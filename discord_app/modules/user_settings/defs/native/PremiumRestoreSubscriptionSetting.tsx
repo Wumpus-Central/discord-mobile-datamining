@@ -1,23 +1,23 @@
-// === Module 15076: PremiumRestoreSubscriptionSetting ===
+// === Module 15338: PremiumRestoreSubscriptionSetting ===
 
-// Module 15076 (PremiumRestoreSubscriptionSetting)
+// Module 15338 (PremiumRestoreSubscriptionSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5715 */;
-import BillingActionCreatorsDefault from "BillingActionCreators" /* 6938 */;
-import UserStore from "UserStore" /* 1377 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5298 */;
+import BillingActionCreatorsDefault from "BillingActionCreators" /* 7127 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11142);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const SettingBuilders = fn(11262);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasPremiumRestoreSubscriptionSetting() {
   const cResult = c.c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
-    const fn = function s() {
+    const fn = function n() {
       return currentUser.getCurrentUser();
     };
     cResult[0] = items;
@@ -41,7 +41,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp8 = cResult[3];
   }
   return tmp8;
-}) : (() => {
+}) : (function useHasPremiumRestoreSubscriptionSetting() {
   const items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   let tmp4 = null != stateFromStores && stateFromStores.verified;
@@ -57,7 +57,7 @@ const pressable = SettingBuilders.createPressable({
     return intl.string(util.t.s9h22P);
   },
   parent: null,
-  IconComponent: fn(8346).NitroWheelIcon,
+  IconComponent: fn(9005).NitroWheelIcon,
   onPress: function handleNitroRestoreSettingPress() {
     const result = BillingActionCreatorsDefault.restoreAndApplyPurchases(true);
     result.then((result) => {
@@ -98,11 +98,11 @@ const pressable = SettingBuilders.createPressable({
     });
   },
   withArrow: true,
-  usePredicate: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  usePredicate: ReactCompilerGating.isReactCompilerEnabled() ? (function useHasPremiumRestoreSubscriptionSetting() {
     const cResult = c.c(4);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
       const items = [UserStore];
-      const fn = function s() {
+      const fn = function n() {
         return currentUser.getCurrentUser();
       };
       cResult[0] = items;
@@ -126,7 +126,7 @@ const pressable = SettingBuilders.createPressable({
       tmp8 = cResult[3];
     }
     return tmp8;
-  }) : (() => {
+  }) : (function useHasPremiumRestoreSubscriptionSetting() {
     const items = [UserStore];
     const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
     let tmp4 = null != stateFromStores && stateFromStores.verified;

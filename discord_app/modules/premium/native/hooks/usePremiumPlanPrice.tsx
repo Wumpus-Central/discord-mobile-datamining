@@ -1,11 +1,11 @@
-// === Module 8898: usePremiumPlanPrice ===
+// === Module 9331: usePremiumPlanPrice ===
 
-// Module 8898 (usePremiumPlanPrice)
-import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 6770 */;
+// Module 9331 (usePremiumPlanPrice)
+import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 6946 */;
 import noop from "module_19" /* 19 */;
-import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4539 */;
-import SubscriptionStore from "SubscriptionStore" /* 4540 */;
-import IAPStore from "IAPStore" /* 6931 */;
+import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4731 */;
+import SubscriptionStore from "SubscriptionStore" /* 4732 */;
+import IAPStore from "IAPStore" /* 7120 */;
 
 const require = globalThis.__r;
 
@@ -16,7 +16,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/hooks/usePremiumPlanPrice.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePremiumPlanPrice(arg0) {
   _require = arg0;
   const cResult = require("c").c(34);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -198,7 +198,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                         if (!SubscriptionPlanStore.isFetchingForPremiumSKUs()) {
                           const obj = SubscriptionPlanActionCreators;
                           const premiumSubscriptionPlans = obj.fetchPremiumSubscriptionPlans(country, undefined, undefined, PaymentGateways.APPLE_ADVANCED_COMMERCE);
-                          premiumSubscriptionPlans.catch(/* F151739 */ function() { ... });
+                          premiumSubscriptionPlans.catch(/* F153413 */ function() { ... });
                         }
                       });
                       return () => {
@@ -269,7 +269,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[12] = undefined;
   cResult[13] = isIOSResult;
   const tmpResult6 = require("PlatformUtils");
-}) : ((arg0) => {
+}) : (function usePremiumPlanPrice(arg0) {
   _require = arg0;
   let formatPrice = _require;
   let amount = priceState;

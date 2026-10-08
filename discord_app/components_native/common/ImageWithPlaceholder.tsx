@@ -1,9 +1,9 @@
-// === Module 8442: ImageWithPlaceholder ===
+// === Module 8928: ImageWithPlaceholder ===
 
-// Module 8442 (ImageWithPlaceholder)
+// Module 8928 (ImageWithPlaceholder)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5981 */;
-import ImageWithThumbhashPlaceholderNativeComponentDefault from "ImageWithThumbhashPlaceholderNativeComponent" /* 8443 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import ImageWithThumbhashPlaceholderNativeComponentDefault from "ImageWithThumbhashPlaceholderNativeComponent" /* 8929 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
 require = fn;
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 const jsx = fn(21).jsx;
 const style = { flex: 1 };
 const ImagePlaceholderVersions = { THUMBHASH: 1, [1]: "THUMBHASH" };
-const PlatformUtils = fn(1369);
+const PlatformUtils = fn(1381);
 if (PlatformUtils.isAndroid()) {
   let importDefaultResult = ImageWithThumbhashPlaceholderNativeComponentDefault;
 } else {
@@ -24,7 +24,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/ImageWithPlaceholder.tsx");
 
 export { ImagePlaceholderVersions };
-export const ImageWithPlaceholder = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const ImageWithPlaceholder = ReactCompilerGating.isReactCompilerEnabled() ? (function ImageWithPlaceholder(arg0) {
   const obj = c;
   const cResult = obj.c(23);
   if (cResult[0] !== arg0) {
@@ -116,7 +116,7 @@ export const ImageWithPlaceholder = ReactCompilerGating.isReactCompilerEnabled()
   cResult[18] = tmp15;
   tmp14 = tmp15;
   const obj5 = { style, resizeMode: "cover", source: tmp13, accessibilityLabel: tmp3 };
-}) : ((arg0) => {
+}) : (function ImageWithPlaceholder(arg0) {
   ({ uri, placeholder, placeholderVersion, alt, style } = arg0);
   const merged = Object.assign(arg0, Object.assign({ uri: 0, placeholder: 0, placeholderVersion: 0, alt: 0, style: 0 }));
   if (null != placeholder) {

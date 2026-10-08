@@ -1,23 +1,23 @@
-// === Module 12991: AvatarDecorationProductPreview ===
+// === Module 13269: AvatarDecorationProductPreview ===
 
-// Module 12991 (AvatarDecorationProductPreview)
+// Module 13269 (AvatarDecorationProductPreview)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import useShopProductItems from "useShopProductItems" /* 7853 */;
-import useCurrentUser from "useCurrentUser" /* 7860 */;
+import native from "native" /* 1200 */;
+import useShopProductItems from "useShopProductItems" /* 8271 */;
+import useCurrentUser from "useCurrentUser" /* 8278 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles({ fullSizePreview: { flex: 1, alignItems: "center", justifyContent: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/AvatarDecorationProductPreview.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((product) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AvatarDecorationProductPreview(product) {
   const cResult = c.c(9);
   const tmp4 = closure_4();
   const currentUser = useCurrentUser.useCurrentUser();
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((product) => {
     cResult[4] = tmp10;
     tmp8 = tmp10;
   }
-}) : ((product) => {
+}) : (function AvatarDecorationProductPreview(product) {
   const tmp = closure_4();
   const currentUser = useCurrentUser.useCurrentUser();
   const firstAvatarDecoration = useShopProductItems.useShopProductItems(product.product).firstAvatarDecoration;

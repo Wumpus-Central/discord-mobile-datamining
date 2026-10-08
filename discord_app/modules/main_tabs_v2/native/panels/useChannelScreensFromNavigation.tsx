@@ -1,14 +1,14 @@
-// === Module 15966: useChannelScreensFromNavigation ===
+// === Module 16226: useChannelScreensFromNavigation ===
 
-// Module 15966 (useChannelScreensFromNavigation)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4742 */;
-import RootNavigationRef from "RootNavigationRef" /* 4743 */;
-import useChatLayoutDefault from "useChatLayout" /* 4745 */;
+// Module 16226 (useChannelScreensFromNavigation)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4936 */;
+import RootNavigationRef from "RootNavigationRef" /* 4937 */;
+import useChatLayoutDefault from "useChatLayout" /* 4939 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4899 */;
 
 const require = globalThis.__r;
 
@@ -142,13 +142,13 @@ function resolveChannelScreens(state, isChatLockedOpen) {
   return tmp8;
 }
 const ME = fn(1085).ME;
-const isStaticChannelRoute = fn(2058).isStaticChannelRoute;
+const isStaticChannelRoute = fn(2070).isStaticChannelRoute;
 const ChannelScreenType = { DEFAULT: 0, [0]: "DEFAULT", BACKGROUND_SAVED: 1, [1]: "BACKGROUND_SAVED", FALLBACK_RENDERED: 2, [2]: "FALLBACK_RENDERED" };
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/useChannelScreensFromNavigation.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useChannelScreensFromNavigation(arg0) {
   const _require = arg0;
   const cResult = require("c").c(11);
   const tmp2 = useChatLayoutDefault();
@@ -216,7 +216,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
       const effect = noop.useEffect(tmp8, tmp9);
       if (cResult[8] !== arg0) {
-        class A {
+        class S {
           constructor() {
             handleStateChange = function handleStateChange(data) {
               closure_1_3(resolveChannelScreens(data.data.state, handleStateChange(closure_2[11]).getChatLayout()), data.data.state);
@@ -229,11 +229,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         }
         let items = [arg0, tmp7];
         cResult[8] = arg0;
-        cResult[9] = A;
+        cResult[9] = S;
         cResult[10] = items;
         let tmp12 = items;
       } else {
-        class A {
+        class S {
           constructor() {
             handleStateChange = function handleStateChange(data) {
               closure_1_3(resolveChannelScreens(data.data.state, handleStateChange(closure_2[11]).getChatLayout()), data.data.state);
@@ -246,7 +246,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         }
         tmp12 = cResult[10];
       }
-      const effect1 = noop.useEffect(A, tmp12);
+      const effect1 = noop.useEffect(S, tmp12);
       return tmp5[0];
     }
     class R {
@@ -289,7 +289,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = fn;
   tmp3 = fn;
   let obj = require("c");
-}) : ((arg0) => {
+}) : (function useChannelScreensFromNavigation(arg0) {
   closure_0 = arg0;
   const tmp = useChatLayoutDefault();
   importDefault = tmp;
@@ -364,7 +364,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   let items1 = [arg0, callback];
   const effect1 = noop.useEffect(() => {
     function handleStateChange(data) {
-      callback(resolveChannelScreens(data.data.state, handleStateChange(4745).getChatLayout()), data.data.state);
+      callback(resolveChannelScreens(data.data.state, handleStateChange(4939).getChatLayout()), data.data.state);
     }
     handleStateChange.addListener("state", handleStateChange);
     return () => {

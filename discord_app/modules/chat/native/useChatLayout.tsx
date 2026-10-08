@@ -1,8 +1,8 @@
-// === Module 4745: useChatLayout ===
+// === Module 4939: useChatLayout ===
 
-// Module 4745 (useChatLayout)
+// Module 4939 (useChatLayout)
 import c from "c" /* 576 */;
-import useWindowSizeClassifier from "useWindowSizeClassifier" /* 4746 */;
+import useWindowSizeClassifier from "useWindowSizeClassifier" /* 4940 */;
 import noop from "module_19" /* 19 */;
 
 const useWindowSizeClassifierDefault = useWindowSizeClassifier;
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat/native/useChatLayout.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useChatLayout() {
   const cResult = c.c(3);
   const tmp2 = useWindowSizeClassifierDefault();
   const tmp3 = tmp2 >= useWindowSizeClassifier.WindowSizeClassifier.LARGE;
@@ -28,7 +28,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[1] = tmp4;
   cResult[2] = obj2;
   tmp5 = obj2;
-}) : (() => {
+}) : (function useChatLayout() {
   const tmp = useWindowSizeClassifierDefault();
   closure_0 = tmp;
   const items = [tmp];

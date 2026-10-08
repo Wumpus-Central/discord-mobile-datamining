@@ -1,34 +1,52 @@
-// === Module 16682: ConjureNativeCardSurface ===
+// === Module 16948: ConjureNativeCardSurface ===
 
-// Module 16682 (ConjureNativeCardSurface)
+// Module 16948 (ConjureNativeCardSurface)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
+import Card from "Card" /* 6186 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
-const obj2 = { surface: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, padding: nativeDefault.space.PX_12 } };
-let closure_4 = createStyles.createStyles(obj2);
+const createStyles = fn(5090);
+let obj2 = { surface: { padding: nativeDefault.space.PX_12 } };
+let closure_3 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, padding: nativeDefault.space.PX_12 };
+const obj3 = { padding: nativeDefault.space.PX_12 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/shared/native/ConjureNativeCardSurface.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
-  const cResult = c.c(3);
-  children = children.children;
-  const tmp2 = closure_4();
-  if (cResult[0] === children) {
-    if (cResult[1] === tmp2.surface) {
-      let tmp3 = cResult[2];
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureNativeCardSurface(arg0) {
+  const cResult = c.c(6);
+  ({ children, style } = arg0);
+  const tmp4 = closure_3();
+  if (cResult[0] === style) {
+    if (cResult[1] === tmp4.surface) {
+      let tmp5 = cResult[2];
     }
-    return tmp3;
+    if (cResult[3] === children) {
+      if (cResult[4] === tmp5) {
+        let tmp6 = cResult[5];
+      }
+      return tmp6;
+    }
+    const obj2 = { variant: "secondary", border: "subtle", radius: 12, style: tmp5, children };
+    const tmp8 = jsx(Card.Card, { variant: "secondary", border: "subtle", radius: 12, style: tmp5, children });
+    cResult[3] = children;
+    cResult[4] = tmp5;
+    cResult[5] = tmp8;
+    tmp6 = tmp8;
   }
-  const tmp4 = <View style={tmp2.surface}>{children}</View>;
-  cResult[0] = children;
-  cResult[1] = tmp2.surface;
-  cResult[2] = tmp4;
-  tmp3 = tmp4;
-}) : ((children) => <View style={closure_4().surface}>{children.children}</View>);
+  const items = [tmp4.surface, style];
+  cResult[0] = style;
+  cResult[1] = tmp4.surface;
+  cResult[2] = items;
+  tmp5 = items;
+}) : (function ConjureNativeCardSurface(arg0) {
+  ({ children, style } = arg0);
+  const obj = { variant: "secondary", border: "subtle", radius: 12, style: null, children };
+  const items = [closure_3().surface, style];
+  obj.style = items;
+  return jsx(Card.Card, { variant: "secondary", border: "subtle", radius: 12, style: null, children });
+});
+export const CONJURE_NATIVE_CARD_RADIUS = 12;

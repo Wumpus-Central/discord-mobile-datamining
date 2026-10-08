@@ -1,10 +1,10 @@
-// === Module 9051: useIsSpeaking ===
+// === Module 6044: useIsSpeaking ===
 
-// Module 9051 (useIsSpeaking)
-import SoundboardStore from "SoundboardStore" /* 5687 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import SpeakingStore from "SpeakingStore" /* 5583 */;
-import VoiceStateStore from "VoiceStateStore" /* 4915 */;
+// Module 6044 (useIsSpeaking)
+import SoundboardStore from "SoundboardStore" /* 5424 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
+import SpeakingStore from "SpeakingStore" /* 5952 */;
+import VoiceStateStore from "VoiceStateStore" /* 5111 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("hooks/useIsSpeaking.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsSpeaking(userId) {
   const cResult = userId(context[5]).c(20);
   userId = userId.userId;
   ({ checkSoundSharing, checkSoundboardSounds, checkIsMuted, context } = userId);
@@ -173,7 +173,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   cResult[6] = userId;
   cResult[7] = fn;
   const tmpResult = userId(context[6]);
-}) : ((checkSoundboardSounds) => {
+}) : (function useIsSpeaking(checkSoundboardSounds) {
   ({ userId: require, checkSoundSharing } = checkSoundboardSounds);
   if (checkSoundSharing === undefined) {
     checkSoundSharing = false;

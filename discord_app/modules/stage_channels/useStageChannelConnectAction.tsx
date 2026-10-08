@@ -1,15 +1,15 @@
-// === Module 9207: useStageChannelConnectAction ===
+// === Module 10764: useStageChannelConnectAction ===
 
-// Module 9207 (useStageChannelConnectAction)
+// Module 10764 (useStageChannelConnectAction)
 import c from "c" /* 576 */;
-import useStateChannelIsLiveDefault from "useStateChannelIsLive" /* 8105 */;
-import useCurrentUserStageRolesDefault from "useCurrentUserStageRoles" /* 9203 */;
+import useStateChannelIsLiveDefault from "useStateChannelIsLive" /* 7480 */;
+import useCurrentUserStageRolesDefault from "useCurrentUserStageRoles" /* 10763 */;
 import "ReactCompilerGating";
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const ChannelConnectAction = { NORMAL: 0, [0]: "NORMAL", START_EVENT: 1, [1]: "START_EVENT" };
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useStageChannelStartEvent(arg0) {
   const cResult = c.c(3);
   const tmp2 = useStateChannelIsLiveDefault(arg0);
   const moderator = useCurrentUserStageRolesDefault(arg0, true).moderator;
@@ -24,10 +24,12 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = moderator;
   cResult[2] = obj2;
   tmp3 = obj2;
-}) : ((arg0) => ({ isLive: useStateChannelIsLiveDefault(arg0), isModerator: useCurrentUserStageRolesDefault(arg0, true).moderator }));
+}) : (function useStageChannelStartEvent(arg0) {
+  return { isLive: useStateChannelIsLiveDefault(arg0), isModerator: useCurrentUserStageRolesDefault(arg0, true).moderator };
+});
 const result = size.fileFinishedImporting("modules/stage_channels/useStageChannelConnectAction.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useStageChannelConnectAction(arg0) {
   if (!tmp) {
     if (useCurrentUserStageRolesDefault(arg0, true).moderator) {
       let NORMAL = obj.START_EVENT;
@@ -36,7 +38,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   NORMAL = obj.NORMAL;
   tmp = useStateChannelIsLiveDefault(arg0);
-}) : ((arg0) => {
+}) : (function useStageChannelConnectAction(arg0) {
   if (!tmp) {
     if (useCurrentUserStageRolesDefault(arg0, true).moderator) {
       let NORMAL = obj.START_EVENT;

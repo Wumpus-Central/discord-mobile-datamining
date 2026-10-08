@@ -1,70 +1,73 @@
-// === Module 14423: SettingHookHarness ===
+// === Module 14649: SettingHookHarness ===
 
-// Module 14423 (SettingHookHarness)
+// Module 14649 (SettingHookHarness)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SettingBlocklistStore from "SettingBlocklistStore" /* 14424 */;
+import LocaleStore from "LocaleStore" /* 2128 */;
+import SettingBlocklistStore from "SettingBlocklistStore" /* 14650 */;
 
 const require = fn;
-const NodeType = fn(11143).NodeType;
-let closure_6 = [];
+const NodeType = fn(11263).NodeType;
+let closure_7 = [];
 const map = new Map();
 const map1 = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/settings/native/renderer/SettingHookHarness.tsx");
 
 export default noop.memo(function SettingHookHarness() {
+  const items = [LocaleStore];
+  const stateFromStores = items1(items2[5]).useStateFromStores(items, () => locale.locale);
   const field = SettingBlocklistStore.getField("blocklist");
-  const items = [];
-  const items1 = [];
-  const entries = Object.entries(items(items1[4]).SETTING_RENDERER_CONFIG);
+  items1 = [];
+  items2 = [];
+  const entries = Object.entries(items1(items2[6]).SETTING_RENDERER_CONFIG);
   let num = 0;
   if (0 < entries.length) {
     while (true) {
-      let tmp2 = _slicedToArray(entries[num], 2);
-      [tmp3, obj2] = tmp2;
-      let usePredicate = obj2.usePredicate;
+      let tmp3 = _slicedToArray(entries[num], 2);
+      [tmp4, obj3] = tmp3;
+      let usePredicate = obj3.usePredicate;
       let predicate;
       if (usePredicate != null) {
         predicate = usePredicate();
       }
-      let tmp6 = false === predicate;
-      if (tmp6) {
-        if (!field.has(tmp3)) {
-          let arr = items.push(tmp3);
+      let tmp7 = false === predicate;
+      if (tmp7) {
+        if (!field.has(tmp4)) {
+          let arr = items1.push(tmp4);
         }
-        if (obj2.type !== NodeType.GUILD_SELECTOR) {
-          let result = map.set(tmp3, obj2.useTitle());
-          let useSearchTerms = obj2.useSearchTerms;
+        if (obj3.type !== NodeType.GUILD_SELECTOR) {
+          let result = map.set(tmp4, obj3.useTitle());
+          let useSearchTerms = obj3.useSearchTerms;
           let searchTerms;
           if (useSearchTerms != null) {
             searchTerms = useSearchTerms();
           }
           if (searchTerms == null) {
-            searchTerms = closure_6;
+            searchTerms = closure_7;
           }
-          let result1 = map1.set(tmp3, searchTerms);
+          let result1 = map1.set(tmp4, searchTerms);
         }
         num = num + 1;
         if (num >= entries.length) {
           break;
         }
       }
-      let hasItem = !tmp6;
-      if (!tmp6) {
-        hasItem = field.has(tmp3);
+      let hasItem = !tmp7;
+      if (!tmp7) {
+        hasItem = field.has(tmp4);
       }
       if (hasItem) {
-        let arr2 = items1.push(tmp3);
+        let arr2 = items2.push(tmp4);
       }
     }
   }
   const effect = noop.useEffect(() => {
-    if (items.length > 0) {
+    if (items1.length > 0) {
       const _Set = Set;
       const set = new Set(SettingBlocklistStore.getField("blocklist"));
-      const item = items.forEach((item) => set.add(item));
-      const item1 = items1.forEach((item) => set.delete(item));
+      const item = items1.forEach((item) => set.add(item));
+      const item1 = items2.forEach((item) => set.delete(item));
       const obj = { blocklist: set };
       SettingBlocklistStore.setState(obj);
     }
@@ -77,7 +80,7 @@ export const getCachedSettingTitle = function getCachedSettingTitle(setting) {
 export const getCachedSettingSearchTerms = function getCachedSettingSearchTerms(arg0) {
   value = map1.get(arg0);
   if (value == null) {
-    value = closure_6;
+    value = closure_7;
   }
   return value;
 };

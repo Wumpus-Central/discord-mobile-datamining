@@ -1,13 +1,13 @@
-// === Module 14981: PremiumRewardGradient ===
+// === Module 15243: PremiumRewardGradient ===
 
-// Module 14981 (PremiumRewardGradient)
+// Module 15243 (PremiumRewardGradient)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4586 */;
-import design_shared from "design/shared" /* 4736 */;
-import useThemeDefault from "useTheme" /* 4797 */;
-import LinearGradientDefault from "LinearGradient" /* 5612 */;
-import _modDef6059 from "module_6059" /* 6059 */;
+import useToken from "useToken" /* 4778 */;
+import design_shared from "design/shared" /* 4930 */;
+import useThemeDefault from "useTheme" /* 4991 */;
+import LinearGradientDefault from "LinearGradient" /* 5387 */;
+import _modDef6245 from "module_6245" /* 6245 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,19 +15,19 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-let createStyles = fn(4896);
+let createStyles = fn(5090);
 let closure_8 = createStyles.createStyles({ wrapper: { position: "relative", overflow: "hidden" }, fill: { position: "absolute", left: 0, right: 0, bottom: 0, height: "100%" }, glow: { position: "absolute", left: 0, right: 0, bottom: 0, height: "50%" }, glowLight: { opacity: 0.5 } });
 const start = { x: 0, y: 0.5 };
 const end = { x: 1, y: 0.5 };
 const start2 = { x: 0.5, y: 0 };
 const end2 = { x: 0.5, y: 1 };
-fn(4733);
-const ColorUtils = fn(4733);
+fn(4927);
+const ColorUtils = fn(4927);
 const hexOpacityToRgbaResult = ColorUtils.hexOpacityToRgba("#000000", 0);
-createStyles = fn(4896);
+createStyles = fn(5090);
 let closure_13 = createStyles.createStyleProperties({ transparentBlack: hexOpacityToRgbaResult, opaqueBlack: nativeDefault.colors.BLACK, transparentWhite: ColorUtils.hexOpacityToRgba("#FFFFFF", 0), opaqueWhite: nativeDefault.colors.WHITE });
 let ReactCompilerGating = fn(558);
-let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGradientColors() {
   const cResult = c.c(3);
   const token = useToken.useToken(nativeDefault.colors.EXPRESSIVE_GRADIENT_NITRO_PINK_START);
   const token1 = useToken.useToken(nativeDefault.colors.EXPRESSIVE_GRADIENT_NITRO_PINK_END);
@@ -42,7 +42,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[1] = token;
   cResult[2] = items;
   tmp4 = items;
-}) : (() => {
+}) : (function useGradientColors() {
   const token = useToken.useToken(nativeDefault.colors.EXPRESSIVE_GRADIENT_NITRO_PINK_START);
   const token1 = useToken.useToken(nativeDefault.colors.EXPRESSIVE_GRADIENT_NITRO_PINK_END);
   let items = [token, token1];
@@ -52,7 +52,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }, items);
 });
 ReactCompilerGating = fn(558);
-let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumRewardFillGradient(arg0) {
   const cResult = c.c(22);
   ({ children, style } = arg0);
   const tmp4 = closure_8();
@@ -147,7 +147,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[6] = transparentWhite;
   cResult[7] = tmp12;
   const tmp6 = closure_13();
-}) : ((arg0) => {
+}) : (function PremiumRewardFillGradient(arg0) {
   ({ children, style } = arg0);
   const tmp = closure_8();
   const tmp3 = closure_13();
@@ -177,7 +177,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return React5(hasOwnProperty, obj2);
 });
 ReactCompilerGating = fn(558);
-let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumRewardGlowGradient(arg0) {
   const cResult = c.c(18);
   ({ children, style } = arg0);
   const tmp4 = closure_8();
@@ -245,7 +245,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         tmp28 = tmp31;
       }
       const obj5 = { style: tmp11, maskElement: tmp13, children: tmp19 };
-      const tmp27 = timestampProducer(_modDef6059, obj5);
+      const tmp27 = timestampProducer(_modDef6245, obj5);
       cResult[11] = tmp11;
       cResult[12] = tmp19;
       cResult[13] = tmp27;
@@ -262,7 +262,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = tmp4.wrapper;
   cResult[4] = items2;
   tmp10 = items2;
-}) : ((arg0) => {
+}) : (function PremiumRewardGlowGradient(arg0) {
   ({ children, style } = arg0);
   const tmp = closure_8();
   const tmp2 = closure_14();
@@ -278,7 +278,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj3 = { style: items1, maskElement: timestampProducer(LinearGradientDefault, { style: React4.absoluteFill, colors: ["transparent", "black"], start: start2, end: end2 }), children: timestampProducer(LinearGradientDefault, { style: React4.absoluteFill, colors: tmp2, start, end }) };
   items1[1] = glowLight;
-  const items2 = [timestampProducer(_modDef6059, obj3), children];
+  const items2 = [timestampProducer(_modDef6245, obj3), children];
   obj2.children = items2;
   return React5(hasOwnProperty, obj2);
 });
@@ -287,7 +287,7 @@ const hexOpacityToRgbaResult1 = ColorUtils.hexOpacityToRgba("#FFFFFF", 0);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/PremiumRewardGradient.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((visible) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestPremiumRewardGradientWrapper(visible) {
   const cResult = c.c(9);
   ({ style, children } = visible);
   if (visible.visible) {
@@ -321,7 +321,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((visible) => {
     cResult[2] = tmp5;
     tmp2 = tmp5;
   }
-}) : ((visible) => {
+}) : (function QuestPremiumRewardGradientWrapper(visible) {
   if (!visible.visible) {
     const obj = { style: tmp, children: tmp2 };
     return tmp3(hasOwnProperty, obj);

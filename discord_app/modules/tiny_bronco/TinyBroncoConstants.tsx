@@ -1,6 +1,6 @@
-// === Module 9435: TinyBroncoConstants ===
+// === Module 5933: TinyBroncoConstants ===
 
-// Module 9435 (TinyBroncoConstants)
+// Module 5933 (TinyBroncoConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/tiny_bronco/TinyBroncoConstants.tsx");

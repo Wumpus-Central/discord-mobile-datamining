@@ -1,7 +1,7 @@
-// === Module 6016: ChangeEmailStore ===
+// === Module 6202: ChangeEmailStore ===
 
-// Module 6016 (ChangeEmailStore)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
+// Module 6202 (ChangeEmailStore)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1271 */;
 import module_570 from "module_570" /* 570 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -27,7 +27,7 @@ const result = size.fileFinishedImporting("modules/verification/ChangeEmailStore
 export const ChangeEmailFields = { EMAIL: "email", EMAIL_TOKEN: "email_token", PASSWORD: "password" };
 export { useChangeEmailStore };
 export { setChangeEmailError };
-export const useChangeEmailError = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useChangeEmailError = ReactCompilerGating.isReactCompilerEnabled() ? (function useChangeEmailError(arg0) {
   _require = arg0;
   const obj = require("c");
   const cResult = obj.c(7);
@@ -76,7 +76,7 @@ export const useChangeEmailError = ReactCompilerGating.isReactCompilerEnabled() 
   cResult[5] = tmp4;
   cResult[6] = items;
   tmp5 = items;
-}) : ((arg0) => {
+}) : (function useChangeEmailError(arg0) {
   closure_0 = arg0;
   const items = [
     obj((errors) => {

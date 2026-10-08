@@ -1,44 +1,44 @@
-// === Module 13321: PremiumManagePlan ===
+// === Module 13621: PremiumManagePlan ===
 
-// Module 13321 (PremiumManagePlan)
+// Module 13621 (PremiumManagePlan)
 import LoggerDefault from "Logger" /* 3 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import useNavigation from "useNavigation" /* 1490 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import actions_BillingActionCreators from "actions/BillingActionCreators" /* 5411 */;
-import useMountEffectDefault from "useMountEffect" /* 5597 */;
-import LinearGradientDefault from "LinearGradient" /* 5612 */;
-import VisualEffectViewAnimatedDefault from "VisualEffectViewAnimated" /* 5779 */;
-import Pressables from "Pressables" /* 5916 */;
-import Card from "Card" /* 6002 */;
-import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 6021 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6494 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 6498 */;
-import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 6908 */;
-import PremiumManagementUtils from "PremiumManagementUtils" /* 6920 */;
-import _modDef7733 from "module_7733" /* 7733 */;
-import PremiumFeaturesCardDefault from "PremiumFeaturesCard" /* 8897 */;
-import PremiumSubscriptionDetails from "PremiumSubscriptionDetails" /* 13176 */;
-import PremiumAccountCreditDefault from "PremiumAccountCredit" /* 13218 */;
-import PremiumNitroHomeUtils from "PremiumNitroHomeUtils" /* 13249 */;
-import useFPDurationLeftDefault from "useFPDurationLeft" /* 13286 */;
-import PremiumFeaturesTableDefault from "PremiumFeaturesTable" /* 13300 */;
+import native from "native" /* 1200 */;
+import useNavigation from "useNavigation" /* 1502 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2127 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import VisualEffectViewAnimatedDefault from "VisualEffectViewAnimated" /* 5362 */;
+import LinearGradientDefault from "LinearGradient" /* 5387 */;
+import useMountEffectDefault from "useMountEffect" /* 5392 */;
+import actions_BillingActionCreators from "actions/BillingActionCreators" /* 5720 */;
+import Card from "Card" /* 6186 */;
+import Pressables from "Pressables" /* 6189 */;
+import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 6207 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6671 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 6675 */;
+import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7097 */;
+import PremiumManagementUtils from "PremiumManagementUtils" /* 7109 */;
+import _modDef8054 from "module_8054" /* 8054 */;
+import PremiumFeaturesCardDefault from "PremiumFeaturesCard" /* 9330 */;
+import PremiumSubscriptionDetails from "PremiumSubscriptionDetails" /* 13476 */;
+import PremiumAccountCreditDefault from "PremiumAccountCredit" /* 13518 */;
+import PremiumNitroHomeUtils from "PremiumNitroHomeUtils" /* 13549 */;
+import useFPDurationLeftDefault from "useFPDurationLeft" /* 13587 */;
+import PremiumFeaturesTableDefault from "PremiumFeaturesTable" /* 13600 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
-import BillingInfoStore from "BillingInfoStore" /* 4536 */;
-import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4539 */;
-import SubscriptionStore from "SubscriptionStore" /* 4540 */;
-import EntitlementStore from "EntitlementStore" /* 6909 */;
-import AppStateStore from "AppStateStore" /* 1986 */;
-import IAPStore from "IAPStore" /* 6931 */;
+import UserStore from "UserStore" /* 1389 */;
+import BillingInfoStore from "BillingInfoStore" /* 4728 */;
+import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4731 */;
+import SubscriptionStore from "SubscriptionStore" /* 4732 */;
+import EntitlementStore from "EntitlementStore" /* 7098 */;
+import AppStateStore from "AppStateStore" /* 1998 */;
+import IAPStore from "IAPStore" /* 7120 */;
 
 require = fn;
 function SubscriptionAndBillingInfo(subscription) {
@@ -150,7 +150,7 @@ function SubscriptionAndBillingInfo(subscription) {
         return tmp5;
       }
     }
-    return closure_2_29(v65535, { size: "small" });
+    return closure_2_29(collapsed, { size: "small" });
   }, items5);
   const tmp4Result11 = tmp4(tmp3[30]);
   [tmp20, c8] = first1(noop.useState(false), 2);
@@ -169,7 +169,7 @@ function SubscriptionAndBillingInfo(subscription) {
     const obj9 = { subscription, planId: planIdFromInvoice, price: null, includePremiumGuilds: true };
     let formatRateResult = null;
     if (null != stateFromStores) {
-      formatRateResult = tmp4(tmp3[43]).formatRate(stateFromStores.priceString, tmp52.interval, tmp52.intervalCount);
+      formatRateResult = tmp4(tmp3[43]).formatRate(stateFromStores.priceString, tmp51.interval, tmp51.intervalCount);
       const tmp4Result14 = tmp4(tmp3[43]);
     }
     obj9.price = formatRateResult;
@@ -229,7 +229,7 @@ function SubscriptionAndBillingInfo(subscription) {
             const obj21 = { style: tmp.pillAndCardContainer, children: null };
             if (tmp11) {
               const obj22 = { style: tmp.pillPosition, children: closure_29(tmp4(tmp3[54]).PremiumReferralTrialPill, {}) };
-              tmp11 = closure_29(tmp55, obj22);
+              tmp11 = closure_29(tmp54, obj22);
             }
             const items10 = [tmp11, ];
             const obj23 = { premiumType: closure_27.TIER_2, forFractionalPremium: fractionalPremiumInfo.fractionalState !== constants4.NONE, hideButton: true, isPremiumGroup, premiumGroupRole };
@@ -250,7 +250,7 @@ function SubscriptionAndBillingInfo(subscription) {
               obj28.children = intl4.string(tmp4(tmp3[26]).t.meauFg);
               items13[1] = closure_29(tmp4(tmp3[25]).Text, obj28);
               obj26.children = items13;
-              let tmp54Result = closure_30(tmp55, obj26);
+              let tmp53Result = closure_30(tmp54, obj26);
             } else {
               const obj29 = { style: tmp.extraInfoTextContainer, children: null };
               if (null != memo) {
@@ -274,9 +274,9 @@ function SubscriptionAndBillingInfo(subscription) {
               items14[1] = closure_29(tmp4(tmp3[51]).GoogleManagementLink, obj32);
               items14[2] = null != memo && memo;
               obj29.children = items14;
-              tmp54Result = closure_30(tmp55, obj29);
+              tmp53Result = closure_30(tmp54, obj29);
             }
-            items12[1] = tmp54Result;
+            items12[1] = tmp53Result;
             const obj33 = { variant: "eyebrow", color: "text-default", children: null };
             const intl5 = tmp4(tmp3[26]).intl;
             obj33.children = intl5.string(tmp4(tmp3[26]).t.Sb6wI1);
@@ -302,25 +302,27 @@ function SubscriptionAndBillingInfo(subscription) {
     }
     const obj37 = { style: tmp.container, children: null };
     const obj38 = { style: tmp.errorHeader, children: null };
-    const obj39 = { source: tmp2(isThemeLightResult ? tmp3[44] : tmp3[45]), style: tmp.headerBackground, children: null };
-    const obj40 = { style: tmp.logoContainer, children: null };
-    const obj41 = { source: tmp2(tmp3[46]), style: tmp.wumpusImg };
-    const items17 = [closure_29(stateFromStores3, obj41), ];
-    const obj42 = { source: tmp2(isThemeLightResult ? tmp3[47] : tmp3[48]), style: tmp.logoStyle };
-    items17[1] = closure_29(stateFromStores3, obj42);
-    obj40.children = items17;
-    const items18 = [closure_30(c8, obj40), ];
-    const obj43 = { variant: "heading-sm/medium", color: "text-default", children: planDescription };
-    items18[1] = closure_29(tmp4(tmp3[25]).Text, obj43);
-    obj39.children = items18;
-    const items19 = [closure_30(loadId, obj39), ];
+    const obj39 = { style: tmp.headerBackground, children: null };
+    const obj40 = { source: tmp2(isThemeLightResult ? tmp3[44] : tmp3[45]), style: tmp.headerBackgroundImage };
+    const items17 = [closure_29(stateFromStores3, obj40), , ];
+    const obj41 = { style: tmp.logoContainer, children: null };
+    const obj42 = { source: tmp2(tmp3[46]), style: tmp.wumpusImg };
+    const items18 = [closure_29(stateFromStores3, obj42), ];
+    const obj43 = { source: tmp2(isThemeLightResult ? tmp3[47] : tmp3[48]), style: tmp.logoStyle };
+    items18[1] = closure_29(stateFromStores3, obj43);
+    obj41.children = items18;
+    items17[1] = closure_30(c8, obj41);
+    const obj44 = { variant: "heading-sm/medium", color: "text-default", children: planDescription };
+    items17[2] = closure_29(tmp4(tmp3[25]).Text, obj44);
+    obj39.children = items17;
+    const items19 = [closure_30(c8, obj39), ];
     let isOnPlatformMatchingExternalPaymentGateway = subscription.isOnPlatformMatchingExternalPaymentGateway;
     if (isOnPlatformMatchingExternalPaymentGateway) {
-      const obj44 = { style: tmp.errorHeaderPrimaryButton, children: null };
-      const obj45 = { size: "sm", variant: "secondary", text: null, onPress: null, loading: null, disabled: null };
+      const obj45 = { style: tmp.errorHeaderPrimaryButton, children: null };
+      const obj46 = { size: "sm", variant: "secondary", text: null, onPress: null, loading: null, disabled: null };
       const intl10 = tmp4(tmp3[26]).intl;
-      obj45.text = intl10.string(tmp4(tmp3[26]).t.lTCb0c);
-      obj45.onPress = asyncGeneratorStep(async () => {
+      obj46.text = intl10.string(tmp4(tmp3[26]).t.lTCb0c);
+      obj46.onPress = asyncGeneratorStep(async () => {
         if (c4 === 2) {
           c4 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
@@ -381,33 +383,33 @@ function SubscriptionAndBillingInfo(subscription) {
           }
         }
       });
-      obj45.loading = tmp20;
-      obj45.disabled = tmp20;
-      obj44.children = closure_29(tmp4(tmp3[49]).Button, obj45);
-      isOnPlatformMatchingExternalPaymentGateway = closure_29(tmp44, obj44);
+      obj46.loading = tmp20;
+      obj46.disabled = tmp20;
+      obj45.children = closure_29(tmp4(tmp3[49]).Button, obj46);
+      isOnPlatformMatchingExternalPaymentGateway = closure_29(tmp44, obj45);
     }
     items19[1] = isOnPlatformMatchingExternalPaymentGateway;
     obj38.children = items19;
     const items20 = [closure_30(c8, obj38), ];
-    const obj46 = { style: tmp.extraInfoContainer, children: null };
-    const obj47 = { variant: "eyebrow", color: "text-default", accessibilityRole: "header", children: null };
+    const obj47 = { style: tmp.extraInfoContainer, children: null };
+    const obj48 = { variant: "eyebrow", color: "text-default", accessibilityRole: "header", children: null };
     const intl11 = tmp4(tmp3[26]).intl;
-    obj47.children = intl11.string(tmp4(tmp3[26]).t.YCrcPL);
-    const items21 = [closure_29(tmp4(tmp3[25]).Text, obj47), ];
-    const obj48 = { style: tmp.extraInfoTextContainer, children: null };
-    const obj49 = { variant: "text-sm/medium", color: "text-default", children: null };
+    obj48.children = intl11.string(tmp4(tmp3[26]).t.YCrcPL);
+    const items21 = [closure_29(tmp4(tmp3[25]).Text, obj48), ];
+    const obj49 = { style: tmp.extraInfoTextContainer, children: null };
+    const obj50 = { variant: "text-sm/medium", color: "text-default", children: null };
     const intl12 = tmp4(tmp3[26]).intl;
-    obj49.children = intl12.string(tmp4(tmp3[26]).t["MTG+3O"]);
-    const items22 = [closure_29(tmp4(tmp3[25]).Text, obj49), , , ];
-    const obj50 = { variant: "text-sm/medium", color: "text-default", children: billingInformationNative };
-    items22[1] = closure_29(tmp4(tmp3[25]).Text, obj50);
-    const obj51 = { subscription };
-    items22[2] = closure_29(tmp4(tmp3[51]).GoogleManagementLink, obj51);
+    obj50.children = intl12.string(tmp4(tmp3[26]).t["MTG+3O"]);
+    const items22 = [closure_29(tmp4(tmp3[25]).Text, obj50), , , ];
+    const obj51 = { variant: "text-sm/medium", color: "text-default", children: billingInformationNative };
+    items22[1] = closure_29(tmp4(tmp3[25]).Text, obj51);
+    const obj52 = { subscription };
+    items22[2] = closure_29(tmp4(tmp3[51]).GoogleManagementLink, obj52);
     items22[3] = null != memo && memo;
-    obj48.children = items22;
-    items21[1] = closure_30(c8, obj48);
-    obj46.children = items21;
-    items20[1] = closure_30(c8, obj46);
+    obj49.children = items22;
+    items21[1] = closure_30(c8, obj49);
+    obj47.children = items21;
+    items20[1] = closure_30(c8, obj47);
     obj37.children = items20;
     return closure_30(c8, obj37);
   }
@@ -415,18 +417,18 @@ function SubscriptionAndBillingInfo(subscription) {
   const tmp4Result13 = tmp4(tmp3[40]);
 }
 get_ActivityIndicator = fn(17);
-({ Image: metroRequire, ImageBackground: closure_7, View: closure_8, ScrollView: closure_9, ActivityIndicator: c10 } = get_ActivityIndicator);
-const TABLE_DIVIDER_WIDTH = fn(5996).TABLE_DIVIDER_WIDTH;
-const isNoneSubscription = fn(4535).isNoneSubscription;
+({ Image: metroRequire, StyleSheet: closure_7, View: closure_8, ScrollView: closure_9, ActivityIndicator: c10 } = get_ActivityIndicator);
+const TABLE_DIVIDER_WIDTH = fn(6180).TABLE_DIVIDER_WIDTH;
+const isNoneSubscription = fn(4727).isNoneSubscription;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_20, HelpdeskArticles: closure_21, SubscriptionStatusTypes: closure_22, UserSettingsSections: closure_23 } = Constants);
-const CustomCheckoutFlow = fn(4875).CustomCheckoutFlow;
-const PremiumConstants = fn(1379);
+const CustomCheckoutFlow = fn(5069).CustomCheckoutFlow;
+const PremiumConstants = fn(1391);
 ({ FractionalPremiumStates: closure_25, PREMIUM_SUBSCRIPTION_APPLICATION: closure_26, PremiumTypes: closure_27, SubscriptionPlanInfo: closure_28 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_29, jsxs: closure_30 } = jsxProd);
 let closure_31 = new LoggerDefault("PremiumManagePlan");
-let createStyles = fn(4896);
+let createStyles = fn(5090);
 let obj2 = { background: null, container: null, contentContainer: null, topBlur: null, accountCredit: null, accountCreditList: null, featuresTable: null, subscriptionHeader: null, billingInfo: null };
 let tmp6 = new LoggerDefault("PremiumManagePlan");
 obj2.background = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, height: "100%" };
@@ -441,13 +443,13 @@ obj2.featuresTable = { paddingTop: 16 };
 obj2.subscriptionHeader = { marginTop: 20, width: "100%" };
 obj2.billingInfo = { marginTop: 20, width: "100%" };
 let closure_32 = createStyles.createStyles(obj2);
-createStyles = fn(4896);
+createStyles = fn(5090);
 let obj7 = { headerContainer: { display: "flex", flexDirection: "row", alignItems: "center", paddingHorizontal: 16, paddingVertical: 8, justifyContent: "space-between" }, backButtonWrapper: null };
 let size = { width: 24, height: 24, borderRadius: nativeDefault.radii.lg, alignItems: "center", justifyContent: "center" };
 obj7.backButtonWrapper = size;
 let closure_33 = createStyles.createStyles(obj7);
 let ReactCompilerGating = fn(558);
-let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? (function ManagePlanHeader() {
   const cResult = c.c(13);
   const tmp4 = closure_33();
   const navigation = useNavigation.useNavigation();
@@ -516,7 +518,7 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[5] = tmp11;
   tmp10 = tmp11;
   const obj6 = { style: tmp4.backButtonWrapper, onPress: tmp6, children: tmp7 };
-}) : (() => {
+}) : (function ManagePlanHeader() {
   const tmp = closure_33();
   closure_0 = useNavigation.useNavigation();
   const obj2 = { style: tmp.headerContainer, children: null };
@@ -539,45 +541,55 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   obj2.children = items;
   return __initData3(closure_1_8, obj2);
 });
-createStyles = fn(4896);
+createStyles = fn(5090);
 let closure_35 = createStyles.createStyles(() => {
-  const obj = { container: { display: "flex", flexDirection: "column", gap: 12 }, errorHeader: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.lg, overflow: "hidden" }, headerBackground: { padding: 16 }, logoContainer: { flexDirection: "row", alignItems: "center", marginBottom: 12 }, wumpusImg: { marginRight: 10, height: 36, width: 51 }, logoStyle: { height: 32, width: 78 }, errorHeaderPrimaryButton: { marginBottom: 16, marginHorizontal: 16 }, extraInfoContainer: { paddingTop: 16, paddingHorizontal: 16, display: "flex", gap: 8 }, extraInfoTextContainer: null, mutationWarningContainer: null, mutationText: null, fpTimeRemaining: null, fpTimeRemainingPill: null, fpUnactivatedHoursPill: null, fpTimeRemainingText: null, fpUnitsTitle: null, fpUnitsStatusText: null, fpRowStart: null, fpRowIcon: null, fpRowContent: null, fpRowEnd: null, dividerContainer: null, divider: null, pillAndCardContainer: null, pillPosition: null, appleAccountMismatchNotice: null, appleAccountMismatchNoticeText: null };
+  const obj = { container: { display: "flex", flexDirection: "column", gap: 12 }, errorHeader: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.lg, overflow: "hidden" }, headerBackground: { padding: 16 }, headerBackgroundImage: null, logoContainer: null, wumpusImg: null, logoStyle: null, errorHeaderPrimaryButton: null, extraInfoContainer: null, extraInfoTextContainer: null, mutationWarningContainer: null, mutationText: null, fpTimeRemaining: null, fpTimeRemainingPill: null, fpUnactivatedHoursPill: null, fpTimeRemainingText: null, fpUnitsTitle: null, fpUnitsStatusText: null, fpRowStart: null, fpRowIcon: null, fpRowContent: null, fpRowEnd: null, dividerContainer: null, divider: null, pillAndCardContainer: null, pillPosition: null, appleAccountMismatchNotice: null, appleAccountMismatchNoticeText: null };
+  const obj3 = {};
+  const merged = Object.assign(absoluteFillObject.absoluteFillObject);
+  obj3.width = undefined;
+  obj3.height = undefined;
+  obj.headerBackgroundImage = obj3;
+  obj.logoContainer = { flexDirection: "row", alignItems: "center", marginBottom: 12 };
+  obj.wumpusImg = { marginRight: 10, height: 36, width: 51 };
+  obj.logoStyle = { height: 32, width: 78 };
+  obj.errorHeaderPrimaryButton = { marginBottom: 16, marginHorizontal: 16 };
+  obj.extraInfoContainer = { paddingTop: 16, paddingHorizontal: 16, display: "flex", gap: 8 };
   const obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
   obj.extraInfoTextContainer = { padding: 16, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, display: "flex", gap: 18 };
-  const obj3 = { padding: 16, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, display: "flex", gap: 18 };
+  const obj4 = { padding: 16, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, display: "flex", gap: 18 };
   obj.mutationWarningContainer = { display: "flex", flexDirection: "row", alignItems: "flex-start", gap: 8, padding: 16, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
   obj.mutationText = { flex: 1 };
-  const obj4 = { display: "flex", flexDirection: "row", alignItems: "flex-start", gap: 8, padding: 16, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+  const obj5 = { display: "flex", flexDirection: "row", alignItems: "flex-start", gap: 8, padding: 16, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
   obj.fpTimeRemaining = { color: nativeDefault.colors.TEXT_BRAND };
-  const obj5 = { color: nativeDefault.colors.TEXT_BRAND };
+  const obj6 = { color: nativeDefault.colors.TEXT_BRAND };
   obj.fpTimeRemainingPill = { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.CONTROL_PRIMARY_BACKGROUND_ACTIVE, paddingVertical: 4, paddingHorizontal: 8 };
-  const obj6 = { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.CONTROL_PRIMARY_BACKGROUND_ACTIVE, paddingVertical: 4, paddingHorizontal: 8 };
+  const obj7 = { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.CONTROL_PRIMARY_BACKGROUND_ACTIVE, paddingVertical: 4, paddingHorizontal: 8 };
   obj.fpUnactivatedHoursPill = { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, paddingVertical: 4, paddingHorizontal: 8 };
-  const obj7 = { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, paddingVertical: 4, paddingHorizontal: 8 };
+  const obj8 = { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, paddingVertical: 4, paddingHorizontal: 8 };
   obj.fpTimeRemainingText = { color: nativeDefault.colors.WHITE };
-  const obj8 = { color: nativeDefault.colors.WHITE };
+  const obj9 = { color: nativeDefault.colors.WHITE };
   obj.fpUnitsTitle = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-  const obj9 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+  const obj10 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
   obj.fpUnitsStatusText = { color: nativeDefault.colors.TEXT_BRAND, marginStart: 18, flexShrink: 1 };
-  const obj10 = { color: nativeDefault.colors.TEXT_BRAND, marginStart: 18, flexShrink: 1 };
+  const obj11 = { color: nativeDefault.colors.TEXT_BRAND, marginStart: 18, flexShrink: 1 };
   obj.fpRowStart = { padding: nativeDefault.modules.mobile.TABLE_ROW_PADDING, minHeight: nativeDefault.modules.mobile.TABLE_ROW_HEIGHT, flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
-  const obj11 = { padding: nativeDefault.modules.mobile.TABLE_ROW_PADDING, minHeight: nativeDefault.modules.mobile.TABLE_ROW_HEIGHT, flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+  const obj12 = { padding: nativeDefault.modules.mobile.TABLE_ROW_PADDING, minHeight: nativeDefault.modules.mobile.TABLE_ROW_HEIGHT, flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
   obj.fpRowIcon = { marginEnd: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
   obj.fpRowContent = { flexShrink: 1, flexGrow: 1, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
-  const obj12 = { marginEnd: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
+  const obj13 = { marginEnd: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
   obj.fpRowEnd = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
   obj.dividerContainer = { height: TABLE_DIVIDER_WIDTH };
-  const obj13 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
+  const obj14 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
   obj.divider = { height: TABLE_DIVIDER_WIDTH, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
   obj.pillAndCardContainer = { position: "relative" };
   obj.pillPosition = { position: "absolute", top: -18, left: 5, zIndex: 99 };
-  const obj14 = { height: TABLE_DIVIDER_WIDTH, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+  const obj15 = { height: TABLE_DIVIDER_WIDTH, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
   obj.appleAccountMismatchNotice = { alignSelf: "stretch", width: "100%", flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_12, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_FEEDBACK_WARNING, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING };
   obj.appleAccountMismatchNoticeText = { flex: 1 };
   return obj;
 });
 ReactCompilerGating = fn(558);
-let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function FractionalPremiumCredits(arg0) {
   const cResult = c.c(63);
   ({ fractionalPremiumInfo, showPremiumFeaturesCard, durationText, hasUnactivatedUnits: fpUnactivatedHoursPill, unactivatedHoursString, activationDate } = arg0);
   const tmp4 = closure_35();
@@ -636,7 +648,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
     const obj8 = { style: tmp19, start: tmp20, end: tmp21, colors: tmp18, children: null };
     const obj9 = { children: null };
-    const obj10 = { color: nativeDefault.unsafe_rawColors.WHITE, source: _modDef7733, size: native.IconSizes.LARGE };
+    const obj10 = { color: nativeDefault.unsafe_rawColors.WHITE, source: _modDef8054, size: native.IconSizes.LARGE };
     obj9.children = closure_1_29(native.Icon, obj10);
     obj8.children = closure_1_29(closure_1_8, obj9);
     const tmp28 = closure_1_29(LinearGradientDefault, obj8);
@@ -885,7 +897,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[18] = tmp41;
   }
   tmp41 = closure_1_29(Text_Text.Text, { variant: "text-sm/medium", children: unactivatedHoursString });
-}) : ((durationText) => {
+}) : (function FractionalPremiumCredits(durationText) {
   ({ fractionalPremiumInfo, showPremiumFeaturesCard, hasUnactivatedUnits, unactivatedHoursString, activationDate } = durationText);
   const tmp = closure_35();
   const obj = { style: tmp.container, children: null };
@@ -916,7 +928,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   obj10.colors = items2;
   const obj12 = { children: null };
   const tmp11 = LinearGradientDefault;
-  obj12.children = closure_1_29(native.Icon, { color: nativeDefault.unsafe_rawColors.WHITE, source: _modDef7733, size: native.IconSizes.LARGE });
+  obj12.children = closure_1_29(native.Icon, { color: nativeDefault.unsafe_rawColors.WHITE, source: _modDef8054, size: native.IconSizes.LARGE });
   obj10.children = closure_1_29(closure_1_8, obj12);
   obj9.children = closure_1_29(tmp11, obj10);
   const items3 = [closure_1_29(closure_1_8, obj9), ];
@@ -994,22 +1006,22 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const intl4 = util.intl;
   obj31.children = intl4.string(util.t["B66Z+f"]);
   tmp8Result = closure_1_29(Text_Text.Text, obj31);
-  const obj13 = { color: nativeDefault.unsafe_rawColors.WHITE, source: _modDef7733, size: native.IconSizes.LARGE };
+  const obj13 = { color: nativeDefault.unsafe_rawColors.WHITE, source: _modDef8054, size: native.IconSizes.LARGE };
 });
 ReactCompilerGating = fn(558);
 let obj5 = { borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/premium/native/PremiumManagePlan.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumManagePlan() {
   const cResult = navigation(576).c(88);
   const tmp4 = closure_32();
   let obj = navigation(576);
   ({ top, bottom } = useSafeAreaInsetsDefault());
   const tmp6 = useSafeAreaInsetsDefault();
-  const youBarSettingsOutsideSafeAreaTop = navigation(13284).useYouBarSettingsOutsideSafeAreaTop();
-  let obj2 = navigation(13284);
-  navigation = navigation(1490).useNavigation();
+  const youBarSettingsOutsideSafeAreaTop = navigation(13585).useYouBarSettingsOutsideSafeAreaTop();
+  let obj2 = navigation(13585);
+  navigation = navigation(1502).useNavigation();
   if (cResult[0] !== navigation) {
     const fn = function t() {
       navigation.setOptions({ headerShown: false });
@@ -1038,7 +1050,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp12 = cResult[3];
     tmp13 = cResult[4];
   }
-  let obj3 = navigation(1490);
+  let obj3 = navigation(1502);
   const stateFromStores = navigation(504).useStateFromStores(tmp12, tmp13);
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [SubscriptionStore];
@@ -1149,9 +1161,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   useMountEffectDefault(tmp27);
   const tmpResult7 = navigation(504);
-  const isInReverseTrial = navigation(7747).useIsInReverseTrial();
-  const tmpResult8 = navigation(7747);
-  useFPDurationLeftDefault(tmp26.endsAt, navigation(13286).CountDownMessageTypes.SHORT_TIME);
+  const isInReverseTrial = navigation(8068).useIsInReverseTrial();
+  const tmpResult8 = navigation(8068);
+  useFPDurationLeftDefault(tmp26.endsAt, navigation(13587).CountDownMessageTypes.SHORT_TIME);
   if (cResult[11] !== tmp26) {
     class X {
       constructor() {
@@ -1343,7 +1355,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
   }
   const tmp5Result = useFPDurationLeftDefault;
-  const theme = navigation(4595).useThemeContext().theme;
+  const theme = navigation(4787).useThemeContext().theme;
   importDefault = noop.useRef(false);
   if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
     class J {
@@ -1400,8 +1412,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp37 = cResult[15];
     tmp38 = cResult[16];
   }
-  const tmpResult9 = navigation(4595);
-  const stateFromStores2 = navigation(504).useStateFromStores(tmp36, tmp37, tmp38, tmp(2069).areSetsEqual);
+  const tmpResult9 = navigation(4787);
+  const stateFromStores2 = navigation(504).useStateFromStores(tmp36, tmp37, tmp38, tmp(2081).areSetsEqual);
   if (cResult[17] !== navigation) {
     class J {
       constructor(arg0) {
@@ -1551,7 +1563,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
     tmp50[1] = tmp47;
     tmp50[2] = theme;
-    const tmp51 = closure_29(tmp5(5779), tmp50);
+    const tmp51 = closure_29(tmp5(5362), tmp50);
     cResult[26] = tmp47;
     cResult[27] = theme;
     cResult[28] = tmp51;
@@ -1561,18 +1573,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[24] = tmp46;
   cResult[25] = items6;
   const tmpResult10 = navigation(504);
-}) : (() => {
+}) : (function PremiumManagePlan() {
   const tmp = closure_32();
   const rect = useSafeAreaInsetsDefault();
   const top = rect.top;
-  const youBarSettingsOutsideSafeAreaTop = navigation(13284).useYouBarSettingsOutsideSafeAreaTop();
-  let obj = navigation(13284);
-  navigation = navigation(1490).useNavigation();
+  const youBarSettingsOutsideSafeAreaTop = navigation(13585).useYouBarSettingsOutsideSafeAreaTop();
+  let obj = navigation(13585);
+  navigation = navigation(1502).useNavigation();
   let items = [navigation];
   const layoutEffect = noop.useLayoutEffect(() => {
     navigation.setOptions({ headerShown: false });
   }, items);
-  let obj2 = navigation(1490);
+  let obj2 = navigation(1502);
   const items1 = [SubscriptionPlanStore];
   const stateFromStores = navigation(504).useStateFromStores(items1, () => SubscriptionPlanStore.isLoadedForPremiumSKUs());
   const obj4 = navigation(504);
@@ -1595,20 +1607,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       isSubscriptionFetching = BillingInfoStore.isSubscriptionFetching;
     }
     if (!isSubscriptionFetching) {
-      const subscriptions = navigation(5411).fetchSubscriptions();
-      const obj = navigation(5411);
+      const subscriptions = navigation(5720).fetchSubscriptions();
+      const obj = navigation(5720);
     }
     if (!tmp5) {
-      const premiumSubscriptionPlans = navigation(6770).fetchPremiumSubscriptionPlans();
-      const obj3 = navigation(6770);
+      const premiumSubscriptionPlans = navigation(6946).fetchPremiumSubscriptionPlans();
+      const obj3 = navigation(6946);
     }
     tmp5 = SubscriptionPlanStore.isLoadedForPremiumSKUs() || SubscriptionPlanStore.isFetchingForPremiumSKUs();
   });
   const obj6 = navigation(504);
-  let isInReverseTrial = navigation(7747).useIsInReverseTrial();
-  const obj8 = navigation(7747);
-  const tmp15Result = useFPDurationLeftDefault(tmp12.endsAt, navigation(13286).CountDownMessageTypes.SHORT_TIME);
-  const unactivatedFractionalPremiumDurationString = navigation(4534).getUnactivatedFractionalPremiumDurationString(tmp12);
+  let isInReverseTrial = navigation(8068).useIsInReverseTrial();
+  const obj8 = navigation(8068);
+  const tmp15Result = useFPDurationLeftDefault(tmp12.endsAt, navigation(13587).CountDownMessageTypes.SHORT_TIME);
+  const unactivatedFractionalPremiumDurationString = navigation(4726).getUnactivatedFractionalPremiumDurationString(tmp12);
   if (null !== tmp10) {
     if (!tmp10.isPurchasedExternally) {
       const currentPeriodEnd = tmp10.currentPeriodEnd;
@@ -1625,10 +1637,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   if (!tmp29Result4) {
     tmp29Result4 = tmp17;
   }
-  const obj9 = navigation(4534);
+  const obj9 = navigation(4726);
   importDefault = noop.useRef(false);
   const callback = noop.useCallback((nativeEvent) => PremiumNitroHomeUtils.trackIfScrolledToBottom({ nativeEvent: nativeEvent.nativeEvent, trackedType: "your_nitro_plan", hasTrackedScrolledToBottom }), []);
-  const tmp4Result = navigation(4595);
+  const tmp4Result = navigation(4787);
   const items4 = [EntitlementStore];
   let tmp23 = null != tmp10;
   const stateFromStores2 = navigation(504).useStateFromStores(items4, () => {
@@ -1638,7 +1650,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       forApplication = new Set();
     }
     return forApplication;
-  }, [], tmp4(2069).areSetsEqual);
+  }, [], tmp4(2081).areSetsEqual);
   if (tmp23) {
     tmp23 = !tmp10.isBoostOnly;
   }
@@ -1683,7 +1695,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const items9 = [tmp29Result, , , , , , ];
   if (isInReverseTrial) {
     const obj13 = { premiumType: closure_27.TIER_2, forFractionalPremium: true, hideButton: true };
-    isInReverseTrial = closure_29(tmp2(8897), obj13);
+    isInReverseTrial = closure_29(tmp2(9330), obj13);
   }
   items9[1] = isInReverseTrial;
   let tmp29Result3 = result;
@@ -1692,7 +1704,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   if (tmp29Result3) {
     const obj14 = { premiumType: closure_27.TIER_2, hideButton: true, hidePrice: true, isPremiumGroup: true, premiumGroupRole };
-    tmp29Result3 = closure_29(tmp2(8897), obj14);
+    tmp29Result3 = closure_29(tmp2(9330), obj14);
   }
   items9[2] = tmp29Result3;
   if (tmp29Result4) {
@@ -1704,7 +1716,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const obj16 = { children: null };
     const obj17 = {
       style: tmp.subscriptionHeader,
-      onClickManagePremiumGuild() {
+      onClickManagePremiumGuild: function handleLearnMorePremiumGuild() {
           const routes = navigation.getState().routes;
           const found = routes.find((name) => name.name === constants.GUILD_BOOSTING);
           UserSettingsModalActionCreatorsDefault.setSection(constants3.GUILD_BOOSTING);
@@ -1718,9 +1730,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         },
       subscription: tmp10
     };
-    const items10 = [closure_29(tmp2(13176), obj17), ];
+    const items10 = [closure_29(tmp2(13476), obj17), ];
     const obj18 = { style: tmp.billingInfo, subscription: tmp10 };
-    items10[1] = closure_29(tmp2(13216), obj18);
+    items10[1] = closure_29(tmp2(13516), obj18);
     obj16.children = items10;
     tmp27Result = closure_30(closure_8, obj16);
   }

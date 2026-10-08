@@ -1,7 +1,7 @@
-// === Module 5043: useAudienceRequestToSpeakState ===
+// === Module 5412: useAudienceRequestToSpeakState ===
 
-// Module 5043 (useAudienceRequestToSpeakState)
-import VoiceStateStore from "VoiceStateStore" /* 4915 */;
+// Module 5412 (useAudienceRequestToSpeakState)
+import VoiceStateStore from "VoiceStateStore" /* 5111 */;
 
 const require = globalThis.__r;
 
@@ -34,7 +34,7 @@ function getAudienceRequestToSpeakState(voiceStateForChannel) {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useAudienceRequestToSpeakState.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAudienceRequestToSpeakState(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   const cResult = require("c").c(5);
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   tmp6 = E;
   const obj = require("c");
   tmp = _require;
-}) : ((arg0, arg1) => {
+}) : (function useAudienceRequestToSpeakState(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   const items = [VoiceStateStore];

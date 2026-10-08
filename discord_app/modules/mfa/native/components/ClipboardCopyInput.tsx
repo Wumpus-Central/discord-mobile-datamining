@@ -1,9 +1,9 @@
-// === Module 15525: ClipboardCopyInput ===
+// === Module 15787: ClipboardCopyInput ===
 
-// Module 15525 (ClipboardCopyInput)
+// Module 15787 (ClipboardCopyInput)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import AppStateStore from "AppStateStore" /* 1986 */;
+import AppStateStore from "AppStateStore" /* 1998 */;
 
 const require = globalThis.__r;
 
@@ -11,13 +11,13 @@ const require = fn;
 const View = fn(17).View;
 const AppStates = fn(1085).AppStates;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_9 = createStyles.createStyles({ inputContainer: { flexDirection: "column", alignSelf: "stretch" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/mfa/native/components/ClipboardCopyInput.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((isValidClipboardCode) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ClipboardCopyInput(isValidClipboardCode) {
   const cResult = require("c").c(23);
   ({ label, placeholder, maxLength, onChangeCode, error, textContentType, autoComplete, keyboardType, isDisabled, autoFocus } = isValidClipboardCode);
   let tmp4 = undefined === autoFocus;
@@ -217,7 +217,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((isValidClipboard
   cResult[4] = fn2;
   tmp13 = fn2;
   const tmpResult = require("initialize");
-}) : ((arg0) => {
+}) : (function ClipboardCopyInput(arg0) {
   ({ onChangeCode, autoFocus } = arg0);
   ({ label, placeholder, isValidClipboardCode, maxLength, error, textContentType, autoComplete, keyboardType, isDisabled } = arg0);
   if (autoFocus === undefined) {

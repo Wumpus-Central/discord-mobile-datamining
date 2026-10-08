@@ -1,23 +1,23 @@
-// === Module 10384: MediaKeyboardBottomSheetHeaderSimple ===
+// === Module 9981: MediaKeyboardBottomSheetHeaderSimple ===
 
-// Module 10384 (MediaKeyboardBottomSheetHeaderSimple)
+// Module 9981 (MediaKeyboardBottomSheetHeaderSimple)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import MediaKeyboardBottomSheetHandleDefault from "MediaKeyboardBottomSheetHandle" /* 10385 */;
+import MediaKeyboardBottomSheetHandleDefault from "MediaKeyboardBottomSheetHandle" /* 9982 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
-let obj = { headerHandleOnlyWrap: { height: fn(1614).HEADER_HANDLE_HEIGHT, paddingBottom: nativeDefault.space.PX_4 } };
+const createStyles = fn(5090);
+let obj = { headerHandleOnlyWrap: { height: fn(1626).HEADER_HANDLE_HEIGHT, paddingBottom: nativeDefault.space.PX_4 } };
 let closure_5 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
-const obj3 = { height: fn(1614).HEADER_HANDLE_HEIGHT, paddingBottom: nativeDefault.space.PX_4 };
+const obj3 = { height: fn(1626).HEADER_HANDLE_HEIGHT, paddingBottom: nativeDefault.space.PX_4 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardBottomSheetHeaderSimple.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function MediaKeyboardBottomSheetHeaderSimple(arg0) {
   const cResult = c.c(6);
   ({ animatedIndex, onPress } = arg0);
   const tmp3 = closure_5();
@@ -43,7 +43,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   cResult[1] = onPress;
   cResult[2] = tmp5;
   tmp4 = tmp5;
-}) : ((arg0) => {
+}) : (function MediaKeyboardBottomSheetHeaderSimple(arg0) {
   ({ animatedIndex, onPress } = arg0);
   return <View style={closure_5().headerHandleOnlyWrap}>{jsx(MediaKeyboardBottomSheetHandleDefault, { animatedIndex, onPress })}</View>;
 }));

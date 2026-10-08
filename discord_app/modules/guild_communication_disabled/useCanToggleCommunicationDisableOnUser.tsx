@@ -1,12 +1,12 @@
-// === Module 8955: useCanToggleCommunicationDisableOnUser ===
+// === Module 11443: useCanToggleCommunicationDisableOnUser ===
 
-// Module 8955 (useCanToggleCommunicationDisableOnUser)
+// Module 11443 (useCanToggleCommunicationDisableOnUser)
 import Constants from "Constants" /* 1085 */;
-import GuildRecord from "GuildRecord" /* 2070 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4520 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
-import UserStore from "UserStore" /* 1377 */;
+import GuildRecord from "GuildRecord" /* 2082 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4712 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
+import UserStore from "UserStore" /* 1389 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -45,7 +45,7 @@ const isGuildOwner = GuildRecord.isGuildOwner;
 const Permissions = Constants.Permissions;
 const result = size.fileFinishedImporting("modules/guild_communication_disabled/useCanToggleCommunicationDisableOnUser.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCanToggleCommunicationDisableOnUser(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
   const cResult = require("c").c(5);
@@ -76,7 +76,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   tmp8 = fn;
   const obj = require("c");
   tmp = _require;
-}) : ((arg0, arg1) => {
+}) : (function useCanToggleCommunicationDisableOnUser(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
   let items = [UserStore, GuildStore, PermissionStore];

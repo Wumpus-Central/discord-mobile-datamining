@@ -1,23 +1,23 @@
-// === Module 6586: ParagraphField ===
+// === Module 6762: ParagraphField ===
 
-// Module 6586 (ParagraphField)
+// Module 6762 (ParagraphField)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import TextArea from "TextArea" /* 6587 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import TextArea from "TextArea" /* 6763 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const maxLength = fn(5850).MAX_PARAGRAPH_RESPONSE_LENGTH;
+const maxLength = fn(6151).MAX_PARAGRAPH_RESPONSE_LENGTH;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles({ container: { marginVertical: 12, flexDirection: "column" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/ParagraphField.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ParagraphField(arg0) {
   const cResult = c.c(10);
   ({ field, onChange } = arg0);
   const tmp4 = closure_5();
@@ -68,7 +68,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[6] = tmp11;
   tmp10 = tmp11;
   const obj4 = { label: tmp5, maxLength, value: response, placeholder: tmp8, onChange };
-}) : ((field) => {
+}) : (function ParagraphField(field) {
   field = field.field;
   let str = field.response;
   const obj = { style: closure_5().container, children: null };

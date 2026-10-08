@@ -1,16 +1,16 @@
-// === Module 7899: useNameplate ===
+// === Module 8318: useNameplate ===
 
-// Module 7899 (useNameplate)
-import utils from "utils" /* 1977 */;
+// Module 8318 (useNameplate)
+import utils from "utils" /* 1989 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 2112 */;
+import GuildMemberStore from "GuildMemberStore" /* 2124 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/nameplates/hooks/useNameplate.tsx");
 
-export const useNameplate = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
+export const useNameplate = ReactCompilerGating.isReactCompilerEnabled() ? (function useNameplate(user) {
   let nameplate3 = user;
   let nameplate = guildId;
   const cResult = user(guildId[3]).c(7);
@@ -80,7 +80,7 @@ export const useNameplate = ReactCompilerGating.isReactCompilerEnabled() ? ((use
   cResult[3] = fn;
   tmp5 = fn;
   const obj = user(guildId[3]);
-}) : ((user) => {
+}) : (function useNameplate(user) {
   user = user.user;
   const guildId = user.guildId;
   const items = [GuildMemberStore];

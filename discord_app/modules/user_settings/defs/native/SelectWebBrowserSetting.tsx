@@ -1,20 +1,20 @@
-// === Module 15315: SelectWebBrowserSetting ===
+// === Module 15577: SelectWebBrowserSetting ===
 
-// Module 15315 (SelectWebBrowserSetting)
+// Module 15577 (SelectWebBrowserSetting)
 import c from "c" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
 import util from "util" /* 1126 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import BrowserManager from "BrowserManager" /* 4857 */;
-import SettingsConstants from "SettingsConstants" /* 7645 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import BrowserManager from "BrowserManager" /* 5051 */;
+import SettingsConstants from "SettingsConstants" /* 7966 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11142 */;
+import SettingBuilders from "SettingBuilders" /* 11262 */;
 import size from "module_2" /* 2 */;
 
 let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating.isReactCompilerEnabled();
 let ReactCompilerGating = ReactCompilerGating_mod;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useWebBrowserSettingOptions() {
   let CHROME = dependencyMap;
   const cResult = c.c(6);
   const browserManagerIsChromeInstalled = BrowserManager.useBrowserManagerIsChromeInstalled();
@@ -82,7 +82,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
     items.push(tmp7);
   }
-}) : (() => {
+}) : (function useWebBrowserSettingOptions() {
   let CHROME = dependencyMap;
   const items = [];
   const browserManagerIsChromeInstalled = BrowserManager.useBrowserManagerIsChromeInstalled();
@@ -121,14 +121,16 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   tmpResult = PlatformUtils;
 });
-const fn = () => BrowserManager.useBrowserManagerSelectedBrowser();
+function useWebBrowserSettingValue() {
+  return BrowserManager.useBrowserManagerSelectedBrowser();
+}
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["C+DkPu"]);
   },
   parent: SettingsConstants.MobileUserSettings.WEB_BROWSER,
-  useValue: fn,
+  useValue: useWebBrowserSettingValue,
   onValueChange: function onWebBrowserSettingValueChange(arg0) {
     const result = BrowserManager.browserManagerSelectBrowser(Number(arg0));
   },

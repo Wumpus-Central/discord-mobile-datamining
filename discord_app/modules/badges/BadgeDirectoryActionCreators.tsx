@@ -1,9 +1,9 @@
-// === Module 7879: BadgeDirectoryActionCreators ===
+// === Module 8297: BadgeDirectoryActionCreators ===
 
-// Module 7879 (BadgeDirectoryActionCreators)
-import HTTPUtils from "HTTPUtils" /* 1282 */;
+// Module 8297 (BadgeDirectoryActionCreators)
+import HTTPUtils from "HTTPUtils" /* 1294 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 import Dispatcher from "Dispatcher" /* 584 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 9740: StageChannelBackground ===
+// === Module 10941: StageChannelBackground ===
 
-// Module 9740 (StageChannelBackground)
+// Module 10941 (StageChannelBackground)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
@@ -8,7 +8,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 const obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BLACK } };
 let closure_4 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -16,7 +16,7 @@ const obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BLACK };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/native/components/StageChannelBackground.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function StageChannelBackground(children) {
   const cResult = c.c(3);
   children = children.children;
   const tmp2 = closure_4();
@@ -31,4 +31,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
   cResult[1] = tmp2.container;
   cResult[2] = tmp4;
   tmp3 = tmp4;
-}) : ((children) => <View style={closure_4().container}>{children.children}</View>);
+}) : (function StageChannelBackground(children) {
+  return <View style={closure_4().container}>{children.children}</View>;
+});

@@ -1,19 +1,19 @@
-// === Module 15648: useDesignSystemsSettingPredicate ===
+// === Module 15928: useDesignSystemsSettingPredicate ===
 
-// Module 15648 (useDesignSystemsSettingPredicate)
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14666 */;
+// Module 15928 (useDesignSystemsSettingPredicate)
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14927 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_settings/design_system/native/useDesignSystemsSettingPredicate.tsx");
 
-export const useDesignSystemsSettingPredicate = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useDesignSystemsSettingPredicate = ReactCompilerGating.isReactCompilerEnabled() ? (function useDesignSystemsSettingPredicate() {
   let staffOrDeveloperSettingPredicate = useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
   if (!staffOrDeveloperSettingPredicate) {
     staffOrDeveloperSettingPredicate = obj2.usePlaygroundAccessExperiment("design_systems_settings");
   }
   return staffOrDeveloperSettingPredicate;
-}) : (() => {
+}) : (function useDesignSystemsSettingPredicate() {
   let staffOrDeveloperSettingPredicate = useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
   if (!staffOrDeveloperSettingPredicate) {
     staffOrDeveloperSettingPredicate = obj2.usePlaygroundAccessExperiment("design_systems_settings");

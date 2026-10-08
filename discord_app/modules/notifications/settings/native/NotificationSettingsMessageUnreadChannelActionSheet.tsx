@@ -1,25 +1,25 @@
-// === Module 12529: NotificationSettingsMessageUnreadChannelActionSheet ===
+// === Module 12625: NotificationSettingsMessageUnreadChannelActionSheet ===
 
-// Module 12529 (NotificationSettingsMessageUnreadChannelActionSheet)
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 6616 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 6621 */;
-import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 9865 */;
-import NotificationSettingsMessageUnreadActionSheetDefault from "NotificationSettingsMessageUnreadActionSheet" /* 12528 */;
+// Module 12625 (NotificationSettingsMessageUnreadChannelActionSheet)
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 6793 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 6798 */;
+import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10425 */;
+import NotificationSettingsMessageUnreadActionSheetDefault from "NotificationSettingsMessageUnreadActionSheet" /* 12624 */;
 import noop from "module_19" /* 19 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5077 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5971 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const UserNotificationSettings = fn(1085).UserNotificationSettings;
-const UnreadSetting = fn(5078).UnreadSetting;
+const UnreadSetting = fn(5972).UnreadSetting;
 let closure_6 = fn(1095).ChannelNotificationSettingsFlags;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMessageUnreadChannelActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function NotificationSettingsMessageUnreadChannelActionSheet(channel) {
   _require = channel;
   const cResult = require("c").c(9);
   let obj = require("c");
@@ -77,7 +77,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   cResult[4] = fn;
   tmp8 = fn;
   let obj2 = require("notficationSettingsChannelFlagUtils");
-}) : ((channel) => {
+}) : (function NotificationSettingsMessageUnreadChannelActionSheet(channel) {
   _require = channel;
   const channelPresetSettings = require("notficationSettingsChannelFlagUtils").useChannelPresetSettings(channel.channel);
   ({ unread, notification } = channelPresetSettings);

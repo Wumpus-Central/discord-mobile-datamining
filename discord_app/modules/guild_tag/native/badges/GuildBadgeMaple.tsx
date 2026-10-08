@@ -1,9 +1,9 @@
-// === Module 13783: GuildBadgeMaple ===
+// === Module 14005: GuildBadgeMaple ===
 
-// Module 13783 (GuildBadgeMaple)
+// Module 14005 (GuildBadgeMaple)
 import c from "c" /* 576 */;
-import inlineStyles from "inlineStyles" /* 8169 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 13748 */;
+import inlineStyles from "inlineStyles" /* 7550 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 13970 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgeMaple.tsx");
 
-export const GuildBadgeMaple = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const GuildBadgeMaple = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBadgeMaple(arg0) {
   const cResult = c.c(30);
   if (cResult[0] !== arg0) {
     ({ width, height, primaryTintColor } = arg0);
@@ -161,7 +161,7 @@ export const GuildBadgeMaple = ReactCompilerGating.isReactCompilerEnabled() ? ((
   cResult[28] = num6;
   cResult[29] = tmp41;
   tmp39 = tmp41;
-}) : ((primaryTintColor) => {
+}) : (function GuildBadgeMaple(primaryTintColor) {
   let num = primaryTintColor.width;
   if (num === undefined) {
     num = 24;

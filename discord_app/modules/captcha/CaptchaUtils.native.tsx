@@ -1,14 +1,14 @@
-// === Module 17454: captcha/CaptchaUtils ===
+// === Module 17736: captcha/CaptchaUtils ===
 
-// Module 17454 (captcha/CaptchaUtils)
+// Module 17736 (captcha/CaptchaUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import SharedCaptchaUtils from "SharedCaptchaUtils" /* 5414 */;
-import ActionSheetStore from "ActionSheetStore" /* 4567 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import SharedCaptchaUtils from "SharedCaptchaUtils" /* 5723 */;
+import ActionSheetStore from "ActionSheetStore" /* 4759 */;
 
 require = fn;
-const CAPTCHA_MODAL_KEY = fn(5422).CAPTCHA_MODAL_KEY;
+const CAPTCHA_MODAL_KEY = fn(5731).CAPTCHA_MODAL_KEY;
 let obj = {
   showCaptcha(options, arg1) {
     _require = arg1;
@@ -30,7 +30,7 @@ let obj = {
     };
     const merged = Object.assign(obj);
     const merged1 = Object.assign(options.options);
-    obj2.openLazy(require("asyncRequireImpl")(17455, dependencyMap.paths), CAPTCHA_MODAL_KEY, obj3);
+    obj2.openLazy(require("asyncRequireImpl")(17737, dependencyMap.paths), CAPTCHA_MODAL_KEY, obj3);
   },
   showCaptchaAsync(nextResult1) {
     if (arg1 === undefined) {
@@ -73,11 +73,11 @@ let obj = {
   useIsCaptchaModalOpen: null
 };
 const ReactCompilerGating = fn(558);
-obj.useIsCaptchaModalOpen = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+obj.useIsCaptchaModalOpen = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsCaptchaModalOpen() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ActionSheetStore];
-    const fn = function n() {
+    const fn = function s() {
       return key.getKey() === CAPTCHA_MODAL_KEY;
     };
     cResult[0] = items;
@@ -88,7 +88,7 @@ obj.useIsCaptchaModalOpen = ReactCompilerGating.isReactCompilerEnabled() ? (() =
     [tmp4, tmp5] = cResult;
   }
   return initialize.useStateFromStores(tmp4, tmp5);
-}) : (() => {
+}) : (function useIsCaptchaModalOpen() {
   const items = [ActionSheetStore];
   return initialize.useStateFromStores(items, () => key.getKey() === CAPTCHA_MODAL_KEY);
 });

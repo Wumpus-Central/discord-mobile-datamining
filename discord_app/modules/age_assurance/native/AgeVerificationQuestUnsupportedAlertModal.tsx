@@ -1,10 +1,10 @@
-// === Module 8135: AgeVerificationQuestUnsupportedAlertModal ===
+// === Module 7522: AgeVerificationQuestUnsupportedAlertModal ===
 
-// Module 8135 (AgeVerificationQuestUnsupportedAlertModal)
+// Module 7522 (AgeVerificationQuestUnsupportedAlertModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import _modDef3073 from "module_3073" /* 3073 */;
-import AlertModal from "AlertModal" /* 5720 */;
+import _modDef3117 from "module_3117" /* 3117 */;
+import AlertModal from "AlertModal" /* 5303 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,13 +13,13 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/native/AgeVerificationQuestUnsupportedAlertModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeVerificationQuestUnsupportedAlertModal() {
   const cResult = c.c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
-    const stringResult = intl.string(_modDef3073.gUqXQN);
+    const stringResult = intl.string(_modDef3117.gUqXQN);
     const intl2 = util.intl;
-    const stringResult1 = intl2.string(_modDef3073.yBHwMy);
+    const stringResult1 = intl2.string(_modDef3117.yBHwMy);
     cResult[0] = stringResult;
     cResult[1] = stringResult1;
     tmp4 = stringResult;
@@ -42,12 +42,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp9 = cResult[2];
   }
   return tmp9;
-}) : (() => {
+}) : (function AgeVerificationQuestUnsupportedAlertModal() {
   const obj = { title: null, content: null, actions: null };
   const intl = util.intl;
-  obj.title = intl.string(_modDef3073.gUqXQN);
+  obj.title = intl.string(_modDef3117.gUqXQN);
   const intl2 = util.intl;
-  obj.content = intl2.string(_modDef3073.yBHwMy);
+  obj.content = intl2.string(_modDef3117.yBHwMy);
   const obj2 = { children: null };
   const obj3 = { text: null };
   const intl3 = util.intl;

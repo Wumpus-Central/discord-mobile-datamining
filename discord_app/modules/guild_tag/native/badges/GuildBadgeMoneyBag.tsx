@@ -1,9 +1,9 @@
-// === Module 13778: GuildBadgeMoneyBag ===
+// === Module 14000: GuildBadgeMoneyBag ===
 
-// Module 13778 (GuildBadgeMoneyBag)
+// Module 14000 (GuildBadgeMoneyBag)
 import c from "c" /* 576 */;
-import inlineStyles from "inlineStyles" /* 8169 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 13748 */;
+import inlineStyles from "inlineStyles" /* 7550 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 13970 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgeMoneyBag.tsx");
 
-export const GuildBadgeMoneyBag = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const GuildBadgeMoneyBag = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBadgeMoneyBag(arg0) {
   const cResult = c.c(62);
   if (cResult[0] !== arg0) {
     ({ width, height, primaryTintColor } = arg0);
@@ -301,7 +301,7 @@ export const GuildBadgeMoneyBag = ReactCompilerGating.isReactCompilerEnabled() ?
   cResult[60] = num6;
   cResult[61] = tmp100;
   tmp98 = tmp100;
-}) : ((primaryTintColor) => {
+}) : (function GuildBadgeMoneyBag(primaryTintColor) {
   let num = primaryTintColor.width;
   if (num === undefined) {
     num = 24;

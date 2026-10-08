@@ -1,7 +1,7 @@
-// === Module 12025: useIsHubForGuild ===
+// === Module 12098: useIsHubForGuild ===
 
-// Module 12025 (useIsHubForGuild)
-import GuildStore from "GuildStore" /* 2074 */;
+// Module 12098 (useIsHubForGuild)
+import GuildStore from "GuildStore" /* 2086 */;
 
 const require = globalThis.__r;
 
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hub/useIsHubForGuild.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsHubForGuild(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -50,7 +50,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp6, tmp7);
-}) : ((arg0) => {
+}) : (function useIsHubForGuild(arg0) {
   _require = arg0;
   const items = [GuildStore];
   const items1 = [arg0];

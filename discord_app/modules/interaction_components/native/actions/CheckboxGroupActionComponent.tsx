@@ -1,7 +1,7 @@
-// === Module 17573: CheckboxGroupActionComponent ===
+// === Module 17855: CheckboxGroupActionComponent ===
 
-// Module 17573 (CheckboxGroupActionComponent)
-import TableCheckboxRow from "TableCheckboxRow" /* 5997 */;
+// Module 17855 (CheckboxGroupActionComponent)
+import TableCheckboxRow from "TableCheckboxRow" /* 6181 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -10,7 +10,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/interaction_components/native/actions/CheckboxGroupActionComponent.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((type) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function CheckboxGroupActionComponent(type) {
   const cResult = type(maxValues[3]).c(25);
   type = type.type;
   ({ options, maxValues } = type);
@@ -44,7 +44,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((type) 
       if (cResult[5] === type) {
         let tmp9 = cResult[6];
       }
-      const componentState = tmp(maxValues[4]).useComponentState(type, tmp9);
+      const componentState = tmp(tmp2[4]).useComponentState(type, tmp9);
       ({ state, executeStateUpdate } = componentState);
       if (cResult[7] === state) {
         if (cResult[8] === type) {
@@ -60,24 +60,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((type) 
                   if (cResult[16] === options) {
                     if (cResult[17] === tmp12) {
                       if (cResult[23] !== cResult[18]) {
-                        { hasIcons: false, children: null }.children = tmp18;
-                        class C {
-                          constructor(arg0) {
-                            closure_0 = type;
-                            return (arg0) => {
-                              if (arg0) {
-                                const items = [];
-                                items[HermesBuiltin.arraySpread(closure_3, 0)] = closure_0;
-                                let found = items;
-                              } else {
-                                found = closure_3.filter(/* F154007 */ function() { ... });
-                              }
-                              executeStateUpdate({ type, values: found });
-                              const obj = { type, values: found };
-                            };
-                          }
-                        }
-                        class R {
+                        const obj2 = { hasIcons: false, children: tmp18 };
+                        const tmp24 = jsx(tmp(tmp2[6]).TableRowGroup, { hasIcons: false, children: tmp18 });
+                        class G {
                           constructor(arg0) {
                             hasItem = closure_3.includes(type.value);
                             tmp2 = jsx;
@@ -86,34 +71,38 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((type) 
                           }
                         }
                         cResult[23] = tmp18;
-                        cResult[24] = tmp22;
-                        let tmp20 = tmp22;
-                        const obj2 = { hasIcons: false, children: null };
+                        cResult[24] = tmp24;
+                        let tmp22 = tmp24;
                       } else {
-                        tmp20 = cResult[24];
+                        tmp22 = cResult[24];
                       }
-                      return tmp20;
+                      return tmp22;
                     }
                   }
                 }
               }
-              class C {
-                constructor(arg0) {
-                  closure_0 = type;
-                  return (arg0) => {
-                    if (arg0) {
-                      const items = [];
-                      items[HermesBuiltin.arraySpread(closure_3, 0)] = closure_0;
-                      let found = items;
-                    } else {
-                      found = closure_3.filter(/* F154007 */ function() { ... });
+              if (cResult[19] === tmp17) {
+                if (cResult[20] === maxValues) {
+                  if (cResult[21] === tmp12) {
+                    let tmp19 = cResult[22];
+                  }
+                  const mapped1 = options.map(tmp19);
+                  cResult[14] = tmp17;
+                  class G {
+                    constructor(arg0) {
+                      hasItem = closure_3.includes(type.value);
+                      tmp2 = jsx;
+                      obj = { label: type.label, subLabel: type.description, checked: hasItem, onPress: closure_4(type.value), disabled: closure_3.length >= maxValues && !hasItem };
+                      return tmp2(closure_0(closure_1[5]).TableCheckboxRow, obj, type.value);
                     }
-                    executeStateUpdate({ type, values: found });
-                    const obj = { type, values: found };
-                  };
+                  }
+                  cResult[15] = maxValues;
+                  cResult[16] = options;
+                  cResult[17] = tmp12;
+                  cResult[18] = mapped1;
                 }
               }
-              class R {
+              class G {
                 constructor(arg0) {
                   hasItem = closure_3.includes(type.value);
                   tmp2 = jsx;
@@ -124,30 +113,29 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((type) 
               cResult[19] = tmp17;
               cResult[20] = maxValues;
               cResult[21] = tmp12;
-              cResult[22] = R;
+              cResult[22] = G;
+              tmp19 = G;
             }
           }
-          class C {
-            constructor(arg0) {
-              closure_0 = type;
-              return (arg0) => {
-                if (arg0) {
-                  const items = [];
-                  items[HermesBuiltin.arraySpread(closure_3, 0)] = closure_0;
-                  let found = items;
-                } else {
-                  found = closure_3.filter(/* F154007 */ function() { ... });
-                }
-                executeStateUpdate({ type, values: found });
-                const obj = { type, values: found };
-              };
-            }
+          function getOnPress(arg0) {
+            closure_0 = arg0;
+            return (arg0) => {
+              if (arg0) {
+                const items = [];
+                items[HermesBuiltin.arraySpread(closure_3, 0)] = closure_0;
+                let found = items;
+              } else {
+                found = closure_3.filter((item) => item !== closure_1_0);
+              }
+              executeStateUpdate({ type, values: found });
+              const obj = { type, values: found };
+            };
           }
           cResult[10] = executeStateUpdate;
           cResult[11] = type;
           cResult[12] = cResult[9];
-          cResult[13] = C;
-          tmp17 = C;
+          cResult[13] = getOnPress;
+          tmp17 = getOnPress;
         }
       }
       let type1;
@@ -158,16 +146,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((type) 
       cResult[7] = state;
       cResult[8] = type;
       cResult[9] = tmp15;
-      const tmpResult = tmp(maxValues[4]);
+      const tmpResult = tmp(tmp2[4]);
     }
     cResult[4] = cResult[1];
     cResult[5] = type;
-    cResult[6] = tmp10;
+    cResult[6] = undefined;
     tmp9 = tmp10;
   }
-  let obj = type(maxValues[3]);
-  tmp = type;
-}) : ((type) => {
+}) : (function CheckboxGroupActionComponent(type) {
   type = type.type;
   options = type.options;
   const maxValues = type.maxValues;

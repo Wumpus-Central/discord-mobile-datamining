@@ -1,16 +1,16 @@
-// === Module 15310: TextAndMediaSyncSetting ===
+// === Module 15572: TextAndMediaSyncSetting ===
 
-// Module 15310 (TextAndMediaSyncSetting)
+// Module 15572 (TextAndMediaSyncSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 8091 */;
-import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1194 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5258 */;
+import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1206 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11142);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const SettingBuilders = fn(11262);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useTextAndMediaSyncSettingValue() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [SelectivelySyncedUserSettingsStore];
@@ -25,7 +25,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     [tmp4, tmp5] = cResult;
   }
   return initialize.useStateFromStores(tmp4, tmp5);
-}) : (() => {
+}) : (function useTextAndMediaSyncSettingValue() {
   const items = [SelectivelySyncedUserSettingsStore];
   return initialize.useStateFromStores(items, () => SelectivelySyncedUserSettingsStore.shouldSync("text"));
 });
@@ -34,8 +34,8 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t["3340dY"]);
   },
-  parent: fn(7645).MobileUserSettings.CHAT,
-  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  parent: fn(7966).MobileUserSettings.CHAT,
+  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useTextAndMediaSyncSettingValue() {
     const cResult = c.c(2);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
       const items = [SelectivelySyncedUserSettingsStore];
@@ -50,7 +50,7 @@ const toggle = SettingBuilders.createToggle({
       [tmp4, tmp5] = cResult;
     }
     return initialize.useStateFromStores(tmp4, tmp5);
-  }) : (() => {
+  }) : (function useTextAndMediaSyncSettingValue() {
     const items = [SelectivelySyncedUserSettingsStore];
     return initialize.useStateFromStores(items, () => SelectivelySyncedUserSettingsStore.shouldSync("text"));
   }),

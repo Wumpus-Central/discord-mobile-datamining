@@ -1,15 +1,15 @@
-// === Module 9981: ExpressionPickerCategories ===
+// === Module 9510: ExpressionPickerCategories ===
 
-// Module 9981 (ExpressionPickerCategories)
+// Module 9510 (ExpressionPickerCategories)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Portal from "Portal" /* 4758 */;
+import Portal from "Portal" /* 4952 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, paddingHorizontal: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center" }, containerRefresh: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, paddingHorizontal: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center" };
 obj2.containerRefresh = { borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };
@@ -19,7 +19,7 @@ const obj4 = { borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SU
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/expression_picker/native/categories/ExpressionPickerCategories.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ExpressionPickerCategories(arg0) {
   const cResult = c.c(10);
   ({ children, portalHostName, style } = arg0);
   const tmp4 = closure_4();
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = tmp4.containerRefresh;
   cResult[3] = items;
   tmp5 = items;
-}) : ((arg0) => {
+}) : (function ExpressionPickerCategories(arg0) {
   ({ children, portalHostName, style } = arg0);
   const obj = { hostName: portalHostName, children: null };
   const obj2 = { style: null, children };

@@ -1,10 +1,10 @@
-// === Module 14974: useVideoQuestClickCtaAndMaybeCloseModal ===
+// === Module 15236: useVideoQuestClickCtaAndMaybeCloseModal ===
 
-// Module 14974 (useVideoQuestClickCtaAndMaybeCloseModal)
-import URLUtilsDefault from "URLUtils" /* 1371 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7225 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 10023 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 10931 */;
+// Module 15236 (useVideoQuestClickCtaAndMaybeCloseModal)
+import URLUtilsDefault from "URLUtils" /* 1383 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7404 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 9554 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 10582 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/useVideoQuestClickCtaAndMaybeCloseModal.tsx");
 
-export const useVideoQuestClickCtaAndMaybeCloseModal = ReactCompilerGating.isReactCompilerEnabled() ? ((quest) => {
+export const useVideoQuestClickCtaAndMaybeCloseModal = ReactCompilerGating.isReactCompilerEnabled() ? (function useVideoQuestClickCtaAndMaybeCloseModal(quest) {
   const cResult = quest(sourceQuestContent[2]).c(5);
   quest = quest.quest;
   const onClose = quest.onClose;
@@ -29,7 +29,7 @@ export const useVideoQuestClickCtaAndMaybeCloseModal = ReactCompilerGating.isRea
       }
     }
   }
-  const fn = function n(content) {
+  const fn = function s(content) {
     const obj = URLUtilsDefault;
     if (obj.isDiscordUrl(obj2.getCtaLink(quest.config), true)) {
       onClose();
@@ -45,7 +45,7 @@ export const useVideoQuestClickCtaAndMaybeCloseModal = ReactCompilerGating.isRea
   cResult[3] = sourceQuestContent;
   cResult[4] = fn;
   tmp3 = fn;
-}) : ((quest) => {
+}) : (function useVideoQuestClickCtaAndMaybeCloseModal(quest) {
   quest = quest.quest;
   const onClose = quest.onClose;
   const sourceQuestContent = quest.sourceQuestContent;

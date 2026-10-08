@@ -1,26 +1,26 @@
-// === Module 10161: StickerPickerCategories ===
+// === Module 9747: StickerPickerCategories ===
 
-// Module 10161 (StickerPickerCategories)
+// Module 9747 (StickerPickerCategories)
 import nativeDefault from "native" /* 587 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import HapticUtils from "HapticUtils" /* 4861 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4862 */;
-import StickersTypes from "StickersTypes" /* 5436 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import HapticUtils from "HapticUtils" /* 5055 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5056 */;
+import StickersTypes from "StickersTypes" /* 5746 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2074 */;
+import GuildStore from "GuildStore" /* 2086 */;
 
 require = fn;
 const View = fn(17).View;
-let useStickerPickerStore = fn(10127).useStickerPickerStore;
+let useStickerPickerStore = fn(9712).useStickerPickerStore;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_8, AnalyticsPages: closure_9, CATEGORY_ICON_RIPPLE_CONFIG: c10, CATEGORY_ICON_SIZE } = Constants);
 const EXPRESSION_FOOTER_HEIGHT = Constants.EXPRESSION_FOOTER_HEIGHT;
 const NODE_SIZE = Constants.NODE_SIZE;
-const ExpressionPickerViewType = fn(1229).ExpressionPickerViewType;
+const ExpressionPickerViewType = fn(1241).ExpressionPickerViewType;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { list: { flex: 1, height: EXPRESSION_FOOTER_HEIGHT }, item: { height: EXPRESSION_FOOTER_HEIGHT, width: EXPRESSION_FOOTER_HEIGHT, justifyContent: "center", alignItems: "center" }, itemInner: null, fadedItem: { opacity: 0.5 }, activeItem: { opacity: 1, backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE }, guildIcon: { height: CATEGORY_ICON_SIZE, width: CATEGORY_ICON_SIZE, borderRadius: CATEGORY_ICON_SIZE / 2 }, guildItemPlaceholder: null, lockContainer: null, lock: null };
 let size = { justifyContent: "center", alignItems: "center", height: NODE_SIZE, width: NODE_SIZE, borderRadius: NODE_SIZE / 2 };
 obj.itemInner = size;
@@ -32,7 +32,7 @@ const size2 = { width: 7.5, height: 7.5, tintColor: nativeDefault.colors.TEXT_DE
 obj.lock = size2;
 let closure_16 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
-let closure_17 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((category) => {
+let closure_17 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function StickerCategoryItem(category) {
   const cResult = category(index[11]).c(38);
   category = category.category;
   const onPressCategory = category.onPressCategory;
@@ -431,7 +431,7 @@ let closure_17 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((cate
   cResult[4] = guild;
   tmp8 = guild;
   let obj = category(index[11]);
-}) : ((category) => {
+}) : (function StickerCategoryItem(category) {
   category = category.category;
   const onPressCategory = category.onPressCategory;
   const index = category.index;
@@ -1000,8 +1000,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((categories) => {
   const callback5 = first.useCallback((arg0, index) => state(closure_17, { category: categories[index], index, isActive: index === categoryIndex, locked: categories[index].isNitroLocked, onPressCategory: callback2 }), items8);
   let obj = { portalHostName: "expression-footer", style: categories.style, children: null };
   const tmp17 = categoryIndex;
-  const tmp19 = categoryIndex(9980)();
-  const items9 = [closure_14(categoryIndex(6559), { estimatedListSize: "windowSize", horizontal: true, itemSize: EXPRESSION_FOOTER_HEIGHT, keyboardShouldPersistTaps: "always", listId: ExpressionPickerViewType.STICKER, onLayout: callback4, onScroll: callback1, placeholderConfig: tmp19, ref, scrollReporting: "callbacks", sections: memo, renderItem: callback5, showsHorizontalScrollIndicator: false, style: tmp.list }), ];
+  const tmp19 = categoryIndex(9509)();
+  const items9 = [closure_14(categoryIndex(6735), { estimatedListSize: "windowSize", horizontal: true, itemSize: EXPRESSION_FOOTER_HEIGHT, keyboardShouldPersistTaps: "always", listId: ExpressionPickerViewType.STICKER, onLayout: callback4, onScroll: callback1, placeholderConfig: tmp19, ref, scrollReporting: "callbacks", sections: memo, renderItem: callback5, showsHorizontalScrollIndicator: false, style: tmp.list }), ];
   let tmp22Result = null != first && first1;
   if (tmp22Result) {
     const obj3 = { onPress: callback3, accessibilityRole: "button", accessibilityLabel: null, children: null };
@@ -1011,12 +1011,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((categories) => {
     const items10 = [, ];
     ({ item: arr11[0], fadedItem: arr11[1] } = tmp);
     obj4.style = items10;
-    const obj5 = { style: tmp.guildIcon, source: tmp17(10162) };
-    obj4.children = closure_14(categories(1188).Icon, obj5);
+    const obj5 = { style: tmp.guildIcon, source: tmp17(9748) };
+    obj4.children = closure_14(categories(1200).Icon, obj5);
     obj3.children = closure_14(closure_5, obj4);
-    tmp22Result = closure_14(categories(5916).PressableOpacity, obj3);
+    tmp22Result = closure_14(categories(6189).PressableOpacity, obj3);
   }
   items9[1] = tmp22Result;
   obj.children = items9;
-  return closure_15(categoryIndex(9981), obj);
+  return closure_15(categoryIndex(9510), obj);
 });

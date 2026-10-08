@@ -1,10 +1,10 @@
-// === Module 9107: usePipDimensions ===
+// === Module 10681: usePipDimensions ===
 
-// Module 9107 (usePipDimensions)
+// Module 10681 (usePipDimensions)
 import c from "c" /* 576 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
-import DeviceOrientation from "DeviceOrientation" /* 8018 */;
-import useIsViewingActivity from "useIsViewingActivity" /* 9108 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
+import DeviceOrientation from "DeviceOrientation" /* 8426 */;
+import useIsViewingActivity from "useIsViewingActivity" /* 10682 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ const ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/components/usePipDimensions.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePipDimensions(arg0) {
   const cResult = c.c(5);
   ({ channelId, forcedOrientation } = arg0);
   let tmp4 = null;
@@ -95,7 +95,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = size;
   tmp31 = size;
   const tmp7 = useWindowDimensionsDefault();
-}) : ((channelId) => {
+}) : (function usePipDimensions(channelId) {
   let forcedOrientation = channelId.forcedOrientation;
   if (forcedOrientation === undefined) {
     forcedOrientation = null;

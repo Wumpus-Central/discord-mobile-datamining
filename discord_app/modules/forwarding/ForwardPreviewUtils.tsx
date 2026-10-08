@@ -1,15 +1,15 @@
-// === Module 11334: ForwardPreviewUtils ===
+// === Module 11601: ForwardPreviewUtils ===
 
-// Module 11334 (ForwardPreviewUtils)
-import EmbedUtils from "EmbedUtils" /* 5433 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
+// Module 11601 (ForwardPreviewUtils)
+import EmbedUtils from "EmbedUtils" /* 5743 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/forwarding/ForwardPreviewUtils.tsx");
 
-export const useForwardPreviewContent = ReactCompilerGating.isReactCompilerEnabled() ? ((message) => {
+export const useForwardPreviewContent = ReactCompilerGating.isReactCompilerEnabled() ? (function useForwardPreviewContent(message) {
   const cResult = message(channel[2]).c(20);
   message = message.message;
   channel = message.channel;
@@ -166,7 +166,7 @@ export const useForwardPreviewContent = ReactCompilerGating.isReactCompilerEnabl
       }
       tmpResult = tmp(tmp2[4]);
     }
-    const fn2 = function v() {
+    const fn2 = function w() {
       let shouldStripEmbedsResult = null != channel;
       if (shouldStripEmbedsResult) {
         shouldStripEmbedsResult = !EmbedUtils.canEmbedLinks(tmp, PermissionStore);
@@ -184,7 +184,7 @@ export const useForwardPreviewContent = ReactCompilerGating.isReactCompilerEnabl
   let obj = message(channel[2]);
   tmp = message;
   tmp2 = channel;
-}) : ((message) => {
+}) : (function useForwardPreviewContent(message) {
   message = message.message;
   ({ channel: dependencyMap, forwardOptions } = message);
   let onlyEmbedIndices;

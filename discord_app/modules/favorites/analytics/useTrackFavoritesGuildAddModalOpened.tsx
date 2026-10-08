@@ -1,7 +1,7 @@
-// === Module 10723: useTrackFavoritesGuildAddModalOpened ===
+// === Module 12701: useTrackFavoritesGuildAddModalOpened ===
 
-// Module 10723 (useTrackFavoritesGuildAddModalOpened)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+// Module 12701 (useTrackFavoritesGuildAddModalOpened)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,11 +12,11 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/analytics/useTrackFavoritesGuildAddModalOpened.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((source) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useTrackFavoritesGuildAddModalOpened(source) {
   _require = source;
   const cResult = require("c").c(3);
   if (cResult[0] !== source) {
-    const fn = function n() {
+    const fn = function u() {
       AnalyticsUtilsDefault.track(AnalyticEvents.FAVORITES_GUILD_ADD_MODAL_OPENED, { source });
     };
     const items = [source];
@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((source) => {
     tmp3 = cResult[2];
   }
   const effect = noop.useEffect(tmp2, tmp3);
-}) : ((source) => {
+}) : (function useTrackFavoritesGuildAddModalOpened(source) {
   const items = [source];
   const effect = noop.useEffect(() => {
     AnalyticsUtilsDefault.track(AnalyticEvents.FAVORITES_GUILD_ADD_MODAL_OPENED, { source });

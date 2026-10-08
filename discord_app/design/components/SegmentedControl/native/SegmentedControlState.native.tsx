@@ -1,7 +1,7 @@
-// === Module 9317: SegmentedControlState ===
+// === Module 8505: SegmentedControlState ===
 
-// Module 9317 (SegmentedControlState)
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5777 */;
+// Module 8505 (SegmentedControlState)
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5360 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/SegmentedControl/native/SegmentedControlState.native.tsx");
 
-export const useSegmentedControlState = ReactCompilerGating.isReactCompilerEnabled() ? ((onPageChangeStart) => {
+export const useSegmentedControlState = ReactCompilerGating.isReactCompilerEnabled() ? (function useSegmentedControlState(onPageChangeStart) {
   const cResult = pageWidth(onPageChangeStart[2]).c(29);
   ({ items, pageWidth } = onPageChangeStart);
   ({ defaultIndex, itemSpacing, onPageChange } = onPageChangeStart);
@@ -240,7 +240,7 @@ export const useSegmentedControlState = ReactCompilerGating.isReactCompilerEnabl
   cResult[9] = enabled;
   cResult[10] = fn2;
   tmp17 = fn2;
-}) : ((pageWidth) => {
+}) : (function useSegmentedControlState(pageWidth) {
   let items = pageWidth.items;
   pageWidth = pageWidth.pageWidth;
   let num = pageWidth.defaultIndex;

@@ -1,18 +1,18 @@
-// === Module 14846: useBountyVideoProgressPersistence ===
+// === Module 15107: useBountyVideoProgressPersistence ===
 
-// Module 14846 (useBountyVideoProgressPersistence)
-import BountyActionCreators from "BountyActionCreators" /* 10962 */;
-import useBountiesModalTiming from "useBountiesModalTiming" /* 14843 */;
+// Module 15107 (useBountyVideoProgressPersistence)
+import BountyActionCreators from "BountyActionCreators" /* 11155 */;
+import useBountiesModalTiming from "useBountiesModalTiming" /* 15104 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BountyStore from "BountyStore" /* 7199 */;
+import BountyStore from "BountyStore" /* 7378 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/useBountyVideoProgressPersistence.tsx");
 
-export const useBountyVideoProgressPersistence = ReactCompilerGating.isReactCompilerEnabled() ? ((bountyId) => {
+export const useBountyVideoProgressPersistence = ReactCompilerGating.isReactCompilerEnabled() ? (function useBountyVideoProgressPersistence(bountyId) {
   const cResult = bountyId(endMode[4]).c(11);
   bountyId = bountyId.bountyId;
   endMode = bountyId.endMode;
@@ -98,7 +98,7 @@ export const useBountyVideoProgressPersistence = ReactCompilerGating.isReactComp
   cResult[2] = fn;
   tmp2 = fn;
   let obj = bountyId(endMode[4]);
-}) : ((bountyId) => {
+}) : (function useBountyVideoProgressPersistence(bountyId) {
   bountyId = bountyId.bountyId;
   const endMode = bountyId.endMode;
   _slicedToArray = undefined;

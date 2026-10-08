@@ -1,18 +1,18 @@
-// === Module 16376: useNotificationsTabBadge ===
+// === Module 16636: useNotificationsTabBadge ===
 
-// Module 16376 (useNotificationsTabBadge)
+// Module 16636 (useNotificationsTabBadge)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 7138 */;
+import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6063 */;
 import noop from "module_19" /* 19 */;
-import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 7137 */;
+import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6062 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/notifications/useNotificationsTabBadge.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useNotificationsTabBadge() {
   const cResult = c.c(8);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [NotificationCenterItemsStore];
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp11 = obj2;
   }
   const tmpResult = initialize;
-}) : (() => {
+}) : (function useNotificationsTabBadge() {
   const items = [NotificationCenterItemsStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => localItems.localItems);
   const items1 = [stateFromStores];

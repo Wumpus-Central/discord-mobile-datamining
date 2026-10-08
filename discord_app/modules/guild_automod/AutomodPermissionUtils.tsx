@@ -1,12 +1,12 @@
-// === Module 4521: AutomodPermissionUtils ===
+// === Module 4713: AutomodPermissionUtils ===
 
-// Module 4521 (AutomodPermissionUtils)
-import GuildMemberStore from "GuildMemberStore" /* 2112 */;
+// Module 4713 (AutomodPermissionUtils)
+import GuildMemberStore from "GuildMemberStore" /* 2124 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const GuildMemberFlags = fn(4501).GuildMemberFlags;
+const GuildMemberFlags = fn(4693).GuildMemberFlags;
 let items = [, , ];
 ({ AUTOMOD_QUARANTINED_BIO: arr[0], AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME: arr[1], AUTOMOD_QUARANTINED_SERVER_TAG: arr[2] } = GuildMemberFlags);
 const ReactCompilerGating = fn(558);
@@ -92,7 +92,7 @@ export const getAutomodReason = function getAutomodReason(automodQuarantinedGuil
   return prop;
 };
 export { hasAutomodQuarantinedProfile };
-export const useCurrentUserAutomodQuaratinedProfile = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useCurrentUserAutomodQuaratinedProfile = ReactCompilerGating.isReactCompilerEnabled() ? (function useCurrentUserAutomodQuaratinedProfile(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -103,7 +103,7 @@ export const useCurrentUserAutomodQuaratinedProfile = ReactCompilerGating.isReac
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function u() {
+    const fn = function n() {
       let tmp2 = null != closure_0;
       if (tmp2) {
         const selfMember = GuildMemberStore.getSelfMember(tmp);
@@ -137,7 +137,7 @@ export const useCurrentUserAutomodQuaratinedProfile = ReactCompilerGating.isReac
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp6, tmp7);
-}) : ((arg0) => {
+}) : (function useCurrentUserAutomodQuaratinedProfile(arg0) {
   _require = arg0;
   items = [GuildMemberStore];
   const items1 = [arg0];

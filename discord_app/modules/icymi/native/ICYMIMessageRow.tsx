@@ -1,31 +1,31 @@
-// === Module 16477: ICYMIMessageRow ===
+// === Module 16737: ICYMIMessageRow ===
 
-// Module 16477 (ICYMIMessageRow)
+// Module 16737 (ICYMIMessageRow)
 import nativeDefault from "native" /* 587 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5712 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8039 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10664 */;
-import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 11293 */;
-import ICYMIShared from "ICYMIShared" /* 16475 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6102 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8447 */;
+import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 9629 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10264 */;
+import ICYMIShared from "ICYMIShared" /* 16735 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5077 */;
-import UserStore from "UserStore" /* 1377 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildMemberStore from "GuildMemberStore" /* 2124 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5971 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const View = fn(17).View;
-const ITEM_PADDING = fn(16474).ITEM_PADDING;
+const ITEM_PADDING = fn(16734).ITEM_PADDING;
 const Constants = fn(1085);
 ({ DEFAULT_ROLE_COLOR_HEX: closure_12, MessageEmbedTypes: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
 const PX_8 = nativeDefault.space.PX_8;
-const createICYMIStyles = fn(16434);
+const createICYMIStyles = fn(16694);
 let closure_18 = createICYMIStyles.createICYMIStyles((paddingLeft) => {
   const obj = { pressable: { flex: 1, paddingLeft: paddingLeft.inset, gap: nativeDefault.space.PX_8 }, messagePreview: null, replyPreview: null, replyInner: null, afterMessage: null, media: null, footer: null };
   const obj2 = { flex: 1, paddingLeft: paddingLeft.inset, gap: nativeDefault.space.PX_8 };
@@ -46,7 +46,7 @@ let closure_18 = createICYMIStyles.createICYMIStyles((paddingLeft) => {
   return obj;
 });
 let ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function MessageRowContent(arg0) {
   const cResult = channel(576).c(37);
   ({ message, channel } = arg0);
   ({ lineClamp, nested, visible } = arg0);
@@ -55,7 +55,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     num = lineClamp;
   }
   const tmp5 = closure_18();
-  const context = noop.useContext(channel(16435).ICYMIContext);
+  const context = noop.useContext(channel(16695).ICYMIContext);
   if (cResult[0] === channel.guild_id) {
     if (cResult[1] === message) {
       let arr = cResult[2];
@@ -91,7 +91,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     if (cResult[6] !== message.attachments) {
       const _Symbol2 = Symbol;
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-        class L {
+        class A {
           constructor(arg0) {
             content_type = arg0.content_type;
             startsWithResult = undefined;
@@ -102,9 +102,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             return startsWithResult;
           }
         }
-        cResult[8] = L;
+        cResult[8] = A;
       } else {
-        class L {
+        class A {
           constructor(arg0) {
             content_type = arg0.content_type;
             startsWithResult = undefined;
@@ -117,11 +117,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         }
       }
       const attachments = message.attachments;
-      const everyResult = attachments.every(L);
+      const everyResult = attachments.every(A);
       cResult[6] = message.attachments;
       cResult[7] = everyResult;
     } else {
-      class L {
+      class A {
         constructor(arg0) {
           content_type = arg0.content_type;
           startsWithResult = undefined;
@@ -133,7 +133,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         }
       }
       if (cResult[9] === context) {
-        class L {
+        class A {
           constructor(arg0) {
             content_type = arg0.content_type;
             startsWithResult = undefined;
@@ -145,7 +145,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           }
         }
         if (cResult[12] === tmp5.messagePreview) {
-          class L {
+          class A {
             constructor(arg0) {
               content_type = arg0.content_type;
               startsWithResult = undefined;
@@ -157,7 +157,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             }
           }
           if (cResult[15] === tmp17) {
-            class L {
+            class A {
               constructor(arg0) {
                 content_type = arg0.content_type;
                 startsWithResult = undefined;
@@ -171,7 +171,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           }
           let tmp27Result = !tmp14;
           if (!tmp14) {
-            class L {
+            class A {
               constructor(arg0) {
                 content_type = arg0.content_type;
                 startsWithResult = undefined;
@@ -184,7 +184,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             }
             const obj2 = { message, muted: stateFromStores, lineClamp: num, messageOptions: null, pointerEvents: null };
             if (0 === arr.length) {
-              class L {
+              class A {
                 constructor(arg0) {
                   content_type = arg0.content_type;
                   startsWithResult = undefined;
@@ -196,7 +196,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                 }
               }
               if (message.attachments.length > 0) {
-                class L {
+                class A {
                   constructor(arg0) {
                     content_type = arg0.content_type;
                     startsWithResult = undefined;
@@ -208,7 +208,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                   }
                 }
                 if (0 === message.embeds.length) {
-                  class L {
+                  class A {
                     constructor(arg0) {
                       content_type = arg0.content_type;
                       startsWithResult = undefined;
@@ -224,7 +224,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             }
             obj2.messageOptions = undefined;
             if (tmp17) {
-              class L {
+              class A {
                 constructor(arg0) {
                   content_type = arg0.content_type;
                   startsWithResult = undefined;
@@ -237,7 +237,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               }
             }
             obj2.pointerEvents = "none";
-            tmp27Result = tmp27(channel(16478).MessageRowPreview, obj2);
+            tmp27Result = tmp27(channel(16738).MessageRowPreview, obj2);
           }
           cResult[15] = tmp17;
           cResult[16] = tmp14;
@@ -254,7 +254,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
       let tmp22 = null;
       if (!tmp4) {
-        class L {
+        class A {
           constructor(arg0) {
             content_type = arg0.content_type;
             startsWithResult = undefined;
@@ -275,13 +275,13 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const tmpResult = channel(504);
   }
   const obj = channel(576);
-  const result = channel(7950).extractMediaSourcesFromMessage(message, message, channel.guild_id, channel(8034).GRAVITY_VALID_EMBED_TYPES);
+  const result = channel(8368).extractMediaSourcesFromMessage(message, message, channel.guild_id, channel(8442).GRAVITY_VALID_EMBED_TYPES);
   cResult[0] = channel.guild_id;
   cResult[1] = message;
   cResult[2] = result;
   arr = result;
-  const tmpResult2 = channel(7950);
-}) : ((message) => {
+  const tmpResult2 = channel(8368);
+}) : (function MessageRowContent(message) {
   message = message.message;
   const channel = message.channel;
   let num = message.lineClamp;
@@ -297,9 +297,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     flag2 = false;
   }
   const tmp = closure_18();
-  const context = noop.useContext(message(16435).ICYMIContext);
-  const result = message(7950).extractMediaSourcesFromMessage(message, message, channel.guild_id, message(8034).GRAVITY_VALID_EMBED_TYPES);
-  const obj = message(7950);
+  const context = noop.useContext(message(16695).ICYMIContext);
+  const result = message(8368).extractMediaSourcesFromMessage(message, message, channel.guild_id, message(8442).GRAVITY_VALID_EMBED_TYPES);
+  const obj = message(8368);
   const items = [UserGuildSettingsStore];
   const stateFromStores = message(504).useStateFromStores(items, () => UserGuildSettingsStore.isChannelMuted(channel.getGuildId(), channel.id));
   const items1 = [message.attachments.length, , ];
@@ -343,14 +343,14 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       str = "auto";
     }
     obj5.pointerEvents = str;
-    tmp12Result = closure_14(tmp2(16478).MessageRowPreview, obj5);
+    tmp12Result = closure_14(tmp2(16738).MessageRowPreview, obj5);
   }
   const items3 = [tmp12Result, , ];
   let tmp13 = result.length > 0;
   if (tmp13) {
     const obj7 = { style: tmp.media, children: null };
     const obj8 = { message, visible: flag2, itemType: "message" };
-    obj7.children = closure_14(channel(16479), obj8);
+    obj7.children = closure_14(channel(16739), obj8);
     tmp13 = closure_14(View, obj7);
   }
   items3[1] = tmp13;
@@ -358,7 +358,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (tmp16) {
     const obj9 = { style: tmp.media, children: null };
     const obj10 = { message, muted: stateFromStores, lineClamp: 3 };
-    obj9.children = closure_14(tmp2(16478).NonMediaEmbedsRowPreview, obj10);
+    obj9.children = closure_14(tmp2(16738).NonMediaEmbedsRowPreview, obj10);
     tmp16 = closure_14(View, obj9);
   }
   items3[2] = tmp16;
@@ -367,12 +367,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 });
 let closure_19 = tmp4;
 ReactCompilerGating = fn(558);
-let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((message) => {
+let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function ReplyMessageContent(message) {
   const cResult = message(576).c(44);
   message = message.message;
   ({ channel, guild } = message);
   const tmp4 = closure_18();
-  const context = noop.useContext(message(16435).ICYMIContext);
+  const context = noop.useContext(message(16695).ICYMIContext);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
     cResult[0] = items;
@@ -411,7 +411,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((message) => {
     if (colorString == null) {
       colorString = closure_12;
     }
-    const width = noop.useContext(tmp(16435).ICYMIContext).width;
+    const width = noop.useContext(tmp(16695).ICYMIContext).width;
     if (null == stateFromStores) {
       return null;
     } else {
@@ -420,7 +420,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((message) => {
         const obj3 = { variant: "text-sm/semibold", color: "text-muted", style: { fontStyle: "italic" }, children: null };
         const intl = tmp(1126).intl;
         obj3.children = intl.string(tmp(1126).t.mPPcez);
-        const tmp18 = closure_14(tmp(4892).Text, obj3);
+        const tmp18 = closure_14(tmp(5086).Text, obj3);
         cResult[7] = tmp18;
         let tmp16 = tmp18;
       } else {
@@ -519,7 +519,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((message) => {
                         tmp43 = tmp46;
                       }
                       const obj9 = { value: tmp35, children: tmp36 };
-                      const tmp42 = closure_14(tmp(16435).ICYMIContext.Provider, obj9);
+                      const tmp42 = closure_14(tmp(16695).ICYMIContext.Provider, obj9);
                       cResult[30] = tmp35;
                       cResult[31] = tmp36;
                       cResult[32] = tmp42;
@@ -544,23 +544,23 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((message) => {
               tmp35 = obj12;
             }
             const obj13 = { variant: "text-md/semibold", style: tmp28, lineClamp: 1, children: tmp29 };
-            const tmp33 = closure_14(tmp(4892).Text, obj13);
+            const tmp33 = closure_14(tmp(5086).Text, obj13);
             cResult[19] = tmp28;
             cResult[20] = tmp29;
             cResult[21] = tmp33;
             tmp31 = tmp33;
           }
         }
-        const name = tmp(5048).getName(guild.id, channel.id, stateFromStores);
+        const name = tmp(5405).getName(guild.id, channel.id, stateFromStores);
         cResult[15] = stateFromStores;
         cResult[16] = channel.id;
         cResult[17] = guild.id;
         cResult[18] = name;
         tmp29 = name;
-        const tmpResult4 = tmp(5048);
+        const tmpResult4 = tmp(5405);
       }
-      const obj14 = { animate: false, guildId: guild.id, user: stateFromStores, size: tmp(1188).AvatarSizes.SMALL };
-      const tmp22 = closure_14(tmp(1188).Avatar, obj14);
+      const obj14 = { animate: false, guildId: guild.id, user: stateFromStores, size: tmp(1200).AvatarSizes.SMALL };
+      const tmp22 = closure_14(tmp(1200).Avatar, obj14);
       cResult[8] = stateFromStores;
       cResult[9] = guild.id;
       cResult[10] = tmp22;
@@ -578,11 +578,11 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((message) => {
   cResult[6] = E;
   tmp12 = E;
   const tmpResult = message(504);
-}) : ((message) => {
+}) : (function ReplyMessageContent(message) {
   message = message.message;
   ({ channel, guild } = message);
   const tmp = closure_18();
-  const context = noop.useContext(message(16435).ICYMIContext);
+  const context = noop.useContext(message(16695).ICYMIContext);
   const items = [UserStore];
   const stateFromStores = message(504).useStateFromStores(items, () => UserStore.getUser(message.author.id));
   const obj2 = message(504);
@@ -595,44 +595,44 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((message) => {
   if (colorString == null) {
     colorString = closure_12;
   }
-  const width = noop.useContext(tmp2(16435).ICYMIContext).width;
+  const width = noop.useContext(tmp2(16695).ICYMIContext).width;
   let tmp8 = null;
   if (null != stateFromStores) {
     const obj4 = { style: tmp.replyPreview, children: null };
     const obj5 = { variant: "text-sm/semibold", color: "text-muted", style: { fontStyle: "italic" }, children: null };
     const intl = tmp2(1126).intl;
     obj5.children = intl.string(tmp2(1126).t.mPPcez);
-    const items2 = [closure_14(tmp2(4892).Text, obj5), ];
+    const items2 = [closure_14(tmp2(5086).Text, obj5), ];
     const obj6 = { style: tmp.replyInner, children: null };
-    const obj7 = { animate: false, guildId: guild.id, user: stateFromStores, size: tmp2(1188).AvatarSizes.SMALL };
-    const items3 = [closure_14(tmp2(1188).Avatar, obj7), ];
+    const obj7 = { animate: false, guildId: guild.id, user: stateFromStores, size: tmp2(1200).AvatarSizes.SMALL };
+    const items3 = [closure_14(tmp2(1200).Avatar, obj7), ];
     const obj8 = { style: null, children: null };
     const obj9 = { gap: 4, width: width - context.inset - 2 * ITEM_PADDING - 2 * PX_12 - 30 - PX_8 - 2 };
     obj8.style = obj9;
     const obj10 = { variant: "text-md/semibold", style: null, lineClamp: 1, children: null };
     const obj11 = { color: colorString };
     obj10.style = obj11;
-    obj10.children = tmp2(5048).getName(guild.id, channel.id, stateFromStores);
-    const items4 = [closure_14(tmp2(4892).Text, obj10), ];
+    obj10.children = tmp2(5405).getName(guild.id, channel.id, stateFromStores);
+    const items4 = [closure_14(tmp2(5086).Text, obj10), ];
     const obj12 = { value: null, children: null };
     const obj13 = { width: width - 2 * PX_12 - 30 - PX_8 - 2, margin: null, inset: null };
     ({ margin: obj14.margin, inset: obj14.inset } = context);
     obj12.value = obj13;
     const obj15 = { message, channel, guild, nested: true };
     obj12.children = closure_14(closure_19, obj15);
-    items4[1] = closure_14(tmp2(16435).ICYMIContext.Provider, obj12);
+    items4[1] = closure_14(tmp2(16695).ICYMIContext.Provider, obj12);
     obj8.children = items4;
     items3[1] = closure_15(View, obj8);
     obj6.children = items3;
     items2[1] = closure_15(View, obj6);
     obj4.children = items2;
     tmp8 = closure_15(View, obj4);
-    const tmp2Result = tmp2(5048);
+    const tmp2Result = tmp2(5405);
   }
   return tmp8;
 });
 ReactCompilerGating = fn(558);
-let closure_21 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((message) => {
+let closure_21 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelRow(message) {
   const cResult = message(guild[15]).c(65);
   message = message.message;
   const channel = message.channel;
@@ -851,7 +851,7 @@ let closure_21 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((mess
                                                     }
                                                     cResult[58] = tmp20;
                                                     cResult[59] = tmp22;
-                                                    class S {
+                                                    class M {
                                                       constructor() {
                                                         tmp = guild;
                                                         id = undefined;
@@ -966,7 +966,7 @@ let closure_21 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((mess
                                 }
                                 cResult[43] = tmp19.pressable;
                                 cResult[44] = tmp30;
-                                class S {
+                                class M {
                                   constructor() {
                                     tmp = guild;
                                     id = undefined;
@@ -1144,7 +1144,7 @@ let closure_21 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((mess
           cResult[18] = G;
           tmp22 = G;
         }
-        class R {
+        class F {
           constructor() {
             obj = closure_1(closure_2[28]);
             itemInteractedResult = obj.itemInteracted(message.id, "message", "long_press_message");
@@ -1159,8 +1159,8 @@ let closure_21 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((mess
         }
         cResult[12] = channel;
         cResult[13] = message;
-        cResult[14] = R;
-        tmp21 = R;
+        cResult[14] = F;
+        tmp21 = F;
       }
       class E {
         constructor() {
@@ -1176,7 +1176,7 @@ let closure_21 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((mess
       }
       cResult[9] = channel.id;
       cResult[10] = message.id;
-      class S {
+      class M {
         constructor() {
           tmp = guild;
           id = undefined;
@@ -1206,7 +1206,7 @@ let closure_21 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((mess
     cResult[8] = items3;
     tmp11 = items3;
   }
-  class S {
+  class M {
     constructor() {
       tmp = guild;
       id = undefined;
@@ -1229,10 +1229,10 @@ let closure_21 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((mess
   }
   cResult[3] = guild.id;
   cResult[4] = message.author.id;
-  cResult[5] = S;
-  tmp8 = S;
+  cResult[5] = M;
+  tmp8 = M;
   const tmpResult = message(guild[19]);
-}) : ((message) => {
+}) : (function ChannelRow(message) {
   message = message.message;
   const channel = message.channel;
   guild = message.guild;
@@ -1331,11 +1331,11 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/native/ICYMIMessageRow.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function MessageRowWrapper(arg0) {
   const cResult = gravityMessage(576).c(15);
   ({ messageContext, visible, message } = arg0);
   const obj = gravityMessage(576);
-  gravityMessage = gravityMessage(16437).useGravityMessage(message);
+  gravityMessage = gravityMessage(16697).useGravityMessage(message);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ChannelStore];
     cResult[0] = items;
@@ -1353,7 +1353,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   } else {
     tmp7 = cResult[2];
   }
-  const obj2 = gravityMessage(16437);
+  const obj2 = gravityMessage(16697);
   const stateFromStores = gravityMessage(504).useStateFromStores(first, tmp7);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [GuildStore];
@@ -1391,15 +1391,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[6] = items2;
   }
   if (cResult[7] !== gravityMessage.author.id) {
-    class T {
+    class S {
       constructor() {
         return closure_8.isBlockedOrIgnored(closure_0.author.id);
       }
     }
     cResult[7] = gravityMessage.author.id;
-    cResult[8] = T;
+    cResult[8] = S;
   } else {
-    class T {
+    class S {
       constructor() {
         return closure_8.isBlockedOrIgnored(closure_0.author.id);
       }
@@ -1407,19 +1407,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   gravityMessage(504);
   if (null != stateFromStores) {
-    class T {
+    class S {
       constructor() {
         return closure_8.isBlockedOrIgnored(closure_0.author.id);
       }
     }
     if (null != stateFromStores1) {
-      class T {
+      class S {
         constructor() {
           return closure_8.isBlockedOrIgnored(closure_0.author.id);
         }
       }
       if (!tmp19) {
-        class T {
+        class S {
           constructor() {
             return closure_8.isBlockedOrIgnored(closure_0.author.id);
           }
@@ -1436,11 +1436,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
   }
   return null;
-}) : ((arg0) => {
+}) : (function MessageRowWrapper(arg0) {
   let gravityMessage;
   ({ message, messageContext, visible } = arg0);
-  gravityMessage = gravityMessage(16437).useGravityMessage(message);
-  const obj = gravityMessage(16437);
+  gravityMessage = gravityMessage(16697).useGravityMessage(message);
+  const obj = gravityMessage(16697);
   const items = [ChannelStore];
   const stateFromStores = gravityMessage(504).useStateFromStores(items, () => ChannelStore.getChannel(gravityMessage.getChannelId()));
   const obj2 = gravityMessage(504);

@@ -1,19 +1,19 @@
-// === Module 15100: AppearanceThemePickerSetting ===
+// === Module 15362: AppearanceThemePickerSetting ===
 
-// Module 15100 (AppearanceThemePickerSetting)
+// Module 15362 (AppearanceThemePickerSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import ThemeStore from "ThemeStore" /* 1193 */;
+import ThemeStore from "ThemeStore" /* 1205 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11142);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const SettingBuilders = fn(11262);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsSingleThemePickerVisible() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ThemeStore];
-    const fn = function s() {
+    const fn = function n() {
       return sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled();
     };
     cResult[0] = items;
@@ -24,7 +24,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     [tmp4, tmp5] = cResult;
   }
   return !initialize.useStateFromStores(tmp4, tmp5);
-}) : (() => {
+}) : (function useIsSingleThemePickerVisible() {
   const items = [ThemeStore];
   return !initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
 });
@@ -33,12 +33,12 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.string(util.t.Ksh3ik);
   },
-  parent: fn(7645).MobileUserSettings.APPEARANCE,
-  usePredicate: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  parent: fn(7966).MobileUserSettings.APPEARANCE,
+  usePredicate: ReactCompilerGating.isReactCompilerEnabled() ? (function useIsSingleThemePickerVisible() {
     const cResult = c.c(2);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
       const items = [ThemeStore];
-      const fn = function s() {
+      const fn = function n() {
         return sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled();
       };
       cResult[0] = items;
@@ -49,11 +49,11 @@ const route = SettingBuilders.createRoute({
       [tmp4, tmp5] = cResult;
     }
     return !initialize.useStateFromStores(tmp4, tmp5);
-  }) : (() => {
+  }) : (function useIsSingleThemePickerVisible() {
     const items = [ThemeStore];
     return !initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
   }),
-  useTrailing: fn(15094).useAppearanceSettingTrailing,
+  useTrailing: fn(15356).useAppearanceSettingTrailing,
   screen: {
     route: fn(1085).UserSettingsSections.APPEARANCE_THEME_PICKER,
     getComponent() {

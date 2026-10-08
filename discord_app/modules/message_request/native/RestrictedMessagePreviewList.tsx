@@ -1,15 +1,15 @@
-// === Module 17104: RestrictedMessagePreviewList ===
+// === Module 17385: RestrictedMessagePreviewList ===
 
-// Module 17104 (RestrictedMessagePreviewList)
+// Module 17385 (RestrictedMessagePreviewList)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import DateUtils from "DateUtils" /* 4558 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import ImageWarningIcon from "ImageWarningIcon" /* 5872 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7861 */;
-import RestrictedBlockedMessageGroupDefault from "RestrictedBlockedMessageGroup" /* 17107 */;
+import DateUtils from "DateUtils" /* 4750 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 8184 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8279 */;
+import RestrictedBlockedMessageGroupDefault from "RestrictedBlockedMessageGroup" /* 17388 */;
 import noop from "module_19" /* 19 */;
-import MessageStore from "MessageStore" /* 5116 */;
+import MessageStore from "MessageStore" /* 5428 */;
 
 const require = globalThis.__r;
 
@@ -54,11 +54,11 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
 let closure_9 = { renderEmbeds: false, renderReactions: false, inlineEmbedMedia: false, inlineAttachmentMedia: false, animateEmoji: false, gifAutoPlay: false, timestampHourCycle: 0, renderCodedLinks: false, renderGiftCode: false, renderActivityInstanceEmbed: false, renderActivityInviteEmbed: false, renderComponents: false, renderThreadEmbeds: false, renderReplies: false, renderCommunicationDisabled: false, renderAttachments: false, renderExecutedCommands: false, renderPolls: false, renderSharedClientTheme: false, renderForumPostActions: false, ignoreMentioned: false, ignoreEmbedDescriptionCache: false, forceHideSimpleEmbedContent: false, enableSwipeActions: false, useAlternateEmbedColors: false, restrictedPreview: true };
-const createStyles = fn(4896);
-let obj2 = { container: { flexDirection: "column" }, hiddenMedia: { marginLeft: fn(17105).RESTRICTED_CONTENT_INSET }, messageRow: { position: "relative" }, avatarHitbox: null, dateDivider: null, dividerLine: null, mediaPlaceholderCard: null, mediaHiddenRow: null };
-let size = { position: "absolute", top: 0, left: 0, width: fn(17105).RESTRICTED_CONTENT_INSET, height: fn(17105).RESTRICTED_AVATAR_SIZE };
+const createStyles = fn(5090);
+let obj2 = { container: { flexDirection: "column" }, hiddenMedia: { marginLeft: fn(17386).RESTRICTED_CONTENT_INSET }, messageRow: { position: "relative" }, avatarHitbox: null, dateDivider: null, dividerLine: null, mediaPlaceholderCard: null, mediaHiddenRow: null };
+let size = { position: "absolute", top: 0, left: 0, width: fn(17386).RESTRICTED_CONTENT_INSET, height: fn(17386).RESTRICTED_AVATAR_SIZE };
 obj2.avatarHitbox = size;
-let obj3 = { marginLeft: fn(17105).RESTRICTED_CONTENT_INSET };
+let obj3 = { marginLeft: fn(17386).RESTRICTED_CONTENT_INSET };
 obj2.dateDivider = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_12 };
 let obj4 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_12 };
 obj2.dividerLine = { flex: 1, height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
@@ -68,7 +68,7 @@ let obj6 = { alignItems: "center", justifyContent: "center", gap: nativeDefault.
 obj2.mediaHiddenRow = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_4 };
 let closure_10 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((count) => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function HiddenMedia(count) {
   const cResult = require("c").c(12);
   let mediaPlaceholderCard = count.count;
   const tmp4 = closure_10();
@@ -77,7 +77,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((count) => {
     if (cResult[1] === tmp4.mediaPlaceholderCard) {
       const _Symbol = Symbol;
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp11 = closure_6(tmp(4818).CircleInformationIcon, { size: "sm", color: "text-muted" });
+        const tmp11 = closure_6(tmp(5012).CircleInformationIcon, { size: "sm", color: "text-muted" });
         cResult[5] = tmp11;
         let tmp9 = tmp11;
       } else {
@@ -88,7 +88,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((count) => {
         let obj2 = { variant: "text-sm/normal", color: "text-muted", children: null };
         let intl = tmp(1126).intl;
         obj2.children = intl.string(tmp(1126).t["VGf+K3"]);
-        const tmp14 = closure_6(tmp(4892).Text, obj2);
+        const tmp14 = closure_6(tmp(5086).Text, obj2);
         cResult[6] = tmp14;
         let tmp12 = tmp14;
       } else {
@@ -144,7 +144,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((count) => {
   cResult[1] = mediaPlaceholderCard;
   cResult[2] = Array.from({ length: mediaPlaceholderCard }, tmp6);
   const arr = Array.from({ length: mediaPlaceholderCard }, tmp6);
-}) : ((length) => {
+}) : (function HiddenMedia(length) {
   const tmp = closure_10();
   _require = tmp;
   let obj = { children: null };
@@ -177,7 +177,7 @@ let obj7 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.spac
 size = fn(2);
 const result = size.fileFinishedImporting("modules/message_request/native/RestrictedMessagePreviewList.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function RestrictedMessagePreviewList(channelId) {
   const cResult = channelId(analyticsLocations[8]).c(25);
   channelId = channelId.channelId;
   const tmp4 = closure_10();
@@ -217,7 +217,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
     if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
       let obj3 = new tmp5(tmp2[17])();
       obj3.setOptions(closure_9);
-      class M {
+      class P {
         constructor(arg0) {
           closure_0 = channelId;
           tmp = closure_1(analyticsLocations[18])(channelId);
@@ -285,7 +285,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
                   }
                   let obj2 = { style: tmp20, children: tmp21 };
                   const tmp26 = arr3(tmp19, obj2);
-                  class M {
+                  class P {
                     constructor(arg0) {
                       closure_0 = channelId;
                       tmp = closure_1(analyticsLocations[18])(channelId);
@@ -332,7 +332,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
             }
           }
           arr3 = groupMessages(stateFromStoresArray);
-          class M {
+          class P {
             constructor(arg0) {
               closure_0 = channelId;
               tmp = closure_1(analyticsLocations[18])(channelId);
@@ -429,7 +429,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
         }
       }
     }
-    class M {
+    class P {
       constructor(arg0) {
         closure_0 = channelId;
         tmp = closure_1(analyticsLocations[18])(channelId);
@@ -470,8 +470,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
     cResult[9] = tmp4.avatarHitbox;
     cResult[10] = tmp4.hiddenMedia;
     cResult[11] = tmp4.messageRow;
-    cResult[12] = M;
-    tmp18 = M;
+    cResult[12] = P;
+    tmp18 = P;
   }
   const fn2 = function _(userId) {
     showUserProfileActionSheetDefault({ userId, channelId, sourceAnalyticsLocations: analyticsLocations });
@@ -481,7 +481,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   cResult[6] = fn2;
   tmp11 = fn2;
   const tmpResult = channelId(analyticsLocations[15]);
-}) : ((channelId) => {
+}) : (function RestrictedMessagePreviewList(channelId) {
   channelId = channelId.channelId;
   let analyticsLocations;
   let callback;

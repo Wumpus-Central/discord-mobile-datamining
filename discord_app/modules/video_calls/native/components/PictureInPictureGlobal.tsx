@@ -1,47 +1,47 @@
-// === Module 17116: PictureInPictureGlobal ===
+// === Module 17397: PictureInPictureGlobal ===
 
-// Module 17116 (PictureInPictureGlobal)
+// Module 17397 (PictureInPictureGlobal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native2 from "native" /* 1188 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import timing from "timing" /* 4897 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 5103 */;
-import NavigatorConstants from "NavigatorConstants" /* 6075 */;
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 9049 */;
-import transitionToActivityDefault from "transitionToActivity" /* 9085 */;
-import PictureInPictureDefault from "PictureInPicture" /* 9103 */;
-import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 9105 */;
-import getPIPBottomOffsetForPIPMode from "getPIPBottomOffsetForPIPMode" /* 17117 */;
+import native2 from "native" /* 1200 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import timing from "timing" /* 5091 */;
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6043 */;
+import NavigatorConstants from "NavigatorConstants" /* 6261 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7476 */;
+import transitionToActivityDefault from "transitionToActivity" /* 10668 */;
+import PictureInPictureDefault from "PictureInPicture" /* 10677 */;
+import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 10679 */;
+import getPIPBottomOffsetForPIPMode from "getPIPBottomOffsetForPIPMode" /* 17398 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2062 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6041 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 1999 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
 
 const require = globalThis.__r;
 
-const usePipDimensionsDefault = tmp5(9107);
+const usePipDimensionsDefault = tmp5(10681);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire, TouchableOpacity: closure_7 } = get_ActivityIndicator);
-let closure_10 = fn(9100).useBestActiveChatInputContainerHeight;
+let closure_10 = fn(9318).useBestActiveChatInputContainerHeight;
 const PictureInPicturePositions = fn(1085).PictureInPicturePositions;
-const ParticipantTypes = fn(4917).ParticipantTypes;
+const ParticipantTypes = fn(5113).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 let c17 = 12;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { container: { flex: 1, marginLeft: 12, marginRight: 12 }, elevationShadow: null, pip: null, background: null };
-const native = fn(1188);
-obj.elevationShadow = native.generateBoxShadowStyle(fn(1188).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
+const native = fn(1200);
+obj.elevationShadow = native.generateBoxShadowStyle(fn(1200).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
 obj.pip = { borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 let obj3 = { borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 obj.background = { backgroundColor: nativeDefault.colors.BLACK, borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 let closure_18 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
-let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function PIPContent(channel) {
   const cResult = channel(576).c(64);
   channel = channel.channel;
   closure_18();
@@ -194,59 +194,87 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((chan
       }
     }
     if (cResult[10] !== tmp18) {
-      class C {
+      class R {
         constructor() {
-          isLocalVideoDisabledResult = null != closure_1;
-          if (isLocalVideoDisabledResult) {
-            tmp3 = closure_12;
-            isLocalVideoDisabledResult = closure_12.isLocalVideoDisabled(tmp.id);
+          currentEmbeddedActivity = closure_8.getCurrentEmbeddedActivity();
+          participant = null;
+          if (null != currentEmbeddedActivity) {
+            tmp3 = closure_9;
+            tmp4 = channel;
+            tmp5 = closure_0;
+            tmp6 = closure_2;
+            obj = closure_0(closure_2[18]);
+            obj1 = { applicationId: null, instanceId: null };
+            ({ applicationId: obj2.applicationId, compositeInstanceId: obj2.instanceId } = currentEmbeddedActivity);
+            participant = closure_9.getParticipant(channel.id, obj.getEmbeddedActivityParticipantId(obj1));
           }
-          return isLocalVideoDisabledResult;
+          return participant;
         }
       }
       const items3 = [tmp18];
       cResult[10] = tmp18;
-      cResult[11] = C;
+      cResult[11] = tmp23;
       cResult[12] = items3;
       let tmp22 = items3;
     } else {
-      class C {
+      class R {
         constructor() {
-          isLocalVideoDisabledResult = null != closure_1;
-          if (isLocalVideoDisabledResult) {
-            tmp3 = closure_12;
-            isLocalVideoDisabledResult = closure_12.isLocalVideoDisabled(tmp.id);
+          currentEmbeddedActivity = closure_8.getCurrentEmbeddedActivity();
+          participant = null;
+          if (null != currentEmbeddedActivity) {
+            tmp3 = closure_9;
+            tmp4 = channel;
+            tmp5 = closure_0;
+            tmp6 = closure_2;
+            obj = closure_0(closure_2[18]);
+            obj1 = { applicationId: null, instanceId: null };
+            ({ applicationId: obj2.applicationId, compositeInstanceId: obj2.instanceId } = currentEmbeddedActivity);
+            participant = closure_9.getParticipant(channel.id, obj.getEmbeddedActivityParticipantId(obj1));
           }
-          return isLocalVideoDisabledResult;
+          return participant;
         }
       }
       tmp22 = cResult[12];
     }
-    const stateFromStores2 = tmp(504).useStateFromStores(tmp20, C, tmp22);
+    const stateFromStores2 = tmp(504).useStateFromStores(tmp20, tmp23, tmp22);
     const _Symbol2 = Symbol;
     if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-      class C {
+      class R {
         constructor() {
-          isLocalVideoDisabledResult = null != closure_1;
-          if (isLocalVideoDisabledResult) {
-            tmp3 = closure_12;
-            isLocalVideoDisabledResult = closure_12.isLocalVideoDisabled(tmp.id);
+          currentEmbeddedActivity = closure_8.getCurrentEmbeddedActivity();
+          participant = null;
+          if (null != currentEmbeddedActivity) {
+            tmp3 = closure_9;
+            tmp4 = channel;
+            tmp5 = closure_0;
+            tmp6 = closure_2;
+            obj = closure_0(closure_2[18]);
+            obj1 = { applicationId: null, instanceId: null };
+            ({ applicationId: obj2.applicationId, compositeInstanceId: obj2.instanceId } = currentEmbeddedActivity);
+            participant = closure_9.getParticipant(channel.id, obj.getEmbeddedActivityParticipantId(obj1));
           }
-          return isLocalVideoDisabledResult;
+          return participant;
         }
       }
       const items4 = [ChannelRTCStore, AuthenticationStore];
       cResult[13] = items4;
-      const tmp24 = items4;
+      const tmp25 = items4;
     } else {
-      class C {
+      class R {
         constructor() {
-          isLocalVideoDisabledResult = null != closure_1;
-          if (isLocalVideoDisabledResult) {
-            tmp3 = closure_12;
-            isLocalVideoDisabledResult = closure_12.isLocalVideoDisabled(tmp.id);
+          currentEmbeddedActivity = closure_8.getCurrentEmbeddedActivity();
+          participant = null;
+          if (null != currentEmbeddedActivity) {
+            tmp3 = closure_9;
+            tmp4 = channel;
+            tmp5 = closure_0;
+            tmp6 = closure_2;
+            obj = closure_0(closure_2[18]);
+            obj1 = { applicationId: null, instanceId: null };
+            ({ applicationId: obj2.applicationId, compositeInstanceId: obj2.instanceId } = currentEmbeddedActivity);
+            participant = closure_9.getParticipant(channel.id, obj.getEmbeddedActivityParticipantId(obj1));
           }
-          return isLocalVideoDisabledResult;
+          return participant;
         }
       }
     }
@@ -290,7 +318,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((chan
       }
     }
     const tmpResult7 = tmp(504);
-    const stateFromStores3 = tmp(504).useStateFromStores(tmp24, B);
+    const stateFromStores3 = tmp(504).useStateFromStores(tmp25, B);
     if (cResult[16] !== channel) {
       class M {
         constructor() {
@@ -319,9 +347,9 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((chan
           return;
         }
       }
-      tmp30[0] = channel;
+      tmp31[0] = channel;
       cResult[18] = channel;
-      cResult[19] = tmp30;
+      cResult[19] = tmp31;
     } else {
       class M {
         constructor() {
@@ -332,8 +360,8 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((chan
       }
     }
     const tmpResult8 = tmp(504);
-    const shouldForcePipOrientation = tmp(9104).useShouldForcePipOrientation(tmp30);
-    tmp(5919);
+    const shouldForcePipOrientation = tmp(10678).useShouldForcePipOrientation(tmp31);
+    tmp(8302);
     if (cResult[20] === channel.id) {
       class M {
         constructor() {
@@ -342,8 +370,8 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((chan
           return;
         }
       }
-      ({ width, height } = usePipDimensionsDefault(tmp34));
-      if (tmp33) {
+      ({ width, height } = usePipDimensionsDefault(tmp35));
+      if (tmp34) {
         class M {
           constructor() {
             obj = closure_0(closure_2[20]);
@@ -369,19 +397,19 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((chan
           }
         }
       }
-      const size = { height, width, flexDirection: tmp36 };
+      const size = { height, width, flexDirection: tmp37 };
       cResult[23] = height;
       cResult[24] = width;
-      cResult[25] = tmp36;
+      cResult[25] = tmp37;
       cResult[26] = size;
-      const tmp35 = usePipDimensionsDefault(tmp34);
+      const tmp36 = usePipDimensionsDefault(tmp35);
     }
     const obj2 = { channelId: channel.id, forcedOrientation: shouldForcePipOrientation };
     cResult[20] = channel.id;
     cResult[21] = shouldForcePipOrientation;
     cResult[22] = obj2;
-    tmp34 = obj2;
-    const tmpResult9 = tmp(9104);
+    tmp35 = obj2;
+    const tmpResult9 = tmp(10678);
   }
   let tmp19 = stateFromStores1;
   if (null != tmp6) {
@@ -407,7 +435,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((chan
   cResult[7] = tmp6;
   cResult[8] = tmp19;
   const tmpResult6 = channel(504);
-}) : ((channel) => {
+}) : (function PIPContent(channel) {
   channel = channel.channel;
   let stateFromStores1;
   let onDoubleTap;
@@ -575,7 +603,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((chan
   const tmp2Result4 = stateFromStores1(onDoubleTap[26]);
 }));
 ReactCompilerGating = fn(558);
-let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function PIPContentContainer(channel) {
   const cResult = c.c(7);
   channel = channel.channel;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -612,7 +640,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((chan
   cResult[6] = tmp12;
   tmp11 = tmp12;
   const tmp4 = _slicedToArray(noop.useState(first), 2);
-}) : ((channel) => {
+}) : (function PIPContentContainer(channel) {
   channel = channel.channel;
   [tmp2, tmp3] = noop.useState(() => constants.TOP_RIGHT);
   const obj = { channel, preferredPosition: tmp2, onMove: tmp3, children: null };
@@ -629,7 +657,7 @@ let obj5 = { backgroundColor: nativeDefault.colors.BLACK, borderRadius: nativeDe
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/components/PictureInPictureGlobal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function PictureInPictureGlobal(channel) {
   const cResult = num(derivedValue[15]).c(14);
   channel = channel.channel;
   const tmp4 = closure_18();
@@ -723,7 +751,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   cResult[2] = items1;
   tmp10 = items1;
   const tmp9 = require("useSafeAreaInsets")();
-}) : ((channel) => {
+}) : (function PictureInPictureGlobal(channel) {
   importDefault = undefined;
   let derivedValue;
   const tmp = closure_18();

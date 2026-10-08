@@ -1,19 +1,19 @@
-// === Module 7597: ConversationPreviewSkeleton ===
+// === Module 9304: ConversationPreviewSkeleton ===
 
-// Module 7597 (ConversationPreviewSkeleton)
+// Module 9304 (ConversationPreviewSkeleton)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import timing from "timing" /* 4897 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import timing from "timing" /* 5091 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(7118).MOBILE_PREVIEW_MESSAGE_COUNT;
+let closure_5 = fn(7304).MOBILE_PREVIEW_MESSAGE_COUNT;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { row: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_4 }, rowSpacing: null, avatar: null, lines: null, lineName: null, lineText: null };
 let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_4 };
 obj2.rowSpacing = { marginTop: nativeDefault.space.PX_26 };
@@ -33,7 +33,7 @@ const obj6 = { height: 10, borderRadius: nativeDefault.radii.xs, backgroundColor
 size = fn(2);
 let result = size.fileFinishedImporting("modules/conversations/components/native/ConversationPreviewSkeleton.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConversationPreviewSkeleton() {
   const cResult = require("c").c(8);
   const tmp4 = closure_8();
   _require = tmp4;
@@ -63,7 +63,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   fn2.__closure = { opacity: sharedValue };
   fn2.__workletHash = 11432452203963;
   fn2.__initData = __initData;
-  const animatedStyle = tmp(4618).useAnimatedStyle(fn2);
+  const animatedStyle = tmp(4810).useAnimatedStyle(fn2);
   if (cResult[3] !== tmp4) {
     const _Array = Array;
     let obj3 = { length: closure_5 };
@@ -91,13 +91,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
     return tmp14;
   }
-  const tmp15 = closure_6(sharedValue(4618).View, { style: animatedStyle, "aria-hidden": true, children: tmp10 });
+  const tmp15 = closure_6(sharedValue(4810).View, { style: animatedStyle, "aria-hidden": true, children: tmp10 });
   cResult[5] = animatedStyle;
   cResult[6] = tmp10;
   cResult[7] = tmp15;
   tmp14 = tmp15;
-  const tmpResult = tmp(4618);
-}) : (() => {
+  const tmpResult = tmp(4810);
+}) : (function ConversationPreviewSkeleton() {
   _require = closure_8();
   const sharedValue = require("ReanimatedRexport").useSharedValue(0.4);
   let items = [sharedValue];
@@ -129,5 +129,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       return React5(View, obj, arg1);
     })
   };
-  return closure_6(sharedValue(4618).View, obj3);
+  return closure_6(sharedValue(4810).View, obj3);
 });

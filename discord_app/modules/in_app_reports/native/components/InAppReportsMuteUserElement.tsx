@@ -1,13 +1,13 @@
-// === Module 12732: InAppReportsMuteUserElement ===
+// === Module 13400: InAppReportsMuteUserElement ===
 
-// Module 12732 (InAppReportsMuteUserElement)
-import NicknameUtilsDefault from "NicknameUtils" /* 5048 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5076 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 8113 */;
-import MuteSettingsUtils from "MuteSettingsUtils" /* 9813 */;
+// Module 13400 (InAppReportsMuteUserElement)
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5105 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5405 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7014 */;
+import MuteSettingsUtils from "MuteSettingsUtils" /* 10376 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
 
 require = fn;
 const AnalyticEvents = fn(1085).AnalyticEvents;
@@ -17,7 +17,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsMuteUserElement.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function MuteUserElement(user) {
   const cResult = user(reportId[7]).c(28);
   user = user.user;
   channelId = user.channelId;
@@ -118,7 +118,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
           }
         }
       }
-      class E {
+      class R {
         constructor() {
           tmp = closure_4(true);
           obj = closure_1(closure_2[11]);
@@ -136,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
       cResult[13] = tmp4;
       cResult[14] = reportId;
       cResult[15] = user.id;
-      cResult[16] = E;
+      cResult[16] = R;
       const tmp18 = channelId(noop.useState(muted), 2);
     }
   }
@@ -175,7 +175,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
   cResult[8] = user;
   cResult[9] = name;
   let obj3 = channelId(reportId[9]);
-}) : ((user) => {
+}) : (function MuteUserElement(user) {
   user = user.user;
   channelId = user.channelId;
   const reportId = user.reportId;

@@ -1,17 +1,17 @@
-// === Module 9895: useCoachmark ===
+// === Module 9375: useCoachmark ===
 
-// Module 9895 (useCoachmark)
+// Module 9375 (useCoachmark)
 import c from "c" /* 576 */;
-import v1 from "v1" /* 1266 */;
-import useTooltip from "useTooltip" /* 9896 */;
-import AnimatedCoachmark from "AnimatedCoachmark" /* 9902 */;
+import v1 from "v1" /* 1278 */;
+import useTooltip from "useTooltip" /* 9376 */;
+import AnimatedCoachmark from "AnimatedCoachmark" /* 9383 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 fn(558);
 const ReactCompilerGating = fn(558);
-let closure_4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAddCoachmark(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   context = noop.useContext(require("LayerContext").LayerContext);
@@ -32,7 +32,7 @@ let closure_4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = context;
   cResult[2] = fn;
   tmp3 = fn;
-}) : ((arg0) => {
+}) : (function useAddCoachmark(arg0) {
   _require = arg0;
   context = noop.useContext(require("LayerContext").LayerContext);
   const items = [context, arg0];
@@ -47,7 +47,7 @@ let closure_4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Coachmark/native/useCoachmark.native.tsx");
 
-export const useCoachmark = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export const useCoachmark = ReactCompilerGating.isReactCompilerEnabled() ? (function useCoachmark(arg0, arg1) {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const v4Result = v1.v4();
@@ -60,7 +60,7 @@ export const useCoachmark = ReactCompilerGating.isReactCompilerEnabled() ? ((arg
   const ref = noop.useRef(first);
   const tmp7 = closure_4(arg1);
   return useTooltip.useTooltipHelper(ref, arg0, tmp7);
-}) : ((arg0, arg1) => {
+}) : (function useCoachmark(arg0, arg1) {
   const ref = noop.useRef(v1.v4());
   const tmp2 = closure_4(arg1);
   return useTooltip.useTooltipHelper(ref, arg0, tmp2);

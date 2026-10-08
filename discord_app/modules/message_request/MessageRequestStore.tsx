@@ -1,7 +1,7 @@
-// === Module 6734: MessageRequestStore ===
+// === Module 6060: MessageRequestStore ===
 
-// Module 6734 (MessageRequestStore)
-import ChannelStore from "ChannelStore" /* 2051 */;
+// Module 6060 (MessageRequestStore)
+import ChannelStore from "ChannelStore" /* 2063 */;
 import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1084 */;
 
 function processChannel(isMessageRequest) {

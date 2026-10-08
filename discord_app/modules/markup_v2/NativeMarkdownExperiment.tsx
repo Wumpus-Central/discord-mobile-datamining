@@ -1,8 +1,8 @@
-// === Module 7773: NativeMarkdownExperiment ===
+// === Module 8094: NativeMarkdownExperiment ===
 
-// Module 7773 (NativeMarkdownExperiment)
+// Module 8094 (NativeMarkdownExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1440 */;
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -10,7 +10,7 @@ const apexExperiment = ApexExperiment.createApexExperiment({ name: "2025-04-nati
 const result = size.fileFinishedImporting("modules/markup_v2/NativeMarkdownExperiment.tsx");
 
 export const NativeMarkdownExperiment = apexExperiment;
-export const useNativeMarkdown = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+export const useNativeMarkdown = ReactCompilerGating.isReactCompilerEnabled() ? (function useNativeMarkdown(location) {
   const cResult = c.c(2);
   const _location = location.location;
   if (cResult[0] !== _location) {
@@ -22,4 +22,6 @@ export const useNativeMarkdown = ReactCompilerGating.isReactCompilerEnabled() ? 
     tmp2 = cResult[1];
   }
   return apexExperiment.useConfig(tmp2);
-}) : ((location) => apexExperiment.useConfig({ location: location.location }));
+}) : (function useNativeMarkdown(location) {
+  return apexExperiment.useConfig({ location: location.location });
+});

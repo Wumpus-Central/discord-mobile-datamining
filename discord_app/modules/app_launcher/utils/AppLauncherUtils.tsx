@@ -1,22 +1,22 @@
-// === Module 8826: AppLauncherUtils ===
+// === Module 9185: AppLauncherUtils ===
 
-// Module 8826 (AppLauncherUtils)
+// Module 9185 (AppLauncherUtils)
 import util from "util" /* 1126 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import Server from "Server" /* 1985 */;
-import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2016 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7043 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8547 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8758 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 8961 */;
-import getPlatformDefault from "getPlatform" /* 8962 */;
-import ApplicationInstallUtils from "ApplicationInstallUtils" /* 8970 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
+import Server from "Server" /* 1997 */;
+import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2028 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7231 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8586 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 9138 */;
+import getPlatformDefault from "getPlatform" /* 10627 */;
+import ApplicationInstallUtils from "ApplicationInstallUtils" /* 10639 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 11233 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 8827 */;
-import ApplicationRecord from "ApplicationRecord" /* 2009 */;
-import AppLauncherStore from "AppLauncherStore" /* 8960 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9186 */;
+import ApplicationRecord from "ApplicationRecord" /* 2021 */;
+import AppLauncherStore from "AppLauncherStore" /* 11791 */;
 
 const require = globalThis.__r;
 
@@ -67,8 +67,8 @@ function getShelfBadgeTypeIfActive(application) {
 }
 let closure_3 = ["fakeAppIconURL"];
 const ApplicationFlags = fn(1085).ApplicationFlags;
-const BuiltInSectionId = fn(5795).BuiltInSectionId;
-const MessageSendLocation = fn(4889).MessageSendLocation;
+const BuiltInSectionId = fn(5399).BuiltInSectionId;
+const MessageSendLocation = fn(5083).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/utils/AppLauncherUtils.tsx");
 
@@ -174,7 +174,7 @@ export const executeAppLauncherCommand = function executeAppLauncherCommand(arg0
             closure_129_0 = undefined;
             closure_129_1 = undefined;
             let maxSizeCallback = 1;
-            const obj5 = { command: tts, optionValues, context, commandTargetId, maxSizeCallback, commandOrigin, sectionName, source: fn.entrypoint() };
+            const obj5 = { command: tts, optionValues, context, commandTargetId, maxSizeCallback, commandOrigin, sectionName, source: submitCommand.entrypoint() };
             sectionName = 2;
             commandOrigin = 1;
             const obj6 = { value: require("executeCommand")(obj5), done: false };
@@ -236,7 +236,7 @@ export const executeAppLauncherCommand = function executeAppLauncherCommand(arg0
       }
     }
   });
-  const fn = function() {
+  function submitCommand() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -245,8 +245,8 @@ export const executeAppLauncherCommand = function executeAppLauncherCommand(arg0
       applyArgumentsResult = apply(self, arguments);
     }
     return applyArgumentsResult;
-  };
-  return fn();
+  }
+  return submitCommand();
 };
 export const getApplicationDetails = function getApplicationDetails(id) {
   let obj = arg1;

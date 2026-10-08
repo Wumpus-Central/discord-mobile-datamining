@@ -1,17 +1,17 @@
-// === Module 13251: PremiumMarketingButtonActions ===
+// === Module 13551: PremiumMarketingButtonActions ===
 
-// Module 13251 (PremiumMarketingButtonActions)
-import ProductIds from "ProductIds" /* 6926 */;
-import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 6941 */;
-import cta_button from "cta_button" /* 10416 */;
-import navigateToSocialLayerStorefrontDefault from "navigateToSocialLayerStorefront" /* 13252 */;
-import showMarketingMomentRewardScreen from "showMarketingMomentRewardScreen" /* 13253 */;
-import PromotionsStore from "PromotionsStore" /* 10409 */;
+// Module 13551 (PremiumMarketingButtonActions)
+import ProductIds from "ProductIds" /* 7115 */;
+import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7130 */;
+import cta_button from "cta_button" /* 10013 */;
+import navigateToSocialLayerStorefrontDefault from "navigateToSocialLayerStorefront" /* 13552 */;
+import showMarketingMomentRewardScreen from "showMarketingMomentRewardScreen" /* 13553 */;
+import PromotionsStore from "PromotionsStore" /* 10006 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const PremiumTypes = fn(1379).PremiumTypes;
+const PremiumTypes = fn(1391).PremiumTypes;
 const Constants = fn(1085);
 ({ AnalyticsSections: hasOwnProperty, AnalyticsObjects: metroRequire, AnalyticsObjectTypes: closure_7, UserSettingsSections: closure_8 } = Constants);
 const size = fn(2);
@@ -52,7 +52,7 @@ export const getButtonActionHandler = function getButtonActionHandler(arg0) {
         analyticsLocations,
         premiumType: onPaymentDismiss.TIER_2,
         onPaymentSuccess,
-        onPaymentDismiss(arg0) {
+        onPaymentDismiss: function handlePaymentDismiss(arg0) {
           ({ productId, isSuccess } = arg0);
           if (onPaymentDismiss != null) {
             const obj = { productId, isSuccess };

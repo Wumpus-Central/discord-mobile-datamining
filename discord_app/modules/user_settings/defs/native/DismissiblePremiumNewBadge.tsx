@@ -1,18 +1,18 @@
-// === Module 14549: DismissiblePremiumNewBadge ===
+// === Module 14810: DismissiblePremiumNewBadge ===
 
-// Module 14549 (DismissiblePremiumNewBadge)
+// Module 14810 (DismissiblePremiumNewBadge)
 import nativeDefault from "native" /* 587 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
-import native from "native" /* 1188 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import LinearGradientDefault from "LinearGradient" /* 5612 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10367 */;
+import native from "native" /* 1200 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import LinearGradientDefault from "LinearGradient" /* 5387 */;
+import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 9964 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const Gradients = fn(6951).Gradients;
+const Gradients = fn(7140).Gradients;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { newTag: { backgroundColor: "transparent" }, newTagContainer: { borderRadius: nativeDefault.radii.sm, marginLeft: nativeDefault.space.PX_4 } };
 let closure_5 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -20,7 +20,7 @@ let obj3 = { borderRadius: nativeDefault.radii.sm, marginLeft: nativeDefault.spa
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/DismissiblePremiumNewBadge.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((dismissibleContent) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function DismissiblePremiumNewBadge(dismissibleContent) {
   const cResult = dismissibleContent(noGradient[6]).c(13);
   dismissibleContent = dismissibleContent.dismissibleContent;
   const containerStyle = dismissibleContent.containerStyle;
@@ -110,7 +110,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((dismissibleConte
   cResult[8] = variantOverride;
   cResult[9] = fn;
   tmp5 = fn;
-}) : ((dismissibleContent) => {
+}) : (function DismissiblePremiumNewBadge(dismissibleContent) {
   dismissibleContent = dismissibleContent.dismissibleContent;
   ({ containerStyle: importDefault, noGradient: dependencyMap, newPremiumStyle: Gradients, colors: jsx, variantOverride: closure_5 } = dismissibleContent);
   closure_6 = closure_5();

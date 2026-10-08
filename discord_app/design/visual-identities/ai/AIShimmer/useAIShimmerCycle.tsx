@@ -1,7 +1,7 @@
-// === Module 14235: useAIShimmerCycle ===
+// === Module 14059: useAIShimmerCycle ===
 
-// Module 14235 (useAIShimmerCycle)
-import waveTransition from "waveTransition" /* 14233 */;
+// Module 14059 (useAIShimmerCycle)
+import waveTransition from "waveTransition" /* 14057 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -22,7 +22,7 @@ const result = size.fileFinishedImporting("design/visual-identities/ai/AIShimmer
 
 export { linesKeyFor };
 export { linesFromKey };
-export const useAIShimmerCycle = ReactCompilerGating.isReactCompilerEnabled() ? ((initialDelay) => {
+export const useAIShimmerCycle = ReactCompilerGating.isReactCompilerEnabled() ? (function useAIShimmerCycle(initialDelay) {
   const cResult = delay(initialDelay[3]).c(43);
   ({ text, delay } = initialDelay);
   initialDelay = initialDelay.initialDelay;
@@ -289,7 +289,7 @@ export const useAIShimmerCycle = ReactCompilerGating.isReactCompilerEnabled() ? 
       }
     }
   }
-  class K {
+  class I {
     constructor() {
       closure_17.current = onComplete;
       closure_18.current = onStart;
@@ -308,11 +308,11 @@ export const useAIShimmerCycle = ReactCompilerGating.isReactCompilerEnabled() ? 
   cResult[8] = onStart;
   cResult[9] = reducedMotion;
   cResult[10] = trailingWidth;
-  cResult[11] = K;
-  tmp9 = K;
+  cResult[11] = I;
+  tmp9 = I;
   let obj = delay(initialDelay[3]);
   tmp5 = duration;
-}) : ((initialDelay) => {
+}) : (function useAIShimmerCycle(initialDelay) {
   ({ text, delay } = initialDelay);
   initialDelay = initialDelay.initialDelay;
   const duration = initialDelay.duration;

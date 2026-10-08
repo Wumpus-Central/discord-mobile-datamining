@@ -1,11 +1,11 @@
-// === Module 12971: FriendRequestNote ===
+// === Module 13250: FriendRequestNote ===
 
-// Module 12971 (FriendRequestNote)
+// Module 13250 (FriendRequestNote)
 import nativeDefault from "native" /* 587 */;
-import PeopleListTracking from "PeopleListTracking" /* 12973 */;
+import PeopleListTracking from "PeopleListTracking" /* 13252 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
 
 const require = globalThis.__r;
 
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 const RelationshipTypes = fn(1085).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { width: "100%", position: "relative", padding: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.md, minHeight: 56, flexDirection: "row", alignItems: "center" }, spoiler: null, hidden: null };
 const rect = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.md };
 obj2.spoiler = rect;
@@ -26,7 +26,7 @@ let obj3 = { width: "100%", position: "relative", padding: nativeDefault.space.P
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/people/native/FriendRequestNote.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FriendRequestNote(userId) {
   const cResult = userId(analyticsLocation[9]).c(27);
   userId = userId.userId;
   ({ styles, backgroundColor, analyticsLocation } = userId);
@@ -169,31 +169,35 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   if (note != null) {
     length1 = note.length;
   }
-  const fn2 = function x() {
-    noop(true);
-    const obj2 = { analyticsLocation, noteLength: null };
-    let num;
-    if (note != null) {
-      num = note.length;
+  class P {
+    constructor() {
+      tmp = closure_3(true);
+      obj = closure_0(closure_1[12]);
+      obj1 = { analyticsLocation, noteLength: null };
+      num = undefined;
+      if (note != null) {
+        num = note.length;
+      }
+      if (num == null) {
+        num = 0;
+      }
+      obj1.noteLength = num;
+      result = obj.trackViewFriendRequestNote(obj1);
+      return;
     }
-    if (num == null) {
-      num = 0;
-    }
-    obj2.noteLength = num;
-    const result = PeopleListTracking.trackViewFriendRequestNote(obj2);
-  };
+  }
   cResult[4] = length1;
-  cResult[5] = fn2;
-  tmp14 = fn2;
+  cResult[5] = P;
+  tmp14 = P;
   const tmp10 = note(noop.useState(stateFromStoresObject.type === RelationshipTypes.PENDING_OUTGOING), 2);
-}) : ((styles) => {
+}) : (function FriendRequestNote(styles) {
   ({ userId: require, backgroundColor, analyticsLocation } = styles);
   noop = undefined;
   const tmp = closure_10();
   const hideFriendRequestNotes = require("HideFriendRequestNotesUtils").useHideFriendRequestNotes();
   const obj = require("HideFriendRequestNotesUtils");
   const items = [RelationshipStore];
-  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => ({ note: RelationshipStore.getNote(require), type: RelationshipStore.getRelationshipType(require) }));
+  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => ({ note: RelationshipStore.getNote(_require), type: RelationshipStore.getRelationshipType(_require) }));
   const note = stateFromStoresObject.note;
   let obj2 = require("initialize");
   [tmp7, c3] = note(noop.useState(stateFromStoresObject.type === RelationshipTypes.PENDING_OUTGOING), 2);

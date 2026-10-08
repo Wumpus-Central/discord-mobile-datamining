@@ -1,8 +1,8 @@
-// === Module 9340: useChannelVideoLimit ===
+// === Module 8762: useChannelVideoLimit ===
 
-// Module 9340 (useChannelVideoLimit)
-import GuildStore from "GuildStore" /* 2074 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4920 */;
+// Module 8762 (useChannelVideoLimit)
+import GuildStore from "GuildStore" /* 2086 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5114 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/video_calls/useChannelVideoLimit.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useChannelVideoLimit(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -49,7 +49,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   let obj = require("c");
   return require("initialize").useStateFromStoresObject(first, tmp7, tmp8);
-}) : ((arg0) => {
+}) : (function useChannelVideoLimit(arg0) {
   _require = arg0;
   const items = [SortedVoiceStateStore, GuildStore];
   const items1 = [arg0];

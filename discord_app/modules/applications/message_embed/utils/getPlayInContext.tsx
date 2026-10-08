@@ -1,9 +1,9 @@
-// === Module 11567: getPlayInContext ===
+// === Module 11630: getPlayInContext ===
 
-// Module 11567 (getPlayInContext)
-import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 9044 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
+// Module 11630 (getPlayInContext)
+import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 10657 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2062 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/message_embed/utils/getPlayInContext.tsx");
 
-export const usePlayInContext = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const usePlayInContext = ReactCompilerGating.isReactCompilerEnabled() ? (function usePlayInContext(arg0) {
   _require = arg0;
   const cResult = require("c").c(14);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -141,7 +141,7 @@ export const usePlayInContext = ReactCompilerGating.isReactCompilerEnabled() ? (
   cResult[5] = I;
   tmp10 = I;
   const tmpResult = require("initialize");
-}) : ((arg0) => {
+}) : (function usePlayInContext(arg0) {
   _require = arg0;
   const items = [SelectedChannelStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => channelId.getChannelId());
@@ -227,7 +227,7 @@ export const getPlayInContext = function getPlayInContext(id, channel_id) {
       tmp11 = compositeInstanceId1 === compositeInstanceId;
     }
     obj3.isCurrentlyInInstance = tmp11;
-    obj3.canLaunchInChannel = NO_CHANNEL === tmp3(9044).EmbeddedActivityLaunchability.CAN_LAUNCH;
+    obj3.canLaunchInChannel = NO_CHANNEL === tmp3(10657).EmbeddedActivityLaunchability.CAN_LAUNCH;
     return obj3;
   }
 };

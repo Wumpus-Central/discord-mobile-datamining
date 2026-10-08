@@ -1,10 +1,10 @@
-// === Module 16381: ConnectionFineIcon ===
+// === Module 16641: ConnectionFineIcon ===
 
-// Module 16381 (ConnectionFineIcon)
+// Module 16641 (ConnectionFineIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4585 */;
-import _mod16382 from "module_16382" /* 16382 */;
+import BaseIconImage from "BaseIconImage" /* 4777 */;
+import _mod16642 from "module_16642" /* 16642 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/ConnectionFineIcon.tsx");
 
-export const ConnectionFineIcon = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const ConnectionFineIcon = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectionFineIcon(arg0) {
   const cResult = c.c(9);
   if (cResult[0] !== arg0) {
     ({ style, color } = arg0);
@@ -36,7 +36,7 @@ export const ConnectionFineIcon = ReactCompilerGating.isReactCompilerEnabled() ?
     ICON_FEEDBACK_POSITIVE = nativeDefault.colors.ICON_FEEDBACK_POSITIVE;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod16382;
+    const tmpResult = _mod16642;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -58,12 +58,12 @@ export const ConnectionFineIcon = ReactCompilerGating.isReactCompilerEnabled() ?
   cResult[8] = tmp14;
   tmp12 = tmp14;
   const obj2 = { source: tmp10, color: ICON_FEEDBACK_POSITIVE, style: tmp5 };
-}) : ((color) => {
+}) : (function ConnectionFineIcon(color) {
   let ICON_FEEDBACK_POSITIVE = color.color;
   if (ICON_FEEDBACK_POSITIVE === undefined) {
     ICON_FEEDBACK_POSITIVE = nativeDefault.colors.ICON_FEEDBACK_POSITIVE;
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod16382, color: ICON_FEEDBACK_POSITIVE, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16642, color: ICON_FEEDBACK_POSITIVE, style: color.style });
 });

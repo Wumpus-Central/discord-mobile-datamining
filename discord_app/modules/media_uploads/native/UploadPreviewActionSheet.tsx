@@ -1,25 +1,25 @@
-// === Module 10376: UploadPreviewActionSheet ===
+// === Module 9973: UploadPreviewActionSheet ===
 
-// Module 10376 (UploadPreviewActionSheet)
+// Module 9973 (UploadPreviewActionSheet)
 import nativeDefault from "native" /* 587 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 7287 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 8842 */;
-import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10377 */;
-import AddImageDescriptionModalActionCreatorsDefault from "AddImageDescriptionModalActionCreators" /* 11049 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 7741 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9201 */;
+import MediaKeyboardUtils from "MediaKeyboardUtils" /* 9974 */;
+import AddImageDescriptionModalActionCreatorsDefault from "AddImageDescriptionModalActionCreators" /* 12793 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const DraftType = fn(7044).DraftType;
+const DraftType = fn(7232).DraftType;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const ACTION_SHEET_MAX_WIDTH = fn(6653).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(6830).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { contentContainer: { padding: 16 }, imageWrap: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, width: "100%" }, imageContainer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, width: "100%" };
 obj2.imageContainer = { overflow: "hidden", alignSelf: "center", borderRadius: nativeDefault.radii.md - nativeDefault.space.PX_4 };
@@ -29,7 +29,7 @@ let obj4 = { overflow: "hidden", alignSelf: "center", borderRadius: nativeDefaul
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/media_uploads/native/UploadPreviewActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onAdd) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UploadPreviewActionSheet(onAdd) {
   const cResult = onAdd(onRemove[10]).c(77);
   onAdd = onAdd.onAdd;
   const onEdit = onAdd.onEdit;
@@ -97,14 +97,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onAdd) => {
         }
       }
     }
-    const fn = function q() {
+    function markSpoiler() {
       ActionSheetActionCreatorsDefault.hideActionSheet();
       UploadAttachmentActionCreatorsDefault.update(channelId, id, DraftType.ChannelMessage, { spoiler: !spoiler });
-    };
+    }
     cResult[8] = channelId;
     cResult[9] = spoiler;
     cResult[10] = id;
-    cResult[11] = fn;
+    cResult[11] = markSpoiler;
   }
   if (cResult[6] !== diff) {
     class O {
@@ -132,7 +132,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onAdd) => {
     }
   }
   let tmp7 = onEdit(onRemove[11]);
-}) : ((onAdd) => {
+}) : (function UploadPreviewActionSheet(onAdd) {
   onAdd = onAdd.onAdd;
   const onEdit = onAdd.onEdit;
   const onRemove = onAdd.onRemove;
@@ -237,9 +237,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onAdd) => {
       }
     }).catch((error) => {
       if ("E_PICKER_CANCELLED" !== error.code) {
-        const obj2 = { key: "CROP_ERROR", IconComponent: width(4806).CircleErrorIcon, content: error.message };
-        height(4574).open(obj2);
-        const obj = height(4574);
+        const obj2 = { key: "CROP_ERROR", IconComponent: width(5000).CircleErrorIcon, content: error.message };
+        height(4766).open(obj2);
+        const obj = height(4766);
       }
     });
   }, items3);
@@ -359,7 +359,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onAdd) => {
       if (tmp14) {
         const obj16 = {
           icon: tmp22(tmp6(tmp4[36]).SpoilerIcon, {}),
-          onPress() {
+          onPress: function markSpoiler() {
                   ActionSheetActionCreatorsDefault.hideActionSheet();
                   UploadAttachmentActionCreatorsDefault.update(channelId, id, DraftType.ChannelMessage, { spoiler: !spoiler });
                 },

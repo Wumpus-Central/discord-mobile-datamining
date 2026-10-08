@@ -1,10 +1,10 @@
-// === Module 14592: MFACodeInput ===
+// === Module 14853: MFACodeInput ===
 
-// Module 14592 (MFACodeInput)
+// Module 14853 (MFACodeInput)
 import nativeDefault from "native" /* 587 */;
-import shared from "shared" /* 4735 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import ClipboardUtils from "ClipboardUtils" /* 6695 */;
+import shared from "shared" /* 4929 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import ClipboardUtils from "ClipboardUtils" /* 6872 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -15,34 +15,38 @@ get_ActivityIndicator = fn(17);
 const AppStates = fn(1085).AppStates;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4896);
-let obj = { inputContainer: { marginTop: 20, flexDirection: "row", justifyContent: "center", alignSelf: "stretch" }, input: { flex: 1, maxWidth: 336, flexDirection: "row", alignSelf: "stretch" }, status: { flex: 1, maxHeight: 20, alignItems: "center", marginTop: 8 }, error: { color: nativeDefault.unsafe_rawColors.RED_400 }, minHeightGuard: { minHeight: 20 } };
-let closure_12 = createStyles.createStyles(obj);
+const createStyles = fn(5090);
+let obj2 = { inputContainer: { marginTop: 20, flexDirection: "row", justifyContent: "center", alignSelf: "stretch" }, input: { flex: 1, maxWidth: 336, flexDirection: "row", alignSelf: "stretch" }, status: { flex: 1, maxHeight: 20, alignItems: "center", marginTop: 8 }, error: { color: nativeDefault.unsafe_rawColors.RED_400 }, minHeightGuard: { minHeight: 20 } };
+let closure_12 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj3 = { color: nativeDefault.unsafe_rawColors.RED_400 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/MFACodeInput.tsx");
 
-export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((appState, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function MFACodeInput(appState) {
   const cResult = appState(error[9]).c(40);
   appState = appState.appState;
   const handleSubmit = appState.handleSubmit;
   ({ style, error } = appState);
   const showActivityIndicator = appState.showActivityIndicator;
-  const resetLoginOnClose = appState.resetLoginOnClose;
-  noop = tmp4;
+  let resetLoginOnClose = appState.resetLoginOnClose;
+  let tmp4 = undefined === resetLoginOnClose;
+  if (!tmp4) {
+    tmp4 = resetLoginOnClose;
+  }
+  resetLoginOnClose = tmp4;
   const tmp5 = closure_12();
   error = tmp5;
   let obj = appState(error[9]);
   const theme = appState(error[10]).useThemeContext().theme;
-  const tmp6 = showActivityIndicator(noop.useState(""), 2);
+  const tmp6 = showActivityIndicator(resetLoginOnClose.useState(""), 2);
   const first = tmp6[0];
   closure_8 = tmp6[1];
-  const tmp8 = showActivityIndicator(noop.useState(null), 2);
+  const tmp8 = showActivityIndicator(resetLoginOnClose.useState(null), 2);
   const first1 = tmp8[0];
   closure_10 = tmp8[1];
   if (cResult[0] !== first1) {
-    const fn = function v() {
+    const fn = function h() {
       const string = ClipboardUtils.getString();
       string.then((result) => {
         const trimmed = result.trim();
@@ -159,7 +163,7 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
             }
             tmp22 = cResult[15];
           }
-          const imperativeHandle = obj3.useImperativeHandle(arg1, W, tmp22);
+          const imperativeHandle = obj3.useImperativeHandle(appState.ref, W, tmp22);
           if (cResult[16] === error) {
             class W {
               constructor() {
@@ -172,43 +176,25 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
               }
             }
           }
-          class Y {
-            constructor() {
-              if (showActivityIndicator) {
-                tmp7 = closure_0;
-                tmp8 = closure_2;
-                obj2 = closure_0(closure_2[10]);
-                tmp9 = theme;
-                tmp11 = closure_1;
-                tmp12 = closure_2;
-                isThemeDarkResult = obj2.isThemeDark(theme);
-                unsafe_rawColors = closure_1(closure_2[7]).unsafe_rawColors;
-                tmp13 = jsx;
-                tmp14 = ActivityIndicator;
-                obj1 = { color: null };
-                obj1.color = isThemeDarkResult ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_500;
-                return jsx(ActivityIndicator, obj1);
-              } else {
-                tmp2 = null;
-                if (null != error) {
-                  tmp3 = jsx;
-                  tmp4 = closure_0;
-                  tmp5 = closure_2;
-                  obj = { style: null, variant: "text-md/medium", children: null };
-                  tmp6 = closure_5;
-                  obj.style = closure_5.error;
-                  obj.children = tmp;
-                  tmp2 = jsx(closure_0(closure_2[14]).Text, obj);
-                }
-                return tmp2;
+          function renderStatus() {
+            if (showActivityIndicator) {
+              const unsafe_rawColors = nativeDefault.unsafe_rawColors;
+              const obj3 = { color: shared.isThemeDark(theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_500 };
+              return options(hasOwnProperty, obj3);
+            } else {
+              let tmp2 = null;
+              if (null != error) {
+                const obj = { style: error.error, variant: "text-md/medium", children: tmp };
+                tmp2 = options(Text_Text.Text, obj);
               }
+              return tmp2;
             }
           }
           cResult[16] = error;
           cResult[17] = showActivityIndicator;
           cResult[18] = tmp5.error;
           cResult[19] = theme;
-          cResult[20] = Y;
+          cResult[20] = renderStatus;
         }
         class P {
           constructor() {
@@ -231,6 +217,7 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
         }
         const items1 = [first, handleSubmit];
         cResult[10] = first;
+        cResult[11] = handleSubmit;
         cResult[12] = P;
         cResult[13] = items1;
         tmp18 = items1;
@@ -268,7 +255,7 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
         const obj2 = appState(error[11]);
       } else {
         let obj = handleSubmit(error[12]);
-        if (closure_1_4) {
+        if (resetLoginOnClose) {
           obj.loginReset();
         } else {
           obj.loginStatusReset();
@@ -278,11 +265,11 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
   };
   cResult[2] = first;
   cResult[3] = tmp10;
-  cResult[4] = undefined === resetLoginOnClose || resetLoginOnClose;
+  cResult[4] = tmp4;
   cResult[5] = fn2;
   tmp11 = fn2;
   const tmpResult = appState(error[10]);
-}) : ((appState, arg1) => {
+}) : (function MFACodeInput(appState) {
   appState = appState.appState;
   const handleSubmit = appState.handleSubmit;
   ({ error, resetLoginOnClose } = appState);
@@ -373,7 +360,7 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
       handleSubmit(first);
     }
   }, items2);
-  const imperativeHandle = noop.useImperativeHandle(arg1, () => ({
+  const imperativeHandle = noop.useImperativeHandle(appState.ref, () => ({
     clear() {
       closure_1_4("");
     }
@@ -412,4 +399,4 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
     return closure_11(closure_10, obj6);
   }
   const tmp20 = Boolean(error) && tmp.minHeightGuard;
-}));
+});

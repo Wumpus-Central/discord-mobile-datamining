@@ -1,17 +1,17 @@
-// === Module 6741: SlayerStorefrontUtils ===
+// === Module 6917: SlayerStorefrontUtils ===
 
-// Module 6741 (SlayerStorefrontUtils)
+// Module 6917 (SlayerStorefrontUtils)
 import _modDef12 from "module_12" /* 12 */;
-import URLUtilsDefault from "URLUtils" /* 1371 */;
-import StoreUtils from "StoreUtils" /* 5329 */;
-import keysSorter from "keysSorter" /* 5642 */;
-import SocialLayerStorefrontTypes from "SocialLayerStorefrontTypes" /* 6745 */;
-import StorefrontUtils from "StorefrontUtils" /* 6746 */;
-import ApplicationStore from "ApplicationStore" /* 5124 */;
-import ApplicationRecord from "ApplicationRecord" /* 2009 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
-import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 6743 */;
+import URLUtilsDefault from "URLUtils" /* 1383 */;
+import StoreUtils from "StoreUtils" /* 5640 */;
+import keysSorter from "keysSorter" /* 5989 */;
+import SocialLayerStorefrontTypes from "SocialLayerStorefrontTypes" /* 6921 */;
+import StorefrontUtils from "StorefrontUtils" /* 6922 */;
+import ApplicationStore from "ApplicationStore" /* 5436 */;
+import ApplicationRecord from "ApplicationRecord" /* 2021 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4899 */;
+import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 6919 */;
 
 const require = globalThis.__r;
 
@@ -141,19 +141,19 @@ function getSKUShareURL(guildId, applicationId) {
   }
   combined = "" + location.protocol + window.GLOBAL_ENV.WEBAPP_ENDPOINT + __initData2.COLLECTIBLES_SHOP_GAME_SHOP(applicationId.applicationId, undefined, applicationId.id, applicationId.slug);
 }
-let closure_4 = fn(6742).WishlistRecommendationReason;
-const SocialLayerStorefrontConstants = fn(6744);
+let closure_4 = fn(6918).WishlistRecommendationReason;
+const SocialLayerStorefrontConstants = fn(6920);
 ({ getChannelsGameShopPrefix: closure_9, STOREFRONT_MARKETING_GUILD_ID: c10, STOREFRONT_MARKETING_GUILD_ID_TEST: closure_11 } = SocialLayerStorefrontConstants);
 const Constants = fn(1085);
 ({ GuildFeatures: closure_12, Routes: map1, SKUProductLines: closure_14 } = Constants);
 const CollectibleShopTab = fn(1087).CollectibleShopTab;
 let str = "jpg";
-if (fn(5329).SUPPORTS_WEBP) {
+if (fn(5640).SUPPORTS_WEBP) {
   str = "webp";
 }
 fn(558);
 const ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGetSocialLayerStorefrontGuildIdAndApplication(arg0) {
   _require = arg0;
   const cResult = require("c").c(6);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -197,7 +197,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = obj2;
   tmp11 = obj2;
   const tmpResult2 = require("useGetOrFetchApplications");
-}) : ((arg0) => {
+}) : (function useGetSocialLayerStorefrontGuildIdAndApplication(arg0) {
   _require = arg0;
   const items = [SocialLayerStorefrontStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => SocialLayerStorefrontStore.getGuildIdFromApplicationId(closure_0));
@@ -297,10 +297,10 @@ export const getOrderedStorefrontSkuIds = function getOrderedStorefrontSkuIds(ar
   }
   return items;
 };
-export const isGameItemSKU = function isGameItemSKU(stateFromStores1) {
-  let tmp = null != stateFromStores1;
+export const isGameItemSKU = function isGameItemSKU(stateFromStores) {
+  let tmp = null != stateFromStores;
   if (tmp) {
-    tmp = stateFromStores1.productLine === constants2.SOCIAL_LAYER_GAME_ITEM;
+    tmp = stateFromStores.productLine === constants2.SOCIAL_LAYER_GAME_ITEM;
   }
   return tmp;
 };
@@ -313,7 +313,7 @@ export const getMarketingGuildId = function getMarketingGuildId() {
     }
     return id;
   }
-  id = v65535;
+  id = collapsed;
 };
 export { hasSocialLayerStorefront };
 export const transformStorefrontMetadataServer = function transformStorefrontMetadataServer(logo_asset_id) {
@@ -450,7 +450,7 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
       if (0 !== tenantMetadata.tenantMetadata.socialLayer.carouselItems.length) {
         const first = tenantMetadata.tenantMetadata.socialLayer.carouselItems[0];
         if (null == first.labelIconAssetId) {
-          let obj4 = { primaryIconAsset: "start", primaryIconLabel: "unicodeVersion" };
+          let obj4 = { primaryIconAsset: "Array", primaryIconLabel: "Reflect" };
         } else {
           const obj3 = StoreUtils;
           obj4 = { primaryIconAsset: URLUtilsDefault.toURLSafe(obj3.getAssetURL(application_id, first.labelIconAssetId, num, "webp")), primaryIconLabel: first.label };
@@ -460,7 +460,7 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
       }
     }
   }
-  return { primaryIconAsset: "start", primaryIconLabel: "unicodeVersion" };
+  return { primaryIconAsset: "Array", primaryIconLabel: "Reflect" };
 };
 export const getGameItemThumbnailUrl = function getGameItemThumbnailUrl(value2) {
   let obj = arg1;
@@ -694,7 +694,7 @@ export const getSocialLayerStorefrontApplicationId = function getSocialLayerStor
   }
   return applicationIdFromGuildId;
 };
-export const useGetSocialLayerStorefrontApplicationId = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useGetSocialLayerStorefrontApplicationId = ReactCompilerGating.isReactCompilerEnabled() ? (function useGetSocialLayerStorefrontApplicationId(arg0) {
   _require = arg0;
   const cResult = require("c").c(10);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -765,7 +765,7 @@ export const useGetSocialLayerStorefrontApplicationId = ReactCompilerGating.isRe
   cResult[9] = tmp14;
   tmp13 = tmp14;
   const tmpResult2 = require("initialize");
-}) : ((arg0) => {
+}) : (function useGetSocialLayerStorefrontApplicationId(arg0) {
   _require = arg0;
   const items = [SocialLayerStorefrontStore];
   let stateFromStores = require("initialize").useStateFromStores(items, () => SocialLayerStorefrontStore.getApplicationIdFromGuildId(closure_0));

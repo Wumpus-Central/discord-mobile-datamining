@@ -1,12 +1,12 @@
-// === Module 17635: RedesignAddAvatarModal ===
+// === Module 17917: RedesignAddAvatarModal ===
 
-// Module 17635 (RedesignAddAvatarModal)
+// Module 17917 (RedesignAddAvatarModal)
 import nativeDefault from "native" /* 587 */;
-import AddAvatarModalActionCreators from "AddAvatarModalActionCreators" /* 17614 */;
+import AddAvatarModalActionCreators from "AddAvatarModalActionCreators" /* 17896 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 7842 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8260 */;
 
 const require = globalThis.__r;
 
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 const UPLOAD_MEDIUM_SIZE = fn(1085).UPLOAD_MEDIUM_SIZE;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, contentContainer: { flexGrow: 2, alignItems: "center" }, growContainer: null, headerContainer: null, buttonContainer: null, title: null, subtitle: null, errorContainer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.growContainer = { flexGrow: 2, minHeight: nativeDefault.space.PX_24 };
@@ -33,7 +33,7 @@ let obj6 = { alignSelf: "center", paddingTop: nativeDefault.space.PX_24 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/avatar/native/components/RedesignAddAvatarModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function RedesignAddAvatarModal(route) {
   const cResult = require("c").c(56);
   const onComplete = route.route.params.onComplete;
   _require = onComplete;
@@ -45,24 +45,24 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
   asyncGeneratorStep = tmp9;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserProfileSettingsStore];
-    class A {
+    class C {
       constructor() {
         return closure_1_8.getPendingChanges().pendingAvatar;
       }
     }
     cResult[0] = items;
-    cResult[1] = A;
+    cResult[1] = C;
     tmp11 = items;
   } else {
     [tmp11, tmp12] = cResult;
   }
   const tmp5 = stateFromStores(noop.useState(false), 2);
-  stateFromStores = require("initialize").useStateFromStores(tmp11, A);
+  stateFromStores = require("initialize").useStateFromStores(tmp11, C);
   if (cResult[2] !== first) {
     let pendingImage;
     if (null != first) {
       let obj2 = { imageUri: null, description: null };
-      class A {
+      class C {
         constructor() {
           return closure_1_8.getPendingChanges().pendingAvatar;
         }
@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
       pendingImage = tmpResult4.createPendingImage(obj2);
       const tmpResult5 = tmp(tmp2[15]);
     }
-    class A {
+    class C {
       constructor() {
         return closure_1_8.getPendingChanges().pendingAvatar;
       }
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
   }
   if (cResult[4] !== imageUri) {
     const memoizedImageSourceResult = tmp(tmp2[16]).memoizedImageSource(imageUri);
-    class A {
+    class C {
       constructor() {
         return closure_1_8.getPendingChanges().pendingAvatar;
       }
@@ -187,7 +187,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
       }
       return applyArgumentsResult;
     }
-    class A {
+    class C {
       constructor() {
         return closure_1_8.getPendingChanges().pendingAvatar;
       }
@@ -200,7 +200,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
   const sum = require("useSafeAreaInsets")().bottom + require("native").space.PX_16;
   if (cResult[7] !== sum) {
     let obj3 = { paddingBottom: sum, paddingHorizontal: require("native").space.PX_16 };
-    class A {
+    class C {
       constructor() {
         return closure_1_8.getPendingChanges().pendingAvatar;
       }
@@ -216,7 +216,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
       let tmp25 = cResult[11];
     }
     const _Symbol = Symbol;
-    class A {
+    class C {
       constructor() {
         return closure_1_8.getPendingChanges().pendingAvatar;
       }
@@ -224,7 +224,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
     if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
       const intl = tmp(tmp2[20]).intl;
       const stringResult = intl.string(tmp(tmp2[20]).t.XQRWvR);
-      class A {
+      class C {
         constructor() {
           return closure_1_8.getPendingChanges().pendingAvatar;
         }
@@ -233,7 +233,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
     }
     if (cResult[13] !== tmp4.title) {
       let obj4 = { style: tmp26, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-      class A {
+      class C {
         constructor() {
           return closure_1_8.getPendingChanges().pendingAvatar;
         }
@@ -249,7 +249,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
     if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
       const intl2 = tmp(tmp2[20]).intl;
       const stringResult1 = intl2.string(tmp(tmp2[20]).t.fH9TLT);
-      class A {
+      class C {
         constructor() {
           return closure_1_8.getPendingChanges().pendingAvatar;
         }
@@ -258,7 +258,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
     }
     if (cResult[16] !== tmp4.subtitle) {
       let obj5 = { style: tmp4.subtitle, variant: "text-sm/medium", color: "text-default", children: null };
-      class A {
+      class C {
         constructor() {
           return closure_1_8.getPendingChanges().pendingAvatar;
         }
@@ -282,7 +282,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
           let tmp45 = tmp6;
           if (tmp6) {
             let obj6 = { variant: "text-sm/medium", color: "text-feedback-critical", children: null };
-            class A {
+            class C {
               constructor() {
                 return closure_1_8.getPendingChanges().pendingAvatar;
               }
@@ -290,7 +290,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
             obj6.children = obj13.string(tmp(tmp2[20]).t.XyLlVm);
             tmp45 = closure_10(tmp(tmp2[21]).Text, obj6);
           }
-          class A {
+          class C {
             constructor() {
               return closure_1_8.getPendingChanges().pendingAvatar;
             }
@@ -312,7 +312,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
                 }
                 if (cResult[34] !== first) {
                   let obj7 = { onAvatarSelect: tmp9, selectedAvatar: null };
-                  class A {
+                  class C {
                     constructor() {
                       return closure_1_8.getPendingChanges().pendingAvatar;
                     }
@@ -325,7 +325,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
                   tmp53 = cResult[35];
                 }
                 if (cResult[36] !== tmp4.growContainer) {
-                  class A {
+                  class C {
                     constructor() {
                       return closure_1_8.getPendingChanges().pendingAvatar;
                     }
@@ -338,7 +338,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
                 } else {
                   tmp56 = cResult[37];
                 }
-                class A {
+                class C {
                   constructor() {
                     return closure_1_8.getPendingChanges().pendingAvatar;
                   }
@@ -346,7 +346,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
                 if (cResult[38] === Symbol.for("react.memo_cache_sentinel")) {
                   const intl3 = tmp(tmp2[20]).intl;
                   const stringResult2 = intl3.string(tmp(tmp2[20]).t.PDTjLN);
-                  class A {
+                  class C {
                     constructor() {
                       return closure_1_8.getPendingChanges().pendingAvatar;
                     }
@@ -383,7 +383,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
                             }
                           }
                         }
-                        class A {
+                        class C {
                           constructor() {
                             return closure_1_8.getPendingChanges().pendingAvatar;
                           }
@@ -401,7 +401,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
                         cResult[55] = tmp71;
                         tmp69 = tmp71;
                       }
-                      class A {
+                      class C {
                         constructor() {
                           return closure_1_8.getPendingChanges().pendingAvatar;
                         }
@@ -413,7 +413,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
                       cResult[48] = tmp68;
                       tmp66 = tmp68;
                     }
-                    class A {
+                    class C {
                       constructor() {
                         return closure_1_8.getPendingChanges().pendingAvatar;
                       }
@@ -443,7 +443,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
               }
             }
           }
-          class A {
+          class C {
             constructor() {
               return closure_1_8.getPendingChanges().pendingAvatar;
             }
@@ -459,7 +459,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
           cResult[33] = tmp52;
           tmp50 = tmp52;
         }
-        class A {
+        class C {
           constructor() {
             return closure_1_8.getPendingChanges().pendingAvatar;
           }
@@ -471,7 +471,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
         cResult[28] = tmp49;
         tmp47 = tmp49;
       }
-      class A {
+      class C {
         constructor() {
           return closure_1_8.getPendingChanges().pendingAvatar;
         }
@@ -498,7 +498,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
   cResult[11] = items4;
   tmp25 = items4;
   const tmpResult = require("initialize");
-}) : ((route) => {
+}) : (function RedesignAddAvatarModal(route) {
   const onComplete = route.route.params.onComplete;
   importDefault = undefined;
   let pendingImage;
@@ -534,7 +534,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
             const obj7 = { size };
             dependencyMap = 1;
             c3 = 1;
-            const obj9 = { value: tmp2(7287).openImagePicker(obj7), done: false };
+            const obj9 = { value: tmp2(7741).openImagePicker(obj7), done: false };
             return obj9;
           }
         } else if (arg0 === 1) {
@@ -550,23 +550,23 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
             pendingImage = undefined;
             if (null != base64) {
               const obj11 = { imageUri: base64, description: null };
-              const obj = tmp2(14435);
-              obj11.description = tmp2(7851).generateAvatarDescription();
+              const obj = tmp2(14660);
+              obj11.description = tmp2(8269).generateAvatarDescription();
               pendingImage = obj.createPendingImage(obj11);
-              const obj3 = tmp2(7851);
+              const obj3 = tmp2(8269);
             }
             closure_128_1 = pendingImage;
             const obj12 = { avatar: closure_128_1 };
-            tmp2(7846).setPendingChanges(obj12);
-            const obj4 = tmp2(7846);
+            tmp2(8264).setPendingChanges(obj12);
+            const obj4 = tmp2(8264);
             let str = "set";
             if (null == closure_128_1) {
               str = "remove";
             }
-            const result = tmp2(7848).announcePendingAvatarChange(str);
+            const result = tmp2(8266).announcePendingAvatarChange(str);
             closure_129_3(undefined);
             c3 = 3;
-            const obj6 = tmp2(7848);
+            const obj6 = tmp2(8266);
           }
           closure_129_1(true);
         }

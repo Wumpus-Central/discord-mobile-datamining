@@ -1,18 +1,18 @@
-// === Module 4796: useCustomThemeDisplaySettings ===
+// === Module 4990: useCustomThemeDisplaySettings ===
 
-// Module 4796 (useCustomThemeDisplaySettings)
+// Module 4990 (useCustomThemeDisplaySettings)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import ClientThemesUtils from "ClientThemesUtils" /* 1239 */;
+import ClientThemesUtils from "ClientThemesUtils" /* 1251 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1238 */;
+import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1250 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/client_themes/native/useCustomThemeDisplaySettings.tsx");
 
-export const useCustomThemeDisplaySettings = ReactCompilerGating.isReactCompilerEnabled() ? ((base_mix) => {
+export const useCustomThemeDisplaySettings = ReactCompilerGating.isReactCompilerEnabled() ? (function useCustomThemeDisplaySettings(base_mix) {
   const cResult = c.c(15);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [CustomThemeMobileStore];
@@ -94,7 +94,7 @@ export const useCustomThemeDisplaySettings = ReactCompilerGating.isReactCompiler
     }
   }
   const tmp7 = _slicedToArray(initialize.useStateFromStoresArray(tmp4, tmp5), 3);
-}) : ((base_theme) => {
+}) : (function useCustomThemeDisplaySettings(base_theme) {
   let items = [CustomThemeMobileStore];
   [tmp4, tmp5, tmp6] = initialize.useStateFromStoresArray(items, () => {
     const items = [CustomThemeMobileStore.getCustomTheme(), CustomThemeMobileStore.getBaseTheme(), CustomThemeMobileStore.getPreviewTheme()];

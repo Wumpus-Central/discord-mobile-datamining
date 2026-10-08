@@ -1,10 +1,10 @@
-// === Module 4908: useGuildIdForChannelRoute ===
+// === Module 5102: useGuildIdForChannelRoute ===
 
-// Module 4908 (useGuildIdForChannelRoute)
+// Module 5102 (useGuildIdForChannelRoute)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import FavoriteStore from "FavoriteStore" /* 2054 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
+import FavoriteStore from "FavoriteStore" /* 2066 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4899 */;
 
 require = fn;
 const FAVORITES = fn(1085).FAVORITES;
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/routing/useGuildIdForChannelRoute.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((getGuildId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildIdForChannelRoute(getGuildId) {
   const cResult = c.c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [SelectedGuildStore];
@@ -35,7 +35,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((getGuildId) => {
     cResult[3] = guildId;
   }
   const tmpResult = initialize;
-}) : ((getGuildId) => {
+}) : (function useGuildIdForChannelRoute(getGuildId) {
   const items = [SelectedGuildStore];
   let stateFromStores = initialize.useStateFromStores(items, () => guildId.getGuildId());
   if (null == stateFromStores) {

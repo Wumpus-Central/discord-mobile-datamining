@@ -1,9 +1,9 @@
-// === Module 7464: BurstReactionAnimationPreview ===
+// === Module 7939: BurstReactionAnimationPreview ===
 
-// Module 7464 (BurstReactionAnimationPreview)
+// Module 7939 (BurstReactionAnimationPreview)
 import c from "c" /* 576 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 7272 */;
-import BurstReactionAnimationDefault from "BurstReactionAnimation" /* 7465 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7873 */;
+import BurstReactionAnimationDefault from "BurstReactionAnimation" /* 7940 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/burst_reactions/BurstReactionAnimationPreview.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function BurstReactionAnimationPreview(arg0) {
   let tmp = dependencyMap;
   const cResult = c.c(4);
   ({ channelId, emoji, messageId, reactionType } = arg0);
@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[2] = messageId;
     cResult[3] = tmp;
   }
-}) : ((arg0) => {
+}) : (function BurstReactionAnimationPreview(arg0) {
   ({ channelId, emoji, messageId, reactionType } = arg0);
   let tmp2 = null;
   if (reactionType === MessageReactionsTypes.ReactionTypes.BURST) {

@@ -1,8 +1,8 @@
-// === Module 16554: useResourceChannels ===
+// === Module 16809: useResourceChannels ===
 
-// Module 16554 (useResourceChannels)
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 5083 */;
+// Module 16809 (useResourceChannels)
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 6912 */;
 
 const require = globalThis.__r;
 
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/useResourceChannels.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useResourceChannels(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -22,7 +22,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function s() {
+    const fn = function o() {
       const resourceChannels = GuildOnboardingHomeSettingsStore.getResourceChannels(closure_0);
       return resourceChannels.filter((channelId) => null != channel.getChannel(channelId.channelId));
     };
@@ -34,7 +34,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("useStateFromStores").useStateFromStoresArray(first, tmp7);
-}) : ((arg0) => {
+}) : (function useResourceChannels(arg0) {
   _require = arg0;
   const items = [GuildOnboardingHomeSettingsStore, ChannelStore];
   return require("useStateFromStores").useStateFromStoresArray(items, () => {

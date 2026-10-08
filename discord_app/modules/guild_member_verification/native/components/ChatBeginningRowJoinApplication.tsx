@@ -1,12 +1,12 @@
-// === Module 12312: ChatBeginningRowJoinApplication ===
+// === Module 12410: ChatBeginningRowJoinApplication ===
 
-// Module 12312 (ChatBeginningRowJoinApplication)
+// Module 12410 (ChatBeginningRowJoinApplication)
 import nativeDefault from "native" /* 587 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4708 */;
-import Text_Text from "Text/Text" /* 4892 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4902 */;
+import Text_Text from "Text/Text" /* 5086 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
-import UserStore from "UserStore" /* 1377 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
@@ -15,7 +15,7 @@ const View = fn(17).View;
 const Permissions = fn(1085).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { width: "100%", marginTop: 12, display: "flex", flexDirection: "column", alignSelf: "flex-start", padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, borderRadius: nativeDefault.radii.lg }, guildInfoRow: { display: "flex", flexDirection: "row", alignItems: "center", gap: 4 }, divider: null, formQuestion: null };
 let obj3 = { width: "100%", marginTop: 12, display: "flex", flexDirection: "column", alignSelf: "flex-start", padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, borderRadius: nativeDefault.radii.lg };
 obj2.divider = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, height: 1, border: "none", marginVertical: 16 };
@@ -26,7 +26,7 @@ let obj4 = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, height: 1, bor
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/native/components/ChatBeginningRowJoinApplication.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChatBeginningRowJoinRequest(channelId) {
   const cResult = require("c").c(32);
   channelId = channelId.channelId;
   let obj = require("c");
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
     }
   }
   return null;
-}) : ((channelId) => {
+}) : (function ChatBeginningRowJoinRequest(channelId) {
   channelId = channelId.channelId;
   let joinRequest;
   let joinRequestGuild;

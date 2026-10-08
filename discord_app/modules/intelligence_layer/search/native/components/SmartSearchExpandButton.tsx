@@ -1,13 +1,13 @@
-// === Module 16891: SmartSearchExpandButton ===
+// === Module 17172: SmartSearchExpandButton ===
 
-// Module 16891 (SmartSearchExpandButton)
+// Module 17172 (SmartSearchExpandButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import _modDef3919 from "module_3919" /* 3919 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 10857 */;
-import ChevronSmallUpIcon2 from "ChevronSmallUpIcon" /* 13398 */;
-import useSearchHostSurface from "useSearchHostSurface" /* 16890 */;
+import _modDef4051 from "module_4051" /* 4051 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 10508 */;
+import ChevronSmallUpIcon2 from "ChevronSmallUpIcon" /* 13698 */;
+import useSearchHostSurface from "useSearchHostSurface" /* 17171 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const rect = { top: nativeDefault.space.PX_8, bottom: nativeDefault.space.PX_8 };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_9 = createStyles.createStyles((backgroundColor) => {
   const obj = { block: { position: "absolute", left: 0, right: 0, bottom: 0, alignItems: "center" }, pill: { height: nativeDefault.space.PX_32, paddingHorizontal: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.round, borderWidth: 1, borderColor: nativeDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT, backgroundColor, alignItems: "center", justifyContent: "center" }, surface: null };
   const obj3 = {};
@@ -30,7 +30,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/intelligence_layer/search/native/components/SmartSearchExpandButton.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function SmartSearchExpandButton(arg0) {
   const cResult = c.c(15);
   ({ isCollapsed, onPress } = arg0);
   const tmp4 = closure_9(useSearchHostSurface.useSearchHostSurfaceColor());
@@ -41,7 +41,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   }
   if (cResult[0] !== isCollapsed) {
     const intl = util.intl;
-    const tmp9 = _modDef3919;
+    const tmp9 = _modDef4051;
     const stringResult = intl.string(isCollapsed ? tmp9.NuTbB9 : tmp9.FKLBbW);
     cResult[0] = isCollapsed;
     cResult[1] = stringResult;
@@ -99,7 +99,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
     cResult[11] = tmp24;
     tmp20 = tmp24;
   }
-}) : ((isCollapsed) => {
+}) : (function SmartSearchExpandButton(isCollapsed) {
   isCollapsed = isCollapsed.isCollapsed;
   const tmp3 = closure_9(useSearchHostSurface.useSearchHostSurfaceColor());
   if (isCollapsed) {
@@ -110,7 +110,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   const obj2 = { style: tmp3.block, hitSlop: rect, children: null };
   const obj3 = { style: tmp3.pill, hitSlop: rect, accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
   const intl = util.intl;
-  const tmp9 = _modDef3919;
+  const tmp9 = _modDef4051;
   if (isCollapsed) {
     let FKLBbW = tmp9.NuTbB9;
     let tmp10 = importDefault;

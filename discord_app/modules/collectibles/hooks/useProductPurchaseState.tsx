@@ -1,9 +1,9 @@
-// === Module 8529: useProductPurchaseState ===
+// === Module 9014: useProductPurchaseState ===
 
-// Module 8529 (useProductPurchaseState)
-import CollectiblesItemType from "CollectiblesItemType" /* 1980 */;
-import compactDefault from "compact" /* 8530 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7081 */;
+// Module 9014 (useProductPurchaseState)
+import CollectiblesItemType from "CollectiblesItemType" /* 1992 */;
+import compactDefault from "compact" /* 9015 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7267 */;
 
 const require = globalThis.__r;
 
@@ -60,7 +60,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useProductPurchaseState.tsx");
 
 export { getProductPurchaseState };
-export const useProductPurchaseState = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useProductPurchaseState = ReactCompilerGating.isReactCompilerEnabled() ? (function useProductPurchaseState(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -71,7 +71,7 @@ export const useProductPurchaseState = ReactCompilerGating.isReactCompilerEnable
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function l() {
+    const fn = function c() {
       return getProductPurchaseState(CollectiblesPurchaseStore, closure_0);
     };
     cResult[1] = arg0;
@@ -82,7 +82,7 @@ export const useProductPurchaseState = ReactCompilerGating.isReactCompilerEnable
   }
   const obj = require("c");
   return require("initialize").useStateFromStoresObject(first, tmp6);
-}) : ((arg0) => {
+}) : (function useProductPurchaseState(arg0) {
   _require = arg0;
   const items = [CollectiblesPurchaseStore];
   return require("initialize").useStateFromStoresObject(items, () => getProductPurchaseState(CollectiblesPurchaseStore, closure_0));

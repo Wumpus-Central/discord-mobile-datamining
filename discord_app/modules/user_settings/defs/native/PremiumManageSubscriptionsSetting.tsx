@@ -1,17 +1,17 @@
-// === Module 14811: PremiumManageSubscriptionsSetting ===
+// === Module 15072: PremiumManageSubscriptionsSetting ===
 
-// Module 14811 (PremiumManageSubscriptionsSetting)
+// Module 15072 (PremiumManageSubscriptionsSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import PremiumUtils from "PremiumUtils" /* 4534 */;
-import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 6936 */;
-import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 11105 */;
+import PremiumUtils from "PremiumUtils" /* 4726 */;
+import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7125 */;
+import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 10470 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 fn(558);
 const ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanNavigateToPaymentSetting() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function t() {
@@ -29,17 +29,19 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     first = cResult[0];
   }
   return first;
-}) : (() => noop.useCallback(() => {
-  const isPaymentsBlocked = BlockedPaymentsCountryExperiment.getIsPaymentsBlocked();
-  let flag = !isPaymentsBlocked;
-  if (isPaymentsBlocked) {
-    openBlockedPaymentsCountryActionSheetDefault();
-    flag = false;
-  }
-  return flag;
-}, []));
-const SettingBuilders = fn(11142);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+}) : (function useCanNavigateToPaymentSetting() {
+  return noop.useCallback(() => {
+    const isPaymentsBlocked = BlockedPaymentsCountryExperiment.getIsPaymentsBlocked();
+    let flag = !isPaymentsBlocked;
+    if (isPaymentsBlocked) {
+      openBlockedPaymentsCountryActionSheetDefault();
+      flag = false;
+    }
+    return flag;
+  }, []);
+});
+const SettingBuilders = fn(11262);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useShowManageSubscriptionsSetting() {
   const cResult = c.c(1);
   let hasPremiumSubscriptionToDisplay = PremiumUtils.useHasPremiumSubscriptionToDisplay();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -53,7 +55,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     hasPremiumSubscriptionToDisplay = tmpResult.useMobileNitroManageSubscriptionsSettingsExperiment(first);
   }
   return hasPremiumSubscriptionToDisplay;
-}) : (() => {
+}) : (function useShowManageSubscriptionsSetting() {
   let hasPremiumSubscriptionToDisplay = PremiumUtils.useHasPremiumSubscriptionToDisplay();
   if (hasPremiumSubscriptionToDisplay) {
     hasPremiumSubscriptionToDisplay = obj2.useMobileNitroManageSubscriptionsSettingsExperiment({ location: "useShowManageSubscriptionsSetting" });
@@ -66,9 +68,9 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t["z5YcJ+"]);
   },
   parent: null,
-  IconComponent: fn(14812).SubscriptionIcon,
+  IconComponent: fn(15073).SubscriptionIcon,
   usePreNavigationAction: tmp2,
-  usePredicate: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  usePredicate: ReactCompilerGating.isReactCompilerEnabled() ? (function useShowManageSubscriptionsSetting() {
     const cResult = c.c(1);
     let hasPremiumSubscriptionToDisplay = PremiumUtils.useHasPremiumSubscriptionToDisplay();
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -82,7 +84,7 @@ const route = SettingBuilders.createRoute({
       hasPremiumSubscriptionToDisplay = tmpResult.useMobileNitroManageSubscriptionsSettingsExperiment(first);
     }
     return hasPremiumSubscriptionToDisplay;
-  }) : (() => {
+  }) : (function useShowManageSubscriptionsSetting() {
     let hasPremiumSubscriptionToDisplay = PremiumUtils.useHasPremiumSubscriptionToDisplay();
     if (hasPremiumSubscriptionToDisplay) {
       hasPremiumSubscriptionToDisplay = obj2.useMobileNitroManageSubscriptionsSettingsExperiment({ location: "useShowManageSubscriptionsSetting" });

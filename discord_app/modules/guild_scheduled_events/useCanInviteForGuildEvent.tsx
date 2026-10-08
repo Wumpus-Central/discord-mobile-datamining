@@ -1,13 +1,13 @@
-// === Module 9297: useCanInviteForGuildEvent ===
+// === Module 8507: useCanInviteForGuildEvent ===
 
-// Module 9297 (useCanInviteForGuildEvent)
-import PermissionUtilsAll from "PermissionUtils" /* 4520 */;
-import canViewInviteModal from "canViewInviteModal" /* 9298 */;
-import StageInstanceStore from "StageInstanceStore" /* 2056 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildChannelStore from "GuildChannelStore" /* 4513 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
+// Module 8507 (useCanInviteForGuildEvent)
+import PermissionUtilsAll from "PermissionUtils" /* 4712 */;
+import canViewInviteModal from "canViewInviteModal" /* 8508 */;
+import StageInstanceStore from "StageInstanceStore" /* 2068 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildChannelStore from "GuildChannelStore" /* 4705 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
 
 const require = globalThis.__r;
 
@@ -67,14 +67,14 @@ function isGuildEventInvitable(guildEvent) {
     return canViewInviteModalResult;
   }
 }
-const isGuildEventEnded = fn(7050).isGuildEventEnded;
-const constants = fn(2057).GuildScheduledEventEntityTypes;
+const isGuildEventEnded = fn(6059).isGuildEventEnded;
+const constants = fn(2069).GuildScheduledEventEntityTypes;
 const Permissions = fn(1085).Permissions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useCanInviteForGuildEvent.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCanInviteForGuildEvent(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -101,7 +101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp9, tmp10);
-}) : ((arg0) => {
+}) : (function useCanInviteForGuildEvent(arg0) {
   _require = arg0;
   let items = [GuildChannelStore, ChannelStore, GuildStore, StageInstanceStore];
   const items1 = [arg0];

@@ -1,11 +1,11 @@
-// === Module 12473: useIsViewingPremiumMemberships ===
+// === Module 12569: useIsViewingPremiumMemberships ===
 
-// Module 12473 (useIsViewingPremiumMemberships)
+// Module 12569 (useIsViewingPremiumMemberships)
 import c from "c" /* 576 */;
 import Constants from "Constants" /* 1085 */;
-import ChannelConstants from "ChannelConstants" /* 2058 */;
-import _mod4716 from "module_4716" /* 4716 */;
-import RouteUtils from "RouteUtils" /* 4723 */;
+import ChannelConstants from "ChannelConstants" /* 2070 */;
+import _mod4910 from "module_4910" /* 4910 */;
+import RouteUtils from "RouteUtils" /* 4917 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -13,7 +13,7 @@ const Routes = Constants.Routes;
 const StaticChannelRoute = ChannelConstants.StaticChannelRoute;
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useIsViewingPremiumMemberships.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsViewingPremiumMemberships() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const RouteParam = RouteUtils.RouteParam;
@@ -23,8 +23,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     first = cResult[0];
   }
-  return null != _mod4716.useRouteMatch(first);
-}) : (() => {
+  return null != _mod4910.useRouteMatch(first);
+}) : (function useIsViewingPremiumMemberships() {
   const RouteParam = RouteUtils.RouteParam;
-  return null != _mod4716.useRouteMatch(Routes.CHANNEL(RouteParam.guildId(), StaticChannelRoute.ROLE_SUBSCRIPTIONS));
+  return null != _mod4910.useRouteMatch(Routes.CHANNEL(RouteParam.guildId(), StaticChannelRoute.ROLE_SUBSCRIPTIONS));
 });

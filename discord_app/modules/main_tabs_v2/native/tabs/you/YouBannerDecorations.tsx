@@ -1,28 +1,28 @@
-// === Module 16981: YouBannerDecorations ===
+// === Module 17262: YouBannerDecorations ===
 
-// Module 16981 (YouBannerDecorations)
+// Module 17262 (YouBannerDecorations)
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1370 */;
-import dismissible_content from "dismissible_content" /* 2036 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4704 */;
-import QuestTypes from "QuestTypes" /* 5633 */;
-import useTrialOffer from "useTrialOffer" /* 6971 */;
-import QuestUtils from "QuestUtils" /* 10921 */;
-import PromotionsHooks from "PromotionsHooks" /* 13381 */;
-import you_tracking_Tracking from "you/tracking/Tracking" /* 16983 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1382 */;
+import dismissible_content from "dismissible_content" /* 2048 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4898 */;
+import QuestTypes from "QuestTypes" /* 5980 */;
+import useTrialOffer from "useTrialOffer" /* 7160 */;
+import QuestUtils from "QuestUtils" /* 10572 */;
+import PromotionsHooks from "PromotionsHooks" /* 13681 */;
+import you_tracking_Tracking from "you/tracking/Tracking" /* 17264 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
-const useIntlLoaderStore = fn(2117).useIntlLoaderStore;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
-let closure_9 = fn(1379).PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID;
+const useIntlLoaderStore = fn(2129).useIntlLoaderStore;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
+let closure_9 = fn(1391).PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_12 = createStyles.createStyles((arg0, arg1, color, borderColor) => {
   const obj = { containerFloatingWrap: null, containerFloatingGradient: null, containerFloating: null, containerFloatingContent: null, endcap: null, buttonsFloating: null };
   const obj2 = {};
@@ -58,7 +58,7 @@ let closure_12 = createStyles.createStyles((arg0, arg1, color, borderColor) => {
   return obj;
 });
 const ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasSettingsBadge() {
   let tmp = PromotionsHooks.useUnseenOutboundPromotions().length > 0;
   const tmp2 = null != useTrialOffer.useTrialOffer(closure_9);
   const result = DismissibleContentUnsafeUtils.useIsDismissibleContentDismissed_UNSAFE(dismissible_content.DismissibleContent.TRIAL_FOR_ALL_2026_SETTINGS_BADGE);
@@ -70,7 +70,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp = tmp4;
   }
   return tmp;
-}) : (() => {
+}) : (function useHasSettingsBadge() {
   let tmp = PromotionsHooks.useUnseenOutboundPromotions().length > 0;
   const tmp2 = null != useTrialOffer.useTrialOffer(closure_9);
   const result = DismissibleContentUnsafeUtils.useIsDismissibleContentDismissed_UNSAFE(dismissible_content.DismissibleContent.TRIAL_FOR_ALL_2026_SETTINGS_BADGE);
@@ -96,7 +96,7 @@ function getFloatingNavBottomMargin(bottom) {
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouBannerDecorations.tsx");
 
-export default noop.memo((navigateToSettings) => {
+export default noop.memo(function YouBannerDecorations(navigateToSettings) {
   navigateToSettings = navigateToSettings.navigateToSettings;
   const navigateToPremium = navigateToSettings.navigateToPremium;
   let num = navigateToSettings.paddingBottom;

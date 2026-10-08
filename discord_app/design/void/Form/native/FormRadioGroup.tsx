@@ -1,10 +1,10 @@
-// === Module 8938: FormRadioGroup ===
+// === Module 8569: FormRadioGroup ===
 
-// Module 8938 (FormRadioGroup)
+// Module 8569 (FormRadioGroup)
 import c from "c" /* 576 */;
-import TableRadioGroup from "TableRadioGroup" /* 6079 */;
-import RedesignCompat from "RedesignCompat" /* 6080 */;
-import FormSectionDefault from "FormSection" /* 8931 */;
+import TableRadioGroup from "TableRadioGroup" /* 6265 */;
+import RedesignCompat from "RedesignCompat" /* 6266 */;
+import FormSectionDefault from "FormSection" /* 8562 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormRadioGroup.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormRadioGroup(arg0) {
   const cResult = c.c(27);
   if (cResult[0] !== arg0) {
     ({ title, hasIcons, accessibilityLabel, children, value, hint, icon } = arg0);
@@ -126,7 +126,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[26] = tmp22;
     tmp15 = tmp22;
   }
-}) : ((arg0) => {
+}) : (function FormRadioGroup(arg0) {
   ({ title, children, hint } = arg0);
   ({ hasIcons, accessibilityLabel, value, icon } = arg0);
   const merged = Object.assign(arg0, Object.assign({ title: 0, hasIcons: 0, accessibilityLabel: 0, children: 0, value: 0, hint: 0, icon: 0 }));

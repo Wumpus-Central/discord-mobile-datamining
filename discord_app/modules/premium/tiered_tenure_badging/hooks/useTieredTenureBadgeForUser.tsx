@@ -1,9 +1,9 @@
-// === Module 10889: useTieredTenureBadgeForUser ===
+// === Module 10540: useTieredTenureBadgeForUser ===
 
-// Module 10889 (useTieredTenureBadgeForUser)
-import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7132 */;
-import UserProfileStore from "UserProfileStore" /* 7124 */;
-import UserStore from "UserStore" /* 1377 */;
+// Module 10540 (useTieredTenureBadgeForUser)
+import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7318 */;
+import UserProfileStore from "UserProfileStore" /* 7309 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/tiered_tenure_badging/hooks/useTieredTenureBadgeForUser.tsx");
 
-export const useTieredTenureBadgeForUser = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useTieredTenureBadgeForUser = ReactCompilerGating.isReactCompilerEnabled() ? (function useTieredTenureBadgeForUser(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -74,7 +74,7 @@ export const useTieredTenureBadgeForUser = ReactCompilerGating.isReactCompilerEn
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp7);
-}) : ((arg0) => {
+}) : (function useTieredTenureBadgeForUser(arg0) {
   _require = arg0;
   const items = [UserProfileStore, UserStore];
   return require("initialize").useStateFromStores(items, () => {

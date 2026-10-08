@@ -1,12 +1,12 @@
-// === Module 12502: useTruncatedGradientColors ===
+// === Module 12598: useTruncatedGradientColors ===
 
-// Module 12502 (useTruncatedGradientColors)
+// Module 12598 (useTruncatedGradientColors)
 import _mod19 from "module_19" /* 19 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
-import useToken from "useToken" /* 4586 */;
-import createStyles from "createStyles" /* 4896 */;
+import useToken from "useToken" /* 4778 */;
+import createStyles from "createStyles" /* 5090 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -14,7 +14,7 @@ const useMemo = _mod19.useMemo;
 let closure_4 = createStyles.createStyles({ gradient: { height: 40 } });
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/hooks/useTruncatedGradientColors.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useTruncatedGradientColors() {
   const cResult = c.c(10);
   const tmp3 = closure_4();
   const token = useToken.useToken(nativeDefault.colors.MOBILE_ALERT_BACKGROUND_DEFAULT);
@@ -59,9 +59,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[5] = tmp8;
   cResult[6] = items;
   tmp10 = items;
-}) : (() => {
+}) : (function useTruncatedGradientColors() {
   const tmp = closure_4();
-  token = token(4586).useToken(nativeDefault.colors.MOBILE_ALERT_BACKGROUND_DEFAULT);
+  token = token(4778).useToken(nativeDefault.colors.MOBILE_ALERT_BACKGROUND_DEFAULT);
   const obj2 = { gradientColors: null, gradientStyles: tmp.gradient };
   let items = [token];
   obj2.gradientColors = useMemo(() => {

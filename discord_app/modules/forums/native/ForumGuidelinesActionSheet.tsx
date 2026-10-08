@@ -1,22 +1,22 @@
-// === Module 10089: ForumGuidelinesActionSheet ===
+// === Module 9672: ForumGuidelinesActionSheet ===
 
-// Module 10089 (ForumGuidelinesActionSheet)
+// Module 9672 (ForumGuidelinesActionSheet)
 import nativeDefault from "native" /* 587 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import LinkUtils from "LinkUtils" /* 5050 */;
-import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 10075 */;
-import ForumGuidelinesManagerDefault from "ForumGuidelinesManager" /* 10091 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import LinkUtils from "LinkUtils" /* 5418 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 9648 */;
+import ForumGuidelinesManagerDefault from "ForumGuidelinesManager" /* 9674 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(6786).FORUM_GUIDELINES_ACTION_SHEET;
+let closure_6 = fn(6961).FORUM_GUIDELINES_ACTION_SHEET;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { scrollContainer: { paddingHorizontal: 16 }, header: { alignItems: "center", paddingTop: 20, paddingBottom: 24 }, headerTitle: { marginTop: 8 }, guidelinesContainer: { padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm }, footer: { paddingBottom: 16 }, buttonWrapper: { marginHorizontal: 16 }, buttonPill: null, floatingButtonContainer: null, editButton: null, editText: null, editIcon: null };
 let obj3 = { padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm };
 obj2.buttonPill = { borderRadius: nativeDefault.radii.sm };
@@ -32,7 +32,7 @@ let obj5 = { color: nativeDefault.colors.TEXT_BRAND };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/ForumGuidelinesActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumGuidelinesActionSheet(channel) {
   const cResult = channel(first[8]).c(68);
   channel = channel.channel;
   const onPress = channel.onPress;
@@ -97,51 +97,39 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     }
     const effect = noop.useEffect(E, tmp16);
     if (cResult[8] !== onPress) {
-      class F {
+      class E {
         constructor() {
-          if (onPress != null) {
-            tmpResult = tmp();
-          }
-          obj = closure_1(closure_2[14]);
-          hideActionSheetResult = obj.hideActionSheet(closure_6);
+          obj = closure_1(closure_2[13]);
+          markAsSeenResult = obj.markAsSeen(channel.id);
           return;
         }
       }
       cResult[8] = onPress;
-      cResult[9] = F;
+      cResult[9] = tmp19;
     } else {
-      class F {
+      class E {
         constructor() {
-          if (onPress != null) {
-            tmpResult = tmp();
-          }
-          obj = closure_1(closure_2[14]);
-          hideActionSheetResult = obj.hideActionSheet(closure_6);
+          obj = closure_1(closure_2[13]);
+          markAsSeenResult = obj.markAsSeen(channel.id);
           return;
         }
       }
     }
     if (cResult[10] === tmp8 < num3) {
-      class F {
+      class E {
         constructor() {
-          if (onPress != null) {
-            tmpResult = tmp();
-          }
-          obj = closure_1(closure_2[14]);
-          hideActionSheetResult = obj.hideActionSheet(closure_6);
+          obj = closure_1(closure_2[13]);
+          markAsSeenResult = obj.markAsSeen(channel.id);
           return;
         }
       }
     }
-    let tmp20 = !tmp12;
+    let tmp21 = !tmp12;
     if (tmp8 >= num3) {
-      class F {
+      class E {
         constructor() {
-          if (onPress != null) {
-            tmpResult = tmp();
-          }
-          obj = closure_1(closure_2[14]);
-          hideActionSheetResult = obj.hideActionSheet(closure_6);
+          obj = closure_1(closure_2[13]);
+          markAsSeenResult = obj.markAsSeen(channel.id);
           return;
         }
       }
@@ -149,38 +137,32 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
       const obj8 = { grow: true, text: null, onPress: null, style: null, pillStyle: null };
       const intl = tmp(tmp2[17]).intl;
       obj8.text = intl.string(tmp(tmp2[17]).t["NX+WJN"]);
-      obj8.onPress = F;
+      obj8.onPress = tmp19;
       ({ buttonWrapper: obj6.style, buttonPill: obj6.pillStyle } = tmp4);
       obj5.children = closure_7(tmp(tmp2[16]).BaseTextButton, obj8);
-      tmp20 = closure_7(tmp(tmp2[15]).SafeAreaPaddingView, obj5);
+      tmp21 = closure_7(tmp(tmp2[15]).SafeAreaPaddingView, obj5);
     }
     cResult[10] = tmp8 < num3;
-    cResult[11] = F;
+    cResult[11] = tmp19;
     cResult[12] = tmp4.buttonPill;
     cResult[13] = tmp4.buttonWrapper;
     cResult[14] = tmp4.footer;
-    cResult[15] = tmp20;
+    cResult[15] = tmp21;
   }
   let sum;
   if (null != first) {
-    class F {
+    class E {
       constructor() {
-        if (onPress != null) {
-          tmpResult = tmp();
-        }
-        obj = closure_1(closure_2[14]);
-        hideActionSheetResult = obj.hideActionSheet(closure_6);
+        obj = closure_1(closure_2[13]);
+        markAsSeenResult = obj.markAsSeen(channel.id);
         return;
       }
     }
     if (obj4.isAndroid()) {
-      class F {
+      class E {
         constructor() {
-          if (onPress != null) {
-            tmpResult = tmp();
-          }
-          obj = closure_1(closure_2[14]);
-          hideActionSheetResult = obj.hideActionSheet(closure_6);
+          obj = closure_1(closure_2[13]);
+          markAsSeenResult = obj.markAsSeen(channel.id);
           return;
         }
       }
@@ -192,7 +174,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   cResult[2] = sum;
   tmp9 = sum;
   let obj2 = channel(first[9]);
-}) : ((channel) => {
+}) : (function ForumGuidelinesActionSheet(channel) {
   channel = channel.channel;
   const onPress = channel.onPress;
   let bottom;
@@ -341,5 +323,5 @@ export const openForumGuidelinesActionSheet = function openForumGuidelinesAction
   const obj = ActionSheetActionCreatorsDefault;
   const obj2 = {};
   const merged = Object.assign(arg0);
-  obj.openLazy(asyncRequireImpl(10089, dependencyMap.paths), closure_6, obj2);
+  obj.openLazy(asyncRequireImpl(9672, dependencyMap.paths), closure_6, obj2);
 };

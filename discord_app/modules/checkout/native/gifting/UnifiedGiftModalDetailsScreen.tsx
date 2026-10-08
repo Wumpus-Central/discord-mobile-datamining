@@ -1,8 +1,8 @@
-// === Module 10573: UnifiedGiftModalDetailsScreen ===
+// === Module 10170: UnifiedGiftModalDetailsScreen ===
 
-// Module 10573 (UnifiedGiftModalDetailsScreen)
+// Module 10170 (UnifiedGiftModalDetailsScreen)
 import nativeDefault from "native" /* 587 */;
-import UnifiedGiftModalTypes from "UnifiedGiftModalTypes" /* 10572 */;
+import UnifiedGiftModalTypes from "UnifiedGiftModalTypes" /* 10169 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { container: { flex: 1, paddingTop: nativeDefault.space.PX_12, alignItems: "stretch" }, scrollView: null, sectionHeader: null };
 let obj3 = { flex: 1, paddingTop: nativeDefault.space.PX_12, alignItems: "stretch" };
 obj.scrollView = { paddingBottom: nativeDefault.space.PX_24 };
@@ -23,7 +23,7 @@ let obj5 = { marginTop: nativeDefault.space.PX_24, marginBottom: nativeDefault.s
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkout/native/gifting/UnifiedGiftModalDetailsScreen.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function UnifiedGiftModalDetailsScreen(arg0) {
   const cResult = recipientUser(navigation[7]).c(51);
   ({ skuId, recipientUser } = arg0);
   ({ setRecipientUser, lockedRecipient, validateRecipient } = arg0);
@@ -162,7 +162,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   cResult[4] = I;
   tmp10 = I;
   const tmp8 = _slicedToArray(noop.useState(false), 2);
-}) : ((recipientUser) => {
+}) : (function UnifiedGiftModalDetailsScreen(recipientUser) {
   recipientUser = recipientUser.recipientUser;
   const validateRecipient = recipientUser.validateRecipient;
   let navigation;

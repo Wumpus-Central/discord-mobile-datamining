@@ -1,14 +1,14 @@
-// === Module 11888: AppLauncherButtonIcon ===
+// === Module 11960: AppLauncherButtonIcon ===
 
-// Module 11888 (AppLauncherButtonIcon)
+// Module 11960 (AppLauncherButtonIcon)
 import c from "c" /* 576 */;
-import useKeyboardTypeDefault from "useKeyboardType" /* 4753 */;
+import useKeyboardTypeDefault from "useKeyboardType" /* 4947 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
-const KeyboardTypes = PlusLargeIcon(1616);
-const AppsIcon = PlusLargeIcon(5897);
-const PlusLargeIcon2 = PlusLargeIcon(10702);
+const KeyboardTypes = PlusLargeIcon(1628);
+const AppsIcon = PlusLargeIcon(8209);
+const PlusLargeIcon2 = PlusLargeIcon(10290);
 require = fn;
 let closure_3 = ["style"];
 const View = fn(17).View;
@@ -17,7 +17,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/AppLauncherButtonIcon.tsx");
 
-export const AppLauncherButtonIcon = ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
+export const AppLauncherButtonIcon = ReactCompilerGating.isReactCompilerEnabled() ? (function AppLauncherButtonIcon(style) {
   let PlusLargeIcon = require;
   let obj = dependencyMap;
   const cResult = c.c(8);
@@ -71,7 +71,7 @@ export const AppLauncherButtonIcon = ReactCompilerGating.isReactCompilerEnabled(
   cResult[5] = tmp2;
   cResult[6] = tmp3;
   cResult[7] = obj4;
-}) : ((style) => {
+}) : (function AppLauncherButtonIcon(style) {
   style = style.style;
   const merged = Object.assign(style, Object.assign({ style: 0 }));
   const obj = { style: { overflow: "hidden" }, children: null };

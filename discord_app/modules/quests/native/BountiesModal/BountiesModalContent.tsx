@@ -1,29 +1,29 @@
-// === Module 14880: BountiesModalContent ===
+// === Module 15142: BountiesModalContent ===
 
-// Module 14880 (BountiesModalContent)
+// Module 15142 (BountiesModalContent)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import Patterns from "Patterns" /* 4863 */;
-import timing from "timing" /* 4897 */;
-import timingPresets from "timingPresets" /* 4900 */;
-import QuestContent from "QuestContent" /* 5635 */;
-import AdCreativeType from "AdCreativeType" /* 5637 */;
-import QuestDataUtils from "QuestDataUtils" /* 7196 */;
-import AnalyticsActions from "AnalyticsActions" /* 7215 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7225 */;
-import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 10932 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 10953 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 10971 */;
-import AnimationUtils from "AnimationUtils" /* 11022 */;
-import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 14827 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import Patterns from "Patterns" /* 5057 */;
+import timing from "timing" /* 5091 */;
+import timingPresets from "timingPresets" /* 5094 */;
+import QuestContent from "QuestContent" /* 5982 */;
+import AdCreativeType from "AdCreativeType" /* 5984 */;
+import QuestDataUtils from "QuestDataUtils" /* 7375 */;
+import AnalyticsActions from "AnalyticsActions" /* 7395 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7404 */;
+import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 10583 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 10604 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 11164 */;
+import AnimationUtils from "AnimationUtils" /* 11197 */;
+import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 15088 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BountyStore from "BountyStore" /* 7199 */;
+import BountyStore from "BountyStore" /* 7378 */;
 
 require = fn;
 function doRewardEarnedHapticFeedback() {
@@ -54,9 +54,9 @@ function doRewardEarnedHapticFeedback() {
   const tmp7Result = Patterns;
 }
 let View = fn(17).View;
-const QuestConstants = fn(5630);
+const QuestConstants = fn(5977);
 ({ BOUNTY_ORB_AMOUNT: closure_8, QuestsExperimentLocations: closure_9 } = QuestConstants);
-const BountiesModalConstants = fn(14831);
+const BountiesModalConstants = fn(15092);
 ({ getBountyVideoEndAppStoreSheetHeight: c10, getBountyVideoEndPeekTargetScale: closure_11 } = BountiesModalConstants);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_12, ComponentActions: map1 } = Constants);
@@ -66,7 +66,7 @@ const jsxProd = fn(21);
 let c18 = 0.5625;
 const initialProgress = { timestampSec: 0, maxTimestampSec: 0, duration: 0 };
 let ReactCompilerGating = fn(558);
-let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBountiesModalVideoLayout() {
   const cResult = c.c(6);
   ({ width, height } = useWindowDimensionsDefault());
   const rect = useSafeAreaInsetsDefault();
@@ -104,11 +104,11 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[4] = rounded;
   cResult[5] = size;
   tmp11 = size;
-}) : (() => {
-  let size = height(1484)();
+}) : (function useBountiesModalVideoLayout() {
+  let size = height(1496)();
   const width = size.width;
   height = size.height;
-  const tmp = height(1618)();
+  const tmp = height(1630)();
   dependencyMap = tmp;
   const items = [width, height, , , , ];
   ({ top: arr[2], bottom: arr[3], left: arr[4], right: arr[5] } = tmp);
@@ -128,7 +128,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     return size;
   }, items);
 });
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_21 = createStyles.createStyles(() => {
   const obj = { videoWrapper: { position: "absolute" }, closeButton: { position: "absolute" }, bottomContainer: { position: "absolute", bottom: nativeDefault.space.PX_24, justifyContent: "flex-end" }, bottomContainerFullWidth: null, bottomContainerNotFullWidth: null };
   const rect = { left: nativeDefault.space.PX_16, right: nativeDefault.space.PX_16 };
@@ -138,7 +138,7 @@ let closure_21 = createStyles.createStyles(() => {
   return obj;
 });
 ReactCompilerGating = fn(558);
-let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((bounty) => {
+let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function BountiesModalContentInner(bounty) {
   const cResult = require("c").c(117);
   bounty = bounty.bounty;
   _require = bounty;
@@ -193,8 +193,8 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((bounty) => {
                           }
                           const stateFromStores = tmp(504).useStateFromStores(tmp18, F);
                           const tmpResult = tmp(504);
-                          const balance = tmp(8541).useFetchVirtualCurrencyBalance().balance;
-                          const tmpResult2 = tmp(8541);
+                          const balance = tmp(9026).useFetchVirtualCurrencyBalance().balance;
+                          const tmpResult2 = tmp(9026);
                           [tmp25, _slicedToArray] = noop.useState(null);
                           if (tmp25 == null) {
                             class F {
@@ -353,7 +353,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((bounty) => {
                               }
                             }
                           });
-                          const fn = function() {
+                          function t13() {
                             const self = this;
                             const apply = closure_0.apply;
                             if (typeof apply === "unknown") {
@@ -362,10 +362,10 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((bounty) => {
                               applyArgumentsResult = apply(self, arguments);
                             }
                             return applyArgumentsResult;
-                          };
+                          }
                           cResult[29] = bounty.id;
                           cResult[30] = sourceQuestContent;
-                          cResult[31] = fn;
+                          cResult[31] = t13;
                           const tmp24 = _slicedToArray(noop.useState(null), 2);
                         }
                       }
@@ -431,7 +431,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((bounty) => {
   cResult[4] = size1;
   tmp4 = size1;
   let obj = require("c");
-}) : ((bounty) => {
+}) : (function BountiesModalContentInner(bounty) {
   bounty = bounty.bounty;
   const sourceQuestContent = bounty.sourceQuestContent;
   const dismissVideoEndAppStoreOverlay = bounty.dismissVideoEndAppStoreOverlay;
@@ -693,14 +693,14 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((bounty) => {
   return closure_17(closure_16, obj12);
 });
 ReactCompilerGating = fn(558);
-let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function BountiesModalContentWithAppStore(arg0) {
   const cResult = sharedValue(576).c(30);
   ({ bounty, sourceQuestContent } = arg0);
   const height = useWindowDimensionsDefault().height;
   const size = closure_20();
   let obj = sharedValue(576);
-  sharedValue = sharedValue(4618).useSharedValue(0);
-  let obj2 = sharedValue(4618);
+  sharedValue = sharedValue(4810).useSharedValue(0);
+  let obj2 = sharedValue(4810);
   [tmp4, importDefault] = noop.useState(null);
   dependencyMap = noop.useRef(null);
   bounty = noop.useRef(0);
@@ -716,7 +716,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           cResult[6] = tmp10;
         }
         if (cResult[7] !== sharedValue) {
-          class B {
+          class R {
             constructor(arg0) {
               closure_3.current = Date.now();
               closure_2.current = arg0;
@@ -731,9 +731,9 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             }
           }
           cResult[7] = sharedValue;
-          cResult[8] = B;
+          cResult[8] = R;
         } else {
-          class B {
+          class R {
             constructor(arg0) {
               closure_3.current = Date.now();
               closure_2.current = arg0;
@@ -851,10 +851,10 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             }
           }
         }
-        const obj3 = { videoEndPeekProgress: sharedValue, videoEndPeekTargetScale: tmp6, isVideoEndAppStoreOverlayVisible: tmp5, showVideoEndAppStoreOverlay: B, dismissVideoEndAppStoreOverlay: Q };
+        const obj3 = { videoEndPeekProgress: sharedValue, videoEndPeekTargetScale: tmp6, isVideoEndAppStoreOverlayVisible: tmp5, showVideoEndAppStoreOverlay: R, dismissVideoEndAppStoreOverlay: Q };
         cResult[11] = Q;
         cResult[12] = tmp5;
-        cResult[13] = B;
+        cResult[13] = R;
         cResult[14] = sharedValue;
         cResult[15] = tmp6;
         cResult[16] = obj3;
@@ -869,7 +869,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   tmp6 = tmp7;
   const obj4 = { windowHeight: height, videoTop: size.top, videoWidth: size.width, videoHeight: size.height };
   const tmp3 = _slicedToArray(noop.useState(null), 2);
-}) : ((arg0) => {
+}) : (function BountiesModalContentWithAppStore(arg0) {
   importDefault = undefined;
   let sharedValue;
   c3 = undefined;
@@ -891,7 +891,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const memo = noop.useMemo(() => closure_2_11({ windowHeight: height, videoTop: styles.top, videoWidth: styles.width, videoHeight: styles.height }), items);
   const items1 = [height];
   const items2 = [sharedValue];
-  const memo1 = noop.useMemo(() => v65535(height), items1);
+  const memo1 = noop.useMemo(() => collapsed(height), items1);
   const showVideoEndAppStoreOverlay = noop.useCallback((current) => {
     closure_5.current = Date.now();
     closure_4.current = current;
@@ -933,7 +933,7 @@ ReactCompilerGating = fn(558);
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalContent.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((bountyId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function BountiesModalContent(bountyId) {
   let VIDEO_MODAL_MOBILE = bounty;
   const cResult = bountyId(bounty[11]).c(16);
   bountyId = bountyId.bountyId;
@@ -963,7 +963,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((bountyId) => {
               class C {
                 constructor() {
                   obj = { bounty: closure_3, sourceQuestContent };
-                  return jsx(f68883, obj);
+                  return jsx(BountiesModalContentWithAppStore, obj);
                 }
               }
               let obj3 = { theme: ThemeTypes.DARK, children: null };
@@ -983,7 +983,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((bountyId) => {
             class C {
               constructor() {
                 obj = { bounty: closure_3, sourceQuestContent };
-                return jsx(f68883, obj);
+                return jsx(BountiesModalContentWithAppStore, obj);
               }
             }
             cResult[9] = id;
@@ -1034,7 +1034,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((bountyId) => {
   cResult[3] = fn;
   tmp3 = fn;
   let obj = bountyId(bounty[11]);
-}) : ((bountyId) => {
+}) : (function BountiesModalContent(bountyId) {
   bountyId = bountyId.bountyId;
   const sourceQuestContent = bountyId.sourceQuestContent;
   _slicedToArray = undefined;

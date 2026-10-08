@@ -1,11 +1,11 @@
-// === Module 13289: PremiumMarketingPage ===
+// === Module 13590: PremiumMarketingPage ===
 
-// Module 13289 (PremiumMarketingPage)
+// Module 13590 (PremiumMarketingPage)
 import nativeDefault from "native" /* 587 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import dismissible_content from "dismissible_content" /* 2036 */;
-import DismissibleContentUtils from "DismissibleContentUtils" /* 2037 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4704 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import dismissible_content from "dismissible_content" /* 2048 */;
+import DismissibleContentUtils from "DismissibleContentUtils" /* 2049 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4898 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,27 +13,27 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
-let FractionalPremiumStates = fn(1379).FractionalPremiumStates;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
+let FractionalPremiumStates = fn(1391).FractionalPremiumStates;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { display: "flex" }, scrollContainer: { flexDirection: "column", alignItems: "center", marginTop: 16 }, arrowIcon: { tintColor: nativeDefault.colors.TEXT_DEFAULT }, backButton: null, sectionWithTopMargin: { marginTop: 48 }, sectionWithPadding: { paddingHorizontal: 12 }, sectionWidth: { maxWidth: 464 }, accountCreditContainer: { width: "100%" }, accountCreditContainerWithSpacing: { marginTop: 24, marginBottom: 20 }, themedBackground: null, backButtonBackground: null };
 let obj4 = { transform: null, position: "absolute", left: 16 };
 let items = [{ scaleX: -1 }];
 obj4.transform = items;
 obj2.backButton = obj4;
 let obj3 = { tintColor: nativeDefault.colors.TEXT_DEFAULT };
-obj2.themedBackground = { backgroundColor: fn(5627).DARK_PRIMARY_700_LIGHT_WHITE_500 };
-let obj5 = { backgroundColor: fn(5627).DARK_PRIMARY_700_LIGHT_WHITE_500 };
-obj2.backButtonBackground = { backgroundColor: fn(5627).TIER_0_MARKETING_PAGE_BACK_BUTTON_BG };
+obj2.themedBackground = { backgroundColor: fn(5974).DARK_PRIMARY_700_LIGHT_WHITE_500 };
+let obj5 = { backgroundColor: fn(5974).DARK_PRIMARY_700_LIGHT_WHITE_500 };
+obj2.backButtonBackground = { backgroundColor: fn(5974).TIER_0_MARKETING_PAGE_BACK_BUTTON_BG };
 let closure_12 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let obj6 = { backgroundColor: fn(5627).TIER_0_MARKETING_PAGE_BACK_BUTTON_BG };
+let obj6 = { backgroundColor: fn(5974).TIER_0_MARKETING_PAGE_BACK_BUTTON_BG };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/premium/native/PremiumMarketingPage.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((userHasSubscription) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumMarketingPage(userHasSubscription) {
   const cResult = userHasSubscription(analyticsLocations[11]).c(105);
   userHasSubscription = userHasSubscription.userHasSubscription;
   ({ subscriptionDetails, billingInfo, accountCredit, applicationId, onClose, premiumFeatureCardOrder, entitlements, onPaymentSuccess, onPaymentDismiss, isFullScreenPresentation } = userHasSubscription);
@@ -169,7 +169,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userHasSubscript
         }
       }
     }
-    function rt(nativeEvent) {
+    function handleScroll(nativeEvent) {
       nativeEvent = nativeEvent.nativeEvent;
       const contentOffset = nativeEvent.contentOffset;
       let tmp2 = !first;
@@ -199,7 +199,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userHasSubscript
     cResult[12] = sharedValue;
     cResult[13] = showAfterLastCard;
     cResult[14] = tmp14;
-    cResult[15] = rt;
+    cResult[15] = handleScroll;
     const tmpResult8 = tmp(tmp2[20]);
   }
   et = function et() {
@@ -211,7 +211,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userHasSubscript
   cResult[5] = et;
   cResult[6] = items1;
   const tmpResult7 = userHasSubscription(analyticsLocations[19]);
-}) : ((userHasSubscription) => {
+}) : (function PremiumMarketingPage(userHasSubscription) {
   userHasSubscription = userHasSubscription.userHasSubscription;
   ({ onClose, entitlements, onPaymentSuccess, onPaymentDismiss, isFullScreenPresentation } = userHasSubscription);
   ({ subscriptionDetails, billingInfo, accountCredit, applicationId, premiumFeatureCardOrder } = userHasSubscription);
@@ -320,7 +320,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userHasSubscript
   const items4 = [sharedValue(navigation(analyticsLocations[31]), {}), , ];
   const obj7 = {
     contentContainerStyle: tmp4.scrollContainer,
-    onScroll(nativeEvent) {
+    onScroll: function handleScroll(nativeEvent) {
       nativeEvent = nativeEvent.nativeEvent;
       const contentOffset = nativeEvent.contentOffset;
       let tmp2 = !c3;

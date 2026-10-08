@@ -1,9 +1,9 @@
-// === Module 12778: useOverlayLayoutDriver ===
+// === Module 12925: useOverlayLayoutDriver ===
 
-// Module 12778 (useOverlayLayoutDriver)
-import native from "native" /* 1188 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import timing from "timing" /* 4897 */;
+// Module 12925 (useOverlayLayoutDriver)
+import native from "native" /* 1200 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import timing from "timing" /* 5091 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -15,12 +15,12 @@ const __initData2 = { code: "function useOverlayLayoutDriverTsx2(){const{interpo
 let ReactCompilerGating = fn(558);
 const __initData3 = { code: "function useOverlayLayoutDriverTsx3(){const{interpolate,animationDriver}=this.__closure;return{transform:[{translateY:interpolate(animationDriver.get(),[0,0.75,1],[50,50,0])}],opacity:interpolate(animationDriver.get(),[0,0.75,1],[0,0,1])};}" };
 const __initData4 = { code: "function useOverlayLayoutDriverTsx4(){const{interpolate,animationDriver}=this.__closure;return{transform:[{translateY:interpolate(animationDriver.get(),[0,0.75,1],[50,50,0])}],opacity:interpolate(animationDriver.get(),[0,0.75,1],[0,0,1])};}" };
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOverlayLayoutDriver() {
   const cResult = sharedValue(576).c(6);
   let obj = sharedValue(576);
-  sharedValue = sharedValue(4618).useSharedValue(0);
-  const obj2 = sharedValue(4618);
-  const mediaViewerDimensions = sharedValue(7978).useMediaViewerDimensions();
+  sharedValue = sharedValue(4810).useSharedValue(0);
+  const obj2 = sharedValue(4810);
+  const mediaViewerDimensions = sharedValue(8395).useMediaViewerDimensions();
   ({ height, width } = mediaViewerDimensions);
   if (cResult[0] !== sharedValue) {
     const fn = function n() {
@@ -48,11 +48,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[4] = width;
   cResult[5] = items;
   tmp5 = items;
-  const obj3 = sharedValue(7978);
-}) : (() => {
-  sharedValue = sharedValue(4618).useSharedValue(0);
-  let obj = sharedValue(4618);
-  const mediaViewerDimensions = sharedValue(7978).useMediaViewerDimensions();
+  const obj3 = sharedValue(8395);
+}) : (function useOverlayLayoutDriver() {
+  sharedValue = sharedValue(4810).useSharedValue(0);
+  let obj = sharedValue(4810);
+  const mediaViewerDimensions = sharedValue(8395).useMediaViewerDimensions();
   const items = [sharedValue, , ];
   ({ height: arr[1], width: arr[2] } = mediaViewerDimensions);
   const effect = noop.useEffect(() => {
@@ -62,7 +62,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   return sharedValue;
 });
 ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((animationDriver) => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHeaderLayoutAnimation(animationDriver) {
   _require = animationDriver;
   const fn = function n() {
     const obj = { transform: null, opacity: null };
@@ -77,7 +77,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((animationDriver) =
   fn.__workletHash = 13622939479876;
   fn.__initData = __initData;
   return obj.useAnimatedStyle(fn);
-}) : ((animationDriver) => {
+}) : (function useHeaderLayoutAnimation(animationDriver) {
   _require = animationDriver;
   const fn = function n() {
     const obj = { transform: null, opacity: null };
@@ -98,7 +98,7 @@ let result = size.fileFinishedImporting("modules/media_viewer/native/useOverlayL
 
 export const useOverlayLayoutDriver = tmp2;
 export const useHeaderLayoutAnimation = tmp3;
-export const useFooterLayoutAnimation = ReactCompilerGating.isReactCompilerEnabled() ? ((animationDriver) => {
+export const useFooterLayoutAnimation = ReactCompilerGating.isReactCompilerEnabled() ? (function useFooterLayoutAnimation(animationDriver) {
   _require = animationDriver;
   const fn = function n() {
     const obj = { transform: null, opacity: null };
@@ -113,7 +113,7 @@ export const useFooterLayoutAnimation = ReactCompilerGating.isReactCompilerEnabl
   fn.__workletHash = 14180573945254;
   fn.__initData = __initData3;
   return obj.useAnimatedStyle(fn);
-}) : ((animationDriver) => {
+}) : (function useFooterLayoutAnimation(animationDriver) {
   _require = animationDriver;
   const fn = function n() {
     const obj = { transform: null, opacity: null };

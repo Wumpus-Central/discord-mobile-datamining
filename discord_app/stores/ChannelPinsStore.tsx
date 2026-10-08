@@ -1,18 +1,18 @@
-// === Module 11312: ChannelPinsStore ===
+// === Module 12805: ChannelPinsStore ===
 
-// Module 11312 (ChannelPinsStore)
+// Module 12805 (ChannelPinsStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5118 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7122 */;
-import LocaleStore from "LocaleStore" /* 2116 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import MessageStore from "MessageStore" /* 5116 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
-import UserStore from "UserStore" /* 1377 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5430 */;
+import handleExplicitMediaScanTimeoutForMessage from "handleExplicitMediaScanTimeoutForMessage" /* 7308 */;
+import LocaleStore from "LocaleStore" /* 2128 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildMemberStore from "GuildMemberStore" /* 2124 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import MessageStore from "MessageStore" /* 5428 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 function handleChannelDelete(arg0) {
@@ -179,7 +179,7 @@ const channelPinsStore = new ChannelPinsStore(DispatcherDefault, {
       } else {
         const items = tmp.items;
         tmp.items = items.slice();
-        tmp.items[findIndexResult].message = ExplicitMediaRedactionUtils.handleExplicitMediaScanTimeoutForMessage(tmp.items[findIndexResult].message);
+        tmp.items[findIndexResult].message = handleExplicitMediaScanTimeoutForMessage.handleExplicitMediaScanTimeoutForMessage(tmp.items[findIndexResult].message);
       }
     }
   }

@@ -1,6 +1,6 @@
-// === Module 8561: useIsVariantColorLight ===
+// === Module 9045: useIsVariantColorLight ===
 
-// Module 8561 (useIsVariantColorLight)
+// Module 9045 (useIsVariantColorLight)
 import c from "c" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
 import noop from "module_19" /* 19 */;
@@ -10,7 +10,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useIsVariantColorLight.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((variantValue) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsVariantColorLight(variantValue) {
   const cResult = c.c(2);
   if (cResult[0] !== variantValue.variantValue) {
     let isValidHexResult = utils_ColorUtils.isValidHex(variantValue.variantValue);
@@ -27,7 +27,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((variantValue) =>
     tmp4 = cResult[1];
   }
   return tmp4;
-}) : ((variantValue) => {
+}) : (function useIsVariantColorLight(variantValue) {
   const items = [variantValue.variantValue];
   return noop.useMemo(() => {
     let isValidHexResult = utils_ColorUtils.isValidHex(variantValue.variantValue);

@@ -1,7 +1,7 @@
-// === Module 14652: useSensitiveMediaSettingDisabled ===
+// === Module 14913: useSensitiveMediaSettingDisabled ===
 
-// Module 14652 (useSensitiveMediaSettingDisabled)
-import useParentalControlSettings from "useParentalControlSettings" /* 14641 */;
+// Module 14913 (useSensitiveMediaSettingDisabled)
+import useParentalControlSettings from "useParentalControlSettings" /* 14902 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -9,4 +9,6 @@ let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const result1 = size.fileFinishedImporting("modules/explicit_media_redaction/hooks/useSensitiveMediaSettingDisabled.tsx");
 
-export const useSensitiveMediaSettingDisabled = () => useParentalControlSettings.useIsParentallyControlled();
+export const useSensitiveMediaSettingDisabled = function useSensitiveMediaSettingDisabled() {
+  return useParentalControlSettings.useIsParentallyControlled();
+};

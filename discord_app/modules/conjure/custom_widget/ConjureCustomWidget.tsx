@@ -1,7 +1,7 @@
-// === Module 12921: ConjureCustomWidget ===
+// === Module 13070: ConjureCustomWidget ===
 
-// Module 12921 (ConjureCustomWidget)
-import GuildStore from "GuildStore" /* 2074 */;
+// Module 13070 (ConjureCustomWidget)
+import GuildStore from "GuildStore" /* 2086 */;
 
 const require = globalThis.__r;
 
@@ -11,12 +11,12 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/custom_widget/ConjureCustomWidget.tsx");
 
 export const CONJURE_CUSTOM_WIDGET_PROMPT_MAX_LENGTH = 2000;
-export const useCanConjureCustomWidget = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export const useCanConjureCustomWidget = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanConjureCustomWidget(arg0, arg1) {
   _require = arg0;
   const cResult = require("c").c(5);
   dependencyMap = tmp4;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [GuildStore, tmp(1440).ApexExperimentStore];
+    const items = [GuildStore, tmp(1452).ApexExperimentStore];
     cResult[0] = items;
     let first = items;
   } else {
@@ -45,7 +45,7 @@ export const useCanConjureCustomWidget = ReactCompilerGating.isReactCompilerEnab
   tmp8 = items1;
   tmp7 = fn;
   const obj = require("c");
-}) : ((arg0) => {
+}) : (function useCanConjureCustomWidget(arg0) {
   _require = arg0;
   let flag = arg1;
   if (arg1 === undefined) {

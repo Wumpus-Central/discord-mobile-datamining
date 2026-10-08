@@ -1,11 +1,11 @@
-// === Module 12479: common/Notifications ===
+// === Module 12575: common/Notifications ===
 
-// Module 12479 (common/Notifications)
+// Module 12575 (common/Notifications)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import InAppNotificationContainerDefault from "InAppNotificationContainer" /* 12499 */;
+import InAppNotificationContainerDefault from "InAppNotificationContainer" /* 12595 */;
 import noop from "module_19" /* 19 */;
-import InAppNotificationStore from "InAppNotificationStore" /* 12480 */;
+import InAppNotificationStore from "InAppNotificationStore" /* 12576 */;
 
 require = fn;
 const jsx = fn(21).jsx;
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/Notifications.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function Notifications() {
   let tmp2 = dependencyMap;
   const cResult = c.c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -38,7 +38,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     cResult[3] = tmp2;
   }
   const tmpResult = initialize;
-}) : (() => {
+}) : (function Notifications() {
   const items = [InAppNotificationStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentNotification.getCurrentNotification());
   let tmp3 = null;

@@ -1,26 +1,26 @@
-// === Module 11932: DoubleTapToReactChatInputBanner ===
+// === Module 12005: DoubleTapToReactChatInputBanner ===
 
-// Module 11932 (DoubleTapToReactChatInputBanner)
+// Module 12005 (DoubleTapToReactChatInputBanner)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
-import dismissible_content from "dismissible_content" /* 2036 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import timing from "timing" /* 4897 */;
-import Pressables from "Pressables" /* 5916 */;
-import XSmallIcon from "XSmallIcon" /* 6024 */;
-import EmojiDefault from "Emoji" /* 6632 */;
-import canAddNewReactionsDefault from "canAddNewReactions" /* 7641 */;
-import renderChannelBadge from "renderChannelBadge" /* 11933 */;
+import native from "native" /* 1200 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import dismissible_content from "dismissible_content" /* 2048 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import timing from "timing" /* 5091 */;
+import Pressables from "Pressables" /* 6189 */;
+import XSmallIcon from "XSmallIcon" /* 6210 */;
+import EmojiDefault from "Emoji" /* 6809 */;
+import canAddNewReactionsDefault from "canAddNewReactions" /* 7962 */;
+import renderChannelBadge from "renderChannelBadge" /* 12006 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 require = fn;
 function DoubleTapToReactChatInputBannerAnimationContainer(channel) {
@@ -90,7 +90,7 @@ function DoubleTapToReactChatInputBannerAnimationContainer(channel) {
   }, []);
   const items3 = [markAsDismissed];
   const callback1 = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12034, dependencyMap.paths), "DoubleTapToReactActionSheet", { emoji });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12107, dependencyMap.paths), "DoubleTapToReactActionSheet", { emoji });
     markAsDismissed(ContentDismissActionType.TAKE_ACTION);
   }, items2);
   const callback2 = noop.useCallback(() => {
@@ -128,12 +128,12 @@ function DoubleTapToReactChatInputBannerAnimationContainer(channel) {
   return closure_10(closure_11, obj7);
 }
 const View = fn(17).View;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
-const EMOJI_URL_BASE_SIZE = fn(1380).EMOJI_URL_BASE_SIZE;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
+const EMOJI_URL_BASE_SIZE = fn(1392).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 const androidRippleConfig = { cornerRadius: 0 };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { animatedContainer: { borderTopWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, measurement: { opacity: 0, position: "absolute" }, container: { display: "flex", flexDirection: "row", alignItems: "center", padding: 12 }, highlight: null, text: null, emojiContainer: null, emoji: null, textEmoji: null, header: null, closeButton: null };
 let obj3 = { borderTopWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.highlight = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
@@ -141,13 +141,13 @@ obj2.text = { marginHorizontal: 12, flex: 1 };
 let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.emojiContainer = { borderWidth: 2, borderColor: nativeDefault.colors.BORDER_STRONG, backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.md, flexDirection: "row", gap: 8, alignItems: "center", justifyContent: "center", padding: 12 };
 obj2.emoji = { width: 28, height: 28 };
-let PlatformUtils = fn(1369);
+let PlatformUtils = fn(1381);
 let num = 22;
 if (PlatformUtils.isIOS()) {
   num = 28;
 }
 let obj7 = { fontSize: num, textAlign: "center", lineHeight: null, color: null };
-PlatformUtils = fn(1369);
+PlatformUtils = fn(1381);
 let num2;
 if (PlatformUtils.isIOS()) {
   num2 = 32;
@@ -159,7 +159,7 @@ obj2.header = { flexDirection: "row", alignItems: "center", gap: 6 };
 obj2.closeButton = { alignSelf: "flex-start" };
 let closure_13 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function DoubleTapToReactChatInputBannerInner(arg0) {
   const cResult = c.c(40);
   ({ emoji, handleDismissBanner } = arg0);
   const tmp4 = closure_13();
@@ -218,7 +218,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                     const obj4 = { style: tmp4.header, children: null };
                     const items1 = [tmp24, tmp25];
                     obj4.children = items1;
-                    const tmp32 = v65535(View, obj4);
+                    const tmp32 = collapsed(View, obj4);
                     cResult[18] = tmp4.header;
                     cResult[19] = tmp32;
                     let tmp29 = tmp32;
@@ -228,28 +228,28 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                   if (cResult[20] !== emoji.name) {
                     const _Symbol3 = Symbol;
                     if (cResult[22] === Symbol.for("react.memo_cache_sentinel")) {
-                      class L {
+                      class B {
                         constructor(arg0, arg1) {
                           obj = { variant: "text-xs/bold", color: "text-strong", children: arg0 };
                           return closure_1_9(closure_1_0(closure_1_2[15]).Text, obj, arg1);
                         }
                       }
-                      class B {
+                      class L {
                         constructor(arg0, arg1) {
                           obj = { variant: "text-xs/medium", color: "text-brand", children: arg0 };
                           return closure_1_9(closure_1_0(closure_1_2[15]).Text, obj, arg1);
                         }
                       }
-                      cResult[22] = L;
-                      cResult[23] = B;
+                      cResult[22] = B;
+                      cResult[23] = L;
                     } else {
-                      class L {
+                      class B {
                         constructor(arg0, arg1) {
                           obj = { variant: "text-xs/bold", color: "text-strong", children: arg0 };
                           return closure_1_9(closure_1_0(closure_1_2[15]).Text, obj, arg1);
                         }
                       }
-                      class B {
+                      class L {
                         constructor(arg0, arg1) {
                           obj = { variant: "text-xs/medium", color: "text-brand", children: arg0 };
                           return closure_1_9(closure_1_0(closure_1_2[15]).Text, obj, arg1);
@@ -257,26 +257,26 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                       }
                     }
                     const intl2 = util.intl;
-                    const obj6 = { emojiName: emoji.name, emojiNameHook: L, tapHereHook: B };
+                    const obj6 = { emojiName: emoji.name, emojiNameHook: B, tapHereHook: L };
                     const formatResult = intl2.format(util.t["5/l2rR"], obj6);
                     emoji = emoji.name;
                     cResult[20] = emoji;
                     cResult[21] = formatResult;
                   } else {
-                    class L {
+                    class B {
                       constructor(arg0, arg1) {
                         obj = { variant: "text-xs/bold", color: "text-strong", children: arg0 };
                         return closure_1_9(closure_1_0(closure_1_2[15]).Text, obj, arg1);
                       }
                     }
-                    class B {
+                    class L {
                       constructor(arg0, arg1) {
                         obj = { variant: "text-xs/medium", color: "text-brand", children: arg0 };
                         return closure_1_9(closure_1_0(closure_1_2[15]).Text, obj, arg1);
                       }
                     }
                     if (cResult[26] === tmp4.text) {
-                      class L {
+                      class B {
                         constructor(arg0, arg1) {
                           obj = { variant: "text-xs/bold", color: "text-strong", children: arg0 };
                           return closure_1_9(closure_1_0(closure_1_2[15]).Text, obj, arg1);
@@ -286,7 +286,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                     const obj7 = { style: tmp4.text, children: null };
                     const items2 = [tmp29, tmp37];
                     obj7.children = items2;
-                    const tmp41 = v65535(View, obj7);
+                    const tmp41 = collapsed(View, obj7);
                     cResult[26] = tmp4.text;
                     cResult[27] = tmp29;
                     cResult[28] = tmp37;
@@ -296,7 +296,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                 const obj8 = { style: tmp4.emojiContainer, children: null };
                 const items3 = [tmp13, tmp17];
                 obj8.children = items3;
-                const tmp23 = v65535(View, obj8);
+                const tmp23 = collapsed(View, obj8);
                 cResult[13] = tmp4.emojiContainer;
                 cResult[14] = tmp13;
                 cResult[15] = tmp23;
@@ -319,13 +319,13 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
   }
   if (null != emoji.id) {
-    class L {
+    class B {
       constructor(arg0, arg1) {
         obj = { variant: "text-xs/bold", color: "text-strong", children: arg0 };
         return closure_1_9(closure_1_0(closure_1_2[15]).Text, obj, arg1);
       }
     }
-    class B {
+    class L {
       constructor(arg0, arg1) {
         obj = { variant: "text-xs/medium", color: "text-brand", children: arg0 };
         return closure_1_9(closure_1_0(closure_1_2[15]).Text, obj, arg1);
@@ -333,7 +333,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     const obj10 = { id: emoji.id, animated: null, size: null };
     if (!stateFromStores) {
-      class L {
+      class B {
         constructor(arg0, arg1) {
           obj = { variant: "text-xs/bold", color: "text-strong", children: arg0 };
           return closure_1_9(closure_1_0(closure_1_2[15]).Text, obj, arg1);
@@ -345,7 +345,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const emojiURL = obj3.getEmojiURL(obj10);
     const tmp11 = !stateFromStores;
   } else {
-    class L {
+    class B {
       constructor(arg0, arg1) {
         obj = { variant: "text-xs/bold", color: "text-strong", children: arg0 };
         return closure_1_9(closure_1_0(closure_1_2[15]).Text, obj, arg1);
@@ -358,7 +358,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = stateFromStores;
   cResult[6] = emojiURL;
   const tmpResult = useStateFromStores;
-}) : ((emoji) => {
+}) : (function DoubleTapToReactChatInputBannerInner(emoji) {
   emoji = emoji.emoji;
   const tmp = closure_13();
   const items = [AccessibilityStore];
@@ -387,7 +387,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   obj4.src = url;
   const items1 = [options(EmojiDefault, obj4), options(Text_Text.Text, { variant: "heading-xl/semibold", color: "interactive-text-default", children: "1" })];
   obj3.children = items1;
-  const items2 = [v65535(View, obj3), , ];
+  const items2 = [collapsed(View, obj3), , ];
   const obj6 = { style: tmp.text, children: null };
   const obj7 = { style: tmp.header, children: null };
   const obj8 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
@@ -395,7 +395,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   obj8.children = intl.string(util.t["6RUX7d"]);
   const items3 = [options(Text_Text.Text, obj8), options(renderChannelBadge.NewBadge, {})];
   obj7.children = items3;
-  const items4 = [v65535(View, obj7), ];
+  const items4 = [collapsed(View, obj7), ];
   const obj9 = { variant: "text-xs/medium", color: "text-default", children: null };
   const intl2 = util.intl;
   obj9.children = intl2.format(util.t["5/l2rR"], {
@@ -409,7 +409,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   });
   items4[1] = options(Text_Text.Text, obj9);
   obj6.children = items4;
-  items2[1] = v65535(View, obj6);
+  items2[1] = collapsed(View, obj6);
   const obj11 = { hitSlop: 8, accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
   const intl3 = util.intl;
   obj11.accessibilityLabel = intl3.string(util.t.cpT0Cq);
@@ -418,7 +418,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   obj11.children = options(XSmallIcon.XSmallIcon, { size: "sm", color: "icon-subtle" });
   items2[2] = options(Pressables.PressableOpacity, obj11);
   obj2.children = items2;
-  return v65535(View, obj2);
+  return collapsed(View, obj2);
 });
 const __initData = { code: "function DoubleTapToReactChatInputBannerTsx1(){const{useReducedMotion,height,withDelay,withTiming,DECELERATED_EASING}=this.__closure;if(useReducedMotion){return{height:height.get()};}return{height:withDelay(200,withTiming(height.get(),{duration:300,easing:DECELERATED_EASING}))};}" };
 ReactCompilerGating = fn(558);
@@ -426,11 +426,11 @@ let obj5 = { borderWidth: 2, borderColor: nativeDefault.colors.BORDER_STRONG, ba
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/double_tap_to_react/native/DoubleTapToReactChatInputBanner.tsx");
 
-export const DoubleTapToReactChatInputBanner = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+export const DoubleTapToReactChatInputBanner = ReactCompilerGating.isReactCompilerEnabled() ? (function DoubleTapToReactChatInputBanner(channel) {
   let tmp2 = dependencyMap;
   const cResult = channel(576).c(4);
   channel = channel.channel;
-  const DoubleTapReactionEmoji = channel(2028).DoubleTapReactionEmoji;
+  const DoubleTapReactionEmoji = channel(2040).DoubleTapReactionEmoji;
   const setting = DoubleTapReactionEmoji.useSetting();
   ({ emojiId, emojiName } = setting);
   let tmp5 = true !== setting.disableDoubleTap;
@@ -450,17 +450,17 @@ export const DoubleTapToReactChatInputBanner = ReactCompilerGating.isReactCompil
     if (!tmp7) {
       let tmp10 = null != channel.lastMessageId;
       if (tmp10) {
-        tmp10 = emoji(7641)(channel);
+        tmp10 = emoji(7962)(channel);
       }
       tmp9 = tmp10;
     }
     tmp5 = tmp9;
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fallbackDoubleTapDisambiguatedEmoji = tmp(7638).getFallbackDoubleTapDisambiguatedEmoji();
+    const fallbackDoubleTapDisambiguatedEmoji = tmp(7959).getFallbackDoubleTapDisambiguatedEmoji();
     cResult[0] = fallbackDoubleTapDisambiguatedEmoji;
     emoji = fallbackDoubleTapDisambiguatedEmoji;
-    const tmpResult = tmp(7638);
+    const tmpResult = tmp(7959);
   } else {
     emoji = cResult[0];
   }
@@ -471,7 +471,7 @@ export const DoubleTapToReactChatInputBanner = ReactCompilerGating.isReactCompil
     } else {
       const _Symbol = Symbol;
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [tmp(2036).DismissibleContent.DOUBLE_TAP_TO_REACT_EXPANDED_UPSELL];
+        const items = [tmp(2048).DismissibleContent.DOUBLE_TAP_TO_REACT_EXPANDED_UPSELL];
         cResult[1] = items;
         let tmp16 = items;
       } else {
@@ -491,14 +491,14 @@ export const DoubleTapToReactChatInputBanner = ReactCompilerGating.isReactCompil
                   return tmp;
                 }
         };
-        tmp2 = closure_9(emoji(10367), obj2);
+        tmp2 = closure_9(emoji(9964), obj2);
         cResult[2] = channel;
         cResult[3] = tmp2;
       }
     }
   }
   return tmp14;
-}) : ((channel) => {
+}) : (function DoubleTapToReactChatInputBanner(channel) {
   channel = channel.channel;
   let memo1;
   const DoubleTapReactionEmoji = channel(memo1[31]).DoubleTapReactionEmoji;

@@ -1,19 +1,19 @@
-// === Module 17758: GuildSettingsModalAuditLog ===
+// === Module 18045: GuildSettingsModalAuditLog ===
 
-// Module 17758 (GuildSettingsModalAuditLog)
+// Module 18045 (GuildSettingsModalAuditLog)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import showSimpleActionSheet from "showSimpleActionSheet" /* 6700 */;
-import AuditLogUtilsAll from "AuditLogUtils" /* 17761 */;
-import AuditLogActionCreators from "AuditLogActionCreators" /* 17764 */;
-import AuditLogDefault from "AuditLog" /* 17773 */;
+import showSimpleActionSheet from "showSimpleActionSheet" /* 6877 */;
+import AuditLogUtilsAll from "AuditLogUtils" /* 18048 */;
+import AuditLogActionCreators from "AuditLogActionCreators" /* 18051 */;
+import AuditLogDefault from "AuditLog" /* 18060 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import UserStore from "UserStore" /* 1377 */;
-import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 17759 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
+import UserStore from "UserStore" /* 1389 */;
+import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 18046 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -22,7 +22,7 @@ const Constants = fn(1085);
 ({ GuildSettingsSections: map1, AuditLogFilterTypes: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { listView: { marginVertical: 12 }, spinner: { marginTop: 40 }, filterTextWrapper: { borderRadius: nativeDefault.radii.md, paddingVertical: 6, paddingHorizontal: 8, backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT }, filtersWrapper: null, firstAuditRow: null, lastAuditRow: null, filterTrailing: null };
 let obj3 = { borderRadius: nativeDefault.radii.md, paddingVertical: 6, paddingHorizontal: 8, backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT };
 obj2.filtersWrapper = { paddingTop: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_8 };
@@ -211,18 +211,18 @@ export default function ConnectedGuildSettingsModalAuditLog(guildId) {
         obj14.Illustration = tmp2(tmp3[27]).EmptyServerSettingsAuditLog;
         closure_15(tmp2(tmp3[26]).EmptyState, obj14);
       } else {
-        const obj15 = { style: null, contentContainerStyle: null, data: null, extraData: null, keyExtractor: null, renderItem: null, onEndReached: null };
-        const items10 = [tmp.listView];
-        obj15.style = items10;
-        obj15.contentContainerStyle = guildId.contentContainerStyle;
-        obj15.data = memo;
-        obj15.extraData = extraData;
-        obj15.keyExtractor = function keyExtractor(id) {
-          return id.id;
-        };
-        obj15.renderItem = callback1;
-        obj15.onEndReached = function onEndReached() {
-          const nextLogPage = AuditLogActionCreators.fetchNextLogPage(guildId);
+        const obj15 = {
+          style: tmp.listView,
+          contentContainerStyle: guildId.contentContainerStyle,
+          data: memo,
+          extraData,
+          keyExtractor(id) {
+                  return id.id;
+                },
+          renderItem: callback1,
+          onEndReached() {
+                  const nextLogPage = AuditLogActionCreators.fetchNextLogPage(guildId);
+                }
         };
         items9[1] = closure_15(stateFromStores1, obj15);
         let tmp24 = null;
@@ -237,7 +237,7 @@ export default function ConnectedGuildSettingsModalAuditLog(guildId) {
     }
   }
   const obj17 = { children: null };
-  const items11 = [tmp16Result, closure_15(guildId(stateFromStores[28]).NavScrim, {})];
-  obj17.children = items11;
+  const items10 = [tmp16Result, closure_15(guildId(stateFromStores[28]).NavScrim, {})];
+  obj17.children = items10;
   return closure_16(closure_17, obj17);
 };

@@ -1,23 +1,23 @@
-// === Module 14869: BountiesScrollIndicatorAnimation ===
+// === Module 15131: BountiesScrollIndicatorAnimation ===
 
-// Module 14869 (BountiesScrollIndicatorAnimation)
+// Module 15131 (BountiesScrollIndicatorAnimation)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4586 */;
-import BountiesScrollIndicatorRive from "BountiesScrollIndicatorRive" /* 4670 */;
+import useToken from "useToken" /* 4778 */;
+import BountiesScrollIndicatorRive from "BountiesScrollIndicatorRive" /* 4862 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles(() => ({ container: { width: 80, height: 80 } }));
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesScrollIndicatorAnimation.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((visible) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function BountiesScrollIndicatorAnimation(visible) {
   const cResult = c.c(9);
   visible = visible.visible;
   const tmp4 = closure_7();
@@ -64,7 +64,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((visible) => {
   cResult[2] = obj5;
   tmp13 = obj5;
   const tmp6 = _slicedToArray(noop.useState(0), 2);
-}) : ((startAnimation) => {
+}) : (function BountiesScrollIndicatorAnimation(startAnimation) {
   const visible = startAnimation.visible;
   const tmp = closure_7();
   const token = useToken.useToken(nativeDefault.colors.TEXT_DEFAULT);

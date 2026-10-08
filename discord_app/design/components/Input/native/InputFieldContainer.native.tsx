@@ -1,12 +1,12 @@
-// === Module 6112: InputFieldContainer ===
+// === Module 6292: InputFieldContainer ===
 
-// Module 6112 (InputFieldContainer)
+// Module 6292 (InputFieldContainer)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4586 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import spring from "spring" /* 5604 */;
-import InputTypes from "InputTypes" /* 6113 */;
+import useToken from "useToken" /* 4778 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import spring from "spring" /* 5374 */;
+import InputTypes from "InputTypes" /* 6293 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -18,7 +18,7 @@ const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const RING_SPRING_CONFIG = { mass: 0.5, damping: 15, stiffness: 200, overshootClamping: true };
 let ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useInputStyles(arg0) {
   const cResult = c.c(4);
   ({ size, round, disabled, grow } = arg0);
   let str = "lg";
@@ -61,7 +61,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmpResult4 = useToken;
   }
   tmp4 = undefined !== round && round;
-}) : ((size) => {
+}) : (function useInputStyles(size) {
   let str = size.size;
   if (str === undefined) {
     str = "lg";
@@ -102,7 +102,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return closure_9(str, flag2, flag3, token, token1, useToken.useToken(nativeDefault.modules.mobile.INPUT_FIELD_PADDING_VERTICAL_SM_IOS));
 });
 let closure_8 = tmp5;
-let createStyles = fn(4896);
+let createStyles = fn(5090);
 let closure_9 = createStyles.createStyles(() => {
   let str = arg0;
   if (arg0 === undefined) {
@@ -186,7 +186,7 @@ let closure_9 = createStyles.createStyles(() => {
   obj9.splitBorder = obj15;
   return obj9;
 });
-createStyles = fn(4896);
+createStyles = fn(5090);
 let closure_10 = createStyles.createStyleProperties({ error: nativeDefault.colors.INPUT_BORDER_ERROR_DEFAULT, default: "transparent", focused: nativeDefault.colors.INPUT_BORDER_ACTIVE });
 const __initData = { code: "function InputFieldContainerNativeTsx1(){const{status,ringColors,isFocused,withSpring,RING_SPRING_CONFIG}=this.__closure;let borderWidth=0;let borderColor=\"transparent\";if(status!==\"default\"){borderWidth=2;borderColor=ringColors.error;}else{if(isFocused){borderWidth=1;borderColor=ringColors.focused;}}return{borderWidth:withSpring(borderWidth,RING_SPRING_CONFIG),borderColor:withSpring(borderColor,RING_SPRING_CONFIG),left:-borderWidth,right:-borderWidth,top:-borderWidth,bottom:-borderWidth};}" };
 const __initData2 = { code: "function InputFieldContainerNativeTsx2(){const{status,ringColors,isFocused,withSpring,RING_SPRING_CONFIG}=this.__closure;let borderWidth=0;let borderColor='transparent';if(status!=='default'){borderWidth=2;borderColor=ringColors.error;}else if(isFocused){borderWidth=1;borderColor=ringColors.focused;}return{borderWidth:withSpring(borderWidth,RING_SPRING_CONFIG),borderColor:withSpring(borderColor,RING_SPRING_CONFIG),left:-borderWidth,right:-borderWidth,top:-borderWidth,bottom:-borderWidth};}" };
@@ -196,7 +196,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Input/native/InputFieldContainer.native.tsx");
 
 export const useInputStyles = tmp5;
-export const InputFieldContainer = ReactCompilerGating.isReactCompilerEnabled() ? ((leadingIcon) => {
+export const InputFieldContainer = ReactCompilerGating.isReactCompilerEnabled() ? (function InputFieldContainer(leadingIcon) {
   const cResult = require("c").c(18);
   const tmp4 = closure_10();
   _require = tmp4;
@@ -370,7 +370,7 @@ export const InputFieldContainer = ReactCompilerGating.isReactCompilerEnabled() 
   cResult[5] = obj3;
   tmp9 = obj3;
   const obj = require("c");
-}) : ((isFocused) => {
+}) : (function InputFieldContainer(isFocused) {
   const tmp = closure_10();
   _require = tmp;
   isFocused = isFocused.isFocused;

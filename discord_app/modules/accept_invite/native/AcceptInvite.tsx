@@ -1,16 +1,17 @@
-// === Module 12398: AcceptInvite ===
+// === Module 12494: AcceptInvite ===
 
-// Module 12398 (AcceptInvite)
+// Module 12494 (AcceptInvite)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import GlobalUtils from "GlobalUtils" /* 1375 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import ImageLoaderUtils from "ImageLoaderUtils" /* 1437 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
-import useToken from "useToken" /* 4586 */;
-import Card from "Card" /* 6002 */;
-import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 6480 */;
-import _modDef12408 from "module_12408" /* 12408 */;
+import GlobalUtils from "GlobalUtils" /* 1387 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
+import ImageLoaderUtils from "ImageLoaderUtils" /* 1449 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
+import useToken from "useToken" /* 4778 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import Card from "Card" /* 6186 */;
+import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 6658 */;
+import _modDef12504 from "module_12504" /* 12504 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -64,26 +65,31 @@ function getInviteState(invite) {
 }
 let closure_3 = ["invite"];
 get_ActivityIndicator = fn(17);
-({ ActivityIndicator: closure_7, ImageBackground: closure_8, View: closure_9 } = get_ActivityIndicator);
+({ ActivityIndicator: closure_7, View: closure_8, StyleSheet } = get_ActivityIndicator);
 const InviteStates = fn(1085).InviteStates;
 const jsxProd = fn(21);
-({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4896);
-let obj2 = { parentContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center" }, imageStyle: { marginVertical: 0, resizeMode: "cover" }, cardContainer: null, cardContent: null, resolvingContainer: null };
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5090);
+let obj2 = { parentContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center" }, imageStyle: null, cardContainer: null, cardContent: null, resolvingContainer: null };
+let obj4 = {};
+let merged = Object.assign(StyleSheet.absoluteFillObject);
+obj4.marginVertical = 0;
+obj4.resizeMode = "cover";
+obj2.imageStyle = obj4;
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center" };
 obj2.cardContainer = { position: "absolute", flex: 1, width: "90%", alignItems: "center", justifyContent: "center", padding: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.cardContent = { padding: 16, flex: 1, justifyContent: "center", alignItems: "center", width: "100%" };
 obj2.resolvingContainer = { padding: 64 };
-let closure_13 = createStyles.createStyles(obj2);
+let closure_12 = createStyles.createStyles(obj2);
 const constants = { LOADING: 0, [0]: "LOADING", DETAILS: 1, [1]: "DETAILS", ERROR: 2, [2]: "ERROR" };
 let ReactCompilerGating = fn(558);
-let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function InviteResolving() {
   const cResult = c.c(5);
-  const tmp2 = closure_13();
+  const tmp2 = closure_12();
   const token = useToken.useToken(nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT);
   if (cResult[0] !== token) {
     const obj3 = { color: token, size: "large" };
-    const tmp7 = closure_1_11(React5, obj3);
+    const tmp7 = collapsed(React5, obj3);
     cResult[0] = token;
     cResult[1] = tmp7;
     let tmp4 = tmp7;
@@ -96,20 +102,20 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
     return tmp8;
   }
-  const tmp9 = closure_1_11(options, { style: tmp2.resolvingContainer, children: tmp4 });
+  const tmp9 = collapsed(closure_1_8, { style: tmp2.resolvingContainer, children: tmp4 });
   cResult[2] = tmp2.resolvingContainer;
   cResult[3] = tmp4;
   cResult[4] = tmp9;
   tmp8 = tmp9;
   const obj4 = { style: tmp2.resolvingContainer, children: tmp4 };
-}) : (() => {
-  const tmp = closure_13();
+}) : (function InviteResolving() {
+  const tmp = closure_12();
   const obj2 = { style: tmp.resolvingContainer, children: null };
-  obj2.children = closure_1_11(React5, { color: useToken.useToken(nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT), size: "large" });
-  return closure_1_11(options, obj2);
+  obj2.children = collapsed(React5, { color: useToken.useToken(nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT), size: "large" });
+  return collapsed(closure_1_8, obj2);
 });
 ReactCompilerGating = fn(558);
-let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((invite) => {
+let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function AcceptInviteCardComponent(invite) {
   const cResult = invite(576).c(14);
   invite = invite.invite;
   if (cResult[0] !== invite) {
@@ -130,7 +136,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((invite) => {
     if (null == invite) {
       const _Symbol2 = Symbol;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp37 = closure_11(closure_16, {});
+        const tmp37 = closure_10(closure_15, {});
         cResult[6] = tmp37;
         let tmp34 = tmp37;
       } else {
@@ -147,12 +153,12 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((invite) => {
       const obj3 = {};
       const merged = Object.assign(invite);
       obj3.invite = invite;
-      const tmp32 = closure_11(first(12399), obj3);
+      const tmp32 = closure_10(first(12495), obj3);
       cResult[7] = invite;
       cResult[8] = invite;
       cResult[9] = tmp32;
       tmp25 = tmp32;
-      const tmp28 = first(12399);
+      const tmp28 = first(12495);
     } else if (tmp38.ERROR === first) {
       if (cResult[10] === invite) {
         if (cResult[11] === invite) {
@@ -163,16 +169,16 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((invite) => {
       const obj4 = {};
       const merged1 = Object.assign(invite);
       obj4.invite = invite;
-      const tmp24 = closure_11(first(12403), obj4);
+      const tmp24 = closure_10(first(12499), obj4);
       cResult[10] = invite;
       cResult[11] = invite;
       cResult[12] = tmp24;
       tmp17 = tmp24;
-      const tmp20 = first(12403);
+      const tmp20 = first(12499);
     } else {
       const _Symbol = Symbol;
       if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp16 = closure_11(closure_16, {});
+        const tmp16 = closure_10(closure_15, {});
         cResult[13] = tmp16;
         let tmp13 = tmp16;
       } else {
@@ -196,7 +202,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((invite) => {
   tmp9 = items;
   tmp8 = fn;
   let obj = invite(576);
-}) : ((invite) => {
+}) : (function AcceptInviteCardComponent(invite) {
   invite = invite.invite;
   [first, dependencyMap] = noop.useState(getInviteState(invite));
   const items = [invite, first];
@@ -208,28 +214,28 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((invite) => {
     }
   }, items);
   if (null == invite) {
-    return closure_11(closure_16, {});
+    return closure_10(closure_15, {});
   } else if (constants.DETAILS === first) {
     const obj2 = {};
     const merged = Object.assign(invite);
     obj2.invite = invite;
-    return closure_11(first(12399), obj2);
+    return closure_10(first(12495), obj2);
   } else if (tmp22.ERROR === first) {
     let obj = {};
     const merged1 = Object.assign(invite);
     obj.invite = invite;
-    return closure_11(first(12403), obj);
+    return closure_10(first(12499), obj);
   } else {
-    return closure_11(closure_16, {});
+    return closure_10(closure_15, {});
   }
 });
 ReactCompilerGating = fn(558);
-let obj4 = { position: "absolute", flex: 1, width: "90%", alignItems: "center", justifyContent: "center", padding: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+let obj5 = { position: "absolute", flex: 1, width: "90%", alignItems: "center", justifyContent: "center", padding: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/accept_invite/native/AcceptInvite.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((invite) => {
-  const cResult = c.c(34);
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AcceptInvite(invite) {
+  const cResult = c.c(42);
   if (cResult[0] !== invite) {
     invite = invite.invite;
     const tmp8 = _objectWithoutProperties(invite, closure_3);
@@ -242,7 +248,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((invite) => {
     tmp4 = cResult[1];
     tmp5 = cResult[2];
   }
-  const tmp9 = closure_13();
+  const tmp9 = closure_12();
   ({ height, width } = useWindowDimensionsDefault());
   if (cResult[3] !== tmp4) {
     let obj2 = tmp4;
@@ -272,102 +278,130 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((invite) => {
           if (cResult[15] === width) {
             let tmp19 = cResult[16];
           }
-          if (cResult[17] === tmp14) {
-            if (cResult[18] === tmp9.imageStyle) {
-              if (cResult[19] === tmp19) {
-                let tmp20 = cResult[20];
-              }
-              if (cResult[21] === tmp4) {
-                if (cResult[22] === tmp5) {
-                  let tmp24 = cResult[23];
-                }
-                if (cResult[24] === tmp9.cardContent) {
-                  if (cResult[25] === tmp24) {
-                    let tmp31 = cResult[26];
-                  }
-                  if (cResult[27] === tmp9.cardContainer) {
-                    if (cResult[28] === tmp31) {
-                      let tmp35 = cResult[29];
-                    }
-                    if (cResult[30] === tmp18) {
-                      if (cResult[31] === tmp20) {
-                        if (cResult[32] === tmp35) {
-                          let tmp38 = cResult[33];
-                        }
-                        return tmp38;
-                      }
-                    }
-                    const obj3 = { style: tmp18, children: null };
-                    const items = [tmp20, tmp35];
-                    obj3.children = items;
-                    const tmp41 = __initData(options, obj3);
-                    cResult[30] = tmp18;
-                    cResult[31] = tmp20;
-                    cResult[32] = tmp35;
-                    cResult[33] = tmp41;
-                    tmp38 = tmp41;
-                  }
-                  const obj5 = { style: tmp9.cardContainer, children: tmp31 };
-                  const tmp37 = closure_1_11(Card.Card, obj5);
-                  cResult[27] = tmp9.cardContainer;
-                  cResult[28] = tmp31;
-                  cResult[29] = tmp37;
-                  tmp35 = tmp37;
-                }
-                const obj6 = { style: tmp9.cardContent, children: tmp24 };
-                const tmp34 = closure_1_11(options, obj6);
-                cResult[24] = tmp9.cardContent;
-                cResult[25] = tmp24;
-                cResult[26] = tmp34;
-                tmp31 = tmp34;
-              }
-              const obj7 = { invite: tmp4 };
-              const merged = Object.assign(tmp5);
-              const tmp30 = closure_1_11(closure_17, obj7);
-              cResult[21] = tmp4;
-              cResult[22] = tmp5;
-              cResult[23] = tmp30;
-              tmp24 = tmp30;
+          if (cResult[17] === height) {
+            if (cResult[18] === width) {
+              let tmp20 = cResult[19];
             }
+            if (cResult[20] === tmp9.imageStyle) {
+              if (cResult[21] === tmp20) {
+                let tmp21 = cResult[22];
+              }
+              if (cResult[23] === tmp14) {
+                if (cResult[24] === tmp21) {
+                  let tmp22 = cResult[25];
+                }
+                if (cResult[26] === tmp19) {
+                  if (cResult[27] === tmp22) {
+                    let tmp25 = cResult[28];
+                  }
+                  if (cResult[29] === tmp4) {
+                    if (cResult[30] === tmp5) {
+                      let tmp29 = cResult[31];
+                    }
+                    if (cResult[32] === tmp9.cardContent) {
+                      if (cResult[33] === tmp29) {
+                        let tmp36 = cResult[34];
+                      }
+                      if (cResult[35] === tmp9.cardContainer) {
+                        if (cResult[36] === tmp36) {
+                          let tmp40 = cResult[37];
+                        }
+                        if (cResult[38] === tmp40) {
+                          if (cResult[39] === tmp18) {
+                            if (cResult[40] === tmp25) {
+                              let tmp43 = cResult[41];
+                            }
+                            return tmp43;
+                          }
+                        }
+                        const obj3 = { style: tmp18, children: null };
+                        const items = [tmp25, tmp40];
+                        obj3.children = items;
+                        const tmp46 = closure_1_11(closure_1_8, obj3);
+                        cResult[38] = tmp40;
+                        cResult[39] = tmp18;
+                        cResult[40] = tmp25;
+                        cResult[41] = tmp46;
+                        tmp43 = tmp46;
+                      }
+                      const obj5 = { style: tmp9.cardContainer, children: tmp36 };
+                      const tmp42 = collapsed(Card.Card, obj5);
+                      cResult[35] = tmp9.cardContainer;
+                      cResult[36] = tmp36;
+                      cResult[37] = tmp42;
+                      tmp40 = tmp42;
+                    }
+                    const obj6 = { style: tmp9.cardContent, children: tmp29 };
+                    const tmp39 = collapsed(closure_1_8, obj6);
+                    cResult[32] = tmp9.cardContent;
+                    cResult[33] = tmp29;
+                    cResult[34] = tmp39;
+                    tmp36 = tmp39;
+                  }
+                  const obj7 = { invite: tmp4 };
+                  const merged = Object.assign(tmp5);
+                  const tmp35 = collapsed(closure_16, obj7);
+                  cResult[29] = tmp4;
+                  cResult[30] = tmp5;
+                  cResult[31] = tmp35;
+                  tmp29 = tmp35;
+                }
+                const obj8 = { style: tmp19, children: tmp22 };
+                const tmp28 = collapsed(closure_1_8, obj8);
+                cResult[26] = tmp19;
+                cResult[27] = tmp22;
+                cResult[28] = tmp28;
+                tmp25 = tmp28;
+              }
+              const obj9 = { source: tmp14, style: tmp21 };
+              const tmp24 = collapsed(FastImageDefault, obj9);
+              cResult[23] = tmp14;
+              cResult[24] = tmp21;
+              cResult[25] = tmp24;
+              tmp22 = tmp24;
+            }
+            const items1 = [tmp9.imageStyle, tmp20];
+            cResult[20] = tmp9.imageStyle;
+            cResult[21] = tmp20;
+            cResult[22] = items1;
+            tmp21 = items1;
           }
-          const obj8 = { source: tmp14, imageStyle: tmp9.imageStyle, style: tmp19 };
-          const tmp23 = closure_1_11(closure_1_8, obj8);
-          cResult[17] = tmp14;
-          cResult[18] = tmp9.imageStyle;
-          cResult[19] = tmp19;
-          cResult[20] = tmp23;
-          tmp20 = tmp23;
+          const size = { height, width };
+          cResult[17] = height;
+          cResult[18] = width;
+          cResult[19] = size;
+          tmp20 = size;
         }
-        const size = { height, width };
+        const size1 = { height, width };
         cResult[14] = height;
         cResult[15] = width;
-        cResult[16] = size;
-        tmp19 = size;
+        cResult[16] = size1;
+        tmp19 = size1;
       }
-      const items1 = [tmp9.parentContainer, tmp17];
+      const items2 = [tmp9.parentContainer, tmp17];
       cResult[11] = tmp9.parentContainer;
       cResult[12] = tmp17;
-      cResult[13] = items1;
-      tmp18 = items1;
+      cResult[13] = items2;
+      tmp18 = items2;
     }
-    const size1 = { height, width };
+    const size2 = { height, width };
     cResult[8] = height;
     cResult[9] = width;
-    cResult[10] = size1;
-    tmp17 = size1;
+    cResult[10] = size2;
+    tmp17 = size2;
   }
   let splash;
   if (guild != null) {
     splash = guild.splash;
   }
   if (null == splash) {
-    let guildSplashSource = _modDef12408;
+    let guildSplashSource = _modDef12504;
   } else {
-    const obj9 = { id: null, splash: null, size: null };
+    const obj10 = { id: null, splash: null, size: null };
     ({ id: obj4.id, splash: obj4.splash } = guild);
     const tmp10Result2 = AvatarUtilsDefault;
-    obj9.size = width * ImageLoaderUtils.getDevicePixelRatio();
-    guildSplashSource = tmp10Result2.getGuildSplashSource(obj9);
+    obj10.size = width * ImageLoaderUtils.getDevicePixelRatio();
+    guildSplashSource = tmp10Result2.getGuildSplashSource(obj10);
     const tmpResult = ImageLoaderUtils;
   }
   cResult[5] = guild;
@@ -375,10 +409,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((invite) => {
   cResult[7] = guildSplashSource;
   tmp14 = guildSplashSource;
   const tmp11 = useWindowDimensionsDefault();
-}) : ((invite) => {
+}) : (function AcceptInvite(invite) {
   invite = invite.invite;
   const merged = Object.assign(invite, Object.assign({ invite: 0 }));
-  const tmp2 = closure_13();
+  const tmp2 = closure_12();
   ({ height, width } = useWindowDimensionsDefault());
   let obj = invite;
   if (invite == null) {
@@ -390,7 +424,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((invite) => {
     splash = guild.splash;
   }
   if (null == splash) {
-    let guildSplashSource = _modDef12408;
+    let guildSplashSource = _modDef12504;
   } else {
     const obj2 = { id: null, splash: null, size: null };
     ({ id: obj3.id, splash: obj3.splash } = guild);
@@ -401,13 +435,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((invite) => {
   const obj5 = { style: null, children: null };
   const items = [tmp2.parentContainer, { height, width }];
   obj5.style = items;
-  const items1 = [closure_1_11(closure_1_8, { source: guildSplashSource, imageStyle: tmp2.imageStyle, style: { height, width } }), ];
-  const obj7 = { style: tmp2.cardContainer, children: null };
-  const obj8 = { style: tmp2.cardContent, children: null };
+  const obj6 = { style: { height, width }, children: null };
+  const obj7 = { source: guildSplashSource, style: null };
+  const items1 = [tmp2.imageStyle, { height, width }];
+  obj7.style = items1;
+  obj6.children = collapsed(FastImageDefault, obj7);
+  const items2 = [collapsed(closure_1_8, obj6), ];
+  const obj8 = { style: tmp2.cardContainer, children: null };
+  const obj9 = { style: tmp2.cardContent, children: null };
   const merged1 = Object.assign(merged);
-  obj8.children = closure_1_11(closure_17, { invite });
-  obj7.children = closure_1_11(options, obj8);
-  items1[1] = closure_1_11(Card.Card, obj7);
-  obj5.children = items1;
-  return __initData(options, obj5);
+  obj9.children = collapsed(closure_16, { invite });
+  obj8.children = collapsed(closure_1_8, obj9);
+  items2[1] = collapsed(Card.Card, obj8);
+  obj5.children = items2;
+  return closure_1_11(closure_1_8, obj5);
 });

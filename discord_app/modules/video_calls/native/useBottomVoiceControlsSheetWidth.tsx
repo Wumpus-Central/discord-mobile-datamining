@@ -1,21 +1,21 @@
-// === Module 9113: useBottomVoiceControlsSheetWidth ===
+// === Module 10686: useBottomVoiceControlsSheetWidth ===
 
-// Module 9113 (useBottomVoiceControlsSheetWidth)
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
-import ChannelCallConstants from "ChannelCallConstants" /* 9087 */;
+// Module 10686 (useBottomVoiceControlsSheetWidth)
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
+import ChannelCallConstants from "ChannelCallConstants" /* 10334 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 ({ BOX_MODE_ACTIONSHEET_WIDTH: c2, BOX_MODE_THRESHOLD_WIDTH: c3 } = ChannelCallConstants);
 const result = size.fileFinishedImporting("modules/video_calls/native/useBottomVoiceControlsSheetWidth.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useBottomVoiceControlsSheetWidth() {
   let width = useWindowDimensionsDefault().width;
   if (width > React3) {
     width = React2;
   }
   return width;
-}) : (() => {
+}) : (function useBottomVoiceControlsSheetWidth() {
   let width = useWindowDimensionsDefault().width;
   if (width > React3) {
     width = React2;

@@ -1,8 +1,8 @@
-// === Module 11943: GuildDirectorySearchModal ===
+// === Module 12016: GuildDirectorySearchModal ===
 
-// Module 11943 (GuildDirectorySearchModal)
-import useInitialValueDefault from "useInitialValue" /* 5991 */;
-import GuildDirectorySearchDefault from "GuildDirectorySearch" /* 11944 */;
+// Module 12016 (GuildDirectorySearchModal)
+import useInitialValueDefault from "useInitialValue" /* 6174 */;
+import GuildDirectorySearchDefault from "GuildDirectorySearch" /* 12017 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/directory_channels/native/components/GuildDirectorySearchModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildDirectorySearchModal(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] !== arg0) {
@@ -47,7 +47,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp6 = cResult[3];
   }
   return tmp6;
-}) : ((arg0) => {
+}) : (function GuildDirectorySearchModal(arg0) {
   _require = arg0;
   return jsx(require("Navigator").Navigator, {
     screens: useInitialValueDefault(() => ({

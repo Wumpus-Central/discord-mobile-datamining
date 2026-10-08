@@ -1,21 +1,21 @@
-// === Module 12211: useAvailableBoostCountForPowerup ===
+// === Module 12290: useAvailableBoostCountForPowerup ===
 
-// Module 12211 (useAvailableBoostCountForPowerup)
+// Module 12290 (useAvailableBoostCountForPowerup)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 4773 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4967 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const GuildPowerupsConstants = fn(4774);
+const GuildPowerupsConstants = fn(4968);
 ({ GuildPowerupType: closure_7, POWERUPS_INCLUDED_IN_LEVEL: closure_8, LEVEL_SKU_ID_TO_BOOSTING_TIER: closure_9 } = GuildPowerupsConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useAvailableBoostCountForPowerup.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, type) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAvailableBoostCountForPowerup(arg0, type) {
   _require = arg0;
   const cResult = require("c").c(17);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -150,7 +150,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, type) => {
     }
   }
   const tmpResult2 = require("initialize");
-}) : ((arg0, arg1) => {
+}) : (function useAvailableBoostCountForPowerup(arg0, arg1) {
   _require = arg0;
   importDefault = arg1;
   let items = [GuildStore];

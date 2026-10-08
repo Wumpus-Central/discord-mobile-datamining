@@ -1,9 +1,9 @@
-// === Module 9647: canStreamWithSettings ===
+// === Module 10842: canStreamWithSettings ===
 
-// Module 9647 (canStreamWithSettings)
-import GoLiveAutoQualityExperiment from "GoLiveAutoQualityExperiment" /* 9648 */;
-import canUseStreamSettingDefault from "canUseStreamSetting" /* 9649 */;
-import StreamSettingsConstants from "StreamSettingsConstants" /* 4943 */;
+// Module 10842 (canStreamWithSettings)
+import GoLiveAutoQualityExperiment from "GoLiveAutoQualityExperiment" /* 10843 */;
+import canUseStreamSettingDefault from "canUseStreamSetting" /* 10844 */;
+import StreamSettingsConstants from "StreamSettingsConstants" /* 5210 */;
 import size from "module_2" /* 2 */;
 
 ({ ApplicationStreamSettingRequirements: c3, ApplicationStreamPresets: closure_4 } = StreamSettingsConstants);

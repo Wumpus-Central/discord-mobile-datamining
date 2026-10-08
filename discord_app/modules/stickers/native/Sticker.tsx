@@ -1,18 +1,18 @@
-// === Module 10140: Sticker ===
+// === Module 9725: Sticker ===
 
-// Module 10140 (Sticker)
+// Module 9725 (Sticker)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import shared from "shared" /* 4735 */;
-import StickersUtils from "StickersUtils" /* 5435 */;
-import StickersTypes from "StickersTypes" /* 5436 */;
-import FastImageDefault from "FastImage" /* 5981 */;
-import _modDef6633 from "module_6633" /* 6633 */;
-import _modDef6634 from "module_6634" /* 6634 */;
-import NativeLottieView from "NativeLottieView" /* 7670 */;
-import NativeAPNGViewDefault from "NativeAPNGView" /* 10141 */;
+import shared from "shared" /* 4929 */;
+import StickersUtils from "StickersUtils" /* 5745 */;
+import StickersTypes from "StickersTypes" /* 5746 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import _modDef6810 from "module_6810" /* 6810 */;
+import _modDef6811 from "module_6811" /* 6811 */;
+import NativeLottieView from "NativeLottieView" /* 7991 */;
+import NativeAPNGViewDefault from "NativeAPNGView" /* 9726 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1193 */;
+import ThemeStore from "ThemeStore" /* 1205 */;
 
 const NativeLottieViewDefault = NativeLottieView;
 
@@ -41,7 +41,7 @@ function getStickerAssetUrl(format_type, size, arg2) {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stickers/native/Sticker.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function Sticker(arg0) {
   const cResult = c.c(32);
   ({ sticker, size, animated, opaque } = arg0);
   if (undefined === opaque) {
@@ -163,9 +163,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           }
           let obj6 = { resizeMode: "contain", style: tmp22, placeholder: null, source: null, accessible: true, accessibilityLabel: null };
           if (tmpResult7.isThemeDark(ThemeStore.theme)) {
-            let tmp25Result = _modDef6633;
+            let tmp25Result = _modDef6810;
           } else {
-            tmp25Result = _modDef6634;
+            tmp25Result = _modDef6811;
           }
           obj6.placeholder = tmp25Result;
           obj6.source = tmp23;
@@ -205,7 +205,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = sticker;
   cResult[3] = str;
   tmp5 = str;
-}) : ((opaque) => {
+}) : (function Sticker(opaque) {
   ({ sticker, size, animated } = opaque);
   if (animated === undefined) {
     animated = true;
@@ -270,9 +270,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const size3 = { height: size, width: size, opacity: num };
     obj6.style = size3;
     if (tmpResult10.isThemeDark(ThemeStore.theme)) {
-      let tmp13Result = _modDef6633;
+      let tmp13Result = _modDef6810;
     } else {
-      tmp13Result = _modDef6634;
+      tmp13Result = _modDef6811;
     }
     obj6.placeholder = tmp13Result;
     const obj7 = { uri: str };

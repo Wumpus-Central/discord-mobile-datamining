@@ -1,7 +1,7 @@
-// === Module 12096: useChangelogIdFromChannel ===
+// === Module 12173: useChangelogIdFromChannel ===
 
-// Module 12096 (useChangelogIdFromChannel)
-import MessageStore from "MessageStore" /* 5116 */;
+// Module 12173 (useChangelogIdFromChannel)
+import MessageStore from "MessageStore" /* 5428 */;
 
 const require = globalThis.__r;
 
@@ -10,7 +10,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/changelog/useChangelogIdFromChannel.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useChangelogIdFromChannel(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     changelogId = stateFromStores.changelogId;
   }
   return changelogId;
-}) : ((arg0) => {
+}) : (function useChangelogIdFromChannel(arg0) {
   _require = arg0;
   const items = [MessageStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => MessageStore.getLastMessage(closure_0));

@@ -1,9 +1,9 @@
-// === Module 16388: NotificationCenterActionButton ===
+// === Module 16648: NotificationCenterActionButton ===
 
-// Module 16388 (NotificationCenterActionButton)
+// Module 16648 (NotificationCenterActionButton)
 import util from "util" /* 1126 */;
-import IconButton from "IconButton" /* 7586 */;
-import _modDef7589 from "module_7589" /* 7589 */;
+import IconButton from "IconButton" /* 8106 */;
+import _modDef8746 from "module_8746" /* 8746 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -17,7 +17,7 @@ export default function NotificationCenterActionButton() {
   const obj = {
     variant: "tertiary",
     size: "sm",
-    icon: _modDef7589,
+    icon: _modDef8746,
     onPress() {
       return require("ActionSheetActionCreators").openLazy(require("asyncRequireImpl")(paths[5], paths.paths), "NotificationCenterActionSheet");
     },
@@ -29,7 +29,7 @@ export default function NotificationCenterActionButton() {
   return jsx(IconButton.IconButton, {
     variant: "tertiary",
     size: "sm",
-    icon: _modDef7589,
+    icon: _modDef8746,
     onPress() {
       return require("ActionSheetActionCreators").openLazy(require("asyncRequireImpl")(paths[5], paths.paths), "NotificationCenterActionSheet");
     },

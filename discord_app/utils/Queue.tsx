@@ -1,6 +1,6 @@
-// === Module 7474: Queue ===
+// === Module 7727: Queue ===
 
-// Module 7474 (Queue)
+// Module 7727 (Queue)
 import LoggerDefault from "Logger" /* 3 */;
 import DequeDefault from "Deque" /* 8 */;
 

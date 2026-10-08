@@ -1,9 +1,9 @@
-// === Module 16847: guild_channels/VoiceOrStageSummaryRow ===
+// === Module 17126: guild_channels/VoiceOrStageSummaryRow ===
 
-// Module 16847 (guild_channels/VoiceOrStageSummaryRow)
+// Module 17126 (guild_channels/VoiceOrStageSummaryRow)
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 4892 */;
+import native from "native" /* 1200 */;
+import Text_Text from "Text/Text" /* 5086 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles((height) => {
   const obj = { container: { flexDirection: "row", alignItems: "center", marginLeft: -2 }, overflowCircle: null, wrapper: null, badge: null, audienceBadge: null };
   const size = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: nativeDefault.radii.round, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", height, width: height };
@@ -28,7 +28,7 @@ const ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/VoiceOrStageSummaryRow.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceOrStageSummaryRow(arg0) {
   const cResult = guildId(avatarSize[6]).c(32);
   ({ users, max, guildId } = arg0);
   ({ layout, audienceCount } = arg0);
@@ -84,7 +84,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
                               return tmp21;
                             }
                           }
-                          class O {
+                          class C {
                             constructor(arg0, arg1) {
                               if (arg1 >= max) {
                                 return;
@@ -166,7 +166,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
                       }
                     }
                   }
-                  class O {
+                  class C {
                     constructor(arg0, arg1) {
                       if (arg1 >= max) {
                         return;
@@ -237,7 +237,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
                   }
                   if (tmp16Result) {
                     let items1 = [, ];
-                    class O {
+                    class C {
                       constructor(arg0, arg1) {
                         if (arg1 >= max) {
                           return;
@@ -345,7 +345,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
                 let tmp10 = cResult[21];
               }
               const mapped = users.map(tmp10);
-              class O {
+              class C {
                 constructor(arg0, arg1) {
                   if (arg1 >= max) {
                     return;
@@ -427,7 +427,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
         }
       }
     }
-    class O {
+    class C {
       constructor(arg0, arg1) {
         if (arg1 >= max) {
           return;
@@ -502,8 +502,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
     cResult[18] = wrapper;
     cResult[19] = tmp5.overflowCircle;
     cResult[20] = tmp5.wrapper;
-    cResult[21] = O;
-    tmp10 = O;
+    cResult[21] = C;
+    tmp10 = C;
   }
   const items4 = [tmp5.container, tmp7];
   cResult[4] = tmp5.container;
@@ -511,7 +511,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   cResult[6] = items4;
   tmp8 = items4;
   let obj = guildId(avatarSize[6]);
-}) : ((layout) => {
+}) : (function VoiceOrStageSummaryRow(layout) {
   ({ users, max } = layout);
   if (max === undefined) {
     max = 5;
@@ -574,7 +574,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
     const items3 = [, ];
     ({ badge: arr4[0], audienceBadge: arr4[1] } = tmp4);
     obj5.style = items3;
-    let obj6 = { size: tmp(tmp2[9]).Icon.Sizes.CUSTOM, style: { height: 14, width: 14 }, source: require("module_16848") };
+    let obj6 = { size: tmp(tmp2[9]).Icon.Sizes.CUSTOM, style: { height: 14, width: 14 }, source: require("module_17127") };
     const items4 = [closure_4(tmp(tmp2[9]).Icon, obj6), ];
     let obj7 = { variant: "text-sm/bold", style: { marginLeft: 4 }, children: audienceCount };
     items4[1] = closure_4(tmp(tmp2[8]).Text, obj7);

@@ -1,21 +1,21 @@
-// === Module 4702: client_themes/ClientThemesUtils ===
+// === Module 4896: client_themes/ClientThemesUtils ===
 
-// Module 4702 (client_themes/ClientThemesUtils)
+// Module 4896 (client_themes/ClientThemesUtils)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
-import ClientThemesTypes from "ClientThemesTypes" /* 1241 */;
-import ColorUtils from "ColorUtils" /* 4733 */;
-import utils_ColorDefault from "utils/Color" /* 4734 */;
-import shared from "shared" /* 4735 */;
-import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4738 */;
-import MobileThemesUtils from "MobileThemesUtils" /* 4794 */;
-import useThemeDefault from "useTheme" /* 4797 */;
+import ClientThemesTypes from "ClientThemesTypes" /* 1253 */;
+import ColorUtils from "ColorUtils" /* 4927 */;
+import utils_ColorDefault from "utils/Color" /* 4928 */;
+import shared from "shared" /* 4929 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4932 */;
+import MobileThemesUtils from "MobileThemesUtils" /* 4988 */;
+import useThemeDefault from "useTheme" /* 4991 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1193 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4703 */;
-import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1238 */;
+import ThemeStore from "ThemeStore" /* 1205 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4897 */;
+import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1250 */;
 
 require = fn;
 function getGradientColorByPercentage(type, MID) {
@@ -240,7 +240,7 @@ export const getGradientThemeMetadata = function getGradientThemeMetadata(gradie
   return null;
 };
 export { getGradientValue };
-export const useGradientValue = ReactCompilerGating.isReactCompilerEnabled() ? ((END, dark) => {
+export const useGradientValue = ReactCompilerGating.isReactCompilerEnabled() ? (function useGradientValue(END, dark) {
   const obj = c;
   const cResult = obj.c(9);
   const tmp4 = useColorThemeBackgroundDefault();
@@ -302,7 +302,7 @@ export const useGradientValue = ReactCompilerGating.isReactCompilerEnabled() ? (
     tmpResult2 = shared;
   }
   return tmp6;
-}) : ((arg0, dark) => {
+}) : (function useGradientValue(arg0, dark) {
   closure_0 = arg0;
   importDefault = dark;
   const tmp = useColorThemeBackgroundDefault();

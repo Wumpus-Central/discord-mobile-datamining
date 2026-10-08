@@ -1,15 +1,15 @@
-// === Module 14415: useTrackNavigatorScreenImpression ===
+// === Module 14641: useTrackNavigatorScreenImpression ===
 
-// Module 14415 (useTrackNavigatorScreenImpression)
+// Module 14641 (useTrackNavigatorScreenImpression)
 import c from "c" /* 576 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 8455 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1272 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 8941 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/app_analytics/native/useTrackNavigatorScreenImpression.tsx");
 
-export const useTrackNavigatorScreenImpression = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, params) => {
+export const useTrackNavigatorScreenImpression = ReactCompilerGating.isReactCompilerEnabled() ? (function useTrackNavigatorScreenImpression(arg0, params) {
   const cResult = c.c(6);
   ({ impressionName, impressionProperties } = arg0);
   if (cResult[0] === impressionProperties) {
@@ -36,7 +36,7 @@ export const useTrackNavigatorScreenImpression = ReactCompilerGating.isReactComp
   cResult[1] = params;
   cResult[2] = impressionPropertiesResult;
   tmp4 = impressionPropertiesResult;
-}) : ((impressionProperties, params) => {
+}) : (function useTrackNavigatorScreenImpression(impressionProperties, params) {
   impressionProperties = impressionProperties.impressionProperties;
   let impressionPropertiesResult = impressionProperties;
   if (typeof impressionProperties === "function") {

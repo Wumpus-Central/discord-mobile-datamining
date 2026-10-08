@@ -1,25 +1,25 @@
-// === Module 11724: ActivityShelfBadge ===
+// === Module 11789: ActivityShelfBadge ===
 
-// Module 11724 (ActivityShelfBadge)
+// Module 11789 (ActivityShelfBadge)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Server from "Server" /* 1985 */;
-import Text_Text from "Text/Text" /* 4892 */;
+import Server from "Server" /* 1997 */;
+import Text_Text from "Text/Text" /* 5086 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { badge: null, newBadge: null, updatedBadge: null, elevationShadow: null, badgeText: null };
 const rect = { position: "absolute", top: 4, right: 4, display: "flex", flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.STATUS_POSITIVE_BACKGROUND };
 obj2.badge = rect;
 obj2.newBadge = { paddingLeft: 4, paddingRight: 6, borderRadius: nativeDefault.radii.sm, height: 16, backgroundColor: nativeDefault.colors.BADGE_NOTIFICATION_BACKGROUND };
 let obj3 = { paddingLeft: 4, paddingRight: 6, borderRadius: nativeDefault.radii.sm, height: 16, backgroundColor: nativeDefault.colors.BADGE_NOTIFICATION_BACKGROUND };
 obj2.updatedBadge = { paddingLeft: 4, paddingRight: 6, borderRadius: nativeDefault.radii.sm, height: 16, backgroundColor: nativeDefault.colors.BADGE_BACKGROUND_BRAND };
-const native = fn(1188);
-obj2.elevationShadow = native.generateBoxShadowStyle(fn(1188).FOUR_DP_ELEVATION_SHADOW_PARAMS);
+const native = fn(1200);
+obj2.elevationShadow = native.generateBoxShadowStyle(fn(1200).FOUR_DP_ELEVATION_SHADOW_PARAMS);
 obj2.badgeText = { textTransform: "uppercase", marginLeft: 2, fontFamily: fn(1085).Fonts.DISPLAY_EXTRABOLD, lineHeight: 16, fontSize: 12 };
 let closure_4 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -27,7 +27,7 @@ let obj4 = { paddingLeft: 4, paddingRight: 6, borderRadius: nativeDefault.radii.
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/native/ActivityShelfBadge.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ActivityShelfBadge(arg0) {
   const cResult = c.c(20);
   ({ labelType, replacementStyles } = arg0);
   const tmp4 = closure_4();
@@ -127,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   } else {
     return null;
   }
-}) : ((arg0) => {
+}) : (function ActivityShelfBadge(arg0) {
   ({ labelType, replacementStyles } = arg0);
   const tmp = closure_4();
   if (replacementStyles == null) {

@@ -1,30 +1,30 @@
-// === Module 9969: EmojiPickerCategoryIcon ===
+// === Module 9496: EmojiPickerCategoryIcon ===
 
-// Module 9969 (EmojiPickerCategoryIcon)
+// Module 9496 (EmojiPickerCategoryIcon)
 import c from "c" /* 576 */;
-import ClockIcon from "ClockIcon" /* 4855 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8346 */;
-import FlagIcon from "FlagIcon" /* 8348 */;
-import TrophyIcon from "TrophyIcon" /* 8397 */;
-import ReactionIcon from "ReactionIcon" /* 8444 */;
-import HeartIcon from "HeartIcon" /* 8461 */;
-import GameControllerIcon from "GameControllerIcon" /* 8771 */;
-import StarIcon from "StarIcon" /* 9956 */;
-import LightbulbIcon from "LightbulbIcon" /* 9970 */;
-import NatureIcon from "NatureIcon" /* 9972 */;
-import FoodIcon from "FoodIcon" /* 9974 */;
-import BicycleIcon from "BicycleIcon" /* 9976 */;
-import ObjectIcon from "ObjectIcon" /* 9978 */;
+import ClockIcon from "ClockIcon" /* 5049 */;
+import TrophyIcon from "TrophyIcon" /* 8895 */;
+import ReactionIcon from "ReactionIcon" /* 8930 */;
+import HeartIcon from "HeartIcon" /* 8947 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9005 */;
+import GameControllerIcon from "GameControllerIcon" /* 9117 */;
+import StarIcon from "StarIcon" /* 9483 */;
+import LightbulbIcon from "LightbulbIcon" /* 9497 */;
+import NatureIcon from "NatureIcon" /* 9499 */;
+import FoodIcon from "FoodIcon" /* 9501 */;
+import BicycleIcon from "BicycleIcon" /* 9503 */;
+import ObjectIcon from "ObjectIcon" /* 9505 */;
+import FlagIcon from "FlagIcon" /* 9507 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const EmojiCategories = fn(5649).EmojiCategories;
+const EmojiCategories = fn(5996).EmojiCategories;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/emoji_picker/native/components/categories/EmojiPickerCategoryIcon.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiPickerCategoryIcon(id) {
   const cResult = c.c(13);
   id = id.id;
   if (EmojiCategories.TOP_GUILD_EMOJI === id) {
@@ -161,7 +161,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((id) =>
     }
     return tmp6;
   }
-}) : ((id) => {
+}) : (function EmojiPickerCategoryIcon(id) {
   id = id.id;
   if (EmojiCategories.TOP_GUILD_EMOJI === id) {
     return jsx(TrophyIcon.TrophyIcon, {});

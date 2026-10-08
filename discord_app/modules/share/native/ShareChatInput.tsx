@@ -1,13 +1,13 @@
-// === Module 11343: ShareChatInput ===
+// === Module 11610: ShareChatInput ===
 
-// Module 11343 (ShareChatInput)
+// Module 11610 (ShareChatInput)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Pressables from "Pressables" /* 5916 */;
-import ReactionIcon from "ReactionIcon" /* 8444 */;
-import useMessageMaxLengthDefault from "useMessageMaxLength" /* 8839 */;
-import FormInputDefault from "FormInput" /* 8930 */;
+import Pressables from "Pressables" /* 6189 */;
+import FormInputDefault from "FormInput" /* 8561 */;
+import ReactionIcon from "ReactionIcon" /* 8930 */;
+import useMessageMaxLengthDefault from "useMessageMaxLength" /* 9198 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,12 +15,12 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { flex: 1, flexDirection: "row", backgroundColor: nativeDefault.colors.SHARE_CHAT_INPUT_BACKGROUND, borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_CHATINPUT_BORDER_DEFAULT, paddingHorizontal: nativeDefault.space.PX_12 }, chatInput: null, chatText: null, inputPlaceholder: null, emojiButton: null, focused: null };
 let obj3 = { flex: 1, flexDirection: "row", backgroundColor: nativeDefault.colors.SHARE_CHAT_INPUT_BACKGROUND, borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_CHATINPUT_BORDER_DEFAULT, paddingHorizontal: nativeDefault.space.PX_12 };
 obj2.chatInput = { flex: 1, paddingVertical: 0, paddingHorizontal: nativeDefault.space.PX_4, maxHeight: 80 };
 const obj5 = { fontSize: 16, lineHeight: 20, fontFamily: fn(1085).Fonts.PRIMARY_NORMAL, color: nativeDefault.colors.TEXT_STRONG, paddingTop: null, paddingBottom: null };
-const PlatformUtils = fn(1369);
+const PlatformUtils = fn(1381);
 let num = 2;
 if (PlatformUtils.isAndroid()) {
   num = 0;
@@ -40,7 +40,7 @@ const obj9 = { borderColor: nativeDefault.colors.MOBILE_CHATINPUT_BORDER_ACTIVE 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/share/native/ShareChatInput.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onBlur) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ShareChatInput(onBlur) {
   const cResult = c.c(32);
   ({ text, inputRef, onChange, onSelectionChange, onFocus } = onBlur);
   onBlur = onBlur.onBlur;
@@ -168,7 +168,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onBlur) => {
   cResult[5] = tmp9;
   cResult[6] = items;
   const tmp8 = _slicedToArray(noop.useState(false), 2);
-}) : ((onFocus) => {
+}) : (function ShareChatInput(onFocus) {
   onFocus = onFocus.onFocus;
   const onBlur = onFocus.onBlur;
   let flag = onFocus.disabled;

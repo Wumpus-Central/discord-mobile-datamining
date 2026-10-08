@@ -1,15 +1,15 @@
-// === Module 14689: useIsParentalConsentBannerActive ===
+// === Module 14950: useIsParentalConsentBannerActive ===
 
-// Module 14689 (useIsParentalConsentBannerActive)
+// Module 14950 (useIsParentalConsentBannerActive)
 import c from "c" /* 576 */;
-import useParentalConsentWarning from "useParentalConsentWarning" /* 14690 */;
-import ParentalConsentWarningTypes from "ParentalConsentWarningTypes" /* 14692 */;
+import useParentalConsentWarning from "useParentalConsentWarning" /* 14951 */;
+import ParentalConsentWarningTypes from "ParentalConsentWarningTypes" /* 14953 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/parent_tools/useIsParentalConsentBannerActive.tsx");
 
-export const useIsParentalConsentBannerActive = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useIsParentalConsentBannerActive = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsParentalConsentBannerActive() {
   const cResult = c.c(2);
   const parentalConsentWarning = useParentalConsentWarning.useParentalConsentWarning();
   let surfaces1;
@@ -35,7 +35,7 @@ export const useIsParentalConsentBannerActive = ReactCompilerGating.isReactCompi
     tmp6 = cResult[1];
   }
   return true === tmp6;
-}) : (() => {
+}) : (function useIsParentalConsentBannerActive() {
   const parentalConsentWarning = useParentalConsentWarning.useParentalConsentWarning();
   let hasItem;
   if (parentalConsentWarning != null) {

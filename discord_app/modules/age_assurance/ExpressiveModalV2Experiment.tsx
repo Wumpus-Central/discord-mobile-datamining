@@ -1,13 +1,13 @@
-// === Module 8138: ExpressiveModalV2Experiment ===
+// === Module 7525: ExpressiveModalV2Experiment ===
 
-// Module 8138 (ExpressiveModalV2Experiment)
+// Module 7525 (ExpressiveModalV2Experiment)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 8125 */;
-import SafetyHubStore from "SafetyHubStore" /* 8139 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 5927 */;
+import SafetyHubStore from "SafetyHubStore" /* 5920 */;
 
 require = fn;
-const ApexExperiment = fn(1440);
+const ApexExperiment = fn(1452);
 let obj2 = { kind: "user", name: "2026-07-expressive-modal-v2", defaultConfig: { enabled: false }, variations: null };
 let obj3 = { 1: null, 2: { enabled: true } };
 obj3[2] = { enabled: true };
@@ -17,12 +17,12 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/ExpressiveModalV2Experiment.tsx");
 
-export const useIsExpressiveModalV2Enabled = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+export const useIsExpressiveModalV2Enabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsExpressiveModalV2Enabled(location) {
   const cResult = c.c(4);
   const isSuspendedUser = SafetyHubUtils.useIsSuspendedUser();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [SafetyHubStore];
-    const fn = function l() {
+    const fn = function t() {
       return isExpressiveModalV2Enabled.getIsExpressiveModalV2Enabled();
     };
     cResult[0] = items;
@@ -46,7 +46,7 @@ export const useIsExpressiveModalV2Enabled = ReactCompilerGating.isReactCompiler
     enabled = stateFromStores;
   }
   return enabled;
-}) : ((location) => {
+}) : (function useIsExpressiveModalV2Enabled(location) {
   const isSuspendedUser = SafetyHubUtils.useIsSuspendedUser();
   const items = [SafetyHubStore];
   const stateFromStores = initialize.useStateFromStores(items, () => isExpressiveModalV2Enabled.getIsExpressiveModalV2Enabled());

@@ -1,19 +1,19 @@
-// === Module 13955: LiveTag ===
+// === Module 14255: LiveTag ===
 
-// Module 13955 (LiveTag)
+// Module 14255 (LiveTag)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
+import Text_Text from "Text/Text" /* 5086 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { tag: { paddingHorizontal: 6, paddingVertical: 2, borderRadius: nativeDefault.radii.round, overflow: "hidden", justifyContent: "center", alignItems: "center", backgroundColor: nativeDefault.colors.BADGE_NOTIFICATION_BACKGROUND }, tagText: null };
 const obj4 = { textAlign: "center", color: nativeDefault.unsafe_rawColors.WHITE, marginTop: null };
-const PlatformUtils = fn(1369);
+const PlatformUtils = fn(1381);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = -2;
@@ -26,7 +26,7 @@ let obj3 = { paddingHorizontal: 6, paddingVertical: 2, borderRadius: nativeDefau
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/LiveTag/native/LiveTag.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function LiveTag(arg0) {
   const cResult = c.c(13);
   ({ style, textStyle, allowFontScaling } = arg0);
   const tmp4 = closure_4();
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = tmp4.tag;
   cResult[2] = items1;
   tmp5 = items1;
-}) : ((arg0) => {
+}) : (function LiveTag(arg0) {
   ({ style, textStyle, allowFontScaling } = arg0);
   const tmp = closure_4();
   const obj = { style: null, children: null };

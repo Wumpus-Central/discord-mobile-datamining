@@ -1,10 +1,10 @@
-// === Module 7286: AttachmentFile ===
+// === Module 7740: AttachmentFile ===
 
-// Module 7286 (AttachmentFile)
+// Module 7740 (AttachmentFile)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
-import UploadPlatform from "UploadPlatform" /* 7260 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 7287 */;
+import UploadPlatform from "UploadPlatform" /* 7731 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 7741 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

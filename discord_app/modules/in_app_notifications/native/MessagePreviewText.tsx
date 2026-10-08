@@ -1,36 +1,36 @@
-// === Module 12501: MessagePreviewText ===
+// === Module 12597: MessagePreviewText ===
 
-// Module 12501 (MessagePreviewText)
+// Module 12597 (MessagePreviewText)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 1107 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import useMessageAuthor from "useMessageAuthor" /* 5311 */;
-import FastImageDefault from "FastImage" /* 5981 */;
-import isForwardMessageDefault from "isForwardMessage" /* 6815 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7525 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 12492 */;
-import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 12502 */;
-import ChannelRowPreview from "ChannelRowPreview" /* 12503 */;
-import usePreviewableMedia from "usePreviewableMedia" /* 12504 */;
-import usePreviewableMediaText from "usePreviewableMediaText" /* 12507 */;
-import useGetInitialMessagePreview from "useGetInitialMessagePreview" /* 12508 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import useMessageAuthor from "useMessageAuthor" /* 5623 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import isForwardMessageDefault from "isForwardMessage" /* 6988 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 9248 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 12588 */;
+import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 12598 */;
+import ChannelRowPreview from "ChannelRowPreview" /* 12599 */;
+import usePreviewableMedia from "usePreviewableMedia" /* 12600 */;
+import usePreviewableMediaText from "usePreviewableMediaText" /* 12603 */;
+import useGetInitialMessagePreview from "useGetInitialMessagePreview" /* 12604 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
 
 require = fn;
 const View = fn(17).View;
-const InAppNotificationConstants = fn(12493);
+const InAppNotificationConstants = fn(12589);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: metroRequire, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_7 } = InAppNotificationConstants);
 const Fonts = fn(1096).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let createStyles = fn(4896);
-const PlatformUtils = fn(1370);
+let createStyles = fn(5090);
+const PlatformUtils = fn(1382);
 let obj3 = { italic: { fontStyle: "italic", fontFamily: PlatformUtils.isIOS() ? Fonts.PRIMARY_NORMAL_ITALIC : Fonts.PRIMARY_MEDIUM_ITALIC } };
 let closure_10 = createStyles.createStyles(obj3);
-createStyles = fn(4896);
+createStyles = fn(5090);
 let obj6 = { embedContainer: null, embedAccentBar: null, embedTextContainer: null, embedMediaContainer: null, embedMedia: null };
 let obj4 = { fontStyle: "italic", fontFamily: PlatformUtils.isIOS() ? Fonts.PRIMARY_NORMAL_ITALIC : Fonts.PRIMARY_MEDIUM_ITALIC };
 obj6.embedContainer = { borderRadius: nativeDefault.radii.sm, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_8, paddingRight: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, flexDirection: "row", overflow: "hidden" };
@@ -38,12 +38,12 @@ let obj7 = { borderRadius: nativeDefault.radii.sm, paddingTop: nativeDefault.spa
 obj6.embedAccentBar = { width: 4, marginTop: -nativeDefault.space.PX_8, marginBottom: -nativeDefault.space.PX_8, alignSelf: "stretch" };
 let obj8 = { width: 4, marginTop: -nativeDefault.space.PX_8, marginBottom: -nativeDefault.space.PX_8, alignSelf: "stretch" };
 obj6.embedTextContainer = { flex: 1, gap: nativeDefault.space.PX_4, paddingVertical: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_8 };
-let size = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", height: 60, width: "unicodeVersion" };
+let size = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", height: 60, width: "code" };
 obj6.embedMediaContainer = size;
 obj6.embedMedia = { width: "100%", height: "100%" };
 let closure_11 = createStyles.createStyles(obj6);
 let ReactCompilerGating = fn(558);
-let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function NativeMessagePreviewContent(arg0) {
   const cResult = c.c(6);
   ({ message, lineClamp, maxHeight } = arg0);
   ({ gradientColors, gradientStyles } = useTruncatedGradientColorsDefault());
@@ -69,14 +69,14 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = tmp6;
   tmp5 = tmp6;
   const obj2 = { children: closure_1_8(ChannelRowPreview.NativeChannelRowPreview, { message, lineClamp, maxHeight, gradientStyles, gradientColors }) };
-}) : ((arg0) => {
+}) : (function NativeMessagePreviewContent(arg0) {
   ({ message, lineClamp, maxHeight } = arg0);
   const tmp = useTruncatedGradientColorsDefault();
   ({ gradientColors, gradientStyles } = tmp);
   return closure_1_8(View, { children: closure_1_8(ChannelRowPreview.NativeChannelRowPreview, { message, lineClamp, maxHeight, gradientStyles, gradientColors }) });
 });
 ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((text) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function SystemMessageText(text) {
   const cResult = c.c(4);
   text = text.text;
   const tmp4 = closure_10();
@@ -100,14 +100,14 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((text) => {
   cResult[3] = tmp8;
   tmp7 = tmp8;
   const obj2 = { variant: first, color: "text-subtle", style: tmp4.italic, lineClamp, children: text };
-}) : ((children) => {
+}) : (function SystemMessageText(children) {
   const tmp = closure_10();
   const messagePreviewTextVariant = InAppNotificationUtils.getMessagePreviewTextVariant();
   return closure_1_8(Text_Text.Text, { variant: messagePreviewTextVariant, color: "text-subtle", style: tmp.italic, lineClamp, children: children.text });
 });
 let closure_13 = tmp4;
 ReactCompilerGating = fn(558);
-let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((media) => {
+let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmbedMediaThumbnail(media) {
   const cResult = c.c(13);
   media = media.media;
   const tmp3 = closure_11();
@@ -172,7 +172,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((media) => {
   cResult[3] = tmp5;
   cResult[4] = items;
   tmp6 = items;
-}) : ((media) => {
+}) : (function EmbedMediaThumbnail(media) {
   media = media.media;
   const tmp = closure_11();
   let url = media.proxyURL;
@@ -193,7 +193,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((media) => {
   return closure_1_8(View, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((embed) => {
+let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmbedCard(embed) {
   const cResult = c.c(25);
   embed = embed.embed;
   const tmp4 = closure_11();
@@ -344,7 +344,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((embed) => {
   cResult[1] = tmp4.embedAccentBar;
   cResult[2] = tmp10;
   tmp9 = tmp10;
-}) : ((embed) => {
+}) : (function EmbedCard(embed) {
   embed = embed.embed;
   const tmp = closure_11();
   const provider = embed.provider;
@@ -427,7 +427,7 @@ let obj9 = { flex: 1, gap: nativeDefault.space.PX_4, paddingVertical: nativeDefa
 size = fn(2);
 let result = size.fileFinishedImporting("modules/in_app_notifications/native/MessagePreviewText.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function MessagePreviewText(arg0) {
   const cResult = c.c(56);
   ({ message, lineClamp, maxHeight, showMessageAuthor } = arg0);
   const tmp4 = undefined !== showMessageAuthor && showMessageAuthor;
@@ -457,15 +457,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     if (cResult[5] !== message.embeds) {
       const _Symbol = Symbol;
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-        class S {
+        class H {
           constructor(arg0) {
             tmp = null != arg0.image || null != arg0.thumbnail;
             return tmp;
           }
         }
-        cResult[7] = S;
+        cResult[7] = H;
       } else {
-        class S {
+        class H {
           constructor(arg0) {
             tmp = null != arg0.image || null != arg0.thumbnail;
             return tmp;
@@ -473,25 +473,25 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         }
       }
       const embeds = message.embeds;
-      const found = embeds.filter(S);
+      const found = embeds.filter(H);
       cResult[5] = message.embeds;
       cResult[6] = found;
     } else {
-      class S {
+      class H {
         constructor(arg0) {
           tmp = null != arg0.image || null != arg0.thumbnail;
           return tmp;
         }
       }
       if (arr2.length > 0) {
-        class S {
+        class H {
           constructor(arg0) {
             tmp = null != arg0.image || null != arg0.thumbnail;
             return tmp;
           }
         }
         if (tmp27.type === MessageEmbedTypes.MessageEmbedTypes.GIFV) {
-          class S {
+          class H {
             constructor(arg0) {
               tmp = null != arg0.image || null != arg0.thumbnail;
               return tmp;
@@ -499,7 +499,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           }
         }
         if (cResult[10] !== getInitialMessagePreview) {
-          class S {
+          class H {
             constructor(arg0) {
               tmp = null != arg0.image || null != arg0.thumbnail;
               return tmp;
@@ -510,7 +510,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           cResult[10] = getInitialMessagePreview;
           cResult[11] = tmp32;
         } else {
-          class S {
+          class H {
             constructor(arg0) {
               tmp = null != arg0.image || null != arg0.thumbnail;
               return tmp;
@@ -518,7 +518,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           }
         }
         if (cResult[12] !== tmp27) {
-          class S {
+          class H {
             constructor(arg0) {
               tmp = null != arg0.image || null != arg0.thumbnail;
               return tmp;
@@ -529,7 +529,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           cResult[12] = tmp27;
           cResult[13] = tmp35;
         } else {
-          class S {
+          class H {
             constructor(arg0) {
               tmp = null != arg0.image || null != arg0.thumbnail;
               return tmp;
@@ -537,7 +537,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           }
         }
         if (cResult[14] === tmp28) {
-          class S {
+          class H {
             constructor(arg0) {
               tmp = null != arg0.image || null != arg0.thumbnail;
               return tmp;
@@ -554,14 +554,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         cResult[16] = tmp39;
         tmp36 = tmp39;
       } else {
-        class S {
+        class H {
           constructor(arg0) {
             tmp = null != arg0.image || null != arg0.thumbnail;
             return tmp;
           }
         }
         if (isForwardMessageDefault(message)) {
-          class S {
+          class H {
             constructor(arg0) {
               tmp = null != arg0.image || null != arg0.thumbnail;
               return tmp;
@@ -569,7 +569,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           }
           let tmp15 = previewableMedia.length > 0;
           if (tmp15) {
-            class S {
+            class H {
               constructor(arg0) {
                 tmp = null != arg0.image || null != arg0.thumbnail;
                 return tmp;
@@ -578,14 +578,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             tmp15 = tmp16 === usePreviewableMedia.PreviewableMediaTypes.GIF;
           }
           if (previewableMedia.length > 0) {
-            class S {
+            class H {
               constructor(arg0) {
                 tmp = null != arg0.image || null != arg0.thumbnail;
                 return tmp;
               }
             }
             if (cResult[17] !== nullableMessageAuthor) {
-              class S {
+              class H {
                 constructor(arg0) {
                   tmp = null != arg0.image || null != arg0.thumbnail;
                   return tmp;
@@ -594,14 +594,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               cResult[17] = nullableMessageAuthor;
               cResult[18] = tmp22;
             } else {
-              class S {
+              class H {
                 constructor(arg0) {
                   tmp = null != arg0.image || null != arg0.thumbnail;
                   return tmp;
                 }
               }
               if (cResult[19] !== tmp21) {
-                class S {
+                class H {
                   constructor(arg0) {
                     tmp = null != arg0.image || null != arg0.thumbnail;
                     return tmp;
@@ -613,7 +613,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                 cResult[20] = tmp26;
                 const tmp24 = tmp26;
               } else {
-                class S {
+                class H {
                   constructor(arg0) {
                     tmp = null != arg0.image || null != arg0.thumbnail;
                     return tmp;
@@ -624,7 +624,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             }
           }
           if (cResult[21] === getInitialMessagePreview) {
-            class S {
+            class H {
               constructor(arg0) {
                 tmp = null != arg0.image || null != arg0.thumbnail;
                 return tmp;
@@ -638,7 +638,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           cResult[23] = maxHeight;
           cResult[24] = tmp20;
         } else {
-          class S {
+          class H {
             constructor(arg0) {
               tmp = null != arg0.image || null != arg0.thumbnail;
               return tmp;
@@ -655,7 +655,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = obj8;
   tmp7 = obj8;
   const tmpResult4 = useMessageAuthor;
-}) : ((message) => {
+}) : (function MessagePreviewText(message) {
   message = message.message;
   ({ lineClamp, maxHeight, showMessageAuthor } = message);
   if (showMessageAuthor === undefined) {

@@ -1,19 +1,19 @@
-// === Module 14857: AdVideoPlayer ===
+// === Module 15119: AdVideoPlayer ===
 
-// Module 14857 (AdVideoPlayer)
+// Module 15119 (AdVideoPlayer)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import timing from "timing" /* 4897 */;
-import timingPresets from "timingPresets" /* 4900 */;
-import spring from "spring" /* 5604 */;
-import springPresets from "springPresets" /* 5605 */;
-import _modDef7994 from "module_7994" /* 7994 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 14839 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import timing from "timing" /* 5091 */;
+import timingPresets from "timingPresets" /* 5094 */;
+import spring from "spring" /* 5374 */;
+import springPresets from "springPresets" /* 5378 */;
+import _modDef8402 from "module_8402" /* 8402 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 15100 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AppStateStore from "AppStateStore" /* 1986 */;
+import AppStateStore from "AppStateStore" /* 1998 */;
 import n from "module_683" /* 683 */;
 
 require = fn;
@@ -24,7 +24,7 @@ const Constants = fn(1085);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 let rect = { left: nativeDefault.space.PX_16, right: nativeDefault.space.PX_16, top: nativeDefault.space.PX_16, bottom: nativeDefault.space.PX_16 };
-const _isNativeReflectConstruct = noop.memo(_modDef7994);
+const _isNativeReflectConstruct = noop.memo(_modDef8402);
 function hasVideoEnded(arg0, arg1) {
   return arg0 >= arg1 - 1;
 }
@@ -49,7 +49,7 @@ function canSeekForward(arg0, arg1, arg2, arg3) {
 canSeekForward.__closure = { hasVideoEnded };
 canSeekForward.__workletHash = 14098132092693;
 canSeekForward.__initData = { code: "function canSeekForward_AdVideoPlayerTsx2(currentTime,maxTimestamp,videoDuration,allowUnrestrictedSeeking){const{hasVideoEnded}=this.__closure;return!hasVideoEnded(currentTime,videoDuration)&&(allowUnrestrictedSeeking||currentTime<=maxTimestamp-1);}" };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { container: null, loadingContainer: null, bufferingSpinner: null, bufferingSpinnerCentered: null, video: null, videoContainer: null, controls: null, controlsTopBottom: null, controlsMiddle: null, controlsTop: null, controlsBottom: null, progressContainer: null, progress: null, icon: null, iconDisabled: null, controlButton: null };
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.container = {};
@@ -94,7 +94,7 @@ let obj10 = { color: nativeDefault.colors.TEXT_SUBTLE };
 obj.controlButton = { padding: nativeDefault.space.PX_8 };
 let closure_17 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
-let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((onBuffer) => {
+let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBufferingState(onBuffer) {
   const cResult = c.c(5);
   onBuffer = onBuffer.onBuffer;
   noop.useRef(false);
@@ -126,7 +126,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((onBuffer) => {
   cResult[3] = tmp4;
   cResult[4] = obj2;
   tmp5 = obj2;
-}) : ((onBuffer) => {
+}) : (function useBufferingState(onBuffer) {
   onBuffer = onBuffer.onBuffer;
   noop.useRef(false);
   const tmp = _slicedToArray(noop.useState(false), 2);
@@ -151,7 +151,7 @@ let obj11 = { padding: nativeDefault.space.PX_8 };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/AdVideoPlayer.tsx");
 
-export const AdVideoPlayer = noop.memo((initialProgress) => {
+export const AdVideoPlayer = noop.memo(function AdVideoPlayer(initialProgress) {
   initialProgress = initialProgress.initialProgress;
   let num = initialProgress.contentDuration;
   if (num === undefined) {
@@ -705,9 +705,7 @@ export const AdVideoPlayer = noop.memo((initialProgress) => {
   const obj7 = { style: null, accessible: false, children: null };
   const items24 = [tmp.container, style];
   obj7.style = items24;
-  const obj8 = { style: null, onPress: callback10, accessible: !shouldShowControlsResult, accessibilityLabel: null, children: null };
-  const items25 = [tmp.videoContainer];
-  obj8.style = items25;
+  const obj8 = { style: tmp.videoContainer, onPress: callback10, accessible: !shouldShowControlsResult, accessibilityLabel: null, children: null };
   const intl = tmp8(tmp9[23]).intl;
   const t = tmp8(tmp9[23]).t;
   obj8.accessibilityLabel = intl.string(tmp55 ? t.R3aFPe : t.fTMEUi);
@@ -716,35 +714,35 @@ export const AdVideoPlayer = noop.memo((initialProgress) => {
     const obj9 = { mixWithOthers: "inherit", httpEngine, automaticallyWaitsToMinimizeStalling, maxBitRate, bufferConfig, preferredForwardBufferDuration, ref: videoRef, accessible: false, importantForAccessibility: "no-hide-descendants", accessibilityRole: "none", style: tmp.video, paused: tmp55, repeat, source: initialProgress.source, onBuffer: callback17, onPlaybackStalled: callback18, onPlaybackResume: callback19, onLoad: callback5, onSeek: callback11, onProgress: callback13, onLoadStart: callback15, onEnd: callback14, onError: callback16, onReadyForDisplay: callback3, onVideoTracks, onLayout: onVideoLayout, resizeMode: "contain" };
     tmp64Result = tmp64(flag8, obj9);
   }
-  const items26 = [tmp64Result, , , , , ];
+  const items25 = [tmp64Result, , , , , ];
   let renderCaptionsResult;
   if (renderCaptions != null) {
     renderCaptionsResult = renderCaptions(first1.timestampSec);
   }
-  items26[1] = renderCaptionsResult;
+  items25[1] = renderCaptionsResult;
   if (!isBuffering) {
-    items26[2] = isBuffering;
+    items25[2] = isBuffering;
     let tmp64Result6 = !tmp27;
     if (!tmp27) {
       const obj10 = { style: tmp.loadingContainer, children: tmp64(onSeekStart, { animating: true }) };
       tmp64Result6 = tmp64(tmp65, obj10);
     }
-    items26[3] = tmp64Result6;
+    items25[3] = tmp64Result6;
     const obj11 = { style: null, accessible: false, children: null };
-    const items27 = [tmp.controls, animatedStyle];
-    obj11.style = items27;
+    const items26 = [tmp.controls, animatedStyle];
+    obj11.style = items26;
     let tmp66Result = flag3;
     if (!flag3) {
       tmp66Result = flag4;
     }
     if (tmp66Result) {
       const obj12 = { style: null, children: null };
-      const items28 = [, , ];
-      ({ controlsTopBottom: arr30[0], controlsTop: arr30[1] } = tmp);
-      items28[2] = tmp61;
-      obj12.style = items28;
+      const items27 = [, , ];
+      ({ controlsTopBottom: arr29[0], controlsTop: arr29[1] } = tmp);
+      items27[2] = tmp61;
+      obj12.style = items27;
       if (!flag3) {
-        const items29 = [flag3, ];
+        const items28 = [flag3, ];
         if (flag4) {
           const obj13 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
           const intl3 = tmp8(tmp9[23]).intl;
@@ -755,8 +753,8 @@ export const AdVideoPlayer = noop.memo((initialProgress) => {
           obj13.children = tmp64(tmp8(tmp9[26]).TranscriptOutlineIcon, obj14);
           flag4 = tmp64(tmp8(tmp9[24]).PressableOpacity, obj13);
         }
-        items29[1] = flag4;
-        obj12.children = items29;
+        items28[1] = flag4;
+        obj12.children = items28;
         tmp66Result = tmp66(tmp65, obj12);
       } else {
         const obj15 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
@@ -774,7 +772,7 @@ export const AdVideoPlayer = noop.memo((initialProgress) => {
         tmp64(tmp8(tmp9[24]).PressableOpacity, obj15);
       }
     }
-    const items30 = [tmp66Result, , ];
+    const items29 = [tmp66Result, , ];
     const obj17 = { style: tmp.controlsMiddle, children: null };
     let tmp64Result8 = flag7;
     if (flag7) {
@@ -786,7 +784,7 @@ export const AdVideoPlayer = noop.memo((initialProgress) => {
       obj18.children = tmp64(tmp8(tmp9[28]).SkipBackwardIcon, size);
       tmp64Result8 = tmp64(tmp8(tmp9[27]).VideoQuestPlayerControlButton, obj18);
     }
-    const items31 = [tmp64Result8, , ];
+    const items30 = [tmp64Result8, , ];
     if (!tmp15) {
       if (first2 !== tmp8(tmp9[12]).PlayerState.ERRORED) {
         const t2 = tmp8(tmp9[23]).t;
@@ -803,7 +801,7 @@ export const AdVideoPlayer = noop.memo((initialProgress) => {
           let tmp64Result9 = tmp64(PauseIcon, { size: "lg" });
         }
         obj19.children = tmp64Result9;
-        items31[1] = tmp64(tmp8(tmp9[27]).VideoQuestPlayerControlButton, obj19);
+        items30[1] = tmp64(tmp8(tmp9[27]).VideoQuestPlayerControlButton, obj19);
         if (flag7) {
           const obj20 = { disabled: tmp39, accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
           const intl5 = tmp8(tmp9[23]).intl;
@@ -813,15 +811,15 @@ export const AdVideoPlayer = noop.memo((initialProgress) => {
           obj20.children = tmp64(tmp8(tmp9[32]).SkipForwardIcon, size1);
           flag7 = tmp64(tmp8(tmp9[27]).VideoQuestPlayerControlButton, obj20);
         }
-        items31[2] = flag7;
-        obj17.children = items31;
-        items30[1] = tmp66(tmp65, obj17);
+        items30[2] = flag7;
+        obj17.children = items30;
+        items29[1] = tmp66(tmp65, obj17);
         if (flag5) {
           const obj21 = { style: null, children: null };
-          const items32 = [, , ];
-          ({ controlsTopBottom: arr34[0], controlsBottom: arr34[1] } = tmp);
-          items32[2] = tmp61;
-          obj21.style = items32;
+          const items31 = [, , ];
+          ({ controlsTopBottom: arr33[0], controlsBottom: arr33[1] } = tmp);
+          items31[2] = tmp61;
+          obj21.style = items31;
           const obj22 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
           const intl6 = tmp8(tmp9[23]).intl;
           obj22.accessibilityLabel = intl6.string(tmp8(tmp9[23]).t.vKZT5t);
@@ -831,19 +829,19 @@ export const AdVideoPlayer = noop.memo((initialProgress) => {
           obj21.children = tmp64(tmp8(tmp9[24]).PressableOpacity, obj22);
           flag5 = tmp64(tmp65, obj21);
         }
-        items30[2] = flag5;
-        obj11.children = items30;
-        items26[4] = tmp66(tmp60(tmp9[13]).View, obj11);
+        items29[2] = flag5;
+        obj11.children = items29;
+        items25[4] = tmp66(tmp60(tmp9[13]).View, obj11);
         if (flag6) {
           const obj23 = { style: tmp.progressContainer, children: null };
           const obj24 = { style: null };
-          const items33 = [tmp.progress, animatedStyle1];
-          obj24.style = items33;
+          const items32 = [tmp.progress, animatedStyle1];
+          obj24.style = items32;
           obj23.children = tmp64(tmp60(tmp9[13]).View, obj24);
           flag6 = tmp64(tmp65, obj23);
         }
-        items26[5] = flag6;
-        obj8.children = items26;
+        items25[5] = flag6;
+        obj8.children = items25;
         obj7.children = tmp66(onProgress, obj8);
         return tmp64(tmp65, obj7);
       }
@@ -851,7 +849,7 @@ export const AdVideoPlayer = noop.memo((initialProgress) => {
     }
     K0e7M9 = tmp8(tmp9[23]).t.K0e7M9;
   } else {
-    let items34 = [tmp.bufferingSpinner, ];
+    let items33 = [tmp.bufferingSpinner, ];
     if (!isFullscreen) {
       if ("center" !== bufferingSpinnerPlacement) {
         let num4;
@@ -872,10 +870,10 @@ export const AdVideoPlayer = noop.memo((initialProgress) => {
         rect1.left = num5;
       }
       const obj25 = { animating: true, style: null, color: null };
-      items34[1] = rect1;
-      obj25.style = items34;
-      items34 = tmp60(tmp9[6]).unsafe_rawColors.WHITE;
-      obj25.color = items34;
+      items33[1] = rect1;
+      obj25.style = items33;
+      items33 = tmp60(tmp9[6]).unsafe_rawColors.WHITE;
+      obj25.color = items33;
       tmp64(tmp71, obj25);
     }
     rect1 = tmp.bufferingSpinnerCentered;

@@ -1,23 +1,23 @@
-// === Module 2103: SelectedChannelStore ===
+// === Module 2115: SelectedChannelStore ===
 
-// Module 2103 (SelectedChannelStore)
+// Module 2115 (SelectedChannelStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage3 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
 import router_utils from "router_utils" /* 1112 */;
-import GlobalUtils from "GlobalUtils" /* 1375 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4742 */;
-import isAccessibleNonStaticChannelPathDefault from "isAccessibleNonStaticChannelPath" /* 6828 */;
-import GatedChannelStore from "GatedChannelStore" /* 2104 */;
+import GlobalUtils from "GlobalUtils" /* 1387 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4936 */;
+import isAccessibleNonStaticChannelPathDefault from "isAccessibleNonStaticChannelPath" /* 7022 */;
+import GatedChannelStore from "GatedChannelStore" /* 2116 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildChannelStore from "GuildChannelStore" /* 4513 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildChannelStore from "GuildChannelStore" /* 4705 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4899 */;
 
 require = fn;
 function handleConnectionOpen(sessionId) {
@@ -206,7 +206,7 @@ function navigateAwayFromChannel(id, guild_id, id2) {
     tmp19 = tmp20;
   }
   if (tmp19) {
-    router_utils.replaceWith(closure_1_24.CHANNEL(tmp4, tmp11));
+    router_utils.replaceWith(dependencyMap.CHANNEL(tmp4, tmp11));
   }
   if (flag3) {
     const Storage = Storage3.Storage;
@@ -311,11 +311,11 @@ function navigateAwayFromSelectedIfInaccessible(guildId) {
 function handleGuildRoleChange(guildId) {
   return navigateAwayFromSelectedIfInaccessible(guildId.guildId);
 }
-const ChannelRecord = fn(2055);
+const ChannelRecord = fn(2067);
 ({ isGuildTextChannelType: closure_12, THREAD_CHANNEL_TYPES: map1 } = ChannelRecord);
 const Constants = fn(1085);
 ({ ChannelTypes: closure_21, ME: closure_22, Permissions: closure_23, Routes: closure_24 } = Constants);
-const isGuildHomeChannel = fn(2058).isGuildHomeChannel;
+const isGuildHomeChannel = fn(2070).isGuildHomeChannel;
 const SelectedChannelStore = "SelectedChannelStore";
 let selectedChannelIds = {};
 const dependencyMap = {};
@@ -878,7 +878,7 @@ const selectedChannelStore = new SelectedChannelStore(DispatcherDefault, {
             const values = closure_1_1(12)(selectedChannelIds).values();
             const obj2 = closure_1_1(12)(selectedChannelIds);
             const combined = values.concat(closure_1_1(12).values(mostRecentSelectedTextChannelIds));
-            const found = combined.filter(closure_1_0(1375).isNotNullish);
+            const found = combined.filter(closure_1_0(1387).isNotNullish);
             const obj4 = closure_1_1(12);
             const uniqResult = found.uniq();
             obj.knownThreadIds = found.uniq().filter((item) => {

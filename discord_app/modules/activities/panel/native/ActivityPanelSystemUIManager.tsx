@@ -1,20 +1,20 @@
-// === Module 17220: ActivityPanelSystemUIManager ===
+// === Module 17501: ActivityPanelSystemUIManager ===
 
-// Module 17220 (ActivityPanelSystemUIManager)
+// Module 17501 (ActivityPanelSystemUIManager)
 import c from "c" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import StatusBarDefault from "StatusBar" /* 9096 */;
-import HomeIndicatorDefault from "HomeIndicator" /* 9098 */;
-import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 17197 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import StatusBarDefault from "StatusBar" /* 10340 */;
+import HomeIndicatorDefault from "HomeIndicator" /* 10673 */;
+import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 17478 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const ActivityPanelModes = fn(9001).ActivityPanelModes;
+const ActivityPanelModes = fn(6072).ActivityPanelModes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 fn(558);
 const ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function BaseActivityPanelSystemUIManager(arg0) {
   const cResult = c.c(9);
   ({ mode, isWindowLandscape } = arg0);
   let tmp5 = mode === ActivityPanelModes.PANEL;
@@ -66,7 +66,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = tmp10;
   tmp9 = tmp10;
   const tmpResult = PlatformUtils;
-}) : ((arg0) => {
+}) : (function BaseActivityPanelSystemUIManager(arg0) {
   ({ mode, isWindowLandscape } = arg0);
   let tmp = mode === ActivityPanelModes.PANEL;
   const tmp3 = PlatformUtils.isIOS() && tmp;
@@ -92,7 +92,7 @@ let closure_8 = tmp4;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/panel/native/ActivityPanelSystemUIManager.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ActivityPanelSystemUIManager() {
   const cResult = c.c(3);
   const context = noop.useContext(ActivityPanelStateContextDefault);
   ({ mode, wrapperDimensions } = context);
@@ -107,7 +107,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[1] = wrapperDimensions.isWindowLandscape;
   cResult[2] = tmp4;
   tmp3 = tmp4;
-}) : (() => {
+}) : (function ActivityPanelSystemUIManager() {
   const context = noop.useContext(ActivityPanelStateContextDefault);
   return hasOwnProperty(closure_8, { mode: context.mode, isWindowLandscape: context.wrapperDimensions.isWindowLandscape });
 }));

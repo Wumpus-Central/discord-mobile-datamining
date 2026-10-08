@@ -1,12 +1,12 @@
-// === Module 15640: useSortedDevToolsScreens ===
+// === Module 15920: useSortedDevToolsScreens ===
 
-// Module 15640 (useSortedDevToolsScreens)
+// Module 15920 (useSortedDevToolsScreens)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import DevToolsActionCreators from "DevToolsActionCreators" /* 15420 */;
-import DevToolsScreens from "DevToolsScreens" /* 15424 */;
+import DevToolsActionCreators from "DevToolsActionCreators" /* 15682 */;
+import DevToolsScreens from "DevToolsScreens" /* 15686 */;
 import _slicedToArray from "module_32" /* 32 */;
-import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7216 */;
+import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7396 */;
 
 require = fn;
 function getSortedDevToolsScreens() {
@@ -44,7 +44,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/devtools/native/useSortedDevToolsScreens.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSortedDevToolsScreens() {
   const cResult = c.c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [DevToolsSettingsStore];
@@ -97,7 +97,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp8 = cResult[3];
   }
   return tmp8;
-}) : (() => {
+}) : (function useSortedDevToolsScreens() {
   const items = [DevToolsSettingsStore];
   initialize.useStateFromStores(items, () => sortedScreenKeys.sortedScreenKeys);
   let sortedScreenKeys;

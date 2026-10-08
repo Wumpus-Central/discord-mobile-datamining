@@ -1,13 +1,13 @@
-// === Module 12297: Tabs/Tabs ===
+// === Module 12395: Tabs/Tabs ===
 
-// Module 12297 (Tabs/Tabs)
+// Module 12395 (Tabs/Tabs)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4618 */;
-import spring from "spring" /* 5604 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6147 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9110 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4810 */;
+import spring from "spring" /* 5374 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6326 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9512 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2116 */;
+import LocaleStore from "LocaleStore" /* 2128 */;
 
 const ReanimatedRexport = ReanimatedRexport2;
 
@@ -24,7 +24,7 @@ let c9 = 0.04;
 let c10 = 0.9;
 let c11 = 16;
 let closure_12 = { mass: 0.3, damping: 13, stiffness: 100, restDisplacementThreshold: 0.001, overshootClamping: true };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_13 = createStyles.createStyles((gap, arg1) => {
   const obj = { container: { display: "flex", flexGrow: 1, minWidth: "100%", flexDirection: "row", alignItems: "center", borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 }, controlsContainer: null, indicatorContainer: null, indicator: null };
   const obj2 = { display: "flex", flexGrow: 1, minWidth: "100%", flexDirection: "row", alignItems: "center", borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 };
@@ -61,7 +61,7 @@ let size = fn(2);
 let result = size.fileFinishedImporting("design/components/Tabs/native/Tabs.native.tsx");
 
 export { defaultCountFormatter };
-export const Tabs = ReactCompilerGating.isReactCompilerEnabled() ? ((state) => {
+export const Tabs = ReactCompilerGating.isReactCompilerEnabled() ? (function Tabs(state) {
   let GestureDetector = state;
   let tmp = onEndDrag;
   const cResult = state(onEndDrag[8]).c(41);
@@ -420,13 +420,13 @@ export const Tabs = ReactCompilerGating.isReactCompilerEnabled() ? ((state) => {
     obj.grow = grow;
     obj.pressed = pressedIndex;
     obj.selected = index === activeIndex.get();
-    obj.onPress = function onPress() {
+    obj.onPress = function handlePress() {
       setActiveIndex(closure_0);
     };
-    obj.onPressIn = function onPressIn() {
+    obj.onPressIn = function handlePressIn() {
       const result = pressedIndex.set(closure_0);
     };
-    obj.onPressOut = function onPressOut() {
+    obj.onPressOut = function handlePressOut() {
       const result = pressedIndex.set(-1);
     };
     obj.variant = variant;
@@ -442,7 +442,7 @@ export const Tabs = ReactCompilerGating.isReactCompilerEnabled() ? ((state) => {
   cResult[19] = variant;
   cResult[20] = me;
   tmp16 = me;
-}) : ((state) => {
+}) : (function Tabs(state) {
   state = state.state;
   let flag = state.grow;
   if (flag === undefined) {
@@ -622,7 +622,7 @@ export const Tabs = ReactCompilerGating.isReactCompilerEnabled() ? ((state) => {
   const animatedStyle = obj5.useAnimatedStyle(A);
   let obj6 = { indicatorTranslateX: derivedValue2, pressedIndex, clampedActiveIndex: derivedValue, PRESSED_TRANSLATE_AMOUNT: scrollOverflow, indicatorWidth: derivedValue1, scrollOverflow, interpolate: state(formatCount[4]).interpolate, SCROLL_OVERFLOW_UPPER_BOUND: 50, SCROLL_OVERFLOW_MAX_SCALE: items, withSpring: state(formatCount[9]).withSpring, SELECTED_INDICATOR_SPRING: itemSpacing };
   let obj8 = { onScroll: null, onEndDrag: null };
-  class P {
+  class F {
     constructor(arg0) {
       result = scrollOffset.set(state.contentOffset.x);
       if (onScrollWorklet != null) {
@@ -631,10 +631,10 @@ export const Tabs = ReactCompilerGating.isReactCompilerEnabled() ? ((state) => {
       return;
     }
   }
-  P.__closure = { scrollOffset, onScrollWorklet };
-  P.__workletHash = 12423910570232;
-  P.__initData = __initData4;
-  obj8.onScroll = P;
+  F.__closure = { scrollOffset, onScrollWorklet };
+  F.__workletHash = 12423910570232;
+  F.__initData = __initData4;
+  obj8.onScroll = F;
   const fn2 = function w() {
     if (onEndDrag != null) {
       tmp();
@@ -730,17 +730,17 @@ export const Tabs = ReactCompilerGating.isReactCompilerEnabled() ? ((state) => {
       obj.grow = grow;
       obj.pressed = pressed;
       obj.selected = index === closure_7.get();
-      obj.onPress = function onPress() {
+      obj.onPress = function handlePress() {
         setActiveIndex(closure_0);
       };
-      obj.onPressIn = function onPressIn() {
+      obj.onPressIn = function handlePressIn() {
         const result = pressed.set(closure_0);
       };
-      obj.onPressOut = function onPressOut() {
+      obj.onPressOut = function handlePressOut() {
         const result = pressed.set(-1);
       };
       obj.variant = variant;
-      return variant(state(12298).TabItem, obj, id);
+      return variant(state(12396).TabItem, obj, id);
     })
   }), items3);
   const memo1 = simultaneousHandlers.useMemo(() => {

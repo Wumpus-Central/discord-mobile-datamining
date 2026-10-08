@@ -1,20 +1,20 @@
-// === Module 6621: NotificationSettingsModalActionCreators ===
+// === Module 6798: NotificationSettingsModalActionCreators ===
 
-// Module 6621 (NotificationSettingsModalActionCreators)
+// Module 6798 (NotificationSettingsModalActionCreators)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1126 */;
-import shared from "shared" /* 4735 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 6616 */;
-import UserGuildSettingsManagerDefault from "UserGuildSettingsManager" /* 6618 */;
+import shared from "shared" /* 4929 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 6793 */;
+import UserGuildSettingsManagerDefault from "UserGuildSettingsManager" /* 6795 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5077 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5971 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const Endpoints = fn(1085).Endpoints;
-fn(4528).NotificationSettingsUpdateType;
+fn(4720).NotificationSettingsUpdateType;
 const constants = fn(1095).ChannelNotificationSettingsFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/NotificationSettingsModalActionCreators.tsx");
@@ -151,14 +151,14 @@ export default {
             } else {
               closure_0 = tmp5;
               closure_128_0 = undefined;
-              const setFlagResult = closure_0(1390).setFlag(UserGuildSettingsStore.accountNotificationSettings.flags, closure_0, tmp2);
+              const setFlagResult = closure_0(1402).setFlag(UserGuildSettingsStore.accountNotificationSettings.flags, closure_0, tmp2);
               closure_128_0 = setFlagResult;
-              const HTTP = closure_0(1282).HTTP;
+              const HTTP = closure_0(1294).HTTP;
               const request = { url: constants.ACCOUNT_NOTIFICATION_SETTINGS, body: null, rejectWithError: null };
               const obj5 = { flags: setFlagResult };
               request.body = obj5;
-              const obj10 = closure_0(1390);
-              request.rejectWithError = closure_0(1282).rejectWithMigratedError();
+              const obj10 = closure_0(1402);
+              request.rejectWithError = closure_0(1294).rejectWithMigratedError();
               dependencyMap = 1;
               c3 = 1;
               const obj6 = { value: HTTP.patch(request), done: false };

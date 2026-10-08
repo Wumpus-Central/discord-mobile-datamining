@@ -1,22 +1,22 @@
-// === Module 12765: BlockedDomainActionSheet ===
+// === Module 12913: BlockedDomainActionSheet ===
 
-// Module 12765 (BlockedDomainActionSheet)
+// Module 12913 (BlockedDomainActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Stack_Stack from "Stack/Stack" /* 5600 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import TrafficConeSpotIllustration from "TrafficConeSpotIllustration" /* 6085 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6652 */;
-import URLCallout from "URLCallout" /* 12766 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import Stack_Stack from "Stack/Stack" /* 5373 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import TrafficConeSpotIllustration from "TrafficConeSpotIllustration" /* 6271 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6829 */;
+import URLCallout from "URLCallout" /* 12914 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { padding: nativeDefault.space.PX_16 }, title: { textAlign: "center" }, warningMessage: { textAlign: "center" } };
 let closure_5 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -24,7 +24,7 @@ let obj3 = { padding: nativeDefault.space.PX_16 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/blocked_domains/components/native/BlockedDomainActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((url) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function BlockedDomainActionSheet(url) {
   const cResult = c.c(17);
   url = url.url;
   const tmp4 = closure_5();
@@ -124,7 +124,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((url) => {
   cResult[8] = tmp15;
   cResult[9] = tmp19;
   tmp18 = tmp19;
-}) : ((url) => {
+}) : (function BlockedDomainActionSheet(url) {
   const tmp = closure_5();
   const obj = { startExpanded: true, children: null };
   const obj2 = { spacing: 16, justify: "center", align: "center", style: tmp.container, children: null };

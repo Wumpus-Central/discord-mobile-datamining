@@ -1,22 +1,22 @@
-// === Module 13278: RewardGrantNotice ===
+// === Module 13579: RewardGrantNotice ===
 
-// Module 13278 (RewardGrantNotice)
+// Module 13579 (RewardGrantNotice)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 6635 */;
-import BalanceWidgetPill from "BalanceWidgetPill" /* 11013 */;
-import PremiumReferralIncentivesExperiment from "PremiumReferralIncentivesExperiment" /* 13262 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 6812 */;
+import BalanceWidgetPill from "BalanceWidgetPill" /* 11188 */;
+import PremiumReferralIncentivesExperiment from "PremiumReferralIncentivesExperiment" /* 13562 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(13260);
+const Constants = fn(13560);
 ({ REFERRAL_INCENTIVE_DISCOUNT_PERCENTAGE: closure_4, REFERRAL_INCENTIVE_ORBS_PER_CONVERSION: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, marginTop: nativeDefault.space.PX_8, alignSelf: "flex-start" }, orbsPillContainer: null, balancePillOverride: null };
 let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, marginTop: nativeDefault.space.PX_8, alignSelf: "flex-start" };
 obj2.orbsPillContainer = { flexDirection: "row", alignItems: "center", marginTop: nativeDefault.space.PX_8, alignSelf: "flex-start" };
@@ -25,7 +25,7 @@ let closure_8 = createStyles.createStyles(obj2);
 fn(558);
 let obj4 = { flexDirection: "row", alignItems: "center", marginTop: nativeDefault.space.PX_8, alignSelf: "flex-start" };
 let ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((nRewardsGranted) => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsGrantNotice(nRewardsGranted) {
   const cResult = c.c(7);
   const tmp4 = closure_8();
   const result = nRewardsGranted.nRewardsGranted * hasOwnProperty;
@@ -66,7 +66,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((nRewardsGranted
   cResult[2] = tmp7;
   tmp6 = tmp7;
   const obj4 = { initialRenderedBalance: 0, balance: result, style: tmp4.balancePillOverride };
-}) : ((nRewardsGranted) => {
+}) : (function OrbsGrantNotice(nRewardsGranted) {
   const tmp = closure_8();
   const obj = { style: tmp.orbsPillContainer, children: null };
   const items = [timestampProducer(BalanceWidgetPill.BalanceWidgetPill, { initialRenderedBalance: 0, balance: nRewardsGranted.nRewardsGranted * hasOwnProperty, style: tmp.balancePillOverride }), ];
@@ -79,7 +79,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((nRewardsGranted
   return React5(View, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((nRewardsGranted) => {
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function DiscountGrantNotice(nRewardsGranted) {
   const cResult = c.c(11);
   nRewardsGranted = nRewardsGranted.nRewardsGranted;
   const tmp4 = closure_8();
@@ -137,7 +137,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((nRewardsGrante
   cResult[9] = tmp15;
   cResult[10] = tmp19;
   tmp18 = tmp19;
-}) : ((nRewardsGranted) => {
+}) : (function DiscountGrantNotice(nRewardsGranted) {
   nRewardsGranted = nRewardsGranted.nRewardsGranted;
   const obj = { style: closure_8().container, accessible: true, accessibilityLabel: null, children: null };
   const intl = util.intl;
@@ -153,7 +153,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((nRewardsGrante
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/referral_program/native/RewardGrantNotice.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function RewardGrantNotice(arg0) {
   const cResult = c.c(4);
   ({ nRewardsGranted, referralRewardType } = arg0);
   if (nRewardsGranted < 1) {
@@ -176,7 +176,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       cResult[1] = tmp13;
     }
   }
-}) : ((arg0) => {
+}) : (function RewardGrantNotice(arg0) {
   ({ nRewardsGranted, referralRewardType } = arg0);
   if (nRewardsGranted < 1) {
     return null;

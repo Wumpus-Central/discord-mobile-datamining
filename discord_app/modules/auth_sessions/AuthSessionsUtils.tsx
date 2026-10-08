@@ -1,18 +1,18 @@
-// === Module 14607: AuthSessionsUtils ===
+// === Module 14868: AuthSessionsUtils ===
 
-// Module 14607 (AuthSessionsUtils)
+// Module 14868 (AuthSessionsUtils)
 import util from "util" /* 1126 */;
-import _modDef4467 from "module_4467" /* 4467 */;
+import _modDef4659 from "module_4659" /* 4659 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import AuthSessionsStore from "AuthSessionsStore" /* 14608 */;
+import AuthSessionsStore from "AuthSessionsStore" /* 14869 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth_sessions/AuthSessionsUtils.tsx");
 
-export const useAuthSessions = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useAuthSessions = ReactCompilerGating.isReactCompilerEnabled() ? (function useAuthSessions() {
   const cResult = authSessionIdHash(576).c(5);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AuthSessionsStore];
@@ -60,7 +60,7 @@ export const useAuthSessions = ReactCompilerGating.isReactCompilerEnabled() ? ((
     return cResult[3];
   }
   const tmpResult = authSessionIdHash(504);
-}) : (() => {
+}) : (function useAuthSessions() {
   const items = [AuthSessionsStore];
   stateFromStoresObject = stateFromStoresObject(504).useStateFromStoresObject(items, () => sessions.getSessions());
   const items1 = [stateFromStoresObject];
@@ -89,8 +89,8 @@ export const formatDate = function formatDate(arg0) {
     const intl = util.intl;
     let stringResult = intl.string(util.t.TXCmfL);
   } else {
-    stringResult = _modDef4467(arg0).fromNow();
-    const obj = _modDef4467(arg0);
+    stringResult = _modDef4659(arg0).fromNow();
+    const obj = _modDef4659(arg0);
   }
   return stringResult;
 };

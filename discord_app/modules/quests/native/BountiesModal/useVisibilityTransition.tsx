@@ -1,8 +1,8 @@
-// === Module 14834: useVisibilityTransition ===
+// === Module 15095: useVisibilityTransition ===
 
-// Module 14834 (useVisibilityTransition)
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import timing from "timing" /* 4897 */;
+// Module 15095 (useVisibilityTransition)
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import timing from "timing" /* 5091 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/useVisibilityTransition.tsx");
 
-export const useVisibilityTransition = ReactCompilerGating.isReactCompilerEnabled() ? ((visible) => {
+export const useVisibilityTransition = ReactCompilerGating.isReactCompilerEnabled() ? (function useVisibilityTransition(visible) {
   const cResult = visible(entranceTiming[3]).c(3);
   visible = visible.visible;
   entranceTiming = visible.entranceTiming;
@@ -70,7 +70,7 @@ export const useVisibilityTransition = ReactCompilerGating.isReactCompilerEnable
   cResult[1] = first;
   cResult[2] = obj3;
   tmp11 = obj3;
-}) : ((visible) => {
+}) : (function useVisibilityTransition(visible) {
   visible = visible.visible;
   const entranceTiming = visible.entranceTiming;
   const exitTiming = visible.exitTiming;

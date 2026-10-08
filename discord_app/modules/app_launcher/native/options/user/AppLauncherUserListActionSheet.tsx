@@ -1,19 +1,19 @@
-// === Module 11825: AppLauncherUserListActionSheet ===
+// === Module 11910: AppLauncherUserListActionSheet ===
 
-// Module 11825 (AppLauncherUserListActionSheet)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import TableRow from "TableRow" /* 6000 */;
+// Module 11910 (AppLauncherUserListActionSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import TableRow from "TableRow" /* 6184 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const DEFAULT_CONTENT_PADDING = fn(1489).DEFAULT_CONTENT_PADDING;
+const DEFAULT_CONTENT_PADDING = fn(1501).DEFAULT_CONTENT_PADDING;
 const jsx = fn(21).jsx;
 const AppLauncherUserListActionSheet = "AppLauncherUserListActionSheet";
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({ emptyState: { paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingTop: DEFAULT_CONTENT_PADDING, flex: 1 } });
 fn(558);
 const ReactCompilerGating = fn(558);
-let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmptyStateWithSnowflakeQuery(arg0) {
   const cResult = onPressRow(576).c(8);
   ({ query, onPressRow } = arg0);
   const tmp4 = closure_6();
@@ -43,7 +43,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       return tmp7;
     }
   }
-  const tmp8 = jsx(onPressRow(11803).AppLauncherList, { contentContainerStyle: tmp4.emptyState, data: tmp5, renderItem: tmp6, keyboardShouldPersistTaps: "always", keyboardDismissMode: "on-drag" });
+  const tmp8 = jsx(onPressRow(11870).AppLauncherList, { contentContainerStyle: tmp4.emptyState, data: tmp5, renderItem: tmp6, keyboardShouldPersistTaps: "always", keyboardDismissMode: "on-drag" });
   cResult[4] = tmp4.emptyState;
   cResult[5] = tmp5;
   cResult[6] = tmp6;
@@ -51,7 +51,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   tmp7 = tmp8;
   const obj = onPressRow(576);
   const obj2 = { contentContainerStyle: tmp4.emptyState, data: tmp5, renderItem: tmp6, keyboardShouldPersistTaps: "always", keyboardDismissMode: "on-drag" };
-}) : ((onPressRow) => {
+}) : (function EmptyStateWithSnowflakeQuery(onPressRow) {
   onPressRow = onPressRow.onPressRow;
   const obj = {
     contentContainerStyle: closure_6().emptyState,
@@ -64,7 +64,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   };
   const items = [onPressRow.query];
   obj.data = items;
-  return jsx(onPressRow(11803).AppLauncherList, {
+  return jsx(onPressRow(11870).AppLauncherList, {
     contentContainerStyle: closure_6().emptyState,
     data: null,
     renderItem(label) {
@@ -77,7 +77,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/options/user/AppLauncherUserListActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onUserPress) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLauncherUserListActionSheet(onUserPress) {
   const cResult = onUserPress(576).c(18);
   onUserPress = onUserPress.onUserPress;
   const onActionSheetDismiss = onUserPress.onActionSheetDismiss;
@@ -330,25 +330,37 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onUserPress) => 
       tmp11[1] = guild_id;
       tmp11[3] = U;
       tmp11[6] = tmp4;
-      tmp9Result = jsx(tmp10(11223), tmp11);
+      tmp9Result = jsx(tmp10(11338), tmp11);
     }
     cResult[8] = channel;
     cResult[9] = id;
     cResult[10] = guild_id;
+    class P {
+      constructor(arg0) {
+        obj = { user: onUserPress.user };
+        tmp = onUserPress(obj);
+        tmp2 = closure_2();
+        return;
+      }
+    }
     cResult[11] = tmp4;
     cResult[12] = U;
     cResult[13] = tmp9Result;
   }
-  const fn2 = function b(user) {
-    onUserPress({ user: user.user });
-    dependencyMap();
-  };
+  class P {
+    constructor(arg0) {
+      obj = { user: onUserPress.user };
+      tmp = onUserPress(obj);
+      tmp2 = closure_2();
+      return;
+    }
+  }
   cResult[2] = tmp3;
   cResult[3] = onUserPress;
-  cResult[4] = fn2;
-  tmp4 = fn2;
+  cResult[4] = P;
+  tmp4 = P;
   const obj = onUserPress(576);
-}) : ((onUserPress) => {
+}) : (function AppLauncherUserListActionSheet(onUserPress) {
   onUserPress = onUserPress.onUserPress;
   const onActionSheetDismiss = onUserPress.onActionSheetDismiss;
   const channel = onUserPress.channel;

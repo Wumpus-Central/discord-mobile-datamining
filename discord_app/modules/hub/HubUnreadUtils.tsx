@@ -1,10 +1,10 @@
-// === Module 16176: HubUnreadUtils ===
+// === Module 16436: HubUnreadUtils ===
 
-// Module 16176 (HubUnreadUtils)
+// Module 16436 (HubUnreadUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import GuildDirectoryUtils from "GuildDirectoryUtils" /* 11946 */;
-import GuildDirectoryStore from "GuildDirectoryStore" /* 11954 */;
-import ReadStateStore from "ReadStateStore" /* 4911 */;
+import GuildDirectoryUtils from "GuildDirectoryUtils" /* 12019 */;
+import GuildDirectoryStore from "GuildDirectoryStore" /* 12027 */;
+import ReadStateStore from "ReadStateStore" /* 6040 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hub/HubUnreadUtils.tsx");
 
-export const useHubUnreadCount = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useHubUnreadCount = ReactCompilerGating.isReactCompilerEnabled() ? (function useHubUnreadCount(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -60,7 +60,7 @@ export const useHubUnreadCount = ReactCompilerGating.isReactCompilerEnabled() ? 
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp7, tmp8);
-}) : ((arg0) => {
+}) : (function useHubUnreadCount(arg0) {
   _require = arg0;
   const items = [GuildDirectoryStore, ReadStateStore];
   const items1 = [arg0];

@@ -1,9 +1,9 @@
-// === Module 16990: YouSettingsCoachmark ===
+// === Module 17271: YouSettingsCoachmark ===
 
-// Module 16990 (YouSettingsCoachmark)
+// Module 17271 (YouSettingsCoachmark)
 import c from "c" /* 576 */;
-import useCoachmark from "useCoachmark" /* 9895 */;
-import useReferralProgramCoachmark from "useReferralProgramCoachmark" /* 16991 */;
+import useCoachmark from "useCoachmark" /* 9375 */;
+import useReferralProgramCoachmark from "useReferralProgramCoachmark" /* 17272 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
 require = fn;
@@ -31,7 +31,7 @@ export default function YouSettingsCoachmark(buttonRef) {
       tmp9 = cResult[1];
       tmp10 = cResult[2];
     }
-    obj3 = obj3(9895);
+    obj3 = obj3(9375);
     coachmark = obj3.useCoachmark(tmp9, tmp10);
   } else {
     const merged = Object.assign(buttonRef, Object.assign({ buttonRef: 0 }));
@@ -39,7 +39,7 @@ export default function YouSettingsCoachmark(buttonRef) {
     return null;
   }
 };
-export const useYouSettingsCoachmark = ReactCompilerGating.isReactCompilerEnabled() ? ((disabled) => {
+export const useYouSettingsCoachmark = ReactCompilerGating.isReactCompilerEnabled() ? (function useYouSettingsCoachmark(disabled) {
   const cResult = c.c(2);
   disabled = disabled.disabled;
   if (cResult[0] !== disabled) {
@@ -55,7 +55,7 @@ export const useYouSettingsCoachmark = ReactCompilerGating.isReactCompilerEnable
     referralProgramCoachmark = null;
   }
   return referralProgramCoachmark;
-}) : ((disabled) => {
+}) : (function useYouSettingsCoachmark(disabled) {
   let referralProgramCoachmark = useReferralProgramCoachmark.useReferralProgramCoachmark({ disabled: disabled.disabled });
   if (referralProgramCoachmark == null) {
     referralProgramCoachmark = null;

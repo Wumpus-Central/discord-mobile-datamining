@@ -1,9 +1,9 @@
-// === Module 5611: ButtonShine ===
+// === Module 5386: ButtonShine ===
 
-// Module 5611 (ButtonShine)
+// Module 5386 (ButtonShine)
 import c from "c" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import timing from "timing" /* 4897 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import timing from "timing" /* 5091 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ let c9 = 56;
 const __initData = { code: "function ButtonShineNativeTsx1(){const{width,SHINE_OFFSCREEN_OFFSET,useReducedMotion,SHINE_WIDTH,withRepeat,withSequence,withTiming,withDelay,SHINE_INITIAL_ANIMATION_DELAY,SHINE_ANIMATION_DURATION}=this.__closure;if(width==null){return{transform:[{translateX:-SHINE_OFFSCREEN_OFFSET}]};}if(useReducedMotion){const centerOffset=(width-SHINE_WIDTH)/2;return{transform:[{translateX:centerOffset}]};}return{transform:[{translateX:withRepeat(withSequence(withTiming(-SHINE_OFFSCREEN_OFFSET,{duration:0},\"animate-always\"),withDelay(SHINE_INITIAL_ANIMATION_DELAY,withTiming(width+SHINE_OFFSCREEN_OFFSET,{duration:SHINE_ANIMATION_DURATION},\"animate-always\"))),-1)}]};}" };
 const __initData2 = { code: "function ButtonShineNativeTsx2(){const{width,SHINE_OFFSCREEN_OFFSET,useReducedMotion,SHINE_WIDTH,withRepeat,withSequence,withTiming,withDelay,SHINE_INITIAL_ANIMATION_DELAY,SHINE_ANIMATION_DURATION}=this.__closure;if(width==null){return{transform:[{translateX:-SHINE_OFFSCREEN_OFFSET}]};}if(useReducedMotion){const centerOffset=(width-SHINE_WIDTH)/2;return{transform:[{translateX:centerOffset}]};}return{transform:[{translateX:withRepeat(withSequence(withTiming(-SHINE_OFFSCREEN_OFFSET,{duration:0},'animate-always'),withDelay(SHINE_INITIAL_ANIMATION_DELAY,withTiming(width+SHINE_OFFSCREEN_OFFSET,{duration:SHINE_ANIMATION_DURATION},'animate-always'))),-1)}]};}" };
 let ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((width, arg1) => {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useShineEffectStyles(width, arg1) {
   _require = width;
   const cResult = require("c").c(3);
   let obj = require("c");
@@ -99,7 +99,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((width, arg1) => {
   cResult[1] = tmp5;
   cResult[2] = obj8;
   tmp6 = obj8;
-}) : ((width, arg1) => {
+}) : (function useShineEffectStyles(width, arg1) {
   _require = width;
   const buttonTextColorStyles = require("ButtonHooks").useButtonTextColorStyles(arg1);
   let obj = require("ButtonHooks");
@@ -157,7 +157,7 @@ let size = fn(2);
 const result = size.fileFinishedImporting("design/components/Button/native/ButtonShine.native.tsx");
 
 export const useShineEffectStyles = tmp2;
-export const ButtonShine = ReactCompilerGating.isReactCompilerEnabled() ? ((variant) => {
+export const ButtonShine = ReactCompilerGating.isReactCompilerEnabled() ? (function ButtonShine(variant) {
   const cResult = c.c(12);
   const tmp3 = _slicedToArray(noop.useState(null), 2);
   closure_0 = tmp3[1];
@@ -214,7 +214,7 @@ export const ButtonShine = ReactCompilerGating.isReactCompilerEnabled() ? ((vari
   cResult[3] = items;
   tmp6 = items;
   const tmp4 = closure_12(tmp3[0], variant.variant);
-}) : ((variant) => {
+}) : (function ButtonShine(variant) {
   const tmp = _slicedToArray(noop.useState(null), 2);
   closure_0 = tmp[1];
   const tmp2 = closure_12(tmp[0], variant.variant);

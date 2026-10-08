@@ -1,23 +1,23 @@
-// === Module 15108: SettingsAppearanceThemeSelectorItem ===
+// === Module 15370: SettingsAppearanceThemeSelectorItem ===
 
-// Module 15108 (SettingsAppearanceThemeSelectorItem)
+// Module 15370 (SettingsAppearanceThemeSelectorItem)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import ClientThemesTypes from "ClientThemesTypes" /* 1241 */;
-import useToken from "useToken" /* 4586 */;
-import themes from "themes" /* 4593 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4600 */;
-import utils_ColorDefault from "utils/Color" /* 4734 */;
-import Pressables from "Pressables" /* 5916 */;
-import ThemedGradient from "ThemedGradient" /* 5918 */;
-import _modDef15109 from "module_15109" /* 15109 */;
-import SynchronizeIconNativeDefault from "SynchronizeIconNative" /* 15110 */;
+import native from "native" /* 1200 */;
+import ClientThemesTypes from "ClientThemesTypes" /* 1253 */;
+import useToken from "useToken" /* 4778 */;
+import themes from "themes" /* 4785 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4792 */;
+import utils_ColorDefault from "utils/Color" /* 4928 */;
+import Pressables from "Pressables" /* 6189 */;
+import ThemedGradient from "ThemedGradient" /* 10211 */;
+import _modDef15371 from "module_15371" /* 15371 */;
+import SynchronizeIconNativeDefault from "SynchronizeIconNative" /* 15372 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1193 */;
-import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 15107 */;
+import ThemeStore from "ThemeStore" /* 1205 */;
+import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 15369 */;
 
 const ThemedGradientDefault = ThemedGradient;
 
@@ -26,14 +26,14 @@ const View = fn(17).View;
 const ThemeTypes = fn(1096).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-let createStyles = fn(4896);
+let createStyles = fn(5090);
 let obj2 = { rippleColor: { color: nativeDefault.unsafe_rawColors.TRANSPARENT }, themeSelectorItemContainer: { width: SettingsAppearanceConstants.THEME_ITEM_WIDTH, height: SettingsAppearanceConstants.THEME_ITEM_HEIGHT }, themeSelectorItem: null, newRedCircle: null };
 let obj3 = { color: nativeDefault.unsafe_rawColors.TRANSPARENT };
 obj2.themeSelectorItem = { borderRadius: nativeDefault.radii.sm, padding: SettingsAppearanceConstants.THEME_ITEM_PADDING };
 let size = { backgroundColor: nativeDefault.unsafe_rawColors.RED_430, width: 12, height: 12, borderRadius: nativeDefault.radii.sm, position: "absolute", top: 0, right: 0 };
 obj2.newRedCircle = size;
 let closure_8 = createStyles.createStyles(obj2);
-createStyles = fn(4896);
+createStyles = fn(5090);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { themeSelectorGradientBackground: { justifyContent: "center", width: "100%", height: "100%" }, lock: null };
   const internal = nativeDefault.internal;
@@ -51,7 +51,7 @@ let closure_10 = new utils_ColorDefault(0, 0, 0, 0.2);
 const tmp5 = new utils_ColorDefault(0, 0, 0, 0.2);
 let closure_11 = new utils_ColorDefault(255, 255, 255, 0.5);
 let ReactCompilerGating = fn(558);
-let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function GradientThemeBackground(arg0) {
   const cResult = c.c(18);
   ({ item, isThemeLocked } = arg0);
   if (cResult[0] !== item.theme) {
@@ -116,7 +116,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
       let tmp18 = isThemeLocked;
       if (isThemeLocked) {
-        const obj5 = { source: _modDef15109, style: tmp6.lock };
+        const obj5 = { source: _modDef15371, style: tmp6.lock };
         tmp18 = timestampProducer(native.Icon, obj5);
       }
       cResult[11] = isThemeLocked;
@@ -136,7 +136,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = tmp7;
   cResult[6] = items1;
   tmp8 = items1;
-}) : ((arg0) => {
+}) : (function GradientThemeBackground(arg0) {
   ({ item, isThemeLocked } = arg0);
   const isThemeDarkResult = themes.isThemeDark(item.theme);
   const tmp4 = closure_9(isThemeDarkResult);
@@ -155,7 +155,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   obj4.mixColorOverride = isThemeDarkResult ? closure_10 : closure_11;
   const items1 = [timestampProducer(ThemedGradientDefault, obj4), ];
   if (isThemeLocked) {
-    const obj6 = { source: _modDef15109, style: tmp4.lock };
+    const obj6 = { source: _modDef15371, style: tmp4.lock };
     isThemeLocked = timestampProducer(native.Icon, obj6);
   }
   items1[1] = isThemeLocked;
@@ -163,7 +163,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return React5(View, obj3);
 });
 ReactCompilerGating = fn(558);
-let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((item) => {
+let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function DefaultThemeBackground(item) {
   const cResult = c.c(14);
   item = item.item;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -236,7 +236,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((item) => {
   cResult[3] = stateFromStores;
   cResult[4] = theme;
   const tmpResult = useStateFromStores;
-}) : ((item) => {
+}) : (function DefaultThemeBackground(item) {
   item = item.item;
   useStateFromStores;
   [][0] = ThemeStore;
@@ -265,7 +265,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((item) => {
   return timestampProducer(View, obj2);
 });
 ReactCompilerGating = fn(558);
-let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function CustomThemeBackground(arg0) {
   const cResult = c.c(18);
   ({ item, isThemeLocked } = arg0);
   if (cResult[0] !== item.theme) {
@@ -330,7 +330,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
       let tmp17 = isThemeLocked;
       if (isThemeLocked) {
-        const obj5 = { source: _modDef15109, style: tmp6.lock };
+        const obj5 = { source: _modDef15371, style: tmp6.lock };
         tmp17 = timestampProducer(native.Icon, obj5);
       }
       cResult[11] = isThemeLocked;
@@ -350,7 +350,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = tmp7;
   cResult[6] = items1;
   tmp8 = items1;
-}) : ((arg0) => {
+}) : (function CustomThemeBackground(arg0) {
   ({ item, isThemeLocked } = arg0);
   const isThemeDarkResult = themes.isThemeDark(item.theme);
   const tmp4 = closure_9(isThemeDarkResult);
@@ -367,7 +367,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   obj4.customTheme = item;
   const items1 = [timestampProducer(ThemedGradient.CustomThemedGradient, obj4), ];
   if (isThemeLocked) {
-    const obj6 = { source: _modDef15109, style: tmp4.lock };
+    const obj6 = { source: _modDef15371, style: tmp4.lock };
     isThemeLocked = timestampProducer(native.Icon, obj6);
   }
   items1[1] = isThemeLocked;
@@ -379,7 +379,7 @@ let tmp6 = new utils_ColorDefault(255, 255, 255, 0.5);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/appearance/native/components/SettingsAppearanceThemeSelectorItem.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ThemeSelectorItem(arg0) {
   const cResult = c.c(27);
   ({ themePreset, isPreview, isSelected, onPress, isNew } = arg0);
   const tmp4 = closure_8();
@@ -503,7 +503,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[0] = isPreview;
   cResult[1] = themePreset;
   cResult[2] = tmp8;
-}) : ((onPress) => {
+}) : (function ThemeSelectorItem(onPress) {
   ({ themePreset, isPreview, isSelected, isNew } = onPress);
   const tmp = closure_8();
   if (isPreview) {

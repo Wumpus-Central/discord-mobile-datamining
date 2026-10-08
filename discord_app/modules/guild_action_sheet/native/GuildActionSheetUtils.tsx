@@ -1,7 +1,7 @@
-// === Module 13792: GuildActionSheetUtils ===
+// === Module 14014: GuildActionSheetUtils ===
 
-// Module 13792 (GuildActionSheetUtils)
-import PermissionStore from "PermissionStore" /* 4515 */;
+// Module 14014 (GuildActionSheetUtils)
+import PermissionStore from "PermissionStore" /* 4707 */;
 
 const require = globalThis.__r;
 
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_action_sheet/native/GuildActionSheetUtils.tsx");
 
-export const useGuildActionSheetPermissions = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useGuildActionSheetPermissions = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildActionSheetPermissions(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -66,7 +66,7 @@ export const useGuildActionSheetPermissions = ReactCompilerGating.isReactCompile
   }
   let obj = require("c");
   return require("initialize").useStateFromStoresObject(first, A, tmp7);
-}) : ((arg0) => {
+}) : (function useGuildActionSheetPermissions(arg0) {
   _require = arg0;
   const items = [PermissionStore];
   const items1 = [arg0];

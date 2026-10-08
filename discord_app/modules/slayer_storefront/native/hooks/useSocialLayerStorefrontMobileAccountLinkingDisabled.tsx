@@ -1,7 +1,7 @@
-// === Module 10755: useSocialLayerStorefrontMobileAccountLinkingDisabled ===
+// === Module 10483: useSocialLayerStorefrontMobileAccountLinkingDisabled ===
 
-// Module 10755 (useSocialLayerStorefrontMobileAccountLinkingDisabled)
-import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 6743 */;
+// Module 10483 (useSocialLayerStorefrontMobileAccountLinkingDisabled)
+import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 6919 */;
 
 const require = globalThis.__r;
 
@@ -10,7 +10,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/slayer_storefront/native/hooks/useSocialLayerStorefrontMobileAccountLinkingDisabled.tsx");
 
-export const useSocialLayerStorefrontMobileAccountLinkingDisabled = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useSocialLayerStorefrontMobileAccountLinkingDisabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useSocialLayerStorefrontMobileAccountLinkingDisabled(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -45,7 +45,7 @@ export const useSocialLayerStorefrontMobileAccountLinkingDisabled = ReactCompile
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp6, tmp7);
-}) : ((arg0) => {
+}) : (function useSocialLayerStorefrontMobileAccountLinkingDisabled(arg0) {
   _require = arg0;
   const items = [SocialLayerStorefrontStore];
   const items1 = [arg0];

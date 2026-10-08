@@ -1,19 +1,19 @@
-// === Module 16911: FilesScreen ===
+// === Module 17192: FilesScreen ===
 
-// Module 16911 (FilesScreen)
-import SearchPlatformUtils from "SearchPlatformUtils" /* 11980 */;
-import BaseMessagesScreen from "BaseMessagesScreen" /* 16906 */;
+// Module 17192 (FilesScreen)
+import SearchPlatformUtils from "SearchPlatformUtils" /* 12053 */;
+import BaseMessagesScreen from "BaseMessagesScreen" /* 17187 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SearchConstants = fn(7524);
+const SearchConstants = fn(9247);
 ({ SearchListItemTypes: closure_4, CARD_ESTIMATED_ITEM_SIZE: hasOwnProperty, FILES_OR_LINKS_NUM_COLUMNS: metroRequire, FILES_OR_LINKS_GAP_WIDTH: closure_7 } = SearchConstants);
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/messages/FilesScreen.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function FilesScreen(searchContext) {
   const cResult = searchContext(onPressMessageItem[4]).c(21);
   searchContext = searchContext.searchContext;
   ({ tab, isFocused, width } = searchContext);
@@ -158,7 +158,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((search
   cResult[4] = fn;
   tmp8 = fn;
   const tmpResult = searchContext(onPressMessageItem[8]);
-}) : ((searchContext) => {
+}) : (function FilesScreen(searchContext) {
   searchContext = searchContext.searchContext;
   const tab = searchContext.tab;
   let fileOrLinkImageDimensions;

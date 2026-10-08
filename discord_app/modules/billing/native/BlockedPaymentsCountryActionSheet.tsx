@@ -1,9 +1,9 @@
-// === Module 11106: BlockedPaymentsCountryActionSheet ===
+// === Module 10471: BlockedPaymentsCountryActionSheet ===
 
-// Module 11106 (BlockedPaymentsCountryActionSheet)
+// Module 10471 (BlockedPaymentsCountryActionSheet)
 import c from "c" /* 576 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6652 */;
-import BlockedPaymentsCountryDisplayDefault from "BlockedPaymentsCountryDisplay" /* 11107 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6829 */;
+import BlockedPaymentsCountryDisplayDefault from "BlockedPaymentsCountryDisplay" /* 10472 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/billing/native/BlockedPaymentsCountryActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function BlockedPaymentsCountryActionSheet() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { children: jsx(BlockedPaymentsCountryDisplayDefault, {}) };
@@ -23,4 +23,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     first = cResult[0];
   }
   return first;
-}) : (() => jsx(Sheet_BottomSheet.BottomSheet, { children: jsx(BlockedPaymentsCountryDisplayDefault, {}) }));
+}) : (function BlockedPaymentsCountryActionSheet() {
+  return jsx(Sheet_BottomSheet.BottomSheet, { children: jsx(BlockedPaymentsCountryDisplayDefault, {}) });
+});

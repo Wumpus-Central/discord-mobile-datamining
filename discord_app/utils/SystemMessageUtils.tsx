@@ -1,27 +1,27 @@
-// === Module 7656: SystemMessageUtils ===
+// === Module 7977: SystemMessageUtils ===
 
-// Module 7656 (SystemMessageUtils)
+// Module 7977 (SystemMessageUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1126 */;
-import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4503 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5048 */;
-import useChannelName from "useChannelName" /* 5049 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5118 */;
-import useMessageAuthor from "useMessageAuthor" /* 5311 */;
-import MarkupParser from "MarkupParser" /* 7657 */;
-import AutomodNotificationEmbedTypeKeys from "AutomodNotificationEmbedTypeKeys" /* 7661 */;
-import GuildRoleSubscriptionSystemMessageUtils from "GuildRoleSubscriptionSystemMessageUtils" /* 7662 */;
-import GuildProductSystemMessageUtils from "GuildProductSystemMessageUtils" /* 7664 */;
-import ApplicationSubscriptionSystemMessageUtils from "ApplicationSubscriptionSystemMessageUtils" /* 7665 */;
-import PrivateChannelIntegrationSystemMessageUtils from "PrivateChannelIntegrationSystemMessageUtils" /* 7666 */;
-import GuildLeaderboardSystemMessageCopy from "GuildLeaderboardSystemMessageCopy" /* 7667 */;
+import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4695 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5405 */;
+import useChannelName from "useChannelName" /* 5417 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5430 */;
+import useMessageAuthor from "useMessageAuthor" /* 5623 */;
+import MarkupParser from "MarkupParser" /* 7978 */;
+import AutomodNotificationEmbedTypeKeys from "AutomodNotificationEmbedTypeKeys" /* 7982 */;
+import GuildRoleSubscriptionSystemMessageUtils from "GuildRoleSubscriptionSystemMessageUtils" /* 7983 */;
+import GuildProductSystemMessageUtils from "GuildProductSystemMessageUtils" /* 7985 */;
+import ApplicationSubscriptionSystemMessageUtils from "ApplicationSubscriptionSystemMessageUtils" /* 7986 */;
+import PrivateChannelIntegrationSystemMessageUtils from "PrivateChannelIntegrationSystemMessageUtils" /* 7987 */;
+import GuildLeaderboardSystemMessageCopy from "GuildLeaderboardSystemMessageCopy" /* 7988 */;
 import _slicedToArray from "module_32" /* 32 */;
-import MessageRecord from "MessageRecord" /* 4526 */;
+import MessageRecord from "MessageRecord" /* 4718 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
-import UserStore from "UserStore" /* 1377 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 

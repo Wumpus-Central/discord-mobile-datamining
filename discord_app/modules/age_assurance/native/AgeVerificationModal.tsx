@@ -1,9 +1,9 @@
-// === Module 8137: AgeVerificationModal ===
+// === Module 7524: AgeVerificationModal ===
 
-// Module 8137 (AgeVerificationModal)
+// Module 7524 (AgeVerificationModal)
 import nativeDefault from "native" /* 587 */;
-import LinkingDefault from "Linking" /* 4571 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4742 */;
+import LinkingDefault from "Linking" /* 4763 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4936 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -103,10 +103,10 @@ function AgeVerifyScreen(uri) {
   }, []);
   return jsx(onClose(isExpressiveModalV2[6]), { allowsInlineMediaPlayback: true, javaScriptEnabled: true, javaScriptCanOpenWindowsAutomatically: true, source: { uri: uri.webviewUrl }, onMessage: callback2, onShouldStartLoadWithRequest: callback3, injectedJavaScript: "\n  window.addEventListener('message', function(event) {\n    window.ReactNativeWebView.postMessage(event.data);\n  }, true);\n", injectedJavaScriptBeforeContentLoaded: "\n  window.open = function(url) {\n    window.ReactNativeWebView.postMessage(JSON.stringify({type: 'AGEKEY_BREAKOUT', url: url}));\n    return null;\n  };\n" });
 }
-let closure_4 = fn(8118).AGE_VERIFICATION_MODAL_KEY;
+let closure_4 = fn(5914).AGE_VERIFICATION_MODAL_KEY;
 let jsx = fn(21).jsx;
 const constants = { VERIFY_AGE: "VERIFY_AGE" };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { headerStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
 let closure_9 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -114,7 +114,7 @@ let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/native/AgeVerificationModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeVerificationModal(arg0) {
   const cResult = webviewUrl(onClose[13]).c(10);
   ({ webviewUrl, onComplete, onClose, isExpressiveModalV2 } = arg0);
   const tmp5 = closure_9();
@@ -192,7 +192,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       return handleCloseAfterCompletion(AgeVerifyScreen, { webviewUrl, onComplete, onClose: handleCloseAfterCompletion, isExpressiveModalV2 });
     }
   };
-}) : ((webviewUrl) => {
+}) : (function AgeVerificationModal(webviewUrl) {
   webviewUrl = webviewUrl.webviewUrl;
   const onComplete = webviewUrl.onComplete;
   const onClose = webviewUrl.onClose;

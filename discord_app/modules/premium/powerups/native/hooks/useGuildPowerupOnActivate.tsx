@@ -1,22 +1,22 @@
-// === Module 12209: useGuildPowerupOnActivate ===
+// === Module 12288: useGuildPowerupOnActivate ===
 
-// Module 12209 (useGuildPowerupOnActivate)
-import BoostingActionCreators from "BoostingActionCreators" /* 5619 */;
-import GuildBoostingUtils from "GuildBoostingUtils" /* 7677 */;
+// Module 12288 (useGuildPowerupOnActivate)
+import BoostingActionCreators from "BoostingActionCreators" /* 5964 */;
+import GuildBoostingUtils from "GuildBoostingUtils" /* 7998 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 6918 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7107 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GuildPowerupsConstants = fn(4774);
+const GuildPowerupsConstants = fn(4968);
 ({ BoostPurchaseIntent: metroRequire, GuildPowerupType: closure_7 } = GuildPowerupsConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupOnActivate.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildPowerupOnActivate(arg0, arg1) {
   _require = arg0;
   importDefault = arg1;
   const cResult = require("c").c(15);
@@ -164,7 +164,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   cResult[9] = shouldUseMobileWebRedirectCheckout;
   cResult[10] = fn2;
   tmp12 = fn2;
-}) : ((arg0, arg1) => {
+}) : (function useGuildPowerupOnActivate(arg0, arg1) {
   _require = arg0;
   importDefault = arg1;
   const tmp = require("useGuildPowerupOnToggle")(arg0, arg1);
@@ -217,7 +217,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
               analyticsLocations,
               guildId: stateFromStores.id,
               onBack() {
-                        return PERK(5099).popWithKey(diff(6929).PREMIUM_KEY);
+                        return PERK(5940).popWithKey(diff(7118).PREMIUM_KEY);
                       },
               onPaymentSuccess() {
                         const availableGuildBoostSlots = GuildBoostingUtils.getAvailableGuildBoostSlots(GuildBoostSlotStore.boostSlots);
@@ -237,7 +237,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
                         }
                       },
               onPaymentDismiss() {
-                        return PERK(5099).popWithKey(diff(6929).PREMIUM_KEY);
+                        return PERK(5940).popWithKey(diff(7118).PREMIUM_KEY);
                       }
             };
             const result = tmp17(onToggle[15]).launchGuildBoostFlowOrAlert(obj3);

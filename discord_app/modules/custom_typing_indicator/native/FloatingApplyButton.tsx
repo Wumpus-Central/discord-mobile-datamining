@@ -1,14 +1,14 @@
-// === Module 15242: FloatingApplyButton ===
+// === Module 15504: FloatingApplyButton ===
 
-// Module 15242 (FloatingApplyButton)
+// Module 15504 (FloatingApplyButton)
 import nativeDefault from "native" /* 587 */;
-import HapticUtils from "HapticUtils" /* 4861 */;
-import spring from "spring" /* 5604 */;
+import HapticUtils from "HapticUtils" /* 5055 */;
+import spring from "spring" /* 5374 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 require = fn;
-const MEDIA_PICKER_SEND_BUTTON_SPRING = fn(1614).MEDIA_PICKER_SEND_BUTTON_SPRING;
+const MEDIA_PICKER_SEND_BUTTON_SPRING = fn(1626).MEDIA_PICKER_SEND_BUTTON_SPRING;
 const jsx = fn(21).jsx;
 const __initData = { code: "function FloatingApplyButtonTsx1(){const{visible}=this.__closure;return{pointerEvents:visible?\"box-none\":\"none\"};}" };
 const __initData2 = { code: "function FloatingApplyButtonTsx2(){const{visible,tokens,reducedMotion,withSpring,MEDIA_PICKER_SEND_BUTTON_SPRING}=this.__closure;const targetOpacity=visible?1:0;const targetTranslateY=visible?0:60;const targetScale=visible?1:0.9;return{position:\"absolute\",bottom:0,left:0,right:0,marginHorizontal:tokens.space.PX_16,flexDirection:\"column\",justifyContent:\"flex-end\",transform:[{translateY:reducedMotion?targetTranslateY:withSpring(targetTranslateY,MEDIA_PICKER_SEND_BUTTON_SPRING)},{scale:reducedMotion?targetScale:withSpring(targetScale,MEDIA_PICKER_SEND_BUTTON_SPRING)}],opacity:reducedMotion?targetOpacity:withSpring(targetOpacity,MEDIA_PICKER_SEND_BUTTON_SPRING)};}" };
@@ -18,7 +18,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/custom_typing_indicator/native/FloatingApplyButton.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((visible) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FloatingApplyButton(visible) {
   const cResult = visible(stateFromStores[5]).c(19);
   visible = visible.visible;
   ({ disabled, text, onPress } = visible);
@@ -104,7 +104,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((visible) => {
   T.__initData = __initData2;
   const animatedStyle = tmpResult4.useAnimatedStyle(T);
   if (cResult[2] !== onPress) {
-    const fn3 = function v() {
+    const fn3 = function y() {
       const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
       onPress();
     };
@@ -176,7 +176,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((visible) => {
   cResult[11] = renderButtonResult;
   tmp13 = renderButtonResult;
   let obj2 = { visible, tokens: onPress(stateFromStores[9]), reducedMotion: stateFromStores, withSpring: visible(stateFromStores[10]).withSpring, MEDIA_PICKER_SEND_BUTTON_SPRING };
-}) : ((visible) => {
+}) : (function FloatingApplyButton(visible) {
   visible = visible.visible;
   ({ disabled, text, onPress } = visible);
   const renderButton = visible.renderButton;

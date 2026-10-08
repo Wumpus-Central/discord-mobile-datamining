@@ -1,27 +1,27 @@
-// === Module 13292: premium/Header ===
+// === Module 13592: premium/Header ===
 
-// Module 13292 (premium/Header)
+// Module 13592 (premium/Header)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import shared from "shared" /* 4735 */;
-import useThemeDefault from "useTheme" /* 4797 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import FastImageDefault from "FastImage" /* 5981 */;
-import _modDef13293 from "module_13293" /* 13293 */;
-import _modDef13294 from "module_13294" /* 13294 */;
+import shared from "shared" /* 4929 */;
+import useThemeDefault from "useTheme" /* 4991 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import _modDef13593 from "module_13593" /* 13593 */;
+import _modDef13594 from "module_13594" /* 13594 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({ container: { flexDirection: "column", alignItems: "center" }, headerText: { marginTop: 16, marginBottom: 24 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/premium/native/Header.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function Header(style) {
   const cResult = c.c(13);
   style = style.style;
   const tmp4 = closure_6();
@@ -39,9 +39,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
       tmp9 = cResult[3];
     }
     if (tmpResult.isThemeDark(tmp6)) {
-      let tmp5Result = _modDef13293;
+      let tmp5Result = _modDef13593;
     } else {
-      tmp5Result = _modDef13294;
+      tmp5Result = _modDef13594;
     }
     if (cResult[4] !== tmp5Result) {
       const obj2 = { accessible: true, accessibilityLabel: tmp9, accessibilityRole: "header", source: tmp5Result };
@@ -94,7 +94,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
   cResult[1] = tmp4.container;
   cResult[2] = items1;
   tmp7 = items1;
-}) : ((style) => {
+}) : (function Header(style) {
   const tmp = closure_6();
   const obj = { style: null, children: null };
   const items = [tmp.container, style.style];
@@ -105,9 +105,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
   obj2.accessibilityLabel = intl.string(util.t.lpNrPu);
   const tmp8 = FastImageDefault;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = _modDef13293;
+    let tmp2Result = _modDef13593;
   } else {
-    tmp2Result = _modDef13294;
+    tmp2Result = _modDef13594;
   }
   obj2.source = tmp2Result;
   const items1 = [React4(tmp8, obj2), ];

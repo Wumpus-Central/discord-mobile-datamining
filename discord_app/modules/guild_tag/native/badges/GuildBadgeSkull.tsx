@@ -1,9 +1,9 @@
-// === Module 13751: GuildBadgeSkull ===
+// === Module 13973: GuildBadgeSkull ===
 
-// Module 13751 (GuildBadgeSkull)
+// Module 13973 (GuildBadgeSkull)
 import c from "c" /* 576 */;
-import inlineStyles from "inlineStyles" /* 8169 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 13748 */;
+import inlineStyles from "inlineStyles" /* 7550 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 13970 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgeSkull.tsx");
 
-export const GuildBadgeSkull = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const GuildBadgeSkull = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBadgeSkull(arg0) {
   const cResult = c.c(45);
   if (cResult[0] !== arg0) {
     ({ width, height, primaryTintColor } = arg0);
@@ -224,7 +224,7 @@ export const GuildBadgeSkull = ReactCompilerGating.isReactCompilerEnabled() ? ((
   cResult[43] = num6;
   cResult[44] = tmp62;
   tmp60 = tmp62;
-}) : ((primaryTintColor) => {
+}) : (function GuildBadgeSkull(primaryTintColor) {
   let num = primaryTintColor.width;
   if (num === undefined) {
     num = 24;

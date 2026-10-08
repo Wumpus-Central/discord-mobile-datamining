@@ -1,7 +1,7 @@
-// === Module 14284: DEFAULT_TOAST_POSITION ===
+// === Module 14108: DEFAULT_TOAST_POSITION ===
 
-// Module 14284 (DEFAULT_TOAST_POSITION)
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4596 */;
+// Module 14108 (DEFAULT_TOAST_POSITION)
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4788 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,13 +10,13 @@ const require = globalThis.__r;
 require = fn;
 const top = "top";
 let c5 = 3000;
-const module_4577 = fn(4577);
-let closure_6 = module_4577.create(() => {
+const module_4769 = fn(4769);
+let closure_6 = module_4769.create(() => {
   const obj = { containerIdsBySurface: new Map() };
   return obj;
 });
 let ReactCompilerGating = fn(558);
-let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOwnsSurface(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   const cResult = require("c").c(7);
@@ -83,7 +83,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => 
   tmp3 = items;
   tmp2 = fn;
   const obj = require("c");
-}) : ((arg0, arg1) => {
+}) : (function useOwnsSurface(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   let items = [arg0, arg1];
@@ -132,7 +132,7 @@ let result = size.fileFinishedImporting("../discord_common/js/packages/design/co
 
 export const DEFAULT_TOAST_POSITION = "top";
 export const DEFAULT_TOAST_DURATION_MS = 3000;
-export const useToastContainer = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useToastContainer = ReactCompilerGating.isReactCompilerEnabled() ? (function useToastContainer(arg0) {
   _require = arg0;
   const cResult = require("c").c(13);
   const obj = require("c");
@@ -184,7 +184,7 @@ export const useToastContainer = ReactCompilerGating.isReactCompilerEnabled() ? 
       }
       const effect = noop.useEffect(tmp14, tmp15);
       if (cResult[7] !== toastStore) {
-        const fn3 = function h() {
+        const fn2 = function x() {
           if (toastStore != null) {
             const text = toastStore.toast.text;
           }
@@ -209,10 +209,10 @@ export const useToastContainer = ReactCompilerGating.isReactCompilerEnabled() ? 
         };
         const items = [toastStore];
         cResult[7] = toastStore;
-        cResult[8] = fn3;
+        cResult[8] = fn2;
         cResult[9] = items;
         let tmp18 = items;
-        let tmp17 = fn3;
+        let tmp17 = fn2;
       } else {
         tmp17 = cResult[8];
         tmp18 = cResult[9];
@@ -231,23 +231,29 @@ export const useToastContainer = ReactCompilerGating.isReactCompilerEnabled() ? 
       tmp20 = obj3;
     }
   }
-  const fn2 = function _() {
-    if (null != toastStore) {
-      const _setTimeout = setTimeout;
-      const timeout = setTimeout(() => closure_0(toastStore[5]).popToast(closure_0), bound);
-      return () => clearTimeout(closure_0);
+  class E {
+    constructor() {
+      if (null != c1) {
+        tmp = globalThis;
+        _setTimeout = setTimeout;
+        tmp2 = closure_2;
+        closure_0 = setTimeout(() => closure_0(toastStore[5]).popToast(closure_0), closure_2);
+        return () => clearTimeout(closure_0);
+      } else {
+        return;
+      }
     }
-  };
+  }
   const items1 = [toastStore, bound, arg0];
   cResult[2] = bound;
   cResult[3] = toastStore;
   cResult[4] = arg0;
-  cResult[5] = fn2;
+  cResult[5] = E;
   cResult[6] = items1;
   tmp15 = items1;
-  tmp14 = fn2;
-  tmpResult = require("module_4576");
-}) : ((arg0) => {
+  tmp14 = E;
+  tmpResult = require("module_4768");
+}) : (function useToastContainer(arg0) {
   _require = arg0;
   const tmp = closure_7(arg0, noop.useId());
   let tmp2 = _require;

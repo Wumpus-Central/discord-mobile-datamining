@@ -1,10 +1,10 @@
-// === Module 15185: DisplayNameStylesGradientPickerSheet ===
+// === Module 15447: DisplayNameStylesGradientPickerSheet ===
 
-// Module 15185 (DisplayNameStylesGradientPickerSheet)
+// Module 15447 (DisplayNameStylesGradientPickerSheet)
 import nativeDefault from "native" /* 587 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import HapticUtils from "HapticUtils" /* 4861 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import HapticUtils from "HapticUtils" /* 5055 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { body: { paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_12, flexGrow: 1, justifyContent: "center", alignItems: "center", gap: nativeDefault.space.PX_16 }, gradientContainer: null, dropperContainer: null, dropper: null, gradient: null, optionContainer: null, swatchWrapper: null, pressable: null, selectedRing: null, option: null, checkmarkOverlay: null, checkmark: null, resetButtonContainer: null };
 let obj3 = { paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_12, flexGrow: 1, justifyContent: "center", alignItems: "center", gap: nativeDefault.space.PX_16 };
 obj2.gradientContainer = { flexDirection: "row", justifyContent: "center", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_8 };
@@ -44,7 +44,7 @@ const merged1 = Object.assign(StyleSheet.absoluteFillObject);
 obj10.alignItems = "center";
 obj10.justifyContent = "center";
 obj2.checkmarkOverlay = obj10;
-const size1 = { width: fn(15186).CHECKMARK_SIZE, height: fn(15186).CHECKMARK_SIZE };
+const size1 = { width: fn(15448).CHECKMARK_SIZE, height: fn(15448).CHECKMARK_SIZE };
 obj2.checkmark = size1;
 let obj8 = { height: 40, borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 obj2.resetButtonContainer = { alignSelf: "stretch", flexDirection: "row", marginHorizontal: nativeDefault.space.PX_8 };
@@ -54,7 +54,7 @@ let obj11 = { alignSelf: "stretch", flexDirection: "row", marginHorizontal: nati
 size = fn(2);
 let result = size.fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesGradientPickerSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((selectedColors) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayNameStylesColorPickerSheet(selectedColors) {
   const cResult = onSelectColors(displayNameStylesEffectConfig[9]).c(74);
   ({ selectedEffectId, onSelectColors } = selectedColors);
   const tmp4 = closure_11();
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((selectedColors) 
         colors = first1.colors;
       }
       if (cResult[6] !== colors) {
-        class D {
+        class M {
           constructor(arg0) {
             closure_0 = selectedColors;
             num = closure_4[selectedColors];
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((selectedColors) 
               onSelect(arg0) {
                           closure_0 = arg0;
                           const result = onSelectColors(displayNameStylesEffectConfig[13]).triggerHapticFeedback(onSelectColors(displayNameStylesEffectConfig[13]).HapticFeedbackTypes.IMPACT_MEDIUM);
-                          closure_1_5((arr) => arr.map(/* F155234 */ function() { ... }));
+                          closure_1_5((arr) => arr.map(/* F156778 */ function() { ... }));
                         },
               actionButtonVariant: "primary"
             };
@@ -101,9 +101,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((selectedColors) 
           }
         }
         cResult[6] = colors;
-        cResult[7] = D;
+        cResult[7] = M;
       } else {
-        class D {
+        class M {
           constructor(arg0) {
             closure_0 = selectedColors;
             num = closure_4[selectedColors];
@@ -116,7 +116,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((selectedColors) 
               onSelect(arg0) {
                           closure_0 = arg0;
                           const result = onSelectColors(displayNameStylesEffectConfig[13]).triggerHapticFeedback(onSelectColors(displayNameStylesEffectConfig[13]).HapticFeedbackTypes.IMPACT_MEDIUM);
-                          closure_1_5((arr) => arr.map(/* F155234 */ function() { ... }));
+                          closure_1_5((arr) => arr.map(/* F156778 */ function() { ... }));
                         },
               actionButtonVariant: "primary"
             };
@@ -125,7 +125,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((selectedColors) 
           }
         }
       }
-      closure_6 = D;
+      closure_6 = M;
       class R {
         constructor() {
           first = closure_3[0];
@@ -240,24 +240,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((selectedColors) 
             }
           }
           if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
-            class A {
+            class W {
               constructor(arg0) {
-                items = [...selectedColors];
-                tmp = closure_5(items);
-                return;
+                obj = onSelectColors(closure_2[21]);
+                return obj.int2hex(selectedColors);
               }
             }
-            cResult[17] = tmp30;
+            cResult[17] = W;
           } else {
-            class A {
+            class W {
               constructor(arg0) {
-                items = [...selectedColors];
-                tmp = closure_5(items);
-                return;
+                obj = onSelectColors(closure_2[21]);
+                return obj.int2hex(selectedColors);
               }
             }
           }
-          const mapped = colors.map(tmp30);
+          const mapped = colors.map(W);
           cResult[15] = colors;
           cResult[16] = mapped;
           class R {
@@ -278,54 +276,49 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((selectedColors) 
             }
           }
         } else {
-          class A {
+          class W {
             constructor(arg0) {
-              items = [...selectedColors];
-              tmp = closure_5(items);
-              return;
+              obj = onSelectColors(closure_2[21]);
+              return obj.int2hex(selectedColors);
             }
           }
           const _Symbol3 = Symbol;
           if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
-            class A {
+            class W {
               constructor(arg0) {
-                items = [...selectedColors];
-                tmp = closure_5(items);
-                return;
+                obj = onSelectColors(closure_2[21]);
+                return obj.int2hex(selectedColors);
               }
             }
             const point = { x: 1, y: 0 };
-            cResult[18] = tmp34;
+            cResult[18] = tmp33;
             cResult[19] = point;
-            let tmp33 = point;
+            let tmp32 = point;
           } else {
-            class A {
+            class W {
               constructor(arg0) {
-                items = [...selectedColors];
-                tmp = closure_5(items);
-                return;
+                obj = onSelectColors(closure_2[21]);
+                return obj.int2hex(selectedColors);
               }
             }
-            tmp33 = cResult[19];
+            tmp32 = cResult[19];
           }
           if (cResult[20] === tmp4.gradient) {
-            class A {
+            class W {
               constructor(arg0) {
-                items = [...selectedColors];
-                tmp = closure_5(items);
-                return;
+                obj = onSelectColors(closure_2[21]);
+                return obj.int2hex(selectedColors);
               }
             }
             const _Array = Array;
             let obj6 = { length: effectColorCount };
             const dropperContainer = tmp4.dropperContainer;
             const arr = Array.from(obj6);
-            if (cResult[23] === D) {
-              class A {
+            if (cResult[23] === M) {
+              class W {
                 constructor(arg0) {
-                  items = [...selectedColors];
-                  tmp = closure_5(items);
-                  return;
+                  obj = onSelectColors(closure_2[21]);
+                  return obj.int2hex(selectedColors);
                 }
               }
             }
@@ -362,7 +355,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((selectedColors) 
                 return;
               }
             }
-            cResult[23] = D;
+            cResult[23] = M;
             cResult[24] = tmp4.dropper;
             cResult[25] = arr;
             cResult[26] = mapped1;
@@ -385,12 +378,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((selectedColors) 
               return;
             }
           }
-          obj7.start = tmp34;
-          obj7.end = tmp33;
-          const tmp37 = closure_8(tmp7(tmp2[22]), obj7);
+          obj7.start = tmp33;
+          obj7.end = tmp32;
+          const tmp36 = closure_8(tmp7(tmp2[22]), obj7);
           cResult[20] = tmp4.gradient;
           cResult[21] = tmp28;
-          cResult[22] = tmp37;
+          cResult[22] = tmp36;
         }
       }
       let obj8 = { title: displayNameStylesEffectConfig.name, trailing: tmp21 };
@@ -401,11 +394,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((selectedColors) 
     }
     cResult[3] = displayNameStylesEffectConfig.defaultColors;
     if (tmp8[0] != null) {
-      class A {
+      class W {
         constructor(arg0) {
-          items = [...selectedColors];
-          tmp = closure_5(items);
-          return;
+          obj = onSelectColors(closure_2[21]);
+          return obj.int2hex(selectedColors);
         }
       }
     }
@@ -441,7 +433,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((selectedColors) 
   cResult[2] = fn;
   tmp10 = fn;
   let obj3 = onSelectColors(displayNameStylesEffectConfig[11]);
-}) : ((selectedColors) => {
+}) : (function DisplayNameStylesColorPickerSheet(selectedColors) {
   ({ selectedEffectId, onSelectColors } = selectedColors);
   let displayNameStylesEffectConfig;
   let colors;

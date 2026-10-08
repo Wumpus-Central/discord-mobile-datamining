@@ -1,8 +1,8 @@
-// === Module 14467: useHasFinishedPresenting ===
+// === Module 14695: useHasFinishedPresenting ===
 
-// Module 14467 (useHasFinishedPresenting)
+// Module 14695 (useHasFinishedPresenting)
 import c from "c" /* 576 */;
-import useNavigation from "useNavigation" /* 1490 */;
+import useNavigation from "useNavigation" /* 1502 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/profiles/native/useHasFinishedPresenting.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useHasFinishedPresenting() {
   const cResult = c.c(4);
   let navigation = useNavigation.useNavigation();
   [first, closure_2] = noop.useState(false);
@@ -52,7 +52,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[3] = items;
   tmp6 = items;
   tmp5 = fn;
-}) : (() => {
+}) : (function useHasFinishedPresenting() {
   let navigation = useNavigation.useNavigation();
   [first, closure_2] = noop.useState(false);
   const items = [navigation, first];

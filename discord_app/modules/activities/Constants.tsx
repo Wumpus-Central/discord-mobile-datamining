@@ -1,9 +1,9 @@
-// === Module 2011: Constants ===
+// === Module 2023: Constants ===
 
-// Module 2011 (Constants)
+// Module 2023 (Constants)
 import Constants from "Constants" /* 1085 */;
-import Server from "Server" /* 1985 */;
-import ActivityApplications from "ActivityApplications" /* 2012 */;
+import Server from "Server" /* 1997 */;
+import ActivityApplications from "ActivityApplications" /* 2024 */;
 import size from "module_2" /* 2 */;
 
 const ChannelTypes = Constants.ChannelTypes;
@@ -78,7 +78,6 @@ export const EXCLUDE_FULL_SCREEN_APPS = items;
 export const SHARE_INTERACTION_APPS = items1;
 export const ActivityFeedbackReasons = { ADS: "ADS", FAILED_LOAD: "FAILED_LOAD", LAGGING: "LAGGING", CONFUSING: "CONFUSING", NOT_FUN: "NOT_FUN", OTHER: "OTHER" };
 export const ActivityIntent = { PLAY: 0, [0]: "PLAY", SPECTATE: 1, [1]: "SPECTATE" };
-export const ActivityPlatform = { DESKTOP: "desktop", MOBILE: "mobile" };
 export const ActivityTooltipName = { BETRAYAL_MARKETING_TOOLTIP: "BETRAYAL_MARKETING_TOOLTIP", FISHINGTON_MARKETING_TOOLTIP: "FISHINGTON_MARKETING_TOOLTIP", POKER_MARKETING_TOOLTIP: "POKER_MARKETING_TOOLTIP", YOUTUBE_MARKETING_TOOLTIP: "YOUTUBE_MARKETING_TOOLTIP" };
 export const OrientationLockState = obj;
 export const APPLICATIONS_WITH_ALLOWED_POPUPS = new Set(items2);

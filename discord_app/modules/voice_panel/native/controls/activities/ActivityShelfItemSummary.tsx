@@ -1,15 +1,15 @@
-// === Module 17317: ActivityShelfItemSummary ===
+// === Module 17598: ActivityShelfItemSummary ===
 
-// Module 17317 (ActivityShelfItemSummary)
+// Module 17598 (ActivityShelfItemSummary)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4618 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import ButtonPill from "ButtonPill" /* 5610 */;
-import ButtonEllipsis from "ButtonEllipsis" /* 5616 */;
-import UserSummaryItemDefault from "UserSummaryItem" /* 9751 */;
-import useActivityUsersDefault from "useActivityUsers" /* 17318 */;
+import native from "native" /* 1200 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4810 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import ButtonPill from "ButtonPill" /* 5385 */;
+import ButtonEllipsis from "ButtonEllipsis" /* 5391 */;
+import UserSummaryItemDefault from "UserSummaryItem" /* 10952 */;
+import useActivityUsersDefault from "useActivityUsers" /* 17599 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,10 +17,10 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { ongoingActivityContainer: { position: "absolute", width: "100%", height: "100%", backgroundColor: "rgba(0,0,0,0.4)", alignItems: "center", justifyContent: "center" }, overlayActivityName: null, overlayActivityNameText: null, loadingTextColor: null, ellipsis: null };
 let obj3 = { paddingHorizontal: 12, paddingVertical: 4, borderRadius: nativeDefault.radii.round, backgroundColor: null, marginBottom: 8 };
-const ColorUtils = fn(4733);
+const ColorUtils = fn(4927);
 obj3.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.64);
 obj2.overlayActivityName = obj3;
 obj2.overlayActivityNameText = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
@@ -28,7 +28,7 @@ obj2.loadingTextColor = { color: "transparent" };
 obj2.ellipsis = { flex: 1, flexShrink: 1, flexGrow: 0, justifyContent: "center", alignItems: "center", top: -12 };
 let closure_7 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function ParticipantsSummary(arg0) {
   const cResult = c.c(4);
   ({ applicationId, channelId } = arg0);
   const tmp5 = useActivityUsersDefault(applicationId, channelId);
@@ -53,7 +53,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp8 = cResult[3];
   }
   return tmp8;
-}) : ((arg0) => {
+}) : (function ParticipantsSummary(arg0) {
   ({ applicationId, channelId } = arg0);
   const obj = { users: useActivityUsersDefault(applicationId, channelId), max: 5, avatarSize: null, withPlusCount: true, style: null, cutout: null };
   const tmp = useActivityUsersDefault(applicationId, channelId);
@@ -67,7 +67,7 @@ let obj5 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/activities/ActivityShelfItemSummary.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ActivityShelfItemSummary(arg0) {
   const cResult = c.c(22);
   ({ channelId, applicationId, applicationName, submitting } = arg0);
   const tmp5 = closure_7();
@@ -160,7 +160,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = tmp9;
   tmp8 = tmp9;
   const tmpResult = ButtonPill;
-}) : ((submitting) => {
+}) : (function ActivityShelfItemSummary(submitting) {
   let flag = submitting.submitting;
   ({ channelId, applicationId, applicationName } = submitting);
   if (flag === undefined) {

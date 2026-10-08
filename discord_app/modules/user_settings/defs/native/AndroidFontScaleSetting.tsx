@@ -1,19 +1,19 @@
-// === Module 15146: AndroidFontScaleSetting ===
+// === Module 15408: AndroidFontScaleSetting ===
 
-// Module 15146 (AndroidFontScaleSetting)
+// Module 15408 (AndroidFontScaleSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import CirclePlusIcon from "CirclePlusIcon" /* 10996 */;
-import CircleMinusIcon from "CircleMinusIcon" /* 15147 */;
+import CirclePlusIcon from "CirclePlusIcon" /* 11220 */;
+import CircleMinusIcon from "CircleMinusIcon" /* 15409 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const useFontScaleStore = fn(15098).useFontScaleStore;
+const useFontScaleStore = fn(15360).useFontScaleStore;
 const FontScales = fn(1095).FontScales;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11142);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const SettingBuilders = fn(11262);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFontScaleSliderProps() {
   const cResult = c.c(13);
   const tmp4 = useFontScaleStore();
   if (cResult[0] !== tmp4.persistedFontScale) {
@@ -84,7 +84,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[11] = text;
   cResult[12] = obj3;
   tmp22 = obj3;
-}) : (() => {
+}) : (function useFontScaleSliderProps() {
   const tmp = useFontScaleStore();
   closure_0 = tmp;
   let index;
@@ -112,8 +112,8 @@ const slider = SettingBuilders.createSlider({
     const intl = util.intl;
     return intl.string(util.t.i19n5L);
   },
-  parent: fn(7645).MobileUserSettings.APPEARANCE,
-  useProps: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  parent: fn(7966).MobileUserSettings.APPEARANCE,
+  useProps: ReactCompilerGating.isReactCompilerEnabled() ? (function useFontScaleSliderProps() {
     const cResult = c.c(13);
     const tmp4 = useFontScaleStore();
     if (cResult[0] !== tmp4.persistedFontScale) {
@@ -184,7 +184,7 @@ const slider = SettingBuilders.createSlider({
     cResult[11] = text;
     cResult[12] = obj3;
     tmp22 = obj3;
-  }) : (() => {
+  }) : (function useFontScaleSliderProps() {
     const tmp = useFontScaleStore();
     closure_0 = tmp;
     let index;
@@ -207,7 +207,7 @@ const slider = SettingBuilders.createSlider({
       return obj;
     }, items);
   }),
-  usePredicate: fn(1369).isAndroid
+  usePredicate: fn(1381).isAndroid
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AndroidFontScaleSetting.tsx");

@@ -1,18 +1,18 @@
-// === Module 14178: ShareStore ===
+// === Module 14477: ShareStore ===
 
-// Module 14178 (ShareStore)
+// Module 14477 (ShareStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
-import GlobalUtils from "GlobalUtils" /* 1375 */;
-import NativeShareManagerModuleDefault from "NativeShareManagerModule" /* 8049 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1272 */;
+import GlobalUtils from "GlobalUtils" /* 1387 */;
+import NativeShareManagerModuleDefault from "NativeShareManagerModule" /* 8458 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
-import UserStore from "UserStore" /* 1377 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4899 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 function handleTokenUpdated(token) {

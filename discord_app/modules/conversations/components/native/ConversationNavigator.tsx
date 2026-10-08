@@ -1,26 +1,26 @@
-// === Module 7567: ConversationNavigator ===
+// === Module 9278: ConversationNavigator ===
 
-// Module 7567 (ConversationNavigator)
+// Module 9278 (ConversationNavigator)
 import nativeDefault from "native" /* 587 */;
-import RootNavigationRef from "RootNavigationRef" /* 4743 */;
-import ConversationsActionCreators from "ConversationsActionCreators" /* 7561 */;
-import useSelectedConversationDefault from "useSelectedConversation" /* 7578 */;
+import RootNavigationRef from "RootNavigationRef" /* 4937 */;
+import ConversationsActionCreators from "ConversationsActionCreators" /* 9272 */;
+import useSelectedConversationDefault from "useSelectedConversation" /* 9289 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelConversationsStore from "ChannelConversationsStore" /* 7116 */;
+import ChannelConversationsStore from "ChannelConversationsStore" /* 7302 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const NativeStackNavigator = fn(7568);
+const NativeStackNavigator = fn(9279);
 let closure_8 = NativeStackNavigator.createNativeStackNavigator();
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conversations/components/native/ConversationNavigator.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConversationNavigator(route) {
   const cResult = require("c").c(22);
   ({ channelId, guildId } = route.route.params);
   let obj = require("c");
@@ -28,7 +28,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
   const tmp5 = useSelectedConversationDefault(channelId);
   _require = tmp5;
   if (cResult[0] !== tmp5) {
-    const fn = function v() {
+    const fn = function u() {
       let tmp = null;
       if (ChannelConversationsStore.consumeFocusRequest()) {
         let tmp3 = null;
@@ -49,9 +49,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
   }
   const first = _slicedToArray(noop.useState(tmp6), 1)[0];
   if (null != first) {
-    let LIST = tmp(7579).ConversationNavigatorScreens.FOCUS;
+    let LIST = tmp(9290).ConversationNavigatorScreens.FOCUS;
   } else {
-    LIST = tmp(7579).ConversationNavigatorScreens.LIST;
+    LIST = tmp(9290).ConversationNavigatorScreens.LIST;
   }
   if (cResult[2] === channelId) {
     if (cResult[3] === guildId) {
@@ -61,11 +61,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
       const fn2 = function f(arg0) {
         ({ route, navigation } = arg0);
-        const obj = closure_0(7580);
+        const obj = closure_0(9291);
         return obj.conversationNavigatorListHeaderOptions(route, navigation, { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND });
       };
       const fn3 = function h() {
-        return closure_0(7595).default;
+        return closure_0(9302).default;
       };
       cResult[5] = fn2;
       cResult[6] = fn3;
@@ -76,7 +76,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
       tmp11 = cResult[6];
     }
     if (cResult[7] !== tmp8) {
-      const obj3 = { initialParams: tmp8, name: tmp(7579).ConversationNavigatorScreens.LIST, options: tmp10, getComponent: tmp11 };
+      const obj3 = { initialParams: tmp8, name: tmp(9290).ConversationNavigatorScreens.LIST, options: tmp10, getComponent: tmp11 };
       const tmp15 = closure_6(closure_8.Screen, obj3);
       cResult[7] = tmp8;
       cResult[8] = tmp15;
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
             }
           }
           const fn4 = function b() {
-            return closure_0(13110).default;
+            return closure_0(9312).default;
           };
           cResult[13] = T;
           cResult[14] = fn4;
@@ -125,7 +125,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
               return obj.conversationNavigatorFocusHeaderOptions(route, navigation, obj1);
             }
           }
-          const obj4 = { name: tmp(7579).ConversationNavigatorScreens.FOCUS, initialParams: tmp16, options: T, getComponent: tmp23 };
+          const obj4 = { name: tmp(9290).ConversationNavigatorScreens.FOCUS, initialParams: tmp16, options: T, getComponent: tmp23 };
           const tmp26 = closure_6(closure_8.Screen, obj4);
           cResult[15] = tmp16;
           cResult[16] = tmp26;
@@ -187,7 +187,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
   cResult[4] = obj6;
   tmp8 = obj6;
   const obj2 = require("Navigator");
-}) : ((route) => {
+}) : (function ConversationNavigator(route) {
   ({ channelId, guildId } = route.route.params);
   _require = undefined;
   const accessibilityNativeStackOptions = require("Navigator").useAccessibilityNativeStackOptions();
@@ -207,9 +207,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
   }), 1)[0];
   const obj2 = { id: "conversation-navigator", screenOptions: accessibilityNativeStackOptions, initialRouteName: null, children: null };
   if (null != first) {
-    let LIST = tmp(7579).ConversationNavigatorScreens.FOCUS;
+    let LIST = tmp(9290).ConversationNavigatorScreens.FOCUS;
   } else {
-    LIST = tmp(7579).ConversationNavigatorScreens.LIST;
+    LIST = tmp(9290).ConversationNavigatorScreens.LIST;
   }
   obj2.initialRouteName = LIST;
   let obj = require("Navigator");
@@ -219,11 +219,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
       name: require("ConversationNavigatorUtils").ConversationNavigatorScreens.LIST,
       options(arg0) {
         ({ route, navigation } = arg0);
-        const obj = closure_0(7580);
+        const obj = closure_0(9291);
         return obj.conversationNavigatorListHeaderOptions(route, navigation, { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND });
       },
       getComponent() {
-        return closure_0(7595).default;
+        return closure_0(9302).default;
       }
     }),
 
@@ -238,11 +238,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
   obj4.initialParams = tmp8;
   obj4.options = function options(arg0) {
     ({ route, navigation } = arg0);
-    const obj = closure_0(7580);
+    const obj = closure_0(9291);
     return obj.conversationNavigatorFocusHeaderOptions(route, navigation, { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND });
   };
   obj4.getComponent = function getComponent() {
-    return closure_0(13110).default;
+    return closure_0(9312).default;
   };
   items[1] = closure_6(closure_8.Screen, obj4);
   obj2.children = items;

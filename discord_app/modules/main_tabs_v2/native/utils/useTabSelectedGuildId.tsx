@@ -1,21 +1,21 @@
-// === Module 14496: useTabSelectedGuildId ===
+// === Module 14756: useTabSelectedGuildId ===
 
-// Module 14496 (useTabSelectedGuildId)
+// Module 14756 (useTabSelectedGuildId)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
-import SortedGuildStore from "SortedGuildStore" /* 5623 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4899 */;
+import SortedGuildStore from "SortedGuildStore" /* 5968 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/utils/useTabSelectedGuildId.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useTabSelectedGuildId() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [SelectedGuildStore, SortedGuildStore];
-    const fn = function n() {
+    const fn = function s() {
       let guildId = SelectedGuildStore.getGuildId();
       const lastSelectedGuildId = SelectedGuildStore.getLastSelectedGuildId();
       if (guildId == null) {
@@ -34,7 +34,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     [tmp4, tmp5] = cResult;
   }
   return useStateFromStores.useStateFromStores(tmp4, tmp5);
-}) : (() => {
+}) : (function useTabSelectedGuildId() {
   const items = [SelectedGuildStore, SortedGuildStore];
   return useStateFromStores.useStateFromStores(items, () => {
     let guildId = SelectedGuildStore.getGuildId();

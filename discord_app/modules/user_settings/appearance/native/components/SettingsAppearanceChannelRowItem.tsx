@@ -1,11 +1,11 @@
-// === Module 15125: SettingsAppearanceChannelRowItem ===
+// === Module 15387: SettingsAppearanceChannelRowItem ===
 
-// Module 15125 (SettingsAppearanceChannelRowItem)
+// Module 15387 (SettingsAppearanceChannelRowItem)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native2 from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import GroupDMAvatar from "GroupDMAvatar" /* 10661 */;
+import native2 from "native" /* 1200 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import GroupDMAvatar from "GroupDMAvatar" /* 10261 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ const View = fn(17).View;
 const StatusTypes = fn(1085).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { channelItemContainer: { flexDirection: "row", gap: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.sm, paddingVertical: nativeDefault.space.PX_8, paddingRight: nativeDefault.space.PX_16, paddingLeft: nativeDefault.space.PX_8 }, channelItemLeft: { alignItems: "center", justifyContent: "center" }, channelItemUnreadIndicator: null, channelItemAvatar: null, channelItemContent: null, channelItemTop: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, height: 8, width: 8, borderRadius: nativeDefault.radii.round, margin: nativeDefault.space.PX_8 };
 obj2.channelItemUnreadIndicator = size;
@@ -23,20 +23,20 @@ obj2.channelItemContent = { flexDirection: "column", flex: 1, justifyContent: "c
 let obj4 = { marginRight: nativeDefault.space.PX_8, justifyContent: "center", alignItems: "center" };
 obj2.channelItemTop = { flexDirection: "row", gap: nativeDefault.space.PX_4, justifyContent: "space-between", alignItems: "center" };
 let closure_6 = createStyles.createStyles(obj2);
-let obj6 = { direction: fn(1188).CutoutDirection.BOTTOM_RIGHT, radius: null, imageType: null, inset: -4 };
-const native = fn(1188);
-let num = native.getStatusSize(fn(1188).AvatarSizes.LARGE_48);
+let obj6 = { direction: fn(1200).CutoutDirection.BOTTOM_RIGHT, radius: null, imageType: null, inset: -4 };
+const native = fn(1200);
+let num = native.getStatusSize(fn(1200).AvatarSizes.LARGE_48);
 if (num == null) {
   num = 0;
 }
 obj6.radius = num / 2 + 4;
-obj6.imageType = fn(1188).CutoutType.CIRCULAR;
+obj6.imageType = fn(1200).CutoutType.CIRCULAR;
 const ReactCompilerGating = fn(558);
 let obj5 = { flexDirection: "row", gap: nativeDefault.space.PX_4, justifyContent: "space-between", alignItems: "center" };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/appearance/native/components/SettingsAppearanceChannelRowItem.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelRowItem(arg0) {
   const cResult = c.c(39);
   ({ animatedStyles, title, timestamp, preview, avatar1, avatar2, status, isUnread } = arg0);
   if (undefined === status) {
@@ -205,7 +205,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = tmp7;
   cResult[4] = tmp9;
   tmp8 = tmp9;
-}) : ((isUnread) => {
+}) : (function ChannelRowItem(isUnread) {
   ({ animatedStyles, preview, avatar1, avatar2, status } = isUnread);
   ({ title, timestamp } = isUnread);
   if (status === undefined) {
@@ -243,7 +243,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   items1[1] = React4(View, obj3);
   obj6 = { style: tmp2.channelItemContent, children: null };
   const obj7 = { style: tmp2.channelItemTop, children: null };
-  const items3 = [React4(tmp6(4892).Text, { animated: true, style: flag ? animatedStyles.textNormal : animatedStyles.textMuted, variant: "redesign/channel-title/semibold", children: title }), React4(tmp6(4892).Text, { animated: true, style: animatedStyles.textMuted, variant: "text-xs/medium", children: timestamp })];
+  const items3 = [React4(tmp6(5086).Text, { animated: true, style: flag ? animatedStyles.textNormal : animatedStyles.textMuted, variant: "redesign/channel-title/semibold", children: title }), React4(tmp6(5086).Text, { animated: true, style: animatedStyles.textMuted, variant: "text-xs/medium", children: timestamp })];
   obj7.children = items3;
   const items4 = [hasOwnProperty(View, obj7), ];
   if (null == preview) {
@@ -256,7 +256,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     animatedStyles = { animated: true, style: null, variant: "redesign/message-preview/medium", lineClamp: 1, children: null };
     animatedStyles.style = flag ? animatedStyles.textNormal : animatedStyles.textMuted;
     animatedStyles.children = preview;
-    React4(tmp6(4892).Text, animatedStyles);
+    React4(tmp6(5086).Text, animatedStyles);
     const tmp12 = flag ? animatedStyles.textNormal : animatedStyles.textMuted;
   }
   const obj8 = { animated: true, style: flag ? animatedStyles.textNormal : animatedStyles.textMuted, variant: "redesign/channel-title/semibold", children: title };

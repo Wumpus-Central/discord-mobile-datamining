@@ -1,10 +1,10 @@
-// === Module 12440: TabsGradient ===
+// === Module 12536: TabsGradient ===
 
-// Module 12440 (TabsGradient)
+// Module 12536 (TabsGradient)
 import c from "c" /* 576 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4618 */;
-import spring from "spring" /* 5604 */;
-import LinearGradientDefault from "LinearGradient" /* 5612 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4810 */;
+import spring from "spring" /* 5374 */;
+import LinearGradientDefault from "LinearGradient" /* 5387 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexport = ReanimatedRexport2;
@@ -15,12 +15,12 @@ const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const LinearGradient = ReanimatedRexport.createAnimatedComponent(LinearGradientDefault);
 const SPRING_CONFIG = { mass: 1, damping: 30, stiffness: 250 };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_9 = createStyles.createStyles({ gradient: { width: 50, position: "absolute", top: 0, bottom: 0, zIndex: 100 }, left: { left: 0 }, right: { right: 0 } });
 const __initData = { code: "function TabsGradientNativeTsx1(){const{withSpring,visible,SPRING_CONFIG}=this.__closure;return{opacity:withSpring(visible.get()?1:0,SPRING_CONFIG)};}" };
 const __initData2 = { code: "function TabsGradientNativeTsx2(){const{withSpring,visible,SPRING_CONFIG}=this.__closure;return{opacity:withSpring(visible.get()?1:0,SPRING_CONFIG)};}" };
 let ReactCompilerGating = fn(558);
-let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((visible) => {
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGradientAnimatedStyle(visible) {
   _require = visible;
   const fn = function s() {
     let num = 0;
@@ -34,7 +34,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((visible) => {
   fn.__workletHash = 14959306962615;
   fn.__initData = __initData;
   return obj.useAnimatedStyle(fn);
-}) : ((visible) => {
+}) : (function useGradientAnimatedStyle(visible) {
   _require = visible;
   const fn = function s() {
     let num = 0;
@@ -59,7 +59,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Tabs/native/TabsGradient.native.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((state) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function TabsGradient(state) {
   const cResult = c.c(19);
   state = state.state;
   const colors = state.colors;
@@ -185,7 +185,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((state) => {
   cResult[4] = rect.left;
   cResult[5] = items3;
   tmp10 = items3;
-}) : ((state) => {
+}) : (function TabsGradient(state) {
   state = state.state;
   const colors = state.colors;
   const scrollOffset = state.scrollOffset;

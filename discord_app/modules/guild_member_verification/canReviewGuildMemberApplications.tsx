@@ -1,8 +1,8 @@
-// === Module 6777: canReviewGuildMemberApplications ===
+// === Module 6953: canReviewGuildMemberApplications ===
 
-// Module 6777 (canReviewGuildMemberApplications)
-import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
+// Module 6953 (canReviewGuildMemberApplications)
+import GuildStore from "GuildStore" /* 2086 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
 
 const require = globalThis.__r;
 
@@ -26,7 +26,7 @@ export const canReviewGuildMemberApplications = function canReviewGuildMemberApp
   }
   return tmp2;
 };
-export const useCanReviewGuildMemberApplications = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useCanReviewGuildMemberApplications = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanReviewGuildMemberApplications(arg0) {
   _require = arg0;
   const cResult = require("c").c(5);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -58,8 +58,8 @@ export const useCanReviewGuildMemberApplications = ReactCompilerGating.isReactCo
       hasItem = PermissionStore.can(constants2.KICK_MEMBERS, stateFromStores);
     }
     if (hasItem) {
-      hasItem = tmp(5849).guildHasVerificationGate(stateFromStores);
-      const tmpResult2 = tmp(5849);
+      hasItem = tmp(6175).guildHasVerificationGate(stateFromStores);
+      const tmpResult2 = tmp(6175);
     }
     cResult[3] = stateFromStores;
     cResult[4] = hasItem;
@@ -68,7 +68,7 @@ export const useCanReviewGuildMemberApplications = ReactCompilerGating.isReactCo
     tmp8 = cResult[4];
   }
   return tmp8;
-}) : ((arg0) => {
+}) : (function useCanReviewGuildMemberApplications(arg0) {
   _require = arg0;
   const items = [GuildStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0));

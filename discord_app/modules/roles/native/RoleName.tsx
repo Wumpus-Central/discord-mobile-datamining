@@ -1,20 +1,20 @@
-// === Module 11462: RoleName ===
+// === Module 11446: RoleName ===
 
-// Module 11462 (RoleName)
+// Module 11446 (RoleName)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 7631 */;
+import native from "native" /* 1200 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 7952 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 }, name: { flexShrink: 1 } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -22,7 +22,7 @@ let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.spac
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/roles/native/RoleName.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function RoleName(arg0) {
   const cResult = c.c(23);
   ({ role, children, textVariant, dotBackground } = arg0);
   let str = "text-md/medium";
@@ -141,7 +141,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[7] = tmp15;
   tmp14 = tmp15;
   const tmpResult4 = enhanced_role_colors_EnhancedRoleColorUtils;
-}) : ((dotBackground) => {
+}) : (function RoleName(dotBackground) {
   ({ role, textVariant } = dotBackground);
   if (textVariant === undefined) {
     textVariant = "text-md/medium";

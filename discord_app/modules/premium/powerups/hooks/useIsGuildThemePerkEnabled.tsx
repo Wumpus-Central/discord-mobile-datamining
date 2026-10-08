@@ -1,9 +1,9 @@
-// === Module 16122: useIsGuildThemePerkEnabled ===
+// === Module 16382: useIsGuildThemePerkEnabled ===
 
-// Module 16122 (useIsGuildThemePerkEnabled)
-import Powerups from "Powerups" /* 4777 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 4773 */;
+// Module 16382 (useIsGuildThemePerkEnabled)
+import Powerups from "Powerups" /* 4971 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4967 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useIsGuildThemePerkEnabled.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsGuildThemePerkEnabled(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp7, tmp8);
-}) : ((arg0) => {
+}) : (function useIsGuildThemePerkEnabled(arg0) {
   _require = arg0;
   const items = [GuildStore, GuildPowerupsStore];
   const items1 = [arg0];

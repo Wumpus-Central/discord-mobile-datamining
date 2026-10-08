@@ -1,27 +1,24 @@
-// === Module 16375: YouBarNotificationsButton ===
+// === Module 16635: YouBarNotificationsButton ===
 
-// Module 16375 (YouBarNotificationsButton)
+// Module 16635 (YouBarNotificationsButton)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import HapticUtils from "HapticUtils" /* 4861 */;
-import spring from "spring" /* 5604 */;
-import ForLaterExperiment from "ForLaterExperiment" /* 7496 */;
-import showForLaterModal from "showForLaterModal" /* 7505 */;
-import SavedMessagesTypes from "SavedMessagesTypes" /* 7506 */;
-import BellIcon from "BellIcon" /* 9301 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import spring from "spring" /* 5374 */;
+import BellIcon from "BellIcon" /* 8747 */;
+import useNotificationsTabBadgeDefault from "useNotificationsTabBadge" /* 16636 */;
 import noop from "module_19" /* 19 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 11296 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 9632 */;
 
+const ReanimatedRexportDefault = tmp5(4810);
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(14915);
+const YouBarConstants = fn(15177);
 ({ YOU_BAR_SPRING_CONFIG: metroRequire, YOU_BAR_BUTTON_HIT_SLOP: closure_7, YOU_BAR_BUTTON_ICON_SIZE } = YouBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { icon: { width: YOU_BAR_BUTTON_ICON_SIZE, height: YOU_BAR_BUTTON_ICON_SIZE }, iconContainer: { display: "flex", flexDirection: "row", alignItems: "center" }, overdueReminderDot: { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION } };
 let closure_10 = createStyles.createStyles(obj);
 const __initData = { code: "function YouBarNotificationsButtonTsx1(){const{withSpring,badgeCount,YOU_BAR_SPRING_CONFIG,tokens}=this.__closure;return{transform:[{scaleX:withSpring(badgeCount>0?1:0,YOU_BAR_SPRING_CONFIG)}],marginLeft:withSpring(badgeCount>0?tokens.space.PX_4:0,YOU_BAR_SPRING_CONFIG),opacity:withSpring(badgeCount>0?1:0,YOU_BAR_SPRING_CONFIG)};}" };
@@ -31,10 +28,11 @@ let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFICAT
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarNotificationsButton.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((hasNameplate) => {
-  const cResult = c.c(39);
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function YouBarNotificationsButton(hasNameplate) {
+  const cResult = c.c(32);
+  hasNameplate = hasNameplate.hasNameplate;
   const tmp4 = closure_10();
-  value = isForLaterExperimentOn(16376)().value;
+  value = useNotificationsTabBadgeDefault().value;
   const require = value;
   const fn = function s() {
     let num = 0;
@@ -59,19 +57,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((hasNam
     return obj2;
   };
   let obj2 = ReanimatedRexport;
-  fn.__closure = { withSpring: spring.withSpring, badgeCount: value, YOU_BAR_SPRING_CONFIG, tokens: isForLaterExperimentOn(587) };
+  fn.__closure = { withSpring: spring.withSpring, badgeCount: value, YOU_BAR_SPRING_CONFIG, tokens: nativeDefault };
   fn.__workletHash = 11181198364048;
   fn.__initData = __initData;
   const animatedStyle = obj2.useAnimatedStyle(fn);
-  let obj3 = { withSpring: spring.withSpring, badgeCount: value, YOU_BAR_SPRING_CONFIG, tokens: isForLaterExperimentOn(587) };
-  isForLaterExperimentOn = ForLaterExperiment.useIsForLaterExperimentOn("YouBar");
-  let hasForLaterAccess = ForLaterExperiment.useHasForLaterAccess("YouBar");
-  if (isForLaterExperimentOn) {
-    if (!hasForLaterAccess) {
-      hasForLaterAccess = SavedMessagesStore.getSavedMessageCount() > 0;
-    }
-    isForLaterExperimentOn = hasForLaterAccess;
-  }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [SavedMessagesStore];
     const fn2 = function _() {
@@ -79,164 +68,208 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((hasNam
     };
     cResult[0] = items;
     cResult[1] = fn2;
-    tmp10 = fn2;
-    tmp9 = items;
+    tmp7 = items;
+    tmp8 = fn2;
   } else {
-    [tmp9, tmp10] = cResult;
+    [tmp7, tmp8] = cResult;
   }
-  const stateFromStores = initialize.useStateFromStores(tmp9, tmp10);
-  let tmp13 = isForLaterExperimentOn;
-  if (isForLaterExperimentOn) {
-    tmp13 = stateFromStores > 0;
-  }
-  if (tmp13) {
-    tmp13 = 0 === value;
-  }
-  if (cResult[2] !== isForLaterExperimentOn) {
+  let obj3 = { withSpring: spring.withSpring, badgeCount: value, YOU_BAR_SPRING_CONFIG, tokens: nativeDefault };
+  const stateFromStores = initialize.useStateFromStores(tmp7, tmp8);
+  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const fn3 = function f() {
-      if (isForLaterExperimentOn) {
-        const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.SOFT);
-        showForLaterModal.showForLaterModal(SavedMessagesTypes.SavedMessageSortTypes.BOOKMARK);
+      const result = value(5055).triggerHapticFeedback(value(5055).HapticFeedbackTypes.SOFT);
+      const obj = value(5055);
+      value(12656).showForLaterModal(value(9633).SavedMessageSortTypes.BOOKMARK);
+    };
+    cResult[2] = fn3;
+    let tmp12 = fn3;
+  } else {
+    tmp12 = cResult[2];
+  }
+  importDefault = tmp12;
+  if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+    const obj4 = { name: "open-bookmarks", label: null };
+    const intl = tmp(1126).intl;
+    obj4.label = intl.string(tmp(1126).t["2pAkDA"]);
+    const items1 = [obj4];
+    cResult[3] = items1;
+    let tmp13 = items1;
+  } else {
+    tmp13 = cResult[3];
+  }
+  if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+    const fn4 = function w(nativeEvent) {
+      if ("open-bookmarks" === nativeEvent.nativeEvent.actionName) {
+        closure_1();
       }
     };
-    cResult[2] = isForLaterExperimentOn;
-    cResult[3] = fn3;
-    let tmp14 = fn3;
+    cResult[4] = fn4;
+    let tmp14 = fn4;
   } else {
-    tmp14 = cResult[3];
+    tmp14 = cResult[4];
   }
-  dependencyMap = tmp14;
-  if (cResult[4] !== isForLaterExperimentOn) {
-    const items1 = [];
-    if (!isForLaterExperimentOn) {
-      cResult[4] = isForLaterExperimentOn;
-      cResult[5] = items1;
+  let str;
+  if (hasNameplate) {
+    str = "white";
+  }
+  if (cResult[5] === tmp4.icon) {
+    if (cResult[6] === str) {
+      let tmp15 = cResult[7];
+    }
+    if (cResult[8] !== value) {
+      const intl2 = tmp(1126).intl;
+      const obj5 = { count: value };
+      const formatToPlainStringResult = intl2.formatToPlainString(tmp(1126).t.kedGua, obj5);
+      cResult[8] = value;
+      cResult[9] = formatToPlainStringResult;
+      let tmp17 = formatToPlainStringResult;
     } else {
-      const _Symbol = Symbol;
-      if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj6 = { name: "open-bookmarks", label: null };
-        const intl = tmp(1126).intl;
-        obj6.label = intl.string(tmp(1126).t["2pAkDA"]);
-        cResult[6] = obj6;
-        let tmp16 = obj6;
-      } else {
-        tmp16 = cResult[6];
-      }
-      items1.push(tmp16);
+      tmp17 = cResult[9];
     }
-  }
-  if (cResult[7] !== tmp14) {
-    class G {
-      constructor(arg0) {
-        if ("open-bookmarks" === hasNameplate.nativeEvent.actionName) {
-          tmp = closure_2;
-          tmp2 = closure_2();
+    if (cResult[10] === tmp17) {
+      if (cResult[11] === stateFromStores) {
+        if (cResult[12] === tmp11) {
+          let tmp19 = cResult[13];
         }
-        return;
-      }
-    }
-    cResult[7] = tmp14;
-    cResult[8] = G;
-  } else {
-    class G {
-      constructor(arg0) {
-        if ("open-bookmarks" === hasNameplate.nativeEvent.actionName) {
-          tmp = closure_2;
-          tmp2 = closure_2();
+        let str4 = "tertiary";
+        if (hasNameplate) {
+          str4 = "secondary-overlay";
         }
-        return;
-      }
-    }
-  }
-  if (hasNameplate.hasNameplate) {
-    class G {
-      constructor(arg0) {
-        if ("open-bookmarks" === hasNameplate.nativeEvent.actionName) {
-          tmp = closure_2;
-          tmp2 = closure_2();
+        if (cResult[14] === tmp15) {
+          if (cResult[15] === tmp11) {
+            if (cResult[16] === tmp4.overdueReminderDot) {
+              let tmp21 = cResult[17];
+            }
+            if (cResult[18] !== value) {
+              const obj6 = { value };
+              const tmp26 = closure_8(tmp(1200).Badge, obj6);
+              cResult[18] = value;
+              cResult[19] = tmp26;
+              let tmp24 = tmp26;
+            } else {
+              tmp24 = cResult[19];
+            }
+            if (cResult[20] === animatedStyle) {
+              if (cResult[21] === tmp24) {
+                let tmp27 = cResult[22];
+              }
+              if (cResult[23] === tmp4.iconContainer) {
+                if (cResult[24] === tmp21) {
+                  if (cResult[25] === tmp27) {
+                    let tmp30 = cResult[26];
+                  }
+                  const _Symbol = Symbol;
+                  if (cResult[27] === Symbol.for("react.memo_cache_sentinel")) {
+                    class H {
+                      constructor() {
+                        obj = value(closure_1_2[20]);
+                        rootNavigationRef = obj.getRootNavigationRef();
+                        if (null != rootNavigationRef) {
+                          str = "notifications";
+                          navigateResult = rootNavigationRef.navigate("notifications", { inNestedNavigator: true });
+                        }
+                        return;
+                      }
+                    }
+                    cResult[27] = H;
+                  } else {
+                    class H {
+                      constructor() {
+                        obj = value(closure_1_2[20]);
+                        rootNavigationRef = obj.getRootNavigationRef();
+                        if (null != rootNavigationRef) {
+                          str = "notifications";
+                          navigateResult = rootNavigationRef.navigate("notifications", { inNestedNavigator: true });
+                        }
+                        return;
+                      }
+                    }
+                  }
+                  if (cResult[28] === tmp19) {
+                    class H {
+                      constructor() {
+                        obj = value(closure_1_2[20]);
+                        rootNavigationRef = obj.getRootNavigationRef();
+                        if (null != rootNavigationRef) {
+                          str = "notifications";
+                          navigateResult = rootNavigationRef.navigate("notifications", { inNestedNavigator: true });
+                        }
+                        return;
+                      }
+                    }
+                  }
+                  const obj7 = { children: null };
+                  const obj9 = { accessibilityLabel: tmp19, accessibilityActions: tmp13, onAccessibilityAction: tmp14, variant: str4, size: "sm", icon: tmp30, onPress: H, onLongPress: tmp12, hitSlop };
+                  obj7.children = closure_8(tmp(8106).IconButton, obj9);
+                  const tmp38 = closure_8(tmp(16634).YouBarButtonContainer, obj7);
+                  cResult[28] = tmp19;
+                  cResult[29] = str4;
+                  cResult[30] = tmp30;
+                  cResult[31] = tmp38;
+                }
+              }
+              const obj10 = { style: tmp4.iconContainer, children: null };
+              const items2 = [tmp21, tmp27];
+              obj10.children = items2;
+              const tmp33 = closure_9(View, obj10);
+              cResult[23] = tmp4.iconContainer;
+              cResult[24] = tmp21;
+              cResult[25] = tmp27;
+              cResult[26] = tmp33;
+              tmp30 = tmp33;
+            }
+            const obj11 = { style: animatedStyle, children: tmp24 };
+            const tmp29 = closure_8(ReanimatedRexportDefault.View, obj11);
+            cResult[20] = animatedStyle;
+            cResult[21] = tmp24;
+            cResult[22] = tmp29;
+            tmp27 = tmp29;
+          }
         }
-        return;
+        const obj12 = { icon: tmp15, hasBadge: tmp11, badgeStyle: tmp4.overdueReminderDot };
+        const tmp23 = closure_8(tmp(16634).YouBarButtonIcon, obj12);
+        cResult[14] = tmp15;
+        cResult[15] = tmp11;
+        cResult[16] = tmp4.overdueReminderDot;
+        cResult[17] = tmp23;
+        tmp21 = tmp23;
       }
     }
-  }
-  if (cResult[9] === tmp4.icon) {
-    class G {
-      constructor(arg0) {
-        if ("open-bookmarks" === hasNameplate.nativeEvent.actionName) {
-          tmp = closure_2;
-          tmp2 = closure_2();
-        }
-        return;
-      }
-    }
-    if (cResult[12] !== value) {
-      class G {
-        constructor(arg0) {
-          if ("open-bookmarks" === hasNameplate.nativeEvent.actionName) {
-            tmp = closure_2;
-            tmp2 = closure_2();
+    let combined = tmp17;
+    if (tmp11) {
+      class H {
+        constructor() {
+          obj = value(closure_1_2[20]);
+          rootNavigationRef = obj.getRootNavigationRef();
+          if (null != rootNavigationRef) {
+            str = "notifications";
+            navigateResult = rootNavigationRef.navigate("notifications", { inNestedNavigator: true });
           }
           return;
         }
       }
-      const obj7 = { count: value };
-      const formatToPlainStringResult = obj9.formatToPlainString(tmp(1126).t.kedGua, obj7);
-      cResult[12] = value;
-      cResult[13] = formatToPlainStringResult;
-    } else {
-      class G {
-        constructor(arg0) {
-          if ("open-bookmarks" === hasNameplate.nativeEvent.actionName) {
-            tmp = closure_2;
-            tmp2 = closure_2();
-          }
-          return;
-        }
-      }
-    }
-    if (cResult[14] === tmp21) {
-      class G {
-        constructor(arg0) {
-          if ("open-bookmarks" === hasNameplate.nativeEvent.actionName) {
-            tmp = closure_2;
-            tmp2 = closure_2();
-          }
-          return;
-        }
-      }
-    }
-    let combined = tmp21;
-    if (tmp13) {
-      class G {
-        constructor(arg0) {
-          if ("open-bookmarks" === hasNameplate.nativeEvent.actionName) {
-            tmp = closure_2;
-            tmp2 = closure_2();
-          }
-          return;
-        }
-      }
-      const obj8 = { count: stateFromStores };
+      const obj13 = { count: stateFromStores };
       const _HermesInternal = HermesInternal;
-      combined = "" + tmp21 + ", " + obj11.formatToPlainString(tmp(1126).t.yBmFPA, obj8);
+      combined = "" + tmp17 + ", " + obj8.formatToPlainString(tmp(1126).t.yBmFPA, obj13);
     }
-    cResult[14] = tmp21;
-    cResult[15] = stateFromStores;
-    cResult[16] = tmp13;
-    cResult[17] = combined;
+    cResult[10] = tmp17;
+    cResult[11] = stateFromStores;
+    cResult[12] = tmp11;
+    cResult[13] = combined;
+    tmp19 = combined;
   }
-  const obj10 = { size: "custom", style: tmp4.icon, color: undefined };
+  const tmp16 = closure_8(BellIcon.BellIcon, { size: "custom", style: tmp4.icon, color: str });
+  cResult[5] = tmp4.icon;
+  cResult[6] = str;
+  cResult[7] = tmp16;
+  tmp15 = tmp16;
+  const obj14 = { size: "custom", style: tmp4.icon, color: str };
   let tmpResult = initialize;
-  cResult[9] = tmp4.icon;
-  cResult[10] = undefined;
-  cResult[11] = closure_8(BellIcon.BellIcon, { size: "custom", style: tmp4.icon, color: undefined });
-  const tmp20 = closure_8(BellIcon.BellIcon, { size: "custom", style: tmp4.icon, color: undefined });
-}) : ((hasNameplate) => {
+}) : (function YouBarNotificationsButton(hasNameplate) {
   hasNameplate = hasNameplate.hasNameplate;
-  let isForLaterExperimentOn;
   let onLongPress;
   const tmp = closure_10();
-  value = isForLaterExperimentOn(onLongPress[9])().value;
+  value = onLongPress(16636)().value;
   _require = value;
   const fn = function u() {
     let num = 0;
@@ -261,93 +294,70 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((hasNam
     return obj2;
   };
   let obj = require("ReanimatedRexport");
-  const tmp2 = isForLaterExperimentOn;
-  fn.__closure = { withSpring: require("spring").withSpring, badgeCount: value, YOU_BAR_SPRING_CONFIG, tokens: isForLaterExperimentOn(onLongPress[6]) };
+  const tmp2 = onLongPress;
+  fn.__closure = { withSpring: require("spring").withSpring, badgeCount: value, YOU_BAR_SPRING_CONFIG, tokens: onLongPress(587) };
   fn.__workletHash = 14846757226483;
   fn.__initData = __initData2;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  let obj2 = { withSpring: require("spring").withSpring, badgeCount: value, YOU_BAR_SPRING_CONFIG, tokens: isForLaterExperimentOn(onLongPress[6]) };
-  isForLaterExperimentOn = require("ForLaterExperiment").useIsForLaterExperimentOn("YouBar");
-  let obj3 = require("ForLaterExperiment");
-  let hasForLaterAccess = require("ForLaterExperiment").useHasForLaterAccess("YouBar");
-  if (isForLaterExperimentOn) {
-    if (!hasForLaterAccess) {
-      hasForLaterAccess = SavedMessagesStore.getSavedMessageCount() > 0;
-    }
-    isForLaterExperimentOn = hasForLaterAccess;
-  }
-  const obj4 = require("ForLaterExperiment");
+  let obj2 = { withSpring: require("spring").withSpring, badgeCount: value, YOU_BAR_SPRING_CONFIG, tokens: onLongPress(587) };
   let items = [SavedMessagesStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => overdueMessageReminderCount.getOverdueMessageReminderCount());
-  let tmp10 = isForLaterExperimentOn;
-  if (isForLaterExperimentOn) {
-    tmp10 = stateFromStores > 0;
-  }
-  if (tmp10) {
-    tmp10 = 0 === value;
-  }
-  const items1 = [isForLaterExperimentOn];
   onLongPress = noop.useCallback(() => {
-    if (isForLaterExperimentOn) {
-      const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.SOFT);
-      showForLaterModal.showForLaterModal(SavedMessagesTypes.SavedMessageSortTypes.BOOKMARK);
-    }
-  }, items1);
-  const items2 = [isForLaterExperimentOn];
-  const items3 = [onLongPress];
+    const result = _undefined(5055).triggerHapticFeedback(_undefined(5055).HapticFeedbackTypes.SOFT);
+    const obj = _undefined(5055);
+    _undefined(12656).showForLaterModal(_undefined(9633).SavedMessageSortTypes.BOOKMARK);
+  }, []);
+  const items1 = [onLongPress];
   const memo = noop.useMemo(() => {
-    const items = [];
-    if (isForLaterExperimentOn) {
-      const obj = { name: "open-bookmarks", label: null };
-      const intl = util.intl;
-      obj.label = intl.string(util.t["2pAkDA"]);
-      items.push(obj);
-    }
+    const obj = { name: "open-bookmarks", label: null };
+    const intl = _undefined(1126).intl;
+    obj.label = intl.string(_undefined(1126).t["2pAkDA"]);
+    const items = [obj];
     return items;
-  }, items2);
+  }, []);
   const callback1 = noop.useCallback((nativeEvent) => {
     if ("open-bookmarks" === nativeEvent.nativeEvent.actionName) {
       callback();
     }
-  }, items3);
-  const obj5 = { size: "custom", style: tmp.icon, color: null };
+  }, items1);
+  const obj4 = { size: "custom", style: tmp.icon, color: null };
   let str;
   if (hasNameplate) {
     str = "white";
   }
-  obj5.color = str;
-  const tmp4Result = require("initialize");
-  let intl = tmp4(tmp3[17]).intl;
+  obj4.color = str;
+  let obj3 = require("initialize");
+  let intl = tmp4(1126).intl;
   const formatToPlainStringResult = intl.formatToPlainString(require("util").t.kedGua, { count: value });
   let combined = formatToPlainStringResult;
-  if (tmp10) {
-    const intl2 = tmp4(tmp3[17]).intl;
-    const obj6 = { count: stateFromStores };
+  if (stateFromStores > 0 && 0 === value) {
+    const intl2 = tmp4(1126).intl;
+    const obj5 = { count: stateFromStores };
     const _HermesInternal = HermesInternal;
-    combined = "" + formatToPlainStringResult + ", " + intl2.formatToPlainString(tmp4(tmp3[17]).t.yBmFPA, obj6);
+    combined = "" + formatToPlainStringResult + ", " + intl2.formatToPlainString(tmp4(1126).t.yBmFPA, obj5);
   }
-  const obj7 = { accessibilityLabel: combined, accessibilityActions: memo, onAccessibilityAction: callback1, variant: null, size: "sm", icon: null, onPress: null, onLongPress: null, hitSlop: null };
+  const obj6 = { accessibilityLabel: combined, accessibilityActions: memo, onAccessibilityAction: callback1, variant: null, size: "sm", icon: null, onPress: null, onLongPress: null, hitSlop: null };
   let str4 = "tertiary";
   if (hasNameplate) {
     str4 = "secondary-overlay";
   }
-  const obj8 = { children: null };
-  obj7.variant = str4;
-  const obj9 = { style: tmp.iconContainer, children: null };
-  const tmp14Result = closure_8(require("BellIcon").BellIcon, obj5);
-  const items4 = [closure_8(require("YouBarButton").YouBarButtonIcon, { icon: closure_8(require("BellIcon").BellIcon, obj5), hasBadge: tmp10, badgeStyle: tmp.overdueReminderDot }), ];
-  const obj10 = { icon: closure_8(require("BellIcon").BellIcon, obj5), hasBadge: tmp10, badgeStyle: tmp.overdueReminderDot };
-  items4[1] = closure_8(tmp2(onLongPress[10]).View, { style: animatedStyle, children: closure_8(require("native").Badge, { value }) });
-  obj9.children = items4;
-  obj7.icon = closure_9(View, obj9);
-  obj7.onPress = function onPress() {
-    const rootNavigationRef = _undefined(callback[21]).getRootNavigationRef();
+  const obj7 = { children: null };
+  obj6.variant = str4;
+  const obj8 = { style: tmp.iconContainer, children: null };
+  const tmp11Result = closure_8(require("BellIcon").BellIcon, obj4);
+  const items2 = [closure_8(require("YouBarButton").YouBarButtonIcon, { icon: closure_8(require("BellIcon").BellIcon, obj4), hasBadge: stateFromStores > 0 && 0 === value, badgeStyle: tmp.overdueReminderDot }), ];
+  const obj9 = { icon: closure_8(require("BellIcon").BellIcon, obj4), hasBadge: stateFromStores > 0 && 0 === value, badgeStyle: tmp.overdueReminderDot };
+  items2[1] = closure_8(tmp2(4810).View, { style: animatedStyle, children: closure_8(require("native").Badge, { value }) });
+  obj8.children = items2;
+  obj6.icon = closure_9(View, obj8);
+  obj6.onPress = function onPress() {
+    const rootNavigationRef = _undefined(4937).getRootNavigationRef();
     if (null != rootNavigationRef) {
       rootNavigationRef.navigate("notifications", { inNestedNavigator: true });
     }
   };
-  obj7.onLongPress = onLongPress;
-  obj7.hitSlop = hitSlop;
-  obj8.children = closure_8(require("IconButton").IconButton, obj7);
-  return closure_8(require("YouBarButton").YouBarButtonContainer, obj8);
+  obj6.onLongPress = onLongPress;
+  obj6.hitSlop = hitSlop;
+  obj7.children = closure_8(require("IconButton").IconButton, obj6);
+  return closure_8(require("YouBarButton").YouBarButtonContainer, obj7);
 }));

@@ -1,12 +1,12 @@
-// === Module 8822: IntegrationTypeSelector ===
+// === Module 9181: IntegrationTypeSelector ===
 
-// Module 8822 (IntegrationTypeSelector)
+// Module 9181 (IntegrationTypeSelector)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import UserPlusIcon from "UserPlusIcon" /* 4839 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 8740 */;
-import ServerIcon from "ServerIcon" /* 8823 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
+import UserPlusIcon from "UserPlusIcon" /* 5033 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9140 */;
+import ServerIcon from "ServerIcon" /* 9182 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { alignItems: "center", flexDirection: "column" }, header: { justifyContent: "center", alignItems: "center", gap: 16, marginTop: 24, marginBottom: 32, width: "100%" }, rows: { alignSelf: "stretch", borderRadius: nativeDefault.radii.sm }, divider: null, learnMore: null, descriptionContainer: null, descriptionMainContainer: null, appIcon: null, appIconMask: null, loadingIcon: null };
 let obj3 = { alignSelf: "stretch", borderRadius: nativeDefault.radii.sm };
 obj2.divider = { height: StyleSheet.hairlineWidth, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginTop: -1 * StyleSheet.hairlineWidth };
@@ -34,7 +34,7 @@ let obj7 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/oauth2/native/IntegrationTypeSelector.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((application) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function IntegrationTypeSelector(application) {
   const cResult = application(arr3[6]).c(35);
   application = application.application;
   const onSelect = application.onSelect;
@@ -234,7 +234,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((application) => 
   loadingIcon = applicationIconSource;
   const obj2 = onSelect(arr3[7]);
   const obj26 = { id: application.id, icon: application.icon };
-}) : ((application) => {
+}) : (function IntegrationTypeSelector(application) {
   application = application.application;
   const onSelect = application.onSelect;
   const tmp = styles();

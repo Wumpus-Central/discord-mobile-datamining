@@ -1,21 +1,21 @@
-// === Module 16593: useConjureAppSlotsLeft ===
+// === Module 16848: useConjureAppSlotsLeft ===
 
-// Module 16593 (useConjureAppSlotsLeft)
+// Module 16848 (useConjureAppSlotsLeft)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 8735 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 12364 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 8734 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 11251 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/create/useConjureAppSlotsLeft.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConjureAppSlotsLeft() {
   const cResult = c.c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function c() {
+    const fn = function n() {
       const projectLimit = ConjureActionCreators.fetchProjectLimit();
     };
     const items = [];
@@ -50,7 +50,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp8 = cResult[3];
   }
   return initialize.useStateFromStores(tmp7, tmp8);
-}) : (() => {
+}) : (function useConjureAppSlotsLeft() {
   const effect = noop.useEffect(() => {
     const projectLimit = ConjureActionCreators.fetchProjectLimit();
   }, []);

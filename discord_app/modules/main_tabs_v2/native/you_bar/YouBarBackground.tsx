@@ -1,29 +1,29 @@
-// === Module 16365: YouBarBackground ===
+// === Module 16625: YouBarBackground ===
 
-// Module 16365 (YouBarBackground)
+// Module 16625 (YouBarBackground)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
-import useToken from "useToken" /* 4586 */;
-import spring from "spring" /* 5604 */;
-import LinearGradientDefault from "LinearGradient" /* 5612 */;
-import _modDef6059 from "module_6059" /* 6059 */;
-import useQuestDockAnimatedBorderRadiusDefault from "useQuestDockAnimatedBorderRadius" /* 15001 */;
+import useToken from "useToken" /* 4778 */;
+import spring from "spring" /* 5374 */;
+import LinearGradientDefault from "LinearGradient" /* 5387 */;
+import _modDef6245 from "module_6245" /* 6245 */;
+import useQuestDockAnimatedBorderRadiusDefault from "useQuestDockAnimatedBorderRadius" /* 15263 */;
 import noop from "module_19" /* 19 */;
 
-const ReanimatedRexportDefault = tmp4(4618);
+const ReanimatedRexportDefault = tmp4(4810);
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(14915);
+const YouBarConstants = fn(15177);
 const YOU_BAR_HEIGHT = YouBarConstants.YOU_BAR_HEIGHT;
 const YOU_BAR_SPRING_CONFIG = YouBarConstants.YOU_BAR_SPRING_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { youRowFloating: { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, borderRadius: nativeDefault.modules.mobile.YOU_BAR_BORDER_RADIUS, borderTopLeftRadius: YOU_BAR_HEIGHT / 2, borderBottomLeftRadius: YOU_BAR_HEIGHT / 2 } };
 let closure_8 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((avatarSize) => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouBarMaskedBackground(avatarSize) {
   const cResult = c.c(27);
   ({ barWidth, backgroundColor } = avatarSize);
   const tmp3 = closure_8();
@@ -124,7 +124,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((avatarSize) => 
             return tmp39;
           }
           const obj6 = { style: first, maskElement: tmp31, children: tmp35 };
-          const tmp42 = timestampProducer(_modDef6059, obj6);
+          const tmp42 = timestampProducer(_modDef6245, obj6);
           cResult[24] = tmp31;
           cResult[25] = tmp35;
           cResult[26] = tmp42;
@@ -155,7 +155,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((avatarSize) => 
   cResult[16] = tmp14;
   cResult[17] = tmp32;
   tmp31 = tmp32;
-}) : ((barWidth) => {
+}) : (function YouBarMaskedBackground(barWidth) {
   barWidth = barWidth.barWidth;
   ({ avatarSize, backgroundColor } = barWidth);
   const diff = avatarSize - 4;
@@ -172,7 +172,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((avatarSize) => 
   const size1 = { position: "absolute", top: YOU_BAR_HEIGHT / 2, width: 8, left: diff - 8, height: YOU_BAR_HEIGHT / 2 };
   obj5.style = size1;
   const obj4 = { style: { position: "absolute", top: YOU_BAR_HEIGHT / 2, left: diff - 1, right: 0, bottom: 0, backgroundColor: "black" } };
-  const tmp3 = _modDef6059;
+  const tmp3 = _modDef6245;
   const tmp4 = LinearGradientDefault;
   const obj9 = _modDef683("#000000");
   const items1 = [_modDef683("#000000").alpha(0).hex(), "#000000"];
@@ -192,7 +192,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((avatarSize) => 
 const __initData = { code: "function YouBarBackgroundTsx1(){const{withSpring,questDockAnimatedBorderRadius,YOU_BAR_SPRING_CONFIG,questDockAnimatedBottomLeftRadius}=this.__closure;return{borderTopRightRadius:withSpring(questDockAnimatedBorderRadius.get(),YOU_BAR_SPRING_CONFIG),borderTopLeftRadius:withSpring(questDockAnimatedBorderRadius.get(),YOU_BAR_SPRING_CONFIG),borderBottomLeftRadius:withSpring(questDockAnimatedBottomLeftRadius.get(),YOU_BAR_SPRING_CONFIG)};}" };
 const __initData2 = { code: "function YouBarBackgroundTsx2(){const{withSpring,questDockAnimatedBorderRadius,YOU_BAR_SPRING_CONFIG,questDockAnimatedBottomLeftRadius}=this.__closure;return{borderTopRightRadius:withSpring(questDockAnimatedBorderRadius.get(),YOU_BAR_SPRING_CONFIG),borderTopLeftRadius:withSpring(questDockAnimatedBorderRadius.get(),YOU_BAR_SPRING_CONFIG),borderBottomLeftRadius:withSpring(questDockAnimatedBottomLeftRadius.get(),YOU_BAR_SPRING_CONFIG)};}" };
 ReactCompilerGating = fn(558);
-let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouBarAnimatedBackground(arg0) {
   const cResult = require("c").c(9);
   ({ barWidth, backgroundColor } = arg0);
   const tmp3 = closure_8();
@@ -257,7 +257,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = size;
   tmp11 = size;
   const obj4 = { withSpring: require("spring").withSpring, questDockAnimatedBorderRadius: tmp6, YOU_BAR_SPRING_CONFIG, questDockAnimatedBottomLeftRadius: tmp8 };
-}) : ((arg0) => {
+}) : (function YouBarAnimatedBackground(arg0) {
   _require = undefined;
   ({ barWidth, backgroundColor } = arg0);
   const tmp = closure_8();
@@ -288,7 +288,7 @@ let obj3 = { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, bor
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarBackground.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function YouBarBackground(arg0) {
   const cResult = c.c(7);
   ({ barWidth, avatarSize, hasNameplate, isLargeAvatar } = arg0);
   let token = useToken.useToken(nativeDefault.colors.MOBILE_FLOATINGBAR_BACKGROUND);
@@ -321,7 +321,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
     tmp3 = tmp6;
   }
   obj3 = useToken;
-}) : ((barWidth) => {
+}) : (function YouBarBackground(barWidth) {
   barWidth = barWidth.barWidth;
   ({ hasNameplate, isLargeAvatar, avatarSize } = barWidth);
   let token = useToken.useToken(nativeDefault.colors.MOBILE_FLOATINGBAR_BACKGROUND);

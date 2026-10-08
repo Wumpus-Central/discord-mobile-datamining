@@ -1,10 +1,10 @@
-// === Module 13522: ExplicitMediaSearchStore ===
+// === Module 13819: ExplicitMediaSearchStore ===
 
-// Module 13522 (ExplicitMediaSearchStore)
+// Module 13819 (ExplicitMediaSearchStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5118 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7122 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5430 */;
+import handleExplicitMediaScanTimeoutForMessage from "handleExplicitMediaScanTimeoutForMessage" /* 7308 */;
 
 require = fn;
 function handleSearchMessagesSuccess(data) {
@@ -58,7 +58,7 @@ const explicitMediaSearchStore = new ExplicitMediaSearchStore(DispatcherDefault,
   MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: function handleScanTimeout(channelId) {
     const combined = "" + channelId.channelId + ":" + channelId.messageId;
     if (null != dependencyMap[combined]) {
-      dependencyMap[combined] = ExplicitMediaRedactionUtils.handleExplicitMediaScanTimeoutForMessage(tmp2);
+      dependencyMap[combined] = handleExplicitMediaScanTimeoutForMessage.handleExplicitMediaScanTimeoutForMessage(tmp2);
     }
   }
 });

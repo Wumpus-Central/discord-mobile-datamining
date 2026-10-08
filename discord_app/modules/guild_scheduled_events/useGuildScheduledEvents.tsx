@@ -1,22 +1,22 @@
-// === Module 9195: useGuildScheduledEvents ===
+// === Module 8630: useGuildScheduledEvents ===
 
-// Module 9195 (useGuildScheduledEvents)
+// Module 8630 (useGuildScheduledEvents)
 import DurationsDefault from "Durations" /* 1102 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
-import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 7050 */;
-import UpcomingEventNoticesStore from "UpcomingEventNoticesStore" /* 9196 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
+import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 6059 */;
+import UpcomingEventNoticesStore from "UpcomingEventNoticesStore" /* 8631 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-let GuildScheduledEventStore = fn(7050);
+let GuildScheduledEventStore = fn(6059);
 ({ isGuildScheduledEventActive: closure_7, StaticGuildEventIndexes: closure_8 } = GuildScheduledEventStore);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
-const GuildScheduledEventsConstants = fn(2057);
+const GuildScheduledEventsConstants = fn(2069);
 ({ GuildScheduledEventEntityTypes: closure_11, GuildScheduledEventStatus: closure_12 } = GuildScheduledEventsConstants);
 const Constants = fn(1085);
 ({ BasicPermissions: map1, GuildFeatures: closure_14 } = Constants);
@@ -24,7 +24,7 @@ let closure_15 = [];
 let closure_16 = 15 * DurationsDefault.Millis.MINUTE;
 fn(558);
 let ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildEvents(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   const cResult = require("c").c(5);
@@ -77,7 +77,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   tmp9 = fn;
   const obj = require("c");
   tmp = _require;
-}) : ((arg0, arg1) => {
+}) : (function useGuildEvents(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   const items = [GuildStore, GuildScheduledEventStore, PermissionStore, ChannelStore];
@@ -110,7 +110,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   }, items1);
 });
 ReactCompilerGating = fn(558);
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useActiveEvent(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -155,7 +155,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp8, tmp9);
-}) : ((arg0) => {
+}) : (function useActiveEvent(arg0) {
   _require = arg0;
   const items = [GuildScheduledEventStore, ChannelStore, PermissionStore];
   const items1 = [arg0];
@@ -183,7 +183,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }, items1);
 });
 ReactCompilerGating = fn(558);
-let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildUpcomingEvents(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -226,7 +226,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStoresArray(first, tmp8, tmp9);
-}) : ((arg0) => {
+}) : (function useGuildUpcomingEvents(arg0) {
   _require = arg0;
   const items = [GuildScheduledEventStore, ChannelStore, PermissionStore];
   const items1 = [arg0];
@@ -253,7 +253,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 });
 let closure_17 = tmp8;
 ReactCompilerGating = fn(558);
-let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useActiveEventsByChannel(arg0) {
   _require = arg0;
   const cResult = require("c").c(6);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -296,7 +296,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     dependencyMap = cResult[5];
   }
   return tmp8;
-}) : ((arg0) => {
+}) : (function useActiveEventsByChannel(arg0) {
   _require = arg0;
   const items = [GuildScheduledEventStore];
   const items1 = [arg0];
@@ -314,7 +314,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }, items2);
 });
 ReactCompilerGating = fn(558);
-let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildUpcomingEventsNotice(arg0) {
   _require = arg0;
   const cResult = require("c").c(11);
   const tmp4 = closure_17(arg0);
@@ -356,7 +356,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp13 = cResult[4];
   }
   if (cResult[5] !== tmp4) {
-    const fn3 = function h() {
+    const fn3 = function _() {
       if (null == closure_1) {
         let reduced = {};
       } else {
@@ -431,7 +431,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
   }
   const tmpResult6 = require("initialize");
-}) : ((arg0) => {
+}) : (function useGuildUpcomingEventsNotice(arg0) {
   let nextShownUpcomingEventNoticeType;
   let tmp8;
   _require = arg0;
@@ -500,7 +500,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const obj4 = require("initialize");
 });
 ReactCompilerGating = fn(558);
-let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildActiveEvent(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -551,7 +551,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp8, tmp9);
-}) : ((arg0) => {
+}) : (function useGuildActiveEvent(arg0) {
   _require = arg0;
   const items = [GuildScheduledEventStore, ChannelStore, PermissionStore];
   const items1 = [arg0];
@@ -585,7 +585,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }, items1);
 });
 ReactCompilerGating = fn(558);
-let tmp11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildChannelScheduledEvents(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -611,14 +611,14 @@ let tmp11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp6, tmp7);
-}) : ((arg0) => {
+}) : (function useGuildChannelScheduledEvents(arg0) {
   _require = arg0;
   const items = [GuildScheduledEventStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(items, () => GuildScheduledEventStore.getGuildScheduledEventsByIndex(closure_2_8.CHANNEL_EVENT_UPCOMING(closure_0)), items1);
 });
 ReactCompilerGating = fn(558);
-let tmp12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp12 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFirstActiveEventChannel(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -650,7 +650,7 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp7, tmp8);
-}) : ((arg0) => {
+}) : (function useFirstActiveEventChannel(arg0) {
   _require = arg0;
   const items = [ChannelStore, GuildScheduledEventStore];
   const items1 = [arg0];
@@ -710,7 +710,7 @@ export { getGuildActiveEvent };
 export const useGuildActiveEvent = tmp10;
 export const useGuildChannelScheduledEvents = tmp11;
 export const useFirstActiveEventChannel = tmp12;
-export const useImminentUpcomingGuildEvents = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useImminentUpcomingGuildEvents = ReactCompilerGating.isReactCompilerEnabled() ? (function useImminentUpcomingGuildEvents(arg0) {
   _require = arg0;
   const cResult = require("c").c(12);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -890,7 +890,7 @@ export const useImminentUpcomingGuildEvents = ReactCompilerGating.isReactCompile
   cResult[7] = tmp6;
   cResult[8] = items2;
   const tmp5 = _slicedToArray(noop.useState(first), 2);
-}) : ((arg0) => {
+}) : (function useImminentUpcomingGuildEvents(arg0) {
   _require = arg0;
   [tmp2, dependencyMap] = stateFromStores(noop.useState(() => Date.now()), 2);
   const effect = noop.useEffect(() => {
@@ -912,11 +912,11 @@ export const useImminentUpcomingGuildEvents = ReactCompilerGating.isReactCompile
   }, items1);
   const items2 = [stateFromStores];
   return noop.useMemo(() => stateFromStores.filter((status) => {
-    const eventSchedule = closure_1_0(9201).getEventSchedule(status);
+    const eventSchedule = closure_1_0(8502).getEventSchedule(status);
     ({ startTime, endTime } = eventSchedule);
-    const obj = closure_1_0(9201);
+    const obj = closure_1_0(8502);
     let toISOStringResult1;
-    const obj2 = closure_1_0(9198);
+    const obj2 = closure_1_0(8496);
     if (endTime != null) {
       toISOStringResult1 = endTime.toISOString();
     }

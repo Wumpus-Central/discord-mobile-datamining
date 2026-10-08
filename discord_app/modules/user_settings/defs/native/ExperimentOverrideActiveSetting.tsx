@@ -1,18 +1,18 @@
-// === Module 15638: ExperimentOverrideActiveSetting ===
+// === Module 15918: ExperimentOverrideActiveSetting ===
 
-// Module 15638 (ExperimentOverrideActiveSetting)
+// Module 15918 (ExperimentOverrideActiveSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import DevToolsNavigator from "DevToolsNavigator" /* 14422 */;
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14666 */;
-import DevToolsContent from "DevToolsContent" /* 15639 */;
-import ExperimentStore from "ExperimentStore" /* 4782 */;
-import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
+import DevToolsNavigator from "DevToolsNavigator" /* 14648 */;
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14927 */;
+import DevToolsContent from "DevToolsContent" /* 15919 */;
+import ExperimentStore from "ExperimentStore" /* 4976 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1258 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
-let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useExperimentOverrideActiveCount() {
   const cResult = c.c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ExperimentStore];
@@ -42,7 +42,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   const tmpResult = initialize;
   return stateFromStores + initialize.useStateFromStores(tmp8, tmp9);
-}) : (() => {
+}) : (function useExperimentOverrideActiveCount() {
   const items = [ExperimentStore];
   const stateFromStores = initialize.useStateFromStores(items, () => Object.keys(allExperimentOverrideDescriptors.getAllExperimentOverrideDescriptors()).length);
   const items1 = [ApexExperimentStore];
@@ -50,7 +50,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
 });
 fn(558);
 ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useExperimentOverrideActiveDescription() {
   const cResult = c.c(4);
   const str = closure_5();
   if (cResult[0] !== str) {
@@ -71,15 +71,15 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp6 = cResult[3];
   }
   return tmp6;
-}) : (() => {
+}) : (function useExperimentOverrideActiveDescription() {
   const str = closure_5();
   return jsx(DevToolsContent.DevToolsContentSubLabel, { label: "Experiments overridden: ", value: closure_5().toString() });
 });
-const SettingBuilders = fn(11142);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const SettingBuilders = fn(11262);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasExperimentOverrideActive() {
   const staffOrDeveloperSettingPredicate = useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
   return closure_5() > 0 && staffOrDeveloperSettingPredicate;
-}) : (() => {
+}) : (function useHasExperimentOverrideActive() {
   const staffOrDeveloperSettingPredicate = useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
   return closure_5() > 0 && staffOrDeveloperSettingPredicate;
 });
@@ -88,12 +88,12 @@ const pressable = SettingBuilders.createPressable({
     return "Experiments Overrides Active";
   },
   parent: null,
-  IconComponent: fn(15429).BeakerIcon,
+  IconComponent: fn(15691).BeakerIcon,
   useDescription: tmp2,
-  usePredicate: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  usePredicate: ReactCompilerGating.isReactCompilerEnabled() ? (function useHasExperimentOverrideActive() {
     const staffOrDeveloperSettingPredicate = useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
     return closure_5() > 0 && staffOrDeveloperSettingPredicate;
-  }) : (() => {
+  }) : (function useHasExperimentOverrideActive() {
     const staffOrDeveloperSettingPredicate = useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
     return closure_5() > 0 && staffOrDeveloperSettingPredicate;
   }),

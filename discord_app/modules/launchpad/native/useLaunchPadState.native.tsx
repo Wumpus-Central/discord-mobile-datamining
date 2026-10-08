@@ -1,19 +1,19 @@
-// === Module 17411: useLaunchPadState ===
+// === Module 17693: useLaunchPadState ===
 
-// Module 17411 (useLaunchPadState)
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import useSafeAreaInsetsSharedValue from "useSafeAreaInsetsSharedValue" /* 9786 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 9787 */;
-import useWindowDimensionsSharedValue from "useWindowDimensionsSharedValue" /* 11661 */;
-import LaunchPadPullTabCache2 from "LaunchPadPullTabCache" /* 17412 */;
+// Module 17693 (useLaunchPadState)
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import useSafeAreaInsetsSharedValue from "useSafeAreaInsetsSharedValue" /* 10350 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10352 */;
+import useWindowDimensionsSharedValue from "useWindowDimensionsSharedValue" /* 11726 */;
+import LaunchPadPullTabCache2 from "LaunchPadPullTabCache" /* 17694 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const LaunchPadConstants = fn(11138);
+const LaunchPadConstants = fn(11258);
 ({ LAUNCH_PAD_PULL_TAB_MAX_POSITION: closure_4, LAUNCH_PAD_PULL_TAB_SCALE_OFFSET: hasOwnProperty } = LaunchPadConstants);
 let closure_6 = { active: false, initialLaunchPadPosition: 0, initialPullTabPosition: 0, initialTouchX: 0, initialTouchY: 0, positionOffsetX: 0, positionOffsetY: 0, startTime: -1, requiresPop: false, startShown: false };
 let __closure = { position: null, scale: 1, offset: 0, minimized: false };
-const LaunchPadPullTabCache = fn(17412);
+const LaunchPadPullTabCache = fn(17694);
 __closure.position = LaunchPadPullTabCache.getLaunchPadPullTabPositionCached();
 const __initData = { code: "function setLaunchPadShown_useLaunchPadStateNativeTsx1(shown){const{launchPadShown}=this.__closure;launchPadShown.set(shown);}" };
 const __initData2 = { code: "function setLaunchPadPosition_useLaunchPadStateNativeTsx2(value){const{launchPadSharedState}=this.__closure;launchPadSharedState.set(Math.max(Math.min(value,1),0));}" };
@@ -35,7 +35,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/launchpad/native/useLaunchPadState.native.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useLaunchPadState() {
   let obj = sharedValue(sharedValue2[4]);
   const cResult = obj.c(32);
   sharedValue = sharedValue(sharedValue2[5]).useSharedValue(closure_6);
@@ -211,7 +211,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[8] = setLaunchPadPullTabTranslation;
   tmp17 = setLaunchPadPullTabTranslation;
   const obj5 = sharedValue(sharedValue2[5]);
-}) : (() => {
+}) : (function useLaunchPadState() {
   let obj = sharedValue(sharedValue2[5]);
   sharedValue = obj.useSharedValue(closure_6);
   const sharedValue1 = sharedValue(sharedValue2[5]).useSharedValue(obj);

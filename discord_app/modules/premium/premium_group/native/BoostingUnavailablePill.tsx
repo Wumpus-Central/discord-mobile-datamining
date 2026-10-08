@@ -1,17 +1,17 @@
-// === Module 13339: BoostingUnavailablePill ===
+// === Module 13639: BoostingUnavailablePill ===
 
-// Module 13339 (BoostingUnavailablePill)
+// Module 13639 (BoostingUnavailablePill)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
-import _modDef3233 from "module_3233" /* 3233 */;
-import PremiumGroupConstants from "PremiumGroupConstants" /* 4548 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import Text_Text from "Text/Text" /* 4892 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import _modDef3277 from "module_3277" /* 3277 */;
+import PremiumGroupConstants from "PremiumGroupConstants" /* 4740 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import Text_Text from "Text/Text" /* 5086 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import createStyles from "createStyles" /* 4896 */;
+import createStyles from "createStyles" /* 5090 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -19,8 +19,8 @@ function handlePress() {
   const obj2 = { aboutText: null };
   const obj = ActionSheetActionCreatorsDefault;
   const intl = util.intl;
-  const tmp = asyncRequireImpl(13340, dependencyMap.paths);
-  obj2.aboutText = intl.formatToPlainString(_modDef3233["5xN/C1"], { premiumGroupProductName: closure_5() });
+  const tmp = asyncRequireImpl(13640, dependencyMap.paths);
+  obj2.aboutText = intl.formatToPlainString(_modDef3277["5xN/C1"], { premiumGroupProductName: closure_5() });
   obj.openLazy(tmp, "PremiumGroupEducationActionSheet", obj2);
 }
 ({ TouchableOpacity: c3, View: closure_4 } = get_ActivityIndicator);
@@ -31,7 +31,7 @@ let closure_7 = createStyles.createStyles(obj);
 let obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, flexDirection: "row", gap: 12, padding: 12, justifyContent: "center", borderColor: nativeDefault.colors.STATUS_WARNING, borderWidth: 1, borderRadius: nativeDefault.radii.lg, marginBottom: 12 };
 const result = size.fileFinishedImporting("modules/premium/premium_group/native/BoostingUnavailablePill.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function BoostingUnavailablePill(style) {
   const cResult = c.c(12);
   style = style.style;
   const tmp4 = closure_7();
@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
   cResult[1] = tmp4.premiumGroupBanner;
   cResult[2] = items;
   tmp5 = items;
-}) : ((style) => {
+}) : (function BoostingUnavailablePill(style) {
   const tmp = closure_7();
   const obj = { activeOpacity: 0.7, onPress: handlePress, children: null };
   const obj2 = { style: null, children: null };

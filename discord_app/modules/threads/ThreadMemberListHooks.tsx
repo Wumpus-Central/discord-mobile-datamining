@@ -1,12 +1,12 @@
-// === Module 16899: ThreadMemberListHooks ===
+// === Module 17180: ThreadMemberListHooks ===
 
-// Module 16899 (ThreadMemberListHooks)
+// Module 17180 (ThreadMemberListHooks)
 import util from "util" /* 1126 */;
-import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 6799 */;
-import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 6825 */;
+import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 6970 */;
+import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 6998 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleStore from "GuildRoleStore" /* 2106 */;
-import ThreadMemberListStore from "ThreadMemberListStore" /* 9511 */;
+import GuildRoleStore from "GuildRoleStore" /* 2118 */;
+import ThreadMemberListStore from "ThreadMemberListStore" /* 8677 */;
 
 const require = globalThis.__r;
 
@@ -17,7 +17,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/threads/ThreadMemberListHooks.tsx");
 
-export const useThreadMemberListSections = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export const useThreadMemberListSections = ReactCompilerGating.isReactCompilerEnabled() ? (function useThreadMemberListSections(arg0, arg1) {
   _require = arg0;
   importDefault = arg1;
   const cResult = require("c").c(16);
@@ -135,14 +135,14 @@ export const useThreadMemberListSections = ReactCompilerGating.isReactCompilerEn
       }
       const _Symbol3 = Symbol;
       if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-        class E {
+        class M {
           constructor(arg0) {
             return arg0.hoist;
           }
         }
-        cResult[12] = E;
+        cResult[12] = M;
       } else {
-        class E {
+        class M {
           constructor(arg0) {
             return arg0.hoist;
           }
@@ -150,23 +150,23 @@ export const useThreadMemberListSections = ReactCompilerGating.isReactCompilerEn
       }
       const _Symbol4 = Symbol;
       if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-        class M {
+        class E {
           constructor(arg0) {
             obj = { id: arg0.id, label: arg0.name };
             return obj;
           }
         }
-        cResult[13] = M;
+        cResult[13] = E;
       } else {
-        class M {
+        class E {
           constructor(arg0) {
             obj = { id: arg0.id, label: arg0.name };
             return obj;
           }
         }
       }
-      const found = stateFromStores.filter(E);
-      const mapped = found.map(M);
+      const found = stateFromStores.filter(M);
+      const mapped = found.map(E);
       const obj2 = { id: StatusTypes.ONLINE, label: null };
       const intl = tmp(members[10]).intl;
       obj2.label = intl.string(tmp(members[10]).t.WbGtnH);
@@ -284,7 +284,7 @@ export const useThreadMemberListSections = ReactCompilerGating.isReactCompilerEn
   cResult[2] = fn;
   tmp4 = fn;
   let obj = require("c");
-}) : ((arg0, arg1) => {
+}) : (function useThreadMemberListSections(arg0, arg1) {
   _require = arg0;
   importDefault = arg1;
   require("useMountEffect")(() => {

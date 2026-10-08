@@ -1,8 +1,8 @@
-// === Module 7803: utils ===
+// === Module 8222: utils ===
 
-// Module 7803 (utils)
+// Module 8222 (utils)
 import Constants from "Constants" /* 1085 */;
-import FlagUtils from "FlagUtils" /* 1390 */;
+import FlagUtils from "FlagUtils" /* 1402 */;
 import size from "module_2" /* 2 */;
 
 const MessageEmbedFlags = Constants.MessageEmbedFlags;

@@ -1,11 +1,11 @@
-// === Module 5048: NicknameUtils ===
+// === Module 5405: NicknameUtils ===
 
-// Module 5048 (NicknameUtils)
+// Module 5405 (NicknameUtils)
 import util from "util" /* 1126 */;
-import UserUtilsDefault from "UserUtils" /* 4728 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
+import UserUtilsDefault from "UserUtils" /* 4922 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildMemberStore from "GuildMemberStore" /* 2124 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
 
 require = fn;
 function getName(guildId, arg1, id) {
@@ -39,7 +39,7 @@ function getName(guildId, arg1, id) {
   return stringResult;
 }
 const ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useName(arg0, arg1, arg2) {
   _require = arg0;
   closure_1 = arg1;
   dependencyMap = arg2;
@@ -69,7 +69,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) 
   tmp8 = fn;
   const obj = require("c");
   tmp = _require;
-}) : ((arg0, arg1, arg2) => {
+}) : (function useName(arg0, arg1, arg2) {
   _require = arg0;
   closure_1 = arg1;
   dependencyMap = arg2;

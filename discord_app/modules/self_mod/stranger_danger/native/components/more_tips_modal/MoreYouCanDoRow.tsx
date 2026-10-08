@@ -1,8 +1,8 @@
-// === Module 9833: MoreYouCanDoRow ===
+// === Module 10396: MoreYouCanDoRow ===
 
-// Module 9833 (MoreYouCanDoRow)
+// Module 10396 (MoreYouCanDoRow)
 import c from "c" /* 576 */;
-import TableRow from "TableRow" /* 6000 */;
+import TableRow from "TableRow" /* 6184 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/stranger_danger/native/components/more_tips_modal/MoreYouCanDoRow.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function MoreYouCanDoRow(arg0) {
   const cResult = c.c(7);
   ({ title, description, variant, onClick, icon, disabled } = arg0);
   if (cResult[0] === description) {
@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = variant;
   cResult[6] = tmp5;
   tmp4 = tmp5;
-}) : ((arg0) => {
+}) : (function MoreYouCanDoRow(arg0) {
   ({ title, description, variant, onClick, icon, disabled } = arg0);
   return jsx(TableRow.TableRow, { label, subLabel, onPress, icon, variant, disabled });
 });

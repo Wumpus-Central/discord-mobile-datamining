@@ -1,10 +1,10 @@
-// === Module 17961: GuildSettingsRoleSubscriptionsEnableMonetization ===
+// === Module 18248: GuildSettingsRoleSubscriptionsEnableMonetization ===
 
-// Module 17961 (GuildSettingsRoleSubscriptionsEnableMonetization)
-import UnavailableNoticeDefault from "UnavailableNotice" /* 16530 */;
-import PlaceholderDefault from "Placeholder" /* 17923 */;
+// Module 18248 (GuildSettingsRoleSubscriptionsEnableMonetization)
+import UnavailableNoticeDefault from "UnavailableNotice" /* 16785 */;
+import PlaceholderDefault from "Placeholder" /* 18210 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2074 */;
+import GuildStore from "GuildStore" /* 2086 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsEnableMonetization.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSubscriptionEnableMonetization(guildId) {
   let tmp2 = dependencyMap;
   const cResult = guildId(576).c(5);
   guildId = guildId.guildId;
@@ -57,7 +57,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     return tmp7;
   }
   tmpResult = guildId(504);
-}) : ((guildId) => {
+}) : (function GuildSubscriptionEnableMonetization(guildId) {
   guildId = guildId.guildId;
   const items = [GuildStore];
   if (null == obj.useStateFromStores(items, () => GuildStore.getGuild(guildId))) {

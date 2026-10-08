@@ -1,24 +1,24 @@
-// === Module 10569: SocialLayerStorefrontGiftPurchaseSection ===
+// === Module 10166: SocialLayerStorefrontGiftPurchaseSection ===
 
-// Module 10569 (SocialLayerStorefrontGiftPurchaseSection)
+// Module 10166 (SocialLayerStorefrontGiftPurchaseSection)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import nativeDefault from "native" /* 587 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10544 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10141 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const View = fn(17).View;
-let useNativeCheckoutStore = fn(6943).useNativeCheckoutStore;
-let AnalyticEvents = fn(1085).AnalyticEvents;
-const GiftingOrigin = fn(1379).GiftingOrigin;
+let useNativeCheckoutStore = fn(7132).useNativeCheckoutStore;
+const AnalyticEvents = fn(1085).AnalyticEvents;
+const GiftingOrigin = fn(1391).GiftingOrigin;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_13 = createStyles.createStyles((arg0) => {
   const obj = { container: null, legalCopy: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_TOP_HIGH);
@@ -31,7 +31,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/slayer_storefront/native/SocialLayerStorefrontGiftPurchaseSection.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((skuId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SocialLayerStorefrontGiftPurchaseSection(skuId) {
   const cResult = skuId(giftOptions[12]).c(58);
   skuId = skuId.skuId;
   const sku = skuId.sku;
@@ -55,7 +55,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((skuId) => {
     first = cResult[0];
   }
   if (cResult[1] !== giftOptions.recipient_id) {
-    const fn = function f() {
+    const fn = function h() {
       return UserStore.getUser(giftOptions.recipient_id);
     };
     cResult[1] = giftOptions.recipient_id;
@@ -99,27 +99,27 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((skuId) => {
   const tmp13Result = useNativeCheckoutStore(D);
   useNativeCheckoutStore = tmp13Result;
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    class R {
+    class M {
       constructor(arg0) {
         tmp = skuId.isPatchOrderLoading || skuId.isCreateOrderLoading;
         return tmp;
       }
     }
-    cResult[5] = R;
+    cResult[5] = M;
   } else {
-    class R {
+    class M {
       constructor(arg0) {
         tmp = skuId.isPatchOrderLoading || skuId.isCreateOrderLoading;
         return tmp;
       }
     }
   }
-  useNativeCheckoutStore(R);
+  useNativeCheckoutStore(M);
   let tmpResult = tmp(giftOptions[15]);
   [r10083, UserStore] = analyticsLocations(stateFromStores.useState(false), 2);
-  AnalyticEvents = stateFromStores.useRef(false);
+  stateFromStores.useRef(false);
   if (cResult[6] === tmp14) {
-    class R {
+    class M {
       constructor(arg0) {
         tmp = skuId.isPatchOrderLoading || skuId.isCreateOrderLoading;
         return tmp;
@@ -231,29 +231,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((skuId) => {
     cResult[18] = skuId;
     cResult[19] = V;
   }
-  class G {
-    constructor() {
-      if (closure_9.current) {
-        flag = false;
-        tmp.current = false;
-        tmp2 = closure_1;
-        tmp3 = closure_2;
-        obj = closure_1(closure_2[16]);
-        tmp4 = AnalyticEvents;
-        tmp5 = closure_6;
-        trackResult = obj.track(AnalyticEvents.PAYMENT_FLOW_FAILED, closure_6);
-        tmp7 = closure_7;
-        tmp8 = closure_7();
-      }
-      tmp9 = closure_8(false);
-      return;
+  const fn2 = function x() {
+    if (ref.current) {
+      tmp.current = false;
+      AnalyticsUtilsDefault.track(AnalyticEvents.PAYMENT_FLOW_FAILED, closure_6);
+      closure_7();
     }
-  }
+    UserStore(false);
+  };
   cResult[6] = tmp14;
   cResult[7] = tmp13Result;
-  cResult[8] = G;
+  cResult[8] = fn2;
   const tmp19 = analyticsLocations(stateFromStores.useState(false), 2);
-}) : ((skuId) => {
+}) : (function SocialLayerStorefrontGiftPurchaseSection(skuId) {
   skuId = skuId.skuId;
   const sku = skuId.sku;
   ({ isPurchaseDisabled, giftOptions } = skuId);

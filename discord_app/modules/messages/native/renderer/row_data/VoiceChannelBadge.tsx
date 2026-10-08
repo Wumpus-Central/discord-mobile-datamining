@@ -1,14 +1,15 @@
-// === Module 13040: VoiceChannelBadge ===
+// === Module 13318: VoiceChannelBadge ===
 
-// Module 13040 (VoiceChannelBadge)
+// Module 13318 (VoiceChannelBadge)
 import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1085 */;
-import AgeGateUtils from "AgeGateUtils" /* 5106 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5819 */;
-import VoiceChannelBadgeExperiment from "VoiceChannelBadgeExperiment" /* 13041 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
-import VoiceStateStore from "VoiceStateStore" /* 4915 */;
+import shouldAgeVerifyForAgeGate from "shouldAgeVerifyForAgeGate" /* 5904 */;
+import AgeGateUtils from "AgeGateUtils" /* 5930 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8134 */;
+import VoiceChannelBadgeExperiment from "VoiceChannelBadgeExperiment" /* 13319 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
+import VoiceStateStore from "VoiceStateStore" /* 5111 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -33,7 +34,7 @@ export const createVoiceChannelBadge = function createVoiceChannelBadge(id, guil
             uri = assetSource.uri;
           }
           if (null != uri) {
-            let result = AgeGateUtils.shouldAgeVerifyForAgeGate();
+            let result = shouldAgeVerifyForAgeGate.shouldAgeVerifyForAgeGate();
             if (result) {
               result = AgeGateUtils.shouldShowAgeGateForChannelId(channel.id);
               const tmpResult4 = AgeGateUtils;
@@ -49,7 +50,7 @@ export const createVoiceChannelBadge = function createVoiceChannelBadge(id, guil
                 return obj2;
               }
             }
-            const tmpResult3 = AgeGateUtils;
+            const tmpResult3 = shouldAgeVerifyForAgeGate;
           }
           const tmpResult = utils_ChannelUtils;
         }

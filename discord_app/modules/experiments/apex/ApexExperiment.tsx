@@ -1,14 +1,14 @@
-// === Module 1441: apex/ApexExperiment ===
+// === Module 1453: apex/ApexExperiment ===
 
-// Module 1441 (apex/ApexExperiment)
+// Module 1453 (apex/ApexExperiment)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import FingerprintUtils from "FingerprintUtils" /* 1265 */;
-import GlobalUtils from "GlobalUtils" /* 1375 */;
-import discord_common_apex_ApexExperimentDefault from "discord_common/apex/ApexExperiment" /* 1442 */;
+import FingerprintUtils from "FingerprintUtils" /* 1277 */;
+import GlobalUtils from "GlobalUtils" /* 1387 */;
+import discord_common_apex_ApexExperimentDefault from "discord_common/apex/ApexExperiment" /* 1454 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1258 */;
 
 require = fn;
 function getUnitId(type, guildId) {
@@ -27,7 +27,7 @@ function getUnitId(type, guildId) {
   }
 }
 const ReactCompilerGating = fn(558);
-let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((type, guildId) => {
+let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useUnitId(type, guildId) {
   const cResult = c.c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [AuthenticationStore];
@@ -67,7 +67,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((type, guildId) 
     const tmpResult4 = GlobalUtils;
   }
   const tmp7 = _slicedToArray(initialize.useStateFromStoresArray(tmp4, tmp5), 2);
-}) : ((type, guildId) => {
+}) : (function useUnitId(type, guildId) {
   let items = [AuthenticationStore];
   _slicedToArray(initialize.useStateFromStoresArray(items, () => {
     const items = [AuthenticationStore.getId(), AuthenticationStore.getInstallationForTracking()];
@@ -94,5 +94,5 @@ const result = size.fileFinishedImporting("modules/experiments/apex/ApexExperime
 export default function createApexExperiment(arg0) {
   return discord_common_apex_ApexExperimentDefault(arg0, ApexExperimentStore, getUnitId, closure_7);
 };
-export const ApexExperiment = fn(1442).ApexExperiment;
+export const ApexExperiment = fn(1454).ApexExperiment;
 export { getUnitId };

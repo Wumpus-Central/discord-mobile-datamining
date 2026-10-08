@@ -1,27 +1,27 @@
-// === Module 16501: ICYMIForumThreadRow ===
+// === Module 16761: ICYMIForumThreadRow ===
 
-// Module 16501 (ICYMIForumThreadRow)
+// Module 16761 (ICYMIForumThreadRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5712 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8039 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10664 */;
-import ICYMIShared from "ICYMIShared" /* 16475 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6102 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8447 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10264 */;
+import ICYMIShared from "ICYMIShared" /* 16735 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildStore from "GuildStore" /* 2074 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildStore from "GuildStore" /* 2086 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createICYMIStyles = fn(16434);
+const createICYMIStyles = fn(16694);
 let closure_9 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
   const obj = { pressable: { flex: 1, paddingLeft: marginHorizontal.inset }, container: { marginHorizontal: marginHorizontal.margin }, subtitle: { marginTop: nativeDefault.space.PX_8, marginBottom: marginHorizontal.margin }, footer: { justifyContent: "flex-end", paddingLeft: marginHorizontal.inset, marginTop: marginHorizontal.margin, gap: marginHorizontal.margin }, threadAsComments: { marginHorizontal: marginHorizontal.margin }, ICYMICardInteractionRow: { marginHorizontal: marginHorizontal.margin, marginBottom: marginHorizontal.margin } };
   return obj;
 });
 let ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIForumThreadRow(channel) {
   const cResult = channel(stateFromStores[8]).c(60);
   channel = channel.channel;
   const message = channel.message;
@@ -103,7 +103,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
           return closure_5.getChannel(channel.parent_id);
         }
       }
-      const effect = author.useEffect(S, tmp16);
+      const effect = author.useEffect(R, tmp16);
       if (cResult[12] === channel) {
         class C {
           constructor() {
@@ -111,7 +111,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
           }
         }
       }
-      class A {
+      class F {
         constructor() {
           tmp = closure_2;
           obj = closure_1(closure_2[11]);
@@ -138,7 +138,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
       cResult[12] = channel;
       cResult[13] = stateFromStores;
       cResult[14] = message.id;
-      cResult[15] = A;
+      cResult[15] = F;
     }
     const items2 = [author.id, undefined];
     cResult[9] = author.id;
@@ -154,7 +154,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
       }
     }
   }
-  class S {
+  class R {
     constructor() {
       tmp = closure_2;
       id = undefined;
@@ -178,9 +178,9 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     }
   }
   cResult[7] = undefined;
-  cResult[8] = S;
+  cResult[8] = R;
   const tmpResult = channel(stateFromStores[9]);
-}) : ((channel) => {
+}) : (function ICYMIForumThreadRow(channel) {
   channel = channel.channel;
   const message = channel.message;
   let stateFromStores;
@@ -295,7 +295,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/native/ICYMIForumThreadRow.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumThreadRowWrapper(arg0) {
   const cResult = c.c(4);
   ({ message, threadChannel, visible } = arg0);
   if (cResult[0] === message) {
@@ -312,6 +312,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = visible;
   cResult[3] = tmp3;
   tmp2 = tmp3;
-}) : ((message) => React5(closure_10, { message: message.message, channel: message.threadChannel, visible: message.visible }));
+}) : (function ForumThreadRowWrapper(message) {
+  return React5(closure_10, { message: message.message, channel: message.threadChannel, visible: message.visible });
+});
 export const MAX_AVATARS_IN_PILE = 3;
 export const ICYMIForumThreadRow = tmp3;

@@ -1,20 +1,20 @@
-// === Module 9818: MoreTipsModal ===
+// === Module 10381: MoreTipsModal ===
 
-// Module 9818 (MoreTipsModal)
+// Module 10381 (MoreTipsModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import _modDef4815 from "module_4815" /* 4815 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 5416 */;
-import MetricEvents from "MetricEvents" /* 5421 */;
-import HeaderActionButton from "HeaderActionButton" /* 6890 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 9811 */;
-import SafetyTipsSectionDefault from "SafetyTipsSection" /* 9819 */;
-import WasThisHelpfulSectionDefault from "WasThisHelpfulSection" /* 9822 */;
+import native from "native" /* 1200 */;
+import _modDef5009 from "module_5009" /* 5009 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 5725 */;
+import MetricEvents from "MetricEvents" /* 5730 */;
+import HeaderActionButton from "HeaderActionButton" /* 7079 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 10374 */;
+import SafetyTipsSectionDefault from "SafetyTipsSection" /* 10382 */;
+import WasThisHelpfulSectionDefault from "WasThisHelpfulSection" /* 10385 */;
 import noop from "module_19" /* 19 */;
-import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 9799 */;
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10266 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -22,7 +22,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { scroll: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, contentContainer: null, tipsContainer: null, learnMore: null, header: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.contentContainer = { marginHorizontal: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
@@ -33,7 +33,7 @@ let obj5 = { gap: nativeDefault.space.PX_8 };
 obj2.header = { marginTop: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_4 };
 let closure_10 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function MoreTipsModalScreen(arg0) {
   const cResult = c.c(28);
   ({ channelId, warningId, senderId, description, safetyTips, actionItems, learnMore } = arg0);
   const tmp4 = closure_10();
@@ -153,7 +153,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = safetyTips;
   cResult[2] = tmp8;
   tmp7 = tmp8;
-}) : ((learnMore) => {
+}) : (function MoreTipsModalScreen(learnMore) {
   learnMore = learnMore.learnMore;
   ({ channelId, warningId, senderId, description, safetyTips, actionItems } = learnMore);
   const tmp = closure_10();
@@ -186,7 +186,7 @@ let obj6 = { marginTop: nativeDefault.space.PX_16, marginBottom: nativeDefault.s
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/stranger_danger/native/components/more_tips_modal/MoreTipsModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function MoreTipsModal(channelId) {
   const cResult = channelId(senderId[8]).c(19);
   channelId = channelId.channelId;
   const warningId = channelId.warningId;
@@ -225,7 +225,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
                   ({ modalKey: closure_129_0, channelId: closure_129_1, warningId: closure_129_2, senderId: closure_129_3, description: closure_129_4, safetyTips: closure_129_5, actionItems: closure_129_6, learnMore: closure_129_7 } = channelId);
                   let obj2 = { MORE_TIPS: null };
                   let obj3 = { headerRight: null, headerTitle: null, headerLeft: null, headerStyle: null, render: null };
-                  class S {
+                  class M {
                     constructor() {
                       tmp2 = closure_2;
                       tmp = closure_0;
@@ -268,7 +268,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
                 }
                 let obj4 = { screens: tmp16, initialRouteName: "MORE_TIPS", headerStatusBarHeight: top };
                 const tmp19 = closure_8(tmp(tmp2[22]).Navigator, obj4);
-                class S {
+                class M {
                   constructor() {
                     tmp2 = closure_2;
                     tmp = closure_0;
@@ -295,7 +295,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
           }
           const items1 = [channelId, warningId, senderId, stateFromStores];
           cResult[9] = channelId;
-          class S {
+          class M {
             constructor() {
               tmp2 = closure_2;
               tmp = closure_0;
@@ -325,7 +325,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
     if (stateFromStores != null) {
       type1 = stateFromStores.type;
     }
-    class S {
+    class M {
       constructor() {
         tmp2 = closure_2;
         tmp = closure_0;
@@ -346,11 +346,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
     cResult[5] = type1;
     cResult[6] = senderId;
     cResult[7] = warningId;
-    cResult[8] = S;
-    tmp10 = S;
+    cResult[8] = M;
+    tmp10 = M;
     const tmpResult = tmp(tmp2[18]);
   }
-  const fn = function l() {
+  const fn = function o() {
     return ChannelSafetyWarningsStore.getChannelSafetyWarning(channelId, warningId);
   };
   cResult[1] = channelId;
@@ -358,7 +358,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   cResult[3] = fn;
   tmp6 = fn;
   let obj = channelId(senderId[8]);
-}) : ((headerStyle) => {
+}) : (function MoreTipsModal(headerStyle) {
   const channelId = headerStyle.channelId;
   const warningId = headerStyle.warningId;
   const senderId = headerStyle.senderId;
@@ -385,7 +385,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
             onPress() {
               return warningId(senderId[14]).popWithKey(channelId);
             },
-            source: _modDef4815,
+            source: _modDef5009,
             iconSize: native.IconSizes.MEDIUM,
             accessibilityLabel: null
           };

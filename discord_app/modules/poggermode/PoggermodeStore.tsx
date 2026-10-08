@@ -1,13 +1,13 @@
-// === Module 7470: PoggermodeStore ===
+// === Module 13456: PoggermodeStore ===
 
-// Module 7470 (PoggermodeStore)
+// Module 13456 (PoggermodeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
-import PoggermodeUtils from "PoggermodeUtils" /* 7471 */;
+import PoggermodeUtils from "PoggermodeUtils" /* 13457 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import PoggermodeSettingsStore from "PoggermodeSettingsStore" /* 7175 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
+import PoggermodeSettingsStore from "PoggermodeSettingsStore" /* 7354 */;
 
 require = fn;
 function updateCombo(userId) {
@@ -45,7 +45,7 @@ function updateCombo(userId) {
     decayInterval1 = iter.decayInterval;
   }
   if (decayInterval1 == null) {
-    decayInterval1 = new obj2(2046).Interval();
+    decayInterval1 = new obj2(2058).Interval();
   }
   obj2.decayInterval = decayInterval1;
   const result = secondaryIndexMap.set("" + userId.userId + "-" + userId.channelId, obj2);
@@ -82,21 +82,25 @@ function updateCombo(userId) {
     }
   }
 }
-const PoggermodeConstants = fn(7176);
+const PoggermodeConstants = fn(7355);
 ({ ShakeLevel: hasOwnProperty, ShakeLocation: metroRequire } = PoggermodeConstants);
 const ComponentActions = fn(1085).ComponentActions;
 const set = new Set();
-const secondaryIndexMap = new fn(4510).SecondaryIndexMap((arg0) => {
+const secondaryIndexMap = new fn(4702).SecondaryIndexMap(function indexedBy(arg0) {
   const items = [, ];
   ({ userId: arr[0], channelId: arr[1] } = arg0);
   return items;
-}, (channelId) => "" + channelId.channelId + "-" + channelId.userId);
-const secondaryIndexMap1 = new fn(4510).SecondaryIndexMap((combo) => {
+}, function sortBy(channelId) {
+  return "" + channelId.channelId + "-" + channelId.userId;
+});
+const secondaryIndexMap1 = new fn(4702).SecondaryIndexMap(function indexedBy(combo) {
   const items = [, , ];
   ({ messageId: arr[0], channelId: arr[1] } = combo);
   items[2] = combo.combo.userId;
   return items;
-}, (channelId) => "" + channelId.channelId + "-" + channelId.combo.userId + "-" + channelId.messageId);
+}, function sortBy(channelId) {
+  return "" + channelId.channelId + "-" + channelId.combo.userId + "-" + channelId.messageId;
+});
 const Store = initializeDefault.Store;
 class PoggermodeStore extends Store {
 }

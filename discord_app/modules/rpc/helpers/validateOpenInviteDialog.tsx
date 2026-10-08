@@ -1,73 +1,77 @@
-// === Module 14339: validateOpenInviteDialog ===
+// === Module 14567: validateOpenInviteDialog ===
 
-// Module 14339 (validateOpenInviteDialog)
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8547 */;
-import RPCErrorDefault from "RPCError" /* 9059 */;
-import canViewInviteModal from "canViewInviteModal" /* 9298 */;
-import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14326 */;
-import FramesStore from "FramesStore" /* 9000 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
+// Module 14567 (validateOpenInviteDialog)
+import canViewInviteModal from "canViewInviteModal" /* 8508 */;
+import EmbeddedAppTypes from "EmbeddedAppTypes" /* 10615 */;
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 10616 */;
+import RPCErrorDefault from "RPCError" /* 11134 */;
+import getGuildIdForEmbeddedSurfaceDefault from "getGuildIdForEmbeddedSurface" /* 11140 */;
+import isPostMessageSocketDefault from "isPostMessageSocket" /* 14547 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
 
 require = fn;
-const TransportTypes = fn(5323).TransportTypes;
 const RPCErrors = fn(1085).RPCErrors;
-const asLaunched = fn(8738).asLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/helpers/validateOpenInviteDialog.tsx");
 
 export const validateOpenInviteDialog = function validateOpenInviteDialog(socket) {
-  if (socket.source.type !== TransportTypes.POST_MESSAGE) {
-    const obj2 = { errorCode: RPCErrors.INVALID_COMMAND };
-    const _HermesInternal3 = HermesInternal;
-    const tmp362 = new RPCErrorDefault(obj2, "command not available from \"" + socket.source.type + "\" transport");
-    throw tmp362;
-  } else {
-    const tmp46 = asLaunched(FramesStore.getFrameByIframeId(socket.source.iframeId));
-    if (null != tmp46) {
-      const surface = tmp46.surface;
-      const type = surface.type;
-      if (EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN === type) {
-        const obj3 = { frame: tmp46, channel: "Array", guild: "parent" };
-        return obj3;
-      } else {
-        if (EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL !== type) {
-          if (EmbeddedSurfaceType.EmbeddedSurfaceType.VOICE_CHANNEL !== type) {
-            const obj4 = { errorCode: RPCErrors.INVALID_CHANNEL };
-            const tmp30 = new RPCErrorDefault(obj4, "Invalid channel");
-            throw tmp30;
-          }
-        }
-        const obj5 = { frame: tmp46, channel: ChannelStore.getChannel(surface.channelId), guild: GuildStore.getGuild(surface.guildId) };
-        return obj5;
+  if (isPostMessageSocketDefault(socket)) {
+    ({ source, surface } = socket.context);
+    const tmp11 = getChannelIdForEmbeddedSurfaceDefault(surface);
+    const type = source.type;
+    if (EmbeddedAppTypes.EmbeddedContextSourceType.FRAME === type) {
+      const obj2 = { frameId: source.frameId, channel: null, guild: null };
+      let channel;
+      if (null != tmp11) {
+        channel = ChannelStore.getChannel(tmp11);
       }
-    } else {
-      const obj9 = getCurrentEmbeddedActivityChannelDefault();
-      if (null == obj9) {
-        const obj6 = { errorCode: RPCErrors.INVALID_CHANNEL };
-        const tmp21 = new RPCErrorDefault(obj6, "Invalid channel");
-        throw tmp21;
+      obj2.channel = channel;
+      obj2.guild = GuildStore.getGuild(getGuildIdForEmbeddedSurfaceDefault(surface));
+      return obj2;
+    } else if (EmbeddedAppTypes.EmbeddedContextSourceType.ACTIVITY === type) {
+      let channel1;
+      if (null != tmp11) {
+        channel1 = ChannelStore.getChannel(tmp11);
+      }
+      if (null == channel1) {
+        const obj3 = { errorCode: RPCErrors.INVALID_CHANNEL };
+        const tmp48 = new RPCErrorDefault(obj3, "Invalid channel");
+        throw tmp48;
       } else {
-        guild = GuildStore.getGuild(obj9.getGuildId());
+        guild = GuildStore.getGuild(channel1.getGuildId());
         if (null == guild) {
-          const obj7 = { errorCode: RPCErrors.INVALID_CHANNEL };
-          const _HermesInternal2 = HermesInternal;
-          const tmp48Result1 = new RPCErrorDefault(obj7, "Invalid guild " + obj9.getGuildId());
-          throw tmp48Result1;
+          const obj4 = { errorCode: RPCErrors.INVALID_CHANNEL };
+          const _HermesInternal3 = HermesInternal;
+          const tmpResult3 = new RPCErrorDefault(obj4, "Invalid guild " + channel1.getGuildId());
+          throw tmpResult3;
         } else {
-          if (obj10.canViewInviteModal(PermissionStore, guild, obj9)) {
-            const obj8 = { frame: "r", channel: obj9, guild };
-            return obj8;
+          if (tmp12Result.canViewInviteModal(PermissionStore, guild, channel1)) {
+            const obj5 = { frameId: "r", channel: channel1, guild };
+            return obj5;
           } else {
-            const obj = { errorCode: RPCErrors.INVALID_PERMISSIONS };
-            const _HermesInternal = HermesInternal;
-            const tmp7 = new RPCErrorDefault(obj, "No invite permissions for " + obj9.id);
-            throw tmp7;
+            const obj6 = { errorCode: RPCErrors.INVALID_PERMISSIONS };
+            const _HermesInternal2 = HermesInternal;
+            const tmpResult11 = new RPCErrorDefault(obj6, "No invite permissions for " + channel1.id);
+            throw tmpResult11;
           }
-          obj10 = canViewInviteModal;
+          tmp12Result = canViewInviteModal;
         }
       }
+    } else if (EmbeddedAppTypes.EmbeddedContextSourceType.INTERACTION === type) {
+      const obj7 = { errorCode: RPCErrors.INVALID_COMMAND };
+      const tmp23 = new RPCErrorDefault(obj7, "Command not supported in interaction modals");
+      throw tmp23;
+    } else {
+      const obj8 = { errorCode: RPCErrors.INVALID_COMMAND };
+      const tmp17 = new RPCErrorDefault(obj8, "Command not supported on this surface");
+      throw tmp17;
     }
+  } else {
+    const obj = { errorCode: RPCErrors.INVALID_COMMAND };
+    const _HermesInternal = HermesInternal;
+    const tmpResult21 = new RPCErrorDefault(obj, "command not available from \"" + socket.source.type + "\" transport");
+    throw tmpResult21;
   }
 };

@@ -1,6 +1,6 @@
-// === Module 12169: GuildPowerupsNotification ===
+// === Module 12248: GuildPowerupsNotification ===
 
-// Module 12169 (GuildPowerupsNotification)
+// Module 12248 (GuildPowerupsNotification)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/powerups/constants/GuildPowerupsNotification.tsx");

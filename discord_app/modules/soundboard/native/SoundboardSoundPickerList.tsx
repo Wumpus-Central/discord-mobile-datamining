@@ -1,25 +1,25 @@
-// === Module 17264: SoundboardSoundPickerList ===
+// === Module 17545: SoundboardSoundPickerList ===
 
-// Module 17264 (SoundboardSoundPickerList)
+// Module 17545 (SoundboardSoundPickerList)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4534 */;
-import ClockIcon from "ClockIcon" /* 4855 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import SoundboardTypes from "SoundboardTypes" /* 5812 */;
-import GuildIcon from "GuildIcon" /* 5978 */;
-import FastListDefault from "FastList" /* 6576 */;
-import TrophyIcon from "TrophyIcon" /* 8397 */;
-import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 9657 */;
-import PremiumUpsellSectionDivider from "PremiumUpsellSectionDivider" /* 9921 */;
-import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 9922 */;
-import chunkDefault from "chunk" /* 9964 */;
-import _modDef10129 from "module_10129" /* 10129 */;
-import SoundButton from "SoundButton" /* 17265 */;
-import _modDef17273 from "module_17273" /* 17273 */;
+import native from "native" /* 1200 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4726 */;
+import ClockIcon from "ClockIcon" /* 5049 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import GuildIcon from "GuildIcon" /* 6161 */;
+import FastListDefault from "FastList" /* 6752 */;
+import SoundboardTypes from "SoundboardTypes" /* 7039 */;
+import TrophyIcon from "TrophyIcon" /* 8895 */;
+import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 9394 */;
+import PremiumUpsellSectionDivider from "PremiumUpsellSectionDivider" /* 9442 */;
+import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 9443 */;
+import chunkDefault from "chunk" /* 9491 */;
+import _modDef9714 from "module_9714" /* 9714 */;
+import SoundButton from "SoundButton" /* 17546 */;
+import _modDef17554 from "module_17554" /* 17554 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const GuildIconDefault = GuildIcon;
 const PremiumUpsellSectionDividerDefault = PremiumUpsellSectionDivider;
@@ -56,100 +56,92 @@ function getSectionLabel(arr) {
     return intl.formatToPlainString(util.t.GXs41w, obj);
   }
 }
-function getFastListSectionsFromCategories(categories, arr, fontScale) {
+function getFastListSectionsFromCategories(categories, fastListSectionsFromCategories, fontScale) {
   const items = [];
   const iter = categories[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let arr2 = chunkDefault(nextResult.items, arr);
+    let arr2 = chunkDefault(nextResult.items, fastListSectionsFromCategories);
     let obj = { category: nextResult, height: arr2.length * sum + (18 * fontScale + 8), soundsByRow: arr2 };
-    arr = items.push(obj);
+    let arr = items.push(obj);
     continue;
   }
   return items;
 }
 const View = fn(17).View;
-const SoundboardStyleConstants = fn(17258);
+const SoundboardStyleConstants = fn(17539);
 ({ SOUND_ROW_HORIZONTAL_PADDING, SOUNDS_PER_ROW: metroRequire, SOUND_BUTTON_HEIGHT, SOUND_ROW_SPACING } = SoundboardStyleConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let sum = SOUND_BUTTON_HEIGHT + 8;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { row: { height: sum, display: "flex", flexDirection: "row", paddingHorizontal: SOUND_ROW_HORIZONTAL_PADDING }, sectionHeader: { flex: 1, display: "flex", flexDirection: "row", alignItems: "center", paddingTop: 16, paddingBottom: 8, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingHorizontal: SOUND_ROW_HORIZONTAL_PADDING }, sectionIcon: { height: 16, width: 16, borderRadius: 8, marginRight: 4 }, soundButtonNotFirst: { marginLeft: SOUND_ROW_SPACING } };
 let closure_10 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
-let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((row) => {
-  const cResult = row(category[11]).c(29);
+let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function SoundPickerButtonRow(row) {
+  const cResult = row(category[11]).c(27);
   row = row.row;
-  const sectionIndex = row.sectionIndex;
   category = row.section;
   const channel = row.channel;
-  let soundButtonNotFirst = closure_10();
+  const tmp4 = closure_10();
+  let soundButtonNotFirst = tmp4;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [isSectionLocked];
     const fn = function c() {
-      return sectionIndex(category[12]).canUseSoundboardEverywhere(isSectionLocked.getCurrentUser());
+      return soundButtonNotFirst(category[12]).canUseSoundboardEverywhere(isSectionLocked.getCurrentUser());
     };
     cResult[0] = items;
     cResult[1] = fn;
-    tmp4 = items;
-    tmp5 = fn;
+    tmp5 = items;
+    tmp6 = fn;
   } else {
-    [tmp4, tmp5] = cResult;
+    [tmp5, tmp6] = cResult;
   }
   let obj = row(category[11]);
-  const stateFromStores = row(category[13]).useStateFromStores(tmp4, tmp5);
+  const stateFromStores = row(category[13]).useStateFromStores(tmp5, tmp6);
   if (null == category) {
     return null;
   } else {
     if (cResult[2] === stateFromStores) {
       if (cResult[3] === channel) {
         if (cResult[4] === category.category) {
-          let tmp8 = cResult[5];
+          let tmp9 = cResult[5];
         }
-        isSectionLocked = tmp8;
-        if (cResult[6] !== soundButtonNotFirst.row) {
-          const items1 = [soundButtonNotFirst.row];
-          cResult[6] = soundButtonNotFirst.row;
-          cResult[7] = items1;
-          let tmp10 = items1;
-        } else {
-          tmp10 = cResult[7];
-        }
-        if (cResult[8] !== tmp8) {
-          let tmp12 = tmp8;
-          if (tmp8) {
+        isSectionLocked = tmp9;
+        if (cResult[6] !== tmp9) {
+          let tmp12 = tmp9;
+          if (tmp9) {
             tmp12 = closure_7(tmp(tmp2[15]).PremiumUpsellGradientBackground, {});
           }
-          cResult[8] = tmp8;
-          cResult[9] = tmp12;
+          cResult[6] = tmp9;
+          cResult[7] = tmp12;
           let tmp11 = tmp12;
         } else {
-          tmp11 = cResult[9];
+          tmp11 = cResult[7];
         }
-        if (cResult[10] === channel) {
-          if (cResult[11] === tmp8) {
-            if (cResult[12] === row) {
-              if (cResult[13] === category.category) {
-                if (cResult[14] === sectionIndex) {
-                  if (cResult[15] === soundButtonNotFirst.soundButtonNotFirst) {
-                    if (cResult[16] === arr3) {
-                      if (cResult[25] === tmp10) {
-                        if (cResult[26] === tmp11) {
-                          if (cResult[27] === tmp14) {
-                            let tmp18 = cResult[28];
+        if (cResult[8] === channel) {
+          if (cResult[9] === tmp9) {
+            if (cResult[10] === row) {
+              if (cResult[11] === category.category) {
+                if (cResult[12] === soundButtonNotFirst) {
+                  if (cResult[13] === tmp4.soundButtonNotFirst) {
+                    if (cResult[14] === arr2) {
+                      if (cResult[23] === tmp4.row) {
+                        if (cResult[24] === tmp11) {
+                          if (cResult[25] === tmp14) {
+                            let tmp18 = cResult[26];
                           }
                           return tmp18;
                         }
                       }
-                      let obj2 = { style: tmp10, children: null };
-                      const items2 = [tmp11, cResult[17]];
-                      obj2.children = items2;
+                      let obj2 = { style: tmp4.row, children: null };
+                      const items1 = [tmp11, cResult[15]];
+                      obj2.children = items1;
                       const tmp21 = closure_8(soundButtonNotFirst, obj2);
-                      cResult[25] = tmp10;
-                      cResult[26] = tmp11;
-                      cResult[27] = cResult[17];
-                      cResult[28] = tmp21;
+                      cResult[23] = tmp4.row;
+                      cResult[24] = tmp11;
+                      cResult[25] = cResult[15];
+                      cResult[26] = tmp21;
                       tmp18 = tmp21;
                     }
                   }
@@ -158,25 +150,25 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((row) => {
             }
           }
         }
-        if (cResult[18] === channel) {
-          if (cResult[19] === tmp8) {
-            if (cResult[20] === row) {
-              if (cResult[21] === category.category) {
-                if (cResult[22] === sectionIndex) {
-                  if (cResult[23] === soundButtonNotFirst.soundButtonNotFirst) {
-                    let tmp15 = cResult[24];
+        if (cResult[16] === channel) {
+          if (cResult[17] === tmp9) {
+            if (cResult[18] === row) {
+              if (cResult[19] === category.category) {
+                if (cResult[20] === soundButtonNotFirst) {
+                  if (cResult[21] === tmp4.soundButtonNotFirst) {
+                    let tmp15 = cResult[22];
                   }
-                  const mapped = arr3.map(tmp15);
-                  cResult[10] = channel;
-                  cResult[11] = tmp8;
-                  cResult[12] = row;
+                  const mapped = arr2.map(tmp15);
+                  cResult[8] = channel;
+                  cResult[9] = tmp9;
+                  cResult[10] = row;
                   category = category.category;
-                  cResult[13] = category;
-                  cResult[14] = sectionIndex;
-                  soundButtonNotFirst = soundButtonNotFirst.soundButtonNotFirst;
-                  cResult[15] = soundButtonNotFirst;
-                  cResult[16] = arr3;
-                  cResult[17] = mapped;
+                  cResult[11] = category;
+                  cResult[12] = soundButtonNotFirst;
+                  soundButtonNotFirst = tmp4.soundButtonNotFirst;
+                  cResult[13] = soundButtonNotFirst;
+                  cResult[14] = arr2;
+                  cResult[15] = mapped;
                 }
               }
             }
@@ -187,7 +179,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((row) => {
           if (SoundboardTypes.SoundboardSoundItemType.SOUND === type) {
             const sound = type.sound;
             const obj = { sound, channel, soundGridLocation: null, style: null, isSectionLocked: null };
-            const obj2 = { section: sectionIndex, item: row };
+            const obj2 = { section: soundButtonNotFirst, item: row };
             obj.soundGridLocation = obj2;
             soundButtonNotFirst = null;
             if (arg1 > 0) {
@@ -203,13 +195,13 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((row) => {
             throw error;
           }
         };
-        cResult[18] = channel;
-        cResult[19] = tmp8;
-        cResult[20] = row;
-        cResult[21] = category.category;
-        cResult[22] = sectionIndex;
-        cResult[23] = soundButtonNotFirst.soundButtonNotFirst;
-        cResult[24] = fn2;
+        cResult[16] = channel;
+        cResult[17] = tmp9;
+        cResult[18] = row;
+        cResult[19] = category.category;
+        cResult[20] = soundButtonNotFirst;
+        cResult[21] = tmp4.soundButtonNotFirst;
+        cResult[22] = fn2;
         tmp15 = fn2;
       }
     }
@@ -222,10 +214,10 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((row) => {
     cResult[3] = channel;
     cResult[4] = category.category;
     cResult[5] = result;
-    tmp8 = result;
+    tmp9 = result;
   }
   const tmpResult = row(category[13]);
-}) : ((row) => {
+}) : (function SoundPickerButtonRow(row) {
   row = row.row;
   ({ sectionIndex: importDefault, section } = row);
   const channel = row.channel;
@@ -243,13 +235,11 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((row) => {
       const tmp2Result = tmp2(section[14]);
     }
     c5 = result;
-    let obj2 = { style: null, children: null };
-    const items1 = [tmp.row];
-    obj2.style = items1;
+    let obj2 = { style: tmp.row, children: null };
     if (result) {
       result = closure_7(tmp2(section[15]).PremiumUpsellGradientBackground, {});
     }
-    const items2 = [
+    const items1 = [
       result,
       section.soundsByRow[row].map((type, index) => {
           type = type.type;
@@ -273,7 +263,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((row) => {
           }
         })
     ];
-    obj2.children = items2;
+    obj2.children = items1;
     return closure_8(soundButtonNotFirst, obj2);
   }
   let obj = row(section[13]);
@@ -283,19 +273,26 @@ let obj3 = { flex: 1, display: "flex", flexDirection: "row", alignItems: "center
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/soundboard/native/SoundboardSoundPickerList.tsx");
 
-export const SoundboardSoundPickerList = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+export const SoundboardSoundPickerList = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function SoundboardSoundPickerListComponent(channel) {
   const cResult = channel(576).c(44);
   channel = channel.channel;
   ({ insetBottom, listRef, scrollPosition: importDefault, onScroll: dependencyMap, setCategoryIndex } = channel);
   ({ shouldShowPremiumUpsell: View, categories } = channel);
+  let num = 0;
+  if (undefined !== insetBottom) {
+    num = insetBottom;
+  }
+  const tmp4 = closure_10();
+  UserStore = tmp4;
   let obj = channel(576);
-  const currentUser = closure_10();
-  const tmp5 = closure_10();
-  const fontScale = channel(5609).useFontScale();
+  const fontScale = channel(5382).useFontScale();
   if (cResult[0] !== categories) {
-    const tmp10 = calculateRowsPerSection(categories, arr);
+    const tmp9 = calculateRowsPerSection(categories, arr);
     cResult[0] = categories;
-    cResult[1] = tmp10;
+    cResult[1] = tmp9;
+    let tmp6 = tmp9;
+  } else {
+    tmp6 = cResult[1];
   }
   if (cResult[2] === categories) {
     if (cResult[3] === fontScale) {
@@ -304,138 +301,386 @@ export const SoundboardSoundPickerList = noop.memo(ReactCompilerGating.isReactCo
     if (cResult[5] !== arr) {
       const _Symbol = Symbol;
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-        class G {
-          constructor(arg0) {
-            return channel.height;
-          }
-        }
-        cResult[7] = G;
+        const fn = function k(height) {
+          return height.height;
+        };
+        cResult[7] = fn;
+        let tmp13 = fn;
       } else {
-        class G {
-          constructor(arg0) {
-            return channel.height;
-          }
-        }
+        tmp13 = cResult[7];
       }
-      const mapped = arr.map(G);
+      const mapped = arr.map(tmp13);
       cResult[5] = arr;
       cResult[6] = mapped;
     } else {
-      class G {
-        constructor(arg0) {
-          return channel.height;
-        }
-      }
+      closure_7 = tmp11;
       if (cResult[8] === channel) {
-        class G {
-          constructor(arg0) {
-            return channel.height;
-          }
+        if (cResult[9] === arr) {
+          let tmp16 = cResult[10];
         }
-        if (cResult[11] !== tmp12) {
-          class C {
-            constructor(arg0, arg1) {
-              rounded = Math.round(channel);
+        if (cResult[11] !== tmp11) {
+          function calculateCategory(arg0, arg1) {
+            const rounded = Math.round(arg0);
+            let num = 0;
+            if (0 < closure_7.length) {
+              sum = arg1 + tmp2[0];
+              let num3 = 0;
+              let num4 = 0;
               num = 0;
-              if (0 < closure_7.length) {
-                tmp3 = arg1;
-                sum = arg1 + tmp2[0];
-                num2 = 1;
-                num3 = 0;
-                num4 = 0;
-                num = 0;
-                if (rounded >= sum) {
-                  sum1 = num4 + 1;
-                  sum2 = num3 + 1;
-                  tmp7 = sum;
+              if (rounded >= sum) {
+                const sum1 = num4 + 1;
+                const sum2 = num3 + 1;
+                num = sum1;
+                while (sum2 < closure_7.length) {
+                  sum = sum + closure_7[sum2];
+                  num3 = sum2;
+                  num4 = sum1;
                   num = sum1;
-                  while (sum2 < closure_7.length) {
-                    sum = sum + closure_7[sum2];
-                    num3 = sum2;
-                    num4 = sum1;
-                    num = sum1;
-                    if (rounded < sum) {
-                      break;
-                    }
+                  if (rounded < sum) {
+                    break;
                   }
                 }
               }
-              return num;
             }
+            return num;
           }
-          cResult[11] = tmp12;
-          class O {
-            constructor(arg0, arg1) {
-              obj = { row: arg1, sectionIndex: channel, section: closure_6[channel], channel };
-              return jsx(f76834, obj);
-            }
-          }
-          cResult[12] = C;
+          cResult[11] = tmp11;
+          cResult[12] = calculateCategory;
+          let tmp18 = calculateCategory;
         } else {
-          class C {
-            constructor(arg0, arg1) {
-              rounded = Math.round(channel);
-              num = 0;
-              if (0 < closure_7.length) {
-                tmp3 = arg1;
-                sum = arg1 + tmp2[0];
-                num2 = 1;
-                num3 = 0;
-                num4 = 0;
-                num = 0;
-                if (rounded >= sum) {
-                  sum1 = num4 + 1;
-                  sum2 = num3 + 1;
-                  tmp7 = sum;
-                  num = sum1;
-                  while (sum2 < closure_7.length) {
-                    sum = sum + closure_7[sum2];
-                    num3 = sum2;
-                    num4 = sum1;
-                    num = sum1;
-                    if (rounded < sum) {
-                      break;
+          tmp18 = cResult[12];
+        }
+        closure_8 = tmp18;
+        if (cResult[13] === tmp18) {
+          if (cResult[14] === setCategoryIndex) {
+            let tmp19 = cResult[15];
+          }
+          closure_9 = tmp19;
+          const debounceResult = tmp(12).debounce((arg0, arg1) => {
+            const bound = Math.min(closure_8(arg0, -arg1 / 2), closure_7.length - 1);
+            let result = !closure_11;
+            if (!closure_11) {
+              result = null != arr[bound];
+            }
+            if (result) {
+              result = PremiumFeatureUpsellUtils.isSoundboardSectionNitroLocked(channel.guild_id, arr[bound].category.categoryInfo);
+            }
+            const result1 = View.set(result);
+          });
+          closure_10 = debounceResult;
+          const _Symbol2 = Symbol;
+          if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
+            let items = [UserStore];
+            class H {
+              constructor() {
+                obj = scrollPosition(onScroll[12]);
+                return obj.canUseSoundboardEverywhere(closure_5.getCurrentUser());
+              }
+            }
+            cResult[16] = items;
+            cResult[17] = H;
+            let tmp24 = H;
+            let tmp23 = items;
+          } else {
+            tmp23 = cResult[16];
+            tmp24 = cResult[17];
+          }
+          const tmpResult4 = tmp(12);
+          calculateRowsPerSection = tmp(504).useStateFromStores(tmp23, tmp24);
+          if (cResult[18] !== tmp4.sectionIcon) {
+            function getSectionIcon(category) {
+              const type = category.category.categoryInfo.type;
+              if (SoundboardTypes.SoundboardSoundGridSectionType.GUILD === type) {
+                const obj2 = { size: GuildIcon.GuildIconSizes.XXSMALL_12, guild: category.category.categoryInfo.guild, style: currentUser.sectionIcon };
+                return React5(GuildIconDefault, obj2);
+              } else if (SoundboardTypes.SoundboardSoundGridSectionType.DEFAULTS === type) {
+                const obj3 = { source: _modDef17554, style: currentUser.sectionIcon };
+                return React5(native.Icon, obj3);
+              } else if (SoundboardTypes.SoundboardSoundGridSectionType.FAVORITES === type) {
+                const obj4 = { source: _modDef9714, style: currentUser.sectionIcon };
+                return React5(native.Icon, obj4);
+              } else if (SoundboardTypes.SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
+                const obj5 = { style: currentUser.sectionIcon };
+                return React5(ClockIcon.ClockIcon, obj5);
+              } else if (SoundboardTypes.SoundboardSoundGridSectionType.SEARCH === type) {
+                return null;
+              } else if (SoundboardTypes.SoundboardSoundGridSectionType.TOP_SOUNDS === type) {
+                const obj = { style: currentUser.sectionIcon };
+                return React5(TrophyIcon.TrophyIcon, obj);
+              }
+            }
+            cResult[18] = tmp4.sectionIcon;
+            class H {
+              constructor() {
+                obj = scrollPosition(onScroll[12]);
+                return obj.canUseSoundboardEverywhere(closure_5.getCurrentUser());
+              }
+            }
+            cResult[19] = getSectionIcon;
+            let tmp26 = getSectionIcon;
+          } else {
+            tmp26 = cResult[19];
+          }
+          closure_12 = tmp26;
+          if (cResult[20] !== arr) {
+            function getSectionHeaderSize(arg0) {
+              if (null == tmp) {
+                let num2 = 0;
+              } else {
+                num2 = 42;
+              }
+              return num2;
+            }
+            cResult[20] = arr;
+            class H {
+              constructor() {
+                obj = scrollPosition(onScroll[12]);
+                return obj.canUseSoundboardEverywhere(closure_5.getCurrentUser());
+              }
+            }
+            cResult[21] = getSectionHeaderSize;
+            let tmp27 = getSectionHeaderSize;
+          } else {
+            tmp27 = cResult[21];
+          }
+          if (cResult[22] !== arr) {
+            function getRowHeight(arg0) {
+              let num = 0;
+              if (null != arr[arg0]) {
+                num = sum;
+              }
+              return num;
+            }
+            cResult[22] = arr;
+            class H {
+              constructor() {
+                obj = scrollPosition(onScroll[12]);
+                return obj.canUseSoundboardEverywhere(closure_5.getCurrentUser());
+              }
+            }
+            cResult[23] = getRowHeight;
+            let tmp28 = getRowHeight;
+          } else {
+            tmp28 = cResult[23];
+          }
+          function isSectionLocked(arg0) {
+            let result = !closure_11;
+            if (!closure_11) {
+              result = null != arr[arg0];
+            }
+            if (result) {
+              result = PremiumFeatureUpsellUtils.isSoundboardSectionNitroLocked(channel.guild_id, arr[arg0].category.categoryInfo);
+            }
+            return result;
+          }
+          if (cResult[24] !== isSectionLocked) {
+            function getSectionPosition(arg0) {
+              const diff = arg0 - 1;
+              let result = !closure_11;
+              if (!closure_11) {
+                result = null != arr[diff];
+              }
+              if (result) {
+                result = PremiumFeatureUpsellUtils.isSoundboardSectionNitroLocked(channel.guild_id, arr[diff].category.categoryInfo);
+              }
+              let result1 = !closure_11;
+              if (!closure_11) {
+                result1 = null != arr[arg0];
+              }
+              if (result1) {
+                result1 = PremiumFeatureUpsellUtils.isSoundboardSectionNitroLocked(channel.guild_id, arr[arg0].category.categoryInfo);
+              }
+              sum = arg0 + 1;
+              let result2 = !closure_11;
+              if (!closure_11) {
+                result2 = null != arr[sum];
+              }
+              if (result2) {
+                result2 = PremiumFeatureUpsellUtils.isSoundboardSectionNitroLocked(channel.guild_id, arr[sum].category.categoryInfo);
+              }
+              if (!result1) {
+                if (result2) {
+                  if (!result) {
+                    let START = PremiumUpsellSectionDivider.PremiumUpsellSectionDividerPosition.START;
+                  }
+                  return START;
+                }
+              }
+              let END = null;
+              if (result1) {
+                END = null;
+                if (!result2) {
+                  END = PremiumUpsellSectionDivider.PremiumUpsellSectionDividerPosition.END;
+                }
+              }
+              START = END;
+            }
+            cResult[24] = isSectionLocked;
+            class H {
+              constructor() {
+                obj = scrollPosition(onScroll[12]);
+                return obj.canUseSoundboardEverywhere(closure_5.getCurrentUser());
+              }
+            }
+            cResult[25] = getSectionPosition;
+            let tmp29 = getSectionPosition;
+          } else {
+            tmp29 = cResult[25];
+          }
+          getFastListSectionsFromCategories = tmp29;
+          if (cResult[26] !== tmp29) {
+            function getSectionFooterSize(arg0) {
+              let num = 0;
+              if (null != closure_13(arg0)) {
+                num = PremiumUpsellSectionDivider.PREMIUM_UPSELL_SECTION_DIVIDER_HEIGHT + PremiumUpsellSectionDivider.PREMIUM_UPSELL_SECTION_DIVIDER_MARGIN;
+              }
+              return num;
+            }
+            cResult[26] = tmp29;
+            class H {
+              constructor() {
+                obj = scrollPosition(onScroll[12]);
+                return obj.canUseSoundboardEverywhere(closure_5.getCurrentUser());
+              }
+            }
+            cResult[27] = getSectionFooterSize;
+            let tmp30 = getSectionFooterSize;
+          } else {
+            tmp30 = cResult[27];
+          }
+          if (cResult[28] !== tmp29) {
+            function renderSectionFooter(arg0) {
+              const tmp = closure_13(arg0);
+              let tmp2 = null;
+              if (null != tmp) {
+                const obj = { position: tmp };
+                tmp2 = React5(PremiumUpsellSectionDividerDefault, obj);
+              }
+              return tmp2;
+            }
+            cResult[28] = tmp29;
+            class H {
+              constructor() {
+                obj = scrollPosition(onScroll[12]);
+                return obj.canUseSoundboardEverywhere(closure_5.getCurrentUser());
+              }
+            }
+            cResult[29] = renderSectionFooter;
+            let tmp31 = renderSectionFooter;
+          } else {
+            tmp31 = cResult[29];
+          }
+          if (cResult[30] !== debounceResult) {
+            function te(nativeEvent) {
+              return debounceResult(0, nativeEvent.nativeEvent.layout.height);
+            }
+            cResult[30] = debounceResult;
+            class H {
+              constructor() {
+                obj = scrollPosition(onScroll[12]);
+                return obj.canUseSoundboardEverywhere(closure_5.getCurrentUser());
+              }
+            }
+            cResult[31] = te;
+            let tmp32 = te;
+          } else {
+            tmp32 = cResult[31];
+          }
+          function handleScroll(nativeEvent) {
+            nativeEvent = nativeEvent.nativeEvent;
+            const y = nativeEvent.contentOffset.y;
+            closure_9(y);
+            debounceResult(y, nativeEvent.layoutMeasurement.height);
+            if (nativeEvent.layoutMeasurement.height + nativeEvent.contentOffset.y < nativeEvent.contentSize.height - 20) {
+              if (null != importDefault) {
+                const result = importDefault.set(y);
+              }
+              if (dependencyMap != null) {
+                dependencyMap(nativeEvent);
+              }
+            }
+          }
+          function renderSectionHeader(arg0) {
+            let result = !closure_11;
+            if (!closure_11) {
+              result = null != arr[arg0];
+            }
+            if (result) {
+              result = PremiumFeatureUpsellUtils.isSoundboardSectionNitroLocked(channel.guild_id, arr[arg0].category.categoryInfo);
+            }
+            const obj2 = { style: currentUser.sectionHeader, children: null };
+            if (result) {
+              result = React5(PremiumUpsellGradientBackground.PremiumUpsellGradientBackground, {});
+            }
+            const obj3 = { children: null };
+            const items = [result, closure_12(arr[arg0]), React5(Text_Text.Text, { accessibilityRole: "header", lineClamp: 1, variant: "heading-sm/semibold", children: getSectionLabel(arr[arg0]) })];
+            obj2.children = items;
+            obj3.children = closure_2_8(View, obj2);
+            return React5(View, obj3, arr[arg0].category.key);
+          }
+          if (cResult[32] === tmp28) {
+            if (cResult[33] === tmp30) {
+              if (cResult[34] === tmp27) {
+                if (cResult[35] === handleScroll) {
+                  if (cResult[36] === num) {
+                    if (cResult[37] === listRef) {
+                      if (cResult[38] === tmp16) {
+                        if (cResult[39] === tmp31) {
+                          if (cResult[40] === renderSectionHeader) {
+                            if (cResult[41] === tmp6) {
+                              if (cResult[42] === tmp32) {
+                                let tmp33 = cResult[43];
+                              }
+                              return tmp33;
+                            }
+                          }
+                        }
+                      }
                     }
                   }
                 }
               }
-              return num;
             }
           }
+          let obj2 = { onLayout: tmp32, sections: tmp6, sectionSize: tmp27, itemSize: tmp28, sectionFooterSize: tmp30, ref: listRef, renderItem: tmp16, renderSection: renderSectionHeader, renderSectionFooter: tmp31, insetEnd: num, onScroll: handleScroll, keyboardShouldPersistTaps: "handled", optimizeListItemRender: true, inActionSheet: true };
+          const tmp36 = closure_7(FastListDefault, obj2);
+          cResult[32] = tmp28;
+          cResult[33] = tmp30;
+          cResult[34] = tmp27;
+          cResult[35] = handleScroll;
+          cResult[36] = num;
+          cResult[37] = listRef;
+          cResult[38] = tmp16;
+          cResult[39] = tmp31;
+          cResult[40] = renderSectionHeader;
+          cResult[41] = tmp6;
+          cResult[42] = tmp32;
+          cResult[43] = tmp36;
+          tmp33 = tmp36;
+          const tmpResult5 = tmp(504);
         }
-        C = tmp18;
-        class O {
-          constructor(arg0, arg1) {
-            obj = { row: arg1, sectionIndex: channel, section: closure_6[channel], channel };
-            return jsx(f76834, obj);
-          }
-        }
-        const debounceResult = tmp(12).debounce((arg0) => {
-          setCategoryIndex(C(arg0, 0));
+        const debounceResult1 = tmp(12).debounce((arg0) => {
+          setCategoryIndex(closure_8(arg0, 0));
         });
         cResult[13] = tmp18;
         cResult[14] = setCategoryIndex;
-        cResult[15] = debounceResult;
-        const tmpResult2 = tmp(12);
-      }
-      class O {
-        constructor(arg0, arg1) {
-          obj = { row: arg1, sectionIndex: channel, section: closure_6[channel], channel };
-          return jsx(f76834, obj);
-        }
+        cResult[15] = debounceResult1;
+        tmp19 = debounceResult1;
+        const tmpResult6 = tmp(12);
       }
       cResult[8] = channel;
       cResult[9] = arr;
-      cResult[10] = O;
+      cResult[10] = tmp17;
+      tmp16 = tmp17;
     }
   }
-  const tmp11 = getFastListSectionsFromCategories(categories, arr, fontScale);
+  const tmp10 = getFastListSectionsFromCategories(categories, arr, fontScale);
   cResult[2] = categories;
   cResult[3] = fontScale;
-  cResult[4] = tmp11;
-  arr = tmp11;
-  const tmpResult = channel(5609);
-}) : ((channel) => {
+  cResult[4] = tmp10;
+  arr = tmp10;
+  const tmpResult = channel(5382);
+}) : (function SoundboardSoundPickerListComponent(channel) {
   channel = channel.channel;
   let num = channel.insetBottom;
   if (num === undefined) {
@@ -486,8 +731,8 @@ export const SoundboardSoundPickerList = noop.memo(ReactCompilerGating.isReactCo
     START = END;
   }
   const currentUser = closure_10();
-  const fontScale = channel(5609).useFontScale();
-  let obj = channel(5609);
+  const fontScale = channel(5382).useFontScale();
+  let obj = channel(5382);
   const tmp3 = getFastListSectionsFromCategories(categories, closure_6, fontScale);
   closure_6 = tmp3;
   let items = [tmp3];
@@ -567,7 +812,7 @@ export const SoundboardSoundPickerList = noop.memo(ReactCompilerGating.isReactCo
       return closure_9(0, nativeEvent.nativeEvent.layout.height);
     },
     sections: tmp2,
-    sectionSize(arg0) {
+    sectionSize: function getSectionHeaderSize(arg0) {
       if (null == tmp) {
         let num2 = 0;
       } else {
@@ -575,23 +820,23 @@ export const SoundboardSoundPickerList = noop.memo(ReactCompilerGating.isReactCo
       }
       return num2;
     },
-    itemSize(arg0) {
+    itemSize: function getRowHeight(arg0) {
       let num = 0;
       if (null != closure_6[arg0]) {
         num = sum;
       }
       return num;
     },
-    sectionFooterSize(categories) {
+    sectionFooterSize: function getSectionFooterSize(arg0) {
       let num = 0;
-      if (null != getSectionPosition(categories)) {
+      if (null != getSectionPosition(arg0)) {
         num = PremiumUpsellSectionDivider.PREMIUM_UPSELL_SECTION_DIVIDER_HEIGHT + PremiumUpsellSectionDivider.PREMIUM_UPSELL_SECTION_DIVIDER_MARGIN;
       }
       return num;
     },
     ref: channel.listRef,
     renderItem: callback,
-    renderSection(arg0) {
+    renderSection: function renderSectionHeader(arg0) {
       let result = !closure_10;
       if (!closure_10) {
         result = null != closure_6[arg0];
@@ -609,10 +854,10 @@ export const SoundboardSoundPickerList = noop.memo(ReactCompilerGating.isReactCo
         const obj3 = { size: GuildIcon.GuildIconSizes.XXSMALL_12, guild: tmp2.category.categoryInfo.guild, style: currentUser.sectionIcon };
         let tmp8Result = React5(GuildIconDefault, obj3);
       } else if (SoundboardTypes.SoundboardSoundGridSectionType.DEFAULTS === type) {
-        const obj4 = { source: _modDef17273, style: currentUser.sectionIcon };
+        const obj4 = { source: _modDef17554, style: currentUser.sectionIcon };
         tmp8Result = React5(native.Icon, obj4);
       } else if (SoundboardTypes.SoundboardSoundGridSectionType.FAVORITES === type) {
-        const obj5 = { source: _modDef10129, style: currentUser.sectionIcon };
+        const obj5 = { source: _modDef9714, style: currentUser.sectionIcon };
         tmp8Result = React5(native.Icon, obj5);
       } else if (SoundboardTypes.SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
         const obj6 = { style: currentUser.sectionIcon };
@@ -633,8 +878,8 @@ export const SoundboardSoundPickerList = noop.memo(ReactCompilerGating.isReactCo
       obj8.children = closure_2_8(View, obj2);
       return React5(View, obj8, closure_6[arg0].category.key);
     },
-    renderSectionFooter(categories) {
-      const tmp = getSectionPosition(categories);
+    renderSectionFooter(arg0) {
+      const tmp = getSectionPosition(arg0);
       let tmp2 = null;
       if (null != tmp) {
         const obj = { position: tmp };
@@ -643,7 +888,7 @@ export const SoundboardSoundPickerList = noop.memo(ReactCompilerGating.isReactCo
       return tmp2;
     },
     insetEnd: num,
-    onScroll(nativeEvent) {
+    onScroll: function handleScroll(nativeEvent) {
       nativeEvent = nativeEvent.nativeEvent;
       const y = nativeEvent.contentOffset.y;
       closure_8(y);

@@ -1,21 +1,21 @@
-// === Module 17240: VoicePanelAccessibilityView ===
+// === Module 17521: VoicePanelAccessibilityView ===
 
-// Module 17240 (VoicePanelAccessibilityView)
+// Module 17521 (VoicePanelAccessibilityView)
 import c from "c" /* 576 */;
-import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 17236 */;
+import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 17517 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 let closure_2 = ["style", "pointerEvents", "nativeID", "accessibilityViewIsModal", "onAccessibilityEscape"];
-const VoicePanelPIPModes = fn(17235).VoicePanelPIPModes;
+const VoicePanelPIPModes = fn(17516).VoicePanelPIPModes;
 const jsx = fn(21).jsx;
-let closure_6 = noop.memo(fn(5774).AccessibilityViewAnimated);
+let closure_6 = noop.memo(fn(5357).AccessibilityViewAnimated);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/VoicePanelAccessibilityView.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePanelAccessibilityView(arg0) {
   const cResult = c.c(14);
   if (cResult[0] !== arg0) {
     ({ style, pointerEvents, nativeID, accessibilityViewIsModal, onAccessibilityEscape } = arg0);
@@ -74,7 +74,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   tmp14 = tmp16;
   const obj2 = { style: tmp8, pointerEvents: str, nativeID: tmp5, accessibilityViewIsModal: tmp4, onAccessibilityEscape: tmp6 };
   tmpResult = VoicePanelPIPStateContext;
-}) : ((pointerEvents) => {
+}) : (function VoicePanelAccessibilityView(pointerEvents) {
   let str = pointerEvents.pointerEvents;
   if (str === undefined) {
     str = "box-none";

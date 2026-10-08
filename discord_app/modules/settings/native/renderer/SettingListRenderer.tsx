@@ -1,22 +1,22 @@
-// === Module 14516: SettingListRenderer ===
+// === Module 14776: SettingListRenderer ===
 
-// Module 14516 (SettingListRenderer)
+// Module 14776 (SettingListRenderer)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1881 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import TableRowGroup from "TableRowGroup" /* 6081 */;
-import _mod8404 from "module_8404" /* 8404 */;
-import SettingRenderer from "SettingRenderer" /* 14518 */;
-import SettingRendererUtils from "SettingRendererUtils" /* 14519 */;
-import useAutoScrollToSetting from "useAutoScrollToSetting" /* 14523 */;
-import useSettingSearchResults from "useSettingSearchResults" /* 14524 */;
-import SettingsSearchEmptyStateDefault from "SettingsSearchEmptyState" /* 14527 */;
-import SettingSearchBarDefault from "SettingSearchBar" /* 14528 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1893 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import TableRowGroup from "TableRowGroup" /* 6267 */;
+import _mod8600 from "module_8600" /* 8600 */;
+import SettingRenderer from "SettingRenderer" /* 14778 */;
+import SettingRendererUtils from "SettingRendererUtils" /* 14779 */;
+import useAutoScrollToSetting from "useAutoScrollToSetting" /* 14784 */;
+import useSettingSearchResults from "useSettingSearchResults" /* 14785 */;
+import SettingsSearchEmptyStateDefault from "SettingsSearchEmptyState" /* 14788 */;
+import SettingSearchBarDefault from "SettingSearchBar" /* 14789 */;
 import noop from "module_19" /* 19 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 14517 */;
-import SettingBlocklistStore from "SettingBlocklistStore" /* 14424 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 14777 */;
+import SettingBlocklistStore from "SettingBlocklistStore" /* 14650 */;
 
 const require = globalThis.__r;
 
@@ -76,13 +76,13 @@ function keyExtractor(type, arg1) {
   return "" + type.type + "-" + label;
 }
 const View = fn(17).View;
-const ListItemType = fn(11143).ListItemType;
+const ListItemType = fn(11263).ListItemType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { container: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, flexGrow: 1 }, contentContainer: { paddingHorizontal: 16 }, searchResultsHeader: { paddingBottom: 24 }, spacer: { paddingTop: 24 }, subLabel: { marginTop: 8 } };
 let closure_9 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((label) => {
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function SearchListSectionLabel(label) {
   const cResult = c.c(5);
   label = label.label;
   const tmp4 = closure_9();
@@ -110,7 +110,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((label) => {
   cResult[4] = tmp8;
   tmp7 = tmp8;
   const obj3 = { style: tmp4.spacer, children: tmp5 };
-}) : ((label) => {
+}) : (function SearchListSectionLabel(label) {
   label = label.label;
   const obj = { style: closure_9().spacer, children: null };
   let tmpResult = label;
@@ -122,7 +122,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((label) => {
   return <View style={closure_9().spacer}>{null}</View>;
 });
 ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((subLabel) => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function SearchListSectionSubLabel(subLabel) {
   const cResult = c.c(5);
   subLabel = subLabel.subLabel;
   const tmp4 = closure_9();
@@ -152,7 +152,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((subLabel) => {
   cResult[4] = tmp9;
   tmp8 = tmp9;
   const obj3 = { style: tmp4.subLabel, children: tmp5 };
-}) : ((subLabel) => {
+}) : (function SearchListSectionSubLabel(subLabel) {
   subLabel = subLabel.subLabel;
   const obj = { style: closure_9().subLabel, children: null };
   if (typeof subLabel === "string") {
@@ -168,7 +168,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((subLabel) => {
 fn(558);
 let obj3 = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, flexGrow: 1 };
 ReactCompilerGating = fn(558);
-const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((node) => {
+const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function SettingsList(node) {
   const cResult = c.c(14);
   node = node.node;
   const tmp4 = closure_9();
@@ -212,7 +212,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((no
         }
       }
       const obj4 = { ref, ListHeaderComponent: node.ListHeaderComponent, contentContainerStyle: tmp14, scrollIndicatorInsets: tmp18, keyExtractor, renderItem, data: tmp7, getItemType };
-      const tmp24 = jsx(_mod8404.FlashList, { ref, ListHeaderComponent: node.ListHeaderComponent, contentContainerStyle: tmp14, scrollIndicatorInsets: tmp18, keyExtractor, renderItem, data: tmp7, getItemType });
+      const tmp24 = jsx(_mod8600.FlashList, { ref, ListHeaderComponent: node.ListHeaderComponent, contentContainerStyle: tmp14, scrollIndicatorInsets: tmp18, keyExtractor, renderItem, data: tmp7, getItemType });
       cResult[7] = tmp7;
       cResult[8] = node.ListHeaderComponent;
       cResult[9] = tmp14;
@@ -234,33 +234,33 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((no
   cResult[2] = toSettingListItemsResult;
   tmp7 = toSettingListItemsResult;
   const tmpResult2 = SettingRendererUtils;
-}) : ((node) => {
+}) : (function SettingsList(node) {
   node = node.node;
   const tmp = closure_9();
   const field = SettingBlocklistStore.useField("blocklist");
   const items = [field, node];
   const memo = noop.useMemo(() => SettingRendererUtils.toSettingListItems(node, field), items);
   const ref = noop.useRef(null);
-  node(14523).useAutoScrollToSearchResultSetting(ref, memo, node.scrollTarget);
+  node(14784).useAutoScrollToSearchResultSetting(ref, memo, node.scrollTarget);
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { ref, ListHeaderComponent: node.ListHeaderComponent, contentContainerStyle: null, scrollIndicatorInsets: null, keyExtractor: null, renderItem: null, data: null, getItemType: null };
   const obj4 = {};
   const merged = Object.assign(tmp.contentContainer);
-  obj4.paddingBottom = field(1618)().bottom + field(587).space.PX_16;
+  obj4.paddingBottom = field(1630)().bottom + field(587).space.PX_16;
   obj3.contentContainerStyle = obj4;
   obj3.scrollIndicatorInsets = { right: 0.01 };
   obj3.keyExtractor = keyExtractor;
   obj3.renderItem = renderItem;
   obj3.data = memo;
   obj3.getItemType = getItemType;
-  obj2.children = jsx(node(8404).FlashList, { ref, ListHeaderComponent: node.ListHeaderComponent, contentContainerStyle: null, scrollIndicatorInsets: null, keyExtractor: null, renderItem: null, data: null, getItemType: null });
+  obj2.children = jsx(node(8600).FlashList, { ref, ListHeaderComponent: node.ListHeaderComponent, contentContainerStyle: null, scrollIndicatorInsets: null, keyExtractor: null, renderItem: null, data: null, getItemType: null });
   return <View style={tmp.container}>{null}</View>;
 }));
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/settings/native/renderer/SettingListRenderer.tsx");
 
 export const SettingsList = memoResult;
-export const SearchableSettingsList = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((node) => {
+export const SearchableSettingsList = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function SearchableSettingsList(node) {
   const cResult = c.c(24);
   node = node.node;
   const tmp4 = closure_9();
@@ -319,7 +319,7 @@ export const SearchableSettingsList = noop.memo(ReactCompilerGating.isReactCompi
                     }
                   }
                   const obj4 = { keyboardShouldPersistTaps: "always", contentContainerStyle: tmp20, ListHeaderComponentStyle: tmp13, ListHeaderComponent: SettingSearchBarDefault, ListEmptyComponent: tmp16, onScroll: KeyboardManagerUtils.dismissGlobalKeyboard, scrollIndicatorInsets: tmp23, keyExtractor, renderItem, data: arr, getItemType };
-                  const tmp29 = jsx(_mod8404.FlashList, { keyboardShouldPersistTaps: "always", contentContainerStyle: tmp20, ListHeaderComponentStyle: tmp13, ListHeaderComponent: SettingSearchBarDefault, ListEmptyComponent: tmp16, onScroll: KeyboardManagerUtils.dismissGlobalKeyboard, scrollIndicatorInsets: tmp23, keyExtractor, renderItem, data: arr, getItemType });
+                  const tmp29 = jsx(_mod8600.FlashList, { keyboardShouldPersistTaps: "always", contentContainerStyle: tmp20, ListHeaderComponentStyle: tmp13, ListHeaderComponent: SettingSearchBarDefault, ListEmptyComponent: tmp16, onScroll: KeyboardManagerUtils.dismissGlobalKeyboard, scrollIndicatorInsets: tmp23, keyExtractor, renderItem, data: arr, getItemType });
                   cResult[19] = tmp16;
                   cResult[20] = tmp13;
                   cResult[21] = arr;
@@ -374,7 +374,7 @@ export const SearchableSettingsList = noop.memo(ReactCompilerGating.isReactCompi
   cResult[3] = toSettingListItemsResult;
   tmp10 = toSettingListItemsResult;
   const tmpResult2 = SettingRendererUtils;
-}) : ((node) => {
+}) : (function SearchableSettingsList(node) {
   node = node.node;
   let settings;
   state = undefined;

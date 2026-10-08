@@ -1,7 +1,7 @@
-// === Module 10163: HorizontalAutocompleteWrapper ===
+// === Module 9749: HorizontalAutocompleteWrapper ===
 
-// Module 10163 (HorizontalAutocompleteWrapper)
-import timing from "timing" /* 4897 */;
+// Module 9749 (HorizontalAutocompleteWrapper)
+import timing from "timing" /* 5091 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/composer/horizontal_autocomplete/HorizontalAutocompleteWrapper.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onPressAutocompleteItem) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function HorizontalAutocompleteWrapper(onPressAutocompleteItem) {
   const cResult = channel(autocompleteSelectionStart[5]).c(21);
   ({ style, channel } = onPressAutocompleteItem);
   onPressAutocompleteItem = onPressAutocompleteItem.onPressAutocompleteItem;
@@ -41,7 +41,70 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onPressAutocompl
             if (results.length > 0) {
               num8 = 1;
             }
-            class I {
+            class S {
+              constructor(arg0) {
+                item = onPressAutocompleteItem.item;
+                type = item.type;
+                tmp = c5;
+                if (c5.USER === type) {
+                  tmp22 = closure_1_6;
+                  tmp23 = onPressAutocompleteItem;
+                  tmp24 = closure_2;
+                  obj1 = {};
+                  tmp25 = obj1;
+                  tmp26 = item;
+                  merged = Object.assign(item);
+                  tmp28 = item;
+                  obj1.guildId = item.guild_id;
+                  obj1.onPress = function onPress(arg0) {
+                    return closure_4(arg0, item);
+                  };
+                  return closure_1_6(onPressAutocompleteItem(closure_2[7]).User, obj1);
+                } else if (tmp.ROLE === type) {
+                  tmp15 = closure_1_6;
+                  tmp16 = onPressAutocompleteItem;
+                  tmp17 = closure_2;
+                  obj5 = {};
+                  tmp18 = obj5;
+                  tmp19 = item;
+                  merged1 = Object.assign(item);
+                  tmp21 = item;
+                  obj5.guildId = item.guild_id;
+                  obj5.onPress = function onPress(arg0) {
+                    return closure_4(arg0, item);
+                  };
+                  return closure_1_6(onPressAutocompleteItem(closure_2[7]).Role, obj5);
+                } else if (tmp.CHANNEL === type) {
+                  tmp9 = closure_1_6;
+                  tmp10 = onPressAutocompleteItem;
+                  tmp11 = closure_2;
+                  obj6 = {};
+                  tmp12 = obj6;
+                  tmp13 = item;
+                  merged2 = Object.assign(item);
+                  obj6.onPress = function onPress(arg0) {
+                    return closure_4(arg0, item);
+                  };
+                  return closure_1_6(onPressAutocompleteItem(closure_2[7]).Channel, obj6);
+                } else if (tmp.EMOJI === type) {
+                  tmp3 = closure_1_6;
+                  tmp4 = onPressAutocompleteItem;
+                  tmp5 = closure_2;
+                  obj = {};
+                  tmp6 = obj;
+                  tmp7 = item;
+                  merged3 = Object.assign(item);
+                  obj.onPress = function onPress(arg0) {
+                    return closure_4(arg0, item);
+                  };
+                  return closure_1_6(onPressAutocompleteItem(closure_2[7]).Emoji, obj);
+                } else {
+                  tmp2 = null;
+                  return null;
+                }
+              }
+            }
+            class H {
               constructor() {
                 obj = { opacity: null };
                 obj2 = closure_0(closure_2[9]);
@@ -50,16 +113,79 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onPressAutocompl
               }
             }
             let obj2 = { withTiming: channel(autocompleteSelectionStart[9]).withTiming, toValue: num8 };
-            I.__closure = obj2;
-            I.__workletHash = 7895652904738;
-            I.__initData = __initData;
-            const animatedStyle = channel(autocompleteSelectionStart[8]).useAnimatedStyle(I);
+            H.__closure = obj2;
+            H.__workletHash = 7895652904738;
+            H.__initData = __initData;
+            const animatedStyle = channel(autocompleteSelectionStart[8]).useAnimatedStyle(H);
             if (cResult[11] === animatedStyle) {
               if (cResult[12] === style) {
                 let tmp10 = cResult[13];
               }
               const _Symbol = Symbol;
-              class I {
+              class S {
+                constructor(arg0) {
+                  item = onPressAutocompleteItem.item;
+                  type = item.type;
+                  tmp = c5;
+                  if (c5.USER === type) {
+                    tmp22 = closure_1_6;
+                    tmp23 = onPressAutocompleteItem;
+                    tmp24 = closure_2;
+                    obj1 = {};
+                    tmp25 = obj1;
+                    tmp26 = item;
+                    merged = Object.assign(item);
+                    tmp28 = item;
+                    obj1.guildId = item.guild_id;
+                    obj1.onPress = function onPress(arg0) {
+                      return closure_4(arg0, item);
+                    };
+                    return closure_1_6(onPressAutocompleteItem(closure_2[7]).User, obj1);
+                  } else if (tmp.ROLE === type) {
+                    tmp15 = closure_1_6;
+                    tmp16 = onPressAutocompleteItem;
+                    tmp17 = closure_2;
+                    obj5 = {};
+                    tmp18 = obj5;
+                    tmp19 = item;
+                    merged1 = Object.assign(item);
+                    tmp21 = item;
+                    obj5.guildId = item.guild_id;
+                    obj5.onPress = function onPress(arg0) {
+                      return closure_4(arg0, item);
+                    };
+                    return closure_1_6(onPressAutocompleteItem(closure_2[7]).Role, obj5);
+                  } else if (tmp.CHANNEL === type) {
+                    tmp9 = closure_1_6;
+                    tmp10 = onPressAutocompleteItem;
+                    tmp11 = closure_2;
+                    obj6 = {};
+                    tmp12 = obj6;
+                    tmp13 = item;
+                    merged2 = Object.assign(item);
+                    obj6.onPress = function onPress(arg0) {
+                      return closure_4(arg0, item);
+                    };
+                    return closure_1_6(onPressAutocompleteItem(closure_2[7]).Channel, obj6);
+                  } else if (tmp.EMOJI === type) {
+                    tmp3 = closure_1_6;
+                    tmp4 = onPressAutocompleteItem;
+                    tmp5 = closure_2;
+                    obj = {};
+                    tmp6 = obj;
+                    tmp7 = item;
+                    merged3 = Object.assign(item);
+                    obj.onPress = function onPress(arg0) {
+                      return closure_4(arg0, item);
+                    };
+                    return closure_1_6(onPressAutocompleteItem(closure_2[7]).Emoji, obj);
+                  } else {
+                    tmp2 = null;
+                    return null;
+                  }
+                }
+              }
+              class H {
                 constructor() {
                   obj = { opacity: null };
                   obj2 = closure_0(closure_2[9]);
@@ -77,8 +203,71 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onPressAutocompl
                   }
                   return tmp18;
                 }
+                class S {
+                  constructor(arg0) {
+                    item = onPressAutocompleteItem.item;
+                    type = item.type;
+                    tmp = c5;
+                    if (c5.USER === type) {
+                      tmp22 = closure_1_6;
+                      tmp23 = onPressAutocompleteItem;
+                      tmp24 = closure_2;
+                      obj1 = {};
+                      tmp25 = obj1;
+                      tmp26 = item;
+                      merged = Object.assign(item);
+                      tmp28 = item;
+                      obj1.guildId = item.guild_id;
+                      obj1.onPress = function onPress(arg0) {
+                        return closure_4(arg0, item);
+                      };
+                      return closure_1_6(onPressAutocompleteItem(closure_2[7]).User, obj1);
+                    } else if (tmp.ROLE === type) {
+                      tmp15 = closure_1_6;
+                      tmp16 = onPressAutocompleteItem;
+                      tmp17 = closure_2;
+                      obj5 = {};
+                      tmp18 = obj5;
+                      tmp19 = item;
+                      merged1 = Object.assign(item);
+                      tmp21 = item;
+                      obj5.guildId = item.guild_id;
+                      obj5.onPress = function onPress(arg0) {
+                        return closure_4(arg0, item);
+                      };
+                      return closure_1_6(onPressAutocompleteItem(closure_2[7]).Role, obj5);
+                    } else if (tmp.CHANNEL === type) {
+                      tmp9 = closure_1_6;
+                      tmp10 = onPressAutocompleteItem;
+                      tmp11 = closure_2;
+                      obj6 = {};
+                      tmp12 = obj6;
+                      tmp13 = item;
+                      merged2 = Object.assign(item);
+                      obj6.onPress = function onPress(arg0) {
+                        return closure_4(arg0, item);
+                      };
+                      return closure_1_6(onPressAutocompleteItem(closure_2[7]).Channel, obj6);
+                    } else if (tmp.EMOJI === type) {
+                      tmp3 = closure_1_6;
+                      tmp4 = onPressAutocompleteItem;
+                      tmp5 = closure_2;
+                      obj = {};
+                      tmp6 = obj;
+                      tmp7 = item;
+                      merged3 = Object.assign(item);
+                      obj.onPress = function onPress(arg0) {
+                        return closure_4(arg0, item);
+                      };
+                      return closure_1_6(onPressAutocompleteItem(closure_2[7]).Emoji, obj);
+                    } else {
+                      tmp2 = null;
+                      return null;
+                    }
+                  }
+                }
                 let obj3 = { style: null, children: null };
-                class I {
+                class H {
                   constructor() {
                     obj = { opacity: null };
                     obj2 = closure_0(closure_2[9]);
@@ -87,11 +276,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onPressAutocompl
                   }
                 }
                 obj3.children = tmp14;
-                const tmp21 = jsx(onPressAutocompleteItem(autocompleteSelectionStart[8]).View, { style: null, children: null });
+                const tmp20 = jsx(onPressAutocompleteItem(autocompleteSelectionStart[8]).View, { style: null, children: null });
                 cResult[18] = tmp10;
                 cResult[19] = tmp14;
-                cResult[20] = tmp21;
-                tmp18 = tmp21;
+                cResult[20] = tmp20;
+                tmp18 = tmp20;
               }
               let obj4 = { keyboardShouldPersistTaps: "always", horizontal: true, keyExtractor: tmp13, data: results, renderItem: tmp7 };
               const tmp17 = <closure_4 keyboardShouldPersistTaps="always" horizontal keyExtractor={tmp13} data={results} renderItem={tmp7} />;
@@ -107,46 +296,72 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onPressAutocompl
             tmp10 = items;
             const tmpResult2 = channel(autocompleteSelectionStart[8]);
           }
-          const fn2 = function f(item) {
-            item = item.item;
-            const type = item.type;
-            if (num8.USER === type) {
-              const obj2 = {};
-              const merged = Object.assign(item);
-              obj2.guildId = item.guild_id;
-              obj2.onPress = function onPress(arg0) {
-                return closure_4(arg0, item);
-              };
-              return jsx(onPressAutocompleteItem(autocompleteSelectionStart[7]).User, {});
-            } else if (num8.ROLE === type) {
-              const obj3 = {};
-              const merged1 = Object.assign(item);
-              obj3.guildId = item.guild_id;
-              obj3.onPress = function onPress(arg0) {
-                return closure_4(arg0, item);
-              };
-              return jsx(onPressAutocompleteItem(autocompleteSelectionStart[7]).Role, {});
-            } else if (num8.CHANNEL === type) {
-              const obj4 = {};
-              const merged2 = Object.assign(item);
-              obj4.onPress = function onPress(arg0) {
-                return closure_4(arg0, item);
-              };
-              return jsx(onPressAutocompleteItem(autocompleteSelectionStart[7]).Channel, {});
-            } else if (num8.EMOJI === type) {
-              const obj = {};
-              const merged3 = Object.assign(item);
-              obj.onPress = function onPress(arg0) {
-                return closure_4(arg0, item);
-              };
-              return jsx(onPressAutocompleteItem(autocompleteSelectionStart[7]).Emoji, {});
-            } else {
-              return null;
+          class S {
+            constructor(arg0) {
+              item = onPressAutocompleteItem.item;
+              type = item.type;
+              tmp = c5;
+              if (c5.USER === type) {
+                tmp22 = closure_1_6;
+                tmp23 = onPressAutocompleteItem;
+                tmp24 = closure_2;
+                obj1 = {};
+                tmp25 = obj1;
+                tmp26 = item;
+                merged = Object.assign(item);
+                tmp28 = item;
+                obj1.guildId = item.guild_id;
+                obj1.onPress = function onPress(arg0) {
+                  return closure_4(arg0, item);
+                };
+                return closure_1_6(onPressAutocompleteItem(closure_2[7]).User, obj1);
+              } else if (tmp.ROLE === type) {
+                tmp15 = closure_1_6;
+                tmp16 = onPressAutocompleteItem;
+                tmp17 = closure_2;
+                obj5 = {};
+                tmp18 = obj5;
+                tmp19 = item;
+                merged1 = Object.assign(item);
+                tmp21 = item;
+                obj5.guildId = item.guild_id;
+                obj5.onPress = function onPress(arg0) {
+                  return closure_4(arg0, item);
+                };
+                return closure_1_6(onPressAutocompleteItem(closure_2[7]).Role, obj5);
+              } else if (tmp.CHANNEL === type) {
+                tmp9 = closure_1_6;
+                tmp10 = onPressAutocompleteItem;
+                tmp11 = closure_2;
+                obj6 = {};
+                tmp12 = obj6;
+                tmp13 = item;
+                merged2 = Object.assign(item);
+                obj6.onPress = function onPress(arg0) {
+                  return closure_4(arg0, item);
+                };
+                return closure_1_6(onPressAutocompleteItem(closure_2[7]).Channel, obj6);
+              } else if (tmp.EMOJI === type) {
+                tmp3 = closure_1_6;
+                tmp4 = onPressAutocompleteItem;
+                tmp5 = closure_2;
+                obj = {};
+                tmp6 = obj;
+                tmp7 = item;
+                merged3 = Object.assign(item);
+                obj.onPress = function onPress(arg0) {
+                  return closure_4(arg0, item);
+                };
+                return closure_1_6(onPressAutocompleteItem(closure_2[7]).Emoji, obj);
+              } else {
+                tmp2 = null;
+                return null;
+              }
             }
-          };
+          }
           cResult[9] = tmp6;
-          cResult[10] = fn2;
-          tmp7 = fn2;
+          cResult[10] = S;
+          tmp7 = S;
         }
       }
       const fn = function w(stopPropagation, arg1) {
@@ -176,7 +391,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onPressAutocompl
   cResult[3] = obj5;
   tmp4 = obj5;
   let obj = channel(autocompleteSelectionStart[5]);
-}) : ((channel) => {
+}) : (function HorizontalAutocompleteWrapper(channel) {
   channel = channel.channel;
   const onPressAutocompleteItem = channel.onPressAutocompleteItem;
   autocompleteSelectionStart = undefined;

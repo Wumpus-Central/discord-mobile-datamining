@@ -1,8 +1,8 @@
-// === Module 14978: QuestDockBlurredContentBackground ===
+// === Module 15240: QuestDockBlurredContentBackground ===
 
-// Module 14978 (QuestDockBlurredContentBackground)
+// Module 15240 (QuestDockBlurredContentBackground)
 import c from "c" /* 576 */;
-import VisualEffectViewAnimatedDefault from "VisualEffectViewAnimated" /* 5779 */;
+import VisualEffectViewAnimatedDefault from "VisualEffectViewAnimated" /* 5362 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockBlurredContentBackground.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function QuestDockBlurredContentBackground(arg0) {
   const cResult = c.c(8);
   ({ layoutAnimatedStyle, opacityAnimatedStyle, layoutAnimation, blurTheme } = arg0);
   let str = "dark";
@@ -55,7 +55,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   cResult[1] = opacityAnimatedStyle;
   cResult[2] = items;
   tmp4 = items;
-}) : ((blurTheme) => {
+}) : (function QuestDockBlurredContentBackground(blurTheme) {
   blurTheme = blurTheme.blurTheme;
   let str = "dark";
   ({ layoutAnimatedStyle, opacityAnimatedStyle, layoutAnimation } = blurTheme);

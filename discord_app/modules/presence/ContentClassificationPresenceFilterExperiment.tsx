@@ -1,7 +1,7 @@
-// === Module 13589: ContentClassificationPresenceFilterExperiment ===
+// === Module 13882: ContentClassificationPresenceFilterExperiment ===
 
-// Module 13589 (ContentClassificationPresenceFilterExperiment)
-import ApexExperiment from "ApexExperiment" /* 1440 */;
+// Module 13882 (ContentClassificationPresenceFilterExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-02-content-classification-presence-filter", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

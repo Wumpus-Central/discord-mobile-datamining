@@ -1,12 +1,12 @@
-// === Module 15406: UserSettingsDebugLogs ===
+// === Module 15668: UserSettingsDebugLogs ===
 
-// Module 15406 (UserSettingsDebugLogs)
+// Module 15668 (UserSettingsDebugLogs)
 import LogAggregator from "LogAggregator" /* 7 */;
 import Storage2 from "Storage" /* 510 */;
 import nativeDefault from "native" /* 587 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4574 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import UserSettingsDebugLogsActionSheet from "UserSettingsDebugLogsActionSheet" /* 15407 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4766 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import UserSettingsDebugLogsActionSheet from "UserSettingsDebugLogsActionSheet" /* 15669 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,12 +17,12 @@ get_ActivityIndicator = fn(17);
 ({ RefreshControl: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsxs: closure_7, jsx: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, searchWrap: null, searchField: null, shareButton: null, list: null, log: null, code: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.searchWrap = { padding: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center" };
 obj2.searchField = { flex: 1 };
-let size = { backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, marginLeft: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, height: fn(6113).InputHeights.MD, width: fn(6113).InputHeights.MD, justifyContent: "center", alignItems: "center" };
+let size = { backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, marginLeft: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, height: fn(6293).InputHeights.MD, width: fn(6293).InputHeights.MD, justifyContent: "center", alignItems: "center" };
 obj2.shareButton = size;
 let obj4 = { padding: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center" };
 obj2.list = { paddingHorizontal: nativeDefault.space.PX_16 };
@@ -35,7 +35,7 @@ let obj6 = { paddingBottom: nativeDefault.space.PX_16 };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/dev_tools/native/UserSettingsDebugLogs.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSettingsDebugLogs() {
   const cResult = require("c").c(41);
   const tmp4 = closure_9();
   _require = tmp4;
@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   closure_6 = tmp14;
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    class B {
+    class A {
       constructor() {
         Storage = closure_0(closure_2[12]).Storage;
         str = Storage.get("debug-log-query", "");
@@ -99,9 +99,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         return str;
       }
     }
-    cResult[5] = B;
+    cResult[5] = A;
   } else {
-    class B {
+    class A {
       constructor() {
         Storage = closure_0(closure_2[12]).Storage;
         str = Storage.get("debug-log-query", "");
@@ -112,12 +112,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       }
     }
   }
-  const tmp5Result3 = first1(noop.useState(B), 2);
+  const tmp5Result3 = first1(noop.useState(A), 2);
   const first2 = tmp5Result3[0];
   const tmp6 = first1(noop.useState(0), 2);
   [r10082, closure_8] = first1(noop.useState(tmp14), 2);
   if (cResult[6] === tmp14) {
-    class B {
+    class A {
       constructor() {
         Storage = closure_0(closure_2[12]).Storage;
         str = Storage.get("debug-log-query", "");
@@ -127,9 +127,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         return str;
       }
     }
-    const effect = obj2.useEffect(T, items1);
+    const effect = obj2.useEffect(O, items1);
     if (cResult[10] === tmp4.code) {
-      class B {
+      class A {
         constructor() {
           Storage = closure_0(closure_2[12]).Storage;
           str = Storage.get("debug-log-query", "");
@@ -175,7 +175,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         }
       }
       if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-        class B {
+        class A {
           constructor() {
             Storage = closure_0(closure_2[12]).Storage;
             str = Storage.get("debug-log-query", "");
@@ -222,7 +222,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         cResult[13] = stringResult;
         const tmp23 = stringResult;
       } else {
-        class B {
+        class A {
           constructor() {
             Storage = closure_0(closure_2[12]).Storage;
             str = Storage.get("debug-log-query", "");
@@ -234,7 +234,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         }
       }
       if (cResult[14] !== first1) {
-        class B {
+        class A {
           constructor() {
             Storage = closure_0(closure_2[12]).Storage;
             str = Storage.get("debug-log-query", "");
@@ -294,7 +294,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         cResult[14] = first1;
         cResult[15] = tmp26;
       } else {
-        class B {
+        class A {
           constructor() {
             Storage = closure_0(closure_2[12]).Storage;
             str = Storage.get("debug-log-query", "");
@@ -306,7 +306,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         }
       }
       if (cResult[16] === first2) {
-        class B {
+        class A {
           constructor() {
             Storage = closure_0(closure_2[12]).Storage;
             str = Storage.get("debug-log-query", "");
@@ -317,7 +317,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           }
         }
         if (cResult[19] === tmp4.searchField) {
-          class B {
+          class A {
             constructor() {
               Storage = closure_0(closure_2[12]).Storage;
               str = Storage.get("debug-log-query", "");
@@ -362,7 +362,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             }
           }
           if (cResult[23] !== tmp4.shareButton) {
-            class B {
+            class A {
               constructor() {
                 Storage = closure_0(closure_2[12]).Storage;
                 str = Storage.get("debug-log-query", "");
@@ -411,7 +411,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             cResult[23] = tmp4.shareButton;
             cResult[24] = tmp37;
           } else {
-            class B {
+            class A {
               constructor() {
                 Storage = closure_0(closure_2[12]).Storage;
                 str = Storage.get("debug-log-query", "");
@@ -423,7 +423,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             }
           }
           if (cResult[25] === tmp4.searchWrap) {
-            class B {
+            class A {
               constructor() {
                 Storage = closure_0(closure_2[12]).Storage;
                 str = Storage.get("debug-log-query", "");
@@ -525,7 +525,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     cResult[11] = tmp4.log;
     cResult[12] = R;
   }
-  class T {
+  class O {
     constructor() {
       if ("" !== closure_7) {
         tmp8 = globalThis;
@@ -564,10 +564,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   items1 = [tmp14, first2];
   cResult[6] = tmp14;
   cResult[7] = first2;
-  cResult[8] = T;
+  cResult[8] = O;
   cResult[9] = items1;
   const tmp5Result4 = first1(noop.useState(tmp14), 2);
-}) : (() => {
+}) : (function UserSettingsDebugLogs() {
   const tmp = closure_9();
   _require = tmp;
   [tmp6, importDefault] = sortOrder(noop.useState(0), 2);
@@ -684,7 +684,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   obj8.data = tmp4Result4[0];
   obj8.renderItem = callback1;
   obj8.refreshControl = closure_8(closure_5, { refreshing: false, onRefresh });
-  items4[1] = closure_8(require("module_8404").FlashList, obj8);
+  items4[1] = closure_8(require("module_8600").FlashList, obj8);
   obj2.children = items4;
   return first1(memo, obj2);
 });

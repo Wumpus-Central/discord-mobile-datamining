@@ -1,16 +1,16 @@
-// === Module 15126: SettingsAppearanceMessagesHeaderItem ===
+// === Module 15388: SettingsAppearanceMessagesHeaderItem ===
 
-// Module 15126 (SettingsAppearanceMessagesHeaderItem)
+// Module 15388 (SettingsAppearanceMessagesHeaderItem)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
+import Text_Text from "Text/Text" /* 5086 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { messagesHeaderContainer: { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center", marginHorizontal: nativeDefault.space.PX_24 } };
 let closure_4 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -18,7 +18,7 @@ const obj3 = { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems:
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/appearance/native/components/SettingsAppearanceMessagesHeaderItem.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((animatedStyles) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesHeaderItem(animatedStyles) {
   const cResult = c.c(6);
   animatedStyles = animatedStyles.animatedStyles;
   const tmp4 = closure_4();
@@ -50,7 +50,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((animatedStyles) 
   cResult[4] = tmp7;
   cResult[5] = tmp11;
   tmp10 = tmp11;
-}) : ((animatedStyles) => {
+}) : (function MessagesHeaderItem(animatedStyles) {
   const obj = { style: closure_4().messagesHeaderContainer, children: null };
   const obj2 = { animated: true, style: animatedStyles.animatedStyles.textNormal, variant: "text-lg/bold", children: null };
   const intl = util.intl;

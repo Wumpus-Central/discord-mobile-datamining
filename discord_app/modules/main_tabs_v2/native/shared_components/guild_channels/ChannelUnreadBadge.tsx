@@ -1,25 +1,25 @@
-// === Module 15999: ChannelUnreadBadge ===
+// === Module 16259: ChannelUnreadBadge ===
 
-// Module 15999 (ChannelUnreadBadge)
-import useFontScale from "useFontScale" /* 5609 */;
-import Badge from "Badge" /* 7514 */;
-import ChannelListLayout from "ChannelListLayout" /* 11712 */;
+// Module 16259 (ChannelUnreadBadge)
+import useFontScale from "useFontScale" /* 5382 */;
+import Badge from "Badge" /* 9237 */;
+import ChannelListLayout from "ChannelListLayout" /* 11777 */;
 import noop from "module_19" /* 19 */;
 
 const BadgeDefault = Badge;
 
 require = fn;
 const View = fn(17).View;
-const MUTED_OPACITY_CONTENT = fn(11711).MUTED_OPACITY_CONTENT;
-const UnreadSetting = fn(5078).UnreadSetting;
+const MUTED_OPACITY_CONTENT = fn(11776).MUTED_OPACITY_CONTENT;
+const UnreadSetting = fn(5972).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({ unreadBadge: { flexGrow: 0, flexShrink: 0, position: "absolute" }, unreadBadgePanel: { marginLeft: -16 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelUnreadBadge.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((panelVariant) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelUnreadBadge(panelVariant) {
   panelVariant = panelVariant.panelVariant;
   let tmp = undefined !== panelVariant;
   ({ unread, resolvedUnreadSetting, muted, isThread, layout, launchpad } = panelVariant);
@@ -52,13 +52,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((panelV
       num2 = 1;
     }
     const obj4 = { opacity: num2 };
-    const items1 = [obj4];
-    obj3.badgeStyle = items1;
+    obj3.badgeStyle = obj4;
     obj2.children = jsx(BadgeDefault, { classic: tmp, size: null, badgeStyle: null });
     tmp9Result = <View style={null}>{null}</View>;
   }
   return tmp9Result;
-}) : ((panelVariant) => {
+}) : (function ChannelUnreadBadge(panelVariant) {
   let flag = panelVariant.panelVariant;
   ({ unread, resolvedUnreadSetting, muted, isThread, layout, launchpad } = panelVariant);
   if (flag === undefined) {
@@ -90,8 +89,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((panelV
       num2 = 1;
     }
     const obj4 = { opacity: num2 };
-    const items1 = [obj4];
-    obj3.badgeStyle = items1;
+    obj3.badgeStyle = obj4;
     obj2.children = jsx(BadgeDefault, { classic: flag, size: null, badgeStyle: null });
     tmp8Result = <View style={null}>{null}</View>;
   }

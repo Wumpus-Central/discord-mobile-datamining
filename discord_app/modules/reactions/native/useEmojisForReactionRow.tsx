@@ -1,20 +1,21 @@
-// === Module 11374: useEmojisForReactionRow ===
+// === Module 12812: useEmojisForReactionRow ===
 
-// Module 11374 (useEmojisForReactionRow)
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4533 */;
+// Module 12812 (useEmojisForReactionRow)
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4725 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const EmojiIntention = fn(1380).EmojiIntention;
+const EmojiIntention = fn(1392).EmojiIntention;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/reactions/native/useEmojisForReactionRow.tsx");
 
-export const useEmojisForReactionRow = ReactCompilerGating.isReactCompilerEnabled() ? ((getGuildId, arg1, arg2) => {
-  const _require = getGuildId;
+export const useEmojisForReactionRow = ReactCompilerGating.isReactCompilerEnabled() ? (function useEmojisForReactionRow(getGuildId, arg1, arg2) {
+  let length;
+  _require = getGuildId;
   const cResult = require("c").c(11);
   if (cResult[0] !== getGuildId) {
     const guildId = getGuildId.getGuildId();
@@ -34,45 +35,33 @@ export const useEmojisForReactionRow = ReactCompilerGating.isReactCompilerEnable
       }
       if (cResult[8] === arr2) {
         if (cResult[9] === rounded) {
-          let tmp8 = cResult[10];
+          let tmp9 = cResult[10];
         }
-        return tmp8;
+        return tmp9;
       }
       const substr = arr2.slice(0, rounded - 1);
       cResult[8] = arr2;
       cResult[9] = rounded;
       cResult[10] = substr;
-      tmp8 = substr;
+      tmp9 = substr;
     }
   }
   if (cResult[6] !== getGuildId) {
-    class R {
-      constructor(arg0) {
-        obj = closure_1(closure_2[6]);
-        obj1 = { emoji: getGuildId, channel: closure_0, intention: EmojiIntention.REACTION };
-        return !obj.isEmojiFilteredOrLocked(obj1);
-      }
-    }
+    const fn = function v(emoji) {
+      return !EmojiUtilsDefault.isEmojiFilteredOrLocked({ emoji, channel, intention: EmojiIntention.REACTION });
+    };
     cResult[6] = getGuildId;
-    cResult[7] = R;
+    cResult[7] = fn;
+    let tmp7 = fn;
   } else {
-    class R {
-      constructor(arg0) {
-        obj = closure_1(closure_2[6]);
-        obj1 = { emoji: getGuildId, channel: closure_0, intention: EmojiIntention.REACTION };
-        return !obj.isEmojiFilteredOrLocked(obj1);
-      }
-    }
+    tmp7 = cResult[7];
   }
-  const found = frequentlyUsedReactionEmojis.filter(R);
+  const found = frequentlyUsedReactionEmojis.filter(tmp7);
   if (found.length < rounded) {
-    class R {
-      constructor(arg0) {
-        obj = closure_1(closure_2[6]);
-        obj1 = { emoji: getGuildId, channel: closure_0, intention: EmojiIntention.REACTION };
-        return !obj.isEmojiFilteredOrLocked(obj1);
-      }
-    }
+    do {
+      let arr = found.push(null);
+      length = found.length;
+    } while (length < rounded);
   }
   cResult[2] = getGuildId;
   cResult[3] = frequentlyUsedReactionEmojis;
@@ -80,8 +69,8 @@ export const useEmojisForReactionRow = ReactCompilerGating.isReactCompilerEnable
   cResult[5] = found;
   arr2 = found;
   const tmpResult = require("EmojiPickerUtils");
-}) : ((getGuildId, arg1, arg2) => {
-  const _require = getGuildId;
+}) : (function useEmojisForReactionRow(getGuildId, arg1, arg2) {
+  _require = getGuildId;
   const guildId = getGuildId.getGuildId();
   const frequentlyUsedReactionEmojis = require("EmojiPickerUtils").useFrequentlyUsedReactionEmojis(guildId);
   rounded = Math.floor(Math.min(frequentlyUsedReactionEmojis(rounded[5])().width, arg1) / arg2);

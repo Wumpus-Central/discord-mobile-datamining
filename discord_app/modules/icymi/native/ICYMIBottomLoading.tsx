@@ -1,6 +1,6 @@
-// === Module 16496: ICYMIBottomLoading ===
+// === Module 16756: ICYMIBottomLoading ===
 
-// Module 16496 (ICYMIBottomLoading)
+// Module 16756 (ICYMIBottomLoading)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
@@ -9,7 +9,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, ActivityIndicator: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles(() => {
   const obj = { container: { paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_24, alignItems: "center", justifyContent: "center" } };
   return obj;
@@ -18,7 +18,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/icymi/native/ICYMIBottomLoading.tsx");
 
-export const ICYMIBottomLoading = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const ICYMIBottomLoading = ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIBottomLoading() {
   const cResult = c.c(3);
   const tmp2 = closure_6();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -38,4 +38,6 @@ export const ICYMIBottomLoading = ReactCompilerGating.isReactCompilerEnabled() ?
     tmp7 = cResult[2];
   }
   return tmp7;
-}) : (() => <React3 style={closure_6().container}><React4 size="small" /></React3>);
+}) : (function ICYMIBottomLoading() {
+  return <React3 style={closure_6().container}><React4 size="small" /></React3>;
+});

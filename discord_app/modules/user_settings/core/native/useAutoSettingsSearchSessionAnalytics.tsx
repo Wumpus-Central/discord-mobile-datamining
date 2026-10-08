@@ -1,19 +1,19 @@
-// === Module 17112: useAutoSettingsSearchSessionAnalytics ===
+// === Module 17393: useAutoSettingsSearchSessionAnalytics ===
 
-// Module 17112 (useAutoSettingsSearchSessionAnalytics)
-import useMountEffectDefault from "useMountEffect" /* 5597 */;
-import SettingSearchSessionAnalyticsManagerDefault from "SettingSearchSessionAnalyticsManager" /* 6499 */;
-import usePreviousDefault from "usePrevious" /* 7957 */;
+// Module 17393 (useAutoSettingsSearchSessionAnalytics)
+import useMountEffectDefault from "useMountEffect" /* 5392 */;
+import usePreviousDefault from "usePrevious" /* 5928 */;
+import SettingSearchSessionAnalyticsManagerDefault from "SettingSearchSessionAnalyticsManager" /* 6676 */;
 import noop from "module_19" /* 19 */;
-import AppStateStore from "AppStateStore" /* 1986 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 14517 */;
+import AppStateStore from "AppStateStore" /* 1998 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 14777 */;
 
 const require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/core/native/useAutoSettingsSearchSessionAnalytics.tsx");
 
-export const useAutoSettingsSearchSessionAnalytics = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useAutoSettingsSearchSessionAnalytics = ReactCompilerGating.isReactCompilerEnabled() ? (function useAutoSettingsSearchSessionAnalytics() {
   const cResult = stateFromStores(576).c(13);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AppStateStore];
@@ -217,7 +217,7 @@ export const useAutoSettingsSearchSessionAnalytics = ReactCompilerGating.isReact
   tmp13 = items2;
   tmp12 = fn3;
   const tmpResult = stateFromStores(504);
-}) : (() => {
+}) : (function useAutoSettingsSearchSessionAnalytics() {
   const items = [AppStateStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => {
     state = state.getState();

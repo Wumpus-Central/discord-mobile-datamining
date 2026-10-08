@@ -1,15 +1,15 @@
-// === Module 15092: AutomaticGainControlSetting ===
+// === Module 15354: AutomaticGainControlSetting ===
 
-// Module 15092 (AutomaticGainControlSetting)
+// Module 15354 (AutomaticGainControlSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import MediaEngineStore from "MediaEngineStore" /* 1999 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11142);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const SettingBuilders = fn(11262);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAutomaticGainControlSettingValue() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [MediaEngineStore];
@@ -24,7 +24,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     [tmp4, tmp5] = cResult;
   }
   return initialize.useStateFromStores(tmp4, tmp5);
-}) : (() => {
+}) : (function useAutomaticGainControlSettingValue() {
   const items = [MediaEngineStore];
   return initialize.useStateFromStores(items, () => automaticGainControl.getAutomaticGainControl());
 });
@@ -33,8 +33,8 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.cUMdH0);
   },
-  parent: fn(7645).MobileUserSettings.VOICE,
-  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  parent: fn(7966).MobileUserSettings.VOICE,
+  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useAutomaticGainControlSettingValue() {
     const cResult = c.c(2);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
       const items = [MediaEngineStore];
@@ -49,11 +49,11 @@ const toggle = SettingBuilders.createToggle({
       [tmp4, tmp5] = cResult;
     }
     return initialize.useStateFromStores(tmp4, tmp5);
-  }) : (() => {
+  }) : (function useAutomaticGainControlSettingValue() {
     const items = [MediaEngineStore];
     return initialize.useStateFromStores(items, () => automaticGainControl.getAutomaticGainControl());
   }),
-  onValueChange: fn(9686).handleAutomaticGainControlChange,
+  onValueChange: fn(10875).handleAutomaticGainControlChange,
   useDescription: function useAutomaticGainControlSettingDescription() {
     const intl = util.intl;
     return intl.string(util.t["6EjbvA"]);

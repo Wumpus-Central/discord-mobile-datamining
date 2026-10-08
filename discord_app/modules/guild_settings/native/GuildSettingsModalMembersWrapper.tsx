@@ -1,10 +1,10 @@
-// === Module 17869: GuildSettingsModalMembersWrapper ===
+// === Module 18156: GuildSettingsModalMembersWrapper ===
 
-// Module 17869 (GuildSettingsModalMembersWrapper)
+// Module 18156 (GuildSettingsModalMembersWrapper)
 import c from "c" /* 576 */;
-import canReviewGuildMemberApplications from "canReviewGuildMemberApplications" /* 6777 */;
-import GuildSettingsModalMembersWithTabsDefault from "GuildSettingsModalMembersWithTabs" /* 16565 */;
-import GuildSettingsModalMembersDefault from "GuildSettingsModalMembers" /* 16567 */;
+import canReviewGuildMemberApplications from "canReviewGuildMemberApplications" /* 6953 */;
+import GuildSettingsModalMembersWithTabsDefault from "GuildSettingsModalMembersWithTabs" /* 16820 */;
+import GuildSettingsModalMembersDefault from "GuildSettingsModalMembers" /* 16822 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalMembersWrapper.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSettingsModalMembersWrapper(guildId) {
   let tmp = dependencyMap;
   const cResult = c.c(4);
   guildId = guildId.guildId;
@@ -37,7 +37,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildI
     return tmp3;
   }
   obj2 = canReviewGuildMemberApplications;
-}) : ((guildId) => {
+}) : (function GuildSettingsModalMembersWrapper(guildId) {
   guildId = guildId.guildId;
-  return jsx(importDefault(canReviewGuildMemberApplications.useCanReviewGuildMemberApplications(guildId) ? 16565 : 16567), { guildId });
+  return jsx(importDefault(canReviewGuildMemberApplications.useCanReviewGuildMemberApplications(guildId) ? 16820 : 16822), { guildId });
 }));

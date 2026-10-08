@@ -1,10 +1,10 @@
-// === Module 15953: RemoteAuthUtils ===
+// === Module 16213: RemoteAuthUtils ===
 
-// Module 15953 (RemoteAuthUtils)
-import RemoteAuthCryptoDefault from "RemoteAuthCrypto" /* 15951 */;
+// Module 16213 (RemoteAuthUtils)
+import RemoteAuthCryptoDefault from "RemoteAuthCrypto" /* 16211 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserRecord from "UserRecord" /* 1391 */;
+import UserRecord from "UserRecord" /* 1403 */;
 
 let closure_5 = async function _decodeEncodedUserRecord() {
   closure_3 = tmp2;
@@ -44,14 +44,4 @@ export const decodeEncodedUserRecord = function decodeEncodedUserRecord() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const base64Encode = function base64Encode(arg0) {
-  const uint8Array = new Uint8Array(arg0);
-  const items = [...uint8Array];
-  const str = btoa(String.fromCharCode.apply(items));
-  const str2 = btoa(String.fromCharCode.apply(items)).replace(/\//g, "_");
-  return btoa(String.fromCharCode.apply(items)).replace(/\//g, "_").replace(/\+/g, "-").replace(/={1,2}$/, "");
-};
-export const base64Decode = function base64Decode(placeholder) {
-  return Uint8Array.from(atob(placeholder), (str) => str.charCodeAt(0));
 };

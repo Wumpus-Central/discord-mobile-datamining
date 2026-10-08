@@ -1,25 +1,25 @@
-// === Module 14590: TwoFASetupEnterCode ===
+// === Module 14851: TwoFASetupEnterCode ===
 
-// Module 14590 (TwoFASetupEnterCode)
-import MFAUtils from "MFAUtils" /* 6446 */;
-import MFAActionCreatorsDefault from "MFAActionCreators" /* 14591 */;
+// Module 14851 (TwoFASetupEnterCode)
+import MFAUtils from "MFAUtils" /* 6624 */;
+import MFAActionCreatorsDefault from "MFAActionCreators" /* 14852 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AppStateStore from "AppStateStore" /* 1986 */;
+import AppStateStore from "AppStateStore" /* 1998 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const TwoFAModalSetupSections = fn(14584).TwoFAModalSetupSections;
+const TwoFAModalSetupSections = fn(14845).TwoFAModalSetupSections;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_9 = createStyles.createStyles({ container: { flex: 1, justifyContent: "center", alignItems: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupEnterCode.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((current) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function TwoFASetupEnterCode(current) {
   _require = current;
   const cResult = require("c").c(22);
   const tmp4 = closure_9();
@@ -41,7 +41,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((current) => {
   navigation = require("useNavigation").useNavigation();
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ref1];
-    const fn2 = function _() {
+    const fn2 = function w() {
       return ref1.getState();
     };
     cResult[2] = items;
@@ -59,7 +59,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((current) => {
   ref = ref.useRef(null);
   ref1 = ref.useRef(null);
   if (cResult[4] !== navigation) {
-    const fn3 = function w(code) {
+    const fn3 = function x(code) {
       _slicedToArray(true);
       const encodeTotpSecretResult = MFAUtils.encodeTotpSecret(ref.current.totpSecret);
       const obj3 = { code, secret: encodeTotpSecretResult };
@@ -162,7 +162,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((current) => {
   cResult[8] = items2;
   tmp19 = items2;
   const tmp13 = _slicedToArray(ref.useState(false), 2);
-}) : ((current) => {
+}) : (function TwoFASetupEnterCode(current) {
   _require = current;
   const tmp = closure_9();
   const twoFASetupStyles = require("TwoFASetupStyles").useTwoFASetupStyles();

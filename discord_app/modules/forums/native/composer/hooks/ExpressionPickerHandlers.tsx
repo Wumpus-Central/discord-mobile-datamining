@@ -1,13 +1,13 @@
-// === Module 10082: ExpressionPickerHandlers ===
+// === Module 9665: ExpressionPickerHandlers ===
 
-// Module 10082 (ExpressionPickerHandlers)
+// Module 9665 (ExpressionPickerHandlers)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 fn(558);
 const ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((selection) => {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePressEmojiHandler(selection) {
   const cResult = c.c(13);
   selection = selection.selection;
   const draftContent = selection.draftContent;
@@ -105,7 +105,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((selection) => {
   cResult[4] = setSelection;
   cResult[5] = obj2;
   tmp2 = obj2;
-}) : ((selection) => {
+}) : (function usePressEmojiHandler(selection) {
   selection = selection.selection;
   const draftContent = selection.draftContent;
   const handleTextChange = selection.handleTextChange;
@@ -150,7 +150,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/composer/hooks/ExpressionPickerHandlers.tsx");
 
 export const usePressEmojiHandler = tmp2;
-export const usePressGIFHandler = ReactCompilerGating.isReactCompilerEnabled() ? ((selection) => {
+export const usePressGIFHandler = ReactCompilerGating.isReactCompilerEnabled() ? (function usePressGIFHandler(selection) {
   const cResult = c.c(7);
   selection = selection.selection;
   const draftContent = selection.draftContent;
@@ -199,7 +199,7 @@ export const usePressGIFHandler = ReactCompilerGating.isReactCompilerEnabled() ?
   cResult[5] = setSelection;
   cResult[6] = fn;
   tmp2 = fn;
-}) : ((selection) => {
+}) : (function usePressGIFHandler(selection) {
   selection = selection.selection;
   const draftContent = selection.draftContent;
   const handleTextChange = selection.handleTextChange;

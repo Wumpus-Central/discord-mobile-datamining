@@ -1,22 +1,22 @@
-// === Module 16591: ConjureHeaderIconButton ===
+// === Module 16846: ConjureHeaderIconButton ===
 
-// Module 16591 (ConjureHeaderIconButton)
+// Module 16846 (ConjureHeaderIconButton)
 import c from "c" /* 576 */;
-import Pressables from "Pressables" /* 5916 */;
+import Pressables from "Pressables" /* 6189 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_3 = createStyles.createStyles({ button: { width: 40, height: 40, alignItems: "center", justifyContent: "center" } });
 const androidRippleConfig = { borderless: true, radius: 20 };
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/shared/native/ConjureHeaderIconButton.tsx");
 
-export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, ref) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureHeaderIconButton(arg0) {
   const cResult = c.c(12);
-  ({ IconComponent, onPress, accessibilityLabel, accessibilityActions, onAccessibilityAction, accessibilityState, disabled } = arg0);
+  ({ IconComponent, onPress, accessibilityLabel, accessibilityActions, onAccessibilityAction, accessibilityState, disabled, ref } = arg0);
   const tmp4 = closure_3();
   if (cResult[0] !== IconComponent) {
     const tmp7 = <IconComponent />;
@@ -59,8 +59,8 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
   cResult[11] = tmp9;
   tmp8 = tmp9;
   const obj2 = { ref, accessibilityRole: "button", accessibilityLabel, accessibilityActions, onAccessibilityAction, accessibilityState, disabled, onPress, activeOpacity: 0.6, androidRippleConfig, style: tmp4.button, children: tmp5 };
-}) : ((arg0, ref) => {
-  ({ IconComponent, onPress, accessibilityLabel, accessibilityActions, onAccessibilityAction, accessibilityState, disabled } = arg0);
+}) : (function ConjureHeaderIconButton(arg0) {
+  ({ IconComponent, onPress, accessibilityLabel, accessibilityActions, onAccessibilityAction, accessibilityState, disabled, ref } = arg0);
   const tmp = closure_3();
   return jsx(Pressables.PressableOpacity, { ref, accessibilityRole: "button", accessibilityLabel, accessibilityActions, onAccessibilityAction, accessibilityState, disabled, onPress, activeOpacity: 0.6, androidRippleConfig, style: closure_3().button, children: <IconComponent /> });
-}));
+});

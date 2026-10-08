@@ -1,7 +1,7 @@
-// === Module 9845: useShouldShowInitialSafetyToolsButtonTooltip ===
+// === Module 10406: useShouldShowInitialSafetyToolsButtonTooltip ===
 
-// Module 9845 (useShouldShowInitialSafetyToolsButtonTooltip)
-import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 9799 */;
+// Module 10406 (useShouldShowInitialSafetyToolsButtonTooltip)
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10266 */;
 
 const require = globalThis.__r;
 
@@ -10,7 +10,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useShouldShowInitialSafetyToolsButtonTooltip.tsx");
 
-export const useShouldShowInitialSafetyToolsButtonTooltip = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useShouldShowInitialSafetyToolsButtonTooltip = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldShowInitialSafetyToolsButtonTooltip(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   const obj = require("c");
@@ -36,7 +36,7 @@ export const useShouldShowInitialSafetyToolsButtonTooltip = ReactCompilerGating.
   const obj2 = require("useInappropriateConversationSafetyToolsWarningForChannel");
   const tmpResult = tmp(504);
   return null != inappropriateConversationSafetyToolsWarningForChannel && !tmp(504).useStateFromStores(first, tmp7);
-}) : ((arg0) => {
+}) : (function useShouldShowInitialSafetyToolsButtonTooltip(arg0) {
   _require = arg0;
   const inappropriateConversationSafetyToolsWarningForChannel = require("useInappropriateConversationSafetyToolsWarningForChannel").useInappropriateConversationSafetyToolsWarningForChannel(arg0);
   const obj = require("useInappropriateConversationSafetyToolsWarningForChannel");

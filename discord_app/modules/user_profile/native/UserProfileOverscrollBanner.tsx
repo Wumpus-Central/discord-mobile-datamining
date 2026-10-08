@@ -1,13 +1,13 @@
-// === Module 7927: UserProfileOverscrollBanner ===
+// === Module 8346: UserProfileOverscrollBanner ===
 
-// Module 7927 (UserProfileOverscrollBanner)
+// Module 8346 (UserProfileOverscrollBanner)
 import c from "c" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 7928 */;
-import UserProfileBannerDefault from "UserProfileBanner" /* 7929 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 8347 */;
+import UserProfileBannerDefault from "UserProfileBanner" /* 8348 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
 
 require = fn;
 let closure_3 = ["bannerAnimatedStyle", "bannerImageAnimatedStyle", "blurAnimatedProps", "showBlur", "privateBanner"];
@@ -19,7 +19,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileOverscrollBanner.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileOverscrollBanner(arg0) {
   const cResult = c.c(20);
   if (cResult[0] !== arg0) {
     ({ bannerAnimatedStyle, bannerImageAnimatedStyle, blurAnimatedProps, showBlur, privateBanner } = arg0);
@@ -103,7 +103,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[11] = tmp22;
   tmp21 = tmp22;
   const tmpResult = PlatformUtils;
-}) : ((arg0) => {
+}) : (function UserProfileOverscrollBanner(arg0) {
   ({ bannerAnimatedStyle, bannerImageAnimatedStyle, blurAnimatedProps, showBlur, privateBanner } = arg0);
   const merged = Object.assign(arg0, Object.assign({ bannerAnimatedStyle: 0, bannerImageAnimatedStyle: 0, blurAnimatedProps: 0, showBlur: 0, privateBanner: 0 }));
   const obj = { style: bannerAnimatedStyle, children: null };

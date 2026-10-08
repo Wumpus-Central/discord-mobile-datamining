@@ -1,14 +1,14 @@
-// === Module 16292: useFavoritesGuildUnreads ===
+// === Module 16552: useFavoritesGuildUnreads ===
 
-// Module 16292 (useFavoritesGuildUnreads)
+// Module 16552 (useFavoritesGuildUnreads)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5698 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4517 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7134 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
-import ReadStateStore from "ReadStateStore" /* 4911 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5077 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6039 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4709 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6082 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
+import ReadStateStore from "ReadStateStore" /* 6040 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5971 */;
 
 const require = globalThis.__r;
 
@@ -17,7 +17,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildUnreads.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavoritesGuildUnreads(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -82,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStoresObject(first, tmp12);
-}) : ((arg0) => {
+}) : (function useFavoritesGuildUnreads(arg0) {
   _require = arg0;
   const items = [ActiveJoinedThreadsStore, ChannelStore, GuildReadStateStore, JoinedThreadsStore, PermissionStore, ReadStateStore, UserGuildSettingsStore];
   return require("initialize").useStateFromStoresObject(items, () => {

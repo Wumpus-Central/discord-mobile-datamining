@@ -1,11 +1,11 @@
-// === Module 16066: ChannelListPanelBackdrop ===
+// === Module 16326: ChannelListPanelBackdrop ===
 
-// Module 16066 (ChannelListPanelBackdrop)
+// Module 16326 (ChannelListPanelBackdrop)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import QuestHooks from "QuestHooks" /* 14908 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 15988 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import QuestHooks from "QuestHooks" /* 15170 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 16248 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 const DM_WIDTH = fn(1085).DM_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { flex: 1, position: "relative", overflow: "hidden" }, panelTint: null, listWrapper: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -28,7 +28,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_list_v2/native/components/ChannelListPanelBackdrop.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelListPanelBackdrop(arg0) {
   let tmp = require;
   const cResult = c.c(22);
   ({ style, contentInset, children } = arg0);
@@ -120,7 +120,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                 tmp19 = tmp22;
               }
             }
-            let tmp12Result = 16067;
+            let tmp12Result = 16327;
             if (isHomeDrawerEnabled) {
               let ScreenAlignedThemedGradientSliding = tmp(tmp12Result).ScreenAlignedThemedGradientSliding;
             } else {
@@ -152,7 +152,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = num4;
   cResult[4] = obj8;
   tmp9 = obj8;
-}) : ((children) => {
+}) : (function ChannelListPanelBackdrop(children) {
   const style = children.style;
   const contentInset = children.contentInset;
   const tmp = closure_8();

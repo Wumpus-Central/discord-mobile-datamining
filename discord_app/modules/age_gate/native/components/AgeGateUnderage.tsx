@@ -1,9 +1,9 @@
-// === Module 15947: AgeGateUnderage ===
+// === Module 16207: AgeGateUnderage ===
 
-// Module 15947 (AgeGateUnderage)
+// Module 16207 (AgeGateUnderage)
 import nativeDefault from "native" /* 587 */;
-import NavigatorHeader from "NavigatorHeader" /* 6017 */;
-import useWideAuthViewDefault from "useWideAuthView" /* 6439 */;
+import NavigatorHeader from "NavigatorHeader" /* 6203 */;
+import useWideAuthViewDefault from "useWideAuthView" /* 6617 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ const View = fn(17).View;
 const HelpdeskArticles = fn(1085).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_9 = createStyles.createStyles((arg0) => {
   let num = 0;
   if (arg0) {
@@ -24,7 +24,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_gate/native/components/AgeGateUnderage.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeGateUnderage(onClose) {
   const cResult = onClose(576).c(34);
   onClose = onClose.onClose;
   ({ underageMessage, existingUser, fromRegister, disableSwipe } = onClose);
@@ -33,7 +33,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
   const tmp8 = useWideAuthViewDefault();
   const tmp9 = closure_9(tmp8);
   let obj = onClose(576);
-  const navigation = onClose(1490).useNavigation();
+  const navigation = onClose(1502).useNavigation();
   if (cResult[0] === (undefined !== disableSwipe && disableSwipe)) {
     if (cResult[1] === tmp4) {
       if (cResult[2] === navigation) {
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
         } else {
           tmp15 = cResult[7];
         }
-        tmp(6023).useNavigatorBackPressHandler(tmp15);
+        tmp(6209).useNavigatorBackPressHandler(tmp15);
         if (cResult[8] !== tmp4) {
           const intl = tmp(1126).intl;
           const string = intl.string;
@@ -70,7 +70,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
           if (cResult[10] !== tmp8) {
             let tmp22 = null;
             if (!tmp8) {
-              tmp22 = closure_6(tmp7(6470), {});
+              tmp22 = closure_6(tmp7(6648), {});
             }
             cResult[10] = tmp8;
             cResult[11] = tmp22;
@@ -80,8 +80,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
           }
           const _Symbol = Symbol;
           if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp28 = closure_6(tmp7(6473), {});
-            const tmp29 = closure_6(tmp(8130).ShieldSpotIllustration, {});
+            const tmp28 = closure_6(tmp7(6651), {});
+            const tmp29 = closure_6(tmp(7508).ShieldSpotIllustration, {});
             cResult[12] = tmp29;
             cResult[13] = tmp28;
             let tmp26 = tmp28;
@@ -138,12 +138,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
                     const obj4 = { style: tmp9.body, variant: "text-md/medium", color: "interactive-text-default", children: null };
                     const intl4 = tmp(1126).intl;
                     obj4.children = intl4.format(tmp(1126).t["3axQdB"], { days: 30 });
-                    const items1 = [closure_6(tmp(4892).Text, obj4), ];
+                    const items1 = [closure_6(tmp(5086).Text, obj4), ];
                     const obj5 = { style: tmp9.buttonWrapper, children: null };
                     const obj6 = { onPress: onClose, text: null, grow: true };
                     const intl5 = tmp(1126).intl;
                     obj6.text = intl5.string(tmp(1126).t.JhDw5o);
-                    obj5.children = closure_6(tmp(5601).Button, obj6);
+                    obj5.children = closure_6(tmp(5375).Button, obj6);
                     items1[1] = closure_6(View, obj5);
                     obj3.children = items1;
                     tmp43 = closure_8(closure_7, obj3);
@@ -156,7 +156,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
                   tmp42 = tmp43;
                 }
                 const obj7 = { style: tmp9.body, variant: "text-md/medium", color: "interactive-text-default", children: cResult[19] };
-                const tmp41 = closure_6(tmp(4892).Text, obj7);
+                const tmp41 = closure_6(tmp(5086).Text, obj7);
                 cResult[20] = tmp9.body;
                 cResult[21] = cResult[19];
                 cResult[22] = tmp41;
@@ -172,22 +172,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
                 const intl3 = tmp(1126).intl;
                 stringResult2 = intl3.string(tmp(1126).t.WqEH4D);
               }
-              const obj8 = { underageMessage: stringResult2, helpURL: tmp7(2115).getArticleURL(HelpdeskArticles.AGE_GATE) };
+              const obj8 = { underageMessage: stringResult2, helpURL: tmp7(2127).getArticleURL(HelpdeskArticles.AGE_GATE) };
               stringResult1 = intl2.format(tmp(1126).t.b0QzXe, obj8);
-              const tmp7Result = tmp7(2115);
+              const tmp7Result = tmp7(2127);
             }
             cResult[17] = tmp5;
             cResult[18] = underageMessage;
             cResult[19] = stringResult1;
           }
           const obj9 = { style: tmp9.header, children: cResult[9] };
-          const tmp32 = closure_6(tmp7(6469), obj9);
+          const tmp32 = closure_6(tmp7(6647), obj9);
           cResult[14] = cResult[9];
           cResult[15] = tmp9.header;
           cResult[16] = tmp32;
           tmp30 = tmp32;
         }
-        const tmpResult2 = tmp(6023);
+        const tmpResult2 = tmp(6209);
       }
     }
   }
@@ -209,8 +209,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
   cResult[5] = items2;
   tmp12 = items2;
   tmp11 = fn;
-  const tmpResult = onClose(1490);
-}) : ((onClose) => {
+  const tmpResult = onClose(1502);
+}) : (function AgeGateUnderage(onClose) {
   onClose = onClose.onClose;
   ({ underageMessage, existingUser } = onClose);
   if (existingUser === undefined) {

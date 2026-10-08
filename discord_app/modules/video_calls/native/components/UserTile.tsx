@@ -1,53 +1,53 @@
-// === Module 9155: UserTile ===
+// === Module 10721: UserTile ===
 
-// Module 9155 (UserTile)
+// Module 10721 (UserTile)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import _modDef4814 from "module_4814" /* 4814 */;
-import _modDef4825 from "module_4825" /* 4825 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import _modDef9160 from "module_9160" /* 9160 */;
-import _modDef9161 from "module_9161" /* 9161 */;
-import _modDef9162 from "module_9162" /* 9162 */;
-import mediaEngineContextFromParticipantTypeDefault from "mediaEngineContextFromParticipantType" /* 9163 */;
+import native from "native" /* 1200 */;
+import _modDef5008 from "module_5008" /* 5008 */;
+import _modDef5019 from "module_5019" /* 5019 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import _modDef10726 from "module_10726" /* 10726 */;
+import _modDef10727 from "module_10727" /* 10727 */;
+import _modDef10728 from "module_10728" /* 10728 */;
+import mediaEngineContextFromParticipantTypeDefault from "mediaEngineContextFromParticipantType" /* 10729 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VoiceChannelEffectsStore from "VoiceChannelEffectsStore" /* 9156 */;
+import VoiceChannelEffectsStore from "VoiceChannelEffectsStore" /* 10722 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import MediaEngineStore from "MediaEngineStore" /* 1999 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_7 = fn(9156).clearVoiceChannelEffectForUser;
+let closure_7 = fn(10722).clearVoiceChannelEffectForUser;
 const VideoToggleState = fn(1085).VideoToggleState;
-const ParticipantTypes = fn(4917).ParticipantTypes;
-const MediaEngineContextTypes = fn(4921).MediaEngineContextTypes;
+const ParticipantTypes = fn(5113).ParticipantTypes;
+const MediaEngineContextTypes = fn(5115).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { container: { flex: 1, width: "100%", alignItems: "center", justifyContent: "center", overflow: "hidden", backgroundColor: nativeDefault.colors.BLACK }, imageBackground: { flex: 1, justifyContent: "center", alignItems: "center", alignSelf: "stretch" }, autoDisabledVideoWrapper: { width: "100%", flexDirection: "row", justifyContent: "center" }, autoDisabledVideo: null, autoDisabledVideoTextWrapper: null, statusWrapper: null, labelText: null };
 let obj4 = { backgroundColor: null, alignItems: "center", height: 24 };
-let ColorUtils = fn(4733);
+let ColorUtils = fn(4927);
 obj4.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_700, 0.5);
 obj.autoDisabledVideo = obj4;
 let obj3 = { flex: 1, width: "100%", alignItems: "center", justifyContent: "center", overflow: "hidden", backgroundColor: nativeDefault.colors.BLACK };
 obj.autoDisabledVideoTextWrapper = { borderRadius: nativeDefault.radii.sm, flexDirection: "row", justifyContent: "space-evenly", paddingHorizontal: 8, paddingVertical: 4, alignItems: "center" };
 let size = { position: "absolute", bottom: 8, right: 8, backgroundColor: null, borderRadius: null, width: 24, height: 24, justifyContent: "center", alignItems: "center" };
-ColorUtils = fn(4733);
+ColorUtils = fn(4927);
 size.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_700, 0.5);
 size.borderRadius = nativeDefault.radii.md;
 obj.statusWrapper = size;
 obj.labelText = { marginLeft: 8, height: 20, alignItems: "center" };
 let closure_17 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
-let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function VideoContent(guildId) {
   const cResult = hasVideo(id[15]).c(35);
   ({ streamId, user, resizeMode, ringing, avatarSize, speaking, gestureEnabled, hasVideo } = guildId);
   guildId = guildId.guildId;
   const tmp4 = closure_17();
-  importDefault = tmp4;
+  closure_1 = tmp4;
   id = user.id;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [AuthenticationStore];
@@ -184,46 +184,31 @@ let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guil
           }
         }
       }
-      class G {
-        constructor() {
-          if (closure_3) {
-            tmp3 = jsx;
-            tmp4 = View;
-            obj = { style: null, children: null };
-            tmp5 = closure_1;
-            obj.style = closure_1.autoDisabledVideoWrapper;
-            tmp6 = jsxs;
-            obj1 = { style: null, children: null };
-            items = [, ];
-            ({ autoDisabledVideo: arr[0], autoDisabledVideoTextWrapper: arr[1] } = closure_1);
-            obj1.style = items;
-            tmp7 = closure_0;
-            tmp8 = closure_2;
-            obj5 = { source: null, size: null, disableColor: true };
-            tmp9 = closure_1;
-            obj5.source = closure_1(closure_2[19]);
-            obj5.size = closure_0(closure_2[18]).Icon.Sizes.SMALL;
-            items1 = [, ];
-            items1[0] = jsx(closure_0(closure_2[18]).Icon, obj5);
-            obj6 = { variant: "text-sm/normal", color: "text-default", style: null, children: null };
-            obj6.style = closure_1.labelText;
-            intl = closure_0(closure_2[21]).intl;
-            obj6.children = intl.string(closure_0(closure_2[21]).t.m2Hyj0);
-            items1[1] = jsx(closure_0(closure_2[20]).Text, obj6);
-            obj1.children = items1;
-            obj.children = jsxs(View, obj1);
-            tmp2 = jsx(View, obj);
-          } else {
-            tmp = closure_4;
-            tmp2 = null;
-          }
-          return tmp2;
+      function renderVideoAutoDisabledStatus() {
+        if (first1) {
+          const obj = { style: closure_1.autoDisabledVideoWrapper, children: null };
+          const obj2 = { style: null, children: null };
+          const items = [, ];
+          ({ autoDisabledVideo: arr[0], autoDisabledVideoTextWrapper: arr[1] } = closure_1);
+          obj2.style = items;
+          const obj3 = { source: _modDef5008, size: native.Icon.Sizes.SMALL, disableColor: true };
+          const items1 = [state(native.Icon, obj3), ];
+          const obj4 = { variant: "text-sm/normal", color: "text-default", style: closure_1.labelText, children: null };
+          const intl = util.intl;
+          obj4.children = intl.string(util.t.m2Hyj0);
+          items1[1] = state(Text_Text.Text, obj4);
+          obj2.children = items1;
+          obj.children = closure_2_15(View, obj2);
+          let tmp2 = state(View, obj);
+        } else {
+          tmp2 = null;
         }
+        return tmp2;
       }
       cResult[16] = first1;
       cResult[17] = tmp20;
       cResult[18] = tmp4;
-      cResult[19] = G;
+      cResult[19] = renderVideoAutoDisabledStatus;
       const tmpResult6 = hasVideo(tmp2[17]);
     }
     let obj2 = { userId: id, guildId };
@@ -248,7 +233,7 @@ let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guil
   tmp8 = items5;
   tmp7 = fn;
   let obj = hasVideo(id[15]);
-}) : ((guildId) => {
+}) : (function VideoContent(guildId) {
   ({ user, hasVideo } = guildId);
   guildId = guildId.guildId;
   _slicedToArray = undefined;
@@ -307,14 +292,14 @@ let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guil
   obj6.speaking = speaking;
   obj6.speakingColor = avatarSpeakingColor;
   obj6.size = avatarSize;
-  obj6.renderVideoDetails = function renderVideoDetails() {
+  obj6.renderVideoDetails = function renderVideoAutoDisabledStatus() {
     if (closure_3) {
       const obj = { style: closure_1.autoDisabledVideoWrapper, children: null };
       const obj2 = { style: null, children: null };
       const items = [, ];
       ({ autoDisabledVideo: arr[0], autoDisabledVideoTextWrapper: arr[1] } = closure_1);
       obj2.style = items;
-      const obj3 = { source: _modDef4814, size: native.Icon.Sizes.SMALL, disableColor: true };
+      const obj3 = { source: _modDef5008, size: native.Icon.Sizes.SMALL, disableColor: true };
       const items1 = [state(native.Icon, obj3), ];
       const obj4 = { variant: "text-sm/normal", color: "text-default", style: closure_1.labelText, children: null };
       const intl = util.intl;
@@ -332,7 +317,7 @@ let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guil
   const tmp11 = require("VideoBackground");
 }));
 ReactCompilerGating = fn(558);
-let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
+let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceStatus(userId) {
   const cResult = userId(576).c(16);
   userId = userId.userId;
   const style = userId.style;
@@ -364,11 +349,11 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((user
   const tmp9 = _slicedToArray(userId(504).useStateFromStoresArray(first, tmp7, tmp8), 3);
   let tmp10 = tmp9[1];
   if (tmp9[0]) {
-    let tmp11 = _modDef9160;
+    let tmp11 = _modDef10726;
   } else if (deafened) {
-    tmp11 = _modDef9161;
+    tmp11 = _modDef10727;
   } else if (muted) {
-    tmp11 = _modDef4825;
+    tmp11 = _modDef5019;
   }
   if (tmp10) {
     tmp10 = !tmp9[2];
@@ -411,8 +396,8 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((user
         const obj4 = { style: null, children: null };
         items3[2] = obj3;
         obj4.style = items3;
-        const obj5 = { source: tmp11, size: tmp(1188).Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, disableColor: tmp11 === _modDef9160 };
-        obj4.children = closure_14(tmp(1188).Icon, obj5);
+        const obj5 = { source: tmp11, size: tmp(1200).Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, disableColor: tmp11 === _modDef10726 };
+        obj4.children = closure_14(tmp(1200).Icon, obj5);
         tmp24Result = closure_14(View, obj4);
       }
       cResult[8] = tmp11;
@@ -428,8 +413,8 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((user
     const obj6 = { style: null, children: null };
     const items4 = [tmp4.statusWrapper, style];
     obj6.style = items4;
-    const obj7 = { source: _modDef9162, size: tmp(1188).Icon.Sizes.SMALL, disableColor: true };
-    obj6.children = closure_14(tmp(1188).Icon, obj7);
+    const obj7 = { source: _modDef10728, size: tmp(1200).Icon.Sizes.SMALL, disableColor: true };
+    obj6.children = closure_14(tmp(1200).Icon, obj7);
     tmp17 = closure_14(View, obj6);
   }
   cResult[4] = tmp10;
@@ -438,7 +423,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((user
   cResult[7] = tmp17;
   tmp16 = tmp17;
   const tmpResult = userId(504);
-}) : ((userId) => {
+}) : (function VoiceStatus(userId) {
   userId = userId.userId;
   const style = userId.style;
   ({ muted, deafened } = userId);
@@ -451,11 +436,11 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((user
   }, items1), 3);
   let tmp5 = tmp4[1];
   if (tmp4[0]) {
-    let tmp6 = _modDef9160;
+    let tmp6 = _modDef10726;
   } else if (deafened) {
-    tmp6 = _modDef9161;
+    tmp6 = _modDef10727;
   } else if (muted) {
-    tmp6 = _modDef4825;
+    tmp6 = _modDef5019;
   }
   if (tmp5) {
     tmp5 = !tmp4[2];
@@ -466,8 +451,8 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((user
       const obj2 = { style: null, children: null };
       const items2 = [tmp.statusWrapper, style];
       obj2.style = items2;
-      const obj3 = { source: _modDef9162, size: tmp2(1188).Icon.Sizes.SMALL, disableColor: true };
-      obj2.children = closure_14(tmp2(1188).Icon, obj3);
+      const obj3 = { source: _modDef10728, size: tmp2(1200).Icon.Sizes.SMALL, disableColor: true };
+      obj2.children = closure_14(tmp2(1200).Icon, obj3);
       tmp14 = closure_14(View, obj2);
     }
     const items3 = [tmp14, ];
@@ -481,8 +466,8 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((user
       const obj5 = { style: null, children: null };
       items4[2] = obj4;
       obj5.style = items4;
-      const obj6 = { source: tmp6, size: tmp2(1188).Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, disableColor: tmp6 === _modDef9160 };
-      obj5.children = closure_14(tmp2(1188).Icon, obj6);
+      const obj6 = { source: tmp6, size: tmp2(1200).Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, disableColor: tmp6 === _modDef10726 };
+      obj5.children = closure_14(tmp2(1200).Icon, obj6);
       tmp19Result = closure_14(View, obj5);
     }
     const obj7 = { children: null };
@@ -500,7 +485,7 @@ let obj5 = { borderRadius: nativeDefault.radii.sm, flexDirection: "row", justify
 size = fn(2);
 let result = size.fileFinishedImporting("modules/video_calls/native/components/UserTile.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((participant) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserTile(participant) {
   const cResult = participant(onDoubleTap[15]).c(65);
   participant = participant.participant;
   const onSingleTap = participant.onSingleTap;
@@ -794,7 +779,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((participant) => 
   cResult[2] = fn;
   tmp5 = fn;
   const obj = participant(onDoubleTap[15]);
-}) : ((participant) => {
+}) : (function UserTile(participant) {
   participant = participant.participant;
   const onSingleTap = participant.onSingleTap;
   const onDoubleTap = participant.onDoubleTap;

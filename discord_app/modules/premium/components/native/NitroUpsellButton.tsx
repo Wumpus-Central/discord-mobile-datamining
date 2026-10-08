@@ -1,13 +1,13 @@
-// === Module 9661: NitroUpsellButton ===
+// === Module 9733: NitroUpsellButton ===
 
-// Module 9661 (NitroUpsellButton)
+// Module 9733 (NitroUpsellButton)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8346 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9005 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 require = fn;
 const jsx = fn(21).jsx;
@@ -15,7 +15,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/components/native/NitroUpsellButton.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function NitroUpsellButton(arg0) {
   const cResult = c.c(9);
   ({ loading, onPress, text, shiny, size } = arg0);
   let tmp4 = undefined === shiny || shiny;
@@ -68,7 +68,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   cResult[8] = tmp14;
   tmp13 = tmp14;
   const tmpResult = initialize;
-}) : ((shiny) => {
+}) : (function NitroUpsellButton(shiny) {
   let flag = shiny.shiny;
   ({ loading, onPress, text } = shiny);
   if (flag === undefined) {

@@ -1,15 +1,15 @@
-// === Module 11629: ForumChannelStore ===
+// === Module 11693: ForumChannelStore ===
 
-// Module 11629 (ForumChannelStore)
+// Module 11693 (ForumChannelStore)
 import _modDef38 from "module_38" /* 38 */;
-import ForumChannelAnalyticsManagerDefault from "ForumChannelAnalyticsManager" /* 7411 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
+import ForumChannelAnalyticsManagerDefault from "ForumChannelAnalyticsManager" /* 7882 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 let set = new Set();
-let obj = { layoutType: fn(2062).ForumLayout.LIST, sortOrder: fn(2061).ThreadSortOrder.CREATION_DATE, tagFilter: set, tagSetting: fn(2063).ThreadSearchTagSetting.MATCH_SOME };
+let obj = { layoutType: fn(2074).ForumLayout.LIST, sortOrder: fn(2073).ThreadSortOrder.CREATION_DATE, tagFilter: set, tagSetting: fn(2075).ThreadSearchTagSetting.MATCH_SOME };
 let closure_6 = function ForumChannelStoreState(set, get) {
   obj = Object.create(new.target.prototype);
   obj.channelStates = {};
@@ -145,7 +145,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/ForumChannelStore.tsx");
 
-export const useForumChannelStore = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+export const useForumChannelStore = ReactCompilerGating.isReactCompilerEnabled() ? (function useForumChannelStore(channelId) {
   _require = channelId;
   obj = require("c");
   const cResult = obj.c(3);
@@ -173,7 +173,7 @@ export const useForumChannelStore = ReactCompilerGating.isReactCompilerEnabled()
     channelState = obj2.getChannelState(channelId);
   }
   return channelState;
-}) : ((channelId) => {
+}) : (function useForumChannelStore(channelId) {
   _require = channelId;
   obj = closure_7();
   const items = [ChannelStore];

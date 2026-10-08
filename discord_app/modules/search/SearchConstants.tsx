@@ -1,7 +1,7 @@
-// === Module 7524: SearchConstants ===
+// === Module 9247: SearchConstants ===
 
-// Module 7524 (SearchConstants)
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7525 */;
+// Module 9247 (SearchConstants)
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 9248 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 

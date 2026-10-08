@@ -1,12 +1,12 @@
-// === Module 13534: ActiveChannelsStore ===
+// === Module 13831: ActiveChannelsStore ===
 
-// Module 13534 (ActiveChannelsStore)
+// Module 13831 (ActiveChannelsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4899 */;
 
 function truncateOldMessageData(channelId) {
   if (null != dependencyMap2[channelId]) {
@@ -33,7 +33,7 @@ function handleChannelDelete(channel) {
   delete tmp4[tmp3];
   delete tmp2[tmp];
 }
-const isGuildHomeChannel = fn(2058).isGuildHomeChannel;
+const isGuildHomeChannel = fn(2070).isGuildHomeChannel;
 let c5 = 900000;
 let dependencyMap = {};
 const dependencyMap2 = {};

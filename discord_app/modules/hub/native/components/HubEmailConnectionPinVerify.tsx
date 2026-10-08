@@ -1,32 +1,32 @@
-// === Module 12422: HubEmailConnectionPinVerify ===
+// === Module 12518: HubEmailConnectionPinVerify ===
 
-// Module 12422 (HubEmailConnectionPinVerify)
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4574 */;
-import _modDef4822 from "module_4822" /* 4822 */;
-import HubJoinManagerDefault from "HubJoinManager" /* 12423 */;
+// Module 12518 (HubEmailConnectionPinVerify)
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4766 */;
+import _modDef5016 from "module_5016" /* 5016 */;
+import HubJoinManagerDefault from "HubJoinManager" /* 12519 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2074 */;
+import GuildStore from "GuildStore" /* 2086 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 function presentResendToast(content) {
   const obj = ToastActionCreatorsDefault;
-  obj.open({ key: "HUB_EMAIL_RESET", content, icon: _modDef4822 });
+  obj.open({ key: "HUB_EMAIL_RESET", content, icon: _modDef5016 });
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Image: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_11 = createStyles.createStyles({ container: { alignItems: "center" }, title: { marginBottom: 8, textAlign: "center" }, description: { textAlign: "center", marginBottom: 24 }, label: { textAlign: "center", marginBottom: 12 }, error: { alignSelf: "center", marginVertical: 8 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hub/native/components/HubEmailConnectionPinVerify.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((email) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function HubEmailConnectionPinVerify(email) {
   const cResult = require("c").c(38);
   email = email.email;
   _require = email;
@@ -40,7 +40,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((email) => {
         guildId(onClose[12])();
       });
       return () => {
-        guildId(12423).terminate();
+        guildId(12519).terminate();
       };
     };
     const items = [onClose];
@@ -268,7 +268,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((email) => {
     }
     return value;
   });
-  const fn2 = function() {
+  function t3() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -277,13 +277,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((email) => {
       applyArgumentsResult = apply(self, arguments);
     }
     return applyArgumentsResult;
-  };
+  }
   cResult[3] = email;
   cResult[4] = guildId;
-  cResult[5] = fn2;
-  tmp8 = fn2;
+  cResult[5] = t3;
+  tmp8 = t3;
   const obj = require("c");
-}) : ((email) => {
+}) : (function HubEmailConnectionPinVerify(email) {
   email = email.email;
   ({ guildId: importDefault, onClose } = email);
   _slicedToArray = undefined;
@@ -317,7 +317,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((email) => {
       require("navigateToLastChannel")();
     });
     return () => {
-      closure_1_1(12423).terminate();
+      closure_1_1(12519).terminate();
     };
   }, items);
   const obj = require("module_12");
@@ -354,7 +354,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((email) => {
   const obj3 = { style: tmp.container, children: null };
   const tmp5 = _slicedToArray(noop.useState(null), 2);
   const tmp7 = email;
-  const items1 = [closure_9(closure_7, { source: require("module_12424") }), , , , , ];
+  const items1 = [closure_9(closure_7, { source: require("module_12520") }), , , , , ];
   const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   let intl = email(onClose[14]).intl;
   obj5.children = intl.string(email(onClose[14]).t.SJ3Lxc);
@@ -367,7 +367,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((email) => {
   const intl3 = email(onClose[14]).intl;
   obj7.children = intl3.string(email(onClose[14]).t.rpWT1s);
   items1[3] = closure_9(email(onClose[20]).Text, obj7);
-  const obj4 = { source: require("module_12424") };
+  const obj4 = { source: require("module_12520") };
   items1[4] = closure_9(email(onClose[21]).CodeBlocks, {
     hasError: false,
     count: 8,

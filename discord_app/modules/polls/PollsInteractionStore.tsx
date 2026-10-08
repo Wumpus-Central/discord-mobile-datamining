@@ -1,10 +1,10 @@
-// === Module 11099: PollsInteractionStore ===
+// === Module 10464: PollsInteractionStore ===
 
-// Module 11099 (PollsInteractionStore)
+// Module 10464 (PollsInteractionStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
 import c from "c" /* 576 */;
-import identity from "module_1254" /* 1254 */;
+import identity from "module_1266" /* 1266 */;
 import "ReactCompilerGating";
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -46,7 +46,7 @@ let closure_4 = identity.createWithEqualityFn((arg0) => {
     }
   };
 });
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMessagePollInteractions(arg0) {
   closure_0 = arg0;
   const cResult = c.c(2);
   if (cResult[0] !== arg0) {
@@ -67,7 +67,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp3 = cResult[1];
   }
   return closure_4(tmp3, discord_common_shallowEqualDefault);
-}) : ((arg0) => {
+}) : (function useMessagePollInteractions(arg0) {
   closure_0 = arg0;
   return closure_4((arg0) => {
     const pollsByMessageId = arg0;
@@ -83,7 +83,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 const result = size.fileFinishedImporting("modules/polls/PollsInteractionStore.tsx");
 
 export const useMessagePollInteractions = tmp2;
-export const useChannelPollInteractions = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useChannelPollInteractions = ReactCompilerGating.isReactCompilerEnabled() ? (function useChannelPollInteractions(arg0) {
   _require = arg0;
   const cResult = require("c").c(2);
   if (cResult[0] !== arg0) {
@@ -101,7 +101,7 @@ export const useChannelPollInteractions = ReactCompilerGating.isReactCompilerEna
     tmp3 = cResult[1];
   }
   return closure_4(tmp3, discord_common_shallowEqualDefault);
-}) : ((arg0) => {
+}) : (function useChannelPollInteractions(arg0) {
   closure_0 = arg0;
   return closure_4((arg0) => {
     let tmp = arg0.pollsByChannelId[closure_0];

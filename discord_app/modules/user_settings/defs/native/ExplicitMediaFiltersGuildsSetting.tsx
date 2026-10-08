@@ -1,28 +1,28 @@
-// === Module 14654: ExplicitMediaFiltersGuildsSetting ===
+// === Module 14915: ExplicitMediaFiltersGuildsSetting ===
 
-// Module 14654 (ExplicitMediaFiltersGuildsSetting)
+// Module 14915 (ExplicitMediaFiltersGuildsSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
-import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 6811 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7122 */;
-import SettingsConstants from "SettingsConstants" /* 7645 */;
-import useUserIsTeen from "useUserIsTeen" /* 8327 */;
-import useExplicitContentSettingsOrDefault from "useExplicitContentSettingsOrDefault" /* 14649 */;
-import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 14650 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1209 */;
+import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 6983 */;
+import useUserIsTeen from "useUserIsTeen" /* 7710 */;
+import SettingsConstants from "SettingsConstants" /* 7966 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8218 */;
+import useExplicitContentSettingsOrDefault from "useExplicitContentSettingsOrDefault" /* 14910 */;
+import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 14911 */;
 import "ReactCompilerGating";
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11142 */;
+import SettingBuilders from "SettingBuilders" /* 11262 */;
 import size from "module_2" /* 2 */;
 
 const MobileUserSettings = SettingsConstants.MobileUserSettings;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsDisabled() {
   let userIsTeen = useUserIsTeen.useUserIsTeen();
   if (!userIsTeen) {
     userIsTeen = obj2.useIsParentallyControlled();
   }
   return userIsTeen;
-}) : (() => {
+}) : (function useIsDisabled() {
   let userIsTeen = useUserIsTeen.useUserIsTeen();
   if (!userIsTeen) {
     userIsTeen = obj2.useIsParentallyControlled();
@@ -33,7 +33,7 @@ function getTitle() {
   const intl = util.intl;
   return intl.string(util.t["FP+a42"]);
 }
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useObscuredContentGuildsSettingValue() {
   const cResult = c.c(2);
   const explicitContentGuilds = useExplicitContentSettingsOrDefault.useExplicitContentSettingOrDefault().explicitContentGuilds;
   if (cResult[0] !== explicitContentGuilds) {
@@ -46,7 +46,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp4 = cResult[1];
   }
   return tmp4;
-}) : (() => {
+}) : (function useObscuredContentGuildsSettingValue() {
   const obj = useExplicitContentSettingsOrDefault;
   return ExplicitMediaRedactionUtils.redactionSettingToRenderedString(obj.useExplicitContentSettingOrDefault().explicitContentGuilds)();
 });
@@ -55,7 +55,7 @@ const pressable = SettingBuilders.createPressable({
   parent() {
     return MobileUserSettings.SENSITIVE_CONTENT_FILTERS;
   },
-  useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (function useObscuredContentGuildsSettingValue() {
     const cResult = c.c(2);
     const explicitContentGuilds = useExplicitContentSettingsOrDefault.useExplicitContentSettingOrDefault().explicitContentGuilds;
     if (cResult[0] !== explicitContentGuilds) {
@@ -68,7 +68,7 @@ const pressable = SettingBuilders.createPressable({
       tmp4 = cResult[1];
     }
     return tmp4;
-  }) : (() => {
+  }) : (function useObscuredContentGuildsSettingValue() {
     const obj = useExplicitContentSettingsOrDefault;
     return ExplicitMediaRedactionUtils.redactionSettingToRenderedString(obj.useExplicitContentSettingOrDefault().explicitContentGuilds)();
   }),

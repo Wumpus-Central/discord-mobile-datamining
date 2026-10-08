@@ -1,23 +1,23 @@
-// === Module 14540: AccountPhoneSetting ===
+// === Module 14801: AccountPhoneSetting ===
 
-// Module 14540 (AccountPhoneSetting)
+// Module 14801 (AccountPhoneSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
-import PhoneActionCreators from "PhoneActionCreators" /* 6549 */;
-import UserStore from "UserStore" /* 1377 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5940 */;
+import PhoneActionCreators from "PhoneActionCreators" /* 6725 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
-let closure_4 = fn(6547).PHONE_VERIFICATION_MODAL_KEY;
+let closure_4 = fn(6723).PHONE_VERIFICATION_MODAL_KEY;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11142);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const SettingBuilders = fn(11262);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountPhoneSettingTrailing() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
-    const fn = function s() {
+    const fn = function o() {
       currentUser = currentUser.getCurrentUser();
       let phone;
       if (currentUser != null) {
@@ -33,7 +33,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     [tmp4, tmp5] = cResult;
   }
   return initialize.useStateFromStores(tmp4, tmp5);
-}) : (() => {
+}) : (function useAccountPhoneSettingTrailing() {
   const items = [UserStore];
   return initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
@@ -49,12 +49,12 @@ const pressable = SettingBuilders.createPressable({
     const intl = util.intl;
     return intl.string(util.t.dEYpSt);
   },
-  parent: fn(7645).MobileUserSettings.ACCOUNT,
-  useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  parent: fn(7966).MobileUserSettings.ACCOUNT,
+  useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountPhoneSettingTrailing() {
     const cResult = c.c(2);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
       const items = [UserStore];
-      const fn = function s() {
+      const fn = function o() {
         currentUser = currentUser.getCurrentUser();
         let phone;
         if (currentUser != null) {
@@ -70,7 +70,7 @@ const pressable = SettingBuilders.createPressable({
       [tmp4, tmp5] = cResult;
     }
     return initialize.useStateFromStores(tmp4, tmp5);
-  }) : (() => {
+  }) : (function useAccountPhoneSettingTrailing() {
     const items = [UserStore];
     return initialize.useStateFromStores(items, () => {
       currentUser = currentUser.getCurrentUser();
@@ -85,7 +85,7 @@ const pressable = SettingBuilders.createPressable({
     const obj2 = { allowDeletePhone: true, reason: null };
     const obj = ModalActionCreatorsDefault;
     obj2.reason = PhoneActionCreators.ChangePhoneReason.USER_SETTINGS_UPDATE;
-    obj.pushLazy(asyncRequireImpl(6546, dependencyMap.paths), obj2, closure_4);
+    obj.pushLazy(asyncRequireImpl(6722, dependencyMap.paths), obj2, closure_4);
   },
   withArrow: true
 });

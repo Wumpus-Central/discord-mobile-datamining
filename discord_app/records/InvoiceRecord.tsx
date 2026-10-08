@@ -1,10 +1,11 @@
-// === Module 4543: InvoiceRecord ===
+// === Module 4735: InvoiceRecord ===
 
-// Module 4543 (InvoiceRecord)
-import PremiumSubscriptionInvoiceItem from "PremiumSubscriptionInvoiceItem" /* 4544 */;
-import Record from "Record" /* 1392 */;
+// Module 4735 (InvoiceRecord)
+import PremiumSubscriptionInvoiceItem from "PremiumSubscriptionInvoiceItem" /* 4736 */;
+import Record from "Record" /* 1404 */;
 
 require = fn;
+const PaymentGateways = fn(1085).PaymentGateways;
 let BaseInvoiceRecord;
 class BaseInvoiceRecord extends tmp2 {
   constructor(arg0) {
@@ -109,7 +110,11 @@ class InvoiceRecord extends BaseInvoiceRecord {
       invoiceItems = [];
     }
     tmp.invoiceItems = invoiceItems;
-    ({ taxInclusive: tmp.taxInclusive, subscriptionPeriodStart: tmp.subscriptionPeriodStart, subscriptionPeriodEnd: tmp.subscriptionPeriodEnd, status: tmp.status, orbsReward: tmp.orbsReward, checkoutContext: tmp.checkoutContext, applyWalletBalance: tmp.applyWalletBalance } = global);
+    ({ taxInclusive: tmp.taxInclusive, subscriptionPeriodStart: tmp.subscriptionPeriodStart, subscriptionPeriodEnd: tmp.subscriptionPeriodEnd, status: tmp.status, orbsReward: tmp.orbsReward, checkoutContext: tmp.checkoutContext, applyWalletBalance: tmp.applyWalletBalance, paymentLegs } = global);
+    if (paymentLegs == null) {
+      paymentLegs = [];
+    }
+    tmp.paymentLegs = paymentLegs;
     return tmp;
   }
 }
@@ -135,7 +140,11 @@ InvoiceRecord["createInvoiceFromServer"] = function createInvoiceFromServer(body
       invoiceItems = [];
     }
     tmp12.invoiceItems = invoiceItems;
-    ({ taxInclusive: tmp12.taxInclusive, subscriptionPeriodStart: tmp12.subscriptionPeriodStart, subscriptionPeriodEnd: tmp12.subscriptionPeriodEnd, status: tmp12.status, orbsReward: tmp12.orbsReward, checkoutContext: tmp12.checkoutContext, applyWalletBalance: tmp12.applyWalletBalance } = obj);
+    ({ taxInclusive: tmp12.taxInclusive, subscriptionPeriodStart: tmp12.subscriptionPeriodStart, subscriptionPeriodEnd: tmp12.subscriptionPeriodEnd, status: tmp12.status, orbsReward: tmp12.orbsReward, checkoutContext: tmp12.checkoutContext, applyWalletBalance: tmp12.applyWalletBalance, paymentLegs } = obj);
+    if (paymentLegs == null) {
+      paymentLegs = [];
+    }
+    tmp12.paymentLegs = paymentLegs;
     return tmp12;
   } else {
     throw new TypeError("Trying to call a non-function");
@@ -216,7 +225,11 @@ InvoiceRecord["createFromOrder"] = function createFromOrder(billing_facet) {
         invoiceItems = [];
       }
       tmp9.invoiceItems = invoiceItems;
-      ({ taxInclusive: tmp9.taxInclusive, subscriptionPeriodStart: tmp9.subscriptionPeriodStart, subscriptionPeriodEnd: tmp9.subscriptionPeriodEnd, status: tmp9.status, orbsReward: tmp9.orbsReward, checkoutContext: tmp9.checkoutContext, applyWalletBalance: tmp9.applyWalletBalance } = obj);
+      ({ taxInclusive: tmp9.taxInclusive, subscriptionPeriodStart: tmp9.subscriptionPeriodStart, subscriptionPeriodEnd: tmp9.subscriptionPeriodEnd, status: tmp9.status, orbsReward: tmp9.orbsReward, checkoutContext: tmp9.checkoutContext, applyWalletBalance: tmp9.applyWalletBalance, paymentLegs } = obj);
+      if (paymentLegs == null) {
+        paymentLegs = [];
+      }
+      tmp9.paymentLegs = paymentLegs;
       return tmp9;
     } else {
       throw new TypeError("Trying to call a non-function");
@@ -231,27 +244,44 @@ InvoiceRecord["createFromOTPPreview"] = function createFromOTPPreview(invoice_it
   if (invoice_items != null) {
     mapped = invoice_items.map(PremiumSubscriptionInvoiceItem.createInvoiceItemFromServer);
   }
-  const obj = { id: "", invoiceItems: mapped, total: invoice_items.amount, subtotal: invoice_items.subtotal, currency: invoice_items.currency, tax: invoice_items.tax, taxInclusive: invoice_items.tax_inclusive, subscriptionPeriodStart: new Date(0), subscriptionPeriodEnd: null, orbsReward: null, checkoutContext: null, applyWalletBalance: null };
+  const obj = { id: "", invoiceItems: mapped, total: invoice_items.amount, subtotal: invoice_items.subtotal, currency: invoice_items.currency, tax: invoice_items.tax, taxInclusive: invoice_items.tax_inclusive, subscriptionPeriodStart: new Date(0), subscriptionPeriodEnd: null, orbsReward: null, checkoutContext: null, applyWalletBalance: null, paymentLegs: null };
   const date = new Date(0);
   const tmp5 = new.target;
   const tmp7 = new.target;
   obj.subscriptionPeriodEnd = new Date(0);
-  ({ orbs_reward: obj.orbsReward, checkout_context } = invoice_items);
-  obj.checkoutContext = checkout_context;
-  obj.applyWalletBalance = invoice_items.apply_wallet_balance;
+  ({ orbs_reward: obj.orbsReward, checkout_context: obj.checkoutContext, apply_wallet_balance } = invoice_items);
+  obj.applyWalletBalance = apply_wallet_balance;
+  obj.paymentLegs = invoice_items.payment_legs;
   if (typeof InvoiceRecord === "function") {
-    const tmp13 = new InvoiceRecord(obj, require, tmp5, tmp7, checkout_context, InvoiceRecord);
+    const tmp13 = new InvoiceRecord(obj, require, tmp5, tmp7, apply_wallet_balance, InvoiceRecord);
     ({ id: tmp13.id, invoiceItems } = obj);
     if (invoiceItems == null) {
       invoiceItems = [];
     }
     tmp13.invoiceItems = invoiceItems;
-    ({ taxInclusive: tmp13.taxInclusive, subscriptionPeriodStart: tmp13.subscriptionPeriodStart, subscriptionPeriodEnd: tmp13.subscriptionPeriodEnd, status: tmp13.status, orbsReward: tmp13.orbsReward, checkoutContext: tmp13.checkoutContext, applyWalletBalance: tmp13.applyWalletBalance } = obj);
+    ({ taxInclusive: tmp13.taxInclusive, subscriptionPeriodStart: tmp13.subscriptionPeriodStart, subscriptionPeriodEnd: tmp13.subscriptionPeriodEnd, status: tmp13.status, orbsReward: tmp13.orbsReward, checkoutContext: tmp13.checkoutContext, applyWalletBalance: tmp13.applyWalletBalance, paymentLegs } = obj);
+    if (paymentLegs == null) {
+      paymentLegs = [];
+    }
+    tmp13.paymentLegs = paymentLegs;
     return tmp13;
   } else {
     throw new TypeError("Trying to call a non-function");
   }
   const date1 = new Date(0);
+};
+prototype2["getWalletAmount"] = function getWalletAmount() {
+  const paymentLegs = this.paymentLegs;
+  return paymentLegs.reduce((acc, payment_gateway) => {
+    let sum = acc;
+    if (payment_gateway.payment_gateway === constants.TDS) {
+      sum = acc + payment_gateway.amount;
+    }
+    return sum;
+  }, 0);
+};
+prototype2["getAmountDue"] = function getAmountDue() {
+  return this.total - this.getWalletAmount();
 };
 prototype2["findInvoiceItemByPlanId"] = function findInvoiceItemByPlanId(id) {
   closure_0 = id;

@@ -1,13 +1,13 @@
-// === Module 16556: HomeWelcomeMessage ===
+// === Module 16811: HomeWelcomeMessage ===
 
-// Module 16556 (HomeWelcomeMessage)
+// Module 16811 (HomeWelcomeMessage)
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7869 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8287 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import UserStore from "UserStore" /* 1377 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 5083 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import UserStore from "UserStore" /* 1389 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 6912 */;
 
 require = fn;
 function replaceUsernameVariable(message, str, username) {
@@ -34,7 +34,7 @@ function replaceUsernameVariable(message, str, username) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { relativeContainer: { position: "relative" }, welcomeContainer: { marginHorizontal: 12, marginVertical: 16, borderRadius: nativeDefault.radii.sm, padding: 2, display: "flex", flexDirection: "column" }, welcomeContent: null, avatarBackground: null, avatarBorder: null, avatar: null, adminUsernameContainer: null, adminUsername: null, message: null, icon: null };
 let obj3 = { marginHorizontal: 12, marginVertical: 16, borderRadius: nativeDefault.radii.sm, padding: 2, display: "flex", flexDirection: "column" };
 obj2.welcomeContent = { borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: 12, paddingBottom: 12, paddingTop: 4 };
@@ -55,7 +55,7 @@ let obj6 = { color: nativeDefault.colors.TEXT_DEFAULT };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/native/HomeWelcomeMessage.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function HomeWelcomeMessage(guildId) {
   const cResult = guildId(stateFromStores2[9]).c(74);
   guildId = guildId.guildId;
   closure_10();
@@ -217,7 +217,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       tmp26 = cResult[12];
     }
     if (cResult[13] !== guildId) {
-      class M {
+      class E {
         constructor() {
           return closure_5.getGuild(guildId);
         }
@@ -237,31 +237,31 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
           return closure_1_6.getCurrentUser();
         }
       }
-      cResult[14] = M;
+      cResult[14] = E;
     } else {
-      class M {
+      class E {
         constructor() {
           return closure_5.getGuild(guildId);
         }
       }
     }
     const tmp24 = tmp19(tmp2[12])(tmp23);
-    const stateFromStores3 = tmp(tmp2[10]).useStateFromStores(tmp26, M);
+    const stateFromStores3 = tmp(tmp2[10]).useStateFromStores(tmp26, E);
     if (stateFromStores1 != null) {
-      class M {
+      class E {
         constructor() {
           return closure_5.getGuild(guildId);
         }
       }
     }
     if (cResult[15] !== undefined) {
-      class M {
+      class E {
         constructor() {
           return closure_5.getGuild(guildId);
         }
       }
       if (stateFromStores1 != null) {
-        class M {
+        class E {
           constructor() {
             return closure_5.getGuild(guildId);
           }
@@ -283,7 +283,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
         }
       }
       if (stateFromStores1 != null) {
-        class M {
+        class E {
           constructor() {
             return closure_5.getGuild(guildId);
           }
@@ -292,14 +292,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       cResult[15] = tmp33;
       cResult[16] = tmp32;
     } else {
-      class M {
+      class E {
         constructor() {
           return closure_5.getGuild(guildId);
         }
       }
     }
     if (cResult[17] === guildId) {
-      class M {
+      class E {
         constructor() {
           return closure_5.getGuild(guildId);
         }
@@ -321,7 +321,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
         }
       }
       if (cResult[20] === stateFromStores2) {
-        class M {
+        class E {
           constructor() {
             return closure_5.getGuild(guildId);
           }
@@ -342,7 +342,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
           }
         }
         if (cResult[23] === stateFromStores2) {
-          class M {
+          class E {
             constructor() {
               return closure_5.getGuild(guildId);
             }
@@ -364,7 +364,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
           }
           const name = obj8.useName(stateFromStores);
           if (null != stateFromStores1) {
-            class M {
+            class E {
               constructor() {
                 return closure_5.getGuild(guildId);
               }
@@ -405,7 +405,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       }
       cResult[20] = stateFromStores2;
       if (stateFromStores3 != null) {
-        class M {
+        class E {
           constructor() {
             return closure_5.getGuild(guildId);
           }
@@ -454,7 +454,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   cResult[10] = obj3;
   tmp23 = obj3;
   const tmp20 = stateFromStores1(stateFromStores2[11]);
-}) : ((guildId) => {
+}) : (function HomeWelcomeMessage(guildId) {
   guildId = guildId.guildId;
   let stateFromStores2;
   let stateFromStores3;

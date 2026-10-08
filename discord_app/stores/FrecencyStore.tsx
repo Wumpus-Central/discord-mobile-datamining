@@ -1,15 +1,15 @@
-// === Module 5701: FrecencyStore ===
+// === Module 6091: FrecencyStore ===
 
-// Module 5701 (FrecencyStore)
+// Module 6091 (FrecencyStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import FrecencyDefault from "Frecency" /* 4933 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
+import FrecencyDefault from "Frecency" /* 5127 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4899 */;
 
 function handleChannelSelect(arg0) {
   ({ guildId, channelId } = arg0);

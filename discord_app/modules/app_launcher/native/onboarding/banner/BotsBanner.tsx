@@ -1,11 +1,11 @@
-// === Module 11693: BotsBanner ===
+// === Module 11758: BotsBanner ===
 
-// Module 11693 (BotsBanner)
+// Module 11758 (BotsBanner)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import ApplicationsImageDefault from "ApplicationsImage" /* 11678 */;
-import BannerBaseDefault from "BannerBase" /* 11689 */;
-import useBannerBots from "useBannerBots" /* 11694 */;
+import ApplicationsImageDefault from "ApplicationsImage" /* 11743 */;
+import BannerBaseDefault from "BannerBase" /* 11754 */;
+import useBannerBots from "useBannerBots" /* 11759 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/onboarding/banner/BotsBanner.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function BotsBanner(context) {
   let tmp2 = dependencyMap;
   const cResult = c.c(11);
   context = context.context;
@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
   cResult[4] = tmp7;
   tmp6 = tmp7;
   const tmpResult = useBannerBots;
-}) : ((context) => {
+}) : (function BotsBanner(context) {
   const bannerBots = useBannerBots.useBannerBots({ context: context.context });
   ({ firstBotApplication, secondBotApplication } = bannerBots);
   let tmp4Result = null;

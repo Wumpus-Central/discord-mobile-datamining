@@ -1,19 +1,19 @@
-// === Module 16678: useConjureAttachmentImage ===
+// === Module 16941: useConjureAttachmentImage ===
 
-// Module 16678 (useConjureAttachmentImage)
+// Module 16941 (useConjureAttachmentImage)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ConjureConnectionStore = fn(12923);
+const ConjureConnectionStore = fn(13072);
 ({ getAttachmentUrl: closure_4, isAttachmentAvailable: hasOwnProperty } = ConjureConnectionStore);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/chat/useConjureAttachmentImage.tsx");
 
-export const useConjureAttachmentImage = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export const useConjureAttachmentImage = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjureAttachmentImage(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   const cResult = require("c").c(13);
@@ -96,7 +96,7 @@ export const useConjureAttachmentImage = ReactCompilerGating.isReactCompilerEnab
   tmp9 = items;
   tmp8 = fn;
   const tmp4 = _slicedToArray(noop.useState(false), 2);
-}) : ((arg0, arg1) => {
+}) : (function useConjureAttachmentImage(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   const tmp = _slicedToArray(noop.useState(null), 2);

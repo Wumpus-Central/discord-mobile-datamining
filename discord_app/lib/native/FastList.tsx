@@ -1,13 +1,13 @@
-// === Module 6576: FastList ===
+// === Module 6752: FastList ===
 
-// Module 6576 (FastList)
+// Module 6752 (FastList)
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 568 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4618 */;
-import NativeViewDefault from "NativeView" /* 5983 */;
-import BottomSheetModal from "BottomSheetModal" /* 6119 */;
-import refObjectUnionAsPropDefault from "refObjectUnionAsProp" /* 6579 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4810 */;
+import NativeViewDefault from "NativeView" /* 6166 */;
+import BottomSheetModal from "BottomSheetModal" /* 6298 */;
+import refObjectUnionAsPropDefault from "refObjectUnionAsProp" /* 6755 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -969,7 +969,7 @@ ReactCompilerGating.isReactCompilerEnabled();
 const __initData = { code: "function FastListTsx1(){const{scrollPosValue,interpolate,inputRange,outputRange,horizontal}=this.__closure;const interpolatedValue=scrollPosValue!=null?interpolate(scrollPosValue.get(),inputRange,outputRange):null;return{transform:interpolatedValue!=null?[horizontal?{translateX:interpolatedValue}:{translateY:interpolatedValue}]:undefined};}" };
 const __initData2 = { code: "function FastListTsx2(){const{scrollPosValue,interpolate,inputRange,outputRange,horizontal}=this.__closure;const interpolatedValue=scrollPosValue!=null?interpolate(scrollPosValue.get(),inputRange,outputRange):null;return{transform:interpolatedValue!=null?[horizontal?{translateX:interpolatedValue}:{translateY:interpolatedValue}]:undefined};}" };
 ReactCompilerGating = fn(558);
-let closure_21 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_21 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function FastListStickySectionRendererComponent(arg0) {
   const cResult = horizontal(items[8]).c(24);
   ({ layoutStart, layoutSize, horizontal } = arg0);
   ({ nextSectionLayoutPosition, scrollPosValue } = arg0);
@@ -1119,7 +1119,7 @@ let closure_21 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
   cResult[5] = onlyResult;
   tmp12 = onlyResult;
   let obj2 = { scrollPosValue, interpolate: horizontal(items[12]).interpolate, inputRange: items, outputRange: items1, horizontal };
-}) : ((children) => {
+}) : (function FastListStickySectionRendererComponent(children) {
   ({ layoutStart, layoutSize, horizontal } = children);
   ({ nextSectionLayoutPosition, scrollPosValue } = children);
   ({ fastListInstance, section, debug, recyclerKey } = children);
@@ -1231,7 +1231,7 @@ let closure_22 = noop.memo(function _FastListSectionRenderer(disableWrapper) {
   fastListInstance = children(section, fastListInstance);
   section = [fastListInstance, false];
   obj4.children = section;
-  v65535(NativeViewDefault, obj4);
+  collapsed(NativeViewDefault, obj4);
 });
 let closure_23 = noop.memo(function _FastListSectionFooterRenderer(disableWrapper) {
   ({ layoutSize, fastListInstance, children, section, recyclerKey, horizontal } = disableWrapper);
@@ -1251,7 +1251,7 @@ let closure_23 = noop.memo(function _FastListSectionFooterRenderer(disableWrappe
   children = children(section, fastListInstance);
   section = [children, false];
   obj4.children = section;
-  v65535(NativeViewDefault, obj4);
+  collapsed(NativeViewDefault, obj4);
 });
 let closure_24 = noop.memo(function _FastListItemRenderer(disableWrapper) {
   ({ layoutSize, children, section, fastListInstance, item, recyclerKey, horizontal } = disableWrapper);
@@ -1276,7 +1276,7 @@ let closure_24 = noop.memo(function _FastListItemRenderer(disableWrapper) {
   }
   const items = [childrenResult1, false];
   obj3.children = items;
-  childrenResult = v65535(NativeViewDefault, obj3);
+  childrenResult = collapsed(NativeViewDefault, obj3);
 });
 let closure_25 = noop.memo(function _FastListHeaderFooterRenderer(disableWrapper) {
   ({ layoutSize, children, fastListInstance, recyclerKey, horizontal } = disableWrapper);
@@ -1296,7 +1296,7 @@ let closure_25 = noop.memo(function _FastListHeaderFooterRenderer(disableWrapper
   children = children(fastListInstance);
   fastListInstance = [children, false];
   obj4.children = fastListInstance;
-  v65535(NativeViewDefault, obj4);
+  collapsed(NativeViewDefault, obj4);
 });
 let closure_26 = noop.memo(function _FastListSpacer(layoutSize) {
   layoutSize = layoutSize.layoutSize;
@@ -2362,13 +2362,13 @@ prototype4["render"] = function render() {
     renderAccessoryResult = renderAccessory(self);
   }
   children[2] = renderAccessoryResult;
-  return v65535(__initData, { children });
+  return collapsed(__initData, { children });
 };
 FastList.defaultProps = { batchesToRender: 12, contentInset: { top: 0, right: 0, left: 0, bottom: 0 }, disableLegacyGestureHandling: false, disableRecyclingOnFullCompute: false, stickyHeaderFooter: false };
 const __initData3 = { code: "function FastListTsx3(event){const{horizontal,workletMounted,scrollPosValue,onScrollWorklet}=this.__closure;const scrollPosition=!horizontal?event.contentOffset.y:event.contentOffset.x;const contentSize=!horizontal?event.contentSize.height:event.contentSize.width;if(contentSize===0&&!workletMounted.get()){return;}workletMounted.set(true);scrollPosValue.set(Math.min(scrollPosition,contentSize));if(onScrollWorklet!=null){const layoutSize=!horizontal?event.layoutMeasurement.height:event.layoutMeasurement.width;onScrollWorklet(scrollPosition,contentSize,layoutSize);}}" };
 const __initData4 = { code: "function FastListTsx4(event){const{horizontal,workletMounted,scrollPosValue,onScrollWorklet}=this.__closure;const scrollPosition=!horizontal?event.contentOffset.y:event.contentOffset.x;const contentSize=!horizontal?event.contentSize.height:event.contentSize.width;if(contentSize===0&&!workletMounted.get())return;workletMounted.set(true);scrollPosValue.set(Math.min(scrollPosition,contentSize));if(onScrollWorklet!=null){const layoutSize=!horizontal?event.layoutMeasurement.height:event.layoutMeasurement.width;onScrollWorklet(scrollPosition,contentSize,layoutSize);}}" };
 ReactCompilerGating = fn(558);
-let closure_32 = ReactCompilerGating.isReactCompilerEnabled() ? ((scrollViewRef) => {
+let closure_32 = ReactCompilerGating.isReactCompilerEnabled() ? (function FastListScrollWorklet(scrollViewRef) {
   const cResult = scrollViewRef(horizontal[8]).c(10);
   scrollViewRef = scrollViewRef.scrollViewRef;
   const scrollPosValue = scrollViewRef.scrollPosValue;
@@ -2448,7 +2448,7 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled() ? ((scrollViewRef)
   cResult[4] = fn;
   tmp6 = fn;
   obj = scrollViewRef(horizontal[8]);
-}) : ((scrollViewRef) => {
+}) : (function FastListScrollWorklet(scrollViewRef) {
   scrollViewRef = scrollViewRef.scrollViewRef;
   const scrollPosValue = scrollViewRef.scrollPosValue;
   const horizontal = scrollViewRef.horizontal;

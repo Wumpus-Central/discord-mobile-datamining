@@ -1,6 +1,6 @@
-// === Module 15627: useMountTimer ===
+// === Module 15907: useMountTimer ===
 
-// Module 15627 (useMountTimer)
+// Module 15907 (useMountTimer)
 import c from "c" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/devtools/native/components/screens/performance/useMountTimer.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useMountTimer() {
   const cResult = c.c(5);
   [tmp3, require] = noop.useState(null);
   noop.useRef(0);
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp7 = cResult[4];
   }
   return tmp7;
-}) : (() => {
+}) : (function useMountTimer() {
   const tmp = _slicedToArray(noop.useState(null), 2);
   closure_0 = tmp[1];
   noop.useRef(0);

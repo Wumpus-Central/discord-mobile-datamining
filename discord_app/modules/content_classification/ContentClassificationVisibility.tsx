@@ -1,11 +1,11 @@
-// === Module 11565: ContentClassificationVisibility ===
+// === Module 11628: ContentClassificationVisibility ===
 
-// Module 11565 (ContentClassificationVisibility)
+// Module 11628 (ContentClassificationVisibility)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import ContentClassificationToAgeRestriction from "ContentClassificationToAgeRestriction" /* 5905 */;
-import AgeRestrictionStatus from "AgeRestrictionStatus" /* 5907 */;
-import UserStore from "UserStore" /* 1377 */;
+import ContentClassificationToAgeRestriction from "ContentClassificationToAgeRestriction" /* 6048 */;
+import AgeRestrictionStatus from "AgeRestrictionStatus" /* 6050 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const ContentClassificationVisibility = { DISPLAY: "display", BLOCK_UNDERAGE: "block_underage", BLOCK_CHANNEL_RESTRICTION: "block_channel_restriction" };
@@ -36,7 +36,7 @@ let result = size.fileFinishedImporting("modules/content_classification/ContentC
 
 export { ContentClassificationVisibility };
 export { getContentClassificationVisibility };
-export const useContentClassificationVisibility = ReactCompilerGating.isReactCompilerEnabled() ? ((data, isPrivate) => {
+export const useContentClassificationVisibility = ReactCompilerGating.isReactCompilerEnabled() ? (function useContentClassificationVisibility(data, isPrivate) {
   const obj = c;
   const cResult = obj.c(6);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -87,7 +87,7 @@ export const useContentClassificationVisibility = ReactCompilerGating.isReactCom
   }
   DISPLAY = obj.DISPLAY;
   const tmpResult = initialize;
-}) : ((data, isPrivate) => {
+}) : (function useContentClassificationVisibility(data, isPrivate) {
   initialize;
   [][0] = UserStore;
   if (null != data) {

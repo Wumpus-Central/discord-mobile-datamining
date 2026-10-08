@@ -1,8 +1,8 @@
-// === Module 12728: InAppReportsUpsellsTableRow ===
+// === Module 13397: InAppReportsUpsellsTableRow ===
 
-// Module 12728 (InAppReportsUpsellsTableRow)
+// Module 13397 (InAppReportsUpsellsTableRow)
 import c from "c" /* 576 */;
-import TableRow from "TableRow" /* 6000 */;
+import TableRow from "TableRow" /* 6184 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsUpsellsTableRow.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((description) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function InAppReportsUpsellsTableRow(description) {
   const cResult = c.c(7);
   ({ title, disabledTitle, variant, disabled, onPress, icon } = description);
   let str = "default";
@@ -52,7 +52,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((description) => 
   cResult[5] = str;
   cResult[6] = tmp8;
   tmp7 = tmp8;
-}) : ((disabled) => {
+}) : (function InAppReportsUpsellsTableRow(disabled) {
   ({ title, disabledTitle, variant } = disabled);
   if (variant === undefined) {
     variant = "default";

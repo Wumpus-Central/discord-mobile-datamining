@@ -1,7 +1,7 @@
-// === Module 8282: GoogleWalletVerificationScreen ===
+// === Module 7664: GoogleWalletVerificationScreen ===
 
-// Module 8282 (GoogleWalletVerificationScreen)
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8119 */;
+// Module 7664 (GoogleWalletVerificationScreen)
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 5915 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -39,7 +39,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_assurance/native/GoogleWalletVerificationScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GoogleWalletVerificationScreen(onClose) {
   const cResult = require("c").c(24);
   onClose = onClose.onClose;
   _require = onClose;
@@ -411,7 +411,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
       }
       return value;
     });
-    const fn2 = function() {
+    function t4() {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -420,11 +420,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
         applyArgumentsResult = apply(self, arguments);
       }
       return applyArgumentsResult;
-    };
+    }
     cResult[6] = tmp10;
     cResult[7] = tmp8;
-    cResult[8] = fn2;
-    tmp11 = fn2;
+    cResult[8] = t4;
+    tmp11 = t4;
     const tmpResult = tmp(tmp2[8]);
   }
   class A {
@@ -441,7 +441,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
   cResult[3] = A;
   tmp8 = A;
   const tmp6 = _slicedToArray(noop.useState(first), 2);
-}) : ((onClose) => {
+}) : (function GoogleWalletVerificationScreen(onClose) {
   onClose = onClose.onClose;
   const onComplete = onClose.onComplete;
   const modalSessionId = onClose.modalSessionId;

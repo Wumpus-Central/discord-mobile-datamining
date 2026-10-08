@@ -1,9 +1,9 @@
-// === Module 8357: useResolveGame ===
+// === Module 8855: useResolveGame ===
 
-// Module 8357 (useResolveGame)
+// Module 8855 (useResolveGame)
 import c from "c" /* 576 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6670 */;
-import useGame from "useGame" /* 6822 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6847 */;
+import useGame from "useGame" /* 6995 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/games/hooks/useResolveGame.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useResolveGame(arg0) {
   const cResult = c.c(6);
   ({ applicationId, gameId } = arg0);
   let tmp4;
@@ -50,7 +50,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = obj3;
   tmp11 = obj3;
   const tmpResult = useGame;
-}) : ((arg0) => {
+}) : (function useResolveGame(arg0) {
   ({ applicationId, gameId } = arg0);
   let getOrFetchApplication;
   let tmp3;

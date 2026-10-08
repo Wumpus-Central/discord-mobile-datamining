@@ -1,16 +1,16 @@
-// === Module 13018: HeadlessCollectiblesPurchaseFlow ===
+// === Module 13296: HeadlessCollectiblesPurchaseFlow ===
 
-// Module 13018 (HeadlessCollectiblesPurchaseFlow)
+// Module 13296 (HeadlessCollectiblesPurchaseFlow)
 import c from "c" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import BillingPlatformUtils from "BillingPlatformUtils" /* 4547 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import useProductPurchaseState from "useProductPurchaseState" /* 8529 */;
-import ACOMExperiments from "ACOMExperiments" /* 8899 */;
-import NativeCheckoutStoreProviderDefault from "NativeCheckoutStoreProvider" /* 10551 */;
-import NativePaymentContext from "NativePaymentContext" /* 10564 */;
-import useCollectiblesExternalGatewayFacetDefault from "useCollectiblesExternalGatewayFacet" /* 10758 */;
-import HeadlessCollectiblesPurchaseRunner from "HeadlessCollectiblesPurchaseRunner" /* 13019 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import BillingPlatformUtils from "BillingPlatformUtils" /* 4739 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import useProductPurchaseState from "useProductPurchaseState" /* 9014 */;
+import ACOMExperiments from "ACOMExperiments" /* 9332 */;
+import NativeCheckoutStoreProviderDefault from "NativeCheckoutStoreProvider" /* 10148 */;
+import NativePaymentContext from "NativePaymentContext" /* 10161 */;
+import useCollectiblesExternalGatewayFacetDefault from "useCollectiblesExternalGatewayFacet" /* 12712 */;
+import HeadlessCollectiblesPurchaseRunner from "HeadlessCollectiblesPurchaseRunner" /* 13297 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -23,7 +23,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/headless_components/HeadlessCollectiblesPurchaseFlow.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function HeadlessCollectiblesPurchaseFlow(arg0) {
   const cResult = c.c(24);
   ({ product, attempt, analyticsLocations, onBuySettled, stageCollectibleChangeForEditProfile } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -131,7 +131,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = enabled;
   cResult[3] = tmp9;
   tmpResult2 = PlatformUtils;
-}) : ((arg0) => {
+}) : (function HeadlessCollectiblesPurchaseFlow(arg0) {
   ({ product, analyticsLocations } = arg0);
   ({ attempt, onBuySettled, stageCollectibleChangeForEditProfile } = arg0);
   const OTPACOMOrderExperiment = ACOMExperiments.OTPACOMOrderExperiment;

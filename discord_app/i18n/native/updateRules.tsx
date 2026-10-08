@@ -1,25 +1,25 @@
-// === Module 17446: updateRules ===
+// === Module 17728: updateRules ===
 
-// Module 17446 (updateRules)
+// Module 17728 (updateRules)
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import _modDef1936 from "module_1936" /* 1936 */;
-import LinkingDefault from "Linking" /* 4571 */;
+import native from "native" /* 1200 */;
+import _modDef1948 from "module_1948" /* 1948 */;
+import LinkingDefault from "Linking" /* 4763 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 let paragraph = { strong: { fontFamily: fn(1085).Fonts.PRIMARY_SEMIBOLD }, italic: { fontStyle: "italic" }, underline: { textDecorationLine: "underline" } };
 const ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((node) => {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function I18nLink(node) {
   const cResult = node(576).c(9);
   node = node.node;
   ({ output, state } = node);
   let obj = node(576);
   const tmp = node;
-  const token = node(4586).useToken(nativeDefault.colors.TEXT_LINK);
+  const token = node(4778).useToken(nativeDefault.colors.TEXT_LINK);
   let str = "none";
-  if (noop.useContext(node(4602).AccessibilityPreferencesContext).alwaysShowLinkDecorations) {
+  if (noop.useContext(node(4794).AccessibilityPreferencesContext).alwaysShowLinkDecorations) {
     str = "underline";
   }
   if (cResult[0] === token) {
@@ -42,7 +42,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((node) => {
             let tmp10 = cResult[8];
           }
           const obj4 = { accessible: true, accessibilityRole: "link", onPress: tmp9, style: tmp5, children: tmp10 };
-          return jsx(tmp(1188).LegacyText, { accessible: true, accessibilityRole: "link", onPress: tmp9, style: tmp5, children: tmp10 });
+          return jsx(tmp(1200).LegacyText, { accessible: true, accessibilityRole: "link", onPress: tmp9, style: tmp5, children: tmp10 });
         }
       }
       const outputResult = output(node.content, state);
@@ -53,25 +53,17 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((node) => {
       tmp10 = outputResult;
     } else {
       if (cResult[3] !== node.target) {
-        class L {
-          constructor() {
-            obj = closure_1(closure_2[8]);
-            obj2 = closure_1(closure_2[9]);
-            return obj.openURL(obj2.sanitizeUrl(node.target));
-          }
-        }
+        const fn = function f() {
+          const obj = LinkingDefault;
+          return obj.openURL(_modDef1948.sanitizeUrl(node.target));
+        };
         cResult[3] = node.target;
-        cResult[4] = L;
+        cResult[4] = fn;
+        let tmp8 = fn;
       } else {
-        class L {
-          constructor() {
-            obj = closure_1(closure_2[8]);
-            obj2 = closure_1(closure_2[9]);
-            return obj.openURL(obj2.sanitizeUrl(node.target));
-          }
-        }
+        tmp8 = cResult[4];
       }
-      obj3.onClick = L;
+      obj3.onClick = tmp8;
     }
   }
   const obj5 = { color: token, textDecorationLine: str };
@@ -79,8 +71,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((node) => {
   cResult[1] = str;
   cResult[2] = obj5;
   tmp5 = obj5;
-  const obj2 = node(4586);
-}) : ((node) => {
+  const obj2 = node(4778);
+}) : (function I18nLink(node) {
   node = node.node;
   let token;
   let obj = {};
@@ -108,7 +100,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((node) => {
   if (null == obj.onClick) {
     obj.onClick = () => {
       const obj = LinkingDefault;
-      return obj.openURL(_modDef1936.sanitizeUrl(node.target));
+      return obj.openURL(_modDef1948.sanitizeUrl(node.target));
     };
   }
   const obj2 = node(token[6]);
@@ -123,25 +115,25 @@ const result = size.fileFinishedImporting("i18n/native/updateRules.tsx");
 export default function updateRules(paragraph) {
   paragraph = {};
   const merged = Object.assign(paragraph.paragraph);
-  paragraph.react = function react(content, fn, key) {
+  paragraph.react = function ParagraphReact(content, fn, key) {
     return jsx(native.LegacyText, { children: fn(content.content, key) }, key.key);
   };
   paragraph.paragraph = paragraph;
   const obj2 = {};
   const merged1 = Object.assign(paragraph.strong);
-  obj2.react = function react(content, fn, key) {
+  obj2.react = function StrongReact(content, fn, key) {
     return jsx(native.LegacyText, { style: paragraph.strong, children: fn(content.content, key) }, key.key);
   };
   paragraph.strong = obj2;
   const obj3 = {};
   const merged2 = Object.assign(paragraph.em);
-  obj3.react = function react(content, fn, key) {
+  obj3.react = function EmReact(content, fn, key) {
     return jsx(native.LegacyText, { style: paragraph.italic, children: fn(content.content, key) }, key.key);
   };
   paragraph.em = obj3;
   const obj4 = {};
   const merged3 = Object.assign(paragraph.u);
-  obj4.react = function react(content, fn, key) {
+  obj4.react = function UnderlineReact(content, fn, key) {
     return jsx(native.LegacyText, { style: paragraph.underline, children: fn(content.content, key) }, key.key);
   };
   paragraph.u = obj4;

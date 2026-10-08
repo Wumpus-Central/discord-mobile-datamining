@@ -1,8 +1,8 @@
-// === Module 16128: GuildThemePreviewOverlay ===
+// === Module 16388: GuildThemePreviewOverlay ===
 
-// Module 16128 (GuildThemePreviewOverlay)
+// Module 16388 (GuildThemePreviewOverlay)
 import c from "c" /* 576 */;
-import inlineStyles from "inlineStyles" /* 8169 */;
+import inlineStyles from "inlineStyles" /* 7550 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_themes/native/GuildThemePreviewOverlay.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildThemePreviewOverlay(arg0) {
   const cResult = c.c(17);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const tmp7 = React3(inlineStyles.Path, { d: "M20.8821 7.1867C20.8821 3.21759 24.0659 0 27.9932 0H84.8821V154.514H20.8821V7.1867Z", fill: "black", fillOpacity: "0.1" });
@@ -121,7 +121,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp43 = cResult[16];
   }
   return tmp43;
-}) : ((arg0) => {
+}) : (function GuildThemePreviewOverlay(arg0) {
   const obj = {};
   const merged = Object.assign(arg0);
   obj.preserveAspectRatio = "none";

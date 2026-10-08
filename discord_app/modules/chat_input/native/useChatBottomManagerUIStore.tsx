@@ -1,6 +1,6 @@
-// === Module 9100: useChatBottomManagerUIStore ===
+// === Module 9318: useChatBottomManagerUIStore ===
 
-// Module 9100 (useChatBottomManagerUIStore)
+// Module 9318 (useChatBottomManagerUIStore)
 import Storage3 from "Storage" /* 510 */;
 import c from "c" /* 576 */;
 import module_570 from "module_570" /* 570 */;
@@ -24,7 +24,7 @@ let obj = module_570.create(() => {
   return obj;
 });
 let ReactCompilerGating = ReactCompilerGating_mod;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useChatInputContainerHeight(arg0) {
   _require = arg0;
   obj = require("c");
   const cResult = obj.c(2);
@@ -49,7 +49,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp2 = cResult[1];
   }
   return obj(tmp2);
-}) : ((arg0) => {
+}) : (function useChatInputContainerHeight(arg0) {
   closure_0 = arg0;
   return obj((chatInputContainerHeight) => {
     chatInputContainerHeight = chatInputContainerHeight.chatInputContainerHeight;
@@ -66,7 +66,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   });
 });
 let ReactCompilerGating = ReactCompilerGating_mod;
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSmallSuggestionBarHeight(arg0) {
   closure_0 = arg0;
   obj = c;
   const cResult = obj.c(2);
@@ -86,7 +86,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp2 = cResult[1];
   }
   return obj(tmp2);
-}) : ((arg0) => {
+}) : (function useSmallSuggestionBarHeight(arg0) {
   closure_0 = arg0;
   return obj((smallSuggestionBarHeight) => {
     smallSuggestionBarHeight = smallSuggestionBarHeight.smallSuggestionBarHeight;
@@ -98,7 +98,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   });
 });
 let ReactCompilerGating = ReactCompilerGating_mod;
-const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useChatShowingAutoComplete(arg0) {
   closure_0 = arg0;
   obj = c;
   const cResult = obj.c(2);
@@ -118,7 +118,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp2 = cResult[1];
   }
   return obj(tmp2);
-}) : ((arg0) => {
+}) : (function useChatShowingAutoComplete(arg0) {
   closure_0 = arg0;
   return obj((showingAutoComplete) => {
     showingAutoComplete = showingAutoComplete.showingAutoComplete;
@@ -130,7 +130,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   });
 });
 let ReactCompilerGating = ReactCompilerGating_mod;
-const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useChatIsAtBottom(arg0) {
   closure_0 = arg0;
   obj = c;
   const cResult = obj.c(2);
@@ -150,7 +150,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp2 = cResult[1];
   }
   return obj(tmp2);
-}) : ((arg0) => {
+}) : (function useChatIsAtBottom(arg0) {
   closure_0 = arg0;
   return obj((isAtBottom) => {
     isAtBottom = isAtBottom.isAtBottom;
@@ -236,7 +236,7 @@ export const updateIsAtBottom = function updateIsAtBottom(arg0, arg1) {
   });
 };
 export const useChatIsAtBottom = tmp6;
-export const useBestActiveChatInputContainerHeight = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useBestActiveChatInputContainerHeight = ReactCompilerGating.isReactCompilerEnabled() ? (function useBestActiveChatInputContainerHeight() {
   obj = c;
   const cResult = obj.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -269,26 +269,28 @@ export const useBestActiveChatInputContainerHeight = ReactCompilerGating.isReact
     first = cResult[0];
   }
   return obj(first);
-}) : (() => obj((chatInputContainerHeight) => {
-  const highestActiveScreenIndex = require("ChatInputUtils").getHighestActiveScreenIndex();
-  if (null == highestActiveScreenIndex) {
-    const Storage2 = require("Storage").Storage;
-    let num4 = Storage2.get(closure_1_2, 0);
-    if (num4 == null) {
-      num4 = 0;
-    }
-    value = num4;
-  } else {
-    chatInputContainerHeight = chatInputContainerHeight.chatInputContainerHeight;
-    value = chatInputContainerHeight.get(highestActiveScreenIndex);
-    if (value == null) {
-      const Storage = require("Storage").Storage;
-      let num2 = Storage.get(closure_1_2, 0);
-      if (num2 == null) {
-        num2 = 0;
+}) : (function useBestActiveChatInputContainerHeight() {
+  return obj((chatInputContainerHeight) => {
+    const highestActiveScreenIndex = require("ChatInputUtils").getHighestActiveScreenIndex();
+    if (null == highestActiveScreenIndex) {
+      const Storage2 = require("Storage").Storage;
+      let num4 = Storage2.get(closure_1_2, 0);
+      if (num4 == null) {
+        num4 = 0;
       }
-      value = num2;
+      value = num4;
+    } else {
+      chatInputContainerHeight = chatInputContainerHeight.chatInputContainerHeight;
+      value = chatInputContainerHeight.get(highestActiveScreenIndex);
+      if (value == null) {
+        const Storage = require("Storage").Storage;
+        let num2 = Storage.get(closure_1_2, 0);
+        if (num2 == null) {
+          num2 = 0;
+        }
+        value = num2;
+      }
     }
-  }
-  return value;
-}));
+    return value;
+  });
+});

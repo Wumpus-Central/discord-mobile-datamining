@@ -1,10 +1,10 @@
-// === Module 15370: SettingsAdvancedScreen ===
+// === Module 15632: SettingsAdvancedScreen ===
 
-// Module 15370 (SettingsAdvancedScreen)
+// Module 15632 (SettingsAdvancedScreen)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import SettingBuilders from "SettingBuilders" /* 11142 */;
-import SettingLayoutDefault from "SettingLayout" /* 14515 */;
+import SettingBuilders from "SettingBuilders" /* 11262 */;
+import SettingLayoutDefault from "SettingLayout" /* 14775 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -35,14 +35,14 @@ function getAdvancedSettings() {
   items1[3] = obj5;
   return items1;
 }
-const MobileUserSettings = fn(7645).MobileUserSettings;
+const MobileUserSettings = fn(7966).MobileUserSettings;
 const MarketingURLs = fn(1085).MarketingURLs;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/advanced/native/SettingsAdvancedScreen.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function SettingsAdvancedScreen() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { sections: getAdvancedSettings() };
@@ -62,7 +62,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp7 = cResult[1];
   }
   return tmp7;
-}) : (() => {
+}) : (function SettingsAdvancedScreen() {
   const node = noop.useMemo(() => {
     const obj = SettingBuilders;
     return obj.createList({ sections: getAdvancedSettings() });

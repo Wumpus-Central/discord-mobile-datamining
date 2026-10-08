@@ -1,9 +1,9 @@
-// === Module 17545: ? ===
+// === Module 17827: ? ===
 
-// Module 17545
+// Module 17827
 import util from "util" /* 1126 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
-import GameConsoleConstants from "GameConsoleConstants" /* 8781 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2127 */;
+import GameConsoleConstants from "GameConsoleConstants" /* 9127 */;
 import size from "module_2" /* 2 */;
 
 const constants = GameConsoleConstants.GameConsoleCommandResultErrorCodes;

@@ -1,9 +1,9 @@
-// === Module 17313: ActivityAccessibilityLayer ===
+// === Module 17594: ActivityAccessibilityLayer ===
 
-// Module 17313 (ActivityAccessibilityLayer)
+// Module 17594 (ActivityAccessibilityLayer)
 import c from "c" /* 576 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5777 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 5786 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5360 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 5369 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -12,22 +12,23 @@ require = fn;
 let closure_2 = ["isActivityFocused"];
 get_ActivityIndicator = fn(17);
 ({ Pressable: metroRequire, StyleSheet: closure_7, View: closure_8 } = get_ActivityIndicator);
-const IS_IOS = fn(11916).IS_IOS;
+const IS_IOS = fn(11989).IS_IOS;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_12 = createStyles.createStyles({ fill: { flex: 1 } });
 let ReactCompilerGating = fn(558);
-let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function FocusedActivityAccessibilityLayer(channelId) {
   const cResult = require("c").c(22);
   ({ activityName, children } = channelId);
   const tmp4 = closure_12();
   let num = 2;
   const obj = require("c");
+  const tmp2 = ref;
   [tmp6, require] = noop.useState(false);
   ref = noop.useRef(null);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function l() {
+    const fn = function s() {
       _require(true);
     };
     cResult[0] = fn;
@@ -36,118 +37,99 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
     first = cResult[0];
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn2 = function w() {
-      _require(false);
-      const result = setAccessibilityFocus.setAccessibilityFocus({ ref, delay: 300 });
-    };
-    cResult[1] = fn2;
-    let tmp9 = fn2;
+    class R {
+      constructor() {
+        tmp = closure_0(false);
+        obj = closure_0(closure_1[9]);
+        obj1 = { ref: closure_1, delay: 300 };
+        result = obj.setAccessibilityFocus(obj1);
+        return;
+      }
+    }
+    cResult[1] = R;
   } else {
-    tmp9 = cResult[1];
+    class R {
+      constructor() {
+        tmp = closure_0(false);
+        obj = closure_0(closure_1[9]);
+        obj1 = { ref: closure_1, delay: 300 };
+        result = obj.setAccessibilityFocus(obj1);
+        return;
+      }
+    }
   }
   if (cResult[2] !== activityName) {
-    if (null != activityName) {
-      const intl2 = require("util").intl;
-      const obj2 = { name: activityName };
-      let formatToPlainStringResult = intl2.formatToPlainString(require("util").t.XSfwGL, obj2);
-    } else {
-      const intl = require("util").intl;
-      formatToPlainStringResult = intl.string(require("util").t.KYNi2m);
+    class R {
+      constructor() {
+        tmp = closure_0(false);
+        obj = closure_0(closure_1[9]);
+        obj1 = { ref: closure_1, delay: 300 };
+        result = obj.setAccessibilityFocus(obj1);
+        return;
+      }
     }
     cResult[num] = activityName;
     num = 3;
-    cResult[3] = formatToPlainStringResult;
+    cResult[3] = tmp10;
   } else {
+    class R {
+      constructor() {
+        tmp = closure_0(false);
+        obj = closure_0(closure_1[9]);
+        obj1 = { ref: closure_1, delay: 300 };
+        result = obj.setAccessibilityFocus(obj1);
+        return;
+      }
+    }
     const _HermesInternal = HermesInternal;
+    const fill = tmp4.fill;
     const combined = "voice-panel-activity-" + channelId.channelId;
-    let tmp14;
     if (tmp6) {
-      tmp14 = tmp9;
-    }
-    let str3 = "no-hide-descendants";
-    if (tmp6) {
-      str3 = "auto";
-    }
-    if (cResult[4] === children) {
-      if (cResult[5] === tmp6) {
-        if (cResult[6] === tmp4.fill) {
-          if (cResult[7] === combined) {
-            if (cResult[8] === tmp14) {
-              if (cResult[9] === tmp15) {
-                if (cResult[10] === str3) {
-                  let tmp16 = cResult[11];
-                }
-                let str4 = "auto";
-                let str5 = "auto";
-                if (tmp6) {
-                  str5 = "none";
-                }
-                const _Symbol = Symbol;
-                if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-                  const intl3 = require("util").intl;
-                  const stringResult = intl3.string(require("util").t["8DaKO6"]);
-                  cResult[12] = stringResult;
-                  let tmp19 = stringResult;
-                } else {
-                  tmp19 = cResult[12];
-                }
-                if (tmp6) {
-                  str4 = "no-hide-descendants";
-                }
-                if (cResult[13] === tmp6) {
-                  if (cResult[14] === tmp10) {
-                    if (cResult[15] === str5) {
-                      if (cResult[16] === str4) {
-                        let tmp21 = cResult[17];
-                      }
-                      if (cResult[18] === tmp4.fill) {
-                        if (cResult[19] === tmp21) {
-                          if (cResult[20] === tmp16) {
-                            let tmp26 = cResult[21];
-                          }
-                          return tmp26;
-                        }
-                      }
-                      const obj3 = { style: tmp4.fill, children: null };
-                      const items = [tmp16, tmp21];
-                      obj3.children = items;
-                      const tmp29 = closure_11(closure_8, obj3);
-                      cResult[18] = tmp4.fill;
-                      cResult[19] = tmp21;
-                      cResult[20] = tmp16;
-                      cResult[21] = tmp29;
-                      tmp26 = tmp29;
-                    }
-                  }
-                }
-                const obj4 = { ref, style: closure_7.absoluteFill, pointerEvents: str5, accessible: true, accessibilityRole: "button", accessibilityLabel: tmp10, accessibilityHint: tmp19, accessibilityElementsHidden: tmp6, importantForAccessibility: str4, onPress: first };
-                const tmp25 = closure_10(closure_6, obj4);
-                cResult[13] = tmp6;
-                cResult[14] = tmp10;
-                cResult[15] = str5;
-                cResult[16] = str4;
-                cResult[17] = tmp25;
-                tmp21 = tmp25;
-              }
-            }
-          }
+      class R {
+        constructor() {
+          tmp = closure_0(false);
+          obj = closure_0(closure_1[9]);
+          obj1 = { ref: closure_1, delay: 300 };
+          result = obj.setAccessibilityFocus(obj1);
+          return;
         }
       }
     }
-    const obj5 = { nativeID: combined, accessibilityViewIsModal: tmp6, onAccessibilityEscape: tmp14, accessibilityElementsHidden: !tmp6, importantForAccessibility: str3, style: tmp4.fill, children };
-    const tmp18 = closure_10(require("AccessibilityView").AccessibilityView, obj5);
+    if (tmp6) {
+      class R {
+        constructor() {
+          tmp = closure_0(false);
+          obj = closure_0(closure_1[9]);
+          obj1 = { ref: closure_1, delay: 300 };
+          result = obj.setAccessibilityFocus(obj1);
+          return;
+        }
+      }
+    }
+    if (cResult[4] === children) {
+      class R {
+        constructor() {
+          tmp = closure_0(false);
+          obj = closure_0(closure_1[9]);
+          obj1 = { ref: closure_1, delay: 300 };
+          result = obj.setAccessibilityFocus(obj1);
+          return;
+        }
+      }
+    }
+    const obj2 = { nativeID: combined, accessibilityViewIsModal: tmp6, onAccessibilityEscape: undefined, accessibilityElementsHidden: !tmp6, importantForAccessibility: "no-hide-descendants", style: tmp4.fill, children };
+    const tmp17 = closure_10(require("AccessibilityView").AccessibilityView, obj2);
     cResult[4] = children;
     cResult[5] = tmp6;
     cResult[6] = tmp4.fill;
     cResult[7] = combined;
-    cResult[8] = tmp14;
+    cResult[8] = undefined;
     cResult[9] = !tmp6;
-    cResult[10] = str3;
-    cResult[11] = tmp18;
-    tmp16 = tmp18;
+    cResult[10] = "no-hide-descendants";
+    cResult[11] = tmp17;
   }
   const tmp5 = _slicedToArray(noop.useState(false), 2);
-}) : ((activityName) => {
+}) : (function FocusedActivityAccessibilityLayer(activityName) {
   activityName = activityName.activityName;
   _require = undefined;
   ({ channelId, children } = activityName);
@@ -189,7 +171,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
   obj3.style = tmp.fill;
   obj3.children = children;
   const items = [closure_10(tmp10(tmp8[11]).AccessibilityView, obj3), ];
-  const obj4 = { ref, style: closure_7.absoluteFill, pointerEvents: null, accessible: true, accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, accessibilityElementsHidden: null, importantForAccessibility: null, onPress: null };
+  const obj4 = { ref, style: absoluteFill.absoluteFill, pointerEvents: null, accessible: true, accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, accessibilityElementsHidden: null, importantForAccessibility: null, onPress: null };
   let str2 = "auto";
   let str3 = "auto";
   if (tmp3) {
@@ -213,7 +195,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/card/ActivityAccessibilityLayer.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((isActivityFocused) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ActivityAccessibilityLayer(isActivityFocused) {
   const cResult = c.c(5);
   if (cResult[0] !== isActivityFocused) {
     isActivityFocused = isActivityFocused.isActivityFocused;
@@ -233,7 +215,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((isActivityFocuse
         if (cResult[3] !== tmp5) {
           const obj2 = {};
           const merged = Object.assign(tmp5);
-          const tmp15 = v65535(closure_13, obj2);
+          const tmp15 = collapsed(closure_13, obj2);
           cResult[3] = tmp5;
           cResult[4] = tmp15;
         }
@@ -241,14 +223,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((isActivityFocuse
     }
   }
   return tmp5.children;
-}) : ((isActivityFocused) => {
+}) : (function ActivityAccessibilityLayer(isActivityFocused) {
   const merged = Object.assign(isActivityFocused, Object.assign({ isActivityFocused: 0 }));
   if (IS_IOS) {
     if (obj.useIsScreenReaderEnabled()) {
       if (isActivityFocused.isActivityFocused) {
         const obj2 = {};
         const merged1 = Object.assign(merged);
-        let children = v65535(closure_13, obj2);
+        let children = collapsed(closure_13, obj2);
       }
       return children;
     }

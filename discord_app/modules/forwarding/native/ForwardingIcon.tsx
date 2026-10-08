@@ -1,16 +1,16 @@
-// === Module 11328: ForwardingIcon ===
+// === Module 11584: ForwardingIcon ===
 
-// Module 11328 (ForwardingIcon)
+// Module 11584 (ForwardingIcon)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
-import ArrowAngleRightUpIcon from "ArrowAngleRightUpIcon" /* 11329 */;
+import ArrowAngleRightUpIcon from "ArrowAngleRightUpIcon" /* 11585 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
 const result = size.fileFinishedImporting("modules/forwarding/native/ForwardingIcon.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForwardingIcon(arg0) {
   const cResult = c.c(2);
   if (cResult[0] !== arg0) {
     const obj2 = {};
@@ -23,7 +23,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp4 = cResult[1];
   }
   return tmp4;
-}) : ((arg0) => {
+}) : (function ForwardingIcon(arg0) {
   const merged = Object.assign(arg0);
   return jsx(ArrowAngleRightUpIcon.ArrowAngleRightUpIcon, {});
 });

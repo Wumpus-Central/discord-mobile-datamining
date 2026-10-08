@@ -1,22 +1,22 @@
-// === Module 14993: QuestThemePicker ===
+// === Module 15255: QuestThemePicker ===
 
-// Module 14993 (QuestThemePicker)
+// Module 15255 (QuestThemePicker)
 import nativeDefault from "native" /* 587 */;
-import ClientThemesTypes from "ClientThemesTypes" /* 1241 */;
-import StringUtils from "StringUtils" /* 2018 */;
-import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 14994 */;
+import ClientThemesTypes from "ClientThemesTypes" /* 1253 */;
+import StringUtils from "StringUtils" /* 2030 */;
+import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 15256 */;
 import noop from "module_19" /* 19 */;
-import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1194 */;
-import ThemeStore from "ThemeStore" /* 1193 */;
+import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1206 */;
+import ThemeStore from "ThemeStore" /* 1205 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, TouchableOpacity: hasOwnProperty } = get_ActivityIndicator);
-let closure_8 = fn(1240).LEGACY_STANDARD_BACKGROUND_THEMES;
+let closure_8 = fn(1252).LEGACY_STANDARD_BACKGROUND_THEMES;
 const ThemeTypes = fn(1096).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { themeSection: { marginBottom: nativeDefault.space.PX_8 }, themeSelector: null, themeOption: null, themeCircle: null, themeCircleSelected: null, themeLabel: null, resetButton: null, resetIcon: null };
 let obj3 = { marginBottom: nativeDefault.space.PX_8 };
 obj2.themeSelector = { flexDirection: "row", gap: nativeDefault.space.PX_12 };
@@ -33,7 +33,7 @@ const size1 = { width: 32, height: 32, borderRadius: nativeDefault.radii.round, 
 obj2.resetIcon = size1;
 let closure_12 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestThemePicker() {
   const cResult = require("c").c(54);
   const tmp4 = closure_12();
   _require = tmp4;
@@ -347,7 +347,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const tmpResult8 = tmp(tmp2[16]);
   }
   const tmpResult5 = require("initialize");
-}) : (() => {
+}) : (function QuestThemePicker() {
   const tmp = closure_12();
   _require = tmp;
   analyticsLocations = analyticsLocations(allMobileThemes[11])(analyticsLocations(allMobileThemes[12]).USER_SETTINGS).analyticsLocations;

@@ -1,8 +1,8 @@
-// === Module 12181: ExpiringPowerupCoachmarkExperiment ===
+// === Module 12260: ExpiringPowerupCoachmarkExperiment ===
 
-// Module 12181 (ExpiringPowerupCoachmarkExperiment)
+// Module 12260 (ExpiringPowerupCoachmarkExperiment)
 import c from "c" /* 576 */;
-import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1441 */;
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1453 */;
 
 require = fn;
 let tmp2 = apex_ApexExperimentDefault({ name: "2026-02-expiring-powerup-coachmark", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/experiments/ExpiringPowerupCoachmarkExperiment.tsx");
 
 export default tmp2;
-export const useExpiringPowerupCoachmarkEnabled = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+export const useExpiringPowerupCoachmarkEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useExpiringPowerupCoachmarkEnabled(location) {
   const cResult = c.c(2);
   if (cResult[0] !== location) {
     const obj2 = { location };
@@ -23,4 +23,6 @@ export const useExpiringPowerupCoachmarkEnabled = ReactCompilerGating.isReactCom
     tmp2 = cResult[1];
   }
   return closure_2.useConfig(tmp2).enabled;
-}) : ((location) => closure_2.useConfig({ location }).enabled);
+}) : (function useExpiringPowerupCoachmarkEnabled(location) {
+  return closure_2.useConfig({ location }).enabled;
+});

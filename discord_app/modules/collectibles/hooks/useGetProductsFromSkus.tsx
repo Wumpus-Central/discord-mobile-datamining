@@ -1,20 +1,20 @@
-// === Module 15754: useGetProductsFromSkus ===
+// === Module 16012: useGetProductsFromSkus ===
 
-// Module 15754 (useGetProductsFromSkus)
+// Module 16012 (useGetProductsFromSkus)
 import _mod19 from "module_19" /* 19 */;
-import uniqByDefault from "uniqBy" /* 15755 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7066 */;
+import uniqByDefault from "uniqBy" /* 16013 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7252 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 _mod19.useCallback;
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useGetProductsFromSkus.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGetProductsFromSkus() {
   const cResult = stateFromStores(576).c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [CollectiblesCategoryStore];
-    const fn = function n() {
+    const fn = function u() {
       return productByStoreListingId.products;
     };
     cResult[0] = items;
@@ -27,7 +27,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const obj = stateFromStores(576);
   stateFromStores = stateFromStores(504).useStateFromStores(tmp4, tmp5);
   if (cResult[2] !== stateFromStores) {
-    const fn2 = function s(arr) {
+    const fn2 = function n(arr) {
       const mapped = arr.map((item) => {
         value = stateFromStores.get(item);
         productByStoreListingId = value;
@@ -48,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp8 = cResult[3];
   }
   return tmp8;
-}) : (() => {
+}) : (function useGetProductsFromSkus() {
   const items = [CollectiblesCategoryStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => productByStoreListingId.products);
   const items1 = [stateFromStores];

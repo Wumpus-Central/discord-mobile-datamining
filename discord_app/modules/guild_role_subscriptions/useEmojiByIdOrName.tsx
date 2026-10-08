@@ -1,11 +1,11 @@
-// === Module 15074: useEmojiByIdOrName ===
+// === Module 15336: useEmojiByIdOrName ===
 
-// Module 15074 (useEmojiByIdOrName)
-import EmojiStore from "EmojiStore" /* 5645 */;
+// Module 15336 (useEmojiByIdOrName)
+import EmojiStore from "EmojiStore" /* 5992 */;
 
 const require = fn;
 const ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEmojiByIdOrName(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   const cResult = require("c").c(5);
@@ -23,7 +23,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     }
     return tmp(504).useStateFromStores(first, tmp6, tmp7);
   }
-  const fn = function l() {
+  const fn = function s() {
     if (null == closure_1) {
       return null;
     } else {
@@ -44,7 +44,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   tmp6 = fn;
   const obj = require("c");
   tmp = _require;
-}) : ((arg0, arg1) => {
+}) : (function useEmojiByIdOrName(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   const items = [EmojiStore];

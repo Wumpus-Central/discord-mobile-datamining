@@ -1,10 +1,10 @@
-// === Module 6546: PhoneVerificationModal ===
+// === Module 6722: PhoneVerificationModal ===
 
-// Module 6546 (PhoneVerificationModal)
-import UserSettingsConfirmPasswordDefault from "UserSettingsConfirmPassword" /* 6496 */;
-import AddPhoneDefault from "AddPhone" /* 6548 */;
-import PhoneActionCreatorsDefault from "PhoneActionCreators" /* 6549 */;
-import VerifyPhoneDefault from "VerifyPhone" /* 6582 */;
+// Module 6722 (PhoneVerificationModal)
+import UserSettingsConfirmPasswordDefault from "UserSettingsConfirmPassword" /* 6673 */;
+import AddPhoneDefault from "AddPhone" /* 6724 */;
+import PhoneActionCreatorsDefault from "PhoneActionCreators" /* 6725 */;
+import VerifyPhoneDefault from "VerifyPhone" /* 6758 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,20 +12,20 @@ const require = globalThis.__r;
 
 const require = fn;
 const VerificationModalScenes = fn(1085).VerificationModalScenes;
-let closure_5 = fn(6547).PHONE_VERIFICATION_MODAL_KEY;
+let closure_5 = fn(6723).PHONE_VERIFICATION_MODAL_KEY;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/verification/native/components/PhoneVerificationModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function PhoneVerificationModal(onClose) {
   const cResult = require("c").c(5);
   if (cResult[0] !== onClose) {
     _require = onClose;
     const obj2 = {};
-    const obj3 = { headerTitle: tmp(6017).getHeaderNoTitle(), headerLeft: null, render: null };
-    const tmpResult = tmp(6017);
-    obj3.headerLeft = tmp(6017).getHeaderCloseButton(onClose.onClose);
+    const obj3 = { headerTitle: tmp(6203).getHeaderNoTitle(), headerLeft: null, render: null };
+    const tmpResult = tmp(6203);
+    obj3.headerLeft = tmp(6203).getHeaderCloseButton(onClose.onClose);
     obj3.render = function render(reason, arg1) {
       onClose = reason;
       closure_1 = arg1;
@@ -89,9 +89,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
     };
     obj2[VerificationModalScenes.ADD_PHONE] = obj3;
     const obj4 = { headerTitle: null, impressionName: null, render: null };
-    const tmpResult4 = tmp(6017);
-    obj4.headerTitle = tmp(6017).getHeaderNoTitle();
-    obj4.impressionName = tmp(1260).ImpressionNames.USER_VERIFY_PHONE;
+    const tmpResult4 = tmp(6203);
+    obj4.headerTitle = tmp(6203).getHeaderNoTitle();
+    obj4.impressionName = tmp(1272).ImpressionNames.USER_VERIFY_PHONE;
     obj4.render = function render(arg0, arg1) {
       closure_0 = arg1;
       let obj = {};
@@ -133,7 +133,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
                     c4 = 1;
                     c2 = 2;
                     c1 = 1;
-                    const obj5 = { value: v3(6549).addPhone(reason, reason, reason.reason), done: false };
+                    const obj5 = { value: v3(6725).addPhone(reason, reason, reason.reason), done: false };
                     return obj5;
                   }
                 } else if (1 === tmp6) {
@@ -167,7 +167,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
             }
           })();
         });
-        obj.onSubmit = function() {
+        obj.onSubmit = function onSubmit() {
           const self = this;
           const apply = closure_1.apply;
           if (typeof apply === "unknown") {
@@ -178,7 +178,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
           return applyArgumentsResult;
         };
         obj.onSuccess = function onSuccess() {
-          closure_1(5099).popWithKey(closure_1_5);
+          closure_1(5940).popWithKey(closure_1_5);
         };
         closure_0.push(VerificationModalScenes.VERIFY_PASSWORD, obj);
       };
@@ -186,8 +186,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
     };
     obj2[VerificationModalScenes.VERIFY_PHONE] = obj4;
     const obj5 = { headerTitle: null, render: null };
-    const tmpResult5 = tmp(6017);
-    obj5.headerTitle = tmp(6017).getHeaderNoTitle();
+    const tmpResult5 = tmp(6203);
+    obj5.headerTitle = tmp(6203).getHeaderNoTitle();
     obj5.render = function render(arg0) {
       const merged = Object.assign(arg0);
       return jsx(UserSettingsConfirmPasswordDefault, {});
@@ -196,7 +196,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
     cResult[0] = onClose;
     cResult[1] = obj2;
     let tmp4 = obj2;
-    const tmpResult6 = tmp(6017);
+    const tmpResult6 = tmp(6203);
   } else {
     tmp4 = cResult[1];
   }
@@ -210,7 +210,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
   }
   if (cResult[3] !== tmp4) {
     const obj6 = { screens: tmp4, initialRouteName: VerificationModalScenes.ADD_PHONE, headerBackTitle: tmp6 };
-    const tmp11 = jsx(tmp(6503).Navigator, { screens: tmp4, initialRouteName: VerificationModalScenes.ADD_PHONE, headerBackTitle: tmp6 });
+    const tmp11 = jsx(tmp(6679).Navigator, { screens: tmp4, initialRouteName: VerificationModalScenes.ADD_PHONE, headerBackTitle: tmp6 });
     cResult[3] = tmp4;
     cResult[4] = tmp11;
     let tmp8 = tmp11;
@@ -218,7 +218,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
     tmp8 = cResult[4];
   }
   return tmp8;
-}) : ((onClose) => {
+}) : (function PhoneVerificationModal(onClose) {
   let obj = { screens: null, initialRouteName: null, headerBackTitle: null };
   _require = onClose;
   let obj2 = {};
@@ -332,7 +332,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
                   c4 = 1;
                   c2 = 2;
                   c1 = 1;
-                  const obj5 = { value: v3(6549).addPhone(reason, reason, reason.reason), done: false };
+                  const obj5 = { value: v3(6725).addPhone(reason, reason, reason.reason), done: false };
                   return obj5;
                 }
               } else if (1 === tmp6) {
@@ -366,7 +366,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
           }
         })();
       });
-      obj.onSubmit = function() {
+      obj.onSubmit = function onSubmit() {
         const self = this;
         const apply = closure_1.apply;
         if (typeof apply === "unknown") {
@@ -377,7 +377,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
         return applyArgumentsResult;
       };
       obj.onSuccess = function onSuccess() {
-        closure_1(5099).popWithKey(closure_1_5);
+        closure_1(5940).popWithKey(closure_1_5);
       };
       closure_0.push(VerificationModalScenes.VERIFY_PASSWORD, obj);
     };

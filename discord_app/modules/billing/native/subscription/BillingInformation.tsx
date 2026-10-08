@@ -1,6 +1,6 @@
-// === Module 13217: BillingInformation ===
+// === Module 13517: BillingInformation ===
 
-// Module 13217 (BillingInformation)
+// Module 13517 (BillingInformation)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/billing/native/subscription/BillingInformation.tsx");
 
-export const useBillingInformationNative = ReactCompilerGating.isReactCompilerEnabled() ? ((isPurchasedViaApple, subscriptionPeriodStart, arg2, arg3, arg4) => {
+export const useBillingInformationNative = ReactCompilerGating.isReactCompilerEnabled() ? (function useBillingInformationNative(isPurchasedViaApple, subscriptionPeriodStart, arg2, arg3, arg4) {
   let gknRR3 = _require;
   let formatResult = dependencyMap;
   const cResult = require("c").c(11);
@@ -32,7 +32,7 @@ export const useBillingInformationNative = ReactCompilerGating.isReactCompilerEn
   }
   const fractionalPremiumInfo = tmp5.fractionalPremiumInfo;
   let obj = require("c");
-  const appleSubscriptionOwnership = gknRR3(13210).useAppleSubscriptionOwnership(isPurchasedViaApple);
+  const appleSubscriptionOwnership = gknRR3(13510).useAppleSubscriptionOwnership(isPurchasedViaApple);
   if (null == subscriptionPeriodStart) {
     return null;
   } else {
@@ -97,7 +97,7 @@ export const useBillingInformationNative = ReactCompilerGating.isReactCompilerEn
                             }
                           }
                         });
-                        const fn = function() {
+                        function t6() {
                           const self = this;
                           const apply = closure_0.apply;
                           if (typeof apply === "unknown") {
@@ -106,9 +106,9 @@ export const useBillingInformationNative = ReactCompilerGating.isReactCompilerEn
                             applyArgumentsResult = apply(self, arguments);
                           }
                           return applyArgumentsResult;
-                        };
-                        cResult[10] = fn;
-                        let tmp16 = fn;
+                        }
+                        cResult[10] = t6;
+                        let tmp16 = t6;
                       } else {
                         tmp16 = cResult[10];
                       }
@@ -131,7 +131,7 @@ export const useBillingInformationNative = ReactCompilerGating.isReactCompilerEn
         }
       }
     }
-    const gknRR3Result2 = gknRR3(4534);
+    const gknRR3Result2 = gknRR3(4726);
     const billingInformationString = gknRR3Result2.getBillingInformationString(isPurchasedViaApple, subscriptionPeriodStart, tmp3, tmp4, fractionalPremiumInfo);
     cResult[2] = fractionalPremiumInfo;
     cResult[3] = tmp3;
@@ -141,8 +141,8 @@ export const useBillingInformationNative = ReactCompilerGating.isReactCompilerEn
     cResult[7] = billingInformationString;
     tmp6 = billingInformationString;
   }
-  const gknRR3Result = gknRR3(13210);
-}) : ((isPurchasedViaApple, subscriptionPeriodStart, arg2) => {
+  const gknRR3Result = gknRR3(13510);
+}) : (function useBillingInformationNative(isPurchasedViaApple, subscriptionPeriodStart, arg2) {
   let tmp = arg2;
   if (arg2 === undefined) {
     tmp = null;
@@ -160,7 +160,7 @@ export const useBillingInformationNative = ReactCompilerGating.isReactCompilerEn
   if (null == subscriptionPeriodStart) {
     return null;
   } else {
-    const tmp2Result = tmp2(4534);
+    const tmp2Result = tmp2(4726);
     const billingInformationString = tmp2Result.getBillingInformationString(isPurchasedViaApple, subscriptionPeriodStart, tmp, flag, fractionalPremiumInfo);
     let formatResult = billingInformationString;
     if (tmp2Result2.isIOS()) {
@@ -219,7 +219,7 @@ export const useBillingInformationNative = ReactCompilerGating.isReactCompilerEn
                 }
               }
             });
-            obj3.onSubscriptionManagementClick = function() {
+            obj3.onSubscriptionManagementClick = function onSubscriptionManagementClick() {
               const self = this;
               const apply = closure_0.apply;
               if (typeof apply === "unknown") {

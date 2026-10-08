@@ -1,14 +1,14 @@
-// === Module 15572: CheckpointButton ===
+// === Module 15851: CheckpointButton ===
 
-// Module 15572 (CheckpointButton)
+// Module 15851 (CheckpointButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4586 */;
-import CheckpointTextDefault from "CheckpointText" /* 15555 */;
-import CheckpointPressable from "CheckpointPressable" /* 15573 */;
-import CheckpointConstants from "CheckpointConstants" /* 5121 */;
+import useToken from "useToken" /* 4778 */;
+import CheckpointTextDefault from "CheckpointText" /* 15821 */;
+import CheckpointPressable from "CheckpointPressable" /* 15842 */;
+import CheckpointConstants from "CheckpointConstants" /* 5433 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
+import createStyles from "createStyles" /* 5090 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -24,7 +24,7 @@ let closure_6 = createStyles.createStyles(obj);
 let obj3 = { backgroundColor: nativeDefault.colors.BLACK, borderWidth: 2, borderColor: CHECKPOINT_DARK_CYAN };
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointButton.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function CheckpointButton(arg0) {
   const cResult = c.c(26);
   ({ onPress, Icon, label, accessibilityLabel, accessibilityHint, accessibilityState, disabled, iconPosition, iconSize } = arg0);
   let str = "start";
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = tmp10;
   tmp9 = tmp10;
   const tmpResult2 = useToken;
-}) : ((iconPosition) => {
+}) : (function CheckpointButton(iconPosition) {
   ({ label, accessibilityLabel, disabled } = iconPosition);
   ({ onPress, Icon, accessibilityHint, accessibilityState } = iconPosition);
   if (disabled === undefined) {

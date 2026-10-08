@@ -1,9 +1,9 @@
-// === Module 13755: GuildBadgeLeaf ===
+// === Module 13977: GuildBadgeLeaf ===
 
-// Module 13755 (GuildBadgeLeaf)
+// Module 13977 (GuildBadgeLeaf)
 import c from "c" /* 576 */;
-import inlineStyles from "inlineStyles" /* 8169 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 13748 */;
+import inlineStyles from "inlineStyles" /* 7550 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 13970 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgeLeaf.tsx");
 
-export const GuildBadgeLeaf = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const GuildBadgeLeaf = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBadgeLeaf(arg0) {
   const cResult = c.c(34);
   if (cResult[0] !== arg0) {
     ({ width, height, primaryTintColor } = arg0);
@@ -183,7 +183,7 @@ export const GuildBadgeLeaf = ReactCompilerGating.isReactCompilerEnabled() ? ((a
   cResult[32] = num6;
   cResult[33] = tmp50;
   tmp48 = tmp50;
-}) : ((primaryTintColor) => {
+}) : (function GuildBadgeLeaf(primaryTintColor) {
   let num = primaryTintColor.width;
   if (num === undefined) {
     num = 24;

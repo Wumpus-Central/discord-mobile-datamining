@@ -1,11 +1,11 @@
-// === Module 6858: useMuteStates ===
+// === Module 7047: useMuteStates ===
 
-// Module 6858 (useMuteStates)
-import ImpersonateStore from "ImpersonateStore" /* 2105 */;
+// Module 7047 (useMuteStates)
+import ImpersonateStore from "ImpersonateStore" /* 2117 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
-import VoiceStateStore from "VoiceStateStore" /* 4915 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
+import VoiceStateStore from "VoiceStateStore" /* 5111 */;
 
 const require = globalThis.__r;
 
@@ -68,7 +68,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/useMuteStates.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useMuteStates(channel) {
   _require = channel;
   const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStoresObject(first, tmp10);
-}) : ((channel) => {
+}) : (function useMuteStates(channel) {
   _require = channel;
   const items = [AuthenticationStore, VoiceStateStore, MediaEngineStore, PermissionStore, ImpersonateStore];
   return require("initialize").useStateFromStoresObject(items, () => getMuteStates({ channel, authenticationStore: AuthenticationStore, voiceStateStore: VoiceStateStore, mediaEngineStore: MediaEngineStore, permissionStore: PermissionStore, impersonateStore: ImpersonateStore }));

@@ -1,21 +1,22 @@
-// === Module 7276: tracking/Tracking ===
+// === Module 7876: Tracking ===
 
-// Module 7276 (tracking/Tracking)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5076 */;
-import TrackingUtils from "TrackingUtils" /* 7278 */;
-import ThreadAnalyticsUtils from "ThreadAnalyticsUtils" /* 7413 */;
-import trackChannelOpenedClickstreamDefault from "trackChannelOpenedClickstream" /* 7414 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import DraftStore from "DraftStore" /* 7044 */;
-import ForumPostMessagesStore from "ForumPostMessagesStore" /* 6790 */;
-import ForumSearchStore from "ForumSearchStore" /* 7277 */;
+// Module 7876 (Tracking)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5105 */;
+import TrackingUtils from "TrackingUtils" /* 7878 */;
+import ThreadAnalyticsUtils from "ThreadAnalyticsUtils" /* 7884 */;
+import getChannelOpenedMetadata from "getChannelOpenedMetadata" /* 7885 */;
+import trackChannelOpenedClickstreamDefault from "trackChannelOpenedClickstream" /* 7889 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import DraftStore from "DraftStore" /* 7232 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 6965 */;
+import ForumSearchStore from "ForumSearchStore" /* 7877 */;
 
 const AppAnalyticsUtilsDefault = AppAnalyticsUtils;
 
 require = fn;
-const DraftType = fn(7044).DraftType;
+const DraftType = fn(7232).DraftType;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_8, AnalyticsSections: closure_9 } = Constants);
 let size = fn(2);
@@ -290,7 +291,7 @@ export const trackForumPostSidebarViewed = function trackForumPostSidebarViewed(
   const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(channelId.guild_id));
   const merged1 = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadata(channelId));
   const merged2 = Object.assign(ThreadAnalyticsUtils.collectThreadMetadata(channelId, true));
-  const merged3 = Object.assign(AppAnalyticsUtils.getChannelOpenedMetadata(channelId.id));
+  const merged3 = Object.assign(getChannelOpenedMetadata.getChannelOpenedMetadata(channelId.id));
   obj2.channel_view = "Split View";
   obj2.platform = PlatformUtils.getPlatform();
   obj.trackWithMetadata(constants.CHANNEL_OPENED, obj2);

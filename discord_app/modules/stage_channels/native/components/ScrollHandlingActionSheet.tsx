@@ -1,8 +1,8 @@
-// === Module 9479: ScrollHandlingActionSheet ===
+// === Module 12896: ScrollHandlingActionSheet ===
 
-// Module 9479 (ScrollHandlingActionSheet)
+// Module 12896 (ScrollHandlingActionSheet)
 import c from "c" /* 576 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6652 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6829 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/native/components/ScrollHandlingActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ScrollHandlingActionSheet(arg0) {
   const cResult = c.c(6);
   if (cResult[0] !== arg0) {
     ({ children, scrollableDeviceHeightBreakpoint } = arg0);
@@ -41,7 +41,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = tmp5;
   cResult[5] = tmp11;
   tmp9 = tmp11;
-}) : ((children) => {
+}) : (function ScrollHandlingActionSheet(children) {
   const merged = Object.assign(children, Object.assign({ children: 0, scrollableDeviceHeightBreakpoint: 0 }));
   const obj = { startExpanded: true };
   const merged1 = Object.assign(merged);

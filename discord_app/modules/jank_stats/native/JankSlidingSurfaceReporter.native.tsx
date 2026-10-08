@@ -1,13 +1,13 @@
-// === Module 15976: JankSlidingSurfaceReporter ===
+// === Module 16236: JankSlidingSurfaceReporter ===
 
-// Module 15976 (JankSlidingSurfaceReporter)
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import NativeJankStatsModuleDefault from "NativeJankStatsModule" /* 15977 */;
-import getJankSurfaceName from "getJankSurfaceName" /* 15978 */;
+// Module 16236 (JankSlidingSurfaceReporter)
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import NativeJankStatsModuleDefault from "NativeJankStatsModule" /* 16237 */;
+import getJankSurfaceName from "getJankSurfaceName" /* 16238 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const JankScreenConstants = fn(15974);
+const JankScreenConstants = fn(16234);
 ({ INTERACTION_NONE: closure_4, INTERACTION_TRANSITION: hasOwnProperty } = JankScreenConstants);
 let __initData = { code: "function JankSlidingSurfaceReporterNativeTsx1(){const{position}=this.__closure;return position.get();}" };
 let closure_7 = { code: "function JankSlidingSurfaceReporterNativeTsx2(current){const{openAt,closedAt,OPEN_SETTLED,CLOSED_SETTLED,MOVING,lastState,runOnJS,report,INTERACTION_NONE,INTERACTION_TRANSITION}=this.__closure;const openIsLower=openAt<closedAt;const atOpen=openIsLower?current<=openAt:current>=openAt;const atClosed=openIsLower?current>=closedAt:current<=closedAt;const state=atOpen?OPEN_SETTLED:atClosed?CLOSED_SETTLED:MOVING;const prevState=lastState.get();if(state===prevState){return;}lastState.set(state);if(state===OPEN_SETTLED){runOnJS(report)(true,INTERACTION_NONE);}else{if(state===CLOSED_SETTLED){runOnJS(report)(false,INTERACTION_NONE);}else{if(prevState===OPEN_SETTLED){runOnJS(report)(false,INTERACTION_TRANSITION);}else{if(prevState===CLOSED_SETTLED){runOnJS(report)(true,INTERACTION_TRANSITION);}}}}}" };
@@ -17,7 +17,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/jank_stats/native/JankSlidingSurfaceReporter.native.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((position) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function JankSlidingSurfaceReporter(position) {
   const cResult = position(closedAt[3]).c(9);
   position = position.position;
   const openAt = position.openAt;
@@ -122,7 +122,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((position) => {
   cResult[2] = resolveOpenName;
   cResult[3] = obj6;
   tmp4 = obj6;
-}) : ((position) => {
+}) : (function JankSlidingSurfaceReporter(position) {
   position = position.position;
   const openAt = position.openAt;
   const closedAt = position.closedAt;

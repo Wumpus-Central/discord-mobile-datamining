@@ -1,17 +1,17 @@
-// === Module 6632: Emoji ===
+// === Module 6809: Emoji ===
 
-// Module 6632 (Emoji)
+// Module 6809 (Emoji)
 import c from "c" /* 576 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4533 */;
-import FastImageDefault from "FastImage" /* 5981 */;
-import _modDef6633 from "module_6633" /* 6633 */;
-import _modDef6634 from "module_6634" /* 6634 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4725 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import _modDef6810 from "module_6810" /* 6810 */;
+import _modDef6811 from "module_6811" /* 6811 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1193 */;
+import ThemeStore from "ThemeStore" /* 1205 */;
 
-const native = LegacyText(1188);
-const PlatformUtils = LegacyText(1369);
-const shared = LegacyText(4735);
+const native = LegacyText(1200);
+const PlatformUtils = LegacyText(1381);
+const shared = LegacyText(4929);
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
@@ -19,7 +19,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/emojis/native/Emoji.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function Emoji(arg0) {
   let LegacyText = require;
   const cResult = c.c(14);
   ({ src, name, style, textEmojiStyle, fastImageStyle, forceTextEmoji, adjustsFontSizeToFit, onError } = arg0);
@@ -58,9 +58,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         if ("" !== tmp2) {
           const obj5 = { resizeMode: "contain", style: fastImageStyle, placeholder: null, source: null, onError: null };
           if (LegacyTextResult.isThemeDark(ThemeStore.theme)) {
-            let tmp9Result = _modDef6633;
+            let tmp9Result = _modDef6810;
           } else {
-            tmp9Result = _modDef6634;
+            tmp9Result = _modDef6811;
           }
           obj5.placeholder = tmp9Result;
           const obj6 = { uri: tmp2 };
@@ -95,7 +95,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = uRL;
   tmp2 = uRL;
   LegacyTextResult1 = PlatformUtils;
-}) : ((arg0) => {
+}) : (function Emoji(arg0) {
   ({ src, name } = arg0);
   ({ style, textEmojiStyle, fastImageStyle, forceTextEmoji, adjustsFontSizeToFit, onError } = arg0);
   let uRL = src;
@@ -111,9 +111,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       if ("" !== uRL) {
         const obj4 = { resizeMode: "contain", style: fastImageStyle, placeholder: null, source: null, onError: null };
         if (tmpResult.isThemeDark(ThemeStore.theme)) {
-          let tmp9Result = _modDef6633;
+          let tmp9Result = _modDef6810;
         } else {
-          tmp9Result = _modDef6634;
+          tmp9Result = _modDef6811;
         }
         obj4.placeholder = tmp9Result;
         const obj5 = { uri: uRL };

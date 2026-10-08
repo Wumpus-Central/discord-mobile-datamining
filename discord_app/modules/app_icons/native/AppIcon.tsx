@@ -1,18 +1,18 @@
-// === Module 15365: AppIcon ===
+// === Module 15627: AppIcon ===
 
-// Module 15365 (AppIcon)
+// Module 15627 (AppIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import shared from "shared" /* 4735 */;
-import useThemeDefault from "useTheme" /* 4797 */;
+import shared from "shared" /* 4929 */;
+import useThemeDefault from "useTheme" /* 4991 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
-const getIconById = fn(8858).getIconById;
+const getIconById = fn(9401).getIconById;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { overflow: "hidden", borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, image: { resizeMode: "contain", height: "100%", width: "100%" } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -20,7 +20,7 @@ let obj3 = { overflow: "hidden", borderColor: nativeDefault.colors.BACKGROUND_BA
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_icons/native/AppIcon.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppIcon(arg0) {
   const cResult = c.c(15);
   ({ id, size, style } = arg0);
   let num = 56;
@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = size1;
   tmp9 = size1;
   tmpResult = shared;
-}) : ((size) => {
+}) : (function AppIcon(size) {
   let num = size.size;
   if (num === undefined) {
     num = 56;

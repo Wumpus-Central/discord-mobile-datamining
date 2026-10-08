@@ -1,8 +1,8 @@
-// === Module 9848: SafetyToolsActionSheetWrapper ===
+// === Module 10409: SafetyToolsActionSheetWrapper ===
 
-// Module 9848 (SafetyToolsActionSheetWrapper)
+// Module 10409 (SafetyToolsActionSheetWrapper)
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -10,7 +10,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/shared/native/SafetyToolsActionSheetWrapper.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SafetyToolsActionSheetWrapper(arg0) {
   const cResult = channelId(stateFromStores[4]).c(16);
   ({ headerTitle, hasHeaderBack, channelId } = arg0);
   ({ warningId, warningType, recipientId, children, onClose } = arg0);
@@ -76,7 +76,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[15] = tmp13;
     tmp12 = tmp13;
   }
-  class T {
+  class B {
     constructor() {
       if (null == closure_2) {
         tmp = onClose;
@@ -88,12 +88,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const items1 = [stateFromStores, onClose];
   cResult[3] = stateFromStores;
   cResult[4] = onClose;
-  cResult[5] = T;
+  cResult[5] = B;
   cResult[6] = items1;
   tmp9 = items1;
-  tmp8 = T;
+  tmp8 = B;
   const tmpResult = channelId(stateFromStores[5]);
-}) : ((channelId) => {
+}) : (function SafetyToolsActionSheetWrapper(channelId) {
   channelId = channelId.channelId;
   const onClose = channelId.onClose;
   let stateFromStores;

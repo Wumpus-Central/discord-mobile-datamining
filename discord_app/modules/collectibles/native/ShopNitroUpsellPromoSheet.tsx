@@ -1,18 +1,18 @@
-// === Module 13000: ShopNitroUpsellPromoSheet ===
+// === Module 13278: ShopNitroUpsellPromoSheet ===
 
-// Module 13000 (ShopNitroUpsellPromoSheet)
+// Module 13278 (ShopNitroUpsellPromoSheet)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import ButtonGroup from "ButtonGroup" /* 5599 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6664 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7494 */;
-import PremiumUpsellUtils from "PremiumUpsellUtils" /* 8848 */;
-import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 9657 */;
-import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 9658 */;
-import NitroUpsellButtonDefault from "NitroUpsellButton" /* 9661 */;
-import PromoSheet from "PromoSheet" /* 10058 */;
-import DiscountsMegaphoneSpotIllustration from "DiscountsMegaphoneSpotIllustration" /* 13001 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import ButtonGroup from "ButtonGroup" /* 5963 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6841 */;
+import PremiumUpsellUtils from "PremiumUpsellUtils" /* 9208 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 9219 */;
+import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 9394 */;
+import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 9451 */;
+import NitroUpsellButtonDefault from "NitroUpsellButton" /* 9733 */;
+import PromoSheet from "PromoSheet" /* 10303 */;
+import DiscountsMegaphoneSpotIllustration from "DiscountsMegaphoneSpotIllustration" /* 13279 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,7 +23,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/ShopNitroUpsellPromoSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ShopNitroUpsellPromoSheet(arg0) {
   const cResult = c.c(18);
   ({ analyticsLocations, title, description } = arg0);
   if (cResult[0] !== analyticsLocations) {
@@ -121,7 +121,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[7] = tmp16;
   tmp15 = tmp16;
   const tmp9 = usePremiumFeatureUpsellGetNitroDefault(false, onViewAllPerks, AnalyticsPages.PREMIUM_UPSELL_SHOP_MEMBER_PRICING, undefined, tmp6);
-}) : ((analyticsLocations) => {
+}) : (function ShopNitroUpsellPromoSheet(analyticsLocations) {
   analyticsLocations = analyticsLocations.analyticsLocations;
   if (analyticsLocations === undefined) {
     analyticsLocations = [];

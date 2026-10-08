@@ -1,16 +1,16 @@
-// === Module 15567: CheckpointSummaryStatsScreen ===
+// === Module 15837: CheckpointSummaryStatsScreen ===
 
-// Module 15567 (CheckpointSummaryStatsScreen)
+// Module 15837 (CheckpointSummaryStatsScreen)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
-import CheckpointStatsScreenDefault from "CheckpointStatsScreen" /* 15559 */;
+import CheckpointStatsScreenDefault from "CheckpointStatsScreen" /* 15830 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/screens/stats/CheckpointSummaryStatsScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function CheckpointSummaryStatsScreen() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const tmp6 = jsx(CheckpointStatsScreenDefault, { name: "Summary" });
@@ -20,4 +20,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     first = cResult[0];
   }
   return first;
-}) : (() => jsx(CheckpointStatsScreenDefault, { name: "Summary" }));
+}) : (function CheckpointSummaryStatsScreen() {
+  return jsx(CheckpointStatsScreenDefault, { name: "Summary" });
+});

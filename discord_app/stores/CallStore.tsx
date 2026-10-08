@@ -1,13 +1,13 @@
-// === Module 5444: CallStore ===
+// === Module 5754: CallStore ===
 
-// Module 5444 (CallStore)
+// Module 5754 (CallStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4899 */;
 
 require = fn;
 function callConnect() {

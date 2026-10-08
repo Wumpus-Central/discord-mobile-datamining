@@ -1,16 +1,16 @@
-// === Module 12492: InAppNotificationUtils ===
+// === Module 12588: InAppNotificationUtils ===
 
-// Module 12492 (InAppNotificationUtils)
+// Module 12588 (InAppNotificationUtils)
 import _mod12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import v1 from "v1" /* 1266 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5076 */;
-import isForwardMessageDefault from "isForwardMessage" /* 6815 */;
+import v1 from "v1" /* 1278 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5105 */;
+import isForwardMessageDefault from "isForwardMessage" /* 6988 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const REACTION_MILESTONE_COUNTS = fn(12493).REACTION_MILESTONE_COUNTS;
+const REACTION_MILESTONE_COUNTS = fn(12589).REACTION_MILESTONE_COUNTS;
 const Constants = fn(1085);
 ({ AnalyticEvents: hasOwnProperty, ChannelTypes: metroRequire, InAppNotificationTypes: closure_7, MessageEmbedTypes: closure_8, MessageFlags: closure_9 } = Constants);
 const ReactCompilerGating = fn(558);
@@ -79,7 +79,7 @@ export const getNotificationDuration = function getNotificationDuration(ALERT) {
   }
   return 5 * DurationsDefault.Millis.SECOND;
 };
-export const useHasPreviewableMedia = ReactCompilerGating.isReactCompilerEnabled() ? ((hasFlag) => {
+export const useHasPreviewableMedia = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasPreviewableMedia(hasFlag) {
   const cResult = c.c(2);
   if (cResult[0] !== hasFlag) {
     let hasFlagResult = hasFlag.hasFlag(constants4.IS_VOICE_MESSAGE);
@@ -130,7 +130,7 @@ export const useHasPreviewableMedia = ReactCompilerGating.isReactCompilerEnabled
     tmp3 = cResult[1];
   }
   return tmp3;
-}) : ((arg0) => {
+}) : (function useHasPreviewableMedia(arg0) {
   closure_0 = arg0;
   const items = [arg0];
   return noop.useMemo(() => {

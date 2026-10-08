@@ -1,16 +1,16 @@
-// === Module 8934: Form/FormSwitch ===
+// === Module 8565: Form/FormSwitch ===
 
-// Module 8934 (Form/FormSwitch)
+// Module 8565 (Form/FormSwitch)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import shared from "shared" /* 4735 */;
-import useThemeDefault from "useTheme" /* 4797 */;
+import shared from "shared" /* 4929 */;
+import useThemeDefault from "useTheme" /* 4991 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Switch = fn(17).Switch;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { switch: { marginVertical: -5 }, track: { color: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED } };
 let closure_5 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -18,7 +18,7 @@ let obj3 = { color: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED };
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormSwitch.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((tintColor) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormSwitch(tintColor) {
   const cResult = c.c(20);
   ({ value, disabled, style, borderColor, onValueChange, accessible, accessibilityLabel, accessibilityHint, renderIosBackground } = tintColor);
   const tmp7 = closure_5();
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((tintColor) => {
   cResult[2] = obj4;
   tmp10 = obj4;
   tmp9 = useThemeDefault();
-}) : ((value) => {
+}) : (function FormSwitch(value) {
   value = value.value;
   const disabled = value.disabled;
   ({ borderColor, renderIosBackground } = value);

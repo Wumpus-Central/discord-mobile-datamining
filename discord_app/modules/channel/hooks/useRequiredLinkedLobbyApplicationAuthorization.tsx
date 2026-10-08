@@ -1,11 +1,11 @@
-// === Module 12094: useRequiredLinkedLobbyApplicationAuthorization ===
+// === Module 12171: useRequiredLinkedLobbyApplicationAuthorization ===
 
-// Module 12094 (useRequiredLinkedLobbyApplicationAuthorization)
+// Module 12171 (useRequiredLinkedLobbyApplicationAuthorization)
 import _mod19 from "module_19" /* 19 */;
-import AuthorizedAppsStore2 from "AuthorizedAppsStore" /* 6609 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6665 */;
-import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 6672 */;
-import ApplicationStore from "ApplicationStore" /* 5124 */;
+import AuthorizedAppsStore2 from "AuthorizedAppsStore" /* 6786 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6842 */;
+import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 6849 */;
+import ApplicationStore from "ApplicationStore" /* 5436 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -15,7 +15,7 @@ const useEffect = _mod19.useEffect;
 const FetchState = AuthorizedAppsStore2.FetchState;
 const result = size.fileFinishedImporting("modules/channel/hooks/useRequiredLinkedLobbyApplicationAuthorization.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((require_application_authorization) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useRequiredLinkedLobbyApplicationAuthorization(require_application_authorization) {
   const cResult = application_id(stateFromStores[4]).c(34);
   let prop;
   if (require_application_authorization != null) {
@@ -53,24 +53,24 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((require_applicat
     tmp10 = cResult[3];
   }
   if (cResult[4] !== application_id) {
-    class S {
+    class F {
       constructor() {
         return closure_4.getApplication(application_id);
       }
     }
     cResult[4] = application_id;
-    cResult[5] = S;
+    cResult[5] = F;
   } else {
-    class S {
+    class F {
       constructor() {
         return closure_4.getApplication(application_id);
       }
     }
   }
   const tmpResult = application_id(stateFromStores[5]);
-  stateFromStores = application_id(stateFromStores[5]).useStateFromStores(tmp10, S);
+  stateFromStores = application_id(stateFromStores[5]).useStateFromStores(tmp10, F);
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-    class S {
+    class F {
       constructor() {
         return closure_4.getApplication(application_id);
       }
@@ -79,112 +79,100 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((require_applicat
     cResult[6] = items2;
     const tmp14 = items2;
   } else {
-    class S {
+    class F {
       constructor() {
         return closure_4.getApplication(application_id);
       }
     }
   }
   if (stateFromStores != null) {
-    class S {
+    class F {
       constructor() {
         return closure_4.getApplication(application_id);
       }
     }
   }
   if (cResult[7] !== undefined) {
-    class S {
+    class F {
       constructor() {
         return closure_4.getApplication(application_id);
       }
     }
     if (stateFromStores != null) {
-      class S {
+      class F {
         constructor() {
           return closure_4.getApplication(application_id);
         }
       }
     }
-    class E {
-      constructor() {
-        parentId = undefined;
-        tmp = closure_4;
-        if (closure_2 != null) {
-          parentId = closure_2.parentId;
-        }
-        return closure_4.getApplication(parentId);
+    const fn2 = function f() {
+      let parentId;
+      if (stateFromStores != null) {
+        parentId = stateFromStores.parentId;
       }
-    }
+      return ApplicationStore.getApplication(parentId);
+    };
     cResult[7] = tmp16;
-    cResult[8] = E;
+    cResult[8] = fn2;
+    const tmp15 = fn2;
   } else {
-    class S {
+    class F {
       constructor() {
         return closure_4.getApplication(application_id);
       }
     }
   }
   const tmpResult4 = application_id(stateFromStores[5]);
-  const stateFromStores1 = application_id(stateFromStores[5]).useStateFromStores(tmp14, E);
+  const stateFromStores1 = application_id(stateFromStores[5]).useStateFromStores(tmp14, tmp15);
   if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-    class S {
+    class F {
       constructor() {
         return closure_4.getApplication(application_id);
       }
     }
-    const items3 = [];
-    class E {
-      constructor() {
-        parentId = undefined;
-        tmp = closure_4;
-        if (closure_2 != null) {
-          parentId = closure_2.parentId;
-        }
-        return closure_4.getApplication(parentId);
-      }
-    }
+    const items3 = [AuthorizedAppsStore];
     cResult[9] = items3;
   } else {
-    class S {
+    class F {
       constructor() {
         return closure_4.getApplication(application_id);
       }
     }
   }
   if (stateFromStores != null) {
-    class S {
+    class F {
       constructor() {
         return closure_4.getApplication(application_id);
       }
     }
   }
   if (cResult[10] !== undefined) {
-    class S {
+    class F {
       constructor() {
         return closure_4.getApplication(application_id);
       }
     }
     if (stateFromStores != null) {
-      class S {
+      class F {
         constructor() {
           return closure_4.getApplication(application_id);
         }
       }
     }
-    class E {
+    class T {
       constructor() {
         parentId = undefined;
-        tmp = closure_4;
+        tmp = closure_5;
         if (closure_2 != null) {
           parentId = closure_2.parentId;
         }
-        return closure_4.getApplication(parentId);
+        return closure_5.getNewestTokenForApplication(parentId);
       }
     }
     cResult[10] = tmp20;
-    cResult[11] = tmp21;
+    cResult[11] = T;
   } else {
-    class S {
+    class F {
       constructor() {
         return closure_4.getApplication(application_id);
       }
@@ -192,59 +180,47 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((require_applicat
   }
   application_id(stateFromStores[5]);
   if (cResult[12] === authorizationsFetchState) {
-    class S {
+    class F {
       constructor() {
         return closure_4.getApplication(application_id);
       }
     }
-    class E {
+    class T {
       constructor() {
         parentId = undefined;
-        tmp = closure_4;
+        tmp = closure_5;
         if (closure_2 != null) {
           parentId = closure_2.parentId;
         }
-        return closure_4.getApplication(parentId);
+        return closure_5.getNewestTokenForApplication(parentId);
       }
     }
     if (cResult[16] === stateFromStores) {
-      class S {
+      class F {
         constructor() {
           return closure_4.getApplication(application_id);
         }
       }
     }
-    class C {
-      constructor() {
-        tmp2 = null != application_id;
-        tmp = application_id;
-        if (tmp2) {
-          tmp3 = closure_2;
-          tmp2 = null == closure_2;
-        }
-        if (tmp2) {
-          tmp4 = authorizationsFetchState;
-          tmp5 = FetchState;
-          tmp2 = authorizationsFetchState === FetchState.FETCHED;
-        }
-        if (tmp2) {
-          tmp6 = closure_1;
-          tmp7 = closure_2;
-          obj = closure_1(closure_2[7]);
-          items = [];
-          items[0] = tmp;
-          flag = false;
-          applications = obj.fetchApplications(items, false);
-        }
-        return;
+    const fn4 = function z() {
+      let tmp2 = null != application_id;
+      if (tmp2) {
+        tmp2 = null == stateFromStores;
       }
-    }
+      if (tmp2) {
+        tmp2 = authorizationsFetchState === FetchState.FETCHED;
+      }
+      if (tmp2) {
+        const items = [application_id];
+        const applications = ApplicationActionCreatorsDefault.fetchApplications(items, false);
+      }
+    };
     cResult[16] = stateFromStores;
     cResult[17] = authorizationsFetchState;
     cResult[18] = application_id;
-    cResult[19] = C;
+    cResult[19] = fn4;
   }
-  const fn2 = function y() {
+  const fn3 = function y() {
     let tmp = null != application_id;
     if (tmp) {
       tmp = authorizationsFetchState === FetchState.NOT_FETCHED;
@@ -256,10 +232,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((require_applicat
   const items4 = [authorizationsFetchState, application_id];
   cResult[12] = authorizationsFetchState;
   cResult[13] = application_id;
-  cResult[14] = fn2;
+  cResult[14] = fn3;
   cResult[15] = items4;
   const tmpResult5 = application_id(stateFromStores[5]);
-}) : ((require_application_authorization) => {
+}) : (function useRequiredLinkedLobbyApplicationAuthorization(require_application_authorization) {
   let prop;
   if (require_application_authorization != null) {
     prop = require_application_authorization.require_application_authorization;

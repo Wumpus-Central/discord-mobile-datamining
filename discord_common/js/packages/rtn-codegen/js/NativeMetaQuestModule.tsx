@@ -1,6 +1,6 @@
-// === Module 1352: NativeMetaQuestModule ===
+// === Module 1364: NativeMetaQuestModule ===
 
-// Module 1352 (NativeMetaQuestModule)
+// Module 1364 (NativeMetaQuestModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

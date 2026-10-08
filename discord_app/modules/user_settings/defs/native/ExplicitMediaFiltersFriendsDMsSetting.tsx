@@ -1,16 +1,16 @@
-// === Module 14648: ExplicitMediaFiltersFriendsDMsSetting ===
+// === Module 14909: ExplicitMediaFiltersFriendsDMsSetting ===
 
-// Module 14648 (ExplicitMediaFiltersFriendsDMsSetting)
+// Module 14909 (ExplicitMediaFiltersFriendsDMsSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 6811 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7122 */;
-import SettingsConstants from "SettingsConstants" /* 7645 */;
-import useExplicitContentSettingsOrDefault from "useExplicitContentSettingsOrDefault" /* 14649 */;
-import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 14650 */;
-import useSensitiveMediaSettingDisabled from "useSensitiveMediaSettingDisabled" /* 14652 */;
+import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 6983 */;
+import SettingsConstants from "SettingsConstants" /* 7966 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8218 */;
+import useExplicitContentSettingsOrDefault from "useExplicitContentSettingsOrDefault" /* 14910 */;
+import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 14911 */;
+import useSensitiveMediaSettingDisabled from "useSensitiveMediaSettingDisabled" /* 14913 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11142 */;
+import SettingBuilders from "SettingBuilders" /* 11262 */;
 import size from "module_2" /* 2 */;
 
 const MobileUserSettings = SettingsConstants.MobileUserSettings;
@@ -18,7 +18,7 @@ function getTitle() {
   const intl = util.intl;
   return intl.string(util.t["+uI23H"]);
 }
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useObscuredContentFriendsDmSettingValue() {
   const cResult = c.c(2);
   const explicitContentFriendDm = useExplicitContentSettingsOrDefault.useExplicitContentSettingOrDefault().explicitContentFriendDm;
   if (cResult[0] !== explicitContentFriendDm) {
@@ -31,7 +31,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp4 = cResult[1];
   }
   return tmp4;
-}) : (() => {
+}) : (function useObscuredContentFriendsDmSettingValue() {
   const obj = useExplicitContentSettingsOrDefault;
   return ExplicitMediaRedactionUtils.redactionSettingToRenderedString(obj.useExplicitContentSettingOrDefault().explicitContentFriendDm)();
 });
@@ -40,7 +40,7 @@ const pressable = SettingBuilders.createPressable({
   parent() {
     return MobileUserSettings.SENSITIVE_CONTENT_FILTERS;
   },
-  useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (function useObscuredContentFriendsDmSettingValue() {
     const cResult = c.c(2);
     const explicitContentFriendDm = useExplicitContentSettingsOrDefault.useExplicitContentSettingOrDefault().explicitContentFriendDm;
     if (cResult[0] !== explicitContentFriendDm) {
@@ -53,7 +53,7 @@ const pressable = SettingBuilders.createPressable({
       tmp4 = cResult[1];
     }
     return tmp4;
-  }) : (() => {
+  }) : (function useObscuredContentFriendsDmSettingValue() {
     const obj = useExplicitContentSettingsOrDefault;
     return ExplicitMediaRedactionUtils.redactionSettingToRenderedString(obj.useExplicitContentSettingOrDefault().explicitContentFriendDm)();
   }),

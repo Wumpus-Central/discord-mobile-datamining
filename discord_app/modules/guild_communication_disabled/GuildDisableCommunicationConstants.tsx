@@ -1,8 +1,8 @@
-// === Module 2114: GuildDisableCommunicationConstants ===
+// === Module 2126: GuildDisableCommunicationConstants ===
 
-// Module 2114 (GuildDisableCommunicationConstants)
+// Module 2126 (GuildDisableCommunicationConstants)
 import util from "util" /* 1126 */;
-import HelpdeskUtils from "HelpdeskUtils" /* 2115 */;
+import HelpdeskUtils from "HelpdeskUtils" /* 2127 */;
 
 require = fn;
 function getFriendlyDurationString(timeout_seconds) {

@@ -1,8 +1,8 @@
-// === Module 2093: MessageDao ===
+// === Module 2105: MessageDao ===
 
-// Module 2093 (MessageDao)
-import Table from "Table" /* 2083 */;
-import TableId from "TableId" /* 2085 */;
+// Module 2105 (MessageDao)
+import Table from "Table" /* 2095 */;
+import TableId from "TableId" /* 2097 */;
 import size from "module_2" /* 2 */;
 
 let MessageDao;

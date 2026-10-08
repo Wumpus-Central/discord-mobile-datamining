@@ -1,25 +1,25 @@
-// === Module 17975: GuildSettingsRoleSubscriptionContainer ===
+// === Module 18262: GuildSettingsRoleSubscriptionContainer ===
 
-// Module 17975 (GuildSettingsRoleSubscriptionContainer)
+// Module 18262 (GuildSettingsRoleSubscriptionContainer)
 import c from "c" /* 576 */;
-import GroupListingsFetchContext from "GroupListingsFetchContext" /* 15046 */;
-import useOnboardingMonetizationEnableFlowDefault from "useOnboardingMonetizationEnableFlow" /* 17953 */;
-import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 17967 */;
+import GroupListingsFetchContext from "GroupListingsFetchContext" /* 15308 */;
+import useOnboardingMonetizationEnableFlowDefault from "useOnboardingMonetizationEnableFlow" /* 18240 */;
+import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 18254 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2074 */;
+import GuildStore from "GuildStore" /* 2086 */;
 
-const ErrorBlockDefault = tmp13(11866);
-const WarningNoticeDefault = tmp13(17926);
+const ErrorBlockDefault = tmp13(11938);
+const WarningNoticeDefault = tmp13(18213);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: c3, View: closure_4 } = get_ActivityIndicator);
 const GuildFeatures = fn(1085).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_9 = createStyles.createStyles({ container: { flex: 1 }, warningBlockContainer: { marginHorizontal: 16, marginTop: 16 }, spinner: { marginTop: 12 } });
 let ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function ApplicationRejectedNotice(guildId) {
   let tmp2 = dependencyMap;
   const cResult = guildId(576).c(20);
   guildId = guildId.guildId;
@@ -170,7 +170,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     tmp42 = tmp43;
   }
   const tmp14 = useOnboardingMonetizationEnableFlowDefault(stateFromStores);
-}) : ((guildId) => {
+}) : (function ApplicationRejectedNotice(guildId) {
   guildId = guildId.guildId;
   const tmp = closure_9();
   const items = [GuildStore];
@@ -230,7 +230,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   return tmp24;
 });
 ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSettingsRoleSubscription(arg0) {
   const cResult = c.c(9);
   ({ guildId, children } = arg0);
   let container = closure_9();
@@ -278,7 +278,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     return tmp7;
   }
   obj2 = GroupListingsFetchContext;
-}) : ((arg0) => {
+}) : (function GuildSettingsRoleSubscription(arg0) {
   ({ guildId, children } = arg0);
   const tmp = closure_9();
   if (obj.useGroupListingsFetchContext()) {
@@ -297,7 +297,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionContainer.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSettingsRoleSubscriptionContainer(guildId) {
   const cResult = c.c(8);
   if (cResult[0] !== guildId) {
     const obj2 = {};
@@ -332,7 +332,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   cResult[4] = tmp12;
   tmp11 = tmp12;
   const obj4 = { guildId: guildId.guildId, children: tmp4 };
-}) : ((guildId) => {
+}) : (function GuildSettingsRoleSubscriptionContainer(guildId) {
   const obj = { guildId: guildId.guildId, refetchOnMount: true, children: null };
   const obj2 = { guildId: guildId.guildId, children: null };
   const merged = Object.assign(guildId);

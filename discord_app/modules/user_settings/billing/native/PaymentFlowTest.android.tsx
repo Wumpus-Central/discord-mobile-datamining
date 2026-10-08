@@ -1,21 +1,21 @@
-// === Module 15586: PaymentFlowTest ===
+// === Module 15866: PaymentFlowTest ===
 
-// Module 15586 (PaymentFlowTest)
+// Module 15866 (PaymentFlowTest)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6478 */;
-import NativePaymentContext from "NativePaymentContext" /* 10564 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6656 */;
+import NativePaymentContext from "NativePaymentContext" /* 10161 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: null, textInput: null, title: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.container = { padding: nativeDefault.space.PX_16 };
@@ -23,7 +23,7 @@ obj.textInput = { marginBottom: 16 };
 obj.title = { marginBottom: 8 };
 let closure_9 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function TestView() {
   const cResult = value(first1[8]).c(31);
   const tmp4 = closure_9();
   const tmp6 = first2(noop.useState("1341506443580276736"), 2);
@@ -72,45 +72,45 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       }
       const _Symbol2 = Symbol;
       if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-        class U {
+        class G {
           constructor(arg0) {
             return closure_1(arg0);
           }
         }
-        cResult[9] = U;
+        cResult[9] = G;
       } else {
-        class U {
+        class G {
           constructor(arg0) {
             return closure_1(arg0);
           }
         }
       }
       if (cResult[10] === value) {
-        class U {
+        class G {
           constructor(arg0) {
             return closure_1(arg0);
           }
         }
         if (cResult[13] === first1) {
-          class U {
+          class G {
             constructor(arg0) {
               return closure_1(arg0);
             }
           }
           if (cResult[16] === first2) {
-            class U {
+            class G {
               constructor(arg0) {
                 return closure_1(arg0);
               }
             }
             if (cResult[19] === tmp18) {
-              class U {
+              class G {
                 constructor(arg0) {
                   return closure_1(arg0);
                 }
               }
               if (cResult[22] === tmp36) {
-                class U {
+                class G {
                   constructor(arg0) {
                     return closure_1(arg0);
                   }
@@ -145,47 +145,31 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         cResult[14] = tmp4.textInput;
         cResult[15] = tmp31;
       }
-      const obj8 = { containerStyle: tmp4.textInput, label: "SKU ID", value, placeholder: "Default: 1341506443580276736 (Anime Shy)", onChange: U, clearable: true };
+      const obj8 = { containerStyle: tmp4.textInput, label: "SKU ID", value, placeholder: "Default: 1341506443580276736 (Anime Shy)", onChange: G, clearable: true };
       const tmp28 = closure_7(tmp(tmp2[11]).TextInput, obj8);
       cResult[10] = value;
       cResult[11] = tmp4.textInput;
       cResult[12] = tmp28;
     }
   }
-  class I {
-    constructor() {
-      tmp2 = null != closure_0;
-      tmp = closure_0;
-      if (tmp2) {
-        tmp3 = closure_2;
-        tmp2 = null != closure_2;
-      }
-      if (tmp2) {
-        obj = { selectedSkuId: null, requestType: "giftSku", giftRecipientId: null, giftMessage: null };
-        obj.selectedSkuId = tmp;
-        tmp4 = closure_2;
-        obj.giftRecipientId = closure_2;
-        tmp5 = closure_3;
-        obj.giftMessage = closure_3;
-        tmp6 = closure_1;
-        tmp7 = closure_2;
-        obj2 = closure_1(closure_2[15]);
-        hideActionSheetResult = obj2.hideActionSheet();
-        obj3 = closure_1(closure_2[15]);
-        tmp9 = closure_0;
-        str = "SimpleRequestOTPActionSheet";
-        openLazyResult = obj3.openLazy(closure_0(closure_2[17])(closure_2[16], closure_2.paths), "SimpleRequestOTPActionSheet", obj);
-      }
-      return;
+  function giftSKU() {
+    let tmp2 = null != first;
+    if (tmp2) {
+      tmp2 = null != first1;
+    }
+    if (tmp2) {
+      const obj = { selectedSkuId: first, requestType: "giftSku", giftRecipientId: first1, giftMessage: first2 };
+      ActionSheetActionCreatorsDefault.hideActionSheet();
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15867, dependencyMap.paths), "SimpleRequestOTPActionSheet", obj);
     }
   }
   cResult[2] = first2;
   cResult[3] = first1;
   cResult[4] = value;
-  cResult[5] = I;
-  tmp18 = I;
+  cResult[5] = giftSKU;
+  tmp18 = giftSKU;
   const tmp5Result2 = first2(noop.useState(undefined), 2);
-}) : (() => {
+}) : (function TestView() {
   const tmp = closure_9();
   const tmp3 = first2(noop.useState("1341506443580276736"), 2);
   value = tmp3[0];
@@ -226,7 +210,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   items2[4] = closure_7(value(first1[12]).Button, {
     disabled: tmp15,
     text: "Send Gift",
-    onPress() {
+    onPress: function giftSKU() {
       let tmp2 = null != first;
       if (tmp2) {
         tmp2 = null != first1;
@@ -234,7 +218,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       if (tmp2) {
         const obj = { selectedSkuId: first, requestType: "giftSku", giftRecipientId: first1, giftMessage: first2 };
         ActionSheetActionCreatorsDefault.hideActionSheet();
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15587, dependencyMap.paths), "SimpleRequestOTPActionSheet", obj);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15867, dependencyMap.paths), "SimpleRequestOTPActionSheet", obj);
       }
     }
   });
@@ -248,7 +232,7 @@ let obj4 = { padding: nativeDefault.space.PX_16 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/billing/native/PaymentFlowTest.android.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function PaymentFlowTest() {
   const cResult = c.c(11);
   const tmp4 = closure_9();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -304,7 +288,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[5] = insets.top;
   cResult[6] = obj5;
   tmp7 = obj5;
-}) : (() => {
+}) : (function PaymentFlowTest() {
   const insets = useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets;
   const obj = { skuIDs: [], activeSubscription: null, children: null };
   const tmp = closure_9();

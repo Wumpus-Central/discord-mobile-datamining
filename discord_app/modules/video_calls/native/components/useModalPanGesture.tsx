@@ -1,9 +1,9 @@
-// === Module 12709: useModalPanGesture ===
+// === Module 11122: useModalPanGesture ===
 
-// Module 12709 (useModalPanGesture)
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
-import spring from "spring" /* 5604 */;
+// Module 11122 (useModalPanGesture)
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import spring from "spring" /* 5374 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5940 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -17,7 +17,7 @@ const __initData = { code: "function useModalPanGestureTsx7(){const{onStart,runO
 const __initData2 = { code: "function useModalPanGestureTsx8(){const{runOnJS,ModalActionCreators}=this.__closure;runOnJS(ModalActionCreators.pop)();}" };
 let result = size.fileFinishedImporting("modules/video_calls/native/components/useModalPanGesture.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((thresholdTranslate) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useModalPanGesture(thresholdTranslate) {
   const cResult = maxTranslate(height[1]).c(7);
   ({ thresholdVelocity, maxTranslate } = thresholdTranslate);
   thresholdTranslate = thresholdTranslate.thresholdTranslate;
@@ -86,7 +86,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((thresholdTransla
   cResult[5] = translateY;
   cResult[6] = useModalPanGestureTsx2;
   tmp5 = useModalPanGestureTsx2;
-}) : ((thresholdVelocity) => {
+}) : (function useModalPanGesture(thresholdVelocity) {
   let num = thresholdVelocity.thresholdVelocity;
   if (num === undefined) {
     num = 500;

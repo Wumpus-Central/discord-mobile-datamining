@@ -1,16 +1,16 @@
-// === Module 12735: InAppReportsSettingsUpsellsElement ===
+// === Module 13403: InAppReportsSettingsUpsellsElement ===
 
-// Module 12735 (InAppReportsSettingsUpsellsElement)
+// Module 13403 (InAppReportsSettingsUpsellsElement)
 import nativeDefault from "native" /* 587 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5076 */;
-import useMountEffectDefault from "useMountEffect" /* 5597 */;
-import SettingsIcon from "SettingsIcon" /* 6893 */;
-import openUserSettings from "openUserSettings" /* 6895 */;
-import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 8316 */;
-import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow" /* 12728 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5105 */;
+import useMountEffectDefault from "useMountEffect" /* 5392 */;
+import SettingsIcon from "SettingsIcon" /* 7082 */;
+import openUserSettings from "openUserSettings" /* 7084 */;
+import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 7699 */;
+import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow" /* 13397 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
 
 require = fn;
 const View = fn(17).View;
@@ -18,7 +18,7 @@ const Constants = fn(1085);
 ({ AnalyticEvents: closure_7, UserSettingsSections: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_16 }, settingsContainer: null, goToSettingsText: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.settingsContainer = { width: "100%", marginBottom: nativeDefault.space.PX_8 };
@@ -26,14 +26,14 @@ let obj4 = { width: "100%", marginBottom: nativeDefault.space.PX_8 };
 obj2.goToSettingsText = { marginTop: nativeDefault.space.PX_4 };
 let closure_11 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((trackSettingsUpsellsAction) => {
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function SettingsUpsellsTableRow(trackSettingsUpsellsAction) {
   const cResult = onButtonClick(576).c(12);
   ({ title, disabledTitle, description, onButtonClick } = trackSettingsUpsellsAction);
   trackSettingsUpsellsAction = trackSettingsUpsellsAction.trackSettingsUpsellsAction;
   const obj = onButtonClick(576);
   [tmp5, dependencyMap] = noop.useState(false);
   if (cResult[0] !== trackSettingsUpsellsAction) {
-    const fn = function o() {
+    const fn = function l() {
       trackSettingsUpsellsAction(in_app_reports_ReportUtils.TrackIarSettingsUpsellsActionType.SETTINGS_UPSELLS_VIEWED);
     };
     cResult[0] = trackSettingsUpsellsAction;
@@ -42,14 +42,14 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((trackSettingsU
   } else {
     tmp6 = cResult[1];
   }
-  trackSettingsUpsellsAction(5597)(tmp6);
+  trackSettingsUpsellsAction(5392)(tmp6);
   if (cResult[2] === onButtonClick) {
     if (cResult[3] === trackSettingsUpsellsAction) {
       let tmp9 = cResult[4];
     }
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp13 = closure_9(onButtonClick(6893).SettingsIcon, {});
+      const tmp13 = closure_9(onButtonClick(7082).SettingsIcon, {});
       cResult[5] = tmp13;
       let tmp11 = tmp13;
     } else {
@@ -68,7 +68,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((trackSettingsU
       }
     }
     const obj2 = { title, disabledTitle, description, disabled: tmp5, onPress: tmp9, icon: tmp11 };
-    const tmp16 = closure_9(tmp7(12728), obj2);
+    const tmp16 = closure_9(tmp7(13397), obj2);
     cResult[6] = description;
     cResult[7] = disabledTitle;
     cResult[8] = tmp5;
@@ -77,7 +77,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((trackSettingsU
     cResult[11] = tmp16;
     tmp14 = tmp16;
   }
-  const fn2 = function l() {
+  const fn2 = function o() {
     onButtonClick();
     dependencyMap(true);
     trackSettingsUpsellsAction(in_app_reports_ReportUtils.TrackIarSettingsUpsellsActionType.SETTINGS_UPSELLS_APPLY_CLICKED);
@@ -88,7 +88,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((trackSettingsU
   tmp9 = fn2;
   const tmp4 = _slicedToArray(noop.useState(false), 2);
   tmp7 = trackSettingsUpsellsAction;
-}) : ((arg0) => {
+}) : (function SettingsUpsellsTableRow(arg0) {
   ({ onButtonClick: require, trackSettingsUpsellsAction: importDefault } = arg0);
   ({ title, disabledTitle, description } = arg0);
   const tmp = _slicedToArray(noop.useState(false), 2);
@@ -115,7 +115,7 @@ let obj5 = { marginTop: nativeDefault.space.PX_4 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsSettingsUpsellsElement.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((settingsUpsells) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SettingsUpsellElement(settingsUpsells) {
   const cResult = settingsUpsells(reportId[9]).c(27);
   settingsUpsells = settingsUpsells.settingsUpsells;
   const channelId = settingsUpsells.channelId;
@@ -131,7 +131,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((settingsUpsells)
     first = cResult[0];
   }
   if (cResult[1] !== channelId) {
-    const fn = function l() {
+    const fn = function o() {
       return ChannelStore.getChannel(channelId);
     };
     cResult[1] = channelId;
@@ -259,7 +259,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((settingsUpsells)
     tmp14 = fn2;
   }
   const tmpResult4 = settingsUpsells(reportId[10]);
-}) : ((settingsUpsells) => {
+}) : (function SettingsUpsellElement(settingsUpsells) {
   settingsUpsells = settingsUpsells.settingsUpsells;
   ({ channelId: importDefault, reportId } = settingsUpsells);
   const reportType = settingsUpsells.reportType;

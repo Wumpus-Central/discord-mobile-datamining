@@ -1,17 +1,17 @@
-// === Module 7219: utils/QuestUtils ===
+// === Module 7399: utils/QuestUtils ===
 
-// Module 7219 (utils/QuestUtils)
-import QuestTaskUtils from "QuestTaskUtils" /* 7221 */;
-import QuestSharePolicy from "QuestSharePolicy" /* 7222 */;
-import StreamPermissionUtils from "StreamPermissionUtils" /* 7223 */;
-import QuestType2 from "QuestType" /* 7224 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7225 */;
+// Module 7399 (utils/QuestUtils)
+import StreamPermissionUtils from "StreamPermissionUtils" /* 5903 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7401 */;
+import QuestSharePolicy from "QuestSharePolicy" /* 7402 */;
+import QuestType2 from "QuestType" /* 7403 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7404 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GameConsoleStore from "GameConsoleStore" /* 4913 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
-import VoiceStateStore from "VoiceStateStore" /* 4915 */;
-import QuestUtmStore from "QuestUtmStore" /* 7220 */;
+import GameConsoleStore from "GameConsoleStore" /* 5109 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
+import VoiceStateStore from "VoiceStateStore" /* 5111 */;
+import QuestUtmStore from "QuestUtmStore" /* 7400 */;
 
 require = fn;
 function isSponsoredPlayQuest(quest) {
@@ -29,7 +29,7 @@ function isSponsoredPlayQuest(quest) {
 function hasVariant(nextResult, MOBILE_ACTIVITY_QUEST) {
   return new Set(nextResult.config.features).has(MOBILE_ACTIVITY_QUEST);
 }
-const QuestConstants = fn(5630);
+const QuestConstants = fn(5977);
 ({ DISCORD_APPLICATION_ID: closure_8, QuestVariants: closure_9, RewardFilterTypes: c10 } = QuestConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/utils/QuestUtils.tsx");
@@ -73,8 +73,8 @@ export const filterQuestsForSocialEntrypoints = function filterQuestsForSocialEn
 export const isShareableQuest = function isShareableQuest(config) {
   return config.sharePolicy !== QuestSharePolicy.QuestSharePolicy.NOT_SHAREABLE;
 };
-export const isStreamingAndCanWatch = function isStreamingAndCanWatch(arg0, stateFromStores) {
-  let first = null != arg0 && null != stateFromStores;
+export const isStreamingAndCanWatch = function isStreamingAndCanWatch(channelId, stateFromStores) {
+  let first = null != channelId && null != stateFromStores;
   if (first) {
     const obj = StreamPermissionUtils;
     first = obj.canWatchStream(stateFromStores, VoiceStateStore, GuildStore, PermissionStore, GameConsoleStore)[0];

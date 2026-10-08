@@ -1,25 +1,27 @@
-// === Module 14664: AndroidViewNsfwDmCommandsSetting ===
+// === Module 14925: AndroidViewNsfwDmCommandsSetting ===
 
-// Module 14664 (AndroidViewNsfwDmCommandsSetting)
+// Module 14925 (AndroidViewNsfwDmCommandsSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import UserSettings from "UserSettings" /* 2028 */;
-import AgeGateUtils from "AgeGateUtils" /* 5106 */;
-import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 6727 */;
-import useNSFWAllowed from "useNSFWAllowed" /* 6728 */;
-import SettingsConstants from "SettingsConstants" /* 7645 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8117 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8119 */;
+import UserSettings from "UserSettings" /* 2040 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 5915 */;
+import AgeGateUtils from "AgeGateUtils" /* 5930 */;
+import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 6903 */;
+import useNSFWAllowed from "useNSFWAllowed" /* 6904 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7492 */;
+import SettingsConstants from "SettingsConstants" /* 7966 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11142 */;
+import SettingBuilders from "SettingBuilders" /* 11262 */;
 import size from "module_2" /* 2 */;
 
-const PlatformUtils = tmp(1369);
+const PlatformUtils = tmp(1381);
 let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating.isReactCompilerEnabled();
 let ReactCompilerGating = ReactCompilerGating_mod;
-const fn = () => AgeRestrictedContentSettingsUtils.useViewNsfwCommandsOrDefault();
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+function useViewNsfwDmCommandsSettingValue() {
+  return AgeRestrictedContentSettingsUtils.useViewNsfwCommandsOrDefault();
+}
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePredicate() {
   let tmp = require;
   let isAndroid = dependencyMap;
   const cResult = c.c(3);
@@ -52,7 +54,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     cResult[1] = flag;
     cResult[2] = isAndroidResult1;
   }
-}) : (() => {
+}) : (function usePredicate() {
   let shouldAgeVerifyForSettingsToggles = AgeGateUtils.useShouldAgeVerifyForSettingsToggles();
   let flag = useNSFWAllowed.useNSFWAllowed();
   if (flag == null) {
@@ -80,7 +82,7 @@ const toggle = SettingBuilders.createToggle({
     return intl.string(util.t["J4zza/"]);
   },
   parent: SettingsConstants.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
-  useValue: fn,
+  useValue: useViewNsfwDmCommandsSettingValue,
   onValueChange: function handleValueChange(arg0) {
     if (obj.shouldAgeVerifyForSettingsToggles()) {
       if (arg0) {
@@ -92,7 +94,7 @@ const toggle = SettingBuilders.createToggle({
     ViewNsfwCommands.updateSetting(arg0);
     obj = AgeGateUtils;
   },
-  usePredicate: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  usePredicate: ReactCompilerGating.isReactCompilerEnabled() ? (function usePredicate() {
     let tmp = require;
     let isAndroid = dependencyMap;
     const cResult = c.c(3);
@@ -125,7 +127,7 @@ const toggle = SettingBuilders.createToggle({
       cResult[1] = flag;
       cResult[2] = isAndroidResult1;
     }
-  }) : (() => {
+  }) : (function usePredicate() {
     let shouldAgeVerifyForSettingsToggles = AgeGateUtils.useShouldAgeVerifyForSettingsToggles();
     let flag = useNSFWAllowed.useNSFWAllowed();
     if (flag == null) {

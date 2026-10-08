@@ -1,9 +1,9 @@
-// === Module 14466: UserProfileUpsellCard ===
+// === Module 14694: UserProfileUpsellCard ===
 
-// Module 14466 (UserProfileUpsellCard)
+// Module 14694 (UserProfileUpsellCard)
 import nativeDefault from "native" /* 587 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
-import LinearGradientDefault from "LinearGradient" /* 5612 */;
+import LinearGradientDefault from "LinearGradient" /* 5387 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -11,14 +11,14 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
-const Gradients = fn(6951).Gradients;
+const Gradients = fn(7140).Gradients;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { upsellButton: { marginTop: 8, flexShrink: 0, borderRadius: nativeDefault.radii.round, gap: 4 }, titleContainer: { flexDirection: "row", alignItems: "center", gap: 4, marginBottom: 4 }, linearGradient: { width: "100%", height: "100%", position: "absolute", overflow: "hidden" }, outer: null, scroll: null, inner: null };
 let obj3 = { marginTop: 8, flexShrink: 0, borderRadius: nativeDefault.radii.round, gap: 4 };
-obj2.outer = { marginHorizontal: fn(6714).PROFILE_SIDE_PADDING - 1 };
-let obj4 = { marginHorizontal: fn(6714).PROFILE_SIDE_PADDING - 1 };
+obj2.outer = { marginHorizontal: fn(6891).PROFILE_SIDE_PADDING - 1 };
+let obj4 = { marginHorizontal: fn(6891).PROFILE_SIDE_PADDING - 1 };
 obj2.scroll = { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.inner = { paddingVertical: 12, paddingHorizontal: 14 };
 let closure_8 = createStyles.createStyles(obj2);
@@ -27,7 +27,7 @@ let obj5 = { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefaul
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileUpsellCard.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileUpsellCard(arg0) {
   const cResult = require("c").c(34);
   ({ style, children, ctaText, headerText, showLinearGradient, cardStyle, contentStyle, ctaStyle, disabled, onPress } = arg0);
   const tmp4 = closure_8();
@@ -68,8 +68,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                   }
                 }
               }
-              const obj2 = { style: tmp13, disabled, onPress, text: ctaText, color: tmp(1188).ButtonColors.GREEN, renderIcon: G, renderLinearGradient: tmp16 };
-              const tmp20 = closure_6(tmp(1188).ShinyButton, obj2);
+              const obj2 = { style: tmp13, disabled, onPress, text: ctaText, color: tmp(1200).ButtonColors.GREEN, renderIcon: G, renderLinearGradient: tmp16 };
+              const tmp20 = closure_6(tmp(1200).ShinyButton, obj2);
               cResult[19] = ctaText;
               cResult[20] = disabled;
               cResult[21] = onPress;
@@ -88,7 +88,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             cResult[17] = tmp4.linearGradient;
             cResult[18] = undefined;
           }
-          let items = [tmp4.upsellButton, ctaStyle];
+          const items = [tmp4.upsellButton, ctaStyle];
           cResult[12] = ctaStyle;
           cResult[13] = tmp4.upsellButton;
           cResult[14] = items;
@@ -103,9 +103,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           }
           const obj3 = { style: tmp4.titleContainer, children: null };
           const obj4 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, size: "xs" };
-          const items1 = [closure_6(tmp(8346).NitroWheelIcon, obj4), ];
+          const items1 = [closure_6(tmp(9005).NitroWheelIcon, obj4), ];
           const obj5 = { variant: "heading-sm/bold", children: headerText };
-          items1[1] = closure_6(tmp(4892).Text, obj5);
+          items1[1] = closure_6(tmp(5086).Text, obj5);
           obj3.children = items1;
           tmp9 = closure_7(closure_3, obj3);
         }
@@ -128,13 +128,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = tmp4.outer;
   cResult[2] = items4;
   let obj = require("c");
-}) : ((headerText) => {
+}) : (function UserProfileUpsellCard(headerText) {
   headerText = headerText.headerText;
   ({ style, children, ctaText, showLinearGradient, cardStyle, contentStyle, ctaStyle, disabled, onPress } = headerText);
   const tmp = closure_8();
   _require = tmp;
   let obj = { borderWidth: 1, style: null, direction: require("native").GradientBorder.Direction.HORIZONTAL, colors: Gradients.PREMIUM_TIER_2, borderRadius: nativeDefault.radii.lg, children: null };
-  let items = [tmp.outer, style];
+  const items = [tmp.outer, style];
   obj.style = items;
   const obj2 = { bounces: false, style: null, contentContainerStyle: null, children: null };
   const items1 = [tmp.scroll, cardStyle];
@@ -145,9 +145,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (null != headerText) {
     const obj3 = { style: tmp.titleContainer, children: null };
     const obj4 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, size: "xs" };
-    const items3 = [closure_6(tmp3(8346).NitroWheelIcon, obj4), ];
+    const items3 = [closure_6(tmp3(9005).NitroWheelIcon, obj4), ];
     const obj5 = { variant: "heading-sm/bold", children: headerText };
-    items3[1] = closure_6(tmp3(4892).Text, obj5);
+    items3[1] = closure_6(tmp3(5086).Text, obj5);
     obj3.children = items3;
     tmp6Result = closure_7(closure_3, obj3);
   }
@@ -168,9 +168,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   let fn;
   if (showLinearGradient) {
     fn = () => {
-      const obj = { style: null, start: ConstantsIOS.HorizontalGradient.START, end: ConstantsIOS.HorizontalGradient.END, colors: Gradients.PREMIUM_TIER_2_TRI_COLOR };
-      const items = [closure_0.linearGradient];
-      obj.style = items;
+      const obj = { style: closure_0.linearGradient, start: ConstantsIOS.HorizontalGradient.START, end: ConstantsIOS.HorizontalGradient.END, colors: Gradients.PREMIUM_TIER_2_TRI_COLOR };
       return timestampProducer(LinearGradientDefault, obj);
     };
   }

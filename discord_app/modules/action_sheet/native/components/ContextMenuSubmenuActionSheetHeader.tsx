@@ -1,21 +1,21 @@
-// === Module 11371: ContextMenuSubmenuActionSheetHeader ===
+// === Module 12809: ContextMenuSubmenuActionSheetHeader ===
 
-// Module 11371 (ContextMenuSubmenuActionSheetHeader)
+// Module 12809 (ContextMenuSubmenuActionSheetHeader)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import ActionSheetHeaderPressableText from "ActionSheetHeaderPressableText" /* 9230 */;
+import ActionSheetHeaderPressableText from "ActionSheetHeaderPressableText" /* 8538 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles({ headerContainer: { paddingVertical: 12, paddingHorizontal: 16, alignItems: "flex-start" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/action_sheet/native/components/ContextMenuSubmenuActionSheetHeader.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onBack) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContextMenuSubmenuActionSheetHeader(onBack) {
   const cResult = c.c(8);
   onBack = onBack.onBack;
   const tmp4 = closure_4();
@@ -60,7 +60,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onBack) => {
   cResult[6] = tmp9;
   cResult[7] = tmp13;
   tmp12 = tmp13;
-}) : ((onBack) => {
+}) : (function ContextMenuSubmenuActionSheetHeader(onBack) {
   let fn = onBack.onBack;
   const obj = { style: closure_4().headerContainer, children: null };
   const obj2 = { label: null, onPress: null };

@@ -1,20 +1,20 @@
-// === Module 9537: InstantInviteQRCodeActionSheet ===
+// === Module 8708: InstantInviteQRCodeActionSheet ===
 
-// Module 9537 (InstantInviteQRCodeActionSheet)
+// Module 8708 (InstantInviteQRCodeActionSheet)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import ToastUtils from "ToastUtils" /* 4573 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import GuildIcon from "GuildIcon" /* 5978 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6651 */;
-import ActionSheet from "ActionSheet" /* 6708 */;
-import components_native_QRCodeDefault from "components_native/QRCode" /* 9538 */;
+import ToastUtils from "ToastUtils" /* 4765 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import GuildIcon from "GuildIcon" /* 6161 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6828 */;
+import ActionSheet from "ActionSheet" /* 6885 */;
+import components_native_QRCodeDefault from "components_native/QRCode" /* 8709 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import UserStore from "UserStore" /* 1377 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const GuildIconDefault = GuildIcon;
 
@@ -24,19 +24,19 @@ const Constants = fn(1085);
 ({ InstantInviteSources: closure_7, RelationshipTypes: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { padding: nativeDefault.space.PX_12, display: "flex", alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_24 }, iconContainer: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center" }, icon: null, code: null };
 let obj3 = { padding: nativeDefault.space.PX_12, display: "flex", alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_24 };
 obj2.icon = { padding: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.lg + nativeDefault.space.PX_4, backgroundColor: nativeDefault.colors.WHITE };
 obj2.code = { alignSelf: "center" };
 let closure_11 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDescription(channel) {
   const cResult = c.c(11);
   channel = channel.channel;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
-    const fn = function c() {
+    const fn = function s() {
       return currentUser.getCurrentUser();
     };
     cResult[0] = items;
@@ -106,7 +106,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     }
   }
   return tmp12;
-}) : ((channel) => {
+}) : (function useDescription(channel) {
   channel = channel.channel;
   const items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
@@ -140,7 +140,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   return tmp6;
 });
 ReactCompilerGating = fn(558);
-let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnFriendAdded(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] !== arg0) {
@@ -167,7 +167,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp3 = cResult[2];
   }
   const effect = noop.useEffect(tmp2, tmp3);
-}) : ((arg0) => {
+}) : (function useOnFriendAdded(arg0) {
   closure_0 = arg0;
   const items = [arg0];
   const effect = noop.useEffect(() => {
@@ -188,7 +188,7 @@ let obj4 = { padding: nativeDefault.space.PX_4, borderRadius: nativeDefault.radi
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/instant_invite/native/components/InstantInviteQRCodeActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((link) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function InstantInviteQRCodeActionSheet(link) {
   const cResult = c.c(26);
   link = link.link;
   const tmp4 = closure_11();
@@ -282,7 +282,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((link) => {
               const obj7 = { style: tmp4.container, children: null };
               const items = [tmp32, tmp36];
               obj7.children = items;
-              const tmp42 = v65535(View, obj7);
+              const tmp42 = collapsed(View, obj7);
               cResult[19] = tmp4.container;
               cResult[20] = tmp32;
               cResult[21] = tmp36;
@@ -292,7 +292,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((link) => {
             const obj8 = { children: null };
             const items1 = [tmp24, tmp28];
             obj8.children = items1;
-            const tmp35 = v65535(View, obj8);
+            const tmp35 = collapsed(View, obj8);
             cResult[14] = tmp24;
             cResult[15] = tmp28;
             cResult[16] = tmp35;
@@ -321,7 +321,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((link) => {
     cResult[9] = tmp27;
     tmp24 = tmp27;
   }
-}) : ((location) => {
+}) : (function InstantInviteQRCodeActionSheet(location) {
   const tmp = closure_11();
   if (location.location === constants.ADD_FRIENDS_MODAL) {
     const intl2 = util.intl;
@@ -338,12 +338,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((link) => {
   if (null != channel) {
     tmp9 = null;
     if (null != GuildStore.getGuild(channel.guild_id)) {
-      const obj2 = { guild: GuildStore.getGuild(channel.guild_id), size: tmp5(5978).GuildIconSizes.LARGE };
+      const obj2 = { guild: GuildStore.getGuild(channel.guild_id), size: tmp5(6161).GuildIconSizes.LARGE };
       tmp9 = options(GuildIconDefault, obj2);
     }
   }
-  closure_13(tmp5(4573).presentFriendRequestAcceptedToast);
-  const obj3 = { header: options(tmp5(6651).BottomSheetTitleHeader, { title: stringResult }), children: null };
+  closure_13(tmp5(4765).presentFriendRequestAcceptedToast);
+  const obj3 = { header: options(tmp5(6828).BottomSheetTitleHeader, { title: stringResult }), children: null };
   const obj4 = { style: tmp.container, children: null };
   const obj5 = { text: location.link, size: 240, style: tmp.code, accessibilityLabel: null };
   let plainText;
@@ -360,14 +360,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((link) => {
     tmp14Result = options(View, obj6);
   }
   items[1] = tmp14Result;
-  const items1 = [v65535(View, { children: items }), ];
+  const items1 = [collapsed(View, { children: items }), ];
   let tmp14Result2 = null != tmp8;
   if (tmp14Result2) {
     const obj8 = { variant: "text-md/normal", children: tmp8.visible };
-    tmp14Result2 = options(tmp5(4892).Text, obj8);
+    tmp14Result2 = options(tmp5(5086).Text, obj8);
   }
   items1[1] = tmp14Result2;
   obj4.children = items1;
-  obj3.children = v65535(View, obj4);
-  return options(tmp5(6708).ActionSheet, obj3);
+  obj3.children = collapsed(View, obj4);
+  return options(tmp5(6885).ActionSheet, obj3);
 });

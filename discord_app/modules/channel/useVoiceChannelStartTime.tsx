@@ -1,11 +1,11 @@
-// === Module 16200: useVoiceChannelStartTime ===
+// === Module 16460: useVoiceChannelStartTime ===
 
-// Module 16200 (useVoiceChannelStartTime)
-import ChannelInfoActionCreators from "ChannelInfoActionCreators" /* 11149 */;
+// Module 16460 (useVoiceChannelStartTime)
+import ChannelInfoActionCreators from "ChannelInfoActionCreators" /* 11269 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5443 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5625 */;
-import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 10036 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5753 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5970 */;
+import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 9566 */;
 
 const require = globalThis.__r;
 
@@ -15,7 +15,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/useVoiceChannelStartTime.tsx");
 
-export const useStartTime = ReactCompilerGating.isReactCompilerEnabled() ? ((type) => {
+export const useStartTime = ReactCompilerGating.isReactCompilerEnabled() ? (function useStartTime(type) {
   _require = type;
   const cResult = require("c").c(12);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -54,7 +54,7 @@ export const useStartTime = ReactCompilerGating.isReactCompilerEnabled() ? ((typ
       }
     }
     const items1 = [stateFromStores];
-    const fn = function f() {
+    const fn = function h() {
       return stateFromStores.isConnected();
     };
     cResult[3] = items1;
@@ -113,7 +113,7 @@ export const useStartTime = ReactCompilerGating.isReactCompilerEnabled() ? ((typ
   cResult[10] = U;
   cResult[11] = items2;
   const tmpResult2 = require("initialize");
-}) : ((type) => {
+}) : (function useStartTime(type) {
   _require = type;
   const items = [VoiceChannelStartTimeStore, closure_4];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => ({ hasRequestedStartTimes: VoiceChannelStartTimeStore.hasRequestedStartTimes(type.guild_id), startTime: VoiceChannelStartTimeStore.getStartTime(type), isGuildUnavailable: GuildAvailabilityStore.isUnavailable(type.guild_id) }));

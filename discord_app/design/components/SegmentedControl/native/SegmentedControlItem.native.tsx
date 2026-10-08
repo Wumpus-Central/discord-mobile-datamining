@@ -1,8 +1,8 @@
-// === Module 9319: SegmentedControlItem ===
+// === Module 8753: SegmentedControlItem ===
 
-// Module 9319 (SegmentedControlItem)
+// Module 8753 (SegmentedControlItem)
 import nativeDefault from "native" /* 587 */;
-import spring from "spring" /* 5604 */;
+import spring from "spring" /* 5374 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const SPRING_CONFIG = { mass: 0.3, damping: 13, stiffness: 250, overshootClamping: true };
-let createStyles = fn(4896);
+let createStyles = fn(5090);
 let closure_8 = createStyles.createStyles((arg0) => {
   const item = { borderRadius: nativeDefault.radii.lg, paddingVertical: null, flexDirection: "row", justifyContent: "center" };
   let num = 8;
@@ -21,7 +21,7 @@ let closure_8 = createStyles.createStyles((arg0) => {
   item.paddingVertical = num;
   return { item, label: { flexDirection: "column", alignItems: "center", gap: 8 } };
 });
-createStyles = fn(4896);
+createStyles = fn(5090);
 let closure_9 = createStyles.createStyleProperties({ inactive: nativeDefault.colors.TEXT_MUTED, active: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, pressed: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE });
 const __initData = { code: "function SegmentedControlItemNativeTsx1(){const{colors,pressed,index,activeIndex,withSpring,SPRING_CONFIG}=this.__closure;let color=colors.inactive;const isPressActive=pressed.get()>=0;const isPressed=pressed.get()===index;const isActive=Math.round(activeIndex.get())===index;if(isPressed){color=colors.pressed;}else{if(isPressActive){color=colors.inactive;}else{if(isActive){color=colors.active;}}}return{color:withSpring(color,SPRING_CONFIG,\"animate-always\")};}" };
 const __initData2 = { code: "function SegmentedControlItemNativeTsx2(){const{colors,pressed,index,activeIndex,withSpring,SPRING_CONFIG}=this.__closure;let color=colors.inactive;const isPressActive=pressed.get()>=0;const isPressed=pressed.get()===index;const isActive=Math.round(activeIndex.get())===index;if(isPressed){color=colors.pressed;}else if(isPressActive){color=colors.inactive;}else if(isActive){color=colors.active;}return{color:withSpring(color,SPRING_CONFIG,'animate-always')};}" };
@@ -30,7 +30,7 @@ let obj3 = { inactive: nativeDefault.colors.TEXT_MUTED, active: nativeDefault.co
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/SegmentedControl/native/SegmentedControlItem.native.tsx");
 
-export const SegmentedControlItem = ReactCompilerGating.isReactCompilerEnabled() ? ((state) => {
+export const SegmentedControlItem = ReactCompilerGating.isReactCompilerEnabled() ? (function SegmentedControlItem(state) {
   const cResult = index(activeIndex[6]).c(24);
   ({ label, index } = state);
   ({ itemCount, icon, onPress, onPressIn, onPressOut, pressed } = state);
@@ -165,7 +165,7 @@ export const SegmentedControlItem = ReactCompilerGating.isReactCompilerEnabled()
   cResult[4] = items1;
   tmp9 = items1;
   const obj2 = { colors: tmp5, pressed, index, activeIndex, withSpring: index(activeIndex[9]).withSpring, SPRING_CONFIG };
-}) : ((index) => {
+}) : (function SegmentedControlItem(index) {
   index = index.index;
   const pressed = index.pressed;
   const variant = index.variant;

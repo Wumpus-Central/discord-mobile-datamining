@@ -1,11 +1,11 @@
-// === Module 2054: FavoriteStore ===
+// === Module 2066: FavoriteStore ===
 
-// Module 2054 (FavoriteStore)
+// Module 2066 (FavoriteStore)
 import _mod12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1209 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
 
 require = fn;
 function initializeFromUserSettings() {
@@ -94,8 +94,8 @@ function initializeFromUserSettings() {
   }
   return flag3;
 }
-const createChannelRecord = fn(2055).createChannelRecord;
-let closure_5 = fn(2065).FAVORITES_UNCATEGORIZED_PARENT_ID;
+const createChannelRecord = fn(2067).createChannelRecord;
+let closure_5 = fn(2077).FAVORITES_UNCATEGORIZED_PARENT_ID;
 const Constants = fn(1085);
 ({ ChannelTypes: metroRequire, FAVORITES: closure_7 } = Constants);
 let closure_12 = false;

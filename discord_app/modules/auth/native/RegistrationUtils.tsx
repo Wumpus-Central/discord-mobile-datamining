@@ -1,10 +1,10 @@
-// === Module 15914: RegistrationUtils ===
+// === Module 16173: RegistrationUtils ===
 
-// Module 15914 (RegistrationUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+// Module 16173 (RegistrationUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
 import noop from "module_19" /* 19 */;
-import InviteStore from "InviteStore" /* 4877 */;
-import DisplayedInviteStore from "DisplayedInviteStore" /* 8426 */;
+import InviteStore from "InviteStore" /* 5071 */;
+import DisplayedInviteStore from "DisplayedInviteStore" /* 8663 */;
 
 const require = globalThis.__r;
 
@@ -81,9 +81,9 @@ function trackRegTransition(overrideRegistrationOptions) {
   obj2.to_step = toStep;
   AnalyticsUtilsDefault.track(AnalyticEvents.REGISTER_TRANSITION, obj2);
 }
-const RegistrationUIStore = fn(15906);
+const RegistrationUIStore = fn(16165);
 ({ clearRegistrationErrorMessage: metroRequire, useRegistrationUIStore: closure_7 } = RegistrationUIStore);
-const RegistrationConstants = fn(15907);
+const RegistrationConstants = fn(16166);
 ({ RegisterTransitionSteps: closure_8, RegistrationTransitionActionTypes: closure_9 } = RegistrationConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsx = fn(21).jsx;
@@ -142,7 +142,7 @@ export function getTrackRegTransition(arg0) {
     return tmp9;
   };
 }
-export const BackButtonWithTracking = ReactCompilerGating.isReactCompilerEnabled() ? ((destinationStep) => {
+export const BackButtonWithTracking = ReactCompilerGating.isReactCompilerEnabled() ? (function BackButtonWithTracking(destinationStep) {
   const cResult = context(onPress[9]).c(7);
   context = noop.useContext(context(onPress[10]).TrackRegistrationContext);
   destinationStep = destinationStep.destinationStep;
@@ -168,28 +168,28 @@ export const BackButtonWithTracking = ReactCompilerGating.isReactCompilerEnabled
       tmp6 = tmp11;
     }
   }
-  const fn = function o() {
+  function handlePress() {
     if (null != onPress) {
       timestampProducer();
       const obj = { step: destinationStep, actionType: constants2.VIEWED };
       context(obj);
       tmp();
     }
-  };
+  }
   cResult[0] = destinationStep;
   cResult[1] = onPress;
   cResult[2] = context;
-  cResult[3] = fn;
-  tmp5 = fn;
+  cResult[3] = handlePress;
+  tmp5 = handlePress;
   let obj = context(onPress[9]);
   tmp = context;
   tmp2 = onPress;
-}) : ((arg0) => {
+}) : (function BackButtonWithTracking(arg0) {
   _require = noop.useContext(require("Auth").TrackRegistrationContext);
   ({ destinationStep: importDefault, onPress: dependencyMap } = arg0);
   let obj = {};
   const merged = Object.assign(arg0);
-  obj.onPress = function onPress() {
+  obj.onPress = function handlePress() {
     if (null != dependencyMap) {
       timestampProducer();
       const obj = { step, actionType: constants2.VIEWED };
@@ -197,7 +197,7 @@ export const BackButtonWithTracking = ReactCompilerGating.isReactCompilerEnabled
       tmp();
     }
   };
-  return jsx(require("module_6026").HeaderBackButton, {});
+  return jsx(require("module_6212").HeaderBackButton, {});
 });
 export const getCommonErrorDetails = function getCommonErrorDetails(error_code) {
   if (-1 === error_code) {

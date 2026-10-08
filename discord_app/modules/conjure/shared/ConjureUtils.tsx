@@ -1,14 +1,14 @@
-// === Module 6756: ConjureUtils ===
+// === Module 6932: ConjureUtils ===
 
-// Module 6756 (ConjureUtils)
+// Module 6932 (ConjureUtils)
 import c from "c" /* 576 */;
-import ConjureTypes from "ConjureTypes" /* 6757 */;
-import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6758 */;
-import ApplicationStore from "ApplicationStore" /* 5124 */;
-import GuildChannelStore_mod from "GuildChannelStore" /* 4513 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
+import ConjureTypes from "ConjureTypes" /* 6933 */;
+import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6934 */;
+import ApplicationStore from "ApplicationStore" /* 5436 */;
+import GuildChannelStore_mod from "GuildChannelStore" /* 4705 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4899 */;
 
 const require = globalThis.__r;
 
@@ -28,14 +28,14 @@ function conjureChannelAppId(channel) {
   }
   return tmp2;
 }
-let GuildChannelStore = fn(4513);
+let GuildChannelStore = fn(4705);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: c3, GUILD_VOCAL_CHANNELS_KEY: closure_4 } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1085);
 ({ Permissions: closure_9, ChannelTypes: c10, GuildFeatures: closure_11 } = Constants);
 fn(558);
 const ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId, location) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanAccessConjure(guildId, location) {
   const cResult = c.c(5);
   if (cResult[0] === guildId.id) {
     if (cResult[1] === location) {
@@ -61,7 +61,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId, location) =
   cResult[1] = location;
   cResult[2] = obj2;
   tmp4 = obj2;
-}) : ((guildId, location) => {
+}) : (function useCanAccessConjure(guildId, location) {
   let isConjureGuildEnabled = ConjureGuildExperiment.useIsConjureGuildEnabled({ guildId: guildId.id, location });
   const features = guildId.features;
   if (isConjureGuildEnabled) {
@@ -292,7 +292,7 @@ export const isConjureChannelCandidate = function isConjureChannelCandidate(chan
   }
   return result;
 };
-export const useIsConjureChannelCandidate = ReactCompilerGating.isReactCompilerEnabled() ? ((guild_id, location) => {
+export const useIsConjureChannelCandidate = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsConjureChannelCandidate(guild_id, location) {
   _require = guild_id;
   const cResult = require("c").c(11);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -336,7 +336,7 @@ export const useIsConjureChannelCandidate = ReactCompilerGating.isReactCompilerE
     if (cResult[4] === guild_id2) {
       let tmp12 = cResult[5];
     }
-    const isConjureGuildEnabled = tmp(6758).useIsConjureGuildEnabled(tmp12);
+    const isConjureGuildEnabled = tmp(6934).useIsConjureGuildEnabled(tmp12);
     if (cResult[6] === appChannelApplication) {
       if (cResult[7] === guild_id) {
         if (cResult[8] === stateFromStores) {
@@ -376,7 +376,7 @@ export const useIsConjureChannelCandidate = ReactCompilerGating.isReactCompilerE
     cResult[9] = isConjureGuildEnabled;
     cResult[10] = tmp17;
     tmp14 = tmp17;
-    const tmpResult4 = tmp(6758);
+    const tmpResult4 = tmp(6934);
   }
   const obj2 = { guildId: guild_id2, location };
   cResult[3] = location;
@@ -384,7 +384,7 @@ export const useIsConjureChannelCandidate = ReactCompilerGating.isReactCompilerE
   cResult[5] = obj2;
   tmp12 = obj2;
   const tmpResult3 = require("useAppChannelApplication");
-}) : ((guild_id, location) => {
+}) : (function useIsConjureChannelCandidate(guild_id, location) {
   _require = guild_id;
   const items = [GuildStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {

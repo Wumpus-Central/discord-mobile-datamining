@@ -1,16 +1,16 @@
-// === Module 12726: InAppReportsRemediationsElement ===
+// === Module 13395: InAppReportsRemediationsElement ===
 
-// Module 12726 (InAppReportsRemediationsElement)
+// Module 13395 (InAppReportsRemediationsElement)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import TableRowGroup from "TableRowGroup" /* 6081 */;
+import TableRowGroup from "TableRowGroup" /* 6267 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_32 } };
 let closure_4 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -18,7 +18,7 @@ const obj3 = { paddingHorizontal: nativeDefault.space.PX_16, marginBottom: nativ
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsRemediationsElement.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function RemediationsElement(children) {
   const cResult = c.c(6);
   children = children.children;
   const tmp4 = closure_4();
@@ -50,7 +50,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
   cResult[4] = tmp7;
   cResult[5] = tmp11;
   tmp10 = tmp11;
-}) : ((children) => {
+}) : (function RemediationsElement(children) {
   const obj = { style: closure_4().container, children: null };
   const obj2 = { title: null, hasIcons: true, children: null };
   const intl = util.intl;

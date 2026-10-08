@@ -1,23 +1,23 @@
-// === Module 8526: WishlistButton ===
+// === Module 9011: WishlistButton ===
 
-// Module 8526 (WishlistButton)
+// Module 9011 (WishlistButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4574 */;
-import native from "native" /* 4595 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import spring from "spring" /* 5604 */;
-import springPresets from "springPresets" /* 5605 */;
-import CollectiblesWishlistUtils from "CollectiblesWishlistUtils" /* 8456 */;
-import useWishlistNUXActionSheetDefault from "useWishlistNUXActionSheet" /* 8457 */;
-import useProductPurchaseState from "useProductPurchaseState" /* 8529 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4766 */;
+import native from "native" /* 4787 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import spring from "spring" /* 5374 */;
+import springPresets from "springPresets" /* 5378 */;
+import CollectiblesWishlistUtils from "CollectiblesWishlistUtils" /* 8942 */;
+import useWishlistNUXActionSheetDefault from "useWishlistNUXActionSheet" /* 8943 */;
+import useProductPurchaseState from "useProductPurchaseState" /* 9014 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 let closure_3 = ["skuId", "product", "onPress", "onTrackPress"];
@@ -29,11 +29,11 @@ const ThemeTypes = fn(1096).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 let obj = { duration: 400, easing: null };
-const Easing = fn(4618).Easing;
+const Easing = fn(4810).Easing;
 obj.easing = Easing.bezier(0.67, 0, 0.26, 1);
-let obj2 = { sm: fn(5607).SMALL_BUTTON_HEIGHT, md: fn(5607).MEDIUM_BUTTON_HEIGHT };
+let obj2 = { sm: fn(5380).SMALL_BUTTON_HEIGHT, md: fn(5380).MEDIUM_BUTTON_HEIGHT };
 const dependencyMap2 = { sm: "sm", md: "md" };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_20 = createStyles.createStyles((arg0) => {
   obj = { button: null, light: null, lightPressed: null, dark: null, darkPressed: null, midnight: null, disabled: null, iconContainer: null, animationFill: null };
   const size = { width: obj2[arg0], height: obj2[arg0], display: "flex", alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.round, borderWidth: 1, borderColor: nativeDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT };
@@ -62,7 +62,7 @@ const __initData = { code: "function WishlistButtonTsx6(){const{styles,withSprin
 const __initData2 = { code: "function WishlistButtonTsx7(){const{animationFillProgress,styles,withSpring,showFilled,SUBTLE_SPRING,interpolate,Extrapolation}=this.__closure;const progress=animationFillProgress.get();return{...styles.animationFill,opacity:withSpring(showFilled?1:0,SUBTLE_SPRING,'animate-always'),transform:[{scale:interpolate(progress,[0,0.625,1],[0,1.35,1],Extrapolation.CLAMP)}]};}" };
 const __initData3 = { code: "function WishlistButtonTsx8(){const{animationFillProgress,styles,showFilled,interpolate,Extrapolation}=this.__closure;const progress_0=animationFillProgress.get();return{...styles.animationFill,opacity:showFilled?interpolate(progress_0,[0,0.7],[1,0],Extrapolation.CLAMP):0,transform:[{scale:interpolate(progress_0,[0,0.625,1],[0,1.35,1],Extrapolation.CLAMP)}]};}" };
 let ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((isWishlisted) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function WishlistButtonBase(isWishlisted) {
   const cResult = isWishlisted(busy[16]).c(64);
   isWishlisted = isWishlisted.isWishlisted;
   const onPress = isWishlisted.onPress;
@@ -129,7 +129,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((isWishlisted) => {
                           return;
                         }
                       }
-                      function ee() {
+                      function tt() {
                         if (first) {
                           let result = sharedValue.set(0);
                           const _requestAnimationFrame = requestAnimationFrame;
@@ -152,7 +152,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((isWishlisted) => {
                       let items = [first, sharedValue];
                       cResult[17] = sharedValue;
                       cResult[18] = first;
-                      cResult[19] = ee;
+                      cResult[19] = tt;
                       cResult[20] = items;
                     }
                   }
@@ -246,7 +246,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((isWishlisted) => {
   cResult[1] = disabled;
   cResult[2] = isWishlisted;
   cResult[3] = { checked: isWishlisted, busy, disabled };
-}) : ((isWishlisted) => {
+}) : (function WishlistButtonBase(isWishlisted) {
   isWishlisted = isWishlisted.isWishlisted;
   const onPress = isWishlisted.onPress;
   const busy = isWishlisted.busy;
@@ -501,7 +501,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((isWishlisted) => {
 });
 let closure_29 = tmp4;
 ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function WishlistButton(onPress) {
   const cResult = require("c").c(34);
   if (cResult[0] !== onPress) {
     ({ skuId, product } = onPress);
@@ -610,7 +610,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
             if (cResult[21] === tmp8) {
               let tmp28 = cResult[22];
             }
-            const wishlistButtonState = tmp(8518).useWishlistButtonState(tmp28);
+            const wishlistButtonState = tmp(9002).useWishlistButtonState(tmp28);
             class I {
               constructor() {
                 return closure_1_11.getId();
@@ -714,7 +714,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
                 }
               }
             });
-            const fn3 = function() {
+            function t10() {
               const self = this;
               const apply = closure_0.apply;
               if (typeof apply === "unknown") {
@@ -723,14 +723,14 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
                 applyArgumentsResult = apply(self, arguments);
               }
               return applyArgumentsResult;
-            };
+            }
             cResult[23] = handleToggle;
             cResult[24] = tmp30;
             cResult[25] = tmp4;
             cResult[26] = tmp5;
-            cResult[27] = fn3;
-            tmp31 = fn3;
-            const tmpResult4 = tmp(8518);
+            cResult[27] = t10;
+            tmp31 = t10;
+            const tmpResult4 = tmp(9002);
           }
         }
       }
@@ -754,7 +754,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
   cResult[15] = fn;
   tmp24 = fn;
   const tmpResult3 = require("initialize");
-}) : ((skuId) => {
+}) : (function WishlistButton(skuId) {
   const product = skuId.product;
   const require = product;
   const onPress = skuId.onPress;
@@ -802,7 +802,7 @@ ReactCompilerGating = fn(558);
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/WishlistButton.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function CollectiblesWishlistButton(arg0) {
   const cResult = c.c(12);
   if (cResult[0] !== arg0) {
     ({ selectedProduct, onTrackPress } = arg0);
@@ -856,7 +856,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp13 = tmp19;
   }
   tmpResult = useProductPurchaseState;
-}) : ((selectedProduct) => {
+}) : (function CollectiblesWishlistButton(selectedProduct) {
   selectedProduct = selectedProduct.selectedProduct;
   let tmp = null;
   const merged = Object.assign(selectedProduct, Object.assign({ selectedProduct: 0, onTrackPress: 0 }));

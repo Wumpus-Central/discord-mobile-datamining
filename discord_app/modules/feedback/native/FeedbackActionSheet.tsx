@@ -1,12 +1,12 @@
-// === Module 11283: FeedbackActionSheet ===
+// === Module 9623: FeedbackActionSheet ===
 
-// Module 11283 (FeedbackActionSheet)
+// Module 9623 (FeedbackActionSheet)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 587 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
-import FeedbackUtils from "FeedbackUtils" /* 11265 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5940 */;
+import FeedbackUtils from "FeedbackUtils" /* 9605 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,10 +15,10 @@ function closeActionSheet() {
   ActionSheetActionCreatorsDefault.hideActionSheet();
 }
 const View = fn(17).View;
-const FeedbackRating = fn(11262).FeedbackRating;
+const FeedbackRating = fn(9602).FeedbackRating;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { padding: nativeDefault.space.PX_16 }, ratingsHeader: { textAlign: "center" }, reasonsList: null };
 let obj3 = { padding: nativeDefault.space.PX_16 };
 obj2.reasonsList = { marginBottom: nativeDefault.space.PX_16 };
@@ -76,8 +76,8 @@ export default function FeedbackActionSheet(feedbackReasons) {
         tmp14 = View(reason);
       }
       obj3.descriptionLabel = tmp14;
-      obj2.pushLazy(asyncRequireImpl(11284, dependencyMap.paths), obj3);
-      const tmp9 = asyncRequireImpl(11284, dependencyMap.paths);
+      obj2.pushLazy(asyncRequireImpl(9624, dependencyMap.paths), obj3);
+      const tmp9 = asyncRequireImpl(9624, dependencyMap.paths);
     } else {
       const obj = { rating, reason, dontShowAgain: first1 };
       trackReport(obj);

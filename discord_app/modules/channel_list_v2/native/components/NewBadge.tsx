@@ -1,20 +1,20 @@
-// === Module 11938: NewBadge ===
+// === Module 12011: NewBadge ===
 
-// Module 11938 (NewBadge)
+// Module 12011 (NewBadge)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import shared from "shared" /* 4735 */;
-import useThemeDefault from "useTheme" /* 4797 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 7519 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import shared from "shared" /* 4929 */;
+import useThemeDefault from "useTheme" /* 4991 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9242 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles((arg0, arg1) => {
   let num = 0;
   if (obj.isIOS()) {
@@ -38,7 +38,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_list_v2/native/components/NewBadge.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewBadge() {
   const cResult = c.c(7);
   const tmp5 = useThemeDefault();
   const tmp6 = closure_5(useIsUsingClientThemeDefault(), tmp5);
@@ -80,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[3] = tmp10;
   tmp9 = tmp10;
   obj2 = shared;
-}) : (() => {
+}) : (function NewBadge() {
   const tmp3 = useThemeDefault();
   const tmp4 = closure_5(useIsUsingClientThemeDefault(), tmp3);
   const obj = { style: tmp4.base, children: null };

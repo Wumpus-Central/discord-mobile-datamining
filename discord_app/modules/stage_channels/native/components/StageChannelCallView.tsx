@@ -1,14 +1,14 @@
-// === Module 9738: StageChannelCallView ===
+// === Module 10939: StageChannelCallView ===
 
-// Module 9738 (StageChannelCallView)
+// Module 10939 (StageChannelCallView)
 import c from "c" /* 576 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4618 */;
-import StatusBarDefault from "StatusBar" /* 9096 */;
-import FocusedControls from "FocusedControls" /* 9618 */;
-import StageChannelAnimationUtils from "StageChannelAnimationUtils" /* 9739 */;
-import StageChannelBackgroundDefault from "StageChannelBackground" /* 9740 */;
-import StageChannelCallListDefault from "StageChannelCallList" /* 9741 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4810 */;
+import StatusBarDefault from "StatusBar" /* 10340 */;
+import FocusedControls from "FocusedControls" /* 10811 */;
+import StageChannelAnimationUtils from "StageChannelAnimationUtils" /* 10940 */;
+import StageChannelBackgroundDefault from "StageChannelBackground" /* 10941 */;
+import StageChannelCallListDefault from "StageChannelCallList" /* 10942 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,10 +17,10 @@ const jsxProd = fn(21);
 function CONTROL_PADDING_PX(arg0) {
 
 }
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({ container: { flex: 1, paddingHorizontal: 12 } });
 let ReactCompilerGating = fn(558);
-let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
+let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageChannelCallBackground(children) {
   const cResult = c.c(8);
   children = children.children;
   const tmp4 = closure_7();
@@ -64,7 +64,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
   cResult[4] = items;
   tmp10 = items;
   const tmpResult = StageChannelAnimationUtils;
-}) : ((arg0) => {
+}) : (function StageChannelCallBackground(arg0) {
   ({ children, channelId } = arg0);
   StageChannelAnimationUtils;
   if (typeof CONTROL_PADDING_PX === "function") {
@@ -85,7 +85,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/native/components/StageChannelCallView.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function StageChannelCallView(channel) {
   const cResult = c.c(6);
   channel = channel.channel;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -119,7 +119,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   cResult[5] = tmp12;
   tmp11 = tmp12;
   const obj4 = { channelId: channel.id, children: tmp7 };
-}) : ((channel) => {
+}) : (function StageChannelCallView(channel) {
   channel = channel.channel;
   const obj = { children: null };
   const items = [React3(StatusBarDefault, { animated: true, barStyle: "light-content" }), React3(closure_8, { channelId: channel.id, children: React3(StageChannelCallListDefault, { channel }) })];

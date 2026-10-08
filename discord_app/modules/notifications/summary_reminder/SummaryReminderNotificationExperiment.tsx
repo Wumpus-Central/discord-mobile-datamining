@@ -1,8 +1,8 @@
-// === Module 15354: SummaryReminderNotificationExperiment ===
+// === Module 15616: SummaryReminderNotificationExperiment ===
 
-// Module 15354 (SummaryReminderNotificationExperiment)
+// Module 15616 (SummaryReminderNotificationExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1440 */;
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -14,7 +14,7 @@ const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/notifications/summary_reminder/SummaryReminderNotificationExperiment.tsx");
 
 export default apexExperiment;
-export const useSummaryReminderNotificationExperiment = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+export const useSummaryReminderNotificationExperiment = ReactCompilerGating.isReactCompilerEnabled() ? (function useSummaryReminderNotificationExperiment(location) {
   const cResult = c.c(2);
   if (cResult[0] !== location) {
     const obj2 = { location };
@@ -25,4 +25,6 @@ export const useSummaryReminderNotificationExperiment = ReactCompilerGating.isRe
     tmp2 = cResult[1];
   }
   return apexExperiment.useConfig(tmp2);
-}) : ((location) => apexExperiment.useConfig({ location }));
+}) : (function useSummaryReminderNotificationExperiment(location) {
+  return apexExperiment.useConfig({ location });
+});

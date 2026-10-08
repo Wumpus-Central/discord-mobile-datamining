@@ -1,6 +1,6 @@
-// === Module 15050: FormSeparator ===
+// === Module 15312: FormSeparator ===
 
-// Module 15050 (FormSeparator)
+// Module 15312 (FormSeparator)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
@@ -8,7 +8,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { alignSelf: "stretch" }, margins: { marginTop: 16 }, separator: null };
 let size = { width: "100%", height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 obj2.separator = size;
@@ -17,7 +17,7 @@ const ReactCompilerGating = fn(558);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormSeparator.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormSeparator(style) {
   const cResult = c.c(9);
   style = style.style;
   const tmp2 = closure_4();
@@ -59,7 +59,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
   cResult[2] = margins;
   cResult[3] = items;
   tmp4 = items;
-}) : ((arg0) => {
+}) : (function FormSeparator(arg0) {
   ({ style, withoutMargins } = arg0);
   const tmp = closure_4();
   const items = [tmp.container, , ];

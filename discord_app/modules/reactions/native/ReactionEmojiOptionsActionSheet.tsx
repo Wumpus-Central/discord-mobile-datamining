@@ -1,26 +1,26 @@
-// === Module 9992: ReactionEmojiOptionsActionSheet ===
+// === Module 9522: ReactionEmojiOptionsActionSheet ===
 
-// Module 9992 (ReactionEmojiOptionsActionSheet)
+// Module 9522 (ReactionEmojiOptionsActionSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import ToastUtils from "ToastUtils" /* 4573 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4574 */;
-import DesignSystemsNotificationComponentsExperiment from "DesignSystemsNotificationComponentsExperiment" /* 4580 */;
-import ClipboardUtils from "ClipboardUtils" /* 6695 */;
-import ReactionActionCreatorsAll from "ReactionActionCreators" /* 7273 */;
-import EmojiActionCreators from "EmojiActionCreators" /* 9952 */;
-import StarIcon from "StarIcon" /* 9956 */;
-import StarOutlineIcon2 from "StarOutlineIcon" /* 9958 */;
+import ToastUtils from "ToastUtils" /* 4765 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4766 */;
+import DesignSystemsNotificationComponentsExperiment from "DesignSystemsNotificationComponentsExperiment" /* 4772 */;
+import ClipboardUtils from "ClipboardUtils" /* 6872 */;
+import ReactionActionCreatorsAll from "ReactionActionCreators" /* 7872 */;
+import EmojiActionCreators from "EmojiActionCreators" /* 9479 */;
+import StarIcon from "StarIcon" /* 9483 */;
+import StarOutlineIcon2 from "StarOutlineIcon" /* 9485 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
-import EmojiStore from "EmojiStore" /* 5645 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
+import EmojiStore from "EmojiStore" /* 5992 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4899 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { header: { alignItems: "center", paddingTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_16 }, reactionPill: null, emoji: null, emojiText: null, reactionText: null, starIcon: null, starIconSelected: null, starIconUnselected: null };
 let obj3 = { alignItems: "center", paddingTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_16 };
 obj2.reactionPill = { flexDirection: "row", alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.xl, borderWidth: 4, borderColor: nativeDefault.colors.BORDER_STRONG, paddingVertical: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
@@ -38,7 +38,7 @@ let obj6 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/reactions/native/ReactionEmojiOptionsActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ReactionEmojiOptionsActionSheet(channelId) {
   const cResult = channelId(emoji[9]).c(75);
   channelId = channelId.channelId;
   const messageId = channelId.messageId;
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   const tidaWebformEnabled = messageId(emoji[11]).useExperiment(tmp6, tmp7).tidaWebformEnabled;
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [SelectedGuildStore];
-    const fn = function y() {
+    const fn = function j() {
       return guildId.getGuildId();
     };
     cResult[2] = items;
@@ -227,7 +227,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   cResult[13] = emojiURL;
   const tmp21 = !stateFromStores2;
   const tmpResult6 = channelId(emoji[12]);
-}) : ((channelId) => {
+}) : (function ReactionEmojiOptionsActionSheet(channelId) {
   channelId = channelId.channelId;
   const messageId = channelId.messageId;
   ({ reaction, canRemoveReactions } = channelId);

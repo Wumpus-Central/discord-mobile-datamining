@@ -1,9 +1,9 @@
-// === Module 12967: AddToWishlistItemCard ===
+// === Module 13246: AddToWishlistItemCard ===
 
-// Module 12967 (AddToWishlistItemCard)
+// Module 13246 (AddToWishlistItemCard)
 import nativeDefault from "native" /* 587 */;
-import SKUPreviewDefault from "SKUPreview" /* 8459 */;
-import HeartOutlineIcon from "HeartOutlineIcon" /* 8527 */;
+import SKUPreviewDefault from "SKUPreview" /* 8945 */;
+import HeartOutlineIcon from "HeartOutlineIcon" /* 9012 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -13,7 +13,7 @@ const View = fn(17).View;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { heartOverlay: null };
 const rect = { position: "absolute", top: nativeDefault.space.PX_4, right: nativeDefault.space.PX_4, zIndex: 1, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_6, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT };
 obj2.heartOverlay = rect;
@@ -39,7 +39,7 @@ export default function AddToWishlistItemCard(sku) {
     const obj3 = { style: heartOverlay.heartOverlay, pointerEvents: "none", children: closure_2_8(HeartOutlineIcon.HeartOutlineIcon, { size: "sm", color: nativeDefault.colors.ICON_OVERLAY_LIGHT }) };
     items[1] = closure_2_8(View, obj3);
     obj.children = items;
-    return v65535(options, obj);
+    return collapsed(options, obj);
   }, items);
   const items1 = [first, wishlistAnalyticsContext, , , , ];
   ({ id: arr2[2], productLine: arr2[3] } = sku);

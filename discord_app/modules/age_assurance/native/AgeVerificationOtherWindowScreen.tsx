@@ -1,27 +1,27 @@
-// === Module 8165: AgeVerificationOtherWindowScreen ===
+// === Module 7546: AgeVerificationOtherWindowScreen ===
 
-// Module 8165 (AgeVerificationOtherWindowScreen)
+// Module 7546 (AgeVerificationOtherWindowScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import _modDef3073 from "module_3073" /* 3073 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Stack_Stack from "Stack/Stack" /* 5600 */;
-import MobilePhoneIcon from "MobilePhoneIcon" /* 6455 */;
-import ModalScreen from "ModalScreen" /* 8128 */;
-import ModalContent from "ModalContent" /* 8129 */;
+import _modDef3117 from "module_3117" /* 3117 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import Stack_Stack from "Stack/Stack" /* 5373 */;
+import MobilePhoneIcon from "MobilePhoneIcon" /* 6633 */;
+import ModalScreen from "ModalScreen" /* 7506 */;
+import ModalContent from "ModalContent" /* 7507 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles({ container: { flex: 1, alignSelf: "stretch" }, text: { textAlign: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/native/AgeVerificationOtherWindowScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((copy) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeVerificationOtherWindowScreen(copy) {
   const cResult = c.c(17);
   copy = copy.copy;
   const tmp4 = closure_5();
@@ -36,7 +36,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((copy) => {
     }
     if (title1 == null) {
       const intl = util.intl;
-      title1 = intl.string(_modDef3073.MLPgsX);
+      title1 = intl.string(_modDef3117.MLPgsX);
     }
     let title2;
     if (copy != null) {
@@ -59,7 +59,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((copy) => {
     }
     if (description1 == null) {
       const intl2 = util.intl;
-      description1 = intl2.string(_modDef3073.VcZF1q);
+      description1 = intl2.string(_modDef3117.VcZF1q);
     }
     let description2;
     if (copy != null) {
@@ -132,7 +132,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((copy) => {
   cResult[7] = tmp20;
   tmp19 = tmp20;
   const obj8 = { accessibilityRole: "header", variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp4.text, children: tmp6 };
-}) : ((copy) => {
+}) : (function AgeVerificationOtherWindowScreen(copy) {
   copy = copy.copy;
   const tmp = closure_5();
   let title;
@@ -141,7 +141,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((copy) => {
   }
   if (title == null) {
     const intl = util.intl;
-    title = intl.string(_modDef3073.MLPgsX);
+    title = intl.string(_modDef3117.MLPgsX);
   }
   let description;
   if (copy != null) {
@@ -149,7 +149,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((copy) => {
   }
   if (description == null) {
     const intl2 = util.intl;
-    description = intl2.string(_modDef3073.VcZF1q);
+    description = intl2.string(_modDef3117.VcZF1q);
   }
   const obj = { children: null };
   const obj2 = { children: null };

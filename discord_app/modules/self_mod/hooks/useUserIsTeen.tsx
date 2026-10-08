@@ -1,16 +1,16 @@
-// === Module 8327: useUserIsTeen ===
+// === Module 7710: useUserIsTeen ===
 
-// Module 8327 (useUserIsTeen)
+// Module 7710 (useUserIsTeen)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/hooks/useUserIsTeen.tsx");
 
-export const useUserIsTeen = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useUserIsTeen = ReactCompilerGating.isReactCompilerEnabled() ? (function useUserIsTeen() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
@@ -30,7 +30,7 @@ export const useUserIsTeen = ReactCompilerGating.isReactCompilerEnabled() ? (() 
     [tmp4, tmp5] = cResult;
   }
   return false === initialize.useStateFromStores(tmp4, tmp5);
-}) : (() => {
+}) : (function useUserIsTeen() {
   const items = [UserStore];
   return false === initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();

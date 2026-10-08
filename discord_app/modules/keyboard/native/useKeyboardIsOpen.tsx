@@ -1,10 +1,10 @@
-// === Module 6117: useKeyboardIsOpen ===
+// === Module 6296: useKeyboardIsOpen ===
 
-// Module 6117 (useKeyboardIsOpen)
-import AppEntryKeyContext from "AppEntryKeyContext" /* 1487 */;
-import KeyboardUIStoreDefault from "KeyboardUIStore" /* 1488 */;
-import KeyboardTypes from "KeyboardTypes" /* 1616 */;
-import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1486 */;
+// Module 6296 (useKeyboardIsOpen)
+import AppEntryKeyContext from "AppEntryKeyContext" /* 1499 */;
+import KeyboardUIStoreDefault from "KeyboardUIStore" /* 1500 */;
+import KeyboardTypes from "KeyboardTypes" /* 1628 */;
+import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1498 */;
 
 const require = globalThis.__r;
 
@@ -40,7 +40,7 @@ function getKeyboardIsOpen(arg0) {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/keyboard/native/useKeyboardIsOpen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useKeyboardIsOpen(arg0) {
   let tmp = arg0;
   const cResult = require("c").c(3);
   if (undefined === arg0) {
@@ -54,9 +54,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     if (cResult[1] === tmp5) {
       let tmp7 = cResult[2];
     }
-    return appEntryKey(1488)(tmp7);
+    return appEntryKey(1500)(tmp7);
   }
-  const fn = function t(arg0) {
+  const fn = function o(arg0) {
     const systemKeyboardOpen = tmp.systemKeyboardOpen;
     if (closure_0) {
       let tmp3 = systemKeyboardOpen;
@@ -74,7 +74,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = fn;
   tmp7 = fn;
   const tmp2Result = require("AppEntryKeyContext");
-}) : (() => {
+}) : (function useKeyboardIsOpen() {
   let tmp = arg0;
   if (arg0 === undefined) {
     tmp = closure_4;
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (flag === undefined) {
     flag = false;
   }
-  importDefault = flag(1487).useAppEntryKey();
+  importDefault = flag(1499).useAppEntryKey();
   return KeyboardUIStoreDefault((arg0) => {
     const systemKeyboardOpen = tmp.systemKeyboardOpen;
     if (flag) {

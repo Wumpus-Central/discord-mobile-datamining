@@ -1,9 +1,9 @@
-// === Module 17756: ExemptionActionSheet ===
+// === Module 18043: ExemptionActionSheet ===
 
-// Module 17756 (ExemptionActionSheet)
+// Module 18043 (ExemptionActionSheet)
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import fuzzysearchDefault from "fuzzysearch" /* 5709 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6099 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { search: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 }, list: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
 obj2.list = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16 };
@@ -23,7 +23,7 @@ const obj4 = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/native/components/ExemptionActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((getId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ExemptionActionSheet(getId) {
   const cResult = initialSelected(getSearchText[7]).c(39);
   ({ title, searchPlaceholder, listId, items, initialSelected } = getId);
   getId = getId.getId;
@@ -50,6 +50,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((getId) => {
       }
     }
   }
+  let num3 = 2;
   const tmp5 = renderLabel(renderIcon.useState(S), 2);
   const first = tmp5[0];
   closure_7 = tmp5[1];
@@ -64,11 +65,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((getId) => {
     }
     const _Symbol = Symbol;
     if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-      class M {
+      class D {
         constructor(arg0) {
           closure_0 = getId;
           tmp = closure_7((items) => {
-            const set = new Set(items);
+            set = new Set(items);
             if (!set.delete(closure_0)) {
               set.add(closure_0);
             }
@@ -77,13 +78,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((getId) => {
           return;
         }
       }
-      cResult[6] = M;
+      cResult[6] = D;
     } else {
-      class M {
+      class D {
         constructor(arg0) {
           closure_0 = getId;
           tmp = closure_7((items) => {
-            const set = new Set(items);
+            set = new Set(items);
             if (!set.delete(closure_0)) {
               set.add(closure_0);
             }
@@ -93,13 +94,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((getId) => {
         }
       }
     }
-    closure_10 = M;
+    closure_10 = D;
     if (cResult[7] === onSave) {
-      class M {
+      class D {
         constructor(arg0) {
           closure_0 = getId;
           tmp = closure_7((items) => {
-            const set = new Set(items);
+            set = new Set(items);
             if (!set.delete(closure_0)) {
               set.add(closure_0);
             }
@@ -109,11 +110,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((getId) => {
         }
       }
       if (cResult[10] === getId) {
-        class M {
+        class D {
           constructor(arg0) {
             closure_0 = getId;
             tmp = closure_7((items) => {
-              const set = new Set(items);
+              set = new Set(items);
               if (!set.delete(closure_0)) {
                 set.add(closure_0);
               }
@@ -123,53 +124,46 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((getId) => {
           }
         }
       }
-      const fn = function q(arg0, arg1) {
-        const tmp2 = getId(length[arg1]);
-        closure_0 = tmp2;
-        const obj = { start: 0 === arg1, end: arg1 === length.length - 1, icon: null, label: null, labelLineClamp: 1, checked: null, onPress: null };
-        let tmp4;
-        if (renderIcon != null) {
-          tmp4 = renderIcon(tmp);
+      class V {
+        constructor(arg0, arg1) {
+          tmp = items[arg1];
+          tmp2 = getId(tmp);
+          closure_0 = tmp2;
+          tmp3 = closure_6;
+          obj = { start: 0 === arg1, end: arg1 === items.length - 1, icon: null, label: null, labelLineClamp: 1, checked: null, onPress: null };
+          tmp4 = undefined;
+          if (renderIcon != null) {
+            tmp4 = renderIcon(tmp);
+          }
+          obj.icon = tmp4;
+          obj.label = renderLabel(tmp);
+          obj.checked = closure_6.has(tmp2);
+          obj.onPress = function onPress() {
+            return closure_10(closure_0);
+          };
+          return tmp3(initialSelected(getSearchText[11]).TableCheckboxRow, obj, tmp2);
         }
-        obj.icon = tmp4;
-        obj.label = renderLabel(length[arg1]);
-        obj.checked = first.has(tmp2);
-        obj.onPress = function onPress() {
-          return closure_10(closure_0);
-        };
-        return first(initialSelected(getSearchText[11]).TableCheckboxRow, obj, tmp2);
-      };
+      }
       cResult[10] = getId;
       cResult[11] = renderIcon;
-      class O {
-        constructor() {
-          obj = closure_1(closure_2[10]);
-          hideActionSheetResult = obj.hideActionSheet();
-          tmp2 = onSave(closure_6);
-          return;
-        }
-      }
+      cResult[12] = renderLabel;
       cResult[13] = first;
       cResult[14] = items;
-      cResult[15] = fn;
+      cResult[15] = V;
     }
-    class O {
-      constructor() {
-        obj = closure_1(closure_2[10]);
-        hideActionSheetResult = obj.hideActionSheet();
-        tmp2 = onSave(closure_6);
-        return;
-      }
+    function handleDone() {
+      ActionSheetActionCreatorsDefault.hideActionSheet();
+      onSave(first);
     }
     cResult[7] = onSave;
     cResult[8] = first;
-    cResult[9] = O;
+    cResult[9] = handleDone;
   } else {
-    class M {
+    class D {
       constructor(arg0) {
         closure_0 = getId;
         tmp = closure_7((items) => {
-          const set = new Set(items);
+          set = new Set(items);
           if (!set.delete(closure_0)) {
             set.add(closure_0);
           }
@@ -179,25 +173,34 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((getId) => {
       }
     }
     closure_8 = str.toLowerCase();
-    const found = items.filter((item) => {
-      const tmp = fuzzysearchDefault;
-      return tmp(closure_8, getSearchText(item).toLowerCase());
-    });
-    cResult[2] = getSearchText;
-    cResult[3] = items;
-    cResult[4] = str;
-    class O {
-      constructor() {
-        obj = closure_1(closure_2[10]);
-        hideActionSheetResult = obj.hideActionSheet();
-        tmp2 = onSave(closure_6);
-        return;
+    class V {
+      constructor(arg0, arg1) {
+        tmp = items[arg1];
+        tmp2 = getId(tmp);
+        closure_0 = tmp2;
+        tmp3 = closure_6;
+        obj = { start: 0 === arg1, end: arg1 === items.length - 1, icon: null, label: null, labelLineClamp: 1, checked: null, onPress: null };
+        tmp4 = undefined;
+        if (renderIcon != null) {
+          tmp4 = renderIcon(tmp);
+        }
+        obj.icon = tmp4;
+        obj.label = renderLabel(tmp);
+        obj.checked = closure_6.has(tmp2);
+        obj.onPress = function onPress() {
+          return closure_10(closure_0);
+        };
+        return tmp3(initialSelected(getSearchText[11]).TableCheckboxRow, obj, tmp2);
       }
     }
-    cResult[5] = found;
+    cResult[num3] = getSearchText;
+    cResult[3] = items;
+    cResult[4] = str;
+    num3 = 5;
+    cResult[5] = tmp9;
   }
   const tmp7 = renderLabel(renderIcon.useState(""), 2);
-}) : ((getSearchText) => {
+}) : (function ExemptionActionSheet(getSearchText) {
   let items = getSearchText.items;
   ({ initialSelected: importDefault, getId } = getSearchText);
   getSearchText = getSearchText.getSearchText;
@@ -227,7 +230,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((getId) => {
   const callback = renderLabel.useCallback((arg0) => {
     closure_0 = arg0;
     closure_8((items) => {
-      const set = new Set(items);
+      set = new Set(items);
       if (!set.delete(closure_0)) {
         set.add(closure_0);
       }
@@ -256,7 +259,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((getId) => {
   const obj3 = { label: null, onPress: null };
   const intl = items(getId[12]).intl;
   obj3.label = intl.string(items(getId[12]).t.i4jeWR);
-  obj3.onPress = function onPress() {
+  obj3.onPress = function handleDone() {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     onSave(first);
   };

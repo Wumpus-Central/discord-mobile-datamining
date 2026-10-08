@@ -1,14 +1,14 @@
-// === Module 15366: UserSettingsAppIcons ===
+// === Module 15628: UserSettingsAppIcons ===
 
-// Module 15366 (UserSettingsAppIcons)
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6664 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 8896 */;
-import openPremiumModalDefault from "openPremiumModal" /* 8943 */;
-import NitroUpsellButtonDefault from "NitroUpsellButton" /* 9661 */;
-import AppIconRowsDefault from "AppIconRows" /* 15367 */;
+// Module 15628 (UserSettingsAppIcons)
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6841 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9328 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9329 */;
+import NitroUpsellButtonDefault from "NitroUpsellButton" /* 9733 */;
+import AppIconRowsDefault from "AppIconRows" /* 15629 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
@@ -16,21 +16,21 @@ require = fn;
 const View = fn(17).View;
 const Constants = fn(1085);
 ({ UpsellTypes: metroRequire, AnalyticsPages: closure_7 } = Constants);
-const getIconById = fn(8858).getIconById;
+const getIconById = fn(9401).getIconById;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_12 = createStyles.createStyles({ upsellButtonContainer: { padding: 0, position: "absolute", bottom: 56, width: 350, alignSelf: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/app_icon/native/UserSettingsAppIcons.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function UserSettingsAppIcons() {
   const cResult = require("c").c(18);
   const tmp4 = closure_12();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
-    const fn = function s() {
+    const fn = function l() {
       return currentUser.getCurrentUser();
     };
     cResult[0] = items;
@@ -46,16 +46,16 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const tmpResult = require("initialize");
   const currentAppIcon = require("AppIconUtils").useCurrentAppIcon();
   if (cResult[2] !== stateFromStores) {
-    const isPremiumResult = tmp(1976).isPremium(stateFromStores);
+    const isPremiumResult = tmp(1988).isPremium(stateFromStores);
     cResult[2] = stateFromStores;
     cResult[3] = isPremiumResult;
     let tmp10 = isPremiumResult;
-    const tmpResult4 = tmp(1976);
+    const tmpResult4 = tmp(1988);
   } else {
     tmp10 = cResult[3];
   }
   dependencyMap = tmp10;
-  const analyticsLocations = currentAppIcon(6664)().analyticsLocations;
+  const analyticsLocations = currentAppIcon(6841)().analyticsLocations;
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     let obj2 = { page: constants.APP_ICONS };
     cResult[4] = obj2;
@@ -77,9 +77,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         const obj3 = { children: null };
         let obj4 = { accessibilityRole: "radiogroup", children: null };
         let obj5 = { onSelect: tmp17 };
-        obj4.children = closure_9(tmp12(15367), obj5);
+        obj4.children = closure_9(tmp12(15629), obj5);
         obj3.children = closure_9(analyticsLocation, obj4);
-        const tmp22 = closure_9(tmp(8924).Form, obj3);
+        const tmp22 = closure_9(tmp(8555).Form, obj3);
         cResult[9] = tmp17;
         cResult[10] = tmp22;
         let tmp19 = tmp22;
@@ -119,9 +119,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         };
         const intl = tmp(1126).intl;
         obj8.text = intl.string(tmp(1126).t.M0rDSO);
-        obj7.children = closure_9(tmp12(9661), obj8);
+        obj7.children = closure_9(tmp12(9733), obj8);
         tmp24 = closure_9(analyticsLocation, obj7);
-        const tmp12Result = tmp12(9661);
+        const tmp12Result = tmp12(9733);
       }
       cResult[11] = analyticsLocations;
       cResult[12] = tmp10;
@@ -163,8 +163,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                   if (tmp26) {
                     if (!c2) {
                       const obj6 = { initialUpsellKey: constants.APP_ICONS, imageSource: tmp27 };
-                      const result = currentAppIcon(8848).handleShowUpsellAlert(obj6);
-                      const obj5 = currentAppIcon(8848);
+                      const result = currentAppIcon(9208).handleShowUpsellAlert(obj6);
+                      const obj5 = currentAppIcon(9208);
                     }
                   }
                   let premiumType;
@@ -173,7 +173,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                   }
                   c2 = 1;
                   c1 = 1;
-                  const obj8 = { value: closure_0(13280).setAppIcon(id, premiumType), done: false };
+                  const obj8 = { value: closure_0(13581).setAppIcon(id, premiumType), done: false };
                   return obj8;
                 }
               } else {
@@ -183,7 +183,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                 }
                 c2 = 2;
                 c1 = 1;
-                const obj9 = { value: closure_0(13280).setAppIcon(closure_0(8859).FreemiumAppIconIds.DEFAULT, premiumType1), done: false };
+                const obj9 = { value: closure_0(13581).setAppIcon(closure_0(9402).FreemiumAppIconIds.DEFAULT, premiumType1), done: false };
                 return obj9;
               }
             }
@@ -233,7 +233,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[8] = onSelect;
   tmp17 = onSelect;
   const tmpResult3 = require("AppIconUtils");
-}) : (() => {
+}) : (function UserSettingsAppIcons() {
   const currentUser = async function _onSelect2(arg0) {
     if (v3 === 2) {
       v3 = 3;
@@ -267,8 +267,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                   if (tmp26) {
                     if (!closure_2_2) {
                       const obj6 = { initialUpsellKey: constants.APP_ICONS, imageSource: tmp27 };
-                      const result = v3(8848).handleShowUpsellAlert(obj6);
-                      const obj5 = v3(8848);
+                      const result = v3(9208).handleShowUpsellAlert(obj6);
+                      const obj5 = v3(9208);
                     }
                   }
                   let premiumType;
@@ -277,7 +277,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                   }
                   dependencyMap = 1;
                   v3 = 1;
-                  const obj8 = { value: stateFromStores(13280).setAppIcon(id, premiumType), done: false };
+                  const obj8 = { value: stateFromStores(13581).setAppIcon(id, premiumType), done: false };
                   return obj8;
                 }
               } else {
@@ -287,7 +287,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                 }
                 dependencyMap = 2;
                 v3 = 1;
-                const obj9 = { value: stateFromStores(13280).setAppIcon(stateFromStores(8859).FreemiumAppIconIds.DEFAULT, premiumType1), done: false };
+                const obj9 = { value: stateFromStores(13581).setAppIcon(stateFromStores(9402).FreemiumAppIconIds.DEFAULT, premiumType1), done: false };
                 return obj9;
               }
             }
@@ -321,9 +321,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const items = [currentUser];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj = stateFromStores(504);
-  importDefault = stateFromStores(13280).useCurrentAppIcon();
-  let obj2 = stateFromStores(13280);
-  const isPremiumResult = stateFromStores(1976).isPremium(stateFromStores);
+  importDefault = stateFromStores(13581).useCurrentAppIcon();
+  let obj2 = stateFromStores(13581);
+  const isPremiumResult = stateFromStores(1988).isPremium(stateFromStores);
   dependencyMap = isPremiumResult;
   const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
   let obj4 = { page: constants.APP_ICONS };
@@ -344,7 +344,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     })
   };
   obj5.children = closure_9(obj4, obj6);
-  const children = [closure_9(stateFromStores(8924).Form, obj5), ];
+  const children = [closure_9(stateFromStores(8555).Form, obj5), ];
   let tmp9Result = !isPremiumResult;
   if (!isPremiumResult) {
     let obj8 = { style: tmp.upsellButtonContainer, children: null };

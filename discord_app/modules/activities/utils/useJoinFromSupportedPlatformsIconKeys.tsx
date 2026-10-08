@@ -1,6 +1,6 @@
-// === Module 13096: useJoinFromSupportedPlatformsIconKeys ===
+// === Module 13374: useJoinFromSupportedPlatformsIconKeys ===
 
-// Module 13096 (useJoinFromSupportedPlatformsIconKeys)
+// Module 13374 (useJoinFromSupportedPlatformsIconKeys)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -55,7 +55,7 @@ const result = size.fileFinishedImporting("modules/activities/utils/useJoinFromS
 export { IconKey };
 export const ACTIVITY_GAME_PLATFORM_TO_ICON_KEY = { [ActivityGamePlatforms.DESKTOP]: IconKey.DESKTOP, [ActivityGamePlatforms.ANDROID]: IconKey.ANDROID, [ActivityGamePlatforms.IOS]: IconKey.IOS, [ActivityGamePlatforms.XBOX]: IconKey.XBOX, [ActivityGamePlatforms.PS4]: IconKey.PLAYSTATION, [ActivityGamePlatforms.PS5]: IconKey.PLAYSTATION, [ActivityGamePlatforms.SAMSUNG]: null, [ActivityGamePlatforms.EMBEDDED]: null, [ActivityGamePlatforms.META_QUEST]: IconKey.VR };
 export { getJoinFromSupportedPlatformsIconKeys };
-export const useJoinFromSupportedPlatformsIconKeys = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useJoinFromSupportedPlatformsIconKeys = ReactCompilerGating.isReactCompilerEnabled() ? (function useJoinFromSupportedPlatformsIconKeys(arg0) {
   const cResult = c.c(4);
   ({ platforms, currentPlatform, isGameLaunchable } = arg0);
   if (cResult[0] === currentPlatform) {
@@ -72,7 +72,7 @@ export const useJoinFromSupportedPlatformsIconKeys = ReactCompilerGating.isReact
   cResult[2] = platforms;
   cResult[3] = tmp3;
   tmp2 = tmp3;
-}) : ((platforms) => {
+}) : (function useJoinFromSupportedPlatformsIconKeys(platforms) {
   platforms = platforms.platforms;
   const currentPlatform = platforms.currentPlatform;
   const isGameLaunchable = platforms.isGameLaunchable;

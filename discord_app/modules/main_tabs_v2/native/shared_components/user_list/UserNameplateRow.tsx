@@ -1,14 +1,14 @@
-// === Module 10659: UserNameplateRow ===
+// === Module 10259: UserNameplateRow ===
 
-// Module 10659 (UserNameplateRow)
+// Module 10259 (UserNameplateRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4586 */;
-import TableRowDivider from "TableRowDivider" /* 5995 */;
-import TableRow from "TableRow" /* 6000 */;
-import TableRowGroupContext from "TableRowGroupContext" /* 6001 */;
-import Card from "Card" /* 6002 */;
-import NameplateDefault from "Nameplate" /* 8507 */;
+import useToken from "useToken" /* 4778 */;
+import TableRowDivider from "TableRowDivider" /* 6179 */;
+import TableRow from "TableRow" /* 6184 */;
+import TableRowGroupContext from "TableRowGroupContext" /* 6185 */;
+import Card from "Card" /* 6186 */;
+import NameplateDefault from "Nameplate" /* 8991 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -17,7 +17,7 @@ require = fn;
 let closure_3 = ["label", "subLabel", "icon", "trailing", "arrow", "onPress", "onPressIn", "onPressOut", "disabled", "start", "end", "labelLineClamp", "subLabelLineClamp", "variant", "draggable", "dragHandlePressableProps", "nameplate", "isPreviewRow"];
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { card: { padding: 0, paddingRight: nativeDefault.space.PX_40, overflow: "hidden" } };
 let closure_10 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -25,7 +25,7 @@ let obj3 = { padding: 0, paddingRight: nativeDefault.space.PX_40, overflow: "hid
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/UserNameplateRow.tsx");
 
-export const UserNameplateRow = ReactCompilerGating.isReactCompilerEnabled() ? ((onPressOut) => {
+export const UserNameplateRow = ReactCompilerGating.isReactCompilerEnabled() ? (function UserNameplateRow(onPressOut) {
   const cResult = c.c(57);
   if (cResult[0] !== onPressOut) {
     ({ label, subLabel, icon, trailing, arrow, onPress, onPressIn } = onPressOut);
@@ -72,14 +72,29 @@ export const UserNameplateRow = ReactCompilerGating.isReactCompilerEnabled() ? (
   }
   [tmp34, dependencyMap] = noop.useState(false);
   if (cResult[20] !== onPressIn) {
-    const fn = function k(arg0) {
-      dependencyMap(true);
-      if (closure_0 != null) {
-        tmp2(arg0);
+    class H {
+      constructor(arg0) {
+        tmp = closure_2(true);
+        if (closure_0 != null) {
+          tmp3 = onPressOut;
+          tmp2Result = tmp2(onPressOut);
+        }
+        return;
       }
-    };
+    }
     cResult[20] = onPressIn;
-    cResult[21] = fn;
+    cResult[21] = H;
+  } else {
+    class H {
+      constructor(arg0) {
+        tmp = closure_2(true);
+        if (closure_0 != null) {
+          tmp3 = onPressOut;
+          tmp2Result = tmp2(onPressOut);
+        }
+        return;
+      }
+    }
   }
   if (cResult[22] !== tmp15) {
     class Q {
@@ -126,7 +141,7 @@ export const UserNameplateRow = ReactCompilerGating.isReactCompilerEnabled() ? (
   cResult[26] = tmp12;
   cResult[27] = React5(NameplateDefault, { nameplate: tmp12, isPressed: tmp34, invertPressOpacity: true, fullOpacity: undefined !== tmp21 && tmp21, animate: undefined !== tmp21 && tmp21 });
   const tmp39 = React5(NameplateDefault, { nameplate: tmp12, isPressed: tmp34, invertPressOpacity: true, fullOpacity: undefined !== tmp21 && tmp21, animate: undefined !== tmp21 && tmp21 });
-}) : ((onPressOut) => {
+}) : (function UserNameplateRow(onPressOut) {
   ({ icon, onPressIn } = onPressOut);
   onPressOut = onPressOut.onPressOut;
   let flag = onPressOut.disabled;

@@ -1,18 +1,18 @@
-// === Module 7273: ReactionActionCreators ===
+// === Module 7872: ReactionActionCreators ===
 
-// Module 7273 (ReactionActionCreators)
+// Module 7872 (ReactionActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
 import util from "util" /* 1126 */;
-import EmojiUtils from "EmojiUtils" /* 4533 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5714 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 7272 */;
-import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7274 */;
+import EmojiUtils from "EmojiUtils" /* 4725 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5297 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7873 */;
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7874 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import MessageStore from "MessageStore" /* 5116 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import MessageStore from "MessageStore" /* 5428 */;
 
 require = fn;
 function checkReactionResponse(arg0, fn, isRetry) {
@@ -89,11 +89,11 @@ function makeURL(type) {
     name = emoji.name;
   }
   if (null == userId) {
-    let REACTIONSResult = v65535.REACTIONS(channelId, messageId, name);
+    let REACTIONSResult = collapsed.REACTIONS(channelId, messageId, name);
   } else if (useTypeEndpoint) {
-    REACTIONSResult = v65535.REACTION_WITH_TYPE(channelId, messageId, name, userId, NORMAL);
+    REACTIONSResult = collapsed.REACTION_WITH_TYPE(channelId, messageId, name, userId, NORMAL);
   } else {
-    REACTIONSResult = v65535.REACTION(channelId, messageId, name, userId);
+    REACTIONSResult = collapsed.REACTION(channelId, messageId, name, userId);
   }
   return REACTIONSResult;
 }
@@ -786,7 +786,7 @@ let closure_23 = async function _removeReaction(arg0) {
                   if (burst != null) {
                     burst = burst.burst;
                   }
-                  const AccessibilityAnnouncer = channelId(4735).AccessibilityAnnouncer;
+                  const AccessibilityAnnouncer = channelId(4929).AccessibilityAnnouncer;
                   intl = channelId(1126).intl;
                   if (!burst) {
                     const obj6 = { name: tmp2.name };

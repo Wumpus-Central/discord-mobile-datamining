@@ -1,7 +1,7 @@
-// === Module 7905: useProfileFrameLayerAsset ===
+// === Module 8324: useProfileFrameLayerAsset ===
 
-// Module 7905 (useProfileFrameLayerAsset)
-import CollectiblesAssetUtils from "CollectiblesAssetUtils" /* 1974 */;
+// Module 8324 (useProfileFrameLayerAsset)
+import CollectiblesAssetUtils from "CollectiblesAssetUtils" /* 1986 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -85,14 +85,14 @@ let closure_16 = async function _preloadLayer(arg0) {
 };
 get_ActivityIndicator = fn(17);
 ({ Image: metroRequire, PixelRatio: closure_7 } = get_ActivityIndicator);
-const UserProfileThemeTypes = fn(6714).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(6891).UserProfileThemeTypes;
 const map = new Map();
 const map1 = new Map();
 const set = new Set();
 const set1 = new Set();
 fn(558);
 const ReactCompilerGating = fn(558);
-let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useProfileFrameLayerAsset(arg0) {
   const cResult = require("c").c(16);
   ({ skuId, layer, width } = arg0);
   if (cResult[0] === layer) {
@@ -257,12 +257,12 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = collectiblesItemAssetUrl;
   tmp4 = collectiblesItemAssetUrl;
   const obj3 = { skuId, assetFormat: require("CollectiblesAssetUtils").CollectiblesItemAssetFormat.STATIC, assetId: layer.id };
-}) : ((width) => {
+}) : (function useProfileFrameLayerAsset(width) {
   width = width.width;
   let collectiblesItemAssetUrl;
   ({ skuId, layer } = width);
-  const obj = collectiblesItemAssetUrl(1974);
-  collectiblesItemAssetUrl = obj.getCollectiblesItemAssetUrl({ skuId, assetFormat: collectiblesItemAssetUrl(1974).CollectiblesItemAssetFormat.STATIC, assetId: layer.id });
+  const obj = collectiblesItemAssetUrl(1986);
+  collectiblesItemAssetUrl = obj.getCollectiblesItemAssetUrl({ skuId, assetFormat: collectiblesItemAssetUrl(1986).CollectiblesItemAssetFormat.STATIC, assetId: layer.id });
   closure_1 = _slicedToArray(noop.useReducer((arg0) => arg0 + 1, 0), 2)[1];
   const items = [collectiblesItemAssetUrl];
   const effect = noop.useEffect(() => {
@@ -354,7 +354,7 @@ let result = size.fileFinishedImporting("modules/collectibles/profile_frames/nat
 
 export default tmp7;
 export { isProfileFrameLayerShown };
-export const usePreloadLayerImages = ReactCompilerGating.isReactCompilerEnabled() ? ((frame) => {
+export const usePreloadLayerImages = ReactCompilerGating.isReactCompilerEnabled() ? (function usePreloadLayerImages(frame) {
   const cResult = frame(skuId[7]).c(27);
   frame = frame.frame;
   ({ containerWidth, profileThemeType } = frame);
@@ -621,7 +621,7 @@ export const usePreloadLayerImages = ReactCompilerGating.isReactCompilerEnabled(
     cResult[14] = num14;
     tmp12 = num14;
   }
-}) : ((frame) => {
+}) : (function usePreloadLayerImages(frame) {
   frame = frame.frame;
   ({ containerWidth, profileThemeType } = frame);
   const filterLayer = frame.filterLayer;

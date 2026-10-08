@@ -1,6 +1,6 @@
-// === Module 17193: useScreenNameSharedValue ===
+// === Module 17474: useScreenNameSharedValue ===
 
-// Module 17193 (useScreenNameSharedValue)
+// Module 17474 (useScreenNameSharedValue)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -9,11 +9,11 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/panels/morphable/native/useScreenNameSharedValue.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useScreenNameSharedValue() {
   const cResult = sharedValue(576).c(3);
   let obj = sharedValue(576);
-  let rootNavigationRef = sharedValue(4743).getRootNavigationRef();
-  const obj2 = sharedValue(4743);
+  let rootNavigationRef = sharedValue(4937).getRootNavigationRef();
+  const obj2 = sharedValue(4937);
   let isReadyResult;
   if (rootNavigationRef != null) {
     isReadyResult = rootNavigationRef.isReady();
@@ -31,7 +31,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     tmp3 = unknown;
   }
-  sharedValue = sharedValue(4618).useSharedValue(tmp3);
+  sharedValue = sharedValue(4810).useSharedValue(tmp3);
   if (cResult[0] !== sharedValue) {
     const fn = function u() {
       const rootNavigationRef = sharedValue(dependencyMap[3]).getRootNavigationRef();
@@ -70,9 +70,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   const effect = noop.useEffect(tmp7, tmp8);
   return sharedValue;
-}) : (() => {
-  let rootNavigationRef = sharedValue(4743).getRootNavigationRef();
-  let obj = sharedValue(4743);
+}) : (function useScreenNameSharedValue() {
+  let rootNavigationRef = sharedValue(4937).getRootNavigationRef();
+  let obj = sharedValue(4937);
   let isReadyResult;
   if (rootNavigationRef != null) {
     isReadyResult = rootNavigationRef.isReady();
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     tmp2 = unknown;
   }
-  sharedValue = sharedValue(4618).useSharedValue(tmp2);
+  sharedValue = sharedValue(4810).useSharedValue(tmp2);
   const items = [sharedValue];
   const effect = noop.useEffect(() => {
     function handleStateChange() {

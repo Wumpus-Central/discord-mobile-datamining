@@ -1,7 +1,7 @@
-// === Module 16434: createICYMIStyles ===
+// === Module 16694: createICYMIStyles ===
 
-// Module 16434 (createICYMIStyles)
-import ICYMIContext from "ICYMIContext" /* 16435 */;
+// Module 16694 (createICYMIStyles)
+import ICYMIContext from "ICYMIContext" /* 16695 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/icymi/native/createICYMIStyle
 
 export const createICYMIStyles = function createICYMIStyles(rect) {
   _require = require("createStyles").createStyles(rect);
-  return () => {
+  return function useStyles() {
     const items = [...arguments];
     const useContext = noop.useContext;
     const items1 = [useContext(ICYMIContext.ICYMIContext), ...items];

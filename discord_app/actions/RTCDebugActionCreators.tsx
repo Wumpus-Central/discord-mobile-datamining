@@ -1,12 +1,10 @@
-// === Module 9736: RTCDebugActionCreators ===
+// === Module 5134: RTCDebugActionCreators ===
 
-// Module 9736 (RTCDebugActionCreators)
+// Module 5134 (RTCDebugActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import DiscordNativeDefault from "DiscordNative" /* 4496 */;
-import trackVoiceAndVideoSettingsUpdateDefault from "trackVoiceAndVideoSettingsUpdate" /* 8084 */;
-import RTCDebugStore from "RTCDebugStore" /* 9735 */;
+import DiscordNativeDefault from "DiscordNative" /* 4688 */;
+import size from "module_2" /* 2 */;
 
-const size = fn(2);
 const result = size.fileFinishedImporting("actions/RTCDebugActionCreators.tsx");
 
 export const open = function open(section) {
@@ -22,10 +20,6 @@ export const openReplay = function openReplay() {
 };
 export const setSection = function setSection(section) {
   DispatcherDefault.dispatch({ type: "RTC_DEBUG_MODAL_SET_SECTION", section });
-};
-export const setShouldRecordNextConnection = function setShouldRecordNextConnection(value) {
-  trackVoiceAndVideoSettingsUpdateDefault("connection_replay_log_enabled", value, RTCDebugStore.shouldRecordNextConnection());
-  DispatcherDefault.dispatch({ type: "RTC_DEBUG_SET_RECORDING_FLAG", value });
 };
 export const setSimulcastDebugOverride = function setSimulcastDebugOverride(userId, context, quality) {
   DispatcherDefault.dispatch({ type: "RTC_DEBUG_SET_SIMULCAST_OVERRIDE", userId, context, quality });

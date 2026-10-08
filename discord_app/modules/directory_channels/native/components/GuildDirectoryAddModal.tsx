@@ -1,16 +1,16 @@
-// === Module 11951: GuildDirectoryAddModal ===
+// === Module 12024: GuildDirectoryAddModal ===
 
-// Module 11951 (GuildDirectoryAddModal)
+// Module 12024 (GuildDirectoryAddModal)
 import c from "c" /* 576 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
-import useInitialValueDefault from "useInitialValue" /* 5991 */;
-import NavigatorHeader from "NavigatorHeader" /* 6017 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6626 */;
-import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 11950 */;
-import GuildDirectoryCreateOrAddDefault from "GuildDirectoryCreateOrAdd" /* 11953 */;
-import GuildDirectoryCreateOrAddDescriptionDefault from "GuildDirectoryCreateOrAddDescription" /* 11961 */;
-import GuildDirectoryTemplatesDefault from "GuildDirectoryTemplates" /* 11965 */;
-import CreateGuildContainerDefault from "CreateGuildContainer" /* 11975 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1272 */;
+import useInitialValueDefault from "useInitialValue" /* 6174 */;
+import NavigatorHeader from "NavigatorHeader" /* 6203 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6803 */;
+import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 12023 */;
+import GuildDirectoryCreateOrAddDefault from "GuildDirectoryCreateOrAdd" /* 12026 */;
+import GuildDirectoryCreateOrAddDescriptionDefault from "GuildDirectoryCreateOrAddDescription" /* 12034 */;
+import GuildDirectoryTemplatesDefault from "GuildDirectoryTemplates" /* 12038 */;
+import CreateGuildContainerDefault from "CreateGuildContainer" /* 12048 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -88,15 +88,15 @@ function getScreens() {
   };
   return obj;
 }
-const GuildDirectoryCreate = fn(11952).GuildDirectoryCreate;
+const GuildDirectoryCreate = fn(12025).GuildDirectoryCreate;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
-let obj2 = { safeArea: { marginTop: fn(6075).NAV_BAR_HEIGHT, flex: 1 } };
+const createStyles = fn(5090);
+let obj2 = { safeArea: { marginTop: fn(6261).NAV_BAR_HEIGHT, flex: 1 } };
 let closure_5 = createStyles.createStyles(obj2);
 fn(558);
-let obj3 = { marginTop: fn(6075).NAV_BAR_HEIGHT, flex: 1 };
+let obj3 = { marginTop: fn(6261).NAV_BAR_HEIGHT, flex: 1 };
 const ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildDirectoryAddModalScreen(children) {
   const cResult = c.c(3);
   children = children.children;
   const tmp4 = closure_5();
@@ -112,18 +112,18 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
   cResult[2] = tmp6;
   tmp5 = tmp6;
   const obj2 = { top: true, style: tmp4.safeArea, children };
-}) : ((children) => {
+}) : (function GuildDirectoryAddModalScreen(children) {
   const tmp = closure_5();
   return jsx(common_SafeAreaView.SafeAreaPaddingView, { top: true, style: closure_5().safeArea, children: children.children });
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryAddModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildDirectoryAddModal(arg0) {
   _require = arg0;
   const cResult = require("c").c(6);
   if (cResult[0] !== arg0) {
-    const fn = function l() {
+    const fn = function s() {
       const obj = { name: GuildDirectoryCreate.CREATE_OR_ADD, params: null };
       const merged = Object.assign(closure_0);
       obj.params = {};
@@ -158,7 +158,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = tmp9;
   tmp8 = tmp9;
   const tmp5 = useInitialValueDefault(tmp4);
-}) : ((arg0) => {
+}) : (function GuildDirectoryAddModal(arg0) {
   _require = arg0;
   ({ screens, initialStack } = useInitialValueDefault(() => {
     const obj = { name: GuildDirectoryCreate.CREATE_OR_ADD, params: null };

@@ -1,18 +1,18 @@
-// === Module 13264: useReferralIncentiveEligibility ===
+// === Module 13565: useReferralIncentiveEligibility ===
 
-// Module 13264 (useReferralIncentiveEligibility)
+// Module 13565 (useReferralIncentiveEligibility)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferralProgram" /* 7738 */;
-import PremiumReferralIncentivesExperiment from "PremiumReferralIncentivesExperiment" /* 13262 */;
-import SubscriptionStore from "SubscriptionStore" /* 4540 */;
+import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferralProgram" /* 8059 */;
+import PremiumReferralIncentivesExperiment from "PremiumReferralIncentivesExperiment" /* 13562 */;
+import SubscriptionStore from "SubscriptionStore" /* 4732 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/referral_program/hooks/useReferralIncentiveEligibility.tsx");
 
-export const useReferralIncentiveEligibility = ReactCompilerGating.isReactCompilerEnabled() ? ((preventFetch) => {
+export const useReferralIncentiveEligibility = ReactCompilerGating.isReactCompilerEnabled() ? (function useReferralIncentiveEligibility(preventFetch) {
   const cResult = c.c(6);
   preventFetch = preventFetch.preventFetch;
   let tmp4 = undefined === preventFetch;
@@ -71,7 +71,7 @@ export const useReferralIncentiveEligibility = ReactCompilerGating.isReactCompil
   tmp11 = null != stateFromStores && !stateFromStores.isPurchasedExternally;
   tmp12 = null != stateFromStores && stateFromStores.hasPremiumNitroMonthly;
   const tmpResult4 = initialize;
-}) : ((preventFetch) => {
+}) : (function useReferralIncentiveEligibility(preventFetch) {
   let flag = preventFetch.preventFetch;
   if (flag === undefined) {
     flag = true;

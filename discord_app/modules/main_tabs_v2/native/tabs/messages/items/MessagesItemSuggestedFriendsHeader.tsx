@@ -1,13 +1,13 @@
-// === Module 16060: MessagesItemSuggestedFriendsHeader ===
+// === Module 16320: MessagesItemSuggestedFriendsHeader ===
 
-// Module 16060 (MessagesItemSuggestedFriendsHeader)
+// Module 16320 (MessagesItemSuggestedFriendsHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import ThemedGradientDefault from "ThemedGradient" /* 5918 */;
-import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 7952 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8370 */;
+import ThemedGradientDefault from "ThemedGradient" /* 10211 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,8 +15,8 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const sum = fn(4892).TextStyleSheet["text-md/semibold"].lineHeight + nativeDefault.space.PX_24;
-const createStyles = fn(4896);
+const sum = fn(5086).TextStyleSheet["text-md/semibold"].lineHeight + nativeDefault.space.PX_24;
+const createStyles = fn(5090);
 let obj = { headerContainer: { height: sum, justifyContent: "center", overflow: "hidden" }, stickyOverlay: null, headerText: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -31,13 +31,13 @@ let obj4 = { marginHorizontal: nativeDefault.space.PX_16 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/MessagesItemSuggestedFriendsHeader.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((stickyAt) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesItemSuggestedFriendsHeader(stickyAt) {
   const cResult = c.c(14);
   stickyAt = stickyAt.stickyAt;
   const scrollPosition = stickyAt.scrollPosition;
   ({ stickyLeft, stickyTop } = stickyAt);
   const tmp4 = closure_8();
-  const fn = function l() {
+  const fn = function s() {
     let tmp2 = null != stickyAt;
     if (tmp2) {
       tmp2 = scrollPosition.get() >= tmp;
@@ -116,7 +116,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((sticky
   cResult[1] = -stickyTop;
   cResult[2] = rect;
   tmp10 = rect;
-}) : ((stickyAt) => {
+}) : (function MessagesItemSuggestedFriendsHeader(stickyAt) {
   stickyAt = stickyAt.stickyAt;
   const scrollPosition = stickyAt.scrollPosition;
   const stickyLeft = stickyAt.stickyLeft;

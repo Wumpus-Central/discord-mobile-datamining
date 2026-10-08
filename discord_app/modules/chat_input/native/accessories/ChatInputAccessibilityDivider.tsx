@@ -1,9 +1,9 @@
-// === Module 11906: ChatInputAccessibilityDivider ===
+// === Module 11979: ChatInputAccessibilityDivider ===
 
-// Module 11906 (ChatInputAccessibilityDivider)
+// Module 11979 (ChatInputAccessibilityDivider)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat_input/native/accessories/ChatInputAccessibilityDivider.tsx");
 
-export const ChatInputAccessibilityDivider = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const ChatInputAccessibilityDivider = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ChatInputAccessibilityDivider() {
   const cResult = c.c(2);
   let tmp4 = null;
   if (obj2.useIsScreenReaderEnabled()) {
@@ -44,7 +44,7 @@ export const ChatInputAccessibilityDivider = noop.memo(ReactCompilerGating.isRea
     tmpResult = PlatformUtils;
   }
   return tmp4;
-}) : (() => {
+}) : (function ChatInputAccessibilityDivider() {
   let tmp3 = null;
   if (obj.useIsScreenReaderEnabled()) {
     tmp3 = null;

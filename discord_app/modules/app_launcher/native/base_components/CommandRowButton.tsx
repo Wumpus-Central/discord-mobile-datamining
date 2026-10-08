@@ -1,22 +1,22 @@
-// === Module 11743: CommandRowButton ===
+// === Module 11809: CommandRowButton ===
 
-// Module 11743 (CommandRowButton)
+// Module 11809 (CommandRowButton)
 import c from "c" /* 576 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const util = TableRowArrow(1126);
-const SendMessageIcon = TableRowArrow(4847);
-const components_Button_Button = TableRowArrow(5601);
-const TableRowArrow2 = TableRowArrow(6007);
+const SendMessageIcon = TableRowArrow(5041);
+const components_Button_Button = TableRowArrow(5375);
+const TableRowArrow2 = TableRowArrow(6193);
 require = fn;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/base_components/CommandRowButton.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function CommandRowIcon(arg0) {
   let TableRowArrow = require;
   const cResult = c.c(4);
   ({ hasOptions, sending, onPressSend } = arg0);
@@ -44,7 +44,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = onPressSend;
   cResult[2] = sending;
   cResult[3] = tmp2Result;
-}) : ((hasOptions) => {
+}) : (function CommandRowIcon(hasOptions) {
   if (hasOptions.hasOptions) {
     let tmp3Result = jsx(TableRowArrow2.TableRowArrow, {});
   } else {
@@ -106,11 +106,11 @@ export const useCommandRowSend = function useCommandRowSend(command) {
             }
             c3 = 1;
             const obj6 = { command, optionValues: null, context: null, sectionName: null, commandOrigin: null };
-            const obj2 = tmp3(8826);
-            obj6.optionValues = tmp3(11621).parseOptionValuesForSend(commandContext.channel, command, {});
+            const obj2 = tmp3(9185);
+            obj6.optionValues = tmp3(11685).parseOptionValuesForSend(commandContext.channel, command, {});
             obj6.context = commandContext;
             obj6.sectionName = sectionName;
-            obj6.commandOrigin = tmp3(7047).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW;
+            obj6.commandOrigin = tmp3(7235).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW;
             dependencyMap = 2;
             c4 = 1;
             const obj7 = { value: obj2.executeAppLauncherCommand(obj6), done: false };

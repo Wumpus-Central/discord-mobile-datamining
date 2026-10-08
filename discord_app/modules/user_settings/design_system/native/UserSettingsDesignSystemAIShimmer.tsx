@@ -1,12 +1,12 @@
-// === Module 15708: UserSettingsDesignSystemAIShimmer ===
+// === Module 15988: UserSettingsDesignSystemAIShimmer ===
 
-// Module 15708 (UserSettingsDesignSystemAIShimmer)
+// Module 15988 (UserSettingsDesignSystemAIShimmer)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Stack_Stack from "Stack/Stack" /* 5600 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import Card from "Card" /* 6002 */;
-import AIShimmer from "AIShimmer" /* 14231 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import Stack_Stack from "Stack/Stack" /* 5373 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import Card from "Card" /* 6186 */;
+import AIShimmer from "AIShimmer" /* 14055 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,13 +15,13 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles({ container: { padding: 16 }, buttonRow: { flexDirection: "row", flexWrap: "wrap", gap: 8 }, stage: { minHeight: 28, justifyContent: "center" } });
 const text = ["Reading the channel", "Finding the highlights", "Writing it up"];
 const options = ["text-xs/normal", "text-sm/normal", "text-md/normal", "text-lg/semibold"];
 const options2 = ["text-default", "text-subtle"];
 let ReactCompilerGating = fn(558);
-let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((onChange) => {
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Picker(onChange) {
   const cResult = require("c").c(10);
   ({ options, value } = onChange);
   require = value;
@@ -75,7 +75,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((onChange) => {
   cResult[6] = fn;
   tmp5 = fn;
   const obj = require("c");
-}) : ((arg0) => {
+}) : (function Picker(arg0) {
   ({ options, value: require, onChange: dependencyMap } = arg0);
   return closure_6(closure_5, {
     style: closure_8().buttonRow,
@@ -97,7 +97,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((onChange) => {
   });
 });
 ReactCompilerGating = fn(558);
-let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
+let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Stage(children) {
   const cResult = c.c(3);
   children = children.children;
   const tmp2 = closure_8();
@@ -112,12 +112,14 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
   cResult[1] = tmp2.stage;
   cResult[2] = tmp4;
   tmp3 = tmp4;
-}) : ((children) => timestampProducer(hasOwnProperty, { style: closure_8().stage, children: children.children }));
+}) : (function Stage(children) {
+  return timestampProducer(hasOwnProperty, { style: closure_8().stage, children: children.children });
+});
 ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemAIShimmer.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSettingsDesignSystemAIShimmer() {
   const cResult = c.c(40);
   const tmp4 = closure_8();
   const tmp6 = _slicedToArray(noop.useState("text-md/normal"), 2);
@@ -363,7 +365,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[8] = tmp28;
   tmp27 = tmp28;
   ref = noop.useRef(null);
-}) : (() => {
+}) : (function UserSettingsDesignSystemAIShimmer() {
   const tmp = closure_8();
   const ref = noop.useRef(null);
   const tmp3 = _slicedToArray(noop.useState("text-md/normal"), 2);

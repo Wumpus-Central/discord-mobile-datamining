@@ -1,18 +1,18 @@
-// === Module 11836: PortalKeyboardBottomSheet ===
+// === Module 11921: PortalKeyboardBottomSheet ===
 
-// Module 11836 (PortalKeyboardBottomSheet)
+// Module 11921 (PortalKeyboardBottomSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1881 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import HapticUtils from "HapticUtils" /* 4861 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5777 */;
-import BottomSheetModal from "BottomSheetModal" /* 6119 */;
-import native from "native" /* 8602 */;
-import isChannelFocused from "isChannelFocused" /* 11839 */;
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1893 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import HapticUtils from "HapticUtils" /* 5055 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5360 */;
+import isChannelFocused from "isChannelFocused" /* 6077 */;
+import BottomSheetModal from "BottomSheetModal" /* 6298 */;
+import native from "native" /* 8517 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import NativeMenuStore from "NativeMenuStore" /* 9625 */;
+import NativeMenuStore from "NativeMenuStore" /* 9645 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 
@@ -21,18 +21,18 @@ get_ActivityIndicator = fn(17);
 ({ Platform, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const PlatformUtils = fn(1369);
+const PlatformUtils = fn(1381);
 let closure_9 = PlatformUtils.isIOS();
-const createStyles = fn(4896);
-let obj = { container: { position: "absolute", top: 0, left: 0 }, background: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, overflow: "hidden" }, headerContainer: null, headerContainerScreenReaderEnabled: null, roundingView: null };
-let size = { borderTopLeftRadius: nativeDefault.radii.none, borderTopRightRadius: nativeDefault.radii.none, width: "100%", height: fn(8602).ACTION_SHEET_DRAG_HANDLE_HEIGHT, marginBottom: -fn(8602).ACTION_SHEET_DRAG_HANDLE_HEIGHT };
-obj.headerContainer = size;
+const createStyles = fn(5090);
+let obj3 = { container: { position: "absolute", top: 0, left: 0 }, background: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, overflow: "hidden" }, headerContainer: null, headerContainerScreenReaderEnabled: null, roundingView: null };
+let size = { borderTopLeftRadius: nativeDefault.radii.none, borderTopRightRadius: nativeDefault.radii.none, width: "100%", height: fn(8517).ACTION_SHEET_DRAG_HANDLE_HEIGHT, marginBottom: -fn(8517).ACTION_SHEET_DRAG_HANDLE_HEIGHT };
+obj3.headerContainer = size;
 let obj4 = { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, overflow: "hidden" };
-obj.headerContainerScreenReaderEnabled = { marginBottom: -nativeDefault.space.PX_8 };
-obj.roundingView = { overflow: "hidden", display: "flex" };
-let closure_10 = createStyles.createStyles(obj);
+obj3.headerContainerScreenReaderEnabled = { marginBottom: -nativeDefault.space.PX_8 };
+obj3.roundingView = { overflow: "hidden", display: "flex" };
+let closure_10 = createStyles.createStyles(obj3);
 let ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function PortalKeyboardBottomSheetHeader(arg0) {
   const cResult = c.c(9);
   ({ style, handleCollapse } = arg0);
   const tmp4 = closure_10();
@@ -75,7 +75,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = items;
   tmp6 = items;
   obj2 = useIsScreenReaderEnabled;
-}) : ((arg0) => {
+}) : (function PortalKeyboardBottomSheetHeader(arg0) {
   ({ style, handleCollapse } = arg0);
   const tmp = closure_10();
   const items = [tmp.headerContainer, , ];
@@ -89,7 +89,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return React5(hasOwnProperty, { style: items, children: React5(native.ActionSheetDragHandle, { onPress: handleCollapse }) });
 });
 ReactCompilerGating = fn(558);
-let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function PortalKeyboardBackground(arg0) {
   const cResult = c.c(7);
   ({ pointerEvents, style, roundingStyle } = arg0);
   const tmp3 = closure_10();
@@ -118,7 +118,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = tmp3.background;
   cResult[3] = items;
   tmp4 = items;
-}) : ((arg0) => {
+}) : (function PortalKeyboardBackground(arg0) {
   ({ pointerEvents, style, roundingStyle } = arg0);
   const obj = { pointerEvents, style: null };
   const items = [style, closure_10().background, roundingStyle];
@@ -142,7 +142,7 @@ let obj5 = { marginBottom: -nativeDefault.space.PX_8 };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/keyboard/native/PortalKeyboardBottomSheet.tsx");
 
-export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((animatedIndex, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function PortalKeyboardBottomSheet(animatedIndex) {
   const cResult = animatedIndex(onClose[10]).c(82);
   animatedIndex = animatedIndex.animatedIndex;
   ({ animatedPosition, chatInputRef } = animatedIndex);
@@ -151,6 +151,7 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
   ({ disableHeaderRoundingAnimation, roundingViewStyle, onAnimate } = animatedIndex);
   ({ rendersHandle, width, forceMaxHeight, enablePanDownToClose, renderExpressionFooter } = animatedIndex);
   let tmp4 = undefined !== isAppsKeyboard;
+  ({ transitionState, ref } = animatedIndex);
   if (tmp4) {
     tmp4 = isAppsKeyboard;
   }
@@ -158,16 +159,16 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
   const open = undefined === rendersHandle || rendersHandle;
   closure_7 = tmp5;
   closure_10();
-  ref = onAnimate.useRef(null);
+  const ref1 = onAnimate.useRef(null);
   if (cResult[0] === (undefined !== enablePanDownToClose && enablePanDownToClose)) {
     if (cResult[1] === tmp5) {
       let tmp9 = cResult[2];
     }
-    const tmp12 = chatInputRef(onClose[13])(tmp9);
-    const tmp13 = animatedIndex.transitionState === tmp(onClose[14]).TransitionStates.YEETED;
-    closure_9 = tmp13;
-    const bottomSheetImperativeHandle = tmp(onClose[15]).useBottomSheetImperativeHandle(arg1, ref);
-    if (cResult[3] !== tmp13) {
+    const tmp11 = chatInputRef(onClose[13])(tmp9);
+    const tmp12 = transitionState === tmp(onClose[14]).TransitionStates.YEETED;
+    closure_9 = tmp12;
+    const bottomSheetImperativeHandle = tmp(onClose[15]).useBottomSheetImperativeHandle(ref, ref1);
+    if (cResult[3] !== tmp12) {
       class W {
         constructor() {
           if (closure_9) {
@@ -181,11 +182,11 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
           return;
         }
       }
-      let items = [ref, tmp13];
-      cResult[3] = tmp13;
+      let items = [ref1, tmp12];
+      cResult[3] = tmp12;
       cResult[4] = W;
       cResult[5] = items;
-      let tmp16 = items;
+      let tmp15 = items;
     } else {
       class W {
         constructor() {
@@ -200,9 +201,9 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
           return;
         }
       }
-      tmp16 = cResult[5];
+      tmp15 = cResult[5];
     }
-    const layoutEffect = onAnimate.useLayoutEffect(W, tmp16);
+    const layoutEffect = onAnimate.useLayoutEffect(W, tmp15);
     if (cResult[6] === animatedIndex) {
       class W {
         constructor() {
@@ -218,12 +219,12 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
         }
       }
     }
-    const obj3 = { animatedIndex, bottomSheetRef: ref, containerHeight: tmp12.containerHeight, forceMaxHeight: tmp5, isYeeted: tmp13, snapPoints: tmp12.snapPoints };
+    const obj3 = { animatedIndex, bottomSheetRef: ref1, containerHeight: tmp11.containerHeight, forceMaxHeight: tmp5, isYeeted: tmp12, snapPoints: tmp11.snapPoints };
     cResult[6] = animatedIndex;
-    cResult[7] = tmp12.containerHeight;
-    cResult[8] = tmp12.snapPoints;
+    cResult[7] = tmp11.containerHeight;
+    cResult[8] = tmp11.snapPoints;
     cResult[9] = tmp5;
-    cResult[10] = tmp13;
+    cResult[10] = tmp12;
     cResult[11] = obj3;
     const tmpResult = tmp(onClose[15]);
   }
@@ -233,7 +234,7 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
   cResult[2] = obj4;
   tmp9 = obj4;
   let obj = animatedIndex(onClose[10]);
-}) : ((animatedIndex, arg1) => {
+}) : (function PortalKeyboardBottomSheet(animatedIndex) {
   animatedIndex = animatedIndex.animatedIndex;
   const chatInputRef = animatedIndex.chatInputRef;
   let flag = animatedIndex.isAppsKeyboard;
@@ -270,7 +271,7 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
   const tmp5 = chatInputRef(flag[13])({ forceMaxHeight, enablePanDownToClose: flag2 });
   const tmp7 = transitionState === animatedIndex(flag[14]).TransitionStates.YEETED;
   closure_9 = tmp7;
-  const bottomSheetImperativeHandle = animatedIndex(flag[15]).useBottomSheetImperativeHandle(arg1, ref);
+  const bottomSheetImperativeHandle = animatedIndex(flag[15]).useBottomSheetImperativeHandle(animatedIndex.ref, ref);
   let items = [ref, tmp7];
   const layoutEffect = headerStyle.useLayoutEffect(() => {
     if (closure_9) {
@@ -439,12 +440,12 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
   const tmp26 = onClose(headerStyle.useState(false), 2);
   closure_14 = tmp27;
   const tmp24 = chatInputRef(flag[25])({ ignoreKeyboard: true });
-  function ne() {
+  function te() {
     return Math.max(animatedIndex.get(), 0) > 0;
   }
-  ne.__closure = { animatedIndex };
-  ne.__workletHash = 3058608499945;
-  ne.__initData = __initData5;
+  te.__closure = { animatedIndex };
+  te.__workletHash = 3058608499945;
+  te.__initData = __initData5;
   function ee(arg0, arg1) {
     if (arg0 !== arg1) {
       ReanimatedRexport.runOnJS(closure_14)(arg0);
@@ -454,7 +455,7 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
   ee.__closure = { runOnJS: animatedIndex(flag[12]).runOnJS, setAccessibilityViewIsModal: tmp26[1] };
   ee.__workletHash = 15997614745643;
   ee.__initData = __initData6;
-  const animatedReaction1 = tmp6Result11.useAnimatedReaction(ne, ee);
+  const animatedReaction1 = tmp6Result11.useAnimatedReaction(te, ee);
   let tmp29 = isScreenReaderEnabled;
   if (!isScreenReaderEnabled) {
     tmp29 = tmp7;
@@ -508,7 +509,7 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
   obj10.children = forceMaxHeight(animatedIndex(flag[28]).AccessibilityViewAnimated, {
     nativeID: "portal-keyboard-sheet",
     style: items6,
-    onAccessibilityEscape() {
+    onAccessibilityEscape: function handleClose() {
       const current = ref.current;
       if (current != null) {
         current.collapse();
@@ -531,4 +532,4 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
   obj9.children = items7;
   obj8.children = tmp32(chatInputRef(flag[12]).View, obj9);
   return forceMaxHeight(animatedIndex(flag[14]).ThemeContextProvider, obj8);
-}));
+});

@@ -1,7 +1,7 @@
-// === Module 8795: useAccountLinkStepTracking ===
+// === Module 9164: useAccountLinkStepTracking ===
 
-// Module 8795 (useAccountLinkStepTracking)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+// Module 9164 (useAccountLinkStepTracking)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/useAccountLinkStepTracking.tsx");
 
-export const useAccountLinkStepTracking = ReactCompilerGating.isReactCompilerEnabled() ? ((platform_type, location_stack) => {
+export const useAccountLinkStepTracking = ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountLinkStepTracking(platform_type, location_stack) {
   _require = platform_type;
   const cResult = require("c").c(7);
   dependencyMap = noop.useRef(null);
@@ -69,7 +69,7 @@ export const useAccountLinkStepTracking = ReactCompilerGating.isReactCompilerEna
   cResult[2] = fn;
   tmp2 = fn;
   let obj = require("c");
-}) : ((platform_type, location_stack) => {
+}) : (function useAccountLinkStepTracking(platform_type, location_stack) {
   noop.useRef(null);
   let items = [location_stack, platform_type];
   const items1 = [location_stack, platform_type];

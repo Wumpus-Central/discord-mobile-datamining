@@ -1,12 +1,12 @@
-// === Module 7646: canReplyToMessage ===
+// === Module 7967: canReplyToMessage ===
 
-// Module 7646 (canReplyToMessage)
+// Module 7967 (canReplyToMessage)
 import MessageTypes from "MessageTypes" /* 1101 */;
-import ThreadHooks from "ThreadHooks" /* 6782 */;
-import useUserCommunicationDisabled from "useUserCommunicationDisabled" /* 7647 */;
+import ThreadHooks from "ThreadHooks" /* 6958 */;
+import useUserCommunicationDisabled from "useUserCommunicationDisabled" /* 7968 */;
 import _slicedToArray from "module_32" /* 32 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
-import UserStore from "UserStore" /* 1377 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
@@ -18,7 +18,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/replies/canReplyToMessage.tsx");
 
-export const useCanReplyToMessage = ReactCompilerGating.isReactCompilerEnabled() ? ((getGuildId, hasFlag) => {
+export const useCanReplyToMessage = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanReplyToMessage(getGuildId, hasFlag) {
   _require = getGuildId;
   dependencyMap = hasFlag;
   const cResult = require("c").c(12);
@@ -88,7 +88,7 @@ export const useCanReplyToMessage = ReactCompilerGating.isReactCompilerEnabled()
     }
     const tmpResult2 = tmp(504);
   }
-  const fn = function v() {
+  const fn = function y() {
     let tmp = null != getGuildId;
     if (tmp) {
       tmp = null != hasFlag;
@@ -112,7 +112,7 @@ export const useCanReplyToMessage = ReactCompilerGating.isReactCompilerEnabled()
   cResult[5] = fn;
   tmp11 = fn;
   const tmpResult = require("useUserCommunicationDisabled");
-}) : ((getGuildId, hasFlag) => {
+}) : (function useCanReplyToMessage(getGuildId, hasFlag) {
   _require = getGuildId;
   dependencyMap = hasFlag;
   const canUnarchiveThread = require("ThreadHooks").useCanUnarchiveThread(getGuildId);

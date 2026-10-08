@@ -1,7 +1,7 @@
-// === Module 7578: useSelectedConversation ===
+// === Module 9289: useSelectedConversation ===
 
-// Module 7578 (useSelectedConversation)
-import SelectedConversationStore from "SelectedConversationStore" /* 7562 */;
+// Module 9289 (useSelectedConversation)
+import SelectedConversationStore from "SelectedConversationStore" /* 9273 */;
 
 const require = globalThis.__r;
 
@@ -10,7 +10,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conversations/useSelectedConversation.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSelectedConversation(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp6, tmp7);
-}) : ((arg0) => {
+}) : (function useSelectedConversation(arg0) {
   _require = arg0;
   const items = [SelectedConversationStore];
   const items1 = [arg0];

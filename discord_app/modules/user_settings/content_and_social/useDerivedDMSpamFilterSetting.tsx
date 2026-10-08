@@ -1,21 +1,21 @@
-// === Module 14663: useDerivedDMSpamFilterSetting ===
+// === Module 14924: useDerivedDMSpamFilterSetting ===
 
-// Module 14663 (useDerivedDMSpamFilterSetting)
+// Module 14924 (useDerivedDMSpamFilterSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
-import UserSettings from "UserSettings" /* 2028 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5587 */;
-import SettingsDefaultFeature from "SettingsDefaultFeature" /* 6812 */;
-import UserStore from "UserStore" /* 1377 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1209 */;
+import UserSettings from "UserSettings" /* 2040 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5918 */;
+import SettingsDefaultFeature from "SettingsDefaultFeature" /* 6984 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
-let closure_3 = fn(2030).ExplicitContentFilterToDmSpamFilterV2;
+let closure_3 = fn(2042).ExplicitContentFilterToDmSpamFilterV2;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/content_and_social/useDerivedDMSpamFilterSetting.tsx");
 
-export const useDerivedDmSpamFilterSettingValue = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useDerivedDmSpamFilterSettingValue = ReactCompilerGating.isReactCompilerEnabled() ? (function useDerivedDmSpamFilterSettingValue() {
   let DmSpamFilterV2 = dependencyMap;
   const cResult = c.c(4);
   const DmSpamFilterV22 = UserSettings.DmSpamFilterV2;
@@ -61,7 +61,7 @@ export const useDerivedDmSpamFilterSettingValue = ReactCompilerGating.isReactCom
     FRIENDS_AND_NON_FRIENDS = DmSpamFilterV2.FRIENDS_AND_NON_FRIENDS;
   }
   const tmpResult2 = RegionalFeatureConfigUtils;
-}) : (() => {
+}) : (function useDerivedDmSpamFilterSettingValue() {
   let DmSpamFilterV2 = dependencyMap;
   const DmSpamFilterV22 = UserSettings.DmSpamFilterV2;
   const setting = DmSpamFilterV22.useSetting();

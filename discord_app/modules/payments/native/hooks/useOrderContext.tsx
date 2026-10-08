@@ -1,6 +1,6 @@
-// === Module 10447: useOrderContext ===
+// === Module 10044: useOrderContext ===
 
-// Module 10447 (useOrderContext)
+// Module 10044 (useOrderContext)
 import c from "c" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -10,7 +10,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/payments/native/hooks/useOrderContext.tsx");
 
-export const useOrderContext = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export const useOrderContext = ReactCompilerGating.isReactCompilerEnabled() ? (function useOrderContext(arg0, arg1) {
   const cResult = c.c(6);
   [tmp3, tmp4] = noop.useState(arg0);
   require = tmp4;
@@ -67,7 +67,7 @@ export const useOrderContext = ReactCompilerGating.isReactCompilerEnabled() ? ((
   cResult[4] = revision;
   cResult[5] = obj2;
   tmp10 = obj2;
-}) : ((arg0) => {
+}) : (function useOrderContext(arg0) {
   let tmp = _slicedToArray(noop.useState(arg0), 2);
   let order = tmp[0];
   const setOrder = tmp3;

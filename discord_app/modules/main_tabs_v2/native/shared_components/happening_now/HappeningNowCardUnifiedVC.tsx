@@ -1,21 +1,21 @@
-// === Module 16036: HappeningNowCardUnifiedVC ===
+// === Module 16296: HappeningNowCardUnifiedVC ===
 
-// Module 16036 (HappeningNowCardUnifiedVC)
+// Module 16296 (HappeningNowCardUnifiedVC)
 import c from "c" /* 576 */;
-import findActivityWithMostParticipantsDefault from "findActivityWithMostParticipants" /* 16027 */;
-import HappeningNowCardActivityDefault from "HappeningNowCardActivity" /* 16037 */;
-import HappeningNowCardEmbeddedActivityDefault from "HappeningNowCardEmbeddedActivity" /* 16049 */;
-import HappeningNowCardVoiceDefault from "HappeningNowCardVoice" /* 16050 */;
+import findActivityWithMostParticipantsDefault from "findActivityWithMostParticipants" /* 16287 */;
+import HappeningNowCardActivityDefault from "HappeningNowCardActivity" /* 16297 */;
+import HappeningNowCardEmbeddedActivityDefault from "HappeningNowCardEmbeddedActivity" /* 16309 */;
+import HappeningNowCardVoiceDefault from "HappeningNowCardVoice" /* 16310 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4918 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2062 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5893 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 fn(558);
 const ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCallActivityData(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -64,7 +64,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   let obj = require("c");
   return require("useStateFromStores").useStateFromStoresObject(first, tmp8, tmp9);
-}) : ((arg0) => {
+}) : (function useCallActivityData(arg0) {
   _require = arg0;
   const items = [EmbeddedActivitiesStore, ApplicationStreamingStore, RelationshipStore];
   const items1 = [arg0];
@@ -99,7 +99,7 @@ let closure_7 = tmp4;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardUnifiedVC.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function HappeningNowCardUnifiedVC(arg0) {
   let tmp = dependencyMap;
   const cResult = c.c(21);
   ({ guildId, index, voiceState, fullwidth, userId, cardKey, panelVariant } = arg0);
@@ -171,7 +171,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp5 = tmp8;
   }
   const tmp4 = closure_7(voiceState.channelId);
-}) : ((arg0) => {
+}) : (function HappeningNowCardUnifiedVC(arg0) {
   ({ guildId, index, voiceState, fullwidth, panelVariant } = arg0);
   ({ userId, cardKey } = arg0);
   if (panelVariant === undefined) {

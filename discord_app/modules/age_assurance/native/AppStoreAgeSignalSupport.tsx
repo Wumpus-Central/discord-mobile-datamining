@@ -1,8 +1,8 @@
-// === Module 8148: AppStoreAgeSignalSupport ===
+// === Module 7529: AppStoreAgeSignalSupport ===
 
-// Module 8148 (AppStoreAgeSignalSupport)
-import MetaQuestUtils from "MetaQuestUtils" /* 1615 */;
-import DeviceUtils from "DeviceUtils" /* 4872 */;
+// Module 7529 (AppStoreAgeSignalSupport)
+import MetaQuestUtils from "MetaQuestUtils" /* 1627 */;
+import DeviceUtils from "DeviceUtils" /* 5066 */;
 import size from "module_2" /* 2 */;
 
 let c2 = 26;

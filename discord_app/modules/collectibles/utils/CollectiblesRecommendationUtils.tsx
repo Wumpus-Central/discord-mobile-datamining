@@ -1,6 +1,6 @@
-// === Module 13026: CollectiblesRecommendationUtils ===
+// === Module 13304: CollectiblesRecommendationUtils ===
 
-// Module 13026 (CollectiblesRecommendationUtils)
+// Module 13304 (CollectiblesRecommendationUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/collectibles/utils/CollectiblesRecommendationUtils.tsx");

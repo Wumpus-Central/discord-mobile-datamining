@@ -1,6 +1,6 @@
-// === Module 16657: ConjureMcpConnectionPanel ===
+// === Module 16919: ConjureMcpConnectionPanel ===
 
-// Module 16657 (ConjureMcpConnectionPanel)
+// Module 16919 (ConjureMcpConnectionPanel)
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -8,7 +8,7 @@ import noop from "module_19" /* 19 */;
 const require = globalThis.__r;
 
 const require = fn;
-const fetchProjectMcpConnection = fn(12923).fetchProjectMcpConnection;
+const fetchProjectMcpConnection = fn(13072).fetchProjectMcpConnection;
 let closure_6 = {
   setTimeout(arg0, arg1) {
     return setTimeout(arg0, arg1);
@@ -192,7 +192,7 @@ const result = size.fileFinishedImporting("modules/conjure/external_connections/
 
 export const MCP_CONNECTION_MIN_REFETCH_MS = 15000;
 export { McpConnectionPanel };
-export const useMcpConnectionPanel = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useMcpConnectionPanel = ReactCompilerGating.isReactCompilerEnabled() ? (function useMcpConnectionPanel(arg0) {
   _require = arg0;
   const cResult = require("c").c(7);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -265,7 +265,7 @@ export const useMcpConnectionPanel = ReactCompilerGating.isReactCompilerEnabled(
     tmp9 = cResult[6];
   }
   return tmp9;
-}) : ((arg0) => {
+}) : (function useMcpConnectionPanel(arg0) {
   closure_0 = arg0;
   [tmp2, dependencyMap] = noop.useState({ connection: null, loading: true, failed: false });
   _slicedToArray = noop.useRef(null);

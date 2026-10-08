@@ -1,19 +1,19 @@
-// === Module 14510: SettingsAccountUtils ===
+// === Module 14770: SettingsAccountUtils ===
 
-// Module 14510 (SettingsAccountUtils)
+// Module 14770 (SettingsAccountUtils)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 fn(558);
 let ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIs2FAEnabled() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
-    const fn = function s() {
+    const fn = function n() {
       currentUser = currentUser.getCurrentUser();
       let flag;
       if (currentUser != null) {
@@ -32,7 +32,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     [tmp4, tmp5] = cResult;
   }
   return useStateFromStores.useStateFromStores(tmp4, tmp5);
-}) : (() => {
+}) : (function useIs2FAEnabled() {
   const items = [UserStore];
   return useStateFromStores.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
@@ -47,11 +47,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   });
 });
 ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsTOTPEnabled() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AuthenticationStore];
-    const fn = function s() {
+    const fn = function n() {
       return AuthenticationStore.hasTOTPEnabled();
     };
     cResult[0] = items;
@@ -62,7 +62,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     [tmp4, tmp5] = cResult;
   }
   return useStateFromStores.useStateFromStores(tmp4, tmp5);
-}) : (() => {
+}) : (function useIsTOTPEnabled() {
   const items = [AuthenticationStore];
   return useStateFromStores.useStateFromStores(items, () => AuthenticationStore.hasTOTPEnabled());
 });
@@ -71,11 +71,11 @@ const result = size.fileFinishedImporting("modules/user_settings/account/native/
 
 export const useIs2FAEnabled = tmp2;
 export const useIsTOTPEnabled = tmp3;
-export const useIsUserVerified = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useIsUserVerified = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsUserVerified() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
-    const fn = function s() {
+    const fn = function n() {
       currentUser = currentUser.getCurrentUser();
       let flag;
       if (currentUser != null) {
@@ -94,7 +94,7 @@ export const useIsUserVerified = ReactCompilerGating.isReactCompilerEnabled() ? 
     [tmp4, tmp5] = cResult;
   }
   return useStateFromStores.useStateFromStores(tmp4, tmp5);
-}) : (() => {
+}) : (function useIsUserVerified() {
   const items = [UserStore];
   return useStateFromStores.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();

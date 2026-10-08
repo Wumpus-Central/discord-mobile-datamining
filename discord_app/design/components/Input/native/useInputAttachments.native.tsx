@@ -1,9 +1,9 @@
-// === Module 6110: useInputAttachments ===
+// === Module 6290: useInputAttachments ===
 
-// Module 6110 (useInputAttachments)
+// Module 6290 (useInputAttachments)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import IconSize from "IconSize" /* 6111 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import IconSize from "IconSize" /* 6291 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ Platform, Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((setWidth) => {
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function InputAttachmentContainer(setWidth) {
   const cResult = c.c(15);
   ({ content, style } = setWidth);
   setWidth = setWidth.setWidth;
@@ -86,7 +86,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((setWidth) => {
     cResult[7] = tmp8;
     cResult[8] = tmp15;
   }
-}) : ((arg0) => {
+}) : (function InputAttachmentContainer(arg0) {
   ({ content, style } = arg0);
   ({ setWidth: dependencyMap, pressableProps } = arg0);
   if (null == content) {
@@ -149,7 +149,7 @@ const result = size.fileFinishedImporting("design/components/Input/native/useInp
 export { estimateAttachmentWidth };
 export { renderInputAttachment };
 export const InputAttachmentContainer = tmp3;
-export const useInputAttachments = ReactCompilerGating.isReactCompilerEnabled() ? ((leadingIcon, leading) => {
+export const useInputAttachments = ReactCompilerGating.isReactCompilerEnabled() ? (function useInputAttachments(leadingIcon, leading) {
   const cResult = inputStyles(leadingIcon[7]).c(35);
   if (cResult[0] === leadingIcon.size) {
     if (cResult[1] === tmp4) {
@@ -158,54 +158,50 @@ export const useInputAttachments = ReactCompilerGating.isReactCompilerEnabled() 
     inputStyles = tmp(tmp2[8]).useInputStyles(tmp5);
     leadingIcon = leadingIcon.leadingIcon;
     ({ leadingText, trailingIcon } = leadingIcon);
-    const trailingText = leadingIcon.trailingText;
     if (cResult[3] === leadingIcon) {
       if (cResult[4] === leadingText) {
-        leading = undefined;
+        let leading1;
         if (leading != null) {
-          leading = leading.leading;
+          leading1 = leading.leading;
         }
-        if (cResult[5] === leading) {
+        if (cResult[5] === leading1) {
           if (cResult[6] === inputStyles.text) {
-            let tmp11 = cResult[7];
+            let tmp10 = cResult[7];
           }
-          let trailing;
+          let trailing1;
           if (leading != null) {
-            trailing = leading.trailing;
+            trailing1 = leading.trailing;
           }
-          if (cResult[8] === trailing) {
+          if (cResult[8] === trailing1) {
             if (cResult[9] === inputStyles.text) {
               if (cResult[10] === trailingIcon) {
-                if (cResult[11] === trailingText) {
-                  let tmp20 = cResult[12];
-                }
                 if (null == leadingIcon) {
-                  let leading1;
+                  let leading2;
                   if (leading != null) {
-                    leading1 = leading.leading;
+                    leading2 = leading.leading;
                   }
-                  if (null == leading1) {
+                  if (null == leading2) {
                     let leadingIcon2 = inputStyles.leadingText;
                   }
                   if (null == trailingIcon) {
-                    let trailing1;
+                    let trailing2;
                     if (leading != null) {
-                      trailing1 = leading.trailing;
+                      trailing2 = leading.trailing;
                     }
-                    if (null == trailing1) {
+                    if (null == trailing2) {
                       let trailingIcon2 = inputStyles.trailingText;
                     }
                     if (cResult[13] === leadingIcon) {
                       if (cResult[14] === inputStyles.leadingIcon) {
-                        let tmp30 = cResult[15];
+                        let tmp21 = cResult[15];
                       }
-                      const first = trailingIcon(noop.useState(tmp30), 2)[0];
+                      const first = trailingIcon(noop.useState(tmp21), 2)[0];
                       if (cResult[16] === inputStyles.trailingIcon) {
                         if (cResult[17] === trailingIcon) {
-                          let tmp35 = cResult[18];
+                          let tmp26 = cResult[18];
                         }
-                        const tmp31Result = trailingIcon(noop.useState(tmp35), 2);
-                        const first1 = tmp31Result[0];
+                        const tmp22Result = trailingIcon(noop.useState(tmp26), 2);
+                        const first1 = tmp22Result[0];
                         let prop;
                         if (leading != null) {
                           prop = leading.leadingPressableProps;
@@ -213,90 +209,40 @@ export const useInputAttachments = ReactCompilerGating.isReactCompilerEnabled() 
                         if (prop == null) {
                           prop = tmp8;
                         }
-                        if (cResult[19] === tmp11) {
-                          if (cResult[20] === leadingIcon2) {
-                            if (cResult[21] === prop) {
-                              let tmp39 = cResult[22];
+                        class L {
+                          constructor() {
+                            num = 0;
+                            if (null != trailingIcon) {
+                              tmp2 = closure_0;
+                              tmp3 = closure_1;
+                              num = closure_0(closure_1[4]).ICON_SIZE.xs + tmp;
                             }
-                            let prop1;
-                            if (leading != null) {
-                              prop1 = leading.trailingPressableProps;
-                            }
-                            if (prop1 == null) {
-                              prop1 = tmp9;
-                            }
-                            if (cResult[23] === prop1) {
-                              if (cResult[24] === tmp20) {
-                                if (cResult[25] === trailingIcon2) {
-                                  let tmp44 = cResult[26];
-                                }
-                                if (cResult[27] === first) {
-                                  if (cResult[28] === inputStyles.padding) {
-                                    if (cResult[29] === first1) {
-                                      let tmp48 = cResult[30];
-                                    }
-                                    if (cResult[31] === tmp48) {
-                                      if (cResult[32] === tmp39) {
-                                        if (cResult[33] === tmp44) {
-                                          let tmp51 = cResult[34];
-                                        }
-                                        return tmp51;
-                                      }
-                                    }
-                                    const obj2 = { leading: tmp39, trailing: tmp44, inputStyle: tmp48 };
-                                    cResult[31] = tmp48;
-                                    cResult[32] = tmp39;
-                                    cResult[33] = tmp44;
-                                    cResult[34] = obj2;
-                                    tmp51 = obj2;
-                                  }
-                                }
-                                let diff;
-                                if (0 !== first) {
-                                  diff = first - inputStyles.padding.paddingHorizontal;
-                                }
-                                const obj3 = { marginStart: diff, marginEnd: null };
-                                let diff1;
-                                if (0 !== first1) {
-                                  diff1 = first1 - inputStyles.padding.paddingHorizontal;
-                                }
-                                obj3.marginEnd = diff1;
-                                cResult[27] = first;
-                                cResult[28] = inputStyles.padding;
-                                cResult[29] = first1;
-                                cResult[30] = obj3;
-                                tmp48 = obj3;
-                              }
-                            }
-                            const obj4 = { content: tmp20, setWidth: tmp31Result[1], pressableProps: prop1, style: trailingIcon2 };
-                            const tmp47 = <closure_7 content={tmp20} setWidth={tmp31Result[1]} pressableProps={prop1} style={trailingIcon2} />;
-                            cResult[23] = prop1;
-                            cResult[24] = tmp20;
-                            cResult[25] = trailingIcon2;
-                            cResult[26] = tmp47;
-                            tmp44 = tmp47;
+                            return num;
                           }
                         }
-                        const obj5 = { content: tmp11, setWidth: tmp34, pressableProps: prop, style: leadingIcon2 };
-                        const tmp42 = <closure_7 content={tmp11} setWidth={tmp34} pressableProps={prop} style={leadingIcon2} />;
-                        cResult[19] = tmp11;
+                        const obj2 = { content: tmp10, setWidth: tmp25, pressableProps: prop, style: leadingIcon2 };
+                        const tmp34 = <closure_7 content={tmp10} setWidth={tmp25} pressableProps={prop} style={leadingIcon2} />;
+                        cResult[19] = tmp10;
                         cResult[20] = leadingIcon2;
                         cResult[21] = prop;
-                        cResult[22] = tmp42;
-                        tmp39 = tmp42;
+                        cResult[22] = tmp34;
                       }
-                      const fn2 = function w() {
-                        let num = 0;
-                        if (null != trailingIcon) {
-                          num = IconSize.ICON_SIZE.xs + tmp;
+                      class L {
+                        constructor() {
+                          num = 0;
+                          if (null != trailingIcon) {
+                            tmp2 = closure_0;
+                            tmp3 = closure_1;
+                            num = closure_0(closure_1[4]).ICON_SIZE.xs + tmp;
+                          }
+                          return num;
                         }
-                        return num;
-                      };
+                      }
                       cResult[16] = inputStyles.trailingIcon;
                       cResult[17] = trailingIcon;
-                      cResult[18] = fn2;
-                      tmp35 = fn2;
-                      const tmp32 = trailingIcon(noop.useState(tmp30), 2);
+                      cResult[18] = L;
+                      tmp26 = L;
+                      const tmp23 = trailingIcon(noop.useState(tmp21), 2);
                     }
                     const fn = function f() {
                       let num = 0;
@@ -308,7 +254,7 @@ export const useInputAttachments = ReactCompilerGating.isReactCompilerEnabled() 
                     cResult[13] = leadingIcon;
                     cResult[14] = inputStyles.leadingIcon;
                     cResult[15] = fn;
-                    tmp30 = fn;
+                    tmp21 = fn;
                   }
                   trailingIcon2 = inputStyles.trailingIcon;
                 }
@@ -316,60 +262,51 @@ export const useInputAttachments = ReactCompilerGating.isReactCompilerEnabled() 
               }
             }
           }
-          let trailing2;
           if (leading != null) {
-            trailing2 = leading.trailing;
-          }
-          if (trailing2 != null) {
-            let trailing3;
-            if (leading != null) {
-              trailing3 = leading.trailing;
-            }
-            cResult[8] = trailing3;
-            cResult[9] = inputStyles.text;
-            cResult[10] = trailingIcon;
-            cResult[11] = trailingText;
-            cResult[12] = trailing2;
-            tmp20 = trailing2;
-          } else if (null != trailingIcon) {
-            let tmp23 = <trailingIcon size="xs" color="input-icon-default" />;
-          } else if (null != trailingText) {
-            const obj7 = { variant: "text-md/normal", style: tmp22, children: trailingText };
-            tmp23 = jsx(tmp(tmp2[5]).Text, { variant: "text-md/normal", style: tmp22, children: trailingText });
+            const trailing = leading.trailing;
           }
         }
       }
     }
-    let leading2;
+    let leading3;
     if (leading != null) {
-      leading2 = leading.leading;
+      leading3 = leading.leading;
     }
-    if (leading2 != null) {
+    if (leading3 != null) {
       cResult[3] = leadingIcon;
       cResult[4] = leadingText;
-      let leading3;
       if (leading != null) {
-        leading3 = leading.leading;
+        leading = leading.leading;
       }
-      cResult[5] = leading3;
+      class L {
+        constructor() {
+          num = 0;
+          if (null != trailingIcon) {
+            tmp2 = closure_0;
+            tmp3 = closure_1;
+            num = closure_0(closure_1[4]).ICON_SIZE.xs + tmp;
+          }
+          return num;
+        }
+      }
       cResult[6] = inputStyles.text;
-      cResult[7] = leading2;
-      tmp11 = leading2;
+      cResult[7] = leading3;
+      tmp10 = leading3;
     } else if (null != leadingIcon) {
-      let tmp14 = <leadingIcon size="xs" color="input-icon-default" />;
+      let tmp13 = <leadingIcon size="xs" color="input-icon-default" />;
     } else if (null != leadingText) {
-      const obj8 = { variant: "text-md/normal", style: tmp13, children: leadingText };
-      tmp14 = jsx(tmp(tmp2[5]).Text, { variant: "text-md/normal", style: tmp13, children: leadingText });
+      const obj3 = { variant: "text-md/normal", style: tmp12, children: leadingText };
+      tmp13 = jsx(tmp(tmp2[5]).Text, { variant: "text-md/normal", style: tmp12, children: leadingText });
     }
     const tmpResult = tmp(tmp2[8]);
   }
-  const obj9 = { size: leadingIcon.size, hasLeadingIcon: null != leadingIcon.leadingIcon };
+  const obj4 = { size: leadingIcon.size, hasLeadingIcon: null != leadingIcon.leadingIcon };
   cResult[0] = leadingIcon.size;
   cResult[1] = null != leadingIcon.leadingIcon;
-  cResult[2] = obj9;
-  tmp5 = obj9;
+  cResult[2] = obj4;
+  tmp5 = obj4;
   const obj = inputStyles(leadingIcon[7]);
-}) : ((size, leading) => {
+}) : (function useInputAttachments(size, leading) {
   inputStyles = inputStyles(leadingIcon[8]).useInputStyles({ size: size.size, hasLeadingIcon: null != size.leadingIcon });
   leadingIcon = size.leadingIcon;
   ({ leadingText, trailingIcon } = size);

@@ -1,7 +1,7 @@
-// === Module 16226: useChannelListFlatData ===
+// === Module 16486: useChannelListFlatData ===
 
-// Module 16226 (useChannelListFlatData)
-import FastList from "FastList" /* 6576 */;
+// Module 16486 (useChannelListFlatData)
+import FastList from "FastList" /* 6752 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -9,7 +9,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/channel_list_v2/native/useChannelListFlatData.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useChannelListFlatData(arg0) {
   const cResult = map(576).c(19);
   ({ getItemSize, getRecyclerKey, getSectionFooterSize, getSectionHeaderSize, headerSize, sections } = arg0);
   if (cResult[0] === getItemSize) {
@@ -25,7 +25,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               let tmp6 = cResult[10];
             }
             if (cResult[11] !== tmp2) {
-              const fn = function u(arg0, arg1) {
+              function getIndex(arg0, arg1) {
                 if (null == arg1) {
                   const _HermesInternal2 = HermesInternal;
                   let combined = "" + FastList.FastListItemTypes.SECTION + ":" + arg0 + ":" + -1;
@@ -34,10 +34,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                   combined = "" + FastList.FastListItemTypes.ITEM + ":" + arg0 + ":" + arg1;
                 }
                 return map.get(combined);
-              };
+              }
               cResult[11] = tmp2;
-              cResult[12] = fn;
-              let tmp47 = fn;
+              cResult[12] = getIndex;
+              let tmp47 = getIndex;
             } else {
               tmp47 = cResult[12];
             }
@@ -80,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       let sum1 = tmp7;
       if (0 !== tmp9) {
         let tmp39 = map;
-        let SECTION = map(6576).FastListItemTypes.SECTION;
+        let SECTION = map(6752).FastListItemTypes.SECTION;
         let sectionHeaderSize = getSectionHeaderSize(num);
         let _HermesInternal5 = HermesInternal;
         let str13 = "";
@@ -106,7 +106,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         if (0 < tmp9) {
           do {
             let tmp21 = map;
-            let ITEM = map(6576).FastListItemTypes.ITEM;
+            let ITEM = map(6752).FastListItemTypes.ITEM;
             let itemSize = getItemSize(num, num3);
             let _HermesInternal2 = HermesInternal;
             let str4 = "";
@@ -140,7 +140,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         let sectionFooterSize = getSectionFooterSize(num);
         sum1 = tmp20;
         if (sectionFooterSize > 0) {
-          let SECTION_FOOTER = tmp39(6576).FastListItemTypes.SECTION_FOOTER;
+          let SECTION_FOOTER = tmp39(6752).FastListItemTypes.SECTION_FOOTER;
           let _HermesInternal6 = HermesInternal;
           let str16 = "";
           let str17 = ":";
@@ -183,7 +183,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   tmp5 = items1;
   tmp3 = items;
   const obj = map(576);
-}) : ((getItemSize) => {
+}) : (function useChannelListFlatData(getItemSize) {
   getItemSize = getItemSize.getItemSize;
   const getRecyclerKey = getItemSize.getRecyclerKey;
   const getSectionFooterSize = getItemSize.getSectionFooterSize;
@@ -267,7 +267,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           let tmp39 = getSectionFooterSize(num);
           sum1 = tmp15;
           if (tmp39 > 0) {
-            let SECTION_FOOTER = tmp36(6576).FastListItemTypes.SECTION_FOOTER;
+            let SECTION_FOOTER = tmp36(6752).FastListItemTypes.SECTION_FOOTER;
             let _HermesInternal6 = HermesInternal;
             let str16 = "";
             let str17 = ":";

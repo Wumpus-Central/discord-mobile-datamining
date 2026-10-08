@@ -1,25 +1,25 @@
-// === Module 17720: GuildSettingsAutoModeration ===
+// === Module 18007: GuildSettingsAutoModeration ===
 
-// Module 17720 (GuildSettingsAutoModeration)
+// Module 18007 (GuildSettingsAutoModeration)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5975 */;
-import TableRowGroup from "TableRowGroup" /* 6081 */;
-import AutomodTriggerConfigs from "AutomodTriggerConfigs" /* 17725 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6158 */;
+import TableRowGroup from "TableRowGroup" /* 6267 */;
+import AutomodTriggerConfigs from "AutomodTriggerConfigs" /* 18012 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const AutomodStore = fn(17721);
+const AutomodStore = fn(18008);
 ({ useAutomodRulesList: closure_4, useSyncAutomodRulesEffect: hasOwnProperty } = AutomodStore);
-let closure_6 = fn(17723).useAutomodEditingRuleState;
+let closure_6 = fn(18010).useAutomodEditingRuleState;
 const Constants = fn(1085);
 ({ GuildSettingsSections: closure_7, HelpdeskArticles: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { stack: { marginTop: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING }, loading: null };
 let obj3 = { marginTop: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
 obj2.loading = { paddingVertical: nativeDefault.space.PX_24 };
@@ -29,7 +29,7 @@ let obj4 = { paddingVertical: nativeDefault.space.PX_24 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/native/GuildSettingsAutoModeration.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSettingsAutoModeration(guildId) {
   const cResult = guildId(navigation[11]).c(24);
   guildId = guildId.guildId;
   const contentContainerStyle = guildId.contentContainerStyle;
@@ -59,180 +59,36 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
                   let tmp10 = cResult[10];
                 }
                 const _Symbol = Symbol;
-                class D {
-                  constructor() {
-                    if (closure_3) {
-                      tmp4 = jsx;
-                      tmp5 = closure_0;
-                      tmp6 = closure_2;
-                      obj = { style: null };
-                      tmp7 = closure_1;
-                      obj.style = closure_1.loading;
-                      mapped = jsx(closure_0(closure_2[15]).ActivityIndicator, obj);
-                    } else {
-                      tmp = globalThis;
-                      _Object = Object;
-                      tmp2 = closure_7;
-                      entries = Object.entries(closure_7);
-                      mapped = entries.map((item) => {
-                        [tmp2, arr] = first(item, 2);
-                        if (0 === arr.length) {
-                          return null;
-                        } else {
-                          let obj = navigation;
-                          if (guildId(navigation[8]).AutomodTriggerCategory.MEMBERS === tmp2) {
-                            const intl2 = guildId(obj[9]).intl;
-                            let stringResult = intl2.string(guildId(obj[9]).t.sx4E5v);
-                          } else if (guildId(obj[8]).AutomodTriggerCategory.CONTENT === tmp2) {
-                            const intl = guildId(obj[9]).intl;
-                            stringResult = intl.string(guildId(obj[9]).t.fphZb0);
-                          }
-                          obj = { title: stringResult, hasIcons: true, children: arr.map(closure_1_8) };
-                          closure_2_9(guildId(navigation[16]).TableRowGroup, obj, tmp2);
-                        }
-                        const tmp = first(item, 2);
-                      });
-                    }
-                    return mapped;
-                  }
-                }
                 if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
                   const obj4 = { variant: "text-sm/normal", color: "text-default", children: null };
-                  class D {
-                    constructor() {
-                      if (closure_3) {
-                        tmp4 = jsx;
-                        tmp5 = closure_0;
-                        tmp6 = closure_2;
-                        obj = { style: null };
-                        tmp7 = closure_1;
-                        obj.style = closure_1.loading;
-                        mapped = jsx(closure_0(closure_2[15]).ActivityIndicator, obj);
-                      } else {
-                        tmp = globalThis;
-                        _Object = Object;
-                        tmp2 = closure_7;
-                        entries = Object.entries(closure_7);
-                        mapped = entries.map((item) => {
-                          [tmp2, arr] = first(item, 2);
-                          if (0 === arr.length) {
-                            return null;
-                          } else {
-                            let obj = navigation;
-                            if (guildId(navigation[8]).AutomodTriggerCategory.MEMBERS === tmp2) {
-                              const intl2 = guildId(obj[9]).intl;
-                              let stringResult = intl2.string(guildId(obj[9]).t.sx4E5v);
-                            } else if (guildId(obj[8]).AutomodTriggerCategory.CONTENT === tmp2) {
-                              const intl = guildId(obj[9]).intl;
-                              stringResult = intl.string(guildId(obj[9]).t.fphZb0);
-                            }
-                            obj = { title: stringResult, hasIcons: true, children: arr.map(closure_1_8) };
-                            closure_2_9(guildId(navigation[16]).TableRowGroup, obj, tmp2);
-                          }
-                          const tmp = first(item, 2);
-                        });
-                      }
-                      return mapped;
-                    }
-                  }
-                  obj4.children = obj5.string(tmp(tmp2[9]).t.EwuSCR);
+                  let intl = tmp(tmp2[9]).intl;
+                  obj4.children = intl.string(tmp(tmp2[9]).t.EwuSCR);
                   const tmp14 = closure_9(tmp(tmp2[17]).Text, obj4);
                   cResult[11] = tmp14;
+                  let tmp12 = tmp14;
+                } else {
+                  tmp12 = cResult[11];
                 }
                 const _Symbol2 = Symbol;
                 if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-                  const obj6 = { children: null };
-                  let items = [, ];
-                  class D {
-                    constructor() {
-                      if (closure_3) {
-                        tmp4 = jsx;
-                        tmp5 = closure_0;
-                        tmp6 = closure_2;
-                        obj = { style: null };
-                        tmp7 = closure_1;
-                        obj.style = closure_1.loading;
-                        mapped = jsx(closure_0(closure_2[15]).ActivityIndicator, obj);
-                      } else {
-                        tmp = globalThis;
-                        _Object = Object;
-                        tmp2 = closure_7;
-                        entries = Object.entries(closure_7);
-                        mapped = entries.map((item) => {
-                          [tmp2, arr] = first(item, 2);
-                          if (0 === arr.length) {
-                            return null;
-                          } else {
-                            let obj = navigation;
-                            if (guildId(navigation[8]).AutomodTriggerCategory.MEMBERS === tmp2) {
-                              const intl2 = guildId(obj[9]).intl;
-                              let stringResult = intl2.string(guildId(obj[9]).t.sx4E5v);
-                            } else if (guildId(obj[8]).AutomodTriggerCategory.CONTENT === tmp2) {
-                              const intl = guildId(obj[9]).intl;
-                              stringResult = intl.string(guildId(obj[9]).t.fphZb0);
-                            }
-                            obj = { title: stringResult, hasIcons: true, children: arr.map(closure_1_8) };
-                            closure_2_9(guildId(navigation[16]).TableRowGroup, obj, tmp2);
-                          }
-                          const tmp = first(item, 2);
-                        });
-                      }
-                      return mapped;
-                    }
-                  }
-                  const obj7 = { variant: "text-sm/normal", color: "text-default", children: null };
-                  let intl = tmp(tmp2[9]).intl;
-                  const obj8 = { helpUrl: require("HelpdeskUtils").getArticleURL(constants2.GUILD_AUTOMOD_BLOCKED_MESSAGE) };
-                  obj7.children = intl.format(tmp(tmp2[9]).t["B+sgGt"], obj8);
-                  items[1] = closure_9(tmp(tmp2[17]).Text, obj7);
-                  obj6.children = items;
-                  const tmp20 = closure_10(tmp(tmp2[18]).Stack, obj6);
+                  const obj5 = { children: null };
+                  let items = [tmp12, ];
+                  const obj6 = { variant: "text-sm/normal", color: "text-default", children: null };
+                  let intl2 = tmp(tmp2[9]).intl;
+                  const obj7 = { helpUrl: require("HelpdeskUtils").getArticleURL(constants2.GUILD_AUTOMOD_BLOCKED_MESSAGE) };
+                  obj6.children = intl2.format(tmp(tmp2[9]).t["B+sgGt"], obj7);
+                  items[1] = closure_9(tmp(tmp2[17]).Text, obj6);
+                  obj5.children = items;
+                  const tmp20 = closure_10(tmp(tmp2[18]).Stack, obj5);
                   cResult[12] = tmp20;
                   let tmp15 = tmp20;
-                  const obj9 = require("HelpdeskUtils");
+                  const obj8 = require("HelpdeskUtils");
                 } else {
                   tmp15 = cResult[12];
                 }
                 if (cResult[13] !== tmp10) {
                   const tmp10Result = tmp10();
                   cResult[13] = tmp10;
-                  class D {
-                    constructor() {
-                      if (closure_3) {
-                        tmp4 = jsx;
-                        tmp5 = closure_0;
-                        tmp6 = closure_2;
-                        obj = { style: null };
-                        tmp7 = closure_1;
-                        obj.style = closure_1.loading;
-                        mapped = jsx(closure_0(closure_2[15]).ActivityIndicator, obj);
-                      } else {
-                        tmp = globalThis;
-                        _Object = Object;
-                        tmp2 = closure_7;
-                        entries = Object.entries(closure_7);
-                        mapped = entries.map((item) => {
-                          [tmp2, arr] = first(item, 2);
-                          if (0 === arr.length) {
-                            return null;
-                          } else {
-                            let obj = navigation;
-                            if (guildId(navigation[8]).AutomodTriggerCategory.MEMBERS === tmp2) {
-                              const intl2 = guildId(obj[9]).intl;
-                              let stringResult = intl2.string(guildId(obj[9]).t.sx4E5v);
-                            } else if (guildId(obj[8]).AutomodTriggerCategory.CONTENT === tmp2) {
-                              const intl = guildId(obj[9]).intl;
-                              stringResult = intl.string(guildId(obj[9]).t.fphZb0);
-                            }
-                            obj = { title: stringResult, hasIcons: true, children: arr.map(closure_1_8) };
-                            closure_2_9(guildId(navigation[16]).TableRowGroup, obj, tmp2);
-                          }
-                          const tmp = first(item, 2);
-                        });
-                      }
-                      return mapped;
-                    }
-                  }
                   cResult[14] = tmp10Result;
                   let tmp21 = tmp10Result;
                 } else {
@@ -247,142 +103,36 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
                       let tmp27 = cResult[20];
                     }
                     const _Symbol3 = Symbol;
-                    class D {
-                      constructor() {
-                        if (closure_3) {
-                          tmp4 = jsx;
-                          tmp5 = closure_0;
-                          tmp6 = closure_2;
-                          obj = { style: null };
-                          tmp7 = closure_1;
-                          obj.style = closure_1.loading;
-                          mapped = jsx(closure_0(closure_2[15]).ActivityIndicator, obj);
-                        } else {
-                          tmp = globalThis;
-                          _Object = Object;
-                          tmp2 = closure_7;
-                          entries = Object.entries(closure_7);
-                          mapped = entries.map((item) => {
-                            [tmp2, arr] = first(item, 2);
-                            if (0 === arr.length) {
-                              return null;
-                            } else {
-                              let obj = navigation;
-                              if (guildId(navigation[8]).AutomodTriggerCategory.MEMBERS === tmp2) {
-                                const intl2 = guildId(obj[9]).intl;
-                                let stringResult = intl2.string(guildId(obj[9]).t.sx4E5v);
-                              } else if (guildId(obj[8]).AutomodTriggerCategory.CONTENT === tmp2) {
-                                const intl = guildId(obj[9]).intl;
-                                stringResult = intl.string(guildId(obj[9]).t.fphZb0);
-                              }
-                              obj = { title: stringResult, hasIcons: true, children: arr.map(closure_1_8) };
-                              closure_2_9(guildId(navigation[16]).TableRowGroup, obj, tmp2);
-                            }
-                            const tmp = first(item, 2);
-                          });
-                        }
-                        return mapped;
-                      }
+                    if (cResult[21] === Symbol.for("react.memo_cache_sentinel")) {
+                      const tmp32 = closure_9(tmp(tmp2[21]).NavScrim, {});
+                      cResult[21] = tmp32;
+                      let tmp30 = tmp32;
+                    } else {
+                      tmp30 = cResult[21];
                     }
                     if (cResult[22] !== tmp27) {
-                      const obj10 = { children: null };
-                      class D {
-                        constructor() {
-                          if (closure_3) {
-                            tmp4 = jsx;
-                            tmp5 = closure_0;
-                            tmp6 = closure_2;
-                            obj = { style: null };
-                            tmp7 = closure_1;
-                            obj.style = closure_1.loading;
-                            mapped = jsx(closure_0(closure_2[15]).ActivityIndicator, obj);
-                          } else {
-                            tmp = globalThis;
-                            _Object = Object;
-                            tmp2 = closure_7;
-                            entries = Object.entries(closure_7);
-                            mapped = entries.map((item) => {
-                              [tmp2, arr] = first(item, 2);
-                              if (0 === arr.length) {
-                                return null;
-                              } else {
-                                let obj = navigation;
-                                if (guildId(navigation[8]).AutomodTriggerCategory.MEMBERS === tmp2) {
-                                  const intl2 = guildId(obj[9]).intl;
-                                  let stringResult = intl2.string(guildId(obj[9]).t.sx4E5v);
-                                } else if (guildId(obj[8]).AutomodTriggerCategory.CONTENT === tmp2) {
-                                  const intl = guildId(obj[9]).intl;
-                                  stringResult = intl.string(guildId(obj[9]).t.fphZb0);
-                                }
-                                obj = { title: stringResult, hasIcons: true, children: arr.map(closure_1_8) };
-                                closure_2_9(guildId(navigation[16]).TableRowGroup, obj, tmp2);
-                              }
-                              const tmp = first(item, 2);
-                            });
-                          }
-                          return mapped;
-                        }
-                      }
-                      tmp36[0] = tmp27;
-                      tmp36[1] = tmp32;
-                      obj10.children = tmp36;
-                      const tmp37 = closure_10(closure_11, obj10);
+                      const obj9 = { children: null };
+                      const items1 = [tmp27, tmp30];
+                      obj9.children = items1;
+                      const tmp36 = closure_10(closure_11, obj9);
                       cResult[22] = tmp27;
-                      cResult[23] = tmp37;
-                      let tmp33 = tmp37;
+                      cResult[23] = tmp36;
+                      let tmp33 = tmp36;
                     } else {
                       tmp33 = cResult[23];
                     }
                     return tmp33;
                   }
-                  class D {
-                    constructor() {
-                      if (closure_3) {
-                        tmp4 = jsx;
-                        tmp5 = closure_0;
-                        tmp6 = closure_2;
-                        obj = { style: null };
-                        tmp7 = closure_1;
-                        obj.style = closure_1.loading;
-                        mapped = jsx(closure_0(closure_2[15]).ActivityIndicator, obj);
-                      } else {
-                        tmp = globalThis;
-                        _Object = Object;
-                        tmp2 = closure_7;
-                        entries = Object.entries(closure_7);
-                        mapped = entries.map((item) => {
-                          [tmp2, arr] = first(item, 2);
-                          if (0 === arr.length) {
-                            return null;
-                          } else {
-                            let obj = navigation;
-                            if (guildId(navigation[8]).AutomodTriggerCategory.MEMBERS === tmp2) {
-                              const intl2 = guildId(obj[9]).intl;
-                              let stringResult = intl2.string(guildId(obj[9]).t.sx4E5v);
-                            } else if (guildId(obj[8]).AutomodTriggerCategory.CONTENT === tmp2) {
-                              const intl = guildId(obj[9]).intl;
-                              stringResult = intl.string(guildId(obj[9]).t.fphZb0);
-                            }
-                            obj = { title: stringResult, hasIcons: true, children: arr.map(closure_1_8) };
-                            closure_2_9(guildId(navigation[16]).TableRowGroup, obj, tmp2);
-                          }
-                          const tmp = first(item, 2);
-                        });
-                      }
-                      return mapped;
-                    }
-                  }
-                  tmp29[0] = contentContainerStyle;
-                  tmp29[1] = tmp23;
-                  const tmp30 = closure_9(tmp(tmp2[20]).Form, tmp29);
+                  const obj10 = { contentContainerStyle, children: tmp23 };
+                  const tmp29 = closure_9(tmp(tmp2[20]).Form, obj10);
                   cResult[18] = contentContainerStyle;
                   cResult[19] = tmp23;
-                  cResult[20] = tmp30;
-                  tmp27 = tmp30;
+                  cResult[20] = tmp29;
+                  tmp27 = tmp29;
                 }
                 const obj11 = { style: tmp4.stack, spacing: require("native").space.PX_24, children: null };
-                const items1 = [tmp15, tmp21];
-                obj11.children = items1;
+                const items2 = [tmp15, tmp21];
+                obj11.children = items2;
                 const tmp26 = closure_10(tmp(tmp2[18]).Stack, obj11);
                 cResult[15] = tmp4.stack;
                 cResult[16] = tmp21;
@@ -391,54 +141,45 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
               }
             }
           }
-          class D {
-            constructor() {
-              if (closure_3) {
-                tmp4 = jsx;
-                tmp5 = closure_0;
-                tmp6 = closure_2;
-                obj = { style: null };
-                tmp7 = closure_1;
-                obj.style = closure_1.loading;
-                mapped = jsx(closure_0(closure_2[15]).ActivityIndicator, obj);
-              } else {
-                tmp = globalThis;
-                _Object = Object;
-                tmp2 = closure_7;
-                entries = Object.entries(closure_7);
-                mapped = entries.map((item) => {
-                  [tmp2, arr] = first(item, 2);
-                  if (0 === arr.length) {
-                    return null;
-                  } else {
-                    let obj = navigation;
-                    if (guildId(navigation[8]).AutomodTriggerCategory.MEMBERS === tmp2) {
-                      const intl2 = guildId(obj[9]).intl;
-                      let stringResult = intl2.string(guildId(obj[9]).t.sx4E5v);
-                    } else if (guildId(obj[8]).AutomodTriggerCategory.CONTENT === tmp2) {
-                      const intl = guildId(obj[9]).intl;
-                      stringResult = intl.string(guildId(obj[9]).t.fphZb0);
-                    }
-                    obj = { title: stringResult, hasIcons: true, children: arr.map(closure_1_8) };
-                    closure_2_9(guildId(navigation[16]).TableRowGroup, obj, tmp2);
+          function renderCategories() {
+            if (first) {
+              let obj = { style: closure_1.loading };
+              let mapped = options(ActivityIndicator_ActivityIndicator.ActivityIndicator, obj);
+            } else {
+              const _Object = Object;
+              const entries = Object.entries(availableTriggerTypes);
+              mapped = entries.map((item) => {
+                [tmp2, arr] = first(item, 2);
+                if (0 === arr.length) {
+                  return null;
+                } else {
+                  let obj = navigation;
+                  if (guildId(navigation[8]).AutomodTriggerCategory.MEMBERS === tmp2) {
+                    const intl2 = guildId(obj[9]).intl;
+                    let stringResult = intl2.string(guildId(obj[9]).t.sx4E5v);
+                  } else if (guildId(obj[8]).AutomodTriggerCategory.CONTENT === tmp2) {
+                    const intl = guildId(obj[9]).intl;
+                    stringResult = intl.string(guildId(obj[9]).t.fphZb0);
                   }
-                  const tmp = first(item, 2);
-                });
-              }
-              return mapped;
+                  obj = { title: stringResult, hasIcons: true, children: arr.map(closure_1_8) };
+                  closure_2_9(guildId(navigation[16]).TableRowGroup, obj, tmp2);
+                }
+                const tmp = first(item, 2);
+              });
             }
+            return mapped;
           }
           cResult[6] = availableTriggerTypes;
           cResult[7] = first;
           cResult[8] = tmp9;
           cResult[9] = tmp4.loading;
-          cResult[10] = D;
-          tmp10 = D;
+          cResult[10] = renderCategories;
+          tmp10 = renderCategories;
         }
       }
     }
   }
-  const fn = function c(triggerType) {
+  function renderTriggerType(triggerType) {
     c0 = triggerType;
     let items = rulesByTriggerType[triggerType];
     if (items == null) {
@@ -504,16 +245,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       }
       return mapped;
     }
-  };
+  }
   cResult[0] = createNewEditingRule;
   cResult[1] = guildId;
   cResult[2] = navigation;
   cResult[3] = rulesByTriggerType;
   cResult[4] = setEditingRule;
-  cResult[5] = fn;
-  tmp9 = fn;
+  cResult[5] = renderTriggerType;
+  tmp9 = renderTriggerType;
   const obj3 = guildId(navigation[8]);
-}) : ((contentContainerStyle) => {
+}) : (function GuildSettingsAutoModeration(contentContainerStyle) {
   const guildId = contentContainerStyle.guildId;
   let rulesByTriggerType;
   _slicedToArray = undefined;

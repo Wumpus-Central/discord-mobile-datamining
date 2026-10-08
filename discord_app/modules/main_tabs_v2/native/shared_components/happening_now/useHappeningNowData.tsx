@@ -1,46 +1,46 @@
-// === Module 16024: useHappeningNowData ===
+// === Module 16284: useHappeningNowData ===
 
-// Module 16024 (useHappeningNowData)
+// Module 16284 (useHappeningNowData)
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 6799 */;
-import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 6825 */;
-import ActiveChannelsActionCreators from "ActiveChannelsActionCreators" /* 16025 */;
+import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 6970 */;
+import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 6998 */;
+import ActiveChannelsActionCreators from "ActiveChannelsActionCreators" /* 16285 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5443 */;
-import ActiveChannelsStore from "ActiveChannelsStore" /* 13534 */;
-import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 7050 */;
-import StageInstanceStore from "StageInstanceStore" /* 2056 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7156 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4918 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2062 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5753 */;
+import ActiveChannelsStore from "ActiveChannelsStore" /* 13831 */;
+import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 6059 */;
+import StageInstanceStore from "StageInstanceStore" /* 2068 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7336 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5893 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelMemberStore from "ChannelMemberStore" /* 6792 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildChannelStore from "GuildChannelStore" /* 4513 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
-import PresenceStore from "PresenceStore" /* 4936 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5077 */;
-import UserStore from "UserStore" /* 1377 */;
-import VoiceStateStore from "VoiceStateStore" /* 4915 */;
+import ChannelMemberStore from "ChannelMemberStore" /* 6967 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildChannelStore from "GuildChannelStore" /* 4705 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
+import PresenceStore from "PresenceStore" /* 5106 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5971 */;
+import UserStore from "UserStore" /* 1389 */;
+import VoiceStateStore from "VoiceStateStore" /* 5111 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let GuildScheduledEventStore = fn(7050);
+let GuildScheduledEventStore = fn(6059);
 ({ eventScheduledToStartWithin: closure_8, isEventUpcoming: closure_9, isGuildScheduledEventActive: c10 } = GuildScheduledEventStore);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
-const MemberListRowTypes = fn(6792).MemberListRowTypes;
-let closure_20 = fn(4513).GUILD_SELECTABLE_CHANNELS_KEY;
-const HappeningNowItem = fn(15129).HappeningNowItem;
+const MemberListRowTypes = fn(6967).MemberListRowTypes;
+let closure_20 = fn(4705).GUILD_SELECTABLE_CHANNELS_KEY;
+const HappeningNowItem = fn(15391).HappeningNowItem;
 const Constants = fn(1085);
 ({ ActivityFlags: closure_29, GuildFeatures: closure_30, Permissions: items, StatusTypes: closure_32 } = Constants);
 items = [ChannelStore, ChannelMemberStore, VoiceStateStore, UserStore];
 const ReactCompilerGating = fn(558);
-let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2, arg3) => {
+let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSpammyStoresVersion(arg0, arg1, arg2, arg3) {
   _require = arg0;
   closure_1 = arg1;
   dependencyMap = arg2;
@@ -116,7 +116,7 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, ar
   cResult[3] = arg3;
   cResult[4] = fn;
   tmp2 = fn;
-}) : ((arg0, arg1, arg2, arg3) => {
+}) : (function useSpammyStoresVersion(arg0, arg1, arg2, arg3) {
   closure_0 = arg0;
   closure_1 = arg1;
   closure_2 = arg2;

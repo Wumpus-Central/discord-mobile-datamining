@@ -1,14 +1,14 @@
-// === Module 16330: GuildsBarFooterWrapper ===
+// === Module 16590: GuildsBarFooterWrapper ===
 
-// Module 16330 (GuildsBarFooterWrapper)
+// Module 16590 (GuildsBarFooterWrapper)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4586 */;
-import NativeViewDefault from "NativeView" /* 5983 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 15988 */;
-import GuildsBarConstants from "GuildsBarConstants" /* 16262 */;
-import createStyles from "createStyles" /* 4896 */;
+import useToken from "useToken" /* 4778 */;
+import NativeViewDefault from "NativeView" /* 6166 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 16248 */;
+import GuildsBarConstants from "GuildsBarConstants" /* 16522 */;
+import createStyles from "createStyles" /* 5090 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -19,7 +19,7 @@ let closure_5 = createStyles.createStyles(obj);
 let obj2 = { display: "flex", alignSelf: "stretch", alignItems: "center", gap: nativeDefault.modules.mobile.GUILD_BAR_ITEM_PADDING };
 const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarFooterWrapper.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildsBarFooterWrapper(children) {
   const cResult = c.c(9);
   children = children.children;
   const token = useToken.useToken(nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE);
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
   cResult[1] = token;
   cResult[2] = tmp8;
   tmp7 = tmp8;
-}) : ((children) => {
+}) : (function GuildsBarFooterWrapper(children) {
   const token = useToken.useToken(nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE);
   const tmp2 = closure_5();
   const isHomeDrawerEnabled = useHomeDrawerGesture.useIsHomeDrawerEnabled();

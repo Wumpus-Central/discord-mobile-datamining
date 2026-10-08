@@ -1,6 +1,6 @@
-// === Module 10060: DismissibleContentFrameworkActionCreators ===
+// === Module 10305: DismissibleContentFrameworkActionCreators ===
 
-// Module 10060 (DismissibleContentFrameworkActionCreators)
+// Module 10305 (DismissibleContentFrameworkActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
 

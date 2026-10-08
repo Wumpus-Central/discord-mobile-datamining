@@ -1,15 +1,15 @@
-// === Module 12504: usePreviewableMedia ===
+// === Module 12600: usePreviewableMedia ===
 
-// Module 12504 (usePreviewableMedia)
+// Module 12600 (usePreviewableMedia)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4586 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 5046 */;
-import isForwardMessageDefault from "isForwardMessage" /* 6815 */;
-import inlineStyles from "inlineStyles" /* 8169 */;
-import CirclePlayIcon from "CirclePlayIcon" /* 8401 */;
-import FileIcon from "FileIcon" /* 11814 */;
-import WaveformIcon from "WaveformIcon" /* 12505 */;
+import useToken from "useToken" /* 4778 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 5415 */;
+import isForwardMessageDefault from "isForwardMessage" /* 6988 */;
+import inlineStyles from "inlineStyles" /* 7550 */;
+import CirclePlayIcon from "CirclePlayIcon" /* 8899 */;
+import FileIcon from "FileIcon" /* 11882 */;
+import WaveformIcon from "WaveformIcon" /* 12601 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -149,7 +149,7 @@ const Constants = fn(1085);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const PreviewableMediaTypes = { IMAGE: "image", VIDEO: "video", AUDIO: "audio", FILE: "file", STICKER: "sticker", GIF: "gif", VOICE_MESSAGE: "voice_message" };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj3 = { voiceMessageIconOverlay: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -160,7 +160,7 @@ obj4.paddingBottom = 13;
 obj3.voiceMessageIconOverlay = obj4;
 let closure_11 = createStyles.createStyles(obj3);
 let ReactCompilerGating = fn(558);
-let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceMessageIcon() {
   const cResult = c.c(10);
   const tmp4 = closure_11();
   const token = useToken.useToken(nativeDefault.colors.BACKGROUND_MOD_STRONG);
@@ -215,7 +215,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[2] = tmp10;
   tmp8 = tmp10;
   const tmp5Result = inlineStylesDefault;
-}) : (() => {
+}) : (function VoiceMessageIcon() {
   const tmp = closure_11();
   const token = useToken.useToken(nativeDefault.colors.BACKGROUND_MOD_STRONG);
   const obj3 = { children: null };
@@ -235,7 +235,7 @@ let size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/hooks/usePreviewableMedia.tsx");
 
 export { PreviewableMediaTypes };
-export const usePreviewableMedia = ReactCompilerGating.isReactCompilerEnabled() ? ((message) => {
+export const usePreviewableMedia = ReactCompilerGating.isReactCompilerEnabled() ? (function usePreviewableMedia(message) {
   const cResult = c.c(4);
   if (cResult[0] !== message) {
     const items = [];
@@ -269,7 +269,7 @@ export const usePreviewableMedia = ReactCompilerGating.isReactCompilerEnabled() 
     tmp3 = cResult[1];
   }
   return tmp3;
-}) : ((message) => {
+}) : (function usePreviewableMedia(message) {
   let items = [message];
   return noop.useMemo(() => {
     const items = [];

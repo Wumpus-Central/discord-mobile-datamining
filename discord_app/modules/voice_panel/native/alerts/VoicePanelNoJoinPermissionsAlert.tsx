@@ -1,10 +1,10 @@
-// === Module 17358: VoicePanelNoJoinPermissionsAlert ===
+// === Module 17639: VoicePanelNoJoinPermissionsAlert ===
 
-// Module 17358 (VoicePanelNoJoinPermissionsAlert)
+// Module 17639 (VoicePanelNoJoinPermissionsAlert)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import AlertModal from "AlertModal" /* 5720 */;
-import VoicePanelLockedIconDefault from "VoicePanelLockedIcon" /* 17359 */;
+import AlertModal from "AlertModal" /* 5303 */;
+import VoicePanelLockedIconDefault from "VoicePanelLockedIcon" /* 17640 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/alerts/VoicePanelNoJoinPermissionsAlert.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePanelNoJoinPermissionsAlert() {
   const cResult = c.c(6);
   const dismissModalCallback = AlertModal.useDismissModalCallback();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -51,7 +51,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp15 = cResult[5];
   }
   return tmp15;
-}) : (() => {
+}) : (function VoicePanelNoJoinPermissionsAlert() {
   const obj2 = { header: jsx(VoicePanelLockedIconDefault, {}), title: null, content: null, actions: null };
   const intl = util.intl;
   obj2.title = intl.string(util.t["7/2/3M"]);

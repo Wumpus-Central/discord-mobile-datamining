@@ -1,9 +1,9 @@
-// === Module 16810: useSearchSuggestionsGesture ===
+// === Module 17089: useSearchSuggestionsGesture ===
 
-// Module 16810 (useSearchSuggestionsGesture)
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6147 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 11980 */;
+// Module 17089 (useSearchSuggestionsGesture)
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6326 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12053 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -31,10 +31,10 @@ function containsPoint(arg0, arg1, arg2) {
 containsPoint.__closure = {};
 containsPoint.__workletHash = 11759746841411;
 containsPoint.__initData = { code: "function containsPoint_useSearchSuggestionsGestureTsx2(rect,x,y){return rect.x<x&&x<rect.x+rect.width&&rect.y<y&&y<rect.y+rect.height;}" };
-const __initData = { code: "function useSearchSuggestionsGestureTsx3(e,manager){const{suggestionsMounted,measure,suggestionsRef,detectorRef,measureRelativeTo,containsPoint,dismissed}=this.__closure;manager.fail();const touch=e.allTouches[0];if(touch==null){return;}if(!suggestionsMounted.get()){return;}const suggestions=measure(suggestionsRef);if(suggestions==null){return;}const detector=measure(detectorRef);if(detector==null){return;}const card=measureRelativeTo(suggestions,detector);if(containsPoint(card,touch.x,touch.y)){return;}dismissed.set(true);}" };
+let closure_7 = { code: "function useSearchSuggestionsGestureTsx3(e,manager){const{suggestionsMounted,measure,suggestionsRef,detectorRef,measureRelativeTo,containsPoint,dismissed}=this.__closure;manager.fail();const touch=e.allTouches[0];if(touch==null){return;}if(!suggestionsMounted.get()){return;}const suggestions=measure(suggestionsRef);if(suggestions==null){return;}const detector=measure(detectorRef);if(detector==null){return;}const card=measureRelativeTo(suggestions,detector);if(containsPoint(card,touch.x,touch.y)){return;}dismissed.set(true);}" };
 let closure_8 = { code: "function useSearchSuggestionsGestureTsx4(e,manager){const{suggestionsMounted,measure,suggestionsRef,detectorRef,measureRelativeTo,containsPoint,dismissed}=this.__closure;manager.fail();const touch=e.allTouches[0];if(touch==null)return;if(!suggestionsMounted.get())return;const suggestions=measure(suggestionsRef);if(suggestions==null)return;const detector=measure(detectorRef);if(detector==null)return;const card=measureRelativeTo(suggestions,detector);if(containsPoint(card,touch.x,touch.y))return;dismissed.set(true);}" };
 const ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSearchSuggestionsContext() {
   context = noop.useContext(context);
   if (null == context) {
     const _Error = Error;
@@ -43,7 +43,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     return context;
   }
-}) : (() => {
+}) : (function useSearchSuggestionsContext() {
   context = noop.useContext(context);
   if (null == context) {
     const _Error = Error;
@@ -58,7 +58,7 @@ let result = size.fileFinishedImporting("modules/search/native/components/layout
 
 export const SearchSuggestionsProvider = context.Provider;
 export const useSearchSuggestionsContext = tmp3;
-export const useSearchSuggestionsGesture = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useSearchSuggestionsGesture = ReactCompilerGating.isReactCompilerEnabled() ? (function useSearchSuggestionsGesture(arg0) {
   _require = arg0;
   const cResult = require("c").c(25);
   let obj = require("c");
@@ -121,7 +121,7 @@ export const useSearchSuggestionsGesture = ReactCompilerGating.isReactCompilerEn
                 }
               }
               const obj6 = { suggestionsRef: animatedRef1, suggestionsMounted: sharedValue1, dismissed: sharedValue, setDismissed: T };
-              class S {
+              class R {
                 constructor(arg0, arg1) {
                   failResult = arg1.fail();
                   first = arg0.allTouches[0];
@@ -176,7 +176,7 @@ export const useSearchSuggestionsGesture = ReactCompilerGating.isReactCompilerEn
         }
         const Gesture = tmp(tmp2[5]).Gesture;
         const ManualResult = Gesture.Manual();
-        class S {
+        class R {
           constructor(arg0, arg1) {
             failResult = arg1.fail();
             first = arg0.allTouches[0];
@@ -222,10 +222,15 @@ export const useSearchSuggestionsGesture = ReactCompilerGating.isReactCompilerEn
           }
         }
         const obj7 = { suggestionsMounted: sharedValue1, measure: tmp(tmp2[3]).measure, suggestionsRef: animatedRef1, detectorRef: animatedRef, measureRelativeTo, containsPoint, dismissed: sharedValue };
-        S.__closure = obj7;
-        S.__workletHash = 4841283826141;
-        S.__initData = __initData;
-        const onTouchesDownResult = Gesture.Manual().manualActivation(true).onTouchesDown(S);
+        R.__closure = obj7;
+        R.__workletHash = 4841283826141;
+        class S {
+          constructor() {
+            obj = closure_1(closure_2[4]);
+            return obj.subscribeTextInputValue(closure_0, closure_5);
+          }
+        }
+        const onTouchesDownResult = Gesture.Manual().manualActivation(true).onTouchesDown(R);
         cResult[9] = animatedRef;
         cResult[10] = sharedValue;
         cResult[11] = sharedValue1;
@@ -241,15 +246,18 @@ export const useSearchSuggestionsGesture = ReactCompilerGating.isReactCompilerEn
     cResult[8] = items;
     tmp10 = items;
   }
-  const fn2 = function _() {
-    return SearchPlatformUtilsDefault.subscribeTextInputValue(closure_0, closure_5);
-  };
+  class S {
+    constructor() {
+      obj = closure_1(closure_2[4]);
+      return obj.subscribeTextInputValue(closure_0, closure_5);
+    }
+  }
   cResult[2] = arg0;
   cResult[3] = tmp8;
-  cResult[4] = fn2;
-  tmp9 = fn2;
+  cResult[4] = S;
+  tmp9 = S;
   const obj5 = require("ReanimatedRexport");
-}) : ((arg0) => {
+}) : (function useSearchSuggestionsGesture(arg0) {
   _require = arg0;
   const sharedValue = require("ReanimatedRexport").useSharedValue(false);
   let obj = require("ReanimatedRexport");

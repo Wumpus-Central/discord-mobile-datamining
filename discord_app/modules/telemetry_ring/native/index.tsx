@@ -1,12 +1,12 @@
-// === Module 1244: TelemetryRingLifecycle ===
+// === Module 1256: TelemetryRingLifecycle ===
 
-// Module 1244 (TelemetryRingLifecycle)
-import telemetry_ring_TelemetryRingLifecycleDefault from "telemetry_ring/TelemetryRingLifecycle" /* 1245 */;
-import ZoomedInTelemetryDefault from "ZoomedInTelemetry" /* 1990 */;
-import ZoomedInAnalyticsExperiment from "ZoomedInAnalyticsExperiment" /* 1991 */;
-import TelemetryRingNative from "TelemetryRingNative" /* 1994 */;
-import SentryTelemetryDefault from "SentryTelemetry" /* 13912 */;
-import NormalTelemetryDefault from "NormalTelemetry" /* 13913 */;
+// Module 1256 (TelemetryRingLifecycle)
+import telemetry_ring_TelemetryRingLifecycleDefault from "telemetry_ring/TelemetryRingLifecycle" /* 1257 */;
+import ZoomedInTelemetryDefault from "ZoomedInTelemetry" /* 2002 */;
+import ZoomedInAnalyticsExperiment from "ZoomedInAnalyticsExperiment" /* 2003 */;
+import TelemetryRingNative from "TelemetryRingNative" /* 2006 */;
+import SentryTelemetryDefault from "SentryTelemetry" /* 14215 */;
+import NormalTelemetryDefault from "NormalTelemetry" /* 14216 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/telemetry_ring/native/index.tsx");

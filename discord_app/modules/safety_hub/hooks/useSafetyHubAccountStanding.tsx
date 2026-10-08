@@ -1,20 +1,20 @@
-// === Module 11507: useSafetyHubAccountStanding ===
+// === Module 11499: useSafetyHubAccountStanding ===
 
-// Module 11507 (useSafetyHubAccountStanding)
+// Module 11499 (useSafetyHubAccountStanding)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import SafetyHubStore from "SafetyHubStore" /* 8139 */;
+import SafetyHubStore from "SafetyHubStore" /* 5920 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/hooks/useSafetyHubAccountStanding.tsx");
 
-export const useSafetyHubAccountStanding = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useSafetyHubAccountStanding = ReactCompilerGating.isReactCompilerEnabled() ? (function useSafetyHubAccountStanding() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [SafetyHubStore];
-    const fn = function o() {
+    const fn = function u() {
       return accountStanding.getAccountStanding();
     };
     cResult[0] = items;
@@ -25,7 +25,7 @@ export const useSafetyHubAccountStanding = ReactCompilerGating.isReactCompilerEn
     [tmp4, tmp5] = cResult;
   }
   return initialize.useStateFromStores(tmp4, tmp5);
-}) : (() => {
+}) : (function useSafetyHubAccountStanding() {
   const items = [SafetyHubStore];
   return initialize.useStateFromStores(items, () => accountStanding.getAccountStanding());
 });

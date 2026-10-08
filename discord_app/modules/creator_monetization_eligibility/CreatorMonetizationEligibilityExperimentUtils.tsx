@@ -1,17 +1,17 @@
-// === Module 6774: CreatorMonetizationEligibilityExperimentUtils ===
+// === Module 6950: CreatorMonetizationEligibilityExperimentUtils ===
 
-// Module 6774 (CreatorMonetizationEligibilityExperimentUtils)
+// Module 6950 (CreatorMonetizationEligibilityExperimentUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import UserStore from "UserStore" /* 1377 */;
-import BillingInfoStore from "BillingInfoStore" /* 4536 */;
+import UserStore from "UserStore" /* 1389 */;
+import BillingInfoStore from "BillingInfoStore" /* 4728 */;
 
 require = fn;
 const GuildFeatures = fn(1085).GuildFeatures;
 const set = new Set(["US"]);
 fn(558);
 const ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsUserInCreatorMonetizationEligibleCountry() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore, BillingInfoStore];
@@ -41,7 +41,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     [tmp4, tmp5] = cResult;
   }
   return initialize.useStateFromStores(tmp4, tmp5);
-}) : (() => {
+}) : (function useIsUserInCreatorMonetizationEligibleCountry() {
   const items = [UserStore, BillingInfoStore];
   return initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
@@ -110,7 +110,7 @@ export { useIsRavenOnboardingGuild };
 export { isRavenOnboardingGuild };
 export { useIsWhitegloveOnboardingGuild };
 export { isWhitegloveOnboardingGuild };
-export const useIsExpeditedOnboardingGuild = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
+export const useIsExpeditedOnboardingGuild = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsExpeditedOnboardingGuild(id) {
   id = undefined;
   if (id != null) {
     id = id.id;
@@ -125,7 +125,7 @@ export const useIsExpeditedOnboardingGuild = ReactCompilerGating.isReactCompiler
     tmp2 = hasItem;
   }
   return tmp2;
-}) : ((id) => {
+}) : (function useIsExpeditedOnboardingGuild(id) {
   id = undefined;
   if (id != null) {
     id = id.id;

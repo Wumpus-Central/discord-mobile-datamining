@@ -1,13 +1,12 @@
-// === Module 13653: VoiceStateAnalytics ===
+// === Module 13888: VoiceStateAnalytics ===
 
-// Module 13653 (VoiceStateAnalytics)
+// Module 13888 (VoiceStateAnalytics)
 import _mod12 from "module_12" /* 12 */;
-import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import VoiceStateStore from "VoiceStateStore" /* 4915 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4920 */;
+import VoiceStateStore from "VoiceStateStore" /* 5111 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5114 */;
 
 require = fn;
-const SpeakingFlags = fn(4921).SpeakingFlags;
+const SpeakingFlags = fn(5115).SpeakingFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("lib/VoiceStateAnalytics.tsx");
 class VoiceStateAnalytics {
@@ -46,10 +45,9 @@ prototype["updateVoiceStates"] = function updateVoiceStates(userId, channelId) {
 prototype["getStats"] = function getStats() {
   return { max_voice_state_count: this.maxVoiceStateCount, total_voice_state_count: this.totalParticipants.size, max_listener_count: this.maxListenerCount, total_listener_count: this.totalListeners.size, max_speaker_count: this.maxSpeakerCount, total_speaker_count: Object.keys(this.totalSpeakers).length };
 };
-prototype["getUserVoiceSettingsStats"] = function getUserVoiceSettingsStats(arg0) {
-  const settings = MediaEngineStore.getSettings(arg0);
-  const set = new Set(Object.keys(settings.localMutes));
-  const set1 = new Set(Object.keys(settings.localVolumes));
+prototype["getUserVoiceSettingsStats"] = function getUserVoiceSettingsStats(localMutes) {
+  const set = new Set(Object.keys(localMutes.localMutes));
+  const set1 = new Set(Object.keys(localMutes.localVolumes));
   set1.delete(this.userId);
   set.delete(this.userId);
   const obj = { num_local_voice_user_mutes: null, num_local_voice_volumes: null };

@@ -1,27 +1,27 @@
-// === Module 14838: BountiesScrollVideoItem ===
+// === Module 15099: BountiesScrollVideoItem ===
 
-// Module 14838 (BountiesScrollVideoItem)
-import QuestContent from "QuestContent" /* 5635 */;
-import AdCreativeType from "AdCreativeType" /* 5637 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 10971 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 14839 */;
+// Module 15099 (BountiesScrollVideoItem)
+import QuestContent from "QuestContent" /* 5982 */;
+import AdCreativeType from "AdCreativeType" /* 5984 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 11164 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 15100 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VirtualCurrencyStore from "VirtualCurrencyStore" /* 8543 */;
-import BountyStore from "BountyStore" /* 7199 */;
+import VirtualCurrencyStore from "VirtualCurrencyStore" /* 9028 */;
+import BountyStore from "BountyStore" /* 7378 */;
 
 require = fn;
 const View = fn(17).View;
-const BOUNTY_ORB_AMOUNT = fn(5630).BOUNTY_ORB_AMOUNT;
+const BOUNTY_ORB_AMOUNT = fn(5977).BOUNTY_ORB_AMOUNT;
 let jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((isActive) => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useResumeOnActive(isActive) {
   const cResult = isActive(576).c(6);
   isActive = isActive.isActive;
   const playerRef = isActive.playerRef;
   dependencyMap = noop.useRef(true);
-  noop.useRef(null);
+  asyncGeneratorStep = noop.useRef(null);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function o(current) {
       closure_3.current = current;
@@ -47,31 +47,40 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((isActive) => {
     }
     return tmp6;
   }
-  const fn2 = function y() {
-    if (ref.current) {
-      tmp.current = false;
-    } else {
-      let tmp2 = isActive;
-      if (isActive) {
-        tmp2 = ref2.current === AdsVideoTypes.PlayerState.PAUSED;
-      }
-      if (tmp2) {
-        const current = playerRef.current;
-        if (current != null) {
-          current.play();
+  class S {
+    constructor() {
+      if (closure_2.current) {
+        flag = false;
+        tmp.current = false;
+      } else {
+        tmp2 = isActive;
+        if (isActive) {
+          tmp3 = closure_3;
+          tmp4 = closure_0;
+          tmp5 = closure_2;
+          tmp2 = closure_3.current === closure_0(closure_2[10]).PlayerState.PAUSED;
+        }
+        if (tmp2) {
+          tmp6 = playerRef;
+          current = playerRef.current;
+          tmp7 = null;
+          if (current != null) {
+            playResult = current.play();
+          }
         }
       }
+      return;
     }
-  };
+  }
   const items = [isActive, playerRef];
   cResult[1] = isActive;
   cResult[2] = playerRef;
-  cResult[3] = fn2;
+  cResult[3] = S;
   cResult[4] = items;
   tmp4 = items;
-  tmp3 = fn2;
+  tmp3 = S;
   const obj = isActive(576);
-}) : ((isActive) => {
+}) : (function useResumeOnActive(isActive) {
   isActive = isActive.isActive;
   const playerRef = isActive.playerRef;
   noop.useRef(true);
@@ -99,7 +108,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((isActive) => {
   return { handlePlayerStateChange };
 });
 ReactCompilerGating = fn(558);
-let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((bounty) => {
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function BountiesScrollVideoItemInner(bounty) {
   const cResult = require("c").c(99);
   bounty = bounty.bounty;
   _require = bounty;
@@ -352,7 +361,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((bounty) => {
         }
       }
     });
-    const fn = function() {
+    function t10() {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -361,11 +370,11 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((bounty) => {
         applyArgumentsResult = apply(self, arguments);
       }
       return applyArgumentsResult;
-    };
+    }
     cResult[12] = bounty.id;
     cResult[13] = isActive;
     cResult[14] = sourceQuestContent;
-    cResult[15] = fn;
+    cResult[15] = t10;
     const tmp11Result4 = _slicedToArray(noop.useState(0), 2);
   }
   const size = { width, height };
@@ -374,7 +383,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((bounty) => {
   cResult[2] = size;
   let obj = require("c");
   tmp = _require;
-}) : ((bounty) => {
+}) : (function BountiesScrollVideoItemInner(bounty) {
   bounty = bounty.bounty;
   const sourceQuestContent = bounty.sourceQuestContent;
   const width = bounty.width;
@@ -619,7 +628,7 @@ ReactCompilerGating = fn(558);
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesScrollVideoItem.tsx");
 
-export const BountiesScrollVideoItem = ReactCompilerGating.isReactCompilerEnabled() ? ((bounty) => {
+export const BountiesScrollVideoItem = ReactCompilerGating.isReactCompilerEnabled() ? (function BountiesScrollVideoItem(bounty) {
   const cResult = bounty(width[9]).c(18);
   bounty = bounty.bounty;
   const sourceQuestContent = bounty.sourceQuestContent;
@@ -695,7 +704,7 @@ export const BountiesScrollVideoItem = ReactCompilerGating.isReactCompilerEnable
   cResult[11] = width;
   cResult[12] = fn;
   tmp10 = fn;
-}) : ((bounty) => {
+}) : (function BountiesScrollVideoItem(bounty) {
   bounty = bounty.bounty;
   const sourceQuestContent = bounty.sourceQuestContent;
   ({ width: dependencyMap, height: asyncGeneratorStep, index: _slicedToArray, isActive } = bounty);
@@ -722,10 +731,10 @@ export const BountiesScrollVideoItem = ReactCompilerGating.isReactCompilerEnable
   if (flag4 === undefined) {
     flag4 = false;
   }
-  return flag3(bounty(10971).BillableAdPlacementImpressionTrackerNative, {
+  return flag3(bounty(11164).BillableAdPlacementImpressionTrackerNative, {
     adContentId: bounty.id,
-    adCreativeType: bounty(5637).AdCreativeType.BOUNTY,
-    questContent: bounty(5635).QuestContent.VIDEO_MODAL_MOBILE,
+    adCreativeType: bounty(5984).AdCreativeType.BOUNTY,
+    questContent: bounty(5982).QuestContent.VIDEO_MODAL_MOBILE,
     sourceQuestContent,
     overrideVisibility: isActive,
     children() {

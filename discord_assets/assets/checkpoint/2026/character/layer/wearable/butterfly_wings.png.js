@@ -1,6 +1,6 @@
-// === Module 5292: ? ===
+// === Module 5604: ? ===
 
-// Module 5292
+// Module 5604
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/wearable/butterfly_wings.png.js");

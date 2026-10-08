@@ -1,13 +1,10 @@
-// === Module 4934: MediaEngineStatsStore ===
+// === Module 5128: MediaEngineStatsStore ===
 
-// Module 4934 (MediaEngineStatsStore)
+// Module 5128 (MediaEngineStatsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 4948 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4935 */;
 
-require = fn;
 function updateAveragedStatsHelper(minVersion, arr5, arg2, arr, arr2) {
   let tmp = arg2;
   const found = arr.find((type) => "video" === type.type);
@@ -192,7 +189,7 @@ class MediaEngineStatsStore extends Store {
 }
 const prototype = MediaEngineStatsStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(AuthenticationStore, StreamRTCConnectionStore);
+  this.waitFor(AuthenticationStore);
 };
 prototype["getConnectionStats"] = function getConnectionStats(mediaEngineConnectionId) {
   let tmp = null;
@@ -237,7 +234,7 @@ prototype["getAccumulatedPerformanceStats"] = function getAccumulatedPerformance
   if (null == mediaEngineConnectionId) {
     return null;
   } else {
-    const tmp2 = "long" === long ? closure_5 : closure_6[mediaEngineConnectionId];
+    const tmp2 = "long" === long ? closure_2 : closure_3[mediaEngineConnectionId];
     let tmp3;
     if (tmp2 != null) {
       tmp3 = tmp2[ownerId];
@@ -272,8 +269,8 @@ const mediaEngineStatsStore = new MediaEngineStatsStore(DispatcherDefault, {
         let tmp12 = prop;
         let tmp13 = nextResult;
         let tmp15 = getStatsHistoryAtIndex(tmp3, 15);
-        let tmp10Result = updateAveragedStats(closure_6, tmp12, tmp13, tmp15);
-        let tmp10Result2 = updateAveragedStats(closure_5, tmp3, tmp2, arr5);
+        let tmp10Result = updateAveragedStats(closure_3, tmp12, tmp13, tmp15);
+        let tmp10Result2 = updateAveragedStats(closure_2, tmp3, tmp2, arr5);
       }
       continue;
     }
@@ -285,35 +282,21 @@ const mediaEngineStatsStore = new MediaEngineStatsStore(DispatcherDefault, {
       delete tmp[tmp2];
     }
   },
-  STREAM_UPDATE: function handleStreamUpdate(streamKey) {
-    streamKey = streamKey.streamKey;
-    if (streamKey.paused) {
-      return false;
-    } else {
-      const rTCConnection = StreamRTCConnectionStore.getRTCConnection(streamKey);
-      let mediaEngineConnectionId;
-      if (rTCConnection != null) {
-        mediaEngineConnectionId = rTCConnection.getMediaEngineConnectionId();
-      }
-      if (null == mediaEngineConnectionId) {
-        return false;
-      } else {
-        const ownerId = StreamKeyUtils.decodeStreamKey(streamKey).ownerId;
-        let tmp11;
-        if (dependencyMap2[mediaEngineConnectionId] != null) {
-          tmp11 = tmp10[ownerId];
-        }
-        if (null != tmp11) {
-          delete tmp3[tmp2];
-        }
-        let tmp15;
-        if (dependencyMap3[mediaEngineConnectionId] != null) {
-          tmp15 = tmp14[ownerId];
-        }
-        if (null != tmp15) {
-          delete tmp[tmp2];
-        }
-      }
+  MEDIA_ENGINE_CONNECTION_USER_STATS_RESET: function handleUserStatsReset(arg0) {
+    ({ mediaEngineConnectionId, userId } = arg0);
+    let tmp6;
+    if (dependencyMap2[mediaEngineConnectionId] != null) {
+      tmp6 = tmp5[userId];
+    }
+    if (null != tmp6) {
+      delete tmp3[tmp2];
+    }
+    let tmp10;
+    if (dependencyMap3[mediaEngineConnectionId] != null) {
+      tmp10 = tmp9[userId];
+    }
+    if (null != tmp10) {
+      delete tmp[tmp2];
     }
   },
   RTC_CONNECTION_VIDEO: function handleVideo(arg0) {

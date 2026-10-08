@@ -1,18 +1,18 @@
-// === Module 6943: NativeCheckoutStore ===
+// === Module 7132: NativeCheckoutStore ===
 
-// Module 6943 (NativeCheckoutStore)
-import _mod1254 from "module_1254" /* 1254 */;
-import _mod4498 from "module_4498" /* 4498 */;
-import OrderActionCreators from "OrderActionCreators" /* 6755 */;
-import ContextUtilsDefault from "ContextUtils" /* 6947 */;
-import payments_OrderActionCreators from "payments/OrderActionCreators" /* 6948 */;
+// Module 7132 (NativeCheckoutStore)
+import _mod1266 from "module_1266" /* 1266 */;
+import _mod4690 from "module_4690" /* 4690 */;
+import OrderActionCreators from "OrderActionCreators" /* 6931 */;
+import ContextUtilsDefault from "ContextUtils" /* 7136 */;
+import payments_OrderActionCreators from "payments/OrderActionCreators" /* 7137 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import OrderRecord from "OrderRecord" /* 6944 */;
+import OrderRecord from "OrderRecord" /* 7133 */;
 
 require = fn;
-const OrderStatus = fn(4875).OrderStatus;
+const OrderStatus = fn(5069).OrderStatus;
 [exports.NativeCheckoutStoreContext, closure_7] = ContextUtilsDefault();
 let context = noop.createContext("unset_context");
 const ReactCompilerGating = fn(558);
@@ -20,33 +20,33 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/checkout/native/NativeCheckoutStore.tsx");
 
 export const NativeCheckoutStoreContextOrNull = context;
-export const useNativeCheckoutStore = ReactCompilerGating.isReactCompilerEnabled() ? ((cResult, shallow) => {
+export const useNativeCheckoutStore = ReactCompilerGating.isReactCompilerEnabled() ? (function useNativeCheckoutStore(cResult, shallow) {
   if (undefined === shallow) {
-    shallow = _mod4498.shallow;
+    shallow = _mod4690.shallow;
   }
   const tmp3 = closure_7();
-  return _mod1254.useStoreWithEqualityFn(tmp3, cResult, shallow);
-}) : ((cResult) => {
+  return _mod1266.useStoreWithEqualityFn(tmp3, cResult, shallow);
+}) : (function useNativeCheckoutStore(cResult) {
   if (shallow === undefined) {
-    shallow = _mod4498.shallow;
+    shallow = _mod4690.shallow;
   }
   const tmp3 = closure_7();
-  return _mod1254.useStoreWithEqualityFn(tmp3, cResult, shallow);
+  return _mod1266.useStoreWithEqualityFn(tmp3, cResult, shallow);
 });
 export const useNativeCheckoutStoreOrNull = function useNativeCheckoutStoreOrNull(cResult) {
   if (shallow === undefined) {
-    shallow = _mod4498.shallow;
+    shallow = _mod4690.shallow;
   }
   context = noop.useContext(context);
   let storeWithEqualityFn = null;
   if ("unset_context" !== context) {
-    storeWithEqualityFn = _mod1254.useStoreWithEqualityFn(context, cResult, shallow);
+    storeWithEqualityFn = _mod1266.useStoreWithEqualityFn(context, cResult, shallow);
   }
   return storeWithEqualityFn;
 };
 export const createNativeStore = function createNativeStore(arg0) {
   ({ order: require, checkoutInitParameters: importDefault, contextMetadata: dependencyMap, analyticsFields: asyncGeneratorStep, paymentGateway: noop, orderRequired: OrderRecord, onOrderRetryCancellation: OrderStatus, initialSubscriptionFacet: closure_7 } = arg0);
-  return _mod1254.createWithEqualityFn((arg0, arg1) => {
+  return _mod1266.createWithEqualityFn((arg0, arg1) => {
     closure_0 = arg0;
     checkoutInitParameters = arg1;
     function runPatchOrderLineItems() {
@@ -432,7 +432,7 @@ export const createNativeStore = function createNativeStore(arg0) {
         }
       }
     });
-    obj.patchOrderLineItems = function() {
+    obj.patchOrderLineItems = function patchOrderLineItems() {
       const self = this;
       const apply = closure_10.apply;
       if (typeof apply === "unknown") {
@@ -540,7 +540,7 @@ export const createNativeStore = function createNativeStore(arg0) {
         }
       }
     });
-    obj.recreateOrder = function() {
+    obj.recreateOrder = function recreateOrder() {
       const self = this;
       const apply = closure_9.apply;
       if (typeof apply === "unknown") {
@@ -647,7 +647,7 @@ export const createNativeStore = function createNativeStore(arg0) {
         }
       }
     });
-    obj.revertOrderToDraft = function() {
+    obj.revertOrderToDraft = function revertOrderToDraft() {
       const self = this;
       const apply = closure_8.apply;
       if (typeof apply === "unknown") {
@@ -675,5 +675,5 @@ export const createNativeStore = function createNativeStore(arg0) {
     };
     obj.onOrderRetryCancellation = runRevertOrderToDraft;
     return obj;
-  }, _mod4498.shallow);
+  }, _mod4690.shallow);
 };

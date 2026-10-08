@@ -1,9 +1,9 @@
-// === Module 5593: useGuildMemberDisplayRole ===
+// === Module 5959: useGuildMemberDisplayRole ===
 
-// Module 5593 (useGuildMemberDisplayRole)
-import PermissionUtilsAll from "PermissionUtils" /* 4520 */;
-import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import GuildStore from "GuildStore" /* 2074 */;
+// Module 5959 (useGuildMemberDisplayRole)
+import PermissionUtilsAll from "PermissionUtils" /* 4712 */;
+import GuildMemberStore from "GuildMemberStore" /* 2124 */;
+import GuildStore from "GuildStore" /* 2086 */;
 
 const require = globalThis.__r;
 
@@ -36,7 +36,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useGuildMemberDisplayRole.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildMemberDisplayRole(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
   const cResult = require("c").c(5);
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     }
     return tmp(504).useStateFromStores(first, tmp7, tmp8);
   }
-  const fn = function u() {
+  const fn = function n() {
     const items = [GuildStore, GuildMemberStore];
     return getHighestHoistedRole(closure_0, closure_1, items);
   };
@@ -67,7 +67,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   tmp7 = fn;
   const obj = require("c");
   tmp = _require;
-}) : ((arg0, arg1) => {
+}) : (function useGuildMemberDisplayRole(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
   let items = [GuildStore, GuildMemberStore];

@@ -1,14 +1,14 @@
-// === Module 5617: Button/BaseButton ===
+// === Module 5383: Button/BaseButton ===
 
-// Module 5617 (Button/BaseButton)
+// Module 5383 (Button/BaseButton)
 import c from "c" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import GlobalUtils from "GlobalUtils" /* 1375 */;
-import native from "native" /* 4595 */;
-import ButtonHooks from "ButtonHooks" /* 5608 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import GlobalUtils from "GlobalUtils" /* 1387 */;
+import native from "native" /* 4787 */;
+import ButtonHooks from "ButtonHooks" /* 5381 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport_mod from "ReanimatedRexport" /* 4618 */;
+import ReanimatedRexport_mod from "ReanimatedRexport" /* 4810 */;
 
 require = fn;
 let closure_2 = ["style"];
@@ -16,10 +16,10 @@ let closure_3 = ["style"];
 get_ActivityIndicator = fn(17);
 ({ Pressable, TouchableOpacity } = get_ActivityIndicator);
 const ThemeTypes = fn(1085).ThemeTypes;
-const IOS_POINTER_STYLE = fn(5618).IOS_POINTER_STYLE;
+const IOS_POINTER_STYLE = fn(5384).IOS_POINTER_STYLE;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function useThemeOverrideVariant(arg0) {
   native;
   if ("primary-overlay" === arg0) {
     let DARK = ThemeTypes.LIGHT;
@@ -29,7 +29,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
   }
   return DARK;
-}) : ((arg0) => {
+}) : (function useThemeOverrideVariant(arg0) {
   native;
   if ("primary-overlay" === arg0) {
     let DARK = ThemeTypes.LIGHT;
@@ -40,10 +40,10 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   return DARK;
 });
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_10 = createStyles.createStyles({ disabled: { opacity: 0.5 } });
 ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, onLayout, onPressIn, onPressOut) => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useButtonPressAnimationPropsIfPressed(arg0, arg1, onLayout, onPressIn, onPressOut) {
   const cResult = c.c(10);
   const buttonPressAnimationProps = ButtonHooks.useButtonPressAnimationProps(arg0, arg1, onLayout, onPressIn, onPressOut);
   if (cResult[0] !== buttonPressAnimationProps) {
@@ -83,7 +83,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, on
     cResult[9] = obj5;
     tmp8 = obj5;
   }
-}) : ((arg0, arg1, onLayout, onPressIn, onPressOut) => {
+}) : (function useButtonPressAnimationPropsIfPressed(arg0, arg1, onLayout, onPressIn, onPressOut) {
   const buttonPressAnimationProps = ButtonHooks.useButtonPressAnimationProps(arg0, arg1, onLayout, onPressIn, onPressOut);
   if (null == arg0) {
     const obj2 = { animatedScaleStyles: "Array", buttonAnimationProps: 0 };
@@ -103,9 +103,9 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Button/native/BaseButton.native.tsx");
 
-export const BaseButton = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, ref) => {
+export const BaseButton = ReactCompilerGating.isReactCompilerEnabled() ? (function BaseButton(arg0) {
   const cResult = c.c(51);
-  ({ children, style, variant, disabled, loading, pressed, onPress, onPressDisabled, onPressIn, onPressOut, onLongPress, onLayout, accessible, accessibilityRole, accessibilityLabel, accessibilityHint, accessibilityValue, accessibilityState, accessibilityActions, onAccessibilityAction, accessibilityElementsHidden, importantForAccessibility, pointerEvents, hitSlop, scaleAmountInPx } = arg0);
+  ({ children, style, variant, disabled, loading, pressed, onPress, onPressDisabled, onPressIn, onPressOut, onLongPress, onLayout, accessible, accessibilityRole, accessibilityLabel, accessibilityHint, accessibilityValue, accessibilityState, accessibilityActions, onAccessibilityAction, accessibilityElementsHidden, importantForAccessibility, pointerEvents, hitSlop, scaleAmountInPx, ref } = arg0);
   let str = "primary";
   if (undefined !== variant) {
     str = variant;
@@ -161,9 +161,9 @@ export const BaseButton = noop.forwardRef(ReactCompilerGating.isReactCompilerEna
                                               if (cResult[27] === ref) {
                                                 if (cResult[28] === accessibilityRole) {
                                                   if (cResult[29] === tmp13) {
-                                                    let tmp31 = cResult[30];
+                                                    let tmp30 = cResult[30];
                                                   }
-                                                  return tmp31;
+                                                  return tmp30;
                                                 }
                                               }
                                             }
@@ -202,7 +202,7 @@ export const BaseButton = noop.forwardRef(ReactCompilerGating.isReactCompilerEna
               obj2.disabled = tmp6;
               obj2.hitSlop = hitSlop;
               obj2.children = tmp13;
-              const tmp37 = <closure_12 />;
+              const tmp36 = <closure_12 />;
               cResult[11] = accessibilityActions;
               cResult[12] = accessibilityElementsHidden;
               cResult[13] = accessibilityHint;
@@ -222,13 +222,13 @@ export const BaseButton = noop.forwardRef(ReactCompilerGating.isReactCompilerEna
               cResult[27] = ref;
               cResult[28] = accessibilityRole;
               cResult[29] = tmp13;
-              cResult[30] = tmp37;
-              tmp31 = tmp37;
+              cResult[30] = tmp36;
+              tmp30 = tmp36;
             } else {
               if (cResult[31] === accessibilityElementsHidden) {
                 if (cResult[32] === accessibilityHint) {
                   if (cResult[33] === accessibilityLabel) {
-                    let tmp19 = cResult[34];
+                    let tmp18 = cResult[34];
                   }
                   let isAndroidResult = accessible;
                   if (accessible == null) {
@@ -251,27 +251,27 @@ export const BaseButton = noop.forwardRef(ReactCompilerGating.isReactCompilerEna
                     cResult[35] = buttonAnimationProps;
                     cResult[36] = ce;
                     cResult[37] = re;
-                    let tmp23 = re;
-                    let tmp22 = ce;
+                    let tmp22 = re;
+                    let tmp21 = ce;
                   } else {
-                    tmp22 = cResult[36];
-                    tmp23 = cResult[37];
+                    tmp21 = cResult[36];
+                    tmp22 = cResult[37];
                   }
                   if (cResult[38] === accessibilityElementsHidden) {
                     if (cResult[39] === buttonAnimationProps) {
                       if (cResult[40] === tmp16) {
-                        if (cResult[41] === tmp19) {
+                        if (cResult[41] === tmp18) {
                           if (cResult[42] === hitSlop) {
                             if (cResult[43] === importantForAccessibility) {
                               if (cResult[44] === onPress) {
                                 if (cResult[45] === ref) {
-                                  if (cResult[46] === tmp22) {
-                                    if (cResult[47] === tmp23) {
-                                      if (cResult[48] === tmp21) {
+                                  if (cResult[46] === tmp21) {
+                                    if (cResult[47] === tmp22) {
+                                      if (cResult[48] === tmp20) {
                                         if (cResult[49] === tmp13) {
-                                          let tmp24 = cResult[50];
+                                          let tmp23 = cResult[50];
                                         }
-                                        return tmp24;
+                                        return tmp23;
                                       }
                                     }
                                   }
@@ -288,31 +288,31 @@ export const BaseButton = noop.forwardRef(ReactCompilerGating.isReactCompilerEna
                   obj3.ref = ref;
                   obj3.accessible = !isAndroidResult;
                   obj3.accessibilityRole = "none";
-                  obj3.accessibilityLabel = tmp19;
+                  obj3.accessibilityLabel = tmp18;
                   obj3.accessibilityElementsHidden = accessibilityElementsHidden;
                   obj3.activeOpacity = 1;
                   obj3.importantForAccessibility = importantForAccessibility;
                   obj3.style = tmp16;
                   obj3.onPress = onPress;
-                  obj3.onPressIn = tmp22;
-                  obj3.onPressOut = tmp23;
+                  obj3.onPressIn = tmp21;
+                  obj3.onPressOut = tmp22;
                   obj3.hitSlop = hitSlop;
                   obj3.children = tmp13;
-                  const tmp30 = <closure_13 />;
+                  const tmp29 = <closure_13 />;
                   cResult[38] = accessibilityElementsHidden;
                   cResult[39] = buttonAnimationProps;
                   cResult[40] = tmp16;
-                  cResult[41] = tmp19;
+                  cResult[41] = tmp18;
                   cResult[42] = hitSlop;
                   cResult[43] = importantForAccessibility;
                   cResult[44] = onPress;
                   cResult[45] = ref;
-                  cResult[46] = tmp22;
-                  cResult[47] = tmp23;
+                  cResult[46] = tmp21;
+                  cResult[47] = tmp22;
                   cResult[48] = !isAndroidResult;
                   cResult[49] = tmp13;
-                  cResult[50] = tmp30;
-                  tmp24 = tmp30;
+                  cResult[50] = tmp29;
+                  tmp23 = tmp29;
                 }
               }
               let str3 = "";
@@ -325,7 +325,7 @@ export const BaseButton = noop.forwardRef(ReactCompilerGating.isReactCompilerEna
               cResult[32] = accessibilityHint;
               cResult[33] = accessibilityLabel;
               cResult[34] = str3;
-              tmp19 = str3;
+              tmp18 = str3;
             }
           }
         }
@@ -357,7 +357,7 @@ export const BaseButton = noop.forwardRef(ReactCompilerGating.isReactCompilerEna
   cResult[3] = obj5;
   tmp9 = obj5;
   const tmp8 = closure_11(pressed, scaleAmountInPx, onLayout, onPressIn, onPressOut);
-}) : ((disabled, ref) => {
+}) : (function BaseButton(disabled) {
   ({ children, variant } = disabled);
   if (variant === undefined) {
     variant = "primary";
@@ -371,7 +371,7 @@ export const BaseButton = noop.forwardRef(ReactCompilerGating.isReactCompilerEna
     flag2 = false;
   }
   ({ pressed, onPress, onPressDisabled, onPressIn, onPressOut, onLayout, accessible, accessibilityRole, accessibilityLabel, accessibilityHint, accessibilityState } = disabled);
-  ({ accessibilityElementsHidden, importantForAccessibility, hitSlop, scaleAmountInPx } = disabled);
+  ({ accessibilityElementsHidden, importantForAccessibility, hitSlop, scaleAmountInPx, ref } = disabled);
   disabled = undefined;
   let buttonAnimationProps;
   ({ onLongPress, accessibilityValue, accessibilityActions, onAccessibilityAction, pointerEvents } = disabled);
@@ -470,4 +470,4 @@ export const BaseButton = noop.forwardRef(ReactCompilerGating.isReactCompilerEna
     return <closure_13 />;
   }
   tmp = closure_10();
-}));
+});

@@ -1,27 +1,27 @@
-// === Module 12779: MediaViewerThumbnails ===
+// === Module 12926: MediaViewerThumbnails ===
 
-// Module 12779 (MediaViewerThumbnails)
+// Module 12926 (MediaViewerThumbnails)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import useToken from "useToken" /* 4586 */;
-import REAWorkaroundViewDefault from "REAWorkaroundView" /* 4619 */;
-import FastImageDefault from "FastImage" /* 5981 */;
-import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 12780 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import useToken from "useToken" /* 4778 */;
+import REAWorkaroundViewDefault from "REAWorkaroundView" /* 4811 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 12927 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const ReanimatedRexportDefault = View(4618);
-const VisualEffectViewDefault = View(5780);
+const ReanimatedRexportDefault = View(4810);
+const VisualEffectViewDefault = View(5363);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
-const Constants = fn(7977);
+const Constants = fn(8394);
 ({ THUMBNAIL_WIDTH_MARGIN: closure_7, THUMBNAIL_MARGIN, THUMBNAIL_HEIGHT } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function ObscuredView(arg0) {
   let tmp2 = dependencyMap;
   const cResult = c.c(7);
   ({ source, index } = arg0);
@@ -67,7 +67,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[6] = tmp2;
   }
   return tmp8;
-}) : ((source) => {
+}) : (function ObscuredView(source) {
   source = source.source;
   [tmp4, tmp5] = useMediaItemSpoilerState.useMediaItemSpoilerState(source.index);
   useToken;
@@ -92,32 +92,34 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   return tmp10Result;
 });
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_11 = createStyles.createStyles({ containerPortrait: { height: 60 }, thumbnailButtonPortrait: { overflow: "hidden", marginHorizontal: THUMBNAIL_MARGIN, borderRadius: 2 }, thumbnailImagePortrait: { height: THUMBNAIL_HEIGHT, width: "100%" } });
-let closure_12 = noop.memo((onSelect) => {
-  ({ source, index } = onSelect);
-  onSelect = onSelect.onSelect;
-  ({ numSources, selectedIndex, useThumbnailStyle } = onSelect);
+let closure_12 = noop.memo(function MediaThumbnail(source) {
+  source = source.source;
+  const index = source.index;
+  const onSelect = source.onSelect;
+  ({ numSources, selectedIndex, useThumbnailStyle } = source);
   const tmp = closure_11();
-  let first = source;
   if (Array.isArray(source)) {
-    first = source[0];
+    source = source[0];
   }
-  const items = [onSelect, index];
-  const thumbnailStyle = useThumbnailStyle(first, index);
-  const callback = noop.useCallback(() => onSelect(index), items);
+  const items = [source];
+  const memo = noop.useMemo(() => {
+    let thumbnail = first.thumbnail;
+    if (thumbnail == null) {
+      thumbnail = first;
+    }
+    return { uri: thumbnail.uri };
+  }, items);
+  const items1 = [onSelect, index];
+  const thumbnailStyle = useThumbnailStyle(source, index);
+  const callback = noop.useCallback(() => onSelect(index), items1);
   const obj = { style: null, children: null };
-  const items1 = [tmp.thumbnailButtonPortrait, thumbnailStyle];
-  obj.style = items1;
+  const items2 = [tmp.thumbnailButtonPortrait, thumbnailStyle];
+  obj.style = items2;
   const obj2 = { needsOffscreenAlphaCompositing: true, renderToHardwareTextureAndroid: true, accessibilityRole: "imagebutton", accessibilityLabel: "Thumbnail preview, " + index + 1 + " of " + numSources, accessibilityHint: "Double tap to focus", accessibilityState: { selected: selectedIndex === index }, onPress: callback, children: null };
-  const obj3 = { style: tmp.thumbnailImagePortrait, source: null, enableAnimation: false };
-  let thumbnail = first.thumbnail;
-  if (thumbnail == null) {
-    thumbnail = first;
-  }
-  obj3.source = thumbnail;
-  const items2 = [closure_1_8(FastImageDefault, obj3), closure_1_8(closure_10, { source: first, index })];
-  obj2.children = items2;
+  const items3 = [closure_1_8(FastImageDefault, { style: tmp.thumbnailImagePortrait, source: memo, enableAnimation: false }), closure_1_8(closure_10, { source, index })];
+  obj2.children = items3;
   obj.children = options(hasOwnProperty, obj2);
   return closure_1_8(ReanimatedRexportDefault.View, obj);
 });

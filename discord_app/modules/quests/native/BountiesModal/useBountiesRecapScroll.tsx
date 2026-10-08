@@ -1,6 +1,6 @@
-// === Module 14836: useBountiesRecapScroll ===
+// === Module 15097: useBountiesRecapScroll ===
 
-// Module 14836 (useBountiesRecapScroll)
+// Module 15097 (useBountiesRecapScroll)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -20,7 +20,7 @@ const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/u
 
 export const RECAP_SNAP_EPSILON = 2;
 export { getRevealProgress };
-export const useBountiesRecapScroll = ReactCompilerGating.isReactCompilerEnabled() ? ((listRef) => {
+export const useBountiesRecapScroll = ReactCompilerGating.isReactCompilerEnabled() ? (function useBountiesRecapScroll(listRef) {
   const cResult = listRef(enabled[2]).c(17);
   listRef = listRef.listRef;
   enabled = listRef.enabled;
@@ -136,14 +136,14 @@ export const useBountiesRecapScroll = ReactCompilerGating.isReactCompilerEnabled
     cResult[10] = B;
     tmp4 = B;
   }
-  const fn2 = function c() {
+  const fn2 = function f() {
     closure_3(offsets.lastBounty);
   };
   cResult[2] = offsets.lastBounty;
   cResult[3] = tmp2;
   cResult[4] = fn2;
   let obj = listRef(enabled[2]);
-}) : ((listRef) => {
+}) : (function useBountiesRecapScroll(listRef) {
   listRef = listRef.listRef;
   const enabled = listRef.enabled;
   const offsets = listRef.offsets;

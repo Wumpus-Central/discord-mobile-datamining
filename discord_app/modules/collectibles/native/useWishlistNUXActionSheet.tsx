@@ -1,18 +1,18 @@
-// === Module 8457: useWishlistNUXActionSheet ===
+// === Module 8943: useWishlistNUXActionSheet ===
 
-// Module 8457 (useWishlistNUXActionSheet)
-import dismissible_content from "dismissible_content" /* 2036 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4704 */;
+// Module 8943 (useWishlistNUXActionSheet)
+import dismissible_content from "dismissible_content" /* 2048 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4898 */;
 import noop from "module_19" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 7124 */;
+import UserProfileStore from "UserProfileStore" /* 7309 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasNeverWishlisted() {
   const cResult = stateFromStores(576).c(8);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AuthenticationStore];
@@ -55,7 +55,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp12 = cResult[5];
   }
   if (cResult[6] !== stateFromStores) {
-    const fn3 = function h() {
+    const fn3 = function _() {
       const userProfile = UserProfileStore.getUserProfile(stateFromStores);
       let tmp2 = null != userProfile;
       if (tmp2) {
@@ -75,7 +75,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     stateFromStores2 = null == stateFromStores1;
   }
   return stateFromStores2;
-}) : (() => {
+}) : (function useHasNeverWishlisted() {
   const items = [AuthenticationStore];
   _require = require("initialize").useStateFromStores(items, () => id.getId());
   const obj = require("initialize");

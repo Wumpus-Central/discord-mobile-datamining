@@ -1,16 +1,16 @@
-// === Module 7930: profile_customization/ProfileCustomizationUtils ===
+// === Module 8349: profile_customization/ProfileCustomizationUtils ===
 
-// Module 7930 (profile_customization/ProfileCustomizationUtils)
+// Module 8349 (profile_customization/ProfileCustomizationUtils)
 import c from "c" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
-import AvatarUtils from "AvatarUtils" /* 1402 */;
-import VideoBackground from "VideoBackground" /* 7931 */;
+import AvatarUtils from "AvatarUtils" /* 1414 */;
+import VideoBackground from "VideoBackground" /* 8350 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/profile_customization/native/ProfileCustomizationUtils.tsx");
 
-export const useUserProfileBannerBackgroundColor = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useUserProfileBannerBackgroundColor = ReactCompilerGating.isReactCompilerEnabled() ? (function useUserProfileBannerBackgroundColor(arg0) {
   const cResult = c.c(10);
   ({ user, guildId, pendingAvatarSrc, displayProfile } = arg0);
   let tmp4 = null;
@@ -70,7 +70,7 @@ export const useUserProfileBannerBackgroundColor = ReactCompilerGating.isReactCo
     primaryColor = tmp16;
   }
   return primaryColor;
-}) : ((arg0) => {
+}) : (function useUserProfileBannerBackgroundColor(arg0) {
   ({ user, pendingAvatarSrc, displayProfile } = arg0);
   if (null == user) {
     const memoizedImageSourceResult = VideoBackground.memoizedImageSource(null);

@@ -1,15 +1,15 @@
-// === Module 10408: PremiumGiftPlanSelect ===
+// === Module 10005: PremiumGiftPlanSelect ===
 
-// Module 10408 (PremiumGiftPlanSelect)
+// Module 10005 (PremiumGiftPlanSelect)
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
-import native from "native" /* 1188 */;
-import timing from "timing" /* 4897 */;
-import PremiumGiftFeaturesCardDefault from "PremiumGiftFeaturesCard" /* 10495 */;
+import native from "native" /* 1200 */;
+import timing from "timing" /* 5091 */;
+import PremiumGiftFeaturesCardDefault from "PremiumGiftFeaturesCard" /* 10092 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7874 */;
-import PromotionsStore from "PromotionsStore" /* 10409 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8292 */;
+import PromotionsStore from "PromotionsStore" /* 10006 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -18,9 +18,9 @@ let VerticalGradient = fn(1085).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 let items = [, ];
-({ TIER_2: arr[0], TIER_0: arr[1] } = fn(1379).PremiumTypes);
+({ TIER_2: arr[0], TIER_0: arr[1] } = fn(1391).PremiumTypes);
 let c16 = 16;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_17 = createStyles.createStyles((width, arg1, arg2) => {
   const obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, headerBackground: null, headerBackgroundColor: null, headerImageContainer: null, headerImage: null, headerOverlay: null, avatar: null, title: null, description: null, carousel: null, dmGiftingContent: null, loadingContainer: null, closeButtonContainer: null, closeButton: null, closeButtonIcon: null, badgeBanner: null };
   const size = { position: "absolute", width, height: 0.1 * arg1, top: arg1 / 1.75 - 0.1 * arg1 };
@@ -62,7 +62,7 @@ const ReactCompilerGating = fn(558);
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumGiftPlanSelect.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumGiftPlanSelect(arg0) {
   const cResult = navigation(onClose[12]).c(162);
   ({ shouldUseDMWishlistGiftingDesign, isLoadingWishlist } = arg0);
   let obj = navigation(onClose[12]);
@@ -93,14 +93,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   navigation(onClose[19]).useNavigatorBackPressHandler(tmp11);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     items = [PromotionsStore];
-    class A {
+    class C {
       constructor() {
         return closure_10.getGiftPromotionRewardSkuIds();
       }
     }
     cResult[2] = items;
-    cResult[3] = A;
-    let tmp14 = A;
+    cResult[3] = C;
+    let tmp14 = C;
     let tmp13 = items;
   } else {
     tmp13 = cResult[2];
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const selectPremiumGift = navigation(onClose[21]).useSelectPremiumGift("PremiumGiftPlanSelect");
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     cResult[4] = { location: "PremiumGiftPlanSelect" };
-    class A {
+    class C {
       constructor() {
         return closure_10.getGiftPromotionRewardSkuIds();
       }
@@ -125,7 +125,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   let enabled = claimableRewards(onClose[22]).useConfig(tmp18).enabled;
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [BadgeDirectoryStore];
-    class A {
+    class C {
       constructor() {
         return closure_10.getGiftPromotionRewardSkuIds();
       }
@@ -169,7 +169,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
     const items2 = [navigation];
-    class A {
+    class C {
       constructor() {
         return closure_10.getGiftPromotionRewardSkuIds();
       }
@@ -209,7 +209,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
     cResult[10] = tmp37;
-    class A {
+    class C {
       constructor() {
         return closure_10.getGiftPromotionRewardSkuIds();
       }
@@ -237,7 +237,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
     cResult[11] = Se;
-    class A {
+    class C {
       constructor() {
         return closure_10.getGiftPromotionRewardSkuIds();
       }
@@ -270,7 +270,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     const effect1 = obj12.useEffect(tmp38, items3);
     const _Symbol = Symbol;
-    class A {
+    class C {
       constructor() {
         return closure_10.getGiftPromotionRewardSkuIds();
       }
@@ -300,7 +300,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         }
       }
       cResult[15] = Ie;
-      class A {
+      class C {
         constructor() {
           return closure_10.getGiftPromotionRewardSkuIds();
         }
@@ -357,7 +357,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         }
       }
       cResult[16] = tmp43;
-      class A {
+      class C {
         constructor() {
           return closure_10.getGiftPromotionRewardSkuIds();
         }
@@ -414,77 +414,60 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         }
       }
     }
-    function be(variant, arg1) {
-      let obj = arg1;
-      if (undefined === arg1) {
-        obj = { forScreenReader: false };
-      }
-      const forScreenReader = obj.forScreenReader;
-      return (item) => {
-        item = item.item;
-        const index = item.index;
-        const obj = { accessible: forScreenReader, accessibilityRole: null, onPress: null, style: null, children: null };
-        let str;
-        if (forScreenReader) {
-          str = "button";
+    class Pe {
+      constructor(arg0, arg1) {
+        closure_0 = arg0;
+        obj = arg1;
+        if (undefined === arg1) {
+          obj = { forScreenReader: false };
         }
-        obj.accessibilityRole = str;
-        let fn;
-        if (forScreenReader) {
-          fn = () => selectPremiumGift(item);
-        }
-        obj.onPress = fn;
-        obj.style = { paddingVertical: nativeDefault.space.PX_8 };
-        const obj3 = {
-          premiumType: item,
-          variant,
-          onPress() {
-            return selectPremiumGift(item);
-          },
-          style: null,
-          onLayout: null,
-          claimableRewards: null,
-          isSelected: null
-        };
-        const obj2 = { paddingVertical: nativeDefault.space.PX_8 };
-        const tmp3 = forScreenReader ? timestampProducer : React5;
-        const size = { height: first1, width: result, alignSelf: null };
-        let str2;
-        if ("default" === variant) {
-          str2 = "center";
-        }
-        size.alignSelf = str2;
-        obj3.style = size;
-        obj3.onLayout = function onLayout(nativeEvent) {
-          const height = nativeEvent.nativeEvent.layout.height;
-          if (height > 0) {
-            let num = ref.current[index];
-            if (num == null) {
-              num = 0;
-            }
-            ref.current[index] = Math.max(height, num);
-            closure_2_10();
+        forScreenReader = obj.forScreenReader;
+        return function PremiumGiftCarouselItem(item) {
+          item = item.item;
+          const index = item.index;
+          const obj = { accessible: forScreenReader, accessibilityRole: null, onPress: null, style: null, children: null };
+          let str;
+          if (forScreenReader) {
+            str = "button";
           }
+          obj.accessibilityRole = str;
+          let fn;
+          if (forScreenReader) {
+            fn = () => { ... };
+          }
+          obj.onPress = fn;
+          obj.style = { paddingVertical: nativeDefault.space.PX_8 };
+          const obj3 = { premiumType: item, variant, onPress() { ... }, style: null, onLayout: null, claimableRewards: null, isSelected: null };
+          const obj2 = { paddingVertical: nativeDefault.space.PX_8 };
+          const tmp3 = forScreenReader ? timestampProducer : React5;
+          const size = { height: first1, width: result, alignSelf: null };
+          let str2;
+          if ("default" === variant) {
+            str2 = "center";
+          }
+          size.alignSelf = str2;
+          obj3.style = size;
+          obj3.onLayout = function onLayout() { ... };
+          obj3.claimableRewards = claimableRewards;
+          obj3.isSelected = first === index;
+          obj.children = __initData(PremiumGiftFeaturesCardDefault, obj3, index);
+          return __initData(tmp3, obj);
         };
-        obj3.claimableRewards = claimableRewards;
-        obj3.isSelected = first === index;
-        obj.children = __initData(PremiumGiftFeaturesCardDefault, obj3, index);
-        return __initData(tmp3, obj);
-      };
+      }
     }
     cResult[17] = first1;
     cResult[18] = result;
     cResult[19] = claimableRewards;
     cResult[20] = first;
     cResult[21] = selectPremiumGift;
-    cResult[22] = be;
+    cResult[22] = Pe;
   }
   items3 = [shouldUseDMWishlistGiftingDesign, undefined];
   cResult[12] = shouldUseDMWishlistGiftingDesign;
   cResult[13] = undefined;
   cResult[14] = items3;
   const tmp30 = selectPremiumGift(enabled.useState(false), 2);
-}) : ((shouldUseDMWishlistGiftingDesign) => {
+}) : (function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) {
   shouldUseDMWishlistGiftingDesign = shouldUseDMWishlistGiftingDesign.shouldUseDMWishlistGiftingDesign;
   let navigation;
   claimableRewards = undefined;
@@ -596,7 +579,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       obj = { forScreenReader: false };
     }
     const forScreenReader = obj.forScreenReader;
-    return (item) => {
+    return function PremiumGiftCarouselItem(item) {
       item = item.item;
       const index = item.index;
       const obj = { accessible: forScreenReader, accessibilityRole: null, onPress: null, style: null, children: null };
@@ -726,7 +709,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (shouldUseDMWishlistGiftingDesign.isLoadingWishlist) {
     const obj11 = { style: null, children: null };
     const items11 = [, ];
-    ({ container: arr23[0], loadingContainer: arr23[1] } = tmp14);
+    ({ container: arr22[0], loadingContainer: arr22[1] } = tmp14);
     obj11.style = items11;
     obj11.children = c12(closure_5, { size: "large" });
     let tmp65Result5 = c12(c7, obj11);
@@ -830,10 +813,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     obj30.contentContainerStyle = obj31;
     const obj32 = { style: null, children: null };
     const obj33 = { paddingTop: top + tmp(tmp2[15]).NAV_BAR_HEIGHT };
-    const items17 = [obj33];
-    obj32.style = items17;
+    obj32.style = obj33;
     if (null == recipientUser) {
-      const items18 = [tmp53, , , , ];
+      const items17 = [tmp53, , , , ];
       const obj34 = { style: tmp14.title, variant: null, color: "text-overlay-light", children: null };
       let str3 = "heading-xxl/extrabold";
       if (null != recipientUser) {
@@ -853,11 +835,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         formatToPlainStringResult = intl2.string(tmp(tmp2[37]).t.dqQgZv);
       }
       obj34.children = formatToPlainStringResult;
-      items18[1] = tmp47(tmp(tmp2[42]).Text, obj34);
+      items17[1] = tmp47(tmp(tmp2[42]).Text, obj34);
       const obj36 = { style: tmp14.description, variant: "heading-sm/medium", color: "text-overlay-light", children: null };
       const intl4 = tmp(tmp2[37]).intl;
       obj36.children = intl4.string(tmp(tmp2[37]).t["30qzrd"]);
-      items18[2] = tmp47(tmp(tmp2[42]).Text, obj36);
+      items17[2] = tmp47(tmp(tmp2[42]).Text, obj36);
       let tmp47Result = enabled;
       if (enabled) {
         const obj37 = { style: tmp14.badgeBanner, onPress: callback1, accessibilityRole: "button", children: null };
@@ -874,12 +856,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         tmp47Result = tmp47(tmp48, obj37);
         const tmpResult10 = tmp(tmp2[24]);
       }
-      items18[3] = tmp47Result;
+      items17[3] = tmp47Result;
       if (0 !== stateFromStoresArray.length) {
         if (undefined === claimableRewards) {
           const obj39 = { children: null };
-          items18[4] = null;
-          obj32.children = items18;
+          items17[4] = null;
+          obj32.children = items17;
           obj30.children = tmp44(tmp49, obj32);
           items13[5] = tmp47(tmp52, obj30);
           obj39.children = items13;
@@ -900,8 +882,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         let tmp47Result3 = tmp47(tmp52, obj40);
       } else {
         const size1 = { style: null, data: null, renderItem: null, width: null, height: null, onConfigurePanGesture: null, loop: false, scrollAnimationDuration: 200, customAnimation: null, mode: "parallax", modeConfig: null, onSnapToItem: null };
-        const items19 = [tmp14.carousel, animatedStyle];
-        size1.style = items19;
+        const items18 = [tmp14.carousel, animatedStyle];
+        size1.style = items18;
         size1.data = arr12;
         if (enabled) {
           memo1 = memo;
@@ -924,15 +906,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         size1.customAnimation = tmp61;
         size1.modeConfig = { parallaxScrollingScale: 1, parallaxScrollingOffset: 40 };
         size1.onSnapToItem = tmp17;
-        const items20 = [tmp47(tmp4(tmp2[34]), size1), ];
+        const items19 = [tmp47(tmp4(tmp2[34]), size1), ];
         const obj43 = { numberOfItems: arr12.length, currentIndex };
-        items20[1] = tmp47(tmp(tmp2[30]).CarouselPagination, obj43);
-        obj42.children = items20;
+        items19[1] = tmp47(tmp(tmp2[30]).CarouselPagination, obj43);
+        obj42.children = items19;
         tmp47Result3 = tmp44(tmp45, obj42);
         const tmp4Result8 = tmp4(tmp2[34]);
       }
     } else {
-      const obj44 = { style: tmp14.avatar, guildId: "r", size: "Reflect", user: null };
+      const obj44 = { style: tmp14.avatar, guildId: "r", size: null, user: null };
       const AvatarSizes = tmp(tmp2[30]).AvatarSizes;
       obj44.size = enabled ? AvatarSizes.LARGE_48 : AvatarSizes.XLARGE;
       obj44.user = recipientUser;

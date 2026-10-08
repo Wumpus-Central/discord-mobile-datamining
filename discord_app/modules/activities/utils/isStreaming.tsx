@@ -1,8 +1,8 @@
-// === Module 7942: isStreaming ===
+// === Module 8360: isStreaming ===
 
-// Module 7942 (isStreaming)
+// Module 8360 (isStreaming)
 import Constants from "Constants" /* 1085 */;
-import Constants2 from "Constants" /* 2011 */;
+import Constants2 from "Constants" /* 2023 */;
 import size from "module_2" /* 2 */;
 
 function _isStreaming(type) {

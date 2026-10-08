@@ -1,10 +1,10 @@
-// === Module 8453: useTrackShopCardImpression ===
+// === Module 8939: useTrackShopCardImpression ===
 
-// Module 8453 (useTrackShopCardImpression)
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7077 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7078 */;
-import useTrackImpression from "useTrackImpression" /* 8455 */;
+// Module 8939 (useTrackShopCardImpression)
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1272 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7263 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7264 */;
+import useTrackImpression from "useTrackImpression" /* 8941 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/hooks/useTrackShopCardImpression.tsx");
 
-export const useTrackShopCardImpression = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, skuId) => {
+export const useTrackShopCardImpression = ReactCompilerGating.isReactCompilerEnabled() ? (function useTrackShopCardImpression(arg0, skuId) {
   _require = arg0;
   importDefault = skuId;
   const cResult = require("c").c(17);
@@ -215,7 +215,7 @@ export const useTrackShopCardImpression = ReactCompilerGating.isReactCompilerEna
   cResult[11] = skuId.skuId;
   cResult[12] = S;
   tmp16 = S;
-}) : ((arg0, skuId) => {
+}) : (function useTrackShopCardImpression(arg0, skuId) {
   _require = arg0;
   importDefault = skuId;
   collectiblesAnalyticsContext = require("CollectiblesAnalyticsContext").useCollectiblesAnalyticsContext();

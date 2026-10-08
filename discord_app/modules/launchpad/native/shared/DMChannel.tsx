@@ -1,29 +1,29 @@
-// === Module 17435: shared/DMChannel ===
+// === Module 17717: shared/DMChannel ===
 
-// Module 17435 (shared/DMChannel)
+// Module 17717 (shared/DMChannel)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import transitionToChannel from "transitionToChannel" /* 4907 */;
-import useChannelNameDefault from "useChannelName" /* 5049 */;
-import useFontScale from "useFontScale" /* 5609 */;
-import Pressables from "Pressables" /* 5916 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7525 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10664 */;
-import ChannelRowPreview from "ChannelRowPreview" /* 12503 */;
-import useMessagePreviewsDefault from "useMessagePreviews" /* 15152 */;
-import useChannelUnreadBadgeState from "useChannelUnreadBadgeState" /* 16325 */;
-import renderChannelItemDefault from "renderChannelItem" /* 16852 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 16853 */;
-import UnreadBadgeDefault from "UnreadBadge" /* 17427 */;
-import renderChannelPressableWrapperDefault from "renderChannelPressableWrapper" /* 17429 */;
+import transitionToChannel from "transitionToChannel" /* 5101 */;
+import useFontScale from "useFontScale" /* 5382 */;
+import useChannelNameDefault from "useChannelName" /* 5417 */;
+import Pressables from "Pressables" /* 6189 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 9248 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10264 */;
+import ChannelRowPreview from "ChannelRowPreview" /* 12599 */;
+import useMessagePreviewsDefault from "useMessagePreviews" /* 15414 */;
+import useChannelUnreadBadgeState from "useChannelUnreadBadgeState" /* 16585 */;
+import renderChannelItemDefault from "renderChannelItem" /* 17131 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 17132 */;
+import UnreadBadgeDefault from "UnreadBadge" /* 17709 */;
+import renderChannelPressableWrapperDefault from "renderChannelPressableWrapper" /* 17711 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const UnreadSetting = fn(5078).UnreadSetting;
+const UnreadSetting = fn(5972).UnreadSetting;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
-let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((id, navigationReplace) => {
+let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePrivateChannelPressEvents(id, navigationReplace) {
   _require = id;
   const cResult = require("c").c(8);
   if (cResult[0] === id.id) {
@@ -59,7 +59,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((id, navigationR
   cResult[1] = navigationReplace;
   cResult[2] = fn;
   tmp2 = fn;
-}) : ((id, navigationReplace) => {
+}) : (function usePrivateChannelPressEvents(id, navigationReplace) {
   const user = id;
   const obj = { onPress: null, onLongPress: null };
   const items = [id.id, navigationReplace];
@@ -70,7 +70,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((id, navigationR
   obj.onLongPress = noop.useCallback(() => openChannelLongPressActionSheet.openChannelLongPressActionSheet(user.id), items1);
   return obj;
 });
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { pressable: { flex: 1 }, pressableUnderlayColor: { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE } };
 let closure_7 = createStyles.createStyles(obj);
 ReactCompilerGating = fn(558);
@@ -78,7 +78,7 @@ let obj4 = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/launchpad/native/shared/DMChannel.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function DMChannel(arg0) {
   const cResult = c.c(23);
   ({ channel, muted, navigationReplace } = arg0);
   const tmp6 = closure_7();
@@ -200,7 +200,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   tmp20 = tmp21;
   const obj7 = { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES, muted: undefined !== muted && muted };
   const tmpResult2 = useFontScale;
-}) : ((navigationReplace) => {
+}) : (function DMChannel(navigationReplace) {
   ({ channel, muted } = navigationReplace);
   if (muted === undefined) {
     muted = false;

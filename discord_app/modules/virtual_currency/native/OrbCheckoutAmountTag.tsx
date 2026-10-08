@@ -1,14 +1,14 @@
-// === Module 10761: OrbCheckoutAmountTag ===
+// === Module 12715: OrbCheckoutAmountTag ===
 
-// Module 10761 (OrbCheckoutAmountTag)
+// Module 12715 (OrbCheckoutAmountTag)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import OrbsIcon from "OrbsIcon" /* 8524 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import OrbsIcon from "OrbsIcon" /* 9009 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
+import createStyles from "createStyles" /* 5090 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -19,7 +19,7 @@ let closure_5 = createStyles.createStyles(obj);
 let obj2 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
 const result = size.fileFinishedImporting("modules/virtual_currency/native/OrbCheckoutAmountTag.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((orbAmount) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbCheckoutAmountTag(orbAmount) {
   const cResult = c.c(11);
   orbAmount = orbAmount.orbAmount;
   const tmp4 = closure_5();
@@ -77,7 +77,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((orbAmount) => {
     cResult[6] = tmp15;
     tmp13 = tmp15;
   }
-}) : ((orbAmount) => {
+}) : (function OrbCheckoutAmountTag(orbAmount) {
   orbAmount = orbAmount.orbAmount;
   const tmp = closure_5();
   const obj = { style: tmp.orbAmountTag, children: null };

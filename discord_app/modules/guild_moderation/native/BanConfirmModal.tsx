@@ -1,7 +1,7 @@
-// === Module 11483: BanConfirmModal ===
+// === Module 11469: BanConfirmModal ===
 
-// Module 11483 (BanConfirmModal)
-import BanConfirmDefault from "BanConfirm" /* 11476 */;
+// Module 11469 (BanConfirmModal)
+import BanConfirmDefault from "BanConfirm" /* 11460 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_moderation/native/BanConfirmModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function BanConfirmModal(userId) {
   const cResult = guildId(onGoBack[3]).c(7);
   ({ cancelButtonCallback, guildId } = userId);
   userId = userId.userId;
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   cResult[5] = userId;
   cResult[6] = tmp9;
   tmp8 = tmp9;
-}) : ((onBeforeGoBack) => {
+}) : (function BanConfirmModal(onBeforeGoBack) {
   ({ guildId: require, userId: importDefault } = onBeforeGoBack);
   let onGoBack;
   onGoBack = require("useNavigatorBackHandler")({ onBeforeGoBack: onBeforeGoBack.cancelButtonCallback }).onGoBack;

@@ -1,57 +1,52 @@
-// === Module 16684: ConjurePlanAutomodExamples ===
+// === Module 16960: ConjurePlanAutomodExamples ===
 
-// Module 16684 (ConjurePlanAutomodExamples)
+// Module 16960 (ConjurePlanAutomodExamples)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import AvatarUtils from "AvatarUtils" /* 1402 */;
-import utils_AvatarUtils from "utils/AvatarUtils" /* 1405 */;
-import _modDef3753 from "module_3753" /* 3753 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Stack_Stack from "Stack/Stack" /* 5600 */;
-import ShieldIcon from "ShieldIcon" /* 8952 */;
-import ConjurePlanAutomodOutcomes from "ConjurePlanAutomodOutcomes" /* 16685 */;
+import native from "native" /* 1200 */;
+import AvatarUtils from "AvatarUtils" /* 1414 */;
+import utils_AvatarUtils from "utils/AvatarUtils" /* 1417 */;
+import _modDef3827 from "module_3827" /* 3827 */;
+import Stack_Stack from "Stack/Stack" /* 5373 */;
+import ConjurePlanAutomodOutcomes from "ConjurePlanAutomodOutcomes" /* 16961 */;
 import noop from "module_19" /* 19 */;
 
+const Text_Text = Text(5086);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let obj = { blocked: fn(8952).ShieldIcon, alert: fn(9301).BellIcon, allowed: fn(4798).CircleCheckIcon };
+let obj = { blocked: fn(10386).ShieldIcon, alert: fn(8747).BellIcon, allowed: fn(4992).CircleCheckIcon };
 let obj2 = { blurple: { text: "text-brand", icon: nativeDefault.colors.TEXT_BRAND }, red: null, green: null };
 let obj3 = { text: "text-brand", icon: nativeDefault.colors.TEXT_BRAND };
 obj2.red = { text: "text-feedback-critical", icon: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
 let obj4 = { text: "text-feedback-critical", icon: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
 obj2.green = { text: "text-feedback-positive", icon: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE };
-const createStyles = fn(4896);
-let obj7 = { typeTag: null, heading: null, examples: null, section: null, sectionHeader: null, sectionLabel: null, rows: null, row: null, blockedRow: null, blockedBar: null, rowBody: null };
+const createStyles = fn(5090);
+let obj7 = { heading: null, examples: null, section: null, sectionHeader: null, sectionLabel: null, rows: null, row: null, blockedRow: null, blockedBar: null, rowBody: null };
 let obj5 = { text: "text-feedback-positive", icon: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE };
-obj7.typeTag = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
-let obj8 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
 obj7.heading = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
-let obj9 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
+let obj8 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 obj7.examples = { gap: nativeDefault.space.PX_12 };
-const obj10 = { gap: nativeDefault.space.PX_12 };
+let obj9 = { gap: nativeDefault.space.PX_12 };
 obj7.section = { gap: nativeDefault.space.PX_8 };
-const obj11 = { gap: nativeDefault.space.PX_8 };
+const obj10 = { gap: nativeDefault.space.PX_8 };
 obj7.sectionHeader = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
 obj7.sectionLabel = { textTransform: "uppercase", letterSpacing: 0.24 };
-const obj12 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
+const obj11 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
 obj7.rows = { gap: nativeDefault.space.PX_4, paddingVertical: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, overflow: "hidden" };
-const obj13 = { gap: nativeDefault.space.PX_4, paddingVertical: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, overflow: "hidden" };
+const obj12 = { gap: nativeDefault.space.PX_4, paddingVertical: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, overflow: "hidden" };
 obj7.row = { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_6, paddingHorizontal: nativeDefault.space.PX_12 };
-const obj14 = { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_6, paddingHorizontal: nativeDefault.space.PX_12 };
+const obj13 = { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_6, paddingHorizontal: nativeDefault.space.PX_12 };
 obj7.blockedRow = { backgroundColor: nativeDefault.colors.MESSAGE_AUTOMOD_BACKGROUND_DEFAULT };
 const rect = { position: "absolute", top: 0, bottom: 0, start: 0, width: 2, backgroundColor: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
 obj7.blockedBar = rect;
-const obj15 = { backgroundColor: nativeDefault.colors.MESSAGE_AUTOMOD_BACKGROUND_DEFAULT };
+const obj14 = { backgroundColor: nativeDefault.colors.MESSAGE_AUTOMOD_BACKGROUND_DEFAULT };
 obj7.rowBody = { flex: 1, minWidth: 0, gap: nativeDefault.space.PX_4 / 2 };
 let closure_8 = createStyles.createStyles(obj7);
-fn(558);
-const obj16 = { flex: 1, minWidth: 0, gap: nativeDefault.space.PX_4 / 2 };
 let ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((reason) => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Footnote(reason) {
   let Text = require;
   let tmp = dependencyMap;
   const cResult = c.c(2);
@@ -65,7 +60,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((reason) => {
     cResult[0] = reason;
     cResult[1] = tmp;
   }
-}) : ((reason) => {
+}) : (function Footnote(reason) {
   reason = reason.reason;
   let tmp = null;
   if (null != reason) {
@@ -75,7 +70,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((reason) => {
   return tmp;
 });
 ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((example) => {
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function ExampleRow(example) {
   const cResult = c.c(29);
   example = example.example;
   const tmp4 = closure_8();
@@ -215,7 +210,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((example) => {
   cResult[3] = blockedRow;
   cResult[4] = items3;
   tmp7 = items3;
-}) : ((example) => {
+}) : (function ExampleRow(example) {
   example = example.example;
   const tmp = closure_8();
   ({ blockedStyle, label } = ConjurePlanAutomodOutcomes.CONJURE_PLAN_AUTOMOD_OUTCOMES[example.outcome]);
@@ -252,7 +247,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((example) => {
   return hasOwnProperty(View, obj2);
 });
 ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((group) => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function ExampleSection(group) {
   obj = c;
   const cResult = obj.c(23);
   let examples = group.group;
@@ -283,30 +278,46 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((group) => {
             if (cResult[13] !== examples.examples) {
               const _Symbol = Symbol;
               if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-                const fn = function w(example, arg1) {
-                  return closure_1_4(closure_1_10, { example }, arg1);
-                };
-                cResult[15] = fn;
-                let tmp23 = fn;
+                class L {
+                  constructor(arg0, arg1) {
+                    obj = { example: group };
+                    return closure_1_4(closure_1_10, obj, arg1);
+                  }
+                }
+                cResult[15] = L;
               } else {
-                tmp23 = cResult[15];
+                class L {
+                  constructor(arg0, arg1) {
+                    obj = { example: group };
+                    return closure_1_4(closure_1_10, obj, arg1);
+                  }
+                }
               }
               const examples1 = examples.examples;
-              const mapped = examples1.map(tmp23);
+              const mapped = examples1.map(L);
               examples = examples.examples;
               cResult[13] = examples;
               cResult[14] = mapped;
             } else {
+              class L {
+                constructor(arg0, arg1) {
+                  obj = { example: group };
+                  return closure_1_4(closure_1_10, obj, arg1);
+                }
+              }
               if (cResult[16] === tmp4.rows) {
-                if (cResult[17] === tmp21) {
-                  let tmp26 = cResult[18];
+                class L {
+                  constructor(arg0, arg1) {
+                    obj = { example: group };
+                    return closure_1_4(closure_1_10, obj, arg1);
+                  }
                 }
                 if (cResult[19] === tmp4.section) {
-                  if (cResult[20] === tmp26) {
-                    if (cResult[21] === tmp16) {
-                      let tmp30 = cResult[22];
+                  class L {
+                    constructor(arg0, arg1) {
+                      obj = { example: group };
+                      return closure_1_4(closure_1_10, obj, arg1);
                     }
-                    return tmp30;
                   }
                 }
                 const obj3 = { style: tmp7, children: null };
@@ -317,14 +328,12 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((group) => {
                 cResult[20] = tmp26;
                 cResult[21] = tmp16;
                 cResult[22] = tmp33;
-                tmp30 = tmp33;
               }
-              const obj4 = { style: tmp20, children: cResult[14] };
+              const obj4 = { style: tmp20, children: tmp21 };
               const tmp29 = React4(View, obj4);
               cResult[16] = tmp4.rows;
-              cResult[17] = cResult[14];
+              cResult[17] = tmp21;
               cResult[18] = tmp29;
-              tmp26 = tmp29;
             }
           }
         }
@@ -353,7 +362,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((group) => {
   cResult[2] = tmp10;
   tmp9 = tmp10;
   const obj7 = { size: "xs", color: obj2[obj2.tone].icon };
-}) : ((group) => {
+}) : (function ExampleSection(group) {
   group = group.group;
   const tmp = closure_8();
   obj = ConjurePlanAutomodOutcomes.CONJURE_PLAN_AUTOMOD_SECTIONS[group.section];
@@ -370,53 +379,11 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((group) => {
   return hasOwnProperty(View, obj2);
 });
 ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(4);
-  const tmp4 = closure_8();
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    obj2 = { size: "xs", color: nativeDefault.colors.TEXT_SUBTLE };
-    const tmp8 = React4(ShieldIcon.ShieldIcon, obj2);
-    cResult[0] = tmp8;
-    let first = tmp8;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj3 = { variant: "text-sm/medium", color: "text-subtle", children: null };
-    const intl = util.intl;
-    obj3.children = intl.string(_modDef3753.DnWMLj);
-    const tmp12 = React4(Text_Text.Text, obj3);
-    cResult[1] = tmp12;
-    let tmp9 = tmp12;
-  } else {
-    tmp9 = cResult[1];
-  }
-  if (cResult[2] !== tmp4.typeTag) {
-    const obj4 = { style: tmp4.typeTag, children: null };
-    const items = [first, tmp9];
-    obj4.children = items;
-    const tmp16 = hasOwnProperty(View, obj4);
-    cResult[2] = tmp4.typeTag;
-    cResult[3] = tmp16;
-    let tmp13 = tmp16;
-  } else {
-    tmp13 = cResult[3];
-  }
-  return tmp13;
-}) : (() => {
-  obj = { style: closure_8().typeTag, children: null };
-  const items = [React4(ShieldIcon.ShieldIcon, { size: "xs", color: nativeDefault.colors.TEXT_SUBTLE }), ];
-  const obj3 = { variant: "text-sm/medium", color: "text-subtle", children: null };
-  const intl = util.intl;
-  obj3.children = intl.string(_modDef3753.DnWMLj);
-  items[1] = React4(Text_Text.Text, obj3);
-  obj.children = items;
-  return hasOwnProperty(View, obj);
-});
+const obj15 = { flex: 1, minWidth: 0, gap: nativeDefault.space.PX_4 / 2 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/plan/native/ConjurePlanAutomodExamples.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((automod) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjurePlanAutomodExamples(automod) {
   const cResult = c.c(15);
   let examples = automod.automod;
   const tmp4 = closure_8();
@@ -442,7 +409,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((automod) => {
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const obj3 = { variant: "text-sm/semibold", color: "text-muted", children: null };
     const intl2 = util.intl;
-    obj3.children = intl2.string(_modDef3753.z4ZKYG);
+    obj3.children = intl2.string(_modDef3827.z4ZKYG);
     const tmp13 = React4(Text_Text.Text, obj3);
     cResult[2] = tmp13;
     let tmp10 = tmp13;
@@ -508,7 +475,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((automod) => {
         }
         const obj5 = { variant: "text-xs/normal", color: "text-muted", children: null };
         const intl3 = util.intl;
-        obj5.children = intl3.string(_modDef3753.bo4MOx);
+        obj5.children = intl3.string(_modDef3827.bo4MOx);
         const tmp29 = React4(Text_Text.Text, obj5);
         cResult[11] = tmp29;
         const tmp27 = tmp29;
@@ -544,7 +511,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((automod) => {
     cResult[9] = tmp19;
     cResult[10] = tmp26;
   }
-}) : ((automod) => {
+}) : (function ConjurePlanAutomodExamples(automod) {
   const tmp = closure_8();
   obj = { direction: "vertical", spacing: 4, children: null };
   obj2 = { style: tmp.heading, children: null };
@@ -557,7 +524,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((automod) => {
   const items = [React4(native.Avatar, obj3), ];
   const obj6 = { variant: "text-sm/semibold", color: "text-muted", children: null };
   const intl2 = util.intl;
-  obj6.children = intl2.string(_modDef3753.z4ZKYG);
+  obj6.children = intl2.string(_modDef3827.z4ZKYG);
   items[1] = React4(Text_Text.Text, obj6);
   obj2.children = items;
   const items1 = [hasOwnProperty(View, obj2), , ];
@@ -567,9 +534,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((automod) => {
   items1[1] = React4(View, obj7);
   const obj9 = { variant: "text-xs/normal", color: "text-muted", children: null };
   const intl3 = util.intl;
-  obj9.children = intl3.string(_modDef3753.bo4MOx);
+  obj9.children = intl3.string(_modDef3827.bo4MOx);
   items1[2] = React4(Text_Text.Text, obj9);
   obj.children = items1;
   return hasOwnProperty(Stack_Stack.Stack, obj);
 });
-export const ConjurePlanAutomodTypeTag = tmp4;

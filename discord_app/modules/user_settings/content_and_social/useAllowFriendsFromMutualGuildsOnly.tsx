@@ -1,9 +1,9 @@
-// === Module 15824: useAllowFriendsFromMutualGuildsOnly ===
+// === Module 16083: useAllowFriendsFromMutualGuildsOnly ===
 
-// Module 15824 (useAllowFriendsFromMutualGuildsOnly)
+// Module 16083 (useAllowFriendsFromMutualGuildsOnly)
 import c from "c" /* 576 */;
-import UserSettings from "UserSettings" /* 2028 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 6498 */;
+import UserSettings from "UserSettings" /* 2040 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 6675 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/content_and_social/useAllowFriendsFromMutualGuildsOnly.tsx");
 
-export const useAllowFriendsFromMutualGuildsOnly = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useAllowFriendsFromMutualGuildsOnly = ReactCompilerGating.isReactCompilerEnabled() ? (function useAllowFriendsFromMutualGuildsOnly() {
   const cResult = c.c(2);
   const FriendSourceFlagsSetting = UserSettings.FriendSourceFlagsSetting;
   const setting = FriendSourceFlagsSetting.useSetting();
@@ -25,8 +25,8 @@ export const useAllowFriendsFromMutualGuildsOnly = ReactCompilerGating.isReactCo
     tmp5 = cResult[1];
   }
   return tmp5.mutualGuilds && !tmp5.all;
-}) : (() => {
-  const FriendSourceFlagsSetting = setting(2028).FriendSourceFlagsSetting;
+}) : (function useAllowFriendsFromMutualGuildsOnly() {
+  const FriendSourceFlagsSetting = setting(2040).FriendSourceFlagsSetting;
   setting = FriendSourceFlagsSetting.useSetting();
   const items = [setting];
   const memo = noop.useMemo(() => UserSettingsUtils.computeFlags(setting), items);

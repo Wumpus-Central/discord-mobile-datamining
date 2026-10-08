@@ -1,21 +1,21 @@
-// === Module 16926: useAutoSearchGuildChannelTab ===
+// === Module 17207: useAutoSearchGuildChannelTab ===
 
-// Module 16926 (useAutoSearchGuildChannelTab)
+// Module 17207 (useAutoSearchGuildChannelTab)
 import _mod12 from "module_12" /* 12 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 11980 */;
-import SearchUtils from "SearchUtils" /* 11987 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12005 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12053 */;
+import SearchUtils from "SearchUtils" /* 12060 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12078 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_4 = fn(11996).SEARCH_TEXT_INPUT_DEBOUNCE_TIME;
+let closure_4 = fn(12069).SEARCH_TEXT_INPUT_DEBOUNCE_TIME;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/hooks/useAutoSearchGuildChannelTab.tsx");
 
-export const useAutoSearchGuildChannelTab = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext, arg1) => {
+export const useAutoSearchGuildChannelTab = ReactCompilerGating.isReactCompilerEnabled() ? (function useAutoSearchGuildChannelTab(searchContext, arg1) {
   _require = searchContext;
   closure_1 = arg1;
   const cResult = require("c").c(14);
@@ -73,7 +73,7 @@ export const useAutoSearchGuildChannelTab = ReactCompilerGating.isReactCompilerE
         const effect2 = noop.useEffect(C, tmp10);
       }
     }
-    const fn3 = function h() {
+    const fn3 = function f() {
       if (!closure_1) {
         const debounceResult = _mod12.debounce(closure_2, closure_4);
         return SearchPlatformUtilsDefault.subscribeTextInputValue(closure_0, debounceResult, true);
@@ -88,7 +88,7 @@ export const useAutoSearchGuildChannelTab = ReactCompilerGating.isReactCompilerE
     tmp7 = items1;
     tmp6 = fn3;
   }
-  const fn2 = function o() {
+  const fn2 = function h() {
     if (!closure_1) {
       closure_2("");
     }
@@ -101,7 +101,7 @@ export const useAutoSearchGuildChannelTab = ReactCompilerGating.isReactCompilerE
   tmp4 = items2;
   tmp3 = fn2;
   let obj = require("c");
-}) : ((searchContext, arg1) => {
+}) : (function useAutoSearchGuildChannelTab(searchContext, arg1) {
   closure_1 = arg1;
   const items = [searchContext];
   const callback = noop.useCallback((searchQueryString) => {

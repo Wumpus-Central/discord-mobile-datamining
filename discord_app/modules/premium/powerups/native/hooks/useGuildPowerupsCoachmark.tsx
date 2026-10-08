@@ -1,35 +1,35 @@
-// === Module 16135: useGuildPowerupsCoachmark ===
+// === Module 16395: useGuildPowerupsCoachmark ===
 
-// Module 16135 (useGuildPowerupsCoachmark)
+// Module 16395 (useGuildPowerupsCoachmark)
 import nativeDefault from "native" /* 587 */;
-import useThemeDefault from "useTheme" /* 4797 */;
-import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 12153 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12185 */;
-import useGetGuildPowerupBannerImage from "useGetGuildPowerupBannerImage" /* 12192 */;
-import GuildPowerupsBoostGemDefault from "GuildPowerupsBoostGem" /* 12193 */;
-import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 12195 */;
-import _modDef12225 from "module_12225" /* 12225 */;
-import _modDef16133 from "module_16133" /* 16133 */;
-import useGuildPowerupsBoostActionDefault from "useGuildPowerupsBoostAction" /* 16136 */;
-import _modDef16137 from "module_16137" /* 16137 */;
-import _modDef16138 from "module_16138" /* 16138 */;
-import _modDef16139 from "module_16139" /* 16139 */;
-import _modDef16140 from "module_16140" /* 16140 */;
+import useThemeDefault from "useTheme" /* 4991 */;
+import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 12232 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12264 */;
+import useGetGuildPowerupBannerImage from "useGetGuildPowerupBannerImage" /* 12271 */;
+import GuildPowerupsBoostGemDefault from "GuildPowerupsBoostGem" /* 12272 */;
+import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 12274 */;
+import _modDef12304 from "module_12304" /* 12304 */;
+import _modDef16393 from "module_16393" /* 16393 */;
+import useGuildPowerupsBoostActionDefault from "useGuildPowerupsBoostAction" /* 16396 */;
+import _modDef16397 from "module_16397" /* 16397 */;
+import _modDef16398 from "module_16398" /* 16398 */;
+import _modDef16399 from "module_16399" /* 16399 */;
+import _modDef16400 from "module_16400" /* 16400 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
-import GuildStore from "GuildStore" /* 2074 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
+import GuildStore from "GuildStore" /* 2086 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GuildPowerupsConstants = fn(4774);
+const GuildPowerupsConstants = fn(4968);
 ({ GUILD_TAG_BADGE_PACKS_WAVE_ONE_SKU_ID_SET: metroRequire, GUILD_TAG_BADGE_PACKS_WAVE_TWO_SKU_ID_SET: closure_7, GuildPowerupType: closure_8 } = GuildPowerupsConstants);
 const Constants = fn(1085);
 ({ AnalyticsPages: closure_9, AnalyticsSections: c10 } = Constants);
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const ThemeTypes = fn(1096).ThemeTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_14 = createStyles.createStyles((arg0) => {
   const obj = { coachmarkImage: null, coachmarkCover: null, boostGemBackground: null };
   const size = { height: 120, width: 260 - 2 * nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.md };
@@ -46,8 +46,8 @@ const ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupsCoachmark.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, guildId, type) => {
-  const _require = guildId;
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildPowerupsCoachmark(arg0, guildId, type) {
+  _require = guildId;
   importDefault = type;
   const cResult = require("c").c(144);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -108,7 +108,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, guildId, t
   }
   let num7 = 0;
   if (null != powerup) {
-    num7 = powerup.cost - tmp9(7682)(guildId).available;
+    num7 = powerup.cost - tmp9(8003)(guildId).available;
   }
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     let obj2 = { page: constants2.GUILD_CHANNEL, section: null };
@@ -133,7 +133,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, guildId, t
             if (cResult[12] === type) {
               if (cResult[13] === tmp10) {
                 if (cResult[14] === stateFromStores1) {
-                  tmp(9895);
+                  tmp(9375);
                   class S {
                     constructor() {
                       return closure_4.useReducedMotion;
@@ -168,21 +168,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, guildId, t
   }
   if (null != type) {
     if (cResult[17] === guildId) {
-      class W {
-        constructor() {
-          obj = closure_1;
-          if (null != closure_1) {
-            tmp = ContentDismissActionType;
-            markAsDismissedResult = obj.markAsDismissed(ContentDismissActionType.TAKE_ACTION);
-            tmp3 = closure_1;
-            tmp4 = closure_2;
-            obj1 = { guildId: null };
-            tmp5 = closure_0;
-            obj1.guildId = closure_0;
-            tmp6 = closure_1(closure_2[18])(obj1);
+      if (cResult[20] !== type) {
+        function handleDismiss() {
+          if (null != type) {
+            type.markAsDismissed(ContentDismissActionType.USER_DISMISS);
           }
-          return;
         }
+        cResult[20] = type;
+        class S {
+          constructor() {
+            return closure_4.useReducedMotion;
+          }
+        }
+        cResult[21] = handleDismiss;
       }
       type = type.type;
       class S {
@@ -191,20 +189,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, guildId, t
         }
       }
     }
-    class W {
-      constructor() {
-        obj = closure_1;
-        if (null != closure_1) {
-          tmp = ContentDismissActionType;
-          markAsDismissedResult = obj.markAsDismissed(ContentDismissActionType.TAKE_ACTION);
-          tmp3 = closure_1;
-          tmp4 = closure_2;
-          obj1 = { guildId: null };
-          tmp5 = closure_0;
-          obj1.guildId = closure_0;
-          tmp6 = closure_1(closure_2[18])(obj1);
-        }
-        return;
+    function handleButtonPress() {
+      if (null != type) {
+        type.markAsDismissed(ContentDismissActionType.TAKE_ACTION);
+        const obj2 = { guildId };
+        openGuildPowerupsModalDefault(obj2);
       }
     }
     class S {
@@ -213,7 +202,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, guildId, t
       }
     }
     cResult[18] = type;
-    cResult[19] = W;
+    cResult[19] = handleButtonPress;
   }
   cResult[7] = num7;
   cResult[8] = tmp15;
@@ -225,8 +214,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, guildId, t
   cResult[14] = stateFromStores1;
   cResult[15] = tmp22;
   const tmpResult3 = require("initialize");
-}) : ((arg0, arg1, type) => {
-  const _require = arg1;
+}) : (function useGuildPowerupsCoachmark(arg0, arg1, type) {
+  _require = arg1;
   importDefault = type;
   let items = [closure_5];
   const items1 = [arg1];
@@ -351,7 +340,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, guildId, t
           obj9.visible = true;
           obj9.renderImgComponent = function renderImgComponent() {
             if (powerups.length > 1) {
-              let str = _modDef16137;
+              let str = _modDef16397;
             } else {
               str = useGetGuildPowerupBannerImage.getGuildPowerupBannerImage(powerups[0], stateFromStores1, true);
               if (str == null) {
@@ -412,7 +401,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, guildId, t
           obj12.renderImgComponent = function renderImgComponent() {
             guildPowerupBannerImage = useGetGuildPowerupBannerImage.getGuildPowerupBannerImage(found1, stateFromStores1, true);
             if (guildPowerupBannerImage == null) {
-              guildPowerupBannerImage = _modDef16133;
+              guildPowerupBannerImage = _modDef16393;
             }
             const obj2 = { imageUrl: guildPowerupBannerImage, isAnimated: !stateFromStores1, style: null };
             const items = [, ];

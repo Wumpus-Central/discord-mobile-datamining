@@ -1,23 +1,23 @@
-// === Module 14754: FamilyCenterParentalControlsContentAndSocial ===
+// === Module 15015: FamilyCenterParentalControlsContentAndSocial ===
 
-// Module 14754 (FamilyCenterParentalControlsContentAndSocial)
+// Module 15015 (FamilyCenterParentalControlsContentAndSocial)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
-import SettingBuilders from "SettingBuilders" /* 11142 */;
-import SettingLayoutDefault from "SettingLayout" /* 14515 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2127 */;
+import SettingBuilders from "SettingBuilders" /* 11262 */;
+import SettingLayoutDefault from "SettingLayout" /* 14775 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const HelpdeskArticles = fn(1085).HelpdeskArticles;
-const MobileUserSettings = fn(7645).MobileUserSettings;
+const MobileUserSettings = fn(7966).MobileUserSettings;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterParentalControlsContentAndSocial.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCenterParentalControlsContentAndSocial() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { sections: null };
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp9 = cResult[1];
   }
   return tmp9;
-}) : (() => {
+}) : (function FamilyCenterParentalControlsContentAndSocial() {
   const obj2 = { sections: null };
   const obj3 = { settings: null, subLabel: null };
   const items = [MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS];

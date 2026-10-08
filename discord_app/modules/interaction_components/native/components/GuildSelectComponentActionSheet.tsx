@@ -1,17 +1,17 @@
-// === Module 14499: GuildSelectComponentActionSheet ===
+// === Module 14759: GuildSelectComponentActionSheet ===
 
-// Module 14499 (GuildSelectComponentActionSheet)
+// Module 14759 (GuildSelectComponentActionSheet)
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5048 */;
-import InteractionComponentTypes from "InteractionComponentTypes" /* 5129 */;
-import SelectComponentActionSheetDefault from "SelectComponentActionSheet" /* 11445 */;
+import native from "native" /* 1200 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5405 */;
+import InteractionComponentTypes from "InteractionComponentTypes" /* 5441 */;
+import SelectComponentActionSheetDefault from "SelectComponentActionSheet" /* 11428 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import SortedGuildStore from "SortedGuildStore" /* 5623 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import SortedGuildStore from "SortedGuildStore" /* 5968 */;
 
 const require = globalThis.__r;
 
@@ -19,13 +19,13 @@ require = fn;
 let View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_10 = createStyles.createStyles({ guildIdentity: { flexDirection: "row", alignItems: "center" }, iconContainer: { marginRight: 16 }, avatar: { marginRight: 4 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/interaction_components/native/components/GuildSelectComponentActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSelectComponentActionSheet(user) {
   const cResult = onSelectGuild(576).c(28);
   ({ selectedGuild, onSelectGuild } = user);
   user = user.user;
@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
   const tmp5 = first;
   [tmp7, r10022] = first(noop.useState(""), 2);
   if (cResult[0] !== selectedGuild) {
-    const obj4 = { type: onSelectGuild(5129).SelectOptionType.GUILD, value: null, label: null, guild: null };
+    const obj4 = { type: onSelectGuild(5441).SelectOptionType.GUILD, value: null, label: null, guild: null };
     ({ id: obj3.value, name: obj3.label } = selectedGuild);
     obj4.guild = selectedGuild;
     cResult[0] = selectedGuild;
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
     }
     const _Symbol2 = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      class D {
+      class T {
         constructor(arg0) {
           if (0 === user.length) {
             tmp4 = closure_1_7;
@@ -80,7 +80,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
             tmp7 = new.target;
             array = new Array();
             tmp9 = array;
-            reduced = flattenedGuildIds.reduce(() => { ... }, array);
+            reduced = flattenedGuildIds.reduce((arr, item) => {
+              guild = guild.getGuild(item);
+              if (null != guild) {
+                const obj = { type: closure_1_0(5441).SelectOptionType.GUILD, value: null, label: null, guild: null };
+                ({ id: obj.value, name: obj.label } = guild);
+                obj.guild = guild;
+                arr = arr.push(obj);
+              }
+              return arr;
+            }, array);
           } else {
             tmp = user;
             tmp2 = closure_2;
@@ -88,14 +97,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
             obj1 = { query: null };
             obj1.query = user;
             queryGuildsResult = obj.queryGuilds(obj1);
-            reduced = queryGuildsResult.map(() => { ... });
+            reduced = queryGuildsResult.map((record) => {
+              record = record.record;
+              return { type: closure_1_0(5441).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
+            });
           }
           return reduced;
         }
       }
-      cResult[5] = D;
+      cResult[5] = T;
     } else {
-      class D {
+      class T {
         constructor(arg0) {
           if (0 === user.length) {
             tmp4 = closure_1_7;
@@ -106,7 +118,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
             tmp7 = new.target;
             array = new Array();
             tmp9 = array;
-            reduced = flattenedGuildIds.reduce(() => { ... }, array);
+            reduced = flattenedGuildIds.reduce((arr, item) => {
+              guild = guild.getGuild(item);
+              if (null != guild) {
+                const obj = { type: closure_1_0(5441).SelectOptionType.GUILD, value: null, label: null, guild: null };
+                ({ id: obj.value, name: obj.label } = guild);
+                obj.guild = guild;
+                arr = arr.push(obj);
+              }
+              return arr;
+            }, array);
           } else {
             tmp = user;
             tmp2 = closure_2;
@@ -114,14 +135,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
             obj1 = { query: null };
             obj1.query = user;
             queryGuildsResult = obj.queryGuilds(obj1);
-            reduced = queryGuildsResult.map(() => { ... });
+            reduced = queryGuildsResult.map((record) => {
+              record = record.record;
+              return { type: closure_1_0(5441).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
+            });
           }
           return reduced;
         }
       }
     }
     if (cResult[6] !== tmp7) {
-      class D {
+      class T {
         constructor(arg0) {
           if (0 === user.length) {
             tmp4 = closure_1_7;
@@ -132,7 +156,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
             tmp7 = new.target;
             array = new Array();
             tmp9 = array;
-            reduced = flattenedGuildIds.reduce(() => { ... }, array);
+            reduced = flattenedGuildIds.reduce((arr, item) => {
+              guild = guild.getGuild(item);
+              if (null != guild) {
+                const obj = { type: closure_1_0(5441).SelectOptionType.GUILD, value: null, label: null, guild: null };
+                ({ id: obj.value, name: obj.label } = guild);
+                obj.guild = guild;
+                arr = arr.push(obj);
+              }
+              return arr;
+            }, array);
           } else {
             tmp = user;
             tmp2 = closure_2;
@@ -140,7 +173,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
             obj1 = { query: null };
             obj1.query = user;
             queryGuildsResult = obj.queryGuilds(obj1);
-            reduced = queryGuildsResult.map(() => { ... });
+            reduced = queryGuildsResult.map((record) => {
+              record = record.record;
+              return { type: closure_1_0(5441).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
+            });
           }
           return reduced;
         }
@@ -148,7 +184,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
       cResult[6] = tmp7;
       cResult[7] = tmp18;
     } else {
-      class D {
+      class T {
         constructor(arg0) {
           if (0 === user.length) {
             tmp4 = closure_1_7;
@@ -159,7 +195,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
             tmp7 = new.target;
             array = new Array();
             tmp9 = array;
-            reduced = flattenedGuildIds.reduce(() => { ... }, array);
+            reduced = flattenedGuildIds.reduce((arr, item) => {
+              guild = guild.getGuild(item);
+              if (null != guild) {
+                const obj = { type: closure_1_0(5441).SelectOptionType.GUILD, value: null, label: null, guild: null };
+                ({ id: obj.value, name: obj.label } = guild);
+                obj.guild = guild;
+                arr = arr.push(obj);
+              }
+              return arr;
+            }, array);
           } else {
             tmp = user;
             tmp2 = closure_2;
@@ -167,7 +212,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
             obj1 = { query: null };
             obj1.query = user;
             queryGuildsResult = obj.queryGuilds(obj1);
-            reduced = queryGuildsResult.map(() => { ... });
+            reduced = queryGuildsResult.map((record) => {
+              record = record.record;
+              return { type: closure_1_0(5441).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
+            });
           }
           return reduced;
         }
@@ -175,189 +223,535 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
     }
     const _Symbol3 = Symbol;
     if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-      class V {
-        constructor() {
-          obj = user(closure_2[11]);
-          return obj.hideActionSheet();
+      class T {
+        constructor(arg0) {
+          if (0 === user.length) {
+            tmp4 = closure_1_7;
+            flattenedGuildIds = closure_1_7.getFlattenedGuildIds();
+            tmp5 = globalThis;
+            _Array = Array;
+            tmp6 = new.target;
+            tmp7 = new.target;
+            array = new Array();
+            tmp9 = array;
+            reduced = flattenedGuildIds.reduce((arr, item) => {
+              guild = guild.getGuild(item);
+              if (null != guild) {
+                const obj = { type: closure_1_0(5441).SelectOptionType.GUILD, value: null, label: null, guild: null };
+                ({ id: obj.value, name: obj.label } = guild);
+                obj.guild = guild;
+                arr = arr.push(obj);
+              }
+              return arr;
+            }, array);
+          } else {
+            tmp = user;
+            tmp2 = closure_2;
+            obj = user(closure_2[17]);
+            obj1 = { query: null };
+            obj1.query = user;
+            queryGuildsResult = obj.queryGuilds(obj1);
+            reduced = queryGuildsResult.map((record) => {
+              record = record.record;
+              return { type: closure_1_0(5441).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
+            });
+          }
+          return reduced;
         }
       }
-      cResult[8] = V;
+      cResult[8] = tmp20;
     } else {
-      class V {
-        constructor() {
-          obj = user(closure_2[11]);
-          return obj.hideActionSheet();
+      class T {
+        constructor(arg0) {
+          if (0 === user.length) {
+            tmp4 = closure_1_7;
+            flattenedGuildIds = closure_1_7.getFlattenedGuildIds();
+            tmp5 = globalThis;
+            _Array = Array;
+            tmp6 = new.target;
+            tmp7 = new.target;
+            array = new Array();
+            tmp9 = array;
+            reduced = flattenedGuildIds.reduce((arr, item) => {
+              guild = guild.getGuild(item);
+              if (null != guild) {
+                const obj = { type: closure_1_0(5441).SelectOptionType.GUILD, value: null, label: null, guild: null };
+                ({ id: obj.value, name: obj.label } = guild);
+                obj.guild = guild;
+                arr = arr.push(obj);
+              }
+              return arr;
+            }, array);
+          } else {
+            tmp = user;
+            tmp2 = closure_2;
+            obj = user(closure_2[17]);
+            obj1 = { query: null };
+            obj1.query = user;
+            queryGuildsResult = obj.queryGuilds(obj1);
+            reduced = queryGuildsResult.map((record) => {
+              record = record.record;
+              return { type: closure_1_0(5441).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
+            });
+          }
+          return reduced;
         }
       }
     }
-    View = V;
+    View = tmp20;
     if (cResult[9] !== onSelectGuild) {
-      class M {
-        constructor(arg0, arg1) {
-          tmp = onSelectGuild(arg1.guild);
-          tmp2 = closure_4(arg1);
-          tmp3 = closure_5();
-          return;
+      class T {
+        constructor(arg0) {
+          if (0 === user.length) {
+            tmp4 = closure_1_7;
+            flattenedGuildIds = closure_1_7.getFlattenedGuildIds();
+            tmp5 = globalThis;
+            _Array = Array;
+            tmp6 = new.target;
+            tmp7 = new.target;
+            array = new Array();
+            tmp9 = array;
+            reduced = flattenedGuildIds.reduce((arr, item) => {
+              guild = guild.getGuild(item);
+              if (null != guild) {
+                const obj = { type: closure_1_0(5441).SelectOptionType.GUILD, value: null, label: null, guild: null };
+                ({ id: obj.value, name: obj.label } = guild);
+                obj.guild = guild;
+                arr = arr.push(obj);
+              }
+              return arr;
+            }, array);
+          } else {
+            tmp = user;
+            tmp2 = closure_2;
+            obj = user(closure_2[17]);
+            obj1 = { query: null };
+            obj1.query = user;
+            queryGuildsResult = obj.queryGuilds(obj1);
+            reduced = queryGuildsResult.map((record) => {
+              record = record.record;
+              return { type: closure_1_0(5441).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
+            });
+          }
+          return reduced;
         }
       }
       cResult[9] = onSelectGuild;
-      cResult[10] = M;
+      cResult[10] = tmp22;
     } else {
-      class M {
-        constructor(arg0, arg1) {
-          tmp = onSelectGuild(arg1.guild);
-          tmp2 = closure_4(arg1);
-          tmp3 = closure_5();
-          return;
+      class T {
+        constructor(arg0) {
+          if (0 === user.length) {
+            tmp4 = closure_1_7;
+            flattenedGuildIds = closure_1_7.getFlattenedGuildIds();
+            tmp5 = globalThis;
+            _Array = Array;
+            tmp6 = new.target;
+            tmp7 = new.target;
+            array = new Array();
+            tmp9 = array;
+            reduced = flattenedGuildIds.reduce((arr, item) => {
+              guild = guild.getGuild(item);
+              if (null != guild) {
+                const obj = { type: closure_1_0(5441).SelectOptionType.GUILD, value: null, label: null, guild: null };
+                ({ id: obj.value, name: obj.label } = guild);
+                obj.guild = guild;
+                arr = arr.push(obj);
+              }
+              return arr;
+            }, array);
+          } else {
+            tmp = user;
+            tmp2 = closure_2;
+            obj = user(closure_2[17]);
+            obj1 = { query: null };
+            obj1.query = user;
+            queryGuildsResult = obj.queryGuilds(obj1);
+            reduced = queryGuildsResult.map((record) => {
+              record = record.record;
+              return { type: closure_1_0(5441).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
+            });
+          }
+          return reduced;
         }
       }
     }
     const _Symbol4 = Symbol;
     if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-      class M {
-        constructor(arg0, arg1) {
-          tmp = onSelectGuild(arg1.guild);
-          tmp2 = closure_4(arg1);
-          tmp3 = closure_5();
-          return;
+      class T {
+        constructor(arg0) {
+          if (0 === user.length) {
+            tmp4 = closure_1_7;
+            flattenedGuildIds = closure_1_7.getFlattenedGuildIds();
+            tmp5 = globalThis;
+            _Array = Array;
+            tmp6 = new.target;
+            tmp7 = new.target;
+            array = new Array();
+            tmp9 = array;
+            reduced = flattenedGuildIds.reduce((arr, item) => {
+              guild = guild.getGuild(item);
+              if (null != guild) {
+                const obj = { type: closure_1_0(5441).SelectOptionType.GUILD, value: null, label: null, guild: null };
+                ({ id: obj.value, name: obj.label } = guild);
+                obj.guild = guild;
+                arr = arr.push(obj);
+              }
+              return arr;
+            }, array);
+          } else {
+            tmp = user;
+            tmp2 = closure_2;
+            obj = user(closure_2[17]);
+            obj1 = { query: null };
+            obj1.query = user;
+            queryGuildsResult = obj.queryGuilds(obj1);
+            reduced = queryGuildsResult.map((record) => {
+              record = record.record;
+              return { type: closure_1_0(5441).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
+            });
+          }
+          return reduced;
         }
       }
-      cResult[11] = tmp22;
+      cResult[11] = tmp24;
     } else {
-      class M {
-        constructor(arg0, arg1) {
-          tmp = onSelectGuild(arg1.guild);
-          tmp2 = closure_4(arg1);
-          tmp3 = closure_5();
-          return;
+      class T {
+        constructor(arg0) {
+          if (0 === user.length) {
+            tmp4 = closure_1_7;
+            flattenedGuildIds = closure_1_7.getFlattenedGuildIds();
+            tmp5 = globalThis;
+            _Array = Array;
+            tmp6 = new.target;
+            tmp7 = new.target;
+            array = new Array();
+            tmp9 = array;
+            reduced = flattenedGuildIds.reduce((arr, item) => {
+              guild = guild.getGuild(item);
+              if (null != guild) {
+                const obj = { type: closure_1_0(5441).SelectOptionType.GUILD, value: null, label: null, guild: null };
+                ({ id: obj.value, name: obj.label } = guild);
+                obj.guild = guild;
+                arr = arr.push(obj);
+              }
+              return arr;
+            }, array);
+          } else {
+            tmp = user;
+            tmp2 = closure_2;
+            obj = user(closure_2[17]);
+            obj1 = { query: null };
+            obj1.query = user;
+            queryGuildsResult = obj.queryGuilds(obj1);
+            reduced = queryGuildsResult.map((record) => {
+              record = record.record;
+              return { type: closure_1_0(5441).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
+            });
+          }
+          return reduced;
         }
       }
     }
     if (first != null) {
-      class M {
-        constructor(arg0, arg1) {
-          tmp = onSelectGuild(arg1.guild);
-          tmp2 = closure_4(arg1);
-          tmp3 = closure_5();
-          return;
+      class T {
+        constructor(arg0) {
+          if (0 === user.length) {
+            tmp4 = closure_1_7;
+            flattenedGuildIds = closure_1_7.getFlattenedGuildIds();
+            tmp5 = globalThis;
+            _Array = Array;
+            tmp6 = new.target;
+            tmp7 = new.target;
+            array = new Array();
+            tmp9 = array;
+            reduced = flattenedGuildIds.reduce((arr, item) => {
+              guild = guild.getGuild(item);
+              if (null != guild) {
+                const obj = { type: closure_1_0(5441).SelectOptionType.GUILD, value: null, label: null, guild: null };
+                ({ id: obj.value, name: obj.label } = guild);
+                obj.guild = guild;
+                arr = arr.push(obj);
+              }
+              return arr;
+            }, array);
+          } else {
+            tmp = user;
+            tmp2 = closure_2;
+            obj = user(closure_2[17]);
+            obj1 = { query: null };
+            obj1.query = user;
+            queryGuildsResult = obj.queryGuilds(obj1);
+            reduced = queryGuildsResult.map((record) => {
+              record = record.record;
+              return { type: closure_1_0(5441).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
+            });
+          }
+          return reduced;
         }
       }
     }
     if (cResult[12] !== undefined) {
-      class M {
-        constructor(arg0, arg1) {
-          tmp = onSelectGuild(arg1.guild);
-          tmp2 = closure_4(arg1);
-          tmp3 = closure_5();
-          return;
+      class T {
+        constructor(arg0) {
+          if (0 === user.length) {
+            tmp4 = closure_1_7;
+            flattenedGuildIds = closure_1_7.getFlattenedGuildIds();
+            tmp5 = globalThis;
+            _Array = Array;
+            tmp6 = new.target;
+            tmp7 = new.target;
+            array = new Array();
+            tmp9 = array;
+            reduced = flattenedGuildIds.reduce((arr, item) => {
+              guild = guild.getGuild(item);
+              if (null != guild) {
+                const obj = { type: closure_1_0(5441).SelectOptionType.GUILD, value: null, label: null, guild: null };
+                ({ id: obj.value, name: obj.label } = guild);
+                obj.guild = guild;
+                arr = arr.push(obj);
+              }
+              return arr;
+            }, array);
+          } else {
+            tmp = user;
+            tmp2 = closure_2;
+            obj = user(closure_2[17]);
+            obj1 = { query: null };
+            obj1.query = user;
+            queryGuildsResult = obj.queryGuilds(obj1);
+            reduced = queryGuildsResult.map((record) => {
+              record = record.record;
+              return { type: closure_1_0(5441).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
+            });
+          }
+          return reduced;
         }
       }
       if (first != null) {
-        class M {
-          constructor(arg0, arg1) {
-            tmp = onSelectGuild(arg1.guild);
-            tmp2 = closure_4(arg1);
-            tmp3 = closure_5();
-            return;
+        class T {
+          constructor(arg0) {
+            if (0 === user.length) {
+              tmp4 = closure_1_7;
+              flattenedGuildIds = closure_1_7.getFlattenedGuildIds();
+              tmp5 = globalThis;
+              _Array = Array;
+              tmp6 = new.target;
+              tmp7 = new.target;
+              array = new Array();
+              tmp9 = array;
+              reduced = flattenedGuildIds.reduce((arr, item) => {
+                guild = guild.getGuild(item);
+                if (null != guild) {
+                  const obj = { type: closure_1_0(5441).SelectOptionType.GUILD, value: null, label: null, guild: null };
+                  ({ id: obj.value, name: obj.label } = guild);
+                  obj.guild = guild;
+                  arr = arr.push(obj);
+                }
+                return arr;
+              }, array);
+            } else {
+              tmp = user;
+              tmp2 = closure_2;
+              obj = user(closure_2[17]);
+              obj1 = { query: null };
+              obj1.query = user;
+              queryGuildsResult = obj.queryGuilds(obj1);
+              reduced = queryGuildsResult.map((record) => {
+                record = record.record;
+                return { type: closure_1_0(5441).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
+              });
+            }
+            return reduced;
           }
         }
       }
-      class P {
-        constructor(arg0) {
-          value = undefined;
-          if (closure_3 != null) {
-            value = closure_3.value;
-          }
-          return user.value === value;
+      function isSelected(value) {
+        value = undefined;
+        if (first != null) {
+          value = first.value;
         }
+        return value.value === value;
       }
-      cResult[12] = tmp26;
-      cResult[13] = P;
+      cResult[12] = tmp28;
+      cResult[13] = isSelected;
     } else {
-      class M {
-        constructor(arg0, arg1) {
-          tmp = onSelectGuild(arg1.guild);
-          tmp2 = closure_4(arg1);
-          tmp3 = closure_5();
-          return;
+      class T {
+        constructor(arg0) {
+          if (0 === user.length) {
+            tmp4 = closure_1_7;
+            flattenedGuildIds = closure_1_7.getFlattenedGuildIds();
+            tmp5 = globalThis;
+            _Array = Array;
+            tmp6 = new.target;
+            tmp7 = new.target;
+            array = new Array();
+            tmp9 = array;
+            reduced = flattenedGuildIds.reduce((arr, item) => {
+              guild = guild.getGuild(item);
+              if (null != guild) {
+                const obj = { type: closure_1_0(5441).SelectOptionType.GUILD, value: null, label: null, guild: null };
+                ({ id: obj.value, name: obj.label } = guild);
+                obj.guild = guild;
+                arr = arr.push(obj);
+              }
+              return arr;
+            }, array);
+          } else {
+            tmp = user;
+            tmp2 = closure_2;
+            obj = user(closure_2[17]);
+            obj1 = { query: null };
+            obj1.query = user;
+            queryGuildsResult = obj.queryGuilds(obj1);
+            reduced = queryGuildsResult.map((record) => {
+              record = record.record;
+              return { type: closure_1_0(5441).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
+            });
+          }
+          return reduced;
         }
       }
     }
     const _Symbol5 = Symbol;
     if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-      class H {
+      class T {
         constructor(arg0) {
-          return user.label;
-        }
-      }
-      class P {
-        constructor(arg0) {
-          value = undefined;
-          if (closure_3 != null) {
-            value = closure_3.value;
+          if (0 === user.length) {
+            tmp4 = closure_1_7;
+            flattenedGuildIds = closure_1_7.getFlattenedGuildIds();
+            tmp5 = globalThis;
+            _Array = Array;
+            tmp6 = new.target;
+            tmp7 = new.target;
+            array = new Array();
+            tmp9 = array;
+            reduced = flattenedGuildIds.reduce((arr, item) => {
+              guild = guild.getGuild(item);
+              if (null != guild) {
+                const obj = { type: closure_1_0(5441).SelectOptionType.GUILD, value: null, label: null, guild: null };
+                ({ id: obj.value, name: obj.label } = guild);
+                obj.guild = guild;
+                arr = arr.push(obj);
+              }
+              return arr;
+            }, array);
+          } else {
+            tmp = user;
+            tmp2 = closure_2;
+            obj = user(closure_2[17]);
+            obj1 = { query: null };
+            obj1.query = user;
+            queryGuildsResult = obj.queryGuilds(obj1);
+            reduced = queryGuildsResult.map((record) => {
+              record = record.record;
+              return { type: closure_1_0(5441).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
+            });
           }
-          return user.value === value;
+          return reduced;
         }
       }
+      cResult[14] = tmp30;
     } else {
-      class H {
+      class T {
         constructor(arg0) {
-          return user.label;
+          if (0 === user.length) {
+            tmp4 = closure_1_7;
+            flattenedGuildIds = closure_1_7.getFlattenedGuildIds();
+            tmp5 = globalThis;
+            _Array = Array;
+            tmp6 = new.target;
+            tmp7 = new.target;
+            array = new Array();
+            tmp9 = array;
+            reduced = flattenedGuildIds.reduce((arr, item) => {
+              guild = guild.getGuild(item);
+              if (null != guild) {
+                const obj = { type: closure_1_0(5441).SelectOptionType.GUILD, value: null, label: null, guild: null };
+                ({ id: obj.value, name: obj.label } = guild);
+                obj.guild = guild;
+                arr = arr.push(obj);
+              }
+              return arr;
+            }, array);
+          } else {
+            tmp = user;
+            tmp2 = closure_2;
+            obj = user(closure_2[17]);
+            obj1 = { query: null };
+            obj1.query = user;
+            queryGuildsResult = obj.queryGuilds(obj1);
+            reduced = queryGuildsResult.map((record) => {
+              record = record.record;
+              return { type: closure_1_0(5441).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
+            });
+          }
+          return reduced;
         }
       }
     }
     if (cResult[15] === tmp4.avatar) {
-      class H {
+      class T {
         constructor(arg0) {
-          return user.label;
+          if (0 === user.length) {
+            tmp4 = closure_1_7;
+            flattenedGuildIds = closure_1_7.getFlattenedGuildIds();
+            tmp5 = globalThis;
+            _Array = Array;
+            tmp6 = new.target;
+            tmp7 = new.target;
+            array = new Array();
+            tmp9 = array;
+            reduced = flattenedGuildIds.reduce((arr, item) => {
+              guild = guild.getGuild(item);
+              if (null != guild) {
+                const obj = { type: closure_1_0(5441).SelectOptionType.GUILD, value: null, label: null, guild: null };
+                ({ id: obj.value, name: obj.label } = guild);
+                obj.guild = guild;
+                arr = arr.push(obj);
+              }
+              return arr;
+            }, array);
+          } else {
+            tmp = user;
+            tmp2 = closure_2;
+            obj = user(closure_2[17]);
+            obj1 = { query: null };
+            obj1.query = user;
+            queryGuildsResult = obj.queryGuilds(obj1);
+            reduced = queryGuildsResult.map((record) => {
+              record = record.record;
+              return { type: closure_1_0(5441).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
+            });
+          }
+          return reduced;
         }
       }
     }
-    class Q {
-      constructor(arg0) {
-        tmp = user;
-        hasAvatarForGuildResult = user.hasAvatarForGuild(user.guild.id);
-        tmp3 = closure_2;
-        obj = closure_1(closure_2[12]);
-        username = obj.getNickname(user.guild.id, undefined, user);
-        if (!hasAvatarForGuildResult) {
-          tmp4 = null;
-          if (null == username) {
-            return;
-          }
-        }
-        obj1 = { style: closure_2.guildIdentity, children: null };
-        tmp8 = hasAvatarForGuildResult;
-        tmp5 = jsxs;
-        tmp6 = View;
-        if (hasAvatarForGuildResult) {
-          tmp9 = jsx;
-          tmp10 = closure_0;
-          obj4 = { size: null, style: null, user: null, guildId: null, animate: true };
-          obj4.size = closure_0(tmp3[13]).AvatarSizes.SIZE_16;
-          obj4.style = tmp7.avatar;
-          obj4.user = tmp;
-          obj4.guildId = user.guild.id;
-          tmp8 = jsx(closure_0(tmp3[13]).Avatar, obj4);
-        }
-        items = [, ];
-        items[0] = tmp8;
-        tmp11 = jsx;
-        if (username == null) {
-          username = tmp.username;
-        }
-        items[1] = tmp11(closure_0(tmp3[14]).Text, { variant: "text-sm/medium", color: "text-default", children: username });
-        obj1.children = items;
-        return tmp5(tmp6, obj1);
+    function renderDescription(guild) {
+      const hasAvatarForGuildResult = user.hasAvatarForGuild(guild.guild.id);
+      let username = NicknameUtilsDefault.getNickname(guild.guild.id, undefined, user);
+      const obj2 = { style: guildIdentity.guildIdentity, children: null };
+      let tmp8 = hasAvatarForGuildResult;
+      if (hasAvatarForGuildResult) {
+        const obj3 = { size: native.AvatarSizes.SIZE_16, style: tmp7.avatar, user, guildId: guild.guild.id, animate: true };
+        tmp8 = closure_2_8(native.Avatar, obj3);
       }
+      const items = [tmp8, ];
+      if (username == null) {
+        username = user.username;
+      }
+      items[1] = closure_2_8(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: username });
+      obj2.children = items;
+      return options(View, obj2);
     }
     cResult[15] = tmp4.avatar;
     cResult[16] = tmp4.guildIdentity;
     cResult[17] = user;
-    cResult[18] = Q;
+    cResult[18] = renderDescription;
   }
   const tmp6 = first(noop.useState(""), 2);
-}) : ((arg0) => {
+}) : (function GuildSelectComponentActionSheet(arg0) {
   ({ selectedGuild, onSelectGuild: require, user: importDefault } = arg0);
   let first;
   let first1;
@@ -389,7 +783,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
       let reduced = flattenedGuildIds.reduce((arr, item) => {
         guild = guild.getGuild(item);
         if (null != guild) {
-          const obj = { type: closure_1_0(5129).SelectOptionType.GUILD, value: null, label: null, guild: null };
+          const obj = { type: closure_1_0(5441).SelectOptionType.GUILD, value: null, label: null, guild: null };
           ({ id: obj.value, name: obj.label } = guild);
           obj.guild = guild;
           arr = arr.push(obj);
@@ -401,7 +795,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
       let obj = require("AutocompleteUtils");
       reduced = require("AutocompleteUtils").queryGuilds(obj2).map((record) => {
         record = record.record;
-        return { type: closure_1_0(5129).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
+        return { type: closure_1_0(5441).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
       });
       const queryGuildsResult = require("AutocompleteUtils").queryGuilds(obj2);
     }
@@ -410,12 +804,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
   const items2 = [first, callback];
   const memo = obj.useMemo(() => callback(first), items2);
   return closure_8(SelectComponentActionSheetDefault, {
-    onPressOptionItem(arg0, guild) {
-      _require(guild.guild);
+    onPressOptionItem: function handlePressOptionItem(arg0, guild) {
+      require(guild.guild);
       closure_5(guild);
       ActionSheetActionCreatorsDefault.hideActionSheet();
     },
-    onRemoveOptionItem() {
+    onRemoveOptionItem: function handleRemoveOptionItem() {
       closure_5(null);
     },
     renderIcon(guild) {
@@ -456,7 +850,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
     },
     submitSelection,
     onQueryChange: tmp2[1],
-    itemAccessibilityLabel(label) {
+    itemAccessibilityLabel: function accessibilityLabel(label) {
       return label.label;
     },
     allowEmpty: false,

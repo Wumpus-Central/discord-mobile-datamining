@@ -1,10 +1,10 @@
-// === Module 17931: useIsMFAEnabled ===
+// === Module 18218: useIsMFAEnabled ===
 
-// Module 17931 (useIsMFAEnabled)
+// Module 18218 (useIsMFAEnabled)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9283 */;
-import UserStore from "UserStore" /* 1377 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8614 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const MFALevels = fn(1085).MFALevels;
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/useIsMFAEnabled.tsx");
 
-export const useIsMFAEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useIsMFAEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsMFAEnabled() {
   const cResult = c.c(7);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
@@ -29,7 +29,7 @@ export const useIsMFAEnabled = ReactCompilerGating.isReactCompilerEnabled() ? ((
   const stateFromStores = useStateFromStores.useStateFromStores(tmp4, tmp5);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [GuildSettingsStore];
-    const fn2 = function c() {
+    const fn2 = function b() {
       return props.getProps().mfaLevel;
     };
     cResult[2] = items1;
@@ -58,7 +58,7 @@ export const useIsMFAEnabled = ReactCompilerGating.isReactCompilerEnabled() ? ((
   cResult[6] = obj2;
   tmp15 = obj2;
   const tmpResult2 = useStateFromStores;
-}) : (() => {
+}) : (function useIsMFAEnabled() {
   const items = [UserStore];
   const stateFromStores = useStateFromStores.useStateFromStores(items, () => currentUser.getCurrentUser());
   const items1 = [GuildSettingsStore];

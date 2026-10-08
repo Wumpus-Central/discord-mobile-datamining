@@ -1,12 +1,12 @@
-// === Module 6709: VerifiedRoleIcon ===
+// === Module 6886: VerifiedRoleIcon ===
 
-// Module 6709 (VerifiedRoleIcon)
+// Module 6886 (VerifiedRoleIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import LinkIcon from "LinkIcon" /* 4845 */;
-import useRoleIconProps from "useRoleIconProps" /* 6692 */;
-import getHigherContrastColor from "getHigherContrastColor" /* 6710 */;
-import RoleIconDefault from "RoleIcon" /* 6711 */;
+import LinkIcon from "LinkIcon" /* 5039 */;
+import useRoleIconProps from "useRoleIconProps" /* 6869 */;
+import getHigherContrastColor from "getHigherContrastColor" /* 6887 */;
+import RoleIconDefault from "RoleIcon" /* 6888 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const Constants = fn(1085);
 const jsx = fn(21).jsx;
 const WHITE = nativeDefault.unsafe_rawColors.WHITE;
 const PRIMARY_630 = nativeDefault.unsafe_rawColors.PRIMARY_630;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { iconContainer: { alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.round } };
 let closure_9 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -24,7 +24,7 @@ let obj3 = { alignItems: "center", justifyContent: "center", borderRadius: nativ
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/connections/native/VerifiedRoleIcon.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function VerifiedRoleIcon(arg0) {
   const cResult = c.c(23);
   ({ guildId, role, roleId, roleColor, size, style, displayRoleIcon } = arg0);
   const tmp3 = closure_9();
@@ -139,7 +139,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = roleId;
   cResult[5] = obj6;
   tmp11 = obj6;
-}) : ((arg0) => {
+}) : (function VerifiedRoleIcon(arg0) {
   ({ role, roleId, roleColor, size } = arg0);
   ({ guildId, style, displayRoleIcon } = arg0);
   if (roleColor == null) {

@@ -1,7 +1,7 @@
-// === Module 13910: DisableCameraSimulcastExperiment ===
+// === Module 14213: DisableCameraSimulcastExperiment ===
 
-// Module 13910 (DisableCameraSimulcastExperiment)
-import ApexExperiment from "ApexExperiment" /* 1440 */;
+// Module 14213 (DisableCameraSimulcastExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-05-disable-camera-simulcast", kind: "user", defaultConfig: { enableSimulcast: true }, variations: null };

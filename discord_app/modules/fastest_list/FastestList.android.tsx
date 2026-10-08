@@ -1,10 +1,9 @@
-// === Module 6559: FastestList ===
+// === Module 6735: FastestList ===
 
-// Module 6559 (FastestList)
-import FastestListNativeComponentDefault from "FastestListNativeComponent" /* 6560 */;
-import _readOnlyError from "_readOnlyError" /* 377 */;
+// Module 6735 (FastestList)
+import FastestListNativeComponentDefault from "FastestListNativeComponent" /* 6736 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport_mod from "ReanimatedRexport" /* 4618 */;
+import ReanimatedRexport_mod from "ReanimatedRexport" /* 4810 */;
 
 const require = fn;
 const jsxProd = fn(21);
@@ -13,77 +12,86 @@ let ReanimatedRexport = ReanimatedRexport_mod;
 ReanimatedRexport.createAnimatedComponent(FastestListNativeComponentDefault);
 let ReanimatedRexport = ReanimatedRexport_mod;
 const FastestListNativeComponent = ReanimatedRexport.createAnimatedComponent(FastestListNativeComponentDefault);
-const BottomSheetModal = fn(6119);
-let closure_8 = BottomSheetModal.createBottomSheetScrollableComponent(fn(6119).SCROLLABLE_TYPE.SCROLLVIEW, FastestListNativeComponent);
+const BottomSheetModal = fn(6298);
+let closure_8 = BottomSheetModal.createBottomSheetScrollableComponent(fn(6298).SCROLLABLE_TYPE.SCROLLVIEW, FastestListNativeComponent);
 let closure_9 = 0;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/fastest_list/FastestList.android.tsx");
 
-export default noop.forwardRef(function FastestList(estimatedListSize, arg1) {
-  let current = estimatedListSize;
-  const enabled = estimatedListSize.enabled;
-  let tmp = undefined === enabled;
-  if (!tmp) {
-    tmp = enabled;
+export default function FastestList(ref) {
+  const merged = Object.assign(ref, Object.assign({ ref: 0 }));
+  let num;
+  let num2;
+  let listId;
+  let onContentLengthChange;
+  ref = undefined;
+  let ref1;
+  let ref2;
+  closure_8 = undefined;
+  let memo1;
+  const enabled = merged.enabled;
+  let tmp2 = undefined === enabled;
+  if (!tmp2) {
+    tmp2 = enabled;
   }
-  const horizontal = estimatedListSize.horizontal;
-  let tmp2 = undefined !== horizontal;
-  if (tmp2) {
-    tmp2 = horizontal;
-  }
-  ({ keyboardDismissMode, inActionSheet } = estimatedListSize);
-  let tmp3 = undefined !== inActionSheet;
+  const horizontal = merged.horizontal;
+  let tmp3 = undefined !== horizontal;
   if (tmp3) {
-    tmp3 = inActionSheet;
+    tmp3 = horizontal;
   }
-  const insetStart = estimatedListSize.insetStart;
-  let num = 0;
+  ({ keyboardDismissMode, inActionSheet } = merged);
+  let tmp4 = undefined !== inActionSheet;
+  if (tmp4) {
+    tmp4 = inActionSheet;
+  }
+  const insetStart = merged.insetStart;
+  num = 0;
   if (undefined !== insetStart) {
     num = insetStart;
   }
-  const insetEnd = estimatedListSize.insetEnd;
-  let num2 = 0;
+  const insetEnd = merged.insetEnd;
+  num2 = 0;
   if (undefined !== insetEnd) {
     num2 = insetEnd;
   }
-  const listId = estimatedListSize.listId;
-  const onContentLengthChange = estimatedListSize.onContentLengthChange;
-  ({ placeholderConfig, renderAhead } = estimatedListSize);
+  listId = merged.listId;
+  onContentLengthChange = merged.onContentLengthChange;
+  ({ placeholderConfig, renderAhead } = merged);
   let str = "nominal";
-  ({ itemSize, listFooterSize, listFooterAlwaysMounted, listHeaderSize, listHeaderAlwaysMounted, onLayout, placeholdersForceEnabled } = estimatedListSize);
+  ({ itemSize, listFooterSize, listFooterAlwaysMounted, listHeaderSize, listHeaderAlwaysMounted, onLayout, placeholdersForceEnabled } = merged);
   if (undefined !== renderAhead) {
     str = renderAhead;
   }
-  const scrollEventThrottle = estimatedListSize.scrollEventThrottle;
+  const scrollEventThrottle = merged.scrollEventThrottle;
   let num3 = 32;
-  ({ renderItem, renderListFooter, renderListHeader, renderSectionHeader, renderSectionFooter } = estimatedListSize);
+  ({ renderItem, renderListFooter, renderListHeader, renderSectionHeader, renderSectionFooter } = merged);
   if (undefined !== scrollEventThrottle) {
     num3 = scrollEventThrottle;
   }
-  ({ scrollReporting, showsHorizontalScrollIndicator } = estimatedListSize);
-  let tmp4 = undefined === showsHorizontalScrollIndicator;
-  ({ sections, sectionHeaderSize, sectionFooterSize } = estimatedListSize);
-  if (!tmp4) {
-    tmp4 = showsHorizontalScrollIndicator;
+  ({ scrollReporting, showsHorizontalScrollIndicator } = merged);
+  let tmp5 = undefined === showsHorizontalScrollIndicator;
+  ({ sections, sectionHeaderSize, sectionFooterSize } = merged);
+  if (!tmp5) {
+    tmp5 = showsHorizontalScrollIndicator;
   }
-  const showsVerticalScrollIndicator = estimatedListSize.showsVerticalScrollIndicator;
-  ({ style, wrapChildren } = estimatedListSize);
-  const ref = listId.useRef(null);
-  const ref1 = listId.useRef(null);
-  const ref2 = listId.useRef(estimatedListSize);
-  const items = [estimatedListSize];
+  const showsVerticalScrollIndicator = merged.showsVerticalScrollIndicator;
+  ({ style, wrapChildren } = merged);
+  ref = listId.useRef(null);
+  ref1 = listId.useRef(null);
+  ref2 = listId.useRef(merged);
+  const items = [merged];
   const effect = listId.useEffect(() => {
-    ref2.current = current;
+    ref2.current = merged;
   }, items);
-  ({ style: style2, marginEnd, marginStart } = num(num2[6])({ style }));
-  const imperativeHandle = listId.useImperativeHandle(arg1, () => ({
+  ({ style: style2, marginEnd, marginStart } = num(num2[5])({ style }));
+  const imperativeHandle = listId.useImperativeHandle(ref.ref, () => ({
     scrollToTop() {
       let flag = arg0;
       if (arg0 === undefined) {
         flag = false;
       }
       if (null != ref.current) {
-        const Commands = closure_0(num2[4]).Commands;
+        const Commands = merged(num2[3]).Commands;
         Commands.scrollToTop(tmp.current, flag);
       }
     },
@@ -97,23 +105,23 @@ export default noop.forwardRef(function FastestList(estimatedListSize, arg1) {
         num = 0;
       }
       if (null != ref.current) {
-        const Commands = closure_0(num2[4]).Commands;
+        const Commands = merged(num2[3]).Commands;
         Commands.scrollToLocation(tmp.current, section, item, animated, num);
       }
     }
   }));
   const items1 = [ref1];
-  const tmp12 = num(num2[6])({ style });
-  const tmp5 = undefined === showsVerticalScrollIndicator || showsVerticalScrollIndicator;
+  const tmp13 = num(num2[5])({ style });
+  const tmp6 = undefined === showsVerticalScrollIndicator || showsVerticalScrollIndicator;
   const callback = listId.useCallback((nativeEvent) => {
-    current = ref1.current;
+    const current = ref1.current;
     if (current != null) {
       current.setVisibleItems(nativeEvent.nativeEvent);
     }
   }, items1);
-  num(num2[8])({ estimatedListSize: estimatedListSize.estimatedListSize, horizontal: tmp2 });
+  num(num2[7])({ estimatedListSize: merged.estimatedListSize, horizontal: tmp3 });
   const items2 = [listId];
-  const tmp14 = num(num2[7])(ref2);
+  const tmp15 = num(num2[6])(ref2);
   const memo = listId.useMemo(() => {
     let str = "fst";
     if (null != listId) {
@@ -122,13 +130,13 @@ export default noop.forwardRef(function FastestList(estimatedListSize, arg1) {
     closure_9 = tmp + 1;
     return "" + str + "-" + +closure_9;
   }, items2);
-  const tmp19 = num(num2[10])({ fastestListId: memo, itemSize, keyExtractor: estimatedListSize.keyExtractor, listFooterSize, listHeaderSize, sections, sectionHeaderSize, sectionFooterSize });
-  closure_8 = tmp19;
-  const items3 = [num2, num, onContentLengthChange, tmp19];
-  const memo1 = listId.useMemo(() => {
+  const tmp20 = num(num2[9])({ fastestListId: memo, itemSize, keyExtractor: merged.keyExtractor, listFooterSize, listHeaderSize, sections, sectionHeaderSize, sectionFooterSize });
+  closure_8 = tmp20;
+  const items3 = [num2, num, onContentLengthChange, tmp20];
+  memo1 = listId.useMemo(() => {
     let reduced;
     if (null != onContentLengthChange) {
-      ({ itemSizeIsUniform: closure_0, itemSizes } = closure_8);
+      ({ itemSizeIsUniform: merged, itemSizes } = closure_8);
       ({ sectionFooterSizeIsUniform: num2, sectionFooterSizes: listId, sectionHeaderSizeIsUniform: onContentLengthChange, sectionHeaderSizes: ref, sections } = closure_8);
       const first = itemSizes[0];
       num = undefined;
@@ -157,7 +165,7 @@ export default noop.forwardRef(function FastestList(estimatedListSize, arg1) {
           num4 = 0;
         }
         const sum = acc + num2;
-        if (current) {
+        if (merged) {
           let num5 = item * num;
         } else {
           num5 = undefined;
@@ -184,50 +192,50 @@ export default noop.forwardRef(function FastestList(estimatedListSize, arg1) {
       onContentLengthChange(memo1);
     }
   }, items4);
-  const tmp17 = num(num2[9])(placeholderConfig);
-  ({ onScroll, onScrollBeginDrag, onScrollEndDrag } = num(num2[11])(estimatedListSize, tmp2));
-  if (tmp3) {
-    let tmp10Result = closure_8;
+  const tmp18 = num(num2[8])(placeholderConfig);
+  ({ onScroll, onScrollBeginDrag, onScrollEndDrag } = num(num2[10])(merged, tmp3));
+  if (tmp4) {
+    let tmp11Result = closure_8;
   } else {
     if ("animatedScrollPosition" !== scrollReporting) {
       if ("animatedCallbacks" !== scrollReporting) {
-        tmp10Result = tmp10(tmp11[4]);
+        tmp11Result = tmp11(tmp12[3]);
       }
     }
-    tmp10Result = ref2;
+    tmp11Result = ref2;
   }
-  const obj = { accessibilityLabel: estimatedListSize.accessibilityLabel, horizontal: tmp2, insetStart: num, insetEnd: num2, keyboardDismissOnDrag: null, onUnexpectedItemSize: null, onLayout: null, onScroll: null, onScrollBeginDrag: null, onScrollEndDrag: null, onVisibleItemsChanged: null, placeholderConfig: null, ref: null, renderAhead: null, scrollEventThrottle: null, sectionsVersioned: null, showsHorizontalScrollIndicator: null, showsVerticalScrollIndicator: null, style: null };
-  let tmp25 = "on-drag" === keyboardDismissMode;
-  if (!tmp25) {
-    tmp25 = "interactive" === keyboardDismissMode;
+  const obj = { accessibilityLabel: merged.accessibilityLabel, horizontal: tmp3, insetStart: num, insetEnd: num2, keyboardDismissOnDrag: null, onUnexpectedItemSize: null, onLayout: null, onScroll: null, onScrollBeginDrag: null, onScrollEndDrag: null, onVisibleItemsChanged: null, placeholderConfig: null, ref: null, renderAhead: null, scrollEventThrottle: null, sectionsVersioned: null, showsHorizontalScrollIndicator: null, showsVerticalScrollIndicator: null, style: null };
+  let tmp26 = "on-drag" === keyboardDismissMode;
+  if (!tmp26) {
+    tmp26 = "interactive" === keyboardDismissMode;
   }
-  obj.keyboardDismissOnDrag = tmp25;
-  obj.onUnexpectedItemSize = tmp14;
+  obj.keyboardDismissOnDrag = tmp26;
+  obj.onUnexpectedItemSize = tmp15;
   obj.onLayout = onLayout;
   obj.onScroll = onScroll;
   obj.onScrollBeginDrag = onScrollBeginDrag;
   obj.onScrollEndDrag = onScrollEndDrag;
   obj.onVisibleItemsChanged = callback;
-  obj.placeholderConfig = tmp17;
+  obj.placeholderConfig = tmp18;
   obj.ref = ref;
   obj.renderAhead = str;
   obj.scrollEventThrottle = num3;
-  obj.sectionsVersioned = tmp19;
-  obj.showsHorizontalScrollIndicator = tmp4;
-  obj.showsVerticalScrollIndicator = tmp5;
+  obj.sectionsVersioned = tmp20;
+  obj.showsHorizontalScrollIndicator = tmp5;
+  obj.showsVerticalScrollIndicator = tmp6;
   obj.style = style2;
-  const tmp22 = num(num2[11])(estimatedListSize, tmp2);
-  if (tmp) {
+  const tmp23 = num(num2[10])(merged, tmp3);
+  if (tmp2) {
     if (null != placeholderConfig) {
       const obj2 = { children: null };
-      const items5 = [tmp24Result, tmp27];
+      const items5 = [tmp25Result, tmp28];
       obj2.children = items5;
-      let tmp24Result2 = ref1(ref, obj2);
+      let tmp25Result2 = ref1(ref, obj2);
     }
-    return tmp24Result2;
+    return tmp25Result2;
   }
   const obj3 = {};
-  tmp24Result = onContentLengthChange(tmp10Result, obj);
-  const merged = Object.assign(estimatedListSize);
-  tmp24Result2 = tmp24(num(num2[13]), obj3);
-});
+  tmp25Result = onContentLengthChange(tmp11Result, obj);
+  const merged1 = Object.assign(merged);
+  tmp25Result2 = tmp25(num(num2[12]), obj3);
+};

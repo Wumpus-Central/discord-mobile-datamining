@@ -1,15 +1,15 @@
-// === Module 8619: useGameNameAndCoverImage ===
+// === Module 13090: useGameNameAndCoverImage ===
 
-// Module 8619 (useGameNameAndCoverImage)
+// Module 13090 (useGameNameAndCoverImage)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import useGame from "useGame" /* 6822 */;
+import useGame from "useGame" /* 6995 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/games/hooks/useGameNameAndCoverImage.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, c9) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGameNameAndCoverImage(arg0, arg1, c9) {
   const cResult = c.c(10);
   const game = useGame.useGame(arg0);
   ({ data, isLoading } = game);
@@ -68,7 +68,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, c9) 
   cResult[1] = c9;
   cResult[2] = coverURL;
   tmp5 = coverURL;
-}) : ((arg0, arg1, c9) => {
+}) : (function useGameNameAndCoverImage(arg0, arg1, c9) {
   const game = useGame.useGame(arg0);
   const data = game.data;
   let coverURL;

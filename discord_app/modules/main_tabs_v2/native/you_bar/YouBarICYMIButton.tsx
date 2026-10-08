@@ -1,19 +1,19 @@
-// === Module 16372: YouBarICYMIButton ===
+// === Module 16632: YouBarICYMIButton ===
 
-// Module 16372 (YouBarICYMIButton)
+// Module 16632 (YouBarICYMIButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import RootNavigationRef from "RootNavigationRef" /* 4743 */;
-import FlashIcon from "FlashIcon" /* 12853 */;
-import useICYMITabBadgeDefault from "useICYMITabBadge" /* 16373 */;
-import YouBarButtonDefault from "YouBarButton" /* 16374 */;
+import RootNavigationRef from "RootNavigationRef" /* 4937 */;
+import FlashIcon from "FlashIcon" /* 13002 */;
+import useICYMITabBadgeDefault from "useICYMITabBadge" /* 16633 */;
+import YouBarButtonDefault from "YouBarButton" /* 16634 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const YOU_BAR_BUTTON_ICON_SIZE = fn(14915).YOU_BAR_BUTTON_ICON_SIZE;
+const YOU_BAR_BUTTON_ICON_SIZE = fn(15177).YOU_BAR_BUTTON_ICON_SIZE;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { icon: { width: YOU_BAR_BUTTON_ICON_SIZE, height: YOU_BAR_BUTTON_ICON_SIZE }, badge: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND } };
 let closure_4 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
@@ -21,7 +21,7 @@ let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarICYMIButton.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((hasNameplate) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function YouBarICYMIButton(hasNameplate) {
   const cResult = c.c(10);
   hasNameplate = hasNameplate.hasNameplate;
   const tmp4 = closure_4();
@@ -78,7 +78,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((hasNam
   cResult[2] = tmp7;
   tmp6 = tmp7;
   const obj3 = { size: "custom", style: tmp4.icon, color: str };
-}) : ((hasNameplate) => {
+}) : (function YouBarICYMIButton(hasNameplate) {
   hasNameplate = hasNameplate.hasNameplate;
   const tmp = closure_4();
   const obj = { hasNameplate, icon: null, hasBadge: null, badgeStyle: null, onPress: null, accessibilityLabel: null };

@@ -1,21 +1,21 @@
-// === Module 17986: EmojiAlias ===
+// === Module 18273: EmojiAlias ===
 
-// Module 17986 (EmojiAlias)
+// Module 18273 (EmojiAlias)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 4892 */;
+import Text_Text from "Text/Text" /* 5086 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles({ emojiAlias: { alignItems: "center", flexDirection: "row" }, emojiColon: { width: 4 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/EmojiAlias.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiAlias(arg0) {
   const cResult = c.c(14);
   ({ name, style } = arg0);
   const tmp4 = closure_5();
@@ -76,7 +76,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = tmp4.emojiAlias;
   cResult[2] = items1;
   tmp5 = items1;
-}) : ((arg0) => {
+}) : (function EmojiAlias(arg0) {
   ({ name, style } = arg0);
   const tmp = closure_5();
   const obj = { style: null, children: null };

@@ -1,6 +1,6 @@
-// === Module 10834: hooks/useHandleUseNow ===
+// === Module 11183: hooks/useHandleUseNow ===
 
-// Module 10834 (hooks/useHandleUseNow)
+// Module 11183 (hooks/useHandleUseNow)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -10,11 +10,11 @@ const isExternalProduct = fn(1087).isExternalProduct;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useHandleUseNow.tsx");
 
-export const useHandleUseNow = function useHandleUseNow(cResult) {
-  const product = cResult.product;
+export const useHandleUseNow = function useHandleUseNow(product) {
+  product = product.product;
   require = product;
-  const onSuccess = cResult.onSuccess;
-  const onError = cResult.onError;
+  const onSuccess = product.onSuccess;
+  const onError = product.onError;
   _slicedToArray = undefined;
   let firstAvatarDecoration;
   let memo;

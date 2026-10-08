@@ -1,11 +1,11 @@
-// === Module 7912: UserProfileGradientUtils ===
+// === Module 8331: UserProfileGradientUtils ===
 
-// Module 7912 (UserProfileGradientUtils)
+// Module 8331 (UserProfileGradientUtils)
 import _mod12 from "module_12" /* 12 */;
 import _modDef683 from "module_683" /* 683 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
-import utils_ColorDefault from "utils/Color" /* 4734 */;
-import shared from "shared" /* 4735 */;
+import utils_ColorDefault from "utils/Color" /* 4928 */;
+import shared from "shared" /* 4929 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

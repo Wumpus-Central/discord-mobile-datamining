@@ -1,24 +1,24 @@
-// === Module 14225: MenuItem ===
+// === Module 14049: MenuItem ===
 
-// Module 14225 (MenuItem)
+// Module 14049 (MenuItem)
 import c from "c" /* 576 */;
-import IconDefault from "Icon" /* 5603 */;
-import FormRowDefault from "FormRow" /* 6640 */;
-import FormLabelDefault from "FormLabel" /* 6642 */;
-import Menu from "Menu" /* 14223 */;
+import IconDefault from "Icon" /* 5377 */;
+import FormRowDefault from "FormRow" /* 6817 */;
+import FormLabelDefault from "FormLabel" /* 6819 */;
+import Menu from "Menu" /* 14043 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles({ formIcon: { width: 20, height: 20 }, formLabel: { fontSize: 14, fontWeight: "500" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Menu/native/MenuItem.tsx");
 
-export const MenuItem = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, ref) => {
+export const MenuItem = ReactCompilerGating.isReactCompilerEnabled() ? (function MenuItem(ref) {
   const cResult = c.c(18);
-  ({ label, IconComponent, iconSource, showIconFirst, style, disabled, action } = arg0);
+  ({ label, IconComponent, iconSource, showIconFirst, style, disabled, action } = ref);
   const tmp6 = closure_5();
   const menuClose = noop.useContext(Menu.MenuContext).menuClose;
   if (cResult[0] === action) {
@@ -53,9 +53,9 @@ export const MenuItem = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabl
                     if (cResult[14] === tmp16) {
                       if (cResult[15] === tmp17) {
                         if (cResult[16] === tmp18) {
-                          let tmp21 = cResult[17];
+                          let tmp20 = cResult[17];
                         }
-                        return tmp21;
+                        return tmp20;
                       }
                     }
                   }
@@ -63,7 +63,7 @@ export const MenuItem = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabl
               }
             }
             const obj2 = { ref, style, accessibilityRole: "menuitem", disabled: tmp5, leading: tmp16, trailing: tmp17, label: tmp18, onPress: tmp7 };
-            const tmp24 = jsx(FormRowDefault, { ref, style, accessibilityRole: "menuitem", disabled: tmp5, leading: tmp16, trailing: tmp17, label: tmp18, onPress: tmp7 });
+            const tmp23 = jsx(FormRowDefault, { ref, style, accessibilityRole: "menuitem", disabled: tmp5, leading: tmp16, trailing: tmp17, label: tmp18, onPress: tmp7 });
             cResult[10] = tmp5;
             cResult[11] = tmp7;
             cResult[12] = ref;
@@ -71,8 +71,8 @@ export const MenuItem = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabl
             cResult[14] = tmp16;
             cResult[15] = tmp17;
             cResult[16] = tmp18;
-            cResult[17] = tmp24;
-            tmp21 = tmp24;
+            cResult[17] = tmp23;
+            tmp20 = tmp23;
           }
           let tmp19 = label;
           if (typeof label === "string") {
@@ -100,15 +100,15 @@ export const MenuItem = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabl
     cResult[5] = tmp6;
     cResult[6] = tmp10;
   }
-  const fn = function u() {
+  function onPress() {
     action();
     menuClose();
-  };
+  }
   cResult[0] = action;
   cResult[1] = menuClose;
-  cResult[2] = fn;
-  tmp7 = fn;
-}) : ((action, ref) => {
+  cResult[2] = onPress;
+  tmp7 = onPress;
+}) : (function MenuItem(action) {
   ({ label, IconComponent, iconSource, showIconFirst } = action);
   if (showIconFirst === undefined) {
     showIconFirst = false;
@@ -129,7 +129,7 @@ export const MenuItem = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabl
       tmp3 = jsx(IconDefault, { source: iconSource, style: tmp.formIcon });
     }
   }
-  const obj2 = { ref, style, accessibilityRole: "menuitem", disabled, leading: null, trailing: null, label: null, onPress: null };
+  const obj2 = { ref: action.ref, style, accessibilityRole: "menuitem", disabled, leading: null, trailing: null, label: null, onPress: null };
   let tmp10 = null;
   if (null != iconSource) {
     tmp10 = null;
@@ -156,5 +156,5 @@ export const MenuItem = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabl
     action();
     menuClose();
   };
-  return jsx(FormRowDefault, { ref, style, accessibilityRole: "menuitem", disabled, leading: null, trailing: null, label: null, onPress: null });
-}));
+  return jsx(FormRowDefault, { ref: action.ref, style, accessibilityRole: "menuitem", disabled, leading: null, trailing: null, label: null, onPress: null });
+});

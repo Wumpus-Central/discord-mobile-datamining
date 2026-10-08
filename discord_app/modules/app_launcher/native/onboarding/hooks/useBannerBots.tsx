@@ -1,17 +1,17 @@
-// === Module 11694: useBannerBots ===
+// === Module 11759: useBannerBots ===
 
-// Module 11694 (useBannerBots)
+// Module 11759 (useBannerBots)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import useActivityApplications from "useActivityApplications" /* 11666 */;
-import AppLauncherSearchUtils from "AppLauncherSearchUtils" /* 11695 */;
+import useActivityApplications from "useActivityApplications" /* 11731 */;
+import AppLauncherSearchUtils from "AppLauncherSearchUtils" /* 11760 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import AppLauncherOnboardingStore from "AppLauncherOnboardingStore" /* 11673 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import AppLauncherOnboardingStore from "AppLauncherOnboardingStore" /* 11738 */;
 
 require = fn;
 let ReactCompilerGating = fn(558);
-let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
+let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFrecencyCommandIds(context) {
   const cResult = context(576).c(6);
   context = context.context;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -52,7 +52,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
     if (cResult[4] === stateFromStores) {
       let tmp10 = cResult[5];
     }
-    return tmp(8834).useTopCommands(tmp10);
+    return tmp(9193).useTopCommands(tmp10);
   }
   const obj2 = { channel: context.channel, guild: stateFromStores };
   cResult[3] = context.channel;
@@ -60,7 +60,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
   cResult[5] = obj2;
   tmp10 = obj2;
   const tmpResult = context(504);
-}) : ((context) => {
+}) : (function useFrecencyCommandIds(context) {
   context = context.context;
   const items = [GuildStore];
   const obj = context(504);
@@ -75,10 +75,10 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
       return GuildStore.getGuild(guild_id);
     })
   };
-  return context(8834).useTopCommands(obj2);
+  return context(9193).useTopCommands(obj2);
 });
 ReactCompilerGating = fn(558);
-let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
+let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAppsMap(context) {
   const cResult = c.c(4);
   context = context.context;
   if (cResult[0] !== context) {
@@ -104,7 +104,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
     tmp5 = cResult[3];
   }
   return tmp5;
-}) : ((context) => {
+}) : (function useAppsMap(context) {
   const apps = AppLauncherSearchUtils.useApplicationsInContext({ context: context.context, onlyWithCommands: true, includeBuiltIn: false, includeEmbeddedApps: false, includeNonEmbeddedApps: true }).apps;
   const items = [apps];
   return noop.useMemo(() => {
@@ -117,7 +117,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
   }, items);
 });
 ReactCompilerGating = fn(558);
-let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
+let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCommandsMap(context) {
   const cResult = c.c(4);
   context = context.context;
   if (cResult[0] !== context) {
@@ -143,7 +143,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
     tmp5 = cResult[3];
   }
   return tmp5;
-}) : ((context) => {
+}) : (function useCommandsMap(context) {
   const commands = AppLauncherSearchUtils.useApplicationCommandsInContext({ context: context.context, includeBuiltIn: false }).commands;
   const items = [commands];
   return noop.useMemo(() => {
@@ -159,7 +159,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/native/onboarding/hooks/useBannerBots.tsx");
 
-export const useBannerBots = ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
+export const useBannerBots = ReactCompilerGating.isReactCompilerEnabled() ? (function useBannerBots(context) {
   const cResult = c.c(23);
   context = context.context;
   if (cResult[0] !== context) {
@@ -214,14 +214,14 @@ export const useBannerBots = ReactCompilerGating.isReactCompilerEnabled() ? ((co
   const activityApplications = useActivityApplications.useActivityApplications(tmp10);
   if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AppLauncherOnboardingStore];
-    class E {
+    class M {
       constructor() {
         return closure_1_4.getRecentApplicationCommandMetadata();
       }
     }
     cResult[10] = items;
-    cResult[11] = E;
-    let tmp13 = E;
+    cResult[11] = M;
+    let tmp13 = M;
     let tmp12 = items;
   } else {
     tmp12 = cResult[10];
@@ -236,7 +236,7 @@ export const useBannerBots = ReactCompilerGating.isReactCompilerEnabled() ? ((co
           if (cResult[16] === tmp8) {
             if (cResult[17] === stateFromStores) {
               require = tmp16;
-              class E {
+              class M {
                 constructor() {
                   return closure_1_4.getRecentApplicationCommandMetadata();
                 }
@@ -267,7 +267,7 @@ export const useBannerBots = ReactCompilerGating.isReactCompilerEnabled() ? ((co
     value3 = obj7.get(item10092);
     if (null != value3) {
       let value4 = obj3.get(tmp21.applicationId);
-      class E {
+      class M {
         constructor() {
           return closure_1_4.getRecentApplicationCommandMetadata();
         }
@@ -276,12 +276,12 @@ export const useBannerBots = ReactCompilerGating.isReactCompilerEnabled() ? ((co
     continue;
   }
   const tmpResult4 = initialize;
-}) : ((context) => {
+}) : (function useBannerBots(context) {
   context = context.context;
   let first1;
   const obj = closure_6({ context });
-  const apps = first1(11695).useApplicationsInContext({ context, onlyWithCommands: true, includeBuiltIn: false, includeEmbeddedApps: false, includeNonEmbeddedApps: true }).apps;
-  const obj2 = first1(11695);
+  const apps = first1(11760).useApplicationsInContext({ context, onlyWithCommands: true, includeBuiltIn: false, includeEmbeddedApps: false, includeNonEmbeddedApps: true }).apps;
+  const obj2 = first1(11760);
   const tmp2 = first1;
   const obj3 = closure_7({ context });
   const tmp4 = closure_5({ context });
@@ -290,8 +290,8 @@ export const useBannerBots = ReactCompilerGating.isReactCompilerEnabled() ? ((co
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  const activityApplications = first1(11666).useActivityApplications({ guildId: guild_id, fetchesShelf: true });
-  const obj4 = first1(11666);
+  const activityApplications = first1(11731).useActivityApplications({ guildId: guild_id, fetchesShelf: true });
+  const obj4 = first1(11731);
   const items = [AppLauncherOnboardingStore];
   const stateFromStores = tmp2(504).useStateFromStores(items, () => recentApplicationCommandMetadata.getRecentApplicationCommandMetadata());
   value = null;

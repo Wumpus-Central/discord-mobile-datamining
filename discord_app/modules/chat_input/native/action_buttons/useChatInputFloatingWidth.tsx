@@ -1,19 +1,19 @@
-// === Module 11903: useChatInputFloatingWidth ===
+// === Module 11976: useChatInputFloatingWidth ===
 
-// Module 11903 (useChatInputFloatingWidth)
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import timing from "timing" /* 4897 */;
+// Module 11976 (useChatInputFloatingWidth)
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import timing from "timing" /* 5091 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_3 = fn(11589).CHAT_INPUT_FLOATING_SLIDE_TIMING_CONFIG;
+let closure_3 = fn(11652).CHAT_INPUT_FLOATING_SLIDE_TIMING_CONFIG;
 let closure_4 = { code: "function useChatInputFloatingWidthTsx1(){const{collapsedWidth,expandedWidth,progress}=this.__closure;return{width:collapsedWidth+(expandedWidth-collapsedWidth)*progress.get()};}" };
 const __initData = { code: "function useChatInputFloatingWidthTsx2(){const{collapsedWidth,expandedWidth,progress}=this.__closure;return{width:collapsedWidth+(expandedWidth-collapsedWidth)*progress.get()};}" };
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/chat_input/native/action_buttons/useChatInputFloatingWidth.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((expanded) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useChatInputFloatingWidth(expanded) {
   const cResult = expanded(collapsedWidth[3]).c(7);
   expanded = expanded.expanded;
   collapsedWidth = expanded.collapsedWidth;
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((expanded) => {
   cResult[4] = items;
   tmp6 = items;
   tmp5 = fn;
-}) : ((expanded) => {
+}) : (function useChatInputFloatingWidth(expanded) {
   expanded = expanded.expanded;
   const collapsedWidth = expanded.collapsedWidth;
   const expandedWidth = expanded.expandedWidth;
@@ -109,7 +109,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((expanded) => {
   }, items);
   let obj2 = { animatedStyle: null };
   let obj = expanded(collapsedWidth[4]);
-  const fn = function c() {
+  const fn = function u() {
     const obj = { width: null };
     const diff = expandedWidth - collapsedWidth;
     obj.width = collapsedWidth + diff * sharedValue.get();

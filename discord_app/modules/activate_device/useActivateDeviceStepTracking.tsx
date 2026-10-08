@@ -1,9 +1,9 @@
-// === Module 13706: useActivateDeviceStepTracking ===
+// === Module 13928: useActivateDeviceStepTracking ===
 
-// Module 13706 (useActivateDeviceStepTracking)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import usePreviousDefault from "usePrevious" /* 7957 */;
-import ActivateDeviceUtils from "ActivateDeviceUtils" /* 13707 */;
+// Module 13928 (useActivateDeviceStepTracking)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import usePreviousDefault from "usePrevious" /* 5928 */;
+import ActivateDeviceUtils from "ActivateDeviceUtils" /* 13929 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activate_device/useActivateDeviceStepTracking.tsx");
 
-export const useActivateDeviceStepTracking = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useActivateDeviceStepTracking = ReactCompilerGating.isReactCompilerEnabled() ? (function useActivateDeviceStepTracking(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   const tmp2 = usePreviousDefault(arg0);
@@ -52,7 +52,7 @@ export const useActivateDeviceStepTracking = ReactCompilerGating.isReactCompiler
   tmp4 = items;
   tmp3 = fn;
   let obj = require("c");
-}) : ((arg0) => {
+}) : (function useActivateDeviceStepTracking(arg0) {
   closure_0 = arg0;
   const tmp = usePreviousDefault(arg0);
   importDefault = tmp;

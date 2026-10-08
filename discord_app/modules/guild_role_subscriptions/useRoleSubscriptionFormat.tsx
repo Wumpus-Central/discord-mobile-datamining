@@ -1,21 +1,21 @@
-// === Module 17963: useRoleSubscriptionFormat ===
+// === Module 18250: useRoleSubscriptionFormat ===
 
-// Module 17963 (useRoleSubscriptionFormat)
+// Module 18250 (useRoleSubscriptionFormat)
 import noop from "module_19" /* 19 */;
-import GuildRoleStore from "GuildRoleStore" /* 2106 */;
-import GuildStore from "GuildStore" /* 2074 */;
+import GuildRoleStore from "GuildRoleStore" /* 2118 */;
+import GuildStore from "GuildStore" /* 2086 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const hasPermission = fn(2107).hasPermission;
-const constants = fn(15038).GuildRoleSubscriptionFormat;
+const hasPermission = fn(2119).hasPermission;
+const constants = fn(15300).GuildRoleSubscriptionFormat;
 const Permissions = fn(1085).Permissions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useRoleSubscriptionFormat.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useRoleSubscriptionFormat(arg0) {
   _require = arg0;
   const cResult = require("c").c(6);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -124,7 +124,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp17 = obj2;
   }
   const tmpResult = require("initialize");
-}) : ((arg0) => {
+}) : (function useRoleSubscriptionFormat(arg0) {
   _require = arg0;
   const items = [GuildStore, GuildRoleStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => {

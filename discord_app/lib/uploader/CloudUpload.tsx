@@ -1,21 +1,21 @@
-// === Module 7281: CloudUpload ===
+// === Module 7729: CloudUpload ===
 
-// Module 7281 (CloudUpload)
+// Module 7729 (CloudUpload)
 import LoggerDefault from "Logger" /* 3 */;
 import BackoffDefault from "Backoff" /* 569 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
-import InlineUploaderDefault from "InlineUploader" /* 6485 */;
-import UploadPlatform from "UploadPlatform" /* 7260 */;
-import Upload2 from "Upload" /* 7282 */;
-import uploader_UploadUtils from "uploader/UploadUtils" /* 7285 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
+import InlineUploaderDefault from "InlineUploader" /* 6663 */;
+import Upload2 from "Upload" /* 7730 */;
+import UploadPlatform from "UploadPlatform" /* 7731 */;
+import uploader_UploadUtils from "uploader/UploadUtils" /* 7739 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import DevSettingsStore from "DevSettingsStore" /* 4895 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1195 */;
-import NetworkStore from "NetworkStore" /* 4945 */;
+import DevSettingsStore from "DevSettingsStore" /* 5089 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1207 */;
+import NetworkStore from "NetworkStore" /* 5280 */;
 
 const Upload = Upload2;
 
@@ -419,7 +419,7 @@ prototype["getResumePosition"] = function getResumePosition(responseUrl) {
       }
       currentSize = v1.currentSize;
     }).catch((error) => {
-      if (error instanceof c0(1282).HTTPResponseError) {
+      if (error instanceof c0(1294).HTTPResponseError) {
         if (308 === error.status) {
           let str = error.headers.range;
           if (str == null) {
@@ -985,7 +985,7 @@ prototype["upload"] = function upload() {
                   let tmp151 = null;
                   if (closure_133_0.allowOptimization) {
                     tmp151 = null;
-                    if (closure_133_0.item.platform === v0(7260).UploadPlatform.WEB) {
+                    if (closure_133_0.item.platform === v0(7731).UploadPlatform.WEB) {
                       tmp151 = null;
                       if (true !== closure_133_0.item.imageConversionEvaluated) {
                         tmp151 = null;
@@ -997,17 +997,17 @@ prototype["upload"] = function upload() {
                               str2 = "jxr";
                             }
                             str = str2;
-                            obj16 = v0(7316);
+                            obj16 = v0(7760);
                           }
                           tmp151 = str;
-                          obj15 = v0(7316);
+                          obj15 = v0(7760);
                         }
                       }
                     }
                   }
                   closure_132_1 = tmp151;
                   if (null != closure_132_1) {
-                    if (closure_133_0.item.platform === v0(7260).UploadPlatform.WEB) {
+                    if (closure_133_0.item.platform === v0(7731).UploadPlatform.WEB) {
                       if (null != closure_133_0.item.file) {
                         let tmp195 = null != closure_133_0.mimeType;
                         if (tmp195) {
@@ -1029,11 +1029,11 @@ prototype["upload"] = function upload() {
                           return obj7;
                         } else {
                           if ("heic" === closure_132_1) {
-                            let heicMimeTypeResult = v0(7316).heicMimeType(closure_133_0.item.file);
-                            const obj20 = v0(7316);
+                            let heicMimeTypeResult = v0(7760).heicMimeType(closure_133_0.item.file);
+                            const obj20 = v0(7760);
                           } else {
-                            heicMimeTypeResult = v0(7316).jxrMimeType(closure_133_0.item.file);
-                            const obj19 = v0(7316);
+                            heicMimeTypeResult = v0(7760).jxrMimeType(closure_133_0.item.file);
+                            const obj19 = v0(7760);
                           }
                           closure_133_0.mimeType = heicMimeTypeResult;
                         }
@@ -1044,7 +1044,7 @@ prototype["upload"] = function upload() {
                     closure_133_0.handleComplete(closure_133_0.id);
                   } else {
                     if (closure_133_0.allowOptimization) {
-                      if (closure_133_0.item.platform === v0(7260).UploadPlatform.WEB) {
+                      if (closure_133_0.item.platform === v0(7731).UploadPlatform.WEB) {
                         if (!closure_132_0) {
                           if (true !== closure_133_0.item.imageConversionEvaluated) {
                             c8 = 5;
@@ -1055,7 +1055,7 @@ prototype["upload"] = function upload() {
                         }
                       }
                     }
-                    const uploadPayload = v0(7317).default.getUploadPayload(closure_133_0);
+                    const uploadPayload = v0(7761).default.getUploadPayload(closure_133_0);
                     c8 = 6;
                     c9 = 1;
                     c9 = 3;
@@ -1111,10 +1111,10 @@ prototype["upload"] = function upload() {
                   }
                   if (tmp119) {
                     closure_3 = closure_133_0;
-                    const obj10 = status(6486);
+                    const obj10 = status(6664);
                     c8 = 4;
                     c9 = 1;
-                    const obj14 = { value: status(6486).fromBlob(file).catch(() => null), done: false };
+                    const obj14 = { value: status(6664).fromBlob(file).catch(() => null), done: false };
                     return obj14;
                   } else {
                     closure_133_0.item.file = closure_132_3.convertedFile;
@@ -1170,7 +1170,7 @@ prototype["upload"] = function upload() {
               return obj21;
             } else {
               closure_132_5 = value;
-              uploadTarget = v0(7318).getUploadTarget(closure_133_0.item.target);
+              uploadTarget = v0(7762).getUploadTarget(closure_133_0.item.target);
               if (null != closure_132_5.filename) {
                 if ("" !== closure_132_5.filename) {
                   const currentSize2 = closure_133_0.currentSize;
@@ -1252,8 +1252,8 @@ prototype["upload"] = function upload() {
               }
               const _HermesInternal2 = HermesInternal;
               logger.error("Requesting upload url failed with code " + dependencyMap + " for " + closure_133_0.id);
-              status(1242).captureException(closure_132_10);
-              const obj3 = status(1242);
+              status(1254).captureException(closure_132_10);
+              const obj3 = status(1254);
             }
             closure_133_0.handleError(closure_132_9);
             c9 = 3;
@@ -1393,7 +1393,7 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
               const obj7 = { value: self, done: true };
               return obj7;
             }
-            obj16 = size(7318);
+            obj16 = size(7762);
           }
         } else {
           if (1 === tmp5) {
@@ -1470,7 +1470,7 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
                         if (fileSize == null) {
                           c3 = 2;
                           c4 = 1;
-                          const obj9 = { value: size(7256).getFileData(uri), done: false };
+                          const obj9 = { value: size(7732).getFileData(uri), done: false };
                           return obj9;
                         }
                       }
@@ -1909,10 +1909,10 @@ prototype["delete"] = function delete() {
             const obj4 = { value, done: true };
             return obj4;
           } else if (null != self.uploadedFilename) {
-            const uploadTarget = v3(7318).getUploadTarget(self.item.target);
+            const uploadTarget = v3(7762).getUploadTarget(self.item.target);
             dependencyMap = 1;
             const deleteUploadURL = uploadTarget.getDeleteUploadURL(self.uploadedFilename);
-            const HTTP = v3(1282).HTTP;
+            const HTTP = v3(1294).HTTP;
             c1 = 2;
             v3 = 1;
             const obj5 = { value: HTTP.del(deleteUploadURL), done: false };

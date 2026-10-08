@@ -1,19 +1,19 @@
-// === Module 6662: ConnectionCard ===
+// === Module 6839: ConnectionCard ===
 
-// Module 6662 (ConnectionCard)
+// Module 6839 (ConnectionCard)
 import c from "c" /* 576 */;
-import ApplicationConnectionCardDefault from "ApplicationConnectionCard" /* 6663 */;
-import ProviderConnectionCardDefault from "ProviderConnectionCard" /* 6680 */;
+import ApplicationConnectionCardDefault from "ApplicationConnectionCard" /* 6840 */;
+import ProviderConnectionCardDefault from "ProviderConnectionCard" /* 6857 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const OnboardingConnectionType = fn(6603).OnboardingConnectionType;
+const OnboardingConnectionType = fn(6779).OnboardingConnectionType;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding/native/ConnectionCard.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectionCard(arg0) {
   const cResult = c.c(8);
   ({ connection, guildId, location: _location } = arg0);
   const connection_type = connection.connection_type;
@@ -52,7 +52,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   } else {
     return null;
   }
-}) : ((arg0) => {
+}) : (function ConnectionCard(arg0) {
   ({ connection, guildId, location: _location } = arg0);
   const connection_type = connection.connection_type;
   if (OnboardingConnectionType.APPLICATION === connection_type) {

@@ -1,8 +1,8 @@
-// === Module 8893: PremiumFeatureUtils ===
+// === Module 9436: PremiumFeatureUtils ===
 
-// Module 8893 (PremiumFeatureUtils)
-import PremiumTypeUtils from "PremiumTypeUtils" /* 1976 */;
-import OverridePremiumTypeStore from "OverridePremiumTypeStore" /* 1378 */;
+// Module 9436 (PremiumFeatureUtils)
+import PremiumTypeUtils from "PremiumTypeUtils" /* 1988 */;
+import OverridePremiumTypeStore from "OverridePremiumTypeStore" /* 1390 */;
 
 require = fn;
 function getUserMaxFileSize(currentUser) {
@@ -21,7 +21,7 @@ function getUserMaxFileSize(currentUser) {
       let obj = dependencyMap;
       if (obj2.isPremium(currentUser)) {
         if (currentUser.premiumType === TIER_2.TIER_2) {
-          const nitroFileUploadLimitBytes = getNitroFileUploadLimitBytes(7257);
+          const nitroFileUploadLimitBytes = getNitroFileUploadLimitBytes(7733);
           getNitroFileUploadLimitBytes = nitroFileUploadLimitBytes.getNitroFileUploadLimitBytes;
           obj = { location: "getUserMaxFileSize" };
           let fileSize = getNitroFileUploadLimitBytes(obj);
@@ -36,7 +36,7 @@ function getUserMaxFileSize(currentUser) {
 }
 const Constants = fn(1085);
 ({ MAX_ATTACHMENT_SIZE: c3, MAX_STAFF_ATTACHMENT_SIZE: closure_4 } = Constants);
-const PremiumConstants = fn(1379);
+const PremiumConstants = fn(1391);
 ({ PremiumTypes: hasOwnProperty, PremiumUserLimits: metroRequire, UNSELECTED_PREMIUM_TYPE_OVERRIDE: closure_7 } = PremiumConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/PremiumFeatureUtils.tsx");

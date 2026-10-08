@@ -1,21 +1,21 @@
-// === Module 12207: useGuildPowerupCardFooterConfig ===
+// === Module 12286: useGuildPowerupCardFooterConfig ===
 
-// Module 12207 (useGuildPowerupCardFooterConfig)
-import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 12170 */;
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12174 */;
-import GuildStore from "GuildStore" /* 2074 */;
+// Module 12286 (useGuildPowerupCardFooterConfig)
+import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 12249 */;
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12253 */;
+import GuildStore from "GuildStore" /* 2086 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const GuildPowerupsConstants = fn(4774);
+const GuildPowerupsConstants = fn(4968);
 ({ GUILD_POWERUP_CONFIGURABLE_SKUS_DESKTOP, GUILD_POWERUP_CONFIGURABLE_SKUS_MOBILE: closure_4, PowerupActiveStatusType: hasOwnProperty } = GuildPowerupsConstants);
 const GuildFeatures = fn(1085).GuildFeatures;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupCardFooterConfig.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, skuId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildPowerupCardFooterConfig(arg0, skuId) {
   _require = arg0;
   const cResult = require("c").c(11);
   const tmp5 = usePowerupActiveStatusDefault(arg0, skuId);
@@ -50,8 +50,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, skuId) => 
   const stateFromStores = require("initialize").useStateFromStores(first, tmp8, tmp9);
   let tmp12 = tmp5.type !== constants.INACTIVE;
   if (!tmp12) {
-    tmp12 = skuId.skuId === tmp(4777).GUILD_POWERUP_GUILD_THEME_SKU_ID && stateFromStores;
-    const tmp13 = skuId.skuId === tmp(4777).GUILD_POWERUP_GUILD_THEME_SKU_ID && stateFromStores;
+    tmp12 = skuId.skuId === tmp(4971).GUILD_POWERUP_GUILD_THEME_SKU_ID && stateFromStores;
+    const tmp13 = skuId.skuId === tmp(4971).GUILD_POWERUP_GUILD_THEME_SKU_ID && stateFromStores;
   }
   let tmp14 = tmp12;
   if (!tmp12) {
@@ -88,7 +88,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, skuId) => 
   cResult[6] = hasItem;
   tmp15 = hasItem;
   const tmpResult = require("initialize");
-}) : ((arg0, skuId) => {
+}) : (function useGuildPowerupCardFooterConfig(arg0, skuId) {
   _require = arg0;
   const tmp3 = usePowerupActiveStatusDefault(arg0, skuId);
   const items = [GuildStore];

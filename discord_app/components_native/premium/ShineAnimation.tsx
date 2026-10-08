@@ -1,9 +1,9 @@
-// === Module 10476: ShineAnimation ===
+// === Module 10073: ShineAnimation ===
 
-// Module 10476 (ShineAnimation)
+// Module 10073 (ShineAnimation)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import timing from "timing" /* 4897 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import timing from "timing" /* 5091 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const ShineAnimationConfig = Object.freeze({ FLASH_TIME_PERCENT: 0.72, FLASH_DURATION_PERCENT: 0.08 });
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { container: { overflow: "hidden" }, shineContainer: null, shine: null, shineInner: null };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.shineContainer = {};
@@ -34,7 +34,7 @@ let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, flex: 
 size = fn(2);
 let result = size.fileFinishedImporting("components_native/premium/ShineAnimation.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ShineAnimation(arg0) {
   const cResult = sharedValue(hexResult1[6]).c(24);
   ({ source, style } = arg0);
   const tmp4 = closure_9();
@@ -190,7 +190,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   cResult[6] = items3;
   tmp16 = items3;
   const obj4 = { ShineAnimationConfig, interpolateColor: sharedValue(hexResult1[7]).interpolateColor, progress: sharedValue, flashStartColor: hexResult, flashEndColor: hexResult1 };
-}) : ((arg0) => {
+}) : (function ShineAnimation(arg0) {
   let sharedValue;
   importDefault = undefined;
   let hexResult1;

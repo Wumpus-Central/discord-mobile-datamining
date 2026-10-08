@@ -1,10 +1,10 @@
-// === Module 15872: RedesignSettingsRealtimeScreen ===
+// === Module 16131: RedesignSettingsRealtimeScreen ===
 
-// Module 15872 (RedesignSettingsRealtimeScreen)
+// Module 16131 (RedesignSettingsRealtimeScreen)
 import c from "c" /* 576 */;
-import SettingBuilders from "SettingBuilders" /* 11142 */;
-import SettingLayoutDefault from "SettingLayout" /* 14515 */;
-import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 15867 */;
+import SettingBuilders from "SettingBuilders" /* 11262 */;
+import SettingLayoutDefault from "SettingLayout" /* 14775 */;
+import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 16126 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notifications/settings/native/routes/RedesignSettingsRealtimeScreen.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function RedesignSettingsRealtimeScreen() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { sections: null };
@@ -36,7 +36,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp6 = cResult[1];
   }
   return tmp6;
-}) : (() => {
+}) : (function RedesignSettingsRealtimeScreen() {
   const node = noop.useMemo(() => {
     const obj2 = { sections: null };
     const obj = SettingBuilders;

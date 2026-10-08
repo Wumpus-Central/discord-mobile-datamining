@@ -1,8 +1,8 @@
-// === Module 11866: ErrorBlock ===
+// === Module 11938: ErrorBlock ===
 
-// Module 11866 (ErrorBlock)
+// Module 11938 (ErrorBlock)
 import c from "c" /* 576 */;
-import MessageBlock from "MessageBlock" /* 11867 */;
+import MessageBlock from "MessageBlock" /* 11939 */;
 import noop from "module_19" /* 19 */;
 
 const MessageBlockDefault = MessageBlock;
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/ErrorBlock.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ErrorBlock(children) {
   const cResult = c.c(2);
   children = children.children;
   if (cResult[0] !== children) {
@@ -26,7 +26,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
     tmp4 = cResult[1];
   }
   return tmp4;
-}) : ((children) => {
+}) : (function ErrorBlock(children) {
   const obj = { color: MessageBlock.MessageBlockColors.RED, children: children.children };
   return jsx(MessageBlockDefault, { color: MessageBlock.MessageBlockColors.RED, children: children.children });
 });

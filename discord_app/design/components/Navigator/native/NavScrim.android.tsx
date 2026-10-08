@@ -1,16 +1,16 @@
-// === Module 6543: NavScrim ===
+// === Module 6719: NavScrim ===
 
-// Module 6543 (NavScrim)
+// Module 6719 (NavScrim)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6478 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6656 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { androidNavScrim: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -22,7 +22,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Navigator/native/NavScrim.android.tsx");
 
-export const NavScrim = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const NavScrim = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function NavScrim() {
   const cResult = c.c(6);
   let androidNavScrim = closure_5();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -55,7 +55,7 @@ export const NavScrim = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ?
     cResult[4] = tmp4;
     cResult[5] = tmp8;
   }
-}) : (() => {
+}) : (function NavScrim() {
   const insets = useSafeAreaInsetsKeyboardAwareDefault({ includeCustomKeyboardHeight: false }).insets;
   let tmp2 = null;
   if (0 !== insets.bottom) {

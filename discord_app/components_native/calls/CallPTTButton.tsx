@@ -1,28 +1,28 @@
-// === Module 9632: CallPTTButton ===
+// === Module 10827: CallPTTButton ===
 
-// Module 9632 (CallPTTButton)
+// Module 10827 (CallPTTButton)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import MediaEngineActionCreators from "MediaEngineActionCreators" /* 9633 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import MediaEngineActionCreators from "MediaEngineActionCreators" /* 10828 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5108 */;
 
 require = fn;
 const InputModes = fn(1085).InputModes;
 const jsx = fn(21).jsx;
 const CallPTTButtonLooks = { BRAND: "brand", BLUR: "blur" };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { button: { margin: 13 }, container: null, buttonBlur: null, buttonBlurPressed: null, textStyle: null, brandButtonContainer: null };
 let obj4 = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", backgroundColor: null };
-let ColorUtils = fn(4733);
+let ColorUtils = fn(4927);
 obj4.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.24);
 obj2.container = obj4;
 obj2.buttonBlur = { backgroundColor: "transparent" };
 const obj5 = { backgroundColor: null };
-ColorUtils = fn(4733);
+ColorUtils = fn(4927);
 obj5.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.6);
 obj2.buttonBlurPressed = obj5;
 obj2.textStyle = { fontSize: 16 };
@@ -61,14 +61,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((stopCa
   const stateFromStores = sendCallback(stateFromStores1[12]).useStateFromStores(tmp6, T);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [ref];
-    class I {
+    class T {
       constructor() {
-        return closure_7.getChannelId();
+        return closure_6.getMode();
       }
     }
     cResult[2] = items1;
-    cResult[3] = I;
-    let tmp11 = I;
+    cResult[3] = tmp13;
+    let tmp11 = tmp13;
     let tmp10 = items1;
   } else {
     tmp10 = cResult[2];
@@ -78,53 +78,53 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((stopCa
   stateFromStores1 = sendCallback(stateFromStores1[12]).useStateFromStores(tmp10, tmp11);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [first1];
-    class I {
+    class T {
       constructor() {
-        return closure_7.getChannelId();
+        return closure_6.getMode();
       }
     }
     cResult[4] = items2;
-    let tmp14 = items2;
+    let tmp15 = items2;
   } else {
-    tmp14 = cResult[4];
+    tmp15 = cResult[4];
   }
   if (cResult[5] !== stateFromStores1) {
     const fn = function w() {
       return ChannelStore.getChannel(stateFromStores1);
     };
     const items3 = [stateFromStores1];
-    class I {
+    class T {
       constructor() {
-        return closure_7.getChannelId();
+        return closure_6.getMode();
       }
     }
     cResult[5] = stateFromStores1;
     cResult[6] = fn;
     cResult[7] = items3;
-    let tmp17 = items3;
-    let tmp16 = fn;
+    let tmp18 = items3;
+    let tmp17 = fn;
   } else {
-    tmp16 = cResult[6];
-    tmp17 = cResult[7];
+    tmp17 = cResult[6];
+    tmp18 = cResult[7];
   }
   const tmpResult4 = sendCallback(stateFromStores1[12]);
-  const stateFromStores2 = sendCallback(stateFromStores1[12]).useStateFromStores(tmp14, tmp16, tmp17);
+  const stateFromStores2 = sendCallback(stateFromStores1[12]).useStateFromStores(tmp15, tmp17, tmp18);
   const tmpResult5 = sendCallback(stateFromStores1[12]);
-  const tmp19 = first(noop.useState(false), 2);
-  first = tmp19[0];
-  noop = tmp21;
-  const tmp22 = first(noop.useState(false), 2);
-  first1 = tmp22[0];
-  MediaEngineStore = tmp24;
+  const tmp20 = first(noop.useState(false), 2);
+  first = tmp20[0];
+  noop = tmp22;
+  const tmp23 = first(noop.useState(false), 2);
+  first1 = tmp23[0];
+  MediaEngineStore = tmp25;
   let isGuildStageVoiceResult;
   if (stateFromStores2 != null) {
     isGuildStageVoiceResult = stateFromStores2.isGuildStageVoice();
   }
   if (isGuildStageVoiceResult) {
-    isGuildStageVoiceResult = !tmp18;
+    isGuildStageVoiceResult = !tmp19;
   }
   ref = noop.useRef(false);
-  tmp18 = stopCallback.stopCallback(stateFromStores1[13])(stateFromStores1);
+  tmp19 = stopCallback.stopCallback(stateFromStores1[13])(stateFromStores1);
   const voiceChatNavigationContext = sendCallback(stateFromStores1[14]).useVoiceChatNavigationContext();
   let prop;
   if (voiceChatNavigationContext != null) {
@@ -134,56 +134,33 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((stopCa
     if (cResult[9] === first) {
       if (cResult[10] === sendCallback) {
         if (cResult[11] === stopCallback) {
-          let tmp29 = cResult[12];
-          let tmp30 = cResult[13];
+          let tmp30 = cResult[12];
+          let tmp31 = cResult[13];
         }
-        const effect = obj6.useEffect(tmp30, tmp29);
+        const effect = obj6.useEffect(tmp31, tmp30);
         if (cResult[14] !== prop) {
-          class N {
-            constructor() {
-              tmp = closure_4(true);
-              tmp2 = closure_6(false);
-              if (setIsSwipeToChatDisabled != null) {
-                tmp3 = setIsSwipeToChatDisabled(true);
-              }
-              return;
+          function handleStartSend() {
+            closure_4(true);
+            mode(false);
+            if (prop != null) {
+              prop(true);
             }
           }
           cResult[14] = prop;
-          class I {
+          class T {
             constructor() {
-              return closure_7.getChannelId();
+              return closure_6.getMode();
             }
           }
-          cResult[15] = N;
-        } else {
-          class N {
-            constructor() {
-              tmp = closure_4(true);
-              tmp2 = closure_6(false);
-              if (setIsSwipeToChatDisabled != null) {
-                tmp3 = setIsSwipeToChatDisabled(true);
-              }
-              return;
-            }
-          }
+          cResult[15] = handleStartSend;
         }
-        class I {
+        class T {
           constructor() {
-            return closure_7.getChannelId();
+            return closure_6.getMode();
           }
         }
         if (cResult[18] !== prop) {
-          class N {
-            constructor() {
-              tmp = closure_4(true);
-              tmp2 = closure_6(false);
-              if (setIsSwipeToChatDisabled != null) {
-                tmp3 = setIsSwipeToChatDisabled(true);
-              }
-              return;
-            }
-          }
+          const _Symbol = Symbol;
           if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
             class CallPTTButtonTsx1 {
               constructor() {
@@ -193,9 +170,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((stopCa
               }
             }
             let obj2 = { runOnJS: sendCallback(tmp2[16]).runOnJS, setDragging: null };
-            class I {
+            class T {
               constructor() {
-                return closure_7.getChannelId();
+                return closure_6.getMode();
               }
             }
             CallPTTButtonTsx1.__closure = obj2;
@@ -211,9 +188,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((stopCa
               }
             }
           }
-          class I {
+          class T {
             constructor() {
-              return closure_7.getChannelId();
+              return closure_6.getMode();
             }
           }
           function et() {
@@ -224,7 +201,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((stopCa
               const tmpResult = ReanimatedRexport;
             }
           }
-          const obj3 = { runOnJS: sendCallback(tmp2[16]).runOnJS, setDragging: tmp24, setPressed: tmp21, setIsSwipeToChatDisabled: prop };
+          const obj3 = { runOnJS: sendCallback(tmp2[16]).runOnJS, setDragging: tmp25, setPressed: tmp22, setIsSwipeToChatDisabled: prop };
           et.__closure = obj3;
           et.__workletHash = 10056118853836;
           et.__initData = __initData2;
@@ -275,16 +252,17 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((stopCa
         tmp3 = closure_0;
         tmp4 = closure_2;
         obj = closure_0(closure_2[15]);
-        setPushToTalkStateResult = obj.setPushToTalkState(tmp);
+        tmp5 = closure_6;
+        setPushToTalkStateResult = obj.setPushToTalkState(closure_6.getMediaEngine(), tmp);
         if (tmp) {
-          tmp8 = null;
+          tmp9 = null;
           if (sendCallback != null) {
-            tmp9 = sendCallback();
+            tmp10 = sendCallback();
           }
         } else {
-          tmp6 = null;
+          tmp7 = null;
           if (stopCallback != null) {
-            tmp7 = stopCallback();
+            tmp8 = stopCallback();
           }
         }
       }
@@ -299,8 +277,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((stopCa
   cResult[11] = stopCallback.stopCallback;
   cResult[12] = items4;
   cResult[13] = A;
-  tmp30 = A;
-  tmp29 = items4;
+  tmp31 = A;
+  tmp30 = items4;
   const tmpResult6 = sendCallback(stateFromStores1[14]);
 }) : ((look) => {
   let BRAND = look.look;
@@ -316,7 +294,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((stopCa
   let ref;
   let prop;
   let string = closure_11();
-  let onTouchStart = stateFromStores1;
+  let handleStartSend = stateFromStores1;
   obj = sendCallback(stateFromStores1[12]);
   const items = [mode];
   const stateFromStores = obj.useStateFromStores(items, () => mode.getMode());
@@ -343,7 +321,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((stopCa
   }
   ref = obj5.useRef(false);
   tmp5 = look.stopCallback(stateFromStores1[13])(stateFromStores1);
-  const voiceChatNavigationContext = sendCallback(onTouchStart[14]).useVoiceChatNavigationContext();
+  const voiceChatNavigationContext = sendCallback(handleStartSend[14]).useVoiceChatNavigationContext();
   prop = undefined;
   if (voiceChatNavigationContext != null) {
     prop = voiceChatNavigationContext.setIsSwipeToChatDisabled;
@@ -355,7 +333,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((stopCa
       tmp = first1;
     }
     if (tmp !== ref.current) {
-      MediaEngineActionCreators.setPushToTalkState(tmp);
+      MediaEngineActionCreators.setPushToTalkState(MediaEngineStore.getMediaEngine(), tmp);
       if (tmp) {
         if (sendCallback != null) {
           sendCallback();
@@ -366,8 +344,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((stopCa
     }
     ref.current = tmp;
   }, items4);
-  const Gesture = sendCallback(onTouchStart[17]).Gesture;
-  const tmp2Result = sendCallback(onTouchStart[14]);
+  const Gesture = sendCallback(handleStartSend[17]).Gesture;
+  const tmp2Result = sendCallback(handleStartSend[14]);
   class G {
     constructor() {
       tmp = closure_0;
@@ -384,10 +362,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((stopCa
     }
   }
   const PanResult = Gesture.Pan();
-  G.__closure = { runOnJS: sendCallback(onTouchStart[16]).runOnJS, setDragging: tmp9[1], setPressed: tmp6[1], setIsSwipeToChatDisabled: prop };
+  G.__closure = { runOnJS: sendCallback(handleStartSend[16]).runOnJS, setDragging: tmp9[1], setPressed: tmp6[1], setIsSwipeToChatDisabled: prop };
   G.__workletHash = 12037532002826;
   G.__initData = __initData4;
-  const obj4 = { runOnJS: sendCallback(onTouchStart[16]).runOnJS, setDragging: tmp9[1], setPressed: tmp6[1], setIsSwipeToChatDisabled: prop };
+  const obj4 = { runOnJS: sendCallback(handleStartSend[16]).runOnJS, setDragging: tmp9[1], setPressed: tmp6[1], setIsSwipeToChatDisabled: prop };
   class F {
     constructor() {
       obj = closure_0(closure_2[16]);
@@ -396,7 +374,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((stopCa
     }
   }
   const onStartResult = PanResult.onStart(G);
-  F.__closure = { runOnJS: sendCallback(onTouchStart[16]).runOnJS, setDragging: tmp9[1] };
+  F.__closure = { runOnJS: sendCallback(handleStartSend[16]).runOnJS, setDragging: tmp9[1] };
   F.__workletHash = 11266403476668;
   F.__initData = __initData3;
   let onEndResult = onStartResult.onEnd(F);
@@ -423,22 +401,22 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((stopCa
           buttonBlurPressed = string.buttonBlurPressed;
         }
         const obj7 = { gesture: onEndResult, children: null };
-        View = View(onTouchStart[16]).View;
+        View = View(handleStartSend[16]).View;
         const obj8 = { style: items7, children: null };
-        style = sendCallback(onTouchStart[19]).Button;
+        style = sendCallback(handleStartSend[19]).Button;
         const obj9 = { style: buttonBlurPressed, textStyle: string.textStyle, text: null, onTouchStart: null, onTouchEnd: null, darkenOnPress: true };
-        const intl = sendCallback(onTouchStart[18]).intl;
+        const intl = sendCallback(handleStartSend[18]).intl;
         string = intl.string;
-        obj9.text = string(sendCallback(onTouchStart[18]).t.Q8gkVL);
-        onTouchStart = function onTouchStart() {
+        obj9.text = string(sendCallback(handleStartSend[18]).t.Q8gkVL);
+        handleStartSend = function handleStartSend() {
           closure_4(true);
           mode(false);
           if (prop != null) {
             prop(true);
           }
         };
-        obj9.onTouchStart = onTouchStart;
-        obj9.onTouchEnd = function onTouchEnd() {
+        obj9.onTouchStart = handleStartSend;
+        obj9.onTouchEnd = function handleStopSend() {
           closure_4(false);
           if (prop != null) {
             prop(false);
@@ -447,7 +425,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((stopCa
         obj8.children = <style style={buttonBlurPressed} textStyle={string.textStyle} text={null} onTouchStart={null} onTouchEnd={null} darkenOnPress />;
         onEndResult = <View style={items7}>{null}</View>;
         obj7.children = onEndResult;
-        jsx(sendCallback(onTouchStart[17]).GestureDetector, { gesture: onEndResult, children: null });
+        jsx(sendCallback(handleStartSend[17]).GestureDetector, { gesture: onEndResult, children: null });
       }
     }
   }

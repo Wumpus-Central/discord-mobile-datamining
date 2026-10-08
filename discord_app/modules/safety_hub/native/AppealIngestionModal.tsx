@@ -1,17 +1,17 @@
-// === Module 11511: AppealIngestionModal ===
+// === Module 11503: AppealIngestionModal ===
 
-// Module 11511 (AppealIngestionModal)
+// Module 11503 (AppealIngestionModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import AppealIngestionModalActionCreatorsDefault from "AppealIngestionModalActionCreators" /* 11510 */;
-import AppealIngestionSpeedBumpDefault from "AppealIngestionSpeedBump" /* 11512 */;
-import AppealIngestionCollectSignalDefault from "AppealIngestionCollectSignal" /* 11526 */;
-import AppealIngestionConfirmSubmissionDefault from "AppealIngestionConfirmSubmission" /* 11528 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import AppealIngestionModalActionCreatorsDefault from "AppealIngestionModalActionCreators" /* 11502 */;
+import AppealIngestionSpeedBumpDefault from "AppealIngestionSpeedBump" /* 11504 */;
+import AppealIngestionCollectSignalDefault from "AppealIngestionCollectSignal" /* 11524 */;
+import AppealIngestionConfirmSubmissionDefault from "AppealIngestionConfirmSubmission" /* 11526 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 8139 */;
+import SafetyHubStore from "SafetyHubStore" /* 5920 */;
 
 const require = globalThis.__r;
 
@@ -24,7 +24,7 @@ function getScreens(isDsaEligible, isSpam, isCoppa, isDeveloperClassification) {
   const obj2 = {
     headerLeft: require("NavigatorHeader").getHeaderCloseButton(AppealIngestionModalActionCreatorsDefault.close),
     headerTitle() {
-      return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, { variant: "text-md/normal", children: "applicationId" });
+      return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, { variant: "text-md/normal", children: "apply" });
     },
     render() {
       return __initData(AppealIngestionSpeedBumpDefault, { isDsaEligible, isSpam, isCoppa, isDeveloperClassification });
@@ -37,7 +37,7 @@ function getScreens(isDsaEligible, isSpam, isCoppa, isDeveloperClassification) {
   const obj3 = require("NavigatorHeader");
   obj4.headerLeft = require("NavigatorHeader").getHeaderBackButton();
   obj4.headerTitle = function headerTitle() {
-    return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, { variant: "text-md/normal", children: "applicationId" });
+    return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, { variant: "text-md/normal", children: "apply" });
   };
   obj4.render = function render() {
     return __initData(AppealIngestionCollectSignalDefault, { isDsaEligible });
@@ -49,7 +49,7 @@ function getScreens(isDsaEligible, isSpam, isCoppa, isDeveloperClassification) {
   const obj5 = require("NavigatorHeader");
   obj6.headerLeft = require("NavigatorHeader").getHeaderBackButton();
   obj6.headerTitle = function headerTitle() {
-    return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, { variant: "text-md/normal", children: "applicationId" });
+    return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, { variant: "text-md/normal", children: "apply" });
   };
   obj6.render = function render() {
     return __initData(AppealIngestionConfirmSubmissionDefault, { isDsaEligible });
@@ -61,7 +61,7 @@ function getScreens(isDsaEligible, isSpam, isCoppa, isDeveloperClassification) {
   const obj7 = require("NavigatorHeader");
   obj8.headerLeft = require("NavigatorHeader").getHeaderCloseButton(AppealIngestionModalActionCreatorsDefault.close);
   obj8.headerTitle = function headerTitle() {
-    return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, { variant: "text-md/normal", children: "applicationId" });
+    return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, { variant: "text-md/normal", children: "apply" });
   };
   obj8.render = function render() {
     return closure_1_12(isSpam(isDeveloperClassification[28]), {});
@@ -73,7 +73,7 @@ function getScreens(isDsaEligible, isSpam, isCoppa, isDeveloperClassification) {
   const obj9 = require("NavigatorHeader");
   obj10.headerLeft = require("NavigatorHeader").getHeaderCloseButton(AppealIngestionModalActionCreatorsDefault.close);
   obj10.headerTitle = function headerTitle() {
-    return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, { variant: "text-md/normal", children: "applicationId" });
+    return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, { variant: "text-md/normal", children: "apply" });
   };
   obj10.render = function render() {
     return closure_1_12(isSpam(isDeveloperClassification[29]), {});
@@ -85,7 +85,7 @@ function getScreens(isDsaEligible, isSpam, isCoppa, isDeveloperClassification) {
   const obj11 = require("NavigatorHeader");
   obj12.headerLeft = require("NavigatorHeader").getHeaderCloseButton(AppealIngestionModalActionCreatorsDefault.close);
   obj12.headerTitle = function headerTitle() {
-    return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, { variant: "text-md/normal", children: "applicationId" });
+    return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, { variant: "text-md/normal", children: "apply" });
   };
   obj12.render = function render() {
     return closure_1_12(isSpam(isDeveloperClassification[30]), {});
@@ -96,12 +96,12 @@ function getScreens(isDsaEligible, isSpam, isCoppa, isDeveloperClassification) {
   return obj;
 }
 let View = fn(17).View;
-const SafetyHubConstants = fn(8126);
+const SafetyHubConstants = fn(5921);
 ({ APPEAL_INGESTION_IMPRESSION_PROPERTIES: closure_9, AppealIngestionSections: c10 } = SafetyHubConstants);
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1085).EMPTY_STRING_SNOWFLAKE_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, headerContainer: { alignSelf: "stretch", marginTop: 16, marginBottom: 8, paddingHorizontal: 16 }, header: { marginBottom: 8, textAlign: "center" }, subheader: { lineHeight: 20, marginBottom: 8, textAlign: "center" }, separator: null, footerContainer: null, footerText: null, footerButton: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.separator = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginVertical: 24 };
@@ -112,7 +112,7 @@ let closure_15 = createStyles.createStyles(obj2);
 fn(558);
 let obj4 = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginVertical: 24 };
 let ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIngestionModalHeader(arg0) {
   const cResult = c.c(10);
   ({ headerText, subHeaderText } = arg0);
   const tmp4 = closure_15();
@@ -167,7 +167,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = tmp4.header;
   cResult[2] = tmp6;
   tmp5 = tmp6;
-}) : ((arg0) => {
+}) : (function AppealIngestionModalHeader(arg0) {
   ({ headerText, subHeaderText } = arg0);
   const tmp = closure_15();
   const obj = { style: tmp.headerContainer, children: null };
@@ -193,7 +193,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return __initData2(View, obj);
 });
 ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIngestionModalScreen(arg0) {
   const cResult = require("c").c(36);
   closure_15();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -215,14 +215,14 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   _require = safetyHubAppealSignal;
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [SafetyHubStore];
-    class A {
+    class C {
       constructor() {
         return closure_1_8.getFreeTextAppealReason();
       }
     }
     cResult[2] = items1;
-    cResult[3] = A;
-    let tmp11 = A;
+    cResult[3] = C;
+    let tmp11 = C;
     let tmp10 = items1;
   } else {
     tmp10 = cResult[2];
@@ -232,7 +232,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const stateFromStores1 = require("initialize").useStateFromStores(tmp10, tmp11);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [SafetyHubStore];
-    class A {
+    class C {
       constructor() {
         return closure_1_8.getFreeTextAppealReason();
       }
@@ -295,7 +295,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
     const items3 = [navigation];
-    class A {
+    class C {
       constructor() {
         return closure_1_8.getFreeTextAppealReason();
       }
@@ -342,7 +342,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         }
       }
     }
-    class A {
+    class C {
       constructor() {
         return closure_1_8.getFreeTextAppealReason();
       }
@@ -419,7 +419,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         }
       }
     });
-    const fn2 = function() {
+    function t10() {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -428,12 +428,12 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         applyArgumentsResult = apply(self, arguments);
       }
       return applyArgumentsResult;
-    };
+    }
     cResult[12] = safetyHubAppealSignal;
     cResult[13] = stateFromStores2;
     cResult[14] = stateFromStores1;
     cResult[15] = O;
-    cResult[16] = fn2;
+    cResult[16] = t10;
   }
   class O {
     constructor() {
@@ -461,7 +461,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[10] = first;
   cResult[11] = O;
   const tmp24 = first(noop.useState(""), 2);
-}) : ((children) => {
+}) : (function AppealIngestionModalScreen(children) {
   let safetyHubAppealSignal;
   let navigation;
   asyncGeneratorStep = undefined;
@@ -571,7 +571,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               v2("");
               v2 = 2;
               c5 = 1;
-              const obj6 = { value: tmp27(11506).requestReview(tmp35, safetyHubAppealSignal, stateFromStores1), done: false };
+              const obj6 = { value: tmp27(11498).requestReview(tmp35, safetyHubAppealSignal, stateFromStores1), done: false };
               return obj6;
             }
           }
@@ -584,8 +584,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             if (body != null) {
               code = body.code;
             }
-            closure_129_4(safetyHubAppealSignal(8125).getRequestReviewErrorFromCode(code));
-            const obj2 = safetyHubAppealSignal(8125);
+            closure_129_4(safetyHubAppealSignal(5927).getRequestReviewErrorFromCode(code));
+            const obj2 = safetyHubAppealSignal(5927);
           } else if (arg0 === 1) {
             c5 = 3;
             throw value;
@@ -668,7 +668,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/native/AppealIngestionModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((classificationId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIngestionModal(classificationId) {
   const cResult = isDsaEligible(flag3[11]).c(8);
   const obj = isDsaEligible(flag3[11]);
   const safetyHubClassification = isDsaEligible(flag3[14]).useSafetyHubClassification(classificationId.classificationId);
@@ -736,7 +736,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((classificationId
   cResult[4] = fn;
   tmp5 = fn;
   const obj2 = isDsaEligible(flag3[14]);
-}) : ((classificationId) => {
+}) : (function AppealIngestionModal(classificationId) {
   _require = undefined;
   let flag2;
   let flag3;

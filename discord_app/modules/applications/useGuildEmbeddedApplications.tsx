@@ -1,12 +1,12 @@
-// === Module 9256: useGuildEmbeddedApplications ===
+// === Module 8585: useGuildEmbeddedApplications ===
 
-// Module 9256 (useGuildEmbeddedApplications)
+// Module 8585 (useGuildEmbeddedApplications)
 import c from "c" /* 576 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6665 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6842 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5124 */;
+import ApplicationStore from "ApplicationStore" /* 5436 */;
 
 require = fn;
 const initialize = fn(504);
@@ -78,7 +78,7 @@ let closure_3 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
     }
   }
 });
-obj2.load = function() {
+obj2.load = function load() {
   const self = this;
   const apply = closure_3.apply;
   if (typeof apply === "unknown") {
@@ -93,7 +93,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/useGuildEmbeddedApplications.tsx");
 
-export const useGuildEmbeddedApplications = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) => {
+export const useGuildEmbeddedApplications = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildEmbeddedApplications(arg0, arg1, arg2) {
   const cResult = c.c(6);
   const tmp2 = closure_6(arg0, arg1, arg2);
   const data = tmp2.data;
@@ -113,7 +113,7 @@ export const useGuildEmbeddedApplications = ReactCompilerGating.isReactCompilerE
       }
     }
   }
-  const fn = function c() {
+  const fn = function s() {
     if (null != data) {
       ref.current = true;
     } else {
@@ -139,7 +139,7 @@ export const useGuildEmbeddedApplications = ReactCompilerGating.isReactCompilerE
   cResult[5] = items;
   tmp4 = items;
   tmp3 = fn;
-}) : ((arg0, arg1, arg2) => {
+}) : (function useGuildEmbeddedApplications(arg0, arg1, arg2) {
   const tmp = closure_6(arg0, arg1, arg2);
   const data = tmp.data;
   const error = tmp.error;

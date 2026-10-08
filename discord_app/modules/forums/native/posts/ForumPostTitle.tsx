@@ -1,14 +1,14 @@
-// === Module 11644: ForumPostTitle ===
+// === Module 11709: ForumPostTitle ===
 
-// Module 11644 (ForumPostTitle)
+// Module 11709 (ForumPostTitle)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 4892 */;
+import Text_Text from "Text/Text" /* 5086 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
-const PlatformUtils = fn(1370);
+const createStyles = fn(5090);
+const PlatformUtils = fn(1382);
 let obj3 = null;
 if (PlatformUtils.isIOS()) {
   obj3 = { lineHeight: 22 };
@@ -21,7 +21,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPostTitle.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((hasUnreads) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPostTitle(hasUnreads) {
   const cResult = c.c(7);
   ({ title, lineClamp, ellipsizeMode, onTextLayout } = hasUnreads);
   const tmp4 = closure_3();
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((hasUnreads) => {
   cResult[6] = tmp6;
   tmp5 = tmp6;
   const obj2 = { variant: "text-md/semibold", color: str, lineClamp, ellipsizeMode, style: tmp4.title, onTextLayout, children: title };
-}) : ((arg0) => {
+}) : (function ForumPostTitle(arg0) {
   ({ title, lineClamp, ellipsizeMode, hasUnreads, onTextLayout } = arg0);
   let str = "text-muted";
   if (hasUnreads) {

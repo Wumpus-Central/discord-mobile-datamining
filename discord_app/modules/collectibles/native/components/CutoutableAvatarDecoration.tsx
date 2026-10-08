@@ -1,15 +1,15 @@
-// === Module 8501: CutoutableAvatarDecoration ===
+// === Module 8985: CutoutableAvatarDecoration ===
 
-// Module 8501 (CutoutableAvatarDecoration)
+// Module 8985 (CutoutableAvatarDecoration)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import AvatarUtils from "AvatarUtils" /* 1402 */;
-import FastImageDefault from "FastImage" /* 5981 */;
-import APNGDecorationNativeComponentDefault from "APNGDecorationNativeComponent" /* 8498 */;
-import ClipViewDefault from "ClipView" /* 8502 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import AvatarUtils from "AvatarUtils" /* 1414 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import APNGDecorationNativeComponentDefault from "APNGDecorationNativeComponent" /* 8982 */;
+import ClipViewDefault from "ClipView" /* 8986 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 require = fn;
 const View = fn(17).View;
@@ -18,13 +18,13 @@ const ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/components/CutoutableAvatarDecoration.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function CutoutableAvatarDecoration(arg0) {
   let tmp2 = dependencyMap;
   const cResult = c.c(30);
   ({ size, avatarDecoration, decorationStyle, animate, cutout } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AccessibilityStore];
-    const fn = function u() {
+    const fn = function s() {
       return useReducedMotion.useReducedMotion;
     };
     cResult[0] = items;
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = avatarDecorationURL;
   tmp9 = avatarDecorationURL;
   const tmpResult4 = AvatarUtils;
-}) : ((size) => {
+}) : (function CutoutableAvatarDecoration(size) {
   size = size.size;
   const avatarDecoration = size.avatarDecoration;
   const decorationStyle = size.decorationStyle;

@@ -1,21 +1,21 @@
-// === Module 12847: UserProfileActivityBadges ===
+// === Module 12994: UserProfileActivityBadges ===
 
-// Module 12847 (UserProfileActivityBadges)
+// Module 12994 (UserProfileActivityBadges)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import GroupIcon from "GroupIcon" /* 5880 */;
-import AppsIcon2 from "AppsIcon" /* 5897 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7242 */;
-import utils from "utils" /* 7829 */;
-import GameControllerIcon from "GameControllerIcon" /* 8771 */;
-import MusicIcon from "MusicIcon" /* 9584 */;
-import TvIcon from "TvIcon" /* 10629 */;
-import conjurePresenceActivity from "conjurePresenceActivity" /* 10634 */;
-import TopicsIcon from "TopicsIcon" /* 11289 */;
-import HourglassIcon from "HourglassIcon" /* 12717 */;
-import shouldShowActivityTimeBarDefault from "shouldShowActivityTimeBar" /* 12849 */;
-import Badges from "Badges" /* 12850 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7421 */;
+import GroupIcon from "GroupIcon" /* 8192 */;
+import AppsIcon2 from "AppsIcon" /* 8209 */;
+import utils from "utils" /* 8247 */;
+import GameControllerIcon from "GameControllerIcon" /* 9117 */;
+import TvIcon from "TvIcon" /* 10227 */;
+import conjurePresenceActivity from "conjurePresenceActivity" /* 10232 */;
+import MusicIcon from "MusicIcon" /* 10233 */;
+import TopicsIcon from "TopicsIcon" /* 11369 */;
+import HourglassIcon from "HourglassIcon" /* 12995 */;
+import shouldShowActivityTimeBarDefault from "shouldShowActivityTimeBar" /* 12998 */;
+import Badges from "Badges" /* 12999 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -47,11 +47,11 @@ const View = fn(17).View;
 const ActivityTypes = fn(1085).ActivityTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({ container: { display: "flex", flexDirection: "row", alignItems: "center", gap: 4 }, bold: { fontWeight: "bold" } });
 fn(558);
 let ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((activity) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function TimestampBadge(activity) {
   const cResult = c.c(16);
   activity = activity.activity;
   const tmp4 = closure_7();
@@ -147,7 +147,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((activity) => {
     }
   }
   return null;
-}) : ((activity) => {
+}) : (function TimestampBadge(activity) {
   activity = activity.activity;
   const tmp = closure_7();
   const timestamps = activity.timestamps;
@@ -195,7 +195,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((activity) => {
   return null;
 });
 ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((activity) => {
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function PartyBadge(activity) {
   const cResult = c.c(9);
   activity = activity.activity;
   let container = closure_7();
@@ -247,7 +247,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((activity) => {
     }
   }
   return null;
-}) : ((activity) => {
+}) : (function PartyBadge(activity) {
   activity = activity.activity;
   if (!isEmbeddedActivityDefault(activity)) {
     if (null != activity.party) {
@@ -272,7 +272,7 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 
 export const TimestampBadge = tmp4;
 export const PartyBadge = tmp5;
-export const EpisodeBadge = ReactCompilerGating.isReactCompilerEnabled() ? ((activity) => {
+export const EpisodeBadge = ReactCompilerGating.isReactCompilerEnabled() ? (function EpisodeBadge(activity) {
   const cResult = c.c(8);
   let container = closure_7();
   const assets = activity.activity.assets;
@@ -321,7 +321,7 @@ export const EpisodeBadge = ReactCompilerGating.isReactCompilerEnabled() ? ((act
     cResult[6] = tmp12;
     cResult[7] = tmp18;
   }
-}) : ((activity) => {
+}) : (function EpisodeBadge(activity) {
   const tmp = closure_7();
   const assets = activity.activity.assets;
   let large_text;

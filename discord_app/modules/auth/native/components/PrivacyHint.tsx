@@ -1,27 +1,27 @@
-// === Module 15943: PrivacyHint ===
+// === Module 16203: PrivacyHint ===
 
-// Module 15943 (PrivacyHint)
+// Module 16203 (PrivacyHint)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4600 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import FormCheckbox from "FormCheckbox" /* 5998 */;
-import Form from "Form" /* 8924 */;
-import PromotionalEmailCheckBoxDefault from "PromotionalEmailCheckBox" /* 15944 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4792 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import FormCheckbox from "FormCheckbox" /* 6182 */;
+import Form from "Form" /* 8555 */;
+import PromotionalEmailCheckBoxDefault from "PromotionalEmailCheckBox" /* 16204 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, Pressable: closure_4 } = get_ActivityIndicator);
-const usePromoEmailConsentStore = fn(6090).usePromoEmailConsentStore;
-const useRegistrationUIStore = fn(15906).useRegistrationUIStore;
+const usePromoEmailConsentStore = fn(5937).usePromoEmailConsentStore;
+const useRegistrationUIStore = fn(16165).useRegistrationUIStore;
 const MarketingURLs = fn(1085).MarketingURLs;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_10 = createStyles.createStyles({ multiItem: { flexDirection: "column", gap: 16 }, checkbox: { flexDirection: "row", alignItems: "flex-start", gap: 8 }, radio: { flexDirection: "row", alignItems: "center", gap: 8 }, checkboxLabel: { flex: 1 } });
 let ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function PrivacyPolicyDescription(style) {
   const cResult = c.c(3);
   style = style.style;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -44,14 +44,14 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
     tmp7 = cResult[2];
   }
   return tmp7;
-}) : ((style) => {
+}) : (function PrivacyPolicyDescription(style) {
   const obj = { style: style.style, variant: "text-xs/medium", color: "text-muted", children: null };
   const intl = util.intl;
   obj.children = intl.format(util.t["KI+BSb"], { termsURL: MarketingURLs.TERMS, privacyURL: MarketingURLs.PRIVACY });
   return closure_1_8(Text_Text.Text, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function PrivacyPolicyCheckbox(arg0) {
   const cResult = c.c(17);
   ({ consent, onToggleConsent, asCheckbox } = arg0);
   const tmp5 = closure_10();
@@ -142,7 +142,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = consent;
   cResult[6] = tmp13Result;
   const tmpResult = useA11yRolesNative;
-}) : ((onToggleConsent) => {
+}) : (function PrivacyPolicyCheckbox(onToggleConsent) {
   ({ consent, asCheckbox } = onToggleConsent);
   if (asCheckbox === undefined) {
     asCheckbox = false;
@@ -175,12 +175,12 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/PrivacyHint.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function PrivacyHint(arg0) {
   const cResult = c.c(17);
   ({ consent, consentRequired, onToggleConsent } = arg0);
   let multiItem = closure_10();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function n(required) {
+    const fn = function c(required) {
       return required.required;
     };
     cResult[0] = fn;
@@ -266,7 +266,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[8] = onToggleConsent;
   cResult[9] = tmp11;
   const tmp4 = usePromoEmailConsentStore(first);
-}) : ((arg0) => {
+}) : (function PrivacyHint(arg0) {
   ({ consent, consentRequired, onToggleConsent } = arg0);
   let items1 = closure_10();
   const tmp = usePromoEmailConsentStore((required) => required.required);

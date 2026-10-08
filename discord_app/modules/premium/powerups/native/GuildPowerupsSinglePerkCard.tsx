@@ -1,13 +1,13 @@
-// === Module 12244: GuildPowerupsSinglePerkCard ===
+// === Module 12323: GuildPowerupsSinglePerkCard ===
 
-// Module 12244 (GuildPowerupsSinglePerkCard)
+// Module 12323 (GuildPowerupsSinglePerkCard)
 import c from "c" /* 576 */;
-import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 12170 */;
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12174 */;
-import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 12191 */;
-import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 12192 */;
-import useGuildPowerupOnShowMoreDefault from "useGuildPowerupOnShowMore" /* 12240 */;
-import GuildPowerupsPerkCardDefault from "GuildPowerupsPerkCard" /* 12245 */;
+import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 12249 */;
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12253 */;
+import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 12270 */;
+import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 12271 */;
+import useGuildPowerupOnShowMoreDefault from "useGuildPowerupOnShowMore" /* 12319 */;
+import GuildPowerupsPerkCardDefault from "GuildPowerupsPerkCard" /* 12324 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsSinglePerkCard.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPowerupsSinglePerkCard(arg0) {
   const cResult = c.c(8);
   ({ guildId, powerup, badge } = arg0);
   const tmp4 = useGetGuildPowerupBannerImageDefault(powerup, true);
@@ -55,7 +55,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[7] = tmp10;
   tmp9 = tmp10;
   const obj3 = { title: powerup.title, description: powerup.description, cost: powerup.cost, imageUrl: str, status: calculatePowerupCardStatus, onPress: tmp8, badge };
-}) : ((badge) => {
+}) : (function GuildPowerupsSinglePerkCard(badge) {
   ({ guildId, powerup } = badge);
   let str = useGetGuildPowerupBannerImageDefault(powerup, true);
   const tmp = usePowerupActiveStatusDefault(guildId, powerup);

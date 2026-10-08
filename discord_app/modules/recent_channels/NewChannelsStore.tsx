@@ -1,20 +1,20 @@
-// === Module 7056: NewChannelsStore ===
+// === Module 7243: NewChannelsStore ===
 
-// Module 7056 (NewChannelsStore)
+// Module 7243 (NewChannelsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 6612 */;
-import SidebarActionTypes from "SidebarActionTypes" /* 6795 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
+import SidebarActionTypes from "SidebarActionTypes" /* 6068 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 6789 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildChannelStore from "GuildChannelStore" /* 4513 */;
-import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import ReadStateStore from "ReadStateStore" /* 4911 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5077 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildChannelStore from "GuildChannelStore" /* 4705 */;
+import GuildMemberStore from "GuildMemberStore" /* 2124 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import ReadStateStore from "ReadStateStore" /* 6040 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5971 */;
 
 require = fn;
 function guildHasCommunity(nextResult) {
@@ -127,7 +127,7 @@ function pruneNewChannels() {
     closure_16[item] = new Set(items.filter((item) => !channelOrParentOptedIn.isChannelOrParentOptedIn(closure_0, item)));
   });
 }
-let closure_7 = fn(4513).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_7 = fn(4705).GUILD_SELECTABLE_CHANNELS_KEY;
 const Constants = fn(1085);
 ({ AnalyticsObjects: closure_12, AnalyticsObjectTypes: map1, GuildFeatures: closure_14 } = Constants);
 let set = new Set();

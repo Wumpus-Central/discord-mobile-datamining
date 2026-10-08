@@ -1,17 +1,17 @@
-// === Module 13265: ReferralProgramShareActionSheet ===
+// === Module 13566: ReferralProgramShareActionSheet ===
 
-// Module 13265 (ReferralProgramShareActionSheet)
+// Module 13566 (ReferralProgramShareActionSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import GlobalUtils from "GlobalUtils" /* 1375 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4596 */;
-import makeUserListPillDataDefault from "makeUserListPillData" /* 10608 */;
-import ReferralProgramShareActionSheetUtils from "ReferralProgramShareActionSheetUtils" /* 13268 */;
+import GlobalUtils from "GlobalUtils" /* 1387 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4788 */;
+import makeUserListPillDataDefault from "makeUserListPillData" /* 10205 */;
+import ReferralProgramShareActionSheetUtils from "ReferralProgramShareActionSheetUtils" /* 13569 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 6974 */;
+import UserStore from "UserStore" /* 1389 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 7163 */;
 
 const require = globalThis.__r;
 
@@ -24,7 +24,7 @@ const View = fn(17).View;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { searchBarContainer: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_24 }, searchBarRowContainer: null, header: null, subtitle: null, centeredContainer: null, errorImage: null, emptyImage: null, footer: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_24 };
 obj2.searchBarRowContainer = { paddingTop: nativeDefault.space.PX_8 };
@@ -242,9 +242,7 @@ export default function ReferralProgramShareActionSheet() {
       fetchUsers();
     }
   }, items14);
-  const obj17 = { style: null, children: null };
-  const items15 = [tmp.footer];
-  obj17.style = items15;
+  const obj17 = { style: tmp.footer, children: null };
   const tmp3Result = require("SearchableUserListActions");
   const obj18 = { size: "lg", text: null, onPress: null, loading: null, disabled: null };
   const intl6 = tmp3(tmp4[16]).intl;
@@ -263,13 +261,13 @@ export default function ReferralProgramShareActionSheet() {
   const intl7 = tmp3(tmp4[16]).intl;
   obj21.placeholder = intl7.string(require("util").t.Kd5RaI);
   obj20.children = hasError(stateFromStores(selectedUserIds[36]), obj21);
-  const items16 = [hasError(memo1, obj20), , ];
+  const items15 = [hasError(memo1, obj20), , ];
   let tmp42 = null;
   if (memo3) {
     tmp42 = tmp29Result;
   }
-  items16[1] = tmp42;
-  items16[2] = hasError(require("UsersFastList").UsersFastList, { ref, inActionSheet: true, sections: memo4, getItemProps: callback3, getSectionProps: callback2, renderListHeader: renderHeader, listHeaderSize: headerSize, insetEnd: 80, onScroll: callback4 });
-  obj19.children = items16;
+  items15[1] = tmp42;
+  items15[2] = hasError(require("UsersFastList").UsersFastList, { ref, inActionSheet: true, sections: memo4, getItemProps: callback3, getSectionProps: callback2, renderListHeader: renderHeader, listHeaderSize: headerSize, insetEnd: 80, onScroll: callback4 });
+  obj19.children = items15;
   return resendUsers(require("Sheet/BottomSheet").BottomSheet, obj19);
 };

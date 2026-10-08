@@ -1,10 +1,10 @@
-// === Module 15789: CollectiblesShopViewAllCategoryItemsScreen ===
+// === Module 16047: CollectiblesShopViewAllCategoryItemsScreen ===
 
-// Module 15789 (CollectiblesShopViewAllCategoryItemsScreen)
+// Module 16047 (CollectiblesShopViewAllCategoryItemsScreen)
 import c from "c" /* 576 */;
-import useNavigation from "useNavigation" /* 1490 */;
-import useSettingNavigationRoute from "useSettingNavigationRoute" /* 6497 */;
-import CollectiblesShopViewAllCategoryItemsDefault from "CollectiblesShopViewAllCategoryItems" /* 15790 */;
+import useNavigation from "useNavigation" /* 1502 */;
+import useSettingNavigationRoute from "useSettingNavigationRoute" /* 6674 */;
+import CollectiblesShopViewAllCategoryItemsDefault from "CollectiblesShopViewAllCategoryItems" /* 16048 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,12 +13,12 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/shop/native/CollectiblesShopViewAllCategoryItemsScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function CollectiblesShopViewAllCategoryItemsScreen() {
   const cResult = c.c(5);
   const settingNavigationRoute = useSettingNavigationRoute.useSettingNavigationRoute();
   const stackNavigation = useNavigation.useStackNavigation();
   if (cResult[0] !== stackNavigation) {
-    const fn = function n() {
+    const fn = function o() {
       stackNavigation.setOptions({ headerShown: false });
     };
     const items = [stackNavigation];
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp8 = cResult[4];
   }
   return tmp8;
-}) : (() => {
+}) : (function CollectiblesShopViewAllCategoryItemsScreen() {
   const settingNavigationRoute = useSettingNavigationRoute.useSettingNavigationRoute();
   const stackNavigation = useNavigation.useStackNavigation();
   const items = [stackNavigation];

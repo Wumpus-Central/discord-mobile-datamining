@@ -1,27 +1,27 @@
-// === Module 16194: TextChannel ===
+// === Module 16454: TextChannel ===
 
-// Module 16194 (TextChannel)
+// Module 16454 (TextChannel)
 import nativeDefault from "native" /* 587 */;
 import RoutingSourcesDefault from "RoutingSources" /* 1124 */;
-import transitionToChannel from "transitionToChannel" /* 4907 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4909 */;
-import useChannelRoleSubscriptionStatus from "useChannelRoleSubscriptionStatus" /* 5804 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10664 */;
+import transitionToChannel from "transitionToChannel" /* 5101 */;
+import useChannelRoleSubscriptionStatus from "useChannelRoleSubscriptionStatus" /* 5409 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7001 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10264 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
-import GatedChannelStore from "GatedChannelStore" /* 2104 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
-import ReadStateStore from "ReadStateStore" /* 4911 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5077 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2062 */;
+import GatedChannelStore from "GatedChannelStore" /* 2116 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
+import ReadStateStore from "ReadStateStore" /* 6040 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5971 */;
 
 require = fn;
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(11711);
+const RedesignChannelListConstants = fn(11776);
 ({ CHANNEL_MARGIN_VERTICAL: closure_11, CHANNEL_TITLE_LINE_HEIGHT: closure_12 } = RedesignChannelListConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_15 = createStyles.createStyles((arg0, arg1) => {
   const obj = { container: { position: "relative", marginVertical, marginHorizontal: 8, borderRadius: nativeDefault.modules.mobile.CHANNEL_ITEM_RADIUS, flexGrow: 1 }, selected: null, selectedBorder: null, row: null, rowWithSubtitle: null, channelLabel: null, channelLabelText: null };
   const obj2 = { position: "relative", marginVertical, marginHorizontal: 8, borderRadius: nativeDefault.modules.mobile.CHANNEL_ITEM_RADIUS, flexGrow: 1 };
@@ -47,7 +47,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/channel_list_v2/native/items/TextChannel.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function TextChannel(channel) {
   const cResult = channel(id[17]).c(71);
   channel = channel.channel;
   ({ muted, selected, subtitle, isSuggestedSection } = channel);
@@ -265,7 +265,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
   tmp14 = items1;
   tmp13 = S;
   let obj = channel(id[17]);
-}) : ((channel) => {
+}) : (function TextChannel(channel) {
   channel = channel.channel;
   ({ muted, selected, subtitle, isSuggestedSection } = channel);
   const tmp = closure_15(muted, selected);

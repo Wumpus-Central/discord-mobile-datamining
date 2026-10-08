@@ -1,17 +1,17 @@
-// === Module 11678: ApplicationsImage ===
+// === Module 11743: ApplicationsImage ===
 
-// Module 11678 (ApplicationsImage)
+// Module 11743 (ApplicationsImage)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import FastImageDefault from "FastImage" /* 5981 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11679 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11744 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { appIconContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.sm + 3, position: "absolute", padding: 3 }, appIconLeftContainer: null, appIconRightContainer: null, appIcon: null };
 let obj4 = { transform: null };
 let items = [{ rotate: "-10deg" }];
@@ -29,7 +29,7 @@ let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadiu
 size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/onboarding/banner/ApplicationsImage.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ApplicationsImage(arg0) {
   const cResult = c.c(25);
   ({ firstApplication, secondApplication } = arg0);
   const tmp4 = closure_7();
@@ -143,7 +143,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = tmp4.appIcon;
   cResult[6] = tmp10;
   tmp9 = tmp10;
-}) : ((arg0) => {
+}) : (function ApplicationsImage(arg0) {
   ({ firstApplication, secondApplication } = arg0);
   const tmp = closure_7();
   let appLauncherIconSource = null;

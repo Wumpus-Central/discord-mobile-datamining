@@ -1,19 +1,19 @@
-// === Module 9282: GuildSettingsActionCreators ===
+// === Module 8613: GuildSettingsActionCreators ===
 
-// Module 9282 (GuildSettingsActionCreators)
+// Module 8613 (GuildSettingsActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5089 */;
-import GuildTemplateTooltipActionCreatorsDefault from "GuildTemplateTooltipActionCreators" /* 6836 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5944 */;
+import GuildTemplateTooltipActionCreatorsDefault from "GuildTemplateTooltipActionCreators" /* 7018 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ImpersonateStore from "ImpersonateStore" /* 2105 */;
-import LurkingStore from "LurkingStore" /* 4516 */;
+import ImpersonateStore from "ImpersonateStore" /* 2117 */;
+import LurkingStore from "LurkingStore" /* 4708 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9283 */;
+import GuildMemberStore from "GuildMemberStore" /* 2124 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8614 */;
 
 require = fn;
 const Constants = fn(1085);
@@ -138,7 +138,7 @@ let body = {
   updateMFALevel(arg0) {
     ({ guildId, level } = arg0);
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: v65535.GUILD_MFA(guildId), body: { level }, oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const request = { url: collapsed.GUILD_MFA(guildId), body: { level }, oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
     return HTTP.post(request).then((body) => DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_SET_MFA_SUCCESS", level: body.body.level }));
   },
   updateIcon(id, icon) {
@@ -208,7 +208,7 @@ let body = {
     obj(584).dispatch({ type: "GUILD_SETTINGS_SUBMIT" });
     const pendingOriginalMd5s = GuildSettingsStore.getPendingOriginalMd5s();
     const obj5 = obj(584);
-    const obj6 = obj(6485);
+    const obj6 = obj(6663);
     const headersForMd5 = obj6.buildHeadersForMd5({ [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_ICON]: pendingOriginalMd5s.icon, [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_BANNER]: pendingOriginalMd5s.banner, [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_INVITE_SPLASH]: pendingOriginalMd5s.splash, [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_DISCOVERY_SPLASH]: pendingOriginalMd5s.discoverySplash });
     const HTTP = require("HTTPUtils").HTTP;
     const request = { url: closure_10.GUILD(id), query: { for_discovery: obj.isForDiscovery }, body: obj2, headers: headersForMd5, oldFormErrors: true, rejectWithError: null };
@@ -249,7 +249,7 @@ let body = {
     if (id3 === undefined) {
       tmp2 = null;
     }
-    const request = { url: v65535.GUILD(id), body: { owner_id: id2, code: tmp2 }, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
+    const request = { url: collapsed.GUILD(id), body: { owner_id: id2, code: tmp2 }, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     const obj = TrackedHTTPUtilsDefault;
     request.trackedActionData = { event: discord_common_AnalyticsUtils.NetworkActionNames.GUILD_TRANSFER_OWNERSHIP, properties: { guild_id: id, verification_type: tmp } };
     const obj2 = { event: discord_common_AnalyticsUtils.NetworkActionNames.GUILD_TRANSFER_OWNERSHIP, properties: { guild_id: id, verification_type: tmp } };
@@ -261,7 +261,7 @@ let body = {
     if (arg1 === undefined) {
       flag = false;
     }
-    const obj2 = { url: v65535.GUILD_PINCODE(id), oldFormErrors: true, trackedActionData: null, rejectWithError: null };
+    const obj2 = { url: collapsed.GUILD_PINCODE(id), oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     const obj = TrackedHTTPUtilsDefault;
     obj2.trackedActionData = { event: discord_common_AnalyticsUtils.NetworkActionNames.GUILD_TRANSFER_OWNERSHIP_SEND_CODE, properties: { guild_id: id, is_resend: flag } };
     const obj3 = { event: discord_common_AnalyticsUtils.NetworkActionNames.GUILD_TRANSFER_OWNERSHIP_SEND_CODE, properties: { guild_id: id, is_resend: flag } };
@@ -270,7 +270,7 @@ let body = {
   },
   deleteGuild(arg0) {
     const HTTP = HTTPUtils.HTTP;
-    const obj = { url: v65535.GUILD_DELETE(arg0), oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const obj = { url: collapsed.GUILD_DELETE(arg0), oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
     return HTTP.post(obj).then(() => {
       body.close();
     });
@@ -310,7 +310,7 @@ let body = {
               closure_128_0 = undefined;
               const isLurkingResult = lurking.isLurking(tmp2);
               closure_128_0 = isLurkingResult;
-              const HTTP = tmp2(1282).HTTP;
+              const HTTP = tmp2(1294).HTTP;
               const request = { url: closure_1_10.GUILD_LEAVE(tmp2), body: null, oldFormErrors: true, rejectWithError: null };
               let isCurrentUserGuestResult = isLurkingResult;
               if (!isLurkingResult) {
@@ -318,13 +318,13 @@ let body = {
               }
               const obj5 = { lurking: isCurrentUserGuestResult };
               request.body = obj5;
-              request.rejectWithError = tmp2(1282).rejectWithMigratedError();
-              const obj4 = tmp2(1282);
+              request.rejectWithError = tmp2(1294).rejectWithMigratedError();
+              const obj4 = tmp2(1294);
               dependencyMap = 1;
               c3 = 1;
               const obj6 = {
                 value: HTTP.del(request).then(() => {
-                          const AccessibilityAnnouncer = closure_1_0(4736).AccessibilityAnnouncer;
+                          const AccessibilityAnnouncer = closure_1_0(4930).AccessibilityAnnouncer;
                           const intl = closure_1_0(1126).intl;
                           AccessibilityAnnouncer.announce(intl.string(closure_1_0(1126).t["7iPyVW"]));
                         }),
@@ -440,26 +440,26 @@ let body = {
   },
   enableIntegration(id, type, id2) {
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: v65535.GUILD_INTEGRATIONS(id), body: null, oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const request = { url: collapsed.GUILD_INTEGRATIONS(id), body: null, oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
     body = { type, id: id2 };
     request.body = body;
     return HTTP.post(request);
   },
   disableIntegration(id, id2) {
     const HTTP = HTTPUtils.HTTP;
-    const obj = { url: v65535.GUILD_INTEGRATION(id, id2), oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const obj = { url: collapsed.GUILD_INTEGRATION(id, id2), oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
     return HTTP.del(obj);
   },
   updateIntegration(guildId, id, expire_behavior, expire_grace_period, enable_emoticons) {
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: v65535.GUILD_INTEGRATION(guildId, id), body: null, oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const request = { url: collapsed.GUILD_INTEGRATION(guildId, id), body: null, oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
     body = { expire_behavior, expire_grace_period, enable_emoticons };
     request.body = body;
     return HTTP.patch(request);
   },
   syncIntegration(guildId, id) {
     const HTTP = HTTPUtils.HTTP;
-    const obj = { url: v65535.GUILD_INTEGRATION_SYNC(guildId, id), oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const obj = { url: collapsed.GUILD_INTEGRATION_SYNC(guildId, id), oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
     HTTP.post(obj);
   },
   migratePinPermission(arg0) {
@@ -489,7 +489,7 @@ let body = {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              const HTTP = v3(1282).HTTP;
+              const HTTP = v3(1294).HTTP;
               const obj4 = { url: closure_1_10.GUILD_MIGRATE_PIN_PERMISSION(guildId), rejectWithError: true };
               c1 = 1;
               v3 = 1;
@@ -541,7 +541,7 @@ let body = {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              const HTTP = v3(1282).HTTP;
+              const HTTP = v3(1294).HTTP;
               const obj4 = { url: closure_1_10.GUILD_MIGRATE_SLOWMODE_PERMISSION(guildId), rejectWithError: true };
               c1 = 1;
               v3 = 1;

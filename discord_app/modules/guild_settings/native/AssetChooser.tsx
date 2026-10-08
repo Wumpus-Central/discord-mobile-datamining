@@ -1,30 +1,36 @@
-// === Module 17716: AssetChooser ===
+// === Module 18003: AssetChooser ===
 
-// Module 17716 (AssetChooser)
+// Module 18003 (AssetChooser)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import Pressables from "Pressables" /* 5916 */;
-import _modDef17717 from "module_17717" /* 17717 */;
-import _modDef17718 from "module_17718" /* 17718 */;
+import native from "native" /* 1200 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import Pressables from "Pressables" /* 6189 */;
+import _modDef18004 from "module_18004" /* 18004 */;
+import _modDef18005 from "module_18005" /* 18005 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: closure_4, Image: hasOwnProperty, ImageBackground: metroRequire, TouchableWithoutFeedback: closure_7 } = get_ActivityIndicator);
+({ View: closure_4, Image: hasOwnProperty, TouchableWithoutFeedback: metroRequire, StyleSheet } = get_ActivityIndicator);
 const UPLOAD_MEDIUM_SIZE = fn(1085).UPLOAD_MEDIUM_SIZE;
 const jsxProd = fn(21);
-({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4896);
-let obj2 = { assetWrapper: { width: "100%", alignItems: "center" }, asset: null, uploadIconWrapper: null, uploadIcon: null, remove: null };
+({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
+const createStyles = fn(5090);
+let obj2 = { assetWrapper: { width: "100%", alignItems: "center" }, asset: null, assetImage: null, uploadIconWrapper: null, uploadIcon: null, remove: null };
 let size = { width: "100%", height: 192, borderRadius: nativeDefault.radii.xs, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.asset = size;
+let obj3 = {};
+const merged = Object.assign(StyleSheet.absoluteFillObject);
+obj3.width = "100%";
+obj3.height = 192;
+obj2.assetImage = obj3;
 const rect = { position: "absolute", bottom: 10, right: 10, shadowColor: nativeDefault.unsafe_rawColors.BLACK, shadowRadius: 10, shadowOffset: { height: 8, width: 0 }, shadowOpacity: 0.2 };
 obj2.uploadIconWrapper = rect;
 obj2.uploadIcon = { width: 16, height: 16 };
 obj2.remove = { marginTop: 8, fontSize: 14, lineHeight: 18, color: nativeDefault.unsafe_rawColors.BLUE_345 };
-let closure_12 = createStyles.createLegacyClassComponentStyles(obj2);
+let closure_11 = createStyles.createLegacyClassComponentStyles(obj2);
 const PureComponent = noop.PureComponent;
 class AssetChooser extends PureComponent {
   constructor() {
@@ -119,7 +125,7 @@ prototype["getSource"] = function getSource() {
   }
 };
 prototype["render"] = function render() {
-  const tmp = closure_12(this.context);
+  const tmp = closure_11(this.context);
   const disabled = this.props.disabled;
   const source = this.getSource();
   const obj = { accessibilityRole: "button", accessibilityLabel: null, style: null, onPress: null, disabled: null, children: null };
@@ -128,37 +134,39 @@ prototype["render"] = function render() {
   obj.style = tmp.assetWrapper;
   obj.onPress = this.handleChooseAsset;
   obj.disabled = disabled;
-  let tmp9 = source;
+  const obj2 = { style: tmp.asset, children: null };
+  let tmp9Result = source;
   if (null == source) {
-    tmp9 = _modDef17717;
+    tmp9Result = _modDef18004;
   }
-  const obj2 = { source: tmp9, style: tmp.asset, children: null };
+  const items = [closure_1_8(FastImageDefault, { source: tmp9Result, style: tmp.assetImage }), ];
   let tmp5Result = null;
   if (!disabled) {
-    const obj3 = { style: tmp.uploadIconWrapper, children: null };
-    const obj4 = { style: tmp.uploadIcon, source: _modDef17718 };
-    obj3.children = options(hasOwnProperty, obj4);
-    tmp5Result = options(React4, obj3);
+    const obj4 = { style: tmp.uploadIconWrapper, children: null };
+    const obj5 = { style: tmp.uploadIcon, source: _modDef18005 };
+    obj4.children = closure_1_8(hasOwnProperty, obj5);
+    tmp5Result = closure_1_8(React4, obj4);
   }
-  obj2.children = tmp5Result;
-  obj.children = options(timestampProducer, obj2);
-  const children = [options(Pressables.PressableOpacity, obj), ];
+  items[1] = tmp5Result;
+  obj2.children = items;
+  obj.children = options(React4, obj2);
+  const children = [closure_1_8(Pressables.PressableOpacity, obj), ];
   let tmp5Result2 = null;
   if (null != source) {
     tmp5Result2 = null;
     if (!disabled) {
-      const obj5 = { accessibilityRole: "button", onPress: this.handleRemoveAsset, children: null };
-      const obj6 = { style: tmp.remove, children: null };
+      const obj6 = { accessibilityRole: "button", onPress: this.handleRemoveAsset, children: null };
+      const obj7 = { style: tmp.remove, children: null };
       const intl2 = util.intl;
-      obj6.children = intl2.string(util.t.N86XcP);
-      obj5.children = options(native.LegacyText, obj6);
-      tmp5Result2 = options(React5, obj5);
+      obj7.children = intl2.string(util.t.N86XcP);
+      obj6.children = closure_1_8(native.LegacyText, obj7);
+      tmp5Result2 = closure_1_8(timestampProducer, obj6);
     }
   }
   children[1] = tmp5Result2;
-  return closure_1_11(v65535, { children });
+  return options(collapsed, { children });
 };
-AssetChooser.contextType = fn(4595).ThemeContext;
+AssetChooser.contextType = fn(4787).ThemeContext;
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/native/AssetChooser.tsx");
 

@@ -1,11 +1,11 @@
-// === Module 10002: NativeChatUtils ===
+// === Module 9532: NativeChatUtils ===
 
-// Module 10002 (NativeChatUtils)
-import SentryUtilsDefault from "SentryUtils" /* 1242 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import ChatNativeComponent from "ChatNativeComponent" /* 10003 */;
-import ChatChangesetUpdateTracker from "ChatChangesetUpdateTracker" /* 10004 */;
-import NativeChatModuleDefault from "NativeChatModule" /* 10005 */;
+// Module 9532 (NativeChatUtils)
+import SentryUtilsDefault from "SentryUtils" /* 1254 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import ChatNativeComponent from "ChatNativeComponent" /* 9533 */;
+import ChatChangesetUpdateTracker from "ChatChangesetUpdateTracker" /* 9534 */;
+import NativeChatModuleDefault from "NativeChatModule" /* 9535 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 
@@ -169,17 +169,23 @@ export default {
     }
   },
   clearRows(arg0) {
-    if (null != arg0) {
+    if (null == arg0) {
+      return null;
+    } else {
       if (obj4.isIOS()) {
+        const andIncrementChangesetIdForChat = ChatChangesetUpdateTracker.getAndIncrementChangesetIdForChat(arg0);
         const Commands = ChatNativeComponent.Commands;
-        Commands.clearRows(arg0, ChatChangesetUpdateTracker.getAndIncrementChangesetIdForChat(arg0));
-        const tmp6Result = ChatChangesetUpdateTracker;
+        Commands.clearRows(arg0, andIncrementChangesetIdForChat);
+        return andIncrementChangesetIdForChat;
       } else {
         const tmp2 = React4(arg0);
-        if (null != tmp2) {
-          const obj = NativeChatModuleDefault;
-          obj.clearRows(tmp2, ChatChangesetUpdateTracker.getAndIncrementChangesetIdForChat(arg0));
-          const tmp6Result2 = ChatChangesetUpdateTracker;
+        if (null == tmp2) {
+          return null;
+        } else {
+          const andIncrementChangesetIdForChat1 = ChatChangesetUpdateTracker.getAndIncrementChangesetIdForChat(arg0);
+          const tmp8Result2 = ChatChangesetUpdateTracker;
+          NativeChatModuleDefault.clearRows(tmp2, andIncrementChangesetIdForChat1);
+          return andIncrementChangesetIdForChat1;
         }
       }
       obj4 = PlatformUtils;

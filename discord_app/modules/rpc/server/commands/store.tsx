@@ -1,9 +1,9 @@
-// === Module 14353: merged14 ===
+// === Module 14581: merged15 ===
 
-// Module 14353 (merged14)
-import EntitlementActionCreatorsAll from "EntitlementActionCreators" /* 6915 */;
-import RPCErrorDefault from "RPCError" /* 9059 */;
-import validateTransportType from "validateTransportType" /* 14355 */;
+// Module 14581 (merged15)
+import EntitlementActionCreatorsAll from "EntitlementActionCreators" /* 7104 */;
+import RPCErrorDefault from "RPCError" /* 11134 */;
+import validateTransportType from "validateTransportType" /* 14583 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -255,7 +255,7 @@ function getEntitlementsHandler(socket) {
     return EntitlementActionCreatorsAll.fetchUserEntitlementsForApplication(id);
   }
 }
-let Constants = fn(5323);
+let Constants = fn(5635);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE, RPC_SCOPE_CONFIG } = Constants);
 Constants = fn(1085);
 ({ CurrencyCodes: hasOwnProperty, RPCCommands, RPCErrors: metroRequire, SKUTypes: closure_7 } = Constants);

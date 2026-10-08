@@ -1,10 +1,10 @@
-// === Module 13959: EmptyState ===
+// === Module 14258: EmptyState ===
 
-// Module 13959 (EmptyState)
+// Module 14258 (EmptyState)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import shared from "shared" /* 4735 */;
-import Text_Text from "Text/Text" /* 4892 */;
+import shared from "shared" /* 4929 */;
+import Text_Text from "Text/Text" /* 5086 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let closure_6 = { textTransform: "none" };
 let closure_7 = { accessible: false, accessibilityRole: "none", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { flex: 1, justifyContent: "center", alignItems: "center", paddingHorizontal: 36, paddingBottom: 80, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, emptyImage: { flex: 1, maxWidth: 300, maxHeight: 200 }, textGroup: { alignSelf: "stretch", alignItems: "center" }, emptyTitle: { marginTop: 20, textTransform: "uppercase" }, emptyBody: { textAlign: "center", marginTop: 8 } };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -22,7 +22,7 @@ let obj3 = { flex: 1, justifyContent: "center", alignItems: "center", paddingHor
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/EmptyState/native/EmptyState.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((Illustration) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function EmptyState(Illustration) {
   const cResult = c.c(30);
   const tmp4 = closure_8();
   const themeContext = shared.useThemeContext();
@@ -176,7 +176,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((Illustration) =>
     cResult[14] = items6;
     tmp29 = items6;
   }
-}) : ((Illustration) => {
+}) : (function EmptyState(Illustration) {
   const tmp = closure_8();
   const themeContext = shared.useThemeContext();
   let hasItem;

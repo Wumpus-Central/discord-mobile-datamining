@@ -1,21 +1,21 @@
-// === Module 5976: MemberVerificationGuildHeader ===
+// === Module 6159: MemberVerificationGuildHeader ===
 
-// Module 5976 (MemberVerificationGuildHeader)
+// Module 6159 (MemberVerificationGuildHeader)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const MemberVerificationFormConstants = fn(5971);
+const MemberVerificationFormConstants = fn(6154);
 ({ AVATAR_BORDER_WIDTH, AVATAR_SIZE } = MemberVerificationFormConstants);
 const useBannerHeight = MemberVerificationFormConstants.useBannerHeight;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let c8 = 1.20225424859375;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { header: { flex: 1, flexDirection: "column", justifyContent: "flex-end", alignItems: "center", marginBottom: 12 }, headerContent: { alignItems: "center", marginTop: -48, paddingTop: 20, paddingBottom: 0, paddingHorizontal: 16 }, linearGradient: { position: "absolute", height: 140, top: 0, right: 0, left: 0 }, avatar: null, avatarContainer: null, featureIcon: null, headerTitle: null, headerDescription: null };
 let size = { borderRadius: nativeDefault.radii.lg, borderWidth: 0, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, height: AVATAR_SIZE, width: AVATAR_SIZE, margin: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM };
 obj2.avatar = size;
@@ -35,7 +35,7 @@ const ReactCompilerGating = fn(558);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/native/components/MemberVerificationGuildHeader.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((hasManualFormFields) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVerificationGuildHeader(hasManualFormFields) {
   const cResult = scrollTop(top[9]).c(47);
   ({ guild, scrollTop } = hasManualFormFields);
   hasManualFormFields = hasManualFormFields.hasManualFormFields;
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((hasManualFormFie
     let obj2 = require("AvatarUtils");
   } else {
     tmp5 = importDefault;
-    guildBannerSource = require("module_5977");
+    guildBannerSource = require("module_6160");
   }
   const tmp8 = useBannerHeight();
   importDefault = tmp8;
@@ -314,7 +314,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((hasManualFormFie
   cResult[4] = tmp14;
   tmp13 = tmp14;
   let obj4 = { interpolate: scrollTop(top[11]).interpolate, scrollTopNegative: derivedValue, height: tmp8, ANIMATION_GOLDEN_RATIO, AVATAR_SIZE };
-}) : ((hasManualFormFields) => {
+}) : (function MemberVerificationGuildHeader(hasManualFormFields) {
   ({ guild, scrollTop } = hasManualFormFields);
   hasManualFormFields = hasManualFormFields.hasManualFormFields;
   importDefault = undefined;
@@ -328,7 +328,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((hasManualFormFie
     let obj = require("AvatarUtils");
   } else {
     tmp3 = top;
-    guildBannerSource = require("module_5977");
+    guildBannerSource = require("module_6160");
     tmp5 = importDefault;
   }
   const tmp8 = useBannerHeight();

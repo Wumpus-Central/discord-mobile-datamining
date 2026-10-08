@@ -1,26 +1,26 @@
-// === Module 13806: GuildActionSheet ===
+// === Module 14031: GuildActionSheet ===
 
-// Module 13806 (GuildActionSheet)
+// Module 14031 (GuildActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import BottomSheetModal from "BottomSheetModal" /* 6119 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6652 */;
-import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 6656 */;
-import useBottomSheetRef from "useBottomSheetRef" /* 7852 */;
-import GuildActionSheetActions from "GuildActionSheetActions" /* 13741 */;
-import GuildActionSheetHeaderDefault from "GuildActionSheetHeader" /* 13801 */;
-import GuildActionSheetTabItemsDefault from "GuildActionSheetTabItems" /* 13807 */;
-import GuildActionSheetProgressDefault from "GuildActionSheetProgress" /* 13808 */;
-import GuildActionSheetEmojiSectionDefault from "GuildActionSheetEmojiSection" /* 13811 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import BottomSheetModal from "BottomSheetModal" /* 6298 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6829 */;
+import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 6833 */;
+import useBottomSheetRef from "useBottomSheetRef" /* 8270 */;
+import GuildActionSheetActions from "GuildActionSheetActions" /* 13963 */;
+import GuildActionSheetHeaderDefault from "GuildActionSheetHeader" /* 14026 */;
+import GuildActionSheetTabItemsDefault from "GuildActionSheetTabItems" /* 14032 */;
+import GuildActionSheetProgressDefault from "GuildActionSheetProgress" /* 14033 */;
+import GuildActionSheetEmojiSectionDefault from "GuildActionSheetEmojiSection" /* 14036 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, actions: { paddingHorizontal: 16, gap: 24 } };
 let closure_6 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
@@ -28,7 +28,7 @@ let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_B
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_action_sheet/native/components/GuildActionSheet.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function GuildActionSheet(arg0) {
   const cResult = c.c(36);
   ({ guild, expanded } = arg0);
   const tmp5 = closure_6();
@@ -186,7 +186,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   cResult[22] = tmp32;
   tmp31 = tmp32;
   tmpResult2 = PlatformUtils;
-}) : ((arg0) => {
+}) : (function GuildActionSheet(arg0) {
   ({ guild, expanded } = arg0);
   if (expanded === undefined) {
     expanded = false;

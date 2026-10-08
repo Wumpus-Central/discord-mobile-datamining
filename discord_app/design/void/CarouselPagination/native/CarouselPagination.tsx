@@ -1,16 +1,16 @@
-// === Module 13962: CarouselPagination ===
+// === Module 14261: CarouselPagination ===
 
-// Module 13962 (CarouselPagination)
+// Module 14261 (CarouselPagination)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import timing from "timing" /* 4897 */;
-import Easing from "Easing" /* 13953 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import timing from "timing" /* 5091 */;
+import Easing from "Easing" /* 14044 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { container: { position: "relative", top: -16, marginBottom: -16, flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_20, paddingVertical: nativeDefault.space.PX_32 }, dot: null };
 let size = { width: 8, height: 8, borderRadius: nativeDefault.radii.xs, marginHorizontal: 4, backgroundColor: nativeDefault.colors.ICON_STRONG };
 obj.dot = size;
@@ -20,7 +20,7 @@ const __initData2 = { code: "function CarouselPaginationTsx2(){const{interpolate
 const __initData3 = { code: "function CarouselPaginationTsx3(){const{withTiming,active,STANDARD_EASING}=this.__closure;return withTiming(active?1:0,{duration:250,easing:STANDARD_EASING},'animate-always');}" };
 const __initData4 = { code: "function CarouselPaginationTsx4(){const{interpolate,progress,interpolateColor,backgroundColor,brand500}=this.__closure;return{width:interpolate(progress.get(),[0,1],[8,16]),backgroundColor:interpolateColor(progress.get(),[0,1],[backgroundColor,brand500]),opacity:interpolate(progress.get(),[0,1],[0.3,1])};}" };
 let ReactCompilerGating = fn(558);
-let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((active) => {
+let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function Dot(active) {
   const cResult = active(BRAND_500[6]).c(3);
   active = active.active;
   const tmp3 = closure_5();
@@ -69,7 +69,7 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((acti
   cResult[1] = tmp3.dot;
   cResult[2] = tmp8;
   tmp7 = tmp8;
-}) : ((active) => {
+}) : (function Dot(active) {
   active = active.active;
   let BRAND_500;
   const tmp = closure_5();
@@ -111,7 +111,7 @@ let obj3 = { position: "relative", top: -16, marginBottom: -16, flexDirection: "
 size = fn(2);
 const result = size.fileFinishedImporting("design/void/CarouselPagination/native/CarouselPagination.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((containerStyle) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function CarouselPagination(containerStyle) {
   const cResult = currentIndex(576).c(11);
   ({ numberOfItems, currentIndex } = containerStyle);
   containerStyle = containerStyle.containerStyle;
@@ -159,7 +159,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((containerStyle) 
   cResult[2] = items;
   tmp3 = items;
   const obj = currentIndex(576);
-}) : ((currentIndex) => {
+}) : (function CarouselPagination(currentIndex) {
   currentIndex = currentIndex.currentIndex;
   ({ numberOfItems, containerStyle } = currentIndex);
   const obj = { style: null, accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };

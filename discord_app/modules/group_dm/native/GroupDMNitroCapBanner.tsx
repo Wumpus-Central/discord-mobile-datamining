@@ -1,12 +1,12 @@
-// === Module 16901: GroupDMNitroCapBanner ===
+// === Module 17182: GroupDMNitroCapBanner ===
 
-// Module 16901 (GroupDMNitroCapBanner)
+// Module 17182 (GroupDMNitroCapBanner)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4586 */;
-import LinearGradientDefault from "LinearGradient" /* 5612 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8346 */;
-import usePremiumPrimaryGradientColorsDefault from "usePremiumPrimaryGradientColors" /* 13243 */;
+import useToken from "useToken" /* 4778 */;
+import LinearGradientDefault from "LinearGradient" /* 5387 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9005 */;
+import usePremiumPrimaryGradientColorsDefault from "usePremiumPrimaryGradientColors" /* 13543 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const locations = [0.0065, 0.5046, 0.9196];
 let c8 = 110.47;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { wrapper: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_16 }, pill: null, iconContainer: null, trailing: null, gradientClip: null, border: null, text: null };
 let obj3 = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_16 };
 obj2.pill = { flexDirection: "row", alignItems: "center", paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
@@ -34,7 +34,7 @@ let obj7 = { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/group_dm/native/GroupDMNitroCapBanner.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GroupDMNitroCapBanner(arg0) {
   const cResult = c.c(43);
   ({ children, trailing, showLeadingIcon, wrapperStyle } = arg0);
   const tmp5 = closure_9();
@@ -211,7 +211,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = items5;
   tmp9 = items5;
   const tmpResult = useToken;
-}) : ((showLeadingIcon) => {
+}) : (function GroupDMNitroCapBanner(showLeadingIcon) {
   let flag = showLeadingIcon.showLeadingIcon;
   ({ children, trailing } = showLeadingIcon);
   if (flag === undefined) {

@@ -1,8 +1,8 @@
-// === Module 6807: SensitiveContentSelfHarmExperiment ===
+// === Module 6978: SensitiveContentSelfHarmExperiment ===
 
-// Module 6807 (SensitiveContentSelfHarmExperiment)
+// Module 6978 (SensitiveContentSelfHarmExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1440 */;
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -14,7 +14,7 @@ const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/explicit_media_redaction/SensitiveContentSelfHarmExperiment.tsx");
 
 export const SensitiveContentSelfHarmExperiment = apexExperiment;
-export const useIsSensitiveContentSelfHarmEnabled = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+export const useIsSensitiveContentSelfHarmEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsSensitiveContentSelfHarmEnabled(location) {
   const cResult = c.c(2);
   if (cResult[0] !== location) {
     const obj2 = { location };
@@ -25,7 +25,9 @@ export const useIsSensitiveContentSelfHarmEnabled = ReactCompilerGating.isReactC
     tmp2 = cResult[1];
   }
   return apexExperiment.useConfig(tmp2).enabled;
-}) : ((location) => apexExperiment.useConfig({ location }).enabled);
+}) : (function useIsSensitiveContentSelfHarmEnabled(location) {
+  return apexExperiment.useConfig({ location }).enabled;
+});
 export const isSensitiveContentSelfHarmEnabled = function isSensitiveContentSelfHarmEnabled(location) {
   return apexExperiment.getConfig({ location }).enabled;
 };

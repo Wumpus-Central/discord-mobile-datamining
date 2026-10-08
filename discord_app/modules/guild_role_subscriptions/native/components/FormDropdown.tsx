@@ -1,21 +1,21 @@
-// === Module 13726: FormDropdown ===
+// === Module 13948: FormDropdown ===
 
-// Module 13726 (FormDropdown)
+// Module 13948 (FormDropdown)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9455 */;
-import _modDef9615 from "module_9615" /* 9615 */;
-import _modDef13727 from "module_13727" /* 13727 */;
-import FormStylesDefault from "FormStyles" /* 13728 */;
+import native from "native" /* 1200 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 7013 */;
+import _modDef10808 from "module_10808" /* 10808 */;
+import _modDef13949 from "module_13949" /* 13949 */;
+import FormStylesDefault from "FormStyles" /* 13950 */;
 import noop from "module_19" /* 19 */;
-import TextStyles_mod from "TextStyles" /* 5922 */;
+import TextStyles_mod from "TextStyles" /* 5902 */;
 
 require = fn;
 const Fonts = fn(1085).Fonts;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { alignItems: "center", flexDirection: "row" }, content: { marginStart: 8, flexGrow: 1 }, placeholder: null, text: null };
 let TextStyles = TextStyles_mod;
 const merged = Object.assign(TextStyles(Fonts.PRIMARY_MEDIUM, nativeDefault.colors.TEXT_MUTED, 16));
@@ -25,10 +25,10 @@ const merged1 = Object.assign(TextStyles(Fonts.PRIMARY_MEDIUM, nativeDefault.col
 obj2.text = {};
 const styles = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function LockedIcon() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { size: native.Icon.Sizes.MEDIUM, source: _modDef13727 };
+    const obj2 = { size: native.Icon.Sizes.MEDIUM, source: _modDef13949 };
     const tmp7 = React3(native.Icon, obj2);
     cResult[0] = tmp7;
     let first = tmp7;
@@ -36,9 +36,11 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     first = cResult[0];
   }
   return first;
-}) : (() => React3(native.Icon, { size: native.Icon.Sizes.MEDIUM, source: _modDef13727 }));
+}) : (function LockedIcon() {
+  return React3(native.Icon, { size: native.Icon.Sizes.MEDIUM, source: _modDef13949 });
+});
 ReactCompilerGating = fn(558);
-let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function DropdownIcon() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { style: null, size: null, source: null };
@@ -47,7 +49,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     obj3.transform = items;
     obj2.style = obj3;
     obj2.size = native.Icon.Sizes.MEDIUM;
-    obj2.source = _modDef9615;
+    obj2.source = _modDef10808;
     const tmp7 = React3(native.Icon, obj2);
     cResult[0] = tmp7;
     let first = tmp7;
@@ -55,8 +57,8 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     first = cResult[0];
   }
   return first;
-}) : (() => {
-  const obj = { style: null, size: native.Icon.Sizes.MEDIUM, source: _modDef9615 };
+}) : (function DropdownIcon() {
+  const obj = { style: null, size: native.Icon.Sizes.MEDIUM, source: _modDef10808 };
   const obj2 = { transform: null };
   const items = [{ rotate: "90deg" }];
   obj2.transform = items;
@@ -67,7 +69,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormDropdown.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormDropdown(arg0) {
   const cResult = c.c(18);
   ({ disabled, label, leading } = arg0);
   ({ onPress, placeholder } = arg0);
@@ -140,7 +142,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[4] = items2;
     tmp10 = items2;
   }
-}) : ((arg0) => {
+}) : (function FormDropdown(arg0) {
   ({ disabled, label } = arg0);
   ({ leading, onPress, placeholder } = arg0);
   const tmp = styles();

@@ -1,20 +1,20 @@
-// === Module 14886: BountiesNuxPromoSheet ===
+// === Module 15148: BountiesNuxPromoSheet ===
 
-// Module 14886 (BountiesNuxPromoSheet)
+// Module 15148 (BountiesNuxPromoSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import PromoSheet from "PromoSheet" /* 10058 */;
-import openBountiesNuxPromoSheet from "openBountiesNuxPromoSheet" /* 14885 */;
-import BountiesPosterSpotIllustration from "BountiesPosterSpotIllustration" /* 14887 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import PromoSheet from "PromoSheet" /* 10303 */;
+import openBountiesNuxPromoSheet from "openBountiesNuxPromoSheet" /* 15147 */;
+import BountiesPosterSpotIllustration from "BountiesPosterSpotIllustration" /* 15149 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { illustrationContainer: { paddingTop: nativeDefault.space.PX_12 } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -22,7 +22,7 @@ let obj3 = { paddingTop: nativeDefault.space.PX_12 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/BountiesNuxPromoSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function BountiesNuxPromoSheet() {
   const cResult = c.c(9);
   const tmp4 = closure_6();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -84,7 +84,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp20 = cResult[8];
   }
   return tmp20;
-}) : (() => {
+}) : (function BountiesNuxPromoSheet() {
   const callback = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.hideActionSheet(openBountiesNuxPromoSheet.PROMO_SHEET_KEY);
   }, []);

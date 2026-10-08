@@ -1,7 +1,7 @@
-// === Module 15062: useSubscriptionRole ===
+// === Module 15324: useSubscriptionRole ===
 
-// Module 15062 (useSubscriptionRole)
-import GuildRoleStore from "GuildRoleStore" /* 2106 */;
+// Module 15324 (useSubscriptionRole)
+import GuildRoleStore from "GuildRoleStore" /* 2118 */;
 
 const require = globalThis.__r;
 
@@ -10,7 +10,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useSubscriptionRole.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSubscriptionRole(arg0, arg1) {
   _require = arg0;
   const cResult = require("c").c(4);
   const obj = require("c");
@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     }
     return tmp(tmp2[4]).useStateFromStores(first, tmp7);
   }
-  const fn = function u() {
+  const fn = function l() {
     let role;
     if (null != closure_0) {
       if (null != subscriptionListing) {
@@ -44,7 +44,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   cResult[3] = fn;
   tmp7 = fn;
   const obj2 = require("GuildRoleSubscriptionsHooks");
-}) : ((arg0, arg1) => {
+}) : (function useSubscriptionRole(arg0, arg1) {
   _require = arg0;
   dependencyMap = require("GuildRoleSubscriptionsHooks").useSubscriptionListing(arg1);
   const obj = require("GuildRoleSubscriptionsHooks");

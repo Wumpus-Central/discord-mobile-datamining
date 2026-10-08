@@ -1,7 +1,7 @@
-// === Module 16754: conjurePendingPlan ===
+// === Module 17029: conjurePendingPlan ===
 
-// Module 16754 (conjurePendingPlan)
-import ConjureChatStore from "ConjureChatStore" /* 12924 */;
+// Module 17029 (conjurePendingPlan)
+import ConjureChatStore from "ConjureChatStore" /* 13073 */;
 import size from "module_2" /* 2 */;
 
 const turnSettled = ConjureChatStore.turnSettled;
@@ -67,8 +67,8 @@ export const planVersions = function planVersions(memo) {
   }
   return map;
 };
-export const planCardExpanded = function planCardExpanded(c19, render_id, arg2) {
-  value = c19.get(render_id);
+export const planCardExpanded = function planCardExpanded(c18, render_id, arg2) {
+  value = c18.get(render_id);
   if (value == null) {
     value = !arg2;
   }

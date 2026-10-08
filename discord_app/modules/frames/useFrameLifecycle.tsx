@@ -1,6 +1,6 @@
-// === Module 16794: useFrameLifecycle ===
+// === Module 17074: useFrameLifecycle ===
 
-// Module 16794 (useFrameLifecycle)
+// Module 17074 (useFrameLifecycle)
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -67,14 +67,14 @@ function useFrameLifecycleState(applicationId) {
     return obj3;
   }
 }
-const FramesConstants = fn(8738);
+const FramesConstants = fn(10613);
 ({ isLaunched: metroRequire, makeFrameId: closure_7 } = FramesConstants);
 const FrameLifecycleState = { Loading: "loading", AwaitingLaunch: "awaiting-launch", Launched: "launched", RenderingElsewhere: "rendering-elsewhere", NoApplication: "no-application", DoesNotSupportSurface: "does-not-support-surface", Error: "error" };
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/frames/useFrameLifecycle.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((applicationId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFrameLifecycle(applicationId) {
   const cResult = applicationId(setFailed[5]).c(9);
   applicationId = applicationId.applicationId;
   const surface = applicationId.surface;
@@ -146,7 +146,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((applicationId) =
   cResult[2] = obj2;
   tmp2 = obj2;
   const obj = applicationId(setFailed[5]);
-}) : ((applicationId) => {
+}) : (function useFrameLifecycle(applicationId) {
   applicationId = applicationId.applicationId;
   const tmp = useFrameLifecycleState({ applicationId, surface: applicationId.surface });
   const surface = tmp.surface;

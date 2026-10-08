@@ -1,7 +1,7 @@
-// === Module 6564: useFastestListPropsEstimatedListSize ===
+// === Module 6740: useFastestListPropsEstimatedListSize ===
 
-// Module 6564 (useFastestListPropsEstimatedListSize)
-import useWindowDimensions from "useWindowDimensions" /* 1484 */;
+// Module 6740 (useFastestListPropsEstimatedListSize)
+import useWindowDimensions from "useWindowDimensions" /* 1496 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,7 +10,7 @@ const ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/fastest_list/props/useFastestListPropsEstimatedListSize.native.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((estimatedListSize) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFastestListPropsEstimatedListSize(estimatedListSize) {
   const cResult = estimatedListSize(horizontal[3]).c(3);
   estimatedListSize = estimatedListSize.estimatedListSize;
   horizontal = estimatedListSize.horizontal;
@@ -32,7 +32,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((estimatedListSiz
   cResult[2] = fn;
   tmp2 = fn;
   let obj = estimatedListSize(horizontal[3]);
-}) : ((arg0) => {
+}) : (function useFastestListPropsEstimatedListSize(arg0) {
   ({ estimatedListSize: require, horizontal: dependencyMap } = arg0);
   return _slicedToArray(noop.useState(() => {
     if ("windowSize" !== closure_1_0) {

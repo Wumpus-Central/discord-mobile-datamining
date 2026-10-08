@@ -1,15 +1,15 @@
-// === Module 9218: EditGuildEventModalNavbar ===
+// === Module 8513: EditGuildEventModalNavbar ===
 
-// Module 9218 (EditGuildEventModalNavbar)
+// Module 8513 (EditGuildEventModalNavbar)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import GlobalUtils from "GlobalUtils" /* 1375 */;
-import _modDef4815 from "module_4815" /* 4815 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6476 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6626 */;
-import HeaderActionButton from "HeaderActionButton" /* 6890 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 9214 */;
+import GlobalUtils from "GlobalUtils" /* 1387 */;
+import _modDef5009 from "module_5009" /* 5009 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6654 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6803 */;
+import HeaderActionButton from "HeaderActionButton" /* 7079 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 8495 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,13 +17,13 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({ header: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: 4, paddingVertical: 8 }, headerTitle: { lineHeight: 28, textTransform: "uppercase" }, buttonContainer: { width: 60 }, rightButton: { marginLeft: 12 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventModalNavbar.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditGuildEventModalNavbar(arg0) {
   const cResult = c.c(40);
   ({ screen, onClose } = arg0);
   const tmp4 = closure_7();
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                         cResult[32] = tmp44;
                         tmp41 = tmp44;
                       }
-                      const obj5 = { accessibilityLabel: tmp35, onPress: onClose, source: _modDef4815, style: tmp4.rightButton };
+                      const obj5 = { accessibilityLabel: tmp35, onPress: onClose, source: _modDef5009, style: tmp4.rightButton };
                       const tmp40 = hasOwnProperty(HeaderActionButton.HeaderActionButton, obj5);
                       cResult[27] = onClose;
                       cResult[28] = tmp4.rightButton;
@@ -173,7 +173,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[19] = items2;
   tmp22 = items2;
   const tmp15 = _slicedToArray(items1, 2);
-}) : ((screen) => {
+}) : (function EditGuildEventModalNavbar(screen) {
   screen = screen.screen;
   const tmp = closure_7();
   const typeConsolidationEyebrow = useTypeConsolidationTextTransform.useTypeConsolidationEyebrow("EditGuildEventModalNavbar", "text-xs/bold");
@@ -201,7 +201,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const intl2 = util.intl;
   obj6.accessibilityLabel = intl2.string(util.t.cpT0Cq);
   obj6.onPress = screen.onClose;
-  obj6.source = _modDef4815;
+  obj6.source = _modDef5009;
   obj6.style = tmp.rightButton;
   obj5.children = hasOwnProperty(HeaderActionButton.HeaderActionButton, obj6);
   items1[2] = hasOwnProperty(View, obj5);

@@ -1,6 +1,6 @@
-// === Module 15752: CollectiblesCoachmarkScrollDismissContext ===
+// === Module 16010: CollectiblesCoachmarkScrollDismissContext ===
 
-// Module 15752 (CollectiblesCoachmarkScrollDismissContext)
+// Module 16010 (CollectiblesCoachmarkScrollDismissContext)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,12 +16,14 @@ const redux = noop.createContext({
 let ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
 ReactCompilerGating = fn(558);
-fn = () => noop.useContext(closure_5);
+function useCollectiblesCoachmarkScrollDismissContext() {
+  return noop.useContext(closure_5);
+}
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/collectibles/native/CollectiblesCoachmarkScrollDismissContext.tsx");
 
-export const useCollectiblesCoachmarkScrollDismissContext = fn;
-export const CollectiblesCoachmarkScrollDismissProvider = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
+export { useCollectiblesCoachmarkScrollDismissContext };
+export const CollectiblesCoachmarkScrollDismissProvider = ReactCompilerGating.isReactCompilerEnabled() ? (function CollectiblesCoachmarkScrollDismissProvider(children) {
   const cResult = c.c(5);
   children = children.children;
   noop.useRef(null);
@@ -81,7 +83,7 @@ export const CollectiblesCoachmarkScrollDismissProvider = ReactCompilerGating.is
     tmp5 = cResult[4];
   }
   return tmp5;
-}) : ((children) => {
+}) : (function CollectiblesCoachmarkScrollDismissProvider(children) {
   noop.useRef(null);
   noop.useRef(null);
   const registerDismiss = noop.useCallback((current) => {

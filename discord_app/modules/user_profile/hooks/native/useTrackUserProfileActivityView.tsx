@@ -1,8 +1,8 @@
-// === Module 12863: useTrackUserProfileActivityView ===
+// === Module 13012: useTrackUserProfileActivityView ===
 
-// Module 12863 (useTrackUserProfileActivityView)
+// Module 13012 (useTrackUserProfileActivityView)
 import _slicedToArray from "module_32" /* 32 */;
-import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 8480 */;
+import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 8966 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/native/useTrackUserProfileActivityView.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useTrackUserProfileActivityView(userId) {
   const cResult = userId(onAction[4]).c(7);
   userId = userId.userId;
   onAction = userId.onAction;
@@ -50,21 +50,27 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
     }
     closure_3(tmp10, tmp11);
   }
-  const fn2 = function v() {
-    if (closure_3) {
-      onAction({ action: "VIEW_ACTIVITY_CARD" });
-      closure_2(true);
+  class A {
+    constructor() {
+      if (closure_3) {
+        tmp = onAction;
+        tmp2 = onAction({ action: "VIEW_ACTIVITY_CARD" });
+        tmp3 = closure_2;
+        flag = true;
+        tmp4 = closure_2(true);
+      }
+      return;
     }
-  };
+  }
   const items1 = [tmp9, onAction];
   cResult[3] = onAction;
   cResult[4] = tmp9;
-  cResult[5] = fn2;
+  cResult[5] = A;
   cResult[6] = items1;
   tmp11 = items1;
-  tmp10 = fn2;
+  tmp10 = A;
   const tmpResult = userId(onAction[5]);
-}) : ((arg0) => {
+}) : (function useTrackUserProfileActivityView(arg0) {
   ({ userId: require, onAction } = arg0);
   _slicedToArray = undefined;
   closure_3 = undefined;

@@ -1,16 +1,16 @@
-// === Module 17500: ChannelCallManager ===
+// === Module 17782: ChannelCallManager ===
 
-// Module 17500 (ChannelCallManager)
-import SoundpackStore from "SoundpackStore" /* 9576 */;
-import CallStore from "CallStore" /* 5444 */;
-import NotificationSettingsStore from "NotificationSettingsStore" /* 12481 */;
-import StreamerModeStore from "StreamerModeStore" /* 4729 */;
-import VoiceStateStore from "VoiceStateStore" /* 4915 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4920 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
+// Module 17782 (ChannelCallManager)
+import SoundpackStore from "SoundpackStore" /* 10771 */;
+import CallStore from "CallStore" /* 5754 */;
+import NotificationSettingsStore from "NotificationSettingsStore" /* 12577 */;
+import StreamerModeStore from "StreamerModeStore" /* 4923 */;
+import VoiceStateStore from "VoiceStateStore" /* 5111 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5114 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6797 */;
 
 let require = fn;
-const SoundUtils = fn(9575);
+const SoundUtils = fn(10770);
 let closure_8 = SoundUtils.createSoundForPack("call_calling", SoundpackStore.getSoundpack());
 class ChannelCallManager extends tmp2 {
   constructor() {

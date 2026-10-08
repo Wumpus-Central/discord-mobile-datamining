@@ -1,8 +1,8 @@
-// === Module 16431: ICYMINavigator ===
+// === Module 16691: ICYMINavigator ===
 
-// Module 16431 (ICYMINavigator)
+// Module 16691 (ICYMINavigator)
 import jsxProd from "jsxProd" /* 21 */;
-import NativeStackNavigator from "NativeStackNavigator" /* 7568 */;
+import NativeStackNavigator from "NativeStackNavigator" /* 9279 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -12,10 +12,10 @@ const require = globalThis.__r;
 let closure_4 = NativeStackNavigator.createNativeStackNavigator();
 const result = size.fileFinishedImporting("modules/icymi/native/navigator/ICYMINavigator.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMINavigator() {
   const cResult = accessibilityNativeStackOptions(576).c(6);
   const obj = accessibilityNativeStackOptions(576);
-  accessibilityNativeStackOptions = accessibilityNativeStackOptions(6503).useAccessibilityNativeStackOptions();
+  accessibilityNativeStackOptions = accessibilityNativeStackOptions(6679).useAccessibilityNativeStackOptions();
   if (cResult[0] !== accessibilityNativeStackOptions) {
     const fn = function n() {
       const merged = Object.assign(accessibilityNativeStackOptions);
@@ -31,7 +31,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const obj3 = {
       name: "icymi-screen",
       getComponent() {
-          return accessibilityNativeStackOptions(16432).ICYMITab;
+          return accessibilityNativeStackOptions(16692).ICYMITab;
         }
     };
     const tmp7 = closure_2(closure_4.Screen, obj3);
@@ -44,7 +44,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const obj4 = {
       name: "notifications-screen",
       getComponent() {
-          return accessibilityNativeStackOptions(16383).ThemedNotificationsModal;
+          return accessibilityNativeStackOptions(16643).ThemedNotificationsModal;
         }
     };
     const tmp11 = closure_2(closure_4.Screen, obj4);
@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp12 = cResult[5];
   }
   return tmp12;
-}) : (() => {
+}) : (function ICYMINavigator() {
   _require = require("Navigator").useAccessibilityNativeStackOptions();
   const obj2 = {
     screenOptions() {
@@ -79,13 +79,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     closure_2(closure_4.Screen, {
       name: "icymi-screen",
       getComponent() {
-        return closure_0(16432).ICYMITab;
+        return closure_0(16692).ICYMITab;
       }
     }),
     closure_2(closure_4.Screen, {
       name: "notifications-screen",
       getComponent() {
-        return closure_0(16383).ThemedNotificationsModal;
+        return closure_0(16643).ThemedNotificationsModal;
       }
     })
   ];

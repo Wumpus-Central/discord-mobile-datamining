@@ -1,6 +1,6 @@
-// === Module 11588: VoiceMessageConstants ===
+// === Module 11651: VoiceMessageConstants ===
 
-// Module 11588 (VoiceMessageConstants)
+// Module 11651 (VoiceMessageConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/voice_messages/VoiceMessageConstants.tsx");

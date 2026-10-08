@@ -1,22 +1,22 @@
-// === Module 17370: useSoundboardConfig ===
+// === Module 17651: useSoundboardConfig ===
 
-// Module 17370 (useSoundboardConfig)
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17219 */;
-import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 17255 */;
+// Module 17651 (useSoundboardConfig)
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17500 */;
+import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 17536 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import MediaEngineStore from "MediaEngineStore" /* 1999 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
 
 const require = globalThis.__r;
 
-const canChannelUseSoundboardDefault = tmp4(6888);
+const canChannelUseSoundboardDefault = tmp4(7077);
 require = fn;
 const SoundboardButtonLocation = { VOICE_CONTROLS: "call control drawer", VOICE_PANEL_CONTROLS: "voice panel controls" };
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useSoundboardConfig.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, analyticsSource) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSoundboardConfig(arg0, analyticsSource) {
   _require = arg0;
   importDefault = analyticsSource;
   let obj = require("c");
@@ -44,27 +44,81 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, analyticsS
         let tmp13 = cResult[7];
       }
       if (cResult[8] !== arg0) {
-        const tmp4ResultResult = canChannelUseSoundboardDefault(ChannelStore.getChannel(arg0));
+        canChannelUseSoundboardDefault;
+        class C {
+          constructor() {
+            channel = closure_4.getChannel(closure_0);
+            if (null != channel) {
+              tmp2 = closure_0;
+              tmp3 = closure_2;
+              obj = closure_0(closure_2[7]);
+              obj1 = { channel: null, analyticsSource: null };
+              obj1.channel = channel;
+              tmp4 = closure_1;
+              obj1.analyticsSource = closure_1;
+              result = obj.showSoundboardSoundPickerActionSheet(obj1);
+            }
+            return;
+          }
+        }
         cResult[8] = arg0;
-        cResult[9] = tmp4ResultResult;
-        let tmp14 = tmp4ResultResult;
-        const tmp4Result = canChannelUseSoundboardDefault;
-      } else {
-        tmp14 = cResult[9];
+        cResult[9] = tmp17;
       }
-      let tmp18 = stateFromStores;
-      if (!stateFromStores) {
-        tmp18 = !tmp14;
+      class C {
+        constructor() {
+          channel = closure_4.getChannel(closure_0);
+          if (null != channel) {
+            tmp2 = closure_0;
+            tmp3 = closure_2;
+            obj = closure_0(closure_2[7]);
+            obj1 = { channel: null, analyticsSource: null };
+            obj1.channel = channel;
+            tmp4 = closure_1;
+            obj1.analyticsSource = closure_1;
+            result = obj.showSoundboardSoundPickerActionSheet(obj1);
+          }
+          return;
+        }
       }
       if (cResult[10] !== stateFromStores) {
-        let stringResult;
         if (stateFromStores) {
-          const intl = tmp(1126).intl;
-          stringResult = intl.string(tmp(1126).t.X1lQli);
+          const string = tmp(1126).intl.string;
+          class C {
+            constructor() {
+              channel = closure_4.getChannel(closure_0);
+              if (null != channel) {
+                tmp2 = closure_0;
+                tmp3 = closure_2;
+                obj = closure_0(closure_2[7]);
+                obj1 = { channel: null, analyticsSource: null };
+                obj1.channel = channel;
+                tmp4 = closure_1;
+                obj1.analyticsSource = closure_1;
+                result = obj.showSoundboardSoundPickerActionSheet(obj1);
+              }
+              return;
+            }
+          }
+        }
+        class C {
+          constructor() {
+            channel = closure_4.getChannel(closure_0);
+            if (null != channel) {
+              tmp2 = closure_0;
+              tmp3 = closure_2;
+              obj = closure_0(closure_2[7]);
+              obj1 = { channel: null, analyticsSource: null };
+              obj1.channel = channel;
+              tmp4 = closure_1;
+              obj1.analyticsSource = closure_1;
+              result = obj.showSoundboardSoundPickerActionSheet(obj1);
+            }
+            return;
+          }
         }
         cResult[10] = stateFromStores;
-        cResult[11] = stringResult;
-        let tmp19 = stringResult;
+        cResult[11] = undefined;
+        let tmp19 = tmp20;
       } else {
         tmp19 = cResult[11];
       }
@@ -86,17 +140,26 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, analyticsS
       cResult[16] = obj2;
       tmp21 = obj2;
     }
-    const fn2 = function h() {
-      const channel = ChannelStore.getChannel(closure_0);
-      if (null != channel) {
-        const obj2 = { channel, analyticsSource };
-        const result = soundboard_SoundboardActionCreators.showSoundboardSoundPickerActionSheet(obj2);
+    class C {
+      constructor() {
+        channel = closure_4.getChannel(closure_0);
+        if (null != channel) {
+          tmp2 = closure_0;
+          tmp3 = closure_2;
+          obj = closure_0(closure_2[7]);
+          obj1 = { channel: null, analyticsSource: null };
+          obj1.channel = channel;
+          tmp4 = closure_1;
+          obj1.analyticsSource = closure_1;
+          result = obj.showSoundboardSoundPickerActionSheet(obj1);
+        }
+        return;
       }
-    };
+    }
     cResult[5] = arg0;
     cResult[6] = analyticsSource;
-    cResult[7] = fn2;
-    tmp13 = fn2;
+    cResult[7] = C;
+    tmp13 = C;
   }
   let tmp11 = tmp5;
   if (tmp5) {
@@ -112,7 +175,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, analyticsS
   cResult[4] = tmp11;
   tmp10 = tmp11;
   const tmpResult = require("initialize");
-}) : ((arg0, analyticsSource) => {
+}) : (function useSoundboardConfig(arg0, analyticsSource) {
   _require = arg0;
   importDefault = analyticsSource;
   let tmp2 = useIsConnectedToVoiceChannelDefault(arg0);

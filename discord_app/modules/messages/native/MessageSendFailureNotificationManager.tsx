@@ -1,15 +1,15 @@
-// === Module 18056: MessageSendFailureNotificationManager ===
+// === Module 18343: MessageSendFailureNotificationManager ===
 
-// Module 18056 (MessageSendFailureNotificationManager)
+// Module 18343 (MessageSendFailureNotificationManager)
 import util from "util" /* 1126 */;
-import PushNotificationDefault from "PushNotification" /* 8995 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 12492 */;
-import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 12494 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
-import UserStore from "UserStore" /* 1377 */;
-import AppStateStore from "AppStateStore" /* 1986 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
+import PushNotificationDefault from "PushNotification" /* 10820 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 12588 */;
+import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 12590 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4899 */;
+import UserStore from "UserStore" /* 1389 */;
+import AppStateStore from "AppStateStore" /* 1998 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6797 */;
 
 require = fn;
 function handleMessageSendFailure(shouldNotify) {
@@ -76,7 +76,7 @@ function handleMessageCreate(message) {
 }
 const Constants = fn(1085);
 ({ InAppNotificationTypes: closure_7, MessageStates: closure_8 } = Constants);
-const LocalNotificationTypes = fn(8739).LocalNotificationTypes;
+const LocalNotificationTypes = fn(12367).LocalNotificationTypes;
 const prototype = function MessageSendFailureNotificationManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { MESSAGE_CREATE: handleMessageCreate, MESSAGE_SEND_FAILED: handleMessageSendFailure };

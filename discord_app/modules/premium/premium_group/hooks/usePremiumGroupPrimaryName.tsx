@@ -1,16 +1,16 @@
-// === Module 13311: usePremiumGroupPrimaryName ===
+// === Module 13611: usePremiumGroupPrimaryName ===
 
-// Module 13311 (usePremiumGroupPrimaryName)
+// Module 13611 (usePremiumGroupPrimaryName)
 import c from "c" /* 576 */;
-import UserUtils from "UserUtils" /* 4728 */;
-import usePremiumGroupMembershipDefault from "usePremiumGroupMembership" /* 13312 */;
-import usePremiumGroupMembersDefault from "usePremiumGroupMembers" /* 13316 */;
+import UserUtils from "UserUtils" /* 4922 */;
+import usePremiumGroupMembershipDefault from "usePremiumGroupMembership" /* 13612 */;
+import usePremiumGroupMembersDefault from "usePremiumGroupMembers" /* 13616 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupPrimaryName.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePremiumGroupPrimaryName(arg0) {
   const cResult = c.c(10);
   if (cResult[0] !== arg0) {
     let obj2 = arg0;
@@ -82,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = undefined === useCachedData || useCachedData;
   cResult[4] = obj4;
   tmp7 = obj4;
-}) : (() => {
+}) : (function usePremiumGroupPrimaryName() {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};

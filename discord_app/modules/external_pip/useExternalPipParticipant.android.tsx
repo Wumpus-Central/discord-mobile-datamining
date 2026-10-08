@@ -1,14 +1,14 @@
-// === Module 17187: useExternalPipParticipant ===
+// === Module 17468: useExternalPipParticipant ===
 
-// Module 17187 (useExternalPipParticipant)
+// Module 17468 (useExternalPipParticipant)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6041 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5108 */;
 
 require = fn;
 function hasOnlySelfParticipant(participants, meId) {
@@ -35,10 +35,10 @@ function hasOnlySelfParticipant(participants, meId) {
     return true;
   }
 }
-const CallConstants = fn(4917);
+const CallConstants = fn(5113);
 ({ isStreamParticipant: closure_8, ParticipantTypes: closure_9 } = CallConstants);
 let ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((selectedParticipantStreamId) => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSetHasActiveVideoOutputSink(selectedParticipantStreamId) {
   const cResult = selectedParticipantStreamId(576).c(3);
   selectedParticipantStreamId = selectedParticipantStreamId.selectedParticipantStreamId;
   if (cResult[0] !== selectedParticipantStreamId) {
@@ -64,7 +64,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((selectedPartic
     tmp3 = cResult[2];
   }
   const effect = noop.useEffect(tmp2, tmp3);
-}) : ((selectedParticipantStreamId) => {
+}) : (function useSetHasActiveVideoOutputSink(selectedParticipantStreamId) {
   selectedParticipantStreamId = selectedParticipantStreamId.selectedParticipantStreamId;
   const items = [selectedParticipantStreamId];
   const effect = noop.useEffect(() => {
@@ -81,7 +81,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((selectedPartic
   }, items);
 });
 ReactCompilerGating = fn(558);
-let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSelectedParticipant(channelId) {
   const cResult = channelId(focusedParticipantStreamId[8]).c(13);
   channelId = channelId.channelId;
   focusedParticipantStreamId = channelId.focusedParticipantStreamId;
@@ -166,7 +166,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
       tmp9 = items2;
     }
   }
-  const fn = function o() {
+  const fn = function l() {
     let tmp20;
     let tmp30;
     let tmp35;
@@ -293,7 +293,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
         return obj;
       }
     }
-    return { selectedParticipantSpeaking: false, selectedParticipantUserId: "Boolean", selectedStreamId: "unicodeVersion" };
+    return { selectedParticipantSpeaking: false, selectedParticipantUserId: "Boolean", selectedStreamId: "end" };
   };
   cResult[1] = channelId;
   cResult[2] = focusedParticipantStreamId;
@@ -301,7 +301,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
   cResult[4] = fn;
   tmp8 = fn;
   const tmp4 = meId(noop.useState(0), 2);
-}) : ((channelId) => {
+}) : (function useSelectedParticipant(channelId) {
   channelId = channelId.channelId;
   const focusedParticipantStreamId = channelId.focusedParticipantStreamId;
   const meId = channelId.meId;
@@ -438,7 +438,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
         return obj;
       }
     }
-    return { selectedParticipantSpeaking: false, selectedParticipantUserId: "Boolean", selectedStreamId: "unicodeVersion" };
+    return { selectedParticipantSpeaking: false, selectedParticipantUserId: "Boolean", selectedStreamId: "end" };
   }, items1);
   const items2 = [stateFromStoresObject.selectedParticipantSpeaking];
   const effect = noop.useEffect(() => {
@@ -455,7 +455,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
   return stateFromStoresObject;
 });
 ReactCompilerGating = fn(558);
-let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFocusedParticipant(channelId) {
   const cResult = channelId(meId[8]).c(4);
   channelId = channelId.channelId;
   meId = channelId.meId;
@@ -474,7 +474,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
     }
     return tmp(tmp2[9]).useStateFromStoresObject(first, tmp6);
   }
-  const fn = function l() {
+  const fn = function u() {
     let selectedParticipant = null;
     if (null != channelId) {
       selectedParticipant = ChannelRTCStore.getSelectedParticipant(tmp);
@@ -553,7 +553,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
   let obj = channelId(meId[8]);
   tmp = channelId;
   tmp2 = meId;
-}) : ((arg0) => {
+}) : (function useFocusedParticipant(arg0) {
   ({ channelId: require, meId: dependencyMap } = arg0);
   noop = undefined;
   noop.useRef(undefined);
@@ -636,7 +636,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/external_pip/useExternalPipParticipant.android.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useExternalPipParticipant() {
   const cResult = c.c(17);
   const items = [RTCConnectionStore];
   const stateFromStores = initialize.useStateFromStores(items, () => channelId.getChannelId());
@@ -717,7 +717,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[4] = obj6;
   tmp9 = obj6;
   const tmpResult = initialize;
-}) : (() => {
+}) : (function useExternalPipParticipant() {
   const items = [RTCConnectionStore];
   const channelId = initialize.useStateFromStores(items, () => channelId.getChannelId());
   const items1 = [AuthenticationStore];

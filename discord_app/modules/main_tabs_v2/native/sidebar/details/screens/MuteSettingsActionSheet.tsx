@@ -1,16 +1,16 @@
-// === Module 11077: MuteSettingsActionSheet ===
+// === Module 10440: MuteSettingsActionSheet ===
 
-// Module 11077 (MuteSettingsActionSheet)
+// Module 10440 (MuteSettingsActionSheet)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import MuteSettingsUtils from "MuteSettingsUtils" /* 9813 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import MuteSettingsUtils from "MuteSettingsUtils" /* 10376 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
-import UserStore from "UserStore" /* 1377 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const UserNotificationSettings = fn(1085).UserNotificationSettings;
@@ -18,7 +18,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
 fn(558);
 const ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildMessageNotifications) => {
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function MuteSettingsHint(guildMessageNotifications) {
   let stringResult = dependencyMap;
   const cResult = c.c(7);
   guildMessageNotifications = guildMessageNotifications.guildMessageNotifications;
@@ -86,7 +86,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildMessageNotifica
       cResult[6] = tmp12;
     }
   }
-}) : ((guildMessageNotifications) => {
+}) : (function MuteSettingsHint(guildMessageNotifications) {
   guildMessageNotifications = guildMessageNotifications.guildMessageNotifications;
   if (guildMessageNotifications.isMuted) {
     const obj2 = { variant: "text-sm/medium", color: "text-default", children: null };
@@ -133,7 +133,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildMessageNotifica
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/screens/MuteSettingsActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function MuteSettings(guildId) {
   const cResult = guildId(onOptionPress[8]).c(45);
   guildId = guildId.guildId;
   const channelId = guildId.channelId;
@@ -432,7 +432,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   cResult[9] = A;
   tmp12 = A;
   let obj = guildId(onOptionPress[8]);
-}) : ((guildId) => {
+}) : (function MuteSettings(guildId) {
   guildId = guildId.guildId;
   const channelId = guildId.channelId;
   const onOptionPress = guildId.onOptionPress;

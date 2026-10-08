@@ -1,13 +1,13 @@
-// === Module 8122: AgeVerificationIncodeModal ===
+// === Module 7503: AgeVerificationIncodeModal ===
 
-// Module 8122 (AgeVerificationIncodeModal)
+// Module 7503 (AgeVerificationIncodeModal)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 let jsx = fn(21).jsx;
 const constants = { METHOD_SELECT: "METHOD_SELECT", VERIFY_AGE: "VERIFY_AGE" };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { headerStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, shadowColor: "transparent" } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -15,7 +15,7 @@ let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, shadow
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/native/AgeVerificationIncodeModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeVerificationIncodeModal(arg0) {
   const cResult = webviewUrl(onClose[10]).c(9);
   ({ webviewUrl, onComplete, onClose } = arg0);
   const tmp4 = closure_6();
@@ -104,7 +104,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       return handleClose(onComplete(onClose[8]), { webviewUrl, onComplete, onClose: handleClose, injectedJavaScriptBeforeContentLoaded: injectedJavaScriptBeforeContentLoaded.injectedJavaScriptBeforeContentLoaded });
     }
   };
-}) : ((webviewUrl) => {
+}) : (function AgeVerificationIncodeModal(webviewUrl) {
   webviewUrl = webviewUrl.webviewUrl;
   const onComplete = webviewUrl.onComplete;
   const onClose = webviewUrl.onClose;

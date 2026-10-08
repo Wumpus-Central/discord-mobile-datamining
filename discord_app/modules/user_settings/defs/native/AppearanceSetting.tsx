@@ -1,19 +1,19 @@
-// === Module 15094: AppearanceSetting ===
+// === Module 15356: AppearanceSetting ===
 
-// Module 15094 (AppearanceSetting)
+// Module 15356 (AppearanceSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import ClientThemesUtils from "ClientThemesUtils" /* 1239 */;
-import _modDef2751 from "module_2751" /* 2751 */;
-import useThemeDefault from "useTheme" /* 4797 */;
-import useActiveTheme from "useActiveTheme" /* 7520 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4703 */;
+import ClientThemesUtils from "ClientThemesUtils" /* 1251 */;
+import _modDef2795 from "module_2795" /* 2795 */;
+import useThemeDefault from "useTheme" /* 4991 */;
+import useActiveTheme from "useActiveTheme" /* 9243 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4897 */;
 
 require = fn;
-const ActiveThemeType = fn(1196).ActiveThemeType;
+const ActiveThemeType = fn(1208).ActiveThemeType;
 const ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAppearanceSettingTrailing() {
   const cResult = c.c(9);
   const tmp5 = useThemeDefault();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -44,7 +44,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const _Symbol2 = Symbol;
     if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
       const intl2 = util.intl;
-      const stringResult = intl2.string(_modDef2751.KSBBpC);
+      const stringResult = intl2.string(_modDef2795.KSBBpC);
       cResult[4] = stringResult;
       let tmp19 = stringResult;
     } else {
@@ -87,7 +87,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     return ActiveThemeType.DEFAULT === activeThemeType ? tmp10 : undefined;
   }
   const tmpResult4 = useActiveTheme;
-}) : (() => {
+}) : (function useAppearanceSettingTrailing() {
   const tmp3 = useThemeDefault();
   const items = [ClientThemesBackgroundStore];
   const stateFromStores = initialize.useStateFromStores(items, () => gradientPreset.gradientPreset);
@@ -95,7 +95,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const activeThemeType = useActiveTheme.useActiveThemeType();
   if (ActiveThemeType.CUSTOM === activeThemeType) {
     const intl2 = util.intl;
-    return intl2.string(_modDef2751.KSBBpC);
+    return intl2.string(_modDef2795.KSBBpC);
   } else if (ActiveThemeType.CLIENT === activeThemeType) {
     let name;
     if (stateFromStores != null) {
@@ -115,14 +115,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     return ActiveThemeType.DEFAULT === activeThemeType ? themeName : undefined;
   }
 });
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["iHH+ky"]);
   },
   parent: null,
-  IconComponent: fn(15095).PaintPaletteIcon,
+  IconComponent: fn(15357).PaintPaletteIcon,
   useTrailing: tmp2,
   screen: {
     route: fn(1085).UserSettingsSections.APPEARANCE,

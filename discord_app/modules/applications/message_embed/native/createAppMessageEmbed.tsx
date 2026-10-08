@@ -1,39 +1,39 @@
-// === Module 11564: createAppMessageEmbed ===
+// === Module 11627: createAppMessageEmbed ===
 
-// Module 11564 (createAppMessageEmbed)
+// Module 11627 (createAppMessageEmbed)
 import util from "util" /* 1126 */;
-import URLUtilsDefault from "URLUtils" /* 1371 */;
-import GlobalUtils from "GlobalUtils" /* 1375 */;
-import AvatarUtils from "AvatarUtils" /* 1402 */;
-import KeyboardTypes from "KeyboardTypes" /* 1616 */;
-import ToastUtils from "ToastUtils" /* 4573 */;
-import ChatInputUtils from "ChatInputUtils" /* 4751 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 6665 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6688 */;
-import ClipboardUtils from "ClipboardUtils" /* 6695 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7047 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7615 */;
-import ApplicationAssetUtils from "ApplicationAssetUtils" /* 7832 */;
-import ApplicationUtils from "ApplicationUtils" /* 8741 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 8826 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 9019 */;
-import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 9027 */;
-import AppLauncherPlayUtils from "AppLauncherPlayUtils" /* 10958 */;
-import ContentClassificationVisibility from "ContentClassificationVisibility" /* 11565 */;
-import CodedLinksTypes from "CodedLinksTypes" /* 11566 */;
-import getPlayInContext from "getPlayInContext" /* 11567 */;
-import nativeAppMessageEmbedUtil from "nativeAppMessageEmbedUtil" /* 11568 */;
-import joinOrStartActivityInChannel from "joinOrStartActivityInChannel" /* 11569 */;
+import URLUtilsDefault from "URLUtils" /* 1383 */;
+import GlobalUtils from "GlobalUtils" /* 1387 */;
+import AvatarUtils from "AvatarUtils" /* 1414 */;
+import KeyboardTypes from "KeyboardTypes" /* 1628 */;
+import ToastUtils from "ToastUtils" /* 4765 */;
+import ChatInputUtils from "ChatInputUtils" /* 4945 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 6842 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6865 */;
+import ClipboardUtils from "ClipboardUtils" /* 6872 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7235 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7861 */;
+import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8250 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 9185 */;
+import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 10617 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10618 */;
+import ApplicationUtils from "ApplicationUtils" /* 10640 */;
+import AppLauncherPlayUtils from "AppLauncherPlayUtils" /* 11153 */;
+import ContentClassificationVisibility from "ContentClassificationVisibility" /* 11628 */;
+import CodedLinksTypes from "CodedLinksTypes" /* 11629 */;
+import getPlayInContext from "getPlayInContext" /* 11630 */;
+import nativeAppMessageEmbedUtil from "nativeAppMessageEmbedUtil" /* 11631 */;
+import joinOrStartActivityInChannel from "joinOrStartActivityInChannel" /* 11632 */;
 import _slicedToArray from "module_32" /* 32 */;
-import UserStore from "UserStore" /* 1377 */;
-import ApplicationAssetsStore from "ApplicationAssetsStore" /* 7833 */;
-import ApplicationStore from "ApplicationStore" /* 5124 */;
+import UserStore from "UserStore" /* 1389 */;
+import ApplicationAssetsStore from "ApplicationAssetsStore" /* 8251 */;
+import ApplicationStore from "ApplicationStore" /* 5436 */;
 
 require = fn;
-const FetchState = fn(7833).FetchState;
-const AppLauncherRouteName = fn(1489).AppLauncherRouteName;
-const MAIN_SURFACE = fn(8738).MAIN_SURFACE;
-const CodedLinkExtendedType = fn(10037).CodedLinkExtendedType;
+const FetchState = fn(8251).FetchState;
+const AppLauncherRouteName = fn(1501).AppLauncherRouteName;
+const MAIN_SURFACE = fn(10613).MAIN_SURFACE;
+const CodedLinkExtendedType = fn(9567).CodedLinkExtendedType;
 let closure_11 = ["embedded_cover"];
 let c12 = 512;
 const size = fn(2);

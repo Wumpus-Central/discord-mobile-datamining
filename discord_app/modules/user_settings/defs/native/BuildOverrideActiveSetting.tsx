@@ -1,22 +1,22 @@
-// === Module 15645: BuildOverrideActiveSetting ===
+// === Module 15925: BuildOverrideActiveSetting ===
 
-// Module 15645 (BuildOverrideActiveSetting)
+// Module 15925 (BuildOverrideActiveSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11412 */;
-import DevToolsNavigator from "DevToolsNavigator" /* 14422 */;
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14666 */;
-import DevToolsContent from "DevToolsContent" /* 15639 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 11095 */;
+import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11395 */;
+import DevToolsNavigator from "DevToolsNavigator" /* 14648 */;
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14927 */;
+import DevToolsContent from "DevToolsContent" /* 15919 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 10460 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
-let closure_4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBuildOverrideActive() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [BuildOverrideStore];
-    const fn = function l() {
+    const fn = function u() {
       const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
       let id;
       if (overrides != null) {
@@ -35,7 +35,7 @@ let closure_4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     [tmp4, tmp5] = cResult;
   }
   return initialize.useStateFromStores(tmp4, tmp5);
-}) : (() => {
+}) : (function useBuildOverrideActive() {
   const items = [BuildOverrideStore];
   return initialize.useStateFromStores(items, () => {
     const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
@@ -51,15 +51,15 @@ let closure_4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
 });
 fn(558);
 ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasBuildOverrideActive() {
   const staffOrDeveloperSettingPredicate = useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
   return null != closure_4() && staffOrDeveloperSettingPredicate;
-}) : (() => {
+}) : (function useHasBuildOverrideActive() {
   const staffOrDeveloperSettingPredicate = useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
   return null != closure_4() && staffOrDeveloperSettingPredicate;
 });
-const SettingBuilders = fn(11142);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const SettingBuilders = fn(11262);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBuildOverrideActiveDescription() {
   const cResult = c.c(2);
   const tmp4 = closure_4();
   if (cResult[0] !== tmp4) {
@@ -75,7 +75,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp5 = cResult[1];
   }
   return tmp5;
-}) : (() => {
+}) : (function useBuildOverrideActiveDescription() {
   const tmp = closure_4();
   let tmp2;
   if (null != tmp) {
@@ -89,8 +89,8 @@ const pressable = SettingBuilders.createPressable({
     return "Build Override Active";
   },
   parent: null,
-  IconComponent: fn(14794).RefreshIcon,
-  useDescription: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  IconComponent: fn(15055).RefreshIcon,
+  useDescription: ReactCompilerGating.isReactCompilerEnabled() ? (function useBuildOverrideActiveDescription() {
     const cResult = c.c(2);
     const tmp4 = closure_4();
     if (cResult[0] !== tmp4) {
@@ -106,7 +106,7 @@ const pressable = SettingBuilders.createPressable({
       tmp5 = cResult[1];
     }
     return tmp5;
-  }) : (() => {
+  }) : (function useBuildOverrideActiveDescription() {
     const tmp = closure_4();
     let tmp2;
     if (null != tmp) {

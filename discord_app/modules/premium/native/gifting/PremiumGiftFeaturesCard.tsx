@@ -1,39 +1,39 @@
-// === Module 10495: PremiumGiftFeaturesCard ===
+// === Module 10092: PremiumGiftFeaturesCard ===
 
-// Module 10495 (PremiumGiftFeaturesCard)
+// Module 10092 (PremiumGiftFeaturesCard)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import StringUtils from "StringUtils" /* 2018 */;
-import native from "native" /* 4595 */;
-import ClockIcon from "ClockIcon" /* 4855 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import LinearGradientDefault from "LinearGradient" /* 5612 */;
-import TextStylesDefault from "TextStyles" /* 5922 */;
-import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 8520 */;
-import usePremiumFeaturesDefault from "usePremiumFeatures" /* 8906 */;
-import PremiumFeaturesLogoDefault from "PremiumFeaturesLogo" /* 8916 */;
-import PremiumFeaturesWumpusDefault from "PremiumFeaturesWumpus" /* 8918 */;
-import PremiumFeatureListDefault from "PremiumFeatureList" /* 8923 */;
-import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10482 */;
-import usePremiumProductPricingStringDefault from "usePremiumProductPricingString" /* 10496 */;
-import useShouldShowGiftingPromotionDecoDefault from "useShouldShowGiftingPromotionDeco" /* 10497 */;
-import MarketingComponentHooks from "MarketingComponentHooks" /* 10498 */;
-import SlayerStorefrontTimeUtils from "SlayerStorefrontTimeUtils" /* 10499 */;
-import PremiumGiftCountdownBadgeDefault from "PremiumGiftCountdownBadge" /* 10500 */;
-import PremiumGiftPromotionDetailsDefault from "PremiumGiftPromotionDetails" /* 10501 */;
+import StringUtils from "StringUtils" /* 2030 */;
+import native from "native" /* 4787 */;
+import ClockIcon from "ClockIcon" /* 5049 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import LinearGradientDefault from "LinearGradient" /* 5387 */;
+import TextStylesDefault from "TextStyles" /* 5902 */;
+import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 9004 */;
+import usePremiumFeaturesDefault from "usePremiumFeatures" /* 9339 */;
+import PremiumFeaturesLogoDefault from "PremiumFeaturesLogo" /* 9349 */;
+import PremiumFeaturesWumpusDefault from "PremiumFeaturesWumpus" /* 9351 */;
+import PremiumFeatureListDefault from "PremiumFeatureList" /* 9356 */;
+import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10079 */;
+import usePremiumProductPricingStringDefault from "usePremiumProductPricingString" /* 10093 */;
+import useShouldShowGiftingPromotionDecoDefault from "useShouldShowGiftingPromotionDeco" /* 10094 */;
+import MarketingComponentHooks from "MarketingComponentHooks" /* 10095 */;
+import SlayerStorefrontTimeUtils from "SlayerStorefrontTimeUtils" /* 10096 */;
+import PremiumGiftCountdownBadgeDefault from "PremiumGiftCountdownBadge" /* 10097 */;
+import PremiumGiftPromotionDetailsDefault from "PremiumGiftPromotionDetails" /* 10098 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import PromotionsStore from "PromotionsStore" /* 10409 */;
+import PromotionsStore from "PromotionsStore" /* 10006 */;
 
 const require = globalThis.__r;
 
 require = fn;
 let closure_3 = ["premiumType", "onPress", "style", "claimableRewards", "isSelected", "variant"];
 const View = fn(17).View;
-const PremiumConstants = fn(1379);
+const PremiumConstants = fn(1391);
 ({ PremiumTypes: closure_7, SubscriptionIntervalTypes: closure_8 } = PremiumConstants);
 const Constants = fn(1096);
 ({ Fonts: closure_9, ThemeTypes: c10 } = Constants);
@@ -64,7 +64,7 @@ const obj13 = { marginTop: nativeDefault.space.PX_24 };
 obj12.compact = { marginTop: nativeDefault.space.PX_12 };
 const obj14 = { marginTop: nativeDefault.space.PX_12 };
 obj12.smallCompact = { marginTop: nativeDefault.space.PX_8 };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_17 = createStyles.createStyles(() => {
   obj = { card: null, logo: null, pricing: null, featureTitle: null, features: null, button: null, featureIcon: null, featureText: null, promotionDetailsContainer: null, countdownBadge: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
@@ -93,7 +93,7 @@ let closure_17 = createStyles.createStyles(() => {
 fn(558);
 const obj15 = { marginTop: nativeDefault.space.PX_8 };
 const ReactCompilerGating = fn(558);
-let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((isLargeSize) => {
+let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumGiftPlanSelectPromotionDetails(isLargeSize) {
   const cResult = c.c(25);
   ({ config, numClaimableRewards, isSelected, onPress } = isLargeSize);
   const tmp4 = closure_17(isLargeSize.isLargeSize);
@@ -256,7 +256,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((isLargeSize) =
   cResult[6] = tmp15;
   tmp14 = tmp15;
   const tmpResult4 = SlayerStorefrontTimeUtils;
-}) : ((config) => {
+}) : (function PremiumGiftPlanSelectPromotionDetails(config) {
   config = config.config;
   ({ numClaimableRewards, isSelected, onPress } = config);
   const tmp = closure_17(config.isLargeSize);
@@ -311,7 +311,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((isLargeSize) =
   obj4.children = __initData(tmp11, obj5);
   return closure_1_11(native.ThemeContextProvider, obj4);
 });
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumGiftFeaturesCard(arg0) {
   const cResult = c.c(66);
   if (cResult[0] !== arg0) {
     ({ premiumType, onPress, style, claimableRewards, isSelected, variant } = arg0);
@@ -462,7 +462,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[11] = tmp18.card;
   cResult[12] = items3;
   const tmpResult = initialize;
-}) : ((variant) => {
+}) : (function PremiumGiftFeaturesCard(variant) {
   ({ premiumType, onPress, style, claimableRewards, isSelected } = variant);
   if (isSelected === undefined) {
     isSelected = true;
@@ -551,7 +551,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumGiftFeaturesCard.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumGiftFeaturesCard(arg0) {
   const cResult = c.c(66);
   if (cResult[0] !== arg0) {
     ({ premiumType, onPress, style, claimableRewards, isSelected, variant } = arg0);
@@ -702,7 +702,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   cResult[11] = tmp18.card;
   cResult[12] = items3;
   const tmpResult = initialize;
-}) : ((variant) => {
+}) : (function PremiumGiftFeaturesCard(variant) {
   ({ premiumType, onPress, style, claimableRewards, isSelected } = variant);
   if (isSelected === undefined) {
     isSelected = true;

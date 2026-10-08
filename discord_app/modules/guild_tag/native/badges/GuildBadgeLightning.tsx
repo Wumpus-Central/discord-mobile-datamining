@@ -1,9 +1,9 @@
-// === Module 13754: GuildBadgeLightning ===
+// === Module 13976: GuildBadgeLightning ===
 
-// Module 13754 (GuildBadgeLightning)
+// Module 13976 (GuildBadgeLightning)
 import c from "c" /* 576 */;
-import inlineStyles from "inlineStyles" /* 8169 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 13748 */;
+import inlineStyles from "inlineStyles" /* 7550 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 13970 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgeLightning.tsx");
 
-export const GuildBadgeLightning = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const GuildBadgeLightning = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBadgeLightning(arg0) {
   const cResult = c.c(42);
   if (cResult[0] !== arg0) {
     ({ width, height, primaryTintColor } = arg0);
@@ -215,7 +215,7 @@ export const GuildBadgeLightning = ReactCompilerGating.isReactCompilerEnabled() 
   cResult[40] = num6;
   cResult[41] = tmp57;
   tmp55 = tmp57;
-}) : ((primaryTintColor) => {
+}) : (function GuildBadgeLightning(primaryTintColor) {
   let num = primaryTintColor.width;
   if (num === undefined) {
     num = 24;

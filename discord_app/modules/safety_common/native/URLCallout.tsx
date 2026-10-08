@@ -1,17 +1,17 @@
-// === Module 12766: URLCallout ===
+// === Module 12914: URLCallout ===
 
-// Module 12766 (URLCallout)
+// Module 12914 (URLCallout)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import SharedStateUtils from "SharedStateUtils" /* 12767 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import SharedStateUtils from "SharedStateUtils" /* 12915 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsxs: c3, jsx: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { linkCalloutContainer: { maxHeight: 300, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, width: "100%", borderRadius: nativeDefault.radii.md }, linkCalloutContainerText: null };
 let obj3 = { maxHeight: 300, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, width: "100%", borderRadius: nativeDefault.radii.md };
 obj2.linkCalloutContainerText = { padding: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_12, textAlign: "center" };
@@ -21,7 +21,7 @@ let obj4 = { padding: nativeDefault.space.PX_8, paddingVertical: nativeDefault.s
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_common/native/URLCallout.tsx");
 
-export const URLCallout = ReactCompilerGating.isReactCompilerEnabled() ? ((url) => {
+export const URLCallout = ReactCompilerGating.isReactCompilerEnabled() ? (function URLCallout(url) {
   const cResult = c.c(14);
   const tmp4 = closure_5();
   const urlParts = SharedStateUtils.useUrlParts(url.url);
@@ -86,7 +86,7 @@ export const URLCallout = ReactCompilerGating.isReactCompilerEnabled() ? ((url) 
   cResult[9] = tmp12;
   cResult[10] = tmp16;
   tmp15 = tmp16;
-}) : ((url) => {
+}) : (function URLCallout(url) {
   const tmp = closure_5();
   const urlParts = SharedStateUtils.useUrlParts(url.url);
   const obj2 = { style: tmp.linkCalloutContainer, children: null };

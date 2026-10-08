@@ -1,22 +1,22 @@
-// === Module 6076: ChangeEmailCollectReasons ===
+// === Module 6262: ChangeEmailCollectReasons ===
 
-// Module 6076 (ChangeEmailCollectReasons)
+// Module 6262 (ChangeEmailCollectReasons)
 import nativeDefault from "native" /* 587 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import TableRadioGroup from "TableRadioGroup" /* 6079 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import TableRadioGroup from "TableRadioGroup" /* 6265 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const VerificationConstants = fn(6077);
+const VerificationConstants = fn(6263);
 ({ CHANGE_EMAIL_REASONS_ORDER: closure_7, SUSPICIOUS_CHANGE_EMAIL_REASONS: closure_8 } = VerificationConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: null, radioGroup: null, title: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.container = { paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };
@@ -29,7 +29,7 @@ let obj5 = { paddingTop: nativeDefault.space.PX_16, paddingBottom: 38 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/verification/native/components/ChangeEmailCollectReasons.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((changeEmailReason) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChangeEmailCollectReasons(changeEmailReason) {
   const cResult = changeEmailReason(navigation[9]).c(29);
   changeEmailReason = changeEmailReason.changeEmailReason;
   const setChangeEmailReason = changeEmailReason.setChangeEmailReason;
@@ -296,7 +296,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((changeEmailReaso
   cResult[4] = fn2;
   tmp10 = fn2;
   const tmpResult2 = changeEmailReason(navigation[11]);
-}) : ((changeEmailReason) => {
+}) : (function ChangeEmailCollectReasons(changeEmailReason) {
   changeEmailReason = changeEmailReason.changeEmailReason;
   const setChangeEmailReason = changeEmailReason.setChangeEmailReason;
   let navigation;

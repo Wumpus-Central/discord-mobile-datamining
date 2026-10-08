@@ -1,32 +1,32 @@
-// === Module 18010: GuildRoleSubscriptionTierDetailsModal ===
+// === Module 18297: GuildRoleSubscriptionTierDetailsModal ===
 
-// Module 18010 (GuildRoleSubscriptionTierDetailsModal)
+// Module 18297 (GuildRoleSubscriptionTierDetailsModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import Form from "Form" /* 8924 */;
-import FormHeaderDefault from "FormHeader" /* 9490 */;
-import FormStylesDefault from "FormStyles" /* 13728 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15045 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15060 */;
-import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 17967 */;
-import FormImagePicker from "FormImagePicker" /* 17973 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 17974 */;
-import EditStateContextProvider from "EditStateContextProvider" /* 17990 */;
-import FormPriceTierDefault from "FormPriceTier" /* 18011 */;
+import native from "native" /* 1200 */;
+import Form from "Form" /* 8555 */;
+import FormHeaderDefault from "FormHeader" /* 8654 */;
+import FormStylesDefault from "FormStyles" /* 13950 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15307 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15322 */;
+import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 18254 */;
+import FormImagePicker from "FormImagePicker" /* 18260 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 18261 */;
+import EditStateContextProvider from "EditStateContextProvider" /* 18277 */;
+import FormPriceTierDefault from "FormPriceTier" /* 18298 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const FormImagePickerDefault = FormImagePicker;
 
 require = fn;
-const GuildRoleSubscriptionsConstants = fn(15038);
+const GuildRoleSubscriptionsConstants = fn(15300);
 ({ GuildRoleSubscriptionsTierScenes: hasOwnProperty, MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: metroRequire, MAX_SUBSCRIPTION_TIER_NAME_LENGTH: closure_7 } = GuildRoleSubscriptionsConstants);
 const UPLOAD_MEDIUM_SIZE = fn(1085).UPLOAD_MEDIUM_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
 let ReactCompilerGating = fn(558);
-let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Content() {
   const cResult = c.c(47);
   const tmp5 = FormStylesDefault();
   const editStateContext = EditStateContextProvider.useEditStateContext();
@@ -113,7 +113,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[10] = B;
   cResult[11] = options(FormImagePickerDefault, obj9);
   const tmp26 = options(FormImagePickerDefault, obj9);
-}) : (() => {
+}) : (function Content() {
   const tmp3 = FormStylesDefault();
   const editStateContext = EditStateContextProvider.useEditStateContext();
   const editStateId = editStateContext.editStateId;
@@ -191,10 +191,10 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const obj15 = { children: null };
   items[7] = options(FormPriceTierDefault, obj14);
   obj15.children = items;
-  return closure_1_11(v65535, obj15);
+  return closure_1_11(collapsed, obj15);
 });
 ReactCompilerGating = fn(558);
-const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRoleSubscriptionTierDetailsTab() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const tmp5 = options(closure_12, {});
@@ -204,12 +204,14 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() 
     first = cResult[0];
   }
   return first;
-}) : (() => options(closure_12, {})));
+}) : (function GuildRoleSubscriptionTierDetailsTab() {
+  return options(closure_12, {});
+}));
 ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierDetailsModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRoleSubscriptionTierDetailsModal(arg0) {
   const cResult = c.c(6);
   const editStateId = EditStateContextProvider.useEditStateContext().editStateId;
   const obj3 = GuildRoleSubscriptionListingEditStateUtilsAll;
@@ -259,7 +261,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = arg0;
   cResult[5] = tmp18;
   tmp15 = tmp18;
-}) : ((arg0) => {
+}) : (function GuildRoleSubscriptionTierDetailsModal(arg0) {
   const editStateId = EditStateContextProvider.useEditStateContext().editStateId;
   const obj2 = GuildRoleSubscriptionListingEditStateUtilsAll;
   const obj3 = GuildRoleSubscriptionListingEditStateUtilsAll;

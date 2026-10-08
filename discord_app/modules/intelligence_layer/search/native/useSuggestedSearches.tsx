@@ -1,21 +1,21 @@
-// === Module 16826: useSuggestedSearches ===
+// === Module 17105: useSuggestedSearches ===
 
-// Module 16826 (useSuggestedSearches)
-import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 12002 */;
-import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 12004 */;
+// Module 17105 (useSuggestedSearches)
+import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 12075 */;
+import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 12077 */;
 import noop from "module_19" /* 19 */;
-import SuggestedSearchStore from "SuggestedSearchStore" /* 11981 */;
+import SuggestedSearchStore from "SuggestedSearchStore" /* 12054 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const EMPTY_SUGGESTED_SEARCHES = fn(11981).EMPTY_SUGGESTED_SEARCHES;
-let closure_6 = fn(11982).SUGGESTED_SEARCHES_WINDOW_SIZE;
+const EMPTY_SUGGESTED_SEARCHES = fn(12054).EMPTY_SUGGESTED_SEARCHES;
+let closure_6 = fn(12055).SUGGESTED_SEARCHES_WINDOW_SIZE;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/intelligence_layer/search/native/useSuggestedSearches.tsx");
 
-export const useSuggestedSearches = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId, source) => {
+export const useSuggestedSearches = ReactCompilerGating.isReactCompilerEnabled() ? (function useSuggestedSearches(guildId, source) {
   const _require = guildId;
   const cResult = require("c").c(19);
   source = source.source;
@@ -219,7 +219,7 @@ export const useSuggestedSearches = ReactCompilerGating.isReactCompilerEnabled()
   cResult[4] = items4;
   tmp10 = items4;
   tmp9 = fn;
-}) : ((guildId, source) => {
+}) : (function useSuggestedSearches(guildId, source) {
   const _require = guildId;
   source = source.source;
   const trackShown = source.trackShown;

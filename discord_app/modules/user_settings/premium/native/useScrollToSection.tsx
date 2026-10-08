@@ -1,6 +1,6 @@
-// === Module 13248: useScrollToSection ===
+// === Module 13548: useScrollToSection ===
 
-// Module 13248 (useScrollToSection)
+// Module 13548 (useScrollToSection)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -9,7 +9,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/premium/native/useScrollToSection.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useScrollToSection(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   const cResult = c.c(5);
@@ -28,7 +28,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     }
     return tmp3;
   }
-  const fn = function c(arg0) {
+  const fn = function o(arg0) {
     return (nativeEvent) => {
       let current = ref !== closure_1;
       if (!current) {
@@ -48,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   cResult[1] = arg0;
   cResult[2] = fn;
   tmp2 = fn;
-}) : ((arg0, arg1) => {
+}) : (function useScrollToSection(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   closure_2 = noop.useRef(false);

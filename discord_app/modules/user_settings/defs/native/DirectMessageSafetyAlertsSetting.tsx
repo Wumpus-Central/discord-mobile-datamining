@@ -1,20 +1,20 @@
-// === Module 14658: DirectMessageSafetyAlertsSetting ===
+// === Module 14919: DirectMessageSafetyAlertsSetting ===
 
-// Module 14658 (DirectMessageSafetyAlertsSetting)
+// Module 14919 (DirectMessageSafetyAlertsSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import SettingsConstants from "SettingsConstants" /* 7645 */;
-import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 9805 */;
-import useSafetyAlertsSettingOrDefault from "useSafetyAlertsSettingOrDefault" /* 9806 */;
-import InappropriateConversationsDefaultOn from "InappropriateConversationsDefaultOn" /* 9807 */;
-import useUserIsConsideredAdultDefault from "useUserIsConsideredAdult" /* 11502 */;
-import updateDmSafetyAlertsSetting from "updateDmSafetyAlertsSetting" /* 14659 */;
+import SettingsConstants from "SettingsConstants" /* 7966 */;
+import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 10368 */;
+import useSafetyAlertsSettingOrDefault from "useSafetyAlertsSettingOrDefault" /* 10369 */;
+import InappropriateConversationsDefaultOn from "InappropriateConversationsDefaultOn" /* 10370 */;
+import useUserIsConsideredAdultDefault from "useUserIsConsideredAdult" /* 11488 */;
+import updateDmSafetyAlertsSetting from "updateDmSafetyAlertsSetting" /* 14920 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11142 */;
+import SettingBuilders from "SettingBuilders" /* 11262 */;
 import size from "module_2" /* 2 */;
 
 const MobileUserSettings = SettingsConstants.MobileUserSettings;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasDmSafetyAlertsSetting() {
   const cResult = c.c(2);
   let flag = useUserIsConsideredAdultDefault();
   if (flag == null) {
@@ -45,7 +45,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp8 = !isEligibleForInappropriateConversationDefaultOn;
   }
   return tmp8;
-}) : (() => {
+}) : (function useHasDmSafetyAlertsSetting() {
   let flag = useUserIsConsideredAdultDefault();
   if (flag == null) {
     flag = true;
@@ -71,7 +71,7 @@ const toggle = SettingBuilders.createToggle({
   },
   useValue: useSafetyAlertsSettingOrDefault.useSafetyAlertsSettingOrDefault,
   onValueChange: updateDmSafetyAlertsSetting.updateDmSafetyAlertsSetting,
-  usePredicate: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  usePredicate: ReactCompilerGating.isReactCompilerEnabled() ? (function useHasDmSafetyAlertsSetting() {
     const cResult = c.c(2);
     let flag = useUserIsConsideredAdultDefault();
     if (flag == null) {
@@ -102,7 +102,7 @@ const toggle = SettingBuilders.createToggle({
       tmp8 = !isEligibleForInappropriateConversationDefaultOn;
     }
     return tmp8;
-  }) : (() => {
+  }) : (function useHasDmSafetyAlertsSetting() {
     let flag = useUserIsConsideredAdultDefault();
     if (flag == null) {
       flag = true;

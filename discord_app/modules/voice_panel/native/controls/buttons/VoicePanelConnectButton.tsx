@@ -1,17 +1,17 @@
-// === Module 17357: VoicePanelConnectButton ===
+// === Module 17638: VoicePanelConnectButton ===
 
-// Module 17357 (VoicePanelConnectButton)
+// Module 17638 (VoicePanelConnectButton)
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5575 */;
-import useAlertStore from "useAlertStore" /* 5716 */;
-import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 8102 */;
-import VoicePanelSpoilerAlert from "VoicePanelSpoilerAlert" /* 12751 */;
-import VoicePanelNoJoinPermissionsAlert from "VoicePanelNoJoinPermissionsAlert" /* 17358 */;
-import VoicePanelMaxCapacityAlert from "VoicePanelMaxCapacityAlert" /* 17361 */;
-import VoicePanelNsfwAlert from "VoicePanelNsfwAlert" /* 17362 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import useAlertStore from "useAlertStore" /* 5299 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5885 */;
+import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7487 */;
+import VoicePanelSpoilerAlert from "VoicePanelSpoilerAlert" /* 12899 */;
+import VoicePanelNoJoinPermissionsAlert from "VoicePanelNoJoinPermissionsAlert" /* 17639 */;
+import VoicePanelMaxCapacityAlert from "VoicePanelMaxCapacityAlert" /* 17642 */;
+import VoicePanelNsfwAlert from "VoicePanelNsfwAlert" /* 17643 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
 
 const require = globalThis.__r;
 const VoicePanelSpoilerAlertDefault = VoicePanelSpoilerAlert;
@@ -21,7 +21,7 @@ const VoicePanelNsfwAlertDefault = VoicePanelNsfwAlert;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { connectButton: { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360, paddingLeft: nativeDefault.space.PX_8, paddingRight: nativeDefault.space.PX_8 }, connectText: { textAlign: "center" } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -29,7 +29,7 @@ let obj3 = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360, paddingL
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelConnectButton.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((props) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectButton(props) {
   const cResult = channelId(canConnect[6]).c(28);
   props = props.props;
   const tmp4 = isChannelSpoilerGated();
@@ -592,7 +592,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((props) => {
   cResult[4] = isAtMaxCapacity;
   cResult[5] = isAtMaxCapacity;
   tmp11 = tmp12;
-}) : ((props) => {
+}) : (function ConnectButton(props) {
   let channelId;
   let guildId;
   let canConnect;

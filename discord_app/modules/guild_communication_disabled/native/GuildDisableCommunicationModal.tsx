@@ -1,7 +1,7 @@
-// === Module 11465: GuildDisableCommunicationModal ===
+// === Module 11449: GuildDisableCommunicationModal ===
 
-// Module 11465 (GuildDisableCommunicationModal)
-import GuildDisableCommunicationDefault from "GuildDisableCommunication" /* 11466 */;
+// Module 11449 (GuildDisableCommunicationModal)
+import GuildDisableCommunicationDefault from "GuildDisableCommunication" /* 11450 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -10,7 +10,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_communication_disabled/native/GuildDisableCommunicationModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildDisableCommunicationModal(guildId) {
   const cResult = guildId(onGoBack[3]).c(12);
   guildId = guildId.guildId;
   const user = guildId.user;
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
         tmp9 = tmp11;
       }
     }
-    const fn = function b() {
+    const fn = function f() {
       return jsx(GuildDisableCommunicationDefault, { user, guildId, onClose: onGoBack });
     };
     cResult[5] = guildId;
@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   cResult[4] = formatToPlainStringResult;
   tmp6 = formatToPlainStringResult;
   const tmp5Result = user(onGoBack[6]);
-}) : ((onBeforeGoBack) => {
+}) : (function GuildDisableCommunicationModal(onBeforeGoBack) {
   const guildId = onBeforeGoBack.guildId;
   const user = onBeforeGoBack.user;
   let onGoBack;

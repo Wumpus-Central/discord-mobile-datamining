@@ -1,15 +1,15 @@
-// === Module 8981: Checkbox ===
+// === Module 12885: Checkbox ===
 
-// Module 8981 (Checkbox)
+// Module 12885 (Checkbox)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4600 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Stack_Stack from "Stack/Stack" /* 5600 */;
-import FormCheckbox from "FormCheckbox" /* 5998 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4792 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import Stack_Stack from "Stack/Stack" /* 5373 */;
+import FormCheckbox from "FormCheckbox" /* 6182 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
+import createStyles from "createStyles" /* 5090 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -18,7 +18,7 @@ import size from "module_2" /* 2 */;
 let closure_6 = createStyles.createStyles({ textContainer: { flex: 1 }, labelContainer: { minHeight: 24, justifyContent: "center" } });
 const result = size.fileFinishedImporting("design/components/Checkbox/native/Checkbox.native.tsx");
 
-export const Checkbox = ReactCompilerGating.isReactCompilerEnabled() ? ((onToggle) => {
+export const Checkbox = ReactCompilerGating.isReactCompilerEnabled() ? (function Checkbox(onToggle) {
   const cResult = c.c(32);
   ({ label, description, required, checked } = onToggle);
   onToggle = onToggle.onToggle;
@@ -178,7 +178,7 @@ export const Checkbox = ReactCompilerGating.isReactCompilerEnabled() ? ((onToggl
   cResult[6] = L;
   tmp12 = L;
   const tmpResult = useA11yRolesNative;
-}) : ((onToggle) => {
+}) : (function Checkbox(onToggle) {
   ({ label, description, required, checked } = onToggle);
   onToggle = onToggle.onToggle;
   const tmp = closure_6();

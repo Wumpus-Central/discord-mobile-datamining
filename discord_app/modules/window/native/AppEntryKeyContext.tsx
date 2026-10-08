@@ -1,6 +1,6 @@
-// === Module 1487: AppEntryKeyContext ===
+// === Module 1499: AppEntryKeyContext ===
 
-// Module 1487 (AppEntryKeyContext)
+// Module 1499 (AppEntryKeyContext)
 import LoggerDefault from "Logger" /* 3 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting("modules/window/native/AppEntryKeyCont
 
 export const DEFAULT_APP_ENTRY_KEY = "main";
 export const AppEntryKeyContext = context;
-export const useAppEntryKey = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useAppEntryKey = ReactCompilerGating.isReactCompilerEnabled() ? (function useAppEntryKey() {
   const cResult = context(576).c(3);
   context = noop.useContext(context);
   if (cResult[0] !== context) {
@@ -42,7 +42,7 @@ export const useAppEntryKey = ReactCompilerGating.isReactCompilerEnabled() ? (()
     context = main;
   }
   return context;
-}) : (() => {
+}) : (function useAppEntryKey() {
   context = noop.useContext(context);
   const items = [context];
   const effect = noop.useEffect(() => {

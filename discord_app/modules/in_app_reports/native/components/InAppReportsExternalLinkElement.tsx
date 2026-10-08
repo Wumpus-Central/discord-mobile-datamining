@@ -1,14 +1,14 @@
-// === Module 12737: InAppReportsExternalLinkElement ===
+// === Module 13405: InAppReportsExternalLinkElement ===
 
-// Module 12737 (InAppReportsExternalLinkElement)
+// Module 13405 (InAppReportsExternalLinkElement)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import LinkingDefault from "Linking" /* 4571 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6476 */;
+import LinkingDefault from "Linking" /* 4763 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6654 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
+import createStyles from "createStyles" /* 5090 */;
 import "ReactCompilerGating";
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -16,26 +16,26 @@ import size from "module_2" /* 2 */;
 const View = _mod17.View;
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let closure_6 = createStyles.createStyles({ linksContainer: { flex: 1, alignSelf: "stretch", paddingHorizontal: 16 }, headerText: { marginBottom: 8 } });
-let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((data) => {
+let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function ExternalLinkItem(data) {
   const cResult = url(576).c(7);
   data = data.data;
   url = data.url;
   ({ link_text, link_description } = data);
   if (data.is_localized) {
     if (cResult[0] !== url) {
-      const fn = function t() {
+      function onLinkPress() {
         LinkingDefault.openURL(url);
-      };
+      }
       cResult[0] = url;
-      cResult[1] = fn;
-      let tmp5 = fn;
+      cResult[1] = onLinkPress;
+      let tmp5 = onLinkPress;
     } else {
       tmp5 = cResult[1];
     }
     const _Symbol = Symbol;
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj2 = { IconComponent: tmp(12738).LinkExternalMediumIcon };
-      const tmp9 = closure_4(tmp(6006).TableRowIcon, obj2);
+      const obj2 = { IconComponent: tmp(13406).LinkExternalMediumIcon };
+      const tmp9 = closure_4(tmp(6192).TableRowIcon, obj2);
       cResult[2] = tmp9;
       let tmp7 = tmp9;
     } else {
@@ -50,7 +50,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((data) => {
       }
     }
     const obj3 = { label: link_text, subLabel: link_description, trailing: tmp7, onPress: tmp5, arrow: false, accessibilityRole: "link" };
-    const tmp12 = closure_4(tmp(8926).RowButton, obj3);
+    const tmp12 = closure_4(tmp(8557).RowButton, obj3);
     cResult[3] = link_description;
     cResult[4] = link_text;
     cResult[5] = tmp5;
@@ -60,24 +60,24 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((data) => {
     return null;
   }
   const obj = url(576);
-}) : ((data) => {
+}) : (function ExternalLinkItem(data) {
   data = data.data;
   const url = data.url;
   let tmp3 = null;
   if (data.is_localized) {
     const obj = { label: tmp, subLabel: tmp2, trailing: null, onPress: null, arrow: false, accessibilityRole: "link" };
-    const obj2 = { IconComponent: url(12738).LinkExternalMediumIcon };
-    obj.trailing = closure_4(url(6006).TableRowIcon, obj2);
-    obj.onPress = function onPress() {
+    const obj2 = { IconComponent: url(13406).LinkExternalMediumIcon };
+    obj.trailing = closure_4(url(6192).TableRowIcon, obj2);
+    obj.onPress = function onLinkPress() {
       LinkingDefault.openURL(url);
     };
-    tmp3 = closure_4(url(8926).RowButton, obj);
+    tmp3 = closure_4(url(8557).RowButton, obj);
   }
   return tmp3;
 });
 const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsExternalLinkElement.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((elements) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ExternalLinksElement(elements) {
   let hvVgAZ = dependencyMap;
   const cResult = c.c(14);
   elements = elements.elements;
@@ -111,7 +111,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((elements) => {
               if (cResult[7] !== elements) {
                 const _Symbol2 = Symbol;
                 if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-                  const fn2 = function v(data, arg1) {
+                  const fn2 = function f(data, arg1) {
                     return closure_1_4(closure_1_7, { data: data.data }, "external-link-" + arg1);
                   };
                   cResult[9] = fn2;
@@ -174,7 +174,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((elements) => {
     }
   }
   return null;
-}) : ((elements) => {
+}) : (function ExternalLinksElement(elements) {
   elements = elements.elements;
   const tmp = closure_6();
   let hvVgAZ = dependencyMap;

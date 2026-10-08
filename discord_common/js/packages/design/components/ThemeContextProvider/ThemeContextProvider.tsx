@@ -1,8 +1,8 @@
-// === Module 4607: ThemeContextProvider ===
+// === Module 4799: ThemeContextProvider ===
 
-// Module 4607 (ThemeContextProvider)
+// Module 4799 (ThemeContextProvider)
 import c from "c" /* 576 */;
-import ThemeContext from "ThemeContext" /* 4599 */;
+import ThemeContext from "ThemeContext" /* 4791 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/ThemeContextProvider/ThemeContextProvider.tsx");
 
-export const ThemeContextProvider = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const ThemeContextProvider = ReactCompilerGating.isReactCompilerEnabled() ? (function ThemeContextProvider(arg0) {
   const cResult = c.c(15);
   ({ children, theme, primaryColor, secondaryColor, gradient, flags, contrast, saturation, enabledExperiments, density, disableAdaptiveTheme, reduceAdaptiveTheme } = arg0);
   const context = noop.useContext(ThemeContext.ThemeContext);
@@ -99,7 +99,7 @@ export const ThemeContextProvider = ReactCompilerGating.isReactCompilerEnabled()
   cResult[11] = themedContext;
   tmp5 = themedContext;
   const tmpResult = ThemeContext;
-}) : ((children) => {
+}) : (function ThemeContextProvider(children) {
   let theme = children.theme;
   let primaryColor = children.primaryColor;
   let secondaryColor = children.secondaryColor;

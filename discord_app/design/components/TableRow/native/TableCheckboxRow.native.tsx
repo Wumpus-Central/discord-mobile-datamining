@@ -1,12 +1,12 @@
-// === Module 5997: TableCheckboxRow ===
+// === Module 6181: TableCheckboxRow ===
 
-// Module 5997 (TableCheckboxRow)
+// Module 6181 (TableCheckboxRow)
 import c from "c" /* 576 */;
-import native from "native" /* 4588 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4600 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import FormCheckbox from "FormCheckbox" /* 5998 */;
-import TableRow from "TableRow" /* 6000 */;
+import native from "native" /* 4780 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4792 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import FormCheckbox from "FormCheckbox" /* 6182 */;
+import TableRow from "TableRow" /* 6184 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/TableRow/native/TableCheckboxRow.native.tsx");
 
-export const TableCheckboxRow = ReactCompilerGating.isReactCompilerEnabled() ? ((checked) => {
+export const TableCheckboxRow = ReactCompilerGating.isReactCompilerEnabled() ? (function TableCheckboxRow(checked) {
   const cResult = c.c(35);
   if (cResult[0] !== checked) {
     checked = checked.checked;
@@ -187,7 +187,7 @@ export const TableCheckboxRow = ReactCompilerGating.isReactCompilerEnabled() ? (
   cResult[13] = T;
   tmp17 = T;
   const tmpResult = ReanimatedRexport;
-}) : ((checked) => {
+}) : (function TableCheckboxRow(checked) {
   checked = checked.checked;
   ({ label, subLabel, disabled } = checked);
   if (disabled === undefined) {

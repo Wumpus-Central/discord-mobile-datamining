@@ -1,28 +1,28 @@
-// === Module 13395: renderPremiumButtonText ===
+// === Module 13695: renderPremiumButtonText ===
 
-// Module 13395 (renderPremiumButtonText)
+// Module 13695 (renderPremiumButtonText)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4534 */;
+import native from "native" /* 1200 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4726 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const PremiumConstants = fn(1379);
+const PremiumConstants = fn(1391);
 ({ PREMIUM_YEARLY_DISCOUNT_PERCENT: closure_4, PRICE_PLACEHOLDER: hasOwnProperty, SubscriptionIntervalTypes: metroRequire } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { discount: null, premiumText: null };
 let obj3 = { borderWidth: 1, borderColor: null, borderRadius: 2, marginLeft: 4, paddingHorizontal: 2 };
-const ColorUtils = fn(4733);
+const ColorUtils = fn(4927);
 obj3.borderColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.3);
 obj2.discount = obj3;
 obj2.premiumText = { flexDirection: "row" };
 let closure_9 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((isGift) => {
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumText(isGift) {
   const cResult = isCurrentPlan(576).c(34);
   ({ style, isCurrentPlan } = isGift);
   isGift = isGift.isGift;
@@ -31,11 +31,11 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((isGift) => {
   const text = isGift.text;
   const tmp4 = closure_9();
   if (cResult[0] !== basePlanId) {
-    const interval = isGift(4534).getInterval(basePlanId);
+    const interval = isGift(4726).getInterval(basePlanId);
     cResult[0] = basePlanId;
     cResult[1] = interval;
     let tmp5 = interval;
-    let obj2 = isGift(4534);
+    let obj2 = isGift(4726);
   } else {
     tmp5 = cResult[1];
   }
@@ -113,7 +113,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((isGift) => {
                         if (null != combined) {
                           let obj4 = { style: tmp4.discount, children: null };
                           const obj5 = { style, numberOfLines: 1, children: combined };
-                          obj4.children = closure_7(isCurrentPlan(1188).LegacyText, obj5);
+                          obj4.children = closure_7(isCurrentPlan(1200).LegacyText, obj5);
                           tmp30 = closure_7(intervalType, obj4);
                         }
                         cResult[25] = combined;
@@ -143,7 +143,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((isGift) => {
           tmp12Result = tmp12();
         }
         const premiumText = tmp4.premiumText;
-        const LegacyText = isCurrentPlan(1188).LegacyText;
+        const LegacyText = isCurrentPlan(1200).LegacyText;
         let intl = isCurrentPlan(1126).intl;
         let title1;
         if (product != null) {
@@ -161,56 +161,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((isGift) => {
         cResult[10] = text;
         cResult[11] = style;
         cResult[12] = LegacyText;
-        class E {
-          constructor() {
-            priceString = undefined;
-            if (product != null) {
-              priceString = product.priceString;
-            }
-            if (priceString == null) {
-              priceString = PRICE_PLACEHOLDER;
-            }
-            if (intervalType === SubscriptionIntervalTypes.MONTH) {
-              tmp4 = isGift;
-              FIjgMp = closure_0;
-              obj1 = closure_2;
-              intl = closure_0(closure_2[10]).intl;
-              formatToPlainString = intl.formatToPlainString;
-              if (isGift) {
-                FIjgMp = FIjgMp(obj1[10]).t.FIjgMp;
-                obj1 = { price: null };
-                obj1.price = priceString;
-                formatToPlainStringResult = formatToPlainString(FIjgMp, obj1);
-              } else {
-                tmp5 = isCurrentPlan;
-                t2 = FIjgMp(obj1[10]).t;
-                obj5 = { price: null };
-                obj5.price = priceString;
-                formatToPlainStringResult = formatToPlainString(isCurrentPlan ? t2.V6iX43 : t2.AbOLNu, obj5);
-              }
-              tmp7 = formatToPlainStringResult;
-            } else {
-              tmp8 = isGift;
-              tmp9 = closure_0;
-              tmp10 = closure_2;
-              intl2 = closure_0(closure_2[10]).intl;
-              formatToPlainString2 = intl2.formatToPlainString;
-              if (isGift) {
-                obj6 = { price: null };
-                obj6.price = priceString;
-                formatToPlainString2Result = formatToPlainString2(tmp9(tmp10[10]).t.rm53bV, obj6);
-              } else {
-                tmp2 = isCurrentPlan;
-                t = tmp9(tmp10[10]).t;
-                obj = { price: null };
-                obj.price = priceString;
-                formatToPlainString2Result = formatToPlainString2(isCurrentPlan ? t.dFbQCa : t["rS8FA+"], obj);
-              }
-              return formatToPlainString2Result;
-            }
-            return;
-          }
-        }
+        cResult[13] = intervalType;
         cResult[14] = tmp12Result;
         cResult[15] = style;
         cResult[16] = 1;
@@ -221,7 +172,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((isGift) => {
         num3 = 1;
         tmp18 = style;
         tmp17 = tmp12Result;
-        tmp16 = intervalType;
+        tmp16 = tmp22;
         tmp15 = LegacyText;
       }
     }
@@ -233,61 +184,47 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((isGift) => {
   if (product != null) {
     priceString1 = product.priceString;
   }
-  class E {
-    constructor() {
-      priceString = undefined;
-      if (product != null) {
-        priceString = product.priceString;
-      }
-      if (priceString == null) {
-        priceString = PRICE_PLACEHOLDER;
-      }
-      if (intervalType === SubscriptionIntervalTypes.MONTH) {
-        tmp4 = isGift;
-        FIjgMp = closure_0;
-        obj1 = closure_2;
-        intl = closure_0(closure_2[10]).intl;
-        formatToPlainString = intl.formatToPlainString;
-        if (isGift) {
-          FIjgMp = FIjgMp(obj1[10]).t.FIjgMp;
-          obj1 = { price: null };
-          obj1.price = priceString;
-          formatToPlainStringResult = formatToPlainString(FIjgMp, obj1);
-        } else {
-          tmp5 = isCurrentPlan;
-          t2 = FIjgMp(obj1[10]).t;
-          obj5 = { price: null };
-          obj5.price = priceString;
-          formatToPlainStringResult = formatToPlainString(isCurrentPlan ? t2.V6iX43 : t2.AbOLNu, obj5);
-        }
-        tmp7 = formatToPlainStringResult;
+  function getPremiumText() {
+    let priceString;
+    if (product != null) {
+      priceString = product.priceString;
+    }
+    if (priceString == null) {
+      priceString = hasOwnProperty;
+    }
+    if (intervalType === constants.MONTH) {
+      let FIjgMp = require;
+      let obj2 = dependencyMap;
+      const intl = util.intl;
+      const formatToPlainString = intl.formatToPlainString;
+      if (isGift) {
+        FIjgMp = FIjgMp(1126).t.FIjgMp;
+        obj2 = { price: priceString };
+        let formatToPlainStringResult = formatToPlainString(FIjgMp, obj2);
       } else {
-        tmp8 = isGift;
-        tmp9 = closure_0;
-        tmp10 = closure_2;
-        intl2 = closure_0(closure_2[10]).intl;
-        formatToPlainString2 = intl2.formatToPlainString;
-        if (isGift) {
-          obj6 = { price: null };
-          obj6.price = priceString;
-          formatToPlainString2Result = formatToPlainString2(tmp9(tmp10[10]).t.rm53bV, obj6);
-        } else {
-          tmp2 = isCurrentPlan;
-          t = tmp9(tmp10[10]).t;
-          obj = { price: null };
-          obj.price = priceString;
-          formatToPlainString2Result = formatToPlainString2(isCurrentPlan ? t.dFbQCa : t["rS8FA+"], obj);
-        }
-        return formatToPlainString2Result;
+        const t2 = FIjgMp(1126).t;
+        const obj3 = { price: priceString };
+        formatToPlainStringResult = formatToPlainString(isCurrentPlan ? t2.V6iX43 : t2.AbOLNu, obj3);
       }
-      return;
+    } else {
+      const intl2 = util.intl;
+      const formatToPlainString2 = intl2.formatToPlainString;
+      if (isGift) {
+        const obj4 = { price: priceString };
+        let formatToPlainString2Result = formatToPlainString2(util.t.rm53bV, obj4);
+      } else {
+        const t = util.t;
+        const obj = { price: priceString };
+        formatToPlainString2Result = formatToPlainString2(isCurrentPlan ? t.dFbQCa : t["rS8FA+"], obj);
+      }
+      return formatToPlainString2Result;
     }
   }
   cResult[5] = priceString1;
-  cResult[6] = E;
-  tmp12 = E;
+  cResult[6] = getPremiumText;
+  tmp12 = getPremiumText;
   let obj = isCurrentPlan(576);
-}) : ((basePlanId) => {
+}) : (function PremiumText(basePlanId) {
   ({ style, isCurrentPlan, isGift, product, text } = basePlanId);
   const tmp = closure_9();
   const intervalType = PremiumUtilsDefault.getInterval(basePlanId.basePlanId).intervalType;

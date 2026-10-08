@@ -1,25 +1,25 @@
-// === Module 11016: OrbLottieAnimation ===
+// === Module 11191: OrbLottieAnimation ===
 
-// Module 11016 (OrbLottieAnimation)
+// Module 11191 (OrbLottieAnimation)
 import c from "c" /* 576 */;
-import shared from "shared" /* 4735 */;
-import useTheme from "useTheme" /* 4797 */;
-import SpendEarnOrbsLightThemeLottie from "SpendEarnOrbsLightThemeLottie" /* 11017 */;
-import SpendEarnOrbsLottie2 from "SpendEarnOrbsLottie" /* 11019 */;
+import shared from "shared" /* 4929 */;
+import useTheme from "useTheme" /* 4991 */;
+import SpendEarnOrbsLightThemeLottie from "SpendEarnOrbsLightThemeLottie" /* 11192 */;
+import SpendEarnOrbsLottie2 from "SpendEarnOrbsLottie" /* 11194 */;
 import "module_19";
 
 require = fn;
 const noop = fn(19);
-({ useRef: c3, useEffect: closure_4, forwardRef } = noop);
+({ useRef: c3, useEffect: closure_4 } = noop);
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
-const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((animationType, arg1) => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function OrbLottieAnimation(animationType) {
   const cResult = c.c(7);
   animationType = animationType.animationType;
   const theme = useTheme.useTheme();
   const tmp6 = React3(null);
   if (cResult[0] !== animationType) {
-    const fn = function p() {
+    const fn = function s() {
       if (null !== animationType) {
         const current = ref.current;
         if (current != null) {
@@ -39,7 +39,7 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
   }
   React4(tmp7, tmp8);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn2 = function h() {
+    const fn2 = function p() {
       return {
         play() {
           const current = ref.current;
@@ -56,7 +56,7 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
   } else {
     tmp10 = cResult[3];
   }
-  const imperativeHandle = noop.useImperativeHandle(arg1, tmp10);
+  const imperativeHandle = noop.useImperativeHandle(animationType.ref, tmp10);
   if (isThemeLightResult) {
     let SpendEarnOrbsLottie = SpendEarnOrbsLightThemeLottie.SpendEarnOrbsLightThemeLottie;
   } else {
@@ -78,7 +78,7 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
   cResult[6] = tmp13;
   tmp12 = tmp13;
   isThemeLightResult = shared.isThemeLight(theme);
-}) : ((animationType, arg1) => {
+}) : (function OrbLottieAnimation(animationType) {
   animationType = animationType.animationType;
   const theme = useTheme.useTheme();
   const tmp5 = React3(null);
@@ -91,7 +91,7 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
       }
     }
   }, items);
-  const imperativeHandle = noop.useImperativeHandle(arg1, () => ({
+  const imperativeHandle = noop.useImperativeHandle(animationType.ref, () => ({
     play() {
       const current = ref.current;
       let playResult;
@@ -113,10 +113,9 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
   }
   size.animation = str;
   return <SpendEarnOrbsLottie ref={tmp5} size="custom" width={60} height={60} opacity={0.8} animation={null} useLottieDefaultColors />;
-}));
-forwardRefResult.displayName = "OrbsLottieAnimation";
+});
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/virtual_currency/native/OrbLottieAnimation.tsx");
 
-export default forwardRefResult;
-export const OrbLottieAnimation = forwardRefResult;
+export default tmp3;
+export const OrbLottieAnimation = tmp3;

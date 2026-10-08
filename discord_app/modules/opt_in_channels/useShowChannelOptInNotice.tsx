@@ -1,18 +1,18 @@
-// === Module 11092: useShowChannelOptInNotice ===
+// === Module 10456: useShowChannelOptInNotice ===
 
-// Module 11092 (useShowChannelOptInNotice)
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5077 */;
+// Module 10456 (useShowChannelOptInNotice)
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5971 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const NULL_STRING_GUILD_ID = fn(1085).NULL_STRING_GUILD_ID;
-const ChannelFlags = fn(2058).ChannelFlags;
+const ChannelFlags = fn(2070).ChannelFlags;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/opt_in_channels/useShowChannelOptInNotice.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((getGuildId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useShowChannelOptInNotice(getGuildId) {
   _require = getGuildId;
   const cResult = require("c").c(11);
   const obj = require("c");
@@ -97,7 +97,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((getGuildId) => {
     tmp12 = hasFlagResult;
   }
   const tmpResult2 = require("OnboardingHomeUtils");
-}) : ((getGuildId) => {
+}) : (function useShowChannelOptInNotice(getGuildId) {
   _require = getGuildId;
   let guildId;
   if (getGuildId != null) {

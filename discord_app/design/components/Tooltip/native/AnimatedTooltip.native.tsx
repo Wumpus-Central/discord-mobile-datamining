@@ -1,12 +1,12 @@
-// === Module 9897: AnimatedTooltip ===
+// === Module 9377: AnimatedTooltip ===
 
-// Module 9897 (AnimatedTooltip)
+// Module 9377 (AnimatedTooltip)
 import c from "c" /* 576 */;
-import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 4602 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4618 */;
-import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 9660 */;
-import Tooltip from "Tooltip" /* 9898 */;
-import TooltipConstants from "TooltipConstants" /* 9900 */;
+import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 4794 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4810 */;
+import Tooltip from "Tooltip" /* 9378 */;
+import TooltipConstants from "TooltipConstants" /* 9380 */;
+import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 9381 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -32,7 +32,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/Tooltip/native/AnimatedTooltip.native.tsx");
 
-export const AnimatedTooltip = ReactCompilerGating.isReactCompilerEnabled() ? ((visible) => {
+export const AnimatedTooltip = ReactCompilerGating.isReactCompilerEnabled() ? (function AnimatedTooltip(visible) {
   const cResult = c.c(7);
   visible = visible.visible;
   const tmp3 = _objectWithoutProperties(visible, closure_3);
@@ -74,7 +74,7 @@ export const AnimatedTooltip = ReactCompilerGating.isReactCompilerEnabled() ? ((
   tmp11 = tmp12;
   const obj4 = { useReducedMotion: enabled, item: tmp10, entering: result, exiting: result, renderItem: renderTooltipItem };
   const tmp5 = _slicedToArray(noop.useState(false), 2);
-}) : ((visible) => {
+}) : (function AnimatedTooltip(visible) {
   visible = visible.visible;
   const merged = Object.assign(visible, Object.assign({ visible: 0 }));
   const result = TooltipConstants.tooltipEnterExitAnimation(merged.position);

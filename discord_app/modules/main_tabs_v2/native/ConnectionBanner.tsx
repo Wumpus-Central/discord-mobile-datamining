@@ -1,31 +1,31 @@
-// === Module 16378: ConnectionBanner ===
+// === Module 16638: ConnectionBanner ===
 
-// Module 16378 (ConnectionBanner)
+// Module 16638 (ConnectionBanner)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
 import util from "util" /* 1126 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import useToken from "useToken" /* 4586 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import spring from "spring" /* 5604 */;
-import LinearGradientDefault from "LinearGradient" /* 5612 */;
-import _modDef6059 from "module_6059" /* 6059 */;
-import ConnectionIndicatorExperimentDefault from "ConnectionIndicatorExperiment" /* 13514 */;
-import ConnectionUnknownIcon from "ConnectionUnknownIcon" /* 16379 */;
-import ConnectionFineIcon from "ConnectionFineIcon" /* 16381 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import useToken from "useToken" /* 4778 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import spring from "spring" /* 5374 */;
+import LinearGradientDefault from "LinearGradient" /* 5387 */;
+import _modDef6245 from "module_6245" /* 6245 */;
+import ConnectionIndicatorExperimentDefault from "ConnectionIndicatorExperiment" /* 13811 */;
+import ConnectionUnknownIcon from "ConnectionUnknownIcon" /* 16639 */;
+import ConnectionFineIcon from "ConnectionFineIcon" /* 16641 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConnectivityIndicatorStateStore from "ConnectivityIndicatorStateStore" /* 13513 */;
+import ConnectivityIndicatorStateStore from "ConnectivityIndicatorStateStore" /* 13810 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const constants = fn(13513).ConnectivityIndicatorState;
-const YouBarConstants = fn(14915);
+const constants = fn(13810).ConnectivityIndicatorState;
+const YouBarConstants = fn(15177);
 const CONNECTION_BANNER_HEIGHT = YouBarConstants.CONNECTION_BANNER_HEIGHT;
 const YOU_BAR_SPRING_CONFIG = YouBarConstants.YOU_BAR_SPRING_CONFIG;
 const AnalyticEvents = fn(1085).AnalyticEvents;
@@ -38,7 +38,7 @@ const end = { x: 1, y: 0.5 };
 const locations2 = [0, 0.4, 0.75, 1];
 const start2 = { x: 0, y: 0 };
 const end2 = { x: 0, y: 1 };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { position: "absolute", left: 0, right: 0, bottom: 0 }, glow: { position: "absolute", top: 0, bottom: 0, left: 0, right: 0 }, glowMaskGradient: { flex: 1 }, content: null, leadingSlot: null, spinner: null };
 const rect = { position: "absolute", top: 0, left: 0, right: 0, height: CONNECTION_BANNER_HEIGHT, flexDirection: "row", alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_12 };
 obj2.content = rect;
@@ -49,7 +49,7 @@ obj3.transform = items;
 obj2.spinner = obj3;
 let closure_21 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? ((state) => {
+let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectionBannerIcon(state) {
   const cResult = c.c(12);
   state = state.state;
   const tmp4 = closure_21();
@@ -119,7 +119,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? ((state) => {
     }
     return tmp12;
   }
-}) : ((state) => {
+}) : (function ConnectionBannerIcon(state) {
   state = state.state;
   const tmp = closure_21();
   useToken;
@@ -141,7 +141,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? ((state) => {
   }
 });
 ReactCompilerGating = fn(558);
-let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((state) => {
+let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectionBannerContent(state) {
   const cResult = c.c(11);
   state = state.state;
   const tmp4 = closure_21();
@@ -202,7 +202,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((state) => {
     cResult[6] = tmp15;
     tmp13 = tmp15;
   }
-}) : ((state) => {
+}) : (function ConnectionBannerContent(state) {
   state = state.state;
   const obj = { style: closure_21().content, children: null };
   const items = [__initData(closure_22, { state }), ];
@@ -227,7 +227,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((state) => {
   return __initData2(timestampProducer, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((progress) => {
+let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function BackOnlineGlow(progress) {
   const cResult = c.c(27);
   progress = progress.progress;
   const tmp3 = closure_21();
@@ -308,7 +308,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((progress) => {
               }
             }
             const obj7 = { style: tmp3.glow, maskElement: tmp17, children: tmp24 };
-            const tmp32 = __initData(_modDef6059, obj7);
+            const tmp32 = __initData(_modDef6245, obj7);
             cResult[20] = tmp3.glow;
             cResult[21] = tmp17;
             cResult[22] = tmp24;
@@ -337,10 +337,10 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((progress) => {
   cResult[8] = tmp9;
   cResult[9] = items1;
   tmp14 = items1;
-}) : ((opacity) => {
+}) : (function BackOnlineGlow(opacity) {
   let token;
   const tmp = closure_21();
-  token = token(4586).useToken(nativeDefault.colors.ICON_FEEDBACK_POSITIVE);
+  token = token(4778).useToken(nativeDefault.colors.ICON_FEEDBACK_POSITIVE);
   let items = [token];
   const memo = noop.useMemo(() => {
     const obj = _modDef683(token);
@@ -357,14 +357,14 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((progress) => {
   const items1 = [tmp.glow, { opacity: opacity.progress }];
   obj2.style = items1;
   const obj3 = { style: tmp.glow, maskElement: null, children: null };
-  let obj = token(4586);
+  let obj = token(4778);
   obj3.maskElement = closure_12(LinearGradientDefault, { style: tmp.glowMaskGradient, colors, locations, start, end });
   obj3.children = closure_12(LinearGradientDefault, { style: tmp.glowMaskGradient, colors: memo, locations: locations2, start: start2, end: end2 });
-  obj2.children = closure_12(_modDef6059, obj3);
+  obj2.children = closure_12(_modDef6245, obj3);
   return closure_12(ReanimatedRexportDefault.View, obj2);
 });
 ReactCompilerGating = fn(558);
-let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConnectivityIndicatorAnalytics(arg0) {
   _require = arg0;
   const cResult = require("c").c(6);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -430,7 +430,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   tmp9 = items1;
   tmp8 = N;
   const tmpResult = require("initialize");
-}) : ((arg0) => {
+}) : (function useConnectivityIndicatorAnalytics(arg0) {
   _require = arg0;
   const items = [ConnectivityIndicatorStateStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => state.getState());
@@ -459,12 +459,12 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
   }, items1);
 });
-let closure_26 = { code: "function ConnectionBannerTsx1(finished){const{shouldShowBanner,runOnJS,setRenderState}=this.__closure;if(finished===true&&!shouldShowBanner){runOnJS(setRenderState)(null);}}" };
-const __initData = { code: "function ConnectionBannerTsx2(){const{progress,CONNECTION_BANNER_HEIGHT}=this.__closure;return{transform:[{translateY:(1-progress.get())*CONNECTION_BANNER_HEIGHT}],opacity:progress.get()};}" };
+const __initData = { code: "function ConnectionBannerTsx1(finished){const{shouldShowBanner,runOnJS,setRenderState}=this.__closure;if(finished===true&&!shouldShowBanner){runOnJS(setRenderState)(null);}}" };
+const __initData2 = { code: "function ConnectionBannerTsx2(){const{progress,CONNECTION_BANNER_HEIGHT}=this.__closure;return{transform:[{translateY:(1-progress.get())*CONNECTION_BANNER_HEIGHT}],opacity:progress.get()};}" };
 let closure_28 = { code: "function ConnectionBannerTsx3(finished){const{shouldShowBanner,runOnJS,setRenderState}=this.__closure;if(finished===true&&!shouldShowBanner){runOnJS(setRenderState)(null);}}" };
-const __initData2 = { code: "function ConnectionBannerTsx4(){const{progress,CONNECTION_BANNER_HEIGHT}=this.__closure;return{transform:[{translateY:(1-progress.get())*CONNECTION_BANNER_HEIGHT}],opacity:progress.get()};}" };
+const __initData3 = { code: "function ConnectionBannerTsx4(){const{progress,CONNECTION_BANNER_HEIGHT}=this.__closure;return{transform:[{translateY:(1-progress.get())*CONNECTION_BANNER_HEIGHT}],opacity:progress.get()};}" };
 ReactCompilerGating = fn(558);
-let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectionBannerInner() {
   const cResult = require("c").c(25);
   const tmp4 = closure_21();
   let obj = require("c");
@@ -493,7 +493,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   sharedValue = require("ReanimatedRexport").useSharedValue(0);
   const tmpResult4 = require("ReanimatedRexport");
   [tmp16, tmp17] = sharedValue1.useState(tmp13);
-  _slicedToArray = tmp17;
+  const _slicedToArray = tmp17;
   const tmp15 = _slicedToArray(sharedValue1.useState(tmp13), 2);
   sharedValue1 = require("ReanimatedRexport").useSharedValue(0);
   if (tmp19) {
@@ -526,7 +526,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       const obj3 = { progress: sharedValue1, CONNECTION_BANNER_HEIGHT };
       L.__closure = obj3;
       L.__workletHash = 13973493587548;
-      L.__initData = __initData;
+      L.__initData = __initData2;
       const animatedStyle = tmp(tmp2[19]).useAnimatedStyle(L);
       if (cResult[10] !== sum) {
         const obj4 = { height: sum };
@@ -635,7 +635,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       tmp32 = items2;
       const tmpResult6 = tmp(tmp2[19]);
     }
-    const fn3 = function f() {
+    const fn2 = function f() {
       let num = 0;
       if (closure_1) {
         num = 1;
@@ -645,40 +645,47 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const items3 = [, sharedValue];
     cResult[6] = sharedValue;
     cResult[7] = tmp12;
-    cResult[8] = fn3;
+    cResult[8] = fn2;
     cResult[9] = items3;
     tmp25 = items3;
-    tmp24 = fn3;
+    tmp24 = fn2;
   }
-  const fn2 = function h() {
-    let num = 0;
-    if (shouldShowBanner) {
-      num = 1;
-    }
-    const fn = function t(arg0) {
-      if (!tmp) {
-        closure_0(sharedValue[19]).runOnJS(setRenderState)(null);
-        const obj = closure_0(sharedValue[19]);
+  class I {
+    constructor() {
+      tmp = closure_4;
+      tmp2 = closure_0;
+      tmp3 = closure_2;
+      obj = closure_0(closure_2[23]);
+      num = 0;
+      tmp4 = closure_0;
+      if (closure_0) {
+        num = 1;
       }
-      tmp = true !== arg0 || shouldShowBanner;
-    };
-    let obj = spring;
-    fn.__closure = { shouldShowBanner, runOnJS: ReanimatedRexport.runOnJS, setRenderState };
-    fn.__workletHash = 3065113239920;
-    fn.__initData = __initData;
-    const result = sharedValue1.set(obj.withSpring(num, YOU_BAR_SPRING_CONFIG, "respect-motion-settings", fn));
-    const obj2 = { shouldShowBanner, runOnJS: ReanimatedRexport.runOnJS, setRenderState };
-  };
+      fn = function n(arg0) {
+        if (!tmp) {
+          closure_0(sharedValue[19]).runOnJS(setRenderState)(null);
+          const obj = closure_0(sharedValue[19]);
+        }
+        tmp = true !== arg0 || shouldShowBanner;
+      };
+      obj1 = { shouldShowBanner: tmp4, runOnJS: tmp2(tmp3[19]).runOnJS, setRenderState: closure_3 };
+      fn.__closure = obj1;
+      fn.__workletHash = 3065113239920;
+      fn.__initData = closure_26;
+      result = closure_4.set(obj.withSpring(num, YOU_BAR_SPRING_CONFIG, "respect-motion-settings", fn));
+      return;
+    }
+  }
   const items4 = [stateFromStores !== constants.HIDDEN, sharedValue1];
   cResult[2] = sharedValue1;
   cResult[3] = stateFromStores !== constants.HIDDEN;
-  cResult[4] = fn2;
+  cResult[4] = I;
   cResult[5] = items4;
   tmp22 = items4;
-  tmp21 = fn2;
+  tmp21 = I;
   tmp19 = null != tmp13 && tmp16 !== tmp13;
   const tmpResult5 = require("ReanimatedRexport");
-}) : (() => {
+}) : (function ConnectionBannerInner() {
   let tmp = closure_21();
   const youBarBottomMargin = require("useYouBarMargins").useYouBarBottomMargin();
   let obj = require("useYouBarMargins");
@@ -694,7 +701,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   sharedValue = require("ReanimatedRexport").useSharedValue(0);
   const tmp2Result = require("ReanimatedRexport");
   [tmp12, tmp13] = sharedValue1.useState(tmp9);
-  _slicedToArray = tmp13;
+  const _slicedToArray = tmp13;
   const tmp11 = _slicedToArray(sharedValue1.useState(tmp9), 2);
   sharedValue1 = require("ReanimatedRexport").useSharedValue(0);
   if (tmp15) {
@@ -706,7 +713,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     if (shouldShowBanner) {
       num = 1;
     }
-    const fn = function t(arg0) {
+    const fn = function n(arg0) {
       if (!tmp) {
         closure_0(sharedValue[19]).runOnJS(setRenderState)(null);
         const obj = closure_0(sharedValue[19]);
@@ -730,7 +737,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }, items2);
   tmp15 = null != tmp9 && tmp12 !== tmp9;
   const tmp2Result3 = require("ReanimatedRexport");
-  let fn = function w() {
+  let fn = function v() {
     const obj = { transform: null, opacity: null };
     const items = [{ translateY: (1 - sharedValue1.get()) * CONNECTION_BANNER_HEIGHT }];
     obj.transform = items;
@@ -739,7 +746,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   };
   fn.__closure = { progress: sharedValue1, CONNECTION_BANNER_HEIGHT };
   fn.__workletHash = 4433680948698;
-  fn.__initData = __initData2;
+  fn.__initData = __initData3;
   const animatedStyle = require("ReanimatedRexport").useAnimatedStyle(fn);
   const obj5 = { pointerEvents: "none", style: null, children: null };
   const items3 = [tmp.container, { height: youBarBottomMargin + CONNECTION_BANNER_HEIGHT }, animatedStyle];
@@ -763,7 +770,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/ConnectionBanner.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectionBanner() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { location: "ConnectionBanner" };
@@ -787,7 +794,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
   }
   return tmp6;
-}) : (() => {
+}) : (function ConnectionBanner() {
   const config = ConnectionIndicatorExperimentDefault.useConfig({ location: "ConnectionBanner" });
   const hidden = config.hidden;
   closure_25(hidden);

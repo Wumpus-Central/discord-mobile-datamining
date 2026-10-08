@@ -1,12 +1,12 @@
-// === Module 10566: SocialLayerStorefrontGiftModal ===
+// === Module 10163: SocialLayerStorefrontGiftModal ===
 
-// Module 10566 (SocialLayerStorefrontGiftModal)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10544 */;
-import SocialLayerStorefrontGiftProductDetailsDefault from "SocialLayerStorefrontGiftProductDetails" /* 10568 */;
-import SocialLayerStorefrontGiftPurchaseSectionDefault from "SocialLayerStorefrontGiftPurchaseSection" /* 10569 */;
+// Module 10163 (SocialLayerStorefrontGiftModal)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10141 */;
+import SocialLayerStorefrontGiftProductDetailsDefault from "SocialLayerStorefrontGiftProductDetails" /* 10165 */;
+import SocialLayerStorefrontGiftPurchaseSectionDefault from "SocialLayerStorefrontGiftPurchaseSection" /* 10166 */;
 import noop from "module_19" /* 19 */;
-import SKUStore from "SKUStore" /* 5702 */;
+import SKUStore from "SKUStore" /* 6092 */;
 
 require = fn;
 const Constants = fn(1085);
@@ -16,7 +16,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/slayer_storefront/native/SocialLayerStorefrontGiftModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((skuId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SocialLayerStorefrontGiftModal(skuId) {
   const cResult = skuId(stateFromStores[5]).c(45);
   skuId = skuId.skuId;
   ({ analyticsLocations, lockedRecipientUser, onGiftModalDismiss, giftingOrigin } = skuId);
@@ -225,7 +225,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((skuId) => {
       }
     }
   }
-  class R {
+  class G {
     constructor() {
       obj = closure_1(closure_2[11]);
       obj1 = { location_stack: analyticsLocations, type: closure_0(closure_2[12]).SOCIAL_LAYER_STOREFRONT_GIFT_MODAL_KEY, sku_id: skuId, application_id: null };
@@ -240,10 +240,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((skuId) => {
   }
   cResult[8] = undefined;
   cResult[9] = skuId;
-  cResult[10] = R;
-  tmp20 = R;
+  cResult[10] = G;
+  tmp20 = G;
   tmpResult3 = skuId(stateFromStores[9]);
-}) : ((skuId) => {
+}) : (function SocialLayerStorefrontGiftModal(skuId) {
   skuId = skuId.skuId;
   ({ analyticsLocations, onGiftModalDismiss, giftingOrigin } = skuId);
   let applicationId;

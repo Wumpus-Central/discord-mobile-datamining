@@ -1,10 +1,10 @@
-// === Module 16125: GuildThemeNuxUtils ===
+// === Module 16385: GuildThemeNuxUtils ===
 
-// Module 16125 (GuildThemeNuxUtils)
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 2033 */;
-import Client from "Client" /* 4793 */;
+// Module 16385 (GuildThemeNuxUtils)
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 2045 */;
+import Client from "Client" /* 4987 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
 
 require = fn;
 let closure_4 = async function _saveGuildThemeNuxPreference(arg0) {

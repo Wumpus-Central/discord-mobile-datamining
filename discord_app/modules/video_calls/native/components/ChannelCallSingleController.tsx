@@ -1,21 +1,21 @@
-// === Module 9719: ChannelCallSingleController ===
+// === Module 10924: ChannelCallSingleController ===
 
-// Module 9719 (ChannelCallSingleController)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5076 */;
+// Module 10924 (ChannelCallSingleController)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5105 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4918 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5893 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const ParticipantTypes = fn(4917).ParticipantTypes;
+const ParticipantTypes = fn(5113).ParticipantTypes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/components/ChannelCallSingleController.tsx");
 
-export const ChannelCallSingleController = ReactCompilerGating.isReactCompilerEnabled() ? ((selectedParticipant) => {
+export const ChannelCallSingleController = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelCallSingleController(selectedParticipant) {
   const cResult = selectedParticipant(576).c(14);
   selectedParticipant = selectedParticipant.selectedParticipant;
   const channel = selectedParticipant.channel;
@@ -42,15 +42,15 @@ export const ChannelCallSingleController = ReactCompilerGating.isReactCompilerEn
     cResult[3] = items1;
   }
   if (cResult[4] !== selectedParticipant.id) {
-    class S {
+    class E {
       constructor() {
         return closure_4.getActiveStreamForStreamKey(selectedParticipant.id);
       }
     }
     cResult[4] = selectedParticipant.id;
-    cResult[5] = S;
+    cResult[5] = E;
   } else {
-    class S {
+    class E {
       constructor() {
         return closure_4.getActiveStreamForStreamKey(selectedParticipant.id);
       }
@@ -58,14 +58,14 @@ export const ChannelCallSingleController = ReactCompilerGating.isReactCompilerEn
   }
   selectedParticipant(504);
   if (ParticipantTypes.STREAM === selectedParticipant.type) {
-    class S {
+    class E {
       constructor() {
         return closure_4.getActiveStreamForStreamKey(selectedParticipant.id);
       }
     }
     const id = selectedParticipant.user.id;
     if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-      class S {
+      class E {
         constructor() {
           return closure_4.getActiveStreamForStreamKey(selectedParticipant.id);
         }
@@ -73,33 +73,33 @@ export const ChannelCallSingleController = ReactCompilerGating.isReactCompilerEn
       const id1 = AuthenticationStore.getId();
       cResult[6] = id1;
     } else {
-      class S {
+      class E {
         constructor() {
           return closure_4.getActiveStreamForStreamKey(selectedParticipant.id);
         }
       }
     }
     if (null == tmp11) {
-      class S {
+      class E {
         constructor() {
           return closure_4.getActiveStreamForStreamKey(selectedParticipant.id);
         }
       }
     } else {
-      class S {
+      class E {
         constructor() {
           return closure_4.getActiveStreamForStreamKey(selectedParticipant.id);
         }
       }
       if (cResult[7] === channel) {
-        class S {
+        class E {
           constructor() {
             return closure_4.getActiveStreamForStreamKey(selectedParticipant.id);
           }
         }
       }
       let tmp17 = channel;
-      tmp17 = tmp17(tmp15 ? 9720 : 9722);
+      tmp17 = tmp17(tmp15 ? 10925 : 10927);
       let obj2 = { participant: selectedParticipant, channel };
       const tmp16Result = <tmp17 participant={selectedParticipant} channel={channel} />;
       cResult[7] = channel;
@@ -108,14 +108,14 @@ export const ChannelCallSingleController = ReactCompilerGating.isReactCompilerEn
       cResult[10] = tmp16Result;
     }
   } else {
-    class S {
+    class E {
       constructor() {
         return closure_4.getActiveStreamForStreamKey(selectedParticipant.id);
       }
     }
   }
   let obj = selectedParticipant(576);
-}) : ((selectedParticipant) => {
+}) : (function ChannelCallSingleController(selectedParticipant) {
   selectedParticipant = selectedParticipant.selectedParticipant;
   const channel = selectedParticipant.channel;
   const items = [channel.id];
@@ -133,13 +133,13 @@ export const ChannelCallSingleController = ReactCompilerGating.isReactCompilerEn
       return null;
     } else {
       let tmp18 = channel;
-      tmp18 = tmp18(selectedParticipant.user.id === tmp15 ? 9720 : 9722);
+      tmp18 = tmp18(selectedParticipant.user.id === tmp15 ? 10925 : 10927);
       let obj2 = { participant: selectedParticipant, channel };
       <tmp18 participant={selectedParticipant} channel={channel} />;
     }
   } else if (ParticipantTypes.USER === type) {
     let obj = { participant: selectedParticipant, channel };
-    return jsx(channel(9723), { participant: selectedParticipant, channel });
+    return jsx(channel(10928), { participant: selectedParticipant, channel });
   } else if (ParticipantTypes.HIDDEN_STREAM === type) {
     return null;
   } else if (ParticipantTypes.ACTIVITY === type) {

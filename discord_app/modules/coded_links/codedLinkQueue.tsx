@@ -1,11 +1,11 @@
-// === Module 17592: codedLinkQueue ===
+// === Module 17874: codedLinkQueue ===
 
-// Module 17592 (codedLinkQueue)
+// Module 17874 (codedLinkQueue)
 import LoggerDefault from "Logger" /* 3 */;
-import _modDef17593 from "module_17593" /* 17593 */;
+import _modDef17875 from "module_17875" /* 17875 */;
 
 const logger = new LoggerDefault("codedLinkQueue");
-const obj = new _modDef17593({ concurrency: 5, intervalCap: 10, interval: 2000 });
+const obj = new _modDef17875({ concurrency: 5, intervalCap: 10, interval: 2000 });
 obj.on("add", () => {
   if (obj.size > 0) {
     logger.warn("Message link fetch queue backlog:", tmp.size);

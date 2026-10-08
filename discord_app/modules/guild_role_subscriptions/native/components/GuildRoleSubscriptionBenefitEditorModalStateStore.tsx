@@ -1,36 +1,36 @@
-// === Module 17993: GuildRoleSubscriptionBenefitEditorModalStateStore ===
+// === Module 18280: GuildRoleSubscriptionBenefitEditorModalStateStore ===
 
-// Module 17993 (GuildRoleSubscriptionBenefitEditorModalStateStore)
+// Module 18280 (GuildRoleSubscriptionBenefitEditorModalStateStore)
 import c from "c" /* 576 */;
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
-import _mod4498 from "module_4498" /* 4498 */;
-import identity from "module_1254" /* 1254 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1271 */;
+import _mod4690 from "module_4690" /* 4690 */;
+import identity from "module_1266" /* 1266 */;
 import "ReactCompilerGating";
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
-let closure_2 = Object.freeze({ name: "", emojiId: "backgroundColor", emojiName: "text", description: "guild_id", refId: "Array" });
+let closure_2 = Object.freeze({ name: "", emojiId: "gap", emojiName: "Text", description: "code", refId: "shapes" });
 let closure_3 = identity.createWithEqualityFn((arg0) => {
   closure_0 = arg0;
   const obj = {};
   const merged = Object.assign(closure_2);
   obj.setEmojiId = function setEmojiId(emoji_id) {
     const emojiId = emoji_id;
-    emojiId(1259).batchUpdates(() => emojiId({ emojiId }));
+    emojiId(1271).batchUpdates(() => emojiId({ emojiId }));
   };
   obj.setEmojiName = function setEmojiName(emoji_name) {
     const emojiName = emoji_name;
-    emojiName(1259).batchUpdates(() => emojiName({ emojiName }));
+    emojiName(1271).batchUpdates(() => emojiName({ emojiName }));
   };
   obj.setName = function setName(name) {
-    name(1259).batchUpdates(() => name({ name }));
+    name(1271).batchUpdates(() => name({ name }));
   };
   obj.setDescription = function setDescription(description) {
-    description(1259).batchUpdates(() => description({ description }));
+    description(1271).batchUpdates(() => description({ description }));
   };
   obj.setRefId = function setRefId(ref_id) {
     const refId = ref_id;
-    refId(1259).batchUpdates(() => refId({ refId }));
+    refId(1271).batchUpdates(() => refId({ refId }));
   };
   obj.reset = function reset() {
     ReactBatchUpdates.batchUpdates(() => closure_1_0(closure_2_2));
@@ -38,7 +38,7 @@ let closure_3 = identity.createWithEqualityFn((arg0) => {
   return obj;
 });
 let ReactCompilerGating = ReactCompilerGating_mod;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDescriptionState() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function t(arg0) {
@@ -51,14 +51,16 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     first = cResult[0];
   }
-  return closure_3(first, _mod4498.shallow);
-}) : (() => closure_3((arg0) => {
-  const items = [, ];
-  ({ description: arr[0], setDescription: arr[1] } = arg0);
-  return items;
-}, _mod4498.shallow));
+  return closure_3(first, _mod4690.shallow);
+}) : (function useDescriptionState() {
+  return closure_3((arg0) => {
+    const items = [, ];
+    ({ description: arr[0], setDescription: arr[1] } = arg0);
+    return items;
+  }, _mod4690.shallow);
+});
 let ReactCompilerGating = ReactCompilerGating_mod;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEmojiIdState() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function t(arg0) {
@@ -71,14 +73,16 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     first = cResult[0];
   }
-  return closure_3(first, _mod4498.shallow);
-}) : (() => closure_3((arg0) => {
-  const items = [, ];
-  ({ emojiId: arr[0], setEmojiId: arr[1] } = arg0);
-  return items;
-}, _mod4498.shallow));
+  return closure_3(first, _mod4690.shallow);
+}) : (function useEmojiIdState() {
+  return closure_3((arg0) => {
+    const items = [, ];
+    ({ emojiId: arr[0], setEmojiId: arr[1] } = arg0);
+    return items;
+  }, _mod4690.shallow);
+});
 let ReactCompilerGating = ReactCompilerGating_mod;
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEmojiNameState() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function t(arg0) {
@@ -91,14 +95,16 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     first = cResult[0];
   }
-  return closure_3(first, _mod4498.shallow);
-}) : (() => closure_3((arg0) => {
-  const items = [, ];
-  ({ emojiName: arr[0], setEmojiName: arr[1] } = arg0);
-  return items;
-}, _mod4498.shallow));
+  return closure_3(first, _mod4690.shallow);
+}) : (function useEmojiNameState() {
+  return closure_3((arg0) => {
+    const items = [, ];
+    ({ emojiName: arr[0], setEmojiName: arr[1] } = arg0);
+    return items;
+  }, _mod4690.shallow);
+});
 let ReactCompilerGating = ReactCompilerGating_mod;
-const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useNameState() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function t(arg0) {
@@ -111,12 +117,14 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     first = cResult[0];
   }
-  return closure_3(first, _mod4498.shallow);
-}) : (() => closure_3((arg0) => {
-  const items = [, ];
-  ({ name: arr[0], setName: arr[1] } = arg0);
-  return items;
-}, _mod4498.shallow));
+  return closure_3(first, _mod4690.shallow);
+}) : (function useNameState() {
+  return closure_3((arg0) => {
+    const items = [, ];
+    ({ name: arr[0], setName: arr[1] } = arg0);
+    return items;
+  }, _mod4690.shallow);
+});
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitEditorModalStateStore.tsx");
 
 export const resetImperatively = function resetImperatively() {
@@ -141,7 +149,7 @@ export const useDescriptionState = tmp2;
 export const useEmojiIdState = tmp3;
 export const useEmojiNameState = tmp4;
 export const useNameState = tmp5;
-export const useRefIdState = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useRefIdState = ReactCompilerGating.isReactCompilerEnabled() ? (function useRefIdState() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function t(arg0) {
@@ -154,9 +162,11 @@ export const useRefIdState = ReactCompilerGating.isReactCompilerEnabled() ? (() 
   } else {
     first = cResult[0];
   }
-  return closure_3(first, _mod4498.shallow);
-}) : (() => closure_3((arg0) => {
-  const items = [, ];
-  ({ refId: arr[0], setRefId: arr[1] } = arg0);
-  return items;
-}, _mod4498.shallow));
+  return closure_3(first, _mod4690.shallow);
+}) : (function useRefIdState() {
+  return closure_3((arg0) => {
+    const items = [, ];
+    ({ refId: arr[0], setRefId: arr[1] } = arg0);
+    return items;
+  }, _mod4690.shallow);
+});

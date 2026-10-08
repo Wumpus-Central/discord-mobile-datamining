@@ -1,9 +1,9 @@
-// === Module 6500: Tracking ===
+// === Module 14783: settings/tracking/Tracking ===
 
-// Module 6500 (Tracking)
+// Module 14783 (settings/tracking/Tracking)
 import Constants from "Constants" /* 1085 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import SettingSearchSessionAnalyticsManagerDefault from "SettingSearchSessionAnalyticsManager" /* 6499 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import SettingSearchSessionAnalyticsManagerDefault from "SettingSearchSessionAnalyticsManager" /* 6676 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;
@@ -17,17 +17,4 @@ export const trackSettingSearchResultPress = function trackSettingSearchResultPr
   const obj = AnalyticsUtilsDefault;
   obj2.search_session_id = SettingSearchSessionAnalyticsManagerDefault.getSearchSessionId();
   obj.track(AnalyticEvents.USER_SETTINGS_SEARCH_RESULT_PRESS, obj2);
-};
-export const trackSettingSearchQueryEntered = function trackSettingSearchQueryEntered() {
-  const obj2 = { search_session_id: null };
-  const obj = AnalyticsUtilsDefault;
-  obj2.search_session_id = SettingSearchSessionAnalyticsManagerDefault.getSearchSessionId();
-  obj.track(AnalyticEvents.USER_SETTINGS_SEARCH_QUERY_ENTERED, obj2);
-};
-export const trackSettingSearchClosed = function trackSettingSearchClosed(searchSessionDuration) {
-  const obj2 = { search_session_id: null, search_session_duration_ms: null };
-  const obj = AnalyticsUtilsDefault;
-  obj2.search_session_id = SettingSearchSessionAnalyticsManagerDefault.getSearchSessionId();
-  obj2.search_session_duration_ms = searchSessionDuration.searchSessionDuration;
-  obj.track(AnalyticEvents.USER_SETTINGS_SEARCH_CLOSED, obj2);
 };

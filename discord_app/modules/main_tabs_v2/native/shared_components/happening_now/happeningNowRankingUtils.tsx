@@ -1,15 +1,15 @@
-// === Module 16031: happeningNowRankingUtils ===
+// === Module 16291: happeningNowRankingUtils ===
 
-// Module 16031 (happeningNowRankingUtils)
+// Module 16291 (happeningNowRankingUtils)
 import _mod12 from "module_12" /* 12 */;
-import GlobalUtils from "GlobalUtils" /* 1375 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
-import VoiceStateStore from "VoiceStateStore" /* 4915 */;
+import GlobalUtils from "GlobalUtils" /* 1387 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
+import VoiceStateStore from "VoiceStateStore" /* 5111 */;
 
 const _modDef12 = _mod12;
 
 require = fn;
-const HappeningNowConstants = fn(15129);
+const HappeningNowConstants = fn(15391);
 ({ HAPPENING_NOW_CARD_WIDTH_NORMAL_WITH_MARGIN: hasOwnProperty, HAPPENING_NOW_CARD_WIDTH_SMALL_WITH_MARGIN: metroRequire, HAPPENING_NOW_CARD_WIDTH_XSMALL_WITH_MARGIN: closure_7 } = HappeningNowConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/happeningNowRankingUtils.tsx");
@@ -95,7 +95,7 @@ export const filterHappeningNowCards = function filterHappeningNowCards(length) 
 };
 export const sortHappeningNowCards = function sortHappeningNowCards(result) {
   const items = [
-    (kind) => {
+    function bigCardsFirst(kind) {
       switch (kind.kind) {
         case "placeholder":
           let tmp = closure_1_5;
@@ -172,7 +172,7 @@ export const sortHappeningNowCards = function sortHappeningNowCards(result) {
           GlobalUtils.assertNever(kind);
       }
     },
-    (voiceState) => {
+    function containsNonDiscoverableVoiceStates(voiceState) {
       let flag = false;
       if ("voiceState" in voiceState) {
         flag = false;

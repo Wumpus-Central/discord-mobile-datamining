@@ -1,9 +1,9 @@
-// === Module 14740: FamilyCenterEmpty ===
+// === Module 15001: FamilyCenterEmpty ===
 
-// Module 14740 (FamilyCenterEmpty)
+// Module 15001 (FamilyCenterEmpty)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import _modDef14741 from "module_14741" /* 14741 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import _modDef15002 from "module_15002" /* 15002 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,18 +11,18 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({ art: { marginBottom: 10, width: 243 }, empty: { display: "flex", alignItems: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterEmpty.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((text) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCenterEmpty(text) {
   const cResult = c.c(8);
   text = text.text;
   const tmp4 = closure_7();
   if (cResult[0] !== tmp4.art) {
-    const obj2 = { source: _modDef14741, style: tmp4.art, resizeMethod: "scale" };
+    const obj2 = { source: _modDef15002, style: tmp4.art, resizeMethod: "scale" };
     const tmp9 = hasOwnProperty(React4, obj2);
     cResult[0] = tmp4.art;
     cResult[1] = tmp9;
@@ -56,10 +56,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((text) => {
   cResult[6] = tmp10;
   cResult[7] = tmp14;
   tmp13 = tmp14;
-}) : ((children) => {
+}) : (function FamilyCenterEmpty(children) {
   const tmp = closure_7();
   const obj = { style: tmp.empty, children: null };
-  const items = [hasOwnProperty(React4, { source: _modDef14741, style: tmp.art, resizeMethod: "scale" }), hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", children: children.text })];
+  const items = [hasOwnProperty(React4, { source: _modDef15002, style: tmp.art, resizeMethod: "scale" }), hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", children: children.text })];
   obj.children = items;
   return timestampProducer(React3, obj);
 });

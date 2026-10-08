@@ -1,21 +1,21 @@
-// === Module 4920: SortedVoiceStateStore ===
+// === Module 5114: SortedVoiceStateStore ===
 
-// Module 4920 (SortedVoiceStateStore)
+// Module 5114 (SortedVoiceStateStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
-import SecondaryIndexMap from "SecondaryIndexMap" /* 4510 */;
-import UserUtilsDefault from "UserUtils" /* 4728 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1209 */;
+import SecondaryIndexMap from "SecondaryIndexMap" /* 4702 */;
+import UserUtilsDefault from "UserUtils" /* 4922 */;
 import _slicedToArray from "module_32" /* 32 */;
-import FavoriteStore from "FavoriteStore" /* 2054 */;
-import UserRecord from "UserRecord" /* 1391 */;
+import FavoriteStore from "FavoriteStore" /* 2066 */;
+import UserRecord from "UserRecord" /* 1403 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import UserStore from "UserStore" /* 1377 */;
-import VoiceStateStore from "VoiceStateStore" /* 4915 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildMemberStore from "GuildMemberStore" /* 2124 */;
+import UserStore from "UserStore" /* 1389 */;
+import VoiceStateStore from "VoiceStateStore" /* 5111 */;
 
 require = fn;
 function getVoiceStatesForGuild(guildId) {

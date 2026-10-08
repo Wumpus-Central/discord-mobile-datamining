@@ -1,16 +1,16 @@
-// === Module 11023: BalanceWidgetPillButton ===
+// === Module 11198: BalanceWidgetPillButton ===
 
-// Module 11023 (BalanceWidgetPillButton)
+// Module 11198 (BalanceWidgetPillButton)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import _modDef8525 from "module_8525" /* 8525 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import _modDef9010 from "module_9010" /* 9010 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function BalanceWidgetPillButton(arg0) {
   const cResult = c.c(14);
   ({ balance, onPress, variant, accessible } = arg0);
   let str = "tertiary";
@@ -55,8 +55,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           }
         }
       }
-      const obj2 = { variant: str, onPress, size: "sm", text: tmp5, icon: _modDef8525, accessible: tmp4, accessibilityElementsHidden: tmp7, importantForAccessibility: str3, accessibilityLabel: cResult[4], disabled: tmp8, loading: tmp8 };
-      const tmp14 = jsx(components_Button_Button.Button, { variant: str, onPress, size: "sm", text: tmp5, icon: _modDef8525, accessible: tmp4, accessibilityElementsHidden: tmp7, importantForAccessibility: str3, accessibilityLabel: cResult[4], disabled: tmp8, loading: tmp8 });
+      const obj2 = { variant: str, onPress, size: "sm", text: tmp5, icon: _modDef9010, accessible: tmp4, accessibilityElementsHidden: tmp7, importantForAccessibility: str3, accessibilityLabel: cResult[4], disabled: tmp8, loading: tmp8 };
+      const tmp14 = jsx(components_Button_Button.Button, { variant: str, onPress, size: "sm", text: tmp5, icon: _modDef9010, accessible: tmp4, accessibilityElementsHidden: tmp7, importantForAccessibility: str3, accessibilityLabel: cResult[4], disabled: tmp8, loading: tmp8 });
       cResult[5] = tmp4;
       cResult[6] = tmp8;
       cResult[7] = onPress;
@@ -79,7 +79,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = balance;
   cResult[3] = null === balance;
   cResult[4] = stringResult;
-}) : ((accessible) => {
+}) : (function BalanceWidgetPillButton(accessible) {
   ({ balance, variant } = accessible);
   if (variant === undefined) {
     variant = "tertiary";
@@ -97,7 +97,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     str = "";
   }
   obj.text = str;
-  obj.icon = _modDef8525;
+  obj.icon = _modDef9010;
   obj.accessible = flag;
   obj.accessibilityElementsHidden = !flag;
   let str2 = "no";

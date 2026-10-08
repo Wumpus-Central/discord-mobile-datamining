@@ -1,7 +1,7 @@
-// === Module 9991: useCanRemoveAllReactions ===
+// === Module 9521: useCanRemoveAllReactions ===
 
-// Module 9991 (useCanRemoveAllReactions)
-import PermissionStore from "PermissionStore" /* 4515 */;
+// Module 9521 (useCanRemoveAllReactions)
+import PermissionStore from "PermissionStore" /* 4707 */;
 
 const require = globalThis.__r;
 
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/reactions/useCanRemoveAllReactions.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCanRemoveAllReactions(arg0) {
   _require = arg0;
   const cResult = require("c").c(5);
   const obj = require("c");
@@ -44,7 +44,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   tmp8 = items1;
   tmp7 = fn;
   const obj2 = require("ThreadHooks");
-}) : ((arg0) => {
+}) : (function useCanRemoveAllReactions(arg0) {
   _require = arg0;
   isActiveChannelOrUnarchivableThread = require("ThreadHooks").useIsActiveChannelOrUnarchivableThread(arg0);
   const obj = require("ThreadHooks");

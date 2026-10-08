@@ -1,8 +1,8 @@
-// === Module 7423: burst_reactions/BurstReactionEffectUtils ===
+// === Module 7898: burst_reactions/BurstReactionEffectUtils ===
 
-// Module 7423 (burst_reactions/BurstReactionEffectUtils)
-import EmojiUtils from "EmojiUtils" /* 4533 */;
-import getBurstAnimation from "getBurstAnimation" /* 7424 */;
+// Module 7898 (burst_reactions/BurstReactionEffectUtils)
+import EmojiUtils from "EmojiUtils" /* 4725 */;
+import getBurstAnimation from "getBurstAnimation" /* 7899 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -330,7 +330,7 @@ let closure_10 = async function _generateAnimationSourceFromLocalImage(arg0) {
 const Image = fn(17).Image;
 fn(558);
 const ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBurstReactionAnimationSource(channelId) {
   const cResult = channelId(emoji[5]).c(6);
   channelId = channelId.channelId;
   const messageId = channelId.messageId;
@@ -425,7 +425,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   tmp5 = items;
   tmp4 = fn;
   const tmp2 = _slicedToArray(noop.useState(null), 2);
-}) : ((channelId) => {
+}) : (function useBurstReactionAnimationSource(channelId) {
   channelId = channelId.channelId;
   const messageId = channelId.messageId;
   const emoji = channelId.emoji;

@@ -1,16 +1,16 @@
-// === Module 14573: SafetyHubAccountStandingSubwayMarker ===
+// === Module 14834: SafetyHubAccountStandingSubwayMarker ===
 
-// Module 14573 (SafetyHubAccountStandingSubwayMarker)
+// Module 14834 (SafetyHubAccountStandingSubwayMarker)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
+import Text_Text from "Text/Text" /* 5086 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { width: 56, display: "flex", flexDirection: "column", justifyContent: "space-between", alignItems: "center", rowGap: 8, flex: 1 }, marker: { display: "flex", justifyContent: "center", alignItems: "center", zIndex: 1, padding: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, empty: null, label: null, firstOption: null, lastOption: null };
 let size = { display: "flex", borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, width: "100%", height: "100%" };
 obj2.empty = size;
@@ -23,7 +23,7 @@ let obj3 = { display: "flex", justifyContent: "center", alignItems: "center", zI
 size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/native/SafetyHubAccountStandingSubwayMarker.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SafetyHubAccountStandingSubwayMarker(arg0) {
   let format = style;
   let formatResult = label;
   const cResult = style(label[6]).c(33);
@@ -64,7 +64,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                                         }
                                       }
                                     }
-                                    class S {
+                                    class I {
                                       constructor(arg0, arg1) {
                                         tmp = jsx;
                                         if (isSelected) {
@@ -105,7 +105,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                                 }
                                 const intl = format(formatResult[8]).intl;
                                 format = intl.format;
-                                class S {
+                                class I {
                                   constructor(arg0, arg1) {
                                     tmp = jsx;
                                     if (isSelected) {
@@ -135,7 +135,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                                 cResult[23] = formatResult;
                               }
                             }
-                            class S {
+                            class I {
                               constructor(arg0, arg1) {
                                 tmp = jsx;
                                 if (isSelected) {
@@ -158,8 +158,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                             cResult[24] = isSelected;
                             cResult[25] = style;
                             cResult[26] = label.label;
-                            cResult[27] = S;
-                            tmp19 = S;
+                            cResult[27] = I;
+                            tmp19 = I;
                           }
                         }
                       }
@@ -202,7 +202,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = 0 === index ? label.firstOption : {};
   let obj = style(label[6]);
   const tmp4 = 0 === index ? label.firstOption : {};
-}) : ((arg0) => {
+}) : (function SafetyHubAccountStandingSubwayMarker(arg0) {
   ({ selectedIcon, style: require, isSelected } = arg0);
   ({ index, size, numOptions } = arg0);
   ({ status, onLayout } = arg0);

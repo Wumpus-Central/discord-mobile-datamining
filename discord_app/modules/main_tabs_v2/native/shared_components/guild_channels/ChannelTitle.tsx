@@ -1,23 +1,23 @@
-// === Module 16851: guild_channels/ChannelTitle ===
+// === Module 17130: guild_channels/ChannelTitle ===
 
-// Module 16851 (guild_channels/ChannelTitle)
+// Module 17130 (guild_channels/ChannelTitle)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import ChannelListLayout from "ChannelListLayout" /* 11712 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import ChannelListLayout from "ChannelListLayout" /* 11777 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const UnreadSetting = fn(5078).UnreadSetting;
+const UnreadSetting = fn(5972).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyleProperties({ muted: nativeDefault.colors.TEXT_MUTED, normal: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, unreadOrConnected: nativeDefault.colors.REDESIGN_CHANNEL_NAME_TEXT });
 const ReactCompilerGating = fn(558);
 let obj = { muted: nativeDefault.colors.TEXT_MUTED, normal: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, unreadOrConnected: nativeDefault.colors.REDESIGN_CHANNEL_NAME_TEXT };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelTitle.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelTitle(arg0) {
   const cResult = c.c(8);
   ({ title, unread, layout, muted, resolvedUnreadSetting, connected } = arg0);
   if (cResult[0] !== layout) {
@@ -70,7 +70,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   cResult[7] = tmp10;
   tmp9 = tmp10;
   const obj3 = { variant: tmp4.channelName.text.variant, lineClamp: 1, maxFontSizeMultiplier: 1.75, style: tmp8, children: title };
-}) : ((unread) => {
+}) : (function ChannelTitle(unread) {
   ({ title, muted } = unread);
   unread = unread.unread;
   const resolvedUnreadSetting = unread.resolvedUnreadSetting;

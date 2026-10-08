@@ -1,17 +1,17 @@
-// === Module 13074: useEmbeddedActivityParticipantAvatarUris ===
+// === Module 13352: useEmbeddedActivityParticipantAvatarUris ===
 
-// Module 13074 (useEmbeddedActivityParticipantAvatarUris)
-import GlobalUtils from "GlobalUtils" /* 1375 */;
+// Module 13352 (useEmbeddedActivityParticipantAvatarUris)
+import GlobalUtils from "GlobalUtils" /* 1387 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
-import UserStore from "UserStore" /* 1377 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2062 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/useEmbeddedActivityParticipantAvatarUris.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useEmbeddedActivityParticipantAvatarUris(arg0) {
   let mapped = dependencyMap;
   const cResult = guildId(576).c(11);
   ({ activity, guildId } = arg0);
@@ -77,13 +77,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   } else {
     tmp13 = cResult[10];
   }
-  const found = stateFromStoresArray.filter(guildId(1375).isNotNullish);
+  const found = stateFromStoresArray.filter(guildId(1387).isNotNullish);
   mapped = found.map(tmp13);
   cResult[6] = guildId;
   cResult[7] = stateFromStoresArray;
   cResult[8] = mapped;
   const tmpResult = guildId(573);
-}) : ((activity) => {
+}) : (function useEmbeddedActivityParticipantAvatarUris(activity) {
   activity = activity.activity;
   const guildId = activity.guildId;
   let memo;

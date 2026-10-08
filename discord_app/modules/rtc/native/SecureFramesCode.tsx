@@ -1,9 +1,9 @@
-// === Module 9393: SecureFramesCode ===
+// === Module 8814: SecureFramesCode ===
 
-// Module 9393 (SecureFramesCode)
+// Module 8814 (SecureFramesCode)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4892 */;
+import Text_Text from "Text/Text" /* 5086 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { codeText: { fontFamily: fn(1096).Fonts.CODE_NORMAL }, row: { flexDirection: "row", justifyContent: "space-around", paddingVertical: 8 }, divider: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE }, codeHeader: null, code: null, loading: null };
 let obj3 = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 obj2.codeHeader = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderTopRightRadius: nativeDefault.radii.lg, borderTopLeftRadius: nativeDefault.radii.lg, paddingVertical: 10, paddingHorizontal: 16, justifyContent: "space-between", alignItems: "center", flexDirection: "row" };
@@ -20,7 +20,7 @@ obj2.code = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, paddingVertic
 obj2.loading = { minHeight: 126 };
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function SecureFramesCodeGrid(arg0) {
   const cResult = require("c").c(6);
   ({ chunks, columns } = arg0);
   const tmp2 = closure_8();
@@ -67,7 +67,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = items;
   arr = items;
   const obj = require("c");
-}) : ((chunks) => {
+}) : (function SecureFramesCodeGrid(chunks) {
   chunks = chunks.chunks;
   const columns = chunks.columns;
   noop = closure_8();
@@ -102,7 +102,7 @@ let obj5 = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, paddingVertica
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/native/SecureFramesCode.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SecureFramesCode(arg0) {
   const cResult = c.c(16);
   ({ title, trailing, chunks, columns } = arg0);
   const tmp4 = closure_8();
@@ -174,7 +174,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = trailing;
   cResult[5] = tmp9;
   tmp8 = tmp9;
-}) : ((chunks) => {
+}) : (function SecureFramesCode(chunks) {
   chunks = chunks.chunks;
   ({ title, trailing, columns } = chunks);
   const tmp = closure_8();

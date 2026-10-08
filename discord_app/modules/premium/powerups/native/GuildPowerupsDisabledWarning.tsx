@@ -1,13 +1,13 @@
-// === Module 12219: GuildPowerupsDisabledWarning ===
+// === Module 12298: GuildPowerupsDisabledWarning ===
 
-// Module 12219 (GuildPowerupsDisabledWarning)
+// Module 12298 (GuildPowerupsDisabledWarning)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import WarningIcon from "WarningIcon" /* 4809 */;
-import Text_Text from "Text/Text" /* 4892 */;
+import WarningIcon from "WarningIcon" /* 5003 */;
+import Text_Text from "Text/Text" /* 5086 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
+import createStyles from "createStyles" /* 5090 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -18,7 +18,7 @@ let closure_6 = createStyles.createStyles(obj);
 let obj2 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, borderColor: nativeDefault.colors.STATUS_WARNING_BACKGROUND, borderWidth: 1, borderRadius: nativeDefault.radii.lg, padding: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING };
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsDisabledWarning.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((text) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPowerupsDisabledWarning(text) {
   const cResult = c.c(7);
   text = text.text;
   const tmp4 = closure_6();
@@ -55,7 +55,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((text) => {
   cResult[3] = tmp10;
   tmp9 = tmp10;
   const obj4 = { style: tmp4.text, variant: "text-md/semibold", color: "text-feedback-warning", children: text };
-}) : ((children) => {
+}) : (function GuildPowerupsDisabledWarning(children) {
   const tmp = closure_6();
   const obj = { style: tmp.container, children: null };
   const items = [React4(WarningIcon.WarningIcon, { color: nativeDefault.colors.TEXT_FEEDBACK_WARNING, size: "md" }), React4(Text_Text.Text, { style: tmp.text, variant: "text-md/semibold", color: "text-feedback-warning", children: children.text })];

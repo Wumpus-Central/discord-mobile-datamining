@@ -1,16 +1,16 @@
-// === Module 9180: WakeLock ===
+// === Module 10748: WakeLock ===
 
-// Module 9180 (WakeLock)
-import NativeScreenWakeLockModuleDefault from "NativeScreenWakeLockModule" /* 9181 */;
+// Module 10748 (WakeLock)
+import NativeScreenWakeLockModuleDefault from "NativeScreenWakeLockModule" /* 10749 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 let ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useWakeLock(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] !== arg0) {
-    const fn = function n() {
+    const fn = function t() {
       const lock = NativeScreenWakeLockModuleDefault.requestLock(closure_0);
       return () => {
         NativeScreenWakeLockModuleDefault.releaseLock(closure_1_0);
@@ -27,7 +27,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp3 = cResult[2];
   }
   const effect = noop.useEffect(tmp2, tmp3);
-}) : ((arg0) => {
+}) : (function useWakeLock(arg0) {
   closure_0 = arg0;
   const items = [arg0];
   const effect = noop.useEffect(() => {
@@ -42,10 +42,10 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/device/native/WakeLock.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((wakeLockKey) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function WakeLock(wakeLockKey) {
   closure_4(wakeLockKey.wakeLockKey);
   return null;
-}) : ((wakeLockKey) => {
+}) : (function WakeLock(wakeLockKey) {
   closure_4(wakeLockKey.wakeLockKey);
   return null;
 });

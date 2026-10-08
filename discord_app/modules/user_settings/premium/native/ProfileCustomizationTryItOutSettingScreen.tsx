@@ -1,23 +1,23 @@
-// === Module 15736: ProfileCustomizationTryItOutSettingScreen ===
+// === Module 15994: ProfileCustomizationTryItOutSettingScreen ===
 
-// Module 15736 (ProfileCustomizationTryItOutSettingScreen)
+// Module 15994 (ProfileCustomizationTryItOutSettingScreen)
 import nativeDefault from "native" /* 587 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1394 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7078 */;
-import UserProfileActionCreators from "UserProfileActionCreators" /* 7849 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7869 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1406 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7264 */;
+import UserProfileActionCreators from "UserProfileActionCreators" /* 8267 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8287 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_7, AnalyticsPages: closure_8 } = Constants);
-const PremiumUpsellTypes = fn(1379).PremiumUpsellTypes;
+const PremiumUpsellTypes = fn(1391).PremiumUpsellTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: null, activityIndicator: null };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj2.container = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
@@ -28,7 +28,7 @@ let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/premium/native/ProfileCustomizationTryItOutSettingScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ProfileCustomizationTryItOutSettingScreen() {
   const cResult = sourceAnalyticsLocations(categories[9]).c(30);
   closure_11();
   let obj = sourceAnalyticsLocations(categories[9]);
@@ -136,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[10] = M;
   cResult[11] = items2;
   const tmp12 = stateFromStores(categories[13])();
-}) : (() => {
+}) : (function ProfileCustomizationTryItOutSettingScreen() {
   let tmp = closure_11();
   const tmp2 = stateFromStores;
   const tmp4 = stateFromStores(categories[10]);

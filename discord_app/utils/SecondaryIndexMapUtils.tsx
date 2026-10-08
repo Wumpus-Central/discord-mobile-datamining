@@ -1,7 +1,7 @@
-// === Module 5596: SecondaryIndexMapUtils ===
+// === Module 5962: SecondaryIndexMapUtils ===
 
-// Module 5596 (SecondaryIndexMapUtils)
-import _modDef1342 from "module_1342" /* 1342 */;
+// Module 5962 (SecondaryIndexMapUtils)
+import _modDef1354 from "module_1354" /* 1354 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/SecondaryIndexMapUtils.tsx");
@@ -11,7 +11,7 @@ export const isVersionEqual = function isVersionEqual(arg0, arg1) {
   [tmp3, tmp4] = arg1;
   let tmp5 = tmp2 === tmp4;
   if (tmp5) {
-    tmp5 = _modDef1342(tmp, tmp3);
+    tmp5 = _modDef1354(tmp, tmp3);
   }
   return tmp5;
 };

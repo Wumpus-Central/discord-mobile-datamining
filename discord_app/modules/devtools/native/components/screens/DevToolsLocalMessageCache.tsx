@@ -1,17 +1,17 @@
-// === Module 15432: DevToolsLocalMessageCache ===
+// === Module 15694: DevToolsLocalMessageCache ===
 
-// Module 15432 (DevToolsLocalMessageCache)
+// Module 15694 (DevToolsLocalMessageCache)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Stack_Stack from "Stack/Stack" /* 5600 */;
-import TableRow from "TableRow" /* 6000 */;
-import TableRowGroup from "TableRowGroup" /* 6081 */;
-import MessageCacheStatsDefault from "MessageCacheStats" /* 7010 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import Stack_Stack from "Stack/Stack" /* 5373 */;
+import TableRow from "TableRow" /* 6184 */;
+import TableRowGroup from "TableRowGroup" /* 6267 */;
+import MessageCacheStatsDefault from "MessageCacheStats" /* 7198 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
+import createStyles from "createStyles" /* 5090 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -22,7 +22,7 @@ let obj2 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW 
 obj.contentContainer = { padding: nativeDefault.space.PX_16 };
 let closure_7 = createStyles.createStyles(obj);
 let ReactCompilerGating = ReactCompilerGating_mod;
-let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((entry) => {
+let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function CacheLogEntry(entry) {
   const cResult = c.c(13);
   entry = entry.entry;
   if (cResult[0] !== entry.startTime) {
@@ -115,7 +115,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((entry) => {
   cResult[8] = combined1;
   cResult[9] = items;
   obj3 = items;
-}) : ((entry) => {
+}) : (function CacheLogEntry(entry) {
   entry = entry.entry;
   let str = entry.before;
   const combined = "" + new Date(entry.startTime).toLocaleString();
@@ -166,7 +166,7 @@ let ReactCompilerGating = ReactCompilerGating_mod;
 let obj3 = { padding: nativeDefault.space.PX_16 };
 const result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsLocalMessageCache.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevToolsLocalMessageCache() {
   const cResult = c.c(6);
   const tmp4 = closure_7();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -218,7 +218,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[5] = tmp18;
   tmp17 = tmp18;
   const obj9 = { style: tmp4.container, contentContainerStyle: tmp4.contentContainer, children: tmp12 };
-}) : (() => {
+}) : (function DevToolsLocalMessageCache() {
   const tmp = closure_7();
   const obj = { style: tmp.container, contentContainerStyle: tmp.contentContainer, children: null };
   const obj2 = { spacing: 8, children: null };

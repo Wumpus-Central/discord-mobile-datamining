@@ -1,7 +1,7 @@
-// === Module 8353: useOpenGameProfileModal ===
+// === Module 8851: useOpenGameProfileModal ===
 
-// Module 8353 (useOpenGameProfileModal)
-import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8358 */;
+// Module 8851 (useOpenGameProfileModal)
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8856 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -9,7 +9,7 @@ const require = globalThis.__r;
 
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useOpenGameProfileModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useOpenGameProfileModal(arg0, arg1) {
   _require = arg0;
   const cResult = require("c").c(7);
   if (cResult[0] !== arg1) {
@@ -24,7 +24,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     tmp3 = cResult[1];
   }
   const onOpened = tmp3.onOpened;
-  const tmp4 = onOpened(8354)(arg0);
+  const tmp4 = onOpened(8852)(arg0);
   dependencyMap = tmp4;
   const gameId = tmp4.gameId;
   if (tmp4.shouldOpenGameProfile) {
@@ -63,14 +63,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
       tmp6 = fn;
     }
   }
-}) : ((arg0) => {
+}) : (function useOpenGameProfileModal(arg0) {
   closure_0 = arg0;
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
   }
   const onOpened = obj.onOpened;
-  const tmp = onOpened(8354)(arg0);
+  const tmp = onOpened(8852)(arg0);
   dependencyMap = tmp;
   const gameId = tmp.gameId;
   let fn;

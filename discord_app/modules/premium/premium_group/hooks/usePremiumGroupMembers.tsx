@@ -1,9 +1,9 @@
-// === Module 13316: usePremiumGroupMembers ===
+// === Module 13616: usePremiumGroupMembers ===
 
-// Module 13316 (usePremiumGroupMembers)
+// Module 13616 (usePremiumGroupMembers)
 import _mod19 from "module_19" /* 19 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import PremiumGroupStore from "PremiumGroupStore" /* 13313 */;
+import PremiumGroupStore from "PremiumGroupStore" /* 13613 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -12,7 +12,7 @@ const require = globalThis.__r;
 const useEffect = _mod19.useEffect;
 const result = size.fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupMembers.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePremiumGroupMembers(arg0, arg1) {
   _require = arg0;
   const cResult = require("c").c(12);
   if (cResult[0] !== arg1) {
@@ -31,7 +31,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   dependencyMap = tmp6;
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [PremiumGroupStore];
-    const fn = function b() {
+    const fn = function n() {
       return { premiumGroupMembers: PremiumGroupStore.getMembers(), isFetchingMembers: PremiumGroupStore.isFetchingMembers(), isUpdatingMembers: PremiumGroupStore.isUpdatingMembers() };
     };
     cResult[2] = items;
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   tmp13 = items1;
   tmp12 = U;
   const tmpResult = require("initialize");
-}) : ((arg0) => {
+}) : (function usePremiumGroupMembers(arg0) {
   _require = arg0;
   let obj = arg1;
   if (arg1 === undefined) {

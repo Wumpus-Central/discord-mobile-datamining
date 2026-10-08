@@ -1,6 +1,6 @@
-// === Module 2059: conjureTopicChannel ===
+// === Module 2071: conjureTopicChannel ===
 
-// Module 2059 (conjureTopicChannel)
+// Module 2071 (conjureTopicChannel)
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 

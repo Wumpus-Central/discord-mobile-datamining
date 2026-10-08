@@ -1,6 +1,6 @@
-// === Module 16572: PrunePreviewStore ===
+// === Module 16827: PrunePreviewStore ===
 
-// Module 16572 (PrunePreviewStore)
+// Module 16827 (PrunePreviewStore)
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = globalThis.__r;
@@ -68,7 +68,7 @@ export const clearAllPrunePreviews = function clearAllPrunePreviews() {
   state = obj4.getState();
   state.clear();
 };
-export const usePrunePreview = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) => {
+export const usePrunePreview = ReactCompilerGating.isReactCompilerEnabled() ? (function usePrunePreview(arg0, arg1, arg2) {
   _require = arg0;
   dependencyMap = arg1;
   args = arg2;
@@ -140,7 +140,7 @@ export const usePrunePreview = ReactCompilerGating.isReactCompilerEnabled() ? ((
   cResult[3] = P;
   tmp2 = P;
   const obj = require("c");
-}) : ((arg0, arg1, arg2) => {
+}) : (function usePrunePreview(arg0, arg1, arg2) {
   closure_0 = arg0;
   closure_1 = arg1;
   args = arg2;

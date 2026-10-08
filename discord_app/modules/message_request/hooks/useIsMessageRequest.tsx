@@ -1,15 +1,15 @@
-// === Module 9801: useIsMessageRequest ===
+// === Module 10364: useIsMessageRequest ===
 
-// Module 9801 (useIsMessageRequest)
-import MessageRequestStore from "MessageRequestStore" /* 6734 */;
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6735 */;
+// Module 10364 (useIsMessageRequest)
+import MessageRequestStore from "MessageRequestStore" /* 6060 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6061 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 fn(558);
 const ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsMessageRequest(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -35,7 +35,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp6, tmp7);
-}) : ((arg0) => {
+}) : (function useIsMessageRequest(arg0) {
   _require = arg0;
   const items = [MessageRequestStore];
   const items1 = [arg0];
@@ -45,7 +45,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_request/hooks/useIsMessageRequest.tsx");
 
 export const useIsMessageRequest = tmp2;
-export const useIsEitherTypeOfMessageRequest = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useIsEitherTypeOfMessageRequest = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsEitherTypeOfMessageRequest(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -75,7 +75,7 @@ export const useIsEitherTypeOfMessageRequest = ReactCompilerGating.isReactCompil
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp7);
-}) : ((arg0) => {
+}) : (function useIsEitherTypeOfMessageRequest(arg0) {
   _require = arg0;
   const items = [MessageRequestStore, SpamMessageRequestStore];
   return require("initialize").useStateFromStores(items, () => {

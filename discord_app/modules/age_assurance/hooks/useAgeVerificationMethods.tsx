@@ -1,25 +1,25 @@
-// === Module 8300: useAgeVerificationMethods ===
+// === Module 7683: useAgeVerificationMethods ===
 
-// Module 8300 (useAgeVerificationMethods)
+// Module 7683 (useAgeVerificationMethods)
 import util from "util" /* 1126 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 5416 */;
-import MetricEvents from "MetricEvents" /* 5421 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8119 */;
-import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 8124 */;
-import GoogleWalletExperiment from "GoogleWalletExperiment" /* 8301 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 5725 */;
+import MetricEvents from "MetricEvents" /* 5730 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 5915 */;
+import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 7505 */;
+import GoogleWalletExperiment from "GoogleWalletExperiment" /* 7684 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AgeVerificationStore from "AgeVerificationStore" /* 8164 */;
+import AgeVerificationStore from "AgeVerificationStore" /* 5913 */;
 
 require = fn;
-const AgeVerificationConstants = fn(8118);
+const AgeVerificationConstants = fn(5914);
 ({ VERIFICATION_METHOD_TITLE_MAP: closure_7, VerificationMethod: closure_8 } = AgeVerificationConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_assurance/hooks/useAgeVerificationMethods.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAgeVerificationMethods(arg0) {
   const cResult = onGoogleWalletSelect(initiateAgeVerification[6]).c(22);
   ({ onClose, classificationId, onGoogleWalletSelect } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -247,8 +247,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                     const obj3 = { value, done: true };
                     return obj3;
                   } else {
-                    const obj5 = id(8119);
-                    const result = obj5.trackAgeVerificationModalClicked(id, id(8119).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY, id(8119).AgeVerificationModalCta.METHOD_SELECT, id);
+                    const obj5 = id(5915);
+                    const result = obj5.trackAgeVerificationModalClicked(id, id(5915).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY, id(5915).AgeVerificationModalCta.METHOD_SELECT, id);
                     v1 = 1;
                     c1 = 1;
                     const obj4 = { value: v1(id), done: false };
@@ -271,7 +271,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               }
             }
           });
-          obj.onClick = function() {
+          obj.onClick = function onClick() {
             const self = this;
             const apply = closure_1.apply;
             if (typeof apply === "unknown") {
@@ -531,7 +531,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = obj2;
   tmp8 = obj2;
   const tmpResult = onGoogleWalletSelect(initiateAgeVerification[7]);
-}) : ((onGoogleWalletSelect) => {
+}) : (function useAgeVerificationMethods(onGoogleWalletSelect) {
   onGoogleWalletSelect = onGoogleWalletSelect.onGoogleWalletSelect;
   let initiateAgeVerification;
   first = undefined;
@@ -613,8 +613,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                       const obj3 = { value, done: true };
                       return obj3;
                     } else {
-                      const obj5 = id(8119);
-                      const result = obj5.trackAgeVerificationModalClicked(id, id(8119).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY, id(8119).AgeVerificationModalCta.METHOD_SELECT, id);
+                      const obj5 = id(5915);
+                      const result = obj5.trackAgeVerificationModalClicked(id, id(5915).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY, id(5915).AgeVerificationModalCta.METHOD_SELECT, id);
                       v1 = 1;
                       c1 = 1;
                       const obj4 = { value: v1(id), done: false };
@@ -637,7 +637,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                 }
               }
             });
-            obj.onClick = function() {
+            obj.onClick = function onClick() {
               const self = this;
               const apply = closure_1.apply;
               if (typeof apply === "unknown") {

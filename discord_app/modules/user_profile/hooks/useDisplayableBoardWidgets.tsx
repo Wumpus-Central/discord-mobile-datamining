@@ -1,11 +1,11 @@
-// === Module 12719: useDisplayableBoardWidgets ===
+// === Module 13211: useDisplayableBoardWidgets ===
 
-// Module 12719 (useDisplayableBoardWidgets)
+// Module 13211 (useDisplayableBoardWidgets)
 import c from "c" /* 576 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7126 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7128 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7129 */;
-import useUserProfileWidgetsDefault from "useUserProfileWidgets" /* 12720 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7311 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7314 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7315 */;
+import useUserProfileWidgetsDefault from "useUserProfileWidgets" /* 13212 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -29,7 +29,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useDisplayableBoardWidgets.tsx");
 
-export const useDisplayableBoardWidgets = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useDisplayableBoardWidgets = ReactCompilerGating.isReactCompilerEnabled() ? (function useDisplayableBoardWidgets(arg0) {
   const cResult = c.c(2);
   const arr = useUserProfileWidgetsDefault(arg0);
   if (cResult[0] !== arr) {
@@ -41,7 +41,7 @@ export const useDisplayableBoardWidgets = ReactCompilerGating.isReactCompilerEna
     tmp2 = cResult[1];
   }
   return tmp2;
-}) : ((arg0) => {
+}) : (function useDisplayableBoardWidgets(arg0) {
   const tmp = useUserProfileWidgetsDefault(arg0);
   closure_0 = tmp;
   const items = [tmp];

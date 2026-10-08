@@ -1,20 +1,20 @@
-// === Module 15303: SaveCameraUploadsToDeviceSetting ===
+// === Module 15565: SaveCameraUploadsToDeviceSetting ===
 
-// Module 15303 (SaveCameraUploadsToDeviceSetting)
+// Module 15565 (SaveCameraUploadsToDeviceSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 8091 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1195 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5258 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1207 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11142);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const SettingBuilders = fn(11262);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSaveCameraUploadsToDeviceValue() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UnsyncedUserSettingsStore];
-    const fn = function n() {
+    const fn = function o() {
       return UnsyncedUserSettingsStore.saveCameraUploadsToDevice;
     };
     cResult[0] = items;
@@ -25,7 +25,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     [tmp4, tmp5] = cResult;
   }
   return initialize.useStateFromStores(tmp4, tmp5);
-}) : (() => {
+}) : (function useSaveCameraUploadsToDeviceValue() {
   const items = [UnsyncedUserSettingsStore];
   return initialize.useStateFromStores(items, () => UnsyncedUserSettingsStore.saveCameraUploadsToDevice);
 });
@@ -34,12 +34,12 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t["99tBAC"]);
   },
-  parent: fn(7645).MobileUserSettings.CHAT,
-  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  parent: fn(7966).MobileUserSettings.CHAT,
+  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useSaveCameraUploadsToDeviceValue() {
     const cResult = c.c(2);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
       const items = [UnsyncedUserSettingsStore];
-      const fn = function n() {
+      const fn = function o() {
         return UnsyncedUserSettingsStore.saveCameraUploadsToDevice;
       };
       cResult[0] = items;
@@ -50,7 +50,7 @@ const toggle = SettingBuilders.createToggle({
       [tmp4, tmp5] = cResult;
     }
     return initialize.useStateFromStores(tmp4, tmp5);
-  }) : (() => {
+  }) : (function useSaveCameraUploadsToDeviceValue() {
     const items = [UnsyncedUserSettingsStore];
     return initialize.useStateFromStores(items, () => UnsyncedUserSettingsStore.saveCameraUploadsToDevice);
   }),

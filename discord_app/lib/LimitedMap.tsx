@@ -1,6 +1,6 @@
-// === Module 7808: LimitedMap ===
+// === Module 8227: LimitedMap ===
 
-// Module 7808 (LimitedMap)
+// Module 8227 (LimitedMap)
 import size from "module_2" /* 2 */;
 
 class LimitedMap extends Map {
@@ -13,7 +13,10 @@ class LimitedMap extends Map {
     self = this;
     if (this.size >= this.maxSize) {
       iter = self.keys();
-      deleteResult = self.delete(iter.next().value);
+      iter2 = iter.next();
+      if (!iter2.done) {
+        deleteResult = self.delete(iter2.value);
+      }
     }
     return super.set(global, require);
   }

@@ -1,9 +1,9 @@
-// === Module 17037: HangoutWindowExperiment ===
+// === Module 17318: HangoutWindowExperiment ===
 
-// Module 17037 (HangoutWindowExperiment)
+// Module 17318 (HangoutWindowExperiment)
 import c from "c" /* 576 */;
-import ExperimentConstants from "ExperimentConstants" /* 4783 */;
-import createExperiment from "module_4780" /* 4780 */;
+import ExperimentConstants from "ExperimentConstants" /* 4977 */;
+import createExperiment from "module_4974" /* 4974 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -14,7 +14,7 @@ const experiment = createExperiment.createExperiment(obj);
 const result = size.fileFinishedImporting("modules/hangout_window/HangoutWindowExperiment.tsx");
 
 export const HangoutWindowExperiment = experiment;
-export const useHangoutWindowExperiment = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useHangoutWindowExperiment = ReactCompilerGating.isReactCompilerEnabled() ? (function useHangoutWindowExperiment(arg0) {
   const cResult = c.c(4);
   ({ guildId, location: _location } = arg0);
   if (cResult[0] === guildId) {
@@ -36,7 +36,9 @@ export const useHangoutWindowExperiment = ReactCompilerGating.isReactCompilerEna
   cResult[1] = _location;
   cResult[2] = obj3;
   tmp2 = obj3;
-}) : ((guildId) => experiment.useExperiment({ guildId: guildId.guildId, location: guildId.location }, { autoTrackExposure: true }));
+}) : (function useHangoutWindowExperiment(guildId) {
+  return experiment.useExperiment({ guildId: guildId.guildId, location: guildId.location }, { autoTrackExposure: true });
+});
 export const getHangoutWindowExperiment = function getHangoutWindowExperiment(guildId) {
   return experiment.getCurrentConfig({ guildId: guildId.guildId, location: guildId.location }, { autoTrackExposure: true });
 };

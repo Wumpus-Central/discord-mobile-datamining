@@ -1,16 +1,16 @@
-// === Module 16050: HappeningNowCardVoice ===
+// === Module 16310: HappeningNowCardVoice ===
 
-// Module 16050 (HappeningNowCardVoice)
+// Module 16310 (HappeningNowCardVoice)
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1126 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import GlobalUtils from "GlobalUtils" /* 1375 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5048 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import GlobalUtils from "GlobalUtils" /* 1387 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5405 */;
 import noop from "module_19" /* 19 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7156 */;
-import UserStore from "UserStore" /* 1377 */;
-import VoiceStateStore from "VoiceStateStore" /* 4915 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7336 */;
+import UserStore from "UserStore" /* 1389 */;
+import VoiceStateStore from "VoiceStateStore" /* 5111 */;
 
 require = fn;
 function formatVoiceActivityTitle(arr, guildId) {
@@ -32,14 +32,14 @@ function formatVoiceActivityTitle(arr, guildId) {
   }
 }
 const View = fn(17).View;
-let closure_8 = fn(15129).HappeningNowCardTrackingType;
+let closure_8 = fn(15391).HappeningNowCardTrackingType;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_12 = createStyles.createStyles({ content: { flexShrink: 1 }, avatars: { marginRight: 12 } });
 const ReactCompilerGating = fn(558);
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoiceChannelUsers(channelId) {
   _require = channelId;
   const cResult = require("c").c(5);
   const obj = require("c");
@@ -64,7 +64,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
     const mapped = _modDef12(voiceStatesForChannel).map((userId) => user.getUser(userId.userId));
     const found = mapped.filter(GlobalUtils.isNotNullish);
     const items = [
-      (id) => {
+      function userAffinitySort(id) {
         userAffinity = userAffinity.getUserAffinity(id.id);
         if ("vc_probability" === voiceUserAffinitySortType) {
           let num2;
@@ -98,7 +98,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   tmp10 = items1;
   tmp9 = fn;
   const obj2 = require("VoiceUserAffinityExperiment");
-}) : ((channelId) => {
+}) : (function useVoiceChannelUsers(channelId) {
   _require = channelId;
   const voiceUserAffinitySortType = require("VoiceUserAffinityExperiment").useVoiceUserAffinitySortType("useVoiceChannelUsers");
   const obj = require("VoiceUserAffinityExperiment");
@@ -109,7 +109,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
     const mapped = _modDef12(voiceStatesForChannel).map((userId) => user.getUser(userId.userId));
     const found = mapped.filter(GlobalUtils.isNotNullish);
     const items = [
-      (id) => {
+      function userAffinitySort(id) {
         userAffinity = userAffinity.getUserAffinity(id.id);
         if ("vc_probability" === voiceUserAffinitySortType) {
           let num2;
@@ -140,7 +140,7 @@ let closure_13 = tmp4;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardVoice.tsx");
 
-export default noop.memo((guildId) => {
+export default noop.memo(function VoiceChannelCard(guildId) {
   guildId = guildId.guildId;
   const index = guildId.index;
   const voiceState = guildId.voiceState;

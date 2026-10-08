@@ -1,8 +1,8 @@
-// === Module 16238: GameClaimCoachmarkExperiment ===
+// === Module 16498: GameClaimCoachmarkExperiment ===
 
-// Module 16238 (GameClaimCoachmarkExperiment)
+// Module 16498 (GameClaimCoachmarkExperiment)
 import c from "c" /* 576 */;
-import createExperiment from "module_4780" /* 4780 */;
+import createExperiment from "module_4974" /* 4974 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -13,7 +13,7 @@ const experiment = createExperiment.createExperiment(obj);
 const result = size.fileFinishedImporting("modules/game_claim/experiments/GameClaimCoachmarkExperiment.tsx");
 
 export const GameClaimCoachmarkExperiment = experiment;
-export const useGameClaimCoachmarkEnabled = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId, location) => {
+export const useGameClaimCoachmarkEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useGameClaimCoachmarkEnabled(guildId, location) {
   const cResult = c.c(4);
   if (cResult[0] === guildId) {
     if (cResult[1] === location) {
@@ -34,4 +34,6 @@ export const useGameClaimCoachmarkEnabled = ReactCompilerGating.isReactCompilerE
   cResult[1] = location;
   cResult[2] = obj3;
   tmp2 = obj3;
-}) : ((guildId, location) => experiment.useExperiment({ guildId, location }, { autoTrackExposure: false }).enabled);
+}) : (function useGameClaimCoachmarkEnabled(guildId, location) {
+  return experiment.useExperiment({ guildId, location }, { autoTrackExposure: false }).enabled;
+});

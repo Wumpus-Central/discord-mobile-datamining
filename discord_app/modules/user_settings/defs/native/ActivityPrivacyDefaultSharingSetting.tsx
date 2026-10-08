@@ -1,21 +1,21 @@
-// === Module 15854: ActivityPrivacyDefaultSharingSetting ===
+// === Module 16113: ActivityPrivacyDefaultSharingSetting ===
 
-// Module 15854 (ActivityPrivacyDefaultSharingSetting)
+// Module 16113 (ActivityPrivacyDefaultSharingSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
-import UserSettings from "UserSettings" /* 2028 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 14675 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1209 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import UserSettings from "UserSettings" /* 2040 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 14936 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 fn(558);
 let ReactCompilerGating = fn(558);
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const SettingBuilders = fn(11142);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const SettingBuilders = fn(11262);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOptions() {
   const cResult = c.c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { value: preloaded_user_settings.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF, label: null, subLabel: null };
@@ -51,32 +51,34 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp6 = cResult[2];
   }
   return tmp6;
-}) : (() => noop.useMemo(() => {
-  const obj = { value: preloaded_user_settings.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF, label: null, subLabel: null };
-  const intl = util.intl;
-  obj.label = intl.string(util.t.FzgQna);
-  const intl2 = util.intl;
-  obj.subLabel = intl2.string(util.t.SQxoyc);
-  const items = [obj, , ];
-  const obj2 = { value: preloaded_user_settings.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS, label: null, subLabel: null };
-  const intl3 = util.intl;
-  obj2.label = intl3.string(util.t["1hvuGH"]);
-  const intl4 = util.intl;
-  obj2.subLabel = intl4.string(util.t.odUCPE);
-  items[1] = obj2;
-  const obj3 = { value: preloaded_user_settings.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON, label: null };
-  const intl5 = util.intl;
-  obj3.label = intl5.string(util.t.fQc5la);
-  items[2] = obj3;
-  return items;
-}, []));
+}) : (function useOptions() {
+  return noop.useMemo(() => {
+    const obj = { value: preloaded_user_settings.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF, label: null, subLabel: null };
+    const intl = util.intl;
+    obj.label = intl.string(util.t.FzgQna);
+    const intl2 = util.intl;
+    obj.subLabel = intl2.string(util.t.SQxoyc);
+    const items = [obj, , ];
+    const obj2 = { value: preloaded_user_settings.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS, label: null, subLabel: null };
+    const intl3 = util.intl;
+    obj2.label = intl3.string(util.t["1hvuGH"]);
+    const intl4 = util.intl;
+    obj2.subLabel = intl4.string(util.t.odUCPE);
+    items[1] = obj2;
+    const obj3 = { value: preloaded_user_settings.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON, label: null };
+    const intl5 = util.intl;
+    obj3.label = intl5.string(util.t.fQc5la);
+    items[2] = obj3;
+    return items;
+  }, []);
+});
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.vpgck1);
   },
-  parent: fn(7645).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
-  useOptions: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  parent: fn(7966).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  useOptions: ReactCompilerGating.isReactCompilerEnabled() ? (function useOptions() {
     const cResult = c.c(3);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
       const obj2 = { value: preloaded_user_settings.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF, label: null, subLabel: null };
@@ -112,26 +114,28 @@ const radio = SettingBuilders.createRadio({
       tmp6 = cResult[2];
     }
     return tmp6;
-  }) : (() => noop.useMemo(() => {
-    const obj = { value: preloaded_user_settings.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF, label: null, subLabel: null };
-    const intl = util.intl;
-    obj.label = intl.string(util.t.FzgQna);
-    const intl2 = util.intl;
-    obj.subLabel = intl2.string(util.t.SQxoyc);
-    const items = [obj, , ];
-    const obj2 = { value: preloaded_user_settings.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS, label: null, subLabel: null };
-    const intl3 = util.intl;
-    obj2.label = intl3.string(util.t["1hvuGH"]);
-    const intl4 = util.intl;
-    obj2.subLabel = intl4.string(util.t.odUCPE);
-    items[1] = obj2;
-    const obj3 = { value: preloaded_user_settings.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON, label: null };
-    const intl5 = util.intl;
-    obj3.label = intl5.string(util.t.fQc5la);
-    items[2] = obj3;
-    return items;
-  }, [])),
-  useValue: () => {
+  }) : (function useOptions() {
+    return noop.useMemo(() => {
+      const obj = { value: preloaded_user_settings.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF, label: null, subLabel: null };
+      const intl = util.intl;
+      obj.label = intl.string(util.t.FzgQna);
+      const intl2 = util.intl;
+      obj.subLabel = intl2.string(util.t.SQxoyc);
+      const items = [obj, , ];
+      const obj2 = { value: preloaded_user_settings.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS, label: null, subLabel: null };
+      const intl3 = util.intl;
+      obj2.label = intl3.string(util.t["1hvuGH"]);
+      const intl4 = util.intl;
+      obj2.subLabel = intl4.string(util.t.odUCPE);
+      items[1] = obj2;
+      const obj3 = { value: preloaded_user_settings.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON, label: null };
+      const intl5 = util.intl;
+      obj3.label = intl5.string(util.t.fQc5la);
+      items[2] = obj3;
+      return items;
+    }, []);
+  }),
+  useValue() {
     const DefaultGuildsActivityRestrictedV2 = UserSettings.DefaultGuildsActivityRestrictedV2;
     return DefaultGuildsActivityRestrictedV2.useSetting();
   },
@@ -148,7 +152,7 @@ const radio = SettingBuilders.createRadio({
       const obj2 = { direction: null, affectedGuildIds: null, settingName: null };
       ({ direction: obj4.direction, affectedGuildIds: obj4.affectedGuildIds } = affectedGuilds);
       obj2.settingName = activityRestrictionSettingName;
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15855, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj2);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16114, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj2);
     }
   }
 });

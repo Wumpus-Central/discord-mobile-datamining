@@ -1,9 +1,9 @@
-// === Module 14768: UserSettingsAuthedAppPermissions ===
+// === Module 15029: UserSettingsAuthedAppPermissions ===
 
-// Module 14768 (UserSettingsAuthedAppPermissions)
-import Text_Text from "Text/Text" /* 4892 */;
-import disclosures2 from "disclosures" /* 8754 */;
-import UserSettingsAuthedApps from "UserSettingsAuthedApps" /* 14762 */;
+// Module 15029 (UserSettingsAuthedAppPermissions)
+import Text_Text from "Text/Text" /* 5086 */;
+import disclosures2 from "disclosures" /* 9134 */;
+import UserSettingsAuthedApps from "UserSettingsAuthedApps" /* 15023 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -13,13 +13,13 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({ container: { paddingHorizontal: 16, paddingVertical: 24 }, permissionContainer: { flexDirection: "row", marginTop: 8 }, permissionIcon: { marginTop: 1 }, permissionText: { flexShrink: 1, marginLeft: 12 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/authorized_apps/native/UserSettingsAuthedAppPermissions.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((oauth2Token) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSettingsAuthedAppPermissions(oauth2Token) {
   const cResult = require("c").c(12);
   oauth2Token = oauth2Token.oauth2Token;
   const tmp2 = closure_7();
@@ -60,7 +60,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((oauth2Token) => 
       }
     }
   }
-  const fn = function s() {
+  function renderPermissions() {
     let items = [];
     const iter = scopes[Symbol.iterator]();
     const nextResult = iter.next();
@@ -108,17 +108,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((oauth2Token) => 
     }
     children[3] = mapped;
     return closure_1_6(closure_1_4, { children });
-  };
+  }
   cResult[0] = application;
   cResult[1] = disclosures;
   cResult[2] = scopes;
   cResult[3] = tmp2.permissionContainer;
   cResult[4] = tmp2.permissionIcon;
   cResult[5] = tmp2.permissionText;
-  cResult[6] = fn;
-  tmp3 = fn;
+  cResult[6] = renderPermissions;
+  tmp3 = renderPermissions;
   let obj = require("c");
-}) : ((oauth2Token) => {
+}) : (function UserSettingsAuthedAppPermissions(oauth2Token) {
   c1 = undefined;
   c2 = undefined;
   c3 = undefined;
@@ -127,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((oauth2Token) => 
   ({ application: c1, scopes: c2, disclosures: c3 } = oauth2Token.oauth2Token);
   return closure_5(c3, {
     contentContainerStyle: tmp.container,
-    children: (() => {
+    children: (function renderPermissions() {
       let items = [];
       const iter = _undefined2[Symbol.iterator]();
       const nextResult = iter.next();
@@ -151,8 +151,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((oauth2Token) => 
       children[2] = items.map((children, index) => {
         const obj = { style: items.permissionContainer, children: null };
         items = [, ];
-        items[0] = closure_2_5(items(4798).CircleCheckIcon, { style: items.permissionIcon, size: "xs", color: c1(587).colors.STATUS_POSITIVE });
-        items[1] = closure_2_5(items(4892).Text, { style: items.permissionText, variant: "text-sm/normal", color: "text-default", children });
+        items[0] = closure_2_5(items(4992).CircleCheckIcon, { style: items.permissionIcon, size: "xs", color: c1(587).colors.STATUS_POSITIVE });
+        items[1] = closure_2_5(items(5086).Text, { style: items.permissionText, variant: "text-sm/normal", color: "text-default", children });
         obj.children = items;
         return closure_2_6(closure_2_4, obj, index);
       });

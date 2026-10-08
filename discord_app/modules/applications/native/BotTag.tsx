@@ -1,11 +1,11 @@
-// === Module 8990: BotTag ===
+// === Module 8741: BotTag ===
 
-// Module 8990 (BotTag)
+// Module 8741 (BotTag)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import CheckmarkSmallBoldIcon from "CheckmarkSmallBoldIcon" /* 8991 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import CheckmarkSmallBoldIcon from "CheckmarkSmallBoldIcon" /* 8742 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -30,10 +30,10 @@ function getBotLabel() {
   stringResult = intl3.string(util.t.lKQ7Wt);
 }
 const View = fn(17).View;
-const BotTagTypes = fn(1360).BotTagTypes;
+const BotTagTypes = fn(1372).BotTagTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { tag: { paddingLeft: 4, paddingRight: 4, borderRadius: nativeDefault.radii.xs, display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: 1 }, verifiedTagLeftPadding: { paddingLeft: 1 }, tagNormal: null, tagInverted: null, tagTextNormal: null, tagTextInverted: null };
 let obj3 = { paddingLeft: 4, paddingRight: 4, borderRadius: nativeDefault.radii.xs, display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: 1 };
 obj2.tagNormal = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
@@ -45,8 +45,8 @@ const obj6 = { color: nativeDefault.colors.WHITE };
 obj2.tagTextInverted = { color: nativeDefault.colors.BACKGROUND_BRAND };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = c.c(22);
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function BotTag(arg0) {
+  const cResult = c.c(20);
   ({ invertColor, type, style, verified } = arg0);
   if (undefined === type) {
     type = BotTagTypes.BOT;
@@ -117,55 +117,47 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             if (cResult[10] === tmp18) {
               let tmp34 = cResult[11];
             }
-            if (cResult[12] !== tmp19) {
-              const items = [tmp19];
-              cResult[12] = tmp19;
-              cResult[13] = items;
-              let tmp35 = items;
-            } else {
-              tmp35 = cResult[13];
-            }
-            if (cResult[14] === tmp35) {
-              if (cResult[15] === tmp7) {
-                let tmp36 = cResult[16];
+            if (cResult[12] === tmp7) {
+              if (cResult[13] === tmp19) {
+                let tmp35 = cResult[14];
               }
-              if (cResult[17] === tmp22) {
-                if (cResult[18] === tmp34) {
-                  if (cResult[19] === tmp36) {
-                    if (cResult[20] === null) {
-                      let tmp39 = cResult[21];
+              if (cResult[15] === tmp22) {
+                if (cResult[16] === tmp34) {
+                  if (cResult[17] === tmp35) {
+                    if (cResult[18] === null) {
+                      let tmp38 = cResult[19];
                     }
-                    return tmp39;
+                    return tmp38;
                   }
                 }
               }
               const obj2 = { style: tmp34, accessible: true, accessibilityRole: "image", accessibilityLabel: tmp22, children: null };
-              const items1 = [null, tmp36];
-              obj2.children = items1;
-              const tmp42 = timestampProducer(View, obj2);
-              cResult[17] = tmp22;
-              cResult[18] = tmp34;
-              cResult[19] = tmp36;
-              cResult[20] = null;
-              cResult[21] = tmp42;
-              tmp39 = tmp42;
+              const items = [null, tmp35];
+              obj2.children = items;
+              const tmp41 = timestampProducer(View, obj2);
+              cResult[15] = tmp22;
+              cResult[16] = tmp34;
+              cResult[17] = tmp35;
+              cResult[18] = null;
+              cResult[19] = tmp41;
+              tmp38 = tmp41;
             }
-            const obj3 = { variant: "text-xs/semibold", lineClamp: 1, maxFontSizeMultiplier: 2, style: tmp35, children: tmp7 };
-            const tmp38 = hasOwnProperty(Text_Text.Text, obj3);
-            cResult[14] = tmp35;
-            cResult[15] = tmp7;
-            cResult[16] = tmp38;
-            tmp36 = tmp38;
+            const obj3 = { variant: "text-xs/semibold", lineClamp: 1, maxFontSizeMultiplier: 2, style: tmp19, children: tmp7 };
+            const tmp37 = hasOwnProperty(Text_Text.Text, obj3);
+            cResult[12] = tmp7;
+            cResult[13] = tmp19;
+            cResult[14] = tmp37;
+            tmp35 = tmp37;
           }
         }
       }
-      const items2 = [tmp6.tag, tmp18, style, prop];
+      const items1 = [tmp6.tag, tmp18, style, prop];
       cResult[7] = prop;
       cResult[8] = style;
       cResult[9] = tmp6.tag;
       cResult[10] = tmp18;
-      cResult[11] = items2;
-      tmp34 = items2;
+      cResult[11] = items1;
+      tmp34 = items1;
     }
   } else {
     const _Symbol = Symbol;
@@ -175,7 +167,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       cResult[2] = tmp16;
     }
   }
-}) : ((invertColor) => {
+}) : (function BotTag(invertColor) {
   let flag = invertColor.invertColor;
   if (flag === undefined) {
     flag = false;
@@ -222,11 +214,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const obj2 = { style: null, accessible: true, accessibilityRole: "image", accessibilityLabel: stringResult, children: null };
   const items = [tmp2.tag, flag ? tmp2.tagInverted : tmp2.tagNormal, invertColor.style, prop];
   obj2.style = items;
-  const items1 = [tmp6, ];
-  const obj3 = { variant: "text-xs/semibold", lineClamp: 1, maxFontSizeMultiplier: 2, style: null, children: getBotLabel(BOT) };
-  const items2 = [flag ? tmp2.tagTextInverted : tmp2.tagTextNormal];
-  obj3.style = items2;
-  items1[1] = hasOwnProperty(tmp17(4892).Text, obj3);
+  const items1 = [tmp6, hasOwnProperty(tmp17(5086).Text, { variant: "text-xs/semibold", lineClamp: 1, maxFontSizeMultiplier: 2, style: flag ? tmp2.tagTextInverted : tmp2.tagTextNormal, children: getBotLabel(BOT) })];
   obj2.children = items1;
   return timestampProducer(View, obj2);
 });

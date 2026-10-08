@@ -1,7 +1,7 @@
-// === Module 8452: useDefaultVariantIndex ===
+// === Module 8938: useDefaultVariantIndex ===
 
-// Module 8452 (useDefaultVariantIndex)
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7081 */;
+// Module 8938 (useDefaultVariantIndex)
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7267 */;
 
 const require = globalThis.__r;
 
@@ -10,7 +10,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useDefaultVariantIndex.tsx");
 
-export const useDefaultVariantIndex = ReactCompilerGating.isReactCompilerEnabled() ? ((product) => {
+export const useDefaultVariantIndex = ReactCompilerGating.isReactCompilerEnabled() ? (function useDefaultVariantIndex(product) {
   const cResult = stateFromStores(576).c(7);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [CollectiblesPurchaseStore];
@@ -52,10 +52,10 @@ export const useDefaultVariantIndex = ReactCompilerGating.isReactCompilerEnabled
       cResult[3] = stateFromStores;
       cResult[4] = findIndexResult;
     }
-    tmpResult2 = tmp(7077);
+    tmpResult2 = tmp(7263);
   }
   return 0;
-}) : ((variants) => {
+}) : (function useDefaultVariantIndex(variants) {
   const items = [CollectiblesPurchaseStore];
   _require = require("initialize").useStateFromStores(items, () => purchases.purchases);
   let num = 0;

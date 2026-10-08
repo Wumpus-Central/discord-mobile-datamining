@@ -1,18 +1,18 @@
-// === Module 7147: Guilds ===
+// === Module 7327: Guilds ===
 
-// Module 7147 (Guilds)
+// Module 7327 (Guilds)
 import LoggerDefault from "Logger" /* 3 */;
-import GuildRecordUtilsAll from "GuildRecordUtils" /* 2066 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 2078 */;
-import GuildRoleRecordUtilsAll from "GuildRoleRecordUtils" /* 2108 */;
-import GuildRoleUtilsAll from "GuildRoleUtils" /* 2110 */;
+import GuildRecordUtilsAll from "GuildRecordUtils" /* 2078 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 2090 */;
+import GuildRoleRecordUtilsAll from "GuildRoleRecordUtils" /* 2120 */;
+import GuildRoleUtilsAll from "GuildRoleUtils" /* 2122 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import GuildRoleStore from "GuildRoleStore" /* 2106 */;
-import GuildStore from "GuildStore" /* 2074 */;
+import GuildMemberStore from "GuildMemberStore" /* 2124 */;
+import GuildRoleStore from "GuildRoleStore" /* 2118 */;
+import GuildStore from "GuildStore" /* 2086 */;
 
-const updateJoinedAt = fn(2070).updateJoinedAt;
+const updateJoinedAt = fn(2082).updateJoinedAt;
 let closure_9 = new LoggerDefault("Guilds");
 class Guilds {
   constructor() {
@@ -98,10 +98,10 @@ prototype["handleBackgroundSync"] = function handleBackgroundSync(arg0, arg1) {
           filterRoleDeletesResult = obj.fromServerArray(tmp2.id, tmp2.roles);
           tmp7 = importAll;
         }
-        let tmp7Result = tmp7(2066);
-        let tmp7Result3 = tmp7(2066);
+        let tmp7Result = tmp7(2078);
+        let tmp7Result3 = tmp7(2078);
         let fromBackgroundSyncResult = tmp7Result3.fromBackgroundSync(tmp2, tmp22);
-        let tmp7Result4 = tmp7(2108);
+        let tmp7Result4 = tmp7(2120);
         let result = tmp7Result4.toSerializedPartition(filterRoleDeletesResult);
         let putResult = self.put(tmp7Result.attachSerializedData(fromBackgroundSyncResult, result, GuildMemberStore.getSelfMember(tmp2.id)), arg1);
       }

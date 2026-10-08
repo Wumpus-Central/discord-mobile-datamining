@@ -1,15 +1,15 @@
-// === Module 15945: usePromoEmailOptInLabel ===
+// === Module 16205: usePromoEmailOptInLabel ===
 
-// Module 15945 (usePromoEmailOptInLabel)
+// Module 16205 (usePromoEmailOptInLabel)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import RegistrationEmailOptInCopyExperimentDefault from "RegistrationEmailOptInCopyExperiment" /* 15946 */;
+import RegistrationEmailOptInCopyExperimentDefault from "RegistrationEmailOptInCopyExperiment" /* 16206 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/auth/usePromoEmailOptInLabel.tsx");
 
-export const usePromoEmailOptInLabel = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, location) => {
+export const usePromoEmailOptInLabel = ReactCompilerGating.isReactCompilerEnabled() ? (function usePromoEmailOptInLabel(arg0, location) {
   const cResult = c.c(5);
   if (cResult[0] !== location) {
     const obj2 = { location };
@@ -36,7 +36,7 @@ export const usePromoEmailOptInLabel = ReactCompilerGating.isReactCompilerEnable
   cResult[3] = trackingCopy;
   cResult[4] = stringResult;
   tmp5 = stringResult;
-}) : ((arg0, location) => {
+}) : (function usePromoEmailOptInLabel(arg0, location) {
   let LSoXK5 = arg0;
   const intl = util.intl;
   if (obj.useConfig(obj2).trackingCopy) {

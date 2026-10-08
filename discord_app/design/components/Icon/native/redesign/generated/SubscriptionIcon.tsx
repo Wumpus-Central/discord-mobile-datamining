@@ -1,10 +1,10 @@
-// === Module 14812: SubscriptionIcon ===
+// === Module 15073: SubscriptionIcon ===
 
-// Module 14812 (SubscriptionIcon)
+// Module 15073 (SubscriptionIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4585 */;
-import _mod14813 from "module_14813" /* 14813 */;
+import BaseIconImage from "BaseIconImage" /* 4777 */;
+import _mod15074 from "module_15074" /* 15074 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/SubscriptionIcon.tsx");
 
-export const SubscriptionIcon = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const SubscriptionIcon = ReactCompilerGating.isReactCompilerEnabled() ? (function SubscriptionIcon(arg0) {
   const cResult = c.c(9);
   if (cResult[0] !== arg0) {
     ({ style, color } = arg0);
@@ -36,7 +36,7 @@ export const SubscriptionIcon = ReactCompilerGating.isReactCompilerEnabled() ? (
     ICON_STRONG = nativeDefault.colors.ICON_STRONG;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod14813;
+    const tmpResult = _mod15074;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -58,12 +58,12 @@ export const SubscriptionIcon = ReactCompilerGating.isReactCompilerEnabled() ? (
   cResult[8] = tmp14;
   tmp12 = tmp14;
   const obj2 = { source: tmp10, color: ICON_STRONG, style: tmp5 };
-}) : ((color) => {
+}) : (function SubscriptionIcon(color) {
   let ICON_STRONG = color.color;
   if (ICON_STRONG === undefined) {
     ICON_STRONG = nativeDefault.colors.ICON_STRONG;
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod14813, color: ICON_STRONG, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15074, color: ICON_STRONG, style: color.style });
 });

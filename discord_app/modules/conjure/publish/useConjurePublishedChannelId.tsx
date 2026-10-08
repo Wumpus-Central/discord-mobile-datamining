@@ -1,8 +1,8 @@
-// === Module 16627: useConjurePublishedChannelId ===
+// === Module 16887: useConjurePublishedChannelId ===
 
-// Module 16627 (useConjurePublishedChannelId)
-import ConjureUtils from "ConjureUtils" /* 6756 */;
-import GuildChannelStore from "GuildChannelStore" /* 4513 */;
+// Module 16887 (useConjurePublishedChannelId)
+import ConjureUtils from "ConjureUtils" /* 6932 */;
+import GuildChannelStore from "GuildChannelStore" /* 4705 */;
 
 const require = globalThis.__r;
 
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/publish/useConjurePublishedChannelId.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConjurePublishedChannelId(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   const cResult = require("c").c(5);
@@ -29,7 +29,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     }
     return tmp(504).useStateFromStores(first, tmp6, tmp7);
   }
-  const fn = function o() {
+  const fn = function t() {
     let findConjureChannelIdResult = null;
     if (null != closure_1) {
       findConjureChannelIdResult = ConjureUtils.findConjureChannelId(closure_0, tmp);
@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   tmp6 = fn;
   let obj = require("c");
   tmp = _require;
-}) : ((arg0, arg1) => {
+}) : (function useConjurePublishedChannelId(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   const items = [GuildChannelStore];

@@ -1,18 +1,18 @@
-// === Module 18000: GuildRoleSubscriptionEmojiEditorModal ===
+// === Module 18287: GuildRoleSubscriptionEmojiEditorModal ===
 
-// Module 18000 (GuildRoleSubscriptionEmojiEditorModal)
+// Module 18287 (GuildRoleSubscriptionEmojiEditorModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5714 */;
-import common_AlertDefault from "common/Alert" /* 5790 */;
-import FastImageDefault from "FastImage" /* 5981 */;
-import EmojiAliasDefault from "EmojiAlias" /* 17986 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5297 */;
+import common_AlertDefault from "common/Alert" /* 5394 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import EmojiAliasDefault from "EmojiAlias" /* 18273 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SubscriptionRoleStore from "SubscriptionRoleStore" /* 5646 */;
+import SubscriptionRoleStore from "SubscriptionRoleStore" /* 5993 */;
 
 const require = globalThis.__r;
 
@@ -21,7 +21,7 @@ get_ActivityIndicator = fn(17);
 ({ View: metroRequire, SectionList: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, display: "flex", flexDirection: "column", justifyContent: "flex-start", height: "100%" }, emojiList: null, row: null, emojiImage: null, emojiAlias: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, display: "flex", flexDirection: "column", justifyContent: "flex-start", height: "100%" };
 obj2.emojiList = { flexGrow: 0, marginVertical: 24, marginHorizontal: 16, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
@@ -34,7 +34,7 @@ let obj4 = { flexGrow: 0, marginVertical: 24, marginHorizontal: 16, borderRadius
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionEmojiEditorModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRoleSubscriptionEmojiEditorModal(guildId) {
   const cResult = require("c").c(49);
   guildId = guildId.guildId;
   _require = guildId;
@@ -44,7 +44,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   let obj = require("c");
   let tmp = _require;
   _slicedToArray = closure_12();
-  subscriptionRoleId(onClose[10])(guildId);
+  const arr = subscriptionRoleId(onClose[10])(guildId);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [SubscriptionRoleStore];
     cResult[0] = items;
@@ -53,34 +53,79 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     first = cResult[0];
   }
   if (cResult[1] !== guildId) {
-    class S {
-      constructor() {
-        return closure_8.getSubscriptionRoles(closure_0);
-      }
-    }
+    const fn = function v() {
+      return SubscriptionRoleStore.getSubscriptionRoles(closure_0);
+    };
     cResult[1] = guildId;
-    cResult[2] = S;
+    cResult[2] = fn;
+    let tmp7 = fn;
   } else {
-    class S {
-      constructor() {
-        return closure_8.getSubscriptionRoles(closure_0);
-      }
-    }
+    tmp7 = cResult[2];
   }
   const tmp4 = closure_12();
-  const stateFromStores = tmp(onClose[11]).useStateFromStores(first, S);
+  const stateFromStores = tmp(onClose[11]).useStateFromStores(first, tmp7);
   [first1, closure_7] = stateFromStores.useState(guildId.initialTierEmojiIds);
   if (null != subscriptionRoleId) {
-    class S {
-      constructor() {
-        return closure_8.getSubscriptionRoles(closure_0);
-      }
-    }
     if (cResult[9] === stateFromStores) {
-      class S {
-        constructor() {
-          return closure_8.getSubscriptionRoles(closure_0);
+      if (cResult[10] === subscriptionRoleId) {
+        if (cResult[11] === first1) {
+          let tmp13 = cResult[12];
         }
+        const found = arr.filter(tmp13);
+        class D {
+          constructor(arg0) {
+            closure_0 = guildId;
+            roles = guildId.roles;
+            return 0 === roles.filter((item) => {
+              let tmp = item === subscriptionRoleId;
+              if (tmp) {
+                tmp = !first1.has(id.id);
+              }
+              let hasItem = !tmp;
+              if (!tmp) {
+                hasItem = stateFromStores.has(item);
+              }
+              return hasItem;
+            }).length;
+          }
+        }
+        if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
+          class G {
+            constructor(arg0) {
+              return guildId.id;
+            }
+          }
+          class D {
+            constructor(arg0) {
+              closure_0 = guildId;
+              roles = guildId.roles;
+              return 0 === roles.filter((item) => {
+                let tmp = item === subscriptionRoleId;
+                if (tmp) {
+                  tmp = !first1.has(id.id);
+                }
+                let hasItem = !tmp;
+                if (!tmp) {
+                  hasItem = stateFromStores.has(item);
+                }
+                return hasItem;
+              }).length;
+            }
+          }
+        } else {
+          class G {
+            constructor(arg0) {
+              return guildId.id;
+            }
+          }
+        }
+        const _Set = Set;
+        let set = new Set(found.map(G));
+        cResult[4] = stateFromStores;
+        cResult[5] = arr;
+        cResult[6] = subscriptionRoleId;
+        cResult[7] = first1;
+        cResult[8] = set;
       }
     }
     class D {
@@ -104,10 +149,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     cResult[10] = subscriptionRoleId;
     cResult[11] = first1;
     cResult[12] = D;
+    tmp13 = D;
   } else {
-    class S {
-      constructor() {
-        return closure_8.getSubscriptionRoles(closure_0);
+    class G {
+      constructor(arg0) {
+        return guildId.id;
       }
     }
     class D {
@@ -127,11 +173,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
         }).length;
       }
     }
-    SubscriptionRoleStore = tmp13;
+    SubscriptionRoleStore = tmp12;
     if (cResult[14] === onClose) {
-      class S {
-        constructor() {
-          return closure_8.getSubscriptionRoles(closure_0);
+      class G {
+        constructor(arg0) {
+          return guildId.id;
         }
       }
     }
@@ -168,7 +214,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     cResult[17] = handleSave;
   }
   let tmpResult = tmp(onClose[11]);
-}) : ((guildId) => {
+}) : (function GuildRoleSubscriptionEmojiEditorModal(guildId) {
   guildId = guildId.guildId;
   const subscriptionRoleId = guildId.subscriptionRoleId;
   const onClose = guildId.onClose;
@@ -241,7 +287,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   let intl = guildId(onClose[13]).intl;
   obj3.title = intl.string(guildId(onClose[13]).t.W4XhnR);
   obj3.onClose = onClose;
-  obj3.onSave = function onSave() {
+  obj3.onSave = function handleConfirmAndSave() {
     if (0 === set.size) {
       handleSave();
     } else {
@@ -289,10 +335,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
           obj4.children = intl2.string(util.t.J0XdJ4);
           items1[1] = options(Text_Text.Text, obj4);
           obj2.children = items1;
-          tmpResult = closure_3_11(v65535, obj2);
+          tmpResult = closure_3_11(collapsed, obj2);
         }
         children[1] = tmpResult;
-        return closure_3_11(v65535, { children });
+        return closure_3_11(collapsed, { children });
       };
       obj.onPress = function onPress() {
         const id = item.id;

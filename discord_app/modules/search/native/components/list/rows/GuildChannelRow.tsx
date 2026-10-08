@@ -1,13 +1,13 @@
-// === Module 16849: GuildChannelRow ===
+// === Module 17128: GuildChannelRow ===
 
-// Module 16849 (GuildChannelRow)
+// Module 17128 (GuildChannelRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useChannelNameDefault from "useChannelName" /* 5049 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5819 */;
-import SearchListRow from "SearchListRow" /* 16828 */;
-import ChannelContent from "ChannelContent" /* 16850 */;
-import renderChannelItem from "renderChannelItem" /* 16852 */;
+import useChannelNameDefault from "useChannelName" /* 5417 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8134 */;
+import SearchListRow from "SearchListRow" /* 17107 */;
+import ChannelContent from "ChannelContent" /* 17129 */;
+import renderChannelItem from "renderChannelItem" /* 17131 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,15 +15,15 @@ require = fn;
 let closure_3 = ["channel", "subtitle", "trailing", "extras", "onPress", "voiceStates"];
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const layout = fn(7524).CHANNEL_LIST_SEARCH_LAYOUT;
+const layout = fn(9247).CHANNEL_LIST_SEARCH_LAYOUT;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { container: { paddingVertical: 10 }, content: { flexDirection: "row", alignItems: "center" }, iconContainer: { marginRight: 0 }, simpleIcon: null };
 let size = { width: 20, height: 20, marginRight: 8, tintColor: nativeDefault.colors.TEXT_MUTED };
 obj.simpleIcon = size;
 let closure_9 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildChannelLabel(channel) {
   const cResult = c.c(6);
   channel = channel.channel;
   const tmp4 = closure_9();
@@ -52,7 +52,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   tmp7 = renderChannelContentResult;
   const obj3 = { channel, layout, name: tmp5 };
   const tmpResult = ChannelContent;
-}) : ((channel) => {
+}) : (function GuildChannelLabel(channel) {
   channel = channel.channel;
   const obj = { style: closure_9().content, children: null };
   const tmp = closure_9();
@@ -64,7 +64,7 @@ ReactCompilerGating = fn(558);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/list/rows/GuildChannelRow.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function GuildChannelRow(arg0) {
   const cResult = c.c(28);
   if (cResult[0] !== arg0) {
     ({ channel, subtitle, trailing, extras, onPress, voiceStates } = arg0);
@@ -177,7 +177,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   cResult[10] = channelAccessibilityProps;
   tmp15 = channelAccessibilityProps;
   const tmpResult2 = renderChannelItem;
-}) : ((channel) => {
+}) : (function GuildChannelRow(channel) {
   channel = channel.channel;
   ({ subtitle, trailing, extras, onPress, voiceStates } = channel);
   const merged = Object.assign(channel, Object.assign({ channel: 0, subtitle: 0, trailing: 0, extras: 0, onPress: 0, voiceStates: 0 }));

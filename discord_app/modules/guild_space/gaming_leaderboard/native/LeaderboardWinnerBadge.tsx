@@ -1,23 +1,23 @@
-// === Module 10655: LeaderboardWinnerBadge ===
+// === Module 10255: LeaderboardWinnerBadge ===
 
-// Module 10655 (LeaderboardWinnerBadge)
+// Module 10255 (LeaderboardWinnerBadge)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import TrophyIcon from "TrophyIcon" /* 8397 */;
-import useActiveLeaderboardWinnerDataDefault from "useActiveLeaderboardWinnerData" /* 10656 */;
-import GuildLeaderboardUtils from "GuildLeaderboardUtils" /* 10657 */;
+import TrophyIcon from "TrophyIcon" /* 8895 */;
+import useActiveLeaderboardWinnerDataDefault from "useActiveLeaderboardWinnerData" /* 10256 */;
+import GuildLeaderboardUtils from "GuildLeaderboardUtils" /* 10257 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles({ container: { marginLeft: 4 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_space/gaming_leaderboard/native/LeaderboardWinnerBadge.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function LeaderboardWinnerBadge(arg0) {
   const cResult = c.c(6);
   ({ guildId, userId } = arg0);
   const tmp4 = closure_5();
@@ -56,7 +56,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[5] = tmp16;
     tmp13 = tmp16;
   }
-}) : ((arg0) => {
+}) : (function LeaderboardWinnerBadge(arg0) {
   ({ guildId, userId } = arg0);
   const tmp4 = useActiveLeaderboardWinnerDataDefault(guildId, userId);
   let tmp5 = null;

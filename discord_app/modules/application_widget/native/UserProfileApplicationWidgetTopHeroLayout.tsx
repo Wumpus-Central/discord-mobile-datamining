@@ -1,28 +1,28 @@
-// === Module 8628: UserProfileApplicationWidgetTopHeroLayout ===
+// === Module 13101: UserProfileApplicationWidgetTopHeroLayout ===
 
-// Module 8628 (UserProfileApplicationWidgetTopHeroLayout)
+// Module 13101 (UserProfileApplicationWidgetTopHeroLayout)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import LinearGradientDefault from "LinearGradient" /* 5612 */;
-import _modDef6059 from "module_6059" /* 6059 */;
-import UserProfileSharedStyles from "UserProfileSharedStyles" /* 7924 */;
-import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 8629 */;
-import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 8716 */;
-import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 8717 */;
+import LinearGradientDefault from "LinearGradient" /* 5387 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import _modDef6245 from "module_6245" /* 6245 */;
+import UserProfileSharedStyles from "UserProfileSharedStyles" /* 8343 */;
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 13102 */;
+import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 13189 */;
+import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 13190 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+const View = fn(17).View;
 const HorizontalGradient = fn(1085).HorizontalGradient;
-const CARD_PADDING = fn(6714).CARD_PADDING;
+const CARD_PADDING = fn(6891).CARD_PADDING;
 const jsxProd = fn(21);
-({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const colors = ["transparent", "black"];
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { root: { position: "relative" }, contentRow: { flexDirection: "row", gap: nativeDefault.space.PX_12, minHeight: 140 }, heroText: null, heroImageColumn: null, heroImageSkeleton: null, heroImagePositioner: null, heroImageMask: null, heroImageFadeGradient: null, heroImageMaskRemainder: null };
 let obj3 = { flexDirection: "row", gap: nativeDefault.space.PX_12, minHeight: 140 };
 obj2.heroText = { flex: 1, minWidth: 120, gap: nativeDefault.space.PX_4, justifyContent: "center" };
@@ -33,16 +33,16 @@ obj2.heroImagePositioner = { position: "absolute", left: "50%", right: -CARD_PAD
 obj2.heroImageMask = { flex: 1, flexDirection: "row" };
 obj2.heroImageFadeGradient = { width: 130 };
 obj2.heroImageMaskRemainder = { flex: 1, backgroundColor: "black" };
-let closure_11 = createStyles.createStyles(obj2);
+let closure_10 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj4 = { flex: 1, minWidth: 120, gap: nativeDefault.space.PX_4, justifyContent: "center" };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/application_widget/native/UserProfileApplicationWidgetTopHeroLayout.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileApplicationWidgetTopHeroLayout(arg0) {
   const cResult = c.c(57);
   ({ header, topConfig, resolveFieldValue, numberFormat } = arg0);
-  const tmp4 = closure_11();
+  const tmp4 = closure_10();
   [tmp6, require] = noop.useState(null);
   if (cResult[0] === numberFormat) {
     if (cResult[1] === resolveFieldValue) {
@@ -76,7 +76,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                     const userProfileCardRadius = UserProfileSharedStyles.useUserProfileCardRadius();
                     if (cResult[19] !== tmp7) {
                       const obj2 = { field: tmp7, variant: "text-lg/medium", color: "text-default" };
-                      const tmp21 = closure_1_8(UserProfileApplicationWidgetFieldUtils.FieldText, obj2);
+                      const tmp21 = React5(UserProfileApplicationWidgetFieldUtils.FieldText, obj2);
                       cResult[19] = tmp7;
                       cResult[20] = tmp21;
                       let tmp19 = tmp21;
@@ -85,7 +85,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                     }
                     if (cResult[21] !== tmp9) {
                       const obj3 = { field: tmp9, variant: "text-sm/normal", color: "text-muted" };
-                      const tmp24 = closure_1_8(UserProfileApplicationWidgetFieldUtils.FieldText, obj3);
+                      const tmp24 = React5(UserProfileApplicationWidgetFieldUtils.FieldText, obj3);
                       cResult[21] = tmp9;
                       cResult[22] = tmp24;
                       let tmp22 = tmp24;
@@ -94,7 +94,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                     }
                     if (cResult[23] !== tmp11) {
                       const obj4 = { field: tmp11, variant: "text-sm/normal", color: "text-muted" };
-                      const tmp27 = closure_1_8(UserProfileApplicationWidgetFieldUtils.FieldText, obj4);
+                      const tmp27 = React5(UserProfileApplicationWidgetFieldUtils.FieldText, obj4);
                       cResult[23] = tmp11;
                       cResult[24] = tmp27;
                       let tmp25 = tmp27;
@@ -103,7 +103,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                     }
                     if (cResult[25] !== tmp13) {
                       const obj5 = { field: tmp13, variant: "text-sm/normal", color: "text-muted" };
-                      const tmp30 = closure_1_8(UserProfileApplicationWidgetFieldUtils.FieldText, obj5);
+                      const tmp30 = React5(UserProfileApplicationWidgetFieldUtils.FieldText, obj5);
                       cResult[25] = tmp13;
                       cResult[26] = tmp30;
                       let tmp28 = tmp30;
@@ -144,22 +144,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                                                     if (cResult[53] === tmp4.root) {
                                                       if (cResult[54] === tmp42) {
                                                         if (cResult[55] === tmp46) {
-                                                          let tmp58 = cResult[56];
+                                                          let tmp57 = cResult[56];
                                                         }
-                                                        return tmp58;
+                                                        return tmp57;
                                                       }
                                                     }
                                                   }
                                                   const obj6 = { style: tmp4.root, children: null };
                                                   const items = [header, tmp42, tmp46];
                                                   obj6.children = items;
-                                                  const tmp61 = options(timestampProducer, obj6);
+                                                  const tmp60 = closure_1_8(View, obj6);
                                                   cResult[52] = header;
                                                   cResult[53] = tmp4.root;
                                                   cResult[54] = tmp42;
                                                   cResult[55] = tmp46;
-                                                  cResult[56] = tmp61;
-                                                  tmp58 = tmp61;
+                                                  cResult[56] = tmp60;
+                                                  tmp57 = tmp60;
                                                 }
                                               }
                                             }
@@ -189,20 +189,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                                           ({ START: obj20.start, END: obj20.end } = HorizontalGradient);
                                           obj11.colors = colors;
                                           obj11.style = tmp4.heroImageFadeGradient;
-                                          const items2 = [closure_1_8(LinearGradientDefault, obj11), ];
+                                          const items2 = [React5(LinearGradientDefault, obj11), ];
                                           const obj12 = { style: tmp4.heroImageMaskRemainder };
-                                          items2[1] = closure_1_8(timestampProducer, obj12);
+                                          items2[1] = React5(View, obj12);
                                           obj10.children = items2;
-                                          obj9.maskElement = options(timestampProducer, obj10);
+                                          obj9.maskElement = closure_1_8(View, obj10);
                                           const obj13 = { source: null, style: null };
                                           const obj14 = { uri: tmp16.media.url };
                                           obj13.source = obj14;
                                           obj13.style = { width: "100%", height: "100%" };
-                                          obj9.children = closure_1_8(hasOwnProperty, obj13);
-                                          tmp48Result = closure_1_8(_modDef6059, obj9);
+                                          obj9.children = React5(FastImageDefault, obj13);
+                                          tmp48Result = React5(_modDef6245, obj9);
                                         }
                                         obj7.children = tmp48Result;
-                                        tmp48Result2 = closure_1_8(timestampProducer, obj7);
+                                        tmp48Result2 = React5(View, obj7);
                                       }
                                       cResult[44] = userProfileCardRadius;
                                       cResult[45] = tmp16;
@@ -218,7 +218,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                                   const obj15 = { style: tmp4.contentRow, children: null };
                                   const items3 = [tmp31, tmp38];
                                   obj15.children = items3;
-                                  const tmp45 = options(timestampProducer, obj15);
+                                  const tmp45 = closure_1_8(View, obj15);
                                   cResult[40] = tmp4.contentRow;
                                   cResult[41] = tmp31;
                                   cResult[42] = tmp38;
@@ -226,7 +226,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                                   tmp42 = tmp45;
                                 }
                                 const obj16 = { style: tmp4.heroImageColumn, children: tmp35 };
-                                const tmp41 = closure_1_8(timestampProducer, obj16);
+                                const tmp41 = React5(View, obj16);
                                 cResult[37] = tmp4.heroImageColumn;
                                 cResult[38] = tmp35;
                                 cResult[39] = tmp41;
@@ -236,7 +236,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                             let tmp36 = null == tmp16 || null == tmp6;
                             if (tmp36) {
                               const obj17 = { style: tmp4.heroImageSkeleton };
-                              tmp36 = closure_1_8(UserProfileApplicationWidgetSkeletons.ImageSkeleton, obj17);
+                              tmp36 = React5(UserProfileApplicationWidgetSkeletons.ImageSkeleton, obj17);
                             }
                             cResult[33] = tmp16;
                             cResult[34] = tmp6;
@@ -250,7 +250,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                     const obj18 = { style: tmp4.heroText, children: null };
                     const items4 = [tmp19, tmp22, tmp25, tmp28];
                     obj18.children = items4;
-                    const tmp34 = options(timestampProducer, obj18);
+                    const tmp34 = closure_1_8(View, obj18);
                     cResult[27] = tmp4.heroText;
                     cResult[28] = tmp28;
                     cResult[29] = tmp19;
@@ -303,10 +303,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = textComponentValues3;
   tmp7 = textComponentValues3;
   const tmpResult8 = resolvedValuesFromUserApplicationIdentityProfile;
-}) : ((header) => {
+}) : (function UserProfileApplicationWidgetTopHeroLayout(header) {
   ({ topConfig, resolveFieldValue, numberFormat } = header);
   c0 = undefined;
-  const tmp = closure_11();
+  const tmp = closure_10();
   [tmp3, c0] = noop.useState(null);
   const tmp2 = _slicedToArray(noop.useState(null), 2);
   const textComponentValues = resolvedValuesFromUserApplicationIdentityProfile.resolveTextComponentValues(topConfig.components.title, resolveFieldValue, numberFormat, true);
@@ -325,19 +325,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const obj6 = { style: tmp.contentRow, children: null };
   const obj7 = { style: tmp.heroText, children: null };
   const userProfileCardRadius = UserProfileSharedStyles.useUserProfileCardRadius();
-  const items2 = [closure_1_8(UserProfileApplicationWidgetFieldUtils.FieldText, { field: textComponentValues, variant: "text-lg/medium", color: "text-default" }), closure_1_8(UserProfileApplicationWidgetFieldUtils.FieldText, { field: textComponentValues1, variant: "text-sm/normal", color: "text-muted" }), closure_1_8(UserProfileApplicationWidgetFieldUtils.FieldText, { field: textComponentValues2, variant: "text-sm/normal", color: "text-muted" }), closure_1_8(UserProfileApplicationWidgetFieldUtils.FieldText, { field: textComponentValues3, variant: "text-sm/normal", color: "text-muted" })];
+  const items2 = [React5(UserProfileApplicationWidgetFieldUtils.FieldText, { field: textComponentValues, variant: "text-lg/medium", color: "text-default" }), React5(UserProfileApplicationWidgetFieldUtils.FieldText, { field: textComponentValues1, variant: "text-sm/normal", color: "text-muted" }), React5(UserProfileApplicationWidgetFieldUtils.FieldText, { field: textComponentValues2, variant: "text-sm/normal", color: "text-muted" }), React5(UserProfileApplicationWidgetFieldUtils.FieldText, { field: textComponentValues3, variant: "text-sm/normal", color: "text-muted" })];
   obj7.children = items2;
-  const items3 = [options(timestampProducer, obj7), ];
+  const items3 = [closure_1_8(View, obj7), ];
   const obj8 = { style: tmp.heroImageColumn, children: null };
   let tmp15Result = null == fieldValue || null == tmp3;
   if (tmp15Result) {
     const obj9 = { style: tmp.heroImageSkeleton };
-    tmp15Result = closure_1_8(UserProfileApplicationWidgetSkeletons.ImageSkeleton, obj9);
+    tmp15Result = React5(UserProfileApplicationWidgetSkeletons.ImageSkeleton, obj9);
   }
   obj8.children = tmp15Result;
-  items3[1] = closure_1_8(timestampProducer, obj8);
+  items3[1] = React5(View, obj8);
   obj6.children = items3;
-  items1[1] = options(timestampProducer, obj6);
+  items1[1] = closure_1_8(View, obj6);
   let tmp15Result4 = null != fieldValue;
   if (tmp15Result4) {
     const obj10 = { style: null, pointerEvents: "none", onLayout: null, children: null };
@@ -361,22 +361,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       ({ START: obj16.start, END: obj16.end } = HorizontalGradient);
       obj14.colors = colors;
       obj14.style = tmp.heroImageFadeGradient;
-      const items5 = [closure_1_8(LinearGradientDefault, obj14), ];
+      const items5 = [React5(LinearGradientDefault, obj14), ];
       const obj15 = { style: tmp.heroImageMaskRemainder };
-      items5[1] = closure_1_8(timestampProducer, obj15);
+      items5[1] = React5(View, obj15);
       obj13.children = items5;
-      obj12.maskElement = options(timestampProducer, obj13);
+      obj12.maskElement = closure_1_8(View, obj13);
       const obj17 = { source: null, style: null };
       const obj18 = { uri: fieldValue.media.url };
       obj17.source = obj18;
       obj17.style = { width: "100%", height: "100%" };
-      obj12.children = closure_1_8(hasOwnProperty, obj17);
-      tmp15Result3 = closure_1_8(_modDef6059, obj12);
+      obj12.children = React5(FastImageDefault, obj17);
+      tmp15Result3 = React5(_modDef6245, obj12);
     }
     obj10.children = tmp15Result3;
-    tmp15Result4 = closure_1_8(timestampProducer, obj10);
+    tmp15Result4 = React5(View, obj10);
   }
   items1[2] = tmp15Result4;
   obj5.children = items1;
-  return options(timestampProducer, obj5);
+  return closure_1_8(View, obj5);
 });

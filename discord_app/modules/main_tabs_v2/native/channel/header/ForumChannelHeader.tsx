@@ -1,23 +1,23 @@
-// === Module 13134: ForumChannelHeader ===
+// === Module 12849: ForumChannelHeader ===
 
-// Module 13134 (ForumChannelHeader)
+// Module 12849 (ForumChannelHeader)
 import c from "c" /* 576 */;
-import ForumChannelSearch from "ForumChannelSearch" /* 13117 */;
-import useIsForumChannelSearchActive from "useIsForumChannelSearchActive" /* 13135 */;
-import GuildChannelHeaderDefault from "GuildChannelHeader" /* 13136 */;
+import ForumChannelSearch from "ForumChannelSearch" /* 12831 */;
+import useIsForumChannelSearchActive from "useIsForumChannelSearchActive" /* 12850 */;
+import GuildChannelHeaderDefault from "GuildChannelHeader" /* 12851 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
-let closure_5 = createStyles.createStyles({ search: { flex: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", paddingStart: 4, height: fn(7510).MIN_HEADER_HEIGHT } });
+const createStyles = fn(5090);
+let closure_5 = createStyles.createStyles({ search: { flex: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", paddingStart: 4, height: fn(9233).MIN_HEADER_HEIGHT } });
 const ReactCompilerGating = fn(558);
-let obj = { search: { flex: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", paddingStart: 4, height: fn(7510).MIN_HEADER_HEIGHT } };
+let obj = { search: { flex: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", paddingStart: 4, height: fn(9233).MIN_HEADER_HEIGHT } };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/channel/header/ForumChannelHeader.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ForumChannelHeader(arg0) {
   const cResult = c.c(14);
   ({ channelId, screenIndex, guildId, pressable, isGuildMemberCountVisible, isNavigationScreen, searchPlaceholder } = arg0);
   let search = closure_5();
@@ -71,7 +71,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
     tmp4 = tmp7;
   }
   obj2 = useIsForumChannelSearchActive;
-}) : ((arg0) => {
+}) : (function ForumChannelHeader(arg0) {
   ({ channelId, guildId } = arg0);
   ({ screenIndex, pressable, isGuildMemberCountVisible, isNavigationScreen, searchPlaceholder } = arg0);
   const tmp = closure_5();

@@ -1,24 +1,24 @@
-// === Module 16894: PeopleScreen ===
+// === Module 17175: PeopleScreen ===
 
-// Module 16894 (PeopleScreen)
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12001 */;
+// Module 17175 (PeopleScreen)
+import tracking_TrackingDefault from "tracking/Tracking" /* 12074 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import SearchPeopleTabStore from "SearchPeopleTabStore" /* 12009 */;
-import SearchQueryStore from "SearchQueryStore" /* 11994 */;
+import SearchPeopleTabStore from "SearchPeopleTabStore" /* 12082 */;
+import SearchQueryStore from "SearchQueryStore" /* 12067 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const SearchConstants = fn(7524);
+const SearchConstants = fn(9247);
 ({ SearchListItemTypes: closure_7, USER_ESTIMATED_ITEM_SIZE: closure_8 } = SearchConstants);
-const constants2 = fn(7523).SearchResultContentEntityTypes;
+const constants2 = fn(9246).SearchResultContentEntityTypes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/PeopleScreen.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function PeopleScreen(searchContext) {
   const cResult = require("c").c(31);
   searchContext = searchContext.searchContext;
   _require = searchContext;
@@ -40,23 +40,37 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((search
     tmp6 = cResult[2];
   }
   if (cResult[3] !== tmp4) {
-    const fn = function v() {
-      return SearchPeopleTabStore.getResults(closure_1);
-    };
+    class S {
+      constructor() {
+        return closure_5.getResults(closure_1);
+      }
+    }
     cResult[3] = tmp4;
-    cResult[4] = fn;
-    let tmp8 = fn;
+    cResult[4] = S;
   } else {
-    tmp8 = cResult[4];
+    class S {
+      constructor() {
+        return closure_5.getResults(closure_1);
+      }
+    }
   }
   let obj = require("c");
-  const stateFromStores = require("initialize").useStateFromStores(tmp6, tmp8);
+  const stateFromStores = require("initialize").useStateFromStores(tmp6, S);
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
+    class S {
+      constructor() {
+        return closure_5.getResults(closure_1);
+      }
+    }
     const items1 = [SearchQueryStore];
     cResult[5] = items1;
-    let tmp9 = items1;
+    const tmp9 = items1;
   } else {
-    tmp9 = cResult[5];
+    class S {
+      constructor() {
+        return closure_5.getResults(closure_1);
+      }
+    }
   }
   if (cResult[6] !== searchContext) {
     class E {
@@ -81,8 +95,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((search
         return closure_6.isInitialSearchQuery(closure_0);
       }
     }
-    tmp14[0] = closure_8;
-    cResult[8] = tmp14;
+    tmp13[0] = closure_8;
+    cResult[8] = tmp13;
   } else {
     class E {
       constructor() {
@@ -91,16 +105,16 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((search
     }
   }
   const tmpResult7 = require("initialize");
-  const fullscreenPlaceholderCount = require("usePlaceholderStyles").useFullscreenPlaceholderCount(tmp14);
+  const fullscreenPlaceholderCount = require("usePlaceholderStyles").useFullscreenPlaceholderCount(tmp13);
   if (cResult[9] !== searchContext) {
     class E {
       constructor() {
         return closure_6.isInitialSearchQuery(closure_0);
       }
     }
-    tmp18[0] = searchContext;
+    tmp17[0] = searchContext;
     cResult[9] = searchContext;
-    cResult[10] = tmp18;
+    cResult[10] = tmp17;
   } else {
     class E {
       constructor() {
@@ -109,16 +123,16 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((search
     }
   }
   const tmpResult8 = require("usePlaceholderStyles");
-  onPressGroupDMItem = require("useOnPressSearchItem").useOnPressGroupDMItem(tmp18);
+  onPressGroupDMItem = require("useOnPressSearchItem").useOnPressGroupDMItem(tmp17);
   if (cResult[11] !== searchContext) {
     class E {
       constructor() {
         return closure_6.isInitialSearchQuery(closure_0);
       }
     }
-    tmp21[0] = searchContext;
+    tmp20[0] = searchContext;
     cResult[11] = searchContext;
-    cResult[12] = tmp21;
+    cResult[12] = tmp20;
   } else {
     class E {
       constructor() {
@@ -127,14 +141,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((search
     }
   }
   const tmpResult9 = require("useOnPressSearchItem");
-  const onPressDMItem = require("useOnPressSearchItem").useOnPressDMItem(tmp21);
+  const onPressDMItem = require("useOnPressSearchItem").useOnPressDMItem(tmp20);
   if (cResult[13] === onPressDMItem) {
     class E {
       constructor() {
         return closure_6.isInitialSearchQuery(closure_0);
       }
     }
-    noop = tmp23;
+    noop = tmp22;
     if (cResult[16] === onPressGroupDMItem) {
       class E {
         constructor() {
@@ -142,7 +156,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((search
         }
       }
       SearchQueryStore = D;
-      if (cResult[19] === tmp23) {
+      if (cResult[19] === tmp22) {
         class E {
           constructor() {
             return closure_6.isInitialSearchQuery(closure_0);
@@ -221,7 +235,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((search
           }
         }
       }
-      cResult[19] = tmp23;
+      cResult[19] = tmp22;
       cResult[20] = D;
       cResult[21] = stateFromStores1;
       cResult[22] = fullscreenPlaceholderCount;
@@ -301,7 +315,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((search
       }
     })();
   });
-  const fn2 = function() {
+  function t9() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -310,12 +324,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((search
       applyArgumentsResult = apply(self, arguments);
     }
     return applyArgumentsResult;
-  };
+  }
   cResult[13] = onPressDMItem;
   cResult[14] = searchContext;
-  cResult[15] = fn2;
+  cResult[15] = t9;
   const tmpResult10 = require("useOnPressSearchItem");
-}) : ((searchContext) => {
+}) : (function PeopleScreen(searchContext) {
   searchContext = searchContext.searchContext;
   let _require = searchContext;
   let stateFromStores;
@@ -410,7 +424,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((search
   }, items2);
   const items3 = [onPressGroupDMItem, searchContext];
   callback1 = fullscreenPlaceholderCount.useCallback((channelId, index) => {
-    const result = search_tracking_TrackingDefault.trackSearchResultClicked({ searchContext, channelId, index, entityType: constants.CHANNEL });
+    const result = tracking_TrackingDefault.trackSearchResultClicked({ searchContext, channelId, index, entityType: constants.CHANNEL });
     onPressGroupDMItem(channelId);
   }, items3);
   const items4 = [callback, callback1, stateFromStores1, fullscreenPlaceholderCount, stateFromStores];

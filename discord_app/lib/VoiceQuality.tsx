@@ -1,14 +1,14 @@
-// === Module 13645: VoiceQuality ===
+// === Module 5272: VoiceQuality ===
 
-// Module 13645 (VoiceQuality)
+// Module 5272 (VoiceQuality)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4951 */;
-import Histogram from "Histogram" /* 7246 */;
-import SystemResourcesDefault from "SystemResources" /* 7252 */;
-import NetworkQualityDefault from "NetworkQuality" /* 13646 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5135 */;
+import Histogram from "Histogram" /* 5273 */;
+import NetworkQualityDefault from "NetworkQuality" /* 5279 */;
+import SystemResourcesDefault from "SystemResources" /* 5281 */;
 import _slicedToArray from "module_32" /* 32 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 4954 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 5138 */;
 
 require = fn;
 function explodePlayoutMetrics(obj) {
@@ -168,11 +168,11 @@ class VoiceQuality extends tmp2 {
     tmp3.sampleStats = function sampleStats(rtp) {
       if (null != rtp) {
         const networkQuality = num.networkQuality;
-        const result = networkQuality.incrementNetworkStats(num(4925).now());
+        const result = networkQuality.incrementNetworkStats(num(5119).now());
         const systemResources = num.systemResources;
         systemResources.takeSample();
         num = 0;
-        const obj2 = num(4925);
+        const obj2 = num(5119);
         let item = _modDef12.forEach(rtp.rtp.outbound, (type) => {
           if ("audio" === type.type) {
             num = type.bitrateTarget;
@@ -307,7 +307,7 @@ class VoiceQuality extends tmp2 {
                 prop = tmp35.bufferStats.audioJitterBufferHistogram;
               }
               if (prop == null) {
-                prop = new closure_0(7246).Histogram();
+                prop = new closure_0(5273).Histogram();
               }
               bufferStats.audioJitterBufferHistogram = prop;
               bufferStats.audioJitterTarget = type.audioJitterTarget;
@@ -316,7 +316,7 @@ class VoiceQuality extends tmp2 {
                 prop1 = tmp35.bufferStats.audioJitterTargetHistogram;
               }
               if (prop1 == null) {
-                prop1 = new closure_0(7246).Histogram();
+                prop1 = new closure_0(5273).Histogram();
               }
               bufferStats.audioJitterTargetHistogram = prop1;
               bufferStats.audioJitterDelay = type.audioJitterDelay;
@@ -325,7 +325,7 @@ class VoiceQuality extends tmp2 {
                 prop2 = tmp35.bufferStats.audioJitterDelayHistogram;
               }
               if (prop2 == null) {
-                prop2 = new closure_0(7246).Histogram();
+                prop2 = new closure_0(5273).Histogram();
               }
               bufferStats.audioJitterDelayHistogram = prop2;
               ({ relativeReceptionDelay: obj.relativeReceptionDelay, relativePlayoutDelay: obj.relativePlayoutDelay } = type);

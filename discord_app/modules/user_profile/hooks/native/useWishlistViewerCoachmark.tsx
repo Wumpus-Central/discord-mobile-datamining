@@ -1,9 +1,9 @@
-// === Module 12947: useWishlistViewerCoachmark ===
+// === Module 13226: useWishlistViewerCoachmark ===
 
-// Module 12947 (useWishlistViewerCoachmark)
+// Module 13226 (useWishlistViewerCoachmark)
 import c from "c" /* 576 */;
-import dismissible_content from "dismissible_content" /* 2036 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 6901 */;
+import dismissible_content from "dismissible_content" /* 2048 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7090 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/native/useWishlistViewerCoachmark.tsx");
 
-export const useWishlistViewerCoachmark = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useWishlistViewerCoachmark = ReactCompilerGating.isReactCompilerEnabled() ? (function useWishlistViewerCoachmark(arg0) {
   const cResult = c.c(6);
   ({ isCurrentUser, shouldShowWishlistTab } = arg0);
   if (cResult[0] === isCurrentUser) {
@@ -43,7 +43,7 @@ export const useWishlistViewerCoachmark = ReactCompilerGating.isReactCompilerEna
     cResult[2] = items;
   }
   items = [];
-}) : ((isCurrentUser) => {
+}) : (function useWishlistViewerCoachmark(isCurrentUser) {
   isCurrentUser = isCurrentUser.isCurrentUser;
   const shouldShowWishlistTab = isCurrentUser.shouldShowWishlistTab;
   let items = [isCurrentUser, shouldShowWishlistTab];

@@ -1,16 +1,16 @@
-// === Module 4738: useColorThemeBackground ===
+// === Module 4932: useColorThemeBackground ===
 
-// Module 4738 (useColorThemeBackground)
+// Module 4932 (useColorThemeBackground)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import ClientThemesTypes from "ClientThemesTypes" /* 1241 */;
-import GuildThemePresets from "GuildThemePresets" /* 4739 */;
-import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 4741 */;
-import MobileThemesUtils from "MobileThemesUtils" /* 4794 */;
+import ClientThemesTypes from "ClientThemesTypes" /* 1253 */;
+import GuildThemePresets from "GuildThemePresets" /* 4933 */;
+import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 4935 */;
+import MobileThemesUtils from "MobileThemesUtils" /* 4988 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1193 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4703 */;
+import ThemeStore from "ThemeStore" /* 1205 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4897 */;
 
 const require = globalThis.__r;
 
@@ -59,7 +59,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/client_themes/native/useColorThemeBackground.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useColorThemeBackground() {
   const cResult = c.c(7);
   const tmp4 = useRoutedActiveGuildThemeDefault();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -109,8 +109,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[6] = tmp16;
   tmp15 = tmp16;
   const tmpResult3 = useStateFromStores;
-}) : (() => {
-  const tmp = stateFromStores(4741)();
+}) : (function useColorThemeBackground() {
+  const tmp = stateFromStores(4935)();
   _require = tmp;
   const items = [ThemeStore];
   stateFromStores = require("useStateFromStores").useStateFromStores(items, () => theme.theme);

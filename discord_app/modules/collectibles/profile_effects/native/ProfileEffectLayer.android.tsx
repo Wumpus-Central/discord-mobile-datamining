@@ -1,9 +1,9 @@
-// === Module 8496: ProfileEffectLayer ===
+// === Module 8980: ProfileEffectLayer ===
 
-// Module 8496 (ProfileEffectLayer)
+// Module 8980 (ProfileEffectLayer)
 import c from "c" /* 576 */;
-import ProfileEffectUtils from "ProfileEffectUtils" /* 8493 */;
-import APNGPlayer from "APNGPlayer" /* 8497 */;
+import ProfileEffectUtils from "ProfileEffectUtils" /* 8977 */;
+import APNGPlayer from "APNGPlayer" /* 8981 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/profile_effects/native/ProfileEffectLayer.android.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((paused) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ProfileEffectLayerAndroid(paused) {
   const cResult = c.c(17);
   ({ layerConfig, animate } = paused);
   paused = paused.paused;
@@ -77,7 +77,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((paused
       const tmpResult = ProfileEffectUtils;
     }
   }
-  const fn = function u() {
+  const fn = function f() {
     if (animate) {
       if (!paused) {
         aPNGPlayerControls.play();
@@ -93,7 +93,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((paused
   cResult[4] = items1;
   tmp7 = items1;
   tmp6 = fn;
-}) : ((paused) => {
+}) : (function ProfileEffectLayerAndroid(paused) {
   ({ layerConfig, animate } = paused);
   paused = paused.paused;
   const width = paused.width;

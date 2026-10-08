@@ -1,35 +1,35 @@
-// === Module 9697: VoiceChatHeaderIcon ===
+// === Module 10886: VoiceChatHeaderIcon ===
 
-// Module 9697 (VoiceChatHeaderIcon)
+// Module 10886 (VoiceChatHeaderIcon)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import native2 from "native" /* 4595 */;
-import Pressables from "Pressables" /* 5916 */;
-import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 9600 */;
+import native from "native" /* 1200 */;
+import native2 from "native" /* 4787 */;
+import Pressables from "Pressables" /* 6189 */;
+import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 10793 */;
 import noop from "module_19" /* 19 */;
-import ReadStateStore from "ReadStateStore" /* 4911 */;
+import ReadStateStore from "ReadStateStore" /* 6040 */;
 
 require = fn;
 const View = fn(17).View;
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { headerButton: null, disabledOpacity: null, chatIconContainer: null, chatIcon: null, badge: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.lg, alignSelf: "center", padding: 6, backgroundColor: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND };
 obj2.headerButton = size;
 obj2.disabledOpacity = { opacity: 0.6 };
-obj2.chatIconContainer = { marginRight: 12, height: fn(6075).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center" };
+obj2.chatIconContainer = { marginRight: 12, height: fn(6261).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center" };
 obj2.chatIcon = { marginHorizontal: 0, width: 32, height: 32 };
-let obj3 = { marginRight: 12, height: fn(6075).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center" };
+let obj3 = { marginRight: 12, height: fn(6261).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center" };
 obj2.badge = { backgroundColor: nativeDefault.colors.ICON_STRONG };
 let closure_8 = createStyles.createStyles(obj2);
 fn(558);
 const obj4 = { backgroundColor: nativeDefault.colors.ICON_STRONG };
 let ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceChatCallScreenHeaderIconInner(arg0) {
   const cResult = c.c(9);
   ({ children, source, onPress, accessibilityLabel } = arg0);
   const tmp3 = closure_8();
@@ -68,7 +68,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = tmp6;
   tmp5 = tmp6;
   const obj3 = { containerStyle: tmp3.chatIcon, accessibilityLabel, source, onPress, children };
-}) : ((onPress) => {
+}) : (function VoiceChatCallScreenHeaderIconInner(onPress) {
   let noop = onPress.onPress;
   ({ children, source, accessibilityLabel } = onPress);
   const tmp = closure_8();
@@ -83,7 +83,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return timestampProducer(View, obj);
 });
 ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoiceChatMentions(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -109,14 +109,14 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStoresObject(first, tmp6, tmp7);
-}) : ((arg0) => {
+}) : (function useVoiceChatMentions(arg0) {
   _require = arg0;
   const items = [ReadStateStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStoresObject(items, () => ({ unreadCount: ReadStateStore.getUnreadCount(closure_0), mentionCount: ReadStateStore.getMentionCount(closure_0) }), items1);
 });
 ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceChatCallScreenHeaderIcon(arg0) {
   const cResult = c.c(2);
   if (cResult[0] !== arg0) {
     const obj2 = { theme: ThemeTypes.DARK, children: null };
@@ -131,7 +131,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp4 = cResult[1];
   }
   return tmp4;
-}) : ((arg0) => {
+}) : (function VoiceChatCallScreenHeaderIcon(arg0) {
   const obj = { theme: ThemeTypes.DARK, children: null };
   const merged = Object.assign(arg0);
   obj.children = timestampProducer(closure_9, {});
@@ -140,7 +140,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_chat/native/components/VoiceChatHeaderIcon.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceChatHeaderIcon(arg0) {
   const cResult = c.c(13);
   ({ accessibilityLabel, onPress, source, children, disabled } = arg0);
   const tmp4 = closure_8();
@@ -195,7 +195,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = disabledOpacity;
   cResult[2] = items1;
   tmp5 = items1;
-}) : ((disabled) => {
+}) : (function VoiceChatHeaderIcon(disabled) {
   let disabledOpacity = disabled.disabled;
   ({ accessibilityLabel, onPress, source, children } = disabled);
   const tmp = closure_8();

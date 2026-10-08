@@ -1,27 +1,27 @@
-// === Module 15017: QuestDockInsetHeaderBody ===
+// === Module 15279: QuestDockInsetHeaderBody ===
 
-// Module 15017 (QuestDockInsetHeaderBody)
+// Module 15279 (QuestDockInsetHeaderBody)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import QuestRewardTileDefault from "QuestRewardTile" /* 10963 */;
-import QuestDockRewardTileDefault from "QuestDockRewardTile" /* 10964 */;
-import QuestDockBlurredContentBackgroundDefault from "QuestDockBlurredContentBackground" /* 14978 */;
-import PremiumRewardGradientDefault from "PremiumRewardGradient" /* 14981 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import QuestRewardTileDefault from "QuestRewardTile" /* 11156 */;
+import QuestDockRewardTileDefault from "QuestDockRewardTile" /* 11157 */;
+import QuestDockBlurredContentBackgroundDefault from "QuestDockBlurredContentBackground" /* 15240 */;
+import PremiumRewardGradientDefault from "PremiumRewardGradient" /* 15243 */;
 import noop from "module_19" /* 19 */;
 
-const native = Button(1188);
-const Text_Text = Button(4892);
-const components_Button_Button = Button(5601);
-const QuestDockHooks = Button(14909);
+const native = Button(1200);
+const Text_Text = Button(5086);
+const components_Button_Button = Button(5375);
+const QuestDockHooks = Button(15171);
 require = fn;
 const View = fn(17).View;
-const QuestDockConstants = fn(14912);
+const QuestDockConstants = fn(15174);
 const QUEST_DOCK_EXPANDED_PADDING_BOTTOM = QuestDockConstants.QUEST_DOCK_EXPANDED_PADDING_BOTTOM;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const PX_80 = nativeDefault.space.PX_80;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { rewardTile: { borderRadius: nativeDefault.radii.lg }, wrapper: { flexGrow: 1, flexShrink: 0, justifyContent: "flex-end", paddingHorizontal: QuestDockConstants.QUEST_DOCK_EXPANDED_PADDING_HORIZONTAL, paddingBottom: QUEST_DOCK_EXPANDED_PADDING_BOTTOM }, rewardContentContainer: { position: "relative" }, rewardContentWrapper: null, contentBadge: null, rewardContent: null, rewardContentCopy: null, premiumRewardPerkPill: null, titleRow: null, questDockCtaWrapper: null, questDockCta: null, questDockCtaRow: null, questDockCtaSaparator: null };
 let obj3 = { borderRadius: nativeDefault.radii.lg };
 obj.rewardContentWrapper = { borderRadius: nativeDefault.modules.mobile.QUEST_DOCK_BORDER_RADIUS, overflow: "hidden", padding: 8, paddingRight: 16 };
@@ -43,7 +43,7 @@ let closure_8 = createStyles.createStyles(obj);
 fn(558);
 let obj7 = { alignSelf: "stretch", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 let ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestDockBodyRewardTile(arg0) {
   const cResult = c.c(3);
   const tmp3 = closure_8();
   if (cResult[0] === arg0) {
@@ -62,7 +62,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = tmp3.rewardTile;
   cResult[2] = tmp7;
   tmp4 = tmp7;
-}) : ((arg0) => {
+}) : (function QuestDockBodyRewardTile(arg0) {
   const obj = {};
   const tmp = closure_8();
   const merged = Object.assign(arg0);
@@ -72,7 +72,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return hasOwnProperty(QuestDockRewardTileDefault, obj);
 });
 ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestDockBodyQuestRewardTile(arg0) {
   const cResult = c.c(3);
   const tmp3 = closure_8();
   if (cResult[0] === arg0) {
@@ -91,7 +91,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = tmp3.rewardTile;
   cResult[2] = tmp7;
   tmp4 = tmp7;
-}) : ((arg0) => {
+}) : (function QuestDockBodyQuestRewardTile(arg0) {
   const obj = {};
   const tmp = closure_8();
   const merged = Object.assign(arg0);
@@ -103,7 +103,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockInsetHeaderBody.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function QuestDockInsetHeaderBody(arg0) {
   let Button = require;
   const cResult = c.c(58);
   ({ rewardTile, premiumRewardPerkPill, contentBadge, title, description, ctaText, onCtaPress, renderCtaIcon, ctaButtonVariant, secondaryCta, ctaLoading, showBonusOrbsGradient } = arg0);
@@ -360,7 +360,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   cResult[4] = items7;
   tmp10 = items7;
   const ButtonResult = QuestDockHooks;
-}) : ((showBonusOrbsGradient) => {
+}) : (function QuestDockInsetHeaderBody(showBonusOrbsGradient) {
   ({ premiumRewardPerkPill, contentBadge, ctaText, onCtaPress, renderCtaIcon, ctaButtonVariant } = showBonusOrbsGradient);
   ({ rewardTile, title, description } = showBonusOrbsGradient);
   if (ctaButtonVariant === undefined) {

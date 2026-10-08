@@ -1,17 +1,17 @@
-// === Module 17467: useIsInRestrictedHours ===
+// === Module 17749: useIsInRestrictedHours ===
 
-// Module 17467 (useIsInRestrictedHours)
+// Module 17749 (useIsInRestrictedHours)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import UserStore from "UserStore" /* 1377 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7061 */;
+import UserStore from "UserStore" /* 1389 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7247 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/hooks/useIsInRestrictedHours.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsInRestrictedHours() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore, FamilyCenterStore];
@@ -26,7 +26,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     [tmp4, tmp5] = cResult;
   }
   return initialize.useStateFromStores(tmp4, tmp5);
-}) : (() => {
+}) : (function useIsInRestrictedHours() {
   const items = [UserStore, FamilyCenterStore];
   return initialize.useStateFromStores(items, () => currentUserInRestrictedHours.isCurrentUserInRestrictedHours());
 });

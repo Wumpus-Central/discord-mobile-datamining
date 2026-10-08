@@ -1,13 +1,13 @@
-// === Module 4598: useBadgeTextVariant ===
+// === Module 4790: useBadgeTextVariant ===
 
-// Module 4598 (useBadgeTextVariant)
-import ThemeContext from "ThemeContext" /* 4599 */;
+// Module 4790 (useBadgeTextVariant)
+import ThemeContext from "ThemeContext" /* 4791 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/design/hooks/useBadgeTextVariant.native.tsx");
 
-export const useBadgeTextVariant = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useBadgeTextVariant = ReactCompilerGating.isReactCompilerEnabled() ? (function useBadgeTextVariant() {
   const themeContext = ThemeContext.useThemeContext();
   let enabledExperiments;
   if (themeContext != null) {
@@ -22,7 +22,7 @@ export const useBadgeTextVariant = ReactCompilerGating.isReactCompilerEnabled() 
     str2 = "experimental/body-xs/semibold";
   }
   return str2;
-}) : (() => {
+}) : (function useBadgeTextVariant() {
   const themeContext = ThemeContext.useThemeContext();
   let enabledExperiments;
   if (themeContext != null) {

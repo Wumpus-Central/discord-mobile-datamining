@@ -1,10 +1,10 @@
-// === Module 9321: GuildEventRecurrences ===
+// === Module 8642: GuildEventRecurrences ===
 
-// Module 9321 (GuildEventRecurrences)
+// Module 8642 (GuildEventRecurrences)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 587 */;
-import useGuildEventRecurrencesDefault from "useGuildEventRecurrences" /* 9322 */;
-import GuildEventRecurrenceDefault from "GuildEventRecurrence" /* 9324 */;
+import useGuildEventRecurrencesDefault from "useGuildEventRecurrences" /* 8643 */;
+import GuildEventRecurrenceDefault from "GuildEventRecurrence" /* 8645 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { marginTop: 16 }, scrollView: { marginTop: 8, marginBottom: 8, borderRadius: nativeDefault.radii.sm, maxHeight: 140 } };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -20,7 +20,7 @@ let obj3 = { marginTop: 8, marginBottom: 8, borderRadius: nativeDefault.radii.sm
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventRecurrences.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildEventId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEventRecurrences(guildEventId) {
   const cResult = guildEventId(activeRecurrenceId[6]).c(23);
   guildEventId = guildEventId.guildEventId;
   const onRecurrencePress = guildEventId.onRecurrencePress;
@@ -32,17 +32,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildEventId) =>
   const obj = guildEventId(activeRecurrenceId[6]);
   ({ recurrenceStartTimes, canViewMoreRecurrences, updateRecurrenceStartTimes } = onRecurrencePress(activeRecurrenceId[7])(guildEventId, guildId, recurrenceRule));
   if (cResult[0] !== updateRecurrenceStartTimes) {
-    const fn = function s(stopPropagation) {
+    function handleViewMore(stopPropagation) {
       stopPropagation.stopPropagation();
       updateRecurrenceStartTimes();
       const current = ref.current;
       if (current != null) {
         current.scrollToEnd();
       }
-    };
+    }
     cResult[0] = updateRecurrenceStartTimes;
-    cResult[1] = fn;
-    let tmp7 = fn;
+    cResult[1] = handleViewMore;
+    let tmp7 = handleViewMore;
   } else {
     tmp7 = cResult[1];
   }
@@ -128,21 +128,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildEventId) =>
       cResult[7] = mapped;
     }
   }
-  class B {
-    constructor(arg0) {
-      obj = closure_1(closure_2[10]);
-      fromTimestampResult = obj.fromTimestamp(guildEventId.getTime());
-      obj1 = { recurrenceId: fromTimestampResult, guildEventId, onPress: onRecurrencePress, isActive: fromTimestampResult === activeRecurrenceId };
-      return jsx(closure_1(closure_2[11]), obj1, fromTimestampResult);
-    }
-  }
+  const fn = function b(getTime) {
+    const fromTimestampResult = SnowflakeUtilsDefault.fromTimestamp(getTime.getTime());
+    return timestampProducer(GuildEventRecurrenceDefault, { recurrenceId: fromTimestampResult, guildEventId, onPress: onRecurrencePress, isActive: fromTimestampResult === activeRecurrenceId }, fromTimestampResult);
+  };
   cResult[8] = activeRecurrenceId;
   cResult[9] = guildEventId;
   cResult[10] = onRecurrencePress;
-  cResult[11] = B;
-  tmp13 = B;
+  cResult[11] = fn;
+  tmp13 = fn;
   const tmp6 = onRecurrencePress(activeRecurrenceId[7])(guildEventId, guildId, recurrenceRule);
-}) : ((guildEventId) => {
+}) : (function GuildEventRecurrences(guildEventId) {
   guildEventId = guildEventId.guildEventId;
   ({ onRecurrencePress: importDefault, activeRecurrenceId: dependencyMap } = guildEventId);
   let ref;
@@ -155,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildEventId) =>
   const obj2 = { variant: "heading-md/semibold", children: null };
   const intl = guildEventId(1126).intl;
   obj2.children = intl.string(guildEventId(1126).t["D/jjoa"]);
-  const items = [closure_6(guildEventId(4892).Text, obj2), , ];
+  const items = [closure_6(guildEventId(5086).Text, obj2), , ];
   const tmp4 = useGuildEventRecurrencesDefault(guildEventId, guildId, recurrenceRule);
   const tmp6 = c4;
   items[1] = closure_6(closure_5, {
@@ -173,7 +169,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildEventId) =>
     const obj4 = { text: null, onPress: null, size: "sm" };
     const intl2 = tmp8(1126).intl;
     obj4.text = intl2.string(tmp8(1126).t["8O7Hpy"]);
-    obj4.onPress = function onPress(stopPropagation) {
+    obj4.onPress = function handleViewMore(stopPropagation) {
       stopPropagation.stopPropagation();
       _undefined();
       const current = ref.current;
@@ -181,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildEventId) =>
         current.scrollToEnd();
       }
     };
-    canViewMoreRecurrences = closure_6(tmp8(5601).Button, obj4);
+    canViewMoreRecurrences = closure_6(tmp8(5375).Button, obj4);
   }
   items[2] = canViewMoreRecurrences;
   obj.children = items;

@@ -1,8 +1,8 @@
-// === Module 9807: InappropriateConversationsDefaultOn ===
+// === Module 10370: InappropriateConversationsDefaultOn ===
 
-// Module 9807 (InappropriateConversationsDefaultOn)
+// Module 10370 (InappropriateConversationsDefaultOn)
 import c from "c" /* 576 */;
-import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1441 */;
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1453 */;
 
 require = fn;
 let tmp2 = apex_ApexExperimentDefault({ name: "2026-04-inappropriate-conversations-default-on", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
@@ -15,7 +15,7 @@ export const InappropriateConversationsDefaultOn = tmp2;
 export const isEligibleForInappropriateConversationDefaultOn = function isEligibleForInappropriateConversationDefaultOn(location) {
   return closure_2.getConfig({ location: location.location }).enabled;
 };
-export const useIsEligibleForInappropriateConversationDefaultOn = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+export const useIsEligibleForInappropriateConversationDefaultOn = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsEligibleForInappropriateConversationDefaultOn(location) {
   const cResult = c.c(2);
   const _location = location.location;
   if (cResult[0] !== _location) {
@@ -27,4 +27,6 @@ export const useIsEligibleForInappropriateConversationDefaultOn = ReactCompilerG
     tmp2 = cResult[1];
   }
   return closure_2.useConfig(tmp2).enabled;
-}) : ((location) => closure_2.useConfig({ location: location.location }).enabled);
+}) : (function useIsEligibleForInappropriateConversationDefaultOn(location) {
+  return closure_2.useConfig({ location: location.location }).enabled;
+});

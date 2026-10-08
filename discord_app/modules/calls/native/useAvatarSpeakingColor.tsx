@@ -1,25 +1,25 @@
-// === Module 9157: useAvatarSpeakingColor ===
+// === Module 10723: useAvatarSpeakingColor ===
 
-// Module 9157 (useAvatarSpeakingColor)
+// Module 10723 (useAvatarSpeakingColor)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
-import useVadColorsDefault from "useVadColors" /* 9159 */;
+import useVadColorsDefault from "useVadColors" /* 10725 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 const require = globalThis.__r;
 
 const initialize = accessibleForegroundColor(504);
-const useToken = accessibleForegroundColor(4586);
-const ColorUtils = accessibleForegroundColor(4733);
+const useToken = accessibleForegroundColor(4778);
+const ColorUtils = accessibleForegroundColor(4927);
 require = fn;
-const ratio = fn(9158).VAD_COLOR_MIN_CONTRAST_RATIO;
+const ratio = fn(10724).VAD_COLOR_MIN_CONTRAST_RATIO;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/calls/native/useAvatarSpeakingColor.tsx");
 
-export const useAvatarSpeakingColor = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useAvatarSpeakingColor = ReactCompilerGating.isReactCompilerEnabled() ? (function useAvatarSpeakingColor(arg0) {
   let accessibleForegroundColor = require;
   let tmp = dependencyMap;
   const cResult = c.c(9);
@@ -81,7 +81,7 @@ export const useAvatarSpeakingColor = ReactCompilerGating.isReactCompilerEnabled
   cResult[3] = userId;
   cResult[4] = obj3;
   tmp7 = obj3;
-}) : ((arg0) => {
+}) : (function useAvatarSpeakingColor(arg0) {
   let stateFromStores;
   importDefault = undefined;
   let token;

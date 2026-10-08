@@ -1,9 +1,9 @@
-// === Module 6504: useNavigatorShouldCrossfade ===
+// === Module 6680: useNavigatorShouldCrossfade ===
 
-// Module 6504 (useNavigatorShouldCrossfade)
+// Module 6680 (useNavigatorShouldCrossfade)
 import c from "c" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 4602 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 4794 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Navigator/native/useNavigatorShouldCrossfade.native.tsx");
 
-export const useNavigatorShouldCrossfade = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useNavigatorShouldCrossfade = ReactCompilerGating.isReactCompilerEnabled() ? (function useNavigatorShouldCrossfade() {
   const cResult = c.c(3);
   const context = noop.useContext(AccessibilityPreferencesContext.AccessibilityPreferencesContext);
   const prefersCrossfades = context.prefersCrossfades;
@@ -31,7 +31,7 @@ export const useNavigatorShouldCrossfade = ReactCompilerGating.isReactCompilerEn
   cResult[2] = tmp6;
   tmp5 = tmp6;
   tmpResult = PlatformUtils;
-}) : (() => {
+}) : (function useNavigatorShouldCrossfade() {
   const context = noop.useContext(AccessibilityPreferencesContext.AccessibilityPreferencesContext);
   let enabled = context.prefersCrossfades;
   if (obj.isAndroid()) {

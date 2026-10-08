@@ -1,9 +1,9 @@
-// === Module 16763: ConjureDither ===
+// === Module 17038: ConjureDither ===
 
-// Module 16763 (ConjureDither)
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4618 */;
-import inlineStyles from "inlineStyles" /* 8169 */;
-import _mod16764 from "module_16764" /* 16764 */;
+// Module 17038 (ConjureDither)
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4810 */;
+import inlineStyles from "inlineStyles" /* 7550 */;
+import _mod17039 from "module_17039" /* 17039 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const jsxProd = fn(21);
 let items = [0, Math.PI];
 let c9 = 9000;
 let ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((width) => {
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function BandPicture(width) {
   const cResult = combined3(width[4]).c(77);
   ({ band, state } = width);
   width = width.width;
@@ -167,7 +167,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((width) => {
                                   }
                                   const BLOBS = tmp(tmp2[5]).BLOBS;
                                   const mapped = BLOBS.map((peak, index) => {
-                                    const blobReachResult = _mod16764.blobReach(peak.peak, peak.radius, bound);
+                                    const blobReachResult = _mod17039.blobReach(peak.peak, peak.radius, bound);
                                     if (blobReachResult <= 0) {
                                       return null;
                                     } else {
@@ -212,10 +212,10 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((width) => {
                         const mapped1 = BLOBS1.map((peak, index) => {
                           const obj = { id: "blob-" + combined3 + "-" + index, children: null };
                           const obj2 = { offset: null, stopColor: "#fff", stopOpacity: 1 };
-                          const obj3 = _mod16764;
+                          const obj3 = _mod17039;
                           ({ peak, radius } = peak);
-                          const blobReachResult = _mod16764.blobReach(peak, radius, closure_6 + _mod16764.FADE_HALF);
-                          obj2.offset = obj3.isoStop(blobReachResult, _mod16764.blobReach(peak.peak, peak.radius, bound));
+                          const blobReachResult = _mod17039.blobReach(peak, radius, closure_6 + _mod17039.FADE_HALF);
+                          obj2.offset = obj3.isoStop(blobReachResult, _mod17039.blobReach(peak.peak, peak.radius, bound));
                           items = [timestampProducer(inlineStyles.Stop, obj2), timestampProducer(inlineStyles.Stop, { offset: 1, stopColor: "#fff", stopOpacity: 0 })];
                           obj.children = items;
                           return React5(inlineStyles.RadialGradient, obj, index);
@@ -330,7 +330,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((width) => {
   cResult[25] = fillOpacity;
   cResult[26] = H;
   tmp22 = H;
-}) : ((width) => {
+}) : (function BandPicture(width) {
   ({ band, state } = width);
   width = width.width;
   const height = width.height;
@@ -345,7 +345,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((width) => {
   const size1 = { id: "cells-" + combined, patternUnits: "userSpaceOnUse", width: state(height[5]).TILE, height: state(height[5]).TILE, children: null };
   const tmp8 = width(height[6]);
   size1.children = state(height[5]).TILES[band].map((item) => {
-    const size = { x: item.x, y: item.y, width: _mod16764.CELL, height: _mod16764.CELL, rx: _mod16764.CORNER, fill, fillOpacity };
+    const size = { x: item.x, y: item.y, width: _mod17039.CELL, height: _mod17039.CELL, rx: _mod17039.CORNER, fill, fillOpacity };
     return timestampProducer(inlineStyles.Rect, size, "" + item.x + "-" + item.y);
   });
   items = [bound(state(height[6]).Pattern, size1), , , ];
@@ -361,10 +361,10 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((width) => {
   items[2] = BLOBS.map((peak, index) => {
     const obj = { id: "blob-" + combined + "-" + index, children: null };
     const obj2 = { offset: null, stopColor: "#fff", stopOpacity: 1 };
-    const obj3 = _mod16764;
+    const obj3 = _mod17039;
     ({ peak, radius } = peak);
-    const blobReachResult = _mod16764.blobReach(peak, radius, closure_5 + _mod16764.FADE_HALF);
-    obj2.offset = obj3.isoStop(blobReachResult, _mod16764.blobReach(peak.peak, peak.radius, bound));
+    const blobReachResult = _mod17039.blobReach(peak, radius, closure_5 + _mod17039.FADE_HALF);
+    obj2.offset = obj3.isoStop(blobReachResult, _mod17039.blobReach(peak.peak, peak.radius, bound));
     items = [timestampProducer(inlineStyles.Stop, obj2), timestampProducer(inlineStyles.Stop, { offset: 1, stopColor: "#fff", stopOpacity: 0 })];
     obj.children = items;
     return React5(inlineStyles.RadialGradient, obj, index);
@@ -381,7 +381,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((width) => {
   const items2 = [tmp9Result, ];
   const BLOBS1 = tmp(tmp2[5]).BLOBS;
   items2[1] = BLOBS1.map((peak, index) => {
-    const blobReachResult = _mod16764.blobReach(peak.peak, peak.radius, bound);
+    const blobReachResult = _mod17039.blobReach(peak.peak, peak.radius, bound);
     if (blobReachResult <= 0) {
       return null;
     } else {
@@ -416,7 +416,7 @@ ReactCompilerGating = fn(558);
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/glow/native/ConjureDither.android.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((width) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureDither(width) {
   const cResult = width(thinking[4]).c(13);
   width = width.width;
   const height = width.height;
@@ -546,7 +546,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((width) => {
   tmp8 = items;
   tmp7 = fn;
   const tmpResult = width(thinking[7]);
-}) : ((width) => {
+}) : (function ConjureDither(width) {
   width = width.width;
   ({ height: importDefault, thinking } = width);
   ({ fill: noop, fillOpacity: closure_4 } = width);

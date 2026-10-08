@@ -1,13 +1,13 @@
-// === Module 8406: GameProfileStoreLinks ===
+// === Module 8903: GameProfileStoreLinks ===
 
-// Module 8406 (GameProfileStoreLinks)
+// Module 8903 (GameProfileStoreLinks)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import LinkingDefault from "Linking" /* 4571 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4860 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import useOpenExternalUrlFromGameProfileDefault from "useOpenExternalUrlFromGameProfile" /* 8361 */;
-import GameProfileStoreLinksActionSheet from "GameProfileStoreLinksActionSheet" /* 8387 */;
+import LinkingDefault from "Linking" /* 4763 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5054 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import useOpenExternalUrlFromGameProfileDefault from "useOpenExternalUrlFromGameProfile" /* 8859 */;
+import GameProfileStoreLinksActionSheet from "GameProfileStoreLinksActionSheet" /* 8885 */;
 import noop from "module_19" /* 19 */;
 
 const GameProfileStoreLinksActionSheetDefault = GameProfileStoreLinksActionSheet;
@@ -16,11 +16,11 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { flexDirection: "column", gap: nativeDefault.space.PX_8 } };
 let closure_6 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((data) => {
+let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function WebsiteGameStoreLinkButton(data) {
   const cResult = c.c(9);
   data = data.data;
   const trackAction = data.trackAction;
@@ -62,7 +62,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((data) => {
   cResult[3] = trackAction;
   cResult[4] = fn;
   tmp6 = fn;
-}) : ((data) => {
+}) : (function WebsiteGameStoreLinkButton(data) {
   data = data.data;
   const trackAction = data.trackAction;
   closure_2 = useOpenExternalUrlFromGameProfileDefault(LinkingDefault.openURL);
@@ -82,7 +82,7 @@ let obj3 = { flexDirection: "column", gap: nativeDefault.space.PX_8 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileStoreLinks.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((websiteButtons) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProfileStoreLinks(websiteButtons) {
   const cResult = trackAction(name[6]).c(25);
   ({ game, trackAction } = websiteButtons);
   websiteButtons = websiteButtons.websiteButtons;
@@ -215,7 +215,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((websiteButtons) 
     }
   }
   return null;
-}) : ((websiteButtons) => {
+}) : (function GameProfileStoreLinks(websiteButtons) {
   ({ game, trackAction } = websiteButtons);
   websiteButtons = websiteButtons.websiteButtons;
   const tmp = closure_6();

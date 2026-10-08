@@ -1,7 +1,7 @@
-// === Module 13279: PremiumPerkCarousel ===
+// === Module 13580: PremiumPerkCarousel ===
 
-// Module 13279 (PremiumPerkCarousel)
-import PremiumPerkCard from "PremiumPerkCard" /* 13223 */;
+// Module 13580 (PremiumPerkCarousel)
+import PremiumPerkCard from "PremiumPerkCard" /* 13523 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,13 +12,13 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles({ title: { marginLeft: 24 }, indicators: { marginBottom: -36 }, carousel: { marginTop: 16 }, carouselCard: { marginLeft: 8 }, lastCarouselCard: { marginRight: 8 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/PremiumPerkCarousel.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumPerkCarousel(arg0) {
   const cResult = onItemChange(currentIndex[6]).c(34);
   ({ title, perks, style, onItemChange } = arg0);
   const tmp4 = closure_8();
@@ -245,7 +245,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = C;
   tmp8 = C;
   const obj2 = onItemChange(currentIndex[7]);
-}) : ((arg0) => {
+}) : (function PremiumPerkCarousel(arg0) {
   ({ perks, onItemChange } = arg0);
   currentIndex = undefined;
   _slicedToArray = undefined;

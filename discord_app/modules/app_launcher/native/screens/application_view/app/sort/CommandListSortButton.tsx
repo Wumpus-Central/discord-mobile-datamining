@@ -1,18 +1,18 @@
-// === Module 11787: CommandListSortButton ===
+// === Module 11854: CommandListSortButton ===
 
-// Module 11787 (CommandListSortButton)
+// Module 11854 (CommandListSortButton)
 import nativeDefault from "native" /* 587 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const CommandListSortOrder = fn(11773).CommandListSortOrder;
-const ANDROID_FOREGROUND_RIPPLE = fn(1192).ANDROID_FOREGROUND_RIPPLE;
+const CommandListSortOrder = fn(11840).CommandListSortOrder;
+const ANDROID_FOREGROUND_RIPPLE = fn(1204).ANDROID_FOREGROUND_RIPPLE;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { overflow: "hidden", borderRadius: nativeDefault.radii.xxl }, button: null };
 const obj3 = { overflow: "hidden", borderRadius: nativeDefault.radii.xxl };
 obj2.button = { gap: 4, flexDirection: "row", alignItems: "center", paddingHorizontal: 12, paddingVertical: 4, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
@@ -36,8 +36,8 @@ export default function CommandListSortButton(sortOrder) {
     androidRippleConfig: ANDROID_FOREGROUND_RIPPLE,
     activeOpacity: 0.8,
     style: tmp.container,
-    onPress() {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11788, dependencyMap.paths), "CommandListSortActionSheet", {
+    onPress: function handlePress() {
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11855, dependencyMap.paths), "CommandListSortActionSheet", {
         sortOrder,
         onSortOptionPress,
         onClose() {
@@ -48,8 +48,8 @@ export default function CommandListSortButton(sortOrder) {
     children: null
   };
   const obj2 = { style: tmp.button, children: null };
-  const items = [closure_6(sortOrder(4892).Text, { variant: "text-sm/medium", color: "text-default", children: stringResult }), closure_6(sortOrder(10857).ChevronSmallDownIcon, { size: "xs", color: onSortOptionPress(587).colors.TEXT_DEFAULT })];
+  const items = [closure_6(sortOrder(5086).Text, { variant: "text-sm/medium", color: "text-default", children: stringResult }), closure_6(sortOrder(10508).ChevronSmallDownIcon, { size: "xs", color: onSortOptionPress(587).colors.TEXT_DEFAULT })];
   obj2.children = items;
   obj.children = closure_7(View, obj2);
-  return closure_6(sortOrder(5916).PressableOpacity, obj);
+  return closure_6(sortOrder(6189).PressableOpacity, obj);
 };

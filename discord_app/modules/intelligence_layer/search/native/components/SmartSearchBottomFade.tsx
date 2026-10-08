@@ -1,17 +1,17 @@
-// === Module 16889: SmartSearchBottomFade ===
+// === Module 17170: SmartSearchBottomFade ===
 
-// Module 16889 (SmartSearchBottomFade)
+// Module 17170 (SmartSearchBottomFade)
 import c from "c" /* 576 */;
 import _modDef683 from "module_683" /* 683 */;
-import LinearGradientDefault from "LinearGradient" /* 5612 */;
-import useSearchHostSurface from "useSearchHostSurface" /* 16890 */;
+import LinearGradientDefault from "LinearGradient" /* 5387 */;
+import useSearchHostSurface from "useSearchHostSurface" /* 17171 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const VerticalGradient = fn(1085).VerticalGradient;
 const jsx = fn(21).jsx;
 const locations = [0, 0.8];
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles((height) => {
   const obj = { fade: null };
   const rect = { position: "absolute", left: 0, right: 0, bottom: 0, height };
@@ -22,7 +22,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/intelligence_layer/search/native/components/SmartSearchBottomFade.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((height) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function SmartSearchBottomFade(height) {
   const cResult = c.c(8);
   const tmp3 = closure_7(height.height);
   const searchHostSurfaceColor = useSearchHostSurface.useSearchHostSurfaceColor();
@@ -61,10 +61,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((height
   cResult[3] = tmp5;
   cResult[4] = items;
   tmp8 = items;
-}) : ((height) => {
+}) : (function SmartSearchBottomFade(height) {
   let searchHostSurfaceColor;
   const tmp = closure_7(height.height);
-  searchHostSurfaceColor = searchHostSurfaceColor(16890).useSearchHostSurfaceColor();
+  searchHostSurfaceColor = searchHostSurfaceColor(17171).useSearchHostSurfaceColor();
   let items = [searchHostSurfaceColor];
   const memo = noop.useMemo(() => {
     const obj = _modDef683(searchHostSurfaceColor);

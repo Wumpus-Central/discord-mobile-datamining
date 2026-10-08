@@ -1,8 +1,8 @@
-// === Module 16343: NonCollapsableGestureDetector ===
+// === Module 16603: NonCollapsableGestureDetector ===
 
-// Module 16343 (NonCollapsableGestureDetector)
+// Module 16603 (NonCollapsableGestureDetector)
 import c from "c" /* 576 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6147 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6326 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/gesture_handlers/native/NonCollapsableGestureDetector.tsx");
 
-export const NonCollapsableGestureDetector = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
+export const NonCollapsableGestureDetector = ReactCompilerGating.isReactCompilerEnabled() ? (function NonCollapsableGestureDetector(children) {
   const cResult = c.c(8);
   if (cResult[0] !== children) {
     children = children.children;
@@ -53,7 +53,7 @@ export const NonCollapsableGestureDetector = ReactCompilerGating.isReactCompiler
   cResult[6] = tmp9;
   cResult[7] = tmp16;
   tmp14 = tmp16;
-}) : ((children) => {
+}) : (function NonCollapsableGestureDetector(children) {
   const obj = {};
   const merged = Object.assign(_objectWithoutProperties(children, closure_3));
   obj.children = <View style={style} collapsable={false}>{children.children}</View>;

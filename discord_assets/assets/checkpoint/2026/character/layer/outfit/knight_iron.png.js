@@ -1,6 +1,6 @@
-// === Module 5241: ? ===
+// === Module 5553: ? ===
 
-// Module 5241
+// Module 5553
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/outfit/knight_iron.png.js");

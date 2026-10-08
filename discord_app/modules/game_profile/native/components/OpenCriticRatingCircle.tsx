@@ -1,9 +1,9 @@
-// === Module 8416: OpenCriticRatingCircle ===
+// === Module 8913: OpenCriticRatingCircle ===
 
-// Module 8416 (OpenCriticRatingCircle)
+// Module 8913 (OpenCriticRatingCircle)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
-import inlineStyles from "inlineStyles" /* 8169 */;
+import inlineStyles from "inlineStyles" /* 7550 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -12,7 +12,7 @@ const inlineStylesDefault = inlineStyles;
 const jsx = jsxProd.jsx;
 let result = size.fileFinishedImporting("modules/game_profile/native/components/OpenCriticRatingCircle.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((rating) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function OpenCriticRatingCircle(rating) {
   const cResult = c.c(10);
   ({ strokeColor, size } = rating);
   const result = size / 2;
@@ -55,7 +55,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((rating) => {
   cResult[5] = combined;
   cResult[6] = tmp11;
   tmp10 = tmp11;
-}) : ((size) => {
+}) : (function OpenCriticRatingCircle(size) {
   size = size.size;
   const result = size / 2;
   const result1 = (size - 4) / 2;

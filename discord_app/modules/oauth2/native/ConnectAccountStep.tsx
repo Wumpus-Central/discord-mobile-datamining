@@ -1,28 +1,28 @@
-// === Module 8763: ConnectAccountStep ===
+// === Module 9146: ConnectAccountStep ===
 
-// Module 8763 (ConnectAccountStep)
+// Module 9146 (ConnectAccountStep)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import AvatarUtils from "AvatarUtils" /* 1402 */;
-import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4583 */;
-import shared from "shared" /* 4735 */;
-import useThemeDefault from "useTheme" /* 4797 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import PlatformsDefault from "Platforms" /* 5449 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6665 */;
-import authorizeConnectionDefault from "authorizeConnection" /* 8764 */;
+import native from "native" /* 1200 */;
+import AvatarUtils from "AvatarUtils" /* 1414 */;
+import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4775 */;
+import shared from "shared" /* 4929 */;
+import useThemeDefault from "useTheme" /* 4991 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import PlatformsDefault from "Platforms" /* 5759 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6842 */;
+import authorizeConnectionDefault from "authorizeConnection" /* 9147 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5124 */;
+import ApplicationStore from "ApplicationStore" /* 5436 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { flexDirection: "column", gap: 16, width: "100%" }, header: { flexDirection: "column", alignItems: "center", gap: 8, marginBottom: 8 }, headerIcons: { flexDirection: "row", alignItems: "center", gap: 16, marginBottom: 8 }, card: { flexDirection: "row", alignItems: "center", gap: 12, padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, borderRadius: nativeDefault.radii.md }, cardName: { flex: 1, minWidth: 0 }, cardInfo: { flex: 1, minWidth: 0, flexDirection: "column", gap: 2 }, platformIcon: null, platformIconSmall: null, infoNotice: null, infoText: null, divider: null };
 let size = { width: 40, height: 40, borderRadius: nativeDefault.radii.sm };
 obj2.platformIcon = size;
@@ -37,12 +37,12 @@ let closure_10 = createStyles.createStyles(obj2);
 fn(558);
 let obj5 = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginVertical: 8 };
 const ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((clientId) => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectAccountStep(clientId) {
   const cResult = clientId(576).c(69);
   clientId = clientId.clientId;
   const platformType = clientId.platformType;
   const tmp4 = closure_10();
-  const tmp6 = platformType(4797)();
+  const tmp6 = platformType(4991)();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ApplicationStore];
     cResult[0] = items;
@@ -68,7 +68,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((clientId) => {
   const stateFromStores = clientId(504).useStateFromStores(first, tmp9, tmp10);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [AuthenticationStore, UserStore];
-    class C {
+    class E {
       constructor() {
         currentUser = null;
         if (null != closure_1_6.getId()) {
@@ -79,8 +79,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((clientId) => {
       }
     }
     cResult[4] = items2;
-    cResult[5] = C;
-    let tmp13 = C;
+    cResult[5] = E;
+    let tmp13 = E;
     let tmp12 = items2;
   } else {
     tmp12 = cResult[4];
@@ -93,12 +93,12 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((clientId) => {
       let applicationIconSource;
       if (null != stateFromStores) {
         ({ id: obj8.id, icon: obj8.icon } = stateFromStores);
-        applicationIconSource = tmp5(1402).getApplicationIconSource({ id: null, icon: null });
+        applicationIconSource = tmp5(1414).getApplicationIconSource({ id: null, icon: null });
         const obj2 = { id: null, icon: null };
-        const tmp5Result = tmp5(1402);
+        const tmp5Result = tmp5(1414);
       }
       cResult[9] = stateFromStores;
-      class C {
+      class E {
         constructor() {
           currentUser = null;
           if (null != closure_1_6.getId()) {
@@ -116,11 +116,11 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((clientId) => {
     if (cResult[11] !== stateFromStores1) {
       let userAvatarSource;
       if (null != stateFromStores1) {
-        userAvatarSource = tmp5(1402).getUserAvatarSource(stateFromStores1);
-        const tmp5Result3 = tmp5(1402);
+        userAvatarSource = tmp5(1414).getUserAvatarSource(stateFromStores1);
+        const tmp5Result3 = tmp5(1414);
       }
       cResult[11] = stateFromStores1;
-      class C {
+      class E {
         constructor() {
           currentUser = null;
           if (null != closure_1_6.getId()) {
@@ -136,7 +136,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((clientId) => {
       tmp23 = cResult[12];
     }
     let str;
-    class C {
+    class E {
       constructor() {
         currentUser = null;
         if (null != closure_1_6.getId()) {
@@ -159,7 +159,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((clientId) => {
       }
       const items3 = [clientId];
       cResult[13] = clientId;
-      class C {
+      class E {
         constructor() {
           currentUser = null;
           if (null != closure_1_6.getId()) {
@@ -185,16 +185,16 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((clientId) => {
     }
     const effect = noop.useEffect(tmp28, tmp27);
     if (cResult[16] !== platformType) {
-      class P {
+      class G {
         constructor() {
-          obj = { platformType, location: "OAuth2 Connect Account Step" };
-          tmp = closure_1(closure_2[16])(obj);
+          obj = closure_1(closure_2[15]);
+          application = obj.fetchApplication(clientId);
           return;
         }
       }
       cResult[16] = platformType;
-      cResult[17] = P;
-      class C {
+      cResult[17] = tmp31;
+      class E {
         constructor() {
           currentUser = null;
           if (null != closure_1_6.getId()) {
@@ -205,27 +205,27 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((clientId) => {
         }
       }
     } else {
-      class P {
+      class G {
         constructor() {
-          obj = { platformType, location: "OAuth2 Connect Account Step" };
-          tmp = closure_1(closure_2[16])(obj);
+          obj = closure_1(closure_2[15]);
+          application = obj.fetchApplication(clientId);
           return;
         }
       }
     }
     const container = tmp4.container;
     if (cResult[18] !== tmp20) {
-      class P {
+      class G {
         constructor() {
-          obj = { platformType, location: "OAuth2 Connect Account Step" };
-          tmp = closure_1(closure_2[16])(obj);
+          obj = closure_1(closure_2[15]);
+          application = obj.fetchApplication(clientId);
           return;
         }
       }
       const obj3 = { source: tmp20, size: null };
-      const Avatar = tmp(1188).Avatar;
-      obj3.size = tmp(1188).AvatarSizes.XLARGE;
-      class C {
+      const Avatar = tmp(1200).Avatar;
+      obj3.size = tmp(1200).AvatarSizes.XLARGE;
+      class E {
         constructor() {
           currentUser = null;
           if (null != closure_1_6.getId()) {
@@ -236,28 +236,28 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((clientId) => {
         }
       }
       cResult[18] = tmp20;
-      cResult[19] = tmp32;
+      cResult[19] = tmp33;
     } else {
-      class P {
+      class G {
         constructor() {
-          obj = { platformType, location: "OAuth2 Connect Account Step" };
-          tmp = closure_1(closure_2[16])(obj);
+          obj = closure_1(closure_2[15]);
+          application = obj.fetchApplication(clientId);
           return;
         }
       }
     }
     const _Symbol = Symbol;
     if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
-      class P {
+      class G {
         constructor() {
-          obj = { platformType, location: "OAuth2 Connect Account Step" };
-          tmp = closure_1(closure_2[16])(obj);
+          obj = closure_1(closure_2[15]);
+          application = obj.fetchApplication(clientId);
           return;
         }
       }
       const obj4 = { color: tmp5(587).colors.INTERACTIVE_TEXT_DEFAULT, size: "md" };
-      const tmp34 = closure_8(tmp(7588).MoreHorizontalIcon, obj4);
-      class C {
+      const tmp35 = closure_8(tmp(9180).MoreHorizontalIcon, obj4);
+      class E {
         constructor() {
           currentUser = null;
           if (null != closure_1_6.getId()) {
@@ -267,29 +267,29 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((clientId) => {
           return currentUser;
         }
       }
-      cResult[20] = tmp34;
-      const tmp33 = tmp34;
+      cResult[20] = tmp35;
+      const tmp34 = tmp35;
     } else {
-      class P {
+      class G {
         constructor() {
-          obj = { platformType, location: "OAuth2 Connect Account Step" };
-          tmp = closure_1(closure_2[16])(obj);
+          obj = closure_1(closure_2[15]);
+          application = obj.fetchApplication(clientId);
           return;
         }
       }
     }
     if (cResult[21] !== tmp23) {
-      class P {
+      class G {
         constructor() {
-          obj = { platformType, location: "OAuth2 Connect Account Step" };
-          tmp = closure_1(closure_2[16])(obj);
+          obj = closure_1(closure_2[15]);
+          application = obj.fetchApplication(clientId);
           return;
         }
       }
       const obj6 = { source: tmp23, size: null };
-      const Avatar2 = tmp(1188).Avatar;
-      obj6.size = tmp(1188).AvatarSizes.XLARGE;
-      class C {
+      const Avatar2 = tmp(1200).Avatar;
+      obj6.size = tmp(1200).AvatarSizes.XLARGE;
+      class E {
         constructor() {
           currentUser = null;
           if (null != closure_1_6.getId()) {
@@ -300,47 +300,47 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((clientId) => {
         }
       }
       cResult[21] = tmp23;
-      cResult[22] = tmp36;
+      cResult[22] = tmp37;
     } else {
-      class P {
+      class G {
         constructor() {
-          obj = { platformType, location: "OAuth2 Connect Account Step" };
-          tmp = closure_1(closure_2[16])(obj);
+          obj = closure_1(closure_2[15]);
+          application = obj.fetchApplication(clientId);
           return;
         }
       }
     }
     if (cResult[23] === tmp4.headerIcons) {
-      class P {
+      class G {
         constructor() {
-          obj = { platformType, location: "OAuth2 Connect Account Step" };
-          tmp = closure_1(closure_2[16])(obj);
+          obj = closure_1(closure_2[15]);
+          application = obj.fetchApplication(clientId);
           return;
         }
       }
     }
     const obj7 = { style: tmp4.headerIcons, children: null };
-    const items4 = [tmp32, tmp33, tmp36];
+    const items4 = [tmp33, tmp34, tmp37];
     obj7.children = items4;
-    const tmp40 = closure_9(View, obj7);
+    const tmp41 = closure_9(View, obj7);
     cResult[23] = tmp4.headerIcons;
-    cResult[24] = tmp32;
-    cResult[25] = tmp36;
-    cResult[26] = tmp40;
+    cResult[24] = tmp33;
+    cResult[25] = tmp37;
+    cResult[26] = tmp41;
   }
   const tmpResult3 = clientId(504);
-  value = platformType(5449).get(platformType);
+  value = platformType(5759).get(platformType);
   if (null == value) {
-    class P {
+    class G {
       constructor() {
-        obj = { platformType, location: "OAuth2 Connect Account Step" };
-        tmp = closure_1(closure_2[16])(obj);
+        obj = closure_1(closure_2[15]);
+        application = obj.fetchApplication(clientId);
         return;
       }
     }
     cResult[6] = platformType;
     cResult[7] = tmp6;
-    class C {
+    class E {
       constructor() {
         currentUser = null;
         if (null != closure_1_6.getId()) {
@@ -351,24 +351,24 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((clientId) => {
       }
     }
   } else {
-    class P {
+    class G {
       constructor() {
-        obj = { platformType, location: "OAuth2 Connect Account Step" };
-        tmp = closure_1(closure_2[16])(obj);
+        obj = closure_1(closure_2[15]);
+        application = obj.fetchApplication(clientId);
         return;
       }
     }
     const icon = value.icon;
-    const source = obj5.makeSource(tmp(4735).isThemeLight(tmp6) ? icon.lightPNG : icon.darkPNG);
-    const tmpResult4 = tmp(4735);
+    const source = obj5.makeSource(tmp(4929).isThemeLight(tmp6) ? icon.lightPNG : icon.darkPNG);
+    const tmpResult4 = tmp(4929);
   }
-  const tmp5Result4 = platformType(5449);
-}) : ((clientId) => {
+  const tmp5Result4 = platformType(5759);
+}) : (function ConnectAccountStep(clientId) {
   clientId = clientId.clientId;
   const platformType = clientId.platformType;
   const platformName = clientId.platformName;
   const tmp = closure_10();
-  const tmp4 = platformType(4797)();
+  const tmp4 = platformType(4991)();
   const items = [ApplicationStore];
   const items1 = [clientId];
   const stateFromStores = clientId(504).useStateFromStores(items, () => ApplicationStore.getApplication(clientId), items1);
@@ -382,19 +382,19 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((clientId) => {
     return currentUser;
   });
   const obj2 = clientId(504);
-  value = platformType(5449).get(platformType);
+  value = platformType(5759).get(platformType);
   if (null == value) {
     let applicationIconSource;
     if (null != stateFromStores) {
       ({ id: obj7.id, icon: obj7.icon } = stateFromStores);
-      applicationIconSource = tmp2(1402).getApplicationIconSource({ id: null, icon: null });
+      applicationIconSource = tmp2(1414).getApplicationIconSource({ id: null, icon: null });
       const obj4 = { id: null, icon: null };
-      const tmp2Result = tmp2(1402);
+      const tmp2Result = tmp2(1414);
     }
     let userAvatarSource;
     if (null != stateFromStores1) {
-      userAvatarSource = tmp2(1402).getUserAvatarSource(stateFromStores1);
-      const tmp2Result2 = tmp2(1402);
+      userAvatarSource = tmp2(1414).getUserAvatarSource(stateFromStores1);
+      const tmp2Result2 = tmp2(1414);
     }
     let str;
     if (stateFromStores != null) {
@@ -410,74 +410,74 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((clientId) => {
     const obj5 = { style: tmp.container, children: null };
     const obj6 = { style: tmp.header, children: null };
     const obj8 = { style: tmp.headerIcons, children: null };
-    const obj9 = { source: applicationIconSource, size: tmp5(1188).AvatarSizes.XLARGE };
-    const items4 = [closure_8(tmp5(1188).Avatar, obj9), , ];
+    const obj9 = { source: applicationIconSource, size: tmp5(1200).AvatarSizes.XLARGE };
+    const items4 = [closure_8(tmp5(1200).Avatar, obj9), , ];
     const obj10 = { color: tmp2(587).colors.INTERACTIVE_TEXT_DEFAULT, size: "md" };
-    items4[1] = closure_8(tmp5(7588).MoreHorizontalIcon, obj10);
-    const obj11 = { source: userAvatarSource, size: tmp5(1188).AvatarSizes.XLARGE };
-    items4[2] = closure_8(tmp5(1188).Avatar, obj11);
+    items4[1] = closure_8(tmp5(9180).MoreHorizontalIcon, obj10);
+    const obj11 = { source: userAvatarSource, size: tmp5(1200).AvatarSizes.XLARGE };
+    items4[2] = closure_8(tmp5(1200).Avatar, obj11);
     obj8.children = items4;
     const items5 = [closure_9(View, obj8), , ];
     const obj12 = { variant: "text-lg/normal", color: "text-default", children: null };
     const intl = tmp5(1126).intl;
     obj12.children = intl.string(tmp5(1126).t.uT1CPa);
-    items5[1] = closure_8(tmp5(4892).Text, obj12);
+    items5[1] = closure_8(tmp5(5086).Text, obj12);
     const obj13 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: str };
-    items5[2] = closure_8(tmp5(4892).Text, obj13);
+    items5[2] = closure_8(tmp5(5086).Text, obj13);
     obj6.children = items5;
     const items6 = [closure_9(View, obj6), , , ];
     const obj14 = { variant: "text-sm/normal", color: "text-default", children: null };
     const intl2 = tmp5(1126).intl;
     const obj15 = { applicationName: str, platformName };
     obj14.children = intl2.format(tmp5(1126).t["aJRE/Q"], obj15);
-    items6[1] = closure_8(tmp5(4892).Text, obj14);
+    items6[1] = closure_8(tmp5(5086).Text, obj14);
     const obj16 = { style: tmp.card, children: null };
     let tmp16Result = null;
     if (null != null) {
       const obj17 = { source: null, style: tmp.platformIcon, disableColor: true };
-      tmp16Result = closure_8(tmp5(1188).Icon, obj17);
+      tmp16Result = closure_8(tmp5(1200).Icon, obj17);
     }
     const items7 = [tmp16Result, , ];
     const obj18 = { variant: "text-md/medium", style: tmp.cardName, color: "text-default", children: platformName };
-    items7[1] = closure_8(tmp5(4892).Text, obj18);
+    items7[1] = closure_8(tmp5(5086).Text, obj18);
     const obj19 = {
       variant: "primary",
       size: "sm",
-      onPress() {
+      onPress: function handleConnect() {
           authorizeConnectionDefault({ platformType, location: "OAuth2 Connect Account Step" });
         },
       text: null
     };
     const intl3 = tmp5(1126).intl;
     obj19.text = intl3.string(tmp5(1126).t.S0W8Z5);
-    items7[2] = closure_8(tmp5(5601).Button, obj19);
+    items7[2] = closure_8(tmp5(5375).Button, obj19);
     obj16.children = items7;
     items6[2] = closure_9(View, obj16);
     const obj20 = { style: tmp.infoNotice, children: null };
     const obj21 = { color: tmp2(587).colors.ICON_FEEDBACK_INFO, size: "sm" };
-    const items8 = [closure_8(tmp5(4818).CircleInformationIcon, obj21), ];
+    const items8 = [closure_8(tmp5(5012).CircleInformationIcon, obj21), ];
     const obj22 = { variant: "text-sm/normal", color: "text-default", style: tmp.infoText, children: null };
     const intl4 = tmp5(1126).intl;
     const obj23 = { platformName, applicationName: str };
     obj22.children = intl4.format(tmp5(1126).t["8psEFX"], obj23);
-    items8[1] = closure_8(tmp5(4892).Text, obj22);
+    items8[1] = closure_8(tmp5(5086).Text, obj22);
     obj20.children = items8;
     items6[3] = closure_9(View, obj20);
     obj5.children = items6;
     return closure_9(View, obj5);
   } else {
-    const tmp5Result = tmp5(1402);
+    const tmp5Result = tmp5(1414);
     const icon = value.icon;
-    const source = tmp5Result.makeSource(tmp5(4735).isThemeLight(tmp4) ? icon.lightPNG : icon.darkPNG);
-    const tmp5Result2 = tmp5(4735);
+    const source = tmp5Result.makeSource(tmp5(4929).isThemeLight(tmp4) ? icon.lightPNG : icon.darkPNG);
+    const tmp5Result2 = tmp5(4929);
   }
-  const obj3 = platformType(5449);
+  const obj3 = platformType(5759);
 });
 size = fn(2);
 const result = size.fileFinishedImporting("modules/oauth2/native/ConnectAccountStep.tsx");
 
 export default tmp3;
-export const ConnectedAccountCard = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const ConnectedAccountCard = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectedAccountCard(arg0) {
   const cResult = c.c(38);
   ({ platformType, platformName, connectedAccount, applicationName } = arg0);
   const tmp4 = closure_10();
@@ -655,7 +655,7 @@ export const ConnectedAccountCard = ReactCompilerGating.isReactCompilerEnabled()
     const tmpResult2 = shared;
   }
   const tmp5Result = PlatformsDefault;
-}) : ((arg0) => {
+}) : (function ConnectedAccountCard(arg0) {
   ({ platformName, connectedAccount } = arg0);
   ({ platformType, applicationName } = arg0);
   const tmp = closure_10();

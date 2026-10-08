@@ -1,12 +1,12 @@
-// === Module 11340: Checkpoint2025ForwardPreview ===
+// === Module 11607: Checkpoint2025ForwardPreview ===
 
-// Module 11340 (Checkpoint2025ForwardPreview)
+// Module 11607 (Checkpoint2025ForwardPreview)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
-import CheckpointUtils from "CheckpointUtils" /* 5131 */;
-import FastImageDefault from "FastImage" /* 5981 */;
-import checkpoint_CheckpointConstants from "checkpoint/CheckpointConstants" /* 11341 */;
-import CheckpointColors from "CheckpointColors" /* 11342 */;
+import CheckpointUtils from "CheckpointUtils" /* 5443 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import checkpoint_CheckpointConstants from "checkpoint/CheckpointConstants" /* 11608 */;
+import CheckpointColors from "CheckpointColors" /* 11609 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -14,7 +14,7 @@ const CheckpointPersonas = checkpoint_CheckpointConstants.CheckpointPersonas;
 const jsx = jsxProd.jsx;
 const result = size.fileFinishedImporting("modules/checkpoint/2025/native/Checkpoint2025ForwardPreview.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((checkpointData) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoint2025ForwardPreview(checkpointData) {
   const cResult = c.c(9);
   let num = checkpointData.checkpointData.cardId;
   if (num == null) {
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((checkpointData) 
   cResult[7] = tmp9;
   cResult[8] = tmp11;
   tmp10 = tmp11;
-}) : ((checkpointData) => {
+}) : (function Checkpoint2025ForwardPreview(checkpointData) {
   let num = checkpointData.checkpointData.cardId;
   if (num == null) {
     num = 0;

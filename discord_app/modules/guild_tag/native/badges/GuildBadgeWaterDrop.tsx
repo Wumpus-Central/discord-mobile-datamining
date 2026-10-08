@@ -1,9 +1,9 @@
-// === Module 13750: GuildBadgeWaterDrop ===
+// === Module 13972: GuildBadgeWaterDrop ===
 
-// Module 13750 (GuildBadgeWaterDrop)
+// Module 13972 (GuildBadgeWaterDrop)
 import c from "c" /* 576 */;
-import inlineStyles from "inlineStyles" /* 8169 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 13748 */;
+import inlineStyles from "inlineStyles" /* 7550 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 13970 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgeWaterDrop.tsx");
 
-export const GuildBadgeWaterDrop = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const GuildBadgeWaterDrop = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBadgeWaterDrop(arg0) {
   const cResult = c.c(29);
   if (cResult[0] !== arg0) {
     ({ width, height, primaryTintColor } = arg0);
@@ -160,7 +160,7 @@ export const GuildBadgeWaterDrop = ReactCompilerGating.isReactCompilerEnabled() 
   cResult[27] = num6;
   cResult[28] = tmp42;
   tmp40 = tmp42;
-}) : ((primaryTintColor) => {
+}) : (function GuildBadgeWaterDrop(primaryTintColor) {
   let num = primaryTintColor.width;
   if (num === undefined) {
     num = 24;

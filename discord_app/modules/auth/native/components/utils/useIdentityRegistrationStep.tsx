@@ -1,8 +1,8 @@
-// === Module 15916: useIdentityRegistrationStep ===
+// === Module 16175: useIdentityRegistrationStep ===
 
-// Module 15916 (useIdentityRegistrationStep)
+// Module 16175 (useIdentityRegistrationStep)
 import util from "util" /* 1126 */;
-import PhoneOrEmailUtils from "PhoneOrEmailUtils" /* 6458 */;
+import PhoneOrEmailUtils from "PhoneOrEmailUtils" /* 6636 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -10,16 +10,16 @@ import noop from "module_19" /* 19 */;
 const require = globalThis.__r;
 
 require = fn;
-const RegistrationUIStore = fn(15906);
+const RegistrationUIStore = fn(16165);
 ({ setRegistrationErrors: metroRequire, updateRegistrationOptions: closure_7, useRegistrationUIStore: closure_8 } = RegistrationUIStore);
-const RegistrationConstants = fn(15907);
+const RegistrationConstants = fn(16166);
 ({ authStateToRegisterTransitionStep: closure_9, RegisterTransitionSteps: c10, RegistrationTransitionActionTypes: closure_11 } = RegistrationConstants);
 const AbortCodes = fn(1085).AbortCodes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/utils/useIdentityRegistrationStep.tsx");
 
-export const useIdentityRegistrationStep = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export const useIdentityRegistrationStep = ReactCompilerGating.isReactCompilerEnabled() ? (function useIdentityRegistrationStep(arg0, arg1) {
   _require = arg0;
   const cResult = require("c").c(21);
   let obj = require("c");
@@ -214,7 +214,7 @@ export const useIdentityRegistrationStep = ReactCompilerGating.isReactCompilerEn
           }
         })();
       });
-      const fn = function() {
+      function t3() {
         const self = this;
         const apply = closure_0.apply;
         if (typeof apply === "unknown") {
@@ -223,12 +223,12 @@ export const useIdentityRegistrationStep = ReactCompilerGating.isReactCompilerEn
           applyArgumentsResult = apply(self, arguments);
         }
         return applyArgumentsResult;
-      };
+      }
       cResult[3] = arg0;
       cResult[4] = first;
       cResult[5] = navigation;
       cResult[6] = context;
-      cResult[7] = fn;
+      cResult[7] = t3;
     }
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
@@ -247,7 +247,7 @@ export const useIdentityRegistrationStep = ReactCompilerGating.isReactCompilerEn
     }
   }
   const tmp6 = _slicedToArray(first.useState(""), 2);
-}) : ((arg0, arg1) => {
+}) : (function useIdentityRegistrationStep(arg0, arg1) {
   _require = arg0;
   importDefault = arg1;
   navigation = require("useNavigation").useNavigation();

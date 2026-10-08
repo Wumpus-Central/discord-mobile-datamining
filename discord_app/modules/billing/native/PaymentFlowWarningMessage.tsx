@@ -1,25 +1,25 @@
-// === Module 13163: PaymentFlowWarningMessage ===
+// === Module 13463: PaymentFlowWarningMessage ===
 
-// Module 13163 (PaymentFlowWarningMessage)
+// Module 13463 (PaymentFlowWarningMessage)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 4892 */;
+import native from "native" /* 1200 */;
+import Text_Text from "Text/Text" /* 5086 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
-let obj2 = { container: { padding: 10, marginVertical: 5, borderRadius: nativeDefault.radii.xs, display: "flex", flexDirection: "row", alignItems: "center", backgroundColor: fn(5627).DARK_PRIMARY_630_LIGHT_PRIMARY_230 }, icon: { marginRight: 10 }, text: { flexShrink: 1 } };
+const createStyles = fn(5090);
+let obj2 = { container: { padding: 10, marginVertical: 5, borderRadius: nativeDefault.radii.xs, display: "flex", flexDirection: "row", alignItems: "center", backgroundColor: fn(5974).DARK_PRIMARY_630_LIGHT_PRIMARY_230 }, icon: { marginRight: 10 }, text: { flexShrink: 1 } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let obj3 = { padding: 10, marginVertical: 5, borderRadius: nativeDefault.radii.xs, display: "flex", flexDirection: "row", alignItems: "center", backgroundColor: fn(5627).DARK_PRIMARY_630_LIGHT_PRIMARY_230 };
+let obj3 = { padding: 10, marginVertical: 5, borderRadius: nativeDefault.radii.xs, display: "flex", flexDirection: "row", alignItems: "center", backgroundColor: fn(5974).DARK_PRIMARY_630_LIGHT_PRIMARY_230 };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/billing/native/PaymentFlowWarningMessage.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function PaymentFlowWarningMessage(children) {
   const cResult = c.c(9);
   const tmp4 = closure_6();
   if (cResult[0] !== tmp4.icon) {
@@ -59,7 +59,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
   cResult[4] = tmp10;
   tmp9 = tmp10;
   const obj3 = { variant: "text-sm/medium", style: tmp4.text, children: children.message };
-}) : ((children) => {
+}) : (function PaymentFlowWarningMessage(children) {
   const tmp = closure_6();
   const obj = { style: tmp.container, children: null };
   const size = { style: tmp.icon, color: nativeDefault.unsafe_rawColors.YELLOW_300, width: 16, height: 16 };

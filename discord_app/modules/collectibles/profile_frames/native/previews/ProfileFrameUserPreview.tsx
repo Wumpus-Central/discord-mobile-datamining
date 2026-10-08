@@ -1,8 +1,8 @@
-// === Module 11011: ProfileFrameUserPreview ===
+// === Module 11186: ProfileFrameUserPreview ===
 
-// Module 11011 (ProfileFrameUserPreview)
+// Module 11186 (ProfileFrameUserPreview)
 import c from "c" /* 576 */;
-import UserProfilePreviewDefault from "UserProfilePreview" /* 10838 */;
+import UserProfilePreviewDefault from "UserProfilePreview" /* 10487 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/profile_frames/native/previews/ProfileFrameUserPreview.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ProfileFrameUserPreview(arg0) {
   let prop = require;
   const cResult = c.c(13);
   if (cResult[0] !== arg0) {
@@ -71,7 +71,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[12] = tmp22;
     tmp15 = tmp22;
   }
-}) : ((profileFrame) => {
+}) : (function ProfileFrameUserPreview(profileFrame) {
   profileFrame = profileFrame.profileFrame;
   ({ avatarDecorationOverride, profileEffectOverride } = profileFrame);
   const merged = Object.assign(profileFrame, Object.assign({ profileFrame: 0, avatarDecorationOverride: 0, profileEffectOverride: 0 }));

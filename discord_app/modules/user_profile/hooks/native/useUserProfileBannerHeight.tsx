@@ -1,16 +1,16 @@
-// === Module 7913: useUserProfileBannerHeight ===
+// === Module 8332: useUserProfileBannerHeight ===
 
-// Module 7913 (useUserProfileBannerHeight)
+// Module 8332 (useUserProfileBannerHeight)
 import c from "c" /* 576 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
-import Constants from "Constants" /* 6714 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
+import Constants from "Constants" /* 6891 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const BANNER_ASPECT_RATIO = Constants.BANNER_ASPECT_RATIO;
 const result = size.fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileBannerHeight.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserProfileBannerHeight(arg0) {
   const cResult = c.c(2);
   const width = useWindowDimensionsDefault().width;
   let bound = width;
@@ -28,7 +28,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp4 = cResult[1];
   }
   return tmp4;
-}) : ((arg0) => {
+}) : (function useUserProfileBannerHeight(arg0) {
   const width = useWindowDimensionsDefault().width;
   let bound = width;
   if (null != arg0) {

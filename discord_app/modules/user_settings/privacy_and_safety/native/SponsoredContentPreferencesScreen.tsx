@@ -1,11 +1,11 @@
-// === Module 15806: SponsoredContentPreferencesScreen ===
+// === Module 16065: SponsoredContentPreferencesScreen ===
 
-// Module 15806 (SponsoredContentPreferencesScreen)
+// Module 16065 (SponsoredContentPreferencesScreen)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
-import SettingBuilders from "SettingBuilders" /* 11142 */;
-import SettingLayoutDefault from "SettingLayout" /* 14515 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2127 */;
+import SettingBuilders from "SettingBuilders" /* 11262 */;
+import SettingLayoutDefault from "SettingLayout" /* 14775 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -31,14 +31,14 @@ function useSponsoredContentSettings() {
   items1[2] = obj7;
   return items1;
 }
-const MobileUserSettings = fn(7645).MobileUserSettings;
+const MobileUserSettings = fn(7966).MobileUserSettings;
 const HelpdeskArticles = fn(1085).HelpdeskArticles;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/privacy_and_safety/native/SponsoredContentPreferencesScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SponsoredContentPreferencesScreen() {
   const cResult = c.c(4);
   const tmp4 = useSponsoredContentSettings();
   if (cResult[0] !== tmp4) {
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp7 = cResult[3];
   }
   return tmp7;
-}) : (() => {
+}) : (function SponsoredContentPreferencesScreen() {
   const tmp = useSponsoredContentSettings();
   const sections = tmp;
   const items = [tmp];

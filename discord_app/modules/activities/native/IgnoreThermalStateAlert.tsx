@@ -1,8 +1,8 @@
-// === Module 9121: IgnoreThermalStateAlert ===
+// === Module 10694: IgnoreThermalStateAlert ===
 
-// Module 9121 (IgnoreThermalStateAlert)
-import common_AlertDefault from "common/Alert" /* 5790 */;
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9026 */;
+// Module 10694 (IgnoreThermalStateAlert)
+import common_AlertDefault from "common/Alert" /* 5394 */;
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 10635 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,13 +12,13 @@ require = fn;
 let closure_3 = ["onConfirm"];
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({ text: { marginTop: 16, lineHeight: 20, textAlign: "center" }, header: { textAlign: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/native/IgnoreThermalStateAlert.tsx");
 
-export const IgnoreThermalStateAlert = ReactCompilerGating.isReactCompilerEnabled() ? ((onConfirm) => {
+export const IgnoreThermalStateAlert = ReactCompilerGating.isReactCompilerEnabled() ? (function IgnoreThermalStateAlert(onConfirm) {
   const cResult = require("c").c(18);
   if (cResult[0] !== onConfirm) {
     onConfirm = onConfirm.onConfirm;
@@ -72,7 +72,7 @@ export const IgnoreThermalStateAlert = ReactCompilerGating.isReactCompilerEnable
   }
   if (cResult[8] !== tmp9.header) {
     const obj2 = { style: tmp9.header, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: tmp15 };
-    const tmp19 = closure_5(tmp(4892).Text, obj2);
+    const tmp19 = closure_5(tmp(5086).Text, obj2);
     cResult[8] = tmp9.header;
     cResult[9] = tmp19;
     let tmp17 = tmp19;
@@ -89,7 +89,7 @@ export const IgnoreThermalStateAlert = ReactCompilerGating.isReactCompilerEnable
   }
   if (cResult[11] !== tmp9.text) {
     const obj3 = { style: tmp9.text, variant: "text-md/medium", children: tmp20 };
-    const tmp24 = closure_5(tmp(4892).Text, obj3);
+    const tmp24 = closure_5(tmp(5086).Text, obj3);
     cResult[11] = tmp9.text;
     cResult[12] = tmp24;
     let tmp22 = tmp24;
@@ -121,7 +121,7 @@ export const IgnoreThermalStateAlert = ReactCompilerGating.isReactCompilerEnable
   cResult[16] = tmp22;
   cResult[17] = tmp28;
   tmp25 = tmp28;
-}) : ((onConfirm) => {
+}) : (function IgnoreThermalStateAlert(onConfirm) {
   onConfirm = onConfirm.onConfirm;
   const merged = Object.assign(onConfirm, Object.assign({ onConfirm: 0 }));
   const tmp2 = closure_7();
@@ -140,11 +140,11 @@ export const IgnoreThermalStateAlert = ReactCompilerGating.isReactCompilerEnable
   const obj2 = { style: tmp2.header, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl3 = onConfirm(1126).intl;
   obj2.children = intl3.string(onConfirm(1126).t.v5X4fZ);
-  const items = [closure_5(onConfirm(4892).Text, obj2), ];
+  const items = [closure_5(onConfirm(5086).Text, obj2), ];
   const obj3 = { style: tmp2.text, variant: "text-md/medium", children: null };
   const intl4 = onConfirm(1126).intl;
   obj3.children = intl4.string(onConfirm(1126).t.VOgTjy);
-  items[1] = closure_5(onConfirm(4892).Text, obj3);
+  items[1] = closure_5(onConfirm(5086).Text, obj3);
   obj.children = items;
   return closure_6(common_AlertDefault, obj);
 });

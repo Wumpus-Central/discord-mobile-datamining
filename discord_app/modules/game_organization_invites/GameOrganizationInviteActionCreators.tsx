@@ -1,6 +1,6 @@
-// === Module 17600: GameOrganizationInviteActionCreators ===
+// === Module 17882: GameOrganizationInviteActionCreators ===
 
-// Module 17600 (GameOrganizationInviteActionCreators)
+// Module 17882 (GameOrganizationInviteActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;

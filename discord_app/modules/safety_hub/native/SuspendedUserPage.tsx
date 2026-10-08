@@ -1,27 +1,27 @@
-// === Module 17114: SuspendedUserPage ===
+// === Module 17395: SuspendedUserPage ===
 
-// Module 17114 (SuspendedUserPage)
+// Module 17395 (SuspendedUserPage)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import LinkingDefault from "Linking" /* 4571 */;
-import _modDef4815 from "module_4815" /* 4815 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6089 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6626 */;
-import IconButton from "IconButton" /* 7586 */;
-import SafetyHubPageDefault from "SafetyHubPage" /* 14567 */;
+import LinkingDefault from "Linking" /* 4763 */;
+import _modDef5009 from "module_5009" /* 5009 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 5936 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6803 */;
+import IconButton from "IconButton" /* 8106 */;
+import SafetyHubPageDefault from "SafetyHubPage" /* 14828 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 8139 */;
+import SafetyHubStore from "SafetyHubStore" /* 5920 */;
 
 require = fn;
 const View = fn(17).View;
-const SafetyHubConstants = fn(8126);
+const SafetyHubConstants = fn(5921);
 ({ AgeCheckStatus: hasOwnProperty, SafetyHubLinks: metroRequire } = SafetyHubConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, display: "flex", flexDirection: "column", height: "100%" }, header: null, text: null, link: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, display: "flex", flexDirection: "column", height: "100%" };
 obj2.header = { backgroundColor: nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT, flexDirection: "row", paddingVertical: nativeDefault.space.PX_8, alignItems: "center" };
@@ -34,7 +34,7 @@ let obj5 = { marginRight: nativeDefault.space.PX_8, textAlign: "left", flexShrin
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/native/SuspendedUserPage.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SuspendedUserSafetyHubPage() {
   const cResult = c.c(13);
   const tmp4 = closure_9();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -51,85 +51,85 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   const stateFromStores = initialize.useStateFromStores(tmp5, tmp6);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    class S {
-      constructor() {
-        obj = closure_1_1(closure_1_2[10]);
-        closeSuspendedUserResult = obj.closeSuspendedUser();
-        return;
-      }
+    function onClose() {
+      AuthenticationActionCreatorsDefault.closeSuspendedUser();
     }
-    cResult[2] = S;
+    cResult[2] = onClose;
+    let tmp9 = onClose;
   } else {
-    class S {
-      constructor() {
-        obj = closure_1_1(closure_1_2[10]);
-        closeSuspendedUserResult = obj.closeSuspendedUser();
-        return;
-      }
-    }
+    tmp9 = cResult[2];
   }
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    class S {
-      constructor() {
-        obj = closure_1_1(closure_1_2[10]);
-        closeSuspendedUserResult = obj.closeSuspendedUser();
-        return;
-      }
+    function openLearnMore() {
+      LinkingDefault.openURL(constants.WARNING_SYSTEM_HELPCENTER_LINK);
     }
-    cResult[3] = tmp11;
+    cResult[3] = openLearnMore;
+    let tmp10 = openLearnMore;
   } else {
-    class S {
-      constructor() {
-        obj = closure_1_1(closure_1_2[10]);
-        closeSuspendedUserResult = obj.closeSuspendedUser();
-        return;
-      }
-    }
+    tmp10 = cResult[3];
   }
   if (cResult[4] === stateFromStores !== constants.VERIFIED) {
-    class S {
-      constructor() {
-        obj = closure_1_1(closure_1_2[10]);
-        closeSuspendedUserResult = obj.closeSuspendedUser();
-        return;
+    if (cResult[5] === tmp4.header) {
+      if (cResult[6] === tmp4.link) {
+        if (cResult[7] === tmp4.text) {
+          let tmp12 = cResult[8];
+        }
+        const _Symbol = Symbol;
+        if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
+          const tmp21 = React5(SafetyHubPageDefault, { visible: true });
+          cResult[9] = tmp21;
+          let tmp18 = tmp21;
+        } else {
+          tmp18 = cResult[9];
+        }
+        if (cResult[10] === tmp4.container) {
+          if (cResult[11] === tmp12) {
+            let tmp22 = cResult[12];
+          }
+          return tmp22;
+        }
+        const rect = { top: true, right: true, left: true, children: null };
+        const obj2 = { style: tmp4.container, children: null };
+        const items1 = [tmp12, tmp18];
+        obj2.children = items1;
+        rect.children = closure_1_8(View, obj2);
+        const tmp26 = React5(common_SafeAreaView.SafeAreaPaddingView, rect);
+        cResult[10] = tmp4.container;
+        cResult[11] = tmp12;
+        cResult[12] = tmp26;
+        tmp22 = tmp26;
       }
     }
   }
-  let tmp13 = tmp12;
+  let tmp13 = tmp11;
   if (stateFromStores !== constants.VERIFIED) {
-    class S {
-      constructor() {
-        obj = closure_1_1(closure_1_2[10]);
-        closeSuspendedUserResult = obj.closeSuspendedUser();
-        return;
-      }
-    }
-    const obj2 = { style: tmp4.header, children: null };
-    const obj3 = { variant: "destructive", accessibilityLabel: null, onPress: null, icon: null };
+    const obj3 = { style: tmp4.header, children: null };
+    const obj4 = { variant: "destructive", accessibilityLabel: null, onPress: null, icon: null };
     const intl = util.intl;
-    obj3.accessibilityLabel = intl.string(util.t.cpT0Cq);
-    obj3.onPress = S;
-    obj3.icon = _modDef4815;
-    const items1 = [React5(IconButton.IconButton, obj3), ];
-    const obj4 = { style: tmp4.text, onPress: tmp11, variant: "text-xs/medium", color: "control-critical-primary-text-default", children: null };
+    obj4.accessibilityLabel = intl.string(util.t.cpT0Cq);
+    obj4.onPress = tmp9;
+    obj4.icon = _modDef5009;
+    const items2 = [React5(IconButton.IconButton, obj4), ];
+    const obj5 = { style: tmp4.text, onPress: tmp10, variant: "text-xs/medium", color: "control-critical-primary-text-default", children: null };
     const intl2 = util.intl;
-    const items2 = [intl2.string(util.t["MG+Bzb"]), " ", ];
-    const obj5 = { style: tmp4.link, variant: "text-xs/medium", color: "control-critical-primary-text-default", children: null };
+    const items3 = [intl2.string(util.t["MG+Bzb"]), " ", ];
+    const obj6 = { style: tmp4.link, variant: "text-xs/medium", color: "control-critical-primary-text-default", children: null };
     const intl3 = util.intl;
-    obj5.children = intl3.string(util.t["9JceHN"]);
-    items2[2] = React5(Text_Text.Text, obj5);
-    obj4.children = items2;
-    items1[1] = closure_1_8(Text_Text.Text, obj4);
-    obj2.children = items1;
-    tmp13 = closure_1_8(View, obj2);
+    obj6.children = intl3.string(util.t["9JceHN"]);
+    items3[2] = React5(Text_Text.Text, obj6);
+    obj5.children = items3;
+    items2[1] = closure_1_8(Text_Text.Text, obj5);
+    obj3.children = items2;
+    tmp13 = closure_1_8(View, obj3);
   }
   cResult[4] = stateFromStores !== constants.VERIFIED;
   cResult[5] = tmp4.header;
   cResult[6] = tmp4.link;
   cResult[7] = tmp4.text;
   cResult[8] = tmp13;
+  tmp12 = tmp13;
   const tmpResult = initialize;
-}) : (() => {
+}) : (function SuspendedUserSafetyHubPage() {
   const tmp = closure_9();
   const items = [SafetyHubStore];
   let tmp6Result = initialize.useStateFromStores(items, () => ageCheckStatus.getAgeCheckStatus()) !== constants.VERIFIED;
@@ -139,14 +139,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const obj4 = { variant: "destructive", accessibilityLabel: null, onPress: null, icon: null };
     const intl = util.intl;
     obj4.accessibilityLabel = intl.string(util.t.cpT0Cq);
-    obj4.onPress = function onPress() {
+    obj4.onPress = function onClose() {
       AuthenticationActionCreatorsDefault.closeSuspendedUser();
     };
-    obj4.icon = _modDef4815;
+    obj4.icon = _modDef5009;
     const items1 = [React5(IconButton.IconButton, obj4), ];
     const obj5 = {
       style: tmp.text,
-      onPress() {
+      onPress: function openLearnMore() {
           LinkingDefault.openURL(constants.WARNING_SYSTEM_HELPCENTER_LINK);
         },
       variant: "text-xs/medium",

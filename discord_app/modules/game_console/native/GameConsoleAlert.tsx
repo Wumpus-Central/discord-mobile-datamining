@@ -1,20 +1,20 @@
-// === Module 9466: GameConsoleAlert ===
+// === Module 10902: GameConsoleAlert ===
 
-// Module 9466 (GameConsoleAlert)
+// Module 10902 (GameConsoleAlert)
 import noop from "module_19" /* 19 */;
-import GameConsoleStore from "GameConsoleStore" /* 4913 */;
+import GameConsoleStore from "GameConsoleStore" /* 5109 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({ errorCodeText: { marginTop: 16 }, alertBody: { marginTop: 0 }, container: { flex: 1 }, body: { marginTop: 16 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_console/native/GameConsoleAlert.tsx");
 
-export const SelfDismissibleAlertBody = ReactCompilerGating.isReactCompilerEnabled() ? ((errorCodeMessage) => {
+export const SelfDismissibleAlertBody = ReactCompilerGating.isReactCompilerEnabled() ? (function SelfDismissibleAlertBody(errorCodeMessage) {
   const cResult = dismissCallback(stateFromStores[6]).c(22);
   ({ body, dismissCallback } = errorCodeMessage);
   errorCodeMessage = errorCodeMessage.errorCodeMessage;
@@ -114,7 +114,7 @@ export const SelfDismissibleAlertBody = ReactCompilerGating.isReactCompilerEnabl
   tmp9 = items4;
   tmp8 = fn2;
   const tmpResult = dismissCallback(stateFromStores[7]);
-}) : ((errorCodeMessage) => {
+}) : (function SelfDismissibleAlertBody(errorCodeMessage) {
   ({ body, dismissCallback } = errorCodeMessage);
   errorCodeMessage = errorCodeMessage.errorCodeMessage;
   let stateFromStores;

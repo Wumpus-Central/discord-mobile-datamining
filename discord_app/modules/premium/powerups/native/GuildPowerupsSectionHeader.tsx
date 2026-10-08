@@ -1,13 +1,13 @@
-// === Module 12226: GuildPowerupsSectionHeader ===
+// === Module 12305: GuildPowerupsSectionHeader ===
 
-// Module 12226 (GuildPowerupsSectionHeader)
+// Module 12305 (GuildPowerupsSectionHeader)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6477 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6655 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
+import createStyles from "createStyles" /* 5090 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -18,7 +18,7 @@ let closure_5 = createStyles.createStyles(obj);
 let obj2 = { padding: nativeDefault.space.PX_16 };
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsSectionHeader.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPowerupsSectionHeader(arg0) {
   const cResult = c.c(9);
   ({ title, description } = arg0);
   const tmp4 = closure_5();
@@ -63,7 +63,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = str;
   cResult[4] = tmp10;
   tmp9 = tmp10;
-}) : ((arg0) => {
+}) : (function GuildPowerupsSectionHeader(arg0) {
   ({ title, description } = arg0);
   const tmp = closure_5();
   const obj2 = { style: tmp.headerContainer, children: null };

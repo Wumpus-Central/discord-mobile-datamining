@@ -1,8 +1,8 @@
-// === Module 4872: DeviceUtils ===
+// === Module 5066: DeviceUtils ===
 
-// Module 4872 (DeviceUtils)
+// Module 5066 (DeviceUtils)
 import Storage3 from "Storage" /* 510 */;
-import NativeDeviceModule from "NativeDeviceModule" /* 1353 */;
+import NativeDeviceModule from "NativeDeviceModule" /* 1365 */;
 
 require = fn;
 const constants = NativeDeviceModule.getConstants();

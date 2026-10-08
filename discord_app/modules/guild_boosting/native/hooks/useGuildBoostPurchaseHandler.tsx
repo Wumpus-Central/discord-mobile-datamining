@@ -1,6 +1,6 @@
-// === Module 12212: useGuildBoostPurchaseHandler ===
+// === Module 12291: useGuildBoostPurchaseHandler ===
 
-// Module 12212 (useGuildBoostPurchaseHandler)
+// Module 12291 (useGuildBoostPurchaseHandler)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -15,7 +15,7 @@ const tmp2 = new LoggerDefault("useGuildBoostPurchaseHandler");
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_boosting/native/hooks/useGuildBoostPurchaseHandler.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildBoostPurchaseHandler(arg0) {
   _require = arg0;
   const cResult = require("c").c(5);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -54,8 +54,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             } else {
               let newAnalyticsLoadId = tmp2;
               newAnalyticsLoadId = undefined;
-              newAnalyticsLoadId = args(10407).getNewAnalyticsLoadId();
-              const obj7 = args(6921);
+              newAnalyticsLoadId = args(10004).getNewAnalyticsLoadId();
+              const obj7 = args(7110);
               c3 = 1;
               c4 = 1;
               const obj4 = {
@@ -88,7 +88,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             const obj5 = { value, done: true };
             return obj5;
           } else {
-            args(5619).closeApplyBoostModal();
+            args(5964).closeApplyBoostModal();
             c4 = 3;
             return { value: "IconComponent", done: null };
           }
@@ -98,7 +98,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         }
       }
     });
-    const fn = function() {
+    function t1() {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -107,10 +107,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         applyArgumentsResult = apply(self, arguments);
       }
       return applyArgumentsResult;
-    };
+    }
     cResult[1] = arg0;
-    cResult[2] = fn;
-    let tmp6 = fn;
+    cResult[2] = t1;
+    let tmp6 = t1;
   } else {
     tmp6 = cResult[2];
   }
@@ -123,7 +123,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp8 = cResult[4];
   }
   return tmp8;
-}) : ((arg0) => {
+}) : (function useGuildBoostPurchaseHandler(arg0) {
   _require = undefined;
   const result = require("MobileWebRedirectCheckoutUtils").isMobileWebRedirectCheckoutEnabled();
   _require = asyncGeneratorStep(async (arg0, arg1) => {
@@ -153,8 +153,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           } else {
             let newAnalyticsLoadId = tmp2;
             newAnalyticsLoadId = undefined;
-            newAnalyticsLoadId = args(10407).getNewAnalyticsLoadId();
-            const obj7 = args(6921);
+            newAnalyticsLoadId = args(10004).getNewAnalyticsLoadId();
+            const obj7 = args(7110);
             c3 = 1;
             c4 = 1;
             const obj4 = {
@@ -187,7 +187,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           const obj5 = { value, done: true };
           return obj5;
         } else {
-          args(5619).closeApplyBoostModal();
+          args(5964).closeApplyBoostModal();
           c4 = 3;
           return { value: "IconComponent", done: null };
         }

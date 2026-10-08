@@ -1,27 +1,27 @@
-// === Module 12500: MessageNotification ===
+// === Module 12596: MessageNotification ===
 
-// Module 12500 (MessageNotification)
+// Module 12596 (MessageNotification)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4596 */;
-import transitionToChannel from "transitionToChannel" /* 4907 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
-import MessageParserDefault from "MessageParser" /* 7179 */;
-import MessagePreviewTextDefault from "MessagePreviewText" /* 12501 */;
+import native from "native" /* 1200 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4788 */;
+import transitionToChannel from "transitionToChannel" /* 5101 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5940 */;
+import MessageParserDefault from "MessageParser" /* 7358 */;
+import MessagePreviewTextDefault from "MessagePreviewText" /* 12597 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 require = fn;
-const InAppNotificationConstants = fn(12493);
+const InAppNotificationConstants = fn(12589);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: hasOwnProperty, NOTIFICATION_PREVIEW_LINE_CLAMP: metroRequire } = InAppNotificationConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles({ newContainerRoleDot: { paddingRight: 4, paddingTop: 0 } });
 let ReactCompilerGating = fn(558);
-let closure_9 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((message) => {
+let closure_9 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function MessagePreview(message) {
   const cResult = c.c(2);
   message = message.message;
   if (cResult[0] !== message) {
@@ -34,9 +34,11 @@ let closure_9 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((messa
     tmp3 = cResult[1];
   }
   return tmp3;
-}) : ((message) => jsx(MessagePreviewTextDefault, { message: message.message, lineClamp, maxHeight })));
+}) : (function MessagePreview(message) {
+  return jsx(MessagePreviewTextDefault, { message: message.message, lineClamp, maxHeight });
+}));
 ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAccessoryLabelNode(arg0) {
   const cResult = c.c(7);
   ({ author, containerStyles } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -92,7 +94,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[6] = tmp13Result;
   tmp11 = tmp13Result;
   const tmpResult = initialize;
-}) : ((author) => {
+}) : (function useAccessoryLabelNode(author) {
   author = author.author;
   const items = [AccessibilityStore];
   let colorString;
@@ -170,7 +172,7 @@ export default noop.memo(function MessageNotification(notification) {
     transitionToChannel.transitionToMessage(channel.id, message.id, { navigationReplace: true });
   }, items1);
   const items3 = [channel, parentChannel, guild, nullableMessageAuthor, handleDismissNotification];
-  const callback1 = guild.useCallback(() => ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12510, dependencyMap.paths), { channelId: channel.id }, "in-app-notification-settings-modal"), items2);
+  const callback1 = guild.useCallback(() => ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12606, dependencyMap.paths), { channelId: channel.id }, "in-app-notification-settings-modal"), items2);
   const memo = guild.useMemo(() => ({ type: "message", channel, parentChannel, guild, author: nullableMessageAuthor, onDismiss: handleDismissNotification }), items3);
   const obj6 = { user: message.author, guildId: null, size: null };
   const guild2 = notification.guild;

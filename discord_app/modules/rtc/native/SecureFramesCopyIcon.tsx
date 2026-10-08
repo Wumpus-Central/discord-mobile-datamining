@@ -1,8 +1,8 @@
-// === Module 9396: SecureFramesCopyIcon ===
+// === Module 8817: SecureFramesCopyIcon ===
 
-// Module 9396 (SecureFramesCopyIcon)
-import ToastUtils from "ToastUtils" /* 4573 */;
-import ClipboardUtils from "ClipboardUtils" /* 6695 */;
+// Module 8817 (SecureFramesCopyIcon)
+import ToastUtils from "ToastUtils" /* 4765 */;
+import ClipboardUtils from "ClipboardUtils" /* 6872 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rtc/native/SecureFramesCopyIcon.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((chunks) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SecureFramesCopyIcon(chunks) {
   const cResult = require("c").c(8);
   chunks = chunks.chunks;
   if (cResult[0] !== chunks) {
@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((chunks) => {
     tmp6 = cResult[3];
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp9 = jsx(tmp(4849).CopyIcon, { size: "sm" });
+    const tmp9 = jsx(tmp(5043).CopyIcon, { size: "sm" });
     cResult[4] = tmp9;
     let tmp7 = tmp9;
   } else {
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((chunks) => {
   }
   if (cResult[6] !== tmp6) {
     const obj2 = { icon: tmp7, variant: "secondary", onPress: tmp6, accessibilityLabel: tmp10, size: "sm" };
-    const tmp14 = jsx(tmp(7586).IconButton, { icon: tmp7, variant: "secondary", onPress: tmp6, accessibilityLabel: tmp10, size: "sm" });
+    const tmp14 = jsx(tmp(8106).IconButton, { icon: tmp7, variant: "secondary", onPress: tmp6, accessibilityLabel: tmp10, size: "sm" });
     cResult[6] = tmp6;
     cResult[7] = tmp14;
     let tmp12 = tmp14;
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((chunks) => {
     tmp12 = cResult[7];
   }
   return tmp12;
-}) : ((chunks) => {
+}) : (function SecureFramesCopyIcon(chunks) {
   chunks = chunks.chunks;
   const items = [chunks];
   const memo = noop.useMemo(() => chunks.join(" "), items);

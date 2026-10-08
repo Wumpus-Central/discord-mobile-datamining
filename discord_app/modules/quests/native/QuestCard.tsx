@@ -1,44 +1,44 @@
-// === Module 14907: QuestCard ===
+// === Module 15169: QuestCard ===
 
-// Module 14907 (QuestCard)
+// Module 15169 (QuestCard)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
-import ColorUtils from "ColorUtils" /* 4733 */;
-import design_shared from "design/shared" /* 4736 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 5416 */;
-import MetricEvents from "MetricEvents" /* 5421 */;
-import AdCreativeType from "AdCreativeType" /* 5637 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7225 */;
-import captureAdUserAction from "captureAdUserAction" /* 7226 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7236 */;
-import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 7237 */;
-import OrbsIcon from "OrbsIcon" /* 8524 */;
-import AssetUtils from "AssetUtils" /* 10013 */;
-import QuestUtils from "QuestUtils" /* 10921 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 10931 */;
-import openQuestAccessSuspendedBottomSheetDefault from "openQuestAccessSuspendedBottomSheet" /* 14936 */;
-import openVideoQuestModalDefault from "openVideoQuestModal" /* 14943 */;
-import VideoQuestModal from "VideoQuestModal" /* 14944 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ColorUtils from "ColorUtils" /* 4927 */;
+import design_shared from "design/shared" /* 4930 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 5725 */;
+import MetricEvents from "MetricEvents" /* 5730 */;
+import AdCreativeType from "AdCreativeType" /* 5984 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7404 */;
+import captureAdUserAction from "captureAdUserAction" /* 7405 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7415 */;
+import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 7416 */;
+import OrbsIcon from "OrbsIcon" /* 9009 */;
+import AssetUtils from "AssetUtils" /* 9544 */;
+import QuestUtils from "QuestUtils" /* 10572 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 10582 */;
+import openQuestAccessSuspendedBottomSheetDefault from "openQuestAccessSuspendedBottomSheet" /* 15198 */;
+import openVideoQuestModalDefault from "openVideoQuestModal" /* 15205 */;
+import VideoQuestModal from "VideoQuestModal" /* 15206 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
-import QuestStore from "QuestStore" /* 7200 */;
+import UserStore from "UserStore" /* 1389 */;
+import QuestStore from "QuestStore" /* 7379 */;
 
 const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: metroRequire, StyleSheet, View: closure_7 } = get_ActivityIndicator);
-const QuestsExperimentLocations = fn(5630).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5977).QuestsExperimentLocations;
 const NOOP = fn(1096).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-let createStyles = fn(4896);
+let createStyles = fn(5090);
 let result = createStyles.experimental_createToken((theme) => {
   theme = theme.theme;
   const internal = nativeDefault.internal;
@@ -47,7 +47,7 @@ let result = createStyles.experimental_createToken((theme) => {
   const isThemeDarkResult = design_shared.isThemeDark(theme);
   return ColorUtils.hexOpacityToRgba(semanticColor, 0);
 });
-createStyles = fn(4896);
+createStyles = fn(5090);
 let result1 = createStyles.experimental_createToken((theme) => {
   theme = theme.theme;
   const isThemeDarkResult = design_shared.isThemeDark(theme);
@@ -60,13 +60,13 @@ let result1 = createStyles.experimental_createToken((theme) => {
   }
   return ColorUtils.hexOpacityToRgba(semanticColor, num);
 });
-createStyles = fn(4896);
+createStyles = fn(5090);
 let result2 = createStyles.experimental_createToken((theme) => {
   const colors = nativeDefault.colors;
   return design_shared.isThemeDark(theme.theme) ? colors.BACKGROUND_SURFACE_HIGH : colors.BLACK;
 });
 const PX_16 = nativeDefault.space.PX_16;
-createStyles = fn(4896);
+createStyles = fn(5090);
 let obj = { container: { position: "relative", padding: 0, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, marginBottom: nativeDefault.space.PX_16, overflow: "hidden" }, heroContainer: null, heroImg: null, heroLinearGradientOverlay: null, previewBadge: null, previewBadgeText: null, rewardImgContainer: null, heroFooterContainer: null, heroFooterLeftContainer: null, promotedByRow: null, shrinkableText: null, detailsWrapper: null, detailsContainer: null, questName: null, bodyContainer: null, subtitleRow: null, rewardSubtitleRow: null, orbWithAmountRow: null, detailsTextContainer: null, buttonContainers: null, equalWidthContainer: null };
 let obj6 = { position: "relative", padding: 0, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, marginBottom: nativeDefault.space.PX_16, overflow: "hidden" };
 obj.heroContainer = { display: "flex", flexDirection: "column", justifyContent: "flex-end", padding: nativeDefault.space.PX_12 };
@@ -101,44 +101,45 @@ let obj13 = { flexDirection: "row", alignItems: "center", rowGap: nativeDefault.
 obj.buttonContainers = { borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE, display: "flex", flexDirection: "row", alignItems: "center", padding: nativeDefault.space.PX_12 };
 obj.equalWidthContainer = { flexBasis: 0, flexGrow: 1, flexShrink: 1 };
 let closure_16 = createStyles.createStyles(obj);
-createStyles = fn(4896);
+createStyles = fn(5090);
 let closure_17 = createStyles.createStyleProperties({ gradientStart: result, gradientMid: result1, gradientEnd: result2 });
 let obj14 = { borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE, display: "flex", flexDirection: "row", alignItems: "center", padding: nativeDefault.space.PX_12 };
 size = fn(2);
 let result3 = size.fileFinishedImporting("modules/quests/native/QuestCard.tsx");
 
 export const ESTIMATED_CARD_HEIGHT = 348;
-export const QuestCard = noop.memo((questContent) => {
-  function trackClick(CLAIM_REWARD) {
+export const QuestCard = noop.memo(function QuestCard(questContent) {
+  function trackClick(questContentCTA) {
     if (obj.shouldMigrateToAdAnalyticsInterface(AdAnalyticsInterfaceExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "quest_card")) {
-      const obj2 = { type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL, adCreativeType: AdCreativeType.AdCreativeType.QUEST, adCreativeId: quest.id, questContentCTA: CLAIM_REWARD, surfaceId: QUEST_HOME_MOBILE, sourceQuestContent, impressionId: getQuestImpressionId() };
+      const obj2 = { type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL, adCreativeType: AdCreativeType.AdCreativeType.QUEST, adCreativeId: quest.id, questContentCTA, surfaceId: QUEST_HOME_MOBILE, sourceQuestContent, impressionId: getQuestImpressionId() };
       captureAdUserAction.captureAdUserAction(obj2);
       const tmpResult = captureAdUserAction;
     } else {
-      const obj3 = { questId: quest.id, questContent: QUEST_HOME_MOBILE, questContentCTA: CLAIM_REWARD, sourceQuestContent };
+      const obj3 = { questId: quest.id, questContent: QUEST_HOME_MOBILE, questContentCTA, sourceQuestContent };
       closure_6(obj3);
     }
     obj = AdAnalyticsInterfaceExperiment;
   }
   function showQuestBottomSheet() {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14938, dependencyMap.paths), "QuestBottomSheet", { questId: quest.id, questContentPosition, sourceQuestContent });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15200, dependencyMap.paths), "QuestBottomSheet", { questId: quest.id, questContentPosition, sourceQuestContent });
   }
+  const tmp = _require;
   const tmp2 = QUEST_HOME_MOBILE;
-  ({ onLayout: require, quest } = questContent);
+  ({ onLayout: closure_0, quest } = questContent);
   QUEST_HOME_MOBILE = questContent.questContent;
   const badgeTextVariant = require("useBadgeTextVariant").useBadgeTextVariant();
   if (undefined === QUEST_HOME_MOBILE) {
-    QUEST_HOME_MOBILE = require("QuestTypes").QuestContent.QUEST_HOME_MOBILE;
+    QUEST_HOME_MOBILE = tmp(tmp2[14]).QuestContent.QUEST_HOME_MOBILE;
   }
   ({ questContentPosition: asyncGeneratorStep, sourceQuestContent } = questContent);
   let obj = require("useBadgeTextVariant");
-  noop = require("getQuestLogger").getQuestLogger({ quest, location: first.QUEST_HOME_MOBILE });
+  noop = tmp(tmp2[15]).getQuestLogger({ quest, location: first.QUEST_HOME_MOBILE });
   let obj2 = { quest, location: first.QUEST_HOME_MOBILE };
-  let tmpResult = require("getQuestLogger");
-  closure_6 = require("AnalyticsHooks").useTrackQuestContentClickedWithImpression();
-  const tmpResult44 = require("AnalyticsHooks");
-  const questTaskDetails = require("hooks/QuestHooks").useQuestTaskDetails(quest);
-  const tmpResult45 = require("hooks/QuestHooks");
+  let tmpResult = tmp(tmp2[15]);
+  closure_6 = tmp(tmp2[16]).useTrackQuestContentClickedWithImpression();
+  const tmpResult44 = tmp(tmp2[16]);
+  const questTaskDetails = tmp(tmp2[17]).useQuestTaskDetails(quest);
+  const tmpResult45 = tmp(tmp2[17]);
   const userStatus = quest.userStatus;
   let enrolledAt;
   if (userStatus != null) {
@@ -173,13 +174,13 @@ export const QuestCard = noop.memo((questContent) => {
   }, items);
   const tmp10 = hasWatchVideoOnMobileTasks;
   const tmp7 = null != enrolledAt;
-  const tmpResult46 = require("hooks/QuestHooks");
-  const questGameLogotypeAssetUrl = require("QuestHooks").useQuestGameLogotypeAssetUrl(quest);
-  const tmpResult47 = require("QuestHooks");
+  const tmpResult46 = tmp(tmp2[17]);
+  const questGameLogotypeAssetUrl = tmp(tmp2[20]).useQuestGameLogotypeAssetUrl(quest);
+  const tmpResult47 = tmp(tmp2[20]);
   ({ gradientEnd, gradientStart, gradientMid } = product());
   const tmp15 = product();
   let items1 = [quest.id];
-  const tmp16 = sourceQuestContent(require("module_8404").useRecyclingState(null, items1), 2);
+  const tmp16 = sourceQuestContent(tmp(tmp2[21]).useRecyclingState(null, items1), 2);
   first = tmp16[0];
   onPress = tmp18;
   let items2 = [tmp16[1]];
@@ -200,26 +201,26 @@ export const QuestCard = noop.memo((questContent) => {
       obj.increment(obj2);
     }
   }, items3);
-  const tmpResult48 = require("module_8404");
+  const tmpResult48 = tmp(tmp2[21]);
   const items4 = [UserStore];
-  const stateFromStores = require("initialize").useStateFromStores(items4, () => diff.getCurrentUser());
-  const tmpResult49 = require("initialize");
-  const defaultRewardNameWithArticle = require("QuestRewardUtils").getDefaultRewardNameWithArticle(quest.config, stateFromStores);
-  const tmpResult50 = require("QuestRewardUtils");
+  const stateFromStores = tmp(tmp2[25]).useStateFromStores(items4, () => diff.getCurrentUser());
+  const tmpResult49 = tmp(tmp2[25]);
+  const defaultRewardNameWithArticle = tmp(tmp2[26]).getDefaultRewardNameWithArticle(quest.config, stateFromStores);
+  const tmpResult50 = tmp(tmp2[26]);
   const items5 = [QuestStore];
-  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items5, () => ({ reward: QuestStore.getRewards(quest.id), isFetchingRewardCode: QuestStore.isFetchingRewardCode(quest.id), isClaimingReward: QuestStore.isClaimingReward(quest.id), isEnrolling: QuestStore.isEnrolling(quest.id), questEnrollmentBlockedUntil: QuestStore.questEnrollmentBlockedUntil }));
+  const stateFromStoresObject = tmp(tmp2[25]).useStateFromStoresObject(items5, () => ({ reward: QuestStore.getRewards(quest.id), isFetchingRewardCode: QuestStore.isFetchingRewardCode(quest.id), isClaimingReward: QuestStore.isClaimingReward(quest.id), isEnrolling: QuestStore.isEnrolling(quest.id), questEnrollmentBlockedUntil: QuestStore.questEnrollmentBlockedUntil }));
   ({ isFetchingRewardCode, isClaimingReward, questEnrollmentBlockedUntil } = stateFromStoresObject);
-  const tmpResult51 = require("initialize");
+  const tmpResult51 = tmp(tmp2[25]);
   const userStatus2 = quest.userStatus;
   let completedAt;
   if (userStatus2 != null) {
     completedAt = userStatus2.completedAt;
   }
-  const questFormattedDate = require("hooks/QuestHooks").useQuestFormattedDate(completedAt, { year: "numeric", month: "long", day: "numeric" });
-  const tmpResult52 = require("hooks/QuestHooks");
-  const hasWatchVideoTasksResult = require("QuestTaskUtils").hasWatchVideoTasks(quest);
-  const tmpResult53 = require("QuestTaskUtils");
-  hasWatchVideoOnMobileTasks = require("QuestHooks").useHasWatchVideoOnMobileTasks(quest.config);
+  const questFormattedDate = tmp(tmp2[17]).useQuestFormattedDate(completedAt, { year: "numeric", month: "long", day: "numeric" });
+  const tmpResult52 = tmp(tmp2[17]);
+  const hasWatchVideoTasksResult = tmp(tmp2[27]).hasWatchVideoTasks(quest);
+  const tmpResult53 = tmp(tmp2[27]);
+  hasWatchVideoOnMobileTasks = tmp(tmp2[20]).useHasWatchVideoOnMobileTasks(quest.config);
   const userStatus3 = quest.userStatus;
   let enrolledAt1;
   if (userStatus3 != null) {
@@ -237,17 +238,17 @@ export const QuestCard = noop.memo((questContent) => {
     claimedAt = userStatus5.claimedAt;
   }
   closure_16 = tmp34;
-  const tmpResult54 = require("QuestHooks");
-  const isQuestExpiredResult = require("QuestDataUtils").isQuestExpired(quest);
-  const tmpResult55 = require("QuestDataUtils");
-  const isQuestExpiredButWithinThirtyDayLookback = require("QuestDataUtils").getIsQuestExpiredButWithinThirtyDayLookback(quest);
-  const tmpResult56 = require("QuestDataUtils");
-  const tmpResult57 = require("QuestCopyUtils");
-  const tmp37 = quest(tmp2[30])();
-  const isThemeDarkResult = require("design/shared").isThemeDark(tmp37);
-  const tmpResult58 = require("design/shared");
-  const result1 = require("QuestRewardUtils").hasCollectiblesQuestReward(quest.config);
-  const tmpResult59 = require("QuestRewardUtils");
+  const tmpResult54 = tmp(tmp2[20]);
+  const isQuestExpiredResult = tmp(tmp2[28]).isQuestExpired(quest);
+  const tmpResult55 = tmp(tmp2[28]);
+  const isQuestExpiredButWithinThirtyDayLookback = tmp(tmp2[29]).getIsQuestExpiredButWithinThirtyDayLookback(quest);
+  const tmpResult56 = tmp(tmp2[29]);
+  const tmpResult57 = tmp(tmp2[30]);
+  const tmp37 = quest(tmp2[31])();
+  const isThemeDarkResult = tmp(tmp2[11]).isThemeDark(tmp37);
+  const tmpResult58 = tmp(tmp2[11]);
+  const result1 = tmp(tmp2[26]).hasCollectiblesQuestReward(quest.config);
+  const tmpResult59 = tmp(tmp2[26]);
   let skuId = null;
   if (result1) {
     skuId = null;
@@ -255,12 +256,12 @@ export const QuestCard = noop.memo((questContent) => {
       skuId = tmpResult57.getDefaultReward(quest.config).skuId;
     }
   }
-  const fetchCollectiblesProduct = require("useFetchCollectiblesProduct").useFetchCollectiblesProduct(skuId);
+  const fetchCollectiblesProduct = tmp(tmp2[32]).useFetchCollectiblesProduct(skuId);
   product = fetchCollectiblesProduct.product;
   const isFetching = fetchCollectiblesProduct.isFetching;
-  const tmpResult60 = require("useFetchCollectiblesProduct");
+  const tmpResult60 = tmp(tmp2[32]);
   const items6 = [UserStore];
-  const currentUserHasVerifiedEmailOrPhone = require("initialize").useStateFromStores(items6, () => {
+  const currentUserHasVerifiedEmailOrPhone = tmp(tmp2[25]).useStateFromStores(items6, () => {
     const currentUser = diff.getCurrentUser();
     result = undefined;
     if (currentUser != null) {
@@ -268,9 +269,9 @@ export const QuestCard = noop.memo((questContent) => {
     }
     return result;
   });
-  const tmpResult61 = require("initialize");
+  const tmpResult61 = tmp(tmp2[25]);
   const items7 = [UserStore];
-  const currentUserHasVerifiedEmail = require("initialize").useStateFromStores(items7, () => {
+  const currentUserHasVerifiedEmail = tmp(tmp2[25]).useStateFromStores(items7, () => {
     const currentUser = diff.getCurrentUser();
     let verified;
     if (currentUser != null) {
@@ -278,17 +279,17 @@ export const QuestCard = noop.memo((questContent) => {
     }
     return verified;
   });
-  const tmpResult62 = require("initialize");
-  const mobileActivityQuest = require("QuestHooks").useMobileActivityQuest(quest);
+  const tmpResult62 = tmp(tmp2[25]);
+  const mobileActivityQuest = tmp(tmp2[20]).useMobileActivityQuest(quest);
   const isMobileActivityQuest = mobileActivityQuest.isMobileActivityQuest;
   const launchMobileActivity = mobileActivityQuest.launchMobileActivity;
-  const tmpResult63 = require("QuestHooks");
-  const token = require("useToken").useToken(quest(tmp2[9]).colors.BACKGROUND_BASE_LOWER);
-  const tmpResult64 = require("useToken");
-  const token1 = require("useToken").useToken(quest(tmp2[9]).colors.BACKGROUND_BASE_LOW);
-  const tmpResult65 = require("useToken");
+  const tmpResult63 = tmp(tmp2[20]);
+  const token = tmp(tmp2[33]).useToken(quest(tmp2[9]).colors.BACKGROUND_BASE_LOWER);
+  const tmpResult64 = tmp(tmp2[33]);
+  const token1 = tmp(tmp2[33]).useToken(quest(tmp2[9]).colors.BACKGROUND_BASE_LOW);
+  const tmpResult65 = tmp(tmp2[33]);
   let tmp46 = null != questEnrollmentBlockedUntil;
-  const token2 = require("useToken").useToken(quest(tmp2[9]).colors.BACKGROUND_BASE_LOWEST);
+  const token2 = tmp(tmp2[33]).useToken(quest(tmp2[9]).colors.BACKGROUND_BASE_LOWEST);
   if (tmp46) {
     tmp46 = !tmp30;
   }
@@ -298,8 +299,8 @@ export const QuestCard = noop.memo((questContent) => {
   if (tmp46) {
     tmp46 = !tmp34;
   }
-  const tmpResult66 = require("useToken");
-  const isQuestAccessSuspended = require("hooks/QuestHooks").useIsQuestAccessSuspended();
+  const tmpResult66 = tmp(tmp2[33]);
+  const isQuestAccessSuspended = tmp(tmp2[17]).useIsQuestAccessSuspended();
   let obj3 = {
     disabled: true,
     onPressDisabled() {
@@ -307,19 +308,20 @@ export const QuestCard = noop.memo((questContent) => {
       openQuestAccessSuspendedBottomSheetDefault();
     }
   };
-  const tmpResult67 = require("hooks/QuestHooks");
-  const questFormattedDate1 = require("hooks/QuestHooks").useQuestFormattedDate(quest.config.expiresAt, { month: "numeric", day: "numeric" });
-  const tmpResult68 = require("hooks/QuestHooks");
-  const getQuestImpressionId = require("ContentImpressionTrackerHooks").useGetQuestImpressionId();
+  const tmpResult67 = tmp(tmp2[17]);
+  const questFormattedDate1 = tmp(tmp2[17]).useQuestFormattedDate(quest.config.expiresAt, { month: "numeric", day: "numeric" });
+  const tmpResult68 = tmp(tmp2[17]);
+  const getQuestImpressionId = tmp(tmp2[35]).useGetQuestImpressionId();
   const items8 = [quest, QUEST_HOME_MOBILE, getQuestImpressionId, sourceQuestContent];
   const callback1 = obj7.useCallback(() => {
     const obj = QuestPlatformUtils;
     obj.openGameLinkDirectly(quest, { content: QUEST_HOME_MOBILE, ctaContent: AnalyticsTypes.QuestContentCTA.OPEN_GAME_LINK, impressionId: getQuestImpressionId(), sourceQuestContent });
   }, items8);
-  const tmpResult69 = require("ContentImpressionTrackerHooks");
-  const primaryCtaCopy = require("QuestCopyHooks").usePrimaryCtaCopy({ quest, application: mobileActivityQuest.questApplication, shortText: true });
-  const tmpResult70 = require("QuestCopyHooks");
-  const ctaLink = require("QuestCopyUtils").getCtaLink(quest.config);
+  const tmpResult69 = tmp(tmp2[35]);
+  const primaryCtaCopy = tmp(tmp2[44]).usePrimaryCtaCopy({ quest, application: mobileActivityQuest.questApplication, shortText: true });
+  const tmpResult70 = tmp(tmp2[44]);
+  _require = undefined;
+  const ctaLink = tmp(tmp2[30]).getCtaLink(quest.config);
   if (null != product) {
     const styles2 = product.styles;
     let buttonColors;
@@ -339,18 +341,18 @@ export const QuestCard = noop.memo((questContent) => {
       confettiColors = [];
     }
     obj4.confettiColors = confettiColors;
-    const items9 = [quest(tmp2[44])(token1), quest(tmp2[44])(token), quest(tmp2[44])(token2)];
+    const items9 = [quest(tmp2[45])(token1), quest(tmp2[45])(token), quest(tmp2[45])(token2)];
     obj4.backgroundColors = items9;
     product.styles = obj4;
   }
   let tmp98Result8 = "" !== ctaLink;
   if (null != claimedAt) {
-    const MobileQuestRewardButtonToSecondaryButtonExperiment = require("apexExperiment").MobileQuestRewardButtonToSecondaryButtonExperiment;
+    const MobileQuestRewardButtonToSecondaryButtonExperiment = tmp(tmp2[46]).MobileQuestRewardButtonToSecondaryButtonExperiment;
     let obj5 = { location: tmp4.QUEST_HOME_MOBILE };
     if (!MobileQuestRewardButtonToSecondaryButtonExperiment.getConfig(obj5).enabled) {
       let obj6 = { text: null, loading: null, onPress: null };
-      let intl4 = require("util").intl;
-      obj6.text = intl4.string(require("util").t.vTgCWx);
+      let intl4 = tmp(tmp2[47]).intl;
+      obj6.text = intl4.string(tmp(tmp2[47]).t.vTgCWx);
       obj6.loading = isFetching;
       obj6.onPress = function onPress() {
         trackClick(AnalyticsTypes.QuestContentCTA.SHOW_REWARD);
@@ -368,17 +370,17 @@ export const QuestCard = noop.memo((questContent) => {
   } else {
     if (tmp98Result10) {
       if (isQuestExpiredResult) {
-        const intl5 = require("util").intl;
+        const intl5 = tmp(tmp2[47]).intl;
         let obj9 = { questName: quest.config.messages.questName };
-        const formatToPlainStringResult = intl5.formatToPlainString(require("util").t.EAYZAr, obj9);
-        const result2 = require("QuestRewardUtils").hasVirtualCurrencyReward(quest.config);
-        const tmpResult72 = require("QuestRewardUtils");
-        const questOrbMultiplierEligibility = require("QuestOrbMultiplierHooks").useQuestOrbMultiplierEligibility();
-        const tmpResult73 = require("QuestOrbMultiplierHooks");
-        let shouldShowBonusOrbsUX = require("hooks/QuestHooks").useShouldShowBonusOrbsUX(quest, questOrbMultiplierEligibility);
+        const formatToPlainStringResult = intl5.formatToPlainString(tmp(tmp2[47]).t.EAYZAr, obj9);
+        const result2 = tmp(tmp2[26]).hasVirtualCurrencyReward(quest.config);
+        const tmpResult72 = tmp(tmp2[26]);
+        const questOrbMultiplierEligibility = tmp(tmp2[52]).useQuestOrbMultiplierEligibility();
+        const tmpResult73 = tmp(tmp2[52]);
+        let shouldShowBonusOrbsUX = tmp(tmp2[17]).useShouldShowBonusOrbsUX(quest, questOrbMultiplierEligibility);
         let tmp80 = shouldShowBonusOrbsUX;
         if (shouldShowBonusOrbsUX) {
-          tmp80 = questOrbMultiplierEligibility === require("QuestOrbMultiplierUtils").QuestOrbMultiplierEligibilityType.NITRO;
+          tmp80 = questOrbMultiplierEligibility === tmp(tmp2[53]).QuestOrbMultiplierEligibilityType.NITRO;
         }
         const userStatus6 = quest.userStatus;
         let orbQuantityClaimed;
@@ -386,20 +388,20 @@ export const QuestCard = noop.memo((questContent) => {
           orbQuantityClaimed = userStatus6.orbQuantityClaimed;
         }
         if (orbQuantityClaimed == null) {
-          orbQuantityClaimed = require("QuestRewardUtils").getVirtualCurrencyRewardOrbQuantity(quest.config);
-          const tmpResult75 = require("QuestRewardUtils");
+          orbQuantityClaimed = tmp(tmp2[26]).getVirtualCurrencyRewardOrbQuantity(quest.config);
+          const tmpResult75 = tmp(tmp2[26]);
         }
-        const tmpResult74 = require("hooks/QuestHooks");
-        const questOrbRewardQuantityForUser = require("QuestRewardUtils").getQuestOrbRewardQuantityForUser(quest.config, stateFromStores);
-        const tmpResult76 = require("QuestRewardUtils");
-        const defaultRewardName = require("QuestRewardUtils").getDefaultRewardName(quest.config, stateFromStores);
-        const tmpResult77 = require("QuestRewardUtils");
-        const fontScale = require("useFontScale").useFontScale();
-        const tmpResult78 = require("useFontScale");
-        const scaledTextLineHeight = require("useScaledTextLineHeight").useScaledTextLineHeight("text-md/semibold");
-        const tmpResult80 = require("QuestCopyHooks");
+        const tmpResult74 = tmp(tmp2[17]);
+        const questOrbRewardQuantityForUser = tmp(tmp2[26]).getQuestOrbRewardQuantityForUser(quest.config, stateFromStores);
+        const tmpResult76 = tmp(tmp2[26]);
+        const defaultRewardName = tmp(tmp2[26]).getDefaultRewardName(quest.config, stateFromStores);
+        const tmpResult77 = tmp(tmp2[26]);
+        const fontScale = tmp(tmp2[54]).useFontScale();
+        const tmpResult78 = tmp(tmp2[54]);
+        const scaledTextLineHeight = tmp(tmp2[55]).useScaledTextLineHeight("text-md/semibold");
+        const tmpResult80 = tmp(tmp2[44]);
         const _Math = Math;
-        const questDescription = tmpResult80.useQuestDescription(quest, sourceQuestContent, tmp4.QUEST_HOME_MOBILE, require("GameProfileAnalyticUtils").GameProfileSources.QuestHome);
+        const questDescription = tmpResult80.useQuestDescription(quest, sourceQuestContent, tmp4.QUEST_HOME_MOBILE, tmp(tmp2[56]).GameProfileSources.QuestHome);
         const result3 = 16 * Math.min(fontScale, 1.3);
         const items10 = [tmp34, result2, questOrbRewardQuantityForUser, orbQuantityClaimed, defaultRewardName, defaultRewardNameWithArticle, result3, scaledTextLineHeight, , , ];
         ({ orbWithAmountRow: arr13[8], rewardSubtitleRow: arr13[9], shrinkableText: arr13[10] } = tmp8);
@@ -498,9 +500,9 @@ export const QuestCard = noop.memo((questContent) => {
         }
         let formatToPlainStringResult1 = questDescription;
         if (tmp93) {
-          const intl6 = require("util").intl;
+          const intl6 = tmp(tmp2[47]).intl;
           let obj10 = { date: questFormattedDate };
-          formatToPlainStringResult1 = intl6.formatToPlainString(require("util").t["l1jCM/"], obj10);
+          formatToPlainStringResult1 = intl6.formatToPlainString(tmp(tmp2[47]).t["l1jCM/"], obj10);
         }
         const items11 = [quest.id, sourceQuestContent];
         const callback2 = obj7.useCallback(() => {
@@ -533,7 +535,7 @@ export const QuestCard = noop.memo((questContent) => {
                   const obj4 = { value, done: true };
                   return obj4;
                 } else {
-                  result = v3(QUEST_HOME_MOBILE[47]).dismissOverlayScreens();
+                  result = v3(QUEST_HOME_MOBILE[48]).dismissOverlayScreens();
                   c1 = 1;
                   v3 = 1;
                   const obj5 = { value: launchMobileActivity(), done: false };
@@ -562,7 +564,7 @@ export const QuestCard = noop.memo((questContent) => {
         items13[1] = obj12;
         obj11.style = items13;
         obj11.onLayout = function onLayout(arg0) {
-          if (require != null) {
+          if (closure_0 != null) {
             tmp(arg0, quest.id);
           }
         };
@@ -572,35 +574,35 @@ export const QuestCard = noop.memo((questContent) => {
         let obj15 = { minHeight: result, backgroundColor: gradientEnd };
         items14[1] = obj15;
         obj14.style = items14;
-        const tmpResult79 = require("useScaledTextLineHeight");
+        const tmpResult79 = tmp(tmp2[55]);
         let obj16 = { source: null, style: null, onError: null, accessible: true, accessibilityRole: "image", accessibilityLabel: null };
         let obj17 = { uri: memo.url };
         obj16.source = obj17;
         obj16.style = tmp8.heroImg;
         obj16.onError = callback;
         obj16.accessibilityLabel = quest.config.messages.questName;
-        const items15 = [defaultRewardNameWithArticle(quest(tmp2[62]), obj16), , , ];
+        const items15 = [defaultRewardNameWithArticle(quest(tmp2[63]), obj16), , , ];
         let obj18 = { style: tmp8.heroLinearGradientOverlay, start: null, end: null, colors: null };
-        const tmp9Result = quest(tmp2[61]);
-        obj18.start = require("ConstantsIOS").VerticalGradient.START;
-        obj18.end = require("ConstantsIOS").VerticalGradient.END;
+        const tmp9Result = quest(tmp2[62]);
+        obj18.start = tmp(tmp2[65]).VerticalGradient.START;
+        obj18.end = tmp(tmp2[65]).VerticalGradient.END;
         const items16 = [gradientStart, gradientMid, gradientEnd];
         obj18.colors = items16;
-        items15[1] = defaultRewardNameWithArticle(quest(tmp2[63]), obj18);
+        items15[1] = defaultRewardNameWithArticle(quest(tmp2[64]), obj18);
         let preview = quest.preview;
         if (preview) {
           let obj19 = { style: tmp8.previewBadge, children: null };
           let obj20 = { variant: badgeTextVariant, color: "text-overlay-light", style: tmp8.previewBadgeText, children: null };
-          const intl7 = require("util").intl;
-          obj20.children = intl7.string(require("util").t.SKNnqq);
-          obj19.children = tmp98(require("Text/Text").Text, obj20);
+          const intl7 = tmp(tmp2[47]).intl;
+          obj20.children = intl7.string(tmp(tmp2[47]).t.SKNnqq);
+          obj19.children = tmp98(tmp(tmp2[59]).Text, obj20);
           preview = tmp98(tmp101, obj19);
         }
         items15[2] = preview;
         const obj21 = { style: tmp8.heroFooterContainer, children: null };
         const obj22 = { style: tmp8.heroFooterLeftContainer, children: null };
         const obj23 = { assetUrl: questGameLogotypeAssetUrl, onError: callback };
-        const items17 = [defaultRewardNameWithArticle(quest(tmp2[65]), obj23), ];
+        const items17 = [defaultRewardNameWithArticle(quest(tmp2[66]), obj23), ];
         const obj24 = { style: tmp8.promotedByRow, children: null };
         let str2 = "text-overlay-light";
         let str3 = "text-overlay-light";
@@ -608,15 +610,15 @@ export const QuestCard = noop.memo((questContent) => {
           str3 = "text-muted";
         }
         const obj25 = { variant: "text-xs/medium", color: str3, style: tmp8.shrinkableText, children: null };
-        const intl8 = require("util").intl;
-        obj25.children = intl8.string(require("util").t.VAbKhK);
-        const items18 = [defaultRewardNameWithArticle(require("Text/Text").Text, obj25), , ];
-        const obj26 = { source: quest(tmp2[66]), style: { height: 16, width: 16 }, accessible: true, accessibilityRole: "image", accessibilityLabel: null };
-        const intl9 = require("util").intl;
-        obj26.accessibilityLabel = intl9.string(require("util").t.OfMjx9);
+        const intl8 = tmp(tmp2[47]).intl;
+        obj25.children = intl8.string(tmp(tmp2[47]).t.VAbKhK);
+        const items18 = [defaultRewardNameWithArticle(tmp(tmp2[59]).Text, obj25), , ];
+        const obj26 = { source: quest(tmp2[67]), style: { height: 16, width: 16 }, accessible: true, accessibilityRole: "image", accessibilityLabel: null };
+        const intl9 = tmp(tmp2[47]).intl;
+        obj26.accessibilityLabel = intl9.string(tmp(tmp2[47]).t.OfMjx9);
         items18[1] = defaultRewardNameWithArticle(closure_6, obj26);
         const obj27 = { variant: "text-xs/medium", color: "text-overlay-light", style: tmp8.shrinkableText, children: quest.config.messages.gamePublisher };
-        items18[2] = defaultRewardNameWithArticle(require("Text/Text").Text, obj27);
+        items18[2] = defaultRewardNameWithArticle(tmp(tmp2[59]).Text, obj27);
         obj24.children = items18;
         items17[1] = questEnrollmentBlockedUntil(shrinkableText, obj24);
         obj22.children = items17;
@@ -630,10 +632,10 @@ export const QuestCard = noop.memo((questContent) => {
             str2 = "text-default";
           }
           const obj28 = { variant: "text-xs/medium", color: str2, style: tmp8.shrinkableText, children: null };
-          const intl10 = require("util").intl;
+          const intl10 = tmp(tmp2[47]).intl;
           const obj29 = { expiryDate: questFormattedDate1 };
-          obj28.children = intl10.format(require("util").t["7D8r4F"], obj29);
-          tmp98Result = tmp98(require("Text/Text").Text, obj28);
+          obj28.children = intl10.format(tmp(tmp2[47]).t["7D8r4F"], obj29);
+          tmp98Result = tmp98(tmp(tmp2[59]).Text, obj28);
         }
         items19[1] = tmp98Result;
         obj21.children = items19;
@@ -645,22 +647,22 @@ export const QuestCard = noop.memo((questContent) => {
         const obj32 = { style: tmp8.rewardImgContainer, children: null };
         if (tmp7) {
           const obj33 = { quest, progress: tmpResult46.useQuestCompletionDetails(quest).completedRatio, size: "sm" };
-          let tmp98Result6 = tmp98(quest(tmp2[67]), obj33);
+          let tmp98Result6 = tmp98(quest(tmp2[68]), obj33);
         } else {
           let size = { quest, height: 64, width: 64 };
-          tmp98Result6 = tmp98(quest(tmp2[68]), size);
+          tmp98Result6 = tmp98(quest(tmp2[69]), size);
         }
         obj32.children = tmp98Result6;
         const items21 = [defaultRewardNameWithArticle(shrinkableText, obj32), ];
         const obj34 = { style: tmp8.detailsTextContainer, children: null };
         const obj35 = { variant: "eyebrow", color: "text-brand", style: tmp8.questName, accessibilityRole: "header", children: formatToPlainStringResult };
-        const items22 = [defaultRewardNameWithArticle(require("Text/Text").Text, obj35), ];
+        const items22 = [defaultRewardNameWithArticle(tmp(tmp2[59]).Text, obj35), ];
         const obj36 = { style: tmp8.bodyContainer, children: null };
         const obj37 = { style: tmp8.subtitleRow, children: null };
         const items23 = [memo1, ];
         if (shouldShowBonusOrbsUX) {
           const obj38 = { questId: quest.config.id, orbMultiplierEligibility: questOrbMultiplierEligibility };
-          shouldShowBonusOrbsUX = tmp98(require("QuestOrbMultiplierPerkPill").QuestOrbMultiplierPerkPill, obj38);
+          shouldShowBonusOrbsUX = tmp98(tmp(tmp2[70]).QuestOrbMultiplierPerkPill, obj38);
         }
         items23[1] = shouldShowBonusOrbsUX;
         obj37.children = items23;
@@ -668,7 +670,7 @@ export const QuestCard = noop.memo((questContent) => {
         let tmp98Result7 = null != formatToPlainStringResult1;
         if (tmp98Result7) {
           const obj39 = { variant: "text-sm/medium", color: "text-muted", children: formatToPlainStringResult1 };
-          tmp98Result7 = tmp98(require("Text/Text").Text, obj39);
+          tmp98Result7 = tmp98(tmp(tmp2[59]).Text, obj39);
         }
         items24[1] = tmp98Result7;
         obj36.children = items24;
@@ -682,19 +684,19 @@ export const QuestCard = noop.memo((questContent) => {
         const obj41 = { children: null };
         if (tmp46) {
           const obj42 = { grow: true, onPress, variant: "secondary", disabled: true, text: null };
-          const intl11 = require("util").intl;
-          obj42.text = intl11.string(require("util").t.V293qn);
-          const items25 = [tmp98(require("components/Button/Button").Button, obj42), ];
+          const intl11 = tmp(tmp2[47]).intl;
+          obj42.text = intl11.string(tmp(tmp2[47]).t.V293qn);
+          const items25 = [tmp98(tmp(tmp2[72]).Button, obj42), ];
           const obj43 = {
-            onPress() {
-                      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14985, dependencyMap.paths), "QuestEnrollmentBlockedBottomSheet", { questId: quest.id, questEnrollmentBlockedUntil, sourceQuestContent });
+            onPress: function showQuestEnrollmentBlockedBottomSheet() {
+                      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15247, dependencyMap.paths), "QuestEnrollmentBlockedBottomSheet", { questId: quest.id, questEnrollmentBlockedUntil, sourceQuestContent });
                     },
             variant: "tertiary",
             text: null
           };
-          const intl12 = require("util").intl;
-          obj43.text = intl12.string(require("util").t.vY9GgG);
-          items25[1] = tmp98(require("components/Button/Button").Button, obj43);
+          const intl12 = tmp(tmp2[47]).intl;
+          obj43.text = intl12.string(tmp(tmp2[47]).t.vY9GgG);
+          items25[1] = tmp98(tmp(tmp2[72]).Button, obj43);
           obj41.children = items25;
           let tmp111 = obj41;
         } else {
@@ -712,16 +714,16 @@ export const QuestCard = noop.memo((questContent) => {
           }
           if (tmp98Result8) {
             const obj44 = { style: tmp8.equalWidthContainer, children: null };
-            const obj45 = { grow: true, variant: "secondary", text: require("QuestCopyUtils").getExternalCtaLabel(quest), onPress: callback1 };
-            obj44.children = tmp98(require("components/Button/Button").Button, obj45);
+            const obj45 = { grow: true, variant: "secondary", text: tmp(tmp2[30]).getExternalCtaLabel(quest), onPress: callback1 };
+            obj44.children = tmp98(tmp(tmp2[72]).Button, obj45);
             tmp98Result8 = tmp98(tmp101, obj44);
-            const tmpResult81 = require("QuestCopyUtils");
+            const tmpResult81 = tmp(tmp2[30]);
           }
           const items26 = [tmp98Result8, ];
           const obj46 = { style: tmp8.equalWidthContainer, children: null };
           const obj47 = { grow: true };
           let merged = Object.assign(obj56);
-          obj46.children = tmp98(require("components/Button/Button").Button, obj47);
+          obj46.children = tmp98(tmp(tmp2[72]).Button, obj47);
           items26[1] = tmp98(tmp101, obj46);
           obj41.children = items26;
           tmp111 = obj41;
@@ -736,11 +738,11 @@ export const QuestCard = noop.memo((questContent) => {
         }
         if (tmp98Result9) {
           const obj48 = { accessibilityLabel: null, icon: null, onPress: null, variant: "secondary" };
-          const intl13 = require("util").intl;
-          obj48.accessibilityLabel = intl13.string(require("util").t.YsCuyF);
-          obj48.icon = quest(tmp2[74]);
+          const intl13 = tmp(tmp2[47]).intl;
+          obj48.accessibilityLabel = intl13.string(tmp(tmp2[47]).t.YsCuyF);
+          obj48.icon = quest(tmp2[75]);
           obj48.onPress = callback2;
-          tmp98Result9 = tmp98(require("IconButton").IconButton, obj48);
+          tmp98Result9 = tmp98(tmp(tmp2[74]).IconButton, obj48);
         }
         items27[1] = tmp98Result9;
         if (tmp98Result10) {
@@ -748,24 +750,24 @@ export const QuestCard = noop.memo((questContent) => {
         }
         if (tmp98Result10) {
           const obj49 = { accessibilityLabel: null, icon: null, onPress: null, variant: "secondary" };
-          const intl14 = require("util").intl;
-          obj49.accessibilityLabel = intl14.string(require("util").t.CkUzLd);
-          obj49.icon = quest(tmp2[74]);
+          const intl14 = tmp(tmp2[47]).intl;
+          obj49.accessibilityLabel = intl14.string(tmp(tmp2[47]).t.CkUzLd);
+          obj49.icon = quest(tmp2[75]);
           obj49.onPress = callback3;
-          tmp98Result10 = tmp98(require("IconButton").IconButton, obj49);
+          tmp98Result10 = tmp98(tmp(tmp2[74]).IconButton, obj49);
         }
         items27[2] = tmp98Result10;
         const obj50 = { quest, showShareLink: !isQuestExpiredResult, location: tmp4.QUESTS_CARD, sourceQuestContent };
-        items27[3] = defaultRewardNameWithArticle(quest(tmp2[75]), obj50);
+        items27[3] = defaultRewardNameWithArticle(quest(tmp2[76]), obj50);
         obj40.children = items27;
-        items20[2] = questEnrollmentBlockedUntil(require("Stack/Stack").Stack, obj40);
+        items20[2] = questEnrollmentBlockedUntil(tmp(tmp2[71]).Stack, obj40);
         obj13.children = items20;
         obj11.children = questEnrollmentBlockedUntil(tmp9Result, obj13);
-        return defaultRewardNameWithArticle(require("Card").Card, obj11);
+        return defaultRewardNameWithArticle(tmp(tmp2[61]).Card, obj11);
       }
       const obj51 = { text: null, loading: null, onPress: null };
-      let intl3 = require("util").intl;
-      obj51.text = intl3.string(require("util").t.cfY4PE);
+      let intl3 = tmp(tmp2[47]).intl;
+      obj51.text = intl3.string(tmp(tmp2[47]).t.cfY4PE);
       if (!isClaimingReward) {
         isClaimingReward = isFetchingRewardCode;
       }
@@ -786,9 +788,9 @@ export const QuestCard = noop.memo((questContent) => {
     }
     if (isQuestExpiredResult) {
       const obj52 = { text: null, loading: null, disabled: true, variant: "secondary", onPress: null };
-      let intl2 = require("util").intl;
+      let intl2 = tmp(tmp2[47]).intl;
       const obj53 = { expiryDate: questFormattedDate1 };
-      obj52.text = intl2.formatToPlainString(require("util").t["6p8BZx"], obj53);
+      obj52.text = intl2.formatToPlainString(tmp(tmp2[47]).t["6p8BZx"], obj53);
       let tmp69 = isClaimingReward;
       if (!isClaimingReward) {
         tmp69 = isFetchingRewardCode;
@@ -802,19 +804,18 @@ export const QuestCard = noop.memo((questContent) => {
     } else {
       if (tmp30) {
         if (hasWatchVideoTasksResult) {
-          const obj54 = { text: require("MobileQuestVideoWatchCtaCopy").getVideoQuestWatchCtaText(questTaskDetails), accessibilityLabel: null, disabled: false, onPress: null };
-          const tmpResult82 = require("MobileQuestVideoWatchCtaCopy");
-          obj54.accessibilityLabel = require("MobileQuestVideoWatchCtaCopy").getVideoQuestWatchCtaAccessibilityLabel(questTaskDetails);
+          const obj54 = { text: tmp(tmp2[49]).getVideoQuestWatchCtaText(questTaskDetails), accessibilityLabel: null, disabled: false, onPress: null };
+          const tmpResult82 = tmp(tmp2[49]);
+          obj54.accessibilityLabel = tmp(tmp2[49]).getVideoQuestWatchCtaAccessibilityLabel(questTaskDetails);
           obj54.onPress = function onPress() {
             logger.log("Navigating to video quest bottom sheet");
             trackClick(AnalyticsTypes.QuestContentCTA.WATCH_VIDEO);
             if (hasWatchVideoOnMobileTasks) {
-              const obj = { questId: quest.id, sourceQuestContent };
-              openVideoQuestModalDefault(obj);
+              const obj2 = { questId: quest.id, sourceQuestContent };
+              openVideoQuestModalDefault(obj2);
             } else {
-              const obj2 = { questId: quest.id, questContentPosition, sourceQuestContent };
-              ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14938, dependencyMap.paths), "QuestBottomSheet", obj2);
-              const tmp5Result = ActionSheetActionCreatorsDefault;
+              const obj3 = { questId: quest.id, questContentPosition, sourceQuestContent };
+              ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15200, dependencyMap.paths), "QuestBottomSheet", obj3);
             }
           };
           let tmp65 = null;
@@ -823,14 +824,14 @@ export const QuestCard = noop.memo((questContent) => {
           }
           let merged2 = Object.assign(tmp65);
           obj56 = obj54;
-          const tmpResult83 = require("MobileQuestVideoWatchCtaCopy");
+          const tmpResult83 = tmp(tmp2[49]);
         }
       }
       if (tmp30) {
         if (isMobileActivityQuest) {
           const obj55 = {
             text: primaryCtaCopy,
-            icon: require("QuestUtils").getPrimaryCtaIcon(quest),
+            icon: tmp(tmp2[48]).getPrimaryCtaIcon(quest),
             disabled: false,
             onPress() {
                       trackClick(AnalyticsTypes.QuestContentCTA.LAUNCH_MOBILE_ACTIVITY);
@@ -843,19 +844,19 @@ export const QuestCard = noop.memo((questContent) => {
           }
           let merged3 = Object.assign(tmp61);
           obj56 = obj55;
-          const tmpResult84 = require("QuestUtils");
+          const tmpResult84 = tmp(tmp2[48]);
         }
       }
       if (tmp30) {
         if (!hasWatchVideoTasksResult) {
           if (!isMobileActivityQuest) {
             obj56 = { text: null, variant: "secondary", disabled: false, onPress: null };
-            let intl = require("util").intl;
-            obj56.text = intl.string(require("util").t.JiosAn);
+            let intl = tmp(tmp2[47]).intl;
+            obj56.text = intl.string(tmp(tmp2[47]).t.JiosAn);
             obj56.onPress = function onPress() {
               logger.log("Navigating to console connection action sheet");
               trackClick(AnalyticsTypes.QuestContentCTA.VIEW_REQUIREMENTS);
-              ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14938, dependencyMap.paths), "QuestBottomSheet", { questId: quest.id, questContentPosition, sourceQuestContent });
+              ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15200, dependencyMap.paths), "QuestBottomSheet", { questId: quest.id, questContentPosition, sourceQuestContent });
             };
           }
         }
@@ -863,19 +864,19 @@ export const QuestCard = noop.memo((questContent) => {
       const obj57 = { text: primaryCtaCopy, disabled: false, loading: stateFromStoresObject.isEnrolling, accessibilityLabel: null, icon: null, onPress: null };
       let videoQuestWatchCtaAccessibilityLabel;
       if (hasWatchVideoTasksResult) {
-        videoQuestWatchCtaAccessibilityLabel = require("MobileQuestVideoWatchCtaCopy").getVideoQuestWatchCtaAccessibilityLabel(questTaskDetails);
-        const tmpResult85 = require("MobileQuestVideoWatchCtaCopy");
+        videoQuestWatchCtaAccessibilityLabel = tmp(tmp2[49]).getVideoQuestWatchCtaAccessibilityLabel(questTaskDetails);
+        const tmpResult85 = tmp(tmp2[49]);
       }
       obj57.accessibilityLabel = videoQuestWatchCtaAccessibilityLabel;
       let primaryCtaIcon;
       if (isMobileActivityQuest) {
-        primaryCtaIcon = require("QuestUtils").getPrimaryCtaIcon(quest);
-        const tmpResult86 = require("QuestUtils");
+        primaryCtaIcon = tmp(tmp2[48]).getPrimaryCtaIcon(quest);
+        const tmpResult86 = tmp(tmp2[48]);
       }
       obj57.icon = primaryCtaIcon;
-      closure_26 = asyncGeneratorStep(async () => {
-        if (dependencyMap === 2) {
-          dependencyMap = 3;
+      _require = asyncGeneratorStep(async () => {
+        if (questContent === 2) {
+          questContent = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
         } else if (tmp4 === 3) {
           if (arg0 === 1) {
@@ -888,60 +889,60 @@ export const QuestCard = noop.memo((questContent) => {
           }
         } else {
           try {
-            dependencyMap = 2;
-            if (0 === v1) {
+            questContent = 2;
+            if (0 === id) {
               if (arg0 === 1) {
-                dependencyMap = 3;
+                questContent = 3;
                 throw value;
               } else if (arg0 === 2) {
-                dependencyMap = 3;
+                questContent = 3;
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
                 logger.log("Enrolling in quest");
-                tmp2(10007);
-                let obj4 = { questContent: QUEST_HOME_MOBILE, questContentCTA: null, sourceQuestContent: null };
+                tmp2(QUEST_HOME_MOBILE[51]);
+                let obj4 = { questContent, questContentCTA: null, sourceQuestContent: null };
                 if (!isMobileActivityQuest) {
-                  if (!hasWatchVideoTasksResult) {
-                    let START_QUEST = tmp2(7225).QuestContentCTA.ACCEPT_QUEST;
+                  if (!closure_1_14) {
+                    let START_QUEST = tmp2(QUEST_HOME_MOBILE[24]).QuestContentCTA.ACCEPT_QUEST;
                   }
                   obj4.questContentCTA = START_QUEST;
                   obj4.sourceQuestContent = sourceQuestContent;
                   obj4 = tmp33(tmp35, obj4);
-                  v1 = 1;
-                  dependencyMap = 1;
+                  id = 1;
+                  questContent = 1;
                 }
-                START_QUEST = tmp2(7225).QuestContentCTA.START_QUEST;
+                START_QUEST = tmp2(QUEST_HOME_MOBILE[24]).QuestContentCTA.START_QUEST;
               }
             } else if (arg0 === 1) {
-              dependencyMap = 3;
+              questContent = 3;
               throw value;
             } else if (arg0 === 2) {
-              dependencyMap = 3;
+              questContent = 3;
               const obj5 = { value, done: true };
               return obj5;
             } else {
-              if (closure_128_14) {
-                if (closure_128_15) {
-                  const obj = { questId: closure_128_1.id, sourceQuestContent: closure_128_4 };
-                  v1(14943)(obj);
-                  dependencyMap = 3;
+              if (closure_1_14) {
+                if (hasWatchVideoOnMobileTasks) {
+                  const obj = { questId: id.id, sourceQuestContent };
+                  quest(QUEST_HOME_MOBILE[50])(obj);
+                  questContent = 3;
                 }
-                closure_128_33();
+                callback3();
               }
-              if (!closure_128_20) {
-                closure_128_25();
+              if (!isMobileActivityQuest) {
+                showQuestBottomSheet();
               }
             }
           } catch (tmp21) {
-            dependencyMap = tmp;
+            questContent = tmp;
             throw tmp21;
           }
         }
       });
-      obj57.onPress = function() {
+      obj57.onPress = function onPress() {
         const self = this;
-        const apply = closure_26.apply;
+        const apply = closure_0.apply;
         if (typeof apply === "unknown") {
           let applyArgumentsResult = HermesBuiltin.applyArguments(self);
         } else {
@@ -957,5 +958,5 @@ export const QuestCard = noop.memo((questContent) => {
       obj56 = obj57;
     }
   }
-  const tmpResult71 = require("QuestCopyUtils");
+  const tmpResult71 = tmp(tmp2[30]);
 });

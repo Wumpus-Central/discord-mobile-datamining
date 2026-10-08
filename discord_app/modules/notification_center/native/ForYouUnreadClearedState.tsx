@@ -1,19 +1,19 @@
-// === Module 16426: ForYouUnreadClearedState ===
+// === Module 16686: ForYouUnreadClearedState ===
 
-// Module 16426 (ForYouUnreadClearedState)
+// Module 16686 (ForYouUnreadClearedState)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import _modDef10396 from "module_10396" /* 10396 */;
+import native from "native" /* 1200 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import _modDef9993 from "module_9993" /* 9993 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { marginBottom: 4, marginHorizontal: 24, alignItems: "center", flexDirection: "row" }, imageContainer: null, icon: null, headerText: null };
 let size = { width: 48, height: 48, backgroundColor: nativeDefault.unsafe_rawColors.GREEN_400, opacity: 0.16, borderRadius: nativeDefault.radii.xl, marginRight: 16, justifyContent: "center", alignItems: "center" };
 obj2.imageContainer = size;
@@ -25,7 +25,7 @@ let obj3 = { margin: 12, position: "absolute", color: nativeDefault.unsafe_rawCo
 size = fn(2);
 const result = size.fileFinishedImporting("modules/notification_center/native/ForYouUnreadClearedState.tsx");
 
-export const ForYouUnreadClearedState = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const ForYouUnreadClearedState = ReactCompilerGating.isReactCompilerEnabled() ? (function ForYouUnreadClearedState() {
   const cResult = c.c(15);
   const tmp4 = closure_6();
   if (cResult[0] !== tmp4.imageContainer) {
@@ -38,7 +38,7 @@ export const ForYouUnreadClearedState = ReactCompilerGating.isReactCompilerEnabl
     tmp5 = cResult[1];
   }
   if (cResult[2] !== tmp4.icon) {
-    const obj3 = { source: _modDef10396, style: tmp4.icon, color: tmp4.icon.color };
+    const obj3 = { source: _modDef9993, style: tmp4.icon, color: tmp4.icon.color };
     const tmp12 = React4(native.Icon, obj3);
     cResult[2] = tmp4.icon;
     cResult[3] = tmp12;
@@ -104,10 +104,10 @@ export const ForYouUnreadClearedState = ReactCompilerGating.isReactCompilerEnabl
   cResult[13] = tmp21;
   cResult[14] = tmp26;
   tmp25 = tmp26;
-}) : (() => {
+}) : (function ForYouUnreadClearedState() {
   const tmp = closure_6();
   const obj = { style: tmp.container, children: null };
-  const items = [React4(View, { style: tmp.imageContainer }), React4(native.Icon, { source: _modDef10396, style: tmp.icon, color: tmp.icon.color }), ];
+  const items = [React4(View, { style: tmp.imageContainer }), React4(native.Icon, { source: _modDef9993, style: tmp.icon, color: tmp.icon.color }), ];
   const obj4 = { children: null };
   const obj5 = { color: "mobile-text-heading-primary", variant: "text-md/semibold", style: tmp.headerText, children: null };
   const intl = util.intl;

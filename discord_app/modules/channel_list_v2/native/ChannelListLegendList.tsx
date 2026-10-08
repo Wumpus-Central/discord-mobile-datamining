@@ -1,8 +1,8 @@
-// === Module 16225: ChannelListLegendList ===
+// === Module 16485: ChannelListLegendList ===
 
-// Module 16225 (ChannelListLegendList)
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import FastList from "FastList" /* 6576 */;
+// Module 16485 (ChannelListLegendList)
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import FastList from "FastList" /* 6752 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -11,13 +11,13 @@ require = fn;
 const jsxProd = fn(21);
 ({ Fragment: closure_4, jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let closure_7 = [];
-let closure_8 = { item: "duration", positionPercentage: false };
+let closure_8 = { item: "emoji", positionPercentage: false };
 let closure_9 = { zIndex: 5 };
 let closure_10 = { code: "function ChannelListLegendListTsx1(event){const{scrollPosValue,onScrollWorklet,onScroll,runOnJS}=this.__closure;scrollPosValue.set(event.contentOffset.y);onScrollWorklet(event.contentOffset.y,event.contentSize.height,event.layoutMeasurement.height);if(onScroll!=null){runOnJS(onScroll)();}}" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/channel_list_v2/native/ChannelListLegendList.tsx");
 
-export default noop.memo(noop.forwardRef(function ChannelListLegendList(listViewportHeight, arg1) {
+export default noop.memo(function ChannelListLegendList(listViewportHeight) {
   ({ headerSize, initialScrollItem: require, initialScrollSection: importDefault, insetEnd } = listViewportHeight);
   listViewportHeight = listViewportHeight.listViewportHeight;
   const onScroll = listViewportHeight.onScroll;
@@ -30,8 +30,8 @@ export default noop.memo(noop.forwardRef(function ChannelListLegendList(listView
   c13 = undefined;
   c14 = undefined;
   contentSize = undefined;
-  ({ endReachedThreshold, getItemSize, getRecyclerKey, getSectionFooterSize, getSectionHeaderSize, onEndReached, renderAccessory, sections } = listViewportHeight);
-  const ref = listViewportHeight.useRef(null);
+  ({ endReachedThreshold, getItemSize, getRecyclerKey, getSectionFooterSize, getSectionHeaderSize, onEndReached, renderAccessory, sections, ref } = listViewportHeight);
+  const ref1 = listViewportHeight.useRef(null);
   let tmp3 = require("useChannelListFlatData")({ getItemSize, getRecyclerKey, getSectionFooterSize, getSectionHeaderSize, headerSize, sections });
   let index = tmp3;
   ({ offsets: c13, sizes: c14, contentSize } = tmp3);
@@ -66,16 +66,16 @@ export default noop.memo(noop.forwardRef(function ChannelListLegendList(listView
     }
   }, []);
   const sharedValue = require("ReanimatedRexport").useSharedValue(memo);
-  const ref1 = listViewportHeight.useRef(tmp3);
-  ref1.current = tmp3;
-  const ref2 = listViewportHeight.useRef(0);
-  ref2.current = contentSize + insetEnd;
+  const ref2 = listViewportHeight.useRef(tmp3);
+  ref2.current = tmp3;
+  const ref3 = listViewportHeight.useRef(0);
+  ref3.current = contentSize + insetEnd;
   let items = [listViewportHeight, sharedValue];
   const memo1 = listViewportHeight.useMemo(() => {
     let obj = {};
     Object.defineProperty(obj, "containerSize", {
       get: () => {
-        const current = ref.current;
+        const current = ref1.current;
         let num;
         if (current != null) {
           num = current.getState().scrollLength;
@@ -89,7 +89,7 @@ export default noop.memo(noop.forwardRef(function ChannelListLegendList(listView
     });
     obj.scrollPosValue = sharedValue;
     obj.getItems = function getItems() {
-      const current = ref.current;
+      const current = ref1.current;
       state = undefined;
       if (current != null) {
         state = current.getState();
@@ -99,13 +99,13 @@ export default noop.memo(noop.forwardRef(function ChannelListLegendList(listView
       } else {
         const items = [];
         const _Math = Math;
-        const bound = Math.min(state.endBuffered, ref1.current.listData.length - 1);
+        const bound = Math.min(state.endBuffered, ref2.current.listData.length - 1);
         const _Math2 = Math;
         let bound1 = Math.max(0, state.startBuffered);
         if (bound1 <= bound) {
           do {
-            let tmp3 = ref1.current.listData[bound1];
-            let obj = { type: tmp3.type, key: bound1, layoutStart: ref1.current.offsets[bound1], layoutSize: ref1.current.sizes[bound1], section: tmp3.section, item: tmp3.item, recyclerKey: tmp3.key };
+            let tmp3 = ref2.current.listData[bound1];
+            let obj = { type: tmp3.type, key: bound1, layoutStart: ref2.current.offsets[bound1], layoutSize: ref2.current.sizes[bound1], section: tmp3.section, item: tmp3.item, recyclerKey: tmp3.key };
             let arr = items.push(obj);
             bound1 = bound1 + 1;
           } while (bound1 <= bound);
@@ -114,7 +114,7 @@ export default noop.memo(noop.forwardRef(function ChannelListLegendList(listView
       }
     };
     obj.getScrollPosition = function getScrollPosition() {
-      const current = ref.current;
+      const current = ref1.current;
       let num;
       if (current != null) {
         num = current.getState().scroll;
@@ -125,7 +125,7 @@ export default noop.memo(noop.forwardRef(function ChannelListLegendList(listView
       return num;
     };
     obj.getSectionItemFromPosition = function getSectionItemFromPosition(arg0) {
-      const offsets = ref1.current.offsets;
+      const offsets = ref2.current.offsets;
       let diff = offsets.length - 1;
       let num = 0;
       let tmp3;
@@ -155,8 +155,8 @@ export default noop.memo(noop.forwardRef(function ChannelListLegendList(listView
       if (null == tmp3) {
         return renderSectionFooter;
       } else {
-        const obj = { type: ref1.current.listData[tmp3].type, key: tmp3, layoutStart: ref1.current.offsets[tmp3], layoutSize: ref1.current.sizes[tmp3], section: null, item: null, recyclerKey: null };
-        ({ section: obj.section, item: obj.item, key: obj.recyclerKey } = ref1.current.listData[tmp3]);
+        const obj = { type: ref2.current.listData[tmp3].type, key: tmp3, layoutStart: ref2.current.offsets[tmp3], layoutSize: ref2.current.sizes[tmp3], section: null, item: null, recyclerKey: null };
+        ({ section: obj.section, item: obj.item, key: obj.recyclerKey } = ref2.current.listData[tmp3]);
         const obj2 = { item: obj, positionPercentage: null };
         let num2 = 0;
         if (obj.layoutSize > 0) {
@@ -188,12 +188,12 @@ export default noop.memo(noop.forwardRef(function ChannelListLegendList(listView
           return false;
         }
       }
-      const current = ref1.current;
+      const current = ref2.current;
       index = current.getIndex(orientation.section, item);
       if (null == index) {
         return false;
       } else {
-        const current4 = ref.current;
+        const current4 = ref1.current;
         let num4;
         if (current4 != null) {
           num4 = current4.getState().scrollLength;
@@ -204,7 +204,7 @@ export default noop.memo(noop.forwardRef(function ChannelListLegendList(listView
         if (num4 <= 0) {
           num4 = listViewportHeight;
         }
-        const current2 = ref.current;
+        const current2 = ref1.current;
         let num6;
         if (current2 != null) {
           num6 = current2.getState().scroll;
@@ -213,7 +213,7 @@ export default noop.memo(noop.forwardRef(function ChannelListLegendList(listView
           num6 = 0;
         }
         let str2 = "top";
-        if (ref1.current.sizes[index] < num4) {
+        if (ref2.current.sizes[index] < num4) {
           str2 = str;
         }
         if ("visible" === str2) {
@@ -236,7 +236,7 @@ export default noop.memo(noop.forwardRef(function ChannelListLegendList(listView
           } else {
             diff1 = tmp11 - num;
           }
-          const current3 = ref.current;
+          const current3 = ref1.current;
           if (current3 != null) {
             const obj = { offset: null, animated: null };
             const _Math3 = Math;
@@ -254,7 +254,7 @@ export default noop.memo(noop.forwardRef(function ChannelListLegendList(listView
       if (arg0 === undefined) {
         flag = true;
       }
-      const current = ref.current;
+      const current = ref1.current;
       if (current != null) {
         const obj = { offset: 0, animated: flag };
         current.scrollToOffset(obj);
@@ -263,7 +263,7 @@ export default noop.memo(noop.forwardRef(function ChannelListLegendList(listView
     return obj;
   }, items);
   const items1 = [memo1];
-  const imperativeHandle = listViewportHeight.useImperativeHandle(arg1, () => memo1, items1);
+  const imperativeHandle = listViewportHeight.useImperativeHandle(ref, () => memo1, items1);
   let obj = require("ReanimatedRexport");
   class G {
     constructor(arg0) {
@@ -298,7 +298,7 @@ export default noop.memo(noop.forwardRef(function ChannelListLegendList(listView
   const callback1 = listViewportHeight.useCallback((type) => type.type, []);
   const callback2 = listViewportHeight.useCallback((key) => key.key, []);
   const items3 = [memo1, renderHeader];
-  const callback3 = listViewportHeight.useCallback((arg0, arg1) => ref1.current.sizes[arg1], []);
+  const callback3 = listViewportHeight.useCallback((arg0, arg1) => ref2.current.sizes[arg1], []);
   const items4 = [insetEnd];
   const memo2 = listViewportHeight.useMemo(() => hasOwnProperty(React4, { children: renderHeader(memo1) }), items3);
   const items5 = [scrollIndicatorInsetBottom];
@@ -310,7 +310,7 @@ export default noop.memo(noop.forwardRef(function ChannelListLegendList(listView
   }
   const obj4 = { children: null };
   const animatedScrollHandler = obj2.useAnimatedScrollHandler(G);
-  const items6 = [onScrollWorklet(require("module_16063").AnimatedLegendList, { ref, contentContainerStyle: memo3, data: tmp3.listData, drawDistance: listViewportHeight, estimatedHeaderSize: headerSize, getFixedItemSize: callback3, getItemType: callback1, initialScrollOffset: memo, keyExtractor: callback2, ListHeaderComponent: memo2, ListHeaderComponentStyle: renderSectionHeader, onEndReached, onEndReachedThreshold: num, onScroll: obj2.useAnimatedScrollHandler(G), recycleItems: true, renderItem: callback, scrollIndicatorInsets: memo4 }), renderAccessory(memo1)];
+  const items6 = [onScrollWorklet(require("module_16323").AnimatedLegendList, { ref: ref1, contentContainerStyle: memo3, data: tmp3.listData, drawDistance: listViewportHeight, estimatedHeaderSize: headerSize, getFixedItemSize: callback3, getItemType: callback1, initialScrollOffset: memo, keyExtractor: callback2, ListHeaderComponent: memo2, ListHeaderComponentStyle: renderSectionHeader, onEndReached, onEndReachedThreshold: num, onScroll: obj2.useAnimatedScrollHandler(G), recycleItems: true, renderItem: callback, scrollIndicatorInsets: memo4 }), renderAccessory(memo1)];
   obj4.children = items6;
   return renderHeader(onScroll, obj4);
-}));
+});

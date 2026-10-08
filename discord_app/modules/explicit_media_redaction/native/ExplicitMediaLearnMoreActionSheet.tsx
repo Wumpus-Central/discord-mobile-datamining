@@ -1,23 +1,23 @@
-// === Module 11501: ExplicitMediaLearnMoreActionSheet ===
+// === Module 11487: ExplicitMediaLearnMoreActionSheet ===
 
-// Module 11501 (ExplicitMediaLearnMoreActionSheet)
+// Module 11487 (ExplicitMediaLearnMoreActionSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import openUserSettings from "openUserSettings" /* 6895 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7122 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8117 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2127 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import openUserSettings from "openUserSettings" /* 7084 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7492 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8218 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(7123).EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY;
+let closure_5 = fn(6979).EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY;
 const Constants = fn(1085);
 ({ HelpdeskArticles: metroRequire, UserSettingsSections: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { paddingVertical: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_24, justifyContent: "center" }, art: null, infoHeader: null, info: null, infoDesc: null, buttonsContainer: null, linkSubtext: null };
 let obj3 = { paddingVertical: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_24, justifyContent: "center" };
 obj2.art = { alignSelf: "center", marginBottom: nativeDefault.space.PX_16 };
@@ -140,7 +140,7 @@ export default function ExplicitMediaLearnMoreActionSheet(channelId) {
   const obj10 = { variant: "secondary", size: "md", text: null, onPress: null };
   const intl6 = tmp4(tmp2[10]).intl;
   obj10.text = intl6.string(channelId(attachmentId[10]).t.bmbHPA);
-  obj10.onPress = function onPress() {
+  obj10.onPress = function handleDismissButtonPress() {
     callback(ExplicitMediaRedactionUtils.TrackMediaRedactionActionType.EXPLICIT_MEDIA_LEARN_MORE_CLICK_DISMISS);
     ActionSheetActionCreatorsDefault.hideActionSheet();
   };

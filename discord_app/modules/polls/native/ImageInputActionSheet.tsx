@@ -1,19 +1,19 @@
-// === Module 11870: ImageInputActionSheet ===
+// === Module 11942: ImageInputActionSheet ===
 
-// Module 11870 (ImageInputActionSheet)
+// Module 11942 (ImageInputActionSheet)
 import nativeDefault from "native" /* 587 */;
-import EditPollCreationImageAltTextModalActionCreators from "EditPollCreationImageAltTextModalActionCreators" /* 11871 */;
+import EditPollCreationImageAltTextModalActionCreators from "EditPollCreationImageAltTextModalActionCreators" /* 11943 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(7468).POLL_CREATION_IMAGE_INPUT_ACTION_SHEET_KEY;
+let closure_5 = fn(7943).POLL_CREATION_IMAGE_INPUT_ACTION_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let c8 = 40;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { emojiContainer: { flexDirection: "row", alignItems: "center", marginHorizontal: 24 }, emojiIcon: { marginRight: 12, borderRadius: nativeDefault.radii.sm } };
 let closure_9 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -21,7 +21,7 @@ let obj3 = { marginRight: 12, borderRadius: nativeDefault.radii.sm };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/polls/native/ImageInputActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ImageInputAnswerActionSheet(channelId) {
   const cResult = channelId(answer[7]).c(31);
   channelId = channelId.channelId;
   const index = channelId.index;
@@ -212,7 +212,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   cResult[4] = tmp4;
   cResult[5] = tmp12Result;
   const tmp5 = index(answer[8])(channelId, answer.localCreationAnswerId, answer.image, c8, c8);
-}) : ((channelId) => {
+}) : (function ImageInputAnswerActionSheet(channelId) {
   channelId = channelId.channelId;
   ({ index: importDefault, answer } = channelId);
   ({ onSaveAltText: noop, onRemoveAnswerImage: View, openExpressionPicker: closure_5 } = channelId);

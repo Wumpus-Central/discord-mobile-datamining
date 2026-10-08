@@ -1,9 +1,9 @@
-// === Module 14620: WebAuthnSuccessStep ===
+// === Module 14881: WebAuthnSuccessStep ===
 
-// Module 14620 (WebAuthnSuccessStep)
+// Module 14881 (WebAuthnSuccessStep)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import UserSettingsAccountBackupCodesDefault from "UserSettingsAccountBackupCodes" /* 14600 */;
+import UserSettingsAccountBackupCodesDefault from "UserSettingsAccountBackupCodes" /* 14861 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/webauthn/native/nav_steps/WebAuthnSuccessStep.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function WebAuthnSuccessStep() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { onGenerate: null, headerLabel: null };
@@ -25,7 +25,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     first = cResult[0];
   }
   return first;
-}) : (() => {
+}) : (function WebAuthnSuccessStep() {
   const obj = { onGenerate: null, headerLabel: null };
   const intl = util.intl;
   obj.headerLabel = intl.format(util.t.iVTs6i, {});

@@ -1,9 +1,9 @@
-// === Module 10054: useTrackFavoritesGuildUpsellModalOpened ===
+// === Module 10299: useTrackFavoritesGuildUpsellModalOpened ===
 
-// Module 10054 (useTrackFavoritesGuildUpsellModalOpened)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6664 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6688 */;
+// Module 10299 (useTrackFavoritesGuildUpsellModalOpened)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6841 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6865 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/analytics/useTrackFavoritesGuildUpsellModalOpened.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((source) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useTrackFavoritesGuildUpsellModalOpened(source) {
   _require = source;
   const cResult = require("c").c(5);
   const obj = require("c");
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((source) => {
     tmp6 = cResult[4];
   }
   return tmp6;
-}) : ((source) => {
+}) : (function useTrackFavoritesGuildUpsellModalOpened(source) {
   const items = [source];
   const effect = noop.useEffect(() => {
     AnalyticsUtilsDefault.track(AnalyticEvents.FAVORITES_GUILD_UPSELL_MODAL_OPENED, { source });

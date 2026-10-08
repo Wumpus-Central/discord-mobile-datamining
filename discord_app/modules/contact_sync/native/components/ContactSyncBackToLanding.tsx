@@ -1,7 +1,7 @@
-// === Module 12366: ContactSyncBackToLanding ===
+// === Module 12462: ContactSyncBackToLanding ===
 
-// Module 12366 (ContactSyncBackToLanding)
-import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 12340 */;
+// Module 12462 (ContactSyncBackToLanding)
+import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 12436 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -9,7 +9,7 @@ const require = globalThis.__r;
 
 let result = size.fileFinishedImporting("modules/contact_sync/native/components/ContactSyncBackToLanding.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContactSyncBackToLanding(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   const obj = require("c");
@@ -34,7 +34,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = arg0;
   cResult[2] = tmp6;
   tmp5 = tmp6;
-}) : ((arg0) => {
+}) : (function ContactSyncBackToLanding(arg0) {
   _require = arg0;
   dependencyMap = require("useNavigation").useNavigation();
   const obj = require("useNavigation");

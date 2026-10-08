@@ -1,38 +1,37 @@
-// === Module 12221: GuildPowerupsMultiPerkBottomSheet ===
+// === Module 12300: GuildPowerupsMultiPerkBottomSheet ===
 
-// Module 12221 (GuildPowerupsMultiPerkBottomSheet)
+// Module 12300 (GuildPowerupsMultiPerkBottomSheet)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import _modDef2553 from "module_2553" /* 2553 */;
-import themes from "themes" /* 4593 */;
-import useThemeDefault from "useTheme" /* 4797 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 12170 */;
-import usePowerupActiveStatus from "usePowerupActiveStatus" /* 12174 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12185 */;
-import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 12191 */;
-import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 12192 */;
-import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 12195 */;
-import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 12196 */;
-import useCanGuildPowerupBeToggledDefault from "useCanGuildPowerupBeToggled" /* 12208 */;
-import useGuildPowerupOnActivateDefault from "useGuildPowerupOnActivate" /* 12209 */;
-import useGuildPowerupOnShowDeactivateDefault from "useGuildPowerupOnShowDeactivate" /* 12213 */;
-import useGuildPowerupColorConfigDefault from "useGuildPowerupColorConfig" /* 12222 */;
-import usePowerupGroupConfigDefault from "usePowerupGroupConfig" /* 12223 */;
+import native from "native" /* 1200 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import _modDef2597 from "module_2597" /* 2597 */;
+import themes from "themes" /* 4785 */;
+import useThemeDefault from "useTheme" /* 4991 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 12249 */;
+import usePowerupActiveStatus from "usePowerupActiveStatus" /* 12253 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12264 */;
+import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 12270 */;
+import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 12271 */;
+import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 12274 */;
+import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 12275 */;
+import useCanGuildPowerupBeToggledDefault from "useCanGuildPowerupBeToggled" /* 12287 */;
+import useGuildPowerupOnActivateDefault from "useGuildPowerupOnActivate" /* 12288 */;
+import useGuildPowerupOnShowDeactivateDefault from "useGuildPowerupOnShowDeactivate" /* 12292 */;
+import useGuildPowerupColorConfigDefault from "useGuildPowerupColorConfig" /* 12301 */;
+import usePowerupGroupConfigDefault from "usePowerupGroupConfig" /* 12302 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles_mod from "createStyles" /* 4896 */;
+import createStyles_mod from "createStyles" /* 5090 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const usePowerupActiveStatusDefault = usePowerupActiveStatus;
 
-const GuildPowerupsSectionHeaderDefault = tmp5(12226);
 const View = _mod17.View;
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let createStyles = createStyles_mod;
@@ -81,7 +80,7 @@ let obj2 = { gap: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.spa
 obj.disabledReasonContainer = { marginHorizontal: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_16 };
 let closure_7 = createStyles.createStyles(obj);
 let ReactCompilerGating = ReactCompilerGating_mod;
-let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPowerupsMultiPerkCard(arg0) {
   const cResult = c.c(48);
   ({ guildId, powerup, isNewPerk, forceStaticImage } = arg0);
   const tmp5 = useThemeDefault();
@@ -237,7 +236,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                                 }
                                 obj4.variant = str5;
                                 const intl2 = util.intl;
-                                const tmp4Result = _modDef2553;
+                                const tmp4Result = _modDef2597;
                                 obj4.text = intl2.string(tmp13 ? tmp4Result.TZsu1U : tmp4Result.gSxlHf);
                                 obj4.onPress = function onPress() {
                                   if (closure_0) {
@@ -329,7 +328,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[6] = items5;
   tmp17 = items5;
   const tmpResult3 = useCalculatePowerupCardStatus;
-}) : ((arg0) => {
+}) : (function GuildPowerupsMultiPerkCard(arg0) {
   ({ guildId, powerup, isNewPerk, forceStaticImage } = arg0);
   c1 = undefined;
   const tmp4 = closure_6(themes.isThemeLight(useThemeDefault()));
@@ -416,7 +415,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     obj13.variant = str2;
     const intl2 = util.intl;
-    const tmp3Result2 = _modDef2553;
+    const tmp3Result2 = _modDef2597;
     obj13.text = intl2.string(result ? tmp3Result2.TZsu1U : tmp3Result2.gSxlHf);
     obj13.onPress = function onPress() {
       if (c0) {
@@ -433,143 +432,123 @@ let ReactCompilerGating = ReactCompilerGating_mod;
 let obj3 = { marginHorizontal: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_16 };
 let result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsMultiPerkBottomSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPowerupsMultiPerkBottomSheet(guildId) {
   const cResult = guildId(576).c(26);
   guildId = guildId.guildId;
   ({ listing, onDismiss } = guildId);
   const tmp4 = closure_7();
-  const bottom = useSafeAreaInsetsDefault().bottom;
-  const tmp6 = usePowerupGroupConfigDefault(guildId, listing);
-  importDefault = tmp6;
-  if (null == tmp6) {
+  const bottom = forceStaticImages(1630)().bottom;
+  forceStaticImages = forceStaticImages(12302)(guildId, listing);
+  if (null == forceStaticImages) {
     return null;
   } else {
     if (cResult[0] !== bottom) {
       const obj2 = { paddingBottom: bottom };
       cResult[0] = bottom;
       cResult[1] = obj2;
-      let tmp7 = obj2;
+      let tmp6 = obj2;
     } else {
-      tmp7 = cResult[1];
+      tmp6 = cResult[1];
     }
-    if (cResult[2] === tmp6.description) {
-      if (cResult[3] === tmp6.title) {
-        let tmp8 = cResult[4];
+    if (cResult[2] === forceStaticImages.description) {
+      if (cResult[3] === forceStaticImages.title) {
+        let tmp7 = cResult[4];
       }
-      if (cResult[5] === tmp6.disabledReason) {
+      if (cResult[5] === forceStaticImages.disabledReason) {
         if (cResult[6] === tmp4.disabledReasonContainer) {
-          let tmp12 = cResult[7];
+          let tmp10 = cResult[7];
         }
-        if (cResult[8] === tmp6.forceStaticImages) {
+        if (cResult[8] === forceStaticImages.forceStaticImages) {
           if (cResult[9] === guildId) {
             if (cResult[10] === listing.powerups) {
               if (cResult[15] === tmp4.cardsContainer) {
                 if (cResult[16] === tmp15) {
                   let tmp19 = cResult[17];
                 }
-                if (cResult[18] === tmp7) {
-                  if (cResult[19] === tmp8) {
-                    if (cResult[20] === tmp12) {
+                if (cResult[18] === tmp6) {
+                  if (cResult[19] === tmp7) {
+                    if (cResult[20] === tmp10) {
                       if (cResult[21] === tmp19) {
-                        let tmp22 = cResult[22];
+                        let tmp23 = cResult[22];
                       }
                       if (cResult[23] === onDismiss) {
-                        if (cResult[24] === tmp22) {
+                        if (cResult[24] === tmp23) {
                           let tmp26 = cResult[25];
                         }
                         return tmp26;
                       }
-                      class P {
-                        constructor(arg0) {
-                          obj = { guildId, powerup: guildId, forceStaticImage: closure_1.forceStaticImages };
-                          return jsx(f60575, obj, guildId.skuId);
-                        }
-                      }
-                      tmp28[2] = onDismiss;
-                      tmp28[3] = tmp22;
-                      const tmp29 = closure_4(tmp(6652).BottomSheet, tmp28);
+                      const obj4 = { scrollable: true, startExpanded: true, onDismiss, children: tmp23 };
+                      const tmp28 = closure_4(tmp(6829).BottomSheet, obj4);
                       cResult[23] = onDismiss;
-                      cResult[24] = tmp22;
-                      cResult[25] = tmp29;
-                      tmp26 = tmp29;
+                      cResult[24] = tmp23;
+                      cResult[25] = tmp28;
+                      tmp26 = tmp28;
                     }
                   }
                 }
-                class P {
-                  constructor(arg0) {
-                    obj = { guildId, powerup: guildId, forceStaticImage: closure_1.forceStaticImages };
-                    return jsx(f60575, obj, guildId.skuId);
-                  }
-                }
-                tmp24[0] = tmp7;
-                const items = [tmp8, tmp12, tmp19];
-                tmp24[1] = items;
-                const tmp25 = closure_5(tmp(6119).BottomSheetScrollView, tmp24);
-                cResult[18] = tmp7;
-                cResult[19] = tmp8;
-                cResult[20] = tmp12;
+                const obj5 = { contentContainerStyle: tmp6, children: null };
+                const items = [tmp7, tmp10, tmp19];
+                obj5.children = items;
+                const tmp25 = closure_5(tmp(6298).BottomSheetScrollView, obj5);
+                cResult[18] = tmp6;
+                cResult[19] = tmp7;
+                cResult[20] = tmp10;
                 cResult[21] = tmp19;
                 cResult[22] = tmp25;
-                tmp22 = tmp25;
+                tmp23 = tmp25;
               }
-              class P {
-                constructor(arg0) {
-                  obj = { guildId, powerup: guildId, forceStaticImage: closure_1.forceStaticImages };
-                  return jsx(f60575, obj, guildId.skuId);
-                }
-              }
-              const obj3 = { style: tmp14, children: cResult[11] };
-              const tmp21 = closure_4(View, obj3);
+              const obj6 = { style: tmp14, children: cResult[11] };
+              const tmp22 = closure_4(View, obj6);
               cResult[15] = tmp4.cardsContainer;
               cResult[16] = cResult[11];
-              cResult[17] = tmp21;
-              tmp19 = tmp21;
+              cResult[17] = tmp22;
+              tmp19 = tmp22;
             }
           }
         }
-        if (cResult[12] === tmp6.forceStaticImages) {
+        if (cResult[12] === forceStaticImages.forceStaticImages) {
           if (cResult[13] === guildId) {
             let tmp16 = cResult[14];
           }
           const powerups = listing.powerups;
           const mapped = powerups.map(tmp16);
-          class P {
-            constructor(arg0) {
-              obj = { guildId, powerup: guildId, forceStaticImage: closure_1.forceStaticImages };
-              return jsx(f60575, obj, guildId.skuId);
-            }
-          }
-          cResult[8] = tmp6;
+          forceStaticImages = forceStaticImages.forceStaticImages;
+          cResult[8] = forceStaticImages;
           cResult[9] = guildId;
           listing = listing.powerups;
           cResult[10] = listing;
           cResult[11] = mapped;
         }
-        class P {
-          constructor(arg0) {
-            obj = { guildId, powerup: guildId, forceStaticImage: closure_1.forceStaticImages };
-            return jsx(f60575, obj, guildId.skuId);
-          }
-        }
-        cResult[12] = tmp6.forceStaticImages;
+        const fn = function x(powerup) {
+          return React4(closure_8, { guildId, powerup, forceStaticImage: forceStaticImages.forceStaticImages }, powerup.skuId);
+        };
+        cResult[12] = forceStaticImages.forceStaticImages;
         cResult[13] = guildId;
-        cResult[14] = P;
-        tmp16 = P;
+        cResult[14] = fn;
+        tmp16 = fn;
       }
-      cResult[5] = tmp6.disabledReason;
+      let tmp11 = null != forceStaticImages.disabledReason;
+      if (tmp11) {
+        const obj7 = { style: tmp4.disabledReasonContainer, children: null };
+        const obj8 = { text: forceStaticImages.disabledReason };
+        obj7.children = closure_4(tmp5(12298), obj8);
+        tmp11 = closure_4(View, obj7);
+      }
+      cResult[5] = forceStaticImages.disabledReason;
       cResult[6] = tmp4.disabledReasonContainer;
-      cResult[7] = null != tmp6.disabledReason;
-      tmp12 = tmp13;
+      cResult[7] = tmp11;
+      tmp10 = tmp11;
     }
-    ({ title: tmp10[0], description: tmp10[1] } = tmp6);
-    const tmp11 = closure_4(GuildPowerupsSectionHeaderDefault, tmp10);
-    cResult[2] = tmp6.description;
-    cResult[3] = tmp6.title;
-    cResult[4] = tmp11;
-    tmp8 = tmp11;
+    ({ title: obj3.title, description: obj3.description } = forceStaticImages);
+    const tmp9 = closure_4(tmp5(12305), { title: null, description: null });
+    cResult[2] = forceStaticImages.description;
+    cResult[3] = forceStaticImages.title;
+    cResult[4] = tmp9;
+    tmp7 = tmp9;
+    const obj15 = { title: null, description: null };
   }
   const obj = guildId(576);
-}) : ((guildId) => {
+}) : (function GuildPowerupsMultiPerkBottomSheet(guildId) {
   guildId = guildId.guildId;
   const listing = guildId.listing;
   const tmp = closure_7();
@@ -582,12 +561,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     const obj3 = { paddingBottom: useSafeAreaInsetsDefault().bottom };
     obj2.contentContainerStyle = obj3;
     ({ title: obj4.title, description: obj4.description } = tmp4);
-    const items = [closure_4(tmp2(12226), { title: null, description: null }), , ];
+    const items = [closure_4(tmp2(12305), { title: null, description: null }), , ];
     let tmp6Result = null != tmp4.disabledReason;
     if (tmp6Result) {
       const obj6 = { style: tmp.disabledReasonContainer, children: null };
       const obj7 = { text: tmp4.disabledReason };
-      obj6.children = closure_4(tmp2(12219), obj7);
+      obj6.children = closure_4(tmp2(12298), obj7);
       tmp6Result = closure_4(View, obj6);
     }
     items[1] = tmp6Result;
@@ -596,8 +575,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     obj13.children = powerups.map((powerup) => React4(closure_8, { guildId, powerup, forceStaticImage: forceStaticImages.forceStaticImages }, powerup.skuId));
     items[2] = closure_4(View, obj13);
     obj2.children = items;
-    obj.children = closure_5(guildId(6119).BottomSheetScrollView, obj2);
-    tmp6Result2 = closure_4(guildId(6652).BottomSheet, obj);
+    obj.children = closure_5(guildId(6298).BottomSheetScrollView, obj2);
+    tmp6Result2 = closure_4(guildId(6829).BottomSheet, obj);
     const obj5 = { title: null, description: null };
   }
   return tmp6Result2;

@@ -1,16 +1,16 @@
-// === Module 10743: useChannelMoveAction ===
+// === Module 12703: useChannelMoveAction ===
 
-// Module 10743 (useChannelMoveAction)
-import getChannelMoveBlockerDefault from "getChannelMoveBlocker" /* 10745 */;
-import ChannelSortingUtils from "ChannelSortingUtils" /* 10747 */;
-import GuildCategoryStore from "GuildCategoryStore" /* 6613 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5077 */;
-import UserStore from "UserStore" /* 1377 */;
-import getChannelListRecord from "getChannelListRecord" /* 10744 */;
+// Module 12703 (useChannelMoveAction)
+import getChannelMoveBlockerDefault from "getChannelMoveBlocker" /* 12705 */;
+import ChannelSortingUtils from "ChannelSortingUtils" /* 12707 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 6790 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4899 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5971 */;
+import UserStore from "UserStore" /* 1389 */;
+import getChannelListRecord from "getChannelListRecord" /* 12704 */;
 
 require = fn;
 function areDestinationsEqual(arr, arg1) {
@@ -20,8 +20,8 @@ function areDestinationsEqual(arr, arg1) {
 const NULL_STRING_CHANNEL_ID = fn(1085).NULL_STRING_CHANNEL_ID;
 let closure_12 = [];
 let ReactCompilerGating = fn(558);
-let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((getGuildId) => {
-  _require = getGuildId;
+let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function useChannelListContext(getGuildId) {
+  const _require = getGuildId;
   const cResult = require("c").c(20);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [SelectedGuildStore];
@@ -38,11 +38,11 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((getGuildId) =>
   let obj = require("c");
   const stateFromStores = require("initialize").useStateFromStores(tmp4, tmp5);
   if (cResult[2] !== stateFromStores) {
-    const isFavoritesGuildIdResult = tmp(2077).isFavoritesGuildId(stateFromStores);
+    const isFavoritesGuildIdResult = tmp(2089).isFavoritesGuildId(stateFromStores);
     cResult[2] = stateFromStores;
     cResult[3] = isFavoritesGuildIdResult;
     let tmp8 = isFavoritesGuildIdResult;
-    const tmpResult3 = tmp(2077);
+    const tmpResult3 = tmp(2089);
   } else {
     tmp8 = cResult[3];
   }
@@ -157,8 +157,8 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((getGuildId) =>
   cResult[7] = guildId;
   tmp10 = guildId;
   const tmpResult = require("initialize");
-}) : ((getGuildId) => {
-  _require = getGuildId;
+}) : (function useChannelListContext(getGuildId) {
+  const _require = getGuildId;
   const items = [SelectedGuildStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => guildId.getGuildId());
   let obj = require("initialize");
@@ -188,7 +188,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_sorting/useChannelMoveAction.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useChannelMoveAction(arg0) {
   const cResult = isFavorites(listChannel[10]).c(38);
   let tmp4 = closure_14(arg0);
   isFavorites = tmp4.isFavorites;
@@ -225,54 +225,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         }
         const _Symbol = Symbol;
         if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-          const items = [guild, closure_4, closure_5, , ];
-          class E {
-            constructor() {
-              if (closure_4) {
-                mapped = closure_12;
-              } else {
-                tmp = categories;
-                _categories = categories._categories;
-                found = _categories.filter((channel) => {
-                  channel = channel.channel;
-                  let canViewChannelListResult = closure_1_0;
-                  if (!closure_1_0) {
-                    let tmp5 = null;
-                    if (channel.id !== NULL_STRING_CHANNEL_ID) {
-                      tmp5 = channel;
-                    }
-                    canViewChannelListResult = isFavorites(listChannel[15]).canViewChannelList(tmp5);
-                    const obj = isFavorites(listChannel[15]);
-                  }
-                  return canViewChannelListResult;
-                });
-                mapped = found.map((channel) => {
-                  channel = channel.channel;
-                  let tmp = null;
-                  if (channel.id !== NULL_STRING_CHANNEL_ID) {
-                    tmp = channel;
-                  }
-                  const obj = { id: channel.id, label: isFavorites(listChannel[16]).computeChannelName(channel, UserStore, RelationshipStore), disabled: null };
-                  let tmp3 = channel.id === closure_1_5;
-                  if (!tmp3) {
-                    let tmp4 = closure_1_0;
-                    if (!closure_1_0) {
-                      let tmp6 = null != guild;
-                      if (tmp6) {
-                        tmp6 = categories(listChannel[15])(tmp, tmp5);
-                      }
-                      tmp4 = tmp6;
-                    }
-                    tmp3 = !tmp4;
-                  }
-                  obj.disabled = tmp3;
-                  return obj;
-                });
-              }
-              return mapped;
-            }
-          }
-          items[4] = RelationshipStore;
+          const items = [guild, closure_4, closure_5, UserStore, RelationshipStore];
           cResult[10] = items;
           let tmp14 = items;
         } else {
@@ -288,50 +241,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                 }
                 const tmpResult = tmp(tmp2[11]);
                 const stateFromStores = tmpResult.useStateFromStores(tmp14, tmp20, tmp21, areDestinationsEqual);
-                class E {
-                  constructor() {
-                    if (closure_4) {
-                      mapped = closure_12;
-                    } else {
-                      tmp = categories;
-                      _categories = categories._categories;
-                      found = _categories.filter((channel) => {
-                        channel = channel.channel;
-                        let canViewChannelListResult = closure_1_0;
-                        if (!closure_1_0) {
-                          let tmp5 = null;
-                          if (channel.id !== NULL_STRING_CHANNEL_ID) {
-                            tmp5 = channel;
-                          }
-                          canViewChannelListResult = isFavorites(listChannel[15]).canViewChannelList(tmp5);
-                          const obj = isFavorites(listChannel[15]);
-                        }
-                        return canViewChannelListResult;
-                      });
-                      mapped = found.map((channel) => {
-                        channel = channel.channel;
-                        let tmp = null;
-                        if (channel.id !== NULL_STRING_CHANNEL_ID) {
-                          tmp = channel;
-                        }
-                        const obj = { id: channel.id, label: isFavorites(listChannel[16]).computeChannelName(channel, UserStore, RelationshipStore), disabled: null };
-                        let tmp3 = channel.id === closure_1_5;
-                        if (!tmp3) {
-                          let tmp4 = closure_1_0;
-                          if (!closure_1_0) {
-                            let tmp6 = null != guild;
-                            if (tmp6) {
-                              tmp6 = categories(listChannel[15])(tmp, tmp5);
-                            }
-                            tmp4 = tmp6;
-                          }
-                          tmp3 = !tmp4;
-                        }
-                        obj.disabled = tmp3;
-                        return obj;
-                      });
-                    }
-                    return mapped;
+                if (!isFavorites) {
+                  if (listChannel.isThread()) {
+                    return null;
                   }
                 }
                 if (null != listGuildId) {
@@ -346,398 +258,101 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                     }
                     if (cResult[18] === categories) {
                       if (cResult[19] === listChannel) {
-                        let tmp29 = cResult[20];
+                        let tmp30 = cResult[20];
                       }
                       if (cResult[21] === categories) {
                         if (cResult[22] === tmp7) {
                           if (cResult[23] === listChannel) {
-                            let tmp30 = cResult[24];
+                            let tmp31 = cResult[24];
                           }
                           const _Symbol2 = Symbol;
-                          class U {
-                            constructor(arg0) {
-                              tmp = listChannel;
-                              parent_id = listChannel.parent_id;
-                              if (parent_id == null) {
-                                parent_id = null;
-                              }
-                              obj = { targetParentId: parent_id, updates: null };
-                              obj2 = closure_0(closure_2[14]);
-                              obj.updates = obj2.getChannelPlacementUpdates(tmp, categories, closure_5, arg0);
-                              return obj;
-                            }
-                          }
-                          if (tmp31 === Symbol.for("react.memo_cache_sentinel")) {
-                            const string = tmp(tmp2[17]).intl.string;
-                            class U {
-                              constructor(arg0) {
-                                tmp = listChannel;
-                                parent_id = listChannel.parent_id;
-                                if (parent_id == null) {
-                                  parent_id = null;
-                                }
-                                obj = { targetParentId: parent_id, updates: null };
-                                obj2 = closure_0(closure_2[14]);
-                                obj.updates = obj2.getChannelPlacementUpdates(tmp, categories, closure_5, arg0);
-                                return obj;
-                              }
-                            }
-                            cResult[25] = tmp33;
-                            let tmp32 = tmp33;
+                          if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
+                            const intl = tmp(tmp2[17]).intl;
+                            const stringResult = intl.string(tmp(tmp2[17]).t.A95Fzm);
+                            cResult[25] = stringResult;
+                            let tmp32 = stringResult;
                           } else {
                             tmp32 = cResult[25];
                           }
                           if (cResult[26] === tmp5) {
                             if (cResult[27] === listChannel.id) {
+                              if (cResult[28] === tmp11) {
+                                let tmp34 = cResult[29];
+                              }
                               if (cResult[30] === stateFromStores) {
-                                if (cResult[31] === tmp29) {
-                                  if (cResult[32] === tmp30) {
+                                if (cResult[31] === tmp30) {
+                                  if (cResult[32] === tmp31) {
                                     if (cResult[33] === isFavorites) {
                                       if (cResult[34] === listChannel) {
                                         if (cResult[35] === listGuildId) {
                                           if (cResult[36] === tmp34) {
-                                            let tmp38 = cResult[37];
+                                            let tmp37 = cResult[37];
                                           }
-                                          return tmp38;
+                                          return tmp37;
                                         }
                                       }
                                     }
                                   }
                                 }
                               }
-                              class U {
-                                constructor(arg0) {
-                                  tmp = listChannel;
-                                  parent_id = listChannel.parent_id;
-                                  if (parent_id == null) {
-                                    parent_id = null;
-                                  }
-                                  obj = { targetParentId: parent_id, updates: null };
-                                  obj2 = closure_0(closure_2[14]);
-                                  obj.updates = obj2.getChannelPlacementUpdates(tmp, categories, closure_5, arg0);
-                                  return obj;
-                                }
-                              }
-                              tmp39[0] = tmp32;
-                              tmp39[1] = listGuildId;
-                              tmp39[2] = listChannel;
-                              tmp39[3] = isFavorites;
-                              tmp39[4] = stateFromStores;
-                              class E {
-                                constructor() {
-                                  if (closure_4) {
-                                    mapped = closure_12;
-                                  } else {
-                                    tmp = categories;
-                                    _categories = categories._categories;
-                                    found = _categories.filter((channel) => {
-                                      channel = channel.channel;
-                                      let canViewChannelListResult = closure_1_0;
-                                      if (!closure_1_0) {
-                                        let tmp5 = null;
-                                        if (channel.id !== NULL_STRING_CHANNEL_ID) {
-                                          tmp5 = channel;
-                                        }
-                                        canViewChannelListResult = isFavorites(listChannel[15]).canViewChannelList(tmp5);
-                                        const obj = isFavorites(listChannel[15]);
-                                      }
-                                      return canViewChannelListResult;
-                                    });
-                                    mapped = found.map((channel) => {
-                                      channel = channel.channel;
-                                      let tmp = null;
-                                      if (channel.id !== NULL_STRING_CHANNEL_ID) {
-                                        tmp = channel;
-                                      }
-                                      const obj = { id: channel.id, label: isFavorites(listChannel[16]).computeChannelName(channel, UserStore, RelationshipStore), disabled: null };
-                                      let tmp3 = channel.id === closure_1_5;
-                                      if (!tmp3) {
-                                        let tmp4 = closure_1_0;
-                                        if (!closure_1_0) {
-                                          let tmp6 = null != guild;
-                                          if (tmp6) {
-                                            tmp6 = categories(listChannel[15])(tmp, tmp5);
-                                          }
-                                          tmp4 = tmp6;
-                                        }
-                                        tmp3 = !tmp4;
-                                      }
-                                      obj.disabled = tmp3;
-                                      return obj;
-                                    });
-                                  }
-                                  return mapped;
-                                }
-                              }
-                              tmp39[6] = tmp29;
-                              tmp39[7] = tmp30;
+                              const obj3 = { label: tmp32, guildId: listGuildId, channel: listChannel, isFavorites, destinations: stateFromStores, placements: tmp34, getDestinationMove: tmp30, getPlacementMove: tmp31 };
                               cResult[30] = stateFromStores;
-                              cResult[31] = tmp29;
-                              cResult[32] = tmp30;
+                              cResult[31] = tmp30;
+                              cResult[32] = tmp31;
                               cResult[33] = isFavorites;
                               cResult[34] = listChannel;
                               cResult[35] = listGuildId;
                               cResult[36] = tmp34;
-                              cResult[37] = tmp39;
-                              tmp38 = tmp39;
+                              cResult[37] = obj3;
+                              tmp37 = obj3;
                             }
                           }
                           if (null == tmp11) {
                             cResult[26] = tmp5;
-                            class U {
-                              constructor(arg0) {
-                                tmp = listChannel;
-                                parent_id = listChannel.parent_id;
-                                if (parent_id == null) {
-                                  parent_id = null;
-                                }
-                                obj = { targetParentId: parent_id, updates: null };
-                                obj2 = closure_0(closure_2[14]);
-                                obj.updates = obj2.getChannelPlacementUpdates(tmp, categories, closure_5, arg0);
-                                return obj;
-                              }
-                            }
                             cResult[27] = listChannel.id;
                             cResult[28] = tmp11;
                             cResult[29] = null;
-                            class E {
-                              constructor() {
-                                if (closure_4) {
-                                  mapped = closure_12;
-                                } else {
-                                  tmp = categories;
-                                  _categories = categories._categories;
-                                  found = _categories.filter((channel) => {
-                                    channel = channel.channel;
-                                    let canViewChannelListResult = closure_1_0;
-                                    if (!closure_1_0) {
-                                      let tmp5 = null;
-                                      if (channel.id !== NULL_STRING_CHANNEL_ID) {
-                                        tmp5 = channel;
-                                      }
-                                      canViewChannelListResult = isFavorites(listChannel[15]).canViewChannelList(tmp5);
-                                      const obj = isFavorites(listChannel[15]);
-                                    }
-                                    return canViewChannelListResult;
-                                  });
-                                  mapped = found.map((channel) => {
-                                    channel = channel.channel;
-                                    let tmp = null;
-                                    if (channel.id !== NULL_STRING_CHANNEL_ID) {
-                                      tmp = channel;
-                                    }
-                                    const obj = { id: channel.id, label: isFavorites(listChannel[16]).computeChannelName(channel, UserStore, RelationshipStore), disabled: null };
-                                    let tmp3 = channel.id === closure_1_5;
-                                    if (!tmp3) {
-                                      let tmp4 = closure_1_0;
-                                      if (!closure_1_0) {
-                                        let tmp6 = null != guild;
-                                        if (tmp6) {
-                                          tmp6 = categories(listChannel[15])(tmp, tmp5);
-                                        }
-                                        tmp4 = tmp6;
-                                      }
-                                      tmp3 = !tmp4;
-                                    }
-                                    obj.disabled = tmp3;
-                                    return obj;
-                                  });
-                                }
-                                return mapped;
-                              }
-                            }
+                            tmp34 = null;
                           } else {
-                            const intl = tmp(tmp2[17]).intl;
-                            class U {
-                              constructor(arg0) {
-                                tmp = listChannel;
-                                parent_id = listChannel.parent_id;
-                                if (parent_id == null) {
-                                  parent_id = null;
-                                }
-                                obj = { targetParentId: parent_id, updates: null };
-                                obj2 = closure_0(closure_2[14]);
-                                obj.updates = obj2.getChannelPlacementUpdates(tmp, categories, closure_5, arg0);
-                                return obj;
-                              }
-                            }
-                            const obj3 = { firstLabel: intl.string(tmp5 ? tmp36.IMqgs9 : tmp36.Q9TKt6), lastLabel: null, isFirst: null, isLast: null };
-                            let id = tmp(tmp2[17]).intl.string;
+                            const intl2 = tmp(tmp2[17]).intl;
                             const t = tmp(tmp2[17]).t;
-                            class E {
-                              constructor() {
-                                if (closure_4) {
-                                  mapped = closure_12;
-                                } else {
-                                  tmp = categories;
-                                  _categories = categories._categories;
-                                  found = _categories.filter((channel) => {
-                                    channel = channel.channel;
-                                    let canViewChannelListResult = closure_1_0;
-                                    if (!closure_1_0) {
-                                      let tmp5 = null;
-                                      if (channel.id !== NULL_STRING_CHANNEL_ID) {
-                                        tmp5 = channel;
-                                      }
-                                      canViewChannelListResult = isFavorites(listChannel[15]).canViewChannelList(tmp5);
-                                      const obj = isFavorites(listChannel[15]);
-                                    }
-                                    return canViewChannelListResult;
-                                  });
-                                  mapped = found.map((channel) => {
-                                    channel = channel.channel;
-                                    let tmp = null;
-                                    if (channel.id !== NULL_STRING_CHANNEL_ID) {
-                                      tmp = channel;
-                                    }
-                                    const obj = { id: channel.id, label: isFavorites(listChannel[16]).computeChannelName(channel, UserStore, RelationshipStore), disabled: null };
-                                    let tmp3 = channel.id === closure_1_5;
-                                    if (!tmp3) {
-                                      let tmp4 = closure_1_0;
-                                      if (!closure_1_0) {
-                                        let tmp6 = null != guild;
-                                        if (tmp6) {
-                                          tmp6 = categories(listChannel[15])(tmp, tmp5);
-                                        }
-                                        tmp4 = tmp6;
-                                      }
-                                      tmp3 = !tmp4;
-                                    }
-                                    obj.disabled = tmp3;
-                                    return obj;
-                                  });
-                                }
-                                return mapped;
-                              }
-                            }
-                            obj3.isFirst = tmp11.first.channel.id === listChannel.id;
+                            const obj4 = { firstLabel: intl2.string(tmp5 ? t.IMqgs9 : t.Q9TKt6), lastLabel: null, isFirst: null, isLast: null };
+                            const intl3 = tmp(tmp2[17]).intl;
+                            let id = intl3.string;
+                            const t2 = tmp(tmp2[17]).t;
+                            obj4.lastLabel = id(tmp5 ? t2["8fQe3x"] : t2["/Pkxmw"]);
+                            obj4.isFirst = tmp11.first.channel.id === listChannel.id;
                             id = tmp11.last.channel.id;
-                            obj3.isLast = id === listChannel.id;
+                            obj4.isLast = id === listChannel.id;
                           }
                         }
                       }
-                      class U {
-                        constructor(arg0) {
-                          tmp = listChannel;
-                          parent_id = listChannel.parent_id;
-                          if (parent_id == null) {
-                            parent_id = null;
-                          }
-                          obj = { targetParentId: parent_id, updates: null };
-                          obj2 = closure_0(closure_2[14]);
-                          obj.updates = obj2.getChannelPlacementUpdates(tmp, categories, closure_5, arg0);
-                          return obj;
+                      function getPlacementMove(arg0) {
+                        let parent_id = listChannel.parent_id;
+                        if (parent_id == null) {
+                          parent_id = null;
                         }
+                        const obj = { targetParentId: parent_id, updates: ChannelSortingUtils.getChannelPlacementUpdates(listChannel, categories, closure_5, arg0) };
+                        return obj;
                       }
                       cResult[21] = categories;
                       cResult[22] = tmp7;
-                      class E {
-                        constructor() {
-                          if (closure_4) {
-                            mapped = closure_12;
-                          } else {
-                            tmp = categories;
-                            _categories = categories._categories;
-                            found = _categories.filter((channel) => {
-                              channel = channel.channel;
-                              let canViewChannelListResult = closure_1_0;
-                              if (!closure_1_0) {
-                                let tmp5 = null;
-                                if (channel.id !== NULL_STRING_CHANNEL_ID) {
-                                  tmp5 = channel;
-                                }
-                                canViewChannelListResult = isFavorites(listChannel[15]).canViewChannelList(tmp5);
-                                const obj = isFavorites(listChannel[15]);
-                              }
-                              return canViewChannelListResult;
-                            });
-                            mapped = found.map((channel) => {
-                              channel = channel.channel;
-                              let tmp = null;
-                              if (channel.id !== NULL_STRING_CHANNEL_ID) {
-                                tmp = channel;
-                              }
-                              const obj = { id: channel.id, label: isFavorites(listChannel[16]).computeChannelName(channel, UserStore, RelationshipStore), disabled: null };
-                              let tmp3 = channel.id === closure_1_5;
-                              if (!tmp3) {
-                                let tmp4 = closure_1_0;
-                                if (!closure_1_0) {
-                                  let tmp6 = null != guild;
-                                  if (tmp6) {
-                                    tmp6 = categories(listChannel[15])(tmp, tmp5);
-                                  }
-                                  tmp4 = tmp6;
-                                }
-                                tmp3 = !tmp4;
-                              }
-                              obj.disabled = tmp3;
-                              return obj;
-                            });
-                          }
-                          return mapped;
-                        }
-                      }
-                      cResult[24] = U;
-                      tmp30 = U;
+                      cResult[23] = listChannel;
+                      cResult[24] = getPlacementMove;
+                      tmp31 = getPlacementMove;
                     }
-                    const fn = function x(categoryKey) {
+                    function getDestinationMove(categoryKey) {
                       let tmp = null;
                       if (categoryKey !== NULL_STRING_CHANNEL_ID) {
                         tmp = categoryKey;
                       }
                       const obj = { targetParentId: tmp, updates: ChannelSortingUtils.getChannelPlacementUpdates(listChannel, categories, categoryKey, "last") };
                       return obj;
-                    };
+                    }
                     cResult[18] = categories;
                     cResult[19] = listChannel;
-                    class E {
-                      constructor() {
-                        if (closure_4) {
-                          mapped = closure_12;
-                        } else {
-                          tmp = categories;
-                          _categories = categories._categories;
-                          found = _categories.filter((channel) => {
-                            channel = channel.channel;
-                            let canViewChannelListResult = closure_1_0;
-                            if (!closure_1_0) {
-                              let tmp5 = null;
-                              if (channel.id !== NULL_STRING_CHANNEL_ID) {
-                                tmp5 = channel;
-                              }
-                              canViewChannelListResult = isFavorites(listChannel[15]).canViewChannelList(tmp5);
-                              const obj = isFavorites(listChannel[15]);
-                            }
-                            return canViewChannelListResult;
-                          });
-                          mapped = found.map((channel) => {
-                            channel = channel.channel;
-                            let tmp = null;
-                            if (channel.id !== NULL_STRING_CHANNEL_ID) {
-                              tmp = channel;
-                            }
-                            const obj = { id: channel.id, label: isFavorites(listChannel[16]).computeChannelName(channel, UserStore, RelationshipStore), disabled: null };
-                            let tmp3 = channel.id === closure_1_5;
-                            if (!tmp3) {
-                              let tmp4 = closure_1_0;
-                              if (!closure_1_0) {
-                                let tmp6 = null != guild;
-                                if (tmp6) {
-                                  tmp6 = categories(listChannel[15])(tmp, tmp5);
-                                }
-                                tmp4 = tmp6;
-                              }
-                              tmp3 = !tmp4;
-                            }
-                            obj.disabled = tmp3;
-                            return obj;
-                          });
-                        }
-                        return mapped;
-                      }
-                    }
-                    cResult[20] = fn;
-                    tmp29 = fn;
+                    cResult[20] = getDestinationMove;
+                    tmp30 = getDestinationMove;
                   }
                 }
                 return null;
@@ -745,62 +360,59 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             }
           }
         }
-        class E {
-          constructor() {
-            if (closure_4) {
-              mapped = closure_12;
-            } else {
-              tmp = categories;
-              _categories = categories._categories;
-              found = _categories.filter((channel) => {
-                channel = channel.channel;
-                let canViewChannelListResult = closure_1_0;
-                if (!closure_1_0) {
-                  let tmp5 = null;
-                  if (channel.id !== NULL_STRING_CHANNEL_ID) {
-                    tmp5 = channel;
-                  }
-                  canViewChannelListResult = isFavorites(listChannel[15]).canViewChannelList(tmp5);
-                  const obj = isFavorites(listChannel[15]);
-                }
-                return canViewChannelListResult;
-              });
-              mapped = found.map((channel) => {
-                channel = channel.channel;
-                let tmp = null;
+        const fn = function x() {
+          if (closure_4) {
+            let mapped = closure_12;
+          } else {
+            const _categories = categories._categories;
+            const found = _categories.filter((channel) => {
+              channel = channel.channel;
+              let canViewChannelListResult = closure_1_0;
+              if (!closure_1_0) {
+                let tmp5 = null;
                 if (channel.id !== NULL_STRING_CHANNEL_ID) {
-                  tmp = channel;
+                  tmp5 = channel;
                 }
-                const obj = { id: channel.id, label: isFavorites(listChannel[16]).computeChannelName(channel, UserStore, RelationshipStore), disabled: null };
-                let tmp3 = channel.id === closure_1_5;
-                if (!tmp3) {
-                  let tmp4 = closure_1_0;
-                  if (!closure_1_0) {
-                    let tmp6 = null != guild;
-                    if (tmp6) {
-                      tmp6 = categories(listChannel[15])(tmp, tmp5);
-                    }
-                    tmp4 = tmp6;
+                canViewChannelListResult = isFavorites(listChannel[15]).canViewChannelList(tmp5);
+                const obj = isFavorites(listChannel[15]);
+              }
+              return canViewChannelListResult;
+            });
+            mapped = found.map((channel) => {
+              channel = channel.channel;
+              let tmp = null;
+              if (channel.id !== NULL_STRING_CHANNEL_ID) {
+                tmp = channel;
+              }
+              const obj = { id: channel.id, label: isFavorites(listChannel[16]).computeChannelName(channel, UserStore, RelationshipStore), disabled: null };
+              let tmp3 = channel.id === closure_1_5;
+              if (!tmp3) {
+                let tmp4 = closure_1_0;
+                if (!closure_1_0) {
+                  let tmp6 = null != guild;
+                  if (tmp6) {
+                    tmp6 = categories(listChannel[15])(tmp, tmp5);
                   }
-                  tmp3 = !tmp4;
+                  tmp4 = tmp6;
                 }
-                obj.disabled = tmp3;
-                return obj;
-              });
-            }
-            return mapped;
+                tmp3 = !tmp4;
+              }
+              obj.disabled = tmp3;
+              return obj;
+            });
           }
-        }
+          return mapped;
+        };
         const items1 = [categories, tmp5, tmp7, isFavorites, guild];
         cResult[11] = categories;
         cResult[12] = tmp7;
         cResult[13] = guild;
         cResult[14] = tmp5;
         cResult[15] = isFavorites;
-        cResult[16] = E;
+        cResult[16] = fn;
         cResult[17] = items1;
         tmp21 = items1;
-        tmp20 = E;
+        tmp20 = fn;
       }
     }
     if (listChannel.isCategory()) {
@@ -821,7 +433,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = categoryKey;
   tmp7 = categoryKey;
   const tmpResult4 = isFavorites(listChannel[14]);
-}) : ((arg0) => {
+}) : (function useChannelMoveAction(arg0) {
   let tmp = closure_14(arg0);
   const isFavorites = tmp.isFavorites;
   ({ listGuildId, categories } = tmp);
@@ -912,12 +524,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       obj3.destinations = stateFromStores;
       if (null == id1) {
         obj3.placements = null;
-        obj3.getDestinationMove = function getDestinationMove(id) {
+        obj3.getDestinationMove = function getDestinationMove(categoryKey) {
           let tmp = null;
-          if (id !== NULL_STRING_CHANNEL_ID) {
-            tmp = id;
+          if (categoryKey !== NULL_STRING_CHANNEL_ID) {
+            tmp = categoryKey;
           }
-          const obj = { targetParentId: tmp, updates: ChannelSortingUtils.getChannelPlacementUpdates(id, categories, id, "last") };
+          const obj = { targetParentId: tmp, updates: ChannelSortingUtils.getChannelPlacementUpdates(id, categories, categoryKey, "last") };
           return obj;
         };
         obj3.getPlacementMove = function getPlacementMove(arg0) {

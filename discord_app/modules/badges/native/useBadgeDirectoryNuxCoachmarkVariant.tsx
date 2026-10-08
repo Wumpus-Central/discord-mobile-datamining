@@ -1,9 +1,9 @@
-// === Module 12904: useBadgeDirectoryNuxCoachmarkVariant ===
+// === Module 13053: useBadgeDirectoryNuxCoachmarkVariant ===
 
-// Module 12904 (useBadgeDirectoryNuxCoachmarkVariant)
+// Module 13053 (useBadgeDirectoryNuxCoachmarkVariant)
 import c from "c" /* 576 */;
-import useCanOpenBadgeDirectoryFromProfile from "useCanOpenBadgeDirectoryFromProfile" /* 10897 */;
-import useBadgeDirectoryNuxPopoverVariant from "useBadgeDirectoryNuxPopoverVariant" /* 12905 */;
+import useCanOpenBadgeDirectoryFromProfile from "useCanOpenBadgeDirectoryFromProfile" /* 10548 */;
+import useBadgeDirectoryNuxPopoverVariant from "useBadgeDirectoryNuxPopoverVariant" /* 13054 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/native/useBadgeDirectoryNuxCoachmarkVariant.tsx");
 
-export const useBadgeDirectoryNuxCoachmarkVariant = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useBadgeDirectoryNuxCoachmarkVariant = ReactCompilerGating.isReactCompilerEnabled() ? (function useBadgeDirectoryNuxCoachmarkVariant(arg0) {
   const cResult = c.c(8);
   ({ userId, enabled, fetchCatalog, location: _location } = arg0);
   if (cResult[0] !== _location) {
@@ -70,7 +70,7 @@ export const useBadgeDirectoryNuxCoachmarkVariant = ReactCompilerGating.isReactC
   cResult[5] = obj4;
   tmp5 = obj4;
   tmpResult = useCanOpenBadgeDirectoryFromProfile;
-}) : ((enabled) => {
+}) : (function useBadgeDirectoryNuxCoachmarkVariant(enabled) {
   enabled = enabled.enabled;
   ({ userId, fetchCatalog, location: _location } = enabled);
   if (enabled) {

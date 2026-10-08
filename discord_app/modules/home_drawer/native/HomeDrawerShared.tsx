@@ -1,6 +1,6 @@
-// === Module 16286: HomeDrawerShared ===
+// === Module 16546: HomeDrawerShared ===
 
-// Module 16286 (HomeDrawerShared)
+// Module 16546 (HomeDrawerShared)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -8,13 +8,13 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsxs: c3, jsx: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles({ container: { flex: 1, flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: 12 }, titleContainer: { flex: 1, flexDirection: "column", justifyContent: "center", gap: 2 }, rightContainer: { overflow: "hidden" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawerShared.tsx");
 
-export const HomeDrawerSharedItem = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const HomeDrawerSharedItem = ReactCompilerGating.isReactCompilerEnabled() ? (function HomeDrawerSharedItem(arg0) {
   const cResult = c.c(11);
   ({ title, subtitle, right } = arg0);
   const tmp2 = closure_5();
@@ -65,7 +65,7 @@ export const HomeDrawerSharedItem = ReactCompilerGating.isReactCompilerEnabled()
   cResult[2] = title;
   cResult[3] = tmp4;
   tmp3 = tmp4;
-}) : ((right) => {
+}) : (function HomeDrawerSharedItem(right) {
   right = right.right;
   ({ title, subtitle } = right);
   const tmp = closure_5();

@@ -1,12 +1,12 @@
-// === Module 11354: SavedMessageUtils ===
+// === Module 12668: SavedMessageUtils ===
 
-// Module 11354 (SavedMessageUtils)
+// Module 12668 (SavedMessageUtils)
 import util from "util" /* 1126 */;
-import _modDef4467 from "module_4467" /* 4467 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4909 */;
+import _modDef4659 from "module_4659" /* 4659 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7001 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
 
 const require = globalThis.__r;
 
@@ -120,7 +120,7 @@ let closure_10 = async function _savedMessageJumpToMessage(arg0, arg1) {
     }
   })();
 };
-const UnknownChannelRecord = fn(2055).UnknownChannelRecord;
+const UnknownChannelRecord = fn(2067).UnknownChannelRecord;
 const Constants = fn(1085);
 ({ ChannelTypes: closure_7, Routes: closure_8 } = Constants);
 const DueInStringTypes = { LONG: 0, [0]: "LONG", SHORT: 1, [1]: "SHORT" };
@@ -154,13 +154,13 @@ export const useDueInString = function useDueInString(arg0) {
     const obj2 = { duration: null };
     const time = dueAt.getTime();
     tmp9 = obj;
-    obj2.duration = _modDef4467.duration(time - now.getTime(), "millisecond").humanize();
+    obj2.duration = _modDef4659.duration(time - now.getTime(), "millisecond").humanize();
     obj.dueInText = intl.formatToPlainString(H4gnX9, obj2);
     obj.isOverdue = now > dueAt;
     return obj;
   }
 };
-export const useSavedMessageChannel = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useSavedMessageChannel = ReactCompilerGating.isReactCompilerEnabled() ? (function useSavedMessageChannel(arg0) {
   let channelId = arg0;
   _require = arg0;
   const cResult = require("c").c(6);
@@ -199,7 +199,7 @@ export const useSavedMessageChannel = ReactCompilerGating.isReactCompilerEnabled
     }
   }
   return stateFromStores;
-}) : ((arg0) => {
+}) : (function useSavedMessageChannel(arg0) {
   _require = arg0;
   const items = [ChannelStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => ChannelStore.getChannel(closure_0.saveData.channelId));

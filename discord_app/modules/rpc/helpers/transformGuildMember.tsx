@@ -1,7 +1,7 @@
-// === Module 14381: transformGuildMember ===
+// === Module 14607: transformGuildMember ===
 
-// Module 14381 (transformGuildMember)
-import AvatarDecorationUtils from "AvatarDecorationUtils" /* 1972 */;
+// Module 14607 (transformGuildMember)
+import AvatarDecorationUtils from "AvatarDecorationUtils" /* 1984 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/rpc/helpers/transformGuildMember.tsx");

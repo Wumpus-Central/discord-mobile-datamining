@@ -1,25 +1,25 @@
-// === Module 12919: UserProfileWidgetsBoardEditNotice ===
+// === Module 13068: UserProfileWidgetsBoardEditNotice ===
 
-// Module 12919 (UserProfileWidgetsBoardEditNotice)
+// Module 13068 (UserProfileWidgetsBoardEditNotice)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import dismissible_content from "dismissible_content" /* 2036 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4818 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Pressables from "Pressables" /* 5916 */;
-import XSmallIcon from "XSmallIcon" /* 6024 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 7924 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10367 */;
+import dismissible_content from "dismissible_content" /* 2048 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5012 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import Pressables from "Pressables" /* 6189 */;
+import XSmallIcon from "XSmallIcon" /* 6210 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8343 */;
+import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 9964 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_16 }, icon: { flexShrink: 0, marginTop: 2 }, text: { flex: 1 }, closeButton: { flexShrink: 0 } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -27,14 +27,14 @@ let obj3 = { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileWidgetsBoardEditNotice.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileWidgetsBoardEditNotice() {
   const cResult = require("c").c(4);
   const tmp4 = closure_7();
   _require = tmp4;
   const tmp6 = UserProfileSharedStylesDefault();
   importDefault = tmp6;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    let items = [tmp(2036).DismissibleContent.USER_PROFILE_WIDGETS_BOARD_MOBILE_EDIT_NOTICE];
+    let items = [tmp(2048).DismissibleContent.USER_PROFILE_WIDGETS_BOARD_MOBILE_EDIT_NOTICE];
     cResult[0] = items;
     let first = items;
   } else {
@@ -118,7 +118,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
   };
   tmp = _require;
-}) : (() => {
+}) : (function UserProfileWidgetsBoardEditNotice() {
   _require = closure_7();
   importDefault = UserProfileSharedStylesDefault();
   let obj = { contentTypes: null, bypassAutoDismiss: true, children: null };

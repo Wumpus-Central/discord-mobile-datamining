@@ -1,30 +1,30 @@
-// === Module 11857: ScheduledMessageCard ===
+// === Module 12860: ScheduledMessageCard ===
 
-// Module 11857 (ScheduledMessageCard)
+// Module 12860 (ScheduledMessageCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import router_utils from "router_utils" /* 1112 */;
 import util from "util" /* 1126 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
-import ScheduledMessageUtils from "ScheduledMessageUtils" /* 7486 */;
-import CalendarPlusIcon from "CalendarPlusIcon" /* 11852 */;
-import ScheduledMessageCardActionButtonsDefault from "ScheduledMessageCardActionButtons" /* 11860 */;
-import ForLaterCardStatusHeader from "ForLaterCardStatusHeader" /* 11861 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5940 */;
+import ScheduledMessageUtils from "ScheduledMessageUtils" /* 9228 */;
+import CalendarPlusIcon from "CalendarPlusIcon" /* 11936 */;
+import ForLaterCardStatusHeader from "ForLaterCardStatusHeader" /* 12680 */;
+import ScheduledMessageCardActionButtonsDefault from "ScheduledMessageCardActionButtons" /* 12861 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
 
 require = fn;
 const View = fn(17).View;
 const Routes = fn(1085).Routes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { card: { gap: 16, marginBottom: 16 }, cardDivider: { marginHorizontal: -16, height: 1, alignSelf: "stretch", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED }, attachmentCount: { flexDirection: "row", alignItems: "center", gap: 4 }, pendingRemoval: { alignItems: "center", paddingVertical: 16 } };
 let closure_9 = createStyles.createStyles(obj);
 fn(558);
 let obj3 = { marginHorizontal: -16, height: 1, alignSelf: "stretch", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 const ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function ScheduledMessageCardStatusHeader(arg0) {
   const cResult = c.c(13);
   ({ scheduledMessage, isPendingRemoval } = arg0);
   if (cResult[0] !== scheduledMessage.state) {
@@ -84,7 +84,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = stateMessage;
   cResult[5] = formatToPlainStringResult;
   tmp6 = formatToPlainStringResult;
-}) : ((isPendingRemoval) => {
+}) : (function ScheduledMessageCardStatusHeader(isPendingRemoval) {
   const scheduledMessage = isPendingRemoval.scheduledMessage;
   const messageForState = ScheduledMessageUtils.getMessageForState(scheduledMessage.state);
   ({ isError, stateMessage } = messageForState);
@@ -102,7 +102,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   obj2.actions = React5(ScheduledMessageCardActionButtonsDefault, { scheduledMessage, isPendingRemoval: isPendingRemoval.isPendingRemoval });
   return React5(ForLaterCardStatusHeader.ForLaterCardStatusHeader, obj2);
 });
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((scheduledMessage) => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ScheduledMessageCard(scheduledMessage) {
   const cResult = pendingRemoval(576).c(25);
   pendingRemoval = scheduledMessage.scheduledMessage;
   const isPendingRemoval = scheduledMessage.isPendingRemoval;
@@ -127,7 +127,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((scheduledMessage) 
   const obj = pendingRemoval(576);
   const stateFromStores = pendingRemoval(504).useStateFromStores(first, tmp7);
   if (cResult[3] !== stateFromStores) {
-    class R {
+    class I {
       constructor() {
         obj = closure_1;
         if (null != closure_1) {
@@ -144,9 +144,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((scheduledMessage) 
       }
     }
     cResult[3] = stateFromStores;
-    cResult[4] = R;
+    cResult[4] = I;
   } else {
-    class R {
+    class I {
       constructor() {
         obj = closure_1;
         if (null != closure_1) {
@@ -164,7 +164,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((scheduledMessage) 
     }
   }
   if (null == stateFromStores) {
-    class R {
+    class I {
       constructor() {
         obj = closure_1;
         if (null != closure_1) {
@@ -181,7 +181,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((scheduledMessage) 
       }
     }
   } else {
-    class R {
+    class I {
       constructor() {
         obj = closure_1;
         if (null != closure_1) {
@@ -198,7 +198,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((scheduledMessage) 
       }
     }
     if (cResult[5] === isPendingRemoval) {
-      class R {
+      class I {
         constructor() {
           obj = closure_1;
           if (null != closure_1) {
@@ -215,7 +215,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((scheduledMessage) 
         }
       }
       if (cResult[8] !== stateFromStores) {
-        class R {
+        class I {
           constructor() {
             obj = closure_1;
             if (null != closure_1) {
@@ -232,11 +232,11 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((scheduledMessage) 
           }
         }
         let obj2 = { channel: stateFromStores, actions: null };
-        const tmp15 = closure_7(tmp(11858).ForLaterCardHeader, obj2);
+        const tmp15 = closure_7(tmp(12681).ForLaterCardHeader, obj2);
         cResult[8] = stateFromStores;
         cResult[9] = tmp15;
       } else {
-        class R {
+        class I {
           constructor() {
             obj = closure_1;
             if (null != closure_1) {
@@ -254,7 +254,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((scheduledMessage) 
         }
       }
       if (cResult[10] !== tmp4.cardDivider) {
-        class R {
+        class I {
           constructor() {
             obj = closure_1;
             if (null != closure_1) {
@@ -275,7 +275,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((scheduledMessage) 
         cResult[10] = tmp4.cardDivider;
         cResult[11] = tmp18;
       } else {
-        class R {
+        class I {
           constructor() {
             obj = closure_1;
             if (null != closure_1) {
@@ -293,7 +293,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((scheduledMessage) 
         }
       }
       if (cResult[12] === tmp26) {
-        class R {
+        class I {
           constructor() {
             obj = closure_1;
             if (null != closure_1) {
@@ -311,7 +311,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((scheduledMessage) 
         }
       }
       if (isPendingRemoval) {
-        class R {
+        class I {
           constructor() {
             obj = closure_1;
             if (null != closure_1) {
@@ -327,10 +327,10 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((scheduledMessage) 
             return;
           }
         }
-        const obj4 = { style: tmp4.pendingRemoval, children: closure_7(tmp(5975).ActivityIndicator, { size: "small" }) };
+        const obj4 = { style: tmp4.pendingRemoval, children: closure_7(tmp(6158).ActivityIndicator, { size: "small" }) };
         let tmp19Result = closure_7(View, obj4);
       } else {
-        class R {
+        class I {
           constructor() {
             obj = closure_1;
             if (null != closure_1) {
@@ -349,7 +349,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((scheduledMessage) 
         tmp20[0] = pendingRemoval.record;
         let tmp21;
         if (tmp26 > 0) {
-          class R {
+          class I {
             constructor() {
               obj = closure_1;
               if (null != closure_1) {
@@ -367,17 +367,17 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((scheduledMessage) 
           }
           const obj5 = { style: tmp4.attachmentCount, children: null };
           const obj6 = { size: "xxs", color: stateFromStores(587).colors.TEXT_MUTED };
-          const items1 = [closure_7(tmp(10382).AttachmentIcon, obj6), ];
+          const items1 = [closure_7(tmp(9979).AttachmentIcon, obj6), ];
           const obj7 = { variant: "text-sm/normal", color: "text-muted", children: null };
           const intl = tmp(1126).intl;
           const obj8 = { count: tmp26 };
           obj7.children = intl.format(tmp(1126).t.ZJ1tPW, obj8);
-          items1[1] = closure_7(tmp(4892).Text, obj7);
+          items1[1] = closure_7(tmp(5086).Text, obj7);
           obj5.children = items1;
           tmp21 = closure_8(View, obj5);
         }
         tmp20[3] = tmp21;
-        tmp19Result = closure_7(tmp(11859).ForLaterMessageRow, tmp20);
+        tmp19Result = closure_7(tmp(12682).ForLaterMessageRow, tmp20);
       }
       cResult[12] = tmp26;
       cResult[13] = isPendingRemoval;
@@ -393,7 +393,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((scheduledMessage) 
     cResult[7] = tmp13;
   }
   const tmpResult = pendingRemoval(504);
-}) : ((scheduledMessage) => {
+}) : (function ScheduledMessageCard(scheduledMessage) {
   scheduledMessage = scheduledMessage.scheduledMessage;
   const isPendingRemoval = scheduledMessage.isPendingRemoval;
   const tmp = closure_9();
@@ -407,11 +407,11 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((scheduledMessage) 
     const obj3 = { scheduledMessage, isPendingRemoval };
     const items1 = [closure_7(closure_10, obj3), , , ];
     const obj4 = { channel: stateFromStores, actions: null };
-    items1[1] = closure_7(tmp2(11858).ForLaterCardHeader, obj4);
+    items1[1] = closure_7(tmp2(12681).ForLaterCardHeader, obj4);
     const obj5 = { style: tmp.cardDivider };
     items1[2] = closure_7(View, obj5);
     if (isPendingRemoval) {
-      const obj6 = { style: tmp.pendingRemoval, children: closure_7(tmp2(5975).ActivityIndicator, { size: "small" }) };
+      const obj6 = { style: tmp.pendingRemoval, children: closure_7(tmp2(6158).ActivityIndicator, { size: "small" }) };
       let tmp10Result = closure_7(View, obj6);
     } else {
       const obj7 = { message: scheduledMessage.record, lineClamp: 10, maxHeight: 400, footer: null };
@@ -419,28 +419,28 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((scheduledMessage) 
       if (length > 0) {
         const obj8 = { style: tmp.attachmentCount, children: null };
         const obj9 = { size: "xxs", color: stateFromStores(587).colors.TEXT_MUTED };
-        const items2 = [closure_7(tmp2(10382).AttachmentIcon, obj9), ];
+        const items2 = [closure_7(tmp2(9979).AttachmentIcon, obj9), ];
         const obj10 = { variant: "text-sm/normal", color: "text-muted", children: null };
         const intl = tmp2(1126).intl;
         const obj11 = { count: length };
         obj10.children = intl.format(tmp2(1126).t.ZJ1tPW, obj11);
-        items2[1] = closure_7(tmp2(4892).Text, obj10);
+        items2[1] = closure_7(tmp2(5086).Text, obj10);
         obj8.children = items2;
         tmp9Result = closure_8(View, obj8);
       }
       obj7.footer = tmp9Result;
-      tmp10Result = closure_7(tmp2(11859).ForLaterMessageRow, obj7);
+      tmp10Result = closure_7(tmp2(12682).ForLaterMessageRow, obj7);
     }
     items1[3] = tmp10Result;
     obj2.children = items1;
-    return closure_8(tmp2(6002).Card, obj2);
+    return closure_8(tmp2(6186).Card, obj2);
   }
   const obj = scheduledMessage(504);
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/scheduled_messages/native/ScheduledMessageCard.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((scheduledMessage) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ScheduledMessageCard(scheduledMessage) {
   const cResult = pendingRemoval(576).c(25);
   pendingRemoval = scheduledMessage.scheduledMessage;
   const isPendingRemoval = scheduledMessage.isPendingRemoval;
@@ -465,7 +465,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((schedu
   const obj = pendingRemoval(576);
   const stateFromStores = pendingRemoval(504).useStateFromStores(first, tmp7);
   if (cResult[3] !== stateFromStores) {
-    class R {
+    class I {
       constructor() {
         obj = closure_1;
         if (null != closure_1) {
@@ -482,9 +482,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((schedu
       }
     }
     cResult[3] = stateFromStores;
-    cResult[4] = R;
+    cResult[4] = I;
   } else {
-    class R {
+    class I {
       constructor() {
         obj = closure_1;
         if (null != closure_1) {
@@ -502,7 +502,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((schedu
     }
   }
   if (null == stateFromStores) {
-    class R {
+    class I {
       constructor() {
         obj = closure_1;
         if (null != closure_1) {
@@ -519,7 +519,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((schedu
       }
     }
   } else {
-    class R {
+    class I {
       constructor() {
         obj = closure_1;
         if (null != closure_1) {
@@ -536,7 +536,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((schedu
       }
     }
     if (cResult[5] === isPendingRemoval) {
-      class R {
+      class I {
         constructor() {
           obj = closure_1;
           if (null != closure_1) {
@@ -553,7 +553,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((schedu
         }
       }
       if (cResult[8] !== stateFromStores) {
-        class R {
+        class I {
           constructor() {
             obj = closure_1;
             if (null != closure_1) {
@@ -570,11 +570,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((schedu
           }
         }
         let obj2 = { channel: stateFromStores, actions: null };
-        const tmp15 = closure_7(tmp(11858).ForLaterCardHeader, obj2);
+        const tmp15 = closure_7(tmp(12681).ForLaterCardHeader, obj2);
         cResult[8] = stateFromStores;
         cResult[9] = tmp15;
       } else {
-        class R {
+        class I {
           constructor() {
             obj = closure_1;
             if (null != closure_1) {
@@ -592,7 +592,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((schedu
         }
       }
       if (cResult[10] !== tmp4.cardDivider) {
-        class R {
+        class I {
           constructor() {
             obj = closure_1;
             if (null != closure_1) {
@@ -613,7 +613,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((schedu
         cResult[10] = tmp4.cardDivider;
         cResult[11] = tmp18;
       } else {
-        class R {
+        class I {
           constructor() {
             obj = closure_1;
             if (null != closure_1) {
@@ -631,7 +631,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((schedu
         }
       }
       if (cResult[12] === tmp26) {
-        class R {
+        class I {
           constructor() {
             obj = closure_1;
             if (null != closure_1) {
@@ -649,7 +649,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((schedu
         }
       }
       if (isPendingRemoval) {
-        class R {
+        class I {
           constructor() {
             obj = closure_1;
             if (null != closure_1) {
@@ -665,10 +665,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((schedu
             return;
           }
         }
-        const obj4 = { style: tmp4.pendingRemoval, children: closure_7(tmp(5975).ActivityIndicator, { size: "small" }) };
+        const obj4 = { style: tmp4.pendingRemoval, children: closure_7(tmp(6158).ActivityIndicator, { size: "small" }) };
         let tmp19Result = closure_7(View, obj4);
       } else {
-        class R {
+        class I {
           constructor() {
             obj = closure_1;
             if (null != closure_1) {
@@ -687,7 +687,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((schedu
         tmp20[0] = pendingRemoval.record;
         let tmp21;
         if (tmp26 > 0) {
-          class R {
+          class I {
             constructor() {
               obj = closure_1;
               if (null != closure_1) {
@@ -705,17 +705,17 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((schedu
           }
           const obj5 = { style: tmp4.attachmentCount, children: null };
           const obj6 = { size: "xxs", color: stateFromStores(587).colors.TEXT_MUTED };
-          const items1 = [closure_7(tmp(10382).AttachmentIcon, obj6), ];
+          const items1 = [closure_7(tmp(9979).AttachmentIcon, obj6), ];
           const obj7 = { variant: "text-sm/normal", color: "text-muted", children: null };
           const intl = tmp(1126).intl;
           const obj8 = { count: tmp26 };
           obj7.children = intl.format(tmp(1126).t.ZJ1tPW, obj8);
-          items1[1] = closure_7(tmp(4892).Text, obj7);
+          items1[1] = closure_7(tmp(5086).Text, obj7);
           obj5.children = items1;
           tmp21 = closure_8(View, obj5);
         }
         tmp20[3] = tmp21;
-        tmp19Result = closure_7(tmp(11859).ForLaterMessageRow, tmp20);
+        tmp19Result = closure_7(tmp(12682).ForLaterMessageRow, tmp20);
       }
       cResult[12] = tmp26;
       cResult[13] = isPendingRemoval;
@@ -731,7 +731,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((schedu
     cResult[7] = tmp13;
   }
   const tmpResult = pendingRemoval(504);
-}) : ((scheduledMessage) => {
+}) : (function ScheduledMessageCard(scheduledMessage) {
   scheduledMessage = scheduledMessage.scheduledMessage;
   const isPendingRemoval = scheduledMessage.isPendingRemoval;
   const tmp = closure_9();
@@ -745,11 +745,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((schedu
     const obj3 = { scheduledMessage, isPendingRemoval };
     const items1 = [closure_7(closure_10, obj3), , , ];
     const obj4 = { channel: stateFromStores, actions: null };
-    items1[1] = closure_7(tmp2(11858).ForLaterCardHeader, obj4);
+    items1[1] = closure_7(tmp2(12681).ForLaterCardHeader, obj4);
     const obj5 = { style: tmp.cardDivider };
     items1[2] = closure_7(View, obj5);
     if (isPendingRemoval) {
-      const obj6 = { style: tmp.pendingRemoval, children: closure_7(tmp2(5975).ActivityIndicator, { size: "small" }) };
+      const obj6 = { style: tmp.pendingRemoval, children: closure_7(tmp2(6158).ActivityIndicator, { size: "small" }) };
       let tmp10Result = closure_7(View, obj6);
     } else {
       const obj7 = { message: scheduledMessage.record, lineClamp: 10, maxHeight: 400, footer: null };
@@ -757,21 +757,21 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((schedu
       if (length > 0) {
         const obj8 = { style: tmp.attachmentCount, children: null };
         const obj9 = { size: "xxs", color: stateFromStores(587).colors.TEXT_MUTED };
-        const items2 = [closure_7(tmp2(10382).AttachmentIcon, obj9), ];
+        const items2 = [closure_7(tmp2(9979).AttachmentIcon, obj9), ];
         const obj10 = { variant: "text-sm/normal", color: "text-muted", children: null };
         const intl = tmp2(1126).intl;
         const obj11 = { count: length };
         obj10.children = intl.format(tmp2(1126).t.ZJ1tPW, obj11);
-        items2[1] = closure_7(tmp2(4892).Text, obj10);
+        items2[1] = closure_7(tmp2(5086).Text, obj10);
         obj8.children = items2;
         tmp9Result = closure_8(View, obj8);
       }
       obj7.footer = tmp9Result;
-      tmp10Result = closure_7(tmp2(11859).ForLaterMessageRow, obj7);
+      tmp10Result = closure_7(tmp2(12682).ForLaterMessageRow, obj7);
     }
     items1[3] = tmp10Result;
     obj2.children = items1;
-    return closure_8(tmp2(6002).Card, obj2);
+    return closure_8(tmp2(6186).Card, obj2);
   }
   const obj = scheduledMessage(504);
 }));

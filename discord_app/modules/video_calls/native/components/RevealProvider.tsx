@@ -1,27 +1,27 @@
-// === Module 9094: RevealProvider ===
+// === Module 10671: RevealProvider ===
 
-// Module 9094 (RevealProvider)
+// Module 10671 (RevealProvider)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import useIsPrivateAudioOnlyCallDefault from "useIsPrivateAudioOnlyCall" /* 9088 */;
-import useIsActivityFocusedDefault from "useIsActivityFocused" /* 9095 */;
-import StatusBarDefault from "StatusBar" /* 9096 */;
-import HomeIndicatorDefault from "HomeIndicator" /* 9098 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import useIsPrivateAudioOnlyCallDefault from "useIsPrivateAudioOnlyCall" /* 10335 */;
+import StatusBarDefault from "StatusBar" /* 10340 */;
+import useIsActivityFocusedDefault from "useIsActivityFocused" /* 10672 */;
+import HomeIndicatorDefault from "HomeIndicator" /* 10673 */;
 import noop from "module_19" /* 19 */;
-import ActionSheetStore from "ActionSheetStore" /* 4567 */;
-import GameConsoleStore from "GameConsoleStore" /* 4913 */;
+import ActionSheetStore from "ActionSheetStore" /* 4759 */;
+import GameConsoleStore from "GameConsoleStore" /* 5109 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ChannelCallStore = fn(9086);
+const ChannelCallStore = fn(10333);
 ({ useChannelCallStore: metroRequire, focusTimeout: closure_7, resetFocusTimer: closure_8, useIsVoiceChatFocused: closure_9 } = ChannelCallStore);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const context = noop.createContext({ reveal: true });
 let ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, id) => {
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRevealProviderValue(arg0, id) {
   const cResult = c.c(9);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ActionSheetStore];
@@ -97,7 +97,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, id) => {
   cResult[8] = obj2;
   tmp20 = obj2;
   const tmpResult3 = initialize;
-}) : ((arg0, id) => {
+}) : (function useRevealProviderValue(arg0, id) {
   let tmp = arg0;
   const items = [ActionSheetStore];
   const stateFromStores = stateFromStores1(504).useStateFromStores(items, () => null != key.getKey());
@@ -125,7 +125,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, id) => {
   }
   stateFromStores1 = tmp;
   const tmp8 = useIsActivityFocusedDefault(id.id);
-  const tmp10 = tmp2(1369).isIOS() && tmp8;
+  const tmp10 = tmp2(1381).isIOS() && tmp8;
   importDefault = tmp10;
   const items2 = [tmp, tmp10];
   return noop.useMemo(() => ({ reveal: stateFromStores1, prefersDeferringSystemGestures }), items2);
@@ -135,7 +135,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/components/RevealProvider.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function RevealProvider(channel) {
   const cResult = require("c").c(15);
   ({ children, showStatus, useThemedBarStyle } = channel);
   let tmp3 = undefined !== showStatus;
@@ -156,7 +156,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   const tmp7 = closure_13(tmp6, channel.channel);
   ({ reveal, prefersDeferringSystemGestures } = tmp7);
   if (cResult[1] !== tmp6) {
-    class F {
+    class D {
       constructor() {
         if (closure_0) {
           tmp3 = resetFocusTimer;
@@ -170,11 +170,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     }
     const items = [tmp6];
     cResult[1] = tmp6;
-    cResult[2] = F;
+    cResult[2] = D;
     cResult[3] = items;
     let tmp9 = items;
   } else {
-    class F {
+    class D {
       constructor() {
         if (closure_0) {
           tmp3 = resetFocusTimer;
@@ -188,9 +188,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     }
     tmp9 = cResult[3];
   }
-  const effect = noop.useEffect(F, tmp9);
+  const effect = noop.useEffect(D, tmp9);
   if (!tmp4) {
-    class F {
+    class D {
       constructor() {
         if (closure_0) {
           tmp3 = resetFocusTimer;
@@ -203,7 +203,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
       }
     }
   } else {
-    class F {
+    class D {
       constructor() {
         if (closure_0) {
           tmp3 = resetFocusTimer;
@@ -217,7 +217,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     }
   }
   if (!reveal) {
-    class F {
+    class D {
       constructor() {
         if (closure_0) {
           tmp3 = resetFocusTimer;
@@ -231,7 +231,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     }
   }
   if (!reveal) {
-    class F {
+    class D {
       constructor() {
         if (closure_0) {
           tmp3 = resetFocusTimer;
@@ -245,7 +245,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     }
   }
   if (cResult[4] === str) {
-    class F {
+    class D {
       constructor() {
         if (closure_0) {
           tmp3 = resetFocusTimer;
@@ -258,7 +258,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
       }
     }
     if (cResult[7] === prefersDeferringSystemGestures) {
-      class F {
+      class D {
         constructor() {
           if (closure_0) {
             tmp3 = resetFocusTimer;
@@ -271,7 +271,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
         }
       }
       if (cResult[10] === children) {
-        class F {
+        class D {
           constructor() {
             if (closure_0) {
               tmp3 = resetFocusTimer;
@@ -306,7 +306,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   cResult[6] = tmp16;
   const obj = require("c");
   tmp4 = undefined !== useThemedBarStyle && useThemedBarStyle;
-}) : ((showStatus) => {
+}) : (function RevealProvider(showStatus) {
   let flag = showStatus.showStatus;
   ({ channel, children } = showStatus);
   if (flag === undefined) {

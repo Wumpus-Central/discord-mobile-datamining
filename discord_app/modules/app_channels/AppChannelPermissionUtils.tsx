@@ -1,11 +1,11 @@
-// === Module 11245: AppChannelPermissionUtils ===
+// === Module 11360: AppChannelPermissionUtils ===
 
-// Module 11245 (AppChannelPermissionUtils)
+// Module 11360 (AppChannelPermissionUtils)
 import c from "c" /* 576 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
-import AppChannelPermissions from "AppChannelPermissions" /* 4522 */;
-import useAppChannelApplication from "useAppChannelApplication" /* 6759 */;
-import ApplicationStore from "ApplicationStore" /* 5124 */;
+import AppChannelPermissions from "AppChannelPermissions" /* 4714 */;
+import useAppChannelApplication from "useAppChannelApplication" /* 6935 */;
+import ApplicationStore from "ApplicationStore" /* 5436 */;
 
 require = fn;
 const ChannelTypes = fn(1085).ChannelTypes;
@@ -51,7 +51,7 @@ export const getAppChannelBotUserId = function getAppChannelBotUserId(c18) {
   }
   return tmp2;
 };
-export const useAppChannelBotUserId = ReactCompilerGating.isReactCompilerEnabled() ? ((type) => {
+export const useAppChannelBotUserId = ReactCompilerGating.isReactCompilerEnabled() ? (function useAppChannelBotUserId(type) {
   const cResult = c.c(3);
   const appChannelApplication = useAppChannelApplication.useAppChannelApplication(type);
   if (cResult[0] === appChannelApplication) {
@@ -84,7 +84,7 @@ export const useAppChannelBotUserId = ReactCompilerGating.isReactCompilerEnabled
   cResult[1] = type;
   cResult[2] = tmp4;
   tmp3 = tmp4;
-}) : ((type) => {
+}) : (function useAppChannelBotUserId(type) {
   const appChannelApplication = useAppChannelApplication.useAppChannelApplication(type);
   let tmp2;
   if (null != type) {

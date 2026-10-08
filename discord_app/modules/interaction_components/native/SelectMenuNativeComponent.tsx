@@ -1,8 +1,8 @@
-// === Module 15606: SelectMenuNativeComponent ===
+// === Module 15886: SelectMenuNativeComponent ===
 
-// Module 15606 (SelectMenuNativeComponent)
+// Module 15886 (SelectMenuNativeComponent)
 import c from "c" /* 576 */;
-import SelectActionComponentViewNativeComponentDefault from "SelectActionComponentViewNativeComponent" /* 15607 */;
+import SelectActionComponentViewNativeComponentDefault from "SelectActionComponentViewNativeComponent" /* 15887 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/interaction_components/native/SelectMenuNativeComponent.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((model) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SelectMenuNativeComponent(model) {
   const cResult = c.c(9);
   if (cResult[0] !== model) {
     model = model.model;
@@ -58,7 +58,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((model) => {
   cResult[7] = tmp8;
   cResult[8] = tmp15;
   tmp12 = tmp15;
-}) : ((model) => {
+}) : (function SelectMenuNativeComponent(model) {
   const merged = Object.assign(model, Object.assign({ model: 0 }));
   const obj = {};
   const merged1 = Object.assign(merged);

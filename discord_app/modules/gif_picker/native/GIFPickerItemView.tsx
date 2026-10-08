@@ -1,19 +1,19 @@
-// === Module 10116: GIFPickerItemView ===
+// === Module 9701: GIFPickerItemView ===
 
-// Module 10116 (GIFPickerItemView)
+// Module 9701 (GIFPickerItemView)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1881 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import gif_picker_GIFPickerUtils from "gif_picker/GIFPickerUtils" /* 10106 */;
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1893 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import gif_picker_GIFPickerUtils from "gif_picker/GIFPickerUtils" /* 9690 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles((height) => {
   const obj = { container: null, gifImage: null, gifImageSelected: null };
   const size = { paddingBottom: gif_picker_GIFPickerUtils.GIF_PICKER_GUTTER_SPACING, paddingHorizontal: gif_picker_GIFPickerUtils.GIF_PICKER_GUTTER_SPACING / 2, borderRadius: nativeDefault.radii.xs, width: "100%", height, flex: 1 };
@@ -41,7 +41,7 @@ export default function GIFPickerItemView(onPressGIF) {
   }, items);
   const items2 = [index, item.src];
   const callback1 = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10117, dependencyMap.paths), "GIFPickerItemActionSheet", { item }, "stack");
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9702, dependencyMap.paths), "GIFPickerItemActionSheet", { item }, "stack");
     const obj2 = { item };
     const result = KeyboardManagerUtils.dismissGlobalKeyboard();
   }, items1);
@@ -78,7 +78,7 @@ export default function GIFPickerItemView(onPressGIF) {
   obj.children = jsx(item(index[14]), { style: gifImage, source: { uri: item.src } });
   return jsx(onPressGIF(index[13]).PressableOpacity, { style: tmp.container, accessibilityRole: "button", accessibilityLabel: memo, accessibilityState: null, onPress: null, onLongPress: null, children: null });
 };
-export const GIFPickerItemPlaceholder = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((height) => {
+export const GIFPickerItemPlaceholder = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function GIFPickerItemPlaceholder(height) {
   const cResult = c.c(5);
   const tmp2 = closure_6(height.height);
   if (cResult[0] !== tmp2.gifImage) {
@@ -102,7 +102,7 @@ export const GIFPickerItemPlaceholder = noop.memo(ReactCompilerGating.isReactCom
   cResult[4] = tmp8;
   tmp7 = tmp8;
   const obj3 = { style: tmp2.container, children: tmp3 };
-}) : ((height) => {
+}) : (function GIFPickerItemPlaceholder(height) {
   const tmp = closure_6(height.height);
   const obj = { style: tmp.container, children: <View style={tmp.gifImage} /> };
   return <View style={tmp.container}><View style={tmp.gifImage} /></View>;

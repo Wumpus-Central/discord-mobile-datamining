@@ -1,9 +1,9 @@
-// === Module 13757: GuildBadgeFire ===
+// === Module 13979: GuildBadgeFire ===
 
-// Module 13757 (GuildBadgeFire)
+// Module 13979 (GuildBadgeFire)
 import c from "c" /* 576 */;
-import inlineStyles from "inlineStyles" /* 8169 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 13748 */;
+import inlineStyles from "inlineStyles" /* 7550 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 13970 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgeFire.tsx");
 
-export const GuildBadgeFire = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const GuildBadgeFire = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBadgeFire(arg0) {
   const cResult = c.c(36);
   if (cResult[0] !== arg0) {
     ({ width, height, primaryTintColor } = arg0);
@@ -191,7 +191,7 @@ export const GuildBadgeFire = ReactCompilerGating.isReactCompilerEnabled() ? ((a
   cResult[34] = num6;
   cResult[35] = tmp51;
   tmp49 = tmp51;
-}) : ((primaryTintColor) => {
+}) : (function GuildBadgeFire(primaryTintColor) {
   let num = primaryTintColor.width;
   if (num === undefined) {
     num = 24;

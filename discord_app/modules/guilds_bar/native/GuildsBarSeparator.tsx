@@ -1,18 +1,18 @@
-// === Module 16326: GuildsBarSeparator ===
+// === Module 16586: GuildsBarSeparator ===
 
-// Module 16326 (GuildsBarSeparator)
+// Module 16586 (GuildsBarSeparator)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4586 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import NativeViewDefault from "NativeView" /* 5983 */;
-import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 6577 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 15988 */;
+import useToken from "useToken" /* 4778 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import NativeViewDefault from "NativeView" /* 6166 */;
+import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 6753 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 16248 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles((width) => {
   const obj = { separator: null };
   const size = { height: 1, width, marginTop: nativeDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN, marginBottom: nativeDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN, marginLeft: 12, marginRight: 12, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, transformOrigin: "0% 50%" };
@@ -22,12 +22,12 @@ let closure_4 = createStyles.createStyles((width) => {
 const __initData = { code: "function GuildsBarSeparatorTsx1(){const{panelTranslateX,guildItemSize}=this.__closure;return{transform:[{scaleX:Math.max(1,(panelTranslateX.get()+guildItemSize)/guildItemSize)}]};}" };
 const __initData2 = { code: "function GuildsBarSeparatorTsx2(){const{panelTranslateX,guildItemSize}=this.__closure;return{transform:[{scaleX:Math.max(1,(panelTranslateX.get()+guildItemSize)/guildItemSize)}]};}" };
 let ReactCompilerGating = fn(558);
-let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildItemSize) => {
+let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildsBarHomeDrawerSeparator(guildItemSize) {
   const cResult = c.c(3);
   guildItemSize = guildItemSize.guildItemSize;
   const tmp3 = closure_4(guildItemSize);
   const panelTranslateX = useHomeDrawerGesture.useHomeDrawerState().panelTranslateX;
-  const fn = function o() {
+  const fn = function n() {
     const obj = { transform: null };
     const items = [{ scaleX: Math.max(1, (panelTranslateX.get() + guildItemSize) / guildItemSize) }];
     obj.transform = items;
@@ -51,11 +51,11 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildItemSize) 
   cResult[1] = tmp3.separator;
   cResult[2] = tmp6;
   tmp5 = tmp6;
-}) : ((guildItemSize) => {
+}) : (function GuildsBarHomeDrawerSeparator(guildItemSize) {
   guildItemSize = guildItemSize.guildItemSize;
   const tmp = closure_4(guildItemSize);
   const panelTranslateX = useHomeDrawerGesture.useHomeDrawerState().panelTranslateX;
-  const fn = function n() {
+  const fn = function o() {
     const obj = { transform: null };
     const items = [{ scaleX: Math.max(1, (panelTranslateX.get() + guildItemSize) / guildItemSize) }];
     obj.transform = items;
@@ -74,7 +74,7 @@ ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarSeparator.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function GuildsBarSeparator() {
   const cResult = c.c(4);
   const token = useToken.useToken(nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE);
   const tmp5 = closure_4(token);
@@ -98,7 +98,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     return tmp6;
   }
   obj3 = useHomeDrawerGesture;
-}) : (() => {
+}) : (function GuildsBarSeparator() {
   const token = useToken.useToken(nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE);
   const tmp4 = closure_4(token);
   if (obj2.useIsHomeDrawerEnabled()) {

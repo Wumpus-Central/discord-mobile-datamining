@@ -1,24 +1,24 @@
-// === Module 12488: FocusModeUtils ===
+// === Module 12584: FocusModeUtils ===
 
-// Module 12488 (FocusModeUtils)
+// Module 12584 (FocusModeUtils)
 import c from "c" /* 576 */;
-import wrappers from "wrappers" /* 1228 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import UserSettings from "UserSettings" /* 2028 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5445 */;
+import wrappers from "wrappers" /* 1240 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import UserSettings from "UserSettings" /* 2040 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5755 */;
 
 const require = globalThis.__r;
 
-const AlertActionCreatorsDefault = tmp5(5714);
+const AlertActionCreatorsDefault = tmp5(5297);
 require = fn;
-const constants = fn(4528).NotificationSettingsUpdateType;
+const constants = fn(4720).NotificationSettingsUpdateType;
 const Constants = fn(1085);
 ({ AnalyticEvents: hasOwnProperty, StatusTypes: metroRequire } = Constants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notifications/FocusModeUtils.tsx");
 
-export const useFocusModeEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useFocusModeEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useFocusModeEnabled() {
   const cResult = c.c(3);
   const FocusMode = UserSettings.FocusMode;
   const setting = FocusMode.useSetting();
@@ -48,7 +48,7 @@ export const useFocusModeEnabled = ReactCompilerGating.isReactCompilerEnabled() 
   cResult[1] = setting1;
   cResult[2] = tmp5;
   tmp4 = tmp5;
-}) : (() => {
+}) : (function useFocusModeEnabled() {
   const FocusMode = UserSettings.FocusMode;
   let setting = FocusMode.useSetting();
   const FocusModeExpiresAtSetting = UserSettings.FocusModeExpiresAtSetting;

@@ -1,13 +1,13 @@
-// === Module 8815: CrunchyrollLinkSuccess ===
+// === Module 9173: CrunchyrollLinkSuccess ===
 
-// Module 8815 (CrunchyrollLinkSuccess)
+// Module 9173 (CrunchyrollLinkSuccess)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6626 */;
-import TwoWayLinkStyles from "TwoWayLinkStyles" /* 8774 */;
-import _modDef8816 from "module_8816" /* 8816 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6803 */;
+import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9120 */;
+import _modDef9174 from "module_9174" /* 9174 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,20 +15,20 @@ get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({ image: { width: 232, height: 108, marginBottom: 24 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkSuccess.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function CrunchyrollLinkDiscordSuccess(onClose) {
   const cResult = c.c(26);
   onClose = onClose.onClose;
   const tmp4 = closure_7();
   const twoWayLinkStyles = TwoWayLinkStyles.useTwoWayLinkStyles();
   ({ container, content } = twoWayLinkStyles);
   if (cResult[0] !== tmp4.image) {
-    const obj3 = { source: _modDef8816, style: tmp4.image };
+    const obj3 = { source: _modDef9174, style: tmp4.image };
     const tmp10 = hasOwnProperty(React3, obj3);
     cResult[0] = tmp4.image;
     cResult[1] = tmp10;
@@ -147,12 +147,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
   cResult[11] = tmp18;
   cResult[12] = tmp22;
   tmp21 = tmp22;
-}) : ((onClose) => {
+}) : (function CrunchyrollLinkDiscordSuccess(onClose) {
   const tmp = closure_7();
   const twoWayLinkStyles = TwoWayLinkStyles.useTwoWayLinkStyles();
   const obj2 = { style: twoWayLinkStyles.container, children: null };
   const obj3 = { style: twoWayLinkStyles.content, children: null };
-  const items = [hasOwnProperty(React3, { source: _modDef8816, style: tmp.image }), , ];
+  const items = [hasOwnProperty(React3, { source: _modDef9174, style: tmp.image }), , ];
   const obj5 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: null };
   const intl = util.intl;
   obj5.children = intl.string(util.t.Fnvxvk);

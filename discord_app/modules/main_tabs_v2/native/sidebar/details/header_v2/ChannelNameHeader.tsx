@@ -1,22 +1,22 @@
-// === Module 16937: ChannelNameHeader ===
+// === Module 17218: ChannelNameHeader ===
 
-// Module 16937 (ChannelNameHeader)
+// Module 17218 (ChannelNameHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import _modDef3689 from "module_3689" /* 3689 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import transitionToChannel from "transitionToChannel" /* 4907 */;
-import ChannelUtils from "ChannelUtils" /* 5041 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5819 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7861 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10661 */;
+import native from "native" /* 1200 */;
+import _modDef3763 from "module_3763" /* 3763 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import transitionToChannel from "transitionToChannel" /* 5101 */;
+import ChannelUtils from "ChannelUtils" /* 5410 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8134 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8279 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10261 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
-import PresenceStore from "PresenceStore" /* 4936 */;
-import UserStore from "UserStore" /* 1377 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
+import PresenceStore from "PresenceStore" /* 5106 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const View = fn(17).View;
@@ -24,7 +24,7 @@ const Constants = fn(1085);
 ({ Permissions: c10, StatusTypes: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { container: { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" }, channelIcon: { height: 40, width: 40, justifyContent: "center", alignItems: "center" }, channelTypeBox: null, channelData: null, statusStyle: null };
 let obj3 = { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" };
 obj.channelTypeBox = { borderRadius: nativeDefault.modules.mobile.CHANNEL_NAME_CHANNEL_ICON_RADIUS, borderWidth: nativeDefault.modules.mobile.CHANNEL_NAME_CHANNEL_BORDER_WIDTH, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
@@ -33,11 +33,10 @@ let obj4 = { borderRadius: nativeDefault.modules.mobile.CHANNEL_NAME_CHANNEL_ICO
 obj.statusStyle = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 let closure_15 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
-let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
-  let statusStyle = dependencyMap;
+let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function DirectMessageIcon(channel) {
   const cResult = channel(576).c(16);
   channel = channel.channel;
-  let statusStyle2 = closure_15();
+  closure_15();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
     cResult[0] = items;
@@ -51,94 +50,199 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     };
     cResult[1] = channel;
     cResult[2] = fn;
-    let tmp5 = fn;
+    let tmp7 = fn;
   } else {
-    tmp5 = cResult[2];
+    tmp7 = cResult[2];
   }
   let obj = channel(576);
-  const stateFromStores = channel(504).useStateFromStores(first, tmp5);
+  const stateFromStores = channel(504).useStateFromStores(first, tmp7);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [PresenceStore];
     cResult[3] = items1;
-    let tmp6 = items1;
+    let tmp9 = items1;
   } else {
-    tmp6 = cResult[3];
+    tmp9 = cResult[3];
   }
   if (cResult[4] !== stateFromStores) {
-    const fn2 = function y() {
-      let isMobileOnlineResult = null != stateFromStores;
-      if (isMobileOnlineResult) {
-        isMobileOnlineResult = PresenceStore.isMobileOnline(stateFromStores.id);
+    class C {
+      constructor() {
+        tmp = closure_1;
+        isMobileOnlineResult = null != closure_1;
+        if (isMobileOnlineResult) {
+          tmp3 = closure_8;
+          isMobileOnlineResult = closure_8.isMobileOnline(tmp.id);
+        }
+        obj = { isMobileOnline: isMobileOnlineResult, isVROnline: null, status: null };
+        isVROnlineResult = null != tmp;
+        if (isVROnlineResult) {
+          tmp5 = closure_8;
+          isVROnlineResult = closure_8.isVROnline(tmp.id);
+        }
+        obj.isVROnline = isVROnlineResult;
+        if (null != tmp) {
+          tmp7 = closure_8;
+          UNKNOWN = closure_8.getStatus(tmp.id);
+        } else {
+          tmp6 = StatusTypes;
+          UNKNOWN = StatusTypes.UNKNOWN;
+        }
+        obj.status = UNKNOWN;
+        return obj;
       }
-      const obj = { isMobileOnline: isMobileOnlineResult, isVROnline: null, status: null };
-      let isVROnlineResult = null != stateFromStores;
-      if (isVROnlineResult) {
-        isVROnlineResult = PresenceStore.isVROnline(stateFromStores.id);
-      }
-      obj.isVROnline = isVROnlineResult;
-      if (null != stateFromStores) {
-        let UNKNOWN = PresenceStore.getStatus(stateFromStores.id);
-      } else {
-        UNKNOWN = constants2.UNKNOWN;
-      }
-      obj.status = UNKNOWN;
-      return obj;
-    };
+    }
     const items2 = [stateFromStores];
     cResult[4] = stateFromStores;
-    cResult[5] = fn2;
+    cResult[5] = C;
     cResult[6] = items2;
-    let tmp9 = items2;
-    let tmp8 = fn2;
+    let tmp12 = items2;
   } else {
-    tmp8 = cResult[5];
-    tmp9 = cResult[6];
+    class C {
+      constructor() {
+        tmp = closure_1;
+        isMobileOnlineResult = null != closure_1;
+        if (isMobileOnlineResult) {
+          tmp3 = closure_8;
+          isMobileOnlineResult = closure_8.isMobileOnline(tmp.id);
+        }
+        obj = { isMobileOnline: isMobileOnlineResult, isVROnline: null, status: null };
+        isVROnlineResult = null != tmp;
+        if (isVROnlineResult) {
+          tmp5 = closure_8;
+          isVROnlineResult = closure_8.isVROnline(tmp.id);
+        }
+        obj.isVROnline = isVROnlineResult;
+        if (null != tmp) {
+          tmp7 = closure_8;
+          UNKNOWN = closure_8.getStatus(tmp.id);
+        } else {
+          tmp6 = StatusTypes;
+          UNKNOWN = StatusTypes.UNKNOWN;
+        }
+        obj.status = UNKNOWN;
+        return obj;
+      }
+    }
+    tmp12 = cResult[6];
   }
   const tmpResult = channel(504);
-  const stateFromStoresObject = channel(504).useStateFromStoresObject(tmp6, tmp8, tmp9);
+  const stateFromStoresObject = channel(504).useStateFromStoresObject(tmp9, C, tmp12);
   ({ isMobileOnline, isVROnline, status } = stateFromStoresObject);
   if (null == stateFromStores) {
-    return null;
-  } else {
-    if (cResult[7] === status) {
-      if (cResult[8] === stateFromStores) {
-        let tmp11 = cResult[9];
+    class C {
+      constructor() {
+        tmp = closure_1;
+        isMobileOnlineResult = null != closure_1;
+        if (isMobileOnlineResult) {
+          tmp3 = closure_8;
+          isMobileOnlineResult = closure_8.isMobileOnline(tmp.id);
+        }
+        obj = { isMobileOnline: isMobileOnlineResult, isVROnline: null, status: null };
+        isVROnlineResult = null != tmp;
+        if (isVROnlineResult) {
+          tmp5 = closure_8;
+          isVROnlineResult = closure_8.isVROnline(tmp.id);
+        }
+        obj.isVROnline = isVROnlineResult;
+        if (null != tmp) {
+          tmp7 = closure_8;
+          UNKNOWN = closure_8.getStatus(tmp.id);
+        } else {
+          tmp6 = StatusTypes;
+          UNKNOWN = StatusTypes.UNKNOWN;
+        }
+        obj.status = UNKNOWN;
+        return obj;
       }
-      if (cResult[10] === isMobileOnline) {
-        if (cResult[11] === isVROnline) {
-          if (cResult[12] === statusStyle2.statusStyle) {
-            if (cResult[13] === tmp11) {
-            }
+    }
+  } else {
+    class C {
+      constructor() {
+        tmp = closure_1;
+        isMobileOnlineResult = null != closure_1;
+        if (isMobileOnlineResult) {
+          tmp3 = closure_8;
+          isMobileOnlineResult = closure_8.isMobileOnline(tmp.id);
+        }
+        obj = { isMobileOnline: isMobileOnlineResult, isVROnline: null, status: null };
+        isVROnlineResult = null != tmp;
+        if (isVROnlineResult) {
+          tmp5 = closure_8;
+          isVROnlineResult = closure_8.isVROnline(tmp.id);
+        }
+        obj.isVROnline = isVROnlineResult;
+        if (null != tmp) {
+          tmp7 = closure_8;
+          UNKNOWN = closure_8.getStatus(tmp.id);
+        } else {
+          tmp6 = StatusTypes;
+          UNKNOWN = StatusTypes.UNKNOWN;
+        }
+        obj.status = UNKNOWN;
+        return obj;
+      }
+    }
+    if (stateFromStores != null) {
+      class C {
+        constructor() {
+          tmp = closure_1;
+          isMobileOnlineResult = null != closure_1;
+          if (isMobileOnlineResult) {
+            tmp3 = closure_8;
+            isMobileOnlineResult = closure_8.isMobileOnline(tmp.id);
           }
+          obj = { isMobileOnline: isMobileOnlineResult, isVROnline: null, status: null };
+          isVROnlineResult = null != tmp;
+          if (isVROnlineResult) {
+            tmp5 = closure_8;
+            isVROnlineResult = closure_8.isVROnline(tmp.id);
+          }
+          obj.isVROnline = isVROnlineResult;
+          if (null != tmp) {
+            tmp7 = closure_8;
+            UNKNOWN = closure_8.getStatus(tmp.id);
+          } else {
+            tmp6 = StatusTypes;
+            UNKNOWN = StatusTypes.UNKNOWN;
+          }
+          obj.status = UNKNOWN;
+          return obj;
         }
       }
-      const obj2 = { avatarDecoration: stateFromStores.avatarDecoration, user: stateFromStores, guildId: "Boolean", size: tmp(1188).AvatarSizes.NORMAL, status: tmp11, isMobileOnline, isVROnline, statusStyle: null };
-      statusStyle = statusStyle2.statusStyle;
-      obj2.statusStyle = statusStyle;
-      const tmp16 = closure_12(tmp(1188).Avatar, obj2);
-      cResult[10] = isMobileOnline;
-      cResult[11] = isVROnline;
-      statusStyle2 = statusStyle2.statusStyle;
-      cResult[12] = statusStyle2;
-      cResult[13] = tmp11;
-      cResult[14] = stateFromStores;
-      cResult[15] = tmp16;
     }
-    let isSystemUserResult;
-    if (stateFromStores != null) {
-      isSystemUserResult = stateFromStores.isSystemUser();
-    }
-    let tmp13 = null;
-    if (!isSystemUserResult) {
-      tmp13 = status;
+    if (!undefined) {
+      class C {
+        constructor() {
+          tmp = closure_1;
+          isMobileOnlineResult = null != closure_1;
+          if (isMobileOnlineResult) {
+            tmp3 = closure_8;
+            isMobileOnlineResult = closure_8.isMobileOnline(tmp.id);
+          }
+          obj = { isMobileOnline: isMobileOnlineResult, isVROnline: null, status: null };
+          isVROnlineResult = null != tmp;
+          if (isVROnlineResult) {
+            tmp5 = closure_8;
+            isVROnlineResult = closure_8.isVROnline(tmp.id);
+          }
+          obj.isVROnline = isVROnlineResult;
+          if (null != tmp) {
+            tmp7 = closure_8;
+            UNKNOWN = closure_8.getStatus(tmp.id);
+          } else {
+            tmp6 = StatusTypes;
+            UNKNOWN = StatusTypes.UNKNOWN;
+          }
+          obj.status = UNKNOWN;
+          return obj;
+        }
+      }
     }
     cResult[7] = status;
     cResult[8] = stateFromStores;
-    cResult[9] = tmp13;
-    tmp11 = tmp13;
+    cResult[9] = null;
   }
   const tmpResult2 = channel(504);
-}) : ((channel) => {
+}) : (function DirectMessageIcon(channel) {
   channel = channel.channel;
   const tmp = closure_15();
   const items = [UserStore];
@@ -167,7 +271,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   }, items2);
   let tmp9Result = null;
   if (null != stateFromStores) {
-    const obj2 = { avatarDecoration: stateFromStores.avatarDecoration, user: stateFromStores, guildId: "Boolean", size: tmp2(1188).AvatarSizes.NORMAL, status: false, isMobileOnline: null, isVROnline: true, statusStyle: null };
+    const obj2 = { avatarDecoration: stateFromStores.avatarDecoration, user: stateFromStores, guildId: "Boolean", size: tmp2(1200).AvatarSizes.NORMAL, status: false, isMobileOnline: null, isVROnline: true, statusStyle: null };
     let isSystemUserResult;
     if (stateFromStores != null) {
       isSystemUserResult = stateFromStores.isSystemUser();
@@ -180,12 +284,12 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     obj2.isMobileOnline = tmp5;
     obj2.isVROnline = tmp6;
     obj2.statusStyle = tmp.statusStyle;
-    tmp9Result = closure_12(tmp2(1188).Avatar, obj2);
+    tmp9Result = closure_12(tmp2(1200).Avatar, obj2);
   }
   return tmp9Result;
 });
 ReactCompilerGating = fn(558);
-let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function ThreadParentChannelLink(channel) {
   const cResult = channel(navigation[12]).c(10);
   channel = channel.channel;
   const tmp4 = require("useChannelName")(channel, true);
@@ -242,7 +346,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   cResult[2] = fn;
   tmp6 = fn;
   const obj2 = channel(navigation[16]);
-}) : ((channel) => {
+}) : (function ThreadParentChannelLink(channel) {
   channel = channel.channel;
   importDefault = undefined;
   let navigation;
@@ -267,7 +371,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   return closure_12(channel(navigation[20]).PressableOpacity, obj2);
 });
 ReactCompilerGating = fn(558);
-let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelSubtitle(channel) {
   let Text = channel;
   let tmp = dependencyMap;
   const cResult = channel(576).c(9);
@@ -308,7 +412,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
       tmp13 = null;
       if ("" !== tmp8) {
         if (cResult[7] !== tmp8) {
-          Text = Text(4892).Text;
+          Text = Text(5086).Text;
           const obj2 = { variant: "text-sm/medium", color: "text-muted", lineClamp: 1, children: tmp8 };
           tmp = closure_12(Text, obj2);
           cResult[7] = tmp8;
@@ -325,13 +429,13 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     tmp8 = stateFromStores;
   } else if (channel.isGameInvitesChannel()) {
     const intl = Text(1126).intl;
-    let stringResult = intl.string(_modDef3689["D+2/QP"]);
+    let stringResult = intl.string(_modDef3763["D+2/QP"]);
   } else {
-    stringResult = Text(5041).channelTypeString(channel);
-    const TextResult1 = Text(5041);
+    stringResult = Text(5410).channelTypeString(channel);
+    const TextResult1 = Text(5410);
   }
   const TextResult = Text(504);
-}) : ((channel) => {
+}) : (function ChannelSubtitle(channel) {
   channel = channel.channel;
   const items = [UserStore];
   const items1 = [channel];
@@ -348,25 +452,25 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
       tmp8 = null;
       if ("" !== stateFromStores) {
         const obj2 = { variant: "text-sm/medium", color: "text-muted", lineClamp: 1, children: stateFromStores };
-        tmp8 = closure_12(tmp(4892).Text, obj2);
+        tmp8 = closure_12(tmp(5086).Text, obj2);
       }
     }
     return tmp8;
   } else if (channel.isGameInvitesChannel()) {
     const intl = tmp(1126).intl;
-    let stringResult = intl.string(_modDef3689["D+2/QP"]);
+    let stringResult = intl.string(_modDef3763["D+2/QP"]);
   } else {
-    stringResult = tmp(5041).channelTypeString(channel);
-    const tmpResult = tmp(5041);
+    stringResult = tmp(5410).channelTypeString(channel);
+    const tmpResult = tmp(5410);
   }
   let obj = channel(504);
 });
 ReactCompilerGating = fn(558);
-let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelNameHeaderContent(channel) {
   const cResult = channel(576).c(48);
   channel = channel.channel;
   closure_15();
-  stateFromStores(5049)(channel);
+  stateFromStores(5417)(channel);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ChannelStore];
     cResult[0] = items;
@@ -402,7 +506,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     tmp11 = cResult[4];
   }
   if (cResult[5] !== stateFromStores) {
-    class M {
+    class D {
       constructor() {
         canResult = null != closure_1;
         if (canResult) {
@@ -415,11 +519,11 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     }
     const items3 = [stateFromStores];
     cResult[5] = stateFromStores;
-    cResult[6] = M;
+    cResult[6] = D;
     cResult[7] = items3;
     let tmp14 = items3;
   } else {
-    class M {
+    class D {
       constructor() {
         canResult = null != closure_1;
         if (canResult) {
@@ -433,9 +537,9 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     tmp14 = cResult[7];
   }
   const tmpResult = channel(504);
-  const stateFromStores1 = channel(504).useStateFromStores(tmp11, M, tmp14);
+  const stateFromStores1 = channel(504).useStateFromStores(tmp11, D, tmp14);
   if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-    class M {
+    class D {
       constructor() {
         canResult = null != closure_1;
         if (canResult) {
@@ -450,7 +554,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     cResult[8] = items4;
     const tmp16 = items4;
   } else {
-    class M {
+    class D {
       constructor() {
         canResult = null != closure_1;
         if (canResult) {
@@ -463,7 +567,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     }
   }
   if (cResult[9] === channel.guild_id) {
-    class M {
+    class D {
       constructor() {
         canResult = null != closure_1;
         if (canResult) {
@@ -476,7 +580,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     }
     const stateFromStores2 = tmp(504).useStateFromStores(tmp16, A, items5);
     if (cResult[13] === stateFromStores1) {
-      class M {
+      class D {
         constructor() {
           canResult = null != closure_1;
           if (canResult) {
@@ -489,7 +593,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
       }
     }
     if (null == stateFromStores) {
-      class M {
+      class D {
         constructor() {
           canResult = null != closure_1;
           if (canResult) {
@@ -507,7 +611,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
       cResult[15] = stateFromStores;
       cResult[16] = tmp20;
     } else {
-      class M {
+      class D {
         constructor() {
           canResult = null != closure_1;
           if (canResult) {
@@ -541,7 +645,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   cResult[11] = A;
   cResult[12] = items5;
   const tmpResult3 = channel(504);
-}) : ((channel) => {
+}) : (function ChannelNameHeaderContent(channel) {
   channel = channel.channel;
   let stateFromStores;
   const tmp = closure_15();
@@ -639,12 +743,12 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   return closure_13(closure_14, obj7);
 });
 ReactCompilerGating = fn(558);
-let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function DMChannelNameHeader(channel) {
   const cResult = channel(576).c(12);
   channel = channel.channel;
   const containerStyle = channel.containerStyle;
   const tmp4 = closure_15();
-  analyticsLocations = analyticsLocations(6664)().analyticsLocations;
+  analyticsLocations = analyticsLocations(6841)().analyticsLocations;
   if (cResult[0] === analyticsLocations) {
     if (cResult[1] === channel) {
       let tmp5 = cResult[2];
@@ -671,7 +775,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
         }
       }
       const obj3 = { style: tmp6, onPress: tmp5, children: tmp7 };
-      const tmp13 = closure_12(tmp(5916).PressableOpacity, obj3);
+      const tmp13 = closure_12(tmp(6189).PressableOpacity, obj3);
       cResult[8] = tmp5;
       cResult[9] = tmp6;
       cResult[10] = tmp7;
@@ -697,10 +801,10 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   tmp5 = fn;
   let obj = channel(576);
   tmp = channel;
-}) : ((channel) => {
+}) : (function DMChannelNameHeader(channel) {
   channel = channel.channel;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(6664)().analyticsLocations;
+  analyticsLocations = analyticsLocations(6841)().analyticsLocations;
   const items = [channel, analyticsLocations];
   const callback = noop.useCallback(() => {
     const recipientId = channel.getRecipientId();
@@ -712,10 +816,10 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   let obj = { style: null, onPress: callback, children: closure_12(closure_19, { channel }) };
   const items1 = [closure_15().container, channel.containerStyle];
   obj.style = items1;
-  return closure_12(channel(5916).PressableOpacity, obj);
+  return closure_12(channel(6189).PressableOpacity, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function DefaultChannelNameHeader(arg0) {
   const cResult = c.c(8);
   ({ channel, containerStyle } = arg0);
   const tmp2 = closure_15();
@@ -750,7 +854,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = tmp2.container;
   cResult[2] = items;
   tmp3 = items;
-}) : ((arg0) => {
+}) : (function DefaultChannelNameHeader(arg0) {
   ({ channel, containerStyle } = arg0);
   const obj = { style: null, children: null };
   const items = [closure_15().container, containerStyle];
@@ -763,7 +867,7 @@ let obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/header_v2/ChannelNameHeader.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelNameHeader(arg0) {
   const cResult = c.c(6);
   ({ channel, containerStyle } = arg0);
   if (channel.isDM()) {
@@ -788,7 +892,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
     cResult[5] = tmp5;
     tmp2 = tmp5;
   }
-}) : ((arg0) => {
+}) : (function ChannelNameHeader(arg0) {
   ({ channel, containerStyle } = arg0);
   if (channel.isDM()) {
     const obj2 = { channel, containerStyle };

@@ -1,10 +1,10 @@
-// === Module 4757: PortalKeyboard ===
+// === Module 4951: PortalKeyboard ===
 
-// Module 4757 (PortalKeyboard)
+// Module 4951 (PortalKeyboard)
 import c from "c" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4742 */;
-import Portal from "Portal" /* 4758 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4936 */;
+import Portal from "Portal" /* 4952 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ let c3 = "default";
 const modal = "modal";
 fn(558);
 const ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function PortalKeyboard(children) {
   const cResult = c.c(3);
   children = children.children;
   if (obj2.useIsModalOpen()) {
@@ -36,7 +36,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
   }
   tmp4 = c3;
   obj2 = NavigationRouteUtils;
-}) : ((children) => {
+}) : (function PortalKeyboard(children) {
   if (obj.useIsModalOpen()) {
     if (tmpResult.isIOS()) {
       let tmp3 = modal;
@@ -54,7 +54,7 @@ export const PortalKeyboardState = { EMPTY: "empty", REQUEST_OPEN: "request_open
 export const PORTAL_HOST_NAME_DEFAULT = "default";
 export const PORTAL_HOST_NAME_MODAL = "modal";
 export const PortalKeyboard = tmp3;
-export const PortalKeyboardHost = ReactCompilerGating.isReactCompilerEnabled() ? ((name) => {
+export const PortalKeyboardHost = ReactCompilerGating.isReactCompilerEnabled() ? (function PortalKeyboardHost(name) {
   const cResult = c.c(2);
   name = name.name;
   if (undefined === name) {
@@ -70,7 +70,7 @@ export const PortalKeyboardHost = ReactCompilerGating.isReactCompilerEnabled() ?
     tmp4 = cResult[1];
   }
   return tmp4;
-}) : ((name) => {
+}) : (function PortalKeyboardHost(name) {
   name = name.name;
   if (name === undefined) {
     name = c3;

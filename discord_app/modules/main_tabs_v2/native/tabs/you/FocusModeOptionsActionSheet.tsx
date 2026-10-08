@@ -1,6 +1,6 @@
-// === Module 16360: FocusModeOptionsActionSheet ===
+// === Module 16620: FocusModeOptionsActionSheet ===
 
-// Module 16360 (FocusModeOptionsActionSheet)
+// Module 16620 (FocusModeOptionsActionSheet)
 import DurationsDefault from "Durations" /* 1102 */;
 import util from "util" /* 1126 */;
 import noop from "module_19" /* 19 */;
@@ -97,11 +97,11 @@ let obj5 = {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/FocusModeOptionsActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onSelect) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FocusModeOptionsActionSheet(onSelect) {
   const cResult = onSelect(576).c(9);
   onSelect = onSelect.onSelect;
   const obj = onSelect(576);
-  const focusModeEnabled = onSelect(12488).useFocusModeEnabled();
+  const focusModeEnabled = onSelect(12584).useFocusModeEnabled();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = tmp(1126).intl;
     const stringResult = intl.string(tmp(1126).t["sNX1E+"]);
@@ -144,8 +144,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onSelect) => {
     const obj4 = { title: first, hasIcons: false, children: null };
     items = [tmp7, tmp10];
     obj4.children = items;
-    obj3.children = closure_3(tmp(6081).TableRowGroup, obj4);
-    const tmp16 = closure_2(tmp(6708).ActionSheet, obj3);
+    obj3.children = closure_3(tmp(6267).TableRowGroup, obj4);
+    const tmp16 = closure_2(tmp(6885).ActionSheet, obj3);
     cResult[6] = tmp7;
     cResult[7] = tmp10;
     cResult[8] = tmp16;
@@ -163,16 +163,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onSelect) => {
     };
     const intl4 = tmp(1126).intl;
     obj5.label = intl4.string(tmp(1126).t.rk35Gm);
-    tmp8 = closure_2(tmp(6000).TableRow, obj5);
+    tmp8 = closure_2(tmp(6184).TableRow, obj5);
   }
   cResult[1] = focusModeEnabled;
   cResult[2] = onSelect;
   cResult[3] = tmp8;
   tmp7 = tmp8;
-  const obj2 = onSelect(12488);
-}) : ((onSelect) => {
+  const obj2 = onSelect(12584);
+}) : (function FocusModeOptionsActionSheet(onSelect) {
   onSelect = onSelect.onSelect;
-  const focusModeEnabled = onSelect(12488).useFocusModeEnabled();
+  const focusModeEnabled = onSelect(12584).useFocusModeEnabled();
   const obj2 = { title: null, hasIcons: false, children: null };
   const intl = onSelect(1126).intl;
   obj2.title = intl.string(onSelect(1126).t["sNX1E+"]);
@@ -188,7 +188,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onSelect) => {
     };
     const intl4 = tmp(1126).intl;
     obj3.label = intl4.string(tmp(1126).t.rk35Gm);
-    tmp4Result = closure_2(tmp(6000).TableRow, obj3);
+    tmp4Result = closure_2(tmp(6184).TableRow, obj3);
   }
   const obj4 = { children: null };
   items = [tmp4Result, ];
@@ -206,6 +206,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onSelect) => {
     }, "" + duration);
   });
   obj2.children = items;
-  obj4.children = closure_3(onSelect(6081).TableRowGroup, obj2);
-  return closure_2(onSelect(6708).ActionSheet, obj4);
+  obj4.children = closure_3(onSelect(6267).TableRowGroup, obj2);
+  return closure_2(onSelect(6885).ActionSheet, obj4);
 });

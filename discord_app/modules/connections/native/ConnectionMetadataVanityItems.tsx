@@ -1,25 +1,25 @@
-// === Module 11205: ConnectionMetadataVanityItems ===
+// === Module 11322: ConnectionMetadataVanityItems ===
 
-// Module 11205 (ConnectionMetadataVanityItems)
+// Module 11322 (ConnectionMetadataVanityItems)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import NumberUtils from "NumberUtils" /* 1888 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import ConnectionsUtils from "ConnectionsUtils" /* 6685 */;
-import _modDef11206 from "module_11206" /* 11206 */;
-import _modDef11207 from "module_11207" /* 11207 */;
+import native from "native" /* 1200 */;
+import NumberUtils from "NumberUtils" /* 1900 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import ConnectionsUtils from "ConnectionsUtils" /* 6862 */;
+import _modDef11323 from "module_11323" /* 11323 */;
+import _modDef11324 from "module_11324" /* 11324 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(6686);
+const Constants = fn(6863);
 ({ MetadataFields: closure_4, MetadataItemTypes: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { connectedAccountVanityMetadata: { marginTop: 4, paddingRight: 8 }, connectedAccountVanityMetadataItem: { flexDirection: "row", alignItems: "center" }, connectedAccountVanityMetadataItemIcon: { height: 18, width: 18, marginRight: 8 }, connectedAccountVanityMetadataTag: { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, paddingHorizontal: 8, paddingVertical: 1, marginRight: 8 }, paypalVerifiedTag: null, paypalVerifiedTagText: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, paddingHorizontal: 8, paddingVertical: 1, marginRight: 8 };
 obj2.paypalVerifiedTag = { backgroundColor: nativeDefault.colors.STATUS_POSITIVE_BACKGROUND };
@@ -27,7 +27,7 @@ let obj4 = { backgroundColor: nativeDefault.colors.STATUS_POSITIVE_BACKGROUND };
 obj2.paypalVerifiedTagText = { color: nativeDefault.colors.WHITE };
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function PaypalVanityTag(style) {
   const cResult = c.c(7);
   style = style.style;
   const tmp4 = closure_8();
@@ -62,7 +62,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
   cResult[1] = tmp4.paypalVerifiedTag;
   cResult[2] = items;
   tmp5 = items;
-}) : ((style) => {
+}) : (function PaypalVanityTag(style) {
   const tmp = closure_8();
   const obj = { style: null, label: null, textStyle: null };
   const items = [tmp.paypalVerifiedTag, style.style];
@@ -73,7 +73,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
   return timestampProducer(closure_12, obj, constants.PAYPAL_VERIFIED);
 });
 ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function VanityMetric(arg0) {
   const cResult = c.c(12);
   ({ label, style } = arg0);
   ({ count, percent } = arg0);
@@ -129,7 +129,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[5] = formatResult1;
     tmp7 = formatResult1;
   }
-}) : ((label) => {
+}) : (function VanityMetric(label) {
   label = label.label;
   ({ count, style, percent } = label);
   const tmp = closure_8();
@@ -154,7 +154,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return timestampProducer(Text_Text.Text, obj4);
 });
 ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function VanityItem(arg0) {
   const cResult = c.c(15);
   ({ label, imageSrc, imageAlt, style } = arg0);
   const tmp4 = closure_8();
@@ -215,7 +215,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = tmp4.connectedAccountVanityMetadataItem;
   cResult[3] = items1;
   tmp5 = items1;
-}) : ((style) => {
+}) : (function VanityItem(style) {
   style = style.style;
   ({ label, imageSrc, imageAlt } = style);
   const tmp = closure_8();
@@ -229,7 +229,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return React5(View, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function VanityTag(arg0) {
   const cResult = c.c(10);
   ({ label, style, textStyle } = arg0);
   const tmp4 = closure_8();
@@ -271,7 +271,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = tmp4.connectedAccountVanityMetadataTag;
   cResult[3] = items;
   tmp5 = items;
-}) : ((arg0) => {
+}) : (function VanityTag(arg0) {
   ({ label, style, textStyle } = arg0);
   const obj = { style: null, children: timestampProducer(Text_Text.Text, { variant: "text-xs/normal", color: "text-muted", style: textStyle, children: label }) };
   const items = [, , ];
@@ -281,7 +281,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return timestampProducer(View, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function VanityDate(arg0) {
   const cResult = c.c(10);
   ({ date, label, locale, style } = arg0);
   const tmp4 = closure_8();
@@ -323,7 +323,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = tmp4.connectedAccountVanityMetadata;
   cResult[2] = items;
   tmp5 = items;
-}) : ((arg0) => {
+}) : (function VanityDate(arg0) {
   ({ date, label, locale, style } = arg0);
   const obj = { variant: "text-xs/normal", color: "text-muted", style: null, children: null };
   const items = [closure_8().connectedAccountVanityMetadata, style];
@@ -434,7 +434,7 @@ export const generateSteamMetadataItems = function generateSteamMetadataItems(me
     const intl = util.intl;
     const obj3 = { count: NumberResult1 };
     obj2.label = intl.format(util.t.Y88M5x, obj3);
-    obj2.imageSrc = _modDef11206;
+    obj2.imageSrc = _modDef11323;
     const intl2 = util.intl;
     obj2.imageAlt = intl2.string(util.t.HKUEZo);
     items.push(timestampProducer(closure_11, obj2, constants.STEAM_ITEM_COUNT_DOTA2));
@@ -444,7 +444,7 @@ export const generateSteamMetadataItems = function generateSteamMetadataItems(me
     const intl3 = util.intl;
     const obj5 = { count: NumberResult2 };
     obj4.label = intl3.format(util.t.Y88M5x, obj5);
-    obj4.imageSrc = _modDef11207;
+    obj4.imageSrc = _modDef11324;
     const intl4 = util.intl;
     obj4.imageAlt = intl4.string(util.t.C8p1Sh);
     items.push(timestampProducer(closure_11, obj4, constants.STEAM_ITEM_COUNT_TF2));

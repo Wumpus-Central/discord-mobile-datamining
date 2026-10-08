@@ -1,21 +1,21 @@
-// === Module 14743: FamilyCenterRequestorDetails ===
+// === Module 15004: FamilyCenterRequestorDetails ===
 
-// Module 14743 (FamilyCenterRequestorDetails)
+// Module 15004 (FamilyCenterRequestorDetails)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import useUserLinks from "useUserLinks" /* 8328 */;
-import FamilyCenterUsernameHeaderDefault from "FamilyCenterUsernameHeader" /* 14716 */;
+import native from "native" /* 1200 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import useUserLinks from "useUserLinks" /* 7711 */;
+import FamilyCenterUsernameHeaderDefault from "FamilyCenterUsernameHeader" /* 14977 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
-let obj2 = { container: { display: "flex", flexDirection: "row", flexGrow: 1, flexShrink: 1 }, avatar: { borderRadius: fn(1188).AVATAR_SIZE_MAP[fn(undefined, 1188).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, detailsContainer: null };
-let obj3 = { borderRadius: fn(1188).AVATAR_SIZE_MAP[fn(undefined, 1188).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+const createStyles = fn(5090);
+let obj2 = { container: { display: "flex", flexDirection: "row", flexGrow: 1, flexShrink: 1 }, avatar: { borderRadius: fn(1200).AVATAR_SIZE_MAP[fn(undefined, 1200).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, detailsContainer: null };
+let obj3 = { borderRadius: fn(1200).AVATAR_SIZE_MAP[fn(undefined, 1200).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.detailsContainer = { paddingLeft: nativeDefault.space.PX_12, paddingRight: nativeDefault.space.PX_4, flexGrow: 1, flexShrink: 1 };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -23,7 +23,7 @@ let obj4 = { paddingLeft: nativeDefault.space.PX_12, paddingRight: nativeDefault
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterRequestorDetails.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((otherUser) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCenterRequestorDetails(otherUser) {
   const cResult = c.c(15);
   otherUser = otherUser.otherUser;
   const tmp4 = closure_6();
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((otherUser) => {
   cResult[1] = tmp4.avatar;
   cResult[2] = tmp7;
   tmp6 = tmp7;
-}) : ((otherUser) => {
+}) : (function FamilyCenterRequestorDetails(otherUser) {
   otherUser = otherUser.otherUser;
   const tmp = closure_6();
   const obj2 = { style: tmp.container, children: null };

@@ -1,30 +1,30 @@
-// === Module 14551: SettingsAgeGroupScreen ===
+// === Module 14812: SettingsAgeGroupScreen ===
 
-// Module 14551 (SettingsAgeGroupScreen)
+// Module 14812 (SettingsAgeGroupScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
-import _modDef3073 from "module_3073" /* 3073 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8117 */;
-import SettingBuilders from "SettingBuilders" /* 11142 */;
-import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 14511 */;
-import SettingLayoutDefault from "SettingLayout" /* 14515 */;
-import TinyBroncoAgeGroupHeader2 from "TinyBroncoAgeGroupHeader" /* 14552 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2127 */;
+import _modDef3117 from "module_3117" /* 3117 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7492 */;
+import SettingBuilders from "SettingBuilders" /* 11262 */;
+import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 14771 */;
+import SettingLayoutDefault from "SettingLayout" /* 14775 */;
+import TinyBroncoAgeGroupHeader2 from "TinyBroncoAgeGroupHeader" /* 14813 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const MobileUserSettings = fn(7645).MobileUserSettings;
+const MobileUserSettings = fn(7966).MobileUserSettings;
 const HelpdeskArticles = fn(1085).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { headerContainer: { gap: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16 } };
 let closure_9 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function SettingsAgeGroupHeader() {
   const cResult = c.c(5);
   const tmp4 = closure_9();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -40,7 +40,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = util.intl;
-    obj2.children = intl.string(_modDef3073.PY4MA0);
+    obj2.children = intl.string(_modDef3117.PY4MA0);
     const tmp9 = React5(Text_Text.Text, obj2);
     cResult[1] = tmp9;
     let tmp6 = tmp9;
@@ -51,7 +51,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const obj3 = { variant: "text-sm/normal", color: "text-default", children: null };
     const intl2 = util.intl;
     const obj4 = { handleOnHelpUrlHook: first };
-    obj3.children = intl2.format(_modDef3073["1DN29p"], obj4);
+    obj3.children = intl2.format(_modDef3117["1DN29p"], obj4);
     const tmp13 = React5(Text_Text.Text, obj3);
     cResult[2] = tmp13;
     let tmp10 = tmp13;
@@ -70,7 +70,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp14 = cResult[4];
   }
   return tmp14;
-}) : (() => {
+}) : (function SettingsAgeGroupHeader() {
   let obj = { style: closure_9().headerContainer, children: null };
   const callback = noop.useCallback(() => {
     const obj = AgeVerificationActionCreatorsDefault;
@@ -78,11 +78,11 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }, []);
   const obj2 = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
-  obj2.children = intl.string(_modDef3073.PY4MA0);
+  obj2.children = intl.string(_modDef3117.PY4MA0);
   const items = [React5(Text_Text.Text, obj2), ];
   const obj3 = { variant: "text-sm/normal", color: "text-default", children: null };
   const intl2 = util.intl;
-  obj3.children = intl2.format(_modDef3073["1DN29p"], { handleOnHelpUrlHook: callback });
+  obj3.children = intl2.format(_modDef3117["1DN29p"], { handleOnHelpUrlHook: callback });
   items[1] = React5(Text_Text.Text, obj3);
   obj.children = items;
   return closure_1_8(View, obj);
@@ -92,14 +92,14 @@ let obj3 = { gap: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.spa
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/age_group/native/SettingsAgeGroupScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SettingsAgeGroupScreen() {
   const cResult = c.c(4);
   const isTinyBroncoSettingsEnabled = TinyBroncoSettingsPredicate.useIsTinyBroncoSettingsEnabled();
   if (cResult[0] !== isTinyBroncoSettingsEnabled) {
     let obj3 = { sections: null, ListHeaderComponent: null };
     const obj4 = { label: null, settings: null };
     const intl = util.intl;
-    obj4.label = intl.string(_modDef3073["5Mi5TE"]);
+    obj4.label = intl.string(_modDef3117["5Mi5TE"]);
     const items = [, , ];
     ({ AGE_GROUP_CONFIRM: arr[0], AGE_GROUP_RESET: arr[1], AGE_GROUP_CONFIRM_ACCOUNT_STATUS: arr[2] } = MobileUserSettings);
     obj4.settings = items;
@@ -127,14 +127,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
     return tmp9;
   }
-}) : (() => {
-  isTinyBroncoSettingsEnabled = isTinyBroncoSettingsEnabled(14511).useIsTinyBroncoSettingsEnabled();
+}) : (function SettingsAgeGroupScreen() {
+  isTinyBroncoSettingsEnabled = isTinyBroncoSettingsEnabled(14771).useIsTinyBroncoSettingsEnabled();
   let items = [isTinyBroncoSettingsEnabled];
   const node = noop.useMemo(() => {
     const obj2 = { sections: null, ListHeaderComponent: null };
     const obj3 = { label: null, settings: null };
     const intl = util.intl;
-    obj3.label = intl.string(_modDef3073["5Mi5TE"]);
+    obj3.label = intl.string(_modDef3117["5Mi5TE"]);
     const items = [, , ];
     ({ AGE_GROUP_CONFIRM: arr[0], AGE_GROUP_RESET: arr[1], AGE_GROUP_CONFIRM_ACCOUNT_STATUS: arr[2] } = MobileUserSettings);
     obj3.settings = items;

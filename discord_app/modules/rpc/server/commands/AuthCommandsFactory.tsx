@@ -1,16 +1,15 @@
-// === Module 14376: AuthCommandsFactory ===
+// === Module 14602: AuthCommandsFactory ===
 
-// Module 14376 (AuthCommandsFactory)
+// Module 14602 (AuthCommandsFactory)
 import Storage3 from "Storage" /* 510 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import RPCErrorDefault from "RPCError" /* 9059 */;
+import RPCErrorDefault from "RPCError" /* 11134 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 5124 */;
-import ApplicationRecord from "ApplicationRecord" /* 2009 */;
-import UserStore from "UserStore" /* 1377 */;
-import LeakyBucket from "LeakyBucket" /* 9066 */;
+import ApplicationStore from "ApplicationStore" /* 5436 */;
+import ApplicationRecord from "ApplicationRecord" /* 2021 */;
+import UserStore from "UserStore" /* 1389 */;
+import LeakyBucket from "LeakyBucket" /* 11144 */;
 
 const require = globalThis.__r;
 
@@ -348,69 +347,163 @@ let closure_18 = async function _authorizeWithPrompt(arg0) {
     }
   }
 };
-function authenticate(authorization, access_token) {
-  _require = authorization;
-  importDefault = access_token;
-  if (authorization.authorization.accessToken) {
-    let obj2 = { errorCode: constants2.INVALID_COMMAND };
-    const tmp19 = new RPCErrorDefault(obj2, "Already authenticated");
-    throw tmp19;
-  } else if (authorization.authorization.authing) {
-    const obj3 = { errorCode: constants2.INVALID_COMMAND };
-    const tmp11 = new RPCErrorDefault(obj3, "Already authenticating");
-    throw tmp11;
+function authenticate() {
+  const self = this;
+  const apply = closure_20.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
-    authorization.authorization.authing = true;
-    const HTTP = require("HTTPUtils").HTTP;
-    let obj = { url: OAUTH2_CURRENT_AUTH.OAUTH2_CURRENT_AUTH, headers: null, oldFormErrors: true, rejectWithError: false };
-    const obj4 = { Authorization: null };
-    const _HermesInternal = HermesInternal;
-    obj4.Authorization = "Bearer " + access_token;
-    obj.headers = obj4;
-    value = HTTP.get(obj);
-    return value.then((body) => {
-      authorization.authorization.authing = false;
-      body = body.body;
-      ({ user, scopes, expires } = body);
-      if (authorization.application.id !== body.application.id) {
-        const obj2 = { errorCode: constants2.INVALID_CLIENTID };
-        const tmp16 = new RPCErrorDefault(obj2, "Application does not match the connection's");
-        throw tmp16;
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+let closure_20 = async function _authenticate(arg0, arg1) {
+  let authorization = arg0;
+  closure_1 = arg1;
+  c6 = 0;
+  c7 = 0;
+  c5 = 0;
+  return (async (arg0, value) => {
+    if (c7 === 2) {
+      c7 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp8 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        const currentUser = UserStore.getCurrentUser();
-        if (null != currentUser) {
-          if (user) {
-            if (currentUser.id === user.id) {
-              const items = [];
-              items[HermesBuiltin.arraySpread(scopes, HermesBuiltin.arraySpread(authorization.authorization.scopes, 0))] = v65535;
-              authorization.authorization.scopes = items;
-              authorization.authorization.accessToken = access_token;
-              const _Date = Date;
-              const date = new Date(expires);
-              authorization.authorization.expires = date;
-              ({ id: obj4.socketId, application: obj4.application } = authorization);
-              DispatcherDefault.dispatch({ type: "RPC_APP_AUTHENTICATED", socketId: null, application: null });
-              const obj8 = {};
-              const merged = Object.assign(body.body);
-              obj8.access_token = access_token;
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c7 = 2;
+        if (0 === c6) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            closure_3 = tmp4;
+            closure_2 = tmp6;
+            closure_130_0 = authorization;
+            closure_130_1 = closure_1;
+            closure_130_2 = undefined;
+            let body;
+            let application;
+            let user;
+            let scopes2;
+            let expires;
+            let currentUser;
+            if (null != authorization.authorization.accessToken) {
+              const obj4 = { errorCode: constants.INVALID_COMMAND };
+              const tmp71 = new RPCErrorDefault(obj4, "Already authenticated");
+              throw tmp71;
+            } else if (authorization.authorization.authing) {
+              const obj5 = { errorCode: constants.INVALID_COMMAND };
+              const tmp63 = new RPCErrorDefault(obj5, "Already authenticating");
+              throw tmp63;
+            } else {
+              authorization.authorization.authing = true;
+              c5 = 2;
+              const HTTP = require("HTTPUtils").HTTP;
+              const obj6 = { url: OAUTH2_CURRENT_AUTH.OAUTH2_CURRENT_AUTH, headers: null, oldFormErrors: true, rejectWithError: false };
+              const obj7 = { Authorization: null };
+              const _HermesInternal2 = HermesInternal;
+              obj7.Authorization = "Bearer " + tmp128;
+              obj6.headers = obj7;
+              c6 = 3;
+              c7 = 1;
+              const obj8 = { value: HTTP.get(obj6), done: false };
               return obj8;
             }
           }
+        } else if (1 === tmp9) {
+          c5 = 0;
+          closure_130_0.authorization.authing = false;
+          throw closure_4;
+        } else if (2 === tmp9) {
+          c5 = 1;
+          closure_130_9 = closure_4;
+          if (closure_130_9 instanceof closure_131_1(closure_131_3[10])) {
+            throw closure_130_9;
+          } else {
+            const obj9 = { errorCode: closure_131_14.INVALID_TOKEN };
+            const _HermesInternal = HermesInternal;
+            const tmp412 = new closure_131_1(closure_131_3[10])(obj9, "Invalid access token: " + closure_130_1);
+            throw tmp412;
+          }
+        } else if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 0;
+          closure_130_0.authorization.authing = false;
+          c7 = 3;
+          const obj10 = { value, done: true };
+          return obj10;
+        } else {
+          closure_130_2 = value;
+          closure_130_0.authorization.authing = false;
+          body = closure_130_2.body;
+          application = body.application;
+          user = body.user;
+          scopes2 = body.scopes;
+          expires = body.expires;
+          if (closure_130_0.application.id !== application.id) {
+            const obj11 = { errorCode: closure_131_14.INVALID_CLIENTID };
+            const tmp26 = new closure_131_1(closure_131_3[10])(obj11, "Application does not match the connection's");
+            throw tmp26;
+          } else {
+            currentUser = closure_131_8.getCurrentUser();
+            if (null != currentUser) {
+              if (null != user) {
+                if (currentUser.id === user.id) {
+                  const item = scopes2.forEach((item) => {
+                    const scopes = authorization.authorization.scopes;
+                    return scopes.add(item);
+                  });
+                  let scopes = closure_130_0.authorization.scopes;
+                  scopes.add(closure_131_10);
+                  closure_130_0.authorization.accessToken = closure_130_1;
+                  const _Date = Date;
+                  const date = new Date(expires);
+                  closure_130_0.authorization.expires = date;
+                  const obj12 = { type: "RPC_APP_AUTHENTICATED", socketId: closure_130_0.id, application: closure_130_0.application };
+                  closure_131_1(closure_131_3[20]).dispatch(obj12);
+                  const obj14 = { application, user, access_token: closure_130_1, expires, scopes: scopes2 };
+                  c5 = 0;
+                  closure_130_0.authorization.authing = false;
+                  c7 = 3;
+                  const obj = { value: obj14, done: true };
+                  return obj;
+                }
+              }
+            }
+            const obj15 = { errorCode: closure_131_14.INVALID_TOKEN };
+            const tmp17 = new closure_131_1(closure_131_3[10])(obj15, "Token does not match current user");
+            throw tmp17;
+          }
         }
-        const obj = { errorCode: constants2.INVALID_TOKEN };
-        const tmp8 = new RPCErrorDefault(obj, "Token does not match current user");
-        throw tmp8;
+      } catch (tmp73) {
+        closure_4 = tmp73;
+        if (tmp5 === c5) {
+          c7 = tmp3;
+          throw tmp73;
+        } else if (tmp2 === tmp75) {
+          c6 = tmp2;
+        } else {
+          c6 = tmp;
+        }
       }
-    }, () => {
-      const obj = { errorCode: constants2.INVALID_TOKEN };
-      throw new RPCErrorDefault({ errorCode: constants2.INVALID_TOKEN }, "Invalid access token: " + closure_1);
-    }).catch((error) => {
-      authorization.authorization.authing = false;
-      throw error;
-    });
-  }
-}
-let Constants = fn(5323);
+    }
+  })();
+};
+let Constants = fn(5635);
 ({ TransportTypes: closure_9, RPC_AUTHENTICATED_SCOPE: c10, RPC_PRIVATE_SCOPE: closure_11 } = Constants);
 Constants = fn(1085);
 ({ Endpoints: closure_12, RPCCommands: map1, RPCErrors: closure_14 } = Constants);
@@ -437,10 +530,10 @@ export default function createAuthCommandHandlers(arg0, arg1) {
           id = socket.application.id;
           if (null == id) {
             let obj2 = { errorCode: constants2.INVALID_COMMAND };
-            const tmp29 = new closure_1(9059)(obj2, "No application.");
+            const tmp29 = new closure_1(11134)(obj2, "No application.");
             throw tmp29;
           } else {
-            IDENTIFY = closure_0(8025).OAuth2Scopes.IDENTIFY;
+            IDENTIFY = closure_0(8433).OAuth2Scopes.IDENTIFY;
             _authorize = function _authorize() {
 
             };
@@ -475,11 +568,11 @@ export default function createAuthCommandHandlers(arg0, arg1) {
                   return authorizeWithPrompt(obj2, closure_0, closure_1).then((result) => {
                     if (null == result) {
                       const obj = { errorCode: constants2.UNKNOWN_ERROR };
-                      const tmp22 = new closure_1(9059)(obj, "Unknown error occurred");
+                      const tmp22 = new closure_1(11134)(obj, "Unknown error occurred");
                       throw tmp22;
                     } else {
                       const parts = result.split(/#|\?/);
-                      const parsed = closure_1(1478).parse(parts[parts.length - 1]);
+                      const parsed = closure_1(1490).parse(parts[parts.length - 1]);
                       if (null != parsed.error) {
                         const obj2 = { errorCode: constants2.OAUTH2_ERROR };
                         let str = parsed.error_description;
@@ -487,7 +580,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
                           str = "unknown error";
                         }
                         const _HermesInternal = HermesInternal;
-                        const tmp82 = new closure_1(9059)(obj2, "OAuth2 Error: " + parsed.error + ": " + str);
+                        const tmp82 = new closure_1(11134)(obj2, "OAuth2 Error: " + parsed.error + ": " + str);
                         throw tmp82;
                       } else {
                         ({ access_token, scope, expires_in } = parsed);
@@ -504,7 +597,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
                         result = Storage.set(CachedTokens, obj3);
                         return authenticate(socket, parsed.access_token);
                       }
-                      const obj5 = closure_1(1478);
+                      const obj5 = closure_1(1490);
                     }
                   });
                 } else {
@@ -517,11 +610,11 @@ export default function createAuthCommandHandlers(arg0, arg1) {
               catchPromise = authorizeWithPrompt(obj3, socket, signal).then((result) => {
                 if (null == result) {
                   const obj = { errorCode: constants2.UNKNOWN_ERROR };
-                  const tmp22 = new closure_1(9059)(obj, "Unknown error occurred");
+                  const tmp22 = new closure_1(11134)(obj, "Unknown error occurred");
                   throw tmp22;
                 } else {
                   const parts = result.split(/#|\?/);
-                  const parsed = closure_1(1478).parse(parts[parts.length - 1]);
+                  const parsed = closure_1(1490).parse(parts[parts.length - 1]);
                   if (null != parsed.error) {
                     const obj2 = { errorCode: constants2.OAUTH2_ERROR };
                     let str = parsed.error_description;
@@ -529,7 +622,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
                       str = "unknown error";
                     }
                     const _HermesInternal = HermesInternal;
-                    const tmp82 = new closure_1(9059)(obj2, "OAuth2 Error: " + parsed.error + ": " + str);
+                    const tmp82 = new closure_1(11134)(obj2, "OAuth2 Error: " + parsed.error + ": " + str);
                     throw tmp82;
                   } else {
                     ({ access_token, scope, expires_in } = parsed);
@@ -546,7 +639,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
                     result = Storage.set(CachedTokens, obj3);
                     return authenticate(socket, parsed.access_token);
                   }
-                  const obj5 = closure_1(1478);
+                  const obj5 = closure_1(1490);
                 }
               });
               const promise = authorizeWithPrompt(obj3, socket, signal);
@@ -557,7 +650,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
       }
       if (null == access_token) {
         let obj = { errorCode: constants2.INVALID_TOKEN };
-        const tmp11 = new closure_1(9059)(obj, "No access token provided");
+        const tmp11 = new closure_1(11134)(obj, "No access token provided");
         throw tmp11;
       } else {
         return authenticate(socket, access_token);
@@ -588,7 +681,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
             throw tmp34;
           } else {
             const scopes = socket.authorization.scopes;
-            hasItem = scopes.includes(closure_2_11);
+            hasItem = scopes.has(closure_2_11);
             if (!hasItem) {
               if (socket.application.id !== client_id) {
                 socket.authorization.authing = false;
@@ -609,7 +702,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
               socket.authorization.authing = false;
               if (null == location) {
                 const obj2 = { errorCode: constants2.UNKNOWN_ERROR };
-                const tmp25 = new hasItem(9059)(obj2, "Unknown error occurred");
+                const tmp25 = new hasItem(11134)(obj2, "Unknown error occurred");
                 throw tmp25;
               } else {
                 const _URL = URL;
@@ -631,13 +724,13 @@ export default function createAuthCommandHandlers(arg0, arg1) {
                       }
                       const obj4 = { errorCode: constants2.OAUTH2_ERROR };
                       const _HermesInternal = HermesInternal;
-                      const tmp122 = new hasItem(9059)(obj4, "OAuth2 Error: " + value2 + ": " + str5);
+                      const tmp122 = new hasItem(11134)(obj4, "OAuth2 Error: " + value2 + ": " + str5);
                       throw tmp122;
                     }
                   }
                   if (null == value) {
                     const obj5 = { errorCode: constants2.OAUTH2_ERROR };
-                    const tmp8 = new hasItem(9059)(obj5, "OAuth2 Error: Unable to find auth code");
+                    const tmp8 = new hasItem(11134)(obj5, "OAuth2 Error: Unable to find auth code");
                     throw tmp8;
                   } else {
                     const obj = { code: value };

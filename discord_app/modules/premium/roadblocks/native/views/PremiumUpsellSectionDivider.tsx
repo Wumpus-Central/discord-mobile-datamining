@@ -1,21 +1,21 @@
-// === Module 9921: PremiumUpsellSectionDivider ===
+// === Module 9442: PremiumUpsellSectionDivider ===
 
-// Module 9921 (PremiumUpsellSectionDivider)
+// Module 9442 (PremiumUpsellSectionDivider)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import LinearGradientDefault from "LinearGradient" /* 5612 */;
+import LinearGradientDefault from "LinearGradient" /* 5387 */;
 import noop from "module_19" /* 19 */;
 
 const ConstantsIOS = LockIcon(1105);
-const LockIcon2 = LockIcon(5886);
-const PremiumUpsellGradientBackground = LockIcon(9922);
+const LockIcon2 = LockIcon(8198);
+const PremiumUpsellGradientBackground = LockIcon(9443);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
-const Gradients = fn(6951).Gradients;
+const Gradients = fn(7140).Gradients;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles((arg0) => {
   let num;
   if (arg0 === obj2.START) {
@@ -52,7 +52,7 @@ const ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/roadblocks/native/views/PremiumUpsellSectionDivider.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumUpsellSectionDivider(arg0) {
   let LockIcon = require;
   let lock = dependencyMap;
   const cResult = c.c(19);
@@ -147,7 +147,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = tmp7;
   tmp6 = tmp7;
   const obj8 = { style: tmp2.gradient, children: tmp3 };
-}) : ((arg0) => {
+}) : (function PremiumUpsellSectionDivider(arg0) {
   ({ useTier0UpsellContent, position } = arg0);
   let lock = closure_8(position);
   const obj = { style: lock.container, children: null };

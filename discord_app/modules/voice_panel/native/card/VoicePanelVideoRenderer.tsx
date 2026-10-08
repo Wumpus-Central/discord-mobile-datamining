@@ -1,14 +1,14 @@
-// === Module 17301: VoicePanelVideoRenderer ===
+// === Module 17582: VoicePanelVideoRenderer ===
 
-// Module 17301 (VoicePanelVideoRenderer)
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4618 */;
-import timing from "timing" /* 4897 */;
-import spring from "spring" /* 5604 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6147 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9110 */;
-import DCDVideoRendererDefault from "DCDVideoRenderer" /* 9149 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 9787 */;
-import VideoActionCreators from "VideoActionCreators" /* 17186 */;
+// Module 17582 (VoicePanelVideoRenderer)
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4810 */;
+import timing from "timing" /* 5091 */;
+import spring from "spring" /* 5374 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6326 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9512 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10352 */;
+import DCDVideoRendererDefault from "DCDVideoRenderer" /* 10715 */;
+import VideoActionCreators from "VideoActionCreators" /* 17467 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,12 +16,12 @@ const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
 const PixelRatio = fn(17).PixelRatio;
-const VoicePanelConstants = fn(11916);
+const VoicePanelConstants = fn(11989);
 let VoicePanelModes = VoicePanelConstants.VoicePanelModes;
 const MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
-const VoicePanelControlsModes = fn(11914).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(17235).VoicePanelPIPModes;
-const SCALE_PHYSICS = fn(11917).SCALE_PHYSICS;
+const VoicePanelControlsModes = fn(11987).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(17516).VoicePanelPIPModes;
+const SCALE_PHYSICS = fn(11990).SCALE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 let c13 = 50;
@@ -45,7 +45,7 @@ function getScaleChangeWithOverscroll(arg0, arg1, arg2) {
 getScaleChangeWithOverscroll.__closure = { MIN_OVERSCROLL: 0.1, OVERSCOLL_INTENSITY_FACTOR: 5 };
 getScaleChangeWithOverscroll.__workletHash = 8727721301304;
 getScaleChangeWithOverscroll.__initData = { code: "function getScaleChangeWithOverscroll_VoicePanelVideoRendererTsx1(currentScale,scaleChange,fitScale){const{MIN_OVERSCROLL,OVERSCOLL_INTENSITY_FACTOR}=this.__closure;if(currentScale>=fitScale){return scaleChange;}const underScale=1-currentScale;const factor=Math.max(MIN_OVERSCROLL,1-underScale*underScale*OVERSCOLL_INTENSITY_FACTOR);return 1+(scaleChange-1)*factor;}" };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_22 = createStyles.createStyles({ wrapper: { position: "absolute", top: 0, left: 0, width: "100%", height: "100%", alignItems: "center", justifyContent: "center" }, animatedWrapperStyles: { position: "absolute" }, video: { width: "100%", height: "100%" }, spinner: { position: "absolute", top: "50%", left: "50%", marginTop: -16, marginLeft: -16, height: 32, width: 32 } });
 let closure_23 = { code: "function VoicePanelVideoRendererTsx2(){const{containerLayout,videoDimensions}=this.__closure;return Math.max(containerLayout.get().width/videoDimensions.get().width,containerLayout.get().height/videoDimensions.get().height);}" };
 let __initData = { code: "function VoicePanelVideoRendererTsx3(){const{containerLayout,videoDimensions}=this.__closure;return Math.min(containerLayout.get().width/videoDimensions.get().width,containerLayout.get().height/videoDimensions.get().height);}" };
@@ -118,7 +118,7 @@ let closure_90 = { code: "function VoicePanelVideoRendererTsx69(){const{isInPanT
 let closure_91 = { code: "function VoicePanelVideoRendererTsx70(){const{lastTapTimestamp,PAN_TO_ZOOM_TAP_TIME_MILLIS,isInPanToZoom}=this.__closure;const hasRecentTap=Date.now()-lastTapTimestamp.get()<=PAN_TO_ZOOM_TAP_TIME_MILLIS;isInPanToZoom.set(hasRecentTap);lastTapTimestamp.set(Date.now());}" };
 let closure_92 = { code: "function VoicePanelVideoRendererTsx71(event_1,manager_2){const{focused,id}=this.__closure;var _focused$get;if(((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)!==id){manager_2.fail();return;}}" };
 let ReactCompilerGating = fn(558);
-let closure_93 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
+let closure_93 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGestures(id) {
   const cResult = id(focused[12]).c(120);
   id = id.id;
   const isCamera = id.isCamera;
@@ -329,7 +329,7 @@ let closure_93 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
                                                       }
                                                       return id === id;
                                                     }
-                                                    class Fe {
+                                                    class Ge {
                                                       constructor() {
                                                         value = closure_21.get();
                                                         if (value < closure_22.get() + c16) {
@@ -770,7 +770,7 @@ let closure_93 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
                                     tmp31.__workletHash = 15797844425755;
                                     tmp31.__initData = __initData8;
                                     cResult[23] = containerLayout;
-                                    class Fe {
+                                    class Ge {
                                       constructor() {
                                         value = closure_21.get();
                                         if (value < closure_22.get() + c16) {
@@ -853,7 +853,7 @@ let closure_93 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
                             }
                           }
                         }
-                        class Fe {
+                        class Ge {
                           constructor() {
                             value = closure_21.get();
                             if (value < closure_22.get() + c16) {
@@ -923,9 +923,9 @@ let closure_93 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
                           }
                         }
                         const obj29 = { coverScale: derivedValue, fitScale: derivedValue1, MIN_ZOOM_FOR_COVER_SNAP_OFFSET: sharedValue3, translateX: sharedValue1, scale: sharedValue, translateY: null, SNAP_CENTER_THRESHOLD: sharedValue, containerLayout, videoDimensions, SNAP_EDGE_OUTER_THRESHOLD: sharedValue2, SNAP_EDGE_INNER_THRESHOLD: sharedValue1 };
-                        Fe.__closure = obj29;
-                        Fe.__workletHash = 3902544453390;
-                        Fe.__initData = __initData7;
+                        Ge.__closure = obj29;
+                        Ge.__workletHash = 3902544453390;
+                        Ge.__initData = __initData7;
                         cResult[15] = containerLayout;
                         cResult[16] = derivedValue;
                         cResult[17] = derivedValue1;
@@ -933,8 +933,8 @@ let closure_93 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
                         cResult[19] = sharedValue1;
                         cResult[20] = sharedValue2;
                         cResult[21] = videoDimensions;
-                        cResult[22] = Fe;
-                        tmp24 = Fe;
+                        cResult[22] = Ge;
+                        tmp24 = Ge;
                         const tmpResult = tmp(tmp2[8]);
                       }
                     }
@@ -990,7 +990,7 @@ let closure_93 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
   cResult[7] = fn4;
   tmp17 = fn4;
   const obj31 = { scale: sharedValue, withSpring: id(focused[14]).withSpring, fitScale: derivedValue1, MODE_CHANGE_PHYSICS: setIsFocusedVideoZoomed, disableAnimations, coverScale: derivedValue, translateX: sharedValue1, SCALE_PHYSICS: hideControls, translateY: sharedValue2, currentSizeThreshold: sharedValue7 };
-}) : ((id) => {
+}) : (function useGestures(id) {
   id = id.id;
   const isCamera = id.isCamera;
   const focused = id.focused;
@@ -1722,7 +1722,7 @@ ReactCompilerGating = fn(558);
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/card/VoicePanelVideoRenderer.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function VideoRenderer(id) {
   const cResult = id(sharedCoords[12]).c(75);
   id = id.id;
   const streamId = id.streamId;
@@ -2396,7 +2396,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((id) =>
   cResult[4] = fn;
   tmp19 = fn;
   let tmp17 = isScrollVisible(isCamera.useState(true), 2);
-}) : ((streamKey) => {
+}) : (function VideoRenderer(streamKey) {
   let id = streamKey.id;
   const streamId = streamKey.streamId;
   ({ userId, videoSpinnerContext, sharedCoords } = streamKey);

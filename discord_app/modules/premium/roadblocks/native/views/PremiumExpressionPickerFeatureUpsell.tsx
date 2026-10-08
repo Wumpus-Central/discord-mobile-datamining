@@ -1,19 +1,19 @@
-// === Module 9944: PremiumExpressionPickerFeatureUpsell ===
+// === Module 9466: PremiumExpressionPickerFeatureUpsell ===
 
-// Module 9944 (PremiumExpressionPickerFeatureUpsell)
+// Module 9466 (PremiumExpressionPickerFeatureUpsell)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import useKeyboardIsOpenDefault from "useKeyboardIsOpen" /* 6117 */;
-import PremiumFeatureUpsellDefault from "PremiumFeatureUpsell" /* 9656 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import useKeyboardIsOpenDefault from "useKeyboardIsOpen" /* 6296 */;
+import PremiumFeatureUpsellDefault from "PremiumFeatureUpsell" /* 9467 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles((arg0) => {
   const obj = { container: null };
   const rect = { position: "absolute", bottom: arg0 + nativeDefault.space.PX_12, left: 0, right: 0 };
@@ -26,7 +26,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/roadblocks/native/views/PremiumExpressionPickerFeatureUpsell.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((bottomSheetIndex) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumExpressionPickerFeatureUpsell(bottomSheetIndex) {
   const cResult = c.c(6);
   bottomSheetIndex = bottomSheetIndex.bottomSheetIndex;
   ({ featureName, analyticsLocation, inPortalKeyboard } = bottomSheetIndex);
@@ -76,7 +76,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((bottomSheetIndex
   cResult[4] = tmp5;
   cResult[5] = tmp8;
   tmp7 = tmp8;
-}) : ((bottomSheetIndex) => {
+}) : (function PremiumExpressionPickerFeatureUpsell(bottomSheetIndex) {
   bottomSheetIndex = bottomSheetIndex.bottomSheetIndex;
   const inPortalKeyboard = bottomSheetIndex.inPortalKeyboard;
   const shouldShow = bottomSheetIndex.shouldShow;

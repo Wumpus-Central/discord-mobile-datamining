@@ -1,7 +1,7 @@
-// === Module 6589: useCharacterLimitAnnouncement ===
+// === Module 6765: useCharacterLimitAnnouncement ===
 
-// Module 6589 (useCharacterLimitAnnouncement)
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4596 */;
+// Module 6765 (useCharacterLimitAnnouncement)
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4788 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -9,7 +9,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/AccessibilityAnnouncer/useCharacterLimitAnnouncement.tsx");
 
-export const useCharacterLimitAnnouncement = ReactCompilerGating.isReactCompilerEnabled() ? ((currentLength) => {
+export const useCharacterLimitAnnouncement = ReactCompilerGating.isReactCompilerEnabled() ? (function useCharacterLimitAnnouncement(currentLength) {
   const cResult = currentLength(maxLength[2]).c(5);
   currentLength = currentLength.currentLength;
   maxLength = currentLength.maxLength;
@@ -24,7 +24,7 @@ export const useCharacterLimitAnnouncement = ReactCompilerGating.isReactCompiler
       const effect = message.useEffect(tmp2, tmp3);
     }
   }
-  const fn = function t() {
+  const fn = function c() {
     if (null != maxLength) {
       if (currentLength >= tmp) {
         if (!ref.current) {
@@ -46,7 +46,7 @@ export const useCharacterLimitAnnouncement = ReactCompilerGating.isReactCompiler
   cResult[4] = items;
   tmp3 = items;
   tmp2 = fn;
-}) : ((currentLength) => {
+}) : (function useCharacterLimitAnnouncement(currentLength) {
   currentLength = currentLength.currentLength;
   const maxLength = currentLength.maxLength;
   const message = currentLength.message;

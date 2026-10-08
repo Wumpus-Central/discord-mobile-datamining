@@ -1,14 +1,14 @@
-// === Module 17248: useStableParticipant ===
+// === Module 17529: useStableParticipant ===
 
-// Module 17248 (useStableParticipant)
+// Module 17529 (useStableParticipant)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
-import NicknameUtils from "NicknameUtils" /* 5048 */;
-import useAvatarDecoration from "useAvatarDecoration" /* 7898 */;
-import participantHasVideoDefault from "participantHasVideo" /* 9154 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
+import NicknameUtils from "NicknameUtils" /* 5405 */;
+import useAvatarDecoration from "useAvatarDecoration" /* 6058 */;
+import participantHasVideoDefault from "participantHasVideo" /* 10720 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6041 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import UserStore from "UserStore" /* 1377 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
@@ -24,7 +24,7 @@ function areStableParticipantsEqual(arg0, arg1) {
   }
   return tmp;
 }
-const ParticipantTypes = fn(4917).ParticipantTypes;
+const ParticipantTypes = fn(5113).ParticipantTypes;
 const ReactCompilerGating = fn(558);
 function isStableStreamParticipant(participant) {
   let type;
@@ -58,7 +58,7 @@ function isStableActivityParticipant(participant) {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/utils/useStableParticipant.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useStableParticipant(id, arg1, arg2) {
   _require = id;
   closure_1 = arg1;
   dependencyMap = arg2;
@@ -86,7 +86,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) 
       if (null == participant) {
         const user = UserStore.getUser(id);
         if (null != user) {
-          const obj3 = { type: ParticipantTypes.USER, id, user, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "Set", ringing: null, hasVideo: 465.988, isSelf: -136 };
+          const obj3 = { type: ParticipantTypes.USER, id, user, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "Set", ringing: null, hasVideo: 0, isSelf: 1 };
           id = AuthenticationStore.getId();
           obj3.userNick = NicknameUtils.getName(closure_2, closure_1, user);
           obj3.userAvatarDecoration = useAvatarDecoration.getAvatarDecoration(user, closure_2);
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) 
   tmp9 = fn;
   let obj = require("c");
   tmp = _require;
-}) : ((id, arg1, arg2) => {
+}) : (function useStableParticipant(id, arg1, arg2) {
   _require = id;
   closure_1 = arg1;
   dependencyMap = arg2;
@@ -163,7 +163,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) 
       if (null == participant) {
         const user = UserStore.getUser(id);
         if (null != user) {
-          const obj3 = { type: ParticipantTypes.USER, id, user, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "Set", ringing: null, hasVideo: 465.988, isSelf: -136 };
+          const obj3 = { type: ParticipantTypes.USER, id, user, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "Set", ringing: null, hasVideo: 0, isSelf: 1 };
           id = AuthenticationStore.getId();
           obj3.userNick = NicknameUtils.getName(closure_2, closure_1, user);
           obj3.userAvatarDecoration = useAvatarDecoration.getAvatarDecoration(user, closure_2);

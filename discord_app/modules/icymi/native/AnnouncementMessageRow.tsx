@@ -1,31 +1,31 @@
-// === Module 16473: AnnouncementMessageRow ===
+// === Module 16733: AnnouncementMessageRow ===
 
-// Module 16473 (AnnouncementMessageRow)
+// Module 16733 (AnnouncementMessageRow)
 import nativeDefault from "native" /* 587 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5712 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8039 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10664 */;
-import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 11293 */;
-import ICYMIShared from "ICYMIShared" /* 16475 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6102 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8447 */;
+import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 9629 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10264 */;
+import ICYMIShared from "ICYMIShared" /* 16735 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5077 */;
-import UserStore from "UserStore" /* 1377 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5971 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const View = fn(17).View;
-const ITEM_PADDING = fn(16474).ITEM_PADDING;
+const ITEM_PADDING = fn(16734).ITEM_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createICYMIStyles = fn(16434);
+const createICYMIStyles = fn(16694);
 let closure_13 = createICYMIStyles.createICYMIStyles((paddingLeft) => {
   const obj = { pressable: { flex: 1, paddingLeft: paddingLeft.inset }, footer: { marginVertical: paddingLeft.margin, gap: nativeDefault.space.PX_8, paddingHorizontal: ITEM_PADDING, marginLeft: paddingLeft.inset } };
   return obj;
 });
 let ReactCompilerGating = fn(558);
-let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
+let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelRow(guild) {
   const cResult = message(channel[12]).c(56);
   ({ unread, message } = guild);
   guild = guild.guild;
@@ -78,7 +78,7 @@ let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guil
                 let tmp17 = cResult[18];
               }
               message(tmp2[19]);
-              class E {
+              class D {
                 constructor() {
                   tmp2 = closure_2;
                   tmp = closure_1;
@@ -122,7 +122,7 @@ let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guil
               }
               if (tmp20 === Symbol.for("react.memo_cache_sentinel")) {
                 const string = message(tmp2[20]).intl.string;
-                class E {
+                class D {
                   constructor() {
                     tmp2 = closure_2;
                     tmp = closure_1;
@@ -169,7 +169,7 @@ let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guil
               }
               if (cResult[20] !== message.id) {
                 guild(tmp2[21]);
-                class E {
+                class D {
                   constructor() {
                     tmp2 = closure_2;
                     tmp = closure_1;
@@ -264,7 +264,7 @@ let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guil
                                             }
                                           }
                                         }
-                                        class E {
+                                        class D {
                                           constructor() {
                                             tmp2 = closure_2;
                                             tmp = closure_1;
@@ -346,7 +346,7 @@ let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guil
                                         cResult[55] = tmp47;
                                         tmp44 = tmp47;
                                       }
-                                      class E {
+                                      class D {
                                         constructor() {
                                           tmp2 = closure_2;
                                           tmp = closure_1;
@@ -396,7 +396,7 @@ let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guil
                                       tmp40 = tmp43;
                                     }
                                   }
-                                  class E {
+                                  class D {
                                     constructor() {
                                       tmp2 = closure_2;
                                       tmp = closure_1;
@@ -452,7 +452,7 @@ let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guil
                             }
                           }
                         }
-                        class E {
+                        class D {
                           constructor() {
                             tmp2 = closure_2;
                             tmp = closure_1;
@@ -511,7 +511,7 @@ let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guil
                       }
                     }
                   }
-                  class E {
+                  class D {
                     constructor() {
                       tmp2 = closure_2;
                       tmp = closure_1;
@@ -564,7 +564,7 @@ let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guil
                   cResult[32] = tmp33;
                   tmp32 = tmp33;
                 }
-                class E {
+                class D {
                   constructor() {
                     tmp2 = closure_2;
                     tmp = closure_1;
@@ -621,7 +621,7 @@ let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guil
               tmp27 = tmp29;
             }
           }
-          class E {
+          class D {
             constructor() {
               tmp2 = closure_2;
               tmp = closure_1;
@@ -664,8 +664,8 @@ let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guil
           }
           cResult[16] = guild.id;
           cResult[17] = message;
-          cResult[18] = E;
-          tmp17 = E;
+          cResult[18] = D;
+          tmp17 = D;
         }
         class L {
           constructor() {
@@ -746,7 +746,7 @@ let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guil
   cResult[5] = P;
   tmp9 = P;
   let tmpResult = message(channel[13]);
-}) : ((message) => {
+}) : (function ChannelRow(message) {
   message = message.message;
   guild = message.guild;
   const channel = message.channel;
@@ -830,7 +830,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/native/AnnouncementMessageRow.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((visible) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AnnouncementMessageRowWrapper(visible) {
   const cResult = message(author[12]).c(15);
   ({ unread, message } = visible);
   visible = visible.visible;
@@ -972,7 +972,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((visible) => {
     }
   }
   return tmp23;
-}) : ((message) => {
+}) : (function AnnouncementMessageRowWrapper(message) {
   message = message.message;
   let author;
   ({ unread, visible } = message);

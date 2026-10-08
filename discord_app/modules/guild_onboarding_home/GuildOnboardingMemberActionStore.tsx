@@ -1,6 +1,6 @@
-// === Module 5084: GuildOnboardingMemberActionStore ===
+// === Module 7888: GuildOnboardingMemberActionStore ===
 
-// Module 5084 (GuildOnboardingMemberActionStore)
+// Module 7888 (GuildOnboardingMemberActionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 

@@ -1,6 +1,6 @@
-// === Module 6080: RedesignCompat ===
+// === Module 6266: RedesignCompat ===
 
-// Module 6080 (RedesignCompat)
+// Module 6266 (RedesignCompat)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/RedesignCompat/native/RedesignCompat.native.tsx");
 
 export const RedesignCompatContext = context;
-export const RedesignCompat = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const RedesignCompat = ReactCompilerGating.isReactCompilerEnabled() ? (function RedesignCompat(arg0) {
   const cResult = c.c(3);
   ({ children, enabled } = arg0);
   if (enabled == null) {
@@ -29,7 +29,7 @@ export const RedesignCompat = ReactCompilerGating.isReactCompilerEnabled() ? ((a
   cResult[1] = enabled;
   cResult[2] = tmp3;
   tmp2 = tmp3;
-}) : ((children) => {
+}) : (function RedesignCompat(children) {
   let enabled = children.enabled;
   if (enabled == null) {
     enabled = true;

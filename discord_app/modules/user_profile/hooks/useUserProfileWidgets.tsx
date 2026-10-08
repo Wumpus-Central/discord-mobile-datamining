@@ -1,9 +1,9 @@
-// === Module 12720: useUserProfileWidgets ===
+// === Module 13212: useUserProfileWidgets ===
 
-// Module 12720 (useUserProfileWidgets)
+// Module 13212 (useUserProfileWidgets)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import UserProfileStore from "UserProfileStore" /* 7124 */;
-import WidgetStore from "WidgetStore" /* 8623 */;
+import UserProfileStore from "UserProfileStore" /* 7309 */;
+import WidgetStore from "WidgetStore" /* 13094 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useUserProfileWidgets.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserProfileWidgets(arg0) {
   _require = arg0;
   const cResult = require("c").c(10);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -61,42 +61,96 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp13 = cResult[6];
   }
   if (cResult[7] !== arg0) {
-    const fn3 = function y() {
-      if (null == closure_0) {
-        return [];
-      } else {
-        const userProfile = UserProfileStore.getUserProfile(tmp);
-        let widgets;
-        if (userProfile != null) {
-          widgets = userProfile.widgets;
+    class F {
+      constructor() {
+        if (null == closure_0) {
+          return [];
+        } else {
+          tmp2 = closure_3;
+          userProfile = closure_3.getUserProfile(tmp);
+          widgets = undefined;
+          if (userProfile != null) {
+            widgets = userProfile.widgets;
+          }
+          if (widgets == null) {
+            widgets = [];
+          }
+          return widgets;
         }
-        if (widgets == null) {
-          widgets = [];
-        }
-        return widgets;
       }
-    };
+    }
     const items4 = [arg0];
     cResult[7] = arg0;
-    cResult[8] = fn3;
+    cResult[8] = F;
     cResult[9] = items4;
     let tmp16 = items4;
-    let tmp15 = fn3;
   } else {
-    tmp15 = cResult[8];
+    class F {
+      constructor() {
+        if (null == closure_0) {
+          return [];
+        } else {
+          tmp2 = closure_3;
+          userProfile = closure_3.getUserProfile(tmp);
+          widgets = undefined;
+          if (userProfile != null) {
+            widgets = userProfile.widgets;
+          }
+          if (widgets == null) {
+            widgets = [];
+          }
+          return widgets;
+        }
+      }
+    }
     tmp16 = cResult[9];
   }
   const tmpResult3 = require("initialize");
-  const stateFromStoresArray = require("initialize").useStateFromStoresArray(tmp13, tmp15, tmp16);
+  const stateFromStoresArray = require("initialize").useStateFromStoresArray(tmp13, F, tmp16);
   let tmp18 = stateFromStoresArray;
   if (stateFromStores) {
+    class F {
+      constructor() {
+        if (null == closure_0) {
+          return [];
+        } else {
+          tmp2 = closure_3;
+          userProfile = closure_3.getUserProfile(tmp);
+          widgets = undefined;
+          if (userProfile != null) {
+            widgets = userProfile.widgets;
+          }
+          if (widgets == null) {
+            widgets = [];
+          }
+          return widgets;
+        }
+      }
+    }
     tmp18 = stateFromStoresArray;
     if (null !== stateFromStores1) {
-      tmp18 = stateFromStores1;
+      class F {
+        constructor() {
+          if (null == closure_0) {
+            return [];
+          } else {
+            tmp2 = closure_3;
+            userProfile = closure_3.getUserProfile(tmp);
+            widgets = undefined;
+            if (userProfile != null) {
+              widgets = userProfile.widgets;
+            }
+            if (widgets == null) {
+              widgets = [];
+            }
+            return widgets;
+          }
+        }
+      }
     }
   }
   return tmp18;
-}) : ((arg0) => {
+}) : (function useUserProfileWidgets(arg0) {
   _require = arg0;
   const items = [AuthenticationStore];
   const items1 = [arg0];

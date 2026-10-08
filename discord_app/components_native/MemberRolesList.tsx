@@ -1,20 +1,20 @@
-// === Module 11484: MemberRolesList ===
+// === Module 11470: MemberRolesList ===
 
-// Module 11484 (MemberRolesList)
-import RolePillDefault from "RolePill" /* 10698 */;
+// Module 11470 (MemberRolesList)
+import RolePillDefault from "RolePill" /* 10286 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleStore from "GuildRoleStore" /* 2106 */;
+import GuildRoleStore from "GuildRoleStore" /* 2118 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({ wrapper: { flexDirection: "row", flexWrap: "wrap", justifyContent: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/MemberRolesList.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((userRoles) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberRolesList(userRoles) {
   const cResult = userRoles(576).c(19);
   userRoles = userRoles.userRoles;
   let id = userRoles.guild;
@@ -55,21 +55,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userRoles) => {
           if (cResult[6] === userRoles) {
             if (cResult[13] === style) {
               if (cResult[14] === tmp4.wrapper) {
-                let tmp20 = cResult[15];
+                let tmp19 = cResult[15];
               }
               if (cResult[16] === tmp13) {
               }
-              const obj2 = { style: tmp20, children: tmp13 };
-              const tmp24 = <View style={tmp20}>{tmp13}</View>;
+              const obj2 = { style: tmp19, children: tmp13 };
+              const tmp23 = <View style={tmp19}>{tmp13}</View>;
               cResult[16] = tmp13;
-              cResult[17] = tmp20;
-              cResult[18] = tmp24;
+              cResult[17] = tmp19;
+              cResult[18] = tmp23;
             }
             const items1 = [tmp4.wrapper, style];
             cResult[13] = style;
             cResult[14] = tmp4.wrapper;
             cResult[15] = items1;
-            tmp20 = items1;
+            tmp19 = items1;
           }
         }
       }
@@ -105,23 +105,25 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userRoles) => {
         }
       }
       if (cResult[11] !== id.id) {
-        class R {
+        class M {
           constructor(arg0) {
-            return userRoles.includes(userRoles.id);
+            obj = { role: userRoles, guildId: guild.id };
+            return jsx(closure_1(closure_2[8]), obj, userRoles.id);
           }
         }
         cResult[11] = id.id;
-        cResult[12] = tmp17;
+        cResult[12] = M;
       } else {
-        class R {
+        class M {
           constructor(arg0) {
-            return userRoles.includes(userRoles.id);
+            obj = { role: userRoles, guildId: guild.id };
+            return jsx(closure_1(closure_2[8]), obj, userRoles.id);
           }
         }
       }
       const found = stateFromStores.filter(sorted);
       sorted = found.sort(tmp15);
-      const mapped = sorted.map(tmp17);
+      const mapped = sorted.map(M);
       id = id.id;
       cResult[4] = id;
       cResult[5] = stateFromStores;
@@ -130,7 +132,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userRoles) => {
     }
   }
   return tmp12;
-}) : ((userRoles) => {
+}) : (function MemberRolesList(userRoles) {
   userRoles = userRoles.userRoles;
   guild = userRoles.guild;
   const tmp = closure_6();

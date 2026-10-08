@@ -1,13 +1,13 @@
-// === Module 7832: ApplicationAssetUtils ===
+// === Module 8250: ApplicationAssetUtils ===
 
-// Module 7832 (ApplicationAssetUtils)
+// Module 8250 (ApplicationAssetUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
-import ImageLoaderUtils from "ImageLoaderUtils" /* 1437 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
+import ImageLoaderUtils from "ImageLoaderUtils" /* 1449 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationAssetsStore from "ApplicationAssetsStore" /* 7833 */;
+import ApplicationAssetsStore from "ApplicationAssetsStore" /* 8251 */;
 
 require = fn;
 function updateAssets() {
@@ -171,9 +171,12 @@ function updateUrlAssetIds(arr, arg1) {
             let mp = closure_11.mp;
             let str4 = mp.serialize(value);
             let combined = null;
-            if (str4) {
-              let _HermesInternal = HermesInternal;
-              combined = "" + "mp" + ":" + str4.toString();
+            if (null != str4) {
+              combined = null;
+              if ("" !== str4) {
+                let _HermesInternal = HermesInternal;
+                combined = "" + "mp" + ":" + str4.toString();
+              }
             }
             arg1[num3] = combined;
             sum = num4 + 1;
@@ -407,9 +410,12 @@ export const getAssetFromImageURL = function getAssetFromImageURL(SPOTIFY, url) 
   const serializer = closure_11[SPOTIFY];
   const str = serializer.serialize(url);
   let combined = null;
-  if (str) {
-    const _HermesInternal = HermesInternal;
-    combined = "" + SPOTIFY + ":" + str.toString();
+  if (null != str) {
+    combined = null;
+    if ("" !== str) {
+      const _HermesInternal = HermesInternal;
+      combined = "" + SPOTIFY + ":" + str.toString();
+    }
   }
   return combined;
 };
@@ -421,25 +427,23 @@ export const getAssetImage = function getAssetImage(application_id, large_image,
   if (null != large_image) {
     if (large_image.includes(":")) {
       [tmp21, tmp22] = large_image.split(":");
-      if (tmp21 === PlatformTypes.TWITCH) {
-        if (null != items) {
-          if (typeof items !== "number") {
-            const deserializer2 = closure_11[tmp23.TWITCH];
-            const deserializeResult = deserializer2.deserialize(tmp22, items);
+      const _Object = Object;
+      hasOwnProperty = Object.prototype.hasOwnProperty;
+      const call = hasOwnProperty.call;
+      if (typeof call === "unknown" ? hasOwnProperty(tmp21) : call(closure_11, tmp21)) {
+        if (tmp21 === PlatformTypes.TWITCH) {
+          if (null != items) {
+            if (typeof items !== "number") {
+              const deserializer2 = closure_11[PlatformTypes.TWITCH];
+              const deserializeResult = deserializer2.deserialize(tmp22, items);
+            }
           }
-        }
-        const obj2 = new LoggerDefault("ApplicationAssetUtils");
-        obj2.warn("getAssetImage: size must === [number, number] for Twitch");
-      } else {
-        const _Object = Object;
-        hasOwnProperty = Object.prototype.hasOwnProperty;
-        const call = hasOwnProperty.call;
-        let deserializeResult1;
-        if (typeof call === "unknown" ? hasOwnProperty(tmp21) : call(closure_11, tmp21)) {
+          const obj2 = new LoggerDefault("ApplicationAssetUtils");
+          obj2.warn("getAssetImage: size must === [number, number] for Twitch");
+        } else {
           const deserializer = closure_11[tmp21];
-          deserializeResult1 = deserializer.deserialize(tmp22);
+          return deserializer.deserialize(tmp22);
         }
-        return deserializeResult1;
       }
       const tmp20 = _slicedToArray(large_image.split(":"), 2);
     }
@@ -507,9 +511,12 @@ export const getAssetIds = function getAssetIds(id, arr) {
             let mp = closure_11.mp;
             let str4 = mp.serialize(value);
             let combined = null;
-            if (str4) {
-              let _HermesInternal = HermesInternal;
-              combined = "" + "mp" + ":" + str4.toString();
+            if (null != str4) {
+              combined = null;
+              if ("" !== str4) {
+                let _HermesInternal = HermesInternal;
+                combined = "" + "mp" + ":" + str4.toString();
+              }
             }
             items[num3] = combined;
             sum = num4 + 1;

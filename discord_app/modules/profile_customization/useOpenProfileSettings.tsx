@@ -1,14 +1,14 @@
-// === Module 9430: useOpenProfileSettings ===
+// === Module 9094: useOpenProfileSettings ===
 
-// Module 9430 (useOpenProfileSettings)
+// Module 9094 (useOpenProfileSettings)
 import _mod19 from "module_19" /* 19 */;
 import Constants from "Constants" /* 1085 */;
 import UserSettingsConstants from "UserSettingsConstants" /* 1095 */;
-import openUserSettings from "openUserSettings" /* 6895 */;
-import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 9433 */;
-import UserStore from "UserStore" /* 1377 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9431 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 7842 */;
+import openUserSettings from "openUserSettings" /* 7084 */;
+import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 9097 */;
+import UserStore from "UserStore" /* 1389 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9095 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8260 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -17,7 +17,7 @@ const UserSettingsSections = Constants.UserSettingsSections;
 let closure_5 = UserSettingsConstants.ProfileCustomizationSubsection;
 const result = size.fileFinishedImporting("modules/profile_customization/useOpenProfileSettings.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useOpenProfileSettings(arg0) {
   const cResult = guild(scrollPosition[7]).c(7);
   if (cResult[0] !== arg0) {
     let obj2 = arg0;
@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = scrollPosition;
   cResult[6] = fn;
   tmp6 = fn;
-}) : (() => {
+}) : (function useOpenProfileSettings() {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};

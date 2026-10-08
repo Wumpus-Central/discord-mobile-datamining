@@ -1,10 +1,10 @@
-// === Module 13111: ConversationFocusView ===
+// === Module 9313: ConversationFocusView ===
 
-// Module 13111 (ConversationFocusView)
+// Module 9313 (ConversationFocusView)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import ConversationsAnalytics2 from "ConversationsAnalytics" /* 7564 */;
-import ConversationNavigatorUtils from "ConversationNavigatorUtils" /* 7579 */;
+import ConversationsAnalytics2 from "ConversationsAnalytics" /* 9275 */;
+import ConversationNavigatorUtils from "ConversationNavigatorUtils" /* 9290 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_9 = createStyles.createStyles((backgroundColor) => {
   const obj = { container: { flex: 1, backgroundColor }, pendingContent: { flex: 1, paddingVertical: nativeDefault.space.PX_24, alignItems: "center", gap: nativeDefault.space.PX_32, backgroundColor } };
   return obj;
@@ -21,7 +21,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conversations/components/native/ConversationFocusView.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConversationFocusView(channelId) {
   const cResult = channelId(startMessageId[6]).c(31);
   channelId = channelId.channelId;
   const conversationId = channelId.conversationId;
@@ -169,7 +169,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   cResult[2] = fn;
   tmp6 = fn;
   const obj2 = channelId(startMessageId[7]);
-}) : ((channelId) => {
+}) : (function ConversationFocusView(channelId) {
   channelId = channelId.channelId;
   const conversationId = channelId.conversationId;
   const jumpMessageId = channelId.jumpMessageId;

@@ -252,7 +252,9 @@ if (tmp3) {
   };
 }
 const dependencyMap = {};
-let tmp6 = tmp2 ? ((arg0) => BigInt(arg0)) : ((num) => {
+let tmp6 = tmp2 ? (function deserializeBigInt(arg0) {
+  return BigInt(arg0);
+}) : (function deserializeHighLow(num) {
   let tmp = num;
   if (!(num instanceof HighLow)) {
     let str = num;
@@ -268,7 +270,7 @@ let tmp6 = tmp2 ? ((arg0) => BigInt(arg0)) : ((num) => {
 });
 const tmp6Result = tmp6(0);
 let closure_5 = tmp6Result;
-const tmp8 = tmp2 ? (() => {
+const tmp8 = tmp2 ? (function filterBigInt() {
   let tmp = arg0;
   if (arg0 === undefined) {
     tmp = closure_5;
@@ -278,7 +280,7 @@ const tmp8 = tmp2 ? (() => {
     tmp2 = closure_5;
   }
   return tmp & tmp2;
-}) : (() => {
+}) : (function filterHighLow() {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = closure_5;
@@ -290,7 +292,7 @@ const tmp8 = tmp2 ? (() => {
   return obj.and(tmp);
 });
 let closure_6 = tmp8;
-let closure_7 = tmp2 ? (() => {
+let closure_7 = tmp2 ? (function flagOrBigInt() {
   let tmp = arg0;
   if (arg0 === undefined) {
     tmp = closure_5;
@@ -300,7 +302,7 @@ let closure_7 = tmp2 ? (() => {
     tmp2 = closure_5;
   }
   return tmp | tmp2;
-}) : (() => {
+}) : (function flagOrHighLow() {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = closure_5;
@@ -311,7 +313,7 @@ let closure_7 = tmp2 ? (() => {
   }
   return obj.or(tmp);
 });
-let closure_8 = tmp2 ? (() => {
+let closure_8 = tmp2 ? (function flagXorBigInt() {
   let tmp = arg0;
   if (arg0 === undefined) {
     tmp = closure_5;
@@ -321,7 +323,7 @@ let closure_8 = tmp2 ? (() => {
     tmp2 = closure_5;
   }
   return tmp ^ tmp2;
-}) : (() => {
+}) : (function flagXorHighLow() {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = closure_5;
@@ -332,7 +334,9 @@ let closure_8 = tmp2 ? (() => {
   }
   return obj.xor(tmp);
 });
-let tmp10 = tmp2 ? ((arg0, arg1) => arg0 === arg1) : ((equals, arg1) => {
+let tmp10 = tmp2 ? (function equalsBigInt(arg0, arg1) {
+  return arg0 === arg1;
+}) : (function equalsHighLow(equals, arg1) {
   if (null != equals) {
     if (null != arg1) {
       let equalsResult = equals.equals(arg1);
@@ -342,7 +346,11 @@ let tmp10 = tmp2 ? ((arg0, arg1) => arg0 === arg1) : ((equals, arg1) => {
   equalsResult = equals == arg1;
 });
 let closure_9 = tmp10;
-const tmp11 = tmp2 ? ((arg0) => BigInt(1) << BigInt(arg0)) : ((arg0) => HighLow.fromBit(arg0));
+const tmp11 = tmp2 ? (function getFlagBigInt(arg0) {
+  return BigInt(1) << BigInt(arg0);
+}) : (function getFlagHighLow(arg0) {
+  return HighLow.fromBit(arg0);
+});
 let closure_10 = tmp11;
 const size = fn(2);
 let result = size.fileFinishedImporting("../discord_common/js/shared/utils/BigFlagUtils.tsx");
@@ -351,13 +359,13 @@ export const isBigFlag = tmp2 ? ((arg0) => typeof arg0 === "bigint") : ((arg0) =
 export const deserialize = tmp6;
 export const EMPTY_FLAG = tmp6Result;
 export const filter = tmp8;
-export const invert = tmp2 ? (() => {
+export const invert = tmp2 ? (function flagNotBigInt() {
   let tmp = arg0;
   if (arg0 === undefined) {
     tmp = closure_5;
   }
   return ~tmp;
-}) : (() => {
+}) : (function flagNotHighLow() {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = closure_5;
@@ -402,7 +410,11 @@ export const remove = function remove(deny, MODERATE_STAGE_CHANNEL_PERMISSIONS) 
   return tmp;
 };
 export const getFlag = tmp11;
-export const asUintN = tmp2 ? ((arg0, flags) => Number(BigInt.asUintN(arg0, flags))) : ((arg0, flags) => HighLow.asUintN(arg0, flags));
+export const asUintN = tmp2 ? (function asUintNBigInt(arg0, flags) {
+  return Number(BigInt.asUintN(arg0, flags));
+}) : (function asUintNHighLow(arg0, flags) {
+  return HighLow.asUintN(arg0, flags);
+});
 export const getBrandedFlag = function getBrandedFlag(arg0) {
   return closure_10(arg0);
 };

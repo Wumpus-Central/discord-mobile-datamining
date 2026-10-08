@@ -1,6 +1,6 @@
-// === Module 1381: BadgeRarity ===
+// === Module 1393: BadgeRarity ===
 
-// Module 1381 (BadgeRarity)
+// Module 1393 (BadgeRarity)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/BadgeRarity.tsx");

@@ -1,17 +1,17 @@
-// === Module 12826: BotReportChooser ===
+// === Module 12973: BotReportChooser ===
 
-// Module 12826 (BotReportChooser)
+// Module 12973 (BotReportChooser)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 6665 */;
-import ActionSheetRow from "ActionSheetRow" /* 6704 */;
-import ActionSheet from "ActionSheet" /* 6708 */;
-import ReportModals from "ReportModals" /* 8312 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 6842 */;
+import ActionSheetRow from "ActionSheetRow" /* 6881 */;
+import ActionSheet from "ActionSheet" /* 6885 */;
+import ReportModals from "ReportModals" /* 7695 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5124 */;
+import ApplicationStore from "ApplicationStore" /* 5436 */;
 
 require = fn;
 const jsxProd = fn(21);
@@ -19,7 +19,7 @@ const jsxProd = fn(21);
 const BotReportChooser = "BotReportChooser";
 fn(558);
 let ReactCompilerGating = fn(558);
-let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
+let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function ReportAppProfile(user) {
   const cResult = user(onSubmit[4]).c(7);
   user = user.user;
   const contextualGuildId = user.contextualGuildId;
@@ -80,7 +80,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
     },
     arrow: true
   };
-}) : ((arg0) => {
+}) : (function ReportAppProfile(arg0) {
   ({ user: require, contextualGuildId: importDefault, onSubmit: dependencyMap, appContext: ApplicationStore } = arg0);
   let obj = { label: null, subLabel: null, onPress: null, arrow: true };
   const obj2 = { variant: "heading-md/semibold", children: null };
@@ -98,7 +98,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
   return closure_4(ActionSheetRow.ActionSheetRow, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
+let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function ReportAppBehavior(user) {
   const cResult = user(contextualGuildId[4]).c(15);
   user = user.user;
   const entrypoint = user.entrypoint;
@@ -187,7 +187,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
   cResult[10] = onSubmit;
   cResult[11] = fn2;
   tmp14 = fn2;
-}) : ((arg0) => {
+}) : (function ReportAppBehavior(arg0) {
   ({ user: require, entrypoint: importDefault, contextualGuildId: dependencyMap, contextualChannelId: ApplicationStore, onSubmit: closure_4, appContext: closure_5 } = arg0);
   const items = [ApplicationStore];
   const stateFromStores = initialize.useStateFromStores(items, () => ApplicationStore.getAppIdForBotUserId(id.id));
@@ -214,7 +214,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/in_app_reports/native/BotReportChooser.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function BotReportChooser(arg0) {
   const cResult = c.c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { textAlign: "center" };
@@ -252,7 +252,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp8 = cResult[3];
   }
   return tmp8;
-}) : ((arg0) => {
+}) : (function BotReportChooser(arg0) {
   const obj = { header: null, children: null };
   const obj2 = { style: { textAlign: "center" }, variant: "redesign/heading-18/bold", children: null };
   const intl = util.intl;

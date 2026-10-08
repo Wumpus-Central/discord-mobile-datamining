@@ -1,9 +1,9 @@
-// === Module 8533: FractionalNitroCoinIllustration ===
+// === Module 9018: FractionalNitroCoinIllustration ===
 
-// Module 8533 (FractionalNitroCoinIllustration)
+// Module 9018 (FractionalNitroCoinIllustration)
 import c from "c" /* 576 */;
-import NitroCoinSpotIllustration from "NitroCoinSpotIllustration" /* 8534 */;
-import NitroCoinStackSpotIllustration2 from "NitroCoinStackSpotIllustration" /* 8536 */;
+import NitroCoinSpotIllustration from "NitroCoinSpotIllustration" /* 9019 */;
+import NitroCoinStackSpotIllustration2 from "NitroCoinStackSpotIllustration" /* 9021 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/FractionalNitroCoinIllustration.tsx");
 
 export const FRACTIONAL_NITRO_COIN_SIZE = { CARD: 80, CHECKOUT: 45, COLLECTED_SHEET: 68 };
-export const FractionalNitroCoinIllustration = ReactCompilerGating.isReactCompilerEnabled() ? ((skuId) => {
+export const FractionalNitroCoinIllustration = ReactCompilerGating.isReactCompilerEnabled() ? (function FractionalNitroCoinIllustration(skuId) {
   const cResult = c.c(5);
   ({ width, height, resizeMode } = skuId);
   let str = "contain";
@@ -43,7 +43,7 @@ export const FractionalNitroCoinIllustration = ReactCompilerGating.isReactCompil
   cResult[3] = width;
   cResult[4] = tmp5;
   tmp4 = tmp5;
-}) : ((resizeMode) => {
+}) : (function FractionalNitroCoinIllustration(resizeMode) {
   resizeMode = resizeMode.resizeMode;
   ({ skuId, width, height } = resizeMode);
   if (resizeMode === undefined) {

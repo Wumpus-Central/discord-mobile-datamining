@@ -1,9 +1,9 @@
-// === Module 9095: useIsActivityFocused ===
+// === Module 10672: useIsActivityFocused ===
 
-// Module 9095 (useIsActivityFocused)
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 9049 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
+// Module 10672 (useIsActivityFocused)
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6043 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6041 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2062 */;
 
 const require = globalThis.__r;
 
@@ -28,7 +28,7 @@ function isActivityFocused(channelId) {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/useIsActivityFocused.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsActivityFocused(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -39,7 +39,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function s() {
+    const fn = function o() {
       const selectedParticipant = ChannelRTCStore.getSelectedParticipant(closure_0);
       const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
       let tmp3 = null != selectedParticipant && null != currentEmbeddedActivity;
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   let obj = require("c");
   return require("initialize").useStateFromStores(first, tmp7);
-}) : ((arg0) => {
+}) : (function useIsActivityFocused(arg0) {
   _require = arg0;
   const items = [ChannelRTCStore, EmbeddedActivitiesStore];
   return require("initialize").useStateFromStores(items, () => {

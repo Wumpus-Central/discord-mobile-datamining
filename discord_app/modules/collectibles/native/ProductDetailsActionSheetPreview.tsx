@@ -1,11 +1,11 @@
-// === Module 12987: ProductDetailsActionSheetPreview ===
+// === Module 13265: ProductDetailsActionSheetPreview ===
 
-// Module 12987 (ProductDetailsActionSheetPreview)
+// Module 13265 (ProductDetailsActionSheetPreview)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1980 */;
-import BundleProductDetailsActionSheetPreviewDefault from "BundleProductDetailsActionSheetPreview" /* 12988 */;
-import IndividualProductPreview from "IndividualProductPreview" /* 12990 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1992 */;
+import BundleProductDetailsActionSheetPreviewDefault from "BundleProductDetailsActionSheetPreview" /* 13266 */;
+import IndividualProductPreview from "IndividualProductPreview" /* 13268 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = globalThis.__r;
@@ -15,7 +15,7 @@ const noop = fn(19);
 ({ useCallback: closure_4, useState: hasOwnProperty } = noop);
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { previewContainer: { flex: 1 }, previewDivider: { borderBottomColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderBottomWidth: 1, paddingBottom: nativeDefault.space.PX_16, flex: 1 } };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -23,7 +23,7 @@ let obj3 = { borderBottomColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, bord
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/ProductDetailsActionSheetPreview.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ProductDetailsActionSheetPreview(arg0) {
   const cResult = c.c(12);
   ({ product, handlePreviewPress, onTrackPress, onBundleActiveItemChange } = arg0);
   const tmp3 = closure_8();
@@ -85,7 +85,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   num = 8;
   cResult[8] = tmp9Result;
   const tmp4 = _slicedToArray(hasOwnProperty(0), 2);
-}) : ((onBundleActiveItemChange) => {
+}) : (function ProductDetailsActionSheetPreview(onBundleActiveItemChange) {
   ({ product, handlePreviewPress, onTrackPress } = onBundleActiveItemChange);
   c0 = undefined;
   const tmp = closure_8();

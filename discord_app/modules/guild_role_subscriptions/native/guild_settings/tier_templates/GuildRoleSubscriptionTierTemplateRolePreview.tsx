@@ -1,24 +1,24 @@
-// === Module 18027: GuildRoleSubscriptionTierTemplateRolePreview ===
+// === Module 18314: GuildRoleSubscriptionTierTemplateRolePreview ===
 
-// Module 18027 (GuildRoleSubscriptionTierTemplateRolePreview)
+// Module 18314 (GuildRoleSubscriptionTierTemplateRolePreview)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import utils_ColorUtilsAll from "utils/ColorUtils" /* 1103 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5048 */;
-import FastImageDefault from "FastImage" /* 5981 */;
-import RoleIconDefault from "RoleIcon" /* 6711 */;
+import native from "native" /* 1200 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5405 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import RoleIconDefault from "RoleIcon" /* 6888 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { flexDirection: "row", padding: 16, borderRadius: nativeDefault.radii.xs, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, avatar: { width: 40, height: 40, borderRadius: 20 }, content: { marginStart: 16 }, contextRow: { flexDirection: "row", alignItems: "center" } };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -26,7 +26,7 @@ let obj3 = { flexDirection: "row", padding: 16, borderRadius: nativeDefault.radi
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateRolePreview.tsx");
 
-export const GuildRoleSubscriptionRolePreview = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const GuildRoleSubscriptionRolePreview = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRoleSubscriptionRolePreview(arg0) {
   const cResult = c.c(40);
   ({ content, style, textStyle, roleColor, roleImage, roleName, guildId } = arg0);
   if (cResult[0] !== content) {
@@ -44,7 +44,7 @@ export const GuildRoleSubscriptionRolePreview = ReactCompilerGating.isReactCompi
   const tmp6 = closure_8();
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
-    const fn = function f() {
+    const fn = function w() {
       return currentUser.getCurrentUser();
     };
     cResult[2] = items;
@@ -206,7 +206,7 @@ export const GuildRoleSubscriptionRolePreview = ReactCompilerGating.isReactCompi
   cResult[5] = tmp6.container;
   cResult[6] = items4;
   tmp13 = items4;
-}) : ((content) => {
+}) : (function GuildRoleSubscriptionRolePreview(content) {
   content = content.content;
   if (content === undefined) {
     const intl = util.intl;

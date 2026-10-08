@@ -1,30 +1,30 @@
-// === Module 9397: SecureFramesUserVerificationBottomSheet ===
+// === Module 8818: SecureFramesUserVerificationBottomSheet ===
 
-// Module 9397 (SecureFramesUserVerificationBottomSheet)
+// Module 8818 (SecureFramesUserVerificationBottomSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4574 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 4798 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import UserActionCreators from "UserActionCreators" /* 7863 */;
-import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 8484 */;
-import SecureFramesUtils from "SecureFramesUtils" /* 9378 */;
-import SecureFramesTracking from "SecureFramesTracking" /* 9382 */;
-import XLargeBoldIcon from "XLargeBoldIcon" /* 9399 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4766 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 4992 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import UserActionCreators from "UserActionCreators" /* 8281 */;
+import SecureFramesUtils from "SecureFramesUtils" /* 8800 */;
+import SecureFramesTracking from "SecureFramesTracking" /* 8803 */;
+import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 8820 */;
+import XLargeBoldIcon from "XLargeBoldIcon" /* 8822 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
-import UserStore from "UserStore" /* 1377 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5108 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const SecureFramesConstants = fn(9380);
+const SecureFramesConstants = fn(8801);
 ({ AnalyticsSecureFramesUserVerification: closure_9, SECURE_FRAMES_PUBLIC_KEY_VERSION: c10, USER_VERIFIED_TOAST_KEY: closure_11 } = SecureFramesConstants);
 const AnalyticsLocations = fn(1085).AnalyticsLocations;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { iconContainer: null, icon: null, content: null, subtitle: null, buttons: null, helpMessage: null };
 let size = { height: 80, width: 80, borderRadius: 40, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, marginBottom: 16 };
 obj2.iconContainer = size;
@@ -38,7 +38,7 @@ const ReactCompilerGating = fn(558);
 size = fn(2);
 let result = size.fileFinishedImporting("modules/rtc/native/SecureFramesUserVerificationBottomSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SecureFramesUserVerificationBottomSheet(userId) {
   const cResult = userId(fingerprintUserKey[11]).c(76);
   userId = userId.userId;
   const channelId = userId.channelId;
@@ -267,7 +267,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   cResult[7] = { userId, channelId, userKey: fingerprintUserKey };
   let obj5 = { userId, channelId, userKey: fingerprintUserKey };
   const tmpResult = userId(fingerprintUserKey[12]);
-}) : ((userId) => {
+}) : (function SecureFramesUserVerificationBottomSheet(userId) {
   userId = userId.userId;
   const channelId = userId.channelId;
   const fingerprint = userId.fingerprint;

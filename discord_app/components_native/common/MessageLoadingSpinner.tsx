@@ -1,15 +1,15 @@
-// === Module 9148: MessageLoadingSpinner ===
+// === Module 10714: MessageLoadingSpinner ===
 
-// Module 9148 (MessageLoadingSpinner)
+// Module 10714 (MessageLoadingSpinner)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4586 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5975 */;
+import useToken from "useToken" /* 4778 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6158 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const PlatformUtils = fn(1369);
+const PlatformUtils = fn(1381);
 let result = null;
 if (!PlatformUtils.isAndroid()) {
   result = fn(17).requireNativeComponent("DCDMessageLoadingSpinner");
@@ -18,7 +18,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result1 = size.fileFinishedImporting("components_native/common/MessageLoadingSpinner.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((color) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function MessageLoadingSpinner(color) {
   const cResult = c.c(3);
   color = color.color;
   if (color == null) {
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((color) => {
   cResult[1] = color;
   cResult[2] = tmp9;
   obj2 = useToken;
-}) : ((color) => {
+}) : (function MessageLoadingSpinner(color) {
   color = color.color;
   if (color == null) {
     color = obj.useToken(nativeDefault.colors.BACKGROUND_BRAND);

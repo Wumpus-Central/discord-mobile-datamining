@@ -1,10 +1,10 @@
-// === Module 13394: GiftPurchaseButton ===
+// === Module 13694: GiftPurchaseButton ===
 
-// Module 13394 (GiftPurchaseButton)
+// Module 13694 (GiftPurchaseButton)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import SubscriptionStore from "SubscriptionStore" /* 4540 */;
-import IAPStore from "IAPStore" /* 6931 */;
+import SubscriptionStore from "SubscriptionStore" /* 4732 */;
+import IAPStore from "IAPStore" /* 7120 */;
 
 const require = globalThis.__r;
 
@@ -15,7 +15,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/premium/GiftPurchaseButton.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftPurchaseButton(arg0) {
   const cResult = require("c").c(30);
   ({ style, variant, planId } = arg0);
   _require = planId;
@@ -38,7 +38,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   dependencyMap = tmp4;
   const obj = require("c");
   const buttonTextColorStyles = require("ButtonHooks").useButtonTextColorStyles(str);
-  const merged = Object.assign(tmp(4892).TextStyleSheet["text-sm/semibold"]);
+  const merged = Object.assign(tmp(5086).TextStyleSheet["text-sm/semibold"]);
   const merged1 = Object.assign(buttonTextColorStyles);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [SubscriptionStore];
@@ -53,14 +53,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp8 = cResult[2];
     tmp9 = cResult[3];
   }
+  const obj3 = {};
   const tmpResult = require("ButtonHooks");
   const stateFromStores = require("initialize").useStateFromStores(tmp8, tmp9);
   if (cResult[4] !== planId) {
-    const productIdForGift = tmp(6926).getProductIdForGift(planId);
+    const productIdForGift = tmp(7115).getProductIdForGift(planId);
     cResult[4] = planId;
     cResult[5] = productIdForGift;
     let tmp12 = productIdForGift;
-    const tmpResult8 = tmp(6926);
+    const tmpResult8 = tmp(7115);
   } else {
     tmp12 = cResult[5];
   }
@@ -75,70 +76,94 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp15 = cResult[6];
   }
   if (cResult[7] !== tmp12) {
-    class B {
-      constructor() {
-        return closure_7.isPurchasingProduct(closure_3);
-      }
-    }
+    const fn2 = function _() {
+      return IAPStore.isPurchasingProduct(closure_3);
+    };
     cResult[7] = tmp12;
-    cResult[8] = B;
+    cResult[8] = fn2;
+    let tmp17 = fn2;
   } else {
-    class B {
-      constructor() {
-        return closure_7.isPurchasingProduct(closure_3);
-      }
-    }
+    tmp17 = cResult[8];
   }
   const tmpResult9 = require("IAPUtils");
-  const stateFromStores1 = require("initialize").useStateFromStores(tmp15, B);
+  const stateFromStores1 = require("initialize").useStateFromStores(tmp15, tmp17);
   if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-    class B {
-      constructor() {
-        return closure_7.isPurchasingProduct(closure_3);
-      }
-    }
     const items2 = [IAPStore];
     cResult[9] = items2;
-    const tmp19 = items2;
+    let tmp19 = items2;
   } else {
-    class B {
-      constructor() {
-        return closure_7.isPurchasingProduct(closure_3);
-      }
-    }
+    tmp19 = cResult[9];
   }
   if (cResult[10] !== tmp12) {
-    class B {
-      constructor() {
-        return closure_7.isPurchasingProduct(closure_3);
-      }
-    }
+    const fn3 = function w() {
+      return IAPStore.getProduct(closure_3);
+    };
     cResult[10] = tmp12;
-    cResult[11] = tmp21;
+    cResult[11] = fn3;
+    let tmp21 = fn3;
   } else {
-    class B {
-      constructor() {
-        return closure_7.isPurchasingProduct(closure_3);
-      }
-    }
+    tmp21 = cResult[11];
   }
   const tmpResult10 = require("initialize");
+  let tmp23 = null != stateFromStores;
   const stateFromStores2 = require("initialize").useStateFromStores(tmp19, tmp21);
   if (tmp23) {
-    class B {
-      constructor() {
-        return closure_7.isPurchasingProduct(closure_3);
-      }
-    }
+    tmp23 = stateFromStores.planId === planId;
   }
-  const analyticsLocations = recipientUserId(6664)().analyticsLocations;
-  tmp23 = null != stateFromStores;
+  const analyticsLocations = recipientUserId(6841)().analyticsLocations;
   const tmpResult11 = require("initialize");
   const createOrReuseGiftOrder = require("createOrReuseGiftOrder").useCreateOrReuseGiftOrder("GiftPurchaseButton");
   if (cResult[12] === tmp4) {
-    class B {
-      constructor() {
-        return closure_7.isPurchasingProduct(closure_3);
+    if (cResult[13] === analyticsLocations) {
+      if (cResult[14] === createOrReuseGiftOrder) {
+        if (cResult[15] === planId) {
+          if (cResult[16] === tmp12) {
+            if (cResult[17] === recipientUserId) {
+              let tmp26 = cResult[18];
+            }
+            const BaseTextButton = tmp(5376).BaseTextButton;
+            const obj4 = { style: obj3, basePlanId: planId, isCurrentPlan: tmp23, isGift: true, product: stateFromStores2 };
+            const tmp28 = recipientUserId(13695)(obj4);
+            if (cResult[19] === BaseTextButton) {
+              if (cResult[20] === tmp26) {
+                if (cResult[21] === stateFromStores1) {
+                  if (cResult[22] === tmp28) {
+                    if (cResult[23] === tmp29) {
+                      if (cResult[24] === str) {
+                        let tmp30 = cResult[25];
+                      }
+                      if (cResult[26] === tmp27) {
+                        if (cResult[27] === style) {
+                          if (cResult[28] === tmp30) {
+                            let tmp33 = cResult[29];
+                          }
+                          return tmp33;
+                        }
+                      }
+                      const obj5 = { style, children: tmp30 };
+                      const tmp35 = <tmp27 style={style}>{tmp30}</tmp27>;
+                      cResult[26] = tmp27;
+                      cResult[27] = style;
+                      cResult[28] = tmp30;
+                      cResult[29] = tmp35;
+                      tmp33 = tmp35;
+                    }
+                  }
+                }
+              }
+            }
+            const obj6 = { textElement: tmp28, variant: str, size: "sm", onPress: tmp26, loading: stateFromStores1, disabled: !canPurchaseIAP, grow: true };
+            const tmp32 = <BaseTextButton textElement={tmp28} variant={str} size="sm" onPress={tmp26} loading={stateFromStores1} disabled={!canPurchaseIAP} grow />;
+            cResult[19] = BaseTextButton;
+            cResult[20] = tmp26;
+            cResult[21] = stateFromStores1;
+            cResult[22] = tmp28;
+            cResult[23] = !canPurchaseIAP;
+            cResult[24] = str;
+            cResult[25] = tmp32;
+            tmp30 = tmp32;
+          }
+        }
       }
     }
   }
@@ -161,7 +186,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     obj7.body = intl2.string(planId(analyticsLocation[16]).t.CKsXk3);
     recipientUserId(analyticsLocation[15]).show(obj7);
   });
-  const fn2 = function() {
+  function t11() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -170,16 +195,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       applyArgumentsResult = apply(self, arguments);
     }
     return applyArgumentsResult;
-  };
+  }
   cResult[12] = tmp4;
   cResult[13] = analyticsLocations;
   cResult[14] = createOrReuseGiftOrder;
   cResult[15] = planId;
   cResult[16] = tmp12;
   cResult[17] = recipientUserId;
-  cResult[18] = fn2;
+  cResult[18] = t11;
+  tmp26 = t11;
   const tmpResult12 = require("createOrReuseGiftOrder");
-}) : ((style) => {
+}) : (function GiftPurchaseButton(style) {
   let str = style.variant;
   if (str === undefined) {
     str = "primary";
@@ -221,17 +247,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const callback = analyticsLocations.useCallback(productIdForGift(function*() {
     yield createOrReuseGiftOrder({ planId, recipientUserId, productId: productIdForGift });
     closure_128_0 = value;
-    const premiumTypeFromPlanId = planId(4534).getPremiumTypeFromPlanId(closure_129_0);
+    const premiumTypeFromPlanId = planId(4726).getPremiumTypeFromPlanId(closure_129_0);
     const premiumType = premiumTypeFromPlanId.premiumType;
     const planInterval = premiumTypeFromPlanId.planInterval;
-    planId(10405).openGiftModal({ recipientUserId: closure_129_2, premiumType, planInterval, analyticsLocation: closure_129_1, analyticsLocations: closure_129_4, order: closure_128_0 });
+    planId(10002).openGiftModal({ recipientUserId: closure_129_2, premiumType, planInterval, analyticsLocation: closure_129_1, analyticsLocations: closure_129_4, order: closure_128_0 });
     yield "IconComponent";
     const obj7 = { title: null, body: null };
     const intl = planId(1126).intl;
     obj7.title = intl.string(planId(1126).t.R0RpRX);
     const intl2 = planId(1126).intl;
     obj7.body = intl2.string(planId(1126).t.CKsXk3);
-    tmp3(5715).show(obj7);
+    tmp3(5298).show(obj7);
   }), items3);
   const tmpResult = planId(recipientUserId[14]);
   obj3.children = jsx(planId(recipientUserId[19]).BaseTextButton, { textElement: analyticsLocation(recipientUserId[20])({ style: obj, basePlanId: planId, isCurrentPlan: tmp11, isGift: true, product: stateFromStores2 }), variant: str, size: "sm", onPress: callback, loading: stateFromStores1, disabled: !canPurchaseIAP, grow: true });

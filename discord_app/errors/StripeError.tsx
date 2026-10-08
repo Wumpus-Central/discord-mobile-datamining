@@ -1,7 +1,7 @@
-// === Module 5321: StripeError ===
+// === Module 5633: StripeError ===
 
-// Module 5321 (StripeError)
-import BillingError from "BillingError" /* 4556 */;
+// Module 5633 (StripeError)
+import BillingError from "BillingError" /* 4748 */;
 
 const prototype = function StripeError(error) {
   error = error.error;

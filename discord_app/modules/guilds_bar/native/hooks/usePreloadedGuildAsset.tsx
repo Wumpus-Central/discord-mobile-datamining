@@ -1,8 +1,8 @@
-// === Module 16318: usePreloadedGuildAsset ===
+// === Module 16578: usePreloadedGuildAsset ===
 
-// Module 16318 (usePreloadedGuildAsset)
-import NativeImageManagerModuleDefault from "NativeImageManagerModule" /* 1886 */;
-import useRefValueDefault from "useRefValue" /* 5980 */;
+// Module 16578 (usePreloadedGuildAsset)
+import NativeImageManagerModuleDefault from "NativeImageManagerModule" /* 1898 */;
+import useRefValueDefault from "useRefValue" /* 6163 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/native/hooks/usePreloadedGuildAsset.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId, icon, asset) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePreloadedGuildAsset(guildId, icon, asset) {
   _require = guildId;
   importDefault = icon;
   dependencyMap = asset;
@@ -106,7 +106,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId, icon, a
   cResult[3] = asset;
   cResult[4] = obj4;
   tmp5 = obj4;
-}) : ((guildId, icon, asset) => {
+}) : (function usePreloadedGuildAsset(guildId, icon, asset) {
   importDefault = icon;
   dependencyMap = asset;
   _slicedToArray = _slicedToArray(ref.useState({}), 2)[1];

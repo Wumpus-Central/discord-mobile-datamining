@@ -1,21 +1,21 @@
-// === Module 16978: YouScreenContainer ===
+// === Module 17259: YouScreenContainer ===
 
-// Module 16978 (YouScreenContainer)
+// Module 17259 (YouScreenContainer)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1370 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import TabsPerformanceTracker from "TabsPerformanceTracker" /* 15981 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1382 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import TabsPerformanceTracker from "TabsPerformanceTracker" /* 16241 */;
 import noop from "module_19" /* 19 */;
 
-const useWindowDimensionsDefault = tmp4(1484);
-const useChatLayoutDefault = tmp4(4745);
-const YouScreenDefault = tmp4(16979);
+const useWindowDimensionsDefault = tmp4(1496);
+const useChatLayoutDefault = tmp4(4939);
+const YouScreenDefault = tmp4(17260);
 require = fn;
 const View = fn(17).View;
-const RootNavigatorScreen = fn(10833).RootNavigatorScreen;
+const RootNavigatorScreen = fn(11182).RootNavigatorScreen;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { container: { flex: 1, overflow: "hidden", alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.xl }, androidContainer: null, wrapper: null };
 let obj3 = { flex: 1, overflow: "hidden", alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.xl };
 obj.androidContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM, borderRadius: nativeDefault.radii.none };
@@ -27,7 +27,7 @@ let obj5 = { flex: 1, borderRadius: nativeDefault.radii.xl, overflow: "hidden" }
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouScreenContainer.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function YouScreenContainer(route) {
   let tmp15Result = dependencyMap;
   const cResult = c.c(15);
   route = route.route;
@@ -114,7 +114,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((route)
     }
     return tmp6;
   }
-}) : ((route) => {
+}) : (function YouScreenContainer(route) {
   route = route.route;
   let items1 = closure_6();
   let tmp5Result = dependencyMap;

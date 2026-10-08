@@ -1,6 +1,6 @@
-// === Module 6449: useLoginReset ===
+// === Module 6627: useLoginReset ===
 
-// Module 6449 (useLoginReset)
+// Module 6627 (useLoginReset)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -10,7 +10,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/useLoginReset.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useLoginReset() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function s() {
@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     [tmp2, tmp3] = cResult;
   }
   const effect = noop.useEffect(tmp2, tmp3);
-}) : (() => {
+}) : (function useLoginReset() {
   const effect = noop.useEffect(() => () => {
     if (!authenticated.isAuthenticated()) {
       closure_1_1(dependencyMap[4]).loginReset();

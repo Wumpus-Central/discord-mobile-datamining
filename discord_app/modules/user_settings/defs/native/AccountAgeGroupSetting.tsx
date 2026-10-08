@@ -1,23 +1,23 @@
-// === Module 14541: AccountAgeGroupSetting ===
+// === Module 14802: AccountAgeGroupSetting ===
 
-// Module 14541 (AccountAgeGroupSetting)
+// Module 14802 (AccountAgeGroupSetting)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1126 */;
-import dismissible_content from "dismissible_content" /* 2036 */;
-import TableRow from "TableRow" /* 6000 */;
-import SettingsConstants from "SettingsConstants" /* 7645 */;
-import useAgeGroupPresentation from "useAgeGroupPresentation" /* 9441 */;
-import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 14511 */;
-import TinyBroncoLazy from "TinyBroncoLazy" /* 14542 */;
-import DismissiblePremiumNewBadgeDefault from "DismissiblePremiumNewBadge" /* 14549 */;
+import dismissible_content from "dismissible_content" /* 2048 */;
+import TableRow from "TableRow" /* 6184 */;
+import SettingsConstants from "SettingsConstants" /* 7966 */;
+import useAgeGroupPresentation from "useAgeGroupPresentation" /* 9102 */;
+import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 14771 */;
+import TinyBroncoLazy from "TinyBroncoLazy" /* 14803 */;
+import DismissiblePremiumNewBadgeDefault from "DismissiblePremiumNewBadge" /* 14810 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
+import createStyles from "createStyles" /* 5090 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11142 */;
-import DismissibleBadgeUtils from "DismissibleBadgeUtils" /* 14550 */;
+import SettingBuilders from "SettingBuilders" /* 11262 */;
+import DismissibleBadgeUtils from "DismissibleBadgeUtils" /* 14811 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -33,7 +33,7 @@ let obj3 = {
     return intl.string(util.t.piqs0o);
   },
   parent: SettingsConstants.MobileUserSettings.ACCOUNT,
-  useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountAgeGroupTrailing() {
     const cResult = c.c(9);
     const tmp4 = closure_6();
     const ageGroupValueLabel = useAgeGroupPresentation.useAgeGroupValueLabel();
@@ -78,7 +78,7 @@ let obj3 = {
     cResult[1] = tmp4.badge;
     cResult[2] = tmp8;
     tmp7 = tmp8;
-  }) : (() => {
+  }) : (function useAccountAgeGroupTrailing() {
     const tmp = closure_6();
     const ageGroupValueLabel = useAgeGroupPresentation.useAgeGroupValueLabel();
     const shouldShowAgeNotice = TinyBroncoLazy.useShouldShowAgeNotice();

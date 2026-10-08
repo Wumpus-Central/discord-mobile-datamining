@@ -1,8 +1,8 @@
-// === Module 13951: PassthroughTouchView ===
+// === Module 14046: PassthroughTouchView ===
 
-// Module 13951 (PassthroughTouchView)
+// Module 14046 (PassthroughTouchView)
 import c from "c" /* 576 */;
-import PassthroughTouchNativeComponentDefault from "PassthroughTouchNativeComponent" /* 13952 */;
+import PassthroughTouchNativeComponentDefault from "PassthroughTouchNativeComponent" /* 14047 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/PassthroughTouchView/native/PassthroughTouchView.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onTouchDown) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function PassthroughTouchView(onTouchDown) {
   const cResult = c.c(6);
   if (cResult[0] !== onTouchDown) {
     onTouchDown = onTouchDown.onTouchDown;
@@ -42,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onTouchDown) => 
   cResult[4] = tmp4;
   cResult[5] = tmp11;
   tmp8 = tmp11;
-}) : ((onTouchDown) => {
+}) : (function PassthroughTouchView(onTouchDown) {
   const merged = Object.assign(onTouchDown, Object.assign({ onTouchDown: 0 }));
   const obj = {};
   const merged1 = Object.assign(merged);

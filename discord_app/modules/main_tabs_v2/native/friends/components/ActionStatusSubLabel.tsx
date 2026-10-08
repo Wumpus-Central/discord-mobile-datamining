@@ -1,9 +1,9 @@
-// === Module 16422: ActionStatusSubLabel ===
+// === Module 16682: ActionStatusSubLabel ===
 
-// Module 16422 (ActionStatusSubLabel)
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4596 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4618 */;
-import timing from "timing" /* 4897 */;
+// Module 16682 (ActionStatusSubLabel)
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4788 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4810 */;
+import timing from "timing" /* 5091 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexport = ReanimatedRexport2;
@@ -15,9 +15,9 @@ function announceActioned(intl) {
 }
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles(() => ({ container: { overflow: "hidden" }, actionStatus: { position: "absolute" } }));
-let closure_7 = ReanimatedRexport.createAnimatedComponent(fn(4892).Text);
+let closure_7 = ReanimatedRexport.createAnimatedComponent(fn(5086).Text);
 const __initData = { code: "function ActionStatusSubLabelTsx1(){const{hasSecondLine,actioned,lineHeight,fontScale,animate,withTiming,interpolate}=this.__closure;const currentlyHasSecondLine=hasSecondLine&&!actioned.get();const lineHeightValue=lineHeight*fontScale;const currentLineHeightValue=currentlyHasSecondLine?lineHeightValue*2:lineHeightValue;return{height:!animate||!actioned.get()?currentLineHeightValue:withTiming(interpolate(actioned.get()?1:0,[0,1],[currentlyHasSecondLine?lineHeightValue*2:lineHeightValue,lineHeightValue]))};}" };
 const __initData2 = { code: "function ActionStatusSubLabelTsx2(){const{actioned,lineHeight,fontScale,animate,withTiming,interpolate}=this.__closure;const translateYValue=actioned.get()?lineHeight*fontScale:0;return{transform:[{translateY:!animate?translateYValue:withTiming(interpolate(actioned.get()?1:0,[0,1],[0,translateYValue]))}]};}" };
 const __initData3 = { code: "function ActionStatusSubLabelTsx3(){const{actioned,lineHeight,fontScale,animate,withTiming,interpolate}=this.__closure;const translateYValue_0=actioned.get()?0:-lineHeight*fontScale;return{transform:[{translateY:!animate?translateYValue_0:withTiming(interpolate(actioned.get()?1:0,[0,1],[translateYValue_0,0]))}],opacity:!animate?actioned.get()?1:0:withTiming(actioned.get()?1:0)};}" };
@@ -33,7 +33,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/components/ActionStatusSubLabel.tsx");
 
 export const ACTION_STATUS_SUB_LABEL_LINE_HEIGHT = 16;
-export const ActionStatusSubLabel = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const ActionStatusSubLabel = ReactCompilerGating.isReactCompilerEnabled() ? (function ActionStatusSubLabel(arg0) {
   const cResult = actioned(animate[7]).c(27);
   ({ lineHeight, textVariant, actioned } = arg0);
   ({ label, secondaryLabel, actionStatus, actionStatusAccessibilityLabel } = arg0);
@@ -286,7 +286,7 @@ export const ActionStatusSubLabel = ReactCompilerGating.isReactCompilerEnabled()
   cResult[2] = items2;
   tmp11 = items2;
   let obj5 = { actionStatusAccessibilityLabel, runOnJS: actioned(animate[4]).runOnJS, announceActioned };
-}) : ((lineHeight) => {
+}) : (function ActionStatusSubLabel(lineHeight) {
   let num = lineHeight.lineHeight;
   if (num === undefined) {
     num = 16;

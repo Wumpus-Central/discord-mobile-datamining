@@ -1,9 +1,9 @@
-// === Module 18019: GuildSettingsRoleSubscriptionsPayments ===
+// === Module 18306: GuildSettingsRoleSubscriptionsPayments ===
 
-// Module 18019 (GuildSettingsRoleSubscriptionsPayments)
+// Module 18306 (GuildSettingsRoleSubscriptionsPayments)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import UnavailableNoticeDefault from "UnavailableNotice" /* 16530 */;
+import UnavailableNoticeDefault from "UnavailableNotice" /* 16785 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsPayments.tsx");
 
-export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSettingsRoleSubscriptionPayments() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { title: null, description: null, brightTitle: true };
@@ -27,11 +27,12 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
     first = cResult[0];
   }
   return first;
-}) : (() => {
+}) : (function GuildSettingsRoleSubscriptionPayments(arg0) {
+  const merged = Object.assign(arg0, Object.assign({ ref: 0 }));
   const obj = { title: null, description: null, brightTitle: true };
   const intl = util.intl;
   obj.title = intl.string(util.t.qAMb9K);
   const intl2 = util.intl;
   obj.description = intl2.string(util.t.pRuzXJ);
   return jsx(UnavailableNoticeDefault, { title: null, description: null, brightTitle: true });
-}));
+});

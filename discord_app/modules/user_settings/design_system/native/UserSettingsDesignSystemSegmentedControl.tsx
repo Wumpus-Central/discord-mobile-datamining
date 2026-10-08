@@ -1,10 +1,10 @@
-// === Module 15671: UserSettingsDesignSystemSegmentedControl ===
+// === Module 15951: UserSettingsDesignSystemSegmentedControl ===
 
-// Module 15671 (UserSettingsDesignSystemSegmentedControl)
+// Module 15951 (UserSettingsDesignSystemSegmentedControl)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4596 */;
-import Text_Text from "Text/Text" /* 4892 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4788 */;
+import Text_Text from "Text/Text" /* 5086 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,11 +15,11 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsxs: metroRequire, jsx: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { margin: 16, flex: 1, alignItems: "center", padding: 40 }, item: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderWidth: 2, borderColor: nativeDefault.colors.BORDER_STRONG, flex: 1, alignItems: "center", justifyContent: "center", height: 400 } };
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSegmentedControlItems(arg0) {
   let sum;
   const cResult = c.c(3);
   const tmp2 = closure_8();
@@ -53,7 +53,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = tmp2.item;
   cResult[2] = items;
   tmp3 = items;
-}) : ((arg0) => {
+}) : (function useSegmentedControlItems(arg0) {
   closure_0 = arg0;
   const tmp = closure_8();
   const item = tmp;
@@ -88,7 +88,7 @@ let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borde
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemSegmentedControl.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSettingsDesignSystemSegmentedControl() {
   const cResult = require("c").c(27);
   const obj = require("c");
   [tmp5, require] = noop.useState(0);
@@ -102,43 +102,23 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const segmentedControlState = require("SegmentedControlState").useSegmentedControlState(tmp10);
     const _Symbol = Symbol;
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-      class I {
-        constructor(arg0) {
-          tmp = closure_0(arg0.nativeEvent.layout.width);
-          return;
-        }
-      }
-      cResult[3] = I;
-    } else {
-      class I {
-        constructor(arg0) {
-          tmp = closure_0(arg0.nativeEvent.layout.width);
-          return;
-        }
-      }
+      const fn = function _(nativeEvent) {
+        _require(nativeEvent.nativeEvent.layout.width);
+      };
+      cResult[3] = fn;
     }
     if (cResult[4] !== segmentedControlState) {
-      class I {
-        constructor(arg0) {
-          tmp = closure_0(arg0.nativeEvent.layout.width);
-          return;
-        }
-      }
       const obj2 = { state: segmentedControlState };
-      const tmp16 = closure_7(require("SegmentedControl").SegmentedControl, obj2);
+      const tmp17 = closure_7(require("SegmentedControl").SegmentedControl, obj2);
       const obj3 = { state: segmentedControlState };
-      const tmp17 = closure_7(require("SegmentedControlPages").SegmentedControlPages, obj3);
+      const tmp18 = closure_7(require("SegmentedControlPages").SegmentedControlPages, obj3);
       cResult[4] = segmentedControlState;
-      cResult[5] = tmp16;
-      cResult[6] = tmp17;
-      let tmp15 = tmp17;
+      cResult[5] = tmp17;
+      cResult[6] = tmp18;
+      let tmp15 = tmp18;
+      let tmp14 = tmp17;
     } else {
-      class I {
-        constructor(arg0) {
-          tmp = closure_0(arg0.nativeEvent.layout.width);
-          return;
-        }
-      }
+      tmp14 = cResult[5];
       tmp15 = cResult[6];
     }
     if (cResult[7] !== first) {
@@ -175,7 +155,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         }
       }
       if (cResult[12] !== first) {
-        class O {
+        class D {
           constructor() {
             diff = closure_1 - 1;
             tmp2 = closure_2(diff);
@@ -185,9 +165,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           }
         }
         cResult[12] = first;
-        cResult[13] = O;
+        cResult[13] = D;
       } else {
-        class O {
+        class D {
           constructor() {
             diff = closure_1 - 1;
             tmp2 = closure_2(diff);
@@ -198,7 +178,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         }
       }
       if (cResult[14] === 2 === first) {
-        class O {
+        class D {
           constructor() {
             diff = closure_1 - 1;
             tmp2 = closure_2(diff);
@@ -207,8 +187,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             return;
           }
         }
-        if (cResult[17] === tmp20) {
-          class O {
+        if (cResult[17] === tmp21) {
+          class D {
             constructor() {
               diff = closure_1 - 1;
               tmp2 = closure_2(diff);
@@ -217,8 +197,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
               return;
             }
           }
-          if (cResult[20] === tmp28) {
-            class O {
+          if (cResult[20] === tmp29) {
+            class D {
               constructor() {
                 diff = closure_1 - 1;
                 tmp2 = closure_2(diff);
@@ -229,33 +209,33 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             }
           }
           const obj4 = { spacing: 24, children: null };
-          const items = [tmp14, tmp15, tmp28];
+          const items = [tmp14, tmp15, tmp29];
           obj4.children = items;
-          const tmp33 = closure_6(require("Stack/Stack").Stack, obj4);
-          cResult[20] = tmp28;
+          const tmp34 = closure_6(require("Stack/Stack").Stack, obj4);
+          cResult[20] = tmp29;
           cResult[21] = tmp14;
           cResult[22] = tmp15;
-          cResult[23] = tmp33;
+          cResult[23] = tmp34;
         }
         const obj5 = { spacing: 8, direction: "horizontal", children: null };
-        const items1 = [tmp20, tmp25];
+        const items1 = [tmp21, tmp26];
         obj5.children = items1;
-        const tmp30 = closure_6(require("Stack/Stack").Stack, obj5);
-        cResult[17] = tmp20;
-        cResult[18] = tmp25;
-        cResult[19] = tmp30;
+        const tmp31 = closure_6(require("Stack/Stack").Stack, obj5);
+        cResult[17] = tmp21;
+        cResult[18] = tmp26;
+        cResult[19] = tmp31;
       }
-      const obj6 = { text: "Remove Tab", variant: "destructive", size: "sm", disabled: 2 === first, onPress: O };
-      const tmp27 = closure_7(require("components/Button/Button").Button, obj6);
+      const obj6 = { text: "Remove Tab", variant: "destructive", size: "sm", disabled: 2 === first, onPress: D };
+      const tmp28 = closure_7(require("components/Button/Button").Button, obj6);
       cResult[14] = 2 === first;
-      cResult[15] = O;
-      cResult[16] = tmp27;
+      cResult[15] = D;
+      cResult[16] = tmp28;
     }
     const obj7 = { text: "Add Tab", variant: "active", size: "sm", disabled: first >= 5, onPress: P };
-    const tmp22 = closure_7(require("components/Button/Button").Button, obj7);
+    const tmp23 = closure_7(require("components/Button/Button").Button, obj7);
     cResult[9] = first >= 5;
     cResult[10] = P;
-    cResult[11] = tmp22;
+    cResult[11] = tmp23;
     const tmpResult = require("SegmentedControlState");
   }
   const obj8 = { items: tmp9, pageWidth: tmp5, defaultIndex: 1 };
@@ -264,7 +244,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[2] = obj8;
   tmp10 = obj8;
   const tmp4 = _slicedToArray(noop.useState(0), 2);
-}) : (() => {
+}) : (function UserSettingsDesignSystemSegmentedControl() {
   const tmp = _slicedToArray(noop.useState(0), 2);
   _require = tmp[1];
   [first, _slicedToArray] = noop.useState(3);

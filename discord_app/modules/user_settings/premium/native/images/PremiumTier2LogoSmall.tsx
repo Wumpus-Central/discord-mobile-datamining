@@ -1,10 +1,10 @@
-// === Module 13304: PremiumTier2LogoSmall ===
+// === Module 13604: PremiumTier2LogoSmall ===
 
-// Module 13304 (PremiumTier2LogoSmall)
+// Module 13604 (PremiumTier2LogoSmall)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4586 */;
-import inlineStyles from "inlineStyles" /* 8169 */;
+import useToken from "useToken" /* 4778 */;
+import inlineStyles from "inlineStyles" /* 7550 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -15,7 +15,7 @@ const ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/premium/native/images/PremiumTier2LogoSmall.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumTier2LogoSmall(arg0) {
   const cResult = c.c(7);
   ({ style, width, height } = arg0);
   const token = useToken.useToken(nativeDefault.colors.TEXT_STRONG);
@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = width;
   cResult[6] = tmp10;
   tmp9 = tmp10;
-}) : ((arg0) => {
+}) : (function PremiumTier2LogoSmall(arg0) {
   ({ style, width, height } = arg0);
   const token = useToken.useToken(nativeDefault.colors.TEXT_STRONG);
   const size = { style, width, height, viewBox: "0 0 50 9", fill: "none", children: null };

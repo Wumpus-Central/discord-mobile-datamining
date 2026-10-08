@@ -1,10 +1,10 @@
-// === Module 12232: useGetExpiringGuildPowerups ===
+// === Module 12311: useGetExpiringGuildPowerups ===
 
-// Module 12232 (useGetExpiringGuildPowerups)
-import GlobalUtils from "GlobalUtils" /* 1375 */;
-import getExpiringGuildEntitlements from "getExpiringGuildEntitlements" /* 12167 */;
+// Module 12311 (useGetExpiringGuildPowerups)
+import GlobalUtils from "GlobalUtils" /* 1387 */;
+import getExpiringGuildEntitlements from "getExpiringGuildEntitlements" /* 12246 */;
 import noop from "module_19" /* 19 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 4773 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4967 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGetExpiringGuildPowerups.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGetExpiringGuildPowerups(arg0) {
   _require = arg0;
   let found = allPowerups;
   const cResult = require("c").c(9);
@@ -42,34 +42,50 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const _Object = Object;
     const expiringGuildEntitlements = tmp(found[5]).getExpiringGuildEntitlements(Object.values(unlockedPowerups));
     if (cResult[7] !== allPowerups) {
-      const fn2 = function _(arg0) {
-        return allPowerups[arg0.sku_id];
-      };
+      class G {
+        constructor(arg0) {
+          return allPowerups[arg0.sku_id];
+        }
+      }
       cResult[7] = allPowerups;
-      cResult[8] = fn2;
-      let tmp9 = fn2;
+      cResult[8] = G;
     } else {
-      tmp9 = cResult[8];
+      class G {
+        constructor(arg0) {
+          return allPowerups[arg0.sku_id];
+        }
+      }
     }
-    const mapped = expiringGuildEntitlements.map(tmp9);
+    const mapped = expiringGuildEntitlements.map(G);
     found = mapped.filter(tmp(found[6]).isNotNullish);
     cResult[4] = allPowerups;
     cResult[5] = unlockedPowerups;
     cResult[6] = found;
     const tmpResult2 = tmp(found[5]);
   } else {
-    const _Symbol = Symbol;
-    if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-      const items1 = [];
-      cResult[3] = items1;
-      let tmp8 = items1;
-    } else {
-      tmp8 = cResult[3];
+    class G {
+      constructor(arg0) {
+        return allPowerups[arg0.sku_id];
+      }
     }
-    return tmp8;
+    if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+      class G {
+        constructor(arg0) {
+          return allPowerups[arg0.sku_id];
+        }
+      }
+      cResult[3] = tmp9;
+    } else {
+      class G {
+        constructor(arg0) {
+          return allPowerups[arg0.sku_id];
+        }
+      }
+    }
+    return tmp9;
   }
   const tmpResult = require("initialize");
-}) : ((arg0) => {
+}) : (function useGetExpiringGuildPowerups(arg0) {
   _require = arg0;
   const items = [GuildPowerupsStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => GuildPowerupsStore.getStateForGuild(closure_0));

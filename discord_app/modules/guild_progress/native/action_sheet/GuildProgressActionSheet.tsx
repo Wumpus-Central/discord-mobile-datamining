@@ -1,36 +1,36 @@
-// === Module 12147: GuildProgressActionSheet ===
+// === Module 12226: GuildProgressActionSheet ===
 
-// Module 12147 (GuildProgressActionSheet)
+// Module 12226 (GuildProgressActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
-import native from "native" /* 1188 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ToastUtils from "ToastUtils" /* 4573 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import transitionToChannel from "transitionToChannel" /* 4907 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6688 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9494 */;
-import GuildProgressUtils from "GuildProgressUtils" /* 12145 */;
-import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 12148 */;
-import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 12153 */;
+import native from "native" /* 1200 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import ToastUtils from "ToastUtils" /* 4765 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import transitionToChannel from "transitionToChannel" /* 5101 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6865 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8658 */;
+import GuildProgressUtils from "GuildProgressUtils" /* 12224 */;
+import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 12227 */;
+import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 12232 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9283 */;
-import GuildChannelStore from "GuildChannelStore" /* 4513 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8614 */;
+import GuildChannelStore from "GuildChannelStore" /* 4705 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const GuildProgressConstants = fn(12140);
+const GuildProgressConstants = fn(12219);
 ({ AnalyticsSetupTypes: closure_8, AnalyticsActions: closure_9 } = GuildProgressConstants);
 const Constants = fn(1085);
 ({ UPLOAD_MEDIUM_SIZE: c10, AnalyticEvents: closure_11, ComponentActions: closure_12, InstantInviteSources: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { padding: 16 }, header: { alignItems: "center", paddingTop: 8, paddingBottom: 16 }, headerTitle: { marginBottom: 8, textAlign: "center" }, headerSubtitle: { fontSize: 14, fontWeight: "500", color: nativeDefault.colors.TEXT_SUBTLE }, footer: { marginTop: 4 }, center: { alignItems: "center" } };
 let closure_16 = createStyles.createStyles(obj2);
 fn(558);
@@ -91,7 +91,7 @@ let closure_17 = tmp6;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_progress/native/action_sheet/GuildProgressActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildProgressActionSheet(guild) {
   const cResult = guild(numFinished[11]).c(72);
   guild = guild.guild;
   closure_16();
@@ -130,14 +130,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
       }
     }
     const items1 = [GuildSettingsStore];
-    class A {
-      constructor() {
-        return closure_1_6.getErrors();
-      }
-    }
+    const fn = function b() {
+      return errors.getErrors();
+    };
     cResult[3] = items1;
-    cResult[4] = A;
-    let tmp11 = A;
+    cResult[4] = fn;
+    let tmp11 = fn;
     const tmp10 = items1;
   } else {
     class P {
@@ -157,11 +155,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
       }
     }
     const items2 = [stateFromStoresObject.message];
-    class A {
-      constructor() {
-        return closure_1_6.getErrors();
-      }
-    }
     cResult[5] = stateFromStoresObject.message;
     cResult[6] = tmp15;
     cResult[7] = items2;
@@ -185,11 +178,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
       }
     }
     const items3 = [id];
-    class A {
-      constructor() {
-        return closure_1_6.getErrors();
-      }
-    }
     cResult[8] = id;
     cResult[9] = M;
     cResult[10] = items3;
@@ -216,7 +204,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
       }
     }
   }
-  const fn = function j() {
+  const fn2 = function j() {
     if (numFinished === totalSteps) {
       const result = GuildProgressActionCreatorsDefault.markCompletedProgressSeen(id);
     }
@@ -226,9 +214,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   cResult[12] = numFinished;
   cResult[13] = totalSteps;
   cResult[14] = items4;
-  cResult[15] = fn;
+  cResult[15] = fn2;
   const tmpResult4 = guild(numFinished[12]);
-}) : ((guild) => {
+}) : (function GuildProgressActionSheet(guild) {
   guild = guild.guild;
   let numFinished;
   const errors = async function _addServerIcon2() {
@@ -257,14 +245,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
             return obj3;
           } else {
             let base64;
-            tmp5(9282).init(View);
-            const obj6 = tmp5(9282);
-            tmp2(12145).hideActionSheet(id.id);
-            const obj7 = tmp2(12145);
+            tmp5(8613).init(View);
+            const obj6 = tmp5(8613);
+            tmp2(12224).hideActionSheet(id.id);
+            const obj7 = tmp2(12224);
             const obj4 = { size };
             dependencyMap = 1;
             c3 = 1;
-            const obj5 = { value: tmp5(7287).openImagePicker(obj4), done: false };
+            const obj5 = { value: tmp5(7741).openImagePicker(obj4), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -277,8 +265,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
         } else {
           base64 = value.base64;
           if (null != base64) {
-            tmp5(9282).updateIcon(closure_129_5, base64);
-            const obj = tmp5(9282);
+            tmp5(8613).updateIcon(closure_129_5, base64);
+            const obj = tmp5(8613);
           }
           c3 = 3;
           return { value: "IconComponent", done: null };
@@ -332,7 +320,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   };
   let obj5 = { uri: null };
   let obj3 = guild(numFinished[12]);
-  obj5.uri = require("module_12149");
+  obj5.uri = require("module_12228");
   obj4.source = obj5;
   const intl = guild(numFinished[19]).intl;
   obj4.title = intl.string(guild(numFinished[19]).t.q9n0Ta);
@@ -359,7 +347,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   };
   let obj7 = { uri: null };
   const tmp11 = closure_14(require("ProgressItem"), obj4);
-  obj7.uri = require("module_12151");
+  obj7.uri = require("module_12230");
   obj6.source = obj7;
   const intl2 = guild(numFinished[19]).intl;
   obj6.title = intl2.string(guild(numFinished[19]).t.DWB2YZ);
@@ -389,7 +377,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   };
   let obj9 = { uri: null };
   const tmp13 = closure_14(require("ProgressItem"), obj6);
-  obj9.uri = require("module_12152");
+  obj9.uri = require("module_12231");
   obj8.source = obj9;
   const intl3 = guild(numFinished[19]).intl;
   obj8.title = intl3.string(guild(numFinished[19]).t.dNktpr);
@@ -412,7 +400,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   };
   const obj11 = { uri: null };
   const tmp15 = closure_14(require("ProgressItem"), obj8);
-  obj11.uri = require("module_12262");
+  obj11.uri = require("module_12341");
   obj10.source = obj11;
   const intl4 = guild(numFinished[19]).intl;
   obj10.title = intl4.string(guild(numFinished[19]).t["6Qbqxw"]);

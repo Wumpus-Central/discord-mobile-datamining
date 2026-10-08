@@ -1,9 +1,9 @@
-// === Module 9254: AppChannelApplicationSelector ===
+// === Module 8583: AppChannelApplicationSelector ===
 
-// Module 9254 (AppChannelApplicationSelector)
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import AppChannelApplicationActionSheet from "AppChannelApplicationActionSheet" /* 9258 */;
+// Module 8583 (AppChannelApplicationSelector)
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import AppChannelApplicationActionSheet from "AppChannelApplicationActionSheet" /* 8588 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -43,14 +43,14 @@ export default function AppChannelApplicationSelector(guildId) {
     tmp5Result = jsx(channelId(tmp2[6]), { application: selectedApplication });
   }
   obj3.icon = tmp5Result;
-  let fn;
+  let handlePress;
   if (true !== disabled && !hasNoApplications) {
-    fn = () => {
+    handlePress = function handlePress() {
       const obj = ActionSheetActionCreatorsDefault;
-      obj.openLazy(asyncRequireImpl(9258, dependencyMap.paths), AppChannelApplicationActionSheet.APP_CHANNEL_APPLICATION_ACTION_SHEET_KEY, { guildId, channelId, selectedApplicationId, onChange });
+      obj.openLazy(asyncRequireImpl(8588, dependencyMap.paths), AppChannelApplicationActionSheet.APP_CHANNEL_APPLICATION_ACTION_SHEET_KEY, { guildId, channelId, selectedApplicationId, onChange });
     };
   }
-  obj3.onPress = fn;
+  obj3.onPress = handlePress;
   obj3.arrow = true !== disabled && !hasNoApplications;
   obj3.disabled = !(true !== disabled && !hasNoApplications);
   obj2.children = jsx(guildId(selectedApplicationId[5]).TableRow, { label: name, accessibilityLabel: null, icon: null, onPress: null, arrow: null, disabled: null });

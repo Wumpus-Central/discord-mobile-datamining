@@ -1,11 +1,11 @@
-// === Module 9905: ExpressiveGradient ===
+// === Module 9386: ExpressiveGradient ===
 
-// Module 9905 (ExpressiveGradient)
+// Module 9386 (ExpressiveGradient)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
-import useToken from "useToken" /* 4586 */;
-import LinearGradientDefault from "LinearGradient" /* 5612 */;
+import useToken from "useToken" /* 4778 */;
+import LinearGradientDefault from "LinearGradient" /* 5387 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -33,7 +33,7 @@ let obj7 = { start: nativeDefault.colors.EXPRESSIVE_GRADIENT_NITRO_GREEN_START, 
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/ExpressiveGradient/native/ExpressiveGradient.native.tsx");
 
-export const ExpressiveGradient = ReactCompilerGating.isReactCompilerEnabled() ? ((backgroundColor) => {
+export const ExpressiveGradient = ReactCompilerGating.isReactCompilerEnabled() ? (function ExpressiveGradient(backgroundColor) {
   obj = c;
   const cResult = obj.c(26);
   ({ color, offsetBottom, children, style } = backgroundColor);
@@ -169,7 +169,7 @@ export const ExpressiveGradient = ReactCompilerGating.isReactCompilerEnabled() ?
   cResult[4] = items5;
   tmp13 = items5;
   const tmpResult4 = useToken;
-}) : ((color) => {
+}) : (function ExpressiveGradient(color) {
   let str = color.color;
   if (str === undefined) {
     str = "purple";

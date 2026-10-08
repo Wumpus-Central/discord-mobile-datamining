@@ -1,10 +1,10 @@
-// === Module 15509: LettersIcon ===
+// === Module 15771: LettersIcon ===
 
-// Module 15509 (LettersIcon)
+// Module 15771 (LettersIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4585 */;
-import _mod15510 from "module_15510" /* 15510 */;
+import BaseIconImage from "BaseIconImage" /* 4777 */;
+import _mod15772 from "module_15772" /* 15772 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/LettersIcon.tsx");
 
-export const LettersIcon = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const LettersIcon = ReactCompilerGating.isReactCompilerEnabled() ? (function LettersIcon(arg0) {
   const cResult = c.c(9);
   if (cResult[0] !== arg0) {
     ({ style, color } = arg0);
@@ -36,7 +36,7 @@ export const LettersIcon = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod15510;
+    const tmpResult = _mod15772;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -58,12 +58,12 @@ export const LettersIcon = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
   cResult[8] = tmp14;
   tmp12 = tmp14;
   const obj2 = { source: tmp10, color: INTERACTIVE_ICON_DEFAULT, style: tmp5 };
-}) : ((color) => {
+}) : (function LettersIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;
   if (INTERACTIVE_ICON_DEFAULT === undefined) {
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15510, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15772, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

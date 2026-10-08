@@ -1,10 +1,10 @@
-// === Module 11157: useDrawerWidth ===
+// === Module 11278: useDrawerWidth ===
 
-// Module 11157 (useDrawerWidth)
+// Module 11278 (useDrawerWidth)
 import c from "c" /* 576 */;
 import Constants from "Constants" /* 1085 */;
-import useChatLayout from "useChatLayout" /* 4745 */;
-import useBaseAppContainerDimensions from "useBaseAppContainerDimensions" /* 4747 */;
+import useChatLayout from "useChatLayout" /* 4939 */;
+import useBaseAppContainerDimensions from "useBaseAppContainerDimensions" /* 4941 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -30,7 +30,7 @@ export const getDrawerWidth = function getDrawerWidth() {
     bound = Math.min(closure_4, width - 32);
   }
 };
-export const useDrawerWidth = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useDrawerWidth = ReactCompilerGating.isReactCompilerEnabled() ? (function useDrawerWidth() {
   const cResult = c.c(3);
   const width = useBaseAppContainerDimensionsDefault().width;
   const tmp2 = useChatLayoutDefault();
@@ -48,7 +48,7 @@ export const useDrawerWidth = ReactCompilerGating.isReactCompilerEnabled() ? (()
     cResult[1] = width;
     cResult[2] = bound;
   }
-}) : (() => {
+}) : (function useDrawerWidth() {
   const width = useBaseAppContainerDimensionsDefault().width;
   if (!tmp.isChatBesideChannelList) {
     return width;

@@ -1,16 +1,16 @@
-// === Module 15882: VEVOOSlider ===
+// === Module 16141: VEVOOSlider ===
 
-// Module 15882 (VEVOOSlider)
+// Module 16141 (VEVOOSlider)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import PlatformUtils2 from "PlatformUtils" /* 1369 */;
-import _modDef7963 from "module_7963" /* 7963 */;
+import PlatformUtils2 from "PlatformUtils" /* 1381 */;
+import _modDef8380 from "module_8380" /* 8380 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
-const PlatformUtils = fn(1369);
+const createStyles = fn(5090);
+const PlatformUtils = fn(1381);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = nativeDefault.space.PX_8;
@@ -20,7 +20,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/visual_effect_view/native/overrides/VEVOOSlider.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((initialValue) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function VEVOOSlider(initialValue) {
   const cResult = c.c(11);
   ({ disabled, disabledOpacity, onValueChange } = initialValue);
   let tmp4 = undefined !== disabledOpacity;
@@ -68,7 +68,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((initia
       }
     }
     const obj3 = { style: tmp7, disabled, value: current, minimumValue: 0, maximumValue: 1, minimumTrackTintColor: nativeDefault.unsafe_rawColors.BRAND_500, maximumTrackTintColor: nativeDefault.unsafe_rawColors.PRIMARY_400, onValueChange, onResponderGrant: tmp10 };
-    const tmp15 = jsx(_modDef7963, { style: tmp7, disabled, value: current, minimumValue: 0, maximumValue: 1, minimumTrackTintColor: nativeDefault.unsafe_rawColors.BRAND_500, maximumTrackTintColor: nativeDefault.unsafe_rawColors.PRIMARY_400, onValueChange, onResponderGrant: tmp10 });
+    const tmp15 = jsx(_modDef8380, { style: tmp7, disabled, value: current, minimumValue: 0, maximumValue: 1, minimumTrackTintColor: nativeDefault.unsafe_rawColors.BRAND_500, maximumTrackTintColor: nativeDefault.unsafe_rawColors.PRIMARY_400, onValueChange, onResponderGrant: tmp10 });
     cResult[6] = disabled;
     cResult[7] = onValueChange;
     cResult[8] = tmp7;
@@ -81,7 +81,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((initia
   cResult[3] = tmp6;
   cResult[4] = items;
   tmp7 = items;
-}) : ((disabled) => {
+}) : (function VEVOOSlider(disabled) {
   let flag = disabled.disabledOpacity;
   if (flag === undefined) {
     flag = false;

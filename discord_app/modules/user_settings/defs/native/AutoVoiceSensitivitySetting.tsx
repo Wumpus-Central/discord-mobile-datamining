@@ -1,16 +1,16 @@
-// === Module 15082: AutoVoiceSensitivitySetting ===
+// === Module 15344: AutoVoiceSensitivitySetting ===
 
-// Module 15082 (AutoVoiceSensitivitySetting)
+// Module 15344 (AutoVoiceSensitivitySetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 8079 */;
-import MediaEngineStore from "MediaEngineStore" /* 1999 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5241 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11142);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const SettingBuilders = fn(11262);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAutoVoiceSensitivitySettingValue() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [MediaEngineStore];
@@ -25,7 +25,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     [tmp4, tmp5] = cResult;
   }
   return initialize.useStateFromStores(tmp4, tmp5);
-}) : (() => {
+}) : (function useAutoVoiceSensitivitySettingValue() {
   const items = [MediaEngineStore];
   return initialize.useStateFromStores(items, () => modeOptions.getModeOptions().autoThreshold);
 });
@@ -34,8 +34,8 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.Z4oaN0);
   },
-  parent: fn(7645).MobileUserSettings.VOICE,
-  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  parent: fn(7966).MobileUserSettings.VOICE,
+  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useAutoVoiceSensitivitySettingValue() {
     const cResult = c.c(2);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
       const items = [MediaEngineStore];
@@ -50,7 +50,7 @@ const toggle = SettingBuilders.createToggle({
       [tmp4, tmp5] = cResult;
     }
     return initialize.useStateFromStores(tmp4, tmp5);
-  }) : (() => {
+  }) : (function useAutoVoiceSensitivitySettingValue() {
     const items = [MediaEngineStore];
     return initialize.useStateFromStores(items, () => modeOptions.getModeOptions().autoThreshold);
   }),

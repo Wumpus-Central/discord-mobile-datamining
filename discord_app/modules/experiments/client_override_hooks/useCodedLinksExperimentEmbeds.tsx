@@ -1,21 +1,21 @@
-// === Module 11151: useCodedLinksExperimentEmbeds ===
+// === Module 11271: useCodedLinksExperimentEmbeds ===
 
-// Module 11151 (useCodedLinksExperimentEmbeds)
+// Module 11271 (useCodedLinksExperimentEmbeds)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import useLegacyExperiments from "useLegacyExperiments" /* 11152 */;
-import useApexExperiments from "useApexExperiments" /* 11153 */;
+import useLegacyExperiments from "useLegacyExperiments" /* 11272 */;
+import useApexExperiments from "useApexExperiments" /* 11273 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
-import ExperimentStore from "ExperimentStore" /* 4782 */;
-import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
+import UserStore from "UserStore" /* 1389 */;
+import ExperimentStore from "ExperimentStore" /* 4976 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1258 */;
 
 const require = globalThis.__r;
 
 require = fn;
 let ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanSeeExperimentEmbeds() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [UserStore];
@@ -45,7 +45,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     [tmp4, tmp5] = cResult;
   }
   return initialize.useStateFromStores(tmp4, tmp5);
-}) : (() => {
+}) : (function useCanSeeExperimentEmbeds() {
   let items = [UserStore];
   return initialize.useStateFromStores(items, () => {
     const items = [UserStore];
@@ -101,7 +101,7 @@ const result = size.fileFinishedImporting("modules/experiments/client_override_h
 
 export { canSeeExperimentEmbeds };
 export const useCanSeeExperimentEmbeds = tmp2;
-export const useCodedLinksExperimentEmbeds = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useCodedLinksExperimentEmbeds = ReactCompilerGating.isReactCompilerEnabled() ? (function useCodedLinksExperimentEmbeds() {
   let obj = _require;
   let apexExperimentOverridesInfo = dependencyMap;
   const cResult = require("c").c(22);
@@ -196,7 +196,7 @@ export const useCodedLinksExperimentEmbeds = ReactCompilerGating.isReactCompiler
     }
   }
   if (cResult[7] !== tmp3) {
-    class F {
+    class C {
       constructor() {
         if (closure_0) {
           tmp2 = closure_6;
@@ -208,9 +208,9 @@ export const useCodedLinksExperimentEmbeds = ReactCompilerGating.isReactCompiler
       }
     }
     cResult[7] = tmp3;
-    cResult[8] = F;
+    cResult[8] = C;
   } else {
-    class F {
+    class C {
       constructor() {
         if (closure_0) {
           tmp2 = closure_6;
@@ -223,9 +223,9 @@ export const useCodedLinksExperimentEmbeds = ReactCompilerGating.isReactCompiler
     }
   }
   const objResult8 = obj(504);
-  const stateFromStores = obj(504).useStateFromStores(tmp12, F);
+  const stateFromStores = obj(504).useStateFromStores(tmp12, C);
   if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-    class F {
+    class C {
       constructor() {
         if (closure_0) {
           tmp2 = closure_6;
@@ -240,7 +240,7 @@ export const useCodedLinksExperimentEmbeds = ReactCompilerGating.isReactCompiler
     cResult[9] = items3;
     const tmp15 = items3;
   } else {
-    class F {
+    class C {
       constructor() {
         if (closure_0) {
           tmp2 = closure_6;
@@ -253,7 +253,7 @@ export const useCodedLinksExperimentEmbeds = ReactCompilerGating.isReactCompiler
     }
   }
   if (cResult[10] !== tmp3) {
-    class F {
+    class C {
       constructor() {
         if (closure_0) {
           tmp2 = closure_6;
@@ -267,7 +267,7 @@ export const useCodedLinksExperimentEmbeds = ReactCompilerGating.isReactCompiler
     cResult[10] = tmp3;
     cResult[11] = tmp17;
   } else {
-    class F {
+    class C {
       constructor() {
         if (closure_0) {
           tmp2 = closure_6;
@@ -282,7 +282,7 @@ export const useCodedLinksExperimentEmbeds = ReactCompilerGating.isReactCompiler
   const objResult9 = obj(504);
   const stateFromStores1 = obj(504).useStateFromStores(tmp15, tmp17);
   if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-    class F {
+    class C {
       constructor() {
         if (closure_0) {
           tmp2 = closure_6;
@@ -297,7 +297,7 @@ export const useCodedLinksExperimentEmbeds = ReactCompilerGating.isReactCompiler
     cResult[12] = items4;
     const tmp19 = items4;
   } else {
-    class F {
+    class C {
       constructor() {
         if (closure_0) {
           tmp2 = closure_6;
@@ -310,78 +310,78 @@ export const useCodedLinksExperimentEmbeds = ReactCompilerGating.isReactCompiler
     }
   }
   if (cResult[13] !== tmp3) {
-    class F {
+    class L {
       constructor() {
         if (closure_0) {
           tmp2 = closure_6;
-          experimentsMetadata = closure_6.getExperimentsMetadata();
+          clientOverrides = closure_6.getClientOverrides();
         } else {
-          experimentsMetadata = closure_10;
+          clientOverrides = closure_12;
         }
-        return experimentsMetadata;
+        return clientOverrides;
       }
     }
     cResult[13] = tmp3;
-    cResult[14] = tmp21;
+    cResult[14] = L;
   } else {
-    class F {
+    class L {
       constructor() {
         if (closure_0) {
           tmp2 = closure_6;
-          experimentsMetadata = closure_6.getExperimentsMetadata();
+          clientOverrides = closure_6.getClientOverrides();
         } else {
-          experimentsMetadata = closure_10;
+          clientOverrides = closure_12;
         }
-        return experimentsMetadata;
+        return clientOverrides;
       }
     }
   }
   const objResult10 = obj(504);
-  const stateFromStores2 = obj(504).useStateFromStores(tmp19, tmp21);
+  const stateFromStores2 = obj(504).useStateFromStores(tmp19, L);
   if (cResult[15] === stateFromStores2) {
-    class F {
+    class L {
       constructor() {
         if (closure_0) {
           tmp2 = closure_6;
-          experimentsMetadata = closure_6.getExperimentsMetadata();
+          clientOverrides = closure_6.getClientOverrides();
         } else {
-          experimentsMetadata = closure_10;
+          clientOverrides = closure_12;
         }
-        return experimentsMetadata;
+        return clientOverrides;
       }
     }
   }
   if (tmp3) {
-    class F {
+    class L {
       constructor() {
         if (closure_0) {
           tmp2 = closure_6;
-          experimentsMetadata = closure_6.getExperimentsMetadata();
+          clientOverrides = closure_6.getClientOverrides();
         } else {
-          experimentsMetadata = closure_10;
+          clientOverrides = closure_12;
         }
-        return experimentsMetadata;
+        return clientOverrides;
       }
     }
-    tmp24[0] = obj(11152).parseRegisteredExperiments(stateFromStoresObject);
-    const objResult12 = obj(11152);
-    tmp24[1] = obj(11152).getLegacyOverridesInfo(stateFromStoresObject1);
-    const objResult13 = obj(11152);
-    tmp24[2] = obj(11153).mergeApexExperiments(stateFromStores, stateFromStores1);
-    obj = obj(11153);
+    tmp23[0] = obj(11272).parseRegisteredExperiments(stateFromStoresObject);
+    const objResult12 = obj(11272);
+    tmp23[1] = obj(11272).getLegacyOverridesInfo(stateFromStoresObject1);
+    const objResult13 = obj(11272);
+    tmp23[2] = obj(11273).mergeApexExperiments(stateFromStores, stateFromStores1);
+    obj = obj(11273);
     apexExperimentOverridesInfo = obj.getApexExperimentOverridesInfo(stateFromStores2);
-    tmp24[3] = apexExperimentOverridesInfo;
-    const objResult14 = obj(11153);
+    tmp23[3] = apexExperimentOverridesInfo;
+    const objResult14 = obj(11273);
   } else {
-    class F {
+    class L {
       constructor() {
         if (closure_0) {
           tmp2 = closure_6;
-          experimentsMetadata = closure_6.getExperimentsMetadata();
+          clientOverrides = closure_6.getClientOverrides();
         } else {
-          experimentsMetadata = closure_10;
+          clientOverrides = closure_12;
         }
-        return experimentsMetadata;
+        return clientOverrides;
       }
     }
   }
@@ -391,9 +391,9 @@ export const useCodedLinksExperimentEmbeds = ReactCompilerGating.isReactCompiler
   cResult[18] = tmp3;
   cResult[19] = stateFromStoresObject1;
   cResult[20] = stateFromStoresObject;
-  cResult[21] = tmp24;
+  cResult[21] = tmp23;
   const objResult11 = obj(504);
-}) : (() => {
+}) : (function useCodedLinksExperimentEmbeds() {
   let tmp = closure_7();
   _require = tmp;
   const items = [stateFromStores2];

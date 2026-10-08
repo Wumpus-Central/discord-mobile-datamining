@@ -1,12 +1,12 @@
-// === Module 11652: useNativeForumPostContent ===
+// === Module 11717: useNativeForumPostContent ===
 
-// Module 11652 (useNativeForumPostContent)
+// Module 11717 (useNativeForumPostContent)
 import c from "c" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1126 */;
-import StickersUtils from "StickersUtils" /* 5435 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6783 */;
-import createStyles from "createStyles" /* 4896 */;
+import StickersUtils from "StickersUtils" /* 5745 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6084 */;
+import createStyles from "createStyles" /* 5090 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -14,7 +14,7 @@ const MessageFlags = Constants.MessageFlags;
 let closure_4 = createStyles.createStyles({ italics: { fontStyle: "italic" } });
 const result = size.fileFinishedImporting("modules/forums/native/posts/hooks/useNativeForumPostContent.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useNativeForumPostContent(arg0) {
   const cResult = c.c(20);
   ({ message, messageContent, senderModifier } = arg0);
   ({ messageLoaded, isMessageDeleted } = arg0);
@@ -185,7 +185,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     stringResult7 = intl8.string(util.t.Lkp2fB);
     tmp8 = null != message && message.ignored;
   }
-}) : ((arg0) => {
+}) : (function useNativeForumPostContent(arg0) {
   ({ message, messageContent, senderModifier } = arg0);
   ({ messageLoaded, isMessageDeleted } = arg0);
   const tmp = closure_4();

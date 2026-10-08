@@ -1,60 +1,60 @@
-// === Module 13746: badges/GuildBadge ===
+// === Module 13968: badges/GuildBadge ===
 
-// Module 13746 (badges/GuildBadge)
+// Module 13968 (badges/GuildBadge)
 import c from "c" /* 576 */;
-import GuildBadgeSword from "GuildBadgeSword" /* 13747 */;
-import GuildBadgeWaterDrop from "GuildBadgeWaterDrop" /* 13750 */;
-import GuildBadgeSkull from "GuildBadgeSkull" /* 13751 */;
-import GuildBadgeToadstool from "GuildBadgeToadstool" /* 13752 */;
-import GuildBadgeMoon from "GuildBadgeMoon" /* 13753 */;
-import GuildBadgeLightning from "GuildBadgeLightning" /* 13754 */;
-import GuildBadgeLeaf from "GuildBadgeLeaf" /* 13755 */;
-import GuildBadgeHeart from "GuildBadgeHeart" /* 13756 */;
-import GuildBadgeFire from "GuildBadgeFire" /* 13757 */;
-import GuildBadgeCompass from "GuildBadgeCompass" /* 13758 */;
-import GuildBadgeCrosshairs from "GuildBadgeCrosshairs" /* 13759 */;
-import GuildBadgeFlower from "GuildBadgeFlower" /* 13760 */;
-import GuildBadgeForce from "GuildBadgeForce" /* 13761 */;
-import GuildBadgeGem from "GuildBadgeGem" /* 13762 */;
-import GuildBadgeLava from "GuildBadgeLava" /* 13763 */;
-import GuildBadgePsychic from "GuildBadgePsychic" /* 13764 */;
-import GuildBadgeSmoke from "GuildBadgeSmoke" /* 13765 */;
-import GuildBadgeSnow from "GuildBadgeSnow" /* 13766 */;
-import GuildBadgeSound from "GuildBadgeSound" /* 13767 */;
-import GuildBadgeSun from "GuildBadgeSun" /* 13768 */;
-import GuildBadgeWind from "GuildBadgeWind" /* 13769 */;
-import GuildBadgeBunny from "GuildBadgeBunny" /* 13770 */;
-import GuildBadgeDog from "GuildBadgeDog" /* 13771 */;
-import GuildBadgeFrog from "GuildBadgeFrog" /* 13772 */;
-import GuildBadgeGoat from "GuildBadgeGoat" /* 13773 */;
-import GuildBadgeCat from "GuildBadgeCat" /* 13774 */;
-import GuildBadgeDiamond from "GuildBadgeDiamond" /* 13775 */;
-import GuildBadgeCrown from "GuildBadgeCrown" /* 13776 */;
-import GuildBadgeTrophy from "GuildBadgeTrophy" /* 13777 */;
-import GuildBadgeMoneyBag from "GuildBadgeMoneyBag" /* 13778 */;
-import GuildBadgeDollarSign from "GuildBadgeDollarSign" /* 13779 */;
-import GuildBadgeClover from "GuildBadgeClover" /* 13780 */;
-import GuildBadgeBlossom from "GuildBadgeBlossom" /* 13781 */;
-import GuildBadgePottedPlant from "GuildBadgePottedPlant" /* 13782 */;
-import GuildBadgeMaple from "GuildBadgeMaple" /* 13783 */;
-import GuildBadgeWiltedFlower from "GuildBadgeWiltedFlower" /* 13784 */;
-import GuildBadgeButterfly from "GuildBadgeButterfly" /* 13785 */;
-import GuildBadgeSnail from "GuildBadgeSnail" /* 13786 */;
-import GuildBadgeCaterpillar from "GuildBadgeCaterpillar" /* 13787 */;
-import GuildBadgeSpider from "GuildBadgeSpider" /* 13788 */;
-import GuildBadgeBee from "GuildBadgeBee" /* 13789 */;
+import GuildBadgeSword from "GuildBadgeSword" /* 13969 */;
+import GuildBadgeWaterDrop from "GuildBadgeWaterDrop" /* 13972 */;
+import GuildBadgeSkull from "GuildBadgeSkull" /* 13973 */;
+import GuildBadgeToadstool from "GuildBadgeToadstool" /* 13974 */;
+import GuildBadgeMoon from "GuildBadgeMoon" /* 13975 */;
+import GuildBadgeLightning from "GuildBadgeLightning" /* 13976 */;
+import GuildBadgeLeaf from "GuildBadgeLeaf" /* 13977 */;
+import GuildBadgeHeart from "GuildBadgeHeart" /* 13978 */;
+import GuildBadgeFire from "GuildBadgeFire" /* 13979 */;
+import GuildBadgeCompass from "GuildBadgeCompass" /* 13980 */;
+import GuildBadgeCrosshairs from "GuildBadgeCrosshairs" /* 13981 */;
+import GuildBadgeFlower from "GuildBadgeFlower" /* 13982 */;
+import GuildBadgeForce from "GuildBadgeForce" /* 13983 */;
+import GuildBadgeGem from "GuildBadgeGem" /* 13984 */;
+import GuildBadgeLava from "GuildBadgeLava" /* 13985 */;
+import GuildBadgePsychic from "GuildBadgePsychic" /* 13986 */;
+import GuildBadgeSmoke from "GuildBadgeSmoke" /* 13987 */;
+import GuildBadgeSnow from "GuildBadgeSnow" /* 13988 */;
+import GuildBadgeSound from "GuildBadgeSound" /* 13989 */;
+import GuildBadgeSun from "GuildBadgeSun" /* 13990 */;
+import GuildBadgeWind from "GuildBadgeWind" /* 13991 */;
+import GuildBadgeBunny from "GuildBadgeBunny" /* 13992 */;
+import GuildBadgeDog from "GuildBadgeDog" /* 13993 */;
+import GuildBadgeFrog from "GuildBadgeFrog" /* 13994 */;
+import GuildBadgeGoat from "GuildBadgeGoat" /* 13995 */;
+import GuildBadgeCat from "GuildBadgeCat" /* 13996 */;
+import GuildBadgeDiamond from "GuildBadgeDiamond" /* 13997 */;
+import GuildBadgeCrown from "GuildBadgeCrown" /* 13998 */;
+import GuildBadgeTrophy from "GuildBadgeTrophy" /* 13999 */;
+import GuildBadgeMoneyBag from "GuildBadgeMoneyBag" /* 14000 */;
+import GuildBadgeDollarSign from "GuildBadgeDollarSign" /* 14001 */;
+import GuildBadgeClover from "GuildBadgeClover" /* 14002 */;
+import GuildBadgeBlossom from "GuildBadgeBlossom" /* 14003 */;
+import GuildBadgePottedPlant from "GuildBadgePottedPlant" /* 14004 */;
+import GuildBadgeMaple from "GuildBadgeMaple" /* 14005 */;
+import GuildBadgeWiltedFlower from "GuildBadgeWiltedFlower" /* 14006 */;
+import GuildBadgeButterfly from "GuildBadgeButterfly" /* 14007 */;
+import GuildBadgeSnail from "GuildBadgeSnail" /* 14008 */;
+import GuildBadgeCaterpillar from "GuildBadgeCaterpillar" /* 14009 */;
+import GuildBadgeSpider from "GuildBadgeSpider" /* 14010 */;
+import GuildBadgeBee from "GuildBadgeBee" /* 14011 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 let closure_2 = ["badge", "primaryTintColor", "secondaryTintColor"];
-const GuildTagBadgeKind = fn(7614).GuildTagBadgeKind;
+const GuildTagBadgeKind = fn(7860).GuildTagBadgeKind;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_tag/native/badges/GuildBadge.tsx");
 
-export const GuildBadge = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const GuildBadge = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBadge(arg0) {
   const cResult = c.c(151);
   if (cResult[0] !== arg0) {
     ({ badge, primaryTintColor, secondaryTintColor } = arg0);
@@ -720,7 +720,7 @@ export const GuildBadge = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0)
   } else {
     return null;
   }
-}) : ((arg0) => {
+}) : (function GuildBadge(arg0) {
   ({ badge, primaryTintColor, secondaryTintColor } = arg0);
   const merged = Object.assign(arg0, Object.assign({ badge: 0, primaryTintColor: 0, secondaryTintColor: 0 }));
   if (GuildTagBadgeKind.SWORD === badge) {

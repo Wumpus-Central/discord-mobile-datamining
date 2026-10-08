@@ -1,10 +1,10 @@
-// === Module 13405: GuildBoostingMarketingWave ===
+// === Module 13705: GuildBoostingMarketingWave ===
 
-// Module 13405 (GuildBoostingMarketingWave)
+// Module 13705 (GuildBoostingMarketingWave)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4586 */;
-import inlineStyles from "inlineStyles" /* 8169 */;
+import useToken from "useToken" /* 4778 */;
+import inlineStyles from "inlineStyles" /* 7550 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -15,7 +15,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingWave.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBoostingMarketingWave(arg0) {
   const cResult = c.c(5);
   const token = useToken.useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
   if (cResult[0] !== token) {
@@ -42,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = tmp12;
   tmp9 = tmp12;
   const tmp4Result = inlineStylesDefault;
-}) : ((arg0) => {
+}) : (function GuildBoostingMarketingWave(arg0) {
   const token = useToken.useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
   const obj2 = { fill: "none", viewBox: "0 0 1512 510", preserveAspectRatio: "none" };
   const merged = Object.assign(arg0);

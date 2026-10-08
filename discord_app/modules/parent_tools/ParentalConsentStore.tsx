@@ -1,6 +1,6 @@
-// === Module 15918: ParentalConsentStore ===
+// === Module 16177: ParentalConsentStore ===
 
-// Module 15918 (ParentalConsentStore)
+// Module 16177 (ParentalConsentStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 

@@ -1,8 +1,8 @@
-// === Module 17099: MessageRequestsSpamScreen ===
+// === Module 17380: MessageRequestsSpamScreen ===
 
-// Module 17099 (MessageRequestsSpamScreen)
+// Module 17380 (MessageRequestsSpamScreen)
 import c from "c" /* 576 */;
-import SpamMessageListDefault from "SpamMessageList" /* 17097 */;
+import SpamMessageListDefault from "SpamMessageList" /* 17378 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/message_requests/screens/MessageRequestsSpamScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((navigation) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function MessageRequestsScreen(navigation) {
   const cResult = c.c(4);
   navigation = navigation.navigation;
   if (cResult[0] !== navigation) {
@@ -34,7 +34,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((navigation) => {
     tmp4 = cResult[3];
   }
   return tmp4;
-}) : ((navigation) => {
+}) : (function MessageRequestsScreen(navigation) {
   navigation = navigation.navigation;
   const items = [navigation];
   const goToMessageRequestPreview = noop.useCallback((channelId) => navigation.push("preview", { channelId }), items);

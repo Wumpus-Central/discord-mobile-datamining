@@ -1,9 +1,9 @@
-// === Module 16936: ChannelDetailsMoreButton ===
+// === Module 17217: ChannelDetailsMoreButton ===
 
-// Module 16936 (ChannelDetailsMoreButton)
-import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 7515 */;
-import _modDef9325 from "module_9325" /* 9325 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10664 */;
+// Module 17217 (ChannelDetailsMoreButton)
+import _modDef8646 from "module_8646" /* 8646 */;
+import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 9238 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10264 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsMoreButton.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function MoreButton(channel) {
   let HeaderIconButton = channel;
   let tmp = dependencyMap;
   const cResult = channel(576).c(5);
@@ -50,9 +50,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     }
     if (cResult[3] !== tmp3) {
       let obj2 = { children: null };
-      HeaderIconButton = HeaderIconButton(7509).HeaderIconButton;
+      HeaderIconButton = HeaderIconButton(9232).HeaderIconButton;
       const obj3 = { accessibilityLabel: tmp6, source: null, onPress: null };
-      tmp = _modDef9325;
+      tmp = _modDef8646;
       obj3.source = tmp;
       obj3.onPress = tmp3;
       obj2.children = <HeaderIconButton accessibilityLabel={tmp6} source={null} onPress={null} />;
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     }
   }
   return tmp4;
-}) : ((channel) => {
+}) : (function MoreButton(channel) {
   channel = channel.channel;
   [][0] = channel;
   let tmp2 = null;
@@ -72,9 +72,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
       let obj2 = { accessibilityLabel: null, source: null, onPress: null };
       const intl = channel(1126).intl;
       obj2.accessibilityLabel = intl.string(channel(1126).t["UKOtz+"]);
-      obj2.source = _modDef9325;
+      obj2.source = _modDef8646;
       obj2.onPress = tmp;
-      obj.children = jsx(channel(7509).HeaderIconButton, { accessibilityLabel: null, source: null, onPress: null });
+      obj.children = jsx(channel(9232).HeaderIconButton, { accessibilityLabel: null, source: null, onPress: null });
       tmp2 = jsx(PressableNavigatorButtonWrapperDefault, { children: null });
     } else {
       tmp2 = null;

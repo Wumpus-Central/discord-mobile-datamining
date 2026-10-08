@@ -1,12 +1,12 @@
-// === Module 6651: BottomSheetTitleHeader ===
+// === Module 6828: BottomSheetTitleHeader ===
 
-// Module 6651 (BottomSheetTitleHeader)
+// Module 6828 (BottomSheetTitleHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
-import useToken from "useToken" /* 4586 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 6018 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
+import useToken from "useToken" /* 4778 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 6204 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,13 +14,13 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-let createStyles = fn(4896);
+let createStyles = fn(5090);
 let closure_8 = createStyles.createStyles(() => {
   const obj = { container: { paddingHorizontal: nativeDefault.modules.mobile.SHEET_HEADER_PADDING_HORIZONTAL, flexDirection: "row", gap: 4, position: "relative" }, titles: { flexGrow: 1, flexShrink: 1, gap: 2 }, subtitle: { textAlign: "center" }, title: { textAlign: "center" } };
   return obj;
 });
 let ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function RedesignBottomSheetTitleHeaderBase(arg0) {
   const cResult = c.c(11);
   ({ title, subtitle } = arg0);
   const tmp2 = closure_8();
@@ -73,7 +73,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[6] = tmp7;
   cResult[7] = tmp12;
   tmp11 = tmp12;
-}) : ((children) => {
+}) : (function RedesignBottomSheetTitleHeaderBase(children) {
   const subtitle = children.subtitle;
   const tmp = closure_8();
   const obj = { style: tmp.container, children: null };
@@ -89,10 +89,10 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   obj.children = React5(View, obj2);
   return timestampProducer(View, obj);
 });
-createStyles = fn(4896);
+createStyles = fn(5090);
 let closure_10 = createStyles.createStyles(() => ({ container: { flexDirection: "column" }, accessories: { flexDirection: "row", justifyContent: "space-between" }, item: { flexShrink: 0 } }));
 ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function RedesignBottomSheetTitleHeaderStacked(arg0) {
   const cResult = c.c(25);
   ({ title, subtitle, leading, trailing } = arg0);
   const tmp2 = closure_8();
@@ -199,7 +199,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = tmp2.container;
   cResult[2] = items3;
   tmp4 = items3;
-}) : ((subtitle) => {
+}) : (function RedesignBottomSheetTitleHeaderStacked(subtitle) {
   subtitle = subtitle.subtitle;
   ({ title, leading, trailing } = subtitle);
   const tmp = closure_8();
@@ -224,7 +224,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   obj.children = items2;
   return React5(View, obj);
 });
-createStyles = fn(4896);
+createStyles = fn(5090);
 let closure_12 = createStyles.createStyles(() => {
   const obj = { accessory: { position: "absolute", top: 0, bottom: 0, flexShrink: 0, flexDirection: "row", flexGrow: 1 }, leading: { left: nativeDefault.space.PX_16, justifyContent: "flex-start" }, trailing: null };
   const obj2 = { left: nativeDefault.space.PX_16, justifyContent: "flex-start" };
@@ -232,7 +232,7 @@ let closure_12 = createStyles.createStyles(() => {
   return obj;
 });
 ReactCompilerGating = fn(558);
-let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function RedesignBottomSheetTitleHeaderComplex(arg0) {
   const cResult = c.c(39);
   ({ title, subtitle, leading, trailing, onTitleTextLayout } = arg0);
   const tmp2 = closure_8();
@@ -411,7 +411,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = tmp13;
   tmp12 = tmp13;
   const tmp5 = _slicedToArray(noop.useState(undefined), 2);
-}) : ((subtitle) => {
+}) : (function RedesignBottomSheetTitleHeaderComplex(subtitle) {
   subtitle = subtitle.subtitle;
   c0 = undefined;
   ({ title, leading, trailing, onTitleTextLayout } = subtitle);
@@ -459,7 +459,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return React5(View, obj2);
 });
 ReactCompilerGating = fn(558);
-let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Title(arg0) {
   const cResult = c.c(3);
   const tmp4 = closure_8();
   if (cResult[0] === arg0) {
@@ -475,13 +475,13 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = tmp7;
   tmp5 = tmp7;
   const obj2 = { variant: "redesign/heading-18/semibold", color: "mobile-text-heading-primary", accessibilityRole: "header", style: tmp4.title };
-}) : ((arg0) => {
+}) : (function Title(arg0) {
   const tmp = closure_8();
   const merged = Object.assign(arg0);
   return timestampProducer(Text_Text.Text, { variant: "redesign/heading-18/semibold", color: "mobile-text-heading-primary", accessibilityRole: "header", style: closure_8().title });
 });
 ReactCompilerGating = fn(558);
-let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
+let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Subtitle(children) {
   const cResult = c.c(3);
   children = children.children;
   const tmp4 = closure_8();
@@ -497,7 +497,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
   cResult[2] = tmp6;
   tmp5 = tmp6;
   const obj2 = { variant: "text-sm/medium", color: "text-muted", style: tmp4.subtitle, textBreakStrategy: "balanced", lineBreakStrategyIOS: "push-out", children };
-}) : ((children) => {
+}) : (function Subtitle(children) {
   const tmp = closure_8();
   return timestampProducer(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", style: closure_8().subtitle, textBreakStrategy: "balanced", lineBreakStrategyIOS: "push-out", children: children.children });
 });
@@ -505,7 +505,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/Sheet/native/BottomSheetTitleHeader.native.tsx");
 
-export const BottomSheetTitleHeader = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const BottomSheetTitleHeader = ReactCompilerGating.isReactCompilerEnabled() ? (function BottomSheetTitleHeader(arg0) {
   const cResult = c.c(11);
   ({ leading, trailing } = arg0);
   let num = 2;
@@ -525,7 +525,7 @@ export const BottomSheetTitleHeader = ReactCompilerGating.isReactCompilerEnabled
     } else {
       const _Symbol = Symbol;
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function v(nativeEvent) {
+        const fn = function b(nativeEvent) {
           closure_0(nativeEvent.nativeEvent.lines.length > 2);
         };
         cResult[4] = fn;
@@ -578,7 +578,7 @@ export const BottomSheetTitleHeader = ReactCompilerGating.isReactCompilerEnabled
   } else {
     tmp4 = cResult[1];
   }
-}) : ((arg0) => {
+}) : (function BottomSheetTitleHeader(arg0) {
   let merged = arg0;
   ({ leading, trailing } = arg0);
   const tmp2 = _slicedToArray(noop.useState(false), 2);

@@ -1,21 +1,21 @@
-// === Module 5576: SelectedChannelActionCreatorsAdditional ===
+// === Module 5886: SelectedChannelActionCreatorsAdditional ===
 
-// Module 5576 (SelectedChannelActionCreatorsAdditional)
+// Module 5886 (SelectedChannelActionCreatorsAdditional)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import v1 from "v1" /* 1266 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 5577 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
-import UserStore from "UserStore" /* 1377 */;
-import VoiceStateStore from "VoiceStateStore" /* 4915 */;
+import v1 from "v1" /* 1278 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 5887 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4899 */;
+import UserStore from "UserStore" /* 1389 */;
+import VoiceStateStore from "VoiceStateStore" /* 5111 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const STAGE_BOOSTING_SHEET_KEY = fn(5578).STAGE_BOOSTING_SHEET_KEY;
+const STAGE_BOOSTING_SHEET_KEY = fn(5888).STAGE_BOOSTING_SHEET_KEY;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/SelectedChannelActionCreatorsAdditional.native.tsx");
 
@@ -83,7 +83,7 @@ export const selectVoiceChannelAdditional = function selectVoiceChannelAdditiona
       const result = require("applyBackgroundOption").applyInitialVideoBackgroundOption();
       const obj6 = require("applyBackgroundOption");
     }
-    require("collectCallFeedback")(() => {
+    require("collectCallFeedback")(function dispatchAction() {
       const v4Result = v1.v4();
       const obj2 = DispatcherDefault;
       obj2.dispatch({ type: "VOICE_CHANNEL_SELECT", guildId, channelId, currentVoiceChannelId: SelectedChannelStore.getVoiceChannelId(), video: flag, stream: flag2, lockVoiceStateForResume: flag3, joinVoiceId: v4Result, bypassIdleUpdate: flag4 });

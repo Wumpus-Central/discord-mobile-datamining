@@ -1,8 +1,8 @@
-// === Module 10735: useAutocompleter ===
+// === Module 11595: useAutocompleter ===
 
-// Module 10735 (useAutocompleter)
-import useInitialValueDefault from "useInitialValue" /* 5991 */;
-import sortByMatchScoreDefault from "sortByMatchScore" /* 9509 */;
+// Module 11595 (useAutocompleter)
+import useInitialValueDefault from "useInitialValue" /* 6174 */;
+import sortByMatchScoreDefault from "sortByMatchScore" /* 8675 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/share/useAutocompleter.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((searchOptions) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAutocompleter(searchOptions) {
   const cResult = searchOptions(576).c(14);
   searchOptions = searchOptions.searchOptions;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -24,7 +24,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((searchOptions) =
   let obj = searchOptions(576);
   [tmp5, importDefault] = noop.useState(first);
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function o() {
+    const fn = function c() {
       const obj = new sortByMatchScoreDefault((results, query) => {
         closure_1_1({ results, query });
       });
@@ -125,7 +125,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((searchOptions) =
   tmp12 = items1;
   tmp11 = E;
   const tmp4 = _slicedToArray(noop.useState(first), 2);
-}) : ((searchOptions) => {
+}) : (function useAutocompleter(searchOptions) {
   searchOptions = searchOptions.searchOptions;
   importDefault = undefined;
   [tmp2, c1] = noop.useState({ results: [], query: "" });

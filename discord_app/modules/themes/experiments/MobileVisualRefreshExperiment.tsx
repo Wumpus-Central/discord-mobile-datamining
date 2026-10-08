@@ -1,8 +1,8 @@
-// === Module 11827: MobileVisualRefreshExperiment ===
+// === Module 11912: MobileVisualRefreshExperiment ===
 
-// Module 11827 (MobileVisualRefreshExperiment)
+// Module 11912 (MobileVisualRefreshExperiment)
 import c from "c" /* 576 */;
-import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1441 */;
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1453 */;
 
 require = fn;
 let tmp2 = apex_ApexExperimentDefault({ kind: "user", name: "2026-02-mobile-visual-refresh", defaultConfig: { enabled: false, chatInputFloating: false, chatInputLegacySendButton: false }, variations: { 0: { enabled: false, chatInputFloating: false, chatInputLegacySendButton: false }, 1: { enabled: true, chatInputFloating: false, chatInputLegacySendButton: false }, 2: { enabled: true, chatInputFloating: true, chatInputLegacySendButton: false }, 3: { enabled: true, chatInputFloating: true, chatInputLegacySendButton: false }, 4: { enabled: true, chatInputFloating: true, chatInputLegacySendButton: true } } });
@@ -10,7 +10,7 @@ let closure_2 = tmp2;
 fn(558);
 const ReactCompilerGating = fn(558);
 const obj = { kind: "user", name: "2026-02-mobile-visual-refresh", defaultConfig: { enabled: false, chatInputFloating: false, chatInputLegacySendButton: false }, variations: { 0: { enabled: false, chatInputFloating: false, chatInputLegacySendButton: false }, 1: { enabled: true, chatInputFloating: false, chatInputLegacySendButton: false }, 2: { enabled: true, chatInputFloating: true, chatInputLegacySendButton: false }, 3: { enabled: true, chatInputFloating: true, chatInputLegacySendButton: false }, 4: { enabled: true, chatInputFloating: true, chatInputLegacySendButton: true } } };
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsMobileVisualRefreshExperimentEnabled(location) {
   const cResult = c.c(2);
   if (cResult[0] !== location) {
     const obj2 = { location };
@@ -21,13 +21,15 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
     tmp2 = cResult[1];
   }
   return closure_2.useConfig(tmp2).enabled;
-}) : ((location) => closure_2.useConfig({ location }).enabled);
+}) : (function useIsMobileVisualRefreshExperimentEnabled(location) {
+  return closure_2.useConfig({ location }).enabled;
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/themes/experiments/MobileVisualRefreshExperiment.tsx");
 
 export default tmp3;
 export const MobileVisualRefreshExperiment = tmp2;
-export const useMobileVisualRefreshConfig = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+export const useMobileVisualRefreshConfig = ReactCompilerGating.isReactCompilerEnabled() ? (function useMobileVisualRefreshConfig(location) {
   const cResult = c.c(2);
   const _location = location.location;
   if (cResult[0] !== _location) {
@@ -39,7 +41,9 @@ export const useMobileVisualRefreshConfig = ReactCompilerGating.isReactCompilerE
     tmp2 = cResult[1];
   }
   return closure_2.useConfig(tmp2);
-}) : ((location) => closure_2.useConfig({ location: location.location }));
+}) : (function useMobileVisualRefreshConfig(location) {
+  return closure_2.useConfig({ location: location.location });
+});
 export const isMobileVisualRefreshEnabled = function isMobileVisualRefreshEnabled(location) {
   return closure_2.getConfig({ location }).enabled;
 };

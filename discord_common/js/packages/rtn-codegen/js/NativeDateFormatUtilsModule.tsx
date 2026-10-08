@@ -1,11 +1,11 @@
-// === Module 4562: NativeDateFormatUtilsModule ===
+// === Module 4754: NativeDateFormatUtilsModule ===
 
-// Module 4562 (NativeDateFormatUtilsModule)
+// Module 4754 (NativeDateFormatUtilsModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 
 const TurboModuleRegistry = _mod17.TurboModuleRegistry;
-const enforcing = TurboModuleRegistry.getEnforcing("NativeDateFormatUtilsModule");
+const value = TurboModuleRegistry.get("NativeDateFormatUtilsModule");
 const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/NativeDateFormatUtilsModule.tsx");
 
-export default enforcing;
+export default value;

@@ -1,9 +1,9 @@
-// === Module 10670: ChatGDMCustomizeActionSheet ===
+// === Module 9583: ChatGDMCustomizeActionSheet ===
 
-// Module 10670 (ChatGDMCustomizeActionSheet)
-import useNavigatorConfirmChangesOnBackDefault from "useNavigatorConfirmChangesOnBack" /* 10671 */;
-import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10674 */;
-import ChatGDMCustomizeDefault from "ChatGDMCustomize" /* 10676 */;
+// Module 9583 (ChatGDMCustomizeActionSheet)
+import useNavigatorConfirmChangesOnBackDefault from "useNavigatorConfirmChangesOnBack" /* 9584 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 9587 */;
+import ChatGDMCustomizeDefault from "ChatGDMCustomize" /* 9589 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/group_dm/native/ChatGDMCustomizeActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChatGDMCustomizeActionSheet(channelId) {
   const cResult = channelId(ref[3]).c(5);
   channelId = channelId.channelId;
   const tmp5 = onGoBack(ref[4])();
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   cResult[3] = ref;
   cResult[4] = tmp9;
   tmp8 = tmp9;
-}) : ((channelId) => {
+}) : (function ChatGDMCustomizeActionSheet(channelId) {
   channelId = channelId.channelId;
   importDefault = undefined;
   dependencyMap = undefined;

@@ -1,10 +1,10 @@
-// === Module 15130: HappeningNowCard ===
+// === Module 15392: HappeningNowCard ===
 
-// Module 15130 (HappeningNowCard)
+// Module 15392 (HappeningNowCard)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Card from "Card" /* 6002 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 6440 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import Card from "Card" /* 6186 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 6618 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,14 +12,14 @@ require = fn;
 let closure_3 = ["children", "noMargin", "displayNameFont"];
 let closure_4 = ["children", "variant"];
 const View = fn(17).View;
-const HappeningNowConstants = fn(15129);
+const HappeningNowConstants = fn(15391);
 const HAPPENING_NOW_CARD_MARGIN_RIGHT = HappeningNowConstants.HAPPENING_NOW_CARD_MARGIN_RIGHT;
 ({ HAPPENING_NOW_CARD_PADDING: closure_8, HAPPENING_NOW_CARD_HEIGHT: closure_9, HAPPENING_NOW_BADGE_SIZE } = HappeningNowConstants);
 ({ HAPPENING_NOW_CARD_WIDTH_SMALL_MIN: closure_11, HAPPENING_NOW_CARD_WIDTH_SMALL_MAX: closure_12, HAPPENING_NOW_CARD_WIDTH_MEDIUM_MIN: map1, HAPPENING_NOW_CARD_WIDTH_MEDIUM_MAX: closure_14, HAPPENING_NOW_CARD_WIDTH_LARGE_MIN: closure_15, HAPPENING_NOW_CARD_WIDTH_LARGE_MAX: closure_16, HAPPENING_NOW_CARD_PADDING_RIGHT: closure_17, HAPPENING_NOW_CARD_WIDTH_STRETCHY_MIN: closure_18, HAPPENING_NOW_CARD_WIDTH_STRETCHY_MAX: closure_19, HAPPENING_NOW_CARD_WIDTH_LARGE_PANELS_MAX: closure_20, HAPPENING_NOW_PANELS_CONTAINER_PADDING } = HappeningNowConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_21, jsxs: closure_22 } = jsxProd);
 let closure_23 = HAPPENING_NOW_PANELS_CONTAINER_PADDING + HAPPENING_NOW_CARD_MARGIN_RIGHT;
-let createStyles = fn(4896);
+let createStyles = fn(5090);
 let closure_24 = createStyles.createStyles((arg0, arg1, arg2) => {
   if ("small" === arg0) {
     const obj2 = { minWidth, maxWidth };
@@ -33,7 +33,7 @@ let closure_24 = createStyles.createStyles((arg0, arg1, arg2) => {
       if (arg2) {
         let diff = 252 - closure_23;
       } else {
-        diff = closure_1_20;
+        diff = constants2;
       }
     } else {
       obj4.maxWidth = maxWidth3;
@@ -45,7 +45,7 @@ let closure_24 = createStyles.createStyles((arg0, arg1, arg2) => {
       if (arg2) {
         let diff1 = 252 - closure_23;
       } else {
-        diff1 = closure_1_20;
+        diff1 = constants2;
       }
     } else {
       obj5.maxWidth = maxWidth4;
@@ -63,12 +63,12 @@ let closure_24 = createStyles.createStyles((arg0, arg1, arg2) => {
   return obj6;
 });
 fn(558);
-createStyles = fn(4896);
+createStyles = fn(5090);
 let obj4 = { cardHeaderMargin: { marginRight: HAPPENING_NOW_BADGE_SIZE + 4 } };
 let closure_25 = createStyles.createStyles(obj4);
 let ReactCompilerGating = fn(558);
 let obj5 = { marginRight: HAPPENING_NOW_BADGE_SIZE + 4 };
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((panelVariant) => {
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function HappeningNowCard(panelVariant) {
   const cResult = c.c(17);
   let flag = panelVariant.panelVariant;
   if (flag == null) {
@@ -141,7 +141,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((panelVariant) => {
   cResult[2] = items1;
   tmp8 = items1;
   const tmp4 = useIsWindowLargeDefault();
-}) : ((onPress) => {
+}) : (function HappeningNowCard(onPress) {
   let flag = onPress.panelVariant;
   if (flag == null) {
     flag = false;
@@ -175,7 +175,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((panelVariant) => {
   return closure_1_22(Card.Card, obj);
 });
 ReactCompilerGating = fn(558);
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function HappeningNowCardHeader(arg0) {
   const cResult = c.c(14);
   if (cResult[0] !== arg0) {
     ({ children, noMargin, displayNameFont } = arg0);
@@ -238,7 +238,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[8] = tmp12;
   cResult[9] = items;
   tmp14 = items;
-}) : ((displayNameFont) => {
+}) : (function HappeningNowCardHeader(displayNameFont) {
   displayNameFont = displayNameFont.displayNameFont;
   ({ children, noMargin } = displayNameFont);
   const merged = Object.assign(displayNameFont, Object.assign({ children: 0, noMargin: 0, displayNameFont: 0 }));
@@ -263,7 +263,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_co
 
 export default tmp5;
 export const HappeningNowCardHeader = tmp6;
-export const HappeningNowCardSubtitle = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const HappeningNowCardSubtitle = ReactCompilerGating.isReactCompilerEnabled() ? (function HappeningNowCardSubtitle(arg0) {
   const cResult = c.c(8);
   if (cResult[0] !== arg0) {
     ({ children, variant } = arg0);
@@ -300,7 +300,7 @@ export const HappeningNowCardSubtitle = ReactCompilerGating.isReactCompilerEnabl
   cResult[6] = str;
   cResult[7] = tmp11;
   tmp9 = tmp11;
-}) : ((variant) => {
+}) : (function HappeningNowCardSubtitle(variant) {
   let str = variant.variant;
   const merged = Object.assign(variant, Object.assign({ children: 0, variant: 0 }));
   if (str == null) {

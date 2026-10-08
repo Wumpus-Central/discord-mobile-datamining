@@ -1,6 +1,6 @@
-// === Module 5989: form_fields/FormSeparator ===
+// === Module 6172: form_fields/FormSeparator ===
 
-// Module 5989 (form_fields/FormSeparator)
+// Module 6172 (form_fields/FormSeparator)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
@@ -8,7 +8,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { separator: { borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, marginVertical: 12 } };
 let closure_4 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -16,7 +16,7 @@ const obj3 = { borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBott
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/FormSeparator.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormSeparator(style) {
   const cResult = c.c(6);
   const tmp2 = closure_4();
   if (cResult[0] === style.style) {
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
   cResult[1] = tmp2.separator;
   cResult[2] = items;
   tmp3 = items;
-}) : ((style) => {
+}) : (function FormSeparator(style) {
   const obj = {};
   const merged = Object.assign(style);
   const items = [closure_4().separator, style.style];

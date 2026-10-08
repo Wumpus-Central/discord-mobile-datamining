@@ -1,16 +1,16 @@
-// === Module 12284: UserProfileMutualGuildsActionSheet ===
+// === Module 12382: UserProfileMutualGuildsActionSheet ===
 
-// Module 12284 (UserProfileMutualGuildsActionSheet)
+// Module 12382 (UserProfileMutualGuildsActionSheet)
 import nativeDefault from "native" /* 587 */;
-import UserProfileStackedActionSheet from "UserProfileStackedActionSheet" /* 10854 */;
-import NoMutualServers from "NoMutualServers" /* 12286 */;
+import UserProfileStackedActionSheet from "UserProfileStackedActionSheet" /* 10505 */;
+import NoMutualServers from "NoMutualServers" /* 12384 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, ActivityIndicator: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { flex: 1, gap: 20, paddingTop: nativeDefault.space.PX_8 }, loadingState: null, emptyState: null };
 let obj3 = { flex: 1, gap: 20, paddingTop: nativeDefault.space.PX_8 };
 obj2.loadingState = { paddingTop: nativeDefault.space.PX_8, alignItems: "center" };
@@ -21,13 +21,13 @@ let obj4 = { paddingTop: nativeDefault.space.PX_8, alignItems: "center" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileMutualGuildsActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileMutualGuildsActionSheet(user) {
   const cResult = user(576).c(16);
   user = user.user;
   const onPressMutualGuild = user.onPressMutualGuild;
   const tmp3 = closure_6();
   dependencyMap = tmp3;
-  const mutualGuilds = onPressMutualGuild(12285)(user).mutualGuilds;
+  const mutualGuilds = onPressMutualGuild(12383)(user).mutualGuilds;
   if (cResult[0] === mutualGuilds) {
     if (cResult[1] === onPressMutualGuild) {
       if (cResult[2] === tmp3.emptyState) {
@@ -40,7 +40,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
             length = mutualGuilds.length;
           }
           if (cResult[6] !== length) {
-            const tmp9 = tmp4(12296)(length);
+            const tmp9 = tmp4(12394)(length);
             cResult[6] = length;
             cResult[7] = tmp9;
             let tmp8 = tmp9;
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
               return tmp16;
             }
             let obj2 = { scrollable: true, title: tmp8, children: tmp12 };
-            const tmp18 = jsx(tmp4(10854), { scrollable: true, title: tmp8, children: tmp12 });
+            const tmp18 = jsx(tmp4(10505), { scrollable: true, title: tmp8, children: tmp12 });
             cResult[13] = tmp8;
             cResult[14] = tmp12;
             cResult[15] = tmp18;
@@ -82,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
       }
     }
   }
-  const fn = function o() {
+  function renderMutualGuilds() {
     if (null == mutualGuilds) {
       const obj2 = { style: closure_2.loadingState, children: <React4 /> };
       let tmp4 = <React3 style={closure_2.loadingState}><React4 /></React3>;
@@ -130,33 +130,33 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
       });
     }
     return tmp4;
-  };
+  }
   cResult[0] = mutualGuilds;
   cResult[1] = onPressMutualGuild;
   cResult[2] = tmp3.emptyState;
   cResult[3] = tmp3.loadingState;
   cResult[4] = user;
-  cResult[5] = fn;
-  tmp5 = fn;
+  cResult[5] = renderMutualGuilds;
+  tmp5 = renderMutualGuilds;
   let obj = user(576);
-}) : ((user) => {
+}) : (function UserProfileMutualGuildsActionSheet(user) {
   user = user.user;
   const onPressMutualGuild = user.onPressMutualGuild;
   const tmp = closure_6();
-  const mutualGuilds = onPressMutualGuild(12285)(user).mutualGuilds;
+  const mutualGuilds = onPressMutualGuild(12383)(user).mutualGuilds;
   let length;
-  const tmp4 = onPressMutualGuild(10854);
+  const tmp4 = onPressMutualGuild(10505);
   if (mutualGuilds != null) {
     length = mutualGuilds.length;
   }
-  const obj = { scrollable: true, title: onPressMutualGuild(12296)(length), children: null };
+  const obj = { scrollable: true, title: onPressMutualGuild(12394)(length), children: null };
   const obj2 = { style: tmp.container, children: null };
   if (null == mutualGuilds) {
     const obj3 = { style: tmp.loadingState, children: <closure_4 /> };
     let tmp3Result = <closure_3 style={tmp.loadingState}><closure_4 /></closure_3>;
   } else if (0 === mutualGuilds.length) {
-    const obj4 = { style: tmp.emptyState, children: jsx(user(12286).NoMutualServers, {}) };
-    tmp3Result = <closure_3 style={tmp.emptyState}>{jsx(user(12286).NoMutualServers, {})}</closure_3>;
+    const obj4 = { style: tmp.emptyState, children: jsx(user(12384).NoMutualServers, {}) };
+    tmp3Result = <closure_3 style={tmp.emptyState}>{jsx(user(12384).NoMutualServers, {})}</closure_3>;
   } else {
     const obj5 = {
       data: mutualGuilds,
@@ -177,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
           });
         }
     };
-    tmp3Result = jsx(user(10854).UserProfileStackedActionSheetList, {
+    tmp3Result = jsx(user(10505).UserProfileStackedActionSheetList, {
       data: mutualGuilds,
       keyExtractor(guild) {
           return guild.guild.id;
@@ -199,5 +199,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
   }
   obj2.children = tmp3Result;
   obj.children = <closure_3 style={tmp.container}>{null}</closure_3>;
-  return <tmp4 scrollable title={onPressMutualGuild(12296)(length)}>{null}</tmp4>;
+  return <tmp4 scrollable title={onPressMutualGuild(12394)(length)}>{null}</tmp4>;
 });

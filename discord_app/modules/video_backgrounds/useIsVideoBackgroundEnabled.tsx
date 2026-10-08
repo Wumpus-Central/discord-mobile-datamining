@@ -1,15 +1,15 @@
-// === Module 9674: useIsVideoBackgroundEnabled ===
+// === Module 10863: useIsVideoBackgroundEnabled ===
 
-// Module 9674 (useIsVideoBackgroundEnabled)
+// Module 10863 (useIsVideoBackgroundEnabled)
 import c from "c" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import useIsVideoBackgroundSupportedDefault from "useIsVideoBackgroundSupported" /* 9675 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import useIsVideoBackgroundSupportedDefault from "useIsVideoBackgroundSupported" /* 10864 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/video_backgrounds/useIsVideoBackgroundEnabled.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsVideoBackgroundEnabled(location) {
   const cResult = c.c(2);
   if (cResult[0] !== location) {
     const obj2 = { location };
@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
     const tmpResult = PlatformUtils;
   }
   return tmp5;
-}) : ((location) => {
+}) : (function useIsVideoBackgroundEnabled(location) {
   let tmp2 = useIsVideoBackgroundSupportedDefault();
   if (tmp2) {
     const isIOSResult = PlatformUtils.isIOS();

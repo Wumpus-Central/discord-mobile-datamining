@@ -1,13 +1,13 @@
-// === Module 14352: setOrientationLockState ===
+// === Module 14580: setOrientationLockState ===
 
-// Module 14352 (setOrientationLockState)
+// Module 14580 (setOrientationLockState)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import RPCErrorDefault from "RPCError" /* 9059 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9062 */;
-import FramesStore from "FramesStore" /* 9000 */;
+import RPCErrorDefault from "RPCError" /* 11134 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11137 */;
+import isPostMessageSocketDefault from "isPostMessageSocket" /* 14547 */;
+import FramesStore from "FramesStore" /* 10612 */;
 
-const TransportTypes = fn(5323).TransportTypes;
-const OrientationLockState = fn(2011).OrientationLockState;
+const OrientationLockState = fn(2023).OrientationLockState;
 const Constants = fn(1096);
 const RPCErrors = Constants.RPCErrors;
 const size = fn(2);
@@ -34,26 +34,28 @@ export default {
     handler(arg0) {
       ({ socket, args } = arg0);
       ({ lock_state, picture_in_picture_lock_state } = args);
-      if (socket.source.type !== TransportTypes.POST_MESSAGE) {
-        const obj2 = { errorCode: RPCErrors.INVALID_COMMAND };
-        const _HermesInternal = HermesInternal;
-        const tmp182 = new RPCErrorDefault(obj2, "command not available from \"" + socket.source.type + "\" transport");
-        throw tmp182;
-      } else {
+      if (isPostMessageSocketDefault(socket)) {
         const id = socket.application.id;
         if (null == id) {
-          const obj4 = { errorCode: RPCErrors.INVALID_COMMAND };
-          const tmp14 = new RPCErrorDefault(obj4, "No application.");
-          throw tmp14;
+          const obj2 = { errorCode: RPCErrors.INVALID_COMMAND };
+          const tmp18 = new RPCErrorDefault(obj2, "No application.");
+          throw tmp18;
         } else {
-          const frameByIframeId = FramesStore.getFrameByIframeId(socket.source.iframeId);
-          if (null != frameByIframeId) {
-            const obj5 = { type: "FRAME_SET_ORIENTATION_LOCK_STATE", frameId: frameByIframeId.id, lockState: lock_state, pictureInPictureLockState: picture_in_picture_lock_state };
-            DispatcherDefault.dispatch(obj5);
+          const frameByEmbeddedContext = FramesStore.getFrameByEmbeddedContext(socket.context, socket.source.iframeId);
+          if (null != frameByEmbeddedContext) {
+            const obj3 = { type: "FRAME_SET_ORIENTATION_LOCK_STATE", frameId: frameByEmbeddedContext.id, lockState: lock_state, pictureInPictureLockState: picture_in_picture_lock_state };
+            DispatcherDefault.dispatch(obj3);
+            const tmpResult = DispatcherDefault;
           }
-          const obj6 = { type: "EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE", applicationId: id, lockState: lock_state, pictureInPictureLockState: picture_in_picture_lock_state, gridLockState: tmp };
-          DispatcherDefault.dispatch(obj6);
+          const obj4 = { type: "EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE", applicationId: id, lockState: lock_state, pictureInPictureLockState: picture_in_picture_lock_state, gridLockState: args.grid_lock_state };
+          DispatcherDefault.dispatch(obj4);
+          const tmpResult3 = DispatcherDefault;
         }
+      } else {
+        const obj = { errorCode: RPCErrors.INVALID_COMMAND };
+        const _HermesInternal = HermesInternal;
+        const tmpResult21 = new RPCErrorDefault(obj, "command not available from \"" + socket.source.type + "\" transport");
+        throw tmpResult21;
       }
     }
   }

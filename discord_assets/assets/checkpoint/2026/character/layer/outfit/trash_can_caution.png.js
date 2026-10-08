@@ -1,6 +1,6 @@
-// === Module 5230: ? ===
+// === Module 5542: ? ===
 
-// Module 5230
+// Module 5542
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/outfit/trash_can_caution.png.js");

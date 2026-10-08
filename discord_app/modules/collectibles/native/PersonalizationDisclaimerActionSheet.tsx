@@ -1,24 +1,24 @@
-// === Module 15776: PersonalizationDisclaimerActionSheet ===
+// === Module 16034: PersonalizationDisclaimerActionSheet ===
 
-// Module 15776 (PersonalizationDisclaimerActionSheet)
+// Module 16034 (PersonalizationDisclaimerActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
-import LinkingDefault from "Linking" /* 4571 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import ButtonGroup from "ButtonGroup" /* 5599 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6652 */;
-import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8296 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2127 */;
+import LinkingDefault from "Linking" /* 4763 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import ButtonGroup from "ButtonGroup" /* 5963 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6829 */;
+import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 7679 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const HelpdeskArticles = fn(1085).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_16 }, header: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.header = { paddingVertical: nativeDefault.space.PX_8, alignSelf: "center", textAlign: "center" };
@@ -28,7 +28,7 @@ let obj4 = { paddingVertical: nativeDefault.space.PX_8, alignSelf: "center", tex
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/PersonalizationDisclaimerActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function PersonalizationDisclaimerActionSheet() {
   const cResult = c.c(10);
   const tmp4 = closure_7();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -108,7 +108,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[8] = tmp8;
   cResult[9] = tmp22;
   tmp21 = tmp22;
-}) : (() => {
+}) : (function PersonalizationDisclaimerActionSheet() {
   const tmp = closure_7();
   const callback = noop.useCallback(() => {
     const obj = LinkingDefault;

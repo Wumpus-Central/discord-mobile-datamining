@@ -1,14 +1,14 @@
-// === Module 13734: ShareAttachments ===
+// === Module 13956: ShareAttachments ===
 
-// Module 13734 (ShareAttachments)
+// Module 13956 (ShareAttachments)
 import nativeDefault from "native" /* 587 */;
-import ColorUtils from "ColorUtils" /* 4733 */;
-import timing from "timing" /* 4897 */;
-import LinearGradientDefault from "LinearGradient" /* 5612 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 7287 */;
-import AttachmentPreviewDefault from "AttachmentPreview" /* 11056 */;
+import ColorUtils from "ColorUtils" /* 4927 */;
+import timing from "timing" /* 5091 */;
+import LinearGradientDefault from "LinearGradient" /* 5387 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 7741 */;
+import AttachmentPreviewDefault from "AttachmentPreview" /* 11884 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
 
 const require = globalThis.__r;
 
@@ -17,8 +17,8 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const LinearGradient = ReanimatedRexport.createAnimatedComponent(LinearGradientDefault);
-let GRADIENT_EASING_CONFIG = { duration: 300, easing: fn(1188).STANDARD_EASING };
-const createStyles = fn(4896);
+let GRADIENT_EASING_CONFIG = { duration: 300, easing: fn(1200).STANDARD_EASING };
+const createStyles = fn(5090);
 let obj2 = { containerRevamp: { marginHorizontal: -nativeDefault.space.PX_16 }, attachmentPreviewContentContainer: null, attachmentPreviewContentContainerRevamp: null, attachmentPreview: null, leftGradient: null, rightGradient: null, gradient: null };
 let obj4 = { marginHorizontal: -nativeDefault.space.PX_16 };
 obj2.attachmentPreviewContentContainer = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
@@ -42,7 +42,7 @@ let obj8 = { color: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/share/native/ShareAttachments.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ShareAttachments(arg0) {
   GRADIENT_EASING_CONFIG = attachmentPreview(sharedValue1[9]);
   const cResult = GRADIENT_EASING_CONFIG.c(48);
   ({ attachments, isRevamp } = arg0);
@@ -359,7 +359,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[10] = items4;
   }
   const tmpResult10 = attachmentPreview(sharedValue1[3]);
-}) : ((arg0) => {
+}) : (function ShareAttachments(arg0) {
   ({ attachments, isRevamp } = arg0);
   if (isRevamp === undefined) {
     isRevamp = false;

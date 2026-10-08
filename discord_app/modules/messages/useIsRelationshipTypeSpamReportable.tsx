@@ -1,7 +1,7 @@
-// === Module 12268: useIsRelationshipTypeSpamReportable ===
+// === Module 12347: useIsRelationshipTypeSpamReportable ===
 
-// Module 12268 (useIsRelationshipTypeSpamReportable)
-import RelationshipStore from "RelationshipStore" /* 4525 */;
+// Module 12347 (useIsRelationshipTypeSpamReportable)
+import RelationshipStore from "RelationshipStore" /* 4717 */;
 
 const require = globalThis.__r;
 
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/useIsRelationshipTypeSpamReportable.tsx");
 
-export const useIsRelationshipTypeSpamReportable = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useIsRelationshipTypeSpamReportable = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsRelationshipTypeSpamReportable(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -22,7 +22,7 @@ export const useIsRelationshipTypeSpamReportable = ReactCompilerGating.isReactCo
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function p() {
+    const fn = function n() {
       return RelationshipStore.getRelationshipType(closure_0);
     };
     const items1 = [arg0];
@@ -38,7 +38,7 @@ export const useIsRelationshipTypeSpamReportable = ReactCompilerGating.isReactCo
   const obj = require("c");
   const stateFromStores = require("initialize").useStateFromStores(first, tmp6, tmp7);
   return stateFromStores === RelationshipTypes.NONE || stateFromStores === RelationshipTypes.BLOCKED || stateFromStores === RelationshipTypes.PENDING_INCOMING;
-}) : ((arg0) => {
+}) : (function useIsRelationshipTypeSpamReportable(arg0) {
   _require = arg0;
   const items = [RelationshipStore];
   const items1 = [arg0];

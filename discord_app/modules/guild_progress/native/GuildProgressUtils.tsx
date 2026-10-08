@@ -1,25 +1,25 @@
-// === Module 12145: GuildProgressUtils ===
+// === Module 12224: GuildProgressUtils ===
 
-// Module 12145 (GuildProgressUtils)
+// Module 12224 (GuildProgressUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import c from "c" /* 576 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 12148 */;
-import GuildChannelStore from "GuildChannelStore" /* 4513 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
-import GuildProgressStore from "GuildProgressStore" /* 12146 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 12227 */;
+import GuildChannelStore from "GuildChannelStore" /* 4705 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
+import GuildProgressStore from "GuildProgressStore" /* 12225 */;
 
 const require = globalThis.__r;
 
 const util = zhHW5c(1126);
 require = fn;
-const Steps = fn(12140).Steps;
+const Steps = fn(12219).Steps;
 const Constants = fn(1085);
 ({ WELCOME_OLD_GUILD_AGE_THRESHOLD: closure_8, Permissions: closure_9 } = Constants);
 let ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIOSCompletionStates(id) {
   const _require = id;
   const cResult = require("c").c(40);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -74,44 +74,96 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
     cResult[6] = stateFromStores1;
     cResult[7] = items3;
   } else {
-    let channelsMessaged = tmp(12143).useChannelsMessaged(cResult[7]);
+    const channelsMessaged = tmp(12222).useChannelsMessaged(cResult[7]);
     const _Symbol = Symbol;
     if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
       const items4 = [GuildProgressStore];
       cResult[8] = items4;
-      let tmp17 = items4;
-    } else {
-      tmp17 = cResult[8];
     }
     if (cResult[9] !== id.id) {
-      const fn3 = function b() {
-        const progress = GuildProgressStore.getProgress(user.id);
-        let flag;
-        if (progress != null) {
-          flag = progress.has(Steps.MESSAGE);
+      class M {
+        constructor() {
+          progress = closure_6.getProgress(closure_0.id);
+          flag = undefined;
+          if (progress != null) {
+            tmp = Steps;
+            flag = progress.has(Steps.MESSAGE);
+          }
+          if (flag == null) {
+            flag = false;
+          }
+          return flag;
         }
-        if (flag == null) {
-          flag = false;
-        }
-        return flag;
-      };
+      }
       cResult[9] = id.id;
-      cResult[10] = fn3;
-      let tmp19 = fn3;
+      cResult[10] = M;
     } else {
-      tmp19 = cResult[10];
+      class M {
+        constructor() {
+          progress = closure_6.getProgress(closure_0.id);
+          flag = undefined;
+          if (progress != null) {
+            tmp = Steps;
+            flag = progress.has(Steps.MESSAGE);
+          }
+          if (flag == null) {
+            flag = false;
+          }
+          return flag;
+        }
+      }
     }
-    const tmpResult11 = tmp(12143);
+    tmp(504);
     if (!channelsMessaged) {
-      channelsMessaged = tmpResult12.useStateFromStores(tmp17, tmp19);
+      class M {
+        constructor() {
+          progress = closure_6.getProgress(closure_0.id);
+          flag = undefined;
+          if (progress != null) {
+            tmp = Steps;
+            flag = progress.has(Steps.MESSAGE);
+          }
+          if (flag == null) {
+            flag = false;
+          }
+          return flag;
+        }
+      }
     }
     const _Symbol2 = Symbol;
     if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
+      class M {
+        constructor() {
+          progress = closure_6.getProgress(closure_0.id);
+          flag = undefined;
+          if (progress != null) {
+            tmp = Steps;
+            flag = progress.has(Steps.MESSAGE);
+          }
+          if (flag == null) {
+            flag = false;
+          }
+          return flag;
+        }
+      }
       const items5 = [GuildStore];
       cResult[11] = items5;
-      let tmp20 = items5;
+      const tmp21 = items5;
     } else {
-      tmp20 = cResult[11];
+      class M {
+        constructor() {
+          progress = closure_6.getProgress(closure_0.id);
+          flag = undefined;
+          if (progress != null) {
+            tmp = Steps;
+            flag = progress.has(Steps.MESSAGE);
+          }
+          if (flag == null) {
+            flag = false;
+          }
+          return flag;
+        }
+      }
     }
     if (cResult[12] !== id.id) {
       class F {
@@ -144,8 +196,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
         }
       }
     }
-    tmpResult12 = tmp(504);
-    const stateFromStores2 = tmp(504).useStateFromStores(tmp20, F);
+    const tmpResult11 = tmp(12222);
+    const stateFromStores2 = tmp(504).useStateFromStores(tmp21, F);
     const _Symbol3 = Symbol;
     if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
       class F {
@@ -180,24 +232,24 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
       }
     }
     if (cResult[15] !== id.id) {
-      class O {
+      class A {
         constructor() {
           return closure_6.getProgress(closure_0.id);
         }
       }
       cResult[15] = id.id;
-      cResult[16] = O;
+      cResult[16] = A;
     } else {
-      class O {
+      class A {
         constructor() {
           return closure_6.getProgress(closure_0.id);
         }
       }
     }
     const tmpResult13 = tmp(504);
-    const stateFromStores3 = tmp(504).useStateFromStores(tmp24, O);
+    const stateFromStores3 = tmp(504).useStateFromStores(tmp24, A);
     if (stateFromStores) {
-      class O {
+      class A {
         constructor() {
           return closure_6.getProgress(closure_0.id);
         }
@@ -209,20 +261,20 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
       cResult[21] = guildPopulated;
       cResult[22] = items7;
     } else {
-      class O {
+      class A {
         constructor() {
           return closure_6.getProgress(closure_0.id);
         }
       }
       if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
-        class O {
+        class A {
           constructor() {
             return closure_6.getProgress(closure_0.id);
           }
         }
         cResult[17] = tmp28;
       } else {
-        class O {
+        class A {
           constructor() {
             return closure_6.getProgress(closure_0.id);
           }
@@ -233,7 +285,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
     const tmpResult14 = tmp(504);
   }
   const tmpResult10 = require("initialize");
-}) : ((arg0) => {
+}) : (function useIOSCompletionStates(arg0) {
   const _require = arg0;
   const items = [PermissionStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => PermissionStore.can(constants.ADMINISTRATOR, closure_0));
@@ -313,7 +365,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
 let closure_10 = tmp3;
 fn(558);
 ReactCompilerGating = fn(558);
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildProgressStep(arg0) {
   let zhHW5c = require;
   let obj = dependencyMap;
   const cResult = c.c(11);
@@ -395,7 +447,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = bound;
   num = 6;
   cResult[6] = formatToPlainStringResult;
-}) : ((arg0) => {
+}) : (function useGuildProgressStep(arg0) {
   const tmp = closure_10(arg0);
   const totalSteps = tmp.totalSteps;
   let stringResult = null;
@@ -449,7 +501,7 @@ export const MIN_PROGRESS_PERCENT = 3;
 export const PROGRESS_BACKGROUND_COLOR = "rgba(78, 93, 148, 0.3)";
 export const openActionSheet = function openActionSheet(guild) {
   const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(asyncRequireImpl(12147, dependencyMap.paths), "guild-progress-" + guild.id, { guild });
+  obj.openLazy(asyncRequireImpl(12226, dependencyMap.paths), "guild-progress-" + guild.id, { guild });
 };
 export const hideActionSheet = function hideActionSheet(id) {
   ActionSheetActionCreatorsDefault.hideActionSheet("guild-progress-" + id);
@@ -461,7 +513,7 @@ export const createGuildProgress = function createGuildProgress(id) {
 };
 export const useIOSCompletionStates = tmp3;
 export const useGuildProgressStep = tmp4;
-export const useIsEligibleForGuildProgress = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
+export const useIsEligibleForGuildProgress = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsEligibleForGuildProgress(id) {
   const _require = id;
   const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -488,7 +540,7 @@ export const useIsEligibleForGuildProgress = ReactCompilerGating.isReactCompiler
     stateFromStores = extractTimestampResult >= Date.now() - closure_8;
   }
   return stateFromStores;
-}) : ((id) => {
+}) : (function useIsEligibleForGuildProgress(id) {
   const _require = id;
   const items = [PermissionStore];
   let stateFromStores = require("initialize").useStateFromStores(items, () => PermissionStore.can(constants.ADMINISTRATOR, closure_0));

@@ -1,8 +1,8 @@
-// === Module 15764: FeaturedFirstCardCoachmarkAnchor ===
+// === Module 16022: FeaturedFirstCardCoachmarkAnchor ===
 
-// Module 15764 (FeaturedFirstCardCoachmarkAnchor)
+// Module 16022 (FeaturedFirstCardCoachmarkAnchor)
 import c from "c" /* 576 */;
-import WishlistButtonCoachmarkDefault from "WishlistButtonCoachmark" /* 15765 */;
+import WishlistButtonCoachmarkDefault from "WishlistButtonCoachmark" /* 16023 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/FeaturedFirstCardCoachmarkAnchor.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FeaturedFirstCardCoachmarkAnchor(children) {
   const cResult = c.c(4);
   children = children.children;
   const ref = noop.useRef(null);
@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
     tmp12 = cResult[3];
   }
   return tmp12;
-}) : ((children) => {
+}) : (function FeaturedFirstCardCoachmarkAnchor(children) {
   const ref = noop.useRef(null);
   const obj = { collapsable: false, children: null };
   const items = [hasOwnProperty(View, { ref, style: { position: "absolute", top: 0, right: 6, width: 32, height: 32 }, collapsable: false }), children.children, hasOwnProperty(WishlistButtonCoachmarkDefault, { anchorRef: ref })];

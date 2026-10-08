@@ -1,10 +1,10 @@
-// === Module 12751: VoicePanelSpoilerAlert ===
+// === Module 12899: VoicePanelSpoilerAlert ===
 
-// Module 12751 (VoicePanelSpoilerAlert)
+// Module 12899 (VoicePanelSpoilerAlert)
 import util from "util" /* 1126 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5575 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5712 */;
-import AlertModal from "AlertModal" /* 5720 */;
+import AlertModal from "AlertModal" /* 5303 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5885 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6102 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/spoiler_channels/native/VoicePanelSpoilerAlert.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePanelSpoilerAlert(channelId) {
   const cResult = channelId(dismissModalCallback[3]).c(17);
   channelId = channelId.channelId;
   const onConnect = channelId.onConnect;
@@ -26,12 +26,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
         let tmp5 = cResult[3];
       }
       if (cResult[4] !== dismissModalCallback) {
-        const fn2 = function f() {
+        function handleDisagree() {
           dismissModalCallback();
-        };
+        }
         cResult[4] = dismissModalCallback;
-        cResult[5] = fn2;
-        let tmp6 = fn2;
+        cResult[5] = handleDisagree;
+        let tmp6 = handleDisagree;
       } else {
         tmp6 = cResult[5];
       }
@@ -103,7 +103,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
       tmp22 = tmp25;
     }
   }
-  const fn = function o() {
+  function handleAgree() {
     GuildActionCreatorsDefault.spoilerAgree(channelId);
     if (null != onConnect) {
       onConnect();
@@ -112,14 +112,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
       const tmpResult = SelectedChannelActionCreatorsDefault;
     }
     dismissModalCallback();
-  };
+  }
   cResult[0] = channelId;
   cResult[1] = onConnect;
   cResult[2] = dismissModalCallback;
-  cResult[3] = fn;
-  tmp5 = fn;
+  cResult[3] = handleAgree;
+  tmp5 = handleAgree;
   const obj2 = channelId(dismissModalCallback[4]);
-}) : ((arg0) => {
+}) : (function VoicePanelSpoilerAlert(arg0) {
   ({ channelId: require, onConnect: importDefault } = arg0);
   dependencyMap = AlertModal.useDismissModalCallback();
   const obj2 = { title: null, content: null, actions: null };
@@ -130,7 +130,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   const obj3 = { children: null };
   const obj4 = {
     variant: "primary",
-    onPress() {
+    onPress: function handleAgree() {
       GuildActionCreatorsDefault.spoilerAgree(require);
       if (null != closure_1_1) {
         closure_1_1();
@@ -147,7 +147,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   const items = [closure_3(AlertModal.AlertActionButton, obj4, "confirm"), ];
   const obj5 = {
     variant: "secondary",
-    onPress() {
+    onPress: function handleDisagree() {
       closure_2();
     },
     text: null

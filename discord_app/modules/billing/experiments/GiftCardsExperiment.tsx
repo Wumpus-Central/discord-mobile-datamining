@@ -1,8 +1,8 @@
-// === Module 6900: GiftCardsExperiment ===
+// === Module 7089: GiftCardsExperiment ===
 
-// Module 6900 (GiftCardsExperiment)
+// Module 7089 (GiftCardsExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1440 */;
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -14,7 +14,7 @@ const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/billing/experiments/GiftCardsExperiment.tsx");
 
 export default apexExperiment;
-export const useGiftCardsExperimentConfig = ReactCompilerGating.isReactCompilerEnabled() ? ((cResult) => {
+export const useGiftCardsExperimentConfig = ReactCompilerGating.isReactCompilerEnabled() ? (function useGiftCardsExperimentConfig(cResult) {
   cResult = c.c(2);
   const config = apexExperiment.useConfig(cResult);
   if (cResult[0] !== config.enabled) {
@@ -26,4 +26,6 @@ export const useGiftCardsExperimentConfig = ReactCompilerGating.isReactCompilerE
     tmp3 = cResult[1];
   }
   return tmp3;
-}) : ((cResult) => ({ enabled: apexExperiment.useConfig(cResult).enabled }));
+}) : (function useGiftCardsExperimentConfig(cResult) {
+  return { enabled: apexExperiment.useConfig(cResult).enabled };
+});

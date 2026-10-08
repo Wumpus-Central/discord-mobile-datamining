@@ -1,22 +1,22 @@
-// === Module 11691: AppsBanner ===
+// === Module 11756: AppsBanner ===
 
-// Module 11691 (AppsBanner)
+// Module 11756 (AppsBanner)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import BannerBaseDefault from "BannerBase" /* 11689 */;
-import OnboardingAppsRocketDefault from "OnboardingAppsRocket" /* 11692 */;
+import BannerBaseDefault from "BannerBase" /* 11754 */;
+import OnboardingAppsRocketDefault from "OnboardingAppsRocket" /* 11757 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles({ rocketIconContainer: { position: "absolute", top: -20 }, rocketIcon: { width: 90, height: 90 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/onboarding/banner/AppsBanner.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppsBaner() {
   const cResult = c.c(8);
   const tmp4 = closure_5();
   if (cResult[0] !== tmp4.rocketIcon) {
@@ -58,7 +58,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[4] = tmp10;
   tmp9 = tmp10;
   const obj4 = { style: tmp4.rocketIconContainer, children: tmp5 };
-}) : (() => {
+}) : (function AppsBaner() {
   const tmp = closure_5();
   const obj = { style: tmp.rocketIconContainer, children: jsx(OnboardingAppsRocketDefault, { style: tmp.rocketIcon }) };
   const obj3 = { image: <View style={tmp.rocketIconContainer}>{jsx(OnboardingAppsRocketDefault, { style: tmp.rocketIcon })}</View>, text: null };

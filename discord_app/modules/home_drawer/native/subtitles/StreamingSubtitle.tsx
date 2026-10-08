@@ -1,10 +1,10 @@
-// === Module 16302: StreamingSubtitle ===
+// === Module 16562: StreamingSubtitle ===
 
-// Module 16302 (StreamingSubtitle)
+// Module 16562 (StreamingSubtitle)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5048 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5405 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/home_drawer/native/subtitles/StreamingSubtitle.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function StreamingSubtitle(arg0) {
   const cResult = c.c(5);
   ({ guildId, streamingUser } = arg0);
   if (cResult[0] === guildId) {
@@ -39,7 +39,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = streamingUser;
   cResult[2] = formatResult;
   tmp4 = formatResult;
-}) : ((arg0) => {
+}) : (function StreamingSubtitle(arg0) {
   ({ guildId, streamingUser } = arg0);
   const obj = { variant: "text-xs/medium", color: "text-voice-connected", lineClamp: 1, children: null };
   const intl = util.intl;

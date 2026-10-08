@@ -1,19 +1,19 @@
-// === Module 11877: ChatInputImageCarousel ===
+// === Module 11949: ChatInputImageCarousel ===
 
-// Module 11877 (ChatInputImageCarousel)
+// Module 11949 (ChatInputImageCarousel)
 import noop from "module_19" /* 19 */;
-import ApplicationCommandStore from "ApplicationCommandStore" /* 7419 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 7280 */;
+import ApplicationCommandStore from "ApplicationCommandStore" /* 7894 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 7880 */;
 
 const require = fn;
-const DraftType = fn(7044).DraftType;
-let closure_6 = fn(9100).useChatShowingAutoComplete;
+const DraftType = fn(7232).DraftType;
+let closure_6 = fn(9318).useChatShowingAutoComplete;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat_input/native/accessories/ChatInputImageCarousel.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((canUpload) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ChatInputImageCarousel(canUpload) {
   const cResult = canUpload(576).c(9);
   canUpload = canUpload.canUpload;
   const channelId = canUpload.channelId;
@@ -42,7 +42,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((canUpl
       let tmp12 = null;
       if (null != stateFromStores) {
         const obj2 = { attachments: stateFromStores, channelId };
-        tmp12 = jsx(channelId(10373), { attachments: stateFromStores, channelId });
+        tmp12 = jsx(channelId(9970), { attachments: stateFromStores, channelId });
       }
       cResult[6] = stateFromStores;
       cResult[7] = channelId;
@@ -75,7 +75,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((canUpl
   tmp8 = fn;
   const obj = canUpload(576);
   tmp = canUpload;
-}) : ((canUpload) => {
+}) : (function ChatInputImageCarousel(canUpload) {
   canUpload = canUpload.canUpload;
   const channelId = canUpload.channelId;
   let tmp = closure_6(canUpload.screenIndex);
@@ -99,7 +99,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((canUpl
   let tmp4 = null;
   if (null != stateFromStores) {
     const obj2 = { attachments: stateFromStores, channelId };
-    tmp4 = jsx(channelId(10373), { attachments: stateFromStores, channelId });
+    tmp4 = jsx(channelId(9970), { attachments: stateFromStores, channelId });
   }
   return tmp4;
 }));

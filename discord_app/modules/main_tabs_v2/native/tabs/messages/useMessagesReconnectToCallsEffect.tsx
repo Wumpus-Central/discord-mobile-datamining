@@ -1,20 +1,20 @@
-// === Module 16015: useMessagesReconnectToCallsEffect ===
+// === Module 16275: useMessagesReconnectToCallsEffect ===
 
-// Module 16015 (useMessagesReconnectToCallsEffect)
+// Module 16275 (useMessagesReconnectToCallsEffect)
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5443 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import PrivateChannelSortStore from "PrivateChannelSortStore" /* 6733 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5753 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import PrivateChannelSortStore from "PrivateChannelSortStore" /* 6909 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesReconnectToCallsEffect.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useMessagesReconnectToCallsEffect() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function n() {
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     [tmp2, tmp3] = cResult;
   }
   const effect = noop.useEffect(tmp2, tmp3);
-}) : (() => {
+}) : (function useMessagesReconnectToCallsEffect() {
   const effect = noop.useEffect(() => {
     function isGatewayConnectedListener() {
       isConnectedResult = GatewayConnectionStore.isConnected();

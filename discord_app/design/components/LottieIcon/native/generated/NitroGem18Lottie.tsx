@@ -1,12 +1,14 @@
-// === Module 14261: NitroGem18Lottie ===
+// === Module 14085: NitroGem18Lottie ===
 
-// Module 14261 (NitroGem18Lottie)
+// Module 14085 (NitroGem18Lottie)
 import c from "c" /* 576 */;
-import LottieIcon from "LottieIcon" /* 9642 */;
-import _mod14262 from "module_14262" /* 14262 */;
+import LottieIcon from "LottieIcon" /* 10837 */;
+import _mod14086 from "module_14086" /* 14086 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
+let closure_2 = ["ref"];
 const jsx = fn(21).jsx;
 const layers = ["G"];
 const items = [{ name: "all", start: 0, duration: 71 }];
@@ -14,29 +16,41 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/LottieIcon/native/generated/NitroGem18Lottie.tsx");
 
-export const NitroGem18Lottie = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, ref) => {
-  const cResult = c.c(4);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod14262;
-    cResult[0] = tmpResult;
-    let first = tmpResult;
+export const NitroGem18Lottie = ReactCompilerGating.isReactCompilerEnabled() ? (function NitroGem18Lottie(ref) {
+  const cResult = c.c(7);
+  if (cResult[0] !== ref) {
+    const tmp8 = _objectWithoutProperties(ref.ref, closure_2);
+    cResult[0] = ref.ref;
+    cResult[1] = tmp8;
+    cResult[2] = ref.ref;
+    let tmp5 = ref;
+    let tmp4 = tmp8;
   } else {
-    first = cResult[0];
+    tmp4 = cResult[1];
+    tmp5 = cResult[2];
   }
-  if (cResult[1] === arg0) {
-    if (cResult[2] === ref) {
-      let tmp6 = cResult[3];
+  if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+    const tmpResult = _mod14086;
+    cResult[3] = tmpResult;
+    let tmp9 = tmpResult;
+  } else {
+    tmp9 = cResult[3];
+  }
+  if (cResult[4] === tmp4) {
+    if (cResult[5] === tmp5) {
+      let tmp11 = cResult[6];
     }
-    return tmp6;
+    return tmp11;
   }
-  const merged = Object.assign(arg0);
-  const tmp8 = jsx(LottieIcon.LottieIcon, { dotLottie: first, animation: "all", ref, layers, markers: items });
-  cResult[1] = arg0;
-  cResult[2] = ref;
-  cResult[3] = tmp8;
-  tmp6 = tmp8;
-  const obj2 = { dotLottie: first, animation: "all", ref, layers, markers: items };
-}) : ((arg0, ref) => {
-  const merged = Object.assign(arg0);
-  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod14262, animation: "all", ref, layers, markers: items });
-}));
+  const merged = Object.assign(tmp4);
+  const tmp13 = jsx(LottieIcon.LottieIcon, { dotLottie: tmp9, animation: "all", ref: tmp5, layers, markers: items });
+  cResult[4] = tmp4;
+  cResult[5] = tmp5;
+  cResult[6] = tmp13;
+  tmp11 = tmp13;
+  const obj2 = { dotLottie: tmp9, animation: "all", ref: tmp5, layers, markers: items };
+}) : (function NitroGem18Lottie(ref) {
+  const merged = Object.assign(ref, Object.assign({ ref: 0 }));
+  const merged1 = Object.assign(merged);
+  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod14086, animation: "all", ref: ref.ref, layers, markers: items });
+});

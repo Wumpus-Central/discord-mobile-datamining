@@ -1,13 +1,13 @@
-// === Module 15124: SettingsAppearanceChannelList ===
+// === Module 15386: SettingsAppearanceChannelList ===
 
-// Module 15124 (SettingsAppearanceChannelList)
+// Module 15386 (SettingsAppearanceChannelList)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4618 */;
-import SettingsAppearanceChannelRowItemDefault from "SettingsAppearanceChannelRowItem" /* 15125 */;
-import SettingsAppearanceMessagesHeaderItemDefault from "SettingsAppearanceMessagesHeaderItem" /* 15126 */;
-import SettingsAppearanceActivityCardsItemDefault from "SettingsAppearanceActivityCardsItem" /* 15127 */;
-import SettingsAppearanceGradientBackgroundDefault from "SettingsAppearanceGradientBackground" /* 15133 */;
-import SettingsAppearanceChannelListPreviewNitroUpsellDefault from "SettingsAppearanceChannelListPreviewNitroUpsell" /* 15136 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4810 */;
+import SettingsAppearanceChannelRowItemDefault from "SettingsAppearanceChannelRowItem" /* 15387 */;
+import SettingsAppearanceMessagesHeaderItemDefault from "SettingsAppearanceMessagesHeaderItem" /* 15388 */;
+import SettingsAppearanceActivityCardsItemDefault from "SettingsAppearanceActivityCardsItem" /* 15389 */;
+import SettingsAppearanceGradientBackgroundDefault from "SettingsAppearanceGradientBackground" /* 15395 */;
+import SettingsAppearanceChannelListPreviewNitroUpsellDefault from "SettingsAppearanceChannelListPreviewNitroUpsell" /* 15398 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { channelPreviewGradient: null, channelPreviewCardContainer: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -31,7 +31,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/appearance/native/components/SettingsAppearanceChannelList.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelListPreview(arg0) {
   const cResult = animatedStyles(576).c(25);
   ({ themes, themeIndex, animatedStyles } = arg0);
   ({ data, useGradientBackground, isNitroLocked } = arg0);
@@ -93,75 +93,67 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
               let obj2 = { paddingVertical: nativeDefault.space.PX_16 };
               cResult[12] = obj2;
-              let tmp15 = obj2;
+              let tmp16 = obj2;
             } else {
-              tmp15 = cResult[12];
+              tmp16 = cResult[12];
             }
             const _Symbol3 = Symbol;
             if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-              class P {
-                constructor(arg0) {
-                  return arg0.id;
-                }
-              }
-              cResult[13] = P;
+              const fn2 = function f(id) {
+                return id.id;
+              };
+              cResult[13] = fn2;
+              let tmp18 = fn2;
             } else {
-              class P {
-                constructor(arg0) {
-                  return arg0.id;
-                }
-              }
+              tmp18 = cResult[13];
             }
             if (cResult[14] === data) {
-              class P {
-                constructor(arg0) {
-                  return arg0.id;
-                }
+              if (cResult[15] === tmp5) {
+                let tmp19 = cResult[16];
               }
               if (cResult[17] === isNitroLocked) {
-                class P {
-                  constructor(arg0) {
-                    return arg0.id;
-                  }
+                if (cResult[18] === tmp22) {
+                  let tmp23 = cResult[19];
                 }
-                if (cResult[20] === tmp22) {
-                  class P {
-                    constructor(arg0) {
-                      return arg0.id;
+                if (cResult[20] === tmp23) {
+                  if (cResult[21] === tmp6) {
+                    if (cResult[22] === tmp10) {
+                      if (cResult[23] === tmp19) {
+                        let tmp27 = cResult[24];
+                      }
+                      return tmp27;
                     }
                   }
                 }
                 let obj3 = { style: tmp6, accessible: true, accessibilityRole: "image", accessibilityLabel: tmp8, children: null };
-                const items = [tmp10, tmp18, tmp22];
+                const items = [tmp10, tmp19, tmp23];
                 obj3.children = items;
-                const tmp29 = closure_6(ReanimatedRexportDefault.View, obj3);
-                cResult[20] = tmp22;
+                const tmp30 = closure_6(ReanimatedRexportDefault.View, obj3);
+                cResult[20] = tmp23;
                 cResult[21] = tmp6;
                 cResult[22] = tmp10;
-                cResult[23] = tmp18;
-                cResult[24] = tmp29;
+                cResult[23] = tmp19;
+                cResult[24] = tmp30;
+                tmp27 = tmp30;
               }
               const obj4 = { visible: isNitroLocked, theme: themes[themeIndex] };
-              const tmp25 = closure_5(SettingsAppearanceChannelListPreviewNitroUpsellDefault, obj4);
+              const tmp26 = closure_5(SettingsAppearanceChannelListPreviewNitroUpsellDefault, obj4);
               cResult[17] = isNitroLocked;
               cResult[18] = themes[themeIndex];
-              cResult[19] = tmp25;
+              cResult[19] = tmp26;
+              tmp23 = tmp26;
             }
-            const obj5 = { contentContainerStyle: tmp15, data, renderItem: tmp5, keyExtractor: P, showsVerticalScrollIndicator: false, importantForAccessibility: "no-hide-descendants" };
-            const tmp20 = closure_5(animatedStyles(8404).FlashList, obj5);
+            const obj5 = { contentContainerStyle: tmp16, data, renderItem: tmp5, keyExtractor: tmp18, showsVerticalScrollIndicator: false, importantForAccessibility: "no-hide-descendants" };
+            const tmp21 = closure_5(animatedStyles(8600).FlashList, obj5);
             cResult[14] = data;
             cResult[15] = tmp5;
-            cResult[16] = tmp20;
+            cResult[16] = tmp21;
+            tmp19 = tmp21;
           }
         }
       }
       let tmp11 = null;
       if (useGradientBackground) {
-        class P {
-          constructor(arg0) {
-            return arg0.id;
-          }
-        }
         const obj6 = { style: tmp4.channelPreviewGradient, children: null };
         const obj7 = { themes, themeIndex, isDimmed: false, backgroundToken: nativeDefault.colors.BACKGROUND_BASE_LOW };
         obj6.children = closure_5(SettingsAppearanceGradientBackgroundDefault, obj7);
@@ -182,7 +174,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = items1;
   tmp6 = items1;
   let obj = animatedStyles(576);
-}) : ((useGradientBackground) => {
+}) : (function ChannelListPreview(useGradientBackground) {
   ({ themes, themeIndex, animatedStyles } = useGradientBackground);
   useGradientBackground = useGradientBackground.useGradientBackground;
   ({ data, isNitroLocked } = useGradientBackground);
@@ -238,7 +230,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     showsVerticalScrollIndicator: false,
     importantForAccessibility: "no-hide-descendants"
   };
-  items2[1] = closure_5(animatedStyles(8404).FlashList, obj4);
+  items2[1] = closure_5(animatedStyles(8600).FlashList, obj4);
   items2[2] = closure_5(SettingsAppearanceChannelListPreviewNitroUpsellDefault, { visible: isNitroLocked, theme: themes[themeIndex] });
   obj.children = items2;
   return closure_6(ReanimatedRexportDefault.View, obj);

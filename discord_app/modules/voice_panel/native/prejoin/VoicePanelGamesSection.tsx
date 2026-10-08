@@ -1,22 +1,22 @@
-// === Module 17331: VoicePanelGamesSection ===
+// === Module 17612: VoicePanelGamesSection ===
 
-// Module 17331 (VoicePanelGamesSection)
+// Module 17612 (VoicePanelGamesSection)
 import c from "c" /* 576 */;
-import useGame from "useGame" /* 6822 */;
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8353 */;
-import FormComponents from "FormComponents" /* 9348 */;
-import VoiceChannelGamesExperimentDefault from "VoiceChannelGamesExperiment" /* 9405 */;
-import GameActivityIconDefault from "GameActivityIcon" /* 9456 */;
-import useVoiceChannelGamesDefault from "useVoiceChannelGames" /* 17332 */;
+import useGame from "useGame" /* 6995 */;
+import FormComponents from "FormComponents" /* 8770 */;
+import VoiceChannelGamesExperimentDefault from "VoiceChannelGamesExperiment" /* 8826 */;
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8851 */;
+import GameActivityIconDefault from "GameActivityIcon" /* 9107 */;
+import useVoiceChannelGamesDefault from "useVoiceChannelGames" /* 17613 */;
 import noop from "module_19" /* 19 */;
 
 const util = v9sZWVp(1126);
-const TableRow = v9sZWVp(6000);
-const GameProfileAnalyticUtils = v9sZWVp(8352);
+const TableRow = v9sZWVp(6184);
+const GameProfileAnalyticUtils = v9sZWVp(8850);
 require = fn;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
-let closure_4 = ReactCompilerGating.isReactCompilerEnabled() ? ((gameId) => {
+let closure_4 = ReactCompilerGating.isReactCompilerEnabled() ? (function GameRow(gameId) {
   let v9sZWVp = require;
   let formatToPlainStringResult = dependencyMap;
   const cResult = c.c(10);
@@ -31,7 +31,7 @@ let closure_4 = ReactCompilerGating.isReactCompilerEnabled() ? ((gameId) => {
     tmp4 = cResult[1];
   }
   const tmp6 = useOpenGameProfileModalDefault(tmp4);
-  closure_0 = tmp6;
+  _require = tmp6;
   if (null == data) {
     return null;
   } else {
@@ -70,25 +70,30 @@ let closure_4 = ReactCompilerGating.isReactCompilerEnabled() ? ((gameId) => {
       cResult[5] = tmp14;
     }
     if (cResult[8] !== tmp6) {
-      const fn = function v() {
-        return closure_0();
-      };
+      class G {
+        constructor() {
+          return closure_0();
+        }
+      }
       cResult[8] = tmp6;
-      cResult[9] = fn;
-      let tmp15 = fn;
+      cResult[9] = G;
     } else {
-      tmp15 = cResult[9];
+      class G {
+        constructor() {
+          return closure_0();
+        }
+      }
     }
-    const obj6 = { icon: intl2, label: name, arrow: true, onPress: tmp15, accessibilityRole: "button", accessibilityLabel: null };
+    const obj6 = { icon: intl2, label: name, arrow: true, onPress: G, accessibilityRole: "button", accessibilityLabel: null };
     intl2 = util.intl;
     v9sZWVp = util.t["9sZWVp"];
     const obj7 = { gameName: name };
     formatToPlainStringResult = intl2.formatToPlainString(v9sZWVp, obj7);
     obj6.accessibilityLabel = formatToPlainStringResult;
-    jsx(TableRow.TableRow, { icon: intl2, label: name, arrow: true, onPress: tmp15, accessibilityRole: "button", accessibilityLabel: null });
+    jsx(TableRow.TableRow, { icon: intl2, label: name, arrow: true, onPress: G, accessibilityRole: "button", accessibilityLabel: null });
     const forResult = Symbol.for("react.early_return_sentinel");
   }
-}) : ((gameId) => {
+}) : (function GameRow(gameId) {
   gameId = gameId.gameId;
   const data = useGame.useGame(gameId).data;
   const obj2 = { gameId, source: null };
@@ -131,7 +136,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/prejoin/VoicePanelGamesSection.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePanelGamesSection(arg0) {
   const cResult = c.c(6);
   ({ members, guildId } = arg0);
   const tmp4 = VoiceChannelGamesExperimentDefault("voice_pre_join_games_section");
@@ -176,7 +181,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
     }
   }
   return null;
-}) : ((arg0) => {
+}) : (function VoicePanelGamesSection(arg0) {
   ({ members, guildId } = arg0);
   const tmp2 = VoiceChannelGamesExperimentDefault("voice_pre_join_games_section");
   const arr = useVoiceChannelGamesDefault(members, guildId, tmp2);

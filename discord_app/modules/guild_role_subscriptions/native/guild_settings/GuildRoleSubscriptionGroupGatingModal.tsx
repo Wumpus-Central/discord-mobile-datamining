@@ -1,22 +1,22 @@
-// === Module 17983: GuildRoleSubscriptionGroupGatingModal ===
+// === Module 18270: GuildRoleSubscriptionGroupGatingModal ===
 
-// Module 17983 (GuildRoleSubscriptionGroupGatingModal)
+// Module 18270 (GuildRoleSubscriptionGroupGatingModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import FormGuildGatingModeSelectorDefault from "FormGuildGatingModeSelector" /* 17966 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 17974 */;
+import FormGuildGatingModeSelectorDefault from "FormGuildGatingModeSelector" /* 18253 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 18261 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RoleTierEditStore from "RoleTierEditStore" /* 17972 */;
+import RoleTierEditStore from "RoleTierEditStore" /* 18259 */;
 
 require = fn;
-const constants = fn(15038).GuildRoleSubscriptionsTierScenes;
+const constants = fn(15300).GuildRoleSubscriptionsTierScenes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildRoleSubscriptionGroupGatingModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRoleSubscriptionGroupGatingModal(arg0) {
   const cResult = c.c(8);
   [tmp5, tmp6] = RoleTierEditStore.useGroupIsFullGateState();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -56,7 +56,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = tmp12;
   tmp11 = tmp12;
   const tmp4 = _slicedToArray(RoleTierEditStore.useGroupIsFullGateState(), 2);
-}) : ((arg0) => {
+}) : (function GuildRoleSubscriptionGroupGatingModal(arg0) {
   [tmp2, tmp3] = RoleTierEditStore.useGroupIsFullGateState();
   const obj = { title: null, description: null, canProceedToNextStep: true, nextStep: null };
   const tmp = _slicedToArray(RoleTierEditStore.useGroupIsFullGateState(), 2);

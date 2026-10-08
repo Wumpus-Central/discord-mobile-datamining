@@ -1,11 +1,11 @@
-// === Module 13927: NewTag ===
+// === Module 14230: NewTag ===
 
-// Module 13927 (NewTag)
+// Module 14230 (NewTag)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import LinearGradientDefault from "LinearGradient" /* 5612 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import LinearGradientDefault from "LinearGradient" /* 5387 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Platform } = get_ActivityIndicator);
 const HorizontalGradient = fn(1085).HorizontalGradient;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { tagContainer: { height: "auto", backgroundColor: nativeDefault.unsafe_rawColors.RED_400, justifyContent: "center", alignItems: "center", paddingHorizontal: 4, marginBottom: 2, borderRadius: nativeDefault.radii.round }, tagText: { textTransform: "uppercase" } };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -23,7 +23,7 @@ let obj3 = { height: "auto", backgroundColor: nativeDefault.unsafe_rawColors.RED
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/NewTag/native/NewTag.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTag(arg0) {
   let tmp2 = dependencyMap;
   const cResult = c.c(47);
   if (cResult[0] !== arg0) {
@@ -226,7 +226,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp20 = items4;
   }
   tmp14 = undefined !== tmp7 && tmp7;
-}) : ((color) => {
+}) : (function NewTag(color) {
   ({ containerStyle, textStyle, variant } = color);
   if (variant === undefined) {
     variant = "heading-sm/semibold";

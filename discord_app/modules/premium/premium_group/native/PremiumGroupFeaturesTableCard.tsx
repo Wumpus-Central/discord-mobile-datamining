@@ -1,19 +1,19 @@
-// === Module 13309: PremiumGroupFeaturesTableCard ===
+// === Module 13609: PremiumGroupFeaturesTableCard ===
 
-// Module 13309 (PremiumGroupFeaturesTableCard)
+// Module 13609 (PremiumGroupFeaturesTableCard)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import ColorUtils from "ColorUtils" /* 4733 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import LinearGradientDefault from "LinearGradient" /* 5612 */;
-import ColorConstants from "ColorConstants" /* 6951 */;
-import PremiumGroupWordmarkDefault from "PremiumGroupWordmark" /* 8915 */;
-import usePremiumGroupFeaturesTableCardTextDefault from "usePremiumGroupFeaturesTableCardText" /* 13310 */;
+import native from "native" /* 1200 */;
+import ColorUtils from "ColorUtils" /* 4927 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import LinearGradientDefault from "LinearGradient" /* 5387 */;
+import ColorConstants from "ColorConstants" /* 7140 */;
+import PremiumGroupWordmarkDefault from "PremiumGroupWordmark" /* 9348 */;
+import usePremiumGroupFeaturesTableCardTextDefault from "usePremiumGroupFeaturesTableCardText" /* 13610 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
+import createStyles from "createStyles" /* 5090 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -31,7 +31,7 @@ let obj5 = { color: nativeDefault.colors.TEXT_DEFAULT, marginBottom: 16 };
 obj.description = { color: nativeDefault.colors.TEXT_DEFAULT };
 let closure_7 = createStyles.createStyles(obj);
 let ReactCompilerGating = ReactCompilerGating_mod;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function BetaPill() {
   const cResult = c.c(6);
   const tmp4 = closure_7();
   ({ betaPill, betaText } = tmp4);
@@ -63,7 +63,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[4] = tmp7;
   cResult[5] = tmp11;
   tmp10 = tmp11;
-}) : (() => {
+}) : (function BetaPill() {
   const tmp = closure_7();
   const obj = { style: tmp.betaPill, children: null };
   const obj2 = { variant: "text-xs/bold", style: tmp.betaText, children: null };
@@ -77,7 +77,7 @@ let ReactCompilerGating = ReactCompilerGating_mod;
 let obj6 = { color: nativeDefault.colors.TEXT_DEFAULT };
 const result = size.fileFinishedImporting("modules/premium/premium_group/native/PremiumGroupFeaturesTableCard.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumGroupFeaturesTableCard(style) {
   const cResult = c.c(22);
   style = style.style;
   const tmp4 = closure_7();
@@ -185,7 +185,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
     cResult[10] = tmp23;
     tmp21 = tmp23;
   }
-}) : ((arg0) => {
+}) : (function PremiumGroupFeaturesTableCard(arg0) {
   ({ style, premiumGroupRole } = arg0);
   const tmp = closure_7();
   const tmp4 = usePremiumGroupFeaturesTableCardTextDefault(premiumGroupRole, false);

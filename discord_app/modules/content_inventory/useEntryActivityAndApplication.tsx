@@ -1,9 +1,9 @@
-// === Module 12838: useEntryActivityAndApplication ===
+// === Module 12985: useEntryActivityAndApplication ===
 
-// Module 12838 (useEntryActivityAndApplication)
+// Module 12985 (useEntryActivityAndApplication)
 import _slicedToArray from "module_32" /* 32 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
-import ContentInventoryActivityStore from "ContentInventoryActivityStore" /* 12839 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2062 */;
+import ContentInventoryActivityStore from "ContentInventoryActivityStore" /* 12986 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/content_inventory/useEntryActivityAndApplication.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((extra) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useEntryActivityAndApplication(extra) {
   _require = extra;
   const cResult = require("c").c(16);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((extra) => {
     if (cResult[4] === application_id1) {
       let tmp10 = cResult[5];
     }
-    [first1] = first1(6670)(tmp10);
+    [first1] = first1(6847)(tmp10);
     const _Symbol = Symbol;
     if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
       const items1 = [EmbeddedActivitiesStore];
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((extra) => {
   cResult[5] = items2;
   tmp10 = items2;
   const tmpResult = require("initialize");
-}) : ((extra) => {
+}) : (function useEntryActivityAndApplication(extra) {
   _require = extra;
   const items = [ContentInventoryActivityStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => ContentInventoryActivityStore.getMatchingActivity(closure_0));
@@ -128,9 +128,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((extra) => {
     application_id1 = extra.extra.application_id;
   }
   items1[1] = application_id1;
-  [activityApplication, obj2.fallbackApplication] = activityApplication(6670)(items1);
+  [activityApplication, obj2.fallbackApplication] = activityApplication(6847)(items1);
   const obj2 = { activity: stateFromStores, embeddedActivity: null, anyMatchingApplication: null, activityApplication: null, fallbackApplication: null };
-  const tmp4 = activityApplication(6670);
+  const tmp4 = activityApplication(6847);
   const items2 = [EmbeddedActivitiesStore];
   obj2.embeddedActivity = tmp(504).useStateFromStores(items2, () => {
     let id;

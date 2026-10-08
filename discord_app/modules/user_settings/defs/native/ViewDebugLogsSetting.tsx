@@ -1,28 +1,28 @@
-// === Module 15403: ViewDebugLogsSetting ===
+// === Module 15665: ViewDebugLogsSetting ===
 
-// Module 15403 (ViewDebugLogsSetting)
+// Module 15665 (ViewDebugLogsSetting)
 import _mod17 from "module_17" /* 17 */;
 import _mod19 from "module_19" /* 19 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import UserSettings from "UserSettings" /* 2028 */;
-import ClockIcon from "ClockIcon" /* 4855 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6651 */;
-import ActionSheetRow from "ActionSheetRow" /* 6704 */;
-import ActionSheet from "ActionSheet" /* 6708 */;
-import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10674 */;
-import ChannelNotificationIcon from "ChannelNotificationIcon" /* 10710 */;
-import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 13672 */;
-import WrenchIcon from "WrenchIcon" /* 15404 */;
-import UserSettingsDebugLogsDefault from "UserSettingsDebugLogs" /* 15406 */;
-import UserSettingsStartupTimingsDefault from "UserSettingsStartupTimings" /* 15409 */;
-import UserSettingsPushNotificationLogsDefault from "UserSettingsPushNotificationLogs" /* 15410 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import UserSettings from "UserSettings" /* 2040 */;
+import ClockIcon from "ClockIcon" /* 5049 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5940 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6828 */;
+import ActionSheetRow from "ActionSheetRow" /* 6881 */;
+import ActionSheet from "ActionSheet" /* 6885 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 9587 */;
+import ChannelNotificationIcon from "ChannelNotificationIcon" /* 10327 */;
+import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 13894 */;
+import WrenchIcon from "WrenchIcon" /* 15666 */;
+import UserSettingsDebugLogsDefault from "UserSettingsDebugLogs" /* 15668 */;
+import UserSettingsStartupTimingsDefault from "UserSettingsStartupTimings" /* 15671 */;
+import UserSettingsPushNotificationLogsDefault from "UserSettingsPushNotificationLogs" /* 15672 */;
 import jsxProd from "jsxProd" /* 21 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11142 */;
+import SettingBuilders from "SettingBuilders" /* 11262 */;
 import size from "module_2" /* 2 */;
 
 const Suspense = _mod19.Suspense;
@@ -30,7 +30,7 @@ const Keyboard = _mod17.Keyboard;
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const ViewDebugLogsActionSheet = "ViewDebugLogsActionSheet";
 let ReactCompilerGating = ReactCompilerGating_mod;
-let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((screenKey) => {
+let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function ViewDebugLogsActionSheetRow(screenKey) {
   const cResult = title(render[5]).c(8);
   ({ icon, title } = screenKey);
   screenKey = screenKey.screenKey;
@@ -72,10 +72,10 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((screenKey) => {
   tmp4 = fn;
   let obj = title(render[5]);
   tmp2 = render;
-}) : ((icon) => {
+}) : (function ViewDebugLogsActionSheetRow(icon) {
   const title = icon.title;
   ({ screenKey: importDefault, render: dependencyMap } = icon);
-  return closure_5(title(6704).ActionSheetRow, {
+  return closure_5(title(6881).ActionSheetRow, {
     icon: icon.icon,
     label: title,
     onPress() {
@@ -89,7 +89,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((screenKey) => {
   });
 });
 let ReactCompilerGating = ReactCompilerGating_mod;
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function ViewDebugLogsActionSheet() {
   const cResult = c.c(7);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { title: null };
@@ -174,7 +174,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp21 = cResult[6];
   }
   return tmp21;
-}) : (() => {
+}) : (function ViewDebugLogsActionSheet() {
   const obj = { header: null, children: null };
   const obj2 = { title: null };
   const intl = util.intl;

@@ -1,10 +1,10 @@
-// === Module 10839: userSettingToActivity ===
+// === Module 10488: userSettingToActivity ===
 
-// Module 10839 (userSettingToActivity)
+// Module 10488 (userSettingToActivity)
 import _mod19 from "module_19" /* 19 */;
 import Constants from "Constants" /* 1085 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4529 */;
-import EmojiStore from "EmojiStore" /* 5645 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4721 */;
+import EmojiStore from "EmojiStore" /* 5992 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -66,9 +66,9 @@ export const getActivityFromCustomStatus = function getActivityFromCustomStatus(
   }
   return _activityFromSetting(setting, usableCustomEmojiById);
 };
-export const useCustomStatusActivity = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useCustomStatusActivity = ReactCompilerGating.isReactCompilerEnabled() ? (function useCustomStatusActivity() {
   const cResult = emojiId(576).c(7);
-  const CustomStatusSetting = emojiId(2028).CustomStatusSetting;
+  const CustomStatusSetting = emojiId(2040).CustomStatusSetting;
   const setting = CustomStatusSetting.useSetting();
   emojiId = undefined;
   if (setting != null) {
@@ -119,7 +119,7 @@ export const useCustomStatusActivity = ReactCompilerGating.isReactCompilerEnable
   cResult[6] = tmp12;
   tmp11 = tmp12;
   const tmpResult = emojiId(504);
-}) : (() => {
+}) : (function useCustomStatusActivity() {
   const CustomStatusSetting = setting(stateFromStores[6]).CustomStatusSetting;
   setting = CustomStatusSetting.useSetting();
   let emojiId;

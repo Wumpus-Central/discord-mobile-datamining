@@ -1,7 +1,7 @@
-// === Module 12311: useProvisionalAccountApplication ===
+// === Module 12409: useProvisionalAccountApplication ===
 
-// Module 12311 (useProvisionalAccountApplication)
-import GameRelationshipStore from "GameRelationshipStore" /* 7155 */;
+// Module 12409 (useProvisionalAccountApplication)
+import GameRelationshipStore from "GameRelationshipStore" /* 7335 */;
 
 const require = globalThis.__r;
 
@@ -10,7 +10,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/provisional_accounts/hooks/useProvisionalAccountApplication.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useProvisionalAccountApplication(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -35,7 +35,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const stateFromStores = require("initialize").useStateFromStores(first, tmp6);
   const tmpResult = require("initialize");
   return require("useGetOrFetchApplications").useGetOrFetchApplication(stateFromStores);
-}) : ((arg0) => {
+}) : (function useProvisionalAccountApplication(arg0) {
   _require = arg0;
   const items = [GameRelationshipStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {

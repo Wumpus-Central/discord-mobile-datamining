@@ -1,20 +1,20 @@
-// === Module 14817: PremiumGiftingSetting ===
+// === Module 15078: PremiumGiftingSetting ===
 
-// Module 14817 (PremiumGiftingSetting)
+// Module 15078 (PremiumGiftingSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import BillingPlatformUtils from "BillingPlatformUtils" /* 4547 */;
-import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 6936 */;
-import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 11105 */;
-import PromotionsHooks from "PromotionsHooks" /* 13381 */;
+import native from "native" /* 1200 */;
+import BillingPlatformUtils from "BillingPlatformUtils" /* 4739 */;
+import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7125 */;
+import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 10470 */;
+import PromotionsHooks from "PromotionsHooks" /* 13681 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 fn(558);
 const ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanNavigateToPaymentSetting() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function t() {
@@ -32,17 +32,19 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     first = cResult[0];
   }
   return first;
-}) : (() => noop.useCallback(() => {
-  const isPaymentsBlocked = BlockedPaymentsCountryExperiment.getIsPaymentsBlocked();
-  let flag = !isPaymentsBlocked;
-  if (isPaymentsBlocked) {
-    openBlockedPaymentsCountryActionSheetDefault();
-    flag = false;
-  }
-  return flag;
-}, []));
-const SettingBuilders = fn(11142);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+}) : (function useCanNavigateToPaymentSetting() {
+  return noop.useCallback(() => {
+    const isPaymentsBlocked = BlockedPaymentsCountryExperiment.getIsPaymentsBlocked();
+    let flag = !isPaymentsBlocked;
+    if (isPaymentsBlocked) {
+      openBlockedPaymentsCountryActionSheetDefault();
+      flag = false;
+    }
+    return flag;
+  }, []);
+});
+const SettingBuilders = fn(11262);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePremiumGiftingSettingTrailing() {
   const cResult = c.c(2);
   const unseenOutboundPromotions = PromotionsHooks.useUnseenOutboundPromotions();
   if (cResult[0] !== unseenOutboundPromotions.length) {
@@ -55,7 +57,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp4 = cResult[1];
   }
   return tmp4;
-}) : (() => {
+}) : (function usePremiumGiftingSettingTrailing() {
   const unseenOutboundPromotions = PromotionsHooks.useUnseenOutboundPromotions();
   return jsx(native.Badge, { value: unseenOutboundPromotions.length });
 });
@@ -65,12 +67,12 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t["jcSP+g"]);
   },
   parent: null,
-  IconComponent: fn(10779).GiftIcon,
+  IconComponent: fn(11561).GiftIcon,
   usePredicate() {
     return BillingPlatformUtils.isPremiumGiftingSupported();
   },
   usePreNavigationAction: tmp2,
-  useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (function usePremiumGiftingSettingTrailing() {
     const cResult = c.c(2);
     const unseenOutboundPromotions = PromotionsHooks.useUnseenOutboundPromotions();
     if (cResult[0] !== unseenOutboundPromotions.length) {
@@ -83,7 +85,7 @@ const route = SettingBuilders.createRoute({
       tmp4 = cResult[1];
     }
     return tmp4;
-  }) : (() => {
+  }) : (function usePremiumGiftingSettingTrailing() {
     const unseenOutboundPromotions = PromotionsHooks.useUnseenOutboundPromotions();
     return jsx(native.Badge, { value: unseenOutboundPromotions.length });
   }),

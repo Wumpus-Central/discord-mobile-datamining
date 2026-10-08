@@ -1,6 +1,6 @@
-// === Module 5603: Icon ===
+// === Module 5377: Icon ===
 
-// Module 5603 (Icon)
+// Module 5377 (Icon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
@@ -9,12 +9,11 @@ require = fn;
 const Image = fn(17).Image;
 const jsx = fn(21).jsx;
 const IconSizes = { EXTRA_SMALL_10: "extraSmall10", EXTRA_SMALL: "extraSmall", SMALL: "small", SMALL_20: "small20", MEDIUM: "medium", LARGE: "large", CUSTOM: "custom", REFRESH_SMALL_16: "refreshSmall16", SMALL_14: "small14" };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles(() => {
   obj = { iconColor: { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT } };
   return obj;
 });
-({ memo, forwardRef } = noop);
 const ReactCompilerGating = fn(558);
 function getIconSize(LARGE_BUTTON_ICON_SIZE) {
   if (obj.EXTRA_SMALL_10 === LARGE_BUTTON_ICON_SIZE) {
@@ -63,10 +62,10 @@ function getIconStyle(MEDIUM) {
   }
   return { width, height: width };
 }
-const memoResult = memo(forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, ref) => {
+const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function Icon(arg0) {
   obj = c;
   const cResult = obj.c(15);
-  ({ source, color, disableColor, size, style, resizeMode, accessible, accessibilityLabel } = arg0);
+  ({ source, color, disableColor, size, style, resizeMode, accessible, accessibilityLabel, ref } = arg0);
   if (undefined === size) {
     size = obj.MEDIUM;
   }
@@ -119,24 +118,24 @@ const memoResult = memo(forwardRef(ReactCompilerGating.isReactCompilerEnabled() 
               if (cResult[11] === str) {
                 if (cResult[12] === source) {
                   if (cResult[13] === tmp10) {
-                    let tmp12 = cResult[14];
+                    let tmp11 = cResult[14];
                   }
-                  return tmp12;
+                  return tmp11;
                 }
               }
             }
           }
         }
         const obj2 = { resizeMode: str, source, style: tmp10, accessible, accessibilityLabel, fadeDuration: 0, ref };
-        const tmp15 = <Image resizeMode={str} source={source} style={tmp10} accessible={accessible} accessibilityLabel={accessibilityLabel} fadeDuration={0} ref={ref} />;
+        const tmp14 = <Image resizeMode={str} source={source} style={tmp10} accessible={accessible} accessibilityLabel={accessibilityLabel} fadeDuration={0} ref={ref} />;
         cResult[8] = accessibilityLabel;
         cResult[9] = accessible;
         cResult[10] = ref;
         cResult[11] = str;
         cResult[12] = source;
         cResult[13] = tmp10;
-        cResult[14] = tmp15;
-        tmp12 = tmp15;
+        cResult[14] = tmp14;
+        tmp11 = tmp14;
       }
     }
     const items = [tmp8, undefined, style];
@@ -156,7 +155,7 @@ const memoResult = memo(forwardRef(ReactCompilerGating.isReactCompilerEnabled() 
     }
   }
   tmp2 = undefined !== disableColor && disableColor;
-}) : ((size, ref) => {
+}) : (function Icon(size) {
   ({ color, disableColor } = size);
   if (disableColor === undefined) {
     disableColor = false;
@@ -169,7 +168,7 @@ const memoResult = memo(forwardRef(ReactCompilerGating.isReactCompilerEnabled() 
   if (resizeMode === undefined) {
     resizeMode = "cover";
   }
-  ({ accessible, accessibilityLabel } = size);
+  ({ accessible, accessibilityLabel, ref } = size);
   if (disableColor) {
     const obj2 = { resizeMode, source: size.source, style: null, accessible: null, accessibilityLabel: null, fadeDuration: 0, ref: null };
     let num = 10;
@@ -210,7 +209,7 @@ const memoResult = memo(forwardRef(ReactCompilerGating.isReactCompilerEnabled() 
   } else {
     iconColor = tmp2.iconColor;
   }
-})));
+}));
 memoResult.displayName = "Icon";
 memoResult.Sizes = IconSizes;
 let size = fn(2);

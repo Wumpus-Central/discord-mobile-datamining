@@ -1,15 +1,15 @@
-// === Module 7611: InteractionStore ===
+// === Module 7856: InteractionStore ===
 
-// Module 7611 (InteractionStore)
+// Module 7856 (InteractionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import InteractionTypes from "InteractionTypes" /* 5126 */;
-import interactions_InteractionTypes from "interactions/InteractionTypes" /* 5127 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 6978 */;
+import InteractionTypes from "InteractionTypes" /* 5438 */;
+import interactions_InteractionTypes from "interactions/InteractionTypes" /* 5439 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7167 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
 
 require = fn;
 function deleteNonce(nonce) {
@@ -19,7 +19,7 @@ function deleteNonce(nonce) {
       delete tmp[tmp3];
     }
     delete tmp[tmp2];
-    const obj = { insertedAt: null, nonce: null, messageId: null, interaction: null };
+    obj = { insertedAt: null, nonce: null, messageId: null, interaction: null };
     const _Date = Date;
     obj.insertedAt = Date.now();
     obj.nonce = nonce;
@@ -36,8 +36,7 @@ const result1 = 10 * DurationsDefault.Millis.SECOND;
 const dependencyMap = {};
 const dependencyMap2 = {};
 const dependencyMap3 = {};
-let modalKey;
-let c12;
+let obj;
 const dependencyMap4 = {};
 const Store = initializeDefault.Store;
 class InteractionStore extends Store {
@@ -54,7 +53,7 @@ prototype["getInteraction"] = function getInteraction(message) {
   return tmp2;
 };
 prototype["getMessageInteractionStates"] = function getMessageInteractionStates() {
-  const obj = {};
+  obj = {};
   const entries = Object.entries(closure_8);
   while (tmp2 !== undefined) {
     let tmp5 = _slicedToArray(tmp3, 2);
@@ -84,11 +83,8 @@ prototype["canQueueInteraction"] = function canQueueInteraction(arg0, arg1) {
   }
   return !tmp2;
 };
-prototype["getIFrameModalApplicationId"] = function getIFrameModalApplicationId() {
-  return c12;
-};
-prototype["getIFrameModalKey"] = function getIFrameModalKey() {
-  return modalKey;
+prototype["getIFrameModal"] = function getIFrameModal() {
+  return obj;
 };
 prototype["getInteractionDebugContext"] = function getInteractionDebugContext(nonce) {
   if (null != nonce) {
@@ -98,7 +94,7 @@ prototype["getInteractionDebugContext"] = function getInteractionDebugContext(no
     } else {
       let tmp5;
       if (null != dependencyMap4[nonce]) {
-        const obj = { interaction: null, messageId: null };
+        obj = { interaction: null, messageId: null };
         ({ interaction: obj.interaction, messageId: obj.messageId } = tmp4);
         tmp5 = obj;
       }
@@ -107,12 +103,12 @@ prototype["getInteractionDebugContext"] = function getInteractionDebugContext(no
   }
 };
 InteractionStore.displayName = "InteractionStore";
-const interactionStore = new InteractionStore(DispatcherDefault, {
+obj = {
   LOGOUT: function handleInit() {
     closure_8 = {};
     closure_9 = {};
     closure_10 = {};
-    closure_13 = {};
+    closure_12 = {};
     const timerId = setInterval(() => {
       const timestamp = Date.now();
       const entries = Object.entries(dependencyMap4);
@@ -134,7 +130,7 @@ const interactionStore = new InteractionStore(DispatcherDefault, {
       closure_10[nonce] = messageId;
     }
     closure_8[nonce] = { state: interactions_InteractionTypes.InteractionState.QUEUED, data, onCreate, onCancel, onSuccess, onFailure };
-    const obj = { state: interactions_InteractionTypes.InteractionState.QUEUED, data, onCreate, onCancel, onSuccess, onFailure };
+    obj = { state: interactions_InteractionTypes.InteractionState.QUEUED, data, onCreate, onCancel, onSuccess, onFailure };
   },
   INTERACTION_CREATE: function handleInteractionCreate(nonce) {
     nonce = nonce.nonce;
@@ -167,7 +163,7 @@ const interactionStore = new InteractionStore(DispatcherDefault, {
             delete tmp[tmp3];
           }
           delete tmp[tmp2];
-          const obj = { insertedAt: null, nonce: null, messageId: null, interaction: null };
+          obj = { insertedAt: null, nonce: null, messageId: null, interaction: null };
           const _Date = Date;
           obj.insertedAt = Date.now();
           obj.nonce = nonce;
@@ -209,7 +205,7 @@ const interactionStore = new InteractionStore(DispatcherDefault, {
           delete tmp[tmp2];
         }
       } else {
-        const obj = {};
+        obj = {};
         const merged = Object.assign(tmp27);
         obj.state = interactions_InteractionTypes.InteractionState.FAILED;
         obj.errorCode = errorCode;
@@ -237,7 +233,7 @@ const interactionStore = new InteractionStore(DispatcherDefault, {
           delete tmp[tmp3];
         }
         delete tmp[tmp2];
-        const obj = { insertedAt: null, nonce: null, messageId: null, interaction: null };
+        obj = { insertedAt: null, nonce: null, messageId: null, interaction: null };
         const _Date = Date;
         obj.insertedAt = Date.now();
         obj.nonce = nonce;
@@ -266,9 +262,9 @@ const interactionStore = new InteractionStore(DispatcherDefault, {
       }
     }
   },
-  INTERACTION_IFRAME_MODAL_CREATE: function handleIFrameModalCreate(nonce) {
-    nonce = nonce.nonce;
-    const id = nonce.application.id;
+  INTERACTION_IFRAME_MODAL_CREATE: function handleIFrameModalCreate(applicationId) {
+    const nonce = applicationId.nonce;
+    obj = { applicationId: applicationId.application.id, interactionId: applicationId.id, customId: applicationId.customId, channelId: applicationId.channelId, modalKey: "gap" };
     if (null != nonce) {
       if (null != dependencyMap[nonce]) {
         const onSuccess = tmp16.onSuccess;
@@ -281,7 +277,7 @@ const interactionStore = new InteractionStore(DispatcherDefault, {
             delete tmp[tmp3];
           }
           delete tmp[tmp2];
-          const obj = { insertedAt: null, nonce: null, messageId: null, interaction: null };
+          obj = { insertedAt: null, nonce: null, messageId: null, interaction: null };
           const _Date = Date;
           obj.insertedAt = Date.now();
           obj.nonce = nonce;
@@ -295,11 +291,17 @@ const interactionStore = new InteractionStore(DispatcherDefault, {
     }
   },
   INTERACTION_IFRAME_MODAL_CLOSE: function handleIFrameModalClose() {
-    modalKey = undefined;
-    c12 = undefined;
+
   },
-  INTERACTION_IFRAME_MODAL_KEY_CREATE: function handleIFrameModalKeyCreate(modalKey) {
-    modalKey = modalKey.modalKey;
+  INTERACTION_IFRAME_MODAL_KEY_CREATE: function handleIFrameModalKeyCreate(arg0) {
+    if (null != obj) {
+      if (obj.interactionId === tmp) {
+        obj = {};
+        const merged = Object.assign(obj);
+        obj.modalKey = tmp2;
+      }
+    }
+    return false;
   },
   INTERACTION_MODAL_CREATE: function handleInteractionModalCreate(nonce) {
     nonce = nonce.nonce;
@@ -315,7 +317,7 @@ const interactionStore = new InteractionStore(DispatcherDefault, {
             delete tmp[tmp3];
           }
           delete tmp[tmp2];
-          const obj = { insertedAt: null, nonce: null, messageId: null, interaction: null };
+          obj = { insertedAt: null, nonce: null, messageId: null, interaction: null };
           const _Date = Date;
           obj.insertedAt = Date.now();
           obj.nonce = nonce;
@@ -355,7 +357,7 @@ const interactionStore = new InteractionStore(DispatcherDefault, {
               delete tmp[tmp3];
             }
             delete tmp[tmp2];
-            const obj = { insertedAt: null, nonce: null, messageId: null, interaction: null };
+            obj = { insertedAt: null, nonce: null, messageId: null, interaction: null };
             const _Date = Date;
             obj.insertedAt = Date.now();
             obj.nonce = nonce;
@@ -377,7 +379,8 @@ const interactionStore = new InteractionStore(DispatcherDefault, {
       }
     }
   }
-});
+};
+const interactionStore = new InteractionStore(DispatcherDefault, obj);
 const size = fn(2);
 const result2 = size.fileFinishedImporting("modules/interactions/InteractionStore.tsx");
 

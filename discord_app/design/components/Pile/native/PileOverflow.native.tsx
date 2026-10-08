@@ -1,19 +1,19 @@
-// === Module 10753: PileOverflow ===
+// === Module 11618: PileOverflow ===
 
-// Module 10753 (PileOverflow)
+// Module 11618 (PileOverflow)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import NumberUtils from "NumberUtils" /* 1888 */;
-import Text_Text from "Text/Text" /* 4892 */;
+import NumberUtils from "NumberUtils" /* 1900 */;
+import Text_Text from "Text/Text" /* 5086 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2116 */;
+import LocaleStore from "LocaleStore" /* 2128 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsxs: closure_4, jsx: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, flexShrink: 0 } };
 let closure_6 = createStyles.createStyles(obj2);
 let items = [[64, "text-lg/semibold"], [48, "text-md/semibold"], [40, "text-md/semibold"], [30, "text-sm/semibold"], [24, "text-xs/semibold"], [16, "text-xxs/semibold"]];
@@ -23,7 +23,7 @@ let obj3 = { alignItems: "center", justifyContent: "center", backgroundColor: na
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/Pile/native/PileOverflow.native.tsx");
 
-export const PileOverflow = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const PileOverflow = ReactCompilerGating.isReactCompilerEnabled() ? (function PileOverflow(arg0) {
   const cResult = c.c(20);
   ({ size, borderRadius, value } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -115,7 +115,7 @@ export const PileOverflow = ReactCompilerGating.isReactCompilerEnabled() ? ((arg
   cResult[5] = obj4;
   tmp9 = obj4;
   const tmpResult = useStateFromStores;
-}) : ((size) => {
+}) : (function PileOverflow(size) {
   size = size.size;
   ({ borderRadius, value } = size);
   const items = [LocaleStore];

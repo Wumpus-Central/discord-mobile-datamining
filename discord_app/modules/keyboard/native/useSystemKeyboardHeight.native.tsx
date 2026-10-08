@@ -1,16 +1,16 @@
-// === Module 1884: useSystemKeyboardHeight ===
+// === Module 1896: useSystemKeyboardHeight ===
 
-// Module 1884 (useSystemKeyboardHeight)
+// Module 1896 (useSystemKeyboardHeight)
 import c from "c" /* 576 */;
-import AppEntryKeyContext from "AppEntryKeyContext" /* 1487 */;
-import KeyboardUIStoreDefault from "KeyboardUIStore" /* 1488 */;
+import AppEntryKeyContext from "AppEntryKeyContext" /* 1499 */;
+import KeyboardUIStoreDefault from "KeyboardUIStore" /* 1500 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 let closure_3 = { excludeSafeAreaInsets: false };
 const result = size.fileFinishedImporting("modules/keyboard/native/useSystemKeyboardHeight.native.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSystemKeyboardHeight(arg0) {
   let tmp = arg0;
   const cResult = c.c(3);
   if (undefined === arg0) {
@@ -33,7 +33,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = fn;
   tmp7 = fn;
   const tmp2Result = AppEntryKeyContext;
-}) : (() => {
+}) : (function useSystemKeyboardHeight() {
   let tmp = arg0;
   if (arg0 === undefined) {
     tmp = closure_3;

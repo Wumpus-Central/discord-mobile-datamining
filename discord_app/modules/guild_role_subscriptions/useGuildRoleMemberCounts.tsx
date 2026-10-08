@@ -1,9 +1,9 @@
-// === Module 6629: useGuildRoleMemberCounts ===
+// === Module 6806: useGuildRoleMemberCounts ===
 
-// Module 6629 (useGuildRoleMemberCounts)
-import GuildRoleMemberActionCreatorsAll from "GuildRoleMemberActionCreators" /* 6631 */;
+// Module 6806 (useGuildRoleMemberCounts)
+import GuildRoleMemberActionCreatorsAll from "GuildRoleMemberActionCreators" /* 6808 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 6630 */;
+import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 6807 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useGuildRoleMemberCounts.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildRoleMemberCounts(arg0, arg1) {
   _require = arg0;
   const cResult = require("c").c(7);
   let num = 0;
@@ -68,7 +68,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   tmp10 = items1;
   tmp9 = fn2;
   let obj = require("c");
-}) : ((arg0) => {
+}) : (function useGuildRoleMemberCounts(arg0) {
   _require = arg0;
   let num = arg1;
   if (arg1 === undefined) {

@@ -1,8 +1,8 @@
-// === Module 10100: EmojiPicker ===
+// === Module 9684: EmojiPicker ===
 
-// Module 10100 (EmojiPicker)
+// Module 9684 (EmojiPicker)
 import nativeDefault from "native" /* 587 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -10,10 +10,10 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const Constants = fn(1085);
 ({ AnalyticEvents: hasOwnProperty, ChatInputComponentViewedTypes: metroRequire, VerticalGradient: closure_7 } = Constants);
-const EmojiIntention = fn(1380).EmojiIntention;
+const EmojiIntention = fn(1392).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { container: { flex: 1 }, list: { overflow: "hidden", flex: 1 }, header: { flexDirection: "row", paddingTop: nativeDefault.space.PX_8, paddingBottom: 1, gap: nativeDefault.space.PX_12 }, headerGradientColor: null, headerGradient: null };
 let obj3 = { flexDirection: "row", paddingTop: nativeDefault.space.PX_8, paddingBottom: 1, gap: nativeDefault.space.PX_12 };
 obj.headerGradientColor = { color: nativeDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT };
@@ -29,7 +29,7 @@ let obj4 = { color: nativeDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEF
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/emoji_picker/native/components/EmojiPicker.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiPicker(arg0) {
   const cResult = channel(handleTextChange[9]).c(60);
   ({ bottomSheetRef, bottomSheetIndex, channel } = arg0);
   ({ onPressEmoji, onBackspace, inPortalKeyboard, suggestedEmojis } = arg0);
@@ -230,7 +230,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   tmp6 = items;
   tmp5 = fn;
   const obj = channel(handleTextChange[9]);
-}) : ((inPortalKeyboard) => {
+}) : (function EmojiPicker(inPortalKeyboard) {
   ({ bottomSheetIndex, channel } = inPortalKeyboard);
   inPortalKeyboard = inPortalKeyboard.inPortalKeyboard;
   let handleTextChange;

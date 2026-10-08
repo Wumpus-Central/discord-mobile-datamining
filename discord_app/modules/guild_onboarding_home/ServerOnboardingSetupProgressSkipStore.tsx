@@ -1,6 +1,6 @@
-// === Module 16232: ServerOnboardingSetupProgressSkipStore ===
+// === Module 16492: ServerOnboardingSetupProgressSkipStore ===
 
-// Module 16232 (ServerOnboardingSetupProgressSkipStore)
+// Module 16492 (ServerOnboardingSetupProgressSkipStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 
@@ -43,7 +43,7 @@ export default serverOnboardingSetupProgressSkipStore;
 export const skipServerOnboardingSetupProgress = function skipServerOnboardingSetupProgress(guildId) {
   DispatcherDefault.dispatch({ type: "SERVER_ONBOARDING_SETUP_PROGRESS_SKIP", guildId });
 };
-export const useIsServerOnboardingSetupProgressSkipped = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useIsServerOnboardingSetupProgressSkipped = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsServerOnboardingSetupProgressSkipped(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -69,7 +69,7 @@ export const useIsServerOnboardingSetupProgressSkipped = ReactCompilerGating.isR
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp6, tmp7);
-}) : ((arg0) => {
+}) : (function useIsServerOnboardingSetupProgressSkipped(arg0) {
   _require = arg0;
   const items = [serverOnboardingSetupProgressSkipStore];
   const items1 = [arg0];

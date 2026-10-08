@@ -1,7 +1,7 @@
-// === Module 15331: CallKitMetricCollectionExperiment ===
+// === Module 15593: CallKitMetricCollectionExperiment ===
 
-// Module 15331 (CallKitMetricCollectionExperiment)
-import ApexExperiment from "ApexExperiment" /* 1440 */;
+// Module 15593 (CallKitMetricCollectionExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-02-callkit-metric-collection", kind: "user", defaultConfig: { enabled: true }, variations: null };

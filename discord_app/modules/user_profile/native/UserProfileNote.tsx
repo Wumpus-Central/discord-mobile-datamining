@@ -1,8 +1,8 @@
-// === Module 12891: UserProfileNote ===
+// === Module 13040: UserProfileNote ===
 
-// Module 12891 (UserProfileNote)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import openEditNoteModalDefault from "openEditNoteModal" /* 12894 */;
+// Module 13040 (UserProfileNote)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import openEditNoteModalDefault from "openEditNoteModal" /* 13043 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileNote.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileNote(userId) {
   const cResult = userId(trackUserProfileAction[3]).c(15);
   userId = userId.userId;
   const onBack = userId.onBack;
@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
       }
     }
   }
-  const fn = function o() {
+  function handlePress() {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     openEditNoteModalDefault({
       userId,
@@ -96,14 +96,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
         return trackUserProfileAction({ action: "SET_NOTE" });
       }
     });
-  };
+  }
   cResult[0] = onBack;
   cResult[1] = trackUserProfileAction;
   cResult[2] = userId;
-  cResult[3] = fn;
-  tmp5 = fn;
+  cResult[3] = handlePress;
+  tmp5 = handlePress;
   const obj2 = userId(trackUserProfileAction[4]);
-}) : ((userId) => {
+}) : (function UserProfileNote(userId) {
   userId = userId.userId;
   const onBack = userId.onBack;
   let trackUserProfileAction;
@@ -132,7 +132,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
     stringResult = string(t["1ZZtts"]);
   }
   obj2.accessibilityHint = stringResult;
-  obj2.onPress = function onPress() {
+  obj2.onPress = function handlePress() {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     openEditNoteModalDefault({
       userId,

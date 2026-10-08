@@ -1,18 +1,18 @@
-// === Module 16490: ContentInventoryEntryContainer ===
+// === Module 16750: ContentInventoryEntryContainer ===
 
-// Module 16490 (ContentInventoryEntryContainer)
+// Module 16750 (ContentInventoryEntryContainer)
 import nativeDefault from "native" /* 587 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7861 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8039 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8279 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8447 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createICYMIStyles = fn(16434);
+const createICYMIStyles = fn(16694);
 const iCYMIStyles = createICYMIStyles.createICYMIStyles((marginBottom, arg1) => {
   let num = 0;
   if (!arg1) {
@@ -48,7 +48,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/icymi/native/content_inventory/ContentInventoryEntryContainer.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((contentId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContentInventoryEntryContainer(contentId) {
   const cResult = contentId(type[8]).c(39);
   contentId = contentId.contentId;
   const userId = contentId.userId;
@@ -210,7 +210,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((contentId) => {
       }
     }
   }
-  const fn = function o() {
+  const fn = function s() {
     if (null != onPress) {
       ICYMIActionCreatorsDefault.itemInteracted(contentId, type, "press");
       const obj3 = { itemId: contentId, itemType: type, actionParameters: { actionGestureType: "press", actionTargetElement: "item_container", actionIntentType: "open", actionDestinationType: null } };
@@ -231,7 +231,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((contentId) => {
   cResult[4] = fn;
   tmp7 = fn;
   let obj = contentId(type[8]);
-}) : ((contentId) => {
+}) : (function ContentInventoryEntryContainer(contentId) {
   contentId = contentId.contentId;
   const userId = contentId.userId;
   let flag = contentId.renderForScreenshot;

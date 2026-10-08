@@ -1,21 +1,21 @@
-// === Module 16202: VoiceChannel ===
+// === Module 16462: VoiceChannel ===
 
-// Module 16202 (VoiceChannel)
+// Module 16462 (VoiceChannel)
 import nativeDefault from "native" /* 587 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ChannelUtils from "ChannelUtils" /* 5041 */;
-import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9295 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10664 */;
-import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 11687 */;
-import VoiceUsersDefault from "VoiceUsers" /* 16083 */;
-import VoiceUserSummaryDefault from "VoiceUserSummary" /* 16092 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import ChannelUtils from "ChannelUtils" /* 5410 */;
+import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 8626 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10264 */;
+import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 11752 */;
+import VoiceUsersDefault from "VoiceUsers" /* 16343 */;
+import VoiceUserSummaryDefault from "VoiceUserSummary" /* 16352 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7051 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
-import ReadStateStore from "ReadStateStore" /* 4911 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5077 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4920 */;
+import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7238 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
+import ReadStateStore from "ReadStateStore" /* 6040 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5971 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5114 */;
 
 require = fn;
 function handleVoiceChannelPress() {
@@ -51,8 +51,8 @@ let closure_18 = async function _handleVoiceChannelPress(arg0) {
   })();
 };
 const View = fn(17).View;
-const NO_VOICE_STATES = fn(4920).NO_VOICE_STATES;
-const RedesignChannelListConstants = fn(11711);
+const NO_VOICE_STATES = fn(5114).NO_VOICE_STATES;
+const RedesignChannelListConstants = fn(11776);
 ({ CHANNEL_SUBTITLE_TEXT_VARIANT: closure_12, CHANNEL_MARGIN_VERTICAL } = RedesignChannelListConstants);
 const Constants = fn(1085);
 ({ AnalyticEvents: map1, Permissions: closure_14 } = Constants);
@@ -61,7 +61,7 @@ let obj = { channelInfo: { flexDirection: "row", alignItems: "center", gap: nati
 let obj2 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, maxHeight: 1 };
 obj.container = { marginVertical: CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
 let ReactCompilerGating = fn(558);
-let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceChannel(channel) {
   obj = channel(embeddedActivitiesCount[17]);
   const cResult = obj.c(52);
   channel = channel.channel;
@@ -359,7 +359,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((chan
   cResult[8] = result;
   tmp19 = result;
   const tmpResult8 = channel(embeddedActivitiesCount[24]);
-}) : ((channel) => {
+}) : (function VoiceChannel(channel) {
   channel = channel.channel;
   ({ selected, collapsed, subtitle, embeddedActivitiesCount: importDefault } = channel);
   let ensureSyncedChannelVoiceStates;
@@ -518,7 +518,7 @@ let obj3 = { marginVertical: CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borde
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/channel_list_v2/native/items/VoiceChannel.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectedVoiceChannel(channel) {
   const cResult = channel(576).c(16);
   channel = channel.channel;
   ({ selected, subtitle } = channel);
@@ -607,7 +607,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
   cResult[15] = tmp16;
   tmp15 = tmp16;
   const tmpResult2 = channel(504);
-}) : ((channel) => {
+}) : (function ConnectedVoiceChannel(channel) {
   channel = channel.channel;
   ({ selected, subtitle } = channel);
   const items = [SortedVoiceStateStore];

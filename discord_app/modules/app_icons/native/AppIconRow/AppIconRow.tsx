@@ -1,15 +1,15 @@
-// === Module 15368: AppIconRow ===
+// === Module 15630: AppIconRow ===
 
-// Module 15368 (AppIconRow)
+// Module 15630 (AppIconRow)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4600 */;
-import TableRow from "TableRow" /* 6000 */;
-import FormRadio from "FormRadio" /* 6082 */;
-import AppIconTypes from "AppIconTypes" /* 8859 */;
-import AppIconDefault from "AppIcon" /* 15365 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4792 */;
+import TableRow from "TableRow" /* 6184 */;
+import FormRadio from "FormRadio" /* 6268 */;
+import AppIconTypes from "AppIconTypes" /* 9402 */;
+import AppIconDefault from "AppIcon" /* 15627 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -39,7 +39,7 @@ const items = [
     return intl.string(util.t.RnMLvl);
   }
 ];
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { icon: { borderRadius: nativeDefault.radii.md } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -47,7 +47,7 @@ let obj3 = { borderRadius: nativeDefault.radii.md };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_icons/native/AppIconRow/AppIconRow.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onLongPress) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppIconRow(onLongPress) {
   const cResult = c.c(26);
   ({ icon, onSelect } = onLongPress);
   onLongPress = onLongPress.onLongPress;
@@ -192,7 +192,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onLongPress) => 
   cResult[0] = icon.name;
   cResult[1] = id;
   cResult[2] = name;
-}) : ((arg0) => {
+}) : (function AppIconRow(arg0) {
   ({ icon, onSelect: require, onLongPress: importDefault } = arg0);
   ({ hasNitro, currentAppIcon, showEasterEgg } = arg0);
   const id = icon.id;

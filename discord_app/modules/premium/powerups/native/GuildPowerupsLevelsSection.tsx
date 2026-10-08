@@ -1,10 +1,10 @@
-// === Module 12237: GuildPowerupsLevelsSection ===
+// === Module 12316: GuildPowerupsLevelsSection ===
 
-// Module 12237 (GuildPowerupsLevelsSection)
+// Module 12316 (GuildPowerupsLevelsSection)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import GuildPowerupsLevelCardDefault from "GuildPowerupsLevelCard" /* 12238 */;
-import MarketingCardsScroller from "MarketingCardsScroller" /* 12242 */;
+import GuildPowerupsLevelCardDefault from "GuildPowerupsLevelCard" /* 12317 */;
+import MarketingCardsScroller from "MarketingCardsScroller" /* 12321 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,12 +14,12 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const PlatformUtils = fn(1370);
+const PlatformUtils = fn(1382);
 let num = 325;
 if (PlatformUtils.isIOS()) {
   num = 300;
 }
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 const obj3 = { cardContainer: { width: 250, marginEnd: PX_16, flex: 1 }, scroller: { height: num, paddingBottom: nativeDefault.space.PX_8 }, scrollerContent: null };
 const obj4 = { height: num, paddingBottom: nativeDefault.space.PX_8 };
 obj3.scrollerContent = { paddingHorizontal: nativeDefault.space.PX_16 };
@@ -29,7 +29,7 @@ const obj5 = { paddingHorizontal: nativeDefault.space.PX_16 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsLevelsSection.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPowerupsLevelsSection(guildId) {
   const cResult = guildId(arr2[7]).c(15);
   guildId = guildId.guildId;
   const listings = guildId.listings;
@@ -102,9 +102,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       }
       const obj2 = { title: null, description: null };
       const intl = tmp(arr2[9]).intl;
-      obj2.title = intl.string(require("module_2553")["TXY/b0"]);
+      obj2.title = intl.string(require("module_2597")["TXY/b0"]);
       const intl2 = tmp(arr2[9]).intl;
-      obj2.description = intl2.string(require("module_2553").aJv4PB);
+      obj2.description = intl2.string(require("module_2597").aJv4PB);
       const tmp17 = closure_5(require("GuildPowerupsSectionHeader"), obj2);
       cResult[5] = tmp17;
       const tmp16 = require("GuildPowerupsSectionHeader");
@@ -132,7 +132,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     cResult[9] = mapped1;
   }
   let obj = guildId(arr2[7]);
-}) : ((arg0) => {
+}) : (function GuildPowerupsLevelsSection(arg0) {
   ({ guildId: require, listings } = arg0);
   let memo;
   const tmp = closure_9();
@@ -149,11 +149,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   }, []);
   const obj2 = { title: null, description: null };
   const intl = util.intl;
-  obj2.title = intl.string(listings(2553)["TXY/b0"]);
+  obj2.title = intl.string(listings(2597)["TXY/b0"]);
   const intl2 = util.intl;
-  obj2.description = intl2.string(listings(2553).aJv4PB);
-  const items1 = [closure_5(listings(12226), obj2), ];
-  const tmp3 = listings(12226);
+  obj2.description = intl2.string(listings(2597).aJv4PB);
+  const items1 = [closure_5(listings(12305), obj2), ];
+  const tmp3 = listings(12305);
   items1[1] = closure_5(MarketingCardsScroller.MarketingCardsScroller, {
     cardMarginRight: PX_16,
     cardWidth: 250,

@@ -1,33 +1,33 @@
-// === Module 17206: ActivityPanelHeader ===
+// === Module 17487: ActivityPanelHeader ===
 
-// Module 17206 (ActivityPanelHeader)
+// Module 17487 (ActivityPanelHeader)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 6670 */;
-import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 17197 */;
-import BlurVisualEffectViewDefault from "BlurVisualEffectView" /* 17207 */;
-import InviteActivityButtonDefault from "InviteActivityButton" /* 17208 */;
-import MinimizeActivityButtonDefault from "MinimizeActivityButton" /* 17212 */;
-import QuestActivityButtonDefault from "QuestActivityButton" /* 17213 */;
-import LeaveActivityButtonDefault from "LeaveActivityButton" /* 17218 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 6847 */;
+import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 17478 */;
+import BlurVisualEffectViewDefault from "BlurVisualEffectView" /* 17488 */;
+import InviteActivityButtonDefault from "InviteActivityButton" /* 17489 */;
+import MinimizeActivityButtonDefault from "MinimizeActivityButton" /* 17493 */;
+import QuestActivityButtonDefault from "QuestActivityButton" /* 17494 */;
+import LeaveActivityButtonDefault from "LeaveActivityButton" /* 17499 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2062 */;
 
-const native = GestureDetector(4595);
-const LegacyBaseButton = GestureDetector(6147);
+const native = GestureDetector(4787);
+const LegacyBaseButton = GestureDetector(6326);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const ActivityPanelConstants = fn(9001);
+const ActivityPanelConstants = fn(6072);
 ({ ACTIVITY_PANEL_PORTRAIT_HEADER_HEIGHT: closure_8, LANDSCAPE_IFRAME_HORIZONTAL_MARGIN: closure_9, ActivityPanelModes: c10 } = ActivityPanelConstants);
 const ThemeTypes = fn(1096).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-let createStyles = fn(4896);
+let createStyles = fn(5090);
 let obj = { panelHeader: null, panelLandscape: null, headerContainer: null, pullIndicator: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -44,7 +44,7 @@ let closure_14 = createStyles.createStyles(obj);
 const __initData = { code: "function ActivityPanelHeaderTsx1(){const{runOnJS,setMode,ActivityPanelModes}=this.__closure;runOnJS(setMode)(ActivityPanelModes.PIP);}" };
 const __initData2 = { code: "function ActivityPanelHeaderTsx2(){const{runOnJS,setMode,ActivityPanelModes}=this.__closure;runOnJS(setMode)(ActivityPanelModes.PIP);}" };
 let ReactCompilerGating = fn(558);
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBaseActivityPanelHeaderContent(arg0) {
   const cResult = setMode(576).c(24);
   ({ landscape, setMode } = arg0);
   ({ wrapperOffset, pipState } = arg0);
@@ -102,7 +102,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                   return;
                 }
               }
-              const obj3 = { runOnJS: setMode(4618).runOnJS, setMode, ActivityPanelModes };
+              const obj3 = { runOnJS: setMode(4810).runOnJS, setMode, ActivityPanelModes };
               T.__closure = obj3;
               T.__workletHash = 14504167937928;
               T.__initData = __initData;
@@ -126,7 +126,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                 }
               }
             }
-            const obj4 = { mode: setMode(17203).MorphablePanelModes.PANEL, panGestureEnabled: true, pipState, swipeRequiresPop: true, wrapperOffset, onPanMinimizeGestureEnd: T, disableHorizontalSafeAreas: true };
+            const obj4 = { mode: setMode(17484).MorphablePanelModes.PANEL, panGestureEnabled: true, pipState, swipeRequiresPop: true, wrapperOffset, onPanMinimizeGestureEnd: T, disableHorizontalSafeAreas: true };
             cResult[15] = T;
             cResult[16] = pipState;
             cResult[17] = wrapperOffset;
@@ -149,13 +149,13 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[8] = obj5;
   tmp9 = obj5;
   const obj = setMode(576);
-}) : ((landscape) => {
+}) : (function useBaseActivityPanelHeaderContent(landscape) {
   landscape = landscape.landscape;
   const setMode = landscape.setMode;
   ({ wrapperOffset, pipState } = landscape);
   const tmp = closure_14();
   dependencyMap = tmp;
-  const tmp2 = setMode(1618)();
+  const tmp2 = setMode(1630)();
   closure_3 = tmp2;
   let items = [landscape];
   const items1 = [landscape, tmp2, , ];
@@ -202,7 +202,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     items[2] = obj;
     return items;
   }, items1);
-  obj.runOnJS = landscape(4618).runOnJS;
+  obj.runOnJS = landscape(4810).runOnJS;
   obj.setMode = setMode;
   obj.ActivityPanelModes = ActivityPanelModes;
   fn.__closure = obj;
@@ -211,8 +211,8 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const items2 = [setMode];
   const obj2 = { gesture: null, headerWrapperStyles: null, headerStyles: null, styles: null };
   const callback = noop.useCallback(fn, items2);
-  const obj3 = { mode: landscape(17203).MorphablePanelModes.PANEL, panGestureEnabled: true, pipState, swipeRequiresPop: true, wrapperOffset, onPanMinimizeGestureEnd: callback, disableHorizontalSafeAreas: true };
-  obj2.gesture = setMode(17203)(obj3);
+  const obj3 = { mode: landscape(17484).MorphablePanelModes.PANEL, panGestureEnabled: true, pipState, swipeRequiresPop: true, wrapperOffset, onPanMinimizeGestureEnd: callback, disableHorizontalSafeAreas: true };
+  obj2.gesture = setMode(17484)(obj3);
   obj2.headerWrapperStyles = memo;
   obj2.headerStyles = memo1;
   obj2.styles = tmp;
@@ -220,7 +220,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 });
 let closure_17 = tmp6;
 ReactCompilerGating = fn(558);
-let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((hasConnectedActivity) => {
+let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function BaseActivityPanelContent(hasConnectedActivity) {
   let GestureDetector = require;
   let tmp = dependencyMap;
   const cResult = c.c(14);
@@ -290,7 +290,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((hasConnectedActivity
     cResult[3] = tmp10;
     tmp9 = tmp10;
   }
-}) : ((landscape) => {
+}) : (function BaseActivityPanelContent(landscape) {
   landscape = landscape.landscape;
   ({ children, hasConnectedActivity, gesture, headerWrapperStyles, headerStyles } = landscape);
   let tmp3Result2 = null;
@@ -315,11 +315,11 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((hasConnectedActivity
   return tmp3Result2;
 });
 let closure_18 = tmp7;
-createStyles = fn(4896);
+createStyles = fn(5090);
 let obj4 = { buttonContainer: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, flexShrink: 1 }, buttonContainerLandscape: { flexDirection: "column-reverse" } };
 const styles = createStyles.createStyles(obj4);
 ReactCompilerGating = fn(558);
-let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ActivityPanelHeaderContentInner(arg0) {
   const cResult = c.c(37);
   ({ landscape, setMode, pipState, wrapperOffset } = arg0);
   if (cResult[0] === landscape) {
@@ -332,7 +332,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [EmbeddedActivitiesStore];
-          const fn = function y() {
+          const fn = function f() {
             return EmbeddedActivitiesStore.getSelfEmbeddedActivityForLocation(EmbeddedActivitiesStore.getConnectedActivityLocation());
           };
           const items1 = [];
@@ -502,7 +502,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
   cResult[3] = wrapperOffset;
   cResult[4] = obj8;
   tmp4 = obj8;
-}) : ((wrapperOffset) => {
+}) : (function ActivityPanelHeaderContentInner(wrapperOffset) {
   ({ landscape, setMode } = wrapperOffset);
   ({ gesture, headerWrapperStyles, headerStyles } = closure_17({ landscape, setMode, wrapperOffset: wrapperOffset.wrapperOffset, pipState: wrapperOffset.pipState }));
   const obj = { landscape, setMode, wrapperOffset: wrapperOffset.wrapperOffset, pipState: wrapperOffset.pipState };
@@ -563,7 +563,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
   return __initData2(closure_18, obj3);
 }));
 ReactCompilerGating = fn(558);
-let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
+let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBaseActivityPanelHeader(context) {
   const cResult = c.c(14);
   const tmp2 = closure_14();
   context = noop.useContext(context.context);
@@ -625,7 +625,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
   cResult[3] = str2;
   cResult[4] = size;
   tmp5 = size;
-}) : ((context) => {
+}) : (function useBaseActivityPanelHeader(context) {
   let tmp = closure_14();
   const headerContainer = tmp;
   context = noop.useContext(context.context);
@@ -656,7 +656,7 @@ let obj5 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.spac
 size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/panel/native/ActivityPanelHeader.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ActivityPanelHeader() {
   const cResult = c.c(9);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { context: ActivityPanelStateContextDefault };
@@ -696,7 +696,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   tmp6 = tmp7;
   const obj4 = { landscape: wrapperDimensions.isWindowLandscape, setMode, wrapperOffset, pipState };
   const tmp5 = closure_21(first);
-}) : (() => {
+}) : (function ActivityPanelHeader() {
   const tmp = closure_21({ context: ActivityPanelStateContextDefault });
   const obj2 = { style: tmp.headerStyles, children: __initData(closure_20, { landscape: tmp.wrapperDimensions.isWindowLandscape, setMode: tmp.setMode, wrapperOffset: tmp.wrapperOffset, pipState: tmp.pipState }) };
   return __initData(hasOwnProperty, obj2);

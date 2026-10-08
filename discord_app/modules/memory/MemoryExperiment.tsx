@@ -1,7 +1,7 @@
-// === Module 14184: MemoryExperiment ===
+// === Module 14483: MemoryExperiment ===
 
-// Module 14184 (MemoryExperiment)
-import ApexExperiment from "ApexExperiment" /* 1440 */;
+// Module 14483 (MemoryExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2025-12-shadow-node-spike", kind: "user", defaultConfig: { enabled: false }, variations: null };

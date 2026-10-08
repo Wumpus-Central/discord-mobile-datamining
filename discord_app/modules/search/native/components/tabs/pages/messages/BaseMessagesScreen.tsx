@@ -1,22 +1,22 @@
-// === Module 16906: BaseMessagesScreen ===
+// === Module 17187: BaseMessagesScreen ===
 
-// Module 16906 (BaseMessagesScreen)
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 11980 */;
-import SearchUtils from "SearchUtils" /* 11987 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12001 */;
-import SearchHistoricalIndexingHeaderDefault from "SearchHistoricalIndexingHeader" /* 16908 */;
+// Module 17187 (BaseMessagesScreen)
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12053 */;
+import SearchUtils from "SearchUtils" /* 12060 */;
+import tracking_TrackingDefault from "tracking/Tracking" /* 12074 */;
+import SearchHistoricalIndexingHeaderDefault from "SearchHistoricalIndexingHeader" /* 17189 */;
 import noop from "module_19" /* 19 */;
-import SearchMessageStore from "SearchMessageStore" /* 6794 */;
-import SearchQueryStore from "SearchQueryStore" /* 11994 */;
+import SearchMessageStore from "SearchMessageStore" /* 6067 */;
+import SearchQueryStore from "SearchQueryStore" /* 12067 */;
 
 require = fn;
-const constants = fn(7523).SearchResultContentEntityTypes;
+const constants = fn(9246).SearchResultContentEntityTypes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/messages/BaseMessagesScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((tab) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function BaseMessagesScreen(tab) {
   const cResult = searchContext(isFocused[7]).c(44);
   ({ data, searchContext } = tab);
   tab = tab.tab;
@@ -348,7 +348,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((tab) => {
   cResult[3] = fn;
   tmp8 = fn;
   let obj = searchContext(isFocused[7]);
-}) : ((tab) => {
+}) : (function BaseMessagesScreen(tab) {
   ({ data, searchContext } = tab);
   tab = tab.tab;
   const isFocused = tab.isFocused;
@@ -461,5 +461,5 @@ export const trackMessageItemPress = function trackMessageItemPress(messageId) {
   obj2.userId = id;
   obj2.index = index;
   obj2.entityType = constants.MESSAGE;
-  const result = search_tracking_TrackingDefault.trackSearchResultClicked(obj2);
+  const result = tracking_TrackingDefault.trackSearchResultClicked(obj2);
 };

@@ -1,33 +1,33 @@
-// === Module 9929: EmojiPickerPremiumSearchUpsell ===
+// === Module 9450: EmojiPickerPremiumSearchUpsell ===
 
-// Module 9929 (EmojiPickerPremiumSearchUpsell)
+// Module 9450 (EmojiPickerPremiumSearchUpsell)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4534 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import MobileEmojiPickerUpsellRestyleExperiment from "MobileEmojiPickerUpsellRestyleExperiment" /* 7498 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 8896 */;
-import openPremiumModalDefault from "openPremiumModal" /* 8943 */;
-import _modDef9930 from "module_9930" /* 9930 */;
-import PremiumExpressionPickerSearchUpsellDefault from "PremiumExpressionPickerSearchUpsell" /* 9931 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4726 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import MobileEmojiPickerUpsellRestyleExperiment from "MobileEmojiPickerUpsellRestyleExperiment" /* 9220 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9328 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9329 */;
+import _modDef9452 from "module_9452" /* 9452 */;
+import PremiumExpressionPickerSearchUpsellDefault from "PremiumExpressionPickerSearchUpsell" /* 9453 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const util = NitroWheelIcon(1126);
-const native = NitroWheelIcon(1188);
-const PremiumUtils = NitroWheelIcon(4534);
-const NitroWheelIcon2 = NitroWheelIcon(8346);
+const native = NitroWheelIcon(1200);
+const PremiumUtils = NitroWheelIcon(4726);
+const NitroWheelIcon2 = NitroWheelIcon(9005);
 require = fn;
 const Constants = fn(1085);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsPages: metroRequire, AnalyticsSections: closure_7 } = Constants);
-const PremiumConstants = fn(1379);
+const PremiumConstants = fn(1391);
 ({ PremiumSubscriptionSKUs: closure_8, PremiumUpsellTypes: closure_9, SubscriptionPlans: c10 } = PremiumConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_12 = createStyles.createStyles({ nitroIcon: { marginRight: 8, alignSelf: "center" } });
 let ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEmojiPickerPremiumSearchUpsellViewed(guildId) {
   const cResult = guildId(useTier0UpsellContent[7]).c(5);
   guildId = guildId.guildId;
   const analyticsLocations = guildId.analyticsLocations;
@@ -42,7 +42,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       const effect = ref.useEffect(tmp3, tmp4);
     }
   }
-  const fn = function l() {
+  const fn = function t() {
     if (!ref.current) {
       tmp.current = true;
       let obj2 = { type: constants4.EMOJI_PICKER_SEARCH, location: null, location_stack: null, sku_id: null };
@@ -66,7 +66,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   cResult[4] = items;
   tmp4 = items;
   tmp3 = fn;
-}) : ((guildId) => {
+}) : (function useEmojiPickerPremiumSearchUpsellViewed(guildId) {
   guildId = guildId.guildId;
   const analyticsLocations = guildId.analyticsLocations;
   const useTier0UpsellContent = guildId.useTier0UpsellContent;
@@ -92,7 +92,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
 });
 let closure_13 = tmp4;
 ReactCompilerGating = fn(558);
-const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((analyticsLocations) => {
+const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEmojiPickerPremiumSearchUpsellClick(analyticsLocations) {
   const cResult = analyticsLocations(mobileEmojiPickerUpsellRestyleEnabled[7]).c(9);
   analyticsLocations = analyticsLocations.analyticsLocations;
   const useTier0UpsellContent = analyticsLocations.useTier0UpsellContent;
@@ -129,7 +129,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((analyticsLocations
       }
     }
   }
-  class I {
+  class P {
     constructor() {
       currentUser = closure_4.getCurrentUser();
       result = null == currentUser;
@@ -167,9 +167,9 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((analyticsLocations
   cResult[2] = onPress;
   cResult[3] = mobileEmojiPickerUpsellRestyleEnabled;
   cResult[4] = useTier0UpsellContent;
-  cResult[5] = I;
-  tmp8 = I;
-}) : ((analyticsLocations) => {
+  cResult[5] = P;
+  tmp8 = P;
+}) : (function useEmojiPickerPremiumSearchUpsellClick(analyticsLocations) {
   analyticsLocations = analyticsLocations.analyticsLocations;
   const useTier0UpsellContent = analyticsLocations.useTier0UpsellContent;
   let mobileEmojiPickerUpsellRestyleEnabled;
@@ -207,7 +207,7 @@ let result = size.fileFinishedImporting("modules/emoji_picker/native/components/
 
 export const useEmojiPickerPremiumSearchUpsellViewed = tmp4;
 export const useEmojiPickerPremiumSearchUpsellClick = tmp5;
-export const PremiumSearchUpsell = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((useTier0UpsellContent) => {
+export const PremiumSearchUpsell = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiPickerListPremiumSearchUpsell(useTier0UpsellContent) {
   let NitroWheelIcon = require;
   const cResult = c.c(13);
   let nitroIcon = closure_12();
@@ -218,7 +218,7 @@ export const PremiumSearchUpsell = noop.memo(ReactCompilerGating.isReactCompiler
   if (cResult[0] !== useTier0UpsellContent.useTier0UpsellContent) {
     const intl = util.intl;
     if (useTier0UpsellContent.useTier0UpsellContent) {
-      const obj3 = { planName: PremiumUtils.getTierDisplayNameByPlanId(v65535.PREMIUM_MONTH_TIER_0) };
+      const obj3 = { planName: PremiumUtils.getTierDisplayNameByPlanId(collapsed.PREMIUM_MONTH_TIER_0) };
       let formatToPlainStringResult = intl.formatToPlainString(util.t.kWBwlJ, obj3);
       const NitroWheelIconResult = PremiumUtils;
     } else {
@@ -270,15 +270,15 @@ export const PremiumSearchUpsell = noop.memo(ReactCompilerGating.isReactCompiler
       const obj5 = { size: "sm", color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, style: nitroIcon.nitroIcon };
       let tmp15Result = <NitroWheelIcon size="sm" color={nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE} style={nitroIcon.nitroIcon} />;
     } else {
-      const obj6 = { style: nitroIcon.nitroIcon, source: _modDef9930, disableColor: true, size: native.Icon.Sizes.MEDIUM };
-      tmp15Result = jsx(native.Icon, { style: nitroIcon.nitroIcon, source: _modDef9930, disableColor: true, size: native.Icon.Sizes.MEDIUM });
+      const obj6 = { style: nitroIcon.nitroIcon, source: _modDef9452, disableColor: true, size: native.Icon.Sizes.MEDIUM };
+      tmp15Result = jsx(native.Icon, { style: nitroIcon.nitroIcon, source: _modDef9452, disableColor: true, size: native.Icon.Sizes.MEDIUM });
     }
     nitroIcon = nitroIcon.nitroIcon;
     cResult[4] = nitroIcon;
     cResult[5] = mobileEmojiPickerUpsellRestyleEnabled;
     cResult[6] = tmp15Result;
   }
-}) : ((useTier0UpsellContent) => {
+}) : (function EmojiPickerListPremiumSearchUpsell(useTier0UpsellContent) {
   const tmp = closure_12();
   ({ loading, onPress } = closure_14(useTier0UpsellContent));
   const tmp2 = closure_14(useTier0UpsellContent);
@@ -286,7 +286,7 @@ export const PremiumSearchUpsell = noop.memo(ReactCompilerGating.isReactCompiler
   closure_13(useTier0UpsellContent);
   const intl = util.intl;
   if (useTier0UpsellContent.useTier0UpsellContent) {
-    const obj2 = { planName: PremiumUtils.getTierDisplayNameByPlanId(v65535.PREMIUM_MONTH_TIER_0) };
+    const obj2 = { planName: PremiumUtils.getTierDisplayNameByPlanId(collapsed.PREMIUM_MONTH_TIER_0) };
     let formatToPlainStringResult = intl.formatToPlainString(util.t.kWBwlJ, obj2);
     const tmp3Result = PremiumUtils;
   } else {
@@ -306,8 +306,8 @@ export const PremiumSearchUpsell = noop.memo(ReactCompilerGating.isReactCompiler
     const obj4 = { size: "sm", color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, style: tmp.nitroIcon };
     let tmp7Result = jsx(NitroWheelIcon2.NitroWheelIcon, { size: "sm", color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, style: tmp.nitroIcon });
   } else {
-    const obj5 = { style: tmp.nitroIcon, source: _modDef9930, disableColor: true, size: native.Icon.Sizes.MEDIUM };
-    tmp7Result = jsx(native.Icon, { style: tmp.nitroIcon, source: _modDef9930, disableColor: true, size: native.Icon.Sizes.MEDIUM });
+    const obj5 = { style: tmp.nitroIcon, source: _modDef9452, disableColor: true, size: native.Icon.Sizes.MEDIUM };
+    tmp7Result = jsx(native.Icon, { style: tmp.nitroIcon, source: _modDef9452, disableColor: true, size: native.Icon.Sizes.MEDIUM });
   }
   obj3.icon = tmp7Result;
   obj3.loading = loading;

@@ -1,20 +1,20 @@
-// === Module 17341: useDrawerToggle ===
+// === Module 17622: useDrawerToggle ===
 
-// Module 17341 (useDrawerToggle)
-import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 17342 */;
+// Module 17622 (useDrawerToggle)
+import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 17623 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelControlsModes = fn(11914).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(11987).VoicePanelControlsModes;
 const __initData = { code: "function useDrawerToggleTsx1(){const{controlsSpecs,VoicePanelControlsModes}=this.__closure;return controlsSpecs.get().mode===VoicePanelControlsModes.DRAWER;}" };
 const __initData2 = { code: "function useDrawerToggleTsx2(){const{controlsSpecs,VoicePanelControlsModes}=this.__closure;return controlsSpecs.get().mode===VoicePanelControlsModes.DRAWER;}" };
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/useDrawerToggle.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useDrawerToggle(arg0) {
   _require = arg0;
   const cResult = require("c").c(12);
   const context = dismissPanel.useContext(controlsSpecs(connected[4]));
@@ -22,7 +22,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   connected = context.connected;
   dismissPanel = context.dismissPanel;
   let obj = require("c");
-  const fn = function c() {
+  const fn = function l() {
     return controlsSpecs.get().mode === VoicePanelControlsModes.DRAWER;
   };
   fn.__closure = { controlsSpecs, VoicePanelControlsModes };
@@ -70,7 +70,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
   }
-  const fn2 = function l() {
+  const fn2 = function c() {
     if (controlsSpecs.get().mode === VoicePanelControlsModes.DRAWER) {
       dismissPanel();
     } else {
@@ -86,13 +86,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = arg0;
   cResult[4] = fn2;
   tmp7 = fn2;
-}) : ((arg0) => {
+}) : (function useDrawerToggle(arg0) {
   _require = arg0;
   const context = dismissPanel.useContext(controlsSpecs(connected[4]));
   controlsSpecs = context.controlsSpecs;
   connected = context.connected;
   dismissPanel = context.dismissPanel;
-  const fn = function c() {
+  const fn = function l() {
     return controlsSpecs.get().mode === VoicePanelControlsModes.DRAWER;
   };
   fn.__closure = { controlsSpecs, VoicePanelControlsModes };

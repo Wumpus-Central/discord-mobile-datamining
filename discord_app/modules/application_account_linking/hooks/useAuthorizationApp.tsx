@@ -1,16 +1,16 @@
-// === Module 6669: useAuthorizationApp ===
+// === Module 6846: useAuthorizationApp ===
 
-// Module 6669 (useAuthorizationApp)
+// Module 6846 (useAuthorizationApp)
 import c from "c" /* 576 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6670 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6847 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5124 */;
-import ApplicationRecord from "ApplicationRecord" /* 2009 */;
+import ApplicationStore from "ApplicationStore" /* 5436 */;
+import ApplicationRecord from "ApplicationRecord" /* 2021 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ApplicationTypes = fn(1360).ApplicationTypes;
+const ApplicationTypes = fn(1372).ApplicationTypes;
 const ReactCompilerGating = fn(558);
 function getAuthorizationApp(type) {
   if (null == type) {
@@ -44,7 +44,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_account_linking/hooks/useAuthorizationApp.tsx");
 
 export { getAuthorizationApp };
-export const useAuthorizationApp = ReactCompilerGating.isReactCompilerEnabled() ? ((getOfficialApplicationId) => {
+export const useAuthorizationApp = ReactCompilerGating.isReactCompilerEnabled() ? (function useAuthorizationApp(getOfficialApplicationId) {
   const cResult = c.c(4);
   if (cResult[0] !== getOfficialApplicationId) {
     let officialApplicationId;
@@ -101,7 +101,7 @@ export const useAuthorizationApp = ReactCompilerGating.isReactCompilerEnabled() 
     }
   }
   return tmp9;
-}) : ((getOfficialApplicationId) => {
+}) : (function useAuthorizationApp(getOfficialApplicationId) {
   _require = getOfficialApplicationId;
   let officialApplicationId;
   if (null != getOfficialApplicationId) {

@@ -1,12 +1,12 @@
-// === Module 7631: enhanced_role_colors/EnhancedRoleColorUtils ===
+// === Module 7952: enhanced_role_colors/EnhancedRoleColorUtils ===
 
-// Module 7631 (enhanced_role_colors/EnhancedRoleColorUtils)
+// Module 7952 (enhanced_role_colors/EnhancedRoleColorUtils)
 import _modDef683 from "module_683" /* 683 */;
-import GlobalUtils from "GlobalUtils" /* 1375 */;
-import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 5800 */;
+import GlobalUtils from "GlobalUtils" /* 1387 */;
+import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 5404 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1193 */;
+import ThemeStore from "ThemeStore" /* 1205 */;
 
 const useHasEnhancedRoleColorsDefault = useHasEnhancedRoleColors;
 
@@ -103,7 +103,7 @@ export const useProcessColorStringsArray = function useProcessColorStringsArray(
 export const isNativeMessageEligibleForEnhancedRoleColors = function isNativeMessageEligibleForEnhancedRoleColors(guildId, id) {
   return useHasEnhancedRoleColors.getHasEnhancedRoleColors(guildId, id);
 };
-export const useIsRoleStyleAndRoleColorsEligibleForERC = (guildId, id, stateFromStores, processColorStringsArray) => {
+export const useIsRoleStyleAndRoleColorsEligibleForERC = function useIsRoleStyleAndRoleColorsEligibleForERC(guildId, id, stateFromStores, processColorStringsArray) {
   let tmp = useHasEnhancedRoleColorsDefault(guildId, id);
   if (tmp) {
     tmp = "username" === stateFromStores;

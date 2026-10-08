@@ -1,17 +1,17 @@
-// === Module 7868: useDisplayProfile ===
+// === Module 8286: useDisplayProfile ===
 
-// Module 7868 (useDisplayProfile)
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7869 */;
-import DisplayProfileDefault from "DisplayProfile" /* 7871 */;
+// Module 8286 (useDisplayProfile)
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8287 */;
+import DisplayProfileDefault from "DisplayProfile" /* 8289 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
-import UserProfileStore from "UserProfileStore" /* 7124 */;
+import UserStore from "UserStore" /* 1389 */;
+import UserProfileStore from "UserProfileStore" /* 7309 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 let ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDisplayProfile(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
   const cResult = require("c").c(4);
@@ -56,7 +56,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   tmp7 = fn;
   const obj = require("c");
   tmp = _require;
-}) : ((arg0, arg1) => {
+}) : (function useDisplayProfile(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
   let items = [UserStore, UserProfileStore];
@@ -107,13 +107,13 @@ function getDisplayProfile(id1, guildId) {
     return tmp8;
   }
 }
-const FunctionUtils = fn(2026);
+const FunctionUtils = fn(2038);
 let closure_7 = FunctionUtils.cachedFunction((arg0, arg1) => new DisplayProfileDefault(arg0, arg1));
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useDisplayProfile.tsx");
 
 export default tmp2;
-export const useDisplayProfileWithFetchEffect = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, guildId) => {
+export const useDisplayProfileWithFetchEffect = ReactCompilerGating.isReactCompilerEnabled() ? (function useDisplayProfileWithFetchEffect(arg0, guildId) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === guildId) {
@@ -124,7 +124,7 @@ export const useDisplayProfileWithFetchEffect = ReactCompilerGating.isReactCompi
     const effect = noop.useEffect(tmp2, tmp3);
     return closure_6(arg0, guildId);
   }
-  const fn = function o() {
+  const fn = function n() {
     maybeFetchUserProfileDefault(closure_0, undefined, { guildId });
   };
   const items = [guildId, arg0];
@@ -135,7 +135,7 @@ export const useDisplayProfileWithFetchEffect = ReactCompilerGating.isReactCompi
   tmp3 = items;
   tmp2 = fn;
   const obj = require("c");
-}) : ((arg0, guildId) => {
+}) : (function useDisplayProfileWithFetchEffect(arg0, guildId) {
   closure_0 = arg0;
   const items = [guildId, arg0];
   const effect = noop.useEffect(() => {

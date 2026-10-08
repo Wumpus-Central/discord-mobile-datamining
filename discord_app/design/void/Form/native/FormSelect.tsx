@@ -1,11 +1,11 @@
-// === Module 8933: FormSelect ===
+// === Module 8564: FormSelect ===
 
-// Module 8933 (FormSelect)
+// Module 8564 (FormSelect)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4600 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Pressables from "Pressables" /* 5916 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4792 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import Pressables from "Pressables" /* 6189 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 const Fonts = fn(1085).Fonts;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let createStyles = fn(4896);
+let createStyles = fn(5090);
 let obj2 = { button: { minWidth: 95, height: 36, margin: 4, borderRadius: 3, justifyContent: "center", alignItems: "center", paddingHorizontal: 10, borderWidth: StyleSheet.hairlineWidth, shadowColor: nativeDefault.colors.BLACK, shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.12, shadowRadius: 6, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, buttonSelected: null, label: null, labelSelected: null };
 let obj3 = { minWidth: 95, height: 36, margin: 4, borderRadius: 3, justifyContent: "center", alignItems: "center", paddingHorizontal: 10, borderWidth: StyleSheet.hairlineWidth, shadowColor: nativeDefault.colors.BLACK, shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.12, shadowRadius: 6, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.buttonSelected = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
@@ -27,7 +27,7 @@ const obj5 = { fontFamily: Fonts.PRIMARY_SEMIBOLD, fontSize: 14, color: nativeDe
 obj2.labelSelected = { color: nativeDefault.unsafe_rawColors.BRAND_100 };
 let closure_7 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((item) => {
+let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function OptionButton(item) {
   const cResult = c.c(20);
   item = item.item;
   ({ selected, onPress } = item);
@@ -119,7 +119,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((item) => {
   cResult[4] = fn;
   tmp7 = fn;
   const tmpResult = useA11yRolesNative;
-}) : ((item) => {
+}) : (function OptionButton(item) {
   item = item.item;
   ({ selected, onPress } = item);
   const tmp = closure_7();
@@ -149,7 +149,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((item) => {
   obj2.children = hasOwnProperty(Text_Text.Text, obj3);
   return hasOwnProperty(Pressables.PressableOpacity, obj2);
 });
-createStyles = fn(4896);
+createStyles = fn(5090);
 const obj9 = { row: { paddingVertical: 12, paddingHorizontal: 16 }, label: null, optionsWrapper: null, optionsContainer: null };
 const obj6 = { color: nativeDefault.unsafe_rawColors.BRAND_100 };
 obj9.label = { fontFamily: Fonts.PRIMARY_SEMIBOLD, fontSize: 13, color: nativeDefault.colors.TEXT_MUTED };
@@ -161,7 +161,7 @@ const obj10 = { fontFamily: Fonts.PRIMARY_SEMIBOLD, fontSize: 13, color: nativeD
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormSelect.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onChange) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormSelect(onChange) {
   const cResult = require("c").c(17);
   ({ label, options, value } = onChange);
   require = value;
@@ -233,7 +233,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onChange) => {
     cResult[5] = tmp9;
     tmp7 = tmp9;
   }
-  const fn = function l(item) {
+  function renderItem(item) {
     return hasOwnProperty(closure_8, {
       item: item.item,
       selected: item.item.value === value,
@@ -245,15 +245,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onChange) => {
         return tmp;
       }
     });
-  };
+  }
   cResult[0] = onChange;
   cResult[1] = value;
-  cResult[2] = fn;
-  tmp6 = fn;
+  cResult[2] = renderItem;
+  tmp6 = renderItem;
   const obj = require("c");
   tmp = require;
   tmp2 = onChange;
-}) : ((onChange) => {
+}) : (function FormSelect(onChange) {
   ({ label, value } = onChange);
   require = value;
   onChange = onChange.onChange;

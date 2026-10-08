@@ -1,8 +1,8 @@
-// === Module 17630: SafetyFlowsExperiment ===
+// === Module 17912: SafetyFlowsExperiment ===
 
-// Module 17630 (SafetyFlowsExperiment)
+// Module 17912 (SafetyFlowsExperiment)
 import c from "c" /* 576 */;
-import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1441 */;
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1453 */;
 
 require = fn;
 let tmp2 = apex_ApexExperimentDefault({ name: "2026-04-safety-flows", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
@@ -15,7 +15,7 @@ export default tmp2;
 export const isEligibleForSafetyFlowsExperiment = function isEligibleForSafetyFlowsExperiment(location) {
   return closure_2.getConfig({ location: location.location }).enabled;
 };
-export const useIsEligibleForSafetyFlowsExperiment = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+export const useIsEligibleForSafetyFlowsExperiment = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsEligibleForSafetyFlowsExperiment(location) {
   const cResult = c.c(2);
   const _location = location.location;
   if (cResult[0] !== _location) {
@@ -27,4 +27,6 @@ export const useIsEligibleForSafetyFlowsExperiment = ReactCompilerGating.isReact
     tmp2 = cResult[1];
   }
   return closure_2.useConfig(tmp2).enabled;
-}) : ((location) => closure_2.useConfig({ location: location.location }).enabled);
+}) : (function useIsEligibleForSafetyFlowsExperiment(location) {
+  return closure_2.useConfig({ location: location.location }).enabled;
+});

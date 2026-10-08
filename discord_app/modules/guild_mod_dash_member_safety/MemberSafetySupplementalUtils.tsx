@@ -1,13 +1,13 @@
-// === Module 7024: MemberSafetySupplementalUtils ===
+// === Module 7212: MemberSafetySupplementalUtils ===
 
-// Module 7024 (MemberSafetySupplementalUtils)
+// Module 7212 (MemberSafetySupplementalUtils)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
-import shared from "shared" /* 4735 */;
-import useThemeDefault from "useTheme" /* 4797 */;
-import PlatformsDefault from "Platforms" /* 5449 */;
-import ConnectionsHooks from "ConnectionsHooks" /* 7025 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
+import shared from "shared" /* 4929 */;
+import useThemeDefault from "useTheme" /* 4991 */;
+import PlatformsDefault from "Platforms" /* 5759 */;
+import ConnectionsHooks from "ConnectionsHooks" /* 7213 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -210,7 +210,7 @@ export const getIntegrationLabel = function getIntegrationLabel(arg0) {
     return intl.string(util.t.gmCUFw);
   }
 };
-export const useGetIntegrationIconString = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useGetIntegrationIconString = ReactCompilerGating.isReactCompilerEnabled() ? (function useGetIntegrationIconString(arg0) {
   let str2 = c.c(4);
   obj2 = PlatformsDefault;
   let lightSVG = obj2.get(ConnectionsHooks.useLegacyPlatformType(arg0));
@@ -242,7 +242,7 @@ export const useGetIntegrationIconString = ReactCompilerGating.isReactCompilerEn
     }
   }
   return tmp3;
-}) : ((arg0) => {
+}) : (function useGetIntegrationIconString(arg0) {
   obj2 = ConnectionsHooks;
   value = PlatformsDefault.get(obj2.useLegacyPlatformType(arg0));
   let tmp5 = null;

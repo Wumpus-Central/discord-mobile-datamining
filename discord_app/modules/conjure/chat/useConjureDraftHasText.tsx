@@ -1,9 +1,9 @@
-// === Module 16756: useConjureDraftHasText ===
+// === Module 17031: useConjureDraftHasText ===
 
-// Module 16756 (useConjureDraftHasText)
+// Module 17031 (useConjureDraftHasText)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureComposerDraftStore from "ConjureComposerDraftStore" /* 16757 */;
+import ConjureComposerDraftStore from "ConjureComposerDraftStore" /* 17032 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/chat/useConjureDraftHasText.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConjureDraftHasText(arg0) {
   _require = arg0;
   const cResult = require("c").c(8);
   if (cResult[0] !== arg0) {
@@ -60,7 +60,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = tmp10;
   tmp9 = tmp10;
   const tmp6 = _slicedToArray(noop.useState(arg0), 2);
-}) : ((arg0) => {
+}) : (function useConjureDraftHasText(arg0) {
   closure_0 = arg0;
   [tmp2, tmp3] = noop.useState(() => "" !== ConjureComposerDraftStore.getDraft(closure_0).trim());
   const tmp4 = _slicedToArray(noop.useState(arg0), 2);

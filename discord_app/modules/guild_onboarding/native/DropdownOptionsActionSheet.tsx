@@ -1,28 +1,28 @@
-// === Module 6637: DropdownOptionsActionSheet ===
+// === Module 6814: DropdownOptionsActionSheet ===
 
-// Module 6637 (DropdownOptionsActionSheet)
+// Module 6814 (DropdownOptionsActionSheet)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import BottomSheetModal from "BottomSheetModal" /* 6119 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6651 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6652 */;
+import native from "native" /* 1200 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import BottomSheetModal from "BottomSheetModal" /* 6298 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6828 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6829 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 5645 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 6602 */;
+import EmojiStore from "EmojiStore" /* 5992 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 6778 */;
 
 require = fn;
 const View = fn(17).View;
-const EMOJI_URL_BASE_SIZE = fn(1380).EMOJI_URL_BASE_SIZE;
+const EMOJI_URL_BASE_SIZE = fn(1392).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_10 = createStyles.createStyles({ optionTextEmoji: { fontSize: 24, lineHeight: 24, paddingTop: 5 }, optionImageEmoji: { height: 24, width: 24 }, newBadge: { fontWeight: "bold" }, labelRow: { display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center" }, closeButtonWrapper: { marginTop: 16, marginHorizontal: 16 } });
 let ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function DropdownOptionRow(option) {
   const cResult = option(576).c(32);
   option = option.option;
   ({ responses, onSelect } = option);
@@ -146,7 +146,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
                           }
                         }
                         const obj3 = { label: tmp32, selected: tmp11, leading: tmp16, trailing: tmp27, onPress: tmp13 };
-                        const tmp37 = closure_8(onSelect(6638), obj3);
+                        const tmp37 = closure_8(onSelect(6815), obj3);
                         cResult[26] = tmp16;
                         cResult[27] = tmp13;
                         cResult[28] = tmp32;
@@ -218,8 +218,8 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
               }
             }
             obj8.size = EMOJI_URL_BASE_SIZE;
-            emojiURL = onSelect(1402).getEmojiURL(obj8);
-            const tmp21Result = onSelect(1402);
+            emojiURL = onSelect(1414).getEmojiURL(obj8);
+            const tmp21Result = onSelect(1414);
           }
           obj7.src = emojiURL;
           const emoji7 = option.emoji;
@@ -231,9 +231,9 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
             str = "";
           }
           obj7.name = str;
-          obj6.children = closure_8(onSelect(6632), obj7);
+          obj6.children = closure_8(onSelect(6809), obj7);
           const tmp19Result = closure_8(tmp20, obj6);
-          const tmp22 = onSelect(6632);
+          const tmp22 = onSelect(6809);
         } else {
           const emoji6 = option.emoji;
           let name;
@@ -284,7 +284,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
   cResult[5] = hasItem;
   tmp11 = hasItem;
   const tmpResult = option(573);
-}) : ((option) => {
+}) : (function DropdownOptionRow(option) {
   option = option.option;
   ({ responses, onSelect } = option);
   let selected;
@@ -371,7 +371,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding/native/DropdownOptionsActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function DropdownOptionsActionSheet(guildId) {
   const cResult = guildId(canBeNew[8]).c(30);
   guildId = guildId.guildId;
   const promptId = guildId.promptId;
@@ -457,10 +457,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
         const intl = tmp(tmp2[13]).intl;
         obj2.title = intl.string(tmp(tmp2[13]).t.E2ICbC);
         cResult[8] = closure_8(tmp(tmp2[18]).BottomSheetTitleHeader, obj2);
-        class P {
+        class F {
           constructor(arg0) {
             obj = { option: guildId, responses: closure_4, onSelect, canBeNew: Boolean(canBeNew) };
-            return jsx(f38600, obj, guildId.id);
+            return jsx(DropdownOptionRow, obj, guildId.id);
           }
         }
         const tmp15 = closure_8(tmp(tmp2[18]).BottomSheetTitleHeader, obj2);
@@ -531,16 +531,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
           }
         }
       }
-      class P {
+      class F {
         constructor(arg0) {
           obj = { option: guildId, responses: closure_4, onSelect, canBeNew: Boolean(canBeNew) };
-          return jsx(f38600, obj, guildId.id);
+          return jsx(DropdownOptionRow, obj, guildId.id);
         }
       }
       cResult[17] = canBeNew;
       cResult[18] = onSelect;
       cResult[19] = stateFromStoresArray;
-      cResult[20] = P;
+      cResult[20] = F;
     }
     const tmpResult2 = tmp(tmp2[9]);
   }
@@ -554,7 +554,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   cResult[6] = C;
   tmp11 = C;
   const tmpResult = guildId(canBeNew[9]);
-}) : ((arg0) => {
+}) : (function DropdownOptionsActionSheet(arg0) {
   ({ guildId: require, promptId: importDefault, canBeNew: dependencyMap, onSelect: noop } = arg0);
   const tmp = closure_10();
   const items = [GuildOnboardingPromptsStore];

@@ -1,6 +1,6 @@
-// === Module 11166: useMessagePreviewHeight ===
+// === Module 11288: useMessagePreviewHeight ===
 
-// Module 11166 (useMessagePreviewHeight)
+// Module 11288 (useMessagePreviewHeight)
 import module_570 from "module_570" /* 570 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -15,8 +15,12 @@ ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const result2 = size.fileFinishedImporting("modules/media_viewer/native/useMessagePreviewHeight.tsx");
 
 export { useMessagePreviewHeightStore };
-export const useMessagePreviewCollapsedheight = () => obj().collapsedHeight;
-export const useMessagePreviewExpandedHeight = () => obj().expandedHeight;
+export const useMessagePreviewCollapsedheight = function useMessagePreviewCollapsedheight() {
+  return obj().collapsedHeight;
+};
+export const useMessagePreviewExpandedHeight = function useMessagePreviewExpandedHeight() {
+  return obj().expandedHeight;
+};
 export const setMesssagePreviewHeight = function setMesssagePreviewHeight(arg0) {
   _require = arg0;
   require("ReactBatchUpdates").batchUpdates(() => obj.setState(closure_0));

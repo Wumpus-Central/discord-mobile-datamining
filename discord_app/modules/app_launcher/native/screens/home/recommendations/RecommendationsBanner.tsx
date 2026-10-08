@@ -1,27 +1,27 @@
-// === Module 11730: RecommendationsBanner ===
+// === Module 11796: RecommendationsBanner ===
 
-// Module 11730 (RecommendationsBanner)
+// Module 11796 (RecommendationsBanner)
 import c from "c" /* 576 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import FastImageDefault from "FastImage" /* 5981 */;
-import useAvatarColorDefault from "useAvatarColor" /* 7826 */;
-import useDisplayProfileDefault from "useDisplayProfile" /* 7868 */;
-import UserProfileBannerDefault from "UserProfileBanner" /* 7929 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 9184 */;
-import AppLauncherContext from "AppLauncherContext" /* 11007 */;
-import HeroMedia from "HeroMedia" /* 11722 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import useAvatarColorDefault from "useAvatarColor" /* 8244 */;
+import useDisplayProfileDefault from "useDisplayProfile" /* 8286 */;
+import UserProfileBannerDefault from "UserProfileBanner" /* 8348 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 10752 */;
+import AppLauncherContext from "AppLauncherContext" /* 11232 */;
+import HeroMedia from "HeroMedia" /* 11787 */;
 import noop from "module_19" /* 19 */;
-import UserRecord from "UserRecord" /* 1391 */;
+import UserRecord from "UserRecord" /* 1403 */;
 
 require = fn;
 const View = fn(17).View;
 const Constants = fn(1085);
 ({ BANNER_HEIGHT: metroRequire, EMPTY_STRING_SNOWFLAKE_ID: closure_7 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_9 = createStyles.createStyles({ imageContainer: { width: "100%", height: "100%" }, image: { width: "100%", height: "100%" } });
 let ReactCompilerGating = fn(558);
-let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((applicationId) => {
+let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function RecommendationBannerEmbedded(applicationId) {
   const cResult = c.c(20);
   applicationId = applicationId.applicationId;
   const width = AppLauncherContext.useRequiredAppLauncherContext().width;
@@ -85,7 +85,7 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((appl
             }
           }
           if (null != imageSource) {
-            tmp6 = tmp6(5981);
+            tmp6 = tmp6(6164);
             const obj = { style: imageStyle, source: imageSource, resizeMode: "cover" };
             let tmp19 = <tmp6 style={imageStyle} source={imageSource} resizeMode="cover" />;
           } else {
@@ -118,10 +118,10 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((appl
   cResult[5] = obj10;
   tmp5 = obj10;
   const tmpResult = HeroMedia;
-}) : ((applicationId) => {
+}) : (function RecommendationBannerEmbedded(applicationId) {
   let heroMediaDimensions;
-  let obj = heroMediaDimensions(11007);
-  heroMediaDimensions = heroMediaDimensions(11722).useHeroMediaDimensions({ width: obj.useRequiredAppLauncherContext().width });
+  let obj = heroMediaDimensions(11232);
+  heroMediaDimensions = heroMediaDimensions(11787).useHeroMediaDimensions({ width: obj.useRequiredAppLauncherContext().width });
   const tmp4 = useEmbeddedActivityBackgroundDefault({ applicationId: applicationId.applicationId, size: heroMediaDimensions.width, names: ["embedded_cover"] });
   importDefault = tmp4;
   let items = [heroMediaDimensions, tmp4];
@@ -150,7 +150,7 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((appl
   return tmp8;
 }));
 ReactCompilerGating = fn(558);
-let closure_11 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((applicationBot) => {
+let closure_11 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ReccomendationBannerBot(applicationBot) {
   const cResult = c.c(5);
   applicationBot = applicationBot.applicationBot;
   let id;
@@ -180,7 +180,7 @@ let closure_11 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((appl
   cResult[3] = tmp7;
   cResult[4] = tmp15;
   tmp14 = tmp15;
-}) : ((applicationBot) => {
+}) : (function ReccomendationBannerBot(applicationBot) {
   applicationBot = applicationBot.applicationBot;
   let id;
   if (applicationBot != null) {
@@ -199,7 +199,7 @@ ReactCompilerGating = fn(558);
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/native/screens/home/recommendations/RecommendationsBanner.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((isActivity) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function RecommendationBanner(isActivity) {
   const cResult = c.c(18);
   ({ applicationId, applicationIcon, applicationBot, overrideImageUrl } = isActivity);
   let imageContainer = closure_9();
@@ -281,7 +281,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((isActi
   cResult[2] = applicationId;
   cResult[3] = applicationIconSource;
   tmp3 = applicationIconSource;
-}) : ((arg0) => {
+}) : (function RecommendationBanner(arg0) {
   ({ applicationId, applicationBot, overrideImageUrl } = arg0);
   ({ isActivity, applicationIcon } = arg0);
   const tmp = closure_9();

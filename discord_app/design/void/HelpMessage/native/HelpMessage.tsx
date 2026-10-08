@@ -1,13 +1,13 @@
-// === Module 13925: HelpMessage ===
+// === Module 14228: HelpMessage ===
 
-// Module 13925 (HelpMessage)
+// Module 14228 (HelpMessage)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 4798 */;
-import CircleXIcon from "CircleXIcon" /* 4803 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 4806 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4818 */;
-import Text_Text from "Text/Text" /* 4892 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 4992 */;
+import CircleXIcon from "CircleXIcon" /* 4997 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 5000 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5012 */;
+import Text_Text from "Text/Text" /* 5086 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -29,7 +29,7 @@ function getIcon(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { padding: nativeDefault.space.PX_8, borderWidth: 1, borderStyle: "solid", gap: nativeDefault.space.PX_8 }, row: { display: "flex", flexDirection: "row", alignItems: "center" }, content: null, warningContainer: null, infoContainer: null, errorContainer: null, successContainer: null };
 let obj3 = { padding: nativeDefault.space.PX_8, borderWidth: 1, borderStyle: "solid", gap: nativeDefault.space.PX_8 };
 obj2.content = { flex: 1, marginLeft: nativeDefault.space.PX_8 };
@@ -64,7 +64,7 @@ let obj4 = { flex: 1, marginLeft: nativeDefault.space.PX_8 };
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/HelpMessage/native/HelpMessage.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function HelpMessage(arg0) {
   const cResult = c.c(21);
   ({ children, messageType, textVariant, textColor, borderRadius, button } = arg0);
   let str = "text-sm/medium";
@@ -167,7 +167,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = tmp7;
   cResult[5] = items2;
   tmp8 = items2;
-}) : ((children) => {
+}) : (function HelpMessage(children) {
   ({ messageType, textVariant } = children);
   if (textVariant === undefined) {
     textVariant = "text-sm/medium";

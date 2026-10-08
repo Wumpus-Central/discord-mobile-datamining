@@ -1,9 +1,9 @@
-// === Module 8932: FormTitle ===
+// === Module 8563: FormTitle ===
 
-// Module 8932 (FormTitle)
+// Module 8563 (FormTitle)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
+import native from "native" /* 1200 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,17 +11,17 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, Platform } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-let PlatformUtils = fn(1369);
+let PlatformUtils = fn(1381);
 let num = 58;
 if (PlatformUtils.isAndroid()) {
   num = 48;
 }
-PlatformUtils = fn(1369);
+PlatformUtils = fn(1381);
 let num2 = 48;
 if (PlatformUtils.isAndroid()) {
   num2 = 56;
 }
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 const obj4 = { titleWrapper: { flexDirection: "row", justifyContent: "space-between", paddingTop: 16, paddingBottom: 16 }, horizontalPadding: { paddingHorizontal: 16 }, thinTitle: { paddingTop: 26 }, titleText: { fontFamily: fn(1085).Fonts.PRIMARY_SEMIBOLD, fontSize: 13, color: nativeDefault.colors.TEXT_SUBTLE }, error: null };
 const obj5 = { fontFamily: fn(1085).Fonts.PRIMARY_SEMIBOLD, fontSize: 13, color: nativeDefault.colors.TEXT_SUBTLE };
 obj4.error = { color: nativeDefault.unsafe_rawColors.RED_400 };
@@ -31,7 +31,7 @@ const obj6 = { color: nativeDefault.unsafe_rawColors.RED_400 };
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormTitle.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormTitle(arg0) {
   const cResult = c.c(20);
   ({ title, icon, numberOfLines, uppercaseTitle, thinTitle, error, inset, viewStyle, textStyle } = arg0);
   let thinTitle2 = undefined !== thinTitle && thinTitle;
@@ -120,7 +120,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = viewStyle;
   cResult[4] = items2;
   tmp7 = items2;
-}) : ((thinTitle) => {
+}) : (function FormTitle(thinTitle) {
   ({ title, uppercaseTitle } = thinTitle);
   ({ icon, numberOfLines } = thinTitle);
   if (uppercaseTitle === undefined) {

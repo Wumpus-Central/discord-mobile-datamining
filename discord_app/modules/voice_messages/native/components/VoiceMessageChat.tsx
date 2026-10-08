@@ -1,28 +1,28 @@
-// === Module 12328: VoiceMessageChat ===
+// === Module 12426: VoiceMessageChat ===
 
-// Module 12328 (VoiceMessageChat)
+// Module 12426 (VoiceMessageChat)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4618 */;
-import timing from "timing" /* 4897 */;
-import spring from "spring" /* 5604 */;
-import utils_TimeUtils from "utils/TimeUtils" /* 7315 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4810 */;
+import timing from "timing" /* 5091 */;
+import spring from "spring" /* 5374 */;
+import utils_TimeUtils from "utils/TimeUtils" /* 7759 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator } = get_ActivityIndicator);
-let useVoiceMessagesUIStore = fn(11587).useVoiceMessagesUIStore;
-const VoiceMessageConstants = fn(11588);
+let useVoiceMessagesUIStore = fn(11650).useVoiceMessagesUIStore;
+const VoiceMessageConstants = fn(11651);
 ({ VOICE_RECORDING_MAX_DURATION_MILLIS: closure_8, VOICE_RECORDING_MAX_DURATION_OFFSET: closure_9, VOICE_RECORDING_REALLY_WARN_DURATION_MILLIS: c10, VOICE_RECORDING_WARN_DURATION_MILLIS: closure_11, WAVEFORM_WAVE_MAX_VALUE: closure_12 } = VoiceMessageConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = ReanimatedRexport.createAnimatedComponent(ActivityIndicator);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { container: { height: "100%", flexDirection: "row", alignItems: "center", paddingVertical: nativeDefault.modules.mobile.VOICE_MESSAGE_RECORDING_CONTAINER_PADDING_VERTICAL, paddingHorizontal: nativeDefault.modules.mobile.VOICE_MESSAGE_RECORDING_PILL_PADDING_HORIZONTAL, gap: nativeDefault.modules.mobile.VOICE_MESSAGE_CHAT_GAP, borderRadius: nativeDefault.modules.mobile.VOICE_MESSAGE_RECORDING_PILL_BORDER_RADIUS, backgroundColor: nativeDefault.colors.MOBILE_CHATINPUT_BACKGROUND_DEFAULT, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_CHATINPUT_BORDER_ACTIVE }, loading: { position: "absolute", left: 12 }, dot: null, dotDismissed: null, waveformContainer: null, waveformBar: null, durationContainer: null, duration: null };
 let size = { height: 6, width: 6, backgroundColor: nativeDefault.unsafe_rawColors.RED_400, borderRadius: nativeDefault.radii.round };
 obj.dot = size;
@@ -32,11 +32,11 @@ let obj2 = { height: "100%", flexDirection: "row", alignItems: "center", padding
 obj.waveformBar = { backgroundColor: nativeDefault.colors.MOBILE_VOICE_MESSAGE_RECORDING_WAVEFORM_BAR_BACKGROUND, borderRadius: 1 };
 let obj4 = { backgroundColor: nativeDefault.colors.MOBILE_VOICE_MESSAGE_RECORDING_WAVEFORM_BAR_BACKGROUND, borderRadius: 1 };
 obj.durationContainer = { flexDirection: "row", alignItems: "center", gap: 4, marginLeft: nativeDefault.modules.mobile.VOICE_MESSAGE_DURATION_MARGIN_LEFT };
-let PlatformUtils = fn(1369);
+let PlatformUtils = fn(1381);
 PlatformUtils = PlatformUtils.isAndroid();
 const mobile = nativeDefault.modules.mobile;
 let obj6 = { lineHeight: PlatformUtils ? mobile.VOICE_MESSAGE_DURATION_LINE_HEIGHT_ANDROID : mobile.VOICE_MESSAGE_DURATION_LINE_HEIGHT_IOS, textAlignVertical: null };
-PlatformUtils = fn(1369);
+PlatformUtils = fn(1381);
 let str;
 if (PlatformUtils.isAndroid()) {
   str = "center";
@@ -47,7 +47,7 @@ let closure_16 = createStyles.createStyles(obj);
 const __initData = { code: "function VoiceMessageChatTsx1(){const{animatedHeight,animatedWidth,animatedMargin}=this.__closure;return{height:animatedHeight.get(),width:animatedWidth.get(),marginRight:animatedMargin.get()};}" };
 const __initData2 = { code: "function VoiceMessageChatTsx2(){const{animatedHeight,animatedWidth,animatedMargin}=this.__closure;return{height:animatedHeight.get(),width:animatedWidth.get(),marginRight:animatedMargin.get()};}" };
 let ReactCompilerGating = fn(558);
-let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((value) => {
+let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function WaveformBar(value) {
   const cResult = require("c").c(11);
   value = value.value;
   require = value;
@@ -122,7 +122,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((value) => {
   tmp9 = items2;
   tmp8 = fn2;
   const obj5 = require("ReanimatedRexport");
-}) : ((value) => {
+}) : (function WaveformBar(value) {
   value = value.value;
   const require = value;
   let sharedValue1;
@@ -160,7 +160,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((value) => {
   return closure_13(sharedValue(sharedValue1[7]).View, obj5);
 });
 ReactCompilerGating = fn(558);
-let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Waveform() {
   const cResult = c.c(17);
   let waveformContainer = closure_16();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -211,20 +211,13 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   const substr = tmp3Result.slice(-tmp7);
   if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-    class D {
-      constructor(arg0) {
-        tmp = closure_0(Math.round(arg0.nativeEvent.layout.width / 6) + 2);
-        return;
-      }
-    }
-    cResult[10] = D;
+    const fn3 = function w(nativeEvent) {
+      _require(Math.round(nativeEvent.nativeEvent.layout.width / 6) + 2);
+    };
+    cResult[10] = fn3;
+    let tmp13 = fn3;
   } else {
-    class D {
-      constructor(arg0) {
-        tmp = closure_0(Math.round(arg0.nativeEvent.layout.width / 6) + 2);
-        return;
-      }
-    }
+    tmp13 = cResult[10];
   }
   if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
     class M {
@@ -251,12 +244,12 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[4] = substr;
   cResult[5] = closure_5;
   cResult[6] = waveformContainer.waveformContainer;
-  cResult[7] = D;
+  cResult[7] = tmp13;
   cResult[8] = mapped;
   num3 = 9;
   cResult[9] = substr;
   const tmp6 = _slicedToArray(noop.useState(0), 2);
-}) : (() => {
+}) : (function Waveform() {
   useVoiceMessagesUIStore((waveformVersion) => waveformVersion.waveformVersion);
   const tmp = closure_16();
   const tmp3 = _slicedToArray(noop.useState(0), 2);
@@ -278,7 +271,7 @@ const constants = { WARN: 0, [0]: "WARN", REALLY_WARN: 1, [1]: "REALLY_WARN", EN
 const __initData3 = { code: "function VoiceMessageChatTsx3(){const{animationValue}=this.__closure;return{opacity:animationValue.get()};}" };
 const __initData4 = { code: "function VoiceMessageChatTsx4(){const{animationValue}=this.__closure;return{opacity:animationValue.get()};}" };
 ReactCompilerGating = fn(558);
-let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((animationValue) => {
+let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Duration(animationValue) {
   const cResult = animationValue(576).c(28);
   animationValue = animationValue.animationValue;
   const tmp4 = closure_16();
@@ -327,25 +320,25 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((animationValue
   first1 = tmp12[0];
   noop = tmp12[1];
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    class O {
+    class D {
       constructor(arg0) {
         return null != animationValue.savedVoiceMessageUploadData;
       }
     }
-    cResult[3] = O;
+    cResult[3] = D;
   } else {
-    class O {
+    class D {
       constructor(arg0) {
         return null != animationValue.savedVoiceMessageUploadData;
       }
     }
   }
-  const tmp6Result = useVoiceMessagesUIStore(O);
+  const tmp6Result = useVoiceMessagesUIStore(D);
   closure_5 = tmp6Result;
   const tmp10 = first1(noop.useState(T), 2);
-  const token = animationValue(4586).useToken(nativeDefault.modules.mobile.VOICE_MESSAGE_DURATION_TEXT_STYLE);
+  const token = animationValue(4778).useToken(nativeDefault.modules.mobile.VOICE_MESSAGE_DURATION_TEXT_STYLE);
   if (cResult[4] === tmp6Result) {
-    class O {
+    class D {
       constructor(arg0) {
         return null != animationValue.savedVoiceMessageUploadData;
       }
@@ -353,7 +346,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((animationValue
     const effect = obj2.useEffect(G, items3);
     const result = tmp11 / 1000;
     if (cResult[8] !== result) {
-      class O {
+      class D {
         constructor(arg0) {
           return null != animationValue.savedVoiceMessageUploadData;
         }
@@ -362,7 +355,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((animationValue
       cResult[8] = result;
       cResult[9] = timeFormat;
     } else {
-      class O {
+      class D {
         constructor(arg0) {
           return null != animationValue.savedVoiceMessageUploadData;
         }
@@ -470,7 +463,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((animationValue
     Z.__closure = obj3;
     Z.__workletHash = 9127206038844;
     Z.__initData = __initData3;
-    const animatedStyle = tmp(4618).useAnimatedStyle(Z);
+    const animatedStyle = tmp(4810).useAnimatedStyle(Z);
     if (cResult[13] === animatedStyle) {
       class F {
         constructor() {
@@ -680,7 +673,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((animationValue
           }
         }
         const obj5 = { style: tmp4.duration, variant: token, color: "text-default", tabularNumbers: true, children: tmp19 };
-        const tmp38 = closure_13(tmp(4892).Text, obj5);
+        const tmp38 = closure_13(tmp(5086).Text, obj5);
         class Z {
           constructor() {
             obj = { opacity: animationValue.get() };
@@ -709,7 +702,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((animationValue
     cResult[13] = animatedStyle;
     cResult[14] = tmp4.durationContainer;
     cResult[15] = items2;
-    const tmpResult2 = tmp(4618);
+    const tmpResult2 = tmp(4810);
   }
   class G {
     constructor() {
@@ -749,8 +742,8 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((animationValue
   cResult[5] = tmp7;
   cResult[6] = G;
   cResult[7] = items3;
-  const tmpResult = animationValue(4586);
-}) : ((animationValue) => {
+  const tmpResult = animationValue(4778);
+}) : (function Duration(animationValue) {
   animationValue = animationValue.animationValue;
   closure_3 = undefined;
   let first1;
@@ -882,7 +875,7 @@ let obj5 = { flexDirection: "row", alignItems: "center", gap: 4, marginLeft: nat
 size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_messages/native/components/VoiceMessageChat.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((isRecording) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceMessageChat(isRecording) {
   const cResult = isRecording(backgroundColor[12]).c(21);
   isRecording = isRecording.isRecording;
   const initialAnimation = isRecording.initialAnimation;
@@ -941,21 +934,26 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((isReco
     C.__initData = __initData6;
     const animatedReaction = tmp(tmp2[7]).useAnimatedReaction(S, C);
     const tmpResult4 = tmp(tmp2[7]);
-    const fn2 = function w() {
-      if (null != backgroundColor) {
-        const obj2 = { backgroundColor: backgroundColor.get() };
-        let obj3 = obj2;
-      } else {
-        obj3 = {};
+    class O {
+      constructor() {
+        obj = backgroundColor;
+        if (null != backgroundColor) {
+          obj1 = { backgroundColor: null };
+          obj1.backgroundColor = obj.get();
+          obj5 = obj1;
+        } else {
+          obj5 = {};
+        }
+        obj6 = { width: "100%" };
+        merged = Object.assign(obj5);
+        return obj6;
       }
-      const merged = Object.assign(obj3);
-      return { width: "100%" };
-    };
+    }
     const obj6 = { backgroundColor };
-    fn2.__closure = obj6;
-    fn2.__workletHash = 722511507624;
-    fn2.__initData = __initData7;
-    const animatedStyle = tmp(tmp2[7]).useAnimatedStyle(fn2);
+    O.__closure = obj6;
+    O.__workletHash = 722511507624;
+    O.__initData = __initData7;
+    const animatedStyle = tmp(tmp2[7]).useAnimatedStyle(O);
     const tmpResult5 = tmp(tmp2[7]);
     class M {
       constructor() {
@@ -1033,13 +1031,27 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((isReco
               }
             }
             obj9.children = items;
-            const tmp36 = closure_14(tmp5(tmp2[7]).View, obj9);
             cResult[15] = leftAccessory;
             cResult[16] = rightAccessory;
             cResult[17] = tmp20;
             cResult[18] = tmp21;
             cResult[19] = tmp25;
-            cResult[20] = tmp36;
+            class O {
+              constructor() {
+                obj = backgroundColor;
+                if (null != backgroundColor) {
+                  obj1 = { backgroundColor: null };
+                  obj1.backgroundColor = obj.get();
+                  obj5 = obj1;
+                } else {
+                  obj5 = {};
+                }
+                obj6 = { width: "100%" };
+                merged = Object.assign(obj5);
+                return obj6;
+              }
+            }
+            const tmp36 = closure_14(tmp5(tmp2[7]).View, obj9);
           }
         }
       }
@@ -1088,14 +1100,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((isReco
     }
   };
   const items3 = [sharedValue, isRecording];
-  cResult[0] = isRecording;
   cResult[1] = sharedValue;
   cResult[2] = fn;
   cResult[3] = items3;
   tmp9 = items3;
   tmp8 = fn;
   let obj3 = isRecording(backgroundColor[7]);
-}) : ((isRecording) => {
+}) : (function VoiceMessageChat(isRecording) {
   isRecording = isRecording.isRecording;
   const initialAnimation = isRecording.initialAnimation;
   const backgroundColor = isRecording.backgroundColor;

@@ -1,9 +1,9 @@
-// === Module 12507: usePreviewableMediaText ===
+// === Module 12603: usePreviewableMediaText ===
 
-// Module 12507 (usePreviewableMediaText)
+// Module 12603 (usePreviewableMediaText)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import usePreviewableMedia from "usePreviewableMedia" /* 12504 */;
+import usePreviewableMedia from "usePreviewableMedia" /* 12600 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/hooks/usePreviewableMediaText.tsx");
 
-export const usePreviewableMediaText = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const usePreviewableMediaText = ReactCompilerGating.isReactCompilerEnabled() ? (function usePreviewableMediaText(arg0) {
   const cResult = c.c(55);
   ({ previewableMedia, author } = arg0);
   if (0 !== previewableMedia.length) {
@@ -361,7 +361,7 @@ export const usePreviewableMediaText = ReactCompilerGating.isReactCompilerEnable
     }
   }
   return first1;
-}) : ((previewableMedia) => {
+}) : (function usePreviewableMediaText(previewableMedia) {
   previewableMedia = previewableMedia.previewableMedia;
   const author = previewableMedia.author;
   const items = [author, previewableMedia];

@@ -1,15 +1,15 @@
-// === Module 11817: AppLauncherBooleanOption ===
+// === Module 11902: AppLauncherBooleanOption ===
 
-// Module 11817 (AppLauncherBooleanOption)
+// Module 11902 (AppLauncherBooleanOption)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Form from "Form" /* 8924 */;
+import Form from "Form" /* 8555 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { flexDirection: "row", width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.lg, alignItems: "center" } };
 let closure_5 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -17,7 +17,7 @@ const obj3 = { flexDirection: "row", width: "100%", backgroundColor: nativeDefau
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/options/boolean/AppLauncherBooleanOption.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLauncherBooleanOption(onPress) {
   const cResult = c.c(14);
   ({ style, option, initialValue } = onPress);
   onPress = onPress.onPress;
@@ -85,7 +85,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
   cResult[3] = tmp4.container;
   cResult[4] = items;
   tmp8 = items;
-}) : ((arg0) => {
+}) : (function AppLauncherBooleanOption(arg0) {
   ({ initialValue: require, onPress: dependencyMap } = arg0);
   selected = undefined;
   closure_3 = undefined;

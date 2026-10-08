@@ -1,19 +1,19 @@
-// === Module 17035: PermissionSpecUtils ===
+// === Module 17316: PermissionSpecUtils ===
 
-// Module 17035 (PermissionSpecUtils)
+// Module 17316 (PermissionSpecUtils)
 import util from "util" /* 1126 */;
-import ChannelRecord from "ChannelRecord" /* 2055 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
-import SoundmojiRenderingExperiment from "SoundmojiRenderingExperiment" /* 5809 */;
-import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 6764 */;
-import GuildOfficialMessagesExperimentDefault from "GuildOfficialMessagesExperiment" /* 6781 */;
-import tracking_Tracking from "tracking/Tracking" /* 7276 */;
-import ChannelPermissionsConstants from "ChannelPermissionsConstants" /* 8110 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9282 */;
-import useGuildEligibleForStageChannels from "useGuildEligibleForStageChannels" /* 17036 */;
-import HangoutWindowExperiment from "HangoutWindowExperiment" /* 17037 */;
-import permissions_PermissionUtilsAll from "permissions/PermissionUtils" /* 17039 */;
-import GuildStore from "GuildStore" /* 2074 */;
+import ChannelRecord from "ChannelRecord" /* 2067 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2127 */;
+import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 6940 */;
+import GuildOfficialMessagesExperimentDefault from "GuildOfficialMessagesExperiment" /* 6957 */;
+import ChannelPermissionsConstants from "ChannelPermissionsConstants" /* 7484 */;
+import Tracking from "Tracking" /* 7876 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8613 */;
+import SoundmojiRenderingExperiment from "SoundmojiRenderingExperiment" /* 11620 */;
+import useGuildEligibleForStageChannels from "useGuildEligibleForStageChannels" /* 17317 */;
+import HangoutWindowExperiment from "HangoutWindowExperiment" /* 17318 */;
+import permissions_PermissionUtilsAll from "permissions/PermissionUtils" /* 17320 */;
+import GuildStore from "GuildStore" /* 2086 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
@@ -60,15 +60,15 @@ export default {
     const tmp3 = closure_11(stateFromStores, arg2, obj);
     const tmp4 = set;
     let channelEventsSection = dependencyMap;
-    const VoiceInThreadsExperiment = set(6782).VoiceInThreadsExperiment;
+    const VoiceInThreadsExperiment = set(6958).VoiceInThreadsExperiment;
     let enabled = VoiceInThreadsExperiment.getCurrentConfig({ guildId: guild_id, location: "3ad37d_1" }).enabled;
     if (enabled) {
       enabled = set.has(stateFromStores.type);
     }
     let obj2 = { guildId: guild_id, location: "3ad37d_1" };
-    const tmp4Result = tmp4(5581);
-    const isStageVideoEnabledResult = tmp4(5581).isStageVideoEnabled(guild_id);
-    let result = tmp4(17038).canCurrentUserManageMessageFilters(guild_id);
+    const tmp4Result = tmp4(5891);
+    const isStageVideoEnabledResult = tmp4(5891).isStageVideoEnabled(guild_id);
+    let result = tmp4(17319).canCurrentUserManageMessageFilters(guild_id);
     const isMediaChannelResult = stateFromStores.isMediaChannel();
     importDefault = isMediaChannelResult;
     set = new Set();
@@ -102,13 +102,13 @@ export default {
       items[4] = permissions_PermissionUtilsAll.generateChannelAppsSection(tmp3, intl27.string(tmp4(1126).t["rrh/W6"]));
       if (tmp.showStageChannelPermissions) {
         const intl28 = tmp4(1126).intl;
-        const items1 = [obj33(17039).generateChannelStageSection(tmp3, intl28.string(tmp4(1126).t.yniauk))];
+        const items1 = [obj33(17320).generateChannelStageSection(tmp3, intl28.string(tmp4(1126).t.yniauk))];
         let items2 = items1;
-        const obj33Result = obj33(17039);
+        const obj33Result = obj33(17320);
       } else {
         items2 = [];
       }
-      obj33 = obj33(17039);
+      obj33 = obj33(17320);
       const intl29 = tmp4(1126).intl;
       channelEventsSection = obj33.generateChannelEventsSection(tmp3, intl29.string(tmp4(1126).t.b8lplT));
       items[HermesBuiltin.arraySpread(items2, 5)] = channelEventsSection;
@@ -216,7 +216,7 @@ export default {
           const obj14 = {
             setUpAutomod() {
                     if (!isMediaChannelResult) {
-                      const result = tracking_Tracking.trackForumEnableAutomodClicked();
+                      const result = Tracking.trackForumEnableAutomodClicked();
                     }
                     GuildSettingsActionCreatorsDefault.open(set, constants5.GUILD_AUTOMOD);
                   }
@@ -251,7 +251,7 @@ export default {
       }
       return mapped;
     }
-    const tmp4Result2 = tmp4(17038);
+    const tmp4Result2 = tmp4(17319);
   },
   generateGuildPermissionSpec(features) {
     set = new Set();

@@ -1,8 +1,8 @@
-// === Module 5787: useBackPressHandler ===
+// === Module 5370: useBackPressHandler ===
 
-// Module 5787 (useBackPressHandler)
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import KeyCommands from "KeyCommands" /* 5788 */;
+// Module 5370 (useBackPressHandler)
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import KeyCommands from "KeyCommands" /* 5371 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -30,13 +30,13 @@ function subscribeToBackPress(onKeyCommand) {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/routing/native/useBackPressHandler.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((current, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useBackPressHandler(current, arg1) {
   _require = current;
   const cResult = require("c").c(5);
   dependencyMap = tmp2;
   noop = noop.useRef(current);
   if (cResult[0] !== current) {
-    let fn = function t() {
+    let fn = function c() {
       closure_2.current = current;
     };
     cResult[0] = current;
@@ -47,7 +47,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((current, arg1) =
   }
   const layoutEffect = obj2.useLayoutEffect(tmp3);
   if (cResult[2] !== (undefined === arg1 || arg1)) {
-    let fn2 = function c() {
+    let fn2 = function t() {
       if (closure_1) {
         const fn = () => ref.current();
         const obj2 = { input: KeyCommands.KeyInputs.ESCAPE, eventName: "keyCommandBackPress", onKeyCommand: fn };
@@ -73,7 +73,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((current, arg1) =
     tmp6 = cResult[4];
   }
   const effect = obj2.useEffect(tmp5, tmp6);
-}) : ((current) => {
+}) : (function useBackPressHandler(current) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = true;

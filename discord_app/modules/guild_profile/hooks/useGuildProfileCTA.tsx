@@ -1,16 +1,16 @@
-// === Module 9428: useGuildProfileCTA ===
+// === Module 9092: useGuildProfileCTA ===
 
-// Module 9428 (useGuildProfileCTA)
-import FlagUtils from "FlagUtils" /* 1390 */;
-import GuildTagUtils from "GuildTagUtils" /* 7847 */;
-import GuildInviteFlags from "GuildInviteFlags" /* 8078 */;
-import usePendingFolderGuildIds from "usePendingFolderGuildIds" /* 9429 */;
+// Module 9092 (useGuildProfileCTA)
+import FlagUtils from "FlagUtils" /* 1402 */;
+import GuildTagUtils from "GuildTagUtils" /* 8265 */;
+import GuildInviteFlags from "GuildInviteFlags" /* 8486 */;
+import usePendingFolderGuildIds from "usePendingFolderGuildIds" /* 9093 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import InviteStore from "InviteStore" /* 4877 */;
-import UserStore from "UserStore" /* 1377 */;
+import GuildMemberStore from "GuildMemberStore" /* 2124 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import InviteStore from "InviteStore" /* 5071 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 const usePendingFolderGuildIdsDefault = usePendingFolderGuildIds;
@@ -24,7 +24,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_profile/hooks/useGuildProfileCTA.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildProfileCTA(id, arg1, arg2) {
   _require = arg2;
   let obj = require("c");
   const cResult = obj.c(23);
@@ -393,7 +393,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) 
     cResult[18] = items6;
     tmp22 = items6;
   }
-  class F {
+  class G {
     constructor() {
       member = null;
       if (null != id) {
@@ -411,10 +411,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) 
   const items7 = [id, stateFromStores];
   cResult[10] = stateFromStores;
   cResult[11] = id;
-  cResult[12] = F;
+  cResult[12] = G;
   cResult[13] = items7;
   const tmpResult6 = require("initialize");
-}) : ((id, arg1, arg2) => {
+}) : (function useGuildProfileCTA(id, arg1, arg2) {
   _require = id;
   importDefault = arg1;
   dependencyMap = arg2;

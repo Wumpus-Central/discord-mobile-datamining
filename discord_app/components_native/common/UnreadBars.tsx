@@ -1,16 +1,16 @@
-// === Module 16336: UnreadBars ===
+// === Module 16596: UnreadBars ===
 
-// Module 16336 (UnreadBars)
+// Module 16596 (UnreadBars)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import HapticUtils from "HapticUtils" /* 4861 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4862 */;
-import TransitionGroup from "TransitionGroup" /* 12080 */;
+import native from "native" /* 1200 */;
+import HapticUtils from "HapticUtils" /* 5055 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5056 */;
+import TransitionGroup from "TransitionGroup" /* 12154 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
-import TextStyles from "TextStyles" /* 5922 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
+import TextStyles from "TextStyles" /* 5902 */;
 
 const require = globalThis.__r;
 
@@ -21,16 +21,16 @@ const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const BEFORE = "BEFORE";
 const AFTER = "AFTER";
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { unreadText: null, unread: null, mention: null };
 let merged = Object.assign(TextStyles(fn(1085).Fonts.DISPLAY_SEMIBOLD, nativeDefault.unsafe_rawColors.WHITE, 12, { uppercase: true }));
 obj2.unreadText = {};
 let obj4 = { margin: 8, height: 24, justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.md, backgroundColor: null };
-let ColorUtils = fn(4733);
+let ColorUtils = fn(4927);
 obj4.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_400, 0.9);
 obj2.unread = obj4;
 const obj6 = { backgroundColor: null };
-ColorUtils = fn(4733);
+ColorUtils = fn(4927);
 obj6.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.RED_400, 0.9);
 obj2.mention = obj6;
 let closure_12 = createStyles.createLegacyClassComponentStyles(obj2);
@@ -159,12 +159,12 @@ prototype["render"] = function render() {
   return closure_1_8(timestampProducer, obj);
 };
 UnreadBar.defaultProps = { bottom: false };
-UnreadBar.contextType = fn(4595).ThemeContext;
+UnreadBar.contextType = fn(4787).ThemeContext;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/UnreadBars.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((scrollToLocation) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UnreadBars(scrollToLocation) {
   const cResult = scrollToLocation(576).c(21);
   scrollToLocation = scrollToLocation.scrollToLocation;
   ({ beforeItem, afterItem, compact, contentInset } = scrollToLocation);
@@ -197,17 +197,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((scrollToLocation
   const obj = scrollToLocation(576);
   const stateFromStores = scrollToLocation(504).useStateFromStores(tmp6, tmp7);
   if (cResult[4] !== scrollToLocation) {
-    const fn = function _(section) {
+    function handlePress(section) {
       scrollToLocation({ section: section.section, item: section.row, animated: true });
-    };
+    }
     cResult[4] = scrollToLocation;
     class T {
       constructor() {
         return closure_1_7.useReducedMotion;
       }
     }
-    cResult[5] = fn;
-    let tmp10 = fn;
+    cResult[5] = handlePress;
+    let tmp10 = handlePress;
   } else {
     tmp10 = cResult[5];
   }
@@ -239,7 +239,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((scrollToLocation
                   tmp20[0] = noop.Fragment;
                   const items1 = [tmp11, tmp16];
                   tmp20[1] = items1;
-                  const tmp22 = closure_9(tmp(12080).TransitionGroup, tmp20);
+                  const tmp22 = closure_9(tmp(12154).TransitionGroup, tmp20);
                   cResult[18] = tmp11;
                   cResult[19] = tmp16;
                   cResult[20] = tmp22;
@@ -286,7 +286,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((scrollToLocation
   cResult[11] = tmp12;
   tmp11 = tmp12;
   const tmpResult = scrollToLocation(504);
-}) : ((contentInset) => {
+}) : (function UnreadBars(contentInset) {
   ({ scrollToLocation: require, beforeItem, afterItem, compact } = contentInset);
   if (compact === undefined) {
     compact = false;

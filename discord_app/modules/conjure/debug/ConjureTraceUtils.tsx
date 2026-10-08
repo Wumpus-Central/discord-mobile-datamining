@@ -1,6 +1,6 @@
-// === Module 16784: ConjureTraceUtils ===
+// === Module 17059: ConjureTraceUtils ===
 
-// Module 16784 (ConjureTraceUtils)
+// Module 17059 (ConjureTraceUtils)
 import size from "module_2" /* 2 */;
 
 function traceCategory(entry) {

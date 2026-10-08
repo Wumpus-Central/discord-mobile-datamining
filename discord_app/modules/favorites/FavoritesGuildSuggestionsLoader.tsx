@@ -1,15 +1,15 @@
-// === Module 16253: FavoritesGuildSuggestionsLoader ===
+// === Module 16513: FavoritesGuildSuggestionsLoader ===
 
-// Module 16253 (FavoritesGuildSuggestionsLoader)
-import useFavoritesGuildSuggestionCandidatesDefault from "useFavoritesGuildSuggestionCandidates" /* 16254 */;
+// Module 16513 (FavoritesGuildSuggestionsLoader)
+import useFavoritesGuildSuggestionCandidatesDefault from "useFavoritesGuildSuggestionCandidates" /* 16514 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const FavoritesGuildSuggestionsStore = fn(16166);
+const FavoritesGuildSuggestionsStore = fn(16426);
 ({ NO_SUGGESTIONS: closure_4, setFavoritesGuildSuggestions: hasOwnProperty, useFavoritesGuildSuggestionsVisibility: metroRequire } = FavoritesGuildSuggestionsStore);
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
-let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function FavoritesGuildSuggestionsLoaderInner() {
   const cResult = require("c").c(3);
   const tmp2 = useFavoritesGuildSuggestionCandidatesDefault(4);
   _require = tmp2;
@@ -29,7 +29,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   const layoutEffect = noop.useLayoutEffect(tmp3, tmp4);
   return null;
-}) : (() => {
+}) : (function FavoritesGuildSuggestionsLoaderInner() {
   const tmp = useFavoritesGuildSuggestionCandidatesDefault(4);
   closure_0 = tmp;
   const items = [tmp];
@@ -42,7 +42,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/FavoritesGuildSuggestionsLoader.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function FavoritesGuildSuggestionsLoader() {
   const cResult = isEligible(576).c(5);
   let tmp2 = closure_6();
   isEligible = tmp2.isEligible;
@@ -87,7 +87,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   tmp4 = items;
   tmp3 = fn;
   const obj = isEligible(576);
-}) : (() => {
+}) : (function FavoritesGuildSuggestionsLoader() {
   const tmp = closure_6();
   const isEligible = tmp.isEligible;
   const isSelected = tmp.isSelected;

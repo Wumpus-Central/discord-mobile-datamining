@@ -1,19 +1,19 @@
-// === Module 10851: CustomStatusPreview ===
+// === Module 10502: CustomStatusPreview ===
 
-// Module 10851 (CustomStatusPreview)
+// Module 10502 (CustomStatusPreview)
 import nativeDefault from "native" /* 587 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
-import ChatInputUtils from "ChatInputUtils" /* 4751 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ChatInputUtils from "ChatInputUtils" /* 4945 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(6714);
+const Constants = fn(6891);
 ({ PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: hasOwnProperty, UserProfileThemeTypes: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { flex: 1, position: "relative", overflow: "hidden", width: 323, maxHeight: 301, borderWidth: 1, borderColor: null, borderRadius: null };
   const colors = nativeDefault.colors;
@@ -51,17 +51,15 @@ export default function CustomStatusPreview(user) {
   ({ gradientFallbackBackground, avatarBackground, containerBackground } = userProfileColors);
   const callback = noop.useCallback(() => {
     ChatInputUtils.dismissKeyboard();
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10852, dependencyMap.paths), "UserProfileCustomStatusActionSheet", { user, previewText: pendingStatusText, previewEmoji: pendingStatusEmoji }, "stack");
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10503, dependencyMap.paths), "UserProfileCustomStatusActionSheet", { user, previewText: pendingStatusText, previewEmoji: pendingStatusEmoji }, "stack");
   }, items);
   const obj2 = { theme, primaryColor, secondaryColor, children: null };
-  const obj3 = { style: null, children: null };
-  const items1 = [tmp7.profileContainer];
-  obj3.style = items1;
-  const items2 = [closure_7(pendingStatusText(pendingStatusEmoji[16]), { user, displayProfile: tmp3, bannerHeight: 132, disableInteraction: true }), , ];
-  const items3 = [closure_7(pendingStatusText(pendingStatusEmoji[17]), { user, backgroundColor: avatarBackground, disableStatus: true }), ];
+  const obj3 = { style: tmp7.profileContainer, children: null };
+  const items1 = [closure_7(pendingStatusText(pendingStatusEmoji[16]), { user, displayProfile: tmp3, bannerHeight: 132, disableInteraction: true }), , ];
+  const items2 = [closure_7(pendingStatusText(pendingStatusEmoji[17]), { user, backgroundColor: avatarBackground, disableStatus: true }), ];
   const obj4 = { fallbackBackground: gradientFallbackBackground, primaryColor, secondaryColor: primaryColor, containerStyle: null, children: null };
-  const items4 = [, , ];
-  ({ profileContentWrapper: arr5[0], profileContent: arr5[1] } = tmp8);
+  const items3 = [, , ];
+  ({ profileContentWrapper: arr4[0], profileContent: arr4[1] } = tmp8);
   let tmp15 = "" !== pendingStatusText;
   let obj = user(pendingStatusEmoji[10]);
   if (!tmp15) {
@@ -75,9 +73,9 @@ export default function CustomStatusPreview(user) {
     const obj5 = { paddingTop };
     tmp16 = obj5;
   }
-  items4[2] = tmp16;
-  obj4.containerStyle = items4;
-  const items5 = [closure_7(pendingStatusText(pendingStatusEmoji[19]), { hasCustomProfileTheme: null != primaryColor, style: tmp8.customStatusBubble, emojiOnlyStyle: tmp8.emojiOnlyCustomStatusBubble, onPressTruncatedStatus: callback, previewEmoji: pendingStatusEmoji, previewText: pendingStatusText, placeholderText }), ];
+  items3[2] = tmp16;
+  obj4.containerStyle = items3;
+  const items4 = [closure_7(pendingStatusText(pendingStatusEmoji[19]), { hasCustomProfileTheme: null != primaryColor, style: tmp8.customStatusBubble, emojiOnlyStyle: tmp8.emojiOnlyCustomStatusBubble, onPressTruncatedStatus: callback, previewEmoji: pendingStatusEmoji, previewText: pendingStatusText, placeholderText }), ];
   const obj7 = { user, themeType: constants.PREVIEW, pronouns: null, badges: null, badgeContainerBackground: null, showBadgeToastOnPress: false };
   let pronouns;
   const obj6 = { hasCustomProfileTheme: null != primaryColor, style: tmp8.customStatusBubble, emojiOnlyStyle: tmp8.emojiOnlyCustomStatusBubble, onPressTruncatedStatus: callback, previewEmoji: pendingStatusEmoji, previewText: pendingStatusText, placeholderText };
@@ -89,11 +87,11 @@ export default function CustomStatusPreview(user) {
   obj7.pronouns = pronouns;
   obj7.badges = tmp4;
   obj7.badgeContainerBackground = containerBackground;
-  items5[1] = closure_7(pendingStatusText(pendingStatusEmoji[20]), obj7);
-  obj4.children = items5;
-  items3[1] = closure_8(tmp14, obj4);
-  obj8.children = items3;
-  items2[1] = closure_8(View, obj8);
+  items4[1] = closure_7(pendingStatusText(pendingStatusEmoji[20]), obj7);
+  obj4.children = items4;
+  items2[1] = closure_8(tmp14, obj4);
+  obj8.children = items2;
+  items1[1] = closure_8(View, obj8);
   let profileEffect;
   if (tmp3 != null) {
     profileEffect = tmp3.profileEffect;
@@ -108,8 +106,8 @@ export default function CustomStatusPreview(user) {
     tmp11Result = closure_7(tmp(tmp2[21]), obj9);
     const tmpResult2 = tmp(tmp2[21]);
   }
-  items2[2] = tmp11Result;
-  obj3.children = items2;
+  items1[2] = tmp11Result;
+  obj3.children = items1;
   obj2.children = closure_8(View, obj3);
   return closure_7(user(pendingStatusEmoji[15]).ThemeContextProvider, obj2);
 };

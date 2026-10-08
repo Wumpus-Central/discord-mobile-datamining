@@ -1,19 +1,19 @@
-// === Module 9933: EmojiPickerListComponentEmpty ===
+// === Module 9455: EmojiPickerListComponentEmpty ===
 
-// Module 9933 (EmojiPickerListComponentEmpty)
+// Module 9455 (EmojiPickerListComponentEmpty)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import BottomSheetModal from "BottomSheetModal" /* 6119 */;
-import SearchEmpty from "SearchEmpty" /* 9934 */;
-import useModalDismissGuardRefreshControl from "useModalDismissGuardRefreshControl" /* 9938 */;
+import native from "native" /* 1200 */;
+import BottomSheetModal from "BottomSheetModal" /* 6298 */;
+import SearchEmpty from "SearchEmpty" /* 9456 */;
+import useModalDismissGuardRefreshControl from "useModalDismissGuardRefreshControl" /* 9460 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { emptyStateContainer: { padding: 0, flex: 1 }, emptyStateBody: { color: nativeDefault.colors.TEXT_SUBTLE }, emptyStateImage: null };
 let obj3 = { color: nativeDefault.colors.TEXT_SUBTLE };
 obj.emptyStateImage = { marginBottom: nativeDefault.space.PX_8, marginTop: 0 };
@@ -23,7 +23,7 @@ let obj4 = { marginBottom: nativeDefault.space.PX_8, marginTop: 0 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/emoji_picker/native/components/EmojiPickerListComponentEmpty.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiPickerListComponentEmpty(arg0) {
   const cResult = c.c(14);
   ({ inActionSheet, insetTop, insetBottom } = arg0);
   const tmp4 = closure_5();
@@ -91,7 +91,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   cResult[1] = insetTop;
   cResult[2] = obj4;
   tmp5 = obj4;
-}) : ((insetBottom) => {
+}) : (function EmojiPickerListComponentEmpty(insetBottom) {
   ({ inActionSheet, insetTop } = insetBottom);
   insetBottom = insetBottom.insetBottom;
   const items = [insetBottom, insetTop];

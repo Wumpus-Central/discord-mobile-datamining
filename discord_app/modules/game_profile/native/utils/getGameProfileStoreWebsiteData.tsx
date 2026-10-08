@@ -1,16 +1,16 @@
-// === Module 8370: getGameProfileStoreWebsiteData ===
+// === Module 8868: getGameProfileStoreWebsiteData ===
 
-// Module 8370 (getGameProfileStoreWebsiteData)
+// Module 8868 (getGameProfileStoreWebsiteData)
 import util from "util" /* 1126 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8352 */;
-import ThirdPartyGameApplicationWebsiteCategory from "ThirdPartyGameApplicationWebsiteCategory" /* 8366 */;
-import SteamNeutralIcon from "SteamNeutralIcon" /* 8371 */;
-import EpicGamesNeutralIcon from "EpicGamesNeutralIcon" /* 8373 */;
-import RobloxNeutralIcon from "RobloxNeutralIcon" /* 8375 */;
-import BattlenetNeutralIcon from "BattlenetNeutralIcon" /* 8377 */;
-import RiotGamesNeutralIcon from "RiotGamesNeutralIcon" /* 8379 */;
-import MinecraftNeutralIcon from "MinecraftNeutralIcon" /* 8381 */;
-import XboxNeutralIcon from "XboxNeutralIcon" /* 8385 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8850 */;
+import ThirdPartyGameApplicationWebsiteCategory from "ThirdPartyGameApplicationWebsiteCategory" /* 8864 */;
+import SteamNeutralIcon from "SteamNeutralIcon" /* 8869 */;
+import EpicGamesNeutralIcon from "EpicGamesNeutralIcon" /* 8871 */;
+import RobloxNeutralIcon from "RobloxNeutralIcon" /* 8873 */;
+import BattlenetNeutralIcon from "BattlenetNeutralIcon" /* 8875 */;
+import RiotGamesNeutralIcon from "RiotGamesNeutralIcon" /* 8877 */;
+import MinecraftNeutralIcon from "MinecraftNeutralIcon" /* 8879 */;
+import XboxNeutralIcon from "XboxNeutralIcon" /* 8883 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

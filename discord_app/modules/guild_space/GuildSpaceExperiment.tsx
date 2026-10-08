@@ -1,9 +1,9 @@
-// === Module 6740: GuildSpaceExperiment ===
+// === Module 6916: GuildSpaceExperiment ===
 
-// Module 6740 (GuildSpaceExperiment)
+// Module 6916 (GuildSpaceExperiment)
 import c from "c" /* 576 */;
 import Constants from "Constants" /* 1085 */;
-import ApexExperiment from "ApexExperiment" /* 1440 */;
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -20,7 +20,7 @@ export const getGuildSpaceExperimentEnabled = function getGuildSpaceExperimentEn
   }
   return enabled;
 };
-export const useGuildSpaceExperimentEnabled = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, location) => {
+export const useGuildSpaceExperimentEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildSpaceExperimentEnabled(arg0, location) {
   let tmp = arg0;
   const cResult = c.c(3);
   if (arg0 == null) {
@@ -37,7 +37,7 @@ export const useGuildSpaceExperimentEnabled = ReactCompilerGating.isReactCompile
   cResult[1] = tmp;
   cResult[2] = obj2;
   tmp3 = obj2;
-}) : ((arg0, location) => {
+}) : (function useGuildSpaceExperimentEnabled(arg0, location) {
   let tmp = arg0;
   if (arg0 == null) {
     tmp = EMPTY_STRING_SNOWFLAKE_ID;

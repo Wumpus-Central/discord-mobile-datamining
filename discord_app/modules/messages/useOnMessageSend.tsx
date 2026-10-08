@@ -1,6 +1,6 @@
-// === Module 16958: useOnMessageSend ===
+// === Module 17239: useOnMessageSend ===
 
-// Module 16958 (useOnMessageSend)
+// Module 17239 (useOnMessageSend)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/useOnMessageSend.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useOnMessageSend(arg0, arg1) {
   _require = arg0;
   const cResult = require("c").c(4);
   let tmp2;
@@ -68,7 +68,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   tmp4 = items;
   tmp3 = fn;
   let obj = require("c");
-}) : ((arg0) => {
+}) : (function useOnMessageSend(arg0) {
   closure_0 = arg0;
   closure_1 = tmp;
   const items = [arg0, arg1];

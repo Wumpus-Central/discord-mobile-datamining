@@ -1,10 +1,10 @@
-// === Module 11832: OptionalCommandOptionList ===
+// === Module 11917: OptionalCommandOptionList ===
 
-// Module 11832 (OptionalCommandOptionList)
+// Module 11917 (OptionalCommandOptionList)
 import util from "util" /* 1126 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import TableRow from "TableRow" /* 6000 */;
-import TableRowGroup from "TableRowGroup" /* 6081 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import TableRow from "TableRow" /* 6184 */;
+import TableRowGroup from "TableRowGroup" /* 6267 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -16,7 +16,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/screens/command_view/OptionalCommandOptionList.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function OptionalCommandOptionList(style) {
   const cResult = onSelectOption(576).c(10);
   ({ options, onSelectOption } = style);
   style = style.style;
@@ -28,7 +28,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
       if (cResult[1] === options) {
         if (cResult[5] !== cResult[2]) {
           let obj2 = { hasIcons: false, children: tmp4 };
-          const tmp10 = jsx(onSelectOption(6081).TableRowGroup, { hasIcons: false, children: tmp4 });
+          const tmp10 = jsx(onSelectOption(6267).TableRowGroup, { hasIcons: false, children: tmp4 });
           cResult[5] = tmp4;
           cResult[6] = tmp10;
           let tmp8 = tmp10;
@@ -66,8 +66,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
         obj2.onPress = function onPress() {
           return onSelectOption(closure_0);
         };
-        obj.trailing = jsx(onSelectOption(5601).Button, { accessibilityRole: "none", variant: "tertiary", size: "sm", shrink: true, text: null, onPress: null });
-        return jsx(onSelectOption(6000).TableRow, {
+        obj.trailing = jsx(onSelectOption(5375).Button, { accessibilityRole: "none", variant: "tertiary", size: "sm", shrink: true, text: null, onPress: null });
+        return jsx(onSelectOption(6184).TableRow, {
           onPress() {
             return onSelectOption(closure_0);
           },
@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
     cResult[2] = mapped;
   }
   let obj = onSelectOption(576);
-}) : ((arg0) => {
+}) : (function OptionalCommandOptionList(arg0) {
   ({ options, onSelectOption: require } = arg0);
   let tmp2 = null;
   if (0 !== options.length) {

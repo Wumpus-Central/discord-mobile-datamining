@@ -1,13 +1,13 @@
-// === Module 17559: HolidayEventsUtils ===
+// === Module 17841: HolidayEventsUtils ===
 
-// Module 17559 (HolidayEventsUtils)
+// Module 17841 (HolidayEventsUtils)
 import c from "c" /* 576 */;
-import HolidayEventsConfigDefault from "HolidayEventsConfig" /* 17555 */;
+import HolidayEventsConfigDefault from "HolidayEventsConfig" /* 17837 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 let ReactCompilerGating = ReactCompilerGating_mod;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsEligible() {
   const cResult = c.c(2);
   const isExperimentEligible = HolidayEventsConfigDefault.useIsExperimentEligible();
   if (cResult[0] !== isExperimentEligible) {
@@ -21,7 +21,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp5 = cResult[1];
   }
   return tmp5;
-}) : (() => {
+}) : (function useIsEligible() {
   const isExperimentEligible = HolidayEventsConfigDefault.useIsExperimentEligible();
   const timestamp = Date.now();
   return timestamp >= HolidayEventsConfigDefault.startTimeMs && timestamp <= HolidayEventsConfigDefault.endTimeMs && isExperimentEligible;
@@ -40,7 +40,7 @@ let obj = {
   getHolidaySoundpack: null
 };
 let ReactCompilerGating = ReactCompilerGating_mod;
-obj.useHolidaySoundpack = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+obj.useHolidaySoundpack = ReactCompilerGating.isReactCompilerEnabled() ? (function useHolidaySoundpack() {
   const cResult = c.c(2);
   const tmp3 = closure_3();
   if (cResult[0] !== tmp3) {
@@ -62,7 +62,7 @@ obj.useHolidaySoundpack = ReactCompilerGating.isReactCompilerEnabled() ? (() => 
     tmp4 = cResult[1];
   }
   return tmp4;
-}) : (() => {
+}) : (function useHolidaySoundpack() {
   let tmp = null;
   if (closure_3()) {
     tmp = null;

@@ -1,17 +1,17 @@
-// === Module 17316: ActivityShelfItemBackground ===
+// === Module 17597: ActivityShelfItemBackground ===
 
-// Module 17316 (ActivityShelfItemBackground)
+// Module 17597 (ActivityShelfItemBackground)
 import c from "c" /* 576 */;
-import NativeViewDefault from "NativeView" /* 5983 */;
-import BrokenImageDefault from "BrokenImage" /* 11723 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import NativeViewDefault from "NativeView" /* 6166 */;
+import BrokenImageDefault from "BrokenImage" /* 11788 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const Image = fn(17).Image;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
-let closure_7 = createStyles.createStyles((aspectRatio) => {
+const createStyles = fn(5090);
+let closure_6 = createStyles.createStyles((aspectRatio) => {
   const obj = { previewImage: { alignItems: "center", justifyContent: "center", backgroundColor: "black" }, activityImage: { width: "100%", aspectRatio } };
   return obj;
 });
@@ -19,128 +19,97 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/activities/ActivityShelfItemBackground.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((aspectRatio) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ActivityShelfItemBackground(aspectRatio) {
   const cResult = c.c(15);
   ({ imageBackground, accessibilityLabel } = aspectRatio);
-  const tmp3 = closure_7(aspectRatio.aspectRatio);
+  const tmp3 = closure_6(aspectRatio.aspectRatio);
   const tmp4 = _slicedToArray(noop.useState(false), 2);
-  _require = tmp4[1];
+  closure_0 = tmp4[1];
   if ("not-found" !== imageBackground.state) {
     if (!tmp4[0]) {
       if ("loading" !== imageBackground.state) {
         if (null != imageBackground.url) {
           const _Symbol = Symbol;
           if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-            class I {
-              constructor() {
-                return closure_0(true);
-              }
-            }
-            cResult[5] = I;
+            const fn = function y() {
+              return closure_0(true);
+            };
+            cResult[5] = fn;
+            let tmp5 = fn;
           } else {
-            class I {
-              constructor() {
-                return closure_0(true);
-              }
-            }
+            tmp5 = cResult[5];
           }
           if (cResult[6] !== imageBackground.url) {
-            class I {
-              constructor() {
-                return closure_0(true);
-              }
-            }
-            tmp7[0] = imageBackground.url;
+            const obj2 = { uri: imageBackground.url };
             cResult[6] = imageBackground.url;
-            cResult[7] = tmp7;
+            cResult[7] = obj2;
+            let tmp6 = obj2;
           } else {
-            class I {
-              constructor() {
-                return closure_0(true);
-              }
-            }
+            tmp6 = cResult[7];
           }
           if (accessibilityLabel == null) {
-            class I {
-              constructor() {
-                return closure_0(true);
-              }
-            }
+            accessibilityLabel = "";
           }
           if (cResult[8] === tmp3.activityImage) {
-            class I {
-              constructor() {
-                return closure_0(true);
+            if (cResult[9] === tmp6) {
+              if (cResult[10] === accessibilityLabel) {
+                let tmp7 = cResult[11];
               }
+              if (cResult[12] === tmp3.previewImage) {
+                if (cResult[13] === tmp7) {
+                  let tmp11 = cResult[14];
+                }
+                return tmp11;
+              }
+              const obj3 = { style: tmp3.previewImage, children: tmp7 };
+              const tmp14 = jsx(NativeViewDefault, { style: tmp3.previewImage, children: tmp7 });
+              cResult[12] = tmp3.previewImage;
+              cResult[13] = tmp7;
+              cResult[14] = tmp14;
+              tmp11 = tmp14;
             }
           }
-          const obj2 = { onError: I, source: tmp7, style: tmp3.activityImage, accessibilityRole: "image", accessibilityLabel };
-          const tmp11 = <Image onError={I} source={tmp7} style={tmp3.activityImage} accessibilityRole="image" accessibilityLabel={accessibilityLabel} />;
+          const obj4 = { onError: tmp5, source: tmp6, style: tmp3.activityImage, accessibilityRole: "image", accessibilityLabel };
+          const tmp10 = jsx(FastImageDefault, { onError: tmp5, source: tmp6, style: tmp3.activityImage, accessibilityRole: "image", accessibilityLabel });
           cResult[8] = tmp3.activityImage;
-          cResult[9] = tmp7;
+          cResult[9] = tmp6;
           cResult[10] = accessibilityLabel;
-          cResult[11] = tmp11;
+          cResult[11] = tmp10;
+          tmp7 = tmp10;
         }
       }
       if (cResult[3] !== tmp3.previewImage) {
-        class I {
-          constructor() {
-            return closure_0(true);
-          }
-        }
-        const obj3 = { style: tmp3.previewImage };
-        const tmp14 = jsx(NativeViewDefault, { style: tmp3.previewImage });
+        const obj5 = { style: tmp3.previewImage };
+        const tmp18 = jsx(NativeViewDefault, { style: tmp3.previewImage });
         cResult[3] = tmp3.previewImage;
-        cResult[4] = tmp14;
-        const tmp12 = tmp14;
+        cResult[4] = tmp18;
+        let tmp15 = tmp18;
       } else {
-        class I {
-          constructor() {
-            return closure_0(true);
-          }
-        }
+        tmp15 = cResult[4];
       }
-      return tmp12;
+      return tmp15;
     }
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    class I {
-      constructor() {
-        return closure_0(true);
-      }
-    }
-    const tmp17 = jsx(BrokenImageDefault, {});
-    cResult[0] = tmp17;
-    const tmp15 = tmp17;
+    const tmp22 = jsx(BrokenImageDefault, {});
+    cResult[0] = tmp22;
+    let first = tmp22;
   } else {
-    class I {
-      constructor() {
-        return closure_0(true);
-      }
-    }
+    first = cResult[0];
   }
   if (cResult[1] !== tmp3.previewImage) {
-    class I {
-      constructor() {
-        return closure_0(true);
-      }
-    }
-    const obj4 = { style: tmp3.previewImage, children: tmp15 };
-    const tmp20 = jsx(NativeViewDefault, { style: tmp3.previewImage, children: tmp15 });
+    const obj6 = { style: tmp3.previewImage, children: first };
+    const tmp26 = jsx(NativeViewDefault, { style: tmp3.previewImage, children: first });
     cResult[1] = tmp3.previewImage;
-    cResult[2] = tmp20;
-    const tmp18 = tmp20;
+    cResult[2] = tmp26;
+    let tmp23 = tmp26;
   } else {
-    class I {
-      constructor() {
-        return closure_0(true);
-      }
-    }
+    tmp23 = cResult[2];
   }
-  return tmp18;
-}) : ((aspectRatio) => {
+  return tmp23;
+}) : (function ActivityShelfItemBackground(aspectRatio) {
   ({ imageBackground, accessibilityLabel } = aspectRatio);
-  const tmp = closure_7(aspectRatio.aspectRatio);
+  const tmp = closure_6(aspectRatio.aspectRatio);
   const tmp2 = _slicedToArray(noop.useState(false), 2);
   closure_0 = tmp2[1];
   if ("not-found" !== imageBackground.state) {
@@ -164,10 +133,16 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((aspect
             accessibilityLabel = "";
           }
           obj3.accessibilityLabel = accessibilityLabel;
-          obj2.children = <Image onError={function onError() {
-            return closure_0(true);
-          }} source={null} style={null} accessibilityRole="image" accessibilityLabel={null} />;
-          let tmp9Result = jsx(NativeViewDefault, { style: tmp.previewImage, children: null });
+          obj2.children = jsx(FastImageDefault, {
+            onError() {
+                      return closure_0(true);
+                    },
+            source: null,
+            style: null,
+            accessibilityRole: "image",
+            accessibilityLabel: null
+          });
+          let tmp9Result = <tmp12 style={tmp.previewImage}>{null}</tmp12>;
         }
       }
       const obj = { style: tmp.previewImage };

@@ -1,15 +1,15 @@
-// === Module 17750: KeywordFilterTriggerFields ===
+// === Module 18037: KeywordFilterTriggerFields ===
 
-// Module 17750 (KeywordFilterTriggerFields)
+// Module 18037 (KeywordFilterTriggerFields)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
-import TableRowGroup from "TableRowGroup" /* 6081 */;
-import KeywordsRowDefault from "KeywordsRow" /* 17744 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2127 */;
+import TableRowGroup from "TableRowGroup" /* 6267 */;
+import KeywordsRowDefault from "KeywordsRow" /* 18031 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const Constants = fn(11487);
+const Constants = fn(11473);
 ({ MAX_KEYWORDS_PER_ALLOWLIST_KEYWORD_FILTER_RULE: c3, MAX_KEYWORDS_PER_KEYWORD_FILTER: closure_4 } = Constants);
 const HelpdeskArticles = fn(1085).HelpdeskArticles;
 const jsxProd = fn(21);
@@ -18,7 +18,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/native/components/KeywordFilterTriggerFields.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((rule) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function KeywordFilterTriggerFields(rule) {
   const cResult = c.c(28);
   rule = rule.rule;
   const onChangeRule = rule.onChangeRule;
@@ -43,12 +43,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((rule) => {
       tmp7 = cResult[4];
     }
     if (cResult[5] !== tmp4) {
-      const fn2 = function x(keywordFilter) {
+      const fn = function k(keywordFilter) {
         return closure_2({ keywordFilter });
       };
       cResult[5] = tmp4;
-      cResult[6] = fn2;
-      let tmp10 = fn2;
+      cResult[6] = fn;
+      let tmp10 = fn;
     } else {
       tmp10 = cResult[6];
     }
@@ -72,44 +72,64 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((rule) => {
         tmp17 = cResult[11];
       }
       if (cResult[12] !== tmp4) {
-        const fn3 = function f(regexPatterns) {
-          return closure_2({ regexPatterns });
-        };
+        class L {
+          constructor(arg0) {
+            obj = { regexPatterns: rule };
+            return closure_2(obj);
+          }
+        }
         cResult[12] = tmp4;
-        cResult[13] = fn3;
-        let tmp22 = fn3;
+        cResult[13] = L;
       } else {
-        tmp22 = cResult[13];
+        class L {
+          constructor(arg0) {
+            obj = { regexPatterns: rule };
+            return closure_2(obj);
+          }
+        }
       }
       if (cResult[14] === regexPatterns) {
-        if (cResult[15] === tmp22) {
-          let tmp23 = cResult[16];
+        class L {
+          constructor(arg0) {
+            obj = { regexPatterns: rule };
+            return closure_2(obj);
+          }
         }
         const _Symbol3 = Symbol;
         if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
+          class L {
+            constructor(arg0) {
+              obj = { regexPatterns: rule };
+              return closure_2(obj);
+            }
+          }
+          const stringResult3 = obj6.string(util.t.lbE2Nm);
           const intl5 = util.intl;
-          const stringResult3 = intl5.string(util.t.lbE2Nm);
-          const intl6 = util.intl;
-          const stringResult4 = intl6.string(util.t.qm7UZ8);
+          const stringResult4 = intl5.string(util.t.qm7UZ8);
           cResult[17] = stringResult3;
           cResult[18] = stringResult4;
           let tmp28 = stringResult4;
-          let tmp27 = stringResult3;
+          const tmp27 = stringResult3;
         } else {
-          tmp27 = cResult[17];
+          class L {
+            constructor(arg0) {
+              obj = { regexPatterns: rule };
+              return closure_2(obj);
+            }
+          }
           tmp28 = cResult[18];
         }
         if (cResult[19] !== tmp4) {
-          class K {
+          class A {
             constructor(arg0) {
               obj = { allowList: rule };
               return closure_2(obj);
             }
           }
           cResult[19] = tmp4;
-          cResult[20] = K;
+          cResult[20] = A;
         } else {
-          class K {
+          class A {
             constructor(arg0) {
               obj = { allowList: rule };
               return closure_2(obj);
@@ -117,14 +137,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((rule) => {
           }
         }
         if (cResult[21] === allowList) {
-          class K {
+          class A {
             constructor(arg0) {
               obj = { allowList: rule };
               return closure_2(obj);
             }
           }
           if (cResult[24] === tmp32) {
-            class K {
+            class A {
               constructor(arg0) {
                 obj = { allowList: rule };
                 return closure_2(obj);
@@ -140,39 +160,38 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((rule) => {
           cResult[26] = tmp23;
           cResult[27] = tmp39;
         }
-        const obj5 = { label: tmp27, description: tmp28, type: "keywords", keywords: allowList, maxWordCount, onChangeKeywords: K };
+        const obj5 = { label: tmp27, description: tmp28, type: "keywords", keywords: allowList, maxWordCount, onChangeKeywords: A };
         const tmp36 = timestampProducer(KeywordsRowDefault, obj5);
         cResult[21] = allowList;
-        cResult[22] = K;
+        cResult[22] = A;
         cResult[23] = tmp36;
       }
-      const obj6 = { label: tmp16, description: tmp17, type: "regex", keywords: regexPatterns, onChangeKeywords: tmp22 };
-      const tmp26 = timestampProducer(KeywordsRowDefault, obj6);
+      const obj7 = { label: tmp16, description: tmp17, type: "regex", keywords: regexPatterns, onChangeKeywords: L };
+      const tmp26 = timestampProducer(KeywordsRowDefault, obj7);
       cResult[14] = regexPatterns;
-      cResult[15] = tmp22;
+      cResult[15] = L;
       cResult[16] = tmp26;
-      tmp23 = tmp26;
     }
-    const obj7 = { label: tmp6, description: tmp7, type: "keywords", keywords: keywordFilter, maxWordCount: maxWordCount2, onChangeKeywords: tmp10 };
-    const tmp15 = timestampProducer(KeywordsRowDefault, obj7);
+    const obj8 = { label: tmp6, description: tmp7, type: "keywords", keywords: keywordFilter, maxWordCount: maxWordCount2, onChangeKeywords: tmp10 };
+    const tmp15 = timestampProducer(KeywordsRowDefault, obj8);
     cResult[7] = keywordFilter;
     cResult[8] = tmp10;
     cResult[9] = tmp15;
     tmp11 = tmp15;
   }
-  const fn = function s(arg0) {
+  function changeTriggerMetadata(arg0) {
     const obj = {};
     const merged = Object.assign(rule);
     const merged1 = Object.assign(rule.triggerMetadata);
     const merged2 = Object.assign(arg0);
     obj.triggerMetadata = {};
     onChangeRule(obj);
-  };
+  }
   cResult[0] = onChangeRule;
   cResult[1] = rule;
-  cResult[2] = fn;
-  tmp4 = fn;
-}) : ((rule) => {
+  cResult[2] = changeTriggerMetadata;
+  tmp4 = changeTriggerMetadata;
+}) : (function KeywordFilterTriggerFields(rule) {
   rule = rule.rule;
   const onChangeRule = rule.onChangeRule;
   ({ keywordFilter, regexPatterns, allowList } = rule.triggerMetadata);

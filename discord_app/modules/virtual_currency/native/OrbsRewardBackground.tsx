@@ -1,13 +1,13 @@
-// === Module 10978: OrbsRewardBackground ===
+// === Module 11171: OrbsRewardBackground ===
 
-// Module 10978 (OrbsRewardBackground)
-import FastImageDefault from "FastImage" /* 5981 */;
-import _modDef10979 from "module_10979" /* 10979 */;
-import _modDef10980 from "module_10980" /* 10980 */;
+// Module 11171 (OrbsRewardBackground)
+import FastImageDefault from "FastImage" /* 6164 */;
+import _modDef11172 from "module_11172" /* 11172 */;
+import _modDef11173 from "module_11173" /* 11173 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
-import AppStateStore from "AppStateStore" /* 1986 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
+import AppStateStore from "AppStateStore" /* 1998 */;
 
 const require = fn;
 const jsxProd = fn(21);
@@ -16,7 +16,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/virtual_currency/native/OrbsRewardBackground.tsx");
 
-export const OrbsRewardBackground = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const OrbsRewardBackground = ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsRewardBackground(arg0) {
   const cResult = onReady(576).c(20);
   ({ style, onReady } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -49,128 +49,99 @@ export const OrbsRewardBackground = ReactCompilerGating.isReactCompilerEnabled()
   const tmpResult = onReady(504);
   const stateFromStores1 = onReady(504).useStateFromStores(tmp8, tmp9);
   const tmpResult2 = onReady(504);
-  [tmp13, importDefault] = noop.useState(false);
-  const tmp12 = _slicedToArray(noop.useState(false), 2);
-  dependencyMap = _slicedToArray(noop.useState(false), 2)[1];
+  [tmp13, importDefault] = first(noop.useState(false), 2);
+  const tmp14 = first(noop.useState(false), 2);
+  dependencyMap = tmp14[1];
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    class R {
-      constructor() {
-        return closure_1(true);
-      }
-    }
-    cResult[4] = R;
+    const fn3 = function k() {
+      return importDefault(true);
+    };
+    cResult[4] = fn3;
+    let tmp15 = fn3;
   } else {
-    class R {
-      constructor() {
-        return closure_1(true);
-      }
-    }
+    tmp15 = cResult[4];
   }
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    class B {
-      constructor() {
-        return closure_2(true);
-      }
-    }
-    cResult[5] = B;
+    const fn4 = function w() {
+      return closure_2(true);
+    };
+    cResult[5] = fn4;
+    let tmp16 = fn4;
   } else {
-    class B {
-      constructor() {
-        return closure_2(true);
-      }
-    }
+    tmp16 = cResult[5];
   }
-  if (!tmp17) {
-    class B {
-      constructor() {
-        return closure_2(true);
-      }
-    }
+  if (!tmp13) {
+    first = !stateFromStores;
     if (!stateFromStores) {
-      class B {
-        constructor() {
-          return closure_2(true);
-        }
-      }
+      first = tmp14[0];
     }
   }
-  _slicedToArray = tmp17;
+  first = tmp13;
   noop = obj4.useRef(false);
-  if (cResult[6] === tmp17) {
-    class B {
-      constructor() {
-        return closure_2(true);
-      }
+  if (cResult[6] === tmp13) {
+    if (cResult[7] === onReady) {
+      let tmp18 = cResult[8];
+      let tmp19 = cResult[9];
     }
-    const effect = obj4.useEffect(L, items2);
+    const effect = obj4.useEffect(tmp18, tmp19);
     const _Symbol = Symbol;
     if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-      class B {
-        constructor() {
-          return closure_2(true);
-        }
-      }
-      tmp20[0] = _modDef10979;
-      cResult[10] = tmp20;
+      const obj2 = { uri: _modDef11172 };
+      cResult[10] = obj2;
+      let tmp21 = obj2;
     } else {
-      class B {
-        constructor() {
-          return closure_2(true);
-        }
-      }
+      tmp21 = cResult[10];
     }
     if (cResult[11] !== style) {
-      class B {
-        constructor() {
-          return closure_2(true);
-        }
-      }
-      const obj2 = { source: tmp20, style, resizeMode: "cover", onLoad: R };
-      const tmp24 = closure_7(FastImageDefault, obj2);
+      const obj3 = { source: tmp21, style, resizeMode: "cover", onLoad: tmp15 };
+      const tmp26 = closure_7(FastImageDefault, obj3);
       cResult[11] = style;
-      cResult[12] = tmp24;
+      cResult[12] = tmp26;
+      let tmp23 = tmp26;
     } else {
-      class B {
-        constructor() {
-          return closure_2(true);
+      tmp23 = cResult[12];
+    }
+    const tmp27 = stateFromStores1 === onReady(1105).AppStates.ACTIVE;
+    if (cResult[13] === tmp27) {
+      if (cResult[14] === stateFromStores) {
+        if (cResult[15] === style) {
+          let tmp28 = cResult[16];
         }
+        if (cResult[17] === tmp23) {
+          if (cResult[18] === tmp28) {
+            let tmp32 = cResult[19];
+          }
+          return tmp32;
+        }
+        const obj5 = { children: null };
+        const items2 = [tmp23, tmp28];
+        obj5.children = items2;
+        const tmp34 = closure_8(obj4.Fragment, obj5);
+        cResult[17] = tmp23;
+        cResult[18] = tmp28;
+        cResult[19] = tmp34;
+        tmp32 = tmp34;
       }
     }
-    const tmp25 = stateFromStores1 === onReady(1105).AppStates.ACTIVE;
-    if (cResult[13] === tmp25) {
-      class B {
-        constructor() {
-          return closure_2(true);
-        }
-      }
-    }
-    let tmp27 = !stateFromStores;
+    let tmp29 = !stateFromStores;
     if (!stateFromStores) {
-      class B {
-        constructor() {
-          return closure_2(true);
-        }
-      }
+      tmp29 = tmp27;
     }
-    if (tmp27) {
-      class B {
-        constructor() {
-          return closure_2(true);
-        }
-      }
-      const obj3 = { source: null, style: null, resizeMode: "cover", onLoad: null, disableFocus: true, playInBackground: true, preventsDisplaySleepDuringVideoPlayback: false };
-      const obj5 = { uri: _modDef10980 };
-      obj3.source = obj5;
-      obj3.style = style;
-      obj3.onLoad = B;
-      tmp27 = closure_7(onReady(7993).VideoComponent, obj3);
+    if (tmp29) {
+      const obj6 = { source: null, style: null, resizeMode: "cover", onLoad: null, disableFocus: true, playInBackground: true, preventsDisplaySleepDuringVideoPlayback: false };
+      const obj7 = { uri: _modDef11173 };
+      obj6.source = obj7;
+      obj6.style = style;
+      obj6.onLoad = tmp16;
+      tmp29 = closure_7(onReady(8401).VideoComponent, obj6);
     }
-    cResult[13] = tmp25;
+    cResult[13] = tmp27;
     cResult[14] = stateFromStores;
     cResult[15] = style;
-    cResult[16] = tmp27;
+    cResult[16] = tmp29;
+    tmp28 = tmp29;
   }
-  class L {
+  class A {
     constructor() {
       tmp = closure_3;
       if (closure_3) {
@@ -187,13 +158,15 @@ export const OrbsRewardBackground = ReactCompilerGating.isReactCompilerEnabled()
       return;
     }
   }
-  items2 = [tmp17, onReady];
-  cResult[6] = tmp17;
+  const items3 = [tmp13, onReady];
+  cResult[6] = tmp13;
   cResult[7] = onReady;
-  cResult[8] = L;
-  cResult[9] = items2;
-  const tmp14 = _slicedToArray(noop.useState(false), 2);
-}) : ((arg0) => {
+  cResult[8] = A;
+  cResult[9] = items3;
+  tmp19 = items3;
+  tmp18 = A;
+  const tmp12 = first(noop.useState(false), 2);
+}) : (function OrbsRewardBackground(arg0) {
   ({ style, onReady } = arg0);
   importDefault = undefined;
   dependencyMap = undefined;
@@ -229,7 +202,7 @@ export const OrbsRewardBackground = ReactCompilerGating.isReactCompilerEnabled()
   const obj4 = { source: null, style: null, resizeMode: "cover", onLoad: null };
   const obj5 = { uri: null };
   const tmp7 = _slicedToArray(noop.useState(false), 2);
-  obj5.uri = _modDef10979;
+  obj5.uri = _modDef11172;
   obj4.source = obj5;
   obj4.style = style;
   obj4.onLoad = callback;
@@ -240,11 +213,11 @@ export const OrbsRewardBackground = ReactCompilerGating.isReactCompilerEnabled()
   }
   if (tmp14Result) {
     const obj6 = { source: null, style: null, resizeMode: "cover", onLoad: null, disableFocus: true, playInBackground: true, preventsDisplaySleepDuringVideoPlayback: false };
-    const obj7 = { uri: _modDef10980 };
+    const obj7 = { uri: _modDef11173 };
     obj6.source = obj7;
     obj6.style = style;
     obj6.onLoad = callback1;
-    tmp14Result = closure_7(onReady(7993).VideoComponent, obj6);
+    tmp14Result = closure_7(onReady(8401).VideoComponent, obj6);
   }
   children[1] = tmp14Result;
   return closure_8(noop.Fragment, { children });

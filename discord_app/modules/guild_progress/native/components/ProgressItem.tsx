@@ -1,15 +1,15 @@
-// === Module 12150: ProgressItem ===
+// === Module 12229: ProgressItem ===
 
-// Module 12150 (ProgressItem)
+// Module 12229 (ProgressItem)
 import nativeDefault from "native" /* 587 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5076 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5105 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { formCTAContainer: { marginBottom: 8 }, formCTA: { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT }, formCTAFullWidth: { width: "100%" } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -17,7 +17,7 @@ let obj3 = { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_progress/native/components/ProgressItem.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((isCompleted) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ProgressItem(isCompleted) {
   const cResult = onPress(analyticsSetupType[7]).c(22);
   ({ title, source, onPress } = isCompleted);
   isCompleted = isCompleted.isCompleted;
@@ -103,7 +103,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((isCompleted) => 
       }
     }
   }
-  const fn = function s() {
+  const fn = function c() {
     let tmp2 = null != analyticsAction;
     if (tmp2) {
       tmp2 = null != analyticsSetupType;
@@ -121,7 +121,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((isCompleted) => 
   cResult[4] = fn;
   tmp5 = fn;
   let obj = onPress(analyticsSetupType[7]);
-}) : ((onPress) => {
+}) : (function ProgressItem(onPress) {
   onPress = onPress.onPress;
   const isCompleted = onPress.isCompleted;
   const analyticsSetupType = onPress.analyticsSetupType;

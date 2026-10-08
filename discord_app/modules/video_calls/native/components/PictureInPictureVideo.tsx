@@ -1,32 +1,32 @@
-// === Module 9122: PictureInPictureVideo ===
+// === Module 10695: PictureInPictureVideo ===
 
-// Module 9122 (PictureInPictureVideo)
+// Module 10695 (PictureInPictureVideo)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native2 from "native" /* 1188 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
-import useToken2 from "useToken" /* 4586 */;
-import _modDef4814 from "module_4814" /* 4814 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5097 */;
-import useAvatarColorDefault from "useAvatarColor" /* 7826 */;
-import transitionToActivityDefault from "transitionToActivity" /* 9085 */;
-import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 9104 */;
-import usePipDimensionsDefault from "usePipDimensions" /* 9107 */;
-import useIsViewingActivity from "useIsViewingActivity" /* 9108 */;
-import VideoRenderer from "VideoRenderer" /* 9140 */;
-import UserTileDefault from "UserTile" /* 9155 */;
-import useAvatarSpeakingColor from "useAvatarSpeakingColor" /* 9157 */;
+import native2 from "native" /* 1200 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
+import useToken2 from "useToken" /* 4778 */;
+import _modDef5008 from "module_5008" /* 5008 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5104 */;
+import useAvatarColorDefault from "useAvatarColor" /* 8244 */;
+import transitionToActivityDefault from "transitionToActivity" /* 10668 */;
+import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 10678 */;
+import usePipDimensionsDefault from "usePipDimensions" /* 10681 */;
+import useIsViewingActivity from "useIsViewingActivity" /* 10682 */;
+import VideoRenderer from "VideoRenderer" /* 10710 */;
+import UserTileDefault from "UserTile" /* 10721 */;
+import useAvatarSpeakingColor from "useAvatarSpeakingColor" /* 10723 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2062 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6041 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import SpeakingStore from "SpeakingStore" /* 5583 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 9101 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
+import SpeakingStore from "SpeakingStore" /* 5952 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 10675 */;
 
 require = fn;
 function areParticipantsEqual(arg0, arg1) {
@@ -36,15 +36,15 @@ function areParticipantsEqual(arg0, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(9086);
+const ChannelCallStore = fn(10333);
 ({ togglePipFocus: map1, useIsVoiceChatFocused: closure_14 } = ChannelCallStore);
-const ParticipantTypes = fn(4917).ParticipantTypes;
+const ParticipantTypes = fn(5113).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { elevationShadow: null, background: null, backgroundPipFab: null, pip: null, pipFab: null, avatarContainer: null, activityPipContainer: null, thermalAlertIconContainer: null, thermalAlertIcon: null };
-const native = fn(1188);
-obj.elevationShadow = native.generateBoxShadowStyle(fn(1188).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
+const native = fn(1200);
+obj.elevationShadow = native.generateBoxShadowStyle(fn(1200).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
 obj.background = { backgroundColor: nativeDefault.colors.BLACK, borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 let obj3 = { backgroundColor: nativeDefault.colors.BLACK, borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 obj.backgroundPipFab = { backgroundColor: nativeDefault.colors.BLACK, borderRadius: nativeDefault.radii.lg };
@@ -59,7 +59,7 @@ let size = { width: 14, height: 14, color: nativeDefault.colors.WHITE };
 obj.thermalAlertIcon = size;
 let closure_19 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
-let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function PictureInPictureVideo(channel) {
   const cResult = channel(openVoice[17]).c(42);
   channel = channel.channel;
   const pipParticipant = channel.pipParticipant;
@@ -86,6 +86,9 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((chan
     if (pipParticipant != null) {
       type = pipParticipant.type;
     }
+    if (cResult[1] === type) {
+      let tmp12 = cResult[2];
+    }
     const _Symbol = Symbol;
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
       const items = [MediaEngineStore];
@@ -95,7 +98,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((chan
       tmp20 = cResult[3];
     }
     if (cResult[4] !== pipParticipant) {
-      const fn = function y() {
+      const fn = function b() {
         let isLocalVideoDisabledResult = null != pipParticipant;
         if (isLocalVideoDisabledResult) {
           isLocalVideoDisabledResult = MediaEngineStore.isLocalVideoDisabled(tmp.id);
@@ -143,54 +146,12 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((chan
                     if (tmp8(tmp2[27])(pipParticipant)) {
                       tmp37 = null;
                       if (!stateFromStores) {
-                        const obj3 = { participant: pipParticipant, avatarSize: tmp(tmp2[14]).AvatarSizes.PROFILE, resizeMode: null, onSingleTap: null, onDoubleTap: null };
-                        class V {
-                          constructor() {
-                            if (closure_3) {
-                              tmp = noop;
-                              tmp2 = noop();
-                            }
-                            if (closure_4) {
-                              tmp5 = closure_1;
-                              tmp6 = closure_2;
-                              obj = closure_1(closure_2[23]);
-                              tmp7 = channel;
-                              tmp8 = null;
-                              participant = obj.selectParticipant(channel.id, null);
-                            } else {
-                              tmp3 = togglePipFocus;
-                              tmp4 = togglePipFocus();
-                            }
-                            return;
-                          }
-                        }
-                        obj3.onSingleTap = tmp28;
-                        obj3.onDoubleTap = tmp28;
+                        const obj3 = { participant: pipParticipant, avatarSize: tmp(tmp2[14]).AvatarSizes.PROFILE, resizeMode: tmp(tmp2[26]).ResizeMode.COVER, onSingleTap: tmp28, onDoubleTap: tmp28 };
                         tmp37 = closure_16(tmp8(tmp2[28]), obj3);
                         const tmp8Result = tmp8(tmp2[28]);
                       }
                     }
                     cResult[22] = stateFromStores;
-                    class V {
-                      constructor() {
-                        if (closure_3) {
-                          tmp = noop;
-                          tmp2 = noop();
-                        }
-                        if (closure_4) {
-                          tmp5 = closure_1;
-                          tmp6 = closure_2;
-                          obj = closure_1(closure_2[23]);
-                          tmp7 = channel;
-                          tmp8 = null;
-                          participant = obj.selectParticipant(channel.id, null);
-                        } else {
-                          tmp3 = togglePipFocus;
-                          tmp4 = togglePipFocus();
-                        }
-                        return;
-                      }
-                    }
                     cResult[23] = tmp28;
                     cResult[24] = pipParticipant;
                     cResult[25] = tmp37;
@@ -216,28 +177,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((chan
                             return;
                           }
                         }
-                        const obj4 = { participant: pipParticipant, channel: null, onSingleTap: null };
-                        class V {
-                          constructor() {
-                            if (closure_3) {
-                              tmp = noop;
-                              tmp2 = noop();
-                            }
-                            if (closure_4) {
-                              tmp5 = closure_1;
-                              tmp6 = closure_2;
-                              obj = closure_1(closure_2[23]);
-                              tmp7 = channel;
-                              tmp8 = null;
-                              participant = obj.selectParticipant(channel.id, null);
-                            } else {
-                              tmp3 = togglePipFocus;
-                              tmp4 = togglePipFocus();
-                            }
-                            return;
-                          }
-                        }
-                        obj4.onSingleTap = tmp31;
+                        const obj4 = { participant: pipParticipant, channel, onSingleTap: tmp31 };
                         const tmp34 = closure_16(tmp8(tmp2[30]), obj4);
                         cResult[30] = channel;
                         cResult[31] = pipParticipant;
@@ -262,26 +202,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((chan
                       }
                     }
                     cResult[26] = channel.guild_id;
-                    class V {
-                      constructor() {
-                        if (closure_3) {
-                          tmp = noop;
-                          tmp2 = noop();
-                        }
-                        if (closure_4) {
-                          tmp5 = closure_1;
-                          tmp6 = closure_2;
-                          obj = closure_1(closure_2[23]);
-                          tmp7 = channel;
-                          tmp8 = null;
-                          participant = obj.selectParticipant(channel.id, null);
-                        } else {
-                          tmp3 = togglePipFocus;
-                          tmp4 = togglePipFocus();
-                        }
-                        return;
-                      }
-                    }
+                    cResult[27] = tmp7;
                     cResult[28] = openVoice;
                     cResult[29] = Y;
                     tmp31 = Y;
@@ -306,52 +227,14 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((chan
                       }
                     }
                   }
-                  class V {
-                    constructor() {
-                      if (closure_3) {
-                        tmp = noop;
-                        tmp2 = noop();
-                      }
-                      if (closure_4) {
-                        tmp5 = closure_1;
-                        tmp6 = closure_2;
-                        obj = closure_1(closure_2[23]);
-                        tmp7 = channel;
-                        tmp8 = null;
-                        participant = obj.selectParticipant(channel.id, null);
-                      } else {
-                        tmp3 = togglePipFocus;
-                        tmp4 = togglePipFocus();
-                      }
-                      return;
-                    }
-                  }
+                  cResult[34] = tmp12;
                   cResult[35] = tmp7;
                   cResult[36] = openVoice;
                   cResult[37] = selfParticipant;
                   cResult[38] = tmp50;
                 }
               }
-              class V {
-                constructor() {
-                  if (closure_3) {
-                    tmp = noop;
-                    tmp2 = noop();
-                  }
-                  if (closure_4) {
-                    tmp5 = closure_1;
-                    tmp6 = closure_2;
-                    obj = closure_1(closure_2[23]);
-                    tmp7 = channel;
-                    tmp8 = null;
-                    participant = obj.selectParticipant(channel.id, null);
-                  } else {
-                    tmp3 = togglePipFocus;
-                    tmp4 = togglePipFocus();
-                  }
-                  return;
-                }
-              }
+              const _Symbol2 = Symbol;
               if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
                 class Y {
                   constructor() {
@@ -415,26 +298,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((chan
                 obj6.resizeMode = tmp(tmp2[26]).ResizeMode.CONTAIN;
                 obj6.participant = pipParticipant;
                 obj6.onSingleTap = tmp28;
-                class V {
-                  constructor() {
-                    if (closure_3) {
-                      tmp = noop;
-                      tmp2 = noop();
-                    }
-                    if (closure_4) {
-                      tmp5 = closure_1;
-                      tmp6 = closure_2;
-                      obj = closure_1(closure_2[23]);
-                      tmp7 = channel;
-                      tmp8 = null;
-                      participant = obj.selectParticipant(channel.id, null);
-                    } else {
-                      tmp3 = togglePipFocus;
-                      tmp4 = togglePipFocus();
-                    }
-                    return;
-                  }
-                }
+                obj6.onDoubleTap = tmp28;
                 tmp44Result = closure_16(tmp45, obj6);
               }
               cResult[17] = pipParticipant.user.id === tmp40;
@@ -445,32 +309,22 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((chan
             }
           }
         }
-        class V {
-          constructor() {
-            if (closure_3) {
-              tmp = noop;
-              tmp2 = noop();
-            }
-            if (closure_4) {
-              tmp5 = closure_1;
-              tmp6 = closure_2;
-              obj = closure_1(closure_2[23]);
-              tmp7 = channel;
-              tmp8 = null;
-              participant = obj.selectParticipant(channel.id, null);
-            } else {
-              tmp3 = togglePipFocus;
-              tmp4 = togglePipFocus();
-            }
-            return;
+        function onPipTap() {
+          if (closure_3) {
+            openVoice();
+          }
+          if (closure_4) {
+            const participant = ChannelRTCActionCreatorsDefault.selectParticipant(channel.id, null);
+          } else {
+            __initData2();
           }
         }
         cResult[11] = channel.id;
         cResult[12] = tmp9;
         cResult[13] = tmp7;
         cResult[14] = openVoice;
-        cResult[15] = V;
-        tmp28 = V;
+        cResult[15] = onPipTap;
+        tmp28 = onPipTap;
       }
     }
     cResult[7] = tmp7;
@@ -479,7 +333,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((chan
     if (pipParticipant != null) {
       id1 = pipParticipant.id;
     }
-    const fn2 = function k() {
+    function onScreenshareTap() {
       const voiceChannelId = SelectedChannelStore.getVoiceChannelId();
       if (null != voiceChannelId) {
         let id;
@@ -494,10 +348,10 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((chan
           openVoice();
         }
       }
-    };
+    }
     cResult[9] = id1;
-    cResult[10] = fn2;
-    tmp26 = fn2;
+    cResult[10] = onScreenshareTap;
+    tmp26 = onScreenshareTap;
     const tmpResult = tmp(tmp2[22]);
   }
   let type2;
@@ -539,8 +393,9 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((chan
   }
   cResult[1] = type3;
   cResult[2] = tmp15Result;
+  tmp12 = tmp15Result;
   const obj2 = channel(openVoice[18]);
-}) : ((channel) => {
+}) : (function PictureInPictureVideo(channel) {
   channel = channel.channel;
   const pipParticipant = channel.pipParticipant;
   const selfParticipant = channel.selfParticipant;
@@ -679,7 +534,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((chan
   const tmpResult = channel(openVoice[22]);
 }));
 ReactCompilerGating = fn(558);
-let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function useActivityPipParticipant(channelId) {
   const cResult = channelId(leadingEdgeDebounce[17]).c(18);
   channelId = channelId.channelId;
   const selfParticipant = channelId.selfParticipant;
@@ -705,7 +560,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
     tmp8 = cResult[2];
   }
   if (cResult[3] !== channelId) {
-    const fn2 = function h() {
+    const fn2 = function v() {
       const items = [ChannelRTCStore.getParticipants(channelId), ChannelRTCStore.getVideoParticipants(channelId), ChannelRTCStore.getParticipantsVersion(channelId)];
       return items;
     };
@@ -795,48 +650,108 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
       }
     }
     if (cResult[13] !== leadingEdgeDebounce) {
-      class V {
-        constructor(arg0) {
-          return channelId.id === closure_2;
+      class A {
+        constructor() {
+          found = null;
+          if (null != selfParticipant) {
+            tmp2 = closure_11;
+            speakers = closure_11.getSpeakers();
+            found = speakers.find((item) => {
+              let isSpeakingResult = item !== user.user.id;
+              if (isSpeakingResult) {
+                isSpeakingResult = speaking.isSpeaking(item);
+              }
+              return isSpeakingResult;
+            });
+          }
+          return found;
         }
       }
       cResult[13] = leadingEdgeDebounce;
-      cResult[14] = V;
+      cResult[14] = tmp20;
     } else {
-      class V {
-        constructor(arg0) {
-          return channelId.id === closure_2;
+      class A {
+        constructor() {
+          found = null;
+          if (null != selfParticipant) {
+            tmp2 = closure_11;
+            speakers = closure_11.getSpeakers();
+            found = speakers.find((item) => {
+              let isSpeakingResult = item !== user.user.id;
+              if (isSpeakingResult) {
+                isSpeakingResult = speaking.isSpeaking(item);
+              }
+              return isSpeakingResult;
+            });
+          }
+          return found;
         }
       }
     }
-    let found = arr4.find(V);
+    let found = arr4.find(tmp20);
     cResult[10] = arr4;
     cResult[11] = leadingEdgeDebounce;
     cResult[12] = found;
   }
   if (selfParticipant != null) {
-    class V {
-      constructor(arg0) {
-        return channelId.id === closure_2;
+    class A {
+      constructor() {
+        found = null;
+        if (null != selfParticipant) {
+          tmp2 = closure_11;
+          speakers = closure_11.getSpeakers();
+          found = speakers.find((item) => {
+            let isSpeakingResult = item !== user.user.id;
+            if (isSpeakingResult) {
+              isSpeakingResult = speaking.isSpeaking(item);
+            }
+            return isSpeakingResult;
+          });
+        }
+        return found;
       }
     }
   }
   if (null != undefined) {
-    class V {
-      constructor(arg0) {
-        return channelId.id === closure_2;
+    class A {
+      constructor() {
+        found = null;
+        if (null != selfParticipant) {
+          tmp2 = closure_11;
+          speakers = closure_11.getSpeakers();
+          found = speakers.find((item) => {
+            let isSpeakingResult = item !== user.user.id;
+            if (isSpeakingResult) {
+              isSpeakingResult = speaking.isSpeaking(item);
+            }
+            return isSpeakingResult;
+          });
+        }
+        return found;
       }
     }
   } else {
-    class V {
-      constructor(arg0) {
-        return channelId.id === closure_2;
+    class A {
+      constructor() {
+        found = null;
+        if (null != selfParticipant) {
+          tmp2 = closure_11;
+          speakers = closure_11.getSpeakers();
+          found = speakers.find((item) => {
+            let isSpeakingResult = item !== user.user.id;
+            if (isSpeakingResult) {
+              isSpeakingResult = speaking.isSpeaking(item);
+            }
+            return isSpeakingResult;
+          });
+        }
+        return found;
       }
     }
     return selfParticipant;
   }
   const tmpResult6 = channelId(leadingEdgeDebounce[31]);
-}) : ((channelId) => {
+}) : (function useActivityPipParticipant(channelId) {
   channelId = channelId.channelId;
   const selfParticipant = channelId.selfParticipant;
   let leadingEdgeDebounce;
@@ -906,7 +821,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
   const obj4 = channelId(leadingEdgeDebounce[31]);
 });
 ReactCompilerGating = fn(558);
-let closure_23 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_23 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ActivityPictureInPictureVideo(arg0) {
   const cResult = c.c(30);
   ({ channel, selfParticipant } = arg0);
   const tmp4 = closure_19();
@@ -1005,7 +920,7 @@ let closure_23 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
                       let tmp39 = null;
                       if (tmp9) {
                         const obj4 = { style: tmp4.thermalAlertIconContainer, children: null };
-                        const obj5 = { style: tmp4.thermalAlertIcon, source: _modDef4814, color: tmp4.thermalAlertIcon.color };
+                        const obj5 = { style: tmp4.thermalAlertIcon, source: _modDef5008, color: tmp4.thermalAlertIcon.color };
                         obj4.children = value2(native2.Icon, obj5);
                         tmp39 = value2(hasOwnProperty, obj4);
                       }
@@ -1072,7 +987,7 @@ let closure_23 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
   cResult[4] = obj10;
   tmp11 = obj10;
   const tmp8 = _slicedToArray(initialize.useStateFromStoresArray(tmp5, tmp6), 2);
-}) : ((channel) => {
+}) : (function ActivityPictureInPictureVideo(channel) {
   channel = channel.channel;
   const tmp = closure_19();
   let items = [ChannelCallLifecycleStore];
@@ -1124,7 +1039,7 @@ let closure_23 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
       let tmp18Result = null;
       if (tmp5) {
         const obj8 = { style: tmp.thermalAlertIconContainer, children: null };
-        const obj9 = { style: tmp.thermalAlertIcon, source: _modDef4814, color: tmp.thermalAlertIcon.color };
+        const obj9 = { style: tmp.thermalAlertIcon, source: _modDef5008, color: tmp.thermalAlertIcon.color };
         obj8.children = tmp18(native2.Icon, obj9);
         tmp18Result = tmp18(hasOwnProperty, obj8);
       }
@@ -1145,7 +1060,7 @@ let obj7 = { borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/components/PictureInPictureVideo.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function PipctureInPictureVideoContainer(arg0) {
   const cResult = c.c(28);
   ({ channel, pipParticipant, selfParticipant } = arg0);
   let activityPipContainer = closure_19();
@@ -1276,7 +1191,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   cResult[6] = obj11;
   tmp8 = obj11;
   const tmpResult3 = useShouldForcePipOrientation;
-}) : ((arg0) => {
+}) : (function PipctureInPictureVideoContainer(arg0) {
   ({ channel, pipParticipant, selfParticipant } = arg0);
   const tmp = closure_19();
   const isViewingActivity = useIsViewingActivity.useIsViewingActivity({ channelId: channel.id });

@@ -1,18 +1,18 @@
-// === Module 18012: components/StepsIndicator ===
+// === Module 18299: components/StepsIndicator ===
 
-// Module 18012 (components/StepsIndicator)
+// Module 18299 (components/StepsIndicator)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import timing from "timing" /* 4897 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import timing from "timing" /* 5091 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { flexDirection: "row", alignItems: "center", justifyContent: "center" }, node: { width: 20, height: 20, borderRadius: 10, marginHorizontal: -2 }, filledNode: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, alignItems: "center", justifyContent: "center" }, emptyNode: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, alignItems: "center", justifyContent: "center" };
 obj2.emptyNode = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
@@ -20,7 +20,7 @@ let closure_7 = createStyles.createStyles(obj2);
 const __initData = { code: "function StepsIndicatorTsx1(){const{interpolate,state,withTiming,duration,Easing}=this.__closure;const rawScale=interpolate(state.get(),[0,1],[0.4,1]);const scale=withTiming(rawScale,{duration:duration,easing:Easing.out(Easing.ease)});const rawMargin=interpolate(state.get(),[0,1],[-2,6]);const marginHorizontal=withTiming(rawMargin,{duration:duration,easing:Easing.out(Easing.ease)});return{marginHorizontal:marginHorizontal,transform:[{scale:scale}]};}" };
 const __initData2 = { code: "function StepsIndicatorTsx2(){const{interpolate,state,withTiming,duration,Easing}=this.__closure;const rawScale=interpolate(state.get(),[0,1],[8/20,1]);const scale=withTiming(rawScale,{duration:duration,easing:Easing.out(Easing.ease)});const rawMargin=interpolate(state.get(),[0,1],[-2,6]);const marginHorizontal=withTiming(rawMargin,{duration:duration,easing:Easing.out(Easing.ease)});return{marginHorizontal:marginHorizontal,transform:[{scale:scale}]};}" };
 let ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function StepNode(arg0) {
   const cResult = isCurrent(num2[7]).c(14);
   ({ label, isCurrent } = arg0);
   ({ isDone, useReducedMotion } = arg0);
@@ -124,7 +124,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   tmp8 = items1;
   tmp7 = fn2;
   let obj3 = { interpolate: isCurrent(num2[8]).interpolate, state: sharedValue, withTiming: isCurrent(num2[9]).withTiming, duration: num2, Easing: isCurrent(num2[8]).Easing };
-}) : ((isCurrent) => {
+}) : (function StepNode(isCurrent) {
   isCurrent = isCurrent.isCurrent;
   let sharedValue;
   let num2;
@@ -191,7 +191,7 @@ let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/StepsIndicator.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function StepsIndicator(arg0) {
   let sum;
   const cResult = c.c(12);
   ({ current, style, total } = arg0);
@@ -254,7 +254,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = items2;
   tmp9 = items2;
   const tmpResult = initialize;
-}) : ((current) => {
+}) : (function StepsIndicator(current) {
   current = current.current;
   const total = current.total;
   let stateFromStores;

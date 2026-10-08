@@ -1,10 +1,10 @@
-// === Module 16532: useTrackRoleSubscriptionUpsellAnalytics ===
+// === Module 16787: useTrackRoleSubscriptionUpsellAnalytics ===
 
-// Module 16532 (useTrackRoleSubscriptionUpsellAnalytics)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5076 */;
+// Module 16787 (useTrackRoleSubscriptionUpsellAnalytics)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5105 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4508 */;
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4700 */;
 
 require = fn;
 const AnalyticEvents = fn(1085).AnalyticEvents;
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useTrackRoleSubscriptionUpsellAnalytics.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useTrackRoleSubscriptionUpsellAnalytics(guildId) {
   const cResult = guildId(_location[4]).c(14);
   guildId = guildId.guildId;
   const groupListingId = guildId.groupListingId;
@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     first = cResult[0];
   }
   if (cResult[1] !== relevantSubscriptionListingIds) {
-    const fn = function l() {
+    const fn = function c() {
       let items = relevantSubscriptionListingIds;
       if (relevantSubscriptionListingIds == null) {
         items = [];
@@ -145,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   cResult[13] = items2;
   tmp14 = items2;
   tmp13 = R;
-}) : ((guildId) => {
+}) : (function useTrackRoleSubscriptionUpsellAnalytics(guildId) {
   guildId = guildId.guildId;
   const groupListingId = guildId.groupListingId;
   const _location = guildId.location;

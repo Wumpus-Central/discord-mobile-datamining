@@ -1,22 +1,22 @@
-// === Module 16442: ItemDetailsActionSheet ===
+// === Module 16702: ItemDetailsActionSheet ===
 
-// Module 16442 (ItemDetailsActionSheet)
+// Module 16702 (ItemDetailsActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import useChannelNameDefault from "useChannelName" /* 5049 */;
-import GuildIcon from "GuildIcon" /* 5978 */;
-import TableRow from "TableRow" /* 6000 */;
-import useDesignToggleDefault from "useDesignToggle" /* 6019 */;
-import TableRowGroup from "TableRowGroup" /* 6081 */;
-import ActionSheet from "ActionSheet" /* 6708 */;
-import ICYMIUtils from "ICYMIUtils" /* 8038 */;
-import ActionSheetIconHeader from "ActionSheetIconHeader" /* 10750 */;
-import ICYMIContentSettingControl from "ICYMIContentSettingControl" /* 16443 */;
+import native from "native" /* 1200 */;
+import useChannelNameDefault from "useChannelName" /* 5417 */;
+import GuildIcon from "GuildIcon" /* 6161 */;
+import TableRow from "TableRow" /* 6184 */;
+import useDesignToggleDefault from "useDesignToggle" /* 6205 */;
+import TableRowGroup from "TableRowGroup" /* 6267 */;
+import ActionSheet from "ActionSheet" /* 6885 */;
+import ICYMIUtils from "ICYMIUtils" /* 8446 */;
+import ActionSheetIconHeader from "ActionSheetIconHeader" /* 10446 */;
+import ICYMIContentSettingControl from "ICYMIContentSettingControl" /* 16703 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import ICYMIStore from "ICYMIStore" /* 8021 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import ICYMIStore from "ICYMIStore" /* 8429 */;
 
 const GuildIconDefault = GuildIcon;
 
@@ -24,7 +24,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { divider: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
 let closure_10 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -32,7 +32,7 @@ let obj3 = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/native/ItemDetailsActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ItemDetailsActionSheet(guildId) {
   const cResult = guildId(id[9]).c(37);
   guildId = guildId.guildId;
   const channelId = guildId.channelId;
@@ -220,7 +220,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     cResult[15] = result;
   }
   const tmpResult4 = guildId(id[10]);
-}) : ((arg0) => {
+}) : (function ItemDetailsActionSheet(arg0) {
   ({ guildId: require, channelId: importDefault, id: dependencyMap } = arg0);
   const items = [ChannelStore];
   const stateFromStores = initialize.useStateFromStores(items, () => ChannelStore.getChannel(importDefault));

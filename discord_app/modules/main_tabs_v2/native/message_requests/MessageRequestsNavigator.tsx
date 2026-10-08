@@ -1,10 +1,10 @@
-// === Module 17079: MessageRequestsNavigator ===
+// === Module 17360: MessageRequestsNavigator ===
 
-// Module 17079 (MessageRequestsNavigator)
+// Module 17360 (MessageRequestsNavigator)
 import nativeDefault from "native" /* 587 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import HeaderShared from "HeaderShared" /* 7509 */;
-import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10675 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import HeaderShared from "HeaderShared" /* 9232 */;
+import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 9588 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,9 +15,9 @@ let closure_3 = ["children"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const NativeStackNavigator = fn(7568);
+const NativeStackNavigator = fn(9279);
 let closure_9 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj3 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, header: null };
 let obj4 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj3.header = { borderBottomWidth: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" };
@@ -27,7 +27,7 @@ let obj5 = { borderBottomWidth: 0, backgroundColor: nativeDefault.colors.BACKGRO
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/message_requests/MessageRequestsNavigator.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function MessageRequestsNavigator() {
   const cResult = require("c").c(19);
   const tmp4 = closure_10();
   _require = tmp4;
@@ -35,7 +35,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const accessibilityNativeStackOptions = require("Navigator").useAccessibilityNativeStackOptions();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function s() {
-      return closure_0(6997).trackAppUIViewed();
+      return closure_0(7185).trackAppUIViewed();
     };
     const items = [];
     cResult[0] = fn;
@@ -47,7 +47,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   const layoutEffect = noop.useLayoutEffect(tmp6, tmp7);
   const obj2 = require("Navigator");
-  ({ left, right } = accessibilityNativeStackOptions(1618)());
+  ({ left, right } = accessibilityNativeStackOptions(1630)());
   if (cResult[2] === left) {
     if (cResult[3] === right) {
       let tmp11 = cResult[4];
@@ -101,10 +101,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           const obj3 = { title: null };
           const intl = tmp(1126).intl;
           obj3.title = intl.string(tmp(1126).t.e7GWjQ);
-          let merged = Object.assign(tmp9(10675)());
+          let merged = Object.assign(tmp9(9588)());
           tmp19[1] = obj3;
           tmp19[2] = function getComponent() {
-            return closure_0(17080).default;
+            return closure_0(17361).default;
           };
           const tmp22 = closure_7(closure_9.Screen, tmp19);
           cResult[11] = tmp22;
@@ -135,10 +135,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           const obj4 = { title: null };
           const intl2 = tmp(1126).intl;
           obj4.title = intl2.string(tmp(1126).t.ulKXHp);
-          const merged1 = Object.assign(tmp9(10675)());
+          const merged1 = Object.assign(tmp9(9588)());
           tmp26[1] = obj4;
           tmp26[2] = function getComponent() {
-            return closure_0(17099).default;
+            return closure_0(17380).default;
           };
           const tmp29 = closure_7(closure_9.Screen, tmp26);
           cResult[12] = tmp29;
@@ -169,10 +169,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           const obj5 = { title: null };
           const intl3 = tmp(1126).intl;
           obj5.title = intl3.string(tmp(1126).t.iilwGH);
-          const merged2 = Object.assign(tmp9(10675)());
+          const merged2 = Object.assign(tmp9(9588)());
           tmp33[1] = obj5;
           tmp33[2] = function getComponent() {
-            return closure_0(17100).default;
+            return closure_0(17381).default;
           };
           const tmp36 = closure_7(closure_9.Screen, tmp33);
           cResult[13] = tmp36;
@@ -257,12 +257,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[3] = right;
   cResult[4] = obj7;
   tmp11 = obj7;
-  const tmp10 = accessibilityNativeStackOptions(1618)();
-}) : (() => {
+  const tmp10 = accessibilityNativeStackOptions(1630)();
+}) : (function MessageRequestsNavigator() {
   const tmp = closure_10();
   _require = tmp;
   importDefault = require("Navigator").useAccessibilityNativeStackOptions();
-  const layoutEffect = noop.useLayoutEffect(() => closure_0(6997).trackAppUIViewed(), []);
+  const layoutEffect = noop.useLayoutEffect(() => closure_0(7185).trackAppUIViewed(), []);
   const rect = useSafeAreaInsetsDefault();
   const obj2 = { style: null, children: null };
   const items = [tmp.container, { paddingLeft: rect.left, paddingRight: rect.right }];
@@ -293,7 +293,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   let merged = Object.assign(getNavigationModalPresentationDefault());
   obj4.options = obj5;
   obj4.getComponent = function getComponent() {
-    return closure_0(17080).default;
+    return closure_0(17361).default;
   };
   const items1 = [closure_7(Screen, obj4), , ];
   const obj6 = { name: "spam", options: null, getComponent: null };
@@ -303,7 +303,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   let merged1 = Object.assign(getNavigationModalPresentationDefault());
   obj6.options = obj7;
   obj6.getComponent = function getComponent() {
-    return closure_0(17099).default;
+    return closure_0(17380).default;
   };
   items1[1] = closure_7(closure_9.Screen, obj6);
   const obj8 = { name: "preview", options: null, getComponent: null };
@@ -313,7 +313,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const merged2 = Object.assign(getNavigationModalPresentationDefault());
   obj8.options = obj9;
   obj8.getComponent = function getComponent() {
-    return closure_0(17100).default;
+    return closure_0(17381).default;
   };
   items1[2] = closure_7(closure_9.Screen, obj8);
   obj3.children = items1;

@@ -1,16 +1,18 @@
-// === Module 6885: trackSoundPlayed ===
+// === Module 7074: trackSoundPlayed ===
 
-// Module 6885 (trackSoundPlayed)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import RunningGameStore from "RunningGameStore" /* 2006 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
+// Module 7074 (trackSoundPlayed)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import SoundboardTypes from "SoundboardTypes" /* 7039 */;
+import RunningGameStore from "RunningGameStore" /* 2018 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5108 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
 
-const DEFAULT_SOUND_GUILD_ID = fn(5689).DEFAULT_SOUND_GUILD_ID;
+require = fn;
+const DEFAULT_SOUND_GUILD_ID = fn(5426).DEFAULT_SOUND_GUILD_ID;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const PremiumConstants = fn(1379);
-({ AnalyticsPremiumFeatureNames: closure_8, AnalyticsPremiumFeatureTiers: closure_9 } = PremiumConstants);
+const PremiumConstants = fn(1391);
+({ AnalyticsPremiumFeatureNames: closure_9, AnalyticsPremiumFeatureTiers: c10 } = PremiumConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundboard/trackSoundPlayed.tsx");
 
@@ -39,7 +41,10 @@ export default function trackSoundPlayed(location_stack, in_overlay, guildId, so
     }
     str = str2;
   }
-  const obj = { feature_name: constants.SOUNDBOARD_PLAY, feature_tier: tmp6 ? options.PREMIUM_STANDARD : options.FREE, guild_id: guildId, home_guild_id: guildId.guildId, location_stack, rtc_connection_id: rTCConnectionId, media_session_id: mediaSessionId, in_overlay, application_name: name, emoji_count: null, feature_selection: null, feature_selection_id: null, sound_type: null, sequence_number: null };
+  if (tmp6) {
+    tmp6 = sound_type !== SoundboardTypes.AnalyticsSoundType.ECHO;
+  }
+  const obj = { feature_name: constants.SOUNDBOARD_PLAY, feature_tier: tmp6 ? collapsed.PREMIUM_STANDARD : collapsed.FREE, guild_id: guildId, home_guild_id: guildId.guildId, location_stack, rtc_connection_id: rTCConnectionId, media_session_id: mediaSessionId, in_overlay, application_name: name, emoji_count: null, feature_selection: null, feature_selection_id: null, sound_type: null, sequence_number: null };
   if (null != guildId.emojiId) {
     let num = 1;
   } else {

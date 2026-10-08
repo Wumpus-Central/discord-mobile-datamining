@@ -1,8 +1,8 @@
-// === Module 17232: useControlsLock ===
+// === Module 17513: useControlsLock ===
 
-// Module 17232 (useControlsLock)
+// Module 17513 (useControlsLock)
 import c from "c" /* 576 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11915 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11988 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -10,7 +10,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/useControlsLock.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useControlsLock(arg0) {
   closure_0 = arg0;
   const cResult = c.c(6);
   const generateStateLocker = noop.useContext(VoicePanelStateContextDefault).generateStateLocker;
@@ -20,7 +20,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     const first = noop.useState(tmp2)[0];
     if (cResult[3] !== first) {
-      const fn2 = function s() {
+      const fn2 = function c() {
         return () => first.unlock();
       };
       const items = [first];
@@ -36,14 +36,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const layoutEffect = noop.useLayoutEffect(tmp4, tmp5);
     return first;
   }
-  const fn = function o() {
+  const fn = function n() {
     return generateStateLocker(closure_0);
   };
   cResult[0] = generateStateLocker;
   cResult[1] = arg0;
   cResult[2] = fn;
   tmp2 = fn;
-}) : ((arg0) => {
+}) : (function useControlsLock(arg0) {
   closure_0 = arg0;
   const generateStateLocker = noop.useContext(VoicePanelStateContextDefault).generateStateLocker;
   const first = noop.useState(() => generateStateLocker(closure_0))[0];

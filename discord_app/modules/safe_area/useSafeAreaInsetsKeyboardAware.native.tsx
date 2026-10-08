@@ -1,25 +1,25 @@
-// === Module 6478: useSafeAreaInsetsKeyboardAware ===
+// === Module 6656: useSafeAreaInsetsKeyboardAware ===
 
-// Module 6478 (useSafeAreaInsetsKeyboardAware)
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import KeyboardTypes from "KeyboardTypes" /* 1616 */;
-import useSystemKeyboardHeight from "useSystemKeyboardHeight" /* 1884 */;
-import useKeyboardType from "useKeyboardType" /* 4753 */;
-import useKeyboardDuration from "useKeyboardDuration" /* 6479 */;
-import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 6480 */;
-import useCustomKeyboardHeight from "useCustomKeyboardHeight" /* 6481 */;
+// Module 6656 (useSafeAreaInsetsKeyboardAware)
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import KeyboardTypes from "KeyboardTypes" /* 1628 */;
+import useSystemKeyboardHeight from "useSystemKeyboardHeight" /* 1896 */;
+import useKeyboardType from "useKeyboardType" /* 4947 */;
+import useKeyboardDuration from "useKeyboardDuration" /* 6657 */;
+import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 6658 */;
+import useCustomKeyboardHeight from "useCustomKeyboardHeight" /* 6659 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1486 */;
+import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1498 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
-let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAnimateChanges(arg0) {
   const cResult = disabled(576).c(5);
   ({ keyboardHeight, disabled } = arg0);
   noop.useRef(false);
   if (cResult[0] !== disabled) {
-    const fn = function o() {
+    const fn = function u() {
       const keyboardDuration = useKeyboardDuration.getKeyboardDuration();
       if (ref.current) {
         if (0 !== keyboardDuration) {
@@ -49,7 +49,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = items;
   tmp3 = items;
   let obj = disabled(576);
-}) : ((disabled) => {
+}) : (function useAnimateChanges(disabled) {
   disabled = disabled.disabled;
   noop.useRef(false);
   const items = [disabled.keyboardHeight, disabled];
@@ -130,7 +130,7 @@ export default function useSafeAreaInsetsKeyboardAware() {
   const tmp3 = flag;
   [tmp8, c6] = appEntryKey(callback.useState(ref.current), 2);
   const items1 = [callback, flag, flag2];
-  const effect = callback.useEffect(() => subscribeToKeyboardUIStore(() => {
+  const effect = callback.useEffect(() => subscribeToKeyboardUIStore(function maybeUpdateKeyboardHeight() {
     const tmp = callback();
     if (ref.current !== tmp) {
       ref.current = tmp;

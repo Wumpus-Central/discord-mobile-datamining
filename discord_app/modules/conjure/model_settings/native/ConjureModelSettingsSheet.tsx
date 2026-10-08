@@ -1,23 +1,23 @@
-// === Module 16618: ConjureModelSettingsSheet ===
+// === Module 16877: ConjureModelSettingsSheet ===
 
-// Module 16618 (ConjureModelSettingsSheet)
+// Module 16877 (ConjureModelSettingsSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import _modDef3753 from "module_3753" /* 3753 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6651 */;
-import ActionSheet from "ActionSheet" /* 6708 */;
-import ConjureEffortPickerDefault from "ConjureEffortPicker" /* 16596 */;
+import _modDef3827 from "module_3827" /* 3827 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6828 */;
+import ActionSheet from "ActionSheet" /* 6885 */;
+import ConjureEffortPickerDefault from "ConjureEffortPicker" /* 16851 */;
 import noop from "module_19" /* 19 */;
-import ConjureConnectionStore from "ConjureConnectionStore" /* 12923 */;
+import ConjureConnectionStore from "ConjureConnectionStore" /* 13072 */;
 
 require = fn;
 const View = fn(17).View;
-const sendModelSettings = fn(12923).sendModelSettings;
+const sendModelSettings = fn(13072).sendModelSettings;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureModelSettingsContent(projectId) {
   const cResult = projectId(576).c(27);
   projectId = projectId.projectId;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -51,7 +51,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
     tmp9 = cResult[4];
   }
   if (cResult[5] !== projectId) {
-    const fn2 = function v() {
+    const fn2 = function _() {
       return ConjureConnectionStore.getConnState(projectId);
     };
     const items3 = [projectId];
@@ -90,7 +90,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
   const tmpResult3 = projectId(504);
   const tmp18 = "open" !== stateFromStores1 || projectId(504).useStateFromStores(tmp14, tmp16, tmp17);
   if (cResult[12] !== projectId) {
-    class I {
+    class E {
       constructor(arg0) {
         try {
           tmp = projectId;
@@ -104,9 +104,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
       }
     }
     cResult[12] = projectId;
-    cResult[13] = I;
+    cResult[13] = E;
   } else {
-    class I {
+    class E {
       constructor(arg0) {
         try {
           tmp = projectId;
@@ -121,7 +121,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
     }
   }
   if (stateFromStores != null) {
-    class I {
+    class E {
       constructor(arg0) {
         try {
           tmp = projectId;
@@ -136,7 +136,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
     }
   }
   if (null == undefined) {
-    class I {
+    class E {
       constructor(arg0) {
         try {
           tmp = projectId;
@@ -150,7 +150,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
       }
     }
   } else {
-    class I {
+    class E {
       constructor(arg0) {
         try {
           tmp = projectId;
@@ -165,7 +165,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
     }
     ({ tiers, choices } = stateFromStores);
     if (cResult[14] === choices) {
-      class I {
+      class E {
         constructor(arg0) {
           try {
             tmp = projectId;
@@ -179,17 +179,17 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
         }
       }
     }
-    const obj2 = { settings: tmp24, tiers, choices, disabled: tmp18, onChange: I };
+    const obj2 = { settings: tmp24, tiers, choices, disabled: tmp18, onChange: E };
     const tmp23 = closure_7(ConjureEffortPickerDefault, obj2);
     cResult[14] = choices;
     cResult[15] = tmp18;
-    cResult[16] = I;
+    cResult[16] = E;
     cResult[17] = tmp24;
     cResult[18] = tiers;
     cResult[19] = tmp23;
   }
   const tmpResult4 = projectId(504);
-}) : ((projectId) => {
+}) : (function ConjureModelSettingsContent(projectId) {
   projectId = projectId.projectId;
   const items = [ConjureConnectionStore];
   const items1 = [projectId];
@@ -222,16 +222,16 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
     const items7 = [closure_7(ConjureEffortPickerDefault, obj5), ];
     const intl = tmp(1126).intl;
     const string = intl.string;
-    const tmp12 = _modDef3753;
+    const tmp12 = _modDef3827;
     if (tmp5) {
       let stringResult = string(tmp12.GxpdUR);
     } else {
       stringResult = string(tmp12["/rJzr6"]);
     }
     const obj6 = { variant: "text-xs/normal", color: "text-muted", children: stringResult };
-    items7[1] = closure_7(tmp(4892).Text, obj6);
+    items7[1] = closure_7(tmp(5086).Text, obj6);
     obj4.children = items7;
-    return closure_8(tmp(5600).Stack, obj4);
+    return closure_8(tmp(5373).Stack, obj4);
   }
   const obj3 = projectId(504);
 });
@@ -240,13 +240,13 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/model_settings/native/ConjureModelSettingsSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureModelSettingsSheet(projectId) {
   const cResult = c.c(3);
   projectId = projectId.projectId;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { title: null };
     const intl = util.intl;
-    obj2.title = intl.string(_modDef3753["3E7Yc0"]);
+    obj2.title = intl.string(_modDef3827["3E7Yc0"]);
     const tmp7 = React5(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2);
     cResult[0] = tmp7;
     let first = tmp7;
@@ -267,11 +267,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
     tmp8 = cResult[2];
   }
   return tmp8;
-}) : ((projectId) => {
+}) : (function ConjureModelSettingsSheet(projectId) {
   const obj = { header: null, children: null };
   const obj2 = { title: null };
   const intl = util.intl;
-  obj2.title = intl.string(_modDef3753["3E7Yc0"]);
+  obj2.title = intl.string(_modDef3827["3E7Yc0"]);
   obj.header = React5(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2);
   obj.children = React5(View, { children: React5(closure_9, { projectId: projectId.projectId }) });
   return React5(ActionSheet.ActionSheet, obj);

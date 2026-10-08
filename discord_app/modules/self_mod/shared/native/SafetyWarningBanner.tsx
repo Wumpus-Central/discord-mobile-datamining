@@ -1,8 +1,8 @@
-// === Module 9815: SafetyWarningBanner ===
+// === Module 10378: SafetyWarningBanner ===
 
-// Module 9815 (SafetyWarningBanner)
+// Module 10378 (SafetyWarningBanner)
 import nativeDefault from "native" /* 587 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 9811 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 10374 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: closure_4, Pressable: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: null, contentContainer: null, safetyShieldIconContainer: null, safetyShieldIcon: null, textContainer: null, text: null, closeButton: null, closeButtonIcon: null, buttonsContainer: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj2.container = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_12 };
@@ -29,7 +29,7 @@ let obj6 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj2.buttonsContainer = { flexDirection: "row", marginTop: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
 let closure_9 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function SafetyWarningBanner(channelId) {
   const cResult = channelId(senderId[6]).c(45);
   channelId = channelId.channelId;
   const warningId = channelId.warningId;
@@ -269,7 +269,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   cResult[7] = fn2;
   tmp8 = fn2;
   let obj = channelId(senderId[6]);
-}) : ((channelId) => {
+}) : (function SafetyWarningBanner(channelId) {
   channelId = channelId.channelId;
   const warningId = channelId.warningId;
   const senderId = channelId.senderId;

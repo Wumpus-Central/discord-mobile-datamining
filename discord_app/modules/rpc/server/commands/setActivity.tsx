@@ -1,24 +1,27 @@
-// === Module 14351: setActivity ===
+// === Module 14579: setActivity ===
 
-// Module 14351 (setActivity)
+// Module 14579 (setActivity)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9062 */;
-import StatusDisplayTypes from "StatusDisplayTypes" /* 10636 */;
-import ApplicationStore from "ApplicationStore" /* 5124 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import StatusDisplayTypes from "StatusDisplayTypes" /* 10236 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11137 */;
+import ApplicationStore from "ApplicationStore" /* 5436 */;
 
 require = fn;
-let Constants = fn(5323);
+let Constants = fn(5635);
 const RPC_LOCAL_SCOPE = Constants.RPC_LOCAL_SCOPE;
-({ TransportTypes: hasOwnProperty, RPC_SCOPE_CONFIG, RPC_EMBEDDED_APP_SCOPE } = Constants);
+const TransportTypes = Constants.TransportTypes;
+({ RPC_SCOPE_CONFIG, RPC_EMBEDDED_APP_SCOPE } = Constants);
 Constants = fn(1085);
 ({ ActivityGamePlatforms: metroRequire, ActivityPartyPrivacy: closure_7, ActivityTypes: closure_8, AnalyticEvents: closure_9, RPCErrors: c10 } = Constants);
 let closure_11 = ["1402418171662569542"];
+let items = [, , ];
+({ IPC: arr[0], WEBSOCKET: arr[1], POST_MESSAGE: arr[2] } = TransportTypes);
 let obj = {};
 let obj2 = { scope: null, validation: null, handler: null };
 let obj3 = {};
-let items = [fn(8025).OAuth2Scopes.RPC, fn(8025).OAuth2Scopes.RPC_ACTIVITIES_WRITE, RPC_LOCAL_SCOPE, RPC_EMBEDDED_APP_SCOPE];
-obj3[RPC_SCOPE_CONFIG.ANY] = items;
+let items1 = [fn(8433).OAuth2Scopes.RPC, fn(8433).OAuth2Scopes.RPC_ACTIVITIES_WRITE, RPC_LOCAL_SCOPE, RPC_EMBEDDED_APP_SCOPE];
+obj3[RPC_SCOPE_CONFIG.ANY] = items1;
 obj2.scope = obj3;
 obj2.validation = function validation(number) {
   const obj = createRpcJoiSchemaObjectDefault(number);
@@ -88,7 +91,7 @@ obj2.validation = function validation(number) {
   obj7.size = arrayResult.items(number.number().min(0)).length(2);
   const itemsResult = arrayResult.items(number.number().min(0));
   const numberResult4 = number.number();
-  const items = [, ];
+  items = [, ];
   ({ PRIVATE: arr2[0], PUBLIC: arr2[1] } = constants);
   obj7.privacy = number.number().default(constants.PRIVATE).valid(items);
   obj3.party = obj41.keys(obj7);
@@ -146,26 +149,24 @@ obj2.handler = function handler(socket) {
   let privacy;
   let assets;
   const scopes = socket.authorization.scopes;
-  let hasItem = scopes.includes(socket(activity[3]).OAuth2Scopes.RPC);
+  let hasItem = scopes.has(socket(activity[3]).OAuth2Scopes.RPC);
   if (!hasItem) {
     const scopes2 = socket.authorization.scopes;
-    hasItem = scopes2.includes(tmp4(tmp6[3]).OAuth2Scopes.RPC_ACTIVITIES_WRITE);
+    hasItem = scopes2.has(tmp4(tmp6[3]).OAuth2Scopes.RPC_ACTIVITIES_WRITE);
   }
   if (!hasItem) {
     const scopes3 = socket.authorization.scopes;
-    hasItem = scopes3.includes(id);
+    hasItem = scopes3.has(id);
   }
   if (!hasItem) {
     pid(tmp6[6])(socket);
   }
-  const items = [, , ];
-  ({ IPC: arr[0], WEBSOCKET: arr[1], POST_MESSAGE: arr[2] } = privacy);
   if (items.includes(socket.transport)) {
     if (null == pid) {
-      if (tmp14.IPC === socket.transport) {
+      if (privacy.IPC === socket.transport) {
         let obj2 = { errorCode: constants4.INVALID_COMMAND };
-        const tmp100 = new pid(tmp5[7])(obj2, "nonzero pid required");
-        throw tmp100;
+        const tmp102 = new pid(tmp5[7])(obj2, "nonzero pid required");
+        throw tmp102;
       }
     }
     id = socket.application.id;
@@ -178,7 +179,7 @@ obj2.handler = function handler(socket) {
         activity.name = socket.application.name;
       }
       activity.application_id = id;
-      activity.platform = socket.transport === tmp14.POST_MESSAGE ? assets.EMBEDDED : assets.DESKTOP;
+      activity.platform = socket.transport === privacy.POST_MESSAGE ? assets.EMBEDDED : assets.DESKTOP;
       const application = isSocketConnected.getApplication(id);
       let flag = activity.instance;
       if (flag == null) {
@@ -200,9 +201,9 @@ obj2.handler = function handler(socket) {
         const tmp4Result2 = tmp4(tmp6[10]);
       }
       if (result) {
-        result = tmp27;
+        result = tmp28;
       }
-      const activityFlags = tmp4Result.computeActivityFlags(activity, flag, tmp27, result, privacy);
+      const activityFlags = tmp4Result.computeActivityFlags(activity, flag, tmp28, result, privacy);
       if (activityFlags > 0) {
         activity.flags = activityFlags;
       }
@@ -215,27 +216,25 @@ obj2.handler = function handler(socket) {
         const values = pid(tmp6[11]).values(secrets);
         const found = values.filter((item) => item);
         if (null != party2) {
-          const items1 = [party2.id];
-          if (tmp103Result.intersection(found, items1).length > 0) {
-            if (!closure_11.includes(socket.application.id)) {
-              let obj4 = { errorCode: constants4.INVALID_ACTIVITY_SECRET };
-              const tmp51 = new tmp103(tmp6[7])(obj4, "secrets cannot match the party id");
-              throw tmp51;
-            }
+          items = [party2.id];
+          if (tmp105Result.intersection(found, items).length > 0) {
+            let obj4 = { errorCode: constants4.INVALID_ACTIVITY_SECRET };
+            const tmp89 = new tmp105(tmp6[7])(obj4, "secrets cannot match the party id");
+            throw tmp89;
           }
-          tmp103Result = tmp103(tmp6[11]);
+          tmp105Result = tmp105(tmp6[11]);
         }
-        const obj13 = pid(tmp6[11]);
-        if (tmp103Result2.uniq(found).length < found.length) {
+        const obj14 = pid(tmp6[11]);
+        if (tmp105Result2.uniq(found).length < found.length) {
           const obj5 = { errorCode: constants4.INVALID_ACTIVITY_SECRET };
-          const tmp87 = new tmp103(tmp6[7])(obj5, "secrets must be unique");
-          throw tmp87;
+          const tmp81 = new tmp105(tmp6[7])(obj5, "secrets must be unique");
+          throw tmp81;
         } else if (null != buttons) {
           const obj6 = { errorCode: constants4.INVALID_ACTIVITY_SECRET };
-          const tmp79 = new tmp103(tmp6[7])(obj6, "secrets cannot currently be sent with buttons");
-          throw tmp79;
+          const tmp73 = new tmp105(tmp6[7])(obj6, "secrets cannot currently be sent with buttons");
+          throw tmp73;
         }
-        tmp103Result2 = pid(tmp6[11]);
+        tmp105Result2 = pid(tmp6[11]);
       }
       const obj8 = {};
       if (null != buttons) {
@@ -249,13 +248,13 @@ obj2.handler = function handler(socket) {
         const iter = keys[Symbol.iterator]();
         const nextResult = iter.next();
         while (iter !== undefined) {
-          let tmp58 = nextResult;
+          let tmp52 = nextResult;
           let _Date = Date;
-          let str6 = Date.now();
-          let str7 = timestamps[nextResult];
-          if (str6.toString().length - str7.toString().length > 2) {
+          let str5 = Date.now();
+          let str6 = timestamps[nextResult];
+          if (str5.toString().length - str6.toString().length > 2) {
             let _Math = Math;
-            timestamps[tmp58] = Math.floor(timestamps[tmp58] * pid(activity[12]).Millis.SECOND);
+            timestamps[tmp52] = Math.floor(timestamps[tmp52] * pid(activity[12]).Millis.SECOND);
           }
           continue;
         }
@@ -265,9 +264,9 @@ obj2.handler = function handler(socket) {
       } else {
         if (null != socket.application) {
           if (null != socket.application.id) {
-            const items2 = [, , ];
+            const items1 = [, , ];
             ({ large_image: arr2[0], small_image: arr2[1], invite_cover_image: arr2[2] } = assets);
-            resolved = socket(activity[13]).fetchAssetIds(socket.application.id, items2);
+            resolved = socket(activity[13]).fetchAssetIds(socket.application.id, items1);
             const obj7 = socket(activity[13]);
           }
         }
@@ -353,8 +352,8 @@ obj2.handler = function handler(socket) {
   } else {
     let obj = { errorCode: constants4.INVALID_COMMAND };
     const _HermesInternal = HermesInternal;
-    const tmp182 = new pid(tmp6[7])(obj, "command not available from \"" + socket.transport + "\" transport");
-    throw tmp182;
+    const tmp172 = new pid(tmp6[7])(obj, "command not available from \"" + socket.transport + "\" transport");
+    throw tmp172;
   }
 };
 obj[Constants.RPCCommands.SET_ACTIVITY] = obj2;

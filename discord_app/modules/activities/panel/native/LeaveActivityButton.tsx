@@ -1,18 +1,18 @@
-// === Module 17218: LeaveActivityButton ===
+// === Module 17499: LeaveActivityButton ===
 
-// Module 17218 (LeaveActivityButton)
+// Module 17499 (LeaveActivityButton)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager" /* 9024 */;
-import _modDef9590 from "module_9590" /* 9590 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager" /* 10623 */;
+import _modDef10783 from "module_10783" /* 10783 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const ActivityPanelModes = fn(9001).ActivityPanelModes;
+const ActivityPanelModes = fn(6072).ActivityPanelModes;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function BaseLeaveActivityButton(onPress) {
   const cResult = c.c(4);
   onPress = onPress.onPress;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -28,8 +28,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
     [tmp4, tmp5] = cResult;
   }
   if (cResult[2] !== onPress) {
-    const obj2 = { onPress, icon: _modDef9590, text: tmp4, accessibilityLabel: tmp5, variant: "destructive", size: "sm", maxFontSizeMultiplier: 1 };
-    const tmp11 = jsx(components_Button_Button.Button, { onPress, icon: _modDef9590, text: tmp4, accessibilityLabel: tmp5, variant: "destructive", size: "sm", maxFontSizeMultiplier: 1 });
+    const obj2 = { onPress, icon: _modDef10783, text: tmp4, accessibilityLabel: tmp5, variant: "destructive", size: "sm", maxFontSizeMultiplier: 1 };
+    const tmp11 = jsx(components_Button_Button.Button, { onPress, icon: _modDef10783, text: tmp4, accessibilityLabel: tmp5, variant: "destructive", size: "sm", maxFontSizeMultiplier: 1 });
     cResult[2] = onPress;
     cResult[3] = tmp11;
     let tmp8 = tmp11;
@@ -37,20 +37,20 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
     tmp8 = cResult[3];
   }
   return tmp8;
-}) : ((onPress) => {
-  const obj = { onPress: onPress.onPress, icon: _modDef9590, text: null, accessibilityLabel: null, variant: "destructive", size: "sm", maxFontSizeMultiplier: 1 };
+}) : (function BaseLeaveActivityButton(onPress) {
+  const obj = { onPress: onPress.onPress, icon: _modDef10783, text: null, accessibilityLabel: null, variant: "destructive", size: "sm", maxFontSizeMultiplier: 1 };
   const intl = util.intl;
   obj.text = intl.string(util.t["Hi1/aQ"]);
   const intl2 = util.intl;
   obj.accessibilityLabel = intl2.string(util.t.k0Aph0);
-  return jsx(components_Button_Button.Button, { onPress: onPress.onPress, icon: _modDef9590, text: null, accessibilityLabel: null, variant: "destructive", size: "sm", maxFontSizeMultiplier: 1 });
+  return jsx(components_Button_Button.Button, { onPress: onPress.onPress, icon: _modDef10783, text: null, accessibilityLabel: null, variant: "destructive", size: "sm", maxFontSizeMultiplier: 1 });
 });
 let closure_5 = tmp2;
 ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/panel/native/LeaveActivityButton.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((selfEmbeddedActivity) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function LeaveActivityButton(selfEmbeddedActivity) {
   const cResult = selfEmbeddedActivity(576).c(4);
   selfEmbeddedActivity = selfEmbeddedActivity.selfEmbeddedActivity;
   const setMode = selfEmbeddedActivity.setMode;
@@ -100,7 +100,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((selfEm
   cResult[2] = setMode;
   cResult[3] = tmp5;
   tmp4 = tmp5;
-}) : ((arg0) => {
+}) : (function LeaveActivityButton(arg0) {
   ({ selfEmbeddedActivity: require, setMode: importDefault } = arg0);
   return <closure_5 onPress={function onPress() {
     importDefault(ActivityPanelModes.DISCONNECTED);

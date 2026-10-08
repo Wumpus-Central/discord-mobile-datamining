@@ -1,8 +1,8 @@
-// === Module 9022: leaveCurrentEmbeddedActivity ===
+// === Module 10621: leaveCurrentEmbeddedActivity ===
 
-// Module 9022 (leaveCurrentEmbeddedActivity)
-import getEmbeddedActivitiesManagerDefault from "getEmbeddedActivitiesManager" /* 9023 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
+// Module 10621 (leaveCurrentEmbeddedActivity)
+import getEmbeddedActivitiesManagerDefault from "getEmbeddedActivitiesManager" /* 10622 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2062 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/leaveCurrentEmbeddedActivity.tsx");

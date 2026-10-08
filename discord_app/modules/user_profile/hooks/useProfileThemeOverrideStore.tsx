@@ -1,11 +1,11 @@
-// === Module 7911: useProfileThemeOverrideStore ===
+// === Module 8330: useProfileThemeOverrideStore ===
 
-// Module 7911 (useProfileThemeOverrideStore)
+// Module 8330 (useProfileThemeOverrideStore)
 import c from "c" /* 576 */;
 import Constants from "Constants" /* 1085 */;
-import shared from "shared" /* 4735 */;
-import useThemeDefault from "useTheme" /* 4797 */;
-import UserProfileGradientUtils from "UserProfileGradientUtils" /* 7912 */;
+import shared from "shared" /* 4929 */;
+import useThemeDefault from "useTheme" /* 4991 */;
+import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8331 */;
 import module_570 from "module_570" /* 570 */;
 import "ReactCompilerGating";
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
@@ -27,7 +27,7 @@ let tmp2 = module_570.create()((arg0) => {
 });
 let closure_4 = tmp2;
 let ReactCompilerGating = ReactCompilerGating_mod;
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEffectiveThemeOverride() {
   const cResult = c.c(9);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function o(themeOverride) {
@@ -113,7 +113,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     cResult[8] = obj2;
     tmp19 = obj2;
   }
-}) : (() => {
+}) : (function useEffectiveThemeOverride() {
   const tmp = closure_4((themeOverride) => themeOverride.themeOverride);
   const tmp3 = useThemeDefault();
   if (null == tmp) {
@@ -176,7 +176,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
 });
 let ReactCompilerGating = ReactCompilerGating_mod;
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsBannerDisabledByOverride() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function n(themeOverride) {
@@ -197,7 +197,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp4 = tmp5;
   }
   return tmp4;
-}) : (() => {
+}) : (function useIsBannerDisabledByOverride() {
   const tmp = closure_4((themeOverride) => themeOverride.themeOverride);
   let tmp2 = null != tmp;
   if (tmp2) {
@@ -214,7 +214,7 @@ const result = size.fileFinishedImporting("modules/user_profile/hooks/useProfile
 export const useProfileThemeOverrideStore = tmp2;
 export const useEffectiveThemeOverride = tmp3;
 export const useIsBannerDisabledByOverride = tmp4;
-export const useHasNonNitroThemeOverride = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useHasNonNitroThemeOverride = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasNonNitroThemeOverride() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function n(themeOverride) {
@@ -231,7 +231,7 @@ export const useHasNonNitroThemeOverride = ReactCompilerGating.isReactCompilerEn
     tmp4 = "non-nitro" === tmp3.mode;
   }
   return tmp4;
-}) : (() => {
+}) : (function useHasNonNitroThemeOverride() {
   const tmp = closure_4((themeOverride) => themeOverride.themeOverride);
   let tmp2 = null != tmp;
   if (tmp2) {

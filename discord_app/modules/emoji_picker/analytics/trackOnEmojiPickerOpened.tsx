@@ -1,14 +1,14 @@
-// === Module 9910: trackOnEmojiPickerOpened ===
+// === Module 9391: trackOnEmojiPickerOpened ===
 
-// Module 9910 (trackOnEmojiPickerOpened)
-import EmojiUtilsDefault from "EmojiUtils" /* 4533 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5076 */;
-import useTopAndNewlyAddedEmojis from "useTopAndNewlyAddedEmojis" /* 9887 */;
-import useEmojiHotrail from "useEmojiHotrail" /* 9888 */;
+// Module 9391 (trackOnEmojiPickerOpened)
+import EmojiUtilsDefault from "EmojiUtils" /* 4725 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5105 */;
+import useTopAndNewlyAddedEmojis from "useTopAndNewlyAddedEmojis" /* 9367 */;
+import useEmojiHotrail from "useEmojiHotrail" /* 9368 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 5645 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
+import EmojiStore from "EmojiStore" /* 5992 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
 
 const require = globalThis.__r;
 
@@ -143,14 +143,14 @@ function trackOnEmojiPickerOpened(current) {
   };
 }
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const EmojiIntention = fn(1380).EmojiIntention;
-const ExpressionPickerViewType = fn(1229).ExpressionPickerViewType;
+const EmojiIntention = fn(1392).EmojiIntention;
+const ExpressionPickerViewType = fn(1241).ExpressionPickerViewType;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/emoji_picker/analytics/trackOnEmojiPickerOpened.tsx");
 
 export default trackOnEmojiPickerOpened;
-export const useTrackOnEmojiPickerOpenedForReactions = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useTrackOnEmojiPickerOpenedForReactions = ReactCompilerGating.isReactCompilerEnabled() ? (function useTrackOnEmojiPickerOpenedForReactions(arg0) {
   const cResult = require("c").c(2);
   _require = noop.useRef(arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -169,7 +169,7 @@ export const useTrackOnEmojiPickerOpenedForReactions = ReactCompilerGating.isRea
   }
   const effect = noop.useEffect(tmp2, tmp3);
   const obj = require("c");
-}) : ((arg0) => {
+}) : (function useTrackOnEmojiPickerOpenedForReactions(arg0) {
   noop.useRef(arg0);
   const effect = noop.useEffect(() => {
     if (ref.current.intention === EmojiIntention.REACTION) {

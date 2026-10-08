@@ -1,19 +1,19 @@
-// === Module 6430: Input ===
+// === Module 6284: Input ===
 
-// Module 6430 (Input)
+// Module 6284 (Input)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 4588 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import getRequiredFieldA11yName from "getRequiredFieldA11yName" /* 6106 */;
-import ErrorText from "ErrorText" /* 6431 */;
+import native from "native" /* 4780 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import getRequiredFieldA11yName from "getRequiredFieldA11yName" /* 6285 */;
+import ErrorText from "ErrorText" /* 6286 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { inputRow: { flexDirection: "row", gap: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_4, marginBottom: nativeDefault.space.PX_4 }, labelWrapper: null, label: null, description: null, error: null };
 let obj3 = { flexDirection: "row", gap: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_4, marginBottom: nativeDefault.space.PX_4 };
 obj2.labelWrapper = { marginBottom: nativeDefault.space.PX_4, flexDirection: "row", alignItems: "center" };
@@ -29,7 +29,7 @@ let obj7 = { marginTop: nativeDefault.space.PX_4, width: "auto" };
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Input/native/Input.native.tsx");
 
-export const Input = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const Input = ReactCompilerGating.isReactCompilerEnabled() ? (function Input(arg0) {
   const cResult = c.c(26);
   const tmp4 = closure_5();
   ({ label, labelTrailing, labelId, description, errorMessage, children, containerStyle, required } = arg0);
@@ -150,7 +150,7 @@ export const Input = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = requiredFieldA11yName;
   tmp5 = requiredFieldA11yName;
   const tmpResult2 = native;
-}) : ((arg0) => {
+}) : (function Input(arg0) {
   const tmp = closure_5();
   ({ label, labelTrailing, labelId, description, errorMessage, required } = arg0);
   ({ children, containerStyle } = arg0);

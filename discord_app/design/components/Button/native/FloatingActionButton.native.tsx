@@ -1,10 +1,10 @@
-// === Module 8609: FloatingActionButton ===
+// === Module 8524: FloatingActionButton ===
 
-// Module 8609 (FloatingActionButton)
+// Module 8524 (FloatingActionButton)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4618 */;
-import spring from "spring" /* 5604 */;
-import ButtonConstants from "ButtonConstants" /* 5607 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4810 */;
+import spring from "spring" /* 5374 */;
+import ButtonConstants from "ButtonConstants" /* 5380 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ require = fn;
 let closure_3 = ["icon", "positionBottom", "positionRight", "accessibilityLabel"];
 const jsx = fn(21).jsx;
 let c7 = 16;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 const styles = createStyles.createStyles(() => {
   const obj = { button: null, iconButtonPill: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
@@ -31,7 +31,7 @@ const result = size.fileFinishedImporting("design/components/Button/native/Float
 
 export const DEFAULT_POSITION_OFFSET = 16;
 export const useStyles = styles;
-export const FloatingActionButton = ReactCompilerGating.isReactCompilerEnabled() ? ((positionRight) => {
+export const FloatingActionButton = ReactCompilerGating.isReactCompilerEnabled() ? (function FloatingActionButton(positionRight) {
   const cResult = require("c").c(17);
   if (cResult[0] !== positionRight) {
     ({ icon, positionBottom } = positionRight);
@@ -174,7 +174,7 @@ export const FloatingActionButton = ReactCompilerGating.isReactCompilerEnabled()
   cResult[13] = tmp19;
   tmp17 = tmp19;
   const obj2 = { withSpring: require("spring").withSpring, positionBottom, DEFAULT_POSITION_OFFSET, SPRING_CONFIG, positionRight: tmp7 };
-}) : ((positionRight) => {
+}) : (function FloatingActionButton(positionRight) {
   ({ icon, positionBottom } = positionRight);
   positionRight = positionRight.positionRight;
   const merged = Object.assign(positionRight, Object.assign({ icon: 0, positionBottom: 0, positionRight: 0, accessibilityLabel: 0 }));
@@ -199,8 +199,8 @@ export const FloatingActionButton = ReactCompilerGating.isReactCompilerEnabled()
       return rect;
     }
   }
-  let obj = positionBottom(4618);
-  F.__closure = { withSpring: positionBottom(5604).withSpring, positionBottom, DEFAULT_POSITION_OFFSET, SPRING_CONFIG, positionRight };
+  let obj = positionBottom(4810);
+  F.__closure = { withSpring: positionBottom(5374).withSpring, positionBottom, DEFAULT_POSITION_OFFSET, SPRING_CONFIG, positionRight };
   F.__workletHash = 9924952956188;
   F.__initData = __initData2;
   const animatedStyle = obj.useAnimatedStyle(F);
@@ -217,6 +217,6 @@ export const FloatingActionButton = ReactCompilerGating.isReactCompilerEnabled()
   }
   obj6.icon = cloneElementResult;
   ({ button: obj4.style, iconButtonPill: obj4.pillStyle } = tmp2);
-  obj3.children = jsx(positionBottom(7587).BaseIconButton, {});
-  return jsx(positionRight(4618).View, { style: animatedStyle, children: null });
+  obj3.children = jsx(positionBottom(8107).BaseIconButton, {});
+  return jsx(positionRight(4810).View, { style: animatedStyle, children: null });
 });

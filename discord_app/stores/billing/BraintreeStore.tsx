@@ -1,11 +1,11 @@
-// === Module 4551: BraintreeStore ===
+// === Module 4743: BraintreeStore ===
 
-// Module 4551 (BraintreeStore)
+// Module 4743 (BraintreeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
 import Constants from "Constants" /* 1085 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
 import size from "module_2" /* 2 */;
 
 ({ Endpoints: closure_4, PaymentGateways: hasOwnProperty, PaymentSourceTypes: metroRequire } = Constants);
@@ -61,6 +61,10 @@ const braintreeStore = new BraintreeStore(DispatcherDefault, {
     if (paymentSourceType.paymentSourceType === constants2.PAYPAL) {
       if (tmp === state) {
         const _window = window;
+        let onComplete;
+        if (popupBridge != null) {
+          onComplete = popupBridge.onComplete;
+        }
         if (typeof onComplete === "function") {
           const obj = { path: tmp2, queryItems: tmp3 };
           onComplete(null, obj);

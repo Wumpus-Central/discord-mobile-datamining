@@ -1,7 +1,7 @@
-// === Module 15523: TotpScreen ===
+// === Module 15785: TotpScreen ===
 
-// Module 15523 (TotpScreen)
-import MFA from "MFA" /* 15524 */;
+// Module 15785 (TotpScreen)
+import MFA from "MFA" /* 15786 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -22,7 +22,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/mfa/native/screens/TotpScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function TotpScreen(arg0) {
   const cResult = require("c").c(24);
   ({ mfaChallenge, finish } = arg0);
   _require = finish;
@@ -120,7 +120,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         }
       })();
     });
-    const fn = function() {
+    function t1() {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -129,10 +129,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         applyArgumentsResult = apply(self, arguments);
       }
       return applyArgumentsResult;
-    };
+    }
     cResult[0] = finish;
-    cResult[1] = fn;
-    let tmp11 = fn;
+    cResult[1] = t1;
+    let tmp11 = t1;
   } else {
     tmp11 = cResult[1];
   }
@@ -274,7 +274,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[8] = tmp22;
   tmp20 = tmp22;
   const tmp21 = require("ClipboardCopyInput");
-}) : ((finish) => {
+}) : (function TotpScreen(finish) {
   finish = finish.finish;
   importDefault = undefined;
   first = undefined;

@@ -1,12 +1,12 @@
-// === Module 11668: useActivityShelfData ===
+// === Module 11733: useActivityShelfData ===
 
-// Module 11668 (useActivityShelfData)
-import GlobalUtils from "GlobalUtils" /* 1375 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8547 */;
+// Module 11733 (useActivityShelfData)
+import GlobalUtils from "GlobalUtils" /* 1387 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8586 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
-import TestModeStore from "TestModeStore" /* 8548 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
+import UserStore from "UserStore" /* 1389 */;
+import TestModeStore from "TestModeStore" /* 9032 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2062 */;
 
 const require = globalThis.__r;
 
@@ -15,9 +15,9 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/useActivityShelfData.tsx");
 
-export const useActivityShelfData = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useActivityShelfData = ReactCompilerGating.isReactCompilerEnabled() ? (function useActivityShelfData(arg0) {
   _require = arg0;
-  let found = arr6;
+  let found = arr5;
   const cResult = require("c").c(26);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [UserStore];
@@ -75,21 +75,21 @@ export const useActivityShelfData = ReactCompilerGating.isReactCompilerEnabled()
       }
     }
     if (null != stateFromStores1) {
-      if (arr6.length > 0) {
-        if (arr6[0].id === stateFromStores1) {
-          const first1 = arr6[0];
+      if (arr5.length > 0) {
+        if (arr5[0].id === stateFromStores1) {
+          const first1 = arr5[0];
           if (first1.supportsEmbeddedSurface(tmp(found[9]).EmbeddedSurfaceType.MAIN)) {
-            if (null != arr6[0].embeddedActivityConfig) {
-              if (cResult[12] !== arr6[0]) {
-                const obj2 = { activity: arr6[0].embeddedActivityConfig, application: arr6[0] };
+            if (null != arr5[0].embeddedActivityConfig) {
+              if (cResult[12] !== arr5[0]) {
+                const obj2 = { activity: arr5[0].embeddedActivityConfig, application: arr5[0] };
                 class S {
                   constructor() {
                     return closure_1_5.testModeEmbeddedApplicationId;
                   }
                 }
-                tmp25[0] = obj2;
-                cResult[12] = arr6[0];
-                cResult[13] = tmp25;
+                tmp27[0] = obj2;
+                cResult[12] = arr5[0];
+                cResult[13] = tmp27;
               }
             }
           }
@@ -106,10 +106,10 @@ export const useActivityShelfData = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
     }
-    closure_3 = tmp23;
+    closure_3 = tmp25;
     if (cResult[15] === stateFromStoresArray) {
-      if (cResult[16] === arr6) {
-        UserStore = tmp27;
+      if (cResult[16] === arr5) {
+        UserStore = tmp29;
         let nsfwAllowed;
         class S {
           constructor() {
@@ -119,25 +119,25 @@ export const useActivityShelfData = ReactCompilerGating.isReactCompilerEnabled()
         if (stateFromStores != null) {
           nsfwAllowed = stateFromStores.nsfwAllowed;
         }
-        if (tmp30 === nsfwAllowed) {
-          if (cResult[21] === tmp27) {
-            if (cResult[22] === tmp23) {
-              let tmp32 = cResult[23];
+        if (tmp32 === nsfwAllowed) {
+          if (cResult[21] === tmp29) {
+            if (cResult[22] === tmp25) {
+              let tmp34 = cResult[23];
             }
-            if (cResult[24] !== tmp32) {
-              const tmp32Result = tmp32();
-              cResult[24] = tmp32;
+            if (cResult[24] !== tmp34) {
+              const tmp34Result = tmp34();
+              cResult[24] = tmp34;
               class S {
                 constructor() {
                   return closure_1_5.testModeEmbeddedApplicationId;
                 }
               }
-              cResult[25] = tmp32Result;
-              let tmp34 = tmp32Result;
+              cResult[25] = tmp34Result;
+              let tmp36 = tmp34Result;
             } else {
-              tmp34 = cResult[25];
+              tmp36 = cResult[25];
             }
-            return tmp34;
+            return tmp36;
           }
         }
         let nsfwAllowed1;
@@ -152,8 +152,8 @@ export const useActivityShelfData = ReactCompilerGating.isReactCompilerEnabled()
               if (supported_platforms == null) {
                 supported_platforms = [];
               }
-              const tmp = stateFromStores(8962);
-              return supported_platforms.includes(tmp(closure_1_0(1369).getOS()));
+              const tmp = stateFromStores(10627);
+              return supported_platforms.includes(tmp(closure_1_0(1381).getOS()));
             });
             found1 = found.filter((activity) => {
               const requires_age_gate = activity.activity.requires_age_gate;
@@ -181,7 +181,7 @@ export const useActivityShelfData = ReactCompilerGating.isReactCompilerEnabled()
               }
               let tmp2 = false === nsfwAllowed;
               if (tmp2) {
-                tmp2 = stateFromStores(arr6[12])(application.application.id);
+                tmp2 = stateFromStores(arr5[12])(application.application.id);
               }
               return !tmp2;
             });
@@ -189,69 +189,124 @@ export const useActivityShelfData = ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[20] = nsfwAllowed1;
         cResult[21] = cResult[17];
-        cResult[22] = tmp23;
+        cResult[22] = tmp25;
         cResult[23] = T;
-        tmp32 = T;
+        tmp34 = T;
       }
     }
-    if (cResult[18] !== arr6) {
-      const fn3 = function q(activity) {
-        const found = arr6.find((id) => id.id === activity.application_id);
-        let tmp2 = null;
-        if (null != found) {
-          const obj = { activity, application: found };
-          tmp2 = obj;
+    if (cResult[18] !== arr5) {
+      class O {
+        constructor(arg0) {
+          closure_0 = arg0;
+          found = closure_2.find((id) => id.id === activity.application_id);
+          tmp2 = null;
+          if (null != found) {
+            obj = { activity: null, application: null };
+            obj.activity = arg0;
+            obj.application = found;
+            tmp2 = obj;
+          }
+          return tmp2;
         }
-        return tmp2;
-      };
-      cResult[18] = arr6;
+      }
+      cResult[18] = arr5;
       class S {
         constructor() {
           return closure_1_5.testModeEmbeddedApplicationId;
         }
       }
-      cResult[19] = fn3;
-      let tmp28 = fn3;
+      cResult[19] = O;
     } else {
-      tmp28 = cResult[19];
+      class O {
+        constructor(arg0) {
+          closure_0 = arg0;
+          found = closure_2.find((id) => id.id === activity.application_id);
+          tmp2 = null;
+          if (null != found) {
+            obj = { activity: null, application: null };
+            obj.activity = arg0;
+            obj.application = found;
+            tmp2 = obj;
+          }
+          return tmp2;
+        }
+      }
     }
-    const mapped = stateFromStoresArray.map(tmp28);
+    const mapped = stateFromStoresArray.map(O);
     found = mapped.filter(tmp(found[8]).isNotNullish);
     cResult[15] = stateFromStoresArray;
-    cResult[16] = arr6;
+    cResult[16] = arr5;
     cResult[17] = found;
   }
   if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn2 = function w(application_id) {
-      return application_id.application_id;
-    };
-    cResult[9] = fn2;
+    class O {
+      constructor(arg0) {
+        closure_0 = arg0;
+        found = closure_2.find((id) => id.id === activity.application_id);
+        tmp2 = null;
+        if (null != found) {
+          obj = { activity: null, application: null };
+          obj.activity = arg0;
+          obj.application = found;
+          tmp2 = obj;
+        }
+        return tmp2;
+      }
+    }
+    cResult[9] = tmp16;
     class S {
       constructor() {
         return closure_1_5.testModeEmbeddedApplicationId;
       }
     }
   } else {
-    const tmp15 = cResult[9];
+    class O {
+      constructor(arg0) {
+        closure_0 = arg0;
+        found = closure_2.find((id) => id.id === activity.application_id);
+        tmp2 = null;
+        if (null != found) {
+          obj = { activity: null, application: null };
+          obj.activity = arg0;
+          obj.application = found;
+          tmp2 = obj;
+        }
+        return tmp2;
+      }
+    }
   }
   const mapped1 = stateFromStoresArray.map(tmp15);
-  let tmp17 = mapped1;
+  let tmp18 = mapped1;
   if (null != stateFromStores1) {
-    const items4 = [stateFromStores1];
+    class O {
+      constructor(arg0) {
+        closure_0 = arg0;
+        found = closure_2.find((id) => id.id === activity.application_id);
+        tmp2 = null;
+        if (null != found) {
+          obj = { activity: null, application: null };
+          obj.activity = arg0;
+          obj.application = found;
+          tmp2 = obj;
+        }
+        return tmp2;
+      }
+    }
+    tmp19[0] = stateFromStores1;
     class S {
       constructor() {
         return closure_1_5.testModeEmbeddedApplicationId;
       }
     }
     HermesBuiltin.arraySpread(mapped1, 1);
-    tmp17 = items4;
+    tmp18 = tmp19;
   }
   cResult[6] = stateFromStoresArray;
   cResult[7] = stateFromStores1;
-  cResult[8] = tmp17;
-  tmp14 = tmp17;
+  cResult[8] = tmp18;
+  tmp14 = tmp18;
   const tmpResult4 = require("initialize");
-}) : ((arg0) => {
+}) : (function useActivityShelfData(arg0) {
   _require = arg0;
   let items = [UserStore];
   const stateFromStores = require("initialize").useStateFromStores(items, UserStore.getCurrentUser);
@@ -315,8 +370,8 @@ export const useActivityShelfData = ReactCompilerGating.isReactCompilerEnabled()
       if (supported_platforms == null) {
         supported_platforms = [];
       }
-      const tmp = stateFromStores(8962);
-      return supported_platforms.includes(tmp(closure_1_0(1369).getOS()));
+      const tmp = stateFromStores(10627);
+      return supported_platforms.includes(tmp(closure_1_0(1381).getOS()));
     });
     const found1 = found.filter((activity) => {
       const requires_age_gate = activity.activity.requires_age_gate;

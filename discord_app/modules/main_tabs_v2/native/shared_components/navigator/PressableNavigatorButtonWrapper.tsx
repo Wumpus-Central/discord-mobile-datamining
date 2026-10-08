@@ -1,12 +1,12 @@
-// === Module 7515: PressableNavigatorButtonWrapper ===
+// === Module 9238: PressableNavigatorButtonWrapper ===
 
-// Module 7515 (PressableNavigatorButtonWrapper)
+// Module 9238 (PressableNavigatorButtonWrapper)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import MainTabsV2Constants from "MainTabsV2Constants" /* 7510 */;
-import createStyles from "createStyles" /* 4896 */;
+import MainTabsV2Constants from "MainTabsV2Constants" /* 9233 */;
+import createStyles from "createStyles" /* 5090 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -21,7 +21,7 @@ let closure_4 = createStyles.createStyles(obj);
 let size = size_mod;
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/navigator/PressableNavigatorButtonWrapper.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function PressableNavigatorButtonWrapper(arg0) {
   const cResult = c.c(3);
   ({ children, isModal } = arg0);
   const tmp3 = closure_4();
@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = tmp4;
   cResult[2] = tmp6;
   tmp5 = tmp6;
-}) : ((children) => {
+}) : (function PressableNavigatorButtonWrapper(children) {
   let flag = children.isModal;
   if (flag === undefined) {
     flag = false;

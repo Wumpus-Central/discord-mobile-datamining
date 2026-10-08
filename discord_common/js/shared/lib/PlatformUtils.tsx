@@ -1,7 +1,7 @@
-// === Module 5328: shared/PlatformUtils ===
+// === Module 5292: shared/PlatformUtils ===
 
-// Module 5328 (shared/PlatformUtils)
-import format_mod from "format" /* 1351 */;
+// Module 5292 (shared/PlatformUtils)
+import format_mod from "format" /* 1363 */;
 
 const set1 = new Set(["Android", "iOS", "Windows Phone"]);
 let platform;

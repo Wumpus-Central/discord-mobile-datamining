@@ -1,10 +1,10 @@
-// === Module 15378: UploadDebugLogsSetting ===
+// === Module 15640: UploadDebugLogsSetting ===
 
-// Module 15378 (UploadDebugLogsSetting)
+// Module 15640 (UploadDebugLogsSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import DebugUploadManager from "DebugUploadManager" /* 12543 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import DebugUploadManager from "DebugUploadManager" /* 12641 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -36,7 +36,7 @@ let closure_9 = async function _handleUploadDebugLogSettingPress() {
           closure_1 = tmp4;
           closure_0 = tmp4;
           (function onUploadDebugLogsRequestStart() {
-            closure_1_0(1259).batchUpdates(() => state.setState({ isDisabled: true, isUploading: true }));
+            closure_1_0(1271).batchUpdates(() => state.setState({ isDisabled: true, isUploading: true }));
           })();
           let uploadDebugLogFiles = DebugLogCategory;
           if (obj8.isIOS()) {
@@ -54,7 +54,7 @@ let closure_9 = async function _handleUploadDebugLogSettingPress() {
       } else if (1 === tmp8) {
         c3 = 0;
         (function onUploadDebugLogsRequestFinish() {
-          closure_1_0(1259).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
+          closure_1_0(1271).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
           const timerId = setTimeout(() => closure_1_0(dependencyMap[5]).batchUpdates(() => state.setState({ isDisabled: false })), 5000);
         })();
         throw dependencyMap;
@@ -67,7 +67,7 @@ let closure_9 = async function _handleUploadDebugLogSettingPress() {
           closure_129_1(closure_129_2[10]).open(obj5);
           c3 = 0;
           (function onUploadDebugLogsRequestFinish() {
-            closure_1_0(1259).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
+            closure_1_0(1271).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
             const timerId = setTimeout(() => closure_1_0(dependencyMap[5]).batchUpdates(() => state.setState({ isDisabled: false })), 5000);
           })();
           c5 = 3;
@@ -85,7 +85,7 @@ let closure_9 = async function _handleUploadDebugLogSettingPress() {
         }
         c3 = 0;
         (function onUploadDebugLogsRequestFinish() {
-          closure_1_0(1259).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
+          closure_1_0(1271).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
           const timerId = setTimeout(() => closure_1_0(dependencyMap[5]).batchUpdates(() => state.setState({ isDisabled: false })), 5000);
         })();
         c5 = 3;
@@ -112,17 +112,19 @@ const module_570 = fn(570);
 let closure_7 = module_570.create(() => ({ isDisabled: false, isUploading: false }));
 let ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
-const f70461 = () => {
+function useIsUploadingDebugLogs() {
 
-};
+}
 ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
 ReactCompilerGating = fn(558);
-fn = () => closure_7().isDisabled;
-const SettingBuilders = fn(11142);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+function useIsUploadDebugLogsDisabled() {
+  return closure_7().isDisabled;
+}
+const SettingBuilders = fn(11262);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useUploadDebugLogsTrailing() {
   const cResult = c.c(2);
-  if (typeof f70461 === "function") {
+  if (typeof useIsUploadingDebugLogs === "function") {
     const isUploading = closure_7().isUploading;
     if (cResult[0] !== isUploading) {
       let tmp4 = null;
@@ -139,8 +141,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-}) : (() => {
-  if (typeof f70461 === "function") {
+}) : (function useUploadDebugLogsTrailing() {
+  if (typeof useIsUploadingDebugLogs === "function") {
     let tmp2 = null;
     if (closure_7().isUploading) {
       tmp2 = <ActivityIndicator />;
@@ -156,7 +158,7 @@ const pressable = SettingBuilders.createPressable({
     return intl.string(util.t.aY1OH2);
   },
   parent: null,
-  IconComponent: fn(4818).CircleInformationIcon,
+  IconComponent: fn(5012).CircleInformationIcon,
   onPress: function handleUploadDebugLogSettingPress() {
     const self = this;
     const apply = closure_9.apply;
@@ -167,9 +169,9 @@ const pressable = SettingBuilders.createPressable({
     }
     return applyArgumentsResult;
   },
-  useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (function useUploadDebugLogsTrailing() {
     const cResult = c.c(2);
-    if (typeof f70461 === "function") {
+    if (typeof useIsUploadingDebugLogs === "function") {
       const isUploading = closure_7().isUploading;
       if (cResult[0] !== isUploading) {
         let tmp4 = null;
@@ -186,8 +188,8 @@ const pressable = SettingBuilders.createPressable({
     } else {
       throw new TypeError("Trying to call a non-function");
     }
-  }) : (() => {
-    if (typeof f70461 === "function") {
+  }) : (function useUploadDebugLogsTrailing() {
+    if (typeof useIsUploadingDebugLogs === "function") {
       let tmp2 = null;
       if (closure_7().isUploading) {
         tmp2 = <ActivityIndicator />;
@@ -197,7 +199,7 @@ const pressable = SettingBuilders.createPressable({
       throw new TypeError("Trying to call a non-function");
     }
   }),
-  useIsDisabled: fn
+  useIsDisabled: useIsUploadDebugLogsDisabled
 });
 const size = fn(2);
 const result2 = size.fileFinishedImporting("modules/user_settings/defs/native/UploadDebugLogsSetting.tsx");

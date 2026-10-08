@@ -1,8 +1,8 @@
-// === Module 8732: ApplicationAssetV2Utils ===
+// === Module 13202: ApplicationAssetV2Utils ===
 
-// Module 8732 (ApplicationAssetV2Utils)
-import HTTPUtils from "HTTPUtils" /* 1282 */;
-import ImageLoaderUtils from "ImageLoaderUtils" /* 1437 */;
+// Module 13202 (ApplicationAssetV2Utils)
+import HTTPUtils from "HTTPUtils" /* 1294 */;
+import ImageLoaderUtils from "ImageLoaderUtils" /* 1449 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/application_assets_v2/ApplicationAssetV2Utils.tsx");

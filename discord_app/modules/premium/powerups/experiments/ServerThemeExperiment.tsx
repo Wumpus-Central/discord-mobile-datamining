@@ -1,10 +1,10 @@
-// === Module 4779: ServerThemeExperiment ===
+// === Module 4973: ServerThemeExperiment ===
 
-// Module 4779 (ServerThemeExperiment)
+// Module 4973 (ServerThemeExperiment)
 import c from "c" /* 576 */;
 import Constants from "Constants" /* 1085 */;
-import ServerThemeApexShadowExperiment2 from "ServerThemeApexShadowExperiment" /* 4791 */;
-import createExperiment from "module_4780" /* 4780 */;
+import ServerThemeApexShadowExperiment2 from "ServerThemeApexShadowExperiment" /* 4985 */;
+import createExperiment from "module_4974" /* 4974 */;
 import "ReactCompilerGating";
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -14,7 +14,7 @@ let obj = { kind: "guild", id: "2026-04_server_theme", label: "Server Theme", de
 const items = [{ id: 0, label: "Control", config: { enabled: false, inExperiment: true, gatesApex: false, rollbackEnabled: false } }, { id: 1, label: "Enable Server Theme", config: { enabled: true, inExperiment: true, gatesApex: false, rollbackEnabled: false } }, { id: 2, label: "Rollback UI for Server Theme", config: { enabled: true, inExperiment: true, gatesApex: false, rollbackEnabled: true } }];
 obj.treatments = items;
 let experiment = createExperiment.createExperiment(obj);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId, location) => {
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useServerThemeEnabled(guildId, location) {
   const cResult = c.c(11);
   if (cResult[0] === guildId) {
     if (cResult[1] === location) {
@@ -74,7 +74,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId, location) =
   cResult[1] = location;
   cResult[2] = obj4;
   tmp4 = obj4;
-}) : ((guildId, location) => {
+}) : (function useServerThemeEnabled(guildId, location) {
   experiment = experiment.useExperiment({ guildId, location }, { autoTrackExposure: false });
   const ServerThemeApexShadowExperiment = ServerThemeApexShadowExperiment2.ServerThemeApexShadowExperiment;
   let tmp3 = guildId;
@@ -141,7 +141,7 @@ export const getServerThemeRollbackEnabled = function getServerThemeRollbackEnab
   }
   return currentConfig.rollbackEnabled;
 };
-export const useServerThemeRollbackEnabled = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId, location) => {
+export const useServerThemeRollbackEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useServerThemeRollbackEnabled(guildId, location) {
   const cResult = c.c(11);
   if (cResult[0] === guildId) {
     if (cResult[1] === location) {
@@ -201,7 +201,7 @@ export const useServerThemeRollbackEnabled = ReactCompilerGating.isReactCompiler
   cResult[1] = location;
   cResult[2] = obj4;
   tmp4 = obj4;
-}) : ((guildId, location) => {
+}) : (function useServerThemeRollbackEnabled(guildId, location) {
   experiment = experiment.useExperiment({ guildId, location }, { autoTrackExposure: false });
   const ServerThemeApexShadowExperiment = ServerThemeApexShadowExperiment2.ServerThemeApexShadowExperiment;
   let tmp3 = guildId;

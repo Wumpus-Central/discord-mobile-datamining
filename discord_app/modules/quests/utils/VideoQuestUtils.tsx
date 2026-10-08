@@ -1,15 +1,15 @@
-// === Module 10953: VideoQuestUtils ===
+// === Module 10604: VideoQuestUtils ===
 
-// Module 10953 (VideoQuestUtils)
+// Module 10604 (VideoQuestUtils)
 import util from "util" /* 1126 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4742 */;
-import QuestDataUtils from "QuestDataUtils" /* 7196 */;
-import AnalyticsActions from "AnalyticsActions" /* 7215 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7221 */;
-import QuestActionCreators from "QuestActionCreators" /* 10007 */;
-import NetworkStore from "NetworkStore" /* 4945 */;
-import QuestStore from "QuestStore" /* 7200 */;
-import VideoQuestUIStore from "VideoQuestUIStore" /* 7202 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4936 */;
+import QuestExpirationUtils from "QuestExpirationUtils" /* 7385 */;
+import AnalyticsActions from "AnalyticsActions" /* 7395 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7401 */;
+import QuestActionCreators from "QuestActionCreators" /* 9537 */;
+import NetworkStore from "NetworkStore" /* 5280 */;
+import QuestStore from "QuestStore" /* 7379 */;
+import VideoQuestUIStore from "VideoQuestUIStore" /* 7381 */;
 
 require = fn;
 const AnalyticEvents = fn(1085).AnalyticEvents;
@@ -17,9 +17,9 @@ const portrait = "portrait";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/utils/VideoQuestUtils.tsx");
 
-export const getVideoQuestWatchCtaText = fn(10954).getVideoQuestWatchCtaText;
+export const getVideoQuestWatchCtaText = fn(10605).getVideoQuestWatchCtaText;
 export const sendVideoProgress = function sendVideoProgress(quest, currentTime) {
-  let isQuestExpiredResult = QuestDataUtils.isQuestExpired(quest);
+  let isQuestExpiredResult = QuestExpirationUtils.isQuestExpired(quest);
   if (!isQuestExpiredResult) {
     const userStatus = quest.userStatus;
     let enrolledAt;
@@ -135,7 +135,7 @@ export const handleVideoQuestModalClose = function handleVideoQuestModalClose(ar
       tmp4 = null == completedAt;
     }
     if (tmp4) {
-      let isQuestExpiredResult = QuestDataUtils.isQuestExpired(quest);
+      let isQuestExpiredResult = QuestExpirationUtils.isQuestExpired(quest);
       if (!isQuestExpiredResult) {
         const userStatus3 = quest.userStatus;
         let enrolledAt1;

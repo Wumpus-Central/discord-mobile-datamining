@@ -1,41 +1,41 @@
-// === Module 9669: ChannelCallConnectingScreen ===
+// === Module 10858: ChannelCallConnectingScreen ===
 
-// Module 9669 (ChannelCallConnectingScreen)
+// Module 10858 (ChannelCallConnectingScreen)
 import c from "c" /* 576 */;
-import MetaQuestUtils from "MetaQuestUtils" /* 1615 */;
-import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1881 */;
-import useThemeDefault from "useTheme" /* 4797 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import useChannelNameDefault from "useChannelName" /* 5049 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5575 */;
-import BottomSheetModal from "BottomSheetModal" /* 6119 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6652 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 8079 */;
-import beginConsoleTransfer from "beginConsoleTransfer" /* 9460 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9494 */;
-import UserSettingsVoiceDefault from "UserSettingsVoice" /* 9670 */;
-import VoiceChatHeaderIconDefault from "VoiceChatHeaderIcon" /* 9697 */;
-import _modDef9698 from "module_9698" /* 9698 */;
-import ChannelCallMicButton from "ChannelCallMicButton" /* 9699 */;
-import coercePlatformTypeToConsoleType from "coercePlatformTypeToConsoleType" /* 9706 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1627 */;
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1893 */;
+import useThemeDefault from "useTheme" /* 4991 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5241 */;
+import useChannelNameDefault from "useChannelName" /* 5417 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5885 */;
+import BottomSheetModal from "BottomSheetModal" /* 6298 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6829 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8658 */;
+import UserSettingsVoiceDefault from "UserSettingsVoice" /* 10859 */;
+import VoiceChatHeaderIconDefault from "VoiceChatHeaderIcon" /* 10886 */;
+import _modDef10887 from "module_10887" /* 10887 */;
+import ChannelCallMicButton from "ChannelCallMicButton" /* 10888 */;
+import coercePlatformTypeToConsoleType from "coercePlatformTypeToConsoleType" /* 10895 */;
+import beginConsoleTransfer from "beginConsoleTransfer" /* 10896 */;
 import noop from "module_19" /* 19 */;
-import GameConsoleStore from "GameConsoleStore" /* 4913 */;
-import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
-import SessionsStore from "SessionsStore" /* 4914 */;
+import GameConsoleStore from "GameConsoleStore" /* 5109 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
+import SessionsStore from "SessionsStore" /* 5110 */;
 
 require = fn;
 const View = fn(17).View;
-const resetFocus = fn(9086).resetFocus;
+const resetFocus = fn(10333).resetFocus;
 const InstantInviteSources = fn(1085).InstantInviteSources;
 const Permissions = fn(1096).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4896);
-let obj2 = { spacer: { width: 8 }, actionBarContainer: { paddingHorizontal: 12, paddingTop: 16, justifyContent: "center", alignItems: "flex-start", flexDirection: "row", height: fn(9111).CALL_ACTION_BAR_HEIGHT } };
+const createStyles = fn(5090);
+let obj2 = { spacer: { width: 8 }, actionBarContainer: { paddingHorizontal: 12, paddingTop: 16, justifyContent: "center", alignItems: "flex-start", flexDirection: "row", height: fn(10684).CALL_ACTION_BAR_HEIGHT } };
 let closure_15 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceSettingsActionSheet() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const isMetaQuestResult = MetaQuestUtils.isMetaQuest();
@@ -56,15 +56,15 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp6 = cResult[1];
   }
   return tmp6;
-}) : (() => {
+}) : (function VoiceSettingsActionSheet() {
   const obj = { scrollable: true, startExpanded: MetaQuestUtils.isMetaQuest(), children: null };
   obj.children = __initData(BottomSheetModal.BottomSheetScrollView, { children: __initData(UserSettingsVoiceDefault, {}) });
   return __initData(Sheet_BottomSheet.BottomSheet, obj);
 });
 fn(558);
-let obj3 = { paddingHorizontal: 12, paddingTop: 16, justifyContent: "center", alignItems: "flex-start", flexDirection: "row", height: fn(9111).CALL_ACTION_BAR_HEIGHT };
+let obj3 = { paddingHorizontal: 12, paddingTop: 16, justifyContent: "center", alignItems: "flex-start", flexDirection: "row", height: fn(10684).CALL_ACTION_BAR_HEIGHT };
 ReactCompilerGating = fn(558);
-let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function JoinMutedButton(channel) {
   const cResult = c.c(3);
   channel = channel.channel;
   const tmp4 = "light" === useThemeDefault();
@@ -79,12 +79,12 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   cResult[1] = tmp4;
   cResult[2] = tmp6;
   tmp5 = tmp6;
-}) : ((channel) => {
+}) : (function JoinMutedButton(channel) {
   const tmp = useThemeDefault();
   return __initData(ChannelCallMicButton.ChannelCallMicButton, { channel: channel.channel, disableTint: "light" === useThemeDefault(), isSmallSize: false });
 });
 ReactCompilerGating = fn(558);
-let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function JoinVoiceButton(channel) {
   const cResult = channel(stateFromStores1[14]).c(21);
   channel = channel.channel;
   const tmp5 = require("useVoiceStateForRemoteSession")();
@@ -119,24 +119,27 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     if (tmp5 != null) {
       sessionId1 = tmp5.sessionId;
     }
-    const fn2 = function f() {
-      let str;
-      if (sessionId != null) {
-        str = sessionId.sessionId;
+    class S {
+      constructor() {
+        str = undefined;
+        tmp = closure_8;
+        if (closure_1 != null) {
+          str = closure_1.sessionId;
+        }
+        if (str == null) {
+          str = "";
+        }
+        sessionById = closure_8.getSessionById(str);
+        os = undefined;
+        if (sessionById != null) {
+          os = sessionById.clientInfo.os;
+        }
+        return os;
       }
-      if (str == null) {
-        str = "";
-      }
-      const sessionById = SessionsStore.getSessionById(str);
-      let os;
-      if (sessionById != null) {
-        os = sessionById.clientInfo.os;
-      }
-      return os;
-    };
+    }
     cResult[3] = sessionId1;
-    cResult[4] = fn2;
-    let tmp13 = fn2;
+    cResult[4] = S;
+    let tmp13 = S;
   } else {
     tmp13 = cResult[4];
   }
@@ -153,7 +156,25 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
           let tmp19 = cResult[9];
         }
         const tmp20 = tmp4(tmp2[20])(channel);
-        const isVoiceChannelLocked = tmp(tmp2[20]).useIsVoiceChannelLocked(channel);
+        class S {
+          constructor() {
+            str = undefined;
+            tmp = closure_8;
+            if (closure_1 != null) {
+              str = closure_1.sessionId;
+            }
+            if (str == null) {
+              str = "";
+            }
+            sessionById = closure_8.getSessionById(str);
+            os = undefined;
+            if (sessionById != null) {
+              os = sessionById.clientInfo.os;
+            }
+            return os;
+          }
+        }
+        const isVoiceChannelLocked = obj4.useIsVoiceChannelLocked(channel);
         let tmp22 = tmp20;
         if (!tmp20) {
           tmp22 = isVoiceChannelLocked;
@@ -164,8 +185,25 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
         const _Symbol = Symbol;
         if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
           let obj2 = { tintColor: tmp4(tmp2[36]).unsafe_rawColors.WHITE };
-          const intl = tmp(tmp2[24]).intl;
-          const stringResult = intl.string(tmp(tmp2[24]).t["96ANUN"]);
+          class S {
+            constructor() {
+              str = undefined;
+              tmp = closure_8;
+              if (closure_1 != null) {
+                str = closure_1.sessionId;
+              }
+              if (str == null) {
+                str = "";
+              }
+              sessionById = closure_8.getSessionById(str);
+              os = undefined;
+              if (sessionById != null) {
+                os = sessionById.clientInfo.os;
+              }
+              return os;
+            }
+          }
+          const stringResult = obj6.string(tmp(tmp2[24]).t["96ANUN"]);
           cResult[10] = obj2;
           cResult[11] = stringResult;
           let tmp24 = stringResult;
@@ -188,19 +226,37 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
                   }
                 }
               }
+              class S {
+                constructor() {
+                  str = undefined;
+                  tmp = closure_8;
+                  if (closure_1 != null) {
+                    str = closure_1.sessionId;
+                  }
+                  if (str == null) {
+                    str = "";
+                  }
+                  sessionById = closure_8.getSessionById(str);
+                  os = undefined;
+                  if (sessionById != null) {
+                    os = sessionById.clientInfo.os;
+                  }
+                  return os;
+                }
+              }
               let obj3 = { disabled: tmp22, backgroundColor: tmp4(tmp2[36]).unsafe_rawColors.GREEN_360, imageStyle: tmp23, accessibilityLabel: tmp24, source: tmp4Result, onPress: tmp19, label: cResult[15], iconPosition: tmp(tmp2[39]).IconPosition.RIGHT };
-              const tmp32 = closure_12(tmp(tmp2[39]).LabeledActionButton, obj3);
+              const tmp31 = closure_12(tmp(tmp2[39]).LabeledActionButton, obj3);
               cResult[16] = tmp22;
               cResult[17] = tmp19;
               cResult[18] = tmp4Result;
               cResult[19] = cResult[15];
-              cResult[20] = tmp32;
-              tmp30 = tmp32;
+              cResult[20] = tmp31;
+              tmp30 = tmp31;
             }
           }
         }
-        const intl2 = tmp(tmp2[24]).intl;
-        const string = intl2.string;
+        const intl = tmp(tmp2[24]).intl;
+        const string = intl.string;
         let TVBCKZ = tmp(tmp2[24]).t;
         if (isVoiceChannelLocked) {
           TVBCKZ = TVBCKZ.TVBCKZ;
@@ -216,7 +272,6 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
         cResult[13] = isVoiceChannelLocked;
         cResult[14] = tmp18;
         cResult[15] = stringResult1;
-        const tmpResult4 = tmp(tmp2[20]);
       }
     }
   }
@@ -259,8 +314,8 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   cResult[8] = stateFromStores1;
   cResult[9] = I;
   tmp19 = I;
-  const tmpResult3 = channel(stateFromStores1[31]);
-}) : ((channel) => {
+  const tmpResult2 = channel(stateFromStores1[31]);
+}) : (function JoinVoiceButton(channel) {
   channel = channel.channel;
   importDefault = undefined;
   let stateFromStores1;
@@ -339,13 +394,13 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   return closure_12(channel(stateFromStores1[39]).LabeledActionButton, obj3);
 });
 ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelCallConnectingHeader(channel) {
   const cResult = channel(576).c(13);
   channel = channel.channel;
   const tmp4 = closure_15();
   const tmp6 = useChannelNameDefault(channel);
   const obj = channel(576);
-  const isVoiceChannelLocked = channel(9613).useIsVoiceChannelLocked(channel);
+  const isVoiceChannelLocked = channel(10806).useIsVoiceChannelLocked(channel);
   if (cResult[0] === channel) {
     if (cResult[1] === isVoiceChannelLocked) {
       let tmp8 = cResult[2];
@@ -398,7 +453,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     }
     let tmp15 = null;
     if (null != tmp8) {
-      const obj7 = { source: _modDef9698, onPress: tmp8, accessibilityLabel: null };
+      const obj7 = { source: _modDef10887, onPress: tmp8, accessibilityLabel: null };
       const intl = tmp(1126).intl;
       const obj8 = { channelName: tmp6 };
       obj7.accessibilityLabel = intl.formatToPlainString(tmp(1126).t["dHHb/2"], obj8);
@@ -421,12 +476,12 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   cResult[1] = isVoiceChannelLocked;
   cResult[2] = fn;
   tmp8 = fn;
-  const obj2 = channel(9613);
-}) : ((channel) => {
+  const obj2 = channel(10806);
+}) : (function ChannelCallConnectingHeader(channel) {
   channel = channel.channel;
   const tmp = closure_15();
   const tmp4 = useChannelNameDefault(channel);
-  const isVoiceChannelLocked = channel(9613).useIsVoiceChannelLocked(channel);
+  const isVoiceChannelLocked = channel(10806).useIsVoiceChannelLocked(channel);
   let fn = null;
   if (PermissionStore.can(Permissions.CREATE_INSTANT_INVITE, channel)) {
     fn = null;
@@ -437,7 +492,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   const items = [closure_12(View, { style: { width: 4 } }), , , ];
   let tmp9Result = null;
   if (null != fn) {
-    const obj2 = { source: _modDef9698, onPress: fn, accessibilityLabel: null };
+    const obj2 = { source: _modDef10887, onPress: fn, accessibilityLabel: null };
     const intl = tmp5(1126).intl;
     const obj3 = { channelName: tmp4 };
     obj2.accessibilityLabel = intl.formatToPlainString(tmp5(1126).t["dHHb/2"], obj3);
@@ -458,7 +513,7 @@ export const showVoiceSettingsActionSheet = function showVoiceSettingsActionShee
   ActionSheetActionCreatorsDefault.openLazy(() => Promise.resolve(closure_1_16), "voice settings", { guildId });
 };
 export const ChannelCallConnectingHeader = tmp3;
-export const CallConnectingActionBar = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+export const CallConnectingActionBar = ReactCompilerGating.isReactCompilerEnabled() ? (function CallConnectingActionBar(channel) {
   const cResult = c.c(7);
   channel = channel.channel;
   const tmp2 = closure_15();
@@ -493,7 +548,7 @@ export const CallConnectingActionBar = ReactCompilerGating.isReactCompilerEnable
   cResult[5] = tmp4;
   cResult[6] = tmp11;
   tmp10 = tmp11;
-}) : ((channel) => {
+}) : (function CallConnectingActionBar(channel) {
   channel = channel.channel;
   const obj = { style: closure_15().actionBarContainer, children: null };
   const items = [__initData(closure_17, { channel }), __initData(closure_18, { channel })];

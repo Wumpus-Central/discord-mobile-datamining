@@ -1,16 +1,16 @@
-// === Module 12251: useGameServerFeaturedGameNames ===
+// === Module 12330: useGameServerFeaturedGameNames ===
 
-// Module 12251 (useGameServerFeaturedGameNames)
+// Module 12330 (useGameServerFeaturedGameNames)
 import c from "c" /* 576 */;
-import useGame from "useGame" /* 6822 */;
-import GameServerConstants from "GameServerConstants" /* 4775 */;
+import useGame from "useGame" /* 6995 */;
+import GameServerConstants from "GameServerConstants" /* 4969 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 ({ MINECRAFT_GAME_ID: c2, HYTALE_GAME_ID: c3 } = GameServerConstants);
 const result = size.fileFinishedImporting("modules/game_server/hooks/useGameServerFeaturedGameNames.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGameServerFeaturedGameNames() {
   const cResult = c.c(3);
   const data = useGame.useGame(React2).data;
   const data2 = useGame.useGame(React3).data;
@@ -39,7 +39,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[1] = str2;
   cResult[2] = obj4;
   tmp2 = obj4;
-}) : (() => {
+}) : (function useGameServerFeaturedGameNames() {
   const data = useGame.useGame(React2).data;
   const data2 = useGame.useGame(React3).data;
   let str;

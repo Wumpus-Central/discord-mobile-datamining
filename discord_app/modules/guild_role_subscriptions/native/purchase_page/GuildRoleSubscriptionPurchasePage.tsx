@@ -1,19 +1,19 @@
-// === Module 16531: GuildRoleSubscriptionPurchasePage ===
+// === Module 16786: GuildRoleSubscriptionPurchasePage ===
 
-// Module 16531 (GuildRoleSubscriptionPurchasePage)
+// Module 16786 (GuildRoleSubscriptionPurchasePage)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import LinkingDefault from "Linking" /* 4571 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5819 */;
-import _modDef9615 from "module_9615" /* 9615 */;
-import GuildRoleSubscriptionPurchasePreviewCardDefault from "GuildRoleSubscriptionPurchasePreviewCard" /* 16541 */;
+import native from "native" /* 1200 */;
+import LinkingDefault from "Linking" /* 4763 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8134 */;
+import _modDef10808 from "module_10808" /* 10808 */;
+import GuildRoleSubscriptionPurchasePreviewCardDefault from "GuildRoleSubscriptionPurchasePreviewCard" /* 16796 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1193 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildStore from "GuildStore" /* 2074 */;
+import ThemeStore from "ThemeStore" /* 1205 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildStore from "GuildStore" /* 2086 */;
 
 const require = globalThis.__r;
 
@@ -24,7 +24,7 @@ const Constants = fn(1085);
 ({ AnalyticsLocations: closure_11, GuildFeatures: closure_12, MarketingURLs: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, heroImage: { aspectRatio: 4, width: "100%" }, guildIconContainer: null, guildIcon: null, contentCard: null, loadingContainer: null, socialContainer: null, socialBadge: null, socialBadgeIcon: null, socialBadgeArrow: null, separator: null, moneyBirbPlaceholder: null, gatedChannel: null, gatedChannelIcon: null };
 const rect = { borderWidth: 3, borderRadius: nativeDefault.radii.md, alignSelf: "flex-start", top: -35, left: 16, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW, position: "absolute" };
 obj2.guildIconContainer = rect;
@@ -47,7 +47,7 @@ let obj7 = { height: 24, marginLeft: 6, tintColor: nativeDefault.colors.INTERACT
 obj2.gatedChannelIcon = { tintColor: nativeDefault.colors.TEXT_DEFAULT };
 let closure_17 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Separator() {
   const cResult = c.c(2);
   const tmp2 = closure_17();
   if (cResult[0] !== tmp2.separator) {
@@ -60,9 +60,11 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp3 = cResult[1];
   }
   return tmp3;
-}) : (() => state(timestampProducer, { style: closure_17().separator }));
+}) : (function Separator() {
+  return state(timestampProducer, { style: closure_17().separator });
+});
 ReactCompilerGating = fn(558);
-let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function LegalDisclaimer() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { variant: "text-xs/normal", color: "text-muted", children: null };
@@ -77,14 +79,14 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     first = cResult[0];
   }
   return first;
-}) : (() => {
+}) : (function LegalDisclaimer() {
   const obj = { variant: "text-xs/normal", color: "text-muted", children: null };
   const intl = util.intl;
   obj.children = intl.format(util.t.FSPTDI, { termsURL: constants3.TERMS, paidURL: constants3.PAID_TERMS });
   return state(Text_Text.Text, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function SocialBadge(arg0) {
   const cResult = c.c(15);
   ({ iconSource, text, onPress } = arg0);
   const tmp4 = closure_17();
@@ -138,7 +140,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     let tmp12 = tmp5;
     if (tmp5) {
-      const obj4 = { source: _modDef9615, style: tmp4.socialBadgeArrow };
+      const obj4 = { source: _modDef10808, style: tmp4.socialBadgeArrow };
       tmp12 = state(native.Icon, obj4);
     }
     cResult[5] = tmp5;
@@ -152,7 +154,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = tmp7;
   tmp6 = tmp7;
   const obj5 = { source: iconSource, style: tmp4.socialBadgeIcon, resizeMode: "contain", disableColor: true };
-}) : ((onPress) => {
+}) : (function SocialBadge(onPress) {
   onPress = onPress.onPress;
   ({ iconSource, text } = onPress);
   const tmp = closure_17();
@@ -166,7 +168,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   obj.onPress = onPress;
   const items = [state(native.Icon, { source: iconSource, style: tmp.socialBadgeIcon, resizeMode: "contain", disableColor: true }), state(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: text }), ];
   if (tmp5Result) {
-    const obj3 = { source: _modDef9615, style: tmp.socialBadgeArrow };
+    const obj3 = { source: _modDef10808, style: tmp.socialBadgeArrow };
     tmp5Result = state(native.Icon, obj3);
   }
   items[2] = tmp5Result;
@@ -178,7 +180,7 @@ let obj8 = { tintColor: nativeDefault.colors.TEXT_DEFAULT };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/purchase_page/GuildRoleSubscriptionPurchasePage.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRoleSubscriptionPurchasePage(guildId) {
   const cResult = guildId(stateFromStores1[10]).c(89);
   guildId = guildId.guildId;
   const gatedChannelId = guildId.gatedChannelId;
@@ -208,45 +210,45 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     tmp12 = cResult[1];
   }
   if (cResult[2] !== guildId) {
-    class G {
+    class P {
       constructor() {
         return closure_10.getGuild(guildId);
       }
     }
     cResult[2] = guildId;
-    cResult[3] = G;
+    cResult[3] = P;
   } else {
-    class G {
+    class P {
       constructor() {
         return closure_10.getGuild(guildId);
       }
     }
   }
   const tmpResult8 = guildId(stateFromStores1[17]);
-  const stateFromStores = guildId(stateFromStores1[19]).useStateFromStores(tmp12, G);
+  const stateFromStores = guildId(stateFromStores1[19]).useStateFromStores(tmp12, P);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    class G {
+    class P {
       constructor() {
         return closure_10.getGuild(guildId);
       }
     }
     cResult[4] = tmp17;
   } else {
-    class G {
+    class P {
       constructor() {
         return closure_10.getGuild(guildId);
       }
     }
   }
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    class O {
+    class D {
       constructor(arg0) {
         return guildId.id;
       }
     }
-    cResult[5] = O;
+    cResult[5] = D;
   } else {
-    class O {
+    class D {
       constructor(arg0) {
         return guildId.id;
       }
@@ -254,23 +256,23 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   }
   const tmpResult9 = guildId(stateFromStores1[19]);
   if (first1 != null) {
-    class O {
+    class D {
       constructor(arg0) {
         return guildId.id;
       }
     }
   }
   const subscriptionListingsForGroup = guildId(stateFromStores1[17]).useSubscriptionListingsForGroup(undefined, tmp17);
-  const mapped = subscriptionListingsForGroup.map(O);
+  const mapped = subscriptionListingsForGroup.map(D);
   if (null != gatedChannelId) {
-    class O {
+    class D {
       constructor(arg0) {
         return guildId.id;
       }
     }
     let ROLE_SUBSCRIPTIONS_TAB = constants.ROLE_SUBSCRIPTION_GATED_CHANNEL;
   } else {
-    class O {
+    class D {
       constructor(arg0) {
         return guildId.id;
       }
@@ -280,7 +282,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   const obj4 = { guildId, groupListingId: null, location: null, relevantSubscriptionListingIds: null };
   const tmpResult10 = guildId(stateFromStores1[17]);
   if (first1 != null) {
-    class O {
+    class D {
       constructor(arg0) {
         return guildId.id;
       }
@@ -291,7 +293,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   obj4.relevantSubscriptionListingIds = mapped;
   gatedChannelId(stateFromStores1[20])(obj4);
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-    class O {
+    class D {
       constructor(arg0) {
         return guildId.id;
       }
@@ -300,14 +302,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     cResult[6] = items1;
     const tmp22 = items1;
   } else {
-    class O {
+    class D {
       constructor(arg0) {
         return guildId.id;
       }
     }
   }
   if (cResult[7] !== gatedChannelId) {
-    class O {
+    class D {
       constructor(arg0) {
         return guildId.id;
       }
@@ -318,7 +320,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     cResult[9] = items2;
     let tmp24 = items2;
   } else {
-    class O {
+    class D {
       constructor(arg0) {
         return guildId.id;
       }
@@ -330,7 +332,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   const tmpResult11 = guildId(stateFromStores1[19]);
   const children = gatedChannelId(stateFromStores1[21])(stateFromStores1);
   if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-    class O {
+    class D {
       constructor(arg0) {
         return guildId.id;
       }
@@ -345,7 +347,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     cResult[11] = items3;
     let tmp29 = items3;
   } else {
-    class O {
+    class D {
       constructor(arg0) {
         return guildId.id;
       }
@@ -355,7 +357,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   const tmp27 = gatedChannelId(stateFromStores1[21])(stateFromStores1);
   const stateFromStores2 = guildId(stateFromStores1[19]).useStateFromStores(tmp29, V);
   if (cResult[12] !== stateFromStores2) {
-    class O {
+    class D {
       constructor(arg0) {
         return guildId.id;
       }
@@ -368,13 +370,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     }
     cResult[13] = tmp31;
   } else {
-    class O {
+    class D {
       constructor(arg0) {
         return guildId.id;
       }
     }
     if (groupListingsFetchContext) {
-      class O {
+      class D {
         constructor(arg0) {
           return guildId.id;
         }
@@ -387,7 +389,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       }
     }
     if (tmp33 === Symbol.for("react.memo_cache_sentinel")) {
-      class O {
+      class D {
         constructor(arg0) {
           return guildId.id;
         }
@@ -401,14 +403,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       cResult[14] = tmp36;
       const tmp34 = tmp36;
     } else {
-      class O {
+      class D {
         constructor(arg0) {
           return guildId.id;
         }
       }
     }
     if (cResult[15] !== tmp5.loadingContainer) {
-      class O {
+      class D {
         constructor(arg0) {
           return guildId.id;
         }
@@ -425,7 +427,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       cResult[16] = tmp39;
       const tmp37 = tmp39;
     } else {
-      class O {
+      class D {
         constructor(arg0) {
           return guildId.id;
         }
@@ -434,7 +436,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     return tmp37;
   }
   const tmpResult12 = guildId(stateFromStores1[19]);
-}) : ((guildId) => {
+}) : (function GuildRoleSubscriptionPurchasePage(guildId) {
   guildId = guildId.guildId;
   const gatedChannelId = guildId.gatedChannelId;
   let stateFromStores1;

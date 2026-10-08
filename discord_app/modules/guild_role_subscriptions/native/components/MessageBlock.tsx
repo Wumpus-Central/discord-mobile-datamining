@@ -1,16 +1,16 @@
-// === Module 11867: MessageBlock ===
+// === Module 11939: MessageBlock ===
 
-// Module 11867 (MessageBlock)
+// Module 11939 (MessageBlock)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
+import native from "native" /* 1200 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 const MessageBlockColors = { RED: 0, [0]: "RED", YELLOW: 1, [1]: "YELLOW" };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles((arg0) => {
   if (obj.RED === arg0) {
     obj = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL, borderColor: nativeDefault.colors.BORDER_FEEDBACK_CRITICAL };
@@ -40,7 +40,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/MessageBlock.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function MessageBlock(children) {
   const cResult = c.c(6);
   children = children.children;
   const tmp4 = closure_6(children.color);
@@ -67,7 +67,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
   cResult[2] = tmp6;
   tmp5 = tmp6;
   const obj3 = { style: tmp4.text, children };
-}) : ((children) => {
+}) : (function MessageBlock(children) {
   const tmp = closure_6(children.color);
   const obj = { style: tmp.container, children: jsx(native.LegacyText, { style: tmp.text, children: children.children }) };
   return <View style={tmp.container}>{jsx(native.LegacyText, { style: tmp.text, children: children.children })}</View>;

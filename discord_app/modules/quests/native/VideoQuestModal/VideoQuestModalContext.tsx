@@ -1,6 +1,6 @@
-// === Module 14945: VideoQuestModalContext ===
+// === Module 15207: VideoQuestModalContext ===
 
-// Module 14945 (VideoQuestModalContext)
+// Module 15207 (VideoQuestModalContext)
 import _modDef38 from "module_38" /* 38 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,11 +10,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestModalContext.tsx");
 
 export default context;
-export const useVideoQuestModalContext = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useVideoQuestModalContext = ReactCompilerGating.isReactCompilerEnabled() ? (function useVideoQuestModalContext() {
   context = noop.useContext(context);
   _modDef38(null != context, "useVideoQuestModalContext must be used within a VideoQuestModalProvider");
   return context;
-}) : (() => {
+}) : (function useVideoQuestModalContext() {
   context = noop.useContext(context);
   _modDef38(null != context, "useVideoQuestModalContext must be used within a VideoQuestModalProvider");
   return context;

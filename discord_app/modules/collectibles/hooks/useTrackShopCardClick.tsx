@@ -1,19 +1,19 @@
-// === Module 8516: useTrackShopCardClick ===
+// === Module 9000: useTrackShopCardClick ===
 
-// Module 8516 (useTrackShopCardClick)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7077 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7078 */;
+// Module 9000 (useTrackShopCardClick)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7263 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7264 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const useSelectedVariantIndex = fn(8517).useSelectedVariantIndex;
+const useSelectedVariantIndex = fn(9001).useSelectedVariantIndex;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useTrackShopCardClick.tsx");
 
-export const useTrackShopCardClick = ReactCompilerGating.isReactCompilerEnabled() ? ((product) => {
+export const useTrackShopCardClick = ReactCompilerGating.isReactCompilerEnabled() ? (function useTrackShopCardClick(product) {
   const cResult = require("c").c(10);
   product = product.product;
   require = product;
@@ -56,7 +56,7 @@ export const useTrackShopCardClick = ReactCompilerGating.isReactCompilerEnabled(
       }
     }
   }
-  const fn = function v(cta, arg1) {
+  const fn = function h(cta, arg1) {
     if (obj.getIsVariantProduct(product)) {
       let tmp4 = arg1;
       if (arg1 == null) {
@@ -93,7 +93,7 @@ export const useTrackShopCardClick = ReactCompilerGating.isReactCompilerEnabled(
   cResult[8] = tilePosition;
   cResult[9] = fn;
   tmp8 = fn;
-}) : ((product) => {
+}) : (function useTrackShopCardClick(product) {
   product = product.product;
   require = product;
   const analyticsLocations = product.analyticsLocations;

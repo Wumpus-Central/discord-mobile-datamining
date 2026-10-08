@@ -1,15 +1,15 @@
-// === Module 11725: useViewableAppLauncherHomeItems ===
+// === Module 11790: useViewableAppLauncherHomeItems ===
 
-// Module 11725 (useViewableAppLauncherHomeItems)
+// Module 11790 (useViewableAppLauncherHomeItems)
 import noop from "module_19" /* 19 */;
-import AppLauncherStore from "AppLauncherStore" /* 8960 */;
+import AppLauncherStore from "AppLauncherStore" /* 11791 */;
 
 const require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/native/screens/home/useViewableAppLauncherHomeItems.tsx");
 
-export const useViewableAppLauncherHomeItems = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useViewableAppLauncherHomeItems = ReactCompilerGating.isReactCompilerEnabled() ? (function useViewableAppLauncherHomeItems() {
   const cResult = sharedValue(sharedValue1[3]).c(8);
   let obj = sharedValue(sharedValue1[3]);
   sharedValue = sharedValue(sharedValue1[4]).useSharedValue(false);
@@ -83,7 +83,7 @@ export const useViewableAppLauncherHomeItems = ReactCompilerGating.isReactCompil
   cResult[2] = sharedValue1;
   cResult[3] = fn;
   tmp5 = fn;
-}) : (() => {
+}) : (function useViewableAppLauncherHomeItems() {
   sharedValue = sharedValue(sharedValue1[4]).useSharedValue(false);
   let obj = sharedValue(sharedValue1[4]);
   sharedValue1 = sharedValue(sharedValue1[4]).useSharedValue(false);

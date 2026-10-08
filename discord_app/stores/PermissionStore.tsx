@@ -1,23 +1,23 @@
-// === Module 4515: PermissionStore ===
+// === Module 4707: PermissionStore ===
 
-// Module 4515 (PermissionStore)
+// Module 4707 (PermissionStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 2066 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4520 */;
-import ThreadActionUtils from "ThreadActionUtils" /* 4523 */;
-import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 4524 */;
-import ImpersonateStore from "ImpersonateStore" /* 2105 */;
-import LurkingStore from "LurkingStore" /* 4516 */;
-import StageInstanceStore from "StageInstanceStore" /* 2056 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4517 */;
-import UserRecord from "UserRecord" /* 1391 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import UserStore from "UserStore" /* 1377 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 2078 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4712 */;
+import ThreadActionUtils from "ThreadActionUtils" /* 4715 */;
+import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 4716 */;
+import ImpersonateStore from "ImpersonateStore" /* 2117 */;
+import LurkingStore from "LurkingStore" /* 4708 */;
+import StageInstanceStore from "StageInstanceStore" /* 2068 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4709 */;
+import UserRecord from "UserRecord" /* 1403 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildMemberStore from "GuildMemberStore" /* 2124 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 function getUncachedChannelPermissions(id, arg1) {
@@ -242,12 +242,12 @@ function computePermissions(context, overwrites, roles, excludeGuildPermissions)
   NONE = tmpResult4.computePermissions({ user: UserStore.getCurrentUser(), context, overwrites, roles, checkElevated: true, excludeGuildPermissions });
   const obj3 = { user: UserStore.getCurrentUser(), context, overwrites, roles, checkElevated: true, excludeGuildPermissions };
 }
-const ChannelRecord = fn(2055);
+const ChannelRecord = fn(2067);
 ({ ChannelRecordBase: closure_8, THREAD_CHANNEL_TYPES: closure_9 } = ChannelRecord);
-const GuildRecord = fn(2070);
+const GuildRecord = fn(2082);
 ({ isGuildOwner: c10, isGuildOwnerWithRequiredMfaLevel: closure_11 } = GuildRecord);
 const Permissions = fn(1085).Permissions;
-let closure_18 = fn(4519).MemberSafetyPagePermissions;
+let closure_18 = fn(4711).MemberSafetyPagePermissions;
 const dependencyMap = {};
 const dependencyMap2 = {};
 const dependencyMap3 = {};
@@ -300,7 +300,7 @@ prototype["getGuildPermissionProps"] = function getGuildPermissionProps(guild) {
   const obj = { canManageGuild: this.can(Permissions.MANAGE_GUILD, guild), canManageChannels: this.can(Permissions.MANAGE_CHANNELS, guild), canManageRoles: this.can(Permissions.MANAGE_ROLES, guild), canManageBans: this.can(Permissions.BAN_MEMBERS, guild), canManageNicknames: this.can(Permissions.MANAGE_NICKNAMES, guild), canManageGuildExpressions: this.can(Permissions.MANAGE_GUILD_EXPRESSIONS, guild) || self.can(Permissions.CREATE_GUILD_EXPRESSIONS, guild), canViewAuditLog: self.can(Permissions.VIEW_AUDIT_LOG, guild), canViewAuditLogV2: self.can(Permissions.VIEW_AUDIT_LOG, guild), canManageWebhooks: self.can(Permissions.MANAGE_WEBHOOKS, guild), canViewGuildAnalytics: self.can(Permissions.VIEW_GUILD_ANALYTICS, guild), canAccessMembersPage: self.canAccessMemberSafetyPage(guild), isGuildAdmin: self.can(Permissions.ADMINISTRATOR, guild), isOwner: null, isOwnerWithRequiredMfaLevel: null, guild: null };
   let tmp4 = null != currentUser;
   if (tmp4) {
-    tmp4 = v65535(guild, currentUser);
+    tmp4 = collapsed(guild, currentUser);
   }
   obj.isOwner = tmp4;
   let tmp6 = null != currentUser;
@@ -398,7 +398,7 @@ prototype["canManageUser"] = function canManageUser(BAN_MEMBERS, user, stateFrom
   if (user instanceof UserRecord) {
     id = user.id;
   }
-  if (v65535(stateFromStores, id)) {
+  if (collapsed(stateFromStores, id)) {
     return false;
   } else {
     const self = this;

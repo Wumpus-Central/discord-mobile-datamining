@@ -1,8 +1,8 @@
-// === Module 4547: BillingPlatformUtils ===
+// === Module 4739: BillingPlatformUtils ===
 
-// Module 4547 (BillingPlatformUtils)
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import MetaQuestUtils from "MetaQuestUtils" /* 1615 */;
+// Module 4739 (BillingPlatformUtils)
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1627 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/device/BillingPlatformUtils.tsx");

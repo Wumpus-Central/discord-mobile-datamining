@@ -1,6 +1,6 @@
-// === Module 12315: JoinRequestRejectionReasonActionSheet ===
+// === Module 12413: JoinRequestRejectionReasonActionSheet ===
 
-// Module 12315 (JoinRequestRejectionReasonActionSheet)
+// Module 12413 (JoinRequestRejectionReasonActionSheet)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -93,7 +93,7 @@ class JoinRequestRejectionReasonActionSheet {
                 const intl = tmp4(tmp45[10]).intl;
                 obj8.content = intl.string(tmp4(tmp45[10]).t["TQY/Rd"]);
                 obj8.icon = function icon() {
-                  return closure_1_6(closure_1_0(4803).CircleXIcon, { color: closure_1_1(587).colors.BACKGROUND_FEEDBACK_CRITICAL, secondaryColor: closure_1_1(587).colors.ICON_FEEDBACK_CRITICAL });
+                  return closure_1_6(closure_1_0(4997).CircleXIcon, { color: closure_1_1(587).colors.BACKGROUND_FEEDBACK_CRITICAL, secondaryColor: closure_1_1(587).colors.ICON_FEEDBACK_CRITICAL });
                 };
                 tmp42(tmp45[9]).open(obj8);
                 const obj = tmp42(tmp45[9]);
@@ -153,7 +153,7 @@ class JoinRequestRejectionReasonActionSheet {
 }
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles({ container: { padding: 20 }, buttonGroup: { marginTop: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/native/components/JoinRequestRejectionReasonActionSheet.tsx");

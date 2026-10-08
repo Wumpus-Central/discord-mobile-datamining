@@ -1,8 +1,8 @@
-// === Module 10656: useActiveLeaderboardWinnerData ===
+// === Module 10256: useActiveLeaderboardWinnerData ===
 
-// Module 10656 (useActiveLeaderboardWinnerData)
+// Module 10256 (useActiveLeaderboardWinnerData)
 import DurationsDefault from "Durations" /* 1102 */;
-import GuildMemberStore from "GuildMemberStore" /* 2112 */;
+import GuildMemberStore from "GuildMemberStore" /* 2124 */;
 
 const require = globalThis.__r;
 
@@ -35,7 +35,7 @@ function getActiveLeaderboardWinnerData(prop) {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_space/gaming_leaderboard/useActiveLeaderboardWinnerData.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useActiveLeaderboardWinnerData(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   const cResult = require("c").c(5);
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   tmp6 = fn;
   const obj = require("c");
   tmp = _require;
-}) : ((arg0, arg1) => {
+}) : (function useActiveLeaderboardWinnerData(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   const items = [GuildMemberStore];

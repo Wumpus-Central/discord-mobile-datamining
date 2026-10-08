@@ -1,20 +1,20 @@
-// === Module 12409: HubEmailConnectionModal ===
+// === Module 12505: HubEmailConnectionModal ===
 
-// Module 12409 (HubEmailConnectionModal)
+// Module 12505 (HubEmailConnectionModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import useNavigation from "useNavigation" /* 1490 */;
-import useInitialValueDefault from "useInitialValue" /* 5991 */;
-import NavigatorHeader from "NavigatorHeader" /* 6017 */;
-import Navigator from "Navigator" /* 6503 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6626 */;
-import HubEmailConnectionStudentPromptDefault from "HubEmailConnectionStudentPrompt" /* 12410 */;
-import HubEmailConnectionContentDefault from "HubEmailConnectionContent" /* 12413 */;
-import HubEmailConnectionWaitlistDefault from "HubEmailConnectionWaitlist" /* 12418 */;
-import HubEmailConnectionSubmitSchoolDefault from "HubEmailConnectionSubmitSchool" /* 12420 */;
-import HubEmailConnectionGuildSelectDefault from "HubEmailConnectionGuildSelect" /* 12421 */;
-import HubEmailConnectionPinVerifyDefault from "HubEmailConnectionPinVerify" /* 12422 */;
-import HubEmailConnectionGuildSelectSearchDefault from "HubEmailConnectionGuildSelectSearch" /* 12425 */;
+import useNavigation from "useNavigation" /* 1502 */;
+import useInitialValueDefault from "useInitialValue" /* 6174 */;
+import NavigatorHeader from "NavigatorHeader" /* 6203 */;
+import Navigator from "Navigator" /* 6679 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6803 */;
+import HubEmailConnectionStudentPromptDefault from "HubEmailConnectionStudentPrompt" /* 12506 */;
+import HubEmailConnectionContentDefault from "HubEmailConnectionContent" /* 12509 */;
+import HubEmailConnectionWaitlistDefault from "HubEmailConnectionWaitlist" /* 12514 */;
+import HubEmailConnectionSubmitSchoolDefault from "HubEmailConnectionSubmitSchool" /* 12516 */;
+import HubEmailConnectionGuildSelectDefault from "HubEmailConnectionGuildSelect" /* 12517 */;
+import HubEmailConnectionPinVerifyDefault from "HubEmailConnectionPinVerify" /* 12518 */;
+import HubEmailConnectionGuildSelectSearchDefault from "HubEmailConnectionGuildSelectSearch" /* 12521 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -31,7 +31,7 @@ function getScreens(pop, arg1) {
   }
   const obj2 = { [closure_1_3.STUDENT_PROMPT]: obj3 };
   obj2[HubEmailConnectionSteps.VERIFY_EMAIL] = {
-    impressionName: tmp5(1260).ImpressionNames.HUB_EMAIL_SIGNUP,
+    impressionName: tmp5(1272).ImpressionNames.HUB_EMAIL_SIGNUP,
     impressionProperties(invite) {
       return { has_invite: null != invite.invite };
     },
@@ -95,15 +95,15 @@ function getScreens(pop, arg1) {
   };
   return obj2;
 }
-const HubEmailConnectionSteps = fn(12400).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(12496).HubEmailConnectionSteps;
 let jsx = fn(21).jsx;
-const createStyles = fn(4896);
-let obj2 = { safeArea: { marginTop: fn(6075).NAV_BAR_HEIGHT, flex: 1 } };
+const createStyles = fn(5090);
+let obj2 = { safeArea: { marginTop: fn(6261).NAV_BAR_HEIGHT, flex: 1 } };
 let closure_5 = createStyles.createStyles(obj2);
 fn(558);
-let obj3 = { marginTop: fn(6075).NAV_BAR_HEIGHT, flex: 1 };
+let obj3 = { marginTop: fn(6261).NAV_BAR_HEIGHT, flex: 1 };
 const ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function HubEmailConnectionScreen(children) {
   const cResult = c.c(3);
   children = children.children;
   const tmp4 = closure_5();
@@ -119,14 +119,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
   cResult[2] = tmp6;
   tmp5 = tmp6;
   const obj2 = { top: true, style: tmp4.safeArea, children };
-}) : ((children) => {
+}) : (function HubEmailConnectionScreen(children) {
   const tmp = closure_5();
   return jsx(common_SafeAreaView.SafeAreaPaddingView, { top: true, style: closure_5().safeArea, children: children.children });
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hub/native/components/HubEmailConnectionModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((isNestedNavigator) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function HubEmailConnectionModal(isNestedNavigator) {
   const cResult = isNestedNavigator(invite[15]).c(10);
   isNestedNavigator = isNestedNavigator.isNestedNavigator;
   const onCloseExtra = isNestedNavigator.onCloseExtra;
@@ -168,7 +168,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((isNestedNavigato
       }
     }
   }
-  const fn = function s() {
+  const fn = function o() {
     function handleClose(arg0) {
       if (closure_1_1 != null) {
         tmp2(true === tmp);
@@ -204,7 +204,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((isNestedNavigato
   cResult[4] = navigation;
   cResult[5] = fn;
   tmp5 = fn;
-}) : ((arg0) => {
+}) : (function HubEmailConnectionModal(arg0) {
   ({ isNestedNavigator: require, onCloseExtra: importDefault, invite: dependencyMap, displayStudentPrompt: HubEmailConnectionSteps } = arg0);
   jsx = useNavigation.useNavigation();
   ({ screens, initialRouteStack } = useInitialValueDefault(() => {

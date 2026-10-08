@@ -1,13 +1,13 @@
-// === Module 14586: TwoFASetupLanding ===
+// === Module 14847: TwoFASetupLanding ===
 
-// Module 14586 (TwoFASetupLanding)
+// Module 14847 (TwoFASetupLanding)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6626 */;
-import TwoFASetupModal from "TwoFASetupModal" /* 14583 */;
-import TwoFASetupStyles from "TwoFASetupStyles" /* 14587 */;
-import _modDef14588 from "module_14588" /* 14588 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6803 */;
+import TwoFASetupModal from "TwoFASetupModal" /* 14844 */;
+import TwoFASetupStyles from "TwoFASetupStyles" /* 14848 */;
+import _modDef14849 from "module_14849" /* 14849 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,19 +15,19 @@ get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({ container: { flex: 1, alignItems: "center", justifyContent: "center" }, authIcon: { width: 120, height: 120, marginBottom: 32 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupLanding.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function TwoFASetupLanding() {
   const cResult = c.c(16);
   const tmp4 = closure_7();
   const twoFASetupStyles = TwoFASetupStyles.useTwoFASetupStyles();
   ({ container, container: container2 } = tmp4);
   if (cResult[0] !== tmp4.authIcon) {
-    const obj3 = { source: _modDef14588, style: tmp4.authIcon };
+    const obj3 = { source: _modDef14849, style: tmp4.authIcon };
     const tmp10 = hasOwnProperty(React3, obj3);
     cResult[0] = tmp4.authIcon;
     cResult[1] = tmp10;
@@ -104,13 +104,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[4] = twoFASetupStyles.text;
   cResult[5] = items1;
   tmp14 = items1;
-}) : (() => {
+}) : (function TwoFASetupLanding() {
   const tmp = closure_7();
   const twoFASetupStyles = TwoFASetupStyles.useTwoFASetupStyles();
   const obj2 = { children: null };
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { bottom: true, style: tmp.container, children: null };
-  const items = [hasOwnProperty(React3, { source: _modDef14588, style: tmp.authIcon }), , ];
+  const items = [hasOwnProperty(React3, { source: _modDef14849, style: tmp.authIcon }), , ];
   const obj6 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj6.children = intl.string(util.t["9E74Dx"]);

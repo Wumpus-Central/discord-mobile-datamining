@@ -1,10 +1,10 @@
-// === Module 5848: useShowMemberVerificationGate ===
+// === Module 8163: useShowMemberVerificationGate ===
 
-// Module 5848 (useShowMemberVerificationGate)
-import MemberVerificationUtils from "MemberVerificationUtils" /* 5849 */;
-import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import UserStore from "UserStore" /* 1377 */;
+// Module 8163 (useShowMemberVerificationGate)
+import MemberVerificationUtils from "MemberVerificationUtils" /* 6175 */;
+import GuildMemberStore from "GuildMemberStore" /* 2124 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
@@ -44,7 +44,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/hooks/useShowMemberVerificationGate.tsx");
 
 export { shouldShowMembershipVerificationGate };
-export const useShowMemberVerificationGate = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useShowMemberVerificationGate = ReactCompilerGating.isReactCompilerEnabled() ? (function useShowMemberVerificationGate(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -75,7 +75,7 @@ export const useShowMemberVerificationGate = ReactCompilerGating.isReactCompiler
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp8, tmp9);
-}) : ((arg0) => {
+}) : (function useShowMemberVerificationGate(arg0) {
   _require = arg0;
   let items = [GuildStore, UserStore, GuildMemberStore];
   const items1 = [arg0];

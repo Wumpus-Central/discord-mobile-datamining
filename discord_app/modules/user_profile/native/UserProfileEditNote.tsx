@@ -1,7 +1,7 @@
-// === Module 12896: UserProfileEditNote ===
+// === Module 13045: UserProfileEditNote ===
 
-// Module 12896 (UserProfileEditNote)
-import NavigatorHeader from "NavigatorHeader" /* 6017 */;
+// Module 13045 (UserProfileEditNote)
+import NavigatorHeader from "NavigatorHeader" /* 6203 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,13 +10,13 @@ const ScrollView = fn(17).ScrollView;
 const NOTE_MAX_LENGTH = fn(1085).NOTE_MAX_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_9 = createStyles.createStyles({ contentContainer: { paddingVertical: 24, paddingHorizontal: 16, gap: 8 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileEditNote.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileEditNote(userId) {
   const cResult = userId(onClose[7]).c(21);
   userId = userId.userId;
   const onSave = userId.onSave;
@@ -162,7 +162,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   cResult[10] = items2;
   tmp16 = items2;
   tmp15 = C;
-}) : ((userId) => {
+}) : (function UserProfileEditNote(userId) {
   userId = userId.userId;
   const onSave = userId.onSave;
   const onClose = userId.onClose;
@@ -203,10 +203,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
         if (closure_5 == null) {
           str = "";
         }
-        const tmp2 = closure_1_1(10672);
+        const tmp2 = closure_1_1(9585);
         tmp2({
           hasEdits: str !== closure_6,
-          onHasEdits: closure_1_0(4751).dismissKeyboard,
+          onHasEdits: closure_1_0(4945).dismissKeyboard,
           resetPending() {
             let str = closure_1_5;
             if (closure_1_5 == null) {
@@ -223,7 +223,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
         });
         const obj = {
           hasEdits: str !== closure_6,
-          onHasEdits: closure_1_0(4751).dismissKeyboard,
+          onHasEdits: closure_1_0(4945).dismissKeyboard,
           resetPending() {
             let str = closure_1_5;
             if (closure_1_5 == null) {

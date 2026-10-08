@@ -1,21 +1,21 @@
-// === Module 17479: AgeGateVerify ===
+// === Module 17761: AgeGateVerify ===
 
-// Module 17479 (AgeGateVerify)
+// Module 17761 (AgeGateVerify)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import AgeGateUtils from "AgeGateUtils" /* 5106 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6626 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8117 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8119 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 5915 */;
+import AgeGateUtils from "AgeGateUtils" /* 5930 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6803 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7492 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { padding: nativeDefault.space.PX_16, flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_16 }, header: { textAlign: "center" }, body: { textAlign: "center" }, buttonWrapper: { width: "100%" } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -23,18 +23,18 @@ let obj3 = { padding: nativeDefault.space.PX_16, flex: 1, alignItems: "center", 
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_gate/native/components/AgeGateVerify.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((source) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeGateVerify(source) {
   const cResult = c.c(15);
   const tmp4 = closure_6();
   const ageGateVerifyContent = AgeGateUtils.useAgeGateVerifyContent(source.source);
   ({ verifyAgreementButtonText, verifyGateDescription, verifyTitle } = ageGateVerifyContent);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function s() {
+    function handleConfirm() {
       const obj = AgeVerificationActionCreatorsDefault;
       const result = obj.showAgeVerificationGetStartedModal({ entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.NSFW_AGE_GATE });
-    };
-    cResult[0] = fn;
-    let first = fn;
+    }
+    cResult[0] = handleConfirm;
+    let first = handleConfirm;
   } else {
     first = cResult[0];
   }
@@ -90,24 +90,24 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((source) => {
     cResult[6] = tmp11;
     tmp9 = tmp11;
   }
-  const tmp8 = React4(Text_Text.Text, { style: tmp4.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: verifyTitle });
+  const tmp8 = React4(Text_Text.Heading, { style: tmp4.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: verifyTitle });
   cResult[1] = tmp4.header;
   cResult[2] = verifyTitle;
   cResult[3] = tmp8;
   tmp7 = tmp8;
   const obj7 = { style: tmp4.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: verifyTitle };
-}) : ((source) => {
+}) : (function AgeGateVerify(source) {
   const tmp = closure_6();
   const ageGateVerifyContent = AgeGateUtils.useAgeGateVerifyContent(source.source);
   ({ verifyAgreementButtonText, verifyGateDescription, verifyTitle } = ageGateVerifyContent);
   const obj2 = { top: true, style: tmp.container, children: null };
-  const items = [React4(Text_Text.Text, { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: verifyTitle }), React4(Text_Text.Text, { style: tmp.body, variant: "text-md/medium", color: "interactive-text-default", children: verifyGateDescription }), ];
+  const items = [React4(Text_Text.Heading, { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: verifyTitle }), React4(Text_Text.Text, { style: tmp.body, variant: "text-md/medium", color: "interactive-text-default", children: verifyGateDescription }), ];
   let tmp6Result = null != verifyAgreementButtonText;
   if (tmp6Result) {
     const obj5 = { style: tmp.buttonWrapper, children: null };
     const obj6 = {
       text: verifyAgreementButtonText,
-      onPress() {
+      onPress: function handleConfirm() {
           const obj = AgeVerificationActionCreatorsDefault;
           const result = obj.showAgeVerificationGetStartedModal({ entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.NSFW_AGE_GATE });
         },

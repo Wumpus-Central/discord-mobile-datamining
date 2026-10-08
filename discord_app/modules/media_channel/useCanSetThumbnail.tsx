@@ -1,7 +1,7 @@
-// === Module 11045: useCanSetThumbnail ===
+// === Module 12791: useCanSetThumbnail ===
 
-// Module 11045 (useCanSetThumbnail)
-import ChannelStore from "ChannelStore" /* 2051 */;
+// Module 12791 (useCanSetThumbnail)
+import ChannelStore from "ChannelStore" /* 2063 */;
 
 const require = globalThis.__r;
 
@@ -10,7 +10,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_channel/useCanSetThumbnail.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, isImage) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCanSetThumbnail(arg0, isImage) {
   _require = arg0;
   const cResult = require("c").c(6);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -21,7 +21,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, isImage) =
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function o() {
+    const fn = function l() {
       return ChannelStore.getChannel(closure_0);
     };
     cResult[1] = arg0;
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, isImage) =
   cResult[5] = isMediaChannelResult;
   tmp9 = isMediaChannelResult;
   const tmpResult = require("useStateFromStores");
-}) : ((arg0, isImage) => {
+}) : (function useCanSetThumbnail(arg0, isImage) {
   _require = arg0;
   const items = [ChannelStore];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => ChannelStore.getChannel(closure_0));

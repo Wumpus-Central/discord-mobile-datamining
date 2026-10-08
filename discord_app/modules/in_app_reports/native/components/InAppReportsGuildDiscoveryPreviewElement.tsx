@@ -1,23 +1,23 @@
-// === Module 12724: InAppReportsGuildDiscoveryPreviewElement ===
+// === Module 13393: InAppReportsGuildDiscoveryPreviewElement ===
 
-// Module 12724 (InAppReportsGuildDiscoveryPreviewElement)
+// Module 13393 (InAppReportsGuildDiscoveryPreviewElement)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 2066 */;
-import ColorUtils from "ColorUtils" /* 4733 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import GuildIconDefault from "GuildIcon" /* 5978 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6476 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 2078 */;
+import ColorUtils from "ColorUtils" /* 4927 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import GuildIconDefault from "GuildIcon" /* 6161 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6654 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 }, borderColor: { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY }, title: { textTransform: "uppercase", lineHeight: 16, marginBottom: 8 }, itemContainer: null, guildInfo: null, guildName: null, guildIcon: null };
 let obj3 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 obj2.itemContainer = { minHeight: 40, borderRadius: nativeDefault.radii.sm, borderWidth: 1, padding: 8 };
@@ -31,7 +31,7 @@ let obj4 = { minHeight: 40, borderRadius: nativeDefault.radii.sm, borderWidth: 1
 size = fn(2);
 let result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsGuildDiscoveryPreviewElement.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildDiscoveryPreviewElement(guild) {
   const cResult = c.c(36);
   guild = guild.guild;
   const tmp4 = closure_7();
@@ -186,7 +186,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   cResult[6] = items4;
   tmp13 = items4;
   const tmpResult = initialize;
-}) : ((guild) => {
+}) : (function GuildDiscoveryPreviewElement(guild) {
   guild = guild.guild;
   const tmp = closure_7();
   const typeConsolidationEyebrow = useTypeConsolidationTextTransform.useTypeConsolidationEyebrow("InAppReportsGuildDiscoveryPreview", "text-xs/bold");

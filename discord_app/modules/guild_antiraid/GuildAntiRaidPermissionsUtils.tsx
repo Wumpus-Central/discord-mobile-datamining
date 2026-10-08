@@ -1,8 +1,8 @@
-// === Module 12496: GuildAntiRaidPermissionsUtils ===
+// === Module 12592: GuildAntiRaidPermissionsUtils ===
 
-// Module 12496 (GuildAntiRaidPermissionsUtils)
-import PermissionStore from "PermissionStore" /* 4515 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 11173 */;
+// Module 12592 (GuildAntiRaidPermissionsUtils)
+import PermissionStore from "PermissionStore" /* 4707 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 11293 */;
 
 const require = globalThis.__r;
 
@@ -10,7 +10,7 @@ const require = fn;
 const Permissions = fn(1085).Permissions;
 fn(558);
 const ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanReportRaid(arg0) {
   _require = arg0;
   const cResult = require("c").c(10);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -128,7 +128,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
   }
   return !tmp14;
-}) : ((arg0) => {
+}) : (function useCanReportRaid(arg0) {
   _require = arg0;
   const items = [PermissionStore];
   const items1 = [arg0];
@@ -150,8 +150,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }, items3);
   let hasDetectedActivityResult = null != stateFromStores1;
   if (hasDetectedActivityResult) {
-    hasDetectedActivityResult = tmp(7696).hasDetectedActivity(stateFromStores1);
-    const tmpResult = tmp(7696);
+    hasDetectedActivityResult = tmp(8017).hasDetectedActivity(stateFromStores1);
+    const tmpResult = tmp(8017);
   }
   let tmp6 = !hasDetectedActivityResult;
   if (!hasDetectedActivityResult) {
@@ -189,7 +189,7 @@ const result = size.fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidP
 export { canReportRaid };
 export const useCanReportRaid = tmp2;
 export { canEnableRaidAlerts };
-export const useCanEnableRaidAlerts = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useCanEnableRaidAlerts = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanEnableRaidAlerts(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -200,7 +200,7 @@ export const useCanEnableRaidAlerts = ReactCompilerGating.isReactCompilerEnabled
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function l() {
+    const fn = function s() {
       if (PermissionStore !== undefined) {
         return PermissionStore.can(Permissions.MANAGE_GUILD, tmp);
       }
@@ -217,7 +217,7 @@ export const useCanEnableRaidAlerts = ReactCompilerGating.isReactCompilerEnabled
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp6, tmp7);
-}) : ((arg0) => {
+}) : (function useCanEnableRaidAlerts(arg0) {
   _require = arg0;
   const items = [PermissionStore];
   const items1 = [arg0];

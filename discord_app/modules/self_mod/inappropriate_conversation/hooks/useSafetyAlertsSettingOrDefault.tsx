@@ -1,18 +1,18 @@
-// === Module 9806: useSafetyAlertsSettingOrDefault ===
+// === Module 10369: useSafetyAlertsSettingOrDefault ===
 
-// Module 9806 (useSafetyAlertsSettingOrDefault)
+// Module 10369 (useSafetyAlertsSettingOrDefault)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import useUserIsTeen from "useUserIsTeen" /* 8327 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import UserStore from "UserStore" /* 1377 */;
+import useUserIsTeen from "useUserIsTeen" /* 7710 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useSafetyAlertsSettingOrDefault.tsx");
 
-export const useSafetyAlertsSettingOrDefault = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useSafetyAlertsSettingOrDefault = ReactCompilerGating.isReactCompilerEnabled() ? (function useSafetyAlertsSettingOrDefault() {
   const cResult = c.c(3);
   const currentUser = UserStore.getCurrentUser();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -67,7 +67,7 @@ export const useSafetyAlertsSettingOrDefault = ReactCompilerGating.isReactCompil
     tmp11 = userIsTeen;
   }
   return tmp11;
-}) : (() => {
+}) : (function useSafetyAlertsSettingOrDefault() {
   const currentUser = UserStore.getCurrentUser();
   const items = [UserSettingsProtoStore];
   const stateFromStores = initialize.useStateFromStores(items, () => {

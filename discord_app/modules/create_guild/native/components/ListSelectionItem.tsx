@@ -1,8 +1,8 @@
-// === Module 11974: ListSelectionItem ===
+// === Module 12047: ListSelectionItem ===
 
-// Module 11974 (ListSelectionItem)
+// Module 12047 (ListSelectionItem)
 import c from "c" /* 576 */;
-import TableRow from "TableRow" /* 6000 */;
+import TableRow from "TableRow" /* 6184 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/create_guild/native/components/ListSelectionItem.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ListSelectionItem(arg0) {
   const cResult = c.c(6);
   ({ Icon, message, onPress } = arg0);
   if (cResult[0] !== Icon) {
@@ -36,7 +36,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = tmp4;
   cResult[5] = tmp8;
   tmp7 = tmp8;
-}) : ((arg0) => {
+}) : (function ListSelectionItem(arg0) {
   ({ Icon, message, onPress } = arg0);
   return jsx(TableRow.TableRow, { onPress, label: message, icon: <Icon size={24} /> });
 });

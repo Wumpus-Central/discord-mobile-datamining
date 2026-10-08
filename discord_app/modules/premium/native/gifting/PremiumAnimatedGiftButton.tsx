@@ -1,17 +1,17 @@
-// === Module 11893: PremiumAnimatedGiftButton ===
+// === Module 11966: PremiumAnimatedGiftButton ===
 
-// Module 11893 (PremiumAnimatedGiftButton)
+// Module 11966 (PremiumAnimatedGiftButton)
 import nativeDefault from "native" /* 587 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const useRef = fn(19).useRef;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles((width, marginHorizontal) => {
   const obj = { containerRefresh: null, animationRefresh: null };
   const size = { width, height: width, borderRadius: nativeDefault.radii.sm, marginHorizontal, display: "flex", alignItems: "center", justifyContent: "center" };
@@ -23,7 +23,7 @@ const ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumAnimatedGiftButton.tsx");
 
-export const PremiumAnimatedGiftButton = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const PremiumAnimatedGiftButton = ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumAnimatedGiftButton(arg0) {
   const cResult = require("c").c(30);
   ({ active, style, disabled, accessibilityState, channelId, animationDataUrl, onAnimationFinished, loop, activeStyle } = arg0);
   let obj = require("c");
@@ -53,7 +53,7 @@ export const PremiumAnimatedGiftButton = ReactCompilerGating.isReactCompilerEnab
   const tmp9 = useRef(null);
   stateFromStores = tmp(504).useStateFromStores(tmp10, T);
   if (cResult[2] !== stateFromStores) {
-    class E {
+    class B {
       constructor() {
         if (!closure_1) {
           tmp = closure_0;
@@ -86,7 +86,7 @@ export const PremiumAnimatedGiftButton = ReactCompilerGating.isReactCompilerEnab
       }
     }
   } else {
-    class E {
+    class B {
       constructor() {
         if (!closure_1) {
           tmp = closure_0;
@@ -114,7 +114,7 @@ export const PremiumAnimatedGiftButton = ReactCompilerGating.isReactCompilerEnab
     }
   }
   if (cResult[4] === channelId) {
-    class E {
+    class B {
       constructor() {
         if (!closure_1) {
           tmp = closure_0;
@@ -140,14 +140,14 @@ export const PremiumAnimatedGiftButton = ReactCompilerGating.isReactCompilerEnab
         return;
       }
     }
-    const effect = noop.useEffect(E, items2);
+    const effect = noop.useEffect(B, items2);
     class T {
       constructor() {
         return closure_1_5.useReducedMotion;
       }
     }
     if (!stateFromStores) {
-      class E {
+      class B {
         constructor() {
           if (!closure_1) {
             tmp = closure_0;
@@ -175,7 +175,7 @@ export const PremiumAnimatedGiftButton = ReactCompilerGating.isReactCompilerEnab
       }
     }
     if (active) {
-      class E {
+      class B {
         constructor() {
           if (!closure_1) {
             tmp = closure_0;
@@ -203,7 +203,7 @@ export const PremiumAnimatedGiftButton = ReactCompilerGating.isReactCompilerEnab
       }
     }
     if (active) {
-      class E {
+      class B {
         constructor() {
           if (!closure_1) {
             tmp = closure_0;
@@ -231,7 +231,7 @@ export const PremiumAnimatedGiftButton = ReactCompilerGating.isReactCompilerEnab
       }
     }
     if (cResult[7] === style) {
-      class E {
+      class B {
         constructor() {
           if (!closure_1) {
             tmp = closure_0;
@@ -269,7 +269,7 @@ export const PremiumAnimatedGiftButton = ReactCompilerGating.isReactCompilerEnab
   cResult[5] = stateFromStores;
   cResult[6] = items2;
   const tmpResult = tmp(504);
-}) : ((arg0) => {
+}) : (function PremiumAnimatedGiftButton(arg0) {
   ({ active, disabled, accessibilityState } = arg0);
   ({ style, activeStyle, channelId, animationDataUrl, onAnimationFinished, loop } = arg0);
   const token = require("useToken").useToken(stateFromStores(587).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
@@ -307,7 +307,7 @@ export const PremiumAnimatedGiftButton = ReactCompilerGating.isReactCompilerEnab
   }, items1);
   let FadeOut;
   if (!stateFromStores) {
-    FadeOut = tmp(4618).FadeOut;
+    FadeOut = tmp(4810).FadeOut;
   }
   const obj5 = { exiting: FadeOut, children: null };
   const items2 = [tmp7.containerRefresh, style, ];
@@ -327,7 +327,7 @@ export const PremiumAnimatedGiftButton = ReactCompilerGating.isReactCompilerEnab
   const merged = Object.assign(accessibilityState);
   obj6.accessibilityState = { disabled };
   const merged1 = Object.assign(arg0);
-  obj6.children = jsx(tmp3(5927), { ref: tmp9, style: tmp7.animationRefresh, source: { uri: animationDataUrl }, loop, autoPlay: false, onAnimationFinish: onAnimationFinished });
+  obj6.children = jsx(tmp3(6110), { ref: tmp9, style: tmp7.animationRefresh, source: { uri: animationDataUrl }, loop, autoPlay: false, onAnimationFinish: onAnimationFinished });
   obj5.children = jsx(require("Pressables").PressableOpacity, { style: items2, hitSlop: null, accessibilityRole: "button", accessibilityState: null });
-  return jsx(stateFromStores(4618).View, { exiting: FadeOut, children: null });
+  return jsx(stateFromStores(4810).View, { exiting: FadeOut, children: null });
 });

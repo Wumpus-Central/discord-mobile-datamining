@@ -1,6 +1,6 @@
-// === Module 11738: useTrackAppLauncherHomeItemImpression ===
+// === Module 11804: useTrackAppLauncherHomeItemImpression ===
 
-// Module 11738 (useTrackAppLauncherHomeItemImpression)
+// Module 11804 (useTrackAppLauncherHomeItemImpression)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
 import noop from "module_19" /* 19 */;
 
@@ -9,10 +9,10 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/screens/home/useTrackAppLauncherHomeItemImpression.tsx");
 
-export const useTrackAppLauncherHomeItemImpression = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useTrackAppLauncherHomeItemImpression = ReactCompilerGating.isReactCompilerEnabled() ? (function useTrackAppLauncherHomeItemImpression() {
   const cResult = trackAppLauncherItemImpressionOnFirstView(576).c(4);
   let obj = trackAppLauncherItemImpressionOnFirstView(576);
-  trackAppLauncherItemImpressionOnFirstView = trackAppLauncherItemImpressionOnFirstView(11739).useTrackAppLauncherItemImpressionOnFirstView().trackAppLauncherItemImpressionOnFirstView;
+  trackAppLauncherItemImpressionOnFirstView = trackAppLauncherItemImpressionOnFirstView(11805).useTrackAppLauncherItemImpressionOnFirstView().trackAppLauncherItemImpressionOnFirstView;
   if (cResult[0] !== trackAppLauncherItemImpressionOnFirstView) {
     const fn = function t(viewableItems) {
       viewableItems = viewableItems.viewableItems;
@@ -80,8 +80,8 @@ export const useTrackAppLauncherHomeItemImpression = ReactCompilerGating.isReact
     tmp3 = cResult[3];
   }
   return tmp3;
-}) : (() => {
-  trackAppLauncherItemImpressionOnFirstView = trackAppLauncherItemImpressionOnFirstView(11739).useTrackAppLauncherItemImpressionOnFirstView().trackAppLauncherItemImpressionOnFirstView;
+}) : (function useTrackAppLauncherHomeItemImpression() {
+  trackAppLauncherItemImpressionOnFirstView = trackAppLauncherItemImpressionOnFirstView(11805).useTrackAppLauncherItemImpressionOnFirstView().trackAppLauncherItemImpressionOnFirstView;
   let obj2 = { trackAppLauncherHomeItemImpression: null };
   const items = [trackAppLauncherItemImpressionOnFirstView];
   obj2.trackAppLauncherHomeItemImpression = noop.useCallback((viewableItems) => {

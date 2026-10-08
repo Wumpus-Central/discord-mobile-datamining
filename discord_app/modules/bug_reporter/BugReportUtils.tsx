@@ -1,14 +1,14 @@
-// === Module 12542: bug_reporter/BugReportUtils ===
+// === Module 12640: bug_reporter/BugReportUtils ===
 
-// Module 12542 (bug_reporter/BugReportUtils)
+// Module 12640 (bug_reporter/BugReportUtils)
 import util from "util" /* 1126 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5089 */;
-import DebugUploadManager from "DebugUploadManager" /* 12543 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5944 */;
+import DebugUploadManager from "DebugUploadManager" /* 12641 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ThemeStore from "ThemeStore" /* 1193 */;
+import ThemeStore from "ThemeStore" /* 1205 */;
 
 require = fn;
 let closure_7 = async function _fetchBugReportConfig() {

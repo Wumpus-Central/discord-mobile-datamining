@@ -1,16 +1,16 @@
-// === Module 16158: AccountLinkBanner ===
+// === Module 16418: AccountLinkBanner ===
 
-// Module 16158 (AccountLinkBanner)
+// Module 16418 (AccountLinkBanner)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ButtonConstants from "ButtonConstants" /* 5607 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10736 */;
+import ButtonConstants from "ButtonConstants" /* 5380 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10490 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
@@ -18,12 +18,12 @@ const PX_82 = nativeDefault.space.PX_8;
 const PX_12 = nativeDefault.space.PX_12;
 const PX_16 = nativeDefault.space.PX_16;
 const PX_4 = nativeDefault.space.PX_4;
-const NORMAL = fn(6674).GameIconSizes.NORMAL;
-let closure_14 = fn(6674).GameIconImageSize[NORMAL];
+const NORMAL = fn(6851).GameIconSizes.NORMAL;
+let closure_14 = fn(6851).GameIconImageSize[NORMAL];
 let c15 = "heading-md/bold";
 let c16 = "text-sm/medium";
 const PX_162 = nativeDefault.space.PX_16;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { card: { padding: PX_12 }, closeButton: null, imagesContainer: null, ellipsisContainer: null, ellipsisDot: null, title: null, body: null, ctaContainer: null };
 let size = { position: "absolute", top: nativeDefault.space.PX_12, right: nativeDefault.space.PX_12, width: 24, height: 24, alignItems: "center", justifyContent: "center", zIndex: 1 };
 obj.closeButton = size;
@@ -36,14 +36,14 @@ obj.body = { marginTop: PX_4, textAlign: "center" };
 obj.ctaContainer = { marginTop: PX_162 };
 let closure_18 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
-let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((startAuthorization) => {
+let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function AccountLinkLargeBanner(startAuthorization) {
   const cResult = markAsDismissed(analyticsLocations[11]).c(53);
   ({ application, markAsDismissed } = startAuthorization);
   startAuthorization = startAuthorization.startAuthorization;
   const tmp4 = closure_18();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
-    const fn = function u() {
+    const fn = function p() {
       return currentUser.getCurrentUser();
     };
     cResult[0] = items;
@@ -173,7 +173,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((startAuthoriza
     cResult[7] = tmp17;
   }
   const tmp10 = startAuthorization(analyticsLocations[13]);
-}) : ((arg0) => {
+}) : (function AccountLinkLargeBanner(arg0) {
   ({ application, markAsDismissed: require, startAuthorization: importDefault } = arg0);
   let analyticsLocations;
   const tmp = closure_18();
@@ -210,7 +210,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((startAuthoriza
     items3[2] = closure_6(View, obj9);
     obj6.children = items3;
     items2[1] = closure_7(View, obj6);
-    const obj10 = { user: stateFromStores, size: require("native").AvatarSizes.LARGE_48, guildId: "Array" };
+    const obj10 = { user: stateFromStores, size: require("native").AvatarSizes.LARGE_48, guildId: "r" };
     items2[2] = closure_6(require("native").Avatar, obj10);
     obj4.children = items2;
     items1[1] = closure_7(View, obj4);
@@ -244,7 +244,7 @@ let obj3 = { flexDirection: "row", alignItems: "center", marginHorizontal: nativ
 size = fn(2);
 const result = size.fileFinishedImporting("modules/application_account_linking/native/AccountLinkBanner.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function AccountLinkBanner(arg0) {
   const cResult = c.c(2);
   if (cResult[0] !== arg0) {
     const obj2 = {};
@@ -257,7 +257,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
     tmp2 = cResult[1];
   }
   return tmp2;
-}) : ((arg0) => {
+}) : (function AccountLinkBanner(arg0) {
   const merged = Object.assign(arg0);
   return timestampProducer(closure_19, {});
 }));

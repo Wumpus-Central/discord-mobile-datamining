@@ -1,10 +1,10 @@
-// === Module 10791: useFetchCollectiblesProduct ===
+// === Module 10482: useFetchCollectiblesProduct ===
 
-// Module 10791 (useFetchCollectiblesProduct)
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7065 */;
+// Module 10482 (useFetchCollectiblesProduct)
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7251 */;
 import _slicedToArray from "module_32" /* 32 */;
-import SKUStore from "SKUStore" /* 5702 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7066 */;
+import SKUStore from "SKUStore" /* 6092 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7252 */;
 
 const require = globalThis.__r;
 
@@ -15,7 +15,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useFetchCollectiblesProduct.tsx");
 
-export const useFetchCollectiblesProduct = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, includeBundles) => {
+export const useFetchCollectiblesProduct = ReactCompilerGating.isReactCompilerEnabled() ? (function useFetchCollectiblesProduct(arg0, includeBundles) {
   _require = arg0;
   dependencyMap = includeBundles;
   const cResult = require("c").c(28);
@@ -107,7 +107,7 @@ export const useFetchCollectiblesProduct = ReactCompilerGating.isReactCompilerEn
         }
       }
     }
-    tmp20 = tmp21 === tmp(1980).CollectiblesItemType.BUNDLE;
+    tmp20 = tmp21 === tmp(1992).CollectiblesItemType.BUNDLE;
   }
   if (tmp20) {
     class L {
@@ -187,7 +187,7 @@ export const useFetchCollectiblesProduct = ReactCompilerGating.isReactCompilerEn
   cResult[15] = arg0;
   cResult[16] = E;
   const tmpResult4 = require("useStateFromStores");
-}) : ((arg0, includeBundles) => {
+}) : (function useFetchCollectiblesProduct(arg0, includeBundles) {
   _require = arg0;
   dependencyMap = includeBundles;
   let items = [state];
@@ -220,7 +220,7 @@ export const useFetchCollectiblesProduct = ReactCompilerGating.isReactCompilerEn
     if (product != null) {
       type = product.type;
     }
-    tmp10 = type === tmp(1980).CollectiblesItemType.BUNDLE;
+    tmp10 = type === tmp(1992).CollectiblesItemType.BUNDLE;
   }
   if (tmp10) {
     tmp10 = 0 === product.items.length;

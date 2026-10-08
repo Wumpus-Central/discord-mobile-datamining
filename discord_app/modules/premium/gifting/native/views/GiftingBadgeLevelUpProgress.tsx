@@ -1,21 +1,21 @@
-// === Module 10781: GiftingBadgeLevelUpProgress ===
+// === Module 12734: GiftingBadgeLevelUpProgress ===
 
-// Module 10781 (GiftingBadgeLevelUpProgress)
+// Module 12734 (GiftingBadgeLevelUpProgress)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import _modDef2617 from "module_2617" /* 2617 */;
-import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10488 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10494 */;
+import _modDef2661 from "module_2661" /* 2661 */;
+import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10085 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10091 */;
 import noop from "module_19" /* 19 */;
 
 const util = format(1126);
-const Text_Text = format(4892);
+const Text_Text = format(5086);
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(7874).getSingleRequirementThreshold;
+let closure_4 = fn(8292).getSingleRequirementThreshold;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { gap: nativeDefault.space.PX_4, width: "100%" }, barRow: null, progressBarTrack: null, progressBarFill: null, labels: null };
 let obj3 = { gap: nativeDefault.space.PX_4, width: "100%" };
 obj2.barRow = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
@@ -30,7 +30,7 @@ let obj6 = { height: 6, borderRadius: nativeDefault.radii.round, backgroundColor
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/gifting/native/views/GiftingBadgeLevelUpProgress.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftingBadgeLevelUpProgress(arg0) {
   let format = require;
   let formatResult = dependencyMap;
   const cResult = c.c(59);
@@ -180,7 +180,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                   intl = util.intl;
                   format = intl.format;
                   const obj9 = { count: progress, threshold: tmp18 };
-                  formatResult = format(_modDef2617.iIpfQe, obj9);
+                  formatResult = format(_modDef2661.iIpfQe, obj9);
                   cResult[6] = tmp4;
                   cResult[7] = newTier;
                   cResult[8] = tmp6;
@@ -251,7 +251,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = giftingBadgeTierIconUrl1;
   tmp4 = giftingBadgeTierIconUrl1;
   const formatResult2 = GiftingBadgesUtils;
-}) : ((style) => {
+}) : (function GiftingBadgeLevelUpProgress(style) {
   ({ progress, currentTier, newTier } = style);
   const tmp = closure_7();
   const isGiftingBadgeComplexArtEnabled = GiftingBadgesUtils.useIsGiftingBadgeComplexArtEnabled("GiftingBadgeLevelUpProgress");
@@ -293,7 +293,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const obj10 = { style: tmp.labels, children: null };
   const obj11 = { variant: "text-xs/normal", color: "text-muted", children: null };
   const intl = util.intl;
-  obj11.children = intl.format(_modDef2617.iIpfQe, { count: progress, threshold: tmp7 });
+  obj11.children = intl.format(_modDef2661.iIpfQe, { count: progress, threshold: tmp7 });
   obj10.children = hasOwnProperty(Text_Text.Text, obj11);
   items3[1] = hasOwnProperty(View, obj10);
   obj3.children = items3;

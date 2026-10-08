@@ -1,13 +1,13 @@
-// === Module 13506: settings/NotifSettingsUtils ===
+// === Module 13803: settings/NotifSettingsUtils ===
 
-// Module 13506 (settings/NotifSettingsUtils)
-import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1233 */;
-import notification_settings from "notification_settings" /* 13508 */;
-import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 13507 */;
+// Module 13803 (settings/NotifSettingsUtils)
+import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1245 */;
+import notification_settings from "notification_settings" /* 13805 */;
+import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 13804 */;
 
 require = fn;
 let ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useNotifSettingValue(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -33,7 +33,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp6, tmp7);
-}) : ((arg0) => {
+}) : (function useNotifSettingValue(arg0) {
   _require = arg0;
   const items = [NotifSettingsProtoStore];
   const items1 = [arg0];
@@ -42,7 +42,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 let closure_3 = tmp2;
 fn(558);
 ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useNotifSettingToggleValue(arg0) {
   const tmp = closure_3(arg0);
   let flag;
   if (tmp != null) {
@@ -52,7 +52,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     flag = true;
   }
   return flag;
-}) : ((arg0) => {
+}) : (function useNotifSettingToggleValue(arg0) {
   const tmp = closure_3(arg0);
   let flag;
   if (tmp != null) {
@@ -71,7 +71,7 @@ export const b64ToDeclarativeSettingsProto = function b64ToDeclarativeSettingsPr
 };
 export const useNotifSettingValue = tmp2;
 export const useNotifSettingToggleValue = tmp3;
-export const useNotifSettingRadioValue = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useNotifSettingRadioValue = ReactCompilerGating.isReactCompilerEnabled() ? (function useNotifSettingRadioValue(arg0) {
   const tmp = closure_3(arg0);
   let num;
   if (tmp != null) {
@@ -81,7 +81,7 @@ export const useNotifSettingRadioValue = ReactCompilerGating.isReactCompilerEnab
     num = 0;
   }
   return num;
-}) : ((arg0) => {
+}) : (function useNotifSettingRadioValue(arg0) {
   const tmp = closure_3(arg0);
   let num;
   if (tmp != null) {

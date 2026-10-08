@@ -1,15 +1,15 @@
-// === Module 8818: DomainVerifyModal ===
+// === Module 9176: DomainVerifyModal ===
 
-// Module 8818 (DomainVerifyModal)
+// Module 9176 (DomainVerifyModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
-import useNavigation from "useNavigation" /* 1490 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6626 */;
-import DomainVerifyUtils from "DomainVerifyUtils" /* 8819 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
+import useNavigation from "useNavigation" /* 1502 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5940 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6803 */;
+import DomainVerifyUtils from "DomainVerifyUtils" /* 9177 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,12 +19,12 @@ const Constants = fn(1085);
 ({ Endpoints: metroRequire, PlatformTypes: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { padding: 16 }, description: { textAlign: "center" }, input: { paddingHorizontal: 0, paddingVertical: 0, marginVertical: 16 }, dns: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.xs, padding: 8, marginTop: 16 }, error: { marginTop: 16 }, code: { fontFamily: "monospace", marginBottom: 4 }, button: { marginTop: 16 } };
 let closure_10 = createStyles.createStyles(obj2);
 const constants2 = { DOMAIN: "DOMAIN", PROOF_DNS: "PROOF_DNS", PROOF_HTTP: "PROOF_HTTP" };
 let ReactCompilerGating = fn(558);
-let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function DomainScreen(onClose) {
   const cResult = onClose(first[8]).c(22);
   onClose = onClose.onClose;
   const tmp4 = closure_10();
@@ -129,7 +129,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
       const tmp24 = navigation(tmp2[13]);
     }
   }
-  const fn = function o() {
+  function verify() {
     noop(true);
     _slicedToArray(null);
     const HTTP = HTTPUtils.HTTP;
@@ -183,14 +183,14 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
     }).finally(() => {
       closure_1_4(false);
     });
-  };
+  }
   cResult[0] = first;
   cResult[1] = navigation;
   cResult[2] = onClose;
-  cResult[3] = fn;
-  tmp12 = fn;
+  cResult[3] = verify;
+  tmp12 = verify;
   const tmp10 = _slicedToArray(noop.useState(false), 2);
-}) : ((onClose) => {
+}) : (function DomainScreen(onClose) {
   onClose = onClose.onClose;
   first = undefined;
   _slicedToArray = undefined;
@@ -279,7 +279,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
   return closure_9(onClose(first[16]).SafeAreaPaddingView, obj2);
 });
 ReactCompilerGating = fn(558);
-let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
+let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function DNSProofScreen(onClose) {
   const cResult = onClose(proof[8]).c(46);
   onClose = onClose.onClose;
   let domain = onClose.domain;
@@ -507,7 +507,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
     cResult[9] = tmp22;
     tmp20 = tmp22;
   }
-  const fn = function c() {
+  function verify() {
     View(true);
     noop(null);
     const HTTP = HTTPUtils.HTTP;
@@ -551,13 +551,13 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
     }).finally(() => {
       closure_1_5(false);
     });
-  };
+  }
   cResult[0] = domain;
   cResult[1] = onClose;
-  cResult[2] = fn;
-  tmp10 = fn;
+  cResult[2] = verify;
+  tmp10 = verify;
   const tmp8 = navigation(noop.useState(false), 2);
-}) : ((proof) => {
+}) : (function DNSProofScreen(proof) {
   ({ onClose: require, domain } = proof);
   proof = proof.proof;
   noop = undefined;
@@ -604,7 +604,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
   const obj14 = { loading: tmp7, text: null, onPress: null };
   const intl5 = require("util").intl;
   obj14.text = intl5.string(require("util").t["13ofGu"]);
-  obj14.onPress = function onPress() {
+  obj14.onPress = function verify() {
     _undefined2(true);
     _undefined(null);
     const HTTP = HTTPUtils.HTTP;
@@ -664,7 +664,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
   return closure_9(require("common/SafeAreaView").SafeAreaPaddingView, obj2);
 });
 ReactCompilerGating = fn(558);
-let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
+let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function HTTPProofScreen(onClose) {
   const cResult = onClose(navigation[8]).c(40);
   onClose = onClose.onClose;
   let domain = onClose.domain;
@@ -864,7 +864,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
     cResult[9] = tmp22;
     tmp20 = tmp22;
   }
-  const fn = function c() {
+  function verify() {
     noop(true);
     _slicedToArray(null);
     const HTTP = HTTPUtils.HTTP;
@@ -908,13 +908,13 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
     }).finally(() => {
       closure_1_4(false);
     });
-  };
+  }
   cResult[0] = domain;
   cResult[1] = onClose;
-  cResult[2] = fn;
-  tmp10 = fn;
+  cResult[2] = verify;
+  tmp10 = verify;
   const tmp8 = _slicedToArray(noop.useState(false), 2);
-}) : ((children) => {
+}) : (function HTTPProofScreen(children) {
   ({ onClose: require, domain } = children);
   _slicedToArray = undefined;
   noop = undefined;
@@ -954,7 +954,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
   const obj12 = { loading: tmp7, text: null, onPress: null };
   const intl4 = util.intl;
   obj12.text = intl4.string(util.t["13ofGu"]);
-  obj12.onPress = function onPress() {
+  obj12.onPress = function verify() {
     _undefined2(true);
     _undefined(null);
     const HTTP = HTTPUtils.HTTP;
@@ -1018,14 +1018,13 @@ let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borde
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/connections/native/DomainVerifyModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function DomainVerifyModal() {
   const cResult = onClose(576).c(5);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function e() {
+    onClose = function onClose() {
       return ModalActionCreatorsDefault.pop();
     };
-    cResult[0] = fn;
-    onClose = fn;
+    cResult[0] = onClose;
   } else {
     onClose = cResult[0];
   }
@@ -1033,13 +1032,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const obj2 = { headerTitle: null, headerLeft: null, render: null };
     const intl = tmp(1126).intl;
     obj2.headerTitle = intl.string(tmp(1126).t["7lo8+e"]);
-    obj2.headerLeft = tmp(6017).getHeaderBackButton(onClose);
+    obj2.headerLeft = tmp(6203).getHeaderBackButton(onClose);
     obj2.render = function render() {
       return closure_2_8(closure_12, { onClose });
     };
     cResult[1] = obj2;
     let tmp5 = obj2;
-    const tmpResult = tmp(6017);
+    const tmpResult = tmp(6203);
   } else {
     tmp5 = cResult[1];
   }
@@ -1047,13 +1046,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const obj3 = { headerTitle: null, headerLeft: null, render: null };
     const intl2 = tmp(1126).intl;
     obj3.headerTitle = intl2.string(tmp(1126).t["7lo8+e"]);
-    obj3.headerLeft = tmp(6017).getHeaderBackButton(onClose);
+    obj3.headerLeft = tmp(6203).getHeaderBackButton(onClose);
     obj3.render = function render(domain) {
       return closure_2_8(closure_13, { domain: domain.domain, proof: domain.proof, onClose });
     };
     cResult[2] = obj3;
     let tmp6 = obj3;
-    const tmpResult3 = tmp(6017);
+    const tmpResult3 = tmp(6203);
   } else {
     tmp6 = cResult[2];
   }
@@ -1064,14 +1063,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const obj5 = { headerTitle: null, headerLeft: null, render: null };
     const intl3 = tmp(1126).intl;
     obj5.headerTitle = intl3.string(tmp(1126).t["7lo8+e"]);
-    obj5.headerLeft = tmp(6017).getHeaderBackButton(onClose);
+    obj5.headerLeft = tmp(6203).getHeaderBackButton(onClose);
     obj5.render = function render(domain) {
       return closure_2_8(closure_14, { domain: domain.domain, proof: domain.proof, onClose });
     };
     obj4[constants2.PROOF_HTTP] = obj5;
     cResult[3] = obj4;
     let tmp7 = obj4;
-    const tmpResult4 = tmp(6017);
+    const tmpResult4 = tmp(6203);
   } else {
     tmp7 = cResult[3];
   }
@@ -1079,14 +1078,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const obj6 = { screens: tmp7, initialRouteName: constants2.DOMAIN, headerBackTitle: null };
     const intl4 = tmp(1126).intl;
     obj6.headerBackTitle = intl4.string(tmp(1126).t["13/7kX"]);
-    const tmp12 = closure_8(tmp(6503).Navigator, obj6);
+    const tmp12 = closure_8(tmp(6679).Navigator, obj6);
     cResult[4] = tmp12;
     let tmp9 = tmp12;
   } else {
     tmp9 = cResult[4];
   }
   return tmp9;
-}) : ((arg0) => {
+}) : (function DomainVerifyModal(arg0) {
   if (arg0 == null) {
     throw new TypeError("Cannot destructure 'undefined' or 'null'.");
   } else {
@@ -1097,7 +1096,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const obj2 = { headerTitle: null, headerLeft: null, render: null };
     const intl = onClose(1126).intl;
     obj2.headerTitle = intl.string(onClose(1126).t["7lo8+e"]);
-    obj2.headerLeft = onClose(6017).getHeaderBackButton(onClose);
+    obj2.headerLeft = onClose(6203).getHeaderBackButton(onClose);
     obj2.render = function render() {
       return closure_2_8(closure_12, { onClose });
     };
@@ -1105,8 +1104,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const obj4 = { headerTitle: null, headerLeft: null, render: null };
     const intl2 = onClose(1126).intl;
     obj4.headerTitle = intl2.string(onClose(1126).t["7lo8+e"]);
-    const obj3 = onClose(6017);
-    obj4.headerLeft = onClose(6017).getHeaderBackButton(onClose);
+    const obj3 = onClose(6203);
+    obj4.headerLeft = onClose(6203).getHeaderBackButton(onClose);
     obj4.render = function render(domain) {
       return closure_2_8(closure_13, { domain: domain.domain, proof: domain.proof, onClose });
     };
@@ -1114,8 +1113,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const obj6 = { headerTitle: null, headerLeft: null, render: null };
     const intl3 = onClose(1126).intl;
     obj6.headerTitle = intl3.string(onClose(1126).t["7lo8+e"]);
-    const obj5 = onClose(6017);
-    obj6.headerLeft = onClose(6017).getHeaderBackButton(onClose);
+    const obj5 = onClose(6203);
+    obj6.headerLeft = onClose(6203).getHeaderBackButton(onClose);
     obj6.render = function render(domain) {
       return closure_2_8(closure_14, { domain: domain.domain, proof: domain.proof, onClose });
     };
@@ -1123,6 +1122,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const obj8 = { screens: obj, initialRouteName: constants2.DOMAIN, headerBackTitle: null };
     const intl4 = onClose(1126).intl;
     obj8.headerBackTitle = intl4.string(onClose(1126).t["13/7kX"]);
-    return closure_8(onClose(6503).Navigator, obj8);
+    return closure_8(onClose(6679).Navigator, obj8);
   }
 });

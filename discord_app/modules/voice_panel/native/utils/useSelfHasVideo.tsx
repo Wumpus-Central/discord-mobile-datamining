@@ -1,10 +1,10 @@
-// === Module 17397: useSelfHasVideo ===
+// === Module 17679: useSelfHasVideo ===
 
-// Module 17397 (useSelfHasVideo)
-import participantHasVideo from "participantHasVideo" /* 9154 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
+// Module 17679 (useSelfHasVideo)
+import participantHasVideo from "participantHasVideo" /* 10720 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6041 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 1999 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/utils/useSelfHasVideo.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSelfHasVideo(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -36,7 +36,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp8);
-}) : ((arg0) => {
+}) : (function useSelfHasVideo(arg0) {
   _require = arg0;
   const items = [ChannelRTCStore, AuthenticationStore, MediaEngineStore];
   return require("initialize").useStateFromStores(items, () => {

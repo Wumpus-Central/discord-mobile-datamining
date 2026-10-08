@@ -1,12 +1,12 @@
-// === Module 12787: MediaModalOverlayFooter ===
+// === Module 12934: MediaModalOverlayFooter ===
 
-// Module 12787 (MediaModalOverlayFooter)
+// Module 12934 (MediaModalOverlayFooter)
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import timing from "timing" /* 4897 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6147 */;
-import useMessagePreviewHeight from "useMessagePreviewHeight" /* 11166 */;
+import native from "native" /* 1200 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import timing from "timing" /* 5091 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6326 */;
+import useMessagePreviewHeight from "useMessagePreviewHeight" /* 11288 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,8 +14,8 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
-let obj2 = { drawerContainer: { overflow: "hidden", backgroundColor: "filter" }, drawerHeaderTab: { width: 40, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_600 }, drawerHeader: { backgroundColor: "r" }, messagePreviewContainer: { marginLeft: 6 }, thumbnailsContainer: { paddingTop: 8 } };
+const createStyles = fn(5090);
+let obj2 = { drawerContainer: { overflow: "hidden", backgroundColor: "k" }, drawerHeaderTab: { width: 40, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_600 }, drawerHeader: { backgroundColor: "create" }, messagePreviewContainer: { marginLeft: 6 }, thumbnailsContainer: { paddingTop: 8 } };
 let closure_8 = createStyles.createStyles(obj2);
 let c9 = -1;
 function clamp(arg0, arg1, arg2) {

@@ -1,23 +1,23 @@
-// === Module 16505: useNotificationPermissionPrompt ===
+// === Module 16765: useNotificationPermissionPrompt ===
 
-// Module 16505 (useNotificationPermissionPrompt)
-import NotificationUtilsDefault from "NotificationUtils" /* 12075 */;
+// Module 16765 (useNotificationPermissionPrompt)
+import NotificationUtilsDefault from "NotificationUtils" /* 12149 */;
 import noop from "module_19" /* 19 */;
-import LoginRequiredActionStore from "LoginRequiredActionStore" /* 2043 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5443 */;
-import UserRequiredActionStore from "UserRequiredActionStore" /* 2044 */;
-import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 12067 */;
+import LoginRequiredActionStore from "LoginRequiredActionStore" /* 2056 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5753 */;
+import UserRequiredActionStore from "UserRequiredActionStore" /* 2057 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 12140 */;
 
 const require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/nuf/native/useNotificationPermissionPrompt.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useNotificationPermissionPrompt() {
   const cResult = stateFromStores(576).c(8);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GatewayConnectionStore];
-    const fn = function l() {
+    const fn = function f() {
       return connected.isConnected();
     };
     cResult[0] = items;
@@ -31,12 +31,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   stateFromStores = stateFromStores(504).useStateFromStores(tmp4, tmp5);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [UserRequiredActionStore, LoginRequiredActionStore];
-    const fn2 = function p() {
-      return stateFromStores1(dependencyMap[8])(LoginRequiredActionStore, UserRequiredActionStore);
-    };
+    class S {
+      constructor() {
+        return closure_1(closure_1_2[8])(closure_1_4, closure_1_6);
+      }
+    }
     cResult[2] = items1;
-    cResult[3] = fn2;
-    let tmp9 = fn2;
+    cResult[3] = S;
+    let tmp9 = S;
     let tmp8 = items1;
   } else {
     tmp8 = cResult[2];
@@ -50,12 +52,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       let tmp14 = cResult[7];
     }
     const effect = noop.useEffect(tmp13, tmp14);
-    const guildOpenNudge = tmp(16506).useGuildOpenNudge();
-    const tmpResult5 = tmp(16506);
-    const postCallDisconnectNudge = tmp(16510).usePostCallDisconnectNudge();
-    const tmpResult6 = tmp(16510);
+    const guildOpenNudge = tmp(16766).useGuildOpenNudge();
+    class S {
+      constructor() {
+        return closure_1(closure_1_2[8])(closure_1_4, closure_1_6);
+      }
+    }
+    const postCallDisconnectNudge = obj5.usePostCallDisconnectNudge();
+    const tmpResult4 = tmp(16766);
   }
-  class N {
+  class P {
     constructor() {
       if (closure_0) {
         tmp = closure_1;
@@ -78,12 +84,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const items2 = [stateFromStores, stateFromStores1];
   cResult[4] = stateFromStores1;
   cResult[5] = stateFromStores;
-  cResult[6] = N;
+  cResult[6] = P;
   cResult[7] = items2;
   tmp14 = items2;
-  tmp13 = N;
-  const tmpResult4 = stateFromStores(504);
-}) : (() => {
+  tmp13 = P;
+  const tmpResult3 = stateFromStores(504);
+}) : (function useNotificationPermissionPrompt() {
   const items = [GatewayConnectionStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => connected.isConnected());
   const obj = stateFromStores(504);
@@ -103,7 +109,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
   }, items2);
   const obj2 = stateFromStores(504);
-  const guildOpenNudge = stateFromStores(16506).useGuildOpenNudge();
-  const obj3 = stateFromStores(16506);
-  const postCallDisconnectNudge = stateFromStores(16510).usePostCallDisconnectNudge();
+  const guildOpenNudge = stateFromStores(16766).useGuildOpenNudge();
+  const obj3 = stateFromStores(16766);
+  const postCallDisconnectNudge = stateFromStores(16770).usePostCallDisconnectNudge();
 });

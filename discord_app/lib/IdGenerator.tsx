@@ -1,7 +1,7 @@
-// === Module 17448: IdGenerator ===
+// === Module 17730: IdGenerator ===
 
-// Module 17448 (IdGenerator)
-import discord_common_IdGenerator from "discord_common/IdGenerator" /* 1262 */;
+// Module 17730 (IdGenerator)
+import discord_common_IdGenerator from "discord_common/IdGenerator" /* 1274 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("lib/IdGenerator.tsx");

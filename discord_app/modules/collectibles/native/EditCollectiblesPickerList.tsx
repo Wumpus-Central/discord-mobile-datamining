@@ -1,8 +1,8 @@
-// === Module 13033: EditCollectiblesPickerList ===
+// === Module 13311: EditCollectiblesPickerList ===
 
-// Module 13033 (EditCollectiblesPickerList)
+// Module 13311 (EditCollectiblesPickerList)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 4892 */;
+import Text_Text from "Text/Text" /* 5086 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,11 +10,11 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
-let obj = { list: { flex: 1, marginTop: 12 }, listContent: { paddingBottom: 88 }, loadingContainer: { paddingVertical: 80, alignItems: "center" }, header: { paddingHorizontal: fn(13028).GUTTER_SIZE, paddingTop: 10, paddingBottom: 5 } };
+const createStyles = fn(5090);
+let obj = { list: { flex: 1, marginTop: 12 }, listContent: { paddingBottom: 88 }, loadingContainer: { paddingVertical: 80, alignItems: "center" }, header: { paddingHorizontal: fn(13306).GUTTER_SIZE, paddingTop: 10, paddingBottom: 5 } };
 let closure_7 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
-let closure_8 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((header) => {
+let closure_8 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function DefaultHeader(header) {
   const cResult = c.c(5);
   header = header.header;
   const tmp4 = closure_7();
@@ -39,13 +39,15 @@ let closure_8 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((heade
   cResult[4] = tmp9;
   tmp8 = tmp9;
   const obj3 = { style: tmp4.header, children: tmp5 };
-}) : ((children) => <hasOwnProperty style={closure_7().header}>{jsx(Text_Text.Heading, { variant: "heading-sm/medium", color: "mobile-text-heading-primary", children: children.header })}</hasOwnProperty>));
+}) : (function DefaultHeader(children) {
+  return <hasOwnProperty style={closure_7().header}>{jsx(Text_Text.Heading, { variant: "heading-sm/medium", color: "mobile-text-heading-primary", children: children.header })}</hasOwnProperty>;
+}));
 ReactCompilerGating = fn(558);
-let obj3 = { paddingHorizontal: fn(13028).GUTTER_SIZE, paddingTop: 10, paddingBottom: 5 };
+let obj3 = { paddingHorizontal: fn(13306).GUTTER_SIZE, paddingTop: 10, paddingBottom: 5 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/EditCollectiblesPickerList.tsx");
 
-export const EditCollectiblesPickerList = ReactCompilerGating.isReactCompilerEnabled() ? ((renderRow) => {
+export const EditCollectiblesPickerList = ReactCompilerGating.isReactCompilerEnabled() ? (function EditCollectiblesPickerList(renderRow) {
   const cResult = selectedSkuId(renderRow[7]).c(21);
   ({ sections, selectedSkuId } = renderRow);
   renderRow = renderRow.renderRow;
@@ -97,14 +99,14 @@ export const EditCollectiblesPickerList = ReactCompilerGating.isReactCompilerEna
         }
         const _Symbol2 = Symbol;
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-          class O {
+          class F {
             constructor(arg0) {
               return renderRow.type;
             }
           }
-          cResult[8] = O;
+          cResult[8] = F;
         } else {
-          class O {
+          class F {
             constructor(arg0) {
               return renderRow.type;
             }
@@ -112,27 +114,27 @@ export const EditCollectiblesPickerList = ReactCompilerGating.isReactCompilerEna
         }
         const _Symbol3 = Symbol;
         if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-          class B {
+          class O {
             constructor(arg0) {
               return renderRow.key;
             }
           }
-          cResult[9] = B;
+          cResult[9] = O;
         } else {
-          class B {
+          class O {
             constructor(arg0) {
               return renderRow.key;
             }
           }
         }
         if (tmp4) {
-          class B {
+          class O {
             constructor(arg0) {
               return renderRow.key;
             }
           }
           if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-            class B {
+            class O {
               constructor(arg0) {
                 return renderRow.key;
               }
@@ -141,14 +143,14 @@ export const EditCollectiblesPickerList = ReactCompilerGating.isReactCompilerEna
             cResult[10] = tmp22;
             const tmp20 = tmp22;
           } else {
-            class B {
+            class O {
               constructor(arg0) {
                 return renderRow.key;
               }
             }
           }
           if (cResult[11] !== tmp5.loadingContainer) {
-            class B {
+            class O {
               constructor(arg0) {
                 return renderRow.key;
               }
@@ -159,7 +161,7 @@ export const EditCollectiblesPickerList = ReactCompilerGating.isReactCompilerEna
             cResult[12] = tmp25;
             const tmp23 = tmp25;
           } else {
-            class B {
+            class O {
               constructor(arg0) {
                 return renderRow.key;
               }
@@ -167,27 +169,27 @@ export const EditCollectiblesPickerList = ReactCompilerGating.isReactCompilerEna
           }
           return tmp23;
         } else {
-          class B {
+          class O {
             constructor(arg0) {
               return renderRow.key;
             }
           }
           if (contentContainerStyle == null) {
-            class B {
+            class O {
               constructor(arg0) {
                 return renderRow.key;
               }
             }
           }
           if (cResult[13] === tmp10) {
-            class B {
+            class O {
               constructor(arg0) {
                 return renderRow.key;
               }
             }
           }
-          const obj3 = { data: tmp10, renderItem: tmp14, getItemType: O, keyExtractor: B, extraData: selectedSkuId, contentContainerStyle, onLayout: first, keyboardShouldPersistTaps: "always" };
-          const tmp19 = jsx(selectedSkuId(tmp2[10]).BottomSheetFlashList, { data: tmp10, renderItem: tmp14, getItemType: O, keyExtractor: B, extraData: selectedSkuId, contentContainerStyle, onLayout: first, keyboardShouldPersistTaps: "always" });
+          const obj3 = { data: tmp10, renderItem: tmp14, getItemType: F, keyExtractor: O, extraData: selectedSkuId, contentContainerStyle, onLayout: first, keyboardShouldPersistTaps: "always" };
+          const tmp19 = jsx(selectedSkuId(tmp2[10]).BottomSheetFlashList, { data: tmp10, renderItem: tmp14, getItemType: F, keyExtractor: O, extraData: selectedSkuId, contentContainerStyle, onLayout: first, keyboardShouldPersistTaps: "always" });
           cResult[13] = tmp10;
           cResult[14] = tmp14;
           cResult[15] = selectedSkuId;
@@ -196,7 +198,7 @@ export const EditCollectiblesPickerList = ReactCompilerGating.isReactCompilerEna
         }
       }
     }
-    const fn2 = function z(item) {
+    const fn2 = function $(item) {
       item = item.item;
       if ("header" === item.type) {
         const obj2 = { header: item.header };
@@ -214,7 +216,7 @@ export const EditCollectiblesPickerList = ReactCompilerGating.isReactCompilerEna
     tmp14 = fn2;
   }
   const tmp6 = _slicedToArray(noop.useState(0), 2);
-}) : ((sections) => {
+}) : (function EditCollectiblesPickerList(sections) {
   sections = sections.sections;
   const selectedSkuId = sections.selectedSkuId;
   const renderRow = sections.renderRow;
@@ -246,7 +248,7 @@ export const EditCollectiblesPickerList = ReactCompilerGating.isReactCompilerEna
         items.push({ type: "header", key: "header-" + header.section, header: header.header });
         const obj = { type: "header", key: "header-" + header.section, header: header.header };
         const obj2 = items(12);
-        const item = items(12).chunk(header.items, items(13028).ROW_SIZE).forEach((items, index) => {
+        const item = items(12).chunk(header.items, items(13306).ROW_SIZE).forEach((items, index) => {
           items.push({ type: "row", key: "row-" + header.section + "-" + index, items });
         });
       });

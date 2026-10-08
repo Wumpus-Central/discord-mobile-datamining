@@ -1,10 +1,10 @@
-// === Module 6604: DefaultChannelUtils ===
+// === Module 6780: DefaultChannelUtils ===
 
-// Module 6604 (DefaultChannelUtils)
+// Module 6780 (DefaultChannelUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4520 */;
-import GatedChannelStore from "GatedChannelStore" /* 2104 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4712 */;
+import GatedChannelStore from "GatedChannelStore" /* 2116 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
 
 const require = globalThis.__r;
 
@@ -15,7 +15,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding/DefaultChannelUtils.tsx");
 
-export const useCanChannelBeDefault = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export const useCanChannelBeDefault = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanChannelBeDefault(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
   const cResult = require("c").c(4);
@@ -53,7 +53,7 @@ export const useCanChannelBeDefault = ReactCompilerGating.isReactCompilerEnabled
   tmp7 = fn;
   let obj = require("c");
   tmp = _require;
-}) : ((arg0, arg1) => {
+}) : (function useCanChannelBeDefault(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
   const items = [GatedChannelStore, ChannelStore];

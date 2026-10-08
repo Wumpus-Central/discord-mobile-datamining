@@ -1,9 +1,9 @@
-// === Module 17067: ConversationPreviewFocusScreen ===
+// === Module 17348: ConversationPreviewFocusScreen ===
 
-// Module 17067 (ConversationPreviewFocusScreen)
-import ConversationFocusViewDefault from "ConversationFocusView" /* 13111 */;
+// Module 17348 (ConversationPreviewFocusScreen)
+import ConversationFocusViewDefault from "ConversationFocusView" /* 9313 */;
 import noop from "module_19" /* 19 */;
-import ConversationPreviewStore from "ConversationPreviewStore" /* 7121 */;
+import ConversationPreviewStore from "ConversationPreviewStore" /* 7307 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -11,10 +11,10 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conversations/components/native/ConversationPreviewFocusScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConversationPreviewFocusScreen() {
   const cResult = conversationId(576).c(16);
   let obj = conversationId(576);
-  const params = conversationId(1493).useRoute().params;
+  const params = conversationId(1505).useRoute().params;
   ({ channelId, conversationId } = params);
   const messageId = params.messageId;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -25,7 +25,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     first = cResult[0];
   }
   if (cResult[1] !== conversationId) {
-    const fn = function l() {
+    const fn = function o() {
       return ConversationPreviewStore.getHydratedMessages(conversationId);
     };
     const items1 = [conversationId];
@@ -38,7 +38,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp6 = cResult[2];
     tmp7 = cResult[3];
   }
-  const obj2 = conversationId(1493);
+  const obj2 = conversationId(1505);
   const stateFromStores = conversationId(504).useStateFromStores(first, tmp6, tmp7);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [ConversationPreviewStore];
@@ -101,11 +101,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[15] = tmp15;
   tmp14 = tmp15;
   const tmpResult2 = conversationId(504);
-}) : (() => {
-  const params = conversationId(1493).useRoute().params;
+}) : (function ConversationPreviewFocusScreen() {
+  const params = conversationId(1505).useRoute().params;
   conversationId = params.conversationId;
   ({ channelId, messageId } = params);
-  let obj = conversationId(1493);
+  let obj = conversationId(1505);
   const items = [ConversationPreviewStore];
   const items1 = [conversationId];
   const messages = conversationId(504).useStateFromStores(items, () => ConversationPreviewStore.getHydratedMessages(conversationId), items1);

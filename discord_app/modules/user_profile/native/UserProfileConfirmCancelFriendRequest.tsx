@@ -1,9 +1,9 @@
-// === Module 12302: UserProfileConfirmCancelFriendRequest ===
+// === Module 12400: UserProfileConfirmCancelFriendRequest ===
 
-// Module 12302 (UserProfileConfirmCancelFriendRequest)
+// Module 12400 (UserProfileConfirmCancelFriendRequest)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import AlertModal from "AlertModal" /* 5720 */;
+import AlertModal from "AlertModal" /* 5303 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileConfirmCancelFriendRequest.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileConfirmCancelFriendRequest(arg0) {
   const cResult = c.c(12);
   ({ userDisplayName, onConfirm } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[10] = tmp16;
   cResult[11] = tmp20;
   tmp19 = tmp20;
-}) : ((arg0) => {
+}) : (function UserProfileConfirmCancelFriendRequest(arg0) {
   ({ userDisplayName, onConfirm } = arg0);
   const obj = { title: null, content: null, actions: null };
   const intl = util.intl;

@@ -1,19 +1,19 @@
-// === Module 16895: useSearchScreenError ===
+// === Module 17176: useSearchScreenError ===
 
-// Module 16895 (useSearchScreenError)
+// Module 17176 (useSearchScreenError)
 import util from "util" /* 1126 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4574 */;
-import _modDef4814 from "module_4814" /* 4814 */;
-import SearchUtils from "SearchUtils" /* 11987 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4766 */;
+import _modDef5008 from "module_5008" /* 5008 */;
+import SearchUtils from "SearchUtils" /* 12060 */;
 import noop from "module_19" /* 19 */;
-import SearchMessageStore from "SearchMessageStore" /* 6794 */;
-import SearchQueryStore from "SearchQueryStore" /* 11994 */;
+import SearchMessageStore from "SearchMessageStore" /* 6067 */;
+import SearchQueryStore from "SearchQueryStore" /* 12067 */;
 
 require = fn;
-let closure_6 = fn(7524).SEARCH_MESSAGE_TAB_SENTINEL;
+let closure_6 = fn(9247).SEARCH_MESSAGE_TAB_SENTINEL;
 fn(558);
 const ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMessageSearchErrorScreen(searchContext) {
   const cResult = searchContext(stateFromStores[5]).c(15);
   searchContext = searchContext.searchContext;
   const tab = searchContext.tab;
@@ -64,7 +64,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => 
         }
       }
       let obj2 = { hasError: null != stateFromStores, errorText: tmp8, isErrorFullscreen: null != stateFromStores && !hasListItems, isErrorToast: null != stateFromStores && hasListItems, showErrorToast: null };
-      class R {
+      class C {
         constructor() {
           if (closure_2 !== closure_4.current) {
             tmp3 = closure_1;
@@ -88,7 +88,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => 
       cResult[14] = obj2;
       tmp17 = obj2;
     }
-    class R {
+    class C {
       constructor() {
         if (closure_2 !== closure_4.current) {
           tmp3 = closure_1;
@@ -106,8 +106,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => 
     }
     cResult[6] = stateFromStores;
     cResult[7] = tmp8;
-    cResult[8] = R;
-    tmp13 = R;
+    cResult[8] = C;
+    tmp13 = C;
     const tmpResult = tmp(tmp2[7]);
   }
   const fn = function l() {
@@ -119,7 +119,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => 
   cResult[3] = fn;
   tmp7 = fn;
   let obj = searchContext(stateFromStores[5]);
-}) : ((arg0) => {
+}) : (function useMessageSearchErrorScreen(arg0) {
   ({ searchContext: require, tab: importDefault, hasListItems } = arg0);
   let stateFromStores;
   let ref;
@@ -142,7 +142,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => 
   let tmp5 = null != stateFromStores;
   const callback = anyErrorMessage.useCallback(() => {
     if (stateFromStores !== ref.current) {
-      const obj2 = { key: "SEARCH_ERROR_TOAST", icon: _modDef4814, content: anyErrorMessage };
+      const obj2 = { key: "SEARCH_ERROR_TOAST", icon: _modDef5008, content: anyErrorMessage };
       ToastActionCreatorsDefault.open(obj2);
       tmp2.current = tmp;
     }
@@ -159,7 +159,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/hooks/useSearchScreenError.tsx");
 
 export const useMessageSearchErrorScreen = tmp2;
-export const useMessageTabCountsErrorText = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => {
+export const useMessageTabCountsErrorText = ReactCompilerGating.isReactCompilerEnabled() ? (function useMessageTabCountsErrorText(searchContext) {
   const cResult = searchContext(576).c(3);
   searchContext = searchContext.searchContext;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -201,7 +201,7 @@ export const useMessageTabCountsErrorText = ReactCompilerGating.isReactCompilerE
   }
   let obj = searchContext(576);
   return searchContext(504).useStateFromStores(first, tmp7);
-}) : ((searchContext) => {
+}) : (function useMessageTabCountsErrorText(searchContext) {
   searchContext = searchContext.searchContext;
   const items = [SearchQueryStore, SearchMessageStore];
   return searchContext(504).useStateFromStores(items, () => {

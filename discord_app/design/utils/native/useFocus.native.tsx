@@ -1,6 +1,6 @@
-// === Module 4592: useFocus ===
+// === Module 4784: useFocus ===
 
-// Module 4592 (useFocus)
+// Module 4784 (useFocus)
 import c from "c" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/utils/native/useFocus.native.tsx");
 
-export const useFocus = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useFocus = ReactCompilerGating.isReactCompilerEnabled() ? (function useFocus() {
   const cResult = c.c(3);
   [tmp3, require] = noop.useState(false);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -38,7 +38,7 @@ export const useFocus = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp5 = cResult[2];
   }
   return tmp5;
-}) : (() => {
+}) : (function useFocus() {
   const tmp = _slicedToArray(noop.useState(false), 2);
   closure_0 = tmp[1];
   return {

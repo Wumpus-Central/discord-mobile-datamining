@@ -1,9 +1,9 @@
-// === Module 9118: useCanSpeakInChannel ===
+// === Module 10691: useCanSpeakInChannel ===
 
-// Module 9118 (useCanSpeakInChannel)
+// Module 10691 (useCanSpeakInChannel)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 5043 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 5412 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const useAudienceRequestToSpeakStateDefault = useAudienceRequestToSpeakState;
@@ -13,11 +13,11 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useCanSpeakInChannel.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCanCurrentUserSpeakInChannel(arg0) {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AuthenticationStore];
-    const fn = function o() {
+    const fn = function u() {
       return id.getId();
     };
     cResult[0] = items;
@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
   const tmpResult = initialize;
   return useAudienceRequestToSpeakStateDefault(stateFromStores, arg0) === useAudienceRequestToSpeakState.RequestToSpeakStates.ON_STAGE;
-}) : ((arg0) => {
+}) : (function useCanCurrentUserSpeakInChannel(arg0) {
   const items = [AuthenticationStore];
   const stateFromStores = initialize.useStateFromStores(items, () => id.getId());
   return useAudienceRequestToSpeakStateDefault(stateFromStores, arg0) === useAudienceRequestToSpeakState.RequestToSpeakStates.ON_STAGE;

@@ -1,12 +1,12 @@
-// === Module 12727: InAppReportsIgnoreUserElement ===
+// === Module 13396: InAppReportsIgnoreUserElement ===
 
-// Module 12727 (InAppReportsIgnoreUserElement)
-import NicknameUtilsDefault from "NicknameUtils" /* 5048 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5076 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9447 */;
+// Module 13396 (InAppReportsIgnoreUserElement)
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5105 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5405 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7004 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
 
 const require = fn;
 const AnalyticEvents = fn(1085).AnalyticEvents;
@@ -15,7 +15,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsIgnoreUserElement.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function IgnoreUserElement(user) {
   const cResult = user(reportId[6]).c(28);
   user = user.user;
   const channelId = user.channelId;
@@ -242,7 +242,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
   cResult[12] = name;
   tmp16 = name;
   const obj4 = channelId(reportId[8]);
-}) : ((user) => {
+}) : (function IgnoreUserElement(user) {
   user = user.user;
   const channelId = user.channelId;
   const reportId = user.reportId;

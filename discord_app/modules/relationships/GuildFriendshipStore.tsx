@@ -1,9 +1,9 @@
-// === Module 13550: GuildFriendshipStore ===
+// === Module 13847: GuildFriendshipStore ===
 
-// Module 13550 (GuildFriendshipStore)
+// Module 13847 (GuildFriendshipStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5712 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6102 */;
 
 function resetStates() {
   closure_3 = {};
@@ -24,7 +24,7 @@ prototype["isFetchingFriendsForGuild"] = function isFetchingFriendsForGuild(arg0
   }
   return fetchState === constants.FETCHING;
 };
-prototype["fetchFriendMembersIfNotFetched"] = function fetchFriendMembersIfNotFetched(id1, items) {
+prototype["fetchFriendMembersIfNotFetched"] = function fetchFriendMembersIfNotFetched(id1, id) {
   let fetchState;
   if (dependencyMap[id1] != null) {
     fetchState = tmp.fetchState;
@@ -35,7 +35,7 @@ prototype["fetchFriendMembersIfNotFetched"] = function fetchFriendMembersIfNotFe
   if (fetchState === constants.NOT_FETCHED) {
     const obj = { fetchState: tmp4.FETCHING, foundMembers: 0, notFoundMembers: 0 };
     dependencyMap[id1] = obj;
-    const membersById = GuildActionCreatorsDefault.requestMembersById(id1, items, false);
+    const membersById = GuildActionCreatorsDefault.requestMembersById(id1, id, false);
   }
 };
 const guildFriendshipStore = new GuildFriendshipStore(DispatcherDefault, {

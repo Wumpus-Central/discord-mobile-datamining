@@ -1,6 +1,6 @@
-// === Module 12549: ComponentProfiler ===
+// === Module 12647: ComponentProfiler ===
 
-// Module 12549 (ComponentProfiler)
+// Module 12647 (ComponentProfiler)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -42,7 +42,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/profiling/ComponentProfiler.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ComponentProfiler(arg0) {
   const cResult = c.c(4);
   ({ id, children } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -94,7 +94,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = id;
   cResult[3] = tmp4;
   tmp3 = tmp4;
-}) : ((arg0) => {
+}) : (function ComponentProfiler(arg0) {
   ({ id, children } = arg0);
   return <noop.Profiler id={id} onRender={noop.useCallback((arg0, arg1, arg2) => {
     if (closure_1_6) {

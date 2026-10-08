@@ -1,16 +1,16 @@
-// === Module 17090: useMessageRequestsCount ===
+// === Module 17371: useMessageRequestsCount ===
 
-// Module 17090 (useMessageRequestsCount)
+// Module 17371 (useMessageRequestsCount)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import MessageRequestStore from "MessageRequestStore" /* 6734 */;
+import MessageRequestStore from "MessageRequestStore" /* 6060 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_request/hooks/useMessageRequestsCount.tsx");
 
-export const useMessageRequestsCount = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useMessageRequestsCount = ReactCompilerGating.isReactCompilerEnabled() ? (function useMessageRequestsCount() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [MessageRequestStore];
@@ -25,7 +25,7 @@ export const useMessageRequestsCount = ReactCompilerGating.isReactCompilerEnable
     [tmp4, tmp5] = cResult;
   }
   return initialize.useStateFromStores(tmp4, tmp5);
-}) : (() => {
+}) : (function useMessageRequestsCount() {
   const items = [MessageRequestStore];
   return initialize.useStateFromStores(items, () => messageRequestsCount.getMessageRequestsCount());
 });

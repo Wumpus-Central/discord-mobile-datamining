@@ -1,9 +1,9 @@
-// === Module 10134: StickerPackInformationPopout ===
+// === Module 9719: StickerPackInformationPopout ===
 
-// Module 10134 (StickerPackInformationPopout)
+// Module 9719 (StickerPackInformationPopout)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
+import Text_Text from "Text/Text" /* 5086 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, FlatList: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { informationContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, width: "90%", marginHorizontal: "5%", padding: 16, borderRadius: nativeDefault.radii.xs, shadowColor: nativeDefault.colors.BLACK, shadowOffset: { width: 2, height: 2 }, shadowOpacity: 0.25, shadowRadius: 5 }, headerContainer: { flexDirection: "row", justifyContent: "space-between", marginBottom: 8 }, informationHeader: { lineHeight: 20 }, informationContentContainer: { flexDirection: "row" }, informationContent: { lineHeight: 20 }, informationContentDescription: { flex: 1, marginLeft: 5 } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -21,7 +21,7 @@ let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, width: "
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stickers/native/StickerPackInformationPopout.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function StickerPackInformationPopout(arg0) {
   const cResult = require("c").c(29);
   ({ stickerPack, onClose, style } = arg0);
   const tmp4 = closure_6();
@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[0] = stickerPack;
     cResult[1] = items;
     let tmp5 = items;
-    tmpResult = tmp(5435);
+    tmpResult = tmp(5745);
   } else {
     tmp5 = cResult[1];
   }
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             const obj4 = { variant: "text-md/bold", color: "text-brand", children: null };
             const intl4 = tmp(1126).intl;
             obj4.children = intl4.string(tmp(1126).t.cpT0Cq);
-            const tmp19 = closure_4(tmp(4892).Text, obj4);
+            const tmp19 = closure_4(tmp(5086).Text, obj4);
             cResult[15] = tmp19;
             let tmp17 = tmp19;
           } else {
@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           }
           if (cResult[16] !== onClose) {
             const obj5 = { onPress: onClose, accessibilityRole: "button", accessibilityLabel: tmp15, children: tmp17 };
-            const tmp22 = closure_4(tmp(5916).PressableOpacity, obj5);
+            const tmp22 = closure_4(tmp(6189).PressableOpacity, obj5);
             cResult[16] = onClose;
             cResult[17] = tmp22;
             let tmp20 = tmp22;
@@ -140,7 +140,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           tmp23 = tmp26;
         }
         const obj9 = { style: informationHeader, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: tmp9 };
-        const tmp13 = closure_4(tmp(4892).Text, obj9);
+        const tmp13 = closure_4(tmp(5086).Text, obj9);
         cResult[11] = tmp4.informationHeader;
         cResult[12] = tmp9;
         cResult[13] = tmp13;
@@ -153,7 +153,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       tmp8 = items3;
     }
   }
-  const fn = function p(children) {
+  function renderItem(children) {
     const obj = { style: closure_0.informationContentContainer, children: null };
     const items = [React4(Text_Text.Text, { style: closure_0.informationContent, variant: "text-md/medium", color: "text-default", children: "\u2022" }), ];
     const obj3 = { style: null, variant: "text-md/medium", color: "text-default", children: children.item.description };
@@ -163,14 +163,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     items[1] = React4(Text_Text.Text, obj3);
     obj.children = items;
     return hasOwnProperty(React2, obj);
-  };
+  }
   cResult[2] = tmp4.informationContent;
   cResult[3] = tmp4.informationContentContainer;
   cResult[4] = tmp4.informationContentDescription;
-  cResult[5] = fn;
-  tmp7 = fn;
+  cResult[5] = renderItem;
+  tmp7 = renderItem;
   let obj = require("c");
-}) : ((stickerPack) => {
+}) : (function StickerPackInformationPopout(stickerPack) {
   stickerPack = stickerPack.stickerPack;
   ({ onClose, style } = stickerPack);
   const tmp = closure_6();

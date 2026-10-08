@@ -1,17 +1,17 @@
-// === Module 16971: FriendRequestsSettingsScreen ===
+// === Module 17252: FriendRequestsSettingsScreen ===
 
-// Module 16971 (FriendRequestsSettingsScreen)
+// Module 17252 (FriendRequestsSettingsScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ThemedGradientDefault from "ThemedGradient" /* 5918 */;
-import UserSettingsFriendRequestsDefault from "UserSettingsFriendRequests" /* 16972 */;
+import ThemedGradientDefault from "ThemedGradient" /* 10211 */;
+import UserSettingsFriendRequestsDefault from "UserSettingsFriendRequests" /* 17253 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1, paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -19,7 +19,7 @@ let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/FriendRequestsSettingsScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FriendRequestsSettingsScreen() {
   const cResult = c.c(4);
   const tmp3 = closure_7();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -50,7 +50,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp12 = cResult[3];
   }
   return tmp12;
-}) : (() => {
+}) : (function FriendRequestsSettingsScreen() {
   const obj = { children: null };
   const items = [React4(ThemedGradientDefault, { absolute: true }), ];
   const tmp = closure_7();

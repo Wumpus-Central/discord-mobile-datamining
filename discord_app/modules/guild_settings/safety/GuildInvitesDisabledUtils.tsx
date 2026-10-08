@@ -1,14 +1,14 @@
-// === Module 12023: GuildInvitesDisabledUtils ===
+// === Module 12096: GuildInvitesDisabledUtils ===
 
-// Module 12023 (GuildInvitesDisabledUtils)
-import GuildIncidentsStore from "GuildIncidentsStore" /* 11173 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
+// Module 12096 (GuildInvitesDisabledUtils)
+import GuildIncidentsStore from "GuildIncidentsStore" /* 11293 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
 
 const require = fn;
 const Constants = fn(1085);
 ({ GuildFeatures: closure_4, Permissions: hasOwnProperty } = Constants);
 let ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useInvitesDisabledPermission(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -38,7 +38,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp6, tmp7);
-}) : ((arg0) => {
+}) : (function useInvitesDisabledPermission(arg0) {
   _require = arg0;
   const items = [PermissionStore];
   const items1 = [arg0];
@@ -52,7 +52,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 });
 let closure_6 = tmp3;
 ReactCompilerGating = fn(558);
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((features) => {
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useInvitesDisabled(features) {
   _require = features;
   const cResult = require("c").c(6);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -117,7 +117,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((features) => {
   cResult[5] = hasItem;
   tmp9 = hasItem;
   const tmpResult = require("initialize");
-}) : ((features) => {
+}) : (function useInvitesDisabled(features) {
   _require = features;
   const items = [GuildIncidentsStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
@@ -156,13 +156,13 @@ const result = size.fileFinishedImporting("modules/guild_settings/safety/GuildIn
 
 export const useInvitesDisabledPermission = tmp3;
 export const useInvitesDisabled = tmp4;
-export const useShouldShowInvitesDisabledNotif = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useShouldShowInvitesDisabledNotif = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldShowInvitesDisabledNotif(arg0) {
   let tmp = closure_6(arg0);
   if (tmp) {
     tmp = closure_7(arg0);
   }
   return tmp;
-}) : ((arg0) => {
+}) : (function useShouldShowInvitesDisabledNotif(arg0) {
   let tmp = closure_6(arg0);
   if (tmp) {
     tmp = closure_7(arg0);

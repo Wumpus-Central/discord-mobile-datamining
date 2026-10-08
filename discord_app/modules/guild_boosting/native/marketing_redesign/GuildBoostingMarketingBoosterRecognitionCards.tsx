@@ -1,29 +1,29 @@
-// === Module 13422: GuildBoostingMarketingBoosterRecognitionCards ===
+// === Module 13722: GuildBoostingMarketingBoosterRecognitionCards ===
 
-// Module 13422 (GuildBoostingMarketingBoosterRecognitionCards)
+// Module 13722 (GuildBoostingMarketingBoosterRecognitionCards)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import BoostGemIcon from "BoostGemIcon" /* 4832 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import HeartIcon from "HeartIcon" /* 8461 */;
-import ShieldUserIcon from "ShieldUserIcon" /* 9267 */;
-import BoostTier3Icon from "BoostTier3Icon" /* 13349 */;
-import _modDef13423 from "module_13423" /* 13423 */;
-import _modDef13424 from "module_13424" /* 13424 */;
-import _modDef13425 from "module_13425" /* 13425 */;
-import _modDef13426 from "module_13426" /* 13426 */;
+import BoostGemIcon from "BoostGemIcon" /* 5026 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import ShieldUserIcon from "ShieldUserIcon" /* 8597 */;
+import HeartIcon from "HeartIcon" /* 8947 */;
+import BoostTier3Icon from "BoostTier3Icon" /* 13649 */;
+import _modDef13723 from "module_13723" /* 13723 */;
+import _modDef13724 from "module_13724" /* 13724 */;
+import _modDef13725 from "module_13725" /* 13725 */;
+import _modDef13726 from "module_13726" /* 13726 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let createStyles = fn(4896);
+let createStyles = fn(5090);
 let obj2 = { card: { minHeight: 124, width: 172, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, display: "flex", flexDirection: "column", alignItems: "center", margin: 5, borderRadius: nativeDefault.radii.sm, paddingHorizontal: 13, paddingVertical: 16 }, description: { textAlign: "center" }, iconContainer: { height: 30, marginBottom: 10 } };
 let closure_6 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function Card(arg0) {
   const cResult = c.c(12);
   const tmp4 = closure_6();
   ({ IconComponent, children } = arg0);
@@ -75,7 +75,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = tmp10;
   tmp9 = tmp10;
   const obj5 = { style: tmp4.iconContainer, children: tmp5 };
-}) : ((arg0) => {
+}) : (function Card(arg0) {
   const tmp = closure_6();
   const obj = { style: tmp.card, children: null };
   const obj2 = { style: tmp.iconContainer, children: React4(IconComponent, { size: "lg", color: nativeDefault.unsafe_rawColors.GUILD_BOOSTING_PINK }) };
@@ -84,14 +84,14 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   obj.children = items;
   return hasOwnProperty(View, obj);
 });
-createStyles = fn(4896);
+createStyles = fn(5090);
 let closure_8 = createStyles.createStyles({ container: { marginTop: 50, display: "flex", flexDirection: "column", alignItems: "center" }, title: { textAlign: "center", marginHorizontal: 34 }, recognitionCardsContainer: { marginTop: 15, display: "flex", flexDirection: "row", justifyContent: "center", flexWrap: "wrap" } });
 ReactCompilerGating = fn(558);
 let obj3 = { minHeight: 124, width: 172, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, display: "flex", flexDirection: "column", alignItems: "center", margin: 5, borderRadius: nativeDefault.radii.sm, paddingHorizontal: 13, paddingVertical: 16 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingBoosterRecognitionCards.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBoostingMarketingBoosterRecognitionCards() {
   const cResult = c.c(13);
   const tmp4 = closure_8();
   ({ container, title } = tmp4);
@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp7 = cResult[2];
   }
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj3 = { icon: _modDef13423, IconComponent: BoostGemIcon.BoostGemIcon, children: null };
+    const obj3 = { icon: _modDef13723, IconComponent: BoostGemIcon.BoostGemIcon, children: null };
     const intl2 = util.intl;
     obj3.children = intl2.string(util.t.TZigSO);
     const tmp14 = React4(closure_7, obj3);
@@ -123,7 +123,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp10 = cResult[3];
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj4 = { icon: _modDef13424, IconComponent: BoostTier3Icon.BoostTier3Icon, children: null };
+    const obj4 = { icon: _modDef13724, IconComponent: BoostTier3Icon.BoostTier3Icon, children: null };
     const intl3 = util.intl;
     obj4.children = intl3.string(util.t.hjQuV2);
     const tmp19 = React4(closure_7, obj4);
@@ -133,7 +133,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp15 = cResult[4];
   }
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj5 = { icon: _modDef13425, IconComponent: ShieldUserIcon.ShieldUserIcon, children: null };
+    const obj5 = { icon: _modDef13725, IconComponent: ShieldUserIcon.ShieldUserIcon, children: null };
     const intl4 = util.intl;
     obj5.children = intl4.string(util.t["2RUcaM"]);
     const tmp24 = React4(closure_7, obj5);
@@ -143,7 +143,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp20 = cResult[5];
   }
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj6 = { icon: _modDef13426, IconComponent: HeartIcon.HeartIcon, children: null };
+    const obj6 = { icon: _modDef13726, IconComponent: HeartIcon.HeartIcon, children: null };
     const intl5 = util.intl;
     obj6.children = intl5.string(util.t.bJoZKV);
     const tmp29 = React4(closure_7, obj6);
@@ -180,7 +180,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[11] = tmp30;
   cResult[12] = tmp35;
   tmp34 = tmp35;
-}) : (() => {
+}) : (function GuildBoostingMarketingBoosterRecognitionCards() {
   const tmp = closure_8();
   const obj = { style: tmp.container, children: null };
   const obj2 = { variant: "heading-xl/extrabold", style: tmp.title, children: null };
@@ -188,19 +188,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   obj2.children = intl.string(util.t.IzKs3o);
   const items = [React4(Text_Text.Heading, obj2), ];
   const obj3 = { style: tmp.recognitionCardsContainer, children: null };
-  const obj4 = { icon: _modDef13423, IconComponent: BoostGemIcon.BoostGemIcon, children: null };
+  const obj4 = { icon: _modDef13723, IconComponent: BoostGemIcon.BoostGemIcon, children: null };
   const intl2 = util.intl;
   obj4.children = intl2.string(util.t.TZigSO);
   const items1 = [React4(closure_7, obj4), , , ];
-  const obj5 = { icon: _modDef13424, IconComponent: BoostTier3Icon.BoostTier3Icon, children: null };
+  const obj5 = { icon: _modDef13724, IconComponent: BoostTier3Icon.BoostTier3Icon, children: null };
   const intl3 = util.intl;
   obj5.children = intl3.string(util.t.hjQuV2);
   items1[1] = React4(closure_7, obj5);
-  const obj6 = { icon: _modDef13425, IconComponent: ShieldUserIcon.ShieldUserIcon, children: null };
+  const obj6 = { icon: _modDef13725, IconComponent: ShieldUserIcon.ShieldUserIcon, children: null };
   const intl4 = util.intl;
   obj6.children = intl4.string(util.t["2RUcaM"]);
   items1[2] = React4(closure_7, obj6);
-  const obj7 = { icon: _modDef13426, IconComponent: HeartIcon.HeartIcon, children: null };
+  const obj7 = { icon: _modDef13726, IconComponent: HeartIcon.HeartIcon, children: null };
   const intl5 = util.intl;
   obj7.children = intl5.string(util.t.bJoZKV);
   items1[3] = React4(closure_7, obj7);

@@ -1,22 +1,22 @@
-// === Module 9569: InviteButton ===
+// === Module 8743: InviteButton ===
 
-// Module 9569 (InviteButton)
+// Module 8743 (InviteButton)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const InviteSendStates = fn(7239).InviteSendStates;
+const InviteSendStates = fn(7418).InviteSendStates;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles({ buttonWrapper: { minWidth: 66, flexDirection: "row" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/instant_invite/native/components/InviteButton.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function InviteButton(arg0) {
   const cResult = c.c(11);
   ({ sendState, disabled, onPressSend } = arg0);
   let flag = undefined !== disabled && disabled;
@@ -102,7 +102,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
     cResult[7] = tmp22;
     tmp20 = tmp22;
   }
-}) : ((onPress) => {
+}) : (function InviteButton(onPress) {
   ({ sendState, disabled } = onPress);
   if (disabled === undefined) {
     disabled = false;

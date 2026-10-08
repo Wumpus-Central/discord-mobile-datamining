@@ -1,11 +1,11 @@
-// === Module 14628: RestrictedUserRowLabel ===
+// === Module 14889: RestrictedUserRowLabel ===
 
-// Module 14628 (RestrictedUserRowLabel)
+// Module 14889 (RestrictedUserRowLabel)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import useToken from "useToken" /* 4586 */;
-import Text_Text from "Text/Text" /* 4892 */;
+import useToken from "useToken" /* 4778 */;
+import Text_Text from "Text/Text" /* 5086 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/content_and_social/native/RestrictedUserRowLabel.tsx");
 
-export const RestrictedUserRowLabel = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const RestrictedUserRowLabel = ReactCompilerGating.isReactCompilerEnabled() ? (function RestrictedUserRowLabel(arg0) {
   const cResult = c.c(13);
   ({ userRecord, accessibilityActions, onAccessibilityAction } = arg0);
   const token = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_LABEL_TEXT_STYLE);
@@ -80,7 +80,7 @@ export const RestrictedUserRowLabel = ReactCompilerGating.isReactCompilerEnabled
   cResult[3] = username;
   cResult[4] = tmp10;
   tmp9 = tmp10;
-}) : ((userRecord) => {
+}) : (function RestrictedUserRowLabel(userRecord) {
   userRecord = userRecord.userRecord;
   ({ accessibilityActions, onAccessibilityAction } = userRecord);
   const token = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_LABEL_TEXT_STYLE);

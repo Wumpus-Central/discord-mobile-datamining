@@ -1,18 +1,18 @@
-// === Module 16435: ICYMIContext ===
+// === Module 16695: ICYMIContext ===
 
-// Module 16435 (ICYMIContext)
+// Module 16695 (ICYMIContext)
 import _mod19 from "module_19" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
 const context = _mod19.createContext({ width: 0, margin: 0, inset: 0 });
 let ReactCompilerGating = ReactCompilerGating_mod;
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useICYMIContextConstructor() {
   const cResult = c.c(2);
   const bound = Math.min(useWindowDimensionsDefault().width, 480);
   const PX_16 = nativeDefault.space.PX_16;
@@ -25,7 +25,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp3 = cResult[1];
   }
   return tmp3;
-}) : (() => {
+}) : (function useICYMIContextConstructor() {
   const bound = Math.min(useWindowDimensionsDefault().width, 480);
   const PX_16 = nativeDefault.space.PX_16;
   return { width: bound, margin: PX_16, inset: PX_16 + 38 };
@@ -36,7 +36,7 @@ const result = size.fileFinishedImporting("modules/icymi/native/ICYMIContext.tsx
 
 export const ICYMIContext = context;
 export const useICYMIContextConstructor = tmp3;
-export const ICYMIContextProvider = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
+export const ICYMIContextProvider = ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIContextProvider(children) {
   const cResult = c.c(7);
   children = children.children;
   ({ width, margin, inset } = closure_5());
@@ -66,7 +66,7 @@ export const ICYMIContextProvider = ReactCompilerGating.isReactCompilerEnabled()
   cResult[3] = obj3;
   tmp3 = obj3;
   const tmp2 = closure_5();
-}) : ((children) => {
+}) : (function ICYMIContextProvider(children) {
   const tmp = closure_5();
   return <context.Provider value={{ width: tmp.width, margin: tmp.margin, inset: tmp.inset }}>{children.children}</context.Provider>;
 });

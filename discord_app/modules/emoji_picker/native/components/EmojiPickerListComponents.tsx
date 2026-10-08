@@ -1,22 +1,22 @@
-// === Module 9924: EmojiPickerListComponents ===
+// === Module 9445: EmojiPickerListComponents ===
 
-// Module 9924 (EmojiPickerListComponents)
+// Module 9445 (EmojiPickerListComponents)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import _modDef7838 from "module_7838" /* 7838 */;
-import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 9922 */;
+import native from "native" /* 1200 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import _modDef8256 from "module_8256" /* 8256 */;
+import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 9443 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const EmojiPickerListConstants = fn(9882);
+const EmojiPickerListConstants = fn(9362);
 ({ LABEL_BOTTOM_PADDING, LABEL_TOP_PADDING, NSFW_ROW_HEIGHT } = EmojiPickerListConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { section: { justifyContent: "center", overflow: "hidden", backgroundColor: nativeDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT, paddingTop: LABEL_TOP_PADDING, paddingBottom: LABEL_BOTTOM_PADDING }, nsfwContainer: null, nsfwText: null };
 let obj3 = { justifyContent: "center", overflow: "hidden", backgroundColor: nativeDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT, paddingTop: LABEL_TOP_PADDING, paddingBottom: LABEL_BOTTOM_PADDING };
 obj.nsfwContainer = { flexDirection: "row", height: NSFW_ROW_HEIGHT, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.sm, marginLeft: 12, marginRight: 12, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
@@ -25,11 +25,11 @@ let closure_6 = createStyles.createStyles(obj);
 fn(558);
 let obj4 = { flexDirection: "row", height: NSFW_ROW_HEIGHT, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.sm, marginLeft: 12, marginRight: 12, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
 const ReactCompilerGating = fn(558);
-const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiPickerListNSFWRow() {
   const cResult = c.c(7);
   const tmp4 = closure_6();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { source: _modDef7838, size: native.Icon.Sizes.SMALL };
+    const obj2 = { source: _modDef8256, size: native.Icon.Sizes.SMALL };
     const tmp8 = React4(native.Icon, obj2);
     cResult[0] = tmp8;
     let first = tmp8;
@@ -67,10 +67,10 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() 
   cResult[5] = tmp11;
   cResult[6] = tmp15;
   tmp14 = tmp15;
-}) : (() => {
+}) : (function EmojiPickerListNSFWRow() {
   const tmp = closure_6();
   const obj = { style: tmp.nsfwContainer, children: null };
-  const items = [React4(native.Icon, { source: _modDef7838, size: native.Icon.Sizes.SMALL }), ];
+  const items = [React4(native.Icon, { source: _modDef8256, size: native.Icon.Sizes.SMALL }), ];
   const obj3 = { style: tmp.nsfwText, variant: "text-sm/normal", color: "interactive-text-active", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t.SLzV5z);
@@ -82,7 +82,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/emoji_picker/native/components/EmojiPickerListComponents.tsx");
 
 export const NSFWRow = memoResult;
-export const Section = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const Section = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiPickerListSection(arg0) {
   const cResult = c.c(9);
   ({ label, isSectionNitroLocked, useTier0UpsellContent } = arg0);
   const tmp4 = closure_6();
@@ -129,7 +129,7 @@ export const Section = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? 
   cResult[1] = useTier0UpsellContent;
   cResult[2] = tmp6;
   tmp5 = tmp6;
-}) : ((useTier0UpsellContent) => {
+}) : (function EmojiPickerListSection(useTier0UpsellContent) {
   ({ label, isSectionNitroLocked } = useTier0UpsellContent);
   const obj = { style: closure_6().section, children: null };
   if (isSectionNitroLocked) {

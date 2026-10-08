@@ -1,10 +1,10 @@
-// === Module 5107: GuildNSFWAgreeStore ===
+// === Module 5931: GuildNSFWAgreeStore ===
 
-// Module 5107 (GuildNSFWAgreeStore)
+// Module 5931 (GuildNSFWAgreeStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import AgeGateUtils from "AgeGateUtils" /* 5106 */;
+import shouldAgeVerifyForAgeGate from "shouldAgeVerifyForAgeGate" /* 5904 */;
 
 require = fn;
 const GuildNSFWAgreeStore = "GuildNSFWAgreeStore";
@@ -20,7 +20,7 @@ prototype["initialize"] = function initialize() {
 prototype["didAgree"] = function didAgree(arg0) {
   let tmp = null != arg0;
   if (tmp) {
-    const result = AgeGateUtils.shouldAgeVerifyForAgeGate();
+    const result = shouldAgeVerifyForAgeGate.shouldAgeVerifyForAgeGate();
     let tmp5 = !result;
     if (!result) {
       tmp5 = value[arg0] || false;

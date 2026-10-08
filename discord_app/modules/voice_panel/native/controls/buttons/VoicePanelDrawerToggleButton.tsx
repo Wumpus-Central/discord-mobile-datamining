@@ -1,20 +1,20 @@
-// === Module 17376: VoicePanelDrawerToggleButton ===
+// === Module 17657: VoicePanelDrawerToggleButton ===
 
-// Module 17376 (VoicePanelDrawerToggleButton)
+// Module 17657 (VoicePanelDrawerToggleButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import NativeViewDefault from "NativeView" /* 5983 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 10857 */;
-import ChevronSmallUpIcon2 from "ChevronSmallUpIcon" /* 13398 */;
-import useDrawerToggleDefault from "useDrawerToggle" /* 17341 */;
-import VoicePanelStyles from "VoicePanelStyles" /* 17355 */;
-import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 17356 */;
+import NativeViewDefault from "NativeView" /* 6166 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 10508 */;
+import ChevronSmallUpIcon2 from "ChevronSmallUpIcon" /* 13698 */;
+import useDrawerToggleDefault from "useDrawerToggle" /* 17622 */;
+import VoicePanelStyles from "VoicePanelStyles" /* 17636 */;
+import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 17637 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { circle: null, iconContainer: null };
 let size = { width: "100%", height: "100%", borderRadius: nativeDefault.radii.round };
 obj2.circle = size;
@@ -24,7 +24,7 @@ const ReactCompilerGating = fn(558);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelDrawerToggleButton.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((props) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePanelDrawerToggleButton(props) {
   const cResult = c.c(17);
   props = props.props;
   ({ openTab, wrapperSpecs } = props);
@@ -103,7 +103,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((props) => {
   cResult[4] = tmp10;
   tmp9 = tmp10;
   const tmp7 = useDrawerToggleDefault(openTab);
-}) : ((arg0) => {
+}) : (function VoicePanelDrawerToggleButton(arg0) {
   ({ props, openTab, wrapperSpecs } = arg0);
   const tmp = closure_5();
   const voicePanelButtonStyles = VoicePanelStyles.useVoicePanelButtonStyles(wrapperSpecs);

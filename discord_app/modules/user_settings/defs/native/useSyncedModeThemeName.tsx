@@ -1,20 +1,20 @@
-// === Module 15139: useSyncedModeThemeName ===
+// === Module 15401: useSyncedModeThemeName ===
 
-// Module 15139 (useSyncedModeThemeName)
+// Module 15401 (useSyncedModeThemeName)
 import util from "util" /* 1126 */;
-import ClientThemesUtils from "ClientThemesUtils" /* 1239 */;
-import _modDef2751 from "module_2751" /* 2751 */;
-import ThemeStore from "ThemeStore" /* 1193 */;
+import ClientThemesUtils from "ClientThemesUtils" /* 1251 */;
+import _modDef2795 from "module_2795" /* 2795 */;
+import ThemeStore from "ThemeStore" /* 1205 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_4 = fn(1240).BACKGROUND_GRADIENT_PRESETS_MAP;
+let closure_4 = fn(1252).BACKGROUND_GRADIENT_PRESETS_MAP;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/useSyncedModeThemeName.tsx");
 
-export const useSyncedModeThemeName = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useSyncedModeThemeName = ReactCompilerGating.isReactCompilerEnabled() ? (function useSyncedModeThemeName(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -34,7 +34,7 @@ export const useSyncedModeThemeName = ReactCompilerGating.isReactCompilerEnabled
       }
       if (null != prop) {
         const intl = util.intl;
-        let stringResult = intl.string(_modDef2751.yl1iMm);
+        let stringResult = intl.string(_modDef2795.yl1iMm);
       } else {
         let prop1;
         if (syncedClientTheme != null) {
@@ -65,7 +65,7 @@ export const useSyncedModeThemeName = ReactCompilerGating.isReactCompilerEnabled
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp6);
-}) : ((arg0) => {
+}) : (function useSyncedModeThemeName(arg0) {
   _require = arg0;
   const items = [ThemeStore];
   return require("initialize").useStateFromStores(items, () => {
@@ -77,7 +77,7 @@ export const useSyncedModeThemeName = ReactCompilerGating.isReactCompilerEnabled
     }
     if (null != prop) {
       const intl = util.intl;
-      let stringResult = intl.string(_modDef2751.yl1iMm);
+      let stringResult = intl.string(_modDef2795.yl1iMm);
     } else {
       let prop1;
       if (syncedClientTheme != null) {

@@ -1,9 +1,9 @@
-// === Module 14443: HuePicker ===
+// === Module 14668: HuePicker ===
 
-// Module 14443 (HuePicker)
+// Module 14668 (HuePicker)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import ColorPickerUtils from "ColorPickerUtils" /* 14440 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import ColorPickerUtils from "ColorPickerUtils" /* 14665 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let closure_8 = [0, 60, 120, 180, 240, 300, 360];
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { justifyContent: "center", alignItems: "center" }, containerFullWidth: { alignSelf: "stretch", overflow: "visible" }, slider: null, colorBar: null, colorBarFullWidth: null, colorBarInner: null, colorBarInnerFullWidth: null };
 let size = { left: 0, position: "absolute", borderColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, width: 24, height: 36, borderRadius: nativeDefault.radii.sm, borderWidth: 2 };
 obj2.slider = size;
@@ -28,7 +28,7 @@ const __initData4 = { code: "function HuePickerTsx4(event){const{hue,normalizeVa
 const __initData5 = { code: "function HuePickerTsx5(event_0){const{hue,normalizeValue,barWidth,onPanUpdate,runOnJS}=this.__closure;hue.set(normalizeValue(event_0.x/barWidth.get())*360);onPanUpdate!=null&&runOnJS(onPanUpdate)();}" };
 const __initData6 = { code: "function HuePickerTsx6(){const{onPanFinalize,runOnJS}=this.__closure;onPanFinalize!=null&&runOnJS(onPanFinalize)();}" };
 let ReactCompilerGating = fn(558);
-let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((hue, barWidth, onPanUpdate, onPanFinalize) => {
+let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHuePickerGesture(hue, barWidth, onPanUpdate, onPanFinalize) {
   _require = hue;
   dependencyMap = onPanUpdate;
   closure_3 = onPanFinalize;
@@ -45,7 +45,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((hue, barWidth,
             ReanimatedRexport.runOnJS(tmp)();
           }
         };
-        const obj2 = { onPanFinalize, runOnJS: tmp(4618).runOnJS };
+        const obj2 = { onPanFinalize, runOnJS: tmp(4810).runOnJS };
         fn3.__closure = obj2;
         fn3.__workletHash = 2479115151384;
         fn3.__initData = __initData3;
@@ -60,7 +60,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((hue, barWidth,
           if (cResult[9] === tmp6) {
             let tmp8 = cResult[10];
           }
-          const panGesture = tmp(6147).usePanGesture(tmp8);
+          const panGesture = tmp(6326).usePanGesture(tmp8);
           if (cResult[11] !== panGesture) {
             const obj3 = { gesture: panGesture };
             cResult[11] = panGesture;
@@ -110,7 +110,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((hue, barWidth,
   tmp5 = fn2;
   tmp4 = fn;
   const obj6 = { hue, normalizeValue: require("ColorPickerUtils").normalizeValue, barWidth, onPanUpdate, runOnJS: require("ReanimatedRexport").runOnJS };
-}) : ((hue, barWidth, onPanUpdate, onPanFinalize) => {
+}) : (function useHuePickerGesture(hue, barWidth, onPanUpdate, onPanFinalize) {
   _require = hue;
   dependencyMap = onPanUpdate;
   closure_3 = onPanFinalize;
@@ -162,7 +162,7 @@ let obj3 = { borderRadius: nativeDefault.radii.xs };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/color_picker/native/HuePicker.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((hue) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function HuePicker(hue) {
   const cResult = hue(num2[7]).c(42);
   hue = hue.hue;
   ({ style, colorBarInnerStyle, sliderStyle, onPanUpdate, onPanFinalize, saturation, lightness, fullWidth } = hue);
@@ -347,7 +347,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((hue) => {
   cResult[1] = num;
   cResult[2] = mapped;
   const tmpResult8 = hue(num2[9]);
-}) : ((hue) => {
+}) : (function HuePicker(hue) {
   hue = hue.hue;
   ({ onPanUpdate, onPanFinalize, saturation } = hue);
   ({ style, colorBarInnerStyle, sliderStyle } = hue);

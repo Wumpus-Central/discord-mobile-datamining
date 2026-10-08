@@ -1,16 +1,16 @@
-// === Module 16190: GuildPowerupsProgressBar ===
+// === Module 16450: GuildPowerupsProgressBar ===
 
-// Module 16190 (GuildPowerupsProgressBar)
+// Module 16450 (GuildPowerupsProgressBar)
 import nativeDefault from "native" /* 587 */;
-import timing from "timing" /* 4897 */;
-import LinearGradientDefault from "LinearGradient" /* 5612 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6688 */;
-import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 12153 */;
-import GuildBoostingProgressBarActionCreators from "GuildBoostingProgressBarActionCreators" /* 16193 */;
+import timing from "timing" /* 5091 */;
+import LinearGradientDefault from "LinearGradient" /* 5387 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6865 */;
+import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 12232 */;
+import GuildBoostingProgressBarActionCreators from "GuildBoostingProgressBarActionCreators" /* 16453 */;
 import noop from "module_19" /* 19 */;
-import GuildBoostingProgressBarPersistedStore from "GuildBoostingProgressBarPersistedStore" /* 16191 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import GuildBoostingProgressBarPersistedStore from "GuildBoostingProgressBarPersistedStore" /* 16451 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -21,9 +21,9 @@ const colors = ["rgba(255, 115, 250, 0.4)", "rgba(255, 115, 250, 0.1)"];
 let c10 = 500;
 let result = 2 * nativeDefault.space.PX_4;
 const LinearGradient = ReanimatedRexport.createAnimatedComponent(LinearGradientDefault);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { container: { paddingVertical: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_16 }, track: null, fillContainer: null, fill: null, fillShadow: null, textContainer: null, headerText: null, rightContent: null, descriptionText: null };
-let obj3 = { paddingVertical: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_16 };
+const obj3 = { paddingVertical: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_16 };
 obj.track = { height: 30, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, justifyContent: "center" };
 let obj5 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -38,16 +38,16 @@ obj.headerText = { flexShrink: 1 };
 obj.rightContent = { flexDirection: "row", alignItems: "center", flexShrink: 1 };
 obj.descriptionText = { flexShrink: 1, opacity: 0.7 };
 let closure_12 = createStyles.createStyles(obj);
-const __initData = { code: "function GuildPowerupsProgressBarTsx1(){const{animatedFillPercent,animatedFillOpacity}=this.__closure;return{width:animatedFillPercent.get()+\"%\",opacity:animatedFillOpacity.get()};}" };
-const __initData2 = { code: "function GuildPowerupsProgressBarTsx2(){const{animatedFillPercent,animatedFillOpacity}=this.__closure;return{width:animatedFillPercent.get()+\"%\",opacity:animatedFillOpacity.get()};}" };
+let closure_13 = { code: "function GuildPowerupsProgressBarTsx1(){const{animatedFillPercent,animatedFillOpacity}=this.__closure;return{width:animatedFillPercent.get()+\"%\",opacity:animatedFillOpacity.get()};}" };
+const __initData = { code: "function GuildPowerupsProgressBarTsx2(){const{animatedFillPercent,animatedFillOpacity}=this.__closure;return{width:animatedFillPercent.get()+\"%\",opacity:animatedFillOpacity.get()};}" };
 const ReactCompilerGating = fn(558);
 let obj7 = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8 };
 const sum = result + 30;
 const size = fn(2);
 let result1 = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsProgressBar.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
-  const cResult = guildId(num9[10]).c(59);
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPowerupsProgressBar(guildId) {
+  const cResult = guildId(576).c(59);
   guildId = guildId.guildId;
   closure_12();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -71,227 +71,77 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     tmp7 = cResult[2];
     tmp8 = cResult[3];
   }
-  let obj = guildId(num9[10]);
-  const stateFromStores = guildId(num9[11]).useStateFromStores(first, tmp7, tmp8);
-  const tmp11 = stateFromStores1(num9[12])(stateFromStores);
+  let obj = guildId(576);
+  const stateFromStores = guildId(573).useStateFromStores(first, tmp7, tmp8);
+  stateFromStores1(16452)(stateFromStores);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const items2 = [sharedValue1];
+    const items2 = [GuildBoostingProgressBarPersistedStore];
     cResult[4] = items2;
-    let tmp12 = items2;
+    let tmp11 = items2;
   } else {
-    tmp12 = cResult[4];
+    tmp11 = cResult[4];
   }
   if (cResult[5] !== guildId) {
-    const fn2 = function w() {
-      let num = GuildBoostingProgressBarPersistedStore.getCountForGuild(guildId);
-      if (num == null) {
-        num = 0;
+    class I {
+      constructor() {
+        num = closure_5.getCountForGuild(guildId);
+        if (num == null) {
+          num = 0;
+        }
+        return num;
       }
-      return num;
-    };
+    }
     const items3 = [guildId];
     cResult[5] = guildId;
-    cResult[6] = fn2;
+    cResult[6] = I;
     cResult[7] = items3;
-    let tmp15 = items3;
-    let tmp14 = fn2;
+    let tmp14 = items3;
   } else {
-    tmp14 = cResult[6];
-    tmp15 = cResult[7];
-  }
-  const tmp10 = stateFromStores1;
-  const tmpResult = guildId(num9[11]);
-  stateFromStores1 = guildId(num9[11]).useStateFromStores(tmp12, tmp14, tmp15);
-  num9 = undefined;
-  if (stateFromStores != null) {
-    num9 = stateFromStores.premiumSubscriberCount;
-  }
-  if (num9 == null) {
-    num9 = 0;
-  }
-  if (cResult[8] === stateFromStores1) {
-    if (cResult[9] === guildId) {
-      if (cResult[10] === num9) {
-        let tmp17 = cResult[11];
-        let tmp18 = cResult[12];
-      }
-      const effect = num11.useEffect(tmp17, tmp18);
-      num11 = 0;
-      if (tmp11 > 0) {
-        const _Math = Math;
-        num11 = Math.min(stateFromStores1 / tmp11 * 100, 100);
-      }
-      const sharedValue = tmp(tmp2[6]).useSharedValue(num11);
-      const obj4 = num11;
-      const tmpResult6 = tmp(tmp2[6]);
-      let num13 = 0;
-      if (num11 > 0) {
-        num13 = 1;
-      }
-      sharedValue1 = tmp(tmp2[6]).useSharedValue(num13);
-      if (cResult[13] === sharedValue1) {
-        if (cResult[14] === sharedValue) {
-          if (cResult[15] === num11) {
-            let tmp24 = cResult[17];
-            const tmp23 = cResult[16];
-          }
-          const effect1 = obj4.useEffect(tmp24, tmp23);
-          class V {
-            constructor() {
-              obj = { width: "" + closure_4.get() + "%", opacity: closure_5.get() };
-              return obj;
-            }
-          }
-          let obj2 = { animatedFillPercent: sharedValue, animatedFillOpacity: sharedValue1 };
-          V.__closure = obj2;
-          V.__workletHash = 6718232104000;
-          V.__initData = __initData;
-          const animatedStyle = tmp(tmp2[6]).useAnimatedStyle(V);
-          if (cResult[18] !== guildId) {
-            class X {
-              constructor() {
-                obj = { guildId, analyticsLocation: null };
-                tmp = closure_1(closure_2[15]);
-                obj.analyticsLocation = closure_1(closure_2[16]).GUILD_BOOSTING_SIDEBAR_DISPLAY;
-                tmpResult = tmp(obj);
-                return;
-              }
-            }
-            cResult[18] = guildId;
-            class V {
-              constructor() {
-                obj = { width: "" + closure_4.get() + "%", opacity: closure_5.get() };
-                return obj;
-              }
-            }
-            cResult[19] = X;
-          } else {
-            class X {
-              constructor() {
-                obj = { guildId, analyticsLocation: null };
-                tmp = closure_1(closure_2[15]);
-                obj.analyticsLocation = closure_1(closure_2[16]).GUILD_BOOSTING_SIDEBAR_DISPLAY;
-                tmpResult = tmp(obj);
-                return;
-              }
-            }
-          }
-          if (cResult[20] === stateFromStores1) {
-            class X {
-              constructor() {
-                obj = { guildId, analyticsLocation: null };
-                tmp = closure_1(closure_2[15]);
-                obj.analyticsLocation = closure_1(closure_2[16]).GUILD_BOOSTING_SIDEBAR_DISPLAY;
-                tmpResult = tmp(obj);
-                return;
-              }
-            }
-          }
-          const intl = tmp(tmp2[17]).intl;
-          class R {
-            constructor() {
-              obj = closure_0(closure_2[14]);
-              obj1 = { duration: c10 };
-              tmp = c10;
-              result = closure_4.set(obj.withTiming(closure_3, obj1));
-              tmp3 = closure_5;
-              obj3 = closure_0(closure_2[14]);
-              num = 0;
-              if (closure_3 > 0) {
-                num = 1;
-              }
-              result1 = closure_5.set(obj3.withTiming(num, { duration: tmp }));
-              return () => {
-                guildId(num9[6]).cancelAnimation(sharedValue);
-                const obj = guildId(num9[6]);
-                guildId(num9[6]).cancelAnimation(sharedValue1);
-              };
-            }
-          }
-          let obj3 = tmp10(tmp2[18]);
-          if (stateFromStores1 >= tmp11) {
-            class X {
-              constructor() {
-                obj = { guildId, analyticsLocation: null };
-                tmp = closure_1(closure_2[15]);
-                obj.analyticsLocation = closure_1(closure_2[16]).GUILD_BOOSTING_SIDEBAR_DISPLAY;
-                tmpResult = tmp(obj);
-                return;
-              }
-            }
-            obj3 = { appliedBoostCount: stateFromStores1 };
-            class V {
-              constructor() {
-                obj = { width: "" + closure_4.get() + "%", opacity: closure_5.get() };
-                return obj;
-              }
-            }
-          } else {
-            class X {
-              constructor() {
-                obj = { guildId, analyticsLocation: null };
-                tmp = closure_1(closure_2[15]);
-                obj.analyticsLocation = closure_1(closure_2[16]).GUILD_BOOSTING_SIDEBAR_DISPLAY;
-                tmpResult = tmp(obj);
-                return;
-              }
-            }
-            tmp31[0] = stateFromStores1;
-            tmp31[1] = tmp11;
-            class V {
-              constructor() {
-                obj = { width: "" + closure_4.get() + "%", opacity: closure_5.get() };
-                return obj;
-              }
-            }
-          }
-          cResult[20] = stateFromStores1;
-          cResult[21] = stateFromStores1 >= tmp11;
-          cResult[22] = tmp11;
-          cResult[23] = tmp32;
-          const tmpResult8 = tmp(tmp2[6]);
-        }
-      }
-      class R {
-        constructor() {
-          obj = closure_0(closure_2[14]);
-          obj1 = { duration: c10 };
-          tmp = c10;
-          result = closure_4.set(obj.withTiming(closure_3, obj1));
-          tmp3 = closure_5;
-          obj3 = closure_0(closure_2[14]);
+    class I {
+      constructor() {
+        num = closure_5.getCountForGuild(guildId);
+        if (num == null) {
           num = 0;
-          if (closure_3 > 0) {
-            num = 1;
-          }
-          result1 = closure_5.set(obj3.withTiming(num, { duration: tmp }));
-          return () => {
-            guildId(num9[6]).cancelAnimation(sharedValue);
-            const obj = guildId(num9[6]);
-            guildId(num9[6]).cancelAnimation(sharedValue1);
-          };
         }
+        return num;
       }
-      const items4 = [sharedValue, sharedValue1, num11];
-      cResult[13] = sharedValue1;
-      cResult[14] = sharedValue;
-      cResult[15] = num11;
-      cResult[16] = items4;
-      cResult[17] = R;
-      tmp24 = R;
-      class A {
-        constructor() {
-          if (closure_1 !== c2) {
-            tmp2 = closure_0;
-            tmp3 = closure_2;
-            obj = closure_0(closure_2[13]);
-            tmp4 = guildId;
-            result = obj.updateGuildPremiumSubscriptionCount(guildId, tmp);
-          }
-          return;
+    }
+    tmp14 = cResult[7];
+  }
+  const tmpResult = guildId(573);
+  stateFromStores1 = guildId(573).useStateFromStores(tmp11, I, tmp14);
+  if (stateFromStores != null) {
+    class I {
+      constructor() {
+        num = closure_5.getCountForGuild(guildId);
+        if (num == null) {
+          num = 0;
         }
+        return num;
       }
-      const tmpResult7 = tmp(tmp2[6]);
+    }
+  }
+  if (undefined == null) {
+    class I {
+      constructor() {
+        num = closure_5.getCountForGuild(guildId);
+        if (num == null) {
+          num = 0;
+        }
+        return num;
+      }
+    }
+  }
+  dependencyMap = tmp16;
+  if (cResult[8] === stateFromStores1) {
+    class I {
+      constructor() {
+        num = closure_5.getCountForGuild(guildId);
+        if (num == null) {
+          num = 0;
+        }
+        return num;
+      }
     }
   }
   class A {
@@ -306,16 +156,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       return;
     }
   }
-  const items5 = [guildId, stateFromStores1, num9];
+  const items4 = [guildId, stateFromStores1, undefined];
   cResult[8] = stateFromStores1;
   cResult[9] = guildId;
-  cResult[10] = num9;
+  cResult[10] = undefined;
   cResult[11] = A;
-  cResult[12] = items5;
-  tmp18 = items5;
-  tmp17 = A;
-  const tmpResult5 = guildId(num9[11]);
-}) : ((guildId) => {
+  cResult[12] = items4;
+  const tmpResult2 = guildId(573);
+}) : (function GuildPowerupsProgressBar(guildId) {
   guildId = guildId.guildId;
   let stateFromStores1;
   let num;
@@ -387,7 +235,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   }
   F.__closure = { animatedFillPercent: sharedValue, animatedFillOpacity: sharedValue1 };
   F.__workletHash = 3044920745091;
-  F.__initData = __initData2;
+  F.__initData = __initData;
   const items6 = [guildId];
   const animatedStyle = guildId(num[6]).useAnimatedStyle(F);
   const callback = obj3.useCallback(() => {

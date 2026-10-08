@@ -1,19 +1,19 @@
-// === Module 11144: useSubscribeMissingActivities ===
+// === Module 11264: useSubscribeMissingActivities ===
 
-// Module 11144 (useSubscribeMissingActivities)
+// Module 11264 (useSubscribeMissingActivities)
 import c from "c" /* 576 */;
-import PresenceSubscriptionsActionCreators from "PresenceSubscriptionsActionCreators" /* 11147 */;
+import PresenceSubscriptionsActionCreators from "PresenceSubscriptionsActionCreators" /* 11267 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PresenceSubscriptionsStore from "PresenceSubscriptionsStore" /* 11145 */;
-import PresenceStore from "PresenceStore" /* 4936 */;
+import PresenceSubscriptionsStore from "PresenceSubscriptionsStore" /* 11265 */;
+import PresenceStore from "PresenceStore" /* 5106 */;
 
 require = fn;
 let closure_6 = [];
 let closure_7 = [];
 let closure_8 = [];
 let ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arr, isPrivate) => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMissingActivities(arr, isPrivate) {
   const cResult = stateFromStoresArray(items3[5]).c(13);
   if (cResult[0] === isPrivate) {
     if (cResult[1] === arr) {
@@ -145,7 +145,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arr, isPrivate)
   const obj = stateFromStoresArray(items3[5]);
   tmp = stateFromStoresArray;
   tmp2 = items3;
-}) : ((arg0, arg1) => {
+}) : (function useMissingActivities(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   let items = [arg0, arg1];
@@ -246,7 +246,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/useSubscribeMissingActivities.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSubscribeMissingActivities(arg0, arg1) {
   const cResult = c.c(6);
   [tmp3, tmp4] = closure_9(arg0, arg1);
   const require = tmp4;
@@ -282,7 +282,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   cResult[4] = tmp4;
   cResult[5] = items1;
   tmp8 = items1;
-}) : ((arg0, arg1) => {
+}) : (function useSubscribeMissingActivities(arg0, arg1) {
   const tmp = _slicedToArray(closure_9(arg0, arg1), 2);
   closure_0 = tmp2;
   const items = [tmp[1]];

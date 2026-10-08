@@ -1,8 +1,8 @@
-// === Module 15902: createChatPanelNativeStackNavigator ===
+// === Module 16161: createChatPanelNativeStackNavigator ===
 
-// Module 15902 (createChatPanelNativeStackNavigator)
-import Link from "Link" /* 1491 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4742 */;
+// Module 16161 (createChatPanelNativeStackNavigator)
+import Link from "Link" /* 1503 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4936 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,7 +10,7 @@ require = fn;
 let closure_2 = ["id", "initialRouteName", "UNSTABLE_routeNamesChangeBehavior", "children", "layout", "screenListeners", "screenOptions", "screenLayout", "UNSTABLE_router"];
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
-let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatPanelNativeStackNavigator(arg0) {
   let tmp = navigation;
   let tmp2 = state2;
   const cResult = navigation(state2[4]).c(38);
@@ -259,7 +259,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[20] = tmp18;
   tmp17 = tmp18;
   let obj = navigation(state2[4]);
-}) : ((arg0) => {
+}) : (function ChatPanelNativeStackNavigator(arg0) {
   ({ id, initialRouteName, UNSTABLE_routeNamesChangeBehavior, children, layout, screenListeners, screenOptions, screenLayout, UNSTABLE_router } = arg0);
   let merged = Object.assign(arg0, Object.assign({ id: 0, initialRouteName: 0, UNSTABLE_routeNamesChangeBehavior: 0, children: 0, layout: 0, screenListeners: 0, screenOptions: 0, screenLayout: 0, UNSTABLE_router: 0 }));
   state = undefined;

@@ -1,12 +1,12 @@
-// === Module 12218: useGuildPowerupConfigureCallback ===
+// === Module 12297: useGuildPowerupConfigureCallback ===
 
-// Module 12218 (useGuildPowerupConfigureCallback)
+// Module 12297 (useGuildPowerupConfigureCallback)
 import _modDef38 from "module_38" /* 38 */;
-import Powerups from "Powerups" /* 4777 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9282 */;
-import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils" /* 9285 */;
-import openGuildPowerupsBottomSheet from "openGuildPowerupsBottomSheet" /* 12189 */;
+import Powerups from "Powerups" /* 4971 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8613 */;
+import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils" /* 8616 */;
+import openGuildPowerupsBottomSheet from "openGuildPowerupsBottomSheet" /* 12268 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -18,7 +18,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupConfigureCallback.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, skuId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildPowerupConfigureCallback(arg0, skuId) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] === arg0) {
@@ -50,7 +50,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, skuId) => 
   cResult[1] = skuId.skuId;
   cResult[2] = fn;
   tmp2 = fn;
-}) : ((arg0, skuId) => {
+}) : (function useGuildPowerupConfigureCallback(arg0, skuId) {
   closure_0 = arg0;
   const items = [arg0, skuId.skuId];
   return noop.useCallback(() => {

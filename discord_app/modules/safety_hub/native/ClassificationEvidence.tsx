@@ -1,21 +1,21 @@
-// === Module 11515: ClassificationEvidence ===
+// === Module 11507: ClassificationEvidence ===
 
-// Module 11515 (ClassificationEvidence)
+// Module 11507 (ClassificationEvidence)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import ClassificationMessageEvidenceDefault from "ClassificationMessageEvidence" /* 11516 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import ClassificationMessageEvidenceDefault from "ClassificationMessageEvidence" /* 11508 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { cardShadow: null, flaggedContent: null, sectionContainer: null };
-const native = fn(1188);
-obj2.cardShadow = native.generateBoxShadowStyle(fn(1188).FOUR_DP_ELEVATION_SHADOW_PARAMS);
+const native = fn(1200);
+obj2.cardShadow = native.generateBoxShadowStyle(fn(1200).FOUR_DP_ELEVATION_SHADOW_PARAMS);
 obj2.flaggedContent = { borderWidth: 1, borderRadius: nativeDefault.radii.sm, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, backgroundColor: nativeDefault.colors.CHANNELTEXTAREA_BACKGROUND, padding: 20 };
 let obj4 = { borderWidth: 1, borderRadius: nativeDefault.radii.sm, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, backgroundColor: nativeDefault.colors.CHANNELTEXTAREA_BACKGROUND, padding: 20 };
 obj2.sectionContainer = { display: "flex", gap: nativeDefault.space.PX_8 };
@@ -25,7 +25,7 @@ let obj5 = { display: "flex", gap: nativeDefault.space.PX_8 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/native/ClassificationEvidence.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((flaggedContent) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ClassificationEvidence(flaggedContent) {
   const cResult = c.c(12);
   flaggedContent = flaggedContent.flaggedContent;
   let sectionContainer = closure_6();
@@ -85,7 +85,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((flaggedContent) 
     cResult[3] = items1;
     tmp7 = items1;
   }
-}) : ((flaggedContent) => {
+}) : (function ClassificationEvidence(flaggedContent) {
   flaggedContent = flaggedContent.flaggedContent;
   const tmp = closure_6();
   let tmp2 = null;

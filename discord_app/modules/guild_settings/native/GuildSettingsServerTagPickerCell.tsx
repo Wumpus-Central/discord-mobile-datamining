@@ -1,15 +1,15 @@
-// === Module 17809: GuildSettingsServerTagPickerCell ===
+// === Module 18096: GuildSettingsServerTagPickerCell ===
 
-// Module 17809 (GuildSettingsServerTagPickerCell)
+// Module 18096 (GuildSettingsServerTagPickerCell)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4600 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4792 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Pressable = fn(17).Pressable;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { cell: { alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.md, borderWidth: 2, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderColor: nativeDefault.colors.BORDER_MUTED }, cellSelected: null };
 let obj3 = { alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.md, borderWidth: 2, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderColor: nativeDefault.colors.BORDER_MUTED };
 obj2.cellSelected = { borderColor: nativeDefault.unsafe_rawColors.BRAND_500 };
@@ -19,7 +19,7 @@ let obj4 = { borderColor: nativeDefault.unsafe_rawColors.BRAND_500 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/native/GuildSettingsServerTagPickerCell.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSettingsServerTagPickerCell(arg0) {
   const cResult = c.c(19);
   ({ size, selected, accessibilityLabel, accessibilityRole, onPress, children } = arg0);
   let str = "radio";
@@ -109,7 +109,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = tmp8;
   tmp7 = tmp8;
   const tmpResult = useA11yRolesNative;
-}) : ((accessibilityLabel) => {
+}) : (function GuildSettingsServerTagPickerCell(accessibilityLabel) {
   ({ size, selected, accessibilityRole } = accessibilityLabel);
   if (accessibilityRole === undefined) {
     accessibilityRole = "radio";

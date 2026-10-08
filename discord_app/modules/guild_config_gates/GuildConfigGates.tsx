@@ -1,9 +1,9 @@
-// === Module 17856: GuildConfigGates ===
+// === Module 18143: GuildConfigGates ===
 
-// Module 17856 (GuildConfigGates)
-import HTTPUtils from "HTTPUtils" /* 1282 */;
+// Module 18143 (GuildConfigGates)
+import HTTPUtils from "HTTPUtils" /* 1294 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildConfigGatesStore from "GuildConfigGatesStore" /* 17857 */;
+import GuildConfigGatesStore from "GuildConfigGatesStore" /* 18144 */;
 
 require = fn;
 const Endpoints = fn(1085).Endpoints;
@@ -98,7 +98,7 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
     }
   }
 });
-obj2.load = function() {
+obj2.load = function load() {
   const self = this;
   const apply = closure_3.apply;
   if (typeof apply === "unknown") {
@@ -116,7 +116,7 @@ ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const size = fn(2);
 const result2 = size.fileFinishedImporting("modules/guild_config_gates/GuildConfigGates.tsx");
 
-export const useGuildVerificationRoleEnabled = (arg0) => {
+export const useGuildVerificationRoleEnabled = function useGuildVerificationRoleEnabled(arg0) {
   const data = closure_6(arg0).data;
   let flag;
   if (data != null) {
@@ -127,8 +127,8 @@ export const useGuildVerificationRoleEnabled = (arg0) => {
   }
   return flag;
 };
-export const useApplicationIdentityLinkedRolesEnabled = (id) => {
-  const data = closure_6(id).data;
+export const useApplicationIdentityLinkedRolesEnabled = function useApplicationIdentityLinkedRolesEnabled(arg0) {
+  const data = closure_6(arg0).data;
   let flag;
   if (data != null) {
     flag = data.applicationIdentityLinkedRolesEnabled;

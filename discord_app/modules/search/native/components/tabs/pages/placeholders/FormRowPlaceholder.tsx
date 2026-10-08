@@ -1,18 +1,18 @@
-// === Module 16868: FormRowPlaceholder ===
+// === Module 17147: FormRowPlaceholder ===
 
-// Module 16868 (FormRowPlaceholder)
+// Module 17147 (FormRowPlaceholder)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4618 */;
-import usePlaceholderStyles from "usePlaceholderStyles" /* 16837 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4810 */;
+import usePlaceholderStyles from "usePlaceholderStyles" /* 17116 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
-let obj2 = { itemContainer: { flexDirection: "row", paddingHorizontal: 16, overflow: "hidden", height: 64, paddingVertical: fn(7524).SEARCH_ROW_TAP_STATE_PADDING, alignItems: "center" }, avatar: null, innerContainer: null, upperText: null, lowerText: null };
+const createStyles = fn(5090);
+let obj2 = { itemContainer: { flexDirection: "row", paddingHorizontal: 16, overflow: "hidden", height: 64, paddingVertical: fn(9247).SEARCH_ROW_TAP_STATE_PADDING, alignItems: "center" }, avatar: null, innerContainer: null, upperText: null, lowerText: null };
 let size = { height: 48, width: 48, borderRadius: nativeDefault.radii.xl, marginRight: 16, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 obj2.avatar = size;
 obj2.innerContainer = { justifyContent: "center", flex: 1 };
@@ -25,7 +25,7 @@ const ReactCompilerGating = fn(558);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/placeholders/FormRowPlaceholder.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormRowPlaceholderItem(style) {
   const cResult = c.c(18);
   style = style.style;
   const tmp3 = closure_6();
@@ -103,7 +103,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
   cResult[2] = tmp3.itemContainer;
   cResult[3] = items2;
   tmp5 = items2;
-}) : ((style) => {
+}) : (function FormRowPlaceholderItem(style) {
   const tmp = closure_6();
   const placeholderAnimatedStyle = usePlaceholderStyles.usePlaceholderAnimatedStyle(true);
   const obj2 = { style: null, pointerEvents: "none", children: null };

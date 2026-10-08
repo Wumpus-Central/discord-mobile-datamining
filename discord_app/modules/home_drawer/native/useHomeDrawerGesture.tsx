@@ -1,21 +1,21 @@
-// === Module 15988: useHomeDrawerGesture ===
+// === Module 16248: useHomeDrawerGesture ===
 
-// Module 15988 (useHomeDrawerGesture)
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4742 */;
-import HapticUtils from "HapticUtils" /* 4861 */;
-import timing from "timing" /* 4897 */;
-import reanimated_AccessibilityPreferencesSharedValue from "reanimated/AccessibilityPreferencesSharedValue" /* 4899 */;
-import HomeDrawerAnimations from "HomeDrawerAnimations" /* 15984 */;
+// Module 16248 (useHomeDrawerGesture)
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4936 */;
+import HapticUtils from "HapticUtils" /* 5055 */;
+import timing from "timing" /* 5091 */;
+import reanimated_AccessibilityPreferencesSharedValue from "reanimated/AccessibilityPreferencesSharedValue" /* 5093 */;
+import HomeDrawerAnimations from "HomeDrawerAnimations" /* 16244 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import HomeDrawerStore from "HomeDrawerStore" /* 15983 */;
-import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore" /* 15989 */;
+import HomeDrawerStore from "HomeDrawerStore" /* 16243 */;
+import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore" /* 16249 */;
 
 require = fn;
-const computeMaxX = fn(15983).computeMaxX;
+const computeMaxX = fn(16243).computeMaxX;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const LaunchPadTypes = fn(11138).LaunchPadTypes;
+const LaunchPadTypes = fn(11258).LaunchPadTypes;
 let c10 = 144;
 let c11 = 0.5;
 let c12 = 400;
@@ -67,17 +67,17 @@ let closure_57 = { code: "function useHomeDrawerGestureTsx39(event_0,manager){co
 let closure_58 = { code: "function useHomeDrawerGestureTsx40(event){const{isPanelTouchActive,dragOffsetX,activationOffsetX,didSettle,didSnapThisGesture,snappedByDrag,hasThrown,flingThrow,withTiming,HOME_DRAWER_FLING_RETURN_TIMING,gestureState,panelX,snapX}=this.__closure;isPanelTouchActive.set(true);dragOffsetX.set(0);activationOffsetX.set(0);didSettle.set(false);didSnapThisGesture.set(false);snappedByDrag.set(false);hasThrown.set(false);flingThrow.set(withTiming(0,HOME_DRAWER_FLING_RETURN_TIMING));gestureState.set({active:false,initialX:event.absoluteX,initialY:event.absoluteY,panelX:panelX.get()+snapX.get()});}" };
 fn(558);
 let obj = { gesture: null, panelStyles: null, gestureState: null, panelX: null, panelTranslateX: null, guildsBarDrawerStyle: null, guildsBarPullX: null };
-let Gesture = fn(6147).Gesture;
+let Gesture = fn(6326).Gesture;
 obj.gesture = Gesture.Pan();
 obj.panelStyles = {};
-let ReanimatedHelperTypes = fn(6578);
+let ReanimatedHelperTypes = fn(6754);
 obj.gestureState = ReanimatedHelperTypes.createFakeSharedValue({ active: false, initialX: 0, initialY: 0, panelX: 0 });
-ReanimatedHelperTypes = fn(6578);
+ReanimatedHelperTypes = fn(6754);
 obj.panelX = ReanimatedHelperTypes.createFakeSharedValue(0);
-ReanimatedHelperTypes = fn(6578);
+ReanimatedHelperTypes = fn(6754);
 obj.panelTranslateX = ReanimatedHelperTypes.createFakeSharedValue(0);
 obj.guildsBarDrawerStyle = {};
-ReanimatedHelperTypes = fn(6578);
+ReanimatedHelperTypes = fn(6754);
 obj.guildsBarPullX = ReanimatedHelperTypes.createFakeSharedValue(0);
 const context = noop.createContext({ homeDrawerState: obj, enableHome: false, landOnHome: false });
 let ReactCompilerGating = fn(558);
@@ -91,7 +91,7 @@ let result3 = size.fileFinishedImporting("modules/home_drawer/native/useHomeDraw
 
 export const INITIAL_OPEN_WIDTH = 144;
 export const HOME_DRAWER_FLING_PHYSICS = { mass: 0.4, damping: 100, stiffness: 250 };
-export const useHomeGesture = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useHomeGesture = ReactCompilerGating.isReactCompilerEnabled() ? (function useHomeGesture() {
   const cResult = panelX(isOpenTarget[7]).c(138);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let obj2 = { location: "gesture" };
@@ -1160,7 +1160,7 @@ export const useHomeGesture = ReactCompilerGating.isReactCompilerEnabled() ? (()
   cResult[9] = tmp19;
   cResult[10] = num8;
   const tmpResult27 = panelX(isOpenTarget[20]);
-}) : (() => {
+}) : (function useHomeGesture() {
   const MobileHomeDrawerExperiment = landOnHome(snapX[8]).MobileHomeDrawerExperiment;
   const config = MobileHomeDrawerExperiment.useConfig({ location: "gesture" });
   ({ enableHome, landOnHome } = config);
@@ -1195,21 +1195,17 @@ export const useHomeGesture = ReactCompilerGating.isReactCompilerEnabled() ? (()
     panelX(snapX[11]).track(isPanelTouchActive.SERVER_DRAWER_INTERACT, { action });
   }, []);
   const obj9 = landOnHome(snapX[10]);
-  class D {
-    constructor() {
-      tmp = 0 === gestureState.get().panelX;
-      if (tmp) {
-        tmp2 = closure_10;
-        tmp3 = c10;
-        tmp = closure_10.get() >= c10;
-      }
-      return tmp;
+  let fn = function f() {
+    let tmp = 0 === gestureState.get().panelX;
+    if (tmp) {
+      tmp = sharedValue.get() >= c10;
     }
-  }
-  D.__closure = { gestureState, dragOffsetX: sharedValue, INITIAL_OPEN_WIDTH: sharedValue };
-  D.__workletHash = 11980682848385;
-  D.__initData = __initData3;
-  const derivedValue = landOnHome(snapX[9]).useDerivedValue(D);
+    return tmp;
+  };
+  fn.__closure = { gestureState, dragOffsetX: sharedValue, INITIAL_OPEN_WIDTH: sharedValue };
+  fn.__workletHash = 11980682848385;
+  fn.__initData = __initData3;
+  const derivedValue = landOnHome(snapX[9]).useDerivedValue(fn);
   const obj10 = { gestureState, dragOffsetX: sharedValue, INITIAL_OPEN_WIDTH: sharedValue };
   const obj12 = landOnHome(snapX[9]);
   class A {
@@ -1963,6 +1959,12 @@ export const useHomeGesture = ReactCompilerGating.isReactCompilerEnabled() ? (()
   };
 });
 export const HomeDrawerStateContext = context;
-export const useHomeDrawerState = () => noop.useContext(context).homeDrawerState;
-export const useIsHomeDrawerEnabled = () => noop.useContext(context).enableHome;
-export const useDoesLandOnHomeDrawer = () => noop.useContext(context).landOnHome;
+export const useHomeDrawerState = function useHomeDrawerState() {
+  return noop.useContext(context).homeDrawerState;
+};
+export const useIsHomeDrawerEnabled = function useIsHomeDrawerEnabled() {
+  return noop.useContext(context).enableHome;
+};
+export const useDoesLandOnHomeDrawer = function useDoesLandOnHomeDrawer() {
+  return noop.useContext(context).landOnHome;
+};

@@ -1,7 +1,7 @@
-// === Module 13836: StreamZeroVadLeadingExperiment ===
+// === Module 14139: StreamZeroVadLeadingExperiment ===
 
-// Module 13836 (StreamZeroVadLeadingExperiment)
-import ApexExperiment from "ApexExperiment" /* 1440 */;
+// Module 14139 (StreamZeroVadLeadingExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-09-stream-zero-vad-leading", kind: "user", defaultConfig: { enabled: false }, variations: null };

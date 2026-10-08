@@ -1,9 +1,9 @@
-// === Module 4747: useBaseAppContainerDimensions ===
+// === Module 4941: useBaseAppContainerDimensions ===
 
-// Module 4747 (useBaseAppContainerDimensions)
+// Module 4941 (useBaseAppContainerDimensions)
 import c from "c" /* 576 */;
-import useWindowDimensions from "useWindowDimensions" /* 1484 */;
-import useSafeAreaInsets from "useSafeAreaInsets" /* 1618 */;
+import useWindowDimensions from "useWindowDimensions" /* 1496 */;
+import useSafeAreaInsets from "useSafeAreaInsets" /* 1630 */;
 import noop from "module_19" /* 19 */;
 
 const useWindowDimensionsDefault = useWindowDimensions;
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/screen/native/useBaseAppContainerDimensions.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useBaseAppContainerDimensions() {
   const cResult = c.c(3);
   ({ height, width } = useWindowDimensionsDefault());
   const rect = useSafeAreaInsetsDefault();
@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[1] = diff;
   cResult[2] = size;
   tmp4 = size;
-}) : (() => {
+}) : (function useBaseAppContainerDimensions() {
   let size = useWindowDimensionsDefault();
   const width = size.width;
   const height = size.height;

@@ -1,12 +1,12 @@
-// === Module 5699: ActiveThreadsStore ===
+// === Module 6065: ActiveThreadsStore ===
 
-// Module 5699 (ActiveThreadsStore)
+// Module 6065 (ActiveThreadsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ChannelRecord from "ChannelRecord" /* 2055 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
+import ChannelRecord from "ChannelRecord" /* 2067 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
 import size from "module_2" /* 2 */;
 
 function handleThreadCreateOrUpdate(channel) {
@@ -89,8 +89,8 @@ prototype["isActive"] = function isActive(guild_id, id, arg2) {
   }
   return tmp;
 };
-prototype["getThreadsForGuild"] = function getThreadsForGuild(guildId) {
-  let tmp = dependencyMap[guildId];
+prototype["getThreadsForGuild"] = function getThreadsForGuild(guild_id) {
+  let tmp = dependencyMap[guild_id];
   if (tmp == null) {
     tmp = closure_8;
   }

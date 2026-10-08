@@ -1,19 +1,19 @@
-// === Module 16542: GuildRoleSubscriptionPurchaseCard ===
+// === Module 16797: GuildRoleSubscriptionPurchaseCard ===
 
-// Module 16542 (GuildRoleSubscriptionPurchaseCard)
+// Module 16797 (GuildRoleSubscriptionPurchaseCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import BottomSheetModal from "BottomSheetModal" /* 6119 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6476 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6652 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15060 */;
-import GuildRoleSubscriptionCard from "GuildRoleSubscriptionCard" /* 15070 */;
-import Elements from "Elements" /* 16537 */;
-import SubscribeButtonDefault from "SubscribeButton" /* 16543 */;
+import native from "native" /* 1200 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import BottomSheetModal from "BottomSheetModal" /* 6298 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6654 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6829 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15322 */;
+import GuildRoleSubscriptionCard from "GuildRoleSubscriptionCard" /* 15332 */;
+import Elements from "Elements" /* 16792 */;
+import SubscribeButtonDefault from "SubscribeButton" /* 16798 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,7 +21,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1 }, header: { padding: 16, paddingBottom: 24 }, content: null, headerText: null, headerDot: null, seperator: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1 };
 obj2.content = { padding: 16, paddingTop: 24, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
@@ -36,7 +36,7 @@ let obj5 = { borderBottomWidth: 1, marginLeft: -16, marginRight: -16, borderColo
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/purchase_page/GuildRoleSubscriptionPurchaseCard.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRoleSubscriptionPurchaseCard(arg0) {
   const cResult = c.c(46);
   ({ listingId, guildId } = arg0);
   const typeConsolidationTextTransform = useTypeConsolidationTextTransform.useTypeConsolidationTextTransform("PurchaseCard");
@@ -255,7 +255,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[9] = tmp17;
   cResult[10] = tmp21;
   tmp20 = tmp21;
-}) : ((guildId) => {
+}) : (function GuildRoleSubscriptionPurchaseCard(guildId) {
   const listingId = guildId.listingId;
   const typeConsolidationTextTransform = useTypeConsolidationTextTransform.useTypeConsolidationTextTransform("PurchaseCard");
   const tmp2 = closure_8();

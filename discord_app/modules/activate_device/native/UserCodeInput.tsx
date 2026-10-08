@@ -1,28 +1,28 @@
-// === Module 13711: UserCodeInput ===
+// === Module 13933: UserCodeInput ===
 
-// Module 13711 (UserCodeInput)
+// Module 13933 (UserCodeInput)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import TextInput from "TextInput" /* 6105 */;
-import useUserCodeSubmit from "useUserCodeSubmit" /* 13713 */;
-import ActivateDeviceSharedStylesDefault from "ActivateDeviceSharedStyles" /* 13714 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import TextInput from "TextInput" /* 6283 */;
+import useUserCodeSubmit from "useUserCodeSubmit" /* 13935 */;
+import ActivateDeviceSharedStylesDefault from "ActivateDeviceSharedStyles" /* 13936 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const OAuthConstants = fn(13712).OAuthConstants;
+const OAuthConstants = fn(13934).OAuthConstants;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_10 = createStyles.createStyles({ text: { textAlign: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activate_device/native/UserCodeInput.tsx");
 
-export const UserCodeInput = ReactCompilerGating.isReactCompilerEnabled() ? ((prefilledUserCode) => {
+export const UserCodeInput = ReactCompilerGating.isReactCompilerEnabled() ? (function UserCodeInput(prefilledUserCode) {
   const cResult = c.c(23);
   let str = prefilledUserCode.prefilledUserCode;
   ({ onClose, onUserCodeAccepted } = prefilledUserCode);
@@ -71,14 +71,14 @@ export const UserCodeInput = ReactCompilerGating.isReactCompilerEnabled() ? ((pr
   if (cResult[6] === tmp10) {
     const _Symbol = Symbol;
     if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-      class G {
+      class D {
         constructor(arg0) {
           return closure_0(prefilledUserCode);
         }
       }
-      cResult[9] = G;
+      cResult[9] = D;
     } else {
-      class G {
+      class D {
         constructor(arg0) {
           return closure_0(prefilledUserCode);
         }
@@ -86,7 +86,7 @@ export const UserCodeInput = ReactCompilerGating.isReactCompilerEnabled() ? ((pr
     }
     const _Symbol2 = Symbol;
     if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-      class G {
+      class D {
         constructor(arg0) {
           return closure_0(prefilledUserCode);
         }
@@ -96,21 +96,21 @@ export const UserCodeInput = ReactCompilerGating.isReactCompilerEnabled() ? ((pr
       cResult[10] = formatToPlainStringResult;
       const tmp21 = formatToPlainStringResult;
     } else {
-      class G {
+      class D {
         constructor(arg0) {
           return closure_0(prefilledUserCode);
         }
       }
     }
     if (cResult[11] === error) {
-      class G {
+      class D {
         constructor(arg0) {
           return closure_0(prefilledUserCode);
         }
       }
       const _Symbol3 = Symbol;
       if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-        class G {
+        class D {
           constructor(arg0) {
             return closure_0(prefilledUserCode);
           }
@@ -119,14 +119,14 @@ export const UserCodeInput = ReactCompilerGating.isReactCompilerEnabled() ? ((pr
         cResult[14] = stringResult2;
         const tmp28 = stringResult2;
       } else {
-        class G {
+        class D {
           constructor(arg0) {
             return closure_0(prefilledUserCode);
           }
         }
       }
       if (cResult[15] === manualSubmit) {
-        class G {
+        class D {
           constructor(arg0) {
             return closure_0(prefilledUserCode);
           }
@@ -139,7 +139,7 @@ export const UserCodeInput = ReactCompilerGating.isReactCompilerEnabled() ? ((pr
       cResult[17] = arr.length !== OAuthConstants.USER_CODE_LENGTH;
       cResult[18] = tmp34;
     }
-    const obj7 = { onChange: G, maxLength: OAuthConstants.USER_CODE_LENGTH, value: arr, autoFocus: true, autoComplete: "off", placeholder: tmp21, errorMessage: error };
+    const obj7 = { onChange: D, maxLength: OAuthConstants.USER_CODE_LENGTH, value: arr, autoFocus: true, autoComplete: "off", placeholder: tmp21, errorMessage: error };
     const tmp27 = React5(TextInput.TextInput, obj7);
     cResult[11] = error;
     cResult[12] = arr;
@@ -153,7 +153,7 @@ export const UserCodeInput = ReactCompilerGating.isReactCompilerEnabled() ? ((pr
   cResult[7] = tmp15;
   cResult[8] = closure_1_8(View, obj8);
   const tmp19 = closure_1_8(View, obj8);
-}) : ((prefilledUserCode) => {
+}) : (function UserCodeInput(prefilledUserCode) {
   let str = prefilledUserCode.prefilledUserCode;
   c0 = undefined;
   ({ onClose, onUserCodeAccepted } = prefilledUserCode);

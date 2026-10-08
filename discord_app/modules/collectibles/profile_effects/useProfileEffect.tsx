@@ -1,20 +1,20 @@
-// === Module 7909: useProfileEffect ===
+// === Module 8328: useProfileEffect ===
 
-// Module 7909 (useProfileEffect)
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7065 */;
+// Module 8328 (useProfileEffect)
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7251 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7066 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7081 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7252 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7267 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const isProfileEffectRecord = fn(7072).isProfileEffectRecord;
+const isProfileEffectRecord = fn(7258).isProfileEffectRecord;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/profile_effects/useProfileEffect.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useProfileEffect(arg0) {
   _require = arg0;
   const cResult = require("c").c(7);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -25,7 +25,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function f() {
+    const fn = function o() {
       if (null != closure_0) {
         const product = CollectiblesCategoryStore.getProduct(closure_0);
         let first;
@@ -78,7 +78,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   tmp11 = items1;
   tmp10 = fn2;
   const tmpResult = require("initialize");
-}) : ((arg0) => {
+}) : (function useProfileEffect(arg0) {
   _require = arg0;
   const items = [CollectiblesCategoryStore, CollectiblesPurchaseStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {

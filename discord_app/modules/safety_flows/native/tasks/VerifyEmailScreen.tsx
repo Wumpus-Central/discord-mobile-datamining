@@ -1,6 +1,6 @@
-// === Module 18114: VerifyEmailScreen ===
+// === Module 18401: VerifyEmailScreen ===
 
-// Module 18114 (VerifyEmailScreen)
+// Module 18401 (VerifyEmailScreen)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -105,7 +105,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         }
       }
     });
-    const fn = function() {
+    function t0() {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -114,10 +114,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         applyArgumentsResult = apply(self, arguments);
       }
       return applyArgumentsResult;
-    };
+    }
     cResult[0] = onTaskComplete;
-    cResult[1] = fn;
-    let tmp9 = fn;
+    cResult[1] = t0;
+    let tmp9 = t0;
   } else {
     tmp9 = cResult[1];
   }
@@ -267,20 +267,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   let obj3 = { title: null, action: null, onAction: null, submitting: null, children: null };
   let obj2 = onTaskComplete(value[7]);
   let intl = onTaskComplete(value[10]).intl;
-  obj3.title = intl.string(require("module_2815")["Qm6K/s"]);
+  obj3.title = intl.string(require("module_2859")["Qm6K/s"]);
   const intl2 = onTaskComplete(value[10]).intl;
-  obj3.action = intl2.string(require("module_2815").wq2RDq);
+  obj3.action = intl2.string(require("module_2859").wq2RDq);
   obj3.onAction = onAction;
   obj3.submitting = tmp4[0];
   let obj4 = { spacing: require("native").space.PX_16, children: null };
   let obj5 = { variant: "text-sm/medium", color: "text-subtle", children: null };
   const intl3 = onTaskComplete(value[10]).intl;
-  obj5.children = intl3.string(require("module_2815").aveKoG);
+  obj5.children = intl3.string(require("module_2859").aveKoG);
   const items3 = [onAction(onTaskComplete(value[12]).Text, obj5), ];
   let obj6 = { spacing: require("native").space.PX_8, children: null };
   let obj7 = { placeholder: null, maxLength: 6, returnKeyType: "done", value: null, onChange: null };
   const intl4 = onTaskComplete(value[10]).intl;
-  obj7.placeholder = intl4.string(require("module_2815").d9Ykjr);
+  obj7.placeholder = intl4.string(require("module_2859").d9Ykjr);
   obj7.value = value;
   obj7.onChange = tmp2[1];
   const items4 = [onAction(onTaskComplete(value[13]).TextInput, obj7), ];

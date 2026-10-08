@@ -1,12 +1,12 @@
-// === Module 7679: actions/BoostingActionCreators ===
+// === Module 8000: actions/BoostingActionCreators ===
 
-// Module 7679 (actions/BoostingActionCreators)
+// Module 8000 (actions/BoostingActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AppliedGuildBoostRecord from "AppliedGuildBoostRecord" /* 7680 */;
-import GuildBoostSlotRecord from "GuildBoostSlotRecord" /* 7681 */;
-import SubscriptionStore from "SubscriptionStore" /* 4540 */;
+import AppliedGuildBoostRecord from "AppliedGuildBoostRecord" /* 8001 */;
+import GuildBoostSlotRecord from "GuildBoostSlotRecord" /* 8002 */;
+import SubscriptionStore from "SubscriptionStore" /* 4732 */;
 
 require = fn;
 let closure_8 = async function _fetchAppliedGuildBoostsForGuild(arg0) {

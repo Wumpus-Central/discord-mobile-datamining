@@ -1,9 +1,9 @@
-// === Module 14413: DiscordGestureHandlerRootView ===
+// === Module 14639: DiscordGestureHandlerRootView ===
 
-// Module 14413 (DiscordGestureHandlerRootView)
+// Module 14639 (DiscordGestureHandlerRootView)
 import c from "c" /* 576 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6147 */;
-import DiscordGestureHandlerRootViewNativeComponentDefault from "DiscordGestureHandlerRootViewNativeComponent" /* 14414 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6326 */;
+import DiscordGestureHandlerRootViewNativeComponentDefault from "DiscordGestureHandlerRootViewNativeComponent" /* 14640 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/gesture_handler/native/DiscordGestureHandlerRootView.android.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function DiscordGestureHandlerRootView(arg0) {
   const cResult = c.c(3);
   ({ children, style } = arg0);
   if (cResult[0] === children) {
@@ -32,7 +32,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = style;
   cResult[2] = tmp6;
   tmp4 = tmp6;
-}) : ((arg0) => {
+}) : (function DiscordGestureHandlerRootView(arg0) {
   ({ children, style } = arg0);
   const obj = { style: styles.flex, children: jsx(LegacyBaseButton.GestureHandlerRootView, { style, children }) };
   return jsx(DiscordGestureHandlerRootViewNativeComponentDefault, { style: styles.flex, children: jsx(LegacyBaseButton.GestureHandlerRootView, { style, children }) });

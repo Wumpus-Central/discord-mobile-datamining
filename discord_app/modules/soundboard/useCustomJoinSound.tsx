@@ -1,19 +1,19 @@
-// === Module 6887: useCustomJoinSound ===
+// === Module 7076: useCustomJoinSound ===
 
-// Module 6887 (useCustomJoinSound)
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
+// Module 7076 (useCustomJoinSound)
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-let closure_3 = fn(5689).CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID;
+let closure_3 = fn(5426).CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID;
 const CustomSoundType = { GLOBAL: 0, [0]: "GLOBAL", GUILD: 1, [1]: "GUILD" };
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundboard/useCustomJoinSound.tsx");
 
 export { CustomSoundType };
-export const useCustomJoinSound = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useCustomJoinSound = ReactCompilerGating.isReactCompilerEnabled() ? (function useCustomJoinSound(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -24,7 +24,7 @@ export const useCustomJoinSound = ReactCompilerGating.isReactCompilerEnabled() ?
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function u() {
+    const fn = function t() {
       const guilds = UserSettingsProtoStore.settings.guilds;
       let guilds1;
       if (guilds != null) {
@@ -63,7 +63,7 @@ export const useCustomJoinSound = ReactCompilerGating.isReactCompilerEnabled() ?
   }
   let obj = require("c");
   return require("initialize").useStateFromStores(first, tmp6);
-}) : ((arg0) => {
+}) : (function useCustomJoinSound(arg0) {
   _require = arg0;
   const items = [UserSettingsProtoStore];
   return require("initialize").useStateFromStores(items, () => {

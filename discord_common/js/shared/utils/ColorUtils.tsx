@@ -41,8 +41,8 @@ function int2hslRaw(initialColor) {
 const re2 = /rgba?\((\d{1,3}), ?(\d{1,3}), ?(\d{1,3})\)?(?:, ?(\d(?:\.\d*)?)\))?/;
 let result = size.fileFinishedImporting("../discord_common/js/shared/utils/ColorUtils.tsx");
 
-export const hex2int = function hex2int(c8) {
-  return _modDef683(c8).num();
+export const hex2int = function hex2int(PRIMARY_530) {
+  return _modDef683(PRIMARY_530).num();
 };
 export const int2hex = function int2hex(color) {
   if (color <= 16777215) {

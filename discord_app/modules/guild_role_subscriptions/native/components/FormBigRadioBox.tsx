@@ -1,19 +1,19 @@
-// === Module 17969: FormBigRadioBox ===
+// === Module 18256: FormBigRadioBox ===
 
-// Module 17969 (FormBigRadioBox)
+// Module 18256 (FormBigRadioBox)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4600 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9455 */;
+import native from "native" /* 1200 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4792 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 7013 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm, alignSelf: "stretch", alignItems: "flex-start", padding: 16 }, containerSelected: null, indicator: null, iconContainer: null, iconContainerSelected: null, title: null, disabled: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm, alignSelf: "stretch", alignItems: "flex-start", padding: 16 };
 obj2.containerSelected = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderWidth: 1, borderColor: nativeDefault.colors.BACKGROUND_BRAND };
@@ -30,7 +30,7 @@ let obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormBigRadioBox.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormBigRadioBox(onPress) {
   const cResult = c.c(33);
   ({ description, icon, title, selected, style, disabled } = onPress);
   let tmp4 = undefined !== disabled;
@@ -174,7 +174,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
   cResult[1] = selected;
   cResult[2] = obj8;
   tmp6 = obj8;
-}) : ((arg0) => {
+}) : (function FormBigRadioBox(arg0) {
   ({ selected, disabled } = arg0);
   ({ description, icon, title, style, onPress } = arg0);
   if (disabled === undefined) {

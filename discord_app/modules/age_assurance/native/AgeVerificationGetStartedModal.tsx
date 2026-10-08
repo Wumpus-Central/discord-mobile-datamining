@@ -1,13 +1,13 @@
-// === Module 8293: AgeVerificationGetStartedModal ===
+// === Module 7675: AgeVerificationGetStartedModal ===
 
-// Module 8293 (AgeVerificationGetStartedModal)
+// Module 7675 (AgeVerificationGetStartedModal)
 import nativeDefault from "native" /* 587 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8119 */;
-import GoogleWalletVerificationScreenDefault from "GoogleWalletVerificationScreen" /* 8282 */;
-import AgeVerificationIntroScreenDefault from "AgeVerificationIntroScreen" /* 8294 */;
-import AgeVerificationRetryScreenDefault from "AgeVerificationRetryScreen" /* 8298 */;
-import AgeVerificationEmbeddedIntroScreenDefault from "AgeVerificationEmbeddedIntroScreen" /* 8299 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 5915 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5940 */;
+import GoogleWalletVerificationScreenDefault from "GoogleWalletVerificationScreen" /* 7664 */;
+import AgeVerificationIntroScreenDefault from "AgeVerificationIntroScreen" /* 7676 */;
+import AgeVerificationRetryScreenDefault from "AgeVerificationRetryScreen" /* 7681 */;
+import AgeVerificationEmbeddedIntroScreenDefault from "AgeVerificationEmbeddedIntroScreen" /* 7682 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -81,7 +81,7 @@ function getScreens(headerStyle, modalSessionId, entryPoint, classificationId, a
   return obj;
 }
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { headerStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, shadowColor: "transparent" } };
 let closure_5 = createStyles.createStyles(obj2);
 let obj4 = { INTRO: "INTRO", RETRY: "RETRY", EXPRESSIVE_INTRO: "EXPRESSIVE_INTRO", GOOGLE_WALLET_VERIFICATION: "GOOGLE_WALLET_VERIFICATION" };
@@ -90,7 +90,7 @@ let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, shadow
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_assurance/native/AgeVerificationGetStartedModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((entryPoint) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeVerificationGetStartedModal(entryPoint) {
   const cResult = entryPoint(EXPRESSIVE_PRIMARY[11]).c(17);
   entryPoint = entryPoint.entryPoint;
   ({ isRetry, useEmbeddedMethods, classificationId, onComplete } = entryPoint);
@@ -195,7 +195,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((entryPoint) => {
   cResult[5] = tmp9;
   tmp8 = tmp9;
   const obj = entryPoint(EXPRESSIVE_PRIMARY[11]);
-}) : ((entryPoint) => {
+}) : (function AgeVerificationGetStartedModal(entryPoint) {
   entryPoint = entryPoint.entryPoint;
   const isRetry = entryPoint.isRetry;
   let flag = entryPoint.useEmbeddedMethods;

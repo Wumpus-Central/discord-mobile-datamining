@@ -1,19 +1,19 @@
-// === Module 8720: UserProfileApplicationWidgetTopContainedLayout ===
+// === Module 13193: UserProfileApplicationWidgetTopContainedLayout ===
 
-// Module 8720 (UserProfileApplicationWidgetTopContainedLayout)
+// Module 13193 (UserProfileApplicationWidgetTopContainedLayout)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 8629 */;
-import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 8716 */;
-import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 8717 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 13102 */;
+import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 13189 */;
+import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 13190 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ Image: c2, View: c3 } = get_ActivityIndicator);
+const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { contentRow: { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" }, text: null, imageContainer: null, image: null, imageSkeleton: null };
 let obj3 = { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" };
 obj2.text = { flex: 1, gap: nativeDefault.space.PX_4 };
@@ -28,7 +28,8 @@ let obj4 = { flex: 1, gap: nativeDefault.space.PX_4 };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/application_widget/native/UserProfileApplicationWidgetTopContainedLayout.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileApplicationWidgetTopContainedLayout(arg0) {
+  let tmp2 = dependencyMap;
   const cResult = c.c(45);
   ({ header, topConfig, resolveFieldValue, numberFormat } = arg0);
   const tmp4 = closure_6();
@@ -122,7 +123,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                                         const obj6 = { children: null };
                                         const items = [header, tmp39];
                                         obj6.children = items;
-                                        const tmp46 = hasOwnProperty(React3, obj6);
+                                        const tmp46 = hasOwnProperty(View, obj6);
                                         cResult[42] = header;
                                         cResult[43] = tmp39;
                                         cResult[44] = tmp46;
@@ -132,7 +133,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                                     const obj7 = { style: tmp4.contentRow, children: null };
                                     const items1 = [tmp28, cResult[37]];
                                     obj7.children = items1;
-                                    const tmp42 = hasOwnProperty(React3, obj7);
+                                    const tmp42 = hasOwnProperty(View, obj7);
                                     cResult[38] = tmp4.contentRow;
                                     cResult[39] = tmp28;
                                     cResult[40] = cResult[37];
@@ -148,8 +149,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                               const obj10 = { uri: imageSkeleton.media.url };
                               obj9.source = obj10;
                               obj9.style = tmp4.image;
-                              obj8.children = React4(React2, obj9);
-                              let tmp34 = React4(React3, obj8);
+                              tmp2 = React4(FastImageDefault, obj9);
+                              obj8.children = tmp2;
+                              let tmp34 = React4(View, obj8);
                             } else {
                               const obj11 = { style: tmp4.imageSkeleton };
                               tmp34 = React4(UserProfileApplicationWidgetSkeletons.ImageSkeleton, obj11);
@@ -166,7 +168,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                     const obj12 = { style: tmp4.text, children: null };
                     const items2 = [tmp16, tmp19, tmp22, tmp25];
                     obj12.children = items2;
-                    const tmp31 = hasOwnProperty(React3, obj12);
+                    const tmp31 = hasOwnProperty(View, obj12);
                     cResult[27] = tmp4.text;
                     cResult[28] = tmp25;
                     cResult[29] = tmp16;
@@ -217,7 +219,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = textComponentValues3;
   tmp5 = textComponentValues3;
   const tmpResult6 = resolvedValuesFromUserApplicationIdentityProfile;
-}) : ((header) => {
+}) : (function UserProfileApplicationWidgetTopContainedLayout(header) {
   ({ topConfig, resolveFieldValue, numberFormat } = header);
   const tmp = closure_6();
   const textComponentValues = resolvedValuesFromUserApplicationIdentityProfile.resolveTextComponentValues(topConfig.components.title, resolveFieldValue, numberFormat, true);
@@ -236,15 +238,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const obj6 = { style: tmp.text, children: null };
   const items2 = [React4(UserProfileApplicationWidgetFieldUtils.FieldText, { field: textComponentValues, variant: "text-lg/medium", color: "text-default" }), React4(UserProfileApplicationWidgetFieldUtils.FieldText, { field: textComponentValues1, variant: "text-sm/normal", color: "text-muted" }), React4(UserProfileApplicationWidgetFieldUtils.FieldText, { field: textComponentValues2, variant: "text-sm/normal", color: "text-muted" }), React4(UserProfileApplicationWidgetFieldUtils.FieldText, { field: textComponentValues3, variant: "text-sm/normal", color: "text-muted" })];
   obj6.children = items2;
-  const items3 = [hasOwnProperty(React3, obj6), ];
+  const items3 = [hasOwnProperty(View, obj6), ];
   if (null != fieldValue) {
     const obj7 = { style: tmp.imageContainer, children: null };
     const obj8 = { source: null, style: null, resizeMode: "contain" };
     const obj9 = { uri: fieldValue.media.url };
     obj8.source = obj9;
     obj8.style = tmp.image;
-    obj7.children = React4(React2, obj8);
-    let tmp12Result = React4(React3, obj7);
+    obj7.children = React4(FastImageDefault, obj8);
+    let tmp12Result = React4(View, obj7);
   } else {
     const obj10 = { style: tmp.imageSkeleton };
     tmp12Result = React4(UserProfileApplicationWidgetSkeletons.ImageSkeleton, obj10);
@@ -252,7 +254,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const obj11 = { children: null };
   items3[1] = tmp12Result;
   obj5.children = items3;
-  items1[1] = hasOwnProperty(React3, obj5);
+  items1[1] = hasOwnProperty(View, obj5);
   obj11.children = items1;
-  return hasOwnProperty(React3, obj11);
+  return hasOwnProperty(View, obj11);
 });

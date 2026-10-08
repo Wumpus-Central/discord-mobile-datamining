@@ -1,24 +1,24 @@
-// === Module 10092: RoleLabel ===
+// === Module 9676: RoleLabel ===
 
-// Module 10092 (RoleLabel)
+// Module 9676 (RoleLabel)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import native from "native" /* 1188 */;
-import Form from "Form" /* 8924 */;
+import native from "native" /* 1200 */;
+import Form from "Form" /* 8555 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({ container: { display: "flex", flexDirection: "row" }, roleDot: { marginRight: 4 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/RoleLabel/native/RoleLabel.tsx");
 
-export const RoleLabel = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const RoleLabel = ReactCompilerGating.isReactCompilerEnabled() ? (function RoleLabel(arg0) {
   const cResult = c.c(17);
   ({ name, color, colors } = arg0);
   const tmp4 = closure_6();
@@ -104,7 +104,7 @@ export const RoleLabel = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
     cResult[4] = obj6;
   }
   const tmpResult = initialize;
-}) : ((color) => {
+}) : (function RoleLabel(color) {
   color = color.color;
   ({ name, colors } = color);
   const tmp = closure_6();

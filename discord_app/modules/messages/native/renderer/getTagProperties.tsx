@@ -1,12 +1,12 @@
-// === Module 7715: getTagProperties ===
+// === Module 8036: getTagProperties ===
 
-// Module 7715 (getTagProperties)
+// Module 8036 (getTagProperties)
 import _mod17 from "module_17" /* 17 */;
 import util from "util" /* 1126 */;
-import MessageConstants from "MessageConstants" /* 4889 */;
-import PublicGuildsUtils from "PublicGuildsUtils" /* 7716 */;
-import isCrosspostDefault from "isCrosspost" /* 7718 */;
-import _modDef7720 from "module_7720" /* 7720 */;
+import MessageConstants from "MessageConstants" /* 5083 */;
+import PublicGuildsUtils from "PublicGuildsUtils" /* 8037 */;
+import isCrosspostDefault from "isCrosspost" /* 8039 */;
+import _modDef8041 from "module_8041" /* 8041 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -35,7 +35,7 @@ export default function getTagProperties(arg0) {
           const intl = util.intl;
           let uri;
           if (isVerifiedBotResult) {
-            uri = Image.resolveAssetSource(_modDef7720).uri;
+            uri = Image.resolveAssetSource(_modDef8041).uri;
           }
           flag = isVerifiedBotResult;
           stringResult = intl.string(util.t["9RNkeF"]);
@@ -62,7 +62,7 @@ export default function getTagProperties(arg0) {
         const intl6 = util.intl;
         stringResult2 = intl6.string(util.t.fyE8sH);
       }
-      const obj2 = { tagText: stringResult, tagAccessibilityLabel: null, tagVerified: flag, tagTextColor: "Boolean", tagBackgroundColor: "unicodeVersion", tagType: SYSTEM_DM_TAG_SYSTEM_TYPE, tagIconUrl: tmp5, opTagText: stringResult2, opTagTextColor: -754169043291420500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, opTagBackgroundColor: 175593249004376850000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 };
+      const obj2 = { tagText: stringResult, tagAccessibilityLabel: null, tagVerified: flag, tagTextColor: "Boolean", tagBackgroundColor: "code", tagType: SYSTEM_DM_TAG_SYSTEM_TYPE, tagIconUrl: tmp5, opTagText: stringResult2, opTagTextColor: "height", opTagBackgroundColor: "Array" };
       ({ opTagTextColor: obj3.opTagTextColor, opTagBackgroundColor: obj3.opTagBackgroundColor } = colors);
       return obj2;
     } else {

@@ -1,11 +1,11 @@
-// === Module 5898: useGameMentionData ===
+// === Module 8210: useGameMentionData ===
 
-// Module 5898 (useGameMentionData)
+// Module 8210 (useGameMentionData)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
-import useGameProfileObscured from "useGameProfileObscured" /* 5903 */;
-import GameStore from "GameStore" /* 2007 */;
-import GameAutocompleteStore from "GameAutocompleteStore" /* 5899 */;
-import UserStore from "UserStore" /* 1377 */;
+import useGameProfileObscured from "useGameProfileObscured" /* 8213 */;
+import GameStore from "GameStore" /* 2019 */;
+import GameAutocompleteStore from "GameAutocompleteStore" /* 8211 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
@@ -41,7 +41,7 @@ export const getGameMentionData = function getGameMentionData(gameId) {
   }
   return tmp4;
 };
-export const useGameMentionData = ReactCompilerGating.isReactCompilerEnabled() ? ((gameId) => {
+export const useGameMentionData = ReactCompilerGating.isReactCompilerEnabled() ? (function useGameMentionData(gameId) {
   _require = gameId;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -91,7 +91,7 @@ export const useGameMentionData = ReactCompilerGating.isReactCompilerEnabled() ?
   }
   let obj = require("c");
   return require("initialize").useStateFromStores(first, tmp8, tmp9, discord_common_shallowEqualDefault);
-}) : ((gameId) => {
+}) : (function useGameMentionData(gameId) {
   _require = gameId;
   const items = [GameStore, GameAutocompleteStore, UserStore];
   const items1 = [gameId];

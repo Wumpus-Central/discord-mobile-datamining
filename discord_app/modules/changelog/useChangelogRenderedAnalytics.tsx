@@ -1,12 +1,12 @@
-// === Module 12095: useChangelogRenderedAnalytics ===
+// === Module 12172: useChangelogRenderedAnalytics ===
 
-// Module 12095 (useChangelogRenderedAnalytics)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ChangeLogActionCreatorsDefault from "ChangeLogActionCreators" /* 7776 */;
+// Module 12172 (useChangelogRenderedAnalytics)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import ChangeLogActionCreatorsDefault from "ChangeLogActionCreators" /* 8097 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2116 */;
-import ReadStateStore from "ReadStateStore" /* 4911 */;
-import ChangelogStore from "ChangelogStore" /* 4910 */;
+import LocaleStore from "LocaleStore" /* 2128 */;
+import ReadStateStore from "ReadStateStore" /* 6040 */;
+import ChangelogStore from "ChangelogStore" /* 7002 */;
 
 const require = globalThis.__r;
 
@@ -16,7 +16,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/changelog/useChangelogRenderedAnalytics.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useChangelogRenderedAnalytics(arg0) {
   _require = arg0;
   const cResult = require("c").c(33);
   const tmp5 = require("useChangelogIdFromChannel")(arg0);
@@ -80,18 +80,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       tmp19 = cResult[11];
     }
     if (cResult[12] !== arg0) {
-      class F {
+      class R {
         constructor() {
           return closure_5.getUnreadCount(closure_0);
         }
       }
       const items3 = [arg0];
       cResult[12] = arg0;
-      cResult[13] = F;
+      cResult[13] = R;
       cResult[14] = items3;
       let tmp22 = items3;
     } else {
-      class F {
+      class R {
         constructor() {
           return closure_5.getUnreadCount(closure_0);
         }
@@ -99,58 +99,52 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       tmp22 = cResult[14];
     }
     const tmpResult3 = tmp(tmp2[8]);
-    stateFromStores2 = tmp(tmp2[8]).useStateFromStores(tmp19, F, tmp22);
+    stateFromStores2 = tmp(tmp2[8]).useStateFromStores(tmp19, R, tmp22);
     stateFromStores1.useRef(stateFromStores2);
     if (cResult[15] !== stateFromStores2) {
-      class A {
+      class R {
         constructor() {
-          closure_7.current = closure_6;
-          return;
+          return closure_5.getUnreadCount(closure_0);
         }
       }
       cResult[15] = stateFromStores2;
-      cResult[16] = A;
+      cResult[16] = tmp25;
     } else {
-      class A {
+      class R {
         constructor() {
-          closure_7.current = closure_6;
-          return;
+          return closure_5.getUnreadCount(closure_0);
         }
       }
     }
-    const effect = obj4.useEffect(A);
+    const effect = obj4.useEffect(tmp25);
     const _Symbol2 = Symbol;
     if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
-      class L {
+      class R {
         constructor() {
-          closure_5.current = Date.now();
-          return;
+          return closure_5.getUnreadCount(closure_0);
         }
       }
-      cResult[17] = L;
+      cResult[17] = tmp28;
     } else {
-      class L {
+      class R {
         constructor() {
-          closure_5.current = Date.now();
-          return;
+          return closure_5.getUnreadCount(closure_0);
         }
       }
     }
     if (cResult[18] !== tmp15) {
-      class L {
+      class R {
         constructor() {
-          closure_5.current = Date.now();
-          return;
+          return closure_5.getUnreadCount(closure_0);
         }
       }
-      tmp28[0] = tmp15;
+      tmp30[0] = tmp15;
       cResult[18] = tmp15;
-      cResult[19] = tmp28;
+      cResult[19] = tmp30;
     } else {
-      class L {
+      class R {
         constructor() {
-          closure_5.current = Date.now();
-          return;
+          return closure_5.getUnreadCount(closure_0);
         }
       }
     }
@@ -165,14 +159,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
     if (cResult[20] === tmp5) {
-      class L {
+      class R {
         constructor() {
-          closure_5.current = Date.now();
-          return;
+          return closure_5.getUnreadCount(closure_0);
         }
       }
     }
-    class R {
+    class N {
       constructor() {
         tmp = closure_4;
         if (closure_4) {
@@ -196,7 +189,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[20] = tmp5;
     cResult[21] = tmp15;
     cResult[22] = stateFromStores;
-    cResult[23] = R;
+    cResult[23] = N;
     cResult[24] = items4;
     const tmpResult4 = tmp(tmp2[8]);
   }
@@ -218,7 +211,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   tmp13 = items5;
   tmp12 = S;
   const tmpResult = require("initialize");
-}) : ((arg0) => {
+}) : (function useChangelogRenderedAnalytics(arg0) {
   _require = arg0;
   const tmp2 = require("useChangelogIdFromChannel")(arg0);
   importDefault = tmp2;
@@ -282,7 +275,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }, items7);
   const items8 = [tmp6, stateFromStores1];
   const effect4 = obj3.useEffect(() => {
-    current = ref.current;
+    const current = ref.current;
     return () => {
       let tmp = closure_4;
       if (closure_4) {

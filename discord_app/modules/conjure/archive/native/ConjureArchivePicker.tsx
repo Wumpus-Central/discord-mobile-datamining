@@ -1,10 +1,10 @@
-// === Module 16594: ConjureArchivePicker ===
+// === Module 16849: ConjureArchivePicker ===
 
-// Module 16594 (ConjureArchivePicker)
+// Module 16849 (ConjureArchivePicker)
 import util from "util" /* 1126 */;
-import _modDef3753 from "module_3753" /* 3753 */;
-import ConjureTypes from "ConjureTypes" /* 6757 */;
-import FilePickerUtils from "FilePickerUtils" /* 11033 */;
+import _modDef3827 from "module_3827" /* 3827 */;
+import ConjureTypes from "ConjureTypes" /* 6933 */;
+import FilePickerUtils from "FilePickerUtils" /* 12779 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -95,7 +95,7 @@ let closure_9 = async function _sendConjureArchiveImport(arg0) {
     }
   }
 };
-const ConjureConnectionStore = fn(12923);
+const ConjureConnectionStore = fn(13072);
 ({ ensureConnection: closure_4, sendUserMessage: hasOwnProperty, uploadAttachmentBytes: metroRequire } = ConjureConnectionStore);
 let closure_7 = ["zip", "tar", "gz", "tgz", "bz2", "xz"];
 const size = fn(2);
@@ -118,7 +118,7 @@ export const describeConjureArchiveRejection = function describeConjureArchiveRe
     const obj2 = { size: null };
     const tmpResult = ConjureTypes;
     obj2.size = tmpResult.formatConjureAttachmentLimit(ConjureTypes.conjureAttachmentLimit(bytes.contentType));
-    formatToPlainStringResult = intl.formatToPlainString(_modDef3753.ThxcOX, obj2);
+    formatToPlainStringResult = intl.formatToPlainString(_modDef3827.ThxcOX, obj2);
     const tmpResult2 = ConjureTypes;
   }
   return formatToPlainStringResult;

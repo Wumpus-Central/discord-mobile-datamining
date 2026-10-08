@@ -1,9 +1,9 @@
-// === Module 7855: useCollectiblesData ===
+// === Module 8273: useCollectiblesData ===
 
-// Module 7855 (useCollectiblesData)
+// Module 8273 (useCollectiblesData)
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7066 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7081 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7252 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7267 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useCollectiblesData.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCollectiblesData(arg0) {
   _require = arg0;
   const cResult = require("c").c(10);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -70,7 +70,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[9] = obj2;
   tmp14 = obj2;
   const tmpResult2 = require("useStateFromStores");
-}) : ((arg0) => {
+}) : (function useCollectiblesData(arg0) {
   _require = arg0;
   let items = [CollectiblesCategoryStore];
   const tmp = _slicedToArray(require("useStateFromStores").useStateFromStoresArray(items, () => {

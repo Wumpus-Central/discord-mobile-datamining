@@ -1,11 +1,11 @@
-// === Module 16167: SearchableDestinationListRow ===
+// === Module 16427: SearchableDestinationListRow ===
 
-// Module 16167 (SearchableDestinationListRow)
-import sortByMatchScore from "sortByMatchScore" /* 9509 */;
-import UserRowDefault from "UserRow" /* 10615 */;
-import GroupDMRowDefault from "GroupDMRow" /* 10660 */;
-import ChannelRowDefault from "ChannelRow" /* 10663 */;
-import formatResults from "formatResults" /* 10724 */;
+// Module 16427 (SearchableDestinationListRow)
+import sortByMatchScore from "sortByMatchScore" /* 8675 */;
+import UserRowDefault from "UserRow" /* 10213 */;
+import GroupDMRowDefault from "GroupDMRow" /* 10260 */;
+import ChannelRowDefault from "ChannelRow" /* 10263 */;
+import formatResults from "formatResults" /* 11577 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/share/native/SearchableDestinationListRow.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((result) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SearchableDestinationListRow(result) {
   const cResult = require("c").c(24);
   if (cResult[0] !== result) {
     result = result.result;
@@ -42,13 +42,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((result) => {
       if (cResult[5] === tmp6) {
         let tmp10 = cResult[6];
       }
-      if (tmp(9509).AutocompleterResultTypes.USER === type) {
+      if (tmp(8675).AutocompleterResultTypes.USER === type) {
         if (cResult[7] !== record.id) {
-          const relationshipType = tmp(7158).getRelationshipType(record.id);
+          const relationshipType = tmp(7338).getRelationshipType(record.id);
           cResult[7] = record.id;
           cResult[8] = relationshipType;
           let tmp30 = relationshipType;
-          const tmpResult = tmp(7158);
+          const tmpResult = tmp(7338);
         } else {
           tmp30 = cResult[8];
         }
@@ -74,7 +74,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((result) => {
         cResult[12] = tmp30;
         cResult[13] = tmp39;
         tmp32 = tmp39;
-      } else if (tmp(9509).AutocompleterResultTypes.GROUP_DM === type) {
+      } else if (tmp(8675).AutocompleterResultTypes.GROUP_DM === type) {
         if (cResult[14] === tmp10) {
           if (cResult[15] === tmp5) {
             if (cResult[16] === record) {
@@ -94,14 +94,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((result) => {
         cResult[17] = tmp29;
         tmp22 = tmp29;
       } else {
-        if (tmp(9509).AutocompleterResultTypes.TEXT_CHANNEL !== type) {
-          if (tmp(9509).AutocompleterResultTypes.VOICE_CHANNEL !== type) {
+        if (tmp(8675).AutocompleterResultTypes.TEXT_CHANNEL !== type) {
+          if (tmp(8675).AutocompleterResultTypes.VOICE_CHANNEL !== type) {
             if (cResult[22] !== type) {
-              const assertNeverResult = tmp(1375).assertNever(type);
+              const assertNeverResult = tmp(1387).assertNever(type);
               cResult[22] = type;
               cResult[23] = assertNeverResult;
               let tmp12 = assertNeverResult;
-              const tmpResult2 = tmp(1375);
+              const tmpResult2 = tmp(1387);
             } else {
               tmp12 = cResult[23];
             }
@@ -138,7 +138,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((result) => {
     tmp10 = fn;
   }
   const obj = require("c");
-}) : ((result) => {
+}) : (function SearchableDestinationListRow(result) {
   result = result.result;
   const require = result;
   const onPressDestination = result.onPressDestination;
@@ -150,31 +150,31 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((result) => {
     if (null != onPressDestination) {
       const fn = () => onPressDestination(formatResults.getDestinationIdFromResult(result));
     }
-    if (tmp2(9509).AutocompleterResultTypes.USER === type) {
+    if (tmp2(8675).AutocompleterResultTypes.USER === type) {
       const obj = {};
       const merged1 = Object.assign(merged);
       obj.user = record;
-      const tmp18 = onPressDestination(10615);
-      obj.type = tmp2(7158).getRelationshipType(record.id);
+      const tmp18 = onPressDestination(10213);
+      obj.type = tmp2(7338).getRelationshipType(record.id);
       obj.onPress = fn;
       return <tmp18 />;
-    } else if (tmp2(9509).AutocompleterResultTypes.GROUP_DM === type) {
+    } else if (tmp2(8675).AutocompleterResultTypes.GROUP_DM === type) {
       const obj2 = {};
       const merged2 = Object.assign(merged);
       obj2.channel = record;
       obj2.onPress = fn;
-      return jsx(onPressDestination(10660), {});
+      return jsx(onPressDestination(10260), {});
     } else {
-      if (tmp2(9509).AutocompleterResultTypes.TEXT_CHANNEL !== type) {
-        if (tmp2(9509).AutocompleterResultTypes.VOICE_CHANNEL !== type) {
-          return tmp2(1375).assertNever(type);
+      if (tmp2(8675).AutocompleterResultTypes.TEXT_CHANNEL !== type) {
+        if (tmp2(8675).AutocompleterResultTypes.VOICE_CHANNEL !== type) {
+          return tmp2(1387).assertNever(type);
         }
       }
       const obj3 = {};
       const merged3 = Object.assign(merged);
       obj3.channel = record;
       obj3.onPress = fn;
-      return jsx(onPressDestination(10663), {});
+      return jsx(onPressDestination(10263), {});
     }
   }
 });

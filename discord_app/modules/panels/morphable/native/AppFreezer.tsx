@@ -1,9 +1,9 @@
-// === Module 16504: AppFreezer ===
+// === Module 16764: AppFreezer ===
 
-// Module 16504 (AppFreezer)
-import NativeViewDefault from "NativeView" /* 5983 */;
+// Module 16764 (AppFreezer)
+import NativeViewDefault from "NativeView" /* 6166 */;
 import noop from "module_19" /* 19 */;
-import AppFreezeStore from "AppFreezeStore" /* 7975 */;
+import AppFreezeStore from "AppFreezeStore" /* 8392 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/panels/morphable/native/AppFreezer.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppFreezer(arg0) {
   const cResult = lockKeys(576).c(6);
   ({ children, manualFreeze, placeholder, lockKeys } = arg0);
   if (undefined === placeholder) {
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       return tmp7;
     }
   }
-  const tmp8 = jsx(lockKeys(5745).Freeze, { freeze: tmp6, placeholder, children });
+  const tmp8 = jsx(lockKeys(5328).Freeze, { freeze: tmp6, placeholder, children });
   cResult[2] = children;
   cResult[3] = placeholder;
   cResult[4] = tmp6;
@@ -51,7 +51,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   tmp7 = tmp8;
   const obj = lockKeys(576);
   const tmp4 = undefined !== manualFreeze && manualFreeze;
-}) : ((children) => {
+}) : (function AppFreezer(children) {
   let flag = children.manualFreeze;
   if (flag === undefined) {
     flag = false;
@@ -73,5 +73,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (!freeze) {
     freeze = flag;
   }
-  return jsx(lockKeys(5745).Freeze, { freeze, placeholder, children: children.children });
+  return jsx(lockKeys(5328).Freeze, { freeze, placeholder, children: children.children });
 });

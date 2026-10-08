@@ -1,11 +1,11 @@
-// === Module 17415: useLaunchPadAnimatedStyles ===
+// === Module 17697: useLaunchPadAnimatedStyles ===
 
-// Module 17415 (useLaunchPadAnimatedStyles)
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import spring from "spring" /* 5604 */;
-import LaunchPadConstants from "LaunchPadConstants" /* 11138 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import createStyles from "createStyles" /* 4896 */;
+// Module 17697 (useLaunchPadAnimatedStyles)
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import spring from "spring" /* 5374 */;
+import LaunchPadConstants from "LaunchPadConstants" /* 11258 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import createStyles from "createStyles" /* 5090 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -20,7 +20,7 @@ let closure_10 = { code: "function useLaunchPadAnimatedStylesNativeTsx5(finished
 const __initData4 = { code: "function useLaunchPadAnimatedStylesNativeTsx6(){const{withSpring,interpolate,launchPadSharedState,LAUNCH_PAD_SPRING_CONFIG}=this.__closure;return{opacity:withSpring(interpolate(launchPadSharedState.get(),[0,1],[0,0.6]),LAUNCH_PAD_SPRING_CONFIG,'animate-always')};}" };
 let result = size.fileFinishedImporting("modules/launchpad/native/useLaunchPadAnimatedStyles.native.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((launchPadSharedState) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useLaunchpadAnimatedStyles(launchPadSharedState) {
   const cResult = launchPadSharedState(launchPadShown[4]).c(12);
   launchPadSharedState = launchPadSharedState.launchPadSharedState;
   const gestureState = launchPadSharedState.gestureState;
@@ -126,7 +126,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((launchPadSharedS
   cResult[1] = tmp2.launchPadCover;
   cResult[2] = items1;
   tmp7 = items1;
-}) : ((launchPadSharedState) => {
+}) : (function useLaunchpadAnimatedStyles(launchPadSharedState) {
   launchPadSharedState = launchPadSharedState.launchPadSharedState;
   const gestureState = launchPadSharedState.gestureState;
   const launchPadShown = launchPadSharedState.launchPadShown;

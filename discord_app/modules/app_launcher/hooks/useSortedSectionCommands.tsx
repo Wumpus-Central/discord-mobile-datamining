@@ -1,18 +1,18 @@
-// === Module 11772: useSortedSectionCommands ===
+// === Module 11839: useSortedSectionCommands ===
 
-// Module 11772 (useSortedSectionCommands)
+// Module 11839 (useSortedSectionCommands)
 import DurationsDefault from "Durations" /* 1102 */;
-import ApplicationDirectoryActionCreatorsAll from "ApplicationDirectoryActionCreators" /* 11699 */;
+import ApplicationDirectoryActionCreatorsAll from "ApplicationDirectoryActionCreators" /* 11764 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const CommandListSortOrder = fn(11773).CommandListSortOrder;
+const CommandListSortOrder = fn(11840).CommandListSortOrder;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/hooks/useSortedSectionCommands.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((sectionId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSortedSectionCommands(sectionId) {
   const cResult = alphabeticalSortedCommands(576).c(15);
   sectionId = sectionId.sectionId;
   alphabeticalSortedCommands = sectionId;
@@ -180,7 +180,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((sectionId) => {
   cResult[2] = undefined;
   tmp6 = tmp8;
   const tmp3 = _slicedToArray(noop.useState(CommandListSortOrder.ALPHABETICAL), 2);
-}) : ((sectionId) => {
+}) : (function useSortedSectionCommands(sectionId) {
   sectionId = sectionId.sectionId;
   const commandsByActiveSection = sectionId.commandsByActiveSection;
   let setSortOrder;

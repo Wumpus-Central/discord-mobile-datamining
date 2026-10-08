@@ -1,12 +1,12 @@
-// === Module 9141: SurfaceDirectRendererExperiment ===
+// === Module 5229: SurfaceDirectRendererExperiment ===
 
-// Module 9141 (SurfaceDirectRendererExperiment)
+// Module 5229 (SurfaceDirectRendererExperiment)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ApexExperiment = fn(1440);
+const ApexExperiment = fn(1452);
 const obj2 = { kind: "user", name: "2026-03-surface-direct-renderer", defaultConfig: { enableSurfaceDirectRenderer: false }, variations: null };
 const obj3 = { 1: null };
 obj3[1] = { enableSurfaceDirectRenderer: true };
@@ -20,7 +20,7 @@ export const ANDROID_SURFACE_DIRECT_RENDERER_EXPERIMENT = "2026-03-surface-direc
 export const isSurfaceDirectRendererExperimentEnabled = function isSurfaceDirectRendererExperimentEnabled() {
   return closure_3.getConfig({ location: "RTCConnection_media_engine_connect" }).enableSurfaceDirectRenderer;
 };
-export const useSurfaceDirectRendererExperiment = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, cResult) => {
+export const useSurfaceDirectRendererExperiment = ReactCompilerGating.isReactCompilerEnabled() ? (function useSurfaceDirectRendererExperiment(arg0, cResult) {
   _require = arg0;
   cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -31,7 +31,7 @@ export const useSurfaceDirectRendererExperiment = ReactCompilerGating.isReactCom
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function l() {
+    const fn = function f() {
       return closure_0 === AuthenticationStore.getId();
     };
     const items1 = [arg0];
@@ -47,7 +47,7 @@ export const useSurfaceDirectRendererExperiment = ReactCompilerGating.isReactCom
   const obj = require("c");
   const tmpResult = require("initialize");
   return null != arg0 && !require("initialize").useStateFromStores(first, tmp6, tmp7) && closure_3.useConfig(cResult).enableSurfaceDirectRenderer;
-}) : ((arg0, cResult) => {
+}) : (function useSurfaceDirectRendererExperiment(arg0, cResult) {
   _require = arg0;
   const items = [AuthenticationStore];
   const items1 = [arg0];

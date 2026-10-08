@@ -1,9 +1,9 @@
-// === Module 6109: useInputClearButton ===
+// === Module 6289: useInputClearButton ===
 
-// Module 6109 (useInputClearButton)
+// Module 6289 (useInputClearButton)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import CircleXIcon from "CircleXIcon" /* 4803 */;
+import CircleXIcon from "CircleXIcon" /* 4997 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ const Pressable = fn(17).Pressable;
 const jsx = fn(21).jsx;
 fn(558);
 const ReactCompilerGating = fn(558);
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((clearable, hasValue) => {
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useInputClearButtonConfig(clearable, hasValue) {
   const cResult = c.c(6);
   clearable = clearable.clearable;
   if (undefined !== clearable) {
@@ -54,7 +54,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((clearable, hasValu
       }
     }
   }
-}) : ((clearable, hasValue) => {
+}) : (function useInputClearButtonConfig(clearable, hasValue) {
   clearable = clearable.clearable;
   if (undefined !== clearable) {
     if (clearable) {
@@ -73,7 +73,7 @@ let closure_4 = tmp4;
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Input/native/useInputClearButton.native.tsx");
 
-export const useInputClearButton = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export const useInputClearButton = ReactCompilerGating.isReactCompilerEnabled() ? (function useInputClearButton(arg0, arg1) {
   const cResult = c.c(3);
   pressableProps = closure_4(arg0, arg1);
   if (null == pressableProps) {
@@ -89,7 +89,7 @@ export const useInputClearButton = ReactCompilerGating.isReactCompilerEnabled() 
     cResult[1] = pressableProps;
     cResult[2] = tmp7;
   }
-}) : ((arg0, arg1) => {
+}) : (function useInputClearButton(arg0, arg1) {
   const tmp = closure_4(arg0, arg1);
   let tmp2 = null;
   if (null != tmp) {

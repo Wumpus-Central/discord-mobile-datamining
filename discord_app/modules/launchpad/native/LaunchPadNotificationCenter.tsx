@@ -1,19 +1,19 @@
-// === Module 17440: LaunchPadNotificationCenter ===
+// === Module 17722: LaunchPadNotificationCenter ===
 
-// Module 17440 (LaunchPadNotificationCenter)
+// Module 17722 (LaunchPadNotificationCenter)
 import c from "c" /* 576 */;
-import notifications_NotificationsDefault from "notifications/Notifications" /* 16383 */;
+import notifications_NotificationsDefault from "notifications/Notifications" /* 16643 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles({ wrapper: { height: "100%" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/launchpad/native/LaunchPadNotificationCenter.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function NotificationsContent() {
   const cResult = c.c(2);
   const tmp3 = closure_4();
   if (cResult[0] !== tmp3.wrapper) {
@@ -26,7 +26,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp4 = cResult[1];
   }
   return tmp4;
-}) : (() => {
+}) : (function NotificationsContent() {
   const tmp = closure_4();
   return jsx(notifications_NotificationsDefault, { style: closure_4().wrapper, nestedInLaunchPad: true });
 }));

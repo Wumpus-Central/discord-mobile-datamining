@@ -1,6 +1,6 @@
-// === Module 4954: TypedEventEmitter ===
+// === Module 5138: TypedEventEmitter ===
 
-// Module 4954 (TypedEventEmitter)
+// Module 5138 (TypedEventEmitter)
 import _mod580 from "module_580" /* 580 */;
 import size from "module_2" /* 2 */;
 

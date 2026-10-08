@@ -1,9 +1,9 @@
-// === Module 12564: PanGestureAnimations ===
+// === Module 10977: PanGestureAnimations ===
 
-// Module 12564 (PanGestureAnimations)
-import native from "native" /* 1188 */;
-import timing from "timing" /* 4897 */;
-import spring from "spring" /* 5604 */;
+// Module 10977 (PanGestureAnimations)
+import native from "native" /* 1200 */;
+import timing from "timing" /* 5091 */;
+import spring from "spring" /* 5374 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -122,7 +122,7 @@ const __initData6 = { code: "function PanGestureAnimationsTsx12(event){const{sta
 let obj4 = { TIMING_CONFIG: obj2, withTiming: timing.withTiming };
 let result = size.fileFinishedImporting("modules/action_sheet/native/PanGestureAnimations.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((lowerBounds) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePanGesture(lowerBounds) {
   const cResult = lowerBounds(upperBounds[4]).c(2);
   lowerBounds = lowerBounds.lowerBounds;
   upperBounds = lowerBounds.upperBounds;
@@ -253,7 +253,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((lowerBounds) => 
   let obj3 = { start: sharedValue, translate, snapPositions, velocity: sharedValue1, swipeVelocityThreshold: num, getNearestValue: onChange, withPanGestureSpring: onEnd, withPanGestureTiming: isGestureInProgress, onEnd };
   const onChangeResult = Gesture.Pan().onStart(fn).onChange(fn2);
   return Gesture.Pan().onStart(fn).onChange(fn2).onEnd(fn3).onFinalize(PanGestureAnimationsTsx5);
-}) : ((lowerBounds) => {
+}) : (function usePanGesture(lowerBounds) {
   lowerBounds = lowerBounds.lowerBounds;
   const upperBounds = lowerBounds.upperBounds;
   const snapPositions = lowerBounds.snapPositions;

@@ -1,9 +1,9 @@
-// === Module 16492: CustomStatusEntryRow ===
+// === Module 16752: CustomStatusEntryRow ===
 
-// Module 16492 (CustomStatusEntryRow)
+// Module 16752 (CustomStatusEntryRow)
 import c from "c" /* 576 */;
-import useReplyActions from "useReplyActions" /* 16488 */;
-import ICYMICustomStatusRowDefault from "ICYMICustomStatusRow" /* 16493 */;
+import useReplyActions from "useReplyActions" /* 16748 */;
+import ICYMICustomStatusRowDefault from "ICYMICustomStatusRow" /* 16753 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/icymi/native/content_inventory/CustomStatusEntryRow.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function CustomStatusEntryRow(arg0) {
   const cResult = c.c(12);
   ({ content, renderForScreenshot, visible } = arg0);
   if (cResult[0] !== content) {
@@ -64,7 +64,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = obj4;
   tmp6 = obj4;
   const tmpResult = useReplyActions;
-}) : ((content) => {
+}) : (function CustomStatusEntryRow(content) {
   content = content.content;
   ({ renderForScreenshot, visible } = content);
   const replyActions = useReplyActions.useReplyActions({ content });

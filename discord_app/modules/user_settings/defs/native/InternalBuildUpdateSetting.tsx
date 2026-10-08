@@ -1,20 +1,20 @@
-// === Module 15637: InternalBuildUpdateSetting ===
+// === Module 15917: InternalBuildUpdateSetting ===
 
-// Module 15637 (InternalBuildUpdateSetting)
+// Module 15917 (InternalBuildUpdateSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import _modDef4467 from "module_4467" /* 4467 */;
-import DownloadIcon from "DownloadIcon" /* 4851 */;
-import MobileNativeUpdateUtilsAll from "MobileNativeUpdateUtils" /* 13737 */;
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14666 */;
-import RefreshIcon2 from "RefreshIcon" /* 14794 */;
-import MobileNativeUpdateStore from "MobileNativeUpdateStore" /* 14176 */;
+import _modDef4659 from "module_4659" /* 4659 */;
+import DownloadIcon from "DownloadIcon" /* 5045 */;
+import MobileNativeUpdateUtilsAll from "MobileNativeUpdateUtils" /* 13959 */;
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14927 */;
+import RefreshIcon2 from "RefreshIcon" /* 15055 */;
+import MobileNativeUpdateStore from "MobileNativeUpdateStore" /* 14475 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 fn(558);
 let ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useInternalBuildUpdateDescription() {
   let concat = c.c(6);
   if (concat[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [MobileNativeUpdateStore];
@@ -56,11 +56,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     str2 = "Never refreshed";
     if (null != stateFromStores1) {
       if (concat[4] !== stateFromStores1) {
-        const fromNowResult = _modDef4467(stateFromStores1).fromNow();
+        const fromNowResult = _modDef4659(stateFromStores1).fromNow();
         concat[4] = stateFromStores1;
         concat[5] = fromNowResult;
         let tmp10 = fromNowResult;
-        const obj4 = _modDef4467(stateFromStores1);
+        const obj4 = _modDef4659(stateFromStores1);
       } else {
         tmp10 = concat[5];
       }
@@ -70,7 +70,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
   }
   return str2;
-}) : (() => {
+}) : (function useInternalBuildUpdateDescription() {
   const items = [MobileNativeUpdateStore];
   const stateFromStores = initialize.useStateFromStores(items, () => {
     const newBuild = MobileNativeUpdateStore.latestFetchedBuild().newBuild;
@@ -89,16 +89,20 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     str = "Never refreshed";
     if (null != stateFromStores1) {
       const _HermesInternal = HermesInternal;
-      str = "Last refreshed " + _modDef4467(stateFromStores1).fromNow();
-      const obj3 = _modDef4467(stateFromStores1);
+      str = "Last refreshed " + _modDef4659(stateFromStores1).fromNow();
+      const obj3 = _modDef4659(stateFromStores1);
     }
   }
   return str;
 });
 ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => MobileNativeUpdateStore.hasUpdatesConfigured && useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate()) : (() => MobileNativeUpdateStore.hasUpdatesConfigured && useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate());
-const SettingBuilders = fn(11142);
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasInternalBuildUpdateSetting() {
+  return MobileNativeUpdateStore.hasUpdatesConfigured && useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
+}) : (function useHasInternalBuildUpdateSetting() {
+  return MobileNativeUpdateStore.hasUpdatesConfigured && useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
+});
+const SettingBuilders = fn(11262);
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function InstallNativeUpdateIcon() {
   let tmp8Result = dependencyMap;
   const cResult = c.c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -127,7 +131,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     return cResult[3];
   }
   const tmpResult = initialize;
-}) : (() => {
+}) : (function InstallNativeUpdateIcon() {
   const items = [MobileNativeUpdateStore];
   if (obj.useStateFromStores(items, () => null !== MobileNativeUpdateStore.latestFetchedBuild().newBuild)) {
     let RefreshIcon = DownloadIcon.DownloadIcon;
@@ -141,7 +145,7 @@ const pressable = SettingBuilders.createPressable({
     return "Internal Build Update";
   },
   parent: null,
-  IconComponent: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  IconComponent: ReactCompilerGating.isReactCompilerEnabled() ? (function InstallNativeUpdateIcon() {
     let tmp8Result = dependencyMap;
     const cResult = c.c(4);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -170,7 +174,7 @@ const pressable = SettingBuilders.createPressable({
       return cResult[3];
     }
     const tmpResult = initialize;
-  }) : (() => {
+  }) : (function InstallNativeUpdateIcon() {
     const items = [MobileNativeUpdateStore];
     if (obj.useStateFromStores(items, () => null !== MobileNativeUpdateStore.latestFetchedBuild().newBuild)) {
       let RefreshIcon = DownloadIcon.DownloadIcon;

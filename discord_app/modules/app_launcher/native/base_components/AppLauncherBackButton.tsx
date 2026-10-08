@@ -1,10 +1,10 @@
-// === Module 11769: AppLauncherBackButton ===
+// === Module 11836: AppLauncherBackButton ===
 
-// Module 11769 (AppLauncherBackButton)
+// Module 11836 (AppLauncherBackButton)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import Link from "Link" /* 1491 */;
-import IconButton from "IconButton" /* 7586 */;
+import Link from "Link" /* 1503 */;
+import IconButton from "IconButton" /* 8106 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/base_components/AppLauncherBackButton.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLauncherBackButton(onPress) {
   const cResult = c.c(8);
   onPress = onPress.onPress;
   const navigation = Link.useNavigation();
@@ -25,7 +25,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
   } else {
     tmp4 = cResult[1];
   }
-  const tmp6 = importDefault(tmp4 ? 6022 : 6025);
+  const tmp6 = importDefault(tmp4 ? 6208 : 6211);
   if (cResult[2] !== tmp4) {
     const intl = util.intl;
     const t = util.t;
@@ -49,13 +49,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
     cResult[7] = tmp12;
     tmp10 = tmp12;
   }
-}) : ((onPress) => {
+}) : (function AppLauncherBackButton(onPress) {
   const navigation = Link.useNavigation();
   const canGoBackResult = navigation.canGoBack();
-  const obj2 = { size: "sm", variant: "secondary-overlay", icon: importDefault(canGoBackResult ? 6022 : 6025), onPress: onPress.onPress, accessibilityLabel: null, maxFontSizeMultiplier: 1.5 };
+  const obj2 = { size: "sm", variant: "secondary-overlay", icon: importDefault(canGoBackResult ? 6208 : 6211), onPress: onPress.onPress, accessibilityLabel: null, maxFontSizeMultiplier: 1.5 };
   const intl = util.intl;
   const t = util.t;
   obj2.accessibilityLabel = intl.string(canGoBackResult ? t["13/7kX"] : t.cpT0Cq);
-  return jsx(IconButton.IconButton, { size: "sm", variant: "secondary-overlay", icon: importDefault(canGoBackResult ? 6022 : 6025), onPress: onPress.onPress, accessibilityLabel: null, maxFontSizeMultiplier: 1.5 });
+  return jsx(IconButton.IconButton, { size: "sm", variant: "secondary-overlay", icon: importDefault(canGoBackResult ? 6208 : 6211), onPress: onPress.onPress, accessibilityLabel: null, maxFontSizeMultiplier: 1.5 });
 });
 export const BACK_BUTTON_SIZE = 32;

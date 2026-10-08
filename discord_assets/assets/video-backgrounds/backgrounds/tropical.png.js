@@ -1,6 +1,6 @@
-// === Module 8095: ? ===
+// === Module 5262: ? ===
 
-// Module 8095
+// Module 5262
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/video-backgrounds/backgrounds/tropical.png.js");

@@ -1,23 +1,23 @@
-// === Module 14742: FamilyCenterLinkRow ===
+// === Module 15003: FamilyCenterLinkRow ===
 
-// Module 14742 (FamilyCenterLinkRow)
+// Module 15003 (FamilyCenterLinkRow)
 import c from "c" /* 576 */;
-import FamilyCenterRequestorDetailsDefault from "FamilyCenterRequestorDetails" /* 14743 */;
-import FamilyCenterLinkWrapperDefault from "FamilyCenterLinkWrapper" /* 14744 */;
+import FamilyCenterRequestorDetailsDefault from "FamilyCenterRequestorDetails" /* 15004 */;
+import FamilyCenterLinkWrapperDefault from "FamilyCenterLinkWrapper" /* 15005 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const UserLinkStatus = fn(7062).UserLinkStatus;
+const UserLinkStatus = fn(7248).UserLinkStatus;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({ actionContainer: { flexDirection: "row", alignItems: "center", justifyContent: "flex-end", height: "100%" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterLinkRow.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCenterLinkRow(arg0) {
   const cResult = c.c(9);
   ({ otherUser, actions } = arg0);
   const tmp3 = closure_7();
@@ -58,7 +58,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = tmp10;
   tmp9 = tmp10;
   const obj4 = { style: tmp3.actionContainer, children: actions };
-}) : ((children) => {
+}) : (function FamilyCenterLinkRow(children) {
   const otherUser = children.otherUser;
   const obj = { userId: otherUser.id, children: null };
   const tmp = closure_7();

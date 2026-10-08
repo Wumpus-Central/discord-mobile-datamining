@@ -1,33 +1,33 @@
-// === Module 9773: ChatView ===
+// === Module 10342: ChatView ===
 
-// Module 9773 (ChatView)
+// Module 10342 (ChatView)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import ChatInputUtils from "ChatInputUtils" /* 4751 */;
-import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 6827 */;
-import SummaryActionCreators from "SummaryActionCreators" /* 9777 */;
-import ChatViewWrapperDefault from "ChatViewWrapper" /* 9782 */;
-import ChatViewStickyHeaderDefault from "ChatViewStickyHeader" /* 9796 */;
-import MessagesDefault from "Messages" /* 11094 */;
-import ChatInputDefault from "ChatInput" /* 11585 */;
-import JumpToPresentButtonDefault from "JumpToPresentButton" /* 11910 */;
-import ChatBeginningRowDefault from "ChatBeginningRow" /* 12139 */;
-import PortalKeyboardInlineComponentDefault from "PortalKeyboardInlineComponent" /* 12318 */;
-import ChatPlaceholderDefault from "ChatPlaceholder" /* 12319 */;
-import ChannelSafeAreaBottomDefault from "ChannelSafeAreaBottom" /* 12323 */;
-import VoiceMessageOverlayDefault from "VoiceMessageOverlay" /* 12326 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import ChatInputUtils from "ChatInputUtils" /* 4945 */;
+import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 7000 */;
+import SummaryActionCreators from "SummaryActionCreators" /* 9627 */;
+import ChatViewWrapperDefault from "ChatViewWrapper" /* 10346 */;
+import ChatViewStickyHeaderDefault from "ChatViewStickyHeader" /* 10360 */;
+import MessagesDefault from "Messages" /* 10459 */;
+import ChatInputDefault from "ChatInput" /* 11648 */;
+import JumpToPresentButtonDefault from "JumpToPresentButton" /* 11983 */;
+import ChatBeginningRowDefault from "ChatBeginningRow" /* 12218 */;
+import PortalKeyboardInlineComponentDefault from "PortalKeyboardInlineComponent" /* 12416 */;
+import ChatPlaceholderDefault from "ChatPlaceholder" /* 12417 */;
+import ChannelSafeAreaBottomDefault from "ChannelSafeAreaBottom" /* 12421 */;
+import VoiceMessageOverlayDefault from "VoiceMessageOverlay" /* 12424 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5443 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import MessageStore from "MessageStore" /* 5116 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5753 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import MessageStore from "MessageStore" /* 5428 */;
 
 require = fn;
-const createChannelRecord = fn(2055).createChannelRecord;
+const createChannelRecord = fn(2067).createChannelRecord;
 const ChannelTypes = fn(1085).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { empty: { flex: 1, borderTopWidth: fn(17).StyleSheet.hairlineWidth, borderTopColor: nativeDefault.colors.BORDER_SUBTLE }, messages: { flex: 1, overflow: "hidden" }, chat: null };
 let obj3 = { flex: 1, borderTopWidth: fn(17).StyleSheet.hairlineWidth, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };
 obj.chat = { backgroundColor: nativeDefault.colors.CHANNEL_BACKGROUND_DEFAULT, justifyContent: "flex-start", overflow: "hidden", flex: 1 };
@@ -37,7 +37,7 @@ let obj4 = { backgroundColor: nativeDefault.colors.CHANNEL_BACKGROUND_DEFAULT, j
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/chat/native/ChatView.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((chatInputRef) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ChatView(chatInputRef) {
   let setInterstitialResult2 = HACK_fixModalInteraction;
   const cResult = channelId(HACK_fixModalInteraction[11]).c(63);
   ({ alwaysRespectKeyboard, channelId } = chatInputRef);
@@ -524,7 +524,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((chatIn
   cResult[4] = items8;
   tmp7 = items8;
   let obj = channelId(HACK_fixModalInteraction[11]);
-}) : ((alwaysRespectKeyboard) => {
+}) : (function ChatView(alwaysRespectKeyboard) {
   let flag = alwaysRespectKeyboard.alwaysRespectKeyboard;
   if (flag === undefined) {
     flag = false;
@@ -669,7 +669,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((chatIn
       obj5.shouldRender = shouldRender;
       items[1] = options(ChatBeginningRowDefault, obj5);
       obj3.children = items;
-      const items1 = [v65535(tmp9, obj3), , , ];
+      const items1 = [collapsed(tmp9, obj3), , , ];
       let tmp7Result = null;
       if (!obj6.isAndroid()) {
         const obj7 = { channelId: channel.id, messagesRef: ref };
@@ -691,9 +691,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((chatIn
       const obj10 = { children: null };
       items1[3] = tmp7Result4;
       obj.children = items1;
-      const items2 = [v65535(tmp5, obj), options(ChannelSafeAreaBottomDefault, { channelId }), options(VoiceMessageOverlayDefault, { channelId })];
+      const items2 = [collapsed(tmp5, obj), options(ChannelSafeAreaBottomDefault, { channelId }), options(VoiceMessageOverlayDefault, { channelId })];
       obj10.children = items2;
-      return v65535(closure_2_11, obj10);
+      return collapsed(closure_2_11, obj10);
     }
     if (channelIsLoading) {
       if (!GatewayConnectionStore.isConnected()) {

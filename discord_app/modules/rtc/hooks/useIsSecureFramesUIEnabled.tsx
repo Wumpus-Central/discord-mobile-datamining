@@ -1,8 +1,8 @@
-// === Module 9398: useIsSecureFramesUIEnabled ===
+// === Module 8819: useIsSecureFramesUIEnabled ===
 
-// Module 9398 (useIsSecureFramesUIEnabled)
-import ChannelStore from "ChannelStore" /* 2051 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
+// Module 8819 (useIsSecureFramesUIEnabled)
+import ChannelStore from "ChannelStore" /* 2063 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5108 */;
 
 const require = fn;
 function isSecureFramesUIEnabled(isCallRTCConnectionEmpty) {
@@ -30,12 +30,12 @@ function isSecureFramesUIEnabled(isCallRTCConnectionEmpty) {
     return false;
   }
 }
-let closure_4 = fn(9380).END_TO_END_ENCRYPTION_DISABLED;
+let closure_4 = fn(8801).END_TO_END_ENCRYPTION_DISABLED;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/hooks/useIsSecureFramesUIEnabled.tsx");
 
-export const useIsSecureFramesUIEnabled = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+export const useIsSecureFramesUIEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsSecureFramesUIEnabled(channelId) {
   const cResult = channelId(576).c(4);
   channelId = channelId.channelId;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -62,7 +62,7 @@ export const useIsSecureFramesUIEnabled = ReactCompilerGating.isReactCompilerEna
   }
   const obj = channelId(576);
   return channelId(504).useStateFromStores(first, tmp7, tmp8);
-}) : ((channelId) => {
+}) : (function useIsSecureFramesUIEnabled(channelId) {
   channelId = channelId.channelId;
   let items = [RTCConnectionStore, ChannelStore];
   const items1 = [channelId];

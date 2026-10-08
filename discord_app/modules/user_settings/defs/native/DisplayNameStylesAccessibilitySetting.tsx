@@ -1,16 +1,16 @@
-// === Module 15243: DisplayNameStylesAccessibilitySetting ===
+// === Module 15505: DisplayNameStylesAccessibilitySetting ===
 
-// Module 15243 (DisplayNameStylesAccessibilitySetting)
+// Module 15505 (DisplayNameStylesAccessibilitySetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import _modDef2911 from "module_2911" /* 2911 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14295 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import _modDef2955 from "module_2955" /* 2955 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14520 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useValue() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AccessibilityStore];
@@ -25,20 +25,20 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     [tmp4, tmp5] = cResult;
   }
   return initialize.useStateFromStores(tmp4, tmp5);
-}) : (() => {
+}) : (function useValue() {
   const items = [AccessibilityStore];
   return initialize.useStateFromStores(items, () => AccessibilityStore.displayNameStylesEnabled);
 });
 function onValueChange(enabled) {
   const result = AccessibilityActionCreators.setDisplayNameStylesEnabled(enabled);
 }
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2911["2gFUEw"]);
+    return intl.string(_modDef2955["2gFUEw"]);
   },
-  parent: fn(7645).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(7966).MobileUserSettings.ACCESSIBILITY,
   useValue: tmp2,
   onValueChange
 });

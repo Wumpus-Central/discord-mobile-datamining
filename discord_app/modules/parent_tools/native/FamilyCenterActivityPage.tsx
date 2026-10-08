@@ -1,15 +1,15 @@
-// === Module 14696: FamilyCenterActivityPage ===
+// === Module 14957: FamilyCenterActivityPage ===
 
-// Module 14696 (FamilyCenterActivityPage)
+// Module 14957 (FamilyCenterActivityPage)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6626 */;
-import useUserLinks from "useUserLinks" /* 8328 */;
-import FamilyCenterDataConfirmationDefault from "FamilyCenterDataConfirmation" /* 11543 */;
-import FamilyCenterParentalConsentNoticeDefault from "FamilyCenterParentalConsentNotice" /* 14697 */;
-import FamilyCenterActivityBannerDefault from "FamilyCenterActivityBanner" /* 14699 */;
-import FamilyCenterFeatureRowDefault from "FamilyCenterFeatureRow" /* 14709 */;
-import FamilyCenterActivityCardDefault from "FamilyCenterActivityCard" /* 14713 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6803 */;
+import useUserLinks from "useUserLinks" /* 7711 */;
+import FamilyCenterDataConfirmationDefault from "FamilyCenterDataConfirmation" /* 11557 */;
+import FamilyCenterParentalConsentNoticeDefault from "FamilyCenterParentalConsentNotice" /* 14958 */;
+import FamilyCenterActivityBannerDefault from "FamilyCenterActivityBanner" /* 14960 */;
+import FamilyCenterFeatureRowDefault from "FamilyCenterFeatureRow" /* 14970 */;
+import FamilyCenterActivityCardDefault from "FamilyCenterActivityCard" /* 14974 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { scrollView: { flex: 1 }, dataConfirmation: { marginTop: nativeDefault.space.PX_8 }, container: null };
 let obj3 = { marginTop: nativeDefault.space.PX_8 };
 obj2.container = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
@@ -27,7 +27,7 @@ let obj4 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: native
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivityPage.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCenterActivityPage() {
   const cResult = c.c(10);
   const tmp4 = closure_8();
   let activeLinkUserIds = useUserLinks.useActiveLinkUserIds();
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   activeLinkUserIds = tmp4.dataConfirmation;
   cResult[2] = activeLinkUserIds;
   cResult[3] = tmp12;
-}) : (() => {
+}) : (function FamilyCenterActivityPage() {
   const tmp = closure_8();
   const obj2 = { style: tmp.scrollView, children: null };
   const activeLinkUserIds = useUserLinks.useActiveLinkUserIds();

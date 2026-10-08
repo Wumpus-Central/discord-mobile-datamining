@@ -1,28 +1,28 @@
-// === Module 16872: FileGridItem ===
+// === Module 17151: FileGridItem ===
 
-// Module 16872 (FileGridItem)
-import MediaFormatTesters from "MediaFormatTesters" /* 5046 */;
-import ImageIcon from "ImageIcon" /* 5878 */;
-import VideoIcon from "VideoIcon" /* 11247 */;
-import FileIcon from "FileIcon" /* 11814 */;
-import SearchMediaImage from "SearchMediaImage" /* 16860 */;
+// Module 17151 (FileGridItem)
+import MediaFormatTesters from "MediaFormatTesters" /* 5415 */;
+import ImageIcon from "ImageIcon" /* 8190 */;
+import VideoIcon from "VideoIcon" /* 11362 */;
+import FileIcon from "FileIcon" /* 11882 */;
+import SearchMediaImage from "SearchMediaImage" /* 17139 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, useWindowDimensions: hasOwnProperty } = get_ActivityIndicator);
-const SearchConstants = fn(7524);
+const SearchConstants = fn(9247);
 ({ FILE_OR_LINK_IMAGE_BUFFER: closure_7, SearchFileTypes: closure_8 } = SearchConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_11 = createStyles.createStyles({ icon: { alignItems: "center", justifyContent: "center" } });
 const ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/list/rows/FileGridItem.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((data) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function FileGridItem(data) {
   const cResult = data(imageStyle[11]).c(47);
   data = data.data;
   const onPress = data.onPress;
@@ -318,7 +318,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((data) 
   cResult[5] = avatarSource;
   tmp10 = avatarSource;
   let tmpResult = data(imageStyle[12]);
-}) : ((containerStyle) => {
+}) : (function FileGridItem(containerStyle) {
   const data = containerStyle.data;
   const onPress = containerStyle.onPress;
   const imageStyle = containerStyle.imageStyle;

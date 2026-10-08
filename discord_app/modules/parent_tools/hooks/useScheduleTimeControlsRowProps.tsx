@@ -1,18 +1,18 @@
-// === Module 14734: useScheduleTimeControlsRowProps ===
+// === Module 14995: useScheduleTimeControlsRowProps ===
 
-// Module 14734 (useScheduleTimeControlsRowProps)
+// Module 14995 (useScheduleTimeControlsRowProps)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import _modDef2521 from "module_2521" /* 2521 */;
-import Text_Text from "Text/Text" /* 4892 */;
+import _modDef2565 from "module_2565" /* 2565 */;
+import Text_Text from "Text/Text" /* 5086 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
 const result = size.fileFinishedImporting("modules/parent_tools/hooks/useScheduleTimeControlsRowProps.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arr) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useScheduleTimeControlsRowProps(arr) {
   const cResult = c.c(13);
   if (0 === arr.length) {
     const _Symbol2 = Symbol;
@@ -20,7 +20,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arr) => {
       const obj2 = { subLabel: null, trailing: "Array" };
       const obj3 = { variant: "text-xs/medium", color: "text-muted", children: null };
       const intl3 = util.intl;
-      obj3.children = intl3.string(_modDef2521.fOBIZH);
+      obj3.children = intl3.string(_modDef2565.fOBIZH);
       obj2.subLabel = jsx(Text_Text.Text, { variant: "text-xs/medium", color: "text-muted", children: null });
       cResult[0] = obj2;
       let first = obj2;
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arr) => {
     if (cResult[4] !== arr.length) {
       const intl = util.intl;
       const obj4 = { count: arr.length };
-      const formatToPlainStringResult = intl.formatToPlainString(_modDef2521.XfwcpX, obj4);
+      const formatToPlainStringResult = intl.formatToPlainString(_modDef2565.XfwcpX, obj4);
       cResult[4] = arr.length;
       cResult[5] = formatToPlainStringResult;
       let tmp9 = formatToPlainStringResult;
@@ -56,7 +56,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arr) => {
     if (cResult[6] !== cResult[2]) {
       const intl2 = util.intl;
       const string = intl2.string;
-      let v8vDHRq = _modDef2521;
+      let v8vDHRq = _modDef2565;
       if (tmp4) {
         v8vDHRq = v8vDHRq["8vDHRq"];
         let stringResult = string(v8vDHRq);
@@ -88,22 +88,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arr) => {
       tmp20 = obj6;
     }
   }
-}) : ((arr) => {
+}) : (function useScheduleTimeControlsRowProps(arr) {
   if (0 === arr.length) {
     const obj2 = { subLabel: null, trailing: "Array" };
     const obj3 = { variant: "text-xs/medium", color: "text-muted", children: null };
     const intl = util.intl;
-    obj3.children = intl.string(_modDef2521.fOBIZH);
+    obj3.children = intl.string(_modDef2565.fOBIZH);
     obj2.subLabel = jsx(Text_Text.Text, { variant: "text-xs/medium", color: "text-muted", children: null });
     return obj2;
   } else {
     const obj4 = { subLabel: null, trailing: null };
     const intl2 = util.intl;
     const obj5 = { count: arr.length };
-    obj4.subLabel = intl2.formatToPlainString(_modDef2521.XfwcpX, obj5);
+    obj4.subLabel = intl2.formatToPlainString(_modDef2565.XfwcpX, obj5);
     const intl3 = util.intl;
     const string = intl3.string;
-    const tmp11 = _modDef2521;
+    const tmp11 = _modDef2565;
     if (someResult) {
       let stringResult = string(tmp11["8vDHRq"]);
     } else {

@@ -1,25 +1,25 @@
-// === Module 5990: MemberVerificationForm ===
+// === Module 6173: MemberVerificationForm ===
 
-// Module 5990 (MemberVerificationForm)
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4708 */;
-import useInitialValueDefault from "useInitialValue" /* 5991 */;
+// Module 6173 (MemberVerificationForm)
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4902 */;
+import useInitialValueDefault from "useInitialValue" /* 6174 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MemberVerificationFormStore from "MemberVerificationFormStore" /* 5970 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 6153 */;
 
 const require = globalThis.__r;
 
 require = fn;
 let View = fn(17).View;
-let closure_8 = fn(5970).NO_MEMBER_VERIFICATION_FORM;
+let closure_8 = fn(6153).NO_MEMBER_VERIFICATION_FORM;
 const VerificationLevels = fn(1085).VerificationLevels;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_12 = createStyles.createStyles({ container: { flex: 1, flexDirection: "column", alignItems: "stretch", paddingHorizontal: 16, paddingVertical: 0 }, submitButton: { marginTop: 12, marginBottom: 12 }, error: { alignSelf: "center", paddingVertical: 16, fontSize: 16 } });
 let ReactCompilerGating = fn(558);
-let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
+let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRequiredVerificationFields(id) {
   _require = id;
   const cResult = require("c").c(3);
   let obj = require("c");
@@ -32,7 +32,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
     if (cResult[1] === phone) {
       let tmp6 = cResult[2];
     }
-    return initialVerification(5991)(tmp6);
+    return initialVerification(6174)(tmp6);
   }
   cResult[0] = id.verificationLevel;
   let phone1;
@@ -60,7 +60,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
   cResult[2] = fn;
   tmp6 = fn;
   let obj2 = require("MemberVerificationModalHooks");
-}) : ((id) => {
+}) : (function useRequiredVerificationFields(id) {
   _require = id;
   importDefault = require("MemberVerificationModalHooks").useInitialVerification(id.id);
   return useInitialValueDefault(() => {
@@ -82,7 +82,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
   });
 });
 ReactCompilerGating = fn(558);
-let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
+let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVerificationForm(id) {
   const cResult = id(stateFromStores[12]).c(21);
   id = id.id;
   const tmp4 = closure_13(id);
@@ -166,7 +166,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
       [tmp23, tmp24] = noop.useState(tmp19);
       View = tmp24;
       if (cResult[14] !== stateFromStores) {
-        class R {
+        class S {
           constructor() {
             if (null != closure_2) {
               tmp = closure_6;
@@ -178,11 +178,11 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
         }
         const items2 = [stateFromStores];
         cResult[14] = stateFromStores;
-        cResult[15] = R;
+        cResult[15] = S;
         cResult[16] = items2;
         let tmp26 = items2;
       } else {
-        class R {
+        class S {
           constructor() {
             if (null != closure_2) {
               tmp = closure_6;
@@ -194,9 +194,9 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
         }
         tmp26 = cResult[16];
       }
-      const effect1 = obj3.useEffect(R, tmp26);
+      const effect1 = obj3.useEffect(S, tmp26);
       if (cResult[17] === tmp11) {
-        class R {
+        class S {
           constructor() {
             if (null != closure_2) {
               tmp = closure_6;
@@ -218,7 +218,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
   cResult[6] = tmp11;
   cResult[7] = tmp4;
   if (stateFromStores != null) {
-    class R {
+    class S {
       constructor() {
         if (null != closure_2) {
           tmp = closure_6;
@@ -229,42 +229,34 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
       }
     }
   }
-  class E {
-    constructor() {
-      if (!closure_3) {
-        tmp2 = null;
-        if (null != closure_1) {
-          items = [];
-          items[0] = tmp;
-          formFields = undefined;
-          if (closure_2 != null) {
-            formFields = closure_2.formFields;
-          }
-          if (formFields == null) {
-            formFields = [];
-          }
-          num = 1;
-          tmp3 = items;
-          tmp4 = formFields;
-          arraySpreadResult = HermesBuiltin.arraySpread(formFields, 1);
+  function getFormFields() {
+    if (!closure_3) {
+      if (null != closure_1) {
+        const items = [tmp];
+        let formFields;
+        if (stateFromStores != null) {
+          formFields = stateFromStores.formFields;
         }
-        return items;
+        if (formFields == null) {
+          formFields = [];
+        }
+        HermesBuiltin.arraySpread(formFields, 1);
       }
-      formFields1 = undefined;
-      if (closure_2 != null) {
-        formFields1 = closure_2.formFields;
-      }
-      if (formFields1 == null) {
-        formFields1 = [];
-      }
-      return;
+      return items;
+    }
+    let formFields1;
+    if (stateFromStores != null) {
+      formFields1 = stateFromStores.formFields;
+    }
+    if (formFields1 == null) {
+      formFields1 = [];
     }
   }
   cResult[8] = undefined;
-  cResult[9] = E;
-  tmp15 = E;
+  cResult[9] = getFormFields;
+  tmp15 = getFormFields;
   const tmpResult = id(stateFromStores[16]);
-}) : ((id) => {
+}) : (function useVerificationForm(id) {
   function getFormFields() {
     if (!memo) {
       if (null != closure_1) {
@@ -387,8 +379,8 @@ export default function MemberVerificationForm(guild) {
                   const obj2 = { key: "MEMBER_VERIFICATION_FORM_INCOMPLETE", content: null, icon: null };
                   const intl = closure_1_0(1126).intl;
                   obj2.content = intl.string(closure_1_0(1126).t.StC497);
-                  obj2.icon = closure_1_1(4813);
-                  closure_1_1(4574).open(obj2);
+                  obj2.icon = closure_1_1(5007);
+                  closure_1_1(4766).open(obj2);
                 })();
                 c6 = 3;
                 return { value: "IconComponent", done: null };

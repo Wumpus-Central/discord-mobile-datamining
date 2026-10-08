@@ -1,20 +1,20 @@
-// === Module 15317: ClearWebBrowserDataSetting ===
+// === Module 15579: ClearWebBrowserDataSetting ===
 
-// Module 15317 (ClearWebBrowserDataSetting)
+// Module 15579 (ClearWebBrowserDataSetting)
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
 import util from "util" /* 1126 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import BrowserManager from "BrowserManager" /* 4857 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import BrowserManager from "BrowserManager" /* 5051 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.HNqvOh);
   },
-  parent: fn(7645).MobileUserSettings.WEB_BROWSER,
+  parent: fn(7966).MobileUserSettings.WEB_BROWSER,
   variant: "danger",
   onPress: function showClearWebBrowserDataAlert() {
     const obj2 = { key: "clear-web-browser-data", title: null, content: null, confirmText: null, onConfirm: null };
@@ -51,7 +51,7 @@ const pressable = SettingBuilders.createPressable({
             } else {
               v1 = 1;
               dependencyMap = 1;
-              const obj5 = { value: tmp4(4857).browserManagerClearWebsiteData(), done: false };
+              const obj5 = { value: tmp4(5051).browserManagerClearWebsiteData(), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -65,7 +65,7 @@ const pressable = SettingBuilders.createPressable({
             const obj7 = { key: "web-browser-data-cleared", content: null };
             const intl = tmp4(1126).intl;
             obj7.content = intl.string(tmp4(1126).t["zaEQz+"]);
-            v1(4574).open(obj7);
+            v1(4766).open(obj7);
             dependencyMap = 3;
             return { value: "IconComponent", done: null };
           }
@@ -75,7 +75,7 @@ const pressable = SettingBuilders.createPressable({
         }
       }
     });
-    obj2.onConfirm = function() {
+    obj2.onConfirm = function onConfirm() {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {

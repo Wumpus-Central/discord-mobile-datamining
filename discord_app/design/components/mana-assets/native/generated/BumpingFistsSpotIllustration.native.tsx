@@ -1,17 +1,17 @@
-// === Module 12829: BumpingFistsSpotIllustration ===
+// === Module 12976: BumpingFistsSpotIllustration ===
 
-// Module 12829 (BumpingFistsSpotIllustration)
+// Module 12976 (BumpingFistsSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5981 */;
-import _modDef12830 from "module_12830" /* 12830 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import _modDef12977 from "module_12977" /* 12977 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
 let result = size.fileFinishedImporting("design/components/mana-assets/native/generated/BumpingFistsSpotIllustration.native.tsx");
 
-export const BumpingFistsSpotIllustration = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const BumpingFistsSpotIllustration = ReactCompilerGating.isReactCompilerEnabled() ? (function BumpingFistsSpotIllustration(arg0) {
   const cResult = c.c(9);
   ({ accessible, accessibilityLabel, resizeMode, width, height, scale } = arg0);
   let num = 288;
@@ -27,7 +27,7 @@ export const BumpingFistsSpotIllustration = ReactCompilerGating.isReactCompilerE
     num3 = scale;
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { uri: _modDef12830 };
+    const obj2 = { uri: _modDef12977 };
     cResult[0] = obj2;
     let first = obj2;
   } else {
@@ -58,12 +58,12 @@ export const BumpingFistsSpotIllustration = ReactCompilerGating.isReactCompilerE
     cResult[8] = tmp11;
     tmp8 = tmp11;
   }
-  const items = [{ width: result, height: result1 }];
+  const size = { width: result, height: result1 };
   cResult[1] = result;
   cResult[2] = result1;
-  cResult[3] = items;
-  tmp7 = items;
-}) : ((width) => {
+  cResult[3] = size;
+  tmp7 = size;
+}) : (function BumpingFistsSpotIllustration(width) {
   let num = width.width;
   ({ accessible, accessibilityLabel, resizeMode } = width);
   if (num === undefined) {
@@ -78,11 +78,9 @@ export const BumpingFistsSpotIllustration = ReactCompilerGating.isReactCompilerE
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef12830 };
+  const obj2 = { uri: _modDef12977 };
   obj.source = obj2;
-  const size = { width: num * num3, height: num2 * num3 };
-  const items = [size];
-  obj.style = items;
+  obj.style = { width: num * num3, height: num2 * num3 };
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;

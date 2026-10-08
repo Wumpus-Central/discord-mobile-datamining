@@ -1,12 +1,12 @@
-// === Module 11684: EntityBorderAppIcon ===
+// === Module 11749: EntityBorderAppIcon ===
 
-// Module 11684 (EntityBorderAppIcon)
+// Module 11749 (EntityBorderAppIcon)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import FastImageDefault from "FastImage" /* 5981 */;
-import createStyles from "createStyles" /* 4896 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import createStyles from "createStyles" /* 5090 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -19,7 +19,7 @@ let closure_6 = createStyles.createStyles((width, borderRadius) => {
 });
 const result = size.fileFinishedImporting("modules/app_launcher/native/base_components/EntityBorderAppIcon.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function EntityBorderAppIcon(arg0) {
   const cResult = c.c(12);
   ({ iconSource, wrapperStyle, iconStyle, iconSize, iconBorderRadius } = arg0);
   let num = 32;
@@ -73,7 +73,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = wrapperStyle;
   cResult[2] = items1;
   tmp5 = items1;
-}) : ((iconSize) => {
+}) : (function EntityBorderAppIcon(iconSize) {
   let num = iconSize.iconSize;
   ({ iconSource, wrapperStyle, iconStyle } = iconSize);
   if (num === undefined) {

@@ -1,18 +1,18 @@
-// === Module 13725: useFilteredGuilds ===
+// === Module 13947: useFilteredGuilds ===
 
-// Module 13725 (useFilteredGuilds)
+// Module 13947 (useFilteredGuilds)
 import _modDef38 from "module_38" /* 38 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import SortedGuildStore from "SortedGuildStore" /* 5623 */;
-import UserStore from "UserStore" /* 1377 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import SortedGuildStore from "SortedGuildStore" /* 5968 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings_picker/useFilteredGuilds.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((isGuildIncluded) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFilteredGuilds(isGuildIncluded) {
   const cResult = isGuildIncluded(stateFromStores2[5]).c(20);
   isGuildIncluded = isGuildIncluded.isGuildIncluded;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -193,7 +193,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((isGuildIncluded)
     tmp25 = obj2;
   }
   const tmpResult4 = isGuildIncluded(stateFromStores2[6]);
-}) : ((isGuildIncluded) => {
+}) : (function useFilteredGuilds(isGuildIncluded) {
   isGuildIncluded = isGuildIncluded.isGuildIncluded;
   const selectedGuildId = isGuildIncluded.selectedGuildId;
   let stateFromStores1;

@@ -1,10 +1,10 @@
-// === Module 11958: GuildDirectoryActionCreators ===
+// === Module 12031: GuildDirectoryActionCreators ===
 
-// Module 11958 (GuildDirectoryActionCreators)
+// Module 12031 (GuildDirectoryActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5089 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5944 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildDirectorySearchStore from "GuildDirectorySearchStore" /* 11945 */;
+import GuildDirectorySearchStore from "GuildDirectorySearchStore" /* 12018 */;
 import "debounce";
 import debounce_mod from "debounce" /* 551 */;
 
@@ -73,7 +73,7 @@ let closure_9 = async function _fetchGuildEntriesForIds(arg0) {
     return value;
   })();
 };
-const DirectoryEntryCategories = fn(11947).DirectoryEntryCategories;
+const DirectoryEntryCategories = fn(12020).DirectoryEntryCategories;
 let Endpoints = fn(1085).Endpoints;
 asyncGeneratorStep(async (arg0, category_id) => {
   closure_0 = arg0;
@@ -84,7 +84,7 @@ asyncGeneratorStep(async (arg0, category_id) => {
     closure_3 = tmp3;
     closure_130_0 = closure_0;
     category_id(584).dispatch({ type: "GUILD_DIRECTORY_FETCH_START" });
-    const HTTP = closure_0(1282).HTTP;
+    const HTTP = closure_0(1294).HTTP;
     const request = { url: c6.DIRECTORY_CHANNEL_ENTRIES(closure_0), query: { category_id }, rejectWithError: true };
     await HTTP.get(request);
     if (1 === tmp7) {
@@ -172,7 +172,7 @@ let closure_0 = asyncGeneratorStep(async (channelId, query) => {
               c5 = 1;
               const obj6 = { type: "GUILD_DIRECTORY_SEARCH_START", channelId, query };
               query(584).dispatch(obj6);
-              const HTTP = channelId(1282).HTTP;
+              const HTTP = channelId(1294).HTTP;
               const request = { url: c6.DIRECTORY_ENTRIES_SEARCH(channelId), query: null, rejectWithError: true };
               const obj8 = { query };
               request.query = obj8;
@@ -246,9 +246,9 @@ export const addDirectoryGuildEntry = function addDirectoryGuildEntry() {
 export const removeDirectoryGuildEntry = function removeDirectoryGuildEntry(channelId, guildId) {
   const obj2 = { url: Endpoints.DIRECTORY_CHANNEL_ENTRY(channelId, guildId), trackedActionData: null, rejectWithError: true };
   const obj = TrackedHTTPUtilsDefault;
-  obj2.trackedActionData = { event: closure_0(1260).NetworkActionNames.DIRECTORY_GUILD_ENTRY_DELETE, properties: { directory_channel_id: channelId, guild_id: guildId } };
+  obj2.trackedActionData = { event: closure_0(1272).NetworkActionNames.DIRECTORY_GUILD_ENTRY_DELETE, properties: { directory_channel_id: channelId, guild_id: guildId } };
   obj.delete(obj2);
-  const obj3 = { event: closure_0(1260).NetworkActionNames.DIRECTORY_GUILD_ENTRY_DELETE, properties: { directory_channel_id: channelId, guild_id: guildId } };
+  const obj3 = { event: closure_0(1272).NetworkActionNames.DIRECTORY_GUILD_ENTRY_DELETE, properties: { directory_channel_id: channelId, guild_id: guildId } };
   DispatcherDefault.dispatch({ type: "GUILD_DIRECTORY_ENTRY_DELETE", channelId, guildId });
 };
 export const searchDirectoryEntries = debounce(function() {

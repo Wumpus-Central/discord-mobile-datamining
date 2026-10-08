@@ -1,26 +1,26 @@
-// === Module 9796: ChatViewStickyHeader ===
+// === Module 10360: ChatViewStickyHeader ===
 
-// Module 9796 (ChatViewStickyHeader)
+// Module 10360 (ChatViewStickyHeader)
 import c from "c" /* 576 */;
-import useStrangerDangerWarning from "useStrangerDangerWarning" /* 9798 */;
-import useInappropriateConversationBannerForChannel from "useInappropriateConversationBannerForChannel" /* 9804 */;
-import useLikelyAtoWarning from "useLikelyAtoWarning" /* 9808 */;
-import LikelyAtoWarningBannerDefault from "LikelyAtoWarningBanner" /* 9809 */;
-import StrangerDangerWarningBannerDefault from "StrangerDangerWarningBanner" /* 9828 */;
-import InappropriateConversationWarningBannerDefault from "InappropriateConversationWarningBanner" /* 9834 */;
-import useUnreadSettingNoticeDefault from "useUnreadSettingNotice" /* 9861 */;
-import ForumPostActionBarDefault from "ForumPostActionBar" /* 9866 */;
-import UnreadSettingNoticeDefault from "UnreadSettingNotice" /* 11087 */;
-import ChatBannerDefault from "ChatBanner" /* 11090 */;
+import useStrangerDangerWarning from "useStrangerDangerWarning" /* 10362 */;
+import useInappropriateConversationBannerForChannel from "useInappropriateConversationBannerForChannel" /* 10367 */;
+import useLikelyAtoWarning from "useLikelyAtoWarning" /* 10371 */;
+import LikelyAtoWarningBannerDefault from "LikelyAtoWarningBanner" /* 10372 */;
+import StrangerDangerWarningBannerDefault from "StrangerDangerWarningBanner" /* 10391 */;
+import InappropriateConversationWarningBannerDefault from "InappropriateConversationWarningBanner" /* 10397 */;
+import useUnreadSettingNoticeDefault from "useUnreadSettingNotice" /* 10421 */;
+import ForumPostActionBarDefault from "ForumPostActionBar" /* 10426 */;
+import UnreadSettingNoticeDefault from "UnreadSettingNotice" /* 10451 */;
+import ChatBannerDefault from "ChatBanner" /* 10454 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const LOCATION_CONTEXT_MOBILE = fn(9797).LOCATION_CONTEXT_MOBILE;
+const LOCATION_CONTEXT_MOBILE = fn(10361).LOCATION_CONTEXT_MOBILE;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
 let ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatViewStickyHeaderAccountSafetyWarnings(arg0) {
   let tmp = dependencyMap;
   const cResult = c.c(12);
   ({ channelId, senderId } = arg0);
@@ -66,7 +66,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[10] = senderId;
     cResult[11] = tmp6;
   }
-}) : ((arg0) => {
+}) : (function ChatViewStickyHeaderAccountSafetyWarnings(arg0) {
   ({ channelId, senderId } = arg0);
   const strangerDangerWarning = useStrangerDangerWarning.useStrangerDangerWarning(channelId);
   const inappropriateConversationBannerForChannel = useInappropriateConversationBannerForChannel.useInappropriateConversationBannerForChannel(channelId, LOCATION_CONTEXT_MOBILE);
@@ -90,7 +90,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat/native/ChatViewStickyHeader.tsx");
 
-export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((channel, arg1) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function StickyHeader(channel) {
   const cResult = c.c(19);
   channel = channel.channel;
   const scrollToNewMessages = channel.scrollToNewMessages;
@@ -98,7 +98,7 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
   const tmp3 = _slicedToArray(noop.useState(false), 2);
   ({ showUnreadsNotice, clearUnreadsNotice } = useUnreadSettingNoticeDefault(channel));
   if (cResult[0] !== channel) {
-    const fn = function h() {
+    const fn = function t() {
       return {
         onChatViewScrolled(isFirstMessageVisible) {
           if (forumPost.isForumPost()) {
@@ -113,7 +113,7 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
   } else {
     tmp7 = cResult[1];
   }
-  const imperativeHandle = noop.useImperativeHandle(arg1, tmp7);
+  const imperativeHandle = noop.useImperativeHandle(channel.ref, tmp7);
   if (cResult[2] === channel) {
     if (cResult[3] === tmp4) {
       let tmp9 = cResult[4];
@@ -192,12 +192,13 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
   cResult[4] = tmp10;
   tmp9 = tmp10;
   const tmp6 = useUnreadSettingNoticeDefault(channel);
-}) : ((handleScrollToNewMessages, arg1) => {
-  const channel = handleScrollToNewMessages.channel;
+}) : (function StickyHeader(channel) {
+  channel = channel.channel;
+  ({ scrollToNewMessages, ref } = channel);
   const tmp = _slicedToArray(noop.useState(false), 2);
   closure_1 = tmp[1];
   ({ showUnreadsNotice, clearUnreadsNotice } = useUnreadSettingNoticeDefault(channel));
-  const imperativeHandle = noop.useImperativeHandle(arg1, () => ({
+  const imperativeHandle = noop.useImperativeHandle(ref, () => ({
     onChatViewScrolled(isFirstMessageVisible) {
       if (forumPost.isForumPost()) {
         closure_1_1(!isFirstMessageVisible.isFirstMessageVisible);
@@ -226,7 +227,7 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
   }
   const obj4 = { children: null };
   items[2] = tmp13;
-  items[3] = timestampProducer(ChatBannerDefault, { channel, handleScrollToNewMessages: handleScrollToNewMessages.scrollToNewMessages });
+  items[3] = timestampProducer(ChatBannerDefault, { channel, handleScrollToNewMessages: scrollToNewMessages });
   obj4.children = items;
   return closure_1_8(React5, obj4);
-})));
+}));

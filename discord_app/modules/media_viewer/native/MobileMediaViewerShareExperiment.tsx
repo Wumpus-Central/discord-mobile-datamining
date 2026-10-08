@@ -1,8 +1,8 @@
-// === Module 8052: MobileMediaViewerShareExperiment ===
+// === Module 8461: MobileMediaViewerShareExperiment ===
 
-// Module 8052 (MobileMediaViewerShareExperiment)
+// Module 8461 (MobileMediaViewerShareExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1440 */;
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -17,7 +17,7 @@ export const MobileMediaViewerShareExperiment = apexExperiment;
 export const getMobileMediaViewerShareExperimentEnabled = function getMobileMediaViewerShareExperimentEnabled(shareMediaSource) {
   return apexExperiment.getConfig({ location: shareMediaSource }).enabled;
 };
-export const useMobileMediaViewerShareExperimentEnabled = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+export const useMobileMediaViewerShareExperimentEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useMobileMediaViewerShareExperimentEnabled(location) {
   const cResult = c.c(2);
   if (cResult[0] !== location) {
     const obj2 = { location };
@@ -28,4 +28,6 @@ export const useMobileMediaViewerShareExperimentEnabled = ReactCompilerGating.is
     tmp2 = cResult[1];
   }
   return apexExperiment.useConfig(tmp2).enabled;
-}) : ((location) => apexExperiment.useConfig({ location }).enabled);
+}) : (function useMobileMediaViewerShareExperimentEnabled(location) {
+  return apexExperiment.useConfig({ location }).enabled;
+});

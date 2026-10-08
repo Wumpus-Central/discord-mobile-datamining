@@ -1,19 +1,19 @@
-// === Module 10716: useInappropriateConversationsTiers ===
+// === Module 12696: useInappropriateConversationsTiers ===
 
-// Module 10716 (useInappropriateConversationsTiers)
+// Module 12696 (useInappropriateConversationsTiers)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import useInappropriateConversationBannerForChannel from "useInappropriateConversationBannerForChannel" /* 9804 */;
-import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 9805 */;
-import UserStore from "UserStore" /* 1377 */;
+import useInappropriateConversationBannerForChannel from "useInappropriateConversationBannerForChannel" /* 10367 */;
+import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 10368 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
-const SafetyWarningTypes = fn(9799).SafetyWarningTypes;
+const SafetyWarningTypes = fn(10266).SafetyWarningTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationsTiers.tsx");
 
-export const useInappropriateConversationsTiers = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
+export const useInappropriateConversationsTiers = ReactCompilerGating.isReactCompilerEnabled() ? (function useInappropriateConversationsTiers(id) {
   const cResult = c.c(6);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { location: "context-menu-item" };
@@ -77,7 +77,7 @@ export const useInappropriateConversationsTiers = ReactCompilerGating.isReactCom
     }
   }
   return null;
-}) : ((id) => {
+}) : (function useInappropriateConversationsTiers(id) {
   const isEligibleForInappropriateConversationWarning = SelfModInappropriateConversationExperiment.useIsEligibleForInappropriateConversationWarning({ location: "context-menu-item" });
   const items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());

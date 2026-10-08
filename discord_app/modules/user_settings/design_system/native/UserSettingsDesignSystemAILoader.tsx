@@ -1,11 +1,11 @@
-// === Module 15706: UserSettingsDesignSystemAILoader ===
+// === Module 15986: UserSettingsDesignSystemAILoader ===
 
-// Module 15706 (UserSettingsDesignSystemAILoader)
+// Module 15986 (UserSettingsDesignSystemAILoader)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Stack_Stack from "Stack/Stack" /* 5600 */;
-import Card from "Card" /* 6002 */;
-import AILoader from "AILoader" /* 14227 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import Stack_Stack from "Stack/Stack" /* 5373 */;
+import Card from "Card" /* 6186 */;
+import AILoader from "AILoader" /* 14051 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,12 +13,12 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: c2, View: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({ container: { padding: 16 }, row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between" } });
 let closure_7 = [12, 16, 24];
 let items = [{ color: "text-default", label: "text-default" }, { color: "text-subtle", label: "text-subtle" }];
 let ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function DemoRow(arg0) {
   const cResult = c.c(6);
   ({ label, children } = arg0);
   const tmp4 = closure_6();
@@ -48,7 +48,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = tmp5;
   cResult[5] = tmp9;
   tmp8 = tmp9;
-}) : ((arg0) => {
+}) : (function DemoRow(arg0) {
   ({ label, children } = arg0);
   const obj = { style: closure_6().row, children: null };
   items = [React4(Text_Text.Text, { variant: "text-sm/medium", color: "text-subtle", children: label }), children];
@@ -59,7 +59,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemAILoader.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSettingsDesignSystemAILoader() {
   const cResult = c.c(4);
   const tmp4 = closure_6();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -114,7 +114,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp15 = cResult[3];
   }
   return tmp15;
-}) : (() => {
+}) : (function UserSettingsDesignSystemAILoader() {
   let obj = { contentContainerStyle: closure_6().container, children: null };
   const obj2 = { spacing: 24, children: null };
   const obj3 = { children: null };

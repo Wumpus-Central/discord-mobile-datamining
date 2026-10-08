@@ -1,18 +1,18 @@
-// === Module 10062: useCanShowFavoritesGuildOnboarding ===
+// === Module 10307: useCanShowFavoritesGuildOnboarding ===
 
-// Module 10062 (useCanShowFavoritesGuildOnboarding)
+// Module 10307 (useCanShowFavoritesGuildOnboarding)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4742 */;
-import ActionSheetStore from "ActionSheetStore" /* 4567 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4936 */;
+import ActionSheetStore from "ActionSheetStore" /* 4759 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/hooks/useCanShowFavoritesGuildOnboarding.native.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCanShowFavoritesGuildOnboarding() {
   const cResult = c.c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [SelectedChannelStore];
@@ -52,7 +52,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp13 = !isModalOpen;
   }
   return tmp13;
-}) : (() => {
+}) : (function useCanShowFavoritesGuildOnboarding() {
   const items = [SelectedChannelStore];
   const stateFromStores = initialize.useStateFromStores(items, () => null != voiceChannelId.getVoiceChannelId());
   const items1 = [ActionSheetStore];

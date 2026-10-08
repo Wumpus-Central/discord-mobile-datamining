@@ -1,36 +1,36 @@
-// === Module 14462: UserProfileBadgesEditButton ===
+// === Module 14690: UserProfileBadgesEditButton ===
 
-// Module 14462 (UserProfileBadgesEditButton)
+// Module 14690 (UserProfileBadgesEditButton)
 import nativeDefault from "native" /* 587 */;
-import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 10894 */;
-import BadgeUtils from "BadgeUtils" /* 10902 */;
-import openCustomizeBadgesSheet from "openCustomizeBadgesSheet" /* 14463 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 10545 */;
+import BadgeUtils from "BadgeUtils" /* 10553 */;
+import openCustomizeBadgesSheet from "openCustomizeBadgesSheet" /* 14691 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9431 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9095 */;
 
 const require = globalThis.__r;
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const View = fn(17).View;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(5090);
 let obj2 = { content: { flexGrow: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 }, badge: { width: 32, height: 32 }, overflowCount: { marginLeft: 2 } };
-let closure_11 = createStyles.createStyles(obj2);
+let closure_10 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj3 = { flexGrow: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileBadgesEditButton.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileBadgesEditButton(arg0) {
   const cResult = require("c").c(70);
   ({ badges, catalogBadges, ownsAnyBadge, autoOpen } = arg0);
   _require = undefined !== autoOpen && autoOpen;
   let obj = require("c");
-  importDefault = closure_11();
+  importDefault = closure_10();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let obj2 = { location: "UserProfileBadgesEditButton" };
     cResult[0] = obj2;
@@ -38,7 +38,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   } else {
     first = cResult[0];
   }
-  const tmp4 = closure_11();
+  const tmp4 = closure_10();
   isBadgeManagementEnabled = require("BadgeManagementExperiment").useIsBadgeManagementEnabled(first);
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     let obj3 = { location: "UserProfileBadgesEditButton" };
@@ -81,19 +81,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         if (cResult[6] === tmp16) {
           let tmp18 = cResult[7];
         }
-        closure_6 = tmp18;
+        ProfileCustomizationNavigationStore = tmp18;
         const _Symbol = Symbol;
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-          class M {
+          class G {
             constructor() {
               obj = autoOpen(closure_2[16]);
               result = obj.openBadgeDirectoryScreen();
               return;
             }
           }
-          cResult[8] = M;
+          cResult[8] = G;
         } else {
-          class M {
+          class G {
             constructor() {
               obj = autoOpen(closure_2[16]);
               result = obj.openBadgeDirectoryScreen();
@@ -101,11 +101,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             }
           }
         }
-        field = field.useField("pendingCustomizeBadgesSheet");
+        const field = ProfileCustomizationNavigationStore.useField("pendingCustomizeBadgesSheet");
         const tmp22 = tmp9(tmp2[17])();
         closure_8 = tmp22;
         if (cResult[9] === tmp18) {
-          class M {
+          class G {
             constructor() {
               obj = autoOpen(closure_2[16]);
               result = obj.openBadgeDirectoryScreen();
@@ -113,15 +113,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             }
           }
         }
-        class U {
+        class N {
           constructor() {
-            obj = closure_0(closure_2[15]);
-            obj1 = { analyticsLocations };
-            result = obj.openCustomizeBadgesSheet(obj1);
-            if (closure_5) {
-              tmp2 = closure_4;
-              tmp3 = ContentDismissActionType;
-              tmp4 = closure_4(ContentDismissActionType.TAKE_ACTION);
+            if (closure_7) {
+              tmp = closure_8;
+              if (closure_8) {
+                tmp2 = globalThis;
+                _setTimeout = setTimeout;
+                num = 300;
+                closure_0 = setTimeout(() => { ... }, 300);
+                return () => { ... };
+              }
             }
             return;
           }
@@ -131,7 +133,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         cResult[10] = tmp22;
         cResult[11] = isBadgeManagementEnabled;
         cResult[12] = field;
-        cResult[13] = tmp25;
+        cResult[13] = N;
         cResult[14] = items2;
       }
     }
@@ -157,7 +159,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   tmp9 = importDefault;
   const tmpResult3 = require("BadgeDirectoryUpdatesExperiment");
-}) : ((arg0) => {
+}) : (function UserProfileBadgesEditButton(arg0) {
   ({ badges, catalogBadges, ownsAnyBadge, autoOpen } = arg0);
   if (autoOpen === undefined) {
     autoOpen = false;
@@ -170,7 +172,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   closure_8 = undefined;
   let ref;
   let legacyIconUrlByBadgeId;
-  let tmp = closure_11();
+  let tmp = legacyIconUrlByBadgeId();
   importDefault = tmp;
   isBadgeManagementEnabled = autoOpen(isBadgeManagementEnabled[10]).useIsBadgeManagementEnabled({ location: "UserProfileBadgesEditButton" });
   let obj = autoOpen(isBadgeManagementEnabled[10]);
@@ -206,7 +208,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const callback1 = noop.useCallback(() => {
     const result = autoOpen(isBadgeManagementEnabled[16]).openBadgeDirectoryScreen();
   }, []);
-  field = field.useField("pendingCustomizeBadgesSheet");
+  field = onPress.useField("pendingCustomizeBadgesSheet");
   const tmp14 = tmp6(isBadgeManagementEnabled[17])();
   closure_8 = tmp14;
   const items3 = [field, tmp14, isBadgeManagementEnabled, onPress];
@@ -215,7 +217,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       if (closure_8) {
         const _setTimeout = setTimeout;
         const timeout = setTimeout(() => {
-          field.setState({ pendingCustomizeBadgesSheet: false });
+          callback.setState({ pendingCustomizeBadgesSheet: false });
           if (isBadgeManagementEnabled) {
             onPress();
           }
@@ -249,13 +251,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       const intl3 = tmp2(tmp3[18]).intl;
       obj3.label = intl3.string(tmp2(tmp3[18]).t.l6w3Vj);
       const obj4 = { showNewBadge: tmp10 };
-      obj3.labelTrailing = ref(tmp2(tmp3[19]).UserProfileEditFormLabelBadges, obj4);
+      obj3.labelTrailing = closure_8(tmp2(tmp3[19]).UserProfileEditFormLabelBadges, obj4);
       const obj5 = { style: tmp.content, "aria-hidden": true, children: null };
       const obj6 = { variant: "text-sm/medium", color: "text-muted", children: null };
       const intl4 = tmp2(tmp3[18]).intl;
       obj6.children = intl4.string(tmp2(tmp3[18]).t.xfuQvv);
-      obj5.children = ref(tmp2(tmp3[20]).Text, obj6);
-      obj3.content = ref(onPress, obj5);
+      obj5.children = closure_8(tmp2(tmp3[20]).Text, obj6);
+      obj3.content = closure_8(closure_5, obj5);
       const obj7 = { text: null };
       const intl5 = tmp2(tmp3[18]).intl;
       obj7.text = intl5.string(tmp2(tmp3[18]).t.xfuQvv);
@@ -269,7 +271,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         onPress = callback1;
       }
       obj3.onPress = onPress;
-      return ref(tmp2(tmp3[19]).UserProfileEditFormButton, obj3);
+      return closure_8(tmp2(tmp3[19]).UserProfileEditFormButton, obj3);
     } else {
       legacyIconUrlByBadgeId = tmp2(tmp3[21]).getLegacyIconUrlByBadgeId(badges);
       const substr = badges.slice(0, tmp2(tmp3[21]).MAX_DISPLAYED_PROFILE_BADGES);
@@ -296,7 +298,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       const intl2 = tmp2(tmp3[18]).intl;
       obj9.label = intl2.string(tmp2(tmp3[18]).t.l6w3Vj);
       const obj10 = { showNewBadge: tmp10 };
-      obj9.labelTrailing = ref(tmp2(tmp3[19]).UserProfileEditFormLabelBadges, obj10);
+      obj9.labelTrailing = closure_8(tmp2(tmp3[19]).UserProfileEditFormLabelBadges, obj10);
       const obj11 = { style: tmp.content, "aria-hidden": true, children: null };
       if (null != substr1) {
         let mapped1 = substr1.map((badge_id) => {
@@ -305,19 +307,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             const obj2 = { style: closure_1.badge, source: null };
             const obj3 = { uri: value };
             obj2.source = obj3;
-            let tmp6 = options(hasOwnProperty, obj2, badge_id.badge_id);
+            let tmp6 = closure_2_8(FastImageDefault, obj2, badge_id.badge_id);
           } else {
             const obj = { badge: badge_id, size: 32, style: closure_1.badge };
-            tmp6 = options(BadgeCatalogIconDefault, obj, badge_id.badge_id);
+            tmp6 = closure_2_8(BadgeCatalogIconDefault, obj, badge_id.badge_id);
           }
           return tmp6;
         });
       } else {
         mapped1 = substr.map((id) => {
           const obj = { style: closure_1.badge, source: null };
-          const obj2 = { uri: BadgeUtils.getProfileBadgeIconUrl(id) };
+          const obj2 = { uri: null };
+          const tmp = FastImageDefault;
+          obj2.uri = BadgeUtils.getProfileBadgeIconUrl(id);
           obj.source = obj2;
-          return options(hasOwnProperty, obj, id.id);
+          return closure_2_8(tmp, obj, id.id);
         });
       }
       const items5 = [mapped1, ];
@@ -330,7 +334,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
       items5[1] = tmp22Result;
       obj11.children = items5;
-      obj9.content = legacyIconUrlByBadgeId(onPress, obj11);
+      obj9.content = ref(closure_5, obj11);
       let tmp27;
       if (mapped.length > 0) {
         const obj13 = { text: formatToPlainStringResult };
@@ -338,7 +342,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
       obj9.accessibilityValue = tmp27;
       obj9.onPress = onPress;
-      return ref(tmp2(tmp3[19]).UserProfileEditFormButton, obj9);
+      return closure_8(tmp2(tmp3[19]).UserProfileEditFormButton, obj9);
     }
   } else {
     return null;

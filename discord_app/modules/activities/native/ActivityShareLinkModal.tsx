@@ -1,30 +1,30 @@
-// === Module 14345: ActivityShareLinkModal ===
+// === Module 14573: ActivityShareLinkModal ===
 
-// Module 14345 (ActivityShareLinkModal)
+// Module 14573 (ActivityShareLinkModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import ToastUtils from "ToastUtils" /* 4573 */;
-import LinkIcon from "LinkIcon" /* 4845 */;
-import ClipboardUtils from "ClipboardUtils" /* 6695 */;
-import HeaderActionButton from "HeaderActionButton" /* 6890 */;
-import HeaderShared from "HeaderShared" /* 7509 */;
-import formatResults from "formatResults" /* 10724 */;
-import getApplicationInstallURL from "getApplicationInstallURL" /* 11770 */;
-import openActivityShareLinkModal from "openActivityShareLinkModal" /* 14344 */;
+import ToastUtils from "ToastUtils" /* 4765 */;
+import LinkIcon from "LinkIcon" /* 5039 */;
+import ClipboardUtils from "ClipboardUtils" /* 6872 */;
+import HeaderActionButton from "HeaderActionButton" /* 7079 */;
+import HeaderShared from "HeaderShared" /* 9232 */;
+import formatResults from "formatResults" /* 11577 */;
+import getApplicationInstallURL from "getApplicationInstallURL" /* 11837 */;
+import openActivityShareLinkModal from "openActivityShareLinkModal" /* 14572 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import UserStore from "UserStore" /* 1377 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import UserStore from "UserStore" /* 1389 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2062 */;
 
 require = fn;
 const View = fn(17).View;
-let UserRowModes = fn(10605).UserRowModes;
-const MessageSendLocation = fn(4889).MessageSendLocation;
+let UserRowModes = fn(10202).UserRowModes;
+const MessageSendLocation = fn(5083).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { headerLeftContainer: { paddingLeft: nativeDefault.space.PX_16 }, headerRightContainer: null, header: null, container: null };
 let obj3 = { paddingLeft: nativeDefault.space.PX_16 };
 obj2.headerRightContainer = { paddingRight: nativeDefault.space.PX_16 };
@@ -38,7 +38,7 @@ let obj6 = { flex: 1, display: "flex", backgroundColor: nativeDefault.colors.BAC
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/native/ActivityShareLinkModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((applicationId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ActivityShareLinkModal(applicationId) {
   const cResult = applicationId(linkId[13]).c(74);
   applicationId = applicationId.applicationId;
   const customId = applicationId.customId;
@@ -162,7 +162,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((applicationId) =
   cResult[11] = undefined;
   cResult[12] = fn3;
   const tmpResult4 = applicationId(linkId[14]);
-}) : ((applicationId) => {
+}) : (function ActivityShareLinkModal(applicationId) {
   applicationId = applicationId.applicationId;
   const customId = applicationId.customId;
   const linkId = applicationId.linkId;
@@ -250,7 +250,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((applicationId) =
             if (null != first3) {
               dependencyMap = 1;
               c3 = 1;
-              let obj4 = { value: Promise.all(first1.map(tmp2(10724).getOrResolveChannelIdFromDestinationId)), done: false };
+              let obj4 = { value: Promise.all(first1.map(tmp2(11577).getOrResolveChannelIdFromDestinationId)), done: false };
               return obj4;
             } else {
               c3 = 3;
@@ -260,8 +260,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((applicationId) =
           c3 = 3;
           throw value;
         } else if (arg0 !== 2) {
-          closure_128_0 = value.filter(tmp2(1375).isNotNullish);
-          closure_128_1 = tmp2(14346).resolveActivityShareMessageContent(closure_129_3, closure_129_14, closure_129_12);
+          closure_128_0 = value.filter(tmp2(1387).isNotNullish);
+          closure_128_1 = tmp2(14574).resolveActivityShareMessageContent(closure_129_3, closure_129_14, closure_129_12);
           closure_129_6(true);
           const item = closure_128_0.forEach((() => {
             closure_0 = closure_1_3(function*(arg0) {
@@ -291,11 +291,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((applicationId) =
                     } else {
                       channel = channel.getChannel(closure_0);
                       if (null != channel) {
-                        const obj2 = closure_2_1(6978);
+                        const obj2 = closure_2_1(7167);
                         const obj6 = { location: constants.ACTIVITY_SHARE };
                         c2 = 1;
                         c1 = 1;
-                        const obj7 = { value: obj2.sendMessage(closure_0, closure_2_1(7179).parse(channel, c1), false, obj6), done: false };
+                        const obj7 = { value: obj2.sendMessage(closure_0, closure_2_1(7358).parse(channel, c1), false, obj6), done: false };
                         return obj7;
                       }
                     }
@@ -326,16 +326,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((applicationId) =
               return applyArgumentsResult;
             };
           })());
-          let obj5 = tmp2(14346);
+          let obj5 = tmp2(14574);
           let obj7 = { key: "ACTIVITY_SHARE_LINK_SUCCESS", content: null };
           const intl = tmp2(1126).intl;
           const obj8 = { applicationName: closure_129_14.name };
           obj7.content = intl.formatToPlainString(tmp2(1126).t.jQULqL, obj8);
-          tmp3(4574).open(obj7);
+          tmp3(4766).open(obj7);
           closure_129_4(true, closure_129_7);
-          let obj6 = tmp3(4574);
-          const result = tmp2(14344).closeActivityShareLinkModal();
-          const obj9 = tmp2(14344);
+          let obj6 = tmp3(4766);
+          const result = tmp2(14572).closeActivityShareLinkModal();
+          const obj9 = tmp2(14572);
         }
         c3 = 3;
         let obj = { value, done: true };

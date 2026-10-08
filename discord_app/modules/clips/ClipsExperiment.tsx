@@ -1,18 +1,19 @@
-// === Module 13502: ClipsExperiment ===
+// === Module 13452: ClipsExperiment ===
 
-// Module 13502 (ClipsExperiment)
+// Module 13452 (ClipsExperiment)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4534 */;
-import isClientClipsCapableDefault from "isClientClipsCapable" /* 13503 */;
-import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import UserStore from "UserStore" /* 1377 */;
+import PlatformUtilsAll from "PlatformUtils" /* 1381 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4726 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
-const PremiumTypes = fn(1379).PremiumTypes;
-const ApexExperiment = fn(1440);
-const obj2 = { kind: "user", name: "2026-03-clips-experiment", defaultConfig: { enableClips: false, ignorePlatformRestriction: false }, variations: null };
-const obj3 = { 1: null, 2: { enableClips: true, ignorePlatformRestriction: false } };
+const PremiumTypes = fn(1391).PremiumTypes;
+const Features = fn(5115).Features;
+const ApexExperiment = fn(1452);
+let obj2 = { kind: "user", name: "2026-03-clips-experiment", defaultConfig: { enableClips: false, ignorePlatformRestriction: false }, variations: null };
+let obj3 = { 1: null, 2: { enableClips: true, ignorePlatformRestriction: false } };
 obj3[2] = { enableClips: true, ignorePlatformRestriction: true };
 obj2.variations = obj3;
 const apexExperiment = ApexExperiment.createApexExperiment(obj2);
@@ -24,64 +25,122 @@ function isUserPremiumTypeForClipsEarlyAccess(premiumType) {
   }
   return PremiumUtilsDefault.isPremiumAtLeast(premiumType, PremiumTypes.TIER_2);
 }
+function isClientClipsCapable(MediaEngineStore) {
+  let ignorePlatformRestriction = apexExperiment.getConfig({ location: "isClipsClientCapable" }).ignorePlatformRestriction;
+  const mediaEngine = MediaEngineStore.getMediaEngine();
+  if (!ignorePlatformRestriction) {
+    let isDesktopResult = PlatformUtilsAll.isDesktop();
+    if (isDesktopResult) {
+      isDesktopResult = mediaEngine.supports(Features.CLIPS);
+    }
+    if (isDesktopResult) {
+      isDesktopResult = mediaEngine.hasClipsV3Support();
+    }
+    ignorePlatformRestriction = isDesktopResult;
+  }
+  return ignorePlatformRestriction;
+}
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/clips/ClipsExperiment.tsx");
 
 export const ClipsExperiment = apexExperiment;
 export const areClipsAvailable = function areClipsAvailable() {
-  if (isClientClipsCapableDefault(MediaEngineStore)) {
+  let ignorePlatformRestriction = apexExperiment.getConfig({ location: "isClipsClientCapable" }).ignorePlatformRestriction;
+  const mediaEngine = MediaEngineStore.getMediaEngine();
+  if (!ignorePlatformRestriction) {
+    let isDesktopResult = PlatformUtilsAll.isDesktop();
+    if (isDesktopResult) {
+      isDesktopResult = mediaEngine.supports(Features.CLIPS);
+    }
+    if (isDesktopResult) {
+      isDesktopResult = mediaEngine.hasClipsV3Support();
+    }
+    ignorePlatformRestriction = isDesktopResult;
+  }
+  if (ignorePlatformRestriction) {
     const currentUser = UserStore.getCurrentUser();
     let premiumType;
     if (currentUser != null) {
       premiumType = currentUser.premiumType;
     }
-    let enableClips = PremiumUtilsDefault.isPremiumAtLeast(premiumType, PremiumTypes.TIER_2);
-    if (!enableClips) {
-      enableClips = apexExperiment.getConfig({ location: "areClipsEnabled" }).enableClips;
-    }
-    return enableClips;
+    return PremiumUtilsDefault.isPremiumAtLeast(premiumType, PremiumTypes.TIER_2) || apexExperiment.getConfig({ location: "areClipsEnabled" }).enableClips;
   } else {
     return false;
   }
 };
-export const useIsClipsAvailable = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useIsClipsAvailable = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsClipsAvailable() {
   const cResult = c.c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp7 = isClientClipsCapableDefault(MediaEngineStore);
-    cResult[0] = tmp7;
-    let first = tmp7;
+    let ignorePlatformRestriction = apexExperiment.getConfig({ location: "isClipsClientCapable" }).ignorePlatformRestriction;
+    const mediaEngine = MediaEngineStore.getMediaEngine();
+    if (!ignorePlatformRestriction) {
+      let isDesktopResult = PlatformUtilsAll.isDesktop();
+      if (isDesktopResult) {
+        isDesktopResult = mediaEngine.supports(Features.CLIPS);
+      }
+      if (isDesktopResult) {
+        isDesktopResult = mediaEngine.hasClipsV3Support();
+      }
+      ignorePlatformRestriction = isDesktopResult;
+    }
+    cResult[0] = ignorePlatformRestriction;
+    let first = ignorePlatformRestriction;
   } else {
     first = cResult[0];
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
-    const fn = function p() {
-      currentUser = currentUser.getCurrentUser();
-      let premiumType;
-      if (currentUser != null) {
-        premiumType = currentUser.premiumType;
+    class C {
+      constructor() {
+        currentUser = closure_1_5.getCurrentUser();
+        obj = closure_1_1(closure_1_3[8]);
+        premiumType = undefined;
+        if (currentUser != null) {
+          premiumType = currentUser.premiumType;
+        }
+        return obj.isPremiumAtLeast(premiumType, closure_1_6.TIER_2);
       }
-      return PremiumUtilsDefault.isPremiumAtLeast(premiumType, TIER_2.TIER_2);
-    };
+    }
     cResult[1] = items;
-    cResult[2] = fn;
-    let tmp9 = fn;
-    let tmp8 = items;
+    cResult[2] = C;
+    let tmp11 = C;
+    let tmp10 = items;
   } else {
-    tmp8 = cResult[1];
-    tmp9 = cResult[2];
+    tmp10 = cResult[1];
+    tmp11 = cResult[2];
   }
-  const stateFromStores = initialize.useStateFromStores(tmp8, tmp9);
+  const stateFromStores = initialize.useStateFromStores(tmp10, tmp11);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const config = apexExperiment.getConfig({ location: "useEnableClips" });
-    cResult[3] = config;
-    let tmp12 = config;
+    class C {
+      constructor() {
+        currentUser = closure_1_5.getCurrentUser();
+        obj = closure_1_1(closure_1_3[8]);
+        premiumType = undefined;
+        if (currentUser != null) {
+          premiumType = currentUser.premiumType;
+        }
+        return obj.isPremiumAtLeast(premiumType, closure_1_6.TIER_2);
+      }
+    }
+    let tmp14 = config;
   } else {
-    tmp12 = cResult[3];
+    tmp14 = cResult[3];
   }
-  return (tmp12.enableClips || stateFromStores) && first;
-}) : (() => {
-  const tmp = isClientClipsCapableDefault(MediaEngineStore);
+  return (tmp14.enableClips || stateFromStores) && first;
+}) : (function useIsClipsAvailable() {
+  let ignorePlatformRestriction = apexExperiment.getConfig({ location: "isClipsClientCapable" }).ignorePlatformRestriction;
+  const mediaEngine = MediaEngineStore.getMediaEngine();
+  if (!ignorePlatformRestriction) {
+    let isDesktopResult = PlatformUtilsAll.isDesktop();
+    if (isDesktopResult) {
+      isDesktopResult = mediaEngine.supports(Features.CLIPS);
+    }
+    if (isDesktopResult) {
+      isDesktopResult = mediaEngine.hasClipsV3Support();
+    }
+    ignorePlatformRestriction = isDesktopResult;
+  }
   const items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
@@ -91,7 +150,7 @@ export const useIsClipsAvailable = ReactCompilerGating.isReactCompilerEnabled() 
     }
     return PremiumUtilsDefault.isPremiumAtLeast(premiumType, TIER_2.TIER_2);
   });
-  return (apexExperiment.getConfig({ location: "useEnableClips" }).enableClips || stateFromStores) && tmp;
+  return (apexExperiment.getConfig({ location: "useEnableClips" }).enableClips || stateFromStores) && ignorePlatformRestriction;
 });
 export { isUserPremiumTypeForClipsEarlyAccess };
 export function isScreenshotKeybindEnabled() {
@@ -100,3 +159,4 @@ export function isScreenshotKeybindEnabled() {
 export function useScreenshotKeybindEnabled() {
   return false;
 }
+export { isClientClipsCapable };

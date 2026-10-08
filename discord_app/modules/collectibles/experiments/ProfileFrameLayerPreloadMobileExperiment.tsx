@@ -1,8 +1,8 @@
-// === Module 7906: ProfileFrameLayerPreloadMobileExperiment ===
+// === Module 8325: ProfileFrameLayerPreloadMobileExperiment ===
 
-// Module 7906 (ProfileFrameLayerPreloadMobileExperiment)
+// Module 8325 (ProfileFrameLayerPreloadMobileExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1440 */;
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -10,7 +10,7 @@ const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-09-prof
 const result = size.fileFinishedImporting("modules/collectibles/experiments/ProfileFrameLayerPreloadMobileExperiment.tsx");
 
 export default apexExperiment;
-export const useIsProfileFrameLayerPreloadEnabled = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+export const useIsProfileFrameLayerPreloadEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsProfileFrameLayerPreloadEnabled(location) {
   const cResult = c.c(2);
   if (cResult[0] !== location) {
     const obj2 = { location };
@@ -21,4 +21,6 @@ export const useIsProfileFrameLayerPreloadEnabled = ReactCompilerGating.isReactC
     tmp2 = cResult[1];
   }
   return apexExperiment.useConfig(tmp2).profileFrameLayerPreloadEnabled;
-}) : ((location) => apexExperiment.useConfig({ location }).profileFrameLayerPreloadEnabled);
+}) : (function useIsProfileFrameLayerPreloadEnabled(location) {
+  return apexExperiment.useConfig({ location }).profileFrameLayerPreloadEnabled;
+});

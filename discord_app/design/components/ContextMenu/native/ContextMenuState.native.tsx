@@ -1,10 +1,10 @@
-// === Module 7591: ContextMenuState ===
+// === Module 9298: ContextMenuState ===
 
-// Module 7591 (ContextMenuState)
+// Module 9298 (ContextMenuState)
 import c from "c" /* 576 */;
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import HapticUtils from "HapticUtils" /* 4861 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1271 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import HapticUtils from "HapticUtils" /* 5055 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -42,12 +42,12 @@ function updateContextMenuState(absoluteX, absoluteY, callback1) {
   }
   const result3 = activeIndex.set(-1);
 }
-const obj7 = { INDEX_BOUNDS_WIDTH_OFFSET: 2, INDEX_BOUNDS_HEIGHT_OFFSET: 3, INDEX_BOUNDS_PAGE_Y_OFFSET: 1, INDEX_BOUNDS_PAGE_X_OFFSET: 0, INDEX_BOUNDS_OFFSET: 4, runOnJS: fn(4618).runOnJS, triggerHapticFeedback: fn(4861).triggerHapticFeedback, HapticFeedbackTypes: fn(4861).HapticFeedbackTypes };
+const obj7 = { INDEX_BOUNDS_WIDTH_OFFSET: 2, INDEX_BOUNDS_HEIGHT_OFFSET: 3, INDEX_BOUNDS_PAGE_Y_OFFSET: 1, INDEX_BOUNDS_PAGE_X_OFFSET: 0, INDEX_BOUNDS_OFFSET: 4, runOnJS: fn(4810).runOnJS, triggerHapticFeedback: fn(5055).triggerHapticFeedback, HapticFeedbackTypes: fn(5055).HapticFeedbackTypes };
 updateContextMenuState.__closure = obj7;
 updateContextMenuState.__workletHash = 10158111154044;
 updateContextMenuState.__initData = { code: "function updateContextMenuState_ContextMenuStateNativeTsx1(absoluteX,absoluteY,state){const{INDEX_BOUNDS_WIDTH_OFFSET,INDEX_BOUNDS_HEIGHT_OFFSET,INDEX_BOUNDS_PAGE_Y_OFFSET,INDEX_BOUNDS_PAGE_X_OFFSET,INDEX_BOUNDS_OFFSET,runOnJS,triggerHapticFeedback,HapticFeedbackTypes}=this.__closure;const{pan:pan,itemMeasurements:itemMeasurements,activeIndex:activeIndex}=state;pan.set(absoluteY);const bounds=itemMeasurements.get();let offset=0;while(offset<bounds.length){const width=bounds[offset+INDEX_BOUNDS_WIDTH_OFFSET];const height=bounds[offset+INDEX_BOUNDS_HEIGHT_OFFSET];const pageY=bounds[offset+INDEX_BOUNDS_PAGE_Y_OFFSET];const pageX=bounds[offset+INDEX_BOUNDS_PAGE_X_OFFSET];const lowerY=pageY;const upperY=pageY+height;const lowerX=pageX;const upperX=pageX+width;if(absoluteY>=lowerY&&absoluteY<=upperY&&absoluteX>=lowerX&&absoluteX<=upperX){const index=offset/INDEX_BOUNDS_OFFSET;if(activeIndex.get()!==index){activeIndex.set(index);runOnJS(triggerHapticFeedback)(HapticFeedbackTypes.IMPACT_LIGHT);}return;}offset+=INDEX_BOUNDS_OFFSET;}activeIndex.set(-1);}" };
 const ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useActiveContextMenu() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function t(menu) {
@@ -59,7 +59,9 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     first = cResult[0];
   }
   return obj3(first);
-}) : (() => obj3((menu) => menu.menu));
+}) : (function useActiveContextMenu() {
+  return obj3((menu) => menu.menu);
+});
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/ContextMenu/native/ContextMenuState.native.tsx");
 
@@ -86,7 +88,7 @@ export const hideContextMenu = function hideContextMenu() {
 };
 export const useActiveContextMenu = tmp3;
 export { updateContextMenuState };
-export const useContextMenuState = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useContextMenuState = ReactCompilerGating.isReactCompilerEnabled() ? (function useContextMenuState() {
   const cResult = c.c(4);
   const sharedValue = ReanimatedRexport.useSharedValue(-1);
   const sharedValue1 = ReanimatedRexport.useSharedValue([]);
@@ -105,7 +107,7 @@ export const useContextMenuState = ReactCompilerGating.isReactCompilerEnabled() 
   cResult[2] = sharedValue;
   cResult[3] = obj5;
   tmp5 = obj5;
-}) : (() => {
+}) : (function useContextMenuState() {
   const sharedValue = ReanimatedRexport.useSharedValue(-1);
   const sharedValue1 = ReanimatedRexport.useSharedValue([]);
   const sharedValue2 = ReanimatedRexport.useSharedValue(-1);

@@ -1,6 +1,6 @@
-// === Module 8313: MenuTypes ===
+// === Module 7696: MenuTypes ===
 
-// Module 8313 (MenuTypes)
+// Module 7696 (MenuTypes)
 import size from "module_2" /* 2 */;
 
 const MediaTakedownRegulation = { TIDA: "tida", UK_STOPNCII: "uk_stopncii", BRAZIL_ONLINE_SAFETY_OF_WOMEN: "brazil_online_safety_of_women" };

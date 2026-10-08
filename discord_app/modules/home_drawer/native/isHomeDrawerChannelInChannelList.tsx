@@ -1,20 +1,20 @@
-// === Module 16299: isHomeDrawerChannelInChannelList ===
+// === Module 16559: isHomeDrawerChannelInChannelList ===
 
-// Module 16299 (isHomeDrawerChannelInChannelList)
+// Module 16559 (isHomeDrawerChannelInChannelList)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5077 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5971 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/home_drawer/native/isHomeDrawerChannelInChannelList.tsx");
 
-export const useIsHomeDrawerChannelInChannelList = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useIsHomeDrawerChannelInChannelList = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsHomeDrawerChannelInChannelList() {
   const cResult = c.c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserGuildSettingsStore];
-    const fn = function l() {
+    const fn = function s() {
       return (guild_id) => {
         const result = closure_1_0(closure_1_1[3]).isOptInEnabledForGuild(guild_id.guild_id);
         let result1 = !result;
@@ -35,7 +35,7 @@ export const useIsHomeDrawerChannelInChannelList = ReactCompilerGating.isReactCo
     [tmp4, tmp5, tmp6] = cResult;
   }
   return initialize.useStateFromStores(tmp4, tmp5, tmp6, initialize.statesWillNeverBeEqual);
-}) : (() => {
+}) : (function useIsHomeDrawerChannelInChannelList() {
   const items = [UserGuildSettingsStore];
   return initialize.useStateFromStores(items, () => (guild_id) => {
     const result = closure_1_0(closure_1_1[3]).isOptInEnabledForGuild(guild_id.guild_id);

@@ -1,22 +1,22 @@
-// === Module 8967: PlaintextResolvers ===
+// === Module 9757: PlaintextResolvers ===
 
-// Module 8967 (PlaintextResolvers)
+// Module 9757 (PlaintextResolvers)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4529 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4533 */;
-import useChannelName from "useChannelName" /* 5049 */;
-import SlateUtils from "SlateUtils" /* 7183 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4721 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4725 */;
+import useChannelName from "useChannelName" /* 5417 */;
+import SlateUtils from "SlateUtils" /* 7362 */;
 import _slicedToArray from "module_32" /* 32 */;
-import EmojiStore from "EmojiStore" /* 5645 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5698 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildChannelStore from "GuildChannelStore" /* 4513 */;
-import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import GuildRoleStore from "GuildRoleStore" /* 2106 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
-import UserStore from "UserStore" /* 1377 */;
+import EmojiStore from "EmojiStore" /* 5992 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6039 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildChannelStore from "GuildChannelStore" /* 4705 */;
+import GuildMemberStore from "GuildMemberStore" /* 2124 */;
+import GuildRoleStore from "GuildRoleStore" /* 2118 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 function resolvePlaintextInlineVoid(text, id, id2, arg3) {
@@ -187,9 +187,9 @@ function matchesUser(arg0, arg1, username) {
   }
   return tmp;
 }
-let closure_8 = fn(4513).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_8 = fn(4705).GUILD_SELECTABLE_CHANNELS_KEY;
 const Permissions = fn(1085).Permissions;
-const EmojiIntention = fn(1380).EmojiIntention;
+const EmojiIntention = fn(1392).EmojiIntention;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_text_area/PlaintextResolvers.tsx");
 

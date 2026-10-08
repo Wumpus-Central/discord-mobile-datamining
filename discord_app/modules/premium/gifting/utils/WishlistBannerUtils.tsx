@@ -1,6 +1,6 @@
-// === Module 10543: WishlistBannerUtils ===
+// === Module 10140: WishlistBannerUtils ===
 
-// Module 10543 (WishlistBannerUtils)
+// Module 10140 (WishlistBannerUtils)
 import _mod19 from "module_19" /* 19 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
@@ -71,7 +71,7 @@ const result = size.fileFinishedImporting("modules/premium/gifting/utils/Wishlis
 export { BannerMode };
 export const BANNER_CONFIG_MOBILE = obj2;
 export { getBannerMode };
-export const useWishlistBannerConfig = ReactCompilerGating.isReactCompilerEnabled() ? ((wishlistInDmLength) => {
+export const useWishlistBannerConfig = ReactCompilerGating.isReactCompilerEnabled() ? (function useWishlistBannerConfig(wishlistInDmLength) {
   const obj = c;
   const cResult = obj.c(9);
   ({ totalUnownedWishlistItemCount, displayItems, recipientName } = wishlistInDmLength);
@@ -150,7 +150,7 @@ export const useWishlistBannerConfig = ReactCompilerGating.isReactCompilerEnable
     }
     return tmp9;
   }
-}) : ((totalUnownedWishlistItemCount) => {
+}) : (function useWishlistBannerConfig(totalUnownedWishlistItemCount) {
   totalUnownedWishlistItemCount = totalUnownedWishlistItemCount.totalUnownedWishlistItemCount;
   const wishlistInDmLength = totalUnownedWishlistItemCount.wishlistInDmLength;
   const displayItems = totalUnownedWishlistItemCount.displayItems;

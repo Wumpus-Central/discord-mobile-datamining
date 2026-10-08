@@ -1,12 +1,12 @@
-// === Module 16938: ChannelDetailsLinkedLobby ===
+// === Module 17219: ChannelDetailsLinkedLobby ===
 
-// Module 16938 (ChannelDetailsLinkedLobby)
+// Module 17219 (ChannelDetailsLinkedLobby)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6670 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2127 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6847 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const View = fn(17).View;
 const HelpdeskArticles = fn(1085).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ Fragment: hasOwnProperty, jsxs: metroRequire, jsx: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { alignItems: "center" }, divider: null };
 let size = { height: 1, width: 48, marginTop: 12, backgroundColor: nativeDefault.colors.BORDER_STRONG };
 obj2.divider = size;
@@ -23,7 +23,7 @@ const ReactCompilerGating = fn(558);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsLinkedLobby.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelDetailsLinkedLobby(arg0) {
   const cResult = c.c(15);
   ({ channel, containerStyle } = arg0);
   const tmp4 = closure_8();
@@ -106,7 +106,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[2] = items2;
     tmp7 = items2;
   }
-}) : ((channel) => {
+}) : (function ChannelDetailsLinkedLobby(channel) {
   channel = channel.channel;
   let divider = closure_8();
   let BPDKoA = require;

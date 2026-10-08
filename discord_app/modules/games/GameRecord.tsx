@@ -1,15 +1,15 @@
-// === Module 2008: GameRecord ===
+// === Module 2020: GameRecord ===
 
-// Module 2008 (GameRecord)
-import GlobalUtils from "GlobalUtils" /* 1375 */;
-import AvatarUtils from "AvatarUtils" /* 1402 */;
-import Server from "Server" /* 1985 */;
-import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 2017 */;
-import Record from "Record" /* 1392 */;
-import ApplicationRecord from "ApplicationRecord" /* 2009 */;
+// Module 2020 (GameRecord)
+import GlobalUtils from "GlobalUtils" /* 1387 */;
+import AvatarUtils from "AvatarUtils" /* 1414 */;
+import Server from "Server" /* 1997 */;
+import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 2029 */;
+import Record from "Record" /* 1404 */;
+import ApplicationRecord from "ApplicationRecord" /* 2021 */;
 
 require = fn;
-const createExecutable = fn(2009).createExecutable;
+const createExecutable = fn(2021).createExecutable;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/games/GameRecord.tsx");
 class GameRecord extends tmp2 {
@@ -207,8 +207,8 @@ prototype["getScreenshotURLs"] = function getScreenshotURLs(arg0) {
   const mapped = screenshotUrls.map((item, index) => self.getScreenshotURL(index, closure_0));
   return mapped.filter(GlobalUtils.isNotNullish);
 };
-prototype["getCompanyByRole"] = function getCompanyByRole(DEVELOPER) {
-  closure_0 = DEVELOPER;
+prototype["getCompanyByRole"] = function getCompanyByRole(PUBLISHER) {
+  closure_0 = PUBLISHER;
   const companies = this.companies;
   let found;
   if (companies != null) {

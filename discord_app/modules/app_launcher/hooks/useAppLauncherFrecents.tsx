@@ -1,29 +1,29 @@
-// === Module 11757: useAppLauncherFrecents ===
+// === Module 11823: useAppLauncherFrecents ===
 
-// Module 11757 (useAppLauncherFrecents)
+// Module 11823 (useAppLauncherFrecents)
 import c from "c" /* 576 */;
-import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 6672 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 8826 */;
-import isApplicationAgeRestrictedDefault from "isApplicationAgeRestricted" /* 8958 */;
-import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 8968 */;
-import getPrimaryAppCommand from "getPrimaryAppCommand" /* 9034 */;
+import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 6849 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 9185 */;
+import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 9759 */;
+import isApplicationAgeRestrictedDefault from "isApplicationAgeRestricted" /* 9761 */;
+import getPrimaryAppCommand from "getPrimaryAppCommand" /* 10637 */;
 import noop from "module_19" /* 19 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6609 */;
-import UserStore from "UserStore" /* 1377 */;
-import AppLauncherLastUsedCommandStore from "AppLauncherLastUsedCommandStore" /* 11758 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6786 */;
+import UserStore from "UserStore" /* 1389 */;
+import AppLauncherLastUsedCommandStore from "AppLauncherLastUsedCommandStore" /* 11824 */;
 
 require = fn;
-const FetchState = fn(6609).FetchState;
-const WATCH_YOUTUBE_PROD_APP_ID = fn(2011).WATCH_YOUTUBE_PROD_APP_ID;
-const ApplicationCommandConstants = fn(5795);
+const FetchState = fn(6786).FetchState;
+const WATCH_YOUTUBE_PROD_APP_ID = fn(2023).WATCH_YOUTUBE_PROD_APP_ID;
+const ApplicationCommandConstants = fn(5399);
 const BuiltInSectionId = ApplicationCommandConstants.BuiltInSectionId;
 let filters = { commandTypes: null };
-let items = [fn(1985).ApplicationCommandType.CHAT, fn(1985).ApplicationCommandType.PRIMARY_ENTRY_POINT];
+let items = [fn(1997).ApplicationCommandType.CHAT, fn(1997).ApplicationCommandType.PRIMARY_ENTRY_POINT];
 filters.commandTypes = items;
 const options = { placeholderCount: 0, limit: ApplicationCommandConstants.DISCOVERY_COMMANDS_QUERY_LIMIT, includeFrecency: true };
 fn(558);
 let ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAppLauncherFrecentApps(arg0) {
   filters = c;
   const cResult = filters.c(11);
   ({ context, onlyActivityApps, allowCommandFetch, includeAuthorizedAppsAndFetch } = arg0);
@@ -67,7 +67,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = context;
   cResult[2] = obj5;
   tmp3 = obj5;
-}) : ((context) => {
+}) : (function useAppLauncherFrecentApps(context) {
   context = context.context;
   ({ onlyActivityApps, allowCommandFetch, includeAuthorizedAppsAndFetch } = context);
   filters = ApplicationCommandQueryApiAll;
@@ -76,7 +76,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return obj3;
 });
 ReactCompilerGating = fn(558);
-let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((includeAuthorizedAppsAndFetch) => {
+let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFrecentApps(includeAuthorizedAppsAndFetch) {
   const cResult = context(576).c(33);
   ({ sectionDescriptors, context } = includeAuthorizedAppsAndFetch);
   includeAuthorizedAppsAndFetch = includeAuthorizedAppsAndFetch.includeAuthorizedAppsAndFetch;
@@ -204,7 +204,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((includeAuthori
         }
       }
       dependencyMap = tmp20;
-      const sortApplicationsViaFrecency = context(11759).useSortApplicationsViaFrecency(cResult[10], tmp16);
+      const sortApplicationsViaFrecency = context(11825).useSortApplicationsViaFrecency(cResult[10], tmp16);
       const _Symbol = Symbol;
       if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
         class T {
@@ -214,19 +214,14 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((includeAuthori
           }
         }
         const items2 = [UserStore];
-        class M {
+        class A {
           constructor() {
-            currentUser = closure_1_7.getCurrentUser();
-            nsfwAllowed = undefined;
-            if (currentUser != null) {
-              nsfwAllowed = currentUser.nsfwAllowed;
-            }
-            return nsfwAllowed;
+            return closure_1_5.getFetchState();
           }
         }
         cResult[14] = items2;
-        cResult[15] = M;
-        let tmp22 = M;
+        cResult[15] = tmp23;
+        let tmp22 = tmp23;
         const tmp21 = items2;
       } else {
         class T {
@@ -237,58 +232,35 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((includeAuthori
         }
         tmp22 = cResult[15];
       }
-      const tmpResult5 = context(11759);
+      const tmpResult5 = context(11825);
       stateFromStores1 = context(504).useStateFromStores(tmp21, tmp22);
       if (cResult[16] !== stateFromStores1) {
-        class U {
+        class T {
           constructor(arg0) {
-            tmp = false === closure_4;
-            if (tmp) {
-              tmp2 = includeAuthorizedAppsAndFetch;
-              tmp3 = closure_1;
-              tmp4 = closure_3;
-              tmp = closure_1(closure_3[14])(includeAuthorizedAppsAndFetch.id);
-            }
-            return !tmp;
+            tmp2 = includeAuthorizedAppsAndFetch.id !== closure_1_10.FRECENCY && includeAuthorizedAppsAndFetch.id !== tmp.BUILT_IN;
+            return tmp2;
           }
         }
         cResult[16] = stateFromStores1;
-        class M {
+        class A {
           constructor() {
-            currentUser = closure_1_7.getCurrentUser();
-            nsfwAllowed = undefined;
-            if (currentUser != null) {
-              nsfwAllowed = currentUser.nsfwAllowed;
-            }
-            return nsfwAllowed;
+            return closure_1_5.getFetchState();
           }
         }
-        cResult[17] = U;
+        cResult[17] = tmp26;
       } else {
-        class U {
+        class T {
           constructor(arg0) {
-            tmp = false === closure_4;
-            if (tmp) {
-              tmp2 = includeAuthorizedAppsAndFetch;
-              tmp3 = closure_1;
-              tmp4 = closure_3;
-              tmp = closure_1(closure_3[14])(includeAuthorizedAppsAndFetch.id);
-            }
-            return !tmp;
+            tmp2 = includeAuthorizedAppsAndFetch.id !== closure_1_10.FRECENCY && includeAuthorizedAppsAndFetch.id !== tmp.BUILT_IN;
+            return tmp2;
           }
         }
       }
       if (includeAuthorizedAppsAndFetch.onlyActivityApps) {
-        class U {
+        class T {
           constructor(arg0) {
-            tmp = false === closure_4;
-            if (tmp) {
-              tmp2 = includeAuthorizedAppsAndFetch;
-              tmp3 = closure_1;
-              tmp4 = closure_3;
-              tmp = closure_1(closure_3[14])(includeAuthorizedAppsAndFetch.id);
-            }
-            return !tmp;
+            tmp2 = includeAuthorizedAppsAndFetch.id !== closure_1_10.FRECENCY && includeAuthorizedAppsAndFetch.id !== tmp.BUILT_IN;
+            return tmp2;
           }
         }
         if (cResult[29] !== context) {
@@ -312,14 +284,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((includeAuthori
             }
           }
           cResult[29] = context;
-          class M {
+          class A {
             constructor() {
-              currentUser = closure_1_7.getCurrentUser();
-              nsfwAllowed = undefined;
-              if (currentUser != null) {
-                nsfwAllowed = currentUser.nsfwAllowed;
-              }
-              return nsfwAllowed;
+              return closure_1_5.getFetchState();
             }
           }
           cResult[30] = H;
@@ -366,17 +333,12 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((includeAuthori
             }
           }
           cResult[31] = tmp20;
-          class M {
+          class A {
             constructor() {
-              currentUser = closure_1_7.getCurrentUser();
-              nsfwAllowed = undefined;
-              if (currentUser != null) {
-                nsfwAllowed = currentUser.nsfwAllowed;
-              }
-              return nsfwAllowed;
+              return closure_1_5.getFetchState();
             }
           }
-          cResult[32] = tmp31;
+          cResult[32] = tmp33;
         } else {
           class H {
             constructor(arg0) {
@@ -398,22 +360,17 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((includeAuthori
             }
           }
         }
-        class M {
+        class A {
           constructor() {
-            currentUser = closure_1_7.getCurrentUser();
-            nsfwAllowed = undefined;
-            if (currentUser != null) {
-              nsfwAllowed = currentUser.nsfwAllowed;
-            }
-            return nsfwAllowed;
+            return closure_1_5.getFetchState();
           }
         }
-        found = arr7.filter(tmp31);
-        const found1 = found.filter(U);
+        found = arr7.filter(tmp33);
+        const found1 = found.filter(tmp26);
         cResult[24] = context;
         cResult[25] = tmp20;
         cResult[26] = sortApplicationsViaFrecency;
-        cResult[27] = U;
+        cResult[27] = tmp26;
         cResult[28] = found1;
       } else {
         class H {
@@ -456,17 +413,12 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((includeAuthori
             }
           }
           cResult[22] = tmp20;
-          class M {
+          class A {
             constructor() {
-              currentUser = closure_1_7.getCurrentUser();
-              nsfwAllowed = undefined;
-              if (currentUser != null) {
-                nsfwAllowed = currentUser.nsfwAllowed;
-              }
-              return nsfwAllowed;
+              return closure_1_5.getFetchState();
             }
           }
-          cResult[23] = tmp26;
+          cResult[23] = tmp28;
         } else {
           class H {
             constructor(arg0) {
@@ -488,26 +440,21 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((includeAuthori
             }
           }
         }
-        const found2 = sortApplicationsViaFrecency.filter(tmp26);
-        class M {
+        const found2 = sortApplicationsViaFrecency.filter(tmp28);
+        class A {
           constructor() {
-            currentUser = closure_1_7.getCurrentUser();
-            nsfwAllowed = undefined;
-            if (currentUser != null) {
-              nsfwAllowed = currentUser.nsfwAllowed;
-            }
-            return nsfwAllowed;
+            return closure_1_5.getFetchState();
           }
         }
         cResult[18] = tmp20;
         cResult[19] = sortApplicationsViaFrecency;
-        cResult[20] = U;
-        cResult[21] = tmp28;
+        cResult[20] = tmp26;
+        cResult[21] = tmp30;
       }
       const tmpResult6 = context(504);
     }
   }
-  class F {
+  class S {
     constructor() {
       tmp = closure_1;
       if (closure_1) {
@@ -527,12 +474,12 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((includeAuthori
   const items3 = [includeAuthorizedAppsAndFetch, stateFromStores];
   cResult[2] = stateFromStores;
   cResult[3] = includeAuthorizedAppsAndFetch;
-  cResult[4] = F;
+  cResult[4] = S;
   cResult[5] = items3;
   tmp9 = items3;
-  tmp8 = F;
+  tmp8 = S;
   const tmpResult = context(504);
-}) : ((onlyActivityApps) => {
+}) : (function useFrecentApps(onlyActivityApps) {
   ({ sectionDescriptors, context } = onlyActivityApps);
   onlyActivityApps = onlyActivityApps.onlyActivityApps;
   const includeAuthorizedAppsAndFetch = onlyActivityApps.includeAuthorizedAppsAndFetch;
@@ -623,7 +570,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((includeAuthori
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/hooks/useAppLauncherFrecents.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAppLauncherFrecentCommandsAndApps(arg0) {
   filters = filterSection(576);
   const cResult = filters.c(29);
   ({ context, onlyActivityApps } = arg0);
@@ -667,14 +614,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
     const items1 = [AppLauncherLastUsedCommandStore];
-    class F {
+    class S {
       constructor() {
         return closure_1_8.getLastUsedCommandId();
       }
     }
     cResult[5] = items1;
-    cResult[6] = F;
-    let tmp12 = F;
+    cResult[6] = S;
+    let tmp12 = S;
     const tmp11 = items1;
   } else {
     class A {
@@ -701,7 +648,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         return;
       }
     }
-    class F {
+    class S {
       constructor() {
         return closure_1_8.getLastUsedCommandId();
       }
@@ -723,55 +670,51 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
     if (cResult[16] !== stateFromStores) {
-      class A {
-        constructor() {
-          tmp = filterSection(BuiltInSectionId.FRECENCY);
-          return;
+      class L {
+        constructor(arg0) {
+          return arg0.id === closure_1;
         }
       }
       cResult[16] = stateFromStores;
-      class F {
+      class S {
         constructor() {
           return closure_1_8.getLastUsedCommandId();
         }
       }
-      cResult[17] = tmp17;
+      cResult[17] = L;
     } else {
-      class A {
-        constructor() {
-          tmp = filterSection(BuiltInSectionId.FRECENCY);
-          return;
+      class L {
+        constructor(arg0) {
+          return arg0.id === closure_1;
         }
       }
     }
-    const found = commands.find(tmp17);
+    const found = commands.find(L);
     cResult[13] = commands;
     cResult[14] = stateFromStores;
     cResult[15] = found;
   }
   if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-    class A {
-      constructor() {
-        tmp = filterSection(BuiltInSectionId.FRECENCY);
-        return;
+    class L {
+      constructor(arg0) {
+        return arg0.id === closure_1;
       }
     }
-    cResult[12] = tmp20;
-    class F {
+    cResult[12] = tmp19;
+    class S {
       constructor() {
         return closure_1_8.getLastUsedCommandId();
       }
     }
   } else {
-    class A {
-      constructor() {
-        tmp = filterSection(BuiltInSectionId.FRECENCY);
-        return;
+    class L {
+      constructor(arg0) {
+        return arg0.id === closure_1;
       }
     }
   }
   const tmpResult = filterSection(504);
-}) : ((arg0) => {
+}) : (function useAppLauncherFrecentCommandsAndApps(arg0) {
   ({ context, onlyActivityApps } = arg0);
   let commandsByActiveSection;
   filterSection = undefined;

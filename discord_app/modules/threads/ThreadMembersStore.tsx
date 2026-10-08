@@ -1,11 +1,11 @@
-// === Module 7279: ThreadMembersStore ===
+// === Module 7879: ThreadMembersStore ===
 
-// Module 7279 (ThreadMembersStore)
+// Module 7879 (ThreadMembersStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ChannelRecord from "ChannelRecord" /* 2055 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
+import ChannelRecord from "ChannelRecord" /* 2067 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
 import size from "module_2" /* 2 */;
 
 function updateFromGuild(threads) {

@@ -1,35 +1,35 @@
-// === Module 11468: GuildEnableCommunicationAlert ===
+// === Module 11452: GuildEnableCommunicationAlert ===
 
-// Module 11468 (GuildEnableCommunicationAlert)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5048 */;
-import useUserCommunicationDisabledDefault from "useUserCommunicationDisabled" /* 7647 */;
-import CountDownDefault from "CountDown" /* 10680 */;
+// Module 11452 (GuildEnableCommunicationAlert)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5405 */;
+import useUserCommunicationDisabledDefault from "useUserCommunicationDisabled" /* 7968 */;
+import CountDownDefault from "CountDown" /* 9593 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
-const useMountEffectDefault = tmp11(5597);
+const useMountEffectDefault = tmp11(5392);
 const require = fn;
 let closure_3 = ["guildId", "userId", "onCancel"];
 const View = fn(17).View;
-const GuildDisableCommunicationConstants = fn(2114);
+const GuildDisableCommunicationConstants = fn(2126);
 ({ CLEAR_COMMUNICATION_DISABLED_MODAL_NAME: closure_9, GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK: c10 } = GuildDisableCommunicationConstants);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_11, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_14 = createStyles.createStyles({ wrapper: { padding: 16 }, body: { paddingTop: 16 }, description: { lineHeight: 18 }, cta: { paddingTop: 8 }, countdown: { fontFamily: Fonts.PRIMARY_SEMIBOLD } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_communication_disabled/native/GuildEnableCommunicationAlert.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEnableCommunicationAlert(guildId) {
   const cResult = require("c").c(43);
   if (cResult[0] !== guildId) {
     guildId = guildId.guildId;
@@ -56,7 +56,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
         let tmp14 = cResult[10];
       }
       useMountEffectDefault(tmp14);
-      class S {
+      class U {
         constructor() {
           obj = closure_1(closure_2[14]);
           obj1 = { type: closure_9, guild_id: closure_0, other_user_id: closure_1 };
@@ -64,22 +64,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
           return;
         }
       }
-      class U {
-        constructor() {
-          user = closure_8.getUser(closure_1);
-          obj = closure_1(closure_2[16]);
-          str = obj.getName(closure_0, null, user);
-          if (str == null) {
-            str = "";
-          }
-          return str;
+      function getUsername() {
+        const user = UserStore.getUser(closure_1);
+        let str = NicknameUtilsDefault.getName(closure_0, null, user);
+        if (str == null) {
+          str = "";
         }
+        return str;
       }
       cResult[11] = tmp4;
       cResult[12] = tmp6;
-      cResult[13] = U;
+      cResult[13] = getUsername;
     }
-    class S {
+    class U {
       constructor() {
         obj = closure_1(closure_2[14]);
         obj1 = { type: closure_9, guild_id: closure_0, other_user_id: closure_1 };
@@ -89,22 +86,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     }
     cResult[8] = tmp4;
     cResult[9] = tmp6;
-    cResult[10] = S;
-    tmp14 = S;
+    cResult[10] = U;
+    tmp14 = U;
   }
-  const fn = function b() {
+  function countdown() {
     let num = 0;
     if (null != first) {
       const _Date = Date;
       num = new Date(first);
     }
     return __initData(CountDownDefault, { style: countdown.countdown, deadline: num, withUnits: true });
-  };
+  }
   cResult[5] = first;
   cResult[6] = tmp10.countdown;
-  cResult[7] = fn;
+  cResult[7] = countdown;
   let obj = require("c");
-}) : ((guildId) => {
+}) : (function GuildEnableCommunicationAlert(guildId) {
   guildId = guildId.guildId;
   const userId = guildId.userId;
   const merged = Object.assign(guildId, Object.assign({ guildId: 0, userId: 0, onCancel: 0 }));
@@ -135,7 +132,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
           } else {
             v1 = 1;
             dependencyMap = 1;
-            const obj5 = { value: v1(11467).setCommunicationDisabledDuration(guildId, userId), done: false };
+            const obj5 = { value: v1(11451).setCommunicationDisabledDuration(guildId, userId), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -149,8 +146,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
           const obj7 = { key: "GUILD_ENABLE_COMMUNICATION_SUCCESS", content: null, icon: null };
           const intl = tmp4(1126).intl;
           obj7.content = intl.string(tmp4(1126).t["/Mmbfv"]);
-          obj7.icon = v1(4811);
-          v1(4574).open(obj7);
+          obj7.icon = v1(5005);
+          v1(4766).open(obj7);
           dependencyMap = 3;
           return { value: "IconComponent", done: null };
         }
@@ -162,8 +159,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   };
   const tmp2 = closure_14();
   dependencyMap = tmp2;
-  closure_3 = _slicedToArray(userId(7647)(userId, guildId), 1)[0];
-  userId(5597)(() => {
+  closure_3 = _slicedToArray(userId(7968)(userId, guildId), 1)[0];
+  userId(5392)(() => {
     AnalyticsUtilsDefault.track(constants.OPEN_MODAL, { type, guild_id: guildId, other_user_id: userId });
   });
   let obj = {};
@@ -195,8 +192,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   let obj3 = { style: tmp2.description, variant: "text-sm/medium", children: null };
   const intl4 = tmp9(1126).intl;
   const user = UserStore.getUser(userId);
-  const tmp7 = userId(5790);
-  let str = userId(5048).getName(guildId, null, user);
+  const tmp7 = userId(5394);
+  let str = userId(5405).getName(guildId, null, user);
   if (str == null) {
     str = "";
   }
@@ -211,14 +208,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       return __initData(CountDownDefault, { style: countdown.countdown, deadline: num, withUnits: true });
     }
   });
-  const items = [closure_12(guildId(4892).Text, obj3), ];
+  const items = [closure_12(guildId(5086).Text, obj3), ];
   let obj5 = { style: null, variant: "text-sm/medium", children: null };
   const items1 = [, ];
   ({ cta: arr2[0], description: arr2[1] } = tmp2);
   obj5.style = items1;
   const intl5 = tmp9(1126).intl;
   obj5.children = intl5.format(guildId(1126).t.KtENkK, { link });
-  items[1] = closure_12(guildId(4892).Text, obj5);
+  items[1] = closure_12(guildId(5086).Text, obj5);
   obj2.children = items;
   obj.children = closure_13(View, obj2);
   return closure_12(tmp7, obj);

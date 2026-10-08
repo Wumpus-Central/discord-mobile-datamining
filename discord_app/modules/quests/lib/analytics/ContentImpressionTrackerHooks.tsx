@@ -1,16 +1,16 @@
-// === Module 10929: ContentImpressionTrackerHooks ===
+// === Module 10580: ContentImpressionTrackerHooks ===
 
-// Module 10929 (ContentImpressionTrackerHooks)
+// Module 10580 (ContentImpressionTrackerHooks)
 import c from "c" /* 576 */;
-import AdCreativeType from "AdCreativeType" /* 5637 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7225 */;
-import QuestImpressionContext from "QuestImpressionContext" /* 10930 */;
+import AdCreativeType from "AdCreativeType" /* 5984 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7404 */;
+import QuestImpressionContext from "QuestImpressionContext" /* 10581 */;
 import noop from "module_19" /* 19 */;
-import QuestStore from "QuestStore" /* 7200 */;
+import QuestStore from "QuestStore" /* 7379 */;
 
 require = fn;
 let ReactCompilerGating = fn(558);
-let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1) => {
+let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAdContentIds(id, arg1) {
   const cResult = c.c(8);
   if (null == arg1) {
     if (null == id) {
@@ -60,7 +60,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1) => {
     tmp2 = cResult[1];
   }
   return tmp2;
-}) : ((arg0, arg1) => {
+}) : (function useAdContentIds(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   let items = [arg0, arg1];
@@ -83,7 +83,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1) => {
 });
 fn(558);
 ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((questOrQuests) => {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAdContentImpressionTrackerProps(questOrQuests) {
   const cResult = c.c(11);
   questOrQuests = undefined;
   if ("questOrQuests" in questOrQuests) {
@@ -137,7 +137,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((questOrQuests) => {
   cResult[1] = questOrQuests.questContent;
   cResult[2] = combined;
   tmp8 = combined;
-}) : ((questOrQuests) => {
+}) : (function useAdContentImpressionTrackerProps(questOrQuests) {
   _require = questOrQuests;
   questOrQuests = undefined;
   if ("questOrQuests" in questOrQuests) {
@@ -164,22 +164,26 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((questOrQuests) => {
   }, items);
 });
 ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => noop.useContext(QuestImpressionContext.QuestImpressionContext)) : (() => noop.useContext(QuestImpressionContext.QuestImpressionContext));
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useQuestImpressionRef() {
+  return noop.useContext(QuestImpressionContext.QuestImpressionContext);
+}) : (function useQuestImpressionRef() {
+  return noop.useContext(QuestImpressionContext.QuestImpressionContext);
+});
 let closure_6 = tmp4;
 ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
-const useQuestImpression = () => {
+function useQuestImpression() {
   const tmp = closure_6();
   let current;
   if (tmp != null) {
     current = tmp.current;
   }
   return current;
-};
+}
 ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
 ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((adContentIds) => {
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useQuestStatusChanged(adContentIds) {
   let obj = adContentIds;
   const cResult = adContentIds(576).c(7);
   adContentIds = adContentIds.adContentIds;
@@ -198,9 +202,9 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((adContentIds) => {
     }
     const stateFromStores = obj(504).useStateFromStores(first, tmp5, tmp6);
     if (null == stateFromStores) {
-      return null !== adCreativeType(7957)(null);
+      return null !== adCreativeType(5928)(null);
     } else if (cResult[5] !== stateFromStores) {
-      obj = obj(7225);
+      obj = obj(7404);
       const questStatus = obj.getQuestStatus(stateFromStores);
       cResult[5] = stateFromStores;
       cResult[6] = questStatus;
@@ -225,7 +229,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((adContentIds) => {
   tmp6 = items1;
   tmp5 = fn;
   const obj2 = adContentIds(576);
-}) : ((adContentIds) => {
+}) : (function useQuestStatusChanged(adContentIds) {
   adContentIds = adContentIds.adContentIds;
   const adCreativeType = adContentIds.adCreativeType;
   const items = [QuestStore];
@@ -251,7 +255,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((adContentIds) => {
   return memo !== adCreativeType(stateFromStores[7])(memo);
 });
 ReactCompilerGating = fn(558);
-const tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGetQuestImpressionId() {
   const cResult = c.c(2);
   const tmp2 = closure_6();
   if (cResult[0] !== tmp2) {
@@ -272,7 +276,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp3 = cResult[1];
   }
   return tmp3;
-}) : (() => {
+}) : (function useGetQuestImpressionId() {
   const tmp = closure_6();
   const items = [tmp];
   return noop.useCallback(() => {
@@ -286,8 +290,8 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     return id;
   }, items);
 });
-const fn2 = () => {
-  if (typeof fn === "function") {
+function useQuestImpressionId() {
+  if (typeof useQuestImpression === "function") {
     const tmp2 = closure_6();
     let current;
     if (tmp2 != null) {
@@ -301,7 +305,7 @@ const fn2 = () => {
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-};
+}
 const size = fn(2);
 const result2 = size.fileFinishedImporting("modules/quests/lib/analytics/ContentImpressionTrackerHooks.tsx");
 
@@ -309,9 +313,9 @@ export const useAdContentImpressionTrackerProps = tmp2;
 export const useQuestStatusChanged = tmp3;
 export const useQuestImpressionRef = tmp4;
 export { useQuestImpression };
-export const useQuestImpressionId = fn2;
+export { useQuestImpressionId };
 export const useGetQuestImpressionId = tmp7;
-export const useGetOptionalQuestImpressionId = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useGetOptionalQuestImpressionId = ReactCompilerGating.isReactCompilerEnabled() ? (function useGetOptionalQuestImpressionId() {
   const cResult = c.c(2);
   const context = noop.useContext(QuestImpressionContext.QuestImpressionContext);
   if (cResult[0] !== context) {
@@ -332,7 +336,7 @@ export const useGetOptionalQuestImpressionId = ReactCompilerGating.isReactCompil
     tmp3 = cResult[1];
   }
   return tmp3;
-}) : (() => {
+}) : (function useGetOptionalQuestImpressionId() {
   const context = noop.useContext(QuestImpressionContext.QuestImpressionContext);
   const items = [context];
   return noop.useCallback(() => {

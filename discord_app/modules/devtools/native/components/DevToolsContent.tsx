@@ -1,21 +1,21 @@
-// === Module 15639: DevToolsContent ===
+// === Module 15919: DevToolsContent ===
 
-// Module 15639 (DevToolsContent)
+// Module 15919 (DevToolsContent)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import HapticUtils from "HapticUtils" /* 4861 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Pressables from "Pressables" /* 5916 */;
-import DevToolsNavigator from "DevToolsNavigator" /* 14422 */;
-import useSortedDevToolsScreens from "useSortedDevToolsScreens" /* 15640 */;
-import ArrowSmallUpIcon from "ArrowSmallUpIcon" /* 15641 */;
-import ArrowSmallDownIcon from "ArrowSmallDownIcon" /* 15643 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import HapticUtils from "HapticUtils" /* 5055 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import Pressables from "Pressables" /* 6189 */;
+import DevToolsNavigator from "DevToolsNavigator" /* 14648 */;
+import useSortedDevToolsScreens from "useSortedDevToolsScreens" /* 15920 */;
+import ArrowSmallUpIcon from "ArrowSmallUpIcon" /* 15921 */;
+import ArrowSmallDownIcon from "ArrowSmallDownIcon" /* 15923 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 11095 */;
-import ExperimentStore from "ExperimentStore" /* 4782 */;
-import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 10460 */;
+import ExperimentStore from "ExperimentStore" /* 4976 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1258 */;
 
 const require = globalThis.__r;
 const useSortedDevToolsScreensDefault = useSortedDevToolsScreens;
@@ -25,7 +25,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { devToolsContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: nativeDefault.space.PX_16 }, sortingIcons: null, button: null, disabledButton: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: nativeDefault.space.PX_16 };
 obj.sortingIcons = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
@@ -34,11 +34,11 @@ obj.button = size;
 obj.disabledButton = { opacity: 0.5 };
 let closure_12 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
-let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDevToolsContentSublabels() {
   const cResult = stateFromStores(576).c(13);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [BuildOverrideStore];
-    const fn = function o() {
+    const fn = function n() {
       const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
       let id;
       if (overrides != null) {
@@ -75,14 +75,12 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const stateFromStores1 = stateFromStores(504).useStateFromStores(tmp8, tmp9);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [ApexExperimentStore];
-    class S {
-      constructor() {
-        return Object.keys(closure_1_9.getClientOverrides()).length;
-      }
-    }
+    const fn3 = function h() {
+      return Object.keys(clientOverrides.getClientOverrides()).length;
+    };
     cResult[4] = items2;
-    cResult[5] = S;
-    let tmp13 = S;
+    cResult[5] = fn3;
+    let tmp13 = fn3;
     let tmp12 = items2;
   } else {
     tmp12 = cResult[4];
@@ -104,55 +102,35 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       let tmp16 = cResult[12];
     }
     const mapped = arr4.map(tmp16);
-    class S {
-      constructor() {
-        return Object.keys(closure_1_9.getClientOverrides()).length;
-      }
-    }
+    cResult[6] = stateFromStores;
     cResult[7] = arr4;
     cResult[8] = sum;
     cResult[9] = mapped;
   }
-  class C {
-    constructor(arg0) {
-      first = closure_3(arg0, 1)[0];
-      if ("buildOverride" === first) {
-        tmp6 = null;
-        tmp7 = undefined;
-        if (null != closure_0) {
-          tmp8 = jsx;
-          tmp9 = closure_14;
-          obj1 = { label: "Build override: ", value: null };
-          obj1.value = tmp5;
-          tmp7 = jsx(closure_14, obj1, first);
-        }
-        return tmp7;
-      } else {
-        str = "experiments";
-        if ("experiments" === first) {
-          str2 = closure_1;
-          num = 0;
-          tmp2 = undefined;
-          if (closure_1 > 0) {
-            tmp3 = jsx;
-            tmp4 = closure_14;
-            obj = { label: "Experiments overridden: ", value: null };
-            obj.value = str2.toString();
-            tmp2 = jsx(closure_14, obj, first);
-          }
-          return tmp2;
-        } else {
-          return;
-        }
+  const fn4 = function _(arg0) {
+    const first = _slicedToArray(arg0, 1)[0];
+    if ("buildOverride" === first) {
+      let tmp7;
+      if (null != stateFromStores) {
+        const obj2 = { label: "Build override: ", value: tmp5 };
+        tmp7 = collapsed(memoResult, obj2, first);
       }
+      return tmp7;
+    } else if ("experiments" === first) {
+      let tmp2;
+      if (sum > 0) {
+        const obj = { label: "Experiments overridden: ", value: sum.toString() };
+        tmp2 = collapsed(memoResult, obj, first);
+      }
+      return tmp2;
     }
-  }
+  };
   cResult[10] = stateFromStores;
   cResult[11] = sum;
-  cResult[12] = C;
-  tmp16 = C;
+  cResult[12] = fn4;
+  tmp16 = fn4;
   const tmpResult4 = stateFromStores(504);
-}) : (() => {
+}) : (function useDevToolsContentSublabels() {
   const items = [BuildOverrideStore];
   _require = require("initialize").useStateFromStores(items, () => {
     const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
@@ -178,26 +156,26 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       let tmp7;
       if (null != closure_0) {
         const obj2 = { label: "Build override: ", value: tmp5 };
-        tmp7 = v65535(memoResult, obj2, tmp);
+        tmp7 = collapsed(memoResult, obj2, tmp);
       }
       return tmp7;
     } else if ("experiments" === tmp) {
       let tmp2;
       if (closure_1 > 0) {
         const obj = { label: "Experiments overridden: ", value: closure_1.toString() };
-        tmp2 = v65535(memoResult, obj, tmp);
+        tmp2 = collapsed(memoResult, obj, tmp);
       }
       return tmp2;
     }
   });
 });
 ReactCompilerGating = fn(558);
-const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function DevToolsContentSubLabel(arg0) {
   const cResult = c.c(5);
   ({ label, value } = arg0);
   if (cResult[0] !== value) {
     const obj2 = { variant: "text-xs/semibold", children: value };
-    const tmp6 = v65535(Text_Text.Text, obj2);
+    const tmp6 = collapsed(Text_Text.Text, obj2);
     cResult[0] = value;
     cResult[1] = tmp6;
     let tmp4 = tmp6;
@@ -218,21 +196,21 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((ar
   cResult[3] = tmp4;
   cResult[4] = tmp8;
   tmp7 = tmp8;
-}) : ((arg0) => {
+}) : (function DevToolsContentSubLabel(arg0) {
   ({ label, value } = arg0);
   const obj = { variant: "text-xs/medium", color: "text-subtle", children: null };
-  const items = [label, v65535(Text_Text.Text, { variant: "text-xs/semibold", children: value })];
+  const items = [label, collapsed(Text_Text.Text, { variant: "text-xs/semibold", children: value })];
   obj.children = items;
   return closure_1_11(Text_Text.Text, obj);
 }));
 ReactCompilerGating = fn(558);
-let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((screenKey) => {
+let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function DevToolsContentSortButtons(screenKey) {
   const cResult = screenKey(576).c(24);
   screenKey = screenKey.screenKey;
   ({ start, end } = screenKey);
   const tmp4 = closure_12();
   if (cResult[0] !== screenKey) {
-    const fn = function n() {
+    const fn = function o() {
       const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
       useSortedDevToolsScreens.updateSortOrder(screenKey, "up");
     };
@@ -252,7 +230,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((screenKey) => 
     }
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp10 = closure_10(tmp(15641).ArrowSmallUpIcon, {});
+      const tmp10 = closure_10(tmp(15921).ArrowSmallUpIcon, {});
       cResult[5] = tmp10;
       let tmp8 = tmp10;
     } else {
@@ -261,7 +239,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((screenKey) => 
     if (cResult[6] === start) {
       if (cResult[7] === tmp5) {
         if (cResult[10] !== screenKey) {
-          class T {
+          class C {
             constructor() {
               obj = closure_0(closure_2[15]);
               result = obj.triggerHapticFeedback(closure_0(closure_2[15]).HapticFeedbackTypes.IMPACT_MEDIUM);
@@ -271,9 +249,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((screenKey) => 
             }
           }
           cResult[10] = screenKey;
-          cResult[11] = T;
+          cResult[11] = C;
         } else {
-          class T {
+          class C {
             constructor() {
               obj = closure_0(closure_2[15]);
               result = obj.triggerHapticFeedback(closure_0(closure_2[15]).HapticFeedbackTypes.IMPACT_MEDIUM);
@@ -284,7 +262,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((screenKey) => 
           }
         }
         if (end) {
-          class T {
+          class C {
             constructor() {
               obj = closure_0(closure_2[15]);
               result = obj.triggerHapticFeedback(closure_0(closure_2[15]).HapticFeedbackTypes.IMPACT_MEDIUM);
@@ -295,7 +273,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((screenKey) => 
           }
         }
         if (cResult[12] === tmp4.button) {
-          class T {
+          class C {
             constructor() {
               obj = closure_0(closure_2[15]);
               result = obj.triggerHapticFeedback(closure_0(closure_2[15]).HapticFeedbackTypes.IMPACT_MEDIUM);
@@ -306,7 +284,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((screenKey) => 
           }
           const _Symbol2 = Symbol;
           if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-            class T {
+            class C {
               constructor() {
                 obj = closure_0(closure_2[15]);
                 result = obj.triggerHapticFeedback(closure_0(closure_2[15]).HapticFeedbackTypes.IMPACT_MEDIUM);
@@ -315,11 +293,11 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((screenKey) => 
                 return;
               }
             }
-            const tmp18 = closure_10(tmp(15643).ArrowSmallDownIcon, {});
+            const tmp18 = closure_10(tmp(15923).ArrowSmallDownIcon, {});
             cResult[15] = tmp18;
             const tmp17 = tmp18;
           } else {
-            class T {
+            class C {
               constructor() {
                 obj = closure_0(closure_2[15]);
                 result = obj.triggerHapticFeedback(closure_0(closure_2[15]).HapticFeedbackTypes.IMPACT_MEDIUM);
@@ -330,7 +308,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((screenKey) => 
             }
           }
           if (cResult[16] === end) {
-            class T {
+            class C {
               constructor() {
                 obj = closure_0(closure_2[15]);
                 result = obj.triggerHapticFeedback(closure_0(closure_2[15]).HapticFeedbackTypes.IMPACT_MEDIUM);
@@ -340,10 +318,10 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((screenKey) => 
               }
             }
           }
-          const obj2 = { onPress: T, disabled: end, style: tmp16, accessibilityRole: "button", accessibilityLabel: "Shift down", children: tmp17 };
-          const tmp21 = closure_10(tmp(5916).PressableOpacity, obj2);
+          const obj2 = { onPress: C, disabled: end, style: tmp16, accessibilityRole: "button", accessibilityLabel: "Shift down", children: tmp17 };
+          const tmp21 = closure_10(tmp(6189).PressableOpacity, obj2);
           cResult[16] = end;
-          cResult[17] = T;
+          cResult[17] = C;
           cResult[18] = tmp16;
           cResult[19] = tmp21;
         }
@@ -354,7 +332,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((screenKey) => 
       }
     }
     const obj3 = { onPress: tmp5, disabled: start, style: tmp6, accessibilityRole: "button", accessibilityLabel: "Shift up", children: tmp8 };
-    const tmp13 = closure_10(tmp(5916).PressableOpacity, obj3);
+    const tmp13 = closure_10(tmp(6189).PressableOpacity, obj3);
     cResult[6] = start;
     cResult[7] = tmp5;
     cResult[8] = tmp6;
@@ -366,7 +344,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((screenKey) => 
   cResult[4] = items1;
   tmp6 = items1;
   let obj = screenKey(576);
-}) : ((arg0) => {
+}) : (function DevToolsContentSortButtons(arg0) {
   ({ screenKey: require, start, end } = arg0);
   const tmp = closure_12();
   let obj = { style: tmp.sortingIcons, children: null };
@@ -416,7 +394,7 @@ let obj4 = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/devtools/native/components/DevToolsContent.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function DevToolsContent(arg0) {
   const cResult = navigation(first[10]).c(18);
   ({ title, embedded } = arg0);
   const tmp4 = closure_12();
@@ -536,7 +514,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   tmp12 = fn;
   let obj2 = navigation(first[19]);
   tmp6 = importDefault;
-}) : ((arg0) => {
+}) : (function DevToolsContent(arg0) {
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;

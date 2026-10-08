@@ -1,11 +1,11 @@
-// === Module 17401: MediaPlaybackPanelContainer ===
+// === Module 17683: MediaPlaybackPanelContainer ===
 
-// Module 17401 (MediaPlaybackPanelContainer)
+// Module 17683 (MediaPlaybackPanelContainer)
 import c from "c" /* 576 */;
-import _mod4500 from "module_4500" /* 4500 */;
-import MediaPlayerManager from "MediaPlayerManager" /* 14396 */;
-import MediaPlaybackPanelControllerDefault from "MediaPlaybackPanelController" /* 17402 */;
-import MediaPlaybackPanelUIDefault from "MediaPlaybackPanelUI" /* 17404 */;
+import _mod4692 from "module_4692" /* 4692 */;
+import MediaPlayerManager from "MediaPlayerManager" /* 14622 */;
+import MediaPlaybackPanelControllerDefault from "MediaPlaybackPanelController" /* 17684 */;
+import MediaPlaybackPanelUIDefault from "MediaPlaybackPanelUI" /* 17686 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_panel/native/MediaPlaybackPanelContainer.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function MediaPlaybackPanelContainer() {
   const cResult = c.c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function t(showPip) {
@@ -66,7 +66,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     first = cResult[0];
   }
   const tmpResult = MediaPlayerManager;
-  const mediaPlayerManagerStore = tmpResult.useMediaPlayerManagerStore(_mod4500.useShallow(first));
+  const mediaPlayerManagerStore = tmpResult.useMediaPlayerManagerStore(_mod4692.useShallow(first));
   if (cResult[1] !== mediaPlayerManagerStore) {
     let tmp7 = null;
     if (mediaPlayerManagerStore) {
@@ -80,7 +80,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp6 = cResult[2];
   }
   return tmp6;
-}) : (() => {
+}) : (function MediaPlaybackPanelContainer() {
   const obj = MediaPlayerManager;
   let tmp2 = null;
   if (obj.useMediaPlayerManagerStore(obj2.useShallow((showPip) => {

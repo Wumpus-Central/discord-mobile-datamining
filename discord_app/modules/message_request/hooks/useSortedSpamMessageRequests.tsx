@@ -1,21 +1,21 @@
-// === Module 17098: useSortedSpamMessageRequests ===
+// === Module 17379: useSortedSpamMessageRequests ===
 
-// Module 17098 (useSortedSpamMessageRequests)
+// Module 17379 (useSortedSpamMessageRequests)
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import UserStore from "UserStore" /* 1377 */;
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6735 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import UserStore from "UserStore" /* 1389 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6061 */;
 
 const require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_request/hooks/useSortedSpamMessageRequests.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSortedSpamMessageRequests() {
   const cResult = stateFromStoresArray(stateFromStoresObject[5]).c(15);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ChannelStore];
-    const fn = function l() {
+    const fn = function u() {
       return ChannelStore.getPrivateChannelsVersion();
     };
     cResult[0] = items;
@@ -144,7 +144,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[11] = stateFromStoresObject;
   cResult[12] = mapped;
   const tmpResult4 = stateFromStoresArray(stateFromStoresObject[6]);
-}) : (() => {
+}) : (function useSortedSpamMessageRequests() {
   const items = [ChannelStore];
   const stateFromStores = stateFromStoresArray(stateFromStoresObject[6]).useStateFromStores(items, () => ChannelStore.getPrivateChannelsVersion());
   let obj = stateFromStoresArray(stateFromStoresObject[6]);

@@ -1,17 +1,18 @@
-// === Module 12938: UserProfileActivityEmptyStates ===
+// === Module 13217: UserProfileActivityEmptyStates ===
 
-// Module 12938 (UserProfileActivityEmptyStates)
+// Module 13217 (UserProfileActivityEmptyStates)
 import _mod12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4909 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import openUserSettings from "openUserSettings" /* 6895 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7001 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
@@ -84,7 +85,7 @@ let items = [
     return intl.string(util.t.YolGh4);
   }
 ];
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { container: { alignItems: "center", paddingVertical: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_16 }, text: null, centeredText: null, buttons: null };
 let obj3 = { alignItems: "center", paddingVertical: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_16 };
 obj.text = { gap: nativeDefault.space.PX_8, alignItems: "center" };
@@ -93,7 +94,7 @@ let obj4 = { gap: nativeDefault.space.PX_8, alignItems: "center" };
 obj.buttons = { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", gap: nativeDefault.space.PX_8 };
 let closure_10 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmptyState(arg0) {
   const cResult = c.c(14);
   ({ heading, bodyText, children } = arg0);
   const tmp4 = closure_10();
@@ -152,7 +153,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = tmp6;
   tmp5 = tmp6;
   const obj5 = { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", style: tmp4.centeredText, children: heading };
-}) : ((arg0) => {
+}) : (function EmptyState(arg0) {
   ({ heading, bodyText, children } = arg0);
   const tmp = closure_10();
   const obj = { style: tmp.container, children: null };
@@ -166,7 +167,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 fn(558);
 let obj5 = { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", gap: nativeDefault.space.PX_8 };
 ReactCompilerGating = fn(558);
-const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
+const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileActivityEmptyOtherUser(user) {
   const cResult = name(576).c(19);
   user = user.user;
   ({ guildId, channelId } = user);
@@ -178,20 +179,33 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((us
         let tmp6 = cResult[4];
       }
       if (cResult[5] !== tmp5) {
-        const fn = function f() {
-          let sampleResult = _mod12.sample(items);
-          if (sampleResult == null) {
-            sampleResult = items[0];
+        class T {
+          constructor() {
+            obj = closure_0(closure_2[12]);
+            tmp = closure_9;
+            sampleResult = obj.sample(closure_9);
+            if (sampleResult == null) {
+              sampleResult = tmp[0];
+            }
+            return sampleResult(closure_0);
           }
-          return sampleResult(name);
-        };
+        }
         cResult[5] = tmp5;
-        cResult[6] = fn;
-        let tmp9 = fn;
+        cResult[6] = T;
       } else {
-        tmp9 = cResult[6];
+        class T {
+          constructor() {
+            obj = closure_0(closure_2[12]);
+            tmp = closure_9;
+            sampleResult = obj.sample(closure_9);
+            if (sampleResult == null) {
+              sampleResult = tmp[0];
+            }
+            return sampleResult(closure_0);
+          }
+        }
       }
-      const first = _slicedToArray(noop.useState(tmp9), 1)[0];
+      const first = _slicedToArray(noop.useState(T), 1)[0];
       if (cResult[7] !== user.id) {
         class A {
           constructor() {
@@ -256,7 +270,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((us
           }
         }
         const obj4 = { size: "sm", variant: "secondary", text: tmp15, onPress: A };
-        const tmp18 = closure_7(tmp(5601).Button, obj4);
+        const tmp18 = closure_7(tmp(5375).Button, obj4);
         cResult[10] = A;
         cResult[11] = tmp18;
       } else {
@@ -309,7 +323,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((us
     }
   }
   let obj = name(576);
-  name = user(5048).getName(guildId, channelId, user);
+  name = user(5405).getName(guildId, channelId, user);
   const intl = tmp(1126).intl;
   const formatToPlainStringResult = intl.formatToPlainString(name(1126).t.sjSitP, { name });
   cResult[0] = channelId;
@@ -318,15 +332,15 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((us
   cResult[3] = name;
   cResult[4] = formatToPlainStringResult;
   tmp6 = formatToPlainStringResult;
-  let obj2 = user(5048);
-}) : ((user) => {
+  let obj2 = user(5405);
+}) : (function UserProfileActivityEmptyOtherUser(user) {
   user = user.user;
   let name;
   ({ guildId, channelId } = user);
   const tmp = closure_10();
-  name = name(5048).getName(guildId, channelId, user);
+  name = name(5405).getName(guildId, channelId, user);
   const intl = user(1126).intl;
-  let obj = name(5048);
+  let obj = name(5405);
   items = [user.id];
   let obj2 = {
     heading: intl.formatToPlainString(user(1126).t.sjSitP, { name }),
@@ -349,7 +363,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((us
   const intl2 = user(1126).intl;
   obj4.text = intl2.string(user(1126).t["g33r/P"]);
   obj4.onPress = callback;
-  obj3.children = closure_7(user(5601).Button, obj4);
+  obj3.children = closure_7(user(5375).Button, obj4);
   obj2.children = closure_7(View, obj3);
   return closure_7(closure_11, obj2);
 }));
@@ -357,13 +371,13 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileActivityEmptyStates.tsx");
 
 export const UserProfileActivityEmptyOtherUser = memoResult;
-export const UserProfileActivityEmptyCurrentUser = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const UserProfileActivityEmptyCurrentUser = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileActivityEmptyCurrentUser() {
   const cResult = c.c(6);
   const tmp4 = closure_10();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function t() {
       ActionSheetActionCreatorsDefault.hideAllActionSheets();
-      openUserSettings.openUserSettings({ screen: constants.CONNECTIONS });
+      require("openUserSettings").openUserSettings({ screen: constants.CONNECTIONS });
     };
     cResult[0] = fn;
     let first = fn;
@@ -406,11 +420,11 @@ export const UserProfileActivityEmptyCurrentUser = noop.memo(ReactCompilerGating
     tmp13 = cResult[5];
   }
   return tmp13;
-}) : (() => {
+}) : (function UserProfileActivityEmptyCurrentUser() {
   let obj = { heading: null, bodyText: null, children: null };
   const callback = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.hideAllActionSheets();
-    openUserSettings.openUserSettings({ screen: constants.CONNECTIONS });
+    require("openUserSettings").openUserSettings({ screen: constants.CONNECTIONS });
   }, []);
   const intl = util.intl;
   obj.heading = intl.string(util.t.VB6LWY);

@@ -1,13 +1,13 @@
-// === Module 7640: canReactToMessage ===
+// === Module 7961: canReactToMessage ===
 
-// Module 7640 (canReactToMessage)
-import FlagUtils from "FlagUtils" /* 1390 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4502 */;
-import canAddNewReactionsDefault from "canAddNewReactions" /* 7641 */;
-import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 5577 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
-import UserStore from "UserStore" /* 1377 */;
+// Module 7961 (canReactToMessage)
+import FlagUtils from "FlagUtils" /* 1402 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4694 */;
+import canAddNewReactionsDefault from "canAddNewReactions" /* 7962 */;
+import GuildMemberStore from "GuildMemberStore" /* 2124 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 5887 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
@@ -52,7 +52,7 @@ export const canReactToMessage = function canReactToMessage(message, channel) {
   const items = [UserStore, GuildMemberStore, GuildVerificationStore, PermissionStore];
   return canReactToMessageInternal(message, channel, items);
 };
-export const useCanReactToMessage = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export const useCanReactToMessage = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanReactToMessage(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
   const cResult = require("c").c(4);
@@ -85,7 +85,7 @@ export const useCanReactToMessage = ReactCompilerGating.isReactCompilerEnabled()
   tmp9 = M;
   const obj = require("c");
   tmp = _require;
-}) : ((arg0, arg1) => {
+}) : (function useCanReactToMessage(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
   let items = [UserStore, GuildMemberStore, GuildVerificationStore, PermissionStore];

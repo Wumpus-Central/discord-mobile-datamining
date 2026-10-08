@@ -1,22 +1,22 @@
-// === Module 13795: GameOrganizationInviteRow ===
+// === Module 14020: GameOrganizationInviteRow ===
 
-// Module 13795 (GameOrganizationInviteRow)
+// Module 14020 (GameOrganizationInviteRow)
 import c from "c" /* 576 */;
-import native from "native" /* 1188 */;
-import UserUtilsDefault from "UserUtils" /* 4728 */;
-import TableRow from "TableRow" /* 6000 */;
-import DiscordTagDefault from "DiscordTag" /* 9331 */;
-import InviteButtonDefault from "InviteButton" /* 9569 */;
+import native from "native" /* 1200 */;
+import UserUtilsDefault from "UserUtils" /* 4922 */;
+import TableRow from "TableRow" /* 6184 */;
+import DiscordTagDefault from "DiscordTag" /* 8740 */;
+import InviteButtonDefault from "InviteButton" /* 8743 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const InviteSendStates = fn(7239).InviteSendStates;
+const InviteSendStates = fn(7418).InviteSendStates;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_organization_invites/native/GameOrganizationInviteRow.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function GameOrganizationInviteRow(user) {
   const cResult = c.c(23);
   user = user.user;
   ({ sendState, onInvite } = user);
@@ -107,7 +107,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((user) 
   cResult[1] = user;
   cResult[2] = fn;
   tmp4 = fn;
-}) : ((user) => {
+}) : (function GameOrganizationInviteRow(user) {
   user = user.user;
   ({ sendState, onInvite } = user);
   const items = [onInvite, user];

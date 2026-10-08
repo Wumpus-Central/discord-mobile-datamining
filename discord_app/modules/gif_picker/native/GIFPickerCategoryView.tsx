@@ -1,14 +1,14 @@
-// === Module 10120: GIFPickerCategoryView ===
+// === Module 9705: GIFPickerCategoryView ===
 
-// Module 10120 (GIFPickerCategoryView)
+// Module 9705 (GIFPickerCategoryView)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import FastImageDefault from "FastImage" /* 5981 */;
-import useAccessibilityPressDefault from "useAccessibilityPress" /* 9274 */;
-import StarIcon from "StarIcon" /* 9956 */;
-import AnalyticsIcon from "AnalyticsIcon" /* 10121 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import useAccessibilityPressDefault from "useAccessibilityPress" /* 8605 */;
+import StarIcon from "StarIcon" /* 9483 */;
+import AnalyticsIcon from "AnalyticsIcon" /* 9706 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 fn(1085).GIFPickerResultTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.xs, flex: 1 }, gifImage: null, gifOverlay: null, categoryName: null, categoryNameIcon: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.xs, flex: 1 };
 obj2.gifImage = { borderRadius: nativeDefault.radii.xs, flex: 1 };
@@ -42,7 +42,7 @@ let obj7 = { marginRight: nativeDefault.space.PX_4 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/gif_picker/native/GIFPickerCategoryView.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onSelectCategory) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GIFPickerCategoryView(onSelectCategory) {
   const cResult = c.c(30);
   onSelectCategory = onSelectCategory.onSelectCategory;
   const item = onSelectCategory.item;
@@ -173,7 +173,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onSelectCategory
   cResult[2] = onSelectCategory;
   cResult[3] = fn;
   tmp5 = fn;
-}) : ((onSelectCategory) => {
+}) : (function GIFPickerCategoryView(onSelectCategory) {
   onSelectCategory = onSelectCategory.onSelectCategory;
   const item = onSelectCategory.item;
   const tmp = closure_9();

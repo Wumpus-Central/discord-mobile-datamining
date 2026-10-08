@@ -1,19 +1,19 @@
-// === Module 15251: SyncProfileColorsSetting ===
+// === Module 15513: SyncProfileColorsSetting ===
 
-// Module 15251 (SyncProfileColorsSetting)
+// Module 15513 (SyncProfileColorsSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11142);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const SettingBuilders = fn(11262);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useProfileColorsSettingValue() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AccessibilityStore];
-    const fn = function n() {
+    const fn = function o() {
       return AccessibilityStore.syncProfileThemeWithUserTheme;
     };
     cResult[0] = items;
@@ -24,7 +24,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     [tmp4, tmp5] = cResult;
   }
   return initialize.useStateFromStores(tmp4, tmp5);
-}) : (() => {
+}) : (function useProfileColorsSettingValue() {
   const items = [AccessibilityStore];
   return initialize.useStateFromStores(items, () => AccessibilityStore.syncProfileThemeWithUserTheme);
 });
@@ -33,12 +33,12 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t["sSY+mD"]);
   },
-  parent: fn(7645).MobileUserSettings.ACCESSIBILITY,
-  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  parent: fn(7966).MobileUserSettings.ACCESSIBILITY,
+  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useProfileColorsSettingValue() {
     const cResult = c.c(2);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
       const items = [AccessibilityStore];
-      const fn = function n() {
+      const fn = function o() {
         return AccessibilityStore.syncProfileThemeWithUserTheme;
       };
       cResult[0] = items;
@@ -49,11 +49,11 @@ const toggle = SettingBuilders.createToggle({
       [tmp4, tmp5] = cResult;
     }
     return initialize.useStateFromStores(tmp4, tmp5);
-  }) : (() => {
+  }) : (function useProfileColorsSettingValue() {
     const items = [AccessibilityStore];
     return initialize.useStateFromStores(items, () => AccessibilityStore.syncProfileThemeWithUserTheme);
   }),
-  onValueChange: fn(14295).toggleSyncProfileThemeWithUserTheme
+  onValueChange: fn(14520).toggleSyncProfileThemeWithUserTheme
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/SyncProfileColorsSetting.tsx");

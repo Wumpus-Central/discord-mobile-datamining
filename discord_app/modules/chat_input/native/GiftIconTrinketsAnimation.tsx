@@ -1,27 +1,27 @@
-// === Module 11894: GiftIconTrinketsAnimation ===
+// === Module 11967: GiftIconTrinketsAnimation ===
 
-// Module 11894 (GiftIconTrinketsAnimation)
+// Module 11967 (GiftIconTrinketsAnimation)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4586 */;
-import FastImageDefault from "FastImage" /* 5981 */;
+import useToken from "useToken" /* 4778 */;
+import FastImageDefault from "FastImage" /* 6164 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 const initialize = APNGPlayer(504);
-const PlatformUtils = APNGPlayer(1369);
-const StringUtils = APNGPlayer(2018);
-const APNGPlayer2 = APNGPlayer(8497);
+const PlatformUtils = APNGPlayer(1381);
+const StringUtils = APNGPlayer(2030);
+const APNGPlayer2 = APNGPlayer(8981);
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles((width) => ({ containerRefresh: { position: "absolute", top: 0, left: 0, width, height: width, overflow: "visible", marginLeft: 0, zIndex: 0 }, trinketsRefresh: { zIndex: 4, position: "absolute", pointerEvents: "none", width: "175%", height: "175%", top: "-37.5%", left: "-37.5%" } }));
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat_input/native/GiftIconTrinketsAnimation.tsx");
 
-export const GiftIconTrinketsAnimation = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((trinketsAnimationUrl) => {
+export const GiftIconTrinketsAnimation = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function GiftIconTrinketsAnimation(trinketsAnimationUrl) {
   let APNGPlayer = require;
   const cResult = c.c(9);
   trinketsAnimationUrl = trinketsAnimationUrl.trinketsAnimationUrl;
@@ -77,7 +77,7 @@ export const GiftIconTrinketsAnimation = noop.memo(ReactCompilerGating.isReactCo
     APNGPlayerResult2 = PlatformUtils;
   }
   APNGPlayerResult1 = StringUtils;
-}) : ((trinketsAnimationUrl) => {
+}) : (function GiftIconTrinketsAnimation(trinketsAnimationUrl) {
   trinketsAnimationUrl = trinketsAnimationUrl.trinketsAnimationUrl;
   let APNGPlayer = require;
   const tmp2 = closure_6(useToken.useToken(nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE));

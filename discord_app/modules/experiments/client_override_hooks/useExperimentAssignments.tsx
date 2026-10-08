@@ -1,17 +1,17 @@
-// === Module 11433: useExperimentAssignments ===
+// === Module 11416: useExperimentAssignments ===
 
-// Module 11433 (useExperimentAssignments)
-import ExperimentManager from "ExperimentManager" /* 4787 */;
+// Module 11416 (useExperimentAssignments)
+import ExperimentManager from "ExperimentManager" /* 4981 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ExperimentStore from "ExperimentStore" /* 4782 */;
-import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
+import ExperimentStore from "ExperimentStore" /* 4976 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1258 */;
 
 const require = globalThis.__r;
 
 require = fn;
 fn(558);
 const ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((kind, arg1) => {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useExperimentAssignment(kind, arg1) {
   _require = kind;
   dependencyMap = arg1;
   const cResult = require("c").c(6);
@@ -32,7 +32,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((kind, arg1) => {
       }
     }
   }
-  const fn = function c() {
+  const fn = function p() {
     if (kind.system === ExperimentManager.ExperimentSystem.LEGACY) {
       const userExperimentDescriptor = ExperimentStore.getUserExperimentDescriptor(kind.name);
       let bucket;
@@ -56,7 +56,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((kind, arg1) => {
   tmp7 = fn;
   const obj = require("c");
   tmp = _require;
-}) : ((arg0, arg1) => {
+}) : (function useExperimentAssignment(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   const items = [ExperimentStore, ApexExperimentStore];
@@ -99,7 +99,7 @@ const result = size.fileFinishedImporting("modules/experiments/client_override_h
 
 export const useExperimentAssignment = tmp2;
 export { getExperimentServerAssignment };
-export const useExperimentServerAssignment = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export const useExperimentServerAssignment = ReactCompilerGating.isReactCompilerEnabled() ? (function useExperimentServerAssignment(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   const cResult = require("c").c(4);
@@ -116,7 +116,7 @@ export const useExperimentServerAssignment = ReactCompilerGating.isReactCompiler
     }
     return tmp(504).useStateFromStores(first, tmp7);
   }
-  const fn = function c() {
+  const fn = function p() {
     let name = closure_0;
     const items = [ExperimentStore, ApexExperimentStore];
     [obj, obj2] = items;
@@ -136,7 +136,7 @@ export const useExperimentServerAssignment = ReactCompilerGating.isReactCompiler
   tmp7 = fn;
   const obj = require("c");
   tmp = _require;
-}) : ((arg0, arg1) => {
+}) : (function useExperimentServerAssignment(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   let items = [ExperimentStore, ApexExperimentStore];

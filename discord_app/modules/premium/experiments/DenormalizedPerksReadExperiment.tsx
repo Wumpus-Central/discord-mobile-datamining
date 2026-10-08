@@ -1,7 +1,7 @@
-// === Module 13818: DenormalizedPerksReadExperiment ===
+// === Module 14122: DenormalizedPerksReadExperiment ===
 
-// Module 13818 (DenormalizedPerksReadExperiment)
-import ApexExperiment from "ApexExperiment" /* 1440 */;
+// Module 14122 (DenormalizedPerksReadExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const obj = { CONTROL: 0, [0]: "CONTROL", DUAL_READ_RETURN_OLD: 1, [1]: "DUAL_READ_RETURN_OLD", DUAL_READ_RETURN_NEW: 2, [2]: "DUAL_READ_RETURN_NEW" };

@@ -1,8 +1,8 @@
-// === Module 8632: resolvedValues ===
+// === Module 13105: resolvedValues ===
 
-// Module 8632 (resolvedValues)
-import ApplicationWidgetFieldPresentationType from "ApplicationWidgetFieldPresentationType" /* 8633 */;
-import ApplicationWidgetFieldValueType from "ApplicationWidgetFieldValueType" /* 8634 */;
+// Module 13105 (resolvedValues)
+import ApplicationWidgetFieldPresentationType from "ApplicationWidgetFieldPresentationType" /* 13106 */;
+import ApplicationWidgetFieldValueType from "ApplicationWidgetFieldValueType" /* 13107 */;
 import size from "module_2" /* 2 */;
 
 function resolveFieldValue(image, items, applicationAssets) {
@@ -83,5 +83,7 @@ const result = size.fileFinishedImporting("../discord_common/js/packages/applica
 export { ResolvedValueType };
 export function bindResolveFieldValue(resolutionContext) {
   closure_0 = resolutionContext;
-  return (image, items) => resolveFieldValue(image, items, closure_0);
+  return function resolveFieldValueBound(image, items) {
+    return resolveFieldValue(image, items, closure_0);
+  };
 }

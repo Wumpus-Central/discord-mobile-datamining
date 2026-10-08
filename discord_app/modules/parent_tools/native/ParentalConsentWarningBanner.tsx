@@ -1,12 +1,12 @@
-// === Module 17441: ParentalConsentWarningBanner ===
+// === Module 17723: ParentalConsentWarningBanner ===
 
-// Module 17441 (ParentalConsentWarningBanner)
+// Module 17723 (ParentalConsentWarningBanner)
 import nativeDefault from "native" /* 587 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import openUserSettings from "openUserSettings" /* 6895 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7063 */;
-import tinycolorDefault from "tinycolor" /* 7076 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import openUserSettings from "openUserSettings" /* 7084 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7249 */;
+import tinycolorDefault from "tinycolor" /* 7262 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -15,14 +15,14 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, StyleSheet } = get_ActivityIndicator);
 const View = get_ActivityIndicator.View;
-const FamilyCenterSubPages = fn(7062).FamilyCenterSubPages;
+const FamilyCenterSubPages = fn(7248).FamilyCenterSubPages;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_8, UserSettingsSections: closure_9, VerticalGradient: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 let closure_14 = 28 + nativeDefault.space.PX_16;
 const locations = [0.5875, 1];
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { strip: null, pressable: null, label: null, link: null };
 const rect = { position: "absolute", top: 0, left: 0, right: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.strip = rect;
@@ -42,14 +42,14 @@ let obj4 = { paddingRight: nativeDefault.space.PX_8 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/ParentalConsentWarningBanner.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ParentalConsentWarningBanner(children) {
   let obj16 = dependencyMap;
   const cResult = require("c").c(28);
   children = children.children;
   const tmp2 = closure_16();
   _require = tmp2;
   let Gfqlpa = daysRemaining;
-  const tmp3 = daysRemaining(1618)();
+  const tmp3 = daysRemaining(1630)();
   let obj3 = require("c");
   const parentalConsentWarning = require("useParentalConsentWarning").useParentalConsentWarning();
   const obj4 = require("useParentalConsentWarning");
@@ -60,12 +60,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
   const obj7 = require("useGlobalStatusIndicatorState");
   const token = require("useToken").useToken(daysRemaining(587).colors.BACKGROUND_FEEDBACK_WARNING);
   if (cResult[0] !== token) {
-    const obj9 = Gfqlpa(7076)(token);
-    const toRgbStringResult = Gfqlpa(7076)(token).setAlpha(0).toRgbString();
+    const obj9 = Gfqlpa(7262)(token);
+    const toRgbStringResult = Gfqlpa(7262)(token).setAlpha(0).toRgbString();
     cResult[0] = token;
     cResult[1] = toRgbStringResult;
     let tmp8 = toRgbStringResult;
-    const setAlphaResult = Gfqlpa(7076)(token).setAlpha(0);
+    const setAlphaResult = Gfqlpa(7262)(token).setAlpha(0);
   } else {
     tmp8 = cResult[1];
   }
@@ -126,16 +126,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
       }
     }
     if (cResult[7] !== tmp2.link) {
-      class H {
+      class W {
         constructor(arg0, arg1) {
           obj = { variant: "text-sm/medium", color: "text-strong", style: closure_0.link, children };
           return jsx(closure_0(closure_2[19]).Text, obj, arg1);
         }
       }
       cResult[7] = tmp2.link;
-      cResult[8] = H;
+      cResult[8] = W;
     } else {
-      class H {
+      class W {
         constructor(arg0, arg1) {
           obj = { variant: "text-sm/medium", color: "text-strong", style: closure_0.link, children };
           return jsx(closure_0(closure_2[19]).Text, obj, arg1);
@@ -143,7 +143,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
       }
     }
     if (tmp13) {
-      class H {
+      class W {
         constructor(arg0, arg1) {
           obj = { variant: "text-sm/medium", color: "text-strong", style: closure_0.link, children };
           return jsx(closure_0(closure_2[19]).Text, obj, arg1);
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
       }
     }
     if (cResult[9] !== 0) {
-      class H {
+      class W {
         constructor(arg0, arg1) {
           obj = { variant: "text-sm/medium", color: "text-strong", style: closure_0.link, children };
           return jsx(closure_0(closure_2[19]).Text, obj, arg1);
@@ -163,7 +163,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
       cResult[9] = num9;
       cResult[10] = items;
     } else {
-      class H {
+      class W {
         constructor(arg0, arg1) {
           obj = { variant: "text-sm/medium", color: "text-strong", style: closure_0.link, children };
           return jsx(closure_0(closure_2[19]).Text, obj, arg1);
@@ -171,14 +171,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
       }
     }
     if (cResult[11] === children) {
-      class H {
+      class W {
         constructor(arg0, arg1) {
           obj = { variant: "text-sm/medium", color: "text-strong", style: closure_0.link, children };
           return jsx(closure_0(closure_2[19]).Text, obj, arg1);
         }
       }
-      if (cResult[14] === H) {
-        class H {
+      if (cResult[14] === W) {
+        class W {
           constructor(arg0, arg1) {
             obj = { variant: "text-sm/medium", color: "text-strong", style: closure_0.link, children };
             return jsx(closure_0(closure_2[19]).Text, obj, arg1);
@@ -186,14 +186,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
         }
       }
       if (tmp13) {
-        class H {
+        class W {
           constructor(arg0, arg1) {
             obj = { variant: "text-sm/medium", color: "text-strong", style: closure_0.link, children };
             return jsx(closure_0(closure_2[19]).Text, obj, arg1);
           }
         }
         if (null != daysRemaining) {
-          class H {
+          class W {
             constructor(arg0, arg1) {
               obj = { variant: "text-sm/medium", color: "text-strong", style: closure_0.link, children };
               return jsx(closure_0(closure_2[19]).Text, obj, arg1);
@@ -205,10 +205,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
           tmp27[0] = items1;
           const obj11 = { pointerEvents: "none", style: StyleSheet.absoluteFill, colors: tmp10, locations, start: null, end: null };
           ({ START: obj14.start, END: obj14.end } = closure_10);
-          const items2 = [closure_11(Gfqlpa(5612), obj11), ];
+          const items2 = [closure_11(Gfqlpa(5387), obj11), ];
           let obj12 = { accessibilityRole: "button", accessibilityHint: null, onPress: null, style: null, children: null };
           const intl = obj(1126).intl;
-          obj12.accessibilityHint = intl.string(Gfqlpa(2521).O2HKdA);
+          obj12.accessibilityHint = intl.string(Gfqlpa(2565).O2HKdA);
           obj12.onPress = I;
           const items3 = [tmp2.pressable, ];
           const obj13 = { paddingTop: tmp3.top + 8 };
@@ -216,27 +216,27 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
           obj12.style = items3;
           let obj15 = { variant: "text-sm/medium", color: "text-strong", lineClamp: 1, style: tmp2.label, children: null };
           if (0 === daysRemaining) {
-            class H {
+            class W {
               constructor(arg0, arg1) {
                 obj = { variant: "text-sm/medium", color: "text-strong", style: closure_0.link, children };
                 return jsx(closure_0(closure_2[19]).Text, obj, arg1);
               }
             }
-            Gfqlpa = Gfqlpa(2521).Gfqlpa;
-            obj16 = { connectHook: H };
+            Gfqlpa = Gfqlpa(2565).Gfqlpa;
+            obj16 = { connectHook: W };
             let formatResult = obj.format(Gfqlpa, obj16);
           } else {
-            class H {
+            class W {
               constructor(arg0, arg1) {
                 obj = { variant: "text-sm/medium", color: "text-strong", style: closure_0.link, children };
                 return jsx(closure_0(closure_2[19]).Text, obj, arg1);
               }
             }
-            const obj17 = { count: daysRemaining, connectHook: H };
-            formatResult = obj18.format(Gfqlpa(2521).ZBK5mM, obj17);
+            const obj17 = { count: daysRemaining, connectHook: W };
+            formatResult = obj18.format(Gfqlpa(2565).ZBK5mM, obj17);
           }
           obj15.children = formatResult;
-          obj15 = closure_11(obj(4892).Text, obj15);
+          obj15 = closure_11(obj(5086).Text, obj15);
           obj12.children = obj15;
           obj12 = closure_11(closure_4, obj12);
           items2[1] = obj12;
@@ -244,7 +244,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
           closure_12(View, tmp27);
         }
       }
-      cResult[14] = H;
+      cResult[14] = W;
       cResult[15] = daysRemaining;
       cResult[16] = tmp10;
       cResult[17] = I;
@@ -268,7 +268,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
   cResult[4] = items4;
   tmp10 = items4;
   const obj8 = require("useToken");
-}) : ((children) => {
+}) : (function ParentalConsentWarningBanner(children) {
   let token;
   let daysRemaining;
   const tmp = closure_16();

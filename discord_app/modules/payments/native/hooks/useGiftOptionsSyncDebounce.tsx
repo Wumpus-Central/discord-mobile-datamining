@@ -1,8 +1,8 @@
-// === Module 10445: useGiftOptionsSyncDebounce ===
+// === Module 10042: useGiftOptionsSyncDebounce ===
 
-// Module 10445 (useGiftOptionsSyncDebounce)
+// Module 10042 (useGiftOptionsSyncDebounce)
 import _modDef12 from "module_12" /* 12 */;
-import useInitialValueDefault from "useInitialValue" /* 5991 */;
+import useInitialValueDefault from "useInitialValue" /* 6174 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/payments/native/hooks/useGiftOptionsSyncDebounce.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGiftOptionsSyncDebounce(arg0) {
   _require = arg0;
   const cResult = require("c").c(16);
   importDefault = noop.useRef(null);
@@ -73,7 +73,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const effect = obj2.useEffect(tmp7, tmp8);
   if (cResult[7] !== tmp5) {
-    const fn4 = function _(current) {
+    const fn4 = function h(current) {
       closure_1.current = current;
       let flag = ref.current !== current;
       if (flag) {
@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp10 = cResult[8];
   }
   if (cResult[9] !== tmp5) {
-    const fn5 = function w(current) {
+    const fn5 = function p(current) {
       closure_4.cancel();
       closure_2.current = current;
     };
@@ -148,7 +148,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[14] = tmp10;
   cResult[15] = obj3;
   const obj = require("c");
-}) : ((arg0) => {
+}) : (function useGiftOptionsSyncDebounce(arg0) {
   closure_0 = arg0;
   importDefault = noop.useRef(null);
   dependencyMap = noop.useRef(null);

@@ -1,6 +1,6 @@
-// === Module 11443: GuildRoleConnectionEligibilityStore ===
+// === Module 11426: GuildRoleConnectionEligibilityStore ===
 
-// Module 11443 (GuildRoleConnectionEligibilityStore)
+// Module 11426 (GuildRoleConnectionEligibilityStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 

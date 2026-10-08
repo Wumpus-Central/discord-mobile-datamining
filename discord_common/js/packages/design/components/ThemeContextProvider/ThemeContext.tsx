@@ -1,6 +1,6 @@
-// === Module 4599: ThemeContext ===
+// === Module 4791: ThemeContext ===
 
-// Module 4599 (ThemeContext)
+// Module 4791 (ThemeContext)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -8,7 +8,7 @@ require = fn;
 const jsxProd = fn(21);
 ({ Fragment: c3, jsx: closure_4 } = jsxProd);
 let ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useThemeContext() {
   context = noop.useContext(context);
   if (null == context) {
     const _Error = Error;
@@ -17,7 +17,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     return context;
   }
-}) : (() => {
+}) : (function useThemeContext() {
   context = noop.useContext(context);
   if (null == context) {
     const _Error = Error;
@@ -49,7 +49,7 @@ export { createThemedContext };
 export const useThemeContext = tmp3;
 export const FALLBACK_THEME_CONTEXT_VALUE = obj3;
 export const ThemeContext = context;
-export const UseThemeContext = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
+export const UseThemeContext = ReactCompilerGating.isReactCompilerEnabled() ? (function UseThemeContext(children) {
   const cResult = c.c(5);
   children = children.children;
   const tmp2 = closure_5();
@@ -73,4 +73,6 @@ export const UseThemeContext = ReactCompilerGating.isReactCompilerEnabled() ? ((
   cResult[1] = tmp2;
   cResult[2] = childrenResult;
   tmp3 = childrenResult;
-}) : ((children) => React4(React3, { children: children.children(closure_5()) }));
+}) : (function UseThemeContext(children) {
+  return React4(React3, { children: children.children(closure_5()) });
+});

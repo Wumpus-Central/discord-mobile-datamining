@@ -1,19 +1,19 @@
-// === Module 11224: useMemberListAction ===
+// === Module 11339: useMemberListAction ===
 
-// Module 11224 (useMemberListAction)
-import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1881 */;
-import dismissible_content from "dismissible_content" /* 2036 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4704 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9494 */;
-import openGroupDMAddMembers from "openGroupDMAddMembers" /* 11225 */;
-import showChatGDMUpsellActionSheetDefault from "showChatGDMUpsellActionSheet" /* 11237 */;
-import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11243 */;
+// Module 11339 (useMemberListAction)
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1893 */;
+import dismissible_content from "dismissible_content" /* 2048 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4898 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8658 */;
+import openGroupDMAddMembers from "openGroupDMAddMembers" /* 11340 */;
+import showChatGDMUpsellActionSheetDefault from "showChatGDMUpsellActionSheet" /* 11352 */;
+import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11358 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
-import UserStore from "UserStore" /* 1377 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 const openGroupDMAddMembersDefault = openGroupDMAddMembers;
@@ -23,15 +23,15 @@ const View = fn(17).View;
 const Constants = fn(1085);
 ({ Permissions: c10, AnalyticsSections: closure_11, InstantInviteSources: closure_12 } = Constants);
 const jsx = fn(21).jsx;
-let closure_14 = { listActionRenderer: "start", listActionHeight: "unicodeVersion" };
-const createStyles = fn(4896);
-let closure_15 = createStyles.createStyles({ wrapper: { paddingTop: fn(10612).USERS_LIST_PADDING_BETWEEN_SECTIONS } });
+let closure_14 = { listActionRenderer: "Array", listActionHeight: "Reflect" };
+const createStyles = fn(5090);
+let closure_15 = createStyles.createStyles({ wrapper: { paddingTop: fn(10209).USERS_LIST_PADDING_BETWEEN_SECTIONS } });
 const ReactCompilerGating = fn(558);
-let obj2 = { wrapper: { paddingTop: fn(10612).USERS_LIST_PADDING_BETWEEN_SECTIONS } };
+let obj2 = { wrapper: { paddingTop: fn(10209).USERS_LIST_PADDING_BETWEEN_SECTIONS } };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/useMemberListAction.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useMemberListAction(channel) {
   const cResult = channel(576).c(40);
   channel = channel.channel;
   const disable = channel.disable;
@@ -44,7 +44,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     first = cResult[0];
   }
   if (cResult[1] !== channel) {
-    const fn = function p() {
+    const fn = function b() {
       let isDMResult;
       if (channel != null) {
         isDMResult = channel.isDM();
@@ -120,7 +120,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     if (channel != null) {
       id = channel.id;
     }
-    id(6553)();
+    id(6729)();
     [r10096, dependencyMap] = noop.useState(undefined);
     const _Symbol = Symbol;
     if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
@@ -224,7 +224,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   cResult[7] = result;
   tmp14 = result;
   const tmpResult = channel(573);
-}) : ((channel) => {
+}) : (function useMemberListAction(channel) {
   channel = channel.channel;
   let flag = channel.disable;
   if (flag === undefined) {

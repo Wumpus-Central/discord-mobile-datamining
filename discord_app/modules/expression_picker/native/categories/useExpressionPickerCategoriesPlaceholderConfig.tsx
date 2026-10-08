@@ -1,14 +1,14 @@
-// === Module 9980: useExpressionPickerCategoriesPlaceholderConfig ===
+// === Module 9509: useExpressionPickerCategoriesPlaceholderConfig ===
 
-// Module 9980 (useExpressionPickerCategoriesPlaceholderConfig)
+// Module 9509 (useExpressionPickerCategoriesPlaceholderConfig)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 6566 */;
+import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 6742 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const CATEGORY_ICON_SIZE = fn(1085).CATEGORY_ICON_SIZE;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { placeholder: { color: nativeDefault.colors.BACKGROUND_MOD_STRONG, opacity: 0.5 } };
 let closure_4 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -16,7 +16,7 @@ const obj3 = { color: nativeDefault.colors.BACKGROUND_MOD_STRONG, opacity: 0.5 }
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/expression_picker/native/categories/useExpressionPickerCategoriesPlaceholderConfig.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useExpressionPickerCategoriesPlaceholderConfig() {
   const cResult = c.c(3);
   const tmp4 = closure_4();
   if (cResult[0] === tmp4.placeholder.color) {
@@ -32,7 +32,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[1] = tmp4.placeholder.opacity;
   cResult[2] = obj2;
   tmp5 = obj2;
-}) : (() => {
+}) : (function useExpressionPickerCategoriesPlaceholderConfig() {
   const tmp = closure_4();
   closure_0 = tmp;
   const items = [tmp];

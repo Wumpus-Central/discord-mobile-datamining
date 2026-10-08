@@ -1,18 +1,18 @@
-// === Module 10911: BadgeRarityPill ===
+// === Module 10562: BadgeRarityPill ===
 
-// Module 10911 (BadgeRarityPill)
+// Module 10562 (BadgeRarityPill)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import BadgeRarity from "BadgeRarity" /* 1381 */;
-import ColorUtils from "ColorUtils" /* 4733 */;
-import shared from "shared" /* 4735 */;
-import useThemeDefault from "useTheme" /* 4797 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import ExperimentalCommonIcon from "ExperimentalCommonIcon" /* 10912 */;
-import ExperimentalRareIcon from "ExperimentalRareIcon" /* 10914 */;
-import ExperimentalEpicIcon from "ExperimentalEpicIcon" /* 10916 */;
-import ExperimentalMythicIcon from "ExperimentalMythicIcon" /* 10918 */;
+import BadgeRarity from "BadgeRarity" /* 1393 */;
+import ColorUtils from "ColorUtils" /* 4927 */;
+import shared from "shared" /* 4929 */;
+import useThemeDefault from "useTheme" /* 4991 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import ExperimentalCommonIcon from "ExperimentalCommonIcon" /* 10563 */;
+import ExperimentalRareIcon from "ExperimentalRareIcon" /* 10565 */;
+import ExperimentalEpicIcon from "ExperimentalEpicIcon" /* 10567 */;
+import ExperimentalMythicIcon from "ExperimentalMythicIcon" /* 10569 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -57,7 +57,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let c6 = 0.24;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { pill: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_6, minHeight: 20, borderRadius: nativeDefault.radii.round, borderWidth: 1 }, label: { textTransform: "uppercase" } };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -65,7 +65,7 @@ let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.spac
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/native/BadgeRarityPill.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((rarity) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeRarityPill(rarity) {
   const cResult = c.c(21);
   const tmp4 = closure_8();
   const tmp5 = getRarityStyle(rarity.rarity, shared.isThemeLight(useThemeDefault()));
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((rarity) => {
     cResult[2] = obj7;
     tmp6 = obj7;
   }
-}) : ((rarity) => {
+}) : (function BadgeRarityPill(rarity) {
   const tmp = closure_8();
   const tmp4 = getRarityStyle(rarity.rarity, shared.isThemeLight(useThemeDefault()));
   if (null == tmp4) {

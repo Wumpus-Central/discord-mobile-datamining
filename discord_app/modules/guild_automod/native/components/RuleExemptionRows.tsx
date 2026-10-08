@@ -1,17 +1,17 @@
-// === Module 17754: RuleExemptionRows ===
+// === Module 18041: RuleExemptionRows ===
 
-// Module 17754 (RuleExemptionRows)
+// Module 18041 (RuleExemptionRows)
 import util from "util" /* 1126 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildRoleStore from "GuildRoleStore" /* 2106 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
-import UserStore from "UserStore" /* 1377 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildRoleStore from "GuildRoleStore" /* 2118 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
-const AutomodTriggerType = fn(11487).AutomodTriggerType;
+const AutomodTriggerType = fn(11473).AutomodTriggerType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const size = fn(2);
@@ -68,8 +68,8 @@ export default function RuleExemptionRows(rule) {
   const intl3 = tmp2(tmp3[7]).intl;
   obj4.label = intl3.string(rule(exemptRoles[7]).t["LPJmL/"]);
   obj4.trailing = closure_8(rule(exemptRoles[11]).TableRow.TrailingText, { text: stateFromStores });
-  obj4.onPress = function onPress() {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17755, dependencyMap.paths), "AutomodExemptRoles", {
+  obj4.onPress = function handlePressRoles() {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18042, dependencyMap.paths), "AutomodExemptRoles", {
       guildId: rule.guildId,
       exemptRoles,
       onSave(exemptRoles) {
@@ -90,8 +90,8 @@ export default function RuleExemptionRows(rule) {
     obj6.label = intl4.string(tmp2(tmp3[7]).t.OGiMXJ);
     const obj8 = { text: stateFromStores1 };
     obj6.trailing = closure_8(tmp2(tmp3[11]).TableRow.TrailingText, obj8);
-    obj6.onPress = function onPress() {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17757, dependencyMap.paths), "AutomodExemptChannels", {
+    obj6.onPress = function handlePressChannels() {
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18044, dependencyMap.paths), "AutomodExemptChannels", {
         guildId: rule.guildId,
         exemptChannels,
         onSave(exemptChannels) {

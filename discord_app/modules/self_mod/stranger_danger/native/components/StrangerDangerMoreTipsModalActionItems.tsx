@@ -1,26 +1,26 @@
-// === Module 9832: StrangerDangerMoreTipsModalActionItems ===
+// === Module 10395: StrangerDangerMoreTipsModalActionItems ===
 
-// Module 9832 (StrangerDangerMoreTipsModalActionItems)
+// Module 10395 (StrangerDangerMoreTipsModalActionItems)
 import util from "util" /* 1126 */;
-import UserUtilsDefault from "UserUtils" /* 4728 */;
-import EyeSlashIcon2 from "EyeSlashIcon" /* 6463 */;
-import EyeIcon from "EyeIcon" /* 6465 */;
-import DenyIcon from "DenyIcon" /* 7599 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9447 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 9811 */;
+import UserUtilsDefault from "UserUtils" /* 4922 */;
+import EyeSlashIcon2 from "EyeSlashIcon" /* 6641 */;
+import EyeIcon from "EyeIcon" /* 6643 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7004 */;
+import DenyIcon from "DenyIcon" /* 9306 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 10374 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
-import UserStore from "UserStore" /* 1377 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
-const SafetyWarningTypes = fn(9799).SafetyWarningTypes;
+const SafetyWarningTypes = fn(10266).SafetyWarningTypes;
 let jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/stranger_danger/native/components/StrangerDangerMoreTipsModalActionItems.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function StrangerDangerMoreTipsModalActionItems(channelId) {
   const cResult = channelId(senderId[7]).c(47);
   channelId = channelId.channelId;
   const warningId = channelId.warningId;
@@ -454,7 +454,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   cResult[13] = N;
   tmp19 = N;
   const tmp17 = _slicedToArray(noop.useState(stateFromStoresObject.isIgnored), 2);
-}) : ((channelId) => {
+}) : (function StrangerDangerMoreTipsModalActionItems(channelId) {
   channelId = channelId.channelId;
   const warningId = channelId.warningId;
   const senderId = channelId.senderId;

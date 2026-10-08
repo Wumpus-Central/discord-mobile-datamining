@@ -1,20 +1,20 @@
-// === Module 8949: ExplicitMediaSenderFalsePositiveActionSheet ===
+// === Module 11551: ExplicitMediaSenderFalsePositiveActionSheet ===
 
-// Module 8949 (ExplicitMediaSenderFalsePositiveActionSheet)
-import ExplicitMediaFalsePositiveActionCreatorsDefault from "ExplicitMediaFalsePositiveActionCreators" /* 8948 */;
-import ExplicitMediaFalsePositiveActionSheet from "ExplicitMediaFalsePositiveActionSheet" /* 8950 */;
-import ExplicitMediaRedactionActionCreators from "ExplicitMediaRedactionActionCreators" /* 8953 */;
+// Module 11551 (ExplicitMediaSenderFalsePositiveActionSheet)
+import ExplicitMediaFalsePositiveActionSheet from "ExplicitMediaFalsePositiveActionSheet" /* 11492 */;
+import ExplicitMediaRedactionActionCreators from "ExplicitMediaRedactionActionCreators" /* 11493 */;
+import ExplicitMediaFalsePositiveActionCreatorsDefault from "ExplicitMediaFalsePositiveActionCreators" /* 11550 */;
 import noop from "module_19" /* 19 */;
-import ExplicitMediaStore from "ExplicitMediaStore" /* 6806 */;
+import ExplicitMediaStore from "ExplicitMediaStore" /* 6977 */;
 
 require = fn;
-let closure_5 = fn(7123).EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_ACTION_SHEET_KEY;
+let closure_5 = fn(6979).EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_ACTION_SHEET_KEY;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/explicit_media_redaction/native/false_positive_reporting/ExplicitMediaSenderFalsePositiveActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ExplicitMediaObscuredFalsePositiveActionSheet(channelId) {
   const cResult = channelId(576).c(28);
   channelId = channelId.channelId;
   const messageId = channelId.messageId;
@@ -57,53 +57,53 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
     if (cResult[6] !== stateFromStores.attachments) {
       const _Symbol2 = Symbol;
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-        class F {
+        class I {
           constructor(arg0) {
             return channelId.filename;
           }
         }
-        cResult[8] = F;
+        cResult[8] = I;
       } else {
-        class F {
+        class I {
           constructor(arg0) {
             return channelId.filename;
           }
         }
       }
       const attachments1 = stateFromStores.attachments;
-      const mapped1 = attachments1.map(F);
+      const mapped1 = attachments1.map(I);
       cResult[6] = stateFromStores.attachments;
       cResult[7] = mapped1;
     } else {
-      class F {
+      class I {
         constructor(arg0) {
           return channelId.filename;
         }
       }
       noop = tmp12;
       if (cResult[9] === channelId) {
-        class F {
+        class I {
           constructor(arg0) {
             return channelId.filename;
           }
         }
         const _Symbol3 = Symbol;
         if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-          class F {
+          class I {
             constructor(arg0) {
               return channelId.filename;
             }
           }
           cResult[12] = tmp18;
         } else {
-          class F {
+          class I {
             constructor(arg0) {
               return channelId.filename;
             }
           }
         }
         if (cResult[13] === tmp12) {
-          class F {
+          class I {
             constructor(arg0) {
               return channelId.filename;
             }
@@ -130,7 +130,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
     }
   }
   const tmpResult = channelId(573);
-}) : ((channelId) => {
+}) : (function ExplicitMediaObscuredFalsePositiveActionSheet(channelId) {
   channelId = channelId.channelId;
   const messageId = channelId.messageId;
   let reportFalsePositive;
@@ -141,7 +141,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   const attachments1 = stateFromStores.attachments;
   noop = attachments1.map((filename) => filename.filename);
   let obj = channelId(573);
-  const explicitMediaActions = channelId(8954).useExplicitMediaActions({
+  const explicitMediaActions = channelId(11494).useExplicitMediaActions({
     onSuccess() {
       ExplicitMediaFalsePositiveActionSheet.handleSuccess(closure_5);
       const result = ExplicitMediaFalsePositiveActionCreatorsDefault.disableFalsePositiveButton(channelId, messageId);
@@ -155,14 +155,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   });
   reportFalsePositive = explicitMediaActions.reportFalsePositive;
   if (stateFromStores.attachments.length <= 0) {
-    messageId(4860).hideActionSheet();
-    const obj4 = messageId(4860);
+    messageId(5054).hideActionSheet();
+    const obj4 = messageId(5054);
   }
   const items1 = [reportFalsePositive];
   const callback = noop.useCallback(() => {
     reportFalsePositive();
   }, items1);
-  const obj2 = channelId(8954);
+  const obj2 = channelId(11494);
   const obj3 = {
     onSuccess() {
       ExplicitMediaFalsePositiveActionSheet.handleSuccess(closure_5);
@@ -175,5 +175,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
       return ExplicitMediaRedactionActionCreators.reportFailedSendFalsePositive(channelId, messageId, closure_2, closure_3);
     }
   };
-  return jsx(channelId(8950).ExplicitMediaFalsePositiveActionSheet, { channelId, messageId, isReportFalsePositiveLoading: explicitMediaActions.isReportFalsePositiveLoading, onConfirmPress: callback, analyticsContext: channelId(7122).TrackMediaRedactionContext.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_FLOW });
+  return jsx(channelId(11492).ExplicitMediaFalsePositiveActionSheet, { channelId, messageId, isReportFalsePositiveLoading: explicitMediaActions.isReportFalsePositiveLoading, onConfirmPress: callback, analyticsContext: channelId(8218).TrackMediaRedactionContext.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_FLOW });
 });

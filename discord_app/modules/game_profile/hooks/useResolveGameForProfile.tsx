@@ -1,18 +1,18 @@
-// === Module 8356: useResolveGameForProfile ===
+// === Module 8854: useResolveGameForProfile ===
 
-// Module 8356 (useResolveGameForProfile)
+// Module 8854 (useResolveGameForProfile)
 import c from "c" /* 576 */;
-import RobloxSubgameUtils from "RobloxSubgameUtils" /* 5026 */;
-import RobloxSubgameTypes from "RobloxSubgameTypes" /* 5027 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6670 */;
-import useGame from "useGame" /* 6822 */;
-import useResolveGameDefault from "useResolveGame" /* 8357 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6847 */;
+import useGame from "useGame" /* 6995 */;
+import RobloxSubgameUtils from "RobloxSubgameUtils" /* 7430 */;
+import RobloxSubgameTypes from "RobloxSubgameTypes" /* 7431 */;
+import useResolveGameDefault from "useResolveGame" /* 8855 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/game_profile/hooks/useResolveGameForProfile.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useResolveGameForProfile(arg0) {
   const cResult = c.c(6);
   ({ applicationId, gameId } = arg0);
   let tmp4;
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = ROBLOX_GAME_ID;
   cResult[2] = obj4;
   tmp6 = obj4;
-}) : ((arg0) => {
+}) : (function useResolveGameForProfile(arg0) {
   ({ applicationId, gameId } = arg0);
   let tmp3;
   if (null == gameId) {

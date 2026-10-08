@@ -1,19 +1,19 @@
-// === Module 15053: LabeledDataBlock ===
+// === Module 15315: LabeledDataBlock ===
 
-// Module 15053 (LabeledDataBlock)
+// Module 15315 (LabeledDataBlock)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Pressables from "Pressables" /* 5916 */;
+import native from "native" /* 1200 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import Pressables from "Pressables" /* 6189 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 5922 */;
+import TextStyles from "TextStyles" /* 5902 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, borderRadius: nativeDefault.radii.sm, flexBasis: "auto", flexGrow: 1, padding: 16 }, title: { marginRight: 4 }, data: null, titleSection: null };
 const merged = Object.assign(TextStyles(fn(1085).Fonts.PRIMARY_MEDIUM, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));
 obj2.data = {};
@@ -25,7 +25,7 @@ let obj4 = {};
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/LabeledDataBlock.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function LabeledDataBlock(arg0) {
   const cResult = c.c(20);
   ({ children, title, style, icon, onPressIcon } = arg0);
   const tmp4 = closure_5();
@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = tmp4.container;
   cResult[2] = items2;
   tmp5 = items2;
-}) : ((arg0) => {
+}) : (function LabeledDataBlock(arg0) {
   ({ children, icon } = arg0);
   ({ title, style, onPressIcon } = arg0);
   const tmp = closure_5();

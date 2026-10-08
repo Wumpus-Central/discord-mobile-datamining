@@ -1,8 +1,8 @@
-// === Module 5971: MemberVerificationFormConstants ===
+// === Module 6154: MemberVerificationFormConstants ===
 
-// Module 5971 (MemberVerificationFormConstants)
+// Module 6154 (MemberVerificationFormConstants)
 import c from "c" /* 576 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -13,7 +13,7 @@ export const BANNER_RATIO_HEIGHT_16_9 = 0.5625;
 export const AVATAR_SIZE = 76;
 export const AVATAR_BORDER_WIDTH = 6;
 export const SCROLL_EVENT_TIMER_MS = 16;
-export const useBannerHeight = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useBannerHeight = ReactCompilerGating.isReactCompilerEnabled() ? (function useBannerHeight() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { ignoreKeyboard: true };
@@ -24,7 +24,7 @@ export const useBannerHeight = ReactCompilerGating.isReactCompilerEnabled() ? ((
   }
   const size = useWindowDimensionsDefault(first);
   return Math.min(size.width, size.height) * c3;
-}) : (() => {
+}) : (function useBannerHeight() {
   const size = useWindowDimensionsDefault({ ignoreKeyboard: true });
   return Math.min(size.width, size.height) * c3;
 });

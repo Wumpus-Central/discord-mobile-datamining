@@ -1,12 +1,12 @@
-// === Module 15772: FeaturedBlock ===
+// === Module 16030: FeaturedBlock ===
 
-// Module 15772 (FeaturedBlock)
+// Module 16030 (FeaturedBlock)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 6664 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6688 */;
-import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8454 */;
-import FeaturedCategorySubblockDefault from "FeaturedCategorySubblock" /* 15773 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 6841 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6865 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8940 */;
+import FeaturedCategorySubblockDefault from "FeaturedCategorySubblock" /* 16031 */;
 import noop from "module_19" /* 19 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
@@ -24,14 +24,14 @@ function Subblocks(style) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles({ container: { display: "flex", width: "100%", flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 }, featuredSubblock: { flex: 1, flexBasis: 400, maxWidth: "100%" } });
 const ReactCompilerGating = fn(558);
 let obj2 = { container: { display: "flex", width: "100%", flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 }, featuredSubblock: { flex: 1, flexBasis: 400, maxWidth: "100%" } };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/FeaturedBlock.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((featuredBlock) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FeaturedBlock(featuredBlock) {
   const cResult = c.c(9);
   featuredBlock = featuredBlock.featuredBlock;
   const tmp4 = closure_5();
@@ -70,7 +70,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((featuredBlock) =
   cResult[2] = tmp7;
   tmp6 = tmp7;
   const obj4 = { featuredBlock, style: tmp4.featuredSubblock };
-}) : ((featuredBlock) => {
+}) : (function FeaturedBlock(featuredBlock) {
   const tmp = closure_5();
   const obj = { value: useAnalyticsLocationsDefault(AnalyticsLocationDefault.COLLECTIBLES_SHOP_FEATURED_BLOCK).analyticsLocations, children: null };
   const obj2 = { style: tmp.container, children: <Subblocks featuredBlock={featuredBlock.featuredBlock} style={tmp.featuredSubblock} /> };

@@ -1,24 +1,24 @@
-// === Module 14427: ProfileCustomizationSettingScreen ===
+// === Module 14653: ProfileCustomizationSettingScreen ===
 
-// Module 14427 (ProfileCustomizationSettingScreen)
+// Module 14653 (ProfileCustomizationSettingScreen)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import ChatInputUtils from "ChatInputUtils" /* 4751 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5076 */;
-import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 6484 */;
-import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 9433 */;
-import maybeShowDiscardChangesAlertDefault from "maybeShowDiscardChangesAlert" /* 10672 */;
-import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 14428 */;
-import useUserProfileEditFormDefault from "useUserProfileEditForm" /* 14446 */;
-import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 14494 */;
-import useGuildProfileEditFormDefault from "useGuildProfileEditForm" /* 14495 */;
-import useMaybeFetchCollectiblesRecommendationsDefault from "useMaybeFetchCollectiblesRecommendations" /* 14504 */;
+import ChatInputUtils from "ChatInputUtils" /* 4945 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5105 */;
+import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 6662 */;
+import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 9097 */;
+import maybeShowDiscardChangesAlertDefault from "maybeShowDiscardChangesAlert" /* 9585 */;
+import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 14654 */;
+import useUserProfileEditFormDefault from "useUserProfileEditForm" /* 14674 */;
+import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 14754 */;
+import useGuildProfileEditFormDefault from "useGuildProfileEditForm" /* 14755 */;
+import useMaybeFetchCollectiblesRecommendationsDefault from "useMaybeFetchCollectiblesRecommendations" /* 14764 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9431 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 7842 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9095 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8260 */;
 
 const require = globalThis.__r;
 
@@ -33,7 +33,7 @@ const Constants = fn(1085);
 ({ AnalyticEvents: closure_15, AnalyticsSections: closure_16 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_19 = createStyles.createStyles({ container: { height: "100%" }, controls: { paddingTop: 4 } });
 let items = [
   {
@@ -63,20 +63,20 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/profiles/native/ProfileCustomizationSettingScreen.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ProfileCustomizationSettingScreen() {
   const cResult = obj5(576).c(55);
   useMaybeFetchCollectiblesRecommendationsDefault();
   closure_19();
   let obj = obj5(576);
-  const token = obj5(4586).useToken(nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
+  const token = obj5(4778).useToken(nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
   obj5 = token;
   const tmp8 = _slicedToArray(stateFromStores.useState(0), 2);
   importDefault = tmp8[1];
   [dependencyMap, closure_3] = stateFromStores.useState(false);
-  let obj2 = obj5(4586);
-  const nativeStackNavigation = obj5(1490).useNativeStackNavigation();
-  let obj3 = obj5(1490);
-  const params = obj5(6497).useSettingNavigationRoute().params;
+  let obj2 = obj5(4778);
+  const nativeStackNavigation = obj5(1502).useNativeStackNavigation();
+  let obj3 = obj5(1502);
+  const params = obj5(6674).useSettingNavigationRoute().params;
   let autoFocusElement;
   if (params != null) {
     autoFocusElement = params.autoFocusElement;
@@ -120,7 +120,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       }
     }
   }
-  let obj4 = obj5(6497);
+  let obj4 = obj5(6674);
   const obj6 = { items: tmp13, pageWidth: tmp8[0], defaultIndex: null, onPageChange: null, onPageChangeStart: null };
   if (field === ProfileCustomizationSubsection.GUILD) {
     class D {
@@ -141,7 +141,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const obj = { hasEdits: stateFromStores, resetPending: UserSettingsAccountActionCreators.resetAllPending, onHasEdits: ChatInputUtils.dismissKeyboard, onConfirm };
     return maybeShowDiscardChangesAlertDefault(obj);
   };
-  const segmentedControlState = obj5(9317).useSegmentedControlState(obj6);
+  const segmentedControlState = obj5(8505).useSegmentedControlState(obj6);
   const activeIndex = segmentedControlState.activeIndex;
   const tmp18 = items[activeIndex.get(activeIndex)];
   if (tmp18 == null) {
@@ -265,7 +265,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
     tmp35 = cResult[11];
   }
-  const tmpResult = obj5(9317);
+  const tmpResult = obj5(8505);
   stateFromStores = obj5(573).useStateFromStores(tmp34, tmp35);
   closure_11 = tmp20.isSubmitting || tmp28.isSubmitting;
   if (cResult[12] === tmp29) {
@@ -298,7 +298,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[14] = tmp22;
   cResult[15] = Y;
   const tmpResult2 = obj5(573);
-}) : (() => {
+}) : (function ProfileCustomizationSettingScreen() {
   require("useMaybeFetchCollectiblesRecommendations")();
   const tmp4 = closure_19();
   const token = require("useToken").useToken(require("native").colors.MOBILE_ACTIONSHEET_BACKGROUND);

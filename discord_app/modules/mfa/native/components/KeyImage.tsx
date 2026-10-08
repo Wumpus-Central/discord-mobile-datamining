@@ -1,12 +1,12 @@
-// === Module 14612: KeyImage ===
+// === Module 14873: KeyImage ===
 
-// Module 14612 (KeyImage)
+// Module 14873 (KeyImage)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import SecurityKeySpotIllustration from "SecurityKeySpotIllustration" /* 14613 */;
-import createStyles from "createStyles" /* 4896 */;
+import SecurityKeySpotIllustration from "SecurityKeySpotIllustration" /* 14874 */;
+import createStyles from "createStyles" /* 5090 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -17,7 +17,7 @@ let closure_4 = createStyles.createStyles(obj);
 let obj2 = { marginBottom: nativeDefault.space.PX_8 };
 const result = size.fileFinishedImporting("modules/mfa/native/components/KeyImage.tsx");
 
-export const KeyImage = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const KeyImage = ReactCompilerGating.isReactCompilerEnabled() ? (function KeyImage() {
   const cResult = c.c(3);
   const tmp4 = closure_4();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -37,4 +37,6 @@ export const KeyImage = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp8 = cResult[2];
   }
   return tmp8;
-}) : (() => <View style={closure_4().container}>{jsx(SecurityKeySpotIllustration.SecurityKeySpotIllustration, { scale: 0.6 })}</View>);
+}) : (function KeyImage() {
+  return <View style={closure_4().container}>{jsx(SecurityKeySpotIllustration.SecurityKeySpotIllustration, { scale: 0.6 })}</View>;
+});

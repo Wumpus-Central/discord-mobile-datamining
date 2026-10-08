@@ -1,41 +1,48 @@
-// === Module 16976: SpamRequestsScreen ===
+// === Module 17257: SpamRequestsScreen ===
 
-// Module 16976 (SpamRequestsScreen)
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7861 */;
+// Module 17257 (SpamRequestsScreen)
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8279 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
-import UserStore from "UserStore" /* 1377 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = fn;
-const UserRowModes = fn(10605).UserRowModes;
+const UserRowModes = fn(10202).UserRowModes;
 const RelationshipTypes = fn(1085).RelationshipTypes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/SpamRequestsScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SpamRequestsScreen(arg0) {
   const cResult = analyticsLocations(stateFromStoresArray1[7]).c(18);
   const obj = analyticsLocations(stateFromStoresArray1[7]);
   const tmp4 = stateFromStoresArray;
   analyticsLocations = stateFromStoresArray(stateFromStoresArray1[8])(stateFromStoresArray(stateFromStoresArray1[9]).FRIEND_REQUESTS).analyticsLocations;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [RelationshipStore];
-    const fn = function p() {
-      return analyticsLocations(stateFromStoresArray1[10]).getPendingRelationshipIds(mutableRelationships.getMutableRelationships()).spamIds;
-    };
+    class S {
+      constructor() {
+        obj = analyticsLocations(closure_2[10]);
+        return obj.getPendingRelationshipIds(closure_1_4.getMutableRelationships()).spamIds;
+      }
+    }
     cResult[0] = items;
-    cResult[1] = fn;
+    cResult[1] = S;
     tmp6 = items;
-    tmp7 = fn;
   } else {
     [tmp6, tmp7] = cResult;
   }
   const tmp5 = stateFromStoresArray(stateFromStoresArray1[8]);
-  stateFromStoresArray = analyticsLocations(stateFromStoresArray1[11]).useStateFromStoresArray(tmp6, tmp7);
+  stateFromStoresArray = analyticsLocations(stateFromStoresArray1[11]).useStateFromStoresArray(tmp6, S);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { name: tmp(tmp2[12]).ImpressionNames.FRIEND_REQUESTS_SPAM_INBOX };
-    cResult[2] = obj2;
+    class S {
+      constructor() {
+        obj = analyticsLocations(closure_2[10]);
+        return obj.getPendingRelationshipIds(closure_1_4.getMutableRelationships()).spamIds;
+      }
+    }
     let tmp10 = obj2;
   } else {
     tmp10 = cResult[2];
@@ -43,6 +50,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   tmp4(stateFromStoresArray1[13])(tmp10);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [UserStore];
+    class S {
+      constructor() {
+        obj = analyticsLocations(closure_2[10]);
+        return obj.getPendingRelationshipIds(closure_1_4.getMutableRelationships()).spamIds;
+      }
+    }
     cResult[3] = items1;
     let tmp12 = items1;
   } else {
@@ -51,11 +64,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (cResult[4] !== stateFromStoresArray) {
     class N {
       constructor() {
-        mapped = closure_1.map((item) => user.getUser(item));
-        return mapped.filter((item) => null != item);
+        mapped = closure_1.map(() => { ... });
+        return mapped.filter(() => { ... });
       }
     }
     const items2 = [stateFromStoresArray];
+    class S {
+      constructor() {
+        obj = analyticsLocations(closure_2[10]);
+        return obj.getPendingRelationshipIds(closure_1_4.getMutableRelationships()).spamIds;
+      }
+    }
     cResult[4] = stateFromStoresArray;
     cResult[5] = N;
     cResult[6] = items2;
@@ -63,8 +82,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   } else {
     class N {
       constructor() {
-        mapped = closure_1.map((item) => user.getUser(item));
-        return mapped.filter((item) => null != item);
+        mapped = closure_1.map(() => { ... });
+        return mapped.filter(() => { ... });
       }
     }
     tmp15 = cResult[6];
@@ -80,6 +99,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
     cResult[7] = analyticsLocations;
+    class S {
+      constructor() {
+        obj = analyticsLocations(closure_2[10]);
+        return obj.getPendingRelationshipIds(closure_1_4.getMutableRelationships()).spamIds;
+      }
+    }
     cResult[8] = E;
   } else {
     class E {
@@ -98,6 +123,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
     cResult[9] = P;
+    class S {
+      constructor() {
+        obj = analyticsLocations(closure_2[10]);
+        return obj.getPendingRelationshipIds(closure_1_4.getMutableRelationships()).spamIds;
+      }
+    }
   } else {
     class P {
       constructor() {
@@ -125,12 +156,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         }
         return tmp20;
       }
-      const obj3 = { getItemProps: F, getSectionProps: P, sections: tmp19 };
-      const tmp22 = jsx(tmp(tmp2[15]).UsersFastList, { getItemProps: F, getSectionProps: P, sections: tmp19 });
+      class S {
+        constructor() {
+          obj = analyticsLocations(closure_2[10]);
+          return obj.getPendingRelationshipIds(closure_1_4.getMutableRelationships()).spamIds;
+        }
+      }
+      tmp22[0] = F;
+      tmp22[1] = tmp17;
+      tmp22[2] = tmp19;
+      const tmp23 = jsx(tmp(tmp2[15]).UsersFastList, tmp22);
       cResult[15] = F;
       cResult[16] = tmp19;
-      cResult[17] = tmp22;
-      tmp20 = tmp22;
+      cResult[17] = tmp23;
+      tmp20 = tmp23;
     } else {
       class P {
         constructor() {
@@ -151,7 +190,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[11] = stateFromStoresArray1;
   cResult[12] = F;
   const tmpResult2 = analyticsLocations(stateFromStoresArray1[11]);
-}) : ((navigation) => {
+}) : (function SpamRequestsScreen(navigation) {
   navigation = navigation.navigation;
   let stateFromStoresArray;
   let stateFromStoresArray1;

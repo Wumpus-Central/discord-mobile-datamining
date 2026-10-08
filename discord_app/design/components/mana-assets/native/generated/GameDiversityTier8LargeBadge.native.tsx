@@ -1,17 +1,17 @@
-// === Module 12913: GameDiversityTier8LargeBadge ===
+// === Module 13062: GameDiversityTier8LargeBadge ===
 
-// Module 12913 (GameDiversityTier8LargeBadge)
+// Module 13062 (GameDiversityTier8LargeBadge)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5981 */;
-import _modDef12914 from "module_12914" /* 12914 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import _modDef13063 from "module_13063" /* 13063 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
 let result = size.fileFinishedImporting("design/components/mana-assets/native/generated/GameDiversityTier8LargeBadge.native.tsx");
 
-export const GameDiversityTier8LargeBadge = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const GameDiversityTier8LargeBadge = ReactCompilerGating.isReactCompilerEnabled() ? (function GameDiversityTier8LargeBadge(arg0) {
   const cResult = c.c(9);
   ({ accessible, accessibilityLabel, resizeMode, width, height, scale } = arg0);
   let num = 100;
@@ -27,7 +27,7 @@ export const GameDiversityTier8LargeBadge = ReactCompilerGating.isReactCompilerE
     num3 = scale;
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { uri: _modDef12914 };
+    const obj2 = { uri: _modDef13063 };
     cResult[0] = obj2;
     let first = obj2;
   } else {
@@ -58,12 +58,12 @@ export const GameDiversityTier8LargeBadge = ReactCompilerGating.isReactCompilerE
     cResult[8] = tmp11;
     tmp8 = tmp11;
   }
-  const items = [{ width: result, height: result1 }];
+  const size = { width: result, height: result1 };
   cResult[1] = result;
   cResult[2] = result1;
-  cResult[3] = items;
-  tmp7 = items;
-}) : ((width) => {
+  cResult[3] = size;
+  tmp7 = size;
+}) : (function GameDiversityTier8LargeBadge(width) {
   let num = width.width;
   ({ accessible, accessibilityLabel, resizeMode } = width);
   if (num === undefined) {
@@ -78,11 +78,9 @@ export const GameDiversityTier8LargeBadge = ReactCompilerGating.isReactCompilerE
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef12914 };
+  const obj2 = { uri: _modDef13063 };
   obj.source = obj2;
-  const size = { width: num * num3, height: num2 * num3 };
-  const items = [size];
-  obj.style = items;
+  obj.style = { width: num * num3, height: num2 * num3 };
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;

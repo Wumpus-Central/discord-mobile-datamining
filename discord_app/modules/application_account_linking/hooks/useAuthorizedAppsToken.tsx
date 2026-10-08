@@ -1,16 +1,16 @@
-// === Module 6671: useAuthorizedAppsToken ===
+// === Module 6848: useAuthorizedAppsToken ===
 
-// Module 6671 (useAuthorizedAppsToken)
+// Module 6848 (useAuthorizedAppsToken)
 import c from "c" /* 576 */;
-import GlobalUtils from "GlobalUtils" /* 1375 */;
-import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 6672 */;
+import GlobalUtils from "GlobalUtils" /* 1387 */;
+import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 6849 */;
 import noop from "module_19" /* 19 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6609 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6786 */;
 
 require = fn;
-const FetchState = fn(6609).FetchState;
+const FetchState = fn(6786).FetchState;
 let ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAuthorizedAppsTokens(arg0, arg1) {
   _require = arg0;
   const cResult = require("c").c(21);
   if (cResult[0] !== arg1) {
@@ -34,7 +34,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     tmp7 = cResult[2];
   }
   if (cResult[3] !== arg0) {
-    const fn = function f() {
+    const fn = function h() {
       let found;
       if (closure_0 != null) {
         const mapped = closure_0.map((item) => newestTokenForApplication.getNewestTokenForApplication(item));
@@ -65,7 +65,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     tmp12 = cResult[6];
   }
   if (cResult[7] !== arg0) {
-    const fn2 = function v() {
+    const fn2 = function k() {
       let flag;
       if (closure_0 != null) {
         flag = closure_0.every((item) => fetchStateForApplication.getFetchStateForApplication(item) === constants.FETCHED);
@@ -161,7 +161,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   tmp23 = items6;
   tmp22 = N;
   const tmpResult4 = require("initialize");
-}) : ((arg0, arg1) => {
+}) : (function useAuthorizedAppsTokens(arg0, arg1) {
   _require = arg0;
   let obj = arg1;
   if (arg1 == null) {
@@ -226,7 +226,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_account_linking/hooks/useAuthorizedAppsToken.tsx");
 
 export const useAuthorizedAppsTokens = tmp2;
-export const useAuthorizedAppsToken = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export const useAuthorizedAppsToken = ReactCompilerGating.isReactCompilerEnabled() ? (function useAuthorizedAppsToken(arg0, arg1) {
   const cResult = c.c(5);
   if (cResult[0] !== arg0) {
     let tmp3 = null;
@@ -256,7 +256,7 @@ export const useAuthorizedAppsToken = ReactCompilerGating.isReactCompilerEnabled
   cResult[3] = first;
   cResult[4] = obj2;
   tmp6 = obj2;
-}) : ((arg0, arg1) => {
+}) : (function useAuthorizedAppsToken(arg0, arg1) {
   closure_0 = arg0;
   let items = [arg0];
   const fetched = closure_6(noop.useMemo(() => {

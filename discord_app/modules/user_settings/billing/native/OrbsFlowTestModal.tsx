@@ -1,18 +1,18 @@
-// === Module 15588: OrbsFlowTestModal ===
+// === Module 15868: OrbsFlowTestModal ===
 
-// Module 15588 (OrbsFlowTestModal)
+// Module 15868 (OrbsFlowTestModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Stack_Stack from "Stack/Stack" /* 5600 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6478 */;
-import LayerScope from "LayerScope" /* 6658 */;
-import HeaderShared from "HeaderShared" /* 7509 */;
-import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10675 */;
-import BalanceWidgetMenuDefault from "BalanceWidgetMenu" /* 15589 */;
-import OrbCheckoutMenuDefault from "OrbCheckoutMenu" /* 15591 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import Stack_Stack from "Stack/Stack" /* 5373 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6656 */;
+import LayerScope from "LayerScope" /* 6835 */;
+import HeaderShared from "HeaderShared" /* 9232 */;
+import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 9588 */;
+import BalanceWidgetMenuDefault from "BalanceWidgetMenu" /* 15869 */;
+import OrbCheckoutMenuDefault from "OrbCheckoutMenu" /* 15871 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -70,15 +70,15 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_7, View: closure_8 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const NativeStackNavigator = fn(7568);
+const NativeStackNavigator = fn(9279);
 let closure_11 = NativeStackNavigator.createNativeStackNavigator();
 let ReactCompilerGating = fn(558);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { wrap: null, container: null, title: null, balancePillContainer: null };
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsFlowTestModal() {
   const cResult = accessibilityNativeStackOptions(576).c(5);
   let obj = accessibilityNativeStackOptions(576);
-  accessibilityNativeStackOptions = accessibilityNativeStackOptions(6503).useAccessibilityNativeStackOptions();
+  accessibilityNativeStackOptions = accessibilityNativeStackOptions(6679).useAccessibilityNativeStackOptions();
   if (cResult[0] !== accessibilityNativeStackOptions) {
     const fn = function n(navigation) {
       const obj = {
@@ -123,7 +123,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp9 = cResult[4];
   }
   return tmp9;
-}) : (() => {
+}) : (function OrbsFlowTestModal() {
   _require = require("Navigator").useAccessibilityNativeStackOptions();
   const obj2 = {
     screenOptions(navigation) {
@@ -158,7 +158,7 @@ const obj6 = { padding: nativeDefault.space.PX_16 };
 obj.balancePillContainer = { flexDirection: "row", justifyContent: "center", marginBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
 let closure_12 = createStyles.createStyles(obj);
 ReactCompilerGating = fn(558);
-let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function BalanceWidgetMenuSection() {
   const cResult = c.c(6);
   const tmp4 = closure_12();
   if (cResult[0] !== tmp4.title) {
@@ -186,20 +186,20 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const obj3 = { spacing: 16, style: tmp4.container, children: null };
   const items = [tmp5, tmp8];
   obj3.children = items;
-  const tmp13 = v65535(Stack_Stack.Stack, obj3);
+  const tmp13 = collapsed(Stack_Stack.Stack, obj3);
   cResult[3] = tmp4.container;
   cResult[4] = tmp5;
   cResult[5] = tmp13;
   tmp12 = tmp13;
-}) : (() => {
+}) : (function BalanceWidgetMenuSection() {
   const tmp = closure_12();
   const obj = { spacing: 16, style: tmp.container, children: null };
   const items = [options(Text_Text.Text, { variant: "text-lg/semibold", style: tmp.title, children: "Balance Widget Menu" }), options(BalanceWidgetMenuDefault, {})];
   obj.children = items;
-  return v65535(Stack_Stack.Stack, obj);
+  return collapsed(Stack_Stack.Stack, obj);
 });
 ReactCompilerGating = fn(558);
-const component = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const component = ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsFlowTest() {
   const cResult = c.c(12);
   const tmp4 = closure_12();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -242,7 +242,7 @@ const component = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         const obj4 = { style: tmp4.wrap, contentContainerStyle: tmp7, children: null };
         const items = [tmp8, tmp9, tmp10];
         obj4.children = items;
-        obj3.children = v65535(React5, obj4);
+        obj3.children = collapsed(React5, obj4);
         const tmp21 = options(LayerScope.LayerScope, obj3);
         cResult[9] = tmp4.wrap;
         cResult[10] = tmp7;
@@ -258,13 +258,13 @@ const component = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[4] = insets.top;
   cResult[5] = obj5;
   tmp7 = obj5;
-}) : (() => {
+}) : (function OrbsFlowTest() {
   const insets = useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets;
   const obj = { children: null };
   const obj2 = { style: closure_12().wrap, contentContainerStyle: { paddingBottom: insets.bottom, paddingTop: insets.top, paddingLeft: insets.left, paddingRight: insets.right }, children: null };
   const items = [options(closure_13, {}), options(BalanceWidgetPillSection, {}), options(OrbCheckoutMenuDefault, {})];
   obj2.children = items;
-  obj.children = v65535(React5, obj2);
+  obj.children = collapsed(React5, obj2);
   return options(LayerScope.LayerScope, obj);
 });
 const obj7 = { flexDirection: "row", justifyContent: "center", marginBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };

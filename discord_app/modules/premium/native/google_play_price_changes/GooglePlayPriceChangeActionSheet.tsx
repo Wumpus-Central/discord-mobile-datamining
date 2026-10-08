@@ -1,19 +1,19 @@
-// === Module 17139: GooglePlayPriceChangeActionSheet ===
+// === Module 17420: GooglePlayPriceChangeActionSheet ===
 
-// Module 17139 (GooglePlayPriceChangeActionSheet)
+// Module 17420 (GooglePlayPriceChangeActionSheet)
 import nativeDefault from "native" /* 587 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2127 */;
 import noop from "module_19" /* 19 */;
-import SubscriptionStore from "SubscriptionStore" /* 4540 */;
-import GooglePlayPriceChangeStore from "GooglePlayPriceChangeStore" /* 17140 */;
+import SubscriptionStore from "SubscriptionStore" /* 4732 */;
+import GooglePlayPriceChangeStore from "GooglePlayPriceChangeStore" /* 17421 */;
 
 const require = fn;
 const View = fn(17).View;
 const HelpdeskArticles = fn(1085).HelpdeskArticles;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { padding: nativeDefault.space.PX_32, paddingTop: nativeDefault.space.PX_24 }, textContainer: null, header: null, body: null };
 let obj3 = { padding: nativeDefault.space.PX_32, paddingTop: nativeDefault.space.PX_24 };
 obj2.textContainer = { marginBottom: nativeDefault.space.PX_24 };
@@ -26,35 +26,32 @@ let obj5 = { marginBottom: nativeDefault.space.PX_16, alignItems: "center", text
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/google_play_price_changes/GooglePlayPriceChangeActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GooglePlayPriceChangeActionSheet(markAsDismissed) {
   const cResult = markAsDismissed(576).c(45);
   markAsDismissed = markAsDismissed.markAsDismissed;
   const tmp4 = closure_10();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GooglePlayPriceChangeStore];
-    class P {
-      constructor() {
-        return closure_1_5.priceChangeRecord;
-      }
-    }
+    const fn = function p() {
+      return priceChangeRecord.priceChangeRecord;
+    };
     cResult[0] = items;
-    cResult[1] = P;
+    cResult[1] = fn;
     tmp5 = items;
+    tmp6 = fn;
   } else {
     [tmp5, tmp6] = cResult;
   }
   const obj = markAsDismissed(576);
-  const stateFromStores = markAsDismissed(504).useStateFromStores(tmp5, P);
+  const stateFromStores = markAsDismissed(504).useStateFromStores(tmp5, tmp6);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [SubscriptionStore];
-    class P {
-      constructor() {
-        return closure_1_5.priceChangeRecord;
-      }
-    }
+    const fn2 = function v() {
+      return premiumSubscription.getPremiumSubscription(true);
+    };
     cResult[2] = items1;
-    cResult[3] = tmp12;
-    let tmp10 = tmp12;
+    cResult[3] = fn2;
+    let tmp10 = fn2;
     let tmp9 = items1;
   } else {
     tmp9 = cResult[2];
@@ -79,125 +76,108 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed)
                 if (cResult[11] === tmp4.header) {
                   if (cResult[12] === tmp4.textContainer) {
                     if (cResult[13] === str) {
-                      let tmp14 = cResult[14];
-                      let tmp15 = cResult[15];
-                      let tmp16 = cResult[16];
-                      class P {
-                        constructor() {
-                          return closure_1_5.priceChangeRecord;
-                        }
-                      }
-                      let tmp18 = cResult[18];
+                      let tmp13 = cResult[14];
+                      let tmp14 = cResult[15];
+                      let tmp15 = cResult[16];
+                      let tmp16 = cResult[17];
+                      let tmp17 = cResult[18];
                       let str2 = cResult[19];
-                      let tmp19 = cResult[20];
-                      let tmp20 = cResult[21];
-                      let tmp21 = cResult[22];
-                      let tmp22 = cResult[23];
+                      let tmp18 = cResult[20];
+                      let tmp19 = cResult[21];
+                      let tmp20 = cResult[22];
+                      let tmp21 = cResult[23];
                     }
-                    if (cResult[24] === tmp14) {
+                    if (cResult[24] === tmp13) {
                       if (cResult[25] === str2) {
-                        if (cResult[26] === tmp19) {
-                          if (cResult[27] === tmp20) {
-                            let tmp30 = cResult[28];
+                        if (cResult[26] === tmp18) {
+                          if (cResult[27] === tmp19) {
+                            let tmp29 = cResult[28];
                           }
-                          if (cResult[29] === tmp15) {
-                            if (cResult[30] === tmp30) {
-                              if (cResult[31] === tmp21) {
-                                if (cResult[32] === tmp22) {
-                                  let tmp34 = cResult[33];
+                          if (cResult[29] === tmp14) {
+                            if (cResult[30] === tmp29) {
+                              if (cResult[31] === tmp20) {
+                                if (cResult[32] === tmp21) {
+                                  let tmp32 = cResult[33];
                                 }
                                 const _Symbol = Symbol;
-                                class P {
-                                  constructor() {
-                                    return closure_1_5.priceChangeRecord;
-                                  }
+                                if (cResult[34] === Symbol.for("react.memo_cache_sentinel")) {
+                                  const intl3 = tmp(1126).intl;
+                                  const stringResult = intl3.string(tmp(1126).t.BddRzS);
+                                  cResult[34] = stringResult;
+                                  let tmp35 = stringResult;
+                                } else {
+                                  tmp35 = cResult[34];
                                 }
                                 if (cResult[35] !== markAsDismissed) {
-                                  const obj2 = { variant: "primary", text: tmp39, onPress: null };
-                                  class P {
-                                    constructor() {
-                                      return closure_1_5.priceChangeRecord;
-                                    }
-                                  }
-                                  const tmp42 = closure_8(tmp(5601).Button, obj2);
+                                  const obj2 = {
+                                    variant: "primary",
+                                    text: tmp35,
+                                    onPress() {
+                                                                      markAsDismissed(ContentDismissActionType.USER_DISMISS);
+                                                                    }
+                                  };
+                                  const tmp39 = closure_8(tmp(5375).Button, obj2);
                                   cResult[35] = markAsDismissed;
-                                  cResult[36] = tmp42;
-                                  let tmp40 = tmp42;
+                                  cResult[36] = tmp39;
+                                  let tmp37 = tmp39;
                                 } else {
-                                  tmp40 = cResult[36];
+                                  tmp37 = cResult[36];
                                 }
-                                if (cResult[37] === tmp16) {
-                                  if (cResult[38] === tmp18) {
-                                    if (cResult[39] === tmp34) {
-                                      if (cResult[40] === tmp40) {
-                                        let tmp43 = cResult[41];
+                                if (cResult[37] === tmp15) {
+                                  if (cResult[38] === tmp17) {
+                                    if (cResult[39] === tmp32) {
+                                      if (cResult[40] === tmp37) {
+                                        let tmp40 = cResult[41];
                                       }
-                                      if (cResult[42] === tmp17) {
-                                        if (cResult[43] === tmp43) {
-                                          let tmp46 = cResult[44];
+                                      if (cResult[42] === tmp16) {
+                                        if (cResult[43] === tmp40) {
+                                          let tmp43 = cResult[44];
                                         }
-                                        return tmp46;
+                                        return tmp43;
                                       }
-                                      class P {
-                                        constructor() {
-                                          return closure_1_5.priceChangeRecord;
-                                        }
-                                      }
-                                      tmp48[0] = tmp43;
-                                      const tmp49 = closure_8(tmp17, tmp48);
-                                      cResult[42] = tmp17;
-                                      cResult[43] = tmp43;
-                                      cResult[44] = tmp49;
-                                      tmp46 = tmp49;
+                                      const obj3 = { children: tmp40 };
+                                      const tmp45 = closure_8(tmp16, obj3);
+                                      cResult[42] = tmp16;
+                                      cResult[43] = tmp40;
+                                      cResult[44] = tmp45;
+                                      tmp43 = tmp45;
                                     }
                                   }
                                 }
-                                const obj3 = { style: tmp18, children: null };
-                                const items2 = [tmp34, tmp40];
-                                obj3.children = items2;
-                                const tmp45 = closure_9(tmp16, obj3);
-                                cResult[37] = tmp16;
-                                cResult[38] = tmp18;
-                                cResult[39] = tmp34;
-                                cResult[40] = tmp40;
-                                cResult[41] = tmp45;
-                                tmp43 = tmp45;
+                                const obj4 = { style: tmp17, children: null };
+                                const items2 = [tmp32, tmp37];
+                                obj4.children = items2;
+                                const tmp42 = closure_9(tmp15, obj4);
+                                cResult[37] = tmp15;
+                                cResult[38] = tmp17;
+                                cResult[39] = tmp32;
+                                cResult[40] = tmp37;
+                                cResult[41] = tmp42;
+                                tmp40 = tmp42;
                               }
                             }
                           }
-                          class P {
-                            constructor() {
-                              return closure_1_5.priceChangeRecord;
-                            }
-                          }
-                          tmp36[0] = tmp21;
-                          const items3 = [tmp22, tmp30];
-                          tmp36[1] = items3;
-                          const tmp37 = closure_9(tmp15, tmp36);
-                          cResult[29] = tmp15;
-                          cResult[30] = tmp30;
-                          cResult[31] = tmp21;
-                          cResult[32] = tmp22;
-                          cResult[33] = tmp37;
-                          tmp34 = tmp37;
+                          const obj5 = { style: tmp20, children: null };
+                          const items3 = [tmp21, tmp29];
+                          obj5.children = items3;
+                          const tmp34 = closure_9(tmp14, obj5);
+                          cResult[29] = tmp14;
+                          cResult[30] = tmp29;
+                          cResult[31] = tmp20;
+                          cResult[32] = tmp21;
+                          cResult[33] = tmp34;
+                          tmp32 = tmp34;
                         }
                       }
                     }
-                    class P {
-                      constructor() {
-                        return closure_1_5.priceChangeRecord;
-                      }
-                    }
-                    tmp32[0] = str2;
-                    tmp32[1] = tmp19;
-                    tmp32[2] = tmp20;
-                    const tmp33 = closure_8(tmp14, tmp32);
-                    cResult[24] = tmp14;
+                    const obj6 = { variant: str2, style: tmp18, children: tmp19 };
+                    const tmp31 = closure_8(tmp13, obj6);
+                    cResult[24] = tmp13;
                     cResult[25] = str2;
-                    cResult[26] = tmp19;
-                    cResult[27] = tmp20;
-                    cResult[28] = tmp33;
-                    tmp30 = tmp33;
+                    cResult[26] = tmp18;
+                    cResult[27] = tmp19;
+                    cResult[28] = tmp31;
+                    tmp29 = tmp31;
                   }
                 }
               }
@@ -208,32 +188,32 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed)
     }
   }
   const tmpResult7 = markAsDismissed(504);
-  const tierDisplayNameByPlanId = markAsDismissed(4534).getTierDisplayNameByPlanId(str);
-  const tmpResult8 = markAsDismissed(4534);
-  const tmpResult9 = markAsDismissed(4534);
-  const intervalStringAsNoun = markAsDismissed(4534).getIntervalStringAsNoun(tmpResult9.getInterval(str).intervalType);
-  const tmpResult10 = markAsDismissed(4534);
-  const tmpResult11 = markAsDismissed(6750);
-  const formatPriceResult = markAsDismissed(6750).formatPrice(stateFromStores.oldPrice, stateFromStores.oldCurrency);
-  const tmpResult12 = markAsDismissed(6750);
-  BottomSheet = tmp(6652).BottomSheet;
+  const tierDisplayNameByPlanId = markAsDismissed(4726).getTierDisplayNameByPlanId(str);
+  const tmpResult8 = markAsDismissed(4726);
+  const tmpResult9 = markAsDismissed(4726);
+  const intervalStringAsNoun = markAsDismissed(4726).getIntervalStringAsNoun(tmpResult9.getInterval(str).intervalType);
+  const tmpResult10 = markAsDismissed(4726);
+  const tmpResult11 = markAsDismissed(6926);
+  const formatPriceResult = markAsDismissed(6926).formatPrice(stateFromStores.oldPrice, stateFromStores.oldCurrency);
+  const tmpResult12 = markAsDismissed(6926);
+  BottomSheet = tmp(6829).BottomSheet;
   ({ container, textContainer } = tmp4);
-  const obj4 = { variant: "heading-xl/bold", style: tmp4.header, children: null };
+  const obj7 = { variant: "heading-xl/bold", style: tmp4.header, children: null };
   const intl = tmp(1126).intl;
-  obj4.children = intl.format(markAsDismissed(1126).t.x0bFvn, { subscriptionName: tierDisplayNameByPlanId });
-  const tmp27 = closure_8(markAsDismissed(4892).Text, obj4);
-  const Text = tmp(4892).Text;
+  obj7.children = intl.format(markAsDismissed(1126).t.x0bFvn, { subscriptionName: tierDisplayNameByPlanId });
+  const tmp26 = closure_8(markAsDismissed(5086).Text, obj7);
+  const Text = tmp(5086).Text;
   const body = tmp4.body;
   const intl2 = tmp(1126).intl;
-  const obj5 = { subscriptionName: tierDisplayNameByPlanId, changeDate: null, interval: null, newPrice: null, oldPrice: null, hc_article_url: null };
-  const formatPriceResult1 = markAsDismissed(6750).formatPrice(stateFromStores.newPrice, stateFromStores.newCurrency);
-  obj5.changeDate = new Date(stateFromStores.expectedChargeTime);
-  obj5.interval = intervalStringAsNoun;
-  obj5.newPrice = formatPriceResult1;
-  obj5.oldPrice = formatPriceResult;
+  const obj8 = { subscriptionName: tierDisplayNameByPlanId, changeDate: null, interval: null, newPrice: null, oldPrice: null, hc_article_url: null };
+  const formatPriceResult1 = markAsDismissed(6926).formatPrice(stateFromStores.newPrice, stateFromStores.newCurrency);
+  obj8.changeDate = new Date(stateFromStores.expectedChargeTime);
+  obj8.interval = intervalStringAsNoun;
+  obj8.newPrice = formatPriceResult1;
+  obj8.oldPrice = formatPriceResult;
   const date = new Date(stateFromStores.expectedChargeTime);
-  obj5.hc_article_url = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SUBSCRIPTION_CANCEL);
-  const formatResult = intl2.format(markAsDismissed(1126).t["n+Hrjb"], obj5);
+  obj8.hc_article_url = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SUBSCRIPTION_CANCEL);
+  const formatResult = intl2.format(markAsDismissed(1126).t["n+Hrjb"], obj8);
   cResult[4] = stateFromStores.expectedChargeTime;
   cResult[5] = stateFromStores.newCurrency;
   cResult[6] = stateFromStores.newPrice;
@@ -253,17 +233,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed)
   cResult[20] = body;
   cResult[21] = formatResult;
   cResult[22] = textContainer;
-  cResult[23] = tmp27;
-  tmp22 = tmp27;
-  tmp21 = textContainer;
-  tmp20 = formatResult;
-  tmp19 = body;
+  cResult[23] = tmp26;
+  tmp21 = tmp26;
+  tmp20 = textContainer;
+  tmp19 = formatResult;
+  tmp18 = body;
   str2 = "text-md/medium";
-  tmp18 = container;
-  tmp16 = View;
+  tmp17 = container;
+  tmp16 = BottomSheet;
   tmp15 = View;
-  tmp14 = Text;
-}) : ((markAsDismissed) => {
+  tmp14 = View;
+  tmp13 = Text;
+}) : (function GooglePlayPriceChangeActionSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
   const tmp = closure_10();
   const items = [GooglePlayPriceChangeStore];
@@ -279,25 +260,25 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed)
     str = "";
   }
   const obj2 = markAsDismissed(504);
-  const tierDisplayNameByPlanId = markAsDismissed(4534).getTierDisplayNameByPlanId(str);
-  const tmp2Result = markAsDismissed(4534);
-  const tmp2Result5 = markAsDismissed(4534);
-  const intervalStringAsNoun = markAsDismissed(4534).getIntervalStringAsNoun(tmp2Result5.getInterval(str).intervalType);
-  const tmp2Result6 = markAsDismissed(4534);
-  const tmp2Result7 = markAsDismissed(6750);
-  const formatPriceResult = markAsDismissed(6750).formatPrice(stateFromStores.oldPrice, stateFromStores.oldCurrency);
-  const tmp2Result8 = markAsDismissed(6750);
+  const tierDisplayNameByPlanId = markAsDismissed(4726).getTierDisplayNameByPlanId(str);
+  const tmp2Result = markAsDismissed(4726);
+  const tmp2Result5 = markAsDismissed(4726);
+  const intervalStringAsNoun = markAsDismissed(4726).getIntervalStringAsNoun(tmp2Result5.getInterval(str).intervalType);
+  const tmp2Result6 = markAsDismissed(4726);
+  const tmp2Result7 = markAsDismissed(6926);
+  const formatPriceResult = markAsDismissed(6926).formatPrice(stateFromStores.oldPrice, stateFromStores.oldCurrency);
+  const tmp2Result8 = markAsDismissed(6926);
   const obj3 = { children: null };
   const obj4 = { style: tmp.container, children: null };
   const obj5 = { style: tmp.textContainer, children: null };
   const obj6 = { variant: "heading-xl/bold", style: tmp.header, children: null };
   const intl = tmp2(1126).intl;
   obj6.children = intl.format(markAsDismissed(1126).t.x0bFvn, { subscriptionName: tierDisplayNameByPlanId });
-  const items2 = [closure_8(markAsDismissed(4892).Text, obj6), ];
+  const items2 = [closure_8(markAsDismissed(5086).Text, obj6), ];
   const obj7 = { variant: "text-md/medium", style: tmp.body, children: null };
   const intl2 = tmp2(1126).intl;
   const obj8 = { subscriptionName: tierDisplayNameByPlanId, changeDate: null, interval: null, newPrice: null, oldPrice: null, hc_article_url: null };
-  const formatPriceResult1 = markAsDismissed(6750).formatPrice(stateFromStores.newPrice, stateFromStores.newCurrency);
+  const formatPriceResult1 = markAsDismissed(6926).formatPrice(stateFromStores.newPrice, stateFromStores.newCurrency);
   obj8.changeDate = new Date(stateFromStores.expectedChargeTime);
   obj8.interval = intervalStringAsNoun;
   obj8.newPrice = formatPriceResult1;
@@ -305,7 +286,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed)
   const date = new Date(stateFromStores.expectedChargeTime);
   obj8.hc_article_url = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SUBSCRIPTION_CANCEL);
   obj7.children = intl2.format(markAsDismissed(1126).t["n+Hrjb"], obj8);
-  items2[1] = closure_8(markAsDismissed(4892).Text, obj7);
+  items2[1] = closure_8(markAsDismissed(5086).Text, obj7);
   obj5.children = items2;
   const items3 = [closure_9(View, obj5), ];
   const obj9 = { variant: "primary", text: null, onPress: null };
@@ -314,8 +295,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed)
   obj9.onPress = function onPress() {
     markAsDismissed(ContentDismissActionType.USER_DISMISS);
   };
-  items3[1] = closure_8(markAsDismissed(5601).Button, obj9);
+  items3[1] = closure_8(markAsDismissed(5375).Button, obj9);
   obj4.children = items3;
   obj3.children = closure_9(View, obj4);
-  return closure_8(markAsDismissed(6652).BottomSheet, obj3);
+  return closure_8(markAsDismissed(6829).BottomSheet, obj3);
 });

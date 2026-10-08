@@ -1,23 +1,23 @@
-// === Module 11558: SoundmojiActionSheet ===
+// === Module 11621: SoundmojiActionSheet ===
 
-// Module 11558 (SoundmojiActionSheet)
+// Module 11621 (SoundmojiActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import EmojiDefault from "Emoji" /* 6632 */;
-import getSoundboardEmojiUrlDefault from "getSoundboardEmojiUrl" /* 11559 */;
+import EmojiDefault from "Emoji" /* 6809 */;
+import getSoundboardEmojiUrlDefault from "getSoundboardEmojiUrl" /* 11622 */;
 import noop from "module_19" /* 19 */;
 
 const util = BottomSheet(1126);
-const Text_Text = BottomSheet(4892);
-const getSoundmojiASTFromString = BottomSheet(5808);
-const Sheet_BottomSheet = BottomSheet(6652);
+const Text_Text = BottomSheet(5086);
+const getSoundmojiASTFromString = BottomSheet(5423);
+const Sheet_BottomSheet = BottomSheet(6829);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { padding: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_16 }, soundmojiContainer: { flexDirection: "row", alignItems: "center" }, emoji: null, textContainer: null };
-const PlatformUtils = fn(1369);
+const PlatformUtils = fn(1381);
 let num;
 if (PlatformUtils.isIOS()) {
   num = 32;
@@ -32,7 +32,7 @@ let obj5 = { gap: nativeDefault.space.PX_4, display: "flex", flex: 1 };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/sounds/soundmoji/native/views/SoundmojiActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SoundmojiActionSheet(arg0) {
   BottomSheet = require;
   let tmp = dependencyMap;
   const cResult = c.c(21);
@@ -138,7 +138,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = soundmojiFromMessage;
   tmp3 = soundmojiFromMessage;
   const BottomSheetResult = getSoundmojiASTFromString;
-}) : ((guildId) => {
+}) : (function SoundmojiActionSheet(guildId) {
   guildId = guildId.guildId;
   const channelId = guildId.channelId;
   const messageId = guildId.messageId;

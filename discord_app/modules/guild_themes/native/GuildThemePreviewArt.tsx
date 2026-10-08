@@ -1,22 +1,22 @@
-// === Module 16127: GuildThemePreviewArt ===
+// === Module 16387: GuildThemePreviewArt ===
 
-// Module 16127 (GuildThemePreviewArt)
+// Module 16387 (GuildThemePreviewArt)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useThemeDefault from "useTheme" /* 4797 */;
-import LinearGradientDefault from "LinearGradient" /* 5612 */;
-import GuildThemePreviewOverlayDefault from "GuildThemePreviewOverlay" /* 16128 */;
+import useThemeDefault from "useTheme" /* 4991 */;
+import LinearGradientDefault from "LinearGradient" /* 5387 */;
+import GuildThemePreviewOverlayDefault from "GuildThemePreviewOverlay" /* 16388 */;
 import noop from "module_19" /* 19 */;
 
-const GuildThemePresets = obj(4739);
+const GuildThemePresets = obj(4933);
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { previewArt: { position: "relative", width: 256, aspectRatio: 1.5705521472392638, overflow: "hidden", borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, previewOverlay: { position: "absolute", top: 7.314, left: 7.461, width: 259.862, height: 154.514 } };
 let closure_6 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function PreviewOverlay() {
   const cResult = c.c(3);
   const tmp3 = closure_6();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -36,13 +36,15 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp8 = cResult[2];
   }
   return tmp8;
-}) : (() => <View pointerEvents="none" style={closure_6().previewOverlay}>{jsx(GuildThemePreviewOverlayDefault, {})}</View>);
+}) : (function PreviewOverlay() {
+  return <View pointerEvents="none" style={closure_6().previewOverlay}>{jsx(GuildThemePreviewOverlayDefault, {})}</View>;
+});
 ReactCompilerGating = fn(558);
 let obj3 = { position: "relative", width: 256, aspectRatio: 1.5705521472392638, overflow: "hidden", borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_themes/native/GuildThemePreviewArt.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildThemePreviewArt(arg0) {
   let obj = require;
   const cResult = c.c(15);
   ({ themeSettings, style } = arg0);
@@ -142,7 +144,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[0] = tmp5;
   cResult[1] = themeSettings;
   cResult[2] = tmp7;
-}) : ((themeSettings) => {
+}) : (function GuildThemePreviewArt(themeSettings) {
   themeSettings = themeSettings.themeSettings;
   const tmp4 = useThemeDefault();
   importDefault = tmp4;

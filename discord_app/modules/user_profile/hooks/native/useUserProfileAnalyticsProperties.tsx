@@ -1,16 +1,16 @@
-// === Module 7881: useUserProfileAnalyticsProperties ===
+// === Module 8299: useUserProfileAnalyticsProperties ===
 
-// Module 7881 (useUserProfileAnalyticsProperties)
+// Module 8299 (useUserProfileAnalyticsProperties)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const UserProfileAnalyticsTypes = fn(7865).UserProfileAnalyticsTypes;
+const UserProfileAnalyticsTypes = fn(8283).UserProfileAnalyticsTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileAnalyticsProperties.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((profileEffectSkuId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserProfileAnalyticsProperties(profileEffectSkuId) {
   const cResult = c.c(27);
   ({ userId, user, channelId, guildId, displayProfile, guildMember, type } = profileEffectSkuId);
   if (type == null) {
@@ -154,7 +154,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((profileEffectSku
   cResult[12] = userId;
   cResult[13] = obj4;
   tmp14 = obj4;
-}) : ((userId) => {
+}) : (function useUserProfileAnalyticsProperties(userId) {
   userId = userId.userId;
   const user = userId.user;
   const channelId = userId.channelId;

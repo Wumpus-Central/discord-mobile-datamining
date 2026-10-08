@@ -1,18 +1,18 @@
-// === Module 16294: FavoritesGuildCoachmarkIntro ===
+// === Module 16554: FavoritesGuildCoachmarkIntro ===
 
-// Module 16294 (FavoritesGuildCoachmarkIntro)
+// Module 16554 (FavoritesGuildCoachmarkIntro)
 import util from "util" /* 1126 */;
-import _modDef3395 from "module_3395" /* 3395 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 10057 */;
-import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 16289 */;
+import _modDef3439 from "module_3439" /* 3439 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 10302 */;
+import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 16549 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 16265 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 16525 */;
 
 require = fn;
 const FAVORITES = fn(1085).FAVORITES;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const __initData = { code: "function FavoritesGuildCoachmarkIntroTsx1(){const{scrollPosition}=this.__closure;return scrollPosition.get()<=0;}" };
 const __initData2 = { code: "function FavoritesGuildCoachmarkIntroTsx2(atTop,wasAtTop){const{runOnJS,setScrolledToTop}=this.__closure;if(atTop===wasAtTop){return;}runOnJS(setScrolledToTop)(atTop);}" };
@@ -22,7 +22,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/native/onboarding/FavoritesGuildCoachmarkIntro.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FavoritesGuildCoachmarkIntro(markAsDismissed) {
   const cResult = markAsDismissed(576).c(14);
   markAsDismissed = markAsDismissed.markAsDismissed;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -59,8 +59,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed)
       ReanimatedRexport.runOnJS(closure_2)(arg0);
     }
   };
-  const tmpResult = markAsDismissed(4618);
-  fn2.__closure = { runOnJS: markAsDismissed(4618).runOnJS, setScrolledToTop: tmp10 };
+  const tmpResult = markAsDismissed(4810);
+  fn2.__closure = { runOnJS: markAsDismissed(4810).runOnJS, setScrolledToTop: tmp10 };
   fn2.__workletHash = 13648062364539;
   fn2.__initData = __initData2;
   const animatedReaction = tmpResult.useAnimatedReaction(C, fn2);
@@ -114,9 +114,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed)
         return;
       }
     }
-    const stringResult = obj4.string(scrollPosition(3395)["bu/mLv"]);
+    const stringResult = obj4.string(scrollPosition(3439)["bu/mLv"]);
     const intl = tmp(1126).intl;
-    const stringResult1 = intl.string(scrollPosition(3395).kxQJ7q);
+    const stringResult1 = intl.string(scrollPosition(3439).kxQJ7q);
     cResult[6] = stringResult;
     cResult[7] = stringResult1;
     let tmp15 = stringResult1;
@@ -134,18 +134,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed)
     tmp15 = cResult[7];
   }
   if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-    class R {
+    class G {
       constructor() {
         return closure_1_8(scrollPosition(closure_2[13]), {});
       }
     }
     const intl2 = tmp(1126).intl;
-    const stringResult2 = intl2.string(scrollPosition(3395)["vN/KQ9"]);
-    cResult[8] = R;
+    const stringResult2 = intl2.string(scrollPosition(3439)["vN/KQ9"]);
+    cResult[8] = G;
     cResult[9] = stringResult2;
     let tmp20 = stringResult2;
   } else {
-    class R {
+    class G {
       constructor() {
         return closure_1_8(scrollPosition(closure_2[13]), {});
       }
@@ -153,7 +153,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed)
     tmp20 = cResult[9];
   }
   if (cResult[10] === D) {
-    class R {
+    class G {
       constructor() {
         return closure_1_8(scrollPosition(closure_2[13]), {});
       }
@@ -162,10 +162,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed)
   cResult[10] = D;
   cResult[11] = I;
   cResult[12] = tmp9;
-  cResult[13] = { visible: tmp9, position: "bottom", title: tmp14, description: tmp15, onDismiss: I, renderImgComponent: R, buttonLabel: tmp20, onButtonPress: D };
-  const obj2 = { runOnJS: markAsDismissed(4618).runOnJS, setScrolledToTop: tmp10 };
-  const obj3 = { visible: tmp9, position: "bottom", title: tmp14, description: tmp15, onDismiss: I, renderImgComponent: R, buttonLabel: tmp20, onButtonPress: D };
-}) : ((markAsDismissed) => {
+  cResult[13] = { visible: tmp9, position: "bottom", title: tmp14, description: tmp15, onDismiss: I, renderImgComponent: G, buttonLabel: tmp20, onButtonPress: D };
+  const obj2 = { runOnJS: markAsDismissed(4810).runOnJS, setScrolledToTop: tmp10 };
+  const obj3 = { visible: tmp9, position: "bottom", title: tmp14, description: tmp15, onDismiss: I, renderImgComponent: G, buttonLabel: tmp20, onButtonPress: D };
+}) : (function FavoritesGuildCoachmarkIntro(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
   _slicedToArray = undefined;
   let onDismiss;
@@ -174,13 +174,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed)
   const tmp = _slicedToArray(onDismiss.useState(() => scrollPosition.get() <= 0), 2);
   const visible = tmp[0];
   _slicedToArray = tmp3;
-  const fn = function v() {
+  const fn = function p() {
     return scrollPosition.get() <= 0;
   };
   fn.__closure = { scrollPosition };
   fn.__workletHash = 16210171023746;
   fn.__initData = __initData3;
-  const fn2 = function p(arg0, arg1) {
+  const fn2 = function v(arg0, arg1) {
     if (arg0 !== arg1) {
       ReanimatedRexport.runOnJS(closure_3)(arg0);
     }
@@ -204,15 +204,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed)
   const memo = onDismiss.useMemo(() => {
     const obj = { visible, position: "bottom", title: null, description: null, onDismiss: null, renderImgComponent: null, buttonLabel: null, onButtonPress: null };
     const intl = util.intl;
-    obj.title = intl.string(_modDef3395["bu/mLv"]);
+    obj.title = intl.string(_modDef3439["bu/mLv"]);
     const intl2 = util.intl;
-    obj.description = intl2.string(_modDef3395.kxQJ7q);
+    obj.description = intl2.string(_modDef3439.kxQJ7q);
     obj.onDismiss = onDismiss;
     obj.renderImgComponent = function renderImgComponent() {
       return closure_1_8(scrollPosition(visible[13]), {});
     };
     const intl3 = util.intl;
-    obj.buttonLabel = intl3.string(_modDef3395["vN/KQ9"]);
+    obj.buttonLabel = intl3.string(_modDef3439["vN/KQ9"]);
     obj.onButtonPress = callback1;
     return obj;
   }, items2);

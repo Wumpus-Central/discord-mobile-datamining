@@ -1,11 +1,11 @@
-// === Module 9481: GuildEventsNoContent ===
+// === Module 8634: GuildEventsNoContent ===
 
-// Module 9481 (GuildEventsNoContent)
+// Module 8634 (GuildEventsNoContent)
 import nativeDefault from "native" /* 587 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9282 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8613 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
-import TextStyles from "TextStyles" /* 5922 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
+import TextStyles from "TextStyles" /* 5902 */;
 
 const require = fn;
 const View = fn(17).View;
@@ -14,7 +14,7 @@ const Constants = fn(1096);
 ({ Permissions: metroRequire, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", marginBottom: 88, padding: 16 }, title: null, subtitle: null };
 let obj3 = {};
 const merged = Object.assign(TextStyles(Fonts.DISPLAY_EXTRABOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24, { marginBottom: 8 }));
@@ -26,7 +26,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventsNoContent.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEventsNoContent(guild) {
   const cResult = guild(576).c(21);
   guild = guild.guild;
   const onClose = guild.onClose;
@@ -55,11 +55,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   const obj = guild(576);
   const stateFromStores = guild(504).useStateFromStores(first, tmp7, tmp8);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { icon: onClose(9308), IconComponent: tmp(9310).CalendarIcon };
-    const tmp14 = closure_7(onClose(9327), obj2);
+    const obj2 = { icon: onClose(8638), IconComponent: tmp(8639).CalendarIcon };
+    const tmp14 = closure_7(onClose(8635), obj2);
     cResult[4] = tmp14;
     let tmp10 = tmp14;
-    const tmp13 = onClose(9327);
+    const tmp13 = onClose(8635);
   } else {
     tmp10 = cResult[4];
   }
@@ -73,7 +73,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   }
   if (cResult[6] !== tmp4.title) {
     const obj3 = { style: tmp4.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: tmp15 };
-    const tmp19 = closure_7(tmp(4892).Text, obj3);
+    const tmp19 = closure_7(tmp(5086).Text, obj3);
     cResult[6] = tmp4.title;
     cResult[7] = tmp19;
     let tmp17 = tmp19;
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   }
   if (cResult[9] !== tmp4.subtitle) {
     const obj4 = { style: tmp4.subtitle, variant: "text-sm/normal", color: "text-default", children: tmp20 };
-    const tmp24 = closure_7(tmp(4892).Text, obj4);
+    const tmp24 = closure_7(tmp(5086).Text, obj4);
     cResult[9] = tmp4.subtitle;
     cResult[10] = tmp24;
     let tmp22 = tmp24;
@@ -137,7 +137,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
         }
     };
     obj6.children = intl3.format(tmp(1126).t["K+DH2o"], obj7);
-    tmp26 = closure_7(tmp(4892).Text, obj6);
+    tmp26 = closure_7(tmp(5086).Text, obj6);
   }
   cResult[11] = stateFromStores;
   cResult[12] = guild;
@@ -146,7 +146,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   cResult[15] = tmp26;
   tmp25 = tmp26;
   const tmpResult = guild(504);
-}) : ((guild) => {
+}) : (function GuildEventsNoContent(guild) {
   guild = guild.guild;
   const onClose = guild.onClose;
   const tmp = closure_9();
@@ -156,17 +156,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { icon: null, IconComponent: null };
   const obj = guild(504);
-  obj3.icon = onClose(9308);
-  obj3.IconComponent = guild(9310).CalendarIcon;
-  const items2 = [closure_7(onClose(9327), obj3), , , ];
+  obj3.icon = onClose(8638);
+  obj3.IconComponent = guild(8639).CalendarIcon;
+  const items2 = [closure_7(onClose(8635), obj3), , , ];
   const obj4 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = guild(1126).intl;
   obj4.children = intl.string(guild(1126).t["WgZ+3D"]);
-  items2[1] = closure_7(guild(4892).Text, obj4);
+  items2[1] = closure_7(guild(5086).Text, obj4);
   const obj5 = { style: tmp.subtitle, variant: "text-sm/normal", color: "text-default", children: null };
   const intl2 = guild(1126).intl;
   obj5.children = intl2.string(guild(1126).t["v/S/PG"]);
-  items2[2] = closure_7(guild(4892).Text, obj5);
+  items2[2] = closure_7(guild(5086).Text, obj5);
   if (stateFromStores) {
     const obj6 = { style: tmp.subtitle, variant: "text-sm/normal", color: "text-default", children: null };
     const intl3 = tmp2(1126).intl;
@@ -177,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
         }
     };
     obj6.children = intl3.format(tmp2(1126).t["K+DH2o"], obj7);
-    stateFromStores = closure_7(tmp2(4892).Text, obj6);
+    stateFromStores = closure_7(tmp2(5086).Text, obj6);
   }
   items2[3] = stateFromStores;
   obj2.children = items2;

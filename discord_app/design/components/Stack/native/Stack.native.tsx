@@ -1,13 +1,13 @@
-// === Module 5600: Stack/Stack ===
+// === Module 5373: Stack/Stack ===
 
-// Module 5600 (Stack/Stack)
+// Module 5373 (Stack/Stack)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles((gap, arg1, alignItems, justifyContent) => {
   const stack = { width: "100%", gap, alignItems, justifyContent, flexDirection: null };
   let str = "column";
@@ -21,7 +21,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Stack/native/Stack.native.tsx");
 
-export const Stack = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const Stack = ReactCompilerGating.isReactCompilerEnabled() ? (function Stack(arg0) {
   const cResult = c.c(7);
   ({ spacing, direction, align, justify, children, style, onLayout } = arg0);
   let num = 8;
@@ -66,7 +66,7 @@ export const Stack = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = tmp2Result.stack;
   cResult[2] = items;
   tmp4 = items;
-}) : ((spacing) => {
+}) : (function Stack(spacing) {
   spacing = spacing.spacing;
   let num = 8;
   if (undefined !== spacing) {

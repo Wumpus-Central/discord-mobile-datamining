@@ -1,30 +1,30 @@
-// === Module 17256: SoundboardSoundPicker ===
+// === Module 17537: SoundboardSoundPicker ===
 
-// Module 17256 (SoundboardSoundPicker)
+// Module 17537 (SoundboardSoundPicker)
 import nativeDefault from "native" /* 587 */;
-import searchSounds from "searchSounds" /* 6856 */;
+import searchSounds from "searchSounds" /* 7045 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
-import UserStore from "UserStore" /* 1377 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5108 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const View = fn(17).View;
-const ExpressionPickerStore = fn(17257);
+const ExpressionPickerStore = fn(17538);
 ({ setSearchQuery: metroRequire, useExpressionPickerStore: closure_7 } = ExpressionPickerStore);
-const SoundboardPickerType = fn(5689).SoundboardPickerType;
+const SoundboardPickerType = fn(5426).SoundboardPickerType;
 const EXPRESSION_FOOTER_HEIGHT = fn(1085).EXPRESSION_FOOTER_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4896);
-let obj = { title: { marginBottom: 8 }, container: { flex: 1, alignItems: "center" }, header: { paddingHorizontal: fn(17258).SOUND_ROW_HORIZONTAL_PADDING, padding: nativeDefault.space.PX_8, width: "100%" }, body: { flex: 1, width: "100%" } };
+const createStyles = fn(5090);
+let obj = { title: { marginBottom: 8 }, container: { flex: 1, alignItems: "center" }, header: { paddingHorizontal: fn(17539).SOUND_ROW_HORIZONTAL_PADDING, padding: nativeDefault.space.PX_8, width: "100%" }, body: { flex: 1, width: "100%" } };
 let closure_14 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
-let obj3 = { paddingHorizontal: fn(17258).SOUND_ROW_HORIZONTAL_PADDING, padding: nativeDefault.space.PX_8, width: "100%" };
+let obj3 = { paddingHorizontal: fn(17539).SOUND_ROW_HORIZONTAL_PADDING, padding: nativeDefault.space.PX_8, width: "100%" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundboard/native/SoundboardSoundPicker.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function SoundboardSoundPicker(channel) {
   const cResult = channel(ref[13]).c(64);
   channel = channel.channel;
   ({ analyticsSource, initialScrollLocation } = channel);
@@ -112,7 +112,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
   cResult[9] = tmp19;
   cResult[10] = channel(ref[17]).searchSounds(tmp19, availableSounds, stateFromStores, channel);
   const searchSoundsResult = channel(ref[17]).searchSounds(tmp19, availableSounds, stateFromStores, channel);
-}) : ((channel) => {
+}) : (function SoundboardSoundPicker(channel) {
   channel = channel.channel;
   const initialScrollLocation = channel.initialScrollLocation;
   let stateFromStores;

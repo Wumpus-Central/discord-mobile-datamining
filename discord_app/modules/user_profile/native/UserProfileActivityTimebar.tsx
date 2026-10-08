@@ -1,10 +1,10 @@
-// === Module 12864: UserProfileActivityTimebar ===
+// === Module 13013: UserProfileActivityTimebar ===
 
-// Module 12864 (UserProfileActivityTimebar)
+// Module 13013 (UserProfileActivityTimebar)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import useActivityTimer from "useActivityTimer" /* 12865 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import useActivityTimer from "useActivityTimer" /* 13014 */;
 import noop from "module_19" /* 19 */;
 
 const useActivityTimerDefault = useActivityTimer;
@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { bar: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.xs, height: 4, marginBottom: 4 }, progress: null, textRow: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.xs, height: 4, marginBottom: 4 };
 obj2.progress = { backgroundColor: nativeDefault.colors.ACTIVITY_TIMEBAR_PROGRESS_BACKGROUND, borderRadius: nativeDefault.radii.xs, height: "100%", minWidth: 4 };
@@ -24,7 +24,7 @@ let obj4 = { backgroundColor: nativeDefault.colors.ACTIVITY_TIMEBAR_PROGRESS_BAC
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileActivityTimebar.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileActivityTimebar(arg0) {
   const cResult = c.c(27);
   ({ start, end, style } = arg0);
   const tmp4 = closure_6();
@@ -142,7 +142,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = start;
   cResult[2] = obj9;
   tmp5 = obj9;
-}) : ((arg0) => {
+}) : (function UserProfileActivityTimebar(arg0) {
   ({ start, end, style } = arg0);
   const tmp = closure_6();
   const tmp2 = useActivityTimerDefault({ start, end });

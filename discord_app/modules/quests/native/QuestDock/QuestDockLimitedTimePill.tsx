@@ -1,18 +1,18 @@
-// === Module 15032: QuestDockLimitedTimePill ===
+// === Module 15294: QuestDockLimitedTimePill ===
 
-// Module 15032 (QuestDockLimitedTimePill)
+// Module 15294 (QuestDockLimitedTimePill)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import TimerIcon from "TimerIcon" /* 11240 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import TimerIcon from "TimerIcon" /* 11355 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { pill: { alignItems: "center", alignSelf: "flex-start", backgroundColor: nativeDefault.unsafe_rawColors.NEUTRAL_79, borderRadius: nativeDefault.radii.round, flexDirection: "row", gap: nativeDefault.space.PX_4, paddingHorizontal: 6, paddingVertical: 2 }, text: { textTransform: "uppercase" } };
 let closure_6 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
@@ -20,7 +20,7 @@ let obj3 = { alignItems: "center", alignSelf: "flex-start", backgroundColor: nat
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockLimitedTimePill.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function QuestDockLimitedTimePill() {
   const cResult = c.c(7);
   const tmp4 = closure_6();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -62,7 +62,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[5] = tmp11;
   cResult[6] = tmp15;
   tmp14 = tmp15;
-}) : (() => {
+}) : (function QuestDockLimitedTimePill() {
   const tmp = closure_6();
   const obj = { style: tmp.pill, accessible: true, accessibilityRole: "text", children: null };
   const items = [React4(TimerIcon.TimerIcon, { size: "xxs", color: nativeDefault.colors.ICON_OVERLAY_LIGHT }), ];

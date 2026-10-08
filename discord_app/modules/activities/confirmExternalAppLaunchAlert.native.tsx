@@ -1,30 +1,30 @@
-// === Module 9042: confirmExternalAppLaunchAlert ===
+// === Module 10655: confirmExternalAppLaunchAlert ===
 
-// Module 9042 (confirmExternalAppLaunchAlert)
+// Module 10655 (confirmExternalAppLaunchAlert)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import LinkingDefault from "Linking" /* 4571 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5714 */;
-import _modDef9043 from "module_9043" /* 9043 */;
+import LinkingDefault from "Linking" /* 4763 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5297 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import _modDef10656 from "module_10656" /* 10656 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
-const PRIVATE_APPS_HELP_ARTICLE = fn(2011).PRIVATE_APPS_HELP_ARTICLE;
+const PRIVATE_APPS_HELP_ARTICLE = fn(2023).PRIVATE_APPS_HELP_ARTICLE;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles({ alertContainer: { display: "flex", alignItems: "center", padding: 8 }, alertEyebrowText: { marginTop: 40, textAlign: "center" }, alertTitleText: { marginTop: 16, textAlign: "center" }, alertSubtitleText: { marginTop: 16, textAlign: "center" }, announcementBirb: { width: 90, height: 100, position: "absolute", top: -66 }, linkWrapper: { marginTop: 8 } });
 let ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((application) => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConfirmActivityGateContent(application) {
   const cResult = c.c(19);
   application = application.application;
   const tmp4 = closure_8();
   if (cResult[0] !== tmp4.announcementBirb) {
-    const obj2 = { source: _modDef9043, style: tmp4.announcementBirb };
+    const obj2 = { source: _modDef10656, style: tmp4.announcementBirb };
     const tmp9 = timestampProducer(React3, obj2);
     cResult[0] = tmp4.announcementBirb;
     cResult[1] = tmp9;
@@ -110,10 +110,10 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((application) =>
   cResult[8] = tmp15;
   cResult[9] = tmp18;
   tmp17 = tmp18;
-}) : ((activityName) => {
+}) : (function ConfirmActivityGateContent(activityName) {
   const tmp = closure_8();
   const obj = { style: tmp.alertContainer, children: null };
-  const items = [timestampProducer(React3, { source: _modDef9043, style: tmp.announcementBirb }), , , ];
+  const items = [timestampProducer(React3, { source: _modDef10656, style: tmp.announcementBirb }), , , ];
   const obj3 = { style: tmp.alertEyebrowText, variant: "eyebrow", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t["06YebE"]);
@@ -130,15 +130,15 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((application) =>
   return React5(React4, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function LinkButton() {
   const cResult = c.c(4);
   const tmp4 = closure_8();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function t() {
+    function handlePress() {
       LinkingDefault.openURL(PRIVATE_APPS_HELP_ARTICLE);
-    };
-    cResult[0] = fn;
-    let first = fn;
+    }
+    cResult[0] = handlePress;
+    let first = handlePress;
   } else {
     first = cResult[0];
   }
@@ -162,12 +162,12 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp9 = cResult[3];
   }
   return tmp9;
-}) : (() => {
+}) : (function LinkButton() {
   const obj = { style: closure_8().linkWrapper, children: null };
   const obj2 = {
     variant: "secondary",
     size: "sm",
-    onPress() {
+    onPress: function handlePress() {
       LinkingDefault.openURL(PRIVATE_APPS_HELP_ARTICLE);
     },
     text: null

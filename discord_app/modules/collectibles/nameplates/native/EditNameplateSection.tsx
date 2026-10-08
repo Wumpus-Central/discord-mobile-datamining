@@ -1,24 +1,24 @@
-// === Module 14483: EditNameplateSection ===
+// === Module 14713: EditNameplateSection ===
 
-// Module 14483 (EditNameplateSection)
+// Module 14713 (EditNameplateSection)
 import c from "c" /* 576 */;
-import utils from "utils" /* 1977 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6688 */;
-import NameplateDefault from "Nameplate" /* 8507 */;
-import useCollectibleListLayout from "useCollectibleListLayout" /* 13028 */;
-import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 13029 */;
-import useNameplateSections from "useNameplateSections" /* 14482 */;
+import utils from "utils" /* 1989 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6865 */;
+import NameplateDefault from "Nameplate" /* 8991 */;
+import useCollectibleListLayout from "useCollectibleListLayout" /* 13306 */;
+import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 13307 */;
+import useNameplateSections from "useNameplateSections" /* 14712 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const isNameplateRecord = fn(1978).isNameplateRecord;
+const isNameplateRecord = fn(1990).isNameplateRecord;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
-let obj = { row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(13028).GUTTER_SIZE }, rowSpacer: null, nameplate: null };
-let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(13028).GUTTER_SIZE };
-obj.rowSpacer = { height: fn(13028).GUTTER_SIZE };
+const createStyles = fn(5090);
+let obj = { row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(13306).GUTTER_SIZE }, rowSpacer: null, nameplate: null };
+let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(13306).GUTTER_SIZE };
+obj.rowSpacer = { height: fn(13306).GUTTER_SIZE };
 obj.nameplate = { overflow: "hidden" };
 let closure_9 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
@@ -262,8 +262,8 @@ const memoResult1 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((n
   const obj2 = { nameplate: memo, fullOpacity: true, isSquarePreview: true, style: null };
   const items2 = [closure_9().nameplate, { borderRadius: 6 }];
   obj2.style = items2;
-  obj.children = closure_6(setSelectedNameplate(8507), obj2);
-  return closure_6(nameplate(13029).EditCollectiblesListItemProduct, obj);
+  obj.children = closure_6(setSelectedNameplate(8991), obj2);
+  return closure_6(nameplate(13307).EditCollectiblesListItemProduct, obj);
 }));
 memoResult1.displayName = "EditNameplateItem";
 let size = fn(2);

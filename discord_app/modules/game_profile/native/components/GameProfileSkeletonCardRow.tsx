@@ -1,6 +1,6 @@
-// === Module 8438: GameProfileSkeletonCardRow ===
+// === Module 8924: GameProfileSkeletonCardRow ===
 
-// Module 8438 (GameProfileSkeletonCardRow)
+// Module 8924 (GameProfileSkeletonCardRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
@@ -8,7 +8,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles((gap) => {
   const obj = { viewport: { overflow: "hidden" }, row: { flexDirection: "row", gap } };
   return obj;
@@ -17,7 +17,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileSkeletonCardRow.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProfileSkeletonCardRow(arg0) {
   const cResult = c.c(12);
   ({ children, contentContainerStyle, gap, style } = arg0);
   if (undefined === gap) {
@@ -67,7 +67,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = tmp4.viewport;
   cResult[2] = items1;
   tmp5 = items1;
-}) : ((gap) => {
+}) : (function GameProfileSkeletonCardRow(gap) {
   let PX_12 = gap.gap;
   ({ children, contentContainerStyle } = gap);
   if (PX_12 === undefined) {

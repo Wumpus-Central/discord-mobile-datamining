@@ -1,14 +1,14 @@
-// === Module 9648: GoLiveAutoQualityExperiment ===
+// === Module 10843: GoLiveAutoQualityExperiment ===
 
-// Module 9648 (GoLiveAutoQualityExperiment)
+// Module 10843 (GoLiveAutoQualityExperiment)
 import Storage3 from "Storage" /* 510 */;
-import StreamActionCreators from "StreamActionCreators" /* 5038 */;
-import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4942 */;
-import ApexExperiment from "apex/ApexExperiment" /* 1441 */;
+import StreamActionCreators from "StreamActionCreators" /* 7438 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1258 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5269 */;
+import ApexExperiment from "apex/ApexExperiment" /* 1453 */;
 
 require = fn;
-const ApplicationStreamPresets = fn(4943).ApplicationStreamPresets;
+const ApplicationStreamPresets = fn(5210).ApplicationStreamPresets;
 let obj = { allowAutoQuality: false, defaultAutoQuality: false, migrateAutoQuality: false };
 const GoLiveAutoQualityMigrationVersion = "GoLiveAutoQualityMigrationVersion";
 const obj2 = { name: "2025-10-go-live-auto-quality", kind: "user", defaultConfig: obj, variations: null };
@@ -33,7 +33,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/go_live/GoLiveAutoQualityExperiment.tsx");
 
 export { getGoLiveAutoQualityExperimentConfig };
-export const useGoLiveAutoQualityExperimentConfig = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+export const useGoLiveAutoQualityExperimentConfig = ReactCompilerGating.isReactCompilerEnabled() ? (function useGoLiveAutoQualityExperimentConfig(location) {
   const cResult = _location(576).c(3);
   _location = location.location;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -55,7 +55,7 @@ export const useGoLiveAutoQualityExperimentConfig = ReactCompilerGating.isReactC
   }
   const obj = _location(576);
   return _location(504).useStateFromStores(first, tmp6);
-}) : ((location) => {
+}) : (function useGoLiveAutoQualityExperimentConfig(location) {
   location = location.location;
   const items = [ApexExperimentStore];
   return location(504).useStateFromStores(items, () => config.getConfig({ location }));

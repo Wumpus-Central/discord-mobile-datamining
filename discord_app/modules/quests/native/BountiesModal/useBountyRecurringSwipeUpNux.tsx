@@ -1,9 +1,9 @@
-// === Module 14835: useBountyRecurringSwipeUpNux ===
+// === Module 15096: useBountyRecurringSwipeUpNux ===
 
-// Module 14835 (useBountyRecurringSwipeUpNux)
+// Module 15096 (useBountyRecurringSwipeUpNux)
 import c from "c" /* 576 */;
-import dismissible_content from "dismissible_content" /* 2036 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 6901 */;
+import dismissible_content from "dismissible_content" /* 2048 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7090 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/useBountyRecurringSwipeUpNux.tsx");
 
-export const useBountyRecurringSwipeUpNux = ReactCompilerGating.isReactCompilerEnabled() ? ((isEligible) => {
+export const useBountyRecurringSwipeUpNux = ReactCompilerGating.isReactCompilerEnabled() ? (function useBountyRecurringSwipeUpNux(isEligible) {
   const cResult = c.c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { cooldownDurationMs };
@@ -40,7 +40,7 @@ export const useBountyRecurringSwipeUpNux = ReactCompilerGating.isReactCompilerE
   cResult[3] = obj3;
   tmp11 = obj3;
   const tmp7 = _slicedToArray(useSelectedDismissibleContent.useSelectedTimeRecurringDismissibleContent(prop, first), 2);
-}) : ((isEligible) => {
+}) : (function useBountyRecurringSwipeUpNux(isEligible) {
   let prop = null;
   if (isEligible.isEligible) {
     prop = dismissible_content.DismissibleContent.BOUNTIES_RECURRING_SWIPE_UP_NUX;

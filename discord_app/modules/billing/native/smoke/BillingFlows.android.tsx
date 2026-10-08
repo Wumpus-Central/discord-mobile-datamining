@@ -1,6 +1,6 @@
-// === Module 15593: BillingFlows ===
+// === Module 15873: BillingFlows ===
 
-// Module 15593 (BillingFlows)
+// Module 15873 (BillingFlows)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
@@ -12,7 +12,7 @@ const jsx = jsxProd.jsx;
 const result = size.fileFinishedImporting("modules/billing/native/smoke/BillingFlows.android.tsx");
 
 export default {
-  RunAllFlows: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  RunAllFlows: ReactCompilerGating.isReactCompilerEnabled() ? (function RunAllFlows() {
     const cResult = c.c(1);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
       const tmp5 = <View />;
@@ -22,5 +22,7 @@ export default {
       first = cResult[0];
     }
     return first;
-  }) : (() => <View />)
+  }) : (function RunAllFlows() {
+    return <View />;
+  })
 };

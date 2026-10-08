@@ -1,42 +1,42 @@
-// === Module 11346: DestinationFailedAlertModal ===
+// === Module 11615: DestinationFailedAlertModal ===
 
-// Module 11346 (DestinationFailedAlertModal)
+// Module 11615 (DestinationFailedAlertModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import UserUtilsDefault from "UserUtils" /* 4728 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import useChannelNameDefault from "useChannelName" /* 5049 */;
-import AlertModal from "AlertModal" /* 5720 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10661 */;
+import native from "native" /* 1200 */;
+import UserUtilsDefault from "UserUtils" /* 4922 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import AlertModal from "AlertModal" /* 5303 */;
+import useChannelNameDefault from "useChannelName" /* 5417 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10261 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import PresenceStore from "PresenceStore" /* 4936 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
-import UserStore from "UserStore" /* 1377 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import PresenceStore from "PresenceStore" /* 5106 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const View = fn(17).View;
 const StatusTypes = fn(1096).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG, borderRadius: nativeDefault.radii.lg, paddingVertical: nativeDefault.space.PX_8 }, row: null, label: null };
 let obj3 = { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG, borderRadius: nativeDefault.radii.lg, paddingVertical: nativeDefault.space.PX_8 };
 obj2.row = { display: "flex", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12, height: 40, marginHorizontal: nativeDefault.space.PX_16 };
 obj2.label = { flexShrink: 1 };
 let closure_13 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function FailedGroupDMRow(channel) {
   const cResult = c.c(9);
   channel = channel.channel;
   const tmp4 = closure_13();
   const tmp6 = useChannelNameDefault(channel);
   if (cResult[0] !== channel) {
     const obj2 = { size: native.AvatarSizes.REFRESH_MEDIUM_32, channel };
-    const tmp10 = v65535(GroupDMAvatarDefault, obj2);
+    const tmp10 = collapsed(GroupDMAvatarDefault, obj2);
     cResult[0] = channel;
     cResult[1] = tmp10;
     let tmp7 = tmp10;
@@ -66,13 +66,13 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     cResult[8] = tmp16;
     tmp13 = tmp16;
   }
-  const tmp12 = v65535(Text_Text.Text, { style: tmp4.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp6 });
+  const tmp12 = collapsed(Text_Text.Text, { style: tmp4.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp6 });
   cResult[2] = tmp6;
   cResult[3] = tmp4.label;
   cResult[4] = tmp12;
   tmp11 = tmp12;
   const obj4 = { style: tmp4.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp6 };
-}) : ((channel) => {
+}) : (function FailedGroupDMRow(channel) {
   channel = channel.channel;
   const tmp = closure_13();
   const obj = { style: tmp.row, children: null };
@@ -80,12 +80,12 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   const tmp2 = useChannelNameDefault(channel);
   obj2.size = native.AvatarSizes.REFRESH_MEDIUM_32;
   obj2.channel = channel;
-  const items = [v65535(GroupDMAvatarDefault, obj2), v65535(Text_Text.Text, { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp2 })];
+  const items = [collapsed(GroupDMAvatarDefault, obj2), collapsed(Text_Text.Text, { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp2 })];
   obj.children = items;
   return closure_1_11(View, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
+let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function FailedUserRow(user) {
   const cResult = user(576).c(13);
   user = user.user;
   const tmp4 = closure_13();
@@ -164,9 +164,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
     obj2.status = null;
     obj2.isMobileOnline = isMobileOnline;
     obj2.isVROnline = isVROnline;
-    obj2.size = tmp(1188).AvatarSizes.XSMALL;
+    obj2.size = tmp(1200).AvatarSizes.XSMALL;
     obj2.avatarDecoration = user.avatarDecoration;
-    const items2 = [closure_10(tmp(1188).Avatar, obj2), ];
+    const items2 = [closure_10(tmp(1200).Avatar, obj2), ];
     const obj3 = { style: tmp4.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: null };
     let name = stateFromStores;
     if (stateFromStores == null) {
@@ -179,7 +179,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
       name = UserUtilsDefault.getName(user);
     }
     obj3.children = name;
-    items2[1] = closure_10(tmp(4892).Text, obj3);
+    items2[1] = closure_10(tmp(5086).Text, obj3);
     tmp16[1] = items2;
     tmp14Result = closure_11(View, tmp16);
   }
@@ -191,7 +191,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
   cResult[11] = user;
   cResult[12] = tmp14Result;
   const tmpResult2 = user(504);
-}) : ((user) => {
+}) : (function FailedUserRow(user) {
   user = user.user;
   const tmp = closure_13();
   const items = [RelationshipStore];
@@ -211,22 +211,22 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
     obj4.status = tmp13;
     obj4.isMobileOnline = tmp6;
     obj4.isVROnline = tmp7;
-    obj4.size = tmp2(1188).AvatarSizes.XSMALL;
+    obj4.size = tmp2(1200).AvatarSizes.XSMALL;
     obj4.avatarDecoration = user.avatarDecoration;
-    const items2 = [closure_10(tmp2(1188).Avatar, obj4), ];
+    const items2 = [closure_10(tmp2(1200).Avatar, obj4), ];
     const obj5 = { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: null };
     if (stateFromStores == null) {
       stateFromStores = UserUtilsDefault.getName(user);
     }
     obj5.children = stateFromStores;
-    items2[1] = closure_10(tmp2(4892).Text, obj5);
+    items2[1] = closure_10(tmp2(5086).Text, obj5);
     obj3.children = items2;
     tmp9Result = closure_11(View, obj3);
   }
   return tmp9Result;
 });
 ReactCompilerGating = fn(558);
-let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function FailedChannelRow(channel) {
   const cResult = channel(576).c(13);
   channel = channel.channel;
   const tmp4 = closure_13();
@@ -289,20 +289,20 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
       tmp17 = tmp20;
     }
     const obj3 = { style: tmp4.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp11 };
-    const tmp16 = closure_10(tmp(4892).Text, obj3);
+    const tmp16 = closure_10(tmp(5086).Text, obj3);
     cResult[6] = tmp11;
     cResult[7] = tmp4.label;
     cResult[8] = tmp16;
     tmp14 = tmp16;
   }
   const tmpResult = channel(504);
-  const tmp13 = closure_10(channel(10751).GuildIconWithChannelType, { "aria-label": "", guild: stateFromStores, channel, size: channel(10751).GuildIconWithChannelTypeSizes.SMALL_32 });
+  const tmp13 = closure_10(channel(11616).GuildIconWithChannelType, { "aria-label": "", guild: stateFromStores, channel, size: channel(11616).GuildIconWithChannelTypeSizes.SMALL_32 });
   cResult[3] = channel;
   cResult[4] = stateFromStores;
   cResult[5] = tmp13;
   tmp12 = tmp13;
-  const obj4 = { "aria-label": "", guild: stateFromStores, channel, size: channel(10751).GuildIconWithChannelTypeSizes.SMALL_32 };
-}) : ((channel) => {
+  const obj4 = { "aria-label": "", guild: stateFromStores, channel, size: channel(11616).GuildIconWithChannelTypeSizes.SMALL_32 };
+}) : (function FailedChannelRow(channel) {
   channel = channel.channel;
   const tmp = closure_13();
   const items = [GuildStore];
@@ -316,12 +316,12 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   const obj2 = { style: tmp.row, children: null };
   const obj = channel(504);
   const tmp3 = useChannelNameDefault(channel);
-  const items1 = [closure_10(channel(10751).GuildIconWithChannelType, { "aria-label": "", guild: stateFromStores, channel, size: channel(10751).GuildIconWithChannelTypeSizes.SMALL_32 }), closure_10(channel(4892).Text, { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp3 })];
+  const items1 = [closure_10(channel(11616).GuildIconWithChannelType, { "aria-label": "", guild: stateFromStores, channel, size: channel(11616).GuildIconWithChannelTypeSizes.SMALL_32 }), closure_10(channel(5086).Text, { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp3 })];
   obj2.children = items1;
   return closure_11(View, obj2);
 });
 ReactCompilerGating = fn(558);
-let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((destination) => {
+let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function FailedDestinationRow(destination) {
   const cResult = destination(576).c(10);
   destination = destination.destination;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -384,7 +384,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((destination) =
   tmp7 = fn;
   let obj = destination(576);
   tmp = destination;
-}) : ((destination) => {
+}) : (function FailedDestinationRow(destination) {
   destination = destination.destination;
   const items = [ChannelStore, UserStore];
   const stateFromStoresObject = destination(504).useStateFromStoresObject(items, () => {
@@ -425,7 +425,7 @@ let obj4 = { display: "flex", flexDirection: "row", alignItems: "center", gap: n
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/share/native/DestinationFailedAlertModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function DestinationFailedAlertModal(arg0) {
   const cResult = c.c(13);
   ({ title, content, failedDestinations, onRetry } = arg0);
   const tmp4 = closure_13();
@@ -454,21 +454,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           const obj3 = { variant: "primary", onPress: onRetry, text: null };
           const intl2 = util.intl;
           obj3.text = intl2.string(util.t["5911Lb"]);
-          const items = [v65535(AlertModal.AlertActionButton, obj3, "confirm"), ];
+          const items = [collapsed(AlertModal.AlertActionButton, obj3, "confirm"), ];
           const obj4 = { variant: "secondary", text: null };
           const intl3 = util.intl;
           obj4.text = intl3.string(util.t.WAI6xu);
-          items[1] = v65535(AlertModal.AlertActionButton, obj4, "cancel");
+          items[1] = collapsed(AlertModal.AlertActionButton, obj4, "cancel");
           obj2.children = items;
           let tmp16Result = closure_1_11(__initData, obj2);
         } else {
           const obj5 = { variant: "primary", text: null };
           const intl = util.intl;
           obj5.text = intl.string(util.t.BddRzS);
-          tmp16Result = v65535(AlertModal.AlertActionButton, obj5, "confirm");
+          tmp16Result = collapsed(AlertModal.AlertActionButton, obj5, "confirm");
         }
         const obj6 = { children: tmp16Result };
-        const tmp16Result2 = v65535(AlertModal.AlertActions, obj6);
+        const tmp16Result2 = collapsed(AlertModal.AlertActions, obj6);
         cResult[6] = onRetry;
         cResult[7] = tmp16Result2;
       } else {
@@ -483,7 +483,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           }
         }
         const obj7 = { title, content, extraContent: tmp11, actions: cResult[7] };
-        const tmp25 = v65535(AlertModal.AlertModal, obj7);
+        const tmp25 = collapsed(AlertModal.AlertModal, obj7);
         cResult[8] = content;
         cResult[9] = tmp11;
         cResult[10] = cResult[7];
@@ -493,36 +493,36 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
     const obj8 = { style: tmp5, children: cResult[1] };
-    const tmp14 = v65535(View, obj8);
+    const tmp14 = collapsed(View, obj8);
     cResult[3] = tmp4.container;
     cResult[4] = cResult[1];
     cResult[5] = tmp14;
     tmp11 = tmp14;
   }
-}) : ((arg0) => {
+}) : (function DestinationFailedAlertModal(arg0) {
   ({ failedDestinations, onRetry } = arg0);
   ({ title, content } = arg0);
   const obj = { title, content, extraContent: null, actions: null };
   const tmp = closure_13();
-  obj.extraContent = v65535(View, { style: closure_13().container, children: failedDestinations.map((destination, index) => closure_1_10(closure_1_17, { destination }, index)) });
+  obj.extraContent = collapsed(View, { style: closure_13().container, children: failedDestinations.map((destination, index) => closure_1_10(closure_1_17, { destination }, index)) });
   if (null != onRetry) {
     const obj3 = { children: null };
     const obj4 = { variant: "primary", onPress: onRetry, text: null };
     const intl2 = util.intl;
     obj4.text = intl2.string(util.t["5911Lb"]);
-    const items = [v65535(AlertModal.AlertActionButton, obj4, "confirm"), ];
+    const items = [collapsed(AlertModal.AlertActionButton, obj4, "confirm"), ];
     const obj5 = { variant: "secondary", text: null };
     const intl3 = util.intl;
     obj5.text = intl3.string(util.t.WAI6xu);
-    items[1] = v65535(AlertModal.AlertActionButton, obj5, "cancel");
+    items[1] = collapsed(AlertModal.AlertActionButton, obj5, "cancel");
     obj3.children = items;
     let tmp2Result = closure_1_11(__initData, obj3);
   } else {
     const obj6 = { variant: "primary", text: null };
     const intl = util.intl;
     obj6.text = intl.string(util.t.BddRzS);
-    tmp2Result = v65535(AlertModal.AlertActionButton, obj6, "confirm");
+    tmp2Result = collapsed(AlertModal.AlertActionButton, obj6, "confirm");
   }
-  obj.actions = v65535(AlertModal.AlertActions, { children: tmp2Result });
-  return v65535(AlertModal.AlertModal, obj);
+  obj.actions = collapsed(AlertModal.AlertActions, { children: tmp2Result });
+  return collapsed(AlertModal.AlertModal, obj);
 });

@@ -1,13 +1,13 @@
-// === Module 11131: ConjureRichPresenceStore ===
+// === Module 11250: ConjureRichPresenceStore ===
 
-// Module 11131 (ConjureRichPresenceStore)
+// Module 11250 (ConjureRichPresenceStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import conjurePresenceActivity from "conjurePresenceActivity" /* 10634 */;
-import IdleStore from "IdleStore" /* 5574 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 8734 */;
+import conjurePresenceActivity from "conjurePresenceActivity" /* 10232 */;
+import IdleStore from "IdleStore" /* 5884 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4899 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 11251 */;
 
 require = fn;
 function updateActivity(withGracePeriod) {
@@ -198,7 +198,7 @@ function updateActivity(withGracePeriod) {
                         let merged = Object.assign(closure_1_10);
                         details = closure_1_10.details;
                         let prop = closure_1_0(closure_1_1[6]).CONJURE_PRESENCE_ACTIVITY_LINES;
-                        let found = prop.filter(/* F106646 */ function() { ... });
+                        let found = prop.filter(/* F107135 */ function() { ... });
                         let _Math = Math;
                         let _Math2 = Math;
                         obj.details = found[Math.floor(Math, Math.random(Math) * found.length)];
@@ -229,7 +229,7 @@ function updateActivity(withGracePeriod) {
   }
 }
 const ActivityTypes = fn(1085).ActivityTypes;
-const StaticChannelRoute = fn(2058).StaticChannelRoute;
+const StaticChannelRoute = fn(2070).StaticChannelRoute;
 let c8 = 300000;
 let selectedProjectId = null;
 let c11 = null;

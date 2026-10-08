@@ -1,9 +1,9 @@
-// === Module 16276: useHomeDrawerToggleAccessibilityAction ===
+// === Module 16536: useHomeDrawerToggleAccessibilityAction ===
 
-// Module 16276 (useHomeDrawerToggleAccessibilityAction)
+// Module 16536 (useHomeDrawerToggleAccessibilityAction)
 import util from "util" /* 1126 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4596 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4742 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4788 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4936 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/home_drawer/native/useHomeDrawerToggleAccessibilityAction.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useHomeDrawerToggleAccessibilityAction(arg0, arg1) {
   _require = arg1;
   const cResult = require("c").c(7);
   if (!arg0) {
@@ -33,7 +33,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     cResult[1] = stringResult;
   } else {
     if (cResult[2] !== arg1) {
-      const fn = function u() {
+      function action() {
         NavigationRouteUtils.setHomeDrawerState(!closure_0);
         const intl = util.intl;
         const string = intl.string;
@@ -45,10 +45,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
         }
         const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
         AccessibilityAnnouncer.announce(stringResult);
-      };
+      }
       cResult[2] = arg1;
-      cResult[3] = fn;
-      let tmp7 = fn;
+      cResult[3] = action;
+      let tmp7 = action;
     } else {
       tmp7 = cResult[3];
     }
@@ -60,7 +60,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     cResult[6] = obj2;
   }
   let obj = require("c");
-}) : ((arg0, arg1) => {
+}) : (function useHomeDrawerToggleAccessibilityAction(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   const items = [arg0, arg1];
@@ -78,7 +78,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
         name,
         label: stringResult,
         action() {
-            closure_0(4742).setHomeDrawerState(!dependencyMap);
+            closure_0(4936).setHomeDrawerState(!dependencyMap);
             const intl = closure_0(1126).intl;
             const string = intl.string;
             const t = closure_0(1126).t;
@@ -87,9 +87,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
             } else {
               stringResult = string(t.hfxfVb);
             }
-            const AccessibilityAnnouncer = closure_0(4596).AccessibilityAnnouncer;
+            const AccessibilityAnnouncer = closure_0(4788).AccessibilityAnnouncer;
             AccessibilityAnnouncer.announce(stringResult);
-            const obj = closure_0(4742);
+            const obj = closure_0(4936);
           }
       };
       return obj;

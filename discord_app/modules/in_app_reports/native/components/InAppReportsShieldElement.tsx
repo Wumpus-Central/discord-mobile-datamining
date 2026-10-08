@@ -1,20 +1,20 @@
-// === Module 8332: InAppReportsShieldElement ===
+// === Module 7715: InAppReportsShieldElement ===
 
-// Module 8332 (InAppReportsShieldElement)
+// Module 7715 (InAppReportsShieldElement)
 import c from "c" /* 576 */;
-import ShieldSpotIllustration from "ShieldSpotIllustration" /* 8130 */;
+import ShieldSpotIllustration from "ShieldSpotIllustration" /* 7508 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles({ container: { flex: 0, alignSelf: "center", marginBottom: 16 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsShieldElement.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((element) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ShieldElement(element) {
   const cResult = c.c(3);
   element = element.element;
   let container = closure_4();
@@ -40,7 +40,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((element) => {
     }
   }
   return tmp4;
-}) : ((element) => {
+}) : (function ShieldElement(element) {
   element = element.element;
   let tmp2 = null;
   if (null != element) {

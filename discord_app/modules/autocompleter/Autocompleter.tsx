@@ -1,20 +1,20 @@
-// === Module 9510: Autocompleter ===
+// === Module 8676: Autocompleter ===
 
-// Module 9510 (Autocompleter)
+// Module 8676 (Autocompleter)
 import _modDef12 from "module_12" /* 12 */;
-import URLUtilsDefault from "URLUtils" /* 1371 */;
-import _modDef1936 from "module_1936" /* 1936 */;
-import StringUtils from "StringUtils" /* 2018 */;
-import findCodedLinks from "findCodedLinks" /* 4876 */;
-import CodedLink from "CodedLink" /* 4881 */;
-import AutocompleteUtils from "AutocompleteUtils" /* 5628 */;
-import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 5710 */;
-import GuildUtilsDefault from "GuildUtils" /* 5711 */;
-import UserSearchManagerDefault from "UserSearchManager" /* 9513 */;
-import ThreadMemberListStore from "ThreadMemberListStore" /* 9511 */;
-import LinkRecord from "LinkRecord" /* 9512 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
-import UserStore from "UserStore" /* 1377 */;
+import URLUtilsDefault from "URLUtils" /* 1383 */;
+import _modDef1948 from "module_1948" /* 1948 */;
+import StringUtils from "StringUtils" /* 2030 */;
+import findCodedLinks from "findCodedLinks" /* 5070 */;
+import CodedLink from "CodedLink" /* 5075 */;
+import AutocompleteUtils from "AutocompleteUtils" /* 5975 */;
+import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 6100 */;
+import GuildUtilsDefault from "GuildUtils" /* 6101 */;
+import UserSearchManagerDefault from "UserSearchManager" /* 8679 */;
+import ThreadMemberListStore from "ThreadMemberListStore" /* 8677 */;
+import LinkRecord from "LinkRecord" /* 8678 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const AutocompleteUtilsDefault = AutocompleteUtils;
 
@@ -27,8 +27,8 @@ function getAutocompleterBoosterMap(USER, options) {
   }
   return boosterMap;
 }
-const GUILD_VOCAL_CHANNELS_KEY = fn(4513).GUILD_VOCAL_CHANNELS_KEY;
-fn(5707).AutocompleterResultTypes;
+const GUILD_VOCAL_CHANNELS_KEY = fn(4705).GUILD_VOCAL_CHANNELS_KEY;
+fn(6097).AutocompleterResultTypes;
 let options = Object.freeze({});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/autocompleter/Autocompleter.tsx");
@@ -503,7 +503,7 @@ prototype["queryApplications"] = function queryApplications(query, limit) {
 };
 prototype["queryGameProfiles"] = function queryGameProfiles(query, _limit) {
   if (this._include(AutocompleterResultTypes.GAME_PROFILE)) {
-    let result = require("queryGamesAutocomplete").queryGamesAutocomplete(query);
+    let result = require("queryGamesAutocomplete").queryGamesAutocomplete(query, require("GameSearchFilterGroup").GameSearchFilterGroup.DEFAULT);
     if (result == null) {
       result = [];
     }
@@ -545,7 +545,7 @@ prototype["queryLink"] = function queryLink(query) {
       const items = [obj2];
       return items;
     } else {
-      const sanitizeUrlResult = _modDef1936.sanitizeUrl(query);
+      const sanitizeUrlResult = _modDef1948.sanitizeUrl(query);
       try {
         const _URL = URL;
         const uRL = new URL(sanitizeUrlResult);

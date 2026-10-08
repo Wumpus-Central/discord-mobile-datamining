@@ -1,13 +1,13 @@
-// === Module 11083: AnimatedCounter ===
+// === Module 10447: AnimatedCounter ===
 
-// Module 11083 (AnimatedCounter)
+// Module 10447 (AnimatedCounter)
 import c from "c" /* 576 */;
-import native from "native" /* 4595 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import spring from "spring" /* 5604 */;
-import springPresets from "springPresets" /* 5605 */;
-import AnimatedCounterUtils from "AnimatedCounterUtils" /* 11084 */;
+import native from "native" /* 4787 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import spring from "spring" /* 5374 */;
+import springPresets from "springPresets" /* 5378 */;
+import AnimatedCounterUtils from "AnimatedCounterUtils" /* 10448 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 createStyles.createStyles({ container: { flex: 0, flexGrow: 0, flexShrink: 0, justifyContent: "flex-start", alignItems: "flex-start", overflow: "hidden" }, hidden: { opacity: 0 } });
 let obj = { ABOVE: -1, [-1]: "ABOVE", NEUTRAL: 0, [0]: "NEUTRAL", BELOW: 1, [1]: "BELOW" };
 let items = [, , ];
@@ -30,7 +30,7 @@ const __initData2 = { code: "function AnimatedCounterTsx2(finished){const{state,
 const __initData3 = { code: "function AnimatedCounterTsx3(){const{withSpring,interpolate,animationState,ANIMATION_INPUT,animationOutput,springConfig,state,TransitionStates,runOnJS,cleanUp}=this.__closure;return{transform:[{translateY:withSpring(interpolate(animationState.get(),ANIMATION_INPUT,animationOutput),springConfig,'respect-motion-settings',function(finished){if(finished&&state===TransitionStates.YEETED){runOnJS(cleanUp)();}})}]};}" };
 let closure_16 = { code: "function AnimatedCounterTsx4(finished){const{state,TransitionStates,runOnJS,cleanUp}=this.__closure;if(finished&&state===TransitionStates.YEETED){runOnJS(cleanUp)();}}" };
 let ReactCompilerGating = fn(558);
-let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((cleanUp) => {
+let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function AnimatedCount(cleanUp) {
   obj = state(height[6]);
   const cResult = obj.c(23);
   ({ count, formatter, state } = cleanUp);
@@ -206,7 +206,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((cleanUp) => {
   tmp17 = items1;
   tmp16 = I;
   let obj4 = { withSpring: state(height[10]).withSpring, interpolate: state(height[8]).interpolate, animationState: sharedValue, ANIMATION_INPUT: items, animationOutput: tmp12, springConfig, state, TransitionStates: state(height[9]).TransitionStates, runOnJS: state(height[8]).runOnJS, cleanUp };
-}) : ((state) => {
+}) : (function AnimatedCount(state) {
   state = state.state;
   const cleanUp = state.cleanUp;
   height = state.height;
@@ -241,7 +241,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((cleanUp) => {
   }), items);
   let obj2 = state(height[8]);
   const tmp2 = cleanUp;
-  let fn = function y() {
+  let fn = function _() {
     obj = { transform: null };
     const obj2 = { translateY: null };
     const obj3 = spring;
@@ -293,7 +293,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((cleanUp) => {
   return closure_7(tmp2(height[8]).View, obj4);
 });
 ReactCompilerGating = fn(558);
-let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((count) => {
+let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function AnimatedCounterTransitionGroup(count) {
   const cResult = count(textColor[6]).c(34);
   count = count.count;
   const formatter = count.formatter;
@@ -379,12 +379,12 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((count) => {
       }
     }
   }
-  class Y {
+  class B {
     constructor(arg0, arg1, arg2, arg3) {
       obj = { formatter: closure_1, springConfig: null, count: null, state: null, cleanUp: null, height: null, textColor: null, textVariant: null, textStyle: null };
       springStandard = springConfig;
       tmp = jsx;
-      tmp2 = f56703;
+      tmp2 = AnimatedCount;
       if (null == springConfig) {
         tmp3 = closure_0;
         tmp4 = closure_2;
@@ -407,9 +407,9 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((count) => {
   cResult[9] = textColor;
   cResult[10] = textStyle;
   cResult[11] = textVariant;
-  cResult[12] = Y;
+  cResult[12] = B;
   const tmp3Result = textVariant(textStyle.useState(tmp6), 2);
-}) : ((count) => {
+}) : (function AnimatedCounterTransitionGroup(count) {
   count = count.count;
   const formatter = count.formatter;
   const textColor = count.textColor;
@@ -470,7 +470,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((count) => {
   return c8(height, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function BasicCounter(arg0) {
   const cResult = c.c(8);
   ({ count, textStyle, textColor, textVariant, formatter } = arg0);
   if (cResult[0] === count) {
@@ -501,7 +501,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = formatter;
   cResult[2] = formatterResult;
   tmp4 = formatterResult;
-}) : ((arg0) => {
+}) : (function BasicCounter(arg0) {
   ({ count, textStyle, textColor, textVariant, formatter } = arg0);
   return React5(Text_Text.Text, { variant: textVariant, color: textColor, style: textStyle, children: formatter(count) });
 });
@@ -509,7 +509,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/forums/native/posts/AnimatedCounter.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function AnimatedCounter(arg0) {
   const cResult = c.c(13);
   ({ count, springConfig, textStyle, animate, textColor, textVariant, formatter } = arg0);
   let str = "text-default";
@@ -567,7 +567,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
     tmp5 = tmp8;
   }
   tmp4 = undefined === animate || animate;
-}) : ((textColor) => {
+}) : (function AnimatedCounter(textColor) {
   ({ count, textStyle, animate } = textColor);
   if (animate === undefined) {
     animate = true;

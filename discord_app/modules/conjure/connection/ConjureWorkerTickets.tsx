@@ -1,7 +1,7 @@
-// === Module 12927: ConjureWorkerTickets ===
+// === Module 13077: ConjureWorkerTickets ===
 
-// Module 12927 (ConjureWorkerTickets)
-import HTTPUtils from "HTTPUtils" /* 1282 */;
+// Module 13077 (ConjureWorkerTickets)
+import HTTPUtils from "HTTPUtils" /* 1294 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

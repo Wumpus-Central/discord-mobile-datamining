@@ -1,13 +1,13 @@
-// === Module 9843: useShouldShowSafetyToolsButtonTooltipForChannel ===
+// === Module 10404: useShouldShowSafetyToolsButtonTooltipForChannel ===
 
-// Module 9843 (useShouldShowSafetyToolsButtonTooltipForChannel)
+// Module 10404 (useShouldShowSafetyToolsButtonTooltipForChannel)
 import c from "c" /* 576 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 9799 */;
-import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 9803 */;
-import useInappropriateConversationSafetyToolsWarningForChannel from "useInappropriateConversationSafetyToolsWarningForChannel" /* 9844 */;
-import useShouldShowInitialSafetyToolsButtonTooltip from "useShouldShowInitialSafetyToolsButtonTooltip" /* 9845 */;
-import InappropriateConversationUtils from "InappropriateConversationUtils" /* 9846 */;
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10266 */;
+import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 10366 */;
+import useInappropriateConversationSafetyToolsWarningForChannel from "useInappropriateConversationSafetyToolsWarningForChannel" /* 10405 */;
+import useShouldShowInitialSafetyToolsButtonTooltip from "useShouldShowInitialSafetyToolsButtonTooltip" /* 10406 */;
+import InappropriateConversationUtils from "InappropriateConversationUtils" /* 10407 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -16,7 +16,7 @@ const HOUR = DurationsDefault.Millis.HOUR;
 let closure_4 = 12 * DurationsDefault.Millis.HOUR;
 const result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useShouldShowSafetyToolsButtonTooltipForChannel.tsx");
 
-export const useSafetyToolsButtonTooltipForChannel = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useSafetyToolsButtonTooltipForChannel = ReactCompilerGating.isReactCompilerEnabled() ? (function useSafetyToolsButtonTooltipForChannel(arg0) {
   const cResult = c.c(3);
   const inappropriateConversationSafetyToolsWarningForChannel = useInappropriateConversationSafetyToolsWarningForChannel.useInappropriateConversationSafetyToolsWarningForChannel(arg0);
   const inappropriateConversationWarningsForChannel = useInappropriateConversationWarningsForChannel.useInappropriateConversationWarningsForChannel(arg0);
@@ -43,46 +43,29 @@ export const useSafetyToolsButtonTooltipForChannel = ReactCompilerGating.isReact
               if (cResult[0] !== inappropriateConversationWarningsForChannel) {
                 const _Symbol = Symbol;
                 if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-                  class T {
-                    constructor(arg0) {
-                      return null == arg0.dismiss_timestamp;
-                    }
-                  }
-                  cResult[2] = T;
+                  const fn = function _(dismiss_timestamp) {
+                    return null == dismiss_timestamp.dismiss_timestamp;
+                  };
+                  cResult[2] = fn;
+                  let tmp18 = fn;
                 } else {
-                  class T {
-                    constructor(arg0) {
-                      return null == arg0.dismiss_timestamp;
-                    }
-                  }
+                  tmp18 = cResult[2];
                 }
-                const found1 = inappropriateConversationWarningsForChannel.filter(T);
-                const findLastResult = found1.findLast((type) => type.type === SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1);
+                const found1 = inappropriateConversationWarningsForChannel.filter(tmp18);
+                let findLastResult = found1.findLast((type) => type.type === SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1);
                 if (findLastResult == null) {
-                  class T {
-                    constructor(arg0) {
-                      return null == arg0.dismiss_timestamp;
-                    }
-                  }
+                  findLastResult = found1.findLast((type) => type.type === SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2);
                 }
                 cResult[0] = inappropriateConversationWarningsForChannel;
                 cResult[1] = findLastResult;
-                const tmp16 = findLastResult;
+                let tmp16 = findLastResult;
               } else {
-                class T {
-                  constructor(arg0) {
-                    return null == arg0.dismiss_timestamp;
-                  }
-                }
+                tmp16 = cResult[1];
               }
               return tmp16;
             }
           } else {
-            class T {
-              constructor(arg0) {
-                return null == arg0.dismiss_timestamp;
-              }
-            }
+            let time1 = globalThis;
             const _Date = Date;
             const date = new Date(dismiss_timestamp);
             let time = date.getTime();
@@ -96,7 +79,7 @@ export const useSafetyToolsButtonTooltipForChannel = ReactCompilerGating.isReact
     }
   }
   obj4 = useShouldShowInitialSafetyToolsButtonTooltip;
-}) : ((arg0) => {
+}) : (function useSafetyToolsButtonTooltipForChannel(arg0) {
   const inappropriateConversationSafetyToolsWarningForChannel = useInappropriateConversationSafetyToolsWarningForChannel.useInappropriateConversationSafetyToolsWarningForChannel(arg0);
   const inappropriateConversationWarningsForChannel = useInappropriateConversationWarningsForChannel.useInappropriateConversationWarningsForChannel(arg0);
   if (null != inappropriateConversationSafetyToolsWarningForChannel) {

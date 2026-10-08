@@ -1,43 +1,43 @@
-// === Module 9645: MobileGoLiveActionSheet ===
+// === Module 10840: MobileGoLiveActionSheet ===
 
-// Module 9645 (MobileGoLiveActionSheet)
+// Module 10840 (MobileGoLiveActionSheet)
 import nativeDefault from "native" /* 587 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
 import util from "util" /* 1126 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
-import _modDef2327 from "module_2327" /* 2327 */;
-import BaseIconImage from "BaseIconImage" /* 4585 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import StreamActionCreators from "StreamActionCreators" /* 5038 */;
-import NativeViewDefault from "NativeView" /* 5983 */;
-import TableRadioRow from "TableRadioRow" /* 6078 */;
-import MobilePhoneIcon from "MobilePhoneIcon" /* 6455 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 8079 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 8848 */;
-import getStreamSettingsForPreset from "getStreamSettingsForPreset" /* 9646 */;
-import SpeedometerIcon from "SpeedometerIcon" /* 9651 */;
-import ImageSparkleIcon from "ImageSparkleIcon" /* 9653 */;
-import _modDef9655 from "module_9655" /* 9655 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1272 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import _modDef2371 from "module_2371" /* 2371 */;
+import BaseIconImage from "BaseIconImage" /* 4777 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5241 */;
+import NativeViewDefault from "NativeView" /* 6166 */;
+import TableRadioRow from "TableRadioRow" /* 6264 */;
+import MobilePhoneIcon from "MobilePhoneIcon" /* 6633 */;
+import StreamActionCreators from "StreamActionCreators" /* 7438 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9208 */;
+import _modDef9470 from "module_9470" /* 9470 */;
+import getStreamSettingsForPreset from "getStreamSettingsForPreset" /* 10841 */;
+import SpeedometerIcon from "SpeedometerIcon" /* 10846 */;
+import ImageSparkleIcon from "ImageSparkleIcon" /* 10848 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4942 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4918 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import UserStore from "UserStore" /* 1377 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5269 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5893 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const getStreamSettingsForPresetDefault = getStreamSettingsForPreset;
 
 require = fn;
-let ApplicationStreamPresets = fn(4943).ApplicationStreamPresets;
+let ApplicationStreamPresets = fn(5210).ApplicationStreamPresets;
 const ApplicationStreamStates = fn(1085).ApplicationStreamStates;
-const MediaEngineContextTypes = fn(4921).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(5115).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { wrapper: { gap: nativeDefault.space.PX_24 }, header: { textAlign: "center" }, section: null, highQualityLabel: null };
 let obj3 = { gap: nativeDefault.space.PX_24 };
 obj.section = { marginHorizontal: nativeDefault.space.PX_16 };
@@ -47,7 +47,7 @@ let closure_16 = createStyles.createStyles(obj);
 const MobileGoLiveActionSheet = "MobileGoLiveActionSheet";
 let items = [{ preset: ApplicationStreamPresets.PRESET_MOBILE_DEFAULT, enabled: true }, , ];
 let obj7 = { preset: ApplicationStreamPresets.PRESET_MOBILE_PERFORMANCE, enabled: null };
-const PlatformUtils = fn(1370);
+const PlatformUtils = fn(1382);
 obj7.enabled = !PlatformUtils.isIOS();
 items[1] = obj7;
 items[2] = { preset: ApplicationStreamPresets.PRESET_MOBILE_HIGH_QUALITY, enabled: true };
@@ -59,7 +59,7 @@ let obj6 = { preset: ApplicationStreamPresets.PRESET_MOBILE_DEFAULT, enabled: tr
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/go_live/native/MobileGoLiveActionSheet.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function MobileGoLiveActionSheet() {
   const cResult = user(576).c(79);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [analyticsLocations];
@@ -225,9 +225,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       const tmp21 = cResult[9];
     }
     const tmpResult5 = tmp(504);
-    const goLiveUpsellVariant = guildPremiumTier(9650).useConfig(tmp21).goLiveUpsellVariant;
-    let obj6 = guildPremiumTier(9650);
-    analyticsLocations = guildPremiumTier(6664)(guildPremiumTier(6688).MOBILE_GO_LIVE_ACTION_SHEET).analyticsLocations;
+    const goLiveUpsellVariant = guildPremiumTier(10845).useConfig(tmp21).goLiveUpsellVariant;
+    let obj6 = guildPremiumTier(10845);
+    analyticsLocations = guildPremiumTier(6841)(guildPremiumTier(6865).MOBILE_GO_LIVE_ACTION_SHEET).analyticsLocations;
     const tmp25 = closure_16();
     ApplicationStreamingStore = tmp25;
     if (cResult[10] === tmp14) {
@@ -279,7 +279,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       SelectedChannelStore = tmp35;
       UserStore = isStreaming(noop.useState(stateFromStoresObject.soundshareEnabled), 2)[1];
       const tmp34 = isStreaming(noop.useState(stateFromStoresObject.soundshareEnabled), 2);
-      const sharedValue = tmp(4618).useSharedValue(!tmp14(ApplicationStreamPresets.PRESET_MOBILE_HIGH_QUALITY));
+      const sharedValue = tmp(4810).useSharedValue(!tmp14(ApplicationStreamPresets.PRESET_MOBILE_HIGH_QUALITY));
       if (cResult[13] === tmp20) {
         if (cResult[14] === guildPremiumTier) {
           if (cResult[15] === isStreaming) {
@@ -288,28 +288,28 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             }
             ApplicationStreamPresets = tmp37;
             if (cResult[18] !== tmp25.highQualityLabel) {
-              function ie(value) {
+              function getTableRadioRowConfig(value) {
                 const maxSettingsForPreset = getStreamSettingsForPreset.getMaxSettingsForPreset(ApplicationStreamPresets.PRESET_MOBILE_DEFAULT);
                 const maxSettingsForPreset1 = getStreamSettingsForPreset.getMaxSettingsForPreset(ApplicationStreamPresets.PRESET_MOBILE_PERFORMANCE);
                 const maxSettingsForPreset2 = getStreamSettingsForPreset.getMaxSettingsForPreset(ApplicationStreamPresets.PRESET_MOBILE_HIGH_QUALITY);
                 const obj5 = { icon: state(MobilePhoneIcon.MobilePhoneIcon, {}), label: null, subLabel: null };
                 const intl = util.intl;
-                obj5.label = intl.string(_modDef2327["2qmQ8N"]);
+                obj5.label = intl.string(_modDef2371["2qmQ8N"]);
                 let str = "";
                 let str2 = "";
                 if (null != maxSettingsForPreset) {
                   const intl2 = util.intl;
-                  str2 = intl2.formatToPlainString(_modDef2327.ibH7vy, maxSettingsForPreset);
+                  str2 = intl2.formatToPlainString(_modDef2371.ibH7vy, maxSettingsForPreset);
                 }
                 const obj6 = { [closure_2_11.PRESET_MOBILE_DEFAULT]: obj5 };
                 obj5.subLabel = str2;
                 const obj7 = { icon: state(SpeedometerIcon.SpeedometerIcon, {}), label: null, subLabel: null };
                 const intl3 = util.intl;
-                obj7.label = intl3.string(_modDef2327["5eO4/m"]);
+                obj7.label = intl3.string(_modDef2371["5eO4/m"]);
                 let formatToPlainStringResult = str;
                 if (null != maxSettingsForPreset1) {
                   const intl4 = util.intl;
-                  formatToPlainStringResult = intl4.formatToPlainString(_modDef2327.fN0UQY, maxSettingsForPreset1);
+                  formatToPlainStringResult = intl4.formatToPlainString(_modDef2371.fN0UQY, maxSettingsForPreset1);
                 }
                 obj7.subLabel = formatToPlainStringResult;
                 obj6[ApplicationStreamPresets.PRESET_MOBILE_PERFORMANCE] = obj7;
@@ -318,15 +318,15 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                 const obj4 = { value };
                 const obj10 = { variant: "text-md/semibold", color: "text-strong", children: null };
                 const intl5 = util.intl;
-                obj10.children = intl5.string(_modDef2327.nMcXo1);
+                obj10.children = intl5.string(_modDef2371.nMcXo1);
                 const items = [state(Text_Text.Text, obj10), ];
                 const tmp8Result = NativeViewDefault;
-                items[1] = state(BaseIconImage.BaseIconImage, { source: _modDef9655, size: "xs" });
+                items[1] = state(BaseIconImage.BaseIconImage, { source: _modDef9470, size: "xs" });
                 obj9.children = items;
                 obj8.label = closure_2_15(tmp8Result, obj9);
                 if (null != maxSettingsForPreset2) {
                   const intl6 = util.intl;
-                  str = intl6.formatToPlainString(_modDef2327.q4gYBi, maxSettingsForPreset2);
+                  str = intl6.formatToPlainString(_modDef2371.q4gYBi, maxSettingsForPreset2);
                 }
                 obj8.subLabel = str;
                 obj6[ApplicationStreamPresets.PRESET_MOBILE_HIGH_QUALITY] = obj8;
@@ -356,8 +356,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                   return obj1;
                 }
               }
-              cResult[19] = ie;
-              let tmp38 = ie;
+              cResult[19] = getTableRadioRowConfig;
+              let tmp38 = getTableRadioRowConfig;
             } else {
               tmp38 = cResult[19];
             }
@@ -383,10 +383,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                 return obj1;
               }
             }
-            const AnalyticsLocationProvider = tmp(6664).AnalyticsLocationProvider;
-            BottomSheet = tmp(6652).BottomSheet;
-            const BottomSheetScrollView = tmp(6119).BottomSheetScrollView;
-            const SafeAreaPaddingView = tmp(6626).SafeAreaPaddingView;
+            const AnalyticsLocationProvider = tmp(6841).AnalyticsLocationProvider;
+            BottomSheet = tmp(6829).BottomSheet;
+            const BottomSheetScrollView = tmp(6298).BottomSheetScrollView;
+            const SafeAreaPaddingView = tmp(6803).SafeAreaPaddingView;
             const _Symbol3 = Symbol;
             class R {
               constructor() {
@@ -407,7 +407,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             }
             if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
               let intl = tmp(1126).intl;
-              const stringResult = intl.string(tmp22(2327).CrNjqp);
+              const stringResult = intl.string(tmp22(2371).CrNjqp);
               class H {
                 constructor() {
                   obj = closure_6;
@@ -457,7 +457,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                 }
               }
               cResult[21] = tmp25.header;
-              cResult[22] = closure_14(tmp(4892).Text, obj3);
+              cResult[22] = closure_14(tmp(5086).Text, obj3);
               class R {
                 constructor() {
                   currentUser = closure_10.getCurrentUser();
@@ -475,12 +475,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                   return { user: currentUser, guildPremiumTier: premiumTier };
                 }
               }
-              const tmp44 = closure_14(tmp(4892).Text, obj3);
+              const tmp44 = closure_14(tmp(5086).Text, obj3);
             }
             const _Symbol4 = Symbol;
             if (cResult[23] === Symbol.for("react.memo_cache_sentinel")) {
               let intl2 = tmp(1126).intl;
-              const stringResult1 = intl2.string(tmp22(2327)["/XSr8v"]);
+              const stringResult1 = intl2.string(tmp22(2371)["/XSr8v"]);
               class H {
                 constructor() {
                   obj = closure_6;
@@ -610,7 +610,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                                 }
                                 if (tmp63 === Symbol.for("react.memo_cache_sentinel")) {
                                   let intl4 = tmp(1126).intl;
-                                  const stringResult2 = intl4.string(tmp22(2327)["j+eAMQ"]);
+                                  const stringResult2 = intl4.string(tmp22(2371)["j+eAMQ"]);
                                   class H {
                                     constructor() {
                                       obj = closure_6;
@@ -641,7 +641,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                                 const _Symbol6 = Symbol;
                                 if (cResult[45] === Symbol.for("react.memo_cache_sentinel")) {
                                   let intl5 = tmp(1126).intl;
-                                  const stringResult3 = intl5.string(tmp22(2327).uwMBDo);
+                                  const stringResult3 = intl5.string(tmp22(2371).uwMBDo);
                                   class H {
                                     constructor() {
                                       obj = closure_6;
@@ -682,7 +682,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                                         let tmp74 = cResult[54];
                                       }
                                       if (cResult[55] !== isStreaming) {
-                                        const Button = tmp(5601).Button;
+                                        const Button = tmp(5375).Button;
                                         if (isStreaming) {
                                           let obj4 = { size: "lg", variant: "destructive", text: null, onPress: null };
                                           class H {
@@ -708,9 +708,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                                             }
                                           }
                                           obj4.onPress = function onPress() {
-                                            user(9644).stopScreenshare();
-                                            const obj = user(9644);
-                                            guildPremiumTier(4860).hideActionSheet(MobileGoLiveActionSheet);
+                                            user(10839).stopScreenshare();
+                                            const obj = user(10839);
+                                            guildPremiumTier(5054).hideActionSheet(MobileGoLiveActionSheet);
                                           };
                                           let obj5 = obj4;
                                         } else {
@@ -739,9 +739,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                                             }
                                           }
                                           obj5.onPress = function onPress() {
-                                            guildPremiumTier(4860).hideActionSheet(MobileGoLiveActionSheet);
-                                            const obj = guildPremiumTier(4860);
-                                            user(9644).startStream();
+                                            guildPremiumTier(5054).hideActionSheet(MobileGoLiveActionSheet);
+                                            const obj = guildPremiumTier(5054);
+                                            user(10839).startStream();
                                           };
                                         }
                                         class H {
@@ -1053,7 +1053,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                                         }
                                         tmp84[0] = tmp25.section;
                                         tmp84[1] = cResult[56];
-                                        const tmp85 = closure_14(tmp22(5983), tmp84);
+                                        const tmp85 = closure_14(tmp22(6166), tmp84);
                                         cResult[57] = tmp25.section;
                                         class R {
                                           constructor() {
@@ -1101,7 +1101,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                                     }
                                     tmp76[0] = tmp25.section;
                                     tmp76[1] = tmp70;
-                                    const tmp77 = closure_14(tmp22(5983), tmp76);
+                                    const tmp77 = closure_14(tmp22(6166), tmp76);
                                     cResult[52] = tmp25.section;
                                     class R {
                                       constructor() {
@@ -1165,8 +1165,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                                       return { user: currentUser, guildPremiumTier: premiumTier };
                                     }
                                   }
-                                  tmp72[2] = closure_14(tmp(6705).TableSwitchRow, obj7);
-                                  const tmp73 = closure_14(tmp(6081).TableRowGroup, tmp72);
+                                  tmp72[2] = closure_14(tmp(6882).TableSwitchRow, obj7);
+                                  const tmp73 = closure_14(tmp(6267).TableRowGroup, tmp72);
                                   cResult[49] = tmp35;
                                   cResult[50] = tmp68;
                                   cResult[51] = tmp73;
@@ -1223,7 +1223,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                             }
                             let obj9 = { text: null, onPress: null };
                             let intl3 = tmp(1126).intl;
-                            obj9.text = intl3.string(tmp22(2327).u72Prd);
+                            obj9.text = intl3.string(tmp22(2371).u72Prd);
                             class R {
                               constructor() {
                                 currentUser = closure_10.getCurrentUser();
@@ -1241,9 +1241,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                                 return { user: currentUser, guildPremiumTier: premiumTier };
                               }
                             }
-                            obj8.children = closure_14(tmp22(9661), obj9);
+                            obj8.children = closure_14(tmp22(9733), obj9);
                             tmp59 = closure_14(tmp61, obj8);
-                            const tmp22Result = tmp22(9661);
+                            const tmp22Result = tmp22(9733);
                           }
                           class R {
                             constructor() {
@@ -1292,7 +1292,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                         }
                         tmp55[0] = tmp25.section;
                         tmp55[1] = tmp51;
-                        const tmp56 = closure_14(tmp22(5983), tmp55);
+                        const tmp56 = closure_14(tmp22(6166), tmp55);
                         cResult[36] = tmp25.section;
                         class R {
                           constructor() {
@@ -1358,8 +1358,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                       }
                     }
                     obj11.children = tmp48;
-                    obj10.children = closure_14(tmp(6079).TableRadioGroup, obj11);
-                    const tmp52 = closure_14(tmp(6081).TableRowGroup, obj10);
+                    obj10.children = closure_14(tmp(6265).TableRadioGroup, obj11);
+                    const tmp52 = closure_14(tmp(6267).TableRowGroup, obj10);
                     cResult[32] = value;
                     cResult[33] = tmp47;
                     cResult[34] = tmp48;
@@ -1472,7 +1472,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       cResult[16] = user;
       cResult[17] = fn2;
       tmp37 = fn2;
-      const tmpResult6 = tmp(4618);
+      const tmpResult6 = tmp(4810);
     }
     if (tmp28) {
       if (closure_18.includes(preset)) {
@@ -1505,7 +1505,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       tmp26 = PRESET_MOBILE_DEFAULT;
     }
     PRESET_MOBILE_DEFAULT = tmp27.PRESET_MOBILE_DEFAULT;
-    const tmp23 = guildPremiumTier(6664);
+    const tmp23 = guildPremiumTier(6841);
     tmp28 = preset === ApplicationStreamPresets.PRESET_MOBILE_DEFAULT || preset === ApplicationStreamPresets.PRESET_MOBILE_PERFORMANCE || preset === ApplicationStreamPresets.PRESET_MOBILE_HIGH_QUALITY;
   }
   const fn = function f(arg0) {
@@ -1516,7 +1516,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[6] = fn;
   tmp14 = fn;
   const tmpResult4 = user(504);
-}) : (() => {
+}) : (function MobileGoLiveActionSheet() {
   let items = [analyticsLocations];
   const stateFromStoresObject = user(callback[21]).useStateFromStoresObject(items, () => analyticsLocations.getState());
   ({ preset, soundshareEnabled } = stateFromStoresObject);
@@ -1642,22 +1642,22 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           const maxSettingsForPreset2 = getStreamSettingsForPreset.getMaxSettingsForPreset(ApplicationStreamPresets.PRESET_MOBILE_HIGH_QUALITY);
           const obj5 = { icon: state(MobilePhoneIcon.MobilePhoneIcon, {}), label: null, subLabel: null };
           const intl = util.intl;
-          obj5.label = intl.string(_modDef2327["2qmQ8N"]);
+          obj5.label = intl.string(_modDef2371["2qmQ8N"]);
           let str = "";
           let str2 = "";
           if (null != maxSettingsForPreset) {
             const intl2 = util.intl;
-            str2 = intl2.formatToPlainString(_modDef2327.ibH7vy, maxSettingsForPreset);
+            str2 = intl2.formatToPlainString(_modDef2371.ibH7vy, maxSettingsForPreset);
           }
           const obj6 = { [closure_2_11.PRESET_MOBILE_DEFAULT]: obj5 };
           obj5.subLabel = str2;
           const obj7 = { icon: state(SpeedometerIcon.SpeedometerIcon, {}), label: null, subLabel: null };
           const intl3 = util.intl;
-          obj7.label = intl3.string(_modDef2327["5eO4/m"]);
+          obj7.label = intl3.string(_modDef2371["5eO4/m"]);
           let formatToPlainStringResult = str;
           if (null != maxSettingsForPreset1) {
             const intl4 = util.intl;
-            formatToPlainStringResult = intl4.formatToPlainString(_modDef2327.fN0UQY, maxSettingsForPreset1);
+            formatToPlainStringResult = intl4.formatToPlainString(_modDef2371.fN0UQY, maxSettingsForPreset1);
           }
           obj7.subLabel = formatToPlainStringResult;
           obj6[ApplicationStreamPresets.PRESET_MOBILE_PERFORMANCE] = obj7;
@@ -1666,15 +1666,15 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           const obj4 = { value };
           const obj10 = { variant: "text-md/semibold", color: "text-strong", children: null };
           const intl5 = util.intl;
-          obj10.children = intl5.string(_modDef2327.nMcXo1);
+          obj10.children = intl5.string(_modDef2371.nMcXo1);
           const items = [state(Text_Text.Text, obj10), ];
           const tmp8Result = NativeViewDefault;
-          items[1] = state(BaseIconImage.BaseIconImage, { source: _modDef9655, size: "xs" });
+          items[1] = state(BaseIconImage.BaseIconImage, { source: _modDef9470, size: "xs" });
           obj9.children = items;
           obj8.label = closure_2_15(tmp8Result, obj9);
           if (null != maxSettingsForPreset2) {
             const intl6 = util.intl;
-            str = intl6.formatToPlainString(_modDef2327.q4gYBi, maxSettingsForPreset2);
+            str = intl6.formatToPlainString(_modDef2371.q4gYBi, maxSettingsForPreset2);
           }
           obj8.subLabel = str;
           obj6[ApplicationStreamPresets.PRESET_MOBILE_HIGH_QUALITY] = obj8;
@@ -1770,5 +1770,5 @@ export const showMobileGoLiveActionSheet = function showMobileGoLiveActionSheet(
   const obj = ActionSheetActionCreatorsDefault;
   obj2.impressionName = discord_common_AnalyticsUtils.ImpressionNames.MOBILE_GO_LIVE_ACTION_SHEET;
   obj2.impressionProperties = { location_stack };
-  obj.openLazy(asyncRequireImpl(9645, dependencyMap.paths), MobileGoLiveActionSheet, obj2);
+  obj.openLazy(asyncRequireImpl(10840, dependencyMap.paths), MobileGoLiveActionSheet, obj2);
 };

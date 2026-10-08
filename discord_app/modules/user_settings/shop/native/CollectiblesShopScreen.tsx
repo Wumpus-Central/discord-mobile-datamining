@@ -1,12 +1,12 @@
-// === Module 15738: CollectiblesShopScreen ===
+// === Module 15996: CollectiblesShopScreen ===
 
-// Module 15738 (CollectiblesShopScreen)
+// Module 15996 (CollectiblesShopScreen)
 import c from "c" /* 576 */;
-import useSettingNavigationRoute from "useSettingNavigationRoute" /* 6497 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6688 */;
-import useGiftCardMobileConsumptionHalfsheet from "useGiftCardMobileConsumptionHalfsheet" /* 6898 */;
-import useShopOrientationLock from "useShopOrientationLock" /* 15739 */;
-import CollectiblesShopV2 from "CollectiblesShopV2" /* 15740 */;
+import useSettingNavigationRoute from "useSettingNavigationRoute" /* 6674 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6865 */;
+import useGiftCardMobileConsumptionHalfsheet from "useGiftCardMobileConsumptionHalfsheet" /* 7087 */;
+import useShopOrientationLock from "useShopOrientationLock" /* 15997 */;
+import CollectiblesShopV2 from "CollectiblesShopV2" /* 15998 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/shop/native/CollectiblesShopScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function CollectiblesShopScreen() {
   const cResult = c.c(4);
   const settingNavigationRoute = useSettingNavigationRoute.useSettingNavigationRoute();
   const shopOrientationLock = useShopOrientationLock.useShopOrientationLock();
@@ -56,7 +56,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[2] = screen;
   cResult[3] = tmp13;
   tmp12 = tmp13;
-}) : (() => {
+}) : (function CollectiblesShopScreen() {
   const settingNavigationRoute = useSettingNavigationRoute.useSettingNavigationRoute();
   const shopOrientationLock = useShopOrientationLock.useShopOrientationLock();
   const giftCardMobileConsumptionHalfsheet = useGiftCardMobileConsumptionHalfsheet.useGiftCardMobileConsumptionHalfsheet();

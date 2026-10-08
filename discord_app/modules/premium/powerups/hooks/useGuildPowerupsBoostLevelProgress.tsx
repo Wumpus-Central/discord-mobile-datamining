@@ -1,8 +1,8 @@
-// === Module 7686: useGuildPowerupsBoostLevelProgress ===
+// === Module 8007: useGuildPowerupsBoostLevelProgress ===
 
-// Module 7686 (useGuildPowerupsBoostLevelProgress)
-import useGuildPowerupsBoostCount from "useGuildPowerupsBoostCount" /* 7682 */;
-import GuildStore from "GuildStore" /* 2074 */;
+// Module 8007 (useGuildPowerupsBoostLevelProgress)
+import useGuildPowerupsBoostCount from "useGuildPowerupsBoostCount" /* 8003 */;
+import GuildStore from "GuildStore" /* 2086 */;
 
 const require = globalThis.__r;
 const useGuildPowerupsBoostCountDefault = useGuildPowerupsBoostCount;
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupsBoostLevelProgress.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildPowerupBoostLevelProgress(arg0) {
   _require = arg0;
   const cResult = require("c").c(6);
   const obj = require("c");
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp9 = cResult[3];
   }
   if (cResult[4] !== arg0) {
-    class G {
+    class P {
       constructor() {
         guild = closure_3.getGuild(closure_0);
         hasItem = undefined;
@@ -66,9 +66,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
     cResult[4] = arg0;
-    cResult[5] = G;
+    cResult[5] = P;
   } else {
-    class G {
+    class P {
       constructor() {
         guild = closure_3.getGuild(closure_0);
         hasItem = undefined;
@@ -83,8 +83,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const tmpResult = require("initialize");
   let num7 = 0;
-  if (!tmpResult2.useStateFromStores(tmp9, G)) {
-    class G {
+  if (!tmpResult2.useStateFromStores(tmp9, P)) {
+    class P {
       constructor() {
         guild = closure_3.getGuild(closure_0);
         hasItem = undefined;
@@ -99,7 +99,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     num7 = dependencyMap[stateFromStores];
   }
   return num7 + tmp4.available;
-}) : ((arg0) => {
+}) : (function useGuildPowerupBoostLevelProgress(arg0) {
   _require = arg0;
   const tmp = useGuildPowerupsBoostCountDefault(arg0);
   const items = [GuildStore];

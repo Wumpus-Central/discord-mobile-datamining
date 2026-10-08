@@ -1,30 +1,30 @@
-// === Module 12503: ChannelRowPreview ===
+// === Module 12599: ChannelRowPreview ===
 
-// Module 12503 (ChannelRowPreview)
+// Module 12599 (ChannelRowPreview)
 import c from "c" /* 576 */;
-import UserSettings from "UserSettings" /* 2028 */;
-import useToken from "useToken" /* 4586 */;
-import LinkIcon from "LinkIcon" /* 4845 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import createStyles from "createStyles" /* 4896 */;
-import useFontScale from "useFontScale" /* 5609 */;
-import ImageIcon from "ImageIcon" /* 5878 */;
-import PhoneCallIcon from "PhoneCallIcon" /* 7534 */;
-import PhoneHangUpIcon from "PhoneHangUpIcon" /* 7536 */;
-import RowGeneratorDefault from "RowGenerator" /* 7602 */;
-import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 7606 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 7820 */;
-import MusicIcon from "MusicIcon" /* 9584 */;
-import AttachmentIcon from "AttachmentIcon" /* 10382 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10736 */;
-import VideoIcon from "VideoIcon" /* 11247 */;
-import MessagePreviewMarkup from "MessagePreviewMarkup" /* 11709 */;
-import ChannelListLayout from "ChannelListLayout" /* 11712 */;
-import StickerIcon from "StickerIcon" /* 12205 */;
-import useFormattedMessagePreview from "useFormattedMessagePreview" /* 12491 */;
+import UserSettings from "UserSettings" /* 2040 */;
+import useToken from "useToken" /* 4778 */;
+import LinkIcon from "LinkIcon" /* 5039 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import createStyles from "createStyles" /* 5090 */;
+import useFontScale from "useFontScale" /* 5382 */;
+import RowGeneratorDefault from "RowGenerator" /* 7719 */;
+import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 7723 */;
+import ImageIcon from "ImageIcon" /* 8190 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8239 */;
+import PhoneCallIcon from "PhoneCallIcon" /* 9256 */;
+import PhoneHangUpIcon from "PhoneHangUpIcon" /* 9258 */;
+import AttachmentIcon from "AttachmentIcon" /* 9979 */;
+import MusicIcon from "MusicIcon" /* 10233 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10490 */;
+import VideoIcon from "VideoIcon" /* 11362 */;
+import MessagePreviewMarkup from "MessagePreviewMarkup" /* 11774 */;
+import ChannelListLayout from "ChannelListLayout" /* 11777 */;
+import StickerIcon from "StickerIcon" /* 12284 */;
+import useFormattedMessagePreview from "useFormattedMessagePreview" /* 12587 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
 
 const require = globalThis.__r;
 
@@ -34,7 +34,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((icon) => {
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function PreviewIcon(icon) {
   const cResult = c.c(19);
   if (cResult[0] !== icon) {
     icon = icon.icon;
@@ -145,7 +145,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((icon) => {
     }
     return tmp9;
   }
-}) : ((icon) => {
+}) : (function PreviewIcon(icon) {
   icon = icon.icon;
   const merged = Object.assign(icon, Object.assign({ icon: 0 }));
   if ("image" === icon) {
@@ -183,7 +183,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((icon) => {
   }
 });
 ReactCompilerGating = fn(558);
-let closure_11 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_11 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function PreviewMarkup(arg0) {
   const cResult = c.c(8);
   ({ markup, channelId, guildId, muted, layout, color } = arg0);
   const fontScale = useFontScale.useFontScale();
@@ -214,13 +214,13 @@ let closure_11 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
   cResult[7] = result;
   tmp5 = result;
   const tmpResult = MessagePreviewMarkup;
-}) : ((arg0) => {
+}) : (function PreviewMarkup(arg0) {
   ({ markup, channelId, guildId, muted, layout, color } = arg0);
   const fontScale = useFontScale.useFontScale();
   return MessagePreviewMarkup.renderMessagePreviewMarkup({ content, muted, guildId, channelId, layout, color, fontScale });
 }));
 ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelRowPreview(arg0) {
   const cResult = c.c(28);
   ({ message, channel, layout, lineClamp, muted, variant, color } = arg0);
   let num = 1;
@@ -369,7 +369,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   tmp7 = scaleTextLineHeightResult;
   tmp6 = layoutStyles;
   const tmpResult6 = useScaledTextLineHeight;
-}) : ((arg0) => {
+}) : (function ChannelRowPreview(arg0) {
   ({ message, channel, layout, lineClamp } = arg0);
   if (lineClamp === undefined) {
     lineClamp = 1;
@@ -428,7 +428,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 });
 let closure_12 = tmp3;
 ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((textColor) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function NativeChannelRowPreview(textColor) {
   const cResult = lineClamp(token[6]).c(19);
   ({ message, lineClamp } = textColor);
   ({ messageSizeCacheRef, maxHeight, gifAutoPlay, gradientStyles, gradientColors } = textColor);
@@ -511,36 +511,6 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((textColor) => {
       const obj4 = { pointerEvents: "none", horizontalOffset: 0, modifyRow: tmp10, message, rowGenerator: tmp18, messageSizeCacheRef, maxHeight, gradientStyles, gradientColors };
       const tmp25 = closure_8(tmp5(tmp2[29]), obj4);
       cResult[11] = gradientColors;
-      class I {
-        constructor(arg0) {
-          processColorOrThrowResult = undefined;
-          tmp2 = closure_0;
-          tmp3 = closure_2;
-          textColor.contextType = closure_0(closure_2[25]).MessageContextType.SEARCH;
-          if (null != closure_2) {
-            try {
-              tmp2Result = tmp2(tmp3[26]);
-              processColorOrThrowResult = tmp2Result.processColorOrThrow(tmp4);
-            } catch (err) {
-            }
-          }
-          if (null != processColorOrThrowResult) {
-            tmp5 = processColorOrThrowResult;
-            textColor.message.textColor = processColorOrThrowResult;
-          }
-          if (null != lineClamp) {
-            obj1 = { numberOfLines: null, expandable: false, seeMoreLabel: "...", seeMoreLabelColor: null };
-            obj1.numberOfLines = tmp6;
-            if (processColorOrThrowResult == null) {
-              tmp7 = closure_1;
-              processColorOrThrowResult = closure_1.seeMoreLabelColor;
-            }
-            obj1.seeMoreLabelColor = processColorOrThrowResult;
-            textColor.truncation = obj1;
-          }
-          return;
-        }
-      }
       cResult[12] = gradientStyles;
       cResult[13] = maxHeight;
       cResult[14] = message;
@@ -551,50 +521,42 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((textColor) => {
       tmp23 = tmp25;
     }
   }
-  class I {
-    constructor(arg0) {
-      processColorOrThrowResult = undefined;
-      tmp2 = closure_0;
-      tmp3 = closure_2;
-      textColor.contextType = closure_0(closure_2[25]).MessageContextType.SEARCH;
-      if (null != closure_2) {
-        try {
-          tmp2Result = tmp2(tmp3[26]);
-          processColorOrThrowResult = tmp2Result.processColorOrThrow(tmp4);
-        } catch (err) {
-        }
+  function modifyRow(message) {
+    let processColorOrThrowResult;
+    message.contextType = RowGeneratorTypes.MessageContextType.SEARCH;
+    if (null != token) {
+      try {
+        processColorOrThrowResult = RowGeneratorStyleSheet.processColorOrThrow(tmp4);
+        const tmp2Result = RowGeneratorStyleSheet;
+      } catch (err) {
       }
-      if (null != processColorOrThrowResult) {
-        tmp5 = processColorOrThrowResult;
-        textColor.message.textColor = processColorOrThrowResult;
+    }
+    if (null != processColorOrThrowResult) {
+      message.message.textColor = processColorOrThrowResult;
+    }
+    if (null != lineClamp) {
+      const obj = { numberOfLines: tmp6, expandable: false, seeMoreLabel: "...", seeMoreLabelColor: null };
+      if (processColorOrThrowResult == null) {
+        processColorOrThrowResult = seeMoreLabelColor.seeMoreLabelColor;
       }
-      if (null != lineClamp) {
-        obj1 = { numberOfLines: null, expandable: false, seeMoreLabel: "...", seeMoreLabelColor: null };
-        obj1.numberOfLines = tmp6;
-        if (processColorOrThrowResult == null) {
-          tmp7 = closure_1;
-          processColorOrThrowResult = closure_1.seeMoreLabelColor;
-        }
-        obj1.seeMoreLabelColor = processColorOrThrowResult;
-        textColor.truncation = obj1;
-      }
-      return;
+      obj.seeMoreLabelColor = processColorOrThrowResult;
+      message.truncation = obj;
     }
   }
   cResult[2] = token;
   cResult[3] = lineClamp;
   cResult[4] = tmp7;
-  cResult[5] = I;
-  tmp10 = I;
+  cResult[5] = modifyRow;
+  tmp10 = modifyRow;
   const tmpResult2 = lineClamp(token[24]);
-}) : ((arg0) => {
+}) : (function NativeChannelRowPreview(arg0) {
   ({ lineClamp: require, gifAutoPlay } = arg0);
   ({ message, messageSizeCacheRef, maxHeight } = arg0);
   if (gifAutoPlay === undefined) {
     gifAutoPlay = false;
   }
   ({ textColor, gradientStyles, gradientColors } = arg0);
-  const tmp = gifAutoPlay(4797)();
+  const tmp = gifAutoPlay(4991)();
   let obj = createStyles;
   dependencyMap = obj.createNativeStyleProperties({ seeMoreLabelColor: gifAutoPlay(587).colors.TEXT_DEFAULT })(tmp);
   const obj2 = { seeMoreLabelColor: gifAutoPlay(587).colors.TEXT_DEFAULT };
@@ -611,7 +573,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((textColor) => {
     obj.setOptions({ renderEmbeds: setting, inlineEmbedMedia: setting1, inlineAttachmentMedia: setting2, renderReactions: false, animateEmoji: false, gifAutoPlay, renderReplies: false, renderCodedLinks: false, renderGiftCode: false, renderActivityInviteEmbed: false, renderThreadEmbeds: false, renderForumPostActions: false, ignoreMentioned: true, enableSwipeActions: false, renderExecutedCommands: false, useAlternateEmbedColors: true });
     return obj;
   }, items);
-  return closure_8(gifAutoPlay(8336), {
+  return closure_8(gifAutoPlay(9308), {
     pointerEvents: "none",
     horizontalOffset: 0,
     modifyRow(message) {
@@ -651,7 +613,7 @@ let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_comp
 
 export const ChannelRowPreview = tmp3;
 export const NativeChannelRowPreview = tmp4;
-export const NativeMessageChannelRowPreview = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((message) => {
+export const NativeMessageChannelRowPreview = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function NativeMessageChannelRowPreview(message) {
   _require = message;
   const cResult = require("c").c(8);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -701,7 +663,7 @@ export const NativeMessageChannelRowPreview = noop.memo(ReactCompilerGating.isRe
     cResult[7] = tmp22;
   }
   tmpResult2 = require("useFormattedMessagePreview");
-}) : ((message) => {
+}) : (function NativeMessageChannelRowPreview(message) {
   _require = message;
   const items = [RelationshipStore];
   const items1 = [message.message.author.id];

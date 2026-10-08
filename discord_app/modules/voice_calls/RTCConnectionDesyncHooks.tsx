@@ -1,14 +1,14 @@
-// === Module 16203: RTCConnectionDesyncHooks ===
+// === Module 16463: RTCConnectionDesyncHooks ===
 
-// Module 16203 (RTCConnectionDesyncHooks)
+// Module 16463 (RTCConnectionDesyncHooks)
 import _mod12 from "module_12" /* 12 */;
-import VoiceConnectFeedbackExperimentDefault from "VoiceConnectFeedbackExperiment" /* 16204 */;
+import VoiceConnectFeedbackExperimentDefault from "VoiceConnectFeedbackExperiment" /* 16464 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionDesyncStore from "RTCConnectionDesyncStore" /* 13582 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
-import VoiceStateStore from "VoiceStateStore" /* 4915 */;
+import RTCConnectionDesyncStore from "RTCConnectionDesyncStore" /* 13875 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5108 */;
+import VoiceStateStore from "VoiceStateStore" /* 5111 */;
 
 const require = globalThis.__r;
 
@@ -39,7 +39,7 @@ function syncChannelVoiceStates(stateFromStores, arg1) {
 const RTCConnectionStates = fn(1085).RTCConnectionStates;
 fn(558);
 let ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDesyncedChannelParticipants(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -65,7 +65,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp7);
-}) : ((arg0) => {
+}) : (function useDesyncedChannelParticipants(arg0) {
   _require = arg0;
   const items = [RTCConnectionDesyncStore, RTCConnectionStore];
   return require("initialize").useStateFromStores(items, () => {
@@ -78,7 +78,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 });
 let closure_11 = tmp3;
 ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEnsureSyncedChannelVoiceStates(arg0, arg1) {
   _require = arg0;
   const cResult = require("c").c(6);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -89,7 +89,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function l() {
+    const fn = function o() {
       let desyncedVoiceStates = null;
       if (closure_0 === RTCConnectionStore.getChannelId()) {
         desyncedVoiceStates = RTCConnectionDesyncStore.getDesyncedVoiceStates();
@@ -116,7 +116,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   cResult[5] = tmp10;
   tmp9 = tmp10;
   const tmpResult = require("initialize");
-}) : ((arg0, arg1) => {
+}) : (function useEnsureSyncedChannelVoiceStates(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
   const items = [RTCConnectionDesyncStore, RTCConnectionStore];
@@ -131,7 +131,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   return noop.useMemo(() => syncChannelVoiceStates(stateFromStores, closure_1), items1);
 });
 ReactCompilerGating = fn(558);
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEnsureSyncedChannelParticipants(arg0, arg1) {
   const cResult = items(576).c(3);
   const arr = closure_11(arg0);
   if (cResult[0] === arr) {
@@ -156,7 +156,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   cResult[1] = arg1;
   cResult[2] = tmp3;
   tmp2 = tmp3;
-}) : ((arg0, arg1) => {
+}) : (function useEnsureSyncedChannelParticipants(arg0, arg1) {
   closure_0 = arg1;
   const tmp = closure_11(arg0);
   closure_1 = tmp;
@@ -178,7 +178,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   }, items);
 });
 ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsSelfDisconnectedUIVisible(arg0) {
   _require = arg0;
   const cResult = require("c").c(8);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -189,7 +189,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function o() {
+    const fn = function c() {
       return AuthenticationStore.getId() === closure_0;
     };
     cResult[1] = arg0;
@@ -225,7 +225,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const stateFromStores = require("initialize").useStateFromStores(tmp8, tmp9);
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [RTCConnectionStore];
-    const fn3 = function y() {
+    const fn3 = function v() {
       return RTCConnectionStore.getWasEverRtcConnected();
     };
     cResult[6] = items2;
@@ -247,7 +247,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     showSelfConnectingUI = obj4.useConfig(tmp7).showSelfConnectingUI;
   }
   return showSelfConnectingUI;
-}) : ((arg0) => {
+}) : (function useIsSelfDisconnectedUIVisible(arg0) {
   _require = arg0;
   const items = [AuthenticationStore];
   let showSelfConnectingUI = require("initialize").useStateFromStores(items, () => AuthenticationStore.getId() === closure_0);
@@ -275,7 +275,7 @@ export const useEnsureSyncedChannelVoiceStates = tmp2;
 export const useDesyncedChannelParticipants = tmp3;
 export const useEnsureSyncedChannelParticipants = tmp4;
 export const useIsSelfDisconnectedUIVisible = tmp5;
-export const useIsRTCDisconnectedUIVisible = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export const useIsRTCDisconnectedUIVisible = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsRTCDisconnectedUIVisible(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
   const cResult = require("c").c(23);
@@ -287,18 +287,28 @@ export const useIsRTCDisconnectedUIVisible = ReactCompilerGating.isReactCompiler
     first = cResult[0];
   }
   if (cResult[1] !== arg1) {
-    const fn = function f() {
-      return AuthenticationStore.getId() === closure_1;
-    };
+    class C {
+      constructor() {
+        return closure_5.getId() === closure_1;
+      }
+    }
     cResult[1] = arg1;
-    cResult[2] = fn;
-    let tmp6 = fn;
+    cResult[2] = C;
   } else {
-    tmp6 = cResult[2];
+    class C {
+      constructor() {
+        return closure_5.getId() === closure_1;
+      }
+    }
   }
   const obj = require("c");
-  const stateFromStores = require("initialize").useStateFromStores(first, tmp6);
+  const stateFromStores = require("initialize").useStateFromStores(first, C);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+    class C {
+      constructor() {
+        return closure_5.getId() === closure_1;
+      }
+    }
     const items1 = [RTCConnectionStore];
     class I {
       constructor() {
@@ -308,9 +318,13 @@ export const useIsRTCDisconnectedUIVisible = ReactCompilerGating.isReactCompiler
     cResult[3] = items1;
     cResult[4] = I;
     let tmp9 = I;
-    let tmp8 = items1;
+    const tmp8 = items1;
   } else {
-    tmp8 = cResult[3];
+    class C {
+      constructor() {
+        return closure_5.getId() === closure_1;
+      }
+    }
     tmp9 = cResult[4];
   }
   const tmpResult = require("initialize");
@@ -318,9 +332,14 @@ export const useIsRTCDisconnectedUIVisible = ReactCompilerGating.isReactCompiler
   _slicedToArray = noop.useRef(null);
   const tmpResult4 = require("initialize");
   [r10054, noop] = noop.useState(false);
-  const tmp12 = _slicedToArray(noop.useState(false), 2);
+  const tmp11 = _slicedToArray(noop.useState(false), 2);
   AuthenticationStore = _slicedToArray(noop.useState(false), 2)[1];
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
+    class C {
+      constructor() {
+        return closure_5.getId() === closure_1;
+      }
+    }
     const items2 = [RTCConnectionStore, ];
     class I {
       constructor() {
@@ -329,15 +348,21 @@ export const useIsRTCDisconnectedUIVisible = ReactCompilerGating.isReactCompiler
     }
     items2[1] = VoiceStateStore;
     cResult[5] = items2;
-    let tmp14 = items2;
+    const tmp13 = items2;
   } else {
-    tmp14 = cResult[5];
+    class C {
+      constructor() {
+        return closure_5.getId() === closure_1;
+      }
+    }
   }
   if (cResult[6] === arg0) {
-    if (cResult[7] === arg1) {
-      let tmp16 = cResult[8];
+    class C {
+      constructor() {
+        return closure_5.getId() === closure_1;
+      }
     }
-    const stateFromStores2 = tmp(tmp2[10]).useStateFromStores(tmp14, tmp16);
+    const stateFromStores2 = tmp(tmp2[10]).useStateFromStores(tmp13, fn);
     class I {
       constructor() {
         return closure_7.getChannelId();
@@ -345,6 +370,11 @@ export const useIsRTCDisconnectedUIVisible = ReactCompilerGating.isReactCompiler
     }
     const _Symbol = Symbol;
     if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
+      class C {
+        constructor() {
+          return closure_5.getId() === closure_1;
+        }
+      }
       const items3 = [RTCConnectionStore, ];
       class I {
         constructor() {
@@ -353,15 +383,21 @@ export const useIsRTCDisconnectedUIVisible = ReactCompilerGating.isReactCompiler
       }
       items3[1] = VoiceStateStore;
       cResult[9] = items3;
-      let tmp18 = items3;
+      const tmp15 = items3;
     } else {
-      tmp18 = cResult[9];
+      class C {
+        constructor() {
+          return closure_5.getId() === closure_1;
+        }
+      }
     }
     if (cResult[10] === arg0) {
-      if (cResult[11] === arg1) {
-        let tmp20 = cResult[12];
+      class C {
+        constructor() {
+          return closure_5.getId() === closure_1;
+        }
       }
-      const stateFromStores3 = tmp(tmp2[10]).useStateFromStores(tmp18, tmp20);
+      const stateFromStores3 = tmp(tmp2[10]).useStateFromStores(tmp15, tmp16);
       class I {
         constructor() {
           return closure_7.getChannelId();
@@ -397,7 +433,7 @@ export const useIsRTCDisconnectedUIVisible = ReactCompilerGating.isReactCompiler
           }
         }
         cResult[15] = items4;
-        let tmp23 = items4;
+        let tmp19 = items4;
       } else {
         class M {
           constructor() {
@@ -409,9 +445,9 @@ export const useIsRTCDisconnectedUIVisible = ReactCompilerGating.isReactCompiler
             return;
           }
         }
-        tmp23 = cResult[15];
+        tmp19 = cResult[15];
       }
-      const effect = noop.useEffect(M, tmp23);
+      const effect = noop.useEffect(M, tmp19);
       if (cResult[16] === arg0) {
         class M {
           constructor() {
@@ -423,7 +459,7 @@ export const useIsRTCDisconnectedUIVisible = ReactCompilerGating.isReactCompiler
             return;
           }
         }
-        const effect1 = noop.useEffect(B, tmp26);
+        const effect1 = noop.useEffect(B, tmp22);
         if (cResult[20] !== stateFromStores3) {
           class M {
             constructor() {
@@ -442,7 +478,7 @@ export const useIsRTCDisconnectedUIVisible = ReactCompilerGating.isReactCompiler
             }
           }
           cResult[20] = stateFromStores3;
-          cResult[21] = tmp30;
+          cResult[21] = tmp26;
           class B {
             constructor() {
               if (closure_2 !== closure_0) {
@@ -483,7 +519,7 @@ export const useIsRTCDisconnectedUIVisible = ReactCompilerGating.isReactCompiler
             }
           }
         }
-        if (tmp31) {
+        if (tmp27) {
           class M {
             constructor() {
               if (closure_6) {
@@ -505,7 +541,7 @@ export const useIsRTCDisconnectedUIVisible = ReactCompilerGating.isReactCompiler
             return;
           }
         }
-        tmp31 = !stateFromStores;
+        tmp27 = !stateFromStores;
       }
       class B {
         constructor() {
@@ -522,10 +558,10 @@ export const useIsRTCDisconnectedUIVisible = ReactCompilerGating.isReactCompiler
       cResult[17] = stateFromStores1;
       cResult[18] = B;
       cResult[19] = items6;
-      tmp26 = items6;
+      tmp22 = items6;
       const tmpResult6 = tmp(tmp2[10]);
     }
-    const fn3 = function w() {
+    const fn2 = function w() {
       let tmp2 = null != closure_1;
       if (tmp2) {
         tmp2 = null != closure_0;
@@ -543,11 +579,11 @@ export const useIsRTCDisconnectedUIVisible = ReactCompilerGating.isReactCompiler
     };
     cResult[10] = arg0;
     cResult[11] = arg1;
-    cResult[12] = fn3;
-    tmp20 = fn3;
+    cResult[12] = fn2;
+    tmp16 = fn2;
     const tmpResult5 = tmp(tmp2[10]);
   }
-  const fn2 = function _() {
+  fn = function _() {
     let isUserConnectedResult = null != closure_1;
     if (isUserConnectedResult) {
       isUserConnectedResult = null != closure_0;
@@ -565,10 +601,9 @@ export const useIsRTCDisconnectedUIVisible = ReactCompilerGating.isReactCompiler
   };
   cResult[6] = arg0;
   cResult[7] = arg1;
-  cResult[8] = fn2;
-  tmp16 = fn2;
-  const tmp13 = _slicedToArray(noop.useState(false), 2);
-}) : ((arg0, arg1) => {
+  cResult[8] = fn;
+  const tmp12 = _slicedToArray(noop.useState(false), 2);
+}) : (function useIsRTCDisconnectedUIVisible(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
   const items = [AuthenticationStore];

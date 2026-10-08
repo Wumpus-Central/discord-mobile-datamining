@@ -1,15 +1,15 @@
-// === Module 9763: ParticipantTitle ===
+// === Module 10966: ParticipantTitle ===
 
-// Module 9763 (ParticipantTitle)
+// Module 10966 (ParticipantTitle)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import getParticipantTitleDefault from "getParticipantTitle" /* 9745 */;
+import native from "native" /* 1200 */;
+import getParticipantTitleDefault from "getParticipantTitle" /* 10946 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { usernameText: { fontSize: 14, color: nativeDefault.colors.WHITE } };
 let closure_4 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -17,7 +17,7 @@ const obj3 = { fontSize: 14, color: nativeDefault.colors.WHITE };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/components/ParticipantTitle.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ParticipantTitle(arg0) {
   const cResult = c.c(9);
   ({ channel, participant, style } = arg0);
   const tmp4 = closure_4();
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = tmp4.usernameText;
   cResult[2] = items;
   tmp5 = items;
-}) : ((arg0) => {
+}) : (function ParticipantTitle(arg0) {
   ({ channel, participant, style } = arg0);
   const obj = { style: null, numberOfLines: 1, children: getParticipantTitleDefault(channel, participant) };
   const items = [closure_4().usernameText, style];

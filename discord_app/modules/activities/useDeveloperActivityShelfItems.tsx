@@ -1,16 +1,16 @@
-// === Module 11670: useDeveloperActivityShelfItems ===
+// === Module 11735: useDeveloperActivityShelfItems ===
 
-// Module 11670 (useDeveloperActivityShelfItems)
+// Module 11735 (useDeveloperActivityShelfItems)
 import noop from "module_19" /* 19 */;
-import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 8546 */;
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 9031 */;
 
 const require = fn;
-let closure_4 = fn(2011).DEFAULT_EMBEDDED_ACTIVITY_CONFIG;
+let closure_4 = fn(2023).DEFAULT_EMBEDDED_ACTIVITY_CONFIG;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/useDeveloperActivityShelfItems.tsx");
 
-export const useDeveloperActivityShelfItems = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useDeveloperActivityShelfItems = ReactCompilerGating.isReactCompilerEnabled() ? (function useDeveloperActivityShelfItems() {
   const cResult = lastUsedObject(576).c(13);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [DeveloperActivityShelfStore];
@@ -52,7 +52,7 @@ export const useDeveloperActivityShelfItems = ReactCompilerGating.isReactCompile
   if (stateFromStoresObject.isEnabled) {
     const _Symbol = Symbol;
     if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-      class E {
+      class I {
         constructor(arg0) {
           obj = { application: arg0, activity: null };
           obj1 = {};
@@ -63,10 +63,10 @@ export const useDeveloperActivityShelfItems = ReactCompilerGating.isReactCompile
           return obj;
         }
       }
-      cResult[10] = E;
-      let mapped = E;
+      cResult[10] = I;
+      let mapped = I;
     } else {
-      class E {
+      class I {
         constructor(arg0) {
           obj = { application: arg0, activity: null };
           obj1 = {};
@@ -80,98 +80,78 @@ export const useDeveloperActivityShelfItems = ReactCompilerGating.isReactCompile
     }
     if (cResult[11] !== lastUsedObject) {
       class I {
-        constructor(arg0, arg1) {
-          tmp = lastUsedObject[arg0.application.id];
-          tmp2 = lastUsedObject[arg1.application.id];
-          num = 1;
-          if (null != tmp) {
-            num2 = -1;
-            if (null != tmp2) {
-              num2 = tmp2 - tmp;
-            }
-            num = num2;
-          }
-          return num;
+        constructor(arg0) {
+          obj = { application: arg0, activity: null };
+          obj1 = {};
+          merged = Object.assign(closure_1_4);
+          merged1 = Object.assign(arg0.embeddedActivityConfig);
+          obj1.application_id = arg0.id;
+          obj.activity = obj1;
+          return obj;
         }
       }
       cResult[11] = lastUsedObject;
-      cResult[12] = I;
+      cResult[12] = tmp16;
     } else {
       class I {
-        constructor(arg0, arg1) {
-          tmp = lastUsedObject[arg0.application.id];
-          tmp2 = lastUsedObject[arg1.application.id];
-          num = 1;
-          if (null != tmp) {
-            num2 = -1;
-            if (null != tmp2) {
-              num2 = tmp2 - tmp;
-            }
-            num = num2;
-          }
-          return num;
+        constructor(arg0) {
+          obj = { application: arg0, activity: null };
+          obj1 = {};
+          merged = Object.assign(closure_1_4);
+          merged1 = Object.assign(arg0.embeddedActivityConfig);
+          obj1.application_id = arg0.id;
+          obj.activity = obj1;
+          return obj;
         }
       }
     }
     mapped = stateFromStoresArray.map(mapped);
-    const sorted = mapped.sort(I);
+    const sorted = mapped.sort(tmp16);
     cResult[7] = stateFromStoresArray;
     cResult[8] = lastUsedObject;
     cResult[9] = sorted;
   } else {
     class I {
-      constructor(arg0, arg1) {
-        tmp = lastUsedObject[arg0.application.id];
-        tmp2 = lastUsedObject[arg1.application.id];
-        num = 1;
-        if (null != tmp) {
-          num2 = -1;
-          if (null != tmp2) {
-            num2 = tmp2 - tmp;
-          }
-          num = num2;
-        }
-        return num;
+      constructor(arg0) {
+        obj = { application: arg0, activity: null };
+        obj1 = {};
+        merged = Object.assign(closure_1_4);
+        merged1 = Object.assign(arg0.embeddedActivityConfig);
+        obj1.application_id = arg0.id;
+        obj.activity = obj1;
+        return obj;
       }
     }
     if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
       class I {
-        constructor(arg0, arg1) {
-          tmp = lastUsedObject[arg0.application.id];
-          tmp2 = lastUsedObject[arg1.application.id];
-          num = 1;
-          if (null != tmp) {
-            num2 = -1;
-            if (null != tmp2) {
-              num2 = tmp2 - tmp;
-            }
-            num = num2;
-          }
-          return num;
+        constructor(arg0) {
+          obj = { application: arg0, activity: null };
+          obj1 = {};
+          merged = Object.assign(closure_1_4);
+          merged1 = Object.assign(arg0.embeddedActivityConfig);
+          obj1.application_id = arg0.id;
+          obj.activity = obj1;
+          return obj;
         }
       }
       cResult[6] = tmp14;
     } else {
       class I {
-        constructor(arg0, arg1) {
-          tmp = lastUsedObject[arg0.application.id];
-          tmp2 = lastUsedObject[arg1.application.id];
-          num = 1;
-          if (null != tmp) {
-            num2 = -1;
-            if (null != tmp2) {
-              num2 = tmp2 - tmp;
-            }
-            num = num2;
-          }
-          return num;
+        constructor(arg0) {
+          obj = { application: arg0, activity: null };
+          obj1 = {};
+          merged = Object.assign(closure_1_4);
+          merged1 = Object.assign(arg0.embeddedActivityConfig);
+          obj1.application_id = arg0.id;
+          obj.activity = obj1;
+          return obj;
         }
       }
     }
     return tmp14;
   }
   const tmpResult2 = lastUsedObject(504);
-}) : (() => {
+}) : (function useDeveloperActivityShelfItems() {
   const items = [DeveloperActivityShelfStore];
   const stateFromStoresObject = isEnabled(lastUsedObject[5]).useStateFromStoresObject(items, () => ({ isEnabled: DeveloperActivityShelfStore.getIsEnabled(), lastUsedObject: DeveloperActivityShelfStore.getLastUsedObject() }), []);
   isEnabled = stateFromStoresObject.isEnabled;

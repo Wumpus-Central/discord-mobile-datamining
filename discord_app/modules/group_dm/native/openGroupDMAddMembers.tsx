@@ -1,14 +1,14 @@
-// === Module 11225: openGroupDMAddMembers ===
+// === Module 11340: openGroupDMAddMembers ===
 
-// Module 11225 (openGroupDMAddMembers)
-import ToastUtils from "ToastUtils" /* 4573 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4742 */;
-import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11226 */;
-import getGroupDMRecipientLimitDefault from "getGroupDMRecipientLimit" /* 11227 */;
-import GroupDMNitroCapExperimentDefault from "GroupDMNitroCapExperiment" /* 11229 */;
-import openGroupDMNitroCapLimitSheetDefault from "openGroupDMNitroCapLimitSheet" /* 11230 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import UserStore from "UserStore" /* 1377 */;
+// Module 11340 (openGroupDMAddMembers)
+import ToastUtils from "ToastUtils" /* 4765 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4936 */;
+import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11341 */;
+import getGroupDMRecipientLimitDefault from "getGroupDMRecipientLimit" /* 11342 */;
+import GroupDMNitroCapExperimentDefault from "GroupDMNitroCapExperiment" /* 11344 */;
+import openGroupDMNitroCapLimitSheetDefault from "openGroupDMNitroCapLimitSheet" /* 11345 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 function getGroupDMAddMembersAction(id, CHANNEL_TEXT_AREA) {

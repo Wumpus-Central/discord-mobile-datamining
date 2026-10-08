@@ -1,11 +1,12 @@
-// === Module 10678: IconUploader ===
+// === Module 9591: IconUploader ===
 
-// Module 10678 (IconUploader)
+// Module 9591 (IconUploader)
 import util from "util" /* 1126 */;
-import AvatarUtils from "AvatarUtils" /* 1402 */;
-import Pressables from "Pressables" /* 5916 */;
-import GuildIcon from "GuildIcon" /* 5978 */;
-import _modDef10679 from "module_10679" /* 10679 */;
+import AvatarUtils from "AvatarUtils" /* 1414 */;
+import GuildIcon from "GuildIcon" /* 6161 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import Pressables from "Pressables" /* 6189 */;
+import _modDef9592 from "module_9592" /* 9592 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,13 +19,13 @@ get_ActivityIndicator = fn(17);
 const UPLOAD_MEDIUM_SIZE = fn(1085).UPLOAD_MEDIUM_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_11 = createStyles.createStyles({ uploadIcon: { position: "absolute", right: -7, top: -7 }, avatar: { height: 64, width: 64, borderRadius: 32 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/IconUploader.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function IconUploader(arg0) {
   const cResult = require("c").c(33);
   ({ disabled, makeURL, type, name, icon, onUpload } = arg0);
   _require = onUpload;
@@ -59,20 +60,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             if (cResult[9] === iconStyle) {
             }
           }
-          let obj3 = { style: iconStyle, icon, value: name, size: tmp(5978).GuildIconSizes.XLARGE, animate: true };
-          const tmp24 = closure_8(onChangeIconPress(5978), obj3);
+          let obj3 = { style: iconStyle, icon, value: name, size: tmp(6161).GuildIconSizes.XLARGE, animate: true };
+          const tmp24 = closure_8(onChangeIconPress(6161), obj3);
           cResult[8] = icon;
           cResult[9] = iconStyle;
           cResult[10] = name;
           cResult[11] = tmp24;
-          const tmp23 = onChangeIconPress(5978);
+          const tmp23 = onChangeIconPress(6161);
         } else {
           if (cResult[12] !== icon) {
-            const source = tmp(1402).makeSource(icon);
+            const source = tmp(1414).makeSource(icon);
             cResult[12] = icon;
             cResult[13] = source;
             let tmp13 = source;
-            const tmpResult = tmp(1402);
+            const tmpResult = tmp(1414);
           } else {
             tmp13 = cResult[13];
           }
@@ -86,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               }
             }
             let obj4 = { style: tmp15, source: tmp13 };
-            const tmp19 = closure_8(closure_6, obj4);
+            const tmp19 = closure_8(onChangeIconPress(6164), obj4);
             cResult[17] = tmp13;
             cResult[18] = tmp15;
             cResult[19] = tmp19;
@@ -131,7 +132,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                 cResult[32] = tmp45;
               }
               let obj6 = { accessibilityRole: "button", accessibilityLabel: tmp37, onPress: tmp11, children: tmp31 };
-              const tmp41 = closure_8(tmp(5916).PressableOpacity, obj6);
+              const tmp41 = closure_8(tmp(6189).PressableOpacity, obj6);
               cResult[27] = tmp11;
               cResult[28] = tmp31;
               cResult[29] = tmp41;
@@ -149,7 +150,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         }
         let tmp27 = null;
         if (!tmp4) {
-          const obj8 = { style: tmp6.uploadIcon, source: onChangeIconPress(10679) };
+          const obj8 = { style: tmp6.uploadIcon, source: onChangeIconPress(9592) };
           tmp27 = closure_8(closure_6, obj8);
         }
         cResult[20] = tmp4;
@@ -242,7 +243,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = tmp5;
   cResult[4] = tmp5Result;
   let obj = require("c");
-}) : ((disabled) => {
+}) : (function IconUploader(disabled) {
   let flag = disabled.disabled;
   if (flag === undefined) {
     flag = false;
@@ -328,27 +329,28 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     fnResult = icon;
   }
   if ("guild" === str) {
-    if (!tmp8) {
+    if (!tmp9) {
       let obj3 = { style: iconStyle, icon: fnResult, value: name, size: GuildIcon.GuildIconSizes.XLARGE, animate: true };
-      let tmp7 = closure_8(GuildIconDefault, obj3);
+      let tmp8 = closure_8(GuildIconDefault, obj3);
     }
-    tmp8 = null == icon && null == name;
+    tmp9 = null == icon && null == name;
   } else {
+    const source = AvatarUtils.makeSource(fnResult);
     let obj4 = { style: null, source: null };
     const items = [tmp.avatar, iconStyle];
     obj4.style = items;
-    obj4.source = AvatarUtils.makeSource(fnResult);
-    tmp7 = closure_8(closure_6, obj4);
+    obj4.source = source;
+    tmp8 = closure_8(FastImageDefault, obj4);
   }
-  const items1 = [tmp7, ];
-  let tmp16 = null;
+  const items1 = [tmp8, ];
+  let tmp17 = null;
   if (!flag) {
-    let obj5 = { style: tmp.uploadIcon, source: _modDef10679 };
-    tmp16 = closure_8(closure_6, obj5);
+    let obj5 = { style: tmp.uploadIcon, source: _modDef9592 };
+    tmp17 = closure_8(closure_6, obj5);
   }
-  items1[1] = tmp16;
-  const tmp14Result = closure_10(closure_9, { children: items1 });
-  let tmp22 = tmp14Result;
+  items1[1] = tmp17;
+  const tmp15Result = closure_10(closure_9, { children: items1 });
+  let tmp23 = tmp15Result;
   if (!flag) {
     let obj6 = { style: disabled.style, children: null };
     const obj7 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
@@ -364,9 +366,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
       return applyArgumentsResult;
     };
-    obj7.children = tmp14Result;
+    obj7.children = tmp15Result;
     obj6.children = closure_8(Pressables.PressableOpacity, obj7);
-    tmp22 = closure_8(closure_5, obj6);
+    tmp23 = closure_8(closure_5, obj6);
   }
-  return tmp22;
+  return tmp23;
 });

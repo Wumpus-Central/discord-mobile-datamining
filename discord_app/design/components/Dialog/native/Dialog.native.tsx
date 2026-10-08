@@ -1,8 +1,8 @@
-// === Module 5773: Dialog ===
+// === Module 5356: Dialog ===
 
-// Module 5773 (Dialog)
+// Module 5356 (Dialog)
 import c from "c" /* 576 */;
-import AccessibilityView from "AccessibilityView" /* 5774 */;
+import AccessibilityView from "AccessibilityView" /* 5357 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Dialog/native/Dialog.native.tsx");
 
-export const Dialog = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const Dialog = ReactCompilerGating.isReactCompilerEnabled() ? (function Dialog(arg0) {
   const cResult = c.c(12);
   if (cResult[0] !== arg0) {
     ({ dialogKey, onDismiss, zIndex } = arg0);
@@ -67,7 +67,7 @@ export const Dialog = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => 
   cResult[11] = tmp16;
   tmp14 = tmp16;
   const obj3 = { style: tmp12, accessibilityViewIsModal: true, onAccessibilityEscape: tmp5, nativeID: tmp4 };
-}) : ((dialogKey) => {
+}) : (function Dialog(dialogKey) {
   dialogKey = dialogKey.dialogKey;
   ({ onDismiss, zIndex } = dialogKey);
   const merged = Object.assign(dialogKey, Object.assign({ dialogKey: 0, onDismiss: 0, zIndex: 0 }));

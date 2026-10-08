@@ -1,26 +1,26 @@
-// === Module 17227: FramePanelHeader ===
+// === Module 17508: FramePanelHeader ===
 
-// Module 17227 (FramePanelHeader)
+// Module 17508 (FramePanelHeader)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 6670 */;
-import ActivityPanelHeader from "ActivityPanelHeader" /* 17206 */;
-import InviteActivityButtonDefault from "InviteActivityButton" /* 17208 */;
-import MinimizeActivityButtonDefault from "MinimizeActivityButton" /* 17212 */;
-import QuestActivityButtonDefault from "QuestActivityButton" /* 17213 */;
-import FramePanelStateContextDefault from "FramePanelStateContext" /* 17223 */;
-import panel_LeaveActivityButtonDefault from "panel/LeaveActivityButton" /* 17228 */;
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 6847 */;
+import ActivityPanelHeader from "ActivityPanelHeader" /* 17487 */;
+import InviteActivityButtonDefault from "InviteActivityButton" /* 17489 */;
+import MinimizeActivityButtonDefault from "MinimizeActivityButton" /* 17493 */;
+import QuestActivityButtonDefault from "QuestActivityButton" /* 17494 */;
+import FramePanelStateContextDefault from "FramePanelStateContext" /* 17504 */;
+import panel_LeaveActivityButtonDefault from "panel/LeaveActivityButton" /* 17509 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 9000 */;
+import FramesStore from "FramesStore" /* 10612 */;
 
 require = fn;
 const View = fn(17).View;
-const asLaunched = fn(8738).asLaunched;
+const asLaunched = fn(10613).asLaunched;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function FramePanelHeaderContentInner(arg0) {
   const cResult = c.c(33);
   ({ frame, landscape, setMode, pipState, wrapperOffset } = arg0);
   if (cResult[0] !== frame.applicationId) {
@@ -175,7 +175,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = wrapperOffset;
   cResult[6] = obj8;
   tmp7 = obj8;
-}) : ((arg0) => {
+}) : (function FramePanelHeaderContentInner(arg0) {
   ({ frame, landscape, setMode } = arg0);
   ({ pipState, wrapperOffset } = arg0);
   const items = [frame.applicationId];
@@ -222,7 +222,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return closure_1_8(ActivityPanelHeader.BaseActivityPanelContent, obj3);
 });
 ReactCompilerGating = fn(558);
-let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function FramePanelHeaderContent(arg0) {
   const cResult = c.c(5);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [FramesStore];
@@ -250,7 +250,7 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
     cResult[4] = tmp15;
   }
   const tmpResult = initialize;
-}) : ((arg0) => {
+}) : (function FramePanelHeaderContent(arg0) {
   const items = [FramesStore];
   const stateFromStores = initialize.useStateFromStores(items, () => asLaunched(mainFrame.getMainFrame()));
   let tmp2 = null;
@@ -265,7 +265,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/panel/native/FramePanelHeader.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function FramePanelHeader() {
   const cResult = c.c(9);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { context: FramePanelStateContextDefault };
@@ -306,7 +306,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   tmp7 = tmp8;
   const obj4 = { landscape: wrapperDimensions.isWindowLandscape, setMode, wrapperOffset, pipState };
   const tmpResult = ActivityPanelHeader;
-}) : (() => {
+}) : (function FramePanelHeader() {
   const obj = ActivityPanelHeader;
   const baseActivityPanelHeader = obj.useBaseActivityPanelHeader({ context: FramePanelStateContextDefault });
   const obj3 = { style: baseActivityPanelHeader.headerStyles, children: React5(closure_10, { landscape: baseActivityPanelHeader.wrapperDimensions.isWindowLandscape, setMode: baseActivityPanelHeader.setMode, wrapperOffset: baseActivityPanelHeader.wrapperOffset, pipState: baseActivityPanelHeader.pipState }) };

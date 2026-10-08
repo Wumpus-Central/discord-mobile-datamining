@@ -1,17 +1,17 @@
-// === Module 6767: useUnmountAbortSignal ===
+// === Module 6943: useUnmountAbortSignal ===
 
-// Module 6767 (useUnmountAbortSignal)
+// Module 6943 (useUnmountAbortSignal)
 import c from "c" /* 576 */;
-import useMountEffect from "useMountEffect" /* 5597 */;
-import useInitialValueDefault from "useInitialValue" /* 5991 */;
+import useMountEffect from "useMountEffect" /* 5392 */;
+import useInitialValueDefault from "useInitialValue" /* 6174 */;
 import "ReactCompilerGating";
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useUnmountAbortSignal() {
   const cResult = c.c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function t() {
+    const fn = function n() {
       const abortController = new AbortController();
       return abortController;
     };
@@ -34,7 +34,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   const unmountEffect = useMountEffect.useUnmountEffect(tmp6);
   return tmp5.signal;
-}) : (() => {
+}) : (function useUnmountAbortSignal() {
   const tmp = useInitialValueDefault(() => {
     const abortController = new AbortController();
     return abortController;
@@ -48,11 +48,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
 const result = size.fileFinishedImporting("hooks/useUnmountAbortSignal.tsx");
 
 export default tmp2;
-export const useUnmountAbortSignalWithDelay = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useUnmountAbortSignalWithDelay = ReactCompilerGating.isReactCompilerEnabled() ? (function useUnmountAbortSignalWithDelay(arg0) {
   closure_0 = arg0;
   const cResult = c.c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function n() {
+    const fn = function t() {
       const abortController = new AbortController();
       return abortController;
     };
@@ -70,7 +70,7 @@ export const useUnmountAbortSignalWithDelay = ReactCompilerGating.isReactCompile
     const unmountEffect = useMountEffect.useUnmountEffect(tmp6);
     return tmp5.signal;
   }
-  const fn2 = function l() {
+  const fn2 = function u() {
     const timerId = setTimeout(() => {
       closure_1_1.abort();
     }, closure_0);
@@ -79,7 +79,7 @@ export const useUnmountAbortSignalWithDelay = ReactCompilerGating.isReactCompile
   cResult[2] = arg0;
   cResult[3] = fn2;
   tmp6 = fn2;
-}) : ((arg0) => {
+}) : (function useUnmountAbortSignalWithDelay(arg0) {
   closure_0 = arg0;
   const tmp = useInitialValueDefault(() => {
     const abortController = new AbortController();

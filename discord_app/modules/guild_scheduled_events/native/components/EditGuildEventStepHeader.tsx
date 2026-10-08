@@ -1,21 +1,21 @@
-// === Module 9280: EditGuildEventStepHeader ===
+// === Module 8611: EditGuildEventStepHeader ===
 
-// Module 9280 (EditGuildEventStepHeader)
+// Module 8611 (EditGuildEventStepHeader)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 4892 */;
+import Text_Text from "Text/Text" /* 5086 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles({ header: { alignItems: "center", paddingBottom: 24 }, headerTitle: { marginTop: 8, marginBottom: 8 }, headerSubtitle: { textAlign: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventStepHeader.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditGuildEventStepHeader(arg0) {
   const cResult = c.c(10);
   ({ title, subtitle } = arg0);
   const tmp4 = closure_5();
@@ -64,7 +64,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = tmp6;
   tmp5 = tmp6;
   const obj4 = { style: tmp4.headerTitle, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: title };
-}) : ((children) => {
+}) : (function EditGuildEventStepHeader(children) {
   const subtitle = children.subtitle;
   const tmp = closure_5();
   const obj = { style: tmp.header, children: null };

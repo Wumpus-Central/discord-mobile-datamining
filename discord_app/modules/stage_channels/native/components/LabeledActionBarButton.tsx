@@ -1,10 +1,10 @@
-// === Module 9708: LabeledActionBarButton ===
+// === Module 10913: LabeledActionBarButton ===
 
-// Module 9708 (LabeledActionBarButton)
+// Module 10913 (LabeledActionBarButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import Pressables from "Pressables" /* 5916 */;
+import native from "native" /* 1200 */;
+import Pressables from "Pressables" /* 6189 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,9 +14,9 @@ get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
-let obj2 = { buttonContainer: { minHeight: 56, minWidth: 56, alignItems: "center", justifyContent: "center", borderRadius: 28, backgroundColor: fn(5627).ACTION_BAR_BUTTON_BACKGROUND }, container: { marginHorizontal: 12 }, containerWithLabel: { minWidth: "50%", maxWidth: "70%", flexShrink: 1 }, pressable: { marginHorizontal: 12, borderRadius: 28 }, buttonContent: { display: "flex", flexDirection: "row", alignItems: "center" }, buttonText: null, rightTextMargin: null };
-let obj3 = { minHeight: 56, minWidth: 56, alignItems: "center", justifyContent: "center", borderRadius: 28, backgroundColor: fn(5627).ACTION_BAR_BUTTON_BACKGROUND };
+const createStyles = fn(5090);
+let obj2 = { buttonContainer: { minHeight: 56, minWidth: 56, alignItems: "center", justifyContent: "center", borderRadius: 28, backgroundColor: fn(5974).ACTION_BAR_BUTTON_BACKGROUND }, container: { marginHorizontal: 12 }, containerWithLabel: { minWidth: "50%", maxWidth: "70%", flexShrink: 1 }, pressable: { marginHorizontal: 12, borderRadius: 28 }, buttonContent: { display: "flex", flexDirection: "row", alignItems: "center" }, buttonText: null, rightTextMargin: null };
+let obj3 = { minHeight: 56, minWidth: 56, alignItems: "center", justifyContent: "center", borderRadius: 28, backgroundColor: fn(5974).ACTION_BAR_BUTTON_BACKGROUND };
 obj2.buttonText = { marginStart: 8, fontSize: 14, color: nativeDefault.colors.WHITE, fontFamily: fn(1096).Fonts.PRIMARY_SEMIBOLD, paddingStart: 3 };
 obj2.rightTextMargin = { marginStart: 0, marginEnd: 8 };
 let closure_8 = createStyles.createStyles(obj2);
@@ -27,7 +27,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/native/components/LabeledActionBarButton.tsx");
 
 export const IconPosition = obj5;
-export const LabeledActionButton = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const LabeledActionButton = ReactCompilerGating.isReactCompilerEnabled() ? (function LabeledActionButton(arg0) {
   const cResult = c.c(55);
   if (cResult[0] !== arg0) {
     ({ backgroundColor, imageStyle, children, source, disabled, label, iconPosition } = arg0);
@@ -263,7 +263,7 @@ export const LabeledActionButton = ReactCompilerGating.isReactCompilerEnabled() 
   cResult[10] = containerWithLabel;
   cResult[11] = items5;
   tmp17 = items5;
-}) : ((children) => {
+}) : (function LabeledActionButton(children) {
   ({ backgroundColor, imageStyle, source, disabled, label, iconPosition } = children);
   if (iconPosition === undefined) {
     iconPosition = obj5.LEFT;

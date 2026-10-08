@@ -1,20 +1,20 @@
-// === Module 12985: useCollectibleProfileOverrides ===
+// === Module 13263: useCollectibleProfileOverrides ===
 
-// Module 12985 (useCollectibleProfileOverrides)
+// Module 13263 (useCollectibleProfileOverrides)
 import c from "c" /* 576 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1980 */;
-import useShopProductItems from "useShopProductItems" /* 7853 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1992 */;
+import useShopProductItems from "useShopProductItems" /* 8271 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const isAvatarDecorationRecord = fn(7071).isAvatarDecorationRecord;
-const isProfileEffectRecord = fn(7072).isProfileEffectRecord;
-const isProfileFrameRecord = fn(7073).isProfileFrameRecord;
+const isAvatarDecorationRecord = fn(7257).isAvatarDecorationRecord;
+const isProfileEffectRecord = fn(7258).isProfileEffectRecord;
+const isProfileFrameRecord = fn(7259).isProfileFrameRecord;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useCollectibleProfileOverrides.tsx");
 
-export const useCollectibleProfileOverrides = ReactCompilerGating.isReactCompilerEnabled() ? ((items, first1) => {
+export const useCollectibleProfileOverrides = ReactCompilerGating.isReactCompilerEnabled() ? (function useCollectibleProfileOverrides(items, first1) {
   const cResult = c.c(9);
   if (cResult[0] !== items) {
     const productItems = useShopProductItems.getProductItems(items);
@@ -66,7 +66,7 @@ export const useCollectibleProfileOverrides = ReactCompilerGating.isReactCompile
     }
   }
   obj3.profileEffect = first;
-}) : ((arg0, arg1) => {
+}) : (function useCollectibleProfileOverrides(arg0, arg1) {
   const type = arg0;
   closure_1 = arg1;
   const items = [arg0, arg1];

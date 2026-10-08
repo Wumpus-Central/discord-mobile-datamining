@@ -1,10 +1,10 @@
-// === Module 12004: SmartSearchAnalyticsManager ===
+// === Module 12077: SmartSearchAnalyticsManager ===
 
-// Module 12004 (SmartSearchAnalyticsManager)
+// Module 12077 (SmartSearchAnalyticsManager)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5076 */;
-import SearchUtils from "SearchUtils" /* 11987 */;
-import SuggestedSearchStore from "SuggestedSearchStore" /* 11981 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5105 */;
+import SearchUtils from "SearchUtils" /* 12060 */;
+import SuggestedSearchStore from "SuggestedSearchStore" /* 12054 */;
 
 require = fn;
 function getCitationCompositionProperties(citations) {
@@ -267,6 +267,13 @@ prototype["trackSmartSearchAnswerDwelled"] = function trackSmartSearchAnswerDwel
   const merged = Object.assign(this.getContextualProperties(smartSearchQuery, getQueryId));
   obj2.dwell_duration_ms = Math.round(dwellDurationMs);
   AppAnalyticsUtilsDefault.trackWithMetadata(AnalyticEvents.SMART_SEARCH_ANSWER_DWELLED, obj2);
+};
+prototype["trackSmartSearchFeedbackGiven"] = function trackSmartSearchFeedbackGiven(arg0, SearchSessionAnalyticsManager) {
+  ({ smartSearchQuery, hasPositiveFeedback } = arg0);
+  const obj2 = {};
+  const merged = Object.assign(this.getContextualProperties(smartSearchQuery, SearchSessionAnalyticsManager));
+  obj2.is_positive_feedback = hasPositiveFeedback;
+  AppAnalyticsUtilsDefault.trackWithMetadata(AnalyticEvents.SMART_SEARCH_FEEDBACK_GIVEN, obj2);
 };
 let merged = Object.assign({ rowVisibilityState: null, dwellStartTime: null, lastShownAnswerKey: null, lastShownSuggestionKey: null, parentSuggestedSearch: null });
 merged[0] = { isRowViewable: false, isTabActive: false, isAppActive: true, currentAnswer: null };

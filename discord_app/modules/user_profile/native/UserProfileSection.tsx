@@ -1,13 +1,13 @@
-// === Module 11212: UserProfileSection ===
+// === Module 11329: UserProfileSection ===
 
-// Module 11212 (UserProfileSection)
+// Module 11329 (UserProfileSection)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 4595 */;
-import ColorUtils from "ColorUtils" /* 4733 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import useProfileThemeValues from "useProfileThemeValues" /* 6690 */;
-import FormDivider from "FormDivider" /* 8928 */;
+import native from "native" /* 4787 */;
+import ColorUtils from "ColorUtils" /* 4927 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import useProfileThemeValues from "useProfileThemeValues" /* 6867 */;
+import FormDivider from "FormDivider" /* 8559 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ let closure_2 = ["title", "headerIcon", "trailingIcon", "showContainer", "childr
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { titleContainer: { flexDirection: "row", marginBottom: 12, justifyContent: "space-between" }, title: { flexDirection: "row" }, section: { marginHorizontal: 12, marginTop: 12, marginBottom: 8 }, contentContainer: { borderWidth: 1, borderRadius: nativeDefault.radii.sm, borderColor: nativeDefault.colors.BORDER_SUBTLE } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -24,7 +24,7 @@ let obj3 = { borderWidth: 1, borderRadius: nativeDefault.radii.sm, borderColor: 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileSection.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileSection(arg0) {
   const cResult = c.c(33);
   if (cResult[0] !== arg0) {
     ({ title, headerIcon, trailingIcon, showContainer, children, style } = arg0);
@@ -165,7 +165,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const tmpResult3 = useProfileThemeValues;
   borderColor = ColorUtils.hexOpacityToRgba(FormDivider.DIVIDER_COLORS[theme], contentContainer.dividerOpacity);
   const tmpResult4 = ColorUtils;
-}) : ((title) => {
+}) : (function UserProfileSection(title) {
   title = title.title;
   ({ headerIcon, trailingIcon, showContainer, children, style } = title);
   const merged = Object.assign(title, Object.assign({ title: 0, headerIcon: 0, trailingIcon: 0, showContainer: 0, children: 0, style: 0 }));

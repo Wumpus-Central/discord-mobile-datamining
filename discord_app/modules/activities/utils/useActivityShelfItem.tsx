@@ -1,21 +1,21 @@
-// === Module 11685: useActivityShelfItem ===
+// === Module 11750: useActivityShelfItem ===
 
-// Module 11685 (useActivityShelfItem)
+// Module 11750 (useActivityShelfItem)
 import c from "c" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import Server from "Server" /* 1985 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4504 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6670 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8758 */;
-import getPlatformDefault from "getPlatform" /* 8962 */;
-import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 9027 */;
-import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 9166 */;
-import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 9167 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 9184 */;
-import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 11686 */;
-import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 11687 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import Server from "Server" /* 1997 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4696 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6847 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 9138 */;
+import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 10617 */;
+import getPlatformDefault from "getPlatform" /* 10627 */;
+import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 10732 */;
+import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 10733 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 10752 */;
+import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 11751 */;
+import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 11752 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2062 */;
 
 require = fn;
 function useOnActivityItemSelected(arg0) {
@@ -36,8 +36,8 @@ function useOnActivityItemSelected(arg0) {
     str = "";
   }
   let tmp = customId({ context, applicationId: str, fetchesApplication });
-  analyticsLocations = context(6664)().analyticsLocations;
-  closure_14 = context(9167)();
+  analyticsLocations = context(6841)().analyticsLocations;
+  closure_14 = context(10733)();
   obj = canLaunchContextlessFrame;
   closure_15 = obj.canLaunchContextlessFrame(application);
   if (null == application) {
@@ -271,13 +271,13 @@ function useOnActivityItemSelected(arg0) {
     }) : undefined;
   }
 }
-const STAFF_RELEASE_PHASES = fn(2011).STAFF_RELEASE_PHASES;
+const STAFF_RELEASE_PHASES = fn(2023).STAFF_RELEASE_PHASES;
 const ApplicationFlags = fn(1085).ApplicationFlags;
-const MAIN_SURFACE = fn(8738).MAIN_SURFACE;
+const MAIN_SURFACE = fn(10613).MAIN_SURFACE;
 const ActivityAction = { START: 0, [0]: "START", JOIN: 1, [1]: "JOIN", LEAVE: 2, [2]: "LEAVE" };
 fn(558);
 const ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((applicationId) => {
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useActivityAction(applicationId) {
   const obj = c;
   const cResult = obj.c(2);
   ({ context, fetchesApplication } = applicationId);
@@ -328,7 +328,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((applicationId) => {
     const tmpResult2 = embeddedActivityLocationUtils;
   }
   const tmpResult = useGetOrFetchApplications;
-}) : ((applicationId) => {
+}) : (function useActivityAction(applicationId) {
   ({ context, fetchesApplication } = applicationId);
   if (fetchesApplication === undefined) {
     fetchesApplication = true;
@@ -388,7 +388,7 @@ function getStaffReleasePhase(application, arg1) {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/useActivityShelfItem.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useActivityShelfItem(arg0) {
   const cResult = c.c(37);
   ({ activityItem, context, locationObject, onActivityItemSelected, embeddedActivitiesManager, assetNames, backgroundResolution, launchingComponentId, commandOrigin, source } = arg0);
   if (cResult[0] !== assetNames) {
@@ -575,7 +575,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = num3;
   cResult[5] = obj5;
   tmp10 = obj5;
-}) : ((backgroundResolution) => {
+}) : (function useActivityShelfItem(backgroundResolution) {
   ({ activityItem, context, assetNames } = backgroundResolution);
   ({ locationObject, onActivityItemSelected, embeddedActivitiesManager } = backgroundResolution);
   if (assetNames === undefined) {

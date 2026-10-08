@@ -1,16 +1,16 @@
-// === Module 17637: RedesignDiscoverabilityLanding ===
+// === Module 17919: RedesignDiscoverabilityLanding ===
 
-// Module 17637 (RedesignDiscoverabilityLanding)
+// Module 17919 (RedesignDiscoverabilityLanding)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import FastImageDefault from "FastImage" /* 5981 */;
-import NavigatorConstants from "NavigatorConstants" /* 6075 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 12344 */;
-import _modDef12434 from "module_12434" /* 12434 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import NavigatorConstants from "NavigatorConstants" /* 6261 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 12440 */;
+import _modDef12530 from "module_12530" /* 12530 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, topContainer: null, growContainer: null, image: null, title: null, subtitle: null, info: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.topContainer = { paddingTop: nativeDefault.space.PX_16 };
@@ -36,7 +36,7 @@ let obj7 = { textAlign: "center", marginBottom: nativeDefault.space.PX_32 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/nuf/native/components/RedesignDiscoverabilityLanding.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onNext) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function RedesignDiscoverabilityLanding(onNext) {
   const cResult = c.c(31);
   const tmp4 = closure_7();
   onNext = onNext.onNext;
@@ -93,7 +93,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onNext) => {
     tmp19 = cResult[9];
   }
   if (cResult[10] !== tmp4.image) {
-    const obj6 = { resizeMode: "contain", style: tmp4.image, source: _modDef12434 };
+    const obj6 = { resizeMode: "contain", style: tmp4.image, source: _modDef12530 };
     const tmp25 = hasOwnProperty(FastImageDefault, obj6);
     cResult[10] = tmp4.image;
     cResult[11] = tmp25;
@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onNext) => {
   if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
     const intl4 = util.intl;
     const obj7 = {
-      learnMoreHook(children, arg1) {
+      learnMoreHook: function LearnMore(children, arg1) {
           return closure_1_5(Text_Text.Text, { onPress: ContactSyncUtils.handleOpenLearnMoreLink, variant: "text-sm/medium", color: "text-link", children }, arg1);
         }
     };
@@ -195,7 +195,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onNext) => {
   cResult[29] = tmp19;
   cResult[30] = tmp43;
   tmp42 = tmp43;
-}) : ((onNext) => {
+}) : (function RedesignDiscoverabilityLanding(onNext) {
   const tmp = closure_7();
   const obj = { style: tmp.container, alwaysBounceVertical: false, contentContainerStyle: { flexGrow: 2, paddingTop: NavigatorConstants.NAV_BAR_HEIGHT + 32, paddingBottom: useSafeAreaInsetsDefault().bottom + 16, paddingHorizontal: nativeDefault.space.PX_16 }, children: null };
   const items = [hasOwnProperty(React3, { style: tmp.topContainer }), , , , , , ];
@@ -210,14 +210,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onNext) => {
   const obj6 = { resizeMode: "contain", style: tmp.image, source: null };
   const obj2 = { flexGrow: 2, paddingTop: NavigatorConstants.NAV_BAR_HEIGHT + 32, paddingBottom: useSafeAreaInsetsDefault().bottom + 16, paddingHorizontal: nativeDefault.space.PX_16 };
   const obj3 = { style: tmp.topContainer };
-  obj6.source = _modDef12434;
+  obj6.source = _modDef12530;
   items[3] = hasOwnProperty(FastImageDefault, obj6);
   const obj7 = { style: tmp.info, variant: "text-sm/medium", color: "text-default", children: null };
   const intl3 = util.intl;
   const items1 = [intl3.string(util.t.ci12MJ), " ", ];
   const intl4 = util.intl;
   items1[2] = intl4.format(util.t.VcSQ4n, {
-    learnMoreHook(children, arg1) {
+    learnMoreHook: function LearnMore(children, arg1) {
       return closure_1_5(Text_Text.Text, { onPress: ContactSyncUtils.handleOpenLearnMoreLink, variant: "text-sm/medium", color: "text-link", children }, arg1);
     }
   });

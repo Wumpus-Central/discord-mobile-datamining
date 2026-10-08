@@ -1,20 +1,20 @@
-// === Module 13117: ForumChannelSearch ===
+// === Module 12831: ForumChannelSearch ===
 
-// Module 13117 (ForumChannelSearch)
-import tracking_Tracking from "tracking/Tracking" /* 7276 */;
-import ForumActionCreatorsDefault from "ForumActionCreators" /* 7552 */;
+// Module 12831 (ForumChannelSearch)
+import Tracking from "Tracking" /* 7876 */;
+import ForumActionCreatorsDefault from "ForumActionCreators" /* 9263 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import ForumSearchStore from "ForumSearchStore" /* 7277 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import ForumSearchStore from "ForumSearchStore" /* 7877 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles({ inputContainer: { flexGrow: 1, marginLeft: 8 }, cancelButtonContainer: { paddingLeft: 8 } });
 fn(558);
 const ReactCompilerGating = fn(558);
-const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function SearchButton(channelId) {
   const cResult = channelId(route[7]).c(12);
   channelId = channelId.channelId;
   const tmp4 = closure_8();
@@ -31,14 +31,14 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((ch
     const effect = noop.useEffect(tmp9, tmp10);
     if (tmp8) {
       if (cResult[4] !== channelId) {
-        const fn2 = function h() {
+        function onPress() {
           if (null != channelId) {
             const result = ForumActionCreatorsDefault.updateForumSearchQuery(tmp, null);
           }
-        };
+        }
         cResult[4] = channelId;
-        cResult[5] = fn2;
-        let tmp14 = fn2;
+        cResult[5] = onPress;
+        let tmp14 = onPress;
       } else {
         tmp14 = cResult[5];
       }
@@ -92,7 +92,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((ch
   tmp10 = items;
   tmp9 = fn;
   const obj3 = channelId(route[8]);
-}) : ((channelId) => {
+}) : (function SearchButton(channelId) {
   channelId = channelId.channelId;
   let route;
   const tmp = closure_8();
@@ -128,13 +128,13 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/forums/native/ForumChannelSearch.tsx");
 
 export const ForumChannelCloseSearchButton = memoResult;
-export const ForumChannelSearchInput = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+export const ForumChannelSearchInput = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function SearchInput(channelId) {
   const cResult = channelId(576).c(25);
   channelId = channelId.channelId;
   const guildId = channelId.guildId;
   closure_8();
   let obj = channelId(576);
-  const canSearchForumPostsByChannelId = channelId(13118).useCanSearchForumPostsByChannelId(channelId);
+  const canSearchForumPostsByChannelId = channelId(12832).useCanSearchForumPostsByChannelId(channelId);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ForumSearchStore];
     cResult[0] = items;
@@ -160,7 +160,7 @@ export const ForumChannelSearchInput = noop.memo(ReactCompilerGating.isReactComp
     tmp8 = cResult[2];
     tmp9 = cResult[3];
   }
-  let obj2 = channelId(13118);
+  let obj2 = channelId(12832);
   const stateFromStores = channelId(504).useStateFromStores(first, tmp8, tmp9);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [ChannelStore];
@@ -254,31 +254,31 @@ export const ForumChannelSearchInput = noop.memo(ReactCompilerGating.isReactComp
           return tmp2;
         }
       }
-      const fn2 = function _() {
+      function clearSearchInput() {
         let tmp2 = null != guildId;
         if (tmp2) {
           tmp2 = null != channelId;
         }
         if (tmp2) {
           const obj2 = { guildId, channelId };
-          const result = tracking_Tracking.trackForumSearchCleared(obj2);
+          const result = Tracking.trackForumSearchCleared(obj2);
         }
         if (null != channelId) {
           const result1 = ForumActionCreatorsDefault.updateForumSearchQuery(tmp8, "");
         }
-      };
+      }
       cResult[8] = channelId;
       cResult[9] = guildId;
-      cResult[10] = fn2;
+      cResult[10] = clearSearchInput;
     }
   }
   return null;
-}) : ((channelId) => {
+}) : (function SearchInput(channelId) {
   channelId = channelId.channelId;
   ({ guildId: importDefault, placeholder } = channelId);
   const tmp = closure_8();
-  const canSearchForumPostsByChannelId = channelId(13118).useCanSearchForumPostsByChannelId(channelId);
-  let obj = channelId(13118);
+  const canSearchForumPostsByChannelId = channelId(12832).useCanSearchForumPostsByChannelId(channelId);
+  let obj = channelId(12832);
   const items = [ForumSearchStore];
   const items1 = [channelId];
   const stateFromStores = channelId(504).useStateFromStores(items, () => {
@@ -298,7 +298,7 @@ export const ForumChannelSearchInput = noop.memo(ReactCompilerGating.isReactComp
       const obj4 = {
         size: "sm",
         defaultValue: stateFromStores,
-        onChange(query) {
+        onChange: function onChangeText(query) {
               if (null != channelId) {
                 const result = ForumActionCreatorsDefault.updateForumSearchQuery(tmp, query);
               }
@@ -311,14 +311,14 @@ export const ForumChannelSearchInput = noop.memo(ReactCompilerGating.isReactComp
       if (null != placeholder) {
         obj4.placeholder = placeholder;
         obj4.autoFocus = 0 === stateFromStores.length;
-        obj4.onClear = function onClear() {
+        obj4.onClear = function clearSearchInput() {
           let tmp2 = null != guildId;
           if (tmp2) {
             tmp2 = null != channelId;
           }
           if (tmp2) {
             const obj2 = { guildId, channelId };
-            const result = tracking_Tracking.trackForumSearchCleared(obj2);
+            const result = Tracking.trackForumSearchCleared(obj2);
           }
           if (null != channelId) {
             const result1 = ForumActionCreatorsDefault.updateForumSearchQuery(tmp8, "");

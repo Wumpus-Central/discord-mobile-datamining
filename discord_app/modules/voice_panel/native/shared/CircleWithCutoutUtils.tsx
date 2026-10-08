@@ -1,8 +1,8 @@
-// === Module 9114: CircleWithCutoutUtils ===
+// === Module 10687: CircleWithCutoutUtils ===
 
-// Module 9114 (CircleWithCutoutUtils)
+// Module 10687 (CircleWithCutoutUtils)
 import c from "c" /* 576 */;
-import inlineStyles from "inlineStyles" /* 8169 */;
+import inlineStyles from "inlineStyles" /* 7550 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -21,7 +21,7 @@ function getCutoutCenterY(result, cutoutPositionInDegrees) {
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/shared/CircleWithCutoutUtils.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function CircleWithCutout(arg0) {
   const cResult = c.c(23);
   ({ circleRadius, cutoutRadius, cutoutPositionInDegrees, circleFillColor } = arg0);
   const result = 2 * circleRadius;
@@ -119,7 +119,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = cutoutPositionInDegrees;
   cResult[2] = sum;
   tmp6 = sum;
-}) : ((arg0) => {
+}) : (function CircleWithCutout(arg0) {
   ({ circleRadius, cutoutPositionInDegrees } = arg0);
   const result = 2 * circleRadius;
   ({ cutoutRadius, enableCutout, circleFillColor } = arg0);

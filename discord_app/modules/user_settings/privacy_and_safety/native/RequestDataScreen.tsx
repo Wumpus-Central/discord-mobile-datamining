@@ -1,16 +1,16 @@
-// === Module 14685: RequestDataScreen ===
+// === Module 14946: RequestDataScreen ===
 
-// Module 14685 (RequestDataScreen)
+// Module 14946 (RequestDataScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import RequestDataContentDefault from "RequestDataContent" /* 14686 */;
+import RequestDataContentDefault from "RequestDataContent" /* 14947 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 const obj = { container: null };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.container = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -20,7 +20,7 @@ const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/privacy_and_safety/native/RequestDataScreen.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function RequestDataScreen() {
   const cResult = c.c(3);
   const tmp3 = closure_5();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -40,4 +40,6 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp8 = cResult[2];
   }
   return tmp8;
-}) : (() => <React3 style={closure_5().container}>{jsx(RequestDataContentDefault, {})}</React3>));
+}) : (function RequestDataScreen() {
+  return <React3 style={closure_5().container}>{jsx(RequestDataContentDefault, {})}</React3>;
+}));

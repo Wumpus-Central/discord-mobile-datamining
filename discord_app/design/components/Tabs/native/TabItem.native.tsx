@@ -1,9 +1,9 @@
-// === Module 12298: TabItem ===
+// === Module 12396: TabItem ===
 
-// Module 12298 (TabItem)
+// Module 12396 (TabItem)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4618 */;
-import spring from "spring" /* 5604 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4810 */;
+import spring from "spring" /* 5374 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,19 +17,19 @@ const jsxProd = fn(21);
 let closure_8 = ReanimatedRexport.createAnimatedComponent(fn(17).Pressable);
 const TEXT_SPRING_CONFIG = { mass: 0.3, damping: 13, stiffness: 250, overshootClamping: true };
 const COUNT_SPRING_CONFIG = { mass: 2, damping: 30, stiffness: 300, overshootClamping: true };
-let createStyles = fn(4896);
+let createStyles = fn(5090);
 let obj = { item: { flexShrink: 0, flexBasis: 0, paddingBottom: 14, flexDirection: "row", justifyContent: "center" }, count: { marginLeft: nativeDefault.space.PX_8 } };
 let closure_11 = createStyles.createStyles(obj);
-createStyles = fn(4896);
+createStyles = fn(5090);
 let obj3 = { marginLeft: nativeDefault.space.PX_8 };
 let closure_12 = createStyles.createStyleProperties({ inactive: nativeDefault.colors.TEXT_MUTED, active: nativeDefault.colors.TEXT_BRAND, pressed: nativeDefault.colors.TEXT_BRAND });
-createStyles = fn(4896);
+createStyles = fn(5090);
 let obj4 = { inactive: nativeDefault.colors.TEXT_MUTED, active: nativeDefault.colors.TEXT_BRAND, pressed: nativeDefault.colors.TEXT_BRAND };
 let closure_13 = createStyles.createStyleProperties({ inactive: nativeDefault.colors.TEXT_MUTED, active: nativeDefault.colors.TEXT_STRONG, pressed: nativeDefault.colors.TEXT_STRONG });
 const __initData = { code: "function TabItemNativeTsx1(){const{colors,pressed,index,activeIndex,withSpring,TEXT_SPRING_CONFIG}=this.__closure;let color=colors.inactive;const isPressActive=pressed.get()>=0;const isPressed=pressed.get()===index;const isActive=Math.round(activeIndex.get())===index;if(isPressed){color=colors.pressed;}else{if(isPressActive){color=colors.inactive;}else{if(isActive){color=colors.active;}}}return{color:withSpring(color,TEXT_SPRING_CONFIG,\"animate-always\")};}" };
 const __initData2 = { code: "function TabItemNativeTsx2(){const{colors,pressed,index,activeIndex,withSpring,TEXT_SPRING_CONFIG}=this.__closure;let color=colors.inactive;const isPressActive=pressed.get()>=0;const isPressed=pressed.get()===index;const isActive=Math.round(activeIndex.get())===index;if(isPressed){color=colors.pressed;}else if(isPressActive){color=colors.inactive;}else if(isActive){color=colors.active;}return{color:withSpring(color,TEXT_SPRING_CONFIG,'animate-always')};}" };
 let ReactCompilerGating = fn(558);
-let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((index) => {
+let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAnimatedTextStyle(index) {
   index = index.index;
   const activeIndex = index.activeIndex;
   const pressed = index.pressed;
@@ -58,7 +58,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((index) => {
   fn.__workletHash = 3501288786345;
   fn.__initData = __initData;
   return obj.useAnimatedStyle(fn);
-}) : ((index) => {
+}) : (function useAnimatedTextStyle(index) {
   index = index.index;
   const activeIndex = index.activeIndex;
   const pressed = index.pressed;
@@ -92,12 +92,12 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((index) => {
 const __initData3 = { code: "function TabItemNativeTsx3(){const{withSpring,countAnimationState,COUNT_SPRING_CONFIG,interpolate}=this.__closure;return{opacity:withSpring(countAnimationState.get(),COUNT_SPRING_CONFIG),transform:[{translateX:withSpring(interpolate(countAnimationState.get(),[0,1],[-10,0]),COUNT_SPRING_CONFIG)}]};}" };
 const __initData4 = { code: "function TabItemNativeTsx4(){const{withSpring,countAnimationState,COUNT_SPRING_CONFIG,interpolate}=this.__closure;return{opacity:withSpring(countAnimationState.get(),COUNT_SPRING_CONFIG),transform:[{translateX:withSpring(interpolate(countAnimationState.get(),[0,1],[-10,0]),COUNT_SPRING_CONFIG)}]};}" };
 ReactCompilerGating = fn(558);
-let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function TabItemCount(arg0) {
   const cResult = sharedValue(576).c(17);
   ({ count, index, activeIndex, pressed, variant } = arg0);
   const tmp4 = closure_11();
   let obj = sharedValue(576);
-  sharedValue = sharedValue(4618).useSharedValue(0);
+  sharedValue = sharedValue(4810).useSharedValue(0);
   if (cResult[0] !== sharedValue) {
     const fn = function n() {
       const result = sharedValue.set(1);
@@ -113,8 +113,8 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp7 = cResult[2];
   }
   const layoutEffect = noop.useLayoutEffect(tmp6, tmp7);
-  let obj2 = sharedValue(4618);
-  const fn2 = function w() {
+  let obj2 = sharedValue(4810);
+  const fn2 = function y() {
     const obj = { opacity: spring.withSpring(sharedValue.get(), closure_10), transform: null };
     const obj3 = { translateX: null };
     const obj4 = spring;
@@ -123,8 +123,8 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     obj.transform = items;
     return obj;
   };
-  const tmpResult = sharedValue(4618);
-  fn2.__closure = { withSpring: sharedValue(5604).withSpring, countAnimationState: sharedValue, COUNT_SPRING_CONFIG, interpolate: sharedValue(4618).interpolate };
+  const tmpResult = sharedValue(4810);
+  fn2.__closure = { withSpring: sharedValue(5374).withSpring, countAnimationState: sharedValue, COUNT_SPRING_CONFIG, interpolate: sharedValue(4810).interpolate };
   fn2.__workletHash = 5074862072194;
   fn2.__initData = __initData3;
   const animatedStyle = tmpResult.useAnimatedStyle(fn2);
@@ -157,7 +157,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             tmp17 = tmp20;
           }
           const obj5 = { animated: true, variant: "text-sm/medium", style: tmp12, lineClamp: 1, children: count };
-          const tmp16 = closure_6(tmp(4892).Text, obj5);
+          const tmp16 = closure_6(tmp(5086).Text, obj5);
           cResult[11] = tmp12;
           cResult[12] = count;
           cResult[13] = tmp16;
@@ -178,17 +178,17 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[6] = variant;
   cResult[7] = obj6;
   tmp10 = obj6;
-  let obj3 = { withSpring: sharedValue(5604).withSpring, countAnimationState: sharedValue, COUNT_SPRING_CONFIG, interpolate: sharedValue(4618).interpolate };
-}) : ((arg0) => {
+  let obj3 = { withSpring: sharedValue(5374).withSpring, countAnimationState: sharedValue, COUNT_SPRING_CONFIG, interpolate: sharedValue(4810).interpolate };
+}) : (function TabItemCount(arg0) {
   let sharedValue;
   ({ count, index, activeIndex, pressed, variant } = arg0);
   const tmp = closure_11();
-  sharedValue = sharedValue(4618).useSharedValue(0);
+  sharedValue = sharedValue(4810).useSharedValue(0);
   let items = [sharedValue];
   const layoutEffect = noop.useLayoutEffect(() => {
     const result = sharedValue.set(1);
   }, items);
-  let obj = sharedValue(4618);
+  let obj = sharedValue(4810);
   class I {
     constructor() {
       obj = { opacity: null, transform: null };
@@ -204,13 +204,13 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       return obj;
     }
   }
-  let obj2 = sharedValue(4618);
-  I.__closure = { withSpring: sharedValue(5604).withSpring, countAnimationState: sharedValue, COUNT_SPRING_CONFIG, interpolate: sharedValue(4618).interpolate };
+  let obj2 = sharedValue(4810);
+  I.__closure = { withSpring: sharedValue(5374).withSpring, countAnimationState: sharedValue, COUNT_SPRING_CONFIG, interpolate: sharedValue(4810).interpolate };
   I.__workletHash = 8384757524453;
   I.__initData = __initData4;
   const animatedStyle = obj2.useAnimatedStyle(I);
-  let obj3 = { withSpring: sharedValue(5604).withSpring, countAnimationState: sharedValue, COUNT_SPRING_CONFIG, interpolate: sharedValue(4618).interpolate };
-  let obj4 = { style: null, children: closure_6(sharedValue(4892).Text, { animated: true, variant: "text-sm/medium", style: closure_16({ index, activeIndex, pressed, variant }), lineClamp: 1, children: count }) };
+  let obj3 = { withSpring: sharedValue(5374).withSpring, countAnimationState: sharedValue, COUNT_SPRING_CONFIG, interpolate: sharedValue(4810).interpolate };
+  let obj4 = { style: null, children: closure_6(sharedValue(5086).Text, { animated: true, variant: "text-sm/medium", style: closure_16({ index, activeIndex, pressed, variant }), lineClamp: 1, children: count }) };
   const items1 = [tmp.count, animatedStyle];
   obj4.style = items1;
   return closure_6(ReanimatedRexport.View, obj4);
@@ -222,7 +222,7 @@ let obj6 = { inactive: nativeDefault.colors.TEXT_MUTED, active: nativeDefault.co
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/Tabs/native/TabItem.native.tsx");
 
-export const TabItem = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const TabItem = ReactCompilerGating.isReactCompilerEnabled() ? (function TabItem(arg0) {
   const cResult = require("c").c(43);
   if (cResult[0] !== arg0) {
     ({ label, count, index } = arg0);
@@ -230,14 +230,7 @@ export const TabItem = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) =>
     ({ itemCount, state, pressed, grow, variant } = arg0);
     const tmp15 = _objectWithoutProperties(arg0, closure_3);
     cResult[0] = arg0;
-    class P {
-      constructor() {
-        obj = { accessibilityState: null };
-        obj1 = { selected: activeIndex.get() === closure_0 };
-        obj.accessibilityState = obj1;
-        return obj;
-      }
-    }
+    cResult[1] = count;
     cResult[2] = grow;
     cResult[3] = index;
     cResult[4] = itemCount;
@@ -248,12 +241,20 @@ export const TabItem = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) =>
     cResult[9] = variant;
     let tmp12 = variant;
     let tmp11 = state;
+    let tmp10 = tmp15;
     let tmp9 = pressed;
+    let tmp8 = label;
+    let tmp7 = itemCount;
     let tmp5 = grow;
+    let tmp4 = count;
   } else {
+    tmp4 = cResult[1];
     tmp5 = cResult[2];
     _require = cResult[3];
+    tmp7 = cResult[4];
+    tmp8 = cResult[5];
     tmp9 = cResult[6];
+    tmp10 = cResult[7];
     tmp11 = cResult[8];
     tmp12 = cResult[9];
   }
@@ -261,26 +262,25 @@ export const TabItem = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) =>
   setItemDimensions = tmp11.setItemDimensions;
   const tmp16 = closure_11();
   let obj = require("c");
-  class P {
-    constructor() {
-      obj = { accessibilityState: null };
-      obj1 = { selected: activeIndex.get() === closure_0 };
-      obj.accessibilityState = obj1;
-      return obj;
-    }
-  }
-  P.__closure = { activeIndex, index };
-  P.__workletHash = 4443106768702;
-  P.__initData = __initData5;
-  const animatedProps = require("ReanimatedRexport").useAnimatedProps(P);
+  const fn = function b() {
+    const obj = { accessibilityState: { selected: activeIndex.get() === closure_0 } };
+    return obj;
+  };
+  fn.__closure = { activeIndex, index };
+  fn.__workletHash = 4443106768702;
+  fn.__initData = __initData5;
+  const animatedProps = require("ReanimatedRexport").useAnimatedProps(fn);
   if (cResult[10] === activeIndex) {
     if (cResult[11] === index) {
       if (cResult[12] === tmp9) {
         if (cResult[13] === tmp12) {
           let tmp18 = cResult[14];
         }
-        closure_16(tmp18);
+        const tmp20 = closure_16(tmp18);
         if (cResult[15] === index) {
+          if (cResult[16] === setItemDimensions) {
+            let tmp21 = cResult[17];
+          }
           let num14 = 0;
           if (tmp5) {
             num14 = 1;
@@ -288,52 +288,125 @@ export const TabItem = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) =>
           if (cResult[18] !== num14) {
             const obj2 = { flexGrow: num14 };
             cResult[18] = num14;
-            class X {
-              constructor(arg0) {
-                obj = closure_0(closure_2[4]);
-                tmp = obj.runOnUI(setItemDimensions)(closure_0, arg0.nativeEvent.layout);
-                return;
-              }
-            }
             cResult[19] = obj2;
             let tmp22 = obj2;
           } else {
             tmp22 = cResult[19];
           }
-          class X {
-            constructor(arg0) {
-              obj = closure_0(closure_2[4]);
-              tmp = obj.runOnUI(setItemDimensions)(closure_0, arg0.nativeEvent.layout);
-              return;
+          if (cResult[20] === tmp16.item) {
+            if (cResult[21] === tmp22) {
+              let tmp23 = cResult[22];
             }
+            if (cResult[23] === index) {
+              if (cResult[24] === tmp7) {
+                let tmp24 = cResult[25];
+              }
+              if (cResult[26] === tmp20) {
+                if (cResult[27] === tmp8) {
+                  let tmp26 = cResult[28];
+                }
+                if (cResult[29] === activeIndex) {
+                  if (cResult[30] === tmp4) {
+                    if (cResult[31] === index) {
+                      if (cResult[32] === tmp9) {
+                        if (cResult[33] === tmp12) {
+                          let tmp29 = cResult[34];
+                        }
+                        if (cResult[35] === animatedProps) {
+                          if (cResult[36] === tmp21) {
+                            if (cResult[37] === tmp10) {
+                              if (cResult[38] === tmp23) {
+                                if (cResult[39] === tmp24) {
+                                  if (cResult[40] === tmp26) {
+                                    if (cResult[41] === tmp29) {
+                                      let tmp33 = cResult[42];
+                                    }
+                                    return tmp33;
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                        const obj3 = { style: tmp23 };
+                        const merged = Object.assign(tmp10);
+                        obj3.onLayout = tmp21;
+                        obj3.accessibilityRole = "tab";
+                        obj3.accessibilityHint = tmp24;
+                        obj3.animatedProps = animatedProps;
+                        const items = [tmp26, tmp29];
+                        obj3.children = items;
+                        const tmp39 = closure_7(closure_8, obj3);
+                        cResult[35] = animatedProps;
+                        cResult[36] = tmp21;
+                        cResult[37] = tmp10;
+                        cResult[38] = tmp23;
+                        cResult[39] = tmp24;
+                        cResult[40] = tmp26;
+                        cResult[41] = tmp29;
+                        cResult[42] = tmp39;
+                        tmp33 = tmp39;
+                      }
+                    }
+                  }
+                }
+                let tmp30 = null;
+                if (null != tmp4) {
+                  const obj4 = { count: tmp4, index, activeIndex, pressed: tmp9, variant: tmp12 };
+                  tmp30 = closure_6(closure_19, obj4);
+                }
+                cResult[29] = activeIndex;
+                cResult[30] = tmp4;
+                cResult[31] = index;
+                cResult[32] = tmp9;
+                cResult[33] = tmp12;
+                cResult[34] = tmp30;
+                tmp29 = tmp30;
+              }
+              const obj5 = { animated: true, variant: "text-sm/semibold", style: tmp20, lineClamp: 1, children: tmp8 };
+              const tmp28 = closure_6(tmp(tmp2[10]).Text, obj5);
+              cResult[26] = tmp20;
+              cResult[27] = tmp8;
+              cResult[28] = tmp28;
+              tmp26 = tmp28;
+            }
+            let formatToPlainStringResult;
+            if (tmpResult2.isAndroid()) {
+              const intl = tmp(tmp2[12]).intl;
+              const obj6 = { position: index + 1, tabCount: tmp7 };
+              formatToPlainStringResult = intl.formatToPlainString(tmp(tmp2[12]).t["4EsQA1"], obj6);
+            }
+            cResult[23] = index;
+            cResult[24] = tmp7;
+            cResult[25] = formatToPlainStringResult;
+            tmp24 = formatToPlainStringResult;
+            tmpResult2 = tmp(tmp2[11]);
           }
-          const items = [tmp16.item, tmp22];
+          const items1 = [tmp16.item, tmp22];
           cResult[20] = tmp16.item;
           cResult[21] = tmp22;
-          cResult[22] = items;
+          cResult[22] = items1;
+          tmp23 = items1;
         }
-        class X {
-          constructor(arg0) {
-            obj = closure_0(closure_2[4]);
-            tmp = obj.runOnUI(setItemDimensions)(closure_0, arg0.nativeEvent.layout);
-            return;
-          }
+        function handleLayout(nativeEvent) {
+          ReanimatedRexport2.runOnUI(setItemDimensions)(closure_0, nativeEvent.nativeEvent.layout);
         }
         cResult[15] = index;
         cResult[16] = setItemDimensions;
-        cResult[17] = X;
+        cResult[17] = handleLayout;
+        tmp21 = handleLayout;
       }
     }
   }
-  const obj3 = { index, activeIndex, pressed: tmp9, variant: tmp12 };
+  const obj7 = { index, activeIndex, pressed: tmp9, variant: tmp12 };
   cResult[10] = activeIndex;
   cResult[11] = index;
   cResult[12] = tmp9;
   cResult[13] = tmp12;
-  cResult[14] = obj3;
-  tmp18 = obj3;
+  cResult[14] = obj7;
+  tmp18 = obj7;
   const tmpResult = require("ReanimatedRexport");
-}) : ((arg0) => {
+}) : (function TabItem(arg0) {
   ({ count, index } = arg0);
   ({ state, pressed, variant } = arg0);
   ({ label, itemCount, grow } = arg0);
@@ -362,7 +435,7 @@ export const TabItem = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) =>
   const obj2 = { style: items };
   items[1] = { flexGrow: num };
   const merged1 = Object.assign(merged);
-  obj2.onLayout = function onLayout(nativeEvent) {
+  obj2.onLayout = function handleLayout(nativeEvent) {
     ReanimatedRexport2.runOnUI(setItemDimensions)(index, nativeEvent.nativeEvent.layout);
   };
   obj2.accessibilityRole = "tab";

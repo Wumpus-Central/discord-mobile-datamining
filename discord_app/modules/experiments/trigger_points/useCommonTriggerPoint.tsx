@@ -1,9 +1,9 @@
-// === Module 13282: useCommonTriggerPoint ===
+// === Module 13583: useCommonTriggerPoint ===
 
-// Module 13282 (useCommonTriggerPoint)
+// Module 13583 (useCommonTriggerPoint)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ExperimentStore from "ExperimentStore" /* 4782 */;
+import ExperimentStore from "ExperimentStore" /* 4976 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/experiments/trigger_points/useCommonTriggerPoint.tsx");
 
-export const useCommonTriggerPoint = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useCommonTriggerPoint = ReactCompilerGating.isReactCompilerEnabled() ? (function useCommonTriggerPoint(arg0) {
   _require = arg0;
   const cResult = require("c").c(8);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -56,7 +56,7 @@ export const useCommonTriggerPoint = ReactCompilerGating.isReactCompilerEnabled(
   cResult[7] = items1;
   tmp11 = items1;
   const tmp7 = _slicedToArray(require("initialize").useStateFromStoresArray(tmp4, tmp5), 2);
-}) : ((arg0) => {
+}) : (function useCommonTriggerPoint(arg0) {
   _require = arg0;
   let items = [ExperimentStore];
   const obj = require("initialize");

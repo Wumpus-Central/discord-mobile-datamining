@@ -1,6 +1,6 @@
-// === Module 4752: ScreenIndexFrozen ===
+// === Module 4946: ScreenIndexFrozen ===
 
-// Module 4752 (ScreenIndexFrozen)
+// Module 4946 (ScreenIndexFrozen)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -36,7 +36,7 @@ export const freezeScreenIndex = function freezeScreenIndex(shouldFreeze, arg1) 
 export { isScreenIndexFrozen };
 export { addFrozenScreenIndexesChangedListener };
 export { removeFrozenScreenIndexesChangedListener };
-export const useIsScreenIndexFrozenSharedValue = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useIsScreenIndexFrozenSharedValue = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsScreenIndexFrozenSharedValue(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   const obj = require("c");
@@ -49,7 +49,7 @@ export const useIsScreenIndexFrozenSharedValue = ReactCompilerGating.isReactComp
     const effect = noop.useEffect(tmp3, tmp4);
     return sharedValue;
   }
-  let fn = function t() {
+  let fn = function c() {
     const fn = () => {
       const result = sharedValue.set(set.has(fn));
     };
@@ -66,7 +66,7 @@ export const useIsScreenIndexFrozenSharedValue = ReactCompilerGating.isReactComp
   tmp4 = items;
   tmp3 = fn;
   const obj2 = require("ReanimatedRexport");
-}) : ((arg0) => {
+}) : (function useIsScreenIndexFrozenSharedValue(arg0) {
   _require = arg0;
   sharedValue = require("ReanimatedRexport").useSharedValue(set.has(arg0));
   const items = [arg0, sharedValue];

@@ -1,9 +1,9 @@
-// === Module 10831: useFetchCollectiblesProductCategory ===
+// === Module 11180: useFetchCollectiblesProductCategory ===
 
-// Module 10831 (useFetchCollectiblesProductCategory)
-import useMaybeFetchCollectiblesCategoriesDefault from "useMaybeFetchCollectiblesCategories" /* 10479 */;
+// Module 11180 (useFetchCollectiblesProductCategory)
+import useMaybeFetchCollectiblesCategoriesDefault from "useMaybeFetchCollectiblesCategories" /* 10076 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7066 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7252 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useFetchCollectiblesProductCategory.tsx");
 
-export const useFetchCollectiblesProductCategory = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useFetchCollectiblesProductCategory = ReactCompilerGating.isReactCompilerEnabled() ? (function useFetchCollectiblesProductCategory(arg0) {
   _require = arg0;
   const cResult = require("c").c(6);
   useMaybeFetchCollectiblesCategoriesDefault();
@@ -24,7 +24,7 @@ export const useFetchCollectiblesProductCategory = ReactCompilerGating.isReactCo
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function n() {
+    const fn = function l() {
       const items = [CollectiblesCategoryStore.isFetchingCategories, CollectiblesCategoryStore.getCategoryForProduct(closure_0)];
       return items;
     };
@@ -49,7 +49,7 @@ export const useFetchCollectiblesProductCategory = ReactCompilerGating.isReactCo
   cResult[5] = obj2;
   tmp11 = obj2;
   const tmp8 = _slicedToArray(require("useStateFromStores").useStateFromStoresArray(first, tmp7), 2);
-}) : ((arg0) => {
+}) : (function useFetchCollectiblesProductCategory(arg0) {
   _require = arg0;
   useMaybeFetchCollectiblesCategoriesDefault();
   let items = [CollectiblesCategoryStore];

@@ -1,8 +1,8 @@
-// === Module 11594: CustomTypingIndicatorExperiment ===
+// === Module 11657: CustomTypingIndicatorExperiment ===
 
-// Module 11594 (CustomTypingIndicatorExperiment)
+// Module 11657 (CustomTypingIndicatorExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1440 */;
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -10,7 +10,7 @@ const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name:
 const result = size.fileFinishedImporting("modules/custom_typing_indicator/CustomTypingIndicatorExperiment.tsx");
 
 export const CustomTypingIndicatorExperiment = apexExperiment;
-export const useCustomTypingIndicatorConfig = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+export const useCustomTypingIndicatorConfig = ReactCompilerGating.isReactCompilerEnabled() ? (function useCustomTypingIndicatorConfig(location) {
   const cResult = c.c(2);
   if (cResult[0] !== location) {
     const obj2 = { location };
@@ -21,7 +21,9 @@ export const useCustomTypingIndicatorConfig = ReactCompilerGating.isReactCompile
     tmp2 = cResult[1];
   }
   return apexExperiment.useConfig(tmp2);
-}) : ((location) => apexExperiment.useConfig({ location }));
+}) : (function useCustomTypingIndicatorConfig(location) {
+  return apexExperiment.useConfig({ location });
+});
 export const getCustomTypingIndicatorConfig = function getCustomTypingIndicatorConfig(location) {
   return apexExperiment.getConfig({ location });
 };

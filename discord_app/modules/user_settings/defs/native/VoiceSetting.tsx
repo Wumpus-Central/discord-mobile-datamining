@@ -1,17 +1,17 @@
-// === Module 15079: VoiceSetting ===
+// === Module 15341: VoiceSetting ===
 
-// Module 15079 (VoiceSetting)
+// Module 15341 (VoiceSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import MediaEngineStore from "MediaEngineStore" /* 1999 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
 
 require = fn;
 const Constants = fn(1085);
 ({ InputModes: c3, UserSettingsSections } = Constants);
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11142);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const SettingBuilders = fn(11262);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoiceSettingTrailing() {
   let Q8gkVL = dependencyMap;
   const cResult = c.c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -42,7 +42,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     return cResult[3];
   }
   const tmpResult = initialize;
-}) : (() => {
+}) : (function useVoiceSettingTrailing() {
   const items = [MediaEngineStore];
   if (obj.useStateFromStores(items, () => mode.getMode()) === constants.PUSH_TO_TALK) {
     const intl2 = util.intl;
@@ -59,8 +59,8 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t.B1fFpf);
   },
   parent: null,
-  IconComponent: fn(9702).MicrophoneIcon,
-  useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  IconComponent: fn(10891).MicrophoneIcon,
+  useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (function useVoiceSettingTrailing() {
     let Q8gkVL = dependencyMap;
     const cResult = c.c(4);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -91,7 +91,7 @@ const route = SettingBuilders.createRoute({
       return cResult[3];
     }
     const tmpResult = initialize;
-  }) : (() => {
+  }) : (function useVoiceSettingTrailing() {
     const items = [MediaEngineStore];
     if (obj.useStateFromStores(items, () => mode.getMode()) === constants.PUSH_TO_TALK) {
       const intl2 = util.intl;

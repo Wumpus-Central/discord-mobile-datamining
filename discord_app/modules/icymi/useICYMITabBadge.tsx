@@ -1,16 +1,16 @@
-// === Module 16373: useICYMITabBadge ===
+// === Module 16633: useICYMITabBadge ===
 
-// Module 16373 (useICYMITabBadge)
+// Module 16633 (useICYMITabBadge)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import ICYMIStore from "ICYMIStore" /* 8021 */;
+import ICYMIStore from "ICYMIStore" /* 8429 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/icymi/useICYMITabBadge.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useICYMITabBadge() {
   const cResult = c.c(5);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ICYMIStore];
@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp9 = cResult[4];
   }
   return tmp9;
-}) : (() => {
+}) : (function useICYMITabBadge() {
   const obj = { value: 0, showDot: null };
   const items = [ICYMIStore];
   obj.showDot = initialize.useStateFromStores(items, () => ICYMIStore.hasNewContent(), []);

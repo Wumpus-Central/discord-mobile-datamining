@@ -1,11 +1,11 @@
-// === Module 5590: GuildMemberRequesterStore ===
+// === Module 5956: GuildMemberRequesterStore ===
 
-// Module 5590 (GuildMemberRequesterStore)
+// Module 5956 (GuildMemberRequesterStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import GuildMemberRequesterDefault from "GuildMemberRequester" /* 5591 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildMemberStore from "GuildMemberStore" /* 2112 */;
+import GuildMemberRequesterDefault from "GuildMemberRequester" /* 5957 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildMemberStore from "GuildMemberStore" /* 2124 */;
 
 function handleConnectionReset() {
   navigation.reset();

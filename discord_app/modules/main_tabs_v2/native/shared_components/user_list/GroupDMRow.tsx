@@ -1,26 +1,26 @@
-// === Module 10660: GroupDMRow ===
+// === Module 10260: GroupDMRow ===
 
-// Module 10660 (GroupDMRow)
+// Module 10260 (GroupDMRow)
 import c from "c" /* 576 */;
-import useChannelNameDefault from "useChannelName" /* 5049 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10661 */;
+import useChannelNameDefault from "useChannelName" /* 5417 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10261 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
-const native = TableCheckboxRow(1188);
-const Text_Text = TableCheckboxRow(4892);
-const TableCheckboxRow2 = TableCheckboxRow(5997);
-const TableRow = TableCheckboxRow(6000);
-const useRecipientsLabel = TableCheckboxRow(10662);
+const native = TableCheckboxRow(1200);
+const Text_Text = TableCheckboxRow(5086);
+const TableCheckboxRow2 = TableCheckboxRow(6181);
+const TableRow = TableCheckboxRow(6184);
+const useRecipientsLabel = TableCheckboxRow(10262);
 require = fn;
 let closure_3 = ["channel", "mode", "selected", "disabled", "onPress"];
-const UserRowModes = fn(10605).UserRowModes;
+const UserRowModes = fn(10202).UserRowModes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/GroupDMRow.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GroupDMRow(channel) {
   let TableCheckboxRow = require;
   let tmp = dependencyMap;
   const cResult = c.c(26);
@@ -136,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     tmp27 = obj6;
     const TableCheckboxRowResult = useRecipientsLabel;
   }
-  const fn = function _() {
+  const fn = function x() {
     if (closure_1 != null) {
       tmp(closure_0);
     }
@@ -145,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   cResult[8] = onPress;
   cResult[9] = fn;
   tmp16 = fn;
-}) : ((channel) => {
+}) : (function GroupDMRow(channel) {
   channel = channel.channel;
   let NONE = channel.mode;
   if (NONE === undefined) {

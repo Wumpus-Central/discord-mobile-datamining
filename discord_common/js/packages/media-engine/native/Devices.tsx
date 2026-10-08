@@ -1,8 +1,8 @@
-// === Module 5023: Devices ===
+// === Module 5207: Devices ===
 
-// Module 5023 (Devices)
-import formatDefault from "format" /* 1351 */;
-import Constants from "Constants" /* 4953 */;
+// Module 5207 (Devices)
+import formatDefault from "format" /* 1363 */;
+import Constants from "Constants" /* 5137 */;
 import size from "module_2" /* 2 */;
 
 ({ DEFAULT_DEVICE_ID: c3, DeviceTypes: closure_4 } = Constants);
@@ -68,7 +68,7 @@ export const sanitizeDevices = function sanitizeDevices(AUDIO_INPUT, items) {
 export const getAudioInputDevices = function getAudioInputDevices() {
   return new Promise((arg0) => {
     closure_0 = arg0;
-    const voiceEngine = closure_0(2001).getVoiceEngine();
+    const voiceEngine = closure_0(2013).getVoiceEngine();
     const inputDevices = voiceEngine.getInputDevices((arr) => {
       const AUDIO_INPUT = constants.AUDIO_INPUT;
       c1 = false;
@@ -131,7 +131,7 @@ export const getAudioInputDevices = function getAudioInputDevices() {
 export const getAudioOutputDevices = function getAudioOutputDevices() {
   return new Promise((arg0) => {
     closure_0 = arg0;
-    const voiceEngine = closure_0(2001).getVoiceEngine();
+    const voiceEngine = closure_0(2013).getVoiceEngine();
     const outputDevices = voiceEngine.getOutputDevices((arr) => {
       const AUDIO_OUTPUT = constants.AUDIO_OUTPUT;
       c1 = false;
@@ -194,7 +194,7 @@ export const getAudioOutputDevices = function getAudioOutputDevices() {
 export const getVideoInputDevices = function getVideoInputDevices() {
   return new Promise((arg0) => {
     closure_0 = arg0;
-    const voiceEngine = closure_0(2001).getVoiceEngine();
+    const voiceEngine = closure_0(2013).getVoiceEngine();
     const videoInputDevices = voiceEngine.getVideoInputDevices((arr) => {
       const VIDEO_INPUT = constants.VIDEO_INPUT;
       c1 = false;

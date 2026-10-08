@@ -1,6 +1,6 @@
-// === Module 11921: fitCardsInGrid ===
+// === Module 11994: fitCardsInGrid ===
 
-// Module 11921 (fitCardsInGrid)
+// Module 11994 (fitCardsInGrid)
 import size from "module_2" /* 2 */;
 
 function isNewLayoutBetter(unusedSpace, unusedSpace2) {

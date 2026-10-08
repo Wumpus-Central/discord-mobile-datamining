@@ -1,14 +1,14 @@
-// === Module 14595: AccountRemove2faSetting ===
+// === Module 14856: AccountRemove2faSetting ===
 
-// Module 14595 (AccountRemove2faSetting)
+// Module 14856 (AccountRemove2faSetting)
 import util from "util" /* 1126 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5714 */;
-import SettingsConstants from "SettingsConstants" /* 7645 */;
-import SettingsAccountUtils from "SettingsAccountUtils" /* 14510 */;
-import MFAActionCreatorsDefault from "MFAActionCreators" /* 14591 */;
-import account_MFAUtils from "account/MFAUtils" /* 14596 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5297 */;
+import SettingsConstants from "SettingsConstants" /* 7966 */;
+import SettingsAccountUtils from "SettingsAccountUtils" /* 14770 */;
+import MFAActionCreatorsDefault from "MFAActionCreators" /* 14852 */;
+import account_MFAUtils from "account/MFAUtils" /* 14857 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11142 */;
+import SettingBuilders from "SettingBuilders" /* 11262 */;
 import size from "module_2" /* 2 */;
 
 let ReactCompilerGating = ReactCompilerGating_mod;
@@ -32,7 +32,9 @@ const pressable = SettingBuilders.createPressable({
     };
     AlertActionCreatorsDefault.show(obj2);
   },
-  useIsDisabled: () => null !== account_MFAUtils.use2FARemoveDisableReason(),
+  useIsDisabled() {
+    return null !== account_MFAUtils.use2FARemoveDisableReason();
+  },
   useDescription: account_MFAUtils.use2FARemoveDisableReason,
   usePredicate: SettingsAccountUtils.useIsTOTPEnabled
 });

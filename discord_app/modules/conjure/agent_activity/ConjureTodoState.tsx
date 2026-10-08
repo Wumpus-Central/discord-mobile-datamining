@@ -1,8 +1,8 @@
-// === Module 16736: ConjureTodoState ===
+// === Module 17011: ConjureTodoState ===
 
-// Module 16736 (ConjureTodoState)
-import ConjureChatStore from "ConjureChatStore" /* 12924 */;
-import ConjureTimelineTree from "ConjureTimelineTree" /* 16692 */;
+// Module 17011 (ConjureTodoState)
+import ConjureChatStore from "ConjureChatStore" /* 13073 */;
+import ConjureTimelineTree from "ConjureTimelineTree" /* 16965 */;
 import size from "module_2" /* 2 */;
 
 const turnSettled = ConjureChatStore.turnSettled;
@@ -97,8 +97,8 @@ export const supersededChecklists = function supersededChecklists(memo) {
   }
   return set;
 };
-export const checklistExpanded = function checklistExpanded(c15, render_id, set) {
-  value = c15.get(render_id);
+export const checklistExpanded = function checklistExpanded(c14, render_id, set) {
+  value = c14.get(render_id);
   if (value == null) {
     value = !set;
   }

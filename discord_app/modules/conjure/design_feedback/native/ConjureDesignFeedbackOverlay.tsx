@@ -1,9 +1,9 @@
-// === Module 16637: ConjureDesignFeedbackOverlay ===
+// === Module 16899: ConjureDesignFeedbackOverlay ===
 
-// Module 16637 (ConjureDesignFeedbackOverlay)
+// Module 16899 (ConjureDesignFeedbackOverlay)
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4860 */;
-import ConjureDesignRemarkSheet from "ConjureDesignRemarkSheet" /* 16638 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5054 */;
+import ConjureDesignRemarkSheet from "ConjureDesignRemarkSheet" /* 16900 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let c10 = 24;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { surface: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 }, highlight: { position: "absolute", borderWidth: 2, borderColor: nativeDefault.colors.TEXT_BRAND, borderRadius: nativeDefault.radii.xs }, marker: null, pending: null, hint: null, hintText: null };
 let size = { position: "absolute", width: 24, height: 24, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.TEXT_BRAND, borderWidth: 2, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.marker = size;
@@ -30,7 +30,7 @@ const obj4 = { textAlign: "center", backgroundColor: nativeDefault.colors.BACKGR
 size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/design_feedback/native/ConjureDesignFeedbackOverlay.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureDesignFeedbackOverlay(projectId) {
   const cResult = projectId(576).c(47);
   projectId = projectId.projectId;
   closure_11();
@@ -64,13 +64,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
   }
   const effect = obj2.useEffect(tmp11, tmp12);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn2 = function _() {
+    const fn2 = function b() {
       closure_9.current = true;
       return () => {
         closure_1_9.current = false;
         if (ref.current) {
-          first(4860).hideActionSheet(projectId(16638).CONJURE_DESIGN_REMARK_SHEET_KEY);
-          const obj = first(4860);
+          first(5054).hideActionSheet(projectId(16900).CONJURE_DESIGN_REMARK_SHEET_KEY);
+          const obj = first(5054);
         }
       };
     };
@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
   if (cResult[5] !== projectId) {
     const fn3 = function y() {
       return () => {
-        const result = projectId(8737).inspectConjurePreviewPoint(closure_1_0, projectId(9005).CONJURE_INSPECT_CLEAR_POINT);
+        const result = projectId(12366).inspectConjurePreviewPoint(closure_1_0, projectId(12371).CONJURE_INSPECT_CLEAR_POINT);
       };
     };
     const items2 = [projectId];
@@ -281,7 +281,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
   cResult[18] = first;
   cResult[19] = W;
   let obj = projectId(576);
-}) : ((projectId) => {
+}) : (function ConjureDesignFeedbackOverlay(projectId) {
   projectId = projectId.projectId;
   let first;
   noop = undefined;
@@ -310,14 +310,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
     return () => {
       closure_1_9.current = false;
       if (ref.current) {
-        size(4860).hideActionSheet(projectId(16638).CONJURE_DESIGN_REMARK_SHEET_KEY);
-        const obj = size(4860);
+        size(5054).hideActionSheet(projectId(16900).CONJURE_DESIGN_REMARK_SHEET_KEY);
+        const obj = size(5054);
       }
     };
   }, []);
   const items1 = [projectId];
   const effect2 = noop.useEffect(() => () => {
-    const result = projectId(8737).inspectConjurePreviewPoint(closure_1_0, projectId(9005).CONJURE_INSPECT_CLEAR_POINT);
+    const result = projectId(12366).inspectConjurePreviewPoint(closure_1_0, projectId(12371).CONJURE_INSPECT_CLEAR_POINT);
   }, items1);
   const items2 = [first2];
   const effect3 = noop.useEffect(() => {
@@ -359,7 +359,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
         point.y = Math.round(nativeEvent.nativeEvent.locationY);
         closure_4(point);
         closure_8(false);
-        const result = projectId(8737).inspectConjurePreviewPoint(point, point);
+        const result = projectId(12366).inspectConjurePreviewPoint(point, point);
         result.then((status) => {
           if (ref.current) {
             closure_4(null);
@@ -386,12 +386,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
             closure_8(true);
           }
         });
-        const obj2 = projectId(8737);
+        const obj2 = projectId(12366);
       }
     }
   }, items4);
   const intl = projectId(1126).intl;
-  const tmp19 = size(3753);
+  const tmp19 = size(3827);
   if (first2) {
     let prop = tmp19["URbF/7"];
     let tmp21 = tmp18;
@@ -408,7 +408,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
   }
   let obj = { style: tmp.surface, onLayout: callback, onPress: callback2, accessibilityRole: "button", accessibilityLabel: null, testID: "conjure-design-surface", children: null };
   const intl2 = tmp16(1126).intl;
-  obj.accessibilityLabel = intl2.string(tmp21(3753)["DesV7/"]);
+  obj.accessibilityLabel = intl2.string(tmp21(3827)["DesV7/"]);
   let obj2 = { style: tmp.surface, pointerEvents: "none", children: null };
   let tmp24Result = null;
   if (null != first1) {
@@ -433,7 +433,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
     items6[1] = null;
     const obj5 = { style: tmp.hint, accessibilityLiveRegion: "polite", children: null };
     const obj6 = { variant: "text-sm/medium", color: "text-default", style: tmp.hintText, children: stringResult };
-    obj5.children = tmp24(tmp16(4892).Text, obj6);
+    obj5.children = tmp24(tmp16(5086).Text, obj6);
     items6[2] = tmp24(tmp27, obj5);
     obj2.children = items6;
     obj.children = closure_9(tmp27, obj2);

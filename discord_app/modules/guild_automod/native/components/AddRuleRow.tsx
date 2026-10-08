@@ -1,11 +1,11 @@
-// === Module 17738: AddRuleRow ===
+// === Module 18025: AddRuleRow ===
 
-// Module 17738 (AddRuleRow)
+// Module 18025 (AddRuleRow)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import TableRow from "TableRow" /* 6000 */;
-import CirclePlusIcon from "CirclePlusIcon" /* 10996 */;
-import AutomodTriggerConfigs from "AutomodTriggerConfigs" /* 17725 */;
+import TableRow from "TableRow" /* 6184 */;
+import CirclePlusIcon from "CirclePlusIcon" /* 11220 */;
+import AutomodTriggerConfigs from "AutomodTriggerConfigs" /* 18012 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/native/components/AddRuleRow.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddRuleRow(arg0) {
   const cResult = c.c(6);
   ({ triggerType, onPress } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = tmp7;
   cResult[5] = tmp10;
   tmp9 = tmp10;
-}) : ((arg0) => {
+}) : (function AddRuleRow(arg0) {
   ({ triggerType, onPress } = arg0);
   const obj = { icon: jsx(TableRow.TableRow.Icon, { IconComponent: CirclePlusIcon.CirclePlusIcon }), label: null, onPress: null };
   const intl = util.intl;

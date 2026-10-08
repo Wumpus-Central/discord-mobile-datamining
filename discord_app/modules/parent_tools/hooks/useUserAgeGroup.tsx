@@ -1,16 +1,16 @@
-// === Module 14694: useUserAgeGroup ===
+// === Module 14955: useUserAgeGroup ===
 
-// Module 14694 (useUserAgeGroup)
+// Module 14955 (useUserAgeGroup)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7061 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7247 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/hooks/useUserAgeGroup.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserAgeGroup() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [FamilyCenterStore];
@@ -25,7 +25,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     [tmp4, tmp5] = cResult;
   }
   return initialize.useStateFromStores(tmp4, tmp5);
-}) : (() => {
+}) : (function useUserAgeGroup() {
   const items = [FamilyCenterStore];
   return initialize.useStateFromStores(items, () => ageGroup.getAgeGroup());
 });

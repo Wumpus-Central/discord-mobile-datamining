@@ -1,14 +1,14 @@
-// === Module 14227: AILoader ===
+// === Module 14051: AILoader ===
 
-// Module 14227 (AILoader)
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import timing from "timing" /* 4897 */;
-import AIGlyphText from "AIGlyphText" /* 14229 */;
+// Module 14051 (AILoader)
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import timing from "timing" /* 5091 */;
+import AIGlyphText from "AIGlyphText" /* 14053 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const AILoaderConstants = fn(14228);
+const AILoaderConstants = fn(14052);
 ({ AI_LOADER_CYCLE_MS: hasOwnProperty, AI_LOADER_GAP_EM: metroRequire, AI_LOADER_GLYPHS: closure_7, AI_LOADER_REDUCED_MOTION_CYCLE_MS: closure_8, AI_LOADER_REST_FRACTION } = AILoaderConstants);
 ({ AI_LOADER_SLOT_COUNT: c10, AI_LOADER_SLOT_STAGGER_MS: closure_11, AI_LOADER_STEP_FRACTION } = AILoaderConstants);
 const AI_LOADER_TRACK_STEPS = AILoaderConstants.AI_LOADER_TRACK_STEPS;
@@ -25,7 +25,7 @@ function trackStepAt(arg0) {
 trackStepAt.__closure = { AI_LOADER_REST_FRACTION, AI_LOADER_TRACK_STEPS, AI_LOADER_STEP_FRACTION };
 trackStepAt.__workletHash = 2403964493846;
 trackStepAt.__initData = { code: "function trackStepAt_AILoaderNativeTsx1(progress){const{AI_LOADER_REST_FRACTION,AI_LOADER_TRACK_STEPS,AI_LOADER_STEP_FRACTION}=this.__closure;if(progress<AI_LOADER_REST_FRACTION)return AI_LOADER_TRACK_STEPS[0];const step=Math.floor((progress-AI_LOADER_REST_FRACTION)/AI_LOADER_STEP_FRACTION)+1;return AI_LOADER_TRACK_STEPS[Math.min(step,AI_LOADER_TRACK_STEPS.length-1)];}" };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_16 = createStyles.createStyles((width) => {
   const obj = { loader: { flexDirection: "row", gap: width * timestampProducer }, slot: { width, height: width, overflow: "hidden" }, glyph: { height: width } };
   return obj;
@@ -33,7 +33,7 @@ let closure_16 = createStyles.createStyles((width) => {
 const __initData = { code: "function AILoaderNativeTsx2(){const{trackStepAt,progress,size}=this.__closure;return{transform:[{translateY:-trackStepAt(progress.get())*size}]};}" };
 const __initData2 = { code: "function AILoaderNativeTsx3(){const{trackStepAt,progress,size}=this.__closure;return{transform:[{translateY:-trackStepAt(progress.get())*size}]};}" };
 let ReactCompilerGating = fn(558);
-let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((index) => {
+let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Slot(index) {
   const cResult = index(color[6]).c(16);
   index = index.index;
   const size = index.size;
@@ -209,14 +209,14 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((index) => {
   tmp7 = items;
   tmp6 = fn;
   let obj2 = index(color[7]);
-}) : ((index) => {
+}) : (function Slot(index) {
   index = index.index;
   const size = index.size;
   ({ color: dependencyMap, cycle } = index);
   const stagger = index.stagger;
   const tmp = closure_16(size);
   const glyph = tmp;
-  const sharedValue = index(4618).useSharedValue(0);
+  const sharedValue = index(4810).useSharedValue(0);
   let items = [cycle, index, sharedValue, stagger];
   const effect = cycle.useEffect(() => {
     const result = sharedValue.set(0);
@@ -227,7 +227,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((index) => {
     const result2 = sharedValue.set(obj.withDelay(result1, obj2.withRepeat(obj3.withTiming(1, { duration: cycle, easing: ReanimatedRexport.Easing.linear }, "animate-always"), -1)));
     return () => index(color[7]).cancelAnimation(sharedValue);
   }, items);
-  let obj = index(4618);
+  let obj = index(4810);
   class R {
     constructor() {
       value = closure_6.get();
@@ -262,17 +262,17 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((index) => {
   R.__workletHash = 6102802507505;
   R.__initData = __initData2;
   const obj4 = { style: tmp.slot, children: null };
-  const animatedStyle = index(4618).useAnimatedStyle(R);
-  let obj2 = index(4618);
+  const animatedStyle = index(4810).useAnimatedStyle(R);
+  let obj2 = index(4810);
   let obj3 = { trackStepAt, progress: sharedValue, size };
-  obj4.children = jsx(size(4618).View, { style: animatedStyle, children: closure_7.map((children) => jsx(AIGlyphText.AIGlyphText, { size, color, allowFontScaling: false, style: glyph.glyph, children }, children)) });
+  obj4.children = jsx(size(4810).View, { style: animatedStyle, children: closure_7.map((children) => jsx(AIGlyphText.AIGlyphText, { size, color, allowFontScaling: false, style: glyph.glyph, children }, children)) });
   return <stagger style={tmp.slot}>{null}</stagger>;
 });
 ReactCompilerGating = fn(558);
 let size = fn(2);
 let result = size.fileFinishedImporting("design/visual-identities/ai/AILoader/AILoader.native.tsx");
 
-export const AILoader = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const AILoader = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function AILoader(arg0) {
   const cResult = num(576).c(16);
   ({ size, color, accessibilityLabel, style } = arg0);
   num = 16;
@@ -284,7 +284,7 @@ export const AILoader = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ?
     str = color;
   }
   const tmp4 = closure_16(num);
-  const reducedMotion = num2.useContext(num(4595).AccessibilityPreferencesContext).reducedMotion;
+  const reducedMotion = num2.useContext(num(4787).AccessibilityPreferencesContext).reducedMotion;
   const tmp5 = reducedMotion.enabled ? closure_8 : closure_5;
   dependencyMap = tmp5;
   num2 = 0;
@@ -351,7 +351,7 @@ export const AILoader = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ?
   cResult[2] = items;
   tmp7 = items;
   const obj = num(576);
-}) : ((size) => {
+}) : (function AILoader(size) {
   let num = size.size;
   if (num === undefined) {
     num = 16;
@@ -362,7 +362,7 @@ export const AILoader = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ?
   }
   const accessibilityLabel = size.accessibilityLabel;
   let num2;
-  const reducedMotion = num2.useContext(num(4595).AccessibilityPreferencesContext).reducedMotion;
+  const reducedMotion = num2.useContext(num(4787).AccessibilityPreferencesContext).reducedMotion;
   dependencyMap = reducedMotion.enabled ? closure_8 : closure_5;
   num2 = 0;
   if (!reducedMotion.enabled) {

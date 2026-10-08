@@ -1,7 +1,7 @@
-// === Module 7191: appMessageEmbedTracking ===
+// === Module 7370: appMessageEmbedTracking ===
 
-// Module 7191 (appMessageEmbedTracking)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+// Module 7370 (appMessageEmbedTracking)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -22,14 +22,14 @@ export const trackAppEmbedClick = function trackAppEmbedClick(arg0) {
   AnalyticsUtilsDefault.track(AnalyticEvents.APP_EMBED_CLICKED, { application_id: applicationId, link_type: linkType, area, referrer_id: referrerId, custom_id: customId, is_dead_end: isDeadEnd, message_id: messageId });
 };
 export { trackAppEmbedViewed };
-export const useTrackAppEmbedViewed = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
+export const useTrackAppEmbedViewed = ReactCompilerGating.isReactCompilerEnabled() ? (function useTrackAppEmbedViewed(id) {
   const cResult = require("c").c(4);
   if (cResult[0] !== id) {
-    const result = tmp(7192).trackingConfigWithDefaults(id);
+    const result = tmp(7371).trackingConfigWithDefaults(id);
     cResult[0] = id;
     cResult[1] = result;
     let tmp4 = result;
-    const tmpResult = tmp(7192);
+    const tmpResult = tmp(7371);
   } else {
     tmp4 = cResult[1];
   }
@@ -61,7 +61,7 @@ export const useTrackAppEmbedViewed = ReactCompilerGating.isReactCompilerEnabled
   }
   let obj = require("c");
   return require("useIntersectionObserver").useIsVisible(tmp6, undefined);
-}) : ((id) => {
+}) : (function useTrackAppEmbedViewed(id) {
   _require = require("appMessageEmbedTrackingConfig").trackingConfigWithDefaults(id);
   noop.useRef(false);
   let obj = require("appMessageEmbedTrackingConfig");

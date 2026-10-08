@@ -1,11 +1,11 @@
-// === Module 16861: FileOrLinkGridPlaceholder ===
+// === Module 17140: FileOrLinkGridPlaceholder ===
 
-// Module 16861 (FileOrLinkGridPlaceholder)
+// Module 17140 (FileOrLinkGridPlaceholder)
 import c from "c" /* 576 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4618 */;
-import useFontScale from "useFontScale" /* 5609 */;
-import usePlaceholderStyles from "usePlaceholderStyles" /* 16837 */;
-import SearchListCard from "SearchListCard" /* 16862 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4810 */;
+import useFontScale from "useFontScale" /* 5382 */;
+import usePlaceholderStyles from "usePlaceholderStyles" /* 17116 */;
+import SearchListCard from "SearchListCard" /* 17141 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/placeholders/FileOrLinkGridPlaceholder.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FileOrLinkGridPlaceholderItem(arg0) {
   const cResult = c.c(11);
   ({ imageStyle, containerStyle } = arg0);
   const placeholderAnimatedStyle = usePlaceholderStyles.usePlaceholderAnimatedStyle(true);
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = width;
   cResult[2] = size;
   tmp6 = size;
-}) : ((imageStyle) => {
+}) : (function FileOrLinkGridPlaceholderItem(imageStyle) {
   imageStyle = imageStyle.imageStyle;
   const placeholderAnimatedStyle = usePlaceholderStyles.usePlaceholderAnimatedStyle(true);
   const width = imageStyle.width;

@@ -1,13 +1,13 @@
-// === Module 2113: useCommunicationDisabledNoticeStore ===
+// === Module 2125: useCommunicationDisabledNoticeStore ===
 
-// Module 2113 (useCommunicationDisabledNoticeStore)
+// Module 2125 (useCommunicationDisabledNoticeStore)
 import c from "c" /* 576 */;
-import _mod1254 from "module_1254" /* 1254 */;
-import _mod4498 from "module_4498" /* 4498 */;
+import _mod1266 from "module_1266" /* 1266 */;
+import _mod4690 from "module_4690" /* 4690 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-const DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY = fn(2114).DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY;
+const DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY = fn(2126).DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY;
 const module_571 = fn(571);
 let state = module_571.createStore((arg0, arg1) => {
   _require = arg0;
@@ -24,7 +24,7 @@ let state = module_571.createStore((arg0, arg1) => {
       notificationDismissedInGuilds.add(arg0);
       const Storage = notificationDismissedInGuilds(510).Storage;
       const result = Storage.set(DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY, notificationDismissedInGuilds);
-      notificationDismissedInGuilds(1259).batchUpdates(() => notificationDismissedInGuilds({ notificationDismissedInGuilds }));
+      notificationDismissedInGuilds(1271).batchUpdates(() => notificationDismissedInGuilds({ notificationDismissedInGuilds }));
     },
     resetNotification(arg0) {
       const notificationDismissedInGuilds = dependencyMap().notificationDismissedInGuilds;
@@ -32,8 +32,8 @@ let state = module_571.createStore((arg0, arg1) => {
         notificationDismissedInGuilds.delete(arg0);
         const Storage = notificationDismissedInGuilds(510).Storage;
         const result = Storage.set(DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY, notificationDismissedInGuilds);
-        notificationDismissedInGuilds(1259).batchUpdates(() => notificationDismissedInGuilds({ notificationDismissedInGuilds }));
-        const obj = notificationDismissedInGuilds(1259);
+        notificationDismissedInGuilds(1271).batchUpdates(() => notificationDismissedInGuilds({ notificationDismissedInGuilds }));
+        const obj = notificationDismissedInGuilds(1271);
       }
     }
   };
@@ -51,7 +51,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_communication_disabled/useCommunicationDisabledNoticeStore.tsx");
 
-export const useCommunicationDisabledNoticeStore = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useCommunicationDisabledNoticeStore = ReactCompilerGating.isReactCompilerEnabled() ? (function useCommunicationDisabledNoticeStore(arg0) {
   const cResult = c.c(7);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function n(arg0) {
@@ -64,8 +64,8 @@ export const useCommunicationDisabledNoticeStore = ReactCompilerGating.isReactCo
   } else {
     first = cResult[0];
   }
-  const tmpResult = _mod1254;
-  [obj3, tmp6] = _mod1254.useStoreWithEqualityFn(closure_4, first, _mod4498.shallow);
+  const tmpResult = _mod1266;
+  [obj3, tmp6] = _mod1266.useStoreWithEqualityFn(closure_4, first, _mod4690.shallow);
   if (cResult[1] === arg0) {
     if (cResult[2] === obj3) {
       let tmp7 = cResult[3];
@@ -87,13 +87,13 @@ export const useCommunicationDisabledNoticeStore = ReactCompilerGating.isReactCo
   cResult[2] = obj3;
   cResult[3] = hasItem;
   tmp7 = hasItem;
-  const tmp5 = _slicedToArray(_mod1254.useStoreWithEqualityFn(closure_4, first, _mod4498.shallow), 2);
-}) : ((arg0) => {
-  const tmp = _slicedToArray(_mod1254.useStoreWithEqualityFn(closure_4, (arg0) => {
+  const tmp5 = _slicedToArray(_mod1266.useStoreWithEqualityFn(closure_4, first, _mod4690.shallow), 2);
+}) : (function useCommunicationDisabledNoticeStore(arg0) {
+  const tmp = _slicedToArray(_mod1266.useStoreWithEqualityFn(closure_4, (arg0) => {
     const items = [, ];
     ({ notificationDismissedInGuilds: arr[0], dismissNotification: arr[1] } = arg0);
     return items;
-  }, _mod4498.shallow), 2);
+  }, _mod4690.shallow), 2);
   const first = tmp[0];
   let items = [!first.has(arg0), tmp[1]];
   return items;

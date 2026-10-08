@@ -1,30 +1,30 @@
-// === Module 11430: ExperimentEmbed ===
+// === Module 11413: ExperimentEmbed ===
 
-// Module 11430 (ExperimentEmbed)
+// Module 11413 (ExperimentEmbed)
 import c from "c" /* 576 */;
-import ExperimentManager from "ExperimentManager" /* 4787 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import ExperimentEmbedUtils from "ExperimentEmbedUtils" /* 7545 */;
-import ExperimentDevToolsUtils from "ExperimentDevToolsUtils" /* 7547 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7615 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7616 */;
-import useCodedLinksExperimentEmbeds from "useCodedLinksExperimentEmbeds" /* 11151 */;
-import useLegacyExperiments from "useLegacyExperiments" /* 11152 */;
-import useApexExperiments from "useApexExperiments" /* 11153 */;
-import _modDef11431 from "module_11431" /* 11431 */;
-import _modDef11432 from "module_11432" /* 11432 */;
-import useExperimentAssignments from "useExperimentAssignments" /* 11433 */;
-import _modDef11434 from "module_11434" /* 11434 */;
+import ExperimentManager from "ExperimentManager" /* 4981 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7861 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7863 */;
+import ExperimentEmbedUtils from "ExperimentEmbedUtils" /* 8117 */;
+import ExperimentDevToolsUtils from "ExperimentDevToolsUtils" /* 8119 */;
+import useCodedLinksExperimentEmbeds from "useCodedLinksExperimentEmbeds" /* 11271 */;
+import useLegacyExperiments from "useLegacyExperiments" /* 11272 */;
+import useApexExperiments from "useApexExperiments" /* 11273 */;
+import _modDef11414 from "module_11414" /* 11414 */;
+import _modDef11415 from "module_11415" /* 11415 */;
+import useExperimentAssignments from "useExperimentAssignments" /* 11416 */;
+import _modDef11417 from "module_11417" /* 11417 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
 const Image = fn(17).Image;
-const ExperimentEmbedType = fn(4783).ExperimentEmbedType;
-const InviteTypes = fn(7239).InviteTypes;
+const ExperimentEmbedType = fn(4977).ExperimentEmbedType;
+const InviteTypes = fn(7418).InviteTypes;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function ExperimentOverrideActionSheet(id) {
   const cResult = id(items[17]).c(22);
   id = id.id;
   const experiment = id.experiment;
@@ -143,7 +143,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
     cResult[13] = tmp24;
   }
   let obj = id(items[17]);
-}) : ((override) => {
+}) : (function ExperimentOverrideActionSheet(override) {
   const id = override.id;
   const experiment = override.experiment;
   let items = [experiment];
@@ -199,7 +199,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/ExperimentEmbed.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectedExperimentOverrideActionSheet(id) {
   const cResult = c.c(4);
   id = id.id;
   const legacyExperiments = useLegacyExperiments.useLegacyExperiments();
@@ -237,7 +237,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
     }
   }
   return tmp10;
-}) : ((id) => {
+}) : (function ConnectedExperimentOverrideActionSheet(id) {
   id = id.id;
   const legacyExperiments = useLegacyExperiments.useLegacyExperiments();
   const experiments = legacyExperiments.experiments;
@@ -331,7 +331,7 @@ export const createExperimentEmbed = function createExperimentEmbed(url, theme) 
         obj5.titleColor = colors.titleColor;
         obj5.subtitle = label;
         obj5.subtitleColor = colors.subtitleColor;
-        obj5.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef11434);
+        obj5.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef11417);
         obj5.thumbnailBackgroundColor = colors.backgroundColor;
         obj5.acceptLabelColor = null != tmp12 && null != iter && tmp12.variantId === iter.value ? colors.clearLabelRedColor : colors.acceptLabelGreenColor;
         obj5.acceptLabelBackgroundColor = null != tmp12 && null != iter && tmp12.variantId === iter.value ? colors.clearLabelRedBackgroundColor : colors.acceptLabelGreenBackgroundColor;
@@ -360,7 +360,7 @@ export const createExperimentEmbed = function createExperimentEmbed(url, theme) 
         }
         obj6.subtitle = combined1;
         obj6.subtitleColor = colors.subtitleColor;
-        obj6.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef11434);
+        obj6.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef11417);
         ({ backgroundColor: obj13.thumbnailBackgroundColor, acceptLabelGreenColor: obj13.acceptLabelColor, acceptLabelGreenBackgroundColor: obj13.acceptLabelBackgroundColor } = colors);
         obj6.acceptLabelText = "View Experiment Details";
         obj6.embedCanBeTapped = true;
@@ -384,9 +384,9 @@ export const createExperimentEmbed = function createExperimentEmbed(url, theme) 
   obj7.bodyText = "This client is missing this experiment. You may need to open the surface where the experiment is used first.";
   obj7.bodyTextColor = colors.bodyTextColor;
   if (tmp4Result10.isThemeDark(theme)) {
-    let tmpResult = _modDef11431;
+    let tmpResult = _modDef11414;
   } else {
-    tmpResult = _modDef11432;
+    tmpResult = _modDef11415;
   }
   obj7.thumbnailUrl = Image.resolveAssetSource(tmpResult).uri;
   obj7.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;

@@ -1,22 +1,22 @@
-// === Module 7806: ComponentStateContext ===
+// === Module 8225: ComponentStateContext ===
 
-// Module 7806 (ComponentStateContext)
+// Module 8225 (ComponentStateContext)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Server from "Server" /* 1985 */;
-import InteractionTypes from "InteractionTypes" /* 5126 */;
-import interactions_InteractionTypes from "interactions/InteractionTypes" /* 5127 */;
-import InteractionComponentTypes from "InteractionComponentTypes" /* 5129 */;
-import useMountEffectDefault from "useMountEffect" /* 5597 */;
-import InteractionUtils from "InteractionUtils" /* 7810 */;
+import Server from "Server" /* 1997 */;
+import useMountEffectDefault from "useMountEffect" /* 5392 */;
+import InteractionTypes from "InteractionTypes" /* 5438 */;
+import interactions_InteractionTypes from "interactions/InteractionTypes" /* 5439 */;
+import InteractionComponentTypes from "InteractionComponentTypes" /* 5441 */;
+import InteractionUtils from "InteractionUtils" /* 8229 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import InteractionStore from "InteractionStore" /* 7611 */;
-import LurkingStore from "LurkingStore" /* 4516 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 5577 */;
-import UserStore from "UserStore" /* 1377 */;
-import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 7807 */;
+import InteractionStore from "InteractionStore" /* 7856 */;
+import LurkingStore from "LurkingStore" /* 4708 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildMemberStore from "GuildMemberStore" /* 2124 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 5887 */;
+import UserStore from "UserStore" /* 1389 */;
+import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 8226 */;
 
 require = fn;
 function isInteractionComponent(type) {
@@ -71,7 +71,7 @@ function getActionComponentState(interaction, id) {
 }
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldDisableInteractiveComponents(arg0) {
   const cResult = require("c").c(13);
   if (cResult[0] !== arg0) {
     const channel = ChannelStore.getChannel(arg0);
@@ -522,7 +522,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
   }
   return tmp25;
-}) : ((arg0) => {
+}) : (function useShouldDisableInteractiveComponents(arg0) {
   const channel = ChannelStore.getChannel(arg0);
   const items = [GuildVerificationStore];
   const items1 = [channel];
@@ -585,11 +585,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  const obj5 = channel(7647);
-  const isThreadModerator = channel(6782).useIsThreadModerator(channel);
-  const tmpResult = channel(6782);
+  const obj5 = channel(7968);
+  const isThreadModerator = channel(6958).useIsThreadModerator(channel);
+  const tmpResult = channel(6958);
   let tmp9 = !stateFromStores;
-  const canUnarchiveThread = channel(6782).useCanUnarchiveThread(channel);
+  const canUnarchiveThread = channel(6958).useCanUnarchiveThread(channel);
   if (stateFromStores) {
     tmp9 = stateFromStores1;
   }
@@ -623,7 +623,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 });
 let closure_15 = tmp2;
 ReactCompilerGating = fn(558);
-let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1) => {
+let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function useComponentValidatorState(id, arg1) {
   _require = id;
   closure_1 = arg1;
   const cResult = require("c").c(15);
@@ -697,7 +697,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1) => {
     cResult[6] = fn2;
     tmp4 = fn2;
   }
-  const fn = function l(arg0) {
+  const fn = function s(arg0) {
     let str = "message";
     if (null != context.modal) {
       str = "modal";
@@ -720,7 +720,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1) => {
   cResult[2] = fn;
   tmp3 = fn;
   let obj = require("c");
-}) : ((id, arg1) => {
+}) : (function useComponentValidatorState(id, arg1) {
   closure_0 = id;
   closure_1 = arg1;
   const context = noop.useContext(closure_19);
@@ -770,7 +770,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1) => {
   return { error, validate };
 });
 ReactCompilerGating = fn(558);
-let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, id2) => {
+let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function useComponentStateForMessage(id, arg1, id2) {
   _require = id;
   importDefault = id2;
   const cResult = require("c").c(30);
@@ -795,88 +795,41 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, id2)
       tmp8 = cResult[4];
     }
     if (cResult[5] !== id) {
-      const fn2 = function _() {
-        return InteractionStore.getInteraction(closure_0);
-      };
+      class E {
+        constructor() {
+          return closure_5.getInteraction(closure_0);
+        }
+      }
       const items2 = [id];
       cResult[5] = id;
-      cResult[6] = fn2;
+      cResult[6] = E;
       cResult[7] = items2;
       let tmp11 = items2;
-      let tmp10 = fn2;
     } else {
-      tmp10 = cResult[6];
+      class E {
+        constructor() {
+          return closure_5.getInteraction(closure_0);
+        }
+      }
       tmp11 = cResult[7];
     }
     const tmpResult = tmp(validate[16]);
-    const stateFromStores1 = tmp(validate[16]).useStateFromStores(tmp8, tmp10, tmp11);
-    const tmp14 = closure_15(id.channel_id) || arg1;
+    const stateFromStores1 = tmp(validate[16]).useStateFromStores(tmp8, E, tmp11);
+    closure_15(id.channel_id) || arg1;
     const tmpResult2 = tmp(validate[16]);
     ({ error, validate } = closure_16(id2, stateFromStores));
-    id = id.applicationId;
-    if (id == null) {
-      id = id.author.id;
+    const applicationId = id.applicationId;
+    if (applicationId == null) {
+      class E {
+        constructor() {
+          return closure_5.getInteraction(closure_0);
+        }
+      }
     }
-    if (cResult[8] === id) {
-      if (cResult[9] === id2.customId) {
-        if (cResult[10] === id2.id) {
-          if (cResult[11] === id2.type) {
-            if (cResult[12] === id.channel_id) {
-              if (cResult[13] === id.flags) {
-                if (cResult[14] === id.id) {
-                  if (cResult[15] === validate) {
-                    let tmp18 = cResult[16];
-                  }
-                  if (cResult[17] === id2) {
-                    if (cResult[18] === tmp14) {
-                      let tmp19 = cResult[19];
-                    }
-                    if (cResult[20] === id2) {
-                      if (cResult[21] === tmp14) {
-                        if (cResult[22] === stateFromStores1) {
-                          let tmp22 = cResult[23];
-                        }
-                        if (cResult[24] === error) {
-                          if (cResult[25] === tmp18) {
-                            if (cResult[26] === stateFromStores) {
-                              if (cResult[27] === tmp19) {
-                                if (cResult[28] === tmp22) {
-                                  let tmp25 = cResult[29];
-                                }
-                                return tmp25;
-                              }
-                            }
-                          }
-                        }
-                        const obj2 = { state: stateFromStores, executeStateUpdate: tmp18, isDisabled: tmp19, visualState: tmp22, error };
-                        cResult[24] = error;
-                        cResult[25] = tmp18;
-                        cResult[26] = stateFromStores;
-                        cResult[27] = tmp19;
-                        cResult[28] = tmp22;
-                        cResult[29] = obj2;
-                        tmp25 = obj2;
-                      }
-                    }
-                    const tmp24 = getActionComponentState(stateFromStores1, id2, tmp14);
-                    cResult[20] = id2;
-                    cResult[21] = tmp14;
-                    cResult[22] = stateFromStores1;
-                    cResult[23] = tmp24;
-                    tmp22 = tmp24;
-                  }
-                  let tmp20 = tmp14;
-                  if (tmp14) {
-                    tmp20 = isInteractionComponent(id2);
-                  }
-                  cResult[17] = id2;
-                  cResult[18] = tmp14;
-                  cResult[19] = tmp20;
-                  tmp19 = tmp20;
-                }
-              }
-            }
-          }
+    if (cResult[8] === applicationId) {
+      class E {
+        constructor() {
+          return closure_5.getInteraction(closure_0);
         }
       }
     }
@@ -915,7 +868,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, id2)
         }
       }
     }
-    cResult[8] = id;
+    cResult[8] = applicationId;
     cResult[9] = id2.customId;
     cResult[10] = id2.id;
     cResult[11] = id2.type;
@@ -924,7 +877,6 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, id2)
     cResult[14] = id.id;
     cResult[15] = validate;
     cResult[16] = T;
-    tmp18 = T;
     const tmp16 = closure_16(id2, stateFromStores);
   }
   const fn = function c() {
@@ -935,7 +887,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, id2)
   cResult[3] = fn;
   tmp6 = fn;
   let obj = require("c");
-}) : ((channel_id, arg1, type) => {
+}) : (function useComponentStateForMessage(channel_id, arg1, type) {
   _require = channel_id;
   const items = [LocalInteractionComponentStateStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => LocalInteractionComponentStateStore.getInteractionComponentState(channel_id.id, type.id));
@@ -987,7 +939,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, id2)
   return obj3;
 });
 ReactCompilerGating = fn(558);
-let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((customId, id, arg2) => {
+let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function useComponentStateForModal(customId, id, arg2) {
   _require = customId;
   importDefault = id;
   dependencyMap = arg2;
@@ -1043,7 +995,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((customId, id, 
                 return tmp17;
               }
             }
-            let obj2 = { state: first1, executeStateUpdate: tmp12, isDisabled: false, visualState: tmp(5129).ActionComponentState.NORMAL, error };
+            let obj2 = { state: first1, executeStateUpdate: tmp12, isDisabled: false, visualState: tmp(5441).ActionComponentState.NORMAL, error };
             class S {
               constructor(arg0) {
                 tmp = null == customId;
@@ -1122,7 +1074,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((customId, id, 
   cResult[3] = fn;
   tmp6 = fn;
   let obj = require("c");
-}) : ((customId, id, arg2) => {
+}) : (function useComponentStateForModal(customId, id, arg2) {
   _require = customId;
   importDefault = id;
   dependencyMap = arg2;
@@ -1160,8 +1112,12 @@ ReactCompilerGating.isReactCompilerEnabled();
 ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
 ReactCompilerGating = fn(558);
-fn = () => noop.useContext(closure_19);
-let fn2 = () => noop.useContext(closure_19).containerId;
+function useComponentStateContext() {
+  return noop.useContext(closure_19);
+}
+function useComponentContainerId() {
+  return noop.useContext(closure_19).containerId;
+}
 const size = fn(2);
 const result2 = size.fileFinishedImporting("modules/interaction_components/ComponentStateContext.tsx");
 
@@ -1229,9 +1185,9 @@ export const useComponentState = function useComponentState(type, arg1) {
   const context = noop.useContext(closure_19);
   return context.useComponentState(type, arg1);
 };
-export const useComponentStateContext = fn;
-export const useComponentContainerId = fn2;
-export const useComponentError = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export { useComponentStateContext };
+export { useComponentContainerId };
+export const useComponentError = ReactCompilerGating.isReactCompilerEnabled() ? (function useComponentError(arg0) {
   const validationErrors = noop.useContext(closure_19).validationErrors;
   let tmp;
   if (validationErrors != null) {
@@ -1241,7 +1197,7 @@ export const useComponentError = ReactCompilerGating.isReactCompilerEnabled() ? 
     tmp = null;
   }
   return tmp;
-}) : ((arg0) => {
+}) : (function useComponentError(arg0) {
   const validationErrors = noop.useContext(closure_19).validationErrors;
   let tmp;
   if (validationErrors != null) {

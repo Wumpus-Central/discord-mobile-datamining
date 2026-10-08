@@ -1,8 +1,8 @@
-// === Module 6852: ErrorHandlingUtils ===
+// === Module 7040: ErrorHandlingUtils ===
 
-// Module 6852 (ErrorHandlingUtils)
+// Module 7040 (ErrorHandlingUtils)
 import Constants from "Constants" /* 1085 */;
-import SentryUtilsDefault from "SentryUtils" /* 1242 */;
+import SentryUtilsDefault from "SentryUtils" /* 1254 */;
 import size from "module_2" /* 2 */;
 
 const items = [, , ];

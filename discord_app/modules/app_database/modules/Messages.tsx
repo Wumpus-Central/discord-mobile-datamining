@@ -1,17 +1,17 @@
-// === Module 6999: modules/Messages ===
+// === Module 7187: modules/Messages ===
 
-// Module 6999 (modules/Messages)
+// Module 7187 (modules/Messages)
 import LoggerDefault from "Logger" /* 3 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 2078 */;
-import _mod2079 from "module_2079" /* 2079 */;
-import requireSortedDescending from "requireSortedDescending" /* 5442 */;
-import isReadableChannel from "isReadableChannel" /* 7006 */;
-import KvMessage2 from "KvMessage" /* 7009 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 2090 */;
+import _mod2091 from "module_2091" /* 2091 */;
+import requireSortedDescending from "requireSortedDescending" /* 5752 */;
+import isReadableChannel from "isReadableChannel" /* 7194 */;
+import KvMessage2 from "KvMessage" /* 7197 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5443 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import SaveableChannelsStore from "SaveableChannelsStore" /* 7000 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5753 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import SaveableChannelsStore from "SaveableChannelsStore" /* 7188 */;
 
 require = fn;
 let closure_8 = new LoggerDefault("Messages");
@@ -282,13 +282,13 @@ prototype2["insertStale"] = function insertStale(guildId, channel_id, item10009,
   const result = GatewayConnectionStore.lastTimeConnectedChanged();
   const KvMessage = KvMessage2.KvMessage;
   const messagesTransactionResult = DatabaseDaosDefault.messagesTransaction(database);
-  messagesTransactionResult.put(guildId, channel_id, KvMessage.fromMessage(guildId, channel_id, item10009, result), _mod2079.ConflictOptions.Skip);
+  messagesTransactionResult.put(guildId, channel_id, KvMessage.fromMessage(guildId, channel_id, item10009, result), _mod2091.ConflictOptions.Skip);
 };
 prototype2["upsertOne"] = function upsertOne(guildId, channelId, message, database) {
   const messagesTransactionResult = DatabaseDaosDefault.messagesTransaction(database);
   const result = GatewayConnectionStore.lastTimeConnectedChanged();
   const KvMessage = KvMessage2.KvMessage;
-  messagesTransactionResult.put(guildId, channelId, KvMessage.fromMessage(guildId, channelId, message, result), _mod2079.ConflictOptions.Replace);
+  messagesTransactionResult.put(guildId, channelId, KvMessage.fromMessage(guildId, channelId, message, result), _mod2091.ConflictOptions.Replace);
   messagesTransactionResult.trimChannel(guildId, channelId, SaveableChannelsStore.saveLimit(channelId));
 };
 prototype2["upsertMany"] = function upsertMany(guild_id, channelId, messages, database) {

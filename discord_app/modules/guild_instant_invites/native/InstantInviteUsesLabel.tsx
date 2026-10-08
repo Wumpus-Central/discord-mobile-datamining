@@ -1,8 +1,8 @@
-// === Module 10699: InstantInviteUsesLabel ===
+// === Module 10287: InstantInviteUsesLabel ===
 
-// Module 10699 (InstantInviteUsesLabel)
+// Module 10287 (InstantInviteUsesLabel)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 4892 */;
+import Text_Text from "Text/Text" /* 5086 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_instant_invites/native/InstantInviteUsesLabel.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function InstantInviteUsesLabel(arg0) {
   const cResult = c.c(3);
   ({ uses, maxUses, style } = arg0);
   let combined = uses;
@@ -33,7 +33,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = style;
   cResult[2] = tmp7;
   tmp6 = tmp7;
-}) : ((style) => {
+}) : (function InstantInviteUsesLabel(style) {
   ({ uses, maxUses } = style);
   let combined = uses;
   if (0 !== maxUses) {

@@ -1,6 +1,6 @@
-// === Module 12541: BugReportUtils ===
+// === Module 12639: BugReportUtils ===
 
-// Module 12541 (BugReportUtils)
+// Module 12639 (BugReportUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

@@ -1,13 +1,13 @@
-// === Module 7976: useMediaViewerSyncer ===
+// === Module 8393: useMediaViewerSyncer ===
 
-// Module 7976 (useMediaViewerSyncer)
+// Module 8393 (useMediaViewerSyncer)
 import c from "c" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import spring from "spring" /* 5604 */;
-import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 7946 */;
-import MediaSourceUtil from "MediaSourceUtil" /* 7950 */;
-import portraitThumbnailHelpers from "portraitThumbnailHelpers" /* 7979 */;
-import resolveSelectedIndex from "resolveSelectedIndex" /* 7980 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import spring from "spring" /* 5374 */;
+import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8364 */;
+import MediaSourceUtil from "MediaSourceUtil" /* 8368 */;
+import portraitThumbnailHelpers from "portraitThumbnailHelpers" /* 8396 */;
+import resolveSelectedIndex from "resolveSelectedIndex" /* 8397 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -57,27 +57,27 @@ function makeMediaViewerSyncer(sources) {
       const rect = thumbnailScrollPositions(selectedIndex[7])();
       let obj2 = sources(selectedIndex[6]);
       let obj4 = { onBeginDrag: null, onEndDrag: null, onScroll: null, onMomentumBegin: null, onMomentumEnd: null };
-      class N {
+      class C {
         constructor() {
           result = closure_4.set(2 | closure_4.get());
           result1 = closure_1_9.set("thumbnails");
           return;
         }
       }
-      N.__closure = { thumbnailsScrolling: mapped1, SCROLLING_DRAG: 2, swipeSource };
-      N.__workletHash = 16224520186325;
-      N.__initData = variableWidthThumbnailsEnabled;
-      obj4.onBeginDrag = N;
-      class C {
+      C.__closure = { thumbnailsScrolling: mapped1, SCROLLING_DRAG: 2, swipeSource };
+      C.__workletHash = 16224520186325;
+      C.__initData = variableWidthThumbnailsEnabled;
+      obj4.onBeginDrag = C;
+      class V {
         constructor() {
           result = closure_4.set(-3 & closure_4.get());
           return;
         }
       }
-      C.__closure = { thumbnailsScrolling: mapped1, SCROLLING_DRAG: 2 };
-      C.__workletHash = 5779899826871;
-      C.__initData = __initData;
-      obj4.onEndDrag = C;
+      V.__closure = { thumbnailsScrolling: mapped1, SCROLLING_DRAG: 2 };
+      V.__workletHash = 5779899826871;
+      V.__initData = __initData;
+      obj4.onEndDrag = V;
       class R {
         constructor(arg0) {
           result = onSelect.contentOffset.x / closure_0;
@@ -171,7 +171,7 @@ function makeMediaViewerSyncer(sources) {
         ReanimatedRexport.scrollTo(animatedRef, thumbnailScrollPositions[arg0].scrollStart, 0, true);
       }, items);
       const animatedScrollHandler = obj3.useAnimatedScrollHandler(obj4);
-      class V {
+      class N {
         constructor() {
           obj = thumbnailsAnimateTo;
           if (thumbnailsAnimateTo.get() >= 0) {
@@ -189,10 +189,10 @@ function makeMediaViewerSyncer(sources) {
         }
       }
       const obj7 = sources(selectedIndex[5]);
-      V.__closure = { thumbnailsAnimateTo: derivedValue2, variableWidthThumbnailsEnabled, runOnJS: sources(selectedIndex[5]).runOnJS, scrollVarWidthThumbnails: callback1, scrollTo: sources(selectedIndex[5]).scrollTo, ref: animatedRef, thumbnailSize: onSelect };
-      V.__workletHash = 1697086875584;
-      V.__initData = __initData5;
-      let derivedValue = obj7.useDerivedValue(V);
+      N.__closure = { thumbnailsAnimateTo: derivedValue2, variableWidthThumbnailsEnabled, runOnJS: sources(selectedIndex[5]).runOnJS, scrollVarWidthThumbnails: callback1, scrollTo: sources(selectedIndex[5]).scrollTo, ref: animatedRef, thumbnailSize: onSelect };
+      N.__workletHash = 1697086875584;
+      N.__initData = __initData5;
+      let derivedValue = obj7.useDerivedValue(N);
       let items1 = [animatedRef];
       const callback2 = _undefined.useCallback((arg0) => {
         const result = portraitThumbnailHelpers.lerpVarWidthThumbnailScrollBounds(thumbnailScrollPositions, arg0);
@@ -629,9 +629,9 @@ function buildThumbnailScrollPositions(sources) {
   }
   return items;
 }
-const Constants = fn(7977);
+const Constants = fn(8394);
 ({ THUMBNAIL_MARGIN: hasOwnProperty, THUMBNAIL_HEIGHT: metroRequire, THUMBNAIL_MAX_WIDTH: closure_7, THUMBNAIL_MIN_WIDTH: closure_8, THUMBNAIL_WIDTH_MARGIN: closure_9 } = Constants);
-const PlatformUtils = fn(1369);
+const PlatformUtils = fn(1381);
 let closure_10 = PlatformUtils.isAndroid();
 let closure_11 = { code: "function useMediaViewerSyncerTsx1(){const{thumbnailsScrolling,SCROLLING_DRAG,swipeSource}=this.__closure;thumbnailsScrolling.set(thumbnailsScrolling.get()|SCROLLING_DRAG);swipeSource.set('thumbnails');}" };
 let closure_12 = { code: "function useMediaViewerSyncerTsx2(){const{thumbnailsScrolling,SCROLLING_DRAG}=this.__closure;thumbnailsScrolling.set(thumbnailsScrolling.get()&~SCROLLING_DRAG);}" };
@@ -664,7 +664,7 @@ const ReactCompilerGating = fn(558);
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/useMediaViewerSyncer.tsx");
 
-export const useMediaViewerSyncer = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useMediaViewerSyncer = ReactCompilerGating.isReactCompilerEnabled() ? (function useMediaViewerSyncer(arg0) {
   const cResult = c.c(7);
   ({ sources, initialIndex, onEndReached, onEndReachedThreshold } = arg0);
   if (cResult[0] !== initialIndex) {
@@ -708,7 +708,7 @@ export const useMediaViewerSyncer = ReactCompilerGating.isReactCompilerEnabled()
   cResult[6] = tmp6;
   tmp5 = tmp6;
   const obj3 = { sources, animProps: tmp4, thumbnailScrollPositions: buildThumbnailScrollPositions(sources), onEndReached, onEndReachedThreshold };
-}) : ((sources) => {
+}) : (function useMediaViewerSyncer(sources) {
   sources = sources.sources;
   const initialIndex = sources.initialIndex;
   const onEndReached = sources.onEndReached;

@@ -1,9 +1,9 @@
-// === Module 10717: useFavoritesGuildChannelActions ===
+// === Module 10445: useFavoritesGuildChannelActions ===
 
-// Module 10717 (useFavoritesGuildChannelActions)
+// Module 10445 (useFavoritesGuildChannelActions)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import FavoriteStore from "FavoriteStore" /* 2054 */;
+import GuildMemberStore from "GuildMemberStore" /* 2124 */;
+import FavoriteStore from "FavoriteStore" /* 2066 */;
 
 const require = globalThis.__r;
 
@@ -12,18 +12,18 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/native/action/useFavoritesGuildChannelActions.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavoritesGuildChannelActions(channelId, arg1) {
   _require = channelId;
   const cResult = require("c").c(17);
   const obj = require("c");
   const favoritesAccess = require("FavoritesHooks").useFavoritesAccess(arg1);
   ({ hasAccess, isExperimentEnabled } = favoritesAccess);
   if (cResult[0] !== channelId) {
-    const isFavoritableChannelResult = tmp(2077).isFavoritableChannel(channelId);
+    const isFavoritableChannelResult = tmp(2089).isFavoritableChannel(channelId);
     cResult[0] = channelId;
     cResult[1] = isFavoritableChannelResult;
     let tmp5 = isFavoritableChannelResult;
-    const tmpResult = tmp(2077);
+    const tmpResult = tmp(2089);
   } else {
     tmp5 = cResult[1];
   }
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId, arg1)
     cResult[5] = items1;
   }
   if (cResult[6] !== channelId.guild_id) {
-    class C {
+    class B {
       constructor() {
         isMemberResult = null == closure_0.guild_id;
         if (!isMemberResult) {
@@ -65,9 +65,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId, arg1)
       }
     }
     cResult[6] = channelId.guild_id;
-    cResult[7] = C;
+    cResult[7] = B;
   } else {
-    class C {
+    class B {
       constructor() {
         isMemberResult = null == closure_0.guild_id;
         if (!isMemberResult) {
@@ -81,7 +81,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId, arg1)
   }
   require("initialize");
   if (tmp5) {
-    class C {
+    class B {
       constructor() {
         isMemberResult = null == closure_0.guild_id;
         if (!isMemberResult) {
@@ -95,7 +95,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId, arg1)
   }
   const tmpResult6 = require("FavoritesHooks");
   if (hasAccess) {
-    class C {
+    class B {
       constructor() {
         isMemberResult = null == closure_0.guild_id;
         if (!isMemberResult) {
@@ -108,7 +108,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId, arg1)
     }
   }
   if (hasAccess) {
-    class C {
+    class B {
       constructor() {
         isMemberResult = null == closure_0.guild_id;
         if (!isMemberResult) {
@@ -121,7 +121,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId, arg1)
     }
   }
   if (hasAccess) {
-    class C {
+    class B {
       constructor() {
         isMemberResult = null == closure_0.guild_id;
         if (!isMemberResult) {
@@ -136,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId, arg1)
   const favoritesBetaTagDismissibleContent = require("FavoritesDismissibleContent").useFavoritesBetaTagDismissibleContent(hasAccess);
   ({ shouldShowBetaTag, dismissBetaTag } = favoritesBetaTagDismissibleContent);
   if (cResult[8] === tmp5) {
-    class C {
+    class B {
       constructor() {
         isMemberResult = null == closure_0.guild_id;
         if (!isMemberResult) {
@@ -159,7 +159,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId, arg1)
   cResult[16] = { isExperimentEnabled, hasFavoritesAccess: hasAccess, canFavoriteChannel: tmp5, isChannelInFavorites: stateFromStores, isFavoritesGuild: isFavoritesGuildSelected, channelId: channelId.id, shouldShowBetaTag, dismissBetaTag };
   const obj3 = { isExperimentEnabled, hasFavoritesAccess: hasAccess, canFavoriteChannel: tmp5, isChannelInFavorites: stateFromStores, isFavoritesGuild: isFavoritesGuildSelected, channelId: channelId.id, shouldShowBetaTag, dismissBetaTag };
   const tmpResult8 = require("FavoritesDismissibleContent");
-}) : ((channelId, arg1) => {
+}) : (function useFavoritesGuildChannelActions(channelId, arg1) {
   _require = channelId;
   const favoritesAccess = require("FavoritesHooks").useFavoritesAccess(arg1);
   ({ hasAccess, isExperimentEnabled } = favoritesAccess);
@@ -193,6 +193,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId, arg1)
   if (tmp7) {
     tmp7 = !isFavoritesGuildSelected;
   }
-  const favoritesBetaTagDismissibleContent = tmp(10063).useFavoritesBetaTagDismissibleContent(tmp7);
+  const favoritesBetaTagDismissibleContent = tmp(10308).useFavoritesBetaTagDismissibleContent(tmp7);
   return { isExperimentEnabled, hasFavoritesAccess: hasAccess, canFavoriteChannel: isFavoritableChannelResult, isChannelInFavorites: stateFromStores, isFavoritesGuild: isFavoritesGuildSelected, channelId: channelId.id, shouldShowBetaTag: favoritesBetaTagDismissibleContent.shouldShowBetaTag, dismissBetaTag: favoritesBetaTagDismissibleContent.dismissBetaTag };
 });

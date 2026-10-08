@@ -1,19 +1,19 @@
-// === Module 15702: UserSettingsDesignSystemFormPrimitives ===
+// === Module 15982: UserSettingsDesignSystemFormPrimitives ===
 
-// Module 15702 (UserSettingsDesignSystemFormPrimitives)
+// Module 15982 (UserSettingsDesignSystemFormPrimitives)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Stack_Stack from "Stack/Stack" /* 5600 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 5892 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 5997 */;
-import TableRow from "TableRow" /* 6000 */;
-import TableRadioRow from "TableRadioRow" /* 6078 */;
-import TableRadioGroup from "TableRadioGroup" /* 6079 */;
-import TableRowGroup from "TableRowGroup" /* 6081 */;
-import TableSwitchRow from "TableSwitchRow" /* 6705 */;
-import Checkbox from "Checkbox" /* 8981 */;
-import VoiceXIcon from "VoiceXIcon" /* 9680 */;
-import Slider from "Slider" /* 14294 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import Stack_Stack from "Stack/Stack" /* 5373 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 6181 */;
+import TableRow from "TableRow" /* 6184 */;
+import TableRadioRow from "TableRadioRow" /* 6264 */;
+import TableRadioGroup from "TableRadioGroup" /* 6265 */;
+import TableRowGroup from "TableRowGroup" /* 6267 */;
+import TableSwitchRow from "TableSwitchRow" /* 6882 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 8204 */;
+import VoiceXIcon from "VoiceXIcon" /* 10869 */;
+import Checkbox from "Checkbox" /* 12885 */;
+import Slider from "Slider" /* 14118 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -22,10 +22,10 @@ const ScrollView = fn(17).ScrollView;
 const NOOP = fn(1085).NOOP;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_9 = createStyles.createStyles({ container: { padding: 16, paddingBottom: 32 } });
 let ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Radio() {
   const cResult = c.c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const tmp7 = timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Radio" });
@@ -52,7 +52,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp9 = cResult[2];
   }
   return tmp9;
-}) : (() => {
+}) : (function Radio() {
   const obj = { children: null };
   const items = [timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Radio" }), timestampProducer(Text_Text.Text, { variant: "text-md/normal", children: "Select a single option from a short list of multiple options" }), ];
   const obj2 = { title: "Role Colors", hasIcons: false, defaultValue: "color-in-names", onChange: NOOP, children: null };
@@ -63,7 +63,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   return React5(closure_1_8, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSwitchState(arg0) {
   const cResult = c.c(3);
   const tmp2 = undefined === arg0 || arg0;
   [tmp4, require] = noop.useState(undefined === arg0 || arg0);
@@ -85,7 +85,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp6 = cResult[2];
   }
   return tmp6;
-}) : (() => {
+}) : (function useSwitchState() {
   let flag = arg0;
   if (arg0 === undefined) {
     flag = true;
@@ -100,7 +100,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   };
 });
 ReactCompilerGating = fn(558);
-let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Switch() {
   const cResult = c.c(18);
   const tmp4 = closure_11();
   const tmp5 = closure_11(false);
@@ -196,7 +196,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[13] = tmp31;
   cResult[14] = tmp42;
   tmp41 = tmp42;
-}) : (() => {
+}) : (function Switch() {
   const tmp = closure_11();
   const tmp2 = closure_11(false);
   const tmp3 = closure_11();
@@ -220,7 +220,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   return React5(closure_1_8, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCheckboxState(arg0) {
   const cResult = c.c(3);
   const tmp2 = undefined === arg0 || arg0;
   [tmp4, require] = noop.useState(undefined === arg0 || arg0);
@@ -242,7 +242,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp6 = cResult[2];
   }
   return tmp6;
-}) : (() => {
+}) : (function useCheckboxState() {
   let flag = arg0;
   if (arg0 === undefined) {
     flag = true;
@@ -257,7 +257,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   };
 });
 ReactCompilerGating = fn(558);
-let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function InlineCheckbox(arg0) {
   const cResult = c.c(6);
   ({ label, description, required, startChecked } = arg0);
   let tmp5 = undefined !== startChecked;
@@ -286,7 +286,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = tmp8;
   tmp7 = tmp8;
   const tmp4Result = closure_13(tmp5);
-}) : ((startChecked) => {
+}) : (function InlineCheckbox(startChecked) {
   let flag = startChecked.startChecked;
   ({ label, description, required } = startChecked);
   if (flag === undefined) {
@@ -296,7 +296,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return timestampProducer(Checkbox.Checkbox, { label, description, required, checked, onToggle });
 });
 ReactCompilerGating = fn(558);
-let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function InlineCheckboxDemo() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { children: null };
@@ -309,14 +309,14 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     first = cResult[0];
   }
   return first;
-}) : (() => {
+}) : (function InlineCheckboxDemo() {
   const obj = { children: null };
   const items = [timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Inline Checkbox" }), timestampProducer(closure_14, { label: "Checkbox label", description: "This is a description", startChecked: true }), timestampProducer(closure_14, { label: "Trust google.com links from now on" }), timestampProducer(closure_14, { label: "I agree to the Terms of Service", required: true })];
   obj.children = items;
   return React5(closure_1_8, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function CheckboxRowDemo() {
   const cResult = c.c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const tmp7 = timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Checkbox" });
@@ -348,7 +348,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp9 = cResult[2];
   }
   return tmp9;
-}) : (() => {
+}) : (function CheckboxRowDemo() {
   const obj = { children: null };
   const items = [timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Checkbox" }), timestampProducer(Text_Text.Text, { variant: "text-md/normal", children: "Select one or more options from a short list of options" }), ];
   const obj2 = { title: "Who can send you a friend request?", hasIcons: false, children: null };
@@ -359,7 +359,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   return React5(closure_1_8, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function SliderDemo() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const tmp6 = timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Slider" });
@@ -383,7 +383,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp7 = cResult[1];
   }
   return tmp7;
-}) : (() => {
+}) : (function SliderDemo() {
   const obj = { children: null };
   const items = [timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Slider" }), ];
   const obj2 = { start: true, end: true, label: "Volume", subLabel: timestampProducer(Slider.Slider, { startIcon: timestampProducer(VoiceXIcon.VoiceXIcon, {}), endIcon: timestampProducer(VoiceNormalIcon.VoiceNormalIcon, {}), onValueChange: NOOP }) };
@@ -395,7 +395,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemFormPrimitives.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSettingsDesignSystemFormPrimitives() {
   const cResult = c.c(7);
   const tmp4 = closure_9();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -431,7 +431,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp21 = cResult[6];
   }
   return tmp21;
-}) : (() => {
+}) : (function UserSettingsDesignSystemFormPrimitives() {
   const obj = { children: null };
   const obj2 = { spacing: 24, style: closure_9().container, children: null };
   const items = [timestampProducer(closure_10, {}), timestampProducer(closure_12, {}), timestampProducer(closure_16, {}), timestampProducer(closure_15, {}), timestampProducer(closure_17, {})];

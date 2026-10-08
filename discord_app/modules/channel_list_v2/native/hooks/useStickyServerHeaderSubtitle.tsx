@@ -1,7 +1,7 @@
-// === Module 16099: useStickyServerHeaderSubtitle ===
+// === Module 16359: useStickyServerHeaderSubtitle ===
 
-// Module 16099 (useStickyServerHeaderSubtitle)
-import GuildMemberCountStore from "GuildMemberCountStore" /* 4786 */;
+// Module 16359 (useStickyServerHeaderSubtitle)
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4980 */;
 
 const require = globalThis.__r;
 
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_list_v2/native/hooks/useStickyServerHeaderSubtitle.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((features) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useStickyServerHeaderSubtitle(features) {
   _require = features;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -40,7 +40,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((features) => {
   tmp6 = fn;
   const obj = require("c");
   tmp = _require;
-}) : ((arg0) => {
+}) : (function useStickyServerHeaderSubtitle(arg0) {
   _require = arg0;
   const items = [GuildMemberCountStore];
   return require("initialize").useStateFromStores(items, () => {

@@ -1,6 +1,6 @@
-// === Module 1886: NativeImageManagerModule ===
+// === Module 1898: NativeImageManagerModule ===
 
-// Module 1886 (NativeImageManagerModule)
+// Module 1898 (NativeImageManagerModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

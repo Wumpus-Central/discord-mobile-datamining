@@ -1,6 +1,6 @@
-// === Module 4667: ? ===
+// === Module 4859: ? ===
 
-// Module 4667
+// Module 4859
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/rive/native/BoostThisServer.riv.js");

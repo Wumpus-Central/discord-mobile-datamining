@@ -1,10 +1,10 @@
-// === Module 12892: useNote ===
+// === Module 13041: useNote ===
 
-// Module 12892 (useNote)
+// Module 13041 (useNote)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import NoteStore from "NoteStore" /* 12893 */;
+import NoteStore from "NoteStore" /* 13042 */;
 
 const require = globalThis.__r;
 
@@ -107,7 +107,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useNote.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useNote(arg0) {
   _require = arg0;
   const cResult = require("c").c(9);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -161,7 +161,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   tmp9 = items1;
   tmp8 = fn2;
   const tmpResult = require("initialize");
-}) : ((arg0) => {
+}) : (function useNote(arg0) {
   _require = arg0;
   const items = [NoteStore];
   let stateFromStores = require("initialize").useStateFromStores(items, () => NoteStore.getNote(closure_0));

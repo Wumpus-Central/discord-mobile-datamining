@@ -1,17 +1,17 @@
-// === Module 13812: RowGroup ===
+// === Module 14037: RowGroup ===
 
-// Module 13812 (RowGroup)
+// Module 14037 (RowGroup)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Stack_Stack from "Stack/Stack" /* 5600 */;
-import TableRowGroup from "TableRowGroup" /* 6081 */;
+import Stack_Stack from "Stack/Stack" /* 5373 */;
+import TableRowGroup from "TableRowGroup" /* 6267 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { overflow: "hidden" }, content: { backgroundColor: nativeDefault.colors.TABLEROW_BACKGROUND_DEFAULT, borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, padding: nativeDefault.modules.mobile.TABLE_ROW_PADDING } };
 let closure_5 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -19,7 +19,7 @@ let obj3 = { backgroundColor: nativeDefault.colors.TABLEROW_BACKGROUND_DEFAULT, 
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/RowGroup/native/RowGroup.native.tsx");
 
-export const RowGroup = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const RowGroup = ReactCompilerGating.isReactCompilerEnabled() ? (function RowGroup(arg0) {
   const cResult = c.c(10);
   ({ children, title, trailing } = arg0);
   const tmp4 = closure_5();
@@ -72,7 +72,7 @@ export const RowGroup = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) =
   cResult[1] = trailing;
   cResult[2] = tmp7Result;
   tmp5 = tmp7Result;
-}) : ((children) => {
+}) : (function RowGroup(children) {
   ({ title, trailing } = children);
   const tmp = closure_5();
   const obj = { style: tmp.container, children: null };

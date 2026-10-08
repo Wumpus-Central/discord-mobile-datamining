@@ -1,15 +1,15 @@
-// === Module 13427: GuildBoostingMarketingTopPerksCards ===
+// === Module 13727: GuildBoostingMarketingTopPerksCards ===
 
-// Module 13427 (GuildBoostingMarketingTopPerksCards)
+// Module 13727 (GuildBoostingMarketingTopPerksCards)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import LottieAnimationViewDefault from "LottieAnimationView" /* 5927 */;
-import _modDef13428 from "module_13428" /* 13428 */;
-import _mod13429 from "module_13429" /* 13429 */;
-import _modDef13430 from "module_13430" /* 13430 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import LottieAnimationViewDefault from "LottieAnimationView" /* 6110 */;
+import _modDef13728 from "module_13728" /* 13728 */;
+import _mod13729 from "module_13729" /* 13729 */;
+import _modDef13730 from "module_13730" /* 13730 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 const require = globalThis.__r;
 
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { wrapper: { marginTop: 50 }, heading: { marginBottom: 20, textAlign: "center" }, scrollerContent: { alignItems: "stretch", flexDirection: "row", justifyContent: "center", minWidth: "100%", paddingHorizontal: 16, paddingBottom: 16 }, card: { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, borderRadius: nativeDefault.radii.lg, display: "flex", alignItems: "center", justifyContent: "center", marginRight: 16, padding: 24, width: 324 }, cardGraphic: null, cardLast: null, cardHeading: null, cardBody: null };
 let size = { borderRadius: nativeDefault.radii.xs, height: 128, marginBottom: 16, overflow: "hidden", width: 211 };
 obj2.cardGraphic = size;
@@ -37,7 +37,7 @@ let items = [
       return intl.string(util.t.HTvLGu);
     },
     getGraphic(style) {
-      return timestampProducer(React3, { style, source: _modDef13428 });
+      return timestampProducer(React3, { style, source: _modDef13728 });
     }
   },
   {
@@ -50,7 +50,7 @@ let items = [
       return intl.string(util.t.wOYbTv);
     },
     getGraphic(style) {
-      const obj = { source: _mod13429, autoPlay: !AccessibilityStore.useReducedMotion, style };
+      const obj = { source: _mod13729, autoPlay: !AccessibilityStore.useReducedMotion, style };
       return timestampProducer(LottieAnimationViewDefault, obj);
     }
   },
@@ -64,7 +64,7 @@ let items = [
       return intl.string(util.t.yCjoUC);
     },
     getGraphic(style) {
-      return timestampProducer(React3, { style, source: _modDef13430 });
+      return timestampProducer(React3, { style, source: _modDef13730 });
     }
   }
 ];
@@ -80,13 +80,13 @@ let obj4 = {
     return intl.string(util.t.HTvLGu);
   },
   getGraphic(style) {
-    return timestampProducer(React3, { style, source: _modDef13428 });
+    return timestampProducer(React3, { style, source: _modDef13728 });
   }
 };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingTopPerksCards.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBoostingMarketingTopPerksCards() {
   const cResult = require("c").c(16);
   const tmp4 = closure_8();
   _require = tmp4;
@@ -101,7 +101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   if (cResult[1] !== tmp4.heading) {
     let obj2 = { style: heading, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: first };
-    const tmp9 = closure_6(tmp(4892).Heading, obj2);
+    const tmp9 = closure_6(tmp(5086).Heading, obj2);
     cResult[1] = tmp4.heading;
     cResult[2] = tmp9;
     let tmp7 = tmp9;
@@ -138,7 +138,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             tmp17 = tmp20;
           }
           const obj4 = { itemCount: items.length, cardWidth: 324, cardMarginRight: 16, contentContainerStyle: tmp10, children: tmp11 };
-          const tmp16 = closure_6(tmp(12242).MarketingCardsScroller, obj4);
+          const tmp16 = closure_6(tmp(12321).MarketingCardsScroller, obj4);
           cResult[9] = tmp4.scrollerContent;
           cResult[10] = tmp11;
           cResult[11] = tmp16;
@@ -169,7 +169,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[8] = mapped;
   tmp11 = mapped;
   let obj = require("c");
-}) : (() => {
+}) : (function GuildBoostingMarketingTopPerksCards() {
   const tmp = closure_8();
   _require = tmp;
   let obj = { style: tmp.wrapper, children: null };

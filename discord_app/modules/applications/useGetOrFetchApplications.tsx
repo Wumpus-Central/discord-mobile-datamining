@@ -1,17 +1,17 @@
-// === Module 6670: useGetOrFetchApplications ===
+// === Module 6847: useGetOrFetchApplications ===
 
-// Module 6670 (useGetOrFetchApplications)
+// Module 6847 (useGetOrFetchApplications)
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 568 */;
 import c from "c" /* 576 */;
-import GlobalUtils from "GlobalUtils" /* 1375 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6665 */;
+import GlobalUtils from "GlobalUtils" /* 1387 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6842 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5124 */;
+import ApplicationStore from "ApplicationStore" /* 5436 */;
 
 require = fn;
 let ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((current, arg1) => {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGetOrFetchApplications(current, arg1) {
   _require = current;
   const cResult = require("c").c(8);
   closure_1 = tmp4;
@@ -38,24 +38,35 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((current, arg1) => {
       tmp9 = cResult[5];
     }
     if (cResult[6] !== current) {
-      const fn2 = function h() {
-        return current.map((item) => {
-          application = undefined;
-          if (null != item) {
-            application = application.getApplication(item);
-          }
-          return application;
-        });
-      };
+      class A {
+        constructor() {
+          return closure_0.map((item) => {
+            application = undefined;
+            if (null != item) {
+              application = application.getApplication(item);
+            }
+            return application;
+          });
+        }
+      }
       cResult[6] = current;
-      cResult[7] = fn2;
-      let tmp11 = fn2;
+      cResult[7] = A;
     } else {
-      tmp11 = cResult[7];
+      class A {
+        constructor() {
+          return closure_0.map((item) => {
+            application = undefined;
+            if (null != item) {
+              application = application.getApplication(item);
+            }
+            return application;
+          });
+        }
+      }
     }
-    return tmp(504).useStateFromStoresArray(tmp9, tmp11);
+    return tmp(504).useStateFromStoresArray(tmp9, A);
   }
-  const fn = function f() {
+  const fn = function p() {
     let tmp = closure_1;
     if (closure_1) {
       tmp = !discord_common_shallowEqual.areArraysShallowEqual(current, ref.current);
@@ -78,7 +89,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((current, arg1) => {
   tmp6 = fn;
   let obj = require("c");
   tmp = _require;
-}) : ((current) => {
+}) : (function useGetOrFetchApplications(current) {
   _require = current;
   let flag = arg1;
   if (arg1 === undefined) {
@@ -115,7 +126,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/useGetOrFetchApplications.tsx");
 
 export default tmp2;
-export const useGetOrFetchApplication = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export const useGetOrFetchApplication = ReactCompilerGating.isReactCompilerEnabled() ? (function useGetOrFetchApplication(arg0, arg1) {
   const cResult = c.c(2);
   if (cResult[0] !== arg0) {
     if (null != arg0) {
@@ -130,7 +141,7 @@ export const useGetOrFetchApplication = ReactCompilerGating.isReactCompilerEnabl
     return closure_5(cResult[1], tmp2)[0];
   }
   tmp2 = undefined === arg1 || arg1;
-}) : ((arg0) => {
+}) : (function useGetOrFetchApplication(arg0) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = true;

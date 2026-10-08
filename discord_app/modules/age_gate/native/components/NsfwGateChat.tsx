@@ -1,11 +1,11 @@
-// === Module 12329: NsfwGateChat ===
+// === Module 12427: NsfwGateChat ===
 
-// Module 12329 (NsfwGateChat)
+// Module 12427 (NsfwGateChat)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import _modDef12330 from "module_12330" /* 12330 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import _modDef12428 from "module_12428" /* 12428 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center" }, border: null, description: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center" };
 obj2.border = { height: StyleSheet.hairlineWidth, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
@@ -24,7 +24,7 @@ let obj4 = { height: StyleSheet.hairlineWidth, backgroundColor: nativeDefault.co
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_gate/native/components/NsfwGateChat.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function NsfwGateChat() {
   const cResult = c.c(12);
   const tmp4 = closure_8();
   if (cResult[0] !== tmp4.border) {
@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp5 = cResult[1];
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj3 = { source: _modDef12330 };
+    const obj3 = { source: _modDef12428 };
     const tmp13 = hasOwnProperty(React4, obj3);
     cResult[2] = tmp13;
     let tmp9 = tmp13;
@@ -88,12 +88,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[7] = tmp16;
   cResult[8] = tmp20;
   tmp19 = tmp20;
-}) : (() => {
+}) : (function NsfwGateChat() {
   const tmp = closure_8();
   const obj = { children: null };
   const items = [hasOwnProperty(React3, { style: tmp.border }), ];
   const obj3 = { style: tmp.container, children: null };
-  const items1 = [hasOwnProperty(React4, { source: _modDef12330 }), ];
+  const items1 = [hasOwnProperty(React4, { source: _modDef12428 }), ];
   const obj5 = { style: tmp.description, variant: "text-md/medium", color: "text-muted", children: null };
   const intl = util.intl;
   obj5.children = intl.string(util.t.W4Qyxr);

@@ -1,27 +1,27 @@
-// === Module 15617: TakeActionScreen ===
+// === Module 15897: TakeActionScreen ===
 
-// Module 15617 (TakeActionScreen)
+// Module 15897 (TakeActionScreen)
 import nativeDefault from "native" /* 587 */;
-import LinkingDefault from "Linking" /* 4571 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 8113 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9447 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 9811 */;
+import LinkingDefault from "Linking" /* 4763 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7004 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7014 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 10374 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
-import UserStore from "UserStore" /* 1377 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
 require = fn;
 let useState = fn(19).useState;
 const View = fn(17).View;
-const Constants = fn(9797);
+const Constants = fn(10361);
 ({ MODAL_LOCATION_CONTEXT_MOBILE: c10, NOFILTR_URL: closure_11, THROUGHLINE_URL: closure_12, REPORTED_USER_CONFIRMATION_TOAST_KEY: map1, TOAST_CHECKMARK_ICON_COLOR: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { display: "flex", alignItems: "center", alignSelf: "stretch", gap: nativeDefault.space.PX_16 }, toastContainer: null, helplineGroup: null, textCenter: null };
 let obj3 = { display: "flex", alignItems: "center", alignSelf: "stretch", gap: nativeDefault.space.PX_16 };
 obj2.toastContainer = { paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_12 };
@@ -34,7 +34,7 @@ let obj5 = { display: "flex", alignSelf: "stretch", gap: nativeDefault.space.PX_
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/native/components/TakeActionScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((senderId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function TakeActionButtons(senderId) {
   const cResult = require("c").c(45);
   senderId = senderId.senderId;
   _require = senderId;
@@ -147,8 +147,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((senderId) => {
                     const obj5 = {
                       value: tmp4(setReported[19]).submitReportForInappropriateConversationSafetyAlert(lastChannelMessage, () => {
                                 dependencyMap(true);
-                                const designSystemsNotificationComponents = closure_0(4580).getDesignSystemsNotificationComponents("TakeActionScreen");
-                                const obj2 = c1(4574);
+                                const designSystemsNotificationComponents = closure_0(4772).getDesignSystemsNotificationComponents("TakeActionScreen");
+                                const obj2 = c1(4766);
                                 if (designSystemsNotificationComponents) {
                                   const obj3 = { text: null, variant: "success" };
                                   const intl2 = closure_0(1126).intl;
@@ -158,15 +158,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((senderId) => {
                                   const obj4 = { key, content: null, IconComponent: null, iconColor: null, containerStyle: null };
                                   const intl = closure_0(1126).intl;
                                   obj4.content = intl.string(closure_0(1126).t.gn2c6X);
-                                  obj4.IconComponent = closure_0(4798).CircleCheckIcon;
+                                  obj4.IconComponent = closure_0(4992).CircleCheckIcon;
                                   obj4.iconColor = iconColor;
                                   obj4.containerStyle = toastContainer.toastContainer;
                                   obj2.open(obj4);
                                 }
-                                const obj = closure_0(4580);
+                                const obj = closure_0(4772);
                               }, () => {
                                 const intl = closure_1_0(1126).intl;
-                                closure_1_0(4573).presentFailedToast(intl.string(closure_1_0(1126).t["0YV04/"]));
+                                closure_1_0(4765).presentFailedToast(intl.string(closure_1_0(1126).t["0YV04/"]));
                               }),
                       done: false
                     };
@@ -192,7 +192,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((senderId) => {
               }
             }
           });
-          const fn3 = function() {
+          function t6() {
             const self = this;
             const apply = closure_0.apply;
             if (typeof apply === "unknown") {
@@ -201,15 +201,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((senderId) => {
               applyArgumentsResult = apply(self, arguments);
             }
             return applyArgumentsResult;
-          };
+          }
           cResult[12] = channelId;
           cResult[13] = lastChannelMessage;
           cResult[14] = senderId;
           cResult[15] = setReported;
           cResult[16] = tmp4.toastContainer;
           cResult[17] = trackAnalyticsEvent;
-          cResult[18] = fn3;
-          tmp17 = fn3;
+          cResult[18] = t6;
+          tmp17 = t6;
         }
       }
       class X {
@@ -240,7 +240,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((senderId) => {
   cResult[5] = senderId;
   cResult[6] = trackAnalyticsEvent;
   cResult[7] = fn2;
-}) : ((senderId) => {
+}) : (function TakeActionButtons(senderId) {
   senderId = senderId.senderId;
   const channelId = senderId.channelId;
   ({ isReported, setReported } = senderId);
@@ -307,10 +307,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((senderId) => {
             v1 = 1;
             dependencyMap = 1;
             const obj5 = {
-              value: tmp4(8312).submitReportForInappropriateConversationSafetyAlert(lastChannelMessage, () => {
+              value: tmp4(7695).submitReportForInappropriateConversationSafetyAlert(lastChannelMessage, () => {
                         dependencyMap(true);
-                        const designSystemsNotificationComponents = closure_0(4580).getDesignSystemsNotificationComponents("TakeActionScreen");
-                        const obj2 = c1(4574);
+                        const designSystemsNotificationComponents = closure_0(4772).getDesignSystemsNotificationComponents("TakeActionScreen");
+                        const obj2 = c1(4766);
                         if (designSystemsNotificationComponents) {
                           const obj3 = { text: null, variant: "success" };
                           const intl2 = closure_0(1126).intl;
@@ -320,15 +320,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((senderId) => {
                           const obj4 = { key, content: null, IconComponent: null, iconColor: null, containerStyle: null };
                           const intl = closure_0(1126).intl;
                           obj4.content = intl.string(closure_0(1126).t.gn2c6X);
-                          obj4.IconComponent = closure_0(4798).CircleCheckIcon;
+                          obj4.IconComponent = closure_0(4992).CircleCheckIcon;
                           obj4.iconColor = iconColor;
                           obj4.containerStyle = toastContainer.toastContainer;
                           obj2.open(obj4);
                         }
-                        const obj = closure_0(4580);
+                        const obj = closure_0(4772);
                       }, () => {
                         const intl = closure_1_0(1126).intl;
-                        closure_1_0(4573).presentFailedToast(intl.string(closure_1_0(1126).t["0YV04/"]));
+                        closure_1_0(4765).presentFailedToast(intl.string(closure_1_0(1126).t["0YV04/"]));
                       }),
               done: false
             };
@@ -341,9 +341,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((senderId) => {
           throw value;
         } else if (arg0 !== 2) {
           closure_128_6(false);
-          const result = v1(8113).showReportSuccessToast(closure_128_0, closure_128_1);
-          closure_128_3(tmp4(9811).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
-          let obj = v1(8113);
+          const result = v1(7014).showReportSuccessToast(closure_128_0, closure_128_1);
+          closure_128_3(tmp4(10374).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
+          let obj = v1(7014);
         }
         dependencyMap = 3;
         const obj6 = { value, done: true };

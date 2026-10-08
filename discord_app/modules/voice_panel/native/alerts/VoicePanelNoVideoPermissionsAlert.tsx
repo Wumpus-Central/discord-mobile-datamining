@@ -1,9 +1,9 @@
-// === Module 17368: VoicePanelNoVideoPermissionsAlert ===
+// === Module 17649: VoicePanelNoVideoPermissionsAlert ===
 
-// Module 17368 (VoicePanelNoVideoPermissionsAlert)
+// Module 17649 (VoicePanelNoVideoPermissionsAlert)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import AlertModal from "AlertModal" /* 5720 */;
+import AlertModal from "AlertModal" /* 5303 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/alerts/VoicePanelNoVideoPermissionsAlert.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePanelNoVideoPermissionsAlert() {
   const cResult = c.c(5);
   const dismissModalCallback = AlertModal.useDismissModalCallback();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -47,7 +47,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp11 = cResult[4];
   }
   return tmp11;
-}) : (() => {
+}) : (function VoicePanelNoVideoPermissionsAlert() {
   const obj2 = { title: null, content: null, actions: null };
   const intl = util.intl;
   obj2.title = intl.string(util.t.OYzPcW);

@@ -1,20 +1,20 @@
-// === Module 12951: UserProfileGameFriendsCard ===
+// === Module 13230: UserProfileGameFriendsCard ===
 
-// Module 12951 (UserProfileGameFriendsCard)
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 6670 */;
-import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 12309 */;
+// Module 13230 (UserProfileGameFriendsCard)
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 6847 */;
+import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 12407 */;
 import noop from "module_19" /* 19 */;
 
-const UserProfileCardDefault = tmp5(6713);
+const UserProfileCardDefault = tmp5(6890);
 const require = fn;
 let jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles({ card: { flexDirection: "column" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileGameFriendsCard.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileGameFriendsCard(style) {
   let tmp2 = dependencyMap;
   const cResult = found(576).c(13);
   style = style.style;
@@ -98,7 +98,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
         }
         if (cResult[8] !== tmp7) {
           const obj5 = { variant: "text-md/normal", color: "text-default", children: tmp7 };
-          const tmp21 = jsx(tmp(4892).Text, { variant: "text-md/normal", color: "text-default", children: tmp7 });
+          const tmp21 = jsx(tmp(5086).Text, { variant: "text-md/normal", color: "text-default", children: tmp7 });
           cResult[8] = tmp7;
           cResult[9] = tmp21;
           let tmp19 = tmp21;
@@ -121,7 +121,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
     }
   }
   const obj = found(576);
-}) : ((arg0) => {
+}) : (function UserProfileGameFriendsCard(arg0) {
   importDefault = undefined;
   dependencyMap = undefined;
   jsx = undefined;
@@ -174,7 +174,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
     const intl3 = tmp6(1126).intl;
     obj4.title = intl3.string(tmp6(1126).t["Uv/eTx"]);
     const obj5 = { variant: "text-md/normal", color: "text-default", children: formatResult };
-    obj4.children = jsx(tmp6(4892).Text, { variant: "text-md/normal", color: "text-default", children: formatResult });
+    obj4.children = jsx(tmp6(5086).Text, { variant: "text-md/normal", color: "text-default", children: formatResult });
     return jsx(UserProfileCardDefault, { style: null, title: null, children: null });
   }
   const arr = useGetOrFetchApplicationsDefault(applicationIds);

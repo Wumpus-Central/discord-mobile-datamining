@@ -1,20 +1,20 @@
-// === Module 14494: UserSettingsEditGuildProfile ===
+// === Module 14754: UserSettingsEditGuildProfile ===
 
-// Module 14494 (UserSettingsEditGuildProfile)
+// Module 14754 (UserSettingsEditGuildProfile)
 import nativeDefault from "native" /* 587 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7869 */;
-import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 9433 */;
-import maybeShowDiscardChangesAlertDefault from "maybeShowDiscardChangesAlert" /* 10672 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8287 */;
+import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 9097 */;
+import maybeShowDiscardChangesAlertDefault from "maybeShowDiscardChangesAlert" /* 9585 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 7842 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8260 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { guildSelector: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.none, borderTopWidth: StyleSheet.hairlineWidth, borderBottomWidth: StyleSheet.hairlineWidth, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, overflow: "hidden" } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -57,7 +57,7 @@ export default function UserSettingsEditGuildProfile() {
       obj5.label = guild.name;
       obj5.onPress = function onPress() {
         maybeShowDiscardChangesAlertDefault({
-          onConfirm() {
+          onConfirm: function openGuildSelectActionSheet() {
             let tmp2 = null != user;
             if (tmp2) {
               tmp2 = null != selectedGuild;

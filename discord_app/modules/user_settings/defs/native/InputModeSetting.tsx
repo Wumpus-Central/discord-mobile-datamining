@@ -1,16 +1,16 @@
-// === Module 15081: InputModeSetting ===
+// === Module 15343: InputModeSetting ===
 
-// Module 15081 (InputModeSetting)
+// Module 15343 (InputModeSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import MediaEngineStore from "MediaEngineStore" /* 1999 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
 
 require = fn;
-const InputModes = fn(4921).InputModes;
+const InputModes = fn(5115).InputModes;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11142);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const SettingBuilders = fn(11262);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useInputModeSettingTrailing() {
   let Q8gkVL = dependencyMap;
   const cResult = c.c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -41,7 +41,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     return cResult[3];
   }
   const tmpResult = initialize;
-}) : (() => {
+}) : (function useInputModeSettingTrailing() {
   const items = [MediaEngineStore];
   if (obj.useStateFromStores(items, () => mode.getMode()) === InputModes.PUSH_TO_TALK) {
     const intl2 = util.intl;
@@ -57,8 +57,8 @@ const pressable = SettingBuilders.createPressable({
     const intl = util.intl;
     return intl.string(util.t["pS+K2L"]);
   },
-  parent: fn(7645).MobileUserSettings.VOICE,
-  useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  parent: fn(7966).MobileUserSettings.VOICE,
+  useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (function useInputModeSettingTrailing() {
     let Q8gkVL = dependencyMap;
     const cResult = c.c(4);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -89,7 +89,7 @@ const pressable = SettingBuilders.createPressable({
       return cResult[3];
     }
     const tmpResult = initialize;
-  }) : (() => {
+  }) : (function useInputModeSettingTrailing() {
     const items = [MediaEngineStore];
     if (obj.useStateFromStores(items, () => mode.getMode()) === InputModes.PUSH_TO_TALK) {
       const intl2 = util.intl;
@@ -100,7 +100,7 @@ const pressable = SettingBuilders.createPressable({
     }
     return stringResult;
   }),
-  onPress: fn(9676).handleInputModePress,
+  onPress: fn(10865).handleInputModePress,
   useSearchTerms() {
     const intl = util.intl;
     const items = [intl.string(util.t.nuFtHH)];

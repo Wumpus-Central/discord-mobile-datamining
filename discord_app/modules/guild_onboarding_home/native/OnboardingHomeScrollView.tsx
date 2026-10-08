@@ -1,15 +1,15 @@
-// === Module 16563: OnboardingHomeScrollView ===
+// === Module 16818: OnboardingHomeScrollView ===
 
-// Module 16563 (OnboardingHomeScrollView)
+// Module 16818 (OnboardingHomeScrollView)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 const obj2 = { guildFeedBackground: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -17,7 +17,7 @@ let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_onboarding_home/native/OnboardingHomeScrollView.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function OnboardingHomeScrollView(children) {
   const cResult = c.c(17);
   ({ guildId, headerOffset, scrollValue } = children);
   children = children.children;
@@ -47,7 +47,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
   const effect = obj2.useEffect(first, tmp6);
   noop = obj2.useRef(true);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    class I {
+    class B {
       constructor() {
         current = null == closure_2.current;
         tmp = closure_2;
@@ -63,9 +63,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
         return;
       }
     }
-    cResult[3] = I;
+    cResult[3] = B;
   } else {
-    class I {
+    class B {
       constructor() {
         current = null == closure_2.current;
         tmp = closure_2;
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
     }
   }
   if (cResult[4] !== guildId) {
-    class I {
+    class B {
       constructor() {
         current = null == closure_2.current;
         tmp = closure_2;
@@ -103,7 +103,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
     cResult[4] = guildId;
     cResult[5] = tmp10;
   } else {
-    class I {
+    class B {
       constructor() {
         current = null == closure_2.current;
         tmp = closure_2;
@@ -120,10 +120,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
       }
     }
   }
-  const effect1 = obj2.useEffect(I, tmp10);
+  const effect1 = obj2.useEffect(B, tmp10);
   const sum = 16 + useSafeAreaInsetsDefault().bottom;
   if (cResult[6] === num) {
-    class I {
+    class B {
       constructor() {
         current = null == closure_2.current;
         tmp = closure_2;
@@ -140,61 +140,111 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
       }
     }
     if (cResult[9] !== scrollValue) {
-      class C {
-        constructor(arg0) {
-          result = scrollValue.set(children.nativeEvent.contentOffset.y);
+      class B {
+        constructor() {
+          current = null == closure_2.current;
+          tmp = closure_2;
+          if (!current) {
+            tmp2 = closure_3;
+            current = closure_3.current;
+          }
+          if (!current) {
+            current2 = tmp.current;
+            scrollToResult = current2.scrollTo({ animated: false, y: 0 });
+          }
+          closure_3.current = false;
           return;
         }
       }
       cResult[9] = scrollValue;
-      cResult[10] = C;
+      cResult[10] = tmp15;
     } else {
-      class C {
-        constructor(arg0) {
-          result = scrollValue.set(children.nativeEvent.contentOffset.y);
+      class B {
+        constructor() {
+          current = null == closure_2.current;
+          tmp = closure_2;
+          if (!current) {
+            tmp2 = closure_3;
+            current = closure_3.current;
+          }
+          if (!current) {
+            current2 = tmp.current;
+            scrollToResult = current2.scrollTo({ animated: false, y: 0 });
+          }
+          closure_3.current = false;
           return;
         }
       }
     }
     const _Symbol = Symbol;
     if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-      class C {
-        constructor(arg0) {
-          result = scrollValue.set(children.nativeEvent.contentOffset.y);
+      class B {
+        constructor() {
+          current = null == closure_2.current;
+          tmp = closure_2;
+          if (!current) {
+            tmp2 = closure_3;
+            current = closure_3.current;
+          }
+          if (!current) {
+            current2 = tmp.current;
+            scrollToResult = current2.scrollTo({ animated: false, y: 0 });
+          }
+          closure_3.current = false;
           return;
         }
       }
-      cResult[11] = tmp16;
+      cResult[11] = tmp17;
     } else {
-      class C {
-        constructor(arg0) {
-          result = scrollValue.set(children.nativeEvent.contentOffset.y);
+      class B {
+        constructor() {
+          current = null == closure_2.current;
+          tmp = closure_2;
+          if (!current) {
+            tmp2 = closure_3;
+            current = closure_3.current;
+          }
+          if (!current) {
+            current2 = tmp.current;
+            scrollToResult = current2.scrollTo({ animated: false, y: 0 });
+          }
+          closure_3.current = false;
           return;
         }
       }
     }
     if (cResult[12] === children) {
-      class C {
-        constructor(arg0) {
-          result = scrollValue.set(children.nativeEvent.contentOffset.y);
+      class B {
+        constructor() {
+          current = null == closure_2.current;
+          tmp = closure_2;
+          if (!current) {
+            tmp2 = closure_3;
+            current = closure_3.current;
+          }
+          if (!current) {
+            current2 = tmp.current;
+            scrollToResult = current2.scrollTo({ animated: false, y: 0 });
+          }
+          closure_3.current = false;
           return;
         }
       }
     }
-    const obj3 = { ref, scrollIndicatorInsets: tmp16, onScroll: C, scrollEventThrottle: 16, style: tmp3.guildFeedBackground, contentContainerStyle: tmp13, children };
-    const tmp20 = <ScrollView ref={ref} scrollIndicatorInsets={tmp16} onScroll={C} scrollEventThrottle={16} style={tmp3.guildFeedBackground} contentContainerStyle={tmp13}>{children}</ScrollView>;
+    const obj3 = { ref, scrollIndicatorInsets: tmp17, onScroll: tmp15, scrollEventThrottle: 16, style: tmp3.guildFeedBackground, contentContainerStyle: tmp13, children };
+    const tmp21 = <ScrollView ref={ref} scrollIndicatorInsets={tmp17} onScroll={tmp15} scrollEventThrottle={16} style={tmp3.guildFeedBackground} contentContainerStyle={tmp13}>{children}</ScrollView>;
     cResult[12] = children;
     cResult[13] = tmp13;
-    cResult[14] = C;
+    cResult[14] = tmp15;
     cResult[15] = tmp3.guildFeedBackground;
-    cResult[16] = tmp20;
+    cResult[16] = tmp21;
   }
   const obj4 = { paddingBottom: sum, marginTop: num };
   cResult[6] = num;
   cResult[7] = sum;
   cResult[8] = obj4;
   ref = noop.useRef(null);
-}) : ((children) => {
+}) : (function OnboardingHomeScrollView(children) {
   ({ guildId, headerOffset } = children);
   if (headerOffset === undefined) {
     headerOffset = 0;
@@ -222,7 +272,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
   }, items1);
   const items2 = [bottom, headerOffset];
   const tmp = closure_6();
-  return <ScrollView ref={ref} scrollIndicatorInsets={{ right: 1 }} onScroll={function onScroll(nativeEvent) {
+  return <ScrollView ref={ref} scrollIndicatorInsets={{ right: 1 }} onScroll={function handleScroll(nativeEvent) {
     const result = scrollValue.set(nativeEvent.nativeEvent.contentOffset.y);
   }} scrollEventThrottle={16} style={closure_6().guildFeedBackground} contentContainerStyle={noop.useMemo(() => ({ paddingBottom: 16 + bottom, marginTop: headerOffset }), items2)}>{children.children}</ScrollView>;
 });

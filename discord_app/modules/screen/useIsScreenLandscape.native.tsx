@@ -1,10 +1,10 @@
-// === Module 5919: useIsScreenLandscape ===
+// === Module 8302: useIsScreenLandscape ===
 
-// Module 5919 (useIsScreenLandscape)
+// Module 8302 (useIsScreenLandscape)
 import c from "c" /* 576 */;
-import AppEntryKeyContext from "AppEntryKeyContext" /* 1487 */;
+import AppEntryKeyContext from "AppEntryKeyContext" /* 1499 */;
 import noop from "module_19" /* 19 */;
-import DimensionsStore from "DimensionsStore" /* 1485 */;
+import DimensionsStore from "DimensionsStore" /* 1497 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
@@ -18,7 +18,7 @@ export const getIsScreenLandscape = function getIsScreenLandscape() {
   }
   return DimensionsStore.getState().byAppEntry[str].screenIsLandscape;
 };
-export const useIsScreenLandscape = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useIsScreenLandscape = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsScreenLandscape() {
   const cResult = c.c(2);
   const appEntryKey = AppEntryKeyContext.useAppEntryKey();
   if (cResult[0] !== appEntryKey) {
@@ -32,7 +32,7 @@ export const useIsScreenLandscape = ReactCompilerGating.isReactCompilerEnabled()
     tmp3 = cResult[1];
   }
   return DimensionsStore(tmp3);
-}) : (() => {
+}) : (function useIsScreenLandscape() {
   const appEntryKey = AppEntryKeyContext.useAppEntryKey();
   const items = [appEntryKey];
   return DimensionsStore(noop.useCallback((arg0) => arg0.byAppEntry[appEntryKey].screenIsLandscape, items));

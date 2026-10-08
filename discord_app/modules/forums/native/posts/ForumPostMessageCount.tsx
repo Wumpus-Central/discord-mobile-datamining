@@ -1,22 +1,22 @@
-// === Module 11646: ForumPostMessageCount ===
+// === Module 11711: ForumPostMessageCount ===
 
-// Module 11646 (ForumPostMessageCount)
+// Module 11711 (ForumPostMessageCount)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import ChatIcon from "ChatIcon" /* 5862 */;
-import ForumHooks from "ForumHooks" /* 7539 */;
-import AnimatedCounterDefault from "AnimatedCounter" /* 11083 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import ChatIcon from "ChatIcon" /* 8174 */;
+import ForumHooks from "ForumHooks" /* 9261 */;
+import AnimatedCounterDefault from "AnimatedCounter" /* 10447 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { tintColor: nativeDefault.colors.ICON_MUTED, marginEnd: 4, marginTop: null };
-let PlatformUtils = fn(1369);
+let PlatformUtils = fn(1381);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = 2;
@@ -24,7 +24,7 @@ if (PlatformUtils.isAndroid()) {
 let obj4 = { iconRead: obj2, iconUnread: null, messageUnreadCount: null, container: null };
 obj2.marginTop = num;
 let obj5 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginEnd: 4, marginTop: null };
-PlatformUtils = fn(1369);
+PlatformUtils = fn(1381);
 let num2 = 0;
 if (PlatformUtils.isAndroid()) {
   num2 = 2;
@@ -38,7 +38,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPostMessageCount.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((thread) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPostMessageCount(thread) {
   const cResult = c.c(22);
   ({ hasUnreads, containerStyle } = thread);
   const tmp4 = closure_6();
@@ -145,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((thread) => {
   cResult[1] = tmp4.container;
   cResult[2] = items2;
   tmp6 = items2;
-}) : ((hasUnreads) => {
+}) : (function ForumPostMessageCount(hasUnreads) {
   hasUnreads = hasUnreads.hasUnreads;
   ({ thread, containerStyle } = hasUnreads);
   const tmp = closure_6();

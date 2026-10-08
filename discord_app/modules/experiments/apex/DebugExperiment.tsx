@@ -1,8 +1,8 @@
-// === Module 13517: DebugExperiment ===
+// === Module 13814: DebugExperiment ===
 
-// Module 13517 (DebugExperiment)
+// Module 13814 (DebugExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1440 */;
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/experiments/apex/DebugExperim
 
 export default apexExperiment;
 export const DebugExperiment = apexExperiment;
-export const useDebugExperiment = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useDebugExperiment = ReactCompilerGating.isReactCompilerEnabled() ? (function useDebugExperiment() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { location: "debug_experiment" };
@@ -25,4 +25,6 @@ export const useDebugExperiment = ReactCompilerGating.isReactCompilerEnabled() ?
     first = cResult[0];
   }
   return apexExperiment.useConfig(first);
-}) : (() => apexExperiment.useConfig({ location: "debug_experiment" }));
+}) : (function useDebugExperiment() {
+  return apexExperiment.useConfig({ location: "debug_experiment" });
+});

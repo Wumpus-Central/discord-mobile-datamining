@@ -1,6 +1,6 @@
-// === Module 1390: FlagUtils ===
+// === Module 1402: FlagUtils ===
 
-// Module 1390 (FlagUtils)
+// Module 1402 (FlagUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/utils/FlagUtils.tsx");

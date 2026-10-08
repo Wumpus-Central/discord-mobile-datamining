@@ -1,19 +1,19 @@
-// === Module 16806: SwipeForMemberListWrapper ===
+// === Module 17086: SwipeForMemberListWrapper ===
 
-// Module 16806 (SwipeForMemberListWrapper)
+// Module 17086 (SwipeForMemberListWrapper)
 import LoggerDefault from "Logger" /* 3 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4742 */;
-import RootNavigationRef from "RootNavigationRef" /* 4743 */;
-import useChatLayout from "useChatLayout" /* 4745 */;
-import ChatInputUtils from "ChatInputUtils" /* 4751 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5076 */;
-import useMountEffect from "useMountEffect" /* 5597 */;
-import getJankSurfaceName from "getJankSurfaceName" /* 15978 */;
-import MainTabsNavigatorPanelContext from "MainTabsNavigatorPanelContext" /* 16364 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4936 */;
+import RootNavigationRef from "RootNavigationRef" /* 4937 */;
+import useChatLayout from "useChatLayout" /* 4939 */;
+import ChatInputUtils from "ChatInputUtils" /* 4945 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5105 */;
+import useMountEffect from "useMountEffect" /* 5392 */;
+import getJankSurfaceName from "getJankSurfaceName" /* 16238 */;
+import MainTabsNavigatorPanelContext from "MainTabsNavigatorPanelContext" /* 16624 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -24,9 +24,9 @@ require = fn;
 get_ActivityIndicator = fn(17);
 let StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
-const ChannelDetailsStore = fn(7522);
+const ChannelDetailsStore = fn(9245);
 ({ getIsChannelDetailsSearchActive: closure_7, setIsChannelDetailsSearchActive: closure_8 } = ChannelDetailsStore);
-const ONYX_BORDER_WIDTH = fn(7510).ONYX_BORDER_WIDTH;
+const ONYX_BORDER_WIDTH = fn(9233).ONYX_BORDER_WIDTH;
 const Constants = fn(1085);
 ({ AnalyticEvents: c10, ComponentActions: closure_11, ThemeTypes: closure_12 } = Constants);
 const jsxProd = fn(21);
@@ -34,7 +34,7 @@ const jsxProd = fn(21);
 let closure_15 = new LoggerDefault("SwipeForMemberListWrapper");
 let c16 = 150;
 let context = noop.createContext(undefined);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { memberListPreview: null, content: null, memberListContainer: null, onyxBorder: null, onyxRightOverflow: null };
 let tmp6 = new LoggerDefault("SwipeForMemberListWrapper");
 obj.memberListPreview = { flex: 1, justifyContent: "center", alignItems: "flex-start", overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -49,7 +49,7 @@ obj.onyxBorder = { borderLeftColor: nativeDefault.colors.BORDER_STRONG, borderLe
 obj.onyxRightOverflow = { right: -ONYX_BORDER_WIDTH };
 let closure_18 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
-let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel_id, arg1, arg2, member_list_open) => {
+let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAnalyticsEffect(channel_id, arg1, arg2, member_list_open) {
   _require = channel_id;
   closure_1 = arg1;
   dependencyMap = arg2;
@@ -108,7 +108,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel_id, ar
   tmp3 = items1;
   tmp2 = fn;
   let obj = require("c");
-}) : ((channel_id, arg1, arg2, member_list_open) => {
+}) : (function useAnalyticsEffect(channel_id, arg1, arg2, member_list_open) {
   closure_1 = arg1;
   closure_2 = arg2;
   const items = [channel_id, arg1, member_list_open];
@@ -139,7 +139,7 @@ const __initData6 = { code: "function SwipeForMemberListWrapperTsx6(isVisible,wa
 const __initData7 = { code: "function SwipeForMemberListWrapperTsx7(){const{isChatLockedOpen,mainTranslateX,stackTranslateX}=this.__closure;return!isChatLockedOpen&&mainTranslateX.get()>0||stackTranslateX!=null&&stackTranslateX.get()>0;}" };
 const __initData8 = { code: "function SwipeForMemberListWrapperTsx8(isInactive,wasInactive){const{panelDisallowGesture}=this.__closure;if(isInactive===wasInactive)return;panelDisallowGesture.set(isInactive);}" };
 ReactCompilerGating = fn(558);
-let closure_28 = ReactCompilerGating.isReactCompilerEnabled() ? ((simultaneousWithExternalGesture, shownPixels, disallowGesture) => {
+let closure_28 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGestureCompositionEffect(simultaneousWithExternalGesture, shownPixels, disallowGesture) {
   _require = shownPixels;
   const cResult = c.c(11);
   context = noop.useContext(MainTabsNavigatorPanelContextDefault);
@@ -274,7 +274,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled() ? ((simultaneousWi
     cResult[5] = gesture2;
     cResult[6] = result1;
   }
-}) : ((arg0, shownPixels, disallowGesture) => {
+}) : (function useGestureCompositionEffect(arg0, shownPixels, disallowGesture) {
   closure_0 = arg0;
   context = noop.useContext(MainTabsNavigatorPanelContextDefault);
   const gesture = context.gesture;

@@ -1,7 +1,7 @@
-// === Module 13135: useIsForumChannelSearchActive ===
+// === Module 12850: useIsForumChannelSearchActive ===
 
-// Module 13135 (useIsForumChannelSearchActive)
-import ForumSearchStore from "ForumSearchStore" /* 7277 */;
+// Module 12850 (useIsForumChannelSearchActive)
+import ForumSearchStore from "ForumSearchStore" /* 7877 */;
 
 const require = globalThis.__r;
 
@@ -10,7 +10,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/hooks/useIsForumChannelSearchActive.tsx");
 
-export const useIsForumChannelSearchActive = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useIsForumChannelSearchActive = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsForumChannelSearchActive(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   const obj = require("c");
@@ -24,7 +24,7 @@ export const useIsForumChannelSearchActive = ReactCompilerGating.isReactCompiler
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function l() {
+    const fn = function s() {
       let searchQuery = null;
       if (null != closure_0) {
         searchQuery = ForumSearchStore.getSearchQuery(tmp);
@@ -41,7 +41,7 @@ export const useIsForumChannelSearchActive = ReactCompilerGating.isReactCompiler
     canSearchForumPostsByChannelId = null != tmp10;
   }
   return canSearchForumPostsByChannelId;
-}) : ((arg0) => {
+}) : (function useIsForumChannelSearchActive(arg0) {
   _require = arg0;
   let canSearchForumPostsByChannelId = require("useCanSearchForumPostsByChannelId").useCanSearchForumPostsByChannelId(arg0);
   require("initialize");

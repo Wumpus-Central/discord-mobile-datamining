@@ -1,9 +1,9 @@
-// === Module 16342: HomeDrawerTTIFirstContentfulPaint ===
+// === Module 16602: HomeDrawerTTIFirstContentfulPaint ===
 
-// Module 16342 (HomeDrawerTTIFirstContentfulPaint)
+// Module 16602 (HomeDrawerTTIFirstContentfulPaint)
 import c from "c" /* 576 */;
-import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 6997 */;
-import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11520 */;
+import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7185 */;
+import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11518 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,10 +12,10 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/guilds/HomeDrawerTTIFirstContentfulPaint.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function HomeDrawerTTIFirstContentfulPaint() {
   const cResult = c.c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function c() {
+    const fn = function o() {
       TTIAnalyticsUtils.trackAppUIViewed();
     };
     const items = [];
@@ -35,7 +35,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp7 = cResult[2];
   }
   return tmp7;
-}) : (() => {
+}) : (function HomeDrawerTTIFirstContentfulPaint() {
   const layoutEffect = noop.useLayoutEffect(() => {
     TTIAnalyticsUtils.trackAppUIViewed();
   }, []);

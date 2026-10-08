@@ -1,10 +1,10 @@
-// === Module 12325: ChannelSafeAreaBottomAnimated ===
+// === Module 12423: ChannelSafeAreaBottomAnimated ===
 
-// Module 12325 (ChannelSafeAreaBottomAnimated)
+// Module 12423 (ChannelSafeAreaBottomAnimated)
 import c from "c" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import useChannelSafeAreaHeightSharedValueDefault from "useChannelSafeAreaHeightSharedValue" /* 9785 */;
-import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles" /* 9790 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import useChannelSafeAreaHeightSharedValueDefault from "useChannelSafeAreaHeightSharedValue" /* 10349 */;
+import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles" /* 10355 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
@@ -19,7 +19,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/channel/ChannelSafeAreaBottomAnimated.android.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelSafeAreaBottom(channelId) {
   const cResult = c.c(5);
   const tmp4 = useChannelSafeAreaHeightSharedValueDefault();
   closure_0 = tmp4;
@@ -53,7 +53,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
   cResult[3] = tmp7;
   cResult[4] = tmp13;
   tmp12 = tmp13;
-}) : ((channelId) => {
+}) : (function ChannelSafeAreaBottom(channelId) {
   const tmp = useChannelSafeAreaHeightSharedValueDefault();
   closure_0 = tmp;
   const tmp2 = useChannelSafeAreaBottomStylesDefault(channelId.channelId);

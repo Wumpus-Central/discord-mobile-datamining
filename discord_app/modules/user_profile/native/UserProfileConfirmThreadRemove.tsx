@@ -1,10 +1,10 @@
-// === Module 12307: UserProfileConfirmThreadRemove ===
+// === Module 12405: UserProfileConfirmThreadRemove ===
 
-// Module 12307 (UserProfileConfirmThreadRemove)
+// Module 12405 (UserProfileConfirmThreadRemove)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import UserUtilsDefault from "UserUtils" /* 4728 */;
-import AlertModal from "AlertModal" /* 5720 */;
+import UserUtilsDefault from "UserUtils" /* 4922 */;
+import AlertModal from "AlertModal" /* 5303 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileConfirmThreadRemove.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileConfirmThreadRemove(user) {
   const cResult = c.c(15);
   ({ isForumPost, onConfirm } = user);
   const name = UserUtilsDefault.useName(user.user);
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
     cResult[3] = name;
     cResult[4] = t2;
   }
-}) : ((isForumPost) => {
+}) : (function UserProfileConfirmThreadRemove(isForumPost) {
   isForumPost = isForumPost.isForumPost;
   ({ user, onConfirm } = isForumPost);
   const name = UserUtilsDefault.useName(user);

@@ -1,7 +1,7 @@
-// === Module 9926: getEmojiItemUrl ===
+// === Module 9447: getEmojiItemUrl ===
 
-// Module 9926 (getEmojiItemUrl)
-import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
+// Module 9447 (getEmojiItemUrl)
+import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/emojis/utils/getEmojiItemUrl.tsx");

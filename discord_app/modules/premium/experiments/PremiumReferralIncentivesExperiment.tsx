@@ -1,8 +1,8 @@
-// === Module 13262: PremiumReferralIncentivesExperiment ===
+// === Module 13562: PremiumReferralIncentivesExperiment ===
 
-// Module 13262 (PremiumReferralIncentivesExperiment)
+// Module 13562 (PremiumReferralIncentivesExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1440 */;
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/premium/experiments/PremiumRe
 
 export default apexExperiment;
 export const ReferralRewardType = obj;
-export const usePremiumReferralIncentivesVariant = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+export const usePremiumReferralIncentivesVariant = ReactCompilerGating.isReactCompilerEnabled() ? (function usePremiumReferralIncentivesVariant(location) {
   const cResult = c.c(6);
   if (cResult[0] !== location) {
     const obj2 = { location };
@@ -38,7 +38,7 @@ export const usePremiumReferralIncentivesVariant = ReactCompilerGating.isReactCo
   cResult[4] = null != config.referralRewardType;
   cResult[5] = obj3;
   tmp5 = obj3;
-}) : ((location) => {
+}) : (function usePremiumReferralIncentivesVariant(location) {
   const config = apexExperiment.useConfig({ location });
   return { referralRewardType: config.referralRewardType, useAltReferralCardArt: config.useAltReferralCardArt, isInReferralIncentivesTreatment: null != config.referralRewardType };
 });

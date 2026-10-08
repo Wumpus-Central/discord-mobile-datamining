@@ -1,27 +1,27 @@
-// === Module 14236: ActionSheetPresenter ===
+// === Module 14060: ActionSheetPresenter ===
 
-// Module 14236 (ActionSheetPresenter)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import useBackPressHandlerDefault from "useBackPressHandler" /* 5787 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 8455 */;
+// Module 14060 (ActionSheetPresenter)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import useBackPressHandlerDefault from "useBackPressHandler" /* 5370 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 8941 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ActionSheetStore from "ActionSheetStore" /* 4567 */;
+import ActionSheetStore from "ActionSheetStore" /* 4759 */;
 
 const require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const NOOP = fn(1085).NOOP;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
-let closure_9 = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((sheetKey, arg1) => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function TrackedWrapperInner(sheetKey) {
   const cResult = sheetKey(576).c(22);
   sheetKey = sheetKey.sheetKey;
   ({ content, impressionName, impressionProperties, zIndex } = sheetKey);
   const obj = sheetKey(576);
-  [tmp5, importDefault] = noop.useState("visible");
+  [tmp5, importDefault] = ref(noop.useState("visible"), 2);
   dependencyMap = noop.useRef(NOOP);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function p(current) {
+    const fn = function o(current) {
       closure_2.current = current;
     };
     cResult[0] = fn;
@@ -29,61 +29,106 @@ let closure_9 = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? (
   } else {
     first = cResult[0];
   }
-  _slicedToArray = obj2.useRef(NOOP);
+  const tmp4 = ref(noop.useState("visible"), 2);
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn2 = function _() {
-      ref2.current();
-    };
-    cResult[1] = fn2;
-    let tmp8 = fn2;
+    class K {
+      constructor() {
+        currentResult = closure_3.current();
+        return;
+      }
+    }
+    cResult[1] = K;
   } else {
-    tmp8 = cResult[1];
+    class K {
+      constructor() {
+        currentResult = closure_3.current();
+        return;
+      }
+    }
   }
   if (cResult[2] === impressionName) {
-    if (cResult[3] === impressionProperties) {
-      let tmp9 = cResult[4];
+    class K {
+      constructor() {
+        currentResult = closure_3.current();
+        return;
+      }
     }
-    useTrackImpressionDefault(tmp9);
+    useTrackImpressionDefault(obj5);
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      const fn3 = function k() {
-        return {
-          componentDidEnter() {
-            closure_1_1("visible");
-          },
-          componentWillLeave(current) {
-            closure_1_1("exiting");
-            ref2.current = current;
-          },
-          componentDidLeave() {
-            closure_1_1("exited");
-            ref2.current = current;
-          }
-        };
-      };
+      class F {
+        constructor() {
+          obj = {
+            componentDidEnter() {
+                      closure_1_1("visible");
+                    },
+            componentWillLeave(current) {
+                      closure_1_1("exiting");
+                      ref2.current = current;
+                    },
+            componentDidLeave() {
+                      closure_1_1("exited");
+                      ref2.current = current;
+                    }
+          };
+          return obj;
+        }
+      }
       const items = [];
-      cResult[5] = fn3;
+      cResult[5] = F;
       cResult[6] = items;
-      let tmp13 = items;
-      let tmp12 = fn3;
+      let tmp12 = items;
     } else {
-      tmp12 = cResult[5];
-      tmp13 = cResult[6];
+      class F {
+        constructor() {
+          obj = {
+            componentDidEnter() {
+                      closure_1_1("visible");
+                    },
+            componentWillLeave(current) {
+                      closure_1_1("exiting");
+                      ref2.current = current;
+                    },
+            componentDidLeave() {
+                      closure_1_1("exited");
+                      ref2.current = current;
+                    }
+          };
+          return obj;
+        }
+      }
+      tmp12 = cResult[6];
     }
-    const imperativeHandle = obj2.useImperativeHandle(arg1, tmp12, tmp13);
+    const imperativeHandle = obj2.useImperativeHandle(sheetKey.ref, F, tmp12);
     if (cResult[7] !== sheetKey) {
-      const fn4 = function z() {
-        ActionSheetActionCreatorsDefault.hideActionSheet(sheetKey);
-      };
+      class T {
+        constructor() {
+          obj = closure_1(closure_2[10]);
+          hideActionSheetResult = obj.hideActionSheet(sheetKey);
+          return;
+        }
+      }
       cResult[7] = sheetKey;
-      cResult[8] = fn4;
-      let tmp16 = fn4;
+      cResult[8] = T;
     } else {
-      tmp16 = cResult[8];
+      class T {
+        constructor() {
+          obj = closure_1(closure_2[10]);
+          hideActionSheetResult = obj.hideActionSheet(sheetKey);
+          return;
+        }
+      }
     }
-    noop = tmp16;
-    if (cResult[9] === tmp16) {
-      if (cResult[12] !== tmp16) {
+    noop = T;
+    if (cResult[9] === T) {
+      class T {
+        constructor() {
+          obj = closure_1(closure_2[10]);
+          hideActionSheetResult = obj.hideActionSheet(sheetKey);
+          return;
+        }
+      }
+      if (cResult[12] !== T) {
         class N {
           constructor() {
             current = closure_2.current;
@@ -94,7 +139,7 @@ let closure_9 = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? (
             return true;
           }
         }
-        cResult[12] = tmp16;
+        cResult[12] = T;
         cResult[13] = N;
       } else {
         class N {
@@ -109,7 +154,7 @@ let closure_9 = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? (
         }
       }
       useBackPressHandlerDefault(N);
-      if (cResult[14] === tmp16) {
+      if (cResult[14] === T) {
         class N {
           constructor() {
             current = closure_2.current;
@@ -121,34 +166,34 @@ let closure_9 = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? (
           }
         }
       }
-      const obj3 = { dialogKey: sheetKey, onDismiss: tmp16, zIndex, children: content };
-      const tmp22 = jsx(tmp(5773).Dialog, { dialogKey: sheetKey, onDismiss: tmp16, zIndex, children: content });
-      cResult[14] = tmp16;
+      const obj3 = { dialogKey: sheetKey, onDismiss: T, zIndex, children: content };
+      const tmp20 = jsx(tmp(5356).Dialog, { dialogKey: sheetKey, onDismiss: T, zIndex, children: content });
+      cResult[14] = T;
       cResult[15] = content;
       cResult[16] = sheetKey;
       cResult[17] = zIndex;
-      cResult[18] = tmp22;
+      cResult[18] = tmp20;
     }
-    const obj4 = { transitionState: tmp5, close: tmp16, onLeave: tmp8, registerDismissHandler: first };
-    cResult[9] = tmp16;
+    const obj4 = { transitionState: tmp5, close: T, onLeave: K, registerDismissHandler: first };
+    cResult[9] = T;
     cResult[10] = tmp5;
     cResult[11] = obj4;
   }
-  const obj5 = { type: sheetKey(1260).ImpressionTypes.HALFSHEET, name: impressionName, properties: impressionProperties };
+  obj5 = { type: sheetKey(1272).ImpressionTypes.HALFSHEET, name: impressionName, properties: impressionProperties };
   cResult[2] = impressionName;
   cResult[3] = impressionProperties;
   cResult[4] = obj5;
-  tmp9 = obj5;
-  const tmp4 = _slicedToArray(noop.useState("visible"), 2);
-}) : ((sheetKey, arg1) => {
+  ref = noop.useRef(NOOP);
+}) : (function TrackedWrapperInner(sheetKey) {
   sheetKey = sheetKey.sheetKey;
-  transitionState = undefined;
-  dependencyMap = undefined;
+  ref = undefined;
   let registerDismissHandler;
   let callback2;
-  ({ content, impressionName, impressionProperties, zIndex } = sheetKey);
-  [transitionState, dependencyMap] = registerDismissHandler.useState("visible");
-  _slicedToArray = registerDismissHandler.useRef(callback2);
+  ({ content, impressionName, impressionProperties, zIndex, ref } = sheetKey);
+  const tmp = ref(registerDismissHandler.useState("visible"), 2);
+  const transitionState = tmp[0];
+  dependencyMap = tmp[1];
+  ref = registerDismissHandler.useRef(callback2);
   registerDismissHandler = registerDismissHandler.useCallback((current) => {
     closure_3.current = current;
   }, []);
@@ -156,9 +201,9 @@ let closure_9 = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? (
   const callback1 = registerDismissHandler.useCallback(() => {
     ref2.current();
   }, []);
-  const obj = { type: sheetKey(1260).ImpressionTypes.HALFSHEET, name: impressionName, properties: impressionProperties };
-  transitionState(8455)(obj);
-  const imperativeHandle = registerDismissHandler.useImperativeHandle(arg1, () => ({
+  const obj = { type: sheetKey(1272).ImpressionTypes.HALFSHEET, name: impressionName, properties: impressionProperties };
+  transitionState(8941)(obj);
+  const imperativeHandle = registerDismissHandler.useImperativeHandle(ref, () => ({
     componentDidEnter() {
       closure_1_2("visible");
     },
@@ -186,15 +231,15 @@ let closure_9 = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? (
     callback2();
     return true;
   }, items2);
-  transitionState(5787)(callback3);
-  const tmp5 = transitionState(8455);
-  return jsx(transitionState(6654).Provider, { value: memo, children: jsx(sheetKey(5773).Dialog, { dialogKey: sheetKey, onDismiss: callback2, zIndex, children: content }) });
-}));
+  transitionState(5370)(callback3);
+  const tmp5 = transitionState(8941);
+  return jsx(transitionState(6831).Provider, { value: memo, children: jsx(sheetKey(5356).Dialog, { dialogKey: sheetKey, onDismiss: callback2, zIndex, children: content }) });
+});
 ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/Sheet/native/ActionSheetPresenter.native.tsx");
 
-export const ActionSheetPresenter = ReactCompilerGating.isReactCompilerEnabled() ? ((appEntryKey) => {
+export const ActionSheetPresenter = ReactCompilerGating.isReactCompilerEnabled() ? (function ActionSheetPresenter(appEntryKey) {
   const cResult = appEntryKey(576).c(12);
   appEntryKey = appEntryKey.appEntryKey;
   if (cResult[0] !== appEntryKey) {
@@ -236,8 +281,8 @@ export const ActionSheetPresenter = ReactCompilerGating.isReactCompilerEnabled()
   if (cResult[6] === appEntryKey) {
     if (cResult[7] === stateFromStoresArray) {
       if (cResult[10] !== cResult[8]) {
-        const obj2 = { style: StyleSheet.absoluteFill, component: tmp(5721).TransitionGroupOverlayView, children: tmp11 };
-        const tmp17 = jsx(tmp(12080).TransitionGroup, { style: StyleSheet.absoluteFill, component: tmp(5721).TransitionGroupOverlayView, children: tmp11 });
+        const obj2 = { style: StyleSheet.absoluteFill, component: tmp(5304).TransitionGroupOverlayView, children: tmp11 };
+        const tmp17 = jsx(tmp(12154).TransitionGroup, { style: StyleSheet.absoluteFill, component: tmp(5304).TransitionGroupOverlayView, children: tmp11 });
         cResult[10] = tmp11;
         cResult[11] = tmp17;
         let tmp14 = tmp17;
@@ -271,7 +316,7 @@ export const ActionSheetPresenter = ReactCompilerGating.isReactCompilerEnabled()
   cResult[7] = stateFromStoresArray;
   cResult[8] = mapped;
   const tmpResult = appEntryKey(504);
-}) : ((appEntryKey) => {
+}) : (function ActionSheetPresenter(appEntryKey) {
   appEntryKey = appEntryKey.appEntryKey;
   const items = [appEntryKey];
   const effect = noop.useEffect(() => () => {
@@ -282,5 +327,5 @@ export const ActionSheetPresenter = ReactCompilerGating.isReactCompilerEnabled()
   const found = stateFromStoresArray.filter((appEntryKey) => appEntryKey.appEntryKey === appEntryKey);
   const mapped = found.map((content) => <closure_1_9 key={content.key} sheetKey={content.key} content={content.content} impressionName={content.impressionName} impressionProperties={content.impressionProperties} zIndex={content.zIndex} />);
   const obj = appEntryKey(504);
-  return jsx(appEntryKey(12080).TransitionGroup, { style: StyleSheet.absoluteFill, component: appEntryKey(5721).TransitionGroupOverlayView, children: mapped });
+  return jsx(appEntryKey(12154).TransitionGroup, { style: StyleSheet.absoluteFill, component: appEntryKey(5304).TransitionGroupOverlayView, children: mapped });
 });

@@ -1,26 +1,26 @@
-// === Module 17976: GuildSettingsRoleSubscriptionTiers ===
+// === Module 18263: GuildSettingsRoleSubscriptionTiers ===
 
-// Module 17976 (GuildSettingsRoleSubscriptionTiers)
+// Module 18263 (GuildSettingsRoleSubscriptionTiers)
 import _mod12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import FastImageDefault from "FastImage" /* 5981 */;
-import PriceUtils from "PriceUtils" /* 6750 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9455 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15060 */;
-import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 15064 */;
-import GuildSettingsRoleSubscriptionContainerDefault from "GuildSettingsRoleSubscriptionContainer" /* 17975 */;
-import GuildRoleSettingsActionCreatorsAll from "GuildRoleSettingsActionCreators" /* 17979 */;
-import GuildRoleSubscriptionsActionCreatorExtrasAll from "GuildRoleSubscriptionsActionCreatorExtras" /* 17980 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import PriceUtils from "PriceUtils" /* 6926 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 7013 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15322 */;
+import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 15326 */;
+import GuildSettingsRoleSubscriptionContainerDefault from "GuildSettingsRoleSubscriptionContainer" /* 18262 */;
+import GuildRoleSettingsActionCreatorsAll from "GuildRoleSettingsActionCreators" /* 18266 */;
+import GuildRoleSubscriptionsActionCreatorExtrasAll from "GuildRoleSubscriptionsActionCreatorExtras" /* 18267 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9283 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4508 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8614 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4700 */;
 
 require = fn;
 function getPriceText(first2, first1) {
@@ -41,13 +41,13 @@ function getPriceText(first2, first1) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-const MAX_SUBSCRIPTION_TIERS = fn(15038).MAX_SUBSCRIPTION_TIERS;
+const MAX_SUBSCRIPTION_TIERS = fn(15300).MAX_SUBSCRIPTION_TIERS;
 const Constants = fn(1085);
 ({ CurrencyCodes: map1, GuildSettingsSections: closure_14, GuildSettingsSubsections: closure_15 } = Constants);
-const SubscriptionIntervalTypes = fn(1379).SubscriptionIntervalTypes;
+const SubscriptionIntervalTypes = fn(1391).SubscriptionIntervalTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { height: "100%" }, tierManagementDescription: { marginBottom: 16, paddingHorizontal: 16 }, tierManagementButton: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm, flexDirection: "row", alignItems: "center", alignSelf: "stretch", justifyContent: "flex-start", height: 72, padding: 16, marginHorizontal: 16, marginBottom: 8 }, tierColumn: { flexDirection: "column", justifyContent: "center", alignItems: "flex-start", flex: 1 }, tierIcon: null, tierPrice: null, draftBadge: null, draftBadgeLabel: null, archiveBadge: null, archiveBadgeLabel: null, unsavedBadge: null, unsavedBadgeLabel: null, detailsRow: null, createTierLabel: null, spinner: null, disabled: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: 20, marginEnd: 12, height: 40, width: 40 };
 obj2.tierIcon = size;
@@ -68,7 +68,7 @@ obj2.spinner = { marginTop: 12 };
 obj2.disabled = { opacity: 0.5 };
 let closure_19 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function DraftBadge() {
   const cResult = c.c(6);
   const tmp4 = closure_19();
   ({ draftBadge, draftBadgeLabel } = tmp4);
@@ -100,7 +100,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[4] = tmp7;
   cResult[5] = tmp11;
   tmp10 = tmp11;
-}) : (() => {
+}) : (function DraftBadge() {
   const tmp = closure_19();
   const obj = { style: tmp.draftBadge, children: null };
   const obj2 = { style: tmp.draftBadgeLabel, variant: "text-xs/semibold", children: null };
@@ -110,7 +110,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   return constants(React5, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function ArchivedBadge() {
   const cResult = c.c(6);
   const tmp4 = closure_19();
   ({ archiveBadge, archiveBadgeLabel } = tmp4);
@@ -142,7 +142,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[4] = tmp7;
   cResult[5] = tmp11;
   tmp10 = tmp11;
-}) : (() => {
+}) : (function ArchivedBadge() {
   const tmp = closure_19();
   const obj = { style: tmp.archiveBadge, children: null };
   const obj2 = { style: tmp.archiveBadgeLabel, variant: "text-xs/semibold", color: "text-overlay-light", children: null };
@@ -152,7 +152,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   return constants(React5, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function UnsavedBadge() {
   const cResult = c.c(6);
   const tmp4 = closure_19();
   ({ unsavedBadge, unsavedBadgeLabel } = tmp4);
@@ -184,7 +184,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[4] = tmp7;
   cResult[5] = tmp11;
   tmp10 = tmp11;
-}) : (() => {
+}) : (function UnsavedBadge() {
   const tmp = closure_19();
   const obj = { style: tmp.unsavedBadge, children: null };
   const obj2 = { style: tmp.unsavedBadgeLabel, variant: "text-xs/semibold", color: "text-overlay-light", children: null };
@@ -194,7 +194,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   return constants(React5, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Row(arg0) {
   const cResult = c.c(9);
   ({ children, onPress, onLongPress, disabled } = arg0);
   const tmp4 = closure_19();
@@ -233,7 +233,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = disabled2;
   cResult[2] = items;
   tmp5 = items;
-}) : ((disabled) => {
+}) : (function Row(disabled) {
   let disabled2 = disabled.disabled;
   ({ children, onPress, onLongPress } = disabled);
   if (disabled2 === undefined) {
@@ -249,7 +249,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return constants(TouchableHitBoxDefault, { style, accessibilityRole: "button", onPress, onLongPress, disabled: disabled2, children });
 });
 ReactCompilerGating = fn(558);
-let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((editStateId) => {
+let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditListingButton(editStateId) {
   const cResult = editStateId(576).c(40);
   editStateId = editStateId.editStateId;
   const guildId = editStateId.guildId;
@@ -297,11 +297,11 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((editStateId) =
     tmp9 = undefined !== stateFromStores;
   }
   const tmpResult = editStateId(573);
-  const first1 = _slicedToArray(groupListingId(15060).useName(editStateId), 1)[0];
-  const obj3 = groupListingId(15060);
-  const first2 = _slicedToArray(groupListingId(15060).usePriceTier(editStateId), 1)[0];
-  const obj4 = groupListingId(15060);
-  const first3 = _slicedToArray(groupListingId(15060).useImage(editStateId, 250), 1)[0];
+  const first1 = _slicedToArray(groupListingId(15322).useName(editStateId), 1)[0];
+  const obj3 = groupListingId(15322);
+  const first2 = _slicedToArray(groupListingId(15322).usePriceTier(editStateId), 1)[0];
+  const obj4 = groupListingId(15322);
+  const first3 = _slicedToArray(groupListingId(15322).useImage(editStateId, 250), 1)[0];
   let first4;
   if (stateFromStores != null) {
     first4 = stateFromStores.subscription_plans[0];
@@ -328,7 +328,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((editStateId) =
                 return;
               }
             }
-            const tmp24 = closure_17(tmp(4892).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null });
+            const tmp24 = closure_17(tmp(5086).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null });
             cResult[13] = first1;
             cResult[14] = tmp24;
             let tmp22 = tmp24;
@@ -420,7 +420,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((editStateId) =
                           }
                         }
                         if (tmp44 === Symbol.for("react.memo_cache_sentinel")) {
-                          const tmp47 = closure_17(tmp(10071).PencilIcon, {});
+                          const tmp47 = closure_17(tmp(9675).PencilIcon, {});
                           class H {
                             constructor() {
                               obj = closure_1(closure_3[12]);
@@ -500,7 +500,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((editStateId) =
             tmp38 = tmp40;
           }
           const obj10 = { style: tmp4.tierPrice, variant: "text-sm/medium", color: "interactive-text-default", children: tmp14 };
-          const tmp37 = closure_17(tmp(4892).Text, obj10);
+          const tmp37 = closure_17(tmp(5086).Text, obj10);
           cResult[21] = tmp14;
           cResult[22] = tmp4.tierPrice;
           cResult[23] = tmp37;
@@ -526,7 +526,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((editStateId) =
           tmp21[0] = tmp4.tierIcon;
           const obj11 = { uri: first3 };
           tmp21[2] = obj11;
-          tmp18 = closure_17(guildId(5981), tmp21);
+          tmp18 = closure_17(guildId(6164), tmp21);
         }
         cResult[10] = first3;
         cResult[11] = tmp4.tierIcon;
@@ -553,8 +553,8 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((editStateId) =
   cResult[4] = first4;
   cResult[5] = tmp15;
   tmp14 = tmp15;
-  const obj5 = groupListingId(15060);
-}) : ((editStateId) => {
+  const obj5 = groupListingId(15322);
+}) : (function EditListingButton(editStateId) {
   editStateId = editStateId.editStateId;
   ({ guildId: importDefault, groupListingId: importAll } = editStateId);
   const tmp = closure_19();
@@ -592,7 +592,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((editStateId) =
   const obj5 = {
     onPress: editStateId.onPress,
     onLongPress() {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17977, dependencyMap.paths), "TierArchiveOrDelete", { editStateId, guildId, groupListingId });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18264, dependencyMap.paths), "TierArchiveOrDelete", { editStateId, guildId, groupListingId });
     },
     children: null
   };
@@ -605,7 +605,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((editStateId) =
   }
   const items1 = [tmp9Result, , ];
   const obj8 = { style: tmp.tierColumn, children: null };
-  const items2 = [closure_17(editStateId(4892).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: _slicedToArray(obj2.useName(editStateId), 1)[0] }), ];
+  const items2 = [closure_17(editStateId(5086).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: _slicedToArray(obj2.useName(editStateId), 1)[0] }), ];
   const obj9 = { style: tmp.detailsRow, children: null };
   if (tmp9Result3) {
     tmp9Result3 = closure_17(closure_21, {});
@@ -622,18 +622,18 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((editStateId) =
   const obj10 = { children: null };
   items3[2] = tmp9Result4;
   const tmp8 = getPriceText(_slicedToArray(obj3.usePriceTier(editStateId), 1)[0], first1);
-  items3[3] = closure_17(editStateId(4892).Text, { style: tmp.tierPrice, variant: "text-sm/medium", color: "interactive-text-default", children: getPriceText(_slicedToArray(obj3.usePriceTier(editStateId), 1)[0], first1) });
+  items3[3] = closure_17(editStateId(5086).Text, { style: tmp.tierPrice, variant: "text-sm/medium", color: "interactive-text-default", children: getPriceText(_slicedToArray(obj3.usePriceTier(editStateId), 1)[0], first1) });
   obj9.children = items3;
   items2[1] = closure_18(closure_7, obj9);
   obj8.children = items2;
   items1[1] = closure_18(closure_7, obj8);
-  items1[2] = closure_17(editStateId(10071).PencilIcon, {});
+  items1[2] = closure_17(editStateId(9675).PencilIcon, {});
   obj5.children = items1;
   obj10.children = closure_18(closure_24, obj5);
   return closure_17(closure_7, obj10);
 });
 ReactCompilerGating = fn(558);
-let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSettingsRoleSubscriptionsTiersInner(guildId) {
   const cResult = guildId(first[19]).c(62);
   guildId = guildId.guildId;
   closure_19();
@@ -691,7 +691,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       if (cResult[6] === first2) {
         const _Symbol4 = Symbol;
         if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-          const fn2 = function q(arg0, arg1) {
+          function handleListingCreated(arg0, arg1) {
             closure_0 = arg0;
             closure_1 = arg1;
             closure_6((arg0) => {
@@ -700,9 +700,9 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
               obj[closure_1] = closure_0;
               return obj;
             });
-          };
-          cResult[10] = fn2;
-          let tmp28 = fn2;
+          }
+          cResult[10] = handleListingCreated;
+          let tmp28 = handleListingCreated;
         } else {
           tmp28 = cResult[10];
         }
@@ -717,7 +717,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
                               obj.title = intl.string(guildId(1126).t.pXbGYc);
                               const intl2 = guildId(1126).intl;
                               obj.subtitle = intl2.string(guildId(1126).t["KzCF/6"]);
-                              return closure_1_17(guildId(6017).NavigatorHeader, obj);
+                              return closure_1_17(guildId(6203).NavigatorHeader, obj);
                             }
               };
               setOptionsResult = closure_1.setOptions(obj);
@@ -736,7 +736,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
                               obj.title = intl.string(guildId(1126).t.pXbGYc);
                               const intl2 = guildId(1126).intl;
                               obj.subtitle = intl2.string(guildId(1126).t["KzCF/6"]);
-                              return closure_1_17(guildId(6017).NavigatorHeader, obj);
+                              return closure_1_17(guildId(6203).NavigatorHeader, obj);
                             }
               };
               setOptionsResult = closure_1.setOptions(obj);
@@ -755,7 +755,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
                               obj.title = intl.string(guildId(1126).t.pXbGYc);
                               const intl2 = guildId(1126).intl;
                               obj.subtitle = intl2.string(guildId(1126).t["KzCF/6"]);
-                              return closure_1_17(guildId(6017).NavigatorHeader, obj);
+                              return closure_1_17(guildId(6203).NavigatorHeader, obj);
                             }
               };
               setOptionsResult = closure_1.setOptions(obj);
@@ -773,7 +773,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
                               obj.title = intl.string(guildId(1126).t.pXbGYc);
                               const intl2 = guildId(1126).intl;
                               obj.subtitle = intl2.string(guildId(1126).t["KzCF/6"]);
-                              return closure_1_17(guildId(6017).NavigatorHeader, obj);
+                              return closure_1_17(guildId(6203).NavigatorHeader, obj);
                             }
               };
               setOptionsResult = closure_1.setOptions(obj);
@@ -791,7 +791,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
                               obj.title = intl.string(guildId(1126).t.pXbGYc);
                               const intl2 = guildId(1126).intl;
                               obj.subtitle = intl2.string(guildId(1126).t["KzCF/6"]);
-                              return closure_1_17(guildId(6017).NavigatorHeader, obj);
+                              return closure_1_17(guildId(6203).NavigatorHeader, obj);
                             }
               };
               setOptionsResult = closure_1.setOptions(obj);
@@ -852,7 +852,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
                       obj.title = intl.string(guildId(1126).t.pXbGYc);
                       const intl2 = guildId(1126).intl;
                       obj.subtitle = intl2.string(guildId(1126).t["KzCF/6"]);
-                      return closure_1_17(guildId(6017).NavigatorHeader, obj);
+                      return closure_1_17(guildId(6203).NavigatorHeader, obj);
                     }
           };
           setOptionsResult = closure_1.setOptions(obj);
@@ -871,7 +871,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
                       obj.title = intl.string(guildId(1126).t.pXbGYc);
                       const intl2 = guildId(1126).intl;
                       obj.subtitle = intl2.string(guildId(1126).t["KzCF/6"]);
-                      return closure_1_17(guildId(6017).NavigatorHeader, obj);
+                      return closure_1_17(guildId(6203).NavigatorHeader, obj);
                     }
           };
           setOptionsResult = closure_1.setOptions(obj);
@@ -889,7 +889,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     let tmpResult = tmp(tmp2[33]);
   }
   const obj6 = guildId(first[32]);
-}) : ((guildId) => {
+}) : (function GuildSettingsRoleSubscriptionsTiersInner(guildId) {
   guildId = guildId.guildId;
   let navigation;
   let first;
@@ -932,7 +932,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
         obj.title = intl.string(guildId(1126).t.pXbGYc);
         const intl2 = guildId(1126).intl;
         obj.subtitle = intl2.string(guildId(1126).t["KzCF/6"]);
-        return closure_1_17(guildId(6017).NavigatorHeader, obj);
+        return closure_1_17(guildId(6203).NavigatorHeader, obj);
       }
     });
   });
@@ -992,7 +992,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
             if (first != null) {
               id = first.id;
             }
-            guildEligibleForTierTemplates(17979).pushTierEditScene(navigation, {
+            guildEligibleForTierTemplates(18266).pushTierEditScene(navigation, {
               groupListingId: id,
               initialEditStateId,
               onBeforeDispatchNewListing(id) {
@@ -1006,7 +1006,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
                 });
               }
             });
-            let obj = guildEligibleForTierTemplates(17979);
+            let obj = guildEligibleForTierTemplates(18266);
             const obj2 = {
               groupListingId: id,
               initialEditStateId,
@@ -1064,7 +1064,7 @@ let obj7 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderR
 size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionTiers.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSettingsRoleSubscriptionsTiers(guildId) {
   const cResult = c.c(5);
   guildId = guildId.guildId;
   if (cResult[0] !== guildId) {
@@ -1087,7 +1087,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   cResult[3] = tmp3;
   cResult[4] = tmp8;
   tmp7 = tmp8;
-}) : ((guildId) => {
+}) : (function GuildSettingsRoleSubscriptionsTiers(guildId) {
   guildId = guildId.guildId;
   const obj = { guildId, children: constants(closure_26, { guildId }) };
   return constants(GuildSettingsRoleSubscriptionContainerDefault, obj);

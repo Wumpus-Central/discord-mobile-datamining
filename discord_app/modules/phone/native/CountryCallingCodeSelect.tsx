@@ -1,17 +1,17 @@
-// === Module 6552: CountryCallingCodeSelect ===
+// === Module 6728: CountryCallingCodeSelect ===
 
-// Module 6552 (CountryCallingCodeSelect)
+// Module 6728 (CountryCallingCodeSelect)
 import nativeDefault from "native" /* 587 */;
-import fuzzysearchDefault from "fuzzysearch" /* 5709 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6099 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
-const getI18NCountryName = fn(5111).getI18NCountryName;
+const getI18NCountryName = fn(5908).getI18NCountryName;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: null, paddingTop: null, paddingBottom: null, flex: 1 };
   const space = nativeDefault.space;
@@ -26,7 +26,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/phone/native/CountryCallingCodeSelect.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCountrySelected) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function CountryCallingCodeSelect(onCountrySelected) {
   const cResult = onCountrySelected(first[8]).c(28);
   onCountrySelected = onCountrySelected.onCountrySelected;
   const onClose = onCountrySelected.onClose;
@@ -52,13 +52,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCountrySelecte
   }
   const tmp12 = onClose(first[11])();
   if (cResult[1] !== first) {
-    const fn = function x(str) {
+    function filterSpacesAndPluses(str) {
       const replaced = str.replace(/\+|\s/g, "");
       return replaced.startsWith(first.replace(/\+|\s/g, ""));
-    };
+    }
     cResult[1] = first;
-    cResult[2] = fn;
-    let tmp13 = fn;
+    cResult[2] = filterSpacesAndPluses;
+    let tmp13 = filterSpacesAndPluses;
   } else {
     tmp13 = cResult[2];
   }
@@ -327,7 +327,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCountrySelecte
   cResult[5] = items1;
   arr2 = items1;
   const tmp7 = num8(noop.useState(""), 2);
-}) : ((onCountrySelected) => {
+}) : (function CountryCallingCodeSelect(onCountrySelected) {
   onCountrySelected = onCountrySelected.onCountrySelected;
   const onClose = onCountrySelected.onClose;
   let first;

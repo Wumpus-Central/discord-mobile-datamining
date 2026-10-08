@@ -1,8 +1,8 @@
-// === Module 4792: GameServerExperiment ===
+// === Module 4986: GameServerExperiment ===
 
-// Module 4792 (GameServerExperiment)
+// Module 4986 (GameServerExperiment)
 import c from "c" /* 576 */;
-import createExperiment from "module_4780" /* 4780 */;
+import createExperiment from "module_4974" /* 4974 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -16,7 +16,7 @@ export const GameServerExperiment = experiment;
 export const getGameServerEnabled = function getGameServerEnabled(guildId, maybeGetGameServerHostingGuildEligiblePopoutDCF) {
   return experiment.getCurrentConfig({ guildId, location: maybeGetGameServerHostingGuildEligiblePopoutDCF }, { autoTrackExposure: false }).enabled;
 };
-export const useGameServerEnabled = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId, location) => {
+export const useGameServerEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useGameServerEnabled(guildId, location) {
   const cResult = c.c(4);
   if (cResult[0] === guildId) {
     if (cResult[1] === location) {
@@ -37,4 +37,6 @@ export const useGameServerEnabled = ReactCompilerGating.isReactCompilerEnabled()
   cResult[1] = location;
   cResult[2] = obj3;
   tmp2 = obj3;
-}) : ((guildId, location) => experiment.useExperiment({ guildId, location }, { autoTrackExposure: false }).enabled);
+}) : (function useGameServerEnabled(guildId, location) {
+  return experiment.useExperiment({ guildId, location }, { autoTrackExposure: false }).enabled;
+});

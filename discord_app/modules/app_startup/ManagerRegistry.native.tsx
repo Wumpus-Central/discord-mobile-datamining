@@ -1,7 +1,7 @@
-// === Module 17469: ManagerRegistry ===
+// === Module 17751: ManagerRegistry ===
 
-// Module 17469 (ManagerRegistry)
-import ManagerRegistryShared from "ManagerRegistryShared" /* 18133 */;
+// Module 17751 (ManagerRegistry)
+import ManagerRegistryShared from "ManagerRegistryShared" /* 18420 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -422,10 +422,10 @@ const obj = {
       return require("RedesignNewUserManager").default;
     }
   },
-  NotificationPermissionManager: {
+  NotificationsManager: {
     actions: ["MESSAGE_CREATE", "MESSAGE_REACTION_ADD", "INVITE_ACCEPT_SUCCESS", "RELATIONSHIP_ADD", "POST_CONNECTION_OPEN", "APP_STATE_UPDATE"],
     inlineRequire() {
-      return require("NotificationPermissionManager").default;
+      return require("NotificationsManager").default;
     },
     neverLoadBeforeConnectionOpen: true
   },
@@ -494,6 +494,12 @@ const obj = {
     actions: ["POST_CONNECTION_OPEN"],
     inlineRequire() {
       return require("RTCLatencyTestManager").default;
+    }
+  },
+  RTCReconnectTimeoutManager: {
+    actions: ["VOICE_STATE_UPDATES"],
+    inlineRequire() {
+      return require("RTCReconnectTimeoutManager").default;
     }
   },
   SavedMessagesManager: {

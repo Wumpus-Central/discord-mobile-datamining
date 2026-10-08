@@ -1,17 +1,17 @@
-// === Module 16415: ForYouReadSectionHeader ===
+// === Module 16675: ForYouReadSectionHeader ===
 
-// Module 16415 (ForYouReadSectionHeader)
+// Module 16675 (ForYouReadSectionHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
+import Text_Text from "Text/Text" /* 5086 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c2, StyleSheet } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { borderTopWidth: StyleSheet.hairlineWidth, borderTopColor: nativeDefault.colors.BORDER_SUBTLE, marginVertical: 8, paddingHorizontal: 24 }, textHeader: null };
 const obj3 = { borderTopWidth: StyleSheet.hairlineWidth, borderTopColor: nativeDefault.colors.BORDER_SUBTLE, marginVertical: 8, paddingHorizontal: 24 };
 obj2.textHeader = { color: nativeDefault.colors.TEXT_SUBTLE, marginTop: 20 };
@@ -21,7 +21,7 @@ const obj4 = { color: nativeDefault.colors.TEXT_SUBTLE, marginTop: 20 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notification_center/native/ForYouReadSectionHeader.tsx");
 
-export const ForYouReadSectionHeader = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const ForYouReadSectionHeader = ReactCompilerGating.isReactCompilerEnabled() ? (function ForYouReadSectionHeader() {
   const cResult = c.c(6);
   const tmp4 = closure_4();
   ({ container, textHeader } = tmp4);
@@ -53,7 +53,7 @@ export const ForYouReadSectionHeader = ReactCompilerGating.isReactCompilerEnable
   cResult[4] = tmp7;
   cResult[5] = tmp11;
   tmp10 = tmp11;
-}) : (() => {
+}) : (function ForYouReadSectionHeader() {
   const tmp = closure_4();
   const obj = { style: tmp.container, children: null };
   const obj2 = { style: tmp.textHeader, variant: "text-sm/semibold", children: null };

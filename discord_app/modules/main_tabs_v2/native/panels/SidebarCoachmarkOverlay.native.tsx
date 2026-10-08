@@ -1,9 +1,9 @@
-// === Module 16187: SidebarCoachmarkOverlay ===
+// === Module 16447: SidebarCoachmarkOverlay ===
 
-// Module 16187 (SidebarCoachmarkOverlay)
+// Module 16447 (SidebarCoachmarkOverlay)
 import c from "c" /* 576 */;
-import useInitialValueDefault from "useInitialValue" /* 5991 */;
-import LayerContext from "LayerContext" /* 6659 */;
+import useInitialValueDefault from "useInitialValue" /* 6174 */;
+import LayerContext from "LayerContext" /* 6836 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ const jsxProd = fn(21);
 const context = noop.createContext(null);
 fn(558);
 const ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((manager) => {
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function SidebarCoachmarkOverlayLayer(manager) {
   const cResult = items(576).c(14);
   items = manager.manager;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -54,7 +54,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((manager) => {
     if (cResult[8] !== items.items) {
       const _Symbol = Symbol;
       if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn3 = function p(children) {
+        const fn3 = function _(children) {
           return closure_1_7(React.Fragment, { children: children.component }, children.key);
         };
         cResult[10] = fn3;
@@ -82,7 +82,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((manager) => {
       tmp12 = tmp17;
     }
   }
-  const fn = function f() {
+  const fn = function y() {
     closure_0 = items;
     items.invalidate = () => closure_1_1({});
     return () => {
@@ -94,7 +94,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((manager) => {
   cResult[3] = fn;
   tmp4 = fn;
   const obj = items(576);
-}) : ((manager) => {
+}) : (function SidebarCoachmarkOverlayLayer(manager) {
   manager = manager.manager;
   closure_1 = _slicedToArray(noop.useState({}), 2)[1];
   const items = [manager];
@@ -128,7 +128,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/SidebarCoachmarkOverlay.native.tsx");
 
 export const SidebarCoachmarkOverlayContext = context;
-export const SidebarCoachmarkOverlay = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const SidebarCoachmarkOverlay = ReactCompilerGating.isReactCompilerEnabled() ? (function SidebarCoachmarkOverlay(arg0) {
   const cResult = c.c(8);
   ({ children, enabled } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -177,7 +177,7 @@ export const SidebarCoachmarkOverlay = ReactCompilerGating.isReactCompilerEnable
   cResult[2] = tmp4;
   cResult[3] = tmp7;
   tmp6 = tmp7;
-}) : ((enabled) => {
+}) : (function SidebarCoachmarkOverlay(enabled) {
   enabled = enabled.enabled;
   const tmp = useInitialValueDefault(() => {
     const layerContextManager = new LayerContext.LayerContextManager();

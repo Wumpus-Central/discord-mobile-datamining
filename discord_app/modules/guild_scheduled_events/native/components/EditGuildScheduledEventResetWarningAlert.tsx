@@ -1,9 +1,9 @@
-// === Module 9312: EditGuildScheduledEventResetWarningAlert ===
+// === Module 8627: EditGuildScheduledEventResetWarningAlert ===
 
-// Module 9312 (EditGuildScheduledEventResetWarningAlert)
+// Module 8627 (EditGuildScheduledEventResetWarningAlert)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import common_AlertDefault from "common/Alert" /* 5790 */;
+import common_AlertDefault from "common/Alert" /* 5394 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildScheduledEventResetWarningAlert.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditGuildScheduledEventResetWarningAlert(arg0) {
   const cResult = c.c(7);
   ({ onClose, onConfirm } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = onConfirm;
   cResult[6] = tmp14;
   tmp12 = tmp14;
-}) : ((arg0) => {
+}) : (function EditGuildScheduledEventResetWarningAlert(arg0) {
   ({ onClose, onConfirm } = arg0);
   const obj = { onClose, onConfirm, title: null, body: null, confirmText: null, confirmColor: null, cancelText: null };
   const intl = util.intl;

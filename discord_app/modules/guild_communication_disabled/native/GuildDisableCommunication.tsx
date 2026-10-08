@@ -1,16 +1,16 @@
-// === Module 11466: GuildDisableCommunication ===
+// === Module 11450: GuildDisableCommunication ===
 
-// Module 11466 (GuildDisableCommunication)
+// Module 11450 (GuildDisableCommunication)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import useMountEffectDefault from "useMountEffect" /* 5597 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import TableRadioGroup from "TableRadioGroup" /* 6079 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6478 */;
-import TextArea from "TextArea" /* 6587 */;
-import useSafeAreaAvoidingInputsDefault from "useSafeAreaAvoidingInputs" /* 10849 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import useMountEffectDefault from "useMountEffect" /* 5392 */;
+import TableRadioGroup from "TableRadioGroup" /* 6265 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6656 */;
+import TextArea from "TextArea" /* 6763 */;
+import useSafeAreaAvoidingInputsDefault from "useSafeAreaAvoidingInputs" /* 10500 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -20,7 +20,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const GuildDisableCommunicationConstants = fn(2114);
+const GuildDisableCommunicationConstants = fn(2126);
 ({ DisableCommunicationDuration, GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK: closure_8, SET_COMMUNICATION_DISABLED_MODAL_NAME: closure_9 } = GuildDisableCommunicationConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
@@ -69,7 +69,7 @@ let items = [
     }
   }
 ];
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, reasonTextArea: null, buttonContainer: null };
 let obj = {
   value: DisableCommunicationDuration.DURATION_60_SEC,
@@ -88,7 +88,7 @@ let obj6 = { marginBottom: nativeDefault.space.PX_16 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_communication_disabled/native/GuildDisableCommunication.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function GuildDisableCommunication(user) {
   const cResult = require("c").c(37);
   user = user.user;
   _require = user;
@@ -452,7 +452,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((user) 
   cResult[6] = U;
   tmp14 = U;
   let obj = require("c");
-}) : ((arg0) => {
+}) : (function GuildDisableCommunication(arg0) {
   ({ user: require, guildId: importDefault, onClose: dependencyMap } = arg0);
   c3 = undefined;
   _slicedToArray = undefined;
@@ -482,7 +482,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((user) 
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            const obj4 = tmp4(11467);
+            const obj4 = tmp4(11451);
             dependencyMap = 1;
             c3 = 1;
             const obj5 = { value: obj4.setCommunicationDisabledDuration(guild_id, id.id, items[asyncGeneratorStep].value, ref.current), done: false };
@@ -497,8 +497,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((user) 
           return obj6;
         } else {
           const intl = user(1126).intl;
-          const obj8 = tmp4(4574);
-          const name = tmp4(5048).getName(closure_129_1, null, closure_129_0);
+          const obj8 = tmp4(4766);
+          const name = tmp4(5405).getName(closure_129_1, null, closure_129_0);
           user = name;
           if (name == null) {
             user = "";
@@ -506,7 +506,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((user) 
           const obj = { key: "GUILD_COMMUNICATION_DISABLED_SUCCESS", content: null, icon: null };
           const obj7 = { user };
           obj.content = intl.formatToPlainString(user(1126).t.O9C3Nt, obj7);
-          obj.icon = tmp4(4811);
+          obj.icon = tmp4(5005);
           obj8.open(obj);
           closure_129_2();
           c3 = 3;

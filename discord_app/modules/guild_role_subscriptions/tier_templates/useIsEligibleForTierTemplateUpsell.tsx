@@ -1,7 +1,7 @@
-// === Module 16221: useIsEligibleForTierTemplateUpsell ===
+// === Module 16481: useIsEligibleForTierTemplateUpsell ===
 
-// Module 16221 (useIsEligibleForTierTemplateUpsell)
-import GuildStore from "GuildStore" /* 2074 */;
+// Module 16481 (useIsEligibleForTierTemplateUpsell)
+import GuildStore from "GuildStore" /* 2086 */;
 
 const require = globalThis.__r;
 
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_role_subscriptions/tier_templates/useIsEligibleForTierTemplateUpsell.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsEligibleForTierTemplateUpsell(arg0) {
   _require = arg0;
   const cResult = require("c").c(7);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -65,11 +65,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp10 = cResult[4];
   }
   if (cResult[5] !== stateFromStores) {
-    const result = tmp(6773).canManageGuildRoleSubscriptions(stateFromStores);
+    const result = tmp(6949).canManageGuildRoleSubscriptions(stateFromStores);
     cResult[5] = stateFromStores;
     cResult[6] = result;
     let tmp17 = result;
-    const tmpResult4 = tmp(6773);
+    const tmpResult4 = tmp(6949);
   } else {
     tmp17 = cResult[6];
   }
@@ -80,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp10 = guildEligibleForTierTemplates;
   }
   return tmp10;
-}) : ((arg0) => {
+}) : (function useIsEligibleForTierTemplateUpsell(arg0) {
   _require = arg0;
   const items = [GuildStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0));

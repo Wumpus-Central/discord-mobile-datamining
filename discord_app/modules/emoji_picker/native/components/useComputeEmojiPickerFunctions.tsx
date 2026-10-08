@@ -1,12 +1,12 @@
-// === Module 9911: useComputeEmojiPickerFunctions ===
+// === Module 9392: useComputeEmojiPickerFunctions ===
 
-// Module 9911 (useComputeEmojiPickerFunctions)
+// Module 9392 (useComputeEmojiPickerFunctions)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
-import FunctionUtils from "FunctionUtils" /* 2026 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4529 */;
-import EmojiPickerUtils from "EmojiPickerUtils" /* 9883 */;
-import age_gate_AgeGateUtils from "age_gate/AgeGateUtils" /* 9912 */;
+import FunctionUtils from "FunctionUtils" /* 2038 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4721 */;
+import EmojiPickerUtils from "EmojiPickerUtils" /* 9363 */;
+import age_gate_AgeGateUtils from "age_gate/AgeGateUtils" /* 9393 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -192,14 +192,14 @@ function pushNativeCategory(emojiSections) {
   emojiSections = emojiSections.emojiSections;
   emojiSections.push(emojiSections.renderingData);
 }
-const EmojiPickerConstants = fn(5649);
+const EmojiPickerConstants = fn(5996);
 ({ EmojiCategories: hasOwnProperty, EmojiCategoryTypes: metroRequire } = EmojiPickerConstants);
-const constants3 = fn(9882).EmojiPickerRenderingDataType;
+const constants3 = fn(9362).EmojiPickerRenderingDataType;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/emoji_picker/native/components/useComputeEmojiPickerFunctions.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useComputeEmojiPickerFunctions() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function s() {
@@ -213,8 +213,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     first = cResult[0];
   }
   return _slicedToArray(noop.useState(first), 1)[0];
-}) : (() => _slicedToArray(noop.useState(() => {
-  const obj = { computeCategories: FunctionUtils.cachedFunction(_computeCategories), computeSearchResults: null };
-  obj.computeSearchResults = FunctionUtils.cachedFunction(_computeSearchResults);
-  return obj;
-}), 1)[0]);
+}) : (function useComputeEmojiPickerFunctions() {
+  return _slicedToArray(noop.useState(() => {
+    const obj = { computeCategories: FunctionUtils.cachedFunction(_computeCategories), computeSearchResults: null };
+    obj.computeSearchResults = FunctionUtils.cachedFunction(_computeSearchResults);
+    return obj;
+  }), 1)[0];
+});

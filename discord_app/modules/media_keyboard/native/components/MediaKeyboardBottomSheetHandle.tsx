@@ -1,10 +1,10 @@
-// === Module 10385: MediaKeyboardBottomSheetHandle ===
+// === Module 9982: MediaKeyboardBottomSheetHandle ===
 
-// Module 10385 (MediaKeyboardBottomSheetHandle)
+// Module 9982 (MediaKeyboardBottomSheetHandle)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import useStateFromSharedValue from "useStateFromSharedValue" /* 7952 */;
-import native from "native" /* 8602 */;
+import useStateFromSharedValue from "useStateFromSharedValue" /* 8370 */;
+import native from "native" /* 8517 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,11 +13,11 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardBottomSheetHandle.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function MediaKeyboardBottomSheetHandle(onPress) {
   const cResult = c.c(7);
   onPress = onPress.onPress;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function l(arg0) {
+    const fn = function o(arg0) {
       return arg0 > 0;
     };
     cResult[0] = fn;
@@ -56,7 +56,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((onPres
     tmp11 = tmp13;
   }
   const tmpResult = useStateFromSharedValue;
-}) : ((onPress) => {
+}) : (function MediaKeyboardBottomSheetHandle(onPress) {
   onPress = onPress.onPress;
   const derivedStateFromSharedValue = useStateFromSharedValue.useDerivedStateFromSharedValue(onPress.animatedIndex, (arg0) => arg0 > 0);
   const intl = util.intl;

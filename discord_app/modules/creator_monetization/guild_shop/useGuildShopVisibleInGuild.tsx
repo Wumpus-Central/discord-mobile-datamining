@@ -1,19 +1,19 @@
-// === Module 6775: useGuildShopVisibleInGuild ===
+// === Module 6951: useGuildShopVisibleInGuild ===
 
-// Module 6775 (useGuildShopVisibleInGuild)
+// Module 6951 (useGuildShopVisibleInGuild)
 import c from "c" /* 576 */;
 import Constants from "Constants" /* 1085 */;
-import useRoleSubscriptionsVisibleInGuild from "useRoleSubscriptionsVisibleInGuild" /* 6763 */;
-import CreatorMonetizationRestrictionsHooks from "CreatorMonetizationRestrictionsHooks" /* 6766 */;
-import GuildProductsEligibility from "GuildProductsEligibility" /* 6771 */;
-import useGuildShopPreviewVisible from "useGuildShopPreviewVisible" /* 6776 */;
+import useRoleSubscriptionsVisibleInGuild from "useRoleSubscriptionsVisibleInGuild" /* 6939 */;
+import CreatorMonetizationRestrictionsHooks from "CreatorMonetizationRestrictionsHooks" /* 6942 */;
+import GuildProductsEligibility from "GuildProductsEligibility" /* 6947 */;
+import useGuildShopPreviewVisible from "useGuildShopPreviewVisible" /* 6952 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const GuildFeatures = Constants.GuildFeatures;
 let result = size.fileFinishedImporting("modules/creator_monetization/guild_shop/useGuildShopVisibleInGuild.tsx");
 
-export const useGuildShopVisibleInGuild = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
+export const useGuildShopVisibleInGuild = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildShopVisibleInGuild(id) {
   c.c(5);
   id = undefined;
   if (id != null) {
@@ -34,7 +34,7 @@ export const useGuildShopVisibleInGuild = ReactCompilerGating.isReactCompilerEna
   }
   const shouldHideGuildPurchaseEntryPoints = CreatorMonetizationRestrictionsHooks.useShouldHideGuildPurchaseEntryPoints(id2).shouldHideGuildPurchaseEntryPoints;
   return false;
-}) : ((id) => {
+}) : (function useGuildShopVisibleInGuild(id) {
   id = undefined;
   if (id != null) {
     id = id.id;

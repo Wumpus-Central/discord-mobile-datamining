@@ -1,8 +1,8 @@
-// === Module 8604: TwinButtons ===
+// === Module 8519: TwinButtons ===
 
-// Module 8604 (TwinButtons)
+// Module 8519 (TwinButtons)
 import nativeDefault from "native" /* 587 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -10,7 +10,7 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles((arg0) => {
   let str = "row";
   if (arg0) {
@@ -25,7 +25,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/experimental/Button/native/TwinButtons.native.tsx");
 
-export const TwinButtons = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
+export const TwinButtons = ReactCompilerGating.isReactCompilerEnabled() ? (function TwinButtons(children) {
   const cResult = require("c").c(8);
   let button = children.children;
   let obj = require("c");
@@ -72,7 +72,7 @@ export const TwinButtons = ReactCompilerGating.isReactCompilerEnabled() ? ((chil
   cResult[1] = button;
   cResult[2] = mapped;
   const obj2 = require("useFontScale");
-}) : ((children) => {
+}) : (function TwinButtons(children) {
   _require = undefined;
   let tmp = closure_6(require("useFontScale").useFontScale() > 1.2);
   _require = tmp;

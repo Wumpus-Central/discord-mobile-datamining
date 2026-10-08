@@ -1,13 +1,13 @@
-// === Module 12902: UserProfileGameFriendActionSheet ===
+// === Module 13051: UserProfileGameFriendActionSheet ===
 
-// Module 12902 (UserProfileGameFriendActionSheet)
+// Module 13051 (UserProfileGameFriendActionSheet)
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12301 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12399 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -15,13 +15,13 @@ get_ActivityIndicator = fn(17);
 const RelationshipTypes = fn(1085).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { applicationNameWrapper: { flexDirection: "row", justifyContent: "flex-start", alignItems: "center", gap: 12 }, gameIcon: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.sm };
 obj2.gameIcon = size;
 let closure_12 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((application) => {
+let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function GameFriendApplicationRow(application) {
   const cResult = application(userDisplayName[10]).c(24);
   application = application.application;
   const userId = application.userId;
@@ -127,7 +127,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((application) =
   cResult[4] = fn;
   tmp5 = fn;
   const obj = application(userDisplayName[10]);
-}) : ((application) => {
+}) : (function GameFriendApplicationRow(application) {
   application = application.application;
   const userId = application.userId;
   const userDisplayName = application.userDisplayName;
@@ -271,7 +271,7 @@ export default function UserProfileGameFriendActionSheet(user) {
     let tmp = null != application;
     if (tmp) {
       const obj = { application, userDisplayName, userId: user.id };
-      tmp = v65535(closure_13, obj, application.id);
+      tmp = collapsed(closure_13, obj, application.id);
     }
     return tmp;
   });

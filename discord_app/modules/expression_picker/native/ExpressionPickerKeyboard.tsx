@@ -1,15 +1,15 @@
-// === Module 16651: ExpressionPickerKeyboard ===
+// === Module 16913: ExpressionPickerKeyboard ===
 
-// Module 16651 (ExpressionPickerKeyboard)
-import KeyboardTypes from "KeyboardTypes" /* 1616 */;
-import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1881 */;
-import native from "native" /* 4595 */;
-import getEmojiTextDefault from "getEmojiText" /* 12085 */;
+// Module 16913 (ExpressionPickerKeyboard)
+import KeyboardTypes from "KeyboardTypes" /* 1628 */;
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1893 */;
+import native from "native" /* 4787 */;
+import getEmojiTextDefault from "getEmojiText" /* 12160 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const KEYBOARD_ANIMATION_CONFIG = fn(11664).KEYBOARD_ANIMATION_CONFIG;
+const KEYBOARD_ANIMATION_CONFIG = fn(11729).KEYBOARD_ANIMATION_CONFIG;
 const jsx = fn(21).jsx;
 let __initData = { code: "function ExpressionPickerKeyboardTsx1(){const{bottomSheetIndex}=this.__closure;return Math.max(bottomSheetIndex.get(),0)>0;}" };
 let closure_8 = { code: "function ExpressionPickerKeyboardTsx2(){const{bottomSheetExpandingOrExpanded,maximum,minimum}=this.__closure;return{height:bottomSheetExpandingOrExpanded.get()?maximum:minimum};}" };
@@ -19,7 +19,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/expression_picker/native/ExpressionPickerKeyboard.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ExpressionPickerKeyboard(onClose) {
   const cResult = chatInputRef(transitionState[5]).c(37);
   ({ channel, chatInputRef } = onClose);
   onClose = onClose.onClose;
@@ -189,12 +189,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((onClos
   cResult[9] = isScreenReaderEnabled;
   cResult[10] = V;
   const tmpResult4 = chatInputRef(transitionState[6]);
-}) : ((channel) => {
+}) : (function ExpressionPickerKeyboard(channel) {
   const chatInputRef = channel.chatInputRef;
   const onClose = channel.onClose;
   const transitionState = channel.transitionState;
   let ref;
-  let derivedValue;
   const sharedValue = chatInputRef(transitionState[6]).useSharedValue(-1);
   let obj = chatInputRef(transitionState[6]);
   const sharedValue1 = chatInputRef(transitionState[6]).useSharedValue(0);
@@ -244,24 +243,25 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((onClos
   const minimum = tmp12.minimum;
   const maximum = tmp12.maximum;
   const obj4 = chatInputRef(transitionState[11]);
+  const fn = function b() {
+    return Math.max(sharedValue.get(), 0) > 0;
+  };
+  fn.__closure = { bottomSheetIndex: sharedValue };
+  fn.__workletHash = 17590128332378;
+  fn.__initData = maximum;
+  const derivedValue = chatInputRef(transitionState[6]).useDerivedValue(fn);
+  const obj5 = chatInputRef(transitionState[6]);
   class S {
     constructor() {
-      return Math.max(closure_3.get(), 0) > 0;
+      obj = { height: closure_10.get() ? maximum : minimum };
+      return obj;
     }
   }
-  S.__closure = { bottomSheetIndex: sharedValue };
-  S.__workletHash = 17590128332378;
-  S.__initData = maximum;
-  derivedValue = chatInputRef(transitionState[6]).useDerivedValue(S);
-  const obj5 = chatInputRef(transitionState[6]);
-  const fn = function b() {
-    return { height: derivedValue.get() ? maximum : minimum };
-  };
-  fn.__closure = { bottomSheetExpandingOrExpanded: derivedValue, maximum, minimum };
-  fn.__workletHash = 7280607865186;
-  fn.__initData = derivedValue;
+  S.__closure = { bottomSheetExpandingOrExpanded: derivedValue, maximum, minimum };
+  S.__workletHash = 7280607865186;
+  S.__initData = derivedValue;
   const items4 = [isScreenReaderEnabled, chatInputRef];
-  const animatedStyle = chatInputRef(transitionState[6]).useAnimatedStyle(fn);
+  const animatedStyle = chatInputRef(transitionState[6]).useAnimatedStyle(S);
   const items5 = [first, onClose, transitionState];
   const callback4 = ref.useCallback(() => {
     closure_7(true);

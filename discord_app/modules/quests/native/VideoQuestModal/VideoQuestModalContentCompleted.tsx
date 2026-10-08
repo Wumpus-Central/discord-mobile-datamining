@@ -1,13 +1,13 @@
-// === Module 14976: VideoQuestModalContentCompleted ===
+// === Module 15238: VideoQuestModalContentCompleted ===
 
-// Module 14976 (VideoQuestModalContentCompleted)
+// Module 15238 (VideoQuestModalContentCompleted)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import spring from "spring" /* 5604 */;
-import QuestTypes from "QuestTypes" /* 5633 */;
-import showShareActionSheet from "showShareActionSheet" /* 8048 */;
-import AssetUtils from "AssetUtils" /* 10013 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 10023 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import spring from "spring" /* 5374 */;
+import QuestTypes from "QuestTypes" /* 5980 */;
+import showShareActionSheet from "showShareActionSheet" /* 8457 */;
+import AssetUtils from "AssetUtils" /* 9544 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 9554 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,13 +20,13 @@ const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let c10 = 125;
 const ANIMATED_CONTENT_SPRING_CONFIG = { mass: 1.9, damping: 18, stiffness: 80, overshootClamping: false };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { wrapper: { flexGrow: 1, flexShrink: 1 }, headerContentCopy: { flexGrow: 1, flexShrink: 1 }, closeButton: { opacity: 0.5 }, scroll: { flexGrow: 1, flexShrink: 1 }, scrollContent: { flexGrow: 1 }, content: { padding: nativeDefault.space.PX_16 }, contentRewardsAnimatedWrapper: { flexGrow: 1, flexShrink: 0 }, contentRewardsWrapper: null, contentRewards: null, contentRewardsCopy: null, contentEndCardHeader: null, contentEndCardHeaderCopy: null, contentEndCard: null, image: null };
 let obj3 = { padding: nativeDefault.space.PX_16 };
-obj.contentRewardsWrapper = { flexGrow: 1, flexShrink: 0, paddingTop: fn(14950).COMPLETION_GLOW_CLEARANCE };
+obj.contentRewardsWrapper = { flexGrow: 1, flexShrink: 0, paddingTop: fn(15212).COMPLETION_GLOW_CLEARANCE };
 obj.contentRewards = { alignItems: "center" };
 obj.contentRewardsCopy = { textAlign: "center" };
-let obj4 = { flexGrow: 1, flexShrink: 0, paddingTop: fn(14950).COMPLETION_GLOW_CLEARANCE };
+let obj4 = { flexGrow: 1, flexShrink: 0, paddingTop: fn(15212).COMPLETION_GLOW_CLEARANCE };
 obj.contentEndCardHeader = { marginBottom: nativeDefault.space.PX_16 };
 obj.contentEndCardHeaderCopy = { flexGrow: 1, flexShrink: 1 };
 let obj5 = { marginBottom: nativeDefault.space.PX_16 };
@@ -41,7 +41,7 @@ let obj7 = { height: 210, marginBottom: nativeDefault.space.PX_24, borderRadius:
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestModalContentCompleted.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function VideoQuestModalContentCompleted(arg0) {
   const cResult = quest(sharedValue[8]).c(110);
   ({ onClose, onRestartVideo, sourceQuestContent } = arg0);
   const tmp4 = closure_12();
@@ -331,7 +331,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   cResult[5] = obj9;
   tmp9 = obj9;
   let obj2 = quest(sharedValue[9]);
-}) : ((onRestartVideo) => {
+}) : (function VideoQuestModalContentCompleted(onRestartVideo) {
   ({ onClose, sourceQuestContent } = onRestartVideo);
   const tmp = closure_12();
   const tmp3 = sharedValue;

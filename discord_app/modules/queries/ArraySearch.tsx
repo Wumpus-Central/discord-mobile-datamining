@@ -1,10 +1,10 @@
-// === Module 11698: ArraySearch ===
+// === Module 11763: ArraySearch ===
 
-// Module 11698 (ArraySearch)
+// Module 11763 (ArraySearch)
 import size from "module_2" /* 2 */;
 
 function sortGroup(arr, arg1) {
-  const dependencyMap = arg1;
+  dependencyMap = arg1;
   return arr.sort((arg0, arg1) => {
     const iter = dependencyMap[Symbol.iterator]();
     while (iter !== undefined) {

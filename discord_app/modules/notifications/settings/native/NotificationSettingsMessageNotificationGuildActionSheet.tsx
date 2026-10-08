@@ -1,24 +1,24 @@
-// === Module 12522: NotificationSettingsMessageNotificationGuildActionSheet ===
+// === Module 12618: NotificationSettingsMessageNotificationGuildActionSheet ===
 
-// Module 12522 (NotificationSettingsMessageNotificationGuildActionSheet)
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 6616 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 6621 */;
-import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 9865 */;
+// Module 12618 (NotificationSettingsMessageNotificationGuildActionSheet)
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 6793 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 6798 */;
+import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10425 */;
 import noop from "module_19" /* 19 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5077 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5971 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const UserNotificationSettings = fn(1085).UserNotificationSettings;
-const UnreadSetting = fn(5078).UnreadSetting;
+const UnreadSetting = fn(5972).UnreadSetting;
 let closure_6 = fn(1095).GuildNotificationSettingsFlags;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMessageNotificationGuildActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function NotificationSettingsMessageNotificationGuildActionSheet(guildId) {
   _require = guildId;
   const cResult = require("c").c(10);
   let obj = require("c");
@@ -42,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
         }
       }
       let obj3 = { context: "guild", value: notification, allMessagesSubLabel: tmp5, onChange: tmp8 };
-      const tmp12 = jsx(unread(12523), { context: "guild", value: notification, allMessagesSubLabel: tmp5, onChange: tmp8 });
+      const tmp12 = jsx(unread(12619), { context: "guild", value: notification, allMessagesSubLabel: tmp5, onChange: tmp8 });
       cResult[6] = notification;
       cResult[7] = tmp5;
       cResult[8] = tmp8;
@@ -78,7 +78,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   cResult[2] = stringResult;
   tmp5 = stringResult;
   let obj2 = require("notificationSettingsGuildFlagUtils");
-}) : ((guildId) => {
+}) : (function NotificationSettingsMessageNotificationGuildActionSheet(guildId) {
   _require = guildId;
   const guildPresetSettings = require("notificationSettingsGuildFlagUtils").useGuildPresetSettings(guildId.guildId);
   const unread = guildPresetSettings.unread;
@@ -105,5 +105,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     const NotificationLabel = NotificationSettingsUtils.NotificationLabel;
     const result = NotificationSettingsModalActionCreatorsDefault.updateGuildNotificationSettings(guildId.guildId, obj, NotificationLabel.notifications(message_notifications));
   };
-  return jsx(unread(12523), { context: "guild", value: notification, allMessagesSubLabel: null, onChange: null });
+  return jsx(unread(12619), { context: "guild", value: notification, allMessagesSubLabel: null, onChange: null });
 });

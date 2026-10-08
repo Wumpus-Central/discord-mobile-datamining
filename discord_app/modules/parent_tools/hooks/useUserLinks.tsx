@@ -1,19 +1,19 @@
-// === Module 8328: useUserLinks ===
+// === Module 7711: useUserLinks ===
 
-// Module 8328 (useUserLinks)
+// Module 7711 (useUserLinks)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7061 */;
+import UserStore from "UserStore" /* 1389 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7247 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const FamilyCenterConstants = fn(7062);
+const FamilyCenterConstants = fn(7248);
 ({ ACCEPTED_LINK_REQUEST_TIMESTAMP_FORMATTER: metroRequire, FAMILY_CENTER_REQUEST_QR_CODE_URL: closure_7, MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS: closure_8, MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS: closure_9, PENDING_LINK_REQUEST_TIMESTAMP_FORMATTER: c10, UserLinkStatus: closure_11, UserLinkType: closure_12 } = FamilyCenterConstants);
 let ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useUserIdsForLinkStatus(arg0) {
   _require = arg0;
   const cResult = require("c").c(8);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -84,7 +84,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = stateFromStores;
   cResult[4] = found1;
   const tmpResult = require("useStateFromStores");
-}) : ((arg0) => {
+}) : (function useUserIdsForLinkStatus(arg0) {
   _require = arg0;
   const items = [FamilyCenterStore];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => linkedUsers.getLinkedUsers());
@@ -109,7 +109,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 });
 let closure_13 = tmp3;
 ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useUsersForLinkStatus(arg0) {
   const cResult = require("c").c(6);
   const tmp4 = closure_13(arg0);
   _require = tmp4;
@@ -150,7 +150,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     return cResult[4];
   }
   const tmpResult = require("useStateFromStores");
-}) : ((arg0) => {
+}) : (function useUsersForLinkStatus(arg0) {
   _require = closure_13(arg0);
   const items = [UserStore];
   const stateFromStoresArray = require("useStateFromStores").useStateFromStoresArray(items, () => closure_0.map((item) => user.getUser(item)));
@@ -159,14 +159,16 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 let closure_14 = tmp4;
 ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
-const useActiveLinkUserIds = () => closure_13(constants.ACTIVE);
+function useActiveLinkUserIds() {
+  return closure_13(constants.ACTIVE);
+}
 ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
 ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
 fn(558);
 ReactCompilerGating = fn(558);
-let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasActiveParentLinks() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [FamilyCenterStore];
@@ -191,7 +193,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
     return tmp;
   });
-}) : (() => {
+}) : (function useHasActiveParentLinks() {
   const items = [FamilyCenterStore];
   stateFromStores = stateFromStores(573).useStateFromStores(items, () => linkedUsers.getLinkedUsers());
   const items1 = [stateFromStores];
@@ -210,7 +212,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }, items1);
 });
 ReactCompilerGating = fn(558);
-let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? (function useUserQRLinkUrl() {
   const cResult = c.c(7);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [FamilyCenterStore];
@@ -254,7 +256,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
   }
   return tmp11;
-}) : (() => {
+}) : (function useUserQRLinkUrl() {
   const items = [FamilyCenterStore];
   const stateFromStores = useStateFromStores.useStateFromStores(items, () => linkCode.getLinkCode());
   const items1 = [UserStore];
@@ -269,21 +271,21 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   return tmp3;
 });
 ReactCompilerGating = fn(558);
-const tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  if (typeof fn === "function") {
+const tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasMaxConnections() {
+  if (typeof useActiveLinkUserIds === "function") {
     return closure_13(constants.ACTIVE).length >= (tmp ? closure_1_8 : options);
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-}) : (() => {
-  if (typeof fn === "function") {
+}) : (function useHasMaxConnections() {
+  if (typeof useActiveLinkUserIds === "function") {
     return closure_13(constants.ACTIVE).length >= (tmp ? closure_1_8 : options);
   } else {
     throw new TypeError("Trying to call a non-function");
   }
 });
 ReactCompilerGating = fn(558);
-let tmp11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let tmp11 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePendingRequestCount() {
   const cResult = stateFromStores(576).c(9);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
@@ -343,7 +345,7 @@ let tmp11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     cResult[8] = found;
   }
   const tmpResult2 = stateFromStores(573);
-}) : (() => {
+}) : (function usePendingRequestCount() {
   const items = [UserStore];
   stateFromStores = stateFromStores(573).useStateFromStores(items, () => currentUser.getCurrentUser());
   stateFromStores(573);
@@ -368,7 +370,7 @@ let tmp11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
 ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
 ReactCompilerGating = fn(558);
-let tmp12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp12 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRequiresParentalConsent(arg0) {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [FamilyCenterStore];
@@ -395,7 +397,7 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp7 = flag;
   }
   return tmp7;
-}) : ((arg0) => {
+}) : (function useRequiresParentalConsent(arg0) {
   const items = [FamilyCenterStore];
   let tmp = null != arg0;
   if (tmp) {
@@ -412,7 +414,7 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return tmp;
 });
 ReactCompilerGating = fn(558);
-let tmp14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp14 = ReactCompilerGating.isReactCompilerEnabled() ? (function useActivityWindowTimeStamp(arg0) {
   _require = arg0;
   let tmp = _require;
   let formatUserActivityTimestamp = dependencyMap;
@@ -461,7 +463,7 @@ let tmp14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     } else {
       tmp9 = cResult[7];
     }
-    tmp = tmp(8331);
+    tmp = tmp(7714);
     formatUserActivityTimestamp = tmp.formatUserActivityTimestamp;
     const date = new result.Date(stateFromStores);
     result = formatUserActivityTimestamp(date.getTime(), tmp9, 7);
@@ -470,7 +472,7 @@ let tmp14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[5] = result;
   }
   const tmpResult = tmp(573);
-}) : ((arg0) => {
+}) : (function useActivityWindowTimeStamp(arg0) {
   _require = arg0;
   closure_1 = require("useSelectedTeen").useSelectedTeenId();
   const obj = require("useSelectedTeen");
@@ -487,26 +489,28 @@ let tmp14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (null != stateFromStores) {
     const _Date = Date;
     const date = new Date(stateFromStores);
-    result = tmp(8331).formatUserActivityTimestamp(date.getTime(), () => closure_0, 7);
-    const tmpResult = tmp(8331);
+    result = tmp(7714).formatUserActivityTimestamp(date.getTime(), () => closure_0, 7);
+    const tmpResult = tmp(7714);
   }
   return result;
 });
-let fn2 = () => closure_14(constants.ACTIVE);
-let fn3 = () => {
-  if (typeof fn === "function") {
+function useActiveLinkUsers() {
+  return closure_14(constants.ACTIVE);
+}
+function useHasActiveLinks() {
+  if (typeof useActiveLinkUserIds === "function") {
     return closure_13(constants.ACTIVE).length > 0;
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-};
-const fn4 = () => {
-  if (typeof fn === "function") {
+}
+function useAcceptedRequestsCount() {
+  if (typeof useActiveLinkUserIds === "function") {
     return closure_13(constants.ACTIVE).length;
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-};
+}
 const size = fn(2);
 const result4 = size.fileFinishedImporting("modules/parent_tools/hooks/useUserLinks.tsx");
 
@@ -530,16 +534,16 @@ export const getActiveLinkUserIds = function getActiveLinkUserIds() {
   const mapped = sorted.map((user_id) => user_id.user_id);
   return mapped.filter((item) => null != item);
 };
-export const useActiveLinkUsers = fn2;
-export const useHasActiveLinks = fn3;
+export { useActiveLinkUsers };
+export { useHasActiveLinks };
 export const useHasActiveParentLinks = tmp8;
 export const useUserQRLinkUrl = tmp9;
 export const useHasMaxConnections = tmp10;
 export const usePendingRequestCount = tmp11;
 export const useRequiresParentalConsent = tmp12;
-export const useAcceptedRequestsCount = fn4;
+export { useAcceptedRequestsCount };
 export const useActivityWindowTimeStamp = tmp14;
-export const useLinkTimestampText = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export const useLinkTimestampText = ReactCompilerGating.isReactCompilerEnabled() ? (function useLinkTimestampText(arg0, arg1) {
   _require = arg0;
   const cResult = require("c").c(6);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -550,7 +554,7 @@ export const useLinkTimestampText = ReactCompilerGating.isReactCompilerEnabled()
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function u() {
+    const fn = function l() {
       return FamilyCenterStore.getLinkTimestamp(closure_0);
     };
     cResult[1] = arg0;
@@ -574,11 +578,11 @@ export const useLinkTimestampText = ReactCompilerGating.isReactCompilerEnabled()
     tmp8 = null;
   } else {
     const _Date = Date;
-    tmp(8331).formatLinkTimestamp(Date.parse(stateFromStores), arg1 === constants.PENDING ? closure_10 : closure_6);
-    const tmpResult2 = tmp(8331);
+    tmp(7714).formatLinkTimestamp(Date.parse(stateFromStores), arg1 === constants.PENDING ? closure_10 : closure_6);
+    const tmpResult2 = tmp(7714);
   }
   const tmpResult = require("useStateFromStores");
-}) : ((arg0, arg1) => {
+}) : (function useLinkTimestampText(arg0, arg1) {
   _require = arg0;
   const items = [FamilyCenterStore];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => FamilyCenterStore.getLinkTimestamp(closure_0));
@@ -586,8 +590,8 @@ export const useLinkTimestampText = ReactCompilerGating.isReactCompilerEnabled()
     return null;
   } else {
     const _Date = Date;
-    tmp(8331).formatLinkTimestamp(Date.parse(stateFromStores), arg1 === constants.PENDING ? closure_10 : closure_6);
-    const tmpResult = tmp(8331);
+    tmp(7714).formatLinkTimestamp(Date.parse(stateFromStores), arg1 === constants.PENDING ? closure_10 : closure_6);
+    const tmpResult = tmp(7714);
   }
   const obj = require("useStateFromStores");
   tmp = _require;

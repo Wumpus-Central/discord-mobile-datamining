@@ -1,9 +1,9 @@
-// === Module 7871: DisplayProfile ===
+// === Module 8289: DisplayProfile ===
 
-// Module 7871 (DisplayProfile)
-import PremiumConstants from "PremiumConstants" /* 1379 */;
-import AvatarUtils from "AvatarUtils" /* 1402 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 7848 */;
+// Module 8289 (DisplayProfile)
+import PremiumConstants from "PremiumConstants" /* 1391 */;
+import AvatarUtils from "AvatarUtils" /* 1414 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8266 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -261,31 +261,31 @@ prototype["getBannerURL"] = function getBannerURL(arg0) {
   guildMemberBannerURL = AvatarUtils.getUserBannerURL({ id: self.userId, banner: self.banner, canAnimate, size });
   const obj6 = { id: self.userId, banner: self.banner, canAnimate, size };
 };
-prototype["getPreviewBanner"] = function getPreviewBanner(pendingBanner, canAnimate, arg2) {
+prototype["getPreviewBanner"] = function getPreviewBanner(bannerChange, setting, arg2) {
   let num = arg2;
   if (arg2 === undefined) {
     num = 480;
   }
-  if (null != pendingBanner) {
-    if (canAnimate) {
-      let imageUri = pendingBanner.imageUri;
+  if (null != bannerChange) {
+    if (setting) {
+      let imageUri = bannerChange.imageUri;
     } else {
-      imageUri = pendingBanner.staticImageUri;
+      imageUri = bannerChange.staticImageUri;
       if (imageUri == null) {
-        imageUri = pendingBanner.imageUri;
+        imageUri = bannerChange.imageUri;
       }
     }
   } else {
     const self = this;
-    if (null === pendingBanner) {
+    if (null === bannerChange) {
       let userBannerURL = null;
       if (self.isUsingGuildMemberBanner()) {
-        const obj3 = { id: self.userId, banner: self._userProfile.banner, canAnimate, size: num };
+        const obj3 = { id: self.userId, banner: self._userProfile.banner, canAnimate: setting, size: num };
         userBannerURL = AvatarUtils.getUserBannerURL(obj3);
       }
       let bannerURL = userBannerURL;
     } else {
-      const obj = { canAnimate, size: num };
+      const obj = { canAnimate: setting, size: num };
       bannerURL = self.getBannerURL(obj);
     }
     return bannerURL;

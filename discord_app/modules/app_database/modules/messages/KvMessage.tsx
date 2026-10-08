@@ -1,9 +1,9 @@
-// === Module 7009: KvMessage ===
+// === Module 7197: KvMessage ===
 
-// Module 7009 (KvMessage)
+// Module 7197 (KvMessage)
 import _slicedToArray from "module_32" /* 32 */;
-import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import UserStore from "UserStore" /* 1377 */;
+import GuildMemberStore from "GuildMemberStore" /* 2124 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1085).EMPTY_STRING_SNOWFLAKE_ID;
 const prototype = function KvMessage() {

@@ -1,8 +1,8 @@
-// === Module 12956: useUserProfileApplicationRoleConnections ===
+// === Module 13235: useUserProfileApplicationRoleConnections ===
 
-// Module 12956 (useUserProfileApplicationRoleConnections)
+// Module 13235 (useUserProfileApplicationRoleConnections)
 import _mod19 from "module_19" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 7124 */;
+import UserProfileStore from "UserProfileStore" /* 7309 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -12,7 +12,7 @@ const useMemo = _mod19.useMemo;
 let closure_4 = [];
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useUserProfileApplicationRoleConnections.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserProfileApplicationRoleConnections(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -39,7 +39,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     prop = stateFromStores.applicationRoleConnections;
   }
   return null != prop ? stateFromStores.applicationRoleConnections : closure_4;
-}) : ((arg0) => {
+}) : (function useUserProfileApplicationRoleConnections(arg0) {
   _require = arg0;
   const items = [UserProfileStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => UserProfileStore.getUserProfile(closure_0));

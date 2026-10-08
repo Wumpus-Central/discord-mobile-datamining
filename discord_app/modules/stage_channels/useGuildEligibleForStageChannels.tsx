@@ -1,7 +1,7 @@
-// === Module 17036: useGuildEligibleForStageChannels ===
+// === Module 17317: useGuildEligibleForStageChannels ===
 
-// Module 17036 (useGuildEligibleForStageChannels)
-import GuildStore from "GuildStore" /* 2074 */;
+// Module 17317 (useGuildEligibleForStageChannels)
+import GuildStore from "GuildStore" /* 2086 */;
 
 const require = globalThis.__r;
 
@@ -27,7 +27,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useGuildEligibleForStageChannels.tsx");
 
 export { isGuildEligibleForStageChannels };
-export const useGuildEligibleForStageChannels = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useGuildEligibleForStageChannels = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildEligibleForStageChannels(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -38,7 +38,7 @@ export const useGuildEligibleForStageChannels = ReactCompilerGating.isReactCompi
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function s() {
+    const fn = function t() {
       const items = [GuildStore];
       [obj] = items;
       guild = obj.getGuild(closure_0);
@@ -61,7 +61,7 @@ export const useGuildEligibleForStageChannels = ReactCompilerGating.isReactCompi
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp6, tmp7);
-}) : ((arg0) => {
+}) : (function useGuildEligibleForStageChannels(arg0) {
   _require = arg0;
   let items = [GuildStore];
   const items1 = [arg0];

@@ -1,12 +1,12 @@
-// === Module 15926: RegisterDisplayName ===
+// === Module 16186: RegisterDisplayName ===
 
-// Module 15926 (RegisterDisplayName)
+// Module 16186 (RegisterDisplayName)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UniqueUsernamesStore from "UniqueUsernamesStore" /* 14535 */;
+import UniqueUsernamesStore from "UniqueUsernamesStore" /* 14796 */;
 
 const require = globalThis.__r;
 
@@ -28,13 +28,13 @@ function getGlobalNameError(first1) {
   }
 }
 const View = fn(17).View;
-const RegistrationUIStore = fn(15906);
+const RegistrationUIStore = fn(16165);
 ({ updateRegistrationOptions: closure_8, useRegistrationUIStore: closure_9 } = RegistrationUIStore);
-const RegistrationConstants = fn(15907);
+const RegistrationConstants = fn(16166);
 ({ RegisterTransitionSteps: c10, RegistrationTransitionActionTypes: closure_11 } = RegistrationConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { globalName: { marginTop: nativeDefault.space.PX_24 }, button: null, page: null };
 let obj3 = { marginTop: nativeDefault.space.PX_24 };
 obj2.button = { marginTop: nativeDefault.space.PX_24 };
@@ -47,16 +47,18 @@ let obj4 = { marginTop: nativeDefault.space.PX_24 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/auth/native/components/RegisterDisplayName.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function RegisterDisplayName() {
+  let tmp2 = first1;
   const cResult = require("c").c(55);
-  closure_14();
-  require("useWideAuthView")();
+  let page = closure_14();
+  let tmp4 = importDefault;
   let obj = require("c");
+  const tmp5 = require("useWideAuthView")();
   const navigation = require("useNavigation").useNavigation();
   _require = navigation;
   const obj2 = require("useNavigation");
-  const tmp8 = context;
-  [r10025, importDefault] = context(noop.useState(false), 2);
+  const tmp7 = context;
+  [tmp9, importDefault] = context(noop.useState(false), 2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function u(errors) {
       return errors.errors;
@@ -80,9 +82,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     tmp12 = cResult[1];
   }
-  const tmp8Result = tmp8(noop.useState(tmp12), 2);
-  first1 = tmp8Result[0];
-  asyncGeneratorStep = tmp8Result[1];
+  const tmp7Result = tmp7(noop.useState(tmp12), 2);
+  first1 = tmp7Result[0];
+  asyncGeneratorStep = tmp7Result[1];
   if (cResult[2] !== first1) {
     const tmp17 = getGlobalNameError(first1);
     cResult[2] = first1;
@@ -100,9 +102,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     tmp19 = cResult[4];
   }
-  require("useAuthFlowBackHandler")(tmp19);
-  const tmp9 = context(noop.useState(false), 2);
-  require("useInitialRegistrationStep")(require("ConstantsIOS").AuthStates.REGISTER_DISPLAY_NAME);
+  tmp4(tmp2[18])(tmp19);
+  const tmp8 = context(noop.useState(false), 2);
+  tmp4(tmp2[19])(require("ConstantsIOS").AuthStates.REGISTER_DISPLAY_NAME);
   if (cResult[5] !== context) {
     const fn3 = function j() {
       context({ step: constants.ACCOUNT_DISPLAY_NAME, actionType: constants2.VIEWED });
@@ -126,7 +128,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     tmp28 = cResult[8];
   }
-  require("useFocusRefOnNavigation")(tmp28);
+  tmp4(tmp2[20])(tmp28);
   if (cResult[9] === navigation) {
     if (cResult[10] === context) {
       let tmp30 = cResult[11];
@@ -157,18 +159,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         }
       }
       if (tmp34 === Symbol.for("react.memo_cache_sentinel")) {
-        class V {
-          constructor(arg0) {
-            tmp = closure_3;
-            str = "";
-            if ("" !== arg0.trim()) {
-              str = arg0;
-            }
-            tmpResult = tmp(str);
-            return;
-          }
+        function handleChange(str) {
+          str = "";
+          closure_3(str);
         }
-        cResult[16] = V;
+        cResult[16] = handleChange;
         class K {
           constructor() {
             obj = {
@@ -187,29 +182,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           }
         }
       } else {
-        class V {
-          constructor(arg0) {
-            tmp = closure_3;
-            str = "";
-            if ("" !== arg0.trim()) {
-              str = arg0;
-            }
-            tmpResult = tmp(str);
-            return;
-          }
-        }
+        const tmp35 = cResult[16];
       }
       if (cResult[17] === tmp11) {
-        class V {
-          constructor(arg0) {
-            tmp = closure_3;
-            str = "";
-            if ("" !== arg0.trim()) {
-              str = arg0;
-            }
-            tmpResult = tmp(str);
-            return;
-          }
+        if (cResult[18] === tmp15) {
+          let tmp36 = cResult[19];
         }
         const _Symbol2 = Symbol;
         class K {
@@ -230,16 +207,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           }
         }
         if (cResult[21] === first1) {
-          class V {
-            constructor(arg0) {
-              tmp = closure_3;
-              str = "";
-              if ("" !== arg0.trim()) {
-                str = arg0;
-              }
-              tmpResult = tmp(str);
-              return;
-            }
+          if (cResult[22] === tmp30) {
+            let tmp41 = cResult[23];
           }
           const _Symbol3 = Symbol;
           class K {
@@ -260,30 +229,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             }
           }
           if (cResult[25] !== tmp36) {
-            class V {
-              constructor(arg0) {
-                tmp = closure_3;
-                str = "";
-                if ("" !== arg0.trim()) {
-                  str = arg0;
-                }
-                tmpResult = tmp(str);
-                return;
-              }
-            }
+            let stringResult;
             if (null == tmp36) {
-              class V {
-                constructor(arg0) {
-                  tmp = closure_3;
-                  str = "";
-                  if ("" !== arg0.trim()) {
-                    str = arg0;
-                  }
-                  tmpResult = tmp(str);
-                  return;
-                }
-              }
-              const stringResult = obj6.string(tmp(tmp2[10]).t.fbKwSs);
+              let intl = tmp(tmp2[10]).intl;
+              stringResult = intl.string(tmp(tmp2[10]).t.fbKwSs);
             }
             class K {
               constructor() {
@@ -303,64 +252,276 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
               }
             }
             cResult[26] = stringResult;
+            let tmp44 = stringResult;
           } else {
-            class V {
-              constructor(arg0) {
-                tmp = closure_3;
-                str = "";
-                if ("" !== arg0.trim()) {
-                  str = arg0;
-                }
-                tmpResult = tmp(str);
-                return;
-              }
-            }
+            tmp44 = cResult[26];
           }
           if (cResult[27] === first1) {
-            class V {
-              constructor(arg0) {
-                tmp = closure_3;
-                str = "";
-                if ("" !== arg0.trim()) {
-                  str = arg0;
+            if (cResult[28] === tmp36) {
+              if (cResult[29] === tmp41) {
+                if (cResult[30] === tmp44) {
+                  let tmp46 = cResult[31];
                 }
-                tmpResult = tmp(str);
-                return;
+                if (cResult[32] === page.globalName) {
+                  if (cResult[33] === tmp46) {
+                    let tmp49 = cResult[34];
+                  }
+                  const _Symbol4 = Symbol;
+                  class K {
+                    constructor() {
+                      obj = {
+                        headerRight() {
+                                              const obj = { text: null, onPress: null };
+                                              const intl = closure_0(first1[10]).intl;
+                                              obj.text = intl.string(closure_0(first1[10]).t["5Wxrcd"]);
+                                              obj.onPress = function onPress() {
+                                                return closure_1_5(null);
+                                              };
+                                              return closure_2_12(closure_0(first1[22]).HeaderActionButton, obj);
+                                            }
+                      };
+                      setOptionsResult = closure_0.setOptions(obj);
+                      return;
+                    }
+                  }
+                  if (tmp52 === Symbol.for("react.memo_cache_sentinel")) {
+                    const intl2 = tmp(tmp2[10]).intl;
+                    const stringResult1 = intl2.string(tmp(tmp2[10]).t.PDTjLN);
+                    class K {
+                      constructor() {
+                        obj = {
+                          headerRight() {
+                                                  const obj = { text: null, onPress: null };
+                                                  const intl = closure_0(first1[10]).intl;
+                                                  obj.text = intl.string(closure_0(first1[10]).t["5Wxrcd"]);
+                                                  obj.onPress = function onPress() {
+                                                    return closure_1_5(null);
+                                                  };
+                                                  return closure_2_12(closure_0(first1[22]).HeaderActionButton, obj);
+                                                }
+                        };
+                        setOptionsResult = closure_0.setOptions(obj);
+                        return;
+                      }
+                    }
+                    cResult[35] = stringResult1;
+                    let tmp53 = stringResult1;
+                  } else {
+                    tmp53 = cResult[35];
+                  }
+                  if (cResult[36] === first1) {
+                    if (cResult[37] === tmp30) {
+                      let tmp55 = cResult[38];
+                    }
+                    if (cResult[39] === first1) {
+                      if (cResult[40] === tmp15) {
+                        let tmp56 = cResult[41];
+                      }
+                      if (cResult[42] === tmp9) {
+                        if (cResult[43] === tmp55) {
+                          if (cResult[44] === tmp56) {
+                            let tmp58 = cResult[45];
+                          }
+                          if (cResult[46] === page.button) {
+                            if (cResult[47] === tmp58) {
+                              let tmp62 = cResult[48];
+                            }
+                            if (cResult[49] === tmp49) {
+                              if (cResult[50] === tmp62) {
+                                let tmp65 = cResult[51];
+                              }
+                              if (tmp5) {
+                                return tmp65;
+                              } else {
+                                if (cResult[52] === tmp65) {
+                                }
+                                tmp4 = tmp4(tmp2[27]);
+                                class K {
+                                  constructor() {
+                                    obj = {
+                                      headerRight() {
+                                                                          const obj = { text: null, onPress: null };
+                                                                          const intl = closure_0(first1[10]).intl;
+                                                                          obj.text = intl.string(closure_0(first1[10]).t["5Wxrcd"]);
+                                                                          obj.onPress = function onPress() {
+                                                                            return closure_1_5(null);
+                                                                          };
+                                                                          return closure_2_12(closure_0(first1[22]).HeaderActionButton, obj);
+                                                                        }
+                                    };
+                                    setOptionsResult = closure_0.setOptions(obj);
+                                    return;
+                                  }
+                                }
+                                tmp72[0] = page.page;
+                                tmp72[1] = tmp65;
+                                tmp2 = closure_12(tmp4, tmp72);
+                                cResult[52] = tmp65;
+                                page = page.page;
+                                cResult[53] = page;
+                                cResult[54] = tmp2;
+                              }
+                            }
+                            class K {
+                              constructor() {
+                                obj = {
+                                  headerRight() {
+                                                                  const obj = { text: null, onPress: null };
+                                                                  const intl = closure_0(first1[10]).intl;
+                                                                  obj.text = intl.string(closure_0(first1[10]).t["5Wxrcd"]);
+                                                                  obj.onPress = function onPress() {
+                                                                    return closure_1_5(null);
+                                                                  };
+                                                                  return closure_2_12(closure_0(first1[22]).HeaderActionButton, obj);
+                                                                }
+                                };
+                                setOptionsResult = closure_0.setOptions(obj);
+                                return;
+                              }
+                            }
+                            tmp67[0] = tmp39;
+                            const items1 = [tmp49, tmp62];
+                            tmp67[1] = items1;
+                            const tmp68 = closure_13(tmp4(tmp2[26]), tmp67);
+                            cResult[49] = tmp49;
+                            cResult[50] = tmp62;
+                            cResult[51] = tmp68;
+                            tmp65 = tmp68;
+                          }
+                          class K {
+                            constructor() {
+                              obj = {
+                                headerRight() {
+                                                              const obj = { text: null, onPress: null };
+                                                              const intl = closure_0(first1[10]).intl;
+                                                              obj.text = intl.string(closure_0(first1[10]).t["5Wxrcd"]);
+                                                              obj.onPress = function onPress() {
+                                                                return closure_1_5(null);
+                                                              };
+                                                              return closure_2_12(closure_0(first1[22]).HeaderActionButton, obj);
+                                                            }
+                              };
+                              setOptionsResult = closure_0.setOptions(obj);
+                              return;
+                            }
+                          }
+                          let obj5 = { style: page.button, children: tmp58 };
+                          const tmp64 = closure_12(View, obj5);
+                          cResult[46] = page.button;
+                          cResult[47] = tmp58;
+                          cResult[48] = tmp64;
+                          tmp62 = tmp64;
+                        }
+                      }
+                      class K {
+                        constructor() {
+                          obj = {
+                            headerRight() {
+                                                      const obj = { text: null, onPress: null };
+                                                      const intl = closure_0(first1[10]).intl;
+                                                      obj.text = intl.string(closure_0(first1[10]).t["5Wxrcd"]);
+                                                      obj.onPress = function onPress() {
+                                                        return closure_1_5(null);
+                                                      };
+                                                      return closure_2_12(closure_0(first1[22]).HeaderActionButton, obj);
+                                                    }
+                          };
+                          setOptionsResult = closure_0.setOptions(obj);
+                          return;
+                        }
+                      }
+                      tmp60[1] = tmp9;
+                      tmp60[2] = tmp53;
+                      tmp60[3] = tmp55;
+                      tmp60[4] = tmp56;
+                      const tmp61 = closure_12(tmp(tmp2[25]).Button, tmp60);
+                      cResult[42] = tmp9;
+                      cResult[43] = tmp55;
+                      cResult[44] = tmp56;
+                      cResult[45] = tmp61;
+                      tmp58 = tmp61;
+                    }
+                    class K {
+                      constructor() {
+                        obj = {
+                          headerRight() {
+                                                  const obj = { text: null, onPress: null };
+                                                  const intl = closure_0(first1[10]).intl;
+                                                  obj.text = intl.string(closure_0(first1[10]).t["5Wxrcd"]);
+                                                  obj.onPress = function onPress() {
+                                                    return closure_1_5(null);
+                                                  };
+                                                  return closure_2_12(closure_0(first1[22]).HeaderActionButton, obj);
+                                                }
+                        };
+                        setOptionsResult = closure_0.setOptions(obj);
+                        return;
+                      }
+                    }
+                    cResult[39] = first1;
+                    cResult[40] = tmp15;
+                    cResult[41] = null != tmp15;
+                    tmp56 = tmp57;
+                  }
+                  function ie() {
+                    return closure_5(first1);
+                  }
+                  cResult[36] = first1;
+                  cResult[37] = tmp30;
+                  cResult[38] = ie;
+                  tmp55 = ie;
+                }
+                class K {
+                  constructor() {
+                    obj = {
+                      headerRight() {
+                                          const obj = { text: null, onPress: null };
+                                          const intl = closure_0(first1[10]).intl;
+                                          obj.text = intl.string(closure_0(first1[10]).t["5Wxrcd"]);
+                                          obj.onPress = function onPress() {
+                                            return closure_1_5(null);
+                                          };
+                                          return closure_2_12(closure_0(first1[22]).HeaderActionButton, obj);
+                                        }
+                    };
+                    setOptionsResult = closure_0.setOptions(obj);
+                    return;
+                  }
+                }
+                let obj6 = { style: tmp40, children: tmp46 };
+                const tmp51 = closure_12(View, obj6);
+                cResult[32] = page.globalName;
+                cResult[33] = tmp46;
+                cResult[34] = tmp51;
+                tmp49 = tmp51;
               }
             }
           }
-          let obj5 = { ref, value: first1, onChange: tmp35, returnKeyType: "next", onSubmitEditing: tmp39, textContentType: "nickname", errorMessage: tmp36, label: tmp41, description: tmp42, clearable: true };
-          const tmp46 = closure_12(tmp(tmp2[24]).TextInput, obj5);
+          let obj7 = { ref, value: first1, onChange: tmp35, returnKeyType: "next", onSubmitEditing: tmp41, textContentType: "nickname", errorMessage: tmp36, label: tmp43, description: tmp44, clearable: true };
+          const tmp48 = closure_12(tmp(tmp2[24]).TextInput, obj7);
           cResult[27] = first1;
           cResult[28] = tmp36;
-          cResult[29] = tmp39;
-          cResult[30] = tmp42;
-          cResult[31] = tmp46;
+          cResult[29] = tmp41;
+          cResult[30] = tmp44;
+          cResult[31] = tmp48;
+          tmp46 = tmp48;
         }
-        const fn5 = function q() {
+        const fn4 = function q() {
           return closure_5(first1);
         };
         cResult[21] = first1;
         cResult[22] = tmp30;
-        cResult[23] = fn5;
+        cResult[23] = fn4;
+        tmp41 = fn4;
       }
-      const tmp37 = require("getError")("global_name", tmp11);
+      let tmp37 = tmp4(tmp2[23])("global_name", tmp11);
       if (tmp37 == null) {
-        class V {
-          constructor(arg0) {
-            tmp = closure_3;
-            str = "";
-            if ("" !== arg0.trim()) {
-              str = arg0;
-            }
-            tmpResult = tmp(str);
-            return;
-          }
-        }
+        tmp37 = tmp15;
       }
       cResult[17] = tmp11;
       cResult[18] = tmp15;
       cResult[19] = tmp37;
+      tmp36 = tmp37;
     }
     class K {
       constructor() {
@@ -379,12 +540,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         return;
       }
     }
-    const items1 = [tmp30, navigation];
+    const items2 = [tmp30, navigation];
     cResult[12] = tmp30;
     cResult[13] = navigation;
     cResult[14] = K;
-    cResult[15] = items1;
-    tmp32 = items1;
+    cResult[15] = items2;
+    tmp32 = items2;
     tmp31 = K;
   }
   _require = asyncGeneratorStep(async (globalName) => {
@@ -453,7 +614,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       }
     })();
   });
-  const fn4 = function() {
+  function t7() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -462,13 +623,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       applyArgumentsResult = apply(self, arguments);
     }
     return applyArgumentsResult;
-  };
+  }
   cResult[9] = navigation;
   cResult[10] = context;
-  cResult[11] = fn4;
-  tmp30 = fn4;
-  const tmp5Result = require("useInitialRegistrationStep");
-}) : (() => {
+  cResult[11] = t7;
+  tmp30 = t7;
+  const tmp4Result = tmp4(tmp2[19]);
+}) : (function RegisterDisplayName() {
   const tmp = closure_14();
   const tmp4 = require("useWideAuthView")();
   const navigation = require("useNavigation").useNavigation();
@@ -600,7 +761,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   let obj5 = {
     ref,
     value: tmp9[0],
-    onChange(str) {
+    onChange: function handleChange(str) {
       str = "";
       closure_3(str);
     },

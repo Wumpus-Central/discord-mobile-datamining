@@ -1,11 +1,11 @@
-// === Module 8401: CirclePlayIcon ===
+// === Module 8899: CirclePlayIcon ===
 
-// Module 8401 (CirclePlayIcon)
+// Module 8899 (CirclePlayIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4585 */;
-import _mod8402 from "module_8402" /* 8402 */;
-import _mod8403 from "module_8403" /* 8403 */;
+import BaseIconImage from "BaseIconImage" /* 4777 */;
+import _mod8900 from "module_8900" /* 8900 */;
+import _mod8901 from "module_8901" /* 8901 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/CirclePlayIcon.tsx");
 
-export const CirclePlayIcon = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const CirclePlayIcon = ReactCompilerGating.isReactCompilerEnabled() ? (function CirclePlayIcon(arg0) {
   const cResult = c.c(21);
   if (cResult[0] !== arg0) {
     ({ style, secondaryColor, color } = arg0);
@@ -46,7 +46,7 @@ export const CirclePlayIcon = ReactCompilerGating.isReactCompilerEnabled() ? ((a
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod8402;
+    const tmpResult = _mod8900;
     cResult[5] = tmpResult;
     let tmp11 = tmpResult;
   } else {
@@ -59,7 +59,7 @@ export const CirclePlayIcon = ReactCompilerGating.isReactCompilerEnabled() ? ((a
       }
       const _Symbol = Symbol;
       if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmpResult2 = _mod8403;
+        const tmpResult2 = _mod8901;
         cResult[10] = tmpResult2;
         let tmp16 = tmpResult2;
       } else {
@@ -120,7 +120,7 @@ export const CirclePlayIcon = ReactCompilerGating.isReactCompilerEnabled() ? ((a
   cResult[9] = tmp15;
   tmp13 = tmp15;
   const obj5 = { source: tmp11, color: str, style: tmp5 };
-}) : ((color) => {
+}) : (function CirclePlayIcon(color) {
   ({ style, secondaryColor } = color);
   if (secondaryColor === undefined) {
     secondaryColor = "transparent";
@@ -132,8 +132,8 @@ export const CirclePlayIcon = ReactCompilerGating.isReactCompilerEnabled() ? ((a
   const merged = Object.assign(color, Object.assign({ style: 0, secondaryColor: 0, color: 0 }));
   const obj = { children: null };
   const merged1 = Object.assign(merged);
-  const items = [timestampProducer(BaseIconImage.BaseIconImage, { source: _mod8402, color: secondaryColor, style }), ];
-  const obj3 = { source: _mod8403, color: INTERACTIVE_ICON_DEFAULT, style: null };
+  const items = [timestampProducer(BaseIconImage.BaseIconImage, { source: _mod8900, color: secondaryColor, style }), ];
+  const obj3 = { source: _mod8901, color: INTERACTIVE_ICON_DEFAULT, style: null };
   const items1 = [style];
   const items2 = [];
   items2[HermesBuiltin.arraySpread(items1.flat(), 0)] = { position: "absolute", top: 0 };

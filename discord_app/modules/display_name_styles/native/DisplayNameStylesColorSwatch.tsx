@@ -1,15 +1,15 @@
-// === Module 14459: DisplayNameStylesColorSwatch ===
+// === Module 14687: DisplayNameStylesColorSwatch ===
 
-// Module 14459 (DisplayNameStylesColorSwatch)
+// Module 14687 (DisplayNameStylesColorSwatch)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
-import DisplayNameEffect from "DisplayNameEffect" /* 1396 */;
-import LinearGradientDefault from "LinearGradient" /* 5612 */;
-import GummyStripesDefault from "GummyStripes" /* 14460 */;
-import createStyles from "createStyles" /* 4896 */;
+import DisplayNameEffect from "DisplayNameEffect" /* 1408 */;
+import LinearGradientDefault from "LinearGradient" /* 5387 */;
+import GummyStripesDefault from "GummyStripes" /* 14688 */;
+import createStyles from "createStyles" /* 5090 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -23,7 +23,7 @@ let closure_5 = createStyles.createStyles(obj);
 let size = size_mod;
 const result = size.fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesColorSwatch.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((colors) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayNameStylesColorSwatch(colors) {
   const cResult = c.c(24);
   colors = colors.colors;
   const tmp4 = closure_5();
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((colors) => {
     if (cResult[8] !== colors) {
       const _Symbol = Symbol;
       if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function _(color) {
+        const fn = function p(color) {
           return utils_ColorUtils.int2hex(color);
         };
         cResult[10] = fn;
@@ -141,7 +141,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((colors) => {
     cResult[18] = str;
     tmp5 = str;
   }
-}) : ((colors) => {
+}) : (function DisplayNameStylesColorSwatch(colors) {
   colors = colors.colors;
   const tmp = closure_5();
   if (colors.effectId === DisplayNameEffect.DisplayNameEffect.GUMMY) {

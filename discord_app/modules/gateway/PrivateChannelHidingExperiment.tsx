@@ -1,9 +1,9 @@
-// === Module 13495: PrivateChannelHidingExperiment ===
+// === Module 13795: PrivateChannelHidingExperiment ===
 
-// Module 13495 (PrivateChannelHidingExperiment)
+// Module 13795 (PrivateChannelHidingExperiment)
 import c from "c" /* 576 */;
-import PrivateChannelHidingExperimentCache from "PrivateChannelHidingExperimentCache" /* 13496 */;
-import ApexExperiment from "ApexExperiment" /* 1440 */;
+import PrivateChannelHidingExperimentCache from "PrivateChannelHidingExperimentCache" /* 13796 */;
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -19,7 +19,7 @@ export const PRIVATE_CHANNEL_OBFUSCATION_KEY = PrivateChannelHidingExperimentCac
 export const isChannelMetadataObfuscationEnabled = function isChannelMetadataObfuscationEnabled(dependencyMap) {
   return closure_2.getConfig({ location: dependencyMap }).enableObfuscation;
 };
-export const useIsChannelMetadataObfuscationEnabled = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+export const useIsChannelMetadataObfuscationEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsChannelMetadataObfuscationEnabled(location) {
   const cResult = c.c(2);
   if (cResult[0] !== location) {
     const obj2 = { location };
@@ -30,7 +30,9 @@ export const useIsChannelMetadataObfuscationEnabled = ReactCompilerGating.isReac
     tmp2 = cResult[1];
   }
   return closure_2.useConfig(tmp2).enableObfuscation;
-}) : ((location) => closure_2.useConfig({ location }).enableObfuscation);
+}) : (function useIsChannelMetadataObfuscationEnabled(location) {
+  return closure_2.useConfig({ location }).enableObfuscation;
+});
 export const isChannelMetadataIntegrityCheckEnabled = function isChannelMetadataIntegrityCheckEnabled(scheduleIntegrityCheck) {
   return closure_2.getConfig({ location: scheduleIntegrityCheck }).enableIntegrityCheck;
 };

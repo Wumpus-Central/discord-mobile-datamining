@@ -1,12 +1,12 @@
-// === Module 12782: MediaViewerOverlayButtonFavoriteGIF ===
+// === Module 12929: MediaViewerOverlayButtonFavoriteGIF ===
 
-// Module 12782 (MediaViewerOverlayButtonFavoriteGIF)
+// Module 12929 (MediaViewerOverlayButtonFavoriteGIF)
 import util from "util" /* 1126 */;
-import frecency_user_settings from "frecency_user_settings" /* 1232 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4574 */;
-import GIFPickerActionCreators from "GIFPickerActionCreators" /* 10103 */;
-import GIFPickerUtils from "GIFPickerUtils" /* 10105 */;
-import GifIcon from "GifIcon" /* 10118 */;
+import frecency_user_settings from "frecency_user_settings" /* 1244 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4766 */;
+import GIFPickerActionCreators from "GIFPickerActionCreators" /* 9687 */;
+import GIFPickerUtils from "GIFPickerUtils" /* 9689 */;
+import GifIcon from "GifIcon" /* 9703 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ const ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaViewerOverlayButtonFavoriteGIF.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((source) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function GIFFavButton(source) {
   let StarIcon = source;
   let tmp = isFavoriteGIF;
   const cResult = source(isFavoriteGIF[3]).c(19);
@@ -92,7 +92,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((source
       }
     }
   }
-  const fn = function c() {
+  const fn = function u() {
     if (isFavoriteGIF) {
       GIFPickerActionCreators.removeFavoriteGIF(uri);
       const tmpResult = GIFPickerActionCreators;
@@ -129,7 +129,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((source
   cResult[10] = fn;
   tmp6 = fn;
   const StarIconResult1 = StarIcon(tmp[5]);
-}) : ((source) => {
+}) : (function GIFFavButton(source) {
   source = source.source;
   let isFavoriteGIF;
   let uri = source.isGIFV ? source.embedURI : source.sourceURI;

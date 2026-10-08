@@ -1,8 +1,8 @@
-// === Module 15998: useCallA11yState ===
+// === Module 16258: useCallA11yState ===
 
-// Module 15998 (useCallA11yState)
+// Module 16258 (useCallA11yState)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CallStore from "CallStore" /* 5444 */;
+import CallStore from "CallStore" /* 5754 */;
 
 const require = globalThis.__r;
 
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/useCallA11yState.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCallA11yState(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -41,7 +41,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStoresObject(first, tmp7);
-}) : ((arg0) => {
+}) : (function useCallA11yState(arg0) {
   _require = arg0;
   const items = [CallStore, AuthenticationStore];
   return require("initialize").useStateFromStoresObject(items, () => {

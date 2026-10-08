@@ -1,14 +1,14 @@
-// === Module 11955: GuildDirectoryMoreMenu ===
+// === Module 12028: GuildDirectoryMoreMenu ===
 
-// Module 11955 (GuildDirectoryMoreMenu)
+// Module 12028 (GuildDirectoryMoreMenu)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5715 */;
-import ReportModals from "ReportModals" /* 8312 */;
-import useCanManageGuildDirectoryEntryDefault from "useCanManageGuildDirectoryEntry" /* 11949 */;
-import GuildDirectoryEditDescriptionModalActionCreatorsDefault from "GuildDirectoryEditDescriptionModalActionCreators" /* 11956 */;
-import GuildDirectoryActionCreatorsAll from "GuildDirectoryActionCreators" /* 11958 */;
+import native from "native" /* 1200 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5298 */;
+import ReportModals from "ReportModals" /* 7695 */;
+import useCanManageGuildDirectoryEntryDefault from "useCanManageGuildDirectoryEntry" /* 12022 */;
+import GuildDirectoryEditDescriptionModalActionCreatorsDefault from "GuildDirectoryEditDescriptionModalActionCreators" /* 12029 */;
+import GuildDirectoryActionCreatorsAll from "GuildDirectoryActionCreators" /* 12031 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,167 +19,249 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryMoreMenu.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((entry) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildDirectoryMoreMenu(entry) {
+  let ContextMenu = entry;
+  let tmp = dependencyMap;
   const cResult = entry(576).c(25);
   entry = entry.entry;
   let obj = entry(576);
   ({ isEntryAdmin, canEdit, canRemove } = useCanManageGuildDirectoryEntryDefault(entry));
   if (cResult[0] !== entry) {
-    const fn = function c() {
+    function handleEdit() {
       GuildDirectoryEditDescriptionModalActionCreatorsDefault.open({ entry });
-    };
+    }
     cResult[0] = entry;
-    cResult[1] = fn;
-    let tmp5 = fn;
+    cResult[1] = handleEdit;
+    let tmp4 = handleEdit;
   } else {
-    tmp5 = cResult[1];
+    tmp4 = cResult[1];
   }
   if (cResult[2] !== entry) {
-    class I {
-      constructor() {
-        obj = closure_1(closure_3[7]);
-        obj1 = { title: null, body: null, onConfirm: null, confirmColor: null, confirmText: null, cancelText: null, onCancel: null, isDismissable: false };
-        intl = closure_0(closure_3[8]).intl;
-        obj1.title = intl.string(closure_0(closure_3[8]).t.KUxYWH);
-        intl2 = closure_0(closure_3[8]).intl;
-        obj4 = { guildName: entry.name };
-        obj1.body = intl2.formatToPlainString(closure_0(closure_3[8]).t["/5y0uV"], obj4);
-        obj1.onConfirm = function onConfirm() {
-          const result = GuildDirectoryActionCreatorsAll.removeDirectoryGuildEntry(entry.channelId, entry.guildId);
-        };
-        obj1.confirmColor = closure_0(closure_3[10]).ButtonColors.RED;
-        intl3 = closure_0(closure_3[8]).intl;
-        obj1.confirmText = intl3.string(closure_0(closure_3[8]).t.N86XcP);
-        intl4 = closure_0(closure_3[8]).intl;
-        obj1.cancelText = intl4.string(closure_0(closure_3[8]).t["ETE/oC"]);
-        obj1.onCancel = function onCancel() {
-          closure_1_1(dependencyMap[7]).close();
-        };
-        showResult = obj.show(obj1);
-        return;
-      }
+    function handleRemove() {
+      const obj2 = { title: null, body: null, onConfirm: null, confirmColor: null, confirmText: null, cancelText: null, onCancel: null, isDismissable: false };
+      const intl = util.intl;
+      obj2.title = intl.string(util.t.KUxYWH);
+      const intl2 = util.intl;
+      obj2.body = intl2.formatToPlainString(util.t["/5y0uV"], { guildName: entry.name });
+      obj2.onConfirm = function onConfirm() {
+        const result = GuildDirectoryActionCreatorsAll.removeDirectoryGuildEntry(entry.channelId, entry.guildId);
+      };
+      obj2.confirmColor = native.ButtonColors.RED;
+      const intl3 = util.intl;
+      obj2.confirmText = intl3.string(util.t.N86XcP);
+      const intl4 = util.intl;
+      obj2.cancelText = intl4.string(util.t["ETE/oC"]);
+      obj2.onCancel = function onCancel() {
+        closure_1_1(dependencyMap[7]).close();
+      };
+      actions_AlertActionCreatorsDefault.show(obj2);
     }
     cResult[2] = entry;
-    cResult[3] = I;
+    cResult[3] = handleRemove;
+    let tmp5 = handleRemove;
   } else {
-    class I {
-      constructor() {
-        obj = closure_1(closure_3[7]);
-        obj1 = { title: null, body: null, onConfirm: null, confirmColor: null, confirmText: null, cancelText: null, onCancel: null, isDismissable: false };
-        intl = closure_0(closure_3[8]).intl;
-        obj1.title = intl.string(closure_0(closure_3[8]).t.KUxYWH);
-        intl2 = closure_0(closure_3[8]).intl;
-        obj4 = { guildName: entry.name };
-        obj1.body = intl2.formatToPlainString(closure_0(closure_3[8]).t["/5y0uV"], obj4);
-        obj1.onConfirm = function onConfirm() {
-          const result = GuildDirectoryActionCreatorsAll.removeDirectoryGuildEntry(entry.channelId, entry.guildId);
-        };
-        obj1.confirmColor = closure_0(closure_3[10]).ButtonColors.RED;
-        intl3 = closure_0(closure_3[8]).intl;
-        obj1.confirmText = intl3.string(closure_0(closure_3[8]).t.N86XcP);
-        intl4 = closure_0(closure_3[8]).intl;
-        obj1.cancelText = intl4.string(closure_0(closure_3[8]).t["ETE/oC"]);
-        obj1.onCancel = function onCancel() {
-          closure_1_1(dependencyMap[7]).close();
-        };
-        showResult = obj.show(obj1);
-        return;
-      }
-    }
+    tmp5 = cResult[3];
   }
   if (cResult[4] !== entry) {
-    class C {
-      constructor() {
-        obj = closure_0(closure_3[11]);
-        result = obj.showReportModalForGuildDirectoryEntry(entry);
-        return;
-      }
+    function handleReport() {
+      const result = ReportModals.showReportModalForGuildDirectoryEntry(entry);
     }
     cResult[4] = entry;
-    cResult[5] = C;
+    cResult[5] = handleReport;
+    let tmp6 = handleReport;
   } else {
-    class C {
-      constructor() {
-        obj = closure_0(closure_3[11]);
-        result = obj.showReportModalForGuildDirectoryEntry(entry);
-        return;
-      }
-    }
+    tmp6 = cResult[5];
   }
   if (cResult[6] === canEdit) {
-    class C {
-      constructor() {
-        obj = closure_0(closure_3[11]);
-        result = obj.showReportModalForGuildDirectoryEntry(entry);
-        return;
+    if (cResult[7] === canRemove) {
+      if (cResult[8] === tmp4) {
+        if (cResult[9] === tmp5) {
+          if (cResult[10] === tmp6) {
+            if (0 === arr.length) {
+              return null;
+            } else {
+              const _Symbol2 = Symbol;
+              if (cResult[22] === Symbol.for("react.memo_cache_sentinel")) {
+                class R {
+                  constructor(arg0) {
+                    tmp = closure_1_5(entry, closure_1_4);
+                    obj = { ref: entry.ref };
+                    merged = Object.assign(tmp);
+                    obj.size = "sm";
+                    obj.variant = "secondary";
+                    intl = entry(closure_1_3[8]).intl;
+                    obj.accessibilityLabel = intl.string(entry(closure_1_3[8]).t.PdRCRg);
+                    obj1 = { size: "sm", color: closure_1_1(closure_1_3[17]).colors.WHITE };
+                    obj.icon = closure_1_6(entry(closure_1_3[16]).MoreHorizontalIcon, obj1);
+                    return closure_1_6(entry(closure_1_3[15]).IconButton, obj);
+                  }
+                }
+                cResult[22] = R;
+              } else {
+                class R {
+                  constructor(arg0) {
+                    tmp = closure_1_5(entry, closure_1_4);
+                    obj = { ref: entry.ref };
+                    merged = Object.assign(tmp);
+                    obj.size = "sm";
+                    obj.variant = "secondary";
+                    intl = entry(closure_1_3[8]).intl;
+                    obj.accessibilityLabel = intl.string(entry(closure_1_3[8]).t.PdRCRg);
+                    obj1 = { size: "sm", color: closure_1_1(closure_1_3[17]).colors.WHITE };
+                    obj.icon = closure_1_6(entry(closure_1_3[16]).MoreHorizontalIcon, obj1);
+                    return closure_1_6(entry(closure_1_3[15]).IconButton, obj);
+                  }
+                }
+              }
+              if (cResult[23] !== arr) {
+                class R {
+                  constructor(arg0) {
+                    tmp = closure_1_5(entry, closure_1_4);
+                    obj = { ref: entry.ref };
+                    merged = Object.assign(tmp);
+                    obj.size = "sm";
+                    obj.variant = "secondary";
+                    intl = entry(closure_1_3[8]).intl;
+                    obj.accessibilityLabel = intl.string(entry(closure_1_3[8]).t.PdRCRg);
+                    obj1 = { size: "sm", color: closure_1_1(closure_1_3[17]).colors.WHITE };
+                    obj.icon = closure_1_6(entry(closure_1_3[16]).MoreHorizontalIcon, obj1);
+                    return closure_1_6(entry(closure_1_3[15]).IconButton, obj);
+                  }
+                }
+                ContextMenu = ContextMenu(9297).ContextMenu;
+                const obj3 = { items: arr, children: R };
+                tmp = <ContextMenu items={arr}>{R}</ContextMenu>;
+                cResult[23] = arr;
+                cResult[24] = tmp;
+              } else {
+                class R {
+                  constructor(arg0) {
+                    tmp = closure_1_5(entry, closure_1_4);
+                    obj = { ref: entry.ref };
+                    merged = Object.assign(tmp);
+                    obj.size = "sm";
+                    obj.variant = "secondary";
+                    intl = entry(closure_1_3[8]).intl;
+                    obj.accessibilityLabel = intl.string(entry(closure_1_3[8]).t.PdRCRg);
+                    obj1 = { size: "sm", color: closure_1_1(closure_1_3[17]).colors.WHITE };
+                    obj.icon = closure_1_6(entry(closure_1_3[16]).MoreHorizontalIcon, obj1);
+                    return closure_1_6(entry(closure_1_3[15]).IconButton, obj);
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
   const items = [];
   if (!canEdit) {
-    class C {
-      constructor() {
-        obj = closure_0(closure_3[11]);
-        result = obj.showReportModalForGuildDirectoryEntry(entry);
-        return;
+    class R {
+      constructor(arg0) {
+        tmp = closure_1_5(entry, closure_1_4);
+        obj = { ref: entry.ref };
+        merged = Object.assign(tmp);
+        obj.size = "sm";
+        obj.variant = "secondary";
+        intl = entry(closure_1_3[8]).intl;
+        obj.accessibilityLabel = intl.string(entry(closure_1_3[8]).t.PdRCRg);
+        obj1 = { size: "sm", color: closure_1_1(closure_1_3[17]).colors.WHITE };
+        obj.icon = closure_1_6(entry(closure_1_3[16]).MoreHorizontalIcon, obj1);
+        return closure_1_6(entry(closure_1_3[15]).IconButton, obj);
       }
     }
   } else {
-    class C {
-      constructor() {
-        obj = closure_0(closure_3[11]);
-        result = obj.showReportModalForGuildDirectoryEntry(entry);
-        return;
+    class R {
+      constructor(arg0) {
+        tmp = closure_1_5(entry, closure_1_4);
+        obj = { ref: entry.ref };
+        merged = Object.assign(tmp);
+        obj.size = "sm";
+        obj.variant = "secondary";
+        intl = entry(closure_1_3[8]).intl;
+        obj.accessibilityLabel = intl.string(entry(closure_1_3[8]).t.PdRCRg);
+        obj1 = { size: "sm", color: closure_1_1(closure_1_3[17]).colors.WHITE };
+        obj.icon = closure_1_6(entry(closure_1_3[16]).MoreHorizontalIcon, obj1);
+        return closure_1_6(entry(closure_1_3[15]).IconButton, obj);
       }
     }
     const _Symbol = Symbol;
     if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-      class C {
-        constructor() {
-          obj = closure_0(closure_3[11]);
-          result = obj.showReportModalForGuildDirectoryEntry(entry);
-          return;
+      class R {
+        constructor(arg0) {
+          tmp = closure_1_5(entry, closure_1_4);
+          obj = { ref: entry.ref };
+          merged = Object.assign(tmp);
+          obj.size = "sm";
+          obj.variant = "secondary";
+          intl = entry(closure_1_3[8]).intl;
+          obj.accessibilityLabel = intl.string(entry(closure_1_3[8]).t.PdRCRg);
+          obj1 = { size: "sm", color: closure_1_1(closure_1_3[17]).colors.WHITE };
+          obj.icon = closure_1_6(entry(closure_1_3[16]).MoreHorizontalIcon, obj1);
+          return closure_1_6(entry(closure_1_3[15]).IconButton, obj);
         }
       }
-      const stringResult = obj2.string(tmp(1126).t.XnuOvN);
+      const stringResult = obj2.string(ContextMenu(1126).t.XnuOvN);
       cResult[13] = stringResult;
       let PencilIcon = stringResult;
     } else {
-      class C {
-        constructor() {
-          obj = closure_0(closure_3[11]);
-          result = obj.showReportModalForGuildDirectoryEntry(entry);
-          return;
+      class R {
+        constructor(arg0) {
+          tmp = closure_1_5(entry, closure_1_4);
+          obj = { ref: entry.ref };
+          merged = Object.assign(tmp);
+          obj.size = "sm";
+          obj.variant = "secondary";
+          intl = entry(closure_1_3[8]).intl;
+          obj.accessibilityLabel = intl.string(entry(closure_1_3[8]).t.PdRCRg);
+          obj1 = { size: "sm", color: closure_1_1(closure_1_3[17]).colors.WHITE };
+          obj.icon = closure_1_6(entry(closure_1_3[16]).MoreHorizontalIcon, obj1);
+          return closure_1_6(entry(closure_1_3[15]).IconButton, obj);
         }
       }
     }
-    if (cResult[14] !== tmp5) {
-      class C {
-        constructor() {
-          obj = closure_0(closure_3[11]);
-          result = obj.showReportModalForGuildDirectoryEntry(entry);
-          return;
+    if (cResult[14] !== tmp4) {
+      class R {
+        constructor(arg0) {
+          tmp = closure_1_5(entry, closure_1_4);
+          obj = { ref: entry.ref };
+          merged = Object.assign(tmp);
+          obj.size = "sm";
+          obj.variant = "secondary";
+          intl = entry(closure_1_3[8]).intl;
+          obj.accessibilityLabel = intl.string(entry(closure_1_3[8]).t.PdRCRg);
+          obj1 = { size: "sm", color: closure_1_1(closure_1_3[17]).colors.WHITE };
+          obj.icon = closure_1_6(entry(closure_1_3[16]).MoreHorizontalIcon, obj1);
+          return closure_1_6(entry(closure_1_3[15]).IconButton, obj);
         }
       }
-      tmp10[0] = PencilIcon;
-      PencilIcon = tmp(10071).PencilIcon;
-      tmp10[1] = PencilIcon;
-      tmp10[2] = tmp5;
-      cResult[14] = tmp5;
-      cResult[15] = tmp10;
+      tmp9[0] = PencilIcon;
+      PencilIcon = ContextMenu(9675).PencilIcon;
+      tmp9[1] = PencilIcon;
+      tmp9[2] = tmp4;
+      cResult[14] = tmp4;
+      cResult[15] = tmp9;
     } else {
-      class C {
-        constructor() {
-          obj = closure_0(closure_3[11]);
-          result = obj.showReportModalForGuildDirectoryEntry(entry);
-          return;
+      class R {
+        constructor(arg0) {
+          tmp = closure_1_5(entry, closure_1_4);
+          obj = { ref: entry.ref };
+          merged = Object.assign(tmp);
+          obj.size = "sm";
+          obj.variant = "secondary";
+          intl = entry(closure_1_3[8]).intl;
+          obj.accessibilityLabel = intl.string(entry(closure_1_3[8]).t.PdRCRg);
+          obj1 = { size: "sm", color: closure_1_1(closure_1_3[17]).colors.WHITE };
+          obj.icon = closure_1_6(entry(closure_1_3[16]).MoreHorizontalIcon, obj1);
+          return closure_1_6(entry(closure_1_3[15]).IconButton, obj);
         }
       }
     }
-    items.push(tmp10);
+    items.push(tmp9);
   }
-  const tmp4 = useCanManageGuildDirectoryEntryDefault(entry);
-}) : ((entry) => {
+  const tmp3 = useCanManageGuildDirectoryEntryDefault(entry);
+}) : (function GuildDirectoryMoreMenu(entry) {
   entry = entry.entry;
   const tmp2 = useCanManageGuildDirectoryEntryDefault(entry);
   const items = [];
@@ -188,7 +270,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((entry) => {
     let obj = { label: null, IconComponent: null, action: null };
     let intl = entry(1126).intl;
     obj.label = intl.string(entry(1126).t.XnuOvN);
-    obj.IconComponent = entry(10071).PencilIcon;
+    obj.IconComponent = entry(9675).PencilIcon;
     obj.action = function handleEdit() {
       GuildDirectoryEditDescriptionModalActionCreatorsDefault.open({ entry });
     };
@@ -198,7 +280,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((entry) => {
     let obj2 = { label: null, IconComponent: null, variant: "destructive", action: null };
     let intl2 = entry(1126).intl;
     obj2.label = intl2.string(entry(1126).t.KUxYWH);
-    obj2.IconComponent = entry(4853).TrashIcon;
+    obj2.IconComponent = entry(5047).TrashIcon;
     obj2.action = function handleRemove() {
       const obj2 = { title: null, body: null, onConfirm: null, confirmColor: null, confirmText: null, cancelText: null, onCancel: null, isDismissable: false };
       const intl = util.intl;
@@ -224,7 +306,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((entry) => {
     const obj3 = { label: null, IconComponent: null, variant: "destructive", action: null };
     let intl3 = entry(1126).intl;
     obj3.label = intl3.string(entry(1126).t.Aen9eh);
-    obj3.IconComponent = entry(8348).FlagIcon;
+    obj3.IconComponent = entry(9507).FlagIcon;
     obj3.action = function handleReport() {
       const result = ReportModals.showReportModalForGuildDirectoryEntry(entry);
     };
@@ -242,11 +324,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((entry) => {
           obj.variant = "secondary";
           const intl = entry(1126).intl;
           obj.accessibilityLabel = intl.string(entry(1126).t.PdRCRg);
-          obj.icon = jsx(entry(7588).MoreHorizontalIcon, { size: "sm", color: nativeDefault.colors.WHITE });
-          return jsx(entry(7586).IconButton, { ref: ref.ref });
+          obj.icon = jsx(entry(9180).MoreHorizontalIcon, { size: "sm", color: nativeDefault.colors.WHITE });
+          return jsx(entry(8106).IconButton, { ref: ref.ref });
         }
     };
-    tmp9 = jsx(entry(7590).ContextMenu, {
+    tmp9 = jsx(entry(9297).ContextMenu, {
       items,
       children(ref) {
           const merged = Object.assign(ref, Object.assign({ ref: 0 }));
@@ -256,8 +338,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((entry) => {
           obj.variant = "secondary";
           const intl = entry(1126).intl;
           obj.accessibilityLabel = intl.string(entry(1126).t.PdRCRg);
-          obj.icon = jsx(entry(7588).MoreHorizontalIcon, { size: "sm", color: nativeDefault.colors.WHITE });
-          return jsx(entry(7586).IconButton, { ref: ref.ref });
+          obj.icon = jsx(entry(9180).MoreHorizontalIcon, { size: "sm", color: nativeDefault.colors.WHITE });
+          return jsx(entry(8106).IconButton, { ref: ref.ref });
         }
     });
   }

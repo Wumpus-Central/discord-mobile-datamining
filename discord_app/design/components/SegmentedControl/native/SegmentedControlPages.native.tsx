@@ -1,11 +1,11 @@
-// === Module 10987: SegmentedControlPages ===
+// === Module 11211: SegmentedControlPages ===
 
-// Module 10987 (SegmentedControlPages)
+// Module 11211 (SegmentedControlPages)
 import c from "c" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4618 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 5786 */;
-import MathUtils from "MathUtils" /* 10988 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4810 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 5369 */;
+import MathUtils from "MathUtils" /* 11212 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -55,7 +55,7 @@ const __initData22 = { code: "function SegmentedControlPagesNativeTsx36(){const{
 const __initData23 = { code: "function SegmentedControlPagesNativeTsx37(){const{activePageRangeStart,activePageRangeEnd}=this.__closure;return[activePageRangeStart.get(),activePageRangeEnd.get()];}" };
 const __initData24 = { code: "function SegmentedControlPagesNativeTsx38([start,end]){const{index,runOnJS,setFreeze}=this.__closure;const isInActiveRange_0=index>=start&&index<=end;runOnJS(setFreeze)(!isInActiveRange_0);}" };
 let ReactCompilerGating = fn(558);
-let closure_47 = ReactCompilerGating.isReactCompilerEnabled() ? ((reportedPageIndex) => {
+let closure_47 = ReactCompilerGating.isReactCompilerEnabled() ? (function SegmentedControlPage(reportedPageIndex) {
   const cResult = require("c").c(32);
   if (cResult[0] !== reportedPageIndex) {
     reportedPageIndex = reportedPageIndex.reportedPageIndex;
@@ -313,18 +313,20 @@ let closure_47 = ReactCompilerGating.isReactCompilerEnabled() ? ((reportedPageIn
       const tmp29 = cResult[14];
     }
     const effect = derivedValue.useEffect(tmp28, tmp29);
-    const fn = function z() {
-      let display = "none";
-      if (derivedValue.get()) {
-        display = "flex";
+    class A {
+      constructor() {
+        display = "none";
+        if (closure_6.get()) {
+          display = "flex";
+        }
+        return { display, flex: 1 };
       }
-      return { display, flex: 1 };
-    };
+    }
     const obj6 = { isVisibleOnScreen: derivedValue };
-    fn.__closure = obj6;
-    fn.__workletHash = 6740536171688;
-    fn.__initData = __initData17;
-    const animatedStyle = tmp(4618).useAnimatedStyle(fn);
+    A.__closure = obj6;
+    A.__workletHash = 6740536171688;
+    A.__initData = __initData17;
+    const animatedStyle = tmp(4810).useAnimatedStyle(A);
     if (cResult[15] === tmp4) {
       class H {
         constructor() {
@@ -369,7 +371,7 @@ let closure_47 = ReactCompilerGating.isReactCompilerEnabled() ? ((reportedPageIn
     cResult[16] = tmp12;
     cResult[17] = tmp6;
     cResult[18] = N;
-    const tmpResult4 = tmp(4618);
+    const tmpResult4 = tmp(4810);
   }
   class C {
     constructor() {
@@ -377,11 +379,10 @@ let closure_47 = ReactCompilerGating.isReactCompilerEnabled() ? ((reportedPageIn
     }
   }
   cResult[9] = tmp6;
-  cResult[10] = tmp9;
   cResult[11] = C;
   tmp18 = C;
   const tmpResult3 = require("ReanimatedRexport");
-}) : ((children) => {
+}) : (function SegmentedControlPage(children) {
   reportedPageIndex = children.reportedPageIndex;
   pageIndex = children.pageIndex;
   scrollTargetPageIndex = children.scrollTargetPageIndex;
@@ -410,7 +411,7 @@ let closure_47 = ReactCompilerGating.isReactCompilerEnabled() ? ((reportedPageIn
   const derivedValue = reportedPageIndex(scrollTargetPageIndex[5]).useDerivedValue(fn);
   let obj = reportedPageIndex(scrollTargetPageIndex[5]);
   let tmp2 = reportedPageIndex;
-  class I {
+  class S {
     constructor() {
       pointerEvents = "box-none";
       if (reportedPageIndex.get() !== index) {
@@ -419,10 +420,10 @@ let closure_47 = ReactCompilerGating.isReactCompilerEnabled() ? ((reportedPageIn
       return { pointerEvents };
     }
   }
-  I.__closure = { reportedPageIndex, index };
-  I.__workletHash = 12899986233414;
-  I.__initData = __initData19;
-  const animatedProps = reportedPageIndex(scrollTargetPageIndex[5]).useAnimatedProps(I);
+  S.__closure = { reportedPageIndex, index };
+  S.__workletHash = 12899986233414;
+  S.__initData = __initData19;
+  const animatedProps = reportedPageIndex(scrollTargetPageIndex[5]).useAnimatedProps(S);
   const tmp6 = activePageRangeEnd(derivedValue.useState(() => reportedPageIndex.get() !== index), 2);
   accessibilityElementsHidden = tmp6[0];
   closure_8 = tmp8;
@@ -433,7 +434,7 @@ let closure_47 = ReactCompilerGating.isReactCompilerEnabled() ? ((reportedPageIn
   fn2.__closure = { reportedPageIndex, index };
   fn2.__workletHash = 2345652853959;
   fn2.__initData = __initData20;
-  class S {
+  class I {
     constructor(arg0) {
       obj = closure_0(closure_2[5]);
       tmp = obj.runOnJS(closure_8)(children);
@@ -441,10 +442,10 @@ let closure_47 = ReactCompilerGating.isReactCompilerEnabled() ? ((reportedPageIn
     }
   }
   let obj3 = reportedPageIndex(scrollTargetPageIndex[5]);
-  S.__closure = { runOnJS: reportedPageIndex(scrollTargetPageIndex[5]).runOnJS, setIsAccessibilityHidden: tmp6[1] };
-  S.__workletHash = 15518480728660;
-  S.__initData = __initData21;
-  const animatedReaction = obj3.useAnimatedReaction(fn2, S);
+  I.__closure = { runOnJS: reportedPageIndex(scrollTargetPageIndex[5]).runOnJS, setIsAccessibilityHidden: tmp6[1] };
+  I.__workletHash = 15518480728660;
+  I.__initData = __initData21;
+  const animatedReaction = obj3.useAnimatedReaction(fn2, I);
   derivedValue.useRef(null);
   ref = derivedValue.useRef(accessibilityElementsHidden);
   let items = [accessibilityElementsHidden];
@@ -529,7 +530,7 @@ const __initData28 = { code: "function SegmentedControlPagesNativeTsx42(min,max)
 const __initData29 = { code: "function SegmentedControlPagesNativeTsx43(){const{activeIndex,pressedIndex}=this.__closure;return{activeIndex:activeIndex.get(),pressedIndex:pressedIndex.get()};}" };
 const __initData30 = { code: "function SegmentedControlPagesNativeTsx44({activeIndex:activeIndex_0,pressedIndex:pressedIndex_0}){const{expandActivePageRange}=this.__closure;let min_0=activeIndex_0;let max_0=activeIndex_0;if(pressedIndex_0!==-1){min_0=Math.min(activeIndex_0,pressedIndex_0);max_0=Math.max(activeIndex_0,pressedIndex_0);}expandActivePageRange(Math.floor(min_0),Math.ceil(max_0));}" };
 ReactCompilerGating = fn(558);
-let closure_54 = ReactCompilerGating.isReactCompilerEnabled() ? ((activeIndex, pressedIndex) => {
+let closure_54 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFrozenPageIndices(activeIndex, pressedIndex) {
   const cResult = c.c(3);
   const sharedValue = ReanimatedRexport2.useSharedValue(activeIndex.get());
   const sharedValue1 = ReanimatedRexport2.useSharedValue(activeIndex.get());
@@ -580,7 +581,7 @@ let closure_54 = ReactCompilerGating.isReactCompilerEnabled() ? ((activeIndex, p
   cResult[1] = sharedValue;
   cResult[2] = items;
   tmp5 = items;
-}) : ((activeIndex, pressedIndex) => {
+}) : (function useFrozenPageIndices(activeIndex, pressedIndex) {
   const sharedValue = ReanimatedRexport2.useSharedValue(activeIndex.get());
   const sharedValue1 = ReanimatedRexport2.useSharedValue(activeIndex.get());
   const fn = function o(arg0, arg1) {
@@ -621,7 +622,7 @@ let closure_54 = ReactCompilerGating.isReactCompilerEnabled() ? ((activeIndex, p
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/SegmentedControl/native/SegmentedControlPages.native.tsx");
 
-export const SegmentedControlPages = ReactCompilerGating.isReactCompilerEnabled() ? ((onEndDragWorklet) => {
+export const SegmentedControlPages = ReactCompilerGating.isReactCompilerEnabled() ? (function SegmentedControlPages(onEndDragWorklet) {
   const cResult = onBeginDragWorklet(onScrollWorklet[7]).c(44);
   ({ state, style, bounces, nativeGesture, onBeginDragWorklet } = onEndDragWorklet);
   onEndDragWorklet = onEndDragWorklet.onEndDragWorklet;
@@ -894,7 +895,7 @@ export const SegmentedControlPages = ReactCompilerGating.isReactCompilerEnabled(
       he.__initData = __initData3;
       const derivedValue = onBeginDragWorklet(tmp2[5]).useDerivedValue(he);
       const tmpResult8 = onBeginDragWorklet(tmp2[5]);
-      class Ie {
+      class Se {
         constructor() {
           value = closure_10.get();
           rounded = Math.floor(value);
@@ -915,9 +916,9 @@ export const SegmentedControlPages = ReactCompilerGating.isReactCompilerEnabled(
         }
       }
       const obj15 = { pageIndex: sharedValue, scrollTargetPageIndex: derivedValue };
-      Ie.__closure = obj15;
-      Ie.__workletHash = 9125733538935;
-      Ie.__initData = re;
+      Se.__closure = obj15;
+      Se.__workletHash = 9125733538935;
+      Se.__initData = re;
       function ve(arg0, arg1) {
         if (!tmp) {
           const result = visiblePageRange.set(arg0);
@@ -928,7 +929,7 @@ export const SegmentedControlPages = ReactCompilerGating.isReactCompilerEnabled(
       ve.__closure = obj16;
       ve.__workletHash = 14106897948399;
       ve.__initData = style;
-      const animatedReaction2 = onBeginDragWorklet(tmp2[5]).useAnimatedReaction(Ie, ve);
+      const animatedReaction2 = onBeginDragWorklet(tmp2[5]).useAnimatedReaction(Se, ve);
       if (0 === pageWidth) {
         return null;
       } else {
@@ -961,7 +962,7 @@ export const SegmentedControlPages = ReactCompilerGating.isReactCompilerEnabled(
                                     class Pe {
                                       constructor(arg0, arg1) {
                                         obj = { index: arg1, activePageRangeStart: closure_21, activePageRangeEnd: closure_22, reportedPageIndex: closure_11, pageIndex: closure_10, scrollTargetPageIndex: closure_23, style: closure_20, item: onEndDragWorklet };
-                                        return jsx(f56558, obj, arg1);
+                                        return jsx(SegmentedControlPage, obj, arg1);
                                       }
                                     }
                                     if (null != nativeGesture) {
@@ -969,7 +970,7 @@ export const SegmentedControlPages = ReactCompilerGating.isReactCompilerEnabled(
                                       class Pe {
                                         constructor(arg0, arg1) {
                                           obj = { index: arg1, activePageRangeStart: closure_21, activePageRangeEnd: closure_22, reportedPageIndex: closure_11, pageIndex: closure_10, scrollTargetPageIndex: closure_23, style: closure_20, item: onEndDragWorklet };
-                                          return jsx(f56558, obj, arg1);
+                                          return jsx(SegmentedControlPage, obj, arg1);
                                         }
                                       }
                                       const tmp47 = scrollOverflow(onBeginDragWorklet(tmp2[10]).GestureDetector, obj17);
@@ -988,7 +989,7 @@ export const SegmentedControlPages = ReactCompilerGating.isReactCompilerEnabled(
                         class Pe {
                           constructor(arg0, arg1) {
                             obj = { index: arg1, activePageRangeStart: closure_21, activePageRangeEnd: closure_22, reportedPageIndex: closure_11, pageIndex: closure_10, scrollTargetPageIndex: closure_23, style: closure_20, item: onEndDragWorklet };
-                            return jsx(f56558, obj, arg1);
+                            return jsx(SegmentedControlPage, obj, arg1);
                           }
                         }
                         obj18.style = tmp36;
@@ -1032,7 +1033,7 @@ export const SegmentedControlPages = ReactCompilerGating.isReactCompilerEnabled(
                     class Pe {
                       constructor(arg0, arg1) {
                         obj = { index: arg1, activePageRangeStart: closure_21, activePageRangeEnd: closure_22, reportedPageIndex: closure_11, pageIndex: closure_10, scrollTargetPageIndex: closure_23, style: closure_20, item: onEndDragWorklet };
-                        return jsx(f56558, obj, arg1);
+                        return jsx(SegmentedControlPage, obj, arg1);
                       }
                     }
                     cResult[19] = first;
@@ -1050,7 +1051,7 @@ export const SegmentedControlPages = ReactCompilerGating.isReactCompilerEnabled(
           class Pe {
             constructor(arg0, arg1) {
               obj = { index: arg1, activePageRangeStart: closure_21, activePageRangeEnd: closure_22, reportedPageIndex: closure_11, pageIndex: closure_10, scrollTargetPageIndex: closure_23, style: closure_20, item: onEndDragWorklet };
-              return jsx(f56558, obj, arg1);
+              return jsx(SegmentedControlPage, obj, arg1);
             }
           }
           cResult[26] = tmp30;
@@ -1096,7 +1097,7 @@ export const SegmentedControlPages = ReactCompilerGating.isReactCompilerEnabled(
   cResult[3] = scrollTarget;
   tmp11 = Z;
   const tmpResult6 = onBeginDragWorklet(onScrollWorklet[5]);
-}) : ((onEndDragWorklet) => {
+}) : (function SegmentedControlPages(onEndDragWorklet) {
   ({ state, nativeGesture, onBeginDragWorklet } = onEndDragWorklet);
   onEndDragWorklet = onEndDragWorklet.onEndDragWorklet;
   const onScrollWorklet = onEndDragWorklet.onScrollWorklet;
@@ -1127,14 +1128,14 @@ export const SegmentedControlPages = ReactCompilerGating.isReactCompilerEnabled(
     closure_15.current = current;
   }, []);
   let obj3 = onBeginDragWorklet(onScrollWorklet[5]);
-  class I {
+  class S {
     constructor() {
       return activeIndex.get();
     }
   }
-  I.__closure = { activeIndex };
-  I.__workletHash = 1395514015727;
-  I.__initData = __initData;
+  S.__closure = { activeIndex };
+  S.__workletHash = 1395514015727;
+  S.__initData = __initData;
   const fn = function v(arg0) {
     ReanimatedRexport2.runOnJS(callback)(arg0);
   };
@@ -1142,7 +1143,7 @@ export const SegmentedControlPages = ReactCompilerGating.isReactCompilerEnabled(
   fn.__closure = { runOnJS: onBeginDragWorklet(onScrollWorklet[5]).runOnJS, updateCurrentActiveIndex };
   fn.__workletHash = 12907997375351;
   fn.__initData = __initData;
-  const animatedReaction = obj4.useAnimatedReaction(I, fn);
+  const animatedReaction = obj4.useAnimatedReaction(S, fn);
   const obj5 = { runOnJS: onBeginDragWorklet(onScrollWorklet[5]).runOnJS, updateCurrentActiveIndex };
   const fn2 = function p() {
     return sharedValue.get();
@@ -1150,16 +1151,16 @@ export const SegmentedControlPages = ReactCompilerGating.isReactCompilerEnabled(
   fn2.__closure = { pageIndex: sharedValue };
   fn2.__workletHash = 10499929423113;
   fn2.__initData = derivedValue;
-  class S {
+  class I {
     constructor(arg0) {
       result = activeIndex.set(onEndDragWorklet);
       return;
     }
   }
-  S.__closure = { activeIndex };
-  S.__workletHash = 4431632836916;
-  S.__initData = __initData4;
-  const animatedReaction1 = onBeginDragWorklet(onScrollWorklet[5]).useAnimatedReaction(fn2, S);
+  I.__closure = { activeIndex };
+  I.__workletHash = 4431632836916;
+  I.__initData = __initData4;
+  const animatedReaction1 = onBeginDragWorklet(onScrollWorklet[5]).useAnimatedReaction(fn2, I);
   const items1 = [onPageChangeRef];
   callback1 = scrollTarget.useCallback((AUTO_DISMISS) => {
     if (onPageChangeRef != null) {

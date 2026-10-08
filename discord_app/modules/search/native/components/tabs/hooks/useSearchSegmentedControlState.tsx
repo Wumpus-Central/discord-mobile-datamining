@@ -1,7 +1,7 @@
-// === Module 16923: useSearchSegmentedControlState ===
+// === Module 17204: useSearchSegmentedControlState ===
 
-// Module 16923 (useSearchSegmentedControlState)
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+// Module 17204 (useSearchSegmentedControlState)
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,7 +21,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/tabs/hooks/useSearchSegmentedControlState.tsx");
 
-export const useSearchSegmentedControlState = ReactCompilerGating.isReactCompilerEnabled() ? ((onSelectedTabChange) => {
+export const useSearchSegmentedControlState = ReactCompilerGating.isReactCompilerEnabled() ? (function useSearchSegmentedControlState(onSelectedTabChange) {
   const cResult = visibleTabs(onSelectedTabChange[2]).c(6);
   ({ items, visibleTabs } = onSelectedTabChange);
   onSelectedTabChange = onSelectedTabChange.onSelectedTabChange;
@@ -140,7 +140,7 @@ export const useSearchSegmentedControlState = ReactCompilerGating.isReactCompile
   cResult[2] = tmp7;
   tmp6 = tmp7;
   const obj3 = visibleTabs(onSelectedTabChange[3]);
-}) : ((visibleTabs) => {
+}) : (function useSearchSegmentedControlState(visibleTabs) {
   visibleTabs = visibleTabs.visibleTabs;
   const onSelectedTabChange = visibleTabs.onSelectedTabChange;
   ({ items, width } = visibleTabs);

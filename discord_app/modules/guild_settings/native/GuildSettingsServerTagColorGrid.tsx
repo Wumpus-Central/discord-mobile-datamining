@@ -1,16 +1,16 @@
-// === Module 17811: GuildSettingsServerTagColorGrid ===
+// === Module 18098: GuildSettingsServerTagColorGrid ===
 
-// Module 17811 (GuildSettingsServerTagColorGrid)
+// Module 18098 (GuildSettingsServerTagColorGrid)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
-const GuildTagConstants = fn(7614);
+const GuildTagConstants = fn(7860);
 ({ GUILD_TAG_BADGE_PALETTE_PRESETS: closure_4, GUILD_TAG_BADGE_NUM_CUSTOMIZABLE_COLORS: hasOwnProperty, GuildTagBadgeSize: metroRequire } = GuildTagConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { grid: { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_8 }, defaultIcon: null };
 const rect = { position: "absolute", right: nativeDefault.space.PX_4, bottom: nativeDefault.space.PX_4 };
 obj2.defaultIcon = rect;
@@ -19,7 +19,7 @@ const ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/native/GuildSettingsServerTagColorGrid.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSettingsServerTagColorGrid(badge) {
   const cResult = badge(secondaryColor[7]).c(41);
   badge = badge.badge;
   const primaryColor = badge.primaryColor;
@@ -259,7 +259,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
   cResult[3] = secondaryColor;
   cResult[4] = everyResult;
   let obj = badge(secondaryColor[7]);
-}) : ((badge) => {
+}) : (function GuildSettingsServerTagColorGrid(badge) {
   badge = badge.badge;
   let primary = badge.primaryColor;
   let secondary = badge.secondaryColor;

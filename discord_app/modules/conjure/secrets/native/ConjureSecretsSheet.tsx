@@ -1,6 +1,6 @@
-// === Module 16748: ConjureSecretsSheet ===
+// === Module 17023: ConjureSecretsSheet ===
 
-// Module 16748 (ConjureSecretsSheet)
+// Module 17023 (ConjureSecretsSheet)
 import nativeDefault from "native" /* 587 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -10,11 +10,11 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const ConjureConnectionStore = fn(12923);
+const ConjureConnectionStore = fn(13072);
 ({ sendUserMessage: closure_7, submitProjectSecrets: closure_8 } = ConjureConnectionStore);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_11 = createStyles.createStyles((paddingBottom) => {
   const obj = { container: { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom }, copyRow: null, copyInfo: null };
   const obj2 = { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom };
@@ -27,7 +27,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/secrets/native/ConjureSecretsSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureSecretsSheet(projectId) {
   const cResult = projectId(ref[9]).c(56);
   projectId = projectId.projectId;
   const request = projectId.request;
@@ -54,34 +54,28 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
   [r10055, closure_7] = noop.useState(false);
   [closure_8, closure_9] = noop.useState(null);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    class I {
-      constructor(arg0) {
-        closure_0 = projectId;
-        obj = closure_0(closure_2[11]);
-        copyResult = obj.copy(projectId, () => { ... });
-        return;
-      }
-    }
-    cResult[2] = I;
-    const tmp12 = I;
+    const fn = function j(arg0) {
+      closure_0 = arg0;
+      projectId(ref[11]).copy(arg0, () => closure_9(closure_0));
+    };
+    cResult[2] = fn;
+    let tmp12 = fn;
   } else {
-    class I {
-      constructor(arg0) {
-        closure_0 = projectId;
-        obj = closure_0(closure_2[11]);
-        copyResult = obj.copy(projectId, () => { ... });
-        return;
-      }
-    }
+    tmp12 = cResult[2];
   }
-  I = tmp12;
+  closure_10 = tmp12;
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     class V {
       constructor(arg0, arg1) {
         closure_0 = projectId;
         closure_1 = arg1;
         tmp = closure_7(false);
-        tmp2 = closure_4(() => { ... });
+        tmp2 = closure_4((arg0) => {
+          const obj = {};
+          const merged = Object.assign(arg0);
+          obj[closure_0] = closure_1;
+          return obj;
+        });
         return;
       }
     }
@@ -92,7 +86,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
         closure_0 = projectId;
         closure_1 = arg1;
         tmp = closure_7(false);
-        tmp2 = closure_4(() => { ... });
+        tmp2 = closure_4((arg0) => {
+          const obj = {};
+          const merged = Object.assign(arg0);
+          obj[closure_0] = closure_1;
+          return obj;
+        });
         return;
       }
     }
@@ -104,7 +103,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
         closure_0 = projectId;
         closure_1 = arg1;
         tmp = closure_7(false);
-        tmp2 = closure_4(() => { ... });
+        tmp2 = closure_4((arg0) => {
+          const obj = {};
+          const merged = Object.assign(arg0);
+          obj[closure_0] = closure_1;
+          return obj;
+        });
         return;
       }
     }
@@ -153,7 +157,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
   cResult[5] = first1;
   cResult[6] = found;
   const tmp10 = _slicedToArray(noop.useState(false), 2);
-}) : ((projectId) => {
+}) : (function ConjureSecretsSheet(projectId) {
   projectId = projectId.projectId;
   const request = projectId.request;
   importDefault = undefined;
@@ -258,7 +262,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
         } else if (arg0 !== 2) {
           dependencyMap = 0;
           const intl = tmp3(1126).intl;
-          const tmp41 = v2(3753);
+          const tmp41 = v2(3827);
           if (closure_128_14) {
             let UGqnoV = tmp41.sMQt5O;
           } else {
@@ -287,7 +291,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
   let obj = { ref, startExpanded: true, keyboardShouldPersistTaps: "handled", header: null, children: null };
   let obj2 = { title: null };
   let intl = projectId(ref[12]).intl;
-  obj2.title = intl.string(require("module_3753").TuMGZp);
+  obj2.title = intl.string(require("module_3827").TuMGZp);
   obj.header = c9(projectId(ref[14]).BottomSheetTitleHeader, obj2);
   let obj3 = { style: tmp3.container, children: null };
   let tmp15Result = null;
@@ -301,7 +305,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
   let items1 = [tmp15Result, , , , , , ];
   let obj5 = { variant: "text-xs/normal", color: "text-muted", children: null };
   const intl2 = tmp16(tmp2[12]).intl;
-  obj5.children = intl2.string(require("module_3753").jgDBJZ);
+  obj5.children = intl2.string(require("module_3827").jgDBJZ);
   items1[1] = c9(projectId(ref[15]).Text, obj5);
   let tmp15Result3 = null;
   if (request.fields.length > 1) {
@@ -370,7 +374,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
   items1[5] = tmp15Result4;
   const obj8 = { text: null, variant: "primary", loading: null, disabled: null, onPress: null };
   const intl5 = tmp16(tmp2[12]).intl;
-  obj8.text = intl5.string(require("module_3753").DUdtms);
+  obj8.text = intl5.string(require("module_3827").DUdtms);
   obj8.loading = first1;
   obj8.disabled = found.length <= 0;
   obj8.onPress = callback;

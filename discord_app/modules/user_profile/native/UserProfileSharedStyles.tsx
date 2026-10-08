@@ -1,9 +1,9 @@
-// === Module 7924: UserProfileSharedStyles ===
+// === Module 8343: UserProfileSharedStyles ===
 
-// Module 7924 (UserProfileSharedStyles)
+// Module 8343 (UserProfileSharedStyles)
 import nativeDefault from "native" /* 587 */;
-import Constants from "Constants" /* 6714 */;
-import createStyles from "createStyles" /* 4896 */;
+import Constants from "Constants" /* 6891 */;
+import createStyles from "createStyles" /* 5090 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -24,7 +24,9 @@ let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const result1 = size.fileFinishedImporting("modules/user_profile/native/UserProfileSharedStyles.tsx");
 
-export default () => closure_9();
+export default function useSharedStyles() {
+  return closure_9();
+};
 export const useUserProfileCardRadius = function useUserProfileCardRadius() {
   return nativeDefault.radii.md;
 };

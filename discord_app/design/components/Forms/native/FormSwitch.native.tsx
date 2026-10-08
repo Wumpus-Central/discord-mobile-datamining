@@ -1,13 +1,13 @@
-// === Module 6706: FormSwitch ===
+// === Module 6883: FormSwitch ===
 
-// Module 6706 (FormSwitch)
+// Module 6883 (FormSwitch)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4618 */;
-import HapticUtils from "HapticUtils" /* 4861 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4862 */;
-import IconDefault from "Icon" /* 5603 */;
-import spring from "spring" /* 5604 */;
-import springPresets from "springPresets" /* 5605 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4810 */;
+import HapticUtils from "HapticUtils" /* 5055 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5056 */;
+import spring from "spring" /* 5374 */;
+import IconDefault from "Icon" /* 5377 */;
+import springPresets from "springPresets" /* 5378 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ require = fn;
 const jsx = fn(21).jsx;
 let ReanimatedRexport = ReanimatedRexport_mod;
 let closure_6 = ReanimatedRexport.createAnimatedComponent(fn(17).Pressable);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { switch: null, unselectedIcon: null, selectedIcon: null, knob: null };
 let size = { width: nativeDefault.modules.mobile.CONTROL_SWITCH_WIDTH, height: nativeDefault.modules.mobile.CONTROL_SWITCH_HEIGHT, padding: nativeDefault.space.PX_4 - 1, flexGrow: 0, flexShrink: 0, borderRadius: nativeDefault.radii.lg, borderWidth: 1, backgroundColor: nativeDefault.colors.SWITCH_BACKGROUND_DEFAULT, borderColor: nativeDefault.colors.SWITCH_BORDER_DEFAULT };
 obj.switch = size;
@@ -76,44 +76,43 @@ export const FormSwitch = function FormSwitch(onValueChange) {
   const tmp2Result15 = require("useToken");
   const token6 = require("useToken").useToken(require("native").colors.SWITCH_THUMB_BACKGROUND_SELECTED_DEFAULT);
   const tmp2Result16 = require("useToken");
+  const fn = function y() {
+    value = sharedValue.get();
+    const obj = { backgroundColor: null, borderColor: null };
+    const items = [token, token1];
+    obj.backgroundColor = ReanimatedRexport2.interpolateColor(value, [0, 1], items);
+    const items1 = [token2, token3];
+    obj.borderColor = ReanimatedRexport2.interpolateColor(value, [0, 1], items1);
+    return obj;
+  };
+  const tmp2Result17 = require("ReanimatedRexport");
+  fn.__closure = { progress: sharedValue, interpolateColor: require("ReanimatedRexport").interpolateColor, trackColor: token, trackSelectedColor: token1, trackBorderColor: token2, trackBorderSelectedColor: token3 };
+  fn.__workletHash = 11488728296308;
+  fn.__initData = token4;
+  const animatedStyle = tmp2Result17.useAnimatedStyle(fn);
+  const obj3 = { progress: sharedValue, interpolateColor: require("ReanimatedRexport").interpolateColor, trackColor: token, trackSelectedColor: token1, trackBorderColor: token2, trackBorderSelectedColor: token3 };
   class D {
     constructor() {
       value = closure_4.get();
-      obj = { backgroundColor: null, borderColor: null };
+      obj = { left: null, backgroundColor: null };
       obj2 = closure_0(closure_2[4]);
-      items = [, ];
-      items[0] = closure_5;
-      items[1] = closure_6;
-      obj.backgroundColor = obj2.interpolateColor(value, [0, 1], items);
+      items = [0];
+      items[1] = closure_9;
+      obj.left = obj2.interpolate(value, [0, 1], items);
       obj3 = closure_0(closure_2[4]);
       items1 = [, ];
-      items1[0] = closure_7;
-      items1[1] = closure_8;
-      obj.borderColor = obj3.interpolateColor(value, [0, 1], items1);
+      items1[0] = closure_10;
+      items1[1] = closure_11;
+      obj.backgroundColor = obj3.interpolateColor(value, [0, 1], items1);
       return obj;
     }
   }
-  const tmp2Result17 = require("ReanimatedRexport");
-  D.__closure = { progress: sharedValue, interpolateColor: require("ReanimatedRexport").interpolateColor, trackColor: token, trackSelectedColor: token1, trackBorderColor: token2, trackBorderSelectedColor: token3 };
-  D.__workletHash = 11488728296308;
-  D.__initData = token4;
-  const animatedStyle = tmp2Result17.useAnimatedStyle(D);
-  const obj3 = { progress: sharedValue, interpolateColor: require("ReanimatedRexport").interpolateColor, trackColor: token, trackSelectedColor: token1, trackBorderColor: token2, trackBorderSelectedColor: token3 };
-  const fn = function y() {
-    value = sharedValue.get();
-    const obj = { left: null, backgroundColor: null };
-    const items = [0, token4];
-    obj.left = ReanimatedRexport2.interpolate(value, [0, 1], items);
-    const items1 = [token5, token6];
-    obj.backgroundColor = ReanimatedRexport2.interpolateColor(value, [0, 1], items1);
-    return obj;
-  };
   const tmp2Result18 = require("ReanimatedRexport");
-  fn.__closure = { progress: sharedValue, interpolate: require("ReanimatedRexport").interpolate, knobCheckedLeft: token4, interpolateColor: require("ReanimatedRexport").interpolateColor, knobBackgroundColor: token5, knobSelectedBackgroundColor: token6 };
-  fn.__workletHash = 10509423128696;
-  fn.__initData = token5;
+  D.__closure = { progress: sharedValue, interpolate: require("ReanimatedRexport").interpolate, knobCheckedLeft: token4, interpolateColor: require("ReanimatedRexport").interpolateColor, knobBackgroundColor: token5, knobSelectedBackgroundColor: token6 };
+  D.__workletHash = 10509423128696;
+  D.__initData = token5;
   _require = 1;
-  const animatedStyle1 = tmp2Result18.useAnimatedStyle(fn);
+  const animatedStyle1 = tmp2Result18.useAnimatedStyle(D);
   const obj4 = { progress: sharedValue, interpolate: require("ReanimatedRexport").interpolate, knobCheckedLeft: token4, interpolateColor: require("ReanimatedRexport").interpolateColor, knobBackgroundColor: token5, knobSelectedBackgroundColor: token6 };
   const fn2 = function n() {
     value = noop.get();
@@ -164,7 +163,7 @@ export const FormSwitch = function FormSwitch(onValueChange) {
       obj7 = { accessible: true, accessibilityRole: "switch", accessibilityLabel, accessibilityHint, accessibilityState: null, onAccessibilityTap: null };
       const obj8 = { disabled, checked: tmp6 };
       obj7.accessibilityState = obj8;
-      obj7.onAccessibilityTap = function onAccessibilityTap() {
+      obj7.onAccessibilityTap = function handleAccessibilityTap() {
         const triggerHapticFeedback = HapticUtils.triggerHapticFeedback;
         const tmp3 = haptics_HapticFeedbackTypesDefault;
         if (c0) {

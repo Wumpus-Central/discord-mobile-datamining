@@ -1,10 +1,10 @@
-// === Module 14840: useBountyAppStoreOverlayPlayback ===
+// === Module 15101: useBountyAppStoreOverlayPlayback ===
 
-// Module 14840 (useBountyAppStoreOverlayPlayback)
+// Module 15101 (useBountyAppStoreOverlayPlayback)
 import c from "c" /* 576 */;
-import useBountyVideoEndAppStoreOverlay from "useBountyVideoEndAppStoreOverlay" /* 14841 */;
-import useBountiesModalTiming from "useBountiesModalTiming" /* 14843 */;
-import useBountyPauseAppStoreSheet from "useBountyPauseAppStoreSheet" /* 14844 */;
+import useBountyVideoEndAppStoreOverlay from "useBountyVideoEndAppStoreOverlay" /* 15102 */;
+import useBountiesModalTiming from "useBountiesModalTiming" /* 15104 */;
+import useBountyPauseAppStoreSheet from "useBountyPauseAppStoreSheet" /* 15105 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ export const getBountyVideoEndMode = function getBountyVideoEndMode(bounty) {
   const BountyVideoEndMode = useBountiesModalTiming.BountyVideoEndMode;
   return result ? BountyVideoEndMode.APP_STORE_LOOP : BountyVideoEndMode.END_CARD;
 };
-export const useBountyAppStoreOverlayPlayback = ReactCompilerGating.isReactCompilerEnabled() ? ((handleVideoPaused) => {
+export const useBountyAppStoreOverlayPlayback = ReactCompilerGating.isReactCompilerEnabled() ? (function useBountyAppStoreOverlayPlayback(handleVideoPaused) {
   const cResult = c.c(26);
   ({ bounty, sourceQuestContent, isActive, endMode, playerRef, handleVideoEnd } = handleVideoPaused);
   handleVideoPaused = handleVideoPaused.handleVideoPaused;
@@ -190,7 +190,7 @@ export const useBountyAppStoreOverlayPlayback = ReactCompilerGating.isReactCompi
   cResult[4] = sourceQuestContent;
   cResult[5] = obj3;
   tmp4 = obj3;
-}) : ((handleVideoPaused) => {
+}) : (function useBountyAppStoreOverlayPlayback(handleVideoPaused) {
   ({ bounty, sourceQuestContent, isActive, endMode, handleVideoEnd } = handleVideoPaused);
   handleVideoPaused = handleVideoPaused.handleVideoPaused;
   const handleVideoResumed = handleVideoPaused.handleVideoResumed;

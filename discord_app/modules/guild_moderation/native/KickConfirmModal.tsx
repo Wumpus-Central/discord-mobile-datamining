@@ -1,7 +1,7 @@
-// === Module 11481: KickConfirmModal ===
+// === Module 11465: KickConfirmModal ===
 
-// Module 11481 (KickConfirmModal)
-import KickConfirmDefault from "KickConfirm" /* 11474 */;
+// Module 11465 (KickConfirmModal)
+import KickConfirmDefault from "KickConfirm" /* 11458 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_moderation/native/KickConfirmModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function KickConfirmModal(userId) {
   const cResult = guildId(onGoBack[3]).c(7);
   ({ cancelButtonCallback, guildId } = userId);
   userId = userId.userId;
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   cResult[5] = userId;
   cResult[6] = tmp9;
   tmp8 = tmp9;
-}) : ((onBeforeGoBack) => {
+}) : (function KickConfirmModal(onBeforeGoBack) {
   ({ guildId: require, userId: importDefault } = onBeforeGoBack);
   let onGoBack;
   onGoBack = require("useNavigatorBackHandler")({ onBeforeGoBack: onBeforeGoBack.cancelButtonCallback }).onGoBack;

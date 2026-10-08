@@ -1,15 +1,15 @@
-// === Module 8056: MediaModalOverlayHeaderWrapper ===
+// === Module 8465: MediaModalOverlayHeaderWrapper ===
 
-// Module 8056 (MediaModalOverlayHeaderWrapper)
+// Module 8465 (MediaModalOverlayHeaderWrapper)
 import c from "c" /* 576 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import NavigatorConstants from "NavigatorConstants" /* 6075 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import NavigatorConstants from "NavigatorConstants" /* 6261 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles((paddingTop, arg1, arg2) => {
   const obj = { bar: { flexDirection: "row", alignItems: "center", height: NavigatorConstants.NAV_BAR_HEIGHT + paddingTop, paddingTop, paddingLeft: arg1 + 6, paddingRight: arg2 + 6 } };
   return obj;
@@ -18,7 +18,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaModalOverlayHeaderWrapper.tsx");
 
-export const MediaModalOverlayHeaderWrapper = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const MediaModalOverlayHeaderWrapper = ReactCompilerGating.isReactCompilerEnabled() ? (function MediaModalOverlayHeaderWrapper(arg0) {
   const cResult = c.c(6);
   ({ children, style } = arg0);
   const rect = useSafeAreaInsetsDefault();
@@ -45,7 +45,7 @@ export const MediaModalOverlayHeaderWrapper = ReactCompilerGating.isReactCompile
   cResult[1] = tmp2.bar;
   cResult[2] = items;
   tmp3 = items;
-}) : ((arg0) => {
+}) : (function MediaModalOverlayHeaderWrapper(arg0) {
   ({ children, style } = arg0);
   const rect = useSafeAreaInsetsDefault();
   const obj = { style: null, pointerEvents: "box-none", children: null };

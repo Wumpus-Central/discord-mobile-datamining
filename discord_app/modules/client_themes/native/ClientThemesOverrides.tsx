@@ -1,17 +1,17 @@
-// === Module 7518: ClientThemesOverrides ===
+// === Module 9241: ClientThemesOverrides ===
 
-// Module 7518 (ClientThemesOverrides)
+// Module 9241 (ClientThemesOverrides)
 import c from "c" /* 576 */;
-import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4702 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 7519 */;
+import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4896 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9242 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles({ none: { backgroundColor: "transparent" } });
 fn(558);
 let ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGradientBottom() {
   const cResult = c.c(2);
   const gradientValue = client_themes_ClientThemesUtils.useGradientValue(client_themes_ClientThemesUtils.GradientPercentage.END);
   if (cResult[0] !== gradientValue) {
@@ -27,7 +27,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp3 = cResult[1];
   }
   return tmp3;
-}) : (() => {
+}) : (function useGradientBottom() {
   const gradientValue = client_themes_ClientThemesUtils.useGradientValue(client_themes_ClientThemesUtils.GradientPercentage.END);
   const items = [gradientValue];
   return noop.useMemo(() => {
@@ -40,7 +40,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }, items);
 });
 ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGradientTop() {
   const cResult = c.c(2);
   const gradientValue = client_themes_ClientThemesUtils.useGradientValue(client_themes_ClientThemesUtils.GradientPercentage.START);
   if (cResult[0] !== gradientValue) {
@@ -56,7 +56,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp3 = cResult[1];
   }
   return tmp3;
-}) : (() => {
+}) : (function useGradientTop() {
   const gradientValue = client_themes_ClientThemesUtils.useGradientValue(client_themes_ClientThemesUtils.GradientPercentage.START);
   const items = [gradientValue];
   return noop.useMemo(() => {
@@ -69,7 +69,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }, items);
 });
 ReactCompilerGating = fn(558);
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGradientMidpoint() {
   const cResult = c.c(2);
   const gradientValue = client_themes_ClientThemesUtils.useGradientValue(client_themes_ClientThemesUtils.GradientPercentage.MID);
   if (cResult[0] !== gradientValue) {
@@ -85,7 +85,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp3 = cResult[1];
   }
   return tmp3;
-}) : (() => {
+}) : (function useGradientMidpoint() {
   const gradientValue = client_themes_ClientThemesUtils.useGradientValue(client_themes_ClientThemesUtils.GradientPercentage.MID);
   const items = [gradientValue];
   return noop.useMemo(() => {
@@ -103,7 +103,7 @@ const result = size.fileFinishedImporting("modules/client_themes/native/ClientTh
 export const useGradientBottom = tmp2;
 export const useGradientTop = tmp3;
 export const useGradientMidpoint = tmp4;
-export const useClientThemesOverride = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useClientThemesOverride = ReactCompilerGating.isReactCompilerEnabled() ? (function useClientThemesOverride(arg0) {
   let tmp2;
   if (useIsUsingClientThemeDefault()) {
     let none = arg0;
@@ -113,7 +113,7 @@ export const useClientThemesOverride = ReactCompilerGating.isReactCompilerEnable
     tmp2 = none;
   }
   return tmp2;
-}) : ((arg0) => {
+}) : (function useClientThemesOverride(arg0) {
   let tmp2;
   if (useIsUsingClientThemeDefault()) {
     let none = arg0;

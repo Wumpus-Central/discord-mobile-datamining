@@ -1,26 +1,26 @@
-// === Module 6081: TableRowGroup ===
+// === Module 6267: TableRowGroup ===
 
-// Module 6081 (TableRowGroup)
+// Module 6267 (TableRowGroup)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4586 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import TableRowDivider from "TableRowDivider" /* 5995 */;
-import TableRowGroupContext from "TableRowGroupContext" /* 6001 */;
+import useToken from "useToken" /* 4778 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import TableRowDivider from "TableRowDivider" /* 6179 */;
+import TableRowGroupContext from "TableRowGroupContext" /* 6185 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { flexShrink: 0 }, content: { borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, overflow: "hidden", flexGrow: 1, flexShrink: 0, padding: 0 }, title: { marginBottom: 8 }, description: { marginBottom: 8 }, hasTrailingText: null, helperText: null };
 let obj3 = { borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, overflow: "hidden", flexGrow: 1, flexShrink: 0, padding: 0 };
 obj2.hasTrailingText = { borderBottomLeftRadius: nativeDefault.radii.none, borderBottomRightRadius: nativeDefault.radii.none };
 obj2.helperText = { marginTop: 8 };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function TableRowGroupTitle(arg0) {
   const cResult = c.c(7);
   ({ title, style, lineClamp } = arg0);
   const tmp4 = closure_8();
@@ -49,7 +49,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = tmp4.title;
   cResult[2] = items;
   tmp5 = items;
-}) : ((arg0) => {
+}) : (function TableRowGroupTitle(arg0) {
   ({ title, style, lineClamp } = arg0);
   const obj = { accessibilityRole: "header", variant: "text-md/medium", color: "text-subtle", style: null, lineClamp, children: title };
   const items = [closure_8().title, style];

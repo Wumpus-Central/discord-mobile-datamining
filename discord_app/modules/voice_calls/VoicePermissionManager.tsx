@@ -1,19 +1,19 @@
-// === Module 17488: VoicePermissionManager ===
+// === Module 17770: VoicePermissionManager ===
 
-// Module 17488 (VoicePermissionManager)
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 5043 */;
-import NativePermissionUtilsDefault from "NativePermissionUtils" /* 7288 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 5585 */;
-import VoiceStateRecord from "VoiceStateRecord" /* 4916 */;
+// Module 17770 (VoicePermissionManager)
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 5412 */;
+import NativePermissionUtilsDefault from "NativePermissionUtils" /* 7494 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 5953 */;
+import VoiceStateRecord from "VoiceStateRecord" /* 5112 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5108 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6797 */;
 
 require = fn;
 const InputModes = fn(1085).InputModes;
-const NativePermissionTypes = fn(5105).NativePermissionTypes;
+const NativePermissionTypes = fn(7477).NativePermissionTypes;
 let c11 = null;
 class VoicePermissionManager extends tmp2 {
   constructor() {

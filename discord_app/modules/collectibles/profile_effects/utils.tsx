@@ -1,6 +1,6 @@
-// === Module 8491: utils ===
+// === Module 8975: utils ===
 
-// Module 8491 (utils)
+// Module 8975 (utils)
 import _mod12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -24,7 +24,7 @@ export const sortEffectLayers = function sortEffectLayers(effects) {
     return num - num2;
   });
 };
-export const usePotentiallyRandomizedProfileEffect = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const usePotentiallyRandomizedProfileEffect = ReactCompilerGating.isReactCompilerEnabled() ? (function usePotentiallyRandomizedProfileEffect(arg0) {
   const cResult = c.c(2);
   [tmp6, tmp7] = noop.useState(arg0);
   if (cResult[0] !== arg0) {
@@ -125,7 +125,7 @@ export const usePotentiallyRandomizedProfileEffect = ReactCompilerGating.isReact
     tmp13(tmp16);
   }
   return tmp12;
-}) : ((arg0) => {
+}) : (function usePotentiallyRandomizedProfileEffect(arg0) {
   closure_0 = undefined;
   let tmp6 = arg0;
   [tmp4, tmp5] = noop.useState(arg0);

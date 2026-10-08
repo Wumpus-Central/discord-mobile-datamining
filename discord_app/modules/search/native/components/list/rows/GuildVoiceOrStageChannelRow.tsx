@@ -1,18 +1,18 @@
-// === Module 16845: GuildVoiceOrStageChannelRow ===
+// === Module 17124: GuildVoiceOrStageChannelRow ===
 
-// Module 16845 (GuildVoiceOrStageChannelRow)
+// Module 17124 (GuildVoiceOrStageChannelRow)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import UserUtilsDefault from "UserUtils" /* 4728 */;
-import StageChannelParticipants from "StageChannelParticipants" /* 5589 */;
-import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 5595 */;
-import ChannelListLayout from "ChannelListLayout" /* 11712 */;
-import renderChannelBadge from "renderChannelBadge" /* 11933 */;
-import guild_channels_ChannelSubtitle from "guild_channels/ChannelSubtitle" /* 16846 */;
-import guild_channels_VoiceOrStageSummaryRowDefault from "guild_channels/VoiceOrStageSummaryRow" /* 16847 */;
-import GuildChannelRowDefault from "GuildChannelRow" /* 16849 */;
+import UserUtilsDefault from "UserUtils" /* 4922 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 5955 */;
+import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 5961 */;
+import ChannelListLayout from "ChannelListLayout" /* 11777 */;
+import renderChannelBadge from "renderChannelBadge" /* 12006 */;
+import guild_channels_ChannelSubtitle from "guild_channels/ChannelSubtitle" /* 17125 */;
+import guild_channels_VoiceOrStageSummaryRowDefault from "guild_channels/VoiceOrStageSummaryRow" /* 17126 */;
+import GuildChannelRowDefault from "GuildChannelRow" /* 17128 */;
 import noop from "module_19" /* 19 */;
-import StageInstanceStore from "StageInstanceStore" /* 2056 */;
+import StageInstanceStore from "StageInstanceStore" /* 2068 */;
 
 require = fn;
 function getVoiceChannelSubtitle(voiceStates, messagesTabLayout) {
@@ -115,12 +115,12 @@ function getVoiceChannelSubtitle(voiceStates, messagesTabLayout) {
   obj = ChannelListLayout;
 }
 const View = fn(17).View;
-const layout = fn(7524).CHANNEL_LIST_SEARCH_LAYOUT;
+const layout = fn(9247).CHANNEL_LIST_SEARCH_LAYOUT;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_9 = createStyles.createStyles({ users: { marginTop: 4 }, subtitle: { marginEnd: 16 }, trailing: { paddingVertical: 4, alignItems: "center", alignSelf: "center" } });
 let ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildVoiceChannelSubtitle(channel) {
   const cResult = channel(576).c(12);
   channel = channel.channel;
   const voiceStates = channel.voiceStates;
@@ -180,7 +180,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     tmp11 = getVoiceChannelSubtitle(voiceStates, layout);
   }
   const tmpResult = channel(504);
-  const result = channel(16846).renderChannelSubtitle({ subtitle: tmp11, muted: false, layout, channelId: id, guildId: guild_id });
+  const result = channel(17125).renderChannelSubtitle({ subtitle: tmp11, muted: false, layout, channelId: id, guildId: guild_id });
   cResult[4] = id;
   cResult[5] = guild_id;
   cResult[6] = stateFromStores;
@@ -188,8 +188,8 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   cResult[8] = result;
   tmp10 = result;
   const obj3 = { subtitle: tmp11, muted: false, layout, channelId: id, guildId: guild_id };
-  const tmpResult2 = channel(16846);
-}) : ((channel) => {
+  const tmpResult2 = channel(17125);
+}) : (function GuildVoiceChannelSubtitle(channel) {
   channel = channel.channel;
   const voiceStates = channel.voiceStates;
   const id = channel.id;
@@ -216,7 +216,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   }, items2)}</stateFromStores>;
 });
 ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildVoiceChannelExtras(arg0) {
   const cResult = c.c(8);
   ({ channel, users } = arg0);
   const tmp3 = closure_9();
@@ -255,7 +255,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = users;
   cResult[4] = tmp6;
   tmp5 = tmp6;
-}) : ((arg0) => {
+}) : (function GuildVoiceChannelExtras(arg0) {
   ({ channel, users } = arg0);
   const tmp = closure_9();
   StageChannelParticipantStoreHooks;
@@ -274,7 +274,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/list/rows/GuildVoiceOrStageChannelRow.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function GuildVoiceChannelRow(channel) {
   const cResult = c.c(26);
   channel = channel.channel;
   ({ voiceStates, trailing, onPress } = channel);
@@ -331,7 +331,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
                         }
                       }
                     }
-                    class I {
+                    class V {
                       constructor() {
                         tmp = onPress(channel.id);
                         return;
@@ -349,7 +349,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
                     tmp22 = tmp24;
                   }
                 }
-                class I {
+                class V {
                   constructor() {
                     tmp = onPress(channel.id);
                     return;
@@ -365,7 +365,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
               }
             }
           }
-          class I {
+          class V {
             constructor() {
               tmp = onPress(channel.id);
               return;
@@ -373,7 +373,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
           }
           let tmp15 = trailing;
           if (null == trailing) {
-            class I {
+            class V {
               constructor() {
                 tmp = onPress(channel.id);
                 return;
@@ -392,7 +392,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
           tmp14 = tmp15;
         }
       }
-      class I {
+      class V {
         constructor() {
           tmp = onPress(channel.id);
           return;
@@ -406,7 +406,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
       cResult[9] = tmp13;
       tmp11 = tmp13;
     }
-    class I {
+    class V {
       constructor() {
         tmp = onPress(channel.id);
         return;
@@ -414,10 +414,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
     }
     cResult[3] = channel.id;
     cResult[4] = onPress;
-    cResult[5] = I;
-    tmp10 = I;
+    cResult[5] = V;
+    tmp10 = V;
   }
-}) : ((channel) => {
+}) : (function GuildVoiceChannelRow(channel) {
   channel = channel.channel;
   ({ voiceStates, trailing, onPress } = channel);
   if (channel.isGuildStageVoice()) {

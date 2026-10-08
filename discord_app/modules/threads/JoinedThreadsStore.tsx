@@ -1,11 +1,11 @@
-// === Module 4517: JoinedThreadsStore ===
+// === Module 4709: JoinedThreadsStore ===
 
-// Module 4517 (JoinedThreadsStore)
+// Module 4709 (JoinedThreadsStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ChannelRecord from "ChannelRecord" /* 2055 */;
-import MuteTimersDefault from "MuteTimers" /* 4518 */;
+import ChannelRecord from "ChannelRecord" /* 2067 */;
+import MuteTimersDefault from "MuteTimers" /* 4710 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import size from "module_2" /* 2 */;
 
@@ -137,9 +137,9 @@ prototype["initialize"] = function initialize() {
 prototype["hasJoined"] = function hasJoined(id) {
   return id in obj;
 };
-prototype["joinTimestamp"] = function joinTimestamp(id) {
+prototype["joinTimestamp"] = function joinTimestamp(id2) {
   let joinTimestamp;
-  if (obj[id] != null) {
+  if (obj[id2] != null) {
     joinTimestamp = tmp.joinTimestamp;
   }
   return joinTimestamp;
@@ -270,7 +270,7 @@ obj = {
       if (null === guildId) {
         tmp3 = tmp5;
       } else if (isJoining) {
-        obj = { threadId: id, guildId, flags: 0, muted: true, muteConfig: { end_time: "r" }, joinTimestamp: null };
+        obj = { threadId: id, guildId, flags: 0, muted: true, muteConfig: { end_time: "create" }, joinTimestamp: null };
         const _Date = Date;
         const date = new Date();
         guildId = date;

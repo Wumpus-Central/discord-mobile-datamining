@@ -1,7 +1,7 @@
-// === Module 13663: OverlaySupported ===
+// === Module 6074: OverlaySupported ===
 
-// Module 13663 (OverlaySupported)
-import PlatformUtils from "PlatformUtils" /* 1369 */;
+// Module 6074 (OverlaySupported)
+import PlatformUtils from "PlatformUtils" /* 1381 */;
 import size from "module_2" /* 2 */;
 
 let flag = PlatformUtils.isPlatformEmbedded;

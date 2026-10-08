@@ -1,20 +1,20 @@
-// === Module 18007: GuildPremiumRoleSubscribeButton ===
+// === Module 18294: GuildPremiumRoleSubscribeButton ===
 
-// Module 18007 (GuildPremiumRoleSubscribeButton)
+// Module 18294 (GuildPremiumRoleSubscribeButton)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import CreatorRevenueButton from "CreatorRevenueButton" /* 9915 */;
+import CreatorRevenueButton from "CreatorRevenueButton" /* 9397 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_3 = createStyles.createStyles({ crButton: { marginVertical: 16 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildPremiumRoleSubscribeButton.tsx");
 
-export const GuildPremiumRoleSubscribeButton = ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
+export const GuildPremiumRoleSubscribeButton = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPremiumRoleSubscribeButton(onPress) {
   const cResult = c.c(4);
   onPress = onPress.onPress;
   const tmp4 = closure_3();
@@ -38,7 +38,7 @@ export const GuildPremiumRoleSubscribeButton = ReactCompilerGating.isReactCompil
   cResult[3] = tmp8;
   tmp7 = tmp8;
   const obj2 = { text: first, onPress, style: tmp4.crButton, disabled: true };
-}) : ((onPress) => {
+}) : (function GuildPremiumRoleSubscribeButton(onPress) {
   const obj = { text: null, onPress: null, style: null, disabled: true };
   const intl = util.intl;
   obj.text = intl.string(util.t.BEeXib);

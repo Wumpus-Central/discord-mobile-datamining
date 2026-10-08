@@ -1,15 +1,15 @@
-// === Module 8128: ModalScreen ===
+// === Module 7506: ModalScreen ===
 
-// Module 8128 (ModalScreen)
+// Module 7506 (ModalScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6478 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6656 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { flex: 1, flexDirection: "column", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
 let closure_5 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -17,7 +17,7 @@ let obj3 = { flex: 1, flexDirection: "column", backgroundColor: nativeDefault.co
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Modal/native/ModalScreen.native.tsx");
 
-export const ModalScreen = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const ModalScreen = ReactCompilerGating.isReactCompilerEnabled() ? (function ModalScreen(arg0) {
   const cResult = c.c(11);
   ({ backgroundColor, children } = arg0);
   const tmp2 = closure_5();
@@ -63,7 +63,7 @@ export const ModalScreen = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
   cResult[3] = backgroundColor;
   cResult[4] = obj3;
   tmp3 = obj3;
-}) : ((children) => {
+}) : (function ModalScreen(children) {
   let backgroundColor = children.backgroundColor;
   const tmp = closure_5();
   const insets = useSafeAreaInsetsKeyboardAwareDefault().insets;

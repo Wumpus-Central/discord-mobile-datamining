@@ -1,40 +1,40 @@
-// === Module 11021: BalanceCounter ===
+// === Module 11196: BalanceCounter ===
 
-// Module 11021 (BalanceCounter)
+// Module 11196 (BalanceCounter)
 import c from "c" /* 576 */;
-import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 4602 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import spring from "spring" /* 5604 */;
+import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 4794 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import spring from "spring" /* 5374 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop_mod from "module_19" /* 19 */;
 
-const Text_Text = tmp(4892);
+const Text_Text = tmp(5086);
 require = fn;
 let noop = fn(19);
 ({ useState: closure_4, useEffect: hasOwnProperty, useRef: metroRequire, useCallback: closure_7 } = noop);
 let noop = noop_mod;
 let jsx = fn(21).jsx;
 let closure_10 = { code: "function BalanceCounterTsx1(){const{runOnJS,setIsAnimating}=this.__closure;runOnJS(setIsAnimating)(false);}" };
-let closure_11 = { code: "function BalanceCounterTsx2(){const{isAnimating,animatedValue,runOnJS,setDisplayValue,setMaxDigits}=this.__closure;if(isAnimating){const roundedValue=Math.round(animatedValue.get());runOnJS(setDisplayValue)(roundedValue);runOnJS(setMaxDigits)(roundedValue.toString().length);}return{};}" };
+let __initData = { code: "function BalanceCounterTsx2(){const{isAnimating,animatedValue,runOnJS,setDisplayValue,setMaxDigits}=this.__closure;if(isAnimating){const roundedValue=Math.round(animatedValue.get());runOnJS(setDisplayValue)(roundedValue);runOnJS(setMaxDigits)(roundedValue.toString().length);}return{};}" };
 let closure_12 = { code: "function BalanceCounterTsx3(){const{runOnJS,setIsAnimating}=this.__closure;runOnJS(setIsAnimating)(false);}" };
-const __initData = { code: "function BalanceCounterTsx4(){const{isAnimating,animatedValue,runOnJS,setDisplayValue,setMaxDigits}=this.__closure;if(isAnimating){const roundedValue=Math.round(animatedValue.get());runOnJS(setDisplayValue)(roundedValue);runOnJS(setMaxDigits)(roundedValue.toString().length);}return{};}" };
+const __initData2 = { code: "function BalanceCounterTsx4(){const{isAnimating,animatedValue,runOnJS,setDisplayValue,setMaxDigits}=this.__closure;if(isAnimating){const roundedValue=Math.round(animatedValue.get());runOnJS(setDisplayValue)(roundedValue);runOnJS(setMaxDigits)(roundedValue.toString().length);}return{};}" };
 const ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((value) => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((value) => {
   const cResult = c.c(26);
   value = value.value;
-  require = value;
+  const require = value;
   const onValueChange = value.onValueChange;
   ({ onValueReached, style } = value);
-  dependencyMap = tmp4(null);
+  dependencyMap = tmp6(null);
   const sharedValue = ReanimatedRexport.useSharedValue(0);
-  ref = tmp4(null);
-  const enabled = noop.useContext(AccessibilityPreferencesContext.AccessibilityPreferencesContext).reducedMotion.enabled;
-  [r10035, tmp4] = sharedValue(ref(0), 2);
-  const tmp3 = sharedValue(ref(0), 2);
-  closure_7 = sharedValue(ref(1), 2)[1];
-  const tmp6 = sharedValue(ref(false), 2);
-  noop = tmp6[0];
-  jsx = tmp6[1];
+  const ref2 = tmp6(null);
+  const enabled = isAnimating.useContext(AccessibilityPreferencesContext.AccessibilityPreferencesContext).reducedMotion.enabled;
+  [obj3, tmp6] = sharedValue(ref2(0), 2);
+  const tmp7 = sharedValue(ref2(1), 2);
+  closure_7 = tmp8;
+  const tmp9 = sharedValue(ref2(false), 2);
+  isAnimating = tmp9[0];
+  jsx = tmp9[1];
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let fn = function o(set, value, duration) {
       setIsAnimating(true);
@@ -49,54 +49,233 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((value) => {
       const result = set.set(obj.withSpring(value, obj2, "respect-motion-settings", fn));
     };
     cResult[0] = fn;
-    let first = fn;
+    let first1 = fn;
   } else {
-    first = cResult[0];
+    first1 = cResult[0];
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    class F {
-      constructor() {
-        tmp = closure_4;
-        if (null != closure_4.current) {
-          tmp2 = globalThis;
-          _clearTimeout = clearTimeout;
-          clearTimeoutResult = clearTimeout(tmp.current);
-          tmp.current = null;
-        }
-        tmp4 = closure_9(false);
-        return;
+    function clearAnimationTimeout() {
+      if (null != ref2.current) {
+        const _clearTimeout = clearTimeout;
+        clearTimeout(ref2.current);
+        ref2.current = null;
       }
+      setIsAnimating(false);
     }
-    cResult[1] = F;
-    const tmp8 = F;
+    cResult[1] = clearAnimationTimeout;
+    let tmp12 = clearAnimationTimeout;
   } else {
-    class F {
-      constructor() {
-        tmp = closure_4;
-        if (null != closure_4.current) {
-          tmp2 = globalThis;
-          _clearTimeout = clearTimeout;
-          clearTimeoutResult = clearTimeout(tmp.current);
-          tmp.current = null;
-        }
-        tmp4 = closure_9(false);
-        return;
-      }
-    }
+    tmp12 = cResult[1];
   }
-  F = tmp8;
+  __initData = tmp12;
   if (cResult[2] === sharedValue) {
-    class F {
-      constructor() {
-        tmp = closure_4;
-        if (null != closure_4.current) {
-          tmp2 = globalThis;
-          _clearTimeout = clearTimeout;
-          clearTimeoutResult = clearTimeout(tmp.current);
-          tmp.current = null;
+    if (cResult[3] === onValueChange) {
+      if (cResult[4] === enabled) {
+        if (cResult[5] === value) {
+          let tmp13 = cResult[6];
         }
-        tmp4 = closure_9(false);
-        return;
+        if (cResult[7] === sharedValue) {
+          if (cResult[8] === onValueChange) {
+            if (cResult[9] === onValueReached) {
+              if (cResult[10] === enabled) {
+                if (cResult[11] === value) {
+                  let tmp14 = cResult[12];
+                }
+                enabled(tmp13, tmp14);
+                class L {
+                  constructor() {
+                    if (closure_8) {
+                      tmp = globalThis;
+                      _Math = Math;
+                      tmp2 = closure_3;
+                      str = Math.round(closure_3.get());
+                      tmp3 = closure_0;
+                      tmp4 = closure_2;
+                      obj = closure_0(closure_2[5]);
+                      tmp5 = closure_6;
+                      tmp6 = obj.runOnJS(closure_6)(str);
+                      obj2 = closure_0(closure_2[5]);
+                      tmp7 = closure_7;
+                      runOnJSResult = obj2.runOnJS(closure_7);
+                      tmp8Result = runOnJSResult(str.toString().length);
+                    }
+                    return {};
+                  }
+                }
+                const obj4 = { isAnimating, animatedValue: sharedValue, runOnJS: tmp(4810).runOnJS, setDisplayValue: tmp6, setMaxDigits: tmp8 };
+                L.__closure = obj4;
+                L.__workletHash = 4408542396979;
+                L.__initData = __initData;
+                const animatedStyle = tmp(4810).useAnimatedStyle(L);
+                if (null === value) {
+                  return null;
+                } else {
+                  let result = 7 * tmp7[0];
+                  if (cResult[13] !== result) {
+                    const obj5 = { minWidth: result };
+                    cResult[13] = result;
+                    class L {
+                      constructor() {
+                        if (closure_8) {
+                          tmp = globalThis;
+                          _Math = Math;
+                          tmp2 = closure_3;
+                          str = Math.round(closure_3.get());
+                          tmp3 = closure_0;
+                          tmp4 = closure_2;
+                          obj = closure_0(closure_2[5]);
+                          tmp5 = closure_6;
+                          tmp6 = obj.runOnJS(closure_6)(str);
+                          obj2 = closure_0(closure_2[5]);
+                          tmp7 = closure_7;
+                          runOnJSResult = obj2.runOnJS(closure_7);
+                          tmp8Result = runOnJSResult(str.toString().length);
+                        }
+                        return {};
+                      }
+                    }
+                    cResult[14] = obj5;
+                    let tmp19 = obj5;
+                  } else {
+                    tmp19 = cResult[14];
+                  }
+                  if (cResult[15] === animatedStyle) {
+                    if (cResult[16] === tmp19) {
+                      let tmp20 = cResult[17];
+                    }
+                    if (cResult[18] !== obj3) {
+                      cResult[18] = obj3;
+                      class L {
+                        constructor() {
+                          if (closure_8) {
+                            tmp = globalThis;
+                            _Math = Math;
+                            tmp2 = closure_3;
+                            str = Math.round(closure_3.get());
+                            tmp3 = closure_0;
+                            tmp4 = closure_2;
+                            obj = closure_0(closure_2[5]);
+                            tmp5 = closure_6;
+                            tmp6 = obj.runOnJS(closure_6)(str);
+                            obj2 = closure_0(closure_2[5]);
+                            tmp7 = closure_7;
+                            runOnJSResult = obj2.runOnJS(closure_7);
+                            tmp8Result = runOnJSResult(str.toString().length);
+                          }
+                          return {};
+                        }
+                      }
+                      let tmp22 = obj3.toFixed(0);
+                      const toFixedResult = obj3.toFixed(0);
+                    } else {
+                      tmp22 = cResult[19];
+                    }
+                    if (cResult[20] === style) {
+                      if (cResult[21] === tmp22) {
+                        let tmp24 = cResult[22];
+                      }
+                      if (cResult[23] === tmp20) {
+                        if (cResult[24] === tmp24) {
+                          let tmp28 = cResult[25];
+                        }
+                        return tmp28;
+                      }
+                      class L {
+                        constructor() {
+                          if (closure_8) {
+                            tmp = globalThis;
+                            _Math = Math;
+                            tmp2 = closure_3;
+                            str = Math.round(closure_3.get());
+                            tmp3 = closure_0;
+                            tmp4 = closure_2;
+                            obj = closure_0(closure_2[5]);
+                            tmp5 = closure_6;
+                            tmp6 = obj.runOnJS(closure_6)(str);
+                            obj2 = closure_0(closure_2[5]);
+                            tmp7 = closure_7;
+                            runOnJSResult = obj2.runOnJS(closure_7);
+                            tmp8Result = runOnJSResult(str.toString().length);
+                          }
+                          return {};
+                        }
+                      }
+                      tmp31[0] = tmp20;
+                      tmp31[1] = tmp24;
+                      const tmp32 = jsx(onValueChange(4810).View, tmp31);
+                      cResult[23] = tmp20;
+                      cResult[24] = tmp24;
+                      cResult[25] = tmp32;
+                      tmp28 = tmp32;
+                    }
+                    class L {
+                      constructor() {
+                        if (closure_8) {
+                          tmp = globalThis;
+                          _Math = Math;
+                          tmp2 = closure_3;
+                          str = Math.round(closure_3.get());
+                          tmp3 = closure_0;
+                          tmp4 = closure_2;
+                          obj = closure_0(closure_2[5]);
+                          tmp5 = closure_6;
+                          tmp6 = obj.runOnJS(closure_6)(str);
+                          obj2 = closure_0(closure_2[5]);
+                          tmp7 = closure_7;
+                          runOnJSResult = obj2.runOnJS(closure_7);
+                          tmp8Result = runOnJSResult(str.toString().length);
+                        }
+                        return {};
+                      }
+                    }
+                    tmp26[1] = style;
+                    tmp26[3] = tmp22;
+                    const tmp27 = jsx(tmp(5086).Text, tmp26);
+                    cResult[20] = style;
+                    cResult[21] = tmp22;
+                    cResult[22] = tmp27;
+                    tmp24 = tmp27;
+                  }
+                  class L {
+                    constructor() {
+                      if (closure_8) {
+                        tmp = globalThis;
+                        _Math = Math;
+                        tmp2 = closure_3;
+                        str = Math.round(closure_3.get());
+                        tmp3 = closure_0;
+                        tmp4 = closure_2;
+                        obj = closure_0(closure_2[5]);
+                        tmp5 = closure_6;
+                        tmp6 = obj.runOnJS(closure_6)(str);
+                        obj2 = closure_0(closure_2[5]);
+                        tmp7 = closure_7;
+                        runOnJSResult = obj2.runOnJS(closure_7);
+                        tmp8Result = runOnJSResult(str.toString().length);
+                      }
+                      return {};
+                    }
+                  }
+                  tmp21[0] = animatedStyle;
+                  tmp21[1] = tmp19;
+                  cResult[15] = animatedStyle;
+                  cResult[16] = tmp19;
+                  cResult[17] = tmp21;
+                  tmp20 = tmp21;
+                }
+                const tmpResult = tmp(4810);
+              }
+            }
+          }
+        }
+        const items = [value, , onValueReached, sharedValue, first1, enabled];
+        cResult[7] = sharedValue;
+        cResult[8] = onValueChange;
+        cResult[9] = onValueReached;
+        cResult[10] = enabled;
+        cResult[11] = value;
+        cResult[12] = items;
+        tmp14 = items;
       }
     }
   }
@@ -126,7 +305,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((value) => {
               tmp14 = globalThis;
               _setTimeout = setTimeout;
               closure_4.current = setTimeout(() => {
-                first(sharedValue, value, duration);
+                first1(sharedValue, value, duration);
                 closure_4.current = null;
               }, orbBalanceCounterAnimationConfigs.delay);
               return closure_11;
@@ -151,9 +330,10 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((value) => {
   cResult[4] = enabled;
   cResult[5] = value;
   cResult[6] = H;
+  tmp13 = H;
 }) : ((value) => {
   value = value.value;
-  require = value;
+  const require = value;
   const onValueChange = value.onValueChange;
   c6 = undefined;
   let isAnimating;
@@ -168,13 +348,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((value) => {
   ({ onValueReached, style } = value);
   dependencyMap = c6(null);
   const sharedValue = ReanimatedRexport.useSharedValue(0);
-  ref = c6(null);
+  const ref2 = c6(null);
   const enabled = isAnimating.useContext(AccessibilityPreferencesContext.AccessibilityPreferencesContext).reducedMotion.enabled;
-  [obj2, tmp5] = sharedValue(ref(0), 2);
+  [obj2, tmp5] = sharedValue(ref2(0), 2);
   c6 = tmp5;
-  const tmp6 = sharedValue(ref(1), 2);
+  const tmp6 = sharedValue(ref2(1), 2);
   closure_7 = tmp7;
-  const tmp8 = sharedValue(ref(false), 2);
+  const tmp8 = sharedValue(ref2(false), 2);
   isAnimating = tmp8[0];
   jsx = tmp8[1];
   const tmp10 = closure_7((set, value, duration) => {
@@ -235,10 +415,10 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((value) => {
     }
     return {};
   };
-  const tmp4 = sharedValue(ref(0), 2);
+  const tmp4 = sharedValue(ref2(0), 2);
   fn.__closure = { isAnimating, animatedValue: sharedValue, runOnJS: ReanimatedRexport.runOnJS, setDisplayValue: tmp5, setMaxDigits: tmp6[1] };
   fn.__workletHash = 3325611842357;
-  fn.__initData = __initData;
+  fn.__initData = __initData2;
   let tmp14 = null;
   if (null !== value) {
     const obj4 = { style: null, children: null };
@@ -248,7 +428,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((value) => {
     obj4.style = items1;
     const obj6 = { variant: "text-sm/semibold", style, maxFontSizeMultiplier: 2, children: obj2.toFixed(0) };
     obj4.children = jsx(Text_Text.Text, { variant: "text-sm/semibold", style, maxFontSizeMultiplier: 2, children: obj2.toFixed(0) });
-    tmp14 = jsx(onValueChange(4618).View, { style: null, children: null });
+    tmp14 = jsx(onValueChange(4810).View, { style: null, children: null });
   }
   return tmp14;
 });

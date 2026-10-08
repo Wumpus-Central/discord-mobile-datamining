@@ -1,21 +1,21 @@
-// === Module 10559: SocialLayerStorefrontBadges ===
+// === Module 10156: SocialLayerStorefrontBadges ===
 
-// Module 10559 (SocialLayerStorefrontBadges)
+// Module 10156 (SocialLayerStorefrontBadges)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import ClydeIcon from "ClydeIcon" /* 10560 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import ClydeIcon from "ClydeIcon" /* 10157 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { exclusiveBadge: { flexDirection: "row", alignItems: "center", textAlignVertical: "center", alignSelf: "flex-start", gap: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.round, paddingHorizontal: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND }, exclusiveBadgeText: null };
 let obj4 = { textTransform: "uppercase", fontSize: nativeDefault.space.PX_12, lineHeight: null };
-let PlatformUtils = fn(1369);
+let PlatformUtils = fn(1381);
 PlatformUtils = PlatformUtils.isAndroid();
 const space = nativeDefault.space;
 obj4.lineHeight = PlatformUtils ? space.PX_12 : space.PX_16;
@@ -26,7 +26,7 @@ let obj3 = { flexDirection: "row", alignItems: "center", textAlignVertical: "cen
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/slayer_storefront/native/SocialLayerStorefrontBadges.tsx");
 
-export const ExclusiveBadge = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const ExclusiveBadge = ReactCompilerGating.isReactCompilerEnabled() ? (function ExclusiveBadge() {
   const cResult = c.c(7);
   const tmp4 = closure_6();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -68,7 +68,7 @@ export const ExclusiveBadge = ReactCompilerGating.isReactCompilerEnabled() ? (()
   cResult[5] = tmp11;
   cResult[6] = tmp15;
   tmp14 = tmp15;
-}) : (() => {
+}) : (function ExclusiveBadge() {
   const tmp = closure_6();
   const obj = { style: tmp.exclusiveBadge, children: null };
   const items = [React4(ClydeIcon.ClydeIcon, { size: "xs", color: nativeDefault.colors.WHITE }), ];

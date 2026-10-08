@@ -1,6 +1,6 @@
-// === Module 9380: SecureFramesConstants ===
+// === Module 8801: SecureFramesConstants ===
 
-// Module 9380 (SecureFramesConstants)
+// Module 8801 (SecureFramesConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/rtc/SecureFramesConstants.tsx");

@@ -1,28 +1,28 @@
-// === Module 17007: ChannelDetailsNavigator ===
+// === Module 17288: ChannelDetailsNavigator ===
 
-// Module 17007 (ChannelDetailsNavigator)
+// Module 17288 (ChannelDetailsNavigator)
 import util from "util" /* 1126 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import HeaderShared from "HeaderShared" /* 7509 */;
-import navigateToThreadCreation from "navigateToThreadCreation" /* 11032 */;
-import _modDef12457 from "module_12457" /* 12457 */;
-import ChannelSettingsModal from "ChannelSettingsModal" /* 17008 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import HeaderShared from "HeaderShared" /* 9232 */;
+import navigateToThreadCreation from "navigateToThreadCreation" /* 12174 */;
+import _modDef12553 from "module_12553" /* 12553 */;
+import ChannelSettingsModal from "ChannelSettingsModal" /* 17289 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
 
 require = fn;
 const View = fn(17).View;
-const constants = fn(10666).ChannelDetailsNavigatorScreens;
+const constants = fn(9581).ChannelDetailsNavigatorScreens;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const SearchNavigatorScreens = fn(16834).SearchNavigatorScreens;
+const SearchNavigatorScreens = fn(17113).SearchNavigatorScreens;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let closure_12 = Object.freeze({});
-const NativeStackNavigator = fn(7568);
+const NativeStackNavigator = fn(9279);
 let closure_13 = NativeStackNavigator.createNativeStackNavigator();
 let ReactCompilerGating = fn(558);
-let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectedCreateThreadHeaderButton(channelId) {
   const cResult = channelId(576).c(5);
   channelId = channelId.channelId;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -53,7 +53,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
     cResult[4] = tmp11;
   }
   const tmpResult = channelId(573);
-}) : ((channelId) => {
+}) : (function ConnectedCreateThreadHeaderButton(channelId) {
   channelId = channelId.channelId;
   const items = [ChannelStore];
   const stateFromStores = channelId(573).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
@@ -65,13 +65,13 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
   return tmp2;
 });
 ReactCompilerGating = fn(558);
-let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function CreateThreadHeaderButton(channel) {
   let HeaderIconButton = channel;
   let tmp = dependencyMap;
   const cResult = channel(576).c(5);
   channel = channel.channel;
   const obj = channel(576);
-  const canStartThread = channel(6782).useCanStartThread(channel);
+  const canStartThread = channel(6958).useCanStartThread(channel);
   if (cResult[0] !== channel) {
     const fn = function t() {
       const result = navigateToThreadCreation.navigateToThreadCreation(channel, "Thread Browser Toolbar");
@@ -95,28 +95,28 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
       tmp6 = cResult[2];
     }
     if (cResult[3] !== tmp4) {
-      HeaderIconButton = HeaderIconButton(7509).HeaderIconButton;
+      HeaderIconButton = HeaderIconButton(9232).HeaderIconButton;
       const obj3 = { accessibilityLabel: tmp6, onPress: tmp4, source: null };
-      tmp = _modDef12457;
+      tmp = _modDef12553;
       obj3.source = tmp;
       const tmp11 = closure_10(HeaderIconButton, obj3);
       cResult[3] = tmp4;
       cResult[4] = tmp11;
     }
   }
-  const obj2 = channel(6782);
-}) : ((channel) => {
+  const obj2 = channel(6958);
+}) : (function CreateThreadHeaderButton(channel) {
   channel = channel.channel;
   [][0] = channel;
-  const canStartThread = channel(6782).useCanStartThread(channel);
+  const canStartThread = channel(6958).useCanStartThread(channel);
   let tmp5 = null;
   if (canStartThread) {
     const obj2 = { accessibilityLabel: null, onPress: null, source: null };
     const intl = tmp(1126).intl;
     obj2.accessibilityLabel = intl.string(tmp(1126).t.rBIGBL);
     obj2.onPress = tmp4;
-    obj2.source = _modDef12457;
-    tmp5 = closure_10(tmp(7509).HeaderIconButton, obj2);
+    obj2.source = _modDef12553;
+    tmp5 = closure_10(tmp(9232).HeaderIconButton, obj2);
   }
   return tmp5;
 });
@@ -124,7 +124,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsNavigator.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((navigation) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelDetailsNavigator(navigation) {
   const cResult = navigation(source[10]).c(74);
   navigation = navigation.navigation;
   let params = navigation.route.params;
@@ -142,93 +142,320 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((naviga
       }
       const effect = noop.useEffect(tmp5, tmp6);
       if (cResult[5] !== navigation) {
-        class C {
-          constructor() {
-            return navigation.addListener("beforeRemove", () => { ... });
-          }
-        }
+        const fn = function _() {
+          return navigation.addListener("beforeRemove", () => channelId(source[18]).close());
+        };
         const items = [navigation];
         cResult[5] = navigation;
-        cResult[6] = C;
+        cResult[6] = fn;
         cResult[7] = items;
         let tmp9 = items;
+        let tmp8 = fn;
       } else {
-        class C {
-          constructor() {
-            return navigation.addListener("beforeRemove", () => { ... });
-          }
-        }
+        tmp8 = cResult[6];
         tmp9 = cResult[7];
       }
-      const effect1 = noop.useEffect(C, tmp9);
+      const effect1 = noop.useEffect(tmp8, tmp9);
       const channelSettingsScreensStyles = tmp(source[19]).useChannelSettingsScreensStyles();
       if (cResult[8] !== channelId) {
-        class C {
-          constructor() {
-            return navigation.addListener("beforeRemove", () => { ... });
-          }
-        }
-        let obj3 = { channelId };
-        tmp13[0] = obj3;
+        let obj3 = { initialParams: null };
+        const obj4 = { channelId };
+        obj3.initialParams = obj4;
         cResult[8] = channelId;
-        cResult[9] = tmp13;
-      } else {
-        class C {
-          constructor() {
-            return navigation.addListener("beforeRemove", () => { ... });
-          }
-        }
+        cResult[9] = obj3;
       }
       let tmpResult = tmp(source[19]);
       const accessibilityNativeStackOptions = tmp(source[20]).useAccessibilityNativeStackOptions();
       if (cResult[10] !== channelId) {
-        class C {
-          constructor() {
-            return navigation.addListener("beforeRemove", () => { ... });
-          }
-        }
         let channel = ChannelStore.getChannel(channelId);
+        let guildId;
         if (channel != null) {
-          class C {
-            constructor() {
-              return navigation.addListener("beforeRemove", () => { ... });
-            }
-          }
+          guildId = channel.getGuildId();
         }
         cResult[10] = channelId;
-        cResult[11] = undefined;
+        cResult[11] = guildId;
+        let tmp14 = guildId;
       } else {
-        class C {
-          constructor() {
-            return navigation.addListener("beforeRemove", () => { ... });
-          }
-        }
+        tmp14 = cResult[11];
       }
       if (cResult[12] === channelId) {
-        class C {
-          constructor() {
-            return navigation.addListener("beforeRemove", () => { ... });
+        if (cResult[13] === tmp14) {
+          if (cResult[14] === channelSettingsScreensStyles) {
+            const _Symbol = Symbol;
+            if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
+              const fn2 = function j() {
+                const rootNavigationRef = navigation(source[21]).getRootNavigationRef();
+                const tmp = null == rootNavigationRef || !rootNavigationRef.isReady();
+                let tmp2 = !tmp;
+                if (!tmp) {
+                  let flag = rootNavigationRef.canGoBack();
+                  if (flag) {
+                    rootNavigationRef.goBack();
+                    flag = true;
+                  }
+                  tmp2 = flag;
+                }
+                return tmp2;
+              };
+              cResult[16] = fn2;
+              let tmp23 = fn2;
+            } else {
+              tmp23 = cResult[16];
+            }
+            tmp(source[22]).useNavigatorBackPressHandler(tmp23);
+            const tmpResult5 = tmp(source[22]);
+            ({ left, right } = channelId(source[23])());
+            if (cResult[17] === left) {
+              if (cResult[18] === right) {
+                let tmp27 = cResult[19];
+              }
+              if (cResult[20] === channelSettingsScreensStyles.container) {
+                if (cResult[23] !== accessibilityNativeStackOptions) {
+                  const obj5 = { headerTitle: tmp(source[15]).renderGenericTitle, headerTitleAlign: "center" };
+                  let merged = Object.assign(accessibilityNativeStackOptions);
+                  cResult[23] = accessibilityNativeStackOptions;
+                  cResult[24] = obj5;
+                }
+                if (cResult[25] === channelId) {
+                  if (cResult[26] === expandTopic) {
+                    if (cResult[27] === search) {
+                      let tmp33 = cResult[28];
+                    }
+                    const _Symbol2 = Symbol;
+                    if (cResult[29] === Symbol.for("react.memo_cache_sentinel")) {
+                      const obj6 = { headerShown: false };
+                      class K {
+                        constructor() {
+                          return navigation(source[24]).default;
+                        }
+                      }
+                      cResult[29] = obj6;
+                      cResult[30] = K;
+                      let tmp34 = obj6;
+                    } else {
+                      tmp34 = cResult[29];
+                      class K {
+                        constructor() {
+                          return navigation(source[24]).default;
+                        }
+                      }
+                    }
+                    if (cResult[31] !== tmp33) {
+                      class K {
+                        constructor() {
+                          return navigation(source[24]).default;
+                        }
+                      }
+                      const obj7 = { initialParams: tmp33, name: constants.DETAILS, options: tmp34, getComponent: K };
+                      const tmp39 = closure_10(Screen.Screen, obj7);
+                      cResult[31] = tmp33;
+                      cResult[32] = tmp39;
+                    }
+                    const _Symbol3 = Symbol;
+                    if (cResult[33] === Symbol.for("react.memo_cache_sentinel")) {
+                      class K {
+                        constructor() {
+                          return navigation(source[24]).default;
+                        }
+                      }
+                      const obj8 = {
+                        name: SearchNavigatorScreens.SEARCH_CHAT_PREVIEW,
+                        options(route) {
+                                              route = route.route;
+                                              let obj = {
+                                                header(arg0) {
+                                                  const obj2 = {};
+                                                  const merged = Object.assign(arg0);
+                                                  const obj = route(9232);
+                                                  obj2.shouldHandleSafeArea = route(1381).isAndroid();
+                                                  return obj.renderHeader(obj2);
+                                                },
+                                                headerTitle() {
+                                                  return closure_2_10(channelId(source[26]), { channelId: route.params.channelId });
+                                                },
+                                                headerLeft: route(source[15]).getRenderBackImage(route.navigation)
+                                              };
+                                              return obj;
+                                            },
+                        getComponent() {
+                                              return navigation(source[27]).default;
+                                            }
+                      };
+                      const tmp43 = closure_10(Screen.Screen, obj8);
+                      cResult[33] = tmp43;
+                    }
+                    const _Symbol4 = Symbol;
+                    if (cResult[34] === Symbol.for("react.memo_cache_sentinel")) {
+                      class K {
+                        constructor() {
+                          return navigation(source[24]).default;
+                        }
+                      }
+                      const obj9 = {
+                        name: tmp(source[28]).ConversationNavigatorScreens.FOCUS,
+                        options(arg0) {
+                                              ({ route, navigation } = arg0);
+                                              return navigation(source[29]).conversationNavigatorFocusHeaderOptions(route, navigation);
+                                            },
+                        getComponent() {
+                                              return navigation(source[30]).default;
+                                            }
+                      };
+                      const tmp46 = closure_10(Screen.Screen, obj9);
+                      cResult[34] = tmp46;
+                    }
+                    if (cResult[35] !== channelId) {
+                      const obj10 = { channelId: null };
+                      class K {
+                        constructor() {
+                          return navigation(source[24]).default;
+                        }
+                      }
+                      cResult[35] = channelId;
+                      cResult[36] = obj10;
+                      let tmp47 = obj10;
+                    } else {
+                      tmp47 = cResult[36];
+                    }
+                    if (cResult[37] !== DETAILS) {
+                      const fn3 = function $(navigation) {
+                        navigation = navigation.navigation;
+                        const obj = { title: null, headerLeft: null };
+                        const intl = util.intl;
+                        obj.title = intl.string(util.t["mp1N/2"]);
+                        if (DETAILS === navigation.route.name) {
+                          let renderModalCloseImage = HeaderShared.getRenderModalCloseImage(navigation);
+                          const tmpResult = HeaderShared;
+                        } else {
+                          renderModalCloseImage = HeaderShared.getRenderModalBackImage(navigation);
+                          const tmpResult2 = HeaderShared;
+                        }
+                        obj.headerLeft = renderModalCloseImage;
+                        return obj;
+                      };
+                      class K {
+                        constructor() {
+                          return navigation(source[24]).default;
+                        }
+                      }
+                      cResult[37] = DETAILS;
+                      cResult[38] = fn3;
+                      let tmp48 = fn3;
+                    } else {
+                      tmp48 = cResult[38];
+                    }
+                    const _Symbol5 = Symbol;
+                    if (cResult[39] === Symbol.for("react.memo_cache_sentinel")) {
+                      function ee() {
+                        return navigation(source[31]).default;
+                      }
+                      class K {
+                        constructor() {
+                          return navigation(source[24]).default;
+                        }
+                      }
+                      cResult[39] = ee;
+                      let tmp49 = ee;
+                    } else {
+                      tmp49 = cResult[39];
+                    }
+                    if (cResult[40] === tmp47) {
+                      class K {
+                        constructor() {
+                          return navigation(source[24]).default;
+                        }
+                      }
+                      const obj11 = { channelId, applicationId };
+                      cResult[43] = applicationId;
+                      cResult[44] = channelId;
+                      cResult[45] = obj11;
+                    }
+                    const obj12 = { name: null, initialParams: null, options: null, getComponent: null };
+                    class I {
+                      constructor() {
+                        channel = closure_6.getChannel(channelId);
+                        if (null != channel) {
+                          tmp = closure_1;
+                          tmp2 = closure_2;
+                          obj2 = closure_1(closure_2[17]);
+                          tmp3 = AnalyticEvents;
+                          obj1 = { channel_id: null, guild_id: null, channel_type: null, initial_route_name: null, source: null };
+                          obj1.channel_id = channel.id;
+                          obj1.guild_id = channel.getGuildId();
+                          obj1.channel_type = channel.type;
+                          tmp4 = DETAILS;
+                          obj1.initial_route_name = DETAILS;
+                          tmp5 = source;
+                          obj1.source = source;
+                          trackResult = obj2.track(AnalyticEvents.CHANNEL_SIDEBAR_VIEWED, obj1);
+                        }
+                        return;
+                      }
+                    }
+                    obj12.initialParams = tmp47;
+                    obj12.options = tmp48;
+                    obj12.getComponent = tmp49;
+                    const tmp54 = closure_10(Screen.Screen, obj12);
+                    cResult[40] = tmp47;
+                    cResult[41] = tmp48;
+                    cResult[42] = tmp54;
+                  }
+                }
+                const obj13 = { channelId, search, expandTopic };
+                cResult[25] = channelId;
+                cResult[26] = expandTopic;
+                cResult[27] = search;
+                cResult[28] = obj13;
+                tmp33 = obj13;
+              }
+              const items1 = [channelSettingsScreensStyles.container, tmp27];
+              cResult[20] = channelSettingsScreensStyles.container;
+              cResult[21] = tmp27;
+              cResult[22] = items1;
+            }
+            const obj14 = { paddingLeft: left, paddingRight: right };
+            cResult[17] = left;
+            cResult[18] = right;
+            class I {
+              constructor() {
+                channel = closure_6.getChannel(channelId);
+                if (null != channel) {
+                  tmp = closure_1;
+                  tmp2 = closure_2;
+                  obj2 = closure_1(closure_2[17]);
+                  tmp3 = AnalyticEvents;
+                  obj1 = { channel_id: null, guild_id: null, channel_type: null, initial_route_name: null, source: null };
+                  obj1.channel_id = channel.id;
+                  obj1.guild_id = channel.getGuildId();
+                  obj1.channel_type = channel.type;
+                  tmp4 = DETAILS;
+                  obj1.initial_route_name = DETAILS;
+                  tmp5 = source;
+                  obj1.source = source;
+                  trackResult = obj2.track(AnalyticEvents.CHANNEL_SIDEBAR_VIEWED, obj1);
+                }
+                return;
+              }
+            }
+            tmp27 = obj14;
+            const tmp26 = channelId(source[23])();
           }
         }
       }
-      if (null != tmp15) {
-        class C {
+      if (null != tmp14) {
+        tmp(source[19]);
+        class K {
           constructor() {
-            return navigation.addListener("beforeRemove", () => { ... });
+            return navigation(source[24]).default;
           }
         }
-        const channelSettingsScreens = obj6.getChannelSettingsScreens(channelId, tmp15, channelSettingsScreensStyles);
       } else {
-        class C {
-          constructor() {
-            return navigation.addListener("beforeRemove", () => { ... });
-          }
-        }
+        const obj15 = {};
       }
       cResult[12] = channelId;
-      cResult[13] = tmp15;
+      cResult[13] = tmp14;
       cResult[14] = channelSettingsScreensStyles;
-      class N {
+      class I {
         constructor() {
           channel = closure_6.getChannel(channelId);
           if (null != channel) {
@@ -249,10 +476,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((naviga
           return;
         }
       }
-      let tmpResult2 = tmp(source[20]);
+      const tmpResult4 = tmp(source[20]);
     }
   }
-  class N {
+  class I {
     constructor() {
       channel = closure_6.getChannel(channelId);
       if (null != channel) {
@@ -273,16 +500,16 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((naviga
       return;
     }
   }
-  const items1 = [channelId, DETAILS, source];
+  const items2 = [channelId, DETAILS, source];
   cResult[0] = channelId;
   cResult[1] = DETAILS;
   cResult[2] = source;
-  cResult[3] = N;
-  cResult[4] = items1;
-  tmp6 = items1;
-  tmp5 = N;
+  cResult[3] = I;
+  cResult[4] = items2;
+  tmp6 = items2;
+  tmp5 = I;
   let obj = navigation(source[10]);
-}) : ((navigation) => {
+}) : (function ChannelDetailsNavigator(navigation) {
   navigation = navigation.navigation;
   let params = navigation.route.params;
   const channelId = params.channelId;
@@ -367,8 +594,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((naviga
           header(arg0) {
             const obj2 = {};
             const merged = Object.assign(arg0);
-            const obj = route(7509);
-            obj2.shouldHandleSafeArea = route(1369).isAndroid();
+            const obj = route(9232);
+            obj2.shouldHandleSafeArea = route(1381).isAndroid();
             return obj.renderHeader(obj2);
           },
           headerTitle() {
@@ -405,8 +632,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((naviga
         header(arg0) {
           const obj2 = {};
           const merged = Object.assign(arg0);
-          const obj = route(7509);
-          obj2.shouldHandleSafeArea = route(1369).isAndroid();
+          const obj = route(9232);
+          obj2.shouldHandleSafeArea = route(1381).isAndroid();
           return obj.renderHeader(obj2);
         },
         headerTitle() {

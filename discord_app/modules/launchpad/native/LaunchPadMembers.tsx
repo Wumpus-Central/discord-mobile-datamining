@@ -1,32 +1,32 @@
-// === Module 17439: LaunchPadMembers ===
+// === Module 17721: LaunchPadMembers ===
 
-// Module 17439 (LaunchPadMembers)
+// Module 17721 (LaunchPadMembers)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import GuildChannelUserListDefault from "GuildChannelUserList" /* 11223 */;
-import PrivateChannelUserListDefault from "PrivateChannelUserList" /* 11826 */;
-import ThreadChannelUserListDefault from "ThreadChannelUserList" /* 16898 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import GuildChannelUserListDefault from "GuildChannelUserList" /* 11338 */;
+import PrivateChannelUserListDefault from "PrivateChannelUserList" /* 11911 */;
+import ThreadChannelUserListDefault from "ThreadChannelUserList" /* 17179 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({ wrapper: { minHeight: 16 }, listStyle: { flex: 0 }, emptyWrapper: { padding: 20 }, emptyText: { textAlign: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/launchpad/native/LaunchPadMembers.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function LaunchPadMembers() {
   const cResult = c.c(28);
   const tmp4 = closure_7();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [SelectedChannelStore, ChannelStore];
-    const fn = function y() {
+    const fn = function h() {
       currentlySelectedChannelId = currentlySelectedChannelId.getCurrentlySelectedChannelId();
       channel = channel.getChannel(currentlySelectedChannelId);
       if (null != currentlySelectedChannelId) {
@@ -46,7 +46,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           }
         }
       }
-      return { channelId: "unicodeVersion", type: false };
+      return { channelId: "code", type: "man_with_veil_light_skin_tone" };
     };
     cResult[0] = items;
     cResult[1] = fn;
@@ -172,7 +172,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp15 = tmp18;
   }
   const tmpResult = useStateFromStores;
-}) : (() => {
+}) : (function LaunchPadMembers() {
   const tmp = closure_7();
   const items = [SelectedChannelStore, ChannelStore];
   const stateFromStoresObject = useStateFromStores.useStateFromStoresObject(items, () => {
@@ -195,7 +195,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         }
       }
     }
-    return { channelId: "unicodeVersion", type: false };
+    return { channelId: "code", type: "man_with_veil_light_skin_tone" };
   });
   if ("private" === stateFromStoresObject.type) {
     let obj2 = { style: tmp.wrapper, children: null };

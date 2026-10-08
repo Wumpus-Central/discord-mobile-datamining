@@ -1,6 +1,8 @@
-// === Module 16624: conjurePreviewModes ===
+// === Module 16884: conjurePreviewModes ===
 
-// Module 16624 (conjurePreviewModes)
+// Module 16884 (conjurePreviewModes)
+import ConjureTypes from "ConjureTypes" /* 6933 */;
+import conjurePreviewFrameSurfaces from "conjurePreviewFrameSurfaces" /* 12369 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -12,12 +14,39 @@ let obj = {
   widget(disableInteraction) {
     return disableInteraction.hasProfileWidget;
   },
+  overlay(hasOverlay) {
+    return true === hasOverlay.hasOverlay;
+  },
   bot(hasBotDm) {
     return true === hasBotDm.hasBotDm;
   }
 };
 const result = size.fileFinishedImporting("modules/conjure/preview/conjurePreviewModes.tsx");
 
+export const previewCapabilitiesFromSurfaces = function previewCapabilitiesFromSurfaces(previewSupportedSurfaces, arg1) {
+  ({ legacy, widgetResolvable, botDmResolvable } = arg1);
+  let tmp = legacy;
+  if (null != previewSupportedSurfaces) {
+    tmp = legacy;
+    if (0 !== previewSupportedSurfaces.length) {
+      obj = { hasFrame: conjurePreviewFrameSurfaces.declaresPreviewFrame(previewSupportedSurfaces), hasProfileWidget: null, hasBotDm: null };
+      if (widgetResolvable) {
+        widgetResolvable = previewSupportedSurfaces.includes(ConjureTypes.ConjureSupportedSurface.PROFILE_WIDGET);
+      }
+      obj.hasProfileWidget = widgetResolvable;
+      if (botDmResolvable) {
+        let hasItem = previewSupportedSurfaces.includes(ConjureTypes.ConjureSupportedSurface.BOT);
+        if (!hasItem) {
+          hasItem = previewSupportedSurfaces.includes(ConjureTypes.ConjureSupportedSurface.APPLICATION_COMMANDS);
+        }
+        botDmResolvable = hasItem;
+      }
+      obj.hasBotDm = botDmResolvable;
+      tmp = obj;
+    }
+  }
+  return tmp;
+};
 export const previewModeAvailability = function previewModeAvailability(installScope) {
   _require = installScope;
   const prop = require("ConjurePreviewMode").CONJURE_PREVIEW_MODE_ORDER;
@@ -49,12 +78,12 @@ export const profileWidgetState = function profileWidgetState(installScope) {
   }
   return str;
 };
-export const resolvePreviewMode = function resolvePreviewMode(arg0, result1) {
+export const resolvePreviewMode = function resolvePreviewMode(arg0, result2) {
   let defaultMode = arg0;
   if (null == arg0) {
-    defaultMode = result1.defaultMode;
+    defaultMode = result2.defaultMode;
   } else {
-    const modes = result1.modes;
+    const modes = result2.modes;
   }
   return defaultMode;
 };

@@ -1,28 +1,28 @@
-// === Module 11148: MessagesHooks ===
+// === Module 11268: MessagesHooks ===
 
-// Module 11148 (MessagesHooks)
+// Module 11268 (MessagesHooks)
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 568 */;
 import c from "c" /* 576 */;
-import GlobalUtils from "GlobalUtils" /* 1375 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6665 */;
-import InviteTypeUtils from "InviteTypeUtils" /* 7238 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 9867 */;
-import ChannelInfoActionCreators from "ChannelInfoActionCreators" /* 11149 */;
-import ChatUpdatesQueueDefault from "ChatUpdatesQueue" /* 11150 */;
+import GlobalUtils from "GlobalUtils" /* 1387 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6842 */;
+import InviteTypeUtils from "InviteTypeUtils" /* 7417 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 9317 */;
+import ChannelInfoActionCreators from "ChannelInfoActionCreators" /* 11269 */;
+import ChatUpdatesQueueDefault from "ChatUpdatesQueue" /* 11270 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 10036 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5625 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import PresenceStore from "PresenceStore" /* 4936 */;
+import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 9566 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5970 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import PresenceStore from "PresenceStore" /* 5106 */;
 
 require = fn;
 const findNodeHandle = fn(17).findNodeHandle;
-let closure_7 = fn(9100).updateShouldShowJumpToPresentButton;
+let closure_7 = fn(9318).updateShouldShowJumpToPresentButton;
 fn(558);
 let ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arr) => {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMessageAuthorActivities(arr) {
   const cResult = require("c").c(6);
   if (cResult[0] !== arr) {
     let obj2 = {};
@@ -62,7 +62,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arr) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStoresObject(tmp6, tmp8, tmp9);
-}) : ((arg0) => {
+}) : (function useMessageAuthorActivities(arg0) {
   _require = arg0;
   const items = [arg0];
   const memo = noop.useMemo(() => {
@@ -80,7 +80,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arr) => {
   return require("initialize").useStateFromStoresObject(items1, () => _modDef12.mapValues(memo, (arg0, arg1) => primaryActivity.getPrimaryActivity(arg1)), items2);
 });
 ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arr) => {
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFetchMessageApplications(arr) {
   const cResult = require("c").c(8);
   if (cResult[0] !== arr) {
     const _Set = Set;
@@ -139,7 +139,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arr) => {
   }
   const effect = noop.useEffect(tmp13, tmp14);
   let obj = require("c");
-}) : ((arg0) => {
+}) : (function useFetchMessageApplications(arg0) {
   closure_0 = arg0;
   const items = [arg0];
   const memo = noop.useMemo(() => {
@@ -167,7 +167,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arr) => {
   }, items1);
 });
 ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFetchVoiceChannelInviteStartTimes(arg0) {
   _require = arg0;
   const cResult = require("c").c(8);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -220,7 +220,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     const effect = noop.useEffect(tmp10, tmp11);
   }
-  const fn2 = function h() {
+  const fn2 = function v() {
     const values = closure_0.values();
     const iter = values[Symbol.iterator]();
     const nextResult = iter.next();
@@ -252,7 +252,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   tmp11 = items2;
   tmp10 = fn2;
   const tmpResult = require("initialize");
-}) : ((arg0) => {
+}) : (function useFetchVoiceChannelInviteStartTimes(arg0) {
   _require = arg0;
   const items = [GuildStore, GuildAvailabilityStore];
   const items1 = [arg0];
@@ -306,7 +306,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }, items2);
 });
 ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useScrollState() {
   const cResult = c.c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { animated: false, hasHandledScroll: false, isAtBottom: false, isNearBottom: false, isNearTop: false, decelerating: false, dragging: false, hasMoreMessagesAfterForLastUpdate: false, _loaded: false };
@@ -339,7 +339,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp6 = cResult[3];
   }
   return tmp6;
-}) : (() => {
+}) : (function useScrollState() {
   const tmp = _slicedToArray(noop.useState({ animated: false, hasHandledScroll: false, isAtBottom: false, isNearBottom: false, isNearTop: false, decelerating: false, dragging: false, hasMoreMessagesAfterForLastUpdate: false, _loaded: false }), 2);
   closure_0 = tmp[1];
   const items = [
@@ -395,7 +395,7 @@ export const useChatUpdatesQueue = function useChatUpdatesQueue(ref5, callback) 
   }, items1);
   return memo;
 };
-export const useMessagesState = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useMessagesState = ReactCompilerGating.isReactCompilerEnabled() ? (function useMessagesState() {
   const cResult = c.c(3);
   [tmp3, tmp4] = noop.useState(false);
   const tmp2 = _slicedToArray(noop.useState(false), 2);
@@ -411,7 +411,7 @@ export const useMessagesState = ReactCompilerGating.isReactCompilerEnabled() ? (
   cResult[1] = tmp3;
   cResult[2] = obj2;
   tmp8 = obj2;
-}) : (() => {
+}) : (function useMessagesState() {
   [tmp2, tmp3] = noop.useState(false);
   const tmp4 = _slicedToArray(noop.useState(false), 2);
   return { shouldForceRender: tmp2, hasJumpedToOriginalPost: tmp4[0], setHasJumpedToOriginalPost: tmp4[1], setShouldForceRender: tmp3 };

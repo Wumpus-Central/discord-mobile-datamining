@@ -1,14 +1,14 @@
-// === Module 11476: BanConfirm ===
+// === Module 11460: BanConfirm ===
 
-// Module 11476 (BanConfirm)
+// Module 11460 (BanConfirm)
 import nativeDefault from "native" /* 587 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import util from "util" /* 1126 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5712 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6102 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import UserStore from "UserStore" /* 1377 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
@@ -115,7 +115,7 @@ items[6] = {
     return intl.string(util.t.FA7IUk);
   }
 };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj8 = { container: null, iconLabelBlock: null, iconStyles: null, blurb: null, redText: null, errorText: null };
 let obj7 = {
   value: 7 * DurationsDefault.Seconds.DAY,
@@ -141,7 +141,7 @@ let obj15 = { marginBottom: nativeDefault.space.PX_16 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_moderation/native/BanConfirm.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function BanConfirm(guildId) {
   const cResult = guildId(onBan[11]).c(22);
   guildId = guildId.guildId;
   const userId = guildId.userId;
@@ -288,7 +288,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildI
   cResult[13] = stateFromStores1;
   cResult[14] = M;
   const tmp21 = stateFromStores(stateFromStores1.useState(V), 2);
-}) : ((arg0) => {
+}) : (function BanConfirm(arg0) {
   ({ guildId: require, userId: importDefault, onBan } = arg0);
   let stateFromStores1;
   c7 = undefined;
@@ -318,7 +318,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildI
       const obj5 = { paddingHorizontal: require("native").space.PX_24, paddingBottom: insets.bottom };
       obj4.contentContainerStyle = obj5;
       const obj6 = { style: tmp.iconLabelBlock, children: null };
-      const obj7 = { style: tmp.iconStyles, source: require("module_11477"), resizeMode: "contain" };
+      const obj7 = { style: tmp.iconStyles, source: require("module_11461"), resizeMode: "contain" };
       const items4 = [closure_10(ref, obj7), , ];
       const obj8 = { style: tmp.redText, variant: "text-md/semibold", children: null };
       const intl = require("util").intl;

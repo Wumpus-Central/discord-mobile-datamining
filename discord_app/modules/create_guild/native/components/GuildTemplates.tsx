@@ -1,31 +1,31 @@
-// === Module 12374: GuildTemplates ===
+// === Module 12470: GuildTemplates ===
 
-// Module 12374 (GuildTemplates)
+// Module 12470 (GuildTemplates)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import ListSelectionItemDefault from "ListSelectionItem" /* 11974 */;
-import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 12347 */;
-import CreateGuildIcons from "CreateGuildIcons" /* 12375 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import ListSelectionItemDefault from "ListSelectionItem" /* 12047 */;
+import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 12443 */;
+import CreateGuildIcons from "CreateGuildIcons" /* 12471 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-let CreateGuildConstants = fn(12371);
+let CreateGuildConstants = fn(12467);
 ({ getGuildTemplatesMap: closure_7, GuildTemplateId: closure_8 } = CreateGuildConstants);
-CreateGuildConstants = fn(6475);
+CreateGuildConstants = fn(6653);
 ({ CreateGuildModalStates: closure_9, GuildTemplateTriggers: c10, NUXGuildTemplatesAnalytics: closure_11 } = CreateGuildConstants);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_12, AnalyticsLocations: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4896);
-let obj2 = { flex: { flex: 1 }, contentContainer: { marginTop: fn(6075).NAV_BAR_HEIGHT }, scrollContainer: null, sections: null, headerContainer: null, headerTitle: null, headerDescription: null, footerSafeAreaContainer: null, footerContainer: null, footerTitle: null };
-let obj3 = { marginTop: fn(6075).NAV_BAR_HEIGHT };
+const createStyles = fn(5090);
+let obj2 = { flex: { flex: 1 }, contentContainer: { marginTop: fn(6261).NAV_BAR_HEIGHT }, scrollContainer: null, sections: null, headerContainer: null, headerTitle: null, headerDescription: null, footerSafeAreaContainer: null, footerContainer: null, footerTitle: null };
+let obj3 = { marginTop: fn(6261).NAV_BAR_HEIGHT };
 obj2.scrollContainer = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 let obj4 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.sections = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING, gap: 24 };
@@ -38,7 +38,7 @@ obj2.footerContainer = { padding: 16, gap: 16, minHeight: 110, justifyContent: "
 obj2.footerTitle = { alignSelf: "center", textAlign: "center" };
 let closure_16 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildTemplatesHeader() {
   const cResult = c.c(10);
   const tmp4 = closure_16();
   ({ headerContainer, headerTitle } = tmp4);
@@ -93,7 +93,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[8] = tmp12;
   cResult[9] = tmp16;
   tmp15 = tmp16;
-}) : (() => {
+}) : (function GuildTemplatesHeader() {
   const tmp = closure_16();
   const obj = { style: tmp.headerContainer, children: null };
   const obj2 = { style: tmp.headerTitle, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
@@ -108,7 +108,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   return closure_1_15(hasOwnProperty, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((trigger) => {
+let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildTemplatesJoinFooter(trigger) {
   const cResult = trigger(navigation[11]).c(26);
   trigger = trigger.trigger;
   const onHeightChange = trigger.onHeightChange;
@@ -128,94 +128,124 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((trigger) => {
     cResult[1] = stringResult;
   } else {
     if (cResult[2] !== onHeightChange) {
-      const fn = function f(nativeEvent) {
-        onHeightChange(nativeEvent.nativeEvent.layout.height);
-      };
+      class G {
+        constructor(arg0) {
+          tmp = onHeightChange(trigger.nativeEvent.layout.height);
+          return;
+        }
+      }
       cResult[2] = onHeightChange;
-      cResult[3] = fn;
-      let tmp10 = fn;
+      cResult[3] = G;
     } else {
-      tmp10 = cResult[3];
+      class G {
+        constructor(arg0) {
+          tmp = onHeightChange(trigger.nativeEvent.layout.height);
+          return;
+        }
+      }
     }
     if (cResult[4] !== bottom) {
-      let obj3 = { paddingBottom: bottom };
+      class G {
+        constructor(arg0) {
+          tmp = onHeightChange(trigger.nativeEvent.layout.height);
+          return;
+        }
+      }
+      tmp12[0] = bottom;
       cResult[4] = bottom;
-      cResult[5] = obj3;
-      let tmp11 = obj3;
+      cResult[5] = tmp12;
     } else {
-      tmp11 = cResult[5];
+      class G {
+        constructor(arg0) {
+          tmp = onHeightChange(trigger.nativeEvent.layout.height);
+          return;
+        }
+      }
     }
     if (cResult[6] === tmp4.footerSafeAreaContainer) {
-      if (cResult[7] === tmp11) {
-        let tmp12 = cResult[8];
+      class G {
+        constructor(arg0) {
+          tmp = onHeightChange(trigger.nativeEvent.layout.height);
+          return;
+        }
       }
       const _Symbol = Symbol;
       ({ footerContainer, footerTitle } = tmp4);
       if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl3 = tmp(tmp2[12]).intl;
-        const stringResult1 = intl3.string(tmp(tmp2[12]).t["N+Mi/U"]);
+        class G {
+          constructor(arg0) {
+            tmp = onHeightChange(trigger.nativeEvent.layout.height);
+            return;
+          }
+        }
+        const stringResult1 = obj3.string(tmp(tmp2[12]).t["N+Mi/U"]);
         cResult[9] = stringResult1;
-        let tmp14 = stringResult1;
+        const tmp15 = stringResult1;
       } else {
-        tmp14 = cResult[9];
+        class G {
+          constructor(arg0) {
+            tmp = onHeightChange(trigger.nativeEvent.layout.height);
+            return;
+          }
+        }
       }
       if (cResult[10] !== tmp4.footerTitle) {
-        let obj4 = { style: footerTitle, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: tmp14 };
+        class G {
+          constructor(arg0) {
+            tmp = onHeightChange(trigger.nativeEvent.layout.height);
+            return;
+          }
+        }
+        let obj4 = { style: footerTitle, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: tmp15 };
         const tmp18 = closure_14(tmp(tmp2[13]).Text, obj4);
         cResult[10] = tmp4.footerTitle;
         cResult[11] = tmp18;
-        let tmp16 = tmp18;
       } else {
-        tmp16 = cResult[11];
+        class G {
+          constructor(arg0) {
+            tmp = onHeightChange(trigger.nativeEvent.layout.height);
+            return;
+          }
+        }
       }
       if (cResult[12] === navigation) {
-        if (cResult[13] === trigger) {
-          let tmp19 = cResult[14];
+        class G {
+          constructor(arg0) {
+            tmp = onHeightChange(trigger.nativeEvent.layout.height);
+            return;
+          }
         }
         if (cResult[15] === tmp19) {
-          if (cResult[16] === tmp6) {
-            let tmp20 = cResult[17];
-          }
-          if (cResult[18] === tmp4.footerContainer) {
-            if (cResult[19] === tmp20) {
-              if (cResult[20] === tmp16) {
-                let tmp23 = cResult[21];
-              }
-              if (cResult[22] === tmp10) {
-                if (cResult[23] === tmp23) {
-                  if (cResult[24] === tmp12) {
-                    let tmp27 = cResult[25];
-                  }
-                  return tmp27;
-                }
-              }
-              const obj5 = { style: tmp12, onLayout: tmp10, children: tmp23 };
-              const tmp30 = closure_14(closure_5, obj5);
-              cResult[22] = tmp10;
-              cResult[23] = tmp23;
-              cResult[24] = tmp12;
-              cResult[25] = tmp30;
-              tmp27 = tmp30;
+          class G {
+            constructor(arg0) {
+              tmp = onHeightChange(trigger.nativeEvent.layout.height);
+              return;
             }
           }
-          const obj6 = { style: footerContainer, children: null };
-          const items = [tmp16, tmp20];
-          obj6.children = items;
-          const tmp26 = closure_15(closure_5, obj6);
+          if (cResult[18] === tmp4.footerContainer) {
+            class G {
+              constructor(arg0) {
+                tmp = onHeightChange(trigger.nativeEvent.layout.height);
+                return;
+              }
+            }
+          }
+          const obj5 = { style: footerContainer, children: null };
+          const items = [tmp17, tmp20];
+          obj5.children = items;
+          const tmp26 = closure_15(closure_5, obj5);
           cResult[18] = tmp4.footerContainer;
           cResult[19] = tmp20;
-          cResult[20] = tmp16;
+          cResult[20] = tmp17;
           cResult[21] = tmp26;
-          tmp23 = tmp26;
         }
-        const obj7 = { variant: "primary", grow: true, text: tmp6, onPress: tmp19 };
-        const tmp22 = closure_14(tmp(tmp2[18]).Button, obj7);
+        const obj6 = { variant: "primary", grow: true, text: tmp6, onPress: tmp19 };
+        const tmp22 = closure_14(tmp(tmp2[18]).Button, obj6);
         cResult[15] = tmp19;
         cResult[16] = tmp6;
         cResult[17] = tmp22;
-        tmp20 = tmp22;
       }
-      const fn2 = function v() {
+      const fn = function v() {
         if (constants3.NUF === trigger) {
           NewUserAnalyticsUtils.trackNUFStep(constants4.STEP_GUILD_TEMPLATE, constants4.STEP_GUILD_JOIN, { skip: false });
           AnalyticsUtilsDefault.track(constants5.JOIN_GUILD_VIEWED);
@@ -227,21 +257,19 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((trigger) => {
       };
       cResult[12] = navigation;
       cResult[13] = trigger;
-      cResult[14] = fn2;
-      tmp19 = fn2;
+      cResult[14] = fn;
     }
-    const items1 = [tmp4.footerSafeAreaContainer, tmp11];
+    const items1 = [tmp4.footerSafeAreaContainer, tmp12];
     cResult[6] = tmp4.footerSafeAreaContainer;
-    cResult[7] = tmp11;
+    cResult[7] = tmp12;
     cResult[8] = items1;
-    tmp12 = items1;
   }
   let obj2 = trigger(navigation[14]);
-}) : ((trigger) => {
+}) : (function GuildTemplatesJoinFooter(trigger) {
   trigger = trigger.trigger;
   const onHeightChange = trigger.onHeightChange;
   const tmp = closure_16();
-  dependencyMap = trigger(1490).useNavigation();
+  dependencyMap = trigger(1502).useNavigation();
   if (trigger === constants3.NUF) {
     const intl2 = tmp2(1126).intl;
     let stringResult = intl2.string(tmp2(1126).t.INo2NK);
@@ -257,15 +285,15 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((trigger) => {
     }, items),
     children: null
   };
-  const items1 = [tmp.footerSafeAreaContainer, { paddingBottom: onHeightChange(1618)().bottom }];
+  const items1 = [tmp.footerSafeAreaContainer, { paddingBottom: onHeightChange(1630)().bottom }];
   obj2.style = items1;
   let obj3 = { style: tmp.footerContainer, children: null };
   let obj4 = { style: tmp.footerTitle, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl3 = tmp2(1126).intl;
   obj4.children = intl3.string(trigger(1126).t["N+Mi/U"]);
   const items2 = [
-    closure_14(trigger(4892).Text, obj4),
-    closure_14(trigger(5601).Button, {
+    closure_14(trigger(5086).Text, obj4),
+    closure_14(trigger(5375).Button, {
       variant: "primary",
       grow: true,
       text: stringResult,
@@ -286,7 +314,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((trigger) => {
   return closure_14(closure_5, obj2);
 });
 ReactCompilerGating = fn(558);
-let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildTemplate) => {
+let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildTemplatesItem(guildTemplate) {
   const cResult = c.c(7);
   guildTemplate = guildTemplate.guildTemplate;
   const onGuildTemplatePress = guildTemplate.onGuildTemplatePress;
@@ -311,14 +339,14 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildTemplate)
     cResult[6] = tmp8;
     tmp5 = tmp8;
   }
-  const fn = function n() {
+  const fn = function l() {
     return onGuildTemplatePress(guildTemplate);
   };
   cResult[0] = guildTemplate;
   cResult[1] = onGuildTemplatePress;
   cResult[2] = fn;
   tmp4 = fn;
-}) : ((guildTemplate) => {
+}) : (function GuildTemplatesItem(guildTemplate) {
   guildTemplate = guildTemplate.guildTemplate;
   const onGuildTemplatePress = guildTemplate.onGuildTemplatePress;
   const obj = {
@@ -335,7 +363,7 @@ let obj6 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, position
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/create_guild/native/components/GuildTemplates.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((trigger) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildTemplates(trigger) {
   const cResult = trigger(fromStep[11]).c(62);
   trigger = trigger.trigger;
   const _location = trigger.location;
@@ -367,11 +395,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((trigger) => {
         noop = tmp16[1];
         const _Symbol2 = Symbol;
         if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-          const fn3 = function k(arg0) {
+          const fn2 = function k(arg0) {
             closure_4(arg0);
           };
-          cResult[9] = fn3;
-          let tmp17 = fn3;
+          cResult[9] = fn2;
+          let tmp17 = fn2;
         } else {
           tmp17 = cResult[9];
         }
@@ -587,18 +615,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((trigger) => {
         cResult[12] = items4;
         tmp19 = items4;
       }
-      const fn2 = function f(guildTemplate) {
+      function onGuildTemplatePress(guildTemplate) {
         navigation.push(constants2.CREATION_INTENT, { guildTemplate, trigger });
         if (trigger === constants3.IN_APP) {
           const obj3 = { template_name: guildTemplate.id };
           AnalyticsUtilsDefault.track(constants5.GUILD_TEMPLATE_SELECTED, obj3);
         }
         const obj = { guildTemplate, trigger };
-      };
+      }
       cResult[5] = navigation;
       cResult[6] = trigger;
-      cResult[7] = fn2;
-      tmp9 = fn2;
+      cResult[7] = onGuildTemplatePress;
+      tmp9 = onGuildTemplatePress;
     }
   }
   const fn = function c() {
@@ -626,7 +654,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((trigger) => {
   tmp7 = items5;
   tmp6 = fn;
   let obj2 = trigger(fromStep[14]);
-}) : ((trigger) => {
+}) : (function GuildTemplates(trigger) {
   trigger = trigger.trigger;
   const _location = trigger.location;
   const fromStep = trigger.fromStep;

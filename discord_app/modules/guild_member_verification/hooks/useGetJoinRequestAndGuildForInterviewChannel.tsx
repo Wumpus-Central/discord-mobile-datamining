@@ -1,15 +1,17 @@
-// === Module 12313: useGetJoinRequestAndGuildForInterviewChannel ===
+// === Module 12411: useGetJoinRequestAndGuildForInterviewChannel ===
 
-// Module 12313 (useGetJoinRequestAndGuildForInterviewChannel)
+// Module 12411 (useGetJoinRequestAndGuildForInterviewChannel)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 5938 */;
+import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 6121 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
-import GuildJoinRequestStore from "GuildJoinRequestStore" /* 5939 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4706 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6122 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4900 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const Permissions = fn(1085).Permissions;
@@ -17,7 +19,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/hooks/useGetJoinRequestAndGuildForInterviewChannel.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGetJoinRequestAndGuildForInterviewChannel(id) {
   const cResult = c.c(17);
   [tmp5, require] = joinRequest.useState(false);
   [first, dependencyMap] = joinRequest.useState(false);
@@ -39,7 +41,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
     tmp11 = cResult[2];
   }
   if (cResult[3] !== tmp8) {
-    class J {
+    class M {
       constructor() {
         request = closure_7.getRequest(closure_3);
         if (null == request) {
@@ -66,9 +68,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
       }
     }
     cResult[3] = tmp8;
-    cResult[4] = J;
+    cResult[4] = M;
   } else {
-    class J {
+    class M {
       constructor() {
         request = closure_7.getRequest(closure_3);
         if (null == request) {
@@ -96,11 +98,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
     }
   }
   const tmp4 = _slicedToArray(joinRequest.useState(false), 2);
-  const stateFromStoresObject = initialize.useStateFromStoresObject(tmp11, J);
+  const stateFromStoresObject = initialize.useStateFromStoresObject(tmp11, M);
   joinRequest = stateFromStoresObject.joinRequest;
   guild = stateFromStoresObject.guild;
   if (cResult[5] === first) {
-    class J {
+    class M {
       constructor() {
         request = closure_7.getRequest(closure_3);
         if (null == request) {
@@ -126,9 +128,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
         }
       }
     }
-    const effect = obj2.useEffect(F, items2);
+    const effect = obj2.useEffect(fn, items2);
     if (cResult[9] === tmp8) {
-      class J {
+      class M {
         constructor() {
           request = closure_7.getRequest(closure_3);
           if (null == request) {
@@ -154,9 +156,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
           }
         }
       }
-      const effect1 = obj2.useEffect(C, tmp20);
+      const effect1 = obj2.useEffect(tmp19, tmp20);
       if (cResult[13] === guild) {
-        class J {
+        class M {
           constructor() {
             request = closure_7.getRequest(closure_3);
             if (null == request) {
@@ -183,75 +185,43 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
           }
         }
       }
-      class C {
-        constructor() {
-          if (null == joinRequest) {
-            tmp = closure_0;
-            flag = true;
-            tmp2 = closure_0(true);
-            tmp3 = closure_1;
-            tmp4 = closure_2;
-            obj = closure_1(closure_2[11]);
-            tmp5 = closure_3;
-            joinRequestForInterview = obj.fetchJoinRequestForInterview(closure_3);
-            cleanupPromise = joinRequestForInterview.finally(() => { ... });
-          }
-          return;
-        }
-      }
-      tmp23[0] = tmp5;
-      tmp23[1] = joinRequest;
-      tmp23[2] = guild;
+      const obj4 = { loading: tmp5, joinRequest, joinRequestGuild: guild };
       cResult[13] = guild;
       cResult[14] = joinRequest;
       cResult[15] = tmp5;
-      cResult[16] = tmp23;
+      cResult[16] = obj4;
     }
-    class C {
-      constructor() {
-        if (null == joinRequest) {
-          tmp = closure_0;
-          flag = true;
-          tmp2 = closure_0(true);
-          tmp3 = closure_1;
-          tmp4 = closure_2;
-          obj = closure_1(closure_2[11]);
-          tmp5 = closure_3;
-          joinRequestForInterview = obj.fetchJoinRequestForInterview(closure_3);
-          cleanupPromise = joinRequestForInterview.finally(() => { ... });
-        }
-        return;
+    const fn2 = function w() {
+      if (null == joinRequest) {
+        require(true);
+        const joinRequestForInterview = GuildJoinRequestActionCreatorsDefault.fetchJoinRequestForInterview(closure_3);
+        joinRequestForInterview.finally(() => {
+          closure_1_0(false);
+        });
       }
-    }
+    };
     const items1 = [joinRequest, tmp8];
     cResult[9] = tmp8;
     cResult[10] = joinRequest;
-    cResult[11] = C;
+    cResult[11] = fn2;
     cResult[12] = items1;
+    tmp19 = fn2;
     tmp20 = items1;
   }
-  class F {
-    constructor() {
-      tmp = null != guild || closure_1;
-      if (!tmp) {
-        tmp2 = closure_2;
-        flag = true;
-        tmp3 = closure_2(true);
-        tmp4 = closure_1;
-        tmp5 = closure_2;
-        obj = closure_1(closure_2[11]);
-        requestToJoinGuilds = obj.fetchRequestToJoinGuilds();
-      }
-      return;
+  fn = function b() {
+    if (!tmp) {
+      closure_2(true);
+      const requestToJoinGuilds = GuildJoinRequestActionCreatorsDefault.fetchRequestToJoinGuilds();
     }
-  }
+    tmp = null != guild || first;
+  };
   items2 = [guild, first];
   cResult[5] = first;
   cResult[6] = guild;
-  cResult[7] = F;
+  cResult[7] = fn;
   cResult[8] = items2;
   const tmpResult = initialize;
-}) : ((id) => {
+}) : (function useGetJoinRequestAndGuildForInterviewChannel(id) {
   [tmp2, require] = joinRequest.useState(false);
   [first, dependencyMap] = joinRequest.useState(false);
   let tmp = _slicedToArray(joinRequest.useState(false), 2);
@@ -291,7 +261,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
   const items2 = [joinRequest, castResult];
   const effect1 = joinRequest.useEffect(() => {
     if (null == joinRequest) {
-      _require(true);
+      require(true);
       const joinRequestForInterview = GuildJoinRequestActionCreatorsDefault.fetchJoinRequestForInterview(castResult);
       joinRequestForInterview.finally(() => {
         closure_1_0(false);

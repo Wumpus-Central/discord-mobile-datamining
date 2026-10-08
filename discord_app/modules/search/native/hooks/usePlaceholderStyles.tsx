@@ -1,22 +1,22 @@
-// === Module 16837: usePlaceholderStyles ===
+// === Module 17116: usePlaceholderStyles ===
 
-// Module 16837 (usePlaceholderStyles)
+// Module 17116 (usePlaceholderStyles)
 import c from "c" /* 576 */;
-import native from "native" /* 1188 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import timing from "timing" /* 4897 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import native from "native" /* 1200 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import timing from "timing" /* 5091 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const FADE_LAYOUT_ANIMATION_DURATION = fn(7524).FADE_LAYOUT_ANIMATION_DURATION;
+const FADE_LAYOUT_ANIMATION_DURATION = fn(9247).FADE_LAYOUT_ANIMATION_DURATION;
 fn(558);
 const __initData = { code: "function usePlaceholderStylesTsx1(){const{useReducedMotion,visible,withRepeat,withSequence,withTiming,STANDARD_EASING,FADE_LAYOUT_ANIMATION_DURATION}=this.__closure;if(useReducedMotion){return{opacity:visible?1:0};}if(visible){return{opacity:withRepeat(withSequence(withTiming(0.5,{duration:0}),withTiming(1,{duration:1300,easing:STANDARD_EASING}),withTiming(0.5,{duration:1300,easing:STANDARD_EASING})),-1)};}return{opacity:withTiming(0,{duration:FADE_LAYOUT_ANIMATION_DURATION})};}" };
 const __initData2 = { code: "function usePlaceholderStylesTsx2(){const{useReducedMotion,visible,withRepeat,withSequence,withTiming,STANDARD_EASING,FADE_LAYOUT_ANIMATION_DURATION}=this.__closure;if(useReducedMotion){return{opacity:visible?1:0};}if(visible){return{opacity:withRepeat(withSequence(withTiming(0.5,{duration:0}),withTiming(1,{duration:1300,easing:STANDARD_EASING}),withTiming(0.5,{duration:1300,easing:STANDARD_EASING})),-1)};}return{opacity:withTiming(0,{duration:FADE_LAYOUT_ANIMATION_DURATION})};}" };
 const ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFullscreenPlaceholderCount(arg0) {
   const cResult = c.c(1);
   ({ placeholderHeight, numColumns } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -27,7 +27,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     first = cResult[0];
   }
   return Math.ceil(useWindowDimensionsDefault(first).height / placeholderHeight) * numColumns;
-}) : ((arg0) => {
+}) : (function useFullscreenPlaceholderCount(arg0) {
   ({ placeholderHeight, numColumns } = arg0);
   return Math.ceil(useWindowDimensionsDefault({ ignoreKeyboard: true }).height / placeholderHeight) * numColumns;
 });
@@ -35,7 +35,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/hooks/usePlaceholderStyles.tsx");
 
 export const useFullscreenPlaceholderCount = tmp2;
-export const usePlaceholderAnimatedStyle = ReactCompilerGating.isReactCompilerEnabled() ? ((visible) => {
+export const usePlaceholderAnimatedStyle = ReactCompilerGating.isReactCompilerEnabled() ? (function usePlaceholderAnimatedStyle(visible) {
   _require = visible;
   const cResult = require("c").c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -53,7 +53,7 @@ export const usePlaceholderAnimatedStyle = ReactCompilerGating.isReactCompilerEn
   let obj = require("c");
   const stateFromStores = require("initialize").useStateFromStores(tmp4, tmp5);
   const tmpResult = require("initialize");
-  const fn2 = function s() {
+  const fn2 = function h() {
     const obj = { opacity: null };
     if (stateFromStores) {
       let num5 = 0;
@@ -84,7 +84,7 @@ export const usePlaceholderAnimatedStyle = ReactCompilerGating.isReactCompilerEn
   fn2.__workletHash = 9750536800906;
   fn2.__initData = __initData;
   return tmpResult2.useAnimatedStyle(fn2);
-}) : ((visible) => {
+}) : (function usePlaceholderAnimatedStyle(visible) {
   _require = visible;
   const items = [AccessibilityStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => useReducedMotion.useReducedMotion);

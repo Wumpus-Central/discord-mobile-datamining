@@ -1,16 +1,16 @@
-// === Module 12433: DiscoverabilityActionSheet ===
+// === Module 12529: DiscoverabilityActionSheet ===
 
-// Module 12433 (DiscoverabilityActionSheet)
+// Module 12529 (DiscoverabilityActionSheet)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
-const ContactSyncModalStore = fn(12341);
+const ContactSyncModalStore = fn(12437);
 ({ useContactSyncModalStore: closure_4, setAllowSync: hasOwnProperty, setAllowPhone: metroRequire, setAllowEmail: closure_7 } = ContactSyncModalStore);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingBottom: 16 }, formRow: null, syncRow: null, formText: null, info: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingBottom: 16 };
 obj2.formRow = { marginTop: 8, paddingVertical: 16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
@@ -25,7 +25,7 @@ let obj6 = { marginTop: 8, fontSize: 14, lineHeight: 18, paddingHorizontal: 16, 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/nuf/native/components/DiscoverabilityActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function DiscoverabilityActionSheet() {
   const cResult = allowPhone(allowEmail[8]).c(59);
   const tmp4 = closure_10();
   const tmp5 = closure_4();
@@ -156,7 +156,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[7] = tmp4.syncRow;
   cResult[8] = items;
   const obj = allowPhone(allowEmail[8]);
-}) : (() => {
+}) : (function DiscoverabilityActionSheet() {
   const tmp = closure_10();
   const tmp2 = closure_4();
   const allowPhone = tmp2.allowPhone;
@@ -201,7 +201,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const obj6 = { style: tmp.info, children: null };
   const intl4 = allowPhone(allowEmail[9]).intl;
   obj6.children = intl4.format(allowPhone(allowEmail[9]).t.eswIfi, {
-    learnMoreHook(children, arg1) {
+    learnMoreHook: function LearnMore(children, arg1) {
       return closure_1_8(allowPhone(allowEmail[11]).Text, { onPress: allowPhone(allowEmail[12]).handleOpenLearnMoreLink, variant: "text-sm/medium", color: "text-link", children }, arg1);
     }
   });

@@ -1,12 +1,12 @@
-// === Module 12299: GuildIconPile ===
+// === Module 12397: GuildIconPile ===
 
-// Module 12299 (GuildIconPile)
+// Module 12397 (GuildIconPile)
 import c from "c" /* 576 */;
-import GuildIcon from "GuildIcon" /* 5978 */;
-import ClipView from "ClipView" /* 8502 */;
-import Pile from "Pile" /* 10752 */;
-import PileOverflow from "PileOverflow" /* 10753 */;
-import ListUtils from "ListUtils" /* 12300 */;
+import GuildIcon from "GuildIcon" /* 6161 */;
+import ClipView from "ClipView" /* 8986 */;
+import Pile from "Pile" /* 11617 */;
+import PileOverflow from "PileOverflow" /* 11618 */;
+import ListUtils from "ListUtils" /* 12398 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Pile/native/GuildIconPile.native.tsx");
 
-export const GuildIconPile = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const GuildIconPile = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildIconPile(arg0) {
   const cResult = c.c(13);
   ({ totalCount, names, children } = arg0);
   const Children = noop.Children;
@@ -77,7 +77,7 @@ export const GuildIconPile = ReactCompilerGating.isReactCompilerEnabled() ? ((ar
   cResult[2] = listSummaryLabel;
   tmp6 = listSummaryLabel;
   const tmpResult = ListUtils;
-}) : ((arg0) => {
+}) : (function GuildIconPile(arg0) {
   ({ totalCount, children } = arg0);
   const Children = noop.Children;
   ({ size, names } = arg0);

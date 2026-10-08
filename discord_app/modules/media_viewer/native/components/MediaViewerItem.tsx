@@ -1,22 +1,22 @@
-// === Module 12802: MediaViewerItem ===
+// === Module 12949: MediaViewerItem ===
 
-// Module 12802 (MediaViewerItem)
-import PlatformUtils2 from "PlatformUtils" /* 1369 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6147 */;
-import useMediaViewerSources from "useMediaViewerSources" /* 7945 */;
-import useEntranceAnimation from "useEntranceAnimation" /* 12804 */;
+// Module 12949 (MediaViewerItem)
+import PlatformUtils2 from "PlatformUtils" /* 1381 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6326 */;
+import useMediaViewerSources from "useMediaViewerSources" /* 8363 */;
+import useEntranceAnimation from "useEntranceAnimation" /* 12951 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsx = fn(21).jsx;
-const PlatformUtils = fn(1369);
+const PlatformUtils = fn(1381);
 let closure_7 = PlatformUtils.isAndroid();
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/components/MediaViewerItem.tsx");
 
-export const MediaViewerItem = noop.memo((index) => {
+export const MediaViewerItem = noop.memo(function MediaViewerItem(index) {
   index = index.index;
   const onLongPress = index.onLongPress;
   const panGestureConfig = index.panGestureConfig;

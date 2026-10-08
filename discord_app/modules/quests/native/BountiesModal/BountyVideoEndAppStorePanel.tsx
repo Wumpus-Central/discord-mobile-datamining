@@ -1,19 +1,19 @@
-// === Module 14877: BountyVideoEndAppStorePanel ===
+// === Module 15139: BountyVideoEndAppStorePanel ===
 
-// Module 14877 (BountyVideoEndAppStorePanel)
+// Module 15139 (BountyVideoEndAppStorePanel)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import openURLDefault from "openURL" /* 4565 */;
-import native from "native" /* 4595 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import timing from "timing" /* 4897 */;
-import timingPresets from "timingPresets" /* 4900 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6147 */;
-import AnalyticsActions from "AnalyticsActions" /* 7215 */;
-import AppStoreOverlayContent from "AppStoreOverlayContent" /* 10933 */;
+import openURLDefault from "openURL" /* 4757 */;
+import native from "native" /* 4787 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import timing from "timing" /* 5091 */;
+import timingPresets from "timingPresets" /* 5094 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6326 */;
+import AnalyticsActions from "AnalyticsActions" /* 7395 */;
+import AppStoreOverlayContent from "AppStoreOverlayContent" /* 10584 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1193 */;
+import ThemeStore from "ThemeStore" /* 1205 */;
 
 require = fn;
 function BountyVideoEndAppStorePanelInner(metadata) {
@@ -36,7 +36,7 @@ function BountyVideoEndAppStorePanelInner(metadata) {
   }, items);
   const unmountEffect = metadata(revealProgress[8]).useUnmountEffect(onPress);
   let obj = metadata(revealProgress[8]);
-  class A {
+  class H {
     constructor() {
       obj = { transform: null };
       obj1 = { translateY: null };
@@ -53,11 +53,11 @@ function BountyVideoEndAppStorePanelInner(metadata) {
     }
   }
   let obj2 = metadata(revealProgress[9]);
-  A.__closure = { interpolate: metadata(revealProgress[9]).interpolate, revealProgress, sheetHeight, Extrapolation: metadata(revealProgress[9]).Extrapolation };
-  A.__workletHash = 2597568517005;
-  A.__initData = __initData;
+  H.__closure = { interpolate: metadata(revealProgress[9]).interpolate, revealProgress, sheetHeight, Extrapolation: metadata(revealProgress[9]).Extrapolation };
+  H.__workletHash = 2597568517005;
+  H.__initData = __initData;
   let items1 = [metadata.storeUrl, onInstallPress];
-  const animatedStyle = obj2.useAnimatedStyle(A);
+  const animatedStyle = obj2.useAnimatedStyle(H);
   const callback1 = onDismiss.useCallback(() => {
     onInstallPress(AnalyticsActions.AppStoreOverlaySurfaces.MAIN_CTA);
     openURLDefault(metadata.storeUrl);
@@ -137,24 +137,24 @@ function BountyVideoEndAppStorePanelInner(metadata) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ACTION_SHEET_BORDER_RADIUS = fn(6653).ACTION_SHEET_BORDER_RADIUS;
+const ACTION_SHEET_BORDER_RADIUS = fn(6830).ACTION_SHEET_BORDER_RADIUS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { root: { position: "absolute", left: 0, right: 0, bottom: 0, zIndex: 10 }, panel: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, borderTopLeftRadius: ACTION_SHEET_BORDER_RADIUS, borderTopRightRadius: ACTION_SHEET_BORDER_RADIUS, overflow: "hidden", flexDirection: "column" }, headerBar: { zIndex: 1 }, headerGestureTarget: { position: "absolute", top: 0, left: 0, right: 0, height: 48, zIndex: 2 }, scrollBody: { flex: 1, minHeight: 0 }, scrollContent: null };
 let obj3 = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, borderTopLeftRadius: ACTION_SHEET_BORDER_RADIUS, borderTopRightRadius: ACTION_SHEET_BORDER_RADIUS, overflow: "hidden", flexDirection: "column" };
-obj2.scrollContent = { paddingBottom: fn(10937).APP_STORE_OVERLAY_FOOTER_GRADIENT_HEIGHT };
+obj2.scrollContent = { paddingBottom: fn(10588).APP_STORE_OVERLAY_FOOTER_GRADIENT_HEIGHT };
 let closure_9 = createStyles.createStyles(obj2);
 const __initData = { code: "function BountyVideoEndAppStorePanelTsx1(){const{interpolate,revealProgress,sheetHeight,Extrapolation}=this.__closure;return{transform:[{translateY:interpolate(revealProgress.get(),[0,1],[sheetHeight,0],Extrapolation.CLAMP)}]};}" };
 let closure_11 = { code: "function BountyVideoEndAppStorePanelTsx2(event_0){const{revealProgress,DISMISS_PROGRESS_THRESHOLD,DISMISS_VELOCITY_THRESHOLD,runOnJS,handleDismiss,withTiming,timingStandard}=this.__closure;if(revealProgress.get()<DISMISS_PROGRESS_THRESHOLD||event_0.velocityY>DISMISS_VELOCITY_THRESHOLD){runOnJS(handleDismiss)();return;}revealProgress.set(withTiming(1,timingStandard));}" };
 let closure_12 = { code: "function BountyVideoEndAppStorePanelTsx3(event){const{revealProgress,dragStartProgress,sheetHeight}=this.__closure;revealProgress.set(Math.max(0,Math.min(1,dragStartProgress.get()-event.translationY/sheetHeight)));}" };
 let closure_13 = { code: "function BountyVideoEndAppStorePanelTsx4(){const{dragStartProgress,revealProgress}=this.__closure;dragStartProgress.set(revealProgress.get());}" };
 const ReactCompilerGating = fn(558);
-let obj4 = { paddingBottom: fn(10937).APP_STORE_OVERLAY_FOOTER_GRADIENT_HEIGHT };
+let obj4 = { paddingBottom: fn(10588).APP_STORE_OVERLAY_FOOTER_GRADIENT_HEIGHT };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountyVideoEndAppStorePanel.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function BountyVideoEndAppStorePanel(arg0) {
   const cResult = c.c(7);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ThemeStore];
@@ -191,7 +191,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[6] = tmp16;
   tmp15 = tmp16;
   const tmpResult = initialize;
-}) : ((arg0) => {
+}) : (function BountyVideoEndAppStorePanel(arg0) {
   const items = [ThemeStore];
   const stateFromStores = initialize.useStateFromStores(items, () => theme.theme);
   const obj2 = { theme: stateFromStores, children: null };

@@ -1,11 +1,11 @@
-// === Module 16423: ContactSuggestionActions ===
+// === Module 16683: ContactSuggestionActions ===
 
-// Module 16423 (ContactSuggestionActions)
+// Module 16683 (ContactSuggestionActions)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import timing from "timing" /* 4897 */;
-import spring from "spring" /* 5604 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 16010 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import timing from "timing" /* 5091 */;
+import spring from "spring" /* 5374 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 16270 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,19 +13,19 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let obj = { duration: 200, easing: null };
-const Easing = fn(4618).Easing;
-obj.easing = Easing.in(fn(4618).Easing.quad);
+const Easing = fn(4810).Easing;
+obj.easing = Easing.in(fn(4810).Easing.quad);
 let obj2 = { duration: 250, easing: null };
-const Easing2 = fn(4618).Easing;
-obj2.easing = Easing2.in(fn(4618).Easing.quad);
+const Easing2 = fn(4810).Easing;
+obj2.easing = Easing2.in(fn(4810).Easing.quad);
 let obj3 = { duration: 250, easing: null };
-const Easing3 = fn(4618).Easing;
-obj3.easing = Easing3.in(fn(4618).Easing.quad);
+const Easing3 = fn(4810).Easing;
+obj3.easing = Easing3.in(fn(4810).Easing.quad);
 let obj4 = { duration: 250, easing: null };
-const Easing4 = fn(4618).Easing;
-obj4.easing = Easing4.out(fn(4618).Easing.quad);
+const Easing4 = fn(4810).Easing;
+obj4.easing = Easing4.out(fn(4810).Easing.quad);
 const SPRING_CONFIG = { mass: 1, stiffness: 172, damping: 17.3 };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj6 = { icon: { position: "absolute", top: 4, zIndex: 2, color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, opacity: 0 } };
 let closure_12 = createStyles.createStyles(obj6);
 const __initData = { code: "function ContactSuggestionActionsTsx1(){const{right,opacity,scale}=this.__closure;return{right:right.get(),opacity:opacity.get(),transform:[{scale:scale.get()}]};}" };
@@ -45,7 +45,7 @@ let obj7 = { position: "absolute", top: 4, zIndex: 2, color: nativeDefault.color
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/components/ContactSuggestionActions.tsx");
 
-export const ContactSuggestionActions = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
+export const ContactSuggestionActions = ReactCompilerGating.isReactCompilerEnabled() ? (function ContactSuggestionActions(user) {
   const cResult = user(onAddSuggestion[7]).c(27);
   user = user.user;
   const added = user.added;
@@ -492,7 +492,7 @@ export const ContactSuggestionActions = ReactCompilerGating.isReactCompilerEnabl
   cResult[7] = user;
   cResult[8] = fn2;
   const tmpResult11 = user(onAddSuggestion[3]);
-}) : ((user) => {
+}) : (function ContactSuggestionActions(user) {
   user = user.user;
   const added = user.added;
   const onAddSuggestion = user.onAddSuggestion;

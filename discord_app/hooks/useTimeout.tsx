@@ -1,6 +1,6 @@
-// === Module 10502: useTimeout ===
+// === Module 10099: useTimeout ===
 
-// Module 10502 (useTimeout)
+// Module 10099 (useTimeout)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
@@ -9,13 +9,13 @@ import size from "module_2" /* 2 */;
 ({ useEffect: c2, useRef: c3 } = noop);
 const result = size.fileFinishedImporting("hooks/useTimeout.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((current, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useTimeout(current, arg1) {
   closure_1 = arg1;
   const cResult = c.c(6);
   const tmp2 = React3(current);
   closure_2 = tmp2;
   if (cResult[0] !== current) {
-    const fn = function o() {
+    const fn = function c() {
       closure_2.current = current;
     };
     const items = [current];
@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((current, arg1) =
   }
   React2(tmp3, tmp4);
   if (cResult[3] !== arg1) {
-    const fn2 = function s() {
+    const fn2 = function l() {
       if (null !== closure_1) {
         const _setTimeout = setTimeout;
         const timeout = setTimeout(() => ref.current(), tmp);
@@ -48,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((current, arg1) =
     tmp8 = cResult[5];
   }
   React2(tmp7, tmp8);
-}) : ((current, arg1) => {
+}) : (function useTimeout(current, arg1) {
   closure_1 = arg1;
   const tmp = React3(current);
   closure_2 = tmp;

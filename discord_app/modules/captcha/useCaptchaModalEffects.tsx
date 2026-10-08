@@ -1,7 +1,7 @@
-// === Module 17456: useCaptchaModalEffects ===
+// === Module 17738: useCaptchaModalEffects ===
 
-// Module 17456 (useCaptchaModalEffects)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+// Module 17738 (useCaptchaModalEffects)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/captcha/useCaptchaModalEffects.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onReject) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCaptchaModalEffects(onReject) {
   const cResult = onReject(576).c(6);
   onReject = onReject.onReject;
   const analyticsType = onReject.analyticsType;
@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onReject) => {
   } else {
     tmp3 = cResult[1];
   }
-  str(5597)(tmp3);
+  str(5392)(tmp3);
   if (cResult[2] !== str) {
     const fn2 = function o() {
       AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, { type: str });
@@ -61,22 +61,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onReject) => {
   }
   const effect = noop.useEffect(tmp5, tmp6);
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn3 = function s() {
+    function onCaptchaAttempted() {
       closure_2.current = false;
-    };
-    cResult[5] = fn3;
-    let tmp8 = fn3;
+    }
+    cResult[5] = onCaptchaAttempted;
+    let tmp8 = onCaptchaAttempted;
   } else {
     tmp8 = cResult[5];
   }
   return tmp8;
-}) : ((arg0) => {
+}) : (function useCaptchaModalEffects(arg0) {
   ({ onReject: require, analyticsType } = arg0);
   if (analyticsType === undefined) {
     analyticsType = "Guild Join Captcha";
   }
   dependencyMap = noop.useRef(true);
-  analyticsType(5597)(() => () => {
+  analyticsType(5392)(() => () => {
     if (ref.current) {
       if (closure_1_0 != null) {
         tmp(require("SharedCaptchaUtils").CaptchaError.CANCEL);
@@ -94,7 +94,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onReject) => {
       }
     };
   }, items);
-  return () => {
+  return function onCaptchaAttempted() {
     closure_2.current = false;
   };
 });

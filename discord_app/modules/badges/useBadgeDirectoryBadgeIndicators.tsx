@@ -1,15 +1,15 @@
-// === Module 10903: useBadgeDirectoryBadgeIndicators ===
+// === Module 10554: useBadgeDirectoryBadgeIndicators ===
 
-// Module 10903 (useBadgeDirectoryBadgeIndicators)
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 7879 */;
-import BadgeUtils from "BadgeUtils" /* 10902 */;
+// Module 10554 (useBadgeDirectoryBadgeIndicators)
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8297 */;
+import BadgeUtils from "BadgeUtils" /* 10553 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectorySeenStore from "BadgeDirectorySeenStore" /* 10904 */;
+import BadgeDirectorySeenStore from "BadgeDirectorySeenStore" /* 10555 */;
 
 require = fn;
 fn(558);
 const ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((badges) => {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBadgeDirectoryBadgeIndicators(badges) {
   const cResult = stateFromStores(576).c(11);
   badges = badges.badges;
   let tmp4 = globalThis;
@@ -29,7 +29,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((badges) => {
   stateFromStores = stateFromStores(504).useStateFromStores(tmp5, tmp6);
   if (badges.enabled) {
     if (cResult[6] !== stateFromStores) {
-      const fn2 = function _(badge_id) {
+      const fn2 = function b(badge_id) {
         badge_id = badge_id.badge_id;
         const BETA_BADGE_IDS = BadgeUtils.BETA_BADGE_IDS;
         let hasItem = BETA_BADGE_IDS.has(badge_id);
@@ -46,7 +46,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((badges) => {
     }
     const _Symbol2 = Symbol;
     if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-      const fn3 = function f(badge_id) {
+      const fn3 = function _(badge_id) {
         return badge_id.badge_id;
       };
       cResult[8] = fn3;
@@ -82,7 +82,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((badges) => {
     return tmp20;
   }
   const tmpResult = stateFromStores(504);
-}) : ((badges) => {
+}) : (function useBadgeDirectoryBadgeIndicators(badges) {
   badges = badges.badges;
   const enabled = badges.enabled;
   const items = [BadgeDirectorySeenStore];
@@ -123,11 +123,11 @@ function dismissBadgeDirectoryBadgeIndicator(badgeId) {
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/badges/useBadgeDirectoryBadgeIndicators.tsx");
 
-export const NEW_INDICATOR_BADGE_IDS = fn(10902).BETA_BADGE_IDS;
+export const NEW_INDICATOR_BADGE_IDS = fn(10553).BETA_BADGE_IDS;
 export { isNewIndicatorBadgeId };
 export { dismissBadgeDirectoryBadgeIndicator };
 export const useBadgeDirectoryBadgeIndicators = tmp2;
-export const useDismissBadgeDirectoryBadgeIndicator = ReactCompilerGating.isReactCompilerEnabled() ? ((badgeId) => {
+export const useDismissBadgeDirectoryBadgeIndicator = ReactCompilerGating.isReactCompilerEnabled() ? (function useDismissBadgeDirectoryBadgeIndicator(badgeId) {
   const cResult = badgeId(enabled[5]).c(4);
   badgeId = badgeId.badgeId;
   enabled = badgeId.enabled;
@@ -138,7 +138,7 @@ export const useDismissBadgeDirectoryBadgeIndicator = ReactCompilerGating.isReac
     }
     const effect = noop.useEffect(tmp2, tmp3);
   }
-  const fn = function s() {
+  const fn = function n() {
     if (tmp2) {
       const BETA_BADGE_IDS = BadgeUtils.BETA_BADGE_IDS;
       if (BETA_BADGE_IDS.has(badgeId)) {
@@ -156,7 +156,7 @@ export const useDismissBadgeDirectoryBadgeIndicator = ReactCompilerGating.isReac
   tmp3 = items;
   tmp2 = fn;
   const obj = badgeId(enabled[5]);
-}) : ((badgeId) => {
+}) : (function useDismissBadgeDirectoryBadgeIndicator(badgeId) {
   badgeId = badgeId.badgeId;
   const enabled = badgeId.enabled;
   const items = [badgeId, enabled];

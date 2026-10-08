@@ -1,9 +1,9 @@
-// === Module 10625: useUserVoiceActivity ===
+// === Module 10223: useUserVoiceActivity ===
 
-// Module 10625 (useUserVoiceActivity)
-import ChannelStore from "ChannelStore" /* 2051 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
-import VoiceStateStore from "VoiceStateStore" /* 4915 */;
+// Module 10223 (useUserVoiceActivity)
+import ChannelStore from "ChannelStore" /* 2063 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
+import VoiceStateStore from "VoiceStateStore" /* 5111 */;
 
 const require = fn;
 function getVisibleUserVoiceActivity(arg0, arg1) {
@@ -75,7 +75,7 @@ function getVisibleUserVoiceActivity(arg0, arg1) {
 }
 const Permissions = fn(1096).Permissions;
 let closure_6 = { ChannelStore, PermissionStore, VoiceStateStore };
-let closure_7 = Object.freeze({ voiceState: "start", voiceChannel: "unicodeVersion" });
+let closure_7 = Object.freeze({ voiceState: "Array", voiceChannel: "Reflect" });
 const ReactCompilerGating = fn(558);
 function getUserVoiceState(arg0) {
   ({ userId, guildId, includeNonDiscoverable } = arg0);
@@ -108,7 +108,7 @@ function getUserVoiceState(arg0) {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activity_status/useUserVoiceActivity.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserVoiceActivity(userId) {
   const cResult = userId(guildId[5]).c(6);
   userId = userId.userId;
   guildId = userId.guildId;
@@ -143,7 +143,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   const obj = userId(guildId[5]);
   tmp = userId;
   tmp2 = guildId;
-}) : ((userId) => {
+}) : (function useUserVoiceActivity(userId) {
   userId = userId.userId;
   const guildId = userId.guildId;
   const includeNonDiscoverable = userId.includeNonDiscoverable;

@@ -1,23 +1,23 @@
-// === Module 8323: IarSettingsUpsellsConfigRegistry ===
+// === Module 7706: IarSettingsUpsellsConfigRegistry ===
 
-// Module 8323 (IarSettingsUpsellsConfigRegistry)
+// Module 7706 (IarSettingsUpsellsConfigRegistry)
 import c from "c" /* 576 */;
-import GlobalUtils from "GlobalUtils" /* 1375 */;
-import IarSettingsUpsellsConfigDmSpamFilterDefault from "IarSettingsUpsellsConfigDmSpamFilter" /* 8324 */;
-import IarSettingsUpsellsConfigScFiltersSexualMediaDefault from "IarSettingsUpsellsConfigScFiltersSexualMedia" /* 8325 */;
-import IarSettingsUpsellsConfigScFiltersGraphicMediaDefault from "IarSettingsUpsellsConfigScFiltersGraphicMedia" /* 8326 */;
+import GlobalUtils from "GlobalUtils" /* 1387 */;
+import IarSettingsUpsellsConfigDmSpamFilterDefault from "IarSettingsUpsellsConfigDmSpamFilter" /* 7707 */;
+import IarSettingsUpsellsConfigScFiltersSexualMediaDefault from "IarSettingsUpsellsConfigScFiltersSexualMedia" /* 7708 */;
+import IarSettingsUpsellsConfigScFiltersGraphicMediaDefault from "IarSettingsUpsellsConfigScFiltersGraphicMedia" /* 7709 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const SettingsUpsellsConfigRegistry = {};
-SettingsUpsellsConfigRegistry[fn(8313).SettingsUpsells.SAFETY_DM_SPAM_FILTER] = IarSettingsUpsellsConfigDmSpamFilterDefault;
-SettingsUpsellsConfigRegistry[fn(8313).SettingsUpsells.SAFETY_SC_FILTERS_SEXUAL_MEDIA] = IarSettingsUpsellsConfigScFiltersSexualMediaDefault;
-SettingsUpsellsConfigRegistry[fn(8313).SettingsUpsells.SAFETY_SC_FILTERS_GRAPHIC_MEDIA] = IarSettingsUpsellsConfigScFiltersGraphicMediaDefault;
+SettingsUpsellsConfigRegistry[fn(7696).SettingsUpsells.SAFETY_DM_SPAM_FILTER] = IarSettingsUpsellsConfigDmSpamFilterDefault;
+SettingsUpsellsConfigRegistry[fn(7696).SettingsUpsells.SAFETY_SC_FILTERS_SEXUAL_MEDIA] = IarSettingsUpsellsConfigScFiltersSexualMediaDefault;
+SettingsUpsellsConfigRegistry[fn(7696).SettingsUpsells.SAFETY_SC_FILTERS_GRAPHIC_MEDIA] = IarSettingsUpsellsConfigScFiltersGraphicMediaDefault;
 fn(558);
 const ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIarReportSettingsUpsells(arg0) {
   const obj = c;
   const cResult = obj.c(2);
   if (null == arg0) {
@@ -45,7 +45,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[0] = arg0;
     cResult[1] = tmp6;
   }
-}) : ((arg0) => {
+}) : (function useIarReportSettingsUpsells(arg0) {
   closure_0 = arg0;
   let items = [arg0];
   return noop.useMemo(() => {
@@ -79,7 +79,7 @@ const result = size.fileFinishedImporting("modules/in_app_reports/IarSettingsUps
 
 export { SettingsUpsellsConfigRegistry };
 export const useIarReportSettingsUpsells = tmp2;
-export const useSettingsUpsellsConfigs = ReactCompilerGating.isReactCompilerEnabled() ? ((arr, arg1) => {
+export const useSettingsUpsellsConfigs = ReactCompilerGating.isReactCompilerEnabled() ? (function useSettingsUpsellsConfigs(arr, arg1) {
   _require = arg1;
   let found = dependencyMap;
   const cResult = require("c").c(5);
@@ -119,7 +119,7 @@ export const useSettingsUpsellsConfigs = ReactCompilerGating.isReactCompilerEnab
   cResult[0] = arg1;
   cResult[1] = arr;
   cResult[2] = found;
-}) : ((arg0, arg1) => {
+}) : (function useSettingsUpsellsConfigs(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   const items = [arg0, arg1];

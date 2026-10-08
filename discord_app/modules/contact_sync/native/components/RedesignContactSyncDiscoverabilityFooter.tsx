@@ -1,13 +1,13 @@
-// === Module 12350: RedesignContactSyncDiscoverabilityFooter ===
+// === Module 12446: RedesignContactSyncDiscoverabilityFooter ===
 
-// Module 12350 (RedesignContactSyncDiscoverabilityFooter)
+// Module 12446 (RedesignContactSyncDiscoverabilityFooter)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1126 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
-import TableRowGroup from "TableRowGroup" /* 6081 */;
-import TableSwitchRow from "TableSwitchRow" /* 6705 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2127 */;
+import TableRowGroup from "TableRowGroup" /* 6267 */;
+import TableSwitchRow from "TableSwitchRow" /* 6882 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -15,7 +15,7 @@ const HelpdeskArticles = Constants.HelpdeskArticles;
 const jsx = jsxProd.jsx;
 const result = size.fileFinishedImporting("modules/contact_sync/native/components/RedesignContactSyncDiscoverabilityFooter.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function RedesignContactSyncDiscoverabilityFooter(arg0) {
   const cResult = c.c(5);
   ({ discoverabilityEnabled, onValueChanged } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -47,7 +47,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = tmp11;
   tmp10 = tmp11;
   const obj4 = { hasIcons: false, helperText: first, children: jsx(TableSwitchRow.TableSwitchRow, { label: tmp8, onValueChange: onValueChanged, value: discoverabilityEnabled }) };
-}) : ((arg0) => {
+}) : (function RedesignContactSyncDiscoverabilityFooter(arg0) {
   ({ discoverabilityEnabled, onValueChanged } = arg0);
   const obj = { hasIcons: false, helperText: null, children: null };
   const intl = util.intl;

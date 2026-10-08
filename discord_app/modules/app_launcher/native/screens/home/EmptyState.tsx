@@ -1,20 +1,20 @@
-// === Module 11749: home/EmptyState ===
+// === Module 11815: home/EmptyState ===
 
-// Module 11749 (home/EmptyState)
+// Module 11815 (home/EmptyState)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 8961 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11679 */;
-import HomeEmptyStateDefault from "HomeEmptyState" /* 11750 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 11233 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11744 */;
+import HomeEmptyStateDefault from "HomeEmptyState" /* 11816 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { padding: 16, gap: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.lg, alignItems: "center", justifyContent: "center" }, textContainer: { textAlign: "center" } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -22,7 +22,7 @@ let obj3 = { padding: 16, gap: 16, backgroundColor: nativeDefault.colors.BACKGRO
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/screens/home/EmptyState.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function EmptyState() {
   const cResult = c.c(7);
   const tmp4 = closure_6();
   const logAppLauncherEmptyStateView = AppLauncherNativeUtils.useLogAppLauncherEmptyStateView(AppLauncherTypes.AppLauncherEmptyStateType.HOME_EMPTY);
@@ -64,7 +64,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[5] = tmp12;
   cResult[6] = tmp16;
   tmp15 = tmp16;
-}) : (() => {
+}) : (function EmptyState() {
   const tmp = closure_6();
   const logAppLauncherEmptyStateView = AppLauncherNativeUtils.useLogAppLauncherEmptyStateView(AppLauncherTypes.AppLauncherEmptyStateType.HOME_EMPTY);
   const obj2 = { style: tmp.container, children: null };

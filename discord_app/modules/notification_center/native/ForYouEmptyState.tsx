@@ -1,23 +1,23 @@
-// === Module 16428: ForYouEmptyState ===
+// === Module 16688: ForYouEmptyState ===
 
-// Module 16428 (ForYouEmptyState)
+// Module 16688 (ForYouEmptyState)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import MailboxSpotIllustration from "MailboxSpotIllustration" /* 16429 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import MailboxSpotIllustration from "MailboxSpotIllustration" /* 16689 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles({ image: { marginBottom: 16 }, container: { paddingHorizontal: 48, alignItems: "center", justifyContent: "center" }, headerText: { fontSize: 18, marginTop: 16, marginBottom: 8 }, text: { textAlign: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notification_center/native/ForYouEmptyState.tsx");
 
-export const ForYouEmptyState = ReactCompilerGating.isReactCompilerEnabled() ? ((height) => {
+export const ForYouEmptyState = ReactCompilerGating.isReactCompilerEnabled() ? (function ForYouEmptyState(height) {
   const cResult = c.c(22);
   height = height.height;
   const tmp4 = closure_5();
@@ -123,7 +123,7 @@ export const ForYouEmptyState = ReactCompilerGating.isReactCompilerEnabled() ? (
   cResult[3] = tmp5;
   cResult[4] = items2;
   tmp6 = items2;
-}) : ((height) => {
+}) : (function ForYouEmptyState(height) {
   const tmp = closure_5();
   const obj = { style: null, children: null };
   const items = [tmp.container, { height: height.height }];

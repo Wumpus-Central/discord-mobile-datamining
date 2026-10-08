@@ -1,10 +1,10 @@
-// === Module 17246: useInviteMembersCallback ===
+// === Module 17527: useInviteMembersCallback ===
 
-// Module 17246 (useInviteMembersCallback)
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9494 */;
-import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11225 */;
+// Module 17527 (useInviteMembersCallback)
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8658 */;
+import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11340 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
 
 const require = globalThis.__r;
 
@@ -15,7 +15,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useInviteMembersCallback.tsx");
 
-export const useInviteMembersCallback = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useInviteMembersCallback = ReactCompilerGating.isReactCompilerEnabled() ? (function useInviteMembersCallback(arg0) {
   _require = arg0;
   const cResult = require("c").c(2);
   if (cResult[0] !== arg0) {
@@ -38,7 +38,7 @@ export const useInviteMembersCallback = ReactCompilerGating.isReactCompilerEnabl
     tmp2 = cResult[1];
   }
   return tmp2;
-}) : ((arg0) => {
+}) : (function useInviteMembersCallback(arg0) {
   closure_0 = arg0;
   const items = [arg0];
   return noop.useCallback(() => {

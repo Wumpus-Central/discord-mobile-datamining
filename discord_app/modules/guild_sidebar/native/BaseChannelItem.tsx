@@ -1,26 +1,26 @@
-// === Module 12031: BaseChannelItem ===
+// === Module 12104: BaseChannelItem ===
 
-// Module 12031 (BaseChannelItem)
+// Module 12104 (BaseChannelItem)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import native2 from "native" /* 8602 */;
-import StaticChannelIndicatorDefault from "StaticChannelIndicator" /* 12032 */;
-import TouchableBackgroundDefault from "TouchableBackground" /* 12033 */;
+import native from "native" /* 1200 */;
+import native2 from "native" /* 8517 */;
+import StaticChannelIndicatorDefault from "StaticChannelIndicator" /* 12105 */;
+import TouchableBackgroundDefault from "TouchableBackground" /* 12106 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
-const utils_PlatformUtils = Text(1370);
-const Text_Text = Text(4892);
+const utils_PlatformUtils = Text(1382);
+const Text_Text = Text(5086);
 require = fn;
 let closure_3 = ["icon", "name", "mode", "hideIcon", "disableHighlightOnPress", "channelInfo", "children", "unread"];
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(11711);
+const RedesignChannelListConstants = fn(11776);
 ({ CHANNEL_SUBTITLE_TEXT_VARIANT: closure_7, CHANNEL_TITLE_LINE_HEIGHT: closure_8 } = RedesignChannelListConstants);
-const UnreadSetting = fn(5078).UnreadSetting;
+const UnreadSetting = fn(5972).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_12 = createStyles.createStyles((arg0) => {
   const obj = { rowPaddingNoIcon: { paddingHorizontal: 6 }, rowSelected: null, unreadIndicator: null, channelIcon: null, redesignedChannelIcon: null, channelIconNormal: null, channelIconUnread: null, channelIconMuted: null, channel: null, channelNameContainer: null, channelName: null };
   obj2 = { borderRadius: nativeDefault.modules.mobile.CHANNEL_ITEM_RADIUS, backgroundColor: nativeDefault.colors.MOBILE_CHANNEL_ITEM_BACKGROUND_SELECTED };
@@ -55,7 +55,7 @@ let closure_12 = createStyles.createStyles((arg0) => {
 });
 let obj2 = { SELECTED: "Selected", LOCKED: "Locked", MUTED: "Muted", RELEVANT: "Relevant", UNREAD_LESS_IMPORTANT: "UnreadLessImportant", UNREAD_IMPORTANT: "UnreadImportant", DEFAULT: "Default" };
 let ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function BaseChannelSubtitle(arg0) {
   let Text = require;
   let tmp = dependencyMap;
   const cResult = c.c(8);
@@ -97,13 +97,13 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const obj4 = { experimental_useNativeText: tmp9, lineClamp: 1 };
     const merged = Object.assign(tmp3);
     obj4.children = subtitle;
-    tmp = v65535(Text, obj4);
+    tmp = collapsed(Text, obj4);
     cResult[4] = tmp3;
     cResult[5] = subtitle;
     cResult[6] = tmp9;
     cResult[7] = tmp;
   }
-}) : ((arg0) => {
+}) : (function BaseChannelSubtitle(arg0) {
   ({ mode, subtitle } = arg0);
   if (mode !== obj2.UNREAD_IMPORTANT) {
     if (mode !== tmp.RELEVANT) {
@@ -121,7 +121,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         obj2 = { experimental_useNativeText: tmp8, lineClamp: 1 };
         const merged = Object.assign(obj);
         obj2.children = subtitle;
-        tmp4Result = v65535(Text_Text.Text, obj2);
+        tmp4Result = collapsed(Text_Text.Text, obj2);
       }
       return tmp4Result;
     }
@@ -132,7 +132,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 let closure_14 = tmp4;
 fn(558);
 ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function BaseChannelIcon(arg0) {
   const cResult = c.c(20);
   ({ disableColor, mode, source, IconComponent, style, isChannelLive } = arg0);
   let redesignedChannelIcon = closure_12(mode);
@@ -182,10 +182,10 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                       str = str2;
                     }
                     obj2.color = str;
-                    let tmp14Result = v65535(IconComponent, obj2);
+                    let tmp14Result = collapsed(IconComponent, obj2);
                   } else {
                     const obj3 = { disableColor, size: native.Icon.Sizes.CUSTOM, style: tmp7, source };
-                    tmp14Result = v65535(native.Icon, obj3);
+                    tmp14Result = collapsed(native.Icon, obj3);
                   }
                   cResult[10] = IconComponent;
                   cResult[11] = disableColor;
@@ -235,7 +235,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     items.push(channelIconUnread);
   }
-}) : ((arg0) => {
+}) : (function BaseChannelIcon(arg0) {
   ({ disableColor, mode, IconComponent, style } = arg0);
   ({ source, isChannelLive } = arg0);
   const tmp = closure_12(mode);
@@ -260,10 +260,10 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         str = str2;
       }
       obj2.color = str;
-      let tmp12Result = v65535(IconComponent, obj2);
+      let tmp12Result = collapsed(IconComponent, obj2);
     } else {
       const obj = { disableColor, size: native.Icon.Sizes.CUSTOM, style: items, source };
-      tmp12Result = v65535(native.Icon, obj);
+      tmp12Result = collapsed(native.Icon, obj);
     }
     return tmp12Result;
   } else {
@@ -282,7 +282,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   tmp4 = mode === obj2.SELECTED;
 });
 ReactCompilerGating = fn(558);
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function BaseChannelName(arg0) {
   const cResult = c.c(14);
   ({ mode, name, subtitle, textStyle } = arg0);
   const tmp4 = closure_12(mode);
@@ -328,7 +328,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             tmp18 = tmp21;
           }
           const obj4 = { mode, subtitle };
-          const tmp17 = v65535(closure_14, obj4);
+          const tmp17 = collapsed(closure_14, obj4);
           cResult[7] = mode;
           cResult[8] = subtitle;
           cResult[9] = tmp17;
@@ -340,7 +340,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       obj5.lineClamp = 1;
       obj5.style = tmp7;
       obj5.children = name;
-      const tmp13 = v65535(Text_Text.Text, obj5);
+      const tmp13 = collapsed(Text_Text.Text, obj5);
       cResult[3] = name;
       cResult[4] = obj2;
       cResult[5] = tmp7;
@@ -354,7 +354,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp7 = items1;
   }
   obj2 = { variant: "text-md/semibold", color: "redesign-channel-name-text" };
-}) : ((mode) => {
+}) : (function BaseChannelName(mode) {
   mode = mode.mode;
   ({ name, subtitle, textStyle } = mode);
   const tmp = closure_12(mode);
@@ -375,9 +375,9 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const items = [tmp.channelName, textStyle];
     obj3.style = items;
     obj3.children = name;
-    const items1 = [v65535(tmp5, obj3), ];
+    const items1 = [collapsed(tmp5, obj3), ];
     const obj4 = { mode, subtitle };
-    items1[1] = v65535(closure_14, obj4);
+    items1[1] = collapsed(closure_14, obj4);
     obj.children = items1;
     return closure_1_11(View, obj);
   }
@@ -404,7 +404,7 @@ function getChannelSubtitleTextProps(channelMode) {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/native/BaseChannelItem.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function BaseChannelItem(arg0) {
   let tmp34Result = dependencyMap;
   const cResult = c.c(30);
   if (cResult[0] !== arg0) {
@@ -524,7 +524,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           ALL_MESSAGES = UnreadSetting.ALL_MESSAGES;
         }
         obj4.resolvedUnreadSetting = ALL_MESSAGES;
-        v65535(StaticChannelIndicatorDefault, obj4);
+        collapsed(StaticChannelIndicatorDefault, obj4);
       }
     }
   }
@@ -535,7 +535,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[13] = items2;
   tmp20 = items2;
   tmp19 = obj2;
-}) : ((mode) => {
+}) : (function BaseChannelItem(mode) {
   mode = mode.mode;
   const hideIcon = mode.hideIcon;
   let flag = mode.disableHighlightOnPress;
@@ -575,9 +575,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     items1[3] = channelInfo;
     obj.children = items1;
     if (flag) {
-      let AnimatedPressableHighlight = hideIcon(12033);
+      let AnimatedPressableHighlight = hideIcon(12106);
     } else {
-      AnimatedPressableHighlight = mode(8602).AnimatedPressableHighlight;
+      AnimatedPressableHighlight = mode(8517).AnimatedPressableHighlight;
     }
     obj2 = {};
     const merged1 = Object.assign(merged);
@@ -592,8 +592,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       ALL_MESSAGES = UnreadSetting.ALL_MESSAGES;
     }
     obj3.resolvedUnreadSetting = ALL_MESSAGES;
-    closure_10(hideIcon(12032), obj3);
-    const tmp9 = hideIcon(12032);
+    closure_10(hideIcon(12105), obj3);
+    const tmp9 = hideIcon(12105);
   }
 });
 export const ChannelModes = obj2;

@@ -1,26 +1,26 @@
-// === Module 13127: useActivityStatusLabel ===
+// === Module 12842: useActivityStatusLabel ===
 
-// Module 13127 (useActivityStatusLabel)
-import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 10624 */;
-import useUserVoiceActivity from "useUserVoiceActivity" /* 10625 */;
-import isGameActivityDefault from "isGameActivity" /* 10632 */;
-import getActivityStatusTextDefault from "getActivityStatusText" /* 10635 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4918 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
-import PresenceStore from "PresenceStore" /* 4936 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
-import VoiceStateStore from "VoiceStateStore" /* 4915 */;
+// Module 12842 (useActivityStatusLabel)
+import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 10222 */;
+import useUserVoiceActivity from "useUserVoiceActivity" /* 10223 */;
+import isGameActivityDefault from "isGameActivity" /* 10230 */;
+import getActivityStatusTextDefault from "getActivityStatusText" /* 10235 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5893 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
+import PresenceStore from "PresenceStore" /* 5106 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
+import VoiceStateStore from "VoiceStateStore" /* 5111 */;
 
 const util = v0wJXSh(1126);
-const VoiceActivityStatus = v0wJXSh(10640);
+const VoiceActivityStatus = v0wJXSh(10240);
 require = fn;
 const ActivityTypes = fn(1085).ActivityTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activity_status/native/useActivityStatusLabel.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useActivityStatusLabel(userId) {
   const cResult = userId(gameMentionsAsPlainText[8]).c(10);
   userId = userId.userId;
   const guildId = userId.guildId;
@@ -184,7 +184,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   tmp18 = items3;
   tmp17 = U;
   const tmpResult3 = userId(gameMentionsAsPlainText[10]);
-}) : ((userId) => {
+}) : (function useActivityStatusLabel(userId) {
   userId = userId.userId;
   const guildId = userId.guildId;
   let gameMentionsAsPlainText;

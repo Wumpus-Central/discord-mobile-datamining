@@ -1,19 +1,19 @@
-// === Module 9804: useInappropriateConversationBannerForChannel ===
+// === Module 10367: useInappropriateConversationBannerForChannel ===
 
-// Module 9804 (useInappropriateConversationBannerForChannel)
+// Module 10367 (useInappropriateConversationBannerForChannel)
 import c from "c" /* 576 */;
-import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 9799 */;
-import useChannelSafetyWarning from "useChannelSafetyWarning" /* 9802 */;
-import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 9803 */;
-import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 9805 */;
-import useSafetyAlertsSettingOrDefault from "useSafetyAlertsSettingOrDefault" /* 9806 */;
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10266 */;
+import useChannelSafetyWarning from "useChannelSafetyWarning" /* 10365 */;
+import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 10366 */;
+import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 10368 */;
+import useSafetyAlertsSettingOrDefault from "useSafetyAlertsSettingOrDefault" /* 10369 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const SafetyWarningTypes = ChannelSafetyWarningsStore.SafetyWarningTypes;
 const result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationBannerForChannel.tsx");
 
-export const useInappropriateConversationBannerForChannel = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, location) => {
+export const useInappropriateConversationBannerForChannel = ReactCompilerGating.isReactCompilerEnabled() ? (function useInappropriateConversationBannerForChannel(arg0, location) {
   const cResult = c.c(2);
   if (cResult[0] !== location) {
     const obj2 = { location };
@@ -49,7 +49,7 @@ export const useInappropriateConversationBannerForChannel = ReactCompilerGating.
     }
   }
   const tmpResult5 = useInappropriateConversationWarningsForChannel;
-}) : ((arg0, location) => {
+}) : (function useInappropriateConversationBannerForChannel(arg0, location) {
   const isEligibleForInappropriateConversationWarning = SelfModInappropriateConversationExperiment.useIsEligibleForInappropriateConversationWarning({ location });
   const obj2 = { location };
   const safetyAlertsSettingOrDefault = useSafetyAlertsSettingOrDefault.useSafetyAlertsSettingOrDefault();

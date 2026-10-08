@@ -1,37 +1,37 @@
-// === Module 14970: QuestContextMenu ===
+// === Module 15232: QuestContextMenu ===
 
-// Module 14970 (QuestContextMenu)
+// Module 15232 (QuestContextMenu)
 import util from "util" /* 1126 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import CheckmarkLargeIcon2 from "CheckmarkLargeIcon" /* 4583 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4596 */;
-import CopyIcon from "CopyIcon" /* 4849 */;
-import parseURLDefault from "parseURL" /* 4873 */;
-import QuestTypes from "QuestTypes" /* 5633 */;
-import AdCreativeType from "AdCreativeType" /* 5637 */;
-import ClipboardUtils from "ClipboardUtils" /* 6695 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7225 */;
-import captureAdUserAction from "captureAdUserAction" /* 7226 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7236 */;
-import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 7237 */;
-import IconButton from "IconButton" /* 7586 */;
-import _modDef7589 from "module_7589" /* 7589 */;
-import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8296 */;
-import QuestActionCreators from "QuestActionCreators" /* 10007 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 10023 */;
-import QuestUtils from "QuestUtils" /* 10921 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 10931 */;
-import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModalActionCreators" /* 14930 */;
-import _modDef14971 from "module_14971" /* 14971 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import CheckmarkLargeIcon2 from "CheckmarkLargeIcon" /* 4775 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4788 */;
+import CopyIcon from "CopyIcon" /* 5043 */;
+import parseURLDefault from "parseURL" /* 5067 */;
+import QuestTypes from "QuestTypes" /* 5980 */;
+import AdCreativeType from "AdCreativeType" /* 5984 */;
+import ClipboardUtils from "ClipboardUtils" /* 6872 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7404 */;
+import captureAdUserAction from "captureAdUserAction" /* 7405 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7415 */;
+import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 7416 */;
+import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 7679 */;
+import IconButton from "IconButton" /* 8106 */;
+import _modDef8746 from "module_8746" /* 8746 */;
+import QuestActionCreators from "QuestActionCreators" /* 9537 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 9554 */;
+import QuestUtils from "QuestUtils" /* 10572 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 10582 */;
+import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModalActionCreators" /* 15192 */;
+import _modDef15233 from "module_15233" /* 15233 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import QuestStore from "QuestStore" /* 7200 */;
+import QuestStore from "QuestStore" /* 7379 */;
 
 require = fn;
 function renderDefaultButton(ref) {
   const obj = { ref: ref.ref };
   const merged = Object.assign(_objectWithoutProperties(ref, closure_3));
-  obj.icon = _modDef7589;
+  obj.icon = _modDef8746;
   obj.variant = "secondary";
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.CAgr1w);
@@ -46,7 +46,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestContextMenu.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function QuestContextMenu(arg0) {
   const cResult = quest(handleProgress[9]).c(89);
   ({ children, quest } = arg0);
   ({ showShareLink, additionalItems, sourceQuestContent } = arg0);
@@ -124,25 +124,15 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
                       return obj.manuallyStartConsoleQuest(quest.id, true);
                     }
                   }
-                  class D {
+                  class H {
                     constructor() {
-                      if (closure_7) {
-                        tmp = closure_0;
-                        tmp2 = closure_2;
-                        obj = closure_0(closure_2[15]);
-                        tmp3 = quest;
-                        obj1 = { content: null, ctaContent: null, impressionId: null, sourceQuestContent: null };
-                        obj1.content = closure_0(closure_2[11]).QuestContent.QUEST_HOME_MOBILE;
-                        obj1.ctaContent = closure_0(closure_2[21]).QuestContentCTA.CONTEXT_MENU_COPY_LINK;
-                        tmp4 = closure_6;
-                        obj1.impressionId = closure_6();
-                        tmp5 = sourceQuestContent;
-                        obj1.sourceQuestContent = sourceQuestContent;
-                        copyShareLinkResult = obj.copyShareLink(quest.id, obj1);
-                        AccessibilityAnnouncer = closure_0(closure_2[22]).AccessibilityAnnouncer;
-                        intl = closure_0(closure_2[7]).intl;
-                        announceResult = AccessibilityAnnouncer.announce(intl.string(closure_0(closure_2[7]).t["+5kSoW"]));
-                      }
+                      obj = closure_1(closure_2[23]);
+                      obj1 = { creative: null, isTargetedDisclosure: false, trackingCtx: null };
+                      obj5 = { type: closure_0(closure_2[24]).AdCreativeType.QUEST, quest };
+                      obj1.creative = obj5;
+                      obj6 = { content: closure_0(closure_2[11]).QuestContent.QUEST_HOME_MOBILE, ctaContent: closure_0(closure_2[21]).QuestContentCTA.CONTEXT_MENU_OPEN_DISCLOSURE, sourceQuestContent };
+                      obj1.trackingCtx = obj6;
+                      showModalResult = obj.showModal(obj1);
                       return;
                     }
                   }
@@ -160,25 +150,15 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
                     }
                   }
                 }
-                class D {
+                class H {
                   constructor() {
-                    if (closure_7) {
-                      tmp = closure_0;
-                      tmp2 = closure_2;
-                      obj = closure_0(closure_2[15]);
-                      tmp3 = quest;
-                      obj1 = { content: null, ctaContent: null, impressionId: null, sourceQuestContent: null };
-                      obj1.content = closure_0(closure_2[11]).QuestContent.QUEST_HOME_MOBILE;
-                      obj1.ctaContent = closure_0(closure_2[21]).QuestContentCTA.CONTEXT_MENU_COPY_LINK;
-                      tmp4 = closure_6;
-                      obj1.impressionId = closure_6();
-                      tmp5 = sourceQuestContent;
-                      obj1.sourceQuestContent = sourceQuestContent;
-                      copyShareLinkResult = obj.copyShareLink(quest.id, obj1);
-                      AccessibilityAnnouncer = closure_0(closure_2[22]).AccessibilityAnnouncer;
-                      intl = closure_0(closure_2[7]).intl;
-                      announceResult = AccessibilityAnnouncer.announce(intl.string(closure_0(closure_2[7]).t["+5kSoW"]));
-                    }
+                    obj = closure_1(closure_2[23]);
+                    obj1 = { creative: null, isTargetedDisclosure: false, trackingCtx: null };
+                    obj5 = { type: closure_0(closure_2[24]).AdCreativeType.QUEST, quest };
+                    obj1.creative = obj5;
+                    obj6 = { content: closure_0(closure_2[11]).QuestContent.QUEST_HOME_MOBILE, ctaContent: closure_0(closure_2[21]).QuestContentCTA.CONTEXT_MENU_OPEN_DISCLOSURE, sourceQuestContent };
+                    obj1.trackingCtx = obj6;
+                    showModalResult = obj.showModal(obj1);
                     return;
                   }
                 }
@@ -192,25 +172,15 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
                 cResult[27] = tmp18;
                 cResult[28] = obj2;
               }
-              class D {
+              class H {
                 constructor() {
-                  if (closure_7) {
-                    tmp = closure_0;
-                    tmp2 = closure_2;
-                    obj = closure_0(closure_2[15]);
-                    tmp3 = quest;
-                    obj1 = { content: null, ctaContent: null, impressionId: null, sourceQuestContent: null };
-                    obj1.content = closure_0(closure_2[11]).QuestContent.QUEST_HOME_MOBILE;
-                    obj1.ctaContent = closure_0(closure_2[21]).QuestContentCTA.CONTEXT_MENU_COPY_LINK;
-                    tmp4 = closure_6;
-                    obj1.impressionId = closure_6();
-                    tmp5 = sourceQuestContent;
-                    obj1.sourceQuestContent = sourceQuestContent;
-                    copyShareLinkResult = obj.copyShareLink(quest.id, obj1);
-                    AccessibilityAnnouncer = closure_0(closure_2[22]).AccessibilityAnnouncer;
-                    intl = closure_0(closure_2[7]).intl;
-                    announceResult = AccessibilityAnnouncer.announce(intl.string(closure_0(closure_2[7]).t["+5kSoW"]));
-                  }
+                  obj = closure_1(closure_2[23]);
+                  obj1 = { creative: null, isTargetedDisclosure: false, trackingCtx: null };
+                  obj5 = { type: closure_0(closure_2[24]).AdCreativeType.QUEST, quest };
+                  obj1.creative = obj5;
+                  obj6 = { content: closure_0(closure_2[11]).QuestContent.QUEST_HOME_MOBILE, ctaContent: closure_0(closure_2[21]).QuestContentCTA.CONTEXT_MENU_OPEN_DISCLOSURE, sourceQuestContent };
+                  obj1.trackingCtx = obj6;
+                  showModalResult = obj.showModal(obj1);
                   return;
                 }
               }
@@ -221,30 +191,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
               }
               cResult[19] = quest;
               cResult[20] = sourceQuestContent;
-              cResult[21] = tmp22;
+              cResult[21] = H;
             }
-          }
-        }
-        class D {
-          constructor() {
-            if (closure_7) {
-              tmp = closure_0;
-              tmp2 = closure_2;
-              obj = closure_0(closure_2[15]);
-              tmp3 = quest;
-              obj1 = { content: null, ctaContent: null, impressionId: null, sourceQuestContent: null };
-              obj1.content = closure_0(closure_2[11]).QuestContent.QUEST_HOME_MOBILE;
-              obj1.ctaContent = closure_0(closure_2[21]).QuestContentCTA.CONTEXT_MENU_COPY_LINK;
-              tmp4 = closure_6;
-              obj1.impressionId = closure_6();
-              tmp5 = sourceQuestContent;
-              obj1.sourceQuestContent = sourceQuestContent;
-              copyShareLinkResult = obj.copyShareLink(quest.id, obj1);
-              AccessibilityAnnouncer = closure_0(closure_2[22]).AccessibilityAnnouncer;
-              intl = closure_0(closure_2[7]).intl;
-              announceResult = AccessibilityAnnouncer.announce(intl.string(closure_0(closure_2[7]).t["+5kSoW"]));
-            }
-            return;
           }
         }
         class S {
@@ -256,7 +204,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
         cResult[15] = tmp16;
         cResult[16] = quest.id;
         cResult[17] = sourceQuestContent;
-        cResult[18] = D;
+        cResult[18] = tmp21;
       }
     }
     class S {
@@ -285,7 +233,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   cResult[9] = isShareableQuestResult;
   tmp16 = isShareableQuestResult;
   const tmpResult7 = quest(handleProgress[14]);
-}) : ((children) => {
+}) : (function QuestContextMenu(children) {
   children = children.children;
   if (children === undefined) {
     children = stateFromStores;
@@ -377,7 +325,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
     const intl = util.intl;
     obj2.label = intl.string(util.t.GcsZKJ);
     obj2.action = callback2;
-    obj2.iconSource = _modDef14971;
+    obj2.iconSource = _modDef15233;
     items[1] = obj2;
     if (flag) {
       const obj3 = { label: null, IconComponent: null, action: null };

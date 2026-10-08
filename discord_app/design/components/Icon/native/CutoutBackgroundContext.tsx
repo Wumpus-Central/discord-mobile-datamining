@@ -1,22 +1,24 @@
-// === Module 8503: CutoutBackgroundContext ===
+// === Module 8987: CutoutBackgroundContext ===
 
-// Module 8503 (CutoutBackgroundContext)
+// Module 8987 (CutoutBackgroundContext)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
-import useToken from "useToken" /* 4586 */;
+import useToken from "useToken" /* 4778 */;
 import noop from "module_19" /* 19 */;
 
-const shared_colors = obj(8504);
+const shared_colors = obj(8988);
 require = fn;
 const jsx = fn(21).jsx;
 let context = noop.createContext(undefined);
 let ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
-const useCutoutBackgroundColor = () => noop.useContext(closure_5);
+function useCutoutBackgroundColor() {
+  return noop.useContext(closure_5);
+}
 fn(558);
 ReactCompilerGating = fn(558);
-let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((BACKGROUND_BASE_LOW) => {
+let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useTokenOrColor(BACKGROUND_BASE_LOW) {
   const internal = nativeDefault.internal;
   let tmp2;
   if (internal.isSemanticColor(BACKGROUND_BASE_LOW)) {
@@ -31,7 +33,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((BACKGROUND_BASE
     tmp4 = token;
   }
   return tmp4;
-}) : ((BACKGROUND_BASE_LOW) => {
+}) : (function useTokenOrColor(BACKGROUND_BASE_LOW) {
   const internal = nativeDefault.internal;
   let tmp2;
   if (internal.isSemanticColor(BACKGROUND_BASE_LOW)) {
@@ -51,12 +53,12 @@ const size = fn(2);
 const result1 = size.fileFinishedImporting("design/components/Icon/native/CutoutBackgroundContext.tsx");
 
 export { useCutoutBackgroundColor };
-export const CutoutBackgroundProvider = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
+export const CutoutBackgroundProvider = ReactCompilerGating.isReactCompilerEnabled() ? (function CutoutBackgroundProvider(children) {
   let obj = require;
   let result = dependencyMap;
   const cResult = c.c(6);
   children = children.children;
-  if (typeof fn === "function") {
+  if (typeof useCutoutBackgroundColor === "function") {
     const context = noop.useContext(redux);
     const tmp8 = closure_7(tmp3);
     if (null != tmp8) {
@@ -93,8 +95,8 @@ export const CutoutBackgroundProvider = ReactCompilerGating.isReactCompilerEnabl
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-}) : ((arg0) => {
-  if (typeof fn === "function") {
+}) : (function CutoutBackgroundProvider(arg0) {
+  if (typeof useCutoutBackgroundColor === "function") {
     const context = noop.useContext(redux);
     const tmp7 = closure_7(tmp);
     if (null != tmp7) {

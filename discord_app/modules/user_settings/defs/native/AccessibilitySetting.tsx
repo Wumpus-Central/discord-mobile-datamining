@@ -1,20 +1,20 @@
-// === Module 15161: AccessibilitySetting ===
+// === Module 15423: AccessibilitySetting ===
 
-// Module 15161 (AccessibilitySetting)
+// Module 15423 (AccessibilitySetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 6901 */;
+import native from "native" /* 1200 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7090 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const jsx = fn(21).jsx;
-let items = [fn(2036).DismissibleContent.MOBILE_ACCESSIBILITY_COLOR_SETTINGS];
+let items = [fn(2048).DismissibleContent.MOBILE_ACCESSIBILITY_COLOR_SETTINGS];
 fn(558);
 const ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useTrailing() {
   const cResult = c.c(4);
   const first = _slicedToArray(useSelectedDismissibleContent.useSelectedDismissibleContent(items), 1)[0];
   if (cResult[0] !== first) {
@@ -47,7 +47,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp9 = cResult[3];
   }
   return tmp9;
-}) : (() => {
+}) : (function useTrailing() {
   [tmp4, r10012] = useSelectedDismissibleContent.useSelectedDismissibleContent(items);
   let tmp5 = null;
   if (null != tmp4) {
@@ -65,11 +65,11 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   return tmp5;
 });
-const SettingBuilders = fn(11142);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const SettingBuilders = fn(11262);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePreNavigationAction() {
   const cResult = first(576).c(3);
   const obj = first(576);
-  let tmp2 = _slicedToArray(first(6901).useSelectedDismissibleContent(items), 2);
+  let tmp2 = _slicedToArray(first(7090).useSelectedDismissibleContent(items), 2);
   first = tmp2[0];
   dependencyMap = tmp4;
   if (cResult[0] === tmp2[1]) {
@@ -96,8 +96,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[1] = first;
   cResult[2] = fn;
   tmp5 = fn;
-}) : (() => {
-  const tmp = _slicedToArray(first(6901).useSelectedDismissibleContent(items), 2);
+}) : (function usePreNavigationAction() {
+  const tmp = _slicedToArray(first(7090).useSelectedDismissibleContent(items), 2);
   first = tmp[0];
   dependencyMap = tmp3;
   items = [tmp[1], first];
@@ -122,12 +122,12 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t.G0neg7);
   },
   parent: null,
-  IconComponent: fn(15162).AccessibilityIcon,
+  IconComponent: fn(15424).AccessibilityIcon,
   useTrailing: tmp2,
-  usePreNavigationAction: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  usePreNavigationAction: ReactCompilerGating.isReactCompilerEnabled() ? (function usePreNavigationAction() {
     const cResult = first(576).c(3);
     const obj = first(576);
-    let tmp2 = _slicedToArray(first(6901).useSelectedDismissibleContent(items), 2);
+    let tmp2 = _slicedToArray(first(7090).useSelectedDismissibleContent(items), 2);
     first = tmp2[0];
     dependencyMap = tmp4;
     if (cResult[0] === tmp2[1]) {
@@ -154,8 +154,8 @@ const route = SettingBuilders.createRoute({
     cResult[1] = first;
     cResult[2] = fn;
     tmp5 = fn;
-  }) : (() => {
-    const tmp = _slicedToArray(first(6901).useSelectedDismissibleContent(items), 2);
+  }) : (function usePreNavigationAction() {
+    const tmp = _slicedToArray(first(7090).useSelectedDismissibleContent(items), 2);
     first = tmp[0];
     dependencyMap = tmp3;
     items = [tmp[1], first];

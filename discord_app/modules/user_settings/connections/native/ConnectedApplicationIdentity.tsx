@@ -1,14 +1,14 @@
-// === Module 14786: ConnectedApplicationIdentity ===
+// === Module 15047: ConnectedApplicationIdentity ===
 
-// Module 14786 (ConnectedApplicationIdentity)
+// Module 15047 (ConnectedApplicationIdentity)
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Icon from "Icon" /* 5603 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5714 */;
-import common_AlertDefault from "common/Alert" /* 5790 */;
-import InfoBoxDefault from "InfoBox" /* 9472 */;
+import native from "native" /* 1200 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5297 */;
+import Icon from "Icon" /* 5377 */;
+import common_AlertDefault from "common/Alert" /* 5394 */;
+import InfoBoxDefault from "InfoBox" /* 10485 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -24,7 +24,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/ConnectedApplicationIdentity.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((identity) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectedApplicationIdentity(identity) {
   const cResult = require("c").c(44);
   identity = identity.identity;
   _require = identity;
@@ -255,7 +255,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((identity) => {
         if (profile3 != null) {
           connection_visible1 = profile3.connection_visible;
         }
-        const fn2 = function() {
+        function t4() {
           const self = this;
           const apply = closure_0.apply;
           if (typeof apply === "unknown") {
@@ -264,11 +264,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((identity) => {
             applyArgumentsResult = apply(self, arguments);
           }
           return applyArgumentsResult;
-        };
+        }
         cResult[10] = connection_visible1;
         cResult[11] = identity.provider_issued_user_id;
-        cResult[12] = fn2;
-        tmp19 = fn2;
+        cResult[12] = t4;
+        tmp19 = t4;
       }
       const obj12 = { id: identity.application_id, icon: null, size: null, botIconFirst: false };
       let icon1;
@@ -331,7 +331,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((identity) => {
   cResult[5] = fn;
   tmp11 = fn;
   const tmp7 = _slicedToArray(noop.useState(flag), 2);
-}) : ((identity) => {
+}) : (function ConnectedApplicationIdentity(identity) {
   identity = identity.identity;
   _require = identity;
   const token = identity.token;

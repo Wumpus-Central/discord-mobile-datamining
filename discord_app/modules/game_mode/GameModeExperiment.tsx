@@ -1,8 +1,8 @@
-// === Module 4888: GameModeExperiment ===
+// === Module 5082: GameModeExperiment ===
 
-// Module 4888 (GameModeExperiment)
+// Module 5082 (GameModeExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1440 */;
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting("modules/game_mode/GameModeExperiment.
 export const getGameModeExperimentConfig = function getGameModeExperimentConfig(location) {
   return closure_2.getConfig({ location: location.location });
 };
-export const useGameModeExperimentConfig = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+export const useGameModeExperimentConfig = ReactCompilerGating.isReactCompilerEnabled() ? (function useGameModeExperimentConfig(location) {
   const cResult = c.c(2);
   const _location = location.location;
   if (cResult[0] !== _location) {
@@ -28,4 +28,6 @@ export const useGameModeExperimentConfig = ReactCompilerGating.isReactCompilerEn
     tmp2 = cResult[1];
   }
   return closure_2.useConfig(tmp2);
-}) : ((location) => closure_2.useConfig({ location: location.location }));
+}) : (function useGameModeExperimentConfig(location) {
+  return closure_2.useConfig({ location: location.location });
+});

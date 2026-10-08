@@ -1,8 +1,8 @@
-// === Module 14665: StaffOnlyFindYourFriendsDeletionSetting ===
+// === Module 14926: StaffOnlyFindYourFriendsDeletionSetting ===
 
-// Module 14665 (StaffOnlyFindYourFriendsDeletionSetting)
+// Module 14926 (StaffOnlyFindYourFriendsDeletionSetting)
 import c from "c" /* 576 */;
-import _mod4498 from "module_4498" /* 4498 */;
+import _mod4690 from "module_4690" /* 4690 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -95,10 +95,10 @@ let closure_9 = async function _onFindYourFriendsDeletionPress() {
 };
 const ActivityIndicator = fn(17).ActivityIndicator;
 const jsx = fn(21).jsx;
-const identity = fn(1254);
+const identity = fn(1266);
 let closure_6 = identity.createWithEqualityFn(() => ({ isLoading: false }));
 let ReactCompilerGating = fn(558);
-let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFindYourFriendsDeletionIsLoading() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function e(isLoading) {
@@ -109,14 +109,18 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     first = cResult[0];
   }
-  return closure_6(first, _mod4498.shallow);
-}) : (() => closure_6((isLoading) => isLoading.isLoading, _mod4498.shallow));
+  return closure_6(first, _mod4690.shallow);
+}) : (function useFindYourFriendsDeletionIsLoading() {
+  return closure_6((isLoading) => isLoading.isLoading, _mod4690.shallow);
+});
 ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
 ReactCompilerGating = fn(558);
-fn = () => closure_8();
-const SettingBuilders = fn(11142);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+function useIsFindYourFriendsDeletionDisabled() {
+  return closure_8();
+}
+const SettingBuilders = fn(11262);
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsFindYourFriendsDeletionTrailing() {
   const cResult = c.c(2);
   const tmp2 = closure_8();
   if (cResult[0] !== tmp2) {
@@ -131,7 +135,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp3 = cResult[1];
   }
   return tmp3;
-}) : (() => {
+}) : (function useIsFindYourFriendsDeletionTrailing() {
   let tmp = null;
   if (closure_8()) {
     tmp = <ActivityIndicator />;
@@ -142,8 +146,8 @@ const pressable = SettingBuilders.createPressable({
   useTitle() {
     return "STAFF ONLY - Find your friends deletion";
   },
-  parent: fn(7645).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
-  useIsDisabled: fn,
+  parent: fn(7966).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  useIsDisabled: useIsFindYourFriendsDeletionDisabled,
   onPress: function onFindYourFriendsDeletionPress() {
     const self = this;
     const apply = closure_9.apply;
@@ -154,8 +158,8 @@ const pressable = SettingBuilders.createPressable({
     }
     return applyArgumentsResult;
   },
-  usePredicate: fn(14666).useStaffOrDeveloperSettingPredicate,
-  useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  usePredicate: fn(14927).useStaffOrDeveloperSettingPredicate,
+  useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (function useIsFindYourFriendsDeletionTrailing() {
     const cResult = c.c(2);
     const tmp2 = closure_8();
     if (cResult[0] !== tmp2) {
@@ -170,7 +174,7 @@ const pressable = SettingBuilders.createPressable({
       tmp3 = cResult[1];
     }
     return tmp3;
-  }) : (() => {
+  }) : (function useIsFindYourFriendsDeletionTrailing() {
     let tmp = null;
     if (closure_8()) {
       tmp = <ActivityIndicator />;

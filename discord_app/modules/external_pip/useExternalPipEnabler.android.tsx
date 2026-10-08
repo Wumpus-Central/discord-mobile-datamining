@@ -1,17 +1,17 @@
-// === Module 17183: useExternalPipEnabler ===
+// === Module 17464: useExternalPipEnabler ===
 
-// Module 17183 (useExternalPipEnabler)
-import ExternalPipEnablerState from "ExternalPipEnablerState" /* 17184 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
+// Module 17464 (useExternalPipEnabler)
+import ExternalPipEnablerState from "ExternalPipEnablerState" /* 17465 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6041 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5108 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/external_pip/useExternalPipEnabler.android.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((disabled) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useExternalPIPEnabler(disabled) {
   const cResult = disabled(576).c(4);
   disabled = disabled.disabled;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((disabled) => {
   }
   const obj = disabled(576);
   return disabled(504).useStateFromStoresObject(first, tmp8, tmp9);
-}) : ((disabled) => {
+}) : (function useExternalPIPEnabler(disabled) {
   disabled = disabled.disabled;
   const items = [ChannelRTCStore, RTCConnectionStore, AuthenticationStore];
   const items1 = [disabled];

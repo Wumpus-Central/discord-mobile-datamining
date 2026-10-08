@@ -1,16 +1,16 @@
-// === Module 16214: GenericUpsellActionSheet ===
+// === Module 16474: GenericUpsellActionSheet ===
 
-// Module 16214 (GenericUpsellActionSheet)
+// Module 16474 (GenericUpsellActionSheet)
 import nativeDefault from "native" /* 587 */;
-import FastImageDefault from "FastImage" /* 5981 */;
+import FastImageDefault from "FastImage" /* 6164 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { image: { width: "100%" }, content: { paddingHorizontal: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_16 }, description: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_16 };
 obj2.description = { marginBottom: nativeDefault.space.PX_16, flex: 1 };
@@ -20,13 +20,13 @@ let obj4 = { marginBottom: nativeDefault.space.PX_16, flex: 1 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/feature_education/GenericUpsellActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GenericUpsellActionSheet(markAsDismissed) {
   const cResult = markAsDismissed(576).c(29);
   markAsDismissed = markAsDismissed.markAsDismissed;
   ({ imageSource, header, body, onCTAPress, cta } = markAsDismissed);
   const tmp4 = closure_7();
   const obj = markAsDismissed(576);
-  const bottomSheetRef1 = markAsDismissed(7852).useBottomSheetRef();
+  const bottomSheetRef1 = markAsDismissed(8270).useBottomSheetRef();
   ({ bottomSheetRef, bottomSheetClose } = bottomSheetRef1);
   if (cResult[0] !== markAsDismissed) {
     const fn = function h() {
@@ -44,7 +44,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed)
     }
     if (cResult[5] !== bottomSheetClose) {
       const obj3 = { variant: "floating", onPress: bottomSheetClose };
-      const tmp11 = closure_5(tmp(6656).ActionSheetHeaderBar, obj3);
+      const tmp11 = closure_5(tmp(6833).ActionSheetHeaderBar, obj3);
       cResult[5] = bottomSheetClose;
       cResult[6] = tmp11;
       let tmp9 = tmp11;
@@ -57,7 +57,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed)
       }
       if (cResult[10] !== header) {
         const obj4 = { accessibilityRole: "header", variant: "heading-xl/medium", color: "mobile-text-heading-primary", children: header };
-        const tmp18 = closure_5(tmp(4892).Text, obj4);
+        const tmp18 = closure_5(tmp(5086).Text, obj4);
         cResult[10] = header;
         cResult[11] = tmp18;
         let tmp16 = tmp18;
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed)
       }
       const _Symbol = Symbol;
       if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp22 = closure_5(tmp(1188).Spacer, { size: 12 });
+        const tmp22 = closure_5(tmp(1200).Spacer, { size: 12 });
         cResult[12] = tmp22;
         let tmp20 = tmp22;
       } else {
@@ -97,7 +97,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed)
                   }
                 }
                 const obj5 = { ref: bottomSheetRef, startExpanded: true, onDismiss: tmp6, handleDisabled: true, header: tmp12, children: tmp29 };
-                const tmp35 = closure_5(tmp(6652).BottomSheet, obj5);
+                const tmp35 = closure_5(tmp(6829).BottomSheet, obj5);
                 cResult[24] = bottomSheetRef;
                 cResult[25] = tmp6;
                 cResult[26] = tmp12;
@@ -119,14 +119,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed)
           tmp29 = tmp32;
         }
         const obj7 = { variant: "primary", grow: true, onPress: onCTAPress, text: cta };
-        const tmp28 = closure_5(tmp(5601).Button, obj7);
+        const tmp28 = closure_5(tmp(5375).Button, obj7);
         cResult[16] = cta;
         cResult[17] = onCTAPress;
         cResult[18] = tmp28;
         tmp26 = tmp28;
       }
       const obj8 = { style: tmp4.description, variant: "text-sm/medium", color: "text-default", children: body };
-      const tmp25 = closure_5(tmp(4892).Text, obj8);
+      const tmp25 = closure_5(tmp(5086).Text, obj8);
       cResult[13] = body;
       cResult[14] = tmp4.description;
       cResult[15] = tmp25;
@@ -147,12 +147,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed)
   cResult[4] = tmp8;
   tmp7 = tmp8;
   const obj10 = { source: imageSource, style: tmp4.image };
-  const obj2 = markAsDismissed(7852);
-}) : ((markAsDismissed) => {
+  const obj2 = markAsDismissed(8270);
+}) : (function GenericUpsellActionSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
   ({ imageSource, header, body, onCTAPress, cta } = markAsDismissed);
   const tmp = closure_7();
-  const bottomSheetRef1 = markAsDismissed(7852).useBottomSheetRef();
+  const bottomSheetRef1 = markAsDismissed(8270).useBottomSheetRef();
   ({ bottomSheetRef, bottomSheetClose } = bottomSheetRef1);
   const obj2 = {
     ref: bottomSheetRef,
@@ -165,12 +165,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed)
     children: null
   };
   const obj3 = { children: null };
-  const items = [closure_5(FastImageDefault, { source: imageSource, style: tmp.image }), closure_5(markAsDismissed(6656).ActionSheetHeaderBar, { variant: "floating", onPress: bottomSheetClose })];
+  const items = [closure_5(FastImageDefault, { source: imageSource, style: tmp.image }), closure_5(markAsDismissed(6833).ActionSheetHeaderBar, { variant: "floating", onPress: bottomSheetClose })];
   obj3.children = items;
   obj2.header = closure_6(View, obj3);
   const obj5 = { style: tmp.content, children: null };
-  const items1 = [closure_5(markAsDismissed(4892).Text, { accessibilityRole: "header", variant: "heading-xl/medium", color: "mobile-text-heading-primary", children: header }), closure_5(markAsDismissed(1188).Spacer, { size: 12 }), closure_5(markAsDismissed(4892).Text, { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: body }), closure_5(markAsDismissed(5601).Button, { variant: "primary", grow: true, onPress: onCTAPress, text: cta })];
+  const items1 = [closure_5(markAsDismissed(5086).Text, { accessibilityRole: "header", variant: "heading-xl/medium", color: "mobile-text-heading-primary", children: header }), closure_5(markAsDismissed(1200).Spacer, { size: 12 }), closure_5(markAsDismissed(5086).Text, { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: body }), closure_5(markAsDismissed(5375).Button, { variant: "primary", grow: true, onPress: onCTAPress, text: cta })];
   obj5.children = items1;
   obj2.children = closure_6(View, obj5);
-  return closure_5(markAsDismissed(6652).BottomSheet, obj2);
+  return closure_5(markAsDismissed(6829).BottomSheet, obj2);
 });

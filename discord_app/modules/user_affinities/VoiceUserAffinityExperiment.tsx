@@ -1,8 +1,8 @@
-// === Module 7754: VoiceUserAffinityExperiment ===
+// === Module 8075: VoiceUserAffinityExperiment ===
 
-// Module 7754 (VoiceUserAffinityExperiment)
+// Module 8075 (VoiceUserAffinityExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1440 */;
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -13,7 +13,7 @@ export default apexExperiment;
 export const getVoiceUserAffinitySortType = function getVoiceUserAffinitySortType(location) {
   return apexExperiment.getConfig({ location }).sortType;
 };
-export const useVoiceUserAffinitySortType = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+export const useVoiceUserAffinitySortType = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoiceUserAffinitySortType(location) {
   const cResult = c.c(2);
   if (cResult[0] !== location) {
     const obj2 = { location };
@@ -24,4 +24,6 @@ export const useVoiceUserAffinitySortType = ReactCompilerGating.isReactCompilerE
     tmp2 = cResult[1];
   }
   return apexExperiment.useConfig(tmp2).sortType;
-}) : ((location) => apexExperiment.useConfig({ location }).sortType);
+}) : (function useVoiceUserAffinitySortType(location) {
+  return apexExperiment.useConfig({ location }).sortType;
+});

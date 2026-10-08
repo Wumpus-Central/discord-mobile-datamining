@@ -1,22 +1,22 @@
-// === Module 16869: LinkGridItem ===
+// === Module 17148: LinkGridItem ===
 
-// Module 16869 (LinkGridItem)
+// Module 17148 (LinkGridItem)
 import _modDef38 from "module_38" /* 38 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import LinkIcon from "LinkIcon" /* 4845 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import ChatIcon from "ChatIcon" /* 5862 */;
-import renderMessageMarkup from "renderMessageMarkup" /* 7542 */;
-import MaskedLinkUtils from "MaskedLinkUtils" /* 8057 */;
-import MarkupReactLinkUtils from "MarkupReactLinkUtils" /* 11250 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 11980 */;
-import SearchMediaImage from "SearchMediaImage" /* 16860 */;
-import SearchResultLinkPreviewMarkup from "SearchResultLinkPreviewMarkup" /* 16870 */;
+import LinkIcon from "LinkIcon" /* 5039 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import renderMessageMarkup from "renderMessageMarkup" /* 8114 */;
+import ChatIcon from "ChatIcon" /* 8174 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 8466 */;
+import MarkupReactLinkUtils from "MarkupReactLinkUtils" /* 9576 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 12053 */;
+import SearchMediaImage from "SearchMediaImage" /* 17139 */;
+import SearchResultLinkPreviewMarkup from "SearchResultLinkPreviewMarkup" /* 17149 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import SearchMessageStore from "SearchMessageStore" /* 6794 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import SearchMessageStore from "SearchMessageStore" /* 6067 */;
 
 require = fn;
 function getLinkNodeAtIndex(content, diff, fn) {
@@ -4741,14 +4741,14 @@ function LinkParsedGridItem(author) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, useWindowDimensions: metroRequire } = get_ActivityIndicator);
-const SearchConstants = fn(7524);
+const SearchConstants = fn(9247);
 ({ FILE_OR_LINK_IMAGE_BUFFER: closure_9, SearchLinkTypes: c10 } = SearchConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_13 = createStyles.createStyles({ iconContainer: { alignItems: "center", justifyContent: "center" }, tapToSee: { fontStyle: "italic" } });
 let ReactCompilerGating = fn(558);
-let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function LinkEmbedGridItem(channelId) {
   const cResult = author(messageId[20]).c(60);
   ({ embed, sources, author } = channelId);
   channelId = channelId.channelId;
@@ -4948,7 +4948,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
     cResult[19] = tmp20;
     tmp18 = tmp20;
   }
-  class G {
+  class F {
     constructor() {
       obj = { style: null, children: jsx(closure_0(closure_2[15]).LinkIcon, { size: "md" }) };
       items = [, ];
@@ -4960,10 +4960,10 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
   }
   cResult[6] = imageStyle;
   cResult[7] = tmp4.iconContainer;
-  cResult[8] = G;
-  tmp14 = G;
+  cResult[8] = F;
+  tmp14 = F;
   const tmpResult2 = author(messageId[8]);
-}) : ((containerStyle) => {
+}) : (function LinkEmbedGridItem(containerStyle) {
   const embed = containerStyle.embed;
   const sources = containerStyle.sources;
   const author = containerStyle.author;
@@ -5057,7 +5057,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/list/rows/LinkGridItem.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function LinkGridItem(arg0) {
   const cResult = c.c(21);
   ({ data, onPressSearchLink, onPressGuildVoiceChannelMention, onPress, imageStyle, containerStyle } = arg0);
   const type = data.type;
@@ -5146,7 +5146,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   } else {
     return null;
   }
-}) : ((arg0) => {
+}) : (function LinkGridItem(arg0) {
   ({ data, onPressSearchLink, onPress, imageStyle, containerStyle } = arg0);
   const type = data.type;
   if (constants.EMBED === type) {

@@ -1,8 +1,8 @@
-// === Module 12995: NitroIcon ===
+// === Module 13273: NitroIcon ===
 
-// Module 12995 (NitroIcon)
+// Module 13273 (NitroIcon)
 import c from "c" /* 576 */;
-import inlineStyles from "inlineStyles" /* 8169 */;
+import inlineStyles from "inlineStyles" /* 7550 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/NitroIcon.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function NitroIcon(arg0) {
   const cResult = c.c(6);
   ({ width, height, color } = arg0);
   let num = 106;
@@ -51,7 +51,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = num;
   cResult[5] = tmp8;
   tmp7 = tmp8;
-}) : ((width) => {
+}) : (function NitroIcon(width) {
   let num = width.width;
   if (num === undefined) {
     num = 106;

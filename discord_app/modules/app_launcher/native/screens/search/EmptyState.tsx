@@ -1,20 +1,20 @@
-// === Module 11747: search/EmptyState ===
+// === Module 11813: search/EmptyState ===
 
-// Module 11747 (search/EmptyState)
+// Module 11813 (search/EmptyState)
 import util from "util" /* 1126 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4596 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4788 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles({ container: { position: "relative", justifyContent: "center", alignItems: "center" }, textContainer: { justifyContent: "center", width: "100%" }, text: { marginTop: 16, textAlign: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/screens/search/EmptyState.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((showsGenericMessage) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function EmptyState(showsGenericMessage) {
   const cResult = showsGenericMessage(576).c(14);
   showsGenericMessage = showsGenericMessage.showsGenericMessage;
   let tmp4 = undefined !== showsGenericMessage;
@@ -24,7 +24,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((showsGenericMess
   showsGenericMessage = tmp4;
   const tmp5 = closure_5();
   const obj = showsGenericMessage(576);
-  const logAppLauncherEmptyStateView = showsGenericMessage(11679).useLogAppLauncherEmptyStateView(tmp(8961).AppLauncherEmptyStateType.SEARCH_EMPTY, showsGenericMessage.query);
+  const logAppLauncherEmptyStateView = showsGenericMessage(11744).useLogAppLauncherEmptyStateView(tmp(11233).AppLauncherEmptyStateType.SEARCH_EMPTY, showsGenericMessage.query);
   if (cResult[0] !== tmp4) {
     const fn = function o() {
       const intl = util.intl;
@@ -91,20 +91,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((showsGenericMess
       tmp16 = tmp19;
     }
     const obj4 = { style: tmp5.text, variant: "text-sm/medium", color: "text-default", children: cResult[4] };
-    const tmp15 = jsx(tmp(4892).Text, { style: tmp5.text, variant: "text-sm/medium", color: "text-default", children: cResult[4] });
+    const tmp15 = jsx(tmp(5086).Text, { style: tmp5.text, variant: "text-sm/medium", color: "text-default", children: cResult[4] });
     cResult[5] = tmp5.text;
     cResult[6] = cResult[4];
     cResult[7] = tmp15;
     tmp13 = tmp15;
   }
-  const tmpResult = showsGenericMessage(11679);
-}) : ((showsGenericMessage) => {
+  const tmpResult = showsGenericMessage(11744);
+}) : (function EmptyState(showsGenericMessage) {
   let flag = showsGenericMessage.showsGenericMessage;
   if (flag === undefined) {
     flag = false;
   }
   const tmp = closure_5();
-  const logAppLauncherEmptyStateView = flag(11679).useLogAppLauncherEmptyStateView(flag(8961).AppLauncherEmptyStateType.SEARCH_EMPTY, showsGenericMessage.query);
+  const logAppLauncherEmptyStateView = flag(11744).useLogAppLauncherEmptyStateView(flag(11233).AppLauncherEmptyStateType.SEARCH_EMPTY, showsGenericMessage.query);
   const items = [flag];
   const effect = noop.useEffect(() => {
     const intl = util.intl;
@@ -130,7 +130,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((showsGenericMess
     stringResult = string(t.LSNOYf);
   }
   obj4.children = stringResult;
-  obj3.children = jsx(flag(4892).Text, { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null });
+  obj3.children = jsx(flag(5086).Text, { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null });
   obj2.children = <View style={tmp.textContainer}>{null}</View>;
   return <View style={tmp.container}>{null}</View>;
 });

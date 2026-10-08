@@ -1,19 +1,19 @@
-// === Module 16121: useShouldShowGuildThemeMemberCoachmark ===
+// === Module 16381: useShouldShowGuildThemeMemberCoachmark ===
 
-// Module 16121 (useShouldShowGuildThemeMemberCoachmark)
-import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4774 */;
-import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 4778 */;
-import ServerThemeExperiment from "ServerThemeExperiment" /* 4779 */;
-import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 7682 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12185 */;
-import useIsGuildThemePerkEnabledDefault from "useIsGuildThemePerkEnabled" /* 16122 */;
+// Module 16381 (useShouldShowGuildThemeMemberCoachmark)
+import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4968 */;
+import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 4972 */;
+import ServerThemeExperiment from "ServerThemeExperiment" /* 4973 */;
+import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 8003 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12264 */;
+import useIsGuildThemePerkEnabledDefault from "useIsGuildThemePerkEnabled" /* 16382 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 let closure_3 = GuildPowerupsConstants.GUILD_THEME_POWERUP_BOOST_PRICE;
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useShouldShowGuildThemeMemberCoachmark.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldShowGuildThemeMemberCoachmark(arg0) {
   const tmp = useHasAllocateBoostPermissionDefault(arg0);
   let serverThemeEnabled = ServerThemeExperiment.useServerThemeEnabled(arg0, "useShouldShowGuildThemeMemberCoachmark");
   const serverThemeUserEnabled = ServerThemeUserExperiment.useServerThemeUserEnabled("useShouldShowGuildThemeMemberCoachmark");
@@ -40,7 +40,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp8 = serverThemeEnabled;
   }
   return tmp8;
-}) : ((arg0) => {
+}) : (function useShouldShowGuildThemeMemberCoachmark(arg0) {
   const tmp = useHasAllocateBoostPermissionDefault(arg0);
   let serverThemeEnabled = ServerThemeExperiment.useServerThemeEnabled(arg0, "useShouldShowGuildThemeMemberCoachmark");
   const serverThemeUserEnabled = ServerThemeUserExperiment.useServerThemeUserEnabled("useShouldShowGuildThemeMemberCoachmark");

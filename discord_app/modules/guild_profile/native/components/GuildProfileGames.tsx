@@ -1,21 +1,21 @@
-// === Module 9418: GuildProfileGames ===
+// === Module 8849: GuildProfileGames ===
 
-// Module 9418 (GuildProfileGames)
+// Module 8849 (GuildProfileGames)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8352 */;
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8353 */;
-import components_GameIconDefault from "components/GameIcon" /* 9419 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8850 */;
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8851 */;
+import components_GameIconDefault from "components/GameIcon" /* 9083 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { display: "flex", flexDirection: "row", gap: 8 }, favoriteGame: { display: "flex", flexDirection: "row", alignItems: "center", gap: 8 }, lastItem: { position: "relative", width: 32, height: 32 }, lastItemOverlay: null, lastItemImage: null, lastItemText: null };
 const rect = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM, borderRadius: nativeDefault.radii.xs };
 obj2.lastItemOverlay = rect;
@@ -23,7 +23,7 @@ obj2.lastItemImage = { position: "absolute" };
 obj2.lastItemText = { display: "flex", justifyContent: "center", alignItems: "center", width: 32, height: 32 };
 const styles = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function ClickableGameIcon(arg0) {
   const cResult = c.c(12);
   ({ style, game } = arg0);
   ({ activityLevel, onPressFallback } = arg0);
@@ -74,7 +74,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = onPressFallback;
   cResult[5] = tmp6;
   cResult[6] = fn;
-}) : ((game) => {
+}) : (function ClickableGameIcon(game) {
   game = game.game;
   const onPressFallback = game.onPressFallback;
   ({ style, activityLevel } = game);
@@ -95,7 +95,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return hasOwnProperty(components_GameIconDefault, { style, game, activityLevel, onPress });
 });
 ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function FavoriteGame(arg0) {
   const cResult = c.c(9);
   ({ game, activityLevel } = arg0);
   const tmp4 = styles();
@@ -135,7 +135,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = game;
   cResult[2] = tmp6;
   tmp5 = tmp6;
-}) : ((activityLevel) => {
+}) : (function FavoriteGame(activityLevel) {
   const game = activityLevel.game;
   const obj = { style: styles().favoriteGame, children: null };
   const items = [hasOwnProperty(closure_8, { game, activityLevel: activityLevel.activityLevel }), hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-subtle", children: game.name })];

@@ -1,8 +1,8 @@
-// === Module 11529: AppealIngestionBreadcrumbs ===
+// === Module 11527: AppealIngestionBreadcrumbs ===
 
-// Module 11529 (AppealIngestionBreadcrumbs)
+// Module 11527 (AppealIngestionBreadcrumbs)
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4892 */;
+import Text_Text from "Text/Text" /* 5086 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { flex: 0, alignSelf: "stretch", marginBottom: 8 }, title: { lineHeight: 16, marginBottom: 8 }, breadCrumbItemContainer: { flexDirection: "row", justifyContent: "flex-start", marginBottom: 8, marginEnd: 32, overflow: "visible" }, breadCrumbDot: null, breadCrumbBar: null, breadCrumbText: null };
 let size = { marginStart: 2, marginTop: 8, width: 4, height: 4, borderRadius: 2, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj2.breadCrumbDot = size;
@@ -23,7 +23,7 @@ const ReactCompilerGating = fn(558);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/native/AppealIngestionBreadcrumbs.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((reasons) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIngestionBreadcrumbs(reasons) {
   const cResult = require("c").c(18);
   breadCrumbText = reasons.reasons;
   const tmp4 = closure_5();
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((reasons) => {
     }
     if (cResult[1] !== tmp4.title) {
       const obj2 = { style: title, accessibilityRole: "header", variant: "text-xs/bold", children: first };
-      const tmp9 = closure_3(tmp(4892).Text, obj2);
+      const tmp9 = closure_3(tmp(5086).Text, obj2);
       cResult[1] = tmp4.title;
       cResult[2] = tmp9;
       let tmp7 = tmp9;
@@ -107,7 +107,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((reasons) => {
     tmp11 = fn;
   }
   let obj = require("c");
-}) : ((reasons) => {
+}) : (function AppealIngestionBreadcrumbs(reasons) {
   reasons = reasons.reasons;
   const tmp = closure_5();
   _require = tmp;

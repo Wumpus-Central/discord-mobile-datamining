@@ -1,8 +1,8 @@
-// === Module 7324: webpConversion ===
+// === Module 7768: webpConversion ===
 
-// Module 7324 (webpConversion)
+// Module 7768 (webpConversion)
 import LoggerDefault from "Logger" /* 3 */;
-import MurmurHashV3Default from "MurmurHashV3" /* 1251 */;
+import MurmurHashV3Default from "MurmurHashV3" /* 1263 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;

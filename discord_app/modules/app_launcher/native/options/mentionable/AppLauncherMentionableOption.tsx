@@ -1,37 +1,37 @@
-// === Module 11821: AppLauncherMentionableOption ===
+// === Module 11906: AppLauncherMentionableOption ===
 
-// Module 11821 (AppLauncherMentionableOption)
+// Module 11906 (AppLauncherMentionableOption)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import UserCircleIcon from "UserCircleIcon" /* 10667 */;
-import AppLauncherMentionableListActionSheet from "AppLauncherMentionableListActionSheet" /* 11818 */;
-import AppLauncherRoleListActionSheet from "AppLauncherRoleListActionSheet" /* 11819 */;
-import AppLauncherOptionIconDefault from "AppLauncherOptionIcon" /* 11820 */;
-import UsernameTextDefault from "UsernameText" /* 11822 */;
+import native from "native" /* 1200 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import UserCircleIcon from "UserCircleIcon" /* 10267 */;
+import AppLauncherMentionableListActionSheet from "AppLauncherMentionableListActionSheet" /* 11903 */;
+import AppLauncherRoleListActionSheet from "AppLauncherRoleListActionSheet" /* 11904 */;
+import AppLauncherOptionIconDefault from "AppLauncherOptionIcon" /* 11905 */;
+import UsernameTextDefault from "UsernameText" /* 11907 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
-import GuildRoleStore from "GuildRoleStore" /* 2106 */;
-import UserStore from "UserStore" /* 1377 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
+import GuildRoleStore from "GuildRoleStore" /* 2118 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const StatusTypes = fn(1096).StatusTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { iconWrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE } };
 let closure_10 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function MentionableIcon(arg0) {
   const cResult = c.c(11);
   ({ mentionable, guildId } = arg0);
   const tmp4 = closure_10();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AccessibilityStore];
-    const fn = function s() {
+    const fn = function o() {
       return useReducedMotion.useReducedMotion;
     };
     cResult[0] = items;
@@ -97,7 +97,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
   }
   const tmpResult = initialize;
-}) : ((mentionable) => {
+}) : (function MentionableIcon(mentionable) {
   mentionable = mentionable.mentionable;
   const tmp = closure_10();
   const items = [AccessibilityStore];
@@ -193,12 +193,12 @@ export default function AppLauncherMentionableOption(option) {
   }
   obj.selectedItemName = tmp7;
   obj.leading = <closure_11 mentionable={mentionable} guildId={guild_id} />;
-  obj.onPress = function onPress() {
+  obj.onPress = function handleRowPress() {
     if (onPress != null) {
       tmp();
     }
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(11818, dependencyMap.paths), AppLauncherMentionableListActionSheet.APP_LAUNCHER_MENTIONABLE_LIST_ACTION_SHEET_KEY, {
+    obj.openLazy(asyncRequireImpl(11903, dependencyMap.paths), AppLauncherMentionableListActionSheet.APP_LAUNCHER_MENTIONABLE_LIST_ACTION_SHEET_KEY, {
       option,
       channel,
       onMentionablePress(mentionable) {

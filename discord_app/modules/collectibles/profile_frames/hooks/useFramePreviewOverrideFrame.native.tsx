@@ -1,19 +1,19 @@
-// === Module 7884: useFramePreviewOverrideFrame ===
+// === Module 8304: useFramePreviewOverrideFrame ===
 
-// Module 7884 (useFramePreviewOverrideFrame)
+// Module 8304 (useFramePreviewOverrideFrame)
 import c from "c" /* 576 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1980 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1992 */;
 import noop from "module_19" /* 19 */;
-import ProfileFrameRecord from "ProfileFrameRecord" /* 7073 */;
+import ProfileFrameRecord from "ProfileFrameRecord" /* 7259 */;
 
 require = fn;
-let closure_4 = fn(7885).useFramePreviewOverrideStore;
+let closure_4 = fn(8305).useFramePreviewOverrideStore;
 let c5 = "frame-preview-override";
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/profile_frames/hooks/useFramePreviewOverrideFrame.native.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFramePreviewOverrideFrame() {
   let PROFILE_FRAME = dependencyMap;
   const cResult = c.c(8);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     cResult[6] = overflowTop;
     cResult[7] = tmp10;
   }
-}) : (() => {
+}) : (function useFramePreviewOverrideFrame() {
   const tmp = closure_4((override) => override.override);
   closure_0 = tmp;
   const items = [tmp];

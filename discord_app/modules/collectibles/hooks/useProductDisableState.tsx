@@ -1,18 +1,18 @@
-// === Module 8564: useProductDisableState ===
+// === Module 9048: useProductDisableState ===
 
-// Module 8564 (useProductDisableState)
+// Module 9048 (useProductDisableState)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import FractionalPremiumSKUs from "FractionalPremiumSKUs" /* 1088 */;
 import util from "util" /* 1126 */;
-import SubscriptionStore from "SubscriptionStore" /* 4540 */;
+import SubscriptionStore from "SubscriptionStore" /* 4732 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useProductDisableState.tsx");
 
-export const useProductDisableState = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useProductDisableState = ReactCompilerGating.isReactCompilerEnabled() ? (function useProductDisableState(arg0) {
   const cResult = c.c(8);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [SubscriptionStore];
@@ -64,7 +64,7 @@ export const useProductDisableState = ReactCompilerGating.isReactCompilerEnabled
     return tmp8;
   }
   const tmpResult = initialize;
-}) : ((arg0) => {
+}) : (function useProductDisableState(arg0) {
   const items = [SubscriptionStore];
   const stateFromStores = initialize.useStateFromStores(items, () => {
     premiumSubscription = premiumSubscription.getPremiumSubscription();

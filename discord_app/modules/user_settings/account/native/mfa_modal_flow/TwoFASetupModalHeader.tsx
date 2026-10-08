@@ -1,6 +1,6 @@
-// === Module 14585: TwoFASetupModalHeader ===
+// === Module 14846: TwoFASetupModalHeader ===
 
-// Module 14585 (TwoFASetupModalHeader)
+// Module 14846 (TwoFASetupModalHeader)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
 
@@ -8,7 +8,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { pageMarkerContainer: { flex: 1, alignItems: "center", justifyContent: "space-between", flexDirection: "row" }, circleIcon: null, horizontalLine: null, filledCircle: null };
 let size = { width: 14, height: 14, borderRadius: 7, borderWidth: 1, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderColor: nativeDefault.colors.BORDER_SUBTLE };
 obj.circleIcon = size;
@@ -21,7 +21,7 @@ let obj3 = { backgroundColor: nativeDefault.colors.TEXT_BRAND, borderColor: nati
 size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupModalHeader.tsx");
 
-export const PageMarker = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const PageMarker = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function PageMarker(arg0) {
   const cResult = filledCircle(576).c(20);
   ({ numMarkers, currentPage: filledCircle } = arg0);
   const tmp2 = closure_5();
@@ -111,7 +111,7 @@ export const PageMarker = noop.memo(ReactCompilerGating.isReactCompilerEnabled()
   cResult[8] = fn;
   tmp4 = fn;
   const obj = filledCircle(576);
-}) : ((arg0) => {
+}) : (function PageMarker(arg0) {
   ({ numMarkers, currentPage: require } = arg0);
   const tmp = closure_5();
   closure_1 = tmp;

@@ -1,17 +1,17 @@
-// === Module 9720: SingleScreenshare ===
+// === Module 10925: SingleScreenshare ===
 
-// Module 9720 (SingleScreenshare)
+// Module 10925 (SingleScreenshare)
 import nativeDefault from "native" /* 587 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5097 */;
-import useMountEffectDefault from "useMountEffect" /* 5597 */;
-import ScreenshareParticipantDefault from "ScreenshareParticipant" /* 9721 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5104 */;
+import useMountEffectDefault from "useMountEffect" /* 5392 */;
+import ScreenshareParticipantDefault from "ScreenshareParticipant" /* 10926 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const ChannelCallStore = fn(9086);
+const ChannelCallStore = fn(10333);
 ({ resetFocus: c3, toggleFocus: closure_4 } = ChannelCallStore);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { stageStreamContainer: { backgroundColor: nativeDefault.colors.BLACK } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -19,7 +19,7 @@ const obj3 = { backgroundColor: nativeDefault.colors.BLACK };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/components/SingleScreenshare.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SingleScreenshare(arg0) {
   const cResult = channel(576).c(11);
   ({ participant, channel } = arg0);
   const tmp3 = closure_6();
@@ -34,22 +34,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   useMountEffectDefault(first);
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn2 = function u() {
+    function onSingleTap() {
       closure_1_4();
-    };
-    cResult[1] = fn2;
-    let tmp7 = fn2;
+    }
+    cResult[1] = onSingleTap;
+    let tmp7 = onSingleTap;
   } else {
     tmp7 = cResult[1];
   }
   if (cResult[2] !== channel.id) {
-    const fn3 = function _() {
+    function onDoubleTap() {
       React3();
       const participant = ChannelRTCActionCreatorsDefault.selectParticipant(channel.id, null);
-    };
+    }
     cResult[2] = channel.id;
-    cResult[3] = fn3;
-    let tmp8 = fn3;
+    cResult[3] = onDoubleTap;
+    let tmp8 = onDoubleTap;
   } else {
     tmp8 = cResult[3];
   }
@@ -82,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[6] = stageStreamContainer;
   tmp9 = stageStreamContainer;
   const obj = channel(576);
-}) : ((channel) => {
+}) : (function SingleScreenshare(channel) {
   channel = channel.channel;
   useMountEffectDefault(() => {
     closure_1_3();

@@ -1,9 +1,9 @@
-// === Module 17818: GuildSettingsModalLobbiesLinked ===
+// === Module 18105: GuildSettingsModalLobbiesLinked ===
 
-// Module 17818 (GuildSettingsModalLobbiesLinked)
+// Module 18105 (GuildSettingsModalLobbiesLinked)
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
-import UserStore from "UserStore" /* 1377 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const GuildSettingsSections = fn(1085).GuildSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
 let ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((channels) => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function SyncingToGamesItem(channels) {
   const cResult = channels(navigation[6]).c(11);
   channels = channels.channels;
   const isOnlySection = channels.isOnlySection;
@@ -38,7 +38,21 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((channels) => {
             }
             return tmp10;
           }
-          const obj4 = { title: name, hasIcons: true, children: cResult[3] };
+          const obj4 = { title: name, hasIcons: true, children: null };
+          class I {
+            constructor(arg0) {
+              closure_0 = channels;
+              obj = { label: null, icon: null, arrow: true, onPress: null };
+              obj2 = channels(closure_2[10]);
+              obj.label = obj2.computeChannelName(channels, closure_1_4, closure_1_3);
+              obj1 = { IconComponent: null };
+              obj4 = channels(closure_2[11]);
+              obj1.IconComponent = obj4.getChannelIconComponent(channels);
+              obj.icon = closure_1_6(channels(closure_2[9]).TableRow.Icon, obj1);
+              obj.onPress = function onPress() { ... };
+              return closure_1_6(channels(closure_2[9]).TableRow, obj, channels.id);
+            }
+          }
           const tmp12 = closure_6(tmp(tmp2[12]).TableRowGroup, obj4);
           cResult[8] = name;
           cResult[9] = cResult[3];
@@ -55,46 +69,53 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((channels) => {
         const mapped = channels.map(tmp7);
         cResult[num] = channels;
         cResult[1] = isOnlySection;
+        class I {
+          constructor(arg0) {
+            closure_0 = channels;
+            obj = { label: null, icon: null, arrow: true, onPress: null };
+            obj2 = channels(closure_2[10]);
+            obj.label = obj2.computeChannelName(channels, closure_1_4, closure_1_3);
+            obj1 = { IconComponent: null };
+            obj4 = channels(closure_2[11]);
+            obj1.IconComponent = obj4.getChannelIconComponent(channels);
+            obj.icon = closure_1_6(channels(closure_2[9]).TableRow.Icon, obj1);
+            obj.onPress = function onPress() { ... };
+            return closure_1_6(channels(closure_2[9]).TableRow, obj, channels.id);
+          }
+        }
         cResult[2] = navigation;
         num = 3;
         cResult[3] = mapped;
       }
     }
-    const fn = function y(id) {
-      const channel = id;
-      let obj = { label: channels(navigation[10]).computeChannelName(id, UserStore, RelationshipStore), icon: null, arrow: true, onPress: null };
-      const obj3 = { IconComponent: null };
-      const obj2 = channels(navigation[10]);
-      obj3.IconComponent = channels(navigation[11]).getChannelIconComponent(id);
-      obj.icon = closure_1_6(channels(navigation[9]).TableRow.Icon, obj3);
-      obj.onPress = function onPress() {
-        const obj = { channel, numScreensToPop: null };
-        let num = 1;
-        if (isOnlySection) {
-          num = 1;
-          if (1 === channels.length) {
-            num = 2;
-          }
-        }
-        obj.numScreensToPop = num;
-        navigation.push(GuildSettingsSections.EDIT_LINKED_LOBBY, obj);
-      };
-      return closure_1_6(channels(navigation[9]).TableRow, obj, id.id);
-    };
+    class I {
+      constructor(arg0) {
+        closure_0 = channels;
+        obj = { label: null, icon: null, arrow: true, onPress: null };
+        obj2 = channels(closure_2[10]);
+        obj.label = obj2.computeChannelName(channels, closure_1_4, closure_1_3);
+        obj1 = { IconComponent: null };
+        obj4 = channels(closure_2[11]);
+        obj1.IconComponent = obj4.getChannelIconComponent(channels);
+        obj.icon = closure_1_6(channels(closure_2[9]).TableRow.Icon, obj1);
+        obj.onPress = function onPress() { ... };
+        return closure_1_6(channels(closure_2[9]).TableRow, obj, channels.id);
+      }
+    }
     cResult[4] = channels.length;
     cResult[5] = isOnlySection;
     cResult[6] = navigation;
-    cResult[7] = fn;
-    tmp7 = fn;
+    cResult[7] = I;
+    tmp7 = I;
   }
   let obj3 = channels(navigation[8]);
-}) : ((channels) => {
+}) : (function SyncingToGamesItem(channels) {
   channels = channels.channels;
   const isOnlySection = channels.isOnlySection;
-  dependencyMap = channels(1490).useNavigation();
-  let obj = channels(1490);
+  dependencyMap = channels(1502).useNavigation();
+  let obj = channels(1502);
   const tmp = channels;
-  const getOrFetchApplication = channels(6670).useGetOrFetchApplication(channels.applicationId);
+  const getOrFetchApplication = channels(6847).useGetOrFetchApplication(channels.applicationId);
   let tmp5Result = null;
   if (0 !== channels.length) {
     let name;
@@ -106,11 +127,11 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((channels) => {
       hasIcons: true,
       children: channels.map((id) => {
           const channel = id;
-          let obj = { label: channels(5049).computeChannelName(id, UserStore, RelationshipStore), icon: null, arrow: true, onPress: null };
+          let obj = { label: channels(5417).computeChannelName(id, UserStore, RelationshipStore), icon: null, arrow: true, onPress: null };
           const obj3 = { IconComponent: null };
-          const obj2 = channels(5049);
-          obj3.IconComponent = channels(5819).getChannelIconComponent(id);
-          obj.icon = closure_1_6(channels(6000).TableRow.Icon, obj3);
+          const obj2 = channels(5417);
+          obj3.IconComponent = channels(8134).getChannelIconComponent(id);
+          obj.icon = closure_1_6(channels(6184).TableRow.Icon, obj3);
           obj.onPress = function onPress() {
             const obj = { channel, numScreensToPop: null };
             let num = 1;
@@ -123,10 +144,10 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((channels) => {
             obj.numScreensToPop = num;
             closure_2.push(GuildSettingsSections.EDIT_LINKED_LOBBY, obj);
           };
-          return closure_1_6(channels(6000).TableRow, obj, id.id);
+          return closure_1_6(channels(6184).TableRow, obj, id.id);
         })
     };
-    tmp5Result = closure_6(tmp(6081).TableRowGroup, obj3);
+    tmp5Result = closure_6(tmp(6267).TableRowGroup, obj3);
   }
   return tmp5Result;
 });
@@ -134,7 +155,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/apps/native/GuildSettingsModalLobbiesLinked.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSettingsModalLobbiesLinked(arg0) {
   const cResult = require("c").c(22);
   ({ contentContainerStyle, guildId } = arg0);
   const obj = require("c");
@@ -144,7 +165,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (cResult[0] !== channelsAllowedToUnlink) {
     const _Symbol = Symbol;
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-      const fn = function l(linkedLobby) {
+      const fn = function t(linkedLobby) {
         linkedLobby = linkedLobby.linkedLobby;
         let application_id;
         if (linkedLobby != null) {
@@ -210,7 +231,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           }
           const _Symbol3 = Symbol;
           if (cResult[19] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp28 = closure_6(tmp(6543).NavScrim, {});
+            const tmp28 = closure_6(tmp(6719).NavScrim, {});
             cResult[19] = tmp28;
             let tmp26 = tmp28;
           } else {
@@ -230,14 +251,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           return tmp29;
         }
         const obj7 = { contentContainerStyle: tmp16, children: tmp20 };
-        const tmp25 = closure_6(tmp(8924).Form, obj7);
+        const tmp25 = closure_6(tmp(8555).Form, obj7);
         cResult[16] = tmp16;
         cResult[17] = tmp20;
         cResult[18] = tmp25;
         tmp23 = tmp25;
       }
       const obj8 = { style: tmp17, spacing: tmp4(587).space.PX_24, children: tmp18 };
-      const tmp22 = closure_6(tmp(5600).Stack, obj8);
+      const tmp22 = closure_6(tmp(5373).Stack, obj8);
       cResult[13] = tmp17;
       cResult[14] = tmp18;
       cResult[15] = tmp22;
@@ -250,7 +271,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp18 = mapped;
   }
   const obj3 = require("useChannelsAllowedToUnlink");
-}) : ((arg0) => {
+}) : (function GuildSettingsModalLobbiesLinked(arg0) {
   _require = undefined;
   let keys;
   ({ contentContainerStyle, guildId } = arg0);

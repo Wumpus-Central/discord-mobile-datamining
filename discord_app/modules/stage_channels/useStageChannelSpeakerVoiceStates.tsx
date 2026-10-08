@@ -1,12 +1,12 @@
-// === Module 16206: useStageChannelSpeakerVoiceStates ===
+// === Module 16466: useStageChannelSpeakerVoiceStates ===
 
-// Module 16206 (useStageChannelSpeakerVoiceStates)
+// Module 16466 (useStageChannelSpeakerVoiceStates)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import GlobalUtils from "GlobalUtils" /* 1375 */;
+import GlobalUtils from "GlobalUtils" /* 1387 */;
 import _slicedToArray from "module_32" /* 32 */;
-import FavoriteStore from "FavoriteStore" /* 2054 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5582 */;
+import FavoriteStore from "FavoriteStore" /* 2066 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5892 */;
 
 const require = globalThis.__r;
 
@@ -15,12 +15,12 @@ function transformParticipantToSortedVoiceState(user) {
   ({ voiceState, userNick } = user);
   return { user: user.user, voiceState, nick: userNick, comparator: getComparator(voiceState, userNick) };
 }
-const getComparator = fn(4920).getComparator;
+const getComparator = fn(5114).getComparator;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useStageChannelSpeakerVoiceStates.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useStageChannelSpeakerVoiceStates(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -63,7 +63,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return _slicedToArray(require("initialize").useStateFromStores(first, tmp8, tmp9, require("SecondaryIndexMapUtils").isVersionEqual), 1)[0];
-}) : ((arg0) => {
+}) : (function useStageChannelSpeakerVoiceStates(arg0) {
   _require = arg0;
   let items = [StageChannelParticipantStore, ChannelStore, FavoriteStore];
   const items1 = [arg0];

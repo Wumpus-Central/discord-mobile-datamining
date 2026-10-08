@@ -1,16 +1,16 @@
-// === Module 12243: GuildPowerupsPerksSection ===
+// === Module 12322: GuildPowerupsPerksSection ===
 
-// Module 12243 (GuildPowerupsPerksSection)
+// Module 12322 (GuildPowerupsPerksSection)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import _modDef2553 from "module_2553" /* 2553 */;
-import GuildPowerupsSectionHeaderDefault from "GuildPowerupsSectionHeader" /* 12226 */;
-import GuildPowerupsSinglePerkCardDefault from "GuildPowerupsSinglePerkCard" /* 12244 */;
-import GuildPowerupsMultiPerkCardDefault from "GuildPowerupsMultiPerkCard" /* 12246 */;
-import GuildPowerupsGameServerCardDefault from "GuildPowerupsGameServerCard" /* 12248 */;
+import _modDef2597 from "module_2597" /* 2597 */;
+import GuildPowerupsSectionHeaderDefault from "GuildPowerupsSectionHeader" /* 12305 */;
+import GuildPowerupsSinglePerkCardDefault from "GuildPowerupsSinglePerkCard" /* 12323 */;
+import GuildPowerupsMultiPerkCardDefault from "GuildPowerupsMultiPerkCard" /* 12325 */;
+import GuildPowerupsGameServerCardDefault from "GuildPowerupsGameServerCard" /* 12327 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
+import createStyles from "createStyles" /* 5090 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -21,7 +21,7 @@ let closure_7 = createStyles.createStyles(obj);
 let obj2 = { flexDirection: "column", gap: nativeDefault.space.PX_16 };
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsPerksSection.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPowerupPerksSection(guildId) {
   const cResult = guildId(576).c(9);
   guildId = guildId.guildId;
   const listings = guildId.listings;
@@ -29,9 +29,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let obj2 = { title: null, description: null };
     const intl = tmp(1126).intl;
-    obj2.title = intl.string(_modDef2553.TV3Vm8);
+    obj2.title = intl.string(_modDef2597.TV3Vm8);
     const intl2 = tmp(1126).intl;
-    obj2.description = intl2.string(_modDef2553.STx9hp);
+    obj2.description = intl2.string(_modDef2597.STx9hp);
     const tmp9 = closure_4(GuildPowerupsSectionHeaderDefault, obj2);
     cResult[0] = tmp9;
     let first = tmp9;
@@ -59,7 +59,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     }
   }
   if (cResult[4] !== guildId) {
-    const fn = function v(type, arg1) {
+    const fn = function h(type, arg1) {
       type = type.type;
       if ("singlePerk" === type) {
         const obj2 = { guildId, powerup: null, badge: null };
@@ -88,15 +88,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   cResult[2] = listings;
   cResult[3] = mapped;
   let obj = guildId(576);
-}) : ((arg0) => {
+}) : (function GuildPowerupPerksSection(arg0) {
   ({ guildId: require, listings } = arg0);
   let obj = { children: null };
   let obj2 = { title: null, description: null };
   const tmp = closure_7();
   const intl = util.intl;
-  obj2.title = intl.string(_modDef2553.TV3Vm8);
+  obj2.title = intl.string(_modDef2597.TV3Vm8);
   const intl2 = util.intl;
-  obj2.description = intl2.string(_modDef2553.STx9hp);
+  obj2.description = intl2.string(_modDef2597.STx9hp);
   const items = [closure_4(GuildPowerupsSectionHeaderDefault, obj2), ];
   items[1] = closure_4(View, {
     style: tmp.container,

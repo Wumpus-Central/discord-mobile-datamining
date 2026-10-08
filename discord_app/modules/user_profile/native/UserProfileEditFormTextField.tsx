@@ -1,12 +1,12 @@
-// === Module 14456: UserProfileEditFormTextField ===
+// === Module 14683: UserProfileEditFormTextField ===
 
-// Module 14456 (UserProfileEditFormTextField)
+// Module 14683 (UserProfileEditFormTextField)
 import c from "c" /* 576 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
-const TextInput = TextArea(6105);
-const TextArea2 = TextArea(6587);
+const TextInput = TextArea(6283);
+const TextArea2 = TextArea(6763);
 require = fn;
 let closure_2 = ["label", "description", "errorMessage", "containerStyle", "numberOfLines", "inputRef"];
 const jsx = fn(21).jsx;
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileEditFormTextField.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileEditFormTextField(arg0) {
   let TextArea = require;
   let tmp = dependencyMap;
   const cResult = c.c(21);
@@ -102,7 +102,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[13] = str;
   cResult[14] = obj4;
   tmp13 = obj4;
-}) : ((inputRef) => {
+}) : (function UserProfileEditFormTextField(inputRef) {
   ({ errorMessage, numberOfLines } = inputRef);
   ({ label, description, containerStyle } = inputRef);
   if (numberOfLines === undefined) {

@@ -1,11 +1,11 @@
-// === Module 8734: ConjureProjectStore ===
+// === Module 11251: ConjureProjectStore ===
 
-// Module 8734 (ConjureProjectStore)
+// Module 11251 (ConjureProjectStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ConjureTypes from "ConjureTypes" /* 6757 */;
+import ConjureTypes from "ConjureTypes" /* 6933 */;
 import _slicedToArray from "module_32" /* 32 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 function isProjectOwner(item10010) {
@@ -53,15 +53,16 @@ let c14 = false;
 let obj = null;
 const set3 = new Set();
 const map4 = new Map();
-let closure_18 = [];
+let error = "unattempted";
+let closure_19 = [];
 const map5 = new Map();
-let c20 = 0;
+let c21 = 0;
 const map6 = new Map();
 const map7 = new Map();
-let closure_23 = [];
+let closure_24 = [];
 const map8 = new Map();
 const map9 = new Map();
-let closure_26 = { status: "idle", truncated: false, count: 0 };
+let closure_27 = { status: "idle", truncated: false, count: 0 };
 const map10 = new Map();
 const Store = initializeDefault.Store;
 class ConjureProjectStore extends Store {
@@ -145,7 +146,7 @@ prototype["getSelectedProjectId"] = function getSelectedProjectId(guildId) {
 prototype["getLogs"] = function getLogs(projectId) {
   value = map5.get(projectId);
   if (value == null) {
-    value = closure_18;
+    value = closure_19;
   }
   return value;
 };
@@ -181,7 +182,7 @@ prototype["getUnreadLogErrorCount"] = function getUnreadLogErrorCount(arg0) {
 prototype["getTrace"] = function getTrace(projectId) {
   value = map8.get(projectId);
   if (value == null) {
-    value = closure_23;
+    value = closure_24;
   }
   return value;
 };
@@ -192,7 +193,7 @@ prototype["getHistoryState"] = function getHistoryState(arg0, arg1) {
     value2 = value.get(arg1);
   }
   if (value2 == null) {
-    value2 = closure_26;
+    value2 = closure_27;
   }
   return value2;
 };
@@ -208,6 +209,9 @@ prototype["getGuildProjectsFetchState"] = function getGuildProjectsFetchState(ar
     str = "unattempted";
   }
   return str;
+};
+prototype["getOwnedProjectsFetchState"] = function getOwnedProjectsFetchState() {
+  return error;
 };
 prototype["isConjureProjectApplication"] = function isConjureProjectApplication(applicationId) {
   let tmp = null != applicationId;
@@ -269,6 +273,7 @@ obj = {
     map9.clear();
     obj = null;
     c12 = false;
+    error = "unattempted";
     maxProjects = null;
     c14 = false;
     map11.clear();
@@ -277,6 +282,8 @@ obj = {
     guildId = guildId.guildId;
     if (null != guildId) {
       const result = map4.set(guildId, "loading");
+    } else {
+      error = "loading";
     }
   },
   CONJURE_PROJECTS_FETCH_SUCCESS: function handleProjectsFetchSuccess(arg0) {
@@ -334,6 +341,7 @@ obj = {
       tmp14 = set4[Symbol.iterator]();
     })();
     c12 = true;
+    error = "success";
     { type: "success", fetchedAt: Date.now() };
     tmp2 = map[Symbol.iterator]();
   },
@@ -341,6 +349,8 @@ obj = {
     guildId = guildId.guildId;
     if (null != guildId) {
       const result = map4.set(guildId, "error");
+    } else {
+      error = "error";
     }
     { type: "error", fetchedAt: Date.now() };
   },
@@ -439,7 +449,7 @@ obj = {
     projectId = projectId.projectId;
     value = map8.get(projectId);
     if (value == null) {
-      value = closure_23;
+      value = closure_24;
     }
     obj = { snapshot: new Set(value.map((kind) => "" + kind.kind + ":" + kind.id)), touched: null };
     set = new Set(value.map((kind) => "" + kind.kind + ":" + kind.id));
@@ -530,8 +540,8 @@ obj = {
       const result = map6.set(projectId, seq);
     }
     const obj2 = { key: null, log };
-    const sum = c20 + 1;
-    c20 = sum;
+    const sum = c21 + 1;
+    c21 = sum;
     obj2.key = sum;
     value2 = map5.get(projectId);
     if (null == value2) {
@@ -589,7 +599,7 @@ obj = {
     } else {
       let value7 = map8.get(projectId);
       if (value7 == null) {
-        value7 = closure_23;
+        value7 = closure_24;
       }
       const tool = "tool";
       const id = toolCall.id;
@@ -799,7 +809,7 @@ obj = {
     } else {
       let value7 = map8.get(projectId);
       if (value7 == null) {
-        value7 = closure_23;
+        value7 = closure_24;
       }
       const model = "model";
       const id = modelCall.id;

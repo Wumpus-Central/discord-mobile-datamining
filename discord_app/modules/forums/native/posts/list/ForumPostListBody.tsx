@@ -1,28 +1,28 @@
-// === Module 11650: ForumPostListBody ===
+// === Module 11715: ForumPostListBody ===
 
-// Module 11650 (ForumPostListBody)
+// Module 11715 (ForumPostListBody)
 import c from "c" /* 576 */;
-import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 6785 */;
-import ForumPostUsername from "ForumPostUsername" /* 11633 */;
-import ForumPostMedia from "ForumPostMedia" /* 11637 */;
-import ForumPostTimestampDefault from "ForumPostTimestamp" /* 11642 */;
-import ForumPostNewTagDefault from "ForumPostNewTag" /* 11643 */;
-import ForumPostTitleDefault from "ForumPostTitle" /* 11644 */;
-import ForumPostMessageContentDefault from "ForumPostMessageContent" /* 11651 */;
+import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 6960 */;
+import ForumPostUsername from "ForumPostUsername" /* 11697 */;
+import ForumPostMedia from "ForumPostMedia" /* 11702 */;
+import ForumPostTimestampDefault from "ForumPostTimestamp" /* 11707 */;
+import ForumPostNewTagDefault from "ForumPostNewTag" /* 11708 */;
+import ForumPostTitleDefault from "ForumPostTitle" /* 11709 */;
+import ForumPostMessageContentDefault from "ForumPostMessageContent" /* 11716 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const ForumTimestampFormats = fn(6786).ForumTimestampFormats;
+const ForumTimestampFormats = fn(6961).ForumTimestampFormats;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({ body: { display: "flex", flexDirection: "row", alignItems: "flex-start" }, contentContainer: { flex: 1 }, thumbnailContainer: { marginLeft: 12 }, details: { flexDirection: "row", alignItems: "center", marginBottom: 6 }, newTagContainer: { marginEnd: 8 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/posts/list/ForumPostListBody.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPostListBody(arg0) {
   const cResult = c.c(42);
   ({ containerStyle, thread, firstMessage, hasUnreads, isNew, firstMessageLoaded, messageContent, media, isEmbed, isLocalDeviceMedia, senderModifier } = arg0);
   const tmp4 = closure_7();
@@ -217,7 +217,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = tmp4.body;
   cResult[2] = items3;
   tmp6 = items3;
-}) : ((arg0) => {
+}) : (function ForumPostListBody(arg0) {
   ({ thread, firstMessage, hasUnreads, isNew, media } = arg0);
   ({ containerStyle, firstMessageLoaded, messageContent, isEmbed, isLocalDeviceMedia, senderModifier } = arg0);
   const tmp = closure_7();

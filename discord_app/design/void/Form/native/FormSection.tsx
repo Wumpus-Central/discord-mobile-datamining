@@ -1,23 +1,23 @@
-// === Module 8931: FormSection ===
+// === Module 8562: FormSection ===
 
-// Module 8931 (FormSection)
+// Module 8562 (FormSection)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import RedesignCompat from "RedesignCompat" /* 6080 */;
-import TableRowGroup2 from "TableRowGroup" /* 6081 */;
-import FormRowDefault from "FormRow" /* 6640 */;
-import FormDividerDefault from "FormDivider" /* 8928 */;
-import FormTitleDefault from "FormTitle" /* 8932 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import RedesignCompat from "RedesignCompat" /* 6266 */;
+import TableRowGroup2 from "TableRowGroup" /* 6267 */;
+import FormRowDefault from "FormRow" /* 6817 */;
+import FormDividerDefault from "FormDivider" /* 8559 */;
+import FormTitleDefault from "FormTitle" /* 8563 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet, Platform } = get_ActivityIndicator);
-const TitleStyleType = fn(1192).TitleStyleType;
+const TitleStyleType = fn(1204).TitleStyleType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { titledSectionHeader: { borderTopWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, marginTop: 16 }, titledSectionNoBorder: { marginTop: 24 }, titledSectionNoBorderOrMargin: {}, emptySectionHeader: { marginTop: 24 }, sectionBody: {}, sectionBodyIOSBorder: {} };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -25,7 +25,7 @@ let obj3 = { borderTopWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE,
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormSection.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormSection(arg0) {
   const cResult = c.c(60);
   ({ icon, children, thinTitle, inset, title, description, accessibilityRole, accessibilityLabel, uppercaseTitle, titleStyleType, titleViewStyle, titleTextStyle, sectionBodyStyle, wrapperStyle, error, hint, hasIcons } = arg0);
   if (undefined === titleStyleType) {
@@ -507,7 +507,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       cResult[41] = tmp13;
     }
   }
-}) : ((arg0) => {
+}) : (function FormSection(arg0) {
   ({ children, inset } = arg0);
   ({ icon, thinTitle } = arg0);
   if (inset === undefined) {

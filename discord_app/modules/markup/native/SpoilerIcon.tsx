@@ -1,8 +1,8 @@
-// === Module 11638: SpoilerIcon ===
+// === Module 11703: SpoilerIcon ===
 
-// Module 11638 (SpoilerIcon)
+// Module 11703 (SpoilerIcon)
 import c from "c" /* 576 */;
-import inlineStyles from "inlineStyles" /* 8169 */;
+import inlineStyles from "inlineStyles" /* 7550 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/markup/native/SpoilerIcon.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function Spoiler(arg0) {
   const cResult = c.c(14);
   if (cResult[0] !== arg0) {
     ({ width, height, color } = arg0);
@@ -86,7 +86,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[12] = num7;
   cResult[13] = tmp18;
   tmp16 = tmp18;
-}) : ((width) => {
+}) : (function Spoiler(width) {
   let num = width.width;
   if (num === undefined) {
     num = 24;

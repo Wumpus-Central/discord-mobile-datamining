@@ -1,29 +1,29 @@
-// === Module 13361: PremiumSubscriptionPricingUpsell ===
+// === Module 13661: PremiumSubscriptionPricingUpsell ===
 
-// Module 13361 (PremiumSubscriptionPricingUpsell)
+// Module 13661 (PremiumSubscriptionPricingUpsell)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import useSubscriptionPlansLoaded from "useSubscriptionPlansLoaded" /* 13224 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import useSubscriptionPlansLoaded from "useSubscriptionPlansLoaded" /* 13524 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2116 */;
-import UserStore from "UserStore" /* 1377 */;
-import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4539 */;
-import SubscriptionStore from "SubscriptionStore" /* 4540 */;
-import IAPStore from "IAPStore" /* 6931 */;
+import LocaleStore from "LocaleStore" /* 2128 */;
+import UserStore from "UserStore" /* 1389 */;
+import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4731 */;
+import SubscriptionStore from "SubscriptionStore" /* 4732 */;
+import IAPStore from "IAPStore" /* 7120 */;
 
 require = fn;
 const View = fn(17).View;
 const CurrencyCodes = fn(1085).CurrencyCodes;
-const PremiumConstants = fn(1379);
+const PremiumConstants = fn(1391);
 ({ SubscriptionPlans: closure_12, SubscriptionPlanInfo: map1, PremiumTypes: closure_14, SubscriptionIntervalTypes: closure_15, NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_16, GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_17 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_21 = createStyles.createStyles({ title: { marginTop: 16 }, pricingSection: { alignItems: "center" }, originalPrice: { textDecorationLine: "line-through" }, cardText: { lineHeight: 20, marginTop: 8, textAlign: "center" } });
 let ReactCompilerGating = fn(558);
-let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function PricingSubheadingCopy() {
   const cResult = require("c").c(45);
   const tmp4 = closure_21();
   _require = tmp4;
@@ -43,7 +43,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   let obj = require("c");
   const stateFromStores = require("initialize").useStateFromStores(tmp5, T);
   if (cResult[2] !== stateFromStores) {
-    const hasBoostDiscountResult = stateFromStores2(4534).hasBoostDiscount(stateFromStores);
+    const hasBoostDiscountResult = stateFromStores2(4726).hasBoostDiscount(stateFromStores);
     class T {
       constructor() {
         return closure_1_7.getCurrentUser();
@@ -51,7 +51,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
     cResult[2] = stateFromStores;
     cResult[3] = hasBoostDiscountResult;
-    const obj3 = stateFromStores2(4534);
+    const obj3 = stateFromStores2(4726);
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [LocaleStore];
@@ -296,7 +296,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
   }
   return tmp33;
-}) : (() => {
+}) : (function PricingSubheadingCopy() {
   let tmp = closure_21();
   _require = tmp;
   let items = [UserStore];
@@ -477,7 +477,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/premium/PremiumSubscriptionPricingUpsell.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumSubscriptionPricingUpsell() {
   const cResult = c.c(9);
   const tmp4 = closure_21();
   const subscriptionPlansLoaded = useSubscriptionPlansLoaded.useSubscriptionPlansLoaded();
@@ -521,13 +521,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const obj4 = { style: pricingSection, children: null };
   const items = [tmp8, tmp11];
   obj4.children = items;
-  const tmp16 = closure_1_20(View, obj4);
+  const tmp16 = constants2(View, obj4);
   cResult[5] = tmp4.pricingSection;
   cResult[6] = tmp8;
   cResult[7] = tmp11;
   cResult[8] = tmp16;
   tmp15 = tmp16;
-}) : (() => {
+}) : (function PremiumSubscriptionPricingUpsell() {
   const tmp = closure_21();
   const obj2 = { style: tmp.pricingSection, children: null };
   const subscriptionPlansLoaded = useSubscriptionPlansLoaded.useSubscriptionPlansLoaded();
@@ -541,5 +541,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   items[1] = tmp5Result;
   obj2.children = items;
-  return closure_1_20(View, obj2);
+  return constants2(View, obj2);
 });

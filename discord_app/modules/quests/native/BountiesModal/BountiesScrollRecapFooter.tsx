@@ -1,22 +1,22 @@
-// === Module 14872: BountiesScrollRecapFooter ===
+// === Module 15134: BountiesScrollRecapFooter ===
 
-// Module 14872 (BountiesScrollRecapFooter)
+// Module 15134 (BountiesScrollRecapFooter)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import BountiesScrollGradientRive from "BountiesScrollGradientRive" /* 4668 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6476 */;
-import OrbsIcon from "OrbsIcon" /* 8524 */;
+import BountiesScrollGradientRive from "BountiesScrollGradientRive" /* 4860 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6654 */;
+import OrbsIcon from "OrbsIcon" /* 9009 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles(() => {
   const obj = { container: { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_4 }, headerLabel: { textTransform: "uppercase" }, orbRow: null, rive: null, orbAmount: null };
   const obj2 = { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_4 };
@@ -32,7 +32,7 @@ let closure_7 = createStyles.createStyles(() => {
 });
 fn(558);
 const ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((orbAmount) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function BountiesScrollRecapFooter(orbAmount) {
   const cResult = c.c(19);
   orbAmount = orbAmount.orbAmount;
   const tmp4 = closure_7();
@@ -121,7 +121,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((orbAmount) => {
   cResult[2] = tmp4.headerLabel;
   cResult[3] = items2;
   tmp9 = items2;
-}) : ((orbAmount) => {
+}) : (function BountiesScrollRecapFooter(orbAmount) {
   orbAmount = orbAmount.orbAmount;
   const tmp = closure_7();
   const typeConsolidationEyebrow = useTypeConsolidationTextTransform.useTypeConsolidationEyebrow("BountiesScrollRecapFooter", "text-xs/bold");
@@ -144,7 +144,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesScrollRecapFooter.tsx");
 
 export const BountiesScrollRecapFooter = tmp4;
-export const BountiesScrollRecapFooterGradient = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const BountiesScrollRecapFooterGradient = ReactCompilerGating.isReactCompilerEnabled() ? (function BountiesScrollRecapFooterGradient() {
   const cResult = c.c(7);
   const tmp4 = closure_7();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -185,7 +185,7 @@ export const BountiesScrollRecapFooterGradient = ReactCompilerGating.isReactComp
   tmp11 = tmp12;
   const obj3 = { style: tmp4.rive, children: tmp8 };
   tmpResult = initialize;
-}) : (() => {
+}) : (function BountiesScrollRecapFooterGradient() {
   const tmp = closure_7();
   const items = [AccessibilityStore];
   const obj2 = { style: tmp.rive, children: null };

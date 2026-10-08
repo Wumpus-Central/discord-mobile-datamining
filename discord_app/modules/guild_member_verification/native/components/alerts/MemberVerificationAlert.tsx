@@ -1,10 +1,10 @@
-// === Module 5934: MemberVerificationAlert ===
+// === Module 6117: MemberVerificationAlert ===
 
-// Module 5934 (MemberVerificationAlert)
+// Module 6117 (MemberVerificationAlert)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import common_AlertDefault from "common/Alert" /* 5790 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import common_AlertDefault from "common/Alert" /* 5394 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ let closure_3 = ["header", "icon", "subtitle", "buttons"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { headerImage: { marginLeft: "auto", marginRight: "auto", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.round, padding: 12, marginTop: 8, marginBottom: 8 }, header: { marginTop: 8, marginBottom: 8, textAlign: "center" }, subtitle: { lineHeight: 18, marginBottom: 8, textAlign: "center" }, buttons: { marginTop: 16, marginBottom: 8, gap: 12 } };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -21,7 +21,7 @@ let obj3 = { marginLeft: "auto", marginRight: "auto", backgroundColor: nativeDef
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/native/components/alerts/MemberVerificationAlert.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVerificationAlert(arg0) {
   const cResult = c.c(24);
   if (cResult[0] !== arg0) {
     ({ header, icon, subtitle, buttons } = arg0);
@@ -120,7 +120,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[7] = tmp12.headerImage;
   cResult[8] = tmp14;
   tmp13 = tmp14;
-}) : ((arg0) => {
+}) : (function MemberVerificationAlert(arg0) {
   ({ icon, subtitle } = arg0);
   ({ header, buttons } = arg0);
   const merged = Object.assign(arg0, Object.assign({ header: 0, icon: 0, subtitle: 0, buttons: 0 }));

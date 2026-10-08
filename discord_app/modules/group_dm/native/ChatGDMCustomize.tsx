@@ -1,11 +1,11 @@
-// === Module 10676: ChatGDMCustomize ===
+// === Module 9589: ChatGDMCustomize ===
 
-// Module 10676 (ChatGDMCustomize)
+// Module 9589 (ChatGDMCustomize)
 import nativeDefault from "native" /* 587 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
@@ -14,7 +14,7 @@ const MAX_CHANNEL_NAME_LENGTH = fn(1085).MAX_CHANNEL_NAME_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const CLEARED_ICON = "CLEARED_ICON";
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { container: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, iconUploader: null, iconClear: null, textInput: null, rateLimitedContainer: null, rateLimitedText: null };
 let obj3 = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj.iconUploader = { marginTop: nativeDefault.space.PX_24, alignSelf: "center" };
@@ -31,7 +31,7 @@ let obj8 = { fontSize: 12, color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/group_dm/native/ChatGDMCustomize.tsx");
 
-export default noop.memo(noop.forwardRef((channelId, arg1) => {
+export default noop.memo(function ChatGDMCustomize(channelId) {
   channelId = channelId.channelId;
   const onFinish = channelId.onFinish;
   let stateFromStores;
@@ -263,7 +263,7 @@ export default noop.memo(noop.forwardRef((channelId, arg1) => {
       const timerId = setTimeout(() => closure_1_9(null), 1000 * tmp);
     }
   }, items4);
-  const imperativeHandle = obj5.useImperativeHandle(arg1, () => ({ hasUnsavedChanges }));
+  const imperativeHandle = obj5.useImperativeHandle(channelId.ref, () => ({ hasUnsavedChanges }));
   if (null == stateFromStores) {
     let obj2 = { style: tmp.container };
     let tmp44Result2 = c10(closure_6, obj2);
@@ -331,4 +331,4 @@ export default noop.memo(noop.forwardRef((channelId, arg1) => {
     tmp34 = hasUnsavedChanges;
   }
   return tmp44Result2;
-}));
+});

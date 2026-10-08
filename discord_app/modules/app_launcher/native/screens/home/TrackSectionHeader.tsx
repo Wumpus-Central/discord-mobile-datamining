@@ -1,15 +1,15 @@
-// === Module 11734: TrackSectionHeader ===
+// === Module 11800: TrackSectionHeader ===
 
-// Module 11734 (TrackSectionHeader)
+// Module 11800 (TrackSectionHeader)
 import c from "c" /* 576 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 8455 */;
-import AppLauncherStore from "AppLauncherStore" /* 8960 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1272 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 8941 */;
+import AppLauncherStore from "AppLauncherStore" /* 11791 */;
 
 require = fn;
 fn(558);
 const ReactCompilerGating = fn(558);
-let closure_4 = ReactCompilerGating.isReactCompilerEnabled() ? ((section_name, num_items, num_visible_items, arg3) => {
+let closure_4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useTrackSectionHeader(section_name, num_items, num_visible_items, arg3) {
   const cResult = c.c(9);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const entrypointResult = AppLauncherStore.entrypoint();
@@ -48,7 +48,7 @@ let closure_4 = ReactCompilerGating.isReactCompilerEnabled() ? ((section_name, n
   cResult[3] = section_name;
   cResult[4] = obj3;
   tmp7 = obj3;
-}) : ((section_name, num_items, num_visible_items, disableTrack) => {
+}) : (function useTrackSectionHeader(section_name, num_items, num_visible_items, disableTrack) {
   const obj = { type: discord_common_AnalyticsUtils.ImpressionTypes.VIEW, name: discord_common_AnalyticsUtils.ImpressionNames.APP_LAUNCHER_SECTION, properties: null };
   const tmp = useTrackImpressionDefault;
   obj.properties = { section_name, num_items, num_visible_items, source: AppLauncherStore.entrypoint() };
@@ -58,10 +58,10 @@ let closure_4 = ReactCompilerGating.isReactCompilerEnabled() ? ((section_name, n
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/screens/home/TrackSectionHeader.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((sectionName) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function TrackSectionHeader(sectionName) {
   closure_4(sectionName.sectionName, sectionName.numItems, sectionName.numVisibleItems, sectionName.viewed);
   return sectionName.children;
-}) : ((sectionName) => {
+}) : (function TrackSectionHeader(sectionName) {
   closure_4(sectionName.sectionName, sectionName.numItems, sectionName.numVisibleItems, sectionName.viewed);
   return sectionName.children;
 });

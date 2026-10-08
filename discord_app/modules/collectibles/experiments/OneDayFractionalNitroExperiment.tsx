@@ -1,9 +1,9 @@
-// === Module 8565: OneDayFractionalNitroExperiment ===
+// === Module 9049: OneDayFractionalNitroExperiment ===
 
-// Module 8565 (OneDayFractionalNitroExperiment)
+// Module 9049 (OneDayFractionalNitroExperiment)
 import c from "c" /* 576 */;
-import PremiumGroupExperimentDefault from "PremiumGroupExperiment" /* 8566 */;
-import ApexExperiment from "ApexExperiment" /* 1440 */;
+import PremiumGroupExperimentDefault from "PremiumGroupExperiment" /* 9050 */;
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -11,7 +11,7 @@ const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-04-one-
 const result = size.fileFinishedImporting("modules/collectibles/experiments/OneDayFractionalNitroExperiment.tsx");
 
 export default apexExperiment;
-export const useOneDayFractionalNitroEnabled = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+export const useOneDayFractionalNitroEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useOneDayFractionalNitroEnabled(location) {
   const cResult = c.c(4);
   if (cResult[0] !== location) {
     const obj2 = { location };
@@ -31,7 +31,7 @@ export const useOneDayFractionalNitroEnabled = ReactCompilerGating.isReactCompil
   }
   const tmp4 = PremiumGroupExperimentDefault(tmp3);
   return apexExperiment.useConfig(tmp5) && !PremiumGroupExperimentDefault(tmp3);
-}) : ((location) => {
+}) : (function useOneDayFractionalNitroEnabled(location) {
   const obj = { location };
   const obj2 = { location };
   const tmp = PremiumGroupExperimentDefault({ location });

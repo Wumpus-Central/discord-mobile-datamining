@@ -1,7 +1,7 @@
-// === Module 6847: TimestampAutocompleteMobileExperiment ===
+// === Module 7034: TimestampAutocompleteMobileExperiment ===
 
-// Module 6847 (TimestampAutocompleteMobileExperiment)
-import ApexExperiment from "ApexExperiment" /* 1440 */;
+// Module 7034 (TimestampAutocompleteMobileExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-08-timestamp-autocomplete-mobile", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

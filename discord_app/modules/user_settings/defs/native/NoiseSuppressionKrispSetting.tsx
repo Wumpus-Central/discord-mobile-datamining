@@ -1,17 +1,17 @@
-// === Module 15088: NoiseSuppressionKrispSetting ===
+// === Module 15350: NoiseSuppressionKrispSetting ===
 
-// Module 15088 (NoiseSuppressionKrispSetting)
+// Module 15350 (NoiseSuppressionKrispSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import UserSettingsVoiceUtils from "UserSettingsVoiceUtils" /* 9686 */;
-import NoiseCancellationUtils from "NoiseCancellationUtils" /* 9687 */;
-import MediaEngineStore from "MediaEngineStore" /* 1999 */;
+import UserSettingsVoiceUtils from "UserSettingsVoiceUtils" /* 10875 */;
+import NoiseCancellationUtils from "NoiseCancellationUtils" /* 10876 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
 
 require = fn;
 fn(558);
 const ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useNoiseSuppressionKrispSettingOptions() {
   const cResult = c.c(13);
   const noiseCancellationDeferredToSystem = NoiseCancellationUtils.useNoiseCancellationDeferredToSystem();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -76,7 +76,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[11] = tmp13;
   cResult[12] = items;
   tmp14 = items;
-}) : (() => {
+}) : (function useNoiseSuppressionKrispSettingOptions() {
   const noiseCancellationDeferredToSystem = NoiseCancellationUtils.useNoiseCancellationDeferredToSystem();
   const obj2 = { value: UserSettingsVoiceUtils.NoiseSuppressionOpt.KRISP, label: null, disabled: null };
   const intl = util.intl;
@@ -93,8 +93,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   items[2] = obj4;
   return items;
 });
-const SettingBuilders = fn(11142);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const SettingBuilders = fn(11262);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasNoiseSuppressionKrispSetting() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [MediaEngineStore];
@@ -109,7 +109,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     [tmp4, tmp5] = cResult;
   }
   return initialize.useStateFromStores(tmp4, tmp5);
-}) : (() => {
+}) : (function useHasNoiseSuppressionKrispSetting() {
   const items = [MediaEngineStore];
   return initialize.useStateFromStores(items, () => noiseCancellationSupported.isNoiseCancellationSupported());
 });
@@ -118,7 +118,7 @@ const radio = SettingBuilders.createRadio({
     const intl = util.intl;
     return intl.string(util.t.t8Qhib);
   },
-  parent: fn(7645).MobileUserSettings.VOICE,
+  parent: fn(7966).MobileUserSettings.VOICE,
   useValue() {
     return UserSettingsVoiceUtils.useSelectedNoiseSuppressionOption();
   },
@@ -126,7 +126,7 @@ const radio = SettingBuilders.createRadio({
     const result = UserSettingsVoiceUtils.handleNoiseSuppressionChange(arg0);
   },
   useOptions: tmp2,
-  usePredicate: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  usePredicate: ReactCompilerGating.isReactCompilerEnabled() ? (function useHasNoiseSuppressionKrispSetting() {
     const cResult = c.c(2);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
       const items = [MediaEngineStore];
@@ -141,7 +141,7 @@ const radio = SettingBuilders.createRadio({
       [tmp4, tmp5] = cResult;
     }
     return initialize.useStateFromStores(tmp4, tmp5);
-  }) : (() => {
+  }) : (function useHasNoiseSuppressionKrispSetting() {
     const items = [MediaEngineStore];
     return initialize.useStateFromStores(items, () => noiseCancellationSupported.isNoiseCancellationSupported());
   }),

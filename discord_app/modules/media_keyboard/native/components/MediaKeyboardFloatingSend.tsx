@@ -1,17 +1,14 @@
-// === Module 16649: MediaKeyboardFloatingSend ===
+// === Module 16911: MediaKeyboardFloatingSend ===
 
-// Module 16649 (MediaKeyboardFloatingSend)
+// Module 16911 (MediaKeyboardFloatingSend)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
-import util from "util" /* 1126 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import SendMessageIcon from "SendMessageIcon" /* 4847 */;
-import spring from "spring" /* 5604 */;
-import FloatingActionButton from "FloatingActionButton" /* 8609 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import spring from "spring" /* 5374 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 7280 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 7880 */;
 
 const require = globalThis.__r;
 
@@ -20,7 +17,7 @@ const StyleSheet = fn(17).StyleSheet;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let c8 = 0.7;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { sendContainer: null, gradient: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -37,7 +34,7 @@ const __initData2 = { code: "function MediaKeyboardFloatingSendTsx2(visible){con
 const __initData3 = { code: "function MediaKeyboardFloatingSendTsx3(){const{animatedIndex,INDEX_HEADER_CHANGE_THRESHOLD,hasUploads}=this.__closure;const isSheetOpen=animatedIndex.get()>INDEX_HEADER_CHANGE_THRESHOLD;return isSheetOpen&&hasUploads;}" };
 const __initData4 = { code: "function MediaKeyboardFloatingSendTsx4(visible){const{isSendVisibleSharedValue}=this.__closure;isSendVisibleSharedValue.set(visible);}" };
 let ReactCompilerGating = fn(558);
-let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((animatedIndex) => {
+let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSendVisibleSharedValue(animatedIndex) {
   const cResult = animatedIndex(draftType[8]).c(5);
   animatedIndex = animatedIndex.animatedIndex;
   const channelId = animatedIndex.channelId;
@@ -58,38 +55,39 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((animatedIndex)
     const tmpResult = tmp(tmp2[9]);
     const sharedValue = tmp(tmp2[10]).useSharedValue(false);
     const tmpResult3 = tmp(tmp2[10]);
+    const fn2 = function x() {
+      return animatedIndex.get() > c8 && stateFromStores;
+    };
+    const obj2 = { animatedIndex, INDEX_HEADER_CHANGE_THRESHOLD, hasUploads: stateFromStores };
+    fn2.__closure = obj2;
+    fn2.__workletHash = 12206635621152;
+    fn2.__initData = __initData;
     class V {
-      constructor() {
-        tmp = animatedIndex.get() > c8 && closure_3;
-        return tmp;
+      constructor(arg0) {
+        result = closure_4.set(animatedIndex);
+        return;
       }
     }
-    const obj2 = { animatedIndex, INDEX_HEADER_CHANGE_THRESHOLD, hasUploads: stateFromStores };
-    V.__closure = obj2;
-    V.__workletHash = 12206635621152;
-    V.__initData = __initData;
-    const fn2 = function x(arg0) {
-      const result = sharedValue.set(arg0);
-    };
     const obj3 = { isSendVisibleSharedValue: sharedValue };
-    fn2.__closure = obj3;
-    fn2.__workletHash = 10753585819648;
-    fn2.__initData = __initData2;
-    const animatedReaction = tmp(tmp2[10]).useAnimatedReaction(V, fn2);
+    V.__closure = obj3;
+    V.__workletHash = 10753585819648;
+    V.__initData = __initData2;
+    const animatedReaction = tmp(tmp2[10]).useAnimatedReaction(fn2, V);
     return sharedValue;
   }
   const fn = function o() {
     return UploadAttachmentStore.getUploadCount(channelId, draftType) > 0;
   };
-  const items1 = [channelId, draftType];
+  tmp8[0] = channelId;
+  tmp8[1] = draftType;
   cResult[1] = channelId;
   cResult[2] = draftType;
   cResult[3] = fn;
-  cResult[4] = items1;
-  tmp7 = items1;
+  cResult[4] = tmp8;
+  tmp7 = tmp8;
   tmp6 = fn;
   const obj = animatedIndex(draftType[8]);
-}) : ((animatedIndex) => {
+}) : (function useSendVisibleSharedValue(animatedIndex) {
   animatedIndex = animatedIndex.animatedIndex;
   const channelId = animatedIndex.channelId;
   const draftType = animatedIndex.draftType;
@@ -122,11 +120,11 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardFloatingSend.tsx");
 
-export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function MediaKeyboardFloatingSendInner(ref) {
   const cResult = c.c(30);
-  ({ animatedIndex, channelId, draftType, onSend } = arg0);
+  ({ animatedIndex, channelId, draftType, onSend } = ref);
   const tmp4 = closure_9();
-  const tmp6 = bottom(1618)();
+  const tmp6 = bottom(1630)();
   [bottom, require] = noop.useState(null);
   if (bottom == null) {
     bottom = tmp6.bottom;
@@ -138,43 +136,57 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
       }
       const tmp10 = closure_14(tmp8);
       dependencyMap = tmp10;
-      const fn = function w() {
-        const obj = { height: null, opacity: null };
-        const sum = bottom + nativeDefault.space.PX_64;
-        obj.height = sum + nativeDefault.space.PX_32;
-        let num = 0;
-        if (closure_2.get()) {
-          num = 1;
-        }
-        obj.opacity = spring.withSpring(num);
-        return obj;
-      };
-      const obj3 = { insetFab: bottom, tokens: tmp5(587), withSpring: spring.withSpring, sendVisibleSharedValue: tmp10 };
-      fn.__closure = obj3;
-      fn.__workletHash = 16399716270519;
-      fn.__initData = __initData5;
-      const animatedStyle = ReanimatedRexport.useAnimatedStyle(fn);
-      const tmpResult = ReanimatedRexport;
       class T {
         constructor() {
-          pointerEvents = "none";
+          obj = { height: null, opacity: null };
+          sum = bottom + closure_1(closure_2[6]).space.PX_64;
+          obj.height = sum + closure_1(closure_2[6]).space.PX_32;
+          obj2 = closure_0(closure_2[12]);
+          num = 0;
           if (closure_2.get()) {
-            pointerEvents = "box-none";
+            num = 1;
           }
-          return { pointerEvents };
+          obj.opacity = obj2.withSpring(num);
+          return obj;
         }
       }
+      const obj3 = { insetFab: bottom, tokens: tmp5(587), withSpring: spring.withSpring, sendVisibleSharedValue: tmp10 };
+      T.__closure = obj3;
+      T.__workletHash = 16399716270519;
+      T.__initData = __initData5;
+      const animatedStyle = ReanimatedRexport.useAnimatedStyle(T);
+      const tmpResult = ReanimatedRexport;
+      const fn = function w() {
+        let pointerEvents = "none";
+        if (closure_2.get()) {
+          pointerEvents = "box-none";
+        }
+        return { pointerEvents };
+      };
       const obj4 = { sendVisibleSharedValue: tmp10 };
-      T.__closure = obj4;
-      T.__workletHash = 17338809179807;
-      T.__initData = __initData6;
-      const animatedProps = ReanimatedRexport.useAnimatedProps(T);
+      fn.__closure = obj4;
+      fn.__workletHash = 17338809179807;
+      fn.__initData = __initData6;
+      const animatedProps = ReanimatedRexport.useAnimatedProps(fn);
       const _Symbol = Symbol;
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const point = { x: 0, y: 0 };
         const point1 = { x: 0, y: 1 };
         cResult[4] = point;
-        cResult[5] = point1;
+        class T {
+          constructor() {
+            obj = { height: null, opacity: null };
+            sum = bottom + closure_1(closure_2[6]).space.PX_64;
+            obj.height = sum + closure_1(closure_2[6]).space.PX_32;
+            obj2 = closure_0(closure_2[12]);
+            num = 0;
+            if (closure_2.get()) {
+              num = 1;
+            }
+            obj.opacity = obj2.withSpring(num);
+            return obj;
+          }
+        }
         let tmp17 = point1;
         let tmp16 = point;
       } else {
@@ -184,7 +196,20 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
       if (cResult[6] !== tmp4.gradient.color) {
         const obj10 = tmp5(683)(tmp4.gradient.color);
         const hexResult = tmp5(683)(tmp4.gradient.color).alpha(0).hex();
-        cResult[6] = tmp4.gradient.color;
+        class T {
+          constructor() {
+            obj = { height: null, opacity: null };
+            sum = bottom + closure_1(closure_2[6]).space.PX_64;
+            obj.height = sum + closure_1(closure_2[6]).space.PX_32;
+            obj2 = closure_0(closure_2[12]);
+            num = 0;
+            if (closure_2.get()) {
+              num = 1;
+            }
+            obj.opacity = obj2.withSpring(num);
+            return obj;
+          }
+        }
         cResult[7] = hexResult;
         let tmp18 = hexResult;
         const alphaResult = tmp5(683)(tmp4.gradient.color).alpha(0);
@@ -192,18 +217,28 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
         tmp18 = cResult[7];
       }
       if (cResult[8] !== tmp4.gradient.color) {
-        const hexResult1 = tmp5(683)(tmp4.gradient.color).hex();
-        cResult[8] = tmp4.gradient.color;
-        cResult[9] = hexResult1;
-        let tmp20 = hexResult1;
         const obj12 = tmp5(683)(tmp4.gradient.color);
+        cResult[8] = tmp4.gradient.color;
+        class T {
+          constructor() {
+            obj = { height: null, opacity: null };
+            sum = bottom + closure_1(closure_2[6]).space.PX_64;
+            obj.height = sum + closure_1(closure_2[6]).space.PX_32;
+            obj2 = closure_0(closure_2[12]);
+            num = 0;
+            if (closure_2.get()) {
+              num = 1;
+            }
+            obj.opacity = obj2.withSpring(num);
+            return obj;
+          }
+        }
+        let tmp20 = tmp5(683)(tmp4.gradient.color).hex();
+        const hexResult1 = tmp5(683)(tmp4.gradient.color).hex();
       } else {
         tmp20 = cResult[9];
       }
       if (cResult[10] === tmp18) {
-        if (cResult[11] === tmp20) {
-          let tmp22 = cResult[12];
-        }
         const _Symbol2 = Symbol;
         if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
           class K {
@@ -221,120 +256,47 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
             }
           }
         }
-        const imperativeHandle = noop.useImperativeHandle(arg1, K);
-        if (cResult[14] === animatedStyle) {
-          class K {
-            constructor() {
-              obj = { setInsetFab: closure_0 };
-              return obj;
+        const imperativeHandle = noop.useImperativeHandle(ref.ref, K);
+        class T {
+          constructor() {
+            obj = { height: null, opacity: null };
+            sum = bottom + closure_1(closure_2[6]).space.PX_64;
+            obj.height = sum + closure_1(closure_2[6]).space.PX_32;
+            obj2 = closure_0(closure_2[12]);
+            num = 0;
+            if (closure_2.get()) {
+              num = 1;
             }
+            obj.opacity = obj2.withSpring(num);
+            return obj;
           }
-          if (cResult[17] === tmp22) {
-            class K {
-              constructor() {
-                obj = { setInsetFab: closure_0 };
-                return obj;
-              }
-            }
-            const _Symbol3 = Symbol;
-            if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
-              class K {
-                constructor() {
-                  obj = { setInsetFab: closure_0 };
-                  return obj;
-                }
-              }
-              const stringResult = obj15.string(util.t.TXNS7S);
-              const tmp38 = closure_6(SendMessageIcon.SendMessageIcon, {});
-              cResult[20] = stringResult;
-              cResult[21] = tmp38;
-              let tmp35 = tmp38;
-              const tmp34 = stringResult;
-            } else {
-              class K {
-                constructor() {
-                  obj = { setInsetFab: closure_0 };
-                  return obj;
-                }
-              }
-              tmp35 = cResult[21];
-            }
-            if (cResult[22] === bottom) {
-              class K {
-                constructor() {
-                  obj = { setInsetFab: closure_0 };
-                  return obj;
-                }
-              }
-              if (cResult[25] === animatedProps) {
-                class K {
-                  constructor() {
-                    obj = { setInsetFab: closure_0 };
-                    return obj;
-                  }
-                }
-              }
-              const obj5 = { style: tmp26, animatedProps, children: null };
-              const items = [tmp27, tmp39];
-              obj5.children = items;
-              const tmp44 = closure_7(tmp5(4618).View, obj5);
-              cResult[25] = animatedProps;
-              cResult[26] = tmp39;
-              cResult[27] = tmp26;
-              cResult[28] = tmp27;
-              class T {
-                constructor() {
-                  pointerEvents = "none";
-                  if (closure_2.get()) {
-                    pointerEvents = "box-none";
-                  }
-                  return { pointerEvents };
-                }
-              }
-              cResult[29] = tmp44;
-            }
-            const obj6 = { accessibilityLabel: tmp34, icon: tmp35, onPress: onSend, positionBottom: bottom };
-            const tmp41 = closure_6(FloatingActionButton.FloatingActionButton, obj6);
-            cResult[22] = bottom;
-            cResult[23] = onSend;
-            cResult[24] = tmp41;
-          }
-          const obj7 = { style: tmp4.gradient };
-          const merged = Object.assign(tmp22);
-          obj7.pointerEvents = "none";
-          const tmp33 = closure_6(tmp5(5612), obj7);
-          cResult[17] = tmp22;
-          cResult[18] = tmp4.gradient;
-          cResult[19] = tmp33;
-          const tmp5Result = tmp5(5612);
         }
-        const items1 = [animatedStyle, tmp4.sendContainer];
+        const items = [animatedStyle, tmp4.sendContainer];
         cResult[14] = animatedStyle;
         cResult[15] = tmp4.sendContainer;
-        cResult[16] = items1;
+        cResult[16] = items;
       }
-      const obj8 = { start: tmp16, end: tmp17, colors: null };
-      const items2 = [tmp18, tmp20];
-      obj8.colors = items2;
+      const obj5 = { start: tmp16, end: tmp17, colors: null };
+      const items1 = [tmp18, tmp20];
+      obj5.colors = items1;
       cResult[10] = tmp18;
       cResult[11] = tmp20;
-      cResult[12] = obj8;
-      tmp22 = obj8;
+      cResult[12] = obj5;
       const tmpResult2 = ReanimatedRexport;
     }
   }
-  const obj9 = { animatedIndex, channelId, draftType };
+  const obj6 = { animatedIndex, channelId, draftType };
   cResult[0] = animatedIndex;
   cResult[1] = channelId;
   cResult[2] = draftType;
-  cResult[3] = obj9;
-  tmp8 = obj9;
+  cResult[3] = obj6;
+  tmp8 = obj6;
   const tmp7 = _slicedToArray(noop.useState(null), 2);
-}) : ((arg0, arg1) => {
+}) : (function MediaKeyboardFloatingSendInner(arg0) {
   importDefault = undefined;
   bottom = undefined;
   _slicedToArray = undefined;
-  ({ animatedIndex, channelId, draftType, onSend } = arg0);
+  ({ animatedIndex, channelId, draftType, onSend, ref } = arg0);
   const tmp = closure_9();
   const _require = tmp;
   const tmp4 = require("useSafeAreaInsets")();
@@ -383,7 +345,7 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
     obj.colors = items;
     return obj;
   }, items);
-  const imperativeHandle = noop.useImperativeHandle(arg1, () => ({ setInsetFab }));
+  const imperativeHandle = noop.useImperativeHandle(ref, () => ({ setInsetFab }));
   const obj5 = { style: null, animatedProps, children: null };
   const items1 = [animatedStyle, tmp.sendContainer];
   obj5.style = items1;
@@ -401,4 +363,4 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
   items2[1] = closure_6(require("FloatingActionButton").FloatingActionButton, obj7);
   obj5.children = items2;
   return closure_7(require("ReanimatedRexport").View, obj5);
-})));
+}));

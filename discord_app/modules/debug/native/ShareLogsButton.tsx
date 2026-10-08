@@ -1,12 +1,12 @@
-// === Module 15408: ShareLogsButton ===
+// === Module 15670: ShareLogsButton ===
 
-// Module 15408 (ShareLogsButton)
+// Module 15670 (ShareLogsButton)
 import LogAggregator from "LogAggregator" /* 7 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import Pressables from "Pressables" /* 5916 */;
-import showShareActionSheet from "showShareActionSheet" /* 8048 */;
-import ShareIcon from "ShareIcon" /* 12730 */;
+import Pressables from "Pressables" /* 6189 */;
+import showShareActionSheet from "showShareActionSheet" /* 8457 */;
+import ShareIcon from "ShareIcon" /* 12920 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/debug/native/ShareLogsButton.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ShareLogsButton() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let obj2 = { accessibilityLabel: null, onPress: null, children: null };
@@ -35,7 +35,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     first = cResult[0];
   }
   return first;
-}) : (() => {
+}) : (function ShareLogsButton() {
   let obj = { accessibilityLabel: null, onPress: null, children: null };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t["Aw+09z"]);

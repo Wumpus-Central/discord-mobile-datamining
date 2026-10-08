@@ -1,6 +1,6 @@
-// === Module 16003: usePrivateChannelWave ===
+// === Module 16263: usePrivateChannelWave ===
 
-// Module 16003 (usePrivateChannelWave)
+// Module 16263 (usePrivateChannelWave)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -10,13 +10,13 @@ const require = globalThis.__r;
 const require = fn;
 const Constants = fn(1085);
 ({ ME: metroRequire, Routes: closure_7 } = Constants);
-const MessageSendLocation = fn(4889).MessageSendLocation;
+const MessageSendLocation = fn(5083).MessageSendLocation;
 let c9 = "749054660769218631";
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/usePrivateChannelWave.native.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePrivateChannelWave(id, arg1) {
   _require = id;
   const cResult = require("c").c(6);
   [first, dependencyMap] = noop.useState(false);
@@ -124,7 +124,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1) => {
       }
     }
   });
-  const fn = function() {
+  function t0() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -133,12 +133,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1) => {
       applyArgumentsResult = apply(self, arguments);
     }
     return applyArgumentsResult;
-  };
+  }
   cResult[0] = id.id;
   cResult[1] = first;
-  cResult[2] = fn;
-  tmp6 = fn;
-}) : ((id, arg1) => {
+  cResult[2] = t0;
+  tmp6 = t0;
+}) : (function usePrivateChannelWave(id, arg1) {
   _require = id;
   [first, dependencyMap] = noop.useState(false);
   let items = [id.id, first];

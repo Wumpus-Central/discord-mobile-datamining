@@ -1,8 +1,8 @@
-// === Module 9805: SelfModInappropriateConversationExperiment ===
+// === Module 10368: SelfModInappropriateConversationExperiment ===
 
-// Module 9805 (SelfModInappropriateConversationExperiment)
+// Module 10368 (SelfModInappropriateConversationExperiment)
 import c from "c" /* 576 */;
-import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1441 */;
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1453 */;
 
 require = fn;
 let tmp2 = apex_ApexExperimentDefault({ name: "2026-04-inappropriate-conversations-prescan", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
@@ -15,7 +15,7 @@ export const InappropriateConversationExperiment = tmp2;
 export const isEligibleForInappropriateConversationWarning = function isEligibleForInappropriateConversationWarning(location) {
   return closure_2.getConfig({ location: location.location }).enabled;
 };
-export const useIsEligibleForInappropriateConversationWarning = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+export const useIsEligibleForInappropriateConversationWarning = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsEligibleForInappropriateConversationWarning(location) {
   const cResult = c.c(2);
   const _location = location.location;
   if (cResult[0] !== _location) {
@@ -27,4 +27,6 @@ export const useIsEligibleForInappropriateConversationWarning = ReactCompilerGat
     tmp2 = cResult[1];
   }
   return closure_2.useConfig(tmp2).enabled;
-}) : ((location) => closure_2.useConfig({ location: location.location }).enabled);
+}) : (function useIsEligibleForInappropriateConversationWarning(location) {
+  return closure_2.useConfig({ location: location.location }).enabled;
+});

@@ -1,14 +1,13 @@
-// === Module 8598: useGameAutocomplete ===
+// === Module 8682: useGameAutocomplete ===
 
-// Module 8598 (useGameAutocomplete)
+// Module 8682 (useGameAutocomplete)
 import c from "c" /* 576 */;
-import GameAutocompleteTypes from "GameAutocompleteTypes" /* 5900 */;
-import GameAutocompleteUtils from "GameAutocompleteUtils" /* 5901 */;
-import GameAutocompleteActionCreators from "GameAutocompleteActionCreators" /* 8599 */;
-import GameSearchSession from "GameSearchSession" /* 8600 */;
+import GameAutocompleteUtils from "GameAutocompleteUtils" /* 8212 */;
+import GameAutocompleteActionCreators from "GameAutocompleteActionCreators" /* 8683 */;
+import GameSearchSession from "GameSearchSession" /* 8684 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GameAutocompleteStore from "GameAutocompleteStore" /* 5899 */;
+import GameAutocompleteStore from "GameAutocompleteStore" /* 8211 */;
 
 const require = globalThis.__r;
 
@@ -16,11 +15,8 @@ require = fn;
 const QueryIds = fn(1085).QueryIds;
 const initialize = fn(504);
 const fetchStore = initialize.createFetchStore(GameAutocompleteStore, {
-  getQueryId(name) {
-    if (DEFAULT === undefined) {
-      DEFAULT = GameAutocompleteTypes.GameAutocompleteProfile.DEFAULT;
-    }
-    return QueryIds.GAME_AUTOCOMPLETE(GameAutocompleteUtils.normalizeGameAutocompleteQuery(name), DEFAULT);
+  getQueryId(name, arg1) {
+    return QueryIds.GAME_AUTOCOMPLETE(GameAutocompleteUtils.normalizeGameAutocompleteQuery(name), arg1);
   },
   get(arg0, arg1) {
     let results = GameAutocompleteStore.getResults(arg0, arg1);
@@ -57,7 +53,7 @@ const fetchStore = initialize.createFetchStore(GameAutocompleteStore, {
   failureStaleAfter: 60
 });
 let ReactCompilerGating = fn(558);
-let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDebouncedQueryValue(arg0) {
   closure_0 = arg0;
   const cResult = c.c(3);
   [tmp3, dependencyMap] = noop.useState(arg0);
@@ -101,7 +97,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const effect = noop.useEffect(tmp4, tmp5);
   return tmp3;
-}) : ((arg0) => {
+}) : (function useDebouncedQueryValue(arg0) {
   closure_0 = arg0;
   [tmp2, dependencyMap] = noop.useState(arg0);
   noop.useRef(tmp2);
@@ -141,27 +137,26 @@ let result = size.fileFinishedImporting("modules/games/autocomplete/useGameAutoc
 export const GAME_AUTOCOMPLETE_DEBOUNCE_MS = 200;
 export const GAME_AUTOCOMPLETE_DEBOUNCE_MAX_WAIT_MS = 500;
 export const useGameAutocomplete = fetchStore;
-export const useDebouncedGameAutocomplete = ReactCompilerGating.isReactCompilerEnabled() ? ((name, surface) => {
-  const cResult = surface(DEFAULT[9]).c(27);
+export const useDebouncedGameAutocomplete = ReactCompilerGating.isReactCompilerEnabled() ? (function useDebouncedGameAutocomplete(name, surface) {
+  const cResult = surface(filterGroup[8]).c(27);
   surface = surface.surface;
-  DEFAULT = surface.profile;
-  if (undefined === DEFAULT) {
-    DEFAULT = tmp(tmp2[5]).GameAutocompleteProfile.DEFAULT;
-  }
+  filterGroup = surface.filterGroup;
   if (cResult[0] !== name) {
-    const result = tmp(tmp2[6]).normalizeGameAutocompleteQuery(name);
+    const result = tmp(tmp2[5]).normalizeGameAutocompleteQuery(name);
     cResult[0] = name;
     cResult[1] = result;
     let tmp4 = result;
-    const tmpResult = tmp(tmp2[6]);
+    const tmpResult = tmp(tmp2[5]);
   } else {
     tmp4 = cResult[1];
   }
   _slicedToArray = tmp4;
   const tmp6 = closure_7(tmp4);
-  const tmp7 = fetchStore(tmp6, DEFAULT);
-  ({ data, isLoading } = tmp7);
-  const obj = surface(DEFAULT[9]);
+  const obj = surface(filterGroup[8]);
+  tmp = surface;
+  tmp2 = filterGroup;
+  ({ data, isLoading } = fetchStore(tmp6, filterGroup));
+  const tmp7 = fetchStore(tmp6, filterGroup);
   const tmp8 = _slicedToArray;
   [tmp10, tmp11] = query.useState(null);
   if (cResult[2] === data) {
@@ -173,63 +168,65 @@ export const useDebouncedGameAutocomplete = ReactCompilerGating.isReactCompilerE
         tmp11(null);
       }
     } else {
-      let tmp14 = null != tmp12;
-      if (tmp14) {
+      let tmp15 = null != tmp12;
+      if (tmp15) {
         let results;
         if (tmp10 != null) {
           results = tmp10.results;
         }
-        tmp14 = tmp12.results !== results;
+        tmp15 = tmp12.results !== results;
       }
-      if (tmp14) {
+      if (tmp15) {
         tmp11(tmp12);
       }
     }
-    let tmp18 = null;
+    let tmp19 = null;
     if (null != tmp4) {
       if (tmp12 == null) {
         tmp12 = tmp10;
       }
-      tmp18 = tmp12;
+      tmp19 = tmp12;
     }
     query = undefined;
-    if (tmp18 != null) {
-      query = tmp18.query;
+    if (tmp19 != null) {
+      query = tmp19.query;
     }
     if (query == null) {
       query = null;
     }
     let results1;
-    if (tmp18 != null) {
-      results1 = tmp18.results;
+    if (tmp19 != null) {
+      results1 = tmp19.results;
     }
     if (results1 == null) {
       results1 = null;
     }
-    if (cResult[5] === DEFAULT) {
+    if (cResult[5] === filterGroup) {
       if (cResult[6] === surface) {
-        let tmp21 = cResult[7];
+        let tmp22 = cResult[7];
       }
-      const first = tmp8(obj3.useState(tmp21), 1)[0];
+      const first = tmp8(obj3.useState(tmp22), 1)[0];
       if (cResult[8] === tmp4) {
         if (cResult[9] === first) {
-          let tmp23 = cResult[10];
-          let tmp24 = cResult[11];
+          let tmp24 = cResult[10];
+          let tmp25 = cResult[11];
         }
-        const effect = obj3.useEffect(tmp23, tmp24);
+        const effect = obj3.useEffect(tmp24, tmp25);
         if (cResult[12] === query) {
           if (cResult[13] === results1) {
             if (cResult[14] === first) {
-              let tmp26 = cResult[15];
-              let tmp27 = cResult[16];
+              let tmp27 = cResult[15];
+              let tmp28 = cResult[16];
             }
-            const effect1 = obj3.useEffect(tmp26, tmp27);
+            const effect1 = obj3.useEffect(tmp27, tmp28);
             if (cResult[17] !== first.end) {
-              const fn2 = function q() {
-                return first.end;
-              };
+              class P {
+                constructor() {
+                  return closure_5.end;
+                }
+              }
               cResult[17] = first.end;
-              class F {
+              class U {
                 constructor() {
                   tmp2 = null != c3;
                   tmp = c3;
@@ -245,12 +242,15 @@ export const useDebouncedGameAutocomplete = ReactCompilerGating.isReactCompilerE
                   return;
                 }
               }
-              cResult[18] = fn2;
-              let tmp29 = fn2;
+              cResult[18] = P;
             } else {
-              tmp29 = cResult[18];
+              class P {
+                constructor() {
+                  return closure_5.end;
+                }
+              }
             }
-            class F {
+            class U {
               constructor() {
                 tmp2 = null != c3;
                 tmp = c3;
@@ -266,30 +266,32 @@ export const useDebouncedGameAutocomplete = ReactCompilerGating.isReactCompilerE
                 return;
               }
             }
-            const effect2 = obj3.useEffect(tmp29, tmp30);
+            const effect2 = obj3.useEffect(P, tmp31);
             if (!isLoading) {
-              isLoading = tmp6 !== tmp4;
-            }
-            let error = null;
-            if (tmp6 === tmp4) {
-              error = tmp7.error;
-            }
-            if (cResult[21] === results1) {
-              if (cResult[22] === first.end) {
-                if (cResult[23] === first.select) {
-                  if (cResult[24] === isLoading) {
-                    if (cResult[25] === error) {
-                      let tmp33 = cResult[26];
-                    }
-                    return tmp33;
-                  }
+              class P {
+                constructor() {
+                  return closure_5.end;
                 }
               }
             }
-            const obj2 = { results: results1, isLoading, error, onSelect: null, endSession: null };
-            class C {
+            if (tmp6 === tmp4) {
+              class P {
+                constructor() {
+                  return closure_5.end;
+                }
+              }
+            }
+            if (cResult[21] === results1) {
+              class P {
+                constructor() {
+                  return closure_5.end;
+                }
+              }
+            }
+            const obj2 = { results: results1, isLoading, error: null, onSelect: null, endSession: null };
+            class O {
               constructor() {
-                gameSearchSession = new closure_0(closure_1[10]).GameSearchSession(surface, DEFAULT);
+                gameSearchSession = new closure_0(closure_1[9]).GameSearchSession(surface, filterGroup);
                 return gameSearchSession;
               }
             }
@@ -298,12 +300,11 @@ export const useDebouncedGameAutocomplete = ReactCompilerGating.isReactCompilerE
             cResult[22] = first.end;
             cResult[23] = first.select;
             cResult[24] = isLoading;
-            cResult[25] = error;
+            cResult[25] = null;
             cResult[26] = obj2;
-            tmp33 = obj2;
           }
         }
-        class F {
+        class U {
           constructor() {
             tmp2 = null != c3;
             tmp = c3;
@@ -322,51 +323,60 @@ export const useDebouncedGameAutocomplete = ReactCompilerGating.isReactCompilerE
         const items = [first, query, results1];
         cResult[12] = query;
         cResult[13] = results1;
-        class C {
+        class O {
           constructor() {
-            gameSearchSession = new closure_0(closure_1[10]).GameSearchSession(surface, DEFAULT);
+            gameSearchSession = new closure_0(closure_1[9]).GameSearchSession(surface, filterGroup);
             return gameSearchSession;
           }
         }
-        cResult[15] = F;
+        cResult[15] = U;
         cResult[16] = items;
-        tmp27 = items;
-        tmp26 = F;
+        tmp28 = items;
+        tmp27 = U;
       }
-      const fn = function b() {
+      const fn = function w() {
         first.onQuery(closure_2);
       };
       const items1 = [first, tmp4];
       cResult[8] = tmp4;
       cResult[9] = first;
-      class C {
+      class O {
         constructor() {
-          gameSearchSession = new closure_0(closure_1[10]).GameSearchSession(surface, DEFAULT);
+          gameSearchSession = new closure_0(closure_1[9]).GameSearchSession(surface, filterGroup);
           return gameSearchSession;
         }
       }
       cResult[10] = fn;
       cResult[11] = items1;
-      tmp24 = items1;
-      tmp23 = fn;
+      tmp25 = items1;
+      tmp24 = fn;
     }
-    class C {
+    class O {
       constructor() {
-        gameSearchSession = new closure_0(closure_1[10]).GameSearchSession(surface, DEFAULT);
+        gameSearchSession = new closure_0(closure_1[9]).GameSearchSession(surface, filterGroup);
         return gameSearchSession;
       }
     }
-    cResult[5] = DEFAULT;
+    cResult[5] = filterGroup;
     cResult[6] = surface;
-    cResult[7] = C;
-    tmp21 = C;
+    cResult[7] = O;
+    tmp22 = O;
   }
-  let tmp13 = null;
   if (null != data) {
-    tmp13 = null;
+    class P {
+      constructor() {
+        return closure_5.end;
+      }
+    }
     if (null != tmp6) {
-      const obj4 = { query: tmp6, results: data };
-      class F {
+      class P {
+        constructor() {
+          return closure_5.end;
+        }
+      }
+      tmp14[0] = tmp6;
+      tmp14[1] = data;
+      class U {
         constructor() {
           tmp2 = null != c3;
           tmp = c3;
@@ -386,72 +396,70 @@ export const useDebouncedGameAutocomplete = ReactCompilerGating.isReactCompilerE
   }
   cResult[2] = data;
   cResult[3] = tmp6;
-  cResult[4] = tmp13;
+  cResult[4] = null;
   tmp12 = tmp13;
-}) : ((name, arg1) => {
-  ({ surface: require, profile } = arg1);
-  if (profile === undefined) {
-    profile = require("GameAutocompleteTypes").GameAutocompleteProfile.DEFAULT;
-  }
+  const tmp9 = _slicedToArray(query.useState(null), 2);
+}) : (function useDebouncedGameAutocomplete(name, arg1) {
+  ({ surface: require, filterGroup } = arg1);
   let query;
   let results1;
   let first;
   const result = require("GameAutocompleteUtils").normalizeGameAutocompleteQuery(name);
   _slicedToArray = result;
-  const tmp4 = closure_7(result);
-  const tmp5 = fetchStore(tmp4, profile);
-  ({ data, isLoading } = tmp5);
+  let tmp2 = closure_7(result);
+  const tmp3 = fetchStore(tmp2, filterGroup);
+  ({ data, isLoading } = tmp3);
   const obj = require("GameAutocompleteUtils");
-  const tmp6 = _slicedToArray;
-  [tmp8, tmp9] = query.useState(null);
-  let tmp10 = null;
+  const tmp4 = _slicedToArray;
+  [tmp6, tmp7] = query.useState(null);
+  let tmp8 = null;
   if (null != data) {
-    tmp10 = null;
-    if (null != tmp4) {
-      const obj3 = { query: tmp4, results: data };
-      tmp10 = obj3;
+    tmp8 = null;
+    if (null != tmp2) {
+      const obj3 = { query: tmp2, results: data };
+      tmp8 = obj3;
     }
   }
   if (null == result) {
-    if (null != tmp8) {
-      tmp9(null);
+    if (null != tmp6) {
+      tmp7(null);
     }
   } else {
-    let tmp11 = null != tmp10;
-    if (tmp11) {
+    let tmp9 = null != tmp8;
+    if (tmp9) {
       let results;
-      if (tmp8 != null) {
-        results = tmp8.results;
+      if (tmp6 != null) {
+        results = tmp6.results;
       }
-      tmp11 = tmp10.results !== results;
+      tmp9 = tmp8.results !== results;
     }
-    if (tmp11) {
-      tmp9(tmp10);
+    if (tmp9) {
+      tmp7(tmp8);
     }
   }
-  let tmp15 = null;
+  let tmp13 = null;
   if (null != result) {
-    if (tmp10 == null) {
-      tmp10 = tmp8;
+    if (tmp8 == null) {
+      tmp8 = tmp6;
     }
-    tmp15 = tmp10;
+    tmp13 = tmp8;
   }
   query = undefined;
-  if (tmp15 != null) {
-    query = tmp15.query;
+  if (tmp13 != null) {
+    query = tmp13.query;
   }
   if (query == null) {
     query = null;
   }
   results1 = undefined;
-  if (tmp15 != null) {
-    results1 = tmp15.results;
+  if (tmp13 != null) {
+    results1 = tmp13.results;
   }
   if (results1 == null) {
     results1 = null;
   }
-  first = tmp6(obj2.useState(() => {
-    const gameSearchSession = new GameSearchSession.GameSearchSession(_require, profile);
+  first = tmp4(obj2.useState(() => {
+    const gameSearchSession = new GameSearchSession.GameSearchSession(_require, filterGroup);
     return gameSearchSession;
   }), 1)[0];
   const items = [first, result];
@@ -472,12 +480,12 @@ export const useDebouncedGameAutocomplete = ReactCompilerGating.isReactCompilerE
   const effect2 = obj2.useEffect(() => first.end, items2);
   const obj6 = { results: results1, isLoading: null, error: null, onSelect: null, endSession: null };
   if (!isLoading) {
-    isLoading = tmp4 !== result;
+    isLoading = tmp2 !== result;
   }
   obj6.isLoading = isLoading;
   let error = null;
-  if (tmp4 === result) {
-    error = tmp5.error;
+  if (tmp2 === result) {
+    error = tmp3.error;
   }
   obj6.error = error;
   ({ select: obj4.onSelect, end: obj4.endSession } = first);

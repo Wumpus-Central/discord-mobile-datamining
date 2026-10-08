@@ -1,7 +1,7 @@
-// === Module 12101: useRequireConfirmationOnAccept ===
+// === Module 12179: useRequireConfirmationOnAccept ===
 
-// Module 12101 (useRequireConfirmationOnAccept)
-import useIsStricterMessageRequestsDefault from "useIsStricterMessageRequests" /* 12102 */;
+// Module 12179 (useRequireConfirmationOnAccept)
+import useIsStricterMessageRequestsDefault from "useIsStricterMessageRequests" /* 12180 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -9,4 +9,6 @@ let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const result1 = size.fileFinishedImporting("modules/message_request/hooks/useRequireConfirmationOnAccept.tsx");
 
-export default () => useIsStricterMessageRequestsDefault();
+export default function useRequireConfirmationOnAccept() {
+  return useIsStricterMessageRequestsDefault();
+};

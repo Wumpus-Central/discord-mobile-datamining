@@ -1,10 +1,10 @@
-// === Module 10741: ModalFloatingAction ===
+// === Module 11612: ModalFloatingAction ===
 
-// Module 10741 (ModalFloatingAction)
+// Module 11612 (ModalFloatingAction)
 import c from "c" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import spring from "spring" /* 5604 */;
-import springPresets from "springPresets" /* 5605 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import spring from "spring" /* 5374 */;
+import springPresets from "springPresets" /* 5378 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,13 +14,13 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_10 = createStyles.createStyles({ floating: { position: "absolute", bottom: 0, width: "100%", paddingHorizontal: 16 }, spacer: { height: 96 } });
 const __initData = { code: "function ModalFloatingActionNativeTsx1(){const{interpolate,sharedValue,floatingBackgroundColor,useReducedMotion}=this.__closure;return{opacity:interpolate(sharedValue.get(),[0,1],[0,1]),borderBottomColor:floatingBackgroundColor,borderBottomWidth:16,transform:[{translateY:interpolate(sharedValue.get(),[useReducedMotion?0.999999:0,1],[32,0])}]};}" };
 const __initData2 = { code: "function ModalFloatingActionNativeTsx2(){const{interpolate,sharedValue,floatingBackgroundColor,useReducedMotion}=this.__closure;return{opacity:interpolate(sharedValue.get(),[0,1],[0,1]),borderBottomColor:floatingBackgroundColor,borderBottomWidth:16,transform:[{translateY:interpolate(sharedValue.get(),[useReducedMotion?0.999999:0,1],[32,0])}]};}" };
 fn(558);
 const ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((isVisible) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ModalFloatingAction(isVisible) {
   const cResult = require("c").c(29);
   if (cResult[0] !== isVisible) {
     isVisible = isVisible.isVisible;
@@ -53,28 +53,59 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((isVisible) => {
       let tmp15 = cResult[7];
     }
     const effect = noop.useEffect(tmp14, tmp15);
-    const fn2 = function x() {
-      const obj = { opacity: ReanimatedRexport.interpolate(sharedValue.get(), [0, 1], [0, 1]), borderBottomColor, borderBottomWidth: 16, transform: null };
-      let num = 0;
-      value = sharedValue.get();
-      if (enabled) {
-        num = 0.999999;
+    class A {
+      constructor() {
+        obj = { opacity: null, borderBottomColor: null, borderBottomWidth: 16, transform: null };
+        obj2 = closure_0(closure_2[7]);
+        obj.opacity = obj2.interpolate(closure_2.get(), [0, 1], [0, 1]);
+        obj.borderBottomColor = closure_0;
+        obj3 = closure_0(closure_2[7]);
+        num = 0;
+        value = closure_2.get();
+        if (enabled) {
+          num = 0.999999;
+        }
+        obj1 = { translateY: null };
+        items = [, ];
+        items[0] = num;
+        items[1] = 1;
+        obj1.translateY = obj3.interpolate(value, items, [32, 0]);
+        items1 = [];
+        items1[0] = obj1;
+        obj.transform = items1;
+        return obj;
       }
-      const obj4 = { translateY: null };
-      const items = [num, 1];
-      obj4.translateY = ReanimatedRexport.interpolate(value, items, [32, 0]);
-      const items1 = [obj4];
-      obj.transform = items1;
-      return obj;
-    };
+    }
     let obj2 = { interpolate: tmp(tmp2[7]).interpolate, sharedValue, floatingBackgroundColor: tmp5, useReducedMotion: enabled };
-    fn2.__closure = obj2;
-    fn2.__workletHash = 1679390676673;
-    fn2.__initData = __initData;
-    const animatedStyle = tmp(tmp2[7]).useAnimatedStyle(fn2);
+    A.__closure = obj2;
+    A.__workletHash = 1679390676673;
+    A.__initData = __initData;
+    const animatedStyle = tmp(tmp2[7]).useAnimatedStyle(A);
     if (cResult[8] !== tmp13.bottom) {
       let obj4 = { paddingBottom: tmp13.bottom };
-      cResult[8] = tmp13.bottom;
+      class A {
+        constructor() {
+          obj = { opacity: null, borderBottomColor: null, borderBottomWidth: 16, transform: null };
+          obj2 = closure_0(closure_2[7]);
+          obj.opacity = obj2.interpolate(closure_2.get(), [0, 1], [0, 1]);
+          obj.borderBottomColor = closure_0;
+          obj3 = closure_0(closure_2[7]);
+          num = 0;
+          value = closure_2.get();
+          if (enabled) {
+            num = 0.999999;
+          }
+          obj1 = { translateY: null };
+          items = [, ];
+          items[0] = num;
+          items[1] = 1;
+          obj1.translateY = obj3.interpolate(value, items, [32, 0]);
+          items1 = [];
+          items1[0] = obj1;
+          obj.transform = items1;
+          return obj;
+        }
+      }
       cResult[9] = obj4;
       let tmp19 = obj4;
     } else {
@@ -89,74 +120,177 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((isVisible) => {
         if (tmp6) {
           str = "auto";
         }
-        if (cResult[14] !== tmp5) {
-          const obj7 = tmp12(tmp2[12])(tmp5);
-          const hexResult = tmp12(tmp2[12])(tmp5).alpha(0).hex();
-          cResult[14] = tmp5;
-          cResult[15] = hexResult;
-          let tmp21 = hexResult;
-          const alphaResult = tmp12(tmp2[12])(tmp5).alpha(0);
-        } else {
-          tmp21 = cResult[15];
+        class A {
+          constructor() {
+            obj = { opacity: null, borderBottomColor: null, borderBottomWidth: 16, transform: null };
+            obj2 = closure_0(closure_2[7]);
+            obj.opacity = obj2.interpolate(closure_2.get(), [0, 1], [0, 1]);
+            obj.borderBottomColor = closure_0;
+            obj3 = closure_0(closure_2[7]);
+            num = 0;
+            value = closure_2.get();
+            if (enabled) {
+              num = 0.999999;
+            }
+            obj1 = { translateY: null };
+            items = [, ];
+            items[0] = num;
+            items[1] = 1;
+            obj1.translateY = obj3.interpolate(value, items, [32, 0]);
+            items1 = [];
+            items1[0] = obj1;
+            obj.transform = items1;
+            return obj;
+          }
         }
         if (cResult[16] === tmp5) {
           if (cResult[17] === tmp21) {
-            let tmp23 = cResult[18];
+            let tmp22 = cResult[18];
           }
           const _Symbol = Symbol;
+          class A {
+            constructor() {
+              obj = { opacity: null, borderBottomColor: null, borderBottomWidth: 16, transform: null };
+              obj2 = closure_0(closure_2[7]);
+              obj.opacity = obj2.interpolate(closure_2.get(), [0, 1], [0, 1]);
+              obj.borderBottomColor = closure_0;
+              obj3 = closure_0(closure_2[7]);
+              num = 0;
+              value = closure_2.get();
+              if (enabled) {
+                num = 0.999999;
+              }
+              obj1 = { translateY: null };
+              items = [, ];
+              items[0] = num;
+              items[1] = 1;
+              obj1.translateY = obj3.interpolate(value, items, [32, 0]);
+              items1 = [];
+              items1[0] = obj1;
+              obj.transform = items1;
+              return obj;
+            }
+          }
           if (cResult[19] === Symbol.for("react.memo_cache_sentinel")) {
             let items = [0, 0.5];
             cResult[19] = items;
-            let tmp25 = items;
-          } else {
-            tmp25 = cResult[19];
-          }
-          if (cResult[20] !== tmp23) {
-            const obj5 = { colors: tmp23, locations: tmp25, style: closure_6.absoluteFill };
-            const tmp29 = closure_8(tmp12(tmp2[13]), obj5);
-            cResult[20] = tmp23;
-            cResult[21] = tmp29;
-            let tmp26 = tmp29;
-          } else {
-            tmp26 = cResult[21];
-          }
-          if (cResult[22] !== tmp4) {
-            const obj6 = {};
-            const merged = Object.assign(tmp4);
-            obj6.variant = "primary";
-            const tmp35 = closure_8(tmp(tmp2[14]).ModalActionButton, obj6);
-            cResult[22] = tmp4;
-            cResult[23] = tmp35;
-            let tmp30 = tmp35;
-          } else {
-            tmp30 = cResult[23];
-          }
-          if (cResult[24] === tmp26) {
-            if (cResult[25] === tmp30) {
-              if (cResult[26] === tmp20) {
-                if (cResult[27] === str) {
-                  let tmp36 = cResult[28];
+            class A {
+              constructor() {
+                obj = { opacity: null, borderBottomColor: null, borderBottomWidth: 16, transform: null };
+                obj2 = closure_0(closure_2[7]);
+                obj.opacity = obj2.interpolate(closure_2.get(), [0, 1], [0, 1]);
+                obj.borderBottomColor = closure_0;
+                obj3 = closure_0(closure_2[7]);
+                num = 0;
+                value = closure_2.get();
+                if (enabled) {
+                  num = 0.999999;
                 }
-                return tmp36;
+                obj1 = { translateY: null };
+                items = [, ];
+                items[0] = num;
+                items[1] = 1;
+                obj1.translateY = obj3.interpolate(value, items, [32, 0]);
+                items1 = [];
+                items1[0] = obj1;
+                obj.transform = items1;
+                return obj;
               }
             }
           }
-          const obj8 = { style: tmp20, pointerEvents: str, children: null };
-          let items1 = [tmp26, tmp30];
-          obj8.children = items1;
-          const tmp38 = closure_9(tmp12(tmp2[7]).View, obj8);
-          cResult[24] = tmp26;
-          cResult[25] = tmp30;
+          if (cResult[20] !== tmp22) {
+            const obj5 = { colors: tmp22, locations: null, style: null };
+            class A {
+              constructor() {
+                obj = { opacity: null, borderBottomColor: null, borderBottomWidth: 16, transform: null };
+                obj2 = closure_0(closure_2[7]);
+                obj.opacity = obj2.interpolate(closure_2.get(), [0, 1], [0, 1]);
+                obj.borderBottomColor = closure_0;
+                obj3 = closure_0(closure_2[7]);
+                num = 0;
+                value = closure_2.get();
+                if (enabled) {
+                  num = 0.999999;
+                }
+                obj1 = { translateY: null };
+                items = [, ];
+                items[0] = num;
+                items[1] = 1;
+                obj1.translateY = obj3.interpolate(value, items, [32, 0]);
+                items1 = [];
+                items1[0] = obj1;
+                obj.transform = items1;
+                return obj;
+              }
+            }
+            obj5.style = closure_6.absoluteFill;
+            const tmp28 = closure_8(tmp12(tmp2[13]), obj5);
+            cResult[20] = tmp22;
+            cResult[21] = tmp28;
+            let tmp25 = tmp28;
+          } else {
+            tmp25 = cResult[21];
+          }
+          if (cResult[22] !== tmp4) {
+            const obj6 = {};
+            class A {
+              constructor() {
+                obj = { opacity: null, borderBottomColor: null, borderBottomWidth: 16, transform: null };
+                obj2 = closure_0(closure_2[7]);
+                obj.opacity = obj2.interpolate(closure_2.get(), [0, 1], [0, 1]);
+                obj.borderBottomColor = closure_0;
+                obj3 = closure_0(closure_2[7]);
+                num = 0;
+                value = closure_2.get();
+                if (enabled) {
+                  num = 0.999999;
+                }
+                obj1 = { translateY: null };
+                items = [, ];
+                items[0] = num;
+                items[1] = 1;
+                obj1.translateY = obj3.interpolate(value, items, [32, 0]);
+                items1 = [];
+                items1[0] = obj1;
+                obj.transform = items1;
+                return obj;
+              }
+            }
+            const merged = Object.assign(tmp4);
+            obj6.variant = "primary";
+            const tmp33 = closure_8(tmp(tmp2[14]).ModalActionButton, obj6);
+            cResult[22] = tmp4;
+            cResult[23] = tmp33;
+            let tmp29 = tmp33;
+          } else {
+            tmp29 = cResult[23];
+          }
+          if (cResult[24] === tmp25) {
+            if (cResult[25] === tmp29) {
+              if (cResult[26] === tmp20) {
+                if (cResult[27] === str) {
+                  let tmp34 = cResult[28];
+                }
+                return tmp34;
+              }
+            }
+          }
+          const obj7 = { style: tmp20, pointerEvents: str, children: null };
+          let items1 = [tmp25, tmp29];
+          obj7.children = items1;
+          const tmp36 = closure_9(tmp12(tmp2[7]).View, obj7);
+          cResult[24] = tmp25;
+          cResult[25] = tmp29;
           cResult[26] = tmp20;
           cResult[27] = str;
-          cResult[28] = tmp38;
-          tmp36 = tmp38;
+          cResult[28] = tmp36;
+          tmp34 = tmp36;
         }
         const items2 = [tmp21, tmp5];
         cResult[16] = tmp5;
         cResult[17] = tmp21;
         cResult[18] = items2;
-        tmp23 = items2;
+        tmp22 = items2;
       }
     }
     const items3 = [animatedStyle, tmp10.floating, tmp19];
@@ -182,7 +316,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((isVisible) => {
   tmp15 = items4;
   tmp14 = fn;
   const tmpResult = require("ReanimatedRexport");
-}) : ((isVisible) => {
+}) : (function ModalFloatingAction(isVisible) {
   isVisible = isVisible.isVisible;
   const floatingBackgroundColor = isVisible.floatingBackgroundColor;
   const merged = Object.assign(isVisible, Object.assign({ isVisible: 0, floatingBackgroundColor: 0 }));
@@ -252,7 +386,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("design/components/Modal/native/ModalFloatingAction.native.tsx");
 
 export const ModalFloatingAction = tmp4;
-export const ModalFloatingActionSpacer = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const ModalFloatingActionSpacer = ReactCompilerGating.isReactCompilerEnabled() ? (function ModalFloatingActionSpacer() {
   const cResult = c.c(2);
   const tmp2 = closure_10();
   if (cResult[0] !== tmp2.spacer) {
@@ -265,4 +399,6 @@ export const ModalFloatingActionSpacer = ReactCompilerGating.isReactCompilerEnab
     tmp3 = cResult[1];
   }
   return tmp3;
-}) : (() => closure_1_8(React5, { style: closure_10().spacer }));
+}) : (function ModalFloatingActionSpacer() {
+  return closure_1_8(React5, { style: closure_10().spacer });
+});

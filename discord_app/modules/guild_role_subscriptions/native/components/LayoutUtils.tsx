@@ -1,7 +1,7 @@
-// === Module 9966: LayoutUtils ===
+// === Module 9493: LayoutUtils ===
 
-// Module 9966 (LayoutUtils)
-import native from "native" /* 1188 */;
+// Module 9493 (LayoutUtils)
+import native from "native" /* 1200 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/LayoutUtils.tsx");
 
-export const GappedList = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const GappedList = ReactCompilerGating.isReactCompilerEnabled() ? (function GappedList(arg0) {
   const cResult = renderGap(num2[3]).c(7);
   ({ children, gap, renderGap } = arg0);
   let num = 4;
@@ -68,7 +68,7 @@ export const GappedList = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0)
   num = 3;
   cResult[3] = mapped;
   const toArrayResult = Children.toArray(children);
-}) : ((gap) => {
+}) : (function GappedList(gap) {
   let num = gap.gap;
   if (num === undefined) {
     num = 4;

@@ -1,20 +1,17 @@
-// === Module 9403: useDisplayNameStylesFont ===
+// === Module 8825: useDisplayNameStylesFont ===
 
-// Module 9403 (useDisplayNameStylesFont)
+// Module 8825 (useDisplayNameStylesFont)
 import c from "c" /* 576 */;
-import DisplayNameStylesConstants from "DisplayNameStylesConstants" /* 1395 */;
-import DisplayNameFont from "DisplayNameFont" /* 1397 */;
-import useDisplayNameStylesEnabled from "useDisplayNameStylesEnabled" /* 5313 */;
-import DisplayNameStylesFlywheelExperiment from "DisplayNameStylesFlywheelExperiment" /* 9404 */;
+import DisplayNameFont from "DisplayNameFont" /* 1409 */;
+import useDisplayNameStylesEnabled from "useDisplayNameStylesEnabled" /* 5625 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
-const FLYWHEEL_FONTS = DisplayNameStylesConstants.FLYWHEEL_FONTS;
 const DISPLAY_NAME_STYLES_FONT_FAMILY_MAP = { [DisplayNameFont.DisplayNameFont.CHERRY_BOMB]: "Sakura-Normal", [DisplayNameFont.DisplayNameFont.CHICLE]: "Jellybean-Normal", [DisplayNameFont.DisplayNameFont.MUSEO_MODERNO]: "Modern-Medium", [DisplayNameFont.DisplayNameFont.NEO_CASTEL]: "Medieval-Normal", [DisplayNameFont.DisplayNameFont.PIXELIFY]: "8Bit-Normal", [DisplayNameFont.DisplayNameFont.SINISTRE]: "Vampyre-Normal", [DisplayNameFont.DisplayNameFont.ZILLA_SLAB]: "Tempo-SemiBold", [DisplayNameFont.DisplayNameFont.PLAYPEN_SANS]: "MonkeyBars-Bold", [DisplayNameFont.DisplayNameFont.ORBITRON]: "Mainframe-Bold", [DisplayNameFont.DisplayNameFont.NEW_ROCKER]: "Headbang-Normal", [DisplayNameFont.DisplayNameFont.KALAM]: "Journal-Bold" };
 const result = size.fileFinishedImporting("modules/display_name_styles/native/useDisplayNameStylesFont.tsx");
 
 export { DISPLAY_NAME_STYLES_FONT_FAMILY_MAP };
-export const useDisplayNameStylesFont = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useDisplayNameStylesFont = ReactCompilerGating.isReactCompilerEnabled() ? (function useDisplayNameStylesFont(arg0) {
   const obj = c;
   const cResult = obj.c(1);
   ({ displayNameStyles, ignoreDisabledStylesSetting } = arg0);
@@ -25,23 +22,19 @@ export const useDisplayNameStylesFont = ReactCompilerGating.isReactCompilerEnabl
   } else {
     first = cResult[0];
   }
-  const displayNameStylesEnabled = useDisplayNameStylesEnabled.useDisplayNameStylesEnabled(first);
-  DisplayNameStylesFlywheelExperiment;
-  if (displayNameStylesEnabled) {
+  if (tmpResult.useDisplayNameStylesEnabled(first)) {
     if (null != displayNameStyles) {
       return obj[displayNameStyles.fontId];
     }
   }
-  const tmpResult = useDisplayNameStylesEnabled;
-}) : ((arg0) => {
+  tmpResult = useDisplayNameStylesEnabled;
+}) : (function useDisplayNameStylesFont(arg0) {
   ({ displayNameStyles, ignoreDisabledStylesSetting } = arg0);
   if (ignoreDisabledStylesSetting === undefined) {
     ignoreDisabledStylesSetting = false;
   }
   const obj = useDisplayNameStylesEnabled;
-  const displayNameStylesEnabled = obj.useDisplayNameStylesEnabled({ location: "useDisplayNameStylesFont-native" });
-  DisplayNameStylesFlywheelExperiment;
-  if (displayNameStylesEnabled) {
+  if (obj.useDisplayNameStylesEnabled({ location: "useDisplayNameStylesFont-native" })) {
     if (null != displayNameStyles) {
       return obj[displayNameStyles.fontId];
     }

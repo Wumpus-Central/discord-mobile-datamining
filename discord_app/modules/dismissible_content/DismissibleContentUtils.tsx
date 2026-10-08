@@ -1,21 +1,21 @@
-// === Module 2037: DismissibleContentUtils ===
+// === Module 2049: DismissibleContentUtils ===
 
-// Module 2037 (DismissibleContentUtils)
+// Module 2049 (DismissibleContentUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 2033 */;
-import dismissible_content from "dismissible_content" /* 2036 */;
-import DismissibleContentFatigueConfig from "DismissibleContentFatigueConfig" /* 2040 */;
-import DismissibleContentTypes from "DismissibleContentTypes" /* 2041 */;
-import VersionedDismissibleContentUtils from "VersionedDismissibleContentUtils" /* 2049 */;
-import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry" /* 4726 */;
-import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 10060 */;
-import trackDismissibleContentActioned from "trackDismissibleContentActioned" /* 13824 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 2045 */;
+import dismissible_content from "dismissible_content" /* 2048 */;
+import DismissibleContentFatigueConfig from "DismissibleContentFatigueConfig" /* 2052 */;
+import DismissibleContentTypes from "DismissibleContentTypes" /* 2054 */;
+import VersionedDismissibleContentUtils from "VersionedDismissibleContentUtils" /* 2061 */;
+import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry" /* 4920 */;
+import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 10305 */;
+import trackDismissibleContentActioned from "trackDismissibleContentActioned" /* 14128 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 2039 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
+import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 2051 */;
 
 const require = globalThis.__r;
 
@@ -46,7 +46,7 @@ function markDismissibleContentAsDismissedPreProcessing(dismissibleContent, forc
   if (tmp) {
     trackDismissibleContentDismissed(dismissibleContent, forceTrack);
   }
-  tmp = v65535(dismissibleContent) || forceTrack.forceTrack;
+  tmp = collapsed(dismissibleContent) || forceTrack.forceTrack;
   const guildId = forceTrack.guildId;
   DismissibleContentFrameworkActionCreators.handleDCDismissed(dismissibleContent, guildId);
 }
@@ -437,10 +437,10 @@ function trackDismissibleContentDismissed(dismissibleContent, dismissAction) {
   obj3.snowflake_id = snowflakeId;
   AnalyticsUtilsDefault.track(AnalyticEvents.DISMISSIBLE_CONTENT_DISMISSED, obj3);
 }
-const DCFEventTypes = fn(2038).DCFEventTypes;
-const DismissibleContentShownStateStore = fn(2042);
+const DCFEventTypes = fn(2050).DCFEventTypes;
+const DismissibleContentShownStateStore = fn(2055);
 ({ addCandidateContent: closure_8, removeCandidateContent: closure_9, isContentShown: c10, getCurrentlyShownCounts: closure_11 } = DismissibleContentShownStateStore);
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 let c14 = 2592000000;
 const ReactCompilerGating = fn(558);
@@ -490,7 +490,7 @@ function getGuildNextNumTimesDismissed(arg0, stateFromStores) {
   }
   return num + 1;
 }
-let items = [fn(2036).DismissibleContent.ACCOUNT_LINK_INVITE_FRIENDS, fn(2036).DismissibleContent.AUTOCLIPPING_ACCOUNT_PANEL_COACHMARK];
+let items = [fn(2048).DismissibleContent.ACCOUNT_LINK_INVITE_FRIENDS, fn(2048).DismissibleContent.AUTOCLIPPING_ACCOUNT_PANEL_COACHMARK];
 const set = new Set(items);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/dismissible_content/DismissibleContentUtils.tsx");
@@ -690,7 +690,7 @@ export const isTimeRecurringSnowflakeBoundDismissibleContentDismissed = function
   obj = NewUserDismissibleContentRegistry;
 };
 export { UNSAFE_isSingleUseGuildDismissibleContentDismissed };
-export const useIsSingleUseGuildDismissibleContentDismissed = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export const useIsSingleUseGuildDismissibleContentDismissed = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsSingleUseGuildDismissibleContentDismissed(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
   const cResult = require("c").c(4);
@@ -727,7 +727,7 @@ export const useIsSingleUseGuildDismissibleContentDismissed = ReactCompilerGatin
   tmp6 = fn;
   let obj = require("c");
   tmp = _require;
-}) : ((arg0, arg1) => {
+}) : (function useIsSingleUseGuildDismissibleContentDismissed(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
   const items = [UserSettingsProtoStore];

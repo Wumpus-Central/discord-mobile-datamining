@@ -1,22 +1,22 @@
-// === Module 16728: ConjureReminderSlot ===
+// === Module 17001: ConjureReminderSlot ===
 
-// Module 16728 (ConjureReminderSlot)
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import timing from "timing" /* 4897 */;
-import conjureReminderSlot from "conjureReminderSlot" /* 16725 */;
+// Module 17001 (ConjureReminderSlot)
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import timing from "timing" /* 5091 */;
+import conjureReminderSlot from "conjureReminderSlot" /* 16998 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsx = fn(21).jsx;
-let obj = { duration: fn(16725).CONJURE_REMINDER_ENTER_MS, easing: null };
-const Easing = fn(4618).Easing;
-obj.easing = Easing.out(fn(4618).Easing.ease);
-let obj2 = { duration: fn(16725).CONJURE_REMINDER_EXIT_MS, easing: null };
-const Easing2 = fn(4618).Easing;
-obj2.easing = Easing2.in(fn(4618).Easing.ease);
+let obj = { duration: fn(16998).CONJURE_REMINDER_ENTER_MS, easing: null };
+const Easing = fn(4810).Easing;
+obj.easing = Easing.out(fn(4810).Easing.ease);
+let obj2 = { duration: fn(16998).CONJURE_REMINDER_EXIT_MS, easing: null };
+const Easing2 = fn(4810).Easing;
+obj2.easing = Easing2.in(fn(4810).Easing.ease);
 const styles = StyleSheet.create({ slot: { overflow: "hidden" }, layer: { position: "absolute", top: 0, left: 0, right: 0 } });
 const __initData = { code: "function ConjureReminderSlotTsx1(){const{height}=this.__closure;return{height:height.get()};}" };
 const __initData2 = { code: "function ConjureReminderSlotTsx2(){const{height}=this.__closure;return{height:height.get()};}" };
@@ -24,7 +24,7 @@ fn(558);
 const __initData3 = { code: "function ConjureReminderSlotTsx3(){const{opacity,rise}=this.__closure;return{opacity:opacity.get(),transform:[{translateY:rise.get()}]};}" };
 const __initData4 = { code: "function ConjureReminderSlotTsx4(){const{opacity,rise}=this.__closure;return{opacity:opacity.get(),transform:[{translateY:rise.get()}]};}" };
 const ReactCompilerGating = fn(558);
-let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((reminderKey) => {
+let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ReminderLayer(reminderKey) {
   const cResult = reminderKey(onMeasure[8]).c(17);
   reminderKey = reminderKey.reminderKey;
   const leaving = reminderKey.leaving;
@@ -136,7 +136,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((reminderKey) =
   tmp7 = items1;
   tmp6 = fn;
   const obj3 = reminderKey(onMeasure[6]);
-}) : ((reminderKey) => {
+}) : (function ReminderLayer(reminderKey) {
   reminderKey = reminderKey.reminderKey;
   const leaving = reminderKey.leaving;
   onMeasure = reminderKey.onMeasure;
@@ -197,7 +197,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((reminderKey) =
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/reminders/native/ConjureReminderSlot.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((reminder) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureReminderSlot(reminder) {
   const cResult = renderReminder(576).c(19);
   ({ style, renderReminder } = reminder);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -215,7 +215,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((reminder) => {
   obj = renderReminder(576);
   const stateFromStores = renderReminder(504).useStateFromStores(tmp4, tmp5);
   const tmpResult = renderReminder(504);
-  const conjureReminderLayers = renderReminder(16725).useConjureReminderLayers(reminder.reminder);
+  const conjureReminderLayers = renderReminder(16998).useConjureReminderLayers(reminder.reminder);
   const found = conjureReminderLayers.find((leaving) => !leaving.leaving);
   let key;
   if (found != null) {
@@ -225,7 +225,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((reminder) => {
     key = null;
   }
   const obj4 = sharedValue;
-  const tmpResult4 = renderReminder(16725);
+  const tmpResult4 = renderReminder(16998);
   [tmp11, dependencyMap] = num3(sharedValue.useState(null), 2);
   num3 = 0;
   if (null != key) {
@@ -240,7 +240,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((reminder) => {
     num3 = height;
   }
   const tmp10 = num3(sharedValue.useState(null), 2);
-  sharedValue = renderReminder(4618).useSharedValue(0);
+  sharedValue = renderReminder(4810).useSharedValue(0);
   if (cResult[2] === sharedValue) {
     if (cResult[3] === stateFromStores) {
       if (cResult[4] === num3) {
@@ -255,7 +255,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((reminder) => {
       fn3.__closure = obj2;
       fn3.__workletHash = 13312603429755;
       fn3.__initData = __initData;
-      const animatedStyle = renderReminder(4618).useAnimatedStyle(fn3);
+      const animatedStyle = renderReminder(4810).useAnimatedStyle(fn3);
       const _Symbol = Symbol;
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
         class I {
@@ -345,7 +345,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((reminder) => {
           class O {
             constructor(arg0) {
               obj = { reminderKey: reminder.key, leaving: reminder.leaving, onMeasure: closure_5, children: renderReminder(reminder.key) };
-              return jsx(f74910, obj, reminder.key);
+              return jsx(ReminderLayer, obj, reminder.key);
             }
           }
           cResult[14] = renderReminder;
@@ -354,7 +354,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((reminder) => {
           class O {
             constructor(arg0) {
               obj = { reminderKey: reminder.key, leaving: reminder.leaving, onMeasure: closure_5, children: renderReminder(reminder.key) };
-              return jsx(f74910, obj, reminder.key);
+              return jsx(ReminderLayer, obj, reminder.key);
             }
           }
         }
@@ -367,7 +367,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((reminder) => {
       cResult[8] = animatedStyle;
       cResult[9] = style;
       cResult[10] = items1;
-      const tmpResult6 = renderReminder(4618);
+      const tmpResult6 = renderReminder(4810);
     }
   }
   const fn2 = function w() {
@@ -383,7 +383,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((reminder) => {
         }
         const result1 = sharedValue.set(num2);
       }
-      return () => renderReminder(4618).cancelAnimation(sharedValue);
+      return () => renderReminder(4810).cancelAnimation(sharedValue);
     }
   };
   const items2 = [sharedValue, num3, stateFromStores];
@@ -394,8 +394,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((reminder) => {
   cResult[6] = items2;
   tmp16 = items2;
   tmp15 = fn2;
-  const tmpResult5 = renderReminder(4618);
-}) : ((renderReminder) => {
+  const tmpResult5 = renderReminder(4810);
+}) : (function ConjureReminderSlot(renderReminder) {
   renderReminder = renderReminder.renderReminder;
   dependencyMap = undefined;
   let num;
@@ -405,7 +405,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((reminder) => {
   const items = [onMeasure];
   const stateFromStores = renderReminder(504).useStateFromStores(items, () => onMeasure.useReducedMotion);
   obj = renderReminder(504);
-  const conjureReminderLayers = renderReminder(16725).useConjureReminderLayers(reminder);
+  const conjureReminderLayers = renderReminder(16998).useConjureReminderLayers(reminder);
   const found = conjureReminderLayers.find((leaving) => !leaving.leaving);
   let key;
   if (found != null) {
@@ -414,7 +414,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((reminder) => {
   if (key == null) {
     key = null;
   }
-  obj2 = renderReminder(16725);
+  obj2 = renderReminder(16998);
   [tmp7, c2] = num(sharedValue.useState(null), 2);
   num = 0;
   if (null != key) {
@@ -429,7 +429,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((reminder) => {
     num = height;
   }
   const tmp6 = num(sharedValue.useState(null), 2);
-  sharedValue = renderReminder(4618).useSharedValue(0);
+  sharedValue = renderReminder(4810).useSharedValue(0);
   const items1 = [sharedValue, num, stateFromStores];
   const effect = obj3.useEffect(() => {
     if (null != num) {
@@ -447,17 +447,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((reminder) => {
       return () => renderReminder(c2[6]).cancelAnimation(sharedValue);
     }
   }, items1);
-  const tmpResult = renderReminder(4618);
-  class C {
+  const tmpResult = renderReminder(4810);
+  class M {
     constructor() {
       obj = { height: closure_4.get() };
       return obj;
     }
   }
-  C.__closure = { height: sharedValue };
-  C.__workletHash = 5124855589272;
-  C.__initData = __initData2;
-  const animatedStyle = renderReminder(4618).useAnimatedStyle(C);
+  M.__closure = { height: sharedValue };
+  M.__workletHash = 5124855589272;
+  M.__initData = __initData2;
+  const animatedStyle = renderReminder(4810).useAnimatedStyle(M);
   onMeasure = obj3.useCallback((arg0, arg1) => {
     closure_0 = arg0;
     const height = Math.round(arg1);
@@ -477,5 +477,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((reminder) => {
   const obj4 = { style: null, accessibilityLiveRegion: "polite", children: conjureReminderLayers.map((key) => <closure_14 key={key.key} reminderKey={key.key} leaving={key.leaving} onMeasure={onMeasure}>{renderReminder(key.key)}</closure_14>) };
   const items2 = [closure_9.slot, style, animatedStyle];
   obj4.style = items2;
-  return jsx(stateFromStores(4618).View, { style: null, accessibilityLiveRegion: "polite", children: conjureReminderLayers.map((key) => <closure_14 key={key.key} reminderKey={key.key} leaving={key.leaving} onMeasure={onMeasure}>{renderReminder(key.key)}</closure_14>) });
+  return jsx(stateFromStores(4810).View, { style: null, accessibilityLiveRegion: "polite", children: conjureReminderLayers.map((key) => <closure_14 key={key.key} reminderKey={key.key} leaving={key.leaving} onMeasure={onMeasure}>{renderReminder(key.key)}</closure_14>) });
 });

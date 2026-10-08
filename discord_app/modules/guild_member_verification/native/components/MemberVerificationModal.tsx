@@ -1,25 +1,25 @@
-// === Module 5969: MemberVerificationModal ===
+// === Module 6152: MemberVerificationModal ===
 
-// Module 5969 (MemberVerificationModal)
+// Module 6152 (MemberVerificationModal)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4618 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4708 */;
-import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 5924 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4810 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4902 */;
+import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 6107 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import MemberVerificationFormStore from "MemberVerificationFormStore" /* 5970 */;
+import GuildMemberStore from "GuildMemberStore" /* 2124 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 6153 */;
 
 const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
 let View = fn(17).View;
-const MemberVerificationFormConstants = fn(5971);
+const MemberVerificationFormConstants = fn(6154);
 ({ SCROLL_EVENT_TIMER_MS: closure_7, useBannerHeight: closure_8 } = MemberVerificationFormConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-let closure_11 = ReanimatedRexport.createAnimatedComponent(fn(1188).Icon);
-const createStyles = fn(4896);
+let closure_11 = ReanimatedRexport.createAnimatedComponent(fn(1200).Icon);
+const createStyles = fn(5090);
 let obj = { flex: { flex: 1 }, flexLoading: { flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, scrollContainer: null, closeButtonContainer: null, closeIconContainer: null, closeIconOverBanner: null, closeIconAfterBanner: null, headerSeparator: null };
 let obj3 = { flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.scrollContainer = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
@@ -42,7 +42,7 @@ let obj6 = { position: "absolute", tintColor: nativeDefault.colors.TEXT_DEFAULT 
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_member_verification/native/components/MemberVerificationModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVerificationModal(guildId) {
   const cResult = guildId(top[11]).c(65);
   guildId = guildId.guildId;
   const onClose = guildId.onClose;
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   const tmp6 = onClose(top[12])();
   const sharedValue = guildId(top[6]).useSharedValue(0);
   let obj2 = guildId(top[6]);
-  const fn = function u(contentOffset) {
+  const fn = function p(contentOffset) {
     return sharedValue.set(contentOffset.contentOffset.y);
   };
   fn.__closure = { scrollTop: sharedValue };
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   A.__initData = __initData2;
   const animatedStyle = obj5.useAnimatedStyle(A);
   const obj6 = { interpolate: guildId(top[6]).interpolate, scrollTop: sharedValue, bannerHeight: tmp11, safeAreaTop: top, isDarkTheme: isThemeDarkResult };
-  class C {
+  class M {
     constructor() {
       obj = { opacity: null };
       obj2 = closure_0(closure_2[6]);
@@ -101,10 +101,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     }
   }
   const obj7 = guildId(top[6]);
-  C.__closure = { interpolate: guildId(top[6]).interpolate, scrollTop: sharedValue, bannerHeight: tmp11, safeAreaTop: top };
-  C.__workletHash = 12938747435123;
-  C.__initData = __initData3;
-  const animatedStyle1 = obj7.useAnimatedStyle(C);
+  M.__closure = { interpolate: guildId(top[6]).interpolate, scrollTop: sharedValue, bannerHeight: tmp11, safeAreaTop: top };
+  M.__workletHash = 12938747435123;
+  M.__initData = __initData3;
+  const animatedStyle1 = obj7.useAnimatedStyle(M);
   const obj8 = { interpolate: guildId(top[6]).interpolate, scrollTop: sharedValue, bannerHeight: tmp11, safeAreaTop: top };
   const setInitialVerificationEffect = guildId(top[15]).useSetInitialVerificationEffect(guildId);
   if (cResult[0] !== bottom) {
@@ -475,7 +475,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     }
   }
   return tmp39;
-}) : ((guildId) => {
+}) : (function MemberVerificationModal(guildId) {
   guildId = guildId.guildId;
   const onClose = guildId.onClose;
   let top;
@@ -606,7 +606,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
         items5[1] = closure_9(tmp2(tmp3[23]), obj15);
         const obj16 = {
           guild: tmp13,
-          onSuccess(application_status) {
+          onSuccess: function handleSuccess(application_status) {
                   const tmp2 = null != GuildMemberStore.getSelfMember(guildId);
                   if (!tmp5) {
                     const result = MemberVerificationAlertActionCreators.openMemberVerificationPendingAlert(guildId);

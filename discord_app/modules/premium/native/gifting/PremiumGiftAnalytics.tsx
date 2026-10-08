@@ -1,11 +1,11 @@
-// === Module 11031: PremiumGiftAnalytics ===
+// === Module 12778: PremiumGiftAnalytics ===
 
-// Module 11031 (PremiumGiftAnalytics)
+// Module 12778 (PremiumGiftAnalytics)
 import util from "util" /* 1126 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 10407 */;
-import PaymentFlowStartedTriggerPoint from "PaymentFlowStartedTriggerPoint" /* 10552 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 10004 */;
+import PaymentFlowStartedTriggerPoint from "PaymentFlowStartedTriggerPoint" /* 10149 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumGiftAnalytics.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((currentStep) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumGiftAnalytics(currentStep) {
   const cResult = currentStep(productId[3]).c(10);
   currentStep = currentStep.currentStep;
   let obj = currentStep(productId[3]);
@@ -42,30 +42,30 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((currentStep) => 
         }
         const effect = obj3.useEffect(tmp6, tmp7);
         if (cResult[7] !== basePurchaseAnalytics) {
-          class A {
+          class E {
             constructor() {
               return () => { ... };
             }
           }
           const items = [basePurchaseAnalytics, ref];
           cResult[7] = basePurchaseAnalytics;
-          cResult[8] = A;
+          cResult[8] = E;
           cResult[9] = items;
           let tmp10 = items;
         } else {
-          class A {
+          class E {
             constructor() {
               return () => { ... };
             }
           }
           tmp10 = cResult[9];
         }
-        const effect1 = obj3.useEffect(A, tmp10);
+        const effect1 = obj3.useEffect(E, tmp10);
         return currentStep.children;
       }
     }
   }
-  class E {
+  class P {
     constructor() {
       tmp = currentStep;
       tmp2 = closure_4;
@@ -165,12 +165,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((currentStep) => 
   cResult[2] = currentStep;
   cResult[3] = customGiftMessage;
   cResult[4] = productId;
-  cResult[5] = E;
+  cResult[5] = P;
   cResult[6] = items1;
   tmp7 = items1;
-  tmp6 = E;
+  tmp6 = P;
   let obj2 = currentStep(productId[4]);
-}) : ((currentStep) => {
+}) : (function PremiumGiftAnalytics(currentStep) {
   currentStep = currentStep.currentStep;
   let productId;
   const nativeGiftContext = currentStep(productId[4]).useNativeGiftContext();

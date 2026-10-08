@@ -1,8 +1,8 @@
-// === Module 6948: payments/OrderActionCreators ===
+// === Module 7137: payments/OrderActionCreators ===
 
-// Module 6948 (payments/OrderActionCreators)
+// Module 7137 (payments/OrderActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -1306,7 +1306,7 @@ let closure_19 = async function _cancelOrderSigning() {
     }
   })();
 };
-const OrderStatus = fn(4875).OrderStatus;
+const OrderStatus = fn(5069).OrderStatus;
 const Endpoints = fn(1085).Endpoints;
 const tmp2 = new LoggerDefault("OrderActionCreators");
 let closure_6 = tmp2;

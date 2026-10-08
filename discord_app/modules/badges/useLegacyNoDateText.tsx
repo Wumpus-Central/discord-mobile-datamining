@@ -1,6 +1,6 @@
-// === Module 10907: useLegacyNoDateText ===
+// === Module 10558: useLegacyNoDateText ===
 
-// Module 10907 (useLegacyNoDateText)
+// Module 10558 (useLegacyNoDateText)
 import util from "util" /* 1126 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -16,7 +16,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/useLegacyNoDateText.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useLegacyNoDateText(arg0) {
   [tmp2, tmp3] = noop.useState(chooseRandomLegacyNoDateText);
   const tmp4 = _slicedToArray(noop.useState(arg0), 2);
   if (arg0 !== tmp4[0]) {
@@ -28,7 +28,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp3(intl.string(items[rounded]));
   }
   return tmp2;
-}) : ((arg0) => {
+}) : (function useLegacyNoDateText(arg0) {
   [tmp2, tmp3] = noop.useState(chooseRandomLegacyNoDateText);
   const tmp4 = _slicedToArray(noop.useState(arg0), 2);
   if (arg0 !== tmp4[0]) {

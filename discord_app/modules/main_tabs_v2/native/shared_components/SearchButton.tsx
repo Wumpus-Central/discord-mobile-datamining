@@ -1,11 +1,11 @@
-// === Module 12022: SearchButton ===
+// === Module 12095: SearchButton ===
 
-// Module 12022 (SearchButton)
+// Module 12095 (SearchButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 6555 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 6731 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ let closure_2 = ["panelVariant"];
 const Pressable = fn(17).Pressable;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { searchButton: { backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, height: 40, alignItems: "center", flexDirection: "row", paddingHorizontal: 12 }, roundedCorners: { borderRadius: 20 }, roundedCornersAlt: null, text: null };
 let obj3 = { backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, height: 40, alignItems: "center", flexDirection: "row", paddingHorizontal: 12 };
 obj2.roundedCornersAlt = { borderRadius: nativeDefault.radii.round };
@@ -26,7 +26,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/SearchButton.tsx");
 
 export const SEARCH_BAR_HEIGHT = 40;
-export const SearchButtonContent = ReactCompilerGating.isReactCompilerEnabled() ? ((panelVariant) => {
+export const SearchButtonContent = ReactCompilerGating.isReactCompilerEnabled() ? (function SearchButtonContent(panelVariant) {
   const cResult = c.c(15);
   if (cResult[0] !== panelVariant) {
     panelVariant = panelVariant.panelVariant;
@@ -100,7 +100,7 @@ export const SearchButtonContent = ReactCompilerGating.isReactCompilerEnabled() 
   cResult[5] = tmp10;
   cResult[6] = items1;
   tmp11 = items1;
-}) : ((panelVariant) => {
+}) : (function SearchButtonContent(panelVariant) {
   const merged = Object.assign(panelVariant, Object.assign({ panelVariant: 0 }));
   const tmp2 = closure_7();
   const obj = {};

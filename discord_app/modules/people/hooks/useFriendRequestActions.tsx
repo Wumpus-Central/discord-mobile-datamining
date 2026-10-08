@@ -1,7 +1,7 @@
-// === Module 12970: useFriendRequestActions ===
+// === Module 13249: useFriendRequestActions ===
 
-// Module 12970 (useFriendRequestActions)
-import PeopleUtilsDefault from "PeopleUtils" /* 10617 */;
+// Module 13249 (useFriendRequestActions)
+import PeopleUtilsDefault from "PeopleUtils" /* 10215 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -9,7 +9,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/people/hooks/useFriendRequestActions.tsx");
 
-export const useFriendRequestActions = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
+export const useFriendRequestActions = ReactCompilerGating.isReactCompilerEnabled() ? (function useFriendRequestActions(userId) {
   const cResult = userId(isGameRelationship[2]).c(16);
   userId = userId.userId;
   const applicationId = userId.applicationId;
@@ -39,7 +39,7 @@ export const useFriendRequestActions = ReactCompilerGating.isReactCompilerEnable
                       }
                       return tmp4;
                     }
-                    class I {
+                    class C {
                       constructor() {
                         obj = closure_1(closure_2[3]);
                         obj1 = { userId, applicationId: null, location: null, onConfirm: null, onCancel: null, onFinally: null };
@@ -68,7 +68,7 @@ export const useFriendRequestActions = ReactCompilerGating.isReactCompilerEnable
             }
           }
         }
-        class I {
+        class C {
           constructor() {
             obj = closure_1(closure_2[3]);
             obj1 = { userId, applicationId: null, location: null, onConfirm: null, onCancel: null, onFinally: null };
@@ -92,8 +92,8 @@ export const useFriendRequestActions = ReactCompilerGating.isReactCompilerEnable
         cResult[9] = onConfirm;
         cResult[10] = onFinally;
         cResult[11] = userId;
-        cResult[12] = I;
-        tmp3 = I;
+        cResult[12] = C;
+        tmp3 = C;
       }
     }
   }
@@ -113,7 +113,7 @@ export const useFriendRequestActions = ReactCompilerGating.isReactCompilerEnable
   cResult[3] = userId;
   cResult[4] = fn;
   tmp2 = fn;
-}) : ((userId) => {
+}) : (function useFriendRequestActions(userId) {
   userId = userId.userId;
   const applicationId = userId.applicationId;
   const isGameRelationship = userId.isGameRelationship;

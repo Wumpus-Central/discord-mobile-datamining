@@ -1,15 +1,15 @@
-// === Module 11656: useCommandContext ===
+// === Module 11721: useCommandContext ===
 
-// Module 11656 (useCommandContext)
+// Module 11721 (useCommandContext)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2074 */;
+import GuildStore from "GuildStore" /* 2086 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
 function getCommandContext(type) {
   if ("contextless" === type.type) {
-    let obj = { channel: "start", guild: "unicodeVersion" };
+    let obj = { channel: "Array", guild: "Reflect" };
   } else {
     obj = { channel: type.channel, guild: GuildStore.getGuild(type.channel.guild_id) };
   }
@@ -19,11 +19,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/hooks/useCommandContext.tsx");
 
 export { getCommandContext };
-export const useCommandContext = ReactCompilerGating.isReactCompilerEnabled() ? ((type) => {
+export const useCommandContext = ReactCompilerGating.isReactCompilerEnabled() ? (function useCommandContext(type) {
   const cResult = c.c(2);
   if (cResult[0] !== type) {
     if ("contextless" === type.type) {
-      let obj2 = { channel: "start", guild: "unicodeVersion" };
+      let obj2 = { channel: "Array", guild: "Reflect" };
     } else {
       obj2 = { channel: type.channel, guild: GuildStore.getGuild(type.channel.guild_id) };
     }
@@ -32,12 +32,12 @@ export const useCommandContext = ReactCompilerGating.isReactCompilerEnabled() ? 
   } else {
     return cResult[1];
   }
-}) : ((arg0) => {
+}) : (function useCommandContext(arg0) {
   const type = arg0;
   const items = [arg0];
   return noop.useMemo(() => {
     if ("contextless" === type.type) {
-      let obj = { channel: "start", guild: "unicodeVersion" };
+      let obj = { channel: "Array", guild: "Reflect" };
     } else {
       obj = { channel: type.channel, guild: GuildStore.getGuild(type.channel.guild_id) };
     }

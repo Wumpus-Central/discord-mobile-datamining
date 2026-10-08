@@ -1,25 +1,26 @@
-// === Module 9024: EmbeddedActivitiesNativeManager ===
+// === Module 10623: EmbeddedActivitiesNativeManager ===
 
-// Module 9024 (EmbeddedActivitiesNativeManager)
+// Module 10623 (EmbeddedActivitiesNativeManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1126 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import GlobalUtils from "GlobalUtils" /* 1375 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4574 */;
-import _modDef4811 from "module_4811" /* 4811 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5715 */;
-import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 9012 */;
-import ThermalUtilsDefault from "ThermalUtils" /* 9017 */;
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9026 */;
-import createWebViewControllerDefault from "createWebViewController" /* 9054 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
-import EmbeddedActivitiesManager from "EmbeddedActivitiesManager" /* 9014 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import GlobalUtils from "GlobalUtils" /* 1387 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4766 */;
+import _modDef5005 from "module_5005" /* 5005 */;
+import ThermalUtilsDefault from "ThermalUtils" /* 5294 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5298 */;
+import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 10624 */;
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 10635 */;
+import makeIframeIdDefault from "makeIframeId" /* 11128 */;
+import createWebViewControllerDefault from "createWebViewController" /* 11129 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5108 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2062 */;
+import EmbeddedActivitiesManager from "EmbeddedActivitiesManager" /* 10625 */;
 
 require = fn;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const PlatformUtils = fn(1369);
+const PlatformUtils = fn(1381);
 let nativeEventEmitter = null;
 if (PlatformUtils.isAndroid()) {
   nativeEventEmitter = new fn(17).NativeEventEmitter(NativeAppLifecycleModuleDefault);
@@ -130,7 +131,7 @@ prototype["showDevShelfOverrideEnabled"] = function showDevShelfOverrideEnabled(
   const obj2 = { key: "EMBEDDED_ACTIVITIES_DEV_SHELF_URL_OVERRIDE_ENABLED", content: null, icon: null, iconColor: "status-positive" };
   const intl = util.intl;
   obj2.content = intl.string(util.t.JfA7IK);
-  obj2.icon = _modDef4811;
+  obj2.icon = _modDef5005;
   ToastActionCreatorsDefault.open(obj2);
 };
 prototype["leaveActivity"] = function leaveActivity(arg0) {
@@ -159,52 +160,53 @@ prototype["clearEmbeddedActivityState"] = function clearEmbeddedActivityState(_l
   const obj2 = { location: _location, applicationId, showFeedback };
   DispatcherDefault.dispatch({ type: "EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE", applicationId, lockState: null, pictureInPictureLockState: null, gridLockState: null });
 };
-prototype["getOrCreateWebViewController"] = function getOrCreateWebViewController() {
+prototype["getOrCreateWebViewController"] = function getOrCreateWebViewController(applicationId) {
   const self = this;
   if (null != this.controller) {
     return self.controller.iframeId;
   } else {
-    const v4Result = self(1266).v4();
-    let obj2 = {
-      getOrigin() {
-          connectedActivityLocation = connectedActivityLocation.getConnectedActivityLocation();
-          let tmp2;
-          if (null != connectedActivityLocation) {
-            const selfEmbeddedActivityForLocation = connectedActivityLocation.getSelfEmbeddedActivityForLocation(connectedActivityLocation);
-            let url;
-            if (selfEmbeddedActivityForLocation != null) {
-              url = selfEmbeddedActivityForLocation.url;
-            }
-            tmp2 = url;
-          }
-          return tmp2;
-        },
-      onDisallowedNavigation() {
-          connectedActivityLocation = EmbeddedActivitiesStore.getConnectedActivityLocation();
-          let tmp2;
-          if (null != connectedActivityLocation) {
-            const selfEmbeddedActivityForLocation = EmbeddedActivitiesStore.getSelfEmbeddedActivityForLocation(connectedActivityLocation);
-            let applicationId;
-            if (selfEmbeddedActivityForLocation != null) {
-              applicationId = selfEmbeddedActivityForLocation.applicationId;
-            }
-            tmp2 = applicationId;
-          }
-          if (tmp5) {
-            const obj2 = { location: connectedActivityLocation, applicationId: tmp2, showFeedback: false };
-            self.leaveActivity(obj2);
-            const obj4 = { body: null, confirmText: null };
-            const intl = util.intl;
-            obj4.body = intl.string(util.t.tYBBWz);
-            const intl2 = util.intl;
-            obj4.confirmText = intl2.string(util.t.BddRzS);
-            actions_AlertActionCreatorsDefault.show(obj4);
-          }
-          tmp5 = null != connectedActivityLocation && null != tmp2;
+    const tmp4 = makeIframeIdDefault();
+    const obj = { contextSource: null, getOrigin: null, onDisallowedNavigation: null };
+    let obj2 = { type: self(10615).EmbeddedContextSourceType.ACTIVITY, applicationId };
+    obj.contextSource = obj2;
+    obj.getOrigin = function getOrigin() {
+      connectedActivityLocation = connectedActivityLocation.getConnectedActivityLocation();
+      let tmp2;
+      if (null != connectedActivityLocation) {
+        const selfEmbeddedActivityForLocation = connectedActivityLocation.getSelfEmbeddedActivityForLocation(connectedActivityLocation);
+        let url;
+        if (selfEmbeddedActivityForLocation != null) {
+          url = selfEmbeddedActivityForLocation.url;
         }
+        tmp2 = url;
+      }
+      return tmp2;
     };
-    self.controller = createWebViewControllerDefault(v4Result, obj2);
-    return v4Result;
+    obj.onDisallowedNavigation = function onDisallowedNavigation() {
+      connectedActivityLocation = EmbeddedActivitiesStore.getConnectedActivityLocation();
+      let tmp2;
+      if (null != connectedActivityLocation) {
+        const selfEmbeddedActivityForLocation = EmbeddedActivitiesStore.getSelfEmbeddedActivityForLocation(connectedActivityLocation);
+        let applicationId;
+        if (selfEmbeddedActivityForLocation != null) {
+          applicationId = selfEmbeddedActivityForLocation.applicationId;
+        }
+        tmp2 = applicationId;
+      }
+      if (tmp5) {
+        const obj2 = { location: connectedActivityLocation, applicationId: tmp2, showFeedback: false };
+        self.leaveActivity(obj2);
+        const obj4 = { body: null, confirmText: null };
+        const intl = util.intl;
+        obj4.body = intl.string(util.t.tYBBWz);
+        const intl2 = util.intl;
+        obj4.confirmText = intl2.string(util.t.BddRzS);
+        actions_AlertActionCreatorsDefault.show(obj4);
+      }
+      tmp5 = null != connectedActivityLocation && null != tmp2;
+    };
+    self.controller = createWebViewControllerDefault(tmp4, obj);
+    return tmp4;
   }
 };
 prototype["hasWebView"] = function hasWebView() {

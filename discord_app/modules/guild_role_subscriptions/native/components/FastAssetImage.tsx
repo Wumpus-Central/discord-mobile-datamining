@@ -1,9 +1,9 @@
-// === Module 15069: FastAssetImage ===
+// === Module 15331: FastAssetImage ===
 
-// Module 15069 (FastAssetImage)
+// Module 15331 (FastAssetImage)
 import c from "c" /* 576 */;
-import StoreUtils from "StoreUtils" /* 5329 */;
-import FastImageDefault from "FastImage" /* 5981 */;
+import StoreUtils from "StoreUtils" /* 5640 */;
+import FastImageDefault from "FastImage" /* 6164 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/FastAssetImage.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((applicationId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FastAssetImage(applicationId) {
   const cResult = c.c(10);
   ({ asset, style } = applicationId);
   [tmp5, require] = noop.useState();
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((applicationId) =
   cResult[4] = str;
   tmp8 = str;
   const tmp4 = _slicedToArray(noop.useState(), 2);
-}) : ((style) => {
+}) : (function FastAssetImage(style) {
   const applicationId = style.applicationId;
   const asset = style.asset;
   _slicedToArray = undefined;

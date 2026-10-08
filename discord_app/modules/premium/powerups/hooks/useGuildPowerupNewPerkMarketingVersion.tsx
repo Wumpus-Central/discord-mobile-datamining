@@ -1,16 +1,16 @@
-// === Module 12177: useGuildPowerupNewPerkMarketingVersion ===
+// === Module 12256: useGuildPowerupNewPerkMarketingVersion ===
 
-// Module 12177 (useGuildPowerupNewPerkMarketingVersion)
-import Powerups from "Powerups" /* 4777 */;
-import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils" /* 9285 */;
+// Module 12256 (useGuildPowerupNewPerkMarketingVersion)
+import Powerups from "Powerups" /* 4971 */;
+import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils" /* 8616 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GuildPowerupsConstants = fn(4774);
+const GuildPowerupsConstants = fn(4968);
 ({ GuildPowerupNewPerkMarketingVersion: hasOwnProperty, NEW_PERK_MARKETING_VERSION_TO_POWERUP_SKU_ID_SET: metroRequire } = GuildPowerupsConstants);
 const Constants = fn(1085);
 ({ GuildFeatures: closure_7, Permissions: closure_8 } = Constants);
@@ -18,7 +18,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupNewPerkMarketingVersion.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildPowerupNewPerkMarketingVersion(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   const cResult = require("c").c(6);
@@ -404,7 +404,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     }
   }
   arr = Array.from(dependencyMap2[constants.GUILD_TAG_BADGE_PACKS_WAVE_TWO]);
-}) : ((arg0, arg1) => {
+}) : (function useGuildPowerupNewPerkMarketingVersion(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   const gameServerEnabled = require("GameServerExperiment").useGameServerEnabled(arg0, "useGuildPowerupNewPerkMarketingVersion");

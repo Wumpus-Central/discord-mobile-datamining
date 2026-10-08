@@ -1,16 +1,16 @@
-// === Module 16587: ConjurePublishBlockedSheet ===
+// === Module 16842: ConjurePublishBlockedSheet ===
 
-// Module 16587 (ConjurePublishBlockedSheet)
+// Module 16842 (ConjurePublishBlockedSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import _modDef3753 from "module_3753" /* 3753 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4860 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6651 */;
-import ActionSheet from "ActionSheet" /* 6708 */;
-import conjurePublishBlockedReason from "conjurePublishBlockedReason" /* 16588 */;
+import _modDef3827 from "module_3827" /* 3827 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5054 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6828 */;
+import ActionSheet from "ActionSheet" /* 6885 */;
+import conjurePublishBlockedReason from "conjurePublishBlockedReason" /* 16843 */;
 import noop from "module_19" /* 19 */;
 
 const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
@@ -20,17 +20,17 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const ConjurePublishBlockedSheet = "ConjurePublishBlockedSheet";
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((reason) => {
+let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjurePublishBlockedSheet(reason) {
   const cResult = c.c(20);
   const tmp4 = closure_7();
   const tmp5 = reason.reason === conjurePublishBlockedReason.ConjurePublishBlockedReason.PERMISSIONS;
   if (cResult[0] !== tmp5) {
     const intl = util.intl;
-    const tmp8 = _modDef3753;
+    const tmp8 = _modDef3827;
     const stringResult = intl.string(tmp5 ? tmp8.wQ4UyJ : tmp8.ZNGLFE);
     cResult[0] = tmp5;
     cResult[1] = stringResult;
@@ -46,7 +46,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((reason) => {
     }
     if (cResult[4] !== tmp5) {
       const intl2 = util.intl;
-      const tmp17 = _modDef3753;
+      const tmp17 = _modDef3827;
       const stringResult1 = intl2.string(tmp5 ? tmp17.Agqmbt : tmp17.ffxKGK);
       cResult[4] = tmp5;
       cResult[5] = stringResult1;
@@ -65,7 +65,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((reason) => {
         if (tmp5) {
           let BddRzS = util.t.BddRzS;
         } else {
-          BddRzS = _modDef3753["/omTNx"];
+          BddRzS = _modDef3827["/omTNx"];
         }
         const stringResult2 = intl3.string(BddRzS);
         cResult[8] = tmp5;
@@ -73,7 +73,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((reason) => {
       } else {
         const _Symbol = Symbol;
         if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-          const fn = function v() {
+          const fn = function _() {
             return ActionSheetActionCreatorsDefault.hideActionSheet(ConjurePublishBlockedSheet);
           };
           cResult[10] = fn;
@@ -121,10 +121,10 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((reason) => {
       }
     }
   }
-}) : ((reason) => {
+}) : (function ConjurePublishBlockedSheet(reason) {
   const tmp4 = reason.reason === conjurePublishBlockedReason.ConjurePublishBlockedReason.PERMISSIONS;
   const intl = util.intl;
-  const tmp7 = _modDef3753;
+  const tmp7 = _modDef3827;
   if (tmp4) {
     let ZNGLFE = tmp7.wQ4UyJ;
     let tmp8 = importDefault;
@@ -137,14 +137,14 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((reason) => {
   obj.header = React4(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: intl.string(ZNGLFE) });
   const obj3 = { style: tmp.content, children: null };
   const intl2 = util.intl;
-  const tmp8Result = tmp8(3753);
+  const tmp8Result = tmp8(3827);
   const obj2 = { title: intl.string(ZNGLFE) };
   const items = [React4(Text_Text.Text, { variant: "text-md/normal", color: "text-muted", children: intl2.string(tmp4 ? tmp8Result.Agqmbt : tmp8Result.ffxKGK) }), ];
   const intl3 = util.intl;
   if (tmp4) {
     let BddRzS = util.t.BddRzS;
   } else {
-    BddRzS = tmp8(3753)["/omTNx"];
+    BddRzS = tmp8(3827)["/omTNx"];
   }
   const obj4 = { variant: "text-md/normal", color: "text-muted", children: intl2.string(tmp4 ? tmp8Result.Agqmbt : tmp8Result.ffxKGK) };
   items[1] = React4(components_Button_Button.Button, {

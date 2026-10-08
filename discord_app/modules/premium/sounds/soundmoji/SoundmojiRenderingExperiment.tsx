@@ -1,8 +1,8 @@
-// === Module 5809: SoundmojiRenderingExperiment ===
+// === Module 11620: SoundmojiRenderingExperiment ===
 
-// Module 5809 (SoundmojiRenderingExperiment)
+// Module 11620 (SoundmojiRenderingExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1440 */;
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting("modules/premium/sounds/soundmoji/Soun
 export const getSoundmojiRenderingExperiment = function getSoundmojiRenderingExperiment(location) {
   return closure_2.getConfig({ location: location.location }).enabled;
 };
-export const useSoundmojiRenderingExperiment = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+export const useSoundmojiRenderingExperiment = ReactCompilerGating.isReactCompilerEnabled() ? (function useSoundmojiRenderingExperiment(location) {
   const cResult = c.c(2);
   const _location = location.location;
   if (cResult[0] !== _location) {
@@ -28,4 +28,6 @@ export const useSoundmojiRenderingExperiment = ReactCompilerGating.isReactCompil
     tmp2 = cResult[1];
   }
   return closure_2.useConfig(tmp2).enabled;
-}) : ((location) => closure_2.useConfig({ location: location.location }).enabled);
+}) : (function useSoundmojiRenderingExperiment(location) {
+  return closure_2.useConfig({ location: location.location }).enabled;
+});

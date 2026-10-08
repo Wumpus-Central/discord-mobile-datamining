@@ -1,21 +1,20 @@
-// === Module 14362: subscriptionHelpers ===
+// === Module 14589: subscriptionHelpers ===
 
-// Module 14362 (subscriptionHelpers)
-import useIsScreenLandscape from "useIsScreenLandscape" /* 5919 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7221 */;
-import useThermalState from "useThermalState" /* 9025 */;
-import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 14322 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
-import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 14321 */;
-import FramesStore from "FramesStore" /* 9000 */;
-import QuestStore from "QuestStore" /* 7200 */;
+// Module 14589 (subscriptionHelpers)
+import QuestTaskUtils from "QuestTaskUtils" /* 7401 */;
+import useIsScreenLandscape from "useIsScreenLandscape" /* 8302 */;
+import useThermalState from "useThermalState" /* 11127 */;
+import isPostMessageSocketDefault from "isPostMessageSocket" /* 14547 */;
+import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 14548 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2062 */;
+import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 14546 */;
+import FramesStore from "FramesStore" /* 10612 */;
+import QuestStore from "QuestStore" /* 7379 */;
 
 require = fn;
-const TransportTypes = fn(5323).TransportTypes;
 const RPCEvents = fn(1085).RPCEvents;
-const Constants = fn(2011);
+const Constants = fn(2023);
 ({ ActivityLayoutMode: closure_7, ActivityScreenOrientation: closure_8 } = Constants);
-const asLaunched = fn(8738).asLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/server/events/subscriptionHelpers.tsx");
 
@@ -53,16 +52,16 @@ export const getInitialSubscriptionPayload = function getInitialSubscriptionPayl
     }
     return tmp34;
   } else if (RPCEvents.FRAME_LAYOUT_MODE_UPDATE === arg1) {
-    if (application.source.type !== TransportTypes.POST_MESSAGE) {
-      return null;
-    } else {
-      const tmp27 = asLaunched(FramesStore.getFrameByIframeId(application.source.iframeId));
-      let tmp28 = null;
-      if (null != tmp27) {
-        const obj7 = { layout_mode: tmp27.data.layoutMode };
-        tmp28 = obj7;
+    if (isPostMessageSocketDefault(application)) {
+      const frameByEmbeddedContext = FramesStore.getFrameByEmbeddedContext(application.context, application.source.iframeId);
+      let tmp29 = null;
+      if (null != frameByEmbeddedContext) {
+        const obj7 = { layout_mode: frameByEmbeddedContext.data.layoutMode };
+        tmp29 = obj7;
       }
-      return tmp28;
+      return tmp29;
+    } else {
+      return null;
     }
   } else if (RPCEvents.THERMAL_STATE_UPDATE === arg1) {
     const thermalState = useThermalState.getThermalState();

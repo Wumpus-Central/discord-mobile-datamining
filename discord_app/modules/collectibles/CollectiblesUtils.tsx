@@ -1,21 +1,21 @@
-// === Module 7078: CollectiblesUtils ===
+// === Module 7264: CollectiblesUtils ===
 
-// Module 7078 (CollectiblesUtils)
+// Module 7264 (CollectiblesUtils)
 import _mod12 from "module_12" /* 12 */;
 import Constants2 from "Constants" /* 1096 */;
 import util from "util" /* 1126 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import PerksStateUtils from "PerksStateUtils" /* 1383 */;
-import user from "user" /* 1385 */;
-import NameplateRecord from "NameplateRecord" /* 1978 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1980 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4534 */;
-import PriceUtils from "PriceUtils" /* 6750 */;
-import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7071 */;
-import ProfileEffectRecord from "ProfileEffectRecord" /* 7072 */;
-import ProfileFrameRecord from "ProfileFrameRecord" /* 7073 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7077 */;
-import ShopAssetConfigRecord from "ShopAssetConfigRecord" /* 7079 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import PerksStateUtils from "PerksStateUtils" /* 1395 */;
+import user from "user" /* 1397 */;
+import NameplateRecord from "NameplateRecord" /* 1990 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1992 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4726 */;
+import PriceUtils from "PriceUtils" /* 6926 */;
+import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7257 */;
+import ProfileEffectRecord from "ProfileEffectRecord" /* 7258 */;
+import ProfileFrameRecord from "ProfileFrameRecord" /* 7259 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7263 */;
+import ShopAssetConfigRecord from "ShopAssetConfigRecord" /* 7265 */;
 import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1087 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
@@ -283,7 +283,7 @@ export const getBundleItemsPriceSum = function getBundleItemsPriceSum(bundledPro
         return acc + num;
       }, 0);
     } else {
-      tmp(1369);
+      tmp(1381);
     }
     DEFAULT = constants3.DEFAULT;
     obj = require("PlatformUtils");
@@ -392,7 +392,7 @@ export const getProductDiscount = function getProductDiscount(product, hasShopDi
           return acc + num;
         }, 0);
       } else {
-        tmp(1369);
+        tmp(1381);
       }
       DEFAULT = constants3.DEFAULT;
       obj = require("PlatformUtils");
@@ -631,19 +631,19 @@ export const getDaysRemaining = function getDaysRemaining(date) {
   const month1 = date.getMonth();
   return Math.floor((Date.UTC(fullYear1, month1, date.getDate()) - Date.UTC(fullYear, month, date.getDate())) / 86400000);
 };
-export const shouldShowLimitedTimeBadge = function shouldShowLimitedTimeBadge(date) {
-  let tmp = null != date;
+export const shouldShowLimitedTimeBadge = function shouldShowLimitedTimeBadge(stateFromStores) {
+  let tmp = null != stateFromStores;
   if (tmp) {
     const _Date = Date;
-    date = new Date();
+    const date = new Date();
     const _Date2 = Date;
     const fullYear = date.getFullYear();
     const month = date.getMonth();
     const _Date3 = Date;
-    const fullYear1 = date.getFullYear();
-    const month1 = date.getMonth();
+    const fullYear1 = stateFromStores.getFullYear();
+    const month1 = stateFromStores.getMonth();
     const _Math = Math;
-    tmp = Math.floor((Date.UTC(fullYear1, month1, date.getDate()) - Date.UTC(fullYear, month, date.getDate())) / 86400000) <= options;
+    tmp = Math.floor((Date.UTC(fullYear1, month1, stateFromStores.getDate()) - Date.UTC(fullYear, month, date.getDate())) / 86400000) <= options;
     const UTCResult = Date.UTC(fullYear, month, date.getDate());
   }
   return tmp;

@@ -1,23 +1,23 @@
-// === Module 17380: VoicePanelVoiceControls ===
+// === Module 17662: VoicePanelVoiceControls ===
 
-// Module 17380 (VoicePanelVoiceControls)
+// Module 17662 (VoicePanelVoiceControls)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import MetaQuestUtils from "MetaQuestUtils" /* 1615 */;
-import UserSettings from "UserSettings" /* 2028 */;
-import TableRowGroup from "TableRowGroup" /* 6081 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6147 */;
-import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 9044 */;
-import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 9673 */;
-import UserSettingsVoiceProcessing from "UserSettingsVoiceProcessing" /* 9685 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11915 */;
-import useSelectedActiveStreamDefault from "useSelectedActiveStream" /* 13620 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17219 */;
-import MobileGoLiveEntrypointExperiment from "MobileGoLiveEntrypointExperiment" /* 17244 */;
-import VoicePanelVoiceControlsButtons from "VoicePanelVoiceControlsButtons" /* 17381 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1627 */;
+import UserSettings from "UserSettings" /* 2040 */;
+import TableRowGroup from "TableRowGroup" /* 6267 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6326 */;
+import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 10657 */;
+import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 10862 */;
+import UserSettingsVoiceProcessing from "UserSettingsVoiceProcessing" /* 10874 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11988 */;
+import useSelectedActiveStreamDefault from "useSelectedActiveStream" /* 13443 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17500 */;
+import MobileGoLiveEntrypointExperiment from "MobileGoLiveEntrypointExperiment" /* 17525 */;
+import VoicePanelVoiceControlsButtons from "VoicePanelVoiceControlsButtons" /* 17663 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
 
 const MobileGoLiveEntrypointExperimentDefault = MobileGoLiveEntrypointExperiment;
 
@@ -25,10 +25,10 @@ require = fn;
 function NOOP() {
 
 }
-const CONTROLS_DRAWER_HEADER_EXPANDED_SIZE = fn(11914).CONTROLS_DRAWER_HEADER_EXPANDED_SIZE;
+const CONTROLS_DRAWER_HEADER_EXPANDED_SIZE = fn(11987).CONTROLS_DRAWER_HEADER_EXPANDED_SIZE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { scrollView: { flex: 1, paddingHorizontal: nativeDefault.space.PX_16 }, scrollViewScreenReader: null, blurRegion: null };
 let obj3 = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16 };
 obj.scrollViewScreenReader = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16, marginTop: CONTROLS_DRAWER_HEADER_EXPANDED_SIZE };
@@ -36,7 +36,7 @@ obj.blurRegion = { height: CONTROLS_DRAWER_HEADER_EXPANDED_SIZE };
 let closure_8 = createStyles.createStyles(obj);
 let closure_9 = ReanimatedRexport.createAnimatedComponent(fn(17).ScrollView);
 let ReactCompilerGating = fn(558);
-let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ListItems(channel) {
   const cResult = channel(treatment[9]).c(49);
   channel = channel.channel;
   const openTab = channel.openTab;
@@ -284,7 +284,7 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((chan
       tmp12 = tmp13;
     }
   }
-  const fn = function v() {
+  function renderSecondRowItem() {
     if (MobileGoLiveEntrypointExperiment.MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT === treatment) {
       const obj2 = { openTab };
       return hasOwnProperty(VoicePanelVoiceControlsButtons.ChatButton, obj2);
@@ -295,14 +295,14 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((chan
       const obj = { channel };
       return hasOwnProperty(VoicePanelVoiceControlsButtons.ScreenshareButton, obj);
     }
-  };
+  }
   cResult[2] = channel;
   cResult[3] = treatment;
   cResult[4] = openTab;
-  cResult[5] = fn;
-  tmp10 = fn;
+  cResult[5] = renderSecondRowItem;
+  tmp10 = renderSecondRowItem;
   const tmp4Result2 = openTab(treatment[15]);
-}) : ((arg0) => {
+}) : (function ListItems(arg0) {
   ({ channel, openTab } = arg0);
   const channelId = noop.useContext(VoicePanelStateContextDefault).channelId;
   const tmp2 = useIsConnectedToVoiceChannelDefault(channelId);
@@ -394,7 +394,7 @@ let obj4 = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16, marginTop: C
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelVoiceControls.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((isVisible) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePanelVoiceControls(isVisible) {
   const cResult = isVisible(sharedValue[9]).c(38);
   isVisible = isVisible.isVisible;
   const openTab = isVisible.openTab;
@@ -599,7 +599,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((isVisi
   tmp17 = items3;
   tmp16 = B;
   const tmpResult7 = isVisible(sharedValue[24]);
-}) : ((isVisible) => {
+}) : (function VoicePanelVoiceControls(isVisible) {
   isVisible = isVisible.isVisible;
   let channelId;
   let sharedValue;

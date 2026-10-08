@@ -1,14 +1,14 @@
-// === Module 15515: MFAModal ===
+// === Module 15777: MFAModal ===
 
-// Module 15515 (MFAModal)
+// Module 15777 (MFAModal)
 import util from "util" /* 1126 */;
-import _modDef4815 from "module_4815" /* 4815 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5715 */;
-import NavigatorHeader from "NavigatorHeader" /* 6017 */;
-import MFAUtils from "MFAUtils" /* 6446 */;
-import HeaderActionButton from "HeaderActionButton" /* 6890 */;
-import MfaStepsTypes from "MfaStepsTypes" /* 15516 */;
+import _modDef5009 from "module_5009" /* 5009 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5298 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5940 */;
+import NavigatorHeader from "NavigatorHeader" /* 6203 */;
+import MFAUtils from "MFAUtils" /* 6624 */;
+import HeaderActionButton from "HeaderActionButton" /* 7079 */;
+import MfaStepsTypes from "MfaStepsTypes" /* 15778 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -21,7 +21,7 @@ const jsx = fn(21).jsx;
 LogBox.ignoreLogs(["Non-serializable values were found in the navigation state"]);
 const MFA_MODAL_KEY = "MFA_MODAL_KEY";
 const ReactCompilerGating = fn(558);
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((cancel) => {
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function MFAModal(cancel) {
   const cResult = require("c").c(84);
   if (cResult[0] !== cancel) {
     ({ mfaChallenge, finish } = cancel);
@@ -82,7 +82,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((cancel) => {
             return;
           }
         }
-        let obj2 = { name: tmp(15516).MfaScreens.SELECT, params: null };
+        let obj2 = { name: tmp(15778).MfaScreens.SELECT, params: null };
         const obj3 = { mfaChallenge: tmp8, finish: tmp24 };
         obj2.params = obj3;
         cResult[19] = tmp24;
@@ -160,7 +160,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((cancel) => {
             const obj11 = { value, done: true };
             return obj11;
           } else {
-            tmp4(5099).popWithKey(MFA_MODAL_KEY);
+            tmp4(5940).popWithKey(MFA_MODAL_KEY);
             ticket = 3;
             return { value: "IconComponent", done: null };
           }
@@ -170,7 +170,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((cancel) => {
         }
       }
     });
-    const fn = function() {
+    function t3() {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -179,11 +179,11 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((cancel) => {
         applyArgumentsResult = apply(self, arguments);
       }
       return applyArgumentsResult;
-    };
+    }
     cResult[13] = tmp8.ticket;
     cResult[14] = finish;
-    cResult[15] = fn;
-    tmp24 = fn;
+    cResult[15] = t3;
+    tmp24 = t3;
   } else if (cResult[7] !== tmp8.methods) {
     const _Symbol = Symbol;
     class L {
@@ -298,7 +298,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((cancel) => {
     cResult[12] = tmp19;
   }
   let obj = require("c");
-}) : ((mfaChallenge) => {
+}) : (function MFAModal(mfaChallenge) {
   mfaChallenge = mfaChallenge.mfaChallenge;
   _require = mfaChallenge;
   let finish = mfaChallenge.finish;
@@ -390,7 +390,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((cancel) => {
     obj3.headerRight = headerRight;
     obj3.render = function render(arg0) {
       const merged = Object.assign(arg0);
-      return closure_1_8(finish(15517), {});
+      return closure_1_8(finish(15779), {});
     };
     obj2[MfaStepsTypes.MfaScreens.SELECT] = obj3;
     const obj5 = {};
@@ -420,7 +420,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((cancel) => {
     obj5.headerRight = tmp12;
     obj5.render = function render(arg0) {
       const merged = Object.assign(arg0);
-      return closure_1_8(finish(15518), {});
+      return closure_1_8(finish(15780), {});
     };
     obj2[MfaStepsTypes.MfaScreens.WEBAUTHN] = obj5;
     const obj6 = {};
@@ -450,7 +450,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((cancel) => {
     obj6.headerRight = tmp20;
     obj6.render = function render(arg0) {
       const merged = Object.assign(arg0);
-      return closure_1_8(finish(15523), {});
+      return closure_1_8(finish(15785), {});
     };
     obj2[MfaStepsTypes.MfaScreens.TOTP] = obj6;
     const obj7 = {};
@@ -480,7 +480,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((cancel) => {
     obj7.headerRight = tmp28;
     obj7.render = function render(arg0) {
       const merged = Object.assign(arg0);
-      return closure_1_8(finish(15526), {});
+      return closure_1_8(finish(15788), {});
     };
     obj2[MfaStepsTypes.MfaScreens.BACKUP] = obj7;
     const obj8 = {};
@@ -510,7 +510,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((cancel) => {
     obj8.headerRight = tmp36;
     obj8.render = function render(arg0) {
       const merged = Object.assign(arg0);
-      return closure_1_8(finish(15527), {});
+      return closure_1_8(finish(15789), {});
     };
     obj2[MfaStepsTypes.MfaScreens.SMS] = obj8;
     const obj9 = {};
@@ -540,7 +540,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((cancel) => {
     obj9.headerRight = tmp44;
     obj9.render = function render(arg0) {
       const merged = Object.assign(arg0);
-      return closure_1_8(finish(15528), {});
+      return closure_1_8(finish(15790), {});
     };
     obj2[MfaStepsTypes.MfaScreens.PASSWORD] = obj9;
     return obj2;

@@ -1,16 +1,16 @@
-// === Module 8556: CollectiblesShopPricePlaceholder ===
+// === Module 9040: CollectiblesShopPricePlaceholder ===
 
-// Module 8556 (CollectiblesShopPricePlaceholder)
+// Module 9040 (CollectiblesShopPricePlaceholder)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import timing from "timing" /* 4897 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import timing from "timing" /* 5091 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { skeletonContainer: { height: 16, flex: 1, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND } };
 let closure_5 = createStyles.createStyles(obj2);
 const __initData = { code: "function CollectiblesShopPricePlaceholderTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };
@@ -20,13 +20,13 @@ let obj3 = { height: 16, flex: 1, borderRadius: nativeDefault.radii.xs, backgrou
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopPricePlaceholder.tsx");
 
-export const CollectiblesShopPricePlaceholder = ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
+export const CollectiblesShopPricePlaceholder = ReactCompilerGating.isReactCompilerEnabled() ? (function CollectiblesShopPricePlaceholder(style) {
   const cResult = sharedValue(576).c(7);
   style = style.style;
   const tmp4 = closure_5();
   let obj = sharedValue(576);
   const tmp = sharedValue;
-  sharedValue = sharedValue(4618).useSharedValue(0.3);
+  sharedValue = sharedValue(4810).useSharedValue(0.3);
   if (cResult[0] !== sharedValue) {
     const fn = function n() {
       const obj = ReanimatedRexport;
@@ -43,14 +43,17 @@ export const CollectiblesShopPricePlaceholder = ReactCompilerGating.isReactCompi
     tmp7 = cResult[2];
   }
   const effect = noop.useEffect(tmp6, tmp7);
-  const obj2 = sharedValue(4618);
-  const fn2 = function f() {
-    return { opacity: sharedValue.get() };
-  };
-  fn2.__closure = { opacity: sharedValue };
-  fn2.__workletHash = 10107093534072;
-  fn2.__initData = __initData;
-  const animatedStyle = tmp(4618).useAnimatedStyle(fn2);
+  const obj2 = sharedValue(4810);
+  class C {
+    constructor() {
+      obj = { opacity: closure_0.get() };
+      return obj;
+    }
+  }
+  C.__closure = { opacity: sharedValue };
+  C.__workletHash = 10107093534072;
+  C.__initData = __initData;
+  const animatedStyle = tmp(4810).useAnimatedStyle(C);
   if (cResult[3] === animatedStyle) {
     if (cResult[4] === style) {
       if (cResult[5] === tmp4.skeletonContainer) {
@@ -68,24 +71,24 @@ export const CollectiblesShopPricePlaceholder = ReactCompilerGating.isReactCompi
   cResult[5] = tmp4.skeletonContainer;
   cResult[6] = tmp11;
   tmp10 = tmp11;
-  const tmpResult = tmp(4618);
-}) : ((style) => {
+  const tmpResult = tmp(4810);
+}) : (function CollectiblesShopPricePlaceholder(style) {
   let sharedValue;
   const tmp = closure_5();
-  sharedValue = sharedValue(4618).useSharedValue(0.3);
+  sharedValue = sharedValue(4810).useSharedValue(0.3);
   const items = [sharedValue];
   const effect = noop.useEffect(() => {
     const obj = ReanimatedRexport;
     const result = sharedValue.set(obj.withRepeat(timing.withTiming(1, { duration: 650 }), -1, true));
   }, items);
-  let obj = sharedValue(4618);
-  const fn = function _() {
+  let obj = sharedValue(4810);
+  const fn = function h() {
     return { opacity: sharedValue.get() };
   };
   fn.__closure = { opacity: sharedValue };
   fn.__workletHash = 5265836727291;
   fn.__initData = __initData2;
-  const animatedStyle = sharedValue(4618).useAnimatedStyle(fn);
+  const animatedStyle = sharedValue(4810).useAnimatedStyle(fn);
   const obj3 = { style: null };
   const items1 = [tmp.skeletonContainer, style.style, animatedStyle];
   obj3.style = items1;

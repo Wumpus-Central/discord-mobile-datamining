@@ -1,8 +1,8 @@
-// === Module 16267: GuildsBarFolderMenuItems ===
+// === Module 16527: GuildsBarFolderMenuItems ===
 
-// Module 16267 (GuildsBarFolderMenuItems)
+// Module 16527 (GuildsBarFolderMenuItems)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SortedGuildStore from "SortedGuildStore" /* 5623 */;
+import SortedGuildStore from "SortedGuildStore" /* 5968 */;
 
 const require = globalThis.__r;
 

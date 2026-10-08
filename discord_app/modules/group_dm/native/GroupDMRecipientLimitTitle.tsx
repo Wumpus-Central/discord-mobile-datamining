@@ -1,14 +1,14 @@
-// === Module 16959: GroupDMRecipientLimitTitle ===
+// === Module 17240: GroupDMRecipientLimitTitle ===
 
-// Module 16959 (GroupDMRecipientLimitTitle)
+// Module 17240 (GroupDMRecipientLimitTitle)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import useToken from "useToken" /* 4586 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8346 */;
-import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11226 */;
-import openGroupDMNitroCapInfoActionSheetDefault from "openGroupDMNitroCapInfoActionSheet" /* 11828 */;
+import useToken from "useToken" /* 4778 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9005 */;
+import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11341 */;
+import openGroupDMNitroCapInfoActionSheetDefault from "openGroupDMNitroCapInfoActionSheet" /* 11913 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,9 +17,9 @@ get_ActivityIndicator = fn(17);
 const MAX_GROUP_DM_PARTICIPANTS = fn(1085).MAX_GROUP_DM_PARTICIPANTS;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { title: { textAlign: "center", fontSize: 18 }, subtitleRow: { alignSelf: "center", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 }, subtitle: { textAlign: "center" }, nitroWheelIcon: null };
-const PlatformUtils = fn(1369);
+const PlatformUtils = fn(1381);
 let tmp5;
 if (PlatformUtils.isAndroid()) {
   let items = [{ translateY: 2 }];
@@ -32,7 +32,7 @@ let obj3 = { alignSelf: "center", flexDirection: "row", alignItems: "center", ga
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/group_dm/native/GroupDMRecipientLimitTitle.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GroupDMRecipientLimitTitle(arg0) {
   const cResult = c.c(30);
   ({ title, memberCount, recipientLimit } = arg0);
   const tmp4 = closure_9();
@@ -186,7 +186,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = recipientLimit;
   cResult[2] = formatToPlainStringResult;
   tmp13 = formatToPlainStringResult;
-}) : ((arg0) => {
+}) : (function GroupDMRecipientLimitTitle(arg0) {
   ({ title, memberCount, recipientLimit } = arg0);
   const tmp = closure_9();
   const groupDMNitroAudience = GroupDMNitroUpsellModel.useGroupDMNitroAudience();

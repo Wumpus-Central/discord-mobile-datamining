@@ -1,8 +1,8 @@
-// === Module 10556: useMobileSocialLayerPurchaseSKU ===
+// === Module 10153: useMobileSocialLayerPurchaseSKU ===
 
-// Module 10556 (useMobileSocialLayerPurchaseSKU)
-import GPlayActionCreators from "GPlayActionCreators" /* 8901 */;
-import useMobilePurchaseSKUDefault from "useMobilePurchaseSKU" /* 10557 */;
+// Module 10153 (useMobileSocialLayerPurchaseSKU)
+import GPlayActionCreators from "GPlayActionCreators" /* 9334 */;
+import useMobilePurchaseSKUDefault from "useMobilePurchaseSKU" /* 10154 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/slayer_storefront/native/hooks/useMobileSocialLayerPurchaseSKU.android.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((sku) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useMobileSocialLayerPurchaseSKU(sku) {
   const cResult = require("c").c(11);
   if (cResult[0] !== sku) {
     sku = sku.sku;
@@ -128,7 +128,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((sku) => {
   }
   DEFAULT = constants.DEFAULT;
   let obj = require("c");
-}) : ((sku) => {
+}) : (function useMobileSocialLayerPurchaseSKU(sku) {
   sku = sku.sku;
   const merged = Object.assign(sku, Object.assign({ sku: 0 }));
   c0 = undefined;

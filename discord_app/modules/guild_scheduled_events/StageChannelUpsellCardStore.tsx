@@ -1,12 +1,12 @@
-// === Module 9242: StageChannelUpsellCardStore ===
+// === Module 8552: StageChannelUpsellCardStore ===
 
-// Module 9242 (StageChannelUpsellCardStore)
+// Module 8552 (StageChannelUpsellCardStore)
 import Storage2 from "Storage" /* 510 */;
 import c from "c" /* 576 */;
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
-import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 2057 */;
-import _mod4498 from "module_4498" /* 4498 */;
-import identity from "module_1254" /* 1254 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1271 */;
+import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 2069 */;
+import _mod4690 from "module_4690" /* 4690 */;
+import identity from "module_1266" /* 1266 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -27,7 +27,7 @@ let closure_3 = identity.createWithEqualityFn((arg0) => {
 });
 let result = size.fileFinishedImporting("modules/guild_scheduled_events/StageChannelUpsellCardStore.tsx");
 
-export const useStageChannelUpsellCardStore = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useStageChannelUpsellCardStore = ReactCompilerGating.isReactCompilerEnabled() ? (function useStageChannelUpsellCardStore() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function l(arg0) {
@@ -40,9 +40,11 @@ export const useStageChannelUpsellCardStore = ReactCompilerGating.isReactCompile
   } else {
     first = cResult[0];
   }
-  return closure_3(first, _mod4498.shallow);
-}) : (() => closure_3((arg0) => {
-  const items = [, ];
-  ({ hasSeenUpsellCard: arr[0], markAsSeen: arr[1] } = arg0);
-  return items;
-}, _mod4498.shallow));
+  return closure_3(first, _mod4690.shallow);
+}) : (function useStageChannelUpsellCardStore() {
+  return closure_3((arg0) => {
+    const items = [, ];
+    ({ hasSeenUpsellCard: arr[0], markAsSeen: arr[1] } = arg0);
+    return items;
+  }, _mod4690.shallow);
+});

@@ -1,12 +1,12 @@
-// === Module 14275: ContextMenuItem ===
+// === Module 14099: ContextMenuItem ===
 
-// Module 14275 (ContextMenuItem)
+// Module 14099 (ContextMenuItem)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4618 */;
-import spring from "spring" /* 5604 */;
-import springPresets from "springPresets" /* 5605 */;
-import ContextMenuState from "ContextMenuState" /* 7591 */;
-import ContextMenuConstants from "ContextMenuConstants" /* 7592 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4810 */;
+import spring from "spring" /* 5374 */;
+import springPresets from "springPresets" /* 5378 */;
+import ContextMenuState from "ContextMenuState" /* 9298 */;
+import ContextMenuConstants from "ContextMenuConstants" /* 9299 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexport = ReanimatedRexport2;
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let closure_7 = ReanimatedRexport.createAnimatedComponent(Pressable);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles((arg0) => {
   const obj = { container: { padding: ContextMenuConstants.CONTEXT_MENU_ITEM_PADDING, minHeight: ContextMenuConstants.CONTEXT_MENU_ITEM_BASE_HEIGHT, flexDirection: "row", justifyContent: "space-between", alignItems: "center", gap: 8 }, containerRefresh: { justifyContent: "flex-start" }, roundedTop: null, roundedBottom: null, border: null, pressed: null, icon: null, label: null, trailingIndicator: null };
   const obj2 = { padding: ContextMenuConstants.CONTEXT_MENU_ITEM_PADDING, minHeight: ContextMenuConstants.CONTEXT_MENU_ITEM_BASE_HEIGHT, flexDirection: "row", justifyContent: "space-between", alignItems: "center", gap: 8 };
@@ -50,7 +50,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/ContextMenu/native/ContextMenuItem.native.tsx");
 
-export const ContextMenuItem = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const ContextMenuItem = ReactCompilerGating.isReactCompilerEnabled() ? (function ContextMenuItem(arg0) {
   const cResult = index(pan[8]).c(42);
   ({ label, IconComponent, trailingIndicator, iconSource, start, end, index } = arg0);
   ({ state, onPress, variant, accessibilityRole } = arg0);
@@ -335,7 +335,7 @@ export const ContextMenuItem = ReactCompilerGating.isReactCompilerEnabled() ? ((
   num = 3;
   cResult[3] = tmp11;
   const obj3 = { activeIndex, index, pressed: sharedValue, withSpring: index(pan[10]).withSpring, backgroundColor, SUBTLE_SPRING: index(pan[11]).SUBTLE_SPRING };
-}) : ((accessibilityRole) => {
+}) : (function ContextMenuItem(accessibilityRole) {
   ({ IconComponent, trailingIndicator, iconSource, start, end, index } = accessibilityRole);
   ({ state, variant } = accessibilityRole);
   ({ label, lastInSection, onPress } = accessibilityRole);

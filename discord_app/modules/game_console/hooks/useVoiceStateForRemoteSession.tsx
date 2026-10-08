@@ -1,18 +1,18 @@
-// === Module 9458: useVoiceStateForRemoteSession ===
+// === Module 9109: useVoiceStateForRemoteSession ===
 
-// Module 9458 (useVoiceStateForRemoteSession)
+// Module 9109 (useVoiceStateForRemoteSession)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import VoiceStateStore from "VoiceStateStore" /* 4915 */;
-import GameConsoleStore from "GameConsoleStore" /* 4913 */;
+import VoiceStateStore from "VoiceStateStore" /* 5111 */;
+import GameConsoleStore from "GameConsoleStore" /* 5109 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_console/hooks/useVoiceStateForRemoteSession.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useVoiceStateForRemoteSession() {
   const cResult = c.c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AuthenticationStore, VoiceStateStore, GameConsoleStore];
@@ -32,7 +32,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     [tmp4, tmp5, tmp6] = cResult;
   }
   return initialize.useStateFromStores(tmp4, tmp5, tmp6);
-}) : (() => {
+}) : (function useVoiceStateForRemoteSession() {
   const items = [AuthenticationStore, VoiceStateStore, GameConsoleStore];
   return initialize.useStateFromStores(items, () => {
     id = id.getId();

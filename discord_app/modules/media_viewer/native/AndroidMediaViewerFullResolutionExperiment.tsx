@@ -1,7 +1,7 @@
-// === Module 12799: AndroidMediaViewerFullResolutionExperiment ===
+// === Module 12946: AndroidMediaViewerFullResolutionExperiment ===
 
-// Module 12799 (AndroidMediaViewerFullResolutionExperiment)
-import ApexExperiment from "ApexExperiment" /* 1440 */;
+// Module 12946 (AndroidMediaViewerFullResolutionExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-10-android-media-viewer-full-resolution", kind: "user", defaultConfig: { enabled: false }, variations: null };

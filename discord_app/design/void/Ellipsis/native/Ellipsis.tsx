@@ -1,13 +1,13 @@
-// === Module 13923: Ellipsis ===
+// === Module 14226: Ellipsis ===
 
-// Module 13923 (Ellipsis)
+// Module 14226 (Ellipsis)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import timing from "timing" /* 4897 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import timing from "timing" /* 5091 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 require = fn;
 const View = fn(17).View;
@@ -17,7 +17,7 @@ let c8 = 233.33333333333334;
 let c9 = 116.66666666666667;
 let c10 = 0.4;
 let c11 = 0.75;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { typingIndicator: { justifyContent: "center", alignItems: "center", flexDirection: "row", marginRight: 4 }, typingIndicatorDot: null };
 let size = { backgroundColor: nativeDefault.colors.TEXT_DEFAULT, borderRadius: nativeDefault.radii.round, marginRight: 2, height: 6, width: 6 };
 obj.typingIndicatorDot = size;
@@ -27,7 +27,7 @@ const __initData = { code: "function EllipsisTsx2(){const{opacityValue,disableSc
 let closure_15 = { code: "function animateValue_EllipsisTsx3(value,fromValue,toValue){const{withRepeat,withSequence,withDelay,sequenceStartDelay,withTiming,delay,animationTimeMs,sequenceEndDelay}=this.__closure;value.set(withRepeat(withSequence(withDelay(sequenceStartDelay,withTiming(fromValue,{duration:0})),withDelay(delay,withSequence(withTiming(toValue,{duration:animationTimeMs}),withTiming(fromValue,{duration:animationTimeMs}))),withDelay(sequenceEndDelay,withTiming(fromValue,{duration:0}))),-1));}" };
 const __initData2 = { code: "function EllipsisTsx4(){const{opacityValue,disableScale,scaleValue}=this.__closure;return{opacity:opacityValue.get(),transform:disableScale?undefined:[{scale:scaleValue.get()}]};}" };
 let ReactCompilerGating = fn(558);
-let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((delay) => {
+let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function AnimatedEllipsisDot(delay) {
   const cResult = disableScale(sequenceStartDelay[7]).c(12);
   ({ dotStyle, disableScale } = delay);
   delay = delay.delay;
@@ -48,7 +48,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((delay) => {
               let tmp8 = cResult[7];
             }
             const effect = sequenceEndDelay.useEffect(tmp7, tmp8);
-            const fn2 = function v() {
+            const fn2 = function b() {
               const obj = { opacity: sharedValue.get(), transform: null };
               let tmp;
               if (!disableScale) {
@@ -130,7 +130,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((delay) => {
   tmp8 = items1;
   tmp7 = fn;
   let obj3 = disableScale(sequenceStartDelay[8]);
-}) : ((disableScale) => {
+}) : (function AnimatedEllipsisDot(disableScale) {
   disableScale = disableScale.disableScale;
   const delay = disableScale.delay;
   const sequenceStartDelay = disableScale.sequenceStartDelay;
@@ -198,7 +198,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((delay) => {
   return jsx(delay(sequenceStartDelay[8]).View, { style: null });
 });
 ReactCompilerGating = fn(558);
-let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((dotStyle) => {
+let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function EllipsisDot(dotStyle) {
   const cResult = c.c(4);
   dotStyle = dotStyle.dotStyle;
   const tmp2 = closure_12();
@@ -223,7 +223,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((dotStyle) => {
   cResult[2] = tmp2.typingIndicatorDot;
   cResult[3] = tmp6;
   tmp5 = tmp6;
-}) : ((dotStyle) => {
+}) : (function EllipsisDot(dotStyle) {
   const obj = { style: null };
   const items = [closure_12().typingIndicatorDot, { opacity }, dotStyle.dotStyle];
   obj.style = items;
@@ -233,14 +233,14 @@ ReactCompilerGating = fn(558);
 size = fn(2);
 let result = size.fileFinishedImporting("design/void/Ellipsis/native/Ellipsis.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((dotStyle) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function Ellipsis(dotStyle) {
   const cResult = dotStyle(576).c(13);
   dotStyle = dotStyle.dotStyle;
   ({ style, disableScale } = dotStyle);
   const tmp4 = closure_12();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AccessibilityStore];
-    const fn = function s() {
+    const fn = function u() {
       return useReducedMotion.useReducedMotion;
     };
     cResult[0] = items;
@@ -297,7 +297,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((dotSty
   cResult[4] = items2;
   tmp9 = items2;
   const tmpResult = dotStyle(504);
-}) : ((style) => {
+}) : (function Ellipsis(style) {
   ({ dotStyle: require, disableScale: importDefault } = style);
   const tmp = closure_12();
   const items = [AccessibilityStore];

@@ -1,6 +1,6 @@
-// === Module 7003: Lru ===
+// === Module 7191: Lru ===
 
-// Module 7003 (Lru)
+// Module 7191 (Lru)
 import size from "module_2" /* 2 */;
 
 class Lru {
@@ -72,6 +72,23 @@ prototype["put"] = function put(arg0, arg1) {
     const items1 = [oldestKeyResult, value];
     return items1;
   }
+};
+prototype["putOldest"] = function putOldest(arg0, arg1) {
+  const items = this.items;
+  items.delete(arg0);
+  const items1 = [arg0, arg1];
+  const items2 = [items1, ...this.items];
+  this.items = new Map(items2);
+};
+prototype["newest"] = function newest() {
+  let tmp;
+  const items = this.items;
+  const entries = items.entries();
+  for (const item10009 of entries) {
+    tmp = item10009;
+    continue;
+  }
+  return tmp;
 };
 prototype["delete"] = function delete(arg0) {
   const items = this.items;

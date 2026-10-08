@@ -1,9 +1,9 @@
-// === Module 7126: UserProfileGameWidgetTypes ===
+// === Module 7311: UserProfileGameWidgetTypes ===
 
-// Module 7126 (UserProfileGameWidgetTypes)
-import GameWidgetLimits from "GameWidgetLimits" /* 5902 */;
-import WidgetType from "WidgetType" /* 7125 */;
-import UserProfileWidgetConstants from "UserProfileWidgetConstants" /* 7127 */;
+// Module 7311 (UserProfileGameWidgetTypes)
+import WidgetType from "WidgetType" /* 7310 */;
+import GameWidgetLimits from "GameWidgetLimits" /* 7313 */;
+import UserProfileWidgetConstants from "UserProfileWidgetConstants" /* 7312 */;
 import size from "module_2" /* 2 */;
 
 ({ widgetSupportsComment: c2, widgetSupportsTags: c3 } = UserProfileWidgetConstants);
@@ -24,7 +24,9 @@ prototype["toSubmission"] = function toSubmission() {
   const obj = { id: this.id, data: null };
   const obj2 = { type: this.type, games: null };
   const games = this.games;
-  obj2.games = games.map((gameId) => ({ game_id: gameId.gameId, comment: gameId.comment, tags: gameId.tags }));
+  obj2.games = games.map(function convertGame(gameId) {
+    return { game_id: gameId.gameId, comment: gameId.comment, tags: gameId.tags };
+  });
   obj.data = obj2;
   return obj;
 };

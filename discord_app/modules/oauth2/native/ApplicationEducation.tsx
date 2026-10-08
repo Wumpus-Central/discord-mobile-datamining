@@ -1,17 +1,17 @@
-// === Module 8972: ApplicationEducation ===
+// === Module 12877: ApplicationEducation ===
 
-// Module 8972 (ApplicationEducation)
+// Module 12877 (ApplicationEducation)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import FriendsIcon from "FriendsIcon" /* 4837 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import SettingsIcon from "SettingsIcon" /* 6893 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8025 */;
-import useIsSocialLayerParentApplicationDefault from "useIsSocialLayerParentApplication" /* 8757 */;
-import GameControllerIcon from "GameControllerIcon" /* 8771 */;
-import ChatSmileIcon from "ChatSmileIcon" /* 8973 */;
-import AuthorizeFormSeparator from "AuthorizeFormSeparator" /* 8975 */;
+import FriendsIcon from "FriendsIcon" /* 5031 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import SettingsIcon from "SettingsIcon" /* 7082 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8433 */;
+import GameControllerIcon from "GameControllerIcon" /* 9117 */;
+import useIsSocialLayerParentApplicationDefault from "useIsSocialLayerParentApplication" /* 9137 */;
+import ChatSmileIcon from "ChatSmileIcon" /* 12878 */;
+import AuthorizeFormSeparator from "AuthorizeFormSeparator" /* 12880 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,14 +19,14 @@ const View = fn(17).View;
 const MAX_FRIENDS = fn(1085).MAX_FRIENDS;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { applicationEducation: { flexDirection: "column", gap: 16 }, entry: { flexDirection: "row", alignItems: "center", gap: 12 }, entryText: { flex: 1 }, entryIcon: null };
 let size = { width: 20, height: 20, tintColor: nativeDefault.colors.TEXT_MUTED };
 obj2.entryIcon = size;
 let closure_8 = createStyles.createStyles(obj2);
 fn(558);
 const ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function ApplicationEducationEntry(arg0) {
   const cResult = c.c(10);
   ({ iconComponent, text } = arg0);
   const tmp4 = closure_8();
@@ -72,7 +72,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = tmp4.entryIcon;
   cResult[2] = iconComponentResult;
   tmp5 = iconComponentResult;
-}) : ((children) => {
+}) : (function ApplicationEducationEntry(children) {
   const iconComponent = children.iconComponent;
   const tmp = closure_8();
   const obj = { style: tmp.entry, children: null };
@@ -88,7 +88,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 size = fn(2);
 const result = size.fileFinishedImporting("modules/oauth2/native/ApplicationEducation.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ApplicationEducation(arg0) {
   const cResult = c.c(43);
   ({ application, accountScopes } = arg0);
   const tmp4 = closure_8();
@@ -341,7 +341,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       tmp59 = tmp62;
     }
   }
-}) : ((arg0) => {
+}) : (function ApplicationEducation(arg0) {
   ({ application, accountScopes } = arg0);
   const items = [];
   const tmp3 = useIsSocialLayerParentApplicationDefault(application);

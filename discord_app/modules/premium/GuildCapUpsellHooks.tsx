@@ -1,12 +1,12 @@
-// === Module 6718: GuildCapUpsellHooks ===
+// === Module 6894: GuildCapUpsellHooks ===
 
-// Module 6718 (GuildCapUpsellHooks)
+// Module 6894 (GuildCapUpsellHooks)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4534 */;
-import HotspotStore2 from "HotspotStore" /* 6719 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import UserStore from "UserStore" /* 1377 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4726 */;
+import HotspotStore2 from "HotspotStore" /* 6895 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const MAX_USER_GUILDS = fn(1085).MAX_USER_GUILDS;
@@ -25,7 +25,7 @@ function hasIncreasedGuildCap(currentUser) {
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/GuildCapUpsellHooks.tsx");
 
-export const useShouldShowInlineGuildCapUpsell = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useShouldShowInlineGuildCapUpsell = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldShowInlineGuildCapUpsell() {
   const cResult = c.c(6);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GuildStore];
@@ -42,7 +42,7 @@ export const useShouldShowInlineGuildCapUpsell = ReactCompilerGating.isReactComp
   let stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [HotspotStore2.HotspotStore];
-    const fn2 = function c() {
+    const fn2 = function p() {
       const HotspotStore = HotspotStore2.HotspotStore;
       return HotspotStore.hasHotspot(HotspotStore2.HotspotLocations.GUILD_CAP_INLINE_UPSELL);
     };
@@ -81,7 +81,7 @@ export const useShouldShowInlineGuildCapUpsell = ReactCompilerGating.isReactComp
     stateFromStores = stateFromStoresObject;
   }
   return stateFromStores;
-}) : (() => {
+}) : (function useShouldShowInlineGuildCapUpsell() {
   const items = [GuildStore];
   let stateFromStores = initialize.useStateFromStores(items, () => guildCount.getGuildCount() >= 95);
   const items1 = [HotspotStore2.HotspotStore];

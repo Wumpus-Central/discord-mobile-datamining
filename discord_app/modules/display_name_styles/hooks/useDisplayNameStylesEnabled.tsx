@@ -1,18 +1,18 @@
-// === Module 5313: useDisplayNameStylesEnabled ===
+// === Module 5625: useDisplayNameStylesEnabled ===
 
-// Module 5313 (useDisplayNameStylesEnabled)
+// Module 5625 (useDisplayNameStylesEnabled)
 import _mod19 from "module_19" /* 19 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import DisplayNameStylesContext from "DisplayNameStylesContext" /* 5314 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import DisplayNameStylesContext from "DisplayNameStylesContext" /* 5626 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const useContext = _mod19.useContext;
 const result = size.fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesEnabled.tsx");
 
-export const useDisplayNameStylesEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useDisplayNameStylesEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useDisplayNameStylesEnabled() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AccessibilityStore];
@@ -31,7 +31,7 @@ export const useDisplayNameStylesEnabled = ReactCompilerGating.isReactCompilerEn
     overrideSettings = useContext(DisplayNameStylesContext.DisplayNameStylesContext).overrideSettings;
   }
   return overrideSettings;
-}) : (() => {
+}) : (function useDisplayNameStylesEnabled() {
   const items = [AccessibilityStore];
   let overrideSettings = initialize.useStateFromStores(items, () => AccessibilityStore.displayNameStylesEnabled);
   if (!overrideSettings) {

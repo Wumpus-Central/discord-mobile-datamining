@@ -1,10 +1,10 @@
-// === Module 14420: SafeAreaProvider ===
+// === Module 14646: SafeAreaProvider ===
 
-// Module 14420 (SafeAreaProvider)
+// Module 14646 (SafeAreaProvider)
 import c from "c" /* 576 */;
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
-import SafeAreaConstants from "SafeAreaConstants" /* 1620 */;
-import _mod1621 from "module_1621" /* 1621 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1271 */;
+import SafeAreaConstants from "SafeAreaConstants" /* 1632 */;
+import _mod1633 from "module_1633" /* 1633 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,12 +13,12 @@ const jsx = fn(21).jsx;
 const style = { position: "absolute", width: 0, height: 0 };
 fn(558);
 const ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function SafeAreaReporter() {
   const cResult = safeAreaInsets(576).c(9);
   let obj = safeAreaInsets(576);
-  safeAreaInsets = safeAreaInsets(1621).useSafeAreaInsets();
-  const obj2 = safeAreaInsets(1621);
-  const appEntryKey = safeAreaInsets(1487).useAppEntryKey();
+  safeAreaInsets = safeAreaInsets(1633).useSafeAreaInsets();
+  const obj2 = safeAreaInsets(1633);
+  const appEntryKey = safeAreaInsets(1499).useAppEntryKey();
   if (cResult[0] === appEntryKey) {
     if (cResult[1] === safeAreaInsets) {
       let tmp4 = cResult[2];
@@ -41,7 +41,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       }
       return tmp9;
     }
-    const fn2 = function y() {
+    const fn2 = function p() {
       if (!ref.current) {
         tmp.current = true;
         closure_0 = safeAreaInsets;
@@ -95,7 +95,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     cResult[6] = fn2;
     tmp8 = fn2;
   }
-  const fn = function u() {
+  const fn = function f() {
     closure_0 = safeAreaInsets;
     closure_1 = appEntryKey;
     ReactBatchUpdates.batchUpdates(() => {
@@ -148,11 +148,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[3] = items;
   tmp5 = items;
   tmp4 = fn;
-  const obj3 = safeAreaInsets(1487);
-}) : (() => {
-  safeAreaInsets = safeAreaInsets(1621).useSafeAreaInsets();
-  let obj = safeAreaInsets(1621);
-  const appEntryKey = safeAreaInsets(1487).useAppEntryKey();
+  const obj3 = safeAreaInsets(1499);
+}) : (function SafeAreaReporter() {
+  safeAreaInsets = safeAreaInsets(1633).useSafeAreaInsets();
+  let obj = safeAreaInsets(1633);
+  const appEntryKey = safeAreaInsets(1499).useAppEntryKey();
   const items = [safeAreaInsets, appEntryKey];
   const layoutEffect = noop.useLayoutEffect(() => {
     closure_0 = safeAreaInsets;
@@ -202,7 +202,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }, items);
   dependencyMap = noop.useRef(false);
   const items1 = [safeAreaInsets, appEntryKey];
-  let obj2 = safeAreaInsets(1487);
+  let obj2 = safeAreaInsets(1499);
   return <View style={style} onLayout={noop.useCallback(() => {
     if (!ref.current) {
       tmp.current = true;
@@ -257,7 +257,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/safe_area/SafeAreaProvider.native.tsx");
 
 export const SafeAreaReporter = tmp2;
-export const SafeAreaProvider = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const SafeAreaProvider = ReactCompilerGating.isReactCompilerEnabled() ? (function SafeAreaProvider(arg0) {
   const cResult = c.c(3);
   ({ children, style } = arg0);
   if (cResult[0] === children) {
@@ -266,13 +266,13 @@ export const SafeAreaProvider = ReactCompilerGating.isReactCompilerEnabled() ? (
     }
     return tmp4;
   }
-  const tmp5 = jsx(_mod1621.SafeAreaProvider, { initialMetrics: SafeAreaConstants.INITIAL_SAFE_AREA_METRICS, children, style });
+  const tmp5 = jsx(_mod1633.SafeAreaProvider, { initialMetrics: SafeAreaConstants.INITIAL_SAFE_AREA_METRICS, children, style });
   cResult[0] = children;
   cResult[1] = style;
   cResult[2] = tmp5;
   tmp4 = tmp5;
   const obj2 = { initialMetrics: SafeAreaConstants.INITIAL_SAFE_AREA_METRICS, children, style };
-}) : ((arg0) => {
+}) : (function SafeAreaProvider(arg0) {
   ({ children, style } = arg0);
-  return jsx(_mod1621.SafeAreaProvider, { initialMetrics: SafeAreaConstants.INITIAL_SAFE_AREA_METRICS, children, style });
+  return jsx(_mod1633.SafeAreaProvider, { initialMetrics: SafeAreaConstants.INITIAL_SAFE_AREA_METRICS, children, style });
 });

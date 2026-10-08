@@ -1,14 +1,14 @@
-// === Module 8576: GameUpdatePlatformIcon ===
+// === Module 9060: GameUpdatePlatformIcon ===
 
-// Module 8576 (GameUpdatePlatformIcon)
+// Module 9060 (GameUpdatePlatformIcon)
 import c from "c" /* 576 */;
-import MobilePhoneIcon from "MobilePhoneIcon" /* 6455 */;
-import PlatformType from "PlatformType" /* 8028 */;
-import AppleNeutralIcon from "AppleNeutralIcon" /* 8158 */;
-import XboxNeutralIcon from "XboxNeutralIcon" /* 8385 */;
-import ScreenIcon from "ScreenIcon" /* 8577 */;
-import PlaystationNeutralIcon from "PlaystationNeutralIcon" /* 8579 */;
-import NintendoSwitchNeutralIcon from "NintendoSwitchNeutralIcon" /* 8581 */;
+import MobilePhoneIcon from "MobilePhoneIcon" /* 6633 */;
+import AppleNeutralIcon from "AppleNeutralIcon" /* 7539 */;
+import PlatformType from "PlatformType" /* 8436 */;
+import XboxNeutralIcon from "XboxNeutralIcon" /* 8883 */;
+import ScreenIcon from "ScreenIcon" /* 9061 */;
+import PlaystationNeutralIcon from "PlaystationNeutralIcon" /* 9063 */;
+import NintendoSwitchNeutralIcon from "NintendoSwitchNeutralIcon" /* 9065 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_update/native/GameUpdatePlatformIcon.tsx");
 
-export const GameUpdatePlatformIcon = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const GameUpdatePlatformIcon = ReactCompilerGating.isReactCompilerEnabled() ? (function GameUpdatePlatformIcon(arg0) {
   const cResult = c.c(18);
   ({ platform, size, color } = arg0);
   let str = "xs";
@@ -105,7 +105,7 @@ export const GameUpdatePlatformIcon = ReactCompilerGating.isReactCompilerEnabled
   } else {
     return null;
   }
-}) : ((color) => {
+}) : (function GameUpdatePlatformIcon(color) {
   ({ platform, size } = color);
   if (size === undefined) {
     size = "xs";

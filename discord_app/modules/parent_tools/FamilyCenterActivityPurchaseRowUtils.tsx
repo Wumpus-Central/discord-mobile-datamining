@@ -1,31 +1,31 @@
-// === Module 14726: FamilyCenterActivityPurchaseRowUtils ===
+// === Module 14987: FamilyCenterActivityPurchaseRowUtils ===
 
-// Module 14726 (FamilyCenterActivityPurchaseRowUtils)
+// Module 14987 (FamilyCenterActivityPurchaseRowUtils)
 import util from "util" /* 1126 */;
-import AvatarUtils from "AvatarUtils" /* 1402 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1980 */;
-import _modDef2521 from "module_2521" /* 2521 */;
-import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7071 */;
-import ProfileEffectRecord from "ProfileEffectRecord" /* 7072 */;
-import PremiumConstants from "PremiumConstants" /* 1379 */;
+import AvatarUtils from "AvatarUtils" /* 1414 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1992 */;
+import _modDef2565 from "module_2565" /* 2565 */;
+import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7257 */;
+import ProfileEffectRecord from "ProfileEffectRecord" /* 7258 */;
+import PremiumConstants from "PremiumConstants" /* 1391 */;
 import size from "module_2" /* 2 */;
 
 function getCollectibleTypeName(type) {
   if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
     const intl5 = util.intl;
-    return intl5.string(_modDef2521.obi47v);
+    return intl5.string(_modDef2565.obi47v);
   } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT === type) {
     const intl4 = util.intl;
-    return intl4.string(_modDef2521.RX8BMR);
+    return intl4.string(_modDef2565.RX8BMR);
   } else if (CollectiblesItemType.CollectiblesItemType.NAMEPLATE === type) {
     const intl3 = util.intl;
-    return intl3.string(_modDef2521.nNGEHk);
+    return intl3.string(_modDef2565.nNGEHk);
   } else if (CollectiblesItemType.CollectiblesItemType.BUNDLE === type) {
     const intl2 = util.intl;
-    return intl2.string(_modDef2521.VS1fKo);
+    return intl2.string(_modDef2565.VS1fKo);
   } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME === type) {
     const intl = util.intl;
-    return intl.string(_modDef2521.JiIY1l);
+    return intl.string(_modDef2565.JiIY1l);
   } else {
     return "";
   }

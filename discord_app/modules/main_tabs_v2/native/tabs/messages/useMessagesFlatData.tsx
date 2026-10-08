@@ -1,11 +1,11 @@
-// === Module 16020: useMessagesFlatData ===
+// === Module 16280: useMessagesFlatData ===
 
-// Module 16020 (useMessagesFlatData)
+// Module 16280 (useMessagesFlatData)
 import c from "c" /* 576 */;
-import useMessagesData from "useMessagesData" /* 16011 */;
-import MessagesItemHappeningNow from "MessagesItemHappeningNow" /* 16021 */;
-import MessagesItemEmptyState from "MessagesItemEmptyState" /* 16058 */;
-import MessagesItemSeparator from "MessagesItemSeparator" /* 16059 */;
+import useMessagesData from "useMessagesData" /* 16271 */;
+import MessagesItemHappeningNow from "MessagesItemHappeningNow" /* 16281 */;
+import MessagesItemEmptyState from "MessagesItemEmptyState" /* 16318 */;
+import MessagesItemSeparator from "MessagesItemSeparator" /* 16319 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesFlatData.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, listItemHeight) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useMessagesFlatData(arg0, listItemHeight) {
   const cResult = c.c(10);
   listItemHeight = listItemHeight.listItemHeight;
   ({ channels, channelFavorites, renderHeader, sections } = arg0);
@@ -122,7 +122,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, listItemHe
       const sum2 = tmp15 + MessagesItemSeparator.MESSAGES_ITEM_SEPERATOR_HEIGHT;
     }
   }
-}) : ((channels, listItemHeight) => {
+}) : (function useMessagesFlatData(channels, listItemHeight) {
   listItemHeight = listItemHeight.listItemHeight;
   channels = undefined;
   channels = channels.channels;

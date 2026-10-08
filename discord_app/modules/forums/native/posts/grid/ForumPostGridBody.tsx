@@ -1,16 +1,16 @@
-// === Module 11634: ForumPostGridBody ===
+// === Module 11698: ForumPostGridBody ===
 
-// Module 11634 (ForumPostGridBody)
+// Module 11698 (ForumPostGridBody)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import GlobalUtils from "GlobalUtils" /* 1375 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import ForumPostMediaUtils from "ForumPostMediaUtils" /* 7551 */;
-import _modDef11055 from "module_11055" /* 11055 */;
-import _modDef11635 from "module_11635" /* 11635 */;
-import _modDef11636 from "module_11636" /* 11636 */;
-import ForumPostMedia from "ForumPostMedia" /* 11637 */;
+import native from "native" /* 1200 */;
+import GlobalUtils from "GlobalUtils" /* 1387 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import ForumPostMediaUtils from "ForumPostMediaUtils" /* 8454 */;
+import _modDef11699 from "module_11699" /* 11699 */;
+import _modDef11700 from "module_11700" /* 11700 */;
+import _modDef11701 from "module_11701" /* 11701 */;
+import ForumPostMedia from "ForumPostMedia" /* 11702 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,7 +20,7 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let c8 = 225;
 let c9 = 192;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { gifIcon: null, container: null, wideAspectRatioContainer: null, mediaIconContainer: null, headerLeftContainer: null, footerLeftContainer: null, footerRightContainer: null, extraMediaCountContainer: null, extraMediaCount: null, grid: null, wideAspectRatioGrid: null, column: null, columnSpacer: null, rowSpacer: null, icon: null };
 let size = { height: 20, width: 33, backgroundColor: "black", borderRadius: nativeDefault.radii.xs, resizeMode: "cover" };
 obj2.gifIcon = size;
@@ -43,11 +43,11 @@ let obj5 = { height: 225, flexDirection: "row", borderRadius: nativeDefault.radi
 obj2.icon = { color: nativeDefault.colors.TEXT_SUBTLE };
 let closure_10 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function GIFIcon() {
   const cResult = c.c(2);
   const tmp4 = closure_10();
   if (cResult[0] !== tmp4.gifIcon) {
-    const obj2 = { size: native.Icon.Sizes.CUSTOM, source: _modDef11635, disableColor: true, style: tmp4.gifIcon };
+    const obj2 = { size: native.Icon.Sizes.CUSTOM, source: _modDef11699, disableColor: true, style: tmp4.gifIcon };
     const tmp8 = timestampProducer(native.Icon, obj2);
     cResult[0] = tmp4.gifIcon;
     cResult[1] = tmp8;
@@ -56,15 +56,15 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp5 = cResult[1];
   }
   return tmp5;
-}) : (() => {
+}) : (function GIFIcon() {
   const tmp = closure_10();
-  return timestampProducer(native.Icon, { size: native.Icon.Sizes.CUSTOM, source: _modDef11635, disableColor: true, style: closure_10().gifIcon });
+  return timestampProducer(native.Icon, { size: native.Icon.Sizes.CUSTOM, source: _modDef11699, disableColor: true, style: closure_10().gifIcon });
 });
 ReactCompilerGating = fn(558);
-let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlayIcon() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { size: native.Icon.Sizes.SMALL_20, source: _modDef11636, disableColor: true };
+    const obj2 = { size: native.Icon.Sizes.SMALL_20, source: _modDef11700, disableColor: true };
     const tmp7 = timestampProducer(native.Icon, obj2);
     cResult[0] = tmp7;
     let first = tmp7;
@@ -72,13 +72,15 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     first = cResult[0];
   }
   return first;
-}) : (() => timestampProducer(native.Icon, { size: native.Icon.Sizes.SMALL_20, source: _modDef11636, disableColor: true }));
+}) : (function PlayIcon() {
+  return timestampProducer(native.Icon, { size: native.Icon.Sizes.SMALL_20, source: _modDef11700, disableColor: true });
+});
 ReactCompilerGating = fn(558);
-let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((extraMediaCount) => {
+let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function ExtraMediaIcon(extraMediaCount) {
   const cResult = c.c(9);
   const tmp4 = closure_10();
   if (cResult[0] !== tmp4.icon.color) {
-    const obj2 = { source: _modDef11055, color: tmp4.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 };
+    const obj2 = { source: _modDef11701, color: tmp4.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 };
     const tmp8 = timestampProducer(native.Icon, obj2);
     cResult[0] = tmp4.icon.color;
     cResult[1] = tmp8;
@@ -115,18 +117,18 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((extraMediaCoun
   cResult[4] = tmp11;
   tmp10 = tmp11;
   const obj4 = { style: tmp4.extraMediaCount, lineClamp: 1, variant: "text-xs/normal", color: "text-default", children: combined };
-}) : ((extraMediaCount) => {
+}) : (function ExtraMediaIcon(extraMediaCount) {
   const tmp = closure_10();
   const obj = { style: tmp.extraMediaCountContainer, children: null };
-  items = [timestampProducer(native.Icon, { source: _modDef11055, color: tmp.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 }), ];
-  const obj2 = { source: _modDef11055, color: tmp.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 };
+  items = [timestampProducer(native.Icon, { source: _modDef11701, color: tmp.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 }), ];
+  const obj2 = { source: _modDef11701, color: tmp.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 };
   items[1] = timestampProducer(Text_Text.Text, { style: tmp.extraMediaCount, lineClamp: 1, variant: "text-xs/normal", color: "text-default", children: "+" + extraMediaCount.extraMediaCount });
   obj.children = items;
   return React5(View, obj);
 });
 let items = [[0, 3], [1, 2]];
 ReactCompilerGating = fn(558);
-let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMediaGridLayout(arg0, arg1) {
   _require = arg0;
   importDefault = arg1;
   const cResult = require("c").c(16);
@@ -210,7 +212,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) =>
   cResult[0] = arg0;
   cResult[1] = bound;
   cResult[2] = found;
-}) : ((arg0, arg1) => {
+}) : (function useMediaGridLayout(arg0, arg1) {
   importDefault = arg1;
   width = require("useWindowDimensions")().width;
   items = [arg0];
@@ -244,7 +246,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) =>
   }, items1);
 });
 ReactCompilerGating = fn(558);
-let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function MediaGridColumn(arg0) {
   const cResult = thread(576).c(14);
   ({ column, thread } = arg0);
   let rowSpacer = closure_10();
@@ -271,7 +273,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
   }
-  const found = column.filter(thread(1375).isNotNullish);
+  const found = column.filter(thread(1387).isNotNullish);
   const column2 = rowSpacer.column;
   if (cResult[7] === rowSpacer.rowSpacer) {
     if (cResult[8] === thread) {
@@ -304,7 +306,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[9] = fn;
   tmp8 = fn;
   let obj = thread(576);
-}) : ((arg0) => {
+}) : (function MediaGridColumn(arg0) {
   ({ column, thread: require } = arg0);
   const tmp = closure_10();
   const rowSpacer = tmp;
@@ -329,15 +331,16 @@ let obj6 = { color: nativeDefault.colors.TEXT_SUBTLE };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/forums/native/posts/grid/ForumPostGridBody.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((thread) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPostGridBody(thread) {
   const cResult = thread(576).c(42);
   thread = thread.thread;
   ({ hasUnreads, media } = thread);
   const tmp4 = closure_10();
-  let columnSpacer = tmp4;
+  importDefault = tmp4;
   let obj = thread(576);
-  let obj2 = thread(6788);
-  [arr, tmp6] = thread(6788).useSomeAppliedTags(thread, 2);
+  const tmp = thread;
+  let obj2 = thread(6963);
+  [arr, tmp6] = thread(6963).useSomeAppliedTags(thread, 2);
   if (cResult[0] !== media) {
     const substr = media.slice(0, 4);
     cResult[0] = media;
@@ -355,14 +358,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((thread) => {
   } else {
     tmp11 = cResult[3];
   }
-  columnSpacer = closure_15(tmp8, tmp11);
+  let columnSpacer = closure_15(tmp8, tmp11);
   let wideAspectRatioGrid = tmp11;
   if (cResult[4] !== media) {
-    const result = tmp(7551).messageContainsGifOrVideo(media);
+    const result = tmp(8454).messageContainsGifOrVideo(media);
     cResult[4] = media;
     cResult[5] = result;
     let tmp13 = result;
-    const tmpResult = tmp(7551);
+    const tmpResult = tmp(8454);
   } else {
     tmp13 = cResult[5];
   }
@@ -386,8 +389,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((thread) => {
         if (cResult[13] === tmp4.columnSpacer) {
           if (cResult[14] === thread) {
             if (cResult[19] === tmp16) {
-              if (cResult[20] === tmp17) {
-                let tmp21 = cResult[21];
+              if (cResult[20] === tmp18) {
+                let tmp22 = cResult[21];
               }
               if (cResult[22] === tmp6) {
                 if (cResult[23] === arr) {
@@ -400,157 +403,340 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((thread) => {
                         if (cResult[29] === containsVideo) {
                           if (cResult[30] === tmp4.headerLeftContainer) {
                             if (cResult[31] === tmp4.mediaIconContainer) {
-                              let tmp29 = cResult[32];
+                              let tmp27 = cResult[32];
                             }
                             if (cResult[33] === bound) {
                               if (cResult[34] === tmp4.footerRightContainer) {
-                                let tmp39 = cResult[35];
+                                let tmp35 = cResult[35];
                               }
                               if (cResult[36] === tmp25) {
-                                if (cResult[37] === tmp29) {
-                                  if (cResult[38] === tmp39) {
+                                if (cResult[37] === tmp27) {
+                                  if (cResult[38] === tmp35) {
                                     if (cResult[39] === tmp15) {
-                                      if (cResult[40] === tmp21) {
-                                        let tmp44 = cResult[41];
+                                      if (cResult[40] === tmp22) {
+                                        let tmp37 = cResult[41];
                                       }
-                                      return tmp44;
+                                      return tmp37;
                                     }
                                   }
                                 }
                               }
+                              class W {
+                                constructor(arg0, arg1) {
+                                  tmp2 = arg1 > 0;
+                                  tmp = jsxs;
+                                  if (tmp2) {
+                                    tmp3 = jsx;
+                                    tmp4 = View;
+                                    obj = { style: null };
+                                    tmp5 = closure_1;
+                                    obj.style = closure_1.columnSpacer;
+                                    tmp2 = jsx(View, obj);
+                                  }
+                                  obj1 = { children: null };
+                                  items = [, ];
+                                  items[0] = tmp2;
+                                  obj4 = { column: thread, thread };
+                                  items[1] = jsx(MediaGridColumn, obj4);
+                                  obj1.children = items;
+                                  return tmp(closure_4.Fragment, obj1, "" + thread + "-" + arg1);
+                                }
+                              }
                               const obj3 = { style: tmp15, children: null };
-                              items = [tmp21, tmp25, tmp29, tmp39];
+                              items = [tmp22, tmp25, tmp27, tmp35];
                               obj3.children = items;
-                              const tmp47 = closure_7(View, obj3);
+                              const tmp39 = closure_7(View, obj3);
                               cResult[36] = tmp25;
-                              cResult[37] = tmp29;
-                              cResult[38] = tmp39;
+                              cResult[37] = tmp27;
+                              cResult[38] = tmp35;
                               cResult[39] = tmp15;
-                              cResult[40] = tmp21;
-                              cResult[41] = tmp47;
-                              tmp44 = tmp47;
+                              cResult[40] = tmp22;
+                              cResult[41] = tmp39;
+                              tmp37 = tmp39;
                             }
-                            let tmp40 = 0 !== bound;
-                            if (tmp40) {
-                              const obj4 = { style: tmp4.footerRightContainer, children: null };
-                              const obj5 = { extraMediaCount: bound };
-                              obj4.children = closure_6(closure_13, obj5);
-                              tmp40 = closure_6(View, obj4);
+                            class W {
+                              constructor(arg0, arg1) {
+                                tmp2 = arg1 > 0;
+                                tmp = jsxs;
+                                if (tmp2) {
+                                  tmp3 = jsx;
+                                  tmp4 = View;
+                                  obj = { style: null };
+                                  tmp5 = closure_1;
+                                  obj.style = closure_1.columnSpacer;
+                                  tmp2 = jsx(View, obj);
+                                }
+                                obj1 = { children: null };
+                                items = [, ];
+                                items[0] = tmp2;
+                                obj4 = { column: thread, thread };
+                                items[1] = jsx(MediaGridColumn, obj4);
+                                obj1.children = items;
+                                return tmp(closure_4.Fragment, obj1, "" + thread + "-" + arg1);
+                              }
                             }
                             cResult[33] = bound;
                             cResult[34] = tmp4.footerRightContainer;
-                            cResult[35] = tmp40;
-                            tmp39 = tmp40;
+                            cResult[35] = 0 !== bound;
+                            tmp35 = tmp36;
                           }
                         }
                       }
-                      let tmp31Result = containsGif;
-                      if (!containsGif) {
-                        tmp31Result = containsVideo;
+                      let tmp29Result = containsGif;
+                      class W {
+                        constructor(arg0, arg1) {
+                          tmp2 = arg1 > 0;
+                          tmp = jsxs;
+                          if (tmp2) {
+                            tmp3 = jsx;
+                            tmp4 = View;
+                            obj = { style: null };
+                            tmp5 = closure_1;
+                            obj.style = closure_1.columnSpacer;
+                            tmp2 = jsx(View, obj);
+                          }
+                          obj1 = { children: null };
+                          items = [, ];
+                          items[0] = tmp2;
+                          obj4 = { column: thread, thread };
+                          items[1] = jsx(MediaGridColumn, obj4);
+                          obj1.children = items;
+                          return tmp(closure_4.Fragment, obj1, "" + thread + "-" + arg1);
+                        }
                       }
-                      if (tmp31Result) {
-                        const obj6 = { style: tmp4.headerLeftContainer, children: null };
-                        let tmp33 = containsGif;
+                      if (tmp29Result) {
+                        const obj4 = { style: tmp4.headerLeftContainer, children: null };
+                        class W {
+                          constructor(arg0, arg1) {
+                            tmp2 = arg1 > 0;
+                            tmp = jsxs;
+                            if (tmp2) {
+                              tmp3 = jsx;
+                              tmp4 = View;
+                              obj = { style: null };
+                              tmp5 = closure_1;
+                              obj.style = closure_1.columnSpacer;
+                              tmp2 = jsx(View, obj);
+                            }
+                            obj1 = { children: null };
+                            items = [, ];
+                            items[0] = tmp2;
+                            obj4 = { column: thread, thread };
+                            items[1] = jsx(MediaGridColumn, obj4);
+                            obj1.children = items;
+                            return tmp(closure_4.Fragment, obj1, "" + thread + "-" + arg1);
+                          }
+                        }
                         if (containsGif) {
-                          const obj7 = { style: tmp4.mediaIconContainer, children: closure_6(closure_11, {}) };
-                          tmp33 = closure_6(View, obj7);
+                          const obj5 = { style: tmp4.mediaIconContainer, children: null };
+                          class W {
+                            constructor(arg0, arg1) {
+                              tmp2 = arg1 > 0;
+                              tmp = jsxs;
+                              if (tmp2) {
+                                tmp3 = jsx;
+                                tmp4 = View;
+                                obj = { style: null };
+                                tmp5 = closure_1;
+                                obj.style = closure_1.columnSpacer;
+                                tmp2 = jsx(View, obj);
+                              }
+                              obj1 = { children: null };
+                              items = [, ];
+                              items[0] = tmp2;
+                              obj4 = { column: thread, thread };
+                              items[1] = jsx(MediaGridColumn, obj4);
+                              obj1.children = items;
+                              return tmp(closure_4.Fragment, obj1, "" + thread + "-" + arg1);
+                            }
+                          }
+                          obj5.children = closure_6(closure_11, {});
+                          const tmp31 = closure_6(View, obj5);
                         }
-                        const items1 = [tmp33, ];
-                        let tmp36 = containsVideo;
+                        const items1 = [tmp31, ];
+                        let tmp33 = containsVideo;
                         if (containsVideo) {
-                          const obj8 = { style: tmp4.mediaIconContainer, children: closure_6(closure_12, {}) };
-                          tmp36 = closure_6(View, obj8);
+                          const obj6 = { style: tmp4.mediaIconContainer, children: null };
+                          class W {
+                            constructor(arg0, arg1) {
+                              tmp2 = arg1 > 0;
+                              tmp = jsxs;
+                              if (tmp2) {
+                                tmp3 = jsx;
+                                tmp4 = View;
+                                obj = { style: null };
+                                tmp5 = closure_1;
+                                obj.style = closure_1.columnSpacer;
+                                tmp2 = jsx(View, obj);
+                              }
+                              obj1 = { children: null };
+                              items = [, ];
+                              items[0] = tmp2;
+                              obj4 = { column: thread, thread };
+                              items[1] = jsx(MediaGridColumn, obj4);
+                              obj1.children = items;
+                              return tmp(closure_4.Fragment, obj1, "" + thread + "-" + arg1);
+                            }
+                          }
+                          obj6.children = closure_6(closure_12, {});
+                          tmp33 = closure_6(View, obj6);
                         }
-                        items1[1] = tmp36;
-                        obj6.children = items1;
-                        tmp31Result = closure_7(View, obj6);
+                        items1[1] = tmp33;
+                        obj4.children = items1;
+                        tmp29Result = closure_7(View, obj4);
                       }
                       cResult[28] = containsGif;
                       cResult[29] = containsVideo;
                       cResult[30] = tmp4.headerLeftContainer;
                       cResult[31] = tmp4.mediaIconContainer;
-                      cResult[32] = tmp31Result;
-                      tmp29 = tmp31Result;
+                      cResult[32] = tmp29Result;
+                      tmp27 = tmp29Result;
                     }
                   }
                 }
               }
-              let tmp26 = tmp7;
-              if (tmp7) {
-                const obj9 = { style: tmp4.footerLeftContainer, children: null };
-                const obj10 = { appliedTags: arr, additionalTagsCount: tmp6, hasUnreads };
-                obj9.children = closure_6(tmp(11641).ForumPostAppliedTagPills, obj10);
-                tmp26 = closure_6(View, obj9);
+              class W {
+                constructor(arg0, arg1) {
+                  tmp2 = arg1 > 0;
+                  tmp = jsxs;
+                  if (tmp2) {
+                    tmp3 = jsx;
+                    tmp4 = View;
+                    obj = { style: null };
+                    tmp5 = closure_1;
+                    obj.style = closure_1.columnSpacer;
+                    tmp2 = jsx(View, obj);
+                  }
+                  obj1 = { children: null };
+                  items = [, ];
+                  items[0] = tmp2;
+                  obj4 = { column: thread, thread };
+                  items[1] = jsx(MediaGridColumn, obj4);
+                  obj1.children = items;
+                  return tmp(closure_4.Fragment, obj1, "" + thread + "-" + arg1);
+                }
               }
               cResult[22] = tmp6;
               cResult[23] = arr;
               cResult[24] = tmp7;
               cResult[25] = hasUnreads;
               cResult[26] = tmp4.footerLeftContainer;
-              cResult[27] = tmp26;
+              cResult[27] = tmp7;
               tmp25 = tmp26;
             }
-            const obj11 = { style: tmp16, children: cResult[15] };
-            const tmp24 = closure_6(View, obj11);
+            class W {
+              constructor(arg0, arg1) {
+                tmp2 = arg1 > 0;
+                tmp = jsxs;
+                if (tmp2) {
+                  tmp3 = jsx;
+                  tmp4 = View;
+                  obj = { style: null };
+                  tmp5 = closure_1;
+                  obj.style = closure_1.columnSpacer;
+                  tmp2 = jsx(View, obj);
+                }
+                obj1 = { children: null };
+                items = [, ];
+                items[0] = tmp2;
+                obj4 = { column: thread, thread };
+                items[1] = jsx(MediaGridColumn, obj4);
+                obj1.children = items;
+                return tmp(closure_4.Fragment, obj1, "" + thread + "-" + arg1);
+              }
+            }
+            const obj7 = { style: tmp16, children: cResult[15] };
+            const tmp24 = closure_6(View, obj7);
             cResult[19] = tmp16;
             cResult[20] = cResult[15];
             cResult[21] = tmp24;
-            tmp21 = tmp24;
+            tmp22 = tmp24;
           }
         }
       }
       if (cResult[16] === tmp4.columnSpacer) {
         if (cResult[17] === thread) {
-          let tmp18 = cResult[18];
+          let tmp19 = cResult[18];
         }
-        const mapped = columnSpacer.map(tmp18);
-        cResult[12] = columnSpacer;
+        const mapped = columnSpacer.map(tmp19);
+        class W {
+          constructor(arg0, arg1) {
+            tmp2 = arg1 > 0;
+            tmp = jsxs;
+            if (tmp2) {
+              tmp3 = jsx;
+              tmp4 = View;
+              obj = { style: null };
+              tmp5 = closure_1;
+              obj.style = closure_1.columnSpacer;
+              tmp2 = jsx(View, obj);
+            }
+            obj1 = { children: null };
+            items = [, ];
+            items[0] = tmp2;
+            obj4 = { column: thread, thread };
+            items[1] = jsx(MediaGridColumn, obj4);
+            obj1.children = items;
+            return tmp(closure_4.Fragment, obj1, "" + thread + "-" + arg1);
+          }
+        }
         columnSpacer = tmp4.columnSpacer;
         cResult[13] = columnSpacer;
         cResult[14] = thread;
         cResult[15] = mapped;
       }
-      const fn = function j(column, arg1) {
-        let tmp2 = arg1 > 0;
-        if (tmp2) {
-          const obj = { style: columnSpacer.columnSpacer };
-          tmp2 = timestampProducer(View, obj);
+      class W {
+        constructor(arg0, arg1) {
+          tmp2 = arg1 > 0;
+          tmp = jsxs;
+          if (tmp2) {
+            tmp3 = jsx;
+            tmp4 = View;
+            obj = { style: null };
+            tmp5 = closure_1;
+            obj.style = closure_1.columnSpacer;
+            tmp2 = jsx(View, obj);
+          }
+          obj1 = { children: null };
+          items = [, ];
+          items[0] = tmp2;
+          obj4 = { column: thread, thread };
+          items[1] = jsx(MediaGridColumn, obj4);
+          obj1.children = items;
+          return tmp(closure_4.Fragment, obj1, "" + thread + "-" + arg1);
         }
-        const obj2 = { children: null };
-        items = [tmp2, timestampProducer(closure_16, { column, thread })];
-        obj2.children = items;
-        return React5(noop.Fragment, obj2, "" + column + "-" + arg1);
-      };
+      }
       cResult[16] = tmp4.columnSpacer;
       cResult[17] = thread;
-      cResult[18] = fn;
-      tmp18 = fn;
+      cResult[18] = W;
+      tmp19 = W;
     }
-    const items2 = [tmp4.grid, wideAspectRatioGrid];
+    tmp17[0] = tmp4.grid;
+    tmp17[1] = wideAspectRatioGrid;
     cResult[9] = tmp4.grid;
     cResult[10] = wideAspectRatioGrid;
-    cResult[11] = items2;
-    tmp16 = items2;
+    cResult[11] = tmp17;
+    tmp16 = tmp17;
   }
-  const items3 = [tmp4.container, wideAspectRatioContainer];
+  const items2 = [tmp4.container, wideAspectRatioContainer];
   cResult[6] = tmp4.container;
   cResult[7] = wideAspectRatioContainer;
-  cResult[8] = items3;
-  tmp15 = items3;
-  const tmp5 = _slicedToArray(thread(6788).useSomeAppliedTags(thread, 2), 2);
-}) : ((thread) => {
+  cResult[8] = items2;
+  tmp15 = items2;
+  const tmp5 = _slicedToArray(thread(6963).useSomeAppliedTags(thread, 2), 2);
+}) : (function ForumPostGridBody(thread) {
   thread = thread.thread;
   const media = thread.media;
   const tmp = closure_10();
   dependencyMap = tmp;
-  const tmp4 = _slicedToArray(thread(6788).useSomeAppliedTags(thread, 2), 2);
+  const tmp4 = _slicedToArray(thread(6963).useSomeAppliedTags(thread, 2), 2);
   const first = tmp4[0];
   let tmp12Result = first.length > 0;
   items = [media];
   const memo = noop.useMemo(() => media.slice(0, 4), items);
   const bound = Math.max(0, media.length - 4);
   const isMediaPostResult = thread.isMediaPost();
-  let obj = thread(6788);
+  let obj = thread(6963);
   let tmp2 = thread;
   const items1 = [media];
   const memo1 = noop.useMemo(() => ForumPostMediaUtils.messageContainsGifOrVideo(media), items1);
@@ -591,7 +777,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((thread) => {
   if (tmp12Result) {
     const obj4 = { style: tmp.footerLeftContainer, children: null };
     const obj5 = { appliedTags: first, additionalTagsCount: tmp4[1], hasUnreads: thread.hasUnreads };
-    obj4.children = closure_6(tmp2(11641).ForumPostAppliedTagPills, obj5);
+    obj4.children = closure_6(tmp2(11706).ForumPostAppliedTagPills, obj5);
     tmp12Result = closure_6(View, obj4);
   }
   items4[1] = tmp12Result;

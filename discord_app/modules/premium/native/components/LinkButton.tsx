@@ -1,21 +1,21 @@
-// === Module 6924: LinkButton ===
+// === Module 7113: LinkButton ===
 
-// Module 6924 (LinkButton)
+// Module 7113 (LinkButton)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Pressables from "Pressables" /* 5916 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import Pressables from "Pressables" /* 6189 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c2, jsxs: c3 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles({ defaultContainerStyle: { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center" }, disabledContainerStyle: { opacity: 0.5 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/components/LinkButton.tsx");
 
-export const LinkButton = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const LinkButton = ReactCompilerGating.isReactCompilerEnabled() ? (function LinkButton(arg0) {
   const cResult = c.c(16);
   ({ onPress, text, containerStyle, disabled, textStyle, variant, textColor, iconRight } = arg0);
   let str = "text-xs/medium";
@@ -92,7 +92,7 @@ export const LinkButton = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0)
   cResult[2] = disabledContainerStyle;
   cResult[3] = items1;
   tmp5 = items1;
-}) : ((textColor) => {
+}) : (function LinkButton(textColor) {
   ({ disabled, variant } = textColor);
   ({ onPress, text, containerStyle, textStyle } = textColor);
   if (variant === undefined) {

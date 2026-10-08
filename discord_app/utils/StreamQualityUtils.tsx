@@ -1,26 +1,26 @@
-// === Module 8101: StreamQualityUtils ===
+// === Module 5268: StreamQualityUtils ===
 
-// Module 8101 (StreamQualityUtils)
+// Module 5268 (StreamQualityUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import getReportedStreamResolutionDefault from "getReportedStreamResolution" /* 5032 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import getReportedStreamResolutionDefault from "getReportedStreamResolution" /* 5270 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4942 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5269 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
-import UserStore from "UserStore" /* 1377 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5108 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const StreamSettingsConstants = fn(4943);
+const StreamSettingsConstants = fn(5210);
 ({ ApplicationStreamFPS: c10, ApplicationStreamResolutions: closure_11, ApplicationStreamSettingRequirements: closure_12, getApplicationFramerate: map1, getApplicationResolution: closure_14 } = StreamSettingsConstants);
-let closure_15 = fn(1379).StreamQualitiesToPremiumType;
-const ResolutionTypes = fn(4921).ResolutionTypes;
+let closure_15 = fn(1391).StreamQualitiesToPremiumType;
+const ResolutionTypes = fn(5115).ResolutionTypes;
 const ReactCompilerGating = fn(558);
 function isPremiumRequirement(quality) {
   return null != quality.quality || null != quality.guildPremiumTier;
@@ -71,7 +71,7 @@ export const isPremiumResolution = function isPremiumResolution(maxQuality) {
       tmp6 = null == closure_12.find((resolution) => {
         let tmp = resolution.resolution === closure_0;
         if (tmp) {
-          tmp = resolution.fps !== v65535.FPS_5;
+          tmp = resolution.fps !== collapsed.FPS_5;
         }
         if (tmp) {
           tmp = !(null != resolution.quality || null != resolution.guildPremiumTier);
@@ -114,11 +114,11 @@ export const getFPSText = function getFPSText(maxFrameRate) {
   return intl.formatToPlainString(util.t.Qb44XH, { fps: maxFrameRate });
 };
 export { getMaxQuality };
-export const useMaxQuality = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
+export const useMaxQuality = ReactCompilerGating.isReactCompilerEnabled() ? (function useMaxQuality(user) {
   const cResult = c.c(16);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ApplicationStreamingSettingsStore];
-    const fn = function o() {
+    const fn = function s() {
       return state.getState();
     };
     cResult[0] = items;
@@ -209,7 +209,7 @@ export const useMaxQuality = ReactCompilerGating.isReactCompilerEnabled() ? ((us
     return tmp15;
   }
   const tmpResult4 = initialize;
-}) : ((arg0) => {
+}) : (function useMaxQuality(arg0) {
   _require = arg0;
   const items = [ApplicationStreamingSettingsStore];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => state.getState());

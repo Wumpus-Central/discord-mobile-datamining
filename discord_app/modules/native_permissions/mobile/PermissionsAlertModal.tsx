@@ -1,9 +1,9 @@
-// === Module 7297: PermissionsAlertModal ===
+// === Module 7502: PermissionsAlertModal ===
 
-// Module 7297 (PermissionsAlertModal)
+// Module 7502 (PermissionsAlertModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import AlertModal from "AlertModal" /* 5720 */;
+import AlertModal from "AlertModal" /* 5303 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/native_permissions/mobile/PermissionsAlertModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function PermissionsAlertModal(arg0) {
   const cResult = c.c(10);
   ({ title, body, onConfirm } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -68,7 +68,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[8] = title;
   cResult[9] = tmp16;
   tmp15 = tmp16;
-}) : ((arg0) => {
+}) : (function PermissionsAlertModal(arg0) {
   ({ title, body, onConfirm } = arg0);
   const obj = { title, content: body, actions: null };
   const obj2 = { children: null };

@@ -1,50 +1,52 @@
-// === Module 6929: PremiumModal ===
+// === Module 7118: PremiumModal ===
 
-// Module 6929 (PremiumModal)
+// Module 7118 (PremiumModal)
 import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
-import NavigatorHeader from "NavigatorHeader" /* 6017 */;
-import Navigator from "Navigator" /* 6503 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 6664 */;
-import UserSettingsPremiumDefault from "UserSettingsPremium" /* 6930 */;
-import PremiumPlanSelectDefault from "PremiumPlanSelect" /* 13366 */;
-import UserSettingsPremiumGiftingDefault from "UserSettingsPremiumGifting" /* 13380 */;
+import NavigatorHeader from "NavigatorHeader" /* 6203 */;
+import Navigator from "Navigator" /* 6679 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 6841 */;
+import UserSettingsPremiumDefault from "UserSettingsPremium" /* 7119 */;
+import PremiumPlanSelectDefault from "PremiumPlanSelect" /* 13666 */;
+import UserSettingsPremiumGiftingDefault from "UserSettingsPremiumGifting" /* 13680 */;
 import noop from "module_19" /* 19 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
 
 require = fn;
-function getScreens(arg0) {
-  ({ analyticsLocation: require, onClose } = arg0);
-  ({ onBack: dependencyMap, giftRecipientId: UserSettingsSections, planId: jsx, applicationId: getScreens, activitySessionId: closure_6, channelId: closure_7, guildId: closure_8, premiumFeatureCardOrder: closure_9, onPaymentSuccess: closure_10, onPaymentDismiss: closure_11 } = arg0);
+function getScreens(analyticsLocation) {
+  analyticsLocation = analyticsLocation.analyticsLocation;
+  const onClose = analyticsLocation.onClose;
+  ({ onBack: dependencyMap, giftRecipientId: UserSettingsSections, planId: jsx, applicationId: getScreens, activitySessionId: closure_6, channelId: closure_7, guildId: closure_8, premiumFeatureCardOrder: closure_9, onPaymentSuccess: closure_10, onPaymentDismiss: closure_11 } = analyticsLocation);
   let obj = {};
-  const obj2 = { title: null, headerLeft: null, render: null };
-  ({ predicate, showCurrentPlan, isBoostPurchaseFlow } = arg0);
-  const intl = util.intl;
-  obj2.title = intl.string(util.t.lpNrPu);
-  obj2.headerLeft = NavigatorHeader.getHeaderCloseButton(onClose);
+  const obj2 = { title: null, headerLeft: null, initialParams: null, render: null };
+  ({ predicate, showCurrentPlan, isBoostPurchaseFlow } = analyticsLocation);
+  const intl = analyticsLocation(1126).intl;
+  obj2.title = intl.string(analyticsLocation(1126).t.lpNrPu);
+  obj2.headerLeft = analyticsLocation(6203).getHeaderCloseButton(onClose);
+  obj2.initialParams = { analyticsLocation };
   obj2.render = function render() {
     return jsx(UserSettingsPremiumDefault, { applicationId, onClose, activitySessionId, channelId, guildId, premiumFeatureCardOrder, onPaymentSuccess, onPaymentDismiss, isFullScreenPresentation: true });
   };
   obj[UserSettingsSections.PREMIUM] = obj2;
   const obj4 = { title: null, render: null };
-  const intl2 = util.intl;
-  obj4.title = intl2.string(util.t["8jmdON"]);
+  const intl2 = analyticsLocation(1126).intl;
+  obj4.title = intl2.string(analyticsLocation(1126).t["8jmdON"]);
   obj4.render = function render() {
-    return planId(onClose(13321), {});
+    return planId(onClose(13621), {});
   };
   obj[UserSettingsSections.PREMIUM_MANAGE_PLAN] = obj4;
   const obj5 = { title: null, headerLeft: null, render: null };
-  const intl3 = util.intl;
-  obj5.title = intl3.string(util.t["+CbP2v"]);
-  obj5.headerLeft = NavigatorHeader.getHeaderCloseButton(onClose);
+  const intl3 = analyticsLocation(1126).intl;
+  obj5.title = intl3.string(analyticsLocation(1126).t["+CbP2v"]);
+  const obj3 = analyticsLocation(6203);
+  obj5.headerLeft = analyticsLocation(6203).getHeaderCloseButton(onClose);
   obj5.render = function render() {
-    return planId(onClose(13324), {});
+    return planId(onClose(13624), {});
   };
   obj[UserSettingsSections.GUILD_BOOSTING] = obj5;
   const obj7 = { title: null, headerLeft: null, initialParams: null, render: null };
-  const intl4 = util.intl;
-  obj7.title = intl4.string(util.t.u95Dt4);
+  const intl4 = analyticsLocation(1126).intl;
+  obj7.title = intl4.string(analyticsLocation(1126).t.u95Dt4);
   obj7.headerLeft = function headerLeft(canGoBack) {
     const obj = NavigatorHeader;
     if (canGoBack.canGoBack) {
@@ -61,9 +63,10 @@ function getScreens(arg0) {
   };
   obj[UserSettingsSections.PREMIUM_PLAN_SELECT] = obj7;
   const obj8 = { title: null, headerLeft: null, render: null };
-  const intl5 = util.intl;
-  obj8.title = intl5.string(util.t.Oba8Sh);
-  obj8.headerLeft = NavigatorHeader.getHeaderCloseButton(onClose);
+  const intl5 = analyticsLocation(1126).intl;
+  obj8.title = intl5.string(analyticsLocation(1126).t.Oba8Sh);
+  const obj6 = analyticsLocation(6203);
+  obj8.headerLeft = analyticsLocation(6203).getHeaderCloseButton(onClose);
   obj8.render = function render() {
     return jsx(UserSettingsPremiumGiftingDefault, { recipientUserId, analyticsLocation });
   };
@@ -76,7 +79,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/premium/PremiumModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((analyticsLocations) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumModal(analyticsLocations) {
   const cResult = c.c(22);
   ({ applicationId, analyticsLocation, initialRoute, onClose, onBack, giftRecipientId, predicate, showCurrentPlan, isBoostPurchaseFlow, planId, activitySessionId, channelId, guildId, premiumFeatureCardOrder, onPaymentSuccess, onPaymentDismiss } = analyticsLocations);
   analyticsLocations = useAnalyticsLocationsDefault(analyticsLocations.analyticsLocations).analyticsLocations;
@@ -155,7 +158,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((analyticsLocatio
   cResult[14] = showCurrentPlan;
   cResult[15] = tmp6;
   tmp5 = tmp6;
-}) : ((initialRoute) => {
+}) : (function PremiumModal(initialRoute) {
   let PREMIUM = initialRoute.initialRoute;
   ({ applicationId, analyticsLocation, analyticsLocations, onClose, onBack, giftRecipientId, predicate, showCurrentPlan, isBoostPurchaseFlow, planId, activitySessionId, channelId, guildId, premiumFeatureCardOrder, onPaymentSuccess, onPaymentDismiss } = initialRoute);
   if (PREMIUM == null) {

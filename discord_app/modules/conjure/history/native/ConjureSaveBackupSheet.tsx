@@ -1,18 +1,18 @@
-// === Module 16665: ConjureSaveBackupSheet ===
+// === Module 16927: ConjureSaveBackupSheet ===
 
-// Module 16665 (ConjureSaveBackupSheet)
+// Module 16927 (ConjureSaveBackupSheet)
 import nativeDefault from "native" /* 587 */;
-import conjureDatabaseLock from "conjureDatabaseLock" /* 16660 */;
+import conjureDatabaseLock from "conjureDatabaseLock" /* 16922 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(12923).createDatabaseRestorePoint;
+let closure_6 = fn(13072).createDatabaseRestorePoint;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const ConjureSaveBackupSheet = "ConjureSaveBackupSheet";
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { content: { paddingBottom: nativeDefault.space.PX_16 } };
 let closure_10 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -20,7 +20,7 @@ let obj3 = { paddingBottom: nativeDefault.space.PX_16 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/history/native/ConjureSaveBackupSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureSaveBackupSheet(projectId) {
   const cResult = projectId(onSaved[8]).c(28);
   projectId = projectId.projectId;
   const environment = projectId.environment;
@@ -187,7 +187,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
   cResult[4] = fn;
   tmp11 = fn;
   const tmp9 = value(noop.useState(false), 2);
-}) : ((projectId) => {
+}) : (function ConjureSaveBackupSheet(projectId) {
   projectId = projectId.projectId;
   const environment = projectId.environment;
   const onSaved = projectId.onSaved;

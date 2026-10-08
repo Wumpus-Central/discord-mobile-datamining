@@ -1,9 +1,9 @@
-// === Module 9877: SuperReactionLocalImageAnimation ===
+// === Module 9357: SuperReactionLocalImageAnimation ===
 
-// Module 9877 (SuperReactionLocalImageAnimation)
+// Module 9357 (SuperReactionLocalImageAnimation)
 import c from "c" /* 576 */;
-import burst_reactions_BurstReactionEffectUtils from "burst_reactions/BurstReactionEffectUtils" /* 7423 */;
-import FadeOutLottieAnimationDefault from "FadeOutLottieAnimation" /* 7466 */;
+import burst_reactions_BurstReactionEffectUtils from "burst_reactions/BurstReactionEffectUtils" /* 7898 */;
+import FadeOutLottieAnimationDefault from "FadeOutLottieAnimation" /* 7941 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/burst_reactions/SuperReactionLocalImageAnimation.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SuperReactionLocalImageAnimation(arg0) {
   let tmp2 = dependencyMap;
   const cResult = c.c(10);
   if (cResult[0] !== arg0) {
@@ -56,7 +56,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = tmp5;
   cResult[6] = obj3;
   tmp10 = obj3;
-}) : ((arg0) => {
+}) : (function SuperReactionLocalImageAnimation(arg0) {
   let tmp = null;
   ({ localImageSource, animationSource } = arg0);
   const merged = Object.assign(arg0, Object.assign({ localImageSource: 0, animationSource: 0 }));

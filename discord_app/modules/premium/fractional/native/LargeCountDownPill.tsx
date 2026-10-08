@@ -1,14 +1,14 @@
-// === Module 13288: LargeCountDownPill ===
+// === Module 13589: LargeCountDownPill ===
 
-// Module 13288 (LargeCountDownPill)
+// Module 13589 (LargeCountDownPill)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4574 */;
-import DesignSystemsNotificationComponentsExperiment from "DesignSystemsNotificationComponentsExperiment" /* 4580 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4818 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4766 */;
+import DesignSystemsNotificationComponentsExperiment from "DesignSystemsNotificationComponentsExperiment" /* 4772 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5012 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
+import createStyles from "createStyles" /* 5090 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -24,12 +24,12 @@ let closure_7 = createStyles.createStyles(obj);
 let obj3 = { paddingVertical: 8, color: nativeDefault.colors.TEXT_STATUS_IDLE, fontSize: 14, lineHeight: 16, marginRight: 8 };
 const result = size.fileFinishedImporting("modules/premium/fractional/native/LargeCountDownPill.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((countdownText) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function LargeCountDownPill(countdownText) {
   const cResult = require("c").c(16);
   const tmp4 = closure_7();
   _require = tmp4;
   if (cResult[0] !== tmp4.iconStyle) {
-    const fn = function l() {
+    function handlePress() {
       const designSystemsNotificationComponents = DesignSystemsNotificationComponentsExperiment.getDesignSystemsNotificationComponents("LargeCountDownPill");
       const obj2 = ToastActionCreatorsDefault;
       if (designSystemsNotificationComponents) {
@@ -44,15 +44,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((countdownText) =
         const intl = util.intl;
         obj4.content = intl.string(util.t["Mv4E/M"]);
         obj4.icon = function icon() {
-          return closure_2_5(closure_0(4818).CircleInformationIcon, { style: closure_1_0.iconStyle, color: nativeDefault.colors.STATUS_WARNING });
+          return closure_2_5(closure_0(5012).CircleInformationIcon, { style: closure_1_0.iconStyle, color: nativeDefault.colors.STATUS_WARNING });
         };
         obj4.iconColor = nativeDefault.colors.STATUS_WARNING;
         obj2.open(obj4);
       }
-    };
+    }
     cResult[0] = tmp4.iconStyle;
-    cResult[1] = fn;
-    let tmp5 = fn;
+    cResult[1] = handlePress;
+    let tmp5 = handlePress;
   } else {
     tmp5 = cResult[1];
   }
@@ -71,7 +71,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((countdownText) =
     }
     if (cResult[7] !== tmp4.iconStyle) {
       let obj2 = { style: tmp4.iconStyle, color: nativeDefault.colors.TEXT_STATUS_IDLE };
-      const tmp13 = closure_5(tmp(4818).CircleInformationIcon, obj2);
+      const tmp13 = closure_5(tmp(5012).CircleInformationIcon, obj2);
       cResult[7] = tmp4.iconStyle;
       cResult[8] = tmp13;
       let tmp10 = tmp13;
@@ -113,11 +113,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((countdownText) =
   cResult[6] = tmp9;
   tmp8 = tmp9;
   let obj = require("c");
-}) : ((countdownText) => {
+}) : (function LargeCountDownPill(countdownText) {
   const tmp = closure_7();
   _require = tmp;
   let obj = {
-    onPress() {
+    onPress: function handlePress() {
       const designSystemsNotificationComponents = DesignSystemsNotificationComponentsExperiment.getDesignSystemsNotificationComponents("LargeCountDownPill");
       const obj2 = ToastActionCreatorsDefault;
       if (designSystemsNotificationComponents) {
@@ -132,7 +132,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((countdownText) =
         const intl = util.intl;
         obj4.content = intl.string(util.t["Mv4E/M"]);
         obj4.icon = function icon() {
-          return closure_2_5(closure_0(4818).CircleInformationIcon, { style: closure_1_0.iconStyle, color: nativeDefault.colors.STATUS_WARNING });
+          return closure_2_5(closure_0(5012).CircleInformationIcon, { style: closure_1_0.iconStyle, color: nativeDefault.colors.STATUS_WARNING });
         };
         obj4.iconColor = nativeDefault.colors.STATUS_WARNING;
         obj2.open(obj4);

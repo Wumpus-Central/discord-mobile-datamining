@@ -1,16 +1,16 @@
-// === Module 13808: GuildActionSheetProgress ===
+// === Module 14033: GuildActionSheetProgress ===
 
-// Module 13808 (GuildActionSheetProgress)
+// Module 14033 (GuildActionSheetProgress)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import GuildProgressUtils from "GuildProgressUtils" /* 12145 */;
-import GuildProgressOverviewDefault from "GuildProgressOverview" /* 13809 */;
+import GuildProgressUtils from "GuildProgressUtils" /* 12224 */;
+import GuildProgressOverviewDefault from "GuildProgressOverview" /* 14034 */;
 import noop from "module_19" /* 19 */;
 
-const Card2 = Card(6002);
+const Card2 = Card(6186);
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { title: { color: nativeDefault.colors.TEXT_DEFAULT }, cardStyle: { padding: 0 } };
 let closure_4 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -18,7 +18,7 @@ let obj3 = { color: nativeDefault.colors.TEXT_DEFAULT };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_action_sheet/native/components/GuildActionSheetProgress.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildActionSheetProgress(guild) {
   let Card = require;
   let tmp = dependencyMap;
   const cResult = c.c(6);
@@ -56,7 +56,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
     }
   }
   return tmp4;
-}) : ((guild) => {
+}) : (function GuildActionSheetProgress(guild) {
   guild = guild.guild;
   const tmp = closure_4();
   const iOSCompletionStates = GuildProgressUtils.useIOSCompletionStates(guild);

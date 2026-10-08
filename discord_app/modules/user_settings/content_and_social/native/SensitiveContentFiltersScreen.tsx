@@ -1,11 +1,11 @@
-// === Module 14636: SensitiveContentFiltersScreen ===
+// === Module 14897: SensitiveContentFiltersScreen ===
 
-// Module 14636 (SensitiveContentFiltersScreen)
+// Module 14897 (SensitiveContentFiltersScreen)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import SettingBuilders from "SettingBuilders" /* 11142 */;
-import SettingLayoutDefault from "SettingLayout" /* 14515 */;
-import SettingsScreenNotices from "SettingsScreenNotices" /* 14637 */;
+import SettingBuilders from "SettingBuilders" /* 11262 */;
+import SettingLayoutDefault from "SettingLayout" /* 14775 */;
+import SettingsScreenNotices from "SettingsScreenNotices" /* 14898 */;
 import noop from "module_19" /* 19 */;
 
 const SettingsScreenNoticesDefault = SettingsScreenNotices;
@@ -32,10 +32,10 @@ function getContentCategory() {
   items1[1] = obj2;
   return items1;
 }
-const MobileUserSettings = fn(7645).MobileUserSettings;
+const MobileUserSettings = fn(7966).MobileUserSettings;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
-const ListHeaderComponent = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const ListHeaderComponent = ReactCompilerGating.isReactCompilerEnabled() ? (function SensitiveContentFiltersNotices() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { isListHeader: true, screen: SettingsScreenNotices.SettingsScreen.SENSITIVE_CONTENT_FILTERS };
@@ -46,7 +46,7 @@ const ListHeaderComponent = ReactCompilerGating.isReactCompilerEnabled() ? (() =
     first = cResult[0];
   }
   return first;
-}) : (() => {
+}) : (function SensitiveContentFiltersNotices() {
   const obj = { isListHeader: true, screen: SettingsScreenNotices.SettingsScreen.SENSITIVE_CONTENT_FILTERS };
   return jsx(SettingsScreenNoticesDefault, { isListHeader: true, screen: SettingsScreenNotices.SettingsScreen.SENSITIVE_CONTENT_FILTERS });
 });
@@ -54,7 +54,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/content_and_social/native/SensitiveContentFiltersScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSettingsSensitiveContentFilters() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { sections: null, ListHeaderComponent: null };
@@ -78,7 +78,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp10 = cResult[1];
   }
   return tmp10;
-}) : (() => {
+}) : (function UserSettingsSensitiveContentFilters() {
   const node = noop.useMemo(() => {
     const obj2 = { sections: null, ListHeaderComponent };
     const items = [...closure_1_6()];

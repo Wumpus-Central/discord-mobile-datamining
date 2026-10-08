@@ -1,26 +1,26 @@
-// === Module 8936: FormSwitchRow ===
+// === Module 8567: FormSwitchRow ===
 
-// Module 8936 (FormSwitchRow)
+// Module 8567 (FormSwitchRow)
 import c from "c" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import RedesignCompat from "RedesignCompat" /* 6080 */;
-import FormRowDefault from "FormRow" /* 6640 */;
-import FormLabelDefault from "FormLabel" /* 6642 */;
-import TableSwitchRow from "TableSwitchRow" /* 6705 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import RedesignCompat from "RedesignCompat" /* 6266 */;
+import FormRowDefault from "FormRow" /* 6817 */;
+import FormLabelDefault from "FormLabel" /* 6819 */;
+import TableSwitchRow from "TableSwitchRow" /* 6882 */;
+import Form_FormSwitchDefault from "Form/FormSwitch" /* 8565 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
-const Form_FormSwitchDefault = tmp13(8934);
 require = fn;
 let closure_3 = ["onValueChange", "value", "disabled", "label", "subLabel", "accessibilityHint", "trailing", "numberOfLines", "switchProps"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_10 = createStyles.createStyles({ trailing: { flex: 1, flexDirection: "row", width: "100%", alignItems: "center" } });
 let ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((onValueChange) => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function FormSwitchRow(onValueChange) {
   const cResult = c.c(48);
   if (cResult[0] !== onValueChange) {
     onValueChange = onValueChange.onValueChange;
@@ -29,21 +29,6 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((onValueChange)
     closure_1 = value;
     ({ disabled, label, subLabel, accessibilityHint, trailing, numberOfLines, switchProps } = onValueChange);
     const tmp16 = _objectWithoutProperties(onValueChange, closure_3);
-    class D {
-      constructor() {
-        tmp2 = null != closure_0;
-        tmp = closure_0;
-        if (tmp2) {
-          tmp3 = closure_1;
-          tmp2 = null != closure_1;
-        }
-        if (tmp2) {
-          tmp4 = closure_1;
-          tmpResult = tmp(!closure_1);
-        }
-        return;
-      }
-    }
     cResult[0] = onValueChange;
     cResult[1] = accessibilityHint;
     cResult[2] = label;
@@ -58,12 +43,16 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((onValueChange)
     let tmp12 = trailing;
     let tmp11 = switchProps;
     let tmp9 = subLabel;
+    let tmp8 = tmp16;
     let tmp6 = numberOfLines;
     let tmp5 = label;
+    let tmp4 = accessibilityHint;
   } else {
+    tmp4 = cResult[1];
     tmp5 = cResult[2];
     tmp6 = cResult[3];
     closure_0 = cResult[4];
+    tmp8 = cResult[5];
     tmp9 = cResult[6];
     tmp11 = cResult[8];
     tmp12 = cResult[9];
@@ -76,166 +65,173 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((onValueChange)
     }
     cResult[11] = tmp11;
     cResult[12] = obj2;
+    let tmp18 = obj2;
+  } else {
+    tmp18 = cResult[12];
   }
-  const tmp18 = closure_10();
+  const tmp19 = closure_10();
   PlatformUtils;
   if (cResult[13] === tmp7) {
-    [first, closure_3] = noop.useState(tmp13);
+    [checked, closure_3] = noop.useState(tmp13);
     if (cResult[16] !== tmp13) {
-      class O {
-        constructor() {
-          tmp = closure_3(closure_1);
-          return;
-        }
-      }
+      const fn = function _() {
+        closure_3(closure_1);
+      };
       const items = [tmp13];
       cResult[16] = tmp13;
-      cResult[17] = O;
+      cResult[17] = fn;
       cResult[18] = items;
-      let tmp25 = items;
+      let tmp27 = items;
+      let tmp26 = fn;
     } else {
-      class O {
-        constructor() {
-          tmp = closure_3(closure_1);
-          return;
-        }
-      }
-      tmp25 = cResult[18];
+      tmp26 = cResult[17];
+      tmp27 = cResult[18];
     }
-    const effect = noop.useEffect(O, tmp25);
-    if (cResult[19] === first) {
-      class O {
-        constructor() {
-          tmp = closure_3(closure_1);
-          return;
-        }
+    const effect = noop.useEffect(tmp26, tmp27);
+    if (cResult[19] === checked) {
+      if (cResult[20] === tmp7) {
+        let tmp29 = cResult[21];
       }
+      let tmp30;
       if (typeof tmp5 === "string") {
-        class O {
-          constructor() {
-            tmp = closure_3(closure_1);
-            return;
-          }
-        }
+        tmp30 = tmp5;
       }
-      let sum = tmp28;
-      if (tmp30) {
-        class O {
-          constructor() {
-            tmp = closure_3(closure_1);
-            return;
-          }
-        }
+      let sum = tmp30;
+      if (tmp32) {
         const _HermesInternal = HermesInternal;
-        sum = tmp28 + " " + tmp9;
+        sum = tmp30 + " " + tmp9;
       }
       if (cResult[22] === tmp5) {
-        class O {
-          constructor() {
-            tmp = closure_3(closure_1);
-            return;
+        if (cResult[23] === tmp6) {
+          let tmp35 = cResult[24];
+        }
+        if (cResult[25] === tmp19.trailing) {
+          if (cResult[26] === tmp35) {
+            if (cResult[27] === tmp39) {
+              let tmp40 = cResult[28];
+            }
+            if (cResult[29] === checked) {
+              if (cResult[30] === tmp17) {
+                let tmp45 = cResult[31];
+              }
+              if (cResult[32] === tmp17) {
+                if (cResult[33] === tmp7) {
+                  if (cResult[34] === tmp18) {
+                    if (cResult[35] === tmp13) {
+                      let tmp46 = cResult[36];
+                    }
+                    if (cResult[37] === tmp4) {
+                      if (cResult[38] === sum) {
+                        if (cResult[39] === tmp17) {
+                          if (cResult[40] === tmp29) {
+                            if (cResult[41] === tmp8) {
+                              if (cResult[42] === tmp9) {
+                                if (cResult[43] === tmp40) {
+                                  if (cResult[44] === tmp44) {
+                                    if (cResult[45] === tmp45) {
+                                      if (cResult[46] === tmp46) {
+                                        let tmp54 = cResult[47];
+                                      }
+                                      return tmp54;
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                    const obj4 = {};
+                    const merged = Object.assign(tmp8);
+                    obj4.label = tmp40;
+                    obj4.subLabel = tmp9;
+                    obj4.disabled = tmp17;
+                    obj4.onPress = tmp44;
+                    obj4.accessible = true;
+                    obj4.onAccessibilityTap = tmp29;
+                    obj4.accessibilityRole = "switch";
+                    obj4.accessibilityLabel = sum;
+                    obj4.accessibilityState = tmp45;
+                    obj4.accessibilityHint = tmp4;
+                    obj4.trailing = tmp46;
+                    const tmp61 = closure_1_8(FormRowDefault, obj4);
+                    cResult[37] = tmp4;
+                    cResult[38] = sum;
+                    cResult[39] = tmp17;
+                    cResult[40] = tmp29;
+                    cResult[41] = tmp8;
+                    cResult[42] = tmp9;
+                    cResult[43] = tmp40;
+                    cResult[44] = tmp44;
+                    cResult[45] = tmp45;
+                    cResult[46] = tmp46;
+                    cResult[47] = tmp61;
+                    tmp54 = tmp61;
+                  }
+                }
+              }
+              const obj5 = { disabled: tmp17, value: tmp13, onValueChange: tmp7 };
+              const merged1 = Object.assign(tmp18);
+              const tmp53 = closure_1_8(Form_FormSwitchDefault, obj5);
+              cResult[32] = tmp17;
+              cResult[33] = tmp7;
+              cResult[34] = tmp18;
+              cResult[35] = tmp13;
+              cResult[36] = tmp53;
+              tmp46 = tmp53;
+            }
+            const obj6 = { disabled: tmp17, checked };
+            cResult[29] = checked;
+            cResult[30] = tmp17;
+            cResult[31] = obj6;
+            tmp45 = obj6;
           }
         }
-        if (cResult[25] === tmp18.trailing) {
-          class O {
-            constructor() {
-              tmp = closure_3(closure_1);
-              return;
-            }
-          }
-        }
-        const obj4 = { style: tmp18.trailing, children: null };
-        const items1 = [tmp32, null != tmp12 && tmp12];
-        obj4.children = items1;
-        const tmp40 = options(View, obj4);
-        cResult[25] = tmp18.trailing;
-        class D {
-          constructor() {
-            tmp2 = null != closure_0;
-            tmp = closure_0;
-            if (tmp2) {
-              tmp3 = closure_1;
-              tmp2 = null != closure_1;
-            }
-            if (tmp2) {
-              tmp4 = closure_1;
-              tmpResult = tmp(!closure_1);
-            }
-            return;
-          }
-        }
-        cResult[26] = tmp32;
+        const obj7 = { style: tmp19.trailing, children: null };
+        const items1 = [tmp35, null != tmp12 && tmp12];
+        obj7.children = items1;
+        const tmp43 = options(View, obj7);
+        cResult[25] = tmp19.trailing;
+        cResult[26] = tmp35;
         cResult[27] = null != tmp12 && tmp12;
-        cResult[28] = tmp40;
+        cResult[28] = tmp43;
+        tmp40 = tmp43;
       }
-      const obj5 = { numberOfLines: tmp6, text: tmp5 };
-      const tmp35 = closure_1_8(FormLabelDefault, obj5);
-      class D {
-        constructor() {
-          tmp2 = null != closure_0;
-          tmp = closure_0;
-          if (tmp2) {
-            tmp3 = closure_1;
-            tmp2 = null != closure_1;
-          }
-          if (tmp2) {
-            tmp4 = closure_1;
-            tmpResult = tmp(!closure_1);
-          }
-          return;
-        }
-      }
+      const obj8 = { numberOfLines: tmp6, text: tmp5 };
+      const tmp38 = closure_1_8(FormLabelDefault, obj8);
       cResult[22] = tmp5;
       cResult[23] = tmp6;
-      cResult[24] = tmp35;
-      tmp30 = null != undefined && typeof tmp9 === "string";
+      cResult[24] = tmp38;
+      tmp35 = tmp38;
+      tmp32 = null != tmp30 && typeof tmp9 === "string";
     }
-    const fn = function j() {
+    function onAccessibilityTap() {
       closure_3(!first);
       const timerId = setTimeout(() => {
         if (closure_1_0 != null) {
-          tmp(!first);
+          tmp(!checked);
         }
       });
-    };
-    cResult[19] = first;
-    class D {
-      constructor() {
-        tmp2 = null != closure_0;
-        tmp = closure_0;
-        if (tmp2) {
-          tmp3 = closure_1;
-          tmp2 = null != closure_1;
-        }
-        if (tmp2) {
-          tmp4 = closure_1;
-          tmpResult = tmp(!closure_1);
-        }
-        return;
-      }
     }
+    cResult[19] = checked;
     cResult[20] = tmp7;
-    cResult[21] = fn;
+    cResult[21] = onAccessibilityTap;
+    tmp29 = onAccessibilityTap;
   }
-  class D {
-    constructor() {
-      tmp2 = null != closure_0;
-      tmp = closure_0;
-      if (tmp2) {
-        tmp3 = closure_1;
-        tmp2 = null != closure_1;
-      }
-      if (tmp2) {
-        tmp4 = closure_1;
-        tmpResult = tmp(!closure_1);
-      }
-      return;
+  function handleOnPress() {
+    let tmp2 = null != closure_0;
+    if (tmp2) {
+      tmp2 = null != closure_1;
+    }
+    if (tmp2) {
+      closure_0(!closure_1);
     }
   }
   cResult[13] = tmp7;
   cResult[14] = tmp13;
-  cResult[15] = D;
-}) : ((onValueChange) => {
+  cResult[15] = handleOnPress;
+}) : (function FormSwitchRow(onValueChange) {
   onValueChange = onValueChange.onValueChange;
   value = onValueChange.value;
   importDefault = value;
@@ -275,9 +271,9 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((onValueChange)
   obj2.label = options(View, obj3);
   obj2.subLabel = subLabel;
   obj2.disabled = flag;
-  let fn;
+  let handleOnPress;
   if (isAndroidResult) {
-    fn = () => {
+    handleOnPress = function handleOnPress() {
       let tmp2 = null != onValueChange;
       if (tmp2) {
         tmp2 = null != value;
@@ -287,7 +283,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((onValueChange)
       }
     };
   }
-  obj2.onPress = fn;
+  obj2.onPress = handleOnPress;
   obj2.accessible = true;
   obj2.onAccessibilityTap = function onAccessibilityTap() {
     closure_3(!first);
@@ -311,7 +307,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormSwitchRow.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormSwitchRowContainer(arg0) {
   let DEPRECATED_style = arg0;
   const cResult = c.c(7);
   if (noop.useContext(RedesignCompat.RedesignCompatContext)) {
@@ -347,7 +343,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     return tmp4;
   }
-}) : ((DEPRECATED_style) => {
+}) : (function FormSwitchRowContainer(DEPRECATED_style) {
   if (noop.useContext(RedesignCompat.RedesignCompatContext)) {
     const obj2 = { style: DEPRECATED_style.DEPRECATED_style, children: null };
     const obj5 = { value: null, onValueChange: null };

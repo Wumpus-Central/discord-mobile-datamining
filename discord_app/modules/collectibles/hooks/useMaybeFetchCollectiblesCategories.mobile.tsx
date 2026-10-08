@@ -1,17 +1,17 @@
-// === Module 10480: ? ===
+// === Module 10077: ? ===
 
-// Module 10480
+// Module 10077
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import useMaybeFetchCollectiblesCategoriesShared from "useMaybeFetchCollectiblesCategoriesShared" /* 10481 */;
-import DevSettingsStore from "DevSettingsStore" /* 4895 */;
+import useMaybeFetchCollectiblesCategoriesShared from "useMaybeFetchCollectiblesCategoriesShared" /* 10078 */;
+import DevSettingsStore from "DevSettingsStore" /* 5089 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useMaybeFetchCollectiblesCategories.mobile.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((paymentGateway, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useMaybeFetchCollectiblesCategories(paymentGateway, arg1) {
   const cResult = c.c(8);
   paymentGateway = undefined;
   if (paymentGateway != null) {
@@ -19,7 +19,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((paymentGateway, 
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [DevSettingsStore];
-    const fn = function l() {
+    const fn = function n() {
       return { noCache: DevSettingsStore.get("shop_disable_cache"), includeUnpublished: DevSettingsStore.get("shop_include_unpublished") };
     };
     cResult[0] = items;
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((paymentGateway, 
   cResult[7] = obj2;
   tmp11 = obj2;
   const tmpResult = initialize;
-}) : ((paymentGateway, arg1) => {
+}) : (function useMaybeFetchCollectiblesCategories(paymentGateway, arg1) {
   paymentGateway = undefined;
   if (paymentGateway != null) {
     paymentGateway = paymentGateway.paymentGateway;

@@ -1,15 +1,15 @@
-// === Module 17369: VoicePanelSoundboardButton ===
+// === Module 17650: VoicePanelSoundboardButton ===
 
-// Module 17369 (VoicePanelSoundboardButton)
+// Module 17650 (VoicePanelSoundboardButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import NativeViewDefault from "NativeView" /* 5983 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11915 */;
-import SoundboardIcon from "SoundboardIcon" /* 12200 */;
-import VoicePanelStyles from "VoicePanelStyles" /* 17355 */;
-import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 17356 */;
-import useSoundboardConfig from "useSoundboardConfig" /* 17370 */;
+import NativeViewDefault from "NativeView" /* 6166 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11988 */;
+import SoundboardIcon from "SoundboardIcon" /* 12279 */;
+import VoicePanelStyles from "VoicePanelStyles" /* 17636 */;
+import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 17637 */;
+import useSoundboardConfig from "useSoundboardConfig" /* 17651 */;
 import noop from "module_19" /* 19 */;
 
 const useSoundboardConfigDefault = useSoundboardConfig;
@@ -17,7 +17,7 @@ const useSoundboardConfigDefault = useSoundboardConfig;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { circle: null, iconContainer: null };
 let size = { width: "100%", height: "100%", borderRadius: nativeDefault.radii.round };
 obj2.circle = size;
@@ -27,7 +27,7 @@ const ReactCompilerGating = fn(558);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelSoundboardButton.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((props) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SoundboardButton(props) {
   const cResult = c.c(9);
   props = props.props;
   const tmp5 = closure_6();
@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((props) => {
   cResult[8] = tmp10;
   tmp9 = tmp10;
   const tmp7Result = useSoundboardConfigDefault(noop.useContext(VoicePanelStateContextDefault).channelId, useSoundboardConfig.SoundboardButtonLocation.VOICE_PANEL_CONTROLS);
-}) : ((arg0) => {
+}) : (function SoundboardButton(arg0) {
   ({ props, wrapperSpecs } = arg0);
   const tmp3 = closure_6();
   const voicePanelButtonStyles = VoicePanelStyles.useVoicePanelButtonStyles(wrapperSpecs);

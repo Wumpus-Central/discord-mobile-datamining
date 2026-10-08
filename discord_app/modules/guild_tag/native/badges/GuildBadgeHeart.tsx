@@ -1,9 +1,9 @@
-// === Module 13756: GuildBadgeHeart ===
+// === Module 13978: GuildBadgeHeart ===
 
-// Module 13756 (GuildBadgeHeart)
+// Module 13978 (GuildBadgeHeart)
 import c from "c" /* 576 */;
-import inlineStyles from "inlineStyles" /* 8169 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 13748 */;
+import inlineStyles from "inlineStyles" /* 7550 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 13970 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgeHeart.tsx");
 
-export const GuildBadgeHeart = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const GuildBadgeHeart = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBadgeHeart(arg0) {
   const cResult = c.c(26);
   if (cResult[0] !== arg0) {
     ({ width, height, primaryTintColor } = arg0);
@@ -148,7 +148,7 @@ export const GuildBadgeHeart = ReactCompilerGating.isReactCompilerEnabled() ? ((
   cResult[24] = num6;
   cResult[25] = tmp39;
   tmp37 = tmp39;
-}) : ((primaryTintColor) => {
+}) : (function GuildBadgeHeart(primaryTintColor) {
   let num = primaryTintColor.width;
   if (num === undefined) {
     num = 24;

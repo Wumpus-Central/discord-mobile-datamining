@@ -1,63 +1,48 @@
-// === Module 16812: SearchScreenSearchBar ===
+// === Module 17091: SearchScreenSearchBar ===
 
-// Module 16812 (SearchScreenSearchBar)
-import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1881 */;
-import mergeProps from "mergeProps" /* 4591 */;
-import useKeyboardIsOpen from "useKeyboardIsOpen" /* 6117 */;
-import layout_SearchBarDefault from "layout/SearchBar" /* 16813 */;
-import SearchFilterSuggestionsDefault from "SearchFilterSuggestions" /* 16815 */;
-import SearchFilterButtonDefault from "SearchFilterButton" /* 16820 */;
+// Module 17091 (SearchScreenSearchBar)
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1893 */;
+import mergeProps from "mergeProps" /* 4783 */;
+import useKeyboardIsOpen from "useKeyboardIsOpen" /* 6296 */;
+import layout_SearchBarDefault from "layout/SearchBar" /* 17092 */;
+import SearchFilterSuggestionsDefault from "SearchFilterSuggestions" /* 17094 */;
+import SearchFilterButtonDefault from "SearchFilterButton" /* 17099 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({ header: { flexDirection: "row", alignItems: "center", paddingLeft: 16, zIndex: 10 }, headerWithBackButton: { paddingLeft: 0 }, headerSearch: { flex: 1, flexGrow: 1 }, headerControlsRight: { paddingRight: 16, paddingLeft: 12 }, suggestionsAnchor: { height: 0 }, suggestions: { position: "absolute", left: 0, right: -50, top: 8 }, suggestionsWithBackButton: { left: -28 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/layout/SearchScreenSearchBar.tsx");
 
-export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, ref) => {
-  const cResult = ref(576).c(33);
-  ({ searchContext, backButton } = arg0);
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function SearchScreenSearchBar(arg0) {
+  const cResult = ref1(576).c(33);
+  ({ searchContext, backButton, ref } = arg0);
   const tmp4 = closure_7();
-  ref = noop.useRef(null);
+  ref1 = noop.useRef(null);
   if (cResult[0] !== ref) {
-    const mergeRefsResult = tmp(4591).mergeRefs(ref, ref);
+    const mergeRefsResult = tmp(4783).mergeRefs(ref, ref1);
     cResult[0] = ref;
     cResult[1] = mergeRefsResult;
     let tmp6 = mergeRefsResult;
-    const tmpResult = tmp(4591);
+    const tmpResult = tmp(4783);
   } else {
     tmp6 = cResult[1];
   }
   importDefault = noop.useRef(false);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    class B {
-      constructor() {
-        obj = closure_0(closure_2[7]);
-        closure_1.current = obj.getKeyboardIsOpen();
-        obj2 = closure_0(closure_2[8]);
-        result = obj2.dismissGlobalKeyboard();
-        return;
-      }
-    }
-    cResult[2] = B;
-  } else {
-    class B {
-      constructor() {
-        obj = closure_0(closure_2[7]);
-        closure_1.current = obj.getKeyboardIsOpen();
-        obj2 = closure_0(closure_2[8]);
-        result = obj2.dismissGlobalKeyboard();
-        return;
-      }
-    }
+    const fn = function b() {
+      closure_1.current = useKeyboardIsOpen.getKeyboardIsOpen();
+      const result = KeyboardManagerUtils.dismissGlobalKeyboard();
+    };
+    cResult[2] = fn;
   }
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    class S {
+    class R {
       constructor(arg0) {
         current = arg0;
         if (arg0) {
@@ -67,14 +52,19 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
         if (current) {
           tmp2 = globalThis;
           _requestAnimationFrame = requestAnimationFrame;
-          animationFrame = requestAnimationFrame(() => { ... });
+          animationFrame = requestAnimationFrame(() => {
+            const current = ref.current;
+            if (current != null) {
+              current.focus();
+            }
+          });
         }
         return;
       }
     }
-    cResult[3] = S;
+    cResult[3] = R;
   } else {
-    class S {
+    class R {
       constructor(arg0) {
         current = arg0;
         if (arg0) {
@@ -84,14 +74,19 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
         if (current) {
           tmp2 = globalThis;
           _requestAnimationFrame = requestAnimationFrame;
-          animationFrame = requestAnimationFrame(() => { ... });
+          animationFrame = requestAnimationFrame(() => {
+            const current = ref.current;
+            if (current != null) {
+              current.focus();
+            }
+          });
         }
         return;
       }
     }
   }
   if (cResult[4] === tmp4.header) {
-    class S {
+    class R {
       constructor(arg0) {
         current = arg0;
         if (arg0) {
@@ -101,13 +96,18 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
         if (current) {
           tmp2 = globalThis;
           _requestAnimationFrame = requestAnimationFrame;
-          animationFrame = requestAnimationFrame(() => { ... });
+          animationFrame = requestAnimationFrame(() => {
+            const current = ref.current;
+            if (current != null) {
+              current.focus();
+            }
+          });
         }
         return;
       }
     }
     if (cResult[7] === tmp6) {
-      class S {
+      class R {
         constructor(arg0) {
           current = arg0;
           if (arg0) {
@@ -117,13 +117,18 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
           if (current) {
             tmp2 = globalThis;
             _requestAnimationFrame = requestAnimationFrame;
-            animationFrame = requestAnimationFrame(() => { ... });
+            animationFrame = requestAnimationFrame(() => {
+              const current = ref.current;
+              if (current != null) {
+                current.focus();
+              }
+            });
           }
           return;
         }
       }
       if (cResult[10] === tmp4.suggestions) {
-        class S {
+        class R {
           constructor(arg0) {
             current = arg0;
             if (arg0) {
@@ -133,13 +138,18 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
             if (current) {
               tmp2 = globalThis;
               _requestAnimationFrame = requestAnimationFrame;
-              animationFrame = requestAnimationFrame(() => { ... });
+              animationFrame = requestAnimationFrame(() => {
+                const current = ref.current;
+                if (current != null) {
+                  current.focus();
+                }
+              });
             }
             return;
           }
         }
         if (cResult[13] === searchContext) {
-          class S {
+          class R {
             constructor(arg0) {
               current = arg0;
               if (arg0) {
@@ -149,13 +159,18 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
               if (current) {
                 tmp2 = globalThis;
                 _requestAnimationFrame = requestAnimationFrame;
-                animationFrame = requestAnimationFrame(() => { ... });
+                animationFrame = requestAnimationFrame(() => {
+                  const current = ref.current;
+                  if (current != null) {
+                    current.focus();
+                  }
+                });
               }
               return;
             }
           }
           if (cResult[16] === tmp4.suggestionsAnchor) {
-            class S {
+            class R {
               constructor(arg0) {
                 current = arg0;
                 if (arg0) {
@@ -165,13 +180,18 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
                 if (current) {
                   tmp2 = globalThis;
                   _requestAnimationFrame = requestAnimationFrame;
-                  animationFrame = requestAnimationFrame(() => { ... });
+                  animationFrame = requestAnimationFrame(() => {
+                    const current = ref.current;
+                    if (current != null) {
+                      current.focus();
+                    }
+                  });
                 }
                 return;
               }
             }
             if (cResult[19] === tmp4.headerSearch) {
-              class S {
+              class R {
                 constructor(arg0) {
                   current = arg0;
                   if (arg0) {
@@ -181,7 +201,12 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
                   if (current) {
                     tmp2 = globalThis;
                     _requestAnimationFrame = requestAnimationFrame;
-                    animationFrame = requestAnimationFrame(() => { ... });
+                    animationFrame = requestAnimationFrame(() => {
+                      const current = ref.current;
+                      if (current != null) {
+                        current.focus();
+                      }
+                    });
                   }
                   return;
                 }
@@ -223,15 +248,14 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
   cResult[4] = tmp4.header;
   cResult[5] = null != backButton && tmp4.headerWithBackButton;
   cResult[6] = items2;
-  let obj = ref(576);
-  tmp = ref;
-}) : ((arg0, arg1) => {
-  ({ searchContext, backButton } = arg0);
-  closure_0 = arg1;
+  let obj = ref1(576);
+  tmp = ref1;
+}) : (function SearchScreenSearchBar(arg0) {
+  ({ searchContext, backButton, ref } = arg0);
   const tmp = closure_7();
   importDefault = noop.useRef(null);
-  const items = [arg1];
-  const memo = noop.useMemo(() => mergeProps.mergeRefs(closure_0, closure_1), items);
+  const items = [ref];
+  const memo = noop.useMemo(() => mergeProps.mergeRefs(ref, closure_1), items);
   dependencyMap = noop.useRef(false);
   const callback = noop.useCallback(() => {
     closure_2.current = useKeyboardIsOpen.getKeyboardIsOpen();
@@ -278,4 +302,4 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
   items2[2] = closure_5(View, { style: tmp.headerControlsRight, children: closure_5(SearchFilterButtonDefault, { searchContext, onOpen: callback, onClose: callback1 }) });
   obj.children = items2;
   return closure_6(View, obj);
-})));
+}));

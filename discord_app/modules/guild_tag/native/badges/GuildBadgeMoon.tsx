@@ -1,9 +1,9 @@
-// === Module 13753: GuildBadgeMoon ===
+// === Module 13975: GuildBadgeMoon ===
 
-// Module 13753 (GuildBadgeMoon)
+// Module 13975 (GuildBadgeMoon)
 import c from "c" /* 576 */;
-import inlineStyles from "inlineStyles" /* 8169 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 13748 */;
+import inlineStyles from "inlineStyles" /* 7550 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 13970 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgeMoon.tsx");
 
-export const GuildBadgeMoon = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const GuildBadgeMoon = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBadgeMoon(arg0) {
   const cResult = c.c(30);
   if (cResult[0] !== arg0) {
     ({ width, height, primaryTintColor } = arg0);
@@ -167,7 +167,7 @@ export const GuildBadgeMoon = ReactCompilerGating.isReactCompilerEnabled() ? ((a
   cResult[28] = num6;
   cResult[29] = tmp45;
   tmp43 = tmp45;
-}) : ((primaryTintColor) => {
+}) : (function GuildBadgeMoon(primaryTintColor) {
   let num = primaryTintColor.width;
   if (num === undefined) {
     num = 24;

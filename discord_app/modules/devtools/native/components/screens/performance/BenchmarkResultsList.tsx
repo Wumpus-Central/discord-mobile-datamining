@@ -1,10 +1,10 @@
-// === Module 15630: BenchmarkResultsList ===
+// === Module 15910: BenchmarkResultsList ===
 
-// Module 15630 (BenchmarkResultsList)
+// Module 15910 (BenchmarkResultsList)
 import c from "c" /* 576 */;
-import TableRow from "TableRow" /* 6000 */;
-import TableRowGroup from "TableRowGroup" /* 6081 */;
-import startFrameMonitor from "startFrameMonitor" /* 15626 */;
+import TableRow from "TableRow" /* 6184 */;
+import TableRowGroup from "TableRowGroup" /* 6267 */;
+import startFrameMonitor from "startFrameMonitor" /* 15906 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/devtools/native/components/screens/performance/BenchmarkResultsList.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function BenchmarkResultsList(arg0) {
   const cResult = c.c(8);
   ({ results, onClear } = arg0);
   let num = 0;
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[7] = tmp14;
     tmp12 = tmp14;
   }
-}) : ((results) => {
+}) : (function BenchmarkResultsList(results) {
   results = results.results;
   let tmp2 = null;
   if (0 !== results.length) {

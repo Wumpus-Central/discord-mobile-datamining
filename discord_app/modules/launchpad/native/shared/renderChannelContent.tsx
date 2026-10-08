@@ -1,31 +1,31 @@
-// === Module 16856: renderChannelContent ===
+// === Module 17135: renderChannelContent ===
 
-// Module 16856 (renderChannelContent)
+// Module 17135 (renderChannelContent)
 import c from "c" /* 576 */;
-import WarningIcon from "WarningIcon" /* 4809 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 5853 */;
-import LockIcon from "LockIcon" /* 5886 */;
-import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 16095 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 16853 */;
-import ChannelTitleDefault from "ChannelTitle" /* 16857 */;
+import WarningIcon from "WarningIcon" /* 5003 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 6785 */;
+import LockIcon from "LockIcon" /* 8198 */;
+import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 16355 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 17132 */;
+import ChannelTitleDefault from "ChannelTitle" /* 17136 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const SUBTITLE_OPACITY_NORMAL = fn(11711).SUBTITLE_OPACITY_NORMAL;
-const UnreadSetting = fn(5078).UnreadSetting;
+const SUBTITLE_OPACITY_NORMAL = fn(11776).SUBTITLE_OPACITY_NORMAL;
+const UnreadSetting = fn(5972).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
-let PlatformUtils = fn(1369);
+const createStyles = fn(5090);
+let PlatformUtils = fn(1381);
 let num = -1;
 if (PlatformUtils.isIOS()) {
   num = 2;
 }
 let obj3 = { channelContent: { flex: 1, marginTop: num }, channelContainer: { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, leftBox: { flexDirection: "column", alignItems: "flex-start", flexShrink: 1 }, rightBox: { flexDirection: "column", alignItems: "flex-end" }, rightContentAbsolute: { position: "absolute", right: 0, top: 0 }, channelTraits: { display: "flex", flexDirection: "row", alignItems: "center" }, channelTraitIcon: null };
 let obj4 = { opacity: SUBTITLE_OPACITY_NORMAL, marginRight: 4, marginTop: null };
-PlatformUtils = fn(1369);
+PlatformUtils = fn(1381);
 let num2 = 0;
 if (PlatformUtils.isAndroid()) {
   num2 = 2;
@@ -34,7 +34,7 @@ obj4.marginTop = num2;
 obj3.channelTraitIcon = obj4;
 let closure_9 = createStyles.createStyles(obj3);
 const ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelContent(arg0) {
   const cResult = c.c(70);
   ({ name, subtitle, unread, resolvedUnreadSetting, locked, muted, lastMessageTimestampString, channel, channelCategoryName, connected, mentionCount, mentionBadge, isSubscriptionGated, needSubscriptionToAccess } = arg0);
   const tmp4 = closure_9();
@@ -405,7 +405,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = locked;
   cResult[3] = tmp9;
   tmp8 = tmp9;
-}) : ((arg0) => {
+}) : (function ChannelContent(arg0) {
   ({ subtitle, resolvedUnreadSetting, locked, muted, lastMessageTimestampString, channel, channelCategoryName, mentionCount, mentionBadge, isSubscriptionGated } = arg0);
   ({ name, unread, connected, needSubscriptionToAccess } = arg0);
   const tmp = closure_9();

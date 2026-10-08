@@ -1,20 +1,20 @@
-// === Module 11046: useSetMediaPostThumbnail ===
+// === Module 12792: useSetMediaPostThumbnail ===
 
-// Module 11046 (useSetMediaPostThumbnail)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 8842 */;
+// Module 12792 (useSetMediaPostThumbnail)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9201 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 7280 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 7880 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const DraftType = fn(7044).DraftType;
+const DraftType = fn(7232).DraftType;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_channel/native/useSetMediaPostThumbnail.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, id) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSetMediaPostThumbnail(arg0, id) {
   _require = arg0;
   const user = id;
   const cResult = require("c").c(8);
@@ -84,7 +84,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, id) => {
   if (id != null) {
     isThumbnail1 = id.isThumbnail;
   }
-  const fn2 = function f() {
+  const fn2 = function b() {
     let id;
     if (user != null) {
       id = user.id;
@@ -123,7 +123,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, id) => {
   cResult[7] = fn2;
   tmp11 = fn2;
   const tmpResult = require("useStateFromStores");
-}) : ((arg0, arg1) => {
+}) : (function useSetMediaPostThumbnail(arg0, arg1) {
   _require = arg0;
   const user = arg1;
   const items = [UploadAttachmentStore];

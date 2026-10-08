@@ -1,17 +1,17 @@
-// === Module 11826: PrivateChannelUserList ===
+// === Module 11911: PrivateChannelUserList ===
 
-// Module 11826 (PrivateChannelUserList)
+// Module 11911 (PrivateChannelUserList)
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1126 */;
-import GlobalUtils from "GlobalUtils" /* 1375 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7861 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8346 */;
-import openGroupDMNitroCapInfoActionSheetDefault from "openGroupDMNitroCapInfoActionSheet" /* 11828 */;
+import GlobalUtils from "GlobalUtils" /* 1387 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8279 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9005 */;
+import openGroupDMNitroCapInfoActionSheetDefault from "openGroupDMNitroCapInfoActionSheet" /* 11913 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
-import UserStore from "UserStore" /* 1377 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const View = fn(17).View;
@@ -23,7 +23,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/PrivateChannelUserList.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function PrivateChannelUserList(channelId) {
   const cResult = channelId(onUserPress[9]).c(52);
   channelId = channelId.channelId;
   ({ disableStickySections, listStyleOverride, disableBottomSafeZone, insetEnd, headerShown, hideTitle } = channelId);
@@ -458,7 +458,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
   cResult[8] = !tmp4;
   cResult[9] = obj2;
   const tmpResult5 = channelId(onUserPress[11]);
-}) : ((channelId) => {
+}) : (function PrivateChannelUserList(channelId) {
   channelId = channelId.channelId;
   let flag = channelId.headerShown;
   ({ disableStickySections, listStyleOverride, disableBottomSafeZone, insetEnd } = channelId);

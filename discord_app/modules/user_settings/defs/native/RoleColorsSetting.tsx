@@ -1,20 +1,20 @@
-// === Module 15166: RoleColorsSetting ===
+// === Module 15428: RoleColorsSetting ===
 
-// Module 15166 (RoleColorsSetting)
+// Module 15428 (RoleColorsSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14295 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14520 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 require = fn;
 let ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRoleColorSettingValue() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AccessibilityStore];
-    const fn = function n() {
+    const fn = function o() {
       return roleStyle.roleStyle;
     };
     cResult[0] = items;
@@ -25,12 +25,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     [tmp4, tmp5] = cResult;
   }
   return initialize.useStateFromStores(tmp4, tmp5);
-}) : (() => {
+}) : (function useRoleColorSettingValue() {
   const items = [AccessibilityStore];
   return initialize.useStateFromStores(items, () => roleStyle.roleStyle);
 });
 ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRoleColorSettingOptions() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { label: null, value: "username" };
@@ -51,31 +51,33 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     first = cResult[0];
   }
   return first;
-}) : (() => noop.useMemo(() => {
-  const obj = { label: null, value: "username" };
-  const intl = util.intl;
-  obj.label = intl.string(util.t.YEOEi6);
-  const items = [obj, , ];
-  const obj2 = { label: null, value: "dot" };
-  const intl2 = util.intl;
-  obj2.label = intl2.string(util.t.mQaro3);
-  items[1] = obj2;
-  const obj3 = { label: null, value: "hidden" };
-  const intl3 = util.intl;
-  obj3.label = intl3.string(util.t.Ji2EVJ);
-  items[2] = obj3;
-  return items;
-}, []));
+}) : (function useRoleColorSettingOptions() {
+  return noop.useMemo(() => {
+    const obj = { label: null, value: "username" };
+    const intl = util.intl;
+    obj.label = intl.string(util.t.YEOEi6);
+    const items = [obj, , ];
+    const obj2 = { label: null, value: "dot" };
+    const intl2 = util.intl;
+    obj2.label = intl2.string(util.t.mQaro3);
+    items[1] = obj2;
+    const obj3 = { label: null, value: "hidden" };
+    const intl3 = util.intl;
+    obj3.label = intl3.string(util.t.Ji2EVJ);
+    items[2] = obj3;
+    return items;
+  }, []);
+});
 function onRoleColorSettingValueChange(roleStyle) {
   AccessibilityActionCreators.setRoleStyle(roleStyle);
 }
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.uSOPWm);
   },
-  parent: fn(7645).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(7966).MobileUserSettings.ACCESSIBILITY,
   useValue: tmp2,
   onValueChange: onRoleColorSettingValueChange,
   useOptions: tmp3

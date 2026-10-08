@@ -1,8 +1,8 @@
-// === Module 16692: ConjureTimelineTree ===
+// === Module 16965: ConjureTimelineTree ===
 
-// Module 16692 (ConjureTimelineTree)
+// Module 16965 (ConjureTimelineTree)
 import util from "util" /* 1126 */;
-import _modDef3753 from "module_3753" /* 3753 */;
+import _modDef3827 from "module_3827" /* 3827 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -39,13 +39,13 @@ function buildTimelineTree(steps, arg1) {
         if (null != value) {
           return value;
         } else {
-          const obj3 = { id, kind: "step", detail: [], detailDrivenBy: [], status: "running", screenshots: [], attachments: [], touched: 0, segment };
+          const obj3 = { id, kind: "step", detail: [], detailDrivenBy: [], status: "running", screenshots: [], browserSessions: [], attachments: [], touched: 0, segment };
           const result = map1.set(combined, obj3);
           if (null != taskId) {
             value3 = map.get(taskId);
             if (null == value3) {
               const obj4 = { taskId, task: null, steps: null };
-              const obj5 = { id: "task", kind: "task", detail: [], detailDrivenBy: [], status: "running", screenshots: [], attachments: [], touched: 0, segment };
+              const obj5 = { id: "task", kind: "task", detail: [], detailDrivenBy: [], status: "running", screenshots: [], browserSessions: [], attachments: [], touched: 0, segment };
               obj4.task = obj5;
               obj4.steps = [];
               const result1 = map.set(taskId, obj4);
@@ -64,7 +64,7 @@ function buildTimelineTree(steps, arg1) {
       let value4 = map.get(taskId);
       if (null == value4) {
         const obj7 = { taskId, task: null, steps: null };
-        const obj8 = { id: "task", kind: "task", detail: [], detailDrivenBy: [], status: "running", screenshots: [], attachments: [], touched: 0, segment };
+        const obj8 = { id: "task", kind: "task", detail: [], detailDrivenBy: [], status: "running", screenshots: [], browserSessions: [], attachments: [], touched: 0, segment };
         obj7.task = obj8;
         obj7.steps = [];
         const result2 = map.set(taskId, obj7);
@@ -72,7 +72,7 @@ function buildTimelineTree(steps, arg1) {
       }
       task = value4.task;
     } else if (task == null) {
-      const obj9 = { id: "task", kind: "task", detail: [], detailDrivenBy: [], status: "running", screenshots: [], attachments: [], touched: 0, segment };
+      const obj9 = { id: "task", kind: "task", detail: [], detailDrivenBy: [], status: "running", screenshots: [], browserSessions: [], attachments: [], touched: 0, segment };
       task = obj9;
     }
     return task;
@@ -241,6 +241,9 @@ function buildTimelineTree(steps, arg1) {
             }
             if (null != node.screenshots) {
               tmp18Result.screenshots = node.screenshots;
+            }
+            if (null != node.browser_sessions) {
+              tmp18Result.browserSessions = node.browser_sessions;
             }
             if (null != node.attachments) {
               tmp18Result.attachments = node.attachments;
@@ -435,7 +438,7 @@ function isTurnWorkFrame(task_id) {
   }
   return tmp;
 }
-let obj = { healthcheck_failed: _modDef3753.iwOTgo, preview_ready: _modDef3753.okkgSB, working: _modDef3753.t8skVB, error: _modDef3753.avt0ax };
+let obj = { healthcheck_failed: _modDef3827.iwOTgo, preview_ready: _modDef3827.okkgSB, working: _modDef3827.t8skVB, error: _modDef3827.avt0ax };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/agent_activity/ConjureTimelineTree.tsx");
 
@@ -451,26 +454,26 @@ export const describeNode = function describeNode(currentStepResult) {
   }
   const intl = util.intl;
   if (t8skVB == null) {
-    t8skVB = _modDef3753.t8skVB;
+    t8skVB = _modDef3827.t8skVB;
   }
   return intl.string(t8skVB);
 };
 export const describeTaskStatus = function describeTaskStatus(arg0) {
   if ("running" === arg0) {
     const intl5 = util.intl;
-    return intl5.string(_modDef3753.jTwZFY);
+    return intl5.string(_modDef3827.jTwZFY);
   } else if ("done" === arg0) {
     const intl4 = util.intl;
-    return intl4.string(_modDef3753.keYz9o);
+    return intl4.string(_modDef3827.keYz9o);
   } else if ("failed" === arg0) {
     const intl3 = util.intl;
-    return intl3.string(_modDef3753["RoY/lg"]);
+    return intl3.string(_modDef3827["RoY/lg"]);
   } else if ("cancelled" === arg0) {
     const intl2 = util.intl;
-    return intl2.string(_modDef3753["HZw/I/"]);
+    return intl2.string(_modDef3827["HZw/I/"]);
   } else if ("incomplete" === arg0) {
     const intl = util.intl;
-    return intl.string(_modDef3753.sf2UHL);
+    return intl.string(_modDef3827.sf2UHL);
   }
 };
 export { buildTimelineTree };

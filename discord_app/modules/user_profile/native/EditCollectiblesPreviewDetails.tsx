@@ -1,25 +1,25 @@
-// === Module 13032: EditCollectiblesPreviewDetails ===
+// === Module 13310: EditCollectiblesPreviewDetails ===
 
-// Module 13032 (EditCollectiblesPreviewDetails)
+// Module 13310 (EditCollectiblesPreviewDetails)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4534 */;
-import DateUtils from "DateUtils" /* 4558 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7078 */;
-import useCollectiblesDataDefault from "useCollectiblesData" /* 7855 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4726 */;
+import DateUtils from "DateUtils" /* 4750 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7264 */;
+import useCollectiblesDataDefault from "useCollectiblesData" /* 8273 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2116 */;
+import LocaleStore from "LocaleStore" /* 2128 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles({ productDetailsContainer: { width: "100%", marginTop: 16, alignItems: "center", gap: 2 } });
 let ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((product) => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditCollectiblesPreviewDescription(product) {
   let stringResult = dependencyMap;
   const cResult = c.c(22);
   ({ user, purchase, nitroJoinCTA, nitroUpgradeCTA } = product);
@@ -193,7 +193,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((product) => {
     return tmp37;
   }
   const tmpResult5 = CollectiblesUtils;
-}) : ((arg0) => {
+}) : (function EditCollectiblesPreviewDescription(arg0) {
   ({ user, purchase } = arg0);
   let stringResult = dependencyMap;
   ({ product, nitroJoinCTA, nitroUpgradeCTA } = arg0);
@@ -293,7 +293,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/EditCollectiblesPreviewDetails.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditCollectiblesPreviewDetails(arg0) {
   const cResult = c.c(12);
   ({ user, previewSkuId, nitroJoinCTA, nitroUpgradeCTA } = arg0);
   const tmp4 = closure_8();
@@ -358,7 +358,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp11 = tmp14;
   }
   return null;
-}) : ((previewSkuId) => {
+}) : (function EditCollectiblesPreviewDetails(previewSkuId) {
   previewSkuId = previewSkuId.previewSkuId;
   ({ user, nitroJoinCTA, nitroUpgradeCTA } = previewSkuId);
   const tmp = closure_8();

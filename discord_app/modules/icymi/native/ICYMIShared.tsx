@@ -1,30 +1,30 @@
-// === Module 16475: ICYMIShared ===
+// === Module 16735: ICYMIShared ===
 
-// Module 16475 (ICYMIShared)
+// Module 16735 (ICYMIShared)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import Client from "Client" /* 4793 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 4883 */;
-import timing from "timing" /* 4897 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4909 */;
-import GuildIcon from "GuildIcon" /* 5978 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 6612 */;
-import safeTransitionToDefault from "safeTransitionTo" /* 6760 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 6978 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7861 */;
-import ICYMIUtils from "ICYMIUtils" /* 8038 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8039 */;
-import ClipView from "ClipView" /* 8502 */;
-import openDetailsActionSheet from "openDetailsActionSheet" /* 16476 */;
+import native from "native" /* 1200 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import Client from "Client" /* 4987 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 5077 */;
+import timing from "timing" /* 5091 */;
+import GuildIcon from "GuildIcon" /* 6161 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 6789 */;
+import safeTransitionToDefault from "safeTransitionTo" /* 6936 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7001 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7167 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8279 */;
+import ICYMIUtils from "ICYMIUtils" /* 8446 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8447 */;
+import ClipView from "ClipView" /* 8986 */;
+import openDetailsActionSheet from "openDetailsActionSheet" /* 16736 */;
 import noop from "module_19" /* 19 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 6819 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
-import UserStore from "UserStore" /* 1377 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 6992 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildMemberStore from "GuildMemberStore" /* 2124 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 const GuildIconDefault = GuildIcon;
@@ -37,7 +37,7 @@ const Constants = fn(1085);
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
 let c21 = 225;
-const createICYMIStyles = fn(16434);
+const createICYMIStyles = fn(16694);
 let closure_22 = createICYMIStyles.createICYMIStyles((paddingBottom) => {
   let num = 0;
   if (obj.isAndroid()) {
@@ -82,7 +82,7 @@ let closure_22 = createICYMIStyles.createICYMIStyles((paddingBottom) => {
   return obj2;
 });
 let ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function Separator() {
   const cResult = c.c(2);
   const tmp2 = closure_22();
   if (cResult[0] !== tmp2.separator) {
@@ -95,10 +95,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp3 = cResult[1];
   }
   return tmp3;
-}) : (() => collapsedCategories(View, { style: closure_22().separator }));
+}) : (function Separator() {
+  return collapsedCategories(View, { style: closure_22().separator });
+});
 let closure_23 = tmp4;
 ReactCompilerGating = fn(558);
-let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function CutoutGuildIconWithUser(arg0) {
   const cResult = c.c(7);
   ({ guild, author } = arg0);
   const tmp4 = closure_22();
@@ -128,7 +130,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = tmp6;
   tmp5 = tmp6;
   const obj3 = { animate: true, style: tmp4.authorIcon, guildId: guild.id, user: author, size: native.AvatarSizes.XSMALL };
-}) : ((guild) => {
+}) : (function CutoutGuildIconWithUser(guild) {
   guild = guild.guild;
   const obj = { guild, icon: null };
   const tmp = closure_22();
@@ -136,7 +138,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return collapsedCategories(closure_25, obj);
 });
 ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function CutoutGuildIcon(arg0) {
   const cResult = c.c(7);
   ({ guild, icon } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -181,7 +183,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = tmp6;
   cResult[6] = tmp13;
   tmp12 = tmp13;
-}) : ((arg0) => {
+}) : (function CutoutGuildIcon(arg0) {
   const obj = { style: { width: 40, height: 40 }, children: null };
   ({ guild, icon } = arg0);
   const obj2 = { cutouts: null, children: null };
@@ -198,7 +200,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 });
 let closure_25 = tmp5;
 ReactCompilerGating = fn(558);
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildContentPost(guild) {
   const cResult = guild(id[23]).c(43);
   guild = guild.guild;
   const channel = guild.channel;
@@ -398,12 +400,12 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   cResult[2] = tmp7;
   tmp6 = tmp7;
   let obj2 = guild(id[27]);
-}) : ((guild) => {
+}) : (function GuildContentPost(guild) {
   guild = guild.guild;
   ({ channel: importDefault, hideTimestamp, id: dependencyMap, type: noop } = guild);
   ({ timestamp, children, avatar, title, subtitle, onHeaderPress, onHeaderLongPress, disableInteractions } = guild);
   const tmp = closure_22();
-  const fontScale = guild(5609).useFontScale();
+  const fontScale = guild(5382).useFontScale();
   let obj2 = { onPress: onHeaderPress, onLongPress: onHeaderLongPress, style: tmp.content, children: null };
   const obj3 = { style: fontScale > 1.8 ? tmp.channelNameAndAccessoryLarge : tmp.channelNameAndAccessory, children: null };
   const obj4 = { style: tmp.header, children: null };
@@ -414,9 +416,9 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   const items1 = [title, ];
   let tmp7Result = !hideTimestamp;
   if (!hideTimestamp) {
-    const obj8 = { lineClamp: 1, variant: "text-xs/normal", color: "text-muted", children: tmp2(7139).getRelativeTimestamp(timestamp) };
-    tmp7Result = closure_18(tmp2(4892).Text, obj8);
-    const tmp2Result = tmp2(7139);
+    const obj8 = { lineClamp: 1, variant: "text-xs/normal", color: "text-muted", children: tmp2(6064).getRelativeTimestamp(timestamp) };
+    tmp7Result = closure_18(tmp2(5086).Text, obj8);
+    const tmp2Result = tmp2(6064);
   }
   items1[1] = tmp7Result;
   obj7.children = items1;
@@ -442,8 +444,8 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
         children: null
       };
       const obj10 = { color: nativeDefault.colors.ICON_MUTED, size: "sm" };
-      obj9.children = closure_18(tmp2(7588).MoreHorizontalIcon, obj10);
-      tmp7Result2 = closure_18(tmp2(5916).PressableOpacity, obj9);
+      obj9.children = closure_18(tmp2(9180).MoreHorizontalIcon, obj10);
+      tmp7Result2 = closure_18(tmp2(6189).PressableOpacity, obj9);
     }
   }
   const obj11 = { children: null };
@@ -457,14 +459,14 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   obj4.children = items;
   obj3.children = closure_19(View, obj4);
   obj2.children = closure_18(View, obj3);
-  const items4 = [closure_18(guild(5916).PressableHighlight, obj2), children];
+  const items4 = [closure_18(guild(6189).PressableHighlight, obj2), children];
   obj11.children = items4;
   return closure_19(closure_20, obj11);
 });
 let closure_26 = tmp6;
 fn(558);
 ReactCompilerGating = fn(558);
-let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
+let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function AnnouncementContentPost(guild) {
   const cResult = guild(author[23]).c(37);
   guild = guild.guild;
   const channel = guild.channel;
@@ -623,7 +625,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
         tmp12 = tmp15;
       }
     }
-    const fn2 = function _() {
+    const fn2 = function v() {
       ICYMIActionCreatorsDefault.itemInteracted(id, "announcement", "open_profile");
       ICYMIActionCreatorsDefault.feedItemActioned({ itemId: id, itemType: "announcement", actionParameters: { actionGestureType: "press", actionTargetElement: "item_header", actionIntentType: "open", actionDestinationType: "user" } });
       showUserProfileActionSheetDefault({ userId: author.id, channelId: channel.id });
@@ -643,7 +645,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   cResult[3] = fn;
   tmp7 = fn;
   let obj = guild(author[23]);
-}) : ((guild) => {
+}) : (function AnnouncementContentPost(guild) {
   guild = guild.guild;
   const channel = guild.channel;
   const author = guild.author;
@@ -696,7 +698,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
 ReactCompilerGating = fn(558);
 const __initData = { code: "function ICYMISharedTsx1(){const{interpolateColor,progress,bgColor,bgColorHighlighted}=this.__closure;return{backgroundColor:interpolateColor(progress.get(),[0,1],[bgColor,bgColorHighlighted])};}" };
 const __initData2 = { code: "function ICYMISharedTsx2(){const{interpolateColor,progress,bgColor,bgColorHighlighted}=this.__closure;return{backgroundColor:interpolateColor(progress.get(),[0,1],[bgColor,bgColorHighlighted])};}" };
-let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
+let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEventPost(guild) {
   const cResult = guild(event[23]).c(40);
   guild = guild.guild;
   const channel = guild.channel;
@@ -1149,7 +1151,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
     const tmpResult3 = tmp(event[33]);
   }
   let obj = guild(event[23]);
-}) : ((guild) => {
+}) : (function GuildEventPost(guild) {
   guild = guild.guild;
   const channel = guild.channel;
   const event = guild.event;
@@ -1278,7 +1280,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   const tmp2Result2 = guild(event[33]);
 });
 ReactCompilerGating = fn(558);
-let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
+let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? (function MessageContentPost(guild) {
   const cResult = guild(author[23]).c(48);
   guild = guild.guild;
   const channel = guild.channel;
@@ -1310,7 +1312,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
       if (colorString == null) {
         colorString = closure_13;
       }
-      class E {
+      class P {
         constructor() {
           return closure_7.getMember(guild.id, author.id);
         }
@@ -1336,72 +1338,159 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
               if (cResult[12] === type) {
                 let tmp15 = cResult[13];
               }
-              const margin = id.useContext(tmp(author[42]).ICYMIContext).margin;
+              class U {
+                constructor() {
+                  obj = closure_1(closure_2[35]);
+                  itemInteractedResult = obj.itemInteracted(id, type, "open_profile");
+                  obj2 = closure_1(closure_2[35]);
+                  obj1 = { itemId: id, itemType: "message", actionParameters: { actionGestureType: "press", actionTargetElement: "item_header", actionIntentType: "open", actionDestinationType: "user" } };
+                  feedItemActionedResult = obj2.feedItemActioned(obj1);
+                  obj5 = { userId: author.id, channelId: channel.id };
+                  tmp3 = closure_1(closure_2[36])(obj5);
+                  return;
+                }
+              }
+              const margin = tmp17(tmp(author[42]).ICYMIContext).margin;
               if (cResult[14] === author) {
                 if (cResult[15] === guild) {
-                  let tmp17 = cResult[16];
+                  let tmp18 = cResult[16];
                 }
                 const _Symbol2 = Symbol;
-                if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
-                  const obj2 = { maxWidth };
+                class U {
+                  constructor() {
+                    obj = closure_1(closure_2[35]);
+                    itemInteractedResult = obj.itemInteracted(id, type, "open_profile");
+                    obj2 = closure_1(closure_2[35]);
+                    obj1 = { itemId: id, itemType: "message", actionParameters: { actionGestureType: "press", actionTargetElement: "item_header", actionIntentType: "open", actionDestinationType: "user" } };
+                    feedItemActionedResult = obj2.feedItemActioned(obj1);
+                    obj5 = { userId: author.id, channelId: channel.id };
+                    tmp3 = closure_1(closure_2[36])(obj5);
+                    return;
+                  }
+                }
+                if (tmp23 === Symbol.for("react.memo_cache_sentinel")) {
+                  const obj2 = { maxWidth: null };
+                  class U {
+                    constructor() {
+                      obj = closure_1(closure_2[35]);
+                      itemInteractedResult = obj.itemInteracted(id, type, "open_profile");
+                      obj2 = closure_1(closure_2[35]);
+                      obj1 = { itemId: id, itemType: "message", actionParameters: { actionGestureType: "press", actionTargetElement: "item_header", actionIntentType: "open", actionDestinationType: "user" } };
+                      feedItemActionedResult = obj2.feedItemActioned(obj1);
+                      obj5 = { userId: author.id, channelId: channel.id };
+                      tmp3 = closure_1(closure_2[36])(obj5);
+                      return;
+                    }
+                  }
                   cResult[17] = obj2;
                 }
                 if (cResult[18] === channel.id) {
                   if (cResult[19] === guild.name) {
-                    let tmp24 = cResult[20];
+                    let tmp26 = cResult[20];
                   }
                   if (cResult[21] !== margin) {
                     const obj3 = { marginRight: margin };
+                    class U {
+                      constructor() {
+                        obj = closure_1(closure_2[35]);
+                        itemInteractedResult = obj.itemInteracted(id, type, "open_profile");
+                        obj2 = closure_1(closure_2[35]);
+                        obj1 = { itemId: id, itemType: "message", actionParameters: { actionGestureType: "press", actionTargetElement: "item_header", actionIntentType: "open", actionDestinationType: "user" } };
+                        feedItemActionedResult = obj2.feedItemActioned(obj1);
+                        obj5 = { userId: author.id, channelId: channel.id };
+                        tmp3 = closure_1(closure_2[36])(obj5);
+                        return;
+                      }
+                    }
                     cResult[21] = margin;
                     cResult[22] = obj3;
-                    let tmp27 = obj3;
+                    let tmp29 = obj3;
                   } else {
-                    tmp27 = cResult[22];
+                    tmp29 = cResult[22];
                   }
-                  if (cResult[23] !== colorString) {
-                    const obj5 = { color: colorString };
-                    cResult[23] = colorString;
-                    cResult[24] = obj5;
-                    let tmp28 = obj5;
-                  } else {
-                    tmp28 = cResult[24];
+                  class U {
+                    constructor() {
+                      obj = closure_1(closure_2[35]);
+                      itemInteractedResult = obj.itemInteracted(id, type, "open_profile");
+                      obj2 = closure_1(closure_2[35]);
+                      obj1 = { itemId: id, itemType: "message", actionParameters: { actionGestureType: "press", actionTargetElement: "item_header", actionIntentType: "open", actionDestinationType: "user" } };
+                      feedItemActionedResult = obj2.feedItemActioned(obj1);
+                      obj5 = { userId: author.id, channelId: channel.id };
+                      tmp3 = closure_1(closure_2[36])(obj5);
+                      return;
+                    }
                   }
                   let combined = name;
                   if (name.length > 20) {
-                    const _HermesInternal = HermesInternal;
+                    class U {
+                      constructor() {
+                        obj = closure_1(closure_2[35]);
+                        itemInteractedResult = obj.itemInteracted(id, type, "open_profile");
+                        obj2 = closure_1(closure_2[35]);
+                        obj1 = { itemId: id, itemType: "message", actionParameters: { actionGestureType: "press", actionTargetElement: "item_header", actionIntentType: "open", actionDestinationType: "user" } };
+                        feedItemActionedResult = obj2.feedItemActioned(obj1);
+                        obj5 = { userId: author.id, channelId: channel.id };
+                        tmp3 = closure_1(closure_2[36])(obj5);
+                        return;
+                      }
+                    }
                     combined = "" + name.slice(0, 17) + "...";
                   }
-                  class E {
+                  class P {
                     constructor() {
                       return closure_7.getMember(guild.id, author.id);
                     }
                   }
                   if (cResult[25] === tmp15) {
-                    if (cResult[26] === tmp28) {
-                      if (cResult[27] === `${tmp29} `) {
-                        let tmp31 = cResult[28];
+                    if (cResult[26] === tmp30) {
+                      if (cResult[27] === `${tmp31} `) {
+                        let tmp33 = cResult[28];
                       }
                       if (cResult[29] !== tmp13) {
-                        const obj6 = { size: "sm", color: channel(author[21]).colors.TEXT_SUBTLE };
-                        const tmp37 = closure_18(tmp13, obj6);
+                        const obj5 = { size: "sm", color: null };
+                        class U {
+                          constructor() {
+                            obj = closure_1(closure_2[35]);
+                            itemInteractedResult = obj.itemInteracted(id, type, "open_profile");
+                            obj2 = closure_1(closure_2[35]);
+                            obj1 = { itemId: id, itemType: "message", actionParameters: { actionGestureType: "press", actionTargetElement: "item_header", actionIntentType: "open", actionDestinationType: "user" } };
+                            feedItemActionedResult = obj2.feedItemActioned(obj1);
+                            obj5 = { userId: author.id, channelId: channel.id };
+                            tmp3 = closure_1(closure_2[36])(obj5);
+                            return;
+                          }
+                        }
+                        obj5.color = channel(author[21]).colors.TEXT_SUBTLE;
+                        const tmp38 = closure_18(tmp13, obj5);
                         cResult[29] = tmp13;
-                        class E {
+                        class P {
                           constructor() {
                             return closure_7.getMember(guild.id, author.id);
                           }
                         }
-                        cResult[30] = tmp37;
-                        let tmp34 = tmp37;
+                        cResult[30] = tmp38;
+                        let tmp36 = tmp38;
                       } else {
-                        tmp34 = cResult[30];
+                        tmp36 = cResult[30];
                       }
-                      tmp(author[38]);
-                      const text = ` ${obj11.contentTypeToText(tmp4)}`;
-                      if (cResult[31] === tmp31) {
-                        if (cResult[32] === tmp34) {
-                          if (cResult[33] === ` ${obj11.contentTypeToText(tmp4)}`) {
-                            if (cResult[34] === tmp27) {
-                              let tmp39 = cResult[35];
+                      class U {
+                        constructor() {
+                          obj = closure_1(closure_2[35]);
+                          itemInteractedResult = obj.itemInteracted(id, type, "open_profile");
+                          obj2 = closure_1(closure_2[35]);
+                          obj1 = { itemId: id, itemType: "message", actionParameters: { actionGestureType: "press", actionTargetElement: "item_header", actionIntentType: "open", actionDestinationType: "user" } };
+                          feedItemActionedResult = obj2.feedItemActioned(obj1);
+                          obj5 = { userId: author.id, channelId: channel.id };
+                          tmp3 = closure_1(closure_2[36])(obj5);
+                          return;
+                        }
+                      }
+                      const text = ` ${obj10.contentTypeToText(tmp4)}`;
+                      if (cResult[31] === tmp33) {
+                        if (cResult[32] === tmp36) {
+                          if (cResult[33] === ` ${obj10.contentTypeToText(tmp4)}`) {
+                            if (cResult[34] === tmp29) {
+                              let tmp40 = cResult[35];
                             }
                             if (cResult[36] === channel) {
                               if (cResult[37] === children) {
@@ -1409,14 +1498,14 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
                                   if (cResult[39] === id) {
                                     if (cResult[40] === onHeaderLongPress) {
                                       if (cResult[41] === onHeaderPress) {
-                                        if (cResult[42] === tmp39) {
-                                          if (cResult[43] === tmp17) {
-                                            if (cResult[44] === tmp24) {
+                                        if (cResult[42] === tmp40) {
+                                          if (cResult[43] === tmp18) {
+                                            if (cResult[44] === tmp26) {
                                               if (cResult[45] === timestamp) {
                                                 if (cResult[46] === type) {
-                                                  let tmp42 = cResult[47];
+                                                  let tmp43 = cResult[47];
                                                 }
-                                                return tmp42;
+                                                return tmp43;
                                               }
                                             }
                                           }
@@ -1427,15 +1516,27 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
                                 }
                               }
                             }
+                            class U {
+                              constructor() {
+                                obj = closure_1(closure_2[35]);
+                                itemInteractedResult = obj.itemInteracted(id, type, "open_profile");
+                                obj2 = closure_1(closure_2[35]);
+                                obj1 = { itemId: id, itemType: "message", actionParameters: { actionGestureType: "press", actionTargetElement: "item_header", actionIntentType: "open", actionDestinationType: "user" } };
+                                feedItemActionedResult = obj2.feedItemActioned(obj1);
+                                obj5 = { userId: author.id, channelId: channel.id };
+                                tmp3 = closure_1(closure_2[36])(obj5);
+                                return;
+                              }
+                            }
                             const element = { guild, channel, timestamp: null, avatar: null, title: null, subtitle: null, onHeaderPress: null, onHeaderLongPress: null, id: null, type: null, children: null };
-                            class E {
+                            class P {
                               constructor() {
                                 return closure_7.getMember(guild.id, author.id);
                               }
                             }
-                            element.avatar = tmp17;
-                            element.title = tmp24;
-                            element.subtitle = tmp39;
+                            element.avatar = tmp18;
+                            element.title = tmp26;
+                            element.subtitle = tmp40;
                             element.onHeaderPress = onHeaderPress;
                             element.onHeaderLongPress = onHeaderLongPress;
                             element.id = id;
@@ -1448,97 +1549,104 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
                             cResult[39] = id;
                             cResult[40] = onHeaderLongPress;
                             cResult[41] = onHeaderPress;
-                            cResult[42] = tmp39;
-                            cResult[43] = tmp17;
-                            cResult[44] = tmp24;
+                            cResult[42] = tmp40;
+                            cResult[43] = tmp18;
+                            cResult[44] = tmp26;
                             cResult[45] = timestamp;
                             cResult[46] = type;
                             cResult[47] = tmp45;
-                            tmp42 = tmp45;
+                            tmp43 = tmp45;
                           }
                         }
                       }
-                      const obj7 = { lineClamp: 2, variant: "text-md/normal", color: "text-default", style: null, children: null };
-                      class E {
+                      const obj6 = { lineClamp: 2, variant: "text-md/normal", color: "text-default", style: null, children: null };
+                      class P {
                         constructor() {
                           return closure_7.getMember(guild.id, author.id);
                         }
                       }
-                      const items1 = [tmp31, tmp34, text];
-                      obj7.children = items1;
-                      const tmp41 = closure_19(tmp(author[28]).Text, obj7);
-                      cResult[31] = tmp31;
-                      cResult[32] = tmp34;
+                      const items1 = [tmp33, tmp36, text];
+                      obj6.children = items1;
+                      const tmp42 = closure_19(tmp(author[28]).Text, obj6);
+                      cResult[31] = tmp33;
+                      cResult[32] = tmp36;
                       cResult[33] = text;
-                      cResult[34] = tmp27;
-                      cResult[35] = tmp41;
-                      tmp39 = tmp41;
+                      cResult[34] = tmp29;
+                      cResult[35] = tmp42;
+                      tmp40 = tmp42;
                     }
                   }
-                  const obj8 = { style: tmp28, onPress: tmp15, variant: "text-md/semibold", children: tmp30 };
-                  const tmp33 = closure_18(tmp(author[28]).Text, obj8);
+                  const obj7 = { style: tmp30, onPress: tmp15, variant: "text-md/semibold", children: tmp32 };
+                  const tmp35 = closure_18(tmp(author[28]).Text, obj7);
                   cResult[25] = tmp15;
-                  cResult[26] = tmp28;
-                  cResult[27] = tmp30;
-                  cResult[28] = tmp33;
-                  tmp31 = tmp33;
+                  cResult[26] = tmp30;
+                  cResult[27] = tmp32;
+                  cResult[28] = tmp35;
+                  tmp33 = tmp35;
                 }
-                const obj9 = { style: null, lineClamp: 1, variant: "text-sm/medium", color: "text-default", children: null };
-                class E {
+                const obj8 = { style: null, lineClamp: 1, variant: "text-sm/medium", color: "text-default", children: null };
+                class P {
                   constructor() {
                     return closure_7.getMember(guild.id, author.id);
                   }
                 }
-                obj9.children = guild.name;
-                const tmp26 = closure_18(tmp(author[28]).Text, obj9, channel.id);
+                obj8.children = guild.name;
+                const tmp28 = closure_18(tmp(author[28]).Text, obj8, channel.id);
                 cResult[18] = channel.id;
                 cResult[19] = guild.name;
-                cResult[20] = tmp26;
-                tmp24 = tmp26;
+                cResult[20] = tmp28;
+                tmp26 = tmp28;
               }
-              class E {
+              class P {
                 constructor() {
                   return closure_7.getMember(guild.id, author.id);
                 }
               }
-              tmp20[0] = guild;
-              tmp20[1] = author;
-              const tmp21 = closure_18(closure_24, tmp20);
+              tmp21[0] = guild;
+              tmp21[1] = author;
+              const tmp22 = closure_18(closure_24, tmp21);
               cResult[14] = author;
               cResult[15] = guild;
-              cResult[16] = tmp21;
-              tmp17 = tmp21;
+              cResult[16] = tmp22;
+              tmp18 = tmp22;
             }
           }
         }
-        const fn = function w() {
-          ICYMIActionCreatorsDefault.itemInteracted(id, type, "open_profile");
-          ICYMIActionCreatorsDefault.feedItemActioned({ itemId: id, itemType: "message", actionParameters: { actionGestureType: "press", actionTargetElement: "item_header", actionIntentType: "open", actionDestinationType: "user" } });
-          showUserProfileActionSheetDefault({ userId: author.id, channelId: channel.id });
-        };
+        class U {
+          constructor() {
+            obj = closure_1(closure_2[35]);
+            itemInteractedResult = obj.itemInteracted(id, type, "open_profile");
+            obj2 = closure_1(closure_2[35]);
+            obj1 = { itemId: id, itemType: "message", actionParameters: { actionGestureType: "press", actionTargetElement: "item_header", actionIntentType: "open", actionDestinationType: "user" } };
+            feedItemActionedResult = obj2.feedItemActioned(obj1);
+            obj5 = { userId: author.id, channelId: channel.id };
+            tmp3 = closure_1(closure_2[36])(obj5);
+            return;
+          }
+        }
         cResult[9] = author.id;
         cResult[10] = channel.id;
-        class E {
+        class P {
           constructor() {
             return closure_7.getMember(guild.id, author.id);
           }
         }
         cResult[11] = id;
         cResult[12] = type;
-        cResult[13] = fn;
-        tmp15 = fn;
+        cResult[13] = U;
+        tmp15 = U;
       }
       const tmpResult = tmp(author[33]);
     }
-    class E {
+    class P {
       constructor() {
         return closure_7.getMember(guild.id, author.id);
       }
     }
     cResult[4] = author.id;
     cResult[5] = guild.id;
-    cResult[6] = E;
-    tmp9 = E;
+    cResult[6] = P;
+    tmp9 = P;
   }
   let obj = guild(author[23]);
   const determineContentTypeResult = guild(author[38]).determineContentType(channel, message);
@@ -1546,8 +1654,8 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   cResult[1] = message;
   cResult[2] = determineContentTypeResult;
   tmp4 = determineContentTypeResult;
-  const tmpResult4 = guild(author[38]);
-}) : ((guild) => {
+  const tmpResult2 = guild(author[38]);
+}) : (function MessageContentPost(guild) {
   guild = guild.guild;
   const channel = guild.channel;
   const author = guild.author;
@@ -1610,7 +1718,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   return closure_18(closure_26, element);
 });
 ReactCompilerGating = fn(558);
-let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? ((id, id2, arg2) => {
+let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (function useThread(id, id2, arg2) {
   _require = id;
   importDefault = id2;
   dependencyMap = arg2;
@@ -1697,7 +1805,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? ((id, id2, arg2)
   tmp10 = items1;
   tmp9 = T;
   const tmpResult = require("initialize");
-}) : ((id, arg1, arg2) => {
+}) : (function useThread(id, arg1, arg2) {
   _require = id;
   closure_1 = arg1;
   dependencyMap = arg2;
@@ -1728,7 +1836,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? ((id, id2, arg2)
   return { thread, messageCount, mostRecentMessage };
 });
 ReactCompilerGating = fn(558);
-let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? (function SimplePost(arg0) {
   const cResult = require("c").c(24);
   ({ children, hideDivider, highlight } = arg0);
   _require = tmp4;
@@ -1866,7 +1974,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   tmp14 = items3;
   tmp13 = fn;
   let obj2 = { interpolateColor: require("ReanimatedRexport").interpolateColor, progress: sharedValue, bgColor: token, bgColorHighlighted };
-}) : ((arg0) => {
+}) : (function SimplePost(arg0) {
   ({ children, hideDivider, highlight } = arg0);
   if (highlight === undefined) {
     highlight = false;
@@ -1874,22 +1982,22 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   let token;
   const tmp = closure_22();
   const tmp2 = token;
-  const tmp4 = token(4797)();
-  token = highlight(4586).useToken(token(587).colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT, tmp4);
-  let obj = highlight(4586);
-  const hexWithOpacityResult = highlight(4733).hexWithOpacity(token(587).unsafe_rawColors.BRAND_360, 0.25);
+  const tmp4 = token(4991)();
+  token = highlight(4778).useToken(token(587).colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT, tmp4);
+  let obj = highlight(4778);
+  const hexWithOpacityResult = highlight(4927).hexWithOpacity(token(587).unsafe_rawColors.BRAND_360, 0.25);
   dependencyMap = hexWithOpacityResult;
-  let obj2 = highlight(4733);
-  const sharedValue = highlight(4618).useSharedValue(0);
-  let obj3 = highlight(4618);
+  let obj2 = highlight(4927);
+  const sharedValue = highlight(4810).useSharedValue(0);
+  let obj3 = highlight(4810);
   const fn = function c() {
     const obj = { backgroundColor: null };
     const items = [token, c2];
     obj.backgroundColor = ReanimatedRexport.interpolateColor(sharedValue.get(), [0, 1], items);
     return obj;
   };
-  let obj4 = highlight(4618);
-  fn.__closure = { interpolateColor: highlight(4618).interpolateColor, progress: sharedValue, bgColor: token, bgColorHighlighted: hexWithOpacityResult };
+  let obj4 = highlight(4810);
+  fn.__closure = { interpolateColor: highlight(4810).interpolateColor, progress: sharedValue, bgColor: token, bgColorHighlighted: hexWithOpacityResult };
   fn.__workletHash = 11803325452646;
   fn.__initData = __initData2;
   let items = [highlight, sharedValue];
@@ -1908,7 +2016,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const items1 = [tmp.simplePostContent, animatedStyle];
     obj7.style = items1;
     obj7.children = children;
-    const items2 = [closure_18(tmp2(4618).View, obj7), ];
+    const items2 = [closure_18(tmp2(4810).View, obj7), ];
     let tmp12Result = null;
     if (!hideDivider) {
       tmp12Result = closure_18(closure_23, {});
@@ -1965,7 +2073,7 @@ export const AnnouncementContentPost = tmp7;
 export const GuildEventPost = tmp8;
 export const MessageContentPost = tmp9;
 export const SimplePost = tmp10;
-export const ThreadAsComments = ReactCompilerGating.isReactCompilerEnabled() ? ((parentMessage) => {
+export const ThreadAsComments = ReactCompilerGating.isReactCompilerEnabled() ? (function ThreadAsComments(parentMessage) {
   const cResult = parentMessage(576).c(50);
   parentMessage = parentMessage.parentMessage;
   ({ onPress, style, inForum } = parentMessage);
@@ -2029,7 +2137,7 @@ export const ThreadAsComments = ReactCompilerGating.isReactCompilerEnabled() ? (
                 }
                 if (cResult[33] !== tmp4.commentsIcon) {
                   const obj2 = { style: tmp4.commentsIcon };
-                  const tmp24 = closure_18(tmp(5862).ChatIcon, obj2);
+                  const tmp24 = closure_18(tmp(8174).ChatIcon, obj2);
                   cResult[33] = tmp4.commentsIcon;
                   cResult[34] = tmp24;
                   let tmp22 = tmp24;
@@ -2038,7 +2146,7 @@ export const ThreadAsComments = ReactCompilerGating.isReactCompilerEnabled() ? (
                 }
                 if (cResult[35] !== str) {
                   const obj3 = { variant: "text-sm/bold", color: "interactive-text-default", children: str };
-                  const tmp27 = closure_18(tmp(4892).Text, obj3);
+                  const tmp27 = closure_18(tmp(5086).Text, obj3);
                   cResult[35] = str;
                   cResult[36] = tmp27;
                   let tmp25 = tmp27;
@@ -2047,7 +2155,7 @@ export const ThreadAsComments = ReactCompilerGating.isReactCompilerEnabled() ? (
                 }
                 if (cResult[37] !== tmp4.chevron) {
                   const obj5 = { style: tmp4.chevron, size: "xxs" };
-                  const tmp30 = closure_18(tmp(6715).ChevronSmallRightIcon, obj5);
+                  const tmp30 = closure_18(tmp(6892).ChevronSmallRightIcon, obj5);
                   cResult[37] = tmp4.chevron;
                   cResult[38] = tmp30;
                   let tmp28 = tmp30;
@@ -2075,7 +2183,7 @@ export const ThreadAsComments = ReactCompilerGating.isReactCompilerEnabled() ? (
                       const obj6 = { style: tmp10, onPress, children: null };
                       const items1 = [tmp12, tmp19, tmp31];
                       obj6.children = items1;
-                      const tmp37 = closure_19(tmp(5916).PressableHighlight, obj6);
+                      const tmp37 = closure_19(tmp(6189).PressableHighlight, obj6);
                       cResult[44] = onPress;
                       cResult[45] = tmp31;
                       cResult[46] = tmp10;
@@ -2098,15 +2206,15 @@ export const ThreadAsComments = ReactCompilerGating.isReactCompilerEnabled() ? (
                 tmp31 = tmp34;
               }
               const obj8 = { variant: "text-sm/semibold", lineClamp: 1, style: tmp4.recentCommentText, children: cResult[29] };
-              const tmp21 = closure_18(tmp(4892).Text, obj8);
+              const tmp21 = closure_18(tmp(5086).Text, obj8);
               cResult[30] = tmp4.recentCommentText;
               cResult[31] = cResult[29];
               cResult[32] = tmp21;
               tmp19 = tmp21;
             }
           }
-          const obj9 = { user: author, guildId: thread.guild_id, size: tmp(1188).AvatarSizes.XSMALL };
-          const tmp14 = closure_18(tmp(1188).Avatar, obj9);
+          const obj9 = { user: author, guildId: thread.guild_id, size: tmp(1200).AvatarSizes.XSMALL };
+          const tmp14 = closure_18(tmp(1200).Avatar, obj9);
           cResult[25] = author;
           cResult[26] = thread.guild_id;
           cResult[27] = tmp14;
@@ -2134,7 +2242,7 @@ export const ThreadAsComments = ReactCompilerGating.isReactCompilerEnabled() ? (
       }
       if (cResult[7] !== tmp4.recentCommentText) {
         const obj10 = { variant: "text-md/semibold", color: "text-muted", lineClamp: 1, style: tmp4.recentCommentText, children: tmp39 };
-        const tmp43 = closure_18(tmp(4892).Text, obj10);
+        const tmp43 = closure_18(tmp(5086).Text, obj10);
         cResult[7] = tmp4.recentCommentText;
         cResult[8] = tmp43;
         let tmp41 = tmp43;
@@ -2143,7 +2251,7 @@ export const ThreadAsComments = ReactCompilerGating.isReactCompilerEnabled() ? (
       }
       if (cResult[9] !== tmp4.commentsIcon) {
         const obj11 = { style: tmp4.commentsIcon };
-        const tmp46 = closure_18(tmp(5862).ChatIcon, obj11);
+        const tmp46 = closure_18(tmp(8174).ChatIcon, obj11);
         cResult[9] = tmp4.commentsIcon;
         cResult[10] = tmp46;
         let tmp44 = tmp46;
@@ -2152,7 +2260,7 @@ export const ThreadAsComments = ReactCompilerGating.isReactCompilerEnabled() ? (
       }
       if (cResult[11] !== tmp4.chevron) {
         const obj12 = { style: tmp4.chevron, size: "xxs" };
-        const tmp49 = closure_18(tmp(6715).ChevronSmallRightIcon, obj12);
+        const tmp49 = closure_18(tmp(6892).ChevronSmallRightIcon, obj12);
         cResult[11] = tmp4.chevron;
         cResult[12] = tmp49;
         let tmp47 = tmp49;
@@ -2177,7 +2285,7 @@ export const ThreadAsComments = ReactCompilerGating.isReactCompilerEnabled() ? (
           const obj13 = { style: tmp38, onPress, children: null };
           const items4 = [tmp41, tmp50];
           obj13.children = items4;
-          const tmp56 = closure_19(tmp(5916).PressableHighlight, obj13);
+          const tmp56 = closure_19(tmp(6189).PressableHighlight, obj13);
           cResult[17] = onPress;
           cResult[18] = tmp38;
           cResult[19] = tmp41;
@@ -2205,7 +2313,7 @@ export const ThreadAsComments = ReactCompilerGating.isReactCompilerEnabled() ? (
     return null;
   }
   tmpResult = parentMessage(504);
-}) : ((parentMessage) => {
+}) : (function ThreadAsComments(parentMessage) {
   parentMessage = parentMessage.parentMessage;
   ({ onPress, style, inForum } = parentMessage);
   const tmp = closure_22();
@@ -2230,8 +2338,8 @@ export const ThreadAsComments = ReactCompilerGating.isReactCompilerEnabled() ? (
         if (mostRecentMessage != null) {
           author = mostRecentMessage.author;
         }
-        const obj3 = { user: author, guildId: thread.guild_id, size: tmp4(1188).AvatarSizes.XSMALL };
-        const items2 = [closure_18(tmp4(1188).Avatar, obj3), , ];
+        const obj3 = { user: author, guildId: thread.guild_id, size: tmp4(1200).AvatarSizes.XSMALL };
+        const items2 = [closure_18(tmp4(1200).Avatar, obj3), , ];
         const obj4 = { variant: "text-sm/semibold", lineClamp: 1, style: tmp.recentCommentText, children: null };
         if (mostRecentMessage.content.length > 0) {
           let parseInlineReplyResult = MarkupUtilsDefault.parseInlineReply(mostRecentMessage.content, true);
@@ -2240,18 +2348,18 @@ export const ThreadAsComments = ReactCompilerGating.isReactCompilerEnabled() ? (
           parseInlineReplyResult = intl.string(tmp4(1126).t["6kp9H2"]);
         }
         obj4.children = parseInlineReplyResult;
-        items2[1] = closure_18(tmp4(4892).Text, obj4);
+        items2[1] = closure_18(tmp4(5086).Text, obj4);
         const obj6 = { style: tmp.commentCount, children: null };
         const obj7 = { style: tmp.commentsIcon };
-        const items3 = [closure_18(tmp4(5862).ChatIcon, obj7), , ];
+        const items3 = [closure_18(tmp4(8174).ChatIcon, obj7), , ];
         const obj8 = { variant: "text-sm/bold", color: "interactive-text-default", children: str };
-        items3[1] = closure_18(tmp4(4892).Text, obj8);
+        items3[1] = closure_18(tmp4(5086).Text, obj8);
         const obj9 = { style: tmp.chevron, size: "xxs" };
-        items3[2] = closure_18(tmp4(6715).ChevronSmallRightIcon, obj9);
+        items3[2] = closure_18(tmp4(6892).ChevronSmallRightIcon, obj9);
         obj6.children = items3;
         items2[2] = closure_19(View, obj6);
         obj2.children = items2;
-        return closure_19(tmp4(5916).PressableHighlight, obj2);
+        return closure_19(tmp4(6189).PressableHighlight, obj2);
       }
     }
     const obj10 = { style: null, onPress: null, children: null };
@@ -2261,16 +2369,16 @@ export const ThreadAsComments = ReactCompilerGating.isReactCompilerEnabled() ? (
     const obj11 = { variant: "text-md/semibold", color: "text-muted", lineClamp: 1, style: tmp.recentCommentText, children: null };
     const intl2 = tmp4(1126).intl;
     obj11.children = intl2.string(tmp4(1126).t.VMWjXW);
-    const items5 = [closure_18(tmp4(4892).Text, obj11), ];
+    const items5 = [closure_18(tmp4(5086).Text, obj11), ];
     const obj12 = { style: tmp.commentCount, children: null };
     const obj13 = { style: tmp.commentsIcon };
-    const items6 = [closure_18(tmp4(5862).ChatIcon, obj13), ];
+    const items6 = [closure_18(tmp4(8174).ChatIcon, obj13), ];
     const obj14 = { style: tmp.chevron, size: "xxs" };
-    items6[1] = closure_18(tmp4(6715).ChevronSmallRightIcon, obj14);
+    items6[1] = closure_18(tmp4(6892).ChevronSmallRightIcon, obj14);
     obj12.children = items6;
     items5[1] = closure_19(View, obj12);
     obj10.children = items5;
-    return closure_19(tmp4(5916).PressableHighlight, obj10);
+    return closure_19(tmp4(6189).PressableHighlight, obj10);
   } else {
     return null;
   }

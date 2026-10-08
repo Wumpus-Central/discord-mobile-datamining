@@ -1,8 +1,8 @@
-// === Module 13929: Collapsible ===
+// === Module 14232: Collapsible ===
 
-// Module 13929 (Collapsible)
+// Module 14232 (Collapsible)
 import nativeDefault from "native" /* 587 */;
-import spring from "spring" /* 5604 */;
+import spring from "spring" /* 5374 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const EXPAND_SPRING = { stiffness: 150, overshootClamping: true };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { collapsible: { position: "relative", overflow: "hidden" }, collapsibleContent: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH } };
 let closure_9 = createStyles.createStyles(obj2);
 const __initData = { code: "function CollapsibleTsx1(){const{withSpring,totalHeight,EXPAND_SPRING}=this.__closure;return{height:withSpring(totalHeight,EXPAND_SPRING)};}" };
@@ -23,7 +23,7 @@ let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Collapsible/native/Collapsible.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function Collapsible(arg0) {
   const cResult = first(first1[7]).c(26);
   ({ children, collapsibleContent, isExpanded, style } = arg0);
   const tmp4 = closure_9();
@@ -176,7 +176,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
   }
   let obj = first(first1[7]);
-}) : ((isExpanded) => {
+}) : (function Collapsible(isExpanded) {
   isExpanded = isExpanded.isExpanded;
   first = undefined;
   first1 = undefined;
@@ -201,16 +201,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     let num = 0;
     const sum = first1 + num;
     c6 = sum;
-    const fn = function v() {
-      const obj = { height: spring.withSpring(c6, closure_8) };
-      return obj;
-    };
+    class C {
+      constructor() {
+        obj = { height: null };
+        obj2 = closure_0(closure_2[9]);
+        obj.height = obj2.withSpring(closure_6, closure_8);
+        return obj;
+      }
+    }
     const obj3 = { withSpring: first(first1[9]).withSpring, totalHeight: sum, EXPAND_SPRING };
-    fn.__closure = obj3;
-    fn.__workletHash = 16011681899808;
-    fn.__initData = __initData2;
+    C.__closure = obj3;
+    C.__workletHash = 16011681899808;
+    C.__initData = __initData2;
     const items1 = [first, tmp4];
-    const animatedStyle = first(first1[8]).useAnimatedStyle(fn);
+    const animatedStyle = first(first1[8]).useAnimatedStyle(C);
     const obj4 = { style, children: null };
     const callback1 = obj.useCallback(() => {
       closure_1(!first);

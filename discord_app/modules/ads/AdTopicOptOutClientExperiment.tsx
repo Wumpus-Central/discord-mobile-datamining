@@ -1,8 +1,8 @@
-// === Module 15803: AdTopicOptOutClientExperiment ===
+// === Module 16061: AdTopicOptOutClientExperiment ===
 
-// Module 15803 (AdTopicOptOutClientExperiment)
+// Module 16061 (AdTopicOptOutClientExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1440 */;
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -14,7 +14,7 @@ const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/ads/AdTopicOptOutClientExperiment.tsx");
 
 export const AdTopicOptOutClientExperiment = apexExperiment;
-export const useIsAdTopicOptOutClientEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useIsAdTopicOptOutClientEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsAdTopicOptOutClientEnabled() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { location: "useIsAdTopicOptOutClientEnabled" };
@@ -24,7 +24,9 @@ export const useIsAdTopicOptOutClientEnabled = ReactCompilerGating.isReactCompil
     first = cResult[0];
   }
   return apexExperiment.useConfig(first).enabled;
-}) : (() => apexExperiment.useConfig({ location: "useIsAdTopicOptOutClientEnabled" }).enabled);
+}) : (function useIsAdTopicOptOutClientEnabled() {
+  return apexExperiment.useConfig({ location: "useIsAdTopicOptOutClientEnabled" }).enabled;
+});
 export const isAdTopicOptOutClientEnabled = function isAdTopicOptOutClientEnabled() {
   return apexExperiment.getConfig({ location: "isAdTopicOptOutClientEnabled" }).enabled;
 };

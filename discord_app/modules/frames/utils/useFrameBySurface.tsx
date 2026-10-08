@@ -1,7 +1,7 @@
-// === Module 16629: useFrameBySurface ===
+// === Module 16891: useFrameBySurface ===
 
-// Module 16629 (useFrameBySurface)
-import FramesStore from "FramesStore" /* 9000 */;
+// Module 16891 (useFrameBySurface)
+import FramesStore from "FramesStore" /* 10612 */;
 
 const require = globalThis.__r;
 
@@ -10,7 +10,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/utils/useFrameBySurface.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFrameBySurface(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   const cResult = require("c").c(5);
@@ -28,7 +28,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     }
     return tmp(504).useStateFromStores(first, tmp6, tmp7);
   }
-  const fn = function s() {
+  const fn = function c() {
     if (null != closure_0) {
       return FramesStore.getFrameBySurface(tmp, closure_1);
     }
@@ -42,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   tmp6 = fn;
   const obj = require("c");
   tmp = _require;
-}) : ((arg0, arg1) => {
+}) : (function useFrameBySurface(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   const items = [FramesStore];

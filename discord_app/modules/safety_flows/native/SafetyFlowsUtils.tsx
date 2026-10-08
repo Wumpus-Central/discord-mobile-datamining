@@ -1,16 +1,16 @@
-// === Module 18110: SafetyFlowsUtils ===
+// === Module 18397: SafetyFlowsUtils ===
 
-// Module 18110 (SafetyFlowsUtils)
+// Module 18397 (SafetyFlowsUtils)
 import util from "util" /* 1126 */;
-import _modDef2815 from "module_2815" /* 2815 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4574 */;
-import _modDef4811 from "module_4811" /* 4811 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
-import types from "types" /* 18104 */;
-import constants from "constants" /* 18105 */;
+import _modDef2859 from "module_2859" /* 2859 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4766 */;
+import _modDef5005 from "module_5005" /* 5005 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5940 */;
+import types from "types" /* 18391 */;
+import constants from "constants" /* 18392 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
@@ -38,9 +38,9 @@ let closure_7 = async function _fetchAndUpdateTask() {
 function navigateToScreenForTask(arr, task_type) {
   if (null == task_type) {
     ModalActionCreatorsDefault.popWithKey(constants.SAFETY_FLOWS_MODAL_KEY);
-    const obj3 = { key: "SAFETY_FLOWS_VERIFY_EMAIL_SUCCESS", icon: _modDef4811, content: null };
+    const obj3 = { key: "SAFETY_FLOWS_VERIFY_EMAIL_SUCCESS", icon: _modDef5005, content: null };
     const intl = util.intl;
-    obj3.content = intl.string(_modDef2815["/fHz9S"]);
+    obj3.content = intl.string(_modDef2859["/fHz9S"]);
     ToastActionCreatorsDefault.open(obj3);
   } else {
     task_type = task_type.task_type;
@@ -97,7 +97,7 @@ const result = size.fileFinishedImporting("modules/safety_flows/native/SafetyFlo
 export { getScreensForTaskType };
 export { fetchAndUpdateTask };
 export { navigateToScreenForTask };
-export const useOnTaskComplete = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useOnTaskComplete = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnTaskComplete() {
   const cResult = require("c").c(5);
   let obj = require("c");
   const navigation = require("useNavigation").useNavigation();
@@ -187,7 +187,7 @@ export const useOnTaskComplete = ReactCompilerGating.isReactCompilerEnabled() ? 
       }
     })();
   });
-  const fn = function() {
+  function t0() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -196,14 +196,14 @@ export const useOnTaskComplete = ReactCompilerGating.isReactCompilerEnabled() ? 
       applyArgumentsResult = apply(self, arguments);
     }
     return applyArgumentsResult;
-  };
+  }
   cResult[0] = navigation;
   cResult[1] = setTask;
   cResult[2] = task.flow_context.flow_id;
   cResult[3] = task.task_id;
-  cResult[4] = fn;
-  tmp4 = fn;
-}) : (() => {
+  cResult[4] = t0;
+  tmp4 = t0;
+}) : (function useOnTaskComplete() {
   const navigation = require("useNavigation").useNavigation();
   _require = navigation;
   let obj = require("useNavigation");

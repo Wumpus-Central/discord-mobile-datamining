@@ -1,16 +1,16 @@
-// === Module 16966: IncomingRequestRowActions ===
+// === Module 17247: IncomingRequestRowActions ===
 
-// Module 16966 (IncomingRequestRowActions)
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import timing from "timing" /* 4897 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 16010 */;
+// Module 17247 (IncomingRequestRowActions)
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import timing from "timing" /* 5091 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 16270 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({ container: { flexDirection: "row" } });
 let closure_8 = { code: "function IncomingRequestRowActionsTsx1(){const{animate,pressed,withTiming}=this.__closure;return{position:\"absolute\",right:0,flexDirection:\"row\",opacity:!animate?!pressed.get()?1:0:withTiming(!pressed.get()?1:0,{duration:150}),pointerEvents:!pressed.get()?\"auto\":\"none\"};}" };
 let closure_9 = { code: "function IncomingRequestRowActionsTsx2(){const{buttonWidth,buttonOffsetX,pressed,animate,withTiming}=this.__closure;const width=buttonWidth.get();const offset=buttonOffsetX.get();const scaleX=!pressed.get()?0.5:1;const translateX=!pressed.get()?width-offset:0;return{transform:[{translateX:!animate?translateX:withTiming(translateX)},{scaleX:!animate?scaleX:withTiming(scaleX)}],opacity:!animate?!pressed.get()?0:1:withTiming(!pressed.get()?0:1),pointerEvents:!pressed.get()?\"none\":\"auto\"};}" };
@@ -26,7 +26,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/components/IncomingRequestRowActions.tsx");
 
-export const IncomingRequestRowActions = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
+export const IncomingRequestRowActions = ReactCompilerGating.isReactCompilerEnabled() ? (function IncomingRequestRowActions(user) {
   const cResult = user(pressed[5]).c(51);
   user = user.user;
   const applicationId = user.applicationId;
@@ -37,8 +37,6 @@ export const IncomingRequestRowActions = ReactCompilerGating.isReactCompilerEnab
   ({ acceptRequestAccessibilityLabel, ignoreRequestAccessibilityLabel } = user);
   sharedValue1();
   let obj = user(pressed[5]);
-  const tmp = user;
-  const tmp2 = pressed;
   const sharedValue = user(pressed[6]).useSharedValue(0);
   let obj2 = user(pressed[6]);
   sharedValue1 = user(pressed[6]).useSharedValue(-1);
@@ -163,46 +161,20 @@ export const IncomingRequestRowActions = ReactCompilerGating.isReactCompilerEnab
   fn4.__initData = __initData2;
   const animatedStyle3 = obj11.useAnimatedStyle(fn4);
   if (cResult[0] !== sharedValue) {
-    class T {
-      constructor(arg0) {
-        result = closure_6.set(user.nativeEvent.layout.width);
-        return;
-      }
+    function handleIconButtonsLayout(nativeEvent) {
+      const result = sharedValue.set(nativeEvent.nativeEvent.layout.width);
     }
     cResult[0] = sharedValue;
-    cResult[1] = T;
-  } else {
-    class T {
-      constructor(arg0) {
-        result = closure_6.set(user.nativeEvent.layout.width);
-        return;
-      }
-    }
+    cResult[1] = handleIconButtonsLayout;
   }
   if (cResult[2] !== sharedValue1) {
-    class P {
-      constructor(arg0) {
-        result = closure_7.set(user.nativeEvent.layout.width);
-        return;
-      }
+    function handleButtonsLayout(nativeEvent) {
+      const result = sharedValue1.set(nativeEvent.nativeEvent.layout.width);
     }
     cResult[2] = sharedValue1;
-    cResult[3] = P;
-  } else {
-    class P {
-      constructor(arg0) {
-        result = closure_7.set(user.nativeEvent.layout.width);
-        return;
-      }
-    }
+    cResult[3] = handleButtonsLayout;
   }
   if (cResult[4] === sharedValue3) {
-    class P {
-      constructor(arg0) {
-        result = closure_7.set(user.nativeEvent.layout.width);
-        return;
-      }
-    }
     class C {
       constructor() {
         value = pressed.get();
@@ -215,10 +187,79 @@ export const IncomingRequestRowActions = ReactCompilerGating.isReactCompilerEnab
     C.__initData = __initData3;
     const animatedProps = tmp(tmp2[6]).useAnimatedProps(C);
     if (cResult[7] === applicationId) {
-      class P {
-        constructor(arg0) {
-          result = closure_7.set(user.nativeEvent.layout.width);
-          return;
+      if (cResult[8] === onAcceptIncomingRequest) {
+        if (cResult[9] === pressed) {
+          if (cResult[12] === applicationId) {
+            if (cResult[13] === onDeclineIncomingRequest) {
+              if (cResult[14] === user.id) {
+                let tmp19 = cResult[15];
+              }
+              if (cResult[16] !== user.id) {
+                class K {
+                  constructor() {
+                    obj = closure_0(closure_2[8]);
+                    sendWaveResult = obj.sendWave(user.id, true, "Incoming Friend Request");
+                    return;
+                  }
+                }
+                class G {
+                  constructor() {
+                    tmp = onDeclineIncomingRequest(user.id, applicationId);
+                    obj = closure_0(closure_2[8]);
+                    obj1 = { userId: user.id, applicationId };
+                    result = obj.dismissIncomingRequest(obj1);
+                    return;
+                  }
+                }
+                cResult[17] = K;
+              } else {
+                class K {
+                  constructor() {
+                    obj = closure_0(closure_2[8]);
+                    sendWaveResult = obj.sendWave(user.id, true, "Incoming Friend Request");
+                    return;
+                  }
+                }
+              }
+              class G {
+                constructor() {
+                  tmp = onDeclineIncomingRequest(user.id, applicationId);
+                  obj = closure_0(closure_2[8]);
+                  obj1 = { userId: user.id, applicationId };
+                  result = obj.dismissIncomingRequest(obj1);
+                  return;
+                }
+              }
+              const obj14 = { size: "sm", variant: "tertiary", icon: applicationId(tmp2[10]), onPress: tmp19, accessibilityLabel: ignoreRequestAccessibilityLabel, maxFontSizeMultiplier: 2 };
+              const tmp24 = animate(tmp(tmp2[9]).IconButton, obj14);
+              class Z {
+                constructor() {
+                  result = pressed.set(true);
+                  obj = closure_0(closure_2[8]);
+                  obj1 = { userId: user.id, applicationId };
+                  result1 = obj.acceptIncomingRequest(obj1);
+                  tmp3 = onAcceptIncomingRequest(user.id, applicationId);
+                  return;
+                }
+              }
+              cResult[19] = ignoreRequestAccessibilityLabel;
+              cResult[20] = tmp24;
+            }
+          }
+          class G {
+            constructor() {
+              tmp = onDeclineIncomingRequest(user.id, applicationId);
+              obj = closure_0(closure_2[8]);
+              obj1 = { userId: user.id, applicationId };
+              result = obj.dismissIncomingRequest(obj1);
+              return;
+            }
+          }
+          cResult[12] = applicationId;
+          cResult[13] = onDeclineIncomingRequest;
+          cResult[14] = user.id;
+          cResult[15] = G;
+          tmp19 = G;
         }
       }
     }
@@ -239,18 +280,15 @@ export const IncomingRequestRowActions = ReactCompilerGating.isReactCompilerEnab
     cResult[11] = Z;
     const tmpResult = tmp(tmp2[6]);
   }
-  class M {
-    constructor(arg0) {
-      result = closure_8.set(user.nativeEvent.layout.width);
-      result1 = closure_9.set(user.nativeEvent.layout.height);
-      return;
-    }
+  function handleWaveLayout(nativeEvent) {
+    const result = sharedValue2.set(nativeEvent.nativeEvent.layout.width);
+    const result1 = sharedValue3.set(nativeEvent.nativeEvent.layout.height);
   }
   cResult[4] = sharedValue3;
   cResult[5] = sharedValue2;
-  cResult[6] = M;
+  cResult[6] = handleWaveLayout;
   const obj12 = { withDelay: user(pressed[6]).withDelay, withRepeat: user(pressed[6]).withRepeat, withTiming: user(pressed[7]).withTiming, pressed, Easing: user(pressed[6]).Easing, waveWidth: sharedValue2, waveHeight: sharedValue3 };
-}) : ((user) => {
+}) : (function IncomingRequestRowActions(user) {
   user = user.user;
   const applicationId = user.applicationId;
   const pressed = user.pressed;
@@ -269,7 +307,7 @@ export const IncomingRequestRowActions = ReactCompilerGating.isReactCompilerEnab
   let obj3 = user(pressed[6]);
   const sharedValue3 = user(pressed[6]).useSharedValue(-1);
   let obj4 = user(pressed[6]);
-  class I {
+  class E {
     constructor() {
       if (animate) {
         tmp = closure_0;
@@ -299,10 +337,10 @@ export const IncomingRequestRowActions = ReactCompilerGating.isReactCompilerEnab
     }
   }
   let obj5 = user(pressed[6]);
-  I.__closure = { animate, pressed, withTiming: user(pressed[7]).withTiming };
-  I.__workletHash = 5108795838134;
-  I.__initData = __initData4;
-  const animatedStyle = obj5.useAnimatedStyle(I);
+  E.__closure = { animate, pressed, withTiming: user(pressed[7]).withTiming };
+  E.__workletHash = 5108795838134;
+  E.__initData = __initData4;
+  const animatedStyle = obj5.useAnimatedStyle(E);
   let obj6 = { animate, pressed, withTiming: user(pressed[7]).withTiming };
   class X {
     constructor() {
@@ -432,7 +470,7 @@ export const IncomingRequestRowActions = ReactCompilerGating.isReactCompilerEnab
     AddFriendsScreenUtils.sendWave(user.id, true, "Incoming Friend Request");
   }, items2);
   const obj14 = {
-    onLayout(nativeEvent) {
+    onLayout: function handleIconButtonsLayout(nativeEvent) {
       const result = sharedValue.set(nativeEvent.nativeEvent.layout.width);
     },
     style: animatedStyle,
@@ -451,7 +489,7 @@ export const IncomingRequestRowActions = ReactCompilerGating.isReactCompilerEnab
   const items4 = [animate(applicationId(pressed[6]).View, obj14), ];
   const obj18 = {
     style: animatedStyle1,
-    onLayout(nativeEvent) {
+    onLayout: function handleButtonsLayout(nativeEvent) {
       const result = sharedValue1.set(nativeEvent.nativeEvent.layout.width);
     }
   };
@@ -471,7 +509,7 @@ export const IncomingRequestRowActions = ReactCompilerGating.isReactCompilerEnab
   const obj17 = { size: "sm", variant: "active", icon: applicationId(pressed[11]), onPress: callback, accessibilityLabel: acceptRequestAccessibilityLabel, maxFontSizeMultiplier: 2 };
   obj20.children = animate(tmp19(pressed[6]).View, {
     style: tmp22,
-    onLayout(nativeEvent) {
+    onLayout: function handleWaveLayout(nativeEvent) {
       const result = sharedValue2.set(nativeEvent.nativeEvent.layout.width);
       const result1 = sharedValue3.set(nativeEvent.nativeEvent.layout.height);
     },

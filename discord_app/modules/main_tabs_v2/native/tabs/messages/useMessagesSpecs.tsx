@@ -1,13 +1,13 @@
-// === Module 15992: useMessagesSpecs ===
+// === Module 16252: useMessagesSpecs ===
 
-// Module 15992 (useMessagesSpecs)
+// Module 16252 (useMessagesSpecs)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import useFontScale from "useFontScale" /* 5609 */;
-import MessagesHeader from "MessagesHeader" /* 15993 */;
-import MessagesItemChannel from "MessagesItemChannel" /* 15996 */;
-import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 16008 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import useFontScale from "useFontScale" /* 5382 */;
+import MessagesHeader from "MessagesHeader" /* 16253 */;
+import MessagesItemChannel from "MessagesItemChannel" /* 16256 */;
+import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 16268 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,7 +19,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesSpecs.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useMessagesSpecs() {
   const cResult = c.c(13);
   const fontScale = useFontScale.useFontScale();
   const messagesHeaderHeight = MessagesHeader.getMessagesHeaderHeight(fontScale);
@@ -74,9 +74,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[11] = tmp15;
   cResult[12] = obj4;
   tmp17 = obj4;
-}) : (() => {
-  fontScale = fontScale(5609).useFontScale();
-  top = top(1618)().top;
+}) : (function useMessagesSpecs() {
+  fontScale = fontScale(5382).useFontScale();
+  top = top(1630)().top;
   const items = [fontScale, top];
   return noop.useMemo(() => {
     const messagesHeaderHeight = MessagesHeader.getMessagesHeaderHeight(fontScale);

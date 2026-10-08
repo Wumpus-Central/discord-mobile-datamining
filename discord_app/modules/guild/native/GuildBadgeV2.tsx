@@ -1,25 +1,25 @@
-// === Module 8427: GuildBadgeV2 ===
+// === Module 8841: GuildBadgeV2 ===
 
-// Module 8427 (GuildBadgeV2)
+// Module 8841 (GuildBadgeV2)
 import c from "c" /* 576 */;
-import BadgeCategory from "BadgeCategory" /* 8429 */;
-import GuildTraits from "GuildTraits" /* 8430 */;
+import GuildTraits from "GuildTraits" /* 8839 */;
+import BadgeCategory from "BadgeCategory" /* 8840 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
-const native = Icon(1188);
-const shared = Icon(4735);
-const GuildBadgeImageSource = Icon(8428);
+const native = Icon(1200);
+const shared = Icon(4929);
+const GuildBadgeImageSource = Icon(8842);
 require = fn;
 let closure_2 = ["guild", "size"];
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles({ icon: { marginRight: 8 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild/native/GuildBadgeV2.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBadgeV2(arg0) {
   let Icon = require;
   let tmp = dependencyMap;
   const cResult = c.c(12);
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const IconResult1 = GuildBadgeImageSource;
   }
   const IconResult = shared;
-}) : ((arg0) => {
+}) : (function GuildBadgeV2(arg0) {
   ({ guild, size } = arg0);
   if (size === undefined) {
     size = native.Icon.Sizes.MEDIUM;

@@ -1,21 +1,21 @@
-// === Module 17855: SelectConnectionActionSheet ===
+// === Module 18142: SelectConnectionActionSheet ===
 
-// Module 17855 (SelectConnectionActionSheet)
+// Module 18142 (SelectConnectionActionSheet)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import useThemeDefault from "useTheme" /* 4797 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import TableRow from "TableRow" /* 6000 */;
-import TableRowGroup from "TableRowGroup" /* 6081 */;
-import BottomSheetModal from "BottomSheetModal" /* 6119 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6626 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6651 */;
-import ActionSheet from "ActionSheet" /* 6708 */;
-import ConnectionsHooks from "ConnectionsHooks" /* 7025 */;
-import SegmentedControlState from "SegmentedControlState" /* 9317 */;
-import SegmentedControl from "SegmentedControl" /* 9318 */;
-import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 11193 */;
+import native from "native" /* 1200 */;
+import useThemeDefault from "useTheme" /* 4991 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import TableRow from "TableRow" /* 6184 */;
+import TableRowGroup from "TableRowGroup" /* 6267 */;
+import BottomSheetModal from "BottomSheetModal" /* 6298 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6803 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6828 */;
+import ActionSheet from "ActionSheet" /* 6885 */;
+import ConnectionsHooks from "ConnectionsHooks" /* 7213 */;
+import SegmentedControlState from "SegmentedControlState" /* 8505 */;
+import SegmentedControl from "SegmentedControl" /* 8752 */;
+import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 11310 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -26,7 +26,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let ReactCompilerGating = fn(558);
-let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function IdentityApplicationRow(arg0) {
   const cResult = c.c(7);
   ({ onPress, applicationId } = arg0);
   const getOrFetchApplicationBatched = useGetOrFetchApplicationBatched.useGetOrFetchApplicationBatched(applicationId);
@@ -37,7 +37,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     if (cResult[0] !== bot) {
       let tmp6 = null;
       if (null != bot) {
-        const obj3 = { user: bot, size: native.AvatarSizes.XSMALL, guildId: "Array" };
+        const obj3 = { user: bot, size: native.AvatarSizes.XSMALL, guildId: "r" };
         tmp6 = timestampProducer(native.Avatar, obj3);
       }
       cResult[0] = bot;
@@ -69,7 +69,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[6] = tmp11;
     tmp9 = tmp11;
   }
-}) : ((arg0) => {
+}) : (function IdentityApplicationRow(arg0) {
   ({ applicationId, onPress } = arg0);
   const getOrFetchApplicationBatched = useGetOrFetchApplicationBatched.useGetOrFetchApplicationBatched(applicationId);
   if (null == getOrFetchApplicationBatched) {
@@ -78,7 +78,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const bot = getOrFetchApplicationBatched.bot;
     let tmp6Result = null;
     if (null != bot) {
-      const obj2 = { user: bot, size: native.AvatarSizes.XSMALL, guildId: "Array" };
+      const obj2 = { user: bot, size: native.AvatarSizes.XSMALL, guildId: "r" };
       tmp6Result = timestampProducer(native.Avatar, obj2);
     }
     const obj3 = { icon: tmp6Result, label: getOrFetchApplicationBatched.name, subLabel: null, onPress: null };
@@ -95,7 +95,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/roles/native/action_sheet/SelectConnectionActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((addConnection) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SelectConnectionActionSheet(addConnection) {
   const cResult = addConnection(excludedApplications[5]).c(37);
   addConnection = addConnection.addConnection;
   const excludedConnections = addConnection.excludedConnections;
@@ -147,7 +147,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((addConnection) =
               let tmp = null;
               if (null != application) {
                 const obj = { icon: null, label: null, subLabel: null, onPress: null };
-                const obj2 = { user: application.bot, size: addConnection(excludedApplications[7]).AvatarSizes.XSMALL, guildId: "Array" };
+                const obj2 = { user: application.bot, size: addConnection(excludedApplications[7]).AvatarSizes.XSMALL, guildId: "r" };
                 obj.icon = closure_1_6(addConnection(excludedApplications[7]).Avatar, obj2);
                 obj.label = application.name;
                 let description;
@@ -366,32 +366,38 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((addConnection) =
       }
     }
     found2 = platforms.filter(found2);
-    const mapped2 = found2.map(fn);
+    const mapped2 = found2.map(R);
     cResult[1] = addConnection;
     cResult[2] = excludedConnections;
     cResult[3] = platforms;
     cResult[4] = tmp4;
     cResult[5] = mapped2;
   }
-  fn = function _(icon) {
-    const obj = addConnection(excludedApplications[13]);
-    icon = icon.icon;
-    const source = obj.makeSource(addConnection(excludedApplications[14]).isThemeDark(closure_5) ? icon.darkPNG : icon.lightPNG);
-    const obj2 = addConnection(excludedApplications[14]);
-    return closure_1_6(addConnection(excludedApplications[8]).TableRow, {
-      icon: closure_1_6(addConnection(excludedApplications[7]).Icon, { source, disableColor: true }),
-      label: icon.name,
-      onPress() {
-        addConnection(icon.type);
-        ActionSheetActionCreatorsDefault.hideActionSheet();
-      }
-    }, "row-" + icon.type);
-  };
+  class R {
+    constructor(arg0) {
+      closure_0 = addConnection;
+      tmp = addConnection;
+      tmp2 = excludedApplications;
+      obj = addConnection(excludedApplications[13]);
+      obj2 = addConnection(excludedApplications[14]);
+      icon = addConnection.icon;
+      source = obj.makeSource(obj2.isThemeDark(closure_5) ? icon.darkPNG : icon.lightPNG);
+      obj1 = {
+        icon: closure_1_6(tmp(tmp2[7]).Icon, { source, disableColor: true }),
+        label: addConnection.name,
+        onPress() {
+              addConnection(icon.type);
+              ActionSheetActionCreatorsDefault.hideActionSheet();
+            }
+      };
+      return closure_1_6(tmp(tmp2[8]).TableRow, obj1, "row-" + addConnection.type);
+    }
+  }
   cResult[8] = addConnection;
   cResult[9] = tmp4;
-  cResult[10] = fn;
+  cResult[10] = R;
   const tmpResult = addConnection(excludedApplications[12]);
-}) : ((arg0) => {
+}) : (function SelectConnectionActionSheet(arg0) {
   ({ addConnection: require, excludedConnections: importDefault, excludedApplications: dependencyMap, integrations, onCompleteApplication: _slicedToArray, gameApplicationIds, onCompleteIdentityApplication } = arg0);
   closure_5 = useThemeDefault();
   let obj = { title: null };
@@ -443,7 +449,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((addConnection) =
       let tmp = null;
       if (null != application) {
         const obj = { icon: null, label: null, subLabel: null, onPress: null };
-        const obj2 = { user: application.bot, size: require("native").AvatarSizes.XSMALL, guildId: "Array" };
+        const obj2 = { user: application.bot, size: require("native").AvatarSizes.XSMALL, guildId: "r" };
         obj.icon = closure_1_6(require("native").Avatar, obj2);
         obj.label = application.name;
         let description;

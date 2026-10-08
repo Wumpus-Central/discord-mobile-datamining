@@ -1,16 +1,16 @@
-// === Module 14878: BountiesModalCloseButton ===
+// === Module 15140: BountiesModalCloseButton ===
 
-// Module 14878 (BountiesModalCloseButton)
+// Module 15140 (BountiesModalCloseButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Pressables from "Pressables" /* 5916 */;
-import XSmallIcon from "XSmallIcon" /* 6024 */;
+import Pressables from "Pressables" /* 6189 */;
+import XSmallIcon from "XSmallIcon" /* 6210 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles(() => {
   const obj = { closeButton: null };
   const size = { alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.round, width: nativeDefault.space.PX_32, height: nativeDefault.space.PX_32 };
@@ -21,7 +21,7 @@ const ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalCloseButton.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function BountiesModalCloseButton(onPress) {
   const cResult = c.c(5);
   onPress = onPress.onPress;
   const tmp4 = closure_4();
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
   cResult[4] = tmp12;
   tmp11 = tmp12;
   const obj3 = { accessibilityLabel: first, accessibilityRole: "button", hitSlop: 12, onPress, style: tmp4.closeButton, children: tmp7 };
-}) : ((onPress) => {
+}) : (function BountiesModalCloseButton(onPress) {
   const obj = { accessibilityLabel: null, accessibilityRole: "button", hitSlop: 12, onPress: null, style: null, children: null };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.cpT0Cq);

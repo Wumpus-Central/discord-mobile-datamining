@@ -1,65 +1,65 @@
-// === Module 13444: GuildSubscriptionRemoval ===
+// === Module 13744: GuildSubscriptionRemoval ===
 
-// Module 13444 (GuildSubscriptionRemoval)
+// Module 13744 (GuildSubscriptionRemoval)
 import c from "c" /* 576 */;
-import shared from "shared" /* 4735 */;
-import _mod7916 from "module_7916" /* 7916 */;
+import shared from "shared" /* 4929 */;
+import _mod8335 from "module_8335" /* 8335 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Image = fn(17).Image;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildSubscriptionRemovalSource() {
   const cResult = c.c(2);
   const theme = shared.useThemeContext().theme;
   if (cResult[0] !== theme) {
     const obj3 = {
       dark() {
-          return require("module_13445");
+          return require("module_13745");
         },
       darker() {
-          return require("module_13446");
+          return require("module_13746");
         },
       light() {
-          return require("module_13447");
+          return require("module_13747");
         }
     };
-    const illustrationSource = _mod7916.getIllustrationSource(theme, obj3);
+    const illustrationSource = _mod8335.getIllustrationSource(theme, obj3);
     cResult[0] = theme;
     cResult[1] = illustrationSource;
     let tmp4 = illustrationSource;
-    const tmpResult = _mod7916;
+    const tmpResult = _mod8335;
   } else {
     tmp4 = cResult[1];
   }
   return tmp4;
-}) : (() => {
+}) : (function useGuildSubscriptionRemovalSource() {
   const obj = shared;
-  return _mod7916.getIllustrationSource(obj.useThemeContext().theme, {
+  return _mod8335.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_13445");
+      return require("module_13745");
     },
     darker() {
-      return require("module_13446");
+      return require("module_13746");
     },
     light() {
-      return require("module_13447");
+      return require("module_13747");
     }
   });
 });
 let closure_4 = tmp3;
 ReactCompilerGating = fn(558);
 function getGuildSubscriptionRemovalSource(theme) {
-  return _mod7916.getIllustrationSource(theme, {
+  return _mod8335.getIllustrationSource(theme, {
     dark() {
-      return require("module_13445");
+      return require("module_13745");
     },
     darker() {
-      return require("module_13446");
+      return require("module_13746");
     },
     light() {
-      return require("module_13447");
+      return require("module_13747");
     }
   });
 }
@@ -68,7 +68,7 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 
 export { getGuildSubscriptionRemovalSource };
 export const useGuildSubscriptionRemovalSource = tmp3;
-export const GuildSubscriptionRemoval = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const GuildSubscriptionRemoval = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSubscriptionRemoval(arg0) {
   const cResult = c.c(3);
   const tmp2 = closure_4();
   if (cResult[0] === arg0) {
@@ -85,7 +85,7 @@ export const GuildSubscriptionRemoval = ReactCompilerGating.isReactCompilerEnabl
   cResult[1] = tmp2;
   cResult[2] = tmp5;
   tmp3 = tmp5;
-}) : ((arg0) => {
+}) : (function GuildSubscriptionRemoval(arg0) {
   const obj = {};
   const merged = Object.assign(arg0);
   obj.source = closure_4();

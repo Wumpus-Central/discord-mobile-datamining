@@ -1,8 +1,8 @@
-// === Module 11806: useAnimationDelayedAutoFocus ===
+// === Module 11873: useAnimationDelayedAutoFocus ===
 
-// Module 11806 (useAnimationDelayedAutoFocus)
+// Module 11873 (useAnimationDelayedAutoFocus)
 import c from "c" /* 576 */;
-import useAwaitAnimationComplete from "useAwaitAnimationComplete" /* 11807 */;
+import useAwaitAnimationComplete from "useAwaitAnimationComplete" /* 11874 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -10,7 +10,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/hooks/useAnimationDelayedAutoFocus.tsx");
 
-export const useAnimationDelayedAutoFocus = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export const useAnimationDelayedAutoFocus = ReactCompilerGating.isReactCompilerEnabled() ? (function useAnimationDelayedAutoFocus(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   const cResult = c.c(5);
@@ -45,7 +45,7 @@ export const useAnimationDelayedAutoFocus = ReactCompilerGating.isReactCompilerE
   cResult[4] = items;
   tmp4 = items;
   tmp3 = fn;
-}) : ((arg0, arg1) => {
+}) : (function useAnimationDelayedAutoFocus(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   const awaitAnimationCompletion = useAwaitAnimationComplete.useAwaitAnimationCompletion();

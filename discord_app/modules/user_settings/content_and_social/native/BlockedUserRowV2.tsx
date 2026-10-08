@@ -1,18 +1,18 @@
-// === Module 14627: BlockedUserRowV2 ===
+// === Module 14888: BlockedUserRowV2 ===
 
-// Module 14627 (BlockedUserRowV2)
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7861 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9447 */;
+// Module 14888 (BlockedUserRowV2)
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7004 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8279 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
-let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? ((userRecord) => {
+let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function BlockedUserRow(userRecord) {
   const cResult = userRecord(576).c(29);
   userRecord = userRecord.userRecord;
-  analyticsLocations = analyticsLocations(6664)().analyticsLocations;
+  analyticsLocations = analyticsLocations(6841)().analyticsLocations;
   if (cResult[0] === userRecord.globalName) {
     if (cResult[1] === userRecord.username) {
       let tmp4 = cResult[2];
@@ -27,8 +27,8 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? ((userRecord) => 
           let tmp7 = cResult[8];
         }
         if (cResult[9] !== userRecord) {
-          const obj2 = { user: userRecord, guildId: "Array", size: tmp(1188).AvatarSizes.REFRESH_MEDIUM_32 };
-          const tmp10 = jsx(tmp(1188).Avatar, { user: userRecord, guildId: "Array", size: tmp(1188).AvatarSizes.REFRESH_MEDIUM_32 });
+          const obj2 = { user: userRecord, guildId: "Array", size: tmp(1200).AvatarSizes.REFRESH_MEDIUM_32 };
+          const tmp10 = jsx(tmp(1200).Avatar, { user: userRecord, guildId: "Array", size: tmp(1200).AvatarSizes.REFRESH_MEDIUM_32 });
           cResult[9] = userRecord;
           cResult[10] = tmp10;
           let tmp8 = tmp10;
@@ -68,106 +68,90 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? ((userRecord) => 
               tmp17 = cResult[18];
             }
             if (cResult[19] !== userRecord.id) {
-              class S {
-                constructor() {
-                  obj = closure_1(closure_2[3]);
-                  unblockUserResult = obj.unblockUser(userRecord.id, { location: "blocked-users-list-mobile-v2" });
-                  return;
-                }
-              }
+              const fn = function k() {
+                RelationshipActionCreatorsDefault.unblockUser(userRecord.id, { location: "blocked-users-list-mobile-v2" });
+              };
               cResult[19] = userRecord.id;
-              cResult[20] = S;
+              cResult[20] = fn;
+              let tmp19 = fn;
             } else {
-              class S {
-                constructor() {
-                  obj = closure_1(closure_2[3]);
-                  unblockUserResult = obj.unblockUser(userRecord.id, { location: "blocked-users-list-mobile-v2" });
-                  return;
-                }
-              }
+              tmp19 = cResult[20];
             }
-            if (cResult[21] === S) {
-              class S {
-                constructor() {
-                  obj = closure_1(closure_2[3]);
-                  unblockUserResult = obj.unblockUser(userRecord.id, { location: "blocked-users-list-mobile-v2" });
-                  return;
-                }
+            if (cResult[21] === tmp19) {
+              if (cResult[22] === tmp4) {
+                let tmp20 = cResult[23];
               }
               if (cResult[24] === tmp6) {
-                class S {
-                  constructor() {
-                    obj = closure_1(closure_2[3]);
-                    unblockUserResult = obj.unblockUser(userRecord.id, { location: "blocked-users-list-mobile-v2" });
-                    return;
+                if (cResult[25] === tmp20) {
+                  if (cResult[26] === tmp8) {
+                    if (cResult[27] === tmp14) {
+                      let tmp23 = cResult[28];
+                    }
+                    return tmp23;
                   }
                 }
               }
               const obj5 = { accessible: false, icon: tmp8, label: tmp14, onPress: tmp6, trailing: tmp20 };
-              const tmp25 = jsx(tmp(6000).TableRow, { accessible: false, icon: tmp8, label: tmp14, onPress: tmp6, trailing: tmp20 });
+              const tmp25 = jsx(tmp(6184).TableRow, { accessible: false, icon: tmp8, label: tmp14, onPress: tmp6, trailing: tmp20 });
               cResult[24] = tmp6;
               cResult[25] = tmp20;
               cResult[26] = tmp8;
               cResult[27] = tmp14;
               cResult[28] = tmp25;
+              tmp23 = tmp25;
             }
-            const obj6 = { size: "sm", variant: "secondary", text: tmp17, accessibilityLabel: tmp4, onPress: S };
-            const tmp22 = jsx(tmp(5601).Button, { size: "sm", variant: "secondary", text: tmp17, accessibilityLabel: tmp4, onPress: S });
-            cResult[21] = S;
+            const obj6 = { size: "sm", variant: "secondary", text: tmp17, accessibilityLabel: tmp4, onPress: tmp19 };
+            const tmp22 = jsx(tmp(5375).Button, { size: "sm", variant: "secondary", text: tmp17, accessibilityLabel: tmp4, onPress: tmp19 });
+            cResult[21] = tmp19;
             cResult[22] = tmp4;
             cResult[23] = tmp22;
+            tmp20 = tmp22;
           }
         }
         const obj7 = { userRecord, accessibilityActions: tmp13, onAccessibilityAction: tmp7 };
-        const tmp16 = jsx(tmp(14628).RestrictedUserRowLabel, { userRecord, accessibilityActions: tmp13, onAccessibilityAction: tmp7 });
+        const tmp16 = jsx(tmp(14889).RestrictedUserRowLabel, { userRecord, accessibilityActions: tmp13, onAccessibilityAction: tmp7 });
         cResult[14] = tmp7;
         cResult[15] = tmp13;
         cResult[16] = userRecord;
         cResult[17] = tmp16;
         tmp14 = tmp16;
       }
-      const fn2 = function v(nativeEvent) {
+      function handleAccessibilityAction(nativeEvent) {
         const actionName = nativeEvent.nativeEvent.actionName;
         if ("activate" === actionName) {
           return closure_2();
         } else if ("unblock" === actionName) {
           RelationshipActionCreatorsDefault.unblockUser(userRecord.id, { location: "blocked-users-list-mobile-v2" });
         }
-      };
+      }
       cResult[6] = tmp6;
       cResult[7] = userRecord.id;
-      cResult[8] = fn2;
-      tmp7 = fn2;
+      cResult[8] = handleAccessibilityAction;
+      tmp7 = handleAccessibilityAction;
     }
-    const fn = function u() {
+    function handleOpenProfile() {
       showUserProfileActionSheetDefault({ userId: userRecord.id, sourceAnalyticsLocations: analyticsLocations });
-    };
+    }
     cResult[3] = analyticsLocations;
     cResult[4] = userRecord.id;
-    cResult[5] = fn;
-    tmp6 = fn;
+    cResult[5] = handleOpenProfile;
+    tmp6 = handleOpenProfile;
   }
   const intl = tmp(1126).intl;
-  const globalName = userRecord.globalName;
-  if (globalName == null) {
-    class S {
-      constructor() {
-        obj = closure_1(closure_2[3]);
-        unblockUserResult = obj.unblockUser(userRecord.id, { location: "blocked-users-list-mobile-v2" });
-        return;
-      }
-    }
+  let username = userRecord.globalName;
+  if (username == null) {
+    username = userRecord.username;
   }
-  const formatToPlainStringResult = intl.formatToPlainString(userRecord(1126).t.izBDZN, { name: globalName });
+  const formatToPlainStringResult = intl.formatToPlainString(userRecord(1126).t.izBDZN, { name: username });
   cResult[0] = userRecord.globalName;
   cResult[1] = userRecord.username;
   cResult[2] = formatToPlainStringResult;
   tmp4 = formatToPlainStringResult;
   let obj = userRecord(576);
-}) : ((userRecord) => {
+}) : (function BlockedUserRow(userRecord) {
   userRecord = userRecord.userRecord;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(6664)().analyticsLocations;
+  analyticsLocations = analyticsLocations(6841)().analyticsLocations;
   const intl = userRecord(1126).intl;
   let username = userRecord.globalName;
   if (username == null) {
@@ -178,12 +162,12 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? ((userRecord) => 
   }
   const formatToPlainStringResult = intl.formatToPlainString(userRecord(1126).t.izBDZN, { name: username });
   let obj = { accessible: false, icon: null, label: null, onPress: null, trailing: null };
-  let obj2 = { user: userRecord, guildId: "Array", size: userRecord(1188).AvatarSizes.REFRESH_MEDIUM_32 };
-  obj.icon = jsx(userRecord(1188).Avatar, { user: userRecord, guildId: "Array", size: userRecord(1188).AvatarSizes.REFRESH_MEDIUM_32 });
+  let obj2 = { user: userRecord, guildId: "Array", size: userRecord(1200).AvatarSizes.REFRESH_MEDIUM_32 };
+  obj.icon = jsx(userRecord(1200).Avatar, { user: userRecord, guildId: "Array", size: userRecord(1200).AvatarSizes.REFRESH_MEDIUM_32 });
   const obj3 = {
     userRecord,
     accessibilityActions: null,
-    onAccessibilityAction(nativeEvent) {
+    onAccessibilityAction: function handleAccessibilityAction(nativeEvent) {
       const actionName = nativeEvent.nativeEvent.actionName;
       if ("activate" === actionName) {
         const obj2 = { userId: userRecord.id, sourceAnalyticsLocations: analyticsLocations };
@@ -195,10 +179,10 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? ((userRecord) => 
   };
   const items = [{ name: "activate" }, { name: "unblock", label: formatToPlainStringResult }];
   obj3.accessibilityActions = items;
-  obj.label = jsx(userRecord(14628).RestrictedUserRowLabel, {
+  obj.label = jsx(userRecord(14889).RestrictedUserRowLabel, {
     userRecord,
     accessibilityActions: null,
-    onAccessibilityAction(nativeEvent) {
+    onAccessibilityAction: function handleAccessibilityAction(nativeEvent) {
       const actionName = nativeEvent.nativeEvent.actionName;
       if ("activate" === actionName) {
         const obj2 = { userId: userRecord.id, sourceAnalyticsLocations: analyticsLocations };
@@ -216,14 +200,14 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? ((userRecord) => 
   obj4.onPress = function onPress() {
     RelationshipActionCreatorsDefault.unblockUser(userRecord.id, { location: "blocked-users-list-mobile-v2" });
   };
-  obj.trailing = jsx(userRecord(5601).Button, { size: "sm", variant: "secondary", text: null, accessibilityLabel: null, onPress: null });
-  return jsx(userRecord(6000).TableRow, { accessible: false, icon: null, label: null, onPress: null, trailing: null });
+  obj.trailing = jsx(userRecord(5375).Button, { size: "sm", variant: "secondary", text: null, accessibilityLabel: null, onPress: null });
+  return jsx(userRecord(6184).TableRow, { accessible: false, icon: null, label: null, onPress: null, trailing: null });
 });
 ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/content_and_social/native/BlockedUserRowV2.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectedBlockedUserRow(userId) {
   const cResult = userId(576).c(5);
   userId = userId.userId;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -254,7 +238,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
     cResult[4] = tmp11;
   }
   const tmpResult = userId(504);
-}) : ((userId) => {
+}) : (function ConnectedBlockedUserRow(userId) {
   userId = userId.userId;
   const items = [UserStore];
   const stateFromStores = userId(504).useStateFromStores(items, () => UserStore.getUser(userId));

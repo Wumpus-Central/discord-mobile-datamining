@@ -1,25 +1,25 @@
-// === Module 10133: StickerPackDetailActionSheet ===
+// === Module 9718: StickerPackDetailActionSheet ===
 
-// Module 10133 (StickerPackDetailActionSheet)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import StickerPickerListRowDefault from "StickerPickerListRow" /* 10139 */;
+// Module 9718 (StickerPackDetailActionSheet)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import StickerPickerListRowDefault from "StickerPickerListRow" /* 9724 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const StickerPickerConstants = fn(10095);
+const StickerPickerConstants = fn(9679);
 ({ MIN_MARGIN: hasOwnProperty, STICKER_SIZE: metroRequire } = StickerPickerConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const ACTION_SHEET_MAX_WIDTH = fn(6653).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(6830).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4896);
-let closure_12 = createStyles.createStyles({ focusedStickerPreviewContainer: { position: "absolute", left: 0, top: 0, height: "100%", width: "100%", alignItems: "center", justifyContent: "center", backgroundColor: "rgba(0, 0, 0, 0.85)" }, header: { marginHorizontal: 16, marginVertical: 8, backgroundColor: "transparent", height: "applicationId" }, stickers: { paddingHorizontal: 16, marginBottom: 16 }, popoutContainer: { position: "absolute", bottom: 50 } });
+const createStyles = fn(5090);
+let closure_12 = createStyles.createStyles({ focusedStickerPreviewContainer: { position: "absolute", left: 0, top: 0, height: "100%", width: "100%", alignItems: "center", justifyContent: "center", backgroundColor: "rgba(0, 0, 0, 0.85)" }, header: { marginHorizontal: 16, marginVertical: 8, backgroundColor: "transparent", height: "children" }, stickers: { paddingHorizontal: 16, marginBottom: 16 }, popoutContainer: { position: "absolute", bottom: 50 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stickers/native/StickerPackDetailActionSheet.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((stickerPack) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function StickerPackDetailActionSheet(stickerPack) {
   const cResult = stickerPack(onClose[8]).c(47);
   stickerPack = stickerPack.stickerPack;
   const analyticsPopoutType = stickerPack.analyticsPopoutType;
@@ -36,16 +36,16 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((sticke
   analyticsPopoutType(onClose[11]).chunk(stickerPack.stickers, rounded);
   closure_8 = first.useRef(onClose);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function u(arg0) {
+    function onPressSticker(arg0) {
       _slicedToArray(arg0);
-    };
-    cResult[0] = fn;
-    let first1 = fn;
+    }
+    cResult[0] = onPressSticker;
+    let first1 = onPressSticker;
   } else {
     first1 = cResult[0];
   }
   if (cResult[1] !== first) {
-    const fn2 = function x() {
+    function toggleDisplayingPackDetails() {
       if (null != ref.current) {
         const _clearTimeout = clearTimeout;
         clearTimeout(ref.current);
@@ -55,23 +55,23 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((sticke
         const _setTimeout = setTimeout;
         ref.current = setTimeout(() => closure_1_5(false), 4000);
       }
-    };
+    }
     cResult[1] = first;
-    cResult[2] = fn2;
-    let tmp12 = fn2;
+    cResult[2] = toggleDisplayingPackDetails;
+    let tmp12 = toggleDisplayingPackDetails;
   } else {
     tmp12 = cResult[2];
   }
   if (cResult[3] !== onClose) {
-    const fn3 = function j() {
+    const fn = function j() {
       closure_8.current = onClose;
     };
     const items = [onClose];
     cResult[3] = onClose;
-    cResult[4] = fn3;
+    cResult[4] = fn;
     cResult[5] = items;
     let tmp14 = items;
-    let tmp13 = fn3;
+    let tmp13 = fn;
   } else {
     tmp13 = cResult[4];
     tmp14 = cResult[5];
@@ -192,7 +192,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((sticke
   cResult[10] = U;
   cResult[11] = items2;
   const obj3 = analyticsPopoutType(onClose[11]);
-}) : ((stickerPack) => {
+}) : (function StickerPackDetailActionSheet(stickerPack) {
   stickerPack = stickerPack.stickerPack;
   const analyticsPopoutType = stickerPack.analyticsPopoutType;
   const onClose = stickerPack.onClose;

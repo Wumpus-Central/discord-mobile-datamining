@@ -1,8 +1,8 @@
-// === Module 4580: DesignSystemsNotificationComponentsExperiment ===
+// === Module 4772: DesignSystemsNotificationComponentsExperiment ===
 
-// Module 4580 (DesignSystemsNotificationComponentsExperiment)
+// Module 4772 (DesignSystemsNotificationComponentsExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1440 */;
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -14,7 +14,7 @@ const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/design/DesignSystemsNotificationComponentsExperiment.tsx");
 
 export default apexExperiment;
-export const useDesignSystemsNotificationComponents = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+export const useDesignSystemsNotificationComponents = ReactCompilerGating.isReactCompilerEnabled() ? (function useDesignSystemsNotificationComponents(location) {
   const cResult = c.c(2);
   if (cResult[0] !== location) {
     const obj2 = { location };
@@ -25,7 +25,9 @@ export const useDesignSystemsNotificationComponents = ReactCompilerGating.isReac
     tmp2 = cResult[1];
   }
   return apexExperiment.useConfig(tmp2).enabled;
-}) : ((location) => apexExperiment.useConfig({ location }).enabled);
+}) : (function useDesignSystemsNotificationComponents(location) {
+  return apexExperiment.useConfig({ location }).enabled;
+});
 export const getDesignSystemsNotificationComponents = function getDesignSystemsNotificationComponents(DevToolsInAppNotificationTestingScreen) {
   return apexExperiment.getConfig({ location: DevToolsInAppNotificationTestingScreen }).enabled;
 };

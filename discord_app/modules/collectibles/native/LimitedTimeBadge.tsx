@@ -1,16 +1,16 @@
-// === Module 8523: LimitedTimeBadge ===
+// === Module 9008: LimitedTimeBadge ===
 
-// Module 8523 (LimitedTimeBadge)
+// Module 9008 (LimitedTimeBadge)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import shared from "shared" /* 4735 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import useCountdownDefault from "useCountdown" /* 6961 */;
+import shared from "shared" /* 4929 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import useCountdownDefault from "useCountdown" /* 7150 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2116 */;
-import ThemeStore from "ThemeStore" /* 1193 */;
+import LocaleStore from "LocaleStore" /* 2128 */;
+import ThemeStore from "ThemeStore" /* 1205 */;
 
 require = fn;
 function getBadgeString(hasItem, days, hours) {
@@ -48,7 +48,7 @@ function getBadgeString(hasItem, days, hours) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { root: { borderRadius: nativeDefault.radii.md, paddingHorizontal: 8, paddingVertical: 2 }, backgroundDarkMode: null, backgroundLightMode: null };
 let obj3 = { borderRadius: nativeDefault.radii.md, paddingHorizontal: 8, paddingVertical: 2 };
 obj2.backgroundDarkMode = { backgroundColor: nativeDefault.colors.WHITE };
@@ -60,7 +60,7 @@ let obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/LimitedTimeBadge.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function LimitedTimeBadge(arg0) {
   const cResult = c.c(22);
   ({ unpublishedAt, style } = arg0);
   const tmp4 = closure_7();
@@ -170,7 +170,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[8] = tmp16;
   tmp15 = tmp16;
   const tmp14 = useCountdownDefault(unpublishedAt, 1000, undefined, true);
-}) : ((unpublishedAt) => {
+}) : (function LimitedTimeBadge(unpublishedAt) {
   const tmp = closure_7();
   const items = [ThemeStore];
   const stateFromStores = initialize.useStateFromStores(items, () => shared.isThemeDark(theme.theme));

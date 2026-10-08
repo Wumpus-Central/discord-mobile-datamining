@@ -1,9 +1,9 @@
-// === Module 7193: useIntersectionObserver ===
+// === Module 7372: useIntersectionObserver ===
 
-// Module 7193 (useIntersectionObserver)
+// Module 7372 (useIntersectionObserver)
 import c from "c" /* 576 */;
-import useConstRefDefault from "useConstRef" /* 7194 */;
-import InteractionObserverUtils from "InteractionObserverUtils" /* 7195 */;
+import useConstRefDefault from "useConstRef" /* 7373 */;
+import InteractionObserverUtils from "InteractionObserverUtils" /* 7374 */;
 import noop from "module_19" /* 19 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -13,7 +13,7 @@ const require = globalThis.__r;
 ({ useEffect: c3, useMemo: closure_4, useRef: hasOwnProperty, useLayoutEffect: metroRequire } = noop);
 let closure_7 = {};
 let ReactCompilerGating = ReactCompilerGating_mod;
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, current, arg2) => {
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIntersectionObserver(arg0, current, arg2) {
   _require = arg0;
   const cResult = require("c").c(10);
   importDefault = tmp3;
@@ -88,7 +88,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, current, arg2)
   cResult[4] = items1;
   tmp10 = items1;
   tmp9 = fn;
-}) : ((arg0, arg1) => {
+}) : (function useIntersectionObserver(arg0, arg1) {
   closure_0 = arg0;
   let flag = arg2;
   if (arg2 === undefined) {
@@ -101,7 +101,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, current, arg2)
   if (arg1 == null) {
     tmp4 = closure_7;
   }
-  const tmp3Result = flag(7194)(tmp4);
+  const tmp3Result = flag(7373)(tmp4);
   ref2 = tmp3Result;
   closure_5(null);
   const items = [flag, arg0, tmp3Result];
@@ -142,7 +142,7 @@ let ReactCompilerGating = ReactCompilerGating_mod;
 let result = size.fileFinishedImporting("../discord_common/js/shared/hooks/useIntersectionObserver.tsx");
 
 export const useIntersectionObserver = tmp3;
-export const useIsVisible = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) => {
+export const useIsVisible = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsVisible(arg0, arg1, arg2) {
   closure_0 = arg0;
   const cResult = c.c(4);
   let num = 1;
@@ -150,7 +150,7 @@ export const useIsVisible = ReactCompilerGating.isReactCompilerEnabled() ? ((arg
     num = arg1;
   }
   if (cResult[0] !== arg0) {
-    const fn = function l(isIntersecting) {
+    const fn = function s(isIntersecting) {
       closure_0(isIntersecting.isIntersecting);
     };
     cResult[0] = arg0;
@@ -174,7 +174,7 @@ export const useIsVisible = ReactCompilerGating.isReactCompilerEnabled() ? ((arg
     tmp6 = cResult[3];
   }
   return closure_8(useConstRefDefault(tmp4).current, tmp6, tmp3);
-}) : ((arg0) => {
+}) : (function useIsVisible(arg0) {
   closure_0 = arg0;
   let num = arg1;
   if (arg1 === undefined) {
@@ -185,7 +185,7 @@ export const useIsVisible = ReactCompilerGating.isReactCompilerEnabled() ? ((arg
     flag = true;
   }
   const items = [num];
-  return closure_8(num(7194)((isIntersecting) => {
+  return closure_8(num(7373)((isIntersecting) => {
     closure_0(isIntersecting.isIntersecting);
   }).current, closure_4(() => {
     value = map.get(num);

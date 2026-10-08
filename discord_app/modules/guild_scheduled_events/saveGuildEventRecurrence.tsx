@@ -1,15 +1,15 @@
-// === Module 9212: saveGuildEventRecurrence ===
+// === Module 8512: saveGuildEventRecurrence ===
 
-// Module 9212 (saveGuildEventRecurrence)
+// Module 8512 (saveGuildEventRecurrence)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import ScheduleUtils from "ScheduleUtils" /* 9198 */;
-import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 9213 */;
+import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 8494 */;
+import ScheduleUtils from "ScheduleUtils" /* 8496 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/guild_scheduled_events/saveGuildEventRecurrence.tsx");
 
-export default function saveGuildEventRecurrence(guild_id, nextRecurrenceIdInEvent, startDate, event_exception_id) {
-  const baseScheduleForRecurrence = ScheduleUtils.getBaseScheduleForRecurrence(nextRecurrenceIdInEvent, guild_id);
+export default function saveGuildEventRecurrence(guild_id, c2, startDate, event_exception_id) {
+  const baseScheduleForRecurrence = ScheduleUtils.getBaseScheduleForRecurrence(c2, guild_id);
   startDate = null;
   if (!obj2.areDatesIdentical(baseScheduleForRecurrence.startDate, startDate.startDate)) {
     startDate = startDate.startDate;
@@ -42,11 +42,11 @@ export default function saveGuildEventRecurrence(guild_id, nextRecurrenceIdInEve
       }
       obj3.scheduled_end_time = toISOStringResult1;
       obj3.is_canceled = event_exception_id.is_canceled;
-      result1 = obj5.updateGuildEventException(obj3, guild_id.guild_id, guild_id.id, nextRecurrenceIdInEvent);
+      result1 = obj5.updateGuildEventException(obj3, guild_id.guild_id, guild_id.id, c2);
     }
     return result1;
   } else {
-    const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(nextRecurrenceIdInEvent);
+    const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(c2);
     const obj4 = { original_scheduled_start_time: null, scheduled_start_time: null, scheduled_end_time: null, is_canceled: false };
     const _Date = Date;
     const date = new Date(extractTimestampResult);

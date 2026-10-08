@@ -1,17 +1,17 @@
-// === Module 11492: GuildAutomodActionCreators ===
+// === Module 11478: GuildAutomodActionCreators ===
 
-// Module 11492 (GuildAutomodActionCreators)
+// Module 11478 (GuildAutomodActionCreators)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
-import GlobalUtils from "GlobalUtils" /* 1375 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5076 */;
-import AutomodFeedback from "AutomodFeedback" /* 7040 */;
-import DataUtils from "DataUtils" /* 11493 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
+import GlobalUtils from "GlobalUtils" /* 1387 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5105 */;
+import AutomodFeedback from "AutomodFeedback" /* 7228 */;
+import DataUtils from "DataUtils" /* 11479 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildRoleStore from "GuildRoleStore" /* 2106 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
+import GuildRoleStore from "GuildRoleStore" /* 2118 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
 
 const require = globalThis.__r;
 
@@ -310,7 +310,7 @@ export const removeMentionRaidRestrictionWithFeedback = function removeMentionRa
     canResult = PermissionStore.can(constants2.MANAGE_GUILD, guild);
   }
   if (canResult) {
-    const result = require("GuildAutomodActionActionCreators").openConfirmRemoveMentionRaid(() => {
+    const result = require("GuildAutomodActionActionCreators").openConfirmRemoveMentionRaid(function onConfirm() {
       const obj = AppAnalyticsUtils;
       obj.trackWithMetadata(constants.GUILD_AUTOMOD_FEEDBACK, { feedback_type: AutomodFeedback.Feedback.MENTION_RAID_REMOVE_RESTRICTION, decision_id });
       const HTTP = HTTPUtils.HTTP;

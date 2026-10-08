@@ -1,11 +1,11 @@
-// === Module 13122: VoicePanelVideoGuardErrorAlert ===
+// === Module 12837: VoicePanelVideoGuardErrorAlert ===
 
-// Module 13122 (VoicePanelVideoGuardErrorAlert)
+// Module 12837 (VoicePanelVideoGuardErrorAlert)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import AlertModal from "AlertModal" /* 5720 */;
-import VideoGuardExperiment from "VideoGuardExperiment" /* 13120 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import AlertModal from "AlertModal" /* 5303 */;
+import VideoGuardExperiment from "VideoGuardExperiment" /* 12834 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/alerts/VoicePanelVideoGuardErrorAlert.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((title) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePanelVideoGuardErrorAlert(title) {
   const cResult = c.c(8);
   title = title.title;
   const dismissModalCallback = AlertModal.useDismissModalCallback();
@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((title) => {
   cResult[6] = title;
   cResult[7] = tmp16;
   tmp15 = tmp16;
-}) : ((title) => {
+}) : (function VoicePanelVideoGuardErrorAlert(title) {
   const obj2 = { title: title.title, content: null, extraContent: null, actions: null };
   const intl = util.intl;
   obj2.content = intl.string(util.t.UoW002);

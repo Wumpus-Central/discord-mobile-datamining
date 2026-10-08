@@ -1,7 +1,7 @@
-// === Module 15001: useQuestDockAnimatedBorderRadius ===
+// === Module 15263: useQuestDockAnimatedBorderRadius ===
 
-// Module 15001 (useQuestDockAnimatedBorderRadius)
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+// Module 15263 (useQuestDockAnimatedBorderRadius)
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/useQuestDockAnimatedBorderRadius.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((maxBorder, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useQuestDockAnimatedBorderRadius(maxBorder, arg1) {
   _require = maxBorder;
   let num = 0;
   if (undefined !== arg1) {
@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((maxBorder, arg1)
   fn.__workletHash = 17005846780112;
   fn.__initData = __initData;
   return obj.useDerivedValue(fn);
-}) : ((maxBorder) => {
+}) : (function useQuestDockAnimatedBorderRadius(maxBorder) {
   _require = maxBorder;
   let num = arg1;
   if (arg1 === undefined) {

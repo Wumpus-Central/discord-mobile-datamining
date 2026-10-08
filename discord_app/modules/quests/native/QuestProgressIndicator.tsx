@@ -1,15 +1,15 @@
-// === Module 14950: QuestProgressIndicator ===
+// === Module 15212: QuestProgressIndicator ===
 
-// Module 14950 (QuestProgressIndicator)
+// Module 15212 (QuestProgressIndicator)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 587 */;
-import timing from "timing" /* 4897 */;
-import inlineStyles from "inlineStyles" /* 8169 */;
+import timing from "timing" /* 5091 */;
+import inlineStyles from "inlineStyles" /* 7550 */;
 import noop_mod from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 import jsxProd from "jsxProd" /* 21 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import createStyles from "createStyles" /* 4896 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import createStyles from "createStyles" /* 5090 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -47,7 +47,7 @@ const __initData5 = { code: "function QuestProgressIndicatorTsx5(){const{circumf
 const __initData6 = { code: "function QuestProgressIndicatorTsx6(){const{underlayOpacity,styles}=this.__closure;return{opacity:underlayOpacity.get(),...styles.opacityMask};}" };
 let result = size.fileFinishedImporting("modules/quests/native/QuestProgressIndicator.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function QuestProgressIndicator(arg0) {
   let obj = progress(stateFromStores[9]);
   const cResult = obj.c(98);
   ({ quest, size, progress } = arg0);
@@ -697,7 +697,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   tmp27 = items6;
   tmp26 = fn3;
   const tmpResult12 = progress(stateFromStores[4]);
-}) : ((loading) => {
+}) : (function QuestProgressIndicator(loading) {
   ({ quest, size, progress } = loading);
   let flag = loading.loading;
   if (flag === undefined) {

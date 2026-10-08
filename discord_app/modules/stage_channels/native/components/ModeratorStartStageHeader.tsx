@@ -1,24 +1,24 @@
-// === Module 9769: ModeratorStartStageHeader ===
+// === Module 10972: ModeratorStartStageHeader ===
 
-// Module 9769 (ModeratorStartStageHeader)
+// Module 10972 (ModeratorStartStageHeader)
 import c from "c" /* 576 */;
-import StageActionHeader from "StageActionHeader" /* 9724 */;
-import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 9730 */;
+import StageActionHeader from "StageActionHeader" /* 10929 */;
+import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 10933 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
-let obj = { header: { height: fn(6075).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", paddingHorizontal: 8, marginTop: 4, overflow: "visible" } };
+const createStyles = fn(5090);
+let obj = { header: { height: fn(6261).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", paddingHorizontal: 8, marginTop: 4, overflow: "visible" } };
 let closure_6 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
-let obj3 = { height: fn(6075).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", paddingHorizontal: 8, marginTop: 4, overflow: "visible" };
+let obj3 = { height: fn(6261).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", paddingHorizontal: 8, marginTop: 4, overflow: "visible" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/native/components/ModeratorStartStageHeader.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ModeratorStartStageHeader(channel) {
   const cResult = c.c(14);
   channel = channel.channel;
   const tmp4 = closure_6();
@@ -87,7 +87,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
   cResult[4] = speaker;
   cResult[5] = tmp13;
   tmp12 = tmp13;
-}) : ((channel) => {
+}) : (function ModeratorStartStageHeader(channel) {
   channel = channel.channel;
   const tmp3 = useMyCurrentStageChannelRoleDefault(channel.id);
   let speaker;

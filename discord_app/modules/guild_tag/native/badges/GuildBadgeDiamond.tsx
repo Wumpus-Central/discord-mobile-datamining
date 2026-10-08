@@ -1,9 +1,9 @@
-// === Module 13775: GuildBadgeDiamond ===
+// === Module 13997: GuildBadgeDiamond ===
 
-// Module 13775 (GuildBadgeDiamond)
+// Module 13997 (GuildBadgeDiamond)
 import c from "c" /* 576 */;
-import inlineStyles from "inlineStyles" /* 8169 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 13748 */;
+import inlineStyles from "inlineStyles" /* 7550 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 13970 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgeDiamond.tsx");
 
-export const GuildBadgeDiamond = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const GuildBadgeDiamond = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBadgeDiamond(arg0) {
   const cResult = c.c(65);
   if (cResult[0] !== arg0) {
     ({ width, height, primaryTintColor } = arg0);
@@ -304,7 +304,7 @@ export const GuildBadgeDiamond = ReactCompilerGating.isReactCompilerEnabled() ? 
   cResult[63] = num6;
   cResult[64] = tmp105;
   tmp103 = tmp105;
-}) : ((primaryTintColor) => {
+}) : (function GuildBadgeDiamond(primaryTintColor) {
   let num = primaryTintColor.width;
   if (num === undefined) {
     num = 24;

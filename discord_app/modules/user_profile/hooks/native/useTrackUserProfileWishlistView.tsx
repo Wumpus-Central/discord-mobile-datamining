@@ -1,15 +1,15 @@
-// === Module 12960: useTrackUserProfileWishlistView ===
+// === Module 13239: useTrackUserProfileWishlistView ===
 
-// Module 12960 (useTrackUserProfileWishlistView)
+// Module 13239 (useTrackUserProfileWishlistView)
 import noop from "module_19" /* 19 */;
-import WishlistStore from "WishlistStore" /* 8464 */;
+import WishlistStore from "WishlistStore" /* 8950 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 ({ useEffect: c2, useRef: c3 } = noop);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/native/useTrackUserProfileWishlistView.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((wishlistId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useTrackUserProfileWishlistView(wishlistId) {
   const cResult = wishlistId(onAction[3]).c(10);
   wishlistId = wishlistId.wishlistId;
   onAction = wishlistId.onAction;
@@ -74,7 +74,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((wishlistId) => {
   cResult[9] = items1;
   tmp10 = items1;
   tmp9 = fn2;
-}) : ((wishlistId) => {
+}) : (function useTrackUserProfileWishlistView(wishlistId) {
   wishlistId = wishlistId.wishlistId;
   const onAction = wishlistId.onAction;
   const productLines = wishlistId.productLines;

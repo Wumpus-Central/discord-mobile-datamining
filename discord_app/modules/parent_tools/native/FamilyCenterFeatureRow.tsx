@@ -1,28 +1,28 @@
-// === Module 14709: FamilyCenterFeatureRow ===
+// === Module 14970: FamilyCenterFeatureRow ===
 
-// Module 14709 (FamilyCenterFeatureRow)
+// Module 14970 (FamilyCenterFeatureRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import _modDef2521 from "module_2521" /* 2521 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Stack_Stack from "Stack/Stack" /* 5600 */;
-import TableRow from "TableRow" /* 6000 */;
-import TableRowGroup from "TableRowGroup" /* 6081 */;
-import EyeIcon from "EyeIcon" /* 6465 */;
-import _modDef9535 from "module_9535" /* 9535 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 11544 */;
-import _modDef12028 from "module_12028" /* 12028 */;
-import QrCodeIcon from "QrCodeIcon" /* 14706 */;
-import _modDef14710 from "module_14710" /* 14710 */;
-import ChatCheckIcon from "ChatCheckIcon" /* 14711 */;
+import _modDef2565 from "module_2565" /* 2565 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import Stack_Stack from "Stack/Stack" /* 5373 */;
+import TableRow from "TableRow" /* 6184 */;
+import TableRowGroup from "TableRowGroup" /* 6267 */;
+import EyeIcon from "EyeIcon" /* 6643 */;
+import _modDef8706 from "module_8706" /* 8706 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 11558 */;
+import _modDef12101 from "module_12101" /* 12101 */;
+import QrCodeIcon from "QrCodeIcon" /* 14967 */;
+import _modDef14971 from "module_14971" /* 14971 */;
+import ChatCheckIcon from "ChatCheckIcon" /* 14972 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { tableGroup: { marginTop: 20, marginBottom: nativeDefault.space.PX_24 } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -30,14 +30,14 @@ let obj3 = { marginTop: 20, marginBottom: nativeDefault.space.PX_24 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterFeatureRow.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCenterFeatureRows() {
   const cResult = c.c(25);
   const tmp4 = closure_6();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
-    const stringResult = intl.string(_modDef2521.qITXhY);
+    const stringResult = intl.string(_modDef2565.qITXhY);
     const intl2 = util.intl;
-    const stringResult1 = intl2.string(_modDef2521.bmhCnL);
+    const stringResult1 = intl2.string(_modDef2565.bmhCnL);
     cResult[0] = stringResult;
     cResult[1] = stringResult1;
     tmp5 = stringResult;
@@ -48,9 +48,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const ageSpecificText = useAgeSpecificText.useAgeSpecificText(tmp5, tmp6);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const intl3 = util.intl;
-    const stringResult2 = intl3.string(_modDef2521.t7SkFy);
+    const stringResult2 = intl3.string(_modDef2565.t7SkFy);
     const intl4 = util.intl;
-    const stringResult3 = intl4.string(_modDef2521["68zfxD"]);
+    const stringResult3 = intl4.string(_modDef2565["68zfxD"]);
     cResult[2] = stringResult2;
     cResult[3] = stringResult3;
     let tmp12 = stringResult3;
@@ -63,9 +63,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const ageSpecificText1 = useAgeSpecificText.useAgeSpecificText(tmp11, tmp12);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const intl5 = util.intl;
-    const stringResult4 = intl5.string(_modDef2521["+pi4Yt"]);
+    const stringResult4 = intl5.string(_modDef2565["+pi4Yt"]);
     const intl6 = util.intl;
-    const stringResult5 = intl6.string(_modDef2521["1xPTwE"]);
+    const stringResult5 = intl6.string(_modDef2565["1xPTwE"]);
     cResult[4] = stringResult4;
     cResult[5] = stringResult5;
     let tmp18 = stringResult5;
@@ -78,14 +78,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const ageSpecificText2 = useAgeSpecificText.useAgeSpecificText(tmp17, tmp18);
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     const intl7 = util.intl;
-    const stringResult6 = intl7.string(_modDef2521["001l3m"]);
+    const stringResult6 = intl7.string(_modDef2565["001l3m"]);
     cResult[6] = stringResult6;
     let tmp23 = stringResult6;
   } else {
     tmp23 = cResult[6];
   }
   if (cResult[7] !== ageSpecificText) {
-    const obj2 = { icon: _modDef14710, IconComponent: ChatCheckIcon.ChatCheckIcon, header: tmp23, description: ageSpecificText };
+    const obj2 = { icon: _modDef14971, IconComponent: ChatCheckIcon.ChatCheckIcon, header: tmp23, description: ageSpecificText };
     cResult[7] = ageSpecificText;
     cResult[8] = obj2;
     let tmp26 = obj2;
@@ -94,14 +94,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
     const intl8 = util.intl;
-    const stringResult7 = intl8.string(_modDef2521.yipAeP);
+    const stringResult7 = intl8.string(_modDef2565.yipAeP);
     cResult[9] = stringResult7;
     let tmp28 = stringResult7;
   } else {
     tmp28 = cResult[9];
   }
   if (cResult[10] !== ageSpecificText1) {
-    const obj3 = { icon: _modDef12028, IconComponent: EyeIcon.EyeIcon, header: tmp28, description: ageSpecificText1 };
+    const obj3 = { icon: _modDef12101, IconComponent: EyeIcon.EyeIcon, header: tmp28, description: ageSpecificText1 };
     cResult[10] = ageSpecificText1;
     cResult[11] = obj3;
     let tmp31 = obj3;
@@ -110,14 +110,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
     const intl9 = util.intl;
-    const stringResult8 = intl9.string(_modDef2521.hhOuMe);
+    const stringResult8 = intl9.string(_modDef2565.hhOuMe);
     cResult[12] = stringResult8;
     let tmp33 = stringResult8;
   } else {
     tmp33 = cResult[12];
   }
   if (cResult[13] !== ageSpecificText2) {
-    const obj4 = { icon: _modDef9535, IconComponent: QrCodeIcon.QrCodeIcon, header: tmp33, description: ageSpecificText2 };
+    const obj4 = { icon: _modDef8706, IconComponent: QrCodeIcon.QrCodeIcon, header: tmp33, description: ageSpecificText2 };
     cResult[13] = ageSpecificText2;
     cResult[14] = obj4;
     let tmp36 = obj4;
@@ -133,7 +133,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       if (cResult[19] === Symbol.for("react.memo_cache_sentinel")) {
         const obj5 = { accessibilityRole: "header", variant: "text-sm/semibold", color: "text-muted", children: null };
         const intl10 = util.intl;
-        obj5.children = intl10.string(_modDef2521["6JkHSg"]);
+        obj5.children = intl10.string(_modDef2565["6JkHSg"]);
         const tmp41 = React4(Text_Text.Text, obj5);
         cResult[19] = tmp41;
         let tmp38 = tmp41;
@@ -181,46 +181,46 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[18] = items1;
   arr = items1;
   const tmpResult4 = useAgeSpecificText;
-}) : (() => {
+}) : (function FamilyCenterFeatureRows() {
   const tmp = closure_6();
   const intl = util.intl;
   const obj = useAgeSpecificText;
   const intl2 = util.intl;
-  const ageSpecificText = obj.useAgeSpecificText(intl.string(_modDef2521.qITXhY), intl2.string(_modDef2521.bmhCnL));
-  const stringResult = intl.string(_modDef2521.qITXhY);
+  const ageSpecificText = obj.useAgeSpecificText(intl.string(_modDef2565.qITXhY), intl2.string(_modDef2565.bmhCnL));
+  const stringResult = intl.string(_modDef2565.qITXhY);
   const intl3 = util.intl;
   const obj2 = useAgeSpecificText;
   const intl4 = util.intl;
-  const ageSpecificText1 = obj2.useAgeSpecificText(intl3.string(_modDef2521.t7SkFy), intl4.string(_modDef2521["68zfxD"]));
-  const stringResult1 = intl3.string(_modDef2521.t7SkFy);
+  const ageSpecificText1 = obj2.useAgeSpecificText(intl3.string(_modDef2565.t7SkFy), intl4.string(_modDef2565["68zfxD"]));
+  const stringResult1 = intl3.string(_modDef2565.t7SkFy);
   const intl5 = util.intl;
   const obj3 = useAgeSpecificText;
   const intl6 = util.intl;
   const obj4 = { icon: null, IconComponent: null, header: null, description: null };
-  const ageSpecificText2 = obj3.useAgeSpecificText(intl5.string(_modDef2521["+pi4Yt"]), intl6.string(_modDef2521["1xPTwE"]));
-  obj4.icon = _modDef14710;
+  const ageSpecificText2 = obj3.useAgeSpecificText(intl5.string(_modDef2565["+pi4Yt"]), intl6.string(_modDef2565["1xPTwE"]));
+  obj4.icon = _modDef14971;
   obj4.IconComponent = ChatCheckIcon.ChatCheckIcon;
   const intl7 = util.intl;
-  obj4.header = intl7.string(_modDef2521["001l3m"]);
+  obj4.header = intl7.string(_modDef2565["001l3m"]);
   obj4.description = ageSpecificText;
   const items = [obj4, , ];
-  const obj5 = { icon: _modDef12028, IconComponent: EyeIcon.EyeIcon, header: null, description: null };
+  const obj5 = { icon: _modDef12101, IconComponent: EyeIcon.EyeIcon, header: null, description: null };
   const intl8 = util.intl;
-  obj5.header = intl8.string(_modDef2521.yipAeP);
+  obj5.header = intl8.string(_modDef2565.yipAeP);
   obj5.description = ageSpecificText1;
   items[1] = obj5;
-  const obj6 = { icon: _modDef9535, IconComponent: QrCodeIcon.QrCodeIcon, header: null, description: null };
+  const obj6 = { icon: _modDef8706, IconComponent: QrCodeIcon.QrCodeIcon, header: null, description: null };
   const intl9 = util.intl;
-  obj6.header = intl9.string(_modDef2521.hhOuMe);
+  obj6.header = intl9.string(_modDef2565.hhOuMe);
   obj6.description = ageSpecificText2;
   items[2] = obj6;
   const obj7 = { style: tmp.tableGroup, children: null };
   const obj8 = { spacing: 8, children: null };
   const obj9 = { accessibilityRole: "header", variant: "text-sm/semibold", color: "text-muted", children: null };
   const intl10 = util.intl;
-  obj9.children = intl10.string(_modDef2521["6JkHSg"]);
+  obj9.children = intl10.string(_modDef2565["6JkHSg"]);
   const items1 = [React4(Text_Text.Text, obj9), ];
-  const stringResult2 = intl5.string(_modDef2521["+pi4Yt"]);
+  const stringResult2 = intl5.string(_modDef2565["+pi4Yt"]);
   items1[1] = React4(TableRowGroup.TableRowGroup, {
     hasIcons: true,
     children: items.map((header) => {

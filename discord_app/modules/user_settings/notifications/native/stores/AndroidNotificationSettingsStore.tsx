@@ -1,9 +1,9 @@
-// === Module 15320: AndroidNotificationSettingsStore ===
+// === Module 15582: AndroidNotificationSettingsStore ===
 
-// Module 15320 (AndroidNotificationSettingsStore)
+// Module 15582 (AndroidNotificationSettingsStore)
 import c from "c" /* 576 */;
-import _mod4498 from "module_4498" /* 4498 */;
-import PushNotificationDefault from "PushNotification" /* 8995 */;
+import _mod4690 from "module_4690" /* 4690 */;
+import PushNotificationDefault from "PushNotification" /* 10820 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;
@@ -127,11 +127,11 @@ let closure_5 = async function _initializeAndroidNotificationSettingsStore() {
     }
   }
 };
-const identity = fn(1254);
-let closure_4 = identity.createWithEqualityFn(() => ({ isLightsEnabled: "toCharArray$esjava$1", isVibrationsEnabled: "Symbol", isSoundsEnabled: "IconComponent", isNotifyEveryTime: "Reflect" }));
+const identity = fn(1266);
+let closure_4 = identity.createWithEqualityFn(() => ({ isLightsEnabled: "code", isVibrationsEnabled: "max", isSoundsEnabled: "shapes", isNotifyEveryTime: "Array" }));
 fn(558);
 let ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAndroidNotificationLightsEnabled() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function t(isLightsEnabled) {
@@ -142,10 +142,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     first = cResult[0];
   }
-  return closure_4(first, _mod4498.shallow);
-}) : (() => closure_4((isLightsEnabled) => isLightsEnabled.isLightsEnabled, _mod4498.shallow));
+  return closure_4(first, _mod4690.shallow);
+}) : (function useAndroidNotificationLightsEnabled() {
+  return closure_4((isLightsEnabled) => isLightsEnabled.isLightsEnabled, _mod4690.shallow);
+});
 ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAndroidNotificationVibrationsEnabled() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function t(isVibrationsEnabled) {
@@ -156,10 +158,12 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     first = cResult[0];
   }
-  return closure_4(first, _mod4498.shallow);
-}) : (() => closure_4((isVibrationsEnabled) => isVibrationsEnabled.isVibrationsEnabled, _mod4498.shallow));
+  return closure_4(first, _mod4690.shallow);
+}) : (function useAndroidNotificationVibrationsEnabled() {
+  return closure_4((isVibrationsEnabled) => isVibrationsEnabled.isVibrationsEnabled, _mod4690.shallow);
+});
 ReactCompilerGating = fn(558);
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAndroidNotificationSoundsEnabled() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function t(isSoundsEnabled) {
@@ -170,8 +174,10 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     first = cResult[0];
   }
-  return closure_4(first, _mod4498.shallow);
-}) : (() => closure_4((isSoundsEnabled) => isSoundsEnabled.isSoundsEnabled, _mod4498.shallow));
+  return closure_4(first, _mod4690.shallow);
+}) : (function useAndroidNotificationSoundsEnabled() {
+  return closure_4((isSoundsEnabled) => isSoundsEnabled.isSoundsEnabled, _mod4690.shallow);
+});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/notifications/native/stores/AndroidNotificationSettingsStore.tsx");
 
@@ -206,7 +212,7 @@ export const setAndroidNotificationSoundsEnabled = function setAndroidNotificati
   const obj = require("ReactBatchUpdates");
   PushNotificationDefault.setSoundsEnabled(isSoundsEnabled);
 };
-export const useAndroidMessageNotificationsEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useAndroidMessageNotificationsEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useAndroidMessageNotificationsEnabled() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function t(isNotifyEveryTime) {
@@ -217,8 +223,10 @@ export const useAndroidMessageNotificationsEnabled = ReactCompilerGating.isReact
   } else {
     first = cResult[0];
   }
-  return closure_4(first, _mod4498.shallow);
-}) : (() => closure_4((isNotifyEveryTime) => isNotifyEveryTime.isNotifyEveryTime, _mod4498.shallow));
+  return closure_4(first, _mod4690.shallow);
+}) : (function useAndroidMessageNotificationsEnabled() {
+  return closure_4((isNotifyEveryTime) => isNotifyEveryTime.isNotifyEveryTime, _mod4690.shallow);
+});
 export const setAndroidMessageNotificationsEnabled = function setAndroidMessageNotificationsEnabled(isNotifyEveryTime) {
   _require = isNotifyEveryTime;
   require("ReactBatchUpdates").batchUpdates(() => state.setState({ isNotifyEveryTime }));

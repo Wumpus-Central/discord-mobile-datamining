@@ -1,9 +1,9 @@
-// === Module 6005: useIOSPressEffects ===
+// === Module 6191: useIOSPressEffects ===
 
-// Module 6005 (useIOSPressEffects)
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import spring from "spring" /* 5604 */;
+// Module 6191 (useIOSPressEffects)
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import spring from "spring" /* 5374 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -17,7 +17,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/util/useIOSPressEffects.tsx");
 
 export { SPRING_CONFIG };
-export const useIOSPressEffects = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export const useIOSPressEffects = ReactCompilerGating.isReactCompilerEnabled() ? (function useIOSPressEffects(arg0, arg1) {
   _require = arg0;
   const cResult = require("c").c(14);
   importDefault = tmp4;
@@ -138,7 +138,7 @@ export const useIOSPressEffects = ReactCompilerGating.isReactCompilerEnabled() ?
   tmp7 = items;
   tmp6 = fn;
   let tmpResult = require("ReanimatedRexport");
-}) : ((arg0) => {
+}) : (function useIOSPressEffects(arg0) {
   _require = arg0;
   let flag = arg1;
   if (arg1 === undefined) {

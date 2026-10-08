@@ -1,17 +1,17 @@
-// === Module 7200: QuestStore ===
+// === Module 7379: QuestStore ===
 
-// Module 7200 (QuestStore)
+// Module 7379 (QuestStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import SentryUtilsDefault from "SentryUtils" /* 1242 */;
-import QuestDataUtils from "QuestDataUtils" /* 7196 */;
-import AdDecisionUtils from "AdDecisionUtils" /* 7198 */;
-import QuestRewardTypes from "QuestRewardTypes" /* 7205 */;
-import getQuestLogger from "getQuestLogger" /* 7206 */;
-import QuestServerUtils from "QuestServerUtils" /* 7207 */;
+import SentryUtilsDefault from "SentryUtils" /* 1254 */;
+import AdDecisionUtils from "AdDecisionUtils" /* 7377 */;
+import QuestRewardTypes from "QuestRewardTypes" /* 7384 */;
+import QuestExpirationUtils from "QuestExpirationUtils" /* 7385 */;
+import getQuestLogger from "getQuestLogger" /* 7386 */;
+import QuestServerUtils from "QuestServerUtils" /* 7387 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ConsoleQuestUIStore from "ConsoleQuestUIStore" /* 7201 */;
-import VideoQuestUIStore from "VideoQuestUIStore" /* 7202 */;
+import ConsoleQuestUIStore from "ConsoleQuestUIStore" /* 7380 */;
+import VideoQuestUIStore from "VideoQuestUIStore" /* 7381 */;
 
 require = fn;
 function initializeState() {
@@ -140,13 +140,13 @@ function _runExpirationCheck() {
       } else if (!map.has(index)) {
         const result1 = map.set(index, false);
       }
-      obj2 = QuestDataUtils;
+      obj2 = QuestExpirationUtils;
     }
   });
   if (_require) {
     questStore.emitChange();
   }
-  let result = require("QuestDataUtils").findNextUpcomingExpirationEpochMs(Array.from(map.values()));
+  let result = require("QuestExpirationUtils").findNextUpcomingExpirationEpochMs(Array.from(map.values()));
   if (null != result) {
     const _Math = Math;
     const _Date = Date;
@@ -158,9 +158,9 @@ function _runExpirationCheck() {
       }, bound);
     }
   }
-  const obj = require("QuestDataUtils");
+  const obj = require("QuestExpirationUtils");
 }
-const QuestsExperimentLocations = fn(5630).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5977).QuestsExperimentLocations;
 new Map();
 let c33 = null;
 let c34 = null;
@@ -372,11 +372,11 @@ const questStore = new QuestStore(DispatcherDefault, {
       let tmp9 = nextResult;
       let result = map.set(nextResult.id, nextResult);
       let tmp13 = mapped;
-      let obj5 = mapped(7196);
+      let obj5 = mapped(7385);
       let result1 = map1.set(nextResult.id, obj5.isQuestExpired(nextResult));
       let targetedContent = nextResult.targetedContent;
-      if (targetedContent.includes(mapped(5633).QuestContent.QUEST_BAR)) {
-        let tmp13Result = tmp13(7206);
+      if (targetedContent.includes(mapped(5980).QuestContent.QUEST_BAR)) {
+        let tmp13Result = tmp13(7386);
         let obj4 = { location: QuestsExperimentLocations.QUESTS_STORE };
         let questLogger = tmp13Result.getQuestLogger(obj4);
         let _HermesInternal2 = HermesInternal;
@@ -398,7 +398,7 @@ const questStore = new QuestStore(DispatcherDefault, {
     for (const item10131 of values) {
       if (!map.has(item10131.id)) {
         let result3 = map.set(item10131.id, item10131);
-        let obj10 = mapped(7196);
+        let obj10 = mapped(7385);
         let result4 = map1.set(item10131.id, obj10.isQuestExpired(item10131));
       }
       continue;
@@ -502,7 +502,7 @@ const questStore = new QuestStore(DispatcherDefault, {
           let tmp23 = new.target;
           let map3 = new Map(closure_24);
           closure_24 = map3;
-          let tmp37Result = QuestDataUtils;
+          let tmp37Result = QuestExpirationUtils;
           let result4 = map3.set(tmp10, tmp37Result.isQuestExpired(result2));
         }
       }
@@ -1089,13 +1089,13 @@ const questStore = new QuestStore(DispatcherDefault, {
     }
     const value4 = map.get(user_status.quest_id);
     if (null != value4) {
-      const isQuestExpiredResult = QuestDataUtils.isQuestExpired(value4);
+      const isQuestExpiredResult = QuestExpirationUtils.isQuestExpired(value4);
       if (closure_24.get(user_status.quest_id) !== isQuestExpiredResult) {
         const _Map2 = Map;
         map2 = new Map(closure_24);
         closure_24 = map2.set(user_status.quest_id, isQuestExpiredResult);
       }
-      const tmpResult = QuestDataUtils;
+      const tmpResult = QuestExpirationUtils;
     }
     let hasItem = 0 === Object.keys(result.progress).length;
     if (hasItem) {
@@ -1200,7 +1200,7 @@ const questStore = new QuestStore(DispatcherDefault, {
     }
     const value4 = map.get(previewQuestUserStatus.questId);
     if (null != value4) {
-      const isQuestExpiredResult = QuestDataUtils.isQuestExpired(value4);
+      const isQuestExpiredResult = QuestExpirationUtils.isQuestExpired(value4);
       if (closure_24.get(previewQuestUserStatus.questId) !== isQuestExpiredResult) {
         const _Map4 = Map;
         map4 = new Map(closure_24);

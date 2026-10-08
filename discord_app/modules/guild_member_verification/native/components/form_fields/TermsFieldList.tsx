@@ -1,19 +1,19 @@
-// === Module 5994: TermsFieldList ===
+// === Module 6178: TermsFieldList ===
 
-// Module 5994 (TermsFieldList)
+// Module 6178 (TermsFieldList)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 4883 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import TableRowDivider from "TableRowDivider" /* 5995 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 5077 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import TableRowDivider from "TableRowDivider" /* 6179 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { termsContainer: { padding: 16, flexDirection: "column", justifyContent: "space-between", backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT }, firstItem: null, lastItem: null, termsRow: null, termsRowContent: null, termsRowNumber: null, title: null };
 let obj3 = { padding: 16, flexDirection: "column", justifyContent: "space-between", backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT };
 obj2.firstItem = { borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm };
@@ -25,7 +25,7 @@ obj2.termsRowNumber = { paddingRight: 8, width: 20, height: 20 };
 obj2.title = { marginBottom: 16 };
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function TermsFieldListItem(arg0) {
   const cResult = c.c(17);
   ({ rowNumber, rowCount, rule, rulesChannelId } = arg0);
   const tmp4 = closure_8();
@@ -95,7 +95,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = rowNumber;
   cResult[2] = formatToPlainStringResult;
   tmp7 = formatToPlainStringResult;
-}) : ((rowNumber) => {
+}) : (function TermsFieldListItem(rowNumber) {
   rowNumber = rowNumber.rowNumber;
   ({ rowCount, rule, rulesChannelId } = rowNumber);
   const tmp = closure_8();
@@ -115,7 +115,7 @@ let obj5 = { borderBottomLeftRadius: nativeDefault.radii.sm, borderBottomRightRa
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/TermsFieldList.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((rules) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function TermsFieldList(rules) {
   const cResult = rules(termsContainer[6]).c(20);
   rules = rules.rules;
   lastItem = rules.rulesChannelId;
@@ -218,7 +218,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((rules) => {
   cResult[14] = fn;
   tmp10 = fn;
   let obj = rules(termsContainer[6]);
-}) : ((rules) => {
+}) : (function TermsFieldList(rules) {
   rules = rules.rules;
   const rulesChannelId = rules.rulesChannelId;
   const tmp = closure_8();
@@ -228,7 +228,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((rules) => {
   const intl = rules(1126).intl;
   obj2.children = intl.string(rules(1126).t.prJqwT);
   let items = [
-    closure_5(rules(4892).Text, obj2),
+    closure_5(rules(5086).Text, obj2),
     closure_5(View, {
       accessibilityRole: "list",
       children: rules.map((rule, index) => {

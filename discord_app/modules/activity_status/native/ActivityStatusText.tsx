@@ -1,21 +1,21 @@
-// === Module 10631: ActivityStatusText ===
+// === Module 10229: ActivityStatusText ===
 
-// Module 10631 (ActivityStatusText)
+// Module 10229 (ActivityStatusText)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 4892 */;
+import Text_Text from "Text/Text" /* 5086 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 let closure_2 = ["children", "style", "variant"];
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles({ text: { flexShrink: 1 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activity_status/native/ActivityStatusText.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ActivityStatusText(arg0) {
   const cResult = c.c(13);
   if (cResult[0] !== arg0) {
     ({ children, style, variant } = arg0);
@@ -70,7 +70,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[6] = tmp11.text;
   cResult[7] = items;
   tmp12 = items;
-}) : ((variant) => {
+}) : (function ActivityStatusText(variant) {
   let str = variant.variant;
   ({ children, style } = variant);
   if (str === undefined) {

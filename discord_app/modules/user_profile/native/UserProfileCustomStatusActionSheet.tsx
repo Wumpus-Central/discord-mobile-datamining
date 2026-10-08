@@ -1,22 +1,22 @@
-// === Module 10852: UserProfileCustomStatusActionSheet ===
+// === Module 10503: UserProfileCustomStatusActionSheet ===
 
-// Module 10852 (UserProfileCustomStatusActionSheet)
+// Module 10503 (UserProfileCustomStatusActionSheet)
 import nativeDefault from "native" /* 587 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5048 */;
-import HeaderAvatarDefault from "HeaderAvatar" /* 7940 */;
-import UserProfileCustomStatusBubbleDefault from "UserProfileCustomStatusBubble" /* 10840 */;
-import useCustomStatusActivityForUserDefault from "useCustomStatusActivityForUser" /* 10853 */;
-import UserProfileStackedActionSheetDefault from "UserProfileStackedActionSheet" /* 10854 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5405 */;
+import HeaderAvatarDefault from "HeaderAvatar" /* 8358 */;
+import UserProfileCustomStatusBubbleDefault from "UserProfileCustomStatusBubble" /* 10489 */;
+import useCustomStatusActivityForUserDefault from "useCustomStatusActivityForUser" /* 10504 */;
+import UserProfileStackedActionSheetDefault from "UserProfileStackedActionSheet" /* 10505 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = fn;
 const View = fn(17).View;
-const Constants = fn(6714);
+const Constants = fn(6891);
 ({ AVATAR_CONTAINER_SIZE, AVATAR_CUSTOM_STATUS_GAP } = Constants);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { statusPreviewContainer: { flexDirection: "row", columnGap: AVATAR_CUSTOM_STATUS_GAP, marginHorizontal: nativeDefault.space.PX_16 }, avatarContainer: { height: AVATAR_CONTAINER_SIZE, width: AVATAR_CONTAINER_SIZE, alignItems: "center", justifyContent: "center" }, avatarStatus: null, customStatusBubble: null };
 let obj3 = { flexDirection: "row", columnGap: AVATAR_CUSTOM_STATUS_GAP, marginHorizontal: nativeDefault.space.PX_16 };
 obj2.avatarStatus = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
@@ -28,7 +28,7 @@ let obj5 = { marginTop: AVATAR_CONTAINER_SIZE / 2 + 10, flexShrink: 1, flexGrow:
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileCustomStatusActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileCustomStatusActionSheet(user) {
   const cResult = user(576).c(26);
   user = user.user;
   ({ previewEmoji, previewText } = user);
@@ -42,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
     first = cResult[0];
   }
   if (cResult[1] !== user.id) {
-    const fn = function o() {
+    const fn = function u() {
       const currentUser = UserStore.getCurrentUser();
       let id;
       if (currentUser != null) {
@@ -150,7 +150,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
   cResult[5] = name;
   cResult[6] = stateFromStores;
   cResult[7] = stringResult;
-}) : ((user) => {
+}) : (function UserProfileCustomStatusActionSheet(user) {
   user = user.user;
   ({ guildId, channelId, previewEmoji, previewText } = user);
   const tmp = closure_7();

@@ -1,9 +1,9 @@
-// === Module 9715: useDeafStates ===
+// === Module 10920: useDeafStates ===
 
-// Module 9715 (useDeafStates)
+// Module 10920 (useDeafStates)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import VoiceStateStore from "VoiceStateStore" /* 4915 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
+import VoiceStateStore from "VoiceStateStore" /* 5111 */;
 
 const require = globalThis.__r;
 
@@ -41,7 +41,7 @@ function getDeafStates(channel) {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/useDeafStates.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useDeafStates(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -52,7 +52,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function o() {
+    const fn = function l() {
       if (VoiceStateStore !== undefined) {
         if (MediaEngineStore !== undefined) {
           if (AuthenticationStore !== undefined) {
@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStoresObject(first, tmp8, tmp9);
-}) : ((arg0) => {
+}) : (function useDeafStates(arg0) {
   _require = arg0;
   const items = [VoiceStateStore, MediaEngineStore, AuthenticationStore];
   const items1 = [arg0];

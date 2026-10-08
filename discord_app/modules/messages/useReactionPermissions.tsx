@@ -1,11 +1,11 @@
-// === Module 10041: useReactionPermissions ===
+// === Module 10428: useReactionPermissions ===
 
-// Module 10041 (useReactionPermissions)
+// Module 10428 (useReactionPermissions)
 import _slicedToArray from "module_32" /* 32 */;
-import LurkingStore from "LurkingStore" /* 4516 */;
-import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 5577 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
+import LurkingStore from "LurkingStore" /* 4708 */;
+import GuildMemberStore from "GuildMemberStore" /* 2124 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 5887 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
 
 const require = globalThis.__r;
 
@@ -15,7 +15,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/useReactionPermissions.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild_id) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useReactionPermissions(guild_id) {
   _require = guild_id;
   const cResult = require("c").c(30);
   guild_id = undefined;
@@ -57,64 +57,34 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild_id) => {
     tmp10 = cResult[4];
   }
   if (cResult[5] !== guild_id) {
-    class R {
-      constructor() {
-        isLurkingResult = null != guild_id;
-        if (isLurkingResult) {
-          tmp3 = closure_4;
-          isLurkingResult = closure_4.isLurking(tmp);
-        }
-        return isLurkingResult;
+    const fn2 = function v() {
+      let isLurkingResult = null != guild_id;
+      if (isLurkingResult) {
+        isLurkingResult = LurkingStore.isLurking(tmp);
       }
-    }
+      return isLurkingResult;
+    };
     const items3 = [guild_id];
     cResult[5] = guild_id;
-    cResult[6] = R;
+    cResult[6] = fn2;
     cResult[7] = items3;
     let tmp13 = items3;
+    let tmp12 = fn2;
   } else {
-    class R {
-      constructor() {
-        isLurkingResult = null != guild_id;
-        if (isLurkingResult) {
-          tmp3 = closure_4;
-          isLurkingResult = closure_4.isLurking(tmp);
-        }
-        return isLurkingResult;
-      }
-    }
+    tmp12 = cResult[6];
     tmp13 = cResult[7];
   }
   const tmpResult = require("initialize");
-  const stateFromStores1 = require("initialize").useStateFromStores(tmp10, R, tmp13);
+  const stateFromStores1 = require("initialize").useStateFromStores(tmp10, tmp12, tmp13);
   if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-    class R {
-      constructor() {
-        isLurkingResult = null != guild_id;
-        if (isLurkingResult) {
-          tmp3 = closure_4;
-          isLurkingResult = closure_4.isLurking(tmp);
-        }
-        return isLurkingResult;
-      }
-    }
     const items4 = [GuildMemberStore];
     cResult[8] = items4;
-    const tmp15 = items4;
+    let tmp15 = items4;
   } else {
-    class R {
-      constructor() {
-        isLurkingResult = null != guild_id;
-        if (isLurkingResult) {
-          tmp3 = closure_4;
-          isLurkingResult = closure_4.isLurking(tmp);
-        }
-        return isLurkingResult;
-      }
-    }
+    tmp15 = cResult[8];
   }
   if (cResult[9] !== guild_id) {
-    class F {
+    class P {
       constructor() {
         isCurrentUserGuestResult = null != guild_id;
         if (isCurrentUserGuestResult) {
@@ -126,11 +96,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild_id) => {
     }
     const items5 = [guild_id];
     cResult[9] = guild_id;
-    cResult[10] = F;
+    cResult[10] = P;
     cResult[11] = items5;
-    let tmp17 = items5;
+    let tmp18 = items5;
   } else {
-    class F {
+    class P {
       constructor() {
         isCurrentUserGuestResult = null != guild_id;
         if (isCurrentUserGuestResult) {
@@ -140,12 +110,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild_id) => {
         return isCurrentUserGuestResult;
       }
     }
-    tmp17 = cResult[11];
+    tmp18 = cResult[11];
   }
   const tmpResult7 = require("initialize");
-  const stateFromStores2 = require("initialize").useStateFromStores(tmp15, F, tmp17);
+  const stateFromStores2 = require("initialize").useStateFromStores(tmp15, P, tmp18);
   if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-    class F {
+    class P {
       constructor() {
         isCurrentUserGuestResult = null != guild_id;
         if (isCurrentUserGuestResult) {
@@ -157,9 +127,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild_id) => {
     }
     const items6 = [PermissionStore];
     cResult[12] = items6;
-    const tmp19 = items6;
+    const tmp20 = items6;
   } else {
-    class F {
+    class P {
       constructor() {
         isCurrentUserGuestResult = null != guild_id;
         if (isCurrentUserGuestResult) {
@@ -171,7 +141,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild_id) => {
     }
   }
   if (cResult[13] === stateFromStores) {
-    class F {
+    class P {
       constructor() {
         isCurrentUserGuestResult = null != guild_id;
         if (isCurrentUserGuestResult) {
@@ -181,15 +151,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild_id) => {
         return isCurrentUserGuestResult;
       }
     }
-    const stateFromStores3 = tmp(tmp2[8]).useStateFromStores(tmp19, G, items7);
+    const stateFromStores3 = tmp(tmp2[8]).useStateFromStores(tmp20, G, items7);
     const tmpResult9 = tmp(tmp2[8]);
     const currentUserAutomodQuaratinedProfile = tmp(tmp2[9]).useCurrentUserAutomodQuaratinedProfile(guild_id);
     const tmpResult10 = tmp(tmp2[9]);
-    const tmp23 = _slicedToArray(tmp(tmp2[10]).useCurrentUserCommunicationDisabled(guild_id), 2)[1];
+    const tmp24 = _slicedToArray(tmp(tmp2[10]).useCurrentUserCommunicationDisabled(guild_id), 2)[1];
     const tmpResult11 = tmp(tmp2[10]);
     const isActiveChannelOrUnarchivableThread = tmp(tmp2[11]).useIsActiveChannelOrUnarchivableThread(guild_id);
     if (null == guild_id) {
-      class F {
+      class P {
         constructor() {
           isCurrentUserGuestResult = null != guild_id;
           if (isCurrentUserGuestResult) {
@@ -200,7 +170,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild_id) => {
         }
       }
       if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
-        class F {
+        class P {
           constructor() {
             isCurrentUserGuestResult = null != guild_id;
             if (isCurrentUserGuestResult) {
@@ -210,9 +180,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild_id) => {
             return isCurrentUserGuestResult;
           }
         }
-        cResult[17] = tmp29;
+        cResult[17] = tmp30;
       } else {
-        class F {
+        class P {
           constructor() {
             isCurrentUserGuestResult = null != guild_id;
             if (isCurrentUserGuestResult) {
@@ -223,9 +193,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild_id) => {
           }
         }
       }
-      return tmp29;
+      return tmp30;
     } else {
-      class F {
+      class P {
         constructor() {
           isCurrentUserGuestResult = null != guild_id;
           if (isCurrentUserGuestResult) {
@@ -235,16 +205,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild_id) => {
           return isCurrentUserGuestResult;
         }
       }
-      const obj2 = { channel: guild_id, canChat: stateFromStores, renderReactions: true, canAddNewReactions: stateFromStores3, isLurking: stateFromStores1, communicationDisabled: tmp23, isActiveChannelOrUnarchivableThread, isAutomodQuarantined: currentUserAutomodQuaratinedProfile };
-      const tmp27 = guild_id(tmp2[12])(obj2);
+      const obj2 = { channel: guild_id, canChat: stateFromStores, renderReactions: true, canAddNewReactions: stateFromStores3, isLurking: stateFromStores1, communicationDisabled: tmp24, isActiveChannelOrUnarchivableThread, isAutomodQuarantined: currentUserAutomodQuaratinedProfile };
+      const tmp28 = guild_id(tmp2[12])(obj2);
       cResult[18] = stateFromStores3;
       cResult[19] = stateFromStores;
       cResult[20] = guild_id;
-      cResult[21] = tmp23;
+      cResult[21] = tmp24;
       cResult[22] = isActiveChannelOrUnarchivableThread;
       cResult[23] = currentUserAutomodQuaratinedProfile;
       cResult[24] = stateFromStores1;
-      cResult[25] = tmp27;
+      cResult[25] = tmp28;
     }
     const tmpResult12 = tmp(tmp2[11]);
   }
@@ -266,7 +236,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild_id) => {
   cResult[15] = G;
   cResult[16] = items7;
   const tmpResult8 = require("initialize");
-}) : ((guild_id) => {
+}) : (function useReactionPermissions(guild_id) {
   _require = guild_id;
   guild_id = undefined;
   if (guild_id != null) {

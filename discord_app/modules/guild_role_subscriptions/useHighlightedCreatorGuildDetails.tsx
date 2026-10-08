@@ -1,9 +1,9 @@
-// === Module 17951: useHighlightedCreatorGuildDetails ===
+// === Module 18238: useHighlightedCreatorGuildDetails ===
 
-// Module 17951 (useHighlightedCreatorGuildDetails)
+// Module 18238 (useHighlightedCreatorGuildDetails)
 import c from "c" /* 576 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import useFetchHighlightedCreatorGuildDetailsDefault from "useFetchHighlightedCreatorGuildDetails" /* 17952 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
+import useFetchHighlightedCreatorGuildDetailsDefault from "useFetchHighlightedCreatorGuildDetails" /* 18239 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_role_subscriptions/useHighlightedCreatorGuildDetails.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, size) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useHighlightedCreatorGuildDetails(id, arg1, size) {
   const cResult = c.c(28);
   ({ isLoading, error, highlightedCreatorDetails } = useFetchHighlightedCreatorGuildDetailsDefault(id));
   let store_page;
@@ -215,7 +215,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, size) 
   cResult[2] = found;
   arr = found;
   const tmp4 = useFetchHighlightedCreatorGuildDetailsDefault(id);
-}) : ((id, arg1, size) => {
+}) : (function useHighlightedCreatorGuildDetails(id, arg1, size) {
   closure_0 = arg1;
   const tmp3 = store_page(memo[4])(id);
   ({ isLoading, highlightedCreatorDetails } = tmp3);

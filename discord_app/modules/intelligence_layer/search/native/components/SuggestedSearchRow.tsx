@@ -1,20 +1,20 @@
-// === Module 16827: SuggestedSearchRow ===
+// === Module 17106: SuggestedSearchRow ===
 
-// Module 16827 (SuggestedSearchRow)
+// Module 17106 (SuggestedSearchRow)
 import nativeDefault from "native" /* 587 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 11980 */;
-import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 12002 */;
-import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 12004 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12005 */;
-import SuggestedSearchActionCreators from "SuggestedSearchActionCreators" /* 12021 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12053 */;
+import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 12075 */;
+import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 12077 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12078 */;
+import SuggestedSearchActionCreators from "SuggestedSearchActionCreators" /* 12094 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const SmartSearchConstants = fn(11982);
+const SmartSearchConstants = fn(12055);
 ({ SUGGESTED_SEARCHES_WINDOW_SIZE: hasOwnProperty, SUGGESTED_SEARCH_COMPACT_LABEL_HEIGHT } = SmartSearchConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { iconCircle: null, text: null, compactLabel: null };
 let size = { width: 48, height: 48, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, alignItems: "center", justifyContent: "center" };
 obj.iconCircle = size;
@@ -25,7 +25,7 @@ const ReactCompilerGating = fn(558);
 size = fn(2);
 let result = size.fileFinishedImporting("modules/intelligence_layer/search/native/components/SuggestedSearchRow.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((suggestedSearch) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function SuggestedSearchRow(suggestedSearch) {
   const cResult = suggestedSearch(suggestionSource[7]).c(21);
   suggestedSearch = suggestedSearch.suggestedSearch;
   const smartSearchQuery = suggestedSearch.smartSearchQuery;
@@ -138,7 +138,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((sugges
   cResult[5] = fn;
   tmp5 = fn;
   let obj = suggestedSearch(suggestionSource[7]);
-}) : ((suggestedSearch) => {
+}) : (function SuggestedSearchRow(suggestedSearch) {
   suggestedSearch = suggestedSearch.suggestedSearch;
   const smartSearchQuery = suggestedSearch.smartSearchQuery;
   const suggestionSource = suggestedSearch.suggestionSource;

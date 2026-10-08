@@ -1,33 +1,33 @@
-// === Module 9946: MessageEmojiActionSheet ===
+// === Module 9473: MessageEmojiActionSheet ===
 
-// Module 9946 (MessageEmojiActionSheet)
+// Module 9473 (MessageEmojiActionSheet)
 import c from "c" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import StandardEmojiContentDefault from "StandardEmojiContent" /* 9947 */;
-import CustomEmojiContentDefault from "CustomEmojiContent" /* 9954 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import StandardEmojiContentDefault from "StandardEmojiContent" /* 9474 */;
+import CustomEmojiContentDefault from "CustomEmojiContent" /* 9481 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
-const PlatformUtils = fn(1369);
+const createStyles = fn(5090);
+const PlatformUtils = fn(1381);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = 16;
 }
 let closure_6 = createStyles.createStyles({ contentWrapper: { paddingHorizontal: 16, paddingBottom: num } });
 let ReactCompilerGating = fn(558);
-let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((emojiNode) => {
+let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function MessageStandardEmojiActionSheet(emojiNode) {
   const cResult = nonce(576).c(7);
   emojiNode = emojiNode.emojiNode;
   const tmp4 = closure_6();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const v4Result = tmp(1266).v4();
+    const v4Result = tmp(1278).v4();
     cResult[0] = v4Result;
     nonce = v4Result;
-    const tmpResult = tmp(1266);
+    const tmpResult = tmp(1278);
   } else {
     nonce = cResult[0];
   }
@@ -86,13 +86,13 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((emojiNode) => {
     return tmp11;
   }
   const obj3 = { startExpanded: true, onDismiss: S, children: <View style={tmp4.contentWrapper}>{tmp8}</View> };
-  tmp11 = jsx(nonce(6652).BottomSheet, { startExpanded: true, onDismiss: S, children: <View style={tmp4.contentWrapper}>{tmp8}</View> });
+  tmp11 = jsx(nonce(6829).BottomSheet, { startExpanded: true, onDismiss: S, children: <View style={tmp4.contentWrapper}>{tmp8}</View> });
   cResult[4] = tmp4.contentWrapper;
   cResult[5] = tmp8;
   cResult[6] = tmp11;
   const obj = nonce(576);
   const obj4 = { style: tmp4.contentWrapper, children: tmp8 };
-}) : ((emojiNode) => {
+}) : (function MessageStandardEmojiActionSheet(emojiNode) {
   let _require;
   const tmp = closure_6();
   const v4Result = require("v1").v4();
@@ -115,7 +115,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((emojiNode) => {
   });
 });
 ReactCompilerGating = fn(558);
-let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((emojiNode) => {
+let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function MessageCustomEmojiActionSheet(emojiNode) {
   const cResult = require("c").c(14);
   emojiNode = emojiNode.emojiNode;
   const tmp4 = closure_6();
@@ -135,10 +135,10 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((emojiNode) => {
   } else {
     const _Symbol = Symbol;
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-      const v4Result = tmp(1266).v4();
+      const v4Result = tmp(1278).v4();
       cResult[2] = v4Result;
       let tmp8 = v4Result;
-      const tmpResult2 = tmp(1266);
+      const tmpResult2 = tmp(1278);
     } else {
       tmp8 = cResult[2];
     }
@@ -170,7 +170,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((emojiNode) => {
               const obj3 = { startExpanded: true, onDismiss: tmp10, children: null };
               const obj4 = { style: tmp4.contentWrapper, children: tmp11 };
               obj3.children = <View style={tmp4.contentWrapper}>{tmp11}</View>;
-              const tmp18 = jsx(tmp(6652).BottomSheet, { startExpanded: true, onDismiss: tmp10, children: null });
+              const tmp18 = jsx(tmp(6829).BottomSheet, { startExpanded: true, onDismiss: tmp10, children: null });
               cResult[11] = tmp4.contentWrapper;
               cResult[12] = tmp11;
               cResult[13] = tmp18;
@@ -192,7 +192,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((emojiNode) => {
     tmp11 = tmp14;
   }
   const tmpResult = require("useEmojiAndSource");
-}) : ((emojiNode) => {
+}) : (function MessageCustomEmojiActionSheet(emojiNode) {
   emojiNode = emojiNode.emojiNode;
   let _require;
   const tmp = closure_6();
@@ -200,7 +200,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((emojiNode) => {
   if (emojiAndSource.isFetching) {
     return null;
   } else {
-    const v4Result = tmp2(1266).v4();
+    const v4Result = tmp2(1278).v4();
     _require = v4Result;
     const obj3 = {
       startExpanded: true,
@@ -213,7 +213,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((emojiNode) => {
     const obj5 = { emojiNode, sourceType: tmp5, expressionSourceApplication: tmp7, expressionSourceGuild: tmp6, customEmojiFromJoinedGuild: tmp9, hasJoinedEmojiSourceGuild: tmp8, nonce: v4Result };
     obj4.children = jsx(CustomEmojiContentDefault, { emojiNode, sourceType: tmp5, expressionSourceApplication: tmp7, expressionSourceGuild: tmp6, customEmojiFromJoinedGuild: tmp9, hasJoinedEmojiSourceGuild: tmp8, nonce: v4Result });
     obj3.children = <View style={tmp.contentWrapper}>{null}</View>;
-    return jsx(tmp2(6652).BottomSheet, {
+    return jsx(tmp2(6829).BottomSheet, {
       startExpanded: true,
       onDismiss() {
           AnalyticsUtilsDefault.track(AnalyticEvents.CLOSE_POPOUT, { nonce });
@@ -228,7 +228,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/emoji/MessageEmojiActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((emojiNode) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function MessageEmojiActionSheet(emojiNode) {
   const cResult = c.c(2);
   emojiNode = emojiNode.emojiNode;
   if (cResult[0] !== emojiNode) {
@@ -244,7 +244,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((emojiNode) => {
   } else {
     return cResult[1];
   }
-}) : ((emojiNode) => {
+}) : (function MessageEmojiActionSheet(emojiNode) {
   emojiNode = emojiNode.emojiNode;
   if ("surrogate" in emojiNode) {
     const obj2 = { emojiNode };

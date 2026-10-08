@@ -1,29 +1,29 @@
-// === Module 16377: YouBarFloatingShade ===
+// === Module 16637: YouBarFloatingShade ===
 
-// Module 16377 (YouBarFloatingShade)
+// Module 16637 (YouBarFloatingShade)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
-import useToken from "useToken" /* 4586 */;
-import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4702 */;
-import useChatLayoutDefault from "useChatLayout" /* 4745 */;
-import LinearGradientDefault from "LinearGradient" /* 5612 */;
-import useYouBarTotalHeight from "useYouBarTotalHeight" /* 14917 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
+import useToken from "useToken" /* 4778 */;
+import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4896 */;
+import useChatLayoutDefault from "useChatLayout" /* 4939 */;
+import LinearGradientDefault from "LinearGradient" /* 5387 */;
+import useYouBarTotalHeight from "useYouBarTotalHeight" /* 15179 */;
 import noop from "module_19" /* 19 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4703 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4897 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(14915).YOU_BAR_GRADIENT_EXTRA_HEIGHT;
-const GUILD_LIST_WIDTH = fn(16262).GUILD_LIST_WIDTH;
+let closure_5 = fn(15177).YOU_BAR_GRADIENT_EXTRA_HEIGHT;
+const GUILD_LIST_WIDTH = fn(16522).GUILD_LIST_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_10 = createStyles.createStyles({ container: { position: "absolute", bottom: 0, left: 0, right: 0 } });
 let ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useYouBarGradientBackground() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ClientThemesBackgroundStore];
@@ -44,7 +44,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     token = tmpResult2.useToken(nativeDefault.colors.MOBILE_FLOATINGBAR_BACKGROUND_SCRIM);
   }
   return token;
-}) : (() => {
+}) : (function useYouBarGradientBackground() {
   const items = [ClientThemesBackgroundStore];
   const stateFromStores = initialize.useStateFromStores(items, () => gradientPreset.gradientPreset);
   let token = null;
@@ -57,7 +57,7 @@ ReactCompilerGating = fn(558);
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarFloatingShade.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function YouBarFloatingShade() {
   const cResult = c.c(36);
   const tmp4 = closure_10();
   const youBarTotalHeight = useYouBarTotalHeight.useYouBarTotalHeight();
@@ -228,7 +228,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[8] = tmp17;
   tmp16 = tmp17;
   const tmpResult4 = useToken;
-}) : (() => {
+}) : (function YouBarFloatingShade() {
   const tmp = closure_10();
   const youBarTotalHeight = useYouBarTotalHeight.useYouBarTotalHeight();
   const sum = youBarTotalHeight + closure_5;

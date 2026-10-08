@@ -1,19 +1,19 @@
-// === Module 14963: VideoQuestCaptions ===
+// === Module 15225: VideoQuestCaptions ===
 
-// Module 14963 (VideoQuestCaptions)
+// Module 15225 (VideoQuestCaptions)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5780 */;
-import useVideoQuestCaptions from "useVideoQuestCaptions" /* 14964 */;
-import VideoQuestCaptionsUtils from "VideoQuestCaptionsUtils" /* 14966 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5363 */;
+import useVideoQuestCaptions from "useVideoQuestCaptions" /* 15226 */;
+import VideoQuestCaptionsUtils from "VideoQuestCaptionsUtils" /* 15228 */;
 import noop from "module_19" /* 19 */;
 import n from "module_683" /* 683 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: null, captionBox: null, captionText: null };
 const rect = { position: "absolute", bottom: nativeDefault.space.PX_32, left: nativeDefault.space.PX_16, right: nativeDefault.space.PX_16, alignItems: "center", justifyContent: "flex-end" };
 obj2.container = rect;
@@ -31,7 +31,7 @@ let obj4 = { color: nativeDefault.colors.WHITE, textAlign: "center" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/captions/VideoQuestCaptions.tsx");
 
-export const VideoQuestCaptions = ReactCompilerGating.isReactCompilerEnabled() ? ((quest) => {
+export const VideoQuestCaptions = ReactCompilerGating.isReactCompilerEnabled() ? (function VideoQuestCaptions(quest) {
   const cResult = c.c(15);
   ({ currentTime, style, visible } = quest);
   let tmp4 = undefined === visible;
@@ -100,7 +100,7 @@ export const VideoQuestCaptions = ReactCompilerGating.isReactCompilerEnabled() ?
     }
   }
   return tmp11;
-}) : ((currentTime) => {
+}) : (function VideoQuestCaptions(currentTime) {
   currentTime = currentTime.currentTime;
   let flag = currentTime.visible;
   ({ quest, style } = currentTime);

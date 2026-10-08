@@ -1,7 +1,7 @@
-// === Module 10128: StickerCategoryUtils ===
+// === Module 9713: StickerCategoryUtils ===
 
-// Module 10128 (StickerCategoryUtils)
-import StickerSendability from "StickerSendability" /* 6850 */;
+// Module 9713 (StickerCategoryUtils)
+import StickersTypes from "StickersTypes" /* 5746 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -18,9 +18,82 @@ export const isStickerCategoryNitroLocked = function isStickerCategoryNitroLocke
   if (everyResult) {
     const stickers = type.stickers;
     everyResult = stickers.every((item) => {
-      const stickerSendability = StickerSendability.getStickerSendability(item, closure_0, closure_1);
-      return stickerSendability === StickerSendability.StickerSendability.SENDABLE_WITH_PREMIUM;
+      const stickerSendability = closure_0(7037).getStickerSendability(item, closure_0, dependencyMap);
+      return stickerSendability === closure_0(7037).StickerSendability.SENDABLE_WITH_PREMIUM;
     });
   }
   return everyResult;
+};
+export const getStickerCategoriesWithNitroLockState = function getStickerCategoriesWithNitroLockState(arr, arg1, arg2) {
+  closure_0 = arg1;
+  closure_1 = arg2;
+  return arr.flatMap((type) => {
+    type = type.type;
+    if (StickersTypes.StickerCategoryTypes.FAVORITE !== type) {
+      if (StickersTypes.StickerCategoryTypes.RECENT !== type) {
+        if (StickersTypes.StickerCategoryTypes.GUILD === type) {
+          closure_0 = tmp;
+          dependencyMap = tmp2;
+          const stickers1 = type.stickers;
+          const found = stickers1.filter((item) => {
+            const stickerSendability = closure_0(7037).getStickerSendability(item, closure_0, dependencyMap);
+            return stickerSendability !== closure_0(7037).StickerSendability.SENDABLE_WITH_BOOSTED_GUILD;
+          });
+          if (found.length > 0) {
+            const obj2 = {};
+            const merged = Object.assign(type);
+            obj2.stickers = found;
+            closure_0 = tmp;
+            dependencyMap = tmp2;
+            let everyResult = obj2.type === StickersTypes.StickerCategoryTypes.GUILD && 0 !== obj2.stickers.length;
+            if (everyResult) {
+              const stickers = obj2.stickers;
+              everyResult = stickers.every((item) => {
+                const stickerSendability = closure_0(7037).getStickerSendability(item, closure_0, dependencyMap);
+                return stickerSendability === closure_0(7037).StickerSendability.SENDABLE_WITH_PREMIUM;
+              });
+            }
+            if (everyResult) {
+              const obj3 = {};
+              const merged1 = Object.assign(type);
+              obj3.stickers = found;
+              obj3.isNitroLocked = true;
+              let obj4 = obj3;
+            }
+            let obj = obj4;
+          }
+          obj4 = {};
+          const merged2 = Object.assign(type);
+          obj4.isNitroLocked = false;
+        } else {
+          obj = {};
+          const merged3 = Object.assign(type);
+          obj.isNitroLocked = false;
+        }
+      }
+      if (null != obj) {
+        const items = [obj];
+        let items1 = items;
+      } else {
+        items1 = [];
+      }
+      return items1;
+    }
+    closure_0 = tmp;
+    dependencyMap = tmp2;
+    const stickers2 = type.stickers;
+    const found1 = stickers2.filter((item) => {
+      const stickerSendability = closure_0(7037).getStickerSendability(item, closure_0, dependencyMap);
+      return stickerSendability !== closure_0(7037).StickerSendability.SENDABLE_WITH_BOOSTED_GUILD;
+    });
+    let tmp18 = null;
+    if (0 !== found1.length) {
+      const obj5 = {};
+      const merged4 = Object.assign(type);
+      obj5.stickers = found1;
+      obj5.isNitroLocked = false;
+      tmp18 = obj5;
+    }
+    obj = tmp18;
+  });
 };

@@ -1,19 +1,19 @@
-// === Module 16951: FriendsScreen ===
+// === Module 17232: FriendsScreen ===
 
-// Module 16951 (FriendsScreen)
+// Module 17232 (FriendsScreen)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1881 */;
-import SendMessageIcon from "SendMessageIcon" /* 4847 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import TableRow from "TableRow" /* 6000 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7861 */;
-import NoResultsDefault from "NoResults" /* 10739 */;
-import WumpusCouchSpotIllustration from "WumpusCouchSpotIllustration" /* 14933 */;
-import _modDef16424 from "module_16424" /* 16424 */;
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1893 */;
+import SendMessageIcon from "SendMessageIcon" /* 5041 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import TableRow from "TableRow" /* 6184 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8279 */;
+import NoResultsDefault from "NoResults" /* 11597 */;
+import WumpusCouchSpotIllustration from "WumpusCouchSpotIllustration" /* 15195 */;
+import _modDef16684 from "module_16684" /* 16684 */;
 import noop from "module_19" /* 19 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7155 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7335 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
 
 const require = globalThis.__r;
 
@@ -21,7 +21,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { paddingTop: nativeDefault.space.PX_8, flex: 1 }, requestsButtonContainer: null, emptyContainer: null, buttonContainer: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_8, flex: 1 };
 obj2.requestsButtonContainer = { marginHorizontal: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
@@ -34,7 +34,7 @@ let obj5 = { flexDirection: "row", marginBottom: nativeDefault.space.PX_16, widt
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/FriendsScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FriendsScreen() {
   const cResult = navigation(incoming[8]).c(57);
   let obj = navigation(incoming[8]);
   navigation = navigation(incoming[9]).useNavigation();
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
   }
   if (cResult[4] !== navigation) {
-    class F {
+    class T {
       constructor(arg0) {
         obj = { screen: "new-message", params: null };
         obj1 = { defaultSelectedUserId: arg0.id, sourcePage: "Friends Screen" };
@@ -102,9 +102,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       }
     }
     cResult[4] = navigation;
-    cResult[5] = F;
+    cResult[5] = T;
   } else {
-    class F {
+    class T {
       constructor(arg0) {
         obj = { screen: "new-message", params: null };
         obj1 = { defaultSelectedUserId: arg0.id, sourcePage: "Friends Screen" };
@@ -115,7 +115,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
   }
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-    class F {
+    class T {
       constructor(arg0) {
         obj = { screen: "new-message", params: null };
         obj1 = { defaultSelectedUserId: arg0.id, sourcePage: "Friends Screen" };
@@ -129,7 +129,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     cResult[7] = items1;
     let tmp16 = items1;
   } else {
-    class F {
+    class T {
       constructor(arg0) {
         obj = { screen: "new-message", params: null };
         obj1 = { defaultSelectedUserId: arg0.id, sourcePage: "Friends Screen" };
@@ -142,7 +142,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   const effect = outgoing.useEffect(tmp17, tmp16);
   if (cResult[8] === incoming) {
-    class F {
+    class T {
       constructor(arg0) {
         obj = { screen: "new-message", params: null };
         obj1 = { defaultSelectedUserId: arg0.id, sourcePage: "Friends Screen" };
@@ -155,7 +155,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const items2 = [];
   const sum = incoming + spam + pendingIgnored;
   if (sum <= 0) {
-    class F {
+    class T {
       constructor(arg0) {
         obj = { screen: "new-message", params: null };
         obj1 = { defaultSelectedUserId: arg0.id, sourcePage: "Friends Screen" };
@@ -166,7 +166,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
   }
   if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-    class F {
+    class T {
       constructor(arg0) {
         obj = { screen: "new-message", params: null };
         obj1 = { defaultSelectedUserId: arg0.id, sourcePage: "Friends Screen" };
@@ -179,7 +179,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     cResult[14] = stringResult;
     const tmp20 = stringResult;
   } else {
-    class F {
+    class T {
       constructor(arg0) {
         obj = { screen: "new-message", params: null };
         obj1 = { defaultSelectedUserId: arg0.id, sourcePage: "Friends Screen" };
@@ -190,7 +190,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
   }
   if (cResult[15] === outgoing) {
-    class F {
+    class T {
       constructor(arg0) {
         obj = { screen: "new-message", params: null };
         obj1 = { defaultSelectedUserId: arg0.id, sourcePage: "Friends Screen" };
@@ -200,7 +200,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       }
     }
     if (cResult[18] !== navigation) {
-      class F {
+      class T {
         constructor(arg0) {
           obj = { screen: "new-message", params: null };
           obj1 = { defaultSelectedUserId: arg0.id, sourcePage: "Friends Screen" };
@@ -212,7 +212,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       cResult[18] = navigation;
       cResult[19] = tmp25;
     } else {
-      class F {
+      class T {
         constructor(arg0) {
           obj = { screen: "new-message", params: null };
           obj1 = { defaultSelectedUserId: arg0.id, sourcePage: "Friends Screen" };
@@ -223,7 +223,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       }
     }
     if (cResult[20] === tmp22) {
-      class F {
+      class T {
         constructor(arg0) {
           obj = { screen: "new-message", params: null };
           obj1 = { defaultSelectedUserId: arg0.id, sourcePage: "Friends Screen" };
@@ -246,7 +246,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[16] = sum;
   cResult[17] = formatToPlainStringResult;
   const tmpResult = navigation(incoming[14]);
-}) : (() => {
+}) : (function FriendsScreen() {
   navigation = navigation(analyticsLocations[9]).useNavigation();
   let tmp2 = closure_9();
   importDefault = tmp2;
@@ -294,7 +294,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
     const items = [];
     if (tmp2) {
-      const obj = { icon: _modDef16424, IconComponent: SendMessageIcon.SendMessageIcon, iconVariant: "default", label: null, subLabel: null, onPress: null };
+      const obj = { icon: _modDef16684, IconComponent: SendMessageIcon.SendMessageIcon, iconVariant: "default", label: null, subLabel: null, onPress: null };
       const intl = util.intl;
       obj.label = intl.string(util.t.fyA115);
       const intl2 = util.intl;
@@ -337,7 +337,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       let v1IEawz = require;
       let obj9 = dependencyMap;
       let obj7 = { start: true, end: true, icon: null, trailing: null, label: null, subLabel: null, onPress: null };
-      const obj8 = { source: _modDef16424 };
+      const obj8 = { source: _modDef16684 };
       obj7.icon = React5(TableRow.TableRow.Icon, obj8);
       obj7.trailing = React5(TableRow.TableRow.Arrow, {});
       const intl5 = util.intl;

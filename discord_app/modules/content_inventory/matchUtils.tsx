@@ -1,12 +1,12 @@
-// === Module 8023: matchUtils ===
+// === Module 8431: matchUtils ===
 
-// Module 8023 (matchUtils)
+// Module 8431 (matchUtils)
 import Constants from "Constants" /* 1085 */;
-import CrunchyrollConnectionConstants from "CrunchyrollConnectionConstants" /* 8024 */;
-import SpotifyConstants from "SpotifyConstants" /* 8026 */;
-import ContentInventoryTypes from "ContentInventoryTypes" /* 8027 */;
-import ContentInventoryListenedMediaProvider from "ContentInventoryListenedMediaProvider" /* 8029 */;
-import isCrunchyrollActivityDefault from "isCrunchyrollActivity" /* 8030 */;
+import CrunchyrollConnectionConstants from "CrunchyrollConnectionConstants" /* 8432 */;
+import SpotifyConstants from "SpotifyConstants" /* 8434 */;
+import ContentInventoryTypes from "ContentInventoryTypes" /* 8435 */;
+import ContentInventoryListenedMediaProvider from "ContentInventoryListenedMediaProvider" /* 8437 */;
+import isCrunchyrollActivityDefault from "isCrunchyrollActivity" /* 8438 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -110,7 +110,7 @@ export const findMatchingEntry = function findMatchingEntry(entries, activity) {
   _require = activity;
   const found = entries.filter(require("utils").isEntryActive);
   if (activity.type === ActivityTypes.PLAYING) {
-    const found1 = found.filter(tmp(8027).isGamingLikeEntry);
+    const found1 = found.filter(tmp(8435).isGamingLikeEntry);
     let found2 = found1.find((extra) => {
       let name = closure_0;
       let game_name = extra.extra;
@@ -129,10 +129,10 @@ export const findMatchingEntry = function findMatchingEntry(entries, activity) {
       return tmp;
     });
   } else if (activity.type === ActivityTypes.LISTENING) {
-    const found3 = found.filter(tmp(8027).isListenedSessionEntry);
+    const found3 = found.filter(tmp(8435).isListenedSessionEntry);
     found2 = found3.find((item) => isMatchingListeningActivity(item, closure_0));
   } else if (activity.type === ActivityTypes.WATCHING) {
-    const found4 = entries.filter(tmp(8027).isWatchedMediaEntry);
+    const found4 = entries.filter(tmp(8435).isWatchedMediaEntry);
     found2 = found4.find((extra) => {
       const tmp3 = isCrunchyrollActivityDefault(activity);
       let tmp4 = !tmp3;

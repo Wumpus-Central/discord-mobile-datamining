@@ -1,9 +1,9 @@
-// === Module 12884: useUserProfileVoiceActivity ===
+// === Module 13033: useUserProfileVoiceActivity ===
 
-// Module 12884 (useUserProfileVoiceActivity)
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7242 */;
-import PresenceStore from "PresenceStore" /* 4936 */;
-import VoiceStateStore from "VoiceStateStore" /* 4915 */;
+// Module 13033 (useUserProfileVoiceActivity)
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7421 */;
+import PresenceStore from "PresenceStore" /* 5106 */;
+import VoiceStateStore from "VoiceStateStore" /* 5111 */;
 
 const require = fn;
 const ReactCompilerGating = fn(558);
@@ -23,7 +23,7 @@ function isUserProfileVoiceActivityForChannel(voiceStateForSession) {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useUserProfileVoiceActivity.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserProfileVoiceActivity(userId) {
   const cResult = userId(576).c(11);
   userId = userId.userId;
   const guildId = userId.guildId;
@@ -31,7 +31,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
     if (cResult[1] === userId) {
       let tmp4 = cResult[2];
     }
-    ({ voiceState, voiceChannel } = id(10625)(tmp4));
+    ({ voiceState, voiceChannel } = id(10223)(tmp4));
     id = undefined;
     if (voiceChannel != null) {
       id = voiceChannel.id;
@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
     cResult[5] = id;
     cResult[6] = fn;
     tmp13 = fn;
-    const tmp6 = id(10625)(tmp4);
+    const tmp6 = id(10223)(tmp4);
   }
   const obj3 = { userId, guildId };
   cResult[0] = guildId;
@@ -96,10 +96,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   tmp4 = obj3;
   const obj = userId(576);
   tmp = userId;
-}) : ((guildId) => {
+}) : (function useUserProfileVoiceActivity(guildId) {
   const userId = guildId.userId;
   let id;
-  const tmp2 = id(10625)({ userId, guildId: guildId.guildId });
+  const tmp2 = id(10223)({ userId, guildId: guildId.guildId });
   const voiceChannel = tmp2.voiceChannel;
   id = undefined;
   if (voiceChannel != null) {

@@ -1,10 +1,10 @@
-// === Module 12986: DynamicBadgeTooltip ===
+// === Module 13264: DynamicBadgeTooltip ===
 
-// Module 12986 (DynamicBadgeTooltip)
+// Module 13264 (DynamicBadgeTooltip)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import Pressables from "Pressables" /* 5916 */;
-import useTooltip from "useTooltip" /* 9896 */;
+import Pressables from "Pressables" /* 6189 */;
+import useTooltip from "useTooltip" /* 9376 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/DynamicBadgeTooltip.tsx");
 
-export const DynamicBadgeTooltip = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const DynamicBadgeTooltip = ReactCompilerGating.isReactCompilerEnabled() ? (function DynamicBadgeTooltip(arg0) {
   const cResult = c.c(12);
   ({ children, accessibilityLabel, tooltipPosition } = arg0);
   let str = "bottom";
@@ -57,7 +57,7 @@ export const DynamicBadgeTooltip = ReactCompilerGating.isReactCompilerEnabled() 
     }
     const tooltip = useTooltip.useTooltip(ref, obj4);
     if (cResult[5] !== visible) {
-      class E {
+      class D {
         constructor() {
           if (closure_0) {
             tmp = globalThis;
@@ -72,11 +72,11 @@ export const DynamicBadgeTooltip = ReactCompilerGating.isReactCompilerEnabled() 
       }
       const items = [visible];
       cResult[5] = visible;
-      cResult[6] = E;
+      cResult[6] = D;
       cResult[7] = items;
       let tmp12 = items;
     } else {
-      class E {
+      class D {
         constructor() {
           if (closure_0) {
             tmp = globalThis;
@@ -91,67 +91,46 @@ export const DynamicBadgeTooltip = ReactCompilerGating.isReactCompilerEnabled() 
       }
       tmp12 = cResult[7];
     }
-    const effect = noop.useEffect(E, tmp12);
+    const effect = noop.useEffect(D, tmp12);
     const _Symbol = Symbol;
     if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
       class E {
         constructor() {
-          if (closure_0) {
-            tmp = globalThis;
-            _setTimeout = setTimeout;
-            num = 2500;
-            closure_0 = setTimeout(() => { ... }, 2500);
-            return () => { ... };
-          } else {
-            return;
-          }
+          tmp = closure_1(() => { ... });
+          return;
         }
       }
-      cResult[8] = tmp15;
+      cResult[8] = E;
     } else {
       class E {
         constructor() {
-          if (closure_0) {
-            tmp = globalThis;
-            _setTimeout = setTimeout;
-            num = 2500;
-            closure_0 = setTimeout(() => { ... }, 2500);
-            return () => { ... };
-          } else {
-            return;
-          }
+          tmp = closure_1(() => { ... });
+          return;
         }
       }
     }
     if (cResult[9] === accessibilityLabel) {
       class E {
         constructor() {
-          if (closure_0) {
-            tmp = globalThis;
-            _setTimeout = setTimeout;
-            num = 2500;
-            closure_0 = setTimeout(() => { ... }, 2500);
-            return () => { ... };
-          } else {
-            return;
-          }
+          tmp = closure_1(() => { ... });
+          return;
         }
       }
-      return tmp16;
+      return tmp15;
     }
-    const obj3 = { ref, onPress: tmp15, hitSlop, accessibilityRole: "button", accessibilityLabel, accessibilityHint: first1, children };
-    const tmp19 = jsx(Pressables.PressableOpacity, { ref, onPress: tmp15, hitSlop, accessibilityRole: "button", accessibilityLabel, accessibilityHint: first1, children });
+    const obj3 = { ref, onPress: E, hitSlop, accessibilityRole: "button", accessibilityLabel, accessibilityHint: first1, children };
+    const tmp18 = jsx(Pressables.PressableOpacity, { ref, onPress: E, hitSlop, accessibilityRole: "button", accessibilityLabel, accessibilityHint: first1, children });
     cResult[9] = accessibilityLabel;
     cResult[10] = children;
-    cResult[11] = tmp19;
-    tmp16 = tmp19;
+    cResult[11] = tmp18;
+    tmp15 = tmp18;
     const tmpResult = useTooltip;
   }
   obj4 = { position: str, label: first1, visible, onPress: S };
   cResult[2] = str;
   cResult[3] = visible;
   cResult[4] = obj4;
-}) : ((tooltipPosition) => {
+}) : (function DynamicBadgeTooltip(tooltipPosition) {
   let str = tooltipPosition.tooltipPosition;
   ({ children, accessibilityLabel } = tooltipPosition);
   if (str === undefined) {

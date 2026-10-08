@@ -1,7 +1,7 @@
-// === Module 12092: useShouldBlockDMInputForQuarantinedUser ===
+// === Module 12169: useShouldBlockDMInputForQuarantinedUser ===
 
-// Module 12092 (useShouldBlockDMInputForQuarantinedUser)
-import MessageStore from "MessageStore" /* 5116 */;
+// Module 12169 (useShouldBlockDMInputForQuarantinedUser)
+import MessageStore from "MessageStore" /* 5428 */;
 
 const require = globalThis.__r;
 
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quarantine/useShouldBlockDMInputForQuarantinedUser.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((hasFlag, id) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldBlockDMInputForQuarantinedUser(hasFlag, id) {
   _require = id;
   const cResult = require("c").c(9);
   const obj = require("c");
@@ -58,7 +58,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((hasFlag, id) => 
     cResult[8] = tmp13;
   }
   const tmpResult = tmp(504);
-}) : ((hasFlag, arg1) => {
+}) : (function useShouldBlockDMInputForQuarantinedUser(hasFlag, arg1) {
   _require = arg1;
   const showConvoStarterInDM = require("useShowConvoStarterInDM").useShowConvoStarterInDM(arg1);
   require("initialize");

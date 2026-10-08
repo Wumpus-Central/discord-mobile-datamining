@@ -1,8 +1,8 @@
-// === Module 9405: VoiceChannelGamesExperiment ===
+// === Module 8826: VoiceChannelGamesExperiment ===
 
-// Module 9405 (VoiceChannelGamesExperiment)
+// Module 8826 (VoiceChannelGamesExperiment)
 import c from "c" /* 576 */;
-import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1441 */;
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1453 */;
 
 require = fn;
 let tmp2 = apex_ApexExperimentDefault({ kind: "user", name: "2026-08-mobile-voice-channel-games", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/experiments/VoiceChannelGamesExperiment.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsVoiceChannelGamesExperimentEnabled(location) {
   const cResult = c.c(2);
   if (cResult[0] !== location) {
     const obj2 = { location };
@@ -22,5 +22,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
     tmp2 = cResult[1];
   }
   return closure_2.useConfig(tmp2).enabled;
-}) : ((location) => closure_2.useConfig({ location }).enabled);
+}) : (function useIsVoiceChannelGamesExperimentEnabled(location) {
+  return closure_2.useConfig({ location }).enabled;
+});
 export const VoiceChannelGamesExperiment = tmp2;

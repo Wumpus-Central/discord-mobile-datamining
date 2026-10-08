@@ -1,21 +1,21 @@
-// === Module 11902: useVoiceMessageTooltip ===
+// === Module 11975: useVoiceMessageTooltip ===
 
-// Module 11902 (useVoiceMessageTooltip)
+// Module 11975 (useVoiceMessageTooltip)
 import util from "util" /* 1126 */;
-import useKeyboardIsOpen from "useKeyboardIsOpen" /* 6117 */;
+import useKeyboardIsOpen from "useKeyboardIsOpen" /* 6296 */;
 import noop from "module_19" /* 19 */;
-import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1486 */;
+import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1498 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const VoiceMessagesUIStore = fn(11587);
+const VoiceMessagesUIStore = fn(11650);
 ({ hideVoiceMessagesTooltip: closure_4, showVoiceMessagesTooltip: hasOwnProperty, useVoiceMessagesUIStore: metroRequire } = VoiceMessagesUIStore);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_messages/native/useVoiceMessageTooltip.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useVoiceMessageTooltip() {
   const cResult = require("c").c(8);
   const ref = noop.useRef(null);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -49,7 +49,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const fn2 = function h() {
       if (keyboardIsOpen) {
         keyboardIsOpen = useKeyboardIsOpen.getKeyboardIsOpen({ includeCustomKeyboard: true });
-        closure_1 = subscribeToKeyboardUIStore(() => {
+        closure_1 = subscribeToKeyboardUIStore(function keyboardChangeListener() {
           if (closure_0 !== obj.getKeyboardIsOpen({ includeCustomKeyboard: true })) {
             closure_2_4();
           }
@@ -86,7 +86,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp14 = cResult[7];
   }
   return tmp14;
-}) : (() => {
+}) : (function useVoiceMessageTooltip() {
   const ref = noop.useRef(null);
   const tmp2 = closure_6((showVoiceMessagesTooltip) => showVoiceMessagesTooltip.showVoiceMessagesTooltip);
   _require = tmp2;
@@ -102,7 +102,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const effect = noop.useEffect(() => {
     if (keyboardIsOpen) {
       keyboardIsOpen = useKeyboardIsOpen.getKeyboardIsOpen({ includeCustomKeyboard: true });
-      closure_1 = subscribeToKeyboardUIStore(() => {
+      closure_1 = subscribeToKeyboardUIStore(function keyboardChangeListener() {
         if (closure_0 !== obj.getKeyboardIsOpen({ includeCustomKeyboard: true })) {
           closure_2_4();
         }

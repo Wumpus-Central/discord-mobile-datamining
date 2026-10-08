@@ -1,11 +1,11 @@
-// === Module 10538: PremiumGiftWishlistBanner ===
+// === Module 10135: PremiumGiftWishlistBanner ===
 
-// Module 10538 (PremiumGiftWishlistBanner)
+// Module 10135 (PremiumGiftWishlistBanner)
 import nativeDefault from "native" /* 587 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7861 */;
-import useWishlistHooks from "useWishlistHooks" /* 8463 */;
-import WishlistBannerUtils from "WishlistBannerUtils" /* 10543 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8279 */;
+import useWishlistHooks from "useWishlistHooks" /* 8949 */;
+import WishlistBannerUtils from "WishlistBannerUtils" /* 10140 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,17 +14,17 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-let constants = fn(6742).WishlistRecommendationReason;
-const PremiumConstants = fn(1379);
+let constants = fn(6918).WishlistRecommendationReason;
+const PremiumConstants = fn(1391);
 ({ GiftingOrigin: closure_8, PremiumSubscriptionSKUToPremiumType: closure_9 } = PremiumConstants);
 const Constants = fn(1085);
 ({ AnalyticEvents: c10, SKUProductLines: closure_11 } = Constants);
 let closure_12 = fn(1087).CollectiblesMobileShopScreen;
-const UserProfileSections = fn(7865).UserProfileSections;
+const UserProfileSections = fn(8283).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_18 = createStyles.createStyles((width, height) => {
   const obj = { title: { marginBottom: nativeDefault.space.PX_4, paddingHorizontal: PX_16 }, subtitle: null, placeholderRow: null, placeholder: null, wishlistItemShadow: null };
   const obj2 = { marginBottom: nativeDefault.space.PX_4, paddingHorizontal: PX_16 };
@@ -41,7 +41,7 @@ const ReactCompilerGating = fn(558);
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumGiftWishlistBanner.tsx");
 
-export const PremiumGiftWishlistBanner = ReactCompilerGating.isReactCompilerEnabled() ? ((giftRecipient) => {
+export const PremiumGiftWishlistBanner = ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumGiftWishlistBanner(giftRecipient) {
   let WISHLIST_IN_DM_LENGTH_MOBILE = skusToUserAndReason;
   const cResult = require("c").c(57);
   giftRecipient = giftRecipient.giftRecipient;
@@ -495,7 +495,7 @@ export const PremiumGiftWishlistBanner = ReactCompilerGating.isReactCompilerEnab
                       }
                     })();
                   });
-                  const fn2 = function() {
+                  function t8() {
                     const self = this;
                     const apply = closure_0.apply;
                     if (typeof apply === "unknown") {
@@ -504,12 +504,12 @@ export const PremiumGiftWishlistBanner = ReactCompilerGating.isReactCompilerEnab
                       applyArgumentsResult = apply(self, arguments);
                     }
                     return applyArgumentsResult;
-                  };
+                  }
                   cResult[23] = defaultWishlistId;
                   cResult[24] = giftRecipient;
                   cResult[25] = tmp17;
-                  cResult[26] = fn2;
-                  tmp18 = fn2;
+                  cResult[26] = t8;
+                  tmp18 = t8;
                 }
                 class F {
                   constructor() {
@@ -633,7 +633,7 @@ export const PremiumGiftWishlistBanner = ReactCompilerGating.isReactCompilerEnab
   cResult[9] = skusToUserAndReason;
   cResult[10] = A;
   const tmpResult = require("useWishlistRecommendations");
-}) : ((giftRecipient) => {
+}) : (function PremiumGiftWishlistBanner(giftRecipient) {
   giftRecipient = giftRecipient.giftRecipient;
   _require = giftRecipient;
   let WISHLIST_IN_DM_LENGTH_MOBILE;

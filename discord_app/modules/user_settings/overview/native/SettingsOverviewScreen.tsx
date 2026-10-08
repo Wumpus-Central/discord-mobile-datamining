@@ -1,14 +1,15 @@
-// === Module 17113: SettingsOverviewScreen ===
+// === Module 17394: SettingsOverviewScreen ===
 
-// Module 17113 (SettingsOverviewScreen)
+// Module 17394 (SettingsOverviewScreen)
+import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import GlobalUtils from "GlobalUtils" /* 1375 */;
-import PremiumUtils from "PremiumUtils" /* 4534 */;
-import SettingBuilders from "SettingBuilders" /* 11142 */;
-import SettingListRenderer from "SettingListRenderer" /* 14516 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 15326 */;
+import GlobalUtils from "GlobalUtils" /* 1387 */;
+import PremiumUtils from "PremiumUtils" /* 4726 */;
+import SettingBuilders from "SettingBuilders" /* 11262 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 15588 */;
 import noop from "module_19" /* 19 */;
+import LocaleStore from "LocaleStore" /* 2128 */;
 
 require = fn;
 function getOverviewSettings(isPremiumUser) {
@@ -89,43 +90,66 @@ function getOverviewSettings(isPremiumUser) {
   items1[9] = obj10;
   return items1;
 }
-const MobileUserSettings = fn(7645).MobileUserSettings;
+const MobileUserSettings = fn(7966).MobileUserSettings;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/overview/native/SettingsOverviewScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(4);
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SettingsOverviewScreen() {
+  const cResult = c.c(7);
   const hasPremiumSubscriptionToDisplay = PremiumUtils.useHasPremiumSubscriptionToDisplay();
-  if (cResult[0] !== hasPremiumSubscriptionToDisplay) {
-    const obj3 = { sections: null };
-    const obj4 = { isPremiumUser: hasPremiumSubscriptionToDisplay };
-    obj3.sections = getOverviewSettings(obj4);
-    const list = SettingBuilders.createList(obj3);
-    cResult[0] = hasPremiumSubscriptionToDisplay;
-    cResult[1] = list;
-    let tmp5 = list;
-    const tmpResult = SettingBuilders;
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [LocaleStore];
+    class E {
+      constructor() {
+        return closure_1_3.locale;
+      }
+    }
+    cResult[0] = items;
+    cResult[1] = E;
+    tmp5 = items;
   } else {
-    tmp5 = cResult[1];
+    [tmp5, tmp6] = cResult;
   }
-  if (cResult[2] !== tmp5) {
-    const obj5 = { node: tmp5 };
-    const tmp10 = jsx(SettingListRenderer.SearchableSettingsList, { node: tmp5 });
-    cResult[2] = tmp5;
-    cResult[3] = tmp10;
-    let tmp8 = tmp10;
-  } else {
-    tmp8 = cResult[3];
+  const stateFromStores = initialize.useStateFromStores(tmp5, E);
+  if (cResult[2] === hasPremiumSubscriptionToDisplay) {
+    if (cResult[3] === stateFromStores) {
+      let tmp9 = cResult[4];
+    }
+    if (cResult[5] !== tmp9) {
+      { node: null }.node = tmp9;
+      class E {
+        constructor() {
+          return closure_1_3.locale;
+        }
+      }
+      cResult[5] = tmp9;
+      cResult[6] = tmp13;
+      let tmp11 = tmp13;
+      const obj3 = { node: null };
+    } else {
+      tmp11 = cResult[6];
+    }
+    return tmp11;
   }
-  return tmp8;
-}) : (() => {
-  hasPremiumSubscriptionToDisplay = hasPremiumSubscriptionToDisplay(4534).useHasPremiumSubscriptionToDisplay();
-  const items = [hasPremiumSubscriptionToDisplay];
+  const tmpResult = initialize;
+  const tmpResult2 = SettingBuilders;
+  const list = tmpResult2.createList({ sections: getOverviewSettings({ isPremiumUser: hasPremiumSubscriptionToDisplay, locale: stateFromStores }) });
+  cResult[2] = hasPremiumSubscriptionToDisplay;
+  cResult[3] = stateFromStores;
+  cResult[4] = list;
+  tmp9 = list;
+  const obj4 = { sections: getOverviewSettings({ isPremiumUser: hasPremiumSubscriptionToDisplay, locale: stateFromStores }) };
+}) : (function SettingsOverviewScreen() {
+  hasPremiumSubscriptionToDisplay = hasPremiumSubscriptionToDisplay(stateFromStores[9]).useHasPremiumSubscriptionToDisplay();
+  const obj = hasPremiumSubscriptionToDisplay(stateFromStores[9]);
+  const items = [LocaleStore];
+  stateFromStores = hasPremiumSubscriptionToDisplay(stateFromStores[10]).useStateFromStores(items, () => locale.locale);
+  const items1 = [hasPremiumSubscriptionToDisplay, stateFromStores];
   const node = noop.useMemo(() => {
-    const obj2 = { sections: getOverviewSettings({ isPremiumUser: hasPremiumSubscriptionToDisplay }) };
+    const obj2 = { sections: getOverviewSettings({ isPremiumUser: hasPremiumSubscriptionToDisplay, locale: stateFromStores }) };
     return SettingBuilders.createList(obj2);
-  }, items);
-  return jsx(hasPremiumSubscriptionToDisplay(14516).SearchableSettingsList, { node });
+  }, items1);
+  return jsx(hasPremiumSubscriptionToDisplay(stateFromStores[12]).SearchableSettingsList, { node });
 });

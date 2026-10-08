@@ -1,9 +1,9 @@
-// === Module 12534: NotificationProgress ===
+// === Module 12630: NotificationProgress ===
 
-// Module 12534 (NotificationProgress)
+// Module 12630 (NotificationProgress)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,13 +12,13 @@ const ReanimatedRexportDefault = ReanimatedRexport;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { progress: { borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, height: 4 }, progressContainerBottom: { width: "100%", position: "absolute", bottom: -1 } };
 let closure_7 = createStyles.createStyles(obj2);
 const __initData = { code: "function NotificationProgressTsx1(){const{percent,width}=this.__closure;const percentRemaining=(typeof percent===\"number\"?percent:percent.get())/100;return{transform:[{translateX:-width+width*percentRemaining}]};}" };
 const __initData2 = { code: "function NotificationProgressTsx2(){const{percent,width}=this.__closure;const percentRemaining=(typeof percent==='number'?percent:percent.get())/100;return{transform:[{translateX:-width+width*percentRemaining}]};}" };
 let ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((percent) => {
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useProgressAnimation(percent) {
   const cResult = c.c(3);
   [width, closure_2] = noop.useState(0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -53,7 +53,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((percent) => {
     tmp8 = cResult[2];
   }
   return tmp8;
-}) : ((percent) => {
+}) : (function useProgressAnimation(percent) {
   [width, closure_2] = noop.useState(0);
   const obj = { animatedStyles: null, handleLayout: null };
   const callback = noop.useCallback((nativeEvent) => closure_2(nativeEvent.nativeEvent.layout.width), []);
@@ -79,7 +79,7 @@ let obj3 = { borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefaul
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/NotificationProgress.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((percent) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function NotificationProgress(percent) {
   const cResult = c.c(7);
   const tmp3 = closure_7();
   ({ animatedStyles, handleLayout } = closure_10(percent.percent));
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((percent) => {
   cResult[2] = tmp6;
   tmp5 = tmp6;
   const tmp4 = closure_10(percent.percent);
-}) : ((percent) => {
+}) : (function NotificationProgress(percent) {
   const tmp = closure_7();
   const tmp2 = closure_10(percent.percent);
   const obj = { onLayout: tmp2.handleLayout, style: tmp.progressContainerBottom, children: null };

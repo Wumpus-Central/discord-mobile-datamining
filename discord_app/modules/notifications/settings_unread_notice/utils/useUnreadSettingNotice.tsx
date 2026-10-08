@@ -1,19 +1,19 @@
-// === Module 9861: useUnreadSettingNotice ===
+// === Module 10421: useUnreadSettingNotice ===
 
-// Module 9861 (useUnreadSettingNotice)
-import UnreadSettingNoticeStore2Default from "UnreadSettingNoticeStore2" /* 9863 */;
+// Module 10421 (useUnreadSettingNotice)
+import UnreadSettingNoticeStore2Default from "UnreadSettingNoticeStore2" /* 10423 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-fn(2055).CHANNEL_ELIGIBLE_FOR_UNREAD_SETTING;
+fn(2067).CHANNEL_ELIGIBLE_FOR_UNREAD_SETTING;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notifications/settings_unread_notice/utils/useUnreadSettingNotice.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUnreadSettingNotice(id) {
   const _require = id;
   const cResult = require("c").c(19);
   let obj = require("c");
@@ -102,7 +102,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
       }
     }
   }
-  class U {
+  class E {
     constructor() {
       tmp = closure_0;
       hasItem = closure_5.has(closure_0.type);
@@ -130,10 +130,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
   cResult[7] = id.type;
   cResult[8] = shouldUseNewNotificationSystem;
   cResult[9] = first;
-  cResult[10] = U;
-  tmp14 = U;
+  cResult[10] = E;
+  tmp14 = E;
   const tmpResult = tmp(first[7]);
-}) : ((id) => {
+}) : (function useUnreadSettingNotice(id) {
   const _require = id;
   const shouldUseNewNotificationSystem = require("notifications/NotificationUtils").useShouldUseNewNotificationSystem("useShouldRenderBanner");
   [first, _slicedToArray] = noop.useState("");

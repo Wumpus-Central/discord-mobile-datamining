@@ -1,9 +1,9 @@
-// === Module 14520: SettingTreeManager ===
+// === Module 14780: SettingTreeManager ===
 
-// Module 14520 (SettingTreeManager)
-import SettingRendererConstants from "SettingRendererConstants" /* 11143 */;
-import SettingHookHarness from "SettingHookHarness" /* 14423 */;
-import SettingsRendererConfig from "SettingsRendererConfig" /* 14425 */;
+// Module 14780 (SettingTreeManager)
+import SettingRendererConstants from "SettingRendererConstants" /* 11263 */;
+import SettingHookHarness from "SettingHookHarness" /* 14649 */;
+import SettingsRendererConfig from "SettingsRendererConfig" /* 14651 */;
 import size from "module_2" /* 2 */;
 
 const NodeType = SettingRendererConstants.NodeType;
@@ -26,22 +26,12 @@ prototype["clear"] = function clear() {
 };
 class SettingTreeManager {
   constructor() {
-    tmp = SettingTreeManagerCache;
     if (typeof SettingTreeManagerCache === "function") {
-      merged = Object.assign({ highestAncestorCache: null, breadcrumbCache: null });
+      merged = Object.assign({ highestAncestorCache: null });
       merged1 = Object.assign({ cache: null });
       merged1[0] = {};
       merged[0] = merged1;
-      tmp4 = new.target;
-      if (typeof tmp === "function") {
-        merged2 = Object.assign({ cache: null });
-        merged2[0] = {};
-        merged[1] = merged2;
-        return merged;
-      } else {
-        str2 = "Trying to call a non-function";
-        throw new TypeError("Trying to call a non-function");
-      }
+      return merged;
     } else {
       str = "Trying to call a non-function";
       throw new TypeError("Trying to call a non-function");
@@ -118,40 +108,26 @@ prototype2["getNearestRouteAncestorDataOrSelf"] = function getNearestRouteAncest
   }
 };
 prototype2["getBreadcrumbs"] = function getBreadcrumbs(setting) {
-  const self = this;
-  const breadcrumbCache = this.breadcrumbCache;
-  value = breadcrumbCache.get(setting);
-  if (null != value) {
-    return value;
-  } else {
-    const items = [];
-    const ancestors = self.getAncestors(setting);
-    for (const item10009 of ancestors) {
-      let obj = SettingHookHarness;
-      let cachedSettingTitle = obj.getCachedSettingTitle(item10009);
-      if (null != cachedSettingTitle) {
-        let arr = items.push(tmp6);
-      }
-      continue;
+  const items = [];
+  const ancestors = this.getAncestors(setting);
+  while (tmp2 !== undefined) {
+    let obj = SettingHookHarness;
+    let cachedSettingTitle = obj.getCachedSettingTitle(tmp3);
+    if (null != cachedSettingTitle) {
+      let arr = items.push(tmp7);
     }
-    const breadcrumbCache2 = self.breadcrumbCache;
-    const result = breadcrumbCache2.set(setting, items.reverse());
-    return items;
+    continue;
   }
+  return items.reverse();
 };
 prototype2["clearCaches"] = function clearCaches() {
-  const breadcrumbCache = this.breadcrumbCache;
-  breadcrumbCache.clear();
   const highestAncestorCache = this.highestAncestorCache;
   highestAncestorCache.clear();
 };
-let merged = Object.assign({ highestAncestorCache: null, breadcrumbCache: null });
+let merged = Object.assign({ highestAncestorCache: null });
 let merged1 = Object.assign({ cache: null });
 merged1[0] = {};
 merged[0] = merged1;
-let merged2 = Object.assign({ cache: null });
-merged2[0] = {};
-merged[1] = merged2;
 let result = size.fileFinishedImporting("modules/settings/native/renderer/SettingTreeManager.tsx");
 
 export default merged;

@@ -1,25 +1,25 @@
-// === Module 7910: useProfileTheme ===
+// === Module 8329: useProfileTheme ===
 
-// Module 7910 (useProfileTheme)
+// Module 8329 (useProfileTheme)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import shims from "shims" /* 586 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
-import shared from "shared" /* 4735 */;
-import useThemeDefault from "useTheme" /* 4797 */;
-import useAvatarColor from "useAvatarColor" /* 7826 */;
-import UserProfileGradientUtils from "UserProfileGradientUtils" /* 7912 */;
+import shared from "shared" /* 4929 */;
+import useThemeDefault from "useTheme" /* 4991 */;
+import useAvatarColor from "useAvatarColor" /* 8244 */;
+import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8331 */;
 import _slicedToArray from "module_32" /* 32 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 require = fn;
-const useEffectiveThemeOverride = fn(7911).useEffectiveThemeOverride;
+const useEffectiveThemeOverride = fn(8330).useEffectiveThemeOverride;
 const ThemeTypes = fn(1085).ThemeTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/hooks/useProfileTheme.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((isPreview) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useProfileTheme(isPreview) {
   const cResult = c.c(23);
   ({ user, displayProfile, pendingThemeColors, pendingAvatarSrc, forceUserTheme } = isPreview);
   const tmp4 = useThemeDefault();
@@ -193,7 +193,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((isPreview) => {
   cResult[5] = tmp12;
   tmp11 = tmp12;
   const tmpResult = initialize;
-}) : ((arg0) => {
+}) : (function useProfileTheme(arg0) {
   ({ user, displayProfile, pendingAvatarSrc } = arg0);
   ({ pendingThemeColors, isPreview, forceUserTheme } = arg0);
   const tmp2 = useThemeDefault();

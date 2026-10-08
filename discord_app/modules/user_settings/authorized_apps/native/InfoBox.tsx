@@ -1,18 +1,18 @@
-// === Module 9472: InfoBox ===
+// === Module 10485: InfoBox ===
 
-// Module 9472 (InfoBox)
+// Module 10485 (InfoBox)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import CircleErrorIcon2 from "CircleErrorIcon" /* 4806 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4818 */;
-import Text_Text from "Text/Text" /* 4892 */;
+import CircleErrorIcon2 from "CircleErrorIcon" /* 5000 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5012 */;
+import Text_Text from "Text/Text" /* 5086 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { infoBox: { borderRadius: nativeDefault.radii.xs, padding: 8, borderStyle: "solid", borderWidth: 1, borderColor: nativeDefault.colors.TEXT_LINK, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO, flexDirection: "row", alignItems: "center", gap: 8 }, infoBoxWarning: null, infoText: null };
 let obj3 = { borderRadius: nativeDefault.radii.xs, padding: 8, borderStyle: "solid", borderWidth: 1, borderColor: nativeDefault.colors.TEXT_LINK, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO, flexDirection: "row", alignItems: "center", gap: 8 };
 obj2.infoBoxWarning = { borderColor: nativeDefault.colors.ICON_FEEDBACK_WARNING, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING };
@@ -24,7 +24,7 @@ let obj4 = { borderColor: nativeDefault.colors.ICON_FEEDBACK_WARNING, background
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/authorized_apps/native/InfoBox.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function InfoBox(arg0) {
   const cResult = c.c(17);
   ({ children, style: infoBoxWarning, look } = arg0);
   if (undefined === look) {
@@ -101,7 +101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = View;
   cResult[5] = tmp11;
   cResult[6] = items3;
-}) : ((look) => {
+}) : (function InfoBox(look) {
   let INFO = look.look;
   ({ children, style } = look);
   if (INFO === undefined) {

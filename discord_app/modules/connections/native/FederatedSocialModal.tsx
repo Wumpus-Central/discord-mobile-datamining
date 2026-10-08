@@ -1,7 +1,7 @@
-// === Module 8820: FederatedSocialModal ===
+// === Module 9178: FederatedSocialModal ===
 
-// Module 8820 (FederatedSocialModal)
-import PlatformsDefault from "Platforms" /* 5449 */;
+// Module 9178 (FederatedSocialModal)
+import PlatformsDefault from "Platforms" /* 5759 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -148,13 +148,13 @@ function FederatedSocialModalScreen(onClose) {
 const WebBrowserType = fn(1085).WebBrowserType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_9 = createStyles.createStyles({ container: { padding: 16 }, description: { textAlign: "center" }, input: { paddingHorizontal: 0, paddingVertical: 0, marginVertical: 16 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/connections/native/FederatedSocialModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((platformType) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FederatedSocialModal(platformType) {
   _require = platformType;
   const cResult = require("c").c(8);
   if (cResult[0] !== platformType.platformType) {
@@ -177,11 +177,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((platformType) =>
     tmp4 = cResult[1];
   }
   if (cResult[2] !== platformType.onClose) {
-    const headerBackButton = tmp(6017).getHeaderBackButton(platformType.onClose);
+    const headerBackButton = tmp(6203).getHeaderBackButton(platformType.onClose);
     cResult[2] = platformType.onClose;
     cResult[3] = headerBackButton;
     let tmp10 = headerBackButton;
-    const tmpResult = tmp(6017);
+    const tmpResult = tmp(6203);
   } else {
     tmp10 = cResult[3];
   }
@@ -220,7 +220,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((platformType) =>
       }
     }
   };
-}) : ((platformType) => {
+}) : (function FederatedSocialModal(platformType) {
   _require = platformType;
   value = PlatformsDefault.get(platformType.platformType);
   let name;

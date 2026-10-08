@@ -1,12 +1,12 @@
-// === Module 9786: useSafeAreaInsetsSharedValue ===
+// === Module 10350: useSafeAreaInsetsSharedValue ===
 
-// Module 9786 (useSafeAreaInsetsSharedValue)
-import AppEntryKeyContext from "AppEntryKeyContext" /* 1487 */;
-import AppEntryKey from "AppEntryKey" /* 1631 */;
-import subscribeToSafeAreaInsetsDefault from "subscribeToSafeAreaInsets" /* 9176 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 9787 */;
-import ReanimatedRexport_mod from "ReanimatedRexport" /* 4618 */;
-import useSafeAreaInsets_mod from "useSafeAreaInsets" /* 1618 */;
+// Module 10350 (useSafeAreaInsetsSharedValue)
+import AppEntryKeyContext from "AppEntryKeyContext" /* 1499 */;
+import AppEntryKey from "AppEntryKey" /* 1643 */;
+import subscribeToSafeAreaInsetsDefault from "subscribeToSafeAreaInsets" /* 10351 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10352 */;
+import ReanimatedRexport_mod from "ReanimatedRexport" /* 4810 */;
+import useSafeAreaInsets_mod from "useSafeAreaInsets" /* 1630 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -49,10 +49,10 @@ const tmp5 = (() => {
 })();
 const result = size.fileFinishedImporting("modules/safe_area/useSafeAreaInsetsSharedValue.native.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSafeAreaInsetsSharedValue() {
   obj = AppEntryKeyContext;
   return obj[obj.useAppEntryKey(obj)];
-}) : (() => {
+}) : (function useSafeAreaInsetsSharedValue() {
   obj = AppEntryKeyContext;
   return obj[obj.useAppEntryKey(obj)];
 });

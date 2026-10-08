@@ -1,21 +1,21 @@
-// === Module 6597: doGuildOnboarding ===
+// === Module 6773: doGuildOnboarding ===
 
-// Module 6597 (doGuildOnboarding)
-import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1885 */;
-import NativeImageManagerModuleDefault from "NativeImageManagerModule" /* 1886 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
-import _mod6600 from "module_6600" /* 6600 */;
-import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 6607 */;
+// Module 6773 (doGuildOnboarding)
+import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
+import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1897 */;
+import NativeImageManagerModuleDefault from "NativeImageManagerModule" /* 1898 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5940 */;
+import _mod6776 from "module_6776" /* 6776 */;
+import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 6783 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
-import GuildOnboardingStore from "GuildOnboardingStore" /* 6598 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4899 */;
+import GuildOnboardingStore from "GuildOnboardingStore" /* 6774 */;
 
 require = fn;
 function getBaseAnimationData() {
-  return JSON.parse(JSON.stringify(_mod6600));
+  return JSON.parse(JSON.stringify(_mod6776));
 }
 let closure_14 = async function _doGuildOnboarding(arg0) {
   let guildId = arg0;
@@ -225,7 +225,7 @@ function openAndWaitForOnboarding(guildId) {
       landingAnimation: dependencyMap[guildId],
       isFirstOpen: true
     };
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(6623, dependencyMap.paths), {
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(6800, dependencyMap.paths), {
       guildId,
       backShouldLeaveGuild: true,
       onFinish() {
@@ -239,7 +239,7 @@ function openAndWaitForOnboarding(guildId) {
         const obj = closure_0(dependencyMap[20]);
       }
     });
-    const pushLazyResult = ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(6623, dependencyMap.paths), {
+    const pushLazyResult = ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(6800, dependencyMap.paths), {
       guildId,
       backShouldLeaveGuild: true,
       onFinish() {
@@ -251,7 +251,7 @@ function openAndWaitForOnboarding(guildId) {
   });
 }
 const Image = fn(17).Image;
-let closure_8 = fn(6599).GUILD_ONBOARDING_MODAL_KEY;
+let closure_8 = fn(6775).GUILD_ONBOARDING_MODAL_KEY;
 const Constants = fn(1085);
 ({ GuildFeatures: closure_9, Routes: c10 } = Constants);
 let closure_12 = {};

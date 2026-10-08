@@ -1,10 +1,10 @@
-// === Module 12946: useSegmentedPagesHeight ===
+// === Module 13225: useSegmentedPagesHeight ===
 
-// Module 12946 (useSegmentedPagesHeight)
+// Module 13225 (useSegmentedPagesHeight)
 import c from "c" /* 576 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ fn(558);
 let ReactCompilerGating = fn(558);
 const __initData = { code: "function useSegmentedPagesHeightTsx1(){const{pageHeights,visiblePageRange,fillHeight}=this.__closure;var _heights$lo,_heights$hi;const heights=pageHeights.get();const[lo,hi]=visiblePageRange.get();const contentHeight=Math.max((_heights$lo=heights[lo])!==null&&_heights$lo!==void 0?_heights$lo:0,(_heights$hi=heights[hi])!==null&&_heights$hi!==void 0?_heights$hi:0);const height=Math.max(contentHeight,fillHeight);return height>0?{height:height}:{};}" };
 const __initData2 = { code: "function useSegmentedPagesHeightTsx2(){const{pageHeights,visiblePageRange,fillHeight}=this.__closure;var _heights$lo,_heights$hi;const heights=pageHeights.get();const[lo,hi]=visiblePageRange.get();const contentHeight=Math.max((_heights$lo=heights[lo])!==null&&_heights$lo!==void 0?_heights$lo:0,(_heights$hi=heights[hi])!==null&&_heights$hi!==void 0?_heights$hi:0);const height=Math.max(contentHeight,fillHeight);return height>0?{height:height}:{};}" };
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePageHeights() {
   const cResult = c.c(6);
   const sharedValue = ReanimatedRexport.useSharedValue([]);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -56,7 +56,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[4] = sharedValue;
   cResult[5] = obj3;
   tmp5 = obj3;
-}) : (() => {
+}) : (function usePageHeights() {
   const sharedValue = ReanimatedRexport.useSharedValue([]);
   noop.useRef([]);
   let items = [sharedValue];
@@ -77,7 +77,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   };
 });
 ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePagerFillHeight(arg0) {
   closure_0 = arg0;
   const cResult = c.c(7);
   const height = useWindowDimensionsDefault().height;
@@ -102,7 +102,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       tmp6 = obj2;
     }
   }
-  const fn = function s() {
+  const fn = function n() {
     const current = ref.current;
     if (current != null) {
       current.measureInWindow((arg0, arg1) => {
@@ -127,7 +127,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = height;
   cResult[3] = fn;
   tmp5 = fn;
-}) : ((arg0) => {
+}) : (function usePagerFillHeight(arg0) {
   closure_0 = arg0;
   const height = useWindowDimensionsDefault().height;
   const bottom = useSafeAreaInsetsDefault().bottom;
@@ -165,14 +165,14 @@ let result = size.fileFinishedImporting("modules/user_profile/native/useSegmente
 
 export const usePageHeights = tmp2;
 export const usePagerFillHeight = tmp3;
-export const usePagesHeightStyle = ReactCompilerGating.isReactCompilerEnabled() ? ((visiblePageRange, pageHeights, arg2) => {
+export const usePagesHeightStyle = ReactCompilerGating.isReactCompilerEnabled() ? (function usePagesHeightStyle(visiblePageRange, pageHeights, arg2) {
   _require = pageHeights;
   let num = 0;
   if (undefined !== arg2) {
     num = arg2;
   }
   visiblePageRange = visiblePageRange.visiblePageRange;
-  const fn = function o() {
+  const fn = function u() {
     value = pageHeights.get();
     const tmp2 = _slicedToArray(visiblePageRange.get(), 2);
     num = value[tmp2[0]];
@@ -196,7 +196,7 @@ export const usePagesHeightStyle = ReactCompilerGating.isReactCompilerEnabled() 
   fn.__workletHash = 7484186791578;
   fn.__initData = __initData;
   return require("ReanimatedRexport").useAnimatedStyle(fn);
-}) : ((visiblePageRange, pageHeights) => {
+}) : (function usePagesHeightStyle(visiblePageRange, pageHeights) {
   _require = pageHeights;
   let num = arg2;
   if (arg2 === undefined) {

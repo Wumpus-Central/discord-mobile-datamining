@@ -1,11 +1,11 @@
-// === Module 9459: useOnConnectToConsole ===
+// === Module 9110: useOnConnectToConsole ===
 
-// Module 9459 (useOnConnectToConsole)
-import dismissible_content from "dismissible_content" /* 2036 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4704 */;
-import XboxLinkModalActionCreatorsDefault from "XboxLinkModalActionCreators" /* 8765 */;
-import PlayStationLinkModalActionCreatorsDefault from "PlayStationLinkModalActionCreators" /* 8796 */;
-import beginConsoleTransfer from "beginConsoleTransfer" /* 9460 */;
+// Module 9110 (useOnConnectToConsole)
+import dismissible_content from "dismissible_content" /* 2048 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4898 */;
+import XboxLinkModalActionCreatorsDefault from "XboxLinkModalActionCreators" /* 9111 */;
+import PlayStationLinkModalActionCreatorsDefault from "PlayStationLinkModalActionCreators" /* 9148 */;
+import beginConsoleTransfer from "beginConsoleTransfer" /* 10896 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -35,7 +35,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/video_calls/native/useOnConnectToConsole.tsx");
 
 export { onConnectToConsole };
-export const useOnConnectToConsole = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export const useOnConnectToConsole = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnConnectToConsole(arg0, arg1) {
   _require = arg0;
   const twoWayLink = arg1;
   const cResult = require("c").c(3);
@@ -66,7 +66,7 @@ export const useOnConnectToConsole = ReactCompilerGating.isReactCompilerEnabled(
   cResult[1] = arg0;
   cResult[2] = fn;
   tmp2 = fn;
-}) : ((arg0, arg1) => {
+}) : (function useOnConnectToConsole(arg0, arg1) {
   closure_0 = arg0;
   const twoWayLink = arg1;
   let items = [arg0, arg1];

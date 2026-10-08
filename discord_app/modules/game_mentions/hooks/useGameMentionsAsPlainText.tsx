@@ -1,20 +1,20 @@
-// === Module 10626: useGameMentionsAsPlainText ===
+// === Module 10224: useGameMentionsAsPlainText ===
 
-// Module 10626 (useGameMentionsAsPlainText)
+// Module 10224 (useGameMentionsAsPlainText)
 import noop from "module_19" /* 19 */;
-import GameStore from "GameStore" /* 2007 */;
-import UserStore from "UserStore" /* 1377 */;
+import GameStore from "GameStore" /* 2019 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ChannelAutocompleteConstants = fn(5796);
+const ChannelAutocompleteConstants = fn(5400);
 ({ extractGameMentionIds: hasOwnProperty, GAME_MENTION_RAW_RE_GLOBAL: metroRequire } = ChannelAutocompleteConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_mentions/hooks/useGameMentionsAsPlainText.tsx");
 
-export const useGameMentionsAsPlainText = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useGameMentionsAsPlainText = ReactCompilerGating.isReactCompilerEnabled() ? (function useGameMentionsAsPlainText(arg0) {
   _require = arg0;
   const cResult = require("c").c(7);
   let str = arg0;
@@ -46,37 +46,44 @@ export const useGameMentionsAsPlainText = ReactCompilerGating.isReactCompilerEna
     }
     return tmp(504).useStateFromStores(tmp8, tmp11, tmp12);
   }
-  class G {
-    constructor() {
-      obj = closure_0(closure_1[7]);
-      str = closure_0;
-      if (!obj.isNullOrEmpty(closure_0)) {
-        tmp = closure_1;
-        num = 0;
-        if (0 !== closure_1.length) {
-          tmp2 = closure_4;
-          currentUser = closure_4.getCurrentUser();
-          tmp4 = null;
-          nsfwAllowed = undefined;
-          if (currentUser != null) {
-            nsfwAllowed = currentUser.nsfwAllowed;
-          }
-          tmp6 = closure_6;
-          return str.replace(closure_6, () => { ... });
+  const fn = function p() {
+    if (!obj.isNullOrEmpty(nsfwAllowed)) {
+      if (0 !== length.length) {
+        const currentUser = UserStore.getCurrentUser();
+        nsfwAllowed = undefined;
+        if (currentUser != null) {
+          nsfwAllowed = currentUser.nsfwAllowed;
         }
+        return str.replace(timestampProducer, (arg0, gameId) => {
+          game = game.getGame(gameId);
+          if (obj.isGameProfileObscured(game, nsfwAllowed)) {
+            const intl2 = nsfwAllowed(dependencyMap[9]).intl;
+            let stringResult = intl2.string(nsfwAllowed(dependencyMap[9]).t["11pdXZ"]);
+          } else {
+            stringResult = undefined;
+            if (game != null) {
+              stringResult = game.name;
+            }
+            if (stringResult == null) {
+              const intl = nsfwAllowed(dependencyMap[9]).intl;
+              stringResult = intl.string(nsfwAllowed(dependencyMap[9]).t["11pdXZ"]);
+            }
+          }
+          return stringResult;
+        });
       }
-      return str;
     }
-  }
+    return nsfwAllowed;
+  };
   const items1 = [arg0, tmp4];
   cResult[3] = tmp4;
   cResult[4] = arg0;
-  cResult[5] = G;
+  cResult[5] = fn;
   cResult[6] = items1;
   tmp12 = items1;
-  tmp11 = G;
+  tmp11 = fn;
   const tmpResult = require("useGame");
-}) : ((arg0) => {
+}) : (function useGameMentionsAsPlainText(arg0) {
   _require = arg0;
   const items = [arg0];
   const memo = noop.useMemo(() => {

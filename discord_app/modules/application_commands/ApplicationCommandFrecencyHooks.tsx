@@ -1,21 +1,21 @@
-// === Module 8834: ApplicationCommandFrecencyHooks ===
+// === Module 9193: ApplicationCommandFrecencyHooks ===
 
-// Module 8834 (ApplicationCommandFrecencyHooks)
+// Module 9193 (ApplicationCommandFrecencyHooks)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
-import ApplicationCommandFrecencyStore_mod from "ApplicationCommandFrecencyStore" /* 8829 */;
+import ApplicationCommandFrecencyStore_mod from "ApplicationCommandFrecencyStore" /* 9188 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let ApplicationCommandFrecencyStore = fn(8829);
+let ApplicationCommandFrecencyStore = fn(9188);
 ({ getFilteredTopCommands: c3, getTopRealCommands: closure_4 } = ApplicationCommandFrecencyStore);
 let ApplicationCommandFrecencyStore = ApplicationCommandFrecencyStore_mod;
 const UserSettingsTypes = fn(1095).UserSettingsTypes;
 fn(558);
 const ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useTopCommands(arg0) {
   const cResult = c.c(7);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function n() {
@@ -33,14 +33,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const effect = noop.useEffect(tmp4, tmp5);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [ApplicationCommandFrecencyStore];
-    class S {
+    class C {
       constructor() {
         return closure_1_5.getTopCommandsWithoutLoadingLatest();
       }
     }
     cResult[2] = items1;
-    cResult[3] = S;
-    let tmp8 = S;
+    cResult[3] = C;
+    let tmp8 = C;
     let tmp7 = items1;
   } else {
     tmp7 = cResult[2];
@@ -59,7 +59,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[6] = tmp12;
   tmp11 = tmp12;
   const tmpResult = initialize;
-}) : ((arg0) => {
+}) : (function useTopCommands(arg0) {
   _require = arg0;
   const effect = noop.useEffect(() => {
     const FrecencyUserSettingsActionCreators = closure_0(stateFromStores[5]).FrecencyUserSettingsActionCreators;
@@ -74,7 +74,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandFrecencyHooks.tsx");
 
 export const useTopCommands = tmp3;
-export const useTopRealCommands = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useTopRealCommands = ReactCompilerGating.isReactCompilerEnabled() ? (function useTopRealCommands(arg0) {
   const cResult = c.c(7);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function u() {
@@ -92,14 +92,14 @@ export const useTopRealCommands = ReactCompilerGating.isReactCompilerEnabled() ?
   const effect = noop.useEffect(tmp4, tmp5);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [ApplicationCommandFrecencyStore];
-    class S {
+    class C {
       constructor() {
         return closure_1_5.getTopCommandsWithoutLoadingLatest();
       }
     }
     cResult[2] = items1;
-    cResult[3] = S;
-    let tmp8 = S;
+    cResult[3] = C;
+    let tmp8 = C;
     let tmp7 = items1;
   } else {
     tmp7 = cResult[2];
@@ -118,7 +118,7 @@ export const useTopRealCommands = ReactCompilerGating.isReactCompilerEnabled() ?
   cResult[6] = tmp12;
   tmp11 = tmp12;
   const tmpResult = initialize;
-}) : ((arg0) => {
+}) : (function useTopRealCommands(arg0) {
   _require = arg0;
   const effect = noop.useEffect(() => {
     const FrecencyUserSettingsActionCreators = closure_0(stateFromStores[5]).FrecencyUserSettingsActionCreators;

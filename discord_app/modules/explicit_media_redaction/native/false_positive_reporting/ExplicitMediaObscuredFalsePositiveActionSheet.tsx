@@ -1,17 +1,17 @@
-// === Module 11314: ExplicitMediaObscuredFalsePositiveActionSheet ===
+// === Module 11489: ExplicitMediaObscuredFalsePositiveActionSheet ===
 
-// Module 11314 (ExplicitMediaObscuredFalsePositiveActionSheet)
-import ExplicitMediaRedactionActionCreators from "ExplicitMediaRedactionActionCreators" /* 8953 */;
+// Module 11489 (ExplicitMediaObscuredFalsePositiveActionSheet)
+import ExplicitMediaRedactionActionCreators from "ExplicitMediaRedactionActionCreators" /* 11493 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_4 = fn(7123).EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY;
+let closure_4 = fn(6979).EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/explicit_media_redaction/native/false_positive_reporting/ExplicitMediaObscuredFalsePositiveActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ExplicitMediaObscuredFalsePositiveActionSheet(channelId) {
   const cResult = channelId(redactableMediaAttachmentsForMessage[4]).c(16);
   channelId = channelId.channelId;
   const messageId = channelId.messageId;
@@ -136,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   cResult[6] = obj5;
   tmp6 = obj5;
   const obj3 = channelId(redactableMediaAttachmentsForMessage[5]);
-}) : ((channelId) => {
+}) : (function ExplicitMediaObscuredFalsePositiveActionSheet(channelId) {
   channelId = channelId.channelId;
   const messageId = channelId.messageId;
   let redactableMediaAttachmentsForMessage;

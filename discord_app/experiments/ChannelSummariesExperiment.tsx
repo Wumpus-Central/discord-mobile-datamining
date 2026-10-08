@@ -1,10 +1,10 @@
-// === Module 9780: ChannelSummariesExperiment ===
+// === Module 9574: ChannelSummariesExperiment ===
 
-// Module 9780 (ChannelSummariesExperiment)
-import ChannelConstants from "ChannelConstants" /* 2058 */;
-import GuildRecord from "GuildRecord" /* 2070 */;
-import FavoritesUtils from "FavoritesUtils" /* 2077 */;
-import GuildStore from "GuildStore" /* 2074 */;
+// Module 9574 (ChannelSummariesExperiment)
+import ChannelConstants from "ChannelConstants" /* 2070 */;
+import GuildRecord from "GuildRecord" /* 2082 */;
+import FavoritesUtils from "FavoritesUtils" /* 2089 */;
+import GuildStore from "GuildStore" /* 2086 */;
 import Constants from "Constants" /* 1085 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -133,7 +133,7 @@ export const useChannelSummariesExperiment = function useChannelSummariesExperim
   }
   return canSeeChannelSummaries(channel, flag);
 };
-export const useGuildEligibleForSummaries = ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1) => {
+export const useGuildEligibleForSummaries = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildEligibleForSummaries(id, arg1) {
   _require = id;
   const cResult = require("c").c(5);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -202,7 +202,7 @@ export const useGuildEligibleForSummaries = ReactCompilerGating.isReactCompilerE
   }
   let obj = require("c");
   return require("useStateFromStores").useStateFromStores(first, tmp7, tmp9);
-}) : ((arg0) => {
+}) : (function useGuildEligibleForSummaries(arg0) {
   _require = arg0;
   const items = [GuildStore];
   const items1 = [arg0];

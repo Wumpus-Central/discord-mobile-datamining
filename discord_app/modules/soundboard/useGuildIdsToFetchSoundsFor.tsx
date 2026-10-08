@@ -1,18 +1,18 @@
-// === Module 6853: useGuildIdsToFetchSoundsFor ===
+// === Module 7041: useGuildIdsToFetchSoundsFor ===
 
-// Module 6853 (useGuildIdsToFetchSoundsFor)
+// Module 7041 (useGuildIdsToFetchSoundsFor)
 import _mod19 from "module_19" /* 19 */;
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import SoundboardStore from "SoundboardStore" /* 5687 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import SoundboardStore from "SoundboardStore" /* 5424 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const useMemo = _mod19.useMemo;
 const result = size.fileFinishedImporting("modules/soundboard/useGuildIdsToFetchSoundsFor.tsx");
 
-export const useGuildIdsToFetchSoundsFor = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useGuildIdsToFetchSoundsFor = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildIdsToFetchSoundsFor() {
   const cResult = c.c(7);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GuildStore];
@@ -54,7 +54,7 @@ export const useGuildIdsToFetchSoundsFor = ReactCompilerGating.isReactCompilerEn
   cResult[6] = found;
   tmp11 = found;
   const tmpResult2 = useStateFromStores;
-}) : (() => {
+}) : (function useGuildIdsToFetchSoundsFor() {
   const items = [GuildStore];
   stateFromStoresArray = stateFromStoresArray(stateFromStores[5]).useStateFromStoresArray(items, () => guildIds.getGuildIds());
   const obj = stateFromStoresArray(stateFromStores[5]);

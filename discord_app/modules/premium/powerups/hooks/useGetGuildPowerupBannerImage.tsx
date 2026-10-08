@@ -1,9 +1,9 @@
-// === Module 12192: useGetGuildPowerupBannerImage ===
+// === Module 12271: useGetGuildPowerupBannerImage ===
 
-// Module 12192 (useGetGuildPowerupBannerImage)
+// Module 12271 (useGetGuildPowerupBannerImage)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
@@ -26,7 +26,7 @@ function getGuildPowerupBannerImage(arr, stateFromStores1, arg2, arg3) {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGetGuildPowerupBannerImage.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((animatedImageUrl, arg1, arg2) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGetGuildPowerupBannerImage(animatedImageUrl, arg1, arg2) {
   const cResult = c.c(7);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AccessibilityStore];
@@ -71,7 +71,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((animatedImageUrl
     staticImageUrl = animatedImageUrl.staticImageUrl;
   }
   const tmpResult = initialize;
-}) : ((animatedImageUrl, arg1, arg2) => {
+}) : (function useGetGuildPowerupBannerImage(animatedImageUrl, arg1, arg2) {
   initialize;
   [][0] = AccessibilityStore;
   if (null != animatedImageUrl) {

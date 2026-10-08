@@ -1,27 +1,27 @@
-// === Module 17129: MobileSurvey ===
+// === Module 17410: MobileSurvey ===
 
-// Module 17129 (MobileSurvey)
+// Module 17410 (MobileSurvey)
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import LinkingDefault from "Linking" /* 4571 */;
-import _modDef8788 from "module_8788" /* 8788 */;
-import SurveyActionCreators from "SurveyActionCreators" /* 15600 */;
+import native from "native" /* 1200 */;
+import LinkingDefault from "Linking" /* 4763 */;
+import _modDef10911 from "module_10911" /* 10911 */;
+import SurveyActionCreators from "SurveyActionCreators" /* 15880 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import SurveyStore from "SurveyStore" /* 5087 */;
+import SurveyStore from "SurveyStore" /* 7466 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles({ confirmIcon: { marginLeft: 4 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/MobileSurvey.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function MobileSurvey() {
   const cResult = require("c").c(19);
   const tmp4 = closure_8();
   _require = tmp4;
@@ -147,38 +147,38 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         }
       }
       if (cResult[11] !== tmp4.confirmIcon) {
-        class L {
+        class C {
           constructor() {
-            obj = { style: closure_0.confirmIcon, color: closure_1(closure_2[14]).unsafe_rawColors.WHITE, size: closure_0(closure_2[13]).Icon.Sizes.SMALL, source: closure_1(closure_2[15]) };
-            return jsx(closure_0(closure_2[13]).Icon, obj);
+            obj = closure_0(closure_2[10]);
+            return obj.surveyHide(closure_1.key, true);
           }
         }
         cResult[11] = tmp4.confirmIcon;
-        cResult[12] = L;
+        cResult[12] = tmp17;
       } else {
-        class L {
+        class C {
           constructor() {
-            obj = { style: closure_0.confirmIcon, color: closure_1(closure_2[14]).unsafe_rawColors.WHITE, size: closure_0(closure_2[13]).Icon.Sizes.SMALL, source: closure_1(closure_2[15]) };
-            return jsx(closure_0(closure_2[13]).Icon, obj);
+            obj = closure_0(closure_2[10]);
+            return obj.surveyHide(closure_1.key, true);
           }
         }
       }
       if (cResult[13] === stateFromStores.cta) {
-        class L {
+        class C {
           constructor() {
-            obj = { style: closure_0.confirmIcon, color: closure_1(closure_2[14]).unsafe_rawColors.WHITE, size: closure_0(closure_2[13]).Icon.Sizes.SMALL, source: closure_1(closure_2[15]) };
-            return jsx(closure_0(closure_2[13]).Icon, obj);
+            obj = closure_0(closure_2[10]);
+            return obj.surveyHide(closure_1.key, true);
           }
         }
       }
-      let obj2 = { body: _prompt, confirmText: cta, cancelText: tmp12, onConfirm: tmp14, onCancel: C, renderConfirmRightIcon: L };
-      const tmp20 = jsx(stateFromStores(5790), { body: _prompt, confirmText: cta, cancelText: tmp12, onConfirm: tmp14, onCancel: C, renderConfirmRightIcon: L });
+      let obj2 = { body: _prompt, confirmText: cta, cancelText: tmp12, onConfirm: tmp14, onCancel: C, renderConfirmRightIcon: tmp17 };
+      const tmp21 = jsx(stateFromStores(5394), { body: _prompt, confirmText: cta, cancelText: tmp12, onConfirm: tmp14, onCancel: C, renderConfirmRightIcon: tmp17 });
       cResult[13] = stateFromStores.cta;
       cResult[14] = stateFromStores.prompt;
       cResult[15] = tmp14;
       cResult[16] = C;
-      cResult[17] = L;
-      cResult[18] = tmp20;
+      cResult[17] = tmp17;
+      cResult[18] = tmp21;
     }
     const fn3 = function k() {
       LinkingDefault.openURL(stateFromStores.url);
@@ -189,15 +189,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     cResult[8] = fn3;
     tmp14 = fn3;
   } else {
-    class L {
+    class C {
       constructor() {
-        obj = { style: closure_0.confirmIcon, color: closure_1(closure_2[14]).unsafe_rawColors.WHITE, size: closure_0(closure_2[13]).Icon.Sizes.SMALL, source: closure_1(closure_2[15]) };
-        return jsx(closure_0(closure_2[13]).Icon, obj);
+        obj = closure_0(closure_2[10]);
+        return obj.surveyHide(closure_1.key, true);
       }
     }
   }
   const tmpResult = require("initialize");
-}) : (() => {
+}) : (function MobileSurvey() {
   _require = closure_8();
   const items = [SurveyStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => currentSurvey.getCurrentSurvey());
@@ -279,10 +279,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       return SurveyActionCreators.surveyHide(stateFromStores.key, true);
     };
     obj3.renderConfirmRightIcon = function renderConfirmRightIcon() {
-      return jsx(native.Icon, { style: confirmIcon.confirmIcon, color: nativeDefault.unsafe_rawColors.WHITE, size: native.Icon.Sizes.SMALL, source: _modDef8788 });
+      return jsx(native.Icon, { style: confirmIcon.confirmIcon, color: nativeDefault.unsafe_rawColors.WHITE, size: native.Icon.Sizes.SMALL, source: _modDef10911 });
     };
-    tmp5 = jsx(stateFromStores(5790), { body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null, renderConfirmRightIcon: null });
-    const tmp8 = stateFromStores(5790);
+    tmp5 = jsx(stateFromStores(5394), { body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null, renderConfirmRightIcon: null });
+    const tmp8 = stateFromStores(5394);
   }
   return tmp5;
 });

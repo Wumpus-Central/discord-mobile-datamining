@@ -1,19 +1,19 @@
-// === Module 12310: useProvisionalAccountExplanationText ===
+// === Module 12408: useProvisionalAccountExplanationText ===
 
-// Module 12310 (useProvisionalAccountExplanationText)
+// Module 12408 (useProvisionalAccountExplanationText)
 import c from "c" /* 576 */;
-import useProvisionalAccountApplicationDefault from "useProvisionalAccountApplication" /* 12311 */;
+import useProvisionalAccountApplicationDefault from "useProvisionalAccountApplication" /* 12409 */;
 import noop from "module_19" /* 19 */;
 
 const util = rSUACb(1126);
-const HelpdeskUtilsDefault = tmp2(2115);
+const HelpdeskUtilsDefault = tmp2(2127);
 require = fn;
 const HelpdeskArticles = fn(1085).HelpdeskArticles;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/provisional_accounts/hooks/useProvisionalAccountExplanationText.tsx");
 
-export const useProvisionalAccountExplanationText = ReactCompilerGating.isReactCompilerEnabled() ? ((renderApplicationName) => {
+export const useProvisionalAccountExplanationText = ReactCompilerGating.isReactCompilerEnabled() ? (function useProvisionalAccountExplanationText(renderApplicationName) {
   let rSUACb = require;
   let getArticleURL = dependencyMap;
   const cResult = c.c(4);
@@ -51,7 +51,7 @@ export const useProvisionalAccountExplanationText = ReactCompilerGating.isReactC
     }
     return tmp4;
   }
-}) : ((renderApplicationName) => {
+}) : (function useProvisionalAccountExplanationText(renderApplicationName) {
   renderApplicationName = renderApplicationName.renderApplicationName;
   const tmp = useProvisionalAccountApplicationDefault(renderApplicationName.userId);
   importDefault = tmp;

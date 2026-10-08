@@ -1,13 +1,13 @@
-// === Module 9478: useIsVideoMode ===
+// === Module 10857: useIsVideoMode ===
 
-// Module 9478 (useIsVideoMode)
+// Module 10857 (useIsVideoMode)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4918 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import VoiceStateStore from "VoiceStateStore" /* 4915 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5893 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
+import VoiceStateStore from "VoiceStateStore" /* 5111 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
@@ -43,7 +43,7 @@ function isVideoMode() {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/useIsVideoMode.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsVideoMode() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ChannelStore, SelectedChannelStore, MediaEngineStore, VoiceStateStore, ApplicationStreamingStore];
@@ -64,7 +64,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     [tmp4, tmp5] = cResult;
   }
   return initialize.useStateFromStores(tmp4, tmp5);
-}) : (() => {
+}) : (function useIsVideoMode() {
   const items = [ChannelStore, SelectedChannelStore, MediaEngineStore, VoiceStateStore, ApplicationStreamingStore];
   return initialize.useStateFromStores(items, () => {
     channel = channel.getChannel(voiceChannelId.getVoiceChannelId());

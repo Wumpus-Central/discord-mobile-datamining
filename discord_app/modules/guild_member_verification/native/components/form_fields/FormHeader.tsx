@@ -1,17 +1,17 @@
-// === Module 9490: FormHeader ===
+// === Module 8654: FormHeader ===
 
-// Module 9490 (FormHeader)
+// Module 8654 (FormHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
+import native from "native" /* 1200 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 5922 */;
+import TextStyles from "TextStyles" /* 5902 */;
 
 require = fn;
 let closure_2 = ["children"];
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { fieldHeader: null };
 const obj3 = {};
 let merged = Object.assign(TextStyles(fn(1096).Fonts.DISPLAY_EXTRABOLD, nativeDefault.colors.TEXT_SUBTLE, 12, { uppercase: true }));
@@ -22,7 +22,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/FormHeader.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormHeader(children) {
   const cResult = c.c(10);
   if (cResult[0] !== children) {
     children = children.children;
@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
   cResult[4] = tmp9.fieldHeader;
   cResult[5] = items;
   tmp10 = items;
-}) : ((children) => {
+}) : (function FormHeader(children) {
   const merged = Object.assign(children, Object.assign({ children: 0 }));
   const obj = {};
   const merged1 = Object.assign(merged);

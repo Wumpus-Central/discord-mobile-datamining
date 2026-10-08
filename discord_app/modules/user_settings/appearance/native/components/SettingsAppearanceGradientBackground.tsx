@@ -1,30 +1,30 @@
-// === Module 15133: SettingsAppearanceGradientBackground ===
+// === Module 15395: SettingsAppearanceGradientBackground ===
 
-// Module 15133 (SettingsAppearanceGradientBackground)
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4618 */;
-import timing from "timing" /* 4897 */;
-import timingPresets from "timingPresets" /* 4900 */;
-import SettingsAppearancePickerUtils from "SettingsAppearancePickerUtils" /* 15134 */;
+// Module 15395 (SettingsAppearanceGradientBackground)
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4810 */;
+import timing from "timing" /* 5091 */;
+import timingPresets from "timingPresets" /* 5094 */;
+import SettingsAppearancePickerUtils from "SettingsAppearancePickerUtils" /* 15396 */;
 import noop from "module_19" /* 19 */;
-import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 15107 */;
+import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 15369 */;
 
 const ReanimatedRexport_mod = ReanimatedRexport2;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsx = fn(21).jsx;
-let ReanimatedRexport = fn(4618);
+let ReanimatedRexport = fn(4810);
 let num = ReanimatedRexport.processColor("rgba(0, 0, 0, 0)");
 if (num == null) {
   num = 0;
 }
 let ReanimatedRexport = ReanimatedRexport_mod;
-let closure_7 = ReanimatedRexport.createAnimatedComponent(fn(5612).LinearGradientNativeComponent);
+let closure_7 = ReanimatedRexport.createAnimatedComponent(fn(5387).LinearGradientNativeComponent);
 let animatedLinearGradientLoadingProps = { colors: null, locations: [], startPoint: { x: 0, y: 0 }, endPoint: { x: 0, y: 0 } };
 let items = [num, num];
 animatedLinearGradientLoadingProps.colors = items;
 let ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((theme) => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function useThemeStateTracker(theme) {
   let tmp = theme;
   const cResult = launchWelcomeSystemTheme(sharedValue1[7]).c(12);
   let obj = launchWelcomeSystemTheme(sharedValue1[7]);
@@ -84,7 +84,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((theme) => {
   cResult[3] = fn;
   tmp8 = fn;
   const tmp2Result2 = launchWelcomeSystemTheme(sharedValue1[4]);
-}) : ((theme) => {
+}) : (function useThemeStateTracker(theme) {
   let tmp = theme;
   launchWelcomeSystemTheme = launchWelcomeSystemTheme(tweener[8]).useLaunchWelcomeSystemTheme();
   if ("system" === theme.theme) {
@@ -110,7 +110,7 @@ ReactCompilerGating = fn(558);
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/appearance/native/components/SettingsAppearanceGradientBackground.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function SettingsAppearanceGradientBackground(arg0) {
   animatedLinearGradientLoadingProps = themeState(sharedValue[7]);
   const cResult = animatedLinearGradientLoadingProps.c(11);
   ({ isDimmed, themes, backgroundToken, themeIndex } = arg0);
@@ -143,19 +143,28 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
         tweener = tmp13.tweener;
         sharedValue = tmp(tmp2[4]).useSharedValue({ width: 0, height: 0 });
         if (cResult[6] !== sharedValue) {
-          const fn = function x(nativeEvent) {
-            nativeEvent = nativeEvent.nativeEvent;
-            const size = { width: nativeEvent.layout.width, height: nativeEvent.layout.height };
-            const result = sharedValue.set(size);
-          };
+          class T {
+            constructor(arg0) {
+              nativeEvent = arg0.nativeEvent;
+              size = { width: nativeEvent.layout.width, height: nativeEvent.layout.height };
+              result = closure_2.set(size);
+              return;
+            }
+          }
           cResult[6] = sharedValue;
-          cResult[7] = fn;
-          let tmp15 = fn;
+          cResult[7] = T;
         } else {
-          tmp15 = cResult[7];
+          class T {
+            constructor(arg0) {
+              nativeEvent = arg0.nativeEvent;
+              size = { width: nativeEvent.layout.width, height: nativeEvent.layout.height };
+              result = closure_2.set(size);
+              return;
+            }
+          }
         }
         const tmpResult = tmp(tmp2[4]);
-        const fn2 = function b() {
+        const fn = function b() {
           value = sharedValue.get();
           ({ width, height } = value);
           if (0 !== width) {
@@ -193,22 +202,27 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
           return animatedLinearGradientLoadingProps;
         };
         let obj2 = { gradientSize: sharedValue, animatedLinearGradientLoadingProps, themeState, interpolate: tmp(tmp2[4]).interpolate, tweener, getGradientStartPoint: tweener(tmp2[12]), processColor: tmp(tmp2[4]).processColor, interpolateColor: tmp(tmp2[4]).interpolateColor };
-        fn2.__closure = obj2;
-        fn2.__workletHash = 12558395784936;
-        fn2.__initData = __initData;
-        const animatedProps = tmp(tmp2[4]).useAnimatedProps(fn2);
+        fn.__closure = obj2;
+        fn.__workletHash = 12558395784936;
+        fn.__initData = __initData;
+        const animatedProps = tmp(tmp2[4]).useAnimatedProps(fn);
         if (cResult[8] === animatedProps) {
-          if (cResult[9] === tmp15) {
-            let tmp20 = cResult[10];
+          class T {
+            constructor(arg0) {
+              nativeEvent = arg0.nativeEvent;
+              size = { width: nativeEvent.layout.width, height: nativeEvent.layout.height };
+              result = closure_2.set(size);
+              return;
+            }
           }
           return tmp20;
         }
-        const obj3 = { style: StyleSheet.absoluteFill, onLayout: tmp15 };
+        const obj3 = { style: StyleSheet.absoluteFill, onLayout: T };
         const merged = Object.assign(tmp16);
         obj3.animatedProps = animatedProps;
-        const tmp27 = <closure_7 style={StyleSheet.absoluteFill} onLayout={tmp15} />;
+        const tmp27 = <closure_7 style={StyleSheet.absoluteFill} onLayout={T} />;
         cResult[8] = animatedProps;
-        cResult[9] = tmp15;
+        cResult[9] = T;
         cResult[10] = tmp27;
         tmp20 = tmp27;
         const tmpResult3 = tmp(tmp2[4]);
@@ -223,7 +237,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   cResult[5] = result;
   tmp10 = result;
   const tmpResult4 = themeState(sharedValue[8]);
-}) : ((isDimmed) => {
+}) : (function SettingsAppearanceGradientBackground(isDimmed) {
   isDimmed = isDimmed.isDimmed;
   const themes = isDimmed.themes;
   const themeIndex = isDimmed.themeIndex;

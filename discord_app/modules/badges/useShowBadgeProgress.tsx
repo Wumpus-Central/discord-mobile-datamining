@@ -1,10 +1,10 @@
-// === Module 10908: useShowBadgeProgress ===
+// === Module 10559: useShowBadgeProgress ===
 
-// Module 10908 (useShowBadgeProgress)
+// Module 10559 (useShowBadgeProgress)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import BadgeUtils from "BadgeUtils" /* 10902 */;
-import ConsentStore from "ConsentStore" /* 6091 */;
+import BadgeUtils from "BadgeUtils" /* 10553 */;
+import ConsentStore from "ConsentStore" /* 5938 */;
 
 require = fn;
 const Consents = fn(1085).Consents;
@@ -12,12 +12,12 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/useShowBadgeProgress.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useShowBadgeProgress(arg0) {
   const cResult = c.c(7);
   ({ badge, viewerBadge, isViewingOtherUser } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ConsentStore];
-    const fn = function l() {
+    const fn = function u() {
       return ConsentStore.hasConsented(constants.PERSONALIZATION);
     };
     cResult[0] = items;
@@ -60,7 +60,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[6] = tmp12;
   tmp11 = tmp12;
   const tmpResult4 = BadgeUtils;
-}) : ((arg0) => {
+}) : (function useShowBadgeProgress(arg0) {
   ({ badge, viewerBadge, isViewingOtherUser } = arg0);
   const items = [ConsentStore];
   const stateFromStores = initialize.useStateFromStores(items, () => ConsentStore.hasConsented(constants.PERSONALIZATION));

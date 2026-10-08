@@ -1,20 +1,21 @@
-// === Module 6782: ThreadHooks ===
+// === Module 6958: ThreadHooks ===
 
-// Module 6782 (ThreadHooks)
+// Module 6958 (ThreadHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
-import AgeGateUtils from "AgeGateUtils" /* 5106 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6783 */;
-import useIsRemoteDefault from "useIsRemote" /* 6784 */;
-import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 6785 */;
+import shouldAgeVerifyForAgeGate2 from "shouldAgeVerifyForAgeGate" /* 5904 */;
+import AgeGateUtils from "AgeGateUtils" /* 5930 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6084 */;
+import useIsRemoteDefault from "useIsRemote" /* 6959 */;
+import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 6960 */;
 import _slicedToArray from "module_32" /* 32 */;
-import createExperiment from "createExperiment" /* 4781 */;
+import createExperiment from "createExperiment" /* 4975 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5698 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6039 */;
 
 require = fn;
 function canUnarchiveThread(stateFromStores) {
@@ -54,7 +55,7 @@ function canUnarchiveThread(stateFromStores) {
   }
   return tmp10;
 }
-const THREADED_CHANNEL_TYPES = fn(2055).THREADED_CHANNEL_TYPES;
+const THREADED_CHANNEL_TYPES = fn(2067).THREADED_CHANNEL_TYPES;
 const Constants = fn(1085);
 ({ Permissions: c10, MessageFlags: closure_11, ChannelTypes: closure_12 } = Constants);
 let obj = { id: "2022-07_voice_in_threads", label: "Voice in Threads", kind: "guild", defaultConfig: { enabled: false }, treatments: null };
@@ -62,7 +63,7 @@ let items = [{ id: 1, label: "On", config: { enabled: true } }];
 obj.treatments = items;
 const importDefaultResultResult = createExperiment(obj);
 let ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((type, hasFlag) => {
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanStartPublicThread(type, hasFlag) {
   _require = type;
   const cResult = require("c").c(8);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -73,7 +74,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((type, hasFlag) => {
     first = cResult[0];
   }
   if (cResult[1] !== type) {
-    const fn = function c() {
+    const fn = function s() {
       if (type.isForumLikeChannel()) {
         let SEND_MESSAGES = constants.SEND_MESSAGES;
       } else {
@@ -123,7 +124,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((type, hasFlag) => {
   cResult[7] = flag;
   tmp9 = flag;
   const tmpResult = require("initialize");
-}) : ((type, hasFlag) => {
+}) : (function useCanStartPublicThread(type, hasFlag) {
   _require = type;
   const items = [PermissionStore];
   const items1 = [type];
@@ -154,7 +155,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((type, hasFlag) => {
 });
 let closure_14 = tmp5;
 ReactCompilerGating = fn(558);
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((type) => {
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanStartPrivateThread(type) {
   _require = type;
   const cResult = require("c").c(7);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -202,7 +203,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((type) => {
   cResult[6] = tmp11;
   tmp9 = tmp11;
   const tmpResult = require("initialize");
-}) : ((type) => {
+}) : (function useCanStartPrivateThread(type) {
   _require = type;
   const items = [PermissionStore];
   const items1 = [type];
@@ -226,13 +227,13 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((type) => {
 let closure_15 = tmp6;
 fn(558);
 ReactCompilerGating = fn(558);
-let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanStartThread(arg0) {
   let tmp = closure_14(arg0);
   if (!tmp) {
     tmp = closure_15(arg0);
   }
   return tmp;
-}) : ((arg0) => {
+}) : (function useCanStartThread(arg0) {
   let tmp = closure_14(arg0);
   if (!tmp) {
     tmp = closure_15(arg0);
@@ -240,7 +241,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return tmp;
 });
 ReactCompilerGating = fn(558);
-let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
+let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanViewThreadForMessage(id) {
   _require = id;
   const cResult = require("c").c(13);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -320,7 +321,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
   cResult[11] = stateFromStores;
   cResult[12] = hasFlagResult;
   const tmpResult2 = require("initialize");
-}) : ((hasFlag) => {
+}) : (function useCanViewThreadForMessage(hasFlag) {
   _require = hasFlag;
   const items = [ChannelStore];
   const items1 = [hasFlag];
@@ -337,7 +338,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
   return hasFlagResult;
 });
 ReactCompilerGating = fn(558);
-let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild_id) => {
+let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasActiveThreads(guild_id) {
   _require = guild_id;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -388,7 +389,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild_id) => {
   tmp7 = fn;
   let obj = require("c");
   tmp = _require;
-}) : ((arg0) => {
+}) : (function useHasActiveThreads(arg0) {
   _require = arg0;
   const items = [ActiveJoinedThreadsStore, PermissionStore];
   return require("initialize").useStateFromStoresObject(items, () => {
@@ -422,7 +423,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild_id) => {
   });
 });
 ReactCompilerGating = fn(558);
-let tmp11 = ReactCompilerGating.isReactCompilerEnabled() ? ((isThread) => {
+let tmp11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanUnarchiveThread(isThread) {
   _require = isThread;
   const cResult = require("c").c(11);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -459,7 +460,7 @@ let tmp11 = ReactCompilerGating.isReactCompilerEnabled() ? ((isThread) => {
     tmp8 = cResult[3];
   }
   if (cResult[4] !== isThread) {
-    const fn2 = function h() {
+    const fn2 = function l() {
       let channel = null;
       if (null != isThread) {
         channel = ChannelStore.getChannel(isThread.parent_id);
@@ -518,7 +519,7 @@ let tmp11 = ReactCompilerGating.isReactCompilerEnabled() ? ((isThread) => {
   cResult[10] = tmp18;
   tmp16 = tmp18;
   const tmpResult2 = require("initialize");
-}) : ((isThread) => {
+}) : (function useCanUnarchiveThread(isThread) {
   _require = isThread;
   const items = [PermissionStore];
   let stateFromStores = require("initialize").useStateFromStores(items, () => {
@@ -569,7 +570,7 @@ let tmp11 = ReactCompilerGating.isReactCompilerEnabled() ? ((isThread) => {
 });
 let closure_16 = tmp11;
 ReactCompilerGating = fn(558);
-let tmp12 = ReactCompilerGating.isReactCompilerEnabled() ? ((isThread) => {
+let tmp12 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsActiveChannelOrUnarchivableThread(isThread) {
   const cResult = c.c(3);
   const tmp2 = closure_16(isThread);
   let flag = null;
@@ -603,7 +604,7 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled() ? ((isThread) => {
     cResult[1] = isThread;
     cResult[2] = isActiveThreadResult;
   }
-}) : ((isThread) => {
+}) : (function useIsActiveChannelOrUnarchivableThread(isThread) {
   let tmp2 = null != isThread;
   if (tmp2) {
     const isThreadResult = isThread.isThread();
@@ -632,7 +633,7 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled() ? ((isThread) => {
 });
 let closure_18 = tmp12;
 ReactCompilerGating = fn(558);
-let tmp13 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsThreadModerator(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -660,7 +661,7 @@ let tmp13 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp6);
-}) : ((arg0) => {
+}) : (function useIsThreadModerator(arg0) {
   _require = arg0;
   let items = [PermissionStore];
   return require("initialize").useStateFromStores(items, () => {
@@ -675,7 +676,7 @@ let tmp13 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 });
 let closure_19 = tmp13;
 ReactCompilerGating = fn(558);
-let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? ((parent_id) => {
+let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanManageThread(parent_id) {
   _require = parent_id;
   const cResult = require("c").c(9);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -860,7 +861,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? ((parent_id) => {
     tmp18 = tmp20;
   }
   return tmp18;
-}) : ((isThread) => {
+}) : (function useCanManageThread(isThread) {
   _require = isThread;
   const items = [ChannelStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
@@ -906,7 +907,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? ((parent_id) => {
   return tmp4;
 });
 ReactCompilerGating = fn(558);
-let tmp15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp15 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasPermissionToJoinThreadVoice(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -932,7 +933,7 @@ let tmp15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     stateFromStores = closure_18(arg0);
   }
   return stateFromStores;
-}) : ((arg0) => {
+}) : (function useHasPermissionToJoinThreadVoice(arg0) {
   _require = arg0;
   const items = [PermissionStore];
   let stateFromStores = require("initialize").useStateFromStores(items, () => PermissionStore.can(constants.CONNECT, closure_0));
@@ -943,7 +944,7 @@ let tmp15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 });
 let closure_20 = tmp15;
 ReactCompilerGating = fn(558);
-let tmp14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp14 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanRemoveThreadMember(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -980,7 +981,7 @@ let tmp14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp8);
-}) : ((arg0) => {
+}) : (function useCanRemoveThreadMember(arg0) {
   _require = arg0;
   let items = [ChannelStore, PermissionStore, AuthenticationStore];
   return require("initialize").useStateFromStores(items, () => {
@@ -1003,7 +1004,7 @@ let tmp14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   });
 });
 ReactCompilerGating = fn(558);
-let tmp16 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild_id) => {
+let tmp16 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanJoinThreadVoice(guild_id) {
   const cResult = c.c(10);
   const tmp4 = useIsRemoteDefault();
   const tmp5 = closure_20(guild_id);
@@ -1025,7 +1026,7 @@ let tmp16 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild_id) => {
   const enabled = importDefaultResultResult.useExperiment(tmp6, tmp7).enabled;
   const isGameInvitesPost = GameInvitesChannelUtils.useIsGameInvitesPost(guild_id);
   const tmpResult = GameInvitesChannelUtils;
-  let shouldAgeVerifyForAgeGate = AgeGateUtils.useShouldAgeVerifyForAgeGate();
+  let shouldAgeVerifyForAgeGate = shouldAgeVerifyForAgeGate2.useShouldAgeVerifyForAgeGate();
   if (shouldAgeVerifyForAgeGate) {
     shouldAgeVerifyForAgeGate = AgeGateUtils.shouldShowAgeGateForChannelId(guild_id.id);
     const tmpResult4 = AgeGateUtils;
@@ -1069,14 +1070,14 @@ let tmp16 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild_id) => {
   cResult[8] = shouldAgeVerifyForAgeGate;
   cResult[9] = isVocalThreadResult;
   tmp10 = isVocalThreadResult;
-  const tmpResult3 = AgeGateUtils;
-}) : ((guildId) => {
+  const tmpResult3 = shouldAgeVerifyForAgeGate2;
+}) : (function useCanJoinThreadVoice(guildId) {
   const tmp2 = useIsRemoteDefault();
   let enabled = importDefaultResultResult.useExperiment({ guildId: guildId.guild_id, location: "e791ea_1" }, { autoTrackExposure: false }).enabled;
   const obj = { guildId: guildId.guild_id, location: "e791ea_1" };
   const tmp3 = closure_20(guildId);
   const isGameInvitesPost = GameInvitesChannelUtils.useIsGameInvitesPost(guildId);
-  let shouldAgeVerifyForAgeGate = AgeGateUtils.useShouldAgeVerifyForAgeGate();
+  let shouldAgeVerifyForAgeGate = shouldAgeVerifyForAgeGate2.useShouldAgeVerifyForAgeGate();
   if (shouldAgeVerifyForAgeGate) {
     shouldAgeVerifyForAgeGate = AgeGateUtils.shouldShowAgeGateForChannelId(guildId.id);
     const tmp4Result = AgeGateUtils;
@@ -1215,7 +1216,7 @@ export { isThreadModerator };
 export const useCanRemoveThreadMember = tmp14;
 export const useHasPermissionToJoinThreadVoice = tmp15;
 export const useCanJoinThreadVoice = tmp16;
-export const useIsNonModInLockedThread = ReactCompilerGating.isReactCompilerEnabled() ? ((isLockedThread) => {
+export const useIsNonModInLockedThread = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsNonModInLockedThread(isLockedThread) {
   const cResult = c.c(3);
   const tmp2 = closure_19(isLockedThread);
   if (cResult[0] === isLockedThread) {
@@ -1229,7 +1230,7 @@ export const useIsNonModInLockedThread = ReactCompilerGating.isReactCompilerEnab
   cResult[1] = tmp2;
   cResult[2] = tmp4;
   tmp3 = tmp4;
-}) : ((isLockedThread) => {
+}) : (function useIsNonModInLockedThread(isLockedThread) {
   const tmp = closure_19(isLockedThread);
   return isLockedThread.isLockedThread() && !closure_19(isLockedThread);
 });

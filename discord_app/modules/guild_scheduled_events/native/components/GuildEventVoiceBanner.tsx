@@ -1,19 +1,19 @@
-// === Module 13607: GuildEventVoiceBanner ===
+// === Module 13429: GuildEventVoiceBanner ===
 
-// Module 13607 (GuildEventVoiceBanner)
+// Module 13429 (GuildEventVoiceBanner)
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 9209 */;
-import guild_scheduled_events_GuildScheduledEventModalActionCreators from "guild_scheduled_events/GuildScheduledEventModalActionCreators" /* 9314 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 8489 */;
+import guild_scheduled_events_GuildScheduledEventModalActionCreators from "guild_scheduled_events/GuildScheduledEventModalActionCreators" /* 8510 */;
 import noop from "module_19" /* 19 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(7050).isGuildScheduledEventActive;
+let closure_6 = fn(6059).isGuildScheduledEventActive;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { header: { margin: 12, padding: 12, borderRadius: nativeDefault.radii.sm, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, descriptionContainerStyle: { paddingTop: 4 }, buttonContainer: { marginTop: 12 } };
 let closure_9 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
@@ -21,7 +21,7 @@ let obj3 = { margin: 12, padding: 12, borderRadius: nativeDefault.radii.sm, bord
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventVoiceBanner.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEventVoiceBanner(channel) {
   const cResult = channel(event[8]).c(34);
   channel = channel.channel;
   const tmp4 = closure_9();
@@ -227,7 +227,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
       }
       if (tmp) {
         ActionSheetActionCreatorsDefault.hideActionSheet();
-        let result = GuildScheduledEventModalActionCreators.openStartGuildEventModal(first, closure_3, () => {
+        let result = guild_scheduled_events_GuildScheduledEventModalActionCreators.openStartGuildEventModal(first, closure_3, () => {
           const result = channel(first[15]).openVoiceChannelActionSheet(closure_1_0);
         });
       }
@@ -243,7 +243,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
   cResult[3] = tmp11;
   cResult[4] = canManageGuildEvent(tmp11);
   const canManageGuildEventResult = canManageGuildEvent(tmp11);
-}) : ((channel) => {
+}) : (function GuildEventVoiceBanner(channel) {
   channel = channel.channel;
   let event;
   let nextRecurrenceIdInEvent;
@@ -276,7 +276,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
     }
     if (tmp) {
       ActionSheetActionCreatorsDefault.hideActionSheet();
-      let result = GuildScheduledEventModalActionCreators.openStartGuildEventModal(first, nextRecurrenceIdInEvent, () => {
+      let result = guild_scheduled_events_GuildScheduledEventModalActionCreators.openStartGuildEventModal(first, nextRecurrenceIdInEvent, () => {
         const result = channel(first[15]).openVoiceChannelActionSheet(closure_1_0);
       });
     }

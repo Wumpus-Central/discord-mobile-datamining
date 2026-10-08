@@ -1,28 +1,28 @@
-// === Module 12949: UserProfileDismissibleUpsells ===
+// === Module 13228: UserProfileDismissibleUpsells ===
 
-// Module 12949 (UserProfileDismissibleUpsells)
+// Module 13228 (UserProfileDismissibleUpsells)
 import nativeDefault from "native" /* 587 */;
-import dismissible_content from "dismissible_content" /* 2036 */;
+import dismissible_content from "dismissible_content" /* 2048 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const util = ShopIcon(1126);
-const native = ShopIcon(1188);
-const Text_Text = ShopIcon(4892);
-const components_Button_Button = ShopIcon(5601);
-const Pressables = ShopIcon(5916);
-const XSmallIcon = ShopIcon(6024);
-const NitroWheelIcon = ShopIcon(8346);
-const ShopIcon2 = ShopIcon(11776);
+const native = ShopIcon(1200);
+const Text_Text = ShopIcon(5086);
+const components_Button_Button = ShopIcon(5375);
+const Pressables = ShopIcon(6189);
+const XSmallIcon = ShopIcon(6210);
+const NitroWheelIcon = ShopIcon(9005);
+const ShopIcon2 = ShopIcon(11843);
 require = fn;
 const View = fn(17).View;
-const TrackUserProfileActions = fn(7865).TrackUserProfileActions;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const TrackUserProfileActions = fn(8283).TrackUserProfileActions;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let items = [...fn(6951).Gradients.PREMIUM_GUILD];
+let items = [...fn(7140).Gradients.PREMIUM_GUILD];
 let closure_10 = items.reverse();
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { upsellContainer: { paddingVertical: 16, paddingHorizontal: 12, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, customProfileThemeUpsellContainer: null, header: null, upsellButtonsContainer: null, upsellButton: null };
 let obj3 = { paddingVertical: 16, paddingHorizontal: 12, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.customProfileThemeUpsellContainer = { backgroundColor: nativeDefault.colors.PROFILE_GRADIENT_OVERLAY_SYNCED_WITH_USER_THEME };
@@ -35,7 +35,7 @@ let obj4 = { backgroundColor: nativeDefault.colors.PROFILE_GRADIENT_OVERLAY_SYNC
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileDismissibleUpsells.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((navigateToShop) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileDismissibleUpsells(navigateToShop) {
   let tmp2 = hasCustomProfileTheme;
   const cResult = navigateToShop(hasCustomProfileTheme[10]).c(22);
   navigateToShop = navigateToShop.navigateToShop;
@@ -247,7 +247,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((navigateToShop) 
   cResult[5] = trackUserProfileAction;
   cResult[6] = fn2;
   tmp12 = fn2;
-}) : ((navigateToShop) => {
+}) : (function UserProfileDismissibleUpsells(navigateToShop) {
   navigateToShop = navigateToShop.navigateToShop;
   const navigateToPremium = navigateToShop.navigateToPremium;
   const hasCustomProfileTheme = navigateToShop.hasCustomProfileTheme;

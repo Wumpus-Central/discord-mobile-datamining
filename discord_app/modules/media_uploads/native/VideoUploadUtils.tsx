@@ -1,8 +1,8 @@
-// === Module 7307: VideoUploadUtils ===
+// === Module 7751: VideoUploadUtils ===
 
-// Module 7307 (VideoUploadUtils)
+// Module 7751 (VideoUploadUtils)
 import LoggerDefault from "Logger" /* 3 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1195 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1207 */;
 import size from "module_2" /* 2 */;
 
 const VideoCompressionQuality = UnsyncedUserSettingsStore.VideoCompressionQuality;

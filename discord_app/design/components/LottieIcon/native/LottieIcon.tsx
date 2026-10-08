@@ -1,12 +1,12 @@
-// === Module 9642: LottieIcon ===
+// === Module 10837: LottieIcon ===
 
-// Module 9642 (LottieIcon)
+// Module 10837 (LottieIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4586 */;
-import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 4602 */;
-import _modDef5928 from "module_5928" /* 5928 */;
-import IconSize from "IconSize" /* 6111 */;
+import useToken from "useToken" /* 4778 */;
+import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 4794 */;
+import _modDef6111 from "module_6111" /* 6111 */;
+import IconSize from "IconSize" /* 6291 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,12 +16,12 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/LottieIcon/native/LottieIcon.tsx");
 
-export const LottieIcon = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((animation, arg1) => {
+export const LottieIcon = ReactCompilerGating.isReactCompilerEnabled() ? (function LottieIcon(animation) {
   const cResult = c.c(40);
   animation = animation.animation;
   ({ dotLottie, size, color, opacity, markers, layers, autoPlay } = animation);
   let str = "md";
-  ({ width, height, useLottieDefaultColors } = animation);
+  ({ width, height, useLottieDefaultColors, ref } = animation);
   if (undefined !== size) {
     str = size;
   }
@@ -42,37 +42,37 @@ export const LottieIcon = noop.forwardRef(ReactCompilerGating.isReactCompilerEna
       if (cResult[5] !== markers) {
         const _Symbol = Symbol;
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-          class R {
+          class F {
             constructor(arg0) {
               return "easteregg" === animation.name;
             }
           }
-          cResult[7] = R;
+          cResult[7] = F;
         } else {
-          class R {
+          class F {
             constructor(arg0) {
               return "easteregg" === animation.name;
             }
           }
         }
-        const found = markers.find(R);
+        const found = markers.find(F);
         cResult[5] = markers;
         cResult[6] = found;
       } else {
-        class R {
+        class F {
           constructor(arg0) {
             return "easteregg" === animation.name;
           }
         }
         if (tmp11 != null) {
-          class R {
+          class F {
             constructor(arg0) {
               return "easteregg" === animation.name;
             }
           }
         }
         if (undefined == null) {
-          class R {
+          class F {
             constructor(arg0) {
               return "easteregg" === animation.name;
             }
@@ -80,14 +80,14 @@ export const LottieIcon = noop.forwardRef(ReactCompilerGating.isReactCompilerEna
         }
         c4 = tmp17;
         if (tmp11 != null) {
-          class R {
+          class F {
             constructor(arg0) {
               return "easteregg" === animation.name;
             }
           }
         }
         if (undefined == null) {
-          class R {
+          class F {
             constructor(arg0) {
               return "easteregg" === animation.name;
             }
@@ -97,27 +97,27 @@ export const LottieIcon = noop.forwardRef(ReactCompilerGating.isReactCompilerEna
         noop.useRef(null);
         const enabled = noop.useContext(AccessibilityPreferencesContext.AccessibilityPreferencesContext).reducedMotion.enabled;
         if ("custom" === str) {
-          class R {
+          class F {
             constructor(arg0) {
               return "easteregg" === animation.name;
             }
           }
         }
         if ("custom" === str) {
-          class R {
+          class F {
             constructor(arg0) {
               return "easteregg" === animation.name;
             }
           }
         }
         if (cResult[8] === tmp5) {
-          class R {
+          class F {
             constructor(arg0) {
               return "easteregg" === animation.name;
             }
           }
           if (cResult[11] !== num2) {
-            class R {
+            class F {
               constructor(arg0) {
                 return "easteregg" === animation.name;
               }
@@ -126,7 +126,7 @@ export const LottieIcon = noop.forwardRef(ReactCompilerGating.isReactCompilerEna
             cResult[11] = num2;
             cResult[12] = tmp26;
           } else {
-            class R {
+            class F {
               constructor(arg0) {
                 return "easteregg" === animation.name;
               }
@@ -134,13 +134,13 @@ export const LottieIcon = noop.forwardRef(ReactCompilerGating.isReactCompilerEna
           }
           const token = useToken.useToken(color);
           if (cResult[13] === layers) {
-            class R {
+            class F {
               constructor(arg0) {
                 return "easteregg" === animation.name;
               }
             }
             if (cResult[16] === sum) {
-              class R {
+              class F {
                 constructor(arg0) {
                   return "easteregg" === animation.name;
                 }
@@ -189,7 +189,7 @@ export const LottieIcon = noop.forwardRef(ReactCompilerGating.isReactCompilerEna
             cResult[21] = K;
           }
           if (null != token) {
-            class R {
+            class F {
               constructor(arg0) {
                 return "easteregg" === animation.name;
               }
@@ -208,7 +208,7 @@ export const LottieIcon = noop.forwardRef(ReactCompilerGating.isReactCompilerEna
     }
   }
   if (cResult[3] !== animation) {
-    class R {
+    class F {
       constructor(arg0) {
         return "easteregg" === animation.name;
       }
@@ -250,7 +250,7 @@ export const LottieIcon = noop.forwardRef(ReactCompilerGating.isReactCompilerEna
     }
     cResult[4] = tmp8;
   } else {
-    class R {
+    class F {
       constructor(arg0) {
         return "easteregg" === animation.name;
       }
@@ -261,7 +261,7 @@ export const LottieIcon = noop.forwardRef(ReactCompilerGating.isReactCompilerEna
   cResult[num] = markers;
   num = 2;
   cResult[2] = found1;
-}) : ((color, arg1) => {
+}) : (function LottieIcon(color) {
   ({ animation: require, size } = color);
   if (size === undefined) {
     size = "md";
@@ -277,11 +277,11 @@ export const LottieIcon = noop.forwardRef(ReactCompilerGating.isReactCompilerEna
   ({ markers, layers } = color);
   const autoPlay = color.autoPlay;
   let sum1;
-  let ref;
+  let ref1;
   let enabled;
   let token;
   let callback;
-  ({ width, height, useLottieDefaultColors } = color);
+  ({ width, height, useLottieDefaultColors, ref } = color);
   let tmp5 = IconSize.ICON_SIZE[size];
   const found = markers.find((name) => name.name === require);
   const start = found.start;
@@ -303,7 +303,7 @@ export const LottieIcon = noop.forwardRef(ReactCompilerGating.isReactCompilerEna
     num3 = -1;
   }
   sum1 = num2 + num3;
-  ref = noop.useRef(null);
+  ref1 = noop.useRef(null);
   enabled = noop.useContext(AccessibilityPreferencesContext.AccessibilityPreferencesContext).reducedMotion.enabled;
   let tmp12 = tmp5;
   if ("custom" === size) {
@@ -326,27 +326,27 @@ export const LottieIcon = noop.forwardRef(ReactCompilerGating.isReactCompilerEna
   }, items);
   callback = noop.useCallback(() => {
     if (enabled) {
-      const current3 = ref.current;
+      const current3 = ref1.current;
       if (current3 != null) {
         current3.play(c4, c4);
       }
     } else {
       if (tmp) {
         if (num2 >= 0) {
-          const current2 = ref.current;
+          const current2 = ref1.current;
           if (current2 != null) {
             current2.play(tmp2, sum1);
           }
         }
       }
-      const current = ref.current;
+      const current = ref1.current;
       if (current != null) {
         current.play(start, c4);
       }
     }
   }, items1);
   const items2 = [callback];
-  const imperativeHandle = noop.useImperativeHandle(arg1, () => ({
+  const imperativeHandle = noop.useImperativeHandle(ref, () => ({
     play() {
       return callback();
     }
@@ -357,13 +357,13 @@ export const LottieIcon = noop.forwardRef(ReactCompilerGating.isReactCompilerEna
     if (autoPlay) {
       callback();
     } else {
-      const current = ref.current;
+      const current = ref1.current;
       if (current != null) {
         current.play(start, start);
       }
     }
   }, items3);
-  const obj3 = { ref, source: color.dotLottie, colorFilters: null, hardwareAccelerationAndroid: true, loop: false, onAnimationLoaded: null, resizeMode: "cover", style: null };
+  const obj3 = { ref: ref1, source: color.dotLottie, colorFilters: null, hardwareAccelerationAndroid: true, loop: false, onAnimationLoaded: null, resizeMode: "cover", style: null };
   let tmp21;
   const tmp3Result = useToken;
   if (!useLottieDefaultColors) {
@@ -373,6 +373,6 @@ export const LottieIcon = noop.forwardRef(ReactCompilerGating.isReactCompilerEna
   obj3.onAnimationLoaded = callback1;
   const items4 = [size1, { opacity: num }];
   obj3.style = items4;
-  obj2.children = jsx(_modDef5928, { ref, source: color.dotLottie, colorFilters: null, hardwareAccelerationAndroid: true, loop: false, onAnimationLoaded: null, resizeMode: "cover", style: null });
+  obj2.children = jsx(_modDef6111, { ref: ref1, source: color.dotLottie, colorFilters: null, hardwareAccelerationAndroid: true, loop: false, onAnimationLoaded: null, resizeMode: "cover", style: null });
   return <View style={size1}>{null}</View>;
-}));
+});

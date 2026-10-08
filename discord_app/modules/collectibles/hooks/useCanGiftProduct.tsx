@@ -1,18 +1,18 @@
-// === Module 13016: useCanGiftProduct ===
+// === Module 13294: useCanGiftProduct ===
 
-// Module 13016 (useCanGiftProduct)
-import CollectiblesItemType from "CollectiblesItemType" /* 1980 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4534 */;
-import BillingPlatformUtils from "BillingPlatformUtils" /* 4547 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7077 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7078 */;
-import useCurrentUser from "useCurrentUser" /* 7860 */;
+// Module 13294 (useCanGiftProduct)
+import CollectiblesItemType from "CollectiblesItemType" /* 1992 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4726 */;
+import BillingPlatformUtils from "BillingPlatformUtils" /* 4739 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7263 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7264 */;
+import useCurrentUser from "useCurrentUser" /* 8278 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/collectibles/hooks/useCanGiftProduct.tsx");
 
-export const useCanGiftProduct = ReactCompilerGating.isReactCompilerEnabled() ? ((type) => {
+export const useCanGiftProduct = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanGiftProduct(type) {
   const currentUser = useCurrentUser.useCurrentUser();
   let result = CollectiblesUtils.isPremiumCollectiblesProduct(type);
   const result1 = CollectiblesUtils.isFreeCollectiblesProduct(type);
@@ -42,7 +42,7 @@ export const useCanGiftProduct = ReactCompilerGating.isReactCompilerEnabled() ? 
     const tmpResult2 = BillingPlatformUtils;
   }
   return !result;
-}) : ((type) => {
+}) : (function useCanGiftProduct(type) {
   const currentUser = useCurrentUser.useCurrentUser();
   let result = CollectiblesUtils.isPremiumCollectiblesProduct(type);
   const result1 = CollectiblesUtils.isFreeCollectiblesProduct(type);

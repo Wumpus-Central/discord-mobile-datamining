@@ -1,23 +1,23 @@
-// === Module 7590: ContextMenu ===
+// === Module 9297: ContextMenu ===
 
-// Module 7590 (ContextMenu)
+// Module 9297 (ContextMenu)
 import util from "util" /* 1126 */;
-import PlatformUtils2 from "PlatformUtils" /* 1369 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import shared from "shared" /* 4735 */;
-import HapticUtils from "HapticUtils" /* 4861 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5777 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 5786 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6147 */;
-import ContextMenuState from "ContextMenuState" /* 7591 */;
-import ContextMenuConstants from "ContextMenuConstants" /* 7592 */;
-import UID from "UID" /* 7593 */;
+import PlatformUtils2 from "PlatformUtils" /* 1381 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import shared from "shared" /* 4929 */;
+import HapticUtils from "HapticUtils" /* 5055 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5360 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 5369 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6326 */;
+import ContextMenuState from "ContextMenuState" /* 9298 */;
+import ContextMenuConstants from "ContextMenuConstants" /* 9299 */;
+import UID from "UID" /* 9300 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ Fragment: closure_4, jsx: hasOwnProperty } = jsxProd);
-const PlatformUtils = fn(1369);
+const PlatformUtils = fn(1381);
 let closure_6 = PlatformUtils.isIOS();
 let closure_7 = { code: "function ContextMenuNativeTsx1(){const{_isIOS,buttonTagSV,measureInWindowForFWO,measure,buttonRef,title,itemCount,dividerIndexes_0,approximateItemHeight,CONTEXT_MENU_DIVIDER_HEIGHT,CONTEXT_MENU_OFFSET,screenHeight,CONTEXT_MENU_EDGE_OFFSET,screenWidth,CONTEXT_MENU_MIN_WIDTH,menuAlign,runOnJS,showMenu}=this.__closure;let pageX;let pageY;let width_0;let height_0;if(_isIOS){const tag_0=buttonTagSV.get();if(tag_0===-1)return;const m=measureInWindowForFWO(tag_0);if(m==null)return;pageX=m.x;pageY=m.y;width_0=m.width;height_0=m.height;}else{const m_0=measure(buttonRef);if(m_0==null)return;pageX=m_0.pageX;pageY=m_0.pageY;width_0=m_0.width;height_0=m_0.height;}const rowCount=title!=null?itemCount+1:itemCount;const dividerCount=(title!=null?1:0)+dividerIndexes_0.length;const menuHeight=approximateItemHeight.get()*rowCount+CONTEXT_MENU_DIVIDER_HEIGHT*dividerCount;const positionBelowOffset=pageY+height_0+CONTEXT_MENU_OFFSET;const positionAboveOffset=screenHeight-pageY+CONTEXT_MENU_OFFSET;const availableSpaceBelow=screenHeight-positionBelowOffset-CONTEXT_MENU_EDGE_OFFSET;const availableSpaceAbove=pageY-CONTEXT_MENU_EDGE_OFFSET;const wouldOverflowBelow=availableSpaceBelow<menuHeight;const wouldOverflowAbove=availableSpaceAbove<menuHeight;const minimumRightPosition=Math.max(screenWidth-pageX-width_0,CONTEXT_MENU_EDGE_OFFSET);function autoPositionVertical(offset){'worklet';let positionY_0='below';let y_0=pageY+height_0+CONTEXT_MENU_OFFSET;if(wouldOverflowBelow===wouldOverflowAbove){if(availableSpaceBelow>availableSpaceAbove){positionY_0='below';}else{positionY_0='above';}}else if(wouldOverflowBelow){positionY_0='above';}else{positionY_0='below';}y_0=(positionY_0==='above'?positionAboveOffset:positionBelowOffset)+(offset!==null&&offset!==void 0?offset:0);return{y:y_0,positionY:positionY_0};}function autoPositionHorizontal(){'worklet';const maxOffset=Math.max(CONTEXT_MENU_EDGE_OFFSET,screenWidth-CONTEXT_MENU_EDGE_OFFSET-CONTEXT_MENU_MIN_WIDTH);const fitsLeft=pageX<=maxOffset;const fitsRight=minimumRightPosition<=maxOffset;const distanceFromLeftEdge=pageX-CONTEXT_MENU_EDGE_OFFSET;const distanceFromRightEdge=screenWidth-CONTEXT_MENU_EDGE_OFFSET-(pageX+CONTEXT_MENU_MIN_WIDTH);let positionX_0='left';let x_0=pageX;if(fitsLeft!==fitsRight?fitsRight:distanceFromLeftEdge>distanceFromRightEdge){positionX_0='right';x_0=minimumRightPosition;}return{x:Math.min(x_0,maxOffset),positionX:positionX_0};}if(menuAlign==='auto'){const{y:y_1,positionY:positionY_1}=autoPositionVertical();const{x:x_1,positionX:positionX_1}=autoPositionHorizontal();runOnJS(showMenu)(x_1,y_1,positionX_1,positionY_1,menuHeight,width_0);}else if(menuAlign==='above'||menuAlign==='below'){const positionY_2=menuAlign;const y_2=positionY_2==='above'?positionAboveOffset:positionBelowOffset;const{x:x_2,positionX:positionX_2}=autoPositionHorizontal();runOnJS(showMenu)(x_2,y_2,positionX_2,positionY_2,menuHeight,width_0);}else{const positionX_3=menuAlign==='left'?'right':'left';const x_3=positionX_3==='left'?pageX+width_0+CONTEXT_MENU_OFFSET:minimumRightPosition+width_0+CONTEXT_MENU_OFFSET;const{y:y_3,positionY:positionY_3}=autoPositionVertical(-1*(CONTEXT_MENU_OFFSET+height_0));runOnJS(showMenu)(x_3,y_3,positionX_3,positionY_3,menuHeight,width_0);}}" };
 const __initData = { code: "function autoPositionVertical_ContextMenuNativeTsx2(offset){const{pageY,height_0,CONTEXT_MENU_OFFSET,wouldOverflowBelow,wouldOverflowAbove,availableSpaceBelow,availableSpaceAbove,positionAboveOffset,positionBelowOffset}=this.__closure;let positionY_0='below';let y_0=pageY+height_0+CONTEXT_MENU_OFFSET;if(wouldOverflowBelow===wouldOverflowAbove){if(availableSpaceBelow>availableSpaceAbove){positionY_0='below';}else{positionY_0='above';}}else if(wouldOverflowBelow){positionY_0='above';}else{positionY_0='below';}y_0=(positionY_0==='above'?positionAboveOffset:positionBelowOffset)+(offset!==null&&offset!==void 0?offset:0);return{y:y_0,positionY:positionY_0};}" };

@@ -1,16 +1,16 @@
-// === Module 9011: FramesNativeManager ===
+// === Module 11150: FramesNativeManager ===
 
-// Module 9011 (FramesNativeManager)
+// Module 11150 (FramesNativeManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1126 */;
-import GlobalUtils from "GlobalUtils" /* 1375 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5715 */;
-import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 9012 */;
-import FramesStore from "FramesStore" /* 9000 */;
-import FramesManager from "FramesManager" /* 9013 */;
+import GlobalUtils from "GlobalUtils" /* 1387 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5298 */;
+import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 10624 */;
+import FramesStore from "FramesStore" /* 10612 */;
+import FramesManager from "FramesManager" /* 11151 */;
 
 require = fn;
-const PlatformUtils = fn(1370);
+const PlatformUtils = fn(1382);
 let nativeEventEmitter = null;
 if (PlatformUtils.isAndroid()) {
   nativeEventEmitter = new fn(17).NativeEventEmitter(NativeAppLifecycleModuleDefault);

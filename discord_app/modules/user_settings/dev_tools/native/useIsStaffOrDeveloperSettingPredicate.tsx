@@ -1,16 +1,16 @@
-// === Module 14666: useIsStaffOrDeveloperSettingPredicate ===
+// === Module 14927: useIsStaffOrDeveloperSettingPredicate ===
 
-// Module 14666 (useIsStaffOrDeveloperSettingPredicate)
+// Module 14927 (useIsStaffOrDeveloperSettingPredicate)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7217 */;
+import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7397 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/dev_tools/native/useIsStaffOrDeveloperSettingPredicate.tsx");
 
-export const useStaffOrDeveloperSettingPredicate = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useStaffOrDeveloperSettingPredicate = ReactCompilerGating.isReactCompilerEnabled() ? (function useStaffOrDeveloperSettingPredicate() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [DeveloperExperimentStore];
@@ -25,7 +25,7 @@ export const useStaffOrDeveloperSettingPredicate = ReactCompilerGating.isReactCo
     [tmp4, tmp5] = cResult;
   }
   return initialize.useStateFromStores(tmp4, tmp5);
-}) : (() => {
+}) : (function useStaffOrDeveloperSettingPredicate() {
   const items = [DeveloperExperimentStore];
   return initialize.useStateFromStores(items, () => isDeveloper.isDeveloper);
 });

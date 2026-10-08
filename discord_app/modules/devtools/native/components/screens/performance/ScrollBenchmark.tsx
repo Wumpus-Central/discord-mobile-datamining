@@ -1,9 +1,9 @@
-// === Module 15631: ScrollBenchmark ===
+// === Module 15911: ScrollBenchmark ===
 
-// Module 15631 (ScrollBenchmark)
+// Module 15911 (ScrollBenchmark)
 import c from "c" /* 576 */;
-import TableRow from "TableRow" /* 6000 */;
-import useFrameMonitorDefault from "useFrameMonitor" /* 15628 */;
+import TableRow from "TableRow" /* 6184 */;
+import useFrameMonitorDefault from "useFrameMonitor" /* 15908 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/devtools/native/components/screens/performance/ScrollBenchmark.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((subLabel) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ScrollBenchmark(subLabel) {
   const cResult = c.c(5);
   subLabel = subLabel.subLabel;
   let str = "Records frame times while you scroll the content below.";
@@ -49,7 +49,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((subLabel) => {
   cResult[3] = start;
   cResult[4] = tmp6;
   tmp5 = tmp6;
-}) : ((subLabel) => {
+}) : (function ScrollBenchmark(subLabel) {
   let str = subLabel.subLabel;
   if (str === undefined) {
     str = "Records frame times while you scroll the content below.";

@@ -1,13 +1,13 @@
-// === Module 15559: CheckpointStatsScreen ===
+// === Module 15830: CheckpointStatsScreen ===
 
-// Module 15559 (CheckpointStatsScreen)
+// Module 15830 (CheckpointStatsScreen)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import CheckpointTextDefault from "CheckpointText" /* 15555 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 15557 */;
+import CheckpointTextDefault from "CheckpointText" /* 15821 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 15823 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
+import createStyles from "createStyles" /* 5090 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -18,7 +18,7 @@ let closure_6 = createStyles.createStyles(obj);
 let obj2 = { flexGrow: 1, justifyContent: "center", gap: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_64 };
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/screens/stats/CheckpointStatsScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((name) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function CheckpointStatsScreen(name) {
   const cResult = c.c(7);
   name = name.name;
   const tmp3 = closure_6();
@@ -56,7 +56,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((name) => {
   cResult[3] = tmp9;
   tmp8 = tmp9;
   const obj4 = { variant: "display-md", style: tmp3.name, adjustsFontSizeToFit: true, lineClamp: 2, children: name };
-}) : ((children) => {
+}) : (function CheckpointStatsScreen(children) {
   const tmp = closure_6();
   const obj = { children: null };
   const obj2 = { style: tmp.container, children: null };

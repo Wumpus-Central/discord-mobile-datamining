@@ -1,11 +1,11 @@
-// === Module 10564: NativePaymentContext ===
+// === Module 10161: NativePaymentContext ===
 
-// Module 10564 (NativePaymentContext)
-import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 6770 */;
-import ContextUtilsDefault from "ContextUtils" /* 6947 */;
+// Module 10161 (NativePaymentContext)
+import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 6946 */;
+import ContextUtilsDefault from "ContextUtils" /* 7136 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4539 */;
+import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4731 */;
 
 require = fn;
 const PaymentGateways = fn(1096).PaymentGateways;
@@ -16,7 +16,7 @@ const importDefaultResultResult = _slicedToArray(ContextUtilsDefault(), 3);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/payments/native/NativePaymentContext.tsx");
 
-export const NativePaymentContextProvider = ReactCompilerGating.isReactCompilerEnabled() ? ((activeSubscription) => {
+export const NativePaymentContextProvider = ReactCompilerGating.isReactCompilerEnabled() ? (function NativePaymentContextProvider(activeSubscription) {
   const cResult = skuIDs(selectedPlanId[7]).c(17);
   ({ children, skuIDs } = activeSubscription);
   activeSubscription = activeSubscription.activeSubscription;
@@ -108,7 +108,7 @@ export const NativePaymentContextProvider = ReactCompilerGating.isReactCompilerE
   tmp7 = items2;
   tmp6 = fn;
   const obj2 = storeFront(selectedPlanId[8]);
-}) : ((skuIDs) => {
+}) : (function NativePaymentContextProvider(skuIDs) {
   skuIDs = skuIDs.skuIDs;
   let storeFront;
   let selectedPlanId;

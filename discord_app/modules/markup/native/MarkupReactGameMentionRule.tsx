@@ -1,32 +1,32 @@
-// === Module 13674: MarkupReactGameMentionRule ===
+// === Module 13896: MarkupReactGameMentionRule ===
 
-// Module 13674 (MarkupReactGameMentionRule)
+// Module 13896 (MarkupReactGameMentionRule)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useGame from "useGame" /* 6822 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8352 */;
-import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8358 */;
+import useGame from "useGame" /* 6995 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8850 */;
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8856 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsxs: c3, jsx: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { icon: null, chip: null, chipText: null };
 let size = { width: 16, height: 16, borderRadius: nativeDefault.radii.xs, marginRight: 2 };
 obj2.icon = size;
-obj2.chip = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.xs, paddingHorizontal: 2 };
-let obj3 = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.xs, paddingHorizontal: 2 };
-obj2.chipText = { color: nativeDefault.unsafe_rawColors.BRAND_500 };
+obj2.chip = { backgroundColor: nativeDefault.colors.MENTION_BACKGROUND, borderRadius: nativeDefault.radii.xs, paddingHorizontal: 2 };
+let obj3 = { backgroundColor: nativeDefault.colors.MENTION_BACKGROUND, borderRadius: nativeDefault.radii.xs, paddingHorizontal: 2 };
+obj2.chipText = { color: nativeDefault.colors.MENTION_FOREGROUND };
 let closure_5 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((state) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function MarkupGameMention(state) {
   const cResult = state(576).c(28);
   state = state.state;
   const tmp4 = closure_5();
   const gameId = state.node.gameId;
   let obj = state(576);
-  const gameMentionData = state(5898).useGameMentionData(gameId);
+  const gameMentionData = state(8210).useGameMentionData(gameId);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = tmp(1126).intl;
     const stringResult = intl.string(tmp(1126).t["11pdXZ"]);
@@ -64,7 +64,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((state) => {
       const obj3 = { color: textColor1, children: null };
       const items = ["@", first];
       obj3.children = items;
-      const tmp33 = closure_3(tmp(4884).MarkupText, obj3, state.key);
+      const tmp33 = closure_3(tmp(5078).MarkupText, obj3, state.key);
       cResult[4] = state.key;
       cResult[5] = textColor1;
       cResult[6] = tmp33;
@@ -73,7 +73,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((state) => {
       if (cResult[7] === gameId) {
         if (cResult[10] !== tmp4.icon) {
           const obj4 = { size: "sm", style: tmp4.icon };
-          const tmp15 = closure_4(tmp(8281).UnknownGameIcon, obj4);
+          const tmp15 = closure_4(tmp(7662).UnknownGameIcon, obj4);
           cResult[10] = tmp4.icon;
           cResult[11] = tmp15;
           let tmp13 = tmp15;
@@ -115,7 +115,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((state) => {
             const obj5 = { accessibilityRole: str2, style: tmp4.chip, color: textColor, onPress: tmp23, children: null };
             const items1 = [tmp13, tmp24];
             obj5.children = items1;
-            const tmp29 = closure_3(tmp(4884).MarkupText, obj5, state.key);
+            const tmp29 = closure_3(tmp(5078).MarkupText, obj5, state.key);
             cResult[20] = tmp13;
             cResult[21] = state.key;
             cResult[22] = tmp4.chip;
@@ -127,7 +127,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((state) => {
             tmp27 = tmp29;
           }
           const obj6 = { variant: "text-sm/medium", style: tmp4.chipText, children: gameName };
-          const tmp26 = closure_4(tmp(4892).Text, obj6);
+          const tmp26 = closure_4(tmp(5086).Text, obj6);
           cResult[17] = gameName;
           cResult[18] = tmp4.chipText;
           cResult[19] = tmp26;
@@ -144,32 +144,32 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((state) => {
           if (cResult[14] === tmp4.icon) {
           }
           const obj8 = { style: tmp4.icon, source: tmp17 };
-          const tmp21 = closure_4(gameId(5981), obj8);
+          const tmp21 = closure_4(gameId(6164), obj8);
           cResult[14] = tmp4.icon;
           cResult[15] = tmp17;
           cResult[16] = tmp21;
         }
       }
-      const fn = function v() {
+      function handlePress() {
         const obj = GameProfileActionCreatorsDefault;
         obj.openGameProfileModal({ gameId, gameProfileModalChecks: { shouldOpenGameProfile: true, gameId }, source: GameProfileAnalyticUtils.GameProfileSources.GameMention, sourceUserId: state.authorId });
-      };
+      }
       cResult[7] = gameId;
       cResult[8] = state.authorId;
-      cResult[9] = fn;
+      cResult[9] = handlePress;
     }
   }
-  const tmp11 = gameId(2017)(gameId, gameIcon, { size: 32 });
+  const tmp11 = gameId(2029)(gameId, gameIcon, { size: 32 });
   cResult[1] = gameId;
   cResult[2] = gameIcon;
   cResult[3] = tmp11;
   tmp10 = tmp11;
-  const obj2 = state(5898);
-}) : ((state) => {
+  const obj2 = state(8210);
+}) : (function MarkupGameMention(state) {
   state = state.state;
   const tmp = closure_5();
   const gameId = state.node.gameId;
-  const gameMentionData = state(5898).useGameMentionData(gameId);
+  const gameMentionData = state(8210).useGameMentionData(gameId);
   const intl = state(1126).intl;
   const stringResult = intl.string(state(1126).t["11pdXZ"]);
   let gameName;
@@ -180,12 +180,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((state) => {
     gameName = stringResult;
   }
   let gameIcon;
-  let obj = state(5898);
+  let obj = state(8210);
   const tmp7 = gameId;
   if (gameMentionData != null) {
     gameIcon = gameMentionData.gameIcon;
   }
-  const tmp8Result = gameId(2017)(gameId, gameIcon, { size: 32 });
+  const tmp8Result = gameId(2029)(gameId, gameIcon, { size: 32 });
   if (null == gameMentionData) {
     let textColor;
     if (state != null) {
@@ -194,19 +194,19 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((state) => {
     const obj2 = { color: textColor, children: null };
     const items = ["@", stringResult];
     obj2.children = items;
-    return closure_3(tmp2(4884).MarkupText, obj2, state.key);
+    return closure_3(tmp2(5078).MarkupText, obj2, state.key);
   } else {
     const obj3 = { size: "sm", style: tmp.icon };
     let tmp11 = null != tmp8Result;
     if (tmp11) {
       tmp11 = "" !== tmp8Result;
     }
-    let tmp17Result = closure_4(tmp2(8281).UnknownGameIcon, obj3);
+    let tmp17Result = closure_4(tmp2(7662).UnknownGameIcon, obj3);
     if (tmp11) {
       const obj4 = { style: tmp.icon, source: null };
       const obj5 = { uri: tmp8Result };
       obj4.source = obj5;
-      tmp17Result = closure_4(tmp7(5981), obj4);
+      tmp17Result = closure_4(tmp7(6164), obj4);
     }
     let str2 = "button";
     if (state.noStyleAndInteraction) {
@@ -218,25 +218,25 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((state) => {
       textColor1 = state.textColor;
     }
     obj6.color = textColor1;
-    let fn;
+    let handlePress;
     if (!state.noStyleAndInteraction) {
-      fn = () => {
+      handlePress = function handlePress() {
         const obj = GameProfileActionCreatorsDefault;
         obj.openGameProfileModal({ gameId, gameProfileModalChecks: { shouldOpenGameProfile: true, gameId }, source: GameProfileAnalyticUtils.GameProfileSources.GameMention, sourceUserId: state.authorId });
       };
     }
-    obj6.onPress = fn;
+    obj6.onPress = handlePress;
     const items1 = [tmp17Result, ];
     const obj7 = { variant: "text-sm/medium", style: tmp.chipText, children: gameName };
-    items1[1] = closure_4(tmp2(4892).Text, obj7);
+    items1[1] = closure_4(tmp2(5086).Text, obj7);
     obj6.children = items1;
-    return closure_3(tmp2(4884).MarkupText, obj6, state.key);
+    return closure_3(tmp2(5078).MarkupText, obj6, state.key);
   }
-  const tmp8 = gameId(2017);
+  const tmp8 = gameId(2029);
 });
 let closure_6 = tmp4;
 ReactCompilerGating = fn(558);
-let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function FetchingGameMention(arg0) {
   const cResult = c.c(3);
   ({ node, state } = arg0);
   const game = useGame.useGame(node.gameId);
@@ -251,7 +251,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = state;
   cResult[2] = tmp4;
   tmp3 = tmp4;
-}) : ((state) => {
+}) : (function FetchingGameMention(state) {
   const node = state.node;
   const game = useGame.useGame(node.gameId);
   return React4(closure_6, { node, state: state.state });

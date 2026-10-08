@@ -1,19 +1,19 @@
-// === Module 10611: UsersFastList ===
+// === Module 10208: UsersFastList ===
 
-// Module 10611 (UsersFastList)
+// Module 10208 (UsersFastList)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Pressables from "Pressables" /* 5916 */;
-import ThemedGradientDefault from "ThemedGradient" /* 5918 */;
-import TableRow from "TableRow" /* 6000 */;
-import ClientThemesOverrides from "ClientThemesOverrides" /* 7518 */;
-import useFastestListTableRowPlaceholderConfig from "useFastestListTableRowPlaceholderConfig" /* 10613 */;
-import UserRowDefault from "UserRow" /* 10615 */;
-import GroupDMRowDefault from "GroupDMRow" /* 10660 */;
-import ChannelRowDefault from "ChannelRow" /* 10663 */;
+import native from "native" /* 1200 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import TableRow from "TableRow" /* 6184 */;
+import Pressables from "Pressables" /* 6189 */;
+import ClientThemesOverrides from "ClientThemesOverrides" /* 9241 */;
+import useFastestListTableRowPlaceholderConfig from "useFastestListTableRowPlaceholderConfig" /* 10210 */;
+import ThemedGradientDefault from "ThemedGradient" /* 10211 */;
+import UserRowDefault from "UserRow" /* 10213 */;
+import GroupDMRowDefault from "GroupDMRow" /* 10260 */;
+import ChannelRowDefault from "ChannelRow" /* 10263 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,11 +21,11 @@ const ReanimatedRexportDefault = ReanimatedRexport;
 
 require = fn;
 const View = fn(17).View;
-const UsersFastListConstants = fn(10612);
+const UsersFastListConstants = fn(10209);
 const USERS_LIST_PADDING_BETWEEN_SECTIONS = UsersFastListConstants.USERS_LIST_PADDING_BETWEEN_SECTIONS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { sectionHeader: { flex: 1, overflow: "hidden", top: -1 * UsersFastListConstants.USERS_LIST_SECTION_BOTTOM_PADDING }, stickyHeader: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, list: null, emptySection: null, section: null, interactiveSection: null, titlePressable: null, titleRow: null, badgeWrapper: null, badge: null };
 let obj3 = { flex: 1, overflow: "hidden", top: -1 * UsersFastListConstants.USERS_LIST_SECTION_BOTTOM_PADDING };
 let obj4 = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
@@ -43,12 +43,12 @@ const rect = { position: "absolute", left: nativeDefault.space.PX_4 + nativeDefa
 obj.badge = rect;
 let closure_10 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Placeholder(arg0) {
   const cResult = c.c(11);
   ({ start, end } = arg0);
   const fastestListTableRowPlaceholderStyles = useFastestListTableRowPlaceholderConfig.useFastestListTableRowPlaceholderStyles();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function n() {
+    const fn = function o() {
       return { width: `${10 + 80 * Math.random() | 0}%` };
     };
     cResult[0] = fn;
@@ -97,7 +97,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = first1;
   cResult[3] = tmp8;
   tmp7 = tmp8;
-}) : ((arg0) => {
+}) : (function Placeholder(arg0) {
   ({ start, end } = arg0);
   const fastestListTableRowPlaceholderStyles = useFastestListTableRowPlaceholderConfig.useFastestListTableRowPlaceholderStyles();
   const obj2 = { end, start, label: null, icon: null, height: "100%" };
@@ -109,7 +109,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return React5(TableRow.TableRow, obj2);
 });
 ReactCompilerGating = fn(558);
-let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlaceholderSection() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const tmp5 = React5(View, {});
@@ -119,7 +119,9 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     first = cResult[0];
   }
   return first;
-}) : (() => React5(View, {}));
+}) : (function PlaceholderSection() {
+  return React5(View, {});
+});
 const __initData = { code: "function UsersFastListTsx1(){const{scrollPosValue,stickyAt}=this.__closure;var _scrollPosValue;const scrollPos=(_scrollPosValue=scrollPosValue)===null||_scrollPosValue===void 0?void 0:_scrollPosValue.get();if(scrollPos==null||stickyAt==null){return false;}return scrollPos>=stickyAt;}" };
 const __initData2 = { code: "function UsersFastListTsx2(){const{isSticky,styles}=this.__closure;return{backgroundColor:isSticky.get()?styles.stickyHeader.backgroundColor:\"transparent\"};}" };
 const __initData3 = { code: "function UsersFastListTsx3(){const{isSticky}=this.__closure;return{opacity:isSticky.get()?1:0};}" };
@@ -127,7 +129,7 @@ const __initData4 = { code: "function UsersFastListTsx4(){const{scrollPosValue,s
 const __initData5 = { code: "function UsersFastListTsx5(){const{isSticky,styles}=this.__closure;return{backgroundColor:isSticky.get()?styles.stickyHeader.backgroundColor:'transparent'};}" };
 const __initData6 = { code: "function UsersFastListTsx6(){const{isSticky}=this.__closure;return{opacity:isSticky.get()?1:0};}" };
 ReactCompilerGating = fn(558);
-let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((stickyAt) => {
+let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function UserSectionInner(stickyAt) {
   const cResult = c.c(40);
   ({ title, colorOverride, actionTitle, action, badge, scrollPosValue } = stickyAt);
   stickyAt = stickyAt.stickyAt;
@@ -152,7 +154,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((stic
       if (cResult[4] === clientThemesOverride) {
         let tmp10 = cResult[5];
       }
-      class E {
+      class V {
         constructor() {
           obj = scrollPosValue;
           value = undefined;
@@ -172,12 +174,12 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((stic
         }
       }
       const obj3 = { scrollPosValue, stickyAt };
-      E.__closure = obj3;
-      E.__workletHash = 15448160320615;
-      E.__initData = __initData;
-      const derivedValue = ReanimatedRexport.useDerivedValue(E);
+      V.__closure = obj3;
+      V.__workletHash = 15448160320615;
+      V.__initData = __initData;
+      const derivedValue = ReanimatedRexport.useDerivedValue(V);
       const tmpResult4 = ReanimatedRexport;
-      class O {
+      class E {
         constructor() {
           backgroundColor = "transparent";
           if (closure_3.get()) {
@@ -188,15 +190,15 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((stic
         }
       }
       const obj4 = { isSticky: derivedValue, styles: tmp4 };
-      O.__closure = obj4;
-      O.__workletHash = 11315917458152;
-      O.__initData = __initData2;
-      const animatedStyle = ReanimatedRexport.useAnimatedStyle(O);
+      E.__closure = obj4;
+      E.__workletHash = 11315917458152;
+      E.__initData = __initData2;
+      const animatedStyle = ReanimatedRexport.useAnimatedStyle(E);
       if (cResult[6] === animatedStyle) {
         if (cResult[7] === tmp4.sectionHeader) {
           let tmp15 = cResult[8];
         }
-        class M {
+        class F {
           constructor() {
             opacity = 0;
             if (closure_3.get()) {
@@ -206,14 +208,14 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((stic
           }
         }
         const obj5 = { isSticky: derivedValue };
-        M.__closure = obj5;
-        M.__workletHash = 13270974904859;
-        M.__initData = __initData3;
-        const animatedStyle1 = ReanimatedRexport.useAnimatedStyle(M);
+        F.__closure = obj5;
+        F.__workletHash = 13270974904859;
+        F.__initData = __initData3;
+        const animatedStyle1 = ReanimatedRexport.useAnimatedStyle(F);
         if (null == title) {
           if (null == actionTitle) {
             if (cResult[9] !== tmp4.emptySection) {
-              class M {
+              class F {
                 constructor() {
                   opacity = 0;
                   if (closure_3.get()) {
@@ -274,7 +276,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((stic
                                   }
                                 }
                               }
-                              class M {
+                              class F {
                                 constructor() {
                                   opacity = 0;
                                   if (closure_3.get()) {
@@ -284,7 +286,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((stic
                                 }
                               }
                               if (!disableStickySections) {
-                                class M {
+                                class F {
                                   constructor() {
                                     opacity = 0;
                                     if (closure_3.get()) {
@@ -297,7 +299,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((stic
                                 let tmp41 = !disableThemedGradient;
                                 if (!disableThemedGradient) {
                                   const obj6 = { style: null, children: null };
-                                  class M {
+                                  class F {
                                     constructor() {
                                       opacity = 0;
                                       if (closure_3.get()) {
@@ -318,7 +320,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((stic
                               cResult[36] = disableThemedGradient;
                               cResult[37] = tmp33;
                               cResult[38] = tmp15;
-                              class O {
+                              class E {
                                 constructor() {
                                   backgroundColor = "transparent";
                                   if (closure_3.get()) {
@@ -332,7 +334,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((stic
                               tmp36 = tmp38Result;
                             }
                           }
-                          class M {
+                          class F {
                             constructor() {
                               opacity = 0;
                               if (closure_3.get()) {
@@ -346,7 +348,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((stic
                           obj7.children = items1;
                           const tmp35 = closure_1_8(View, obj7);
                           cResult[30] = tmp10;
-                          class O {
+                          class E {
                             constructor() {
                               backgroundColor = "transparent";
                               if (closure_3.get()) {
@@ -360,7 +362,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((stic
                           cResult[33] = tmp35;
                           tmp33 = tmp35;
                         }
-                        class M {
+                        class F {
                           constructor() {
                             opacity = 0;
                             if (closure_3.get()) {
@@ -371,7 +373,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((stic
                         }
                         if (null != actionTitle) {
                           const obj8 = { onPress: null, children: null };
-                          class M {
+                          class F {
                             constructor() {
                               opacity = 0;
                               if (closure_3.get()) {
@@ -390,7 +392,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((stic
                         tmp30 = tmp31;
                       }
                     }
-                    class M {
+                    class F {
                       constructor() {
                         opacity = 0;
                         if (closure_3.get()) {
@@ -401,7 +403,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((stic
                     }
                     if (null != onTitlePress) {
                       const obj10 = { accessibilityRole: "button", style: null, onPress: null, children: null };
-                      class M {
+                      class F {
                         constructor() {
                           opacity = 0;
                           if (closure_3.get()) {
@@ -421,7 +423,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((stic
                     tmp27 = tmp28;
                   }
                 }
-                class M {
+                class F {
                   constructor() {
                     opacity = 0;
                     if (closure_3.get()) {
@@ -431,7 +433,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((stic
                   }
                 }
                 if (null != titleLeading) {
-                  class M {
+                  class F {
                     constructor() {
                       opacity = 0;
                       if (closure_3.get()) {
@@ -452,7 +454,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((stic
                 tmp22 = tmp23;
               }
             }
-            class M {
+            class F {
               constructor() {
                 opacity = 0;
                 if (closure_3.get()) {
@@ -467,7 +469,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((stic
             const tmp21 = closure_1_8(Text_Text.Text, obj11);
             cResult[15] = tmp18;
             cResult[16] = tmp5;
-            class O {
+            class E {
               constructor() {
                 backgroundColor = "transparent";
                 if (closure_3.get()) {
@@ -482,7 +484,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((stic
             tmp20 = tmp21;
           }
         }
-        class O {
+        class E {
           constructor() {
             backgroundColor = "transparent";
             if (closure_3.get()) {
@@ -514,7 +516,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((stic
   cResult[5] = items5;
   tmp10 = items5;
   const tmpResult = ClientThemesOverrides;
-}) : ((stickyAt) => {
+}) : (function UserSectionInner(stickyAt) {
   ({ title, colorOverride } = stickyAt);
   ({ actionTitle, badge, scrollPosValue } = stickyAt);
   stickyAt = stickyAt.stickyAt;
@@ -652,12 +654,12 @@ let obj8 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.spac
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/UsersFastList.tsx");
 
-export const UsersFastList = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((getSectionProps, arg1) => {
+export const UsersFastList = ReactCompilerGating.isReactCompilerEnabled() ? (function UsersFastListInner(getSectionProps) {
   const cResult = getItemProps(disableThemedGradient[8]).c(32);
   ({ sections, getItemProps } = getSectionProps);
   getSectionProps = getSectionProps.getSectionProps;
   ({ getItemSize, keyExtractor, insetStart, insetEnd, disableBottomSafeZone, disableStickySections, disableThemedGradient } = getSectionProps);
-  ({ disableBackgroundOverlay, inActionSheet, listHeaderSize, onContentLengthChange, onScroll, onLayout, renderListHeader, listStyleOverride } = getSectionProps);
+  ({ disableBackgroundOverlay, inActionSheet, listHeaderSize, onContentLengthChange, onScroll, onLayout, renderListHeader, listStyleOverride, ref } = getSectionProps);
   disableStickySections = tmp5;
   const tmp6 = closure_10();
   if (!tmp4) {
@@ -690,11 +692,11 @@ export const UsersFastList = noop.forwardRef(ReactCompilerGating.isReactCompiler
               str3 = "placeholder";
               if ("placeholder" === type) {
                 tmp16 = jsx;
-                tmp17 = f55374;
+                tmp17 = Placeholder;
                 obj6 = {};
                 tmp18 = obj6;
                 merged1 = Object.assign(element.props);
-                return jsx(f55374, obj6);
+                return jsx(Placeholder, obj6);
               } else {
                 str4 = "gdm";
                 if ("gdm" === type) {
@@ -784,11 +786,11 @@ export const UsersFastList = noop.forwardRef(ReactCompilerGating.isReactCompiler
               str3 = "placeholder";
               if ("placeholder" === type) {
                 tmp16 = jsx;
-                tmp17 = f55374;
+                tmp17 = Placeholder;
                 obj6 = {};
                 tmp18 = obj6;
                 merged1 = Object.assign(element.props);
-                return jsx(f55374, obj6);
+                return jsx(Placeholder, obj6);
               } else {
                 str4 = "gdm";
                 if ("gdm" === type) {
@@ -850,11 +852,11 @@ export const UsersFastList = noop.forwardRef(ReactCompilerGating.isReactCompiler
               str3 = "placeholder";
               if ("placeholder" === type) {
                 tmp16 = jsx;
-                tmp17 = f55374;
+                tmp17 = Placeholder;
                 obj6 = {};
                 tmp18 = obj6;
                 merged1 = Object.assign(element.props);
-                return jsx(f55374, obj6);
+                return jsx(Placeholder, obj6);
               } else {
                 str4 = "gdm";
                 if ("gdm" === type) {
@@ -915,11 +917,11 @@ export const UsersFastList = noop.forwardRef(ReactCompilerGating.isReactCompiler
                 str3 = "placeholder";
                 if ("placeholder" === type) {
                   tmp16 = jsx;
-                  tmp17 = f55374;
+                  tmp17 = Placeholder;
                   obj6 = {};
                   tmp18 = obj6;
                   merged1 = Object.assign(element.props);
-                  return jsx(f55374, obj6);
+                  return jsx(Placeholder, obj6);
                 } else {
                   str4 = "gdm";
                   if ("gdm" === type) {
@@ -981,11 +983,11 @@ export const UsersFastList = noop.forwardRef(ReactCompilerGating.isReactCompiler
                 str3 = "placeholder";
                 if ("placeholder" === type) {
                   tmp16 = jsx;
-                  tmp17 = f55374;
+                  tmp17 = Placeholder;
                   obj6 = {};
                   tmp18 = obj6;
                   merged1 = Object.assign(element.props);
-                  return jsx(f55374, obj6);
+                  return jsx(Placeholder, obj6);
                 } else {
                   str4 = "gdm";
                   if ("gdm" === type) {
@@ -1093,7 +1095,7 @@ export const UsersFastList = noop.forwardRef(ReactCompilerGating.isReactCompiler
       cResult[8] = K;
     }
   }
-  const fn = function l(arg0, arg1, scrollPosValue, stickyAt) {
+  const fn = function s(arg0, arg1, scrollPosValue, stickyAt) {
     const element = getSectionProps(arg0);
     let type;
     if (element != null) {
@@ -1119,7 +1121,7 @@ export const UsersFastList = noop.forwardRef(ReactCompilerGating.isReactCompiler
   cResult[3] = fn;
   let obj = getItemProps(disableThemedGradient[8]);
   tmp4 = undefined !== disableBottomSafeZone && disableBottomSafeZone;
-}) : ((getItemProps, ref) => {
+}) : (function UsersFastListInner(getItemProps) {
   getItemProps = getItemProps.getItemProps;
   const getSectionProps = getItemProps.getSectionProps;
   ({ getItemSize, insetEnd } = getItemProps);
@@ -1140,7 +1142,7 @@ export const UsersFastList = noop.forwardRef(ReactCompilerGating.isReactCompiler
   const listStyleOverride = getItemProps.listStyleOverride;
   closure_7 = undefined;
   let clientThemesOverride;
-  ({ inActionSheet, listHeaderSize, onContentLengthChange, onScroll, onLayout, renderListHeader } = getItemProps);
+  ({ inActionSheet, listHeaderSize, onContentLengthChange, onScroll, onLayout, renderListHeader, ref } = getItemProps);
   let tmp = closure_10();
   const list = tmp;
   let num = 0;
@@ -1175,8 +1177,8 @@ export const UsersFastList = noop.forwardRef(ReactCompilerGating.isReactCompiler
     }
   }, items);
   const items2 = [getSectionProps, tmp6];
-  const callback1 = disableBackgroundOverlay.useCallback((disableThemedGradient, arg1) => {
-    const element = getItemProps(disableThemedGradient, arg1);
+  const callback1 = disableBackgroundOverlay.useCallback((arg0, arg1) => {
+    const element = getItemProps(arg0, arg1);
     let type;
     if (element != null) {
       type = element.type;
@@ -1251,4 +1253,4 @@ export const UsersFastList = noop.forwardRef(ReactCompilerGating.isReactCompiler
   obj2.placeholderConfig = tmp12;
   obj2.listHeaderSize = listHeaderSize;
   return tmp13(getSectionProps(flag2[23]), obj2);
-}));
+});

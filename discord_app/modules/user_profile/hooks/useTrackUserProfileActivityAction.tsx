@@ -1,9 +1,9 @@
-// === Module 12862: useTrackUserProfileActivityAction ===
+// === Module 13011: useTrackUserProfileActivityAction ===
 
-// Module 12862 (useTrackUserProfileActivityAction)
+// Module 13011 (useTrackUserProfileActivityAction)
 import _mod19 from "module_19" /* 19 */;
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 7873 */;
-import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 8480 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8291 */;
+import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 8966 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -12,7 +12,7 @@ const require = globalThis.__r;
 _mod19.useCallback;
 let result = size.fileFinishedImporting("modules/user_profile/hooks/useTrackUserProfileActivityAction.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useTrackUserProfileActivityAction(user) {
   const cResult = user(activity[3]).c(13);
   user = user.user;
   const display = user.display;
@@ -38,7 +38,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
     first = cResult[0];
   }
   if (cResult[1] !== user.id) {
-    const fn = function c() {
+    const fn = function n() {
       return ContentInventoryOutboxStore.getUserOutbox(user.id);
     };
     cResult[1] = user.id;
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
       }
     }
   }
-  class P {
+  class C {
     constructor(arg0) {
       action = user.action;
       obj = { action, analyticsLocations };
@@ -90,9 +90,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
   cResult[9] = stream;
   cResult[10] = trackUserProfileAction;
   cResult[11] = voiceChannelId;
-  cResult[12] = P;
-  tmp9 = P;
-}) : ((activity) => {
+  cResult[12] = C;
+  tmp9 = C;
+}) : (function useTrackUserProfileActivityAction(activity) {
   ({ user: require, display } = activity);
   activity = activity.activity;
   const entry = activity.entry;

@@ -1,20 +1,20 @@
-// === Module 14630: IgnoredUsersList ===
+// === Module 14891: IgnoredUsersList ===
 
-// Module 14630 (IgnoredUsersList)
+// Module 14891 (IgnoredUsersList)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import TableRowGroup from "TableRowGroup" /* 6081 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6626 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 6664 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6688 */;
-import Blocked from "Blocked" /* 14623 */;
-import IgnoredUserRowDefault from "IgnoredUserRow" /* 14631 */;
+import native from "native" /* 1200 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import TableRowGroup from "TableRowGroup" /* 6267 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6803 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 6841 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6865 */;
+import Blocked from "Blocked" /* 14884 */;
+import IgnoredUserRowDefault from "IgnoredUserRow" /* 14892 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
 
@@ -22,13 +22,13 @@ require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { list: { marginTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16 }, sectionLabelStyle: null };
 let obj3 = { marginTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.sectionLabelStyle = { marginTop: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_8 };
 let closure_7 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((userIds) => {
+let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function IgnoredUsersList(userIds) {
   const cResult = c.c(21);
   userIds = userIds.userIds;
   const tmp4 = closure_7();
@@ -140,7 +140,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((userIds) => {
     cResult[5] = tmp10;
     tmp8 = tmp10;
   }
-}) : ((userIds) => {
+}) : (function IgnoredUsersList(userIds) {
   userIds = userIds.userIds;
   const tmp = closure_7();
   useAnalyticsLocationsDefault;
@@ -173,11 +173,11 @@ let obj4 = { marginTop: nativeDefault.space.PX_12, marginBottom: nativeDefault.s
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/content_and_social/native/IgnoredUsersList.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectedIgnoredUsersList() {
   const cResult = c.c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [RelationshipStore];
-    const fn = function l() {
+    const fn = function s() {
       return ignoredIDs.getIgnoredIDs();
     };
     cResult[0] = items;
@@ -198,7 +198,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp8 = cResult[3];
   }
   return tmp8;
-}) : (() => {
+}) : (function ConnectedIgnoredUsersList() {
   const items = [RelationshipStore];
   return hasOwnProperty(closure_8, { userIds: initialize.useStateFromStoresArray(items, () => ignoredIDs.getIgnoredIDs()) });
 });

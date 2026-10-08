@@ -1,19 +1,19 @@
-// === Module 16952: useFriendRequestCounts ===
+// === Module 17233: useFriendRequestCounts ===
 
-// Module 16952 (useFriendRequestCounts)
+// Module 17233 (useFriendRequestCounts)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7155 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7335 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIncomingFriendRequestCount() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [RelationshipStore, GameRelationshipStore];
-    const fn = function u() {
+    const fn = function o() {
       const items = [RelationshipStore, GameRelationshipStore];
       [obj, obj2] = items;
       const pendingCount = obj.getPendingCount();
@@ -27,7 +27,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     [tmp4, tmp5] = cResult;
   }
   return initialize.useStateFromStores(tmp4, tmp5);
-}) : (() => {
+}) : (function useIncomingFriendRequestCount() {
   let items = [RelationshipStore, GameRelationshipStore];
   return initialize.useStateFromStores(items, () => {
     const items = [RelationshipStore, GameRelationshipStore];

@@ -1,6 +1,6 @@
-// === Module 9448: RelationshipConstants ===
+// === Module 7005: RelationshipConstants ===
 
-// Module 9448 (RelationshipConstants)
+// Module 7005 (RelationshipConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/relationships/RelationshipConstants.tsx");

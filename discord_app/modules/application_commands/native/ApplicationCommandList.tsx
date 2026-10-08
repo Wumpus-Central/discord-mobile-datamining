@@ -1,17 +1,17 @@
-// === Module 12059: ApplicationCommandList ===
+// === Module 12132: ApplicationCommandList ===
 
-// Module 12059 (ApplicationCommandList)
+// Module 12132 (ApplicationCommandList)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const FlatList = fn(17).FlatList;
 const jsx = fn(21).jsx;
-let closure_7 = 3 * fn(10085).AUTOCOMPLETE_ROW_HEIGHT;
+let closure_7 = 3 * fn(9668).AUTOCOMPLETE_ROW_HEIGHT;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/native/ApplicationCommandList.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onPressCommandItem) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ApplicationCommandList(onPressCommandItem) {
   const cResult = channel(commands[5]).c(26);
   ({ style, channel } = onPressCommandItem);
   onPressCommandItem = onPressCommandItem.onPressCommandItem;
@@ -193,7 +193,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onPressCommandIt
       tmp12 = P;
     }
   }
-  class E {
+  class T {
     constructor(arg0) {
       item = onPressCommandItem.item;
       tmp = commands;
@@ -226,10 +226,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onPressCommandIt
   cResult[6] = channel.guild_id;
   cResult[7] = onPressCommandItem;
   cResult[8] = sections;
-  cResult[9] = E;
-  tmp9 = E;
+  cResult[9] = T;
+  tmp9 = T;
   const obj5 = onCommandsChange(commands[8]);
-}) : ((channel) => {
+}) : (function ApplicationCommandList(channel) {
   channel = channel.channel;
   const onPressCommandItem = channel.onPressCommandItem;
   const onCommandsChange = channel.onCommandsChange;

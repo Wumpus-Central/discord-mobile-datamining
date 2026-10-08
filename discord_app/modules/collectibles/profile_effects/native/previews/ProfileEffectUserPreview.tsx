@@ -1,8 +1,8 @@
-// === Module 10837: ProfileEffectUserPreview ===
+// === Module 10486: ProfileEffectUserPreview ===
 
-// Module 10837 (ProfileEffectUserPreview)
+// Module 10486 (ProfileEffectUserPreview)
 import c from "c" /* 576 */;
-import UserProfilePreviewDefault from "UserProfilePreview" /* 10838 */;
+import UserProfilePreviewDefault from "UserProfilePreview" /* 10487 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/profile_effects/native/previews/ProfileEffectUserPreview.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ProfileEffectUserPreview(arg0) {
   let mbHmX2 = require;
   const cResult = c.c(13);
   if (cResult[0] !== arg0) {
@@ -71,7 +71,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[12] = tmp21;
     tmp14 = tmp21;
   }
-}) : ((profileEffect) => {
+}) : (function ProfileEffectUserPreview(profileEffect) {
   profileEffect = profileEffect.profileEffect;
   ({ avatarDecorationOverride, profileFrameOverride } = profileEffect);
   const merged = Object.assign(profileEffect, Object.assign({ profileEffect: 0, avatarDecorationOverride: 0, profileFrameOverride: 0 }));

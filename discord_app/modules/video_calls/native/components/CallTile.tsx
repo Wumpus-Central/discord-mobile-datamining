@@ -1,38 +1,38 @@
-// === Module 9754: CallTile ===
+// === Module 10955: CallTile ===
 
-// Module 9754 (CallTile)
+// Module 10955 (CallTile)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4618 */;
-import timing from "timing" /* 4897 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5097 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7861 */;
-import _modDef8786 from "module_8786" /* 8786 */;
-import _modDef9477 from "module_9477" /* 9477 */;
-import TouchableStreamPreviewDefault from "TouchableStreamPreview" /* 9755 */;
-import _modDef9760 from "module_9760" /* 9760 */;
-import _modDef9761 from "module_9761" /* 9761 */;
-import _modDef9762 from "module_9762" /* 9762 */;
-import ParticipantTitleDefault from "ParticipantTitle" /* 9763 */;
+import native from "native" /* 1200 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4810 */;
+import timing from "timing" /* 5091 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5104 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8279 */;
+import TouchableStreamPreviewDefault from "TouchableStreamPreview" /* 10956 */;
+import _modDef10961 from "module_10961" /* 10961 */;
+import _modDef10962 from "module_10962" /* 10962 */;
+import _modDef10963 from "module_10963" /* 10963 */;
+import _modDef10964 from "module_10964" /* 10964 */;
+import _modDef10965 from "module_10965" /* 10965 */;
+import ParticipantTitleDefault from "ParticipantTitle" /* 10966 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4918 */;
-import UserStore from "UserStore" /* 1377 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5893 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(9086);
+const ChannelCallStore = fn(10333);
 ({ resetFocus: closure_8, toggleFocus: closure_9 } = ChannelCallStore);
-const CallConstants = fn(4917);
+const CallConstants = fn(5113);
 ({ ParticipantTypes: c10, isStreamParticipant: closure_11, VoicePlatforms: closure_12 } = CallConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { liveContainer: { position: "absolute", top: 8, right: 8 }, titleIcon: { marginRight: 6 }, usernameContainer: null, usernamePosition: null, streamPreview: null, screenshareContainer: null, stageStreamContainer: null };
 let obj3 = { flexDirection: "row", alignItems: "center", alignSelf: "flex-start", backgroundColor: null, borderRadius: null, paddingHorizontal: 8, paddingVertical: 4 };
-const ColorUtils = fn(4733);
+const ColorUtils = fn(4927);
 obj3.backgroundColor = ColorUtils.hexOpacityToRgba(nativeDefault.unsafe_rawColors.PRIMARY_700, 0.5);
 obj3.borderRadius = nativeDefault.radii.sm;
 obj.usernameContainer = obj3;
@@ -47,7 +47,7 @@ let closure_16 = createStyles.createStyles(obj);
 fn(558);
 let obj7 = { backgroundColor: nativeDefault.colors.BLACK };
 let ReactCompilerGating = fn(558);
-let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function StreamPreviewTile(arg0) {
   const cResult = c.c(11);
   ({ participant, style } = arg0);
   const tmp3 = closure_16();
@@ -58,7 +58,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     const _Symbol = Symbol;
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj2 = { aspectRatio: "duration", borderRadius: false };
+      const obj2 = { aspectRatio: "emoji", borderRadius: false };
       cResult[3] = obj2;
       let tmp6 = obj2;
     } else {
@@ -103,7 +103,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = tmp3.streamPreview;
   cResult[2] = items;
   tmp4 = items;
-}) : ((participant) => {
+}) : (function StreamPreviewTile(participant) {
   participant = participant.participant;
   const obj = { style: null, children: null };
   const items = [closure_16().streamPreview, participant.style];
@@ -111,7 +111,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   obj.children = __initData2(TouchableStreamPreviewDefault, {
     guildId: participant.stream.guildId,
     userId: participant.user.id,
-    style: { aspectRatio: "duration", borderRadius: false },
+    style: { aspectRatio: "emoji", borderRadius: false },
     disableTransition: true,
     onPress() {
       return closure_1_8();
@@ -121,23 +121,23 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 });
 let closure_17 = tmp7;
 ReactCompilerGating = fn(558);
-let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((participant) => {
+let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function ParticipantIcon(participant) {
   let titleIcon = dependencyMap;
   const cResult = c.c(3);
   participant = participant.participant;
   let titleIcon2 = closure_16();
   if (participant.type === constants.STREAM) {
-    let tmp4 = _modDef9760;
+    let tmp4 = _modDef10961;
   } else if (participant.type === tmp3.USER) {
     const voicePlatform = participant.voicePlatform;
     if (constants2.MOBILE === voicePlatform) {
-      tmp4 = _modDef9761;
+      tmp4 = _modDef10962;
     } else if (constants2.XBOX === voicePlatform) {
-      tmp4 = _modDef8786;
+      tmp4 = _modDef10963;
     } else if (constants2.PLAYSTATION === voicePlatform) {
-      tmp4 = _modDef9477;
+      tmp4 = _modDef10964;
     } else if (constants2.QUEST === voicePlatform) {
-      tmp4 = _modDef9762;
+      tmp4 = _modDef10965;
     }
   }
   if (null == tmp4) {
@@ -154,20 +154,20 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((participant) =
     cResult[1] = titleIcon2;
     cResult[2] = tmp13;
   }
-}) : ((participant) => {
+}) : (function ParticipantIcon(participant) {
   participant = participant.participant;
   if (participant.type === constants.STREAM) {
-    let tmp3 = _modDef9760;
+    let tmp3 = _modDef10961;
   } else if (participant.type === tmp2.USER) {
     const voicePlatform = participant.voicePlatform;
     if (constants2.MOBILE === voicePlatform) {
-      tmp3 = _modDef9761;
+      tmp3 = _modDef10962;
     } else if (constants2.XBOX === voicePlatform) {
-      tmp3 = _modDef8786;
+      tmp3 = _modDef10963;
     } else if (constants2.PLAYSTATION === voicePlatform) {
-      tmp3 = _modDef9477;
+      tmp3 = _modDef10964;
     } else if (constants2.QUEST === voicePlatform) {
-      tmp3 = _modDef9762;
+      tmp3 = _modDef10965;
     }
   }
   let tmp14 = null;
@@ -180,7 +180,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((participant) =
 const __initData = { code: "function CallTileTsx1(){const{withTiming,reveal,STANDARD_EASING}=this.__closure;return{opacity:withTiming(reveal?1:0,{easing:STANDARD_EASING,duration:250})};}" };
 const __initData2 = { code: "function CallTileTsx2(){const{withTiming,reveal,STANDARD_EASING}=this.__closure;return{opacity:withTiming(reveal?1:0,{easing:STANDARD_EASING,duration:250})};}" };
 ReactCompilerGating = fn(558);
-let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function TileOverlay(arg0) {
   const cResult = reveal(576).c(27);
   ({ participant, isActiveStream, channel } = arg0);
   ({ hasLeftSafeArea, hasRightSafeArea, hasBottomSafeArea, hasTopSafeArea } = arg0);
@@ -188,7 +188,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   let obj = reveal(576);
   const tmp = reveal;
   ({ bottom, left, top, right } = useSafeAreaInsetsDefault());
-  reveal = noop.useContext(reveal(9094).RevealContext).reveal;
+  reveal = noop.useContext(reveal(10671).RevealContext).reveal;
   const tmp6 = useSafeAreaInsetsDefault();
   const fn = function l() {
     let num = 0;
@@ -200,8 +200,8 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     obj2.opacity = obj.withTiming(num, { easing: native.STANDARD_EASING, duration: 250 });
     return obj2;
   };
-  let obj2 = reveal(4618);
-  fn.__closure = { withTiming: reveal(4897).withTiming, reveal, STANDARD_EASING: reveal(1188).STANDARD_EASING };
+  let obj2 = reveal(4810);
+  fn.__closure = { withTiming: reveal(5091).withTiming, reveal, STANDARD_EASING: reveal(1200).STANDARD_EASING };
   fn.__workletHash = 15640123774063;
   fn.__initData = __initData;
   const animatedStyle = obj2.useAnimatedStyle(fn);
@@ -302,7 +302,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           }
           let tmp12 = isActiveStream;
           if (isActiveStream) {
-            const obj9 = { style: tmp4.liveContainer, children: closure_13(tmp(1188).LiveTag, {}) };
+            const obj9 = { style: tmp4.liveContainer, children: closure_13(tmp(1200).LiveTag, {}) };
             tmp12 = closure_13(closure_5, obj9);
           }
           cResult[8] = isActiveStream;
@@ -325,14 +325,14 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = num4;
   cResult[4] = rect;
   tmp8 = rect;
-  const obj3 = { withTiming: reveal(4897).withTiming, reveal, STANDARD_EASING: reveal(1188).STANDARD_EASING };
-}) : ((arg0) => {
+  const obj3 = { withTiming: reveal(5091).withTiming, reveal, STANDARD_EASING: reveal(1200).STANDARD_EASING };
+}) : (function TileOverlay(arg0) {
   ({ participant, isActiveStream } = arg0);
   let reveal;
   ({ channel, hasLeftSafeArea, hasRightSafeArea, hasBottomSafeArea, hasTopSafeArea } = arg0);
   const tmp = closure_16();
   ({ bottom, left, top, right } = useSafeAreaInsetsDefault());
-  reveal = noop.useContext(reveal(9094).RevealContext).reveal;
+  reveal = noop.useContext(reveal(10671).RevealContext).reveal;
   const tmp4 = useSafeAreaInsetsDefault();
   const tmp5 = reveal;
   class A {
@@ -350,8 +350,8 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       return obj1;
     }
   }
-  let obj = reveal(4618);
-  A.__closure = { withTiming: reveal(4897).withTiming, reveal, STANDARD_EASING: reveal(1188).STANDARD_EASING };
+  let obj = reveal(4810);
+  A.__closure = { withTiming: reveal(5091).withTiming, reveal, STANDARD_EASING: reveal(1200).STANDARD_EASING };
   A.__workletHash = 1463196379948;
   A.__initData = __initData2;
   let num = 0;
@@ -379,7 +379,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const items = [closure_4.absoluteFill, rect, animatedStyle];
   obj3.style = items;
   if (isActiveStream) {
-    const obj4 = { style: tmp.liveContainer, children: closure_13(tmp5(1188).LiveTag, {}) };
+    const obj4 = { style: tmp.liveContainer, children: closure_13(tmp5(1200).LiveTag, {}) };
     isActiveStream = closure_13(closure_5, obj4);
   }
   const items1 = [isActiveStream, ];
@@ -396,7 +396,7 @@ let closure_21 = tmp8;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/components/CallTile.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((participant) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function CallTitle(participant) {
   const cResult = participant(analyticsLocations[11]).c(60);
   participant = participant.participant;
   ({ avatarSize, channel } = participant);
@@ -674,7 +674,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((partic
     cResult[8] = fn2;
     tmp14 = fn2;
   }
-  class U {
+  class G {
     constructor() {
       tmp = resetFocus();
       obj = closure_1(closure_2[15]);
@@ -684,10 +684,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((partic
   }
   cResult[3] = channel.id;
   cResult[4] = participant.id;
-  cResult[5] = U;
-  tmp13 = U;
+  cResult[5] = G;
+  tmp13 = G;
   const tmpResult = participant(analyticsLocations[14]);
-}) : ((participant) => {
+}) : (function CallTitle(participant) {
   participant = participant.participant;
   const channel = participant.channel;
   const hasRightSafeArea = participant.hasRightSafeArea;

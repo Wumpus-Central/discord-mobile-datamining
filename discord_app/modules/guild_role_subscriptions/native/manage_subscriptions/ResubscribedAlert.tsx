@@ -1,13 +1,13 @@
-// === Module 15051: ResubscribedAlert ===
+// === Module 15313: ResubscribedAlert ===
 
-// Module 15051 (ResubscribedAlert)
+// Module 15313 (ResubscribedAlert)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import common_AlertDefault from "common/Alert" /* 5790 */;
-import _modDef15052 from "module_15052" /* 15052 */;
+import native from "native" /* 1200 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import common_AlertDefault from "common/Alert" /* 5394 */;
+import _modDef15314 from "module_15314" /* 15314 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL }, body: { alignItems: "center", textAlign: "center" }, centerText: { textAlign: "center" }, headerImage: { width: 87, height: 87 } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -23,7 +23,7 @@ let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/manage_subscriptions/ResubscribedAlert.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ResubscribedAlert(onClose) {
   const cResult = c.c(20);
   onClose = onClose.onClose;
   const tmp4 = closure_7();
@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
   }
   ({ container, body } = tmp4);
   if (cResult[1] !== tmp4.headerImage) {
-    const obj2 = { source: _modDef15052, style: tmp4.headerImage };
+    const obj2 = { source: _modDef15314, style: tmp4.headerImage };
     const tmp11 = hasOwnProperty(React4, obj2);
     cResult[1] = tmp4.headerImage;
     cResult[2] = tmp11;
@@ -127,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
   cResult[14] = tmp17;
   cResult[15] = tmp29;
   tmp28 = tmp29;
-}) : ((onClose) => {
+}) : (function ResubscribedAlert(onClose) {
   const tmp = closure_7();
   const obj = { confirmText: null, onConfirm: null, style: null, children: null };
   const intl = util.intl;
@@ -136,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
   obj.style = tmp.container;
   const obj2 = { style: tmp.body, children: null };
   const tmp2 = common_AlertDefault;
-  const items = [hasOwnProperty(React4, { source: _modDef15052, style: tmp.headerImage }), hasOwnProperty(native.Spacer, { size: 27 }), , , ];
+  const items = [hasOwnProperty(React4, { source: _modDef15314, style: tmp.headerImage }), hasOwnProperty(native.Spacer, { size: 27 }), , , ];
   const obj4 = { variant: "text-lg/semibold", color: "mobile-text-heading-primary", style: tmp.centerText, children: null };
   const intl2 = util.intl;
   obj4.children = intl2.string(util.t.oPV2cy);

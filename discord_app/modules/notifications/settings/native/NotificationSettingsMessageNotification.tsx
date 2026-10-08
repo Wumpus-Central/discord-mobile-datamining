@@ -1,15 +1,15 @@
-// === Module 12518: NotificationSettingsMessageNotification ===
+// === Module 12614: NotificationSettingsMessageNotification ===
 
-// Module 12518 (NotificationSettingsMessageNotification)
+// Module 12614 (NotificationSettingsMessageNotification)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Pressables from "Pressables" /* 5916 */;
-import notificationSettingsPresetOptionUtils from "notificationSettingsPresetOptionUtils" /* 12519 */;
-import NotificationSettingsMockMessageDefault from "NotificationSettingsMockMessage" /* 12520 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import Pressables from "Pressables" /* 6189 */;
+import notificationSettingsPresetOptionUtils from "notificationSettingsPresetOptionUtils" /* 12615 */;
+import NotificationSettingsMockMessageDefault from "NotificationSettingsMockMessage" /* 12616 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -18,11 +18,11 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { card: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: 20, borderWidth: 1, padding: 14 }, cta: { textAlign: "center", marginTop: 4 }, label: { textAlign: "center", marginTop: 8 }, header: { marginBottom: 8 }, headerTitle: { marginBottom: 4 } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((setting) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function NotificationSettingsMessageNotification(setting) {
   const cResult = c.c(36);
   const tmp4 = closure_6();
   if (cResult[0] !== setting.setting) {
@@ -193,7 +193,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((setting) => {
     cResult[12] = tmp21;
     tmp18 = tmp21;
   }
-}) : ((onPress) => {
+}) : (function NotificationSettingsMessageNotification(onPress) {
   const tmp = closure_6();
   const pushNotificationSelectOptions = notificationSettingsPresetOptionUtils.getPushNotificationSelectOptions();
   const found = pushNotificationSelectOptions.find((value) => value.value === onPress.setting);
@@ -250,7 +250,7 @@ export const NotificationSettingsGuildMessageNotification = function Notificatio
     style: style.style,
     setting: require("notificationSettingsGuildFlagUtils").useGuildPresetSettings(style.guildId).notification,
     onCustomize() {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12522, dependencyMap.paths), "MessageNotificationGuildActionSheet", { guildId: style.guildId });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12618, dependencyMap.paths), "MessageNotificationGuildActionSheet", { guildId: style.guildId });
     }
   };
   return closure_4(closure_7, obj);
@@ -262,7 +262,7 @@ export const NotificationSettingsChannelMessageNotification = function Notificat
     style: style.style,
     setting: require("notficationSettingsChannelFlagUtils").useChannelPresetSettings(style.channel).notification,
     onCustomize() {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12524, dependencyMap.paths), "MessageNotificationChannelActionSheet", { channel: style.channel });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12620, dependencyMap.paths), "MessageNotificationChannelActionSheet", { channel: style.channel });
     }
   };
   return closure_4(closure_7, obj);

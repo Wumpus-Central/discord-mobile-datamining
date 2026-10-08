@@ -1,8 +1,8 @@
-// === Module 7029: isSpam ===
+// === Module 7217: isSpam ===
 
-// Module 7029 (isSpam)
-import AutomodMessageUtils from "AutomodMessageUtils" /* 7030 */;
-import UserStore from "UserStore" /* 1377 */;
+// Module 7217 (isSpam)
+import AutomodMessageUtils from "AutomodMessageUtils" /* 7218 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const Constants = fn(1085);

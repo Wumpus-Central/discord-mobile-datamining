@@ -1,24 +1,24 @@
-// === Module 6791: GuildSubscriptionsStore ===
+// === Module 6966: GuildSubscriptionsStore ===
 
-// Module 6791 (GuildSubscriptionsStore)
+// Module 6966 (GuildSubscriptionsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import FavoritesUtils from "FavoritesUtils" /* 2077 */;
-import GuildSubscriptionsDefault from "GuildSubscriptions" /* 6797 */;
+import FavoritesUtils from "FavoritesUtils" /* 2089 */;
+import GuildSubscriptionsDefault from "GuildSubscriptions" /* 6968 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ExperimentStore from "ExperimentStore" /* 4782 */;
-import LurkingStore from "LurkingStore" /* 4516 */;
-import SpotifyStore from "SpotifyStore" /* 5446 */;
+import ExperimentStore from "ExperimentStore" /* 4976 */;
+import LurkingStore from "LurkingStore" /* 4708 */;
+import SpotifyStore from "SpotifyStore" /* 5756 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelSectionStore from "ChannelSectionStore" /* 6793 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5625 */;
-import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
+import ChannelSectionStore from "ChannelSectionStore" /* 6066 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5970 */;
+import GuildMemberStore from "GuildMemberStore" /* 2124 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5108 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4899 */;
 
 require = fn;
 function handleConnectionOpenOrResumed(type) {
@@ -84,7 +84,7 @@ function handleConnectionOpenOrResumed(type) {
       }
     }
     closure_20.subscribeToGuild(tmp11);
-    obj5 = obj4(2077);
+    obj5 = obj4(2089);
   }
   obj4 = {};
   set = new Set(LurkingStore.lurkingGuildIds());
@@ -186,7 +186,7 @@ function handleSpotifyUpdate() {
   }
   return false;
 }
-const EVERYONE_CHANNEL_ID = fn(6792).EVERYONE_CHANNEL_ID;
+const EVERYONE_CHANNEL_ID = fn(6967).EVERYONE_CHANNEL_ID;
 const Constants = fn(1085);
 ({ ChannelSections, ChannelTypes: closure_19 } = Constants);
 let closure_20 = new GuildSubscriptionsDefault((subscriptions) => {

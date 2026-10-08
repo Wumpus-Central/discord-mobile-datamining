@@ -1,6 +1,6 @@
-// === Module 4662: useRivePlayback ===
+// === Module 4854: useRivePlayback ===
 
-// Module 4662 (useRivePlayback)
+// Module 4854 (useRivePlayback)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/useRivePlayback.tsx");
 
-export const useRivePlayback = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, isReady) => {
+export const useRivePlayback = ReactCompilerGating.isReactCompilerEnabled() ? (function useRivePlayback(arg0, isReady) {
   _require = arg0;
   const cResult = require("c").c(32);
   isReady = isReady.isReady;
@@ -206,7 +206,7 @@ export const useRivePlayback = ReactCompilerGating.isReactCompilerEnabled() ? ((
       cResult[13] = arg0;
       cResult[14] = N;
     }
-    class P {
+    class M {
       constructor() {
         obj = closure_0;
         if (closure_0 != null) {
@@ -219,10 +219,10 @@ export const useRivePlayback = ReactCompilerGating.isReactCompilerEnabled() ? ((
     }
     cResult[8] = tmp7;
     cResult[9] = arg0;
-    cResult[10] = P;
-    tmp8 = P;
+    cResult[10] = M;
+    tmp8 = M;
   }
-  class I {
+  class C {
     constructor() {
       tmp = closure_10();
       if (closure_3) {
@@ -237,10 +237,10 @@ export const useRivePlayback = ReactCompilerGating.isReactCompilerEnabled() ? ((
   }
   cResult[5] = tmp6;
   cResult[6] = shouldShortLoopForReducedMotion;
-  cResult[7] = I;
-  tmp7 = I;
+  cResult[7] = C;
+  tmp7 = C;
   const obj = require("c");
-}) : ((arg0, isReady) => {
+}) : (function useRivePlayback(arg0, isReady) {
   closure_0 = arg0;
   isReady = isReady.isReady;
   const appStatePlaybackEnabled = isReady.appStatePlaybackEnabled;

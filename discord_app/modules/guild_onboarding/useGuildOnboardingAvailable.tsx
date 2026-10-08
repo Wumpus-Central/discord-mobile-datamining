@@ -1,7 +1,7 @@
-// === Module 6848: useGuildOnboardingAvailable ===
+// === Module 7035: useGuildOnboardingAvailable ===
 
-// Module 6848 (useGuildOnboardingAvailable)
-import ImpersonateStore from "ImpersonateStore" /* 2105 */;
+// Module 7035 (useGuildOnboardingAvailable)
+import ImpersonateStore from "ImpersonateStore" /* 2117 */;
 
 const require = globalThis.__r;
 
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding/useGuildOnboardingAvailable.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((features) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildOnboardingAvailable(features) {
   _require = features;
   const cResult = require("c").c(6);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((features) => {
   cResult[5] = tmp10;
   tmp9 = tmp10;
   const tmpResult = require("initialize");
-}) : ((features) => {
+}) : (function useGuildOnboardingAvailable(features) {
   _require = features;
   const items = [ImpersonateStore];
   let stateFromStores = require("initialize").useStateFromStores(items, () => {

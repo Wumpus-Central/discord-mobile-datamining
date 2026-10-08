@@ -1,21 +1,21 @@
-// === Module 11654: GameInviteVoiceCount ===
+// === Module 11719: GameInviteVoiceCount ===
 
-// Module 11654 (GameInviteVoiceCount)
+// Module 11719 (GameInviteVoiceCount)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4920 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5114 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({ container: { flexDirection: "row", alignItems: "center", gap: 4, marginLeft: 8 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_invite_channels/native/GameInviteVoiceCount.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameInviteVoiceCount(channel) {
   const cResult = channel(576).c(10);
   channel = channel.channel;
   let container = closure_7();
@@ -48,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     const _Symbol = Symbol;
     if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
       const obj2 = { size: "xs", color: nativeDefault.colors.ICON_FEEDBACK_POSITIVE };
-      const tmp12 = closure_5(tmp(5892).VoiceNormalIcon, obj2);
+      const tmp12 = closure_5(tmp(8204).VoiceNormalIcon, obj2);
       cResult[4] = tmp12;
       let tmp9 = tmp12;
     } else {
@@ -56,7 +56,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     }
     if (cResult[5] !== stateFromStores) {
       const obj3 = { variant: "text-sm/medium", color: "text-feedback-positive", children: stateFromStores };
-      const tmp15 = closure_5(tmp(4892).Text, obj3);
+      const tmp15 = closure_5(tmp(5086).Text, obj3);
       cResult[5] = stateFromStores;
       cResult[6] = tmp15;
       let tmp13 = tmp15;
@@ -75,7 +75,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     cResult[9] = tmp19;
   }
   const tmpResult = channel(504);
-}) : ((channel) => {
+}) : (function GameInviteVoiceCount(channel) {
   channel = channel.channel;
   const tmp = closure_7();
   const items = [SortedVoiceStateStore];
@@ -85,9 +85,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   if (0 !== stateFromStores) {
     const obj2 = { style: tmp.container, children: null };
     const obj3 = { size: "xs", color: nativeDefault.colors.ICON_FEEDBACK_POSITIVE };
-    const items2 = [closure_5(tmp2(5892).VoiceNormalIcon, obj3), ];
+    const items2 = [closure_5(tmp2(8204).VoiceNormalIcon, obj3), ];
     const obj4 = { variant: "text-sm/medium", color: "text-feedback-positive", children: stateFromStores };
-    items2[1] = closure_5(tmp2(4892).Text, obj4);
+    items2[1] = closure_5(tmp2(5086).Text, obj4);
     obj2.children = items2;
     tmp5 = closure_6(View, obj2);
   }

@@ -1,31 +1,30 @@
-// === Module 17761: AuditLogUtils ===
+// === Module 18048: AuditLogUtils ===
 
-// Module 17761 (AuditLogUtils)
+// Module 18048 (AuditLogUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import IntegerDefault from "Integer" /* 14 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
 import util from "util" /* 1126 */;
-import FlagUtilsAll from "FlagUtils" /* 1390 */;
-import _modDef4467 from "module_4467" /* 4467 */;
-import DateUtils from "DateUtils" /* 4558 */;
-import UserUtilsDefault from "UserUtils" /* 4728 */;
-import TimeUtils from "TimeUtils" /* 4925 */;
-import useChannelName from "useChannelName" /* 5049 */;
-import InstantInviteUtilsDefault from "InstantInviteUtils" /* 9496 */;
-import AutomodRuleUtils from "AutomodRuleUtils" /* 17724 */;
-import GuildFeedItemTypes from "GuildFeedItemTypes" /* 17762 */;
-import EmojiStore from "EmojiStore" /* 5645 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 6602 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 5083 */;
-import StageInstanceStore from "StageInstanceStore" /* 2056 */;
-import StickersStore from "StickersStore" /* 5694 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildRoleStore from "GuildRoleStore" /* 2106 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
-import UserStore from "UserStore" /* 1377 */;
-import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 17759 */;
+import _modDef4659 from "module_4659" /* 4659 */;
+import DateUtils from "DateUtils" /* 4750 */;
+import UserUtilsDefault from "UserUtils" /* 4922 */;
+import TimeUtils from "TimeUtils" /* 5119 */;
+import useChannelName from "useChannelName" /* 5417 */;
+import InstantInviteUtilsDefault from "InstantInviteUtils" /* 8660 */;
+import AutomodRuleUtils from "AutomodRuleUtils" /* 18011 */;
+import GuildFeedItemTypes from "GuildFeedItemTypes" /* 18049 */;
+import EmojiStore from "EmojiStore" /* 5992 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 6778 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 6912 */;
+import StageInstanceStore from "StageInstanceStore" /* 2068 */;
+import StickersStore from "StickersStore" /* 6035 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildRoleStore from "GuildRoleStore" /* 2118 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
+import UserStore from "UserStore" /* 1389 */;
+import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 18046 */;
 
 require = fn;
 function getPermissionChanges(oldValue, newValue) {
@@ -34,29 +33,27 @@ function getPermissionChanges(oldValue, newValue) {
   if (typeof oldValue === "string") {
     num = oldValue;
   }
+  const deserializeResult = deserializer.deserialize(num);
   const deserializer2 = BigFlagUtilsAll;
   let num2 = 0;
   if (typeof newValue === "string") {
     num2 = newValue;
   }
-  const deserializeResult = deserializer.deserialize(num);
   const deserializeResult1 = deserializer2.deserialize(num2);
-  const tmpResult = BigFlagUtilsAll;
-  BigFlagUtilsAll;
+  const tmp2Result = BigFlagUtilsAll;
+  const removeResult = BigFlagUtilsAll.remove(deserializeResult1, deserializeResult);
   const added = [];
   const removed = [];
-  for (const key10027 in closure_1_23) {
-    let tmp12 = constants7[key10027];
+  const tmp2Result2 = BigFlagUtilsAll;
+  const values = Object.values(constants6);
+  for (const item10040 of values) {
     let obj3 = BigFlagUtilsAll;
-    if (obj3.has(removeResult, tmp12)) {
-      let arr = added.push(tmp12);
+    if (obj3.has(removeResult, item10040)) {
+      let arr = added.push(item10040);
     }
-    let tmp13Result = BigFlagUtilsAll;
-    if (!tmp13Result.has(tmp7, tmp12)) {
-      continue;
-    } else {
-      let arr2 = removed.push(tmp12);
-      continue;
+    let tmp12Result = BigFlagUtilsAll;
+    if (tmp12Result.has(removeResult1, item10040)) {
+      let arr2 = removed.push(item10040);
     }
     continue;
   }
@@ -244,18 +241,19 @@ function transformAvailableForumTagChange(newValue) {
   }
   return newValue;
 }
-const AuditLogChange = fn(17760).AuditLogChange;
+const AuditLogChange = fn(18047).AuditLogChange;
 const Constants = fn(1085);
-({ AuditLogActions: closure_15, AuditLogChangeKeys } = Constants);
+const AuditLogActions = Constants.AuditLogActions;
+const AuditLogChangeKeys = Constants.AuditLogChangeKeys;
 const AuditLogTargetTypes = Constants.AuditLogTargetTypes;
 ({ MFALevels: closure_18, VerificationLevels: closure_19, UserNotificationSettings: closure_20, GuildExplicitContentFilterTypes: closure_21, ChannelTypes: closure_22, Permissions: closure_23, NOOP_NULL: closure_24, VideoQualityMode: closure_25, ApplicationCommandPermissionTypes: closure_26, AuditLogSubtargetTypes: closure_27, SystemChannelFlags: closure_28, AuditLogActionTypes: closure_29 } = Constants);
-const ChannelFlags = fn(2058).ChannelFlags;
-const AutomodTriggerType = fn(11487).AutomodTriggerType;
-const GuildOnboardingMode = fn(6603).GuildOnboardingMode;
-const GuildScheduledEventsConstants = fn(2057);
+const ChannelFlags = fn(2070).ChannelFlags;
+const AutomodTriggerType = fn(11473).AutomodTriggerType;
+const GuildOnboardingMode = fn(6779).GuildOnboardingMode;
+const GuildScheduledEventsConstants = fn(2069);
 ({ GuildScheduledEventEntityTypes: closure_33, GuildScheduledEventStatus: closure_34, GuildScheduledEventPrivacyLevel: closure_35 } = GuildScheduledEventsConstants);
 let closure_36 = new LoggerDefault("AuditLogUtils");
-let items = [fn(4925).TimeUnits.DAYS, fn(4925).TimeUnits.HOURS, fn(4925).TimeUnits.MINUTES, fn(4925).TimeUnits.SECONDS];
+let items = [fn(5119).TimeUnits.DAYS, fn(5119).TimeUnits.HOURS, fn(5119).TimeUnits.MINUTES, fn(5119).TimeUnits.SECONDS];
 let closure_38 = { [AuditLogTargetTypes.CHANNEL]: { [AuditLogChangeKeys.ID]: true, [AuditLogChangeKeys.PERMISSION_OVERWRITES]: true }, [AuditLogTargetTypes.CHANNEL_OVERWRITE]: { [AuditLogChangeKeys.TYPE]: true, [AuditLogChangeKeys.ID]: true, [AuditLogChangeKeys.PERMISSION_OVERWRITES]: true }, [AuditLogTargetTypes.INVITE]: { [AuditLogChangeKeys.INVITER_ID]: true, [AuditLogChangeKeys.USES]: true }, [AuditLogTargetTypes.WEBHOOK]: { [AuditLogChangeKeys.TYPE]: true, [AuditLogChangeKeys.APPLICATION_ID]: true }, [AuditLogTargetTypes.INTEGRATION]: { [AuditLogChangeKeys.TYPE]: true, [AuditLogChangeKeys.NAME]: true }, [AuditLogTargetTypes.THREAD]: { [AuditLogChangeKeys.ID]: true, [AuditLogChangeKeys.TYPE]: true }, [AuditLogTargetTypes.STICKER]: { [AuditLogChangeKeys.ID]: true, [AuditLogChangeKeys.TYPE]: true, [AuditLogChangeKeys.ASSET]: true, [AuditLogChangeKeys.FORMAT_TYPE]: true, [AuditLogChangeKeys.AVAILABLE]: true, [AuditLogChangeKeys.GUILD_ID]: true }, [AuditLogTargetTypes.GUILD_HOME]: { [AuditLogChangeKeys.ENTITY_TYPE]: true }, [AuditLogTargetTypes.GUILD_ONBOARDING]: { [AuditLogChangeKeys.PROMPTS]: true }, [AuditLogTargetTypes.GUILD_SOUNDBOARD]: { [AuditLogChangeKeys.ID]: true, [AuditLogChangeKeys.SOUND_ID]: true } };
 class ACTION_FILTER_ITEMS {
   constructor() {
@@ -542,23 +540,25 @@ class ACTION_FILTER_ITEMS {
   }
 }
 let obj = {
-  [fn(4925).TimeUnits.SECONDS]: (seconds) => {
+  [fn(5119).TimeUnits.SECONDS]: (seconds) => {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.geSp4K, { seconds });
   },
-  [fn(4925).TimeUnits.MINUTES]: (minutes) => {
+  [fn(5119).TimeUnits.MINUTES]: (minutes) => {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.iXLF9W, { minutes });
   },
-  [fn(4925).TimeUnits.HOURS]: (hours) => {
+  [fn(5119).TimeUnits.HOURS]: (hours) => {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.xCjYxK, { hours });
   },
-  [fn(4925).TimeUnits.DAYS]: (days) => {
+  [fn(5119).TimeUnits.DAYS]: (days) => {
     const intl = util.intl;
     return intl.formatToPlainString(util.t["k2UNz+"], { days });
   }
 };
+let items1 = [, , , , , , ];
+({ MEMBER_PRUNE: arr2[0], MEMBER_DISCONNECT: arr2[1], MEMBER_MOVE: arr2[2], CHANNEL_POSITION_UPDATE: arr2[3], ROLE_POSITION_UPDATE: arr2[4], CREATOR_MONETIZATION_REQUEST_CREATED: arr2[5], CREATOR_MONETIZATION_TERMS_ACCEPTED: arr2[6] } = AuditLogActions);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_settings/audit_log/AuditLogUtils.tsx");
 
@@ -593,8 +593,8 @@ export const getChangeStrings = function getChangeStrings(targetType) {
     __3TkD(1126).t.Ehsnij;
     obj2[AuditLogChangeKeys.PUBLIC_UPDATES_CHANNEL_ID] = (newValue) => null == newValue.newValue ? __3TkD : _5kDYS3;
     const obj3 = {};
-    obj3[constants2.NONE] = __3TkD(1126).t.voaCCQ;
-    obj3[constants2.ELEVATED] = __3TkD(1126).t.pRNVwz;
+    obj3[constants.NONE] = __3TkD(1126).t.voaCCQ;
+    obj3[constants.ELEVATED] = __3TkD(1126).t.pRNVwz;
     __3TkD = obj3;
     obj2[AuditLogChangeKeys.MFA_LEVEL] = (arg0) => __3TkD[arg0.newValue];
     __3TkD = __3TkD(1126).t.ADIty8;
@@ -604,25 +604,25 @@ export const getChangeStrings = function getChangeStrings(targetType) {
     __3TkD(1126).t.deQ5wO;
     obj2[AuditLogChangeKeys.WIDGET_CHANNEL_ID] = (newValue) => null == newValue.newValue ? __3TkD : _5kDYS3;
     const obj4 = {};
-    obj4[constants3.NONE] = __3TkD(1126).t.W27rsc;
-    obj4[constants3.LOW] = __3TkD(1126).t["V8P+Pw"];
-    obj4[constants3.MEDIUM] = __3TkD(1126).t.ERQFau;
-    obj4[constants3.HIGH] = __3TkD(1126).t["83fN0j"];
-    obj4[constants3.VERY_HIGH] = __3TkD(1126).t.PnkQJE;
+    obj4[constants2.NONE] = __3TkD(1126).t.W27rsc;
+    obj4[constants2.LOW] = __3TkD(1126).t["V8P+Pw"];
+    obj4[constants2.MEDIUM] = __3TkD(1126).t.ERQFau;
+    obj4[constants2.HIGH] = __3TkD(1126).t["83fN0j"];
+    obj4[constants2.VERY_HIGH] = __3TkD(1126).t.PnkQJE;
     __3TkD = obj4;
     obj2[AuditLogChangeKeys.VERIFICATION_LEVEL] = (arg0) => __3TkD[arg0.newValue];
     const obj5 = {};
-    obj5[constants4.ALL_MESSAGES] = __3TkD(1126).t.LDi76A;
-    obj5[constants4.ONLY_MENTIONS] = __3TkD(1126).t["6K83ba"];
+    obj5[constants3.ALL_MESSAGES] = __3TkD(1126).t.LDi76A;
+    obj5[constants3.ONLY_MENTIONS] = __3TkD(1126).t["6K83ba"];
     __3TkD = obj5;
     obj2[AuditLogChangeKeys.DEFAULT_MESSAGE_NOTIFICATIONS] = (arg0) => __3TkD[arg0.newValue];
     __3TkD = __3TkD(1126).t.Zplsov;
     __3TkD(1126).t.u6cArh;
     obj2[AuditLogChangeKeys.VANITY_URL_CODE] = (newValue) => null == newValue.newValue ? __3TkD : _5kDYS3;
     const obj6 = {};
-    obj6[constants5.DISABLED] = __3TkD(1126).t.fmOeL3;
-    obj6[constants5.MEMBERS_WITHOUT_ROLES] = __3TkD(1126).t["4FghYw"];
-    obj6[constants5.ALL_MEMBERS] = __3TkD(1126).t.olyrSm;
+    obj6[constants4.DISABLED] = __3TkD(1126).t.fmOeL3;
+    obj6[constants4.MEMBERS_WITHOUT_ROLES] = __3TkD(1126).t["4FghYw"];
+    obj6[constants4.ALL_MEMBERS] = __3TkD(1126).t.olyrSm;
     __3TkD = obj6;
     obj2[AuditLogChangeKeys.EXPLICIT_CONTENT_FILTER] = (arg0) => __3TkD[arg0.newValue];
     __3TkD = __3TkD(1126).t.rBT0sn;
@@ -805,7 +805,7 @@ export const getChangeStrings = function getChangeStrings(targetType) {
           __3TkD = __3TkD(1126).t.MWp6H7;
           obj20[AuditLogChangeKeys.TEMPORARY] = (newValue) => newValue.newValue ? __3TkD : _5kDYS3;
           const obj23 = {};
-          obj23[__3TkD(8078).GuildInviteFlags.IS_GUEST_INVITE] = __3TkD(1126).t.XYZMbL;
+          obj23[__3TkD(8486).GuildInviteFlags.IS_GUEST_INVITE] = __3TkD(1126).t.XYZMbL;
           __3TkD = obj23;
           obj20[AuditLogChangeKeys.FLAGS] = (arg0) => __3TkD[arg0.newValue];
           obj20[AuditLogChangeKeys.ROLE_IDS] = () => __3TkD(1126).t.gb1Owj;
@@ -864,8 +864,8 @@ export const getChangeStrings = function getChangeStrings(targetType) {
           __3TkD = __3TkD(1126).t["m+veAn"];
           obj33[AuditLogChangeKeys.TOPIC] = (oldValue) => null == oldValue.oldValue ? __3TkD : _5kDYS3;
           const obj34 = {};
-          obj34[constants13.GUILD_ONLY] = __3TkD(1126).t["EC+CDt"];
-          obj34[constants13.PUBLIC] = __3TkD(1126).t["pK/WG0"];
+          obj34[constants12.GUILD_ONLY] = __3TkD(1126).t["EC+CDt"];
+          obj34[constants12.PUBLIC] = __3TkD(1126).t["pK/WG0"];
           __3TkD = obj34;
           obj33[AuditLogChangeKeys.PRIVACY_LEVEL] = (arg0) => __3TkD[arg0.newValue];
           const obj35 = {};
@@ -877,22 +877,22 @@ export const getChangeStrings = function getChangeStrings(targetType) {
           obj36[AuditLogChangeKeys.NAME] = () => __3TkD(1126).t["21EXHW"];
           obj36[AuditLogChangeKeys.DESCRIPTION] = () => __3TkD(1126).t.Vm1ofw;
           const obj37 = {};
-          obj37[constants13.GUILD_ONLY] = __3TkD(1126).t["EC+CDt"];
-          obj37[constants13.PUBLIC] = __3TkD(1126).t["pK/WG0"];
+          obj37[constants12.GUILD_ONLY] = __3TkD(1126).t["EC+CDt"];
+          obj37[constants12.PUBLIC] = __3TkD(1126).t["pK/WG0"];
           __3TkD = obj37;
           obj36[AuditLogChangeKeys.PRIVACY_LEVEL] = (arg0) => __3TkD[arg0.newValue];
           const obj38 = {};
-          obj38[constants12.SCHEDULED] = __3TkD(1126).t.hXKDgq;
-          obj38[constants12.ACTIVE] = __3TkD(1126).t.lRX1nz;
-          obj38[constants12.COMPLETED] = __3TkD(1126).t["/eFIhq"];
-          obj38[constants12.CANCELED] = __3TkD(1126).t.NWIYhj;
+          obj38[constants11.SCHEDULED] = __3TkD(1126).t.hXKDgq;
+          obj38[constants11.ACTIVE] = __3TkD(1126).t.lRX1nz;
+          obj38[constants11.COMPLETED] = __3TkD(1126).t["/eFIhq"];
+          obj38[constants11.CANCELED] = __3TkD(1126).t.NWIYhj;
           __3TkD = obj38;
           obj36[AuditLogChangeKeys.STATUS] = (arg0) => __3TkD[arg0.newValue];
           const obj39 = {};
-          obj39[constants11.NONE] = __3TkD(1126).t["6sO3Ss"];
-          obj39[constants11.STAGE_INSTANCE] = __3TkD(1126).t["Wo+s1y"];
-          obj39[constants11.VOICE] = __3TkD(1126).t.XCVaIL;
-          obj39[constants11.EXTERNAL] = __3TkD(1126).t.IvhAj2;
+          obj39[constants10.NONE] = __3TkD(1126).t["6sO3Ss"];
+          obj39[constants10.STAGE_INSTANCE] = __3TkD(1126).t["Wo+s1y"];
+          obj39[constants10.VOICE] = __3TkD(1126).t.XCVaIL;
+          obj39[constants10.EXTERNAL] = __3TkD(1126).t.IvhAj2;
           __3TkD = obj39;
           obj36[AuditLogChangeKeys.ENTITY_TYPE] = (arg0) => __3TkD[arg0.newValue];
           __3TkD = __3TkD(1126).t.yJBIcX;
@@ -1193,10 +1193,10 @@ export const getChangeStrings = function getChangeStrings(targetType) {
   }
 };
 export const shouldNotRenderChangeDetail = function shouldNotRenderChangeDetail(log, key) {
-  if (log.actionType === constants10.DELETE) {
-    if (log.action !== constants.MEMBER_BAN_ADD) {
-      if (log.action !== constants.MEMBER_KICK) {
-        if (log.action !== constants.MEMBER_PRUNE) {
+  if (log.actionType === constants9.DELETE) {
+    if (log.action !== AuditLogActions.MEMBER_BAN_ADD) {
+      if (log.action !== AuditLogActions.MEMBER_KICK) {
+        if (log.action !== AuditLogActions.MEMBER_PRUNE) {
           return key.key !== AuditLogChangeKeys.REASON;
         }
       }
@@ -1211,10 +1211,10 @@ export const shouldNotRenderChangeDetail = function shouldNotRenderChangeDetail(
 export const checkChangesToRender = function checkChangesToRender(log) {
   const changes = log.changes;
   return null != changes && changes.some((key) => {
-    if (log.actionType === constants10.DELETE) {
-      if (log.action !== constants.MEMBER_BAN_ADD) {
-        if (log.action !== constants.MEMBER_KICK) {
-          if (log.action !== constants.MEMBER_PRUNE) {
+    if (log.actionType === constants9.DELETE) {
+      if (log.action !== AuditLogActions.MEMBER_BAN_ADD) {
+        if (log.action !== AuditLogActions.MEMBER_KICK) {
+          if (log.action !== AuditLogActions.MEMBER_PRUNE) {
             let tmp4 = key.key !== AuditLogChangeKeys.REASON;
           }
           return !tmp4;
@@ -1404,9 +1404,9 @@ export const getSimpleAuditLogChangeDetails = function getSimpleAuditLogChangeDe
 };
 export const getChangeTitle = function getChangeTitle(log) {
   const action = log.action;
-  if (constants.GUILD_UPDATE === action) {
+  if (AuditLogActions.GUILD_UPDATE === action) {
     return util.t.LjZO31;
-  } else if (constants.CHANNEL_CREATE === action) {
+  } else if (AuditLogActions.CHANNEL_CREATE === action) {
     let found = null;
     if (null != log.changes) {
       const changes = log.changes;
@@ -1418,121 +1418,185 @@ export const getChangeTitle = function getChangeTitle(log) {
       throw error;
     } else {
       const newValue3 = found.newValue;
-      if (constants6.GUILD_STAGE_VOICE === newValue3) {
+      if (constants5.GUILD_STAGE_VOICE === newValue3) {
         return util.t["OKp4+o"];
-      } else if (constants6.GUILD_VOICE === newValue3) {
+      } else if (constants5.GUILD_VOICE === newValue3) {
         return util.t.NPOy4G;
-      } else if (constants6.GUILD_CATEGORY === newValue3) {
+      } else if (constants5.GUILD_CATEGORY === newValue3) {
         return util.t.T3KIjz;
-      } else if (constants6.GUILD_FORUM === newValue3) {
+      } else if (constants5.GUILD_FORUM === newValue3) {
         return util.t.VvNgHX;
-      } else if (constants6.GUILD_MEDIA === newValue3) {
+      } else if (constants5.GUILD_MEDIA === newValue3) {
         return util.t["4NWSxa"];
-      } else if (constants6.GUILD_ANNOUNCEMENT === newValue3) {
+      } else if (constants5.GUILD_ANNOUNCEMENT === newValue3) {
         return util.t.eYP6UV;
       } else {
         return util.t.wrYNG2;
       }
     }
-  } else if (constants.CHANNEL_UPDATE === action) {
+  } else if (AuditLogActions.CHANNEL_UPDATE === action) {
     return util.t.nTYk6B;
-  } else if (constants.CHANNEL_DELETE === action) {
+  } else if (AuditLogActions.CHANNEL_DELETE === action) {
     return util.t.ynfvkm;
-  } else if (constants.CHANNEL_OVERWRITE_CREATE === action) {
+  } else if (AuditLogActions.CHANNEL_OVERWRITE_CREATE === action) {
     return util.t.l5Cu1a;
-  } else if (constants.CHANNEL_OVERWRITE_UPDATE === action) {
+  } else if (AuditLogActions.CHANNEL_OVERWRITE_UPDATE === action) {
     return util.t.uhtbNU;
-  } else if (constants.CHANNEL_OVERWRITE_DELETE === action) {
+  } else if (AuditLogActions.CHANNEL_OVERWRITE_DELETE === action) {
     return util.t["HASt/3"];
-  } else if (constants.CHANNEL_POSITION_UPDATE === action) {
+  } else if (AuditLogActions.CHANNEL_POSITION_UPDATE === action) {
     return util.t.d3aX5b;
-  } else if (constants.MEMBER_KICK === action) {
+  } else if (AuditLogActions.MEMBER_KICK === action) {
     return util.t.B5hDZX;
-  } else if (constants.MEMBER_PRUNE === action) {
+  } else if (AuditLogActions.MEMBER_PRUNE === action) {
     return util.t.qKOZTP;
-  } else if (constants.MEMBER_BAN_ADD === action) {
+  } else if (AuditLogActions.MEMBER_BAN_ADD === action) {
     return util.t["XklUm/"];
-  } else if (constants.MEMBER_BAN_REMOVE === action) {
+  } else if (AuditLogActions.MEMBER_BAN_REMOVE === action) {
     return util.t.o3Y6HD;
-  } else if (constants.MEMBER_UPDATE === action) {
+  } else if (AuditLogActions.MEMBER_UPDATE === action) {
     return util.t.pznhLN;
-  } else if (constants.MEMBER_ROLE_UPDATE === action) {
+  } else if (AuditLogActions.MEMBER_ROLE_UPDATE === action) {
     return util.t.Vngfia;
-  } else if (constants.MEMBER_MOVE === action) {
-    return util.t.Yt6NkU;
-  } else if (constants.MEMBER_DISCONNECT === action) {
-    return util.t.K4eCZw;
-  } else if (constants.BOT_ADD === action) {
+  } else if (AuditLogActions.MEMBER_MOVE === action) {
+    const Yt6NkU = util.t.Yt6NkU;
+    const hEqea3 = util.t.hEqea3;
+    let qXazAb = util.t.qXazAb;
+    const options3 = log.options;
+    const unique_count2 = options3.unique_count;
+    let NumberResult = null;
+    ({ unique_overflow: unique_overflow2, member: member2 } = options3);
+    if (null != unique_count2) {
+      const _Number3 = Number;
+      NumberResult = Number(unique_count2);
+    }
+    let tmp163 = Yt6NkU;
+    if (null != NumberResult) {
+      const _Number4 = Number;
+      tmp163 = Yt6NkU;
+      if (!Number.isNaN(NumberResult)) {
+        tmp163 = Yt6NkU;
+        if (NumberResult >= 1) {
+          if ("1" !== unique_overflow2) {
+            let VW2XVd = hEqea3;
+            if (1 === NumberResult) {
+              VW2XVd = hEqea3;
+              if (null != member2) {
+                VW2XVd = util.t.VW2XVd;
+              }
+            }
+            qXazAb = VW2XVd;
+          }
+          tmp163 = qXazAb;
+        }
+      }
+    }
+    return tmp163;
+  } else if (AuditLogActions.MEMBER_DISCONNECT === action) {
+    const K4eCZw = util.t.K4eCZw;
+    const lODaeu = util.t.lODaeu;
+    let xuGjhY = util.t.xuGjhY;
+    const options2 = log.options;
+    const unique_count = options2.unique_count;
+    let NumberResult1 = null;
+    ({ unique_overflow, member } = options2);
+    if (null != unique_count) {
+      const _Number = Number;
+      NumberResult1 = Number(unique_count);
+    }
+    let tmp156 = K4eCZw;
+    if (null != NumberResult1) {
+      const _Number2 = Number;
+      tmp156 = K4eCZw;
+      if (!Number.isNaN(NumberResult1)) {
+        tmp156 = K4eCZw;
+        if (NumberResult1 >= 1) {
+          if ("1" !== unique_overflow) {
+            let tTwGD8 = lODaeu;
+            if (1 === NumberResult1) {
+              tTwGD8 = lODaeu;
+              if (null != member) {
+                tTwGD8 = util.t.tTwGD8;
+              }
+            }
+            xuGjhY = tTwGD8;
+          }
+          tmp156 = xuGjhY;
+        }
+      }
+    }
+    return tmp156;
+  } else if (AuditLogActions.BOT_ADD === action) {
     return util.t.fWvX0G;
-  } else if (constants.ROLE_CREATE === action) {
+  } else if (AuditLogActions.ROLE_CREATE === action) {
     return util.t.UTLTx6;
-  } else if (constants.ROLE_UPDATE === action) {
+  } else if (AuditLogActions.ROLE_UPDATE === action) {
     return util.t.NRbN18;
-  } else if (constants.ROLE_DELETE === action) {
+  } else if (AuditLogActions.ROLE_DELETE === action) {
     return util.t["4s63tb"];
-  } else if (constants.ROLE_POSITION_UPDATE === action) {
+  } else if (AuditLogActions.ROLE_POSITION_UPDATE === action) {
     return util.t.jZeaoW;
-  } else if (constants.INVITE_CREATE === action) {
+  } else if (AuditLogActions.INVITE_CREATE === action) {
     return util.t.YHOXWy;
-  } else if (constants.INVITE_UPDATE === action) {
+  } else if (AuditLogActions.INVITE_UPDATE === action) {
     return util.t.ja3kGS;
-  } else if (constants.INVITE_DELETE === action) {
+  } else if (AuditLogActions.INVITE_DELETE === action) {
     return util.t["3n/iWk"];
-  } else if (constants.WEBHOOK_CREATE === action) {
+  } else if (AuditLogActions.WEBHOOK_CREATE === action) {
     return util.t.MhYhil;
-  } else if (constants.WEBHOOK_UPDATE === action) {
+  } else if (AuditLogActions.WEBHOOK_UPDATE === action) {
     return util.t["6GTlWB"];
-  } else if (constants.WEBHOOK_DELETE === action) {
+  } else if (AuditLogActions.WEBHOOK_DELETE === action) {
     return util.t.in0VjZ;
-  } else if (constants.EMOJI_CREATE === action) {
+  } else if (AuditLogActions.EMOJI_CREATE === action) {
     return util.t["7vekRO"];
-  } else if (constants.EMOJI_UPDATE === action) {
+  } else if (AuditLogActions.EMOJI_UPDATE === action) {
     return util.t.IsCKfh;
-  } else if (constants.EMOJI_DELETE === action) {
+  } else if (AuditLogActions.EMOJI_DELETE === action) {
     return util.t.JnUaVG;
-  } else if (constants.STICKER_CREATE === action) {
+  } else if (AuditLogActions.STICKER_CREATE === action) {
     return util.t.DRZifq;
-  } else if (constants.STICKER_UPDATE === action) {
+  } else if (AuditLogActions.STICKER_UPDATE === action) {
     return util.t.bhujGc;
-  } else if (constants.STICKER_DELETE === action) {
+  } else if (AuditLogActions.STICKER_DELETE === action) {
     return util.t.rGEP9U;
-  } else if (constants.MESSAGE_DELETE === action) {
+  } else if (AuditLogActions.MESSAGE_DELETE === action) {
     return util.t["HPkD+M"];
-  } else if (constants.MESSAGE_BULK_DELETE === action) {
+  } else if (AuditLogActions.MESSAGE_BULK_DELETE === action) {
     return util.t["3RIvLE"];
-  } else if (constants.MESSAGE_PIN === action) {
+  } else if (AuditLogActions.MESSAGE_PIN === action) {
     return util.t.Yna7E7;
-  } else if (constants.MESSAGE_UNPIN === action) {
+  } else if (AuditLogActions.MESSAGE_UNPIN === action) {
     return util.t.NCxXUW;
-  } else if (constants.INTEGRATION_CREATE === action) {
+  } else if (AuditLogActions.INTEGRATION_CREATE === action) {
     return util.t.HYvCb3;
-  } else if (constants.INTEGRATION_UPDATE === action) {
+  } else if (AuditLogActions.INTEGRATION_UPDATE === action) {
     return util.t.ibCCOS;
-  } else if (constants.INTEGRATION_DELETE === action) {
+  } else if (AuditLogActions.INTEGRATION_DELETE === action) {
     return util.t["8zScWY"];
-  } else if (constants.STAGE_INSTANCE_CREATE === action) {
+  } else if (AuditLogActions.STAGE_INSTANCE_CREATE === action) {
     return util.t["n7x/DF"];
-  } else if (constants.STAGE_INSTANCE_UPDATE === action) {
+  } else if (AuditLogActions.STAGE_INSTANCE_UPDATE === action) {
     return util.t["0hQYU4"];
-  } else if (constants.STAGE_INSTANCE_DELETE === action) {
+  } else if (AuditLogActions.STAGE_INSTANCE_DELETE === action) {
     if (null != log.userId) {
       let prop = util.t["Oi/in9"];
     } else {
       prop = util.t["7ZIFm9"];
     }
     return prop;
-  } else if (constants.GUILD_SCHEDULED_EVENT_CREATE === action) {
+  } else if (AuditLogActions.GUILD_SCHEDULED_EVENT_CREATE === action) {
     return util.t.S7k52p;
-  } else if (constants.GUILD_SCHEDULED_EVENT_UPDATE === action) {
+  } else if (AuditLogActions.GUILD_SCHEDULED_EVENT_UPDATE === action) {
     return util.t.ebTK11;
-  } else if (constants.GUILD_SCHEDULED_EVENT_DELETE === action) {
+  } else if (AuditLogActions.GUILD_SCHEDULED_EVENT_DELETE === action) {
     return util.t["/ARPKQ"];
   } else {
-    if (constants.GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE !== action) {
-      if (constants.GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE !== action) {
-        if (constants.GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE === action) {
+    if (AuditLogActions.GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE !== action) {
+      if (AuditLogActions.GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE !== action) {
+        if (AuditLogActions.GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE === action) {
           return util.t.zYb2da;
-        } else if (constants.THREAD_CREATE === action) {
+        } else if (AuditLogActions.THREAD_CREATE === action) {
           let found1 = null;
           if (null != log.changes) {
             const changes1 = log.changes;
@@ -1544,23 +1608,23 @@ export const getChangeTitle = function getChangeTitle(log) {
             throw error1;
           } else {
             const newValue2 = found1.newValue;
-            if (constants6.PRIVATE_THREAD === newValue2) {
+            if (constants5.PRIVATE_THREAD === newValue2) {
               return util.t.Br0y5w;
-            } else if (tmp204.ANNOUNCEMENT_THREAD === newValue2) {
+            } else if (tmp214.ANNOUNCEMENT_THREAD === newValue2) {
               return util.t["6uaMmO"];
             } else {
               return util.t["2cxQ7G"];
             }
           }
-        } else if (constants.THREAD_UPDATE === action) {
+        } else if (AuditLogActions.THREAD_UPDATE === action) {
           return util.t.PSsy4t;
-        } else if (constants.THREAD_DELETE === action) {
+        } else if (AuditLogActions.THREAD_DELETE === action) {
           return util.t.s3Khn8;
-        } else if (constants.APPLICATION_COMMAND_PERMISSION_UPDATE === action) {
+        } else if (AuditLogActions.APPLICATION_COMMAND_PERMISSION_UPDATE === action) {
           return util.t.uzCqBm;
-        } else if (constants.AUTO_MODERATION_BLOCK_MESSAGE === action) {
+        } else if (AuditLogActions.AUTO_MODERATION_BLOCK_MESSAGE === action) {
           return util.t.NqWv2K;
-        } else if (constants.AUTO_MODERATION_FLAG_TO_CHANNEL === action) {
+        } else if (AuditLogActions.AUTO_MODERATION_FLAG_TO_CHANNEL === action) {
           options = log.options;
           let prop1;
           if (options != null) {
@@ -1572,35 +1636,35 @@ export const getChangeTitle = function getChangeTitle(log) {
             SD0PwJ = util.t.SD0PwJ;
           }
           return SD0PwJ;
-        } else if (constants.AUTO_MODERATION_USER_COMMUNICATION_DISABLED === action) {
+        } else if (AuditLogActions.AUTO_MODERATION_USER_COMMUNICATION_DISABLED === action) {
           return util.t.Vk4TwX;
-        } else if (constants.AUTO_MODERATION_QUARANTINE_USER === action) {
+        } else if (AuditLogActions.AUTO_MODERATION_QUARANTINE_USER === action) {
           return util.t["/W5u5o"];
-        } else if (constants.CREATOR_MONETIZATION_REQUEST_CREATED === action) {
+        } else if (AuditLogActions.CREATOR_MONETIZATION_REQUEST_CREATED === action) {
           return util.t.ONvWyr;
-        } else if (constants.CREATOR_MONETIZATION_TERMS_ACCEPTED === action) {
+        } else if (AuditLogActions.CREATOR_MONETIZATION_TERMS_ACCEPTED === action) {
           return util.t["ryGLk+"];
-        } else if (constants.AUTO_MODERATION_RULE_CREATE === action) {
+        } else if (AuditLogActions.AUTO_MODERATION_RULE_CREATE === action) {
           return util.t["NKljj+"];
-        } else if (constants.AUTO_MODERATION_RULE_UPDATE === action) {
+        } else if (AuditLogActions.AUTO_MODERATION_RULE_UPDATE === action) {
           return util.t["3wEA9u"];
-        } else if (constants.AUTO_MODERATION_RULE_DELETE === action) {
+        } else if (AuditLogActions.AUTO_MODERATION_RULE_DELETE === action) {
           return util.t.umua3n;
-        } else if (constants.ONBOARDING_PROMPT_CREATE === action) {
+        } else if (AuditLogActions.ONBOARDING_PROMPT_CREATE === action) {
           return util.t["/8A1g2"];
-        } else if (constants.ONBOARDING_PROMPT_UPDATE === action) {
+        } else if (AuditLogActions.ONBOARDING_PROMPT_UPDATE === action) {
           return util.t.ArIrWI;
-        } else if (constants.ONBOARDING_PROMPT_DELETE === action) {
+        } else if (AuditLogActions.ONBOARDING_PROMPT_DELETE === action) {
           return util.t.IuBTao;
-        } else if (constants.ONBOARDING_CREATE === action) {
+        } else if (AuditLogActions.ONBOARDING_CREATE === action) {
           return util.t["wDaq3/"];
-        } else if (constants.ONBOARDING_UPDATE === action) {
+        } else if (AuditLogActions.ONBOARDING_UPDATE === action) {
           return util.t["yONu/l"];
-        } else if (constants.HOME_SETTINGS_CREATE === action) {
+        } else if (AuditLogActions.HOME_SETTINGS_CREATE === action) {
           return util.t.dSdCjG;
-        } else if (constants.HOME_SETTINGS_UPDATE === action) {
+        } else if (AuditLogActions.HOME_SETTINGS_UPDATE === action) {
           return util.t.XHE8qv;
-        } else if (constants.GUILD_HOME_FEATURE_ITEM === action) {
+        } else if (AuditLogActions.GUILD_HOME_FEATURE_ITEM === action) {
           let found2 = null;
           if (null != log.changes) {
             const changes2 = log.changes;
@@ -1618,25 +1682,25 @@ export const getChangeTitle = function getChangeTitle(log) {
               return util.t["UZ+U3A"];
             }
           }
-        } else if (constants.GUILD_HOME_REMOVE_ITEM === action) {
+        } else if (AuditLogActions.GUILD_HOME_REMOVE_ITEM === action) {
           return util.t.kPReun;
-        } else if (constants.SOUNDBOARD_SOUND_CREATE === action) {
+        } else if (AuditLogActions.SOUNDBOARD_SOUND_CREATE === action) {
           return util.t["0PD83V"];
-        } else if (constants.SOUNDBOARD_SOUND_UPDATE === action) {
+        } else if (AuditLogActions.SOUNDBOARD_SOUND_UPDATE === action) {
           return util.t.CM8n1w;
-        } else if (constants.SOUNDBOARD_SOUND_DELETE === action) {
+        } else if (AuditLogActions.SOUNDBOARD_SOUND_DELETE === action) {
           return util.t["kVz4/0"];
-        } else if (constants.VOICE_CHANNEL_STATUS_CREATE === action) {
+        } else if (AuditLogActions.VOICE_CHANNEL_STATUS_CREATE === action) {
           return util.t.MWjnU7;
-        } else if (constants.VOICE_CHANNEL_STATUS_DELETE === action) {
+        } else if (AuditLogActions.VOICE_CHANNEL_STATUS_DELETE === action) {
           return util.t.aS8Krq;
-        } else if (constants.GUILD_MEMBER_VERIFICATION_UPDATE === action) {
+        } else if (AuditLogActions.GUILD_MEMBER_VERIFICATION_UPDATE === action) {
           return util.t["NUKUb+"];
-        } else if (constants.GUILD_PROFILE_UPDATE === action) {
+        } else if (AuditLogActions.GUILD_PROFILE_UPDATE === action) {
           return util.t.Ed6hF1;
-        } else if (constants.GUILD_MIGRATE_PIN_PERMISSION === action) {
+        } else if (AuditLogActions.GUILD_MIGRATE_PIN_PERMISSION === action) {
           return util.t["3Ne7MA"];
-        } else if (constants.GUILD_MIGRATE_BYPASS_SLOWMODE_PERMISSION === action) {
+        } else if (AuditLogActions.GUILD_MIGRATE_BYPASS_SLOWMODE_PERMISSION === action) {
           return util.t["naflH+"];
         } else {
           return null;
@@ -1675,19 +1739,19 @@ export const getStringForRemovedChannelFlag = function getStringForRemovedChanne
   }
 };
 export const getStringForPermission = function getStringForPermission(item, log) {
-  if (constants7.CREATE_INSTANT_INVITE === item) {
+  if (constants6.CREATE_INSTANT_INVITE === item) {
     const intl55 = util.intl;
     return intl55.string(util.t.zJrgTG);
-  } else if (constants7.KICK_MEMBERS === item) {
+  } else if (constants6.KICK_MEMBERS === item) {
     const intl54 = util.intl;
     return intl54.string(util.t.pBNv6i);
-  } else if (constants7.BAN_MEMBERS === item) {
+  } else if (constants6.BAN_MEMBERS === item) {
     const intl53 = util.intl;
     return intl53.string(util.t.oTBA7N);
-  } else if (constants7.ADMINISTRATOR === item) {
+  } else if (constants6.ADMINISTRATOR === item) {
     const intl52 = util.intl;
     return intl52.string(util.t.PGvZqX);
-  } else if (constants7.MANAGE_CHANNELS === item) {
+  } else if (constants6.MANAGE_CHANNELS === item) {
     if (log.targetType !== AuditLogTargetTypes.CHANNEL) {
       if (log.targetType !== tmp103.CHANNEL_OVERWRITE) {
         const intl50 = util.intl;
@@ -1697,37 +1761,37 @@ export const getStringForPermission = function getStringForPermission(item, log)
     }
     const intl51 = util.intl;
     stringResult = intl51.string(util.t.nAw15L);
-  } else if (constants7.MANAGE_GUILD === item) {
+  } else if (constants6.MANAGE_GUILD === item) {
     const intl49 = util.intl;
     return intl49.string(util.t.QZRcfO);
-  } else if (constants7.VIEW_GUILD_ANALYTICS === item) {
+  } else if (constants6.VIEW_GUILD_ANALYTICS === item) {
     const intl48 = util.intl;
     return intl48.string(util.t["rQJBE/"]);
-  } else if (constants7.VIEW_CREATOR_MONETIZATION_ANALYTICS === item) {
+  } else if (constants6.VIEW_CREATOR_MONETIZATION_ANALYTICS === item) {
     const intl47 = util.intl;
     return intl47.string(util.t["0lTLTv"]);
-  } else if (constants7.CHANGE_NICKNAME === item) {
+  } else if (constants6.CHANGE_NICKNAME === item) {
     const intl46 = util.intl;
     return intl46.string(util.t.dilOF6);
-  } else if (constants7.MANAGE_NICKNAMES === item) {
+  } else if (constants6.MANAGE_NICKNAMES === item) {
     const intl45 = util.intl;
     return intl45.string(util.t["t+Ct5x"]);
-  } else if (constants7.MANAGE_ROLES === item) {
+  } else if (constants6.MANAGE_ROLES === item) {
     const intl44 = util.intl;
     return intl44.string(util.t["C8d+oG"]);
-  } else if (constants7.MANAGE_WEBHOOKS === item) {
+  } else if (constants6.MANAGE_WEBHOOKS === item) {
     const intl43 = util.intl;
     return intl43.string(util.t["/ADKmM"]);
-  } else if (constants7.CREATE_GUILD_EXPRESSIONS === item) {
+  } else if (constants6.CREATE_GUILD_EXPRESSIONS === item) {
     const intl42 = util.intl;
     return intl42.string(util.t.HarVuP);
-  } else if (constants7.MANAGE_GUILD_EXPRESSIONS === item) {
+  } else if (constants6.MANAGE_GUILD_EXPRESSIONS === item) {
     const intl41 = util.intl;
     return intl41.string(util.t.bbuXIn);
-  } else if (constants7.VIEW_AUDIT_LOG === item) {
+  } else if (constants6.VIEW_AUDIT_LOG === item) {
     const intl40 = util.intl;
     return intl40.string(util.t.fZgLpA);
-  } else if (constants7.VIEW_CHANNEL === item) {
+  } else if (constants6.VIEW_CHANNEL === item) {
     if (log.targetType !== AuditLogTargetTypes.CHANNEL) {
       if (log.targetType !== tmp77.CHANNEL_OVERWRITE) {
         const intl38 = util.intl;
@@ -1737,115 +1801,115 @@ export const getStringForPermission = function getStringForPermission(item, log)
     }
     const intl39 = util.intl;
     stringResult1 = intl39.string(util.t["W/A4Qp"]);
-  } else if (constants7.SEND_MESSAGES === item) {
+  } else if (constants6.SEND_MESSAGES === item) {
     const intl37 = util.intl;
     return intl37.string(util.t.T32rkC);
-  } else if (constants7.SEND_TTS_MESSAGES === item) {
+  } else if (constants6.SEND_TTS_MESSAGES === item) {
     const intl36 = util.intl;
     return intl36.string(util.t.Mg7bku);
-  } else if (constants7.USE_APPLICATION_COMMANDS === item) {
+  } else if (constants6.USE_APPLICATION_COMMANDS === item) {
     const intl35 = util.intl;
     return intl35.string(util.t.shbR1a);
-  } else if (constants7.MANAGE_MESSAGES === item) {
+  } else if (constants6.MANAGE_MESSAGES === item) {
     const intl34 = util.intl;
     return intl34.string(util.t["6lU9xM"]);
-  } else if (constants7.EMBED_LINKS === item) {
+  } else if (constants6.EMBED_LINKS === item) {
     const intl33 = util.intl;
     return intl33.string(util.t["969dEL"]);
-  } else if (constants7.ATTACH_FILES === item) {
+  } else if (constants6.ATTACH_FILES === item) {
     const intl32 = util.intl;
     return intl32.string(util.t["3AS4UM"]);
-  } else if (constants7.READ_MESSAGE_HISTORY === item) {
+  } else if (constants6.READ_MESSAGE_HISTORY === item) {
     const intl31 = util.intl;
     return intl31.string(util.t.l9ufaR);
-  } else if (constants7.MENTION_EVERYONE === item) {
+  } else if (constants6.MENTION_EVERYONE === item) {
     const intl30 = util.intl;
     return intl30.string(util.t.Y78KGC);
-  } else if (constants7.USE_EXTERNAL_EMOJIS === item) {
+  } else if (constants6.USE_EXTERNAL_EMOJIS === item) {
     const intl29 = util.intl;
     return intl29.string(util.t.BpBGZU);
-  } else if (constants7.USE_EXTERNAL_STICKERS === item) {
+  } else if (constants6.USE_EXTERNAL_STICKERS === item) {
     const intl28 = util.intl;
     return intl28.string(util.t["UeRs+b"]);
-  } else if (constants7.ADD_REACTIONS === item) {
+  } else if (constants6.ADD_REACTIONS === item) {
     const intl27 = util.intl;
     return intl27.string(util.t.yEoJAr);
-  } else if (constants7.CONNECT === item) {
+  } else if (constants6.CONNECT === item) {
     const intl26 = util.intl;
     return intl26.string(util.t.S0W8Z5);
-  } else if (constants7.SPEAK === item) {
+  } else if (constants6.SPEAK === item) {
     const intl25 = util.intl;
     return intl25.string(util.t["8w1tIR"]);
-  } else if (constants7.MUTE_MEMBERS === item) {
+  } else if (constants6.MUTE_MEMBERS === item) {
     const intl24 = util.intl;
     return intl24.string(util.t["8EI30/"]);
-  } else if (constants7.DEAFEN_MEMBERS === item) {
+  } else if (constants6.DEAFEN_MEMBERS === item) {
     const intl23 = util.intl;
     return intl23.string(util.t["9L47Fr"]);
-  } else if (constants7.MOVE_MEMBERS === item) {
+  } else if (constants6.MOVE_MEMBERS === item) {
     const intl22 = util.intl;
     return intl22.string(util.t.YtjJPQ);
-  } else if (constants7.USE_VAD === item) {
+  } else if (constants6.USE_VAD === item) {
     const intl21 = util.intl;
     return intl21.string(util.t["08zAV7"]);
-  } else if (constants7.PRIORITY_SPEAKER === item) {
+  } else if (constants6.PRIORITY_SPEAKER === item) {
     const intl20 = util.intl;
     return intl20.string(util.t.BVK71i);
-  } else if (constants7.STREAM === item) {
+  } else if (constants6.STREAM === item) {
     const intl19 = util.intl;
     return intl19.string(util.t.FlNoSV);
-  } else if (constants7.USE_SOUNDBOARD === item) {
+  } else if (constants6.USE_SOUNDBOARD === item) {
     const intl18 = util.intl;
     return intl18.string(util.t.Bco7NG);
-  } else if (constants7.USE_EXTERNAL_SOUNDS === item) {
+  } else if (constants6.USE_EXTERNAL_SOUNDS === item) {
     const intl17 = util.intl;
     return intl17.string(util.t.pwaVJ6);
-  } else if (constants7.REQUEST_TO_SPEAK === item) {
+  } else if (constants6.REQUEST_TO_SPEAK === item) {
     const intl16 = util.intl;
     return intl16.string(util.t["5kicT2"]);
-  } else if (constants7.USE_EMBEDDED_ACTIVITIES === item) {
+  } else if (constants6.USE_EMBEDDED_ACTIVITIES === item) {
     const intl15 = util.intl;
     return intl15.string(util.t.rLSGeh);
-  } else if (constants7.CREATE_EVENTS === item) {
+  } else if (constants6.CREATE_EVENTS === item) {
     const intl14 = util.intl;
     return intl14.string(util.t.qyjZua);
-  } else if (constants7.MANAGE_EVENTS === item) {
+  } else if (constants6.MANAGE_EVENTS === item) {
     const intl13 = util.intl;
     return intl13.string(util.t.HIgA5a);
-  } else if (constants7.CREATE_PUBLIC_THREADS === item) {
+  } else if (constants6.CREATE_PUBLIC_THREADS === item) {
     const intl12 = util.intl;
     return intl12.string(util.t["25rKnX"]);
-  } else if (constants7.CREATE_PRIVATE_THREADS === item) {
+  } else if (constants6.CREATE_PRIVATE_THREADS === item) {
     const intl11 = util.intl;
     return intl11.string(util.t.QwbTSa);
-  } else if (constants7.SEND_MESSAGES_IN_THREADS === item) {
+  } else if (constants6.SEND_MESSAGES_IN_THREADS === item) {
     const intl10 = util.intl;
     return intl10.string(util.t.fTE74g);
-  } else if (constants7.MANAGE_THREADS === item) {
+  } else if (constants6.MANAGE_THREADS === item) {
     const intl9 = util.intl;
     return intl9.string(util.t.kEqgr7);
-  } else if (constants7.MODERATE_MEMBERS === item) {
+  } else if (constants6.MODERATE_MEMBERS === item) {
     const intl8 = util.intl;
     return intl8.string(util.t["+RL6pz"]);
-  } else if (constants7.SET_VOICE_CHANNEL_STATUS === item) {
+  } else if (constants6.SET_VOICE_CHANNEL_STATUS === item) {
     const intl7 = util.intl;
     return intl7.string(util.t.VBwkUf);
-  } else if (constants7.SEND_POLLS === item) {
+  } else if (constants6.SEND_POLLS === item) {
     const intl6 = util.intl;
     return intl6.string(util.t.UMQ7Ww);
-  } else if (constants7.SEND_VOICE_MESSAGES === item) {
+  } else if (constants6.SEND_VOICE_MESSAGES === item) {
     const intl5 = util.intl;
     return intl5.string(util.t.WlWSBT);
-  } else if (constants7.USE_EXTERNAL_APPS === item) {
+  } else if (constants6.USE_EXTERNAL_APPS === item) {
     const intl4 = util.intl;
     return intl4.string(util.t.TtA5rK);
-  } else if (constants7.PIN_MESSAGES === item) {
+  } else if (constants6.PIN_MESSAGES === item) {
     const intl3 = util.intl;
     return intl3.string(util.t.Y5BI39);
-  } else if (constants7.BYPASS_SLOWMODE === item) {
+  } else if (constants6.BYPASS_SLOWMODE === item) {
     const intl2 = util.intl;
     return intl2.string(util.t.kqcjeV);
-  } else if (constants7.MANAGE_OFFICIAL_MESSAGES === item) {
+  } else if (constants6.MANAGE_OFFICIAL_MESSAGES === item) {
     const intl = util.intl;
     return intl.string(util.t.Aj9ruN);
   } else {
@@ -1860,17 +1924,17 @@ export const transformLogs = function transformLogs(arr, arg1) {
     items = result3;
     targetType = targetType.targetType;
     let tmp3 = result3;
-    if (constants2.GUILD !== targetType) {
+    if (constants3.GUILD !== targetType) {
       tmp3 = tmp;
-      if (constants2.GUILD_HOME !== targetType) {
+      if (constants3.GUILD_HOME !== targetType) {
         tmp3 = tmp;
-        if (constants2.GUILD_PROFILE !== targetType) {
-          if (constants2.CHANNEL !== targetType) {
-            if (constants2.CHANNEL_OVERWRITE !== targetType) {
-              if (constants2.USER === targetType) {
-                result3 = constants.NICK;
+        if (constants3.GUILD_PROFILE !== targetType) {
+          if (constants3.CHANNEL !== targetType) {
+            if (constants3.CHANNEL_OVERWRITE !== targetType) {
+              if (constants3.USER === targetType) {
+                result3 = constants2.NICK;
                 const targetId15 = targetType.targetId;
-                let tmp192 = ((targetId15) => user.getUser(targetId15))(targetId15);
+                const tmp192 = ((targetId15) => user.getUser(targetId15))(targetId15);
                 let tmp195 = null;
                 if (tmp194) {
                   ((arg0) => arg0)(tmp192);
@@ -1902,8 +1966,8 @@ export const transformLogs = function transformLogs(arr, arg1) {
                 }
                 tmp3 = tmp201;
                 tmp194 = null != tmp192 && true;
-              } else if (constants2.ROLE === targetType) {
-                result3 = constants.NAME;
+              } else if (constants3.ROLE === targetType) {
+                result3 = constants2.NAME;
                 const targetId14 = targetType.targetId;
                 const tmp180 = ((targetId14) => role.getRole(items.id, targetId14))(targetId14);
                 let tmp183 = null;
@@ -1936,8 +2000,8 @@ export const transformLogs = function transformLogs(arr, arg1) {
                 }
                 tmp3 = tmp188;
                 tmp182 = null != tmp180 && true;
-              } else if (constants2.ONBOARDING_PROMPT === targetType) {
-                result3 = constants.ID;
+              } else if (constants3.ONBOARDING_PROMPT === targetType) {
+                result3 = constants2.ID;
                 const targetId13 = targetType.targetId;
                 const tmp165 = ((targetId13) => onboardingPrompt.getOnboardingPrompt(targetId13))(targetId13);
                 let tmp168 = null;
@@ -1961,7 +2025,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
                     stringResult = tmp169;
                     if (null != found2) {
                       stringResult = found2.newValue || found2.oldValue;
-                      const tmp175 = found2.newValue || found2.oldValue;
+                      let tmp175 = found2.newValue || found2.oldValue;
                     }
                   }
                 }
@@ -1976,11 +2040,11 @@ export const transformLogs = function transformLogs(arr, arg1) {
                 tmp167 = null != tmp165 && true;
               } else {
                 tmp3 = tmp;
-                if (constants2.GUILD_ONBOARDING !== targetType) {
+                if (constants3.GUILD_ONBOARDING !== targetType) {
                   tmp3 = tmp;
-                  if (constants2.GUILD_MEMBER_VERIFICATION !== targetType) {
-                    if (constants2.INVITE === targetType) {
-                      result3 = constants.CODE;
+                  if (constants3.GUILD_MEMBER_VERIFICATION !== targetType) {
+                    if (constants3.INVITE === targetType) {
+                      result3 = constants2.CODE;
                       const targetId12 = targetType.targetId;
                       const tmp153 = closure_1_24(targetId12);
                       let tmp156 = null;
@@ -2013,8 +2077,8 @@ export const transformLogs = function transformLogs(arr, arg1) {
                       }
                       tmp3 = tmp161;
                       tmp155 = null != tmp153 && false;
-                    } else if (constants2.INTEGRATION === targetType) {
-                      result3 = constants.TYPE;
+                    } else if (constants3.INTEGRATION === targetType) {
+                      result3 = constants2.TYPE;
                       const targetId11 = targetType.targetId;
                       const tmp140 = ((targetId11) => {
                         closure_0 = targetId11;
@@ -2051,8 +2115,8 @@ export const transformLogs = function transformLogs(arr, arg1) {
                       }
                       tmp3 = tmp148;
                       tmp142 = null != tmp140 && true;
-                    } else if (constants2.WEBHOOK === targetType) {
-                      result3 = constants.NAME;
+                    } else if (constants3.WEBHOOK === targetType) {
+                      result3 = constants2.NAME;
                       const targetId10 = targetType.targetId;
                       const tmp128 = ((targetId10) => {
                         closure_0 = targetId10;
@@ -2089,8 +2153,8 @@ export const transformLogs = function transformLogs(arr, arg1) {
                       }
                       tmp3 = tmp136;
                       tmp130 = null != tmp128 && true;
-                    } else if (constants2.EMOJI === targetType) {
-                      result3 = constants.NAME;
+                    } else if (constants3.EMOJI === targetType) {
+                      result3 = constants2.NAME;
                       const targetId9 = targetType.targetId;
                       const tmp116 = ((targetId9) => {
                         closure_0 = targetId9;
@@ -2127,8 +2191,8 @@ export const transformLogs = function transformLogs(arr, arg1) {
                       }
                       tmp3 = tmp124;
                       tmp118 = null != tmp116 && true;
-                    } else if (constants2.STICKER === targetType) {
-                      result3 = constants.NAME;
+                    } else if (constants3.STICKER === targetType) {
+                      result3 = constants2.NAME;
                       const targetId8 = targetType.targetId;
                       const tmp104 = ((targetId8) => stickerById.getStickerById(targetId8))(targetId8);
                       let tmp107 = null;
@@ -2161,8 +2225,8 @@ export const transformLogs = function transformLogs(arr, arg1) {
                       }
                       tmp3 = tmp112;
                       tmp106 = null != tmp104 && true;
-                    } else if (constants2.STAGE_INSTANCE === targetType) {
-                      result3 = constants.TOPIC;
+                    } else if (constants3.STAGE_INSTANCE === targetType) {
+                      result3 = constants2.TOPIC;
                       const targetId7 = targetType.targetId;
                       const tmp92 = ((targetId7) => {
                         closure_0 = targetId7;
@@ -2204,10 +2268,10 @@ export const transformLogs = function transformLogs(arr, arg1) {
                       tmp3 = tmp100;
                       tmp94 = null != tmp92 && true;
                     } else {
-                      if (constants2.GUILD_SCHEDULED_EVENT !== targetType) {
-                        if (constants2.GUILD_SCHEDULED_EVENT_EXCEPTION !== targetType) {
-                          if (constants2.THREAD === targetType) {
-                            result3 = constants.NAME;
+                      if (constants3.GUILD_SCHEDULED_EVENT !== targetType) {
+                        if (constants3.GUILD_SCHEDULED_EVENT_EXCEPTION !== targetType) {
+                          if (constants3.THREAD === targetType) {
+                            result3 = constants2.NAME;
                             const targetId5 = targetType.targetId;
                             const tmp68 = ((targetId5) => {
                               closure_0 = targetId5;
@@ -2244,7 +2308,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
                             }
                             tmp3 = tmp76;
                             tmp70 = null != tmp68 && true;
-                          } else if (constants2.APPLICATION_COMMAND === targetType) {
+                          } else if (constants3.APPLICATION_COMMAND === targetType) {
                             if (targetType.targetId === targetType.options.application_id) {
                               let integrations = GuildSettingsAuditLogStore.integrations;
                               const found10 = integrations.find((application) => {
@@ -2257,9 +2321,9 @@ export const transformLogs = function transformLogs(arr, arg1) {
                               });
                               tmp3 = null != found10 ? found10.name : targetType.targetId;
                             } else {
-                              result3 = constants.NAME;
+                              result3 = constants2.NAME;
                               const targetId18 = targetType.targetId;
-                              const tmp253 = ((targetId18) => {
+                              const tmp259 = ((targetId18) => {
                                 closure_0 = targetId18;
                                 const applicationCommands = closure_1_14.applicationCommands;
                                 return applicationCommands.find((id) => id.id === closure_0);
@@ -2272,14 +2336,14 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                       let name = name_localized.name_localized;
                                     }
                                     let combined = name;
-                                    if (name_localized.type === result3(1985).ApplicationCommandType.CHAT) {
+                                    if (name_localized.type === result3(1997).ApplicationCommandType.CHAT) {
                                       const _HermesInternal = HermesInternal;
                                       combined = "/\u2060" + name;
                                     }
                                     return combined;
                                   }
                                   name = name_localized.name;
-                                })(tmp253);
+                                })(tmp259);
                               }
                               let tmp57 = tmp56;
                               if (null == tmp56) {
@@ -2306,10 +2370,10 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                 tmp61 = targetId18;
                               }
                               tmp3 = tmp61;
-                              tmp55 = null != tmp253 && true;
+                              tmp55 = null != tmp259 && true;
                             }
-                          } else if (constants2.AUTO_MODERATION_RULE === targetType) {
-                            result3 = constants.NAME;
+                          } else if (constants3.AUTO_MODERATION_RULE === targetType) {
+                            result3 = constants2.NAME;
                             const targetId4 = targetType.targetId;
                             const tmp44 = ((targetId4) => {
                               closure_0 = targetId4;
@@ -2346,8 +2410,8 @@ export const transformLogs = function transformLogs(arr, arg1) {
                             }
                             tmp3 = tmp52;
                             tmp46 = null != tmp44 && true;
-                          } else if (constants2.GUILD_SOUNDBOARD === targetType) {
-                            result3 = constants.NAME;
+                          } else if (constants3.GUILD_SOUNDBOARD === targetType) {
+                            result3 = constants2.NAME;
                             const targetId3 = targetType.targetId;
                             const tmp32 = closure_1_24(targetId3);
                             let tmp35 = null;
@@ -2380,9 +2444,9 @@ export const transformLogs = function transformLogs(arr, arg1) {
                             }
                             tmp3 = tmp40;
                             tmp34 = null != tmp32 && false;
-                          } else if (constants2.HOME_SETTINGS === targetType) {
+                          } else if (constants3.HOME_SETTINGS === targetType) {
                             let targetId2 = tmp.id;
-                            result3 = constants.GUILD_ID;
+                            result3 = constants2.GUILD_ID;
                             if (targetId2 == null) {
                               targetId2 = targetType.targetId;
                             }
@@ -2423,13 +2487,13 @@ export const transformLogs = function transformLogs(arr, arg1) {
                               tmp27 = targetId2;
                             }
                             tmp3 = tmp27;
-                          } else if (constants2.VOICE_CHANNEL_STATUS === targetType) {
-                            result3 = constants.STATUS;
+                          } else if (constants3.VOICE_CHANNEL_STATUS === targetType) {
+                            result3 = constants2.STATUS;
                             const targetId = targetType.targetId;
                             let tmp7 = ((targetId) => closure_1_10.getChannel(targetId))(targetId);
                             let tmp10 = null;
                             if (tmp9) {
-                              tmp10 = ((channel) => result3(5049).computeChannelName(channel, user, closure_1_12, true))(tmp7);
+                              tmp10 = ((channel) => result3(5417).computeChannelName(channel, user, closure_1_12, true))(tmp7);
                             }
                             let tmp11 = tmp10;
                             if (null == tmp10) {
@@ -2463,7 +2527,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
                           }
                         }
                       }
-                      result3 = constants.NAME;
+                      result3 = constants2.NAME;
                       const targetId6 = targetType.targetId;
                       const tmp80 = ((targetId6) => {
                         closure_0 = targetId6;
@@ -2506,12 +2570,12 @@ export const transformLogs = function transformLogs(arr, arg1) {
               }
             }
           }
-          result3 = constants.NAME;
+          result3 = constants2.NAME;
           const targetId16 = targetType.targetId;
           const tmp205 = ((targetId16) => closure_1_10.getChannel(targetId16))(targetId16);
           let tmp208 = null;
           if (tmp207) {
-            tmp208 = ((channel) => result3(5049).computeChannelName(channel, user, closure_1_12, true))(tmp205);
+            tmp208 = ((channel) => result3(5417).computeChannelName(channel, user, closure_1_12, true))(tmp205);
           }
           let tmp209 = tmp208;
           if (null == tmp208) {
@@ -2550,23 +2614,29 @@ export const transformLogs = function transformLogs(arr, arg1) {
         obj = {};
         const merged = Object.assign(result1.options);
         let type = result1.options.type;
-        if (constants3.USER === type) {
+        if (constants4.USER === type) {
           let id = result1.options.id;
-          user = user.getUser(id);
-          if (tmp224) {
-            id = items(4728).getUserTag(user);
-            let obj4 = items(4728);
+          let user = null;
+          if (null != id) {
+            user = authStore.getUser(id);
+          }
+          if (tmp225) {
+            id = items(4922).getUserTag(user);
+            let obj4 = items(4922);
           }
           obj.subtarget = id;
-          tmp224 = null != user && true;
+          tmp225 = null != user && true;
         } else if (tmp220.ROLE === type) {
           let role_name = result1.options.role_name;
-          const tmp256 = closure_1_24(role_name);
-          if (tmp221) {
-            role_name = undefined(tmp256);
+          let tmp261Result = null;
+          if (null != role_name) {
+            tmp261Result = tmp261(role_name);
+          }
+          if (tmp222) {
+            role_name = undefined(tmp261Result);
           }
           obj.subtarget = role_name;
-          tmp221 = null != tmp256 && false;
+          tmp222 = null != tmp261Result && false;
         }
         if (null != result1.options.channel_id) {
           let targetId17 = result1.options.channel_id;
@@ -2574,47 +2644,46 @@ export const transformLogs = function transformLogs(arr, arg1) {
           if (targetId17 == null) {
             targetId17 = result1.targetId;
           }
-          const tmp227 = ((targetId17) => closure_1_10.getChannel(targetId17))(targetId17);
-          let tmp229 = null;
-          if (tmp228) {
-            ((arg0) => arg0)(tmp227);
-            tmp229 = tmp227;
+          const tmp228 = ((targetId17) => closure_1_10.getChannel(targetId17))(targetId17);
+          let tmp230 = null;
+          if (tmp229) {
+            ((arg0) => arg0)(tmp228);
+            tmp230 = tmp228;
           }
-          let tmp231 = tmp229;
-          if (null == tmp229) {
-            tmp231 = tmp229;
-            if (tmp234) {
-              tmp231 = tmp233[targetId17];
+          let tmp232 = tmp230;
+          if (null == tmp230) {
+            tmp232 = tmp230;
+            if (tmp235) {
+              tmp232 = tmp234[targetId17];
             }
-            tmp234 = null != GuildSettingsAuditLogStore.deletedTargets[result1.targetType] && null != GuildSettingsAuditLogStore.deletedTargets[result1.targetType][targetId17];
+            tmp235 = null != GuildSettingsAuditLogStore.deletedTargets[result1.targetType] && null != GuildSettingsAuditLogStore.deletedTargets[result1.targetType][targetId17];
           }
-          let tmp235 = tmp231;
-          if (null == tmp231) {
-            tmp235 = tmp231;
+          let tmp236 = tmp232;
+          if (null == tmp232) {
+            tmp236 = tmp232;
             if (null != result1.changes) {
               const changes17 = result1.changes;
               const found18 = changes17.find((key) => key.key === result3);
-              tmp235 = tmp231;
+              tmp236 = tmp232;
               if (null != found18) {
-                tmp235 = found18.newValue || found18.oldValue;
-                const tmp237 = found18.newValue || found18.oldValue;
+                tmp236 = found18.newValue || found18.oldValue;
+                const tmp238 = found18.newValue || found18.oldValue;
               }
             }
           }
-          if (tmp235 == null) {
-            tmp235 = targetId17;
+          if (tmp236 == null) {
+            tmp236 = targetId17;
           }
-          obj.channel = tmp235;
-          tmp228 = null != tmp227 && true;
+          obj.channel = tmp236;
+          tmp229 = null != tmp228 && true;
         }
-        let tmp238 = null != result1.options.members_removed;
-        if (tmp238) {
-          tmp238 = 0 !== result1.options.members_removed;
+        let tmp239 = null != result1.options.members_removed;
+        if (tmp239) {
+          tmp239 = 0 !== result1.options.members_removed;
         }
-        if (tmp238) {
+        if (tmp239) {
           obj.count = result1.options.members_removed;
         }
-        options = obj;
         if (null != result1.options.event_exception_id) {
           let guildScheduledEvents = GuildSettingsAuditLogStore.guildScheduledEvents;
           const found19 = guildScheduledEvents.find((id) => id.id === result3.targetId);
@@ -2623,8 +2692,8 @@ export const transformLogs = function transformLogs(arr, arg1) {
             const prop = found19.guild_scheduled_event_exceptions;
             found20 = prop.find((event_exception_id) => event_exception_id.event_exception_id === result3.options.event_exception_id);
           }
-          let obj5 = closure_0(4558);
-          const tmp244 = items(4467);
+          let obj5 = closure_0(4750);
+          const tmp245 = items(4659);
           let str5;
           if (found20 != null) {
             str5 = found20.event_exception_id;
@@ -2632,77 +2701,102 @@ export const transformLogs = function transformLogs(arr, arg1) {
           if (str5 == null) {
             str5 = "0";
           }
-          obj.subtarget = obj5.dateFormat(tmp244(items(11).extractTimestamp(str5)), "LL");
-          options = obj;
+          obj.subtarget = obj5.dateFormat(tmp245(items(11).extractTimestamp(str5)), "LL");
           const obj6 = items(11);
         }
+        options = obj;
+        if (!tmp249) {
+          let tmp250 = null != result1.options.member_id;
+          if (tmp250) {
+            tmp250 = "" !== result1.options.member_id;
+          }
+          options = obj;
+          if (tmp250) {
+            let user1 = authStore.getUser(result1.options.member_id);
+            if (user1 == null) {
+              user1 = null;
+            }
+            obj.member = user1;
+            options = obj;
+          }
+        }
+        tmp249 = result1.action !== constants.MEMBER_MOVE && result1.action !== tmp248.MEMBER_DISCONNECT;
       } else {
         options = result1.options;
       }
       const result2 = result1.set("options", options);
       result3 = result2;
-      let tmp247 = result2;
+      let tmp253 = result2;
       if (null != result2.changes) {
         items = [];
         const changes18 = result2.changes;
         let item = changes18.forEach((newValue) => {
-          if (result3.action === constants.APPLICATION_COMMAND_PERMISSION_UPDATE) {
-            const type = tmp298.type;
-            if (constants9.ROLE === type) {
-              let name = tmp298.id;
-              role = GuildRoleStore.getRole(tmp2.id, name);
-              if (tmp319) {
+          if (result3.action === AuditLogActions.APPLICATION_COMMAND_PERMISSION_UPDATE) {
+            const type = tmp291.type;
+            if (constants8.ROLE === type) {
+              let name = tmp291.id;
+              role = null;
+              if (null != name) {
+                role = GuildRoleStore.getRole(tmp2.id, name);
+              }
+              if (tmp312) {
                 name = role.name;
               }
               newValue.subtarget = name;
-              let tmp2922 = newValue;
-              tmp319 = null != role && true;
-            } else if (constants9.USER === type) {
-              let id2 = tmp298.id;
-              user = UserStore.getUser(id2);
-              if (tmp313) {
+              let tmp2852 = newValue;
+              tmp312 = null != role && true;
+            } else if (constants8.USER === type) {
+              let id2 = tmp291.id;
+              user = null;
+              if (null != id2) {
+                user = UserStore.getUser(id2);
+              }
+              if (tmp306) {
                 id2 = UserUtilsDefault.getUserTag(user);
               }
               newValue.subtarget = id2;
-              tmp2922 = newValue;
-              tmp313 = null != user && true;
+              tmp2852 = newValue;
+              tmp306 = null != user && true;
             } else {
-              tmp2922 = newValue;
-              if (constants9.CHANNEL === type) {
-                const obj27 = IntegerDefault(tmp2.id);
-                if (tmp298.id === str23.toString()) {
+              tmp2852 = newValue;
+              if (constants8.CHANNEL === type) {
+                const obj24 = IntegerDefault(tmp2.id);
+                if (tmp291.id === str23.toString()) {
                   const intl11 = util.intl;
                   newValue.subtarget = intl11.string(util.t.MSYhgh);
-                  tmp2922 = newValue;
+                  tmp2852 = newValue;
                 } else {
-                  let id = tmp298.id;
-                  const channel = ChannelStore.getChannel(id);
-                  if (tmp303) {
-                    const obj24 = useChannelName;
-                    id = obj24.computeChannelName(channel, UserStore, RelationshipStore, true);
+                  let id = tmp291.id;
+                  let channel = null;
+                  if (null != id) {
+                    channel = ChannelStore.getChannel(id);
+                  }
+                  if (tmp296) {
+                    const obj22 = useChannelName;
+                    id = obj22.computeChannelName(channel, UserStore, RelationshipStore, true);
                   }
                   newValue.subtarget = id;
-                  tmp2922 = newValue;
-                  tmp303 = null != channel && true;
+                  tmp2852 = newValue;
+                  tmp296 = null != channel && true;
                 }
                 str23 = IntegerDefault(tmp2.id).subtract(1);
               }
             }
           } else if (AuditLogChangeKeys.OWNER_ID === newValue.key) {
-            ({ newValue: newValue22, oldValue: oldValue22 } = newValue);
+            ({ newValue: newValue21, oldValue: oldValue21 } = newValue);
             if (null != newValue.newValue) {
-              newValue22 = UserStore.getUser(newValue.newValue);
+              newValue21 = UserStore.getUser(newValue.newValue);
             }
             if (null != newValue.oldValue) {
-              oldValue22 = UserStore.getUser(newValue.oldValue);
+              oldValue21 = UserStore.getUser(newValue.oldValue);
             }
-            if (!oldValue22) {
-              oldValue22 = newValue.oldValue;
+            if (!oldValue21) {
+              oldValue21 = newValue.oldValue;
             }
-            if (!newValue22) {
-              newValue22 = newValue.newValue;
+            if (!newValue21) {
+              newValue21 = newValue.newValue;
             }
-            tmp2922 = new AuditLogChange(key18, oldValue22, newValue22);
+            tmp2852 = new AuditLogChange(key18, oldValue21, newValue21);
           } else {
             if (AuditLogChangeKeys.CHANNEL_ID !== key19) {
               if (AuditLogChangeKeys.AFK_CHANNEL_ID !== key19) {
@@ -2710,27 +2804,12 @@ export const transformLogs = function transformLogs(arr, arg1) {
                   if (AuditLogChangeKeys.RULES_CHANNEL_ID !== key19) {
                     if (AuditLogChangeKeys.PUBLIC_UPDATES_CHANNEL_ID !== key19) {
                       if (AuditLogChangeKeys.AFK_TIMEOUT === key19) {
-                        ({ newValue: newValue20, oldValue: oldValue20 } = newValue);
-                        if (null != newValue.newValue) {
-                          newValue20 = newValue.newValue / 60;
-                        }
-                        if (null != newValue.oldValue) {
-                          oldValue20 = newValue.oldValue / 60;
-                        }
-                        if (!oldValue20) {
-                          oldValue20 = newValue.oldValue;
-                        }
-                        if (!newValue20) {
-                          newValue20 = newValue.newValue;
-                        }
-                        tmp2922 = new AuditLogChange(key16, oldValue20, newValue20);
-                      } else if (AuditLogChangeKeys.BITRATE === key19) {
                         ({ newValue: newValue19, oldValue: oldValue19 } = newValue);
                         if (null != newValue.newValue) {
-                          newValue19 = newValue.newValue / 1000;
+                          newValue19 = newValue.newValue / 60;
                         }
                         if (null != newValue.oldValue) {
-                          oldValue19 = newValue.oldValue / 1000;
+                          oldValue19 = newValue.oldValue / 60;
                         }
                         if (!oldValue19) {
                           oldValue19 = newValue.oldValue;
@@ -2738,16 +2817,14 @@ export const transformLogs = function transformLogs(arr, arg1) {
                         if (!newValue19) {
                           newValue19 = newValue.newValue;
                         }
-                        tmp2922 = new AuditLogChange(key15, oldValue19, newValue19);
-                      } else if (AuditLogChangeKeys.COLOR === key19) {
+                        tmp2852 = new AuditLogChange(key16, oldValue19, newValue19);
+                      } else if (AuditLogChangeKeys.BITRATE === key19) {
                         ({ newValue: newValue18, oldValue: oldValue18 } = newValue);
                         if (null != newValue.newValue) {
-                          newValue18 = utils_ColorUtils.int2hex(newValue.newValue).toUpperCase();
-                          const str21 = utils_ColorUtils.int2hex(newValue.newValue);
+                          newValue18 = newValue.newValue / 1000;
                         }
                         if (null != newValue.oldValue) {
-                          oldValue18 = utils_ColorUtils.int2hex(newValue.oldValue).toUpperCase();
-                          const str22 = utils_ColorUtils.int2hex(newValue.oldValue);
+                          oldValue18 = newValue.oldValue / 1000;
                         }
                         if (!oldValue18) {
                           oldValue18 = newValue.oldValue;
@@ -2755,49 +2832,41 @@ export const transformLogs = function transformLogs(arr, arg1) {
                         if (!newValue18) {
                           newValue18 = newValue.newValue;
                         }
-                        tmp2922 = new AuditLogChange(key14, oldValue18, newValue18);
-                      } else if (AuditLogChangeKeys.THEME_COLORS === key19) {
-                        ({ newValue: newValue16, oldValue: oldValue16 } = newValue);
+                        tmp2852 = new AuditLogChange(key15, oldValue18, newValue18);
+                      } else if (AuditLogChangeKeys.COLOR === key19) {
+                        ({ newValue: newValue17, oldValue: oldValue17 } = newValue);
                         if (null != newValue.newValue) {
-                          const newValue17 = newValue.newValue;
-                          const formatted = utils_ColorUtils.int2hex(newValue17[0]).toUpperCase();
-                          const str13 = utils_ColorUtils.int2hex(newValue17[0]);
-                          const _HermesInternal = HermesInternal;
-                          newValue16 = "" + formatted + ", " + utils_ColorUtils.int2hex(newValue17[1]).toUpperCase();
-                          const str14 = utils_ColorUtils.int2hex(newValue17[1]);
+                          newValue17 = utils_ColorUtils.int2hex(newValue.newValue).toUpperCase();
+                          const str21 = utils_ColorUtils.int2hex(newValue.newValue);
                         }
                         if (null != newValue.oldValue) {
-                          const oldValue17 = newValue.oldValue;
-                          const formatted1 = utils_ColorUtils.int2hex(oldValue17[0]).toUpperCase();
-                          const str17 = utils_ColorUtils.int2hex(oldValue17[0]);
-                          const _HermesInternal2 = HermesInternal;
-                          oldValue16 = "" + formatted1 + ", " + utils_ColorUtils.int2hex(oldValue17[1]).toUpperCase();
-                          const str18 = utils_ColorUtils.int2hex(oldValue17[1]);
+                          oldValue17 = utils_ColorUtils.int2hex(newValue.oldValue).toUpperCase();
+                          const str22 = utils_ColorUtils.int2hex(newValue.oldValue);
                         }
-                        if (!oldValue16) {
-                          oldValue16 = newValue.oldValue;
+                        if (!oldValue17) {
+                          oldValue17 = newValue.oldValue;
                         }
-                        if (!newValue16) {
-                          newValue16 = newValue.newValue;
+                        if (!newValue17) {
+                          newValue17 = newValue.newValue;
                         }
-                        tmp2922 = new AuditLogChange(key13, oldValue16, newValue16);
-                      } else if (AuditLogChangeKeys.MAX_AGE === key19) {
+                        tmp2852 = new AuditLogChange(key14, oldValue17, newValue17);
+                      } else if (AuditLogChangeKeys.THEME_COLORS === key19) {
                         ({ newValue: newValue15, oldValue: oldValue15 } = newValue);
                         if (null != newValue.newValue) {
-                          let label = newValue.newValue;
-                          const maxAgeOptionByValue = InstantInviteUtilsDefault.getMaxAgeOptionByValue(label);
-                          if (null !== maxAgeOptionByValue) {
-                            label = maxAgeOptionByValue.label;
-                          }
-                          newValue15 = label;
+                          const newValue16 = newValue.newValue;
+                          const formatted = utils_ColorUtils.int2hex(newValue16[0]).toUpperCase();
+                          const str13 = utils_ColorUtils.int2hex(newValue16[0]);
+                          const _HermesInternal = HermesInternal;
+                          newValue15 = "" + formatted + ", " + utils_ColorUtils.int2hex(newValue16[1]).toUpperCase();
+                          const str14 = utils_ColorUtils.int2hex(newValue16[1]);
                         }
                         if (null != newValue.oldValue) {
-                          let label2 = newValue.oldValue;
-                          const maxAgeOptionByValue1 = InstantInviteUtilsDefault.getMaxAgeOptionByValue(label2);
-                          if (null !== maxAgeOptionByValue1) {
-                            label2 = maxAgeOptionByValue1.label;
-                          }
-                          oldValue15 = label2;
+                          const oldValue16 = newValue.oldValue;
+                          const formatted1 = utils_ColorUtils.int2hex(oldValue16[0]).toUpperCase();
+                          const str17 = utils_ColorUtils.int2hex(oldValue16[0]);
+                          const _HermesInternal2 = HermesInternal;
+                          oldValue15 = "" + formatted1 + ", " + utils_ColorUtils.int2hex(oldValue16[1]).toUpperCase();
+                          const str18 = utils_ColorUtils.int2hex(oldValue16[1]);
                         }
                         if (!oldValue15) {
                           oldValue15 = newValue.oldValue;
@@ -2805,64 +2874,117 @@ export const transformLogs = function transformLogs(arr, arg1) {
                         if (!newValue15) {
                           newValue15 = newValue.newValue;
                         }
-                        tmp2922 = new AuditLogChange(key12, oldValue15, newValue15);
+                        tmp2852 = new AuditLogChange(key13, oldValue15, newValue15);
+                      } else if (AuditLogChangeKeys.MAX_AGE === key19) {
+                        ({ newValue: newValue14, oldValue: oldValue14 } = newValue);
+                        if (null != newValue.newValue) {
+                          let label = newValue.newValue;
+                          const maxAgeOptionByValue = InstantInviteUtilsDefault.getMaxAgeOptionByValue(label);
+                          if (null !== maxAgeOptionByValue) {
+                            label = maxAgeOptionByValue.label;
+                          }
+                          newValue14 = label;
+                        }
+                        if (null != newValue.oldValue) {
+                          let label2 = newValue.oldValue;
+                          const maxAgeOptionByValue1 = InstantInviteUtilsDefault.getMaxAgeOptionByValue(label2);
+                          if (null !== maxAgeOptionByValue1) {
+                            label2 = maxAgeOptionByValue1.label;
+                          }
+                          oldValue14 = label2;
+                        }
+                        if (!oldValue14) {
+                          oldValue14 = newValue.oldValue;
+                        }
+                        if (!newValue14) {
+                          newValue14 = newValue.newValue;
+                        }
+                        tmp2852 = new AuditLogChange(key12, oldValue14, newValue14);
                       } else if (AuditLogChangeKeys.PERMISSIONS === key19) {
                         items = [];
-                        ({ added: added2, removed: removed2 } = getPermissionChanges(newValue.oldValue, newValue.newValue));
-                        if (added2.length > 0) {
-                          const tmp208 = new AuditLogChange(AuditLogChangeKeys.PERMISSIONS_GRANTED, null, added2);
-                          items.push(tmp208);
+                        ({ added: added3, removed: removed3 } = getPermissionChanges(newValue.oldValue, newValue.newValue));
+                        if (added3.length > 0) {
+                          const tmp201 = new AuditLogChange(AuditLogChangeKeys.PERMISSIONS_GRANTED, null, added3);
+                          items.push(tmp201);
                         }
-                        tmp2922 = items;
-                        if (removed2.length > 0) {
-                          const tmp372 = new AuditLogChange(AuditLogChangeKeys.PERMISSIONS_DENIED, null, removed2);
-                          items.push(tmp372);
-                          tmp2922 = items;
+                        tmp2852 = items;
+                        if (removed3.length > 0) {
+                          const tmp360 = new AuditLogChange(AuditLogChangeKeys.PERMISSIONS_DENIED, null, removed3);
+                          items.push(tmp360);
+                          tmp2852 = items;
                         }
-                        const tmp202 = getPermissionChanges(newValue.oldValue, newValue.newValue);
+                        const tmp195 = getPermissionChanges(newValue.oldValue, newValue.newValue);
                       } else {
                         if (AuditLogChangeKeys.PERMISSIONS_GRANTED !== key19) {
                           if (AuditLogChangeKeys.PERMISSIONS_DENIED !== key19) {
                             if (AuditLogChangeKeys.FLAGS === key19) {
-                              ({ oldValue: oldValue14, newValue: newValue14 } = newValue);
-                              let num6 = 0;
-                              if (typeof oldValue14 === "number") {
-                                num6 = oldValue14;
-                              }
-                              let num7 = 0;
-                              if (typeof newValue14 === "number") {
-                                num7 = newValue14;
-                              }
-                              FlagUtilsAll;
-                              const items1 = [];
-                              const items2 = [];
-                              for (const key10535 in ChannelFlags) {
-                                let tmp348 = ChannelFlags[key10535];
-                                let obj26 = FlagUtilsAll;
-                                if (obj26.hasFlag(removeFlagResult, tmp348)) {
-                                  let arr3 = items1.push(tmp348);
+                              items1 = [];
+                              ({ added, removed } = (function getChannelFlagChanges(oldValue, newValue) {
+                                let num = 0;
+                                if (typeof oldValue === "number") {
+                                  num = oldValue;
                                 }
-                                let tmp349Result = FlagUtilsAll;
-                                if (!tmp349Result.hasFlag(tmp179, tmp348)) {
-                                  continue;
-                                } else {
-                                  let arr4 = items2.push(tmp348);
+                                let num2 = 0;
+                                if (typeof newValue === "number") {
+                                  num2 = newValue;
+                                }
+                                obj = items2(1402);
+                                const removeFlagResult = items2(1402).removeFlag(num2, num);
+                                const added = [];
+                                const removed = [];
+                                const obj2 = items2(1402);
+                                const values = Object.values(closure_1_30);
+                                for (const item10028 of values) {
+                                  obj3 = items2(1402);
+                                  if (obj3.hasFlag(removeFlagResult, item10028)) {
+                                    let arr = added.push(item10028);
+                                  }
+                                  let tmp6Result = items2(1402);
+                                  if (tmp6Result.hasFlag(removeFlagResult1, item10028)) {
+                                    let arr2 = removed.push(item10028);
+                                  }
                                   continue;
                                 }
-                                continue;
+                                return { added, removed };
+                              })(newValue.oldValue, newValue.newValue));
+                              if (added.length > 0) {
+                                const tmp181 = new AuditLogChange(newValue.key, null, added);
+                                items1.push(tmp181);
                               }
-                              const items3 = [];
-                              if (items1.length > 0) {
-                                const tmp188 = new AuditLogChange(newValue.key, null, items1);
-                                items3.push(tmp188);
+                              tmp2852 = items1;
+                              if (removed.length > 0) {
+                                const tmp344 = new AuditLogChange(newValue.key, removed, null);
+                                items1.push(tmp344);
+                                tmp2852 = items1;
                               }
-                              tmp2922 = items3;
-                              if (items2.length > 0) {
-                                const tmp356 = new AuditLogChange(newValue.key, items2, null);
-                                items3.push(tmp356);
-                                tmp2922 = items3;
-                              }
-                              const removeFlagResult = FlagUtilsAll.removeFlag(num7, num6);
+                              const tmp175 = (function getChannelFlagChanges(oldValue, newValue) {
+                                let num = 0;
+                                if (typeof oldValue === "number") {
+                                  num = oldValue;
+                                }
+                                let num2 = 0;
+                                if (typeof newValue === "number") {
+                                  num2 = newValue;
+                                }
+                                obj = items2(1402);
+                                const removeFlagResult = items2(1402).removeFlag(num2, num);
+                                const added = [];
+                                const removed = [];
+                                const obj2 = items2(1402);
+                                const values = Object.values(closure_1_30);
+                                for (const item10028 of values) {
+                                  obj3 = items2(1402);
+                                  if (obj3.hasFlag(removeFlagResult, item10028)) {
+                                    let arr = added.push(item10028);
+                                  }
+                                  let tmp6Result = items2(1402);
+                                  if (tmp6Result.hasFlag(removeFlagResult1, item10028)) {
+                                    let arr2 = removed.push(item10028);
+                                  }
+                                  continue;
+                                }
+                                return { added, removed };
+                              })(newValue.oldValue, newValue.newValue);
                             } else if (AuditLogChangeKeys.PREFERRED_LOCALE === key19) {
                               ({ newValue: newValue13, oldValue: oldValue13 } = newValue);
                               if (null != newValue.newValue) {
@@ -2891,7 +3013,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
                               if (!newValue13) {
                                 newValue13 = newValue.newValue;
                               }
-                              tmp2922 = new AuditLogChange(key11, oldValue13, newValue13);
+                              tmp2852 = new AuditLogChange(key11, oldValue13, newValue13);
                             } else if (AuditLogChangeKeys.VIDEO_QUALITY_MODE === key19) {
                               ({ newValue: newValue12, oldValue: oldValue12 } = newValue);
                               if (null == newValue.newValue) {
@@ -2902,15 +3024,15 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                   if (!newValue12) {
                                     newValue12 = newValue.newValue;
                                   }
-                                  tmp2922 = new AuditLogChange(key10, oldValue12, newValue12);
-                                } else if (newValue.oldValue === constants8.FULL) {
+                                  tmp2852 = new AuditLogChange(key10, oldValue12, newValue12);
+                                } else if (newValue.oldValue === constants7.FULL) {
                                   const intl10 = util.intl;
                                   let stringResult = intl10.string(util.t["7jOoJE"]);
                                 } else {
                                   const intl9 = util.intl;
                                   stringResult = intl9.string(util.t.jjKYpu);
                                 }
-                              } else if (newValue.newValue === constants8.FULL) {
+                              } else if (newValue.newValue === constants7.FULL) {
                                 const intl8 = util.intl;
                                 let stringResult1 = intl8.string(util.t["7jOoJE"]);
                               } else {
@@ -2919,16 +3041,16 @@ export const transformLogs = function transformLogs(arr, arg1) {
                               }
                             } else if (AuditLogChangeKeys.SYSTEM_CHANNEL_FLAGS === key19) {
                               ({ SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATIONS: obj9[closure_3_28.SUPPRESS_JOIN_NOTIFICATIONS], SYSTEM_CHANNEL_FLAG_PREMIUM_SUBSCRIPTIONS: obj9[closure_3_28.SUPPRESS_PREMIUM_SUBSCRIPTIONS], SYSTEM_CHANNEL_FLAG_REMINDER_NOTIFICATIONS: obj9[closure_3_28.SUPPRESS_GUILD_REMINDER_NOTIFICATIONS], SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATION_REPLIES: obj9[closure_3_28.SUPPRESS_JOIN_NOTIFICATION_REPLIES] } = AuditLogChangeKeys);
-                              const items4 = [];
+                              const items2 = [];
                               const _Object = Object;
-                              const values = Object.values(closure_3_28);
+                              let values = Object.values(closure_3_28);
                               const item = values.forEach((item) => {
                                 if ((newValue.oldValue & item) === item !== (newValue.newValue & item) === item) {
                                   const tmp7 = new closure_2_9(obj3[item], !tmp, !tmp2);
-                                  items4.push(tmp7);
+                                  items2.push(tmp7);
                                 }
                               });
-                              tmp2922 = items4;
+                              tmp2852 = items2;
                             } else if (AuditLogChangeKeys.AUTO_MODERATION_ACTIONS === key19) {
                               let tmp1322 = newValue;
                               if (result3.targetType === AuditLogTargetTypes.AUTO_MODERATION_RULE) {
@@ -2961,7 +3083,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                 }
                                 tmp1322 = new AuditLogChange(key9, oldValue11, newValue11);
                               }
-                              tmp2922 = tmp1322;
+                              tmp2852 = tmp1322;
                             } else if (AuditLogChangeKeys.AUTO_MODERATION_EVENT_TYPE === key19) {
                               let tmp1182 = newValue;
                               if (result3.targetType === AuditLogTargetTypes.AUTO_MODERATION_RULE) {
@@ -2981,7 +3103,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                 }
                                 tmp1182 = new AuditLogChange(key8, oldValue10, newValue10);
                               }
-                              tmp2922 = tmp1182;
+                              tmp2852 = tmp1182;
                             } else if (AuditLogChangeKeys.AUTO_MODERATION_TRIGGER_TYPE === key19) {
                               let tmp1102 = newValue;
                               if (result3.targetType === AuditLogTargetTypes.AUTO_MODERATION_RULE) {
@@ -3001,16 +3123,16 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                 }
                                 tmp1102 = new AuditLogChange(key7, oldValue9, newValue9);
                               }
-                              tmp2922 = tmp1102;
+                              tmp2852 = tmp1102;
                             } else if (AuditLogChangeKeys.AUTO_MODERATION_TRIGGER_METADATA === key19) {
                               let tmp1022 = newValue;
                               if (result3.targetType === AuditLogTargetTypes.AUTO_MODERATION_RULE) {
                                 ({ newValue: newValue8, oldValue: oldValue8 } = newValue);
                                 if (null != newValue.newValue) {
                                   let newValue7 = newValue.newValue;
-                                  let tmp335 = newValue7;
+                                  let tmp328 = newValue7;
                                   if (null != newValue7) {
-                                    tmp335 = newValue7;
+                                    tmp328 = newValue7;
                                     if (typeof newValue7 === "object") {
                                       if (null == newValue7.keyword_filter) {
                                         const _JSON3 = JSON;
@@ -3027,13 +3149,13 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                       json = intl5.formatToMarkdownString(util.t.y91UXV, obj4);
                                     }
                                   }
-                                  newValue8 = tmp335;
+                                  newValue8 = tmp328;
                                 }
                                 if (null != newValue.oldValue) {
                                   let oldValue7 = newValue.oldValue;
-                                  let tmp336 = oldValue7;
+                                  let tmp329 = oldValue7;
                                   if (null != oldValue7) {
-                                    tmp336 = oldValue7;
+                                    tmp329 = oldValue7;
                                     if (typeof oldValue7 === "object") {
                                       if (null == oldValue7.keyword_filter) {
                                         const _JSON4 = JSON;
@@ -3050,7 +3172,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                       json1 = intl6.formatToMarkdownString(util.t.y91UXV, obj5);
                                     }
                                   }
-                                  oldValue8 = tmp336;
+                                  oldValue8 = tmp329;
                                 }
                                 if (!oldValue8) {
                                   oldValue8 = newValue.oldValue;
@@ -3060,7 +3182,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                 }
                                 tmp1022 = new AuditLogChange(key6, oldValue8, newValue8);
                               }
-                              tmp2922 = tmp1022;
+                              tmp2852 = tmp1022;
                             } else {
                               if (AuditLogChangeKeys.AUTO_MODERATION_ADD_KEYWORDS !== key19) {
                                 if (AuditLogChangeKeys.AUTO_MODERATION_REMOVE_KEYWORDS !== key19) {
@@ -3073,10 +3195,10 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                             if (result3.targetType === AuditLogTargetTypes.AUTO_MODERATION_RULE) {
                                               ({ newValue: newValue5, oldValue: oldValue5 } = newValue);
                                               if (null != newValue.newValue) {
-                                                const newValue23 = newValue.newValue;
-                                                const mapped6 = newValue23.map(ChannelStore.getChannel);
+                                                const newValue22 = newValue.newValue;
+                                                const mapped6 = newValue22.map(ChannelStore.getChannel);
                                                 const found2 = mapped6.filter((item) => null != item);
-                                                const mapped7 = found2.map((item) => newValue(dependencyMap[24]).computeChannelName(item, user, closure_1_12, true));
+                                                const mapped7 = found2.map((item) => newValue(5417).computeChannelName(item, user, closure_1_12, true));
                                                 if (null == mapped7) {
                                                   newValue5 = mapped7;
                                                 } else {
@@ -3088,10 +3210,10 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                                 }
                                               }
                                               if (null != newValue.oldValue) {
-                                                const oldValue23 = newValue.oldValue;
-                                                const mapped8 = oldValue23.map(ChannelStore.getChannel);
+                                                const oldValue22 = newValue.oldValue;
+                                                const mapped8 = oldValue22.map(ChannelStore.getChannel);
                                                 const found3 = mapped8.filter((item) => null != item);
-                                                const mapped9 = found3.map((item) => newValue(dependencyMap[24]).computeChannelName(item, user, closure_1_12, true));
+                                                const mapped9 = found3.map((item) => newValue(5417).computeChannelName(item, user, closure_1_12, true));
                                                 if (null == mapped9) {
                                                   oldValue5 = mapped9;
                                                 } else {
@@ -3110,14 +3232,14 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                               }
                                               tmp662 = new AuditLogChange(key4, oldValue5, newValue5);
                                             }
-                                            tmp2922 = tmp662;
+                                            tmp2852 = tmp662;
                                           } else if (AuditLogChangeKeys.AUTO_MODERATION_EXEMPT_ROLES === key19) {
                                             let tmp502 = newValue;
                                             if (result3.targetType === AuditLogTargetTypes.AUTO_MODERATION_RULE) {
                                               ({ newValue: newValue4, oldValue: oldValue4 } = newValue);
                                               if (null != newValue.newValue) {
-                                                const newValue24 = newValue.newValue;
-                                                const mapped10 = newValue24.map((item) => role.getRole(newValue.id, item));
+                                                const newValue23 = newValue.newValue;
+                                                const mapped10 = newValue23.map((item) => role.getRole(newValue.id, item));
                                                 const found4 = mapped10.filter((item) => null != item);
                                                 const mapped11 = found4.map((name) => name.name);
                                                 if (null == mapped11) {
@@ -3131,8 +3253,8 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                                 }
                                               }
                                               if (null != newValue.oldValue) {
-                                                const oldValue24 = newValue.oldValue;
-                                                const mapped12 = oldValue24.map((item) => role.getRole(newValue.id, item));
+                                                const oldValue23 = newValue.oldValue;
+                                                const mapped12 = oldValue23.map((item) => role.getRole(newValue.id, item));
                                                 const found5 = mapped12.filter((item) => null != item);
                                                 const mapped13 = found5.map((name) => name.name);
                                                 if (null == mapped13) {
@@ -3153,20 +3275,20 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                               }
                                               tmp502 = new AuditLogChange(key3, oldValue4, newValue4);
                                             }
-                                            tmp2922 = tmp502;
+                                            tmp2852 = tmp502;
                                           } else if (AuditLogChangeKeys.ROLE_IDS === key19) {
-                                            let tmp3411 = newValue;
+                                            let tmp346 = newValue;
                                             if (result3.targetType === AuditLogTargetTypes.INVITE) {
                                               ({ newValue: newValue3, oldValue: oldValue3 } = newValue);
                                               if (null != newValue.newValue) {
-                                                const newValue25 = newValue.newValue;
-                                                const mapped14 = newValue25.map((item) => role.getRole(newValue.id, item));
+                                                const newValue24 = newValue.newValue;
+                                                const mapped14 = newValue24.map((item) => role.getRole(newValue.id, item));
                                                 const found6 = mapped14.filter((item) => null != item);
                                                 newValue3 = found6.map((id) => ({ id: id.id, name: id.name }));
                                               }
                                               if (null != newValue.oldValue) {
-                                                const oldValue25 = newValue.oldValue;
-                                                const mapped15 = oldValue25.map((item) => role.getRole(newValue.id, item));
+                                                const oldValue24 = newValue.oldValue;
+                                                const mapped15 = oldValue24.map((item) => role.getRole(newValue.id, item));
                                                 const found7 = mapped15.filter((item) => null != item);
                                                 oldValue3 = found7.map((id) => ({ id: id.id, name: id.name }));
                                               }
@@ -3176,13 +3298,13 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                               if (!newValue3) {
                                                 newValue3 = newValue.newValue;
                                               }
-                                              tmp3411 = new AuditLogChange(key2, oldValue3, newValue3);
+                                              tmp346 = new AuditLogChange(key2, oldValue3, newValue3);
                                             }
-                                            tmp2922 = tmp3411;
+                                            tmp2852 = tmp346;
                                           } else if (AuditLogChangeKeys.AVAILABLE_TAGS === key19) {
-                                            tmp2922 = transformAvailableForumTagChange(newValue);
+                                            tmp2852 = transformAvailableForumTagChange(newValue);
                                           } else if (AuditLogChangeKeys.APPLIED_TAGS === key19) {
-                                            tmp2922 = transformAppliedForumTagChange(newValue, result3);
+                                            tmp2852 = transformAppliedForumTagChange(newValue, result3);
                                           } else if (AuditLogChangeKeys.SCHEDULED_START_TIME === key19) {
                                             ({ newValue, oldValue } = newValue);
                                             if (null != newValue.newValue) {
@@ -3190,14 +3312,14 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                               const _Date = Date;
                                               obj = DateUtils;
                                               const date = new Date(newValue2);
-                                              newValue = obj.dateFormat(_modDef4467(date), "LLLL");
+                                              newValue = obj.dateFormat(_modDef4659(date), "LLLL");
                                             }
                                             if (null != newValue.oldValue) {
                                               const oldValue2 = newValue.oldValue;
                                               const _Date2 = Date;
-                                              const obj2 = DateUtils;
+                                              let obj2 = DateUtils;
                                               const date1 = new Date(oldValue2);
-                                              oldValue = obj2.dateFormat(_modDef4467(date1), "LLLL");
+                                              oldValue = obj2.dateFormat(_modDef4659(date1), "LLLL");
                                             }
                                             if (!oldValue) {
                                               oldValue = newValue.oldValue;
@@ -3205,9 +3327,9 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                             if (!newValue) {
                                               newValue = newValue.newValue;
                                             }
-                                            tmp2922 = new AuditLogChange(key, oldValue, newValue);
+                                            tmp2852 = new AuditLogChange(key, oldValue, newValue);
                                           } else {
-                                            tmp2922 = newValue;
+                                            tmp2852 = newValue;
                                           }
                                         }
                                       }
@@ -3228,91 +3350,88 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                     }
                                     tmp822 = new AuditLogChange(key5, oldValue6, newValue6);
                                   } else {
-                                    let oldValue26 = newValue.oldValue;
-                                    if (null == oldValue26) {
+                                    let oldValue25 = newValue.oldValue;
+                                    if (null == oldValue25) {
                                       const _JSON2 = JSON;
-                                      let json2 = JSON.stringify(oldValue26);
+                                      let json2 = JSON.stringify(oldValue25);
                                     } else {
                                       const _Array2 = Array;
                                     }
-                                    oldValue26 = oldValue26.map((item) => "'" + item + "'");
-                                    json2 = oldValue26.join(", ");
+                                    oldValue25 = oldValue25.map((item) => "'" + item + "'");
+                                    json2 = oldValue25.join(", ");
                                   }
                                 } else {
-                                  let newValue26 = newValue.newValue;
-                                  if (null == newValue26) {
+                                  let newValue25 = newValue.newValue;
+                                  if (null == newValue25) {
                                     const _JSON = JSON;
-                                    let json3 = JSON.stringify(newValue26);
+                                    let json3 = JSON.stringify(newValue25);
                                   } else {
                                     const _Array = Array;
                                   }
-                                  newValue26 = newValue26.map((item) => "'" + item + "'");
-                                  json3 = newValue26.join(", ");
+                                  newValue25 = newValue25.map((item) => "'" + item + "'");
+                                  json3 = newValue25.join(", ");
                                 }
                               }
-                              tmp2922 = tmp822;
+                              tmp2852 = tmp822;
                             }
                           }
                         }
-                        const items5 = [];
-                        ({ added, removed } = getPermissionChanges(newValue.oldValue, newValue.newValue));
-                        if (added.length > 0) {
-                          const tmp198 = new AuditLogChange(newValue.key, null, added);
-                          items5.push(tmp198);
+                        const items3 = [];
+                        ({ added: added2, removed: removed2 } = getPermissionChanges(newValue.oldValue, newValue.newValue));
+                        if (added2.length > 0) {
+                          const tmp191 = new AuditLogChange(newValue.key, null, added2);
+                          items3.push(tmp191);
                         }
-                        tmp2922 = items5;
-                        if (removed.length > 0) {
-                          const tmp364 = new AuditLogChange(AuditLogChangeKeys.PERMISSIONS_RESET, removed, removed);
-                          items5.push(tmp364);
-                          tmp2922 = items5;
+                        tmp2852 = items3;
+                        if (removed2.length > 0) {
+                          const tmp352 = new AuditLogChange(AuditLogChangeKeys.PERMISSIONS_RESET, removed2, removed2);
+                          items3.push(tmp352);
+                          tmp2852 = items3;
                         }
-                        const tmp192 = getPermissionChanges(newValue.oldValue, newValue.newValue);
+                        const tmp185 = getPermissionChanges(newValue.oldValue, newValue.newValue);
                       }
                     }
                   }
                 }
               }
             }
-            ({ newValue: newValue21, oldValue: oldValue21 } = newValue);
+            ({ newValue: newValue20, oldValue: oldValue20 } = newValue);
             if (null != newValue.newValue) {
               const channel1 = ChannelStore.getChannel(newValue.newValue);
               let channelName = channel1;
               if (null != channel1) {
-                const obj22 = useChannelName;
-                channelName = obj22.computeChannelName(channel1, UserStore, RelationshipStore, true);
+                const obj20 = useChannelName;
+                channelName = obj20.computeChannelName(channel1, UserStore, RelationshipStore, true);
               }
-              newValue21 = channelName;
+              newValue20 = channelName;
             }
             if (null != newValue.oldValue) {
               const channel2 = ChannelStore.getChannel(newValue.oldValue);
               let channelName1 = channel2;
               if (null != channel2) {
-                const obj23 = useChannelName;
-                channelName1 = obj23.computeChannelName(channel2, UserStore, RelationshipStore, true);
+                const obj21 = useChannelName;
+                channelName1 = obj21.computeChannelName(channel2, UserStore, RelationshipStore, true);
               }
-              oldValue21 = channelName1;
+              oldValue20 = channelName1;
             }
-            if (!oldValue21) {
-              oldValue21 = newValue.oldValue;
+            if (!oldValue20) {
+              oldValue20 = newValue.oldValue;
             }
-            if (!newValue21) {
-              newValue21 = newValue.newValue;
+            if (!newValue20) {
+              newValue20 = newValue.newValue;
             }
-            tmp2922 = new AuditLogChange(key17, oldValue21, newValue21);
+            tmp2852 = new AuditLogChange(key17, oldValue20, newValue20);
           }
-          if (Array.isArray(tmp2922)) {
-            const item1 = tmp2922.forEach((item) => obj3.push(item));
+          if (Array.isArray(tmp2852)) {
+            const item1 = tmp2852.forEach((item) => obj3.push(item));
           } else {
-            items.push(tmp2922);
+            items.push(tmp2852);
           }
         });
         result3 = result2.set("changes", items);
-        tmp247 = result3;
+        tmp253 = result3;
       }
-      items.push(tmp247);
-    } else {
-      let items1 = [, , , , , , ];
-      ({ MEMBER_PRUNE: arr19[0], MEMBER_DISCONNECT: arr19[1], MEMBER_MOVE: arr19[2], CHANNEL_POSITION_UPDATE: arr19[3], ROLE_POSITION_UPDATE: arr19[4], CREATOR_MONETIZATION_REQUEST_CREATED: arr19[5], CREATOR_MONETIZATION_TERMS_ACCEPTED: arr19[6] } = closure_1_15);
+      items.push(tmp253);
     }
   });
   return items;

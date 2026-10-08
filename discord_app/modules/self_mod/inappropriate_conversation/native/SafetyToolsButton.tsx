@@ -1,18 +1,18 @@
-// === Module 13139: SafetyToolsButton ===
+// === Module 12854: SafetyToolsButton ===
 
-// Module 13139 (SafetyToolsButton)
+// Module 12854 (SafetyToolsButton)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 9811 */;
-import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 9812 */;
-import SafetyToolsActionCreators from "SafetyToolsActionCreators" /* 9838 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 10374 */;
+import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 10375 */;
+import SafetyToolsActionCreators from "SafetyToolsActionCreators" /* 10401 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { safetyToolsButton: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -20,7 +20,7 @@ let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/native/SafetyToolsButton.tsx");
 
-export const SafetyToolsButton = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+export const SafetyToolsButton = ReactCompilerGating.isReactCompilerEnabled() ? (function SafetyToolsButton(channelId) {
   const cResult = channelId(warningId[7]).c(42);
   channelId = channelId.channelId;
   const recipientId = channelId.recipientId;
@@ -210,7 +210,7 @@ export const SafetyToolsButton = ReactCompilerGating.isReactCompilerEnabled() ? 
   cResult[2] = T;
   tmp9 = T;
   let tmp7 = warningType(safetyToolsButtonTooltipForChannel.useState(false), 2);
-}) : ((channelId) => {
+}) : (function SafetyToolsButton(channelId) {
   channelId = channelId.channelId;
   const recipientId = channelId.recipientId;
   const warningId = channelId.warningId;

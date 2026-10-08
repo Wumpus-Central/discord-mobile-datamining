@@ -1,13 +1,13 @@
-// === Module 12948: UserProfilePrivateInfoBanner ===
+// === Module 13227: UserProfilePrivateInfoBanner ===
 
-// Module 12948 (UserProfilePrivateInfoBanner)
+// Module 13227 (UserProfilePrivateInfoBanner)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import createStyles from "createStyles" /* 4896 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import createStyles from "createStyles" /* 5090 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -18,7 +18,7 @@ let closure_4 = createStyles.createStyles(obj);
 let obj2 = { padding: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.lg, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfilePrivateInfoBanner.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfilePrivateInfoBanner(arg0) {
   const cResult = c.c(12);
   ({ username, containerBackground } = arg0);
   const tmp4 = closure_4();
@@ -75,7 +75,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = tmp5;
   cResult[4] = items;
   tmp8 = items;
-}) : ((username) => {
+}) : (function UserProfilePrivateInfoBanner(username) {
   const containerBackground = username.containerBackground;
   const items = [closure_4().banner, ];
   let tmp3 = null != containerBackground;

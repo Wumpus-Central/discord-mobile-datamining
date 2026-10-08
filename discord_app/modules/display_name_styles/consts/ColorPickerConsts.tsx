@@ -1,6 +1,6 @@
-// === Module 15186: ColorPickerConsts ===
+// === Module 15448: ColorPickerConsts ===
 
-// Module 15186 (ColorPickerConsts)
+// Module 15448 (ColorPickerConsts)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/display_name_styles/consts/ColorPickerConsts.tsx");

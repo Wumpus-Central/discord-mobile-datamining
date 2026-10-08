@@ -1,13 +1,13 @@
-// === Module 10722: useFavoritesGuildChannelFilter ===
+// === Module 12700: useFavoritesGuildChannelFilter ===
 
-// Module 10722 (useFavoritesGuildChannelFilter)
-import GlobalUtils from "GlobalUtils" /* 1375 */;
-import FavoritesUtils from "FavoritesUtils" /* 2077 */;
-import sortByMatchScore from "sortByMatchScore" /* 9509 */;
+// Module 12700 (useFavoritesGuildChannelFilter)
+import GlobalUtils from "GlobalUtils" /* 1387 */;
+import FavoritesUtils from "FavoritesUtils" /* 2089 */;
+import sortByMatchScore from "sortByMatchScore" /* 8675 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
-import FavoriteStore from "FavoriteStore" /* 2054 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
+import FavoriteStore from "FavoriteStore" /* 2066 */;
 
 require = fn;
 const Permissions = fn(1085).Permissions;
@@ -15,7 +15,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildChannelFilter.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavoritesGuildChannelFilter() {
   const cResult = stateFromStores(576).c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [FavoriteStore];
@@ -75,7 +75,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp8 = cResult[3];
   }
   return tmp8;
-}) : (() => {
+}) : (function useFavoritesGuildChannelFilter() {
   const items = [FavoriteStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => favoriteChannels.getFavoriteChannels());
   const items1 = [stateFromStores];

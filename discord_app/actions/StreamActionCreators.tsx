@@ -1,29 +1,29 @@
-// === Module 5038: StreamActionCreators ===
+// === Module 7438: StreamActionCreators ===
 
-// Module 5038 (StreamActionCreators)
+// Module 7438 (StreamActionCreators)
 import _modDef38 from "module_38" /* 38 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4909 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 4948 */;
-import ChannelUtils from "ChannelUtils" /* 5041 */;
-import GuildRoomActionCreators from "GuildRoomActionCreators" /* 5052 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5089 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5097 */;
-import transitionToStreamDefault from "transitionToStream" /* 5098 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5575 */;
-import StreamQualityUtils from "StreamQualityUtils" /* 8101 */;
-import CallActionCreatorsDefault from "CallActionCreators" /* 9446 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5104 */;
+import StreamQualityUtils from "StreamQualityUtils" /* 5268 */;
+import ChannelUtils from "ChannelUtils" /* 5410 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5885 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 5896 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5944 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7001 */;
+import CallActionCreatorsDefault from "CallActionCreators" /* 7003 */;
+import GuildRoomActionCreators from "GuildRoomActionCreators" /* 7441 */;
+import transitionToStreamDefault from "transitionToStream" /* 7475 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GameConsoleStore from "GameConsoleStore" /* 4913 */;
-import PopoutWindowStore from "PopoutWindowStore" /* 5039 */;
-import ApplicationStreamPreviewStore from "ApplicationStreamPreviewStore" /* 5040 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4918 */;
+import GameConsoleStore from "GameConsoleStore" /* 5109 */;
+import PopoutWindowStore from "PopoutWindowStore" /* 7439 */;
+import ApplicationStreamPreviewStore from "ApplicationStreamPreviewStore" /* 7440 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5893 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import VoiceStateStore from "VoiceStateStore" /* 4915 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
+import VoiceStateStore from "VoiceStateStore" /* 5111 */;
 
 const require = globalThis.__r;
 
@@ -128,13 +128,13 @@ let closure_19 = async function _fetchStreamPreview() {
               const obj7 = { type: "STREAM_PREVIEW_FETCH_START", streamKey: HTTPResult };
               DispatcherDefault.dispatch(obj7);
               c6 = 1;
-              HTTP = obj6(1282).HTTP;
+              HTTP = obj6(1294).HTTP;
               const request = { url: closure_2_13.STREAM_PREVIEW(HTTPResult), query: null, oldFormErrors: true, rejectWithError: null };
               const obj9 = { version: null };
               timestamp = Date.now();
               obj9.version = timestamp;
               request.query = obj9;
-              obj6 = obj6(1282);
+              obj6 = obj6(1294);
               result = obj6.rejectWithMigratedError();
               request.rejectWithError = result;
               value = HTTP.get(request);
@@ -195,7 +195,7 @@ let closure_20 = async function _notifyStreamStart(arg0) {
 };
 const Constants = fn(1085);
 ({ Endpoints: map1, AppContext: closure_14, PopoutWindowKeys: closure_15 } = Constants);
-const StreamTypes = fn(4938).StreamTypes;
+const StreamTypes = fn(5894).StreamTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/StreamActionCreators.tsx");
 
@@ -342,15 +342,15 @@ export const joinPrivateChannelAndWatchStream = function joinPrivateChannelAndWa
           windowOpen = voiceChannelId.getVoiceChannelId() === channelId;
         }
         if (!windowOpen) {
-          closure_1(5098)(closure_1_1);
+          closure_1(7475)(closure_1_1);
         }
       } else {
         channel = channel.getChannel(channelId);
         closure_1(38)(null != channel, "Cannot join a null voice channel");
         const isInChannelResult = inChannel.isInChannel(channelId);
         if (!isInChannelResult) {
-          closure_0(5041).isChannelFull(channel, inChannel, GuildStore);
-          const obj = closure_0(5041);
+          closure_0(5410).isChannelFull(channel, inChannel, GuildStore);
+          const obj = closure_0(5410);
         }
       }
     };

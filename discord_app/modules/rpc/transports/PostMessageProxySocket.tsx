@@ -1,18 +1,18 @@
-// === Module 9068: PostMessageProxySocket ===
+// === Module 11146: PostMessageProxySocket ===
 
-// Module 9068 (PostMessageProxySocket)
+// Module 11146 (PostMessageProxySocket)
 import Constants from "Constants" /* 1085 */;
-import RPCOpcodesDefault from "RPCOpcodes" /* 9058 */;
-import RPCErrorDefault from "RPCError" /* 9059 */;
-import BaseSocket from "BaseSocket" /* 9069 */;
+import RPCOpcodesDefault from "RPCOpcodes" /* 11133 */;
+import RPCErrorDefault from "RPCError" /* 11134 */;
+import BaseSocket from "BaseSocket" /* 11147 */;
 import size from "module_2" /* 2 */;
 
 const RPCCloseCodes = Constants.RPCCloseCodes;
 class WindowProxySocket extends tmp2 {
   constructor(arg0) {
-    ({ postMessageToRPCClient, encoding, logger } = global);
+    ({ context, postMessageToRPCClient, encoding, logger } = global);
     ({ postClose, onSendingToRPCClient } = global);
-    tmp3 = new WindowProxySocket(global.source, global.version, encoding, tmp2, tmp, new.target, new.target, postMessageToRPCClient, logger);
+    tmp3 = new WindowProxySocket(global.source, global.version, encoding, tmp2, tmp, new.target, new.target, context, postMessageToRPCClient, logger);
     items = ["etf", "json"];
     if (-1 === items.indexOf(encoding)) {
       tmp13 = closure_0;
@@ -47,6 +47,7 @@ class WindowProxySocket extends tmp2 {
         throw tmp11;
       } else {
         tmp4 = tmp3;
+        tmp3.context = context;
         tmp3.postMessageToRPCClient = postMessageToRPCClient;
         tmp3.logger = logger;
         tmp3.postClose = postClose;

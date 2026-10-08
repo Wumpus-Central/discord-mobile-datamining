@@ -1,15 +1,15 @@
-// === Module 11227: getGroupDMRecipientLimit ===
+// === Module 11342: getGroupDMRecipientLimit ===
 
-// Module 11227 (getGroupDMRecipientLimit)
-import PremiumTypeUtils from "PremiumTypeUtils" /* 1976 */;
-import GroupDMNitroCapExperiment from "GroupDMNitroCapExperiment" /* 11229 */;
-import UserStore from "UserStore" /* 1377 */;
+// Module 11342 (getGroupDMRecipientLimit)
+import PremiumTypeUtils from "PremiumTypeUtils" /* 1988 */;
+import GroupDMNitroCapExperiment from "GroupDMNitroCapExperiment" /* 11344 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
-let closure_3 = fn(11228).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+let closure_3 = fn(11343).MAX_GROUP_DM_NITRO_PARTICIPANTS;
 const Constants = fn(1085);
 ({ MAX_GROUP_DM_PARTICIPANTS: closure_4, MAX_GROUP_DM_STAFF_PARTICIPANTS: hasOwnProperty } = Constants);
-const PremiumTypes = fn(1379).PremiumTypes;
+const PremiumTypes = fn(1391).PremiumTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/group_dm/getGroupDMRecipientLimit.tsx");
 

@@ -1,23 +1,23 @@
-// === Module 12417: HubEmailConnectionDescriptionActionsheet ===
+// === Module 12513: HubEmailConnectionDescriptionActionsheet ===
 
-// Module 12417 (HubEmailConnectionDescriptionActionsheet)
+// Module 12513 (HubEmailConnectionDescriptionActionsheet)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6651 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6652 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6828 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6829 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c2, jsxs: c3 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles({ description: { marginBottom: 8 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hub/native/components/HubEmailConnectionDescriptionActionsheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function HubEmailConnectionDescriptionActionsheet() {
   const cResult = c.c(10);
   const tmp4 = closure_4();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -78,7 +78,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[8] = tmp15;
   cResult[9] = tmp19;
   tmp18 = tmp19;
-}) : (() => {
+}) : (function HubEmailConnectionDescriptionActionsheet() {
   const tmp = closure_4();
   const obj = { children: null };
   const obj2 = { title: null };

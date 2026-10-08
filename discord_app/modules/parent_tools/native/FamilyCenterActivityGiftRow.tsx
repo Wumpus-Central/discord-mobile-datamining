@@ -1,22 +1,22 @@
-// === Module 14729: FamilyCenterActivityGiftRow ===
+// === Module 14990: FamilyCenterActivityGiftRow ===
 
-// Module 14729 (FamilyCenterActivityGiftRow)
+// Module 14990 (FamilyCenterActivityGiftRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import UserUtilsDefault from "UserUtils" /* 4728 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import useCollectiblesDataDefault from "useCollectiblesData" /* 7855 */;
-import useSelectedTeenUser from "useSelectedTeenUser" /* 14717 */;
-import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 14726 */;
-import FamilyCenterActivityItemPreviewDefault from "FamilyCenterActivityItemPreview" /* 14727 */;
-import FamilyCenterActivityGiftRowUtils from "FamilyCenterActivityGiftRowUtils" /* 14728 */;
+import UserUtilsDefault from "UserUtils" /* 4922 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import useCollectiblesDataDefault from "useCollectiblesData" /* 8273 */;
+import useSelectedTeenUser from "useSelectedTeenUser" /* 14978 */;
+import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 14987 */;
+import FamilyCenterActivityItemPreviewDefault from "FamilyCenterActivityItemPreview" /* 14988 */;
+import FamilyCenterActivityGiftRowUtils from "FamilyCenterActivityGiftRowUtils" /* 14989 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { display: "flex", flexDirection: "row", alignItems: "center", borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 }, textContainer: { display: "flex", flexDirection: "column", flexShrink: 1 } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -24,7 +24,7 @@ let obj3 = { display: "flex", flexDirection: "row", alignItems: "center", border
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivityGiftRow.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((gifterUserId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCenterActivityGiftRow(gifterUserId) {
   const cResult = c.c(26);
   ({ skuId, subscriptionPlanId, price, claimed, offeredAt, claimedAt } = gifterUserId);
   const tmp4 = closure_6();
@@ -157,7 +157,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((gifterUserId) =>
   cResult[2] = purchaseDisplayInfo;
   tmp9 = purchaseDisplayInfo;
   const tmpResult2 = FamilyCenterActivityPurchaseRowUtils;
-}) : ((arg0) => {
+}) : (function FamilyCenterActivityGiftRow(arg0) {
   ({ skuId, subscriptionPlanId } = arg0);
   ({ price, gifterUserId, claimed, offeredAt, claimedAt } = arg0);
   const tmp = closure_6();

@@ -1,12 +1,12 @@
-// === Module 17023: MessagePreview ===
+// === Module 17304: MessagePreview ===
 
-// Module 17023 (MessagePreview)
+// Module 17304 (MessagePreview)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import ChatPreview from "ChatPreview" /* 13112 */;
+import ChatPreview from "ChatPreview" /* 9314 */;
 import noop from "module_19" /* 19 */;
-import MessagePreviewStore from "MessagePreviewStore" /* 8047 */;
+import MessagePreviewStore from "MessagePreviewStore" /* 8456 */;
 
 require = fn;
 const Constants = fn(1085);
@@ -17,7 +17,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/MessagePreview.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function MessagePreview(arg0) {
   const cResult = c.c(12);
   ({ channelId, onBeforeJumpToMessage } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -48,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     const _Symbol = Symbol;
     if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-      class C {
+      class S {
         constructor() {
           return () => {
             closure_1_1(closure_1_2[8]).clearMessages();
@@ -56,11 +56,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         }
       }
       const items1 = [];
-      cResult[6] = C;
+      cResult[6] = S;
       cResult[7] = items1;
       let tmp12 = items1;
     } else {
-      class C {
+      class S {
         constructor() {
           return () => {
             closure_1_1(closure_1_2[8]).clearMessages();
@@ -69,9 +69,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
       tmp12 = cResult[7];
     }
-    const effect = noop.useEffect(C, tmp12);
+    const effect = noop.useEffect(S, tmp12);
     if (cResult[8] === channelId) {
-      class C {
+      class S {
         constructor() {
           return () => {
             closure_1_1(closure_1_2[8]).clearMessages();
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = obj3;
   tmp10 = obj3;
   const tmpResult = initialize;
-}) : ((channelId) => {
+}) : (function MessagePreview(channelId) {
   const onBeforeJumpToMessage = channelId.onBeforeJumpToMessage;
   const items = [MessagePreviewStore];
   const stateFromStoresObject = onBeforeJumpToMessage(504).useStateFromStoresObject(items, () => ({ messages: MessagePreviewStore.messages, jumpTargetId: MessagePreviewStore.jumpTargetId }));
@@ -109,5 +109,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const effect = noop.useEffect(() => () => {
     jumpTargetId(closure_1_2[8]).clearMessages();
   }, []);
-  return jsx(onBeforeJumpToMessage(13112).ChatPreview, { channelId: channelId.channelId, messages: stateFromStoresObject.messages, jumpToChatProps: memo, analyticsLocation });
+  return jsx(onBeforeJumpToMessage(9314).ChatPreview, { channelId: channelId.channelId, messages: stateFromStoresObject.messages, jumpToChatProps: memo, analyticsLocation });
 });

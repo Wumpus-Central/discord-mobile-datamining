@@ -1,8 +1,8 @@
-// === Module 8088: VideoFilterImageError ===
+// === Module 5255: VideoFilterImageError ===
 
-// Module 8088 (VideoFilterImageError)
+// Module 5255 (VideoFilterImageError)
 import util from "util" /* 1126 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
 import size from "module_2" /* 2 */;
 
 const constants = { ASSET_SIZE: "BINARY_TYPE_MAX_SIZE" };

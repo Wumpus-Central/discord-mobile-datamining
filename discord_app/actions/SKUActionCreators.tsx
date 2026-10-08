@@ -1,16 +1,16 @@
-// === Module 10558: SKUActionCreators ===
+// === Module 10155: SKUActionCreators ===
 
-// Module 10558 (SKUActionCreators)
+// Module 10155 (SKUActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
-import BillingUtils from "BillingUtils" /* 4549 */;
-import StoreUtils from "StoreUtils" /* 5329 */;
-import PurchaseTokenUtils from "PurchaseTokenUtils" /* 5429 */;
-import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7111 */;
-import TestModeUtils from "TestModeUtils" /* 8545 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
+import BillingUtils from "BillingUtils" /* 4741 */;
+import StoreUtils from "StoreUtils" /* 5640 */;
+import PurchaseTokenUtils from "PurchaseTokenUtils" /* 5738 */;
+import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7297 */;
+import TestModeUtils from "TestModeUtils" /* 9030 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 8474 */;
-import SKUStore from "SKUStore" /* 5702 */;
+import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 8960 */;
+import SKUStore from "SKUStore" /* 6092 */;
 
 require = fn;
 let closure_8 = async function _fetchSKU() {
@@ -327,10 +327,11 @@ let closure_11 = async function _previewPurchaseSku(arg0) {
           closure_129_3 = undefined;
           closure_129_4 = undefined;
           closure_129_5 = undefined;
-          ({ applicationId: closure_129_0, skuId: closure_129_1, paymentSourceId: closure_129_2, isGift: closure_129_3, currency: closure_129_4, applyWalletBalance: closure_129_5 } = closure_0);
           closure_129_6 = undefined;
+          ({ applicationId: closure_129_0, skuId: closure_129_1, paymentSourceId: closure_129_2, isGift: closure_129_3, currency: closure_129_4, applyWalletBalance: closure_129_5, previousTotal: closure_129_6 } = closure_0);
+          closure_129_7 = undefined;
           let promotionIdOverride;
-          closure_129_8 = undefined;
+          closure_129_9 = undefined;
           c5 = 1;
           c6 = 1;
           return { value: "Reflect", done: true };
@@ -345,20 +346,23 @@ let closure_11 = async function _previewPurchaseSku(arg0) {
           return obj7;
         } else {
           const obj8 = { payment_source_id: closure_129_2, gift: closure_129_3, currency: closure_129_4 };
-          closure_129_6 = obj8;
+          closure_129_7 = obj8;
           if (null != closure_129_5) {
-            closure_129_6.apply_wallet_balance = closure_129_5;
+            closure_129_7.apply_wallet_balance = closure_129_5;
+          }
+          if (null != closure_129_6) {
+            closure_129_7.previous_total = closure_129_6;
           }
           if (obj3.isTestModeForApplication(closure_129_0)) {
-            closure_129_6.test_mode = true;
+            closure_129_7.test_mode = true;
           }
           promotionIdOverride = closure_130_4.getPromotionIdOverride();
           if (null != promotionIdOverride) {
-            closure_129_6.promotion_id_override = promotionIdOverride;
+            closure_129_7.promotion_id_override = promotionIdOverride;
           }
           c4 = 1;
           obj3 = closure_130_0(closure_130_2[8]);
-          const request = { url: closure_130_7.STORE_SKU_PURCHASE(closure_129_1), query: closure_129_6, oldFormErrors: true, rejectWithError: null };
+          const request = { url: closure_130_7.STORE_SKU_PURCHASE(closure_129_1), query: closure_129_7, oldFormErrors: true, rejectWithError: null };
           const obj4 = closure_130_0(closure_130_2[5]);
           request.rejectWithError = closure_130_0(closure_130_2[6]).rejectWithMigratedError();
           c5 = 3;
@@ -368,22 +372,22 @@ let closure_11 = async function _previewPurchaseSku(arg0) {
         }
       } else if (2 === tmp7) {
         c4 = 0;
-        closure_129_9 = closure_3;
-        if (closure_129_9 instanceof closure_130_0(closure_130_2[10]).BillingError) {
-          let billingError = closure_129_9;
+        closure_129_10 = closure_3;
+        if (closure_129_10 instanceof closure_130_0(closure_130_2[10]).BillingError) {
+          let billingError = closure_129_10;
         } else {
-          billingError = new closure_130_0(closure_130_2[10]).BillingError(closure_129_9);
+          billingError = new closure_130_0(closure_130_2[10]).BillingError(closure_129_10);
         }
-        closure_129_8 = billingError;
-        if (closure_129_8.code !== closure_130_0(closure_130_2[11]).ErrorCodes.BILLING_BUNDLE_ALREADY_PURCHASED) {
-          if (closure_129_8.code !== closure_130_0(closure_130_2[11]).ErrorCodes.BILLING_BUNDLE_PARTIALLY_OWNED) {
-            if (closure_129_8.code !== closure_130_0(closure_130_2[11]).ErrorCodes.INVALID_BILLING_ADDRESS) {
+        closure_129_9 = billingError;
+        if (closure_129_9.code !== closure_130_0(closure_130_2[11]).ErrorCodes.BILLING_BUNDLE_ALREADY_PURCHASED) {
+          if (closure_129_9.code !== closure_130_0(closure_130_2[11]).ErrorCodes.BILLING_BUNDLE_PARTIALLY_OWNED) {
+            if (closure_129_9.code !== closure_130_0(closure_130_2[11]).ErrorCodes.INVALID_BILLING_ADDRESS) {
               c6 = 3;
               return { value: null, done: true };
             }
           }
         }
-        throw closure_129_8;
+        throw closure_129_9;
       } else if (arg0 === 1) {
         c6 = 3;
         throw value;
@@ -398,11 +402,11 @@ let closure_11 = async function _previewPurchaseSku(arg0) {
         const obj = { value: value.body, done: true };
         return obj;
       }
-    } catch (tmp66) {
-      closure_3 = tmp66;
+    } catch (tmp71) {
+      closure_3 = tmp71;
       if (tmp4 === c4) {
         c6 = tmp2;
-        throw tmp66;
+        throw tmp71;
       } else {
         c5 = tmp;
       }

@@ -1,27 +1,27 @@
-// === Module 11648: ForumPostContainer ===
+// === Module 11713: ForumPostContainer ===
 
-// Module 11648 (ForumPostContainer)
+// Module 11713 (ForumPostContainer)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import Card from "Card" /* 6002 */;
-import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10044 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import Card from "Card" /* 6186 */;
+import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10431 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { childContainer: { position: "relative", minHeight: 110, padding: 12 }, card: { marginBottom: 12 }, disabledContainer: { marginBottom: 12, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.md, overflow: "hidden" } };
 let closure_6 = createStyles.createStyles(obj);
-const ReanimatedHelperTypes = fn(6578);
+const ReanimatedHelperTypes = fn(6754);
 const redux = noop.createContext(ReanimatedHelperTypes.createFakeSharedValue(false));
 let ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
 fn(558);
 let obj3 = { marginBottom: 12, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.md, overflow: "hidden" };
 ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPostPressableContainer(arg0) {
   const cResult = c.c(20);
   ({ threadId, children, style } = arg0);
   const tmp4 = closure_6();
@@ -108,7 +108,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[6] = items;
   tmp9 = items;
   const tmp8 = useNativeForumPostHandlersDefault(tmp7);
-}) : ((arg0) => {
+}) : (function ForumPostPressableContainer(arg0) {
   ({ threadId, children, style } = arg0);
   const tmp = closure_6();
   const sharedValue = ReanimatedRexport.useSharedValue(false);
@@ -131,13 +131,15 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const tmp4 = useNativeForumPostHandlersDefault({ threadId });
   return <redux.Provider value={sharedValue}><View style={tmp.card}>{null}</View></redux.Provider>;
 });
-fn = () => noop.useContext(closure_7);
+function useForumPostContainerPressedIn() {
+  return noop.useContext(closure_7);
+}
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/forums/native/posts/ForumPostContainer.tsx");
 
-export const useForumPostContainerPressedIn = fn;
+export { useForumPostContainerPressedIn };
 export const ForumPostPressableContainer = tmp3;
-export const ForumPostDisabledContainer = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const ForumPostDisabledContainer = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPostDisabledContainer(arg0) {
   const cResult = c.c(6);
   ({ children, style } = arg0);
   const tmp2 = closure_6();
@@ -163,7 +165,7 @@ export const ForumPostDisabledContainer = ReactCompilerGating.isReactCompilerEna
   cResult[1] = tmp2.disabledContainer;
   cResult[2] = items;
   tmp3 = items;
-}) : ((arg0) => {
+}) : (function ForumPostDisabledContainer(arg0) {
   ({ children, style } = arg0);
   const obj = { style: null, pointerEvents: "none", children: null };
   const items = [closure_6().disabledContainer, style];

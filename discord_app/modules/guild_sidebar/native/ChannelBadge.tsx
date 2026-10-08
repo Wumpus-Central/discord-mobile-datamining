@@ -1,25 +1,25 @@
-// === Module 16184: ChannelBadge ===
+// === Module 16444: ChannelBadge ===
 
-// Module 16184 (ChannelBadge)
+// Module 16444 (ChannelBadge)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
-import NumberUtils from "NumberUtils" /* 1888 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import NewBadgeDefault from "NewBadge" /* 11938 */;
-import MentionsBadgeDefault from "MentionsBadge" /* 16185 */;
+import NumberUtils from "NumberUtils" /* 1900 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import NewBadgeDefault from "NewBadge" /* 12011 */;
+import MentionsBadgeDefault from "MentionsBadge" /* 16445 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2116 */;
+import LocaleStore from "LocaleStore" /* 2128 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles(() => ({ channelInfoContainer: { paddingStart: 4 } }));
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/native/ChannelBadge.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((isNewChannel) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelBadge(isNewChannel) {
   const cResult = c.c(19);
   ({ mentionCount, isMentionLowImportance, postsWithUnreadsCount, muted } = isNewChannel);
   const tmp4 = closure_6();
@@ -126,7 +126,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((isNewChannel) =>
     return null;
   }
   const tmpResult = useStateFromStores;
-}) : ((arg0) => {
+}) : (function ChannelBadge(arg0) {
   ({ mentionCount, postsWithUnreadsCount, muted } = arg0);
   ({ isMentionLowImportance, isNewChannel } = arg0);
   const tmp = closure_6();

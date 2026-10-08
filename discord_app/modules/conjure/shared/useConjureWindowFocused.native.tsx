@@ -1,9 +1,9 @@
-// === Module 16183: useConjureWindowFocused ===
+// === Module 16443: useConjureWindowFocused ===
 
-// Module 16183 (useConjureWindowFocused)
+// Module 16443 (useConjureWindowFocused)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import AppStateStore from "AppStateStore" /* 1986 */;
+import AppStateStore from "AppStateStore" /* 1998 */;
 
 require = fn;
 const AppStates = fn(1085).AppStates;
@@ -11,11 +11,11 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/shared/useConjureWindowFocused.native.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConjureWindowFocused() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AppStateStore];
-    const fn = function s() {
+    const fn = function u() {
       return state.getState() === constants.ACTIVE;
     };
     cResult[0] = items;
@@ -26,7 +26,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     [tmp4, tmp5] = cResult;
   }
   return initialize.useStateFromStores(tmp4, tmp5);
-}) : (() => {
+}) : (function useConjureWindowFocused() {
   const items = [AppStateStore];
   return initialize.useStateFromStores(items, () => state.getState() === constants.ACTIVE);
 });

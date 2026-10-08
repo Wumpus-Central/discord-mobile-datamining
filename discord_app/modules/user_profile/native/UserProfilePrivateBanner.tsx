@@ -1,27 +1,27 @@
-// === Module 12980: UserProfilePrivateBanner ===
+// === Module 13258: UserProfilePrivateBanner ===
 
-// Module 12980 (UserProfilePrivateBanner)
+// Module 13258 (UserProfilePrivateBanner)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import LockIcon from "LockIcon" /* 5886 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import LockIcon from "LockIcon" /* 8198 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
-let obj2 = { banner: { flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 6, paddingTop: 18, paddingBottom: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, position: "relative", zIndex: fn(6714).PROFILE_TOP_LAYER_Z_INDEX } };
+const createStyles = fn(5090);
+let obj2 = { banner: { flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 6, paddingTop: 18, paddingBottom: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, position: "relative", zIndex: fn(6891).PROFILE_TOP_LAYER_Z_INDEX } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 6, paddingTop: 18, paddingBottom: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, position: "relative", zIndex: fn(6714).PROFILE_TOP_LAYER_Z_INDEX };
+let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 6, paddingTop: 18, paddingBottom: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, position: "relative", zIndex: fn(6891).PROFILE_TOP_LAYER_Z_INDEX };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfilePrivateBanner.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((primaryColor) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfilePrivateBanner(primaryColor) {
   const cResult = c.c(9);
   primaryColor = primaryColor.primaryColor;
   const tmp4 = closure_6();
@@ -80,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((primaryColor) =>
   cResult[3] = tmp5;
   cResult[4] = items1;
   tmp8 = items1;
-}) : ((primaryColor) => {
+}) : (function UserProfilePrivateBanner(primaryColor) {
   primaryColor = primaryColor.primaryColor;
   const items = [closure_6().banner, ];
   let tmp3 = null != primaryColor;

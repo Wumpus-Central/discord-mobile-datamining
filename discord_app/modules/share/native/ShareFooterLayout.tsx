@@ -1,12 +1,12 @@
-// === Module 11344: ShareFooterLayout ===
+// === Module 11611: ShareFooterLayout ===
 
-// Module 11344 (ShareFooterLayout)
+// Module 11611 (ShareFooterLayout)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import spring from "spring" /* 5604 */;
-import springPresets from "springPresets" /* 5605 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6478 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import spring from "spring" /* 5374 */;
+import springPresets from "springPresets" /* 5378 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6656 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { footer: { display: "flex", flexDirection: "column", flexShrink: 0, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE }, footerSeparator: null, warningWrapper: null, chatRow: null };
 let obj3 = { display: "flex", flexDirection: "column", flexShrink: 0, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };
 obj2.footerSeparator = { marginHorizontal: -nativeDefault.space.PX_16, borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE };
@@ -30,7 +30,7 @@ let obj5 = { display: "flex", flexDirection: "row", gap: nativeDefault.space.PX_
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/share/native/ShareFooterLayout.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ShareFooterLayout(arg0) {
   const cResult = c.c(22);
   ({ preview, chatInput, sendButton, warningText, avoidKeyboard } = arg0);
   const tmp4 = closure_7();
@@ -70,7 +70,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             let tmp22 = null != warningText;
             if (tmp22) {
               const obj4 = { variant: "text-sm/normal", color: "text-feedback-warning", children: warningText };
-              tmp22 = closure_4(tmp(4892).Text, obj4);
+              tmp22 = closure_4(tmp(5086).Text, obj4);
             }
             cResult[12] = warningText;
             cResult[13] = tmp22;
@@ -143,7 +143,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = items4;
   tmp9 = items4;
   const obj3 = { withSpring: spring.withSpring, footerPaddingBottom: sum, ON_PRESS_SPRING: springPresets.ON_PRESS_SPRING };
-}) : ((arg0) => {
+}) : (function ShareFooterLayout(arg0) {
   ({ preview, warningText } = arg0);
   ({ chatInput, sendButton, avoidKeyboard } = arg0);
   const tmp = closure_7();
@@ -180,7 +180,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   let tmp12 = null != warningText;
   if (tmp12) {
     const obj8 = { variant: "text-sm/normal", color: "text-feedback-warning", children: warningText };
-    tmp12 = closure_4(tmp4(4892).Text, obj8);
+    tmp12 = closure_4(tmp4(5086).Text, obj8);
   }
   items4[1] = tmp12;
   obj6.children = items4;

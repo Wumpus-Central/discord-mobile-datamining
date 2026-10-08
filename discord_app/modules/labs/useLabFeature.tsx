@@ -1,7 +1,7 @@
-// === Module 8043: useLabFeature ===
+// === Module 8451: useLabFeature ===
 
-// Module 8043 (useLabFeature)
-import LabFeatureStore from "LabFeatureStore" /* 8041 */;
+// Module 8451 (useLabFeature)
+import LabFeatureStore from "LabFeatureStore" /* 8449 */;
 
 const require = globalThis.__r;
 
@@ -10,7 +10,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/labs/useLabFeature.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useLabFeature(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -21,7 +21,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function s() {
+    const fn = function o() {
       return LabFeatureStore.get(closure_0);
     };
     const items1 = [arg0];
@@ -36,7 +36,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp6, tmp7);
-}) : ((arg0) => {
+}) : (function useLabFeature(arg0) {
   _require = arg0;
   const items = [LabFeatureStore];
   const items1 = [arg0];

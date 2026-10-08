@@ -1,23 +1,23 @@
-// === Module 13740: useMessageRequestPrivacyOption ===
+// === Module 13962: useMessageRequestPrivacyOption ===
 
-// Module 13740 (useMessageRequestPrivacyOption)
+// Module 13962 (useMessageRequestPrivacyOption)
 import c from "c" /* 576 */;
-import UserSettings from "UserSettings" /* 2028 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 6498 */;
-import useIsStricterMessageRequestsDefault from "useIsStricterMessageRequests" /* 12102 */;
+import UserSettings from "UserSettings" /* 2040 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 6675 */;
+import useIsStricterMessageRequestsDefault from "useIsStricterMessageRequests" /* 12180 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
-let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
+let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function MessageRequestRestrictedGuildPrivacyOption(guild) {
   const cResult = id(576).c(14);
   guild = guild.guild;
   id = guild.id;
-  let MessageRequestRestrictedGuildIds = id(2028).MessageRequestRestrictedGuildIds;
+  let MessageRequestRestrictedGuildIds = id(2040).MessageRequestRestrictedGuildIds;
   const setting = MessageRequestRestrictedGuildIds.useSetting();
   if (cResult[0] === id) {
-    const RestrictedGuildIds = tmp(2028).RestrictedGuildIds;
+    const RestrictedGuildIds = tmp(2040).RestrictedGuildIds;
     const setting1 = RestrictedGuildIds.useSetting();
     if (cResult[3] === guild.id) {
       if (cResult[4] === setting1) {
@@ -153,7 +153,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
         }
       }
       const obj2 = { label: tmp10, subLabel: tmp11, value: !tmp6, onValueChange: S, disabled: tmp6 };
-      const tmp17 = jsx(tmp(6704).ActionSheetSwitchRow, { label: tmp10, subLabel: tmp11, value: !tmp6, onValueChange: S, disabled: tmp6 });
+      const tmp17 = jsx(tmp(6881).ActionSheetSwitchRow, { label: tmp10, subLabel: tmp11, value: !tmp6, onValueChange: S, disabled: tmp6 });
       cResult[10] = S;
       cResult[11] = tmp6;
       cResult[12] = !tmp6;
@@ -170,13 +170,13 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   cResult[1] = setting;
   cResult[2] = hasItem1;
   let obj = id(576);
-}) : ((guild) => {
+}) : (function MessageRequestRestrictedGuildPrivacyOption(guild) {
   guild = guild.guild;
   const id = guild.id;
-  let MessageRequestRestrictedGuildIds = id(2028).MessageRequestRestrictedGuildIds;
+  let MessageRequestRestrictedGuildIds = id(2040).MessageRequestRestrictedGuildIds;
   const setting = MessageRequestRestrictedGuildIds.useSetting();
   const hasItem = setting.includes(id);
-  const RestrictedGuildIds = id(2028).RestrictedGuildIds;
+  const RestrictedGuildIds = id(2040).RestrictedGuildIds;
   const setting1 = RestrictedGuildIds.useSetting();
   const hasItem1 = setting1.includes(guild.id);
   const items = [id];
@@ -202,13 +202,13 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   obj.value = tmp5;
   obj.onValueChange = callback;
   obj.disabled = hasItem1;
-  return jsx(id(6704).ActionSheetSwitchRow, { label: null, subLabel: null, value: null, onValueChange: null, disabled: null });
+  return jsx(id(6881).ActionSheetSwitchRow, { label: null, subLabel: null, value: null, onValueChange: null, disabled: null });
 });
 ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_request/native/hooks/useMessageRequestPrivacyOption.tsx");
 
-export const useMessageRequestPrivacyOption = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
+export const useMessageRequestPrivacyOption = ReactCompilerGating.isReactCompilerEnabled() ? (function useMessageRequestPrivacyOption(guild) {
   const cResult = c.c(3);
   guild = guild.guild;
   const tmp2 = useIsStricterMessageRequestsDefault();
@@ -227,7 +227,7 @@ export const useMessageRequestPrivacyOption = ReactCompilerGating.isReactCompile
   cResult[1] = tmp2;
   cResult[2] = tmp4;
   tmp3 = tmp4;
-}) : ((guild) => {
+}) : (function useMessageRequestPrivacyOption(guild) {
   let tmp = null;
   if (!useIsStricterMessageRequestsDefault()) {
     const obj = { guild: guild.guild };

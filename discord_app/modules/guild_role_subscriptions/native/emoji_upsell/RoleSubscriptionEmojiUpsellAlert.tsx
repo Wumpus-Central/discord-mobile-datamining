@@ -1,27 +1,27 @@
-// === Module 9914: RoleSubscriptionEmojiUpsellAlert ===
+// === Module 9396: RoleSubscriptionEmojiUpsellAlert ===
 
-// Module 9914 (RoleSubscriptionEmojiUpsellAlert)
+// Module 9396 (RoleSubscriptionEmojiUpsellAlert)
 import util from "util" /* 1126 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5712 */;
-import _modDef8849 from "module_8849" /* 8849 */;
-import CreatorRevenueButton from "CreatorRevenueButton" /* 9915 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6102 */;
+import _modDef9209 from "module_9209" /* 9209 */;
+import CreatorRevenueButton from "CreatorRevenueButton" /* 9397 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2074 */;
+import GuildStore from "GuildStore" /* 2086 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const StaticChannelRoute = fn(2058).StaticChannelRoute;
+const StaticChannelRoute = fn(2070).StaticChannelRoute;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/emoji_upsell/RoleSubscriptionEmojiUpsellAlert.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function RoleSubscriptionEmojiUpsellAlert(guildId) {
   const cResult = guildId(576).c(18);
   guildId = guildId.guildId;
   const onClose = guildId.onClose;
-  const size = onClose(1484)();
+  const size = onClose(1496)();
   const diff = Math.min(0.9 * Math.min(size.width, size.height), 500) - 32;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GuildStore];
@@ -51,7 +51,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     name = stateFromStores.name;
   }
   if (cResult[3] !== name) {
-    const obj2 = { image: tmp4(8849), title: null, description: null };
+    const obj2 = { image: tmp4(9209), title: null, description: null };
     let intl = tmp(1126).intl;
     obj2.title = intl.string(tmp(1126).t.cBjkcx);
     const intl2 = tmp(1126).intl;
@@ -78,65 +78,74 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       tmp13 = cResult[8];
     }
     if (cResult[9] !== tmp12) {
-      const fn2 = function x() {
-        const obj = { onPress, text: null };
-        const intl = util.intl;
-        obj.text = intl.string(util.t.p8FG1D);
-        return jsx(CreatorRevenueButton.CreatorRevenueButton, { onPress, text: null });
-      };
-      cResult[9] = tmp12;
-      cResult[10] = fn2;
-      let tmp15 = fn2;
-    } else {
-      tmp15 = cResult[10];
-    }
-    if (cResult[11] === diff) {
-      if (cResult[12] === tmp11) {
-        let tmp16 = cResult[13];
-      }
-      if (cResult[14] === onClose) {
-        if (cResult[15] === tmp15) {
-          if (cResult[16] === tmp16) {
-            let tmp19 = cResult[17];
-          }
-          return tmp19;
+      class P {
+        constructor() {
+          obj = { onPress: closure_2, text: null };
+          intl = closure_0(closure_2[5]).intl;
+          obj.text = intl.string(closure_0(closure_2[5]).t.p8FG1D);
+          return jsx(closure_0(closure_2[11]).CreatorRevenueButton, obj);
         }
       }
-      const obj4 = { cancelText: tmp13, onClose, renderConfirmButton: tmp15, children: tmp16 };
-      const tmp21 = jsx(tmp4(5790), { cancelText: tmp13, onClose, renderConfirmButton: tmp15, children: tmp16 });
+      cResult[9] = tmp12;
+      cResult[10] = P;
+    } else {
+      class P {
+        constructor() {
+          obj = { onPress: closure_2, text: null };
+          intl = closure_0(closure_2[5]).intl;
+          obj.text = intl.string(closure_0(closure_2[5]).t.p8FG1D);
+          return jsx(closure_0(closure_2[11]).CreatorRevenueButton, obj);
+        }
+      }
+    }
+    if (cResult[11] === diff) {
+      class P {
+        constructor() {
+          obj = { onPress: closure_2, text: null };
+          intl = closure_0(closure_2[5]).intl;
+          obj.text = intl.string(closure_0(closure_2[5]).t.p8FG1D);
+          return jsx(closure_0(closure_2[11]).CreatorRevenueButton, obj);
+        }
+      }
+      if (cResult[14] === onClose) {
+        class P {
+          constructor() {
+            obj = { onPress: closure_2, text: null };
+            intl = closure_0(closure_2[5]).intl;
+            obj.text = intl.string(closure_0(closure_2[5]).t.p8FG1D);
+            return jsx(closure_0(closure_2[11]).CreatorRevenueButton, obj);
+          }
+        }
+      }
+      const obj4 = { cancelText: tmp13, onClose, renderConfirmButton: P, children: tmp16 };
+      const tmp21 = jsx(tmp4(5394), { cancelText: tmp13, onClose, renderConfirmButton: P, children: tmp16 });
       cResult[14] = onClose;
-      cResult[15] = tmp15;
+      cResult[15] = P;
       cResult[16] = tmp16;
       cResult[17] = tmp21;
-      tmp19 = tmp21;
     }
     const obj5 = { alertWidth: diff, upsellItem: tmp11 };
-    const tmp18 = jsx(tmp(8857).PremiumUpsellItem, { alertWidth: diff, upsellItem: tmp11 });
+    const tmp18 = jsx(tmp(9400).PremiumUpsellItem, { alertWidth: diff, upsellItem: tmp11 });
     cResult[11] = diff;
     cResult[12] = tmp11;
     cResult[13] = tmp18;
-    tmp16 = tmp18;
   }
-  class T {
-    constructor() {
-      obj = closure_1(closure_2[10]);
-      result = obj.transitionToGuildSync(guildId, undefined, StaticChannelRoute.ROLE_SUBSCRIPTIONS);
-      if (onClose != null) {
-        tmp2 = onClose();
-      }
-      return;
+  function handleConfirm() {
+    const result = GuildActionCreatorsDefault.transitionToGuildSync(guildId, undefined, StaticChannelRoute.ROLE_SUBSCRIPTIONS);
+    if (onClose != null) {
+      onClose();
     }
   }
   cResult[5] = guildId;
   cResult[6] = onClose;
-  cResult[7] = T;
-  tmp12 = T;
+  cResult[7] = handleConfirm;
+  tmp12 = handleConfirm;
   const tmpResult = guildId(504);
-}) : ((arg0) => {
+}) : (function RoleSubscriptionEmojiUpsellAlert(arg0) {
   ({ guildId: require, onClose } = arg0);
   let stateFromStores;
   function handleConfirm() {
-    const result = GuildActionCreatorsDefault.transitionToGuildSync(require, undefined, StaticChannelRoute.ROLE_SUBSCRIPTIONS);
+    const result = GuildActionCreatorsDefault.transitionToGuildSync(_require, undefined, StaticChannelRoute.ROLE_SUBSCRIPTIONS);
     if (onClose != null) {
       onClose();
     }
@@ -146,7 +155,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   const items = [GuildStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => {
     guild = null;
-    if (null != require) {
+    if (null != _require) {
       guild = GuildStore.getGuild(tmp);
     }
     return guild;
@@ -161,7 +170,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     if (stateFromStores != null) {
       name = stateFromStores.name;
     }
-    const obj = { image: _modDef8849, title: null, description: null };
+    const obj = { image: _modDef9209, title: null, description: null };
     const intl = util.intl;
     obj.title = intl.string(util.t.cBjkcx);
     const intl2 = util.intl;

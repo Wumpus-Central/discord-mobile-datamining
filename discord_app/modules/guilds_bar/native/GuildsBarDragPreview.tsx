@@ -1,13 +1,13 @@
-// === Module 16341: GuildsBarDragPreview ===
+// === Module 16601: GuildsBarDragPreview ===
 
-// Module 16341 (GuildsBarDragPreview)
+// Module 16601 (GuildsBarDragPreview)
 import c from "c" /* 576 */;
-import _mod4498 from "module_4498" /* 4498 */;
-import native from "native" /* 4595 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import spring from "spring" /* 5604 */;
+import _mod4690 from "module_4690" /* 4690 */;
+import native from "native" /* 4787 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import spring from "spring" /* 5374 */;
 import noop from "module_19" /* 19 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 16265 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 16525 */;
 
 require = fn;
 function getItemPreviewKey(id) {
@@ -16,12 +16,12 @@ function getItemPreviewKey(id) {
 function renderAnimatedItemPreview(key, node, transitionState, cleanUp) {
   return <closure_26 key={key} node={node} transitionState={transitionState} cleanUp={cleanUp} />;
 }
-const GuildsNodeType = fn(5623).GuildsNodeType;
-const GUILD_ITEM_INSET_LEFT = fn(16262).GUILD_ITEM_INSET_LEFT;
+const GuildsNodeType = fn(5968).GuildsNodeType;
+const GUILD_ITEM_INSET_LEFT = fn(16522).GUILD_ITEM_INSET_LEFT;
 const jsx = fn(21).jsx;
-let createStyles = fn(4896);
+let createStyles = fn(5090);
 let closure_8 = createStyles.createStyles({ dragPreview: { position: "absolute", left: 0 }, animatedPreviewStyle: { position: "absolute" }, dragPreviewHome: { right: 0 } });
-createStyles = fn(4896);
+createStyles = fn(5090);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { animatedPreviewStyleHome: null };
   const rect = { left: 0, right: 0, transformOrigin: null };
@@ -40,7 +40,7 @@ const __initData6 = { code: "function GuildsBarDragPreviewTsx6(){const{scrollPos
 const __initData7 = { code: "function GuildsBarDragPreviewTsx7(){const{dropPosition,scrollPosition,gestureState,draggedHeight,minY,maxY,windowSize,withSpring,DRAG_SPRING_PHYSICS,runOnJS,dropComplete}=this.__closure;let translateY=function(){if(dropPosition!=null){return dropPosition-scrollPosition.get();}return gestureState.get().absoluteY-draggedHeight/2;}();if(gestureState.get().mode!=null&&dropPosition==null){translateY=Math.min(Math.max(translateY,minY.get()),maxY.get());}else{translateY=Math.max(-draggedHeight,Math.min(translateY,windowSize));}return{top:withSpring(translateY,DRAG_SPRING_PHYSICS,'animate-always',function(finished){if(finished&&dropPosition!=null){runOnJS(dropComplete)();}})};}" };
 let closure_18 = { code: "function GuildsBarDragPreviewTsx8(finished){const{dropPosition,runOnJS,dropComplete}=this.__closure;if(finished&&dropPosition!=null){runOnJS(dropComplete)();}}" };
 let ReactCompilerGating = fn(558);
-let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((dragRegion) => {
+let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function PreviewItem(dragRegion) {
   const cResult = dragRegion(dropComplete[7]).c(11);
   dragRegion = dragRegion.dragRegion;
   const draggedHeight = dragRegion.draggedHeight;
@@ -153,7 +153,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((dragRegion) =>
   if ("convert-after" === overState) {
     if (null != overNode) {
       if (cResult[0] !== overNode) {
-        const element = { type: listInsets.FOLDER, id: -1, parentId: "Reflect", name: "Array", color: "apply", expanded: false, children: false };
+        const element = { type: listInsets.FOLDER, id: -1, parentId: "Reflect", name: "Array", color: "bm", expanded: "Array", children: "toCharArray$esjava$1" };
         const items = [overNode];
         element.children = items;
         cResult[0] = overNode;
@@ -206,7 +206,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((dragRegion) =>
   cResult[5] = items2;
   tmp15 = items2;
   const obj6 = { dropPosition, scrollPosition, gestureState, draggedHeight, minY: derivedValue, maxY: derivedValue1, windowSize, withSpring: dragRegion(dropComplete[10]).withSpring, DRAG_SPRING_PHYSICS, runOnJS: dragRegion(dropComplete[9]).runOnJS, dropComplete };
-}) : ((dragRegion) => {
+}) : (function PreviewItem(dragRegion) {
   dragRegion = dragRegion.dragRegion;
   const draggedHeight = dragRegion.draggedHeight;
   ({ draggedNode, dropComplete } = dragRegion);
@@ -310,7 +310,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((dragRegion) =>
   const memo = gestureState.useMemo(() => {
     if ("convert-after" === overState) {
       if (null != overNode) {
-        const element = { type: GuildsNodeType.FOLDER, id: -1, parentId: "Reflect", name: "Array", color: "apply", expanded: false, children: false };
+        const element = { type: GuildsNodeType.FOLDER, id: -1, parentId: "Reflect", name: "Array", color: "bm", expanded: "Array", children: "toCharArray$esjava$1" };
         const items = [tmp2];
         element.children = items;
         return element;
@@ -341,7 +341,7 @@ let closure_23 = { code: "function GuildsBarDragPreviewTsx10(finished){const{tra
 const __initData9 = { code: "function GuildsBarDragPreviewTsx11(){const{isFolder,visible,withSpring,DRAG_SPRING_PHYSICS,transitionState,TransitionStates,runOnJS,cleanUp}=this.__closure;const targetScale=function(){if(isFolder){return visible.get()===1?1:0.3;}return visible.get()===1?1:0.33;}();const{translateX:translateX,translateY:translateY}=function(){if(isFolder){return{translateX:0,translateY:0};}if(visible.get()===1){return{translateX:0,translateY:0};}return{translateX:10,translateY:-10};}();return{zIndex:isFolder?0:1,transform:[{translateY:withSpring(translateY,DRAG_SPRING_PHYSICS,'animate-always')},{translateX:withSpring(translateX,DRAG_SPRING_PHYSICS,'animate-always')},{scale:withSpring(targetScale,DRAG_SPRING_PHYSICS,'animate-always',function(finished){if(finished&&transitionState===TransitionStates.YEETED&&isFolder){runOnJS(cleanUp)();}})}],opacity:withSpring(isFolder?visible.get():1,DRAG_SPRING_PHYSICS,'animate-always')};}" };
 let closure_25 = { code: "function GuildsBarDragPreviewTsx12(finished){const{transitionState,TransitionStates,isFolder,runOnJS,cleanUp}=this.__closure;if(finished&&transitionState===TransitionStates.YEETED&&isFolder){runOnJS(cleanUp)();}}" };
 ReactCompilerGating = fn(558);
-let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? ((cleanUp) => {
+let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function AnimatedItemPreview(cleanUp) {
   const cResult = transitionState(sharedValue[7]).c(19);
   ({ node, transitionState } = cleanUp);
   cleanUp = cleanUp.cleanUp;
@@ -361,7 +361,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? ((cleanUp) => {
     name = !tmp9;
   }
   let obj4 = transitionState(sharedValue[9]);
-  let fn = function p() {
+  let fn = function w() {
     value = sharedValue.get();
     let num = 1;
     if (isFolder) {
@@ -505,7 +505,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? ((cleanUp) => {
     cResult[6] = items;
     tmp15 = items;
   }
-  const fn2 = function w() {
+  const fn2 = function p() {
     let num = 1;
     if (transitionState === native.TransitionStates.YEETED) {
       num = 0;
@@ -517,7 +517,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? ((cleanUp) => {
   cResult[2] = fn2;
   tmp11 = fn2;
   let obj5 = { isFolder: node.type === GuildsNodeType.FOLDER, visible: sharedValue, withSpring: transitionState(sharedValue[10]).withSpring, DRAG_SPRING_PHYSICS, transitionState, TransitionStates: transitionState(sharedValue[11]).TransitionStates, runOnJS: transitionState(sharedValue[9]).runOnJS, cleanUp };
-}) : ((cleanUp) => {
+}) : (function AnimatedItemPreview(cleanUp) {
   ({ node, transitionState } = cleanUp);
   cleanUp = cleanUp.cleanUp;
   let sharedValue;
@@ -642,7 +642,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarDragPreview.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function GuildsBarDragPreview() {
   const cResult = c.c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function t(arg0) {
@@ -669,7 +669,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         if (null != dragSpecs) {
           if (null != overSpecs) {
             state = overSpecs.state;
-            const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "alle sekunti", scrollPosition: "alle {{count}} sekuntia", dragRegion: null, windowSize: "\u{1F6B4}", dropComplete: true, listInsets: 6 };
+            const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "Commit SHA", scrollPosition: "id", dragRegion: null, windowSize: "\u{1F9D1}\u{1F3FF}\u200D\u2764\uFE0F\u200D\u{1F9D1}\u{1F3FE}", dropComplete: true, listInsets: null };
             ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
             obj.overState = state;
             let node;
@@ -694,7 +694,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     first = cResult[0];
   }
-  const tmp5 = GuildsBarDnDStore(first, _mod4498.shallow);
+  const tmp5 = GuildsBarDnDStore(first, _mod4690.shallow);
   if (cResult[1] !== tmp5) {
     let tmp7 = null;
     if (null != tmp5) {
@@ -709,7 +709,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp6 = cResult[2];
   }
   return tmp6;
-}) : (() => {
+}) : (function GuildsBarDragPreview() {
   const tmp = GuildsBarDnDStore((arg0) => {
     ({ dragSpecs, overSpecs, gestureState, scrollPosition, dragRegion, windowSize, dropComplete, listInsets, dropSpecs } = arg0);
     if (null != dropSpecs) {
@@ -734,7 +734,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       if (null != dragSpecs) {
         if (null != overSpecs) {
           state = overSpecs.state;
-          const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "alle sekunti", scrollPosition: "alle {{count}} sekuntia", dragRegion: null, windowSize: "\u{1F6B4}", dropComplete: true, listInsets: 6 };
+          const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "Commit SHA", scrollPosition: "id", dragRegion: null, windowSize: "\u{1F9D1}\u{1F3FF}\u200D\u2764\uFE0F\u200D\u{1F9D1}\u{1F3FE}", dropComplete: true, listInsets: null };
           ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
           obj.overState = state;
           let node;
@@ -753,7 +753,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       }
       return null;
     }
-  }, _mod4498.shallow);
+  }, _mod4690.shallow);
   let tmp2 = null;
   if (null != tmp) {
     let obj = {};

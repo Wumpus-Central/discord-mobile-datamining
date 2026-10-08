@@ -1,21 +1,21 @@
-// === Module 16927: useAutoSearchMembersTab ===
+// === Module 17208: useAutoSearchMembersTab ===
 
-// Module 16927 (useAutoSearchMembersTab)
+// Module 17208 (useAutoSearchMembersTab)
 import _mod12 from "module_12" /* 12 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 11980 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12053 */;
 import noop from "module_19" /* 19 */;
-import SearchQueryStore from "SearchQueryStore" /* 11994 */;
+import SearchQueryStore from "SearchQueryStore" /* 12067 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_5 = fn(11996).SEARCH_TEXT_INPUT_DEBOUNCE_TIME;
+let closure_5 = fn(12069).SEARCH_TEXT_INPUT_DEBOUNCE_TIME;
 const SearchTypes = fn(1085).SearchTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/hooks/useAutoSearchMembersTab.tsx");
 
-export const useAutoSearchMembersTab = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export const useAutoSearchMembersTab = ReactCompilerGating.isReactCompilerEnabled() ? (function useAutoSearchMembersTab(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
   const cResult = require("c").c(7);
@@ -28,7 +28,7 @@ export const useAutoSearchMembersTab = ReactCompilerGating.isReactCompilerEnable
     if (cResult[4] !== arg0) {
       const fn2 = function h() {
         return () => {
-          const result = closure_1(12005).cleanupGuildMemberTab(closure_1_0);
+          const result = closure_1(12078).cleanupGuildMemberTab(closure_1_0);
         };
       };
       const items = [arg0];
@@ -43,11 +43,11 @@ export const useAutoSearchMembersTab = ReactCompilerGating.isReactCompilerEnable
     }
     const effect1 = noop.useEffect(tmp5, tmp6);
   }
-  const fn = function o() {
+  const fn = function b() {
     if (!closure_1) {
       const debounceResult = _mod12.debounce((searchQueryString) => {
         if (!autocompleteVisible.isAutocompleteVisible(searchContext)) {
-          const guildIdFromSearchContext = searchContext(11987).getGuildIdFromSearchContext(searchContext);
+          const guildIdFromSearchContext = searchContext(12060).getGuildIdFromSearchContext(searchContext);
           if (null != guildIdFromSearchContext) {
             const channelIds = autocompleteVisible.getChannelIds(searchContext);
             let tmp8 = null;
@@ -65,10 +65,10 @@ export const useAutoSearchMembersTab = ReactCompilerGating.isReactCompilerEnable
               tmp12 = tmp8;
             }
             obj4.threadId = tmp12;
-            closure_1(12005).searchGuildMemberTab(obj4);
-            const obj3 = closure_1(12005);
+            closure_1(12078).searchGuildMemberTab(obj4);
+            const obj3 = closure_1(12078);
           }
-          const obj2 = searchContext(11987);
+          const obj2 = searchContext(12060);
         }
       }, closure_5);
       return SearchPlatformUtilsDefault.subscribeTextInputValue(searchContext, debounceResult);
@@ -82,7 +82,7 @@ export const useAutoSearchMembersTab = ReactCompilerGating.isReactCompilerEnable
   tmp3 = items1;
   tmp2 = fn;
   let obj = require("c");
-}) : ((arg0, arg1) => {
+}) : (function useAutoSearchMembersTab(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   const items = [arg1, arg0];
@@ -90,7 +90,7 @@ export const useAutoSearchMembersTab = ReactCompilerGating.isReactCompilerEnable
     if (!closure_1) {
       const debounceResult = _mod12.debounce((searchQueryString) => {
         if (!autocompleteVisible.isAutocompleteVisible(searchContext)) {
-          const guildIdFromSearchContext = searchContext(11987).getGuildIdFromSearchContext(searchContext);
+          const guildIdFromSearchContext = searchContext(12060).getGuildIdFromSearchContext(searchContext);
           if (null != guildIdFromSearchContext) {
             const channelIds = autocompleteVisible.getChannelIds(searchContext);
             let tmp8 = null;
@@ -108,10 +108,10 @@ export const useAutoSearchMembersTab = ReactCompilerGating.isReactCompilerEnable
               tmp12 = tmp8;
             }
             obj4.threadId = tmp12;
-            closure_1(12005).searchGuildMemberTab(obj4);
-            const obj3 = closure_1(12005);
+            closure_1(12078).searchGuildMemberTab(obj4);
+            const obj3 = closure_1(12078);
           }
-          const obj2 = searchContext(11987);
+          const obj2 = searchContext(12060);
         }
       }, closure_5);
       return SearchPlatformUtilsDefault.subscribeTextInputValue(searchContext, debounceResult);
@@ -119,6 +119,6 @@ export const useAutoSearchMembersTab = ReactCompilerGating.isReactCompilerEnable
   }, items);
   const items1 = [arg0];
   const effect1 = noop.useEffect(() => () => {
-    const result = closure_1(12005).cleanupGuildMemberTab(closure_1_0);
+    const result = closure_1(12078).cleanupGuildMemberTab(closure_1_0);
   }, items1);
 });

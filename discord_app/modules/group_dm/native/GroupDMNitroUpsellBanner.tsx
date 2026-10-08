@@ -1,27 +1,27 @@
-// === Module 16900: GroupDMNitroUpsellBanner ===
+// === Module 17181: GroupDMNitroUpsellBanner ===
 
-// Module 16900 (GroupDMNitroUpsellBanner)
+// Module 17181 (GroupDMNitroUpsellBanner)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import spring from "spring" /* 5604 */;
-import _modDef7733 from "module_7733" /* 7733 */;
-import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11226 */;
-import GroupDMNitroCapExperimentDefault from "GroupDMNitroCapExperiment" /* 11229 */;
-import useGroupDMNitroUpsellActionDefault from "useGroupDMNitroUpsellAction" /* 11233 */;
-import GroupDMNitroCapBannerDefault from "GroupDMNitroCapBanner" /* 16901 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import spring from "spring" /* 5374 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import _modDef8054 from "module_8054" /* 8054 */;
+import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11341 */;
+import GroupDMNitroCapExperimentDefault from "GroupDMNitroCapExperiment" /* 11344 */;
+import useGroupDMNitroUpsellActionDefault from "useGroupDMNitroUpsellAction" /* 11348 */;
+import GroupDMNitroCapBannerDefault from "GroupDMNitroCapBanner" /* 17182 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const number = fn(11228).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+const number = fn(11343).MAX_GROUP_DM_NITRO_PARTICIPANTS;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const PX_40 = nativeDefault.space.PX_40;
@@ -31,7 +31,7 @@ const PX_24 = nativeDefault.space.PX_24;
 const PX_8 = nativeDefault.space.PX_8;
 const locations = [0, 0.225, 1];
 let closure_17 = { mass: 0.8, stiffness: 400, damping: 32, overshootClamping: true };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { floatingOverlay: { position: "absolute", left: 0, right: 0, bottom: 0 }, floatingContent: { justifyContent: "flex-end" }, floatingBanner: { backgroundColor: "transparent", paddingTop: 0, paddingBottom: nativeDefault.space.PX_16 } };
 let closure_18 = createStyles.createStyles(obj2);
 const __initData = { code: "function GroupDMNitroUpsellBannerTsx1(){const{opacity,translateY}=this.__closure;return{opacity:opacity.get(),transform:[{translateY:translateY.get()}]};}" };
@@ -39,7 +39,7 @@ const __initData2 = { code: "function GroupDMNitroUpsellBannerTsx2(){const{keybo
 const __initData3 = { code: "function GroupDMNitroUpsellBannerTsx3(){const{opacity,translateY}=this.__closure;return{opacity:opacity.get(),transform:[{translateY:translateY.get()}]};}" };
 const __initData4 = { code: "function GroupDMNitroUpsellBannerTsx4(){const{keyboardHeight,safeAreaBottom}=this.__closure;return{bottom:Math.max(keyboardHeight.get()-safeAreaBottom,0)};}" };
 let ReactCompilerGating = fn(558);
-let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((visible) => {
+let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function FloatingBanner(visible) {
   const cResult = visible(bottom[9]).c(48);
   visible = visible.visible;
   ({ hideGradient, onListInsetChange } = visible);
@@ -71,7 +71,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((visible) => {
       const effect = noop.useEffect(tmp14, tmp15);
       const _Symbol = Symbol;
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn2 = function h(nativeEvent) {
+        const fn2 = function p(nativeEvent) {
           const height = nativeEvent.nativeEvent.layout.height;
           noop((arg0) => {
             let tmp = height;
@@ -561,7 +561,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((visible) => {
   tmp15 = items4;
   tmp14 = fn;
   const tmpResult = visible(bottom[13]);
-}) : ((children) => {
+}) : (function FloatingBanner(children) {
   const visible = children.visible;
   ({ hideGradient, onListInsetChange } = children);
   let bottom;
@@ -638,7 +638,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((visible) => {
     const tmp9Result = spring;
   }, items2);
   const tmp5Result = visible(bottom[13]);
-  class U {
+  class R {
     constructor() {
       obj = { opacity: closure_6.get(), transform: null };
       obj1 = { translateY: closure_7.get() };
@@ -648,10 +648,10 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((visible) => {
       return obj;
     }
   }
-  U.__closure = { opacity: sharedValue, translateY: sharedValue1 };
-  U.__workletHash = 10761841231690;
-  U.__initData = __initData3;
-  const animatedStyle = visible(bottom[13]).useAnimatedStyle(U);
+  R.__closure = { opacity: sharedValue, translateY: sharedValue1 };
+  R.__workletHash = 10761841231690;
+  R.__initData = __initData3;
+  const animatedStyle = visible(bottom[13]).useAnimatedStyle(R);
   const tmp5Result3 = visible(bottom[13]);
   class X {
     constructor() {
@@ -695,7 +695,7 @@ let obj3 = { backgroundColor: "transparent", paddingTop: 0, paddingBottom: nativ
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/group_dm/native/GroupDMNitroUpsellBanner.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GroupDMNitroUpsellBanner(arg0) {
   const cResult = c.c(33);
   ({ location: _location, floating, hideFloatingGradient, onFloatingListInsetChange, wrapperStyle } = arg0);
   let tmp4 = undefined !== floating;
@@ -824,7 +824,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                 const obj8 = { showLeadingIcon: false, wrapperStyle: tmp19, trailing: tmp24, children: null };
                 const items1 = [tmp27, tmp30];
                 obj8.children = items1;
-                const tmp36 = v65535(GroupDMNitroCapBannerDefault, obj8);
+                const tmp36 = collapsed(GroupDMNitroCapBannerDefault, obj8);
                 cResult[23] = tmp24;
                 cResult[24] = tmp30;
                 cResult[25] = tmp19;
@@ -832,7 +832,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                 tmp34 = tmp36;
               }
             }
-            const obj9 = { text: tmp21, size: "sm", variant: "experimental_premium-primary", shiny: tmp23, icon: _modDef7733, onPress: tmp14 };
+            const obj9 = { text: tmp21, size: "sm", variant: "experimental_premium-primary", shiny: tmp23, icon: _modDef8054, onPress: tmp14 };
             const tmp26 = options(components_Button_Button.Button, obj9);
             cResult[17] = tmp14;
             cResult[18] = tmp21;
@@ -867,7 +867,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[6] = obj10;
   tmp13 = obj10;
   const tmpResult4 = GroupDMNitroUpsellModel;
-}) : ((wrapperStyle) => {
+}) : (function GroupDMNitroUpsellBanner(wrapperStyle) {
   ({ location: _location, floating } = wrapperStyle);
   ({ memberCount, recipientLimit } = wrapperStyle);
   if (floating === undefined) {
@@ -904,7 +904,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp15 = !stateFromStores;
   }
   obj7.shiny = tmp15;
-  obj7.icon = _modDef7733;
+  obj7.icon = _modDef8054;
   obj7.onPress = tmp7Result;
   obj6.trailing = options(components_Button_Button.Button, obj7);
   const obj8 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
@@ -916,7 +916,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   obj9.children = intl3.formatToPlainString(util.t["8o8Zk5"], { number });
   items2[1] = options(Text_Text.Text, obj9);
   obj6.children = items2;
-  const tmp11Result = v65535(tmp5Result, obj6);
+  const tmp11Result = collapsed(tmp5Result, obj6);
   let tmp14Result = tmp11Result;
   if (floating) {
     const obj11 = { visible: tmp9, hideGradient: hideFloatingGradient, onListInsetChange: onFloatingListInsetChange, children: tmp11Result };

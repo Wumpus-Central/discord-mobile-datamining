@@ -1,8 +1,8 @@
-// === Module 15519: button ===
+// === Module 15781: button ===
 
-// Module 15519 (button)
+// Module 15781 (button)
 import c from "c" /* 576 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/mfa/native/components/button.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function MFAButton(arg0) {
   const cResult = c.c(2);
   if (cResult[0] !== arg0) {
     const obj2 = { size: "lg" };
@@ -24,7 +24,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp4 = cResult[1];
   }
   return tmp4;
-}) : ((arg0) => {
+}) : (function MFAButton(arg0) {
   const merged = Object.assign(arg0);
   return jsx(components_Button_Button.Button, { size: "lg" });
 });

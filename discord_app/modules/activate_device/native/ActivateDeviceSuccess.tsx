@@ -1,27 +1,27 @@
-// === Module 13715: ActivateDeviceSuccess ===
+// === Module 13937: ActivateDeviceSuccess ===
 
-// Module 13715 (ActivateDeviceSuccess)
+// Module 13937 (ActivateDeviceSuccess)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import AvatarUtils from "AvatarUtils" /* 1402 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import FastImageDefault from "FastImage" /* 5981 */;
-import scopes2 from "scopes" /* 8752 */;
-import ActivateDeviceSharedStylesDefault from "ActivateDeviceSharedStyles" /* 13714 */;
+import AvatarUtils from "AvatarUtils" /* 1414 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import scopes2 from "scopes" /* 9132 */;
+import ActivateDeviceSharedStylesDefault from "ActivateDeviceSharedStyles" /* 13936 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({ image: { width: 300, height: 200, alignSelf: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activate_device/native/ActivateDeviceSuccess.tsx");
 
-export const ActivateDeviceSuccess = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const ActivateDeviceSuccess = ReactCompilerGating.isReactCompilerEnabled() ? (function ActivateDeviceSuccess(arg0) {
   const cResult = c.c(17);
   ({ data, onComplete, successImage } = arg0);
   const tmp4 = closure_7();
@@ -138,7 +138,7 @@ export const ActivateDeviceSuccess = ReactCompilerGating.isReactCompilerEnabled(
     cResult[4] = tmp14;
     tmp13 = tmp14;
   }
-}) : ((onComplete) => {
+}) : (function ActivateDeviceSuccess(onComplete) {
   ({ data, successImage } = onComplete);
   if (null != data.twoWayLinkCode) {
     const intl2 = util.intl;

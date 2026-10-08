@@ -1,15 +1,15 @@
-// === Module 13964: Badges/Badges ===
+// === Module 14263: Badges/Badges ===
 
-// Module 13964 (Badges/Badges)
+// Module 14263 (Badges/Badges)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4892 */;
+import Text_Text from "Text/Text" /* 5086 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-let createStyles = fn(4896);
+let createStyles = fn(5090);
 let obj2 = { base: { borderRadius: nativeDefault.radii.sm, paddingHorizontal: 4, paddingVertical: 2 }, danger: null, info: null, brand: null, expressive: null };
 let obj3 = { borderRadius: nativeDefault.radii.sm, paddingHorizontal: 4, paddingVertical: 2 };
 obj2.danger = { backgroundColor: nativeDefault.colors.BADGE_NOTIFICATION_BACKGROUND };
@@ -20,7 +20,7 @@ obj2.brand = { backgroundColor: nativeDefault.unsafe_rawColors.BRAND_260 };
 const obj6 = { backgroundColor: nativeDefault.unsafe_rawColors.BRAND_260 };
 obj2.expressive = { backgroundColor: nativeDefault.colors.CONTROL_EXPRESSIVE_BACKGROUND_DEFAULT };
 let closure_4 = createStyles.createStyles(obj2);
-createStyles = fn(4896);
+createStyles = fn(5090);
 const obj9 = { text: { textAlign: "center", textTransform: "uppercase" }, dangerText: null, infoText: null, brandText: null, expressiveText: null };
 const obj7 = { backgroundColor: nativeDefault.colors.CONTROL_EXPRESSIVE_BACKGROUND_DEFAULT };
 obj9.dangerText = { color: nativeDefault.colors.WHITE };
@@ -38,7 +38,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Badges/native/Badges.tsx");
 
 export const BadgeColors = obj14;
-export const TextBadge = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const TextBadge = ReactCompilerGating.isReactCompilerEnabled() ? (function TextBadge(arg0) {
   const cResult = c.c(14);
   ({ color, style, text, textStyle } = arg0);
   if (undefined === color) {
@@ -96,7 +96,7 @@ export const TextBadge = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   cResult[2] = tmp5.base;
   cResult[3] = items1;
   tmp9 = items1;
-}) : ((color) => {
+}) : (function TextBadge(color) {
   let DANGER = color.color;
   if (DANGER === undefined) {
     DANGER = obj14.DANGER;

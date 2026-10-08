@@ -1,15 +1,15 @@
-// === Module 16104: useFavoritesGuildResetAction ===
+// === Module 16364: useFavoritesGuildResetAction ===
 
-// Module 16104 (useFavoritesGuildResetAction)
+// Module 16364 (useFavoritesGuildResetAction)
 import c from "c" /* 576 */;
 import router_utils from "router_utils" /* 1112 */;
 import util from "util" /* 1126 */;
-import UserSettings from "UserSettings" /* 2028 */;
-import FavoritesUtils from "FavoritesUtils" /* 2077 */;
-import _modDef3395 from "module_3395" /* 3395 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10048 */;
+import UserSettings from "UserSettings" /* 2040 */;
+import FavoritesUtils from "FavoritesUtils" /* 2089 */;
+import _modDef3439 from "module_3439" /* 3439 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10293 */;
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4899 */;
 
 require = fn;
 const Routes = fn(1085).Routes;
@@ -17,7 +17,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildResetAction.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavoritesGuildResetAction() {
   const cResult = c.c(5);
   const DeveloperMode = UserSettings.DeveloperMode;
   let hasAccess = DeveloperMode.useSetting();
@@ -41,9 +41,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
-    const stringResult = intl.string(_modDef3395.YkET6R);
+    const stringResult = intl.string(_modDef3439.YkET6R);
     const intl2 = util.intl;
-    const stringResult1 = intl2.string(_modDef3395.ZzcwNk);
+    const stringResult1 = intl2.string(_modDef3439.ZzcwNk);
     cResult[1] = stringResult;
     cResult[2] = stringResult1;
     let tmp6 = stringResult1;
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp10 = cResult[4];
   }
   return tmp10;
-}) : (() => {
+}) : (function useFavoritesGuildResetAction() {
   const DeveloperMode = UserSettings.DeveloperMode;
   let hasAccess = DeveloperMode.useSetting();
   const callback = noop.useCallback(() => {
@@ -78,9 +78,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   const obj2 = { isAvailable: hasAccess, label: null, subLabel: null, perform: null };
   const intl = util.intl;
-  obj2.label = intl.string(_modDef3395.YkET6R);
+  obj2.label = intl.string(_modDef3439.YkET6R);
   const intl2 = util.intl;
-  obj2.subLabel = intl2.string(_modDef3395.ZzcwNk);
+  obj2.subLabel = intl2.string(_modDef3439.ZzcwNk);
   obj2.perform = callback;
   return obj2;
 });

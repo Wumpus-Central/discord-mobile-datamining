@@ -1,22 +1,22 @@
-// === Module 7937: Banner ===
+// === Module 8356: Banner ===
 
-// Module 7937 (Banner)
+// Module 8356 (Banner)
 import c from "c" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
-import FastImageDefault from "FastImage" /* 5981 */;
+import FastImageDefault from "FastImage" /* 6164 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const BANNER_HEIGHT = fn(1085).BANNER_HEIGHT;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({ root: { width: "100%" }, image: { width: "100%", height: "100%" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/profile_customization/native/Banner.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ProfileBanner(arg0) {
   const cResult = c.c(15);
   ({ style, bannerSource, backgroundColor, bannerSafeArea, bannerHeight } = arg0);
   let num = 0;
@@ -86,7 +86,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = sum;
   cResult[4] = obj4;
   tmp8 = obj4;
-}) : ((bannerHeight) => {
+}) : (function ProfileBanner(bannerHeight) {
   ({ bannerSource, bannerSafeArea } = bannerHeight);
   ({ style, backgroundColor } = bannerHeight);
   if (bannerSafeArea === undefined) {

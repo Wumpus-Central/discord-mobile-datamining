@@ -1,19 +1,19 @@
-// === Module 10900: BadgeDirectoryScreen ===
+// === Module 10551: BadgeDirectoryScreen ===
 
-// Module 10900 (BadgeDirectoryScreen)
+// Module 10551 (BadgeDirectoryScreen)
 import nativeDefault from "native" /* 587 */;
-import NavigatorHeader from "NavigatorHeader" /* 6017 */;
-import openBadgeDirectoryScreen from "openBadgeDirectoryScreen" /* 10899 */;
-import BadgeDirectoryViewDefault from "BadgeDirectoryView" /* 10901 */;
+import NavigatorHeader from "NavigatorHeader" /* 6203 */;
+import openBadgeDirectoryScreen from "openBadgeDirectoryScreen" /* 10550 */;
+import BadgeDirectoryViewDefault from "BadgeDirectoryView" /* 10552 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 let c6 = "badge-directory";
-const createStyles = fn(4896);
-let obj2 = { sheetHeader: { height: fn(6075).NAV_BAR_HEIGHT }, view: null };
-let obj3 = { height: fn(6075).NAV_BAR_HEIGHT };
+const createStyles = fn(5090);
+let obj2 = { sheetHeader: { height: fn(6261).NAV_BAR_HEIGHT }, view: null };
+let obj3 = { height: fn(6261).NAV_BAR_HEIGHT };
 obj2.view = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -21,7 +21,7 @@ let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/native/BadgeDirectoryScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((targetUserId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeDirectoryScreen(targetUserId) {
   let Navigator = targetUserId;
   let tmp = dependencyMap;
   const cResult = targetUserId(576).c(20);
@@ -29,7 +29,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((targetUserId) =>
   let view = closure_7();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
-    const fn = function c() {
+    const fn = function u() {
       currentUser = currentUser.getCurrentUser();
       let id;
       if (currentUser != null) {
@@ -83,10 +83,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((targetUserId) =>
     if (cResult[6] === stateFromStores1) {
       const _Symbol = Symbol;
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-        const headerCloseButton = Navigator(6017).getHeaderCloseButton(Navigator(10899).closeBadgeDirectoryScreen);
+        const headerCloseButton = Navigator(6203).getHeaderCloseButton(Navigator(10550).closeBadgeDirectoryScreen);
         cResult[8] = headerCloseButton;
         let tmp15 = headerCloseButton;
-        const NavigatorResult2 = Navigator(6017);
+        const NavigatorResult2 = Navigator(6203);
       } else {
         tmp15 = cResult[8];
       }
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((targetUserId) =>
               if (cResult[14] === view.sheetHeader) {
               }
             }
-            Navigator = Navigator(6503).Navigator;
+            Navigator = Navigator(6679).Navigator;
             const obj2 = { screens: sheetHeader, initialRouteName, headerStatusBarHeight: 0, headerStyle: null, viewStyle: null };
             ({ sheetHeader: obj9.headerStyle, view: obj9.viewStyle } = view);
             tmp = <Navigator screens={sheetHeader} initialRouteName={initialRouteName} headerStatusBarHeight={0} headerStyle={null} viewStyle={null} />;
@@ -118,13 +118,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((targetUserId) =>
               return tmp18;
             }
             const obj3 = { screens: sheetHeader, initialRouteName, viewStyle: view.view };
-            const tmp21 = jsx(Navigator(10989).Modal, { screens: sheetHeader, initialRouteName, viewStyle: view.view });
+            const tmp21 = jsx(Navigator(11213).Modal, { screens: sheetHeader, initialRouteName, viewStyle: view.view });
             cResult[17] = sheetHeader;
             cResult[18] = view.view;
             cResult[19] = tmp21;
             tmp18 = tmp21;
           }
-          NavigatorResult3 = Navigator(10899);
+          NavigatorResult3 = Navigator(10550);
         }
       }
       const obj4 = {};
@@ -153,7 +153,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((targetUserId) =>
   const intl2 = Navigator(1126).intl;
   stringResult = intl2.formatToPlainString(Navigator(1126).t.EIcwoe, { username: stateFromStores1 });
   const NavigatorResult1 = Navigator(504);
-}) : ((targetUserId) => {
+}) : (function BadgeDirectoryScreen(targetUserId) {
   targetUserId = targetUserId.targetUserId;
   dependencyMap = undefined;
   const tmp = closure_7();
@@ -209,10 +209,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((targetUserId) =>
       if (tmp2Result.isBadgeDirectoryIOSPageSheet()) {
         const obj4 = { screens: memo, initialRouteName, headerStatusBarHeight: 0, headerStyle: null, viewStyle: null };
         ({ sheetHeader: obj6.headerStyle, view: obj6.viewStyle } = tmp);
-        let tmp9Result = jsx(tmp2(6503).Navigator, { screens: memo, initialRouteName, headerStatusBarHeight: 0, headerStyle: null, viewStyle: null });
+        let tmp9Result = jsx(tmp2(6679).Navigator, { screens: memo, initialRouteName, headerStatusBarHeight: 0, headerStyle: null, viewStyle: null });
       } else {
         const obj5 = { screens: memo, initialRouteName, viewStyle: tmp.view };
-        tmp9Result = jsx(tmp2(10989).Modal, { screens: memo, initialRouteName, viewStyle: tmp.view });
+        tmp9Result = jsx(tmp2(11213).Modal, { screens: memo, initialRouteName, viewStyle: tmp.view });
       }
       return tmp9Result;
     }

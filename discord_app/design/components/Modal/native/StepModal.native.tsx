@@ -1,11 +1,11 @@
-// === Module 14290: StepModal ===
+// === Module 14114: StepModal ===
 
-// Module 14290 (StepModal)
+// Module 14114 (StepModal)
 import c from "c" /* 576 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import NavigatorConstants from "NavigatorConstants" /* 6075 */;
-import Modal from "Modal" /* 10989 */;
-import ModalStepIndicator from "ModalStepIndicator" /* 14291 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import NavigatorConstants from "NavigatorConstants" /* 6261 */;
+import Modal from "Modal" /* 11213 */;
+import ModalStepIndicator from "ModalStepIndicator" /* 14115 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -15,16 +15,16 @@ let closure_3 = ["steps", "onWillFocus"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { height: "100%" }, stepContainer: null };
-const rect = { flexDirection: "column", alignItems: "center", justifyContent: "center", top: 0, left: 0, right: 0, height: fn(6075).NAV_BAR_HEIGHT };
+const rect = { flexDirection: "column", alignItems: "center", justifyContent: "center", top: 0, left: 0, right: 0, height: fn(6261).NAV_BAR_HEIGHT };
 obj2.stepContainer = rect;
 let closure_10 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Modal/native/StepModal.native.tsx");
 
-export const StepModal = ReactCompilerGating.isReactCompilerEnabled() ? ((steps) => {
+export const StepModal = ReactCompilerGating.isReactCompilerEnabled() ? (function StepModal(steps) {
   const cResult = c.c(28);
   if (cResult[0] !== steps) {
     steps = steps.steps;
@@ -141,7 +141,7 @@ export const StepModal = ReactCompilerGating.isReactCompilerEnabled() ? ((steps)
     cResult[12] = tmp21;
     tmp16 = tmp21;
   }
-  const fn = function y(arg0) {
+  const fn = function _(arg0) {
     let num;
     if (closure_1 != null) {
       num = closure_1.indexOf(tmp.name);
@@ -159,7 +159,7 @@ export const StepModal = ReactCompilerGating.isReactCompilerEnabled() ? ((steps)
   cResult[6] = fn;
   tmp13 = fn;
   const tmp11 = _slicedToArray(noop.useState(0), 2);
-}) : ((steps) => {
+}) : (function StepModal(steps) {
   steps = steps.steps;
   const onWillFocus = steps.onWillFocus;
   const merged = Object.assign(steps, Object.assign({ steps: 0, onWillFocus: 0 }));
@@ -169,7 +169,7 @@ export const StepModal = ReactCompilerGating.isReactCompilerEnabled() ? ((steps)
   closure_2 = tmp4[1];
   const items = [onWillFocus, steps];
   const obj = { style: tmp2.container, children: null };
-  const callback = noop.useCallback((onDidFocus) => {
+  const callback = noop.useCallback((arg0) => {
     let num;
     if (steps != null) {
       num = steps.indexOf(tmp.name);
@@ -179,7 +179,7 @@ export const StepModal = ReactCompilerGating.isReactCompilerEnabled() ? ((steps)
     }
     closure_2(num);
     if (onWillFocus != null) {
-      onWillFocus(onDidFocus);
+      onWillFocus(arg0);
     }
   }, items);
   const obj2 = {};

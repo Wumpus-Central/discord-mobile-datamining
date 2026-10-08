@@ -1,10 +1,10 @@
-// === Module 10909: useShowBadgePersonalizationNotice ===
+// === Module 10560: useShowBadgePersonalizationNotice ===
 
-// Module 10909 (useShowBadgePersonalizationNotice)
+// Module 10560 (useShowBadgePersonalizationNotice)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import BadgeUtils from "BadgeUtils" /* 10902 */;
-import ConsentStore from "ConsentStore" /* 6091 */;
+import BadgeUtils from "BadgeUtils" /* 10553 */;
+import ConsentStore from "ConsentStore" /* 5938 */;
 
 require = fn;
 const Consents = fn(1085).Consents;
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/useShowBadgePersonalizationNotice.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useShowBadgePersonalizationNotice(arg0) {
   const cResult = c.c(6);
   ({ badge, isViewingOtherUser } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -44,7 +44,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = tmp9;
   tmp8 = tmp9;
   const tmpResult2 = BadgeUtils;
-}) : ((arg0) => {
+}) : (function useShowBadgePersonalizationNotice(arg0) {
   ({ badge, isViewingOtherUser } = arg0);
   const items = [ConsentStore];
   const stateFromStores = initialize.useStateFromStores(items, () => ConsentStore.hasConsented(constants.PERSONALIZATION));

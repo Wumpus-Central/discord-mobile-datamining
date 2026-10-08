@@ -1,10 +1,10 @@
-// === Module 11233: useGroupDMNitroUpsellAction ===
+// === Module 11348: useGroupDMNitroUpsellAction ===
 
-// Module 11233 (useGroupDMNitroUpsellAction)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import openUserSettings from "openUserSettings" /* 6895 */;
-import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11226 */;
-import PremiumMarketingUtil from "PremiumMarketingUtil" /* 11232 */;
+// Module 11348 (useGroupDMNitroUpsellAction)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import openUserSettings from "openUserSettings" /* 7084 */;
+import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11341 */;
+import PremiumMarketingUtil from "PremiumMarketingUtil" /* 11347 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/group_dm/native/useGroupDMNitroUpsellAction.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((audience) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGroupDMNitroUpsellAction(audience) {
   const cResult = audience(acquisitionStrategy[3]).c(5);
   audience = audience.audience;
   const _location = audience.location;
@@ -58,7 +58,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((audience) => {
   cResult[3] = onCheckout;
   cResult[4] = fn;
   tmp3 = fn;
-}) : ((audience) => {
+}) : (function useGroupDMNitroUpsellAction(audience) {
   audience = audience.audience;
   const _location = audience.location;
   const acquisitionStrategy = audience.acquisitionStrategy;

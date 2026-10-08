@@ -1,23 +1,23 @@
-// === Module 12996: OrbBadgePreview ===
+// === Module 13274: OrbBadgePreview ===
 
-// Module 12996 (OrbBadgePreview)
+// Module 13274 (OrbBadgePreview)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import useCurrentUser from "useCurrentUser" /* 7860 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 8539 */;
-import UserProfilePreviewDefault from "UserProfilePreview" /* 10838 */;
+import useCurrentUser from "useCurrentUser" /* 8278 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9024 */;
+import UserProfilePreviewDefault from "UserProfilePreview" /* 10487 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles({ container: { flex: 1, justifyContent: "center", alignItems: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/OrbBadgePreview.tsx");
 
-export const OrbBadgePreview = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const OrbBadgePreview = ReactCompilerGating.isReactCompilerEnabled() ? (function OrbBadgePreview() {
   const cResult = c.c(7);
   const tmp4 = closure_5();
   const currentUser = useCurrentUser.useCurrentUser();
@@ -53,7 +53,7 @@ export const OrbBadgePreview = ReactCompilerGating.isReactCompilerEnabled() ? ((
   cResult[5] = tmp9;
   cResult[6] = tmp14;
   tmp13 = tmp14;
-}) : (() => {
+}) : (function OrbBadgePreview() {
   const tmp = closure_5();
   const obj2 = { style: tmp.container, children: null };
   const currentUser = useCurrentUser.useCurrentUser();

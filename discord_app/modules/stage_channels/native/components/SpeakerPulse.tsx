@@ -1,11 +1,11 @@
-// === Module 13948: SpeakerPulse ===
+// === Module 14251: SpeakerPulse ===
 
-// Module 13948 (SpeakerPulse)
+// Module 14251 (SpeakerPulse)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import timing from "timing" /* 4897 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import timing from "timing" /* 5091 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 require = fn;
 const View = fn(17).View;
@@ -14,7 +14,7 @@ const jsxProd = fn(21);
 let c9 = 0.16;
 let c10 = 250;
 let c11 = 500;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { pulse: { backgroundColor: nativeDefault.colors.WHITE }, border: null };
 let obj3 = { backgroundColor: nativeDefault.colors.WHITE };
 obj2.border = { backgroundColor: nativeDefault.colors.STATUS_SPEAKING };
@@ -28,7 +28,7 @@ let obj4 = { backgroundColor: nativeDefault.colors.STATUS_SPEAKING };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/stage_channels/native/components/SpeakerPulse.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SpeakerPulse(arg0) {
   const cResult = stateFromStores(sharedValue1[7]).c(28);
   ({ color, style } = arg0);
   const tmp4 = closure_12();
@@ -266,7 +266,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   tmp13 = items4;
   tmp12 = I;
   const tmpResult5 = stateFromStores(sharedValue1[9]);
-}) : ((arg0) => {
+}) : (function SpeakerPulse(arg0) {
   ({ color, style } = arg0);
   let stateFromStores;
   let sharedValue1;

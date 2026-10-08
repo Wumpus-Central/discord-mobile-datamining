@@ -1,9 +1,9 @@
-// === Module 11112: useGiftCodeErrorMessage ===
+// === Module 10477: useGiftCodeErrorMessage ===
 
-// Module 11112 (useGiftCodeErrorMessage)
+// Module 10477 (useGiftCodeErrorMessage)
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7081 */;
-import GiftCodeStore from "GiftCodeStore" /* 11101 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7267 */;
+import GiftCodeStore from "GiftCodeStore" /* 10466 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/gift_code_modal/useGiftCodeErrorMessage.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, id) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGiftCodeErrorMessage(arg0, id) {
   _require = arg0;
   const cResult = require("c").c(11);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -106,7 +106,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, id) => {
     }
   }
   const tmpResult2 = require("initialize");
-}) : ((arg0, id) => {
+}) : (function useGiftCodeErrorMessage(arg0, id) {
   _require = arg0;
   let items = [GiftCodeStore];
   [first] = require("initialize").useStateFromStoresArray(items, () => {

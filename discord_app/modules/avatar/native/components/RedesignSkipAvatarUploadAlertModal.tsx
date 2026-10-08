@@ -1,9 +1,9 @@
-// === Module 17634: RedesignSkipAvatarUploadAlertModal ===
+// === Module 17916: RedesignSkipAvatarUploadAlertModal ===
 
-// Module 17634 (RedesignSkipAvatarUploadAlertModal)
+// Module 17916 (RedesignSkipAvatarUploadAlertModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import AlertModal from "AlertModal" /* 5720 */;
+import AlertModal from "AlertModal" /* 5303 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/avatar/native/components/RedesignSkipAvatarUploadAlertModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onConfirm) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function RedesignSkipAvatarUploadAlertModal(onConfirm) {
   const cResult = c.c(8);
   onConfirm = onConfirm.onConfirm;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onConfirm) => {
     tmp16 = cResult[7];
   }
   return tmp16;
-}) : ((onConfirm) => {
+}) : (function RedesignSkipAvatarUploadAlertModal(onConfirm) {
   const obj = { title: null, content: null, actions: null };
   const intl = util.intl;
   obj.title = intl.string(util.t.DnKHuV);

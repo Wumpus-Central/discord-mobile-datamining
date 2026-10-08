@@ -1,9 +1,9 @@
-// === Module 11822: UsernameText ===
+// === Module 11907: UsernameText ===
 
-// Module 11822 (UsernameText)
+// Module 11907 (UsernameText)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import NicknameUtils from "NicknameUtils" /* 5048 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import NicknameUtils from "NicknameUtils" /* 5405 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/base_components/UsernameText.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UsernameText(arg0) {
   const cResult = c.c(27);
   ({ user, guildId, variant, color } = arg0);
   let str = "text-md/medium";
@@ -141,7 +141,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = str;
   cResult[2] = obj7;
   tmp4 = obj7;
-}) : ((color) => {
+}) : (function UsernameText(color) {
   ({ user, variant } = color);
   if (variant === undefined) {
     variant = "text-md/medium";

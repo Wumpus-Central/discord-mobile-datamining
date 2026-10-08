@@ -1,11 +1,11 @@
-// === Module 8775: TwoWayLinkStepHeader ===
+// === Module 9121: TwoWayLinkStepHeader ===
 
-// Module 8775 (TwoWayLinkStepHeader)
+// Module 9121 (TwoWayLinkStepHeader)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6476 */;
-import TwoWayLinkStyles from "TwoWayLinkStyles" /* 8774 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6654 */;
+import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9120 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/TwoWayLinkStepHeader.tsx");
 
-export const TwoWayLinkStepHeader = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const TwoWayLinkStepHeader = ReactCompilerGating.isReactCompilerEnabled() ? (function TwoWayLinkStepHeader(arg0) {
   const cResult = c.c(10);
   ({ idx, total } = arg0);
   const twoWayLinkStyles = TwoWayLinkStyles.useTwoWayLinkStyles();
@@ -56,7 +56,7 @@ export const TwoWayLinkStepHeader = ReactCompilerGating.isReactCompilerEnabled()
   cResult[1] = twoWayLinkStyles.stepHeader;
   cResult[2] = items;
   tmp7 = items;
-}) : ((arg0) => {
+}) : (function TwoWayLinkStepHeader(arg0) {
   ({ idx, total } = arg0);
   const twoWayLinkStyles = TwoWayLinkStyles.useTwoWayLinkStyles();
   const typeConsolidationEyebrow = useTypeConsolidationTextTransform.useTypeConsolidationEyebrow("TwoWayLinkStepHeader", "text-xs/bold");

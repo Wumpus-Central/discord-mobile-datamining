@@ -1,24 +1,24 @@
-// === Module 14530: AccountUsernameSetting ===
+// === Module 14791: AccountUsernameSetting ===
 
-// Module 14530 (AccountUsernameSetting)
+// Module 14791 (AccountUsernameSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import UserUtilsDefault from "UserUtils" /* 4728 */;
-import AutomodQuarantineUtils from "AutomodQuarantineUtils" /* 11496 */;
+import UserUtilsDefault from "UserUtils" /* 4922 */;
+import AutomodQuarantineUtils from "AutomodQuarantineUtils" /* 11482 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
-const Text_Text = Text(4892);
+const Text_Text = Text(5086);
 require = fn;
 const jsx = fn(21).jsx;
 fn(558);
 const ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountUsernameSettingTrailing() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
-    const fn = function o() {
+    const fn = function s() {
       return UserUtilsDefault.getUserTag(currentUser.getCurrentUser(), { decoration: "never" });
     };
     cResult[0] = items;
@@ -29,12 +29,12 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     [tmp4, tmp5] = cResult;
   }
   return initialize.useStateFromStores(tmp4, tmp5);
-}) : (() => {
+}) : (function useAccountUsernameSettingTrailing() {
   const items = [UserStore];
   return initialize.useStateFromStores(items, () => UserUtilsDefault.getUserTag(currentUser.getCurrentUser(), { decoration: "never" }));
 });
-const SettingBuilders = fn(11142);
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const SettingBuilders = fn(11262);
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountUsernameSettingDescription() {
   let Text = require;
   let tmp = dependencyMap;
   const cResult = c.c(2);
@@ -55,7 +55,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     cResult[0] = first;
     cResult[1] = tmp;
   }
-}) : (() => {
+}) : (function useAccountUsernameSettingDescription() {
   const guildAutomodProfileQuarantineErrors = AutomodQuarantineUtils.useGuildAutomodProfileQuarantineErrors();
   let first;
   if (guildAutomodProfileQuarantineErrors != null) {
@@ -76,9 +76,9 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.string(util.t.IEpCBQ);
   },
-  parent: fn(7645).MobileUserSettings.ACCOUNT,
+  parent: fn(7966).MobileUserSettings.ACCOUNT,
   useTrailing: tmp3,
-  useDescription: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  useDescription: ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountUsernameSettingDescription() {
     let Text = require;
     let tmp = dependencyMap;
     const cResult = c.c(2);
@@ -99,7 +99,7 @@ const route = SettingBuilders.createRoute({
       cResult[0] = first;
       cResult[1] = tmp;
     }
-  }) : (() => {
+  }) : (function useAccountUsernameSettingDescription() {
     const guildAutomodProfileQuarantineErrors = AutomodQuarantineUtils.useGuildAutomodProfileQuarantineErrors();
     let first;
     if (guildAutomodProfileQuarantineErrors != null) {

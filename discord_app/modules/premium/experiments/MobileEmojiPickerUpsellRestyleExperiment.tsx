@@ -1,9 +1,9 @@
-// === Module 7498: MobileEmojiPickerUpsellRestyleExperiment ===
+// === Module 9220: MobileEmojiPickerUpsellRestyleExperiment ===
 
-// Module 7498 (MobileEmojiPickerUpsellRestyleExperiment)
+// Module 9220 (MobileEmojiPickerUpsellRestyleExperiment)
 import c from "c" /* 576 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7494 */;
-import ApexExperiment from "ApexExperiment" /* 1440 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 9219 */;
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -12,7 +12,7 @@ const items = [EntitlementFeatureNames.EntitlementFeatureNames.EMOJIS_EVERYWHERE
 const result = size.fileFinishedImporting("modules/premium/experiments/MobileEmojiPickerUpsellRestyleExperiment.tsx");
 
 export const MobileEmojiPickerUpsellRestyleExperiment = apexExperiment;
-export const useMobileEmojiPickerUpsellRestyleEnabled = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+export const useMobileEmojiPickerUpsellRestyleEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useMobileEmojiPickerUpsellRestyleEnabled(location) {
   const cResult = c.c(2);
   if (cResult[0] !== location) {
     const obj2 = { location };
@@ -23,7 +23,9 @@ export const useMobileEmojiPickerUpsellRestyleEnabled = ReactCompilerGating.isRe
     tmp2 = cResult[1];
   }
   return apexExperiment.useConfig(tmp2);
-}) : ((location) => apexExperiment.useConfig({ location }));
+}) : (function useMobileEmojiPickerUpsellRestyleEnabled(location) {
+  return apexExperiment.useConfig({ location });
+});
 export const getMobileEmojiPickerUpsellRestyleEnabledForFeature = function getMobileEmojiPickerUpsellRestyleEnabledForFeature(featureName, location) {
   let config = items.includes(featureName);
   if (config) {

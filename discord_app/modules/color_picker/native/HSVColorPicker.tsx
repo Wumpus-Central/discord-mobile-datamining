@@ -1,23 +1,23 @@
-// === Module 14441: HSVColorPicker ===
+// === Module 14666: HSVColorPicker ===
 
-// Module 14441 (HSVColorPicker)
+// Module 14666 (HSVColorPicker)
 import c from "c" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import SaturationValueColorPickerDefault from "SaturationValueColorPicker" /* 14442 */;
-import HuePickerDefault from "HuePicker" /* 14443 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import SaturationValueColorPickerDefault from "SaturationValueColorPicker" /* 14667 */;
+import HuePickerDefault from "HuePicker" /* 14668 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({ hsvColorPicker: { alignItems: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/color_picker/native/HSVColorPicker.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function HSVColorPicker(arg0) {
   const cResult = c.c(21);
   ({ hue, saturation, value, saturationValuePickerStyle, saturationValueColorBoxStyle, saturationValueColorBoxInnerStyle, saturationValueSelectorStyle, huePickerStyle, hueColorBarInnerStyle, hueSliderStyle, onPanUpdate, onPanFinalize } = arg0);
   const tmp3 = closure_6();
@@ -108,7 +108,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[8] = value;
   cResult[9] = tmp9;
   tmp8 = tmp9;
-}) : ((arg0) => {
+}) : (function HSVColorPicker(arg0) {
   ({ hue, saturation, value, onPanUpdate, onPanFinalize } = arg0);
   ({ saturationValuePickerStyle, saturationValueColorBoxStyle, saturationValueColorBoxInnerStyle, saturationValueSelectorStyle, huePickerStyle, hueColorBarInnerStyle, hueSliderStyle } = arg0);
   const tmp = closure_6();

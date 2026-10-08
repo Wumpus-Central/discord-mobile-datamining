@@ -1,27 +1,27 @@
-// === Module 15679: UserSettingsDesignSystemToast ===
+// === Module 15959: UserSettingsDesignSystemToast ===
 
-// Module 15679 (UserSettingsDesignSystemToast)
+// Module 15959 (UserSettingsDesignSystemToast)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import EmojiUtils from "EmojiUtils" /* 4533 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4574 */;
-import toastUtils from "toastUtils" /* 4575 */;
-import DesignSystemsNotificationComponentsExperiment from "DesignSystemsNotificationComponentsExperiment" /* 4580 */;
-import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4583 */;
-import XLargeIcon from "XLargeIcon" /* 4801 */;
-import _modDef4811 from "module_4811" /* 4811 */;
-import _modDef4813 from "module_4813" /* 4813 */;
-import _modDef4817 from "module_4817" /* 4817 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4818 */;
-import CopyIcon from "CopyIcon" /* 4849 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Stack_Stack from "Stack/Stack" /* 5600 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import Card from "Card" /* 6002 */;
-import Toast_Toast from "Toast/Toast" /* 14279 */;
+import EmojiUtils from "EmojiUtils" /* 4725 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4766 */;
+import toastUtils from "toastUtils" /* 4767 */;
+import DesignSystemsNotificationComponentsExperiment from "DesignSystemsNotificationComponentsExperiment" /* 4772 */;
+import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4775 */;
+import XLargeIcon from "XLargeIcon" /* 4995 */;
+import _modDef5005 from "module_5005" /* 5005 */;
+import _modDef5007 from "module_5007" /* 5007 */;
+import _modDef5011 from "module_5011" /* 5011 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5012 */;
+import CopyIcon from "CopyIcon" /* 5043 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import Stack_Stack from "Stack/Stack" /* 5373 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import Card from "Card" /* 6186 */;
+import Toast_Toast from "Toast/Toast" /* 14103 */;
 import noop from "module_19" /* 19 */;
-import ToastStore from "ToastStore" /* 15680 */;
+import ToastStore from "ToastStore" /* 15960 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
@@ -30,11 +30,11 @@ const jsxProd = fn(21);
 let c7 = "This is a toast message";
 let c8 = "https://cdn.discordapp.com/embed/avatars/0.png";
 let sum2 = 0;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { padding: nativeDefault.space.PX_16 }, previews: { alignItems: "center" } };
 let closure_10 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function DemoGroup(arg0) {
   const cResult = c.c(11);
   ({ title, hint, demos } = arg0);
   if (cResult[0] !== title) {
@@ -90,7 +90,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[10] = tmp19;
     tmp15 = tmp19;
   }
-}) : ((demos) => {
+}) : (function DemoGroup(demos) {
   demos = demos.demos;
   ({ title, hint } = demos);
   const obj = { children: null };
@@ -101,7 +101,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return hasOwnProperty(Card.Card, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function LiveStores() {
   const cResult = c.c(17);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     items = [ToastStore];
@@ -241,7 +241,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[8] = tmp16;
   tmp15 = tmp16;
   const tmpResult4 = toastUtils;
-}) : (() => {
+}) : (function LiveStores() {
   items = [ToastStore];
   const stateFromStores = initialize.useStateFromStores(items, () => content.getContent());
   const toastStore = toastUtils.useToastStore((currentToastMap) => {
@@ -310,7 +310,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   return hasOwnProperty(Card.Card, obj7);
 });
 ReactCompilerGating = fn(558);
-let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function ActiveRenderer() {
   const cResult = c.c(6);
   const designSystemsNotificationComponents = DesignSystemsNotificationComponentsExperiment.useDesignSystemsNotificationComponents("UserSettingsDesignSystemToast");
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -354,7 +354,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp14 = cResult[5];
   }
   return tmp14;
-}) : (() => {
+}) : (function ActiveRenderer() {
   const designSystemsNotificationComponents = DesignSystemsNotificationComponentsExperiment.useDesignSystemsNotificationComponents("UserSettingsDesignSystemToast");
   const obj2 = { spacing: nativeDefault.space.PX_8, children: null };
   items = [hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", children: "Active renderer" }), , ];
@@ -393,7 +393,7 @@ let items = [
   {
     label: "Success \u2014 checkmark bitmap",
     onPress() {
-      const obj2 = { key: null, content: "Saved", icon: _modDef4811 };
+      const obj2 = { key: null, content: "Saved", icon: _modDef5005 };
       const sum = sum2 + 1;
       sum2 = sum;
       obj2.key = "" + "SUCCESS_BITMAP" + "-" + sum;
@@ -403,7 +403,7 @@ let items = [
   {
     label: "Critical \u2014 yellow alert bitmap",
     onPress() {
-      const obj2 = { key: null, content: "Something went wrong", icon: _modDef4813 };
+      const obj2 = { key: null, content: "Something went wrong", icon: _modDef5007 };
       const sum = sum2 + 1;
       sum2 = sum;
       obj2.key = "" + "ERROR_BITMAP" + "-" + sum;
@@ -413,7 +413,7 @@ let items = [
   {
     label: "Default \u2014 information bitmap",
     onPress() {
-      const obj2 = { key: null, content: Thisisatoastmessage, icon: _modDef4817 };
+      const obj2 = { key: null, content: Thisisatoastmessage, icon: _modDef5011 };
       const sum = sum2 + 1;
       sum2 = sum;
       obj2.key = "" + "INFO_BITMAP" + "-" + sum;
@@ -614,7 +614,7 @@ let obj9 = {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemToast.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSettingsDesignSystemToast() {
   const cResult = c.c(23);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const emojiUrl = EmojiUtils.getEmojiUrl({ name: "\u{1F525}" });
@@ -764,7 +764,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     cResult[22] = tmp66;
     tmp63 = tmp66;
   }
-}) : (() => {
+}) : (function UserSettingsDesignSystemToast() {
   const emojiUrl = EmojiUtils.getEmojiUrl({ name: "\u{1F525}" });
   const tmp4 = closure_10();
   const obj2 = { contentContainerStyle: tmp4.container, children: null };

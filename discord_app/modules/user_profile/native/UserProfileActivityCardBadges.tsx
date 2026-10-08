@@ -1,7 +1,7 @@
-// === Module 12846: UserProfileActivityCardBadges ===
+// === Module 12993: UserProfileActivityCardBadges ===
 
-// Module 12846 (UserProfileActivityCardBadges)
-import UserProfileActivityBadges from "UserProfileActivityBadges" /* 12847 */;
+// Module 12993 (UserProfileActivityCardBadges)
+import UserProfileActivityBadges from "UserProfileActivityBadges" /* 12994 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,7 +27,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileActivityCardBadges.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((activity) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileActivityCardBadges(activity) {
   const cResult = activity(576).c(12);
   activity = activity.activity;
   const style = activity.style;
@@ -82,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((activity) => {
     const mapped = arr.map(B);
   }
   const forResult = Symbol.for("react.early_return_sentinel");
-}) : ((activity) => {
+}) : (function UserProfileActivityCardBadges(activity) {
   activity = activity.activity;
   const arr = getActivityBadges(activity);
   let tmp = null;

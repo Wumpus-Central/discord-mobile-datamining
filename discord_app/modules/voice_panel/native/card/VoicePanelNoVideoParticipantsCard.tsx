@@ -1,17 +1,17 @@
-// === Module 17308: VoicePanelNoVideoParticipantsCard ===
+// === Module 17589: VoicePanelNoVideoParticipantsCard ===
 
-// Module 17308 (VoicePanelNoVideoParticipantsCard)
+// Module 17589 (VoicePanelNoVideoParticipantsCard)
 import nativeDefault from "native" /* 587 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5097 */;
-import NativeViewDefault from "NativeView" /* 5983 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11915 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5104 */;
+import NativeViewDefault from "NativeView" /* 6166 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11988 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const Pressable = fn(17).Pressable;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { container: null, label: null, button: null, buttonText: null };
 let size = { width: "100%", height: "100%", alignItems: "center", justifyContent: "center", padding: 16, backgroundColor: nativeDefault.colors.VOICE_VIDEO_VIDEO_TILE_BACKGROUND };
 obj.container = size;
@@ -25,7 +25,7 @@ let obj4 = { color: nativeDefault.unsafe_rawColors.PRIMARY_860 };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/card/VoicePanelNoVideoParticipantsCard.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePanelNoVideoParticipantsCard() {
   const cResult = channelId(576).c(17);
   channelId = noop.useContext(VoicePanelStateContextDefault).channelId;
   const tmp5 = closure_7();
@@ -50,7 +50,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   if (cResult[3] !== tmp5.label) {
     const obj2 = { style: label, variant: "text-md/semibold", color: "text-overlay-light", children: tmp7 };
-    const tmp11 = closure_5(tmp(4892).Text, obj2);
+    const tmp11 = closure_5(tmp(5086).Text, obj2);
     cResult[3] = tmp5.label;
     cResult[4] = tmp11;
     let tmp9 = tmp11;
@@ -75,7 +75,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   if (cResult[7] !== tmp5.buttonText) {
     const obj3 = { variant: "text-sm/semibold", style: tmp5.buttonText, children: tmp14 };
-    const tmp18 = closure_5(tmp(4892).Text, obj3);
+    const tmp18 = closure_5(tmp(5086).Text, obj3);
     cResult[7] = tmp5.buttonText;
     cResult[8] = tmp18;
     let tmp16 = tmp18;
@@ -113,7 +113,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[12] = tmp20;
   tmp19 = tmp20;
   const obj = channelId(576);
-}) : (() => {
+}) : (function VoicePanelNoVideoParticipantsCard() {
   const channelId = noop.useContext(VoicePanelStateContextDefault).channelId;
   const tmp = closure_7();
   const items = [channelId];
@@ -124,14 +124,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const obj2 = { style: tmp.label, variant: "text-md/semibold", color: "text-overlay-light", children: null };
   const intl = channelId(1126).intl;
   obj2.children = intl.string(channelId(1126).t["8eBJ73"]);
-  const items1 = [closure_5(channelId(4892).Text, obj2), ];
+  const items1 = [closure_5(channelId(5086).Text, obj2), ];
   const obj3 = { style: tmp.button, onPress: callback, accessibilityRole: "button", accessibilityLabel: null, children: null };
   const intl2 = channelId(1126).intl;
   obj3.accessibilityLabel = intl2.string(channelId(1126).t.kLQySL);
   const obj4 = { variant: "text-sm/semibold", style: tmp.buttonText, children: null };
   const intl3 = channelId(1126).intl;
   obj4.children = intl3.string(channelId(1126).t.kLQySL);
-  obj3.children = closure_5(channelId(4892).Text, obj4);
+  obj3.children = closure_5(channelId(5086).Text, obj4);
   items1[1] = closure_5(Pressable, obj3);
   obj.children = items1;
   return closure_6(NativeViewDefault, obj);

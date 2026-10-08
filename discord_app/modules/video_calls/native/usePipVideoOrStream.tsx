@@ -1,22 +1,22 @@
-// === Module 9105: usePipVideoOrStream ===
+// === Module 10679: usePipVideoOrStream ===
 
-// Module 9105 (usePipVideoOrStream)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4742 */;
-import ChannelCallModalDefault from "ChannelCallModal" /* 9092 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
-import VideoSpeakerStore from "VideoSpeakerStore" /* 9106 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4918 */;
+// Module 10679 (usePipVideoOrStream)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4936 */;
+import ChannelCallModalDefault from "ChannelCallModal" /* 10669 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2062 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6041 */;
+import VideoSpeakerStore from "VideoSpeakerStore" /* 10680 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5893 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5108 */;
 
 require = fn;
-const CallConstants = fn(4917);
+const CallConstants = fn(5113);
 ({ isStreamParticipant: closure_11, isUserParticipant: closure_12, ParticipantTypes: map1 } = CallConstants);
 let ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePipVideoOrStream(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -27,7 +27,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function c() {
+    const fn = function s() {
       if (null != _undefined) {
         let videoParticipants = ChannelRTCStore.getVideoParticipants(_undefined);
       } else {
@@ -143,7 +143,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   let obj = require("c");
   return require("initialize").useStateFromStores(first, tmp8, tmp9);
-}) : ((arg0) => {
+}) : (function usePipVideoOrStream(arg0) {
   _require = arg0;
   const items = [ChannelRTCStore, VideoSpeakerStore, ApplicationStreamingStore];
   const items1 = [arg0];
@@ -258,7 +258,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/usePipVideoOrStream.tsx");
 
 export default tmp3;
-export const useHasPipParticipant = ReactCompilerGating.isReactCompilerEnabled() ? ((isActivityViewFocused) => {
+export const useHasPipParticipant = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasPipParticipant(isActivityViewFocused) {
   const cResult = isActivityViewFocused(576).c(8);
   isActivityViewFocused = isActivityViewFocused.isActivityViewFocused;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -322,7 +322,7 @@ export const useHasPipParticipant = ReactCompilerGating.isReactCompilerEnabled()
   tmp16 = items2;
   tmp15 = fn2;
   const tmpResult = isActivityViewFocused(504);
-}) : ((isActivityViewFocused) => {
+}) : (function useHasPipParticipant(isActivityViewFocused) {
   isActivityViewFocused = isActivityViewFocused.isActivityViewFocused;
   const items = [RTCConnectionStore];
   const stateFromStores = isActivityViewFocused(504).useStateFromStores(items, () => channelId.getChannelId());

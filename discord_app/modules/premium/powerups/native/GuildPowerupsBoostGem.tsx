@@ -1,12 +1,12 @@
-// === Module 12193: GuildPowerupsBoostGem ===
+// === Module 12272: GuildPowerupsBoostGem ===
 
-// Module 12193 (GuildPowerupsBoostGem)
+// Module 12272 (GuildPowerupsBoostGem)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BoostGemDefault from "BoostGem" /* 12194 */;
-import createStyles from "createStyles" /* 4896 */;
+import BoostGemDefault from "BoostGem" /* 12273 */;
+import createStyles from "createStyles" /* 5090 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -19,7 +19,7 @@ let closure_5 = createStyles.createStyles(obj);
 let size = size_mod;
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsBoostGem.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPowerupsBoostGem(arg0) {
   const cResult = c.c(9);
   ({ style, gemWidth, gemHeight } = arg0);
   const tmp3 = closure_5();
@@ -56,7 +56,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = tmp3.boostGemContainer;
   cResult[2] = items;
   tmp4 = items;
-}) : ((arg0) => {
+}) : (function GuildPowerupsBoostGem(arg0) {
   ({ style, gemWidth, gemHeight } = arg0);
   const obj = { style: null, children: null };
   const items = [closure_5().boostGemContainer, style];

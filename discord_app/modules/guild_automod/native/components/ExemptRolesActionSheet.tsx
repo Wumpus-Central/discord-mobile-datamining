@@ -1,10 +1,10 @@
-// === Module 17755: ExemptRolesActionSheet ===
+// === Module 18042: ExemptRolesActionSheet ===
 
-// Module 17755 (ExemptRolesActionSheet)
-import RoleNameDefault from "RoleName" /* 11462 */;
-import ExemptionActionSheetDefault from "ExemptionActionSheet" /* 17756 */;
+// Module 18042 (ExemptRolesActionSheet)
+import RoleNameDefault from "RoleName" /* 11446 */;
+import ExemptionActionSheetDefault from "ExemptionActionSheet" /* 18043 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleStore from "GuildRoleStore" /* 2106 */;
+import GuildRoleStore from "GuildRoleStore" /* 2118 */;
 
 const require = fn;
 function renderRoleName(role) {
@@ -16,13 +16,13 @@ function getRoleId(id) {
 function getRoleName(name) {
   return name.name;
 }
-const isEveryoneRole = fn(2107).isEveryoneRole;
+const isEveryoneRole = fn(2119).isEveryoneRole;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/native/components/ExemptRolesActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ExemptRolesActionSheet(guildId) {
   const cResult = guildId(576).c(13);
   guildId = guildId.guildId;
   ({ exemptRoles, onSave } = guildId);
@@ -111,7 +111,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     cResult[12] = tmp22;
   }
   const tmpResult = guildId(504);
-}) : ((guildId) => {
+}) : (function ExemptRolesActionSheet(guildId) {
   guildId = guildId.guildId;
   ({ exemptRoles, onSave } = guildId);
   const items = [GuildRoleStore];
@@ -131,5 +131,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   obj2.getSearchText = getRoleName;
   obj2.renderLabel = renderRoleName;
   obj2.onSave = onSave;
-  return jsx(stateFromStores(17756), { title: null, searchPlaceholder: null, listId: "automod-exempt-roles", items: null, initialSelected: null, getId: null, getSearchText: null, renderLabel: null, onSave: null });
+  return jsx(stateFromStores(18043), { title: null, searchPlaceholder: null, listId: "automod-exempt-roles", items: null, initialSelected: null, getId: null, getSearchText: null, renderLabel: null, onSave: null });
 });

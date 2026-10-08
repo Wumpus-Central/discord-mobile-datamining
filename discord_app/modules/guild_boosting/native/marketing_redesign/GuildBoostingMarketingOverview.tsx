@@ -1,12 +1,12 @@
-// === Module 6897: GuildBoostingMarketingOverview ===
+// === Module 7086: GuildBoostingMarketingOverview ===
 
-// Module 6897 (GuildBoostingMarketingOverview)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import GuildBoostingMarketingPersistentCta from "GuildBoostingMarketingPersistentCta" /* 6916 */;
+// Module 7086 (GuildBoostingMarketingOverview)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import GuildBoostingMarketingPersistentCta from "GuildBoostingMarketingPersistentCta" /* 7105 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import UserStore from "UserStore" /* 1377 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
@@ -14,13 +14,13 @@ const Constants = fn(1085);
 ({ AnalyticEvents: closure_8, AnalyticsPages: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_13 = createStyles.createStyles({ wrapper: { paddingBottom: 24 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingOverview.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBoostingMarketingOverview(guildId) {
   const cResult = guildId(stateFromStores[9]).c(53);
   closure_13();
   guildId = guildId.guildId;
@@ -175,7 +175,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   cResult[9] = navigation;
   cResult[10] = fn2;
   const tmpResult4 = guildId(stateFromStores[11]);
-}) : ((guildId) => {
+}) : (function GuildBoostingMarketingOverview(guildId) {
   guildId = guildId.guildId;
   const guildBoostSlots = guildId.guildBoostSlots;
   let tmp = closure_13();
@@ -236,9 +236,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   }, items3);
   const effect1 = obj4.useEffect(() => {
     guildBoostSlots(stateFromStores[18]).wait(() => {
-      const premiumSubscriptionPlans = guildId(6770).fetchPremiumSubscriptionPlans();
-      const obj = guildId(6770);
-      const paymentSources = guildId(5411).fetchPaymentSources();
+      const premiumSubscriptionPlans = guildId(6946).fetchPremiumSubscriptionPlans();
+      const obj = guildId(6946);
+      const paymentSources = guildId(5720).fetchPaymentSources();
     });
   }, []);
   let tmp18 = null;

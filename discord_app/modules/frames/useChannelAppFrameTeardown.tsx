@@ -1,22 +1,22 @@
-// === Module 16801: useChannelAppFrameTeardown ===
+// === Module 17081: useChannelAppFrameTeardown ===
 
-// Module 16801 (useChannelAppFrameTeardown)
-import getFramesManagerDefault from "getFramesManager" /* 9076 */;
+// Module 17081 (useChannelAppFrameTeardown)
+import getFramesManagerDefault from "getFramesManager" /* 11149 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
-import FramesStore from "FramesStore" /* 9000 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
+import FramesStore from "FramesStore" /* 10612 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const getFrameSurfaceForChannel = fn(8738).getFrameSurfaceForChannel;
+const getFrameSurfaceForChannel = fn(10613).getFrameSurfaceForChannel;
 const Permissions = fn(1085).Permissions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/useChannelAppFrameTeardown.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useChannelAppFrameTeardown(id) {
   const cResult = id(stateFromStores[7]).c(10);
   id = undefined;
   if (id != null) {
@@ -42,34 +42,56 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
     tmp8 = cResult[2];
   }
   if (cResult[3] !== id) {
-    const fn = function _() {
-      const channel = ChannelStore.getChannel(id);
-      let canResult = null != channel;
-      if (canResult) {
-        canResult = PermissionStore.can(Permissions.VIEW_CHANNEL, channel);
+    class C {
+      constructor() {
+        channel = closure_4.getChannel(id);
+        canResult = null != channel;
+        if (canResult) {
+          tmp3 = closure_5;
+          tmp4 = Permissions;
+          canResult = closure_5.can(Permissions.VIEW_CHANNEL, channel);
+        }
+        return canResult;
       }
-      return canResult;
-    };
+    }
     const items1 = [id];
     cResult[3] = id;
-    cResult[4] = fn;
+    cResult[4] = C;
     cResult[5] = items1;
     let tmp12 = items1;
-    let tmp11 = fn;
   } else {
-    tmp11 = cResult[4];
+    class C {
+      constructor() {
+        channel = closure_4.getChannel(id);
+        canResult = null != channel;
+        if (canResult) {
+          tmp3 = closure_5;
+          tmp4 = Permissions;
+          canResult = closure_5.can(Permissions.VIEW_CHANNEL, channel);
+        }
+        return canResult;
+      }
+    }
     tmp12 = cResult[5];
   }
   let obj = id(stateFromStores[7]);
-  stateFromStores = id(stateFromStores[8]).useStateFromStores(tmp8, tmp11, tmp12);
+  stateFromStores = id(stateFromStores[8]).useStateFromStores(tmp8, C, tmp12);
   if (cResult[6] === stateFromStores) {
-    if (cResult[7] === tmp5) {
-      let tmp14 = cResult[8];
-      let tmp15 = cResult[9];
+    class C {
+      constructor() {
+        channel = closure_4.getChannel(id);
+        canResult = null != channel;
+        if (canResult) {
+          tmp3 = closure_5;
+          tmp4 = Permissions;
+          canResult = closure_5.can(Permissions.VIEW_CHANNEL, channel);
+        }
+        return canResult;
+      }
     }
-    const effect = noop.useEffect(tmp14, tmp15);
+    const effect = noop.useEffect(fn, items2);
   }
-  const fn2 = function h() {
+  fn = function _() {
     if (null != closure_1) {
       if (!stateFromStores) {
         const framesForSurface = FramesStore.getFramesForSurface(tmp);
@@ -81,15 +103,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
       }
     }
   };
-  const items2 = [tmp5, stateFromStores];
+  items2 = [tmp5, stateFromStores];
   cResult[6] = stateFromStores;
   cResult[7] = tmp5;
-  cResult[8] = fn2;
+  cResult[8] = fn;
   cResult[9] = items2;
-  tmp15 = items2;
-  tmp14 = fn2;
   const tmpResult = id(stateFromStores[8]);
-}) : ((id) => {
+}) : (function useChannelAppFrameTeardown(id) {
   _require = id;
   id = undefined;
   if (id != null) {

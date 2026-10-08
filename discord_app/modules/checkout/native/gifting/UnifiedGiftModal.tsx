@@ -1,20 +1,20 @@
-// === Module 10571: UnifiedGiftModal ===
+// === Module 10168: UnifiedGiftModal ===
 
-// Module 10571 (UnifiedGiftModal)
+// Module 10168 (UnifiedGiftModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
-import NavigatorHeader from "NavigatorHeader" /* 6017 */;
-import Navigator from "Navigator" /* 6503 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 6664 */;
-import UnifiedGiftModalTypes from "UnifiedGiftModalTypes" /* 10572 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5940 */;
+import NavigatorHeader from "NavigatorHeader" /* 6203 */;
+import Navigator from "Navigator" /* 6679 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 6841 */;
+import UnifiedGiftModalTypes from "UnifiedGiftModalTypes" /* 10169 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
-let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((skuId) => {
+let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useScreens(skuId) {
   const cResult = skuId(onGiftModalDismiss[4]).c(11);
   skuId = skuId.skuId;
   const lockedRecipientUser = skuId.lockedRecipientUser;
@@ -56,7 +56,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((skuId) => {
       }
     }
   }
-  class D {
+  class I {
     constructor() {
       obj = {};
       obj1 = { title: null, headerLeft: null, render: null };
@@ -88,11 +88,11 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((skuId) => {
   cResult[6] = renderPurchaseSection;
   cResult[7] = skuId;
   cResult[8] = validateRecipient;
-  cResult[9] = D;
+  cResult[9] = I;
   cResult[10] = items;
   tmp8 = items;
-  tmp7 = D;
-}) : ((skuId) => {
+  tmp7 = I;
+}) : (function useScreens(skuId) {
   skuId = skuId.skuId;
   const lockedRecipientUser = skuId.lockedRecipientUser;
   const onGiftModalDismiss = skuId.onGiftModalDismiss;
@@ -135,7 +135,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkout/native/gifting/UnifiedGiftModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UnifiedGiftModal(arg0) {
   const cResult = c.c(12);
   ({ skuId, analyticsLocations, lockedRecipientUser, onGiftModalDismiss, validateRecipient, renderProductDetails, renderPurchaseSection } = arg0);
   if (cResult[0] === lockedRecipientUser) {
@@ -182,7 +182,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = validateRecipient;
   cResult[6] = obj4;
   tmp4 = obj4;
-}) : ((skuId) => {
+}) : (function UnifiedGiftModal(skuId) {
   const obj2 = { value: skuId.analyticsLocations, children: null };
   const obj = { skuId: skuId.skuId, lockedRecipientUser: skuId.lockedRecipientUser, onGiftModalDismiss: skuId.onGiftModalDismiss, validateRecipient: skuId.validateRecipient, renderProductDetails: skuId.renderProductDetails, renderPurchaseSection: skuId.renderPurchaseSection };
   const tmp = closure_6({ skuId: skuId.skuId, lockedRecipientUser: skuId.lockedRecipientUser, onGiftModalDismiss: skuId.onGiftModalDismiss, validateRecipient: skuId.validateRecipient, renderProductDetails: skuId.renderProductDetails, renderPurchaseSection: skuId.renderPurchaseSection });

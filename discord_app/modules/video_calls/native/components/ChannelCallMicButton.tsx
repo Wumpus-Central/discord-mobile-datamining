@@ -1,16 +1,16 @@
-// === Module 9699: ChannelCallMicButton ===
+// === Module 10888: ChannelCallMicButton ===
 
-// Module 9699 (ChannelCallMicButton)
+// Module 10888 (ChannelCallMicButton)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import useMuteStatesDefault from "useMuteStates" /* 6858 */;
-import CallBarActionAll from "CallBarAction" /* 9112 */;
-import VoiceActionUtils from "VoiceActionUtils" /* 9700 */;
-import VoicePanelRiveMicButton from "VoicePanelRiveMicButton" /* 9701 */;
+import useMuteStatesDefault from "useMuteStates" /* 7047 */;
+import CallBarActionAll from "CallBarAction" /* 10685 */;
+import VoiceActionUtils from "VoiceActionUtils" /* 10889 */;
+import VoicePanelRiveMicButton from "VoicePanelRiveMicButton" /* 10890 */;
 import noop from "module_19" /* 19 */;
-import GameConsoleStore from "GameConsoleStore" /* 4913 */;
+import GameConsoleStore from "GameConsoleStore" /* 5109 */;
 
 require = fn;
 const jsx = fn(21).jsx;
@@ -18,7 +18,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/components/ChannelCallMicButton.tsx");
 
-export const ChannelCallMicButton = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+export const ChannelCallMicButton = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelCallMicButton(channel) {
   const cResult = c.c(16);
   ({ isSmallSize, disableTint } = channel);
   let tmp4 = undefined !== disableTint;
@@ -62,7 +62,7 @@ export const ChannelCallMicButton = ReactCompilerGating.isReactCompilerEnabled()
     } else {
       tmp16 = cResult[7];
     }
-    const tmp5Result = importDefault(mute ? 9704 : 9705);
+    const tmp5Result = importDefault(mute ? 10893 : 10894);
     if (!tmp4) {
       tmp4 = mute;
     }
@@ -105,7 +105,7 @@ export const ChannelCallMicButton = ReactCompilerGating.isReactCompilerEnabled()
   cResult[4] = muteHandler;
   tmp11 = muteHandler;
   const tmpResult2 = VoiceActionUtils;
-}) : ((disableTint) => {
+}) : (function ChannelCallMicButton(disableTint) {
   let flag = disableTint.disableTint;
   ({ channel, isSmallSize } = disableTint);
   if (flag === undefined) {
@@ -116,7 +116,7 @@ export const ChannelCallMicButton = ReactCompilerGating.isReactCompilerEnabled()
   const items = [GameConsoleStore];
   const stateFromStores = mute(504).useStateFromStores(items, () => null != awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo());
   const obj = mute(504);
-  const muteHandler = mute(9700).createMuteHandler(tmp3, stateFromStores);
+  const muteHandler = mute(10889).createMuteHandler(tmp3, stateFromStores);
   mute = muteHandler.mute;
   const items1 = [mute];
   const memo = noop.useMemo(() => jsx(VoicePanelRiveMicButton.VoicePanelRiveMicButton, { muted: mute }), items1);
@@ -124,7 +124,7 @@ export const ChannelCallMicButton = ReactCompilerGating.isReactCompilerEnabled()
   const intl = mute(1126).intl;
   obj3.accessibilityLabel = intl.string(mute(1126).t.B3zz0G);
   obj3.onPress = muteHandler.onPress;
-  obj3.source = importDefault(mute ? 9704 : 9705);
+  obj3.source = importDefault(mute ? 10893 : 10894);
   if (!flag) {
     flag = mute;
   }

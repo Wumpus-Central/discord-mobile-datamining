@@ -1,11 +1,11 @@
-// === Module 16306: TypingSubtitle ===
+// === Module 16566: TypingSubtitle ===
 
-// Module 16306 (TypingSubtitle)
+// Module 16566 (TypingSubtitle)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5819 */;
-import TextIcon from "TextIcon" /* 5871 */;
-import useSubtitleStyles from "useSubtitleStyles" /* 16305 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8134 */;
+import TextIcon from "TextIcon" /* 8183 */;
+import useSubtitleStyles from "useSubtitleStyles" /* 16565 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/home_drawer/native/subtitles/TypingSubtitle.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function TypingSubtitle(arg0) {
   const cResult = c.c(17);
   ({ guild, channel, channelName, text } = arg0);
   const subtitleStyles = useSubtitleStyles.useSubtitleStyles();
@@ -101,7 +101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = guild;
   cResult[2] = channelIconComponentWithGuild;
   tmp5 = channelIconComponentWithGuild;
-}) : ((arg0) => {
+}) : (function TypingSubtitle(arg0) {
   ({ channel, channelName } = arg0);
   ({ guild, text } = arg0);
   const subtitleStyles = useSubtitleStyles.useSubtitleStyles();

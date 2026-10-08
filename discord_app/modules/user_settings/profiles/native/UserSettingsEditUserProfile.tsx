@@ -1,12 +1,12 @@
-// === Module 14428: UserSettingsEditUserProfile ===
+// === Module 14654: UserSettingsEditUserProfile ===
 
-// Module 14428 (UserSettingsEditUserProfile)
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6664 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6688 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7869 */;
-import UserProfileEditFormDefault from "UserProfileEditForm" /* 14429 */;
+// Module 14654 (UserSettingsEditUserProfile)
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6841 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6865 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8287 */;
+import UserProfileEditFormDefault from "UserProfileEditForm" /* 14655 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/profiles/native/UserSettingsEditUserProfile.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSettingsEditUserProfile(arg0) {
   let AnalyticsLocationProvider = stateFromStores;
   let tmp = dependencyMap;
   const cResult = stateFromStores(576).c(11);
@@ -35,7 +35,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const result = AnalyticsLocationProvider(504);
   stateFromStores = result.useStateFromStores(tmp5, tmp6);
   if (cResult[2] !== stateFromStores) {
-    class S {
+    class U {
       constructor() {
         obj = closure_0;
         if (null != closure_0) {
@@ -50,11 +50,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     const items1 = [stateFromStores];
     cResult[2] = stateFromStores;
-    cResult[3] = S;
+    cResult[3] = U;
     cResult[4] = items1;
     let tmp10 = items1;
   } else {
-    class S {
+    class U {
       constructor() {
         obj = closure_0;
         if (null != closure_0) {
@@ -69,9 +69,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     tmp10 = cResult[4];
   }
-  const effect = noop.useEffect(S, tmp10);
+  const effect = noop.useEffect(U, tmp10);
   if (null == stateFromStores) {
-    class S {
+    class U {
       constructor() {
         obj = closure_0;
         if (null != closure_0) {
@@ -85,7 +85,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
   } else {
-    class S {
+    class U {
       constructor() {
         obj = closure_0;
         if (null != closure_0) {
@@ -99,7 +99,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
     if (cResult[5] === stateFromStores) {
-      class S {
+      class U {
         constructor() {
           obj = closure_0;
           if (null != closure_0) {
@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         }
       }
       if (cResult[8] === analyticsLocations) {
-        class S {
+        class U {
           constructor() {
             obj = closure_0;
             if (null != closure_0) {
@@ -127,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           }
         }
       }
-      AnalyticsLocationProvider = AnalyticsLocationProvider(6664).AnalyticsLocationProvider;
+      AnalyticsLocationProvider = AnalyticsLocationProvider(6841).AnalyticsLocationProvider;
       const obj2 = { value: analyticsLocations, children: tmp12 };
       tmp = <AnalyticsLocationProvider value={analyticsLocations}>{tmp12}</AnalyticsLocationProvider>;
       cResult[8] = analyticsLocations;
@@ -142,7 +142,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[7] = tmp18;
     const tmp3Result = UserProfileEditFormDefault;
   }
-}) : ((arg0) => {
+}) : (function UserSettingsEditUserProfile(arg0) {
   let tmp3 = useAnalyticsLocationsDefault;
   const tmp4 = stateFromStores;
   const items = [UserStore];
@@ -159,7 +159,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const obj3 = { currentUser: stateFromStores };
     const merged = Object.assign(arg0);
     obj2.children = jsx(UserProfileEditFormDefault, { currentUser: stateFromStores });
-    tmp7 = jsx(tmp4(6664).AnalyticsLocationProvider, { value: tmp3(AnalyticsLocationDefault.USER_SETTINGS_USER_PROFILE).analyticsLocations, children: null });
+    tmp7 = jsx(tmp4(6841).AnalyticsLocationProvider, { value: tmp3(AnalyticsLocationDefault.USER_SETTINGS_USER_PROFILE).analyticsLocations, children: null });
     const tmpResult = UserProfileEditFormDefault;
   }
   return tmp7;

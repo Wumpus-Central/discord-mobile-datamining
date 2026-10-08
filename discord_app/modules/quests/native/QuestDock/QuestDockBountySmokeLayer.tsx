@@ -1,27 +1,27 @@
-// === Module 15021: QuestDockBountySmokeLayer ===
+// === Module 15283: QuestDockBountySmokeLayer ===
 
-// Module 15021 (QuestDockBountySmokeLayer)
+// Module 15283 (QuestDockBountySmokeLayer)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import FastImageDefault from "FastImage" /* 5981 */;
-import QuestDockUtils from "QuestDockUtils" /* 14911 */;
-import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext" /* 14999 */;
-import BountiesAndroidQuestBarSmokeAnimationExperiment from "BountiesAndroidQuestBarSmokeAnimationExperiment" /* 15022 */;
-import _modDef15023 from "module_15023" /* 15023 */;
-import _modDef15024 from "module_15024" /* 15024 */;
-import useIsQuestDockContentVisibleDefault from "useIsQuestDockContentVisible" /* 15025 */;
-import _modDef15026 from "module_15026" /* 15026 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import QuestDockUtils from "QuestDockUtils" /* 15173 */;
+import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext" /* 15261 */;
+import BountiesAndroidQuestBarSmokeAnimationExperiment from "BountiesAndroidQuestBarSmokeAnimationExperiment" /* 15284 */;
+import _modDef15285 from "module_15285" /* 15285 */;
+import _modDef15286 from "module_15286" /* 15286 */;
+import useIsQuestDockContentVisibleDefault from "useIsQuestDockContentVisible" /* 15287 */;
+import _modDef15288 from "module_15288" /* 15288 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
-const _modDef15027 = tmp9(15027);
+const _modDef15289 = tmp9(15289);
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
-const QuestsExperimentLocations = fn(5630).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5977).QuestsExperimentLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
 let c11 = 3.75;
@@ -30,25 +30,25 @@ fn(558);
 let ReactCompilerGating = fn(558);
 let obj2 = { video: StyleSheet.absoluteFillObject, hiddenVideo: null };
 let obj5 = {};
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useQuestDockBountySmokeCollapsedPlaceholderUrl() {
   const isBountiesAndroidQuestBarSmokeAnimationEnabled = BountiesAndroidQuestBarSmokeAnimationExperiment.useIsBountiesAndroidQuestBarSmokeAnimationEnabled(QuestsExperimentLocations.QUESTS_BAR_MOBILE);
   if (obj2.isAndroid()) {
     if (isBountiesAndroidQuestBarSmokeAnimationEnabled) {
-      let tmp3 = _modDef15024;
+      let tmp3 = _modDef15286;
     }
     return tmp3;
   }
-  tmp3 = _modDef15023;
+  tmp3 = _modDef15285;
   obj2 = PlatformUtils;
-}) : (() => {
+}) : (function useQuestDockBountySmokeCollapsedPlaceholderUrl() {
   const isBountiesAndroidQuestBarSmokeAnimationEnabled = BountiesAndroidQuestBarSmokeAnimationExperiment.useIsBountiesAndroidQuestBarSmokeAnimationEnabled(QuestsExperimentLocations.QUESTS_BAR_MOBILE);
   if (obj2.isAndroid()) {
     if (isBountiesAndroidQuestBarSmokeAnimationEnabled) {
-      let tmp3 = _modDef15024;
+      let tmp3 = _modDef15286;
     }
     return tmp3;
   }
-  tmp3 = _modDef15023;
+  tmp3 = _modDef15285;
   obj2 = PlatformUtils;
 });
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -56,11 +56,11 @@ obj5.opacity = 0;
 obj2.hiddenVideo = obj5;
 const styles = StyleSheet.create(obj2);
 ReactCompilerGating = fn(558);
-let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestDockBountySmokePlaceholder() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { source: null, style: null, resizeMode: "cover", accessible: false, importantForAccessibility: "no-hide-descendants" };
-    const obj3 = { uri: _modDef15023 };
+    const obj3 = { uri: _modDef15285 };
     obj2.source = obj3;
     obj2.style = StyleSheet.absoluteFillObject;
     const tmp8 = closure_1_8(FastImageDefault, obj2);
@@ -70,15 +70,15 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     first = cResult[0];
   }
   return first;
-}) : (() => {
+}) : (function QuestDockBountySmokePlaceholder() {
   const obj = { source: null, style: null, resizeMode: "cover", accessible: false, importantForAccessibility: "no-hide-descendants" };
-  const obj2 = { uri: _modDef15023 };
+  const obj2 = { uri: _modDef15285 };
   obj.source = obj2;
   obj.style = StyleSheet.absoluteFillObject;
   return closure_1_8(FastImageDefault, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((paused) => {
+let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestDockBountySmokeLayerIOS(paused) {
   const cResult = c.c(14);
   paused = paused.paused;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -110,7 +110,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((paused) => {
     }
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn2 = function y() {
+    const fn2 = function v() {
       tmp13(true);
     };
     cResult[2] = fn2;
@@ -119,15 +119,15 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((paused) => {
     tmp18 = cResult[2];
   }
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    class O {
+    class M {
       constructor() {
         tmp = closure_0(false);
         return;
       }
     }
-    cResult[3] = O;
+    cResult[3] = M;
   } else {
-    class O {
+    class M {
       constructor() {
         tmp = closure_0(false);
         return;
@@ -135,7 +135,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((paused) => {
     }
   }
   if (cResult[4] === tmp10) {
-    class O {
+    class M {
       constructor() {
         tmp = closure_0(false);
         return;
@@ -144,17 +144,17 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((paused) => {
   }
   let tmp21Result = !stateFromStores;
   if (!stateFromStores) {
-    class O {
+    class M {
       constructor() {
         tmp = closure_0(false);
         return;
       }
     }
     const obj2 = { style: tmp12 ? closure_13.video : closure_13.hiddenVideo, source: null, resizeMode: "cover", paused: null, muted: true, disableFocus: true, preventsDisplaySleepDuringVideoPlayback: false, importantForAccessibility: "no-hide-descendants", onReadyForDisplay: null, onError: null };
-    const obj3 = { uri: _modDef15026 };
+    const obj3 = { uri: _modDef15288 };
     obj2.source = obj3;
     if (!tmp4) {
-      class O {
+      class M {
         constructor() {
           tmp = closure_0(false);
           return;
@@ -163,8 +163,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((paused) => {
     }
     obj2.paused = tmp4;
     obj2.onReadyForDisplay = tmp18;
-    obj2.onError = O;
-    tmp21Result = tmp21(tmp(7993).VideoComponent, obj2);
+    obj2.onError = M;
+    tmp21Result = tmp21(tmp(8401).VideoComponent, obj2);
   }
   cResult[4] = tmp10;
   cResult[5] = tmp12;
@@ -172,7 +172,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((paused) => {
   cResult[7] = stateFromStores;
   cResult[8] = tmp21Result;
   const tmp11 = _slicedToArray(noop.useState(false), 2);
-}) : ((paused) => {
+}) : (function QuestDockBountySmokeLayerIOS(paused) {
   let flag = paused.paused;
   if (flag === undefined) {
     flag = false;
@@ -202,7 +202,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((paused) => {
   let tmp18Result = !stateFromStores;
   if (!stateFromStores) {
     const obj3 = { style: tmp7 ? closure_13.video : closure_13.hiddenVideo, source: null, resizeMode: "cover", paused: null, muted: true, disableFocus: true, preventsDisplaySleepDuringVideoPlayback: false, importantForAccessibility: "no-hide-descendants", onReadyForDisplay: null, onError: null };
-    const obj4 = { uri: _modDef15026 };
+    const obj4 = { uri: _modDef15288 };
     obj3.source = obj4;
     if (!flag) {
       flag = !tmp5;
@@ -210,7 +210,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((paused) => {
     obj3.paused = flag;
     obj3.onReadyForDisplay = callback;
     obj3.onError = tmp14;
-    tmp18Result = closure_8(tmp(7993).VideoComponent, obj3);
+    tmp18Result = closure_8(tmp(8401).VideoComponent, obj3);
   }
   const children = [tmp18Result, ];
   let tmp20 = !tmp7;
@@ -221,12 +221,12 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((paused) => {
   return closure_10(closure_9, { children });
 });
 ReactCompilerGating = fn(558);
-let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((paused) => {
+let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestDockBountySmokeLayerAndroidAnimated(paused) {
   const cResult = isRendered(576).c(19);
   paused = paused.paused;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AccessibilityStore];
-    const fn = function p() {
+    const fn = function b() {
       return useReducedMotion.useReducedMotion;
     };
     cResult[0] = items;
@@ -286,7 +286,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((paused) => {
   if (!stateFromStores) {
     tmp9Result = null;
     if (tmp16) {
-      tmp9Result = _modDef15027;
+      tmp9Result = _modDef15289;
     }
   }
   const tmp11Result = tmp11(noop.useState(tmp9Result), 2);
@@ -297,7 +297,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((paused) => {
     }
   }
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn3 = function x() {
+    const fn3 = function j() {
       return () => {
         if (null != ref.current) {
           const _clearTimeout = clearTimeout;
@@ -445,14 +445,14 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((paused) => {
     obj2.paused = tmp4;
     obj2.onLoad = U;
     obj2.onError = tmp34;
-    tmp36Result = tmp36(tmp(7993).VideoComponent, obj2);
+    tmp36Result = tmp36(tmp(8401).VideoComponent, obj2);
   }
   cResult[10] = tmp10;
   cResult[11] = undefined !== paused && paused;
   cResult[12] = tmp9Result;
   cResult[13] = tmp36Result;
   const tmp15 = _slicedToArray(noop.useState(false), 2);
-}) : ((paused) => {
+}) : (function QuestDockBountySmokeLayerAndroidAnimated(paused) {
   let flag = paused.paused;
   if (flag === undefined) {
     flag = false;
@@ -499,7 +499,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((paused) => {
   if (!stateFromStores) {
     tmp4Result = null;
     if (tmp11) {
-      tmp4Result = tmp4(15027);
+      tmp4Result = tmp4(15289);
     }
   }
   const tmp6Result = tmp6(noop.useState(tmp4Result), 2);
@@ -538,23 +538,23 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((paused) => {
     obj3.paused = flag;
     obj3.onLoad = callback;
     obj3.onError = tmp24;
-    tmp28Result = closure_8(tmp(7993).VideoComponent, obj3);
+    tmp28Result = closure_8(tmp(8401).VideoComponent, obj3);
   }
   const children = [tmp28Result, ];
   let tmp30 = !tmp8;
   if (!tmp8) {
     const obj5 = { source: null, style: null, resizeMode: "cover", accessible: false, importantForAccessibility: "no-hide-descendants" };
-    const obj6 = { uri: tmp4(15024) };
+    const obj6 = { uri: tmp4(15286) };
     obj5.source = obj6;
     obj5.style = StyleSheet.absoluteFillObject;
-    tmp30 = closure_8(tmp4(5981), obj5);
-    const tmp4Result2 = tmp4(5981);
+    tmp30 = closure_8(tmp4(6164), obj5);
+    const tmp4Result2 = tmp4(6164);
   }
   children[1] = tmp30;
   return closure_10(closure_9, { children });
 });
 ReactCompilerGating = fn(558);
-let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((surface) => {
+let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestDockBountySmokeLayerAndroid(surface) {
   const obj = c;
   const cResult = obj.c(3);
   if (obj2.useIsBountiesAndroidQuestBarSmokeAnimationEnabled(QuestsExperimentLocations.QUESTS_BAR_MOBILE)) {
@@ -576,7 +576,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((surface) => {
     first = cResult[0];
   }
   return first;
-}) : ((surface) => {
+}) : (function QuestDockBountySmokeLayerAndroid(surface) {
   const obj = BountiesAndroidQuestBarSmokeAnimationExperiment;
   if (obj.useIsBountiesAndroidQuestBarSmokeAnimationEnabled(QuestsExperimentLocations.QUESTS_BAR_MOBILE)) {
     if (surface.surface !== obj.EXPANDED) {
@@ -589,7 +589,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((surface) => {
   tmp3 = closure_1_8(closure_14, {});
 });
 ReactCompilerGating = fn(558);
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSmokeArtSize() {
   const cResult = c.c(3);
   ({ left, right } = useSafeAreaInsetsDefault());
   const tmp2 = useSafeAreaInsetsDefault();
@@ -606,7 +606,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[1] = questDockExpandedWidth;
   cResult[2] = size;
   tmp5 = size;
-}) : (() => {
+}) : (function useSmokeArtSize() {
   const width = left(right[12])().width;
   const rect = left(right[13])();
   left = rect.left;
@@ -621,7 +621,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockBountySmokeLayer.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function QuestDockBountySmokeLayer(arg0) {
   const cResult = c.c(2);
   if (cResult[0] !== arg0) {
     if (tmpResult.isAndroid()) {
@@ -639,7 +639,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   } else {
     return cResult[1];
   }
-}) : ((arg0) => {
+}) : (function QuestDockBountySmokeLayer(arg0) {
   if (obj.isAndroid()) {
     const obj2 = {};
     const merged = Object.assign(arg0);

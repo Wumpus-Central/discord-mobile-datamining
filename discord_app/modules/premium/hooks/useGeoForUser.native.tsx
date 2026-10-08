@@ -1,18 +1,18 @@
-// === Module 6937: useGeoForUser ===
+// === Module 7126: useGeoForUser ===
 
-// Module 6937 (useGeoForUser)
-import actions_BillingActionCreatorsAll from "actions/BillingActionCreators" /* 5411 */;
+// Module 7126 (useGeoForUser)
+import actions_BillingActionCreatorsAll from "actions/BillingActionCreators" /* 5720 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import BillingInfoStore from "BillingInfoStore" /* 4536 */;
-import IAPStore from "IAPStore" /* 6931 */;
+import BillingInfoStore from "BillingInfoStore" /* 4728 */;
+import IAPStore from "IAPStore" /* 7120 */;
 
 const require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/hooks/useGeoForUser.native.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGeoForUser() {
   const cResult = stateFromStores2(576).c(15);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [IAPStore];
@@ -127,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[10] = items3;
   tmp18 = items3;
   const tmpResult4 = stateFromStores2(504);
-}) : (() => {
+}) : (function useGeoForUser() {
   const items = [IAPStore];
   const stateFromStores = stateFromStores2(504).useStateFromStores(items, () => {
     product = product.getProduct(stateFromStores2(dependencyMap[6]).ProductIds.PREMIUM_TIER_2_MONTHLY);

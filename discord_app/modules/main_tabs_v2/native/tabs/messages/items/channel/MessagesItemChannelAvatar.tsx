@@ -1,19 +1,19 @@
-// === Module 16000: MessagesItemChannelAvatar ===
+// === Module 16260: MessagesItemChannelAvatar ===
 
-// Module 16000 (MessagesItemChannelAvatar)
+// Module 16260 (MessagesItemChannelAvatar)
 import nativeDefault from "native" /* 587 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10661 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10261 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import PresenceStore from "PresenceStore" /* 4936 */;
-import TypingStore from "TypingStore" /* 11592 */;
-import UserStore from "UserStore" /* 1377 */;
+import PresenceStore from "PresenceStore" /* 5106 */;
+import TypingStore from "TypingStore" /* 11655 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = fn;
-const MUTED_OPACITY_CONTENT = fn(11711).MUTED_OPACITY_CONTENT;
+const MUTED_OPACITY_CONTENT = fn(11776).MUTED_OPACITY_CONTENT;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_10 = createStyles.createStyles((arg0) => {
   const avatar = { borderRadius: nativeDefault.radii.round, marginRight: nativeDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_AVATAR_MARGIN_END, width: nativeDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_AVATAR_SIZE, height: nativeDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_AVATAR_SIZE, opacity: null };
   let num = 1;
@@ -27,7 +27,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelAvatar.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesItemChannelAvatar(channel) {
   let obj = first;
   const cResult = channel(first[11]).c(27);
   channel = channel.channel;
@@ -152,7 +152,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
         return false;
       }
     }
-    const stateFromStores1 = tmp(obj[13]).useStateFromStores(tmp12, U);
+    const stateFromStores1 = tmp(obj[13]).useStateFromStores(tmp12, O);
     const _Symbol = Symbol;
     if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
       class F {
@@ -392,7 +392,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
             return isMobileOnlineResult;
           }
         }
-        const obj3 = { user: stateFromStores2, avatarDecoration: stateFromStores2.avatarDecoration, guildId: "e", isMobileOnline: stateFromStores3, isVROnline: stateFromStores4, status: null, streaming: "277cee809330c511936d96d22ff4ddc7", style: "fi.messages.277cee809330c511936d96d22ff4ddc7.compiled.messages", size: "jsona", animate: "VOICE_CATEGORY_EXPAND", typing: null, autoStatusCutout: true };
+        const obj3 = { user: stateFromStores2, avatarDecoration: stateFromStores2.avatarDecoration, guildId: "e", isMobileOnline: stateFromStores3, isVROnline: stateFromStores4, status: null, streaming: "bfa447207de9efb4276e2616820dae4e", style: "hr.messages.bfa447207de9efb4276e2616820dae4e.compiled.messages", size: "jsona", animate: "VOICE_CATEGORY_EXPAND", typing: null, autoStatusCutout: true };
         if (!stateFromStores2.isSystemUser()) {
           class H {
             constructor() {
@@ -423,7 +423,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
     cResult[22] = tmp3Result;
     cResult[23] = stateFromStores2;
     cResult[24] = stateFromStores3;
-    class U {
+    class O {
       constructor() {
         useReducedMotion = closure_3.useReducedMotion;
         tmp = !useReducedMotion;
@@ -441,7 +441,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
     cResult[26] = tmp24Result;
     const tmpResult8 = tmp(obj[13]);
   }
-  class U {
+  class O {
     constructor() {
       useReducedMotion = closure_3.useReducedMotion;
       tmp = !useReducedMotion;
@@ -457,9 +457,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
   }
   cResult[5] = hasUnreadMessages;
   cResult[6] = stateFromStores;
-  cResult[7] = U;
+  cResult[7] = O;
   const tmpResult = channel(obj[13]);
-}) : ((channel) => {
+}) : (function MessagesItemChannelAvatar(channel) {
   channel = channel.channel;
   ({ hasUnreadMessages: importDefault, muted, status } = channel);
   dependencyMap = undefined;
@@ -475,7 +475,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
     muted = !channelSelected;
   }
   const tmpResult = closure_10(muted);
-  const REFRESH_MEDIUM_32 = channel(1188).AvatarSizes.REFRESH_MEDIUM_32;
+  const REFRESH_MEDIUM_32 = channel(1200).AvatarSizes.REFRESH_MEDIUM_32;
   dependencyMap = AuthenticationStore.getId();
   const items = [TypingStore];
   stateFromStores = channel(504).useStateFromStores(items, () => {
@@ -538,7 +538,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
   } else {
     tmp11Result = null;
     if (null != stateFromStores2) {
-      const obj7 = { user: stateFromStores2, avatarDecoration: stateFromStores2.avatarDecoration, guildId: "e", isMobileOnline: stateFromStores3, isVROnline: stateFromStores4, status: null, streaming: "277cee809330c511936d96d22ff4ddc7", style: "fi.messages.277cee809330c511936d96d22ff4ddc7.compiled.messages", size: "jsona", animate: "VOICE_CATEGORY_EXPAND", typing: null, autoStatusCutout: true };
+      const obj7 = { user: stateFromStores2, avatarDecoration: stateFromStores2.avatarDecoration, guildId: "e", isMobileOnline: stateFromStores3, isVROnline: stateFromStores4, status: null, streaming: "bfa447207de9efb4276e2616820dae4e", style: "hr.messages.bfa447207de9efb4276e2616820dae4e.compiled.messages", size: "jsona", animate: "VOICE_CATEGORY_EXPAND", typing: null, autoStatusCutout: true };
       let tmp12 = null;
       if (!stateFromStores2.isSystemUser()) {
         tmp12 = status;
@@ -549,7 +549,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
       obj7.size = REFRESH_MEDIUM_32;
       obj7.animate = stateFromStores1;
       obj7.typing = stateFromStores;
-      tmp11Result = jsx(tmp3(1188).Avatar, { user: stateFromStores2, avatarDecoration: stateFromStores2.avatarDecoration, guildId: "e", isMobileOnline: stateFromStores3, isVROnline: stateFromStores4, status: null, streaming: "277cee809330c511936d96d22ff4ddc7", style: "fi.messages.277cee809330c511936d96d22ff4ddc7.compiled.messages", size: "jsona", animate: "VOICE_CATEGORY_EXPAND", typing: null, autoStatusCutout: true });
+      tmp11Result = jsx(tmp3(1200).Avatar, { user: stateFromStores2, avatarDecoration: stateFromStores2.avatarDecoration, guildId: "e", isMobileOnline: stateFromStores3, isVROnline: stateFromStores4, status: null, streaming: "bfa447207de9efb4276e2616820dae4e", style: "hr.messages.bfa447207de9efb4276e2616820dae4e.compiled.messages", size: "jsona", animate: "VOICE_CATEGORY_EXPAND", typing: null, autoStatusCutout: true });
     }
   }
   return tmp11Result;

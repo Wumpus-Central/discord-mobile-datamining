@@ -1,7 +1,7 @@
-// === Module 16583: conjureDesignFeedbackStore ===
+// === Module 16838: conjureDesignFeedbackStore ===
 
-// Module 16583 (conjureDesignFeedbackStore)
-import ConjureDesignFeedback from "ConjureDesignFeedback" /* 16584 */;
+// Module 16838 (conjureDesignFeedbackStore)
+import ConjureDesignFeedback from "ConjureDesignFeedback" /* 16839 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -272,7 +272,7 @@ export const removeConjureDesignAnnotation = function removeConjureDesignAnnotat
   }
 };
 export { subscribeConjureDesignFeedback };
-export const useConjureDesignFeedback = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useConjureDesignFeedback = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjureDesignFeedback(arg0) {
   _require = arg0;
   const cResult = require("c").c(2);
   if (cResult[0] !== arg0) {
@@ -294,7 +294,7 @@ export const useConjureDesignFeedback = ReactCompilerGating.isReactCompilerEnabl
     tmp2 = cResult[1];
   }
   return noop.useSyncExternalStore(subscribeConjureDesignFeedback, tmp2, tmp2);
-}) : ((arg0) => {
+}) : (function useConjureDesignFeedback(arg0) {
   closure_0 = arg0;
   const items = [arg0];
   const callback = noop.useCallback(() => {

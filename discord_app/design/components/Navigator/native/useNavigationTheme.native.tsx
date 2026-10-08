@@ -1,11 +1,11 @@
-// === Module 6545: useNavigationTheme ===
+// === Module 6721: useNavigationTheme ===
 
-// Module 6545 (useNavigationTheme)
+// Module 6721 (useNavigationTheme)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Link from "Link" /* 1491 */;
-import useToken from "useToken" /* 4586 */;
-import shared from "shared" /* 4735 */;
+import Link from "Link" /* 1503 */;
+import useToken from "useToken" /* 4778 */;
+import shared from "shared" /* 4929 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -15,7 +15,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Navigator/native/useNavigationTheme.native.tsx");
 
-export const useNavigationTheme = ReactCompilerGating.isReactCompilerEnabled() ? ((DARK) => {
+export const useNavigationTheme = ReactCompilerGating.isReactCompilerEnabled() ? (function useNavigationTheme(DARK) {
   const cResult = c.c(11);
   const token = useToken.useToken(nativeDefault.colors.TEXT_STRONG, DARK);
   const token1 = useToken.useToken(nativeDefault.colors.BORDER_SUBTLE, DARK);
@@ -61,7 +61,7 @@ export const useNavigationTheme = ReactCompilerGating.isReactCompilerEnabled() ?
   cResult[6] = token3;
   cResult[7] = obj8;
   tmp11 = obj8;
-}) : ((DARK) => {
+}) : (function useNavigationTheme(DARK) {
   _require = DARK;
   token = require("useToken").useToken(token(token1[4]).colors.TEXT_STRONG, DARK);
   let obj = require("useToken");

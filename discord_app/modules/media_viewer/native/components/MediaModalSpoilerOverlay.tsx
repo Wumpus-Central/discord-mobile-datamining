@@ -1,16 +1,16 @@
-// === Module 12797: MediaModalSpoilerOverlay ===
+// === Module 12944: MediaModalSpoilerOverlay ===
 
-// Module 12797 (MediaModalSpoilerOverlay)
+// Module 12944 (MediaModalSpoilerOverlay)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import PlatformUtils2 from "PlatformUtils" /* 1369 */;
-import useToken from "useToken" /* 4586 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4618 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5780 */;
-import ImageWarningIcon from "ImageWarningIcon" /* 5872 */;
-import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 12780 */;
+import PlatformUtils2 from "PlatformUtils" /* 1381 */;
+import useToken from "useToken" /* 4778 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4810 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5363 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 8184 */;
+import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 12927 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,10 +19,10 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { spoilerOverlayContainer: { justifyContent: "center", alignContent: "center", flex: 1 }, obscureContentContainer: { gap: nativeDefault.space.PX_4, justifyContent: "center", alignItems: "center", alignSelf: "center" }, spoilerOverlayBackground: null };
 let obj4 = { paddingHorizontal: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.lg, height: nativeDefault.space.PX_32, backgroundColor: null, flexGrow: 0, justifyContent: "center", alignItems: "center", alignSelf: "center" };
-let PlatformUtils = fn(1369);
+let PlatformUtils = fn(1381);
 PlatformUtils = PlatformUtils.isAndroid();
 const unsafe_rawColors = nativeDefault.unsafe_rawColors;
 obj4.backgroundColor = PlatformUtils ? unsafe_rawColors.PRIMARY_800 : unsafe_rawColors.PRIMARY_600;
@@ -33,7 +33,7 @@ let obj3 = { gap: nativeDefault.space.PX_4, justifyContent: "center", alignItems
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_viewer/native/components/MediaModalSpoilerOverlay.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((index) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function MediaModalSpoilerOverlay(index) {
   const cResult = c.c(17);
   ({ style, source: spoilerOverlayBackground } = index);
   const tmp4 = closure_8();
@@ -126,7 +126,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((index)
   } else {
     return null;
   }
-}) : ((source) => {
+}) : (function MediaModalSpoilerOverlay(source) {
   source = source.source;
   ({ style, index } = source);
   let items2 = closure_8();

@@ -3,11 +3,13 @@
 // Module 1128 (intl/util)
 import c from "c" /* 576 */;
 import _mod1165 from "module_1165" /* 1165 */;
+import _Parser from "_Parser" /* 1188 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
+let closure_3 = { es: "es-ES", nb: "no", nn: "no" };
 const ReactCompilerGating = fn(558);
 function getLanguages() {
   return require("module_1187");
@@ -47,36 +49,44 @@ export const getNormalizedLocale = function getNormalizedLocale(Language, arg1) 
     return Language;
   } else {
     const parts = Language.split("-");
-    const first = parts[0];
     if (mapped.includes(parts[0])) {
-      let found2 = first;
+      return parts[0];
     } else {
-      if ("zh" === first) {
-        if (parts.length > 1) {
-          if ("Hant" === parts[1]) {
-            let found1 = mapped.find((item) => "zh-TW" === item);
-            if (found1 == null) {
-              found1 = arg1;
-            }
-            found2 = found1;
-          }
+      let tmp2 = null;
+      if (1 === parts.length) {
+        tmp2 = closure_3[parts[0]];
+      }
+      if (null != tmp2) {
+        if (mapped.includes(tmp2)) {
+          return tmp2;
         }
+      }
+      if ("zh" === parts[0]) {
+        let found1 = mapped.find((item) => "zh-TW" === item);
+        if (found1 == null) {
+          found1 = arg1;
+        }
+        let found2 = found1;
       }
       found2 = mapped.find((item) => item.split("-")[0] === parts[0]);
       if (found2 == null) {
         found2 = arg1;
       }
     }
-    return found2;
   }
   const arr = require("module_1187");
 };
-export const useSyncMessages = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export const parseRuntimeIcuAsIntlMessage = function parseRuntimeIcuAsIntlMessage(arg0, defaultLocale) {
+  const parsed = _Parser.parse(arg0, { ignoreTag: true });
+  const internalIntlMessage = new _mod1165.InternalIntlMessage(parsed, defaultLocale);
+  return internalIntlMessage;
+};
+export const useSyncMessages = ReactCompilerGating.isReactCompilerEnabled() ? (function useSyncMessages(arg0, arg1) {
   closure_0 = arg0;
   const currentLocale = arg1;
   const cResult = c.c(5);
   if (cResult[0] !== arg0) {
-    const fn = function l(arg0) {
+    const fn = function s(arg0) {
       return closure_0.onChange(arg0);
     };
     cResult[0] = arg0;
@@ -91,14 +101,14 @@ export const useSyncMessages = ReactCompilerGating.isReactCompilerEnabled() ? ((
     }
     const syncExternalStore = noop.useSyncExternalStore(tmp2, tmp3);
   }
-  const fn2 = function o() {
+  const fn2 = function l() {
     return closure_0.isLocaleLoaded(currentLocale.currentLocale);
   };
   cResult[2] = arg1;
   cResult[3] = arg0;
   cResult[4] = fn2;
   tmp3 = fn2;
-}) : ((arg0, arg1) => {
+}) : (function useSyncMessages(arg0, arg1) {
   closure_0 = arg0;
   const currentLocale = arg1;
   const syncExternalStore = noop.useSyncExternalStore((arg0) => closure_0.onChange(arg0), () => closure_0.isLocaleLoaded(currentLocale.currentLocale));

@@ -1,7 +1,7 @@
-// === Module 18059: VideoStutterMitigationExperiment ===
+// === Module 18346: VideoStutterMitigationExperiment ===
 
-// Module 18059 (VideoStutterMitigationExperiment)
-import ApexExperiment from "ApexExperiment" /* 1440 */;
+// Module 18346 (VideoStutterMitigationExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-03-video-stutter-mitigation", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

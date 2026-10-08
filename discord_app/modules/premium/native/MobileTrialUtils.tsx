@@ -1,21 +1,21 @@
-// === Module 6968: MobileTrialUtils ===
+// === Module 7157: MobileTrialUtils ===
 
-// Module 6968 (MobileTrialUtils)
+// Module 7157 (MobileTrialUtils)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import PremiumConstants from "PremiumConstants" /* 1379 */;
-import dismissible_content from "dismissible_content" /* 2036 */;
-import PremiumUtils from "PremiumUtils" /* 4534 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4704 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 6969 */;
-import AndroidTwoWeekTrialsExperiment from "AndroidTwoWeekTrialsExperiment" /* 13161 */;
+import PremiumConstants from "PremiumConstants" /* 1391 */;
+import dismissible_content from "dismissible_content" /* 2048 */;
+import PremiumUtils from "PremiumUtils" /* 4726 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4898 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7158 */;
+import AndroidTwoWeekTrialsExperiment from "AndroidTwoWeekTrialsExperiment" /* 13461 */;
 import "ReactCompilerGating";
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const dependencyMap = PremiumConstants.PremiumSubscriptionSKUToPremiumType;
 let ReactCompilerGating = ReactCompilerGating_mod;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldShowPremiumTrialUserSettingsAvatarBadge() {
   const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();
   let tmp3 = null != premiumTrialOffer;
   const result = DismissibleContentUnsafeUtils.useIsDismissibleContentDismissed_UNSAFE(dismissible_content.DismissibleContent.PREMIUM_MOBILE_TRIAL_USER_SETTINGS_AVATAR_BADGE);
@@ -30,7 +30,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp3 = !result;
   }
   return tmp3;
-}) : (() => {
+}) : (function useShouldShowPremiumTrialUserSettingsAvatarBadge() {
   const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();
   let tmp3 = null != premiumTrialOffer;
   const result = DismissibleContentUnsafeUtils.useIsDismissibleContentDismissed_UNSAFE(dismissible_content.DismissibleContent.PREMIUM_MOBILE_TRIAL_USER_SETTINGS_AVATAR_BADGE);
@@ -47,7 +47,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   return tmp3;
 });
 let ReactCompilerGating = ReactCompilerGating_mod;
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePremiumTrialOfferPremiumType() {
   const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();
   let skuId;
   if (premiumTrialOffer != null) {
@@ -57,7 +57,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
   }
   return dependencyMap[skuId];
-}) : (() => {
+}) : (function usePremiumTrialOfferPremiumType() {
   const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();
   let skuId;
   if (premiumTrialOffer != null) {
@@ -72,7 +72,7 @@ let result = size.fileFinishedImporting("modules/premium/native/MobileTrialUtils
 
 export const useShouldShowPremiumTrialUserSettingsAvatarBadge = tmp2;
 export const usePremiumTrialOfferPremiumType = tmp3;
-export const useNitroTrialCtaOverride = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+export const useNitroTrialCtaOverride = ReactCompilerGating.isReactCompilerEnabled() ? (function useNitroTrialCtaOverride(location) {
   const cResult = c.c(3);
   const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();
   let subscriptionTrial;
@@ -106,7 +106,7 @@ export const useNitroTrialCtaOverride = ReactCompilerGating.isReactCompilerEnabl
     }
     tmpResult = AndroidTwoWeekTrialsExperiment;
   }
-}) : ((location) => {
+}) : (function useNitroTrialCtaOverride(location) {
   const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();
   let subscriptionTrial;
   if (premiumTrialOffer != null) {

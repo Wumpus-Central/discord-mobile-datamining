@@ -1,17 +1,17 @@
-// === Module 11911: ChatFloatingNavButton ===
+// === Module 11984: ChatFloatingNavButton ===
 
-// Module 11911 (ChatFloatingNavButton)
+// Module 11984 (ChatFloatingNavButton)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import spring from "spring" /* 5604 */;
-import springPresets from "springPresets" /* 5605 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import spring from "spring" /* 5374 */;
+import springPresets from "springPresets" /* 5378 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, Pressable: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { pill: null, icon: null };
 let size = { height: nativeDefault.modules.mobile.JUMP_TO_PRESENT_BUTTON_SIZE, width: nativeDefault.modules.mobile.JUMP_TO_PRESENT_BUTTON_SIZE, borderRadius: nativeDefault.modules.button.BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH, borderColor: nativeDefault.colors.BORDER_MUTED, alignItems: "center", justifyContent: "center", overflow: "hidden" };
 obj2.pill = size;
@@ -24,7 +24,7 @@ const ReactCompilerGating = fn(558);
 size = fn(2);
 let result = size.fileFinishedImporting("modules/chat_input/native/ChatFloatingNavButton.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChatFloatingNavButton(arg0) {
   const cResult = sharedValue(token1[6]).c(24);
   ({ accessibilityLabel, icon, onPress } = arg0);
   const tmp3 = closure_7();
@@ -69,16 +69,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
   }
   if (cResult[2] !== sharedValue) {
-    class I {
+    class E {
       constructor() {
         result = closure_0.set(0);
         return;
       }
     }
     cResult[2] = sharedValue;
-    cResult[3] = I;
+    cResult[3] = E;
   } else {
-    class I {
+    class E {
       constructor() {
         result = closure_0.set(0);
         return;
@@ -86,14 +86,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
   }
   if (cResult[4] === animatedStyle) {
-    class I {
+    class E {
       constructor() {
         result = closure_0.set(0);
         return;
       }
     }
     if (cResult[7] !== token2) {
-      class I {
+      class E {
         constructor() {
           result = closure_0.set(0);
           return;
@@ -103,7 +103,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       cResult[7] = token2;
       cResult[8] = tmp14;
     } else {
-      class I {
+      class E {
         constructor() {
           result = closure_0.set(0);
           return;
@@ -111,39 +111,39 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
     if (cResult[9] === tmp3.icon) {
-      class I {
+      class E {
         constructor() {
           result = closure_0.set(0);
           return;
         }
       }
       if (cResult[12] === icon) {
-        class I {
+        class E {
           constructor() {
             result = closure_0.set(0);
             return;
           }
         }
         if (cResult[15] === tmp12) {
-          class I {
+          class E {
             constructor() {
               result = closure_0.set(0);
               return;
             }
           }
           if (cResult[18] === accessibilityLabel) {
-            class I {
+            class E {
               constructor() {
                 result = closure_0.set(0);
                 return;
               }
             }
           }
-          const obj8 = { accessibilityRole: "button", accessibilityLabel, onPress, onPressIn: S, onPressOut: I, children: tmp20 };
-          const tmp26 = <closure_5 accessibilityRole="button" accessibilityLabel={accessibilityLabel} onPress={onPress} onPressIn={S} onPressOut={I}>{tmp20}</closure_5>;
+          const obj8 = { accessibilityRole: "button", accessibilityLabel, onPress, onPressIn: S, onPressOut: E, children: tmp20 };
+          const tmp26 = <closure_5 accessibilityRole="button" accessibilityLabel={accessibilityLabel} onPress={onPress} onPressIn={S} onPressOut={E}>{tmp20}</closure_5>;
           cResult[18] = accessibilityLabel;
           cResult[19] = S;
-          cResult[20] = I;
+          cResult[20] = E;
           cResult[21] = onPress;
           cResult[22] = tmp20;
           cResult[23] = tmp26;
@@ -170,7 +170,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = tmp3.pill;
   cResult[6] = items1;
   const obj7 = { withSpring: sharedValue(token1[9]).withSpring, interpolateColor: sharedValue(token1[7]).interpolateColor, pressed: sharedValue, bgColor: token, pressedBgColor: token1, ON_PRESS_SPRING: sharedValue(token1[10]).ON_PRESS_SPRING };
-}) : ((arg0) => {
+}) : (function ChatFloatingNavButton(arg0) {
   let sharedValue;
   let token;
   let token1;

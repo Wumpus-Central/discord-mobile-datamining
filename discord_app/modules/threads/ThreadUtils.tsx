@@ -1,18 +1,18 @@
-// === Module 7420: ThreadUtils ===
+// === Module 7895: ThreadUtils ===
 
-// Module 7420 (ThreadUtils)
+// Module 7895 (ThreadUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1126 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import _modDef4467 from "module_4467" /* 4467 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5076 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 6616 */;
-import threads_getTimestampStringDefault from "threads/getTimestampString" /* 7021 */;
-import ThreadAnalyticsUtils from "ThreadAnalyticsUtils" /* 7413 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import _modDef4659 from "module_4659" /* 4659 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5105 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 6793 */;
+import threads_getTimestampStringDefault from "threads/getTimestampString" /* 7209 */;
+import ThreadAnalyticsUtils from "ThreadAnalyticsUtils" /* 7884 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import ReadStateStore from "ReadStateStore" /* 4911 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5077 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4517 */;
+import ReadStateStore from "ReadStateStore" /* 6040 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5971 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4709 */;
 
 const require = globalThis.__r;
 
@@ -113,7 +113,7 @@ export const trackThreadNotificationSettingsUpdated = function trackThreadNotifi
     AnalyticsUtilsDefault.track(constants.THREAD_NOTIFICATION_SETTINGS_UPDATED, obj2);
   }
 };
-export const useLastMessageTimestamp = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
+export const useLastMessageTimestamp = ReactCompilerGating.isReactCompilerEnabled() ? (function useLastMessageTimestamp(id) {
   _require = id;
   const cResult = require("c").c(11);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -154,8 +154,8 @@ export const useLastMessageTimestamp = ReactCompilerGating.isReactCompilerEnable
   if (cResult[5] !== createTimestamp) {
     let valueOfResult = null;
     if (null != createTimestamp) {
-      valueOfResult = _modDef4467(createTimestamp).valueOf();
-      const obj4 = _modDef4467(createTimestamp);
+      valueOfResult = _modDef4659(createTimestamp).valueOf();
+      const obj4 = _modDef4659(createTimestamp);
     }
     cResult[5] = createTimestamp;
     cResult[6] = valueOfResult;
@@ -184,7 +184,7 @@ export const useLastMessageTimestamp = ReactCompilerGating.isReactCompilerEnable
   cResult[10] = extractTimestampResult1;
   tmp15 = extractTimestampResult1;
   const tmpResult = require("initialize");
-}) : ((threadMetadata) => {
+}) : (function useLastMessageTimestamp(threadMetadata) {
   _require = threadMetadata;
   const items = [ReadStateStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => ReadStateStore.lastMessageId(threadMetadata.id));
@@ -199,8 +199,8 @@ export const useLastMessageTimestamp = ReactCompilerGating.isReactCompilerEnable
   }
   let valueOfResult = null;
   if (null != createTimestamp) {
-    valueOfResult = _modDef4467(createTimestamp).valueOf();
-    const obj3 = _modDef4467(createTimestamp);
+    valueOfResult = _modDef4659(createTimestamp).valueOf();
+    const obj3 = _modDef4659(createTimestamp);
   }
   if (extractTimestampResult == null) {
     extractTimestampResult = valueOfResult;

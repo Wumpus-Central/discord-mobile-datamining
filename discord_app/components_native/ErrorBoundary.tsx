@@ -1,27 +1,27 @@
-// === Module 15885: ErrorBoundary ===
+// === Module 16144: ErrorBoundary ===
 
-// Module 15885 (ErrorBoundary)
+// Module 16144 (ErrorBoundary)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import SentryUtilsDefault from "SentryUtils" /* 1242 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import AppCrash from "AppCrash" /* 9523 */;
+import native from "native" /* 1200 */;
+import SentryUtilsDefault from "SentryUtils" /* 1254 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import AppCrash from "AppCrash" /* 8693 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 11095 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 10460 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ NativeModules: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_11 = createStyles.createLegacyClassComponentStyles({ buttons: { position: "absolute", right: 32, bottom: 32, left: 32, gap: 12 }, debugLogsContainer: { position: "absolute", right: 32, top: 64, display: "flex", flexDirection: "row", alignItems: "center", gap: 12 }, error: { marginTop: 24, textAlign: "center" }, text: { textAlign: "center" } });
 const ReactCompilerGating = fn(558);
-let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function MaybeClearBuildOverride() {
   const cResult = require("c").c(6);
   const obj = require("c");
   [tmp5, closure_0] = noop.useState(false);
@@ -31,7 +31,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
       let id;
       if (overrides != null) {
-        const tmp4 = overrides[closure_0(undefined, 11412).DEVICE_FIELD];
+        const tmp4 = overrides[closure_0(undefined, 11395).DEVICE_FIELD];
         if (tmp4 != null) {
           id = tmp4.id;
         }
@@ -53,7 +53,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
       _require = asyncGeneratorStep(async () => {
         tmp3(true);
-        await tmp3(11412).clearBuildOverride();
+        await tmp3(11395).clearBuildOverride();
         if (1 === tmp7) {
           c3 = 0;
           tmp3(false);
@@ -92,7 +92,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
     if (cResult[4] !== tmp5) {
       const obj2 = { variant: "secondary", loading: tmp5, text: tmp11, onPress: tmp9 };
-      const tmp15 = closure_9(tmp(5601).Button, obj2);
+      const tmp15 = closure_9(tmp(5375).Button, obj2);
       cResult[4] = tmp5;
       cResult[5] = tmp15;
       let tmp13 = tmp15;
@@ -102,7 +102,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     return tmp13;
   }
   tmpResult = require("initialize");
-}) : (() => {
+}) : (function MaybeClearBuildOverride() {
   closure_1 = async function _clearOverride2() {
     _require(true);
     await tmp3(tmp16[9]).clearBuildOverride();
@@ -147,7 +147,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       }
       return applyArgumentsResult;
     };
-    return closure_9(tmp2(5601).Button, obj2);
+    return closure_9(tmp2(5375).Button, obj2);
   }
   obj = require("initialize");
 });
@@ -231,16 +231,16 @@ prototype["render"] = function render() {
     obj4.onPress = self.handleReload;
     items1[1] = options(components_Button_Button.Button, obj4);
     obj3.children = items1;
-    items[1] = v65535(React5, obj3);
+    items[1] = collapsed(React5, obj3);
     items[2] = null;
     obj.children = items;
-    let children = v65535(native.EmptyState, obj);
+    let children = collapsed(native.EmptyState, obj);
   } else {
     children = self.props.children;
   }
   return children;
 };
-ErrorBoundary.contextType = fn(4595).ThemeContext;
+ErrorBoundary.contextType = fn(4787).ThemeContext;
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/ErrorBoundary.tsx");
 

@@ -1,10 +1,10 @@
-// === Module 8915: PremiumGroupWordmark ===
+// === Module 9348: PremiumGroupWordmark ===
 
-// Module 8915 (PremiumGroupWordmark)
+// Module 9348 (PremiumGroupWordmark)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4586 */;
-import inlineStyles from "inlineStyles" /* 8169 */;
+import useToken from "useToken" /* 4778 */;
+import inlineStyles from "inlineStyles" /* 7550 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ const ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/premium_group/native/PremiumGroupWordmark.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumGroupWordmark(arg0) {
   const cResult = c.c(12);
   if (cResult[0] !== arg0) {
     ({ width, height, alwaysWhite } = arg0);
@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[11] = tmp18;
   tmp15 = tmp18;
   const tmp11Result = inlineStylesDefault;
-}) : ((arg0) => {
+}) : (function PremiumGroupWordmark(arg0) {
   ({ width, height, alwaysWhite } = arg0);
   const merged = Object.assign(arg0, Object.assign({ width: 0, height: 0, alwaysWhite: 0 }));
   let str = "white";

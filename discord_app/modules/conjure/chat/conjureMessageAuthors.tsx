@@ -1,8 +1,8 @@
-// === Module 16674: conjureMessageAuthors ===
+// === Module 16937: conjureMessageAuthors ===
 
-// Module 16674 (conjureMessageAuthors)
-import UserActionCreatorsAll from "UserActionCreators" /* 7863 */;
-import UserStore from "UserStore" /* 1377 */;
+// Module 16937 (conjureMessageAuthors)
+import UserActionCreatorsAll from "UserActionCreators" /* 8281 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const set = new Set();
 const map = new Map();
@@ -24,19 +24,19 @@ export const resolveMessageAuthor = function resolveMessageAuthor(arg0, user, cu
   }
   return tmp;
 };
-export const requestMessageAuthor = function requestMessageAuthor(userId) {
-  importAll = userId;
-  if (null != userId) {
-    if (!set.has(userId)) {
-      if (null == UserStore.getUser(userId)) {
-        let num = map.get(userId);
+export const requestMessageAuthor = function requestMessageAuthor(actor_user_id) {
+  importAll = actor_user_id;
+  if (null != actor_user_id) {
+    if (!set.has(actor_user_id)) {
+      if (null == UserStore.getUser(actor_user_id)) {
+        let num = map.get(actor_user_id);
         if (num == null) {
           num = 0;
         }
         if (num < 3) {
-          const result = map.set(userId, num + 1);
-          set.add(userId);
-          const user = UserActionCreatorsAll.getUser(userId);
+          const result = map.set(actor_user_id, num + 1);
+          set.add(actor_user_id);
+          const user = UserActionCreatorsAll.getUser(actor_user_id);
           user.finally(() => set.delete(closure_0)).catch(() => {
 
           });

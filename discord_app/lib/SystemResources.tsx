@@ -1,9 +1,9 @@
-// === Module 7252: SystemResources ===
+// === Module 5281: SystemResources ===
 
-// Module 7252 (SystemResources)
-import ProcessUtilsDefault from "ProcessUtils" /* 1363 */;
-import Histogram from "Histogram" /* 7246 */;
-import DeviceState from "DeviceState" /* 7253 */;
+// Module 5281 (SystemResources)
+import ProcessUtilsDefault from "ProcessUtils" /* 1375 */;
+import Histogram from "Histogram" /* 5273 */;
+import DeviceState from "DeviceState" /* 5282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

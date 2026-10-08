@@ -1,21 +1,21 @@
-// === Module 8817: CrunchyrollLinkError ===
+// === Module 9175: CrunchyrollLinkError ===
 
-// Module 8817 (CrunchyrollLinkError)
+// Module 9175 (CrunchyrollLinkError)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import useNavigation from "useNavigation" /* 1490 */;
-import useConnectRetry from "useConnectRetry" /* 8792 */;
-import TwoWayLinkError from "TwoWayLinkError" /* 8793 */;
+import useNavigation from "useNavigation" /* 1502 */;
+import useConnectRetry from "useConnectRetry" /* 9161 */;
+import TwoWayLinkError from "TwoWayLinkError" /* 9162 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const constants = fn(8809).CrunchyrollLinkModalScenes;
+const constants = fn(9167).CrunchyrollLinkModalScenes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkError.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function CrunchyrollLinkDiscordError(onClose) {
   const cResult = c.c(5);
   onClose = onClose.onClose;
   const navigation = useNavigation.useNavigation();
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
   cResult[3] = connectRetry;
   cResult[4] = tmp11;
   tmp10 = tmp11;
-}) : ((onClose) => {
+}) : (function CrunchyrollLinkDiscordError(onClose) {
   const navigation = useNavigation.useNavigation();
   const connectRetry = useConnectRetry.useConnectRetry(navigation, constants.PRE_CONNECT);
   const obj3 = { title: null, body: null, onClose: null, onRetry: null };

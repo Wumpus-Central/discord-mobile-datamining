@@ -1,16 +1,16 @@
-// === Module 14660: DirectMessageSpamFilterSetting ===
+// === Module 14921: DirectMessageSpamFilterSetting ===
 
-// Module 14660 (DirectMessageSpamFilterSetting)
+// Module 14921 (DirectMessageSpamFilterSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import UserSettings from "UserSettings" /* 2028 */;
-import ModerationUtils from "ModerationUtils" /* 14661 */;
+import UserSettings from "UserSettings" /* 2040 */;
+import ModerationUtils from "ModerationUtils" /* 14922 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11142);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const SettingBuilders = fn(11262);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDmSpamFilterSettingOptions() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const dmSpamOptions = ModerationUtils.generateDmSpamOptions();
@@ -22,17 +22,19 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     first = cResult[0];
   }
   return first;
-}) : (() => noop.useMemo(() => {
-  const dmSpamOptions = ModerationUtils.generateDmSpamOptions();
-  return dmSpamOptions.map((value) => ({ value: value.value, label: value.name, subLabel: value.desc }));
-}, []));
+}) : (function useDmSpamFilterSettingOptions() {
+  return noop.useMemo(() => {
+    const dmSpamOptions = ModerationUtils.generateDmSpamOptions();
+    return dmSpamOptions.map((value) => ({ value: value.value, label: value.name, subLabel: value.desc }));
+  }, []);
+});
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.tiCXaH);
   },
-  parent: fn(7645).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
-  useOptions: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  parent: fn(7966).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  useOptions: ReactCompilerGating.isReactCompilerEnabled() ? (function useDmSpamFilterSettingOptions() {
     const cResult = c.c(1);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
       const dmSpamOptions = ModerationUtils.generateDmSpamOptions();
@@ -44,11 +46,13 @@ const radio = SettingBuilders.createRadio({
       first = cResult[0];
     }
     return first;
-  }) : (() => noop.useMemo(() => {
-    const dmSpamOptions = ModerationUtils.generateDmSpamOptions();
-    return dmSpamOptions.map((value) => ({ value: value.value, label: value.name, subLabel: value.desc }));
-  }, [])),
-  useValue: fn(14663).useDerivedDmSpamFilterSettingValue,
+  }) : (function useDmSpamFilterSettingOptions() {
+    return noop.useMemo(() => {
+      const dmSpamOptions = ModerationUtils.generateDmSpamOptions();
+      return dmSpamOptions.map((value) => ({ value: value.value, label: value.name, subLabel: value.desc }));
+    }, []);
+  }),
+  useValue: fn(14924).useDerivedDmSpamFilterSettingValue,
   onValueChange: function onDmSpamFilterSettingValueChange(arg0) {
     const DmSpamFilterV2 = UserSettings.DmSpamFilterV2;
     DmSpamFilterV2.updateSetting(Number(arg0));

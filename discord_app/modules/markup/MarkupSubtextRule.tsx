@@ -1,17 +1,17 @@
-// === Module 5817: MarkupSubtextRule ===
+// === Module 8105: MarkupSubtextRule ===
 
-// Module 5817 (MarkupSubtextRule)
-import _mod1936 from "module_1936" /* 1936 */;
+// Module 8105 (MarkupSubtextRule)
+import _mod1948 from "module_1948" /* 1948 */;
 import size from "module_2" /* 2 */;
 
-const _modDef1936 = _mod1936;
+const _modDef1948 = _mod1948;
 
 const re2 = /\n$/;
 const re3 = /^ *-# +((?!-#)[^\n]+)(?:\n|$)/;
 const result = size.fileFinishedImporting("modules/markup/MarkupSubtextRule.tsx");
 
 export default {
-  order: _modDef1936.defaultRules.heading.order,
+  order: _modDef1948.defaultRules.heading.order,
   requiredFirstCharacters: ["-"],
   match(arg0, allowSubtext, str) {
     let tmp = null;
@@ -22,7 +22,7 @@ export default {
         }
         tmp = tmp4;
       }
-      tmp4 = _mod1936.anyScopeRegex(re3)(arg0, allowSubtext, str);
+      tmp4 = _mod1948.anyScopeRegex(re3)(arg0, allowSubtext, str);
     }
     return tmp;
   },
@@ -32,7 +32,7 @@ export default {
     const trimmed = arg0[1].trim();
     const merged = Object.assign(arg2);
     obj3.allowSubtext = false;
-    obj.content = _mod1936.parseInline(fn, trimmed, obj3);
+    obj.content = _mod1948.parseInline(fn, trimmed, obj3);
     return obj;
   }
 };

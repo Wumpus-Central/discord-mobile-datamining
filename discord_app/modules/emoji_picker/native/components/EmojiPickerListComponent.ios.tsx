@@ -1,24 +1,25 @@
-// === Module 9942: components/EmojiPickerListComponent ===
+// === Module 9464: components/EmojiPickerListComponent ===
 
-// Module 9942 (components/EmojiPickerListComponent)
+// Module 9464 (components/EmojiPickerListComponent)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const EmojiPickerListConstants = fn(9882);
+const EmojiPickerListConstants = fn(9362);
 ({ ROW_HEIGHT: closure_4, LABEL_HEIGHT: hasOwnProperty, LABEL_TOP_PADDING: metroRequire, LABEL_BOTTOM_PADDING: closure_7 } = EmojiPickerListConstants);
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/emoji_picker/native/components/EmojiPickerListComponent.ios.tsx");
 
-export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((categoryIndexActive, arg1) => {
-  const cResult = categoryIndexActive(ref[4]).c(16);
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiPickerListComponent(categoryIndexActive) {
+  const cResult = categoryIndexActive(ref1[4]).c(16);
   categoryIndexActive = categoryIndexActive.categoryIndexActive;
   ({ data, paddingTop, paddingBottom, renderItem } = categoryIndexActive);
   ({ data: data2, headerIndices } = data);
-  ref = noop.useRef(null);
+  ({ onShowNitroUpsell, ref } = categoryIndexActive);
+  ref1 = noop.useRef(null);
   if (cResult[0] === paddingBottom) {
     if (cResult[1] === paddingTop) {
       let tmp5 = cResult[2];
@@ -35,10 +36,13 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
     }
     const _Symbol2 = Symbol;
     if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-      const fn2 = function b(type, arg1) {
+      const fn2 = function h(type, arg1) {
         return "" + type.type + "-" + arg1;
       };
       cResult[4] = fn2;
+      let tmp8 = fn2;
+    } else {
+      tmp8 = cResult[4];
     }
     const _Symbol3 = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
@@ -127,8 +131,7 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
           return;
         }
       }
-      const imperativeHandle = noop.useImperativeHandle(arg1, C);
-      const onViewableItemsChanged = headerIndices(tmp2[7])(categoryIndexActive.onShowNitroUpsell).onViewableItemsChanged;
+      const imperativeHandle = noop.useImperativeHandle(ref, C);
       const isPortalKeyboardInModal = tmp(tmp2[8]).useIsPortalKeyboardInModal();
       if (cResult[9] === tmp5) {
         class O {
@@ -159,7 +162,7 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
           }
         }
       }
-      const obj3 = { contentContainerStyle: tmp5, data: data2, getItemType: tmp7, keyboardShouldPersistTaps: "always", keyExtractor: null, onViewableItemsChanged: null, overrideItemLayout: null, preventNativeModalDismiss: null, ref: null, renderItem: null, stickyHeaderIndices: null };
+      const obj3 = { contentContainerStyle: tmp5, data: data2, getItemType: tmp7, keyboardShouldPersistTaps: "always", keyExtractor: tmp8, onViewableItemsChanged: null, overrideItemLayout: null, preventNativeModalDismiss: null, ref: null, renderItem: null, stickyHeaderIndices: null };
       class C {
         constructor() {
           obj = {
@@ -206,20 +209,19 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
           return obj;
         }
       }
-      obj3.onViewableItemsChanged = onViewableItemsChanged;
       obj3.overrideItemLayout = O;
       obj3.preventNativeModalDismiss = isPortalKeyboardInModal;
-      obj3.ref = ref;
+      obj3.ref = ref1;
       obj3.renderItem = renderItem;
       obj3.stickyHeaderIndices = headerIndices;
-      const tmp17 = jsx(tmp(tmp2[9]).BottomSheetFlashList, { contentContainerStyle: tmp5, data: data2, getItemType: tmp7, keyboardShouldPersistTaps: "always", keyExtractor: null, onViewableItemsChanged: null, overrideItemLayout: null, preventNativeModalDismiss: null, ref: null, renderItem: null, stickyHeaderIndices: null });
+      const tmp16 = jsx(tmp(tmp2[9]).BottomSheetFlashList, { contentContainerStyle: tmp5, data: data2, getItemType: tmp7, keyboardShouldPersistTaps: "always", keyExtractor: tmp8, onViewableItemsChanged: null, overrideItemLayout: null, preventNativeModalDismiss: null, ref: null, renderItem: null, stickyHeaderIndices: null });
       cResult[9] = tmp5;
       cResult[10] = data2;
       cResult[11] = headerIndices;
-      cResult[12] = onViewableItemsChanged;
+      cResult[12] = headerIndices(tmp2[7])(onShowNitroUpsell).onViewableItemsChanged;
       cResult[13] = isPortalKeyboardInModal;
       cResult[14] = renderItem;
-      cResult[15] = tmp17;
+      cResult[15] = tmp16;
       const tmpResult = tmp(tmp2[8]);
     }
     class C {
@@ -277,14 +279,14 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
   cResult[1] = paddingTop;
   cResult[2] = obj4;
   tmp5 = obj4;
-  let obj = categoryIndexActive(ref[4]);
-}) : ((paddingTop, arg1) => {
+  let obj = categoryIndexActive(ref1[4]);
+}) : (function EmojiPickerListComponent(paddingTop) {
   ({ categoryIndexActive: require, data } = paddingTop);
   const stickyHeaderIndices = data.headerIndices;
   paddingTop = paddingTop.paddingTop;
   const paddingBottom = paddingTop.paddingBottom;
-  ({ onShowNitroUpsell, renderItem } = paddingTop);
-  const ref = paddingBottom.useRef(null);
+  ({ onShowNitroUpsell, renderItem, ref } = paddingTop);
+  const ref2 = paddingBottom.useRef(null);
   const items = [paddingTop, paddingBottom];
   const contentContainerStyle = paddingBottom.useMemo(() => ({ paddingTop, paddingBottom }), items);
   const getItemType = paddingBottom.useCallback((type) => type.type, []);
@@ -303,10 +305,10 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
           }
         }
       }
-      arg0.size = ref;
+      arg0.size = ref2;
     }
   }, []);
-  const imperativeHandle = paddingBottom.useImperativeHandle(arg1, () => ({
+  const imperativeHandle = paddingBottom.useImperativeHandle(ref, () => ({
     scrollToHeaderIndex(animated) {
       let flag = animated.animated;
       if (flag === undefined) {
@@ -347,5 +349,5 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
     }
   }));
   const preventNativeModalDismiss = require("PortalKeyboardModalContext").useIsPortalKeyboardInModal();
-  return jsx(require("module_8404").BottomSheetFlashList, { contentContainerStyle, data: data.data, getItemType, keyboardShouldPersistTaps: "always", keyExtractor, onViewableItemsChanged: stickyHeaderIndices(paddingTop[7])(onViewableItemsChanged).onViewableItemsChanged, overrideItemLayout, preventNativeModalDismiss, ref, renderItem, stickyHeaderIndices });
-}));
+  return jsx(require("module_8600").BottomSheetFlashList, { contentContainerStyle, data: data.data, getItemType, keyboardShouldPersistTaps: "always", keyExtractor, onViewableItemsChanged: stickyHeaderIndices(paddingTop[7])(onViewableItemsChanged).onViewableItemsChanged, overrideItemLayout, preventNativeModalDismiss, ref: ref2, renderItem, stickyHeaderIndices });
+});

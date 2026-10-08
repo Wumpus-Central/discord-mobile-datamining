@@ -1,35 +1,34 @@
-// === Module 7644: DoubleTapNitroAlert ===
+// === Module 7965: DoubleTapNitroAlert ===
 
-// Module 7644 (DoubleTapNitroAlert)
+// Module 7965 (DoubleTapNitroAlert)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 4806 */;
-import AlertModal from "AlertModal" /* 5720 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 5000 */;
+import AlertModal from "AlertModal" /* 5303 */;
+import openUserSettings from "openUserSettings" /* 7084 */;
 import noop from "module_19" /* 19 */;
-
-const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const NITRO_UPSELL_ALERT_KEY = fn(7639).NITRO_UPSELL_ALERT_KEY;
+const NITRO_UPSELL_ALERT_KEY = fn(7960).NITRO_UPSELL_ALERT_KEY;
 const UserSettingsSections = fn(1085).UserSettingsSections;
-const MobileUserSettings = fn(7645).MobileUserSettings;
+const MobileUserSettings = fn(7966).MobileUserSettings;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_10 = createStyles.createStyles({ icon: { alignItems: "center", justifyContent: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/double_tap_to_react/native/DoubleTapNitroAlert.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((emojiName) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function DoubleTapNitroAlert(emojiName) {
   const cResult = c.c(13);
   emojiName = emojiName.emojiName;
   const tmp4 = closure_10();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function l() {
       const obj2 = { screen: constants.TEXT, params: { initialSetting: constants2.DOUBLE_TAP_EMOJI } };
-      require("openUserSettings").openUserSettings(obj2);
+      openUserSettings.openUserSettings(obj2);
     };
     cResult[0] = fn;
     let first = fn;
@@ -37,222 +36,93 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((emojiName) => {
     first = cResult[0];
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    class E {
-      constructor() {
-        obj = closure_1_0(closure_1_1[9]);
-        obj1 = { screen: closure_1_5.PREMIUM };
-        openUserSettingsResult = obj.openUserSettings(obj1, () => {
-          closure_1_0(dependencyMap[10]).dismissAlert(closure_1_4);
-        });
-        return;
-      }
-    }
-    cResult[1] = E;
+    const fn2 = function b() {
+      openUserSettings.openUserSettings({ screen: constants.PREMIUM }, () => {
+        closure_1_0(dependencyMap[10]).dismissAlert(closure_1_4);
+      });
+    };
+    cResult[1] = fn2;
+    let tmp6 = fn2;
   } else {
-    class E {
-      constructor() {
-        obj = closure_1_0(closure_1_1[9]);
-        obj1 = { screen: closure_1_5.PREMIUM };
-        openUserSettingsResult = obj.openUserSettings(obj1, () => {
-          closure_1_0(dependencyMap[10]).dismissAlert(closure_1_4);
-        });
-        return;
-      }
-    }
+    tmp6 = cResult[1];
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    class E {
-      constructor() {
-        obj = closure_1_0(closure_1_1[9]);
-        obj1 = { screen: closure_1_5.PREMIUM };
-        openUserSettingsResult = obj.openUserSettings(obj1, () => {
-          closure_1_0(dependencyMap[10]).dismissAlert(closure_1_4);
-        });
-        return;
-      }
-    }
     let obj2 = { size: "custom", style: { width: 40, height: 40 } };
-    const tmp8 = React5(CircleErrorIcon.CircleErrorIcon, obj2);
-    cResult[2] = tmp8;
-    const tmp7 = tmp8;
+    const tmp9 = React5(CircleErrorIcon.CircleErrorIcon, obj2);
+    cResult[2] = tmp9;
+    let tmp7 = tmp9;
   } else {
-    class E {
-      constructor() {
-        obj = closure_1_0(closure_1_1[9]);
-        obj1 = { screen: closure_1_5.PREMIUM };
-        openUserSettingsResult = obj.openUserSettings(obj1, () => {
-          closure_1_0(dependencyMap[10]).dismissAlert(closure_1_4);
-        });
-        return;
-      }
-    }
+    tmp7 = cResult[2];
   }
   if (cResult[3] !== tmp4.icon) {
-    class E {
-      constructor() {
-        obj = closure_1_0(closure_1_1[9]);
-        obj1 = { screen: closure_1_5.PREMIUM };
-        openUserSettingsResult = obj.openUserSettings(obj1, () => {
-          closure_1_0(dependencyMap[10]).dismissAlert(closure_1_4);
-        });
-        return;
-      }
-    }
     const obj3 = { style: tmp4.icon, children: tmp7 };
-    const tmp11 = React5(View, obj3);
+    const tmp13 = React5(View, obj3);
     cResult[3] = tmp4.icon;
-    cResult[4] = tmp11;
+    cResult[4] = tmp13;
+    let tmp10 = tmp13;
   } else {
-    class E {
-      constructor() {
-        obj = closure_1_0(closure_1_1[9]);
-        obj1 = { screen: closure_1_5.PREMIUM };
-        openUserSettingsResult = obj.openUserSettings(obj1, () => {
-          closure_1_0(dependencyMap[10]).dismissAlert(closure_1_4);
-        });
-        return;
-      }
-    }
+    tmp10 = cResult[4];
   }
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    class E {
-      constructor() {
-        obj = closure_1_0(closure_1_1[9]);
-        obj1 = { screen: closure_1_5.PREMIUM };
-        openUserSettingsResult = obj.openUserSettings(obj1, () => {
-          closure_1_0(dependencyMap[10]).dismissAlert(closure_1_4);
-        });
-        return;
-      }
-    }
-    const stringResult = obj4.string(util.t.HRAWfC);
+    const intl = util.intl;
+    const stringResult = intl.string(util.t.HRAWfC);
     cResult[5] = stringResult;
-    const tmp12 = stringResult;
+    let tmp14 = stringResult;
   } else {
-    class E {
-      constructor() {
-        obj = closure_1_0(closure_1_1[9]);
-        obj1 = { screen: closure_1_5.PREMIUM };
-        openUserSettingsResult = obj.openUserSettings(obj1, () => {
-          closure_1_0(dependencyMap[10]).dismissAlert(closure_1_4);
-        });
-        return;
-      }
-    }
+    tmp14 = cResult[5];
   }
   if (cResult[6] !== emojiName) {
-    class E {
-      constructor() {
-        obj = closure_1_0(closure_1_1[9]);
-        obj1 = { screen: closure_1_5.PREMIUM };
-        openUserSettingsResult = obj.openUserSettings(obj1, () => {
-          closure_1_0(dependencyMap[10]).dismissAlert(closure_1_4);
-        });
-        return;
-      }
-    }
-    const obj6 = { emojiName, onRenewNitro: E };
-    const formatResult = obj5.format(util.t["3u/Je4"], obj6);
+    const intl2 = util.intl;
+    const obj4 = { emojiName, onRenewNitro: tmp6 };
+    const formatResult = intl2.format(util.t["3u/Je4"], obj4);
     cResult[6] = emojiName;
     cResult[7] = formatResult;
+    let tmp16 = formatResult;
   } else {
-    class E {
-      constructor() {
-        obj = closure_1_0(closure_1_1[9]);
-        obj1 = { screen: closure_1_5.PREMIUM };
-        openUserSettingsResult = obj.openUserSettings(obj1, () => {
-          closure_1_0(dependencyMap[10]).dismissAlert(closure_1_4);
-        });
-        return;
-      }
-    }
+    tmp16 = cResult[7];
   }
   if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-    class E {
-      constructor() {
-        obj = closure_1_0(closure_1_1[9]);
-        obj1 = { screen: closure_1_5.PREMIUM };
-        openUserSettingsResult = obj.openUserSettings(obj1, () => {
-          closure_1_0(dependencyMap[10]).dismissAlert(closure_1_4);
-        });
-        return;
-      }
-    }
-    const obj7 = { onPress: first, text: null };
-    const intl = util.intl;
-    obj7.text = intl.string(util.t.LIIHRy);
-    const tmp17 = React5(AlertModal.AlertActionButton, obj7, "confirm");
-    cResult[8] = tmp17;
-    const tmp16 = tmp17;
+    const obj5 = { onPress: first, text: null };
+    const intl3 = util.intl;
+    obj5.text = intl3.string(util.t.LIIHRy);
+    const tmp20 = React5(AlertModal.AlertActionButton, obj5, "confirm");
+    cResult[8] = tmp20;
+    let tmp18 = tmp20;
   } else {
-    class E {
-      constructor() {
-        obj = closure_1_0(closure_1_1[9]);
-        obj1 = { screen: closure_1_5.PREMIUM };
-        openUserSettingsResult = obj.openUserSettings(obj1, () => {
-          closure_1_0(dependencyMap[10]).dismissAlert(closure_1_4);
-        });
-        return;
-      }
-    }
+    tmp18 = cResult[8];
   }
   if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-    class E {
-      constructor() {
-        obj = closure_1_0(closure_1_1[9]);
-        obj1 = { screen: closure_1_5.PREMIUM };
-        openUserSettingsResult = obj.openUserSettings(obj1, () => {
-          closure_1_0(dependencyMap[10]).dismissAlert(closure_1_4);
-        });
-        return;
-      }
-    }
-    const obj8 = { children: null };
-    const items = [tmp16, ];
-    const obj9 = { variant: "secondary", text: null };
-    const intl2 = util.intl;
-    obj9.text = intl2.string(util.t["Nr6v2+"]);
-    items[1] = React5(AlertModal.AlertActionButton, obj9, "cancel");
-    obj8.children = items;
-    const tmp21 = options(closure_1_8, obj8);
-    cResult[9] = tmp21;
-    const tmp18 = tmp21;
+    const obj6 = { children: null };
+    const items = [tmp18, ];
+    const obj7 = { variant: "secondary", text: null };
+    const intl4 = util.intl;
+    obj7.text = intl4.string(util.t["Nr6v2+"]);
+    items[1] = React5(AlertModal.AlertActionButton, obj7, "cancel");
+    obj6.children = items;
+    const tmp25 = options(closure_1_8, obj6);
+    cResult[9] = tmp25;
+    let tmp21 = tmp25;
   } else {
-    class E {
-      constructor() {
-        obj = closure_1_0(closure_1_1[9]);
-        obj1 = { screen: closure_1_5.PREMIUM };
-        openUserSettingsResult = obj.openUserSettings(obj1, () => {
-          closure_1_0(dependencyMap[10]).dismissAlert(closure_1_4);
-        });
-        return;
-      }
-    }
+    tmp21 = cResult[9];
   }
-  if (cResult[10] === tmp9) {
-    class E {
-      constructor() {
-        obj = closure_1_0(closure_1_1[9]);
-        obj1 = { screen: closure_1_5.PREMIUM };
-        openUserSettingsResult = obj.openUserSettings(obj1, () => {
-          closure_1_0(dependencyMap[10]).dismissAlert(closure_1_4);
-        });
-        return;
-      }
+  if (cResult[10] === tmp10) {
+    if (cResult[11] === tmp16) {
+      let tmp26 = cResult[12];
     }
-    return tmp22;
+    return tmp26;
   }
-  tmp22 = React5(AlertModal.AlertModal, { header: tmp9, title: tmp12, content: tmp14, actions: tmp18 });
-  cResult[10] = tmp9;
-  cResult[11] = tmp14;
-  cResult[12] = tmp22;
-}) : ((emojiName) => {
+  const tmp27 = React5(AlertModal.AlertModal, { header: tmp10, title: tmp14, content: tmp16, actions: tmp21 });
+  cResult[10] = tmp10;
+  cResult[11] = tmp16;
+  cResult[12] = tmp27;
+  tmp26 = tmp27;
+}) : (function DoubleTapNitroAlert(emojiName) {
   const callback = noop.useCallback(() => {
     const obj2 = { screen: constants.TEXT, params: { initialSetting: constants2.DOUBLE_TAP_EMOJI } };
-    require("openUserSettings").openUserSettings(obj2);
+    openUserSettings.openUserSettings(obj2);
   }, []);
   const callback1 = noop.useCallback(() => {
-    require("openUserSettings").openUserSettings({ screen: constants.PREMIUM }, () => {
+    openUserSettings.openUserSettings({ screen: constants.PREMIUM }, () => {
       closure_1_0(dependencyMap[10]).dismissAlert(closure_1_4);
     });
   }, []);

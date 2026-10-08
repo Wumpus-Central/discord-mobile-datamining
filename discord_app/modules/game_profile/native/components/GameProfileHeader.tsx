@@ -1,12 +1,13 @@
-// === Module 8393: GameProfileHeader ===
+// === Module 8891: GameProfileHeader ===
 
-// Module 8393 (GameProfileHeader)
+// Module 8891 (GameProfileHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import LinearGradientDefault from "LinearGradient" /* 5612 */;
-import SKUUtils from "SKUUtils" /* 8394 */;
-import useGameProfileHeroBackgroundURLDefault from "useGameProfileHeroBackgroundURL" /* 8395 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import LinearGradientDefault from "LinearGradient" /* 5387 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import SKUUtils from "SKUUtils" /* 8892 */;
+import useGameProfileHeroBackgroundURLDefault from "useGameProfileHeroBackgroundURL" /* 8893 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
@@ -14,13 +15,13 @@ const ReanimatedRexportDefault = ReanimatedRexport;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
-const GameProfileConstants = fn(8391);
+const GameProfileConstants = fn(8889);
 ({ DISCORD_APP_GAME_ID: metroRequire, MOBILE_GAME_PROFILE_MAX_WIDTH } = GameProfileConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = 114;
 let c10 = "rgba(0,0,0,0.3)";
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, artHero: null, artHeroImage: null, artHeroGradient: null, headerContent: null, shadowContainer: null, coverContainer: null, iconContainer: null, image: null, titleContainer: null, titleRow: null, title: null, wavingWumpus: null, textShadow: null };
 const rect = { width: "100%", position: "absolute", top: 0, bottom: -nativeDefault.space.PX_80, left: 0, right: 0 };
 obj2.artHero = rect;
@@ -51,7 +52,7 @@ let obj7 = { textShadowColor: nativeDefault.colors.BLACK, textShadowOffset: { wi
 size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileHeader.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProfileHeader(arg0) {
   const cResult = c.c(64);
   ({ game, scrollY, onHeightMeasured } = arg0);
   const tmp4 = closure_11();
@@ -85,7 +86,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[5] = iconURL;
   }
   if (cResult[6] !== onHeightMeasured) {
-    class L {
+    class D {
       constructor(arg0) {
         if (onHeightMeasured != null) {
           tmp2 = arg0;
@@ -95,9 +96,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
     cResult[6] = onHeightMeasured;
-    cResult[7] = L;
+    cResult[7] = D;
   } else {
-    class L {
+    class D {
       constructor(arg0) {
         if (onHeightMeasured != null) {
           tmp2 = arg0;
@@ -108,7 +109,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
   }
   if (cResult[8] === animatedStyle) {
-    class L {
+    class D {
       constructor(arg0) {
         if (onHeightMeasured != null) {
           tmp2 = arg0;
@@ -118,7 +119,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
     if (cResult[11] === tmp9) {
-      class L {
+      class D {
         constructor(arg0) {
           if (onHeightMeasured != null) {
             tmp2 = arg0;
@@ -128,7 +129,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         }
       }
       if (cResult[14] !== tmp4.container.backgroundColor) {
-        class L {
+        class D {
           constructor(arg0) {
             if (onHeightMeasured != null) {
               tmp2 = arg0;
@@ -141,7 +142,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         cResult[14] = tmp4.container.backgroundColor;
         cResult[15] = items;
       } else {
-        class L {
+        class D {
           constructor(arg0) {
             if (onHeightMeasured != null) {
               tmp2 = arg0;
@@ -152,7 +153,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         }
       }
       if (cResult[16] === tmp4.artHeroGradient) {
-        class L {
+        class D {
           constructor(arg0) {
             if (onHeightMeasured != null) {
               tmp2 = arg0;
@@ -162,7 +163,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           }
         }
         if (cResult[19] === tmp17) {
-          class L {
+          class D {
             constructor(arg0) {
               if (onHeightMeasured != null) {
                 tmp2 = arg0;
@@ -173,23 +174,23 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           }
         }
         const obj3 = { style: tmp17, children: null };
-        const items1 = [tmp18, tmp22];
+        const items1 = [tmp18, tmp21];
         obj3.children = items1;
-        const tmp27 = closure_1_8(ReanimatedRexportDefault.View, obj3);
+        const tmp26 = closure_1_8(ReanimatedRexportDefault.View, obj3);
         cResult[19] = tmp17;
         cResult[20] = tmp18;
-        cResult[21] = tmp22;
-        cResult[22] = tmp27;
+        cResult[21] = tmp21;
+        cResult[22] = tmp26;
       }
-      const obj4 = { colors: tmp21, style: tmp4.artHeroGradient };
-      const tmp24 = React5(LinearGradientDefault, obj4);
+      const obj4 = { colors: tmp20, style: tmp4.artHeroGradient };
+      const tmp23 = React5(LinearGradientDefault, obj4);
       cResult[16] = tmp4.artHeroGradient;
-      cResult[17] = tmp21;
-      cResult[18] = tmp24;
+      cResult[17] = tmp20;
+      cResult[18] = tmp23;
     }
     let tmp19 = null != tmp9;
     if (tmp19) {
-      class L {
+      class D {
         constructor(arg0) {
           if (onHeightMeasured != null) {
             tmp2 = arg0;
@@ -202,7 +203,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       const obj6 = { uri: tmp9 };
       obj5.source = obj6;
       obj5.style = tmp4.artHeroImage;
-      tmp19 = React5(hasOwnProperty, obj5);
+      tmp19 = React5(FastImageDefault, obj5);
     }
     cResult[11] = tmp9;
     cResult[12] = tmp4.artHeroImage;
@@ -213,7 +214,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[9] = tmp4.artHero;
   cResult[10] = items2;
   const tmpResult = ReanimatedRexport;
-}) : ((game) => {
+}) : (function GameProfileHeader(game) {
   game = game.game;
   ({ scrollY, onHeightMeasured } = game);
   scrollY = undefined;
@@ -257,13 +258,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const obj5 = { uri: tmp7 };
     obj4.source = obj5;
     obj4.style = tmp.artHeroImage;
-    tmp12 = closure_7(closure_5, obj4);
+    tmp12 = closure_7(onHeightMeasured(tmp3[11]), obj4);
   }
   const items4 = [tmp12, ];
   const obj6 = { colors: null, style: tmp.artHeroGradient };
   const items5 = [c10, tmp.container.backgroundColor];
   obj6.colors = items5;
-  items4[1] = closure_7(onHeightMeasured(scrollY[11]), obj6);
+  items4[1] = closure_7(onHeightMeasured(scrollY[12]), obj6);
   obj3.children = items4;
   const items6 = [closure_8(onHeightMeasured(scrollY[8]).View, obj3), ];
   const obj7 = { style: tmp.headerContent, children: null };
@@ -274,52 +275,52 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const obj11 = { uri: memo };
     obj10.source = obj11;
     obj10.style = tmp.image;
-    obj9.children = closure_7(closure_5, obj10);
+    obj9.children = closure_7(onHeightMeasured(tmp3[11]), obj10);
     let obj12 = obj9;
   } else {
     obj12 = { style: tmp.iconContainer, children: null };
-    let tmp15Result = null != memo1;
-    if (tmp15Result) {
+    let tmp14Result = null != memo1;
+    if (tmp14Result) {
       const obj13 = { source: null, style: null };
       const obj14 = { uri: memo1 };
       obj13.source = obj14;
       obj13.style = tmp.image;
-      tmp15Result = closure_7(closure_5, obj13);
+      tmp14Result = closure_7(onHeightMeasured(tmp3[11]), obj13);
     }
-    obj12.children = tmp15Result;
+    obj12.children = tmp14Result;
   }
   obj8.children = closure_7(closure_4, obj12);
   const items7 = [closure_7(closure_4, obj8), ];
   const obj15 = { style: tmp.titleContainer, children: null };
-  let tmp15Result4 = null != l30Rank;
-  if (tmp15Result4) {
+  let tmp14Result4 = null != l30Rank;
+  if (tmp14Result4) {
     const obj16 = { rank: l30Rank };
-    tmp15Result4 = closure_7(onHeightMeasured(tmp3[12]), obj16);
+    tmp14Result4 = closure_7(onHeightMeasured(tmp3[13]), obj16);
   }
-  const items8 = [tmp15Result4, , ];
+  const items8 = [tmp14Result4, , ];
   const obj17 = { style: tmp.titleRow, children: null };
   const obj18 = { variant: "heading-xxl/semibold", color: "text-overlay-light", lineClamp: 2, style: null, children: game.name };
   const items9 = [, ];
   ({ textShadow: arr11[0], title: arr11[1] } = tmp);
   obj18.style = items9;
-  const items10 = [closure_7(game(scrollY[13]).Text, obj18), ];
-  let tmp15Result5 = game.id === closure_6;
-  if (tmp15Result5) {
-    const obj19 = { source: onHeightMeasured(tmp3[14]), style: tmp.wavingWumpus, accessible: false, importantForAccessibility: "no" };
-    tmp15Result5 = closure_7(closure_5, obj19);
+  const items10 = [closure_7(game(scrollY[14]).Text, obj18), ];
+  let tmp14Result5 = game.id === closure_6;
+  if (tmp14Result5) {
+    const obj19 = { source: onHeightMeasured(tmp3[15]), style: tmp.wavingWumpus, accessible: false, importantForAccessibility: "no" };
+    tmp14Result5 = closure_7(closure_5, obj19);
   }
-  items10[1] = tmp15Result5;
+  items10[1] = tmp14Result5;
   obj17.children = items10;
   items8[1] = closure_8(closure_4, obj17);
-  let tmp15Result6 = null;
+  let tmp14Result6 = null;
   if (null != joined) {
-    tmp15Result6 = null;
+    tmp14Result6 = null;
     if ("" !== joined) {
       const obj20 = { variant: "text-md/normal", color: "text-overlay-light", lineClamp: 2, style: tmp.textShadow, children: joined };
-      tmp15Result6 = closure_7(tmp2(tmp3[13]).Text, obj20);
+      tmp14Result6 = closure_7(tmp2(tmp3[14]).Text, obj20);
     }
   }
-  items8[2] = tmp15Result6;
+  items8[2] = tmp14Result6;
   obj15.children = items8;
   items7[1] = closure_8(closure_4, obj15);
   obj7.children = items7;

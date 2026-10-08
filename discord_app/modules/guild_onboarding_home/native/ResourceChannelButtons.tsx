@@ -1,8 +1,8 @@
-// === Module 11926: ResourceChannelButtons ===
+// === Module 11999: ResourceChannelButtons ===
 
-// Module 11926 (ResourceChannelButtons)
+// Module 11999 (ResourceChannelButtons)
 import nativeDefault from "native" /* 587 */;
-import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 7532 */;
+import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 9254 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { wrapper: { display: "flex", flexDirection: "row", padding: 12, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, buttonWrapper: { flex: 1 }, spacer: { width: 8 }, iconColor: null };
 let obj3 = { display: "flex", flexDirection: "row", padding: 12, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.iconColor = { color: nativeDefault.colors.WHITE };
@@ -20,7 +20,7 @@ let obj4 = { color: nativeDefault.colors.WHITE };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/native/ResourceChannelButtons.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ResourceChannelButtons(channel) {
   const cResult = channel(first[7]).c(22);
   channel = channel.channel;
   const obj = channel(first[7]);
@@ -136,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   cResult[2] = fn;
   tmp8 = fn;
   const obj3 = channel(first[9]);
-}) : ((channel) => {
+}) : (function ResourceChannelButtons(channel) {
   channel = channel.channel;
   first = undefined;
   noop = undefined;

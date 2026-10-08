@@ -1,14 +1,14 @@
-// === Module 15650: UserSettingsDesignSystemText ===
+// === Module 15930: UserSettingsDesignSystemText ===
 
-// Module 15650 (UserSettingsDesignSystemText)
+// Module 15930 (UserSettingsDesignSystemText)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4586 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import TextVariants from "TextVariants" /* 4893 */;
-import Stack_Stack from "Stack/Stack" /* 5600 */;
-import TableRow from "TableRow" /* 6000 */;
-import TableRowGroup from "TableRowGroup" /* 6081 */;
+import useToken from "useToken" /* 4778 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import TextVariants from "TextVariants" /* 5087 */;
+import Stack_Stack from "Stack/Stack" /* 5373 */;
+import TableRow from "TableRow" /* 6184 */;
+import TableRowGroup from "TableRowGroup" /* 6267 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemText.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSettingsDesignSystemText() {
   const cResult = c.c(5);
   const token = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_PADDING);
   if (cResult[0] !== token) {
@@ -60,7 +60,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp10 = cResult[4];
   }
   return tmp10;
-}) : (() => {
+}) : (function UserSettingsDesignSystemText() {
   let obj2 = { children: null };
   const token = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_PADDING);
   const obj3 = { spacing: nativeDefault.space.PX_24, style: { paddingHorizontal: token }, children: null };

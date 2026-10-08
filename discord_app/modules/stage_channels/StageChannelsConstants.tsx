@@ -1,15 +1,15 @@
-// === Module 5578: StageChannelsConstants ===
+// === Module 5888: StageChannelsConstants ===
 
-// Module 5578 (StageChannelsConstants)
+// Module 5888 (StageChannelsConstants)
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1126 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2127 */;
 import size from "module_2" /* 2 */;
 
 const HelpdeskArticles = Constants.HelpdeskArticles;
 const result = size.fileFinishedImporting("modules/stage_channels/StageChannelsConstants.tsx");
 
-export const MAX_STAGE_TOPIC_LENGTH = 240;
+export const MAX_STAGE_TOPIC_LENGTH = 120;
 export const MAX_AUDIENCE_ROW_LIMIT = 4;
 export const STAGE_APPLICATION_ID = "834488117758001152";
 export const REQUEST_TO_SPEAK_SHEET_KEY = "request-to-speak-list";

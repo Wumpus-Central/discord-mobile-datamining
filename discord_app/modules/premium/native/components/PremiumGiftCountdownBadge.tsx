@@ -1,17 +1,17 @@
-// === Module 10500: PremiumGiftCountdownBadge ===
+// === Module 10097: PremiumGiftCountdownBadge ===
 
-// Module 10500 (PremiumGiftCountdownBadge)
+// Module 10097 (PremiumGiftCountdownBadge)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import Text_Text from "Text/Text" /* 4892 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import Text_Text from "Text/Text" /* 5086 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles(() => {
   const obj = { badge: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.round, paddingHorizontal: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND }, text: null };
   const obj2 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.round, paddingHorizontal: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
@@ -30,7 +30,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/components/PremiumGiftCountdownBadge.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumGiftCountdownBadge(arg0) {
   const cResult = c.c(12);
   ({ text, icon, style } = arg0);
   const tmp4 = closure_6();
@@ -80,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = tmp4.badge;
   cResult[2] = items1;
   tmp5 = items1;
-}) : ((text) => {
+}) : (function PremiumGiftCountdownBadge(text) {
   ({ icon, style } = text);
   const tmp = closure_6();
   const obj = { style: null, children: null };

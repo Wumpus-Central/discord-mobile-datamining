@@ -1,12 +1,12 @@
-// === Module 8937: FormRadioRow ===
+// === Module 8568: FormRadioRow ===
 
-// Module 8937 (FormRadioRow)
+// Module 8568 (FormRadioRow)
 import c from "c" /* 576 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4600 */;
-import TableRadioRow from "TableRadioRow" /* 6078 */;
-import RedesignCompat from "RedesignCompat" /* 6080 */;
-import FormRowDefault from "FormRow" /* 6640 */;
-import Form_FormRadioDefault from "Form/FormRadio" /* 6646 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4792 */;
+import TableRadioRow from "TableRadioRow" /* 6264 */;
+import RedesignCompat from "RedesignCompat" /* 6266 */;
+import FormRowDefault from "FormRow" /* 6817 */;
+import Form_FormRadioDefault from "Form/FormRadio" /* 6823 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormRadioRow.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormRadioRow(arg0) {
   const cResult = c.c(31);
   if (cResult[0] !== arg0) {
     ({ selected, align, leading, value, onPress, style } = arg0);
@@ -152,7 +152,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp17 = tmp18;
   }
   const tmpResult = useA11yRolesNative;
-}) : ((arg0) => {
+}) : (function FormRadioRow(arg0) {
   ({ selected, align } = arg0);
   if (align === undefined) {
     align = "left";

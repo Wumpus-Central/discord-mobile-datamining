@@ -1,9 +1,9 @@
-// === Module 9938: useModalDismissGuardRefreshControl ===
+// === Module 9460: useModalDismissGuardRefreshControl ===
 
-// Module 9938 (useModalDismissGuardRefreshControl)
+// Module 9460 (useModalDismissGuardRefreshControl)
 import c from "c" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import PortalKeyboardModalContext from "PortalKeyboardModalContext" /* 9939 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import PortalKeyboardModalContext from "PortalKeyboardModalContext" /* 9461 */;
 import noop_mod from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/keyboard/native/useModalDismissGuardRefreshControl.tsx");
 
-export const useModalDismissGuardRefreshControl = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useModalDismissGuardRefreshControl = ReactCompilerGating.isReactCompilerEnabled() ? (function useModalDismissGuardRefreshControl() {
   const cResult = c.c(2);
   const isPortalKeyboardInModal = PortalKeyboardModalContext.useIsPortalKeyboardInModal();
   if (cResult[0] !== isPortalKeyboardInModal) {
@@ -36,8 +36,8 @@ export const useModalDismissGuardRefreshControl = ReactCompilerGating.isReactCom
     tmp5 = cResult[1];
   }
   return tmp5;
-}) : (() => {
-  isPortalKeyboardInModal = isPortalKeyboardInModal(9939).useIsPortalKeyboardInModal();
+}) : (function useModalDismissGuardRefreshControl() {
+  isPortalKeyboardInModal = isPortalKeyboardInModal(9461).useIsPortalKeyboardInModal();
   const items = [isPortalKeyboardInModal];
   return noop.useMemo(() => {
     let tmp;

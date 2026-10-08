@@ -1,8 +1,8 @@
-// === Module 14701: useRefreshLinkCodeOnExpiry ===
+// === Module 14962: useRefreshLinkCodeOnExpiry ===
 
-// Module 14701 (useRefreshLinkCodeOnExpiry)
+// Module 14962 (useRefreshLinkCodeOnExpiry)
 import c from "c" /* 576 */;
-import useStableCallbackDefault from "useStableCallback" /* 6459 */;
+import useStableCallbackDefault from "useStableCallback" /* 6637 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -10,7 +10,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/hooks/useRefreshLinkCodeOnExpiry.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useRefreshLinkCodeOnExpiry(arg0, arg1) {
   closure_0 = arg0;
   const cResult = c.c(4);
   const tmp2 = useStableCallbackDefault(arg1);
@@ -42,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   cResult[3] = items;
   tmp4 = items;
   tmp3 = fn;
-}) : ((arg0, arg1) => {
+}) : (function useRefreshLinkCodeOnExpiry(arg0, arg1) {
   closure_0 = arg0;
   const tmp = useStableCallbackDefault(arg1);
   closure_1 = tmp;

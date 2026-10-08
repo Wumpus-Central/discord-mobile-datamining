@@ -1,10 +1,10 @@
-// === Module 13770: GuildBadgeBunny ===
+// === Module 13992: GuildBadgeBunny ===
 
-// Module 13770 (GuildBadgeBunny)
+// Module 13992 (GuildBadgeBunny)
 import c from "c" /* 576 */;
-import v1 from "v1" /* 1266 */;
-import inlineStyles from "inlineStyles" /* 8169 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 13748 */;
+import v1 from "v1" /* 1278 */;
+import inlineStyles from "inlineStyles" /* 7550 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 13970 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,7 +19,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgeBunny.tsx");
 
-export const GuildBadgeBunny = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const GuildBadgeBunny = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBadgeBunny(arg0) {
   const cResult = c.c(56);
   if (cResult[0] !== arg0) {
     ({ width, height, primaryTintColor } = arg0);
@@ -280,7 +280,7 @@ export const GuildBadgeBunny = ReactCompilerGating.isReactCompilerEnabled() ? ((
   cResult[48] = tmp19;
   cResult[49] = tmp91;
   tmp90 = tmp91;
-}) : ((primaryTintColor) => {
+}) : (function GuildBadgeBunny(primaryTintColor) {
   let num = primaryTintColor.width;
   if (num === undefined) {
     num = 24;

@@ -1,11 +1,11 @@
-// === Module 8104: useIsOnStartStageScreenStore ===
+// === Module 7479: useIsOnStartStageScreenStore ===
 
-// Module 8104 (useIsOnStartStageScreenStore)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
-import StageChannelPermissions from "StageChannelPermissions" /* 2060 */;
+// Module 7479 (useIsOnStartStageScreenStore)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1271 */;
+import StageChannelPermissions from "StageChannelPermissions" /* 2072 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
 
 const require = globalThis.__r;
 
@@ -22,7 +22,7 @@ const result = size.fileFinishedImporting("modules/stage_channels/useIsOnStartSt
 
 export default obj4;
 export { setIsOnStartStageScreen };
-export const useUpdateIsOnStartStageScreenEffect = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
+export const useUpdateIsOnStartStageScreenEffect = ReactCompilerGating.isReactCompilerEnabled() ? (function useUpdateIsOnStartStageScreenEffect(id) {
   _require = id;
   const cResult = require("c").c(11);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -52,18 +52,18 @@ export const useUpdateIsOnStartStageScreenEffect = ReactCompilerGating.isReactCo
     tmp8 = cResult[3];
   }
   if (cResult[4] !== id) {
-    class O {
+    class I {
       constructor() {
         return closure_4.can(closure_0(closure_2[8]).MODERATE_STAGE_CHANNEL_PERMISSIONS, closure_0);
       }
     }
     const items2 = [id];
     cResult[4] = id;
-    cResult[5] = O;
+    cResult[5] = I;
     cResult[6] = items2;
     let tmp11 = items2;
   } else {
-    class O {
+    class I {
       constructor() {
         return closure_4.can(closure_0(closure_2[8]).MODERATE_STAGE_CHANNEL_PERMISSIONS, closure_0);
       }
@@ -71,9 +71,9 @@ export const useUpdateIsOnStartStageScreenEffect = ReactCompilerGating.isReactCo
     tmp11 = cResult[6];
   }
   const tmpResult = require("initialize");
-  stateFromStores1 = require("initialize").useStateFromStores(tmp8, O, tmp11);
+  stateFromStores1 = require("initialize").useStateFromStores(tmp8, I, tmp11);
   if (stateFromStores1) {
-    class O {
+    class I {
       constructor() {
         return closure_4.can(closure_0(closure_2[8]).MODERATE_STAGE_CHANNEL_PERMISSIONS, closure_0);
       }
@@ -81,14 +81,14 @@ export const useUpdateIsOnStartStageScreenEffect = ReactCompilerGating.isReactCo
   }
   stateFromStores1 = tmp13;
   if (cResult[7] === stateFromStores1) {
-    class O {
+    class I {
       constructor() {
         return closure_4.can(closure_0(closure_2[8]).MODERATE_STAGE_CHANNEL_PERMISSIONS, closure_0);
       }
     }
     const effect = noop.useEffect(fn2, items3);
   }
-  fn2 = function l() {
+  fn2 = function _() {
     if (stateFromStores) {
       if (!stateFromStores1) {
         closure_0 = false;
@@ -105,7 +105,7 @@ export const useUpdateIsOnStartStageScreenEffect = ReactCompilerGating.isReactCo
   cResult[9] = fn2;
   cResult[10] = items3;
   const tmpResult2 = require("initialize");
-}) : ((id) => {
+}) : (function useUpdateIsOnStartStageScreenEffect(id) {
   _require = id;
   const items = [SelectedChannelStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => SelectedChannelStore.getVoiceChannelId() === id.id);
@@ -115,7 +115,7 @@ export const useUpdateIsOnStartStageScreenEffect = ReactCompilerGating.isReactCo
   const stateFromStores1 = require("initialize").useStateFromStores(items1, () => PermissionStore.can(StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS, closure_0), items2);
   let tmp3 = stateFromStores1;
   if (stateFromStores1) {
-    tmp3 = !stateFromStores(8105)(id.id);
+    tmp3 = !stateFromStores(7480)(id.id);
   }
   dependencyMap = tmp3;
   const items3 = [stateFromStores, tmp3];

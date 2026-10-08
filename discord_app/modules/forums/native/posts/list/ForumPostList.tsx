@@ -1,27 +1,27 @@
-// === Module 11649: ForumPostList ===
+// === Module 11714: ForumPostList ===
 
-// Module 11649 (ForumPostList)
+// Module 11714 (ForumPostList)
 import c from "c" /* 576 */;
-import ForumTagHooks from "ForumTagHooks" /* 6788 */;
-import ForumPostPinIconDefault from "ForumPostPinIcon" /* 11631 */;
-import ForumPostAppliedTags from "ForumPostAppliedTags" /* 11641 */;
-import ForumPostListBodyDefault from "ForumPostListBody" /* 11650 */;
-import ForumPostListFooterDefault from "ForumPostListFooter" /* 11653 */;
+import ForumTagHooks from "ForumTagHooks" /* 6963 */;
+import ForumPostPinIconDefault from "ForumPostPinIcon" /* 11695 */;
+import ForumPostAppliedTags from "ForumPostAppliedTags" /* 11706 */;
+import ForumPostListBodyDefault from "ForumPostListBody" /* 11715 */;
+import ForumPostListFooterDefault from "ForumPostListFooter" /* 11718 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const ChannelFlags = fn(2058).ChannelFlags;
+const ChannelFlags = fn(2070).ChannelFlags;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_9 = createStyles.createStyles({ header: { display: "flex", flexDirection: "row", alignItems: "center", marginBottom: 8 }, content: { flex: 1, marginBottom: 12 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/posts/list/ForumPostList.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPostList(arg0) {
   const cResult = c.c(31);
   ({ messageContent, firstMessage, firstMessageLoaded, hasUnreads, isNew, media, isEmbed, isLocalDeviceMedia, parentChannel, thread, senderModifier } = arg0);
   const tmp4 = closure_9();
@@ -155,7 +155,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[7] = tmp12Result;
   tmp10 = tmp12Result;
   const tmp5 = _slicedToArray(ForumTagHooks.useSomeAppliedTags(thread, 2), 2);
-}) : ((arg0) => {
+}) : (function ForumPostList(arg0) {
   ({ firstMessage, hasUnreads, thread } = arg0);
   ({ messageContent, firstMessageLoaded, isNew, media, isEmbed, isLocalDeviceMedia, parentChannel, senderModifier } = arg0);
   const tmp = closure_9();

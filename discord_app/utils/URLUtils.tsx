@@ -1,12 +1,12 @@
-// === Module 1371: URLUtils ===
+// === Module 1383: URLUtils ===
 
-// Module 1371 (URLUtils)
+// Module 1383 (URLUtils)
 import _modDef12 from "module_12" /* 12 */;
 import Constants from "Constants" /* 1085 */;
-import URLUtilsDefault from "URLUtils" /* 1371 */;
-import UrlAll from "Url" /* 1373 */;
-import GlobalUtils from "GlobalUtils" /* 1375 */;
-import ip from "ip" /* 1372 */;
+import URLUtilsDefault from "URLUtils" /* 1383 */;
+import UrlAll from "Url" /* 1385 */;
+import GlobalUtils from "GlobalUtils" /* 1387 */;
+import ip from "ip" /* 1384 */;
 import size from "module_2" /* 2 */;
 
 function isDiscordProxiedAssetUrl(url, arg1, arg2) {

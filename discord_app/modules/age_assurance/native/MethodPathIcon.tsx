@@ -1,8 +1,8 @@
-// === Module 8168: MethodPathIcon ===
+// === Module 7549: MethodPathIcon ===
 
-// Module 8168 (MethodPathIcon)
+// Module 7549 (MethodPathIcon)
 import nativeDefault from "native" /* 587 */;
-import inlineStyles from "inlineStyles" /* 8169 */;
+import inlineStyles from "inlineStyles" /* 7550 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -11,7 +11,7 @@ const inlineStylesDefault = inlineStyles;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: null };
 let size = { width: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE, height: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE, justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.lg };
 obj2.container = size;
@@ -20,12 +20,12 @@ const ReactCompilerGating = fn(558);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/native/MethodPathIcon.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((icon) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function MethodPathIcon(icon) {
   const cResult = token(576).c(10);
   let paths = icon.icon;
   const tmp3 = closure_5();
   const obj = token(576);
-  token = token(4586).useToken(nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT);
+  token = token(4778).useToken(nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT);
   if (cResult[0] === paths.paths) {
     if (cResult[1] === token) {
       if (cResult[5] !== cResult[2]) {
@@ -52,7 +52,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((icon) => {
     }
   }
   if (cResult[3] !== token) {
-    const fn = function c(d) {
+    const fn = function h(d) {
       return jsx(inlineStyles.Path, { d: d.d, fill: token, fillRule: d.fillRule }, d.d);
     };
     cResult[3] = token;
@@ -67,8 +67,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((icon) => {
   cResult[0] = paths;
   cResult[1] = token;
   cResult[2] = mapped;
-  const obj2 = token(4586);
-}) : ((icon) => {
+  const obj2 = token(4778);
+}) : (function MethodPathIcon(icon) {
   _require = undefined;
   const tmp = closure_5();
   _require = require("useToken").useToken(nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT);

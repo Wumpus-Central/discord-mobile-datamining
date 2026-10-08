@@ -1,15 +1,15 @@
-// === Module 17974: GuildRoleSubscriptionTierEditStep ===
+// === Module 18261: GuildRoleSubscriptionTierEditStep ===
 
-// Module 17974 (GuildRoleSubscriptionTierEditStep)
+// Module 18261 (GuildRoleSubscriptionTierEditStep)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import useNavigation from "useNavigation" /* 1490 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6626 */;
-import FormSeparatorDefault from "FormSeparator" /* 15050 */;
+import useNavigation from "useNavigation" /* 1502 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6803 */;
+import FormSeparatorDefault from "FormSeparator" /* 15312 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,11 +19,11 @@ get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, height: "100%" }, scrollContainer: { flexGrow: 1 }, headerContainer: { position: "relative", paddingTop: 48, paddingBottom: 8, paddingHorizontal: 16, alignItems: "center" }, title: { marginTop: 12, textAlign: "center" }, subtitle: { marginTop: 8, textAlign: "center" }, separator: { marginTop: 24 }, footerContainer: { width: "100%", padding: 16 } };
 let closure_10 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Header(arg0) {
   const cResult = c.c(13);
   ({ description, title } = arg0);
   const tmp4 = closure_10();
@@ -78,7 +78,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = tmp6;
   tmp5 = tmp6;
   const obj5 = { style: tmp4.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: title };
-}) : ((arg0) => {
+}) : (function Header(arg0) {
   ({ description, title } = arg0);
   const tmp = closure_10();
   const obj = { top: true, style: tmp.headerContainer, children: null };
@@ -87,7 +87,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return options(common_SafeAreaView.SafeAreaPaddingView, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((canProceedToNextStep) => {
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Footer(canProceedToNextStep) {
   const cResult = c.c(15);
   ({ nextStep, onProceed, submitting } = canProceedToNextStep);
   const tmp4 = closure_10();
@@ -151,7 +151,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((canProceedToNe
     cResult[6] = items;
     tmp11 = items;
   }
-}) : ((arg0) => {
+}) : (function Footer(arg0) {
   ({ canProceedToNextStep, nextStep, onProceed, submitting } = arg0);
   if (null == nextStep) {
     const intl2 = util.intl;
@@ -167,7 +167,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((canProceedToNe
   const tmp = closure_10();
   items[1] = { paddingBottom: useSafeAreaInsetsDefault().bottom };
   obj.style = items;
-  obj.children = closure_1_8(tmp5(5601).Button, { loading: submitting, disabled: !canProceedToNextStep, text: stringResult, onPress: onProceed });
+  obj.children = closure_1_8(tmp5(5375).Button, { loading: submitting, disabled: !canProceedToNextStep, text: stringResult, onPress: onProceed });
   return closure_1_8(timestampProducer, obj);
 });
 ReactCompilerGating = fn(558);
@@ -175,8 +175,8 @@ let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, height: 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierEditStep.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((scrollable) => {
-  const cResult = c.c(32);
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRoleSubscriptionTierEditStep(scrollable) {
+  const cResult = c.c(30);
   if (cResult[0] !== scrollable) {
     scrollable = scrollable.scrollable;
     const tmp8 = _objectWithoutProperties(scrollable, closure_3);
@@ -209,115 +209,132 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((scrollable) => {
         } else {
           tmp29 = cResult[8];
         }
-        if (cResult[9] !== container.scrollContainer) {
-          const items = [container.scrollContainer];
-          cResult[9] = container.scrollContainer;
-          cResult[10] = items;
-          let tmp36 = items;
-        } else {
-          tmp36 = cResult[10];
-        }
-        if (cResult[11] === tmp4.children) {
-          if (cResult[12] === tmp36) {
-            let tmp37 = cResult[13];
+        if (cResult[9] === tmp4.children) {
+          if (cResult[10] === container.scrollContainer) {
+            let tmp36 = cResult[11];
           }
-          if (cResult[14] === tmp10) {
-            if (cResult[15] === tmp4) {
-              let tmp41 = cResult[16];
+          if (cResult[12] === tmp10) {
+            if (cResult[13] === tmp4) {
+              let tmp40 = cResult[14];
             }
-            if (cResult[17] === container.container) {
-              if (cResult[18] === tmp29) {
-                if (cResult[19] === tmp37) {
+            if (cResult[15] === container.container) {
+              if (cResult[16] === tmp29) {
+                if (cResult[17] === tmp36) {
                 }
               }
             }
             const obj3 = { style: container.container, children: null };
-            const items1 = [tmp29, tmp37, tmp41];
-            obj3.children = items1;
-            const tmp51 = options(timestampProducer, obj3);
+            const items = [tmp29, tmp36, tmp40];
+            obj3.children = items;
+            const tmp50 = options(timestampProducer, obj3);
             container = container.container;
-            cResult[17] = container;
-            cResult[18] = tmp29;
-            cResult[19] = tmp37;
-            cResult[20] = tmp41;
-            cResult[21] = tmp51;
+            cResult[15] = container;
+            cResult[16] = tmp29;
+            class S {
+              constructor() {
+                if (null != onProceed) {
+                  tmpResult = tmp();
+                } else if (null != nextStep) {
+                  tmp3 = closure_0;
+                  arr = closure_0.push(tmp2);
+                }
+                return;
+              }
+            }
+            cResult[18] = tmp40;
+            cResult[19] = tmp50;
           }
           const obj4 = {};
           const merged1 = Object.assign(tmp4);
           obj4.onProceed = tmp10;
-          const tmp47 = closure_1_8(closure_12, obj4);
-          cResult[14] = tmp10;
-          cResult[15] = tmp4;
-          cResult[16] = tmp47;
-          tmp41 = tmp47;
+          const tmp46 = closure_1_8(closure_12, obj4);
+          cResult[12] = tmp10;
+          cResult[13] = tmp4;
+          cResult[14] = tmp46;
+          tmp40 = tmp46;
         }
-        const obj5 = { keyboardShouldPersistTaps: "handled", showsVerticalScrollIndicator: false, alwaysBounceVertical: false, contentContainerStyle: tmp36, children: tmp4.children };
-        const tmp40 = closure_1_8(React5, obj5);
-        cResult[11] = tmp4.children;
-        cResult[12] = tmp36;
-        cResult[13] = tmp40;
-        tmp37 = tmp40;
+        const obj5 = { keyboardShouldPersistTaps: "handled", showsVerticalScrollIndicator: false, alwaysBounceVertical: false, contentContainerStyle: container.scrollContainer, children: tmp4.children };
+        const tmp39 = closure_1_8(React5, obj5);
+        cResult[9] = tmp4.children;
+        cResult[10] = container.scrollContainer;
+        cResult[11] = tmp39;
+        tmp36 = tmp39;
       } else {
-        if (cResult[22] !== tmp4) {
+        if (cResult[20] !== tmp4) {
           const obj6 = {};
           const merged2 = Object.assign(tmp4);
           const tmp17 = closure_1_8(closure_11, obj6);
-          cResult[22] = tmp4;
-          cResult[23] = tmp17;
+          cResult[20] = tmp4;
+          cResult[21] = tmp17;
           let tmp11 = tmp17;
         } else {
-          tmp11 = cResult[23];
+          tmp11 = cResult[21];
         }
-        if (cResult[24] === tmp10) {
-          if (cResult[25] === tmp4) {
-            let tmp18 = cResult[26];
+        if (cResult[22] === tmp10) {
+          if (cResult[23] === tmp4) {
+            let tmp18 = cResult[24];
           }
-          if (cResult[27] === tmp4.children) {
-            if (cResult[28] === container.container) {
-              if (cResult[29] === tmp11) {
-                if (cResult[30] === tmp18) {
-                  let tmp25 = cResult[31];
+          if (cResult[25] === tmp4.children) {
+            if (cResult[26] === container.container) {
+              if (cResult[27] === tmp11) {
+                if (cResult[28] === tmp18) {
+                  let tmp25 = cResult[29];
                 }
                 return tmp25;
               }
             }
           }
           const obj7 = { style: container.container, children: null };
-          const items2 = [tmp11, tmp4.children, tmp18];
-          obj7.children = items2;
+          const items1 = [tmp11, tmp4.children, tmp18];
+          obj7.children = items1;
           const tmp28 = options(timestampProducer, obj7);
-          cResult[27] = tmp4.children;
-          cResult[28] = container.container;
-          cResult[29] = tmp11;
-          cResult[30] = tmp18;
-          cResult[31] = tmp28;
+          cResult[25] = tmp4.children;
+          cResult[26] = container.container;
+          cResult[27] = tmp11;
+          class S {
+            constructor() {
+              if (null != onProceed) {
+                tmpResult = tmp();
+              } else if (null != nextStep) {
+                tmp3 = closure_0;
+                arr = closure_0.push(tmp2);
+              }
+              return;
+            }
+          }
+          cResult[28] = tmp18;
+          cResult[29] = tmp28;
           tmp25 = tmp28;
         }
         const obj8 = {};
         const merged3 = Object.assign(tmp4);
         obj8.onProceed = tmp10;
         const tmp24 = closure_1_8(closure_12, obj8);
-        cResult[24] = tmp10;
-        cResult[25] = tmp4;
-        cResult[26] = tmp24;
+        cResult[22] = tmp10;
+        cResult[23] = tmp4;
+        cResult[24] = tmp24;
         tmp18 = tmp24;
       }
     }
   }
-  const fn = function v() {
-    if (null != onProceed) {
-      tmp();
-    } else if (null != nextStep) {
-      navigation.push(tmp2);
+  class S {
+    constructor() {
+      if (null != onProceed) {
+        tmpResult = tmp();
+      } else if (null != nextStep) {
+        tmp3 = closure_0;
+        arr = closure_0.push(tmp2);
+      }
+      return;
     }
-  };
+  }
   cResult[3] = navigation;
   cResult[4] = nextStep;
   cResult[5] = onProceed;
-  cResult[6] = fn;
-  tmp10 = fn;
+  cResult[6] = S;
+  tmp10 = S;
   const tmpResult = useNavigation;
-}) : ((scrollable) => {
+}) : (function GuildRoleSubscriptionTierEditStep(scrollable) {
   const merged = Object.assign(scrollable, Object.assign({ scrollable: 0 }));
   const tmp2 = closure_10();
   const navigation = useNavigation.useNavigation();
@@ -336,10 +353,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((scrollable) => {
     const obj3 = {};
     const merged1 = Object.assign(merged);
     const items1 = [closure_1_8(closure_11, obj3), , ];
-    const obj4 = { keyboardShouldPersistTaps: "handled", showsVerticalScrollIndicator: false, alwaysBounceVertical: false, contentContainerStyle: null, children: null };
-    const items2 = [tmp2.scrollContainer];
-    obj4.contentContainerStyle = items2;
-    obj4.children = merged.children;
+    const obj4 = { keyboardShouldPersistTaps: "handled", showsVerticalScrollIndicator: false, alwaysBounceVertical: false, contentContainerStyle: tmp2.scrollContainer, children: merged.children };
     items1[1] = closure_1_8(React5, obj4);
     const obj5 = {};
     const merged2 = Object.assign(merged);
@@ -351,12 +365,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((scrollable) => {
     obj6 = { style: tmp2.container, children: null };
     const obj7 = {};
     const merged3 = Object.assign(merged);
-    const items3 = [closure_1_8(closure_11, obj7), merged.children, ];
+    const items2 = [closure_1_8(closure_11, obj7), merged.children, ];
     const obj8 = {};
     const merged4 = Object.assign(merged);
     obj8.onProceed = callback;
-    items3[2] = closure_1_8(closure_12, obj8);
-    obj6.children = items3;
+    items2[2] = closure_1_8(closure_12, obj8);
+    obj6.children = items2;
   }
   return options(timestampProducer, obj6);
 });

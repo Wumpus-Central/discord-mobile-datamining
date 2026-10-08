@@ -1,22 +1,22 @@
-// === Module 10498: MarketingComponentHooks ===
+// === Module 10095: MarketingComponentHooks ===
 
-// Module 10498 (MarketingComponentHooks)
+// Module 10095 (MarketingComponentHooks)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import themes from "themes" /* 4593 */;
-import useThemeDefault from "useTheme" /* 4797 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import themes from "themes" /* 4785 */;
+import useThemeDefault from "useTheme" /* 4991 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/promotions/MarketingComponentHooks.tsx");
 
-export const useThemeAndReducedMotionAwareAssetUrl = ReactCompilerGating.isReactCompilerEnabled() ? ((lightStaticUrl, arg1) => {
+export const useThemeAndReducedMotionAwareAssetUrl = ReactCompilerGating.isReactCompilerEnabled() ? (function useThemeAndReducedMotionAwareAssetUrl(lightStaticUrl, arg1) {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AccessibilityStore];
-    const fn = function u() {
+    const fn = function s() {
       return useReducedMotion.useReducedMotion;
     };
     cResult[0] = items;
@@ -34,7 +34,7 @@ export const useThemeAndReducedMotionAwareAssetUrl = ReactCompilerGating.isReact
     const tmpResult2 = themes;
   }
   const tmpResult = initialize;
-}) : ((lightStaticUrl, arg1) => {
+}) : (function useThemeAndReducedMotionAwareAssetUrl(lightStaticUrl, arg1) {
   const tmp2 = useThemeDefault();
   const items = [AccessibilityStore];
   const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);

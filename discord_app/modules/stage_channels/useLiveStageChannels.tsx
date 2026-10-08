@@ -1,19 +1,19 @@
-// === Module 16150: useLiveStageChannels ===
+// === Module 16410: useLiveStageChannels ===
 
-// Module 16150 (useLiveStageChannels)
+// Module 16410 (useLiveStageChannels)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import GlobalUtils from "GlobalUtils" /* 1375 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
-import StageInstanceStore from "StageInstanceStore" /* 2056 */;
+import GlobalUtils from "GlobalUtils" /* 1387 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
+import StageInstanceStore from "StageInstanceStore" /* 2068 */;
 
 const require = globalThis.__r;
 
 require = fn;
 let ReactCompilerGating = fn(558);
-let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAllVisibleChannels(arg0) {
   _require = arg0;
   const cResult = require("c").c(8);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -48,7 +48,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp9 = cResult[4];
   }
   if (cResult[5] !== stateFromStoresArray) {
-    const fn2 = function _() {
+    const fn2 = function h() {
       return stateFromStoresArray.filter((item) => closure_1_4.can(closure_1_0(closure_1_2[3]).JOIN_VOCAL_CHANNEL_PERMISSIONS, item));
     };
     const items3 = [stateFromStoresArray];
@@ -63,7 +63,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const tmpResult = require("initialize");
   return require("initialize").useStateFromStoresArray(tmp9, tmp11, tmp12);
-}) : ((arg0) => {
+}) : (function useAllVisibleChannels(arg0) {
   _require = arg0;
   const items = [ChannelStore];
   const items1 = [arg0];
@@ -78,7 +78,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 });
 fn(558);
 ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAllLiveStageChannels() {
   const cResult = c.c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [StageInstanceStore];
@@ -97,7 +97,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     [tmp4, tmp5, tmp6] = cResult;
   }
   return closure_6(initialize.useStateFromStores(tmp4, tmp5, tmp6));
-}) : (() => {
+}) : (function useAllLiveStageChannels() {
   const items = [StageInstanceStore];
   return closure_6(initialize.useStateFromStores(items, () => {
     allStageInstances = allStageInstances.getAllStageInstances();
@@ -107,7 +107,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useLiveStageChannels.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useLiveStageChannels(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -133,7 +133,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return closure_6(require("initialize").useStateFromStoresArray(first, tmp6, tmp7));
-}) : ((arg0) => {
+}) : (function useLiveStageChannels(arg0) {
   _require = arg0;
   const items = [StageInstanceStore];
   const items1 = [arg0];

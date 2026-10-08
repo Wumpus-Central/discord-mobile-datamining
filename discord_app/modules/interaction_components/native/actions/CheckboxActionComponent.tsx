@@ -1,10 +1,10 @@
-// === Module 17574: CheckboxActionComponent ===
+// === Module 17856: CheckboxActionComponent ===
 
-// Module 17574 (CheckboxActionComponent)
+// Module 17856 (CheckboxActionComponent)
 import _modDef38 from "module_38" /* 38 */;
-import Server from "Server" /* 1985 */;
-import ComponentStateContext from "ComponentStateContext" /* 7806 */;
-import Checkbox from "Checkbox" /* 8981 */;
+import Server from "Server" /* 1997 */;
+import ComponentStateContext from "ComponentStateContext" /* 8225 */;
+import Checkbox from "Checkbox" /* 12885 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/interaction_components/native/actions/CheckboxActionComponent.tsx");
 
-export default noop.memo((type) => {
+export default noop.memo(function CheckboxActionComponent(type) {
   type = type.type;
   const componentStateContext = ComponentStateContext.useComponentStateContext();
   _modDef38(null != componentStateContext, "CheckboxActionComponent must be rendered inside a ComponentStateContext");
@@ -50,7 +50,7 @@ export default noop.memo((type) => {
     label: tmp11.label,
     description: tmp11.description,
     checked: memo,
-    onToggle(value) {
+    onToggle: function onChange(value) {
       executeStateUpdate({ type, value });
     }
   });

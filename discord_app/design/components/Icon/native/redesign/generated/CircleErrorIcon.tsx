@@ -1,11 +1,11 @@
-// === Module 4806: CircleErrorIcon ===
+// === Module 5000: CircleErrorIcon ===
 
-// Module 4806 (CircleErrorIcon)
+// Module 5000 (CircleErrorIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4585 */;
-import _mod4807 from "module_4807" /* 4807 */;
-import _mod4808 from "module_4808" /* 4808 */;
+import BaseIconImage from "BaseIconImage" /* 4777 */;
+import _mod5001 from "module_5001" /* 5001 */;
+import _mod5002 from "module_5002" /* 5002 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx");
 
-export const CircleErrorIcon = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const CircleErrorIcon = ReactCompilerGating.isReactCompilerEnabled() ? (function CircleErrorIcon(arg0) {
   const cResult = c.c(21);
   if (cResult[0] !== arg0) {
     ({ style, secondaryColor, color } = arg0);
@@ -46,7 +46,7 @@ export const CircleErrorIcon = ReactCompilerGating.isReactCompilerEnabled() ? ((
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod4807;
+    const tmpResult = _mod5001;
     cResult[5] = tmpResult;
     let tmp11 = tmpResult;
   } else {
@@ -59,7 +59,7 @@ export const CircleErrorIcon = ReactCompilerGating.isReactCompilerEnabled() ? ((
       }
       const _Symbol = Symbol;
       if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmpResult2 = _mod4808;
+        const tmpResult2 = _mod5002;
         cResult[10] = tmpResult2;
         let tmp16 = tmpResult2;
       } else {
@@ -120,7 +120,7 @@ export const CircleErrorIcon = ReactCompilerGating.isReactCompilerEnabled() ? ((
   cResult[9] = tmp15;
   tmp13 = tmp15;
   const obj5 = { source: tmp11, color: str, style: tmp5 };
-}) : ((color) => {
+}) : (function CircleErrorIcon(color) {
   ({ style, secondaryColor } = color);
   if (secondaryColor === undefined) {
     secondaryColor = "transparent";
@@ -132,8 +132,8 @@ export const CircleErrorIcon = ReactCompilerGating.isReactCompilerEnabled() ? ((
   const merged = Object.assign(color, Object.assign({ style: 0, secondaryColor: 0, color: 0 }));
   const obj = { children: null };
   const merged1 = Object.assign(merged);
-  const items = [timestampProducer(BaseIconImage.BaseIconImage, { source: _mod4807, color: secondaryColor, style }), ];
-  const obj3 = { source: _mod4808, color: INTERACTIVE_ICON_DEFAULT, style: null };
+  const items = [timestampProducer(BaseIconImage.BaseIconImage, { source: _mod5001, color: secondaryColor, style }), ];
+  const obj3 = { source: _mod5002, color: INTERACTIVE_ICON_DEFAULT, style: null };
   const items1 = [style];
   const items2 = [];
   items2[HermesBuiltin.arraySpread(items1.flat(), 0)] = { position: "absolute", top: 0 };

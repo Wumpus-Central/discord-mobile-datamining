@@ -1,6 +1,6 @@
-// === Module 14289: useFocusRefOnNavigation ===
+// === Module 14113: useFocusRefOnNavigation ===
 
-// Module 14289 (useFocusRefOnNavigation)
+// Module 14113 (useFocusRefOnNavigation)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -8,13 +8,13 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Navigator/native/useFocusRefOnNavigation.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((inputRef) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFocusRefOnNavigation(inputRef) {
   const cResult = inputRef(576).c(5);
   inputRef = inputRef.inputRef;
   const enabled = inputRef.enabled;
   dependencyMap = tmp4;
   const obj = inputRef(576);
-  const isFocused = inputRef(1491).useIsFocused();
+  const isFocused = inputRef(1503).useIsFocused();
   if (cResult[0] === (undefined === enabled || enabled)) {
     if (cResult[1] === inputRef) {
       if (cResult[2] === isFocused) {
@@ -49,7 +49,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((inputRef) => {
   cResult[4] = items;
   tmp7 = items;
   tmp6 = fn;
-}) : ((inputRef) => {
+}) : (function useFocusRefOnNavigation(inputRef) {
   inputRef = inputRef.inputRef;
   let flag = inputRef.enabled;
   if (flag === undefined) {

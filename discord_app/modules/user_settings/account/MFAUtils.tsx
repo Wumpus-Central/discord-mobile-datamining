@@ -1,13 +1,13 @@
-// === Module 14596: account/MFAUtils ===
+// === Module 14857: account/MFAUtils ===
 
-// Module 14596 (account/MFAUtils)
+// Module 14857 (account/MFAUtils)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import MFAUtils from "MFAUtils" /* 6446 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
-import UserStore from "UserStore" /* 1377 */;
+import MFAUtils from "MFAUtils" /* 6624 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
@@ -17,7 +17,7 @@ const Constants = fn(1085);
 fn(558);
 const obj2 = { AVAILABLE: "available", UNAVAILABLE_NO_CRYPTO: "unavailable_no_crypto", UNAVAILABLE_UNVERIFIED: "unavailable_unverified" };
 let ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsMFAEnabled() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
@@ -33,7 +33,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     [tmp4, tmp5] = cResult;
   }
   return useStateFromStores.useStateFromStores(tmp4, tmp5);
-}) : (() => {
+}) : (function useIsMFAEnabled() {
   const items = [UserStore];
   return useStateFromStores.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
@@ -41,7 +41,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   });
 });
 ReactCompilerGating = fn(558);
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMFAAvailability() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
@@ -71,7 +71,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     return obj2.UNAVAILABLE_NO_CRYPTO;
   }
   const tmpResult = useStateFromStores;
-}) : (() => {
+}) : (function useMFAAvailability() {
   const items = [UserStore];
   const stateFromStores = useStateFromStores.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
@@ -139,7 +139,7 @@ export const getSMSBackupDisabledMessage = function getSMSBackupDisabledMessage(
 export const useIsMFAEnabled = tmp3;
 export const MFAAvailability = obj2;
 export const useMFAAvailability = tmp4;
-export const use2FARemoveDisableReason = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const use2FARemoveDisableReason = ReactCompilerGating.isReactCompilerEnabled() ? (function use2FARemoveDisableReason(arg0) {
   const cResult = require("c").c(3);
   _require = tmp4;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -248,7 +248,7 @@ export const use2FARemoveDisableReason = ReactCompilerGating.isReactCompilerEnab
   }
   const obj = require("c");
   return require("useStateFromStores").useStateFromStores(first, S);
-}) : (() => {
+}) : (function use2FARemoveDisableReason() {
   let flag = arg0;
   if (arg0 === undefined) {
     flag = false;

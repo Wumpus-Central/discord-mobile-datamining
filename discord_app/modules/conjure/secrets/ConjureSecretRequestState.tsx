@@ -1,9 +1,9 @@
-// === Module 16749: ConjureSecretRequestState ===
+// === Module 17024: ConjureSecretRequestState ===
 
-// Module 16749 (ConjureSecretRequestState)
+// Module 17024 (ConjureSecretRequestState)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import _modDef3753 from "module_3753" /* 3753 */;
+import _modDef3827 from "module_3827" /* 3827 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,14 +11,14 @@ require = fn;
 function isSecretsSavedMessage(content) {
   const trimmed = content.content.trim();
   const intl = util.intl;
-  let tmp5 = trimmed === intl.string(_modDef3753.UGqnoV);
+  let tmp5 = trimmed === intl.string(_modDef3827.UGqnoV);
   if (!tmp5) {
     const intl2 = util.intl;
-    tmp5 = trimmed === intl2.string(_modDef3753.sMQt5O);
+    tmp5 = trimmed === intl2.string(_modDef3827.sMQt5O);
   }
   return tmp5;
 }
-const turnSettled = fn(12924).turnSettled;
+const turnSettled = fn(13073).turnSettled;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/secrets/ConjureSecretRequestState.tsx");
@@ -106,7 +106,7 @@ export const secretRequestStatuses = function secretRequestStatuses(memo, stateF
   }
   return map;
 };
-export const useSecretRequestStatusChanged = ReactCompilerGating.isReactCompilerEnabled() ? ((cardId, arg1) => {
+export const useSecretRequestStatusChanged = ReactCompilerGating.isReactCompilerEnabled() ? (function useSecretRequestStatusChanged(cardId, arg1) {
   closure_1 = arg1;
   const cResult = c.c(3);
   if (cResult[0] === cardId) {
@@ -143,7 +143,7 @@ export const useSecretRequestStatusChanged = ReactCompilerGating.isReactCompiler
   cResult[1] = arg1;
   cResult[2] = fn;
   tmp2 = fn;
-}) : ((cardId, arg1) => {
+}) : (function useSecretRequestStatusChanged(cardId, arg1) {
   closure_1 = arg1;
   [tmp2, tmp3] = noop.useState(() => {
     const obj = { cardId, status: null };

@@ -1,18 +1,18 @@
-// === Module 6904: useSelectedDismissibleContentShared ===
+// === Module 7093: useSelectedDismissibleContentShared ===
 
-// Module 6904 (useSelectedDismissibleContentShared)
+// Module 7093 (useSelectedDismissibleContentShared)
 import noop from "module_19" /* 19 */;
-import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 2039 */;
+import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 2051 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/dismissible_content/useSelectedDismissibleContentShared.tsx");
 
-export const useSelectedDismissibleContentShared = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2, arg3) => {
+export const useSelectedDismissibleContentShared = ReactCompilerGating.isReactCompilerEnabled() ? (function useSelectedDismissibleContentShared(arg0, arg1, arg2, arg3) {
   _require = arg0;
   dependencyMap = arg1;
   noop = arg3;
@@ -30,7 +30,7 @@ export const useSelectedDismissibleContentShared = ReactCompilerGating.isReactCo
             let tmp8 = cResult[8];
           }
           const effect = noop.useEffect(tmp7, tmp8);
-          class D {
+          class T {
             constructor() {
               return () => { ... };
             }
@@ -38,7 +38,7 @@ export const useSelectedDismissibleContentShared = ReactCompilerGating.isReactCo
         }
       }
     }
-    class D {
+    class T {
       constructor() {
         return () => { ... };
       }
@@ -48,10 +48,10 @@ export const useSelectedDismissibleContentShared = ReactCompilerGating.isReactCo
     cResult[4] = arg1;
     cResult[5] = tmp5;
     cResult[6] = arg0;
-    cResult[7] = D;
+    cResult[7] = T;
     cResult[8] = items;
     tmp8 = items;
-    tmp7 = D;
+    tmp7 = T;
   }
   let tmp6 = null != arg0 && !tmp4;
   if (tmp6) {
@@ -62,7 +62,7 @@ export const useSelectedDismissibleContentShared = ReactCompilerGating.isReactCo
   cResult[1] = arg0;
   cResult[2] = tmp6;
   tmp5 = tmp6;
-}) : ((arg0, arg1) => {
+}) : (function useSelectedDismissibleContentShared(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   let flag = arg2;
@@ -88,7 +88,7 @@ export const useSelectedDismissibleContentShared = ReactCompilerGating.isReactCo
       }
       let tmp6 = content !== closure_1_0;
       if (!tmp6) {
-        let result = closure_0(2041).isGuildDismissibleContent(tmp5);
+        let result = closure_0(2054).isGuildDismissibleContent(tmp5);
         if (result) {
           const lastDismissed2 = tmp2.lastDismissed;
           let guildId;
@@ -98,7 +98,7 @@ export const useSelectedDismissibleContentShared = ReactCompilerGating.isReactCo
           result = guildId !== closure_1_2;
         }
         tmp6 = result;
-        const obj = closure_0(2041);
+        const obj = closure_0(2054);
       }
       tmp = tmp6;
       tmp2 = lastDismissed;

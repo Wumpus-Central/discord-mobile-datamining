@@ -1,29 +1,29 @@
-// === Module 16369: YouBarAvatar ===
+// === Module 16629: YouBarAvatar ===
 
-// Module 16369 (YouBarAvatar)
+// Module 16629 (YouBarAvatar)
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import native2 from "native" /* 4595 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import spring from "spring" /* 5604 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6147 */;
-import ClipView from "ClipView" /* 8502 */;
+import native from "native" /* 1200 */;
+import native2 from "native" /* 4787 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import spring from "spring" /* 5374 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6326 */;
+import ClipView from "ClipView" /* 8986 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5445 */;
-import UserStore from "UserStore" /* 1377 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5755 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Pressable: closure_7 } = get_ActivityIndicator);
-const YouBarConstants = fn(14915);
+const YouBarConstants = fn(15177);
 ({ YOU_BAR_AVATAR_LARGE_SIZE: closure_11, YOU_BAR_AVATAR_PLACEHOLDER_SIZE: closure_12, YOU_BAR_AVATAR_SIZE: map1, YOU_BAR_STATUS_INSET: closure_14, YOU_BAR_HEIGHT: closure_15, YOU_BAR_LARGE_STATUS_SIZE: closure_16, YOU_BAR_PADDING: closure_17, YOU_BAR_SPRING_CONFIG: closure_18, YOU_BAR_STATUS_OFFSET: closure_19, YOU_BAR_AVATAR_LARGE_PX: closure_20 } = YouBarConstants);
 const StatusTypes = fn(1085).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { avatarShadow: null };
 let merged = Object.assign(nativeDefault.shadows.SHADOW_MEDIUM);
 obj.avatarShadow = {};
@@ -33,7 +33,7 @@ let closure_26 = { code: "function YouBarAvatarTsx2(finished){const{transitionSt
 const __initData2 = { code: "function YouBarAvatarTsx3(){const{withSpring,scale,YOU_BAR_SPRING_CONFIG,left,top,opacity,transitionState,TransitionStates,runOnJS,cleanup}=this.__closure;return{transform:[{scale:withSpring(scale.get(),YOU_BAR_SPRING_CONFIG)}],left:withSpring(left.get(),YOU_BAR_SPRING_CONFIG),top:withSpring(top.get(),YOU_BAR_SPRING_CONFIG),opacity:withSpring(opacity.get(),YOU_BAR_SPRING_CONFIG,'respect-motion-settings',function(finished){if(finished&&transitionState===TransitionStates.YEETED){runOnJS(cleanup)();}})};}" };
 const __initData3 = { code: "function YouBarAvatarTsx4(finished){const{transitionState,TransitionStates,runOnJS,cleanup}=this.__closure;if(finished&&transitionState===TransitionStates.YEETED){runOnJS(cleanup)();}}" };
 let ReactCompilerGating = fn(558);
-let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? ((transitionState) => {
+let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouBarAvatarLarge(transitionState) {
   const cResult = transitionState(576).c(47);
   transitionState = transitionState.transitionState;
   const cleanup = transitionState.cleanup;
@@ -69,36 +69,36 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? ((transitionStat
   }
   const tmpResult = transitionState(504);
   const stateFromStores1 = transitionState(504).useStateFromStores(tmp9, tmp10);
-  let result = tmp(1188).AVATAR_SIZE_MAP[closure_13] / height;
+  let result = tmp(1200).AVATAR_SIZE_MAP[closure_13] / height;
   dependencyMap = result;
-  let result1 = (height - tmp(1188).AVATAR_SIZE_MAP[closure_13]) / 2;
-  const tmp16 = transitionState === transitionState(4595).TransitionStates.MOUNTED;
+  let result1 = (height - tmp(1200).AVATAR_SIZE_MAP[closure_13]) / 2;
+  const tmp16 = transitionState === transitionState(4787).TransitionStates.MOUNTED;
   const tmpResult10 = transitionState(504);
   let num5 = 0;
   if (tmp16) {
     num5 = 1;
   }
-  const sharedValue = transitionState(4618).useSharedValue(num5);
-  const tmpResult11 = transitionState(4618);
+  const sharedValue = transitionState(4810).useSharedValue(num5);
+  const tmpResult11 = transitionState(4810);
   let num6 = 1;
   if (!tmp16) {
     num6 = result;
   }
-  const sharedValue1 = transitionState(4618).useSharedValue(num6);
-  const tmpResult12 = transitionState(4618);
+  const sharedValue1 = transitionState(4810).useSharedValue(num6);
+  const tmpResult12 = transitionState(4810);
   if (tmp16) {
     let tmp19 = -closure_17;
   } else {
     tmp19 = -result1;
   }
-  const sharedValue2 = transitionState(4618).useSharedValue(tmp19);
-  const tmpResult13 = transitionState(4618);
+  const sharedValue2 = transitionState(4810).useSharedValue(tmp19);
+  const tmpResult13 = transitionState(4810);
   if (tmp16) {
     let diff = -closure_17 - (height - closure_15) / 2;
   } else {
     diff = -result1;
   }
-  const sharedValue3 = transitionState(4618).useSharedValue(diff);
+  const sharedValue3 = transitionState(4810).useSharedValue(diff);
   if (cResult[4] === sharedValue2) {
     if (cResult[5] === sharedValue) {
       if (cResult[6] === sharedValue1) {
@@ -136,7 +136,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? ((transitionStat
             OFFLINE = StatusTypes.OFFLINE;
           }
           if (null == OFFLINE) {
-            tmp(4618);
+            tmp(4810);
             function et() {
               const rect = { transform: null, left: null, top: null, opacity: null };
               let obj = { scale: spring.withSpring(sharedValue1.get(), YOU_BAR_SPRING_CONFIG) };
@@ -168,23 +168,23 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? ((transitionStat
                 return closure_1_8.animateYouBarAvatarDeco;
               }
             }
-            rect.withSpring = tmp(5604).withSpring;
+            rect.withSpring = tmp(5374).withSpring;
             rect.scale = sharedValue1;
             rect.YOU_BAR_SPRING_CONFIG = YOU_BAR_SPRING_CONFIG;
             rect.left = sharedValue2;
             rect.top = sharedValue3;
             rect.opacity = sharedValue;
             rect.transitionState = transitionState;
-            rect.TransitionStates = tmp(4595).TransitionStates;
-            rect.runOnJS = tmp(4618).runOnJS;
+            rect.TransitionStates = tmp(4787).TransitionStates;
+            rect.runOnJS = tmp(4810).runOnJS;
             rect.cleanup = cleanup;
             et.__closure = rect;
             et.__workletHash = 15831722009842;
             et.__initData = __initData;
             const tmp45Result = tmp45(et);
-            const token = tmp(4586).useToken(cleanup(587).colors.MOBILE_FLOATINGBAR_BACKGROUND);
-            const tmpResult17 = tmp(4586);
-            const token1 = tmp(4586).useToken(cleanup(587).colors.BORDER_SUBTLE);
+            const token = tmp(4778).useToken(cleanup(587).colors.MOBILE_FLOATINGBAR_BACKGROUND);
+            const tmpResult17 = tmp(4778);
+            const token1 = tmp(4778).useToken(cleanup(587).colors.BORDER_SUBTLE);
             if (null == stateFromStores1) {
               return null;
             } else {
@@ -211,10 +211,10 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? ((transitionStat
               cResult[16] = tmp4.avatarShadow;
               cResult[17] = items3;
             }
-            const tmpResult18 = tmp(4586);
+            const tmpResult18 = tmp(4778);
           } else {
             let result2 = closure_16 / 2;
-            let sum = result2 + tmp(1188).STATUS_PADDING;
+            let sum = result2 + tmp(1200).STATUS_PADDING;
             class K {
               constructor() {
                 return closure_1_8.animateYouBarAvatarDeco;
@@ -295,8 +295,8 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? ((transitionStat
   cResult[10] = items4;
   tmp27 = items4;
   tmp26 = J;
-  const tmpResult14 = transitionState(4618);
-}) : ((transitionState) => {
+  const tmpResult14 = transitionState(4810);
+}) : (function YouBarAvatarLarge(transitionState) {
   transitionState = transitionState.transitionState;
   const cleanup = transitionState.cleanup;
   let OFFLINE;
@@ -362,7 +362,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? ((transitionStat
     if (tmp) {
       let diff = -result1;
     } else {
-      diff = -constants - (closure_2_20 - closure_2_15) / 2;
+      diff = -constants - (constants2 - closure_2_15) / 2;
     }
     const result3 = sharedValue3.set(diff);
   }, items2);
@@ -379,7 +379,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? ((transitionStat
     if (null != OFFLINE) {
       const result = statusSizeOverride / 2;
       const sum = result + native.STATUS_PADDING;
-      const diff = closure_2_20 - sum - statusSizeOverride / 4 * 2;
+      const diff = constants2 - sum - statusSizeOverride / 4 * 2;
       const obj = { nativeCutouts: null };
       const point = { shape: ClipView.CutoutShape.Circle, x: diff + closure_2_19, y: diff + closure_2_19, size: 2 * sum };
       const items = [point];
@@ -449,7 +449,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? ((transitionStat
     obj6.style = size2;
     obj5.children = closure_22(sharedValue1, obj6);
     const items6 = [closure_22(tmp23(tmp3[19]), obj5), , , ];
-    const obj7 = { user: stateFromStores, guildId: "Array", size, animate: true, needsOffscreenAlphaCompositing: null, status: null, statusSizeOverride: null, cutout: null, statusStyle: "listenerCount" };
+    const obj7 = { user: stateFromStores, guildId: "Array", size, animate: true, needsOffscreenAlphaCompositing: null, status: null, statusSizeOverride: null, cutout: null, statusStyle: "leden" };
     if (OFFLINE === StatusTypes.UNKNOWN) {
       OFFLINE = StatusTypes.OFFLINE;
     }
@@ -513,7 +513,7 @@ let closure_31 = { code: "function YouBarAvatarTsx6(finished){const{transitionSt
 const __initData5 = { code: "function YouBarAvatarTsx7(){const{withSpring,opacity,YOU_BAR_SPRING_CONFIG,transitionState,TransitionStates,runOnJS,cleanup}=this.__closure;return{opacity:withSpring(opacity.get(),YOU_BAR_SPRING_CONFIG,'respect-motion-settings',function(finished){if(finished&&transitionState===TransitionStates.YEETED){runOnJS(cleanup)();}})};}" };
 let closure_33 = { code: "function YouBarAvatarTsx8(finished){const{transitionState,TransitionStates,runOnJS,cleanup}=this.__closure;if(finished&&transitionState===TransitionStates.YEETED){runOnJS(cleanup)();}}" };
 ReactCompilerGating = fn(558);
-let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? ((transitionState) => {
+let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouBarAvatar(transitionState) {
   const cResult = transitionState(sharedValue[13]).c(18);
   transitionState = transitionState.transitionState;
   const cleanup = transitionState.cleanup;
@@ -655,7 +655,7 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? ((transitionStat
           tmp23 = tmp25;
         }
       }
-      const obj4 = { user: stateFromStores, guildId: "Array", size, animate: true, needsOffscreenAlphaCompositing: null, avatarDecoration, status: OFFLINE, autoStatusCutout: "/assets/.cache/intl/bW9kdWxlcy9nb19saXZlL3dlYi9tb2RhbA==" };
+      const obj4 = { user: stateFromStores, guildId: "Array", size, animate: true, needsOffscreenAlphaCompositing: null, avatarDecoration, status: OFFLINE, autoStatusCutout: "/assets/.cache/intl/bW9kdWxlcy9jb2xsZWN0aWJsZXMvd2Vi" };
       const tmp22 = closure_22(tmp(tmp2[15]).Avatar, obj4);
       cResult[11] = avatarDecoration;
       cResult[12] = OFFLINE;
@@ -679,7 +679,7 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? ((transitionStat
   tmp15 = items3;
   tmp14 = fn3;
   let obj2 = { withSpring: transitionState(sharedValue[20]).withSpring, opacity: sharedValue, YOU_BAR_SPRING_CONFIG, transitionState, TransitionStates: transitionState(sharedValue[16]).TransitionStates, runOnJS: transitionState(sharedValue[17]).runOnJS, cleanup };
-}) : ((transitionState) => {
+}) : (function YouBarAvatar(transitionState) {
   transitionState = transitionState.transitionState;
   const cleanup = transitionState.cleanup;
   let sharedValue;
@@ -738,7 +738,7 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? ((transitionStat
     const rect = { position: "absolute", top: -result, left: -result };
     const items3 = [rect, animatedStyle];
     obj6.style = items3;
-    const obj7 = { user: stateFromStores, guildId: "Array", size: size2, animate: true, needsOffscreenAlphaCompositing: null, avatarDecoration, status: true, autoStatusCutout: "/assets/.cache/intl/bW9kdWxlcy9nb19saXZlL3dlYi9tb2RhbA==" };
+    const obj7 = { user: stateFromStores, guildId: "Array", size: size2, animate: true, needsOffscreenAlphaCompositing: null, avatarDecoration, status: true, autoStatusCutout: "/assets/.cache/intl/bW9kdWxlcy9jb2xsZWN0aWJsZXMvd2Vi" };
     if (OFFLINE === StatusTypes.UNKNOWN) {
       OFFLINE = StatusTypes.OFFLINE;
     }

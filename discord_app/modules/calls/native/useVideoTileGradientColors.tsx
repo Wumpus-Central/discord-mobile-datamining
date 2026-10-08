@@ -1,9 +1,9 @@
-// === Module 7936: useVideoTileGradientColors ===
+// === Module 8355: useVideoTileGradientColors ===
 
-// Module 7936 (useVideoTileGradientColors)
+// Module 8355 (useVideoTileGradientColors)
 import c from "c" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
-import UserProfileGradientUtils from "UserProfileGradientUtils" /* 7912 */;
+import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8331 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -55,7 +55,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/native/useVideoTileGradientColors.tsx");
 
 export { computeVideoTileGradientStops };
-export const useVideoTileGradientColors = ReactCompilerGating.isReactCompilerEnabled() ? ((modalV2BackgroundColor, modalV2BackgroundColor) => {
+export const useVideoTileGradientColors = ReactCompilerGating.isReactCompilerEnabled() ? (function useVideoTileGradientColors(modalV2BackgroundColor, modalV2BackgroundColor) {
   const cResult = c.c(3);
   if (cResult[0] === modalV2BackgroundColor) {
     if (cResult[1] === modalV2BackgroundColor) {
@@ -68,7 +68,7 @@ export const useVideoTileGradientColors = ReactCompilerGating.isReactCompilerEna
   cResult[1] = modalV2BackgroundColor;
   cResult[2] = tmp3;
   tmp2 = tmp3;
-}) : ((arg0, arg1) => {
+}) : (function useVideoTileGradientColors(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   const items = [arg0, arg1];

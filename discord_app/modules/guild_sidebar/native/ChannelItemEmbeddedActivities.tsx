@@ -1,10 +1,10 @@
-// === Module 16199: ChannelItemEmbeddedActivities ===
+// === Module 16459: ChannelItemEmbeddedActivities ===
 
-// Module 16199 (ChannelItemEmbeddedActivities)
+// Module 16459 (ChannelItemEmbeddedActivities)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import GameIcon from "GameIcon" /* 6674 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import GameIcon from "GameIcon" /* 6851 */;
 import noop from "module_19" /* 19 */;
 
 const GameIconDefault = GameIcon;
@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { overflow: { lineHeight: 16, textAlign: "center", textAlignVertical: "center", padding: 4 }, overflowContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.xs, display: "flex", alignItems: "center", justifyContent: "center" }, container: { display: "flex", flexDirection: "row" }, modeMuted: { opacity: 0.3 } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -21,7 +21,7 @@ let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borde
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/native/ChannelItemEmbeddedActivities.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelItemEmbeddedActivities(arg0) {
   const cResult = c.c(20);
   ({ embeddedApps, size, muted } = arg0);
   if (undefined === size) {
@@ -128,7 +128,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[7] = tmp9;
     tmp6 = tmp9;
   }
-}) : ((muted) => {
+}) : (function ChannelItemEmbeddedActivities(muted) {
   ({ embeddedApps, size } = muted);
   if (size === undefined) {
     size = GameIcon.GameIconSizes.SIZE_24;

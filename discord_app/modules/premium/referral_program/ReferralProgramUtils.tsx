@@ -1,21 +1,23 @@
-// === Module 7737: ReferralProgramUtils ===
+// === Module 8058: ReferralProgramUtils ===
 
-// Module 7737 (ReferralProgramUtils)
+// Module 8058 (ReferralProgramUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import util from "util" /* 1126 */;
-import dismissible_content from "dismissible_content" /* 2036 */;
-import DismissibleContentUtils from "DismissibleContentUtils" /* 2037 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4704 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 6974 */;
+import dismissible_content from "dismissible_content" /* 2048 */;
+import DismissibleContentUtils from "DismissibleContentUtils" /* 2049 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4898 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 7163 */;
 
 require = fn;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 let ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
 ReactCompilerGating = fn(558);
-fn = () => DismissibleContentUnsafeUtils.useIsDismissibleContentDismissed_UNSAFE(dismissible_content.DismissibleContent.REFERRAL_PROGRAM_ENTRYPOINT_NITRO_TAB_BADGE);
+function useIsReferralProgramEntrypointBadgeAcknowledged() {
+  return DismissibleContentUnsafeUtils.useIsDismissibleContentDismissed_UNSAFE(dismissible_content.DismissibleContent.REFERRAL_PROGRAM_ENTRYPOINT_NITRO_TAB_BADGE);
+}
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/premium/referral_program/ReferralProgramUtils.tsx");
 
@@ -43,7 +45,7 @@ export const getReferralTrialOfferExpirationCopy = function getReferralTrialOffe
   }
   return formatToPlainStringResult;
 };
-export const useIsReferralProgramEntrypointBadgeAcknowledged = fn;
+export { useIsReferralProgramEntrypointBadgeAcknowledged };
 export const markReferralProgramEntrypointBadgeAcknowledged = function markReferralProgramEntrypointBadgeAcknowledged() {
   const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(dismissible_content.DismissibleContent.REFERRAL_PROGRAM_ENTRYPOINT_NITRO_TAB_BADGE);
 };
@@ -81,13 +83,13 @@ export const markReferralProgramPopoverSeen = function markReferralProgramPopove
 export const markReferralIncentivePopoverSeen = function markReferralIncentivePopoverSeen() {
   const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(dismissible_content.DismissibleContent.REFERRAL_PROGRAM_INCENTIVE_POPOVER);
 };
-export const useIsReferralProgramPopoverShowable = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useIsReferralProgramPopoverShowable = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsReferralProgramPopoverShowable() {
   const cResult = stateFromStores1(576).c(7);
   let obj = stateFromStores1(576);
-  let isEligibleSenderForReferralProgram = stateFromStores1(7738).useIsEligibleSenderForReferralProgram(false);
+  let isEligibleSenderForReferralProgram = stateFromStores1(8059).useIsEligibleSenderForReferralProgram(false);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ReferralTrialStore];
-    const fn = function o() {
+    const fn = function t() {
       return ReferralTrialStore.getReferralsRemaining();
     };
     cResult[0] = items;
@@ -97,7 +99,7 @@ export const useIsReferralProgramPopoverShowable = ReactCompilerGating.isReactCo
   } else {
     [tmp5, tmp6] = cResult;
   }
-  const obj2 = stateFromStores1(7738);
+  const obj2 = stateFromStores1(8059);
   const stateFromStores = stateFromStores1(504).useStateFromStores(tmp5, tmp6);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [ReferralTrialStore];
@@ -119,7 +121,7 @@ export const useIsReferralProgramPopoverShowable = ReactCompilerGating.isReactCo
     cResult[4] = items2;
   }
   if (cResult[5] !== stateFromStores1) {
-    class E {
+    class P {
       constructor() {
         isDismissed = null != closure_0;
         if (isDismissed) {
@@ -132,9 +134,9 @@ export const useIsReferralProgramPopoverShowable = ReactCompilerGating.isReactCo
       }
     }
     cResult[5] = stateFromStores1;
-    cResult[6] = E;
+    cResult[6] = P;
   } else {
-    class E {
+    class P {
       constructor() {
         isDismissed = null != closure_0;
         if (isDismissed) {
@@ -150,7 +152,7 @@ export const useIsReferralProgramPopoverShowable = ReactCompilerGating.isReactCo
   stateFromStores1(504);
   let tmp17 = null != stateFromStores1;
   if (tmp17) {
-    class E {
+    class P {
       constructor() {
         isDismissed = null != closure_0;
         if (isDismissed) {
@@ -163,7 +165,7 @@ export const useIsReferralProgramPopoverShowable = ReactCompilerGating.isReactCo
       }
     }
     if (isEligibleSenderForReferralProgram) {
-      class E {
+      class P {
         constructor() {
           isDismissed = null != closure_0;
           if (isDismissed) {
@@ -177,7 +179,7 @@ export const useIsReferralProgramPopoverShowable = ReactCompilerGating.isReactCo
       }
     }
     if (isEligibleSenderForReferralProgram) {
-      class E {
+      class P {
         constructor() {
           isDismissed = null != closure_0;
           if (isDismissed) {
@@ -194,9 +196,9 @@ export const useIsReferralProgramPopoverShowable = ReactCompilerGating.isReactCo
     tmp17 = isEligibleSenderForReferralProgram;
   }
   return tmp17;
-}) : (() => {
-  let isEligibleSenderForReferralProgram = stateFromStores1(7738).useIsEligibleSenderForReferralProgram(false);
-  let obj = stateFromStores1(7738);
+}) : (function useIsReferralProgramPopoverShowable() {
+  let isEligibleSenderForReferralProgram = stateFromStores1(8059).useIsEligibleSenderForReferralProgram(false);
+  let obj = stateFromStores1(8059);
   const items = [ReferralTrialStore];
   const stateFromStores = stateFromStores1(504).useStateFromStores(items, () => ReferralTrialStore.getReferralsRemaining());
   const obj2 = stateFromStores1(504);

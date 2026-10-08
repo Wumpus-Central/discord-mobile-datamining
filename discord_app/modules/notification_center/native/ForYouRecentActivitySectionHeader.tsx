@@ -1,16 +1,16 @@
-// === Module 16416: ForYouRecentActivitySectionHeader ===
+// === Module 16676: ForYouRecentActivitySectionHeader ===
 
-// Module 16416 (ForYouRecentActivitySectionHeader)
+// Module 16676 (ForYouRecentActivitySectionHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
+import Text_Text from "Text/Text" /* 5086 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { marginTop: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_24 }, textHeader: null };
 const obj3 = { marginTop: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_24 };
 obj2.textHeader = { marginTop: nativeDefault.space.PX_8 };
@@ -20,7 +20,7 @@ const obj4 = { marginTop: nativeDefault.space.PX_8 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notification_center/native/ForYouRecentActivitySectionHeader.tsx");
 
-export const ForYouRecentActivitySectionHeader = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const ForYouRecentActivitySectionHeader = ReactCompilerGating.isReactCompilerEnabled() ? (function ForYouRecentActivitySectionHeader() {
   const cResult = c.c(6);
   const tmp4 = closure_4();
   ({ container, textHeader } = tmp4);
@@ -52,7 +52,7 @@ export const ForYouRecentActivitySectionHeader = ReactCompilerGating.isReactComp
   cResult[4] = tmp7;
   cResult[5] = tmp11;
   tmp10 = tmp11;
-}) : (() => {
+}) : (function ForYouRecentActivitySectionHeader() {
   const tmp = closure_4();
   const obj = { style: tmp.container, children: null };
   const obj2 = { style: tmp.textHeader, color: "text-muted", variant: "text-sm/semibold", accessibilityRole: "header", children: null };

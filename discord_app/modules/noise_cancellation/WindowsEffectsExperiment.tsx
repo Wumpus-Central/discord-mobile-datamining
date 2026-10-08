@@ -1,11 +1,11 @@
-// === Module 9689: WindowsEffectsExperiment ===
+// === Module 10878: WindowsEffectsExperiment ===
 
-// Module 9689 (WindowsEffectsExperiment)
-import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
+// Module 10878 (WindowsEffectsExperiment)
+import ApexExperimentStore from "ApexExperimentStore" /* 1258 */;
 
 const require = fn;
 let obj = { preferSystemEffects: false };
-const ApexExperiment = fn(1440);
+const ApexExperiment = fn(1452);
 const obj3 = { name: "2025-12-windows-audio-effects", kind: "user", defaultConfig: obj, variations: null };
 const obj4 = { 1: null };
 const obj5 = {};
@@ -22,7 +22,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/noise_cancellation/WindowsEffectsExperiment.tsx");
 
 export { getWindowsAudioEffectsExperimentConfig };
-export const useWindowsAudioEffectsExperimentConfig = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+export const useWindowsAudioEffectsExperimentConfig = ReactCompilerGating.isReactCompilerEnabled() ? (function useWindowsAudioEffectsExperimentConfig(location) {
   const cResult = _location(576).c(3);
   _location = location.location;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -44,7 +44,7 @@ export const useWindowsAudioEffectsExperimentConfig = ReactCompilerGating.isReac
   }
   const obj = _location(576);
   return _location(504).useStateFromStores(first, tmp6);
-}) : ((location) => {
+}) : (function useWindowsAudioEffectsExperimentConfig(location) {
   location = location.location;
   const items = [ApexExperimentStore];
   return location(504).useStateFromStores(items, () => config.getConfig({ location }));

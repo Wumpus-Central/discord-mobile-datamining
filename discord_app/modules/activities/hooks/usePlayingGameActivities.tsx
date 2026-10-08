@@ -1,11 +1,11 @@
-// === Module 9406: usePlayingGameActivities ===
+// === Module 8827: usePlayingGameActivities ===
 
-// Module 9406 (usePlayingGameActivities)
-import isPlayingGameActivityDefault from "isPlayingGameActivity" /* 9407 */;
+// Module 8827 (usePlayingGameActivities)
+import isPlayingGameActivityDefault from "isPlayingGameActivity" /* 8828 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import PresenceStore from "PresenceStore" /* 4936 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5445 */;
+import PresenceStore from "PresenceStore" /* 5106 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5755 */;
 
 const require = globalThis.__r;
 
@@ -15,7 +15,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/hooks/usePlayingGameActivities.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePlayingGameActivities(arg0, arg1, arg2) {
   _require = arg0;
   importDefault = arg1;
   const cResult = require("c").c(7);
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
   tmp9 = fn;
   const obj = require("c");
   tmp = _require;
-}) : ((arg0, arg1) => {
+}) : (function usePlayingGameActivities(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
   let flag = arg2;

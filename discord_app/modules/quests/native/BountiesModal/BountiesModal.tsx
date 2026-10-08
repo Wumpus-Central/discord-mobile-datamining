@@ -1,9 +1,9 @@
-// === Module 14828: BountiesModal ===
+// === Module 15089: BountiesModal ===
 
-// Module 14828 (BountiesModal)
-import BountiesModalTypes from "BountiesModalTypes" /* 14829 */;
-import BountiesModalContentScrollDefault from "BountiesModalContentScroll" /* 14830 */;
-import BountiesModalContentDefault from "BountiesModalContent" /* 14880 */;
+// Module 15089 (BountiesModal)
+import BountiesModalTypes from "BountiesModalTypes" /* 15090 */;
+import BountiesModalContentScrollDefault from "BountiesModalContentScroll" /* 15091 */;
+import BountiesModalContentDefault from "BountiesModalContent" /* 15142 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModal.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((bountyId) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function BountiesModal(bountyId) {
   const cResult = bountyId(variant[3]).c(11);
   bountyId = bountyId.bountyId;
   const sourceQuestContent = bountyId.sourceQuestContent;
@@ -127,7 +127,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((bounty
   };
   tmp = bountyId;
   tmp2 = variant;
-}) : ((bountyId) => {
+}) : (function BountiesModal(bountyId) {
   bountyId = bountyId.bountyId;
   const sourceQuestContent = bountyId.sourceQuestContent;
   const variant = bountyId.variant;

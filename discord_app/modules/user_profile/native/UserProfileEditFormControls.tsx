@@ -1,17 +1,17 @@
-// === Module 14461: UserProfileEditFormControls ===
+// === Module 14689: UserProfileEditFormControls ===
 
-// Module 14461 (UserProfileEditFormControls)
+// Module 14689 (UserProfileEditFormControls)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Pressables from "Pressables" /* 5916 */;
-import TableRowArrow from "TableRowArrow" /* 6007 */;
-import Input from "Input" /* 6430 */;
-import FormSwitch from "FormSwitch" /* 6706 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8346 */;
+import native from "native" /* 1200 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import Pressables from "Pressables" /* 6189 */;
+import TableRowArrow from "TableRowArrow" /* 6193 */;
+import Input from "Input" /* 6284 */;
+import FormSwitch from "FormSwitch" /* 6883 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9005 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,14 +20,14 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { button: { flexGrow: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", gap: 12, padding: 12, borderColor: nativeDefault.colors.BORDER_STRONG, borderWidth: 1, borderRadius: nativeDefault.radii.md }, buttonDisabled: { opacity: 0.5 }, buttonTextContainer: { flexGrow: 1, flexShrink: 1, flexDirection: "column" }, formControlText: { marginRight: "auto", flexShrink: 1 }, labelTrailing: null, newBadge: null };
 let obj3 = { flexGrow: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", gap: 12, padding: 12, borderColor: nativeDefault.colors.BORDER_STRONG, borderWidth: 1, borderRadius: nativeDefault.radii.md };
 obj2.labelTrailing = { flexDirection: "row", alignItems: "center", marginLeft: nativeDefault.space.PX_4, gap: nativeDefault.space.PX_4 };
 obj2.newBadge = { paddingTop: 0 };
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((text) => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function FormControlText(text) {
   const cResult = c.c(3);
   text = text.text;
   const tmp4 = closure_8();
@@ -43,12 +43,12 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((text) => {
   cResult[2] = tmp6;
   tmp5 = tmp6;
   const obj2 = { variant: "text-sm/medium", color: "text-default", style: tmp4.formControlText, children: text };
-}) : ((children) => {
+}) : (function FormControlText(children) {
   const tmp = closure_8();
   return timestampProducer(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", style: closure_8().formControlText, children: children.text });
 });
 ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((text) => {
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function FormControlSubtext(text) {
   let Text = require;
   let tmp = dependencyMap;
   const cResult = c.c(3);
@@ -67,7 +67,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((text) => {
     cResult[1] = text;
     cResult[2] = tmp;
   }
-}) : ((text) => {
+}) : (function FormControlSubtext(text) {
   text = text.text;
   let tmp2 = null;
   if (null != text) {
@@ -79,7 +79,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((text) => {
 fn(558);
 let obj4 = { flexDirection: "row", alignItems: "center", marginLeft: nativeDefault.space.PX_4, gap: nativeDefault.space.PX_4 };
 ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileEditFormLabelBadges(arg0) {
   const cResult = c.c(9);
   ({ showPremiumIcon, showNewBadge } = arg0);
   let labelTrailing = closure_8();
@@ -129,7 +129,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = labelTrailing.newBadge;
   cResult[4] = tmp11;
   tmp10 = tmp11;
-}) : ((showPremiumIcon) => {
+}) : (function UserProfileEditFormLabelBadges(showPremiumIcon) {
   let flag = showPremiumIcon.showPremiumIcon;
   if (flag === undefined) {
     flag = false;
@@ -163,7 +163,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return tmp3Result;
 });
 ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileEditFormButton(arg0) {
   const cResult = c.c(31);
   ({ label, labelTrailing, buttonText, buttonSubtext, content, onPress, leading, trailing, accessibilityValue, disabled, loading, hideArrow } = arg0);
   const tmp7 = closure_8();
@@ -298,7 +298,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = buttonDisabled;
   cResult[2] = items2;
   tmp8 = items2;
-}) : ((loading) => {
+}) : (function UserProfileEditFormButton(loading) {
   ({ label, buttonText, content, disabled } = loading);
   ({ labelTrailing, buttonSubtext, onPress, leading, trailing, accessibilityValue } = loading);
   if (disabled === undefined) {
@@ -362,7 +362,7 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 
 export const UserProfileEditFormLabelBadges = tmp4;
 export const UserProfileEditFormButton = tmp5;
-export const UserProfileEditFormSwitch = ReactCompilerGating.isReactCompilerEnabled() ? ((onValueChange) => {
+export const UserProfileEditFormSwitch = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileEditFormSwitch(onValueChange) {
   const cResult = c.c(31);
   ({ label, subLabel, value } = onValueChange);
   require = value;
@@ -377,29 +377,19 @@ export const UserProfileEditFormSwitch = ReactCompilerGating.isReactCompilerEnab
       let tmp9 = cResult[2];
     }
     if (cResult[3] !== value) {
-      class H {
+      class L {
         constructor() {
           tmp = closure_2(value);
           return;
         }
       }
       const items = [value];
-      class V {
-        constructor() {
-          tmp = closure_2(!value);
-          timerId = setTimeout(() => {
-            if (onValueChange != null) {
-              tmp(!closure_1_0);
-            }
-          });
-          return;
-        }
-      }
-      cResult[4] = H;
+      cResult[3] = value;
+      cResult[4] = L;
       cResult[5] = items;
       let tmp11 = items;
     } else {
-      class H {
+      class L {
         constructor() {
           tmp = closure_2(value);
           return;
@@ -407,23 +397,23 @@ export const UserProfileEditFormSwitch = ReactCompilerGating.isReactCompilerEnab
       }
       tmp11 = cResult[5];
     }
-    const effect = noop.useEffect(H, tmp11);
+    const effect = noop.useEffect(L, tmp11);
     if (cResult[6] === onValueChange) {
-      class H {
+      class L {
         constructor() {
           tmp = closure_2(value);
           return;
         }
       }
       if (isAndroidResult) {
-        class H {
+        class L {
           constructor() {
             tmp = closure_2(value);
             return;
           }
         }
       } else {
-        class H {
+        class L {
           constructor() {
             tmp = closure_2(value);
             return;
@@ -431,26 +421,15 @@ export const UserProfileEditFormSwitch = ReactCompilerGating.isReactCompilerEnab
         }
       }
       if (isAndroidResult) {
-        class H {
+        class L {
           constructor() {
             tmp = closure_2(value);
             return;
           }
         }
       }
-      class V {
-        constructor() {
-          tmp = closure_2(!value);
-          timerId = setTimeout(() => {
-            if (onValueChange != null) {
-              tmp(!closure_1_0);
-            }
-          });
-          return;
-        }
-      }
       if (accessibilityLabel == null) {
-        class H {
+        class L {
           constructor() {
             tmp = closure_2(value);
             return;
@@ -458,36 +437,25 @@ export const UserProfileEditFormSwitch = ReactCompilerGating.isReactCompilerEnab
         }
       }
       if (cResult[9] === tmp8) {
-        class H {
+        class L {
           constructor() {
             tmp = closure_2(value);
             return;
           }
         }
         if (cResult[12] !== subLabel) {
-          class H {
+          class L {
             constructor() {
               tmp = closure_2(value);
               return;
             }
           }
-          { text: null }.text = subLabel;
-          class V {
-            constructor() {
-              tmp = closure_2(!value);
-              timerId = setTimeout(() => {
-                if (onValueChange != null) {
-                  tmp(!closure_1_0);
-                }
-              });
-              return;
-            }
-          }
+          const obj2 = { text: subLabel };
+          const tmp18 = timestampProducer(closure_9, obj2);
           cResult[12] = subLabel;
-          cResult[13] = tmp17;
-          const obj2 = { text: null };
+          cResult[13] = tmp18;
         } else {
-          class H {
+          class L {
             constructor() {
               tmp = closure_2(value);
               return;
@@ -495,66 +463,50 @@ export const UserProfileEditFormSwitch = ReactCompilerGating.isReactCompilerEnab
           }
         }
         if (cResult[14] === tmp4) {
-          class H {
+          class L {
             constructor() {
               tmp = closure_2(value);
               return;
             }
           }
         }
-        class V {
-          constructor() {
-            tmp = closure_2(!value);
-            timerId = setTimeout(() => {
-              if (onValueChange != null) {
-                tmp(!closure_1_0);
-              }
-            });
-            return;
-          }
-        }
-        tmp20[1] = value;
-        tmp20[2] = tmp9;
-        tmp20[3] = tmp4;
-        const tmp21 = timestampProducer(tmp(6706).FormSwitch, tmp20);
+        const obj4 = { "aria-hidden": true, value, onValueChange: tmp9, disabled: tmp4 };
+        const tmp21 = timestampProducer(tmp(6883).FormSwitch, obj4);
         cResult[14] = tmp4;
         cResult[15] = tmp9;
         cResult[16] = value;
         cResult[17] = tmp21;
       }
-      const obj4 = { disabled: tmp4, checked: tmp8 };
+      const obj5 = { disabled: tmp4, checked: tmp8 };
       cResult[9] = tmp8;
       cResult[10] = tmp4;
-      cResult[11] = obj4;
+      cResult[11] = obj5;
     }
-    class V {
-      constructor() {
-        tmp = closure_2(!value);
-        timerId = setTimeout(() => {
-          if (onValueChange != null) {
-            tmp(!closure_1_0);
-          }
-        });
-        return;
-      }
+    function handleAccessibilityTap() {
+      _slicedToArray(!value);
+      const timerId = setTimeout(() => {
+        if (onValueChange != null) {
+          tmp(!closure_1_0);
+        }
+      });
     }
     cResult[6] = onValueChange;
     cResult[7] = value;
-    cResult[8] = V;
+    cResult[8] = handleAccessibilityTap;
   }
-  const fn = function s() {
+  function handleOnPress() {
     let tmpResult;
     if (onValueChange != null) {
       tmpResult = tmp(!value);
     }
     return tmpResult;
-  };
+  }
   cResult[0] = onValueChange;
   cResult[1] = value;
-  cResult[2] = fn;
-  tmp9 = fn;
+  cResult[2] = handleOnPress;
+  tmp9 = handleOnPress;
   const tmp7 = _slicedToArray(noop.useState(value), 2);
-}) : ((arg0) => {
+}) : (function UserProfileEditFormSwitch(arg0) {
   ({ subLabel, value } = arg0);
   require = value;
   ({ onValueChange: dependencyMap, accessibilityLabel, disabled } = arg0);
@@ -571,7 +523,7 @@ export const UserProfileEditFormSwitch = ReactCompilerGating.isReactCompilerEnab
     closure_2(value);
   }, items);
   if (isAndroidResult) {
-    let PressableHighlight = tmp2(5916).PressableHighlight;
+    let PressableHighlight = tmp2(6189).PressableHighlight;
   } else {
     PressableHighlight = React4;
   }
@@ -589,7 +541,7 @@ export const UserProfileEditFormSwitch = ReactCompilerGating.isReactCompilerEnab
   }
   const obj3 = {
     onPress: tmp9,
-    onAccessibilityTap() {
+    onAccessibilityTap: function handleAccessibilityTap() {
       closure_2(!value);
       const timerId = setTimeout(() => {
         if (closure_1_1 != null) {

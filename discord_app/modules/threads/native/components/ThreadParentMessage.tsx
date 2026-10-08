@@ -1,23 +1,23 @@
-// === Module 16805: ThreadParentMessage ===
+// === Module 17085: ThreadParentMessage ===
 
-// Module 16805 (ThreadParentMessage)
+// Module 17085 (ThreadParentMessage)
 import initialize from "initialize" /* 504 */;
 import router_utils from "router_utils" /* 1112 */;
-import Pressables from "Pressables" /* 5916 */;
-import RowGeneratorDefault from "RowGenerator" /* 7602 */;
-import ChatItemDefault from "ChatItem" /* 8336 */;
+import Pressables from "Pressables" /* 6189 */;
+import RowGeneratorDefault from "RowGenerator" /* 7719 */;
+import ChatItemDefault from "ChatItem" /* 9308 */;
 import noop from "module_19" /* 19 */;
-import ReferencedMessageStore from "ReferencedMessageStore" /* 7115 */;
-import MessageStore from "MessageStore" /* 5116 */;
+import ReferencedMessageStore from "ReferencedMessageStore" /* 7301 */;
+import MessageStore from "MessageStore" /* 5428 */;
 
 require = fn;
-const ReferencedMessageState = fn(7115).ReferencedMessageState;
+const ReferencedMessageState = fn(7301).ReferencedMessageState;
 const jsx = fn(21).jsx;
 let rowGenerator = new RowGeneratorDefault();
 rowGenerator.setOptions({ renderCodedLinks: false, renderGiftCode: false, renderActivityInstanceEmbed: false, renderActivityInviteEmbed: false, renderEmbeds: true, ignoreMentioned: true, inlineAttachmentMedia: true, inlineEmbedMedia: true, renderReactions: false, renderReplies: true, renderThreadEmbeds: false });
 fn(558);
 const ReactCompilerGating = fn(558);
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ThreadChannelStarterMessage(guildId) {
   let PressableOpacity = guildId;
   let tmp = channelId;
   const cResult = guildId(channelId[6]).c(13);
@@ -48,7 +48,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
           if (cResult[6] === messageId) {
             let tmp11 = cResult[7];
           }
-          class S {
+          class M {
             constructor() {
               obj = closure_0(closure_2[8]);
               transitionToGuildResult = obj.transitionToGuild(guildId, channelId, messageId);
@@ -56,7 +56,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
             }
           }
           if (cResult[10] === tmp11) {
-            class S {
+            class M {
               constructor() {
                 obj = closure_0(closure_2[8]);
                 transitionToGuildResult = obj.transitionToGuild(guildId, channelId, messageId);
@@ -72,7 +72,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
           cResult[12] = tmp;
         }
       }
-      class S {
+      class M {
         constructor() {
           obj = closure_0(closure_2[8]);
           transitionToGuildResult = obj.transitionToGuild(guildId, channelId, messageId);
@@ -82,8 +82,8 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       cResult[4] = channelId;
       cResult[5] = guildId;
       cResult[6] = messageId;
-      cResult[7] = S;
-      tmp11 = S;
+      cResult[7] = M;
+      tmp11 = M;
     }
     const PressableOpacityResult = PressableOpacity(tmp[7]);
   }
@@ -95,7 +95,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   cResult[3] = fn;
   tmp5 = fn;
   const obj = guildId(channelId[6]);
-}) : ((arg0) => {
+}) : (function ThreadChannelStarterMessage(arg0) {
   ({ guildId: require, messageId: importDefault, channelId: dependencyMap } = arg0);
   rowGenerator = initialize;
   const items = [ReferencedMessageStore];
@@ -129,7 +129,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/threads/native/components/ThreadParentMessage.tsx");
 
 export const ThreadChannelStarterMessage = tmp4;
-export const ThreadCreationStarterMessage = ReactCompilerGating.isReactCompilerEnabled() ? ((messageId) => {
+export const ThreadCreationStarterMessage = ReactCompilerGating.isReactCompilerEnabled() ? (function ThreadCreationStarterMessage(messageId) {
   let tmp2 = dependencyMap;
   rowGenerator = messageId(576);
   const cResult = rowGenerator.c(7);
@@ -160,7 +160,7 @@ export const ThreadCreationStarterMessage = ReactCompilerGating.isReactCompilerE
       }
       if (cResult[5] !== stateFromStores) {
         const obj3 = { rowGenerator, message: stateFromStores, style: tmp9, pointerEvents: "none" };
-        tmp2 = jsx(channelId(8336), { rowGenerator, message: stateFromStores, style: tmp9, pointerEvents: "none" });
+        tmp2 = jsx(channelId(9308), { rowGenerator, message: stateFromStores, style: tmp9, pointerEvents: "none" });
         cResult[5] = stateFromStores;
         cResult[6] = tmp2;
       }
@@ -175,7 +175,7 @@ export const ThreadCreationStarterMessage = ReactCompilerGating.isReactCompilerE
   cResult[3] = fn;
   tmp6 = fn;
   tmp = messageId;
-}) : ((arg0) => {
+}) : (function ThreadCreationStarterMessage(arg0) {
   ({ messageId: require, channelId: importDefault } = arg0);
   rowGenerator = initialize;
   const items = [MessageStore];

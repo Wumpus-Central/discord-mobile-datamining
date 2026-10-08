@@ -1,6 +1,6 @@
-// === Module 9076: getFramesManager ===
+// === Module 11149: getFramesManager ===
 
-// Module 9076 (getFramesManager)
+// Module 11149 (getFramesManager)
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

@@ -1,15 +1,15 @@
-// === Module 15246: ShowLinkDecorationsSetting ===
+// === Module 15508: ShowLinkDecorationsSetting ===
 
-// Module 15246 (ShowLinkDecorationsSetting)
+// Module 15508 (ShowLinkDecorationsSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14295 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14520 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useShowLinkDecorationsSettingValue() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AccessibilityStore];
@@ -24,20 +24,20 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     [tmp4, tmp5] = cResult;
   }
   return initialize.useStateFromStores(tmp4, tmp5);
-}) : (() => {
+}) : (function useShowLinkDecorationsSettingValue() {
   const items = [AccessibilityStore];
   return initialize.useStateFromStores(items, () => AccessibilityStore.alwaysShowLinkDecorations);
 });
 function onShowLinkDecorationsValueChange(alwaysShowLinkDecorations) {
   const result = AccessibilityActionCreators.setAlwaysShowLinkDecorations(alwaysShowLinkDecorations);
 }
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.OLZFB8);
   },
-  parent: fn(7645).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(7966).MobileUserSettings.ACCESSIBILITY,
   useValue: tmp2,
   onValueChange: onShowLinkDecorationsValueChange
 });

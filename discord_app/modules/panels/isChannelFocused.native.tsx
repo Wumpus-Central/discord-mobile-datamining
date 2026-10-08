@@ -1,19 +1,19 @@
-// === Module 11839: isChannelFocused ===
+// === Module 6077: isChannelFocused ===
 
-// Module 11839 (isChannelFocused)
-import RootNavigationRef from "RootNavigationRef" /* 4743 */;
-import getInitialNavigationStateDefault from "getInitialNavigationState" /* 4744 */;
-import useChatLayout from "useChatLayout" /* 4745 */;
+// Module 6077 (isChannelFocused)
+import RootNavigationRef from "RootNavigationRef" /* 4937 */;
+import getInitialNavigationStateDefault from "getInitialNavigationState" /* 4938 */;
+import useChatLayout from "useChatLayout" /* 4939 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
-import NavigationHistoryStore from "NavigationHistoryStore" /* 6841 */;
-import VoicePanelStore from "VoicePanelStore" /* 5104 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6041 */;
+import NavigationHistoryStore from "NavigationHistoryStore" /* 6078 */;
+import VoicePanelStore from "VoicePanelStore" /* 6079 */;
 
 const require = globalThis.__r;
 const useChatLayoutDefault = useChatLayout;
 
-const NavigationRouteUtils = params(4742);
+const NavigationRouteUtils = params(4936);
 require = fn;
 function getFocusedChannelId() {
   let params = require;
@@ -144,7 +144,7 @@ function getFocusedChannelId() {
     }
   }
 }
-const CHANNEL_PREFIX = fn(6841).CHANNEL_PREFIX;
+const CHANNEL_PREFIX = fn(6078).CHANNEL_PREFIX;
 let c9 = null;
 const ReactCompilerGating = fn(558);
 function isChannelFocused() {
@@ -155,10 +155,10 @@ const result = size.fileFinishedImporting("modules/panels/isChannelFocused.nativ
 
 export { getFocusedChannelId };
 export { isChannelFocused };
-export const useIsChannelFocused = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useIsChannelFocused = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsChannelFocused() {
   const cResult = require("c").c(6);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function u() {
+    const fn = function s() {
       return null != getFocusedChannelId();
     };
     cResult[0] = fn;
@@ -212,7 +212,7 @@ export const useIsChannelFocused = ReactCompilerGating.isReactCompilerEnabled() 
   }
   const effect1 = noop.useEffect(tmp9, tmp10);
   return tmp4[0];
-}) : (() => {
+}) : (function useIsChannelFocused() {
   const tmp = _slicedToArray(noop.useState(() => null != getFocusedChannelId()), 2);
   closure_0 = tmp[1];
   const items = [useChatLayoutDefault()];

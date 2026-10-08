@@ -1,6 +1,6 @@
-// === Module 4755: ZustandStore ===
+// === Module 4949: ZustandStore ===
 
-// Module 4755 (ZustandStore)
+// Module 4949 (ZustandStore)
 import c from "c" /* 576 */;
 import size from "module_2" /* 2 */;
 
@@ -13,23 +13,23 @@ const result = size.fileFinishedImporting("lib/ZustandStore.tsx");
 
 export const createZustandStore = function createZustandStore(arg0) {
   _require = arg0;
-  let obj = require("module_1254");
+  let obj = require("module_1266");
   let tmp = _require;
-  dependencyMap = obj.createWithEqualityFn(require("module_4756").subscribeWithSelector((arg0, arg1, arg2) => {
+  dependencyMap = obj.createWithEqualityFn(require("module_4950").subscribeWithSelector((arg0, arg1, arg2) => {
     closure_0 = arg0;
     return closure_0((arg0) => {
       closure_0 = arg0;
       return closure_0(closure_1_1[2]).batchUpdates(() => closure_0(closure_0));
     }, arg1, arg2);
   }));
-  const obj2 = require("module_4756");
-  let tmp3 = require("ReactCompilerGating").isReactCompilerEnabled() ? ((arg0, arg1) => {
+  const obj2 = require("module_4950");
+  let tmp3 = require("ReactCompilerGating").isReactCompilerEnabled() ? (function useState(arg0, arg1) {
     let tmp = arg1;
     if (undefined === arg1) {
       tmp = defaultStatesAreEqual;
     }
     return closure_1(arg0, tmp);
-  }) : ((arg0) => {
+  }) : (function useState(arg0) {
     let tmp = arg1;
     if (arg1 === undefined) {
       tmp = defaultStatesAreEqual;
@@ -52,7 +52,7 @@ export const createZustandStore = function createZustandStore(arg0) {
       }
       return tmp2;
     },
-    useField: tmp(558).isReactCompilerEnabled() ? ((arg0, arg1) => {
+    useField: tmp(558).isReactCompilerEnabled() ? (function useField(arg0, arg1) {
       closure_0 = arg0;
       let tmp = arg1;
       const cResult = c.c(2);
@@ -70,7 +70,7 @@ export const createZustandStore = function createZustandStore(arg0) {
         tmp3 = cResult[1];
       }
       return closure_2(tmp3, tmp);
-    }) : ((arg0) => {
+    }) : (function useField(arg0) {
       closure_0 = arg0;
       let tmp = arg1;
       if (arg1 === undefined) {

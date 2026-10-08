@@ -1,24 +1,26 @@
-// === Module 14681: UseDataToCustomizeDiscordSetting ===
+// === Module 14942: UseDataToCustomizeDiscordSetting ===
 
-// Module 14681 (UseDataToCustomizeDiscordSetting)
+// Module 14942 (UseDataToCustomizeDiscordSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5714 */;
-import common_AlertDefault from "common/Alert" /* 5790 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14641 */;
-import ConsentActionCreators from "ConsentActionCreators" /* 14679 */;
-import showDataPrivacyRateLimitAlert from "showDataPrivacyRateLimitAlert" /* 14680 */;
-import ConsentStore from "ConsentStore" /* 6091 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5297 */;
+import common_AlertDefault from "common/Alert" /* 5394 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14902 */;
+import ConsentActionCreators from "ConsentActionCreators" /* 14940 */;
+import showDataPrivacyRateLimitAlert from "showDataPrivacyRateLimitAlert" /* 14941 */;
+import ConsentStore from "ConsentStore" /* 5938 */;
 
 require = fn;
 const Consents = fn(1085).Consents;
 let ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
 ReactCompilerGating = fn(558);
-fn = () => useParentalControlSettings.useIsParentallyControlled();
-const SettingBuilders = fn(11142);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+function useIsDisabled() {
+  return useParentalControlSettings.useIsParentallyControlled();
+}
+const SettingBuilders = fn(11262);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDataToCustomizeDiscordSettingValue() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ConsentStore];
@@ -33,7 +35,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     [tmp4, tmp5] = cResult;
   }
   return initialize.useStateFromStores(tmp4, tmp5);
-}) : (() => {
+}) : (function useDataToCustomizeDiscordSettingValue() {
   const items = [ConsentStore];
   return initialize.useStateFromStores(items, () => ConsentStore.hasConsented(constants.PERSONALIZATION));
 });
@@ -42,8 +44,8 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.MNKzyg);
   },
-  parent: fn(7645).MobileUserSettings.DATA_AND_PRIVACY,
-  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  parent: fn(7966).MobileUserSettings.DATA_AND_PRIVACY,
+  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useDataToCustomizeDiscordSettingValue() {
     const cResult = c.c(2);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
       const items = [ConsentStore];
@@ -58,7 +60,7 @@ const toggle = SettingBuilders.createToggle({
       [tmp4, tmp5] = cResult;
     }
     return initialize.useStateFromStores(tmp4, tmp5);
-  }) : (() => {
+  }) : (function useDataToCustomizeDiscordSettingValue() {
     const items = [ConsentStore];
     return initialize.useStateFromStores(items, () => ConsentStore.hasConsented(constants.PERSONALIZATION));
   }),
@@ -85,7 +87,7 @@ const toggle = SettingBuilders.createToggle({
       AlertActionCreatorsDefault.show(obj2);
     }
   },
-  useIsDisabled: fn
+  useIsDisabled
 });
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/UseDataToCustomizeDiscordSetting.tsx");

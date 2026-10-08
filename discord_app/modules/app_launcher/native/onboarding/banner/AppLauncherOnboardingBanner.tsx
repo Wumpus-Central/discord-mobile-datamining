@@ -1,11 +1,11 @@
-// === Module 11676: AppLauncherOnboardingBanner ===
+// === Module 11741: AppLauncherOnboardingBanner ===
 
-// Module 11676 (AppLauncherOnboardingBanner)
+// Module 11741 (AppLauncherOnboardingBanner)
 import c from "c" /* 576 */;
-import dismissible_content from "dismissible_content" /* 2036 */;
-import ActivitiesBannerDefault from "ActivitiesBanner" /* 11677 */;
-import AppsBannerDefault from "AppsBanner" /* 11691 */;
-import BotsBannerDefault from "BotsBanner" /* 11693 */;
+import dismissible_content from "dismissible_content" /* 2048 */;
+import ActivitiesBannerDefault from "ActivitiesBanner" /* 11742 */;
+import AppsBannerDefault from "AppsBanner" /* 11756 */;
+import BotsBannerDefault from "BotsBanner" /* 11758 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/onboarding/banner/AppLauncherOnboardingBanner.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLauncherOnboardingBanner(arg0) {
   const cResult = c.c(5);
   ({ context, visibleContent } = arg0);
   if (dismissible_content.DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER === visibleContent) {
@@ -52,7 +52,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   } else {
     return null;
   }
-}) : ((arg0) => {
+}) : (function AppLauncherOnboardingBanner(arg0) {
   ({ context, visibleContent } = arg0);
   if (dismissible_content.DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER === visibleContent) {
     const obj2 = { context };

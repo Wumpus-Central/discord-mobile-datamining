@@ -1,8 +1,8 @@
-// === Module 17318: useActivityUsers ===
+// === Module 17599: useActivityUsers ===
 
-// Module 17318 (useActivityUsers)
-import UserStore from "UserStore" /* 1377 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
+// Module 17599 (useActivityUsers)
+import UserStore from "UserStore" /* 1389 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2062 */;
 
 const require = globalThis.__r;
 
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/useActivityUsers.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useActivityUsers(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   const cResult = require("c").c(5);
@@ -29,7 +29,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     }
     return tmp(573).useStateFromStoresArray(first, tmp7, tmp8);
   }
-  const fn = function s() {
+  const fn = function a() {
     if (null == closure_1) {
       return [];
     } else {
@@ -55,7 +55,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   tmp7 = fn;
   const obj = require("c");
   tmp = _require;
-}) : ((arg0, arg1) => {
+}) : (function useActivityUsers(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   let items = [EmbeddedActivitiesStore, UserStore];

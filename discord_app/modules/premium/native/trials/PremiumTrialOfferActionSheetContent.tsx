@@ -1,27 +1,27 @@
-// === Module 15580: PremiumTrialOfferActionSheetContent ===
+// === Module 15860: PremiumTrialOfferActionSheetContent ===
 
-// Module 15580 (PremiumTrialOfferActionSheetContent)
+// Module 15860 (PremiumTrialOfferActionSheetContent)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import PremiumUtils from "PremiumUtils" /* 4534 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import FolderIcon from "FolderIcon" /* 5865 */;
-import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 7257 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8346 */;
-import ChatSmileIcon from "ChatSmileIcon" /* 8973 */;
-import UserIcon from "UserIcon" /* 11448 */;
-import NitroWumpusFlightRight3dIllustration from "NitroWumpusFlightRight3dIllustration" /* 15581 */;
-import PremiumPerksListDefault from "PremiumPerksList" /* 15583 */;
+import PremiumUtils from "PremiumUtils" /* 4726 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 7733 */;
+import FolderIcon from "FolderIcon" /* 8177 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9005 */;
+import UserIcon from "UserIcon" /* 11431 */;
+import ChatSmileIcon from "ChatSmileIcon" /* 12878 */;
+import NitroWumpusFlightRight3dIllustration from "NitroWumpusFlightRight3dIllustration" /* 15861 */;
+import PremiumPerksListDefault from "PremiumPerksList" /* 15863 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const PremiumTypes = fn(1379).PremiumTypes;
+const PremiumTypes = fn(1391).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { contentContainer: { paddingHorizontal: 36, paddingTop: 18, paddingBottom: 36, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "flex-start", display: "flex", flexDirection: "column", gap: 0 }, buttonContainer: { marginVertical: 6, width: "100%", height: 48 }, title: { width: "100%", textAlign: "center" }, heroIllustrationContainer: { alignItems: "center", justifyContent: "center", height: 188, width: "100%" } };
 let closure_7 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
@@ -29,7 +29,7 @@ let obj3 = { paddingHorizontal: 36, paddingTop: 18, paddingBottom: 36, width: "1
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/trials/PremiumTrialOfferActionSheetContent.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumTrialOfferActionSheetContent(arg0) {
   const cResult = c.c(27);
   ({ trialOffer, intervalDuration, onConfirm } = arg0);
   const tmp4 = closure_7();
@@ -209,7 +209,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   cResult[7] = skuId3;
   cResult[8] = formatToPlainStringResult1;
   tmp19 = formatToPlainStringResult1;
-}) : ((onConfirm) => {
+}) : (function PremiumTrialOfferActionSheetContent(onConfirm) {
   ({ trialOffer, intervalDuration } = onConfirm);
   const tmp = closure_7();
   let subscriptionTrial;

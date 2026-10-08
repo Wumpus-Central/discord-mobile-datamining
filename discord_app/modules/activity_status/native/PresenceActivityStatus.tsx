@@ -1,16 +1,16 @@
-// === Module 10633: PresenceActivityStatus ===
+// === Module 10231: PresenceActivityStatus ===
 
-// Module 10633 (PresenceActivityStatus)
+// Module 10231 (PresenceActivityStatus)
 import c from "c" /* 576 */;
-import AppsIcon2 from "AppsIcon" /* 5897 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7242 */;
-import GameControllerIcon2 from "GameControllerIcon" /* 8771 */;
-import MusicIcon from "MusicIcon" /* 9584 */;
-import ActivityStatusIconDefault from "ActivityStatusIcon" /* 10628 */;
-import TvIcon from "TvIcon" /* 10629 */;
-import ActivityStatusTextDefault from "ActivityStatusText" /* 10631 */;
-import conjurePresenceActivity from "conjurePresenceActivity" /* 10634 */;
-import getActivityStatusTextDefault from "getActivityStatusText" /* 10635 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7421 */;
+import AppsIcon2 from "AppsIcon" /* 8209 */;
+import GameControllerIcon2 from "GameControllerIcon" /* 9117 */;
+import ActivityStatusIconDefault from "ActivityStatusIcon" /* 10226 */;
+import TvIcon from "TvIcon" /* 10227 */;
+import ActivityStatusTextDefault from "ActivityStatusText" /* 10229 */;
+import conjurePresenceActivity from "conjurePresenceActivity" /* 10232 */;
+import MusicIcon from "MusicIcon" /* 10233 */;
+import getActivityStatusTextDefault from "getActivityStatusText" /* 10235 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -52,7 +52,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activity_status/native/PresenceActivityStatus.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function PresenceActivityStatus(arg0) {
   const cResult = c.c(16);
   ({ activity, iconStyle, textStyle, maxFontSizeMultiplier, hideIcon, hideText } = arg0);
   if (undefined !== hideIcon && hideIcon) {
@@ -131,7 +131,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[6] = iconStyle;
   cResult[7] = tmp12;
   tmp11 = tmp12;
-}) : ((hideText) => {
+}) : (function PresenceActivityStatus(hideText) {
   ({ activity, hideIcon } = hideText);
   ({ iconStyle, textStyle, maxFontSizeMultiplier } = hideText);
   if (hideIcon === undefined) {

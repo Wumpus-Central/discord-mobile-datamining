@@ -1,16 +1,16 @@
-// === Module 10825: PremiumGiftingPromotionSuccessActions ===
+// === Module 12777: PremiumGiftingPromotionSuccessActions ===
 
-// Module 10825 (PremiumGiftingPromotionSuccessActions)
+// Module 12777 (PremiumGiftingPromotionSuccessActions)
 import nativeDefault from "native" /* 587 */;
-import PremiumGiftModal from "PremiumGiftModal" /* 10406 */;
-import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 10826 */;
+import PremiumGiftModal from "PremiumGiftModal" /* 10003 */;
+import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 11175 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 let View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { flexDirection: "column", alignItems: "center", gap: nativeDefault.space.PX_16 }, promoDetails: null };
 let obj3 = { flexDirection: "column", alignItems: "center", gap: nativeDefault.space.PX_16 };
 obj2.promoDetails = { alignSelf: "stretch", paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
@@ -20,7 +20,7 @@ let obj4 = { alignSelf: "stretch", paddingVertical: nativeDefault.space.PX_12, p
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumGiftingPromotionSuccessActions.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((purchase) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumGiftingPromotionSuccessActions(purchase) {
   const cResult = onClose(navigation[6]).c(24);
   const tmp4 = closure_7();
   let obj = onClose(navigation[6]);
@@ -67,7 +67,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((purchase) => {
                       let tmp13 = cResult[15];
                     }
                     const _Symbol = Symbol;
-                    class S {
+                    class I {
                       constructor() {
                         if (null != product) {
                           tmp10 = closure_1;
@@ -108,7 +108,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((purchase) => {
                           return tmp20;
                         }
                       }
-                      class S {
+                      class I {
                         constructor() {
                           if (null != product) {
                             tmp10 = closure_1;
@@ -155,7 +155,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((purchase) => {
                     tmp17 = tmp19;
                   }
                 }
-                class S {
+                class I {
                   constructor() {
                     if (null != product) {
                       tmp10 = closure_1;
@@ -194,7 +194,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((purchase) => {
           }
         }
       }
-      class S {
+      class I {
         constructor() {
           if (null != product) {
             tmp10 = closure_1;
@@ -229,8 +229,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((purchase) => {
       cResult[8] = onClose;
       cResult[9] = tmp10;
       cResult[10] = product;
-      cResult[11] = S;
-      tmp11 = S;
+      cResult[11] = I;
+      tmp11 = I;
     }
   }
   const fn = function _() {
@@ -249,7 +249,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((purchase) => {
   cResult[4] = fn;
   tmp10 = fn;
   const tmpResult = onClose(navigation[10]);
-}) : ((purchase) => {
+}) : (function PremiumGiftingPromotionSuccessActions(purchase) {
   let onClose;
   let navigation;
   onCancel = undefined;

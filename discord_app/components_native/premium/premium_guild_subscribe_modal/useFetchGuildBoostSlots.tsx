@@ -1,20 +1,22 @@
-// === Module 13399: useFetchGuildBoostSlots ===
+// === Module 13699: useFetchGuildBoostSlots ===
 
-// Module 13399 (useFetchGuildBoostSlots)
+// Module 13699 (useFetchGuildBoostSlots)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 6918 */;
-import AppStateStore from "AppStateStore" /* 1986 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7107 */;
+import AppStateStore from "AppStateStore" /* 1998 */;
 
 const require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/premium/premium_guild_subscribe_modal/useFetchGuildBoostSlots.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFetchGuildBoostSlots() {
   const cResult = first(stateFromStores[6]).c(9);
-  [first, closure_1] = noop.useState(true);
+  const tmp4 = ref(noop.useState(true), 2);
+  first = tmp4[0];
+  closure_1 = tmp4[1];
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [GuildBoostSlotStore];
     const fn = function l() {
@@ -31,14 +33,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   stateFromStores = first(stateFromStores[7]).useStateFromStores(tmp6, tmp7);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [AppStateStore];
-    class F {
-      constructor() {
-        return closure_1_7.getState();
-      }
-    }
+    const fn2 = function v() {
+      return state.getState();
+    };
     cResult[2] = items1;
-    cResult[3] = F;
-    let tmp11 = F;
+    cResult[3] = fn2;
+    let tmp11 = fn2;
     let tmp10 = items1;
   } else {
     tmp10 = cResult[2];
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   const tmpResult = first(stateFromStores[7]);
   const stateFromStores1 = first(stateFromStores[7]).useStateFromStores(tmp10, tmp11);
-  _slicedToArray = noop.useRef(stateFromStores1);
+  const tmpResult2 = first(stateFromStores[7]);
   if (cResult[4] === stateFromStores1) {
     if (cResult[5] === stateFromStores) {
       if (cResult[6] === first) {
@@ -57,101 +57,115 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       return first;
     }
   }
-  const fn2 = function b() {
-    if (closure_0) {
-      closure_0 = stateFromStores1(function*() {
-        if (c2 === 2) {
-          c2 = 3;
-          throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp4 === 3) {
-          if (arg0 === 1) {
-            throw value;
-          } else if (arg0 === 2) {
-            const obj4 = { value, done: true };
-            return obj4;
+  class B {
+    constructor() {
+      if (closure_0) {
+        tmp5 = closure_3;
+        closure_0 = closure_3(function*() {
+          if (c2 === 2) {
+            c2 = 3;
+            throw new TypeError("Generator functions may not be called on executing generators");
+          } else if (tmp4 === 3) {
+            if (arg0 === 1) {
+              throw value;
+            } else if (arg0 === 2) {
+              const obj4 = { value, done: true };
+              return obj4;
+            } else {
+              return { value: "IconComponent", done: null };
+            }
           } else {
-            return { value: "IconComponent", done: null };
-          }
-        } else {
-          try {
-            c2 = 2;
-            if (0 === v1) {
-              if (arg0 === 1) {
+            try {
+              c2 = 2;
+              if (0 === v1) {
+                if (arg0 === 1) {
+                  c2 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  c2 = 3;
+                  const obj5 = { value, done: true };
+                  return obj5;
+                } else {
+                  let resolve = globalThis;
+                  let appliedGuildBoostsForUser = stateFromStores;
+                  let items = [closure_2_1(stateFromStores[9]).init(), , ];
+                  if (c2) {
+                    resolve = resolve.Promise.resolve;
+                    let resolveResult = resolve();
+                    const _Promise = resolve.Promise;
+                  } else {
+                    resolveResult = tmp2(appliedGuildBoostsForUser[10]).fetchGuildBoostSlots();
+                    const obj2 = tmp2(appliedGuildBoostsForUser[10]);
+                  }
+                  items[1] = resolveResult;
+                  const obj6 = closure_2_1(stateFromStores[9]);
+                  appliedGuildBoostsForUser = tmp2(appliedGuildBoostsForUser[10]).fetchAppliedGuildBoostsForUser();
+                  items[2] = appliedGuildBoostsForUser;
+                  items = Promise.all(items);
+                  v1 = 1;
+                  c2 = 1;
+                  const obj3 = tmp2(appliedGuildBoostsForUser[10]);
+                }
+              } else if (arg0 === 1) {
                 c2 = 3;
                 throw value;
               } else if (arg0 === 2) {
                 c2 = 3;
-                const obj5 = { value, done: true };
-                return obj5;
+                const obj = { value, done: true };
+                return obj;
               } else {
-                let resolve = globalThis;
-                let appliedGuildBoostsForUser = stateFromStores;
-                let items = [closure_2_1(stateFromStores[9]).init(), , ];
-                if (c2) {
-                  resolve = resolve.Promise.resolve;
-                  let resolveResult = resolve();
-                  const _Promise = resolve.Promise;
-                } else {
-                  resolveResult = tmp2(appliedGuildBoostsForUser[10]).fetchGuildBoostSlots();
-                  const obj2 = tmp2(appliedGuildBoostsForUser[10]);
-                }
-                items[1] = resolveResult;
-                const obj6 = closure_2_1(stateFromStores[9]);
-                appliedGuildBoostsForUser = tmp2(appliedGuildBoostsForUser[10]).fetchAppliedGuildBoostsForUser();
-                items[2] = appliedGuildBoostsForUser;
-                items = Promise.all(items);
-                v1 = 1;
-                c2 = 1;
-                const obj3 = tmp2(appliedGuildBoostsForUser[10]);
+                v1(false);
+                c2 = 3;
+                return { value: "IconComponent", done: null };
               }
-            } else if (arg0 === 1) {
-              c2 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c2 = 3;
-              const obj = { value, done: true };
-              return obj;
-            } else {
-              v1(false);
-              c2 = 3;
-              return { value: "IconComponent", done: null };
+            } catch (tmp13) {
+              c2 = tmp;
+              throw tmp13;
             }
-          } catch (tmp13) {
-            c2 = tmp;
-            throw tmp13;
           }
+        });
+        tmp6 = closure_4;
+        tmp7 = closure_3;
+        closure_4.current = closure_3;
+        tmp8 = (function fetch() {
+          const self = this;
+          const apply = closure_0.apply;
+          if (typeof apply === "unknown") {
+            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+          } else {
+            applyArgumentsResult = apply(self, arguments);
+          }
+          return applyArgumentsResult;
+        })();
+      } else {
+        tmp2 = closure_4;
+        if (closure_3 !== closure_4.current) {
+          tmp3 = closure_0;
+          tmp4 = closure_2;
         }
-      });
-      ref.current = stateFromStores1;
-      (function fetch() {
-        const self = this;
-        const apply = closure_0.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
-      })();
+      }
+      return;
     }
-  };
+  }
   const items2 = [stateFromStores1, stateFromStores, first];
   cResult[4] = stateFromStores1;
   cResult[5] = stateFromStores;
   cResult[6] = first;
-  cResult[7] = fn2;
+  cResult[7] = B;
   cResult[8] = items2;
   tmp15 = items2;
-  tmp14 = fn2;
-  const tmpResult2 = first(stateFromStores[7]);
-}) : (() => {
-  [first, closure_1] = noop.useState(true);
+  tmp14 = B;
+  ref = noop.useRef(stateFromStores1);
+}) : (function useFetchGuildBoostSlots() {
+  const tmp = ref(noop.useState(true), 2);
+  const first = tmp[0];
+  closure_1 = tmp[1];
   let items = [GuildBoostSlotStore];
   stateFromStores = first(stateFromStores[7]).useStateFromStores(items, () => hasFetched.hasFetched);
   let obj = first(stateFromStores[7]);
   const items1 = [AppStateStore];
   const stateFromStores1 = first(stateFromStores[7]).useStateFromStores(items1, () => state.getState());
-  _slicedToArray = noop.useRef(stateFromStores1);
+  let obj2 = first(stateFromStores[7]);
   const items2 = [stateFromStores1, stateFromStores, first];
   const effect = noop.useEffect(() => {
     if (closure_0) {

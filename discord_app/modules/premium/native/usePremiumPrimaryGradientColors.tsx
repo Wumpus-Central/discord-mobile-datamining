@@ -1,15 +1,15 @@
-// === Module 13243: usePremiumPrimaryGradientColors ===
+// === Module 13543: usePremiumPrimaryGradientColors ===
 
-// Module 13243 (usePremiumPrimaryGradientColors)
+// Module 13543 (usePremiumPrimaryGradientColors)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4586 */;
+import useToken from "useToken" /* 4778 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/native/usePremiumPrimaryGradientColors.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePremiumPrimaryGradientColors() {
   const cResult = c.c(4);
   const token = useToken.useToken(nativeDefault.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT);
   const token1 = useToken.useToken(nativeDefault.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT_2);
@@ -28,7 +28,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[2] = token2;
   cResult[3] = items;
   tmp5 = items;
-}) : (() => {
+}) : (function usePremiumPrimaryGradientColors() {
   const items = [useToken.useToken(nativeDefault.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT), , ];
   items[1] = useToken.useToken(nativeDefault.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT_2);
   items[2] = useToken.useToken(nativeDefault.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PINK_FOR_GRADIENT);

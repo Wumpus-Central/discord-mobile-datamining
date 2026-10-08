@@ -1,19 +1,19 @@
-// === Module 5921: QuarantineModeInfoAlert ===
+// === Module 6105: QuarantineModeInfoAlert ===
 
-// Module 5921 (QuarantineModeInfoAlert)
+// Module 6105 (QuarantineModeInfoAlert)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import common_AlertDefault from "common/Alert" /* 5790 */;
+import native from "native" /* 1200 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import common_AlertDefault from "common/Alert" /* 5394 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 5922 */;
+import TextStyles from "TextStyles" /* 5902 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { header: null, text: null };
 let obj3 = {};
 const merged = Object.assign(TextStyles(fn(1085).Fonts.PRIMARY_BOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));
@@ -26,7 +26,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quarantine/native/QuarantineModeInfoAlert.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuarantineModeInfoAlert(onClose) {
   const cResult = c.c(10);
   onClose = onClose.onClose;
   const tmp4 = closure_5();
@@ -81,7 +81,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
   cResult[8] = tmp12;
   cResult[9] = tmp16;
   tmp15 = tmp16;
-}) : ((onClose) => {
+}) : (function QuarantineModeInfoAlert(onClose) {
   const tmp = closure_5();
   const obj = { onClose: onClose.onClose, children: null };
   const obj2 = { style: tmp.header, children: null };

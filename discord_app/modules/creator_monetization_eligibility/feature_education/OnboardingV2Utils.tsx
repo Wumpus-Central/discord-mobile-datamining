@@ -1,11 +1,11 @@
-// === Module 16219: OnboardingV2Utils ===
+// === Module 16479: OnboardingV2Utils ===
 
-// Module 16219 (OnboardingV2Utils)
+// Module 16479 (OnboardingV2Utils)
 import Constants from "Constants" /* 1085 */;
-import GuildRecord from "GuildRecord" /* 2070 */;
-import GuildRoleSubscriptionSettingUtils from "GuildRoleSubscriptionSettingUtils" /* 6773 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import UserStore from "UserStore" /* 1377 */;
+import GuildRecord from "GuildRecord" /* 2082 */;
+import GuildRoleSubscriptionSettingUtils from "GuildRoleSubscriptionSettingUtils" /* 6949 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import UserStore from "UserStore" /* 1389 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -16,7 +16,7 @@ let items = [, , , , ];
 ({ CREATOR_MONETIZABLE_PROVISIONAL: arr[0], CREATOR_MONETIZABLE: arr[1], CREATOR_MONETIZABLE_WHITEGLOVE: arr[2], CREATOR_MONETIZABLE_DISABLED: arr[3], CREATOR_MONETIZABLE_RESTRICTED: arr[4] } = Constants.GuildFeatures);
 const result = size.fileFinishedImporting("modules/creator_monetization_eligibility/feature_education/OnboardingV2Utils.tsx");
 
-export const useCanSeeCreatorMonetizationOnboardingV2Upsell = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useCanSeeCreatorMonetizationOnboardingV2Upsell = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanSeeCreatorMonetizationOnboardingV2Upsell(arg0) {
   _require = arg0;
   const cResult = require("c").c(10);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -88,7 +88,7 @@ export const useCanSeeCreatorMonetizationOnboardingV2Upsell = ReactCompilerGatin
     cResult[7] = tmp14;
   }
   const tmpResult4 = require("GuildRoleSubscriptionSettingUtils");
-}) : ((arg0) => {
+}) : (function useCanSeeCreatorMonetizationOnboardingV2Upsell(arg0) {
   _require = arg0;
   items = [GuildStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0));

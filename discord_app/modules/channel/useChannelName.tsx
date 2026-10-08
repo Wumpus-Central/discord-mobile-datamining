@@ -1,13 +1,13 @@
-// === Module 5049: useChannelName ===
+// === Module 5417: useChannelName ===
 
-// Module 5049 (useChannelName)
+// Module 5417 (useChannelName)
 import util from "util" /* 1126 */;
-import GlobalUtils from "GlobalUtils" /* 1375 */;
-import UserUtilsDefault from "UserUtils" /* 4728 */;
+import GlobalUtils from "GlobalUtils" /* 1387 */;
+import UserUtilsDefault from "UserUtils" /* 4922 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ExperimentStore from "ExperimentStore" /* 4782 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
-import UserStore from "UserStore" /* 1377 */;
+import ExperimentStore from "ExperimentStore" /* 4976 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
@@ -154,7 +154,7 @@ const Constants = fn(1085);
 ({ ChannelTypes: closure_7, NULL_STRING_CHANNEL_ID: closure_8 } = Constants);
 fn(558);
 const ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useComputedGroupDmName(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -200,7 +200,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp7);
-}) : ((arg0) => {
+}) : (function useComputedGroupDmName(arg0) {
   _require = arg0;
   const items = [UserStore, RelationshipStore];
   return require("initialize").useStateFromStores(items, () => {
@@ -278,7 +278,7 @@ function escapeChannelName(channelName) {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/useChannelName.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useChannelName(arg0, arg1) {
   _require = arg0;
   const cResult = require("c").c(4);
   closure_1 = tmp4;
@@ -308,7 +308,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   tmp9 = fn;
   const obj = require("c");
   tmp = _require;
-}) : ((arg0) => {
+}) : (function useChannelName(arg0) {
   _require = arg0;
   let flag = arg1;
   if (arg1 === undefined) {

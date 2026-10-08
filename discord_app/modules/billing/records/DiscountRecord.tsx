@@ -1,9 +1,9 @@
-// === Module 6973: DiscountRecord ===
+// === Module 7162: DiscountRecord ===
 
-// Module 6973 (DiscountRecord)
-import Record from "Record" /* 1392 */;
+// Module 7162 (DiscountRecord)
+import Record from "Record" /* 1404 */;
 
-const PremiumConstants = fn(1379);
+const PremiumConstants = fn(1391);
 ({ SubscriptionIntervalTypes, DiscountUserUsageLimitIntervalTypes } = PremiumConstants);
 let closure_0 = { [DiscountUserUsageLimitIntervalTypes.DAY]: SubscriptionIntervalTypes.DAY, [DiscountUserUsageLimitIntervalTypes.WEEK]: SubscriptionIntervalTypes.DAY, [DiscountUserUsageLimitIntervalTypes.MONTH]: SubscriptionIntervalTypes.MONTH, [DiscountUserUsageLimitIntervalTypes.YEAR]: SubscriptionIntervalTypes.YEAR };
 let DiscountRecord;

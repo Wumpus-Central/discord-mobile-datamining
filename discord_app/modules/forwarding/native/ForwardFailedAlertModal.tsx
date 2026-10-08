@@ -1,7 +1,7 @@
-// === Module 11345: ForwardFailedAlertModal ===
+// === Module 11614: ForwardFailedAlertModal ===
 
-// Module 11345 (ForwardFailedAlertModal)
-import ForwardModalUtils from "ForwardModalUtils" /* 11319 */;
+// Module 11614 (ForwardFailedAlertModal)
+import ForwardModalUtils from "ForwardModalUtils" /* 11572 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -10,7 +10,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forwarding/native/ForwardFailedAlertModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((message) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForwardFailedAlertModal(message) {
   const cResult = message(forwardOptions[3]).c(11);
   message = message.message;
   const failedDestinations = message.failedDestinations;
@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((message) => {
   cResult[3] = fn;
   tmp4 = fn;
   const obj = message(forwardOptions[3]);
-}) : ((message) => {
+}) : (function ForwardFailedAlertModal(message) {
   message = message.message;
   const failedDestinations = message.failedDestinations;
   const forwardOptions = message.forwardOptions;

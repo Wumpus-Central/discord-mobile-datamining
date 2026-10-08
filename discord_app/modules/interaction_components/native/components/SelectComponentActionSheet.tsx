@@ -1,23 +1,23 @@
-// === Module 11445: SelectComponentActionSheet ===
+// === Module 11428: SelectComponentActionSheet ===
 
-// Module 11445 (SelectComponentActionSheet)
+// Module 11428 (SelectComponentActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4600 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import FormCheckbox from "FormCheckbox" /* 5998 */;
-import TableRow from "TableRow" /* 6000 */;
-import CheckmarkSmallBoldIcon from "CheckmarkSmallBoldIcon" /* 8991 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4792 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import FormCheckbox from "FormCheckbox" /* 6182 */;
+import TableRow from "TableRow" /* 6184 */;
+import CheckmarkSmallBoldIcon from "CheckmarkSmallBoldIcon" /* 8742 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_7 = fn(6653).ACTION_SHEET_START_HEIGHT_RATIO;
+let closure_7 = fn(6830).ACTION_SHEET_START_HEIGHT_RATIO;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { selectionOptionItemIconWrapper: { width: nativeDefault.space.PX_32, alignItems: "center" }, tagListIconWrapper: null, tagListIcon: null, textInputWrapper: null };
 let size = { width: nativeDefault.space.PX_16, height: nativeDefault.space.PX_16 };
 obj2.tagListIconWrapper = size;
@@ -29,7 +29,7 @@ let obj3 = { width: nativeDefault.space.PX_32, alignItems: "center" };
 obj2.textInputWrapper = { paddingHorizontal: nativeDefault.space.PX_4, marginTop: nativeDefault.space.PX_16, marginHorizontal: nativeDefault.space.PX_16 };
 let closure_11 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((renderIcon) => {
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function SelectionHeader(renderIcon) {
   const cResult = renderIcon(onPressOptionItem[9]).c(29);
   renderIcon = renderIcon.renderIcon;
   ({ selectionActionComponent, labelComponent, selectButtonDisabled, selectedOptions } = renderIcon);
@@ -221,7 +221,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((renderIcon) =>
   cResult[3] = mapped;
   arr = mapped;
   let obj = renderIcon(onPressOptionItem[9]);
-}) : ((renderIcon) => {
+}) : (function SelectionHeader(renderIcon) {
   renderIcon = renderIcon.renderIcon;
   ({ selectionActionComponent, labelComponent, selectButtonDisabled, selectedOptions } = renderIcon);
   ({ onPressOptionItem: dependencyMap, onRemoveOptionItem: noop, onQueryChange } = renderIcon);
@@ -274,10 +274,10 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((renderIcon) =>
     const obj3 = { size: "sm", variant: str, disabled: selectButtonDisabled, onPress: renderIcon.submitSelection, text: null };
     const intl3 = tmp6(1126).intl;
     obj3.text = intl3.string(tmp6(1126).t.XqMe3N);
-    tmp5Result = closure_8(tmp6(5601).Button, obj3);
+    tmp5Result = closure_8(tmp6(5375).Button, obj3);
   }
   obj.trailing = tmp5Result;
-  const children = [closure_8(renderIcon(6651).BottomSheetTitleHeader, obj), ];
+  const children = [closure_8(renderIcon(6828).BottomSheetTitleHeader, obj), ];
   let tmp5Result4 = null;
   if (null != onQueryChange) {
     tmp5Result4 = null;
@@ -311,15 +311,15 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((renderIcon) =>
         }
         onQueryChange(arg0);
       };
-      tmp5Result4 = closure_8(selectedOptions(9270), obj4);
-      const tmp13 = selectedOptions(9270);
+      tmp5Result4 = closure_8(selectedOptions(8601), obj4);
+      const tmp13 = selectedOptions(8601);
     }
   }
   children[1] = tmp5Result4;
   return closure_10(closure_9, { children });
 });
 ReactCompilerGating = fn(558);
-let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((item) => {
+let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function SelectionOptionItem(item) {
   const cResult = c.c(44);
   item = item.item;
   const onPressOptionItem = item.onPressOptionItem;
@@ -446,7 +446,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((item) => {
                             const obj4 = { style: tmp20, children: null };
                             const items = [tmp21, cResult[28]];
                             obj4.children = items;
-                            const tmp28 = v65535(View, obj4);
+                            const tmp28 = collapsed(View, obj4);
                             cResult[29] = tmp21;
                             cResult[30] = cResult[28];
                             cResult[31] = tmp28;
@@ -535,7 +535,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((item) => {
   cResult[1] = flag;
   cResult[2] = obj6;
   tmp5 = obj6;
-}) : ((item) => {
+}) : (function SelectionOptionItem(item) {
   item = item.item;
   ({ onPressOptionItem: importDefault, selected, disabled, index: dependencyMap, itemAccessibilityLabel, renderDescription, renderOptionSuffix } = item);
   ({ clearable, start, end, iconContainerStyle, skipIcon, multi, renderIcon } = item);
@@ -601,7 +601,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((item) => {
   }
   items1[1] = tmp6Result2;
   obj4.children = items1;
-  obj2.trailing = v65535(View, obj4);
+  obj2.trailing = collapsed(View, obj4);
   return closure_1_8(TableRow.TableRow, obj2);
 });
 ReactCompilerGating = fn(558);
@@ -609,7 +609,7 @@ let obj4 = { paddingHorizontal: nativeDefault.space.PX_4, marginTop: nativeDefau
 size = fn(2);
 let result = size.fileFinishedImporting("modules/interaction_components/native/components/SelectComponentActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((selectionActionComponent) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SelectComponentActionSheet(selectionActionComponent) {
   const cResult = selectionActionComponent(selectedCount[9]).c(51);
   selectionActionComponent = selectionActionComponent.selectionActionComponent;
   ({ labelComponent, onPressOptionItem } = selectionActionComponent);
@@ -804,7 +804,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((selectionActionC
   cResult[12] = items2;
   cResult[13] = U;
   const tmpResult = selectionActionComponent(selectedCount[23]);
-}) : ((selectionActionComponent) => {
+}) : (function SelectComponentActionSheet(selectionActionComponent) {
   selectionActionComponent = selectionActionComponent.selectionActionComponent;
   const onPressOptionItem = selectionActionComponent.onPressOptionItem;
   const selectedCount = selectionActionComponent.selectedCount;

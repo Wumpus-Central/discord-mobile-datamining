@@ -1,9 +1,9 @@
-// === Module 16987: YouScreenNavIconMeasurer ===
+// === Module 17268: YouScreenNavIconMeasurer ===
 
-// Module 16987 (YouScreenNavIconMeasurer)
+// Module 17268 (YouScreenNavIconMeasurer)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ContextUtilsDefault from "ContextUtils" /* 6947 */;
+import ContextUtilsDefault from "ContextUtils" /* 7136 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ const PX_4 = nativeDefault.space.PX_4;
 fn(558);
 const importDefaultResultResult = _slicedToArray(ContextUtilsDefault(), 2);
 const ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouScreenNavIconMeasurer(children) {
   const cResult = require("c").c(7);
   children = children.children;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -143,7 +143,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
   cResult[5] = tmp11;
   cResult[6] = tmp12;
   const tmp7 = _slicedToArray(noop.useState(), 2);
-}) : ((children) => {
+}) : (function YouScreenNavIconMeasurer(children) {
   width = undefined;
   _slicedToArray = undefined;
   let onWidthMeasured;
@@ -172,7 +172,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouScreenNavIconMeasurer.tsx");
 
 export const YouScreenNavIconMeasurer = tmp4;
-export const useYouScreenNavIconMeasurement = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useYouScreenNavIconMeasurement = ReactCompilerGating.isReactCompilerEnabled() ? (function useYouScreenNavIconMeasurement() {
   const cResult = c.c(6);
   const tmp2 = closure_1_8();
   const onWidthMeasured = tmp2.onWidthMeasured;
@@ -199,7 +199,7 @@ export const useYouScreenNavIconMeasurement = ReactCompilerGating.isReactCompile
     }
     return tmp11;
   }
-  const fn = function n() {
+  const fn = function t() {
     const current = ref.current;
     if (null != current) {
       current.measureLayout(current, (arg0, arg1, arg2) => {
@@ -217,7 +217,7 @@ export const useYouScreenNavIconMeasurement = ReactCompilerGating.isReactCompile
   tmp8 = items;
   tmp7 = fn;
   const tmp5 = _slicedToArray(noop.useState(false), 2);
-}) : (() => {
+}) : (function useYouScreenNavIconMeasurement() {
   const tmp = closure_1_8();
   const onWidthMeasured = tmp.onWidthMeasured;
   const id = noop.useId();

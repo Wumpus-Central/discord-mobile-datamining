@@ -1,18 +1,18 @@
-// === Module 6644: FormArrow ===
+// === Module 6821: FormArrow ===
 
-// Module 6644 (FormArrow)
+// Module 6821 (FormArrow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import _modDef6645 from "module_6645" /* 6645 */;
+import native from "native" /* 1200 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import _modDef6822 from "module_6822" /* 6822 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { wrapper: { flexDirection: "row", alignItems: "center" }, icon: { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginRight: -8, marginLeft: 8 } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -20,7 +20,7 @@ let obj3 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginRig
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormArrow.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormArrow(arg0) {
   const cResult = c.c(12);
   ({ label, style } = arg0);
   let wrapper = closure_6();
@@ -55,7 +55,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const obj4 = { style: null, source: null, size: null };
     const items1 = [wrapper.icon, style];
     obj4.style = items1;
-    obj4.source = _modDef6645;
+    obj4.source = _modDef6822;
     obj4.size = native.Icon.Sizes.MEDIUM;
     const tmp14 = React4(native.Icon, obj4);
     cResult[2] = style;
@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const obj5 = { style: null, source: null, size: null };
     const items2 = [wrapper.icon, style];
     obj5.style = items2;
-    obj5.source = _modDef6645;
+    obj5.source = _modDef6822;
     obj5.size = native.Icon.Sizes.MEDIUM;
     const tmp7 = React4(native.Icon, obj5);
     cResult[9] = style;
@@ -80,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[11] = tmp7;
     tmp4 = tmp7;
   }
-}) : ((arg0) => {
+}) : (function FormArrow(arg0) {
   ({ label, style } = arg0);
   const tmp = closure_6();
   if (null != label) {
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const obj4 = { style: null, source: null, size: null };
     const items1 = [tmp.icon, style];
     obj4.style = items1;
-    obj4.source = _modDef6645;
+    obj4.source = _modDef6822;
     obj4.size = native.Icon.Sizes.MEDIUM;
     items[1] = React4(native.Icon, obj4);
     obj2.children = items;
@@ -99,7 +99,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const obj = { style: null, source: null, size: null };
     const items2 = [tmp.icon, style];
     obj.style = items2;
-    obj.source = _modDef6645;
+    obj.source = _modDef6822;
     obj.size = native.Icon.Sizes.MEDIUM;
     tmp6 = React4(native.Icon, obj);
   }

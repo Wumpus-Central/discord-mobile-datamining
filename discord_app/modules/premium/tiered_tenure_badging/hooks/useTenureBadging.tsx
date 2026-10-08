@@ -1,22 +1,22 @@
-// === Module 10888: useTenureBadging ===
+// === Module 10539: useTenureBadging ===
 
-// Module 10888 (useTenureBadging)
+// Module 10539 (useTenureBadging)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import PremiumTypeUtils from "PremiumTypeUtils" /* 1976 */;
-import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7132 */;
-import useTieredTenureBadgeForUser from "useTieredTenureBadgeForUser" /* 10889 */;
-import TenureBadgeWithheldStateExperiment from "TenureBadgeWithheldStateExperiment" /* 10890 */;
-import UserProfileStore from "UserProfileStore" /* 7124 */;
-import UserStore from "UserStore" /* 1377 */;
-import SubscriptionStore from "SubscriptionStore" /* 4540 */;
+import PremiumTypeUtils from "PremiumTypeUtils" /* 1988 */;
+import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7318 */;
+import useTieredTenureBadgeForUser from "useTieredTenureBadgeForUser" /* 10540 */;
+import TenureBadgeWithheldStateExperiment from "TenureBadgeWithheldStateExperiment" /* 10541 */;
+import UserProfileStore from "UserProfileStore" /* 7309 */;
+import UserStore from "UserStore" /* 1389 */;
+import SubscriptionStore from "SubscriptionStore" /* 4732 */;
 
 require = fn;
-const PremiumConstants = fn(1379);
+const PremiumConstants = fn(1391);
 ({ PremiumTypes: hasOwnProperty, TENURE_BADGES: metroRequire } = PremiumConstants);
 const TieredTenureBadgeStatus = { UPCOMING: "upcoming", WITHHELD: "withheld", EARNED: "earned" };
 let ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useTieredTenureBadge() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
@@ -41,7 +41,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tieredTenureBadgeForUser = null;
   }
   return tieredTenureBadgeForUser;
-}) : (() => {
+}) : (function useTieredTenureBadge() {
   const items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   let id;
@@ -56,7 +56,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
 });
 let closure_8 = tmp3;
 ReactCompilerGating = fn(558);
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePremiumSinceForUser(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -87,7 +87,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp6);
-}) : ((arg0) => {
+}) : (function usePremiumSinceForUser(arg0) {
   _require = arg0;
   const items = [UserProfileStore];
   return require("initialize").useStateFromStores(items, () => {
@@ -105,7 +105,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 });
 let closure_9 = tmp4;
 ReactCompilerGating = fn(558);
-const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePremiumSince() {
   const cResult = require("c").c(8);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
@@ -122,11 +122,11 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const obj = require("c");
   const stateFromStores = require("initialize").useStateFromStores(tmp4, tmp5);
   if (cResult[2] !== stateFromStores) {
-    const isPremiumExactlyResult = tmp(1976).isPremiumExactly(stateFromStores, closure_5.TIER_2);
+    const isPremiumExactlyResult = tmp(1988).isPremiumExactly(stateFromStores, closure_5.TIER_2);
     cResult[2] = stateFromStores;
     cResult[3] = isPremiumExactlyResult;
     let tmp8 = isPremiumExactlyResult;
-    const tmpResult3 = tmp(1976);
+    const tmpResult3 = tmp(1988);
   } else {
     tmp8 = cResult[3];
   }
@@ -169,7 +169,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     stateFromStores1 = closure_9(id);
   }
   return stateFromStores1;
-}) : (() => {
+}) : (function usePremiumSince() {
   const items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   const isPremiumExactlyResult = PremiumTypeUtils.isPremiumExactly(stateFromStores, closure_5.TIER_2);
@@ -198,14 +198,14 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
 let closure_10 = tmp5;
 fn(558);
 ReactCompilerGating = fn(558);
-let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useTieredTenureEarnedOnDate() {
   let getEarnedOnDate = require;
   let earnedOnDate2 = dependencyMap;
   const cResult = c.c(5);
   const tmp3 = closure_8();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [SubscriptionStore];
-    const fn = function n() {
+    const fn = function t() {
       return premiumTypeSubscription.getPremiumTypeSubscription();
     };
     cResult[0] = items;
@@ -236,7 +236,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
   }
   return tmp7;
-}) : (() => {
+}) : (function useTieredTenureEarnedOnDate() {
   const tmp = closure_8();
   const items = [SubscriptionStore];
   const stateFromStores = initialize.useStateFromStores(items, () => premiumTypeSubscription.getPremiumTypeSubscription());
@@ -255,7 +255,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
 });
 let closure_11 = tmp7;
 ReactCompilerGating = fn(558);
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useTieredTenureBadgesFromSubscriptionData() {
   const cResult = c.c(6);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
@@ -312,7 +312,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     return null;
   }
   tmpResult5 = PremiumTypeUtils;
-}) : (() => {
+}) : (function useTieredTenureBadgesFromSubscriptionData() {
   const items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   const items1 = [SubscriptionStore];
@@ -329,14 +329,14 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   return earnedTenureBadge;
 });
 ReactCompilerGating = fn(558);
-let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? (function useTieredTenureBadgeDataForUser(arg0) {
   const tieredTenureBadgeForUser = useTieredTenureBadgeForUser.useTieredTenureBadgeForUser(arg0);
   let tmp2 = null;
   if (null != tieredTenureBadgeForUser) {
     tmp2 = dependencyMap[tieredTenureBadgeForUser];
   }
   return tmp2;
-}) : ((arg0) => {
+}) : (function useTieredTenureBadgeDataForUser(arg0) {
   const tieredTenureBadgeForUser = useTieredTenureBadgeForUser.useTieredTenureBadgeForUser(arg0);
   let tmp2 = null;
   if (null != tieredTenureBadgeForUser) {
@@ -354,7 +354,7 @@ export const usePremiumSinceForUser = tmp4;
 export const usePremiumSince = tmp5;
 export const useTieredTenureBadgesFromSubscriptionData = tmp6;
 export const useTieredTenureEarnedOnDate = tmp7;
-export const useTieredTenureBadgeData = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useTieredTenureBadgeData = ReactCompilerGating.isReactCompilerEnabled() ? (function useTieredTenureBadgeData() {
   const obj = c;
   const cResult = obj.c(8);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -443,7 +443,7 @@ export const useTieredTenureBadgeData = ReactCompilerGating.isReactCompilerEnabl
     return tmp21;
   }
   const tmpResult = initialize;
-}) : (() => {
+}) : (function useTieredTenureBadgeData() {
   const obj = initialize;
   const items = [UserStore];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());

@@ -1,25 +1,25 @@
-// === Module 8132: AgeVerificationWebViewScreen ===
+// === Module 7510: AgeVerificationWebViewScreen ===
 
-// Module 8132 (AgeVerificationWebViewScreen)
+// Module 7510 (AgeVerificationWebViewScreen)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 587 */;
-import LinkingDefault from "Linking" /* 4571 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4742 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 5108 */;
-import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 8124 */;
+import LinkingDefault from "Linking" /* 4763 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4936 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 5905 */;
+import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 7505 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(8118).AGE_VERIFICATION_MODAL_KEY;
-const AgeVerificationIncodeWebViewConstants = fn(8121);
+let closure_6 = fn(5914).AGE_VERIFICATION_MODAL_KEY;
+const AgeVerificationIncodeWebViewConstants = fn(7493);
 ({ AgeVerificationIncodeResultStatus: closure_7, buildIncodeFallbackSessionInjection: closure_8, parseIncodeWebViewMessage: closure_9 } = AgeVerificationIncodeWebViewConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let closure_12 = new LoggerDefault("AgeVerificationWebViewScreen");
 let c13 = 15000;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: null, loadingOverlay: null, webView: null };
 const tmp4 = new LoggerDefault("AgeVerificationWebViewScreen");
 obj2.container = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
@@ -33,7 +33,7 @@ let obj4 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWE
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_assurance/native/AgeVerificationWebViewScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeVerificationWebViewScreen(onClose) {
   const cResult = onComplete(ref[10]).c(35);
   ({ webviewUrl, onComplete } = onClose);
   onClose = onClose.onClose;
@@ -57,7 +57,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
     first = cResult[0];
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    class W {
+    class R {
       constructor() {
         closure_0 = setTimeout(() => {
           if (!ref.current) {
@@ -70,11 +70,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
       }
     }
     const items = [first];
-    cResult[1] = W;
+    cResult[1] = R;
     cResult[2] = items;
     let tmp8 = items;
   } else {
-    class W {
+    class R {
       constructor() {
         closure_0 = setTimeout(() => {
           if (!ref.current) {
@@ -88,9 +88,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
     }
     tmp8 = cResult[2];
   }
-  const effect = obj2.useEffect(W, tmp8);
+  const effect = obj2.useEffect(R, tmp8);
   if (cResult[3] === onClose) {
-    class W {
+    class R {
       constructor() {
         closure_0 = setTimeout(() => {
           if (!ref.current) {
@@ -488,7 +488,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
   cResult[4] = onComplete;
   cResult[5] = M;
   const tmp5 = ref(noop.useState(true), 2);
-}) : ((webviewUrl) => {
+}) : (function AgeVerificationWebViewScreen(webviewUrl) {
   webviewUrl = webviewUrl.webviewUrl;
   const onComplete = webviewUrl.onComplete;
   const onClose = webviewUrl.onClose;

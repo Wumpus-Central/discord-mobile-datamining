@@ -1,6 +1,6 @@
-// === Module 15155: RemoteFetchData ===
+// === Module 15417: RemoteFetchData ===
 
-// Module 15155 (RemoteFetchData)
+// Module 15417 (RemoteFetchData)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const FetchStatus = { Pending: 0, [0]: "Pending", Fetching: 1, [1]: "Fetching" };
@@ -87,9 +87,9 @@ prototype["markFailed"] = function markFailed(arg0) {
     continue;
   }
 };
-prototype["try"] = function try(nextWantsResult, string) {
+prototype["try"] = function try(nextWantsResult, objectResult4) {
   closure_0 = nextWantsResult;
-  closure_1 = string;
+  closure_1 = objectResult4;
   const self = this;
   return (async () => {
     if (c5 === 2) {

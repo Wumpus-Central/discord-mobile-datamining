@@ -1,18 +1,18 @@
-// === Module 14998: QuestBarPreview ===
+// === Module 15260: QuestBarPreview ===
 
-// Module 14998 (QuestBarPreview)
+// Module 15260 (QuestBarPreview)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import QuestDockExternalCoordinationContext from "QuestDockExternalCoordinationContext" /* 14916 */;
-import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext" /* 14999 */;
-import QuestDock from "QuestDock" /* 15000 */;
+import QuestDockExternalCoordinationContext from "QuestDockExternalCoordinationContext" /* 15178 */;
+import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext" /* 15261 */;
+import QuestDock from "QuestDock" /* 15262 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 const value = { isRendered: true, isVisibleToUser: true };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { overlay: { position: "absolute", bottom: 0, left: 0, right: 0, zIndex: 1000, elevation: 1000, pointerEvents: "box-none" }, questDockContainer: null };
 const rect = { position: "absolute", bottom: 0, left: nativeDefault.space.PX_16, right: nativeDefault.space.PX_16, zIndex: 1001, elevation: 1001 };
 obj2.questDockContainer = rect;
@@ -21,7 +21,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/quests/native/QuestBarPreview.tsx");
 
-export const QuestBarPreview = ReactCompilerGating.isReactCompilerEnabled() ? ((quest) => {
+export const QuestBarPreview = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestBarPreview(quest) {
   const cResult = c.c(8);
   quest = quest.quest;
   let overlay = closure_6();
@@ -64,7 +64,7 @@ export const QuestBarPreview = ReactCompilerGating.isReactCompilerEnabled() ? ((
     }
   }
   return tmp4;
-}) : ((quest) => {
+}) : (function QuestBarPreview(quest) {
   quest = quest.quest;
   const tmp = closure_6();
   let tmp2 = null;

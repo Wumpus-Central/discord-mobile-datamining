@@ -1,19 +1,19 @@
-// === Module 9456: GameActivityIcon ===
+// === Module 9107: GameActivityIcon ===
 
-// Module 9456 (GameActivityIcon)
+// Module 9107 (GameActivityIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 4595 */;
-import FastImageDefault from "FastImage" /* 5981 */;
+import native from "native" /* 4787 */;
+import FastImageDefault from "FastImage" /* 6164 */;
 import noop from "module_19" /* 19 */;
 
-const AvatarUtils = UnknownGameIcon(1402);
-const shared = UnknownGameIcon(4735);
-const UnknownGameIcon2 = UnknownGameIcon(8281);
+const AvatarUtils = UnknownGameIcon(1414);
+const shared = UnknownGameIcon(4929);
+const UnknownGameIcon2 = UnknownGameIcon(7662);
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { icon: { borderRadius: nativeDefault.radii.xs } };
 let closure_6 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
@@ -21,7 +21,7 @@ let obj3 = { borderRadius: nativeDefault.radii.xs };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/games/native/GameActivityIcon.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function GameActivityIcon(style) {
   let UnknownGameIcon = require;
   let tmp = dependencyMap;
   const cResult = c.c(14);
@@ -105,7 +105,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((style)
     tmp7 = items2;
   }
   obj2 = native;
-}) : ((style) => {
+}) : (function GameActivityIcon(style) {
   ({ game, size, onShown } = style);
   style = style.style;
   const tmp = closure_6();

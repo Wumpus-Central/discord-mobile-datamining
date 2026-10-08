@@ -1,17 +1,17 @@
-// === Module 16503: NewContentPill ===
+// === Module 16763: NewContentPill ===
 
-// Module 16503 (NewContentPill)
+// Module 16763 (NewContentPill)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import spring from "spring" /* 5604 */;
-import GuildIcon from "GuildIcon" /* 5978 */;
-import ICYMITypes from "ICYMITypes" /* 8034 */;
-import ICYMIUtils from "ICYMIUtils" /* 8038 */;
-import ClipView from "ClipView" /* 8502 */;
+import spring from "spring" /* 5374 */;
+import GuildIcon from "GuildIcon" /* 6161 */;
+import ICYMITypes from "ICYMITypes" /* 8442 */;
+import ICYMIUtils from "ICYMIUtils" /* 8446 */;
+import ClipView from "ClipView" /* 8986 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import ICYMIStore from "ICYMIStore" /* 8021 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import ICYMIStore from "ICYMIStore" /* 8429 */;
 
 const GuildIconDefault = GuildIcon;
 const ClipViewDefault = ClipView;
@@ -21,7 +21,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { alignSelf: "center", alignItems: "center", flexDirection: "row", paddingRight: 12, paddingLeft: 8, paddingVertical: 6, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND }, guildIconBG: null, refreshMorePillContainer: null };
 let obj3 = { alignSelf: "center", alignItems: "center", flexDirection: "row", paddingRight: 12, paddingLeft: 8, paddingVertical: 6, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj2.guildIconBG = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
@@ -29,7 +29,7 @@ obj2.refreshMorePillContainer = { position: "absolute", top: 0, left: 0, height:
 let closure_11 = createStyles.createStyles(obj2);
 const springConfig = { overshootClamping: true, stiffness: 20, damping: 15, mass: 0.03 };
 let ReactCompilerGating = fn(558);
-let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
+let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function CutoutGuildIcon(guild) {
   const cResult = c.c(5);
   guild = guild.guild;
   const tmp4 = closure_11();
@@ -67,7 +67,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   cResult[3] = tmp4.guildIconBG;
   cResult[4] = tmp11;
   tmp8 = tmp11;
-}) : ((guild) => {
+}) : (function CutoutGuildIcon(guild) {
   const obj = { style: { width: 24, height: 24 }, children: null };
   const obj2 = { cutouts: null, children: null };
   const size = { shape: null, x: 18, y: -4, width: 32, height: 32, cornerRadius: null };
@@ -93,7 +93,7 @@ let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/icymi/native/NewContentPill.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewContentPill(onPress) {
   const cResult = onPress(stateFromStoresArray[9]).c(64);
   onPress = onPress.onPress;
   const isRefreshing = onPress.isRefreshing;
@@ -303,7 +303,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
   cResult[13] = V;
   cResult[14] = items5;
   const tmpResult10 = onPress(stateFromStoresArray[18]);
-}) : ((onPress) => {
+}) : (function NewContentPill(onPress) {
   onPress = onPress.onPress;
   const isRefreshing = onPress.isRefreshing;
   let stateFromStoresArray;

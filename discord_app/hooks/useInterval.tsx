@@ -1,6 +1,6 @@
-// === Module 6967: useInterval ===
+// === Module 7156: useInterval ===
 
-// Module 6967 (useInterval)
+// Module 7156 (useInterval)
 import noop from "module_19" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -10,7 +10,7 @@ const require = globalThis.__r;
 ({ useEffect: c3, useRef: closure_4 } = noop);
 const result = size.fileFinishedImporting("hooks/useInterval.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((current, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useInterval(current, arg1) {
   _require = current;
   closure_1 = arg1;
   const cResult = require("c").c(6);
@@ -35,7 +35,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((current, arg1) =
     const fn2 = function f() {
       if (null !== closure_1) {
         const _setInterval = setInterval;
-        ref.current = setInterval(() => {
+        ref.current = setInterval(function tick() {
           closure_1(ref[3])(null != ref.current, "Missing callback");
           ref.current();
         }, tmp);
@@ -57,7 +57,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((current, arg1) =
     tmp7 = cResult[5];
   }
   ref(tmp6, tmp7);
-}) : ((current, arg1) => {
+}) : (function useInterval(current, arg1) {
   closure_1 = arg1;
   closure_2 = closure_4(current);
   const ref = closure_4(null);
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((current, arg1) =
   ref(() => {
     if (null !== closure_1) {
       const _setInterval = setInterval;
-      ref.current = setInterval(() => {
+      ref.current = setInterval(function tick() {
         closure_1(ref[3])(null != ref.current, "Missing callback");
         ref.current();
       }, tmp);

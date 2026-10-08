@@ -1,6 +1,6 @@
-// === Module 9174: WebViewContext ===
+// === Module 10740: WebViewContext ===
 
-// Module 9174 (WebViewContext)
+// Module 10740 (WebViewContext)
 import c from "c" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -12,20 +12,20 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const context = noop.createContext(0);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles({ placeholderWebView: { width: 2, height: 2, position: "absolute", opacity: 0 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/embedded_apps/native/WebViewContext.tsx");
 
 export const WebViewContext = context;
-export const WebViewContextProvider = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
+export const WebViewContextProvider = ReactCompilerGating.isReactCompilerEnabled() ? (function WebViewContextProvider(children) {
   const cResult = c.c(7);
   children = children.children;
   const tmp2 = closure_8();
   [tmp4, require] = noop.useState(0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function b(_nativeTag) {
+    const fn = function u(_nativeTag) {
       if (_nativeTag) {
         require(_nativeTag._nativeTag);
       }
@@ -62,7 +62,7 @@ export const WebViewContextProvider = ReactCompilerGating.isReactCompilerEnabled
   cResult[6] = tmp11;
   tmp10 = tmp11;
   const tmp3 = _slicedToArray(noop.useState(0), 2);
-}) : ((children) => {
+}) : (function WebViewContextProvider(children) {
   const tmp2 = _slicedToArray(noop.useState(0), 2);
   closure_0 = tmp3;
   const items = [tmp2[1]];

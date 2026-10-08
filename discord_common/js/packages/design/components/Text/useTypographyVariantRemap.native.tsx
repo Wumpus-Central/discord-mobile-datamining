@@ -1,15 +1,15 @@
-// === Module 4902: useTypographyVariantRemap ===
+// === Module 5096: useTypographyVariantRemap ===
 
-// Module 4902 (useTypographyVariantRemap)
+// Module 5096 (useTypographyVariantRemap)
 import c from "c" /* 576 */;
-import ThemeContext from "ThemeContext" /* 4599 */;
-import typographyVariantRemap from "typographyVariantRemap" /* 4903 */;
+import ThemeContext from "ThemeContext" /* 4791 */;
+import typographyVariantRemap from "typographyVariantRemap" /* 5097 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("../discord_common/js/packages/design/components/Text/useTypographyVariantRemap.native.tsx");
 
-export const useTypographyVariantRemap = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export const useTypographyVariantRemap = ReactCompilerGating.isReactCompilerEnabled() ? (function useTypographyVariantRemap(arg0, arg1) {
   const cResult = c.c(6);
   let themeContext = ThemeContext.useThemeContext();
   if (themeContext == null) {
@@ -42,7 +42,7 @@ export const useTypographyVariantRemap = ReactCompilerGating.isReactCompilerEnab
   cResult[5] = result;
   tmp5 = result;
   const tmpResult = typographyVariantRemap;
-}) : ((arg0, arg1) => {
+}) : (function useTypographyVariantRemap(arg0, arg1) {
   let themeContext = ThemeContext.useThemeContext();
   if (themeContext == null) {
     themeContext = [];

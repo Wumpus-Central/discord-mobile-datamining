@@ -1,16 +1,16 @@
-// === Module 6436: Login ===
+// === Module 6614: Login ===
 
-// Module 6436 (Login)
+// Module 6614 (Login)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5715 */;
-import Pressables from "Pressables" /* 5916 */;
-import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 6438 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5298 */;
+import Pressables from "Pressables" /* 6189 */;
+import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 6616 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PhoneStore from "PhoneStore" /* 6437 */;
+import PhoneStore from "PhoneStore" /* 6615 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const require = globalThis.__r;
@@ -38,7 +38,7 @@ const View = fn(17).View;
 const AuthStates = fn(1085).AuthStates;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_12 = createStyles.createStyles((arg0) => {
   const obj = { password: { marginTop: 24 }, button: { width: "100%", marginTop: 16 }, hint: { marginTop: 4 }, link: { alignSelf: "flex-start", paddingVertical: 4 }, separator: { paddingHorizontal: 16, paddingVertical: 4 }, content: null };
   let num = 0;
@@ -49,8 +49,8 @@ let closure_12 = createStyles.createStyles((arg0) => {
   return obj;
 });
 const ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = c.c(12);
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function LinkButton(arg0) {
+  const cResult = c.c(10);
   ({ onPress, text, containerStyle, textStyle, variant, textColor } = arg0);
   let str = "text-xs/medium";
   if (undefined !== variant) {
@@ -60,53 +60,45 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (undefined !== textColor) {
     str2 = textColor;
   }
-  if (cResult[0] !== containerStyle) {
-    const items = [containerStyle];
-    cResult[0] = containerStyle;
-    cResult[1] = items;
-    let tmp4 = items;
-  } else {
-    tmp4 = cResult[1];
-  }
-  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const rect = { top: 8, right: 8, bottom: 8 };
-    cResult[2] = rect;
-    let tmp5 = rect;
+    cResult[0] = rect;
+    let first = rect;
   } else {
-    tmp5 = cResult[2];
+    first = cResult[0];
   }
-  if (cResult[3] === text) {
-    if (cResult[4] === str2) {
-      if (cResult[5] === textStyle) {
-        if (cResult[6] === str) {
-          let tmp6 = cResult[7];
+  if (cResult[1] === text) {
+    if (cResult[2] === str2) {
+      if (cResult[3] === textStyle) {
+        if (cResult[4] === str) {
+          let tmp5 = cResult[5];
         }
-        if (cResult[8] === onPress) {
-          if (cResult[9] === tmp4) {
-            if (cResult[10] === tmp6) {
-              let tmp8 = cResult[11];
+        if (cResult[6] === containerStyle) {
+          if (cResult[7] === onPress) {
+            if (cResult[8] === tmp5) {
+              let tmp7 = cResult[9];
             }
-            return tmp8;
+            return tmp7;
           }
         }
-        const obj2 = { style: tmp4, hitSlop: tmp5, accessibilityRole: "button", onPress, children: tmp6 };
-        const tmp10 = v65535(Pressables.PressableOpacity, obj2);
-        cResult[8] = onPress;
-        cResult[9] = tmp4;
-        cResult[10] = tmp6;
-        cResult[11] = tmp10;
-        tmp8 = tmp10;
+        const obj2 = { style: containerStyle, hitSlop: first, accessibilityRole: "button", onPress, children: tmp5 };
+        const tmp9 = collapsed(Pressables.PressableOpacity, obj2);
+        cResult[6] = containerStyle;
+        cResult[7] = onPress;
+        cResult[8] = tmp5;
+        cResult[9] = tmp9;
+        tmp7 = tmp9;
       }
     }
   }
-  const tmp7 = v65535(Text_Text.Text, { style: textStyle, variant: str, color: str2, children: text });
-  cResult[3] = text;
-  cResult[4] = str2;
-  cResult[5] = textStyle;
-  cResult[6] = str;
-  cResult[7] = tmp7;
-  tmp6 = tmp7;
-}) : ((variant) => {
+  const tmp6 = collapsed(Text_Text.Text, { style: textStyle, variant: str, color: str2, children: text });
+  cResult[1] = text;
+  cResult[2] = str2;
+  cResult[3] = textStyle;
+  cResult[4] = str;
+  cResult[5] = tmp6;
+  tmp5 = tmp6;
+}) : (function LinkButton(variant) {
   let str = variant.variant;
   ({ onPress, text, containerStyle, textStyle } = variant);
   if (str === undefined) {
@@ -116,10 +108,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (str2 === undefined) {
     str2 = "text-link";
   }
-  const obj = { style: null, hitSlop: { top: 8, right: 8, bottom: 8 }, accessibilityRole: "button", onPress, children: v65535(Text_Text.Text, { style: textStyle, variant: str, color: str2, children: text }) };
-  const items = [containerStyle];
-  obj.style = items;
-  return v65535(Pressables.PressableOpacity, obj);
+  return collapsed(Pressables.PressableOpacity, { style: containerStyle, hitSlop: { top: 8, right: 8, bottom: 8 }, accessibilityRole: "button", onPress, children: collapsed(Text_Text.Text, { style: textStyle, variant: str, color: str2, children: text }) });
 });
 let closure_13 = tmp3;
 const size = fn(2);
@@ -495,7 +484,7 @@ export default function Login(isMultiAccount) {
     keyboardType: "email-address",
     alpha2: stateFromStores.alpha2,
     countryCode: _slicedToArray(str.split(" "), 1)[0],
-    onChange(arg0, arg1) {
+    onChange: function handleLoginUpdated(arg0, arg1) {
       countryCode(arg1 + arg0);
     },
     onSubmitEditing() {

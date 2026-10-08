@@ -1,19 +1,19 @@
-// === Module 7466: FadeOutLottieAnimation ===
+// === Module 7941: FadeOutLottieAnimation ===
 
-// Module 7466 (FadeOutLottieAnimation)
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import timing from "timing" /* 4897 */;
+// Module 7941 (FadeOutLottieAnimation)
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import timing from "timing" /* 5091 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 const require = globalThis.__r;
 
 require = fn;
 let closure_3 = ["onComplete"];
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_9 = createStyles.createStyles({ content: { width: "100%" } });
 const __initData = { code: "function FadeOutLottieAnimationTsx1(){const{isAnimationComplete,isFadeOut,withTiming,runOnJS,setIsFadeOut}=this.__closure;if(!isAnimationComplete){return{opacity:1};}if(isFadeOut){return{opacity:withTiming(0,{duration:300},\"respect-motion-settings\",function(finished){if(finished){runOnJS(setIsFadeOut)(false);}})};}return{opacity:0};}" };
 const __initData2 = { code: "function FadeOutLottieAnimationTsx2(finished){const{runOnJS,setIsFadeOut}=this.__closure;if(finished){runOnJS(setIsFadeOut)(false);}}" };
@@ -23,7 +23,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/burst_reactions/FadeOutLottieAnimation.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onComplete) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FadeOutLottieAnimation(onComplete) {
   const cResult = require("c").c(17);
   if (cResult[0] !== onComplete) {
     onComplete = onComplete.onComplete;
@@ -60,26 +60,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onComplete) => {
   let obj = require("c");
   const stateFromStores = require("initialize").useStateFromStores(tmp15, tmp16);
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    class L {
-      constructor() {
-        tmp = closure_2(false);
-        return;
-      }
-    }
+    const fn2 = function b() {
+      closure_2(false);
+    };
     const items1 = [];
-    cResult[5] = L;
+    cResult[5] = fn2;
     cResult[6] = items1;
     let tmp20 = items1;
+    let tmp19 = fn2;
   } else {
-    class L {
-      constructor() {
-        tmp = closure_2(false);
-        return;
-      }
-    }
+    tmp19 = cResult[5];
     tmp20 = cResult[6];
   }
-  const effect = noop.useEffect(L, tmp20);
+  const effect = noop.useEffect(tmp19, tmp20);
   const tmpResult = require("initialize");
   class H {
     constructor() {
@@ -127,20 +120,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onComplete) => {
   H.__initData = __initData;
   const animatedStyle = tmpResult2.useAnimatedStyle(H);
   if (isAnimationComplete) {
-    class L {
-      constructor() {
-        tmp = closure_2(false);
-        return;
-      }
+    if (!first1) {
+      return null;
     }
   }
+  let num8 = 1;
   if (stateFromStores) {
-    class L {
-      constructor() {
-        tmp = closure_2(false);
-        return;
-      }
-    }
+    num8 = 0.5;
   }
   if (cResult[7] !== tmp4) {
     class M {
@@ -180,16 +166,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onComplete) => {
     }
   }
   let obj3 = { isAnimationComplete, isFadeOut: first1, withTiming: require("timing").withTiming, runOnJS: require("ReanimatedRexport").runOnJS, setIsFadeOut: tmp12[1] };
-  let obj4 = { style: tmp9.content, speed: 1, onAnimationFinish: M };
+  let obj4 = { style: tmp9.content, speed: num8, onAnimationFinish: M };
   const merged = Object.assign(tmp5);
-  const tmp24 = isAnimationComplete(5927);
+  const tmp25 = isAnimationComplete(6110);
   cResult[9] = tmp5;
   cResult[10] = tmp9.content;
-  cResult[11] = 1;
+  cResult[11] = num8;
   cResult[12] = M;
-  cResult[13] = jsx(isAnimationComplete(5927), { style: tmp9.content, speed: 1, onAnimationFinish: M });
-  const tmp26 = jsx(isAnimationComplete(5927), { style: tmp9.content, speed: 1, onAnimationFinish: M });
-}) : ((onComplete) => {
+  cResult[13] = jsx(isAnimationComplete(6110), { style: tmp9.content, speed: num8, onAnimationFinish: M });
+  const tmp27 = jsx(isAnimationComplete(6110), { style: tmp9.content, speed: num8, onAnimationFinish: M });
+}) : (function FadeOutLottieAnimation(onComplete) {
   onComplete = onComplete.onComplete;
   const merged = Object.assign(onComplete, Object.assign({ onComplete: 0 }));
   setIsFadeOut = undefined;
@@ -205,7 +191,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onComplete) => {
   const effect = noop.useEffect(() => {
     closure_2(false);
   }, []);
-  onComplete(4618);
+  onComplete(4810);
   let fn = function v() {
     if (first) {
       if (first1) {
@@ -230,7 +216,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onComplete) => {
     }
   };
   let obj = onComplete(504);
-  fn.__closure = { isAnimationComplete, isFadeOut: first1, withTiming: onComplete(4897).withTiming, runOnJS: onComplete(4618).runOnJS, setIsFadeOut: tmp5[1] };
+  fn.__closure = { isAnimationComplete, isFadeOut: first1, withTiming: onComplete(5091).withTiming, runOnJS: onComplete(4810).runOnJS, setIsFadeOut: tmp5[1] };
   fn.__workletHash = 7916715451819;
   fn.__initData = __initData3;
   if (!isAnimationComplete) {
@@ -248,9 +234,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onComplete) => {
       closure_2(true);
     };
     const merged1 = Object.assign(merged);
-    obj3.children = jsx(isAnimationComplete(5927), { style: tmp2.content, speed: null, onAnimationFinish: null });
-    let tmp14Result = jsx(isAnimationComplete(4618).View, { style: tmp12, children: null });
-    const tmp16 = isAnimationComplete(5927);
+    obj3.children = jsx(isAnimationComplete(6110), { style: tmp2.content, speed: null, onAnimationFinish: null });
+    let tmp14Result = jsx(isAnimationComplete(4810).View, { style: tmp12, children: null });
+    const tmp16 = isAnimationComplete(6110);
   } else {
     tmp14Result = null;
   }

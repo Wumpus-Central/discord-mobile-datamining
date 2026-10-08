@@ -1,33 +1,33 @@
-// === Module 8805: PlayStationLinkSuccess ===
+// === Module 9158: PlayStationLinkSuccess ===
 
-// Module 8805 (PlayStationLinkSuccess)
+// Module 9158 (PlayStationLinkSuccess)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6626 */;
-import TwoWayLinkStyles from "TwoWayLinkStyles" /* 8774 */;
-import _modDef8790 from "module_8790" /* 8790 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6803 */;
+import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9120 */;
+import _modDef9159 from "module_9159" /* 9159 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
-let closure_8 = createStyles.createStyles({ image: { width: 124, height: 160, marginBottom: 24 } });
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(5090);
+let closure_7 = createStyles.createStyles({ image: { width: 124, height: 160, marginBottom: 24 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkSuccess.tsx");
 
-export const PlayStationLinkSuccess = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
+export const PlayStationLinkSuccess = ReactCompilerGating.isReactCompilerEnabled() ? (function PlayStationLinkSuccess(onClose) {
   const cResult = c.c(27);
   onClose = onClose.onClose;
-  const tmp4 = closure_8();
+  const tmp4 = closure_7();
   const twoWayLinkStyles = TwoWayLinkStyles.useTwoWayLinkStyles();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj3 = { uri: _modDef8790 };
+    const obj3 = { uri: _modDef9159 };
     cResult[0] = obj3;
     let first = obj3;
   } else {
@@ -36,7 +36,7 @@ export const PlayStationLinkSuccess = ReactCompilerGating.isReactCompilerEnabled
   ({ container, content } = twoWayLinkStyles);
   if (cResult[1] !== tmp4.image) {
     const obj4 = { source: first, style: tmp4.image };
-    const tmp11 = timestampProducer(React4, obj4);
+    const tmp11 = hasOwnProperty(FastImageDefault, obj4);
     cResult[1] = tmp4.image;
     cResult[2] = tmp11;
     let tmp8 = tmp11;
@@ -53,7 +53,7 @@ export const PlayStationLinkSuccess = ReactCompilerGating.isReactCompilerEnabled
   }
   if (cResult[4] !== twoWayLinkStyles.title) {
     const obj5 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: tmp12 };
-    const tmp16 = timestampProducer(Text_Text.Text, obj5);
+    const tmp16 = hasOwnProperty(Text_Text.Text, obj5);
     cResult[4] = twoWayLinkStyles.title;
     cResult[5] = tmp16;
     let tmp14 = tmp16;
@@ -70,7 +70,7 @@ export const PlayStationLinkSuccess = ReactCompilerGating.isReactCompilerEnabled
   }
   if (cResult[7] !== twoWayLinkStyles.body) {
     const obj6 = { variant: "text-md/normal", color: "text-default", style: twoWayLinkStyles.body, children: tmp17 };
-    const tmp21 = timestampProducer(Text_Text.Text, obj6);
+    const tmp21 = hasOwnProperty(Text_Text.Text, obj6);
     cResult[7] = twoWayLinkStyles.body;
     cResult[8] = tmp21;
     let tmp19 = tmp21;
@@ -95,7 +95,7 @@ export const PlayStationLinkSuccess = ReactCompilerGating.isReactCompilerEnabled
         }
         if (cResult[15] !== onClose) {
           const obj7 = { size: "md", text: tmp24, onPress: onClose };
-          const tmp28 = timestampProducer(components_Button_Button.Button, obj7);
+          const tmp28 = hasOwnProperty(components_Button_Button.Button, obj7);
           cResult[15] = onClose;
           cResult[16] = tmp28;
           let tmp26 = tmp28;
@@ -121,7 +121,7 @@ export const PlayStationLinkSuccess = ReactCompilerGating.isReactCompilerEnabled
             const obj8 = { style: container, children: null };
             const items = [tmp22, tmp33];
             obj8.children = items;
-            const tmp39 = React5(hasOwnProperty, obj8);
+            const tmp39 = timestampProducer(View, obj8);
             cResult[23] = twoWayLinkStyles.container;
             cResult[24] = tmp22;
             cResult[25] = tmp33;
@@ -129,14 +129,14 @@ export const PlayStationLinkSuccess = ReactCompilerGating.isReactCompilerEnabled
             tmp36 = tmp39;
           }
           const obj9 = { bottom: true, style: footerContainer, children: tmp29 };
-          const tmp35 = timestampProducer(common_SafeAreaView.SafeAreaPaddingView, obj9);
+          const tmp35 = hasOwnProperty(common_SafeAreaView.SafeAreaPaddingView, obj9);
           cResult[20] = twoWayLinkStyles.footerContainer;
           cResult[21] = tmp29;
           cResult[22] = tmp35;
           tmp33 = tmp35;
         }
         const obj10 = { style: footerButton, children: tmp26 };
-        const tmp32 = timestampProducer(hasOwnProperty, obj10);
+        const tmp32 = hasOwnProperty(View, obj10);
         cResult[17] = twoWayLinkStyles.footerButton;
         cResult[18] = tmp26;
         cResult[19] = tmp32;
@@ -147,38 +147,39 @@ export const PlayStationLinkSuccess = ReactCompilerGating.isReactCompilerEnabled
   const obj11 = { style: content, children: null };
   const items1 = [tmp8, tmp14, tmp19];
   obj11.children = items1;
-  const tmp23 = React5(hasOwnProperty, obj11);
+  const tmp23 = timestampProducer(View, obj11);
   cResult[9] = twoWayLinkStyles.content;
   cResult[10] = tmp19;
   cResult[11] = tmp8;
   cResult[12] = tmp14;
   cResult[13] = tmp23;
   tmp22 = tmp23;
-}) : ((onClose) => {
-  const tmp = closure_8();
+}) : (function PlayStationLinkSuccess(onClose) {
+  const tmp = closure_7();
   const twoWayLinkStyles = TwoWayLinkStyles.useTwoWayLinkStyles();
   const obj2 = { style: twoWayLinkStyles.container, children: null };
   const obj3 = { style: twoWayLinkStyles.content, children: null };
-  const items = [timestampProducer(React4, { source: noop.useMemo(() => ({ uri: _modDef8790 }), []), style: tmp.image }), , ];
+  const memo = noop.useMemo(() => ({ uri: _modDef9159 }), []);
+  const items = [hasOwnProperty(FastImageDefault, { source: memo, style: tmp.image }), , ];
   const obj5 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: null };
   const intl = util.intl;
   obj5.children = intl.string(util.t.e6SOl0);
-  items[1] = timestampProducer(Text_Text.Text, obj5);
+  items[1] = hasOwnProperty(Text_Text.Text, obj5);
   const obj6 = { variant: "text-md/normal", color: "text-default", style: twoWayLinkStyles.body, children: null };
   const intl2 = util.intl;
   obj6.children = intl2.string(util.t.QjAZAQ);
-  items[2] = timestampProducer(Text_Text.Text, obj6);
+  items[2] = hasOwnProperty(Text_Text.Text, obj6);
   obj3.children = items;
-  const items1 = [React5(hasOwnProperty, obj3), ];
+  const items1 = [timestampProducer(View, obj3), ];
   const obj7 = { bottom: true, style: twoWayLinkStyles.footerContainer, children: null };
   const obj8 = { style: twoWayLinkStyles.footerButton, children: null };
   const obj9 = { size: "md", text: null, onPress: null };
   const intl3 = util.intl;
   obj9.text = intl3.string(util.t.i4jeWR);
   obj9.onPress = onClose.onClose;
-  obj8.children = timestampProducer(components_Button_Button.Button, obj9);
-  obj7.children = timestampProducer(hasOwnProperty, obj8);
-  items1[1] = timestampProducer(common_SafeAreaView.SafeAreaPaddingView, obj7);
+  obj8.children = hasOwnProperty(components_Button_Button.Button, obj9);
+  obj7.children = hasOwnProperty(View, obj8);
+  items1[1] = hasOwnProperty(common_SafeAreaView.SafeAreaPaddingView, obj7);
   obj2.children = items1;
-  return React5(hasOwnProperty, obj2);
+  return timestampProducer(View, obj2);
 });

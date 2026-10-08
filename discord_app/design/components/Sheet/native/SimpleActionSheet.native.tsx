@@ -1,17 +1,17 @@
-// === Module 6702: SimpleActionSheet ===
+// === Module 6879: SimpleActionSheet ===
 
-// Module 6702 (SimpleActionSheet)
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6651 */;
-import ActionSheetCloseButton from "ActionSheetCloseButton" /* 6703 */;
-import ActionSheetRow from "ActionSheetRow" /* 6704 */;
-import ActionSheet from "ActionSheet" /* 6708 */;
+// Module 6879 (SimpleActionSheet)
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6828 */;
+import ActionSheetCloseButton from "ActionSheetCloseButton" /* 6880 */;
+import ActionSheetRow from "ActionSheetRow" /* 6881 */;
+import ActionSheet from "ActionSheet" /* 6885 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c2, jsxs: c3 } = jsxProd);
 const ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((hideActionSheet) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function SimpleActionSheet(hideActionSheet) {
   const cResult = hideActionSheet(576).c(13);
   hideActionSheet = hideActionSheet.hideActionSheet;
   ({ header, options, hasIcons } = hideActionSheet);
@@ -23,10 +23,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((hideActionSheet) => 
       let tmp7Result = null;
       if (null != header.onClose) {
         const obj4 = { onPress: header.onClose };
-        tmp7Result = closure_2(tmp(6703).ActionSheetCloseButton, obj4);
+        tmp7Result = closure_2(tmp(6880).ActionSheetCloseButton, obj4);
       }
       obj3.trailing = tmp7Result;
-      tmp7Result2 = closure_2(tmp(6651).BottomSheetTitleHeader, obj3);
+      tmp7Result2 = closure_2(tmp(6828).BottomSheetTitleHeader, obj3);
     }
     cResult[0] = header;
     cResult[1] = tmp7Result2;
@@ -49,14 +49,14 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((hideActionSheet) => 
         const obj5 = { children: null };
         const items = [tmp4, tmp12];
         obj5.children = items;
-        const tmp17 = closure_3(tmp(6708).ActionSheet, obj5);
+        const tmp17 = closure_3(tmp(6885).ActionSheet, obj5);
         cResult[10] = tmp4;
         cResult[11] = tmp12;
         cResult[12] = tmp17;
         tmp15 = tmp17;
       }
       const obj9 = { hasIcons, children: cResult[4] };
-      const tmp14 = closure_2(tmp(6704).ActionSheetRow.Group, obj9);
+      const tmp14 = closure_2(tmp(6881).ActionSheetRow.Group, obj9);
       cResult[7] = hasIcons;
       cResult[8] = cResult[4];
       cResult[9] = tmp14;
@@ -69,7 +69,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((hideActionSheet) => 
       ({ label, isDestructive } = arg0);
       if (null != icon) {
         const obj = { source: icon, IconComponent };
-        const tmp = closure_1_2(hideActionSheet(6704).ActionSheetRow.Icon, obj);
+        const tmp = closure_1_2(hideActionSheet(6881).ActionSheetRow.Icon, obj);
       }
       const obj2 = { icon: tmp, variant: null, label: null, onPress: null };
       let str = "default";
@@ -78,11 +78,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((hideActionSheet) => 
       }
       obj2.variant = str;
       obj2.label = label;
-      obj2.onPress = function onPress() {
+      obj2.onPress = function handlePress() {
         hideActionSheet();
         closure_1_0();
       };
-      return closure_1_2(hideActionSheet(6704).ActionSheetRow, obj2, arg1);
+      return closure_1_2(hideActionSheet(6881).ActionSheetRow, obj2, arg1);
     };
     cResult[5] = hideActionSheet;
     cResult[6] = fn;
@@ -95,7 +95,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((hideActionSheet) => 
   cResult[3] = options;
   cResult[4] = mapped;
   let obj = hideActionSheet(576);
-}) : ((hasIcons) => {
+}) : (function SimpleActionSheet(hasIcons) {
   ({ hideActionSheet: require, header, options } = hasIcons);
   let tmp5Result2 = null != header;
   if (tmp5Result2) {
@@ -128,7 +128,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((hideActionSheet) => 
         }
         obj2.variant = str;
         obj2.label = label;
-        obj2.onPress = function onPress() {
+        obj2.onPress = function handlePress() {
           require();
           closure_1_0();
         };

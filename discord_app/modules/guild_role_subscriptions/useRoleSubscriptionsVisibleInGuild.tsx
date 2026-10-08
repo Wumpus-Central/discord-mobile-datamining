@@ -1,11 +1,11 @@
-// === Module 6763: useRoleSubscriptionsVisibleInGuild ===
+// === Module 6939: useRoleSubscriptionsVisibleInGuild ===
 
-// Module 6763 (useRoleSubscriptionsVisibleInGuild)
-import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 6764 */;
-import useHasRoleSubscriptionInGuild from "useHasRoleSubscriptionInGuild" /* 6765 */;
-import GuildProductsEligibility from "GuildProductsEligibility" /* 6771 */;
-import ImpersonateStore from "ImpersonateStore" /* 2105 */;
-import GuildStore from "GuildStore" /* 2074 */;
+// Module 6939 (useRoleSubscriptionsVisibleInGuild)
+import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 6940 */;
+import useHasRoleSubscriptionInGuild from "useHasRoleSubscriptionInGuild" /* 6941 */;
+import GuildProductsEligibility from "GuildProductsEligibility" /* 6947 */;
+import ImpersonateStore from "ImpersonateStore" /* 2117 */;
+import GuildStore from "GuildStore" /* 2086 */;
 
 const useHasRoleSubscriptionInGuildDefault = useHasRoleSubscriptionInGuild;
 
@@ -36,7 +36,7 @@ function computeCanEveryoneInGuildSeeRoleSubscriptions(id1) {
 }
 const GuildFeatures = fn(1085).GuildFeatures;
 let ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRoleSubscriptionsVisibleInGuild(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   const obj = require("c");
@@ -74,7 +74,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp11 = stateFromStores;
   }
   return tmp11;
-}) : ((arg0) => {
+}) : (function useRoleSubscriptionsVisibleInGuild(arg0) {
   _require = arg0;
   const tmp = useHasRoleSubscriptionInGuildDefault(arg0);
   let items = [GuildStore, ImpersonateStore];
@@ -107,7 +107,7 @@ export const areRoleSubscriptionsVisibleInGuild = function areRoleSubscriptionsV
   return hasRoleSubscriptionsInGuild;
 };
 export const useRoleSubscriptionsVisibleInGuild = tmp2;
-export const useShowRoleSubscriptionsInChannelList = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useShowRoleSubscriptionsInChannelList = ReactCompilerGating.isReactCompilerEnabled() ? (function useShowRoleSubscriptionsInChannelList(arg0) {
   let tmp = closure_7(arg0);
   const guildEligibleForGuildProducts = GuildProductsEligibility.useGuildEligibleForGuildProducts(arg0);
   if (tmp) {
@@ -118,7 +118,7 @@ export const useShowRoleSubscriptionsInChannelList = ReactCompilerGating.isReact
     tmp = flag;
   }
   return tmp;
-}) : ((arg0) => {
+}) : (function useShowRoleSubscriptionsInChannelList(arg0) {
   let tmp = closure_7(arg0);
   const guildEligibleForGuildProducts = GuildProductsEligibility.useGuildEligibleForGuildProducts(arg0);
   if (tmp) {

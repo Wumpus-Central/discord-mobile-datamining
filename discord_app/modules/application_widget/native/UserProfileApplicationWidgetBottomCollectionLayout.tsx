@@ -1,19 +1,19 @@
-// === Module 8723: UserProfileApplicationWidgetBottomCollectionLayout ===
+// === Module 13196: UserProfileApplicationWidgetBottomCollectionLayout ===
 
-// Module 8723 (UserProfileApplicationWidgetBottomCollectionLayout)
+// Module 13196 (UserProfileApplicationWidgetBottomCollectionLayout)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
+import FastImageDefault from "FastImage" /* 6164 */;
 import noop from "module_19" /* 19 */;
 
-const Text_Text = Text(4892);
-const resolvedValuesFromUserApplicationIdentityProfile = Text(8629);
-const UserProfileApplicationWidgetSkeletons = Text(8717);
+const Text_Text = Text(5086);
+const resolvedValuesFromUserApplicationIdentityProfile = Text(13102);
+const UserProfileApplicationWidgetSkeletons = Text(13190);
 require = fn;
-get_ActivityIndicator = fn(17);
-({ Image: c2, View: c3 } = get_ActivityIndicator);
+const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { grid: { flexDirection: "row", flexWrap: "wrap", rowGap: nativeDefault.space.PX_16, columnGap: nativeDefault.space.PX_16 }, item: null, itemImage: null, itemContent: null };
 let obj3 = { flexDirection: "row", flexWrap: "wrap", rowGap: nativeDefault.space.PX_16, columnGap: nativeDefault.space.PX_16 };
 obj2.item = { width: "47%", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
@@ -23,7 +23,7 @@ let obj4 = { width: "47%", flexDirection: "row", alignItems: "center", gap: nati
 obj2.itemContent = { flex: 1, gap: nativeDefault.space.PX_4, minWidth: 0 };
 let closure_6 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function CollectionItem(arg0) {
   let Text = require;
   let status = dependencyMap;
   const cResult = c.c(26);
@@ -67,7 +67,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                         const obj2 = { style: tmp2.item, children: null };
                         const items = [tmp7, tmp23];
                         obj2.children = items;
-                        const tmp30 = hasOwnProperty(React3, obj2);
+                        const tmp30 = hasOwnProperty(View, obj2);
                         cResult[22] = tmp2.item;
                         cResult[23] = tmp7;
                         cResult[24] = tmp23;
@@ -78,7 +78,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                     const obj3 = { style: tmp2.itemContent, children: null };
                     const items1 = [tmp13, cResult[17]];
                     obj3.children = items1;
-                    const tmp26 = hasOwnProperty(React3, obj3);
+                    const tmp26 = hasOwnProperty(View, obj3);
                     cResult[18] = tmp2.itemContent;
                     cResult[19] = tmp13;
                     cResult[20] = cResult[17];
@@ -116,7 +116,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           const obj7 = { uri: itemImage.media.url };
           obj6.source = obj7;
           obj6.style = tmp2.itemImage;
-          let tmp9 = React4(React2, obj6);
+          let tmp9 = React4(FastImageDefault, obj6);
         } else {
           const obj8 = { style: tmp2.itemImage };
           tmp9 = React4(UserProfileApplicationWidgetSkeletons.ImageSkeleton, obj8);
@@ -146,7 +146,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = image;
   cResult[2] = fieldValue;
   itemImage = fieldValue;
-}) : ((arg0) => {
+}) : (function CollectionItem(arg0) {
   ({ componentConfig, resolveFieldValue } = arg0);
   const tmp = closure_6();
   let image;
@@ -163,7 +163,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const obj5 = { uri: fieldValue.media.url };
     obj4.source = obj5;
     obj4.style = tmp.itemImage;
-    let tmp11 = React4(React2, obj4);
+    let tmp11 = React4(FastImageDefault, obj4);
     let tmp12 = React4;
   } else {
     const obj6 = { style: tmp.itemImage };
@@ -187,16 +187,16 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   items2[1] = tmp12Result2;
   obj7.children = items2;
-  items1[1] = hasOwnProperty(React3, obj7);
+  items1[1] = hasOwnProperty(View, obj7);
   obj3.children = items1;
-  return hasOwnProperty(React3, obj3);
+  return hasOwnProperty(View, obj3);
 });
 ReactCompilerGating = fn(558);
 let obj5 = { flex: 1, gap: nativeDefault.space.PX_4, minWidth: 0 };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/application_widget/native/UserProfileApplicationWidgetBottomCollectionLayout.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileApplicationWidgetBottomCollectionLayout(arg0) {
   const cResult = c.c(18);
   ({ bottomConfig, resolveFieldValue } = arg0);
   const tmp2 = closure_6();
@@ -231,7 +231,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           const obj2 = { style: tmp2.grid, children: null };
           const items = [tmp3, tmp5, tmp9, tmp13];
           obj2.children = items;
-          const tmp20 = hasOwnProperty(React3, obj2);
+          const tmp20 = hasOwnProperty(View, obj2);
           cResult[12] = tmp2.grid;
           cResult[13] = tmp3;
           cResult[14] = tmp5;
@@ -267,10 +267,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = tmp4;
   tmp3 = tmp4;
   const obj6 = { componentConfig: bottomConfig.components.item_1, resolveFieldValue };
-}) : ((arg0) => {
+}) : (function UserProfileApplicationWidgetBottomCollectionLayout(arg0) {
   ({ bottomConfig, resolveFieldValue } = arg0);
   const obj = { style: closure_6().grid, children: null };
   const items = [React4(closure_7, { componentConfig: bottomConfig.components.item_1, resolveFieldValue }), React4(closure_7, { componentConfig: bottomConfig.components.item_2, resolveFieldValue }), React4(closure_7, { componentConfig: bottomConfig.components.item_3, resolveFieldValue }), React4(closure_7, { componentConfig: bottomConfig.components.item_4, resolveFieldValue })];
   obj.children = items;
-  return hasOwnProperty(React3, obj);
+  return hasOwnProperty(View, obj);
 });

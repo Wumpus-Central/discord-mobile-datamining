@@ -1,6 +1,6 @@
-// === Module 12049: useDebouncedSetChatInputState ===
+// === Module 12122: useDebouncedSetChatInputState ===
 
-// Module 12049 (useDebouncedSetChatInputState)
+// Module 12122 (useDebouncedSetChatInputState)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -9,7 +9,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat_input/native/useDebouncedSetChatInputState.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useDebouncedSetChatInputState(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   const cResult = c.c(11);
@@ -46,13 +46,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
       let tmp6 = cResult[5];
     }
     if (cResult[6] !== arg0) {
-      const fn4 = function v(arg0) {
+      const fn3 = function _(arg0) {
         first();
         closure_0(arg0);
       };
       cResult[6] = arg0;
-      cResult[7] = fn4;
-      let tmp7 = fn4;
+      cResult[7] = fn3;
+      let tmp7 = fn3;
     } else {
       tmp7 = cResult[7];
     }
@@ -68,33 +68,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     cResult[10] = obj3;
     tmp8 = obj3;
   }
-  const fn3 = function _(arg0) {
-    closure_0 = arg0;
-    first();
-    closure_2.current = setTimeout(() => {
-      focused((focused) => {
-        let tmp2 = focused;
-        if (focused.focused === focused.focused) {
-          tmp2 = focused;
-          if (focused.text === focused.text) {
-            tmp2 = focused;
-            if (focused.selectionStart === focused.selectionStart) {
-              tmp2 = focused;
-              if (focused.selectionEnd === focused.selectionEnd) {
-                tmp2 = focused;
-              }
-            }
-          }
-        }
-        return tmp2;
-      });
-    }, closure_1);
-  };
+  class S {
+    constructor(arg0) {
+      closure_0 = arg0;
+      tmp = closure_3();
+      closure_2.current = setTimeout(() => {
+        focused(() => { ... });
+      }, closure_1);
+      return;
+    }
+  }
   cResult[3] = arg1;
   cResult[4] = arg0;
-  cResult[5] = fn3;
-  tmp6 = fn3;
-}) : ((arg0, arg1) => {
+  cResult[5] = S;
+  tmp6 = S;
+}) : (function useDebouncedSetChatInputState(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   noop.useRef(null);

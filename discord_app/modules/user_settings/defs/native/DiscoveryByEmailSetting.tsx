@@ -1,19 +1,19 @@
-// === Module 14672: DiscoveryByEmailSetting ===
+// === Module 14933: DiscoveryByEmailSetting ===
 
-// Module 14672 (DiscoveryByEmailSetting)
+// Module 14933 (DiscoveryByEmailSetting)
 import c from "c" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1126 */;
-import FlagUtils from "FlagUtils" /* 1390 */;
-import UserSettings from "UserSettings" /* 2028 */;
-import SettingsConstants from "SettingsConstants" /* 7645 */;
-import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 12348 */;
+import FlagUtils from "FlagUtils" /* 1402 */;
+import UserSettings from "UserSettings" /* 2040 */;
+import SettingsConstants from "SettingsConstants" /* 7966 */;
+import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 12444 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11142 */;
+import SettingBuilders from "SettingBuilders" /* 11262 */;
 import size from "module_2" /* 2 */;
 
 const FriendDiscoveryFlags = Constants.FriendDiscoveryFlags;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDiscoveryByEmailSettingValue() {
   const cResult = c.c(2);
   const FriendDiscoverySettings = UserSettings.FriendDiscoverySettings;
   const setting = FriendDiscoverySettings.useSetting();
@@ -27,7 +27,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp5 = cResult[1];
   }
   return tmp5;
-}) : (() => {
+}) : (function useDiscoveryByEmailSettingValue() {
   const FriendDiscoverySettings = UserSettings.FriendDiscoverySettings;
   const setting = FriendDiscoverySettings.useSetting();
   return FlagUtils.hasFlag(setting, FriendDiscoveryFlags.FIND_BY_EMAIL);
@@ -42,7 +42,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.ilGsHE);
   },
-  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useDiscoveryByEmailSettingValue() {
     const cResult = c.c(2);
     const FriendDiscoverySettings = UserSettings.FriendDiscoverySettings;
     const setting = FriendDiscoverySettings.useSetting();
@@ -56,7 +56,7 @@ const toggle = SettingBuilders.createToggle({
       tmp5 = cResult[1];
     }
     return tmp5;
-  }) : (() => {
+  }) : (function useDiscoveryByEmailSettingValue() {
     const FriendDiscoverySettings = UserSettings.FriendDiscoverySettings;
     const setting = FriendDiscoverySettings.useSetting();
     return FlagUtils.hasFlag(setting, FriendDiscoveryFlags.FIND_BY_EMAIL);

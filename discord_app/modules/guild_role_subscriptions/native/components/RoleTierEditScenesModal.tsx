@@ -1,17 +1,17 @@
-// === Module 17982: RoleTierEditScenesModal ===
+// === Module 18269: RoleTierEditScenesModal ===
 
-// Module 17982 (RoleTierEditScenesModal)
+// Module 18269 (RoleTierEditScenesModal)
 import _modDef38 from "module_38" /* 38 */;
 import util from "util" /* 1126 */;
-import _modDef4815 from "module_4815" /* 4815 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
-import HeaderActionButton from "HeaderActionButton" /* 6890 */;
-import GuildRoleSubscriptionGroupDetailsModalDefault from "GuildRoleSubscriptionGroupDetailsModal" /* 17971 */;
-import GuildRoleSubscriptionGroupGatingModalDefault from "GuildRoleSubscriptionGroupGatingModal" /* 17983 */;
-import GuildRoleSubscriptionTierBenefitsModal from "GuildRoleSubscriptionTierBenefitsModal" /* 17984 */;
-import GuildRoleSubscriptionTierConfirmationModalDefault from "GuildRoleSubscriptionTierConfirmationModal" /* 18005 */;
-import GuildRoleSubscriptionTierDesignModalDefault from "GuildRoleSubscriptionTierDesignModal" /* 18008 */;
-import GuildRoleSubscriptionTierDetailsModalDefault from "GuildRoleSubscriptionTierDetailsModal" /* 18010 */;
+import _modDef5009 from "module_5009" /* 5009 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5940 */;
+import HeaderActionButton from "HeaderActionButton" /* 7079 */;
+import GuildRoleSubscriptionGroupDetailsModalDefault from "GuildRoleSubscriptionGroupDetailsModal" /* 18258 */;
+import GuildRoleSubscriptionGroupGatingModalDefault from "GuildRoleSubscriptionGroupGatingModal" /* 18270 */;
+import GuildRoleSubscriptionTierBenefitsModal from "GuildRoleSubscriptionTierBenefitsModal" /* 18271 */;
+import GuildRoleSubscriptionTierConfirmationModalDefault from "GuildRoleSubscriptionTierConfirmationModal" /* 18292 */;
+import GuildRoleSubscriptionTierDesignModalDefault from "GuildRoleSubscriptionTierDesignModal" /* 18295 */;
+import GuildRoleSubscriptionTierDetailsModalDefault from "GuildRoleSubscriptionTierDetailsModal" /* 18297 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -67,7 +67,7 @@ function buildScreenMap(arg0, handleClose) {
   closure_129_1 = handleClose;
   obj4.headerRight = () => {
     obj = {
-      source: _modDef4815,
+      source: _modDef5009,
       onPress() {
         return merged(obj);
       },
@@ -119,7 +119,7 @@ function buildScreenMap(arg0, handleClose) {
   closure_130_1 = handleClose;
   obj7.headerRight = () => {
     obj = {
-      source: _modDef4815,
+      source: _modDef5009,
       onPress() {
         return merged(obj);
       },
@@ -170,7 +170,7 @@ function buildScreenMap(arg0, handleClose) {
   closure_131_1 = handleClose;
   obj9.headerRight = () => {
     obj = {
-      source: _modDef4815,
+      source: _modDef5009,
       onPress() {
         return merged(obj);
       },
@@ -219,7 +219,7 @@ function buildScreenMap(arg0, handleClose) {
   closure_132_1 = handleClose;
   obj11.headerRight = () => {
     obj = {
-      source: _modDef4815,
+      source: _modDef5009,
       onPress() {
         return merged(obj);
       },
@@ -268,7 +268,7 @@ function buildScreenMap(arg0, handleClose) {
   closure_133_1 = handleClose;
   obj13.headerRight = () => {
     obj = {
-      source: _modDef4815,
+      source: _modDef5009,
       onPress() {
         return merged(obj);
       },
@@ -319,7 +319,7 @@ function buildScreenMap(arg0, handleClose) {
   closure_134_1 = handleClose;
   obj15.headerRight = () => {
     obj = {
-      source: _modDef4815,
+      source: _modDef5009,
       onPress() {
         return merged(obj);
       },
@@ -370,7 +370,7 @@ function buildScreenMap(arg0, handleClose) {
   closure_135_1 = handleClose;
   obj17.headerRight = () => {
     obj = {
-      source: _modDef4815,
+      source: _modDef5009,
       onPress() {
         return merged(obj);
       },
@@ -417,30 +417,30 @@ function buildScreenMap(arg0, handleClose) {
   obj6[constants.DETAILS] = obj17;
   return obj6;
 }
-const RoleTierEditStore = fn(17972);
+const RoleTierEditStore = fn(18259);
 ({ useCurrentTierEditScene: hasOwnProperty, useResetTierEditState: metroRequire } = RoleTierEditStore);
-let closure_7 = fn(15038).GuildRoleSubscriptionsTierScenes;
+const constants = fn(15300).GuildRoleSubscriptionsTierScenes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_11 = createStyles.createStyles({ stepsIndicator: { position: "absolute", alignSelf: "center", height: 48 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/RoleTierEditScenesModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((modalKey) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function RoleTierEditScenesModal(modalKey) {
   _require = modalKey;
   const cResult = require("c").c(34);
-  closure_11();
+  const tmp4 = closure_11();
   modalKey = modalKey.modalKey;
   ({ steps, onClose } = modalKey);
-  let tmp3 = first(closure_5(), 2);
-  first = tmp3[0];
-  noop = tmp5;
-  const tmp6 = closure_6();
-  closure_5 = tmp6;
-  let obj = require("c");
-  closure_6 = first(noop.useState(0), 2)[1];
+  const tmp5 = first(closure_5(), 2);
+  first = tmp5[0];
+  noop = tmp7;
+  const tmp8 = closure_6();
+  closure_5 = tmp8;
+  const tmp9 = first(noop.useState(0), 2);
+  closure_6 = tmp9[1];
   const top = modalKey(onClose[18])().top;
   if (cResult[0] !== modalKey) {
     const fn = function c() {
@@ -448,94 +448,139 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((modalKey) => {
     };
     cResult[0] = modalKey;
     cResult[1] = fn;
-    let tmp8 = fn;
+    let tmp11 = fn;
   } else {
-    tmp8 = cResult[1];
+    tmp11 = cResult[1];
   }
-  closure_7 = tmp8;
-  if (cResult[2] === tmp8) {
+  closure_7 = tmp11;
+  if (cResult[2] === tmp11) {
     if (cResult[3] === onClose) {
-      if (cResult[4] === tmp6) {
-        let tmp9 = cResult[5];
+      if (cResult[4] === tmp8) {
+        let tmp12 = cResult[5];
       }
-      closure_8 = tmp9;
+      closure_8 = tmp12;
       if (cResult[6] !== steps) {
         const _Symbol = Symbol;
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-          class M {
-            constructor(arg0) {
-              scene = modalKey;
-              if (typeof modalKey !== "string") {
-                scene = modalKey.scene;
-              }
-              return scene;
+          const fn2 = function k(scene) {
+            if (typeof scene !== "string") {
+              scene = scene.scene;
             }
-          }
-          cResult[8] = M;
+            return scene;
+          };
+          cResult[8] = fn2;
+          let tmp14 = fn2;
         } else {
-          class M {
-            constructor(arg0) {
-              scene = modalKey;
-              if (typeof modalKey !== "string") {
-                scene = modalKey.scene;
-              }
-              return scene;
-            }
-          }
+          tmp14 = cResult[8];
         }
-        const mapped = steps.map(M);
+        const mapped = steps.map(tmp14);
         cResult[6] = steps;
         cResult[7] = mapped;
       } else {
-        class M {
-          constructor(arg0) {
-            scene = modalKey;
-            if (typeof modalKey !== "string") {
-              scene = modalKey.scene;
-            }
-            return scene;
-          }
-        }
-        if (cResult[9] === tmp10) {
-          class M {
-            constructor(arg0) {
-              scene = modalKey;
-              if (typeof modalKey !== "string") {
-                scene = modalKey.scene;
-              }
-              return scene;
-            }
+        if (cResult[9] === cResult[7]) {
+          if (cResult[10] === tmp7) {
+            let tmp17 = cResult[11];
           }
           if (cResult[12] === first) {
-            class M {
-              constructor(arg0) {
-                scene = modalKey;
-                if (typeof modalKey !== "string") {
-                  scene = modalKey.scene;
+            if (cResult[13] === tmp12) {
+              if (cResult[14] === modalKey) {
+                if (cResult[15] === arr) {
+                  let tmp18 = cResult[16];
                 }
-                return scene;
+                ({ screens, initialStack } = tmp10(onClose[20])(tmp18));
+                const _Symbol2 = Symbol;
+                if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
+                  const intl = tmp(onClose[9]).intl;
+                  const stringResult = intl.string(tmp(onClose[9]).t["13/7kX"]);
+                  cResult[17] = stringResult;
+                  let tmp21 = stringResult;
+                } else {
+                  tmp21 = cResult[17];
+                }
+                if (cResult[18] === tmp17) {
+                  if (cResult[19] === initialStack) {
+                    if (cResult[20] === screens) {
+                      let tmp23 = cResult[21];
+                    }
+                    if (cResult[22] !== top) {
+                      let obj2 = { top };
+                      cResult[22] = top;
+                      cResult[23] = obj2;
+                      let tmp26 = obj2;
+                    } else {
+                      tmp26 = cResult[23];
+                    }
+                    if (cResult[24] === tmp4.stepsIndicator) {
+                      if (cResult[25] === tmp26) {
+                        let tmp27 = cResult[26];
+                      }
+                      const sum = tmp9[0] + 1;
+                      if (cResult[27] === arr.length) {
+                        if (cResult[28] === tmp27) {
+                          if (cResult[29] === sum) {
+                            let tmp29 = cResult[30];
+                          }
+                          if (cResult[31] === tmp29) {
+                            if (cResult[32] === tmp23) {
+                              let tmp32 = cResult[33];
+                            }
+                            return tmp32;
+                          }
+                          let obj3 = { children: null };
+                          let items = [tmp23, tmp29];
+                          obj3.children = items;
+                          const tmp35 = closure_10(arr, obj3);
+                          cResult[31] = tmp29;
+                          cResult[32] = tmp23;
+                          cResult[33] = tmp35;
+                          tmp32 = tmp35;
+                        }
+                      }
+                      const obj4 = { style: tmp27, current: sum, total: arr.length };
+                      const tmp31 = closure_8(tmp10(onClose[22]), obj4);
+                      cResult[27] = arr.length;
+                      cResult[28] = tmp27;
+                      cResult[29] = sum;
+                      cResult[30] = tmp31;
+                      tmp29 = tmp31;
+                    }
+                    let items1 = [tmp4.stepsIndicator, tmp26];
+                    cResult[24] = tmp4.stepsIndicator;
+                    cResult[25] = tmp26;
+                    cResult[26] = items1;
+                    tmp27 = items1;
+                  }
+                }
+                const obj5 = { screens, initialRouteStack: initialStack, onWillFocus: tmp17, headerBackTitle: tmp21 };
+                const tmp25 = closure_8(tmp(onClose[21]).Navigator, obj5);
+                cResult[18] = tmp17;
+                cResult[19] = initialStack;
+                cResult[20] = screens;
+                cResult[21] = tmp25;
+                tmp23 = tmp25;
+                const tmp19 = tmp10(onClose[20])(tmp18);
               }
             }
           }
-          const fn2 = function x() {
+          const fn3 = function x() {
             const obj = { screens: buildScreenMap(closure_0, closure_8), initialStack: null };
-            _modDef38(tmp10.length > 0, "At least one step must be provided to RoleTierEditScenesModal");
+            _modDef38(arr.length > 0, "At least one step must be provided to RoleTierEditScenesModal");
             if (null == first) {
-              const obj2 = { name: tmp10[0] };
+              const obj2 = { name: arr[0] };
               const items = [obj2];
               let tmp3 = items;
             } else {
               const items1 = [];
               let num2 = 0;
               tmp3 = items1;
-              if (0 < tmp10.length) {
-                const obj3 = { name: tmp10[num2] };
+              if (0 < arr.length) {
+                const obj3 = { name: arr[num2] };
                 items1.push(obj3);
                 tmp3 = items1;
-                while (tmp10[num2] !== first) {
+                while (arr[num2] !== first) {
                   num2 = num2 + 1;
                   tmp3 = items1;
-                  if (num2 < tmp10.length) {
+                  if (num2 < arr.length) {
                     continue;
                   } else {
                     break;
@@ -547,70 +592,44 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((modalKey) => {
             obj.initialStack = tmp3;
             return obj;
           };
-          class L {
-            constructor(arg0) {
-              name = modalKey.route.name;
-              if (null != name) {
-                tmp = closure_4;
-                tmp2 = closure_4(name);
-                tmp3 = closure_9;
-                findIndexResult = closure_9.findIndex((item) => item === name);
-                num = 0;
-                if (findIndexResult >= 0) {
-                  tmp5 = closure_6;
-                  tmp6 = closure_6(findIndexResult);
-                }
-              }
-              return;
-            }
-          }
           cResult[12] = first;
-          cResult[13] = tmp9;
+          cResult[13] = tmp12;
           cResult[14] = modalKey;
-          cResult[15] = tmp10;
-          cResult[16] = fn2;
+          cResult[15] = arr;
+          cResult[16] = fn3;
+          tmp18 = fn3;
         }
-        class L {
-          constructor(arg0) {
-            name = modalKey.route.name;
-            if (null != name) {
-              tmp = closure_4;
-              tmp2 = closure_4(name);
-              tmp3 = closure_9;
-              findIndexResult = closure_9.findIndex((item) => item === name);
-              num = 0;
-              if (findIndexResult >= 0) {
-                tmp5 = closure_6;
-                tmp6 = closure_6(findIndexResult);
-              }
+        function handleSceneWillFocus(route) {
+          const name = route.route.name;
+          if (null != name) {
+            closure_4(name);
+            const findIndexResult = arr.findIndex((item) => item === name);
+            if (findIndexResult >= 0) {
+              closure_6(findIndexResult);
             }
-            return;
           }
         }
-        cResult[9] = tmp10;
-        cResult[10] = tmp5;
-        cResult[11] = L;
+        cResult[9] = cResult[7];
+        cResult[10] = tmp7;
+        cResult[11] = handleSceneWillFocus;
+        tmp17 = handleSceneWillFocus;
       }
     }
   }
-  class B {
-    constructor(arg0) {
-      if (onClose != null) {
-        tmp2 = modalKey;
-        tmpResult = tmp(modalKey);
-      }
-      tmp4 = closure_7();
-      tmp5 = closure_5();
-      return;
+  function handleClose(arg0) {
+    if (onClose != null) {
+      tmp(arg0);
     }
+    closure_7();
+    closure_5();
   }
-  cResult[2] = tmp8;
+  cResult[2] = tmp11;
   cResult[3] = onClose;
-  cResult[4] = tmp6;
-  cResult[5] = B;
-  tmp9 = B;
-  const tmp7 = first(noop.useState(0), 2);
-}) : ((modalKey) => {
+  cResult[4] = tmp8;
+  cResult[5] = handleClose;
+  tmp12 = handleClose;
+  let obj = require("c");
+}) : (function RoleTierEditScenesModal(modalKey) {
   _require = modalKey;
   function handleClose(arg0) {
     if (onClose != null) {
@@ -673,8 +692,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((modalKey) => {
   let obj2 = {
     screens,
     initialRouteStack: initialStack,
-    onWillFocus(onDidFocus) {
-      const name = onDidFocus.route.name;
+    onWillFocus: function handleSceneWillFocus(route) {
+      const name = route.route.name;
       if (null != name) {
         closure_1_5(name);
         const findIndexResult = memo.findIndex((item) => item === name);

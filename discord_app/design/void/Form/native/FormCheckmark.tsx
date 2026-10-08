@@ -1,9 +1,9 @@
-// === Module 6649: FormCheckmark ===
+// === Module 6826: FormCheckmark ===
 
-// Module 6649 (FormCheckmark)
+// Module 6826 (FormCheckmark)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 6635 */;
+import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 6812 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormCheckmark.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((selected) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function RowCheckmark(selected) {
   const cResult = c.c(2);
   selected = selected.selected;
   if (cResult[0] !== selected) {
@@ -28,7 +28,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((selected) => {
     tmp4 = cResult[1];
   }
   return tmp4;
-}) : ((selected) => {
+}) : (function RowCheckmark(selected) {
   let tmp = null;
   if (selected.selected) {
     const obj = { color: nativeDefault.unsafe_rawColors.BRAND_500 };

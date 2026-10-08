@@ -1,9 +1,9 @@
-// === Module 11087: UnreadSettingNotice ===
+// === Module 10451: UnreadSettingNotice ===
 
-// Module 11087 (UnreadSettingNotice)
+// Module 10451 (UnreadSettingNotice)
 import nativeDefault from "native" /* 587 */;
-import UnreadSettingNoticeImpressionTrackingDefault from "UnreadSettingNoticeImpressionTracking" /* 11088 */;
-import updateChannelUnreadSettingsDefault from "updateChannelUnreadSettings" /* 11089 */;
+import UnreadSettingNoticeImpressionTrackingDefault from "UnreadSettingNoticeImpressionTracking" /* 10452 */;
+import updateChannelUnreadSettingsDefault from "updateChannelUnreadSettings" /* 10453 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -13,7 +13,7 @@ const View = fn(17).View;
 let closure_4 = fn(1095).ChannelNotificationSettingsFlags;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { content: null, informations: null, actions: null, inlineTextWithIcon: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj2.content = { display: "flex", flexDirection: "row", paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16, borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -26,7 +26,7 @@ let obj3 = { display: "flex", flexDirection: "row", paddingVertical: nativeDefau
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notifications/settings_unread_notice/native/UnreadSettingNotice.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UnreadSettingNoticeConnected(channel) {
   _require = channel;
   const cResult = require("c").c(19);
   const tmp4 = closure_7();
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     const obj3 = { variant: "text-md/semibold", children: null };
     const intl = tmp(1126).intl;
     obj3.children = intl.string(tmp(1126).t.i4xQ5o);
-    const tmp11 = closure_5(tmp(4892).Text, obj3);
+    const tmp11 = closure_5(tmp(5086).Text, obj3);
     cResult[2] = tmp11;
     let tmp9 = tmp11;
   } else {
@@ -73,7 +73,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     const obj5 = { variant: "text-xs/medium", color: "text-link", children: null };
     const intl2 = tmp(1126).intl;
     obj5.children = intl2.string(tmp(1126).t.KyUKhT);
-    const tmp19 = closure_5(tmp(4892).Text, obj5);
+    const tmp19 = closure_5(tmp(5086).Text, obj5);
     cResult[7] = tmp19;
     let tmp17 = tmp19;
   } else {
@@ -122,7 +122,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   tmp20 = tmp21;
   const obj = require("c");
   const obj8 = { accessibilityRole: "button", style: tmp4.inlineTextWithIcon, onPress: tmp16, children: tmp17 };
-}) : ((channel) => {
+}) : (function UnreadSettingNoticeConnected(channel) {
   _require = channel;
   const tmp = closure_7();
   const obj = { style: tmp.content, children: null };

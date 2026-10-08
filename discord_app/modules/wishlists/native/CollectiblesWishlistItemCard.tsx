@@ -1,23 +1,23 @@
-// === Module 10783: CollectiblesWishlistItemCard ===
+// === Module 12736: CollectiblesWishlistItemCard ===
 
-// Module 10783 (CollectiblesWishlistItemCard)
-import SKUPreview from "SKUPreview" /* 8459 */;
-import WishlistItemCardBaseDefault from "WishlistItemCardBase" /* 8460 */;
+// Module 12736 (CollectiblesWishlistItemCard)
+import SKUPreview from "SKUPreview" /* 8945 */;
+import WishlistItemCardBaseDefault from "WishlistItemCardBase" /* 8946 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import SentGiftsStore from "SentGiftsStore" /* 10784 */;
+import SentGiftsStore from "SentGiftsStore" /* 12737 */;
 
 const require = globalThis.__r;
 
 require = fn;
 let closure_3 = ["sku", "isOwned", "source", "wishlistOwnerId", "size"];
-let closure_6 = fn(7070).transformSKUToCollectiblesItem;
+let closure_6 = fn(7256).transformSKUToCollectiblesItem;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/native/CollectiblesWishlistItemCard.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((sku) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function CollectiblesWishlistItemCard(sku) {
   const cResult = require("c").c(26);
   if (cResult[0] !== sku) {
     sku = sku.sku;
@@ -29,7 +29,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((sku) => {
     const tmp12 = _objectWithoutProperties(sku, closure_3);
     cResult[0] = sku;
     cResult[1] = tmp12;
-    class I {
+    class O {
       constructor() {
         hasSentGiftResult = null != closure_2;
         if (hasSentGiftResult) {
@@ -70,11 +70,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((sku) => {
     }
     const stateFromStores = tmp(504).useStateFromStores(tmp14, tmp16, tmp17);
     if (cResult[12] !== tmp6) {
-      const productNameAndTypeFromSku = tmp(8456).getProductNameAndTypeFromSku(tmp6);
+      const productNameAndTypeFromSku = tmp(8942).getProductNameAndTypeFromSku(tmp6);
       cResult[12] = tmp6;
       cResult[13] = productNameAndTypeFromSku;
       let tmp19 = productNameAndTypeFromSku;
-      const tmpResult2 = tmp(8456);
+      const tmpResult2 = tmp(8942);
     } else {
       tmp19 = cResult[13];
     }
@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((sku) => {
         const merged = Object.assign(tmp4);
         obj2.overlay = OWNED;
         const tmp32 = jsx(WishlistItemCardBaseDefault, { accessibilityLabel: tmp19, renderPreview: tmp24, source: tmp7, size: tmp5 });
-        class I {
+        class O {
           constructor() {
             hasSentGiftResult = null != closure_2;
             if (hasSentGiftResult) {
@@ -133,9 +133,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((sku) => {
         cResult[25] = tmp32;
         tmp25 = tmp32;
       }
-      OWNED = tmp(8460).WishlistItemCardOverlay.OWNED;
+      OWNED = tmp(8946).WishlistItemCardOverlay.OWNED;
     }
-    const fn = function p() {
+    const fn = function _() {
       let tmp2 = null;
       if (null != closure_3) {
         const obj = { collectiblesItemData: tmp, size };
@@ -149,7 +149,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((sku) => {
     tmp24 = fn;
     const tmpResult = tmp(504);
   }
-  class I {
+  class O {
     constructor() {
       hasSentGiftResult = null != closure_2;
       if (hasSentGiftResult) {
@@ -163,13 +163,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((sku) => {
   const items1 = [tmp6.id, wishlistOwnerId];
   cResult[8] = tmp6.id;
   cResult[9] = wishlistOwnerId;
-  cResult[10] = I;
+  cResult[10] = O;
   cResult[11] = items1;
   tmp17 = items1;
-  tmp16 = I;
+  tmp16 = O;
   let obj = require("c");
   tmp13 = undefined !== tmp8 && tmp8;
-}) : ((sku) => {
+}) : (function CollectiblesWishlistItemCard(sku) {
   sku = sku.sku;
   let flag = sku.isOwned;
   if (flag === undefined) {

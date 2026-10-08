@@ -1,20 +1,20 @@
-// === Module 9836: ConfirmBlockUserAlert ===
+// === Module 10399: ConfirmBlockUserAlert ===
 
-// Module 9836 (ConfirmBlockUserAlert)
+// Module 10399 (ConfirmBlockUserAlert)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import ReportModals from "ReportModals" /* 8312 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9447 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7004 */;
+import ReportModals from "ReportModals" /* 7695 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const View = fn(17).View;
-const LOCATION_CONTEXT_MOBILE = fn(9797).LOCATION_CONTEXT_MOBILE;
+const LOCATION_CONTEXT_MOBILE = fn(10361).LOCATION_CONTEXT_MOBILE;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { header: { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, textAlign: "center" }, text: null, buttonsContainer: null };
 let obj3 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, textAlign: "center" };
 obj2.text = { color: nativeDefault.colors.TEXT_SUBTLE, marginTop: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_4, textAlign: "center" };
@@ -26,7 +26,7 @@ let obj5 = { gap: nativeDefault.space.PX_12, marginBottom: -nativeDefault.space.
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/self_mod/shared/native/ConfirmBlockUserAlert.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConfirmBlockUserAlert(userId) {
   const cResult = userId(onCancel[8]).c(47);
   userId = userId.userId;
   const channelId = userId.channelId;
@@ -34,8 +34,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   const onClose = userId.onClose;
   const onBlockAndReport = userId.onBlockAndReport;
   const onBlock = userId.onBlock;
-  const blockButtonVariant = userId.blockButtonVariant;
-  const tmp4 = closure_9();
+  closure_9();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [onBlock];
     cResult[0] = items;
@@ -44,295 +43,44 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
     first = cResult[0];
   }
   if (cResult[1] !== userId) {
-    const fn = function p() {
-      return UserStore.getUser(userId);
-    };
+    class C {
+      constructor() {
+        return closure_5.getUser(userId);
+      }
+    }
     cResult[1] = userId;
-    cResult[2] = fn;
-    let tmp7 = fn;
+    cResult[2] = C;
   } else {
-    tmp7 = cResult[2];
+    class C {
+      constructor() {
+        return closure_5.getUser(userId);
+      }
+    }
   }
   let obj = userId(onCancel[8]);
-  const stateFromStores = userId(onCancel[9]).useStateFromStores(first, tmp7);
+  const stateFromStores = userId(onCancel[9]).useStateFromStores(first, C);
   const tmpResult = userId(onCancel[9]);
   const lastChannelMessage = userId(onCancel[10]).useLastChannelMessage(channelId);
   const tmpResult2 = userId(onCancel[10]);
   const name = channelId(onCancel[11]).useName(stateFromStores);
   if (cResult[3] === channelId) {
-    if (cResult[4] === userId) {
-      let tmp11 = cResult[5];
-    }
-    closure_7 = tmp11;
-    if (cResult[6] === onCancel) {
-      if (cResult[7] === onClose) {
-        let tmp12 = cResult[8];
+    class C {
+      constructor() {
+        return closure_5.getUser(userId);
       }
-      onPress = tmp12;
-      if (cResult[9] === tmp11) {
-        if (cResult[10] === onBlock) {
-          if (cResult[11] === onClose) {
-            let tmp13 = cResult[12];
+    }
+    if (cResult[6] === onCancel) {
+      class C {
+        constructor() {
+          return closure_5.getUser(userId);
+        }
+      }
+      const onPress = S;
+      if (cResult[9] === E) {
+        class C {
+          constructor() {
+            return closure_5.getUser(userId);
           }
-          if (cResult[13] === tmp11) {
-            if (cResult[14] === lastChannelMessage) {
-              if (cResult[15] === onBlockAndReport) {
-                if (cResult[16] === onClose) {
-                  let tmp14 = cResult[17];
-                }
-                if (cResult[18] !== tmp12) {
-                  class R {
-                    constructor() {
-                      obj = { size: "lg", onPress: closure_8, text: null, variant: "secondary" };
-                      intl = closure_0(closure_2[16]).intl;
-                      obj.text = intl.string(closure_0(closure_2[16]).t["ETE/oC"]);
-                      return jsx(closure_0(closure_2[15]).Button, obj);
-                    }
-                  }
-                  cResult[18] = tmp12;
-                  class M {
-                    constructor() {
-                      tmp = onClose();
-                      tmp2 = closure_7();
-                      tmp3 = onBlock();
-                      return;
-                    }
-                  }
-                  cResult[19] = R;
-                } else {
-                  class R {
-                    constructor() {
-                      obj = { size: "lg", onPress: closure_8, text: null, variant: "secondary" };
-                      intl = closure_0(closure_2[16]).intl;
-                      obj.text = intl.string(closure_0(closure_2[16]).t["ETE/oC"]);
-                      return jsx(closure_0(closure_2[15]).Button, obj);
-                    }
-                  }
-                }
-                class M {
-                  constructor() {
-                    tmp = onClose();
-                    tmp2 = closure_7();
-                    tmp3 = onBlock();
-                    return;
-                  }
-                }
-                if (cResult[22] === tmp4.header) {
-                  class R {
-                    constructor() {
-                      obj = { size: "lg", onPress: closure_8, text: null, variant: "secondary" };
-                      intl = closure_0(closure_2[16]).intl;
-                      obj.text = intl.string(closure_0(closure_2[16]).t["ETE/oC"]);
-                      return jsx(closure_0(closure_2[15]).Button, obj);
-                    }
-                  }
-                  if (cResult[25] === description) {
-                    class R {
-                      constructor() {
-                        obj = { size: "lg", onPress: closure_8, text: null, variant: "secondary" };
-                        intl = closure_0(closure_2[16]).intl;
-                        obj.text = intl.string(closure_0(closure_2[16]).t["ETE/oC"]);
-                        return jsx(closure_0(closure_2[15]).Button, obj);
-                      }
-                    }
-                    if (cResult[28] === tmp4.text) {
-                      class R {
-                        constructor() {
-                          obj = { size: "lg", onPress: closure_8, text: null, variant: "secondary" };
-                          intl = closure_0(closure_2[16]).intl;
-                          obj.text = intl.string(closure_0(closure_2[16]).t["ETE/oC"]);
-                          return jsx(closure_0(closure_2[15]).Button, obj);
-                        }
-                      }
-                      const _Symbol = Symbol;
-                      class M {
-                        constructor() {
-                          tmp = onClose();
-                          tmp2 = closure_7();
-                          tmp3 = onBlock();
-                          return;
-                        }
-                      }
-                      if (tmp27 === Symbol.for("react.memo_cache_sentinel")) {
-                        class R {
-                          constructor() {
-                            obj = { size: "lg", onPress: closure_8, text: null, variant: "secondary" };
-                            intl = closure_0(closure_2[16]).intl;
-                            obj.text = intl.string(closure_0(closure_2[16]).t["ETE/oC"]);
-                            return jsx(closure_0(closure_2[15]).Button, obj);
-                          }
-                        }
-                        const stringResult = obj8.string(tmp(onCancel[16]).t.l4Emac);
-                        class M {
-                          constructor() {
-                            tmp = onClose();
-                            tmp2 = closure_7();
-                            tmp3 = onBlock();
-                            return;
-                          }
-                        }
-                        cResult[31] = stringResult;
-                        const tmp28 = stringResult;
-                      } else {
-                        class R {
-                          constructor() {
-                            obj = { size: "lg", onPress: closure_8, text: null, variant: "secondary" };
-                            intl = closure_0(closure_2[16]).intl;
-                            obj.text = intl.string(closure_0(closure_2[16]).t["ETE/oC"]);
-                            return jsx(closure_0(closure_2[15]).Button, obj);
-                          }
-                        }
-                      }
-                      if (blockButtonVariant == null) {
-                        class R {
-                          constructor() {
-                            obj = { size: "lg", onPress: closure_8, text: null, variant: "secondary" };
-                            intl = closure_0(closure_2[16]).intl;
-                            obj.text = intl.string(closure_0(closure_2[16]).t["ETE/oC"]);
-                            return jsx(closure_0(closure_2[15]).Button, obj);
-                          }
-                        }
-                      }
-                      if (cResult[32] === tmp13) {
-                        class R {
-                          constructor() {
-                            obj = { size: "lg", onPress: closure_8, text: null, variant: "secondary" };
-                            intl = closure_0(closure_2[16]).intl;
-                            obj.text = intl.string(closure_0(closure_2[16]).t["ETE/oC"]);
-                            return jsx(closure_0(closure_2[15]).Button, obj);
-                          }
-                        }
-                        if (cResult[35] === tmp14) {
-                          class R {
-                            constructor() {
-                              obj = { size: "lg", onPress: closure_8, text: null, variant: "secondary" };
-                              intl = closure_0(closure_2[16]).intl;
-                              obj.text = intl.string(closure_0(closure_2[16]).t["ETE/oC"]);
-                              return jsx(closure_0(closure_2[15]).Button, obj);
-                            }
-                          }
-                          if (cResult[38] === tmp4.buttonsContainer) {
-                            class R {
-                              constructor() {
-                                obj = { size: "lg", onPress: closure_8, text: null, variant: "secondary" };
-                                intl = closure_0(closure_2[16]).intl;
-                                obj.text = intl.string(closure_0(closure_2[16]).t["ETE/oC"]);
-                                return jsx(closure_0(closure_2[15]).Button, obj);
-                              }
-                            }
-                          }
-                          class M {
-                            constructor() {
-                              tmp = onClose();
-                              tmp2 = closure_7();
-                              tmp3 = onBlock();
-                              return;
-                            }
-                          }
-                          let obj2 = { style: tmp4.buttonsContainer, children: null };
-                          const items1 = [tmp31, tmp34];
-                          obj2.children = items1;
-                          const tmp38 = onPress(onBlockAndReport, obj2);
-                          cResult[38] = tmp4.buttonsContainer;
-                          cResult[39] = tmp31;
-                          cResult[40] = tmp34;
-                          cResult[41] = tmp38;
-                        }
-                        class M {
-                          constructor() {
-                            tmp = onClose();
-                            tmp2 = closure_7();
-                            tmp3 = onBlock();
-                            return;
-                          }
-                        }
-                        cResult[35] = tmp14;
-                        cResult[36] = onBlockAndReport;
-                        cResult[37] = null != onBlockAndReport;
-                      }
-                      const obj3 = { size: "lg", onPress: tmp13, text: tmp28, variant: blockButtonVariant };
-                      const tmp33 = closure_7(tmp(onCancel[15]).Button, obj3);
-                      cResult[32] = tmp13;
-                      cResult[33] = blockButtonVariant;
-                      cResult[34] = tmp33;
-                    }
-                    class M {
-                      constructor() {
-                        tmp = onClose();
-                        tmp2 = closure_7();
-                        tmp3 = onBlock();
-                        return;
-                      }
-                    }
-                    tmp25[0] = tmp4.text;
-                    tmp25[2] = tmp20;
-                    const tmp26 = closure_7(tmp(onCancel[17]).Text, tmp25);
-                    cResult[28] = tmp4.text;
-                    cResult[29] = tmp20;
-                    cResult[30] = tmp26;
-                  }
-                  class M {
-                    constructor() {
-                      tmp = onClose();
-                      tmp2 = closure_7();
-                      tmp3 = onBlock();
-                      return;
-                    }
-                  }
-                  if (description == null) {
-                    class R {
-                      constructor() {
-                        obj = { size: "lg", onPress: closure_8, text: null, variant: "secondary" };
-                        intl = closure_0(closure_2[16]).intl;
-                        obj.text = intl.string(closure_0(closure_2[16]).t["ETE/oC"]);
-                        return jsx(closure_0(closure_2[15]).Button, obj);
-                      }
-                    }
-                    class M {
-                      constructor() {
-                        tmp = onClose();
-                        tmp2 = closure_7();
-                        tmp3 = onBlock();
-                        return;
-                      }
-                    }
-                    const formatResult = obj6.format(tmp(onCancel[16]).t.pegItC, { name: null });
-                    const obj5 = { name: null };
-                  }
-                  cResult[25] = description;
-                  cResult[26] = name;
-                  cResult[27] = formatResult;
-                }
-                const obj7 = { style: tmp4.header, variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: tmp16 };
-                const tmp19 = closure_7(tmp(onCancel[17]).Text, obj7);
-                cResult[22] = tmp4.header;
-                cResult[23] = tmp16;
-                cResult[24] = tmp19;
-              }
-            }
-          }
-          const fn2 = function z() {
-            onClose();
-            closure_7();
-            const result = ReportModals.showReportModalForInappropriateConversationSafetyAlert(lastChannelMessage);
-            if (onBlockAndReport != null) {
-              onBlockAndReport();
-            }
-          };
-          class M {
-            constructor() {
-              tmp = onClose();
-              tmp2 = closure_7();
-              tmp3 = onBlock();
-              return;
-            }
-          }
-          cResult[13] = tmp11;
-          cResult[14] = lastChannelMessage;
-          cResult[15] = onBlockAndReport;
-          cResult[16] = onClose;
-          cResult[17] = fn2;
-          tmp14 = fn2;
         }
       }
       class M {
@@ -343,13 +91,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
           return;
         }
       }
-      cResult[9] = tmp11;
+      cResult[9] = E;
       cResult[10] = onBlock;
       cResult[11] = onClose;
       cResult[12] = M;
-      tmp13 = M;
     }
-    class A {
+    class S {
       constructor() {
         tmp = onClose();
         tmp2 = onCancel();
@@ -358,26 +105,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
     }
     cResult[6] = onCancel;
     cResult[7] = onClose;
-    cResult[8] = A;
-    tmp12 = A;
+    cResult[8] = S;
   }
   class E {
     constructor() {
       obj = closure_1(closure_2[12]);
       obj1 = { location: LOCATION_CONTEXT_MOBILE };
       blockUserResult = obj.blockUser(userId, obj1);
-      nextPromise = blockUserResult.then(() => {
-        const result = channelId(onCancel[13]).showBlockSuccessToast(userId, closure_1_1);
-      });
+      nextPromise = blockUserResult.then(() => { ... });
       return;
     }
   }
   cResult[3] = channelId;
   cResult[4] = userId;
   cResult[5] = E;
-  tmp11 = E;
   const obj4 = channelId(onCancel[11]);
-}) : ((userId) => {
+}) : (function ConfirmBlockUserAlert(userId) {
   userId = userId.userId;
   const channelId = userId.channelId;
   ({ description, onCancel } = userId);
@@ -400,7 +143,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
     });
   }, items1);
   const items2 = [onClose, onCancel];
-  onPress = onClose.useCallback(() => {
+  const onPress = onClose.useCallback(() => {
     onClose();
     onCancel();
   }, items2);

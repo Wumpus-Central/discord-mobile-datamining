@@ -1,8 +1,8 @@
-// === Module 16233: ServerOnboardingSetupProgressExperiment ===
+// === Module 16493: ServerOnboardingSetupProgressExperiment ===
 
-// Module 16233 (ServerOnboardingSetupProgressExperiment)
+// Module 16493 (ServerOnboardingSetupProgressExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1440 */;
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -13,7 +13,7 @@ obj.variations = obj2;
 let closure_2 = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/experiments/ServerOnboardingSetupProgressExperiment.tsx");
 
-export const useServerOnboardingSetupProgressExperiment = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+export const useServerOnboardingSetupProgressExperiment = ReactCompilerGating.isReactCompilerEnabled() ? (function useServerOnboardingSetupProgressExperiment(location) {
   const cResult = c.c(2);
   if (cResult[0] !== location) {
     const obj2 = { location };
@@ -24,4 +24,6 @@ export const useServerOnboardingSetupProgressExperiment = ReactCompilerGating.is
     tmp2 = cResult[1];
   }
   return closure_2.useConfig(tmp2);
-}) : ((location) => closure_2.useConfig({ location }));
+}) : (function useServerOnboardingSetupProgressExperiment(location) {
+  return closure_2.useConfig({ location });
+});

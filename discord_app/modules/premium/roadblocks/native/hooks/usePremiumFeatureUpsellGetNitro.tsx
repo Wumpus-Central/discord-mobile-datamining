@@ -1,18 +1,18 @@
-// === Module 9658: usePremiumFeatureUpsellGetNitro ===
+// === Module 9451: usePremiumFeatureUpsellGetNitro ===
 
-// Module 9658 (usePremiumFeatureUpsellGetNitro)
-import ChatInputUtils from "ChatInputUtils" /* 4751 */;
-import actions_BillingActionCreators from "actions/BillingActionCreators" /* 5411 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6664 */;
-import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 6941 */;
-import UserOfferActionCreators from "UserOfferActionCreators" /* 7744 */;
+// Module 9451 (usePremiumFeatureUpsellGetNitro)
+import ChatInputUtils from "ChatInputUtils" /* 4945 */;
+import actions_BillingActionCreators from "actions/BillingActionCreators" /* 5720 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6841 */;
+import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7130 */;
+import UserOfferActionCreators from "UserOfferActionCreators" /* 8065 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SubscriptionStore from "SubscriptionStore" /* 4540 */;
-import UserOfferStore from "UserOfferStore" /* 6972 */;
+import SubscriptionStore from "SubscriptionStore" /* 4732 */;
+import UserOfferStore from "UserOfferStore" /* 7161 */;
 
 require = fn;
-const PremiumTypes = fn(1379).PremiumTypes;
+const PremiumTypes = fn(1391).PremiumTypes;
 const AnalyticsObjectTypes = fn(1085).AnalyticsObjectTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/roadblocks/native/hooks/usePremiumFeatureUpsellGetNitro.tsx");
@@ -78,14 +78,14 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, page, arg3) 
           onPress();
         }).catch(() => {
           const intl = closure_1_0(1126).intl;
-          page(4573).presentFailedToast(intl.string(closure_1_0(1126).t.R0RpRX));
+          page(4765).presentFailedToast(intl.string(closure_1_0(1126).t.R0RpRX));
         }).finally(() => closure_1_4(false));
         const catchPromise = Promise.all(items).then(() => {
           ref.current = ref.current + 1;
           onPress();
         }).catch(() => {
           const intl = closure_1_0(1126).intl;
-          page(4573).presentFailedToast(intl.string(closure_1_0(1126).t.R0RpRX));
+          page(4765).presentFailedToast(intl.string(closure_1_0(1126).t.R0RpRX));
         });
       }
     }

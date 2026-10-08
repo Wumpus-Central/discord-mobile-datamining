@@ -1,15 +1,15 @@
-// === Module 4704: DismissibleContentUnsafeUtils ===
+// === Module 4898: DismissibleContentUnsafeUtils ===
 
-// Module 4704 (DismissibleContentUnsafeUtils)
+// Module 4898 (DismissibleContentUnsafeUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import Uint8ArrayUtils from "Uint8ArrayUtils" /* 2035 */;
-import DismissibleContentUtils from "DismissibleContentUtils" /* 2037 */;
-import DismissibleContentTypes from "DismissibleContentTypes" /* 2041 */;
-import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry" /* 4726 */;
+import Uint8ArrayUtils from "Uint8ArrayUtils" /* 2047 */;
+import DismissibleContentUtils from "DismissibleContentUtils" /* 2049 */;
+import DismissibleContentTypes from "DismissibleContentTypes" /* 2054 */;
+import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry" /* 4920 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4899 */;
 
 const require = globalThis.__r;
 
@@ -372,7 +372,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/dismissible_content/DismissibleContentUnsafeUtils.tsx");
 
 export { UNSAFE_isDismissibleContentDismissed };
-export const useIsDismissibleContentDismissed_UNSAFE = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export const useIsDismissibleContentDismissed_UNSAFE = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsDismissibleContentDismissed_UNSAFE(arg0, arg1) {
   _require = arg0;
   const cResult = require("c").c(6);
   if (cResult[0] !== arg1) {
@@ -411,7 +411,7 @@ export const useIsDismissibleContentDismissed_UNSAFE = ReactCompilerGating.isRea
   tmp8 = A;
   const obj = require("c");
   tmp = _require;
-}) : ((arg0) => {
+}) : (function useIsDismissibleContentDismissed_UNSAFE(arg0) {
   _require = arg0;
   if (arg1 === undefined) {
     const obj = {};

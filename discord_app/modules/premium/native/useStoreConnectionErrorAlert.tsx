@@ -1,17 +1,17 @@
-// === Module 6933: useStoreConnectionErrorAlert ===
+// === Module 7122: useStoreConnectionErrorAlert ===
 
-// Module 6933 (useStoreConnectionErrorAlert)
+// Module 7122 (useStoreConnectionErrorAlert)
 import util from "util" /* 1126 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5714 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5297 */;
 import noop from "module_19" /* 19 */;
-import IAPStore from "IAPStore" /* 6931 */;
+import IAPStore from "IAPStore" /* 7120 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/useStoreConnectionErrorAlert.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useStoreConnectionErrorAlert() {
   const cResult = stateFromStores(576).c(5);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [IAPStore];
@@ -50,7 +50,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   const effect = noop.useEffect(tmp8, tmp9);
   const tmpResult = stateFromStores(504);
-}) : (() => {
+}) : (function useStoreConnectionErrorAlert() {
   const items = [IAPStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => IAPStore.hasConnectionError());
   const items1 = [stateFromStores];

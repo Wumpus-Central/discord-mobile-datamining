@@ -1,18 +1,18 @@
-// === Module 6608: GuildOnboardingUtils ===
+// === Module 6784: GuildOnboardingUtils ===
 
-// Module 6608 (GuildOnboardingUtils)
+// Module 6784 (GuildOnboardingUtils)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
-import GlobalUtils from "GlobalUtils" /* 1375 */;
-import FlagUtilsAll from "FlagUtils" /* 1390 */;
-import StringUtils from "StringUtils" /* 2018 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4520 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 5853 */;
-import DefaultChannelUtils from "DefaultChannelUtils" /* 6604 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5447 */;
-import GuildChannelStore from "GuildChannelStore" /* 4513 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
+import GlobalUtils from "GlobalUtils" /* 1387 */;
+import FlagUtilsAll from "FlagUtils" /* 1402 */;
+import StringUtils from "StringUtils" /* 2030 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4712 */;
+import DefaultChannelUtils from "DefaultChannelUtils" /* 6780 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 6785 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5757 */;
+import GuildChannelStore from "GuildChannelStore" /* 4705 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
 
 const require = globalThis.__r;
 
@@ -79,15 +79,15 @@ function areStatesEqual(arg0, arg1) {
   }
   return tmp;
 }
-let closure_7 = fn(4513).GUILD_SELECTABLE_CHANNELS_KEY;
-const OnboardingConnectionType = fn(6603).OnboardingConnectionType;
+let closure_7 = fn(4705).GUILD_SELECTABLE_CHANNELS_KEY;
+const OnboardingConnectionType = fn(6779).OnboardingConnectionType;
 const Constants = fn(1085);
 ({ GuildFeatures: closure_11, Permissions: closure_12 } = Constants);
-const GuildMemberFlags = fn(4501).GuildMemberFlags;
+const GuildMemberFlags = fn(4693).GuildMemberFlags;
 let date = new Date(1682488800000);
 fn(558);
 let ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildOnboardingSettingsAvailable(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -123,7 +123,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp7);
-}) : ((arg0) => {
+}) : (function useGuildOnboardingSettingsAvailable(arg0) {
   _require = arg0;
   const items = [GuildStore, PermissionStore];
   return require("initialize").useStateFromStores(items, () => {
@@ -145,7 +145,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   });
 });
 ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arr, arr2) => {
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useChannelCoverageForOnboarding(arg0, arr, arr2) {
   _require = arg0;
   const cResult = require("c").c(8);
   let filter = globalThis;
@@ -237,7 +237,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arr, arr2) => 
   cResult[5] = arr2;
   cResult[6] = items1;
   const set = new filter.Set();
-}) : ((arg0, arr, arr2) => {
+}) : (function useChannelCoverageForOnboarding(arg0, arr, arr2) {
   _require = arg0;
   const items = [GuildChannelStore];
   arr2 = require("initialize").useStateFromStores(items, () => GuildChannelStore.getChannels(closure_0))[closure_7];
@@ -290,7 +290,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arr, arr2) => 
   return items1;
 });
 ReactCompilerGating = fn(558);
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsChattableChannel(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -335,7 +335,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp6);
-}) : ((arg0) => {
+}) : (function useIsChattableChannel(arg0) {
   _require = arg0;
   const items = [ChannelStore];
   return require("initialize").useStateFromStores(items, () => {
@@ -591,7 +591,7 @@ export const getChattableDefaultChannels = function getChattableDefaultChannels(
   ];
   return items;
 };
-export const useChattableDefaultChannels = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export const useChattableDefaultChannels = ReactCompilerGating.isReactCompilerEnabled() ? (function useChattableDefaultChannels(arg0, arg1) {
   _require = arg0;
   const cResult = require("c").c(5);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -659,7 +659,7 @@ export const useChattableDefaultChannels = ReactCompilerGating.isReactCompilerEn
   tmp6 = fn;
   let obj = require("c");
   tmp = _require;
-}) : ((arg0, arg1) => {
+}) : (function useChattableDefaultChannels(arg0, arg1) {
   _require = arg0;
   let items = [GuildChannelStore];
   let items1 = [arg0, arg1];

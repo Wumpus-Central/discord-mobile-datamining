@@ -1,42 +1,42 @@
-// === Module 17321: VoicePanelCardFloatingControls ===
+// === Module 17602: VoicePanelCardFloatingControls ===
 
-// Module 17321 (VoicePanelCardFloatingControls)
+// Module 17602 (VoicePanelCardFloatingControls)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 4595 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 4806 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 4948 */;
-import StreamActionCreators from "StreamActionCreators" /* 5038 */;
-import spring from "spring" /* 5604 */;
-import NativeViewDefault from "NativeView" /* 5983 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7861 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8352 */;
-import useShouldOpenGameProfileModal from "useShouldOpenGameProfileModal" /* 8354 */;
-import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager" /* 9024 */;
-import VoiceStateIcons from "VoiceStateIcons" /* 9349 */;
-import VoiceStateIconUtils from "VoiceStateIconUtils" /* 9350 */;
-import usePlayingGameActivitiesDefault from "usePlayingGameActivities" /* 9406 */;
-import VoiceXIcon from "VoiceXIcon" /* 9680 */;
-import _modDef9761 from "module_9761" /* 9761 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11915 */;
-import useStableParticipant from "useStableParticipant" /* 17248 */;
-import useVoicePanelCardUserStateIcons from "useVoicePanelCardUserStateIcons" /* 17250 */;
-import _modDef17277 from "module_17277" /* 17277 */;
-import getRandomNumberInRangeDefault from "getRandomNumberInRange" /* 17307 */;
-import _modDef17322 from "module_17322" /* 17322 */;
-import _modDef17323 from "module_17323" /* 17323 */;
+import native from "native" /* 4787 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 5000 */;
+import spring from "spring" /* 5374 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 5896 */;
+import NativeViewDefault from "NativeView" /* 6166 */;
+import StreamActionCreators from "StreamActionCreators" /* 7438 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8279 */;
+import VoiceStateIcons from "VoiceStateIcons" /* 8771 */;
+import VoiceStateIconUtils from "VoiceStateIconUtils" /* 8772 */;
+import usePlayingGameActivitiesDefault from "usePlayingGameActivities" /* 8827 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8850 */;
+import useShouldOpenGameProfileModal from "useShouldOpenGameProfileModal" /* 8852 */;
+import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager" /* 10623 */;
+import VoiceXIcon from "VoiceXIcon" /* 10869 */;
+import _modDef10962 from "module_10962" /* 10962 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11988 */;
+import useStableParticipant from "useStableParticipant" /* 17529 */;
+import useVoicePanelCardUserStateIcons from "useVoicePanelCardUserStateIcons" /* 17531 */;
+import _modDef17558 from "module_17558" /* 17558 */;
+import getRandomNumberInRangeDefault from "getRandomNumberInRange" /* 17588 */;
+import _modDef17603 from "module_17603" /* 17603 */;
+import _modDef17604 from "module_17604" /* 17604 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4918 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
-import ReanimatedRexport_mod from "ReanimatedRexport" /* 4618 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2062 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5893 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5108 */;
+import ReanimatedRexport_mod from "ReanimatedRexport" /* 4810 */;
 
-const useGameProfileObscuredDefault = tmp3(5903);
-const useResolveGameForProfileDefault = tmp3(8356);
-const GuildTagDefault = tmp3(9409);
-const GameTagChipletDefault = tmp3(17327);
+const useGameProfileObscuredDefault = tmp3(8213);
+const GuildTagDefault = tmp3(8830);
+const useResolveGameForProfileDefault = tmp3(8854);
+const GameTagChipletDefault = tmp3(17608);
 require = fn;
 function getAccessibilityLabel(tmp4ResultResult, label) {
   if (null != tmp4ResultResult.find((type) => type.type === require("useVoicePanelCardUserStateIcons").VoicePanelCardUserStateIconType.STREAM_ICON)) {
@@ -64,21 +64,21 @@ function getAccessibilityLabel(tmp4ResultResult, label) {
 }
 get_ActivityIndicator = fn(17);
 ({ Platform, Pressable } = get_ActivityIndicator);
-const VoicePanelConstants = fn(11916);
+const VoicePanelConstants = fn(11989);
 ({ MODE_CHANGE_PHYSICS: closure_9, VoicePanelModes: c10 } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(11914).VoicePanelControlsModes;
-const VOICE_PANEL_CARD_INNER_PADDING = fn(11919).VOICE_PANEL_CARD_INNER_PADDING;
+const VoicePanelControlsModes = fn(11987).VoicePanelControlsModes;
+const VOICE_PANEL_CARD_INNER_PADDING = fn(11992).VOICE_PANEL_CARD_INNER_PADDING;
 const ThemeTypes = fn(1085).ThemeTypes;
-const CallConstants = fn(4917);
+const CallConstants = fn(5113);
 ({ ParticipantTypes: closure_14, VoicePlatforms: closure_15 } = CallConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17, Fragment: closure_18 } = jsxProd);
 let ReanimatedRexport = ReanimatedRexport_mod;
-let closure_19 = ReanimatedRexport.createAnimatedComponent(fn(1188).Icon);
+let closure_19 = ReanimatedRexport.createAnimatedComponent(fn(1200).Icon);
 let ReanimatedRexport = ReanimatedRexport_mod;
 let closure_20 = ReanimatedRexport.createAnimatedComponent(Pressable);
 let c21 = 28;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_22 = createStyles.createStyles(() => {
   const obj = { labelPositionContainer: { position: "absolute", left: 8, right: 8, bottom: 8, justifyContent: "center", alignItems: "center", marginHorizontal: 8 }, labelOuterContainer: { display: "flex", flexDirection: "row", justifyContent: "flex-start", alignItems: "center", borderRadius: nativeDefault.radii.sm, overflow: "hidden", paddingHorizontal: 8, backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, height: v28, gap: 4 }, initialIcons: { display: "flex", flexDirection: "row", marginStart: -4, marginEnd: -4 }, icon: null, iconWithoutBackground: null, iconContainer: null, speakerMuteIcon: null, floatingContainer: null, floatingText: null, ringingIconContainer: null, ringingIcon: null, secureFramesIcon: null };
   const size = { width: 12, height: 12, tintColor: nativeDefault.colors.WHITE };
@@ -100,7 +100,7 @@ let closure_22 = createStyles.createStyles(() => {
 const __initData = { code: "function VoicePanelCardFloatingControlsTsx1(){const{controlsSpecs,VoicePanelControlsModes,GAP}=this.__closure;const hidden=controlsSpecs.get().mode===VoicePanelControlsModes.HIDDEN;return{marginLeft:hidden?2:GAP,marginRight:hidden?2:0};}" };
 const __initData2 = { code: "function VoicePanelCardFloatingControlsTsx2(){const{controlsSpecs,VoicePanelControlsModes,GAP}=this.__closure;const hidden=controlsSpecs.get().mode===VoicePanelControlsModes.HIDDEN;return{marginLeft:hidden?2:GAP,marginRight:hidden?2:0};}" };
 let ReactCompilerGating = fn(558);
-let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((voicePlatform) => {
+let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function StreamIcon(voicePlatform) {
   const cResult = controlsSpecs(576).c(6);
   voicePlatform = voicePlatform.voicePlatform;
   const tmp3 = closure_22();
@@ -123,14 +123,14 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((voicePlatform)
   fn.__closure = { controlsSpecs, VoicePanelControlsModes, GAP: 4 };
   fn.__workletHash = 3270040588948;
   fn.__initData = __initData;
-  const animatedStyle = controlsSpecs(4618).useAnimatedStyle(fn);
-  let tmp4Result = _modDef17277;
+  const animatedStyle = controlsSpecs(4810).useAnimatedStyle(fn);
+  let tmp4Result = _modDef17558;
   if (voicePlatform === constants2.XBOX) {
-    tmp4Result = _modDef17322;
+    tmp4Result = _modDef17603;
   } else if (voicePlatform === constants2.MOBILE) {
-    tmp4Result = _modDef9761;
+    tmp4Result = _modDef10962;
   } else if (voicePlatform === constants2.QUEST) {
-    tmp4Result = _modDef17323;
+    tmp4Result = _modDef17604;
   }
   if (cResult[0] === animatedStyle) {
     if (cResult[1] === tmp3.iconWithoutBackground) {
@@ -154,9 +154,9 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((voicePlatform)
   cResult[1] = tmp3.iconWithoutBackground;
   cResult[2] = items;
   tmp8 = items;
-  const obj2 = controlsSpecs(4618);
+  const obj2 = controlsSpecs(4810);
   const obj3 = { controlsSpecs, VoicePanelControlsModes, GAP: 4 };
-}) : ((voicePlatform) => {
+}) : (function StreamIcon(voicePlatform) {
   voicePlatform = voicePlatform.voicePlatform;
   const controlsSpecs = noop.useContext(VoicePanelStateContextDefault).controlsSpecs;
   let tmp = closure_22();
@@ -177,14 +177,14 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((voicePlatform)
   fn.__closure = { controlsSpecs, VoicePanelControlsModes, GAP: 4 };
   fn.__workletHash = 15914667672663;
   fn.__initData = __initData2;
-  const animatedStyle = controlsSpecs(4618).useAnimatedStyle(fn);
-  let tmp2Result = _modDef17277;
+  const animatedStyle = controlsSpecs(4810).useAnimatedStyle(fn);
+  let tmp2Result = _modDef17558;
   if (voicePlatform === constants2.XBOX) {
-    tmp2Result = _modDef17322;
+    tmp2Result = _modDef17603;
   } else if (voicePlatform === constants2.MOBILE) {
-    tmp2Result = _modDef9761;
+    tmp2Result = _modDef10962;
   } else if (voicePlatform === constants2.QUEST) {
-    tmp2Result = _modDef17323;
+    tmp2Result = _modDef17604;
   }
   const obj3 = { source: tmp2Result, style: null };
   const items = [tmp.iconWithoutBackground, animatedStyle];
@@ -192,7 +192,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((voicePlatform)
   return closure_16(closure_19, obj3);
 });
 ReactCompilerGating = fn(558);
-let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? ((icon) => {
+let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function AnimatedLabelIcon(icon) {
   const cResult = c.c(31);
   icon = icon.icon;
   const tmp4 = closure_22();
@@ -346,7 +346,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? ((icon) => {
     cResult[30] = tmp15;
     tmp12 = tmp15;
   }
-}) : ((icon) => {
+}) : (function AnimatedLabelIcon(icon) {
   icon = icon.icon;
   const tmp = closure_22();
   const type = icon.type;
@@ -399,7 +399,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? ((icon) => {
 const __initData3 = { code: "function VoicePanelCardFloatingControlsTsx3(){const{controlsHidden,FLOATING_BAR_HEIGHT,VOICE_PANEL_CARD_INNER_PADDING,withSpring,MODE_CHANGE_PHYSICS}=this.__closure;const hidden=controlsHidden.get();return{position:\"absolute\",top:hidden?-(FLOATING_BAR_HEIGHT+VOICE_PANEL_CARD_INNER_PADDING*2):VOICE_PANEL_CARD_INNER_PADDING,left:VOICE_PANEL_CARD_INNER_PADDING,opacity:withSpring(hidden?0:1,MODE_CHANGE_PHYSICS),zIndex:1};}" };
 const __initData4 = { code: "function VoicePanelCardFloatingControlsTsx4(){const{controlsHidden,FLOATING_BAR_HEIGHT,VOICE_PANEL_CARD_INNER_PADDING,withSpring,MODE_CHANGE_PHYSICS}=this.__closure;const hidden=controlsHidden.get();return{position:'absolute',top:hidden?-(FLOATING_BAR_HEIGHT+VOICE_PANEL_CARD_INNER_PADDING*2):VOICE_PANEL_CARD_INNER_PADDING,left:VOICE_PANEL_CARD_INNER_PADDING,opacity:withSpring(hidden?0:1,MODE_CHANGE_PHYSICS),zIndex:1};}" };
 ReactCompilerGating = fn(558);
-let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? ((controlsHidden) => {
+let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (function useTopLeftButtonStyles(controlsHidden) {
   _require = controlsHidden;
   const fn = function n() {
     value = controlsHidden.get();
@@ -421,7 +421,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? ((controlsHidden
   fn.__workletHash = 14378515190270;
   fn.__initData = __initData3;
   return obj.useAnimatedStyle(fn);
-}) : ((controlsHidden) => {
+}) : (function useTopLeftButtonStyles(controlsHidden) {
   _require = controlsHidden;
   const fn = function n() {
     value = controlsHidden.get();
@@ -445,11 +445,11 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? ((controlsHidden
   return obj.useAnimatedStyle(fn);
 });
 ReactCompilerGating = fn(558);
-let closure_31 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((participant) => {
+let closure_31 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function CloseButton(participant) {
   const cResult = participant(576).c(11);
   participant = participant.participant;
   ({ isSelf, layout } = participant);
-  guildId = noop.useContext(guildId(11915)).guildId;
+  guildId = noop.useContext(guildId(11988)).guildId;
   const tmp5 = closure_30(participant.controlsHidden);
   if (cResult[0] === guildId) {
     if (cResult[1] === participant) {
@@ -467,18 +467,18 @@ let closure_31 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((part
             }
           }
         }
-        let obj2 = { icon: tmp4(17324), onPress: tmp6, style: tmp5, layout, accessibilityLabel: cResult[5] };
-        const tmp15 = closure_16(tmp4(17217), obj2);
+        let obj2 = { icon: tmp4(17605), onPress: tmp6, style: tmp5, layout, accessibilityLabel: cResult[5] };
+        const tmp15 = closure_16(tmp4(17498), obj2);
         cResult[6] = tmp6;
         cResult[7] = layout;
         cResult[8] = cResult[5];
         cResult[9] = tmp5;
         cResult[10] = tmp15;
         tmp12 = tmp15;
-        const tmp4Result = tmp4(17217);
+        const tmp4Result = tmp4(17498);
       }
     }
-    const result = tmp(17248).isStableActivityParticipant(participant);
+    const result = tmp(17529).isStableActivityParticipant(participant);
     const intl = tmp(1126).intl;
     const string = intl.string;
     let t = tmp(1126).t;
@@ -493,7 +493,7 @@ let closure_31 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((part
     cResult[3] = isSelf;
     cResult[4] = participant;
     cResult[5] = stringResult;
-    let tmpResult = tmp(17248);
+    let tmpResult = tmp(17529);
   }
   const fn = function o() {
     if (obj.isStableStreamParticipant(participant)) {
@@ -521,11 +521,11 @@ let closure_31 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((part
   cResult[2] = fn;
   tmp6 = fn;
   let obj = participant(576);
-}) : ((participant) => {
+}) : (function CloseButton(participant) {
   participant = participant.participant;
   let guildId;
   ({ controlsHidden, isSelf, layout } = participant);
-  guildId = noop.useContext(guildId(11915)).guildId;
+  guildId = noop.useContext(guildId(11988)).guildId;
   const items = [guildId, participant];
   const callback = noop.useCallback(() => {
     if (obj.isStableStreamParticipant(participant)) {
@@ -550,12 +550,12 @@ let closure_31 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((part
   }, items);
   let obj = { icon: null, onPress: null, style: null, layout: null, accessibilityLabel: null };
   const tmp = closure_30(controlsHidden);
-  obj.icon = guildId(17324);
+  obj.icon = guildId(17605);
   obj.onPress = callback;
   obj.style = tmp;
   obj.layout = layout;
-  const tmp4 = guildId(17217);
-  const result = participant(17248).isStableActivityParticipant(participant);
+  const tmp4 = guildId(17498);
+  const result = participant(17529).isStableActivityParticipant(participant);
   const intl = participant(1126).intl;
   const string = intl.string;
   const t = participant(1126).t;
@@ -572,7 +572,7 @@ let closure_31 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((part
 const __initData5 = { code: "function VoicePanelCardFloatingControlsTsx5(){const{controlsHidden,mode,VoicePanelModes,FLOATING_BAR_HEIGHT,VOICE_PANEL_CARD_INNER_PADDING,withSpring,MODE_CHANGE_PHYSICS}=this.__closure;const hidden=controlsHidden.get()||mode.get()===VoicePanelModes.PIP;return{position:\"absolute\",top:hidden?-(FLOATING_BAR_HEIGHT+VOICE_PANEL_CARD_INNER_PADDING*2):VOICE_PANEL_CARD_INNER_PADDING,right:VOICE_PANEL_CARD_INNER_PADDING,opacity:withSpring(hidden?0:1,MODE_CHANGE_PHYSICS),zIndex:1};}" };
 const __initData6 = { code: "function VoicePanelCardFloatingControlsTsx6(){const{controlsHidden,mode,VoicePanelModes,FLOATING_BAR_HEIGHT,VOICE_PANEL_CARD_INNER_PADDING,withSpring,MODE_CHANGE_PHYSICS}=this.__closure;const hidden=controlsHidden.get()||mode.get()===VoicePanelModes.PIP;return{position:'absolute',top:hidden?-(FLOATING_BAR_HEIGHT+VOICE_PANEL_CARD_INNER_PADDING*2):VOICE_PANEL_CARD_INNER_PADDING,right:VOICE_PANEL_CARD_INNER_PADDING,opacity:withSpring(hidden?0:1,MODE_CHANGE_PHYSICS),zIndex:1};}" };
 ReactCompilerGating = fn(558);
-let closure_34 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((participantId) => {
+let closure_34 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function CardFocusButton(participantId) {
   const cResult = participantId(setFocused[17]).c(11);
   participantId = participantId.participantId;
   const controlsHidden = participantId.controlsHidden;
@@ -654,7 +654,7 @@ let closure_34 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((part
   cResult[2] = fn;
   tmp6 = fn;
   const obj = participantId(setFocused[17]);
-}) : ((participantId) => {
+}) : (function CardFocusButton(participantId) {
   participantId = participantId.participantId;
   const controlsHidden = participantId.controlsHidden;
   const targetName = participantId.targetName;
@@ -725,7 +725,7 @@ let closure_45 = { code: "function VoicePanelCardFloatingControlsTsx16(finished_
 const __initData13 = { code: "function VoicePanelCardFloatingControlsTsx17(){const{controlsHidden,FLOATING_BAR_HEIGHT,VOICE_PANEL_CARD_INNER_PADDING}=this.__closure;return{top:controlsHidden.get()?-(FLOATING_BAR_HEIGHT+VOICE_PANEL_CARD_INNER_PADDING*2):0};}" };
 const __initData14 = { code: "function VoicePanelCardFloatingControlsTsx18(){const{angle}=this.__closure;return{transform:[{rotate:angle.get()+\"deg\"}]};}" };
 ReactCompilerGating = fn(558);
-let closure_48 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((controlsHidden) => {
+let closure_48 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function RingingIcon(controlsHidden) {
   const cResult = controlsHidden(sharedValue1[17]).c(13);
   controlsHidden = controlsHidden.controlsHidden;
   const tmp4 = closure_22();
@@ -868,7 +868,7 @@ let closure_48 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((cont
   tmp16 = items1;
   const obj5 = { controlsHidden, FLOATING_BAR_HEIGHT: v28, VOICE_PANEL_CARD_INNER_PADDING };
   const tmpResult5 = controlsHidden(sharedValue1[12]);
-}) : ((controlsHidden) => {
+}) : (function RingingIcon(controlsHidden) {
   controlsHidden = controlsHidden.controlsHidden;
   let sharedValue1;
   const tmp = closure_22();
@@ -964,7 +964,7 @@ let closure_48 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((cont
   return closure_16(tmp12, obj9);
 }));
 ReactCompilerGating = fn(558);
-let closure_49 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((controlsHidden) => {
+let closure_49 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function RingingIconWrapper(controlsHidden) {
   const cResult = c.c(2);
   controlsHidden = controlsHidden.controlsHidden;
   if (cResult[0] !== controlsHidden) {
@@ -979,9 +979,11 @@ let closure_49 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((cont
     tmp4 = cResult[1];
   }
   return tmp4;
-}) : ((controlsHidden) => value2(native.ThemeContextProvider, { theme: ThemeTypes.LIGHT, children: value2(closure_48, { controlsHidden: controlsHidden.controlsHidden }) })));
+}) : (function RingingIconWrapper(controlsHidden) {
+  return value2(native.ThemeContextProvider, { theme: ThemeTypes.LIGHT, children: value2(closure_48, { controlsHidden: controlsHidden.controlsHidden }) });
+}));
 ReactCompilerGating = fn(558);
-let closure_50 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_50 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function UserTagChiplet(arg0) {
   let tmp = dependencyMap;
   const cResult = gameRecord(576).c(13);
   ({ userId, textColor } = arg0);
@@ -1061,7 +1063,7 @@ let closure_50 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
   tmp9 = items;
   tmp8 = fn;
   let obj = gameRecord(576);
-}) : ((arg0) => {
+}) : (function UserTagChiplet(arg0) {
   ({ userId, textColor } = arg0);
   let gameRecord;
   importDefault = undefined;
@@ -1095,11 +1097,11 @@ let closure_50 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
   if (null != gameRecord) {
     if (!tmp6) {
       let obj = { game: gameRecord, userId, textColor };
-      let tmp9 = closure_16(tmp(17327), obj);
+      let tmp9 = closure_16(tmp(17608), obj);
     }
     return tmp9;
   }
-  tmp9 = closure_16(tmp(9409), { userId, textColor });
+  tmp9 = closure_16(tmp(8830), { userId, textColor });
 }));
 const __initData15 = { code: "function VoicePanelCardFloatingControlsTsx19(){const{hasHiddenVisibleIcon,focused,connected,mode,VoicePanelModes,controlsHidden}=this.__closure;const showIcon=hasHiddenVisibleIcon&&focused.get()==null;return!connected.get()||mode.get()===VoicePanelModes.PIP||!showIcon&&controlsHidden.get();}" };
 const __initData16 = { code: "function VoicePanelCardFloatingControlsTsx20(){const{isPillHidden}=this.__closure;return isPillHidden.get();}" };
@@ -1112,7 +1114,7 @@ const __initData22 = { code: "function VoicePanelCardFloatingControlsTsx26(hidde
 const __initData23 = { code: "function VoicePanelCardFloatingControlsTsx27(){const{pillOpacity,isPillHidden,FLOATING_BAR_HEIGHT,VOICE_PANEL_CARD_INNER_PADDING}=this.__closure;return{opacity:pillOpacity.get(),top:isPillHidden.get()?FLOATING_BAR_HEIGHT+VOICE_PANEL_CARD_INNER_PADDING:0,height:FLOATING_BAR_HEIGHT,pointerEvents:isPillHidden.get()?'none':'auto'};}" };
 const __initData24 = { code: "function VoicePanelCardFloatingControlsTsx28(){const{connected,isScreenReaderEnabled,controlsSpecs,VoicePanelControlsModes,hasIcon,GAP}=this.__closure;const hidden_0=!connected.get()||!isScreenReaderEnabled&&controlsSpecs.get().mode===VoicePanelControlsModes.HIDDEN&&hasIcon;const shouldCollapseWidth=hidden_0&&hasIcon;return{width:shouldCollapseWidth?0:'auto',marginRight:hidden_0?-GAP:0};}" };
 ReactCompilerGating = fn(558);
-let closure_61 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((controlsHidden) => {
+let closure_61 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function FloatingParticipantLabel(controlsHidden) {
   const cResult = controlsHidden(controlsSpecs[17]).c(58);
   controlsHidden = controlsHidden.controlsHidden;
   ({ label, layout, participant } = controlsHidden);
@@ -1705,7 +1707,7 @@ let closure_61 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((cont
   cResult[2] = id;
   cResult[3] = fn;
   obj3 = controlsHidden(controlsSpecs[31]);
-}) : ((controlsHidden) => {
+}) : (function FloatingParticipantLabel(controlsHidden) {
   controlsHidden = controlsHidden.controlsHidden;
   ({ label, layout, participant } = controlsHidden);
   channelId = undefined;
@@ -1919,7 +1921,7 @@ ReactCompilerGating = fn(558);
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/card/VoicePanelCardFloatingControls.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function FloatingControls(arg0) {
   const cResult = participant(controlsSpecs[17]).c(33);
   ({ label, participant } = arg0);
   ({ isRinging, layout } = arg0);
@@ -2246,7 +2248,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   cResult[5] = T;
   tmp14 = T;
   const tmpResult5 = participant(controlsSpecs[31]);
-}) : ((arg0) => {
+}) : (function FloatingControls(arg0) {
   ({ label, participant } = arg0);
   ({ isRinging, layout } = arg0);
   let guildId;

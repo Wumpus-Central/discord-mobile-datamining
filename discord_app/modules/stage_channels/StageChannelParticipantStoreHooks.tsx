@@ -1,16 +1,16 @@
-// === Module 5595: StageChannelParticipantStoreHooks ===
+// === Module 5961: StageChannelParticipantStoreHooks ===
 
-// Module 5595 (StageChannelParticipantStoreHooks)
-import StageChannelParticipants from "StageChannelParticipants" /* 5589 */;
+// Module 5961 (StageChannelParticipantStoreHooks)
+import StageChannelParticipants from "StageChannelParticipants" /* 5955 */;
 import _slicedToArray from "module_32" /* 32 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5582 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5892 */;
 
 const require = globalThis.__r;
 
 require = fn;
 fn(558);
 let ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useStageParticipants(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   const cResult = require("c").c(5);
@@ -27,9 +27,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
       let tmp7 = cResult[4];
     }
     const tmpResult = tmp(504);
-    return _slicedToArray(tmpResult.useStateFromStores(first, tmp6, tmp7, tmp(5596).isVersionEqual), 1)[0];
+    return _slicedToArray(tmpResult.useStateFromStores(first, tmp6, tmp7, tmp(5962).isVersionEqual), 1)[0];
   }
-  const fn = function u() {
+  const fn = function c() {
     const items = [StageChannelParticipantStore.getMutableParticipants(closure_0, closure_1), StageChannelParticipantStore.getParticipantsVersion(closure_0)];
     return items;
   };
@@ -41,7 +41,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   tmp7 = items1;
   tmp6 = fn;
   const obj = require("c");
-}) : ((arg0, arg1) => {
+}) : (function useStageParticipants(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   let items = [StageChannelParticipantStore];
@@ -52,7 +52,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   }, items1, require("SecondaryIndexMapUtils").isVersionEqual), 1)[0];
 });
 ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useStageParticipantsCount(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   const cResult = require("c").c(5);
@@ -70,7 +70,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     }
     return tmp(504).useStateFromStores(first, tmp6, tmp7);
   }
-  const fn = function c() {
+  const fn = function u() {
     return StageChannelParticipantStore.getParticipantCount(closure_0, closure_1);
   };
   const items1 = [arg0, arg1];
@@ -82,7 +82,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   tmp6 = fn;
   const obj = require("c");
   tmp = _require;
-}) : ((arg0, arg1) => {
+}) : (function useStageParticipantsCount(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   const items = [StageChannelParticipantStore];
@@ -90,7 +90,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   return require("initialize").useStateFromStores(items, () => StageChannelParticipantStore.getParticipantCount(closure_0, closure_1), items1);
 });
 ReactCompilerGating = fn(558);
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSortedRequestToSpeakParticipants(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -101,7 +101,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function c() {
+    const fn = function u() {
       const items = [StageChannelParticipantStore.getMutableRequestToSpeakParticipants(closure_0), StageChannelParticipantStore.getRequestToSpeakParticipantsVersion(closure_0)];
       return items;
     };
@@ -117,7 +117,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return _slicedToArray(require("initialize").useStateFromStores(first, tmp6, tmp7, require("SecondaryIndexMapUtils").isVersionEqual), 1)[0];
-}) : ((arg0) => {
+}) : (function useSortedRequestToSpeakParticipants(arg0) {
   _require = arg0;
   let items = [StageChannelParticipantStore];
   const items1 = [arg0];
@@ -132,7 +132,7 @@ const result = size.fileFinishedImporting("modules/stage_channels/StageChannelPa
 export const useStageParticipants = tmp2;
 export const useStageParticipantsCount = tmp3;
 export const useSortedRequestToSpeakParticipants = tmp4;
-export const useActualStageSpeakerCount = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useActualStageSpeakerCount = ReactCompilerGating.isReactCompilerEnabled() ? (function useActualStageSpeakerCount(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -159,7 +159,7 @@ export const useActualStageSpeakerCount = ReactCompilerGating.isReactCompilerEna
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp6, tmp7);
-}) : ((arg0) => {
+}) : (function useActualStageSpeakerCount(arg0) {
   _require = arg0;
   const items = [StageChannelParticipantStore];
   const items1 = [arg0];

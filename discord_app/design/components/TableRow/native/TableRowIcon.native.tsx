@@ -1,9 +1,9 @@
-// === Module 6006: TableRowIcon ===
+// === Module 6192: TableRowIcon ===
 
-// Module 6006 (TableRowIcon)
+// Module 6192 (TableRowIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Icon from "Icon" /* 5603 */;
+import Icon from "Icon" /* 5377 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ let closure_3 = ["color"];
 let closure_4 = ["color"];
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: null, default: null, statusOnline: null, statusIdle: null, statusDND: null, statusOffline: null, xbox: null, playstation: null, danger: null, secondary: null, translucent: null };
 let size = { width: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE, height: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE, justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.lg };
 obj2.container = size;
@@ -43,7 +43,7 @@ const obj12 = { color: nativeDefault.colors.WHITE };
 size = fn(2);
 const result = size.fileFinishedImporting("design/components/TableRow/native/TableRowIcon.native.tsx");
 
-export const TableRowIcon = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const TableRowIcon = ReactCompilerGating.isReactCompilerEnabled() ? (function TableRowIcon(arg0) {
   const cResult = c.c(22);
   ({ source, IconComponent, variant } = arg0);
   let str = "default";
@@ -177,7 +177,7 @@ export const TableRowIcon = ReactCompilerGating.isReactCompilerEnabled() ? ((arg
       translucent = tmp4.translucent;
     break;
   }
-}) : ((arg0) => {
+}) : (function TableRowIcon(arg0) {
   ({ source, IconComponent, variant } = arg0);
   if (variant === undefined) {
     variant = "default";

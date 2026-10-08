@@ -1,10 +1,10 @@
-// === Module 9795: ChatViewWrapperBase ===
+// === Module 10359: ChatViewWrapperBase ===
 
-// Module 9795 (ChatViewWrapperBase)
+// Module 10359 (ChatViewWrapperBase)
 import c from "c" /* 576 */;
-import LayerScope from "LayerScope" /* 6658 */;
-import useChatViewPointerEventsDefault from "useChatViewPointerEvents" /* 9793 */;
-import StickyWrapper from "StickyWrapper" /* 9794 */;
+import LayerScope from "LayerScope" /* 6835 */;
+import useChatViewPointerEventsDefault from "useChatViewPointerEvents" /* 10357 */;
+import StickyWrapper from "StickyWrapper" /* 10358 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat/native/ChatViewWrapperBase.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChatViewWrapperBase(channelId) {
   const cResult = c.c(5);
   ({ children, stickyHeader, style } = channelId);
   const tmp4 = useChatViewPointerEventsDefault(channelId.channelId);
@@ -35,7 +35,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   cResult[4] = tmp6;
   tmp5 = tmp6;
   const obj2 = { children: jsx(StickyWrapper.StickyWrapper, { header: stickyHeader, style, pointerEvents: tmp4, children }) };
-}) : ((arg0) => {
+}) : (function ChatViewWrapperBase(arg0) {
   ({ channelId, children, stickyHeader, style } = arg0);
   const tmp = useChatViewPointerEventsDefault(channelId);
   return jsx(LayerScope.LayerScope, { children: jsx(StickyWrapper.StickyWrapper, { header: stickyHeader, style, pointerEvents: useChatViewPointerEventsDefault(channelId), children }) });

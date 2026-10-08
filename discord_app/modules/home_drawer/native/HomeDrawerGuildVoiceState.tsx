@@ -1,32 +1,32 @@
-// === Module 16300: HomeDrawerGuildVoiceState ===
+// === Module 16560: HomeDrawerGuildVoiceState ===
 
-// Module 16300 (HomeDrawerGuildVoiceState)
+// Module 16560 (HomeDrawerGuildVoiceState)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import LinearGradientDefault from "LinearGradient" /* 5612 */;
-import FastImageDefault from "FastImage" /* 5981 */;
-import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 9759 */;
-import AvatarPile from "AvatarPile" /* 12869 */;
-import BlockedUserUtils from "BlockedUserUtils" /* 13538 */;
+import native from "native" /* 1200 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import LinearGradientDefault from "LinearGradient" /* 5387 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 10960 */;
+import AvatarPile from "AvatarPile" /* 13018 */;
+import BlockedUserUtils from "BlockedUserUtils" /* 13835 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 4513 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5077 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4920 */;
+import GuildChannelStore from "GuildChannelStore" /* 4705 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5971 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5114 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const GUILD_VOCAL_CHANNELS_KEY = fn(4513).GUILD_VOCAL_CHANNELS_KEY;
+const GUILD_VOCAL_CHANNELS_KEY = fn(4705).GUILD_VOCAL_CHANNELS_KEY;
 const ChannelTypes = fn(1085).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-let createStyles = fn(4896);
+let createStyles = fn(5090);
 let obj2 = { voiceContainer: { paddingRight: 8, height: 40, gap: 4, justifyContent: "center" }, streamPreviewShadow: null, streamPreview: null, streamPreviewDarkGradient: null, streamPreviewGradient: null, streamPreviewBorder: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_MEDIUM);
 obj2.streamPreviewShadow = { borderRadius: nativeDefault.radii.sm };
@@ -38,7 +38,7 @@ const rect = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, borde
 obj2.streamPreviewBorder = rect;
 let closure_13 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceUsers(arg0) {
   const cResult = guildId(576).c(15);
   ({ voiceUsers, guildId } = arg0);
   if (cResult[0] !== voiceUsers) {
@@ -89,8 +89,8 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             }
           }
           const obj3 = { style: tmp5, children: null };
-          const obj4 = { size: guildId(1188).AvatarSizes.XSMALL, names: tmp6, totalCount: tmp10, children: cResult[8] };
-          obj3.children = closure_11(guildId(12869).AvatarPile, obj4);
+          const obj4 = { size: guildId(1200).AvatarSizes.XSMALL, names: tmp6, totalCount: tmp10, children: cResult[8] };
+          obj3.children = closure_11(guildId(13018).AvatarPile, obj4);
           const tmp18 = closure_11(View, obj3);
           cResult[11] = tmp6;
           cResult[12] = cResult[8];
@@ -116,7 +116,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
   }
   const obj = guildId(576);
-}) : ((arg0) => {
+}) : (function VoiceUsers(arg0) {
   ({ voiceUsers, guildId: require } = arg0);
   let substr = voiceUsers;
   if (voiceUsers.length > 3) {
@@ -131,7 +131,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   return tmp;
 });
-createStyles = fn(4896);
+createStyles = fn(5090);
 let obj4 = { tag: null, tagText: null };
 const rect1 = { paddingHorizontal: 4, paddingVertical: 1, borderBottomRightRadius: nativeDefault.radii.xs, overflow: "hidden", justifyContent: "center", alignItems: "center", backgroundColor: nativeDefault.unsafe_rawColors.RED_400, position: "absolute", top: 0, left: 0 };
 obj4.tag = rect1;
@@ -139,7 +139,7 @@ let obj3 = { borderRadius: nativeDefault.radii.sm };
 obj4.tagText = { textAlign: "center", color: nativeDefault.unsafe_rawColors.WHITE, includeFontPadding: false };
 let closure_15 = createStyles.createStyles(obj4);
 ReactCompilerGating = fn(558);
-let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function LiveTag() {
   const cResult = c.c(6);
   const tmp4 = closure_15();
   ({ tag, tagText } = tmp4);
@@ -172,7 +172,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[4] = tmp7;
   cResult[5] = tmp11;
   tmp10 = tmp11;
-}) : (() => {
+}) : (function LiveTag() {
   const tmp = closure_15();
   const obj = { style: tmp.tag, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: null };
   const obj2 = { variant: "text-xxs/bold", style: tmp.tagText, lineClamp: 1, children: null };
@@ -184,7 +184,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
 fn(558);
 let obj5 = { textAlign: "center", color: nativeDefault.unsafe_rawColors.WHITE, includeFontPadding: false };
 ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildVoiceState(arg0) {
   const cResult = c.c(17);
   ({ voiceUsers, streamingChannelId, streamingUser, guildId } = arg0);
   let streamPreviewShadow = closure_13();
@@ -279,7 +279,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   } else {
     return null;
   }
-}) : ((arg0) => {
+}) : (function GuildVoiceState(arg0) {
   ({ voiceUsers, streamingChannelId, streamingUser, guildId } = arg0);
   const tmp = closure_13();
   let id;
@@ -329,9 +329,8 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawerGuildVoiceState.tsx");
 
 export const GuildVoiceState = tmp4;
-export const useVoiceUsers = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
+export const useVoiceUsers = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoiceUsers(id) {
   _require = id;
-  let flatMapResult = isHomeDrawerChannelInChannelList;
   const cResult = require("c").c(32);
   id = id.id;
   const obj = require("c");
@@ -348,7 +347,7 @@ export const useVoiceUsers = ReactCompilerGating.isReactCompilerEnabled() ? ((id
       let tmp8 = cResult[3];
       let tmp9 = cResult[4];
     }
-    const stateFromStoresArray = tmp(flatMapResult[20]).useStateFromStoresArray(first, tmp8, tmp9);
+    const stateFromStoresArray = tmp(tmp2[20]).useStateFromStoresArray(first, tmp8, tmp9);
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
       const items1 = [SortedVoiceStateStore];
@@ -371,24 +370,26 @@ export const useVoiceUsers = ReactCompilerGating.isReactCompilerEnabled() ? ((id
       tmp13 = cResult[7];
       tmp14 = cResult[8];
     }
-    const tmpResult = tmp(flatMapResult[20]);
-    const stateFromStores = tmp(flatMapResult[20]).useStateFromStores(tmp11, tmp13, tmp14);
+    const tmpResult = tmp(tmp2[20]);
+    const stateFromStores = tmp(tmp2[20]).useStateFromStores(tmp11, tmp13, tmp14);
     const _Symbol2 = Symbol;
     if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
       const items3 = [user];
-      const fn3 = function x() {
-        return user.getBlockedOrIgnoredIDs();
-      };
+      class P {
+        constructor() {
+          return user.getBlockedOrIgnoredIDs();
+        }
+      }
       cResult[9] = items3;
-      cResult[10] = fn3;
-      let tmp17 = fn3;
+      cResult[10] = P;
+      let tmp17 = P;
       let tmp16 = items3;
     } else {
       tmp16 = cResult[9];
       tmp17 = cResult[10];
     }
-    const tmpResult3 = tmp(flatMapResult[20]);
-    afkChannelId = tmp(flatMapResult[20]).useStateFromStores(tmp16, tmp17);
+    const tmpResult3 = tmp(tmp2[20]);
+    afkChannelId = tmp(tmp2[20]).useStateFromStores(tmp16, tmp17);
     if (cResult[11] === afkChannelId) {
       if (cResult[12] === id.afkChannelId) {
         if (cResult[13] === stateFromStores) {
@@ -396,38 +397,53 @@ export const useVoiceUsers = ReactCompilerGating.isReactCompilerEnabled() ? ((id
             if (cResult[20] === id.afkChannelId) {
               if (cResult[21] === stateFromStores) {
                 if (cResult[22] === stateFromStoresArray) {
-                  streamingChannelId = cResult[23];
+                  closure_6 = cResult[23];
                   user = cResult[24];
                 }
-                if (cResult[25] === streamingChannelId) {
+                if (cResult[25] === closure_6) {
                   if (cResult[26] === user) {
-                    let tmp29 = cResult[27];
+                    let tmp30 = cResult[27];
                   }
-                  ({ streamingUser, streamingChannelId } = tmp29);
-                  if (cResult[28] === streamingChannelId) {
-                    if (cResult[29] === streamingUser) {
-                      if (cResult[30] === tmp19) {
-                        let tmp33 = cResult[31];
-                      }
-                      return tmp33;
+                  const streamingUser = tmp30.streamingUser;
+                  class P {
+                    constructor() {
+                      return user.getBlockedOrIgnoredIDs();
                     }
                   }
-                  const obj3 = { voiceUsers: tmp19, streamingUser, streamingChannelId };
-                  cResult[28] = streamingChannelId;
+                  if (cResult[28] === tmp35) {
+                    if (cResult[29] === streamingUser) {
+                      if (cResult[30] === tmp19) {
+                        let tmp36 = cResult[31];
+                      }
+                      return tmp36;
+                    }
+                  }
+                  const obj3 = { voiceUsers: tmp19, streamingUser, streamingChannelId: tmp35 };
+                  cResult[28] = tmp35;
                   cResult[29] = streamingUser;
                   cResult[30] = tmp19;
                   cResult[31] = obj3;
-                  tmp33 = obj3;
+                  tmp36 = obj3;
                 }
-                const obj4 = { streamingUser: user, streamingChannelId };
-                cResult[25] = streamingChannelId;
+                class P {
+                  constructor() {
+                    return user.getBlockedOrIgnoredIDs();
+                  }
+                }
+                tmp31[0] = user;
+                tmp31[1] = closure_6;
+                cResult[25] = closure_6;
                 cResult[26] = user;
-                cResult[27] = obj4;
-                tmp29 = obj4;
+                cResult[27] = tmp31;
+                tmp30 = tmp31;
               }
             }
-            user = null;
-            streamingChannelId = null;
+            class P {
+              constructor() {
+                return user.getBlockedOrIgnoredIDs();
+              }
+            }
+            closure_6 = null;
             const _Object = Object;
             const keys = Object.keys(stateFromStores);
             const item = keys.forEach((item) => {
@@ -452,7 +468,7 @@ export const useVoiceUsers = ReactCompilerGating.isReactCompilerEnabled() ? ((id
             cResult[20] = id.afkChannelId;
             cResult[21] = stateFromStores;
             cResult[22] = stateFromStoresArray;
-            cResult[23] = streamingChannelId;
+            cResult[23] = closure_6;
             cResult[24] = user;
           }
         }
@@ -460,20 +476,21 @@ export const useVoiceUsers = ReactCompilerGating.isReactCompilerEnabled() ? ((id
     }
     if (cResult[16] === afkChannelId) {
       if (cResult[17] === id.afkChannelId) {
-        if (cResult[18] === stateFromStores) {
-          let tmp20 = cResult[19];
+        id(tmp2[22]);
+        class P {
+          constructor() {
+            return user.getBlockedOrIgnoredIDs();
+          }
         }
-        flatMapResult = id(flatMapResult[22]).flatMap(stateFromStoresArray, tmp20);
         cResult[11] = afkChannelId;
         afkChannelId = id.afkChannelId;
         cResult[12] = afkChannelId;
         cResult[13] = stateFromStores;
         cResult[14] = stateFromStoresArray;
-        cResult[15] = flatMapResult;
-        const obj6 = id(flatMapResult[22]);
+        cResult[15] = tmp2;
       }
     }
-    const fn4 = function k(arg0) {
+    const fn3 = function k(arg0) {
       if (arg0 === id.afkChannelId) {
         return [];
       } else {
@@ -488,9 +505,8 @@ export const useVoiceUsers = ReactCompilerGating.isReactCompilerEnabled() ? ((id
     cResult[16] = afkChannelId;
     cResult[17] = id.afkChannelId;
     cResult[18] = stateFromStores;
-    cResult[19] = fn4;
-    tmp20 = fn4;
-    const tmpResult4 = tmp(flatMapResult[20]);
+    cResult[19] = fn3;
+    const tmpResult4 = tmp(tmp2[20]);
   }
   const fn = function v() {
     const found = GuildChannelStore.getChannels(id)[GUILD_VOCAL_CHANNELS_KEY].filter((channel) => {
@@ -514,7 +530,7 @@ export const useVoiceUsers = ReactCompilerGating.isReactCompilerEnabled() ? ((id
   tmp9 = items4;
   tmp8 = fn;
   const obj2 = require("isHomeDrawerChannelInChannelList");
-}) : ((id) => {
+}) : (function useVoiceUsers(id) {
   _require = id;
   id = id.id;
   isHomeDrawerChannelInChannelList = require("isHomeDrawerChannelInChannelList").useIsHomeDrawerChannelInChannelList();

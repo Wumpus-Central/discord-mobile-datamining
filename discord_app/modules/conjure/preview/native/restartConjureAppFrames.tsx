@@ -1,9 +1,9 @@
-// === Module 9010: restartConjureAppFrames ===
+// === Module 12376: restartConjureAppFrames ===
 
-// Module 9010 (restartConjureAppFrames)
-import FramesNativeManagerDefault from "FramesNativeManager" /* 9011 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 9019 */;
-import FramesStore from "FramesStore" /* 9000 */;
+// Module 12376 (restartConjureAppFrames)
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10618 */;
+import FramesNativeManagerDefault from "FramesNativeManager" /* 11150 */;
+import FramesStore from "FramesStore" /* 10612 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/preview/native/restartConjureAppFrames.tsx");

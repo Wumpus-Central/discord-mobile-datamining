@@ -1,29 +1,29 @@
-// === Module 12992: NameplateProductPreview ===
+// === Module 13270: NameplateProductPreview ===
 
-// Module 12992 (NameplateProductPreview)
+// Module 13270 (NameplateProductPreview)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import utils from "utils" /* 1977 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import LinearGradientDefault from "LinearGradient" /* 5612 */;
-import TableRow from "TableRow" /* 6000 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 7848 */;
-import useShopProductItems from "useShopProductItems" /* 7853 */;
-import useCurrentUser from "useCurrentUser" /* 7860 */;
-import useAvatarDecorationIfNotExpiredDefault from "useAvatarDecorationIfNotExpired" /* 7941 */;
-import types from "types" /* 10647 */;
-import UserNameplateRow from "UserNameplateRow" /* 10659 */;
+import native from "native" /* 1200 */;
+import utils from "utils" /* 1989 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import LinearGradientDefault from "LinearGradient" /* 5387 */;
+import TableRow from "TableRow" /* 6184 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8266 */;
+import useShopProductItems from "useShopProductItems" /* 8271 */;
+import useCurrentUser from "useCurrentUser" /* 8278 */;
+import useAvatarDecorationIfNotExpiredDefault from "useAvatarDecorationIfNotExpired" /* 8359 */;
+import types from "types" /* 10247 */;
+import UserNameplateRow from "UserNameplateRow" /* 10259 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { position: "relative", flex: 1, justifyContent: "center", overflow: "hidden" }, memberListContainer: { paddingHorizontal: nativeDefault.space.PX_16 }, memberListTitle: null, memberListGradient: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.memberListTitle = { paddingVertical: nativeDefault.space.PX_8 };
@@ -33,7 +33,7 @@ let closure_8 = createStyles.createStyles(obj2);
 fn(558);
 let obj4 = { paddingVertical: nativeDefault.space.PX_8 };
 let ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function NameplateUser(arg0) {
   const cResult = c.c(20);
   ({ previewNameplate, previewAvatarDecoration } = arg0);
   const currentUser = useCurrentUser.useCurrentUser();
@@ -63,11 +63,11 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     const stateFromStores = initialize.useStateFromStores(tmp11, tmp12);
     if (cResult[5] !== currentUser) {
-      const name = tmp8(4728).getName(currentUser);
+      const name = tmp8(4922).getName(currentUser);
       cResult[5] = currentUser;
       cResult[6] = name;
       let id = name;
-      const tmp8Result = tmp8(4728);
+      const tmp8Result = tmp8(4922);
     } else {
       id = cResult[6];
     }
@@ -79,7 +79,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     } else {
       tmp16 = cResult[8];
     }
-    if (null == tmp8(5312)(tmp16)) {
+    if (null == tmp8(5624)(tmp16)) {
       if (cResult[12] === tmp9) {
         if (cResult[13] === tmp22) {
           if (cResult[14] === currentUser) {
@@ -112,7 +112,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     } else {
       if (cResult[9] === id) {
       }
-      tmp8 = tmp8(10646);
+      tmp8 = tmp8(10246);
       const obj6 = { userId: currentUser.id, userName: id, effectDisplayType: types.EffectDisplayType.STATIC, lineClamp: 1, variant: "text-md/semibold" };
       const tmp20 = timestampProducer(tmp8, obj6);
       cResult[9] = id;
@@ -128,7 +128,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = profilePreviewValue;
   tmp6 = profilePreviewValue;
   const tmpResult2 = ProfileCustomizationUtils;
-}) : ((arg0) => {
+}) : (function NameplateUser(arg0) {
   let currentUser;
   importDefault = undefined;
   let stateFromStores;
@@ -163,7 +163,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return closure_6(currentUser(stateFromStores[22]).UserNameplateRow, { nameplate, icon, label, isPreviewRow: true });
 });
 ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlaceholderUser(arg0) {
   const cResult = c.c(7);
   ({ user, start, end } = arg0);
   if (cResult[0] !== user.avatarSrc) {
@@ -196,7 +196,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[6] = tmp10;
   tmp9 = tmp10;
   const obj4 = { icon: tmp6, label: user.name, start: undefined !== start && start, end: undefined !== end && end };
-}) : ((end) => {
+}) : (function PlaceholderUser(end) {
   ({ user, start } = end);
   if (start === undefined) {
     start = false;
@@ -211,7 +211,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/nameplates/native/NameplateProductPreview.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((avatarDecorationOverride) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function NameplateProductPreview(avatarDecorationOverride) {
   const cResult = c.c(60);
   avatarDecorationOverride = avatarDecorationOverride.avatarDecorationOverride;
   const tmp4 = closure_8();
@@ -490,7 +490,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((avatarDecoration
   tmp7 = tmp14;
   tmp6 = nameplateData;
   const tmpResult = utils;
-}) : ((arg0) => {
+}) : (function NameplateProductPreview(arg0) {
   ({ product, avatarDecorationOverride } = arg0);
   const tmp = closure_8();
   const obj = useShopProductItems;

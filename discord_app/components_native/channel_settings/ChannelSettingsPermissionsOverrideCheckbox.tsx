@@ -1,11 +1,11 @@
-// === Module 17040: ChannelSettingsPermissionsOverrideCheckbox ===
+// === Module 17321: ChannelSettingsPermissionsOverrideCheckbox ===
 
-// Module 17040 (ChannelSettingsPermissionsOverrideCheckbox)
+// Module 17321 (ChannelSettingsPermissionsOverrideCheckbox)
 import nativeDefault from "native" /* 587 */;
-import PermissionUtils from "PermissionUtils" /* 4520 */;
-import DenyIcon from "DenyIcon" /* 7599 */;
-import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 8484 */;
-import SlashIcon from "SlashIcon" /* 17041 */;
+import PermissionUtils from "PermissionUtils" /* 4712 */;
+import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 8820 */;
+import DenyIcon from "DenyIcon" /* 9306 */;
+import SlashIcon from "SlashIcon" /* 17322 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -34,7 +34,7 @@ get_ActivityIndicator = fn(17);
 const jsx = fn(21).jsx;
 const PX_4 = nativeDefault.space.PX_4;
 const md = nativeDefault.radii.md;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { ternaryCheckBox: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: md, height: nativeDefault.space.PX_32, paddingVertical: PX_4, paddingHorizontal: PX_4 / 2, flexDirection: "row" }, iconWrapper: { borderRadius: md - PX_4, marginHorizontal: PX_4 / 2, justifyContent: "center", height: "100%" }, icon: null, denyActive: null, denySelected: null, allowActive: null, allowSelected: null, passthroughSelected: null, passthroughActive: null, disabled: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: md, height: nativeDefault.space.PX_32, paddingVertical: PX_4, paddingHorizontal: PX_4 / 2, flexDirection: "row" };
 obj.icon = { marginHorizontal: nativeDefault.space.PX_8 };
@@ -52,9 +52,9 @@ const obj9 = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_SELE
 obj.passthroughActive = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_HOVER };
 obj.disabled = { opacity: 0.3 };
 let closure_6 = createStyles.createStyles(obj);
-let items = [fn(4520).DENY, fn(4520).PASSTHROUGH, fn(4520).ALLOW];
+let items = [fn(4712).DENY, fn(4712).PASSTHROUGH, fn(4712).ALLOW];
 let ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((selected) => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function OverrideOption(selected) {
   let v6639O5 = styles;
   const cResult = type(styles[11]).c(22);
   ({ permissionTitle, type } = selected);
@@ -117,7 +117,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((selected) => {
                   }
                 }
               }
-              class I {
+              class O {
                 constructor(arg0) {
                   items = selected;
                   if (!selected) {
@@ -164,7 +164,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((selected) => {
               tmp16 = tmp20;
             }
           }
-          class I {
+          class O {
             constructor(arg0) {
               items = selected;
               if (!selected) {
@@ -201,7 +201,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((selected) => {
           tmp13 = tmp15;
         }
       }
-      class I {
+      class O {
         constructor(arg0) {
           items = selected;
           if (!selected) {
@@ -234,8 +234,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((selected) => {
       cResult[7] = selected;
       cResult[8] = styles;
       cResult[9] = type;
-      cResult[10] = I;
-      tmp12 = I;
+      cResult[10] = O;
+      tmp12 = O;
     }
     items = [permissionTitle, ];
     const _Boolean = Boolean;
@@ -246,7 +246,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((selected) => {
     obj4 = found;
   }
   const tmpResult = type(v6639O5[12]);
-}) : ((type) => {
+}) : (function OverrideOption(type) {
   type = type.type;
   const selected = type.selected;
   const styles = type.styles;
@@ -296,7 +296,7 @@ const obj10 = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_HOV
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsPermissionsOverrideCheckbox.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((permissionTitle) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelSettingsPermissionsOverrideCheckbox(permissionTitle) {
   const cResult = permissionTitle(onValueChange[11]).c(13);
   permissionTitle = permissionTitle.permissionTitle;
   value = permissionTitle.value;
@@ -368,7 +368,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((permis
   cResult[2] = items;
   tmp4 = items;
   const obj = permissionTitle(onValueChange[11]);
-}) : ((permissionTitle) => {
+}) : (function ChannelSettingsPermissionsOverrideCheckbox(permissionTitle) {
   permissionTitle = permissionTitle.permissionTitle;
   ({ value: importDefault, disabled } = permissionTitle);
   if (disabled === undefined) {

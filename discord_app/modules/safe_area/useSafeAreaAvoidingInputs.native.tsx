@@ -1,9 +1,9 @@
-// === Module 10849: useSafeAreaAvoidingInputs ===
+// === Module 10500: useSafeAreaAvoidingInputs ===
 
-// Module 10849 (useSafeAreaAvoidingInputs)
+// Module 10500 (useSafeAreaAvoidingInputs)
 import nativeDefault from "native" /* 587 */;
-import useWindowDimensions from "useWindowDimensions" /* 1484 */;
-import useKeyboardDuration from "useKeyboardDuration" /* 6479 */;
+import useWindowDimensions from "useWindowDimensions" /* 1496 */;
+import useKeyboardDuration from "useKeyboardDuration" /* 6657 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -142,7 +142,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safe_area/useSafeAreaAvoidingInputs.native.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((insets) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSafeAreaAvoidingInputs(insets) {
   const cResult = require("c").c(11);
   insets = insets.insets;
   _require = insets;
@@ -170,16 +170,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((insets) => {
     }
     noop = tmp5;
     if (cResult[6] !== tmp5) {
-      const fn3 = function y() {
+      const fn2 = function y() {
         const timeout = setTimeout(closure_4, useKeyboardDuration.getKeyboardDuration());
         return () => clearTimeout(closure_0);
       };
       const items1 = [tmp5];
       cResult[6] = tmp5;
-      cResult[7] = fn3;
+      cResult[7] = fn2;
       cResult[8] = items1;
       let tmp7 = items1;
-      let tmp6 = fn3;
+      let tmp6 = fn2;
     } else {
       tmp6 = cResult[7];
       tmp7 = cResult[8];
@@ -330,7 +330,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((insets) => {
       }
     }
   });
-  const fn2 = function() {
+  function t3() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -339,12 +339,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((insets) => {
       applyArgumentsResult = apply(self, arguments);
     }
     return applyArgumentsResult;
-  };
+  }
   cResult[3] = insets;
   cResult[4] = scrollViewRef;
-  cResult[5] = fn2;
-  tmp5 = fn2;
-}) : ((insets) => {
+  cResult[5] = t3;
+  tmp5 = t3;
+}) : (function useSafeAreaAvoidingInputs(insets) {
   insets = insets.insets;
   const inputs = insets.inputs;
   const scrollViewRef = insets.scrollViewRef;
@@ -404,7 +404,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((insets) => {
               if (null != current2) {
                 dependencyMap = 1;
                 c3 = 1;
-                const obj4 = { value: tmp3(10850).measureViewRefInWindow(found.ref), done: false };
+                const obj4 = { value: tmp3(10501).measureViewRefInWindow(found.ref), done: false };
                 return obj4;
               }
             }
@@ -421,7 +421,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((insets) => {
             closure_128_2 = value;
             dependencyMap = 2;
             c3 = 1;
-            const obj6 = { value: tmp3(10850).measureViewRefInView(closure_128_1.ref, closure_128_0), done: false };
+            const obj6 = { value: tmp3(10501).measureViewRefInView(closure_128_1.ref, closure_128_0), done: false };
             return obj6;
           }
         } else {
@@ -439,7 +439,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((insets) => {
                 if (null != closure_128_3) {
                   dependencyMap = 3;
                   c3 = 1;
-                  const obj9 = { value: tmp3(10850).measureViewInWindow(closure_128_0), done: false };
+                  const obj9 = { value: tmp3(10501).measureViewInWindow(closure_128_0), done: false };
                   return obj9;
                 }
               }

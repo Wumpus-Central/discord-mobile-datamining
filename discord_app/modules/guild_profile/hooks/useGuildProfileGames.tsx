@@ -1,16 +1,16 @@
-// === Module 9423: useGuildProfileGames ===
+// === Module 9087: useGuildProfileGames ===
 
-// Module 9423 (useGuildProfileGames)
+// Module 9087 (useGuildProfileGames)
 import c from "c" /* 576 */;
-import GlobalUtils from "GlobalUtils" /* 1375 */;
+import GlobalUtils from "GlobalUtils" /* 1387 */;
 import noop from "module_19" /* 19 */;
-import GameRecord from "GameRecord" /* 2008 */;
-import GameStore from "GameStore" /* 2007 */;
+import GameRecord from "GameRecord" /* 2020 */;
+import GameStore from "GameStore" /* 2019 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
 let ReactCompilerGating = fn(558);
-let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFallbackGameRecords(arg0) {
   const cResult = c.c(2);
   if (cResult[0] !== arg0) {
     const _Map = Map;
@@ -33,7 +33,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp2 = cResult[1];
   }
   return tmp2;
-}) : ((arg0) => {
+}) : (function useFallbackGameRecords(arg0) {
   closure_0 = arg0;
   const items = [arg0];
   return noop.useMemo(() => {
@@ -53,7 +53,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }, items);
 });
 ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((games) => {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAllGuildProfileGames(games) {
   _require = games;
   const cResult = require("c").c(9);
   games = games.games;
@@ -73,7 +73,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((games) => {
   const tmp7 = null != games && !require("initialize").useStateFromStores(tmp4, tmp5);
   if (cResult[2] === games.gameApplicationIds) {
     if (cResult[3] === tmp7) {
-      const games1 = tmp(6822).useGames(cResult[4]);
+      const games1 = tmp(6995).useGames(cResult[4]);
       const tmp11 = closure_6(games);
       dependencyMap = tmp11;
       const _Symbol = Symbol;
@@ -90,22 +90,24 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((games) => {
         }
         return tmp(504).useStateFromStoresArray(tmp12, tmp14);
       }
-      const fn2 = function y() {
-        const gameApplicationIds = games.gameApplicationIds;
-        const mapped = gameApplicationIds.map((item) => {
-          game = game.getGame(item);
-          if (game == null) {
-            game = closure_1_1.get(item);
-          }
-          return game;
-        });
-        return mapped.filter(GlobalUtils.isNotNullish);
-      };
+      class A {
+        constructor() {
+          gameApplicationIds = closure_0.gameApplicationIds;
+          mapped = gameApplicationIds.map((item) => {
+            game = game.getGame(item);
+            if (game == null) {
+              game = closure_1_1.get(item);
+            }
+            return game;
+          });
+          return mapped.filter(closure_0(closure_1[8]).isNotNullish);
+        }
+      }
       cResult[6] = tmp11;
       cResult[7] = games.gameApplicationIds;
-      cResult[8] = fn2;
-      tmp14 = fn2;
-      const tmpResult3 = tmp(6822);
+      cResult[8] = A;
+      tmp14 = A;
+      const tmpResult3 = tmp(6995);
     }
   }
   cResult[2] = games.gameApplicationIds;
@@ -113,7 +115,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((games) => {
   cResult[4] = tmp7 ? [] : games.gameApplicationIds;
   const tmp8 = tmp7 ? [] : games.gameApplicationIds;
   const tmpResult = require("initialize");
-}) : ((games) => {
+}) : (function useAllGuildProfileGames(games) {
   _require = games;
   games = games.games;
   const items = [AuthenticationStore];
@@ -147,7 +149,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_profile/hooks/useGuildProfileGames.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((gameActivity) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildProfileGames(gameActivity) {
   const cResult = c.c(11);
   gameActivity = gameActivity.gameActivity;
   const tmp2 = closure_7(gameActivity);
@@ -216,7 +218,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((gameActivity) =>
   cResult[1] = tmp2;
   cResult[2] = sorted;
   arr = sorted;
-}) : ((gameActivity) => {
+}) : (function useGuildProfileGames(gameActivity) {
   gameActivity = gameActivity.gameActivity;
   let tmp = closure_7(gameActivity);
   const args = tmp;

@@ -1,7 +1,7 @@
-// === Module 10683: LobbyUtils ===
+// === Module 10271: LobbyUtils ===
 
-// Module 10683 (LobbyUtils)
-import PermissionStore from "PermissionStore" /* 4515 */;
+// Module 10271 (LobbyUtils)
+import PermissionStore from "PermissionStore" /* 4707 */;
 
 const require = globalThis.__r;
 
@@ -33,7 +33,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/lobbies/LobbyUtils.tsx");
 
 export { canUnlinkLobbyChannel };
-export const useCanUnlinkLobbyChannel = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useCanUnlinkLobbyChannel = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanUnlinkLobbyChannel(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -44,7 +44,7 @@ export const useCanUnlinkLobbyChannel = ReactCompilerGating.isReactCompilerEnabl
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function t() {
+    const fn = function b() {
       if (PermissionStore !== undefined) {
         let tmp3 = null != linkedLobby;
         if (tmp3) {
@@ -71,7 +71,7 @@ export const useCanUnlinkLobbyChannel = ReactCompilerGating.isReactCompilerEnabl
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp6);
-}) : ((arg0) => {
+}) : (function useCanUnlinkLobbyChannel(arg0) {
   _require = arg0;
   const items = [PermissionStore];
   return require("initialize").useStateFromStores(items, () => {

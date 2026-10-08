@@ -1,17 +1,17 @@
-// === Module 16017: MessagesEmptyState ===
+// === Module 16277: MessagesEmptyState ===
 
-// Module 16017 (MessagesEmptyState)
+// Module 16277 (MessagesEmptyState)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
-import useNavigation from "useNavigation" /* 1490 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import useIsScreenLandscape from "useIsScreenLandscape" /* 5919 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 8455 */;
-import useYouBarTotalHeight from "useYouBarTotalHeight" /* 14917 */;
-import _modDef16018 from "module_16018" /* 16018 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1272 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
+import useNavigation from "useNavigation" /* 1502 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import useIsScreenLandscape from "useIsScreenLandscape" /* 8302 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 8941 */;
+import useYouBarTotalHeight from "useYouBarTotalHeight" /* 15179 */;
+import _modDef16278 from "module_16278" /* 16278 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -24,13 +24,13 @@ const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let c10 = 622;
 let c11 = 350;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_12 = createStyles.createStyles({ container: { flex: 1, justifyContent: "center" }, scrollViewContentContainer: { flexGrow: 2 }, innerContainer: { alignItems: "center", justifyContent: "center" }, imageContainer: { alignItems: "center", marginBottom: 24 }, textWrapper: { paddingHorizontal: 48 }, body: { marginBottom: 24, textAlign: "center" }, title: { textAlign: "center", fontSize: 18, marginBottom: 8 }, buttonWrapper: { paddingHorizontal: 16, paddingBottom: 16 } });
 const ReactCompilerGating = fn(558);
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesEmptyState.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesEmptyState() {
   const cResult = c.c(43);
   const tmp4 = closure_12();
   [tmp7, require] = noop.useState(0);
@@ -241,7 +241,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         cResult[14] = tmp24;
         cResult[15] = tmp31;
       }
-      const obj6 = { resizeMode: "contain", source: _modDef16018, style: null };
+      const obj6 = { resizeMode: "contain", source: _modDef16278, style: null };
       const size = { height: result1, width: bound };
       obj6.style = size;
       const tmp27 = closure_1_8(timestampProducer, obj6);
@@ -269,7 +269,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[5] = youBarTotalHeight;
   cResult[6] = tmp18;
   const tmpResult4 = useYouBarTotalHeight;
-}) : (() => {
+}) : (function MessagesEmptyState() {
   const tmp = closure_12();
   let width = useWindowDimensionsDefault().width;
   [tmp5, require] = noop.useState(0);
@@ -303,7 +303,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const obj5 = { style: tmp.container, onLayout: callback, children: null };
   const obj6 = { style: tmp.innerContainer, children: null };
   const obj7 = { style: tmp.imageContainer, children: null };
-  const obj8 = { resizeMode: "contain", source: _modDef16018, style: null };
+  const obj8 = { resizeMode: "contain", source: _modDef16278, style: null };
   if (result < c10) {
     let result1 = c11 * (result / c10);
   } else {

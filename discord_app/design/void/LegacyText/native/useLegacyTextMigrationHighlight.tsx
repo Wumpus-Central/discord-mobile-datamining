@@ -1,12 +1,12 @@
-// === Module 8942: useLegacyTextMigrationHighlight ===
+// === Module 8573: useLegacyTextMigrationHighlight ===
 
-// Module 8942 (useLegacyTextMigrationHighlight)
+// Module 8573 (useLegacyTextMigrationHighlight)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import DevSettingsStore from "DevSettingsStore" /* 4895 */;
+import DevSettingsStore from "DevSettingsStore" /* 5089 */;
 
 require = fn;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 const obj2 = { highlight: { borderWidth: 1, borderColor: nativeDefault.colors.STATUS_DANGER } };
 let closure_3 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -14,7 +14,7 @@ const obj3 = { borderWidth: 1, borderColor: nativeDefault.colors.STATUS_DANGER }
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/LegacyText/native/useLegacyTextMigrationHighlight.tsx");
 
-export const useLegacyTextMigrationHighlight = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useLegacyTextMigrationHighlight = ReactCompilerGating.isReactCompilerEnabled() ? (function useLegacyTextMigrationHighlight() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [DevSettingsStore];
@@ -34,7 +34,7 @@ export const useLegacyTextMigrationHighlight = ReactCompilerGating.isReactCompil
     highlight = tmp4.highlight;
   }
   return highlight;
-}) : (() => {
+}) : (function useLegacyTextMigrationHighlight() {
   const tmp = closure_3();
   const items = [DevSettingsStore];
   let highlight = null;

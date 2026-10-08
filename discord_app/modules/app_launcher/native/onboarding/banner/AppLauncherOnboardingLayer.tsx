@@ -1,16 +1,16 @@
-// === Module 11675: AppLauncherOnboardingLayer ===
+// === Module 11740: AppLauncherOnboardingLayer ===
 
-// Module 11675 (AppLauncherOnboardingLayer)
+// Module 11740 (AppLauncherOnboardingLayer)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import AppLauncherOnboardingBannerDefault from "AppLauncherOnboardingBanner" /* 11676 */;
+import AppLauncherOnboardingBannerDefault from "AppLauncherOnboardingBanner" /* 11741 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(9100).useBestActiveChatInputContainerHeight;
+let closure_4 = fn(9318).useBestActiveChatInputContainerHeight;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { container: null };
 const rect = { opacity: 1, width: "100%", position: "absolute", left: 0, top: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM };
 obj.container = rect;
@@ -19,7 +19,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/onboarding/banner/AppLauncherOnboardingLayer.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function AppLauncherOnboardingLayer(arg0) {
   const cResult = c.c(6);
   ({ context, visibleContent, bottomOffset } = arg0);
   const tmp3 = closure_6();
@@ -54,7 +54,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   cResult[4] = visibleContent;
   cResult[5] = tmp6;
   tmp5 = tmp6;
-}) : ((visibleContent) => {
+}) : (function AppLauncherOnboardingLayer(visibleContent) {
   visibleContent = visibleContent.visibleContent;
   ({ context, bottomOffset } = visibleContent);
   let tmp3 = null;

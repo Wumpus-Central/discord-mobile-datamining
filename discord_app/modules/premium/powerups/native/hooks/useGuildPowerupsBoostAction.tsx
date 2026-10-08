@@ -1,16 +1,16 @@
-// === Module 16136: useGuildPowerupsBoostAction ===
+// === Module 16396: useGuildPowerupsBoostAction ===
 
-// Module 16136 (useGuildPowerupsBoostAction)
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6664 */;
-import useGuildBoostPurchaseHandlerDefault from "useGuildBoostPurchaseHandler" /* 12212 */;
+// Module 16396 (useGuildPowerupsBoostAction)
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6841 */;
+import useGuildBoostPurchaseHandlerDefault from "useGuildBoostPurchaseHandler" /* 12291 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 6918 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7107 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const GuildPowerupsConstants = fn(4774);
+const GuildPowerupsConstants = fn(4968);
 ({ BoostPurchaseIntent: metroRequire, GuildPowerupType: closure_7 } = GuildPowerupsConstants);
 const Constants = fn(1085);
 ({ AnalyticsObjects: closure_8, AnalyticsObjectTypes: closure_9 } = Constants);
@@ -18,7 +18,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupsBoostAction.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2, arg3, arg4) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4) {
   _require = arg0;
   importDefault = arg1;
   dependencyMap = arg2;
@@ -76,9 +76,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
               let tmp15 = c2;
               if (c2 > 0) {
                 if (!handleMobileWebRedirectCheckout.hasFetched) {
-                  const items = [tmp2(6938).init(), ];
-                  let obj2 = tmp2(6938);
-                  items[1] = guildId(7679).fetchGuildBoostSlots();
+                  const items = [tmp2(7127).init(), ];
+                  let obj2 = tmp2(7127);
+                  items[1] = guildId(8000).fetchGuildBoostSlots();
                   c2 = 1;
                   c3 = 1;
                   const obj8 = { value: Promise.all(items), done: false };
@@ -103,9 +103,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
           PERK = analyticsLocations.PERK;
         }
         closure_128_0 = PERK;
-        availableGuildBoostSlots = guildId(7677).getAvailableGuildBoostSlots(handleMobileWebRedirectCheckout.boostSlots);
+        availableGuildBoostSlots = guildId(7998).getAvailableGuildBoostSlots(handleMobileWebRedirectCheckout.boostSlots);
         if (availableGuildBoostSlots.length >= c2) {
-          tmp15 = guildId(5619);
+          tmp15 = guildId(5964);
           const obj9 = { guildBoostSlots: availableGuildBoostSlots.slice(0, c2), guildId, intent: closure_128_0 };
           tmp15.openTransferModal(obj9);
         } else if (!shouldUseMobileWebRedirectCheckout) {
@@ -126,17 +126,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
             }
             const obj = guildId(dependencyMap[11]);
           };
-          const result = guildId(6919).launchGuildBoostFlowOrAlert(obj10);
-          const obj6 = guildId(6919);
+          const result = guildId(7108).launchGuildBoostFlowOrAlert(obj10);
+          const obj6 = guildId(7108);
         }
-        const obj5 = guildId(7677);
+        const obj5 = guildId(7998);
       } catch (tmp50) {
         c3 = tmp;
         throw tmp50;
       }
     }
   });
-  const fn = function() {
+  function t0() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -145,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
       applyArgumentsResult = apply(self, arguments);
     }
     return applyArgumentsResult;
-  };
+  }
   cResult[0] = arg4;
   cResult[1] = analyticsLocations;
   cResult[2] = arg2;
@@ -153,9 +153,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
   cResult[4] = handleMobileWebRedirectCheckout;
   cResult[5] = arg1;
   cResult[6] = shouldUseMobileWebRedirectCheckout;
-  cResult[7] = fn;
-  tmp3 = fn;
-}) : ((arg0, arg1, arg2, arg3, arg4) => {
+  cResult[7] = t0;
+  tmp3 = t0;
+}) : (function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4) {
   closure_0 = arg0;
   importDefault = arg1;
   dependencyMap = arg2;
@@ -197,9 +197,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
               tmp15 = dependencyMap;
               if (dependencyMap > 0) {
                 if (!handleMobileWebRedirectCheckout.hasFetched) {
-                  const items = [tmp2(6938).init(), ];
-                  let obj2 = tmp2(6938);
-                  items[1] = tmp3(7679).fetchGuildBoostSlots();
+                  const items = [tmp2(7127).init(), ];
+                  let obj2 = tmp2(7127);
+                  items[1] = tmp3(8000).fetchGuildBoostSlots();
                   dependencyMap = 1;
                   c3 = 1;
                   const obj8 = { value: Promise.all(items), done: false };
@@ -224,9 +224,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
           PERK = constants.PERK;
         }
         closure_128_0 = PERK;
-        availableGuildBoostSlots = tmp3(7677).getAvailableGuildBoostSlots(handleMobileWebRedirectCheckout.boostSlots);
+        availableGuildBoostSlots = tmp3(7998).getAvailableGuildBoostSlots(handleMobileWebRedirectCheckout.boostSlots);
         if (availableGuildBoostSlots.length >= closure_129_2) {
-          tmp15 = tmp3(5619);
+          tmp15 = tmp3(5964);
           const obj9 = { guildBoostSlots: availableGuildBoostSlots.slice(0, closure_129_2), guildId: closure_129_0, intent: closure_128_0 };
           tmp15.openTransferModal(obj9);
         } else if (!closure_129_4) {
@@ -247,10 +247,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
             }
             const obj = guildId(dependencyMap[11]);
           };
-          const result = tmp3(6919).launchGuildBoostFlowOrAlert(obj10);
-          const obj6 = tmp3(6919);
+          const result = tmp3(7108).launchGuildBoostFlowOrAlert(obj10);
+          const obj6 = tmp3(7108);
         }
-        const obj5 = tmp3(7677);
+        const obj5 = tmp3(7998);
       } catch (tmp50) {
         c3 = tmp;
         throw tmp50;

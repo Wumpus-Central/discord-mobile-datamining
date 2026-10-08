@@ -1,9 +1,9 @@
-// === Module 12303: UserProfileConfirmRemoveFriend ===
+// === Module 12401: UserProfileConfirmRemoveFriend ===
 
-// Module 12303 (UserProfileConfirmRemoveFriend)
+// Module 12401 (UserProfileConfirmRemoveFriend)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import AlertModal from "AlertModal" /* 5720 */;
+import AlertModal from "AlertModal" /* 5303 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileConfirmRemoveFriend.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileConfirmRemoveFriend(arg0) {
   const cResult = c.c(14);
   ({ userDisplayName, onConfirm } = arg0);
   if (cResult[0] !== userDisplayName) {
@@ -88,7 +88,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[12] = tmp16;
   cResult[13] = tmp20;
   tmp19 = tmp20;
-}) : ((userDisplayName) => {
+}) : (function UserProfileConfirmRemoveFriend(userDisplayName) {
   userDisplayName = userDisplayName.userDisplayName;
   const obj = { title: null, content: null, actions: null };
   const intl = util.intl;

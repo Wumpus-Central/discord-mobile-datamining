@@ -1,24 +1,24 @@
-// === Module 8451: CollectiblesShopCardV2 ===
+// === Module 8937: CollectiblesShopCardV2 ===
 
-// Module 8451 (CollectiblesShopCardV2)
+// Module 8937 (CollectiblesShopCardV2)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4574 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7077 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7078 */;
-import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 7858 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8346 */;
-import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8454 */;
-import CollectiblesBadges from "CollectiblesBadges" /* 8519 */;
-import DiceIcon from "DiceIcon" /* 8521 */;
-import LimitedTimeBadgeDefault from "LimitedTimeBadge" /* 8523 */;
-import OrbsIcon from "OrbsIcon" /* 8524 */;
-import WishlistButton from "WishlistButton" /* 8526 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4766 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7263 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7264 */;
+import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8276 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8940 */;
+import CollectiblesBadges from "CollectiblesBadges" /* 9003 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9005 */;
+import DiceIcon from "DiceIcon" /* 9006 */;
+import LimitedTimeBadgeDefault from "LimitedTimeBadge" /* 9008 */;
+import OrbsIcon from "OrbsIcon" /* 9009 */;
+import WishlistButton from "WishlistButton" /* 9011 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1193 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7066 */;
+import ThemeStore from "ThemeStore" /* 1205 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7252 */;
 
 const require = globalThis.__r;
 
@@ -34,7 +34,7 @@ if (PixelRatio.getFontScale() >= 1.78) {
   num = 302;
 }
 let c11 = 150;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { card: null, topRowOverlay: null, badge: null, badgePill: null, badgeOverrideText: null, badgePillDarkMode: null, badgePillLightMode: null, wishlistButton: null };
 let size = { position: "relative", height: num, width: 150, display: "flex", borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 obj.card = size;
@@ -49,7 +49,7 @@ obj.badgePillLightMode = { backgroundColor: nativeDefault.colors.BADGE_BACKGROUN
 obj.wishlistButton = { marginLeft: "auto", flexShrink: 0 };
 let closure_12 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
-let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((product) => {
+let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function CollectiblesShopCardInternalV2(product) {
   const cResult = require("c").c(82);
   product = product.product;
   require = product;
@@ -162,7 +162,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((product) => {
   cResult[2] = selectedProduct;
   tmp6 = selectedProduct;
   const tmpResult8 = require("CollectiblesProductUtils");
-}) : ((product) => {
+}) : (function CollectiblesShopCardInternalV2(product) {
   product = product.product;
   const require = product;
   ({ onPress: importDefault, unpublishedAt, collectibleProductState, isDisabled } = product);
@@ -365,7 +365,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((product) => {
   tmp2Result13 = require("initialize");
 });
 ReactCompilerGating = fn(558);
-let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((product) => {
+let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function CollectiblesShopCardV2Inner(product) {
   const cResult = require("c").c(22);
   product = product.product;
   require = product;
@@ -515,7 +515,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((product) => {
   cResult[2] = selectedProduct;
   tmp5 = selectedProduct;
   const tmpResult14 = require("CollectiblesProductUtils");
-}) : ((product) => {
+}) : (function CollectiblesShopCardV2Inner(product) {
   product = product.product;
   const require = product;
   let onPress = product.onPress;

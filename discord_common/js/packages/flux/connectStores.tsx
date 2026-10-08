@@ -7,6 +7,7 @@ import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
+let closure_3 = ["ref"];
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("../discord_common/js/packages/flux/connectStores.tsx");
@@ -26,7 +27,7 @@ export default function connectStores(items, arg1, arg2) {
           str = "<Unknown>";
         }
         const combined = "FluxContainer(" + str + ")";
-        const Component = React.Component;
+        const Component = noop.Component;
         class FluxContainer extends Component {
           constructor() {
             applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -124,22 +125,35 @@ export default function connectStores(items, arg1, arg2) {
           return <closure_0 ref={forwardedConnectStoresRef} />;
         };
         FluxContainer.displayName = combined;
-        const forwardRefResult = React.forwardRef(items(558).isReactCompilerEnabled() ? ((childProps, forwardedConnectStoresRef) => {
-          const cResult = c.c(3);
-          if (cResult[0] === childProps) {
-            if (cResult[1] === forwardedConnectStoresRef) {
-              let tmp2 = cResult[2];
-            }
-            return tmp2;
+        let tmp2 = items(558).isReactCompilerEnabled() ? (function ForwardRef(ref) {
+          const cResult = c.c(6);
+          if (cResult[0] !== ref) {
+            const tmp6 = _objectWithoutProperties(ref.ref, closure_3);
+            cResult[0] = ref.ref;
+            cResult[1] = tmp6;
+            cResult[2] = ref.ref;
+            let tmp3 = ref;
+            let tmp2 = tmp6;
+          } else {
+            tmp2 = cResult[1];
+            tmp3 = cResult[2];
           }
-          const tmp3 = <FluxContainer childProps={childProps} forwardedConnectStoresRef={forwardedConnectStoresRef} />;
-          cResult[0] = childProps;
-          cResult[1] = forwardedConnectStoresRef;
-          cResult[2] = tmp3;
-          tmp2 = tmp3;
-        }) : ((childProps, forwardedConnectStoresRef) => <FluxContainer childProps={childProps} forwardedConnectStoresRef={forwardedConnectStoresRef} />));
-        forwardRefResult.displayName = "ForwardRef(" + combined + ")";
-        return forwardRefResult;
+          if (cResult[3] === tmp2) {
+            if (cResult[4] === tmp3) {
+              let tmp7 = cResult[5];
+            }
+            return tmp7;
+          }
+          const tmp8 = <FluxContainer childProps={tmp2} forwardedConnectStoresRef={tmp3} />;
+          cResult[3] = tmp2;
+          cResult[4] = tmp3;
+          cResult[5] = tmp8;
+          tmp7 = tmp8;
+        }) : (function ForwardRef(forwardedConnectStoresRef) {
+          return <FluxContainer childProps={Object.assign(forwardedConnectStoresRef, Object.assign({ ref: 0 }))} forwardedConnectStoresRef={forwardedConnectStoresRef.ref} />;
+        });
+        tmp2.displayName = "ForwardRef(" + combined + ")";
+        return tmp2;
       };
     }
     return fn;
@@ -155,7 +169,7 @@ export default function connectStores(items, arg1, arg2) {
       str = "<Unknown>";
     }
     const combined = "FluxContainer(" + str + ")";
-    const Component = React.Component;
+    const Component = noop.Component;
     class FluxContainer extends Component {
       constructor() {
         applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

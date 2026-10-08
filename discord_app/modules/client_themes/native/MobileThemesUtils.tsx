@@ -1,25 +1,25 @@
-// === Module 4794: MobileThemesUtils ===
+// === Module 4988: MobileThemesUtils ===
 
-// Module 4794 (MobileThemesUtils)
+// Module 4988 (MobileThemesUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import ClientThemesTypes from "ClientThemesTypes" /* 1241 */;
-import _modDef2751 from "module_2751" /* 2751 */;
-import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings" /* 4796 */;
-import ThemeStore from "ThemeStore" /* 1193 */;
-import SavedCustomThemeStore from "SavedCustomThemeStore" /* 4795 */;
-import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1238 */;
+import ClientThemesTypes from "ClientThemesTypes" /* 1253 */;
+import _modDef2795 from "module_2795" /* 2795 */;
+import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings" /* 4990 */;
+import ThemeStore from "ThemeStore" /* 1205 */;
+import SavedCustomThemeStore from "SavedCustomThemeStore" /* 4989 */;
+import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1250 */;
 
 require = fn;
 function getCustomThemesName() {
   const intl = util.intl;
-  return intl.string(_modDef2751.yl1iMm);
+  return intl.string(_modDef2795.yl1iMm);
 }
-const ClientThemesConstants = fn(1240);
+const ClientThemesConstants = fn(1252);
 ({ BACKGROUND_GRADIENT_PRESETS_MOBILE: metroRequire, REFRESH_STANDARD_BACKGROUND_THEMES: closure_7 } = ClientThemesConstants);
 let ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCustomBackgroundGradient(arg0) {
   let CUSTOM_BACKGROUND_GRADIENT = dependencyMap;
   const cResult = c.c(3);
   customTheme = useCustomThemeDisplaySettings.useCustomThemeDisplaySettings(arg0);
@@ -37,7 +37,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[1] = customTheme;
     cResult[2] = obj4;
   }
-}) : ((arg0) => {
+}) : (function useCustomBackgroundGradient(arg0) {
   const customThemeDisplaySettings = useCustomThemeDisplaySettings.useCustomThemeDisplaySettings(arg0);
   let tmp4 = null;
   if (undefined !== customThemeDisplaySettings) {
@@ -49,7 +49,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 });
 let closure_9 = tmp3;
 ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePerModeCustomBackgroundGradient(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -60,7 +60,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function u() {
+    const fn = function s() {
       if (null == closure_0) {
         return null;
       } else {
@@ -88,7 +88,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   let obj = require("c");
   return require("initialize").useStateFromStores(first, tmp6);
-}) : ((arg0) => {
+}) : (function usePerModeCustomBackgroundGradient(arg0) {
   _require = arg0;
   const items = [ThemeStore];
   return require("initialize").useStateFromStores(items, () => {
@@ -115,11 +115,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 let closure_10 = tmp4;
 fn(558);
 ReactCompilerGating = fn(558);
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSavedCustomTheme() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [SavedCustomThemeStore];
-    const fn = function s() {
+    const fn = function n() {
       return savedCustomTheme.getSavedCustomTheme();
     };
     cResult[0] = items;
@@ -135,7 +135,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp8 = stateFromStores;
   }
   return tmp8;
-}) : (() => {
+}) : (function useSavedCustomTheme() {
   const items = [SavedCustomThemeStore];
   const stateFromStores = initialize.useStateFromStores(items, () => savedCustomTheme.getSavedCustomTheme());
   let tmp2 = null;
@@ -181,7 +181,7 @@ export const getAllMobileThemes = function getAllMobileThemes() {
   }
   return items1;
 };
-export const useAllMobileThemes = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useAllMobileThemes = ReactCompilerGating.isReactCompilerEnabled() ? (function useAllMobileThemes(arg0) {
   const cResult = c.c(2);
   let tmp2 = closure_9(closure_11());
   if (null != arg0) {
@@ -203,7 +203,7 @@ export const useAllMobileThemes = ReactCompilerGating.isReactCompilerEnabled() ?
   } else {
     return cResult[1];
   }
-}) : ((arg0) => {
+}) : (function useAllMobileThemes(arg0) {
   let tmp = closure_9(closure_11());
   if (null != arg0) {
     tmp = closure_10(arg0);

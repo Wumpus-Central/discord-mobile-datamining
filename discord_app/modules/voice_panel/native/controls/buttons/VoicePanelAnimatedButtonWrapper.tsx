@@ -1,19 +1,19 @@
-// === Module 17356: VoicePanelAnimatedButtonWrapper ===
+// === Module 17637: VoicePanelAnimatedButtonWrapper ===
 
-// Module 17356 (VoicePanelAnimatedButtonWrapper)
+// Module 17637 (VoicePanelAnimatedButtonWrapper)
 import nativeDefault from "native" /* 587 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import timing from "timing" /* 4897 */;
-import spring from "spring" /* 5604 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import timing from "timing" /* 5091 */;
+import spring from "spring" /* 5374 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const MODE_CHANGE_PHYSICS = fn(11916).MODE_CHANGE_PHYSICS;
+const MODE_CHANGE_PHYSICS = fn(11989).MODE_CHANGE_PHYSICS;
 let jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { pressableWrapper: { justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.modules.button.BORDER_RADIUS_LG } };
 let closure_6 = createStyles.createStyles(obj2);
 let closure_7 = ReanimatedRexport.createAnimatedComponent(fn(17).Pressable);
@@ -26,7 +26,7 @@ let obj3 = { justifyContent: "center", alignItems: "center", borderRadius: nativ
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelAnimatedButtonWrapper.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AnimatedButtonWrapper(arg0) {
   let withTiming = sharedValue;
   const cResult = pressed(sharedValue[8]).c(33);
   ({ props, onPress, onLongPress, onPressIn, onPressOut, accessibilityLabel, accessibilityHint, style, children, pressed, disabled } = arg0);
@@ -278,7 +278,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = onPressIn;
   tmp5 = onPressIn;
   obj2 = pressed(sharedValue[6]);
-}) : ((onPressOut) => {
+}) : (function AnimatedButtonWrapper(onPressOut) {
   ({ props, onPressIn } = onPressOut);
   onPressOut = onPressOut.onPressOut;
   const style = onPressOut.style;

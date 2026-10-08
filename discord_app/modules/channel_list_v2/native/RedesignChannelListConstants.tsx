@@ -1,9 +1,9 @@
-// === Module 11711: RedesignChannelListConstants ===
+// === Module 11776: RedesignChannelListConstants ===
 
-// Module 11711 (RedesignChannelListConstants)
+// Module 11776 (RedesignChannelListConstants)
 import _mod17 from "module_17" /* 17 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10736 */;
-import PlatformUtils from "utils/PlatformUtils" /* 1370 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10490 */;
+import PlatformUtils from "utils/PlatformUtils" /* 1382 */;
 import size from "module_2" /* 2 */;
 
 let c2 = "text-xs/medium";
@@ -49,9 +49,9 @@ export const getScaledChannelSubtitleHeight = function getScaledChannelSubtitleH
 export const getScaledCategoryRowHeight = function getScaledCategoryRowHeight(fontScale) {
   return useScaledTextLineHeight.scaleTextLineHeight(c5, fontScale) + 8 + 4;
 };
-export const getScaledChannelRowHeight = function getScaledChannelRowHeight(arg0) {
+export const getScaledChannelRowHeight = function getScaledChannelRowHeight(fontScale) {
   const sum = 8 + hairlineWidth;
-  return 2 * sum + useScaledTextLineHeight.scaleLineHeight(num, arg0);
+  return 2 * sum + useScaledTextLineHeight.scaleLineHeight(num, fontScale);
 };
 export const getScaledSearchBarHeight = function getScaledSearchBarHeight(fontScale) {
   return 24 + useScaledTextLineHeight.scaleTextLineHeight(c4, fontScale);

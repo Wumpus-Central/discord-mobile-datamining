@@ -1,10 +1,10 @@
-// === Module 8546: DeveloperActivityShelfStore ===
+// === Module 9031: DeveloperActivityShelfStore ===
 
-// Module 8546 (DeveloperActivityShelfStore)
+// Module 9031 (DeveloperActivityShelfStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import UserSettings from "UserSettings" /* 2028 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8547 */;
+import UserSettings from "UserSettings" /* 2040 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8586 */;
 
 require = fn;
 let closure_2 = { lastUsedObject: {}, useActivityUrlOverride: false, activityUrlOverride: null, filter: "" };

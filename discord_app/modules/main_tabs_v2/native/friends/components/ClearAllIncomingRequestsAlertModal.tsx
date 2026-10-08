@@ -1,10 +1,10 @@
-// === Module 16974: ClearAllIncomingRequestsAlertModal ===
+// === Module 17255: ClearAllIncomingRequestsAlertModal ===
 
-// Module 16974 (ClearAllIncomingRequestsAlertModal)
+// Module 17255 (ClearAllIncomingRequestsAlertModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import AlertModal from "AlertModal" /* 5720 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9447 */;
+import AlertModal from "AlertModal" /* 5303 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7004 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -72,7 +72,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/components/ClearAllIncomingRequestsAlertModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((incomingRequestCount) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ClearAllIncomingRequestsAlertModal(incomingRequestCount) {
   const cResult = c.c(7);
   incomingRequestCount = incomingRequestCount.incomingRequestCount;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -127,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((incomingRequestC
     tmp16 = cResult[6];
   }
   return tmp16;
-}) : ((incomingRequestCount) => {
+}) : (function ClearAllIncomingRequestsAlertModal(incomingRequestCount) {
   const obj = { title: null, content: null, actions: null };
   const intl = util.intl;
   obj.title = intl.string(util.t.z2pFjo);

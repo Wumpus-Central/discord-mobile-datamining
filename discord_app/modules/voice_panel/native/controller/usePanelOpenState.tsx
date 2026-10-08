@@ -1,16 +1,16 @@
-// === Module 17400: usePanelOpenState ===
+// === Module 17682: usePanelOpenState ===
 
-// Module 17400 (usePanelOpenState)
+// Module 17682 (usePanelOpenState)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VoicePanelStore from "VoicePanelStore" /* 5104 */;
+import VoicePanelStore from "VoicePanelStore" /* 6079 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelModes = fn(11916).VoicePanelModes;
+const VoicePanelModes = fn(11989).VoicePanelModes;
 const Constants = fn(1085);
 ({ ComponentActions: closure_7, Routes: closure_8 } = Constants);
 const __initData = { code: "function usePanelOpenStateTsx1(){const{connected}=this.__closure;return{connected:connected.get()};}" };
@@ -21,7 +21,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/controller/usePanelOpenState.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2, connected) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePanelOpenState(arg0, arg1, arg2, connected) {
   _require = arg0;
   importDefault = arg1;
   dependencyMap = arg2;
@@ -31,16 +31,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
     return state.closeChannel(closure_0);
   }
   let obj = require("c");
-  class O {
+  class E {
     constructor() {
       obj = { connected: closure_3.get() };
       return obj;
     }
   }
-  O.__closure = { connected };
-  O.__workletHash = 8350408810765;
-  O.__initData = __initData;
-  class E {
+  E.__closure = { connected };
+  E.__workletHash = 8350408810765;
+  E.__initData = __initData;
+  class O {
     constructor(arg0, arg1) {
       connected = undefined;
       if (arg1 != null) {
@@ -58,10 +58,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
     }
   }
   let obj2 = require("ReanimatedRexport");
-  E.__closure = { runOnJS: require("ReanimatedRexport").runOnJS, doCloseChannel };
-  E.__workletHash = 9166012598595;
-  E.__initData = __initData2;
-  const animatedReaction = obj2.useAnimatedReaction(O, E);
+  O.__closure = { runOnJS: require("ReanimatedRexport").runOnJS, doCloseChannel };
+  O.__workletHash = 9166012598595;
+  O.__initData = __initData2;
+  const animatedReaction = obj2.useAnimatedReaction(E, O);
   if (cResult[0] === arg0) {
     if (cResult[1] === connected) {
       if (cResult[2] === arg1) {
@@ -97,18 +97,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
               return obj.getHistory().location.pathname;
             }
           }
-          const effect1 = obj4.useEffect(I, tmp12);
+          const effect1 = obj4.useEffect(L, tmp12);
         }
-        class I {
+        class L {
           constructor() {
             obj = closure_1(closure_2[9]);
             closure_0 = obj.addRouteChangeListener((pathname) => {
               if (first !== pathname.pathname) {
                 closure_1_6(tmp);
                 const obj2 = { path: null };
-                const RouteParam = closure_0(4723).RouteParam;
-                const obj = closure_0(4710);
-                const RouteParam2 = closure_0(4723).RouteParam;
+                const RouteParam = closure_0(4917).RouteParam;
+                const obj = closure_0(4904);
+                const RouteParam2 = closure_0(4917).RouteParam;
                 obj2.path = closure_2_8.CHANNEL(RouteParam.guildId(), RouteParam2.channelId());
                 const matchPathResult = obj.matchPath(pathname.pathname, obj2);
                 const guildIdResult = RouteParam.guildId();
@@ -118,10 +118,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
                     tmp2 = matchPathResult.params.channelId === closure_0;
                   }
                   if (!tmp2) {
-                    closure_1(9020)();
+                    closure_1(10619)();
                   }
                 }
-                obj3 = closure_0(12565);
+                obj3 = closure_0(10978);
               }
             });
             return () => {
@@ -130,7 +130,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
           }
         }
         const items = [, ];
-        class O {
+        class E {
           constructor() {
             obj = { connected: closure_3.get() };
             return obj;
@@ -139,8 +139,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
         items[1] = first;
         cResult[7] = arg0;
         cResult[8] = first;
-        cResult[9] = I;
-        class E {
+        cResult[9] = L;
+        class O {
           constructor(arg0, arg1) {
             connected = undefined;
             if (arg1 != null) {
@@ -203,7 +203,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
   tmp4 = items1;
   tmp3 = fn;
   let obj3 = { runOnJS: require("ReanimatedRexport").runOnJS, doCloseChannel };
-}) : ((arg0, arg1, arg2, connected) => {
+}) : (function usePanelOpenState(arg0, arg1, arg2, connected) {
   _require = arg0;
   closure_1 = arg1;
   dependencyMap = arg2;
@@ -211,16 +211,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
     state = VoicePanelStore.getState();
     return state.closeChannel(closure_0);
   }
-  class O {
+  class E {
     constructor() {
       obj = { connected: closure_3.get() };
       return obj;
     }
   }
-  O.__closure = { connected };
-  O.__workletHash = 8132120691023;
-  O.__initData = __initData3;
-  class E {
+  E.__closure = { connected };
+  E.__workletHash = 8132120691023;
+  E.__initData = __initData3;
+  class O {
     constructor(arg0, arg1) {
       connected = undefined;
       if (arg1 != null) {
@@ -238,10 +238,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
     }
   }
   let obj = require("ReanimatedRexport");
-  E.__closure = { runOnJS: require("ReanimatedRexport").runOnJS, doCloseChannel };
-  E.__workletHash = 176531712901;
-  E.__initData = __initData4;
-  const animatedReaction = obj.useAnimatedReaction(O, E);
+  O.__closure = { runOnJS: require("ReanimatedRexport").runOnJS, doCloseChannel };
+  O.__workletHash = 176531712901;
+  O.__initData = __initData4;
+  const animatedReaction = obj.useAnimatedReaction(E, O);
   const items = [arg0, arg1, arg2, connected];
   const effect = doCloseChannel.useEffect(() => {
     function componentActionOpen(channelId) {
@@ -274,18 +274,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
       ComponentDispatch2.unsubscribe(constants.VOICE_PANEL_CLOSE, componentActionClose);
     };
   }, items);
-  const tmp3 = connected(doCloseChannel.useState(() => closure_1(12572).getHistory().location.pathname), 2);
+  const tmp3 = connected(doCloseChannel.useState(() => closure_1(10985).getHistory().location.pathname), 2);
   const first = tmp3[0];
   closure_6 = tmp3[1];
   const items1 = [arg0, first];
   const effect1 = doCloseChannel.useEffect(() => {
-    closure_0 = closure_1(12572).addRouteChangeListener((pathname) => {
+    closure_0 = closure_1(10985).addRouteChangeListener((pathname) => {
       if (first !== pathname.pathname) {
         closure_1_6(tmp);
         const obj2 = { path: null };
-        const RouteParam = closure_0(4723).RouteParam;
-        const obj = closure_0(4710);
-        const RouteParam2 = closure_0(4723).RouteParam;
+        const RouteParam = closure_0(4917).RouteParam;
+        const obj = closure_0(4904);
+        const RouteParam2 = closure_0(4917).RouteParam;
         obj2.path = closure_2_8.CHANNEL(RouteParam.guildId(), RouteParam2.channelId());
         const matchPathResult = obj.matchPath(pathname.pathname, obj2);
         const guildIdResult = RouteParam.guildId();
@@ -295,10 +295,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
             tmp2 = matchPathResult.params.channelId === closure_0;
           }
           if (!tmp2) {
-            closure_1(9020)();
+            closure_1(10619)();
           }
         }
-        obj3 = closure_0(12565);
+        obj3 = closure_0(10978);
       }
     });
     return () => {

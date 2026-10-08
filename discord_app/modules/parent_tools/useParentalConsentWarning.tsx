@@ -1,16 +1,16 @@
-// === Module 14690: useParentalConsentWarning ===
+// === Module 14951: useParentalConsentWarning ===
 
-// Module 14690 (useParentalConsentWarning)
+// Module 14951 (useParentalConsentWarning)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import ParentalConsentWarningStore from "ParentalConsentWarningStore" /* 14691 */;
+import ParentalConsentWarningStore from "ParentalConsentWarningStore" /* 14952 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/useParentalConsentWarning.tsx");
 
-export const useParentalConsentWarning = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useParentalConsentWarning = ReactCompilerGating.isReactCompilerEnabled() ? (function useParentalConsentWarning() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ParentalConsentWarningStore];
@@ -25,7 +25,7 @@ export const useParentalConsentWarning = ReactCompilerGating.isReactCompilerEnab
     [tmp4, tmp5] = cResult;
   }
   return initialize.useStateFromStores(tmp4, tmp5);
-}) : (() => {
+}) : (function useParentalConsentWarning() {
   const items = [ParentalConsentWarningStore];
   return initialize.useStateFromStores(items, () => warning.getWarning());
 });

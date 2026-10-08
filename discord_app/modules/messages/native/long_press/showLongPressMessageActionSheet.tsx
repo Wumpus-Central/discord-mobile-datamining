@@ -1,12 +1,12 @@
-// === Module 11293: showLongPressMessageActionSheet ===
+// === Module 9629: showLongPressMessageActionSheet ===
 
-// Module 11293 (showLongPressMessageActionSheet)
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+// Module 9629 (showLongPressMessageActionSheet)
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/long_press/showLongPressMessageActionSheet.tsx");
 
 export const showLongPressMessageActionSheet = function showLongPressMessageActionSheet(arg0) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11294, dependencyMap.paths), "MessageLongPressActionSheet", arg0);
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9630, dependencyMap.paths), "MessageLongPressActionSheet", arg0);
 };

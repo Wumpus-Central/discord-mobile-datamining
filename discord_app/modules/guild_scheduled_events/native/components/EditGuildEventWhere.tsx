@@ -1,16 +1,16 @@
-// === Module 9239: EditGuildEventWhere ===
+// === Module 8549: EditGuildEventWhere ===
 
-// Module 9239 (EditGuildEventWhere)
+// Module 8549 (EditGuildEventWhere)
 import util from "util" /* 1126 */;
-import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1881 */;
-import _modDef4467 from "module_4467" /* 4467 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 9214 */;
-import EntityUtils from "EntityUtils" /* 9215 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9282 */;
+import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1893 */;
+import _modDef4659 from "module_4659" /* 4659 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 8495 */;
+import EntityUtils from "EntityUtils" /* 8499 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8613 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
 
 const require = globalThis.__r;
 
@@ -42,20 +42,20 @@ function assertGuildEventWhereIsValid(guildEvent) {
     }
   }
 }
-let closure_8 = fn(7050).isGuildScheduledEventActive;
-const GuildScheduledEventsConstants = fn(2057);
+let closure_8 = fn(6059).isGuildScheduledEventActive;
+const GuildScheduledEventsConstants = fn(2069);
 ({ AGE_VERIFICATION_STAGE_CHANNEL_TYPES: closure_9, GuildScheduledEventEntityTypes: c10 } = GuildScheduledEventsConstants);
 const Constants = fn(1085);
 ({ Permissions: closure_11, GuildSettingsSections: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_16 = createStyles.createStyles({ channelSelection: { marginTop: 16 }, error: { paddingVertical: 8 }, text: { marginTop: 24 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventWhere.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditGuildEventWhere(guild) {
   const cResult = guild(ref[12]).c(63);
   guild = guild.guild;
   const guildEvent = guild.guildEvent;
@@ -155,249 +155,108 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
       }
     }
     if (cResult[13] !== onChange) {
-      class H {
-        constructor(arg0) {
-          tmp = closure_4(null);
-          obj = { channelId: guild.id };
-          tmp2 = onChange(obj);
-          return;
+      class D {
+        constructor() {
+          return closure_7.can(Permissions.MANAGE_ROLES, guild);
         }
       }
       cResult[13] = onChange;
-      class Y {
-        constructor(arg0) {
-          tmp = closure_4(null);
-          obj = { entityType: guild, scheduledEndTime: "Array" };
-          if (guild === closure_10.EXTERNAL) {
-            tmp2 = closure_1;
-            tmp3 = closure_3;
-            tmp4 = guildEvent;
-            obj2 = closure_1(closure_3[18])(guildEvent.scheduledStartTime);
-            if (obj2 == null) {
-              obj2 = tmp2(tmp3[18])();
-            }
-            str = "hour";
-            num = 1;
-            addResult = obj2.add(1, "hour");
-            obj.scheduledEndTime = addResult.toISOString();
-          }
-          tmp5 = onChange(obj);
-          return;
-        }
-      }
+      cResult[14] = tmp20;
     } else {
-      class H {
-        constructor(arg0) {
-          tmp = closure_4(null);
-          obj = { channelId: guild.id };
-          tmp2 = onChange(obj);
-          return;
+      class D {
+        constructor() {
+          return closure_7.can(Permissions.MANAGE_ROLES, guild);
         }
       }
     }
     if (cResult[15] !== onChange) {
-      class B {
-        constructor(arg0) {
-          tmp = closure_4(null);
-          obj = { entityMetadata: null };
-          obj1 = { location: guild };
-          obj.entityMetadata = obj1;
-          tmp2 = onChange(obj);
-          return;
+      class D {
+        constructor() {
+          return closure_7.can(Permissions.MANAGE_ROLES, guild);
         }
       }
       cResult[15] = onChange;
-      class Y {
-        constructor(arg0) {
-          tmp = closure_4(null);
-          obj = { entityType: guild, scheduledEndTime: "Array" };
-          if (guild === closure_10.EXTERNAL) {
-            tmp2 = closure_1;
-            tmp3 = closure_3;
-            tmp4 = guildEvent;
-            obj2 = closure_1(closure_3[18])(guildEvent.scheduledStartTime);
-            if (obj2 == null) {
-              obj2 = tmp2(tmp3[18])();
-            }
-            str = "hour";
-            num = 1;
-            addResult = obj2.add(1, "hour");
-            obj.scheduledEndTime = addResult.toISOString();
-          }
-          tmp5 = onChange(obj);
-          return;
-        }
-      }
+      cResult[16] = tmp22;
     } else {
-      class B {
-        constructor(arg0) {
-          tmp = closure_4(null);
-          obj = { entityMetadata: null };
-          obj1 = { location: guild };
-          obj.entityMetadata = obj1;
-          tmp2 = onChange(obj);
-          return;
+      class D {
+        constructor() {
+          return closure_7.can(Permissions.MANAGE_ROLES, guild);
         }
       }
     }
     if (cResult[17] === guildEvent.scheduledStartTime) {
-      class B {
-        constructor(arg0) {
-          tmp = closure_4(null);
-          obj = { entityMetadata: null };
-          obj1 = { location: guild };
-          obj.entityMetadata = obj1;
-          tmp2 = onChange(obj);
-          return;
+      class D {
+        constructor() {
+          return closure_7.can(Permissions.MANAGE_ROLES, guild);
         }
       }
       if (cResult[20] !== guildEvent.entityType) {
-        class B {
-          constructor(arg0) {
-            tmp = closure_4(null);
-            obj = { entityMetadata: null };
-            obj1 = { location: guild };
-            obj.entityMetadata = obj1;
-            tmp2 = onChange(obj);
-            return;
+        class D {
+          constructor() {
+            return closure_7.can(Permissions.MANAGE_ROLES, guild);
           }
         }
         const channelTypeFromEntity = obj6.getChannelTypeFromEntity(guildEvent.entityType);
         cResult[20] = guildEvent.entityType;
-        class Y {
-          constructor(arg0) {
-            tmp = closure_4(null);
-            obj = { entityType: guild, scheduledEndTime: "Array" };
-            if (guild === closure_10.EXTERNAL) {
-              tmp2 = closure_1;
-              tmp3 = closure_3;
-              tmp4 = guildEvent;
-              obj2 = closure_1(closure_3[18])(guildEvent.scheduledStartTime);
-              if (obj2 == null) {
-                obj2 = tmp2(tmp3[18])();
-              }
-              str = "hour";
-              num = 1;
-              addResult = obj2.add(1, "hour");
-              obj.scheduledEndTime = addResult.toISOString();
-            }
-            tmp5 = onChange(obj);
-            return;
-          }
-        }
         cResult[21] = channelTypeFromEntity;
       } else {
-        class B {
-          constructor(arg0) {
-            tmp = closure_4(null);
-            obj = { entityMetadata: null };
-            obj1 = { location: guild };
-            obj.entityMetadata = obj1;
-            tmp2 = onChange(obj);
-            return;
+        class D {
+          constructor() {
+            return closure_7.can(Permissions.MANAGE_ROLES, guild);
           }
         }
       }
       if (cResult[22] === stateFromStores) {
-        class B {
-          constructor(arg0) {
-            tmp = closure_4(null);
-            obj = { entityMetadata: null };
-            obj1 = { location: guild };
-            obj.entityMetadata = obj1;
-            tmp2 = onChange(obj);
-            return;
+        class D {
+          constructor() {
+            return closure_7.can(Permissions.MANAGE_ROLES, guild);
           }
         }
       }
-      class Y {
-        constructor(arg0) {
-          tmp = closure_4(null);
-          obj = { entityType: guild, scheduledEndTime: "Array" };
-          if (guild === closure_10.EXTERNAL) {
-            tmp2 = closure_1;
-            tmp3 = closure_3;
-            tmp4 = guildEvent;
-            obj2 = closure_1(closure_3[18])(guildEvent.scheduledStartTime);
-            if (obj2 == null) {
-              obj2 = tmp2(tmp3[18])();
-            }
-            str = "hour";
-            num = 1;
-            addResult = obj2.add(1, "hour");
-            obj.scheduledEndTime = addResult.toISOString();
-          }
-          tmp5 = onChange(obj);
-          return;
-        }
-      }
-      const obj3 = { guild, channel: stateFromStores, guildEventId, channelType: tmp22, onChangeChannel: H, style: tmp4.channelSelection };
-      const tmp26 = closure_13(guildEvent(tmp2[19]), obj3);
+      const obj3 = { guild, channel: stateFromStores, guildEventId, channelType: tmp24, onChangeChannel: tmp20, style: tmp4.channelSelection };
+      const tmp29 = closure_13(guildEvent(tmp2[19]), obj3);
       cResult[22] = stateFromStores;
       cResult[23] = guild;
       cResult[24] = guildEventId;
-      cResult[25] = H;
+      cResult[25] = tmp20;
       cResult[26] = tmp4.channelSelection;
-      cResult[27] = tmp22;
-      cResult[28] = tmp26;
+      cResult[27] = tmp24;
+      cResult[28] = tmp29;
     }
-    class Y {
-      constructor(arg0) {
-        tmp = closure_4(null);
-        obj = { entityType: guild, scheduledEndTime: "Array" };
-        if (guild === closure_10.EXTERNAL) {
-          tmp2 = closure_1;
-          tmp3 = closure_3;
-          tmp4 = guildEvent;
-          obj2 = closure_1(closure_3[18])(guildEvent.scheduledStartTime);
-          if (obj2 == null) {
-            obj2 = tmp2(tmp3[18])();
-          }
-          str = "hour";
-          num = 1;
-          addResult = obj2.add(1, "hour");
-          obj.scheduledEndTime = addResult.toISOString();
+    function handleChangeEventEntityType(entityType) {
+      _slicedToArray(null);
+      const obj = { entityType, scheduledEndTime: "Array" };
+      if (entityType === constants.EXTERNAL) {
+        let obj2 = _modDef4659(guildEvent.scheduledStartTime);
+        if (obj2 == null) {
+          obj2 = _modDef4659();
         }
-        tmp5 = onChange(obj);
-        return;
+        obj.scheduledEndTime = obj2.add(1, "hour").toISOString();
+        const addResult = obj2.add(1, "hour");
       }
+      onChange(obj);
     }
     cResult[17] = guildEvent.scheduledStartTime;
     cResult[18] = onChange;
-    cResult[19] = Y;
+    cResult[19] = handleChangeEventEntityType;
   }
-  class Q {
-    constructor() {
-      tmp3 = closure_3;
-      obj = closure_2(closure_3[15]);
-      result = obj.dismissGlobalKeyboard();
-      try {
-        tmp5 = closure_4;
-        tmp6 = null;
-        tmp7 = closure_4(null);
-        tmp8 = assertGuildEventWhereIsValid;
-        tmp9 = guildEvent;
-        num = 0;
-        tmp10 = assertGuildEventWhereIsValid(guildEvent);
-        tmp11 = closure_5;
-        tmp12 = closure_0;
-        arr = closure_5.push(closure_0(tmp3[16]).EditGuildEventScreens.DETAILS);
-        return;
-      } catch (tmp14) {
-        tmp15 = closure_4;
-        tmp16 = closure_4(tmp14.message);
-        tmp17 = closure_0;
-        AccessibilityAnnouncer = closure_0(tmp2[17]).AccessibilityAnnouncer;
-        announceResult = AccessibilityAnnouncer.announce(tmp14.message);
-      }
-      return;
+  function handleNext() {
+    const result = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
+    try {
+      _slicedToArray(null);
+      assertGuildEventWhereIsValid(guildEvent);
+      navigation.push(EditGuildEventUtils.EditGuildEventScreens.DETAILS);
+    } catch (tmp14) {
+      _slicedToArray(tmp14.message);
+      const AccessibilityAnnouncer = require("AccessibilityAnnouncer").AccessibilityAnnouncer;
+      AccessibilityAnnouncer.announce(tmp14.message);
     }
   }
   cResult[10] = guildEvent;
   cResult[11] = navigation;
-  cResult[12] = Q;
+  cResult[12] = handleNext;
   const tmpResult4 = guild(ref[14]);
-}) : ((guild) => {
+}) : (function EditGuildEventWhere(guild) {
   guild = guild.guild;
   const guildEvent = guild.guildEvent;
   const onChange = guild.onChange;
@@ -422,9 +281,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   guildEvent(ref[19]);
   const tmp9 = closure_8(initialGuildEvent);
   obj4.channelType = guild(ref[10]).getChannelTypeFromEntity(guildEvent.entityType);
-  obj4.onChangeChannel = function onChangeChannel(handleSelectChannel) {
+  obj4.onChangeChannel = function handleChangeEventChannel(channelId) {
     _undefined(null);
-    onChange({ channelId: handleSelectChannel.id });
+    onChange({ channelId: channelId.id });
   };
   obj4.style = tmp.channelSelection;
   if (guildEvent.entityType === constants.EXTERNAL) {
@@ -466,7 +325,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   const obj9 = { text: null, variant: "primary", onPress: null, disabled: null };
   const intl = tmp3(tmp4[9]).intl;
   obj9.text = intl.string(guild(ref[9]).t.PDTjLN);
-  obj9.onPress = function onPress() {
+  obj9.onPress = function handleNext() {
     const result = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
     try {
       _undefined(null);
@@ -495,13 +354,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
     closure_13(guild(ref[20]).GuildEventEntityTypeSelection, {
       guild,
       entityType: guildEvent.entityType,
-      onChange(entityType) {
+      onChange: function handleChangeEventEntityType(entityType) {
         _undefined(null);
         const obj = { entityType, scheduledEndTime: "Array" };
         if (entityType === constants.EXTERNAL) {
-          let obj2 = _modDef4467(guildEvent.scheduledStartTime);
+          let obj2 = _modDef4659(guildEvent.scheduledStartTime);
           if (obj2 == null) {
-            obj2 = _modDef4467();
+            obj2 = _modDef4659();
           }
           obj.scheduledEndTime = obj2.add(1, "hour").toISOString();
           const addResult = obj2.add(1, "hour");
@@ -517,13 +376,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   const obj12 = {
     guild,
     entityType: guildEvent.entityType,
-    onChange(entityType) {
+    onChange: function handleChangeEventEntityType(entityType) {
       _undefined(null);
       const obj = { entityType, scheduledEndTime: "Array" };
       if (entityType === constants.EXTERNAL) {
-        let obj2 = _modDef4467(guildEvent.scheduledStartTime);
+        let obj2 = _modDef4659(guildEvent.scheduledStartTime);
         if (obj2 == null) {
-          obj2 = _modDef4467();
+          obj2 = _modDef4659();
         }
         obj.scheduledEndTime = obj2.add(1, "hour").toISOString();
         const addResult = obj2.add(1, "hour");

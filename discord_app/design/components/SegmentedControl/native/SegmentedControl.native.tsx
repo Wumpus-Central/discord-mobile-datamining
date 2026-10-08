@@ -1,9 +1,9 @@
-// === Module 9318: SegmentedControl ===
+// === Module 8752: SegmentedControl ===
 
-// Module 9318 (SegmentedControl)
+// Module 8752 (SegmentedControl)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import spring from "spring" /* 5604 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import spring from "spring" /* 5374 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
@@ -16,7 +16,7 @@ const jsxProd = fn(21);
 let c8 = 0.04;
 let c9 = 0.9;
 let closure_10 = { mass: 0.3, damping: 13, stiffness: 100, restDisplacementThreshold: 0.001, overshootClamping: true };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_11 = createStyles.createStyles((borderRadius, paddingVertical) => {
   const obj = { scrollContentContainer: { flexGrow: 1 }, controlsContainer: { backgroundColor: nativeDefault.colors.MOBILE_SEGMENTED_CONTROL_BACKGROUND, borderRadius: borderRadius + paddingVertical, paddingVertical, display: "flex", flexDirection: "row", alignItems: "center" }, indicatorContainer: { position: "absolute", width: "100%", height: "100%", borderRadius, flexDirection: "row" }, indicator: null };
   const obj2 = { backgroundColor: nativeDefault.colors.MOBILE_SEGMENTED_CONTROL_BACKGROUND, borderRadius: borderRadius + paddingVertical, paddingVertical, display: "flex", flexDirection: "row", alignItems: "center" };
@@ -43,7 +43,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/SegmentedControl/native/SegmentedControl.native.tsx");
 
-export const SegmentedControl = ReactCompilerGating.isReactCompilerEnabled() ? ((state) => {
+export const SegmentedControl = ReactCompilerGating.isReactCompilerEnabled() ? (function SegmentedControl(state) {
   const cResult = state(activeIndex[6]).c(46);
   state = state.state;
   ({ variant, keyboardShouldPersistTaps } = state);
@@ -221,7 +221,7 @@ export const SegmentedControl = ReactCompilerGating.isReactCompilerEnabled() ? (
   cResult[11] = tmp5.indicator;
   cResult[12] = fn5;
   const obj2 = { indicatorTranslateX: derivedValue1, pressedIndex, clampedActiveIndex: derivedValue, PRESSED_TRANSLATE_AMOUNT, indicatorWidth: sharedValue1, scrollOverflow, interpolate: state(activeIndex[8]).interpolate, SCROLL_OVERFLOW_UPPER_BOUND: 50, SCROLL_OVERFLOW_MAX_SCALE: items.length, segmentSpacing: num, itemCount: items.length, previousIndicatorWidth: sharedValue2, withSpring: state(activeIndex[9]).withSpring, SELECTED_INDICATOR_SPRING: sharedValue };
-}) : ((keyboardShouldPersistTaps) => {
+}) : (function SegmentedControl(keyboardShouldPersistTaps) {
   state = keyboardShouldPersistTaps.state;
   let str = keyboardShouldPersistTaps.variant;
   if (str === undefined) {
@@ -461,13 +461,13 @@ export const SegmentedControl = ReactCompilerGating.isReactCompilerEnabled() ? (
       label,
       state,
       pressed,
-      onPress() {
+      onPress: function handlePress() {
         setActiveIndex(closure_0);
       },
-      onPressIn() {
+      onPressIn: function handlePressIn() {
         const result = pressed.set(closure_0);
       },
-      onPressOut() {
+      onPressOut: function handlePressOut() {
         const result = pressed.set(-1);
       },
       icon: null,

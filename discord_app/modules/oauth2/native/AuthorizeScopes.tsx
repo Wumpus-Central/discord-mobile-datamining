@@ -1,22 +1,22 @@
-// === Module 8976: AuthorizeScopes ===
+// === Module 12881: AuthorizeScopes ===
 
-// Module 8976 (AuthorizeScopes)
+// Module 12881 (AuthorizeScopes)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 4798 */;
-import CircleXIcon from "CircleXIcon" /* 4803 */;
-import Text_Text from "Text/Text" /* 4892 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 4992 */;
+import CircleXIcon from "CircleXIcon" /* 4997 */;
+import Text_Text from "Text/Text" /* 5086 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({ scopesContainer: { flexDirection: "column", gap: 16 }, scopes: { flexDirection: "column", gap: 16 }, scopeContainer: { flexDirection: "row" }, scope: { flex: 1, flexDirection: "column", justifyContent: "center" }, iconWrapper: { marginRight: 12, width: 20, height: 20 }, fakeScopeIcon: { opacity: 0.6 } });
 let ReactCompilerGating = fn(558);
-let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function Scope(arg0) {
   const cResult = c.c(22);
   ({ text, error, isFake } = arg0);
   const tmp4 = closure_6();
@@ -129,7 +129,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[3] = tmp4.fakeScopeIcon;
     cResult[4] = tmp16Result;
   }
-}) : ((arg0) => {
+}) : (function Scope(arg0) {
   ({ text, error, isFake } = arg0);
   const tmp = closure_6();
   const intl = util.intl;
@@ -152,10 +152,10 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const obj2 = { style: tmp.iconWrapper, accessible: false, importantForAccessibility: "no-hide-descendants", children: null };
   if (isFake) {
     const obj3 = { style: tmp.fakeScopeIcon, color: nativeDefault.colors.TEXT_MUTED, size: "refresh_sm" };
-    let tmp10Result = React4(tmp6(4803).CircleXIcon, obj3);
+    let tmp10Result = React4(tmp6(4997).CircleXIcon, obj3);
   } else {
     const obj4 = { color: nativeDefault.colors.TEXT_MUTED, size: "refresh_sm" };
-    tmp10Result = React4(tmp6(4798).CircleCheckIcon, obj4);
+    tmp10Result = React4(tmp6(4992).CircleCheckIcon, obj4);
   }
   obj2.children = tmp10Result;
   const items = [React4(View, obj2), ];
@@ -164,11 +164,11 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (isFake) {
     str3 = "text-muted";
   }
-  const items1 = [React4(tmp6(4892).Text, { variant: "text-md/normal", color: str3, children: text }), ];
+  const items1 = [React4(tmp6(5086).Text, { variant: "text-md/normal", color: str3, children: text }), ];
   let tmp10Result2 = null;
   if (null != error) {
     const obj6 = { variant: "text-xs/normal", children: error };
-    tmp10Result2 = React4(tmp6(4892).Text, obj6);
+    tmp10Result2 = React4(tmp6(5086).Text, obj6);
   }
   items1[1] = tmp10Result2;
   obj5.children = items1;
@@ -180,7 +180,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/oauth2/native/AuthorizeScopes.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((isTrustedName) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AuthorizeScopes(isTrustedName) {
   const cResult = accountScopes(576).c(27);
   ({ application, accountScopes } = isTrustedName);
   ({ requestedScopes, integrationType, errors } = isTrustedName);
@@ -189,14 +189,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((isTrustedName) =
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function p() {
       const random = Math.random();
-      return accountScopes(8752).FAKE_SCOPES[Math.floor(Math, random * accountScopes(undefined, 8752).FAKE_SCOPES.length)];
+      return accountScopes(9132).FAKE_SCOPES[Math.floor(Math, random * accountScopes(undefined, 9132).FAKE_SCOPES.length)];
     };
     cResult[0] = fn;
     let first = fn;
   } else {
     first = cResult[0];
   }
-  const tmp7 = errors(5991)(first);
+  const tmp7 = errors(6174)(first);
   if (0 === accountScopes.length) {
     return null;
   } else {
@@ -220,7 +220,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((isTrustedName) =
         }
         if (cResult[9] !== tmp14) {
           const obj2 = { variant: "heading-sm/normal", color: "text-default", children: tmp14 };
-          const tmp18 = closure_4(accountScopes(4892).Text, obj2);
+          const tmp18 = closure_4(accountScopes(5086).Text, obj2);
           cResult[9] = tmp14;
           cResult[10] = tmp18;
           let tmp16 = tmp18;
@@ -293,7 +293,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((isTrustedName) =
         }
         const mapped = accountScopes.map((item) => {
           closure_0 = item;
-          const scopeNames = accountScopes(8752).getScopeNames(item, closure_0);
+          const scopeNames = accountScopes(9132).getScopeNames(item, closure_0);
           return scopeNames.map((text, index) => {
             const obj = { text, error: null };
             let tmp3;
@@ -324,9 +324,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((isTrustedName) =
       cResult[8] = formatResult;
       tmp14 = formatResult;
     }
-    let hasItem = integrationType === accountScopes(8740).ApplicationIntegrationType.USER_INSTALL;
+    let hasItem = integrationType === accountScopes(9140).ApplicationIntegrationType.USER_INSTALL;
     if (hasItem) {
-      hasItem = requestedScopes.includes(accountScopes(8025).OAuth2Scopes.APPLICATIONS_COMMANDS);
+      hasItem = requestedScopes.includes(accountScopes(8433).OAuth2Scopes.APPLICATIONS_COMMANDS);
     }
     cResult[3] = integrationType;
     cResult[4] = requestedScopes;
@@ -335,7 +335,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((isTrustedName) =
   }
   let obj = accountScopes(576);
   tmp4 = undefined !== isTrustedName && isTrustedName;
-}) : ((accountScopes) => {
+}) : (function AuthorizeScopes(accountScopes) {
   accountScopes = accountScopes.accountScopes;
   ({ requestedScopes, errors: importDefault, isTrustedName } = accountScopes);
   ({ application, integrationType } = accountScopes);
@@ -354,20 +354,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((isTrustedName) =
       PZpY9c = t["1Hz+Sl"];
       tmp5 = tmp15;
     }
-    let hasItem = integrationType === tmp5(8740).ApplicationIntegrationType.USER_INSTALL;
+    let hasItem = integrationType === tmp5(9140).ApplicationIntegrationType.USER_INSTALL;
     if (hasItem) {
-      hasItem = requestedScopes.includes(tmp5(8025).OAuth2Scopes.APPLICATIONS_COMMANDS);
+      hasItem = requestedScopes.includes(tmp5(8433).OAuth2Scopes.APPLICATIONS_COMMANDS);
     }
     let obj = { style: tmp.scopesContainer, children: null };
     const obj2 = { variant: "heading-sm/normal", color: "text-default", children: null };
     const intl = tmp5(1126).intl;
     const obj3 = { application: application.name };
     obj2.children = intl.format(PZpY9c, obj3);
-    const items = [closure_4(tmp5(4892).Text, obj2), ];
+    const items = [closure_4(tmp5(5086).Text, obj2), ];
     const obj4 = { style: tmp.scopes, children: null };
     const mapped = accountScopes.map((item) => {
       closure_0 = item;
-      const scopeNames = accountScopes(8752).getScopeNames(item, closure_0);
+      const scopeNames = accountScopes(9132).getScopeNames(item, closure_0);
       return scopeNames.map((text, index) => {
         const obj = { text, error: null };
         let tmp3;

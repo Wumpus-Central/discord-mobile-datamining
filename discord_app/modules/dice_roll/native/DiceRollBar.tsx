@@ -1,20 +1,20 @@
-// === Module 12036: DiceRollBar ===
+// === Module 12109: DiceRollBar ===
 
-// Module 12036 (DiceRollBar)
+// Module 12109 (DiceRollBar)
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import timing from "timing" /* 4897 */;
+import native from "native" /* 1200 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import timing from "timing" /* 5091 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 require = fn;
 const View = fn(17).View;
-const useDiceRollState = fn(11586).useDiceRollState;
+const useDiceRollState = fn(11649).useDiceRollState;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = 300;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { animatedContainer: { overflow: "hidden" }, container: { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, paddingVertical: 8, gap: 12, borderTopWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH } };
 let closure_10 = createStyles.createStyles(obj2);
 let closure_11 = { code: "function DiceRollBarTsx1(){const{useReducedMotion,height,opacity,withTiming,ANIMATION_DURATION_MS,DECELERATED_EASING}=this.__closure;if(useReducedMotion){return{height:height.get(),opacity:opacity.get()};}return{height:withTiming(height.get(),{duration:ANIMATION_DURATION_MS,easing:DECELERATED_EASING}),opacity:withTiming(opacity.get(),{duration:ANIMATION_DURATION_MS,easing:DECELERATED_EASING})};}" };
@@ -26,7 +26,7 @@ let obj3 = { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, 
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/dice_roll/native/DiceRollBar.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function DiceRollBar(channelId) {
   const cResult = stateFromStores(sharedValue1[8]).c(30);
   closure_10();
   const tmp5 = useDiceRollState(channelId.channelId);
@@ -116,7 +116,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   tmp15 = items2;
   tmp14 = N;
   const tmpResult6 = stateFromStores(sharedValue1[10]);
-}) : ((channelId) => {
+}) : (function DiceRollBar(channelId) {
   let stateFromStores;
   let sharedValue1;
   let flag;

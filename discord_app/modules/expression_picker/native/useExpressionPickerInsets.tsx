@@ -1,10 +1,10 @@
-// === Module 10099: useExpressionPickerInsets ===
+// === Module 9683: useExpressionPickerInsets ===
 
-// Module 10099 (useExpressionPickerInsets)
+// Module 9683 (useExpressionPickerInsets)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6478 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6656 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/expression_picker/native/useExpressionPickerInsets.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((hasCategories) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useExpressionPickerInsets(hasCategories) {
   const cResult = c.c(6);
   const bottom = useSafeAreaInsetsDefault().bottom;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -48,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((hasCategories) =
   cResult[4] = sum1;
   cResult[5] = obj4;
   tmp8 = obj4;
-}) : ((hasCategories) => {
+}) : (function useExpressionPickerInsets(hasCategories) {
   const bottom = useSafeAreaInsetsDefault().bottom;
   const obj = { safeAreaStyle: null, safeAreaBottomKeyboardAware: null };
   const items = [bottom];

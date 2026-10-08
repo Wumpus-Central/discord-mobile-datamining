@@ -1,19 +1,19 @@
-// === Module 14602: AccountWebAuthnViewSetting ===
+// === Module 14863: AccountWebAuthnViewSetting ===
 
-// Module 14602 (AccountWebAuthnViewSetting)
+// Module 14863 (AccountWebAuthnViewSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5714 */;
-import WebAuthnActionCreators from "WebAuthnActionCreators" /* 6093 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5297 */;
+import WebAuthnActionCreators from "WebAuthnActionCreators" /* 5945 */;
 import noop from "module_19" /* 19 */;
-import WebAuthnStore from "WebAuthnStore" /* 14508 */;
-import UserStore from "UserStore" /* 1377 */;
+import WebAuthnStore from "WebAuthnStore" /* 14768 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 fn(558);
 const ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountCanUseWebAuthnView() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function t() {
@@ -41,27 +41,29 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     first = cResult[0];
   }
   return first;
-}) : (() => noop.useCallback(() => {
-  currentUser = currentUser.getCurrentUser();
-  let flag;
-  if (currentUser != null) {
-    flag = currentUser.verified;
-  }
-  if (flag == null) {
-    flag = false;
-  }
-  if (!flag) {
-    const obj2 = { title: null, body: null };
-    const intl = util.intl;
-    obj2.title = intl.string(util.t.v740sh);
-    const intl2 = util.intl;
-    obj2.body = intl2.string(util.t.uggF7o);
-    AlertActionCreatorsDefault.show(obj2);
-  }
-  return flag;
-}, []));
-const SettingBuilders = fn(11142);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+}) : (function useAccountCanUseWebAuthnView() {
+  return noop.useCallback(() => {
+    currentUser = currentUser.getCurrentUser();
+    let flag;
+    if (currentUser != null) {
+      flag = currentUser.verified;
+    }
+    if (flag == null) {
+      flag = false;
+    }
+    if (!flag) {
+      const obj2 = { title: null, body: null };
+      const intl = util.intl;
+      obj2.title = intl.string(util.t.v740sh);
+      const intl2 = util.intl;
+      obj2.body = intl2.string(util.t.uggF7o);
+      AlertActionCreatorsDefault.show(obj2);
+    }
+    return flag;
+  }, []);
+});
+const SettingBuilders = fn(11262);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountSecurityKeysSettingTrailing() {
   const cResult = c.c(2);
   if (!WebAuthnStore.hasFetchedCredentials()) {
     const webAuthnCredentials = WebAuthnActionCreators.fetchWebAuthnCredentials();
@@ -81,7 +83,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     [tmp6, tmp7] = cResult;
   }
   return initialize.useStateFromStores(tmp6, tmp7);
-}) : (() => {
+}) : (function useAccountSecurityKeysSettingTrailing() {
   if (!WebAuthnStore.hasFetchedCredentials()) {
     const webAuthnCredentials = WebAuthnActionCreators.fetchWebAuthnCredentials();
   }
@@ -96,9 +98,9 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.string(util.t["0N1s81"]);
   },
-  parent: fn(7645).MobileUserSettings.ACCOUNT,
+  parent: fn(7966).MobileUserSettings.ACCOUNT,
   usePreNavigationAction: tmp2,
-  useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountSecurityKeysSettingTrailing() {
     const cResult = c.c(2);
     if (!WebAuthnStore.hasFetchedCredentials()) {
       const webAuthnCredentials = WebAuthnActionCreators.fetchWebAuthnCredentials();
@@ -118,7 +120,7 @@ const route = SettingBuilders.createRoute({
       [tmp6, tmp7] = cResult;
     }
     return initialize.useStateFromStores(tmp6, tmp7);
-  }) : (() => {
+  }) : (function useAccountSecurityKeysSettingTrailing() {
     if (!WebAuthnStore.hasFetchedCredentials()) {
       const webAuthnCredentials = WebAuthnActionCreators.fetchWebAuthnCredentials();
     }

@@ -1,20 +1,20 @@
-// === Module 15087: AndroidMobileOverlaySetting ===
+// === Module 15349: AndroidMobileOverlaySetting ===
 
-// Module 15087 (AndroidMobileOverlaySetting)
+// Module 15349 (AndroidMobileOverlaySetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import MobileVoiceOverlayActionCreatorsDefault from "MobileVoiceOverlayActionCreators" /* 9684 */;
-import MobileVoiceOverlayStore from "MobileVoiceOverlayStore" /* 9671 */;
+import MobileVoiceOverlayActionCreatorsDefault from "MobileVoiceOverlayActionCreators" /* 10873 */;
+import MobileVoiceOverlayStore from "MobileVoiceOverlayStore" /* 10860 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11142);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const SettingBuilders = fn(11262);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAndroidMobileOverlaySettingValue() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [MobileVoiceOverlayStore];
-    const fn = function s() {
+    const fn = function o() {
       return enabled.getEnabled();
     };
     cResult[0] = items;
@@ -25,7 +25,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     [tmp4, tmp5] = cResult;
   }
   return initialize.useStateFromStores(tmp4, tmp5);
-}) : (() => {
+}) : (function useAndroidMobileOverlaySettingValue() {
   const items = [MobileVoiceOverlayStore];
   return initialize.useStateFromStores(items, () => enabled.getEnabled());
 });
@@ -34,12 +34,12 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t["9CSZJm"]);
   },
-  parent: fn(7645).MobileUserSettings.VOICE,
-  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  parent: fn(7966).MobileUserSettings.VOICE,
+  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useAndroidMobileOverlaySettingValue() {
     const cResult = c.c(2);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
       const items = [MobileVoiceOverlayStore];
-      const fn = function s() {
+      const fn = function o() {
         return enabled.getEnabled();
       };
       cResult[0] = items;
@@ -50,7 +50,7 @@ const toggle = SettingBuilders.createToggle({
       [tmp4, tmp5] = cResult;
     }
     return initialize.useStateFromStores(tmp4, tmp5);
-  }) : (() => {
+  }) : (function useAndroidMobileOverlaySettingValue() {
     const items = [MobileVoiceOverlayStore];
     return initialize.useStateFromStores(items, () => enabled.getEnabled());
   }),
@@ -59,7 +59,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.Wfoivk);
   },
-  usePredicate: fn(9671).isMobileOverlaySupported
+  usePredicate: fn(10860).isMobileOverlaySupported
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AndroidMobileOverlaySetting.tsx");

@@ -1,14 +1,14 @@
-// === Module 8989: oauth2/Header ===
+// === Module 12889: oauth2/Header ===
 
-// Module 8989 (oauth2/Header)
+// Module 12889 (oauth2/Header)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import FlagUtils from "FlagUtils" /* 1390 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import BotTagDefault from "BotTag" /* 8990 */;
+import native from "native" /* 1200 */;
+import FlagUtils from "FlagUtils" /* 1402 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import BotTagDefault from "BotTag" /* 8741 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const View = fn(17).View;
 const UserFlags = fn(1085).UserFlags;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { header: { paddingBottom: 16, marginHorizontal: 16, borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm, flexDirection: "column", justifyContent: "center", alignItems: "center" }, applicationNameWrapper: { flexDirection: "row" }, headerIcons: { alignItems: "center", flexDirection: "row", justifyContent: "space-between", marginBottom: 24 }, ellipseGroup: { flexDirection: "row", justifyContent: "space-between", marginHorizontal: 24 }, ellipse: null, botTag: null };
 let size = { width: 4, height: 4, marginHorizontal: 2, backgroundColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, opacity: 0.1, borderRadius: 2 };
 obj2.ellipse = size;
@@ -27,7 +27,7 @@ let obj3 = { paddingBottom: 16, marginHorizontal: 16, borderTopLeftRadius: nativ
 size = fn(2);
 const result = size.fileFinishedImporting("modules/oauth2/native/Header.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function Header(arg0) {
   const cResult = c.c(41);
   ({ user, application, accountScopes, bot } = arg0);
   const tmp4 = closure_7();
@@ -215,7 +215,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = applicationIconSource;
   tmp5 = applicationIconSource;
   const obj16 = { id: application.id, icon: application.icon };
-}) : ((accountScopes) => {
+}) : (function Header(accountScopes) {
   ({ user, application, bot } = accountScopes);
   const tmp = closure_7();
   let userAvatarSource;

@@ -1,8 +1,8 @@
-// === Module 16907: SearchFetchPendingManager ===
+// === Module 17188: SearchFetchPendingManager ===
 
-// Module 16907 (SearchFetchPendingManager)
-import useInitialValueDefault from "useInitialValue" /* 5991 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 11980 */;
+// Module 17188 (SearchFetchPendingManager)
+import useInitialValueDefault from "useInitialValue" /* 6174 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12053 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -40,7 +40,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/messages/SearchFetchPendingManager.tsx");
 
-export const useSearchFetchPendingManager = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useSearchFetchPendingManager = ReactCompilerGating.isReactCompilerEnabled() ? (function useSearchFetchPendingManager(arg0) {
   _require = arg0;
   const cResult = require("c").c(5);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -108,7 +108,7 @@ export const useSearchFetchPendingManager = ReactCompilerGating.isReactCompilerE
   tmp6 = items;
   tmp5 = fn2;
   let obj = require("c");
-}) : ((arg0) => {
+}) : (function useSearchFetchPendingManager(arg0) {
   closure_0 = arg0;
   const tmp = useInitialValueDefault(() => {
     if (typeof closure_4 === "function") {

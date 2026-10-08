@@ -1,8 +1,8 @@
-// === Module 11002: useBotProfileCommands ===
+// === Module 11227: useBotProfileCommands ===
 
-// Module 11002 (useBotProfileCommands)
+// Module 11227 (useBotProfileCommands)
 import c from "c" /* 576 */;
-import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 8968 */;
+import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 9759 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -10,7 +10,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/useBotProfileCommands.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useBotProfileCommands(arg0, arg1, arg2) {
   const cResult = c.c(5);
   const accessibleCommandsForApplication = ApplicationCommandQueryApiAll.useAccessibleCommandsForApplication(arg0, arg1, arg2);
   ({ commands, application } = accessibleCommandsForApplication);
@@ -50,7 +50,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
   cResult[3] = tmp3;
   cResult[4] = obj3;
   tmp6 = obj3;
-}) : ((arg0, arg1, arg2) => {
+}) : (function useBotProfileCommands(arg0, arg1, arg2) {
   const accessibleCommandsForApplication = ApplicationCommandQueryApiAll.useAccessibleCommandsForApplication(arg0, arg1, arg2);
   const commands = accessibleCommandsForApplication.commands;
   const obj2 = { application: accessibleCommandsForApplication.application, commands: null };

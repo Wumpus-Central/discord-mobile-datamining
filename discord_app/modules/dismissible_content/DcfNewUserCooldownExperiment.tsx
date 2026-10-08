@@ -1,9 +1,9 @@
-// === Module 4727: DcfNewUserCooldownExperiment ===
+// === Module 4921: DcfNewUserCooldownExperiment ===
 
-// Module 4727 (DcfNewUserCooldownExperiment)
+// Module 4921 (DcfNewUserCooldownExperiment)
 import c from "c" /* 576 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import ApexExperiment from "ApexExperiment" /* 1440 */;
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -20,7 +20,7 @@ let closure_2 = ApexExperiment.createApexExperiment(obj);
 const obj6 = { newUserCooldownMs: 7 * DurationsDefault.Millis.DAY };
 const result = size.fileFinishedImporting("modules/dismissible_content/DcfNewUserCooldownExperiment.tsx");
 
-export const useDcfNewUserCooldown = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useDcfNewUserCooldown = ReactCompilerGating.isReactCompilerEnabled() ? (function useDcfNewUserCooldown() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { location: "useDcfNewUserCooldown" };
@@ -30,7 +30,9 @@ export const useDcfNewUserCooldown = ReactCompilerGating.isReactCompilerEnabled(
     first = cResult[0];
   }
   return closure_2.useConfig(first).newUserCooldownMs;
-}) : (() => closure_2.useConfig({ location: "useDcfNewUserCooldown" }).newUserCooldownMs);
+}) : (function useDcfNewUserCooldown() {
+  return closure_2.useConfig({ location: "useDcfNewUserCooldown" }).newUserCooldownMs;
+});
 export const getDcfNewUserCooldown = function getDcfNewUserCooldown() {
   return closure_2.getConfig({ location: "getDcfNewUserCooldown" }).newUserCooldownMs;
 };

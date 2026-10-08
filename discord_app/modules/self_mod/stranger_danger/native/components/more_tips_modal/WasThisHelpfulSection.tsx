@@ -1,26 +1,26 @@
-// === Module 9822: WasThisHelpfulSection ===
+// === Module 10385: WasThisHelpfulSection ===
 
-// Module 9822 (WasThisHelpfulSection)
+// Module 10385 (WasThisHelpfulSection)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4574 */;
-import DesignSystemsNotificationComponentsExperiment from "DesignSystemsNotificationComponentsExperiment" /* 4580 */;
-import _modDef8951 from "module_8951" /* 8951 */;
-import ShieldIcon from "ShieldIcon" /* 8952 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 9811 */;
-import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 9812 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4766 */;
+import DesignSystemsNotificationComponentsExperiment from "DesignSystemsNotificationComponentsExperiment" /* 4772 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 10374 */;
+import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 10375 */;
+import ShieldIcon from "ShieldIcon" /* 10386 */;
+import _modDef10387 from "module_10387" /* 10387 */;
 import noop from "module_19" /* 19 */;
-import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 9799 */;
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10266 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const constants = fn(9799).SafetyWarningFeedbackTypes;
-const Constants = fn(9797);
+const constants = fn(10266).SafetyWarningFeedbackTypes;
+const Constants = fn(10361);
 ({ DOWNVOTE_FEEDBACK_CONFIRMATION_TOAST_KEY: closure_8, TOAST_SHIELD_ICON_COLOR: closure_9, UPVOTE_FEEDBACK_CONFIRMATION_TOAST_KEY: c10, FEEDBACK_BUTTON_ACTIVE_BACKGROUND_COLOR } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { flexDirection: "column", alignItems: "center" }, buttonsContainer: { flexDirection: "row", marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 }, buttonsBackground: null, buttonsBackgroundInactive: null, buttonsBackgroundActive: null, buttonIconInactive: null, buttonIconActive: null, toastContainer: null };
 let size = { width: nativeDefault.space.PX_32, height: nativeDefault.space.PX_32, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center" };
 obj2.buttonsBackground = size;
@@ -39,7 +39,7 @@ let obj7 = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/self_mod/stranger_danger/native/components/more_tips_modal/WasThisHelpfulSection.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function WasThisHelpfulSection(channelId) {
   const cResult = channelId(senderId[8]).c(44);
   channelId = channelId.channelId;
   const warningId = channelId.warningId;
@@ -160,7 +160,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
                 }
               }
               let obj5 = { style: tmp19, disabled: tmp17, onPress: L, accessibilityLabel: tmp21, children: tmp24 };
-              class S {
+              class A {
                 constructor(arg0, arg1) {
                   tmp = closure_0;
                   tmp2 = closure_2;
@@ -214,7 +214,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
             const items1 = [tmp4.buttonsBackground, tmp18];
             cResult[11] = tmp4.buttonsBackground;
             cResult[12] = tmp18;
-            class S {
+            class A {
               constructor(arg0, arg1) {
                 tmp = closure_0;
                 tmp2 = closure_2;
@@ -273,7 +273,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
         }
       }
     }
-    class S {
+    class A {
       constructor(arg0, arg1) {
         tmp = closure_0;
         tmp2 = closure_2;
@@ -322,8 +322,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
     cResult[6] = senderId;
     cResult[7] = tmp4.toastContainer;
     cResult[8] = warningId;
-    cResult[9] = S;
-    tmp12 = S;
+    cResult[9] = A;
+    tmp12 = A;
     let tmpResult = tmp(tmp2[9]);
   }
   const fn = function u() {
@@ -334,7 +334,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   cResult[3] = fn;
   tmp7 = fn;
   let obj = channelId(senderId[8]);
-}) : ((channelId) => {
+}) : (function WasThisHelpfulSection(channelId) {
   channelId = channelId.channelId;
   const warningId = channelId.warningId;
   const senderId = channelId.senderId;
@@ -361,7 +361,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   const items3 = [channelId, warningId, tmp.toastContainer, senderId, stateFromStores];
   closure_5 = noop.useCallback((feedbackType, cta) => {
     const result = ChannelSafetyWarningsActionCreators.setChannelSafetyWarningFeedback(channelId, warningId, feedbackType);
-    const tmp6 = feedbackType === constants.UPVOTE ? v65535 : closure_2_8;
+    const tmp6 = feedbackType === constants.UPVOTE ? collapsed : closure_2_8;
     const designSystemsNotificationComponents = DesignSystemsNotificationComponentsExperiment.getDesignSystemsNotificationComponents("WasThisHelpfulSectionNative");
     const obj3 = ToastActionCreatorsDefault;
     if (designSystemsNotificationComponents) {
@@ -375,7 +375,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
       const obj4 = { key: tmp6, content: null, icon: null, IconComponent: null, iconColor: null, containerStyle: null, recolorLegacyIcon: true };
       const intl = util.intl;
       obj4.content = intl.string(util.t["gd/Yqs"]);
-      obj4.icon = _modDef8951;
+      obj4.icon = _modDef10387;
       obj4.IconComponent = ShieldIcon.ShieldIcon;
       obj4.iconColor = iconColor;
       obj4.containerStyle = toastContainer.toastContainer;

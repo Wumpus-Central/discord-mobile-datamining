@@ -1,23 +1,23 @@
-// === Module 5972: MemberVerificationModalHooks ===
+// === Module 6155: MemberVerificationModalHooks ===
 
-// Module 5972 (MemberVerificationModalHooks)
+// Module 6155 (MemberVerificationModalHooks)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
-import InitialMemberVerificationStore from "InitialMemberVerificationStore" /* 5973 */;
+import UserStore from "UserStore" /* 1389 */;
+import InitialMemberVerificationStore from "InitialMemberVerificationStore" /* 6156 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const setInitialVerification = fn(5973).setInitialVerification;
+const setInitialVerification = fn(6156).setInitialVerification;
 fn(558);
 let ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useUserVerificationState() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
-    const fn = function o() {
+    const fn = function c() {
       currentUser = currentUser.getCurrentUser();
       let flag;
       if (currentUser != null) {
@@ -46,7 +46,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     [tmp4, tmp5] = cResult;
   }
   return initialize.useStateFromStoresObject(tmp4, tmp5);
-}) : (() => {
+}) : (function useUserVerificationState() {
   const items = [UserStore];
   return initialize.useStateFromStoresObject(items, () => {
     currentUser = currentUser.getCurrentUser();
@@ -72,7 +72,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
 });
 let closure_6 = tmp3;
 ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useInitialVerification(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -83,7 +83,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function c() {
+    const fn = function o() {
       return InitialMemberVerificationStore.getInitialVerificationState(closure_0);
     };
     const items1 = [arg0];
@@ -98,7 +98,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp6, tmp7);
-}) : ((arg0) => {
+}) : (function useInitialVerification(arg0) {
   _require = arg0;
   const items = [InitialMemberVerificationStore];
   const items1 = [arg0];
@@ -108,7 +108,7 @@ let closure_7 = tmp4;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/native/MemberVerificationModalHooks.tsx");
 
-export const useSetInitialVerificationEffect = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useSetInitialVerificationEffect = ReactCompilerGating.isReactCompilerEnabled() ? (function useSetInitialVerificationEffect(arg0) {
   _require = arg0;
   const cResult = require("c").c(8);
   const tmp2 = closure_7(arg0);
@@ -138,35 +138,27 @@ export const useSetInitialVerificationEffect = ReactCompilerGating.isReactCompil
     }
     const effect = obj3.useEffect(S);
     if (cResult[5] !== arg0) {
-      class V {
+      class S {
         constructor() {
-          if (null == closure_2.current.initial) {
-            tmp2 = setInitialVerification;
-            tmp3 = closure_0;
-            tmp4 = setInitialVerification(closure_0, tmp);
-          }
+          closure_2.current = closure_1;
           return;
         }
       }
       const items = [arg0];
       cResult[5] = arg0;
-      cResult[6] = V;
+      cResult[6] = tmp9;
       cResult[7] = items;
       let tmp8 = items;
     } else {
-      class V {
+      class S {
         constructor() {
-          if (null == closure_2.current.initial) {
-            tmp2 = setInitialVerification;
-            tmp3 = closure_0;
-            tmp4 = setInitialVerification(closure_0, tmp);
-          }
+          closure_2.current = closure_1;
           return;
         }
       }
       tmp8 = cResult[7];
     }
-    const effect1 = obj3.useEffect(V, tmp8);
+    const effect1 = obj3.useEffect(tmp9, tmp8);
     return tmp4.initial;
   }
   const obj2 = { initial: tmp2, current: tmp3 };
@@ -175,7 +167,7 @@ export const useSetInitialVerificationEffect = ReactCompilerGating.isReactCompil
   cResult[2] = obj2;
   tmp4 = obj2;
   const obj = require("c");
-}) : ((arg0) => {
+}) : (function useSetInitialVerificationEffect(arg0) {
   closure_0 = arg0;
   const current = { initial: closure_7(arg0), current: closure_6() };
   noop = noop.useRef(current);

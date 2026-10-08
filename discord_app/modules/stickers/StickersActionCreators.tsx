@@ -1,16 +1,16 @@
-// === Module 10125: StickersActionCreators ===
+// === Module 9710: StickersActionCreators ===
 
-// Module 10125 (StickersActionCreators)
+// Module 9710 (StickersActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1126 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5714 */;
-import InlineUploaderDefault from "InlineUploader" /* 6485 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5297 */;
+import InlineUploaderDefault from "InlineUploader" /* 6663 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5443 */;
-import LocaleStore from "LocaleStore" /* 2116 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5625 */;
-import UserStore from "UserStore" /* 1377 */;
-import StickersStore from "StickersStore" /* 5694 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5753 */;
+import LocaleStore from "LocaleStore" /* 2128 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5970 */;
+import UserStore from "UserStore" /* 1389 */;
+import StickersStore from "StickersStore" /* 6035 */;
 
 const require = globalThis.__r;
 
@@ -458,7 +458,7 @@ export const favoriteSticker = function favoriteSticker(arg0) {
       tmp = found;
     }
     stickerIds.stickerIds = tmp;
-    if (obj.size(stickerIds.stickerIds) >= v65535) {
+    if (obj.size(stickerIds.stickerIds) >= collapsed) {
       const obj2 = { title: null, body: null };
       const intl = util.intl;
       obj2.title = intl.string(util.t["+XYXtZ"]);

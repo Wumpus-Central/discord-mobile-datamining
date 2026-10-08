@@ -1,18 +1,18 @@
-// === Module 6727: AgeRestrictedContentSettingsUtils ===
+// === Module 6903: AgeRestrictedContentSettingsUtils ===
 
-// Module 6727 (AgeRestrictedContentSettingsUtils)
+// Module 6903 (AgeRestrictedContentSettingsUtils)
 import c from "c" /* 576 */;
-import UserSettings from "UserSettings" /* 2028 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 5108 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5587 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 5588 */;
-import useNSFWAllowed from "useNSFWAllowed" /* 6728 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserSettings from "UserSettings" /* 2040 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 5905 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 5917 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5918 */;
+import useNSFWAllowed from "useNSFWAllowed" /* 6904 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 fn(558);
 const ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useViewNsfwCommandsOrDefault() {
   const cResult = c.c(5);
   const ViewNsfwCommands = UserSettings.ViewNsfwCommands;
   const setting = ViewNsfwCommands.useSetting();
@@ -51,7 +51,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[3] = nSFWAllowed;
   cResult[4] = tmp8;
   tmp6 = tmp8;
-}) : (() => {
+}) : (function useViewNsfwCommandsOrDefault() {
   const ViewNsfwCommands = UserSettings.ViewNsfwCommands;
   let flag = ViewNsfwCommands.useSetting();
   const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
@@ -94,7 +94,7 @@ const result = size.fileFinishedImporting("modules/user_settings/content_and_soc
 
 export { resolveNsfwTogglesWithDefaults };
 export const useViewNsfwCommandsOrDefault = tmp2;
-export const useViewNsfwGuildsOrDefault = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useViewNsfwGuildsOrDefault = ReactCompilerGating.isReactCompilerEnabled() ? (function useViewNsfwGuildsOrDefault() {
   const cResult = c.c(5);
   const ViewNsfwGuilds = UserSettings.ViewNsfwGuilds;
   const setting = ViewNsfwGuilds.useSetting();
@@ -133,7 +133,7 @@ export const useViewNsfwGuildsOrDefault = ReactCompilerGating.isReactCompilerEna
   cResult[3] = nSFWAllowed;
   cResult[4] = tmp8;
   tmp6 = tmp8;
-}) : (() => {
+}) : (function useViewNsfwGuildsOrDefault() {
   const ViewNsfwGuilds = UserSettings.ViewNsfwGuilds;
   let flag = ViewNsfwGuilds.useSetting();
   const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();

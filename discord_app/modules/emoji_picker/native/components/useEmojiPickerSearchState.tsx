@@ -1,9 +1,9 @@
-// === Module 9890: useEmojiPickerSearchState ===
+// === Module 9370: useEmojiPickerSearchState ===
 
-// Module 9890 (useEmojiPickerSearchState)
+// Module 9370 (useEmojiPickerSearchState)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 5645 */;
+import EmojiStore from "EmojiStore" /* 5992 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/emoji_picker/native/components/useEmojiPickerSearchState.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel, arg1, intention, bypassPremiumEmojiEntitlement) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useEmojiPickerSearchState(channel, arg1, intention, bypassPremiumEmojiEntitlement) {
   _require = channel;
   dependencyMap = arg1;
   _slicedToArray = intention;
@@ -48,22 +48,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel, arg1, i
       if (":" === arr[0]) {
         substr = arr.slice(1);
       }
-      const FrecencyUserSettingsActionCreators = channel(2033).FrecencyUserSettingsActionCreators;
+      const FrecencyUserSettingsActionCreators = channel(2045).FrecencyUserSettingsActionCreators;
       const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
       const obj2 = { channel, query: substr, count: 0, intention, bypassPremiumEmojiEntitlement };
       dependencyMap = ref.searchWithoutFetchingLatest(obj2);
-      channel(1259).batchUpdates(() => {
+      channel(1271).batchUpdates(() => {
         ref.current = current;
         closure_2_5(closure_1);
       });
-      const obj3 = channel(1259);
+      const obj3 = channel(1271);
     } else {
-      channel(1259).batchUpdates(() => {
+      channel(1271).batchUpdates(() => {
         ref.current = "";
         closure_1_5(null);
         const result = closure_1.set(0);
       });
-      const obj = channel(1259);
+      const obj = channel(1271);
     }
   };
   cResult[0] = bypassPremiumEmojiEntitlement;
@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel, arg1, i
   cResult[3] = intention;
   cResult[4] = fn;
   tmp5 = fn;
-}) : ((channel, arg1, intention, bypassPremiumEmojiEntitlement) => {
+}) : (function useEmojiPickerSearchState(channel, arg1, intention, bypassPremiumEmojiEntitlement) {
   dependencyMap = arg1;
   _slicedToArray = intention;
   noop = bypassPremiumEmojiEntitlement;
@@ -88,22 +88,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel, arg1, i
       if (":" === arr[0]) {
         substr = arr.slice(1);
       }
-      const FrecencyUserSettingsActionCreators = channel(2033).FrecencyUserSettingsActionCreators;
+      const FrecencyUserSettingsActionCreators = channel(2045).FrecencyUserSettingsActionCreators;
       const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
       const obj2 = { channel, query: substr, count: 0, intention, bypassPremiumEmojiEntitlement };
       dependencyMap = ref.searchWithoutFetchingLatest(obj2);
-      channel(1259).batchUpdates(() => {
+      channel(1271).batchUpdates(() => {
         ref.current = current;
         closure_5(closure_1);
       });
-      const obj3 = channel(1259);
+      const obj3 = channel(1271);
     } else {
-      channel(1259).batchUpdates(() => {
+      channel(1271).batchUpdates(() => {
         ref.current = "";
         closure_1_5(null);
         const result = closure_1.set(0);
       });
-      const obj = channel(1259);
+      const obj = channel(1271);
     }
   }, items);
   return obj;

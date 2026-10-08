@@ -1,10 +1,10 @@
-// === Module 16940: ChannelDetailsTopicGradient ===
+// === Module 17221: ChannelDetailsTopicGradient ===
 
-// Module 16940 (ChannelDetailsTopicGradient)
+// Module 17221 (ChannelDetailsTopicGradient)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
-import useToken from "useToken" /* 4586 */;
+import useToken from "useToken" /* 4778 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsTopicGradient.tsx");
 
-export const useChannelTopicGradientBackground = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useChannelTopicGradientBackground = ReactCompilerGating.isReactCompilerEnabled() ? (function useChannelTopicGradientBackground() {
   const cResult = c.c(5);
   const token = useToken.useToken(nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
   if (cResult[0] !== token) {
@@ -36,8 +36,8 @@ export const useChannelTopicGradientBackground = ReactCompilerGating.isReactComp
   cResult[3] = tmp5;
   cResult[4] = items;
   tmp7 = items;
-}) : (() => {
-  token = token(4586).useToken(nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
+}) : (function useChannelTopicGradientBackground() {
+  token = token(4778).useToken(nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
   let items = [token];
   return noop.useMemo(() => {
     const obj = _modDef683(token);

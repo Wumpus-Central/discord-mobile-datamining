@@ -1,16 +1,16 @@
-// === Module 9426: GuildProfileLoadingError ===
+// === Module 9090: GuildProfileLoadingError ===
 
-// Module 9426 (GuildProfileLoadingError)
+// Module 9090 (GuildProfileLoadingError)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import useToken from "useToken" /* 4586 */;
-import useThemeDefault from "useTheme" /* 4797 */;
-import WarningIcon from "WarningIcon" /* 4809 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import LinearGradientDefault from "LinearGradient" /* 5612 */;
-import Pressables from "Pressables" /* 5916 */;
-import GuildProfileView from "GuildProfileView" /* 9413 */;
+import useToken from "useToken" /* 4778 */;
+import useThemeDefault from "useTheme" /* 4991 */;
+import WarningIcon from "WarningIcon" /* 5003 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import LinearGradientDefault from "LinearGradient" /* 5387 */;
+import Pressables from "Pressables" /* 6189 */;
+import GuildProfileView from "GuildProfileView" /* 8834 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,7 +21,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_profile/native/components/GuildProfileLoadingError.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onRetry) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildProfileLoadingError(onRetry) {
   const cResult = c.c(30);
   onRetry = onRetry.onRetry;
   const styles = GuildProfileView.useStyles();
@@ -172,7 +172,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onRetry) => {
   cResult[2] = backgroundForProfile;
   tmp10 = backgroundForProfile;
   const tmpResult = GuildProfileView;
-}) : ((onPress) => {
+}) : (function GuildProfileLoadingError(onPress) {
   const styles = GuildProfileView.useStyles();
   const tmp2 = useThemeDefault();
   const obj3 = { style: styles.container, children: null };

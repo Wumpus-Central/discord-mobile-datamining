@@ -1,9 +1,9 @@
-// === Module 10028: DiscordAppState ===
+// === Module 6076: DiscordAppState ===
 
-// Module 10028 (DiscordAppState)
+// Module 6076 (DiscordAppState)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import AppStateStore from "AppStateStore" /* 1986 */;
+import AppStateStore from "AppStateStore" /* 1998 */;
 
 require = fn;
 let obj = {
@@ -16,7 +16,7 @@ let obj = {
   useCanUIRequestGatewaySocket: null
 };
 const ReactCompilerGating = fn(558);
-obj.useCanUIRequestGatewaySocket = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+obj.useCanUIRequestGatewaySocket = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanUIRequestGatewaySocket() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AppStateStore];
@@ -31,7 +31,7 @@ obj.useCanUIRequestGatewaySocket = ReactCompilerGating.isReactCompilerEnabled() 
     [tmp4, tmp5] = cResult;
   }
   return initialize.useStateFromStores(tmp4, tmp5);
-}) : (() => {
+}) : (function useCanUIRequestGatewaySocket() {
   const items = [AppStateStore];
   return initialize.useStateFromStores(items, () => "active" === state.getState());
 });

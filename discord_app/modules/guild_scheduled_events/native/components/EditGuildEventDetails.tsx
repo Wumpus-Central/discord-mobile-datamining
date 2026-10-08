@@ -1,11 +1,11 @@
-// === Module 9291: EditGuildEventDetails ===
+// === Module 8622: EditGuildEventDetails ===
 
-// Module 9291 (EditGuildEventDetails)
+// Module 8622 (EditGuildEventDetails)
 import util from "util" /* 1126 */;
-import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1881 */;
-import _modDef4467 from "module_4467" /* 4467 */;
-import ScheduleUtils from "ScheduleUtils" /* 9198 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 9214 */;
+import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1893 */;
+import _modDef4659 from "module_4659" /* 4659 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 8495 */;
+import ScheduleUtils from "ScheduleUtils" /* 8496 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,17 +20,17 @@ function assertGuildEventDetailsValid(guildEvent) {
     throw error;
   }
 }
-let closure_6 = fn(7050).isGuildScheduledEventActive;
-let constants = fn(2057).GuildScheduledEventEntityTypes;
+let closure_6 = fn(6059).isGuildScheduledEventActive;
+let constants = fn(2069).GuildScheduledEventEntityTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_11 = createStyles.createStyles({ error: { paddingVertical: 8 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventDetails.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildEvent) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditGuildEventDetails(guildEvent) {
   const cResult = guildEvent(scheduledEndTime[8]).c(75);
   guildEvent = guildEvent.guildEvent;
   ({ initialGuildEvent, onChange } = guildEvent);
@@ -110,13 +110,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildEvent) => {
             let tmp35 = cResult[17];
           }
           if (cResult[18] !== onChange) {
-            const fn2 = function $(arg0) {
+            function handleChangeEvent(arg0) {
               closure_1_11(null);
               onChange(arg0);
-            };
+            }
             cResult[18] = onChange;
-            cResult[19] = fn2;
-            let tmp36 = fn2;
+            cResult[19] = handleChangeEvent;
+            let tmp36 = handleChangeEvent;
           } else {
             tmp36 = cResult[19];
           }
@@ -129,12 +129,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildEvent) => {
                     let tmp37 = cResult[25];
                   }
                   if (cResult[26] !== tmp36) {
-                    function ie(toISOString) {
+                    function handleChangeEventEndTime(toISOString) {
                       closure_13({ scheduledEndTime: toISOString.toISOString() });
                     }
                     cResult[26] = tmp36;
-                    cResult[27] = ie;
-                    let tmp38 = ie;
+                    cResult[27] = handleChangeEventEndTime;
+                    let tmp38 = handleChangeEventEndTime;
                   } else {
                     tmp38 = cResult[27];
                   }
@@ -165,7 +165,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildEvent) => {
                           }
                           const _Symbol5 = Symbol;
                           if (cResult[41] === Symbol.for("react.memo_cache_sentinel")) {
-                            function ve() {
+                            function onFocus() {
                               const timerId = setTimeout(() => {
                                 if (null != ref.current) {
                                   const current = ref.current;
@@ -173,8 +173,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildEvent) => {
                                 }
                               }, 100);
                             }
-                            cResult[41] = ve;
-                            let tmp52 = ve;
+                            cResult[41] = onFocus;
+                            let tmp52 = onFocus;
                           } else {
                             tmp52 = cResult[41];
                           }
@@ -193,12 +193,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildEvent) => {
                             tmp53 = cResult[42];
                           }
                           if (cResult[43] !== tmp36) {
-                            function he(name) {
+                            function ge(name) {
                               return closure_13({ name });
                             }
                             cResult[43] = tmp36;
-                            cResult[44] = he;
-                            let tmp58 = he;
+                            cResult[44] = ge;
+                            let tmp58 = ge;
                           } else {
                             tmp58 = cResult[44];
                           }
@@ -370,7 +370,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildEvent) => {
                     cResult[33] = tmp41;
                     tmp40 = tmp41;
                   }
-                  function le(c7) {
+                  function handleRecurrenceChange(c7) {
                     if (null != closure_5) {
                       const obj2 = { recurrenceRule: ScheduleUtils.recurrenceOptionToRecurrenceRule(c7, tmp) };
                       onChange(obj2);
@@ -379,13 +379,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildEvent) => {
                   }
                   cResult[28] = onChange;
                   cResult[29] = tmp5;
-                  cResult[30] = le;
-                  tmp39 = le;
+                  cResult[30] = handleRecurrenceChange;
+                  tmp39 = handleRecurrenceChange;
                 }
               }
             }
           }
-          function ne(toISOString) {
+          function handleChangeEventStartTime(toISOString) {
             if (closure_10) {
               const intl = util.intl;
               return closure_1_11(intl.string(util.t.nKIaRG));
@@ -396,9 +396,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildEvent) => {
                 isBeforeResult = before.isBefore(toISOString);
               }
               if (isBeforeResult) {
-                const obj2 = _modDef4467(toISOString);
-                obj.scheduledEndTime = _modDef4467(toISOString).add(1, "hour").toISOString();
-                const addResult = _modDef4467(toISOString).add(1, "hour");
+                const obj2 = _modDef4659(toISOString);
+                obj.scheduledEndTime = _modDef4659(toISOString).add(1, "hour").toISOString();
+                const addResult = _modDef4659(toISOString).add(1, "hour");
               }
               let tmp8 = null != toISOString;
               if (tmp8) {
@@ -415,44 +415,29 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildEvent) => {
           cResult[22] = tmp29;
           cResult[23] = first;
           cResult[24] = scheduledEndTime;
-          cResult[25] = ne;
-          tmp37 = ne;
+          cResult[25] = handleChangeEventStartTime;
+          tmp37 = handleChangeEventStartTime;
         }
-        class Y {
-          constructor() {
-            tmp3 = closure_3;
-            obj = closure_2(closure_3[12]);
-            result = obj.dismissGlobalKeyboard();
-            try {
-              tmp5 = closure_11;
-              tmp6 = null;
-              tmp7 = closure_11(null);
-              tmp8 = assertGuildEventDetailsValid;
-              tmp9 = guildEvent;
-              num = 0;
-              tmp10 = assertGuildEventDetailsValid(guildEvent);
-              tmp11 = closure_12;
-              tmp12 = closure_0;
-              navigateResult = closure_12.navigate(closure_0(tmp3[13]).EditGuildEventScreens.PREVIEW);
-              return;
-            } catch (tmp14) {
-              tmp15 = closure_11;
-              tmp16 = closure_11(tmp14.message);
-              tmp17 = closure_0;
-              AccessibilityAnnouncer = closure_0(tmp2[14]).AccessibilityAnnouncer;
-              announceResult = AccessibilityAnnouncer.announce(tmp14.message);
-            }
-            return;
+        function handleNext() {
+          const result = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
+          try {
+            closure_1_11(null);
+            assertGuildEventDetailsValid(guildEvent);
+            navigation.navigate(EditGuildEventUtils.EditGuildEventScreens.PREVIEW);
+          } catch (tmp14) {
+            closure_1_11(tmp14.message);
+            const AccessibilityAnnouncer = require("AccessibilityAnnouncer").AccessibilityAnnouncer;
+            AccessibilityAnnouncer.announce(tmp14.message);
           }
         }
         cResult[15] = guildEvent;
         cResult[16] = navigation;
-        cResult[17] = Y;
-        tmp35 = Y;
+        cResult[17] = handleNext;
+        tmp35 = handleNext;
         const tmpResult = tmp(tmp2[11]);
       }
       const fn = function x() {
-        return ScheduleUtils.recurrenceRuleToOption(_modDef4467(scheduledStartTime), recurrenceRule);
+        return ScheduleUtils.recurrenceRuleToOption(_modDef4659(scheduledStartTime), recurrenceRule);
       };
       cResult[5] = recurrenceRule;
       cResult[6] = scheduledStartTime;
@@ -482,7 +467,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildEvent) => {
   cResult[3] = scheduledStartTime;
   cResult[4] = addResult3;
   let obj = guildEvent(scheduledEndTime[8]);
-}) : ((guildEvent) => {
+}) : (function EditGuildEventDetails(guildEvent) {
   guildEvent = guildEvent.guildEvent;
   const onChange = guildEvent.onChange;
   scheduledStartTime = undefined;
@@ -495,28 +480,28 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildEvent) => {
   const recurrenceRule = guildEvent.recurrenceRule;
   const items = [scheduledStartTime];
   ({ name, entityType } = guildEvent);
-  memo = memo.useMemo(() => _modDef4467(scheduledStartTime), items);
+  memo = memo.useMemo(() => _modDef4659(scheduledStartTime), items);
   const items1 = [scheduledEndTime, scheduledStartTime];
   const memo1 = memo.useMemo(() => {
     if (null != scheduledEndTime) {
-      let addResult = _modDef4467(tmp);
+      let addResult = _modDef4659(tmp);
     } else {
-      addResult = _modDef4467(scheduledStartTime).add(1, "hour");
-      const obj = _modDef4467(scheduledStartTime);
+      addResult = _modDef4659(scheduledStartTime).add(1, "hour");
+      const obj = _modDef4659(scheduledStartTime);
     }
     return addResult;
   }, items1);
   const tmp = c11();
-  [c7, c8] = recurrenceRule(memo.useState(() => ScheduleUtils.recurrenceRuleToOption(_modDef4467(scheduledStartTime), recurrenceRule)), 2);
+  [c7, c8] = recurrenceRule(memo.useState(() => ScheduleUtils.recurrenceRuleToOption(_modDef4659(scheduledStartTime), recurrenceRule)), 2);
   const memo2 = memo.useMemo(() => onChange(scheduledEndTime[9])(), []);
   const items2 = [memo];
   const memo3 = memo.useMemo(() => onChange(scheduledEndTime[9])().add(guildEvent(scheduledEndTime[10]).MAX_DAYS_AHEAD_AN_EVENT_CAN_START, "days"), []);
-  const memo4 = memo.useMemo(() => _modDef4467(memo).add(15, "minutes"), items2);
+  const memo4 = memo.useMemo(() => _modDef4659(memo).add(15, "minutes"), items2);
   const memo5 = memo.useMemo(() => onChange(scheduledEndTime[9])().add(guildEvent(scheduledEndTime[10]).MAX_DAYS_AHEAD_AN_EVENT_CAN_END, "days"), []);
   const ref = memo.useRef(null);
   const tmp10 = memo1(guildEvent.initialGuildEvent);
   closure_10 = tmp10;
-  const tmp4 = recurrenceRule(memo.useState(() => ScheduleUtils.recurrenceRuleToOption(_modDef4467(scheduledStartTime), recurrenceRule)), 2);
+  const tmp4 = recurrenceRule(memo.useState(() => ScheduleUtils.recurrenceRuleToOption(_modDef4659(scheduledStartTime), recurrenceRule)), 2);
   [tmp12, c11] = recurrenceRule(memo.useState(null), 2);
   const tmp11 = recurrenceRule(memo.useState(null), 2);
   const navigation = guildEvent(scheduledEndTime[11]).useNavigation();
@@ -530,7 +515,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildEvent) => {
   let obj4 = { text: null, variant: "primary", onPress: null, disabled: null };
   let intl = tmp13(tmp14[6]).intl;
   obj4.text = intl.string(guildEvent(scheduledEndTime[6]).t.PDTjLN);
-  obj4.onPress = function onPress() {
+  obj4.onPress = function handleNext() {
     const result = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
     try {
       _undefined2(null);
@@ -570,7 +555,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildEvent) => {
   ];
   const obj8 = {
     date: memo,
-    onChange(toISOString) {
+    onChange: function handleChangeEventStartTime(toISOString) {
       if (closure_10) {
         const intl = util.intl;
         return _undefined2(intl.string(util.t.nKIaRG));
@@ -581,9 +566,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildEvent) => {
           isBeforeResult = memo1.isBefore(toISOString);
         }
         if (isBeforeResult) {
-          const obj2 = _modDef4467(toISOString);
-          obj.scheduledEndTime = _modDef4467(toISOString).add(1, "hour").toISOString();
-          const addResult = _modDef4467(toISOString).add(1, "hour");
+          const obj2 = _modDef4659(toISOString);
+          obj.scheduledEndTime = _modDef4659(toISOString).add(1, "hour").toISOString();
+          const addResult = _modDef4659(toISOString).add(1, "hour");
         }
         let tmp8 = null != toISOString;
         if (tmp8) {
@@ -611,7 +596,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildEvent) => {
   if (tmp19Result) {
     const obj9 = {
       date: memo1,
-      onChange(toISOString) {
+      onChange: function handleChangeEventEndTime(toISOString) {
           _undefined2(null);
           onChange({ scheduledEndTime: toISOString.toISOString() });
         },
@@ -630,7 +615,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildEvent) => {
   items4[4] = c8(guildEvent(scheduledEndTime[18]).GuildEventRecurrence, {
     startDate: memo,
     recurrenceRule,
-    onRecurrenceChange(c7) {
+    onRecurrenceChange: function handleRecurrenceChange(c7) {
       if (null != memo) {
         const obj2 = { recurrenceRule: ScheduleUtils.recurrenceOptionToRecurrenceRule(c7, tmp) };
         onChange(obj2);

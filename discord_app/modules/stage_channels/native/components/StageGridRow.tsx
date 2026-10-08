@@ -1,44 +1,44 @@
-// === Module 9752: StageGridRow ===
+// === Module 10953: StageGridRow ===
 
-// Module 9752 (StageGridRow)
-import StageChannelParticipants from "StageChannelParticipants" /* 5589 */;
-import useIsScreenLandscape from "useIsScreenLandscape" /* 5919 */;
-import SpeakerTileDefault from "SpeakerTile" /* 9743 */;
-import StageTileTypes from "StageTileTypes" /* 9744 */;
-import MediaTileDefault from "MediaTile" /* 9753 */;
+// Module 10953 (StageGridRow)
+import StageChannelParticipants from "StageChannelParticipants" /* 5955 */;
+import useIsScreenLandscape from "useIsScreenLandscape" /* 8302 */;
+import SpeakerTileDefault from "SpeakerTile" /* 10944 */;
+import StageTileTypes from "StageTileTypes" /* 10945 */;
+import MediaTileDefault from "MediaTile" /* 10954 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles({ container: { flexDirection: "row", alignItems: "center" }, containerLandscape: { justifyContent: "center" } });
 const ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/native/components/StageGridRow.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function StageGridRow(channel) {
   let StageTileSize = dependencyMap;
   const cResult = channel(576).c(15);
   channel = channel.channel;
   const participants = channel.participants;
   const tmp3 = closure_5();
   let obj = channel(576);
-  const isScreenLandscape = channel(5919).useIsScreenLandscape();
+  const isScreenLandscape = channel(8302).useIsScreenLandscape();
   let num = 3;
   if (0 === channel.row) {
     num = participants.length;
   }
   if (cResult[0] !== num) {
     if (1 === num) {
-      StageTileSize = tmp(9744).StageTileSize;
+      StageTileSize = tmp(10945).StageTileSize;
       let HALF = StageTileSize.FULL;
       cResult[0] = num;
       cResult[1] = HALF;
     } else if (2 !== num) {
-      HALF = tmp(9744).StageTileSize.THIRD;
+      HALF = tmp(10945).StageTileSize.THIRD;
     }
-    HALF = tmp(9744).StageTileSize.HALF;
+    HALF = tmp(10945).StageTileSize.HALF;
   } else {
     const size = tmp5;
     let containerLandscape = isScreenLandscape;
@@ -77,7 +77,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
         cResult[7] = tmp5;
         cResult[8] = mapped;
       }
-      const fn = function y(type) {
+      const fn = function v(type) {
         type = type.type;
         let flag = true;
         if (StageChannelParticipants.StageChannelParticipantTypes.STREAM !== type) {
@@ -115,8 +115,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
     cResult[4] = items;
     tmp7 = items;
   }
-  let obj2 = channel(5919);
-}) : ((row) => {
+  let obj2 = channel(8302);
+}) : (function StageGridRow(row) {
   ({ channel: require, participants } = row);
   let THIRD;
   const tmp = closure_5();

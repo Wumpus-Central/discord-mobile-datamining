@@ -1,12 +1,12 @@
-// === Module 9617: StageChannelHeightHooks ===
+// === Module 10810: StageChannelHeightHooks ===
 
-// Module 9617 (StageChannelHeightHooks)
-import useStageBlockedUsersCount from "useStageBlockedUsersCount" /* 8310 */;
+// Module 10810 (StageChannelHeightHooks)
+import useStageBlockedUsersCount from "useStageBlockedUsersCount" /* 7693 */;
 import "ReactCompilerGating";
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGetStageRTCPanelHeight(arg0) {
   const stageBlockedUsersCount = useStageBlockedUsersCount.useStageBlockedUsersCount(arg0);
   useStageBlockedUsersCount;
   if (stageBlockedUsersCount > 0) {
@@ -15,7 +15,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     num = 68;
   }
   return num;
-}) : ((arg0) => {
+}) : (function useGetStageRTCPanelHeight(arg0) {
   const stageBlockedUsersCount = useStageBlockedUsersCount.useStageBlockedUsersCount(arg0);
   useStageBlockedUsersCount;
   if (stageBlockedUsersCount > 0) {
@@ -29,7 +29,7 @@ const result = size.fileFinishedImporting("modules/stage_channels/StageChannelHe
 
 export const CALL_ACTION_BAR_HEIGHT = 112;
 export const useGetStageRTCPanelHeight = tmp2;
-export const useGetActionBarHeight = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useGetActionBarHeight = ReactCompilerGating.isReactCompilerEnabled() ? (function useGetActionBarHeight(arg0) {
   const stageBlockedUsersCount = useStageBlockedUsersCount.useStageBlockedUsersCount(arg0);
   useStageBlockedUsersCount;
   if (stageBlockedUsersCount > 0) {
@@ -38,7 +38,7 @@ export const useGetActionBarHeight = ReactCompilerGating.isReactCompilerEnabled(
     num = 112;
   }
   return num;
-}) : ((arg0) => {
+}) : (function useGetActionBarHeight(arg0) {
   const stageBlockedUsersCount = useStageBlockedUsersCount.useStageBlockedUsersCount(arg0);
   useStageBlockedUsersCount;
   if (stageBlockedUsersCount > 0) {

@@ -1,24 +1,24 @@
-// === Module 12456: useCreateGameInvitePost ===
+// === Module 12552: useCreateGameInvitePost ===
 
-// Module 12456 (useCreateGameInvitePost)
-import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 6785 */;
-import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11406 */;
+// Module 12552 (useCreateGameInvitePost)
+import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 6960 */;
+import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11389 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import LocalActivityStore from "LocalActivityStore" /* 11129 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5445 */;
-import SlowmodeStore from "SlowmodeStore" /* 7184 */;
+import LocalActivityStore from "LocalActivityStore" /* 11248 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5755 */;
+import SlowmodeStore from "SlowmodeStore" /* 7363 */;
 
 require = fn;
-const SlowmodeType = fn(7184).SlowmodeType;
+const SlowmodeType = fn(7363).SlowmodeType;
 const ActivityActionTypes = fn(1085).ActivityActionTypes;
-const ChannelFlags = fn(2058).ChannelFlags;
+const ChannelFlags = fn(2070).ChannelFlags;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_invite_channels/useCreateGameInvitePost.tsx");
 
-export const useCreateGameInvitePost = ReactCompilerGating.isReactCompilerEnabled() ? ((parentChannel) => {
+export const useCreateGameInvitePost = ReactCompilerGating.isReactCompilerEnabled() ? (function useCreateGameInvitePost(parentChannel) {
   const cResult = parentChannel(applicationIdsForGame[9]).c(47);
   parentChannel = parentChannel.parentChannel;
   const description = parentChannel.description;
@@ -354,7 +354,7 @@ export const useCreateGameInvitePost = ReactCompilerGating.isReactCompilerEnable
   cResult[18] = { parentChannel, name: tmp18, appliedTags: appliedTagIds, activityAction: undefined, applicationId: undefined, voiceChatEnabled, upload, onThreadCreated };
   let obj4 = { parentChannel, name: tmp18, appliedTags: appliedTagIds, activityAction: undefined, applicationId: undefined, voiceChatEnabled, upload, onThreadCreated };
   const tmpResult2 = parentChannel(applicationIdsForGame[10]);
-}) : ((parentChannel) => {
+}) : (function useCreateGameInvitePost(parentChannel) {
   parentChannel = parentChannel.parentChannel;
   const str = parentChannel.description;
   const appliedTagIds = parentChannel.appliedTagIds;

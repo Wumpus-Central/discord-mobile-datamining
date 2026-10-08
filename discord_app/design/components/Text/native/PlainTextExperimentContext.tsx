@@ -1,6 +1,6 @@
-// === Module 4901: PlainTextExperimentContext ===
+// === Module 5095: PlainTextExperimentContext ===
 
-// Module 4901 (PlainTextExperimentContext)
+// Module 5095 (PlainTextExperimentContext)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const size = fn(2);
 const result1 = size.fileFinishedImporting("design/components/Text/native/PlainTextExperimentContext.tsx");
 
-export const PlainTextExperimentProvider = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const PlainTextExperimentProvider = ReactCompilerGating.isReactCompilerEnabled() ? (function PlainTextExperimentProvider(arg0) {
   const cResult = c.c(3);
   ({ children, enabled } = arg0);
   if (cResult[0] === children) {
@@ -27,5 +27,9 @@ export const PlainTextExperimentProvider = ReactCompilerGating.isReactCompilerEn
   cResult[1] = enabled;
   cResult[2] = tmp3;
   tmp2 = tmp3;
-}) : ((enabled) => <closure_4 value={enabled.enabled}>{enabled.children}</closure_4>);
-export const usePlainTextExperimentEnabled = () => noop.useContext(closure_4);
+}) : (function PlainTextExperimentProvider(enabled) {
+  return <closure_4 value={enabled.enabled}>{enabled.children}</closure_4>;
+});
+export const usePlainTextExperimentEnabled = function usePlainTextExperimentEnabled() {
+  return noop.useContext(closure_4);
+};

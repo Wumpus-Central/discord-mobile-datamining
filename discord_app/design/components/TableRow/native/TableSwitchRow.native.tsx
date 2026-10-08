@@ -1,12 +1,12 @@
-// === Module 6705: TableSwitchRow ===
+// === Module 6882: TableSwitchRow ===
 
-// Module 6705 (TableSwitchRow)
+// Module 6882 (TableSwitchRow)
 import c from "c" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import native from "native" /* 4588 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import TableRow from "TableRow" /* 6000 */;
-import FormSwitch from "FormSwitch" /* 6706 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import native from "native" /* 4780 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import TableRow from "TableRow" /* 6184 */;
+import FormSwitch from "FormSwitch" /* 6883 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -16,13 +16,13 @@ let closure_2 = ["value", "onValueChange", "label", "subLabel", "trailing", "dis
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_9 = createStyles.createStyles(() => ({ labelWithTrailing: { flexDirection: "row", alignItems: "center", gap: 8 } }));
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/TableRow/native/TableSwitchRow.native.tsx");
 
-export const TableSwitchRow = ReactCompilerGating.isReactCompilerEnabled() ? ((value) => {
+export const TableSwitchRow = ReactCompilerGating.isReactCompilerEnabled() ? (function TableSwitchRow(value) {
   const cResult = c.c(47);
   if (cResult[0] !== value) {
     value = value.value;
@@ -31,16 +31,6 @@ export const TableSwitchRow = ReactCompilerGating.isReactCompilerEnabled() ? ((v
     closure_0 = onValueChange;
     ({ label, subLabel, trailing, disabled, accessibilityHint, variant } = value);
     const tmp15 = _objectWithoutProperties(value, closure_2);
-    class V {
-      constructor() {
-        tmpResult = undefined;
-        if (closure_0 != null) {
-          tmp3 = closure_1;
-          tmpResult = tmp(!closure_1);
-        }
-        return tmpResult;
-      }
-    }
     cResult[0] = value;
     cResult[1] = accessibilityHint;
     cResult[2] = label;
@@ -54,153 +44,203 @@ export const TableSwitchRow = ReactCompilerGating.isReactCompilerEnabled() ? ((v
     let tmp12 = variant;
     let tmp10 = trailing;
     let tmp8 = subLabel;
+    let tmp7 = tmp15;
     let tmp5 = label;
+    let tmp4 = accessibilityHint;
   } else {
+    tmp4 = cResult[1];
     tmp5 = cResult[2];
     closure_0 = cResult[3];
+    tmp7 = cResult[4];
     tmp8 = cResult[5];
     tmp10 = cResult[7];
     closure_1 = cResult[8];
     tmp12 = cResult[9];
   }
-  const tmp16 = closure_9();
+  const tmp17 = closure_9();
   PlatformUtils;
   if (cResult[10] === tmp6) {
+    if (cResult[11] === tmp11) {
+      let tmp20 = cResult[12];
+    }
     if (cResult[13] !== tmp5) {
       const nodeText = native.getNodeText(tmp5);
       cResult[13] = tmp5;
       cResult[14] = nodeText;
+      let tmp21 = nodeText;
       const tmpResult3 = native;
+    } else {
+      tmp21 = cResult[14];
     }
     if (cResult[15] !== tmp8) {
       const nodeText1 = native.getNodeText(tmp8);
       cResult[15] = tmp8;
       cResult[16] = nodeText1;
+      let str = nodeText1;
       const tmpResult4 = native;
+    } else {
+      str = cResult[16];
     }
-    [r10076, closure_2] = noop.useState(tmp11);
+    [tmp26, closure_2] = noop.useState(tmp11);
     if (cResult[17] !== tmp11) {
-      class N {
-        constructor() {
-          tmp = closure_2(closure_1);
-          return;
-        }
-      }
+      const fn = function k() {
+        closure_1_2(closure_1);
+      };
       const items = [tmp11];
       cResult[17] = tmp11;
-      cResult[18] = N;
+      cResult[18] = fn;
       cResult[19] = items;
-      let tmp26 = items;
+      let tmp28 = items;
+      let tmp27 = fn;
     } else {
-      class N {
-        constructor() {
-          tmp = closure_2(closure_1);
-          return;
-        }
-      }
-      tmp26 = cResult[19];
+      tmp27 = cResult[18];
+      tmp28 = cResult[19];
     }
-    const effect = noop.useEffect(N, tmp26);
+    const effect = noop.useEffect(tmp27, tmp28);
     if (cResult[20] === tmp6) {
-      class N {
-        constructor() {
-          tmp = closure_2(closure_1);
-          return;
-        }
+      if (cResult[21] === tmp11) {
+        let tmp30 = cResult[22];
       }
       if (cResult[23] === tmp5) {
-        class N {
-          constructor() {
-            tmp = closure_2(closure_1);
-            return;
+        if (cResult[24] === tmp17) {
+          if (cResult[25] === tmp10) {
+            if (cResult[26] === tmp12) {
+              let tmp31 = cResult[27];
+            }
+            if (cResult[28] === tmp26) {
+              if (cResult[29] === tmp16) {
+                let tmp36 = cResult[30];
+              }
+              if (str == null) {
+                str = "";
+              }
+              const _HermesInternal = HermesInternal;
+              const combined = "" + tmp21 + ", " + str;
+              if (cResult[31] === tmp16) {
+                if (cResult[32] === tmp20) {
+                  if (cResult[33] === tmp11) {
+                    let tmp41 = cResult[34];
+                  }
+                  if (cResult[35] === tmp4) {
+                    if (cResult[36] === tmp16) {
+                      if (cResult[37] === tmp30) {
+                        if (cResult[38] === tmp7) {
+                          if (cResult[39] === tmp8) {
+                            if (cResult[40] === combined) {
+                              if (cResult[41] === tmp40) {
+                                if (cResult[42] === tmp41) {
+                                  if (cResult[43] === tmp31) {
+                                    if (cResult[44] === tmp36) {
+                                      if (cResult[45] === tmp12) {
+                                        let tmp44 = cResult[46];
+                                      }
+                                      return tmp44;
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                  const obj2 = {};
+                  const merged = Object.assign(tmp7);
+                  obj2.variant = tmp12;
+                  obj2.arrow = false;
+                  obj2.label = tmp31;
+                  obj2.subLabel = tmp8;
+                  obj2.disabled = tmp16;
+                  obj2.accessibilityState = tmp36;
+                  obj2.accessible = true;
+                  obj2.accessibilityRole = "switch";
+                  obj2.accessibilityLabel = combined;
+                  obj2.accessibilityHint = tmp4;
+                  obj2.onPress = tmp40;
+                  obj2.onAccessibilityTap = tmp30;
+                  obj2.trailing = tmp41;
+                  const tmp49 = React5(TableRow.TableRow, obj2);
+                  cResult[35] = tmp4;
+                  cResult[36] = tmp16;
+                  cResult[37] = tmp30;
+                  cResult[38] = tmp7;
+                  cResult[39] = tmp8;
+                  cResult[40] = combined;
+                  cResult[41] = tmp40;
+                  cResult[42] = tmp41;
+                  cResult[43] = tmp31;
+                  cResult[44] = tmp36;
+                  cResult[45] = tmp12;
+                  cResult[46] = tmp49;
+                  tmp44 = tmp49;
+                }
+              }
+              const obj3 = { "aria-hidden": true, value: tmp11, onValueChange: tmp20, disabled: tmp16 };
+              const tmp43 = React5(FormSwitch.FormSwitch, obj3);
+              cResult[31] = tmp16;
+              cResult[32] = tmp20;
+              cResult[33] = tmp11;
+              cResult[34] = tmp43;
+              tmp41 = tmp43;
+            }
+            const obj5 = { disabled: tmp16, checked: tmp26 };
+            cResult[28] = tmp26;
+            cResult[29] = tmp16;
+            cResult[30] = obj5;
+            tmp36 = obj5;
           }
         }
       }
-      let tmp34Result = tmp5;
+      let tmp50Result = tmp5;
       if (null != tmp10) {
-        class N {
-          constructor() {
-            tmp = closure_2(closure_1);
-            return;
-          }
-        }
-        tmp36[0] = tmp16.labelWithTrailing;
-        let tmp32Result = tmp5;
+        const obj6 = { style: tmp17.labelWithTrailing, children: null };
+        let tmp34Result = tmp5;
         if (!noop.isValidElement(tmp5)) {
-          class N {
-            constructor() {
-              tmp = closure_2(closure_1);
-              return;
-            }
-          }
+          let str2 = "mobile-text-heading-primary";
           if ("danger" === tmp12) {
-            class N {
-              constructor() {
-                tmp = closure_2(closure_1);
-                return;
-              }
-            }
+            str2 = "text-feedback-critical";
           }
-          const obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", includeFontPadding: true, children: tmp5 };
-          tmp32Result = tmp32(Text_Text.Text, obj2);
+          const obj7 = { variant: "text-md/semibold", color: str2, includeFontPadding: true, children: tmp5 };
+          tmp34Result = React5(Text_Text.Text, obj7);
         }
-        const items1 = [tmp32Result, tmp10];
-        tmp36[1] = items1;
-        tmp34Result = closure_1_8(View, tmp36);
+        const items1 = [tmp34Result, tmp10];
+        obj6.children = items1;
+        tmp50Result = closure_1_8(View, obj6);
       }
       cResult[23] = tmp5;
-      cResult[24] = tmp16;
+      cResult[24] = tmp17;
       cResult[25] = tmp10;
       cResult[26] = tmp12;
-      class V {
-        constructor() {
-          tmpResult = undefined;
-          if (closure_0 != null) {
-            tmp3 = closure_1;
-            tmpResult = tmp(!closure_1);
-          }
-          return tmpResult;
-        }
-      }
-      cResult[27] = tmp34Result;
+      cResult[27] = tmp50Result;
+      tmp31 = tmp50Result;
     }
-    const fn = function $() {
+    function handleAccessibilityTap() {
       closure_1_2(!closure_1);
       const timerId = setTimeout(() => {
         if (closure_1_0 != null) {
           tmp(!closure_1_1);
         }
       });
-    };
-    class V {
-      constructor() {
-        tmpResult = undefined;
-        if (closure_0 != null) {
-          tmp3 = closure_1;
-          tmpResult = tmp(!closure_1);
-        }
-        return tmpResult;
-      }
     }
     cResult[20] = tmp6;
     cResult[21] = tmp11;
-    cResult[22] = fn;
-    const tmp24 = _slicedToArray(noop.useState(tmp11), 2);
+    cResult[22] = handleAccessibilityTap;
+    tmp30 = handleAccessibilityTap;
+    const tmp25 = _slicedToArray(noop.useState(tmp11), 2);
   }
-  class V {
-    constructor() {
-      tmpResult = undefined;
-      if (closure_0 != null) {
-        tmp3 = closure_1;
-        tmpResult = tmp(!closure_1);
-      }
-      return tmpResult;
+  function handleOnPress() {
+    let tmpResult;
+    if (closure_0 != null) {
+      tmpResult = tmp(!closure_1);
     }
+    return tmpResult;
   }
   cResult[10] = tmp6;
   cResult[11] = tmp11;
-  cResult[12] = V;
-}) : ((value) => {
+  cResult[12] = handleOnPress;
+  tmp20 = handleOnPress;
+}) : (function TableSwitchRow(value) {
   value = value.value;
   require = value;
   ({ onValueChange: dependencyMap, label, subLabel, trailing, disabled } = value);
@@ -233,7 +273,7 @@ export const TableSwitchRow = ReactCompilerGating.isReactCompilerEnabled() ? ((v
         str = "text-feedback-critical";
       }
       const obj7 = { variant: "text-md/semibold", color: str, includeFontPadding: true, children: label };
-      tmp10Result = React5(tmp3(4892).Text, obj7);
+      tmp10Result = React5(tmp3(5086).Text, obj7);
     }
     const items1 = [tmp10Result, trailing];
     obj6.children = items1;
@@ -263,7 +303,7 @@ export const TableSwitchRow = ReactCompilerGating.isReactCompilerEnabled() ? ((v
     tmp14 = handleOnPress;
   }
   obj5.onPress = tmp14;
-  obj5.onAccessibilityTap = function onAccessibilityTap() {
+  obj5.onAccessibilityTap = function handleAccessibilityTap() {
     closure_2(!value);
     const timerId = setTimeout(() => {
       if (closure_1_1 != null) {

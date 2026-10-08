@@ -1,29 +1,29 @@
-// === Module 16858: GuildTextChannelRow ===
+// === Module 17137: GuildTextChannelRow ===
 
-// Module 16858 (GuildTextChannelRow)
+// Module 17137 (GuildTextChannelRow)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import c from "c" /* 576 */;
-import SearchUtils from "SearchUtils" /* 11987 */;
-import guild_channels_ChannelSubtitle from "guild_channels/ChannelSubtitle" /* 16846 */;
-import GuildChannelRowDefault from "GuildChannelRow" /* 16849 */;
+import SearchUtils from "SearchUtils" /* 12060 */;
+import guild_channels_ChannelSubtitle from "guild_channels/ChannelSubtitle" /* 17125 */;
+import GuildChannelRowDefault from "GuildChannelRow" /* 17128 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 let closure_3 = ["channel", "trailing", "lastMessageId", "onPress"];
-const layout = fn(7524).CHANNEL_LIST_SEARCH_LAYOUT;
+const layout = fn(9247).CHANNEL_LIST_SEARCH_LAYOUT;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/list/rows/GuildTextChannelRow.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function GuildTextChannelRow(channel) {
   const cResult = c.c(21);
   if (cResult[0] !== channel) {
     channel = channel.channel;
-    id = channel;
+    let _require = channel;
     ({ trailing, lastMessageId, onPress } = channel);
-    closure_1 = onPress;
+    importDefault = onPress;
     const tmp11 = _objectWithoutProperties(channel, closure_3);
     cResult[0] = channel;
     cResult[1] = channel;
@@ -35,9 +35,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
     let tmp7 = tmp11;
     let tmp5 = lastMessageId;
   } else {
-    id = cResult[1];
+    _require = cResult[1];
     tmp5 = cResult[2];
-    closure_1 = cResult[3];
+    importDefault = cResult[3];
     tmp7 = cResult[4];
     tmp8 = cResult[5];
   }
@@ -74,28 +74,37 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
             }
           }
         }
+        class A {
+          constructor() {
+            tmp = closure_1(closure_0.id);
+            return;
+          }
+        }
         const obj3 = {};
         const merged = Object.assign(tmp7);
         obj3.subtitle = tmp15;
         obj3.channel = tmp4;
         obj3.trailing = tmp8;
         obj3.onPress = tmp18;
-        const tmp26 = jsx(GuildChannelRowDefault, {});
+        const tmp25 = jsx(GuildChannelRowDefault, {});
         cResult[15] = tmp4;
         cResult[16] = tmp18;
         cResult[17] = tmp7;
         cResult[18] = tmp15;
         cResult[19] = tmp8;
-        cResult[20] = tmp26;
-        tmp19 = tmp26;
+        cResult[20] = tmp25;
+        tmp19 = tmp25;
       }
-      const fn = function f() {
-        closure_1(id.id);
-      };
+      class A {
+        constructor() {
+          tmp = closure_1(closure_0.id);
+          return;
+        }
+      }
       cResult[12] = tmp4.id;
       cResult[13] = onPress;
-      cResult[14] = fn;
-      tmp18 = fn;
+      cResult[14] = A;
+      tmp18 = A;
     }
   }
   let channelActiveAgoTimestamp = null;
@@ -111,7 +120,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
   tmp15 = result;
   const obj4 = { subtitle: channelActiveAgoTimestamp, layout, channelId: id, guildId: guild_id };
   const tmpResult = guild_channels_ChannelSubtitle;
-}) : ((channel) => {
+}) : (function GuildTextChannelRow(channel) {
   channel = channel.channel;
   ({ lastMessageId, onPress } = channel);
   let extractTimestampResult = null;

@@ -1,8 +1,8 @@
-// === Module 12155: useLoadGuildPowerups ===
+// === Module 12234: useLoadGuildPowerups ===
 
-// Module 12155 (useLoadGuildPowerups)
-import GameServerActionCreators from "GameServerActionCreators" /* 12156 */;
-import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 12162 */;
+// Module 12234 (useLoadGuildPowerups)
+import GameServerActionCreators from "GameServerActionCreators" /* 12235 */;
+import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 12241 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useLoadGuildPowerups.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useLoadGuildPowerups(arg0) {
   _require = arg0;
   const cResult = require("c").c(7);
   let obj = require("c");
@@ -40,7 +40,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     const effect1 = noop.useEffect(tmp6, tmp7);
   }
-  const fn = function o() {
+  const fn = function t() {
     if (gameServerEnabled) {
       const gameServerCatalog = GameServerActionCreators.fetchGameServerCatalog(closure_0);
     }
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   tmp4 = items1;
   tmp3 = fn;
   const obj2 = require("GameServerExperiment");
-}) : ((arg0) => {
+}) : (function useLoadGuildPowerups(arg0) {
   _require = arg0;
   gameServerEnabled = require("GameServerExperiment").useGameServerEnabled(arg0, "useLoadGuildPowerups");
   const items = [arg0, gameServerEnabled];

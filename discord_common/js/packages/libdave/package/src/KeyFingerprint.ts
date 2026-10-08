@@ -1,6 +1,6 @@
-// === Module 9366: KeyFingerprint ===
+// === Module 8788: KeyFingerprint ===
 
-// Module 9366 (KeyFingerprint)
+// Module 8788 (KeyFingerprint)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 let closure_1 = async function _generateKeyFingerprint(arg0) {

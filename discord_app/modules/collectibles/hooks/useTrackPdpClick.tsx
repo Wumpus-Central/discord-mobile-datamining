@@ -1,8 +1,8 @@
-// === Module 12984: useTrackPdpClick ===
+// === Module 13262: useTrackPdpClick ===
 
-// Module 12984 (useTrackPdpClick)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7078 */;
+// Module 13262 (useTrackPdpClick)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7264 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useTrackPdpClick.tsx");
 
-export const useTrackPdpClick = ReactCompilerGating.isReactCompilerEnabled() ? ((skuId) => {
+export const useTrackPdpClick = ReactCompilerGating.isReactCompilerEnabled() ? (function useTrackPdpClick(skuId) {
   const cResult = skuId(analyticsLocations[3]).c(9);
   skuId = skuId.skuId;
   const productSkuIds = skuId.productSkuIds;
@@ -72,7 +72,7 @@ export const useTrackPdpClick = ReactCompilerGating.isReactCompilerEnabled() ? (
   cResult[7] = skuId;
   cResult[8] = I;
   tmp7 = I;
-}) : ((skuId) => {
+}) : (function useTrackPdpClick(skuId) {
   skuId = skuId.skuId;
   const productSkuIds = skuId.productSkuIds;
   const analyticsLocations = skuId.analyticsLocations;

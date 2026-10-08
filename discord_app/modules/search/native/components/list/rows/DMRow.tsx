@@ -1,23 +1,23 @@
-// === Module 16842: DMRow ===
+// === Module 17121: DMRow ===
 
-// Module 16842 (DMRow)
+// Module 17121 (DMRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import UserUtilsDefault from "UserUtils" /* 4728 */;
-import BotTagDefault from "BotTag" /* 8990 */;
-import _modDef9268 from "module_9268" /* 9268 */;
-import ActivityStatusDefault from "ActivityStatus" /* 10622 */;
-import _modDef13326 from "module_13326" /* 13326 */;
+import native from "native" /* 1200 */;
+import UserUtilsDefault from "UserUtils" /* 4922 */;
+import _modDef8598 from "module_8598" /* 8598 */;
+import BotTagDefault from "BotTag" /* 8741 */;
+import ActivityStatusDefault from "ActivityStatus" /* 10220 */;
+import _modDef13626 from "module_13626" /* 13626 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
-import PresenceStore from "PresenceStore" /* 4936 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
+import PresenceStore from "PresenceStore" /* 5106 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
 
-const UserUtils = Text(4728);
-const Text_Text = Text(4892);
+const UserUtils = Text(4922);
+const Text_Text = Text(5086);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ActivityIndicator: closure_7 } = get_ActivityIndicator);
@@ -25,11 +25,11 @@ const Constants = fn(1085);
 ({ StatusTypes: closure_11, RelationshipTypes: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { activityStatusIcon: { width: 14, height: 14 }, activityStatusText: { color: nativeDefault.colors.TEXT_SUBTLE, fontSize: 14, lineHeight: 18, fontWeight: "400" }, tag: { marginLeft: 4 }, title: { flexDirection: "row" } };
 let closure_15 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
-let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((type) => {
+let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function FriendPresence(type) {
   let Text = require;
   let tmp = dependencyMap;
   const cResult = c.c(10);
@@ -77,7 +77,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((type) => {
     cResult[9] = tmp7;
     tmp4 = tmp7;
   }
-}) : ((user) => {
+}) : (function FriendPresence(user) {
   user = user.user;
   ({ type, animate, guildId } = user);
   if (type === constants2.PENDING_INCOMING) {
@@ -212,7 +212,7 @@ export default noop.memo(function DMRow(user) {
       let tmp4Result = isOwner;
       if (isOwner) {
         const obj4 = { style: title.tag, children: null };
-        const obj5 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef9268, disableColor: true };
+        const obj5 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef8598, disableColor: true };
         obj4.children = __initData2(native.Icon, obj5);
         tmp4Result = __initData2(timestampProducer, obj4);
       }
@@ -220,7 +220,7 @@ export default noop.memo(function DMRow(user) {
       let tmp4Result3 = null != premiumSince;
       if (tmp4Result3) {
         const obj6 = { style: title.tag, children: null };
-        const obj7 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef13326, disableColor: true };
+        const obj7 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef13626, disableColor: true };
         obj6.children = __initData2(native.Icon, obj7);
         tmp4Result3 = __initData2(timestampProducer, obj6);
       }

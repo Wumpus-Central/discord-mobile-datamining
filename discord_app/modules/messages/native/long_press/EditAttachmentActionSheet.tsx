@@ -1,26 +1,26 @@
-// === Module 11317: EditAttachmentActionSheet ===
+// === Module 12807: EditAttachmentActionSheet ===
 
-// Module 11317 (EditAttachmentActionSheet)
+// Module 12807 (EditAttachmentActionSheet)
 import util from "util" /* 1126 */;
-import FlagUtils from "FlagUtils" /* 1390 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4596 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Stack_Stack from "Stack/Stack" /* 5600 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 5997 */;
-import TextArea from "TextArea" /* 6587 */;
-import BottomSheetTitleHeader2 from "BottomSheetTitleHeader" /* 6651 */;
-import ActionSheet from "ActionSheet" /* 6708 */;
-import useBottomSheetRef from "useBottomSheetRef" /* 7852 */;
+import FlagUtils from "FlagUtils" /* 1402 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4788 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import Stack_Stack from "Stack/Stack" /* 5373 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 6181 */;
+import TextArea from "TextArea" /* 6763 */;
+import BottomSheetTitleHeader2 from "BottomSheetTitleHeader" /* 6828 */;
+import ActionSheet from "ActionSheet" /* 6885 */;
+import useBottomSheetRef from "useBottomSheetRef" /* 8270 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MessageStore from "MessageStore" /* 5116 */;
+import MessageStore from "MessageStore" /* 5428 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_7 = fn(4889).LEGACY_SPOILER_ATTACHMENT_PREFIX;
+let closure_7 = fn(5083).LEGACY_SPOILER_ATTACHMENT_PREFIX;
 let MessageAttachmentFlags = fn(1085).MessageAttachmentFlags;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
@@ -28,7 +28,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/long_press/EditAttachmentActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((message) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditAttachmentActionSheet(message) {
   const cResult = require("c").c(44);
   message = message.message;
   _require = message;
@@ -80,15 +80,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((message) => {
     }
     const _Symbol2 = Symbol;
     if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-      const fn = function z() {
+      function showError() {
         const intl = util.intl;
         const stringResult = intl.string(util.t.fEptJP);
         closure_1_7(stringResult);
         const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
         AccessibilityAnnouncer.announce(stringResult);
-      };
-      cResult[8] = fn;
-      let tmp27 = fn;
+      }
+      cResult[8] = showError;
+      let tmp27 = showError;
     } else {
       tmp27 = cResult[8];
     }
@@ -365,7 +365,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((message) => {
   cResult[6] = hasFlagResult;
   tmp15 = hasFlagResult;
   const tmp12 = first1(first2.useState(str), 2);
-}) : ((arg0) => {
+}) : (function EditAttachmentActionSheet(arg0) {
   ({ message: require, attachment } = arg0);
   dependencyMap = undefined;
   value = undefined;
@@ -486,7 +486,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((message) => {
   const tmp7Result3 = first1(first2.useState(false), 2);
   first2 = tmp7Result3[0];
   closure_6 = tmp7Result3[1];
-  const tmp5 = attachment(7951)(attachment);
+  const tmp5 = attachment(8369)(attachment);
   [tmp17, c7] = first1(first2.useState(), 2);
   let intl = util.intl;
   let stringResult = intl.string(util.t.Y8ujqr);

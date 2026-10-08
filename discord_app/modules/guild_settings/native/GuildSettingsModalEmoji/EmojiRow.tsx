@@ -1,31 +1,32 @@
-// === Module 17782: GuildSettingsModalEmoji/EmojiRow ===
+// === Module 18069: GuildSettingsModalEmoji/EmojiRow ===
 
-// Module 17782 (GuildSettingsModalEmoji/EmojiRow)
+// Module 18069 (GuildSettingsModalEmoji/EmojiRow)
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4533 */;
-import UserUtilsDefault from "UserUtils" /* 4728 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5048 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5777 */;
-import Pressables from "Pressables" /* 5916 */;
-import EmojiActionCreators from "EmojiActionCreators" /* 9952 */;
-import showEmojiOverflowActionSheetDefault from "showEmojiOverflowActionSheet" /* 17783 */;
-import _modDef17785 from "module_17785" /* 17785 */;
+import native from "native" /* 1200 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4725 */;
+import UserUtilsDefault from "UserUtils" /* 4922 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5360 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5405 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import Pressables from "Pressables" /* 6189 */;
+import EmojiActionCreators from "EmojiActionCreators" /* 9479 */;
+import showEmojiOverflowActionSheetDefault from "showEmojiOverflowActionSheet" /* 18070 */;
+import _modDef18072 from "module_18072" /* 18072 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import UserStore from "UserStore" /* 1377 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, Image: metroRequire, Pressable: closure_7 } = get_ActivityIndicator);
+({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+const createStyles = fn(5090);
 let obj2 = { flex: { flex: 1 }, flexCenterRow: { flexDirection: "row", alignItems: "center" }, nameContainer: { paddingVertical: 4, borderRadius: nativeDefault.radii.xs, alignItems: "center", flexDirection: "row" }, activeNameContainer: null, usernameContainer: null, emojiText: null, colon: null, username: null, emojiImage: null, overflowIcon: null };
-let PlatformUtils = fn(1369);
+let PlatformUtils = fn(1381);
 let num = 4;
 if (PlatformUtils.isAndroid()) {
   num = 0;
@@ -33,7 +34,7 @@ if (PlatformUtils.isAndroid()) {
 let obj3 = { paddingVertical: 4, borderRadius: nativeDefault.radii.xs, alignItems: "center", flexDirection: "row" };
 obj2.activeNameContainer = { padding: num, borderRadius: nativeDefault.radii.xs, alignItems: "center", flexDirection: "row" };
 obj2.usernameContainer = { marginRight: 8, maxWidth: 150, flexShrink: 1 };
-PlatformUtils = fn(1369);
+PlatformUtils = fn(1381);
 let num2;
 if (PlatformUtils.isAndroid()) {
   num2 = 0;
@@ -46,22 +47,22 @@ obj2.username = { fontSize: 13, color: nativeDefault.colors.TEXT_MUTED };
 obj2.emojiImage = { width: 30, height: 30, resizeMode: "contain" };
 let obj8 = { fontSize: 13, color: nativeDefault.colors.TEXT_MUTED };
 obj2.overflowIcon = { paddingLeft: nativeDefault.space.PX_8, alignItems: "center", flexDirection: "row", height: "100%" };
-let closure_12 = createStyles.createStyles(obj2);
+let closure_11 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj9 = { paddingLeft: nativeDefault.space.PX_8, alignItems: "center", flexDirection: "row", height: "100%" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalEmoji/EmojiRow.tsx");
 
-export const EmojiRow = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export const EmojiRow = ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiRow(guildId) {
   const cResult = guildId(onSelectRolesForEmoji[10]).c(69);
   guildId = guildId.guildId;
   const emoji = guildId.emoji;
   ({ disabled, start, end, onSelectRolesForEmoji } = guildId);
   _slicedToArray = undefined !== disabled && disabled;
   let obj = guildId(onSelectRolesForEmoji[10]);
-  noop = onPress();
+  noop = onBlur();
   [first, closure_6] = noop.useState(emoji.name);
-  [closure_7, GuildStore] = noop.useState(false);
+  [GuildStore, UserStore] = noop.useState(false);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [GuildStore];
     cResult[0] = items;
@@ -70,29 +71,43 @@ export const EmojiRow = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId
     first1 = cResult[0];
   }
   if (cResult[1] !== guildId) {
-    const fn = function y() {
-      return GuildStore.getGuild(guildId);
-    };
+    class I {
+      constructor() {
+        return closure_7.getGuild(guildId);
+      }
+    }
     cResult[1] = guildId;
-    cResult[2] = fn;
-    let tmp10 = fn;
+    cResult[2] = I;
   } else {
-    tmp10 = cResult[2];
+    class I {
+      constructor() {
+        return closure_7.getGuild(guildId);
+      }
+    }
   }
-  const tmp4 = onPress();
-  const stateFromStores = guildId(onSelectRolesForEmoji[11]).useStateFromStores(first1, tmp10);
+  const tmp4 = onBlur();
+  const stateFromStores = guildId(onSelectRolesForEmoji[11]).useStateFromStores(first1, I);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    let items1 = [stateFromStores1];
+    class I {
+      constructor() {
+        return closure_7.getGuild(guildId);
+      }
+    }
+    let items1 = [UserStore];
     cResult[3] = items1;
-    let tmp12 = items1;
+    const tmp12 = items1;
   } else {
-    tmp12 = cResult[3];
+    class I {
+      constructor() {
+        return closure_7.getGuild(guildId);
+      }
+    }
   }
   if (cResult[4] !== emoji.user) {
-    class D {
+    class O {
       constructor() {
         tmp = emoji;
-        user = closure_9.getUser(emoji.user.id);
+        user = closure_8.getUser(emoji.user.id);
         if (user == null) {
           user = tmp.user;
         }
@@ -101,31 +116,31 @@ export const EmojiRow = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId
     }
     const items2 = [emoji.user];
     cResult[4] = emoji.user;
-    cResult[5] = D;
+    cResult[5] = O;
     cResult[6] = items2;
-    let tmp15 = items2;
+    let tmp14 = items2;
   } else {
-    class D {
+    class O {
       constructor() {
         tmp = emoji;
-        user = closure_9.getUser(emoji.user.id);
+        user = closure_8.getUser(emoji.user.id);
         if (user == null) {
           user = tmp.user;
         }
         return user;
       }
     }
-    tmp15 = cResult[6];
+    tmp14 = cResult[6];
   }
   let tmpResult = guildId(onSelectRolesForEmoji[11]);
-  stateFromStores1 = guildId(onSelectRolesForEmoji[11]).useStateFromStores(tmp12, D, tmp15);
+  const stateFromStores1 = guildId(onSelectRolesForEmoji[11]).useStateFromStores(tmp12, O, tmp14);
   const tmpResult3 = guildId(onSelectRolesForEmoji[11]);
   const canManageGuildExpression = guildId(onSelectRolesForEmoji[12]).useManageResourcePermissions(stateFromStores).canManageGuildExpression;
   if (cResult[7] === canManageGuildExpression) {
-    class D {
+    class O {
       constructor() {
         tmp = emoji;
-        user = closure_9.getUser(emoji.user.id);
+        user = closure_8.getUser(emoji.user.id);
         if (user == null) {
           user = tmp.user;
         }
@@ -134,10 +149,10 @@ export const EmojiRow = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId
     }
     closure_10 = result;
     if (cResult[10] === emoji.id) {
-      class D {
+      class O {
         constructor() {
           tmp = emoji;
-          user = closure_9.getUser(emoji.user.id);
+          user = closure_8.getUser(emoji.user.id);
           if (user == null) {
             user = tmp.user;
           }
@@ -145,37 +160,27 @@ export const EmojiRow = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId
         }
       }
     }
-    class K {
-      constructor() {
-        if (closure_5 !== emoji.name) {
-          tmp3 = closure_0;
-          tmp4 = closure_2;
-          obj = closure_0(closure_2[13]);
-          obj1 = { guildId: null, emojiId: null, name: null };
-          tmp5 = guildId;
-          obj1.guildId = guildId;
-          obj1.emojiId = tmp2.id;
-          tmp6 = closure_1;
-          obj3 = closure_1(closure_2[14]);
-          obj1.name = obj3.sanitizeEmojiName(tmp);
-          updateEmojiResult = obj.updateEmoji(obj1);
-        }
-        tmp8 = closure_8(false);
-        return;
+    function handleNameBlur() {
+      if (first !== emoji.name) {
+        const obj2 = { guildId, emojiId: tmp2.id, name: null };
+        const obj = EmojiActionCreators;
+        obj2.name = EmojiUtilsDefault.sanitizeEmojiName(tmp);
+        obj.updateEmoji(obj2);
       }
+      closure_8(false);
     }
     cResult[10] = emoji.id;
     cResult[11] = emoji.name;
     cResult[12] = guildId;
     cResult[13] = first;
-    cResult[14] = K;
+    cResult[14] = handleNameBlur;
   }
   result = canManageGuildExpression(emoji);
   cResult[7] = canManageGuildExpression;
   cResult[8] = emoji;
   cResult[9] = result;
   const tmpResult4 = guildId(onSelectRolesForEmoji[12]);
-}) : ((guildId) => {
+}) : (function EmojiRow(guildId) {
   guildId = guildId.guildId;
   const emoji = guildId.emoji;
   let flag = guildId.disabled;
@@ -186,7 +191,7 @@ export const EmojiRow = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId
   let children;
   noop = undefined;
   ({ start, end } = guildId);
-  const tmp = closure_12();
+  const tmp = closure_11();
   const tmp2 = children(noop.useState(emoji.name), 2);
   children = tmp2[0];
   noop = tmp2[1];
@@ -244,39 +249,40 @@ export const EmojiRow = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId
   const obj6 = { style: tmp.emojiImage, source: null };
   const obj7 = { uri: null };
   let obj3 = guildId(onSelectRolesForEmoji[12]);
-  obj7.uri = emoji(onSelectRolesForEmoji[21]).getEmojiURL({ id: emoji.id, animated: emoji.animated, size: 48 });
+  const tmp15 = emoji(onSelectRolesForEmoji[21]);
+  obj7.uri = emoji(onSelectRolesForEmoji[22]).getEmojiURL({ id: emoji.id, animated: emoji.animated, size: 48 });
   obj6.source = obj7;
-  obj5.children = closure_10(onPress, obj6);
-  obj4.icon = closure_10(closure_7, obj5);
-  const obj8 = emoji(onSelectRolesForEmoji[21]);
+  obj5.children = closure_9(tmp15, obj6);
+  obj4.icon = closure_9(onPress, obj5);
+  const obj8 = emoji(onSelectRolesForEmoji[22]);
   const obj9 = { id: emoji.id, animated: emoji.animated, size: 48 };
-  const nickname = emoji(onSelectRolesForEmoji[22]).getNickname(guildId, undefined, stateFromStores1);
+  const nickname = emoji(onSelectRolesForEmoji[23]).getNickname(guildId, undefined, stateFromStores1);
   const obj11 = { style: tmp.flexCenterRow, children: null };
   const obj12 = { style: tmp.usernameContainer, children: null };
   let tmp13Result = null;
   if (null != nickname) {
     const obj13 = { numberOfLines: 1, style: tmp.username, children: nickname };
-    tmp13Result = closure_10(tmp5(tmp6[18]).LegacyText, obj13);
+    tmp13Result = closure_9(tmp5(tmp6[18]).LegacyText, obj13);
   }
   const items6 = [tmp13Result, ];
   const obj14 = { numberOfLines: 1, style: tmp.username, children: null };
-  const obj10 = emoji(onSelectRolesForEmoji[22]);
-  obj14.children = emoji(onSelectRolesForEmoji[23]).getUserTag(stateFromStores1);
-  items6[1] = closure_10(guildId(onSelectRolesForEmoji[18]).LegacyText, obj14);
+  const obj10 = emoji(onSelectRolesForEmoji[23]);
+  obj14.children = emoji(onSelectRolesForEmoji[24]).getUserTag(stateFromStores1);
+  items6[1] = closure_9(guildId(onSelectRolesForEmoji[18]).LegacyText, obj14);
   obj12.children = items6;
-  const items7 = [closure_11(closure_5, obj12), , ];
-  const tmp14Result = emoji(onSelectRolesForEmoji[23]);
-  items7[1] = closure_10(guildId(onSelectRolesForEmoji[18]).Avatar, { user: stateFromStores1, guildId, size: guildId(onSelectRolesForEmoji[18]).AvatarSizes.XSMALL });
+  const items7 = [closure_10(closure_5, obj12), , ];
+  const tmp14Result = emoji(onSelectRolesForEmoji[24]);
+  items7[1] = closure_9(guildId(onSelectRolesForEmoji[18]).Avatar, { user: stateFromStores1, guildId, size: guildId(onSelectRolesForEmoji[18]).AvatarSizes.XSMALL });
   let tmp13Result3 = null;
   if (!flag) {
     const obj16 = { style: tmp.overflowIcon, onPress, hitSlop: 8, children: null };
-    const obj17 = { source: tmp14(tmp6[25]), size: tmp5(tmp6[18]).IconSizes.REFRESH_SMALL_16 };
-    obj16.children = closure_10(tmp5(tmp6[18]).Icon, obj17);
-    tmp13Result3 = closure_10(tmp5(tmp6[24]).PressableOpacity, obj16);
+    const obj17 = { source: tmp14(tmp6[26]), size: tmp5(tmp6[18]).IconSizes.REFRESH_SMALL_16 };
+    obj16.children = closure_9(tmp5(tmp6[18]).Icon, obj17);
+    tmp13Result3 = closure_9(tmp5(tmp6[25]).PressableOpacity, obj16);
   }
   items7[2] = tmp13Result3;
   obj11.children = items7;
-  obj4.trailing = closure_11(closure_5, obj11);
+  obj4.trailing = closure_10(closure_5, obj11);
   if (tmp4[0]) {
     if (result) {
       const obj18 = { style: tmp.activeNameContainer, children: null };
@@ -298,8 +304,8 @@ export const EmojiRow = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId
       obj19.style = items8;
       obj19.onChangeText = updateName;
       obj19.value = children;
-      obj18.children = closure_10(tmp5(tmp6[18]).TextInput, obj19);
-      let tmp13Result4 = closure_10(tmp17, obj18);
+      obj18.children = closure_9(tmp5(tmp6[18]).TextInput, obj19);
+      let tmp13Result4 = closure_9(tmp18, obj18);
     }
     obj4.label = tmp13Result4;
     obj4.disabled = flag;
@@ -307,12 +313,12 @@ export const EmojiRow = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId
     obj4.onLongPress = callback2;
     obj4.start = start;
     obj4.end = end;
-    return closure_10(guildId(onSelectRolesForEmoji[26]).TableRow, obj4);
+    return closure_9(guildId(onSelectRolesForEmoji[27]).TableRow, obj4);
   }
   const obj20 = { style: tmp.nameContainer, children: null };
-  const items9 = [closure_10(guildId(onSelectRolesForEmoji[17]).Text, { style: tmp.colon, variant: "text-md/medium", color: "text-muted", children: ":" }), closure_10(guildId(onSelectRolesForEmoji[17]).Text, { lineClamp: 1, style: tmp.emojiText, variant: "text-md/medium", color: "mobile-text-heading-primary", children }), closure_10(guildId(onSelectRolesForEmoji[17]).Text, { style: tmp.colon, variant: "text-md/medium", color: "text-muted", children: ":" })];
+  const items9 = [closure_9(guildId(onSelectRolesForEmoji[17]).Text, { style: tmp.colon, variant: "text-md/medium", color: "text-muted", children: ":" }), closure_9(guildId(onSelectRolesForEmoji[17]).Text, { lineClamp: 1, style: tmp.emojiText, variant: "text-md/medium", color: "mobile-text-heading-primary", children }), closure_9(guildId(onSelectRolesForEmoji[17]).Text, { style: tmp.colon, variant: "text-md/medium", color: "text-muted", children: ":" })];
   obj20.children = items9;
-  tmp13Result4 = closure_11(tmp17, obj20);
+  tmp13Result4 = closure_10(tmp18, obj20);
   const obj15 = { user: stateFromStores1, guildId, size: guildId(onSelectRolesForEmoji[18]).AvatarSizes.XSMALL };
   const obj21 = { style: tmp.colon, variant: "text-md/medium", color: "text-muted", children: ":" };
   const obj22 = { lineClamp: 1, style: tmp.emojiText, variant: "text-md/medium", color: "mobile-text-heading-primary", children };

@@ -1,13 +1,13 @@
-// === Module 11623: ChatInputContentCallbacks ===
+// === Module 11687: ChatInputContentCallbacks ===
 
-// Module 11623 (ChatInputContentCallbacks)
+// Module 11687 (ChatInputContentCallbacks)
 import _modDef12 from "module_12" /* 12 */;
-import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 6799 */;
-import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 6825 */;
-import useMessageMaxLengthDefault from "useMessageMaxLength" /* 8839 */;
+import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 6970 */;
+import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 6998 */;
+import useMessageMaxLengthDefault from "useMessageMaxLength" /* 9198 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelMemberStore from "ChannelMemberStore" /* 6792 */;
+import ChannelMemberStore from "ChannelMemberStore" /* 6967 */;
 
 const require = globalThis.__r;
 
@@ -47,7 +47,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_text_area/ChatInputContentCallbacks.tsx");
 
 export { tryUpdateSubscriptionForHereMention };
-export const useHereMentionCallback = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) => {
+export const useHereMentionCallback = ReactCompilerGating.isReactCompilerEnabled() ? (function useHereMentionCallback(arg0, arg1, arg2) {
   _require = arg0;
   importDefault = arg1;
   dependencyMap = arg2;
@@ -74,7 +74,7 @@ export const useHereMentionCallback = ReactCompilerGating.isReactCompilerEnabled
           }
         }
       }
-      const fn = function y() {
+      const fn = function v() {
         const groups = ChannelMemberStore.getProps(closure_1, closure_2).groups;
         if (null != closure_1) {
           let tmp = groups.length > 1;
@@ -142,7 +142,7 @@ export const useHereMentionCallback = ReactCompilerGating.isReactCompilerEnabled
   cResult[2] = tmp4;
   cResult[3] = debounceResult;
   tmp7 = debounceResult;
-}) : ((arg0, arg1, arg2) => {
+}) : (function useHereMentionCallback(arg0, arg1, arg2) {
   closure_0 = arg0;
   importDefault = arg1;
   dependencyMap = arg2;
@@ -166,9 +166,9 @@ export const useHereMentionCallback = ReactCompilerGating.isReactCompilerEnabled
       if (!(arr.length < 5 || arr.length > closure_1_3)) {
         let flag = -1 !== arr.indexOf(memo);
         if (flag) {
-          closure_0(6825).subscribeChannel(closure_1_1, dependencyMap, closure_0(6799).DEFAULT_RANGES);
+          closure_0(6998).subscribeChannel(closure_1_1, dependencyMap, closure_0(6970).DEFAULT_RANGES);
           flag = true;
-          const obj = closure_0(6825);
+          const obj = closure_0(6998);
         }
         tmp9 = flag;
       }

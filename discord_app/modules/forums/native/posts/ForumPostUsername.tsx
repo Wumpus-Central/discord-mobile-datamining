@@ -1,28 +1,28 @@
-// === Module 11633: ForumPostUsername ===
+// === Module 11697: ForumPostUsername ===
 
-// Module 11633 (ForumPostUsername)
+// Module 11697 (ForumPostUsername)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import native from "native" /* 1188 */;
-import ForumLayout from "ForumLayout" /* 2062 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import ForumHooks from "ForumHooks" /* 7539 */;
-import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 7631 */;
-import useChatWidthDefault from "useChatWidth" /* 11156 */;
-import ForumPostGridBody from "ForumPostGridBody" /* 11634 */;
+import native from "native" /* 1200 */;
+import ForumLayout from "ForumLayout" /* 2074 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 7952 */;
+import ForumHooks from "ForumHooks" /* 9261 */;
+import useChatWidthDefault from "useChatWidth" /* 11277 */;
+import ForumPostGridBody from "ForumPostGridBody" /* 11698 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 require = fn;
 const View = fn(17).View;
-const useForumChannelStore = fn(11629).useForumChannelStore;
+const useForumChannelStore = fn(11693).useForumChannelStore;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles({ authorContainer: { flexDirection: "row", alignItems: "center", justifyContent: "center", marginEnd: 8 }, roleDotContainer: { alignItems: "center", justifyContent: "center", marginEnd: 2, marginBottom: 4 }, authorName: { overflow: "hidden", flexWrap: "nowrap" } });
 fn(558);
 let ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPostAuthor(arg0) {
   const cResult = c.c(11);
   ({ thread, hasUnreads, suffix, containerStyle, roleDotStyle, textStyle } = arg0);
   const forumPostAuthor = ForumHooks.useForumPostAuthor(thread);
@@ -88,7 +88,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[10] = tmp9;
     tmp6 = tmp9;
   }
-}) : ((thread) => {
+}) : (function ForumPostAuthor(thread) {
   thread = thread.thread;
   ({ hasUnreads, suffix, containerStyle, roleDotStyle, textStyle } = thread);
   const forumPostAuthor = ForumHooks.useForumPostAuthor(thread);
@@ -131,13 +131,13 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return tmp5Result;
 });
 ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((thread) => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function useUsernameMaxWidth(thread) {
   let num = 158;
   if (useForumChannelStore(thread.thread.parent_id).layoutType === ForumLayout.ForumLayout.GRID) {
     num = 72;
   }
   return useChatWidthDefault() - ForumPostGridBody.GRID_HORIZONTAL_PADDING - num;
-}) : ((thread) => {
+}) : (function useUsernameMaxWidth(thread) {
   let num = 158;
   if (useForumChannelStore(thread.thread.parent_id).layoutType === ForumLayout.ForumLayout.GRID) {
     num = 72;
@@ -145,7 +145,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((thread) => {
   return useChatWidthDefault() - ForumPostGridBody.GRID_HORIZONTAL_PADDING - num;
 });
 ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPostUsername(arg0) {
   const cResult = c.c(35);
   ({ thread, authorId, authorName, authorColor, authorColors, containerStyle, roleDotStyle, textStyle, suffix, hasUnreads } = arg0);
   const tmp4 = closure_8();
@@ -160,14 +160,14 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const tmp6 = closure_9(tmp5);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AccessibilityStore];
-    class A {
+    class N {
       constructor() {
         return closure_1_4.roleStyle;
       }
     }
     cResult[2] = items;
-    cResult[3] = A;
-    let tmp8 = A;
+    cResult[3] = N;
+    let tmp8 = N;
     let tmp7 = items;
   } else {
     tmp7 = cResult[2];
@@ -179,7 +179,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       if (cResult[7] !== hasUnreads) {
         const tmp15 = hasUnreads ? {} : { opacity: 0.8 };
         cResult[7] = hasUnreads;
-        class A {
+        class N {
           constructor() {
             return closure_1_4.roleStyle;
           }
@@ -187,7 +187,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         cResult[8] = tmp15;
       } else {
         const processColorStringsArray = enhanced_role_colors_EnhancedRoleColorUtils.useProcessColorStringsArray(authorColors);
-        class A {
+        class N {
           constructor() {
             return closure_1_4.roleStyle;
           }
@@ -207,7 +207,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                   if (cResult[17] === authorColors) {
                     if (cResult[18] === roleDotStyle) {
                       if (cResult[19] === stateFromStores) {
-                        class A {
+                        class N {
                           constructor() {
                             return closure_1_4.roleStyle;
                           }
@@ -221,14 +221,14 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                     }
                   }
                 }
-                class A {
+                class N {
                   constructor() {
                     return closure_1_4.roleStyle;
                   }
                 }
                 if (tmp29) {
                   const obj3 = { style: null, children: null };
-                  class A {
+                  class N {
                     constructor() {
                       return closure_1_4.roleStyle;
                     }
@@ -249,7 +249,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               }
             }
             const items2 = [, , ];
-            class A {
+            class N {
               constructor() {
                 return closure_1_4.roleStyle;
               }
@@ -262,7 +262,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             cResult[15] = items2;
           }
           const obj5 = { maxWidth: tmp6 };
-          class A {
+          class N {
             constructor() {
               return closure_1_4.roleStyle;
             }
@@ -280,7 +280,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if ("username" !== stateFromStores) {
     let obj6 = {};
     cResult[4] = authorColor;
-    class A {
+    class N {
       constructor() {
         return closure_1_4.roleStyle;
       }
@@ -290,7 +290,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   obj6 = { color: authorColor };
   const tmpResult = initialize;
-}) : ((arg0) => {
+}) : (function ForumPostUsername(arg0) {
   ({ thread, authorId, authorName, authorColor, authorColors } = arg0);
   ({ containerStyle, roleDotStyle, textStyle, suffix, hasUnreads } = arg0);
   const tmp = closure_8();
@@ -342,7 +342,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPostUsername.tsx");
 
 export const ForumPostAuthor = tmp4;
-export const ForumPostMessageAuthor = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const ForumPostMessageAuthor = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPostMessageAuthor(arg0) {
   const cResult = c.c(11);
   ({ thread, hasUnreads, suffix, containerStyle, roleDotStyle, textStyle, message } = arg0);
   const forumPostMessageAuthor = ForumHooks.useForumPostMessageAuthor(message, thread);
@@ -386,7 +386,7 @@ export const ForumPostMessageAuthor = ReactCompilerGating.isReactCompilerEnabled
   cResult[9] = thread;
   cResult[10] = tmp5;
   tmp4 = tmp5;
-}) : ((thread) => {
+}) : (function ForumPostMessageAuthor(thread) {
   thread = thread.thread;
   ({ message, hasUnreads, suffix, containerStyle, roleDotStyle, textStyle } = thread);
   const forumPostMessageAuthor = ForumHooks.useForumPostMessageAuthor(message, thread);

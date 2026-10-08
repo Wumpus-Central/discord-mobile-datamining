@@ -1,19 +1,19 @@
-// === Module 14705: ConnectGuardianCard ===
+// === Module 14966: ConnectGuardianCard ===
 
-// Module 14705 (ConnectGuardianCard)
+// Module 14966 (ConnectGuardianCard)
 import nativeDefault from "native" /* 587 */;
-import ToastUtils from "ToastUtils" /* 4573 */;
-import ClipboardUtils from "ClipboardUtils" /* 6695 */;
-import shareGuardianConnectLink from "shareGuardianConnectLink" /* 14702 */;
+import ToastUtils from "ToastUtils" /* 4765 */;
+import ClipboardUtils from "ClipboardUtils" /* 6872 */;
+import shareGuardianConnectLink from "shareGuardianConnectLink" /* 14963 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(7062).FAMILY_CENTER_REQUEST_QR_CODE_URL;
+let closure_6 = fn(7248).FAMILY_CENTER_REQUEST_QR_CODE_URL;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_16 }, compactContainer: null, card: null, countdown: null, divider: null, compactDividerFlush: null, dividerLine: null, dividerText: null, buttonGroup: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.compactContainer = { alignSelf: "center", gap: nativeDefault.space.PX_16 };
@@ -34,7 +34,7 @@ let obj8 = { marginHorizontal: nativeDefault.space.PX_8 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/parent_tools/native/ConnectGuardianCard.tsx");
 
-export const ConnectGuardianCard = ReactCompilerGating.isReactCompilerEnabled() ? ((linkCode) => {
+export const ConnectGuardianCard = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectGuardianCard(linkCode) {
   const cResult = linkCode(id[8]).c(69);
   linkCode = linkCode.linkCode;
   ({ expiresAt, shareActions } = linkCode);
@@ -412,7 +412,7 @@ export const ConnectGuardianCard = ReactCompilerGating.isReactCompilerEnabled() 
   cResult[4] = fn2;
   tmp10 = stateFromStores;
   const tmpResult = linkCode(id[9]);
-}) : ((linkCode) => {
+}) : (function ConnectGuardianCard(linkCode) {
   linkCode = linkCode.linkCode;
   ({ expiresAt, shareActions } = linkCode);
   if (shareActions === undefined) {

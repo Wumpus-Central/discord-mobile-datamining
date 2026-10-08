@@ -1,23 +1,23 @@
-// === Module 16323: GuildsBarDirectMessage ===
+// === Module 16583: GuildsBarDirectMessage ===
 
-// Module 16323 (GuildsBarDirectMessage)
+// Module 16583 (GuildsBarDirectMessage)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import transitionToChannel from "transitionToChannel" /* 4907 */;
-import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9295 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10664 */;
+import transitionToChannel from "transitionToChannel" /* 5101 */;
+import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 8626 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10264 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CallStore from "CallStore" /* 5444 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7134 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
-import UserStore from "UserStore" /* 1377 */;
+import CallStore from "CallStore" /* 5754 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6082 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const ChannelTypes = fn(1085).ChannelTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { dm: null };
 let size = { width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE, height: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE };
 obj.dm = size;
@@ -26,7 +26,7 @@ const ReactCompilerGating = fn(558);
 size = fn(2);
 let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarDirectMessage.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function GuildsBarDirectMessage(channelId) {
   const cResult = channelId(channel[12]).c(32);
   channelId = channelId.channelId;
   const tmp4 = closure_12();
@@ -85,7 +85,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
         return closure_7.getMentionCountForPrivateChannel(channelId).count;
       }
     }
-    const stateFromStoresObject = tmp(tmp2[14]).useStateFromStoresObject(tmp11, fn);
+    const stateFromStoresObject = tmp(tmp2[14]).useStateFromStoresObject(tmp11, R);
     channel = stateFromStoresObject.channel;
     ({ dmRecipient, label } = stateFromStoresObject);
     if (cResult[8] !== stateFromStores) {
@@ -255,39 +255,56 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
     cResult[12] = tmp24;
     const tmp20 = stateFromStores(tmp2[17])(tmp18);
   }
-  fn = function y() {
-    channel = ChannelStore.getChannel(channelId);
-    let type;
-    if (channel != null) {
-      type = channel.type;
+  class R {
+    constructor() {
+      tmp = channelId;
+      channel = closure_6.getChannel(channelId);
+      type = undefined;
+      if (channel != null) {
+        type = channel.type;
+      }
+      user = undefined;
+      if (type === ChannelTypes.DM) {
+        tmp4 = closure_9;
+        user = closure_9.getUser(channel.getRecipientId());
+      }
+      obj2 = closure_5;
+      call = closure_5.getCall(tmp);
+      id = closure_4.getId();
+      hasItem = null != call && null != id;
+      if (hasItem) {
+        ringing = call.ringing;
+        hasItem = ringing.includes(id);
+      }
+      tmp8 = obj2.isCallActive(tmp) && !hasItem;
+      obj1 = { channel, dmRecipient: user, label: null };
+      if (null != channel) {
+        tmp12 = closure_1;
+        tmp13 = closure_2;
+        obj5 = { channel: null, unread: null, mentionCount: null, isIncomingCall: null, isOngoingCall: null };
+        obj5.channel = channel;
+        tmp14 = closure_1;
+        num = 0;
+        obj5.unread = closure_1 > 0;
+        obj5.mentionCount = closure_1;
+        obj5.isIncomingCall = hasItem;
+        obj5.isOngoingCall = tmp8;
+        stringResult = closure_1(closure_2[15])(obj5);
+      } else {
+        tmp9 = closure_0;
+        tmp10 = closure_2;
+        intl = closure_0(closure_2[16]).intl;
+        stringResult = intl.string(closure_0(closure_2[16]).t.zLZPmk);
+      }
+      obj1.label = stringResult;
+      return obj1;
     }
-    let user;
-    if (type === ChannelTypes.DM) {
-      user = UserStore.getUser(channel.getRecipientId());
-    }
-    const call = CallStore.getCall(channelId);
-    const id = AuthenticationStore.getId();
-    let hasItem = null != call && null != id;
-    if (hasItem) {
-      const ringing = call.ringing;
-      hasItem = ringing.includes(id);
-    }
-    const obj = { channel, dmRecipient: user, label: null };
-    if (null != channel) {
-      const obj3 = { channel, unread: stateFromStores > 0, mentionCount: stateFromStores, isIncomingCall: hasItem, isOngoingCall: tmp8 };
-      let stringResult = getChannelA11yLabelDefault(obj3);
-    } else {
-      const intl = util.intl;
-      stringResult = intl.string(util.t.zLZPmk);
-    }
-    obj.label = stringResult;
-    return obj;
-  };
+  }
   cResult[5] = channelId;
   cResult[6] = stateFromStores;
-  cResult[7] = fn;
+  cResult[7] = R;
   const tmpResult3 = channelId(channel[14]);
-}) : ((channelId) => {
+}) : (function GuildsBarDirectMessage(channelId) {
   channelId = channelId.channelId;
   let channel;
   const tmp = closure_12();

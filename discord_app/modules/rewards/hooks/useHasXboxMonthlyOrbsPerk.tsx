@@ -1,17 +1,17 @@
-// === Module 13558: useHasXboxMonthlyOrbsPerk ===
+// === Module 13851: useHasXboxMonthlyOrbsPerk ===
 
-// Module 13558 (useHasXboxMonthlyOrbsPerk)
+// Module 13851 (useHasXboxMonthlyOrbsPerk)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import PerksStateUtils from "PerksStateUtils" /* 1383 */;
-import user from "user" /* 1385 */;
-import PremiumUtils from "PremiumUtils" /* 4534 */;
-import UserStore from "UserStore" /* 1377 */;
+import PerksStateUtils from "PerksStateUtils" /* 1395 */;
+import user from "user" /* 1397 */;
+import PremiumUtils from "PremiumUtils" /* 4726 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const PremiumUtilsDefault = PremiumUtils;
 
 require = fn;
-const PremiumTypes = fn(1379).PremiumTypes;
+const PremiumTypes = fn(1391).PremiumTypes;
 const ReactCompilerGating = fn(558);
 function hasCrepeMonthlyOrbsPerk(currentUser) {
   if (obj.canUseMonthlyOrbs(currentUser)) {
@@ -35,11 +35,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/rewards/hooks/useHasXboxMonthlyOrbsPerk.tsx");
 
 export { hasCrepeMonthlyOrbsPerk };
-export const useHasXboxMonthlyOrbsPerk = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useHasXboxMonthlyOrbsPerk = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasXboxMonthlyOrbsPerk() {
   const cResult = c.c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
-    const fn = function n() {
+    const fn = function o() {
       return currentUser.getCurrentUser();
     };
     cResult[0] = items;
@@ -77,7 +77,7 @@ export const useHasXboxMonthlyOrbsPerk = ReactCompilerGating.isReactCompilerEnab
     tmp8 = cResult[3];
   }
   return tmp8;
-}) : (() => {
+}) : (function useHasXboxMonthlyOrbsPerk() {
   const items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   let flag = false;

@@ -1,14 +1,14 @@
-// === Module 10897: useCanOpenBadgeDirectoryFromProfile ===
+// === Module 10548: useCanOpenBadgeDirectoryFromProfile ===
 
-// Module 10897 (useCanOpenBadgeDirectoryFromProfile)
+// Module 10548 (useCanOpenBadgeDirectoryFromProfile)
 import c from "c" /* 576 */;
-import BadgeManagementExperiment from "BadgeManagementExperiment" /* 10896 */;
+import BadgeManagementExperiment from "BadgeManagementExperiment" /* 10547 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/badges/native/useCanOpenBadgeDirectoryFromProfile.tsx");
 
-export const useCanOpenBadgeDirectoryFromProfile = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+export const useCanOpenBadgeDirectoryFromProfile = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanOpenBadgeDirectoryFromProfile(location) {
   const cResult = c.c(4);
   const _location = location.location;
   if (cResult[0] !== _location) {
@@ -33,7 +33,7 @@ export const useCanOpenBadgeDirectoryFromProfile = ReactCompilerGating.isReactCo
     isBadgeManagementEnabled = tmpResult2.useIsBadgeDirectoryUpdatesEnabled(tmp6);
   }
   return isBadgeManagementEnabled;
-}) : ((location) => {
+}) : (function useCanOpenBadgeDirectoryFromProfile(location) {
   const _location = location.location;
   let isBadgeManagementEnabled = BadgeManagementExperiment.useIsBadgeManagementEnabled({ location: _location });
   if (isBadgeManagementEnabled) {

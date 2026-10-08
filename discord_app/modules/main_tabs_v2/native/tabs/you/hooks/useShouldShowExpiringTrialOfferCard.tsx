@@ -1,22 +1,22 @@
-// === Module 17003: useShouldShowExpiringTrialOfferCard ===
+// === Module 17284: useShouldShowExpiringTrialOfferCard ===
 
-// Module 17003 (useShouldShowExpiringTrialOfferCard)
+// Module 17284 (useShouldShowExpiringTrialOfferCard)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import useCountdownDefault from "useCountdown" /* 6961 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 6969 */;
-import NoticeStore from "NoticeStore" /* 13549 */;
+import useCountdownDefault from "useCountdown" /* 7150 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7158 */;
+import NoticeStore from "NoticeStore" /* 13846 */;
 
 require = fn;
 const NoticeTypes = fn(1085).NoticeTypes;
-const PremiumSubscriptionSKUs = fn(1379).PremiumSubscriptionSKUs;
+const PremiumSubscriptionSKUs = fn(1391).PremiumSubscriptionSKUs;
 let closure_6 = 10 * DurationsDefault.Millis.SECOND;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/hooks/useShouldShowExpiringTrialOfferCard.tsx");
 
-export const useShouldShowExpiringTrialOfferCard = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useShouldShowExpiringTrialOfferCard = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldShowExpiringTrialOfferCard() {
   const cResult = c.c(8);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [NoticeStore];
@@ -94,7 +94,7 @@ export const useShouldShowExpiringTrialOfferCard = ReactCompilerGating.isReactCo
     }
   }
   const tmpResult2 = usePremiumTrialOffer;
-}) : (() => {
+}) : (function useShouldShowExpiringTrialOfferCard() {
   const items = [NoticeStore];
   const stateFromStores = useStateFromStores.useStateFromStores(items, () => noticeType.getNoticeType());
   const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();

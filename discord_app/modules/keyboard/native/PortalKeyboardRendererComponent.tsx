@@ -1,15 +1,15 @@
-// === Module 16644: PortalKeyboardRendererComponent ===
+// === Module 16906: PortalKeyboardRendererComponent ===
 
-// Module 16644 (PortalKeyboardRendererComponent)
+// Module 16906 (PortalKeyboardRendererComponent)
 import c from "c" /* 576 */;
-import KeyboardTypes from "KeyboardTypes" /* 1616 */;
-import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 6736 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 8961 */;
-import AppLauncherKeyboardDefault from "AppLauncherKeyboard" /* 11663 */;
-import MediaKeyboardDefault from "MediaKeyboard" /* 16645 */;
-import ExpressionPickerKeyboardDefault from "ExpressionPickerKeyboard" /* 16651 */;
+import KeyboardTypes from "KeyboardTypes" /* 1628 */;
+import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 6910 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 11233 */;
+import AppLauncherKeyboardDefault from "AppLauncherKeyboard" /* 11728 */;
+import MediaKeyboardDefault from "MediaKeyboard" /* 16907 */;
+import ExpressionPickerKeyboardDefault from "ExpressionPickerKeyboard" /* 16913 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
 
 require = fn;
 const jsx = fn(21).jsx;
@@ -17,7 +17,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/keyboard/native/PortalKeyboardRendererComponent.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function PortalKeyboardRendererComponent(arg0) {
   const cResult = c.c(19);
   ({ item, state, cleanUp } = arg0);
   ({ channelId, chatInputRef, type } = item);
@@ -109,7 +109,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
     }
   }
   return null;
-}) : ((item) => {
+}) : (function PortalKeyboardRendererComponent(item) {
   item = item.item;
   const channelId = item.channelId;
   ({ chatInputRef, type } = item);

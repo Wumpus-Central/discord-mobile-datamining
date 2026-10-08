@@ -1,18 +1,18 @@
-// === Module 13811: GuildActionSheetEmojiSection ===
+// === Module 14036: GuildActionSheetEmojiSection ===
 
-// Module 13811 (GuildActionSheetEmojiSection)
+// Module 14036 (GuildActionSheetEmojiSection)
 import nativeDefault from "native" /* 587 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4534 */;
-import ToastUtils from "ToastUtils" /* 4573 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import HapticUtils from "HapticUtils" /* 4861 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4862 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 8848 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4726 */;
+import ToastUtils from "ToastUtils" /* 4765 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import HapticUtils from "HapticUtils" /* 5055 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5056 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9208 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 5645 */;
-import ThemeStore from "ThemeStore" /* 1193 */;
-import UserStore from "UserStore" /* 1377 */;
+import EmojiStore from "EmojiStore" /* 5992 */;
+import ThemeStore from "ThemeStore" /* 1205 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
@@ -22,7 +22,7 @@ const Constants = fn(1085);
 ({ UpsellTypes: closure_9, AnalyticsSections: c10, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { header: { flexDirection: "row", alignItems: "center", flexWrap: "wrap" }, dotSeparator: null, premiumTitle: null, emojiContainer: null, emoji: null, emojiCount: null };
 let size = { width: 4, height: 4, borderRadius: nativeDefault.radii.xs, marginRight: 8, marginLeft: 8, backgroundColor: nativeDefault.colors.TEXT_SUBTLE };
 obj2.dotSeparator = size;
@@ -37,7 +37,7 @@ let obj4 = { color: nativeDefault.colors.TEXT_SUBTLE, fontSize: 12, fontFamily: 
 size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_action_sheet/native/components/GuildActionSheetEmojiSection.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildActionSheetEmojiSection(guildId) {
   const cResult = guildId(first[11]).c(9);
   guildId = guildId.guildId;
   let tmp4 = closure_13();
@@ -80,17 +80,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       }
     }
     const items2 = [UserStore];
-    class O {
-      constructor() {
-        return closure_1_8.getCurrentUser();
-      }
-    }
+    const fn = function f() {
+      return currentUser.getCurrentUser();
+    };
     const items3 = [];
     cResult[4] = items2;
-    cResult[5] = O;
+    cResult[5] = fn;
     cResult[6] = items3;
     let tmp15 = items3;
-    let tmp14 = O;
+    let tmp14 = fn;
     const tmp13 = items2;
   } else {
     class E {
@@ -158,11 +156,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     }
     diff1 = tmp22 - 1;
     const _Math = Math;
-    class O {
-      constructor() {
-        return closure_1_8.getCurrentUser();
-      }
-    }
     bound = Math.min(num8 + 1, 99);
   }
   const substr = stateFromStoresArray.slice(0, diff1);
@@ -205,11 +198,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       }
     }
     cResult[7] = analyticsLocations;
-    class O {
-      constructor() {
-        return closure_1_8.getCurrentUser();
-      }
-    }
     cResult[8] = K;
   } else {
     class K {
@@ -291,12 +279,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       }
     }
     let obj2 = { title: null, trailing: null, children: null };
-    class O {
-      constructor() {
-        return closure_1_8.getCurrentUser();
-      }
-    }
-    obj2.title = obj9.string(tmp(tmp2[22]).t.Q60n1E);
+    const intl = tmp(tmp2[22]).intl;
+    obj2.title = intl.string(tmp(tmp2[22]).t.Q60n1E);
     let tmp30Result = null;
     if (tmp18) {
       class K {
@@ -337,11 +321,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       tmp32[1] = function onPress() {
         return K(guildId, stateFromStores);
       };
-      class O {
-        constructor() {
-          return closure_1_8.getCurrentUser();
-        }
-      }
       let obj3 = { style: tmp4.header, children: null };
       let obj4 = { style: tmp4.dotSeparator };
       const items4 = [tmp30(num7, obj4), , ];
@@ -352,15 +331,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       const obj8 = { color: tmp28 };
       items5[1] = obj8;
       obj7.style = items5;
-      const intl = tmp(tmp2[22]).intl;
-      obj7.children = intl.string(tmp(tmp2[22]).t.p1j56s);
+      const intl2 = tmp(tmp2[22]).intl;
+      obj7.children = intl2.string(tmp(tmp2[22]).t.p1j56s);
       items4[2] = tmp30(tmp(tmp2[24]).LegacyText, obj7);
       obj3.children = items4;
       tmp32[2] = closure_12(num7, obj3);
       tmp30Result = tmp30(tmp(tmp2[23]).PressableOpacity, tmp32);
     }
     obj2.trailing = tmp30Result;
-    const obj10 = { style: tmp4.emojiContainer, children: null };
+    const obj9 = { style: tmp4.emojiContainer, children: null };
     const items6 = [
       substr.map((accessibilityLabel) => {
           closure_0 = accessibilityLabel;
@@ -433,34 +412,30 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
           return;
         }
       }
-      class O {
-        constructor() {
-          return closure_1_8.getCurrentUser();
-        }
-      }
-      tmp37[1] = tmp38(tmp(tmp2[22]).t["UKOtz+"]);
-      tmp37[2] = function onPress() {
+      const intl3 = tmp(tmp2[22]).intl;
+      tmp38[1] = intl3.string(tmp(tmp2[22]).t["UKOtz+"]);
+      tmp38[2] = function onPress() {
         const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
         closure_3(true);
       };
-      const obj11 = { style: null, children: null };
+      const obj10 = { style: null, children: null };
       const items7 = [, , ];
       ({ emoji: arr10[0], emojiCount: arr10[1] } = tmp4);
-      const obj12 = { margin: num7 };
-      items7[2] = obj12;
-      obj11.style = items7;
+      const obj11 = { margin: num7 };
+      items7[2] = obj11;
+      obj10.style = items7;
       let _HermesInternal = HermesInternal;
-      obj11.children = "+" + bound;
-      tmp37[3] = tmp30(tmp(tmp2[24]).LegacyText, obj11);
-      tmp30Result3 = tmp30(tmp(tmp2[23]).PressableOpacity, tmp37, -1);
+      obj10.children = "+" + bound;
+      tmp38[3] = tmp30(tmp(tmp2[24]).LegacyText, obj10);
+      tmp30Result3 = tmp30(tmp(tmp2[23]).PressableOpacity, tmp38, -1);
     }
     items6[1] = tmp30Result3;
-    obj10.children = items6;
-    obj2.children = closure_12(num7, obj10);
+    obj9.children = items6;
+    obj2.children = closure_12(num7, obj9);
     tmp30Result4 = tmp30(tmp(tmp2[21]).RowGroup, obj2);
   }
   return tmp30Result4;
-}) : ((guildId) => {
+}) : (function GuildActionSheetEmojiSection(guildId) {
   guildId = guildId.guildId;
   first = undefined;
   _slicedToArray = undefined;

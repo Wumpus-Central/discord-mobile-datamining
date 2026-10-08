@@ -1,19 +1,19 @@
-// === Module 10138: StickerPackBanner ===
+// === Module 9723: StickerPackBanner ===
 
-// Module 10138 (StickerPackBanner)
+// Module 9723 (StickerPackBanner)
 import c from "c" /* 576 */;
-import StickersUtils from "StickersUtils" /* 5435 */;
+import StickersUtils from "StickersUtils" /* 5745 */;
+import FastImageDefault from "FastImage" /* 6164 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ Image: c2, View: c3 } = get_ActivityIndicator);
+const View = fn(17).View;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stickers/native/StickerPackBanner.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function StickerPackBanner(arg0) {
   const cResult = c.c(10);
   ({ containerStyle, style, stickerPack } = arg0);
   if (cResult[0] !== stickerPack) {
@@ -43,30 +43,30 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       if (cResult[7] === containerStyle) {
       }
       const obj3 = { style: containerStyle, children: tmp7 };
-      const tmp14 = <React3 style={containerStyle}>{tmp7}</React3>;
+      const tmp14 = <View style={containerStyle}>{tmp7}</View>;
       cResult[7] = containerStyle;
       cResult[8] = tmp7;
       cResult[9] = tmp14;
     }
     const obj4 = { source: tmp6, style, resizeMode: "contain" };
-    const tmp10 = <React2 source={tmp6} style={style} resizeMode="contain" />;
+    const tmp10 = jsx(FastImageDefault, { source: tmp6, style, resizeMode: "contain" });
     cResult[4] = style;
     cResult[5] = tmp6;
     cResult[6] = tmp10;
     tmp7 = tmp10;
   }
-}) : ((arg0) => {
+}) : (function StickerPackBanner(arg0) {
   ({ containerStyle, style, stickerPack } = arg0);
   const stickerPackBannerAssetUrl = StickersUtils.getStickerPackBannerAssetUrl(stickerPack, 1024);
-  let tmp2 = null;
+  let tmp3 = null;
   if (null != stickerPackBannerAssetUrl) {
     const obj2 = { style: containerStyle, children: null };
     const obj3 = { source: null, style: null, resizeMode: "contain" };
     const obj4 = { uri: stickerPackBannerAssetUrl };
     obj3.source = obj4;
     obj3.style = style;
-    obj2.children = <React2 source={null} style={null} resizeMode="contain" />;
-    tmp2 = <React3 style={containerStyle}>{null}</React3>;
+    obj2.children = jsx(FastImageDefault, { source: null, style: null, resizeMode: "contain" });
+    tmp3 = <View style={containerStyle}>{null}</View>;
   }
-  return tmp2;
+  return tmp3;
 });

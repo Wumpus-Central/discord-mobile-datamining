@@ -1,22 +1,22 @@
-// === Module 16277: useGuildsBarBottomRightBadge ===
+// === Module 16537: useGuildsBarBottomRightBadge ===
 
-// Module 16277 (useGuildsBarBottomRightBadge)
-import native from "native" /* 1188 */;
-import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 16278 */;
-import GuildsBarGuildJoinRequestBadgeDefault from "GuildsBarGuildJoinRequestBadge" /* 16279 */;
-import InvitesDisabledBadgeDefault from "InvitesDisabledBadge" /* 16283 */;
+// Module 16537 (useGuildsBarBottomRightBadge)
+import native from "native" /* 1200 */;
+import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 16538 */;
+import GuildsBarGuildJoinRequestBadgeDefault from "GuildsBarGuildJoinRequestBadge" /* 16539 */;
+import InvitesDisabledBadgeDefault from "InvitesDisabledBadge" /* 16543 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({ bottomRightBadge: { position: "absolute", right: 9, backgroundColor: "transparent", borderColor: "transparent" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/native/hooks/useGuildsBarBottomRightBadge.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((mentionCount) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildsBarBottomRightBadge(mentionCount) {
   const cResult = mentionCount(576).c(45);
   mentionCount = mentionCount.mentionCount;
   ({ isMentionLowImportance, joinRequestState, shouldShowInvitesDisabled } = mentionCount);
@@ -38,10 +38,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((mentionCount) =>
   }
   [first, dependencyMap] = noop.useState(tmp5);
   const obj = mentionCount(576);
-  const token = mentionCount(4586).useToken(first(587).modules.mobile.GUILD_BAR_ITEM_SIZE);
-  const tmpResult = mentionCount(4586);
-  const token1 = mentionCount(4586).useToken(first(587).modules.mobile.GUILD_BAR_ITEM_MARGIN);
-  const diff = token1 - tmp(1188).BADGE_PADDING;
+  const token = mentionCount(4778).useToken(first(587).modules.mobile.GUILD_BAR_ITEM_SIZE);
+  const tmpResult = mentionCount(4778);
+  const token1 = mentionCount(4778).useToken(first(587).modules.mobile.GUILD_BAR_ITEM_MARGIN);
+  const diff = token1 - tmp(1200).BADGE_PADDING;
   if (cResult[2] !== diff) {
     const obj2 = { bottom: diff };
     cResult[2] = diff;
@@ -55,7 +55,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((mentionCount) =>
       let tmp13 = cResult[6];
     }
     if (mentionCount > 0) {
-      const diff1 = first - 2 * tmp(1188).BADGE_PADDING;
+      const diff1 = first - 2 * tmp(1200).BADGE_PADDING;
       if (cResult[7] === token) {
         if (cResult[10] !== first) {
           class L {
@@ -95,7 +95,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((mentionCount) =>
           }
         }
         const obj3 = { maskStyle: tmp13, value: mentionCount, isMentionLowImportance, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", onLayout: L };
-        const tmp27 = jsx(tmp(1188).MaskedBadge, { maskStyle: tmp13, value: mentionCount, isMentionLowImportance, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", onLayout: L });
+        const tmp27 = jsx(tmp(1200).MaskedBadge, { maskStyle: tmp13, value: mentionCount, isMentionLowImportance, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", onLayout: L });
         cResult[12] = tmp13;
         cResult[13] = isMentionLowImportance;
         cResult[14] = mentionCount;
@@ -103,7 +103,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((mentionCount) =>
         cResult[16] = tmp27;
       }
       const obj4 = { position: "bottom-right", containerSize: token, width: diff1 };
-      const tmp23 = tmp8(16278)(obj4);
+      const tmp23 = tmp8(16538)(obj4);
       cResult[7] = token;
       cResult[8] = diff1;
       cResult[9] = tmp23;
@@ -197,7 +197,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((mentionCount) =>
           const tmp20 = obj5;
         }
         const obj6 = { style: tmp13, joinRequestState };
-        const tmp17 = jsx(tmp8(16279), { style: tmp13, joinRequestState });
+        const tmp17 = jsx(tmp8(16539), { style: tmp13, joinRequestState });
         cResult[25] = tmp13;
         cResult[26] = joinRequestState;
         cResult[27] = tmp17;
@@ -210,8 +210,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((mentionCount) =>
   cResult[5] = tmp12;
   cResult[6] = items;
   tmp13 = items;
-  const tmpResult2 = mentionCount(4586);
-}) : ((mentionCount) => {
+  const tmpResult2 = mentionCount(4778);
+}) : (function useGuildsBarBottomRightBadge(mentionCount) {
   mentionCount = mentionCount.mentionCount;
   const isMentionLowImportance = mentionCount.isMentionLowImportance;
   const joinRequestState = mentionCount.joinRequestState;
@@ -297,7 +297,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((mentionCount) =>
       obj8.cutouts = items2;
       return obj8;
     } else {
-      return { badge: null, cutout: "Array", cutouts: "parent" };
+      return { badge: null, cutout: "Array", cutouts: "toCharArray$esjava$1" };
     }
   }, items1);
 });

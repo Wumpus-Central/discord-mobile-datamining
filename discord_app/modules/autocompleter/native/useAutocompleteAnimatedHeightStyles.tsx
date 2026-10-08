@@ -1,8 +1,8 @@
-// === Module 12051: useAutocompleteAnimatedHeightStyles ===
+// === Module 12124: useAutocompleteAnimatedHeightStyles ===
 
-// Module 12051 (useAutocompleteAnimatedHeightStyles)
-import timing from "timing" /* 4897 */;
-import timingPresets from "timingPresets" /* 4900 */;
+// Module 12124 (useAutocompleteAnimatedHeightStyles)
+import timing from "timing" /* 5091 */;
+import timingPresets from "timingPresets" /* 5094 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -12,7 +12,7 @@ const __initData = { code: "function useAutocompleteAnimatedHeightStylesTsx1(){c
 const __initData2 = { code: "function useAutocompleteAnimatedHeightStylesTsx2(){const{withTiming,height,timingStandard,isFrozenSharedValue}=this.__closure;return{height:withTiming(height,timingStandard),display:!isFrozenSharedValue.get()?'flex':'none'};}" };
 const result = size.fileFinishedImporting("modules/autocompleter/native/useAutocompleteAnimatedHeightStyles.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((height, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAutocompleteAnimatedHeightStyles(height, arg1) {
   _require = height;
   isScreenIndexFrozenSharedValue = require("ScreenIndexFrozen").useIsScreenIndexFrozenSharedValue(arg1);
   let obj = require("ScreenIndexFrozen");
@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((height, arg1) =>
   fn.__workletHash = 13204746043694;
   fn.__initData = __initData;
   return obj2.useAnimatedStyle(fn);
-}) : ((height, arg1) => {
+}) : (function useAutocompleteAnimatedHeightStyles(height, arg1) {
   _require = height;
   isScreenIndexFrozenSharedValue = require("ScreenIndexFrozen").useIsScreenIndexFrozenSharedValue(arg1);
   let obj = require("ScreenIndexFrozen");

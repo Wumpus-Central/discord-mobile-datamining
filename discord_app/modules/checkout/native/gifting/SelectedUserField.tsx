@@ -1,15 +1,15 @@
-// === Module 10602: SelectedUserField ===
+// === Module 10199: SelectedUserField ===
 
-// Module 10602 (SelectedUserField)
+// Module 10199 (SelectedUserField)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import UserUtilsDefault from "UserUtils" /* 4728 */;
-import CircleXIcon from "CircleXIcon" /* 4803 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import InputFieldContainer from "InputFieldContainer" /* 6112 */;
-import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 6555 */;
+import native from "native" /* 1200 */;
+import UserUtilsDefault from "UserUtils" /* 4922 */;
+import CircleXIcon from "CircleXIcon" /* 4997 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import InputFieldContainer from "InputFieldContainer" /* 6292 */;
+import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 6731 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { marginHorizontal: nativeDefault.space.PX_16 }, content: { flexDirection: "row", overflow: "hidden", alignItems: "center", display: "flex" }, opener: null, openerWithClearButton: null, searchIcon: null, userPill: null, userPillText: null, clearButton: null };
 let obj3 = { marginHorizontal: nativeDefault.space.PX_16 };
 obj2.opener = { flexDirection: "row", alignItems: "center", flex: 1, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: 6 };
@@ -37,7 +37,7 @@ let obj7 = { alignItems: "center", justifyContent: "center", minWidth: 44, minHe
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkout/native/gifting/SelectedUserField.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SelectedUserField(arg0) {
   const cResult = c.c(28);
   ({ selectedUser, onPress, setSelectedUser } = arg0);
   const tmp4 = closure_7();
@@ -182,7 +182,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = null != selectedUser && tmp4.openerWithClearButton;
   cResult[2] = items3;
   tmp6 = items3;
-}) : ((onPress) => {
+}) : (function SelectedUserField(onPress) {
   ({ selectedUser, setSelectedUser: require } = onPress);
   const tmp = closure_7();
   const obj = { style: tmp.container, children: null };

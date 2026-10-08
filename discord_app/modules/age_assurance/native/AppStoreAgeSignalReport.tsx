@@ -1,13 +1,13 @@
-// === Module 17644: AppStoreAgeSignalReport ===
+// === Module 17926: AppStoreAgeSignalReport ===
 
-// Module 17644 (AppStoreAgeSignalReport)
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5587 */;
-import AppStoreAgeSignalSupport from "AppStoreAgeSignalSupport" /* 8148 */;
+// Module 17926 (AppStoreAgeSignalReport)
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5918 */;
+import AppStoreAgeSignalSupport from "AppStoreAgeSignalSupport" /* 7529 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserStore from "UserStore" /* 1377 */;
-import AppStateStore from "AppStateStore" /* 1986 */;
+import UserStore from "UserStore" /* 1389 */;
+import AppStateStore from "AppStateStore" /* 1998 */;
 
 const require = globalThis.__r;
 
@@ -198,7 +198,7 @@ let closure_18 = async function _settleAppStoreAgeSignalReport() {
           c0 = 3;
           const obj4 = { value, done: true };
           return obj4;
-        } else if (null != v65535) {
+        } else if (null != collapsed) {
           const items = [tmp13, require("TimeUtils").sleep(15000)];
           c1 = 1;
           c0 = 1;
@@ -240,8 +240,8 @@ export const beginAppStoreAgeSignalReport = function beginAppStoreAgeSignalRepor
   if (tmp3) {
     let result = require("AppStoreAgeSignalSupport").isAppStoreAgeSignalSupported();
     if (result) {
-      result = tmp4(5587).shouldCollectAppStoreSignal();
-      const tmp4Result = tmp4(5587);
+      result = tmp4(5918).shouldCollectAppStoreSignal();
+      const tmp4Result = tmp4(5918);
     }
     tmp3 = result;
     const obj = require("AppStoreAgeSignalSupport");

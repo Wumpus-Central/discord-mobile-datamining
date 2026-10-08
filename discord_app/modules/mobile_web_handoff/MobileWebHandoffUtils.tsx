@@ -1,8 +1,8 @@
-// === Module 6833: MobileWebHandoffUtils ===
+// === Module 7027: MobileWebHandoffUtils ===
 
-// Module 6833 (MobileWebHandoffUtils)
-import v1 from "v1" /* 1266 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
+// Module 7027 (MobileWebHandoffUtils)
+import v1 from "v1" /* 1278 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

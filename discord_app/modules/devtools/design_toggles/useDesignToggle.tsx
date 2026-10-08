@@ -1,7 +1,7 @@
-// === Module 6019: useDesignToggle ===
+// === Module 6205: useDesignToggle ===
 
-// Module 6019 (useDesignToggle)
-import DesignTogglesStore from "DesignTogglesStore" /* 6020 */;
+// Module 6205 (useDesignToggle)
+import DesignTogglesStore from "DesignTogglesStore" /* 6206 */;
 
 const require = globalThis.__r;
 
@@ -10,7 +10,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/devtools/design_toggles/useDesignToggle.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useDesignToggle(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -36,7 +36,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp6, tmp7);
-}) : ((arg0) => {
+}) : (function useDesignToggle(arg0) {
   _require = arg0;
   const items = [DesignTogglesStore];
   const items1 = [arg0];

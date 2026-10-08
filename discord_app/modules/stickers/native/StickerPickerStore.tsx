@@ -1,6 +1,6 @@
-// === Module 10127: StickerPickerStore ===
+// === Module 9712: StickerPickerStore ===
 
-// Module 10127 (StickerPickerStore)
+// Module 9712 (StickerPickerStore)
 import module_570 from "module_570" /* 570 */;
 import size from "module_2" /* 2 */;
 
@@ -10,11 +10,11 @@ export const useStickerPickerStore = module_570.create((arg0) => {
   closure_0 = arg0;
   return {
     packToScrollTo: null,
-    setPackToScrollTo(pack_id) {
-      return pack_id(dependencyMap[1]).batchUpdates(() => {
-        pack_id((packToScrollTo) => {
+    setPackToScrollTo(dependencyMap) {
+      return dependencyMap(closure_1_1[1]).batchUpdates(() => {
+        dependencyMap((packToScrollTo) => {
           let tmp = packToScrollTo;
-          if (packToScrollTo.packToScrollTo !== pack_id) {
+          if (packToScrollTo.packToScrollTo !== dependencyMap) {
             const obj = { packToScrollTo: tmp2 };
             tmp = obj;
           }

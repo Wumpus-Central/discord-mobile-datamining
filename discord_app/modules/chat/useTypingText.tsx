@@ -1,16 +1,16 @@
-// === Module 11606: useTypingText ===
+// === Module 11658: useTypingText ===
 
-// Module 11606 (useTypingText)
-import NicknameUtilsDefault from "NicknameUtils" /* 5048 */;
+// Module 11658 (useTypingText)
+import NicknameUtilsDefault from "NicknameUtils" /* 5405 */;
 import _slicedToArray from "module_32" /* 32 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat/useTypingText.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useTypingText(channelId) {
   let lJ9sZX = channelId;
   let formatResult2 = typingUserIds;
   const cResult = channelId(typingUserIds[3]).c(16);
@@ -99,7 +99,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   tmp6 = items1;
   tmp5 = fn;
   let obj = channelId(typingUserIds[3]);
-}) : ((channelId) => {
+}) : (function useTypingText(channelId) {
   channelId = channelId.channelId;
   const guildId = channelId.guildId;
   const typingUserIds = channelId.typingUserIds;

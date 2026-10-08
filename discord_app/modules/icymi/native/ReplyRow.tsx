@@ -1,18 +1,18 @@
-// === Module 16491: ReplyRow ===
+// === Module 16751: ReplyRow ===
 
-// Module 16491 (ReplyRow)
+// Module 16751 (ReplyRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Pressables from "Pressables" /* 5916 */;
-import ReactionIcon from "ReactionIcon" /* 8444 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import Pressables from "Pressables" /* 6189 */;
+import ReactionIcon from "ReactionIcon" /* 8930 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createICYMIStyles = fn(16434);
+const createICYMIStyles = fn(16694);
 let closure_6 = createICYMIStyles.createICYMIStyles((marginLeft) => {
   const obj = { separator: null, container: null, buttonContainer: null, feedbackContainer: null, icon: null, feedbackButtonIcon: null, input: null, contentInventoryPressable: null, contentInventoryContainer: null, contentInventoryText: null, replyContainer: null };
   const size = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginBottom: marginLeft.margin, width: "100%" };
@@ -39,7 +39,7 @@ const ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/icymi/native/ReplyRow.tsx");
 
-export const ContentInventoryReplyRow = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const ContentInventoryReplyRow = ReactCompilerGating.isReactCompilerEnabled() ? (function ContentInventoryReplyRow(arg0) {
   const cResult = c.c(17);
   ({ reactText, onReply } = arg0);
   const tmp4 = closure_6();
@@ -108,7 +108,7 @@ export const ContentInventoryReplyRow = ReactCompilerGating.isReactCompilerEnabl
   cResult[2] = tmp6;
   tmp5 = tmp6;
   const obj6 = { variant: "text-md/medium", color: "input-placeholder-text-default", lineClamp: 1, style: tmp4.contentInventoryText, children: reactText };
-}) : ((onPress) => {
+}) : (function ContentInventoryReplyRow(onPress) {
   const reactText = onPress.reactText;
   const tmp = closure_6();
   const obj = { style: tmp.replyContainer, children: null };

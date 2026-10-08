@@ -1,29 +1,29 @@
-// === Module 9940: EmojiPickerListComponent ===
+// === Module 9462: EmojiPickerListComponent ===
 
-// Module 9940 (EmojiPickerListComponent)
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4529 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4618 */;
-import PortalToNativeViewDefault from "PortalToNativeView" /* 6574 */;
-import EmojiPickerPremiumSearchUpsell from "EmojiPickerPremiumSearchUpsell" /* 9929 */;
-import EmojiPickerNativeComponent2 from "EmojiPickerNativeComponent" /* 9941 */;
+// Module 9462 (EmojiPickerListComponent)
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4721 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4810 */;
+import PortalToNativeViewDefault from "PortalToNativeView" /* 6750 */;
+import EmojiPickerPremiumSearchUpsell from "EmojiPickerPremiumSearchUpsell" /* 9450 */;
+import EmojiPickerNativeComponent2 from "EmojiPickerNativeComponent" /* 9463 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 5645 */;
+import EmojiStore from "EmojiStore" /* 5992 */;
 
 const EmojiPickerNativeComponentDefault = EmojiPickerNativeComponent2;
 const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
-const EmojiCategoryTypes = fn(5649).EmojiCategoryTypes;
-const IMAGE_SIZE = fn(9882).IMAGE_SIZE;
-const PADDING_VERTICAL = fn(1229).PADDING_VERTICAL;
+const EmojiCategoryTypes = fn(5996).EmojiCategoryTypes;
+const IMAGE_SIZE = fn(9362).IMAGE_SIZE;
+const PADDING_VERTICAL = fn(1241).PADDING_VERTICAL;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_11 = createStyles.createStyles({ container: { flex: 1 } });
 const EmojiPickerNativeComponent = ReanimatedRexport.createAnimatedComponent(EmojiPickerNativeComponentDefault);
-const BottomSheetModal = fn(6119);
-let closure_12 = BottomSheetModal.createBottomSheetScrollableComponent(fn(6119).SCROLLABLE_TYPE.SCROLLVIEW, EmojiPickerNativeComponent);
-const MetaQuestUtils = fn(1615);
+const BottomSheetModal = fn(6298);
+let closure_12 = BottomSheetModal.createBottomSheetScrollableComponent(fn(6298).SCROLLABLE_TYPE.SCROLLVIEW, EmojiPickerNativeComponent);
+const MetaQuestUtils = fn(1627);
 const IS_META_QUEST = MetaQuestUtils.isMetaQuest();
 const __initData = { code: "function EmojiPickerListComponentAndroidTsx1(){const{bottomSheetIndex}=this.__closure;return bottomSheetIndex.get();}" };
 const __initData2 = { code: "function EmojiPickerListComponentAndroidTsx2(index){const{inPortalKeyboard,IS_META_QUEST,runOnJS,scrollingEnabled}=this.__closure;if(!inPortalKeyboard||index<0||IS_META_QUEST){return;}if(index===0){runOnJS(scrollingEnabled)(false);}else{if(index===1){runOnJS(scrollingEnabled)(true);}}}" };
@@ -33,7 +33,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/emoji_picker/native/components/EmojiPickerListComponent.android.tsx");
 
-export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((categoryIndexActive, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiPickerListComponent(categoryIndexActive) {
   const cResult = bottomSheetIndex(data[12]).c(38);
   ({ analyticsLocations, bottomSheetIndex } = categoryIndexActive);
   categoryIndexActive = categoryIndexActive.categoryIndexActive;
@@ -44,10 +44,10 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
   const onLongPressEmoji = categoryIndexActive.onLongPressEmoji;
   const onShowNitroUpsell = categoryIndexActive.onShowNitroUpsell;
   const useTier0UpsellContent = categoryIndexActive.useTier0UpsellContent;
-  let obj = bottomSheetIndex(data[12]);
+  const tmp4 = closure_11();
   const ref = guildId.useRef(null);
   if (cResult[0] !== data.hasGuildData) {
-    const fn = function f() {
+    const fn = function p() {
       let hasGuildData = null != ref.current;
       if (hasGuildData) {
         hasGuildData = data.hasGuildData;
@@ -78,7 +78,7 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
       Commands.scrollingEnabled(tmp.current, arg0);
     }
   }
-  const tmp4 = closure_11();
+  let obj = bottomSheetIndex(data[12]);
   class B {
     constructor() {
       return bottomSheetIndex.get();
@@ -87,45 +87,27 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
   B.__closure = { bottomSheetIndex };
   B.__workletHash = 10656486632396;
   B.__initData = __initData;
-  class N {
-    constructor(arg0) {
-      tmp = !inPortalKeyboard;
-      if (inPortalKeyboard) {
-        num = 0;
-        tmp = categoryIndexActive < 0;
-      }
-      if (!tmp) {
-        tmp = closure_13;
-      }
-      if (!tmp) {
-        num2 = 0;
-        if (0 === categoryIndexActive) {
-          tmp6 = closure_0;
-          tmp7 = closure_2;
-          obj2 = closure_0(closure_2[7]);
-          tmp8 = scrollingEnabled;
-          flag2 = false;
-          tmp9 = obj2.runOnJS(scrollingEnabled)(false);
-        } else {
-          num3 = 1;
-          if (1 === categoryIndexActive) {
-            tmp2 = closure_0;
-            tmp3 = closure_2;
-            obj = closure_0(closure_2[7]);
-            tmp4 = scrollingEnabled;
-            flag = true;
-            tmp5 = obj.runOnJS(scrollingEnabled)(true);
-          }
-        }
-      }
-      return;
+  const fn2 = function w(arg0) {
+    let tmp = !inPortalKeyboard;
+    if (inPortalKeyboard) {
+      tmp = arg0 < 0;
     }
-  }
+    if (!tmp) {
+      tmp = closure_13;
+    }
+    if (!tmp) {
+      if (0 === arg0) {
+        ReanimatedRexport2.runOnJS(scrollingEnabled)(false);
+      } else if (1 === arg0) {
+        ReanimatedRexport2.runOnJS(scrollingEnabled)(true);
+      }
+    }
+  };
   const tmpResult = bottomSheetIndex(data[7]);
-  N.__closure = { inPortalKeyboard, IS_META_QUEST, runOnJS: bottomSheetIndex(data[7]).runOnJS, scrollingEnabled };
-  N.__workletHash = 11529436039893;
-  N.__initData = __initData2;
-  const animatedReaction = tmpResult.useAnimatedReaction(B, N);
+  fn2.__closure = { inPortalKeyboard, IS_META_QUEST, runOnJS: bottomSheetIndex(data[7]).runOnJS, scrollingEnabled };
+  fn2.__workletHash = 11529436039893;
+  fn2.__initData = __initData2;
+  const animatedReaction = tmpResult.useAnimatedReaction(B, fn2);
   if (cResult[4] !== guildId) {
     class K {
       constructor(arg0) {
@@ -264,7 +246,7 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
           }
         }
       }
-      const imperativeHandle = guildId.useImperativeHandle(arg1, tmp17);
+      const imperativeHandle = guildId.useImperativeHandle(categoryIndexActive.ref, tmp17);
       if (cResult[17] !== animateEmoji) {
         class V {
           constructor(arg0) {
@@ -272,7 +254,7 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
             return;
           }
         }
-        tmp21[0] = animateEmoji;
+        tmp20[0] = animateEmoji;
         class G {
           constructor(arg0) {
             tmp = closure_10(categoryIndexActive.nativeEvent);
@@ -284,7 +266,7 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
           }
         }
         cResult[17] = animateEmoji;
-        cResult[18] = tmp21;
+        cResult[18] = tmp20;
       } else {
         class V {
           constructor(arg0) {
@@ -293,7 +275,7 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
           }
         }
       }
-      if (cResult[19] === tmp21) {
+      if (cResult[19] === tmp20) {
         class V {
           constructor(arg0) {
             result = categoryIndexActive.set(categoryIndexActive.nativeEvent.index);
@@ -301,56 +283,23 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
           }
         }
       }
-      const obj4 = { config: tmp21, emojiData: data, emojiMargin: onShowNitroUpsell, emojiSize: onLongPressEmoji, onPressEmoji: Q, onLongPressEmoji: G, onStickyHeaderRender: V, onShowNitroUpsell: tmp14, paddingTop, paddingBottom, useTier0UpsellContent, ref, style: tmp4.container };
-      const tmp27 = ref(closure_12, obj4);
-      cResult[19] = tmp21;
+      const obj4 = { config: tmp20, emojiData: data, emojiMargin: onShowNitroUpsell, emojiSize: onLongPressEmoji, onPressEmoji: Q, onLongPressEmoji: G, onStickyHeaderRender: V, onShowNitroUpsell: tmp14, paddingTop, paddingBottom, useTier0UpsellContent, ref, style: tmp4.container };
+      const tmp26 = ref(closure_12, obj4);
+      cResult[19] = tmp20;
       cResult[20] = data;
       cResult[21] = G;
       cResult[22] = Q;
+      cResult[23] = tmp14;
       class B {
         constructor() {
           return bottomSheetIndex.get();
         }
       }
-      cResult[24] = V;
       cResult[25] = paddingBottom;
       cResult[26] = paddingTop;
-      class N {
-        constructor(arg0) {
-          tmp = !inPortalKeyboard;
-          if (inPortalKeyboard) {
-            num = 0;
-            tmp = categoryIndexActive < 0;
-          }
-          if (!tmp) {
-            tmp = closure_13;
-          }
-          if (!tmp) {
-            num2 = 0;
-            if (0 === categoryIndexActive) {
-              tmp6 = closure_0;
-              tmp7 = closure_2;
-              obj2 = closure_0(closure_2[7]);
-              tmp8 = scrollingEnabled;
-              flag2 = false;
-              tmp9 = obj2.runOnJS(scrollingEnabled)(false);
-            } else {
-              num3 = 1;
-              if (1 === categoryIndexActive) {
-                tmp2 = closure_0;
-                tmp3 = closure_2;
-                obj = closure_0(closure_2[7]);
-                tmp4 = scrollingEnabled;
-                flag = true;
-                tmp5 = obj.runOnJS(scrollingEnabled)(true);
-              }
-            }
-          }
-          return;
-        }
-      }
+      cResult[27] = tmp4.container;
       cResult[28] = useTier0UpsellContent;
-      cResult[29] = tmp27;
+      cResult[29] = tmp26;
     }
     class G {
       constructor(arg0) {
@@ -380,7 +329,7 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
   cResult[7] = onPressEmoji;
   cResult[8] = Q;
   const obj3 = { inPortalKeyboard, IS_META_QUEST, runOnJS: bottomSheetIndex(data[7]).runOnJS, scrollingEnabled };
-}) : ((analyticsLocations, arg1) => {
+}) : (function EmojiPickerListComponent(analyticsLocations) {
   analyticsLocations = analyticsLocations.analyticsLocations;
   const bottomSheetIndex = analyticsLocations.bottomSheetIndex;
   const categoryIndexActive = analyticsLocations.categoryIndexActive;
@@ -393,35 +342,35 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
   const onShowNitroUpsell = analyticsLocations.onShowNitroUpsell;
   const useTier0UpsellContent = analyticsLocations.useTier0UpsellContent;
   let callback1;
-  ({ paddingTop, paddingBottom } = analyticsLocations);
-  const ref = data.useRef(null);
-  const items = [ref, data];
+  ({ paddingTop, paddingBottom, ref } = analyticsLocations);
+  const ref1 = data.useRef(null);
+  const items = [ref1, data];
   const effect = data.useEffect(() => {
-    let hasGuildData = null != ref.current;
+    let hasGuildData = null != ref1.current;
     if (hasGuildData) {
       hasGuildData = data.hasGuildData;
     }
     if (hasGuildData) {
       const Commands = EmojiPickerNativeComponent2.Commands;
-      Commands.refreshEmojis(ref.current);
+      Commands.refreshEmojis(ref1.current);
     }
   }, items);
   const scrollingEnabled = data.useCallback((arg0) => {
-    if (null != ref.current) {
+    if (null != ref1.current) {
       const Commands = EmojiPickerNativeComponent2.Commands;
       Commands.scrollingEnabled(tmp.current, arg0);
     }
   }, []);
-  let tmp = ref();
-  class H {
+  let tmp = ref1();
+  class J {
     constructor() {
       return bottomSheetIndex.get();
     }
   }
-  H.__closure = { bottomSheetIndex };
-  H.__workletHash = 5721747051790;
-  H.__initData = __initData3;
-  class D {
+  J.__closure = { bottomSheetIndex };
+  J.__workletHash = 5721747051790;
+  J.__initData = __initData3;
+  class H {
     constructor(arg0) {
       tmp = !inPortalKeyboard;
       if (inPortalKeyboard) {
@@ -456,10 +405,10 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
     }
   }
   let obj = analyticsLocations(categoryIndexActive[7]);
-  D.__closure = { inPortalKeyboard, IS_META_QUEST: callback1, runOnJS: analyticsLocations(categoryIndexActive[7]).runOnJS, scrollingEnabled };
-  D.__workletHash = 3717292116277;
-  D.__initData = __initData4;
-  const animatedReaction = obj.useAnimatedReaction(H, D);
+  H.__closure = { inPortalKeyboard, IS_META_QUEST: callback1, runOnJS: analyticsLocations(categoryIndexActive[7]).runOnJS, scrollingEnabled };
+  H.__workletHash = 3717292116277;
+  H.__initData = __initData4;
+  const animatedReaction = obj.useAnimatedReaction(J, H);
   const items1 = [guildId];
   callback1 = data.useCallback((emojiId) => {
     emojiId = emojiId.emojiId;
@@ -493,7 +442,7 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
   const callback5 = data.useCallback((nativeEvent) => {
     onShowNitroUpsell(nativeEvent.nativeEvent.showNitroUpsell);
   }, items5);
-  const imperativeHandle = data.useImperativeHandle(arg1, () => ({
+  const imperativeHandle = data.useImperativeHandle(ref, () => ({
     scrollToHeaderIndex(animated) {
       let flag = animated.animated;
       if (flag === undefined) {
@@ -514,10 +463,10 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
   const items6 = [animateEmoji];
   let obj2 = { inPortalKeyboard, IS_META_QUEST: callback1, runOnJS: analyticsLocations(categoryIndexActive[7]).runOnJS, scrollingEnabled };
   const items7 = [guildId, analyticsLocations, useTier0UpsellContent, data.hasSearchUpsell];
-  const obj3 = { config: data.useMemo(() => ({ animateEmoji, scrollFastOptimizationEnabled: true, scrollFastVelocity: 8000, disableAnimationsOnScroll: true }), items6), emojiData: data, emojiMargin: onPressEmoji, emojiSize: inPortalKeyboard, onPressEmoji: callback2, onLongPressEmoji: callback3, onStickyHeaderRender: callback4, onShowNitroUpsell: callback5, paddingTop, paddingBottom, useTier0UpsellContent, ref, style: tmp.container };
+  const obj3 = { config: data.useMemo(() => ({ animateEmoji, scrollFastOptimizationEnabled: true, scrollFastVelocity: 8000, disableAnimationsOnScroll: true }), items6), emojiData: data, emojiMargin: onPressEmoji, emojiSize: inPortalKeyboard, onPressEmoji: callback2, onLongPressEmoji: callback3, onStickyHeaderRender: callback4, onShowNitroUpsell: callback5, paddingTop, paddingBottom, useTier0UpsellContent, ref: ref1, style: tmp.container };
   const obj4 = { children: null };
   const items8 = [
-    onLongPressEmoji(scrollingEnabled, { config: data.useMemo(() => ({ animateEmoji, scrollFastOptimizationEnabled: true, scrollFastVelocity: 8000, disableAnimationsOnScroll: true }), items6), emojiData: data, emojiMargin: onPressEmoji, emojiSize: inPortalKeyboard, onPressEmoji: callback2, onLongPressEmoji: callback3, onStickyHeaderRender: callback4, onShowNitroUpsell: callback5, paddingTop, paddingBottom, useTier0UpsellContent, ref, style: tmp.container }),
+    onLongPressEmoji(scrollingEnabled, { config: data.useMemo(() => ({ animateEmoji, scrollFastOptimizationEnabled: true, scrollFastVelocity: 8000, disableAnimationsOnScroll: true }), items6), emojiData: data, emojiMargin: onPressEmoji, emojiSize: inPortalKeyboard, onPressEmoji: callback2, onLongPressEmoji: callback3, onStickyHeaderRender: callback4, onShowNitroUpsell: callback5, paddingTop, paddingBottom, useTier0UpsellContent, ref: ref1, style: tmp.container }),
     data.useMemo(() => {
       let tmp = null;
       if (data.hasSearchUpsell) {
@@ -531,4 +480,4 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
   ];
   obj4.children = items8;
   return useTier0UpsellContent(onShowNitroUpsell, obj4);
-}));
+});

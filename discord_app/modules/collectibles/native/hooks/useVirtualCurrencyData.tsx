@@ -1,9 +1,9 @@
-// === Module 13005: useVirtualCurrencyData ===
+// === Module 13283: useVirtualCurrencyData ===
 
-// Module 13005 (useVirtualCurrencyData)
+// Module 13283 (useVirtualCurrencyData)
 import c from "c" /* 576 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7077 */;
-import _mod8541 from "module_8541" /* 8541 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7263 */;
+import _mod9026 from "module_9026" /* 9026 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,13 +11,13 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/hooks/useVirtualCurrencyData.tsx");
 
-export const useVirtualCurrencyData = ReactCompilerGating.isReactCompilerEnabled() ? ((product, hasShopDiscount) => {
+export const useVirtualCurrencyData = ReactCompilerGating.isReactCompilerEnabled() ? (function useVirtualCurrencyData(product, hasShopDiscount) {
   const cResult = c.c(7);
   if (cResult[0] === hasShopDiscount) {
     if (cResult[1] === product) {
       let tmp4 = cResult[2];
     }
-    const balance = _mod8541.useFetchVirtualCurrencyBalance().balance;
+    const balance = _mod9026.useFetchVirtualCurrencyBalance().balance;
     let tmp7 = null;
     if (null != tmp4) {
       tmp7 = null;
@@ -39,7 +39,7 @@ export const useVirtualCurrencyData = ReactCompilerGating.isReactCompilerEnabled
     cResult[5] = tmp4;
     cResult[6] = obj2;
     tmp8 = obj2;
-    const tmpResult = _mod8541;
+    const tmpResult = _mod9026;
   }
   const productOrbPrice = CollectiblesProductUtils.getProductOrbPrice({ product, hasShopDiscount });
   cResult[0] = hasShopDiscount;
@@ -48,10 +48,10 @@ export const useVirtualCurrencyData = ReactCompilerGating.isReactCompilerEnabled
   tmp4 = productOrbPrice;
   const obj3 = { product, hasShopDiscount };
   const tmpResult2 = CollectiblesProductUtils;
-}) : ((product, hasShopDiscount) => {
+}) : (function useVirtualCurrencyData(product, hasShopDiscount) {
   const productOrbPrice = CollectiblesProductUtils.getProductOrbPrice({ product, hasShopDiscount });
   const obj2 = { product, hasShopDiscount };
-  const balance = _mod8541.useFetchVirtualCurrencyBalance().balance;
+  const balance = _mod9026.useFetchVirtualCurrencyBalance().balance;
   const items = [productOrbPrice, balance];
   return {
     price: productOrbPrice,

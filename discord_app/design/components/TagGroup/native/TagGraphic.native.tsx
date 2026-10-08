@@ -1,16 +1,16 @@
-// === Module 14274: TagGraphic ===
+// === Module 14098: TagGraphic ===
 
-// Module 14274 (TagGraphic)
+// Module 14098 (TagGraphic)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import TagGroupTypes from "TagGroupTypes" /* 14271 */;
+import TagGroupTypes from "TagGroupTypes" /* 14095 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles((width, backgroundColor) => {
   const obj = { image: { width, height: width }, avatar: null, roleDot: null };
   const size = { width, height: width, borderRadius: nativeDefault.radii.round, overflow: "hidden" };
@@ -23,7 +23,7 @@ const ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/TagGroup/native/TagGraphic.native.tsx");
 
-export const TagGraphic = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const TagGraphic = ReactCompilerGating.isReactCompilerEnabled() ? (function TagGraphic(arg0) {
   const cResult = c.c(15);
   ({ graphic, size } = arg0);
   let color;
@@ -104,7 +104,7 @@ export const TagGraphic = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0)
   cResult[14] = tmp11;
   tmp10 = tmp11;
   const obj5 = { size: tmp8, color: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT, accessible: false };
-}) : ((arg0) => {
+}) : (function TagGraphic(arg0) {
   ({ graphic, size } = arg0);
   let color;
   if ("type" in graphic) {

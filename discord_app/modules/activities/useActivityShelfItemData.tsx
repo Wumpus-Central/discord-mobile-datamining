@@ -1,8 +1,8 @@
-// === Module 17312: useActivityShelfItemData ===
+// === Module 17593: useActivityShelfItemData ===
 
-// Module 17312 (useActivityShelfItemData)
+// Module 17593 (useActivityShelfItemData)
 import c from "c" /* 576 */;
-import useActivityShelfItemsDefault from "useActivityShelfItems" /* 11667 */;
+import useActivityShelfItemsDefault from "useActivityShelfItems" /* 11732 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -10,7 +10,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/useActivityShelfItemData.tsx");
 
-export const useActivityShelfItemData = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId, arg1) => {
+export const useActivityShelfItemData = ReactCompilerGating.isReactCompilerEnabled() ? (function useActivityShelfItemData(guildId, arg1) {
   closure_0 = arg1;
   const cResult = c.c(5);
   if (cResult[0] !== guildId) {
@@ -36,7 +36,7 @@ export const useActivityShelfItemData = ReactCompilerGating.isReactCompilerEnabl
   cResult[3] = arr;
   cResult[4] = found;
   tmp4 = found;
-}) : ((guildId, arg1) => {
+}) : (function useActivityShelfItemData(guildId, arg1) {
   closure_0 = arg1;
   const tmp = useActivityShelfItemsDefault({ guildId });
   closure_1 = tmp;

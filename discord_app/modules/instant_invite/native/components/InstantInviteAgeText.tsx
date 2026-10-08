@@ -1,27 +1,27 @@
-// === Module 9564: InstantInviteAgeText ===
+// === Module 8735: InstantInviteAgeText ===
 
-// Module 9564 (InstantInviteAgeText)
+// Module 8735 (InstantInviteAgeText)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Pressables from "Pressables" /* 5916 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6477 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9494 */;
-import InstantInviteUtils from "InstantInviteUtils" /* 9496 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import Pressables from "Pressables" /* 6189 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6655 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8658 */;
+import InstantInviteUtils from "InstantInviteUtils" /* 8660 */;
 import noop from "module_19" /* 19 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 9495 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 8659 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsxs: closure_4, jsx: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({ inviteAgeContainer: { flexDirection: "row", alignItems: "center", flexWrap: "wrap" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/instant_invite/native/components/InstantInviteAgeText.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((callbackActionSheet) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function InstantInviteAgeText(callbackActionSheet) {
   const cResult = channel(callbackActionSheet[6]).c(22);
   ({ style, channel } = callbackActionSheet);
   callbackActionSheet = callbackActionSheet.callbackActionSheet;
@@ -152,7 +152,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((callbackActionSh
     tmp11 = items3;
   }
   const tmpResult3 = channel(callbackActionSheet[8]);
-}) : ((style) => {
+}) : (function InstantInviteAgeText(style) {
   ({ channel: require, callbackActionSheet: dependencyMap, canEditInvite } = style);
   if (canEditInvite === undefined) {
     canEditInvite = true;

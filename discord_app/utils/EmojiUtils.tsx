@@ -1,16 +1,16 @@
-// === Module 4533: EmojiUtils ===
+// === Module 4725: EmojiUtils ===
 
-// Module 4533 (EmojiUtils)
-import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import ImageUtils from "ImageUtils" /* 1481 */;
-import CreatorMonetizationRestrictionsUtils from "CreatorMonetizationRestrictionsUtils" /* 4507 */;
-import EmojiTypes from "EmojiTypes" /* 4532 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4534 */;
-import RoleSubscriptionEmojiUtils from "RoleSubscriptionEmojiUtils" /* 5650 */;
-import EmojiUtilsPlatformedDefault from "EmojiUtilsPlatformed" /* 7422 */;
+// Module 4725 (EmojiUtils)
+import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
+import ImageUtils from "ImageUtils" /* 1493 */;
+import CreatorMonetizationRestrictionsUtils from "CreatorMonetizationRestrictionsUtils" /* 4699 */;
+import EmojiTypes from "EmojiTypes" /* 4724 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4726 */;
+import RoleSubscriptionEmojiUtils from "RoleSubscriptionEmojiUtils" /* 5997 */;
+import EmojiUtilsPlatformedDefault from "EmojiUtilsPlatformed" /* 7897 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
-import UserStore from "UserStore" /* 1377 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 function getEmojiUnavailableReason(forceIncludeExternalGuilds) {
@@ -131,10 +131,10 @@ let closure_19 = async function _getEmojiColors() {
   await EmojiUtilsPlatformedDefault.getEmojiColors(closure_0);
   return value;
 };
-const ChannelRecord = fn(2055);
+const ChannelRecord = fn(2067);
 ({ isGuildTextChannelType: closure_4, isGuildVocalChannelType: hasOwnProperty } = ChannelRecord);
 const Permissions = fn(1085).Permissions;
-const EmojiConstants = fn(1380);
+const EmojiConstants = fn(1392);
 ({ EMOJI_MAX_FILESIZE: closure_9, EMOJI_MAX_LENGTH: c10, EMOJI_RE: closure_11, EmojiDisabledReasons } = EmojiConstants);
 ({ EmojiIntention: map1, isExternalEmojiAllowedForIntention: closure_14 } = EmojiConstants);
 const items = [, ];
@@ -152,7 +152,7 @@ export default {
   sanitizeEmojiName(str) {
     let length;
     const replaced = str.replace(closure_1_11, "");
-    const substr = replaced.slice(0, v65535);
+    const substr = replaced.slice(0, collapsed);
     let tmp = substr;
     let tmp2 = substr;
     if (substr.length < 2) {

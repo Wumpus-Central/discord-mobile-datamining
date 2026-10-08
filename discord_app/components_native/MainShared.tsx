@@ -1,33 +1,33 @@
-// === Module 17115: MainShared ===
+// === Module 17396: MainShared ===
 
-// Module 17115 (MainShared)
+// Module 17396 (MainShared)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4742 */;
-import KeyCommands from "KeyCommands" /* 5788 */;
-import usePipVideoOrStream from "usePipVideoOrStream" /* 9105 */;
-import VoicePanelUtils from "VoicePanelUtils" /* 9622 */;
-import AccessibilityManagerDefault from "AccessibilityManager" /* 14218 */;
-import PictureInPictureGlobalDefault from "PictureInPictureGlobal" /* 17116 */;
-import showLaunchPadDefault from "showLaunchPad" /* 17118 */;
-import BurstReactionAnimationContainerDefault from "BurstReactionAnimationContainer" /* 17119 */;
-import NativeMenuPresenterDefault from "NativeMenuPresenter" /* 17120 */;
-import components_ActionSheetPresenterDefault from "components/ActionSheetPresenter" /* 17121 */;
-import AlertsDefault from "Alerts" /* 17122 */;
-import SoundPlayerDefault from "SoundPlayer" /* 17130 */;
-import MainViewTooltipActionSheetsV2Default from "MainViewTooltipActionSheetsV2" /* 17134 */;
-import AppToastContainerDefault from "AppToastContainer" /* 17168 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4936 */;
+import KeyCommands from "KeyCommands" /* 5371 */;
+import usePipVideoOrStream from "usePipVideoOrStream" /* 10679 */;
+import VoicePanelUtils from "VoicePanelUtils" /* 10815 */;
+import AccessibilityManagerDefault from "AccessibilityManager" /* 14517 */;
+import PictureInPictureGlobalDefault from "PictureInPictureGlobal" /* 17397 */;
+import showLaunchPadDefault from "showLaunchPad" /* 17399 */;
+import BurstReactionAnimationContainerDefault from "BurstReactionAnimationContainer" /* 17400 */;
+import NativeMenuPresenterDefault from "NativeMenuPresenter" /* 17401 */;
+import components_ActionSheetPresenterDefault from "components/ActionSheetPresenter" /* 17402 */;
+import AlertsDefault from "Alerts" /* 17403 */;
+import SoundPlayerDefault from "SoundPlayer" /* 17411 */;
+import MainViewTooltipActionSheetsV2Default from "MainViewTooltipActionSheetsV2" /* 17415 */;
+import AppToastContainerDefault from "AppToastContainer" /* 17449 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5108 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 fn(558);
 let ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function PictureInPictureGlobalContainer() {
   let tmp2 = dependencyMap;
   const cResult = c.c(5);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -74,7 +74,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
   }
   return tmp14;
-}) : (() => {
+}) : (function PictureInPictureGlobalContainer() {
   const items = [ChannelStore, RTCConnectionStore];
   const stateFromStores = initialize.useStateFromStores(items, () => channel.getChannel(channelId.getChannelId()));
   const hasPipParticipant = usePipVideoOrStream.useHasPipParticipant({ isActivityViewFocused: false });
@@ -97,7 +97,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   return tmp7;
 });
 ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAppKeyCommands() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const tmpResult = PlatformUtils;
@@ -117,7 +117,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const keyCommands = KeyCommands.useKeyCommands(cResult[0]);
     const tmpResult2 = KeyCommands;
   }
-}) : (() => {
+}) : (function useAppKeyCommands() {
   const memo = noop.useMemo(() => {
     const KeyModifierFlags = KeyCommands.KeyModifierFlags;
     const obj2 = { input: "k", modifierFlags: PlatformUtils.isAndroid() ? KeyModifierFlags.keyModifierControl : KeyModifierFlags.keyModifierCommand, eventName: "keyCommandShowQuickSwitcher", discoverabilityTitle: null, onKeyCommand: null };
@@ -144,7 +144,7 @@ export const MainViewTooltipActionSheetsV2 = MainViewTooltipActionSheetsV2Defaul
 export const ToastContainer = AppToastContainerDefault;
 export const PictureInPictureGlobalContainer = tmp2;
 export const useAppKeyCommands = tmp3;
-export const useScreenReaderEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useScreenReaderEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useScreenReaderEnabled() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function o() {
@@ -159,7 +159,7 @@ export const useScreenReaderEnabled = ReactCompilerGating.isReactCompilerEnabled
     [tmp2, tmp3] = cResult;
   }
   const effect = noop.useEffect(tmp2, tmp3);
-}) : (() => {
+}) : (function useScreenReaderEnabled() {
   const effect = noop.useEffect(() => {
     const result = AccessibilityManagerDefault.checkScreenreaderEnabled();
   }, []);

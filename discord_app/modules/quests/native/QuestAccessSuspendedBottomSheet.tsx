@@ -1,13 +1,13 @@
-// === Module 14937: QuestAccessSuspendedBottomSheet ===
+// === Module 15199: QuestAccessSuspendedBottomSheet ===
 
-// Module 14937 (QuestAccessSuspendedBottomSheet)
+// Module 15199 (QuestAccessSuspendedBottomSheet)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import PromoSheet from "PromoSheet" /* 10058 */;
-import openAccountStanding from "openAccountStanding" /* 11534 */;
-import openQuestAccessSuspendedBottomSheet from "openQuestAccessSuspendedBottomSheet" /* 14936 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import PromoSheet from "PromoSheet" /* 10303 */;
+import openAccountStanding from "openAccountStanding" /* 11532 */;
+import openQuestAccessSuspendedBottomSheet from "openQuestAccessSuspendedBottomSheet" /* 15198 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestAccessSuspendedBottomSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestAccessSuspendedBottomSheet() {
   const cResult = c.c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function t() {
@@ -55,7 +55,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp9 = cResult[3];
   }
   return tmp9;
-}) : (() => {
+}) : (function QuestAccessSuspendedBottomSheet() {
   const callback = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.hideActionSheet(openQuestAccessSuspendedBottomSheet.ACTION_SHEET_KEY);
     openAccountStanding.openAccountStanding();

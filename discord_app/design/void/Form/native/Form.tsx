@@ -1,24 +1,24 @@
-// === Module 6641: Form/Form ===
+// === Module 6818: Form/Form ===
 
-// Module 6641 (Form/Form)
+// Module 6818 (Form/Form)
 import c from "c" /* 576 */;
-import RedesignCompat from "RedesignCompat" /* 6080 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6478 */;
+import RedesignCompat from "RedesignCompat" /* 6266 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6656 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({ form: { flex: 1 }, redesign: { paddingTop: 16 } });
 let context = noop.createContext({ isForm: false });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/Form.tsx");
 
-export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, ref) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function Form(arg0) {
   const cResult = c.c(21);
-  ({ style, children, keyboardShouldPersistTaps, alwaysBounceVertical, contentContainerStyle, onScroll, scrollsToTop, onLayout } = arg0);
+  ({ style, children, keyboardShouldPersistTaps, alwaysBounceVertical, contentContainerStyle, onScroll, scrollsToTop, onLayout, ref } = arg0);
   let str = "never";
   if (undefined !== keyboardShouldPersistTaps) {
     str = keyboardShouldPersistTaps;
@@ -71,9 +71,9 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
                     if (cResult[17] === scrollsToTop) {
                       if (cResult[18] === tmp8) {
                         if (cResult[19] === tmp11) {
-                          let tmp14 = cResult[20];
+                          let tmp13 = cResult[20];
                         }
-                        return tmp14;
+                        return tmp13;
                       }
                     }
                   }
@@ -85,7 +85,7 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
         const obj5 = { value: first, children: null };
         const obj6 = { ref, onLayout, scrollsToTop, style: tmp8, contentContainerStyle: tmp11, contentInset: tmp12, automaticallyAdjustContentInsets: false, keyboardShouldPersistTaps: str, alwaysBounceVertical: tmp4, onScroll, children };
         obj5.children = <ScrollView ref={ref} onLayout={onLayout} scrollsToTop={scrollsToTop} style={tmp8} contentContainerStyle={tmp11} contentInset={tmp12} automaticallyAdjustContentInsets={false} keyboardShouldPersistTaps={str} alwaysBounceVertical={tmp4} onScroll={onScroll}>{children}</ScrollView>;
-        const tmp18 = <context.Provider value={first}>{null}</context.Provider>;
+        const tmp17 = <context.Provider value={first}>{null}</context.Provider>;
         cResult[11] = tmp4;
         cResult[12] = children;
         cResult[13] = str;
@@ -95,8 +95,8 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
         cResult[17] = scrollsToTop;
         cResult[18] = tmp8;
         cResult[19] = tmp11;
-        cResult[20] = tmp18;
-        tmp14 = tmp18;
+        cResult[20] = tmp17;
+        tmp13 = tmp17;
       }
       const items = [tmp10, contentContainerStyle];
       cResult[7] = contentContainerStyle;
@@ -111,7 +111,7 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
   cResult[3] = redesign;
   cResult[4] = items1;
   tmp8 = items1;
-}) : ((keyboardShouldPersistTaps, ref) => {
+}) : (function Form(keyboardShouldPersistTaps) {
   let str = keyboardShouldPersistTaps.keyboardShouldPersistTaps;
   ({ style, children } = keyboardShouldPersistTaps);
   if (str === undefined) {
@@ -121,7 +121,7 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
   if (flag === undefined) {
     flag = true;
   }
-  ({ contentContainerStyle, onScroll, scrollsToTop, onLayout } = keyboardShouldPersistTaps);
+  ({ contentContainerStyle, onScroll, scrollsToTop, onLayout, ref } = keyboardShouldPersistTaps);
   const tmp = closure_6();
   let redesign = noop.useContext(RedesignCompat.RedesignCompatContext);
   const obj = { value: { isForm: true }, children: null };
@@ -141,5 +141,5 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
   obj2.children = children;
   obj.children = <ScrollView ref={ref} onLayout={onLayout} scrollsToTop={scrollsToTop} style={null} contentContainerStyle={null} contentInset={null} automaticallyAdjustContentInsets={false} keyboardShouldPersistTaps={null} alwaysBounceVertical={null} onScroll={null}>{null}</ScrollView>;
   return <context.Provider value={{ isForm: true }}>{null}</context.Provider>;
-}));
+});
 export const FormContext = context;

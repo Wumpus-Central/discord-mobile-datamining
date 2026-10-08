@@ -1,8 +1,8 @@
-// === Module 7952: useStateFromSharedValue ===
+// === Module 8370: useStateFromSharedValue ===
 
-// Module 7952 (useStateFromSharedValue)
+// Module 8370 (useStateFromSharedValue)
 import c from "c" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ let closure_7 = { code: "function useStateFromSharedValueTsx2(id_0,sharedValue_1
 let closure_8 = { code: "function useStateFromSharedValueTsx3(id,listener,sharedValue_0){const{runOnJS}=this.__closure;sharedValue_0.addListener(id,function(value){return runOnJS(listener)(value);});}" };
 let closure_9 = { code: "function useStateFromSharedValueTsx4(id_0,sharedValue_1){sharedValue_1.removeListener(id_0);}" };
 let ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useListenerSubscription(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   const cResult = require("c").c(4);
@@ -35,7 +35,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) =>
         listeners: set,
         valueListener(arg0) {
             closure_0 = arg0;
-            set(1259).batchUpdates(() => {
+            set(1271).batchUpdates(() => {
               for (const item10005 of set) {
                 let item10005Result = item10005(closure_0);
                 continue;
@@ -57,12 +57,12 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) =>
         closure_0 = arg1;
         addListener.addListener(arg0, (arg0) => set(dependencyMap[5]).runOnJS(closure_0)(arg0));
       };
-      const obj4 = { runOnJS: closure_0(4618).runOnJS };
+      const obj4 = { runOnJS: closure_0(4810).runOnJS };
       fn.__closure = obj4;
       fn.__workletHash = 580393174787;
       fn.__initData = __initData;
-      closure_0(4618).runOnUI(fn)(value.listenerId, value.valueListener, tmp);
-      const obj3 = closure_0(4618);
+      closure_0(4810).runOnUI(fn)(value.listenerId, value.valueListener, tmp);
+      const obj3 = closure_0(4810);
     }
     return () => {
       const listeners = set.listeners;
@@ -87,7 +87,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) =>
   tmp3 = items;
   tmp2 = fn;
   let obj = require("c");
-}) : ((arg0, arg1) => {
+}) : (function useListenerSubscription(arg0, arg1) {
   closure_0 = arg0;
   dependencyMap = arg1;
   const items = [arg0, arg1];
@@ -101,7 +101,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) =>
         listeners: set,
         valueListener(arg0) {
             closure_0 = arg0;
-            set(1259).batchUpdates(() => {
+            set(1271).batchUpdates(() => {
               for (const item10005 of set) {
                 let item10005Result = item10005(closure_0);
                 continue;
@@ -121,14 +121,14 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) =>
       const result = map.set(tmp, value);
       let fn = function n(arg0, arg1, addListener) {
         closure_0 = arg1;
-        addListener.addListener(arg0, (arg0) => set(4618).runOnJS(closure_0)(arg0));
+        addListener.addListener(arg0, (arg0) => set(4810).runOnJS(closure_0)(arg0));
       };
-      const obj4 = { runOnJS: closure_0(4618).runOnJS };
+      const obj4 = { runOnJS: closure_0(4810).runOnJS };
       fn.__closure = obj4;
       fn.__workletHash = 4734743082561;
       fn.__initData = __initData;
-      closure_0(4618).runOnUI(fn)(value.listenerId, value.valueListener, tmp);
-      const obj3 = closure_0(4618);
+      closure_0(4810).runOnUI(fn)(value.listenerId, value.valueListener, tmp);
+      const obj3 = closure_0(4810);
     }
     return () => {
       const listeners = set.listeners;
@@ -148,7 +148,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) =>
 });
 fn(558);
 ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useStateFromSharedValue(arg0) {
   closure_0 = arg0;
   const cResult = c.c(2);
   if (cResult[0] !== arg0) {
@@ -164,7 +164,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const tmp3 = _slicedToArray(noop.useState(tmp2), 2);
   closure_10(arg0, tmp3[1]);
   return tmp3[0];
-}) : ((arg0) => {
+}) : (function useStateFromSharedValue(arg0) {
   closure_0 = arg0;
   const tmp = _slicedToArray(noop.useState(() => closure_0.get()), 2);
   closure_10(arg0, tmp[1]);
@@ -174,7 +174,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/reanimated/native/useStateFromSharedValue.tsx");
 
 export default tmp3;
-export const useDerivedStateFromSharedValue = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, current) => {
+export const useDerivedStateFromSharedValue = ReactCompilerGating.isReactCompilerEnabled() ? (function useDerivedStateFromSharedValue(arg0, current) {
   closure_0 = arg0;
   const cResult = c.c(6);
   if (cResult[0] === current) {
@@ -215,7 +215,7 @@ export const useDerivedStateFromSharedValue = ReactCompilerGating.isReactCompile
   cResult[1] = arg0;
   cResult[2] = fn;
   tmp2 = fn;
-}) : ((arg0, current) => {
+}) : (function useDerivedStateFromSharedValue(arg0, current) {
   closure_0 = arg0;
   [tmp2, _slicedToArray] = noop.useState(() => current(closure_0.get(), undefined));
   closure_3 = noop.useRef(current);

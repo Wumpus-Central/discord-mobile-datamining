@@ -1,22 +1,22 @@
-// === Module 14716: FamilyCenterUsernameHeader ===
+// === Module 14977: FamilyCenterUsernameHeader ===
 
-// Module 14716 (FamilyCenterUsernameHeader)
+// Module 14977 (FamilyCenterUsernameHeader)
 import c from "c" /* 576 */;
-import UserUtilsDefault from "UserUtils" /* 4728 */;
-import Text_Text from "Text/Text" /* 4892 */;
+import UserUtilsDefault from "UserUtils" /* 4922 */;
+import Text_Text from "Text/Text" /* 5086 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({ container: { justifyContent: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterUsernameHeader.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCenterUsernameHeader(user) {
   const cResult = c.c(10);
   user = user.user;
   const tmp4 = closure_6();
@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
   cResult[5] = tmp10;
   cResult[6] = tmp14;
   tmp13 = tmp14;
-}) : ((user) => {
+}) : (function FamilyCenterUsernameHeader(user) {
   user = user.user;
   const tmp = closure_6();
   const name = UserUtilsDefault.useName(user);

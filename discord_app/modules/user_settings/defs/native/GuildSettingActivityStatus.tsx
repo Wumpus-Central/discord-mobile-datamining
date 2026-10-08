@@ -1,18 +1,18 @@
-// === Module 15828: GuildSettingActivityStatus ===
+// === Module 16087: GuildSettingActivityStatus ===
 
-// Module 15828 (GuildSettingActivityStatus)
+// Module 16087 (GuildSettingActivityStatus)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import UserSettings from "UserSettings" /* 2028 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 6498 */;
-import SettingsConstants from "SettingsConstants" /* 7645 */;
-import UserSettingsSafetySelectedGuildStore from "UserSettingsSafetySelectedGuildStore" /* 15815 */;
+import UserSettings from "UserSettings" /* 2040 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 6675 */;
+import SettingsConstants from "SettingsConstants" /* 7966 */;
+import UserSettingsSafetySelectedGuildStore from "UserSettingsSafetySelectedGuildStore" /* 16074 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11142 */;
+import SettingBuilders from "SettingBuilders" /* 11262 */;
 import size from "module_2" /* 2 */;
 
 ({ getSelectedGuildId: c2, useUserSafetySettingsSelectedGuildStore: c3 } = UserSettingsSafetySelectedGuildStore);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useValue() {
   const cResult = c.c(3);
   const selectedGuildId = React3().selectedGuildId;
   const ActivityRestrictedGuilds = UserSettings.ActivityRestrictedGuilds;
@@ -28,7 +28,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[1] = setting;
   cResult[2] = hasItem;
   tmp2 = hasItem;
-}) : (() => {
+}) : (function useValue() {
   const ActivityRestrictedGuilds = UserSettings.ActivityRestrictedGuilds;
   const setting = ActivityRestrictedGuilds.useSetting();
   return !setting.includes(React3().selectedGuildId);
@@ -43,7 +43,7 @@ const toggle = SettingBuilders.createToggle({
     return intl.string(util.t.TUKMak);
   },
   parent: SettingsConstants.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
-  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useValue() {
     const cResult = c.c(3);
     const selectedGuildId = React3().selectedGuildId;
     const ActivityRestrictedGuilds = UserSettings.ActivityRestrictedGuilds;
@@ -59,7 +59,7 @@ const toggle = SettingBuilders.createToggle({
     cResult[1] = setting;
     cResult[2] = hasItem;
     tmp2 = hasItem;
-  }) : (() => {
+  }) : (function useValue() {
     const ActivityRestrictedGuilds = UserSettings.ActivityRestrictedGuilds;
     const setting = ActivityRestrictedGuilds.useSetting();
     return !setting.includes(React3().selectedGuildId);

@@ -1,19 +1,19 @@
-// === Module 16638: ConjureDesignRemarkSheet ===
+// === Module 16900: ConjureDesignRemarkSheet ===
 
-// Module 16638 (ConjureDesignRemarkSheet)
+// Module 16900 (ConjureDesignRemarkSheet)
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import ConjureDesignFeedback from "ConjureDesignFeedback" /* 16584 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import ConjureDesignFeedback from "ConjureDesignFeedback" /* 16839 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 let View = fn(17).View;
-const sendUserMessage = fn(12923).sendUserMessage;
+const sendUserMessage = fn(13072).sendUserMessage;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const ConjureDesignRemarkSheet = "ConjureDesignRemarkSheet";
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { content: { gap: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 }, actions: null };
 let obj3 = { gap: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
 obj2.actions = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
@@ -23,7 +23,7 @@ let obj4 = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/design_feedback/native/ConjureDesignRemarkSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureDesignRemarkSheet(projectId) {
   const cResult = projectId(onClose[8]).c(41);
   projectId = projectId.projectId;
   const target = projectId.target;
@@ -99,7 +99,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
   cResult[8] = tmp6;
   cResult[9] = fn;
   const tmp3 = first(noop.useState(""), 2);
-}) : ((projectId) => {
+}) : (function ConjureDesignRemarkSheet(projectId) {
   projectId = projectId.projectId;
   const target = projectId.target;
   const onClose = projectId.onClose;

@@ -1,21 +1,21 @@
-// === Module 4703: ClientThemesBackgroundStore ===
+// === Module 4897: ClientThemesBackgroundStore ===
 
-// Module 4703 (ClientThemesBackgroundStore)
+// Module 4897 (ClientThemesBackgroundStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ClientThemesUtils from "ClientThemesUtils" /* 1239 */;
-import UserSettings from "UserSettings" /* 2028 */;
-import dismissible_content from "dismissible_content" /* 2036 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4534 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4704 */;
-import UserUtils from "UserUtils" /* 4728 */;
-import ThemeActionCreators from "ThemeActionCreators" /* 4732 */;
-import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1194 */;
-import ThemeStore from "ThemeStore" /* 1193 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1195 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import UserStore from "UserStore" /* 1377 */;
+import ClientThemesUtils from "ClientThemesUtils" /* 1251 */;
+import UserSettings from "UserSettings" /* 2040 */;
+import dismissible_content from "dismissible_content" /* 2048 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4726 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4898 */;
+import UserUtils from "UserUtils" /* 4922 */;
+import ThemeActionCreators from "ThemeActionCreators" /* 4926 */;
+import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1206 */;
+import ThemeStore from "ThemeStore" /* 1205 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1207 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 function reset() {
@@ -90,9 +90,9 @@ function handleUserSettingsProtoStoreUpdate() {
     _undefined = undefined;
   }
 }
-const isGuildTextChannelType = fn(2055).isGuildTextChannelType;
-const dependencyMap = fn(1240).BACKGROUND_GRADIENT_PRESETS_MAP;
-const SystemThemeState = fn(1196).SystemThemeState;
+const isGuildTextChannelType = fn(2067).isGuildTextChannelType;
+const dependencyMap = fn(1252).BACKGROUND_GRADIENT_PRESETS_MAP;
+const SystemThemeState = fn(1208).SystemThemeState;
 let closure_14 = true;
 let c15 = false;
 let c16 = false;

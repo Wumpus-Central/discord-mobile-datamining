@@ -1,21 +1,21 @@
-// === Module 17297: VoicePanelHeaderChatButton ===
+// === Module 17578: VoicePanelHeaderChatButton ===
 
-// Module 17297 (VoicePanelHeaderChatButton)
+// Module 17578 (VoicePanelHeaderChatButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
 import util from "util" /* 1126 */;
-import ChatIcon from "ChatIcon" /* 5862 */;
-import NativeViewDefault from "NativeView" /* 5983 */;
-import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 17217 */;
-import useChatBadgeDefault from "useChatBadge" /* 17298 */;
+import NativeViewDefault from "NativeView" /* 6166 */;
+import ChatIcon from "ChatIcon" /* 8174 */;
+import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 17498 */;
+import useChatBadgeDefault from "useChatBadge" /* 17579 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ComponentActions = fn(1085).ComponentActions;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { badgeContainer: { position: "absolute", top: -2, right: -2 }, badge: null, notificationBadge: null };
 let size = { width: 8, height: 8, borderRadius: nativeDefault.radii.round };
 obj2.badge = size;
@@ -26,7 +26,7 @@ let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFICAT
 size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/header/VoicePanelHeaderChatButton.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePanelHeaderChatButton(channelId) {
   const cResult = c.c(7);
   const tmp4 = closure_7();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -86,7 +86,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   cResult[3] = tmp4;
   cResult[4] = tmp13;
   tmp12 = tmp13;
-}) : ((channelId) => {
+}) : (function VoicePanelHeaderChatButton(channelId) {
   const tmp = closure_7();
   const callback = noop.useCallback(() => {
     const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;

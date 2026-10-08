@@ -1,16 +1,16 @@
-// === Module 14485: UserProfilePrimaryGuildEditButton ===
+// === Module 14715: UserProfilePrimaryGuildEditButton ===
 
-// Module 14485 (UserProfilePrimaryGuildEditButton)
+// Module 14715 (UserProfilePrimaryGuildEditButton)
 import nativeDefault from "native" /* 587 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2074 */;
+import GuildStore from "GuildStore" /* 2086 */;
 
 require = fn;
-const GuildTagBadgeSize = fn(7614).GuildTagBadgeSize;
+const GuildTagBadgeSize = fn(7860).GuildTagBadgeSize;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { tag: { paddingHorizontal: 6, paddingVertical: 2, columnGap: 4, borderRadius: nativeDefault.radii.sm } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -109,8 +109,8 @@ export default function UserProfilePrimaryGuildEditButton(arg0) {
     obj4.buttonText = name;
     const obj5 = { text: combined };
     obj4.accessibilityValue = obj5;
-    obj4.onPress = function onPress() {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14487, dependencyMap.paths), "UserPrimaryGuildListBottomSheet", { availableGuilds: userAvailableGuildsWithTags, selectedGuildId: pendingPrimaryGuildId, onSelectGuild: handleSelectPrimaryGuild });
+    obj4.onPress = function handleOpenSelectPrimaryGuild() {
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14717, dependencyMap.paths), "UserPrimaryGuildListBottomSheet", { availableGuilds: userAvailableGuildsWithTags, selectedGuildId: pendingPrimaryGuildId, onSelectGuild: handleSelectPrimaryGuild });
     };
     let tmp23Result = null;
     if (null != stateFromStores) {

@@ -1,10 +1,10 @@
-// === Module 11339: CheckpointForwardPreview ===
+// === Module 11606: CheckpointForwardPreview ===
 
-// Module 11339 (CheckpointForwardPreview)
+// Module 11606 (CheckpointForwardPreview)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
-import CheckpointConstants from "CheckpointConstants" /* 5121 */;
-import Checkpoint2025ForwardPreviewDefault from "Checkpoint2025ForwardPreview" /* 11340 */;
+import CheckpointConstants from "CheckpointConstants" /* 5433 */;
+import Checkpoint2025ForwardPreviewDefault from "Checkpoint2025ForwardPreview" /* 11607 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -12,7 +12,7 @@ const CheckpointVersions = CheckpointConstants.CheckpointVersions;
 const jsx = jsxProd.jsx;
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointForwardPreview.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((checkpointData) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function CheckpointForwardPreview(checkpointData) {
   const cResult = c.c(2);
   checkpointData = checkpointData.checkpointData;
   if (CheckpointVersions.V2025 === checkpointData.version) {
@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((checkpointData) 
     const V2026 = tmp3.V2026;
     return null;
   }
-}) : ((checkpointData) => {
+}) : (function CheckpointForwardPreview(checkpointData) {
   checkpointData = checkpointData.checkpointData;
   if (CheckpointVersions.V2025 === checkpointData.version) {
     const obj = { checkpointData };

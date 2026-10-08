@@ -1,23 +1,23 @@
-// === Module 16097: useChannelListSpecs ===
+// === Module 16357: useChannelListSpecs ===
 
-// Module 16097 (useChannelListSpecs)
+// Module 16357 (useChannelListSpecs)
 import c from "c" /* 576 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import useFontScale from "useFontScale" /* 5609 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 10738 */;
-import useChannelListWidthDefault from "useChannelListWidth" /* 15986 */;
-import RedesignGuildHeader from "RedesignGuildHeader" /* 16098 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import useFontScale from "useFontScale" /* 5382 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11596 */;
+import useChannelListWidthDefault from "useChannelListWidth" /* 16246 */;
+import RedesignGuildHeader from "RedesignGuildHeader" /* 16358 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const RedesignChannelListConstants = fn(11711);
+const RedesignChannelListConstants = fn(11776);
 ({ STICKY_BANNER_ASPECT_RATIO: closure_4, BANNER_MAX_HEIGHT_PERCENTAGE: hasOwnProperty } = RedesignChannelListConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_list_v2/native/hooks/useChannelListSpecs.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((banner) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useChannelListSpecs(banner) {
   const cResult = c.c(19);
   const redesignGuildHeaderHeight = RedesignGuildHeader.useRedesignGuildHeaderHeight(banner);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -109,15 +109,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((banner) => {
   tmp26 = obj4;
   tmp9 = null != banner.banner;
   const tmpResult = useFontScale;
-}) : ((banner) => {
-  redesignGuildHeaderHeight = redesignGuildHeaderHeight(16098).useRedesignGuildHeaderHeight(banner);
-  height = height(1484)({ ignoreKeyboard: true }).height;
-  const tmp2 = height(15986)();
+}) : (function useChannelListSpecs(banner) {
+  redesignGuildHeaderHeight = redesignGuildHeaderHeight(16358).useRedesignGuildHeaderHeight(banner);
+  height = height(1496)({ ignoreKeyboard: true }).height;
+  const tmp2 = height(16246)();
   dependencyMap = tmp2;
-  const obj = redesignGuildHeaderHeight(16098);
-  const fontScale = redesignGuildHeaderHeight(5609).useFontScale();
+  const obj = redesignGuildHeaderHeight(16358);
+  const fontScale = redesignGuildHeaderHeight(5382).useFontScale();
   closure_4 = tmp4;
-  const top = height(1618)().top;
+  const top = height(1630)().top;
   const items = [null != banner.banner, tmp2, height, redesignGuildHeaderHeight, top, fontScale];
   return fontScale.useMemo(() => {
     let num = 0;

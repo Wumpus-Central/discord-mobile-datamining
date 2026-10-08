@@ -1,12 +1,12 @@
-// === Module 6814: SensitiveMediaGoreRedactionSettingsUtils ===
+// === Module 6986: SensitiveMediaGoreRedactionSettingsUtils ===
 
-// Module 6814 (SensitiveMediaGoreRedactionSettingsUtils)
-import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
-import UserSettings from "UserSettings" /* 2028 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5587 */;
-import SettingsDefaultFeature from "SettingsDefaultFeature" /* 6812 */;
+// Module 6986 (SensitiveMediaGoreRedactionSettingsUtils)
+import preloaded_user_settings from "preloaded_user_settings" /* 1209 */;
+import UserSettings from "UserSettings" /* 2040 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5918 */;
+import SettingsDefaultFeature from "SettingsDefaultFeature" /* 6984 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 function resolveGoreSettingWithDefaults(isFriend) {
@@ -148,4 +148,8 @@ export const updateGoreContentSetting = function updateGoreContentSetting(arg0) 
   GoreContentSettings2.updateSetting({});
   const obj2 = {};
 };
-export const useSensitiveContentFilterHelpArticle = ReactCompilerGating.isReactCompilerEnabled() ? (() => HelpdeskArticles.EXPLICIT_MEDIA_REDACTION) : (() => noop.useMemo(() => constants.EXPLICIT_MEDIA_REDACTION, []));
+export const useSensitiveContentFilterHelpArticle = ReactCompilerGating.isReactCompilerEnabled() ? (function useSensitiveContentFilterHelpArticle() {
+  return HelpdeskArticles.EXPLICIT_MEDIA_REDACTION;
+}) : (function useSensitiveContentFilterHelpArticle() {
+  return noop.useMemo(() => constants.EXPLICIT_MEDIA_REDACTION, []);
+});

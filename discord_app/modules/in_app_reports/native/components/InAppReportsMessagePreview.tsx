@@ -1,20 +1,20 @@
-// === Module 8335: InAppReportsMessagePreview ===
+// === Module 7718: InAppReportsMessagePreview ===
 
-// Module 8335 (InAppReportsMessagePreview)
+// Module 7718 (InAppReportsMessagePreview)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import ColorUtils from "ColorUtils" /* 4733 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import RowGeneratorDefault from "RowGenerator" /* 7602 */;
-import ChatItemDefault from "ChatItem" /* 8336 */;
+import ColorUtils from "ColorUtils" /* 4927 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import RowGeneratorDefault from "RowGenerator" /* 7719 */;
+import ChatItemDefault from "ChatItem" /* 9308 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 }, borderColor: { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY }, title: { lineHeight: 16, marginBottom: 8 }, chatItemContainer: null };
 let obj3 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 obj2.chatItemContainer = { minHeight: 40, borderRadius: nativeDefault.radii.sm, borderWidth: 1, padding: 8 };
@@ -26,7 +26,7 @@ let obj4 = { minHeight: 40, borderRadius: nativeDefault.radii.sm, borderWidth: 1
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsMessagePreview.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((message) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function MessagePreview(message) {
   const cResult = c.c(19);
   message = message.message;
   const tmp4 = closure_6();
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((message) => {
   cResult[8] = tmp12;
   cResult[9] = items1;
   tmp13 = items1;
-}) : ((message) => {
+}) : (function MessagePreview(message) {
   const tmp = closure_6();
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "text-xs/bold", children: null };

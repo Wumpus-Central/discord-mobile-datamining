@@ -1,17 +1,17 @@
-// === Module 12832: useShouldShowMutualInfo ===
+// === Module 12979: useShouldShowMutualInfo ===
 
-// Module 12832 (useShouldShowMutualInfo)
+// Module 12979 (useShouldShowMutualInfo)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import useIsUserProfileObfuscatedDefault from "useIsUserProfileObfuscated" /* 12833 */;
-import UserStore from "UserStore" /* 1377 */;
+import useIsUserProfileObfuscatedDefault from "useIsUserProfileObfuscated" /* 12980 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useShouldShowMutualInfo.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldShowMutualInfo(id) {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
@@ -33,7 +33,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
   }
   const tmp8 = useIsUserProfileObfuscatedDefault(id);
   return id !== id.id && !useIsUserProfileObfuscatedDefault(id);
-}) : ((id) => {
+}) : (function useShouldShowMutualInfo(id) {
   const items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   id = undefined;

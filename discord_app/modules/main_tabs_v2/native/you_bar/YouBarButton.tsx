@@ -1,26 +1,26 @@
-// === Module 16374: YouBarButton ===
+// === Module 16634: YouBarButton ===
 
-// Module 16374 (YouBarButton)
+// Module 16634 (YouBarButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BadgeDefault from "Badge" /* 7514 */;
-import IconButton from "IconButton" /* 7586 */;
-import ClipView from "ClipView" /* 8502 */;
+import IconButton from "IconButton" /* 8106 */;
+import ClipView from "ClipView" /* 8986 */;
+import BadgeDefault from "Badge" /* 9237 */;
 import noop from "module_19" /* 19 */;
 
 const ClipViewDefault = ClipView;
 
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(14915);
+const YouBarConstants = fn(15177);
 ({ YOU_BAR_BUTTON_HIT_SLOP: hasOwnProperty, YOU_BAR_BUTTON_ICON_SIZE: metroRequire } = YouBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { buttonContainer: { position: "relative", borderRadius: nativeDefault.modules.button.BORDER_RADIUS, overflow: "hidden" } };
 let closure_9 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((badgeRadius) => {
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIconBadgeCutout(badgeRadius) {
   const cResult = c.c(6);
   ({ size, xOffset, yOffset, badgeWidth, borderWidth } = badgeRadius);
   const sum = badgeRadius.badgeRadius + borderWidth;
@@ -62,7 +62,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((badgeRadius) =
   cResult[4] = sum1;
   cResult[5] = size1;
   tmp12 = size1;
-}) : ((size) => {
+}) : (function useIconBadgeCutout(size) {
   size = size.size;
   let num = size.xOffset;
   if (num === undefined) {
@@ -88,7 +88,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((badgeRadius) =
   }, items);
 });
 ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIconContentStyle(arg0) {
   const cResult = c.c(3);
   ({ size, badgeSize, xOffset, yOffset } = arg0);
   let num = 0;
@@ -109,12 +109,12 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     return tmp6;
   }
-  const rect = { position: "absolute", left: sum, top: sum1, right: "concat", bottom: "TypeError", padding: "keys", minWidth: "ind" };
+  const rect = { position: "absolute", left: sum, top: sum1, right: "constructor", bottom: "useStateFromStores", padding: "keys", minWidth: "marginBottom" };
   cResult[0] = sum;
   cResult[1] = sum1;
   cResult[2] = rect;
   tmp6 = rect;
-}) : ((size) => {
+}) : (function useIconContentStyle(size) {
   size = size.size;
   const badgeSize = size.badgeSize;
   let num = size.xOffset;
@@ -127,12 +127,12 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const items = [size, badgeSize, num2, num];
   return noop.useMemo(() => {
-    const rect = { position: "absolute", left: size - badgeSize + num, top: size - badgeSize + num2, right: "concat", bottom: "TypeError", padding: "keys", minWidth: "ind" };
+    const rect = { position: "absolute", left: size - badgeSize + num, top: size - badgeSize + num2, right: "constructor", bottom: "useStateFromStores", padding: "keys", minWidth: "marginBottom" };
     return rect;
   }, items);
 });
 ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouBarButtonIcon(arg0) {
   const cResult = c.c(16);
   ({ icon, hasBadge, badgeStyle } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -214,7 +214,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = tmp5;
   cResult[3] = hasBadge;
   cResult[4] = items2;
-}) : ((hasBadge) => {
+}) : (function YouBarButtonIcon(hasBadge) {
   hasBadge = hasBadge.hasBadge;
   ({ icon, badgeStyle } = hasBadge);
   const tmp = closure_10({ size: width, badgeRadius: 4, borderWidth: 2 });
@@ -241,7 +241,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 });
 let closure_12 = tmp4;
 ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouBarButtonContainer(children) {
   const cResult = c.c(3);
   children = children.children;
   const tmp2 = closure_9();
@@ -256,14 +256,16 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
   cResult[1] = tmp2.buttonContainer;
   cResult[2] = tmp4;
   tmp3 = tmp4;
-}) : ((children) => React5(View, { style: closure_9().buttonContainer, children: children.children }));
+}) : (function YouBarButtonContainer(children) {
+  return React5(View, { style: closure_9().buttonContainer, children: children.children });
+});
 let closure_13 = tmp5;
 ReactCompilerGating = fn(558);
 let obj3 = { position: "relative", borderRadius: nativeDefault.modules.button.BORDER_RADIUS, overflow: "hidden" };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarButton.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((hasNameplate) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function YouBarButton(hasNameplate) {
   const cResult = c.c(10);
   ({ icon, hasBadge, badgeStyle, onPress, onLongPress, accessibilityLabel } = hasNameplate);
   let str = "tertiary";
@@ -306,7 +308,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((hasNam
   cResult[2] = icon;
   cResult[3] = tmp5;
   tmp4 = tmp5;
-}) : ((arg0) => {
+}) : (function YouBarButton(arg0) {
   ({ hasNameplate, icon, hasBadge, badgeStyle, onPress, onLongPress, accessibilityLabel } = arg0);
   const obj = { accessibilityLabel, variant: null, size: "sm", icon: null, onPress: null, onLongPress: null, hitSlop: null };
   let str = "tertiary";

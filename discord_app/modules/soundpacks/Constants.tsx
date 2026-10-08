@@ -1,6 +1,6 @@
-// === Module 9577: Constants ===
+// === Module 10772: Constants ===
 
-// Module 9577 (Constants)
+// Module 10772 (Constants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/soundpacks/Constants.tsx");

@@ -1,9 +1,9 @@
-// === Module 12170: useGuildPowerupRollbackEnabled ===
+// === Module 12249: useGuildPowerupRollbackEnabled ===
 
-// Module 12170 (useGuildPowerupRollbackEnabled)
+// Module 12249 (useGuildPowerupRollbackEnabled)
 import c from "c" /* 576 */;
-import Powerups from "Powerups" /* 4777 */;
-import ServerThemeExperiment from "ServerThemeExperiment" /* 4779 */;
+import Powerups from "Powerups" /* 4971 */;
+import ServerThemeExperiment from "ServerThemeExperiment" /* 4973 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -12,7 +12,7 @@ function isGuildPowerupRollbackEnabledForSku(arg0, arg1) {
 }
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupRollbackEnabled.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, skuId, arg2) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildPowerupRollbackEnabled(arg0, skuId, arg2) {
   const cResult = c.c(3);
   const serverThemeRollbackEnabled = ServerThemeExperiment.useServerThemeRollbackEnabled(arg0, arg2);
   if (cResult[0] === serverThemeRollbackEnabled) {
@@ -26,7 +26,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, skuId, arg
   cResult[1] = skuId.skuId;
   cResult[2] = tmp6;
   tmp5 = tmp6;
-}) : ((arg0, skuId, arg2) => {
+}) : (function useGuildPowerupRollbackEnabled(arg0, skuId, arg2) {
   const serverThemeRollbackEnabled = ServerThemeExperiment.useServerThemeRollbackEnabled(arg0, arg2);
   return skuId.skuId === Powerups.GUILD_POWERUP_GUILD_THEME_SKU_ID && serverThemeRollbackEnabled;
 });

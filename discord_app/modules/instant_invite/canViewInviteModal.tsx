@@ -1,15 +1,15 @@
-// === Module 9298: canViewInviteModal ===
+// === Module 8508: canViewInviteModal ===
 
-// Module 9298 (canViewInviteModal)
+// Module 8508 (canViewInviteModal)
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
 const Permissions = Constants.Permissions;
 const result = size.fileFinishedImporting("modules/instant_invite/canViewInviteModal.tsx");
 
-export const canViewInviteModal = function canViewInviteModal(PermissionStore, guild, defaultChannel, stageInstanceByChannel) {
-  let tmp = defaultChannel;
-  if (defaultChannel == null) {
+export const canViewInviteModal = function canViewInviteModal(PermissionStore, guild, channel1, stageInstanceByChannel) {
+  let tmp = channel1;
+  if (channel1 == null) {
     tmp = guild;
   }
   let canResult = null != tmp;

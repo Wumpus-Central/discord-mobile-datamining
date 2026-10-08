@@ -1,11 +1,11 @@
-// === Module 6703: ActionSheetCloseButton ===
+// === Module 6880: ActionSheetCloseButton ===
 
-// Module 6703 (ActionSheetCloseButton)
+// Module 6880 (ActionSheetCloseButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Pressables from "Pressables" /* 5916 */;
-import XSmallIcon from "XSmallIcon" /* 6024 */;
+import Pressables from "Pressables" /* 6189 */;
+import XSmallIcon from "XSmallIcon" /* 6210 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Sheet/native/ActionSheetCloseButton.native.tsx");
 
-export const ActionSheetCloseButton = ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
+export const ActionSheetCloseButton = ReactCompilerGating.isReactCompilerEnabled() ? (function ActionSheetCloseButton(onPress) {
   const cResult = c.c(6);
   onPress = onPress.onPress;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -53,7 +53,7 @@ export const ActionSheetCloseButton = ReactCompilerGating.isReactCompilerEnabled
   cResult[5] = tmp12;
   tmp11 = tmp12;
   const obj3 = { accessibilityRole: "button", accessibilityLabel: first, hitSlop, androidRippleConfig, onPress, children: tmp8 };
-}) : ((arg0) => {
+}) : (function ActionSheetCloseButton(arg0) {
   ({ onPress, variant } = arg0);
   const obj = { accessibilityRole: "button", accessibilityLabel: null, hitSlop: null, androidRippleConfig: null, onPress: null, children: null };
   const intl = util.intl;

@@ -1,22 +1,22 @@
-// === Module 17279: VoicePanelSettingsActionSheet ===
+// === Module 17560: VoicePanelSettingsActionSheet ===
 
-// Module 17279 (VoicePanelSettingsActionSheet)
+// Module 17560 (VoicePanelSettingsActionSheet)
 import c from "c" /* 576 */;
-import BottomSheetModal from "BottomSheetModal" /* 6119 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6626 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6652 */;
-import VoicePanelSettingsOverviewDefault from "VoicePanelSettingsOverview" /* 17280 */;
+import BottomSheetModal from "BottomSheetModal" /* 6298 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6803 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6829 */;
+import VoicePanelSettingsOverviewDefault from "VoicePanelSettingsOverview" /* 17561 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles({ wrapper: { gap: 24 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/header/VoicePanelSettingsActionSheet.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePanelSettingsActionSheet(arg0) {
   const cResult = c.c(6);
   ({ guildId, channelId } = arg0);
   const tmp4 = closure_4();
@@ -46,7 +46,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   cResult[1] = guildId;
   cResult[2] = tmp6;
   tmp5 = tmp6;
-}) : ((arg0) => {
+}) : (function VoicePanelSettingsActionSheet(arg0) {
   ({ guildId, channelId } = arg0);
   const obj = { startExpanded: true, scrollable: true, children: null };
   const obj2 = { children: null };

@@ -1,19 +1,19 @@
-// === Module 12533: MessageNotificationHeader ===
+// === Module 12629: MessageNotificationHeader ===
 
-// Module 12533 (MessageNotificationHeader)
+// Module 12629 (MessageNotificationHeader)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ChannelTypes from "ChannelTypes" /* 1106 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import useChannelName from "useChannelName" /* 5049 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5819 */;
-import ChatIcon2 from "ChatIcon" /* 5862 */;
-import ThreadIcon2 from "ThreadIcon" /* 5864 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import useChannelName from "useChannelName" /* 5417 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8134 */;
+import ChatIcon2 from "ChatIcon" /* 8174 */;
+import ThreadIcon2 from "ThreadIcon" /* 8176 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
-import UserStore from "UserStore" /* 1377 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 function getLocationLabel(arg0) {
@@ -84,13 +84,13 @@ function getLocationLabel(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 }, headerContent: { flex: 1, flexDirection: "row", alignItems: "center" }, primaryText: { flexShrink: 1, marginRight: 2 }, secondaryTextContainer: { flexDirection: "row", alignItems: "center", gap: 2, flex: 1, overflow: "hidden" }, separator: { marginHorizontal: 2 }, icon: { width: 16, height: 16 }, secondaryText: { flex: 1 } };
 let closure_9 = createStyles.createStyles(obj2);
 fn(558);
 let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 let ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function LocationText(arg0) {
   const cResult = c.c(20);
   ({ channel, parentChannel, author, location: _location, color } = arg0);
   const tmp4 = closure_9();
@@ -182,7 +182,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     const ChatIcon = ChatIcon2.ChatIcon;
   }
-}) : ((channel) => {
+}) : (function LocationText(channel) {
   channel = channel.channel;
   const parentChannel = channel.parentChannel;
   let str;
@@ -226,7 +226,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return closure_8(str, obj);
 });
 ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function SimpleNotificationHeader(arg0) {
   const cResult = c.c(15);
   ({ text, secondaryText, labelStyle } = arg0);
   const tmp4 = closure_9();
@@ -293,7 +293,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = tmp4.primaryText;
   cResult[2] = items2;
   tmp5 = items2;
-}) : ((secondaryText) => {
+}) : (function SimpleNotificationHeader(secondaryText) {
   secondaryText = secondaryText.secondaryText;
   ({ text, labelStyle } = secondaryText);
   const tmp = closure_9();
@@ -319,7 +319,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/MessageNotificationHeader.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function MessageNotificationHeader(arg0) {
   const cResult = c.c(25);
   ({ channel, parentChannel, guild, author, locationTextColor } = arg0);
   const tmp4 = closure_9();
@@ -440,7 +440,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[7] = tmp13;
   tmp12 = tmp13;
   const tmpResult = initialize;
-}) : ((arg0) => {
+}) : (function MessageNotificationHeader(arg0) {
   ({ channel, parentChannel, author } = arg0);
   ({ guild, locationTextColor } = arg0);
   const tmp = closure_9();

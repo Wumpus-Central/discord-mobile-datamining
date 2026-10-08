@@ -1,30 +1,30 @@
-// === Module 13809: GuildProgressOverview ===
+// === Module 14034: GuildProgressOverview ===
 
-// Module 13809 (GuildProgressOverview)
+// Module 14034 (GuildProgressOverview)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Pressables from "Pressables" /* 5916 */;
-import showSimpleActionSheet from "showSimpleActionSheet" /* 6700 */;
-import _modDef9615 from "module_9615" /* 9615 */;
-import GuildProgressUtils from "GuildProgressUtils" /* 12145 */;
-import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 12148 */;
-import GuildProgressBarDefault from "GuildProgressBar" /* 13810 */;
+import native from "native" /* 1200 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import Pressables from "Pressables" /* 6189 */;
+import showSimpleActionSheet from "showSimpleActionSheet" /* 6877 */;
+import _modDef10808 from "module_10808" /* 10808 */;
+import GuildProgressUtils from "GuildProgressUtils" /* 12224 */;
+import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 12227 */;
+import GuildProgressBarDefault from "GuildProgressBar" /* 14035 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { padding: 16 }, horizontal: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" }, title: { fontSize: 16, lineHeight: 20, fontFamily: fn(1085).Fonts.PRIMARY_SEMIBOLD, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, marginBottom: 2 }, step: { lineHeight: 16 }, progressBar: { marginTop: 8 } };
 let closure_7 = createStyles.createStyles(obj2);
 fn(558);
 let obj3 = { fontSize: 16, lineHeight: 20, fontFamily: fn(1085).Fonts.PRIMARY_SEMIBOLD, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, marginBottom: 2 };
 const ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildProgressOverviewView(arg0) {
   const cResult = c.c(25);
   ({ titleStyle, onPress, onLongPress, title, subtitle, percentComplete } = arg0);
   const tmp4 = closure_7();
@@ -46,7 +46,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           }
           const _Symbol = Symbol;
           if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-            const obj2 = { source: _modDef9615 };
+            const obj2 = { source: _modDef10808 };
             const tmp20 = hasOwnProperty(native.Icon, obj2);
             cResult[12] = tmp20;
             let tmp17 = tmp20;
@@ -129,7 +129,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = titleStyle;
   cResult[2] = items3;
   tmp5 = items3;
-}) : ((arg0) => {
+}) : (function GuildProgressOverviewView(arg0) {
   ({ titleStyle, onPress, onLongPress, title, subtitle, percentComplete } = arg0);
   const tmp = closure_7();
   const obj = { accessibilityRole: "button", activeOpacity: 0.4, style: tmp.container, onPress, onLongPress, children: null };
@@ -140,7 +140,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   obj4.style = items;
   const items1 = [hasOwnProperty(native.LegacyText, obj4), hasOwnProperty(Text_Text.Text, { style: tmp.step, variant: "text-xs/medium", color: "text-default", children: subtitle })];
   obj3.children = items1;
-  const items2 = [timestampProducer(View, obj3), hasOwnProperty(native.Icon, { source: _modDef9615 })];
+  const items2 = [timestampProducer(View, obj3), hasOwnProperty(native.Icon, { source: _modDef10808 })];
   obj2.children = items2;
   const items3 = [timestampProducer(View, obj2), hasOwnProperty(GuildProgressBarDefault, { style: tmp.progressBar, percent: percentComplete })];
   obj.children = items3;
@@ -150,11 +150,11 @@ let closure_8 = tmp4;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_progress/native/components/GuildProgressOverview.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildProgressOverview(guild) {
   const cResult = guild(completed[7]).c(19);
   guild = guild.guild;
   ({ titleStyle, longPressDisabled, resume } = guild);
-  importDefault = tmp4;
+  closure_1 = tmp4;
   let obj = guild(completed[7]);
   const guildProgressStep = guild(completed[8]).useGuildProgressStep(guild);
   ({ percentComplete, subtitle, completed } = guildProgressStep);
@@ -175,20 +175,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
         if (cResult[10] !== tmp5) {
           let intl = tmp(completed[11]).intl;
           const string = intl.string;
-          class I {
-            constructor() {
-              if (!completed) {
-                tmp = closure_1;
-                tmp2 = closure_2;
-                obj = closure_1(closure_2[9]);
-                tmp3 = guild;
-                progress = obj.createProgress(guild.id);
-              }
-              obj2 = closure_0(closure_2[8]);
-              openActionSheetResult = obj2.openActionSheet(guild);
-              return;
-            }
-          }
+          let NzxWjb = tmp(completed[11]).t;
           if (tmp5) {
             NzxWjb = NzxWjb.NzxWjb;
             let stringResult = string(NzxWjb);
@@ -212,52 +199,30 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
               }
             }
           }
-          class I {
-            constructor() {
-              if (!completed) {
-                tmp = closure_1;
-                tmp2 = closure_2;
-                obj = closure_1(closure_2[9]);
-                tmp3 = guild;
-                progress = obj.createProgress(guild.id);
-              }
-              obj2 = closure_0(closure_2[8]);
-              openActionSheetResult = obj2.openActionSheet(guild);
-              return;
-            }
-          }
           let obj2 = { titleStyle, onPress: tmp12, onLongPress: tmp11, title: cResult[11], subtitle, percentComplete };
-          const tmp18 = closure_5(closure_8, obj2);
+          const tmp19 = closure_5(closure_8, obj2);
           cResult[12] = tmp11;
           cResult[13] = tmp12;
           cResult[14] = percentComplete;
           cResult[15] = subtitle;
           cResult[16] = cResult[11];
           cResult[17] = titleStyle;
-          cResult[18] = tmp18;
-          tmp16 = tmp18;
+          cResult[18] = tmp19;
+          tmp16 = tmp19;
         }
       }
-      class I {
-        constructor() {
-          if (!completed) {
-            tmp = closure_1;
-            tmp2 = closure_2;
-            obj = closure_1(closure_2[9]);
-            tmp3 = guild;
-            progress = obj.createProgress(guild.id);
-          }
-          obj2 = closure_0(closure_2[8]);
-          openActionSheetResult = obj2.openActionSheet(guild);
-          return;
+      function openProgressSheet() {
+        if (!completed) {
+          const progress = GuildProgressActionCreatorsDefault.createProgress(guild.id);
         }
+        GuildProgressUtils.openActionSheet(guild);
       }
       cResult[7] = completed;
       cResult[8] = guild;
-      cResult[9] = I;
-      tmp12 = I;
+      cResult[9] = openProgressSheet;
+      tmp12 = openProgressSheet;
     }
-    const fn2 = function c() {
+    function handleLongPress() {
       if (!closure_1) {
         const obj2 = { key: "GuildProgressOverviewLongPress", options: null, hasIcons: false };
         const obj3 = { label: null, onPress: null };
@@ -270,13 +235,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
         obj2.options = items;
         const result = showSimpleActionSheet.showSimpleActionSheet(obj2);
       }
-    };
+    }
     cResult[4] = guild.id;
     cResult[5] = tmp4;
-    cResult[6] = fn2;
-    tmp11 = fn2;
+    cResult[6] = handleLongPress;
+    tmp11 = handleLongPress;
   }
-  const fn = function n() {
+  const fn = function o() {
     if (completed) {
       const result = GuildProgressActionCreatorsDefault.markCompletedProgressSeen(guild.id);
     }
@@ -289,7 +254,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   tmp8 = items;
   tmp7 = fn;
   const tmpResult = guild(completed[8]);
-}) : ((guild) => {
+}) : (function GuildProgressOverview(guild) {
   guild = guild.guild;
   let flag = guild.longPressDisabled;
   if (flag === undefined) {
@@ -311,13 +276,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   }, items);
   let obj2 = {
     titleStyle: guild.titleStyle,
-    onPress() {
+    onPress: function openProgressSheet() {
       if (!completed) {
         const progress = GuildProgressActionCreatorsDefault.createProgress(guild.id);
       }
       GuildProgressUtils.openActionSheet(guild);
     },
-    onLongPress() {
+    onLongPress: function handleLongPress() {
       if (!flag) {
         const obj2 = { key: "GuildProgressOverviewLongPress", options: null, hasIcons: false };
         const obj3 = { label: null, onPress: null };

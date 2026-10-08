@@ -1,10 +1,10 @@
-// === Module 10736: useScaledTextLineHeight ===
+// === Module 10490: useScaledTextLineHeight ===
 
-// Module 10736 (useScaledTextLineHeight)
+// Module 10490 (useScaledTextLineHeight)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import useFontScale from "useFontScale" /* 5609 */;
-import NativeFontModuleDefault from "NativeFontModule" /* 10737 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import useFontScale from "useFontScale" /* 5382 */;
+import NativeFontModuleDefault from "NativeFontModule" /* 10491 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -32,7 +32,7 @@ let result = size.fileFinishedImporting("modules/screen/native/useScaledTextLine
 
 export { scaleLineHeight };
 export { scaleTextLineHeight };
-export const useScaledTextLineHeight = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useScaledTextLineHeight = ReactCompilerGating.isReactCompilerEnabled() ? (function useScaledTextLineHeight(arg0) {
   const cResult = c.c(3);
   const fontScale = useFontScale.useFontScale();
   if (cResult[0] === fontScale) {
@@ -52,7 +52,7 @@ export const useScaledTextLineHeight = ReactCompilerGating.isReactCompilerEnable
   cResult[1] = arg0;
   cResult[2] = value;
   tmp5 = value;
-}) : ((arg0) => {
+}) : (function useScaledTextLineHeight(arg0) {
   const fontScale = useFontScale.useFontScale();
   const lineHeight = Text_Text.TextStyleSheet[arg0].lineHeight;
   value = map.get(lineHeight);

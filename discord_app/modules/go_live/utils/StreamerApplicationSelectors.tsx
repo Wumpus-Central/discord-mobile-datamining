@@ -1,9 +1,9 @@
-// === Module 7241: StreamerApplicationSelectors ===
+// === Module 7420: StreamerApplicationSelectors ===
 
-// Module 7241 (StreamerApplicationSelectors)
+// Module 7420 (StreamerApplicationSelectors)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7242 */;
-import PresenceStore from "PresenceStore" /* 4936 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7421 */;
+import PresenceStore from "PresenceStore" /* 5106 */;
 
 const require = globalThis.__r;
 
@@ -61,7 +61,7 @@ const result = size.fileFinishedImporting("modules/go_live/utils/StreamerApplica
 export { getStreamerActivityByUserId };
 export { getStreamerActivity };
 export { getStreamerApplication };
-export const useGetStreamApplication = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useGetStreamApplication = ReactCompilerGating.isReactCompilerEnabled() ? (function useGetStreamApplication(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -101,7 +101,7 @@ export const useGetStreamApplication = ReactCompilerGating.isReactCompilerEnable
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp6, tmp7, streamApplicationEqualityCheck);
-}) : ((arg0) => {
+}) : (function useGetStreamApplication(arg0) {
   _require = arg0;
   const items = [PresenceStore];
   const items1 = [arg0];

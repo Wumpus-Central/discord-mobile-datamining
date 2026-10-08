@@ -1,19 +1,19 @@
-// === Module 16993: ShopCoachmark ===
+// === Module 17274: ShopCoachmark ===
 
-// Module 16993 (ShopCoachmark)
+// Module 17274 (ShopCoachmark)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
+import native from "native" /* 1200 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({ image: { marginTop: 12 } });
 let ReactCompilerGating = fn(558);
-let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function CoachmarkImg(arg0) {
   const cResult = c.c(6);
   ({ source, decorationAsset } = arg0);
   const tmp4 = closure_6();
@@ -40,7 +40,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = tmp7;
   tmp6 = tmp7;
   const obj3 = { style: tmp4.image, source, avatarDecoration: tmp5, size: native.AvatarSizes.XXLARGE };
-}) : ((arg0) => {
+}) : (function CoachmarkImg(arg0) {
   ({ source, decorationAsset } = arg0);
   const tmp = closure_6();
   return jsx(native.Avatar, { style: closure_6().image, source, avatarDecoration: { asset: decorationAsset }, size: native.AvatarSizes.XXLARGE });
@@ -49,7 +49,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/ShopCoachmark.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ShopCoachmark(markAsDismissed) {
   const cResult = markAsDismissed(decorationAsset[5]).c(14);
   markAsDismissed = markAsDismissed.markAsDismissed;
   ({ visible, title, description, avatarSrc } = markAsDismissed);
@@ -114,7 +114,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed)
   cResult[4] = renderImgComponent;
   cResult[5] = fn2;
   tmp5 = fn2;
-}) : ((markAsDismissed) => {
+}) : (function ShopCoachmark(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
   const visible = markAsDismissed.visible;
   const title = markAsDismissed.title;

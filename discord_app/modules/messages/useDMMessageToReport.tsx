@@ -1,18 +1,18 @@
-// === Module 12267: useDMMessageToReport ===
+// === Module 12346: useDMMessageToReport ===
 
-// Module 12267 (useDMMessageToReport)
+// Module 12346 (useDMMessageToReport)
 import c from "c" /* 576 */;
-import useLongestChannelMessageBeforeReply from "useLongestChannelMessageBeforeReply" /* 12107 */;
-import useIsRelationshipTypeSpamReportable from "useIsRelationshipTypeSpamReportable" /* 12268 */;
-import getApplicationFromBotUserIdDefault from "getApplicationFromBotUserId" /* 12269 */;
-import useIsApplicationDeveloperDefault from "useIsApplicationDeveloper" /* 12270 */;
-import useMessageRequestPreview from "useMessageRequestPreview" /* 12274 */;
+import useLongestChannelMessageBeforeReply from "useLongestChannelMessageBeforeReply" /* 12185 */;
+import useIsRelationshipTypeSpamReportable from "useIsRelationshipTypeSpamReportable" /* 12347 */;
+import getApplicationFromBotUserIdDefault from "getApplicationFromBotUserId" /* 12348 */;
+import useIsApplicationDeveloperDefault from "useIsApplicationDeveloper" /* 12349 */;
+import useMessageRequestPreview from "useMessageRequestPreview" /* 12353 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/useDMMessageToReport.tsx");
 
-export const useDMMessageToReport = ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) => {
+export const useDMMessageToReport = ReactCompilerGating.isReactCompilerEnabled() ? (function useDMMessageToReport(id, arg1, arg2) {
   const cResult = c.c(6);
   let isRelationshipTypeSpamReportable = useIsRelationshipTypeSpamReportable.useIsRelationshipTypeSpamReportable(arg1);
   let tmp7 = null;
@@ -76,7 +76,7 @@ export const useDMMessageToReport = ReactCompilerGating.isReactCompilerEnabled()
   cResult[5] = obj4;
   tmp18 = obj4;
   const tmpResult2 = useMessageRequestPreview;
-}) : ((id, arg1, arg2) => {
+}) : (function useDMMessageToReport(id, arg1, arg2) {
   let isRelationshipTypeSpamReportable = useIsRelationshipTypeSpamReportable.useIsRelationshipTypeSpamReportable(arg1);
   let tmp6 = null;
   if (arg2) {

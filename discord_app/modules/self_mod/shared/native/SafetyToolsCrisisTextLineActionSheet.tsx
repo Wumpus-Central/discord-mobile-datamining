@@ -1,19 +1,19 @@
-// === Module 9847: SafetyToolsCrisisTextLineActionSheet ===
+// === Module 10408: SafetyToolsCrisisTextLineActionSheet ===
 
-// Module 9847 (SafetyToolsCrisisTextLineActionSheet)
+// Module 10408 (SafetyToolsCrisisTextLineActionSheet)
 import nativeDefault from "native" /* 587 */;
-import LinkingDefault from "Linking" /* 4571 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 9811 */;
-import SafetyToolsActionSheetWrapperDefault from "SafetyToolsActionSheetWrapper" /* 9848 */;
+import LinkingDefault from "Linking" /* 4763 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 10374 */;
+import SafetyToolsActionSheetWrapperDefault from "SafetyToolsActionSheetWrapper" /* 10409 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(9797);
+const Constants = fn(10361);
 ({ CRISIS_TEXT_LINE_SMS_URI: closure_4, CRISIS_TEXT_LINE_URL: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { display: "flex", alignItems: "center", gap: nativeDefault.space.PX_16, padding: nativeDefault.space.PX_16, paddingTop: 0 }, description: null };
 let obj3 = { display: "flex", alignItems: "center", gap: nativeDefault.space.PX_16, padding: nativeDefault.space.PX_16, paddingTop: 0 };
 obj2.description = { textAlign: "center", marginBottom: nativeDefault.space.PX_8, maxWidth: 300 };
@@ -23,7 +23,7 @@ let obj4 = { textAlign: "center", marginBottom: nativeDefault.space.PX_8, maxWid
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/shared/native/SafetyToolsCrisisTextLineActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SafetyToolsCrisisTextLineActionSheet(arg0) {
   const cResult = trackAnalyticsEvent(576).c(22);
   ({ channelId, recipientId, warningId, warningType, onClose, trackAnalyticsEvent } = arg0);
   const tmp4 = closure_8();
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   if (cResult[2] !== tmp4.description) {
     const obj2 = { variant: "text-md/medium", color: "text-default", style: description, children: tmp7 };
-    const tmp11 = closure_6(trackAnalyticsEvent(4892).Text, obj2);
+    const tmp11 = closure_6(trackAnalyticsEvent(5086).Text, obj2);
     cResult[2] = tmp4.description;
     cResult[3] = tmp11;
     let tmp9 = tmp11;
@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_SAFETY_TOOLS_CTL_SMS);
         }
     };
-    const tmp16 = closure_6(trackAnalyticsEvent(5601).Button, obj3);
+    const tmp16 = closure_6(trackAnalyticsEvent(5375).Button, obj3);
     cResult[5] = trackAnalyticsEvent;
     cResult[6] = tmp16;
     let tmp14 = tmp16;
@@ -98,7 +98,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_SAFETY_TOOLS_CTL_WEB);
         }
     };
-    const tmp21 = closure_6(trackAnalyticsEvent(5601).Button, obj4);
+    const tmp21 = closure_6(trackAnalyticsEvent(5375).Button, obj4);
     cResult[8] = trackAnalyticsEvent;
     cResult[9] = tmp21;
     let tmp19 = tmp21;
@@ -149,7 +149,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[14] = tmp23;
   tmp22 = tmp23;
   const obj = trackAnalyticsEvent(576);
-}) : ((trackAnalyticsEvent) => {
+}) : (function SafetyToolsCrisisTextLineActionSheet(trackAnalyticsEvent) {
   trackAnalyticsEvent = trackAnalyticsEvent.trackAnalyticsEvent;
   ({ channelId, recipientId, warningId, warningType, onClose } = trackAnalyticsEvent);
   const tmp = closure_8();
@@ -162,7 +162,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const obj3 = { variant: "text-md/medium", color: "text-default", style: tmp.description, children: null };
   const intl2 = trackAnalyticsEvent(1126).intl;
   obj3.children = intl2.string(trackAnalyticsEvent(1126).t.uicS5l);
-  const items = [closure_6(trackAnalyticsEvent(4892).Text, obj3), , ];
+  const items = [closure_6(trackAnalyticsEvent(5086).Text, obj3), , ];
   const obj4 = { variant: "secondary", size: "lg", text: null, grow: true, onPress: null };
   const intl3 = trackAnalyticsEvent(1126).intl;
   obj4.text = intl3.string(trackAnalyticsEvent(1126).t.lkUb4S);
@@ -170,7 +170,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     LinkingDefault.openURL(React4);
     trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_SAFETY_TOOLS_CTL_SMS);
   };
-  items[1] = closure_6(trackAnalyticsEvent(5601).Button, obj4);
+  items[1] = closure_6(trackAnalyticsEvent(5375).Button, obj4);
   const obj5 = { variant: "secondary", size: "lg", text: null, grow: true, onPress: null };
   const intl4 = trackAnalyticsEvent(1126).intl;
   obj5.text = intl4.string(trackAnalyticsEvent(1126).t.ogLlvy);
@@ -178,7 +178,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     LinkingDefault.openURL(hasOwnProperty);
     trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_SAFETY_TOOLS_CTL_WEB);
   };
-  items[2] = closure_6(trackAnalyticsEvent(5601).Button, obj5);
+  items[2] = closure_6(trackAnalyticsEvent(5375).Button, obj5);
   obj2.children = items;
   obj.children = closure_7(View, obj2);
   return closure_6(SafetyToolsActionSheetWrapperDefault, obj);

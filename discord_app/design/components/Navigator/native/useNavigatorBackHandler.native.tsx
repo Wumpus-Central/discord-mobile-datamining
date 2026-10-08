@@ -1,6 +1,6 @@
-// === Module 10673: useNavigatorBackHandler ===
+// === Module 9586: useNavigatorBackHandler ===
 
-// Module 10673 (useNavigatorBackHandler)
+// Module 9586 (useNavigatorBackHandler)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -9,7 +9,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Navigator/native/useNavigatorBackHandler.native.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useNavigatorBackHandler(arg0) {
   let tmp = arg0;
   const cResult = onBeforeGoBack(navigation[2]).c(8);
   if (undefined === arg0) {
@@ -80,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = items;
   tmp8 = items;
   tmp7 = fn2;
-}) : (() => {
+}) : (function useNavigatorBackHandler() {
   let tmp = arg0;
   if (arg0 === undefined) {
     tmp = closure_3;

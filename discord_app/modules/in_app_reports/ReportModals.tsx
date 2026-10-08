@@ -1,15 +1,15 @@
-// === Module 8312: ReportModals ===
+// === Module 7695: ReportModals ===
 
-// Module 8312 (ReportModals)
-import GuildRecordUtils from "GuildRecordUtils" /* 2066 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5076 */;
-import MenuTypes from "MenuTypes" /* 8313 */;
-import showReportModal from "showReportModal" /* 8314 */;
-import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 8316 */;
+// Module 7695 (ReportModals)
+import GuildRecordUtils from "GuildRecordUtils" /* 2078 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5105 */;
+import MenuTypes from "MenuTypes" /* 7696 */;
+import showReportModal from "showReportModal" /* 7697 */;
+import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 7699 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import StageInstanceStore from "StageInstanceStore" /* 2056 */;
-import MessageRecord from "MessageRecord" /* 4526 */;
-import UserRecord from "UserRecord" /* 1391 */;
+import StageInstanceStore from "StageInstanceStore" /* 2068 */;
+import MessageRecord from "MessageRecord" /* 4718 */;
+import UserRecord from "UserRecord" /* 1403 */;
 
 require = fn;
 let closure_8 = async function _submitHamReportForFirstDM() {
@@ -208,7 +208,7 @@ export const showUnauthenticatedReportModalForTida = function showUnauthenticate
 export const showUnauthenticatedReportModalForMessage = function showUnauthenticatedReportModalForMessage(emailToken, onClose) {
   const tmp = new MessageRecord({});
   const obj = AppAnalyticsUtilsDefault;
-  const merged = Object.assign({ message_id: "start", channel_id: "unicodeVersion" });
+  const merged = Object.assign({ message_id: "Array", channel_id: "Reflect" });
   obj.trackWithMetadata(AnalyticEvents.IAR_MODAL_OPEN, { report_type: MenuTypes.UnauthenticatedReportNames.MESSAGE });
   const obj2 = { report_type: MenuTypes.UnauthenticatedReportNames.MESSAGE };
   const obj3 = showReportModal;

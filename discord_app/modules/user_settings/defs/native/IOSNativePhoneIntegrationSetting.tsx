@@ -1,21 +1,21 @@
-// === Module 15330: IOSNativePhoneIntegrationSetting ===
+// === Module 15592: IOSNativePhoneIntegrationSetting ===
 
-// Module 15330 (IOSNativePhoneIntegrationSetting)
+// Module 15592 (IOSNativePhoneIntegrationSetting)
 import util from "util" /* 1126 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import UserSettings from "UserSettings" /* 2028 */;
-import SettingsConstants from "SettingsConstants" /* 7645 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 15326 */;
-import CallKitMetricCollectionExperimentDefault from "CallKitMetricCollectionExperiment" /* 15331 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import UserSettings from "UserSettings" /* 2040 */;
+import SettingsConstants from "SettingsConstants" /* 7966 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 15588 */;
+import CallKitMetricCollectionExperimentDefault from "CallKitMetricCollectionExperiment" /* 15593 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import SettingBuilders_mod from "SettingBuilders" /* 11142 */;
+import SettingBuilders_mod from "SettingBuilders" /* 11262 */;
 import size from "module_2" /* 2 */;
 
 let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const f70310 = (arg0) => {
+function useHasIOSNativePhoneIntegrationSetting(arg0) {
 
-};
+}
 let obj = {
   useTitle() {
     const intl = util.intl;
@@ -29,7 +29,7 @@ let obj2 = {};
 const merged = Object.assign(obj);
 obj2.parent = SettingsConstants.MobileUserSettings.NOTIFICATIONS;
 obj2.usePredicate = function usePredicate() {
-  if (typeof f70310 === "function") {
+  if (typeof useHasIOSNativePhoneIntegrationSetting === "function") {
     let enabled = CallKitMetricCollectionExperimentDefault.useConfig({ location: "IOSNativePhoneIntegrationSetting" }).enabled;
     if (enabled) {
       enabled = PlatformUtils.isIOS();
@@ -48,7 +48,7 @@ const obj3 = {};
 const merged1 = Object.assign(obj);
 obj3.parent = MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN;
 obj3.usePredicate = function usePredicate() {
-  if (typeof f70310 === "function") {
+  if (typeof useHasIOSNativePhoneIntegrationSetting === "function") {
     let enabled = CallKitMetricCollectionExperimentDefault.useConfig({ location: "RedesignIOSNativePhoneIntegrationSetting" }).enabled;
     if (enabled) {
       enabled = PlatformUtils.isIOS();

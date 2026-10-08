@@ -1,14 +1,14 @@
-// === Module 14457: UserProfileDisplayNameStylesEditButton ===
+// === Module 14684: UserProfileDisplayNameStylesEditButton ===
 
-// Module 14457 (UserProfileDisplayNameStylesEditButton)
+// Module 14684 (UserProfileDisplayNameStylesEditButton)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10646 */;
-import _modDef13030 from "module_13030" /* 13030 */;
-import getDisplayNameStylesFontNameDefault from "getDisplayNameStylesFontName" /* 14458 */;
-import DisplayNameStylesColorSwatchDefault from "DisplayNameStylesColorSwatch" /* 14459 */;
+import native from "native" /* 1200 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10246 */;
+import _modDef13308 from "module_13308" /* 13308 */;
+import getDisplayNameStylesFontNameDefault from "getDisplayNameStylesFontName" /* 14686 */;
+import DisplayNameStylesColorSwatchDefault from "DisplayNameStylesColorSwatch" /* 14687 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -17,9 +17,9 @@ const noop = fn(19);
 const View = fn(17).View;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_7, UserSettingsSections: closure_8 } = Constants);
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { ggContainer: null, noneIcon: null };
 let size = { height: 48, width: 48, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, alignItems: "center", justifyContent: "center", paddingBottom: 4 };
 obj2.ggContainer = size;
@@ -30,7 +30,7 @@ let obj3 = { tintColor: nativeDefault.colors.TEXT_SUBTLE };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileDisplayNameStylesEditButton.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileDisplayNameStylesEditButton(user) {
   const cResult = user(isTryItOut[9]).c(38);
   user = user.user;
   const guildId = user.guildId;
@@ -628,7 +628,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
     const tmpResult3 = tmp(tmp2[14]);
   }
   let obj3 = user(isTryItOut[11]);
-}) : ((user) => {
+}) : (function UserProfileDisplayNameStylesEditButton(user) {
   user = user.user;
   const guildId = user.guildId;
   const isTryItOut = user.isTryItOut;
@@ -693,8 +693,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
   }, items2);
   const tmp16 = nativeStackNavigation(() => {
     if (null == closure_6) {
-      const obj2 = { source: _modDef13030, style: closure_3.noneIcon };
-      let tmp10 = jsx(native.Icon, { source: _modDef13030, style: closure_3.noneIcon });
+      const obj2 = { source: _modDef13308, style: closure_3.noneIcon };
+      let tmp10 = jsx(native.Icon, { source: _modDef13308, style: closure_3.noneIcon });
     } else {
       const obj = { style: closure_3.ggContainer, children: null };
       const obj3 = { userId: user.id, guildId, userName: "Gg", pendingDisplayNameStyles: tmp, ignoreDisabledStylesSetting: true, variant: "heading-xl/semibold" };

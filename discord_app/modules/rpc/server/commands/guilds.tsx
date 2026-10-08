@@ -1,97 +1,67 @@
-// === Module 14332: guilds ===
+// === Module 14564: guilds ===
 
-// Module 14332 (guilds)
-import GuildRecord from "GuildRecord" /* 2070 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8025 */;
-import RPCErrorDefault from "RPCError" /* 9059 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9062 */;
-import GuildStore from "GuildStore" /* 2074 */;
+// Module 14564 (guilds)
+import GuildRecord from "GuildRecord" /* 2082 */;
+import Constants2 from "Constants" /* 5635 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8433 */;
+import RPCErrorDefault from "RPCError" /* 11134 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11137 */;
+import botScopedAccess from "botScopedAccess" /* 14556 */;
+import GuildStore from "GuildStore" /* 2086 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
 const getGuildIconURL = GuildRecord.getGuildIconURL;
-({ RPCCommands, RPCErrors: closure_4 } = Constants);
+({ RPCCommands, RPCErrors: hasOwnProperty } = Constants);
 let obj = {};
-obj[RPCCommands.GET_GUILD] = {
-  scope: OAuth2Scopes.OAuth2Scopes.RPC,
-  validation(string) {
-    const obj = createRpcJoiSchemaObjectDefault(string);
-    const obj2 = { guild_id: string.string(), timeout: null };
-    const requiredResult = createRpcJoiSchemaObjectDefault(string).required();
-    const numberResult = string.number();
-    obj2.timeout = string.number().min(0).max(60);
-    return requiredResult.keys(obj2);
-  },
-  handler(socket) {
-    ({ server, args } = socket);
-    ({ guild_id: importDefault, timeout } = args);
-    if (timeout === undefined) {
-      timeout = 0;
-    }
-    const storeWaitResult = server.storeWait(socket.socket, () => GuildStore.getGuild(importDefault), timeout);
-    return server.storeWait(socket.socket, () => GuildStore.getGuild(importDefault), timeout).catch(() => {
-      throw new RPCErrorDefault({ errorCode: constants.GET_GUILD_TIMED_OUT }, "Request to get guild timed out.");
-    }).then((vanityURLCode) => {
-      if (null == vanityURLCode) {
-        const obj2 = { errorCode: constants.INVALID_GUILD };
-        const _HermesInternal = HermesInternal;
-        const tmp52 = new RPCErrorDefault(obj2, "Invalid guild id: " + closure_1_0);
-        throw tmp52;
-      } else {
-        const obj = { id: null, name: null, icon_url: null, members: null, vanity_url_code: null };
-        ({ id: obj.id, name: obj.name } = vanityURLCode);
-        let tmp2 = getGuildIconURL(vanityURLCode, 128);
-        if (tmp2 == null) {
-          tmp2 = null;
-        }
-        obj.icon_url = tmp2;
-        obj.members = [];
-        obj.vanity_url_code = vanityURLCode.vanityURLCode;
-        return obj;
-      }
-    });
+let obj2 = { scope: null, validation: null, validateAccess: null, handler: null };
+const obj3 = {};
+const items = [OAuth2Scopes.OAuth2Scopes.RPC, OAuth2Scopes.OAuth2Scopes.BOT];
+obj3[Constants2.RPC_SCOPE_CONFIG.ANY] = items;
+obj2.scope = obj3;
+obj2.validation = function validation(string) {
+  const obj = createRpcJoiSchemaObjectDefault(string);
+  const obj2 = { guild_id: string.string(), timeout: null };
+  const requiredResult = createRpcJoiSchemaObjectDefault(string).required();
+  const numberResult = string.number();
+  obj2.timeout = string.number().min(0).max(60);
+  return requiredResult.keys(obj2);
+};
+obj2.validateAccess = function validateAccess(botScopeOnly) {
+  if (botScopeOnly.botScopeOnly) {
+    return botScopedAccess.validateBotScopeHasGuildAccess(tmp2, tmp);
   }
 };
-let obj2 = {
-  scope: OAuth2Scopes.OAuth2Scopes.RPC,
-  validation(string) {
-    const obj = createRpcJoiSchemaObjectDefault(string);
-    const obj2 = { guild_id: string.string(), timeout: null };
-    const requiredResult = createRpcJoiSchemaObjectDefault(string).required();
-    const numberResult = string.number();
-    obj2.timeout = string.number().min(0).max(60);
-    return requiredResult.keys(obj2);
-  },
-  handler(socket) {
-    ({ server, args } = socket);
-    ({ guild_id: importDefault, timeout } = args);
-    if (timeout === undefined) {
-      timeout = 0;
-    }
-    const storeWaitResult = server.storeWait(socket.socket, () => GuildStore.getGuild(importDefault), timeout);
-    return server.storeWait(socket.socket, () => GuildStore.getGuild(importDefault), timeout).catch(() => {
-      throw new RPCErrorDefault({ errorCode: constants.GET_GUILD_TIMED_OUT }, "Request to get guild timed out.");
-    }).then((vanityURLCode) => {
-      if (null == vanityURLCode) {
-        const obj2 = { errorCode: constants.INVALID_GUILD };
-        const _HermesInternal = HermesInternal;
-        const tmp52 = new RPCErrorDefault(obj2, "Invalid guild id: " + closure_1_0);
-        throw tmp52;
-      } else {
-        const obj = { id: null, name: null, icon_url: null, members: null, vanity_url_code: null };
-        ({ id: obj.id, name: obj.name } = vanityURLCode);
-        let tmp2 = getGuildIconURL(vanityURLCode, 128);
-        if (tmp2 == null) {
-          tmp2 = null;
-        }
-        obj.icon_url = tmp2;
-        obj.members = [];
-        obj.vanity_url_code = vanityURLCode.vanityURLCode;
-        return obj;
-      }
-    });
+obj2.handler = function handler(socket) {
+  ({ server, args } = socket);
+  ({ guild_id: require, timeout } = args);
+  if (timeout === undefined) {
+    timeout = 0;
   }
+  const storeWaitResult = server.storeWait(socket.socket, () => GuildStore.getGuild(require), timeout);
+  return server.storeWait(socket.socket, () => GuildStore.getGuild(require), timeout).catch(() => {
+    throw new RPCErrorDefault({ errorCode: constants.GET_GUILD_TIMED_OUT }, "Request to get guild timed out.");
+  }).then((vanityURLCode) => {
+    if (null == vanityURLCode) {
+      const obj2 = { errorCode: constants.INVALID_GUILD };
+      const _HermesInternal = HermesInternal;
+      const tmp52 = new RPCErrorDefault(obj2, "Invalid guild id: " + require);
+      throw tmp52;
+    } else {
+      const obj = { id: null, name: null, icon_url: null, members: null, vanity_url_code: null };
+      ({ id: obj.id, name: obj.name } = vanityURLCode);
+      let tmp2 = getGuildIconURL(vanityURLCode, 128);
+      if (tmp2 == null) {
+        tmp2 = null;
+      }
+      obj.icon_url = tmp2;
+      obj.members = [];
+      obj.vanity_url_code = vanityURLCode.vanityURLCode;
+      return obj;
+    }
+  });
 };
+obj[RPCCommands.GET_GUILD] = obj2;
 obj[RPCCommands.GET_GUILDS] = {
   scope: OAuth2Scopes.OAuth2Scopes.RPC,
   handler() {

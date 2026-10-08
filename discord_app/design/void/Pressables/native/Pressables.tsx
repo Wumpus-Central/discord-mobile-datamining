@@ -1,26 +1,26 @@
-// === Module 5916: Pressables ===
+// === Module 6189: Pressables ===
 
-// Module 5916 (Pressables)
+// Module 6189 (Pressables)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import StyleSheetUtilsDefault from "StyleSheetUtils" /* 5917 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import StyleSheetUtilsDefault from "StyleSheetUtils" /* 6190 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 let closure_3 = ["children", "androidRippleConfig", "style", "type", "activeOpacity", "underlayColor", "innerRef"];
-let closure_4 = ["activeOpacity"];
-let closure_5 = ["underlayColor"];
+let closure_4 = ["activeOpacity", "ref"];
+let closure_5 = ["underlayColor", "ref"];
 const Pressable = fn(17).Pressable;
-const IOS_POINTER_STYLE = fn(5618).IOS_POINTER_STYLE;
-const getThemedRippleConfig = fn(1192).getThemedRippleConfig;
+const IOS_POINTER_STYLE = fn(5384).IOS_POINTER_STYLE;
+const getThemedRippleConfig = fn(1204).getThemedRippleConfig;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
-let obj = { pressedHighlight: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED } };
-let closure_12 = createStyles.createStyles(obj);
+const createStyles = fn(5090);
+let obj2 = { pressedHighlight: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED } };
+let closure_12 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((type) => {
+let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function PressableBase(type) {
   let merged1 = dependencyMap;
   const cResult = require("c").c(26);
   if (cResult[0] !== type) {
@@ -115,7 +115,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((type) => {
       cResult[16] = style;
       cResult[17] = tmp25;
     }
-    tmpResult2 = tmp(1369);
+    tmpResult2 = tmp(1381);
   } else {
     if (cResult[9] === tmp4) {
       if (cResult[10] === backgroundColor) {
@@ -199,7 +199,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((type) => {
     cResult[14] = E;
   }
   tmpResult = require("PlatformUtils");
-}) : ((androidRippleConfig) => {
+}) : (function PressableBase(androidRippleConfig) {
   androidRippleConfig = androidRippleConfig.androidRippleConfig;
   const style = androidRippleConfig.style;
   const type = androidRippleConfig.type;
@@ -284,83 +284,90 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((type) => {
 fn(558);
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 ReactCompilerGating = fn(558);
-const forwardRefResult = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((activeOpacity, innerRef) => {
-  const cResult = c.c(7);
-  if (cResult[0] !== activeOpacity) {
-    activeOpacity = activeOpacity.activeOpacity;
-    const tmp6 = _objectWithoutProperties(activeOpacity, closure_4);
-    cResult[0] = activeOpacity;
-    cResult[1] = tmp6;
-    cResult[2] = activeOpacity;
-    let tmp3 = activeOpacity;
-    let tmp2 = tmp6;
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function PressableOpacity(arg0) {
+  const cResult = c.c(8);
+  if (cResult[0] !== arg0) {
+    ({ activeOpacity, ref } = arg0);
+    const tmp7 = _objectWithoutProperties(arg0, closure_4);
+    cResult[0] = arg0;
+    cResult[1] = tmp7;
+    cResult[2] = ref;
+    cResult[3] = activeOpacity;
+    let tmp4 = activeOpacity;
+    let tmp3 = ref;
+    let tmp2 = tmp7;
   } else {
     tmp2 = cResult[1];
     tmp3 = cResult[2];
+    tmp4 = cResult[3];
   }
-  let num4 = 0.2;
-  if (undefined !== tmp3) {
-    num4 = tmp3;
+  let num5 = 0.2;
+  if (undefined !== tmp4) {
+    num5 = tmp4;
   }
-  if (cResult[3] === num4) {
-    if (cResult[4] === tmp2) {
-      if (cResult[5] === innerRef) {
-        let tmp7 = cResult[6];
+  if (cResult[4] === num5) {
+    if (cResult[5] === tmp2) {
+      if (cResult[6] === tmp3) {
+        let tmp8 = cResult[7];
       }
-      return tmp7;
+      return tmp8;
     }
   }
   const merged = Object.assign(tmp2);
-  const tmp9 = <closure_13 innerRef={innerRef} type="opacity" activeOpacity={num4} />;
-  cResult[3] = num4;
-  cResult[4] = tmp2;
-  cResult[5] = innerRef;
-  cResult[6] = tmp9;
-  tmp7 = tmp9;
-  const obj2 = { innerRef, type: "opacity", activeOpacity: num4 };
-}) : ((activeOpacity, innerRef) => {
+  const tmp10 = <closure_13 innerRef={tmp3} type="opacity" activeOpacity={num5} />;
+  cResult[4] = num5;
+  cResult[5] = tmp2;
+  cResult[6] = tmp3;
+  cResult[7] = tmp10;
+  tmp8 = tmp10;
+  const obj2 = { innerRef: tmp3, type: "opacity", activeOpacity: num5 };
+}) : (function PressableOpacity(activeOpacity) {
   let num = activeOpacity.activeOpacity;
   if (num === undefined) {
     num = 0.2;
   }
-  const merged = Object.assign(Object.assign(activeOpacity, Object.assign({ activeOpacity: 0 })));
-  return <closure_13 innerRef={innerRef} type="opacity" activeOpacity={num} />;
-}));
+  const merged = Object.assign(Object.assign(activeOpacity, Object.assign({ activeOpacity: 0, ref: 0 })));
+  return <closure_13 innerRef={activeOpacity.ref} type="opacity" activeOpacity={num} />;
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Pressables/native/Pressables.tsx");
 
-export const PressableOpacity = forwardRefResult;
-export const PressableHighlight = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((underlayColor, innerRef) => {
-  const cResult = c.c(7);
-  if (cResult[0] !== underlayColor) {
-    underlayColor = underlayColor.underlayColor;
-    const tmp6 = _objectWithoutProperties(underlayColor, closure_5);
-    cResult[0] = underlayColor;
-    cResult[1] = tmp6;
-    cResult[2] = underlayColor;
-    let tmp3 = underlayColor;
-    let tmp2 = tmp6;
+export const PressableOpacity = tmp2;
+export const PressableHighlight = ReactCompilerGating.isReactCompilerEnabled() ? (function PressableHighlight(arg0) {
+  const cResult = c.c(8);
+  if (cResult[0] !== arg0) {
+    ({ underlayColor, ref } = arg0);
+    const tmp7 = _objectWithoutProperties(arg0, closure_5);
+    cResult[0] = arg0;
+    cResult[1] = tmp7;
+    cResult[2] = ref;
+    cResult[3] = underlayColor;
+    let tmp4 = underlayColor;
+    let tmp3 = ref;
+    let tmp2 = tmp7;
   } else {
     tmp2 = cResult[1];
     tmp3 = cResult[2];
+    tmp4 = cResult[3];
   }
-  if (cResult[3] === tmp2) {
-    if (cResult[4] === innerRef) {
-      if (cResult[5] === tmp3) {
-        let tmp7 = cResult[6];
+  if (cResult[4] === tmp2) {
+    if (cResult[5] === tmp3) {
+      if (cResult[6] === tmp4) {
+        let tmp8 = cResult[7];
       }
-      return tmp7;
+      return tmp8;
     }
   }
   const merged = Object.assign(tmp2);
-  const tmp9 = <closure_13 innerRef={innerRef} type="highlight" underlayColor={tmp3} />;
-  cResult[3] = tmp2;
-  cResult[4] = innerRef;
+  const tmp10 = <closure_13 innerRef={tmp3} type="highlight" underlayColor={tmp4} />;
+  cResult[4] = tmp2;
   cResult[5] = tmp3;
-  cResult[6] = tmp9;
-  tmp7 = tmp9;
-  const obj2 = { innerRef, type: "highlight", underlayColor: tmp3 };
-}) : ((underlayColor, innerRef) => {
-  const merged = Object.assign(Object.assign(underlayColor, Object.assign({ underlayColor: 0 })));
-  return <closure_13 innerRef={innerRef} type="highlight" underlayColor={underlayColor.underlayColor} />;
-}));
+  cResult[6] = tmp4;
+  cResult[7] = tmp10;
+  tmp8 = tmp10;
+  const obj2 = { innerRef: tmp3, type: "highlight", underlayColor: tmp4 };
+}) : (function PressableHighlight(arg0) {
+  ({ underlayColor, ref } = arg0);
+  const merged = Object.assign(Object.assign(arg0, Object.assign({ underlayColor: 0, ref: 0 })));
+  return <closure_13 innerRef={ref} type="highlight" underlayColor={underlayColor} />;
+});

@@ -1,10 +1,10 @@
-// === Module 11082: ThreadNotificationSettings ===
+// === Module 6088: ThreadNotificationSettings ===
 
-// Module 11082 (ThreadNotificationSettings)
-import FlagUtils from "FlagUtils" /* 1390 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5077 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4517 */;
+// Module 6088 (ThreadNotificationSettings)
+import FlagUtils from "FlagUtils" /* 1402 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5971 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4709 */;
 
 const require = globalThis.__r;
 
@@ -64,7 +64,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/threads/ThreadNotificationSettings.tsx");
 
 export { computeThreadNotificationSetting };
-export const useThreadNotificationSetting = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useThreadNotificationSetting = ReactCompilerGating.isReactCompilerEnabled() ? (function useThreadNotificationSetting(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -95,7 +95,7 @@ export const useThreadNotificationSetting = ReactCompilerGating.isReactCompilerE
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, N, tmp9);
-}) : ((arg0) => {
+}) : (function useThreadNotificationSetting(arg0) {
   _require = arg0;
   const items = [JoinedThreadsStore, UserGuildSettingsStore, ChannelStore];
   const items1 = [arg0];

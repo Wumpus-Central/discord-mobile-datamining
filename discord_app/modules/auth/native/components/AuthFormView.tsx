@@ -1,13 +1,13 @@
-// === Module 6467: AuthFormView ===
+// === Module 6645: AuthFormView ===
 
-// Module 6467 (AuthFormView)
+// Module 6645 (AuthFormView)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useWideAuthViewDefault from "useWideAuthView" /* 6439 */;
-import WideAuthScrollContext from "WideAuthScrollContext" /* 6468 */;
-import AuthHeaderDefault from "AuthHeader" /* 6469 */;
-import BackgroundImageDefault from "BackgroundImage" /* 6470 */;
-import AuthNavbarPlaceholderDefault from "AuthNavbarPlaceholder" /* 6473 */;
+import useWideAuthViewDefault from "useWideAuthView" /* 6617 */;
+import WideAuthScrollContext from "WideAuthScrollContext" /* 6646 */;
+import AuthHeaderDefault from "AuthHeader" /* 6647 */;
+import BackgroundImageDefault from "BackgroundImage" /* 6648 */;
+import AuthNavbarPlaceholderDefault from "AuthNavbarPlaceholder" /* 6651 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles((arg0) => {
   const obj = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, flex: { flex: 1 }, content: null, subHeader: null };
   let num = 0;
@@ -51,7 +51,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/AuthFormView.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AuthFormView(arg0) {
   const cResult = c.c(45);
   ({ children, headerText, subHeader, contentStyle, backgroundImageSource, backgroundImageCover } = arg0);
   const tmp4 = useWideAuthViewDefault();
@@ -254,7 +254,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[20] = items4;
     tmp6 = items4;
   }
-}) : ((arg0) => {
+}) : (function AuthFormView(arg0) {
   ({ children, headerText, subHeader, contentStyle } = arg0);
   ({ backgroundImageSource, backgroundImageCover } = arg0);
   const tmp3 = useWideAuthViewDefault();

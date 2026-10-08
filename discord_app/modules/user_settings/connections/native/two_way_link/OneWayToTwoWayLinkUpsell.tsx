@@ -1,18 +1,18 @@
-// === Module 14790: OneWayToTwoWayLinkUpsell ===
+// === Module 15051: OneWayToTwoWayLinkUpsell ===
 
-// Module 14790 (OneWayToTwoWayLinkUpsell)
+// Module 15051 (OneWayToTwoWayLinkUpsell)
 import nativeDefault from "native" /* 587 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10367 */;
+import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 9964 */;
 import noop from "module_19" /* 19 */;
-import TextStyles_mod from "TextStyles" /* 5922 */;
+import TextStyles_mod from "TextStyles" /* 5902 */;
 
 const require = fn;
 const View = fn(17).View;
 const Fonts = fn(1085).Fonts;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, margin: 16, padding: 12, borderRadius: nativeDefault.radii.sm }, header: { flexDirection: "row", marginBottom: 4, alignItems: "center" }, titleContainer: { flexGrow: 1, flexShrink: 1 }, title: null, body: null, newContainer: null, reconnectButton: null };
 let TextStyles = TextStyles_mod;
 const merged = Object.assign(TextStyles(Fonts.PRIMARY_SEMIBOLD, nativeDefault.colors.TEXT_DEFAULT, 16));
@@ -24,7 +24,7 @@ obj2.newContainer = { paddingHorizontal: 6, width: "auto", alignSelf: "flex-star
 obj2.reconnectButton = { marginTop: 8 };
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function OneWayToTwoWayNewTag(markAsDismissed) {
   const cResult = markAsDismissed(576).c(5);
   markAsDismissed = markAsDismissed.markAsDismissed;
   const tmp4 = closure_8();
@@ -45,7 +45,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed
   const effect = noop.useEffect(tmp5, tmp6);
   if (cResult[3] !== tmp4.newContainer) {
     const obj2 = { containerStyle: tmp4.newContainer, variant: "text-xs/bold" };
-    const tmp10 = closure_6(markAsDismissed(1188).NewTag, obj2);
+    const tmp10 = closure_6(markAsDismissed(1200).NewTag, obj2);
     cResult[3] = tmp4.newContainer;
     cResult[4] = tmp10;
     let tmp8 = tmp10;
@@ -53,12 +53,12 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed
     tmp8 = cResult[4];
   }
   return tmp8;
-}) : ((markAsDismissed) => {
+}) : (function OneWayToTwoWayNewTag(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
   const items = [markAsDismissed];
   const effect = noop.useEffect(() => markAsDismissed(ContentDismissActionType.UNKNOWN), items);
   const tmp = closure_8();
-  return closure_6(markAsDismissed(1188).NewTag, { containerStyle: closure_8().newContainer, variant: "text-xs/bold" });
+  return closure_6(markAsDismissed(1200).NewTag, { containerStyle: closure_8().newContainer, variant: "text-xs/bold" });
 });
 ReactCompilerGating = fn(558);
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, margin: 16, padding: 12, borderRadius: nativeDefault.radii.sm };
@@ -67,7 +67,7 @@ let obj5 = {};
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/OneWayToTwoWayLinkUpsell.tsx");
 
-export const OneWayToTwoWayLinkUpsell = ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
+export const OneWayToTwoWayLinkUpsell = ReactCompilerGating.isReactCompilerEnabled() ? (function OneWayToTwoWayLinkUpsell(onPress) {
   const cResult = newIndicatorDismissibleContent(576).c(27);
   ({ title, body, img, newIndicatorDismissibleContent } = onPress);
   onPress = onPress.onPress;
@@ -120,7 +120,7 @@ export const OneWayToTwoWayLinkUpsell = ReactCompilerGating.isReactCompilerEnabl
               }
               if (cResult[17] !== onPress) {
                 const obj3 = { text: tmp23, onPress };
-                const tmp27 = closure_6(newIndicatorDismissibleContent(5601).Button, obj3);
+                const tmp27 = closure_6(newIndicatorDismissibleContent(5375).Button, obj3);
                 cResult[17] = onPress;
                 cResult[18] = tmp27;
                 let tmp25 = tmp27;
@@ -160,7 +160,7 @@ export const OneWayToTwoWayLinkUpsell = ReactCompilerGating.isReactCompilerEnabl
               tmp28 = tmp31;
             }
             const obj6 = { style: tmp4.body, variant: "text-sm/medium", children: body };
-            const tmp21 = closure_6(newIndicatorDismissibleContent(4892).Text, obj6);
+            const tmp21 = closure_6(newIndicatorDismissibleContent(5086).Text, obj6);
             cResult[13] = body;
             cResult[14] = tmp4.body;
             cResult[15] = tmp21;
@@ -188,14 +188,14 @@ export const OneWayToTwoWayLinkUpsell = ReactCompilerGating.isReactCompilerEnabl
     cResult[8] = tmp14;
     tmp11 = tmp14;
   }
-  const tmp10 = closure_6(newIndicatorDismissibleContent(4892).Text, { style: tmp4.title, variant: "text-md/semibold", children: title });
+  const tmp10 = closure_6(newIndicatorDismissibleContent(5086).Text, { style: tmp4.title, variant: "text-md/semibold", children: title });
   cResult[2] = tmp4.title;
   cResult[3] = title;
   cResult[4] = tmp10;
   tmp9 = tmp10;
   let obj = newIndicatorDismissibleContent(576);
   const obj9 = { style: tmp4.title, variant: "text-md/semibold", children: title };
-}) : ((newIndicatorDismissibleContent) => {
+}) : (function OneWayToTwoWayLinkUpsell(newIndicatorDismissibleContent) {
   newIndicatorDismissibleContent = newIndicatorDismissibleContent.newIndicatorDismissibleContent;
   ({ title, body, img, onPress } = newIndicatorDismissibleContent);
   const tmp = closure_8();
@@ -215,17 +215,17 @@ export const OneWayToTwoWayLinkUpsell = ReactCompilerGating.isReactCompilerEnabl
   };
   const items = [newIndicatorDismissibleContent];
   obj4.contentTypes = items;
-  const items1 = [closure_6(SelectedDismissibleContentDefault, obj4), closure_6(newIndicatorDismissibleContent(4892).Text, { style: tmp.title, variant: "text-md/semibold", children: title })];
+  const items1 = [closure_6(SelectedDismissibleContentDefault, obj4), closure_6(newIndicatorDismissibleContent(5086).Text, { style: tmp.title, variant: "text-md/semibold", children: title })];
   obj3.children = items1;
   const items2 = [closure_7(View, obj3), img];
   obj2.children = items2;
-  const items3 = [closure_7(View, obj2), closure_6(newIndicatorDismissibleContent(4892).Text, { style: tmp.body, variant: "text-sm/medium", children: body }), ];
+  const items3 = [closure_7(View, obj2), closure_6(newIndicatorDismissibleContent(5086).Text, { style: tmp.body, variant: "text-sm/medium", children: body }), ];
   const obj7 = { style: tmp.reconnectButton, children: null };
   const obj8 = { text: null, onPress: null };
   const intl = newIndicatorDismissibleContent(1126).intl;
   obj8.text = intl.string(newIndicatorDismissibleContent(1126).t.vD60Pv);
   obj8.onPress = onPress;
-  obj7.children = closure_6(newIndicatorDismissibleContent(5601).Button, obj8);
+  obj7.children = closure_6(newIndicatorDismissibleContent(5375).Button, obj8);
   items3[2] = closure_6(View, obj7);
   obj.children = items3;
   return closure_7(View, obj);

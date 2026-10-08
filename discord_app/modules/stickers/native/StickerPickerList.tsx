@@ -1,32 +1,32 @@
-// === Module 10155: StickerPickerList ===
+// === Module 9741: StickerPickerList ===
 
-// Module 10155 (StickerPickerList)
+// Module 9741 (StickerPickerList)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 6566 */;
-import PremiumUpsellSectionDividerDefault from "PremiumUpsellSectionDivider" /* 9921 */;
-import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 9922 */;
-import StickerPickerListRowDefault from "StickerPickerListRow" /* 10139 */;
-import _modDef10156 from "module_10156" /* 10156 */;
-import useStickerPickerListData from "useStickerPickerListData" /* 10157 */;
-import StickerPickerPremiumSearchUpsellDefault from "StickerPickerPremiumSearchUpsell" /* 10158 */;
+import native from "native" /* 1200 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 6742 */;
+import PremiumUpsellSectionDividerDefault from "PremiumUpsellSectionDivider" /* 9442 */;
+import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 9443 */;
+import StickerPickerListRowDefault from "StickerPickerListRow" /* 9724 */;
+import _modDef9742 from "module_9742" /* 9742 */;
+import useStickerPickerListData from "useStickerPickerListData" /* 9743 */;
+import StickerPickerPremiumSearchUpsellDefault from "StickerPickerPremiumSearchUpsell" /* 9744 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import StickersStore from "StickersStore" /* 5694 */;
+import StickersStore from "StickersStore" /* 6035 */;
 
 require = fn;
 const View = fn(17).View;
-const useStickerPickerStore = fn(10127).useStickerPickerStore;
-const StickerPickerConstants = fn(10095);
+const useStickerPickerStore = fn(9712).useStickerPickerStore;
+const StickerPickerConstants = fn(9679);
 ({ STICKER_SCROLL_LOAD_DELAY_MS: closure_8, STICKER_SCROLL_LOAD_DELAY_AFTER_HEIGHT_CHANGE_MS: closure_9, STICKER_SIZE: c10 } = StickerPickerConstants);
 const Constants = fn(1085);
 ({ AnalyticsPages: closure_11, AnalyticsSections: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { listPlaceholder: { color: nativeDefault.colors.BACKGROUND_MOD_MUTED }, section: null, sectionSticker: null, nsfwContainer: null, nsfwText: null };
 let obj3 = { color: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 obj.section = { justifyContent: "center", overflow: "hidden", backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
@@ -37,7 +37,7 @@ obj.nsfwContainer = { flexDirection: "row", alignItems: "center", justifyContent
 obj.nsfwText = { marginLeft: 4, textAlign: "center" };
 let closure_16 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
-let closure_17 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((height) => {
+let closure_17 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiPickerListNSFWRow(height) {
   const cResult = c.c(12);
   height = height.height;
   const tmp4 = closure_16();
@@ -55,7 +55,7 @@ let closure_17 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((heig
     }
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj3 = { source: _modDef10156, size: native.Icon.Sizes.SMALL };
+      const obj3 = { source: _modDef9742, size: native.Icon.Sizes.SMALL };
       const tmp11 = __initData2(native.Icon, obj3);
       cResult[5] = tmp11;
       let tmp8 = tmp11;
@@ -100,12 +100,12 @@ let closure_17 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((heig
   cResult[3] = tmp5;
   cResult[4] = items1;
   tmp6 = items1;
-}) : ((height) => {
+}) : (function EmojiPickerListNSFWRow(height) {
   const tmp = closure_16();
   const obj = { style: null, children: null };
   const items = [tmp.nsfwContainer, { height: height.height }];
   obj.style = items;
-  const items1 = [__initData2(native.Icon, { source: _modDef10156, size: native.Icon.Sizes.SMALL }), ];
+  const items1 = [__initData2(native.Icon, { source: _modDef9742, size: native.Icon.Sizes.SMALL }), ];
   const obj3 = { style: tmp.nsfwText, variant: "text-sm/normal", color: "interactive-text-active", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t.uy25Qz);
@@ -114,7 +114,7 @@ let closure_17 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((heig
   return state(View, obj);
 }));
 ReactCompilerGating = fn(558);
-let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function StickerPickerListSection(arg0) {
   const cResult = c.c(14);
   ({ height, label, isSectionNitroLocked, sectionStyle } = arg0);
   const tmp4 = closure_16();
@@ -176,7 +176,7 @@ let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
   cResult[4] = tmp5;
   cResult[5] = items1;
   tmp6 = items1;
-}) : ((isSectionNitroLocked) => {
+}) : (function StickerPickerListSection(isSectionNitroLocked) {
   isSectionNitroLocked = isSectionNitroLocked.isSectionNitroLocked;
   ({ height, label, sectionStyle } = isSectionNitroLocked);
   const obj = { style: null, children: null };
@@ -190,7 +190,7 @@ let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
   return state(View, obj);
 }));
 ReactCompilerGating = fn(558);
-let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function StickerPickerListSectionFooter(arg0) {
   const cResult = c.c(7);
   ({ height, isSectionNitroLocked } = arg0);
   if (cResult[0] !== height) {
@@ -223,7 +223,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
   cResult[5] = tmp5;
   cResult[6] = tmp9;
   tmp8 = tmp9;
-}) : ((height) => {
+}) : (function StickerPickerListSectionFooter(height) {
   let isSectionNitroLocked = height.isSectionNitroLocked;
   const obj = { style: { height: height.height }, children: null };
   if (isSectionNitroLocked) {
@@ -237,7 +237,7 @@ let obj6 = { flexDirection: "row", alignItems: "center", justifyContent: "center
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/stickers/native/StickerPickerList.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((bottomSheetRef) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function StickerPickerList(bottomSheetRef) {
   const cResult = bottomSheetRef(setCategoryIndex[11]).c(128);
   bottomSheetRef = bottomSheetRef.bottomSheetRef;
   const bottomSheetIndex = bottomSheetRef.bottomSheetIndex;
@@ -353,7 +353,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((bottom
       }
     }
   }
-  function oe(index) {
+  function scrollTo(index) {
     index = index.index;
     ({ delay, expand } = index);
     tmp23();
@@ -376,9 +376,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((bottom
   cResult[7] = bottomSheetRef;
   cResult[8] = setCategoryIndex;
   cResult[9] = tmp20;
-  cResult[10] = oe;
+  cResult[10] = scrollTo;
   const tmpResult4 = bottomSheetRef(setCategoryIndex[21]);
-}) : ((bottomSheetRef) => {
+}) : (function StickerPickerList(bottomSheetRef) {
   bottomSheetRef = bottomSheetRef.bottomSheetRef;
   const bottomSheetIndex = bottomSheetRef.bottomSheetIndex;
   const setCategoryIndex = bottomSheetRef.setCategoryIndex;
@@ -429,9 +429,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((bottom
     }
     closure_0 = { scrollTo: -1 };
     return {
-      scroll(layout) {
-        const index = layout.index;
-        ({ delay, expand } = layout);
+      scroll: function scrollTo(index) {
+        index = index.index;
+        ({ delay, expand } = index);
         clearTimeout(closure_0.scrollTo);
         if (expand) {
           let current = bottomSheetRef.current;

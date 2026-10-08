@@ -1,17 +1,17 @@
-// === Module 17033: ChannelSettingsPermissionsList ===
+// === Module 17314: ChannelSettingsPermissionsList ===
 
-// Module 17033 (ChannelSettingsPermissionsList)
+// Module 17314 (ChannelSettingsPermissionsList)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Server from "Server" /* 1985 */;
-import fuzzysearchDefault from "fuzzysearch" /* 5709 */;
+import Server from "Server" /* 1997 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6099 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import GuildRoleStore from "GuildRoleStore" /* 2106 */;
-import UserStore from "UserStore" /* 1377 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildMemberStore from "GuildMemberStore" /* 2124 */;
+import GuildRoleStore from "GuildRoleStore" /* 2118 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const View = fn(17).View;
@@ -20,13 +20,13 @@ const Constants = fn(1085);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = { rows: [], sections: [] };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: nativeDefault.space.PX_12, flex: 1 }, containerSearchBar: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: nativeDefault.space.PX_12, flex: 1 };
 obj.containerSearchBar = { paddingVertical: nativeDefault.space.PX_8 };
 let closure_16 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
-let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((enabled) => {
+let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildMemberData(enabled) {
   const cResult = c.c(13);
   ({ permissionOverwrites, guildId, searchQuery } = enabled);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -123,7 +123,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((enabled) => {
     }
   }
   return closure_15;
-}) : ((enabled) => {
+}) : (function useGuildMemberData(enabled) {
   enabled = enabled.enabled;
   const permissionOverwrites = enabled.permissionOverwrites;
   const guildId = enabled.guildId;
@@ -179,7 +179,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((enabled) => {
   }, items1);
 });
 ReactCompilerGating = fn(558);
-let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildRoleData(channel) {
   const cResult = channel(576).c(12);
   channel = channel.channel;
   ({ sortedGuildRoles, searchQuery } = channel);
@@ -236,7 +236,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     }
   }
   return closure_15;
-}) : ((enabled) => {
+}) : (function useGuildRoleData(enabled) {
   enabled = enabled.enabled;
   const channel = enabled.channel;
   const sortedGuildRoles = enabled.sortedGuildRoles;
@@ -274,7 +274,7 @@ let obj4 = { paddingVertical: nativeDefault.space.PX_8 };
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsPermissionsList.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelSettingsPermissionsList(channelId) {
   const cResult = channelId(stateFromStores[12]).c(44);
   channelId = channelId.channelId;
   const type = channelId.type;
@@ -311,7 +311,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
     tmp12 = cResult[3];
   }
   if (cResult[4] !== stateFromStores) {
-    class N {
+    class B {
       constructor() {
         obj = closure_3;
         guildId = undefined;
@@ -328,11 +328,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
     }
     const items2 = [stateFromStores];
     cResult[4] = stateFromStores;
-    cResult[5] = N;
+    cResult[5] = B;
     cResult[6] = items2;
     let tmp15 = items2;
   } else {
-    class N {
+    class B {
       constructor() {
         obj = closure_3;
         guildId = undefined;
@@ -350,10 +350,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
     tmp15 = cResult[6];
   }
   const tmpResult = channelId(stateFromStores[13]);
-  const stateFromStoresObject = channelId(stateFromStores[13]).useStateFromStoresObject(tmp12, N, tmp15);
+  const stateFromStoresObject = channelId(stateFromStores[13]).useStateFromStoresObject(tmp12, B, tmp15);
   guildId = stateFromStoresObject.guildId;
   if (stateFromStores != null) {
-    class N {
+    class B {
       constructor() {
         obj = closure_3;
         guildId = undefined;
@@ -370,7 +370,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
     }
   }
   if (cResult[7] === guildId) {
-    class N {
+    class B {
       constructor() {
         obj = closure_3;
         guildId = undefined;
@@ -393,7 +393,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
   cResult[11] = { enabled: type === constants.MEMBER, permissionOverwrites: undefined, guildId, searchQuery: first };
   const obj3 = { enabled: type === constants.MEMBER, permissionOverwrites: undefined, guildId, searchQuery: first };
   const tmpResult2 = channelId(stateFromStores[13]);
-}) : ((channelId) => {
+}) : (function ChannelSettingsPermissionsList(channelId) {
   channelId = channelId.channelId;
   const type = channelId.type;
   let stateFromStores;

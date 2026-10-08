@@ -1,16 +1,16 @@
-// === Module 14554: AccountAgeGroupAdultSetting ===
+// === Module 14815: AccountAgeGroupAdultSetting ===
 
-// Module 14554 (AccountAgeGroupAdultSetting)
+// Module 14815 (AccountAgeGroupAdultSetting)
 import util from "util" /* 1126 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 5108 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5587 */;
-import SettingsConstants from "SettingsConstants" /* 7645 */;
-import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 14511 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 5905 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5918 */;
+import SettingsConstants from "SettingsConstants" /* 7966 */;
+import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 14771 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11142 */;
+import SettingBuilders from "SettingBuilders" /* 11262 */;
 import size from "module_2" /* 2 */;
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountAgeGroupAdultSettingPredicate() {
   const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
   const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
   let hasAgeGatedFeatures = RegionalFeatureConfigUtils.useHasAgeGatedFeatures();
@@ -25,7 +25,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     hasAgeGatedFeatures = !isTinyBroncoSettingsEnabled;
   }
   return hasAgeGatedFeatures;
-}) : (() => {
+}) : (function useAccountAgeGroupAdultSettingPredicate() {
   const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
   const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
   let hasAgeGatedFeatures = RegionalFeatureConfigUtils.useHasAgeGatedFeatures();
@@ -51,7 +51,7 @@ let obj = {
     const intl = util.intl;
     return intl.string(util.t.XxRj7f);
   },
-  usePredicate: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  usePredicate: ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountAgeGroupAdultSettingPredicate() {
     const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
     const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
     let hasAgeGatedFeatures = RegionalFeatureConfigUtils.useHasAgeGatedFeatures();
@@ -66,7 +66,7 @@ let obj = {
       hasAgeGatedFeatures = !isTinyBroncoSettingsEnabled;
     }
     return hasAgeGatedFeatures;
-  }) : (() => {
+  }) : (function useAccountAgeGroupAdultSettingPredicate() {
     const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
     const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
     let hasAgeGatedFeatures = RegionalFeatureConfigUtils.useHasAgeGatedFeatures();
@@ -95,7 +95,7 @@ export default SettingBuilders.createStatic({
     const intl = util.intl;
     return intl.string(util.t.XxRj7f);
   },
-  usePredicate: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  usePredicate: ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountAgeGroupAdultSettingPredicate() {
     const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
     const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
     let hasAgeGatedFeatures = RegionalFeatureConfigUtils.useHasAgeGatedFeatures();
@@ -110,7 +110,7 @@ export default SettingBuilders.createStatic({
       hasAgeGatedFeatures = !isTinyBroncoSettingsEnabled;
     }
     return hasAgeGatedFeatures;
-  }) : (() => {
+  }) : (function useAccountAgeGroupAdultSettingPredicate() {
     const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
     const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
     let hasAgeGatedFeatures = RegionalFeatureConfigUtils.useHasAgeGatedFeatures();

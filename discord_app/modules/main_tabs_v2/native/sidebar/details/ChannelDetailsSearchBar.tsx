@@ -1,26 +1,26 @@
-// === Module 16811: ChannelDetailsSearchBar ===
+// === Module 17090: ChannelDetailsSearchBar ===
 
-// Module 16811 (ChannelDetailsSearchBar)
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12005 */;
+// Module 17090 (ChannelDetailsSearchBar)
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12078 */;
 import noop from "module_19" /* 19 */;
-import SearchQueryStore from "SearchQueryStore" /* 11994 */;
+import SearchQueryStore from "SearchQueryStore" /* 12067 */;
 
 const require = fn;
-let closure_5 = fn(7522).setIsChannelDetailsSearchActive;
+let closure_5 = fn(9245).setIsChannelDetailsSearchActive;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
-let obj = { back: { justifyContent: "center", height: fn(12022).SEARCH_BAR_HEIGHT, paddingStart: fn(10666).CHANNEL_DETAILS_MARGIN, paddingEnd: 8 } };
+const createStyles = fn(5090);
+let obj = { back: { justifyContent: "center", height: fn(12095).SEARCH_BAR_HEIGHT, paddingStart: fn(9581).CHANNEL_DETAILS_MARGIN, paddingEnd: 8 } };
 let closure_7 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
-let obj3 = { justifyContent: "center", height: fn(12022).SEARCH_BAR_HEIGHT, paddingStart: fn(10666).CHANNEL_DETAILS_MARGIN, paddingEnd: 8 };
+let obj3 = { justifyContent: "center", height: fn(12095).SEARCH_BAR_HEIGHT, paddingStart: fn(9581).CHANNEL_DETAILS_MARGIN, paddingEnd: 8 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsSearchBar.tsx");
 
-export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((channelId, arg1) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelDetailsSearchBar(channelId) {
   const cResult = channelId(channelDetailsSearchContext[8]).c(22);
   channelId = channelId.channelId;
   const onBackPress = channelId.onBackPress;
-  const showBackButton = channelId.showBackButton;
+  ({ showBackButton, ref } = channelId);
   let tmp4 = undefined === showBackButton;
   if (!tmp4) {
     tmp4 = showBackButton;
@@ -29,7 +29,7 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
   let obj = channelId(channelDetailsSearchContext[8]);
   channelDetailsSearchContext = channelId(channelDetailsSearchContext[9]).useChannelDetailsSearchContext(channelId, channelId.guildId);
   if (cResult[0] !== channelDetailsSearchContext) {
-    const fn = function h() {
+    const fn = function u() {
       return () => {
         onBackPress(channelDetailsSearchContext[10]).trackSearchClosed({ searchContext });
       };
@@ -134,7 +134,7 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
   cResult[4] = items;
   tmp8 = items;
   const tmpResult = channelId(channelDetailsSearchContext[9]);
-}) : ((channelId, ref) => {
+}) : (function ChannelDetailsSearchBar(channelId) {
   channelId = channelId.channelId;
   const onBackPress = channelId.onBackPress;
   let flag = channelId.showBackButton;
@@ -169,7 +169,7 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
       callback1();
     }
   }, items3);
-  const obj2 = { ref, searchContext: channelDetailsSearchContext, backButton: null };
+  const obj2 = { ref: channelId.ref, searchContext: channelDetailsSearchContext, backButton: null };
   let tmp9Result = null;
   let obj = channelId(channelDetailsSearchContext[9]);
   if (flag) {
@@ -180,5 +180,5 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
     tmp9Result = jsx(tmp2(tmp3[12]).PressableOpacity, { accessibilityRole: "button", onPress: callback2, style: tmp.back, accessibilityLabel: null, children: null });
   }
   obj2.backButton = tmp9Result;
-  return jsx(onBackPress(channelDetailsSearchContext[15]), { ref, searchContext: channelDetailsSearchContext, backButton: null });
-})));
+  return jsx(onBackPress(channelDetailsSearchContext[15]), { ref: channelId.ref, searchContext: channelDetailsSearchContext, backButton: null });
+}));

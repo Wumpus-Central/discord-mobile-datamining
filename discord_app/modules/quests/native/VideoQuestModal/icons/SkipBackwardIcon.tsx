@@ -1,8 +1,8 @@
-// === Module 14863: SkipBackwardIcon ===
+// === Module 15125: SkipBackwardIcon ===
 
-// Module 14863 (SkipBackwardIcon)
+// Module 15125 (SkipBackwardIcon)
 import c from "c" /* 576 */;
-import inlineStyles from "inlineStyles" /* 8169 */;
+import inlineStyles from "inlineStyles" /* 7550 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/icons/SkipBackwardIcon.tsx");
 
-export const SkipBackwardIcon = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const SkipBackwardIcon = ReactCompilerGating.isReactCompilerEnabled() ? (function SkipBackwardIcon(arg0) {
   const cResult = c.c(16);
   if (cResult[0] !== arg0) {
     ({ width, height, color } = arg0);
@@ -98,7 +98,7 @@ export const SkipBackwardIcon = ReactCompilerGating.isReactCompilerEnabled() ? (
   cResult[14] = num7;
   cResult[15] = tmp21;
   tmp18 = tmp21;
-}) : ((width) => {
+}) : (function SkipBackwardIcon(width) {
   let num = width.width;
   if (num === undefined) {
     num = 24;

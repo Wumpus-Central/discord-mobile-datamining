@@ -1,8 +1,8 @@
-// === Module 15022: BountiesAndroidQuestBarSmokeAnimationExperiment ===
+// === Module 15284: BountiesAndroidQuestBarSmokeAnimationExperiment ===
 
-// Module 15022 (BountiesAndroidQuestBarSmokeAnimationExperiment)
+// Module 15284 (BountiesAndroidQuestBarSmokeAnimationExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1440 */;
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -14,7 +14,7 @@ const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/quests/experiments/BountiesAndroidQuestBarSmokeAnimationExperiment.tsx");
 
 export const BountiesAndroidQuestBarSmokeAnimationExperiment = apexExperiment;
-export const useIsBountiesAndroidQuestBarSmokeAnimationEnabled = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+export const useIsBountiesAndroidQuestBarSmokeAnimationEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsBountiesAndroidQuestBarSmokeAnimationEnabled(location) {
   const cResult = c.c(2);
   if (cResult[0] !== location) {
     const obj2 = { location };
@@ -25,4 +25,6 @@ export const useIsBountiesAndroidQuestBarSmokeAnimationEnabled = ReactCompilerGa
     tmp2 = cResult[1];
   }
   return apexExperiment.useConfig(tmp2).enabled;
-}) : ((location) => apexExperiment.useConfig({ location }).enabled);
+}) : (function useIsBountiesAndroidQuestBarSmokeAnimationEnabled(location) {
+  return apexExperiment.useConfig({ location }).enabled;
+});

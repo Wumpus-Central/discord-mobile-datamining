@@ -1,11 +1,11 @@
-// === Module 17639: useConnectGuardianGate ===
+// === Module 17921: useConnectGuardianGate ===
 
-// Module 17639 (useConnectGuardianGate)
+// Module 17921 (useConnectGuardianGate)
 import initialize from "initialize" /* 504 */;
-import useMountEffectDefault from "useMountEffect" /* 5597 */;
+import useMountEffectDefault from "useMountEffect" /* 5392 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7061 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7247 */;
 
 const require = globalThis.__r;
 
@@ -14,11 +14,11 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/hooks/useConnectGuardianGate.tsx");
 
-export const useConnectGuardianGate = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useConnectGuardianGate = ReactCompilerGating.isReactCompilerEnabled() ? (function useConnectGuardianGate() {
   const cResult = require("c").c(10);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [FamilyCenterStore];
-    const fn = function s() {
+    const fn = function l() {
       return { linkCode: FamilyCenterStore.getLinkCode(), expiresAt: FamilyCenterStore.getLinkCodeExpiresAt() };
     };
     cResult[0] = items;
@@ -250,7 +250,7 @@ export const useConnectGuardianGate = ReactCompilerGating.isReactCompilerEnabled
     }
   }
   const tmp8Result = _slicedToArray(noop.useState(tmp10), 2);
-}) : (() => {
+}) : (function useConnectGuardianGate() {
   const items = [FamilyCenterStore];
   const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => ({ linkCode: FamilyCenterStore.getLinkCode(), expiresAt: FamilyCenterStore.getLinkCodeExpiresAt() }));
   ({ linkCode, expiresAt } = stateFromStoresObject);

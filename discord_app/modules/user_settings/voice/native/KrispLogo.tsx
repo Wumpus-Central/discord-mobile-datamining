@@ -1,17 +1,17 @@
-// === Module 9690: KrispLogo ===
+// === Module 10879: KrispLogo ===
 
-// Module 9690 (KrispLogo)
+// Module 10879 (KrispLogo)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
-import LinkingDefault from "Linking" /* 4571 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import _modDef9691 from "module_9691" /* 9691 */;
-import _modDef9692 from "module_9692" /* 9692 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2127 */;
+import LinkingDefault from "Linking" /* 4763 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import _modDef10880 from "module_10880" /* 10880 */;
+import _modDef10881 from "module_10881" /* 10881 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1193 */;
+import ThemeStore from "ThemeStore" /* 1205 */;
 
 require = fn;
 function handleKrispLinkPressed() {
@@ -36,11 +36,11 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/voice/native/KrispLogo.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function KrispLogo() {
   const cResult = c.c(9);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ThemeStore];
-    const fn = function o() {
+    const fn = function c() {
       return theme.theme;
     };
     cResult[0] = items;
@@ -53,9 +53,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
   const tmpResult = initialize;
   if (tmpResult2.isThemeLight(stateFromStores)) {
-    let tmp8Result = _modDef9691;
+    let tmp8Result = _modDef10880;
   } else {
-    tmp8Result = _modDef9692;
+    tmp8Result = _modDef10881;
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
@@ -106,13 +106,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp24 = cResult[8];
   }
   return tmp24;
-}) : (() => {
+}) : (function KrispLogo() {
   const items = [ThemeStore];
   const stateFromStores = initialize.useStateFromStores(items, () => theme.theme);
   if (obj2.isThemeLight(stateFromStores)) {
-    let tmp4Result = _modDef9691;
+    let tmp4Result = _modDef10880;
   } else {
-    tmp4Result = _modDef9692;
+    tmp4Result = _modDef10881;
   }
   const obj3 = { style: closure_13.detailsView, children: null };
   const obj4 = { style: closure_13.logo, source: tmp4Result, accessibilityLabel: null };

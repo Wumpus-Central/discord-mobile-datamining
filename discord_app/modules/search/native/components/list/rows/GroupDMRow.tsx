@@ -1,13 +1,13 @@
-// === Module 16843: rows/GroupDMRow ===
+// === Module 17122: rows/GroupDMRow ===
 
-// Module 16843 (rows/GroupDMRow)
+// Module 17122 (rows/GroupDMRow)
 import c from "c" /* 576 */;
-import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import useChannelNameDefault from "useChannelName" /* 5049 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10661 */;
-import useRecipientsLabel from "useRecipientsLabel" /* 10662 */;
-import SearchListRow from "SearchListRow" /* 16828 */;
+import native from "native" /* 1200 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import useChannelNameDefault from "useChannelName" /* 5417 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10261 */;
+import useRecipientsLabel from "useRecipientsLabel" /* 10262 */;
+import SearchListRow from "SearchListRow" /* 17107 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/list/rows/GroupDMRow.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GroupDMRow(channel) {
   const cResult = c.c(16);
   channel = channel.channel;
   ({ trailing, onPress } = channel);
@@ -96,7 +96,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   cResult[1] = onPress;
   cResult[2] = fn;
   tmp6 = fn;
-}) : ((channel) => {
+}) : (function GroupDMRow(channel) {
   channel = channel.channel;
   const onPress = channel.onPress;
   ({ trailing, onAccessibilityAction, accessibilityActions } = channel);

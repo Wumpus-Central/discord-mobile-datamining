@@ -1,10 +1,10 @@
-// === Module 17086: useMutualGuilds ===
+// === Module 17367: useMutualGuilds ===
 
-// Module 17086 (useMutualGuilds)
+// Module 17367 (useMutualGuilds)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import noop from "module_19" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 7124 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserProfileStore from "UserProfileStore" /* 7309 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_request/hooks/useMutualGuilds.tsx");
 
-export const useMutualGuildsForMessageRequests = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useMutualGuildsForMessageRequests = ReactCompilerGating.isReactCompilerEnabled() ? (function useMutualGuildsForMessageRequests(arg0) {
   _require = arg0;
   const cResult = require("c").c(11);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -43,73 +43,68 @@ export const useMutualGuildsForMessageRequests = ReactCompilerGating.isReactComp
     tmp8 = cResult[3];
   }
   if (cResult[4] !== arg0) {
-    class M {
-      constructor() {
-        mutualGuilds = closure_4.getMutualGuilds(closure_0);
-        mapped = undefined;
-        if (mutualGuilds != null) {
-          mapped = mutualGuilds.map((guild) => guild.guild);
-        }
-        if (mapped == null) {
-          mapped = [];
-        }
-        return mapped;
+    const fn2 = function f() {
+      const mutualGuilds = UserProfileStore.getMutualGuilds(closure_0);
+      let mapped;
+      if (mutualGuilds != null) {
+        mapped = mutualGuilds.map((guild) => guild.guild);
       }
-    }
+      if (mapped == null) {
+        mapped = [];
+      }
+      return mapped;
+    };
     cResult[4] = arg0;
-    cResult[5] = M;
+    cResult[5] = fn2;
+    let tmp10 = fn2;
   } else {
-    class M {
-      constructor() {
-        mutualGuilds = closure_4.getMutualGuilds(closure_0);
-        mapped = undefined;
-        if (mutualGuilds != null) {
-          mapped = mutualGuilds.map((guild) => guild.guild);
-        }
-        if (mapped == null) {
-          mapped = [];
-        }
-        return mapped;
-      }
-    }
+    tmp10 = cResult[5];
   }
   const tmpResult = require("initialize");
-  stateFromStoresArray = require("initialize").useStateFromStoresArray(tmp8, M);
+  stateFromStoresArray = require("initialize").useStateFromStoresArray(tmp8, tmp10);
   if (cResult[6] === stateFromStoresArray) {
-    class M {
-      constructor() {
-        mutualGuilds = closure_4.getMutualGuilds(closure_0);
-        mapped = undefined;
-        if (mutualGuilds != null) {
-          mapped = mutualGuilds.map((guild) => guild.guild);
-        }
-        if (mapped == null) {
-          mapped = [];
-        }
-        return mapped;
+    if (cResult[7] === stateFromStores) {
+      if (cResult[8] === arg0) {
+        let tmp12 = cResult[9];
+        let tmp13 = cResult[10];
       }
+      const effect = noop.useEffect(tmp12, tmp13);
+      return stateFromStoresArray;
     }
   }
-  const fn2 = function _() {
-    let tmp = 0 === stateFromStoresArray.length;
-    if (tmp) {
-      tmp = null != stateFromStores;
+  class S {
+    constructor() {
+      tmp = 0 === closure_2.length;
+      if (tmp) {
+        tmp2 = closure_1;
+        tmp3 = null;
+        tmp = null != closure_1;
+      }
+      if (tmp) {
+        tmp4 = closure_4;
+        tmp5 = closure_0;
+        tmp6 = null;
+        tmp = null == closure_4.getMutualGuilds(closure_0);
+      }
+      if (tmp) {
+        tmp7 = closure_1;
+        tmp8 = closure_2;
+        obj = closure_1(closure_2[6]);
+        waitResult = obj.wait(() => stateFromStores(stateFromStoresArray[7])(closure_1_0, undefined, { withMutualGuilds: true }));
+      }
+      return;
     }
-    if (tmp) {
-      tmp = null == UserProfileStore.getMutualGuilds(closure_0);
-    }
-    if (tmp) {
-      DispatcherDefault.wait(() => stateFromStores(stateFromStoresArray[7])(closure_1_0, undefined, { withMutualGuilds: true }));
-    }
-  };
+  }
   const items2 = [stateFromStoresArray, stateFromStores, arg0];
   cResult[6] = stateFromStoresArray;
   cResult[7] = stateFromStores;
   cResult[8] = arg0;
-  cResult[9] = fn2;
+  cResult[9] = S;
   cResult[10] = items2;
+  tmp13 = items2;
+  tmp12 = S;
   const tmpResult2 = require("initialize");
-}) : ((arg0) => {
+}) : (function useMutualGuildsForMessageRequests(arg0) {
   _require = arg0;
   const items = [UserStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => UserStore.getUser(closure_0));

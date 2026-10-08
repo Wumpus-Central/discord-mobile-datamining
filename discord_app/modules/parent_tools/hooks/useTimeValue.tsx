@@ -1,6 +1,6 @@
-// === Module 14759: useTimeValue ===
+// === Module 15020: useTimeValue ===
 
-// Module 14759 (useTimeValue)
+// Module 15020 (useTimeValue)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -9,7 +9,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/hooks/useTimeValue.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((initial) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useTimeValue(initial) {
   const cResult = c.c(3);
   initial = initial.initial;
   const defaultValue = initial.defaultValue;
@@ -19,7 +19,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((initial) => {
     }
     return noop.useState(tmp2);
   }
-  const fn = function n() {
+  const fn = function s() {
     if (null != initial) {
       const time = { hours: null, minutes: null };
       ({ hours: obj.hours, minutes: obj.minutes } = initial);
@@ -33,7 +33,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((initial) => {
   cResult[1] = initial;
   cResult[2] = fn;
   tmp2 = fn;
-}) : ((arg0) => {
+}) : (function useTimeValue(arg0) {
   ({ initial: require, defaultValue: dependencyMap } = arg0);
   return noop.useState(() => {
     if (null != require) {
@@ -46,4 +46,4 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((initial) => {
     return tmp2;
   });
 });
-export const timeToMinutes = fn(12483).timeToMinutes;
+export const timeToMinutes = fn(12579).timeToMinutes;

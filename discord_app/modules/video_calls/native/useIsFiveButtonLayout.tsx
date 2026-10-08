@@ -1,8 +1,8 @@
-// === Module 9115: useIsFiveButtonLayout ===
+// === Module 10688: useIsFiveButtonLayout ===
 
-// Module 9115 (useIsFiveButtonLayout)
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildStore from "GuildStore" /* 2074 */;
+// Module 10688 (useIsFiveButtonLayout)
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildStore from "GuildStore" /* 2086 */;
 
 const require = globalThis.__r;
 
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/useIsFiveButtonLayout.tsx");
 
-export const useIsFiveButtonLayout = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useIsFiveButtonLayout = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsFiveButtonLayout(arg0) {
   _require = arg0;
   const cResult = require("c").c(9);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -22,7 +22,7 @@ export const useIsFiveButtonLayout = ReactCompilerGating.isReactCompilerEnabled(
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function u() {
+    const fn = function l() {
       return ChannelStore.getChannel(closure_0);
     };
     cResult[1] = arg0;
@@ -54,7 +54,7 @@ export const useIsFiveButtonLayout = ReactCompilerGating.isReactCompilerEnabled(
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  const tmp10 = guild_id(9116);
+  const tmp10 = guild_id(10689);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [GuildStore];
     cResult[3] = items1;
@@ -63,7 +63,7 @@ export const useIsFiveButtonLayout = ReactCompilerGating.isReactCompilerEnabled(
     tmp14 = cResult[3];
   }
   if (cResult[4] !== guild_id) {
-    const fn2 = function _() {
+    const fn2 = function v() {
       return GuildStore.getGuild(guild_id);
     };
     const items2 = [guild_id];
@@ -76,7 +76,7 @@ export const useIsFiveButtonLayout = ReactCompilerGating.isReactCompilerEnabled(
     tmp16 = cResult[5];
     tmp17 = cResult[6];
   }
-  const tmp10Result = guild_id(9116)(guild_id1, id);
+  const tmp10Result = guild_id(10689)(guild_id1, id);
   const stateFromStores1 = require("initialize").useStateFromStores(tmp14, tmp16, tmp17);
   if (stateFromStores1 != null) {
     const afkChannelId = stateFromStores1.afkChannelId;
@@ -100,8 +100,8 @@ export const useIsFiveButtonLayout = ReactCompilerGating.isReactCompilerEnabled(
   if (stateFromStores != null) {
     id1 = stateFromStores.id;
   }
-  const tmp9Result = guild_id(9117);
-  const tmp9ResultResult = guild_id(9117)(id1);
+  const tmp9Result = guild_id(10690);
+  const tmp9ResultResult = guild_id(10690)(id1);
   if (isConnectedToVoiceChannel) {
     isConnectedToVoiceChannel = tmp10Result;
   }
@@ -118,7 +118,7 @@ export const useIsFiveButtonLayout = ReactCompilerGating.isReactCompilerEnabled(
     isConnectedToVoiceChannel = afkChannelId !== arg0;
   }
   return isConnectedToVoiceChannel;
-}) : ((arg0) => {
+}) : (function useIsFiveButtonLayout(arg0) {
   _require = arg0;
   const items = [ChannelStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => ChannelStore.getChannel(closure_0));
@@ -144,8 +144,8 @@ export const useIsFiveButtonLayout = ReactCompilerGating.isReactCompilerEnabled(
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  const tmp6 = guild_id(9116);
-  const tmp6Result = guild_id(9116)(guild_id1, id);
+  const tmp6 = guild_id(10689);
+  const tmp6Result = guild_id(10689)(guild_id1, id);
   const items1 = [GuildStore];
   const items2 = [guild_id];
   const stateFromStores1 = tmp(504).useStateFromStores(items1, () => GuildStore.getGuild(guild_id), items2);
@@ -164,8 +164,8 @@ export const useIsFiveButtonLayout = ReactCompilerGating.isReactCompilerEnabled(
   if (stateFromStores != null) {
     id1 = stateFromStores.id;
   }
-  const tmp5Result = guild_id(9117);
-  const tmp5ResultResult = guild_id(9117)(id1);
+  const tmp5Result = guild_id(10690);
+  const tmp5ResultResult = guild_id(10690)(id1);
   if (isConnectedToVoiceChannel) {
     isConnectedToVoiceChannel = tmp6Result;
   }

@@ -1,6 +1,6 @@
-// === Module 9179: useDispatchOpenActivity ===
+// === Module 10747: useDispatchOpenActivity ===
 
-// Module 9179 (useDispatchOpenActivity)
+// Module 10747 (useDispatchOpenActivity)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import noop from "module_19" /* 19 */;
 
@@ -9,7 +9,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/useDispatchOpenActivity.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((connectedEmbeddedActivity) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useDispatchOpenActivity(connectedEmbeddedActivity) {
   const cResult = connectedEmbeddedActivity(576).c(4);
   connectedEmbeddedActivity = connectedEmbeddedActivity.connectedEmbeddedActivity;
   let applicationId;
@@ -41,7 +41,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((connectedEmbedde
   tmp4 = items;
   tmp3 = fn;
   let obj = connectedEmbeddedActivity(576);
-}) : ((connectedEmbeddedActivity) => {
+}) : (function useDispatchOpenActivity(connectedEmbeddedActivity) {
   connectedEmbeddedActivity = connectedEmbeddedActivity.connectedEmbeddedActivity;
   let applicationId;
   if (connectedEmbeddedActivity != null) {

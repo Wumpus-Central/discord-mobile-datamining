@@ -1,28 +1,28 @@
-// === Module 16385: BackIconWithBadge ===
+// === Module 16645: BackIconWithBadge ===
 
-// Module 16385 (BackIconWithBadge)
+// Module 16645 (BackIconWithBadge)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1370 */;
-import XLargeIcon from "XLargeIcon" /* 4801 */;
-import ArrowLargeLeftIcon2 from "ArrowLargeLeftIcon" /* 6021 */;
-import XSmallIcon from "XSmallIcon" /* 6024 */;
-import ClipView from "ClipView" /* 8502 */;
-import useNotificationsTabBadgeDefault from "useNotificationsTabBadge" /* 16376 */;
+import native from "native" /* 1200 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1382 */;
+import XLargeIcon from "XLargeIcon" /* 4995 */;
+import ArrowLargeLeftIcon2 from "ArrowLargeLeftIcon" /* 6207 */;
+import XSmallIcon from "XSmallIcon" /* 6210 */;
+import ClipView from "ClipView" /* 8986 */;
+import useNotificationsTabBadgeDefault from "useNotificationsTabBadge" /* 16636 */;
 import noop from "module_19" /* 19 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7134 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6082 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { badgeWrapper: { position: "absolute", top: 16, left: 12 }, backIcon: { height: 24, width: 24 }, iconWithBadge: { display: "flex", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, borderRadius: nativeDefault.modules.button.BORDER_RADIUS, padding: 7, backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT } };
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function IconWithBadge(arg0) {
   const cResult = c.c(20);
   ({ includeNotificationsCount, Icon } = arg0);
   closure_8();
@@ -100,7 +100,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
   }
   const tmpResult = initialize;
-}) : ((includeNotificationsCount) => {
+}) : (function IconWithBadge(includeNotificationsCount) {
   let flag = includeNotificationsCount.includeNotificationsCount;
   if (flag === undefined) {
     flag = false;
@@ -116,7 +116,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   let num2 = 0;
   if (flag) {
-    num2 = memo(16376)().value;
+    num2 = memo(16636)().value;
   }
   const sum = num + num2;
   _require = sum;
@@ -153,12 +153,12 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     items4 = [];
   }
   const obj4 = { cutouts: items4, children: closure_6(includeNotificationsCount.Icon, { size: "md", style: tmp.backIcon, color: "interactive-text-default" }) };
-  const items5 = [closure_6(tmp5(8502), obj4), ];
+  const items5 = [closure_6(tmp5(8986), obj4), ];
   let tmp9Result = null;
   if (sum > 0) {
     const obj6 = { style: tmp.badgeWrapper, children: null };
     const obj7 = { value: sum, maxValue: 99 };
-    obj6.children = closure_6(tmp2(1188).Badge, obj7);
+    obj6.children = closure_6(tmp2(1200).Badge, obj7);
     tmp9Result = closure_6(View, obj6);
   }
   items5[1] = tmp9Result;
@@ -169,7 +169,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 fn(558);
 let obj3 = { display: "flex", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, borderRadius: nativeDefault.modules.button.BORDER_RADIUS, padding: 7, backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT };
 ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function SettingsLeftIconWithBadge(arg0) {
   let ArrowLargeLeftIcon = dependencyMap;
   const cResult = c.c(5);
   ({ navigation, includeNotificationsCount } = arg0);
@@ -199,7 +199,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = tmp4.index > 0;
   cResult[4] = timestampProducer(closure_9, tmp9);
   const tmp7Result = timestampProducer(closure_9, tmp9);
-}) : ((navigation) => {
+}) : (function SettingsLeftIconWithBadge(navigation) {
   navigation = navigation.navigation;
   let flag = navigation.includeNotificationsCount;
   if (flag === undefined) {
@@ -217,7 +217,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return timestampProducer(closure_9, tmp5);
 });
 ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((includeNotificationsCount) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function LeftBackIconWithBadge(includeNotificationsCount) {
   const cResult = c.c(2);
   includeNotificationsCount = includeNotificationsCount.includeNotificationsCount;
   if (cResult[0] !== (undefined !== includeNotificationsCount && includeNotificationsCount)) {
@@ -230,7 +230,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((includeNotifications
     tmp5 = cResult[1];
   }
   return tmp5;
-}) : ((includeNotificationsCount) => {
+}) : (function LeftBackIconWithBadge(includeNotificationsCount) {
   let flag = includeNotificationsCount.includeNotificationsCount;
   if (flag === undefined) {
     flag = false;
@@ -243,7 +243,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_co
 export const BACK_ICON_WITH_BADGE_HIT_SLOP = { top: 8, bottom: 8, left: 8, right: 8 };
 export const SettingsLeftIconWithBadge = tmp3;
 export const LeftBackIconWithBadge = tmp4;
-export const CloseIconWithBadgeOnSide = ReactCompilerGating.isReactCompilerEnabled() ? ((count) => {
+export const CloseIconWithBadgeOnSide = ReactCompilerGating.isReactCompilerEnabled() ? (function CloseIconWithBadgeOnSide(count) {
   const cResult = c.c(6);
   count = count.count;
   const tmp4 = closure_8();
@@ -280,7 +280,7 @@ export const CloseIconWithBadgeOnSide = ReactCompilerGating.isReactCompilerEnabl
   cResult[4] = tmp8;
   cResult[5] = tmp12;
   tmp11 = tmp12;
-}) : ((count) => {
+}) : (function CloseIconWithBadgeOnSide(count) {
   count = count.count;
   const obj = { style: closure_8().iconWithBadge, children: null };
   const items = [timestampProducer(XLargeIcon.XLargeIcon, { size: "sm", color: "white" }), ];

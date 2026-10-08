@@ -1,25 +1,25 @@
-// === Module 14527: SettingsSearchEmptyState ===
+// === Module 14788: SettingsSearchEmptyState ===
 
-// Module 14527 (SettingsSearchEmptyState)
+// Module 14788 (SettingsSearchEmptyState)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4596 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Stack_Stack from "Stack/Stack" /* 5600 */;
-import NoResultsAlt from "NoResultsAlt" /* 9275 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4788 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import Stack_Stack from "Stack/Stack" /* 5373 */;
+import NoResultsAlt from "NoResultsAlt" /* 8606 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({ container: { paddingTop: 24, justifyContent: "center", alignItems: "center" }, textContainer: { marginTop: 24 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/settings/native/search/components/SettingsSearchEmptyState.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function SettingsSearchEmptyState() {
   const cResult = c.c(10);
   const tmp4 = closure_6();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -89,7 +89,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[8] = tmp17;
   cResult[9] = tmp21;
   tmp20 = tmp21;
-}) : (() => {
+}) : (function SettingsSearchEmptyState() {
   const tmp = closure_6();
   const effect = noop.useEffect(() => {
     const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;

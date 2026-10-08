@@ -1,11 +1,11 @@
-// === Module 14308: notifications/NotificationSettingsUtils ===
+// === Module 14533: notifications/NotificationSettingsUtils ===
 
-// Module 14308 (notifications/NotificationSettingsUtils)
+// Module 14533 (notifications/NotificationSettingsUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1440 */;
-import NotificationSettingsExperiments from "NotificationSettingsExperiments" /* 14309 */;
-import DeclarativeNotificationSettingsRedesignExperiment from "DeclarativeNotificationSettingsRedesignExperiment" /* 14310 */;
+import ApexExperiment from "ApexExperiment" /* 1452 */;
+import NotificationSettingsExperiments from "NotificationSettingsExperiments" /* 14534 */;
+import DeclarativeNotificationSettingsRedesignExperiment from "DeclarativeNotificationSettingsRedesignExperiment" /* 14535 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -47,22 +47,24 @@ function getExperimentAndConfigBySettingId(arg0) {
   }
   return {};
 }
-const NotificationSettingsConstants = fn(14302);
+const NotificationSettingsConstants = fn(14527);
 ({ NOTIF_SETTING_MAPPING: closure_4, NOTIF_SETTINGS: hasOwnProperty } = NotificationSettingsConstants);
 let ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
-const useIsDeclarativeSettingsUIAvailable = (arg0) => DeclarativeNotificationSettingsRedesignExperiment.useIsDeclarativeNotificationSettingsRedesignEnabled("useIsDeclarativeSettingsUIAvailable:" + arg0);
+function useIsDeclarativeSettingsUIAvailable(AndroidMessageNotificationsSetting) {
+  return DeclarativeNotificationSettingsRedesignExperiment.useIsDeclarativeNotificationSettingsRedesignEnabled("useIsDeclarativeSettingsUIAvailable:" + AndroidMessageNotificationsSetting);
+}
 ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
 ReactCompilerGating = fn(558);
-const fn2 = (CATEGORY_OTHER) => {
-  if (typeof fn === "function") {
+function useNotifCategoryVisibility(CATEGORY_OTHER) {
+  if (typeof useIsDeclarativeSettingsUIAvailable === "function") {
     const _HermesInternal = HermesInternal;
     return DeclarativeNotificationSettingsRedesignExperiment.useIsDeclarativeNotificationSettingsRedesignEnabled("useIsDeclarativeSettingsUIAvailable:" + CATEGORY_OTHER);
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-};
+}
 const size = fn(2);
 const result2 = size.fileFinishedImporting("modules/notifications/NotificationSettingsUtils.tsx");
 
@@ -109,8 +111,8 @@ export const getAssignedNotifSettingsAndMappings = function getAssignedNotifSett
   return { settings, mappings };
 };
 export { useIsDeclarativeSettingsUIAvailable };
-export const useNotifCategoryVisibility = fn2;
-export const useNotifSettingVisibility = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export { useNotifCategoryVisibility };
+export const useNotifSettingVisibility = ReactCompilerGating.isReactCompilerEnabled() ? (function useNotifSettingVisibility(arg0) {
   const cResult = c.c(9);
   if (cResult[0] !== arg0) {
     const tmp6 = getExperimentAndConfigBySettingId(arg0);
@@ -148,7 +150,7 @@ export const useNotifSettingVisibility = ReactCompilerGating.isReactCompilerEnab
     tmp9 = cResult[5];
   }
   let variation = initialize.useStateFromStores(tmp7, tmp8, tmp9);
-  if (typeof fn === "function") {
+  if (typeof useIsDeclarativeSettingsUIAvailable === "function") {
     const _HermesInternal = HermesInternal;
     let isDeclarativeNotificationSettingsRedesignEnabled = DeclarativeNotificationSettingsRedesignExperiment.useIsDeclarativeNotificationSettingsRedesignEnabled("useIsDeclarativeSettingsUIAvailable:" + "useNotifSettingVisibility");
     if (isDeclarativeNotificationSettingsRedesignEnabled) {
@@ -173,7 +175,7 @@ export const useNotifSettingVisibility = ReactCompilerGating.isReactCompilerEnab
     throw new TypeError("Trying to call a non-function");
   }
   const tmpResult = initialize;
-}) : ((arg0) => {
+}) : (function useNotifSettingVisibility(arg0) {
   _require = arg0;
   const items = [arg0];
   const memo = noop.useMemo(() => getExperimentAndConfigBySettingId(closure_0), items);
@@ -188,7 +190,7 @@ export const useNotifSettingVisibility = ReactCompilerGating.isReactCompilerEnab
     }
     return config;
   }, items2);
-  if (typeof fn === "function") {
+  if (typeof useIsDeclarativeSettingsUIAvailable === "function") {
     const _HermesInternal = HermesInternal;
     let isDeclarativeNotificationSettingsRedesignEnabled = tmp2(tmp3[4]).useIsDeclarativeNotificationSettingsRedesignEnabled("useIsDeclarativeSettingsUIAvailable:" + "useNotifSettingVisibility");
     if (isDeclarativeNotificationSettingsRedesignEnabled) {

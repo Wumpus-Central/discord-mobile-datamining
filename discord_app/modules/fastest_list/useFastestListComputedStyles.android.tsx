@@ -1,6 +1,6 @@
-// === Module 6561: useFastestListComputedStyles ===
+// === Module 6737: useFastestListComputedStyles ===
 
-// Module 6561 (useFastestListComputedStyles)
+// Module 6737 (useFastestListComputedStyles)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,7 +10,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/fastest_list/useFastestListComputedStyles.android.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFastestListComputedStyles(style) {
   const cResult = c.c(6);
   style = style.style;
   if (cResult[0] !== style) {
@@ -171,7 +171,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
     const error1 = new Error("FastestList: marginStart and marginEnd must be numbers.");
     throw error1;
   }
-}) : ((style) => {
+}) : (function useFastestListComputedStyles(style) {
   style = style.style;
   let items = [style];
   return noop.useMemo(() => {

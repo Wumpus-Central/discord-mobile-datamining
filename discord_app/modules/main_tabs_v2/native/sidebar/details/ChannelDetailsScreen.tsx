@@ -1,10 +1,10 @@
-// === Module 17064: ChannelDetailsScreen ===
+// === Module 17345: ChannelDetailsScreen ===
 
-// Module 17064 (ChannelDetailsScreen)
+// Module 17345 (ChannelDetailsScreen)
 import c from "c" /* 576 */;
-import Link from "Link" /* 1491 */;
-import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 4747 */;
-import ChannelDetailsDefault from "ChannelDetails" /* 16809 */;
+import Link from "Link" /* 1503 */;
+import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 4941 */;
+import ChannelDetailsDefault from "ChannelDetails" /* 17088 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,14 +13,14 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsScreen.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((navigation) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelDetailsScreen(navigation) {
   const cResult = c.c(8);
   navigation = navigation.navigation;
   const route = Link.useRoute();
   const channelId = route.params.channelId;
   const width = useBaseAppContainerDimensionsDefault().width;
   if (cResult[0] !== navigation) {
-    const fn = function o() {
+    const fn = function s() {
       navigation.goBack();
     };
     cResult[0] = navigation;
@@ -49,7 +49,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((naviga
   cResult[6] = tmp5;
   cResult[7] = tmp9;
   tmp8 = tmp9;
-}) : ((navigation) => {
+}) : (function ChannelDetailsScreen(navigation) {
   navigation = navigation.navigation;
   const route = Link.useRoute();
   const items = [navigation];

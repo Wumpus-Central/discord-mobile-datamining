@@ -1,7 +1,7 @@
-// === Module 9103: PictureInPicture ===
+// === Module 10677: PictureInPicture ===
 
-// Module 9103 (PictureInPicture)
-import spring from "spring" /* 5604 */;
+// Module 10677 (PictureInPicture)
+import spring from "spring" /* 5374 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,10 +10,10 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
-const toggleFocus = fn(9086).toggleFocus;
+const toggleFocus = fn(10333).toggleFocus;
 const PictureInPicturePositions = fn(1085).PictureInPicturePositions;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { pipOuterContainer: null, pipInnerContainer: null, elevationShadow: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -23,8 +23,8 @@ let obj4 = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
 obj4.alignItems = "baseline";
 obj.pipInnerContainer = obj4;
-const native = fn(1188);
-obj.elevationShadow = native.generateBoxShadowStyle(fn(1188).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
+const native = fn(1200);
+obj.elevationShadow = native.generateBoxShadowStyle(fn(1200).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
 let closure_9 = createStyles.createStyles(obj);
 function getSpringAnimationConfig(velocity) {
   return { mass: 0.2, damping: 7.5, stiffness: 100, restDisplacementThreshold: 0.1, restSpeedThreshold: 0.1, overshootClamping: true, velocity };
@@ -38,7 +38,7 @@ const ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/components/PictureInPicture.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((preferredPosition) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function PictureInPicture(preferredPosition) {
   const cResult = insets(ref[9]).c(42);
   ({ children, style, channel } = preferredPosition);
   if (undefined === preferredPosition.preferredPosition) {
@@ -174,7 +174,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((prefer
   cResult[5] = obj6;
   tmp11 = obj6;
   const tmp9 = require("useWindowDimensions")();
-}) : ((preferredPosition) => {
+}) : (function PictureInPicture(preferredPosition) {
   ({ children, style } = preferredPosition);
   if (preferredPosition.preferredPosition === undefined) {
     const TOP_LEFT = PictureInPicturePositions.TOP_LEFT;

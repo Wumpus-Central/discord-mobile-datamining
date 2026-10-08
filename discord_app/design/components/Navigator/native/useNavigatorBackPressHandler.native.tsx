@@ -1,7 +1,7 @@
-// === Module 6023: useNavigatorBackPressHandler ===
+// === Module 6209: useNavigatorBackPressHandler ===
 
-// Module 6023 (useNavigatorBackPressHandler)
-import useBackPressHandler from "useBackPressHandler" /* 5787 */;
+// Module 6209 (useNavigatorBackPressHandler)
+import useBackPressHandler from "useBackPressHandler" /* 5370 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Navigator/native/useNavigatorBackPressHandler.native.tsx");
 
-export const useNavigatorBackPressHandler = ReactCompilerGating.isReactCompilerEnabled() ? ((current) => {
+export const useNavigatorBackPressHandler = ReactCompilerGating.isReactCompilerEnabled() ? (function useNavigatorBackPressHandler(current) {
   _require = current;
   const cResult = require("c").c(3);
   dependencyMap = noop.useRef(current);
@@ -38,7 +38,7 @@ export const useNavigatorBackPressHandler = ReactCompilerGating.isReactCompilerE
   const obj = require("c");
   const focusEffect = require("Link").useFocusEffect(tmp6);
   const tmpResult = require("Link");
-}) : ((current) => {
+}) : (function useNavigatorBackPressHandler(current) {
   _require = current;
   dependencyMap = noop.useRef(current);
   const layoutEffect = noop.useLayoutEffect(() => {

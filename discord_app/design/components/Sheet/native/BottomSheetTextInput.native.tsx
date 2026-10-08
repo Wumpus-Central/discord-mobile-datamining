@@ -1,10 +1,10 @@
-// === Module 9271: BottomSheetTextInput ===
+// === Module 8602: BottomSheetTextInput ===
 
-// Module 9271 (BottomSheetTextInput)
+// Module 8602 (BottomSheetTextInput)
 import c from "c" /* 576 */;
-import NativeTextInput from "NativeTextInput" /* 6116 */;
-import useBottomSheetKeyboardHandlingDefault from "useBottomSheetKeyboardHandling" /* 6118 */;
-import TextInput_TextInputDefault from "TextInput/TextInput" /* 9272 */;
+import NativeTextInput from "NativeTextInput" /* 6295 */;
+import useBottomSheetKeyboardHandlingDefault from "useBottomSheetKeyboardHandling" /* 6297 */;
+import TextInput_TextInputDefault from "TextInput/TextInput" /* 8603 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Sheet/native/BottomSheetTextInput.native.tsx");
 
-export const BottomSheetTextInput = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const BottomSheetTextInput = ReactCompilerGating.isReactCompilerEnabled() ? (function BottomSheetTextInput(arg0) {
   const cResult = c.c(15);
   if (cResult[0] !== arg0) {
     ({ onFocus, onBlur, ref } = arg0);
@@ -43,7 +43,7 @@ export const BottomSheetTextInput = ReactCompilerGating.isReactCompilerEnabled()
     const tmp14 = useBottomSheetKeyboardHandlingDefault(tmp12);
     const keyboardBlurring = NativeTextInput.useKeyboardBlurring(ref1);
     if (cResult[8] !== ref) {
-      const fn = function y(current) {
+      const fn = function h(current) {
         ref1.current = current;
         if (typeof closure_0 === "function") {
           closure_0(current);
@@ -85,7 +85,7 @@ export const BottomSheetTextInput = ReactCompilerGating.isReactCompilerEnabled()
   cResult[7] = obj3;
   tmp12 = obj3;
   ref1 = noop.useRef(null);
-}) : ((ref) => {
+}) : (function BottomSheetTextInput(ref) {
   ref = ref.ref;
   ({ onFocus, onBlur } = ref);
   ref = undefined;

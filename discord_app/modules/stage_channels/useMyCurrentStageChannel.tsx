@@ -1,21 +1,21 @@
-// === Module 9623: useMyCurrentStageChannel ===
+// === Module 10816: useMyCurrentStageChannel ===
 
-// Module 9623 (useMyCurrentStageChannel)
+// Module 10816 (useMyCurrentStageChannel)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useMyCurrentStageChannel.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useMyCurrentStageChannel() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [SelectedChannelStore, ChannelStore];
-    const fn = function u() {
+    const fn = function l() {
       voiceChannelId = voiceChannelId.getVoiceChannelId();
       if (null != voiceChannelId) {
         channel = channel.getChannel(voiceChannelId);
@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     [tmp4, tmp5] = cResult;
   }
   return initialize.useStateFromStores(tmp4, tmp5);
-}) : (() => {
+}) : (function useMyCurrentStageChannel() {
   const items = [SelectedChannelStore, ChannelStore];
   return initialize.useStateFromStores(items, () => {
     voiceChannelId = voiceChannelId.getVoiceChannelId();

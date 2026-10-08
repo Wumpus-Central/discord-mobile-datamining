@@ -1,9 +1,11 @@
-// === Module 8599: GameAutocompleteActionCreators ===
+// === Module 8683: GameAutocompleteActionCreators ===
 
-// Module 8599 (GameAutocompleteActionCreators)
-import GameAutocompleteTypes from "GameAutocompleteTypes" /* 5900 */;
+// Module 8683 (GameAutocompleteActionCreators)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
+import GameAutocompleteUtils from "GameAutocompleteUtils" /* 8212 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GameAutocompleteStore from "GameAutocompleteStore" /* 5899 */;
+import GameAutocompleteStore from "GameAutocompleteStore" /* 8211 */;
 
 require = fn;
 let closure_6 = async function _fetchGameAutocomplete(arg0) {
@@ -33,85 +35,63 @@ let closure_6 = async function _fetchGameAutocomplete(arg0) {
         } else {
           closure_4 = tmp3;
           closure_3 = tmp7;
+          closure_131_0 = filter_group;
           closure_131_1 = undefined;
-          closure_131_0 = closure_0;
-          let DEFAULT = closure_1;
-          if (closure_1 === undefined) {
-            DEFAULT = GameAutocompleteTypes.GameAutocompleteProfile.DEFAULT;
-          }
-          closure_131_1 = DEFAULT;
           closure_131_2 = undefined;
-          closure_131_3 = undefined;
-          c7 = 1;
-          c8 = 1;
-          return { value: "Reflect", done: true };
-        }
-      } else {
-        if (1 === tmp7) {
-          if (arg0 === 1) {
-            c8 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c8 = 3;
-            const obj5 = { value, done: true };
-            return obj5;
-          } else {
-            closure_131_2 = closure_132_0(closure_132_2[4]).normalizeGameAutocompleteQuery(closure_131_0);
-            if (null != closure_131_2) {
-              const shouldSuppressFetchResult = closure_132_4.shouldSuppressFetch(closure_131_2, closure_131_1);
-              const dispatch = closure_132_1(closure_132_2[5]).dispatch;
-              if (shouldSuppressFetchResult) {
-                const obj6 = { type: "GAME_AUTOCOMPLETE_FETCH_SUCCESS", query: closure_131_2, profile: closure_131_1, results: [] };
-                dispatch(obj6);
-              } else {
-                const obj7 = { type: "GAME_AUTOCOMPLETE_FETCH", query: closure_131_2, profile: closure_131_1 };
-                dispatch(obj7);
-                c6 = 1;
-                const HTTP = closure_132_0(closure_132_2[6]).HTTP;
-                const request = { url: closure_132_5.GAMES_AUTOCOMPLETE, query: null, rejectWithError: false };
-                const obj8 = { q: closure_131_2 };
-                request.query = obj8;
-                c7 = 3;
-                c8 = 1;
-                const obj9 = { value: HTTP.get(request), done: false };
-                return obj9;
-              }
-              const tmp66 = closure_132_1(closure_132_2[5]);
+          const result = GameAutocompleteUtils.normalizeGameAutocompleteQuery(closure_0);
+          closure_131_1 = result;
+          if (null != result) {
+            const shouldSuppressFetchResult = GameAutocompleteStore.shouldSuppressFetch(result, filter_group);
+            const dispatch = DispatcherDefault.dispatch;
+            if (shouldSuppressFetchResult) {
+              const obj5 = { type: "GAME_AUTOCOMPLETE_FETCH_SUCCESS", query: result, filterGroup: filter_group, results: [] };
+              dispatch(obj5);
+            } else {
+              const obj6 = { type: "GAME_AUTOCOMPLETE_FETCH", query: result, filterGroup: filter_group };
+              dispatch(obj6);
+              c6 = 1;
+              const HTTP = HTTPUtils.HTTP;
+              const request = { url: constants.GAMES_AUTOCOMPLETE, query: null, rejectWithError: false };
+              const obj7 = { q: result, filter_group };
+              request.query = obj7;
+              c7 = 2;
+              c8 = 1;
+              const obj8 = { value: HTTP.get(request), done: false };
+              return obj8;
             }
-            c8 = 3;
-            const obj14 = closure_132_0(closure_132_2[4]);
           }
-        } else if (2 === tmp7) {
-          c6 = 0;
-          closure_131_4 = closure_5;
-          const obj10 = { type: "GAME_AUTOCOMPLETE_FETCH_FAILURE", query: closure_131_2, profile: closure_131_1 };
-          closure_132_1(closure_132_2[5]).dispatch(obj10);
-          throw closure_131_4;
-        } else if (arg0 === 1) {
           c8 = 3;
-          throw value;
-        } else if (arg0 !== 2) {
-          const body = value.body;
-          dependencyMap = body;
-          if (body == null) {
-            dependencyMap = [];
-          }
-          closure_131_3 = dependencyMap.map((id) => ({ id: String(id.id), name: id.name, icon: id.icon, platformAvailability: id.platform_availability }));
-          const obj11 = { type: "GAME_AUTOCOMPLETE_FETCH_SUCCESS", query: closure_131_2, profile: closure_131_1, results: closure_131_3 };
-          closure_132_1(closure_132_2[5]).dispatch(obj11);
-          c6 = 0;
-          const obj = closure_132_1(closure_132_2[5]);
         }
+      } else if (1 === tmp7) {
         c6 = 0;
+        closure_131_3 = closure_5;
+        const obj9 = { type: "GAME_AUTOCOMPLETE_FETCH_FAILURE", query: closure_131_1, filterGroup: closure_131_0 };
+        closure_132_1(closure_132_2[4]).dispatch(obj9);
+        throw closure_131_3;
+      } else if (arg0 === 1) {
         c8 = 3;
-        const obj12 = { value, done: true };
-        return obj12;
+        throw value;
+      } else if (arg0 !== 2) {
+        const body = value.body;
+        dependencyMap = body;
+        if (body == null) {
+          dependencyMap = [];
+        }
+        closure_131_2 = dependencyMap.map((id) => ({ id: String(id.id), name: id.name, icon: id.icon, platformAvailability: id.platform_availability }));
+        const obj10 = { type: "GAME_AUTOCOMPLETE_FETCH_SUCCESS", query: closure_131_1, filterGroup: closure_131_0, results: closure_131_2 };
+        closure_132_1(closure_132_2[4]).dispatch(obj10);
+        c6 = 0;
+        const obj = closure_132_1(closure_132_2[4]);
       }
-    } catch (tmp42) {
-      closure_5 = tmp42;
+      c6 = 0;
+      c8 = 3;
+      const obj11 = { value, done: true };
+      return obj11;
+    } catch (tmp31) {
+      closure_5 = tmp31;
       if (tmp4 === c6) {
         c8 = tmp2;
-        throw tmp42;
+        throw tmp31;
       } else {
         c7 = tmp;
       }
@@ -120,7 +100,7 @@ let closure_6 = async function _fetchGameAutocomplete(arg0) {
 };
 const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/games/autocomplete/GameAutocompleteActionCreators.tsx");
+let result = size.fileFinishedImporting("modules/games/autocomplete/GameAutocompleteActionCreators.tsx");
 
 export const fetchGameAutocomplete = function fetchGameAutocomplete() {
   const self = this;

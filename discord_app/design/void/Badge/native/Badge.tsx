@@ -1,31 +1,31 @@
-// === Module 13961: Badge/Badge ===
+// === Module 14260: Badge/Badge ===
 
-// Module 13961 (Badge/Badge)
+// Module 14260 (Badge/Badge)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import NumberUtils from "NumberUtils" /* 1888 */;
-import shared from "shared" /* 4735 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8941 */;
+import NumberUtils from "NumberUtils" /* 1900 */;
+import shared from "shared" /* 4929 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8572 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2116 */;
+import LocaleStore from "LocaleStore" /* 2128 */;
 
 require = fn;
 const View = fn(17).View;
-const BadgeConstants = fn(1190);
+const BadgeConstants = fn(1202);
 ({ BADGE_MASK_SIZE: metroRequire, BADGE_MASK_UNREAD_SIZE: closure_7, BADGE_PADDING, BADGE_SIZE } = BadgeConstants);
 const BADGE_SIZE_UNREAD = BadgeConstants.BADGE_SIZE_UNREAD;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { badgeMask: { position: "absolute", bottom: -BADGE_PADDING, right: -BADGE_PADDING, padding: BADGE_PADDING, zIndex: 1 }, badge: { paddingLeft: BADGE_PADDING, paddingRight: BADGE_PADDING, borderRadius: nativeDefault.space.PX_8, justifyContent: "center", alignItems: "center", overflow: "hidden" }, badgeText: null, experimentalBadgeText: null, noCount: null, unread: null, mention: null, lowImportanceMention: null, eventsMentionBadge: null };
 let obj4 = { minWidth: BADGE_SIZE - 2 * BADGE_PADDING, color: nativeDefault.colors.WHITE, fontSize: 12, lineHeight: null, fontFamily: null, textAlign: "center", textAlignVertical: null };
-let PlatformUtils = fn(1369);
+let PlatformUtils = fn(1381);
 PlatformUtils = PlatformUtils.isAndroid();
 const space = nativeDefault.space;
 obj4.lineHeight = PlatformUtils ? space.PX_12 : space.PX_16;
 obj4.fontFamily = fn(1085).Fonts.PRIMARY_BOLD;
-PlatformUtils = fn(1369);
+PlatformUtils = fn(1381);
 let str;
 if (PlatformUtils.isAndroid()) {
   str = "center";
@@ -46,7 +46,7 @@ const obj10 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
 obj2.eventsMentionBadge = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
 let closure_11 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function Badge(arg0) {
   const cResult = c.c(29);
   ({ value, style, dotStyle, textStyle, accessible, accessibilityLabel, accessibilityElementsHidden, importantForAccessibility, hideCount, maxValue, unreadIndicator, eventsMentionBadge, isMentionLowImportance } = arg0);
   let str = "auto";
@@ -214,7 +214,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   tmp14 = BADGE_SIZE;
   const tmpResult4 = initialize;
-}) : ((value) => {
+}) : (function Badge(value) {
   value = value.value;
   require = value;
   const style = value.style;
@@ -308,7 +308,7 @@ size = fn(2);
 let result = size.fileFinishedImporting("design/void/Badge/native/Badge.tsx");
 
 export default tmp4;
-export const MaskedBadge = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const MaskedBadge = ReactCompilerGating.isReactCompilerEnabled() ? (function MaskedBadge(arg0) {
   const cResult = c.c(23);
   ({ style, maskStyle, dotStyle, textStyle, value, maxValue, accessibilityLabel, accessibilityElementsHidden, importantForAccessibility, onLayout, hideCount, unreadIndicator, isMentionLowImportance } = arg0);
   const tmp3 = closure_11();
@@ -395,7 +395,7 @@ export const MaskedBadge = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
     tmp6 = obj4;
   }
   tmp4 = timestampProducer;
-}) : ((maskStyle) => {
+}) : (function MaskedBadge(maskStyle) {
   maskStyle = maskStyle.maskStyle;
   value = maskStyle.value;
   importDefault = value;

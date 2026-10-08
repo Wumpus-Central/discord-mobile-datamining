@@ -1,37 +1,37 @@
-// === Module 8982: ApplicationDetails ===
+// === Module 12886: ApplicationDetails ===
 
-// Module 8982 (ApplicationDetails)
+// Module 12886 (ApplicationDetails)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import LinkIcon from "LinkIcon" /* 4845 */;
-import ClockIcon2 from "ClockIcon" /* 4855 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import LockIcon from "LockIcon" /* 5886 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8025 */;
-import GlobeEarthIcon from "GlobeEarthIcon" /* 8584 */;
-import scopes from "scopes" /* 8752 */;
-import disclosures from "disclosures" /* 8754 */;
-import Utils from "Utils" /* 8756 */;
-import ShieldIcon from "ShieldIcon" /* 8952 */;
-import EmbedIcon from "EmbedIcon" /* 8983 */;
-import HammerIcon from "HammerIcon" /* 8985 */;
-import RobotIcon from "RobotIcon" /* 8987 */;
+import LinkIcon from "LinkIcon" /* 5039 */;
+import ClockIcon2 from "ClockIcon" /* 5049 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import LockIcon from "LockIcon" /* 8198 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8433 */;
+import GlobeEarthIcon from "GlobeEarthIcon" /* 9068 */;
+import scopes from "scopes" /* 9132 */;
+import disclosures from "disclosures" /* 9134 */;
+import Utils from "Utils" /* 9136 */;
+import ShieldIcon from "ShieldIcon" /* 10386 */;
+import HammerIcon from "HammerIcon" /* 11466 */;
+import RobotIcon from "RobotIcon" /* 12825 */;
+import EmbedIcon from "EmbedIcon" /* 12887 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { applicationDetails: { flexDirection: "column", gap: 16 }, entry: { flexDirection: "row", alignItems: "center", gap: 8 }, entryText: { flex: 1 }, entryIcon: null };
 let size = { width: 16, height: 16, tintColor: nativeDefault.colors.TEXT_MUTED };
 obj2.entryIcon = size;
 let closure_6 = createStyles.createStyles(obj2);
 fn(558);
 const ReactCompilerGating = fn(558);
-let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function ApplicationDetailsEntry(arg0) {
   const cResult = c.c(10);
   ({ iconComponent, text } = arg0);
   const tmp4 = closure_6();
@@ -77,7 +77,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = tmp4.entryIcon;
   cResult[2] = iconComponentResult;
   tmp5 = iconComponentResult;
-}) : ((children) => {
+}) : (function ApplicationDetailsEntry(children) {
   const iconComponent = children.iconComponent;
   const tmp = closure_6();
   const obj = { style: tmp.entry, children: null };
@@ -93,7 +93,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 size = fn(2);
 const result = size.fileFinishedImporting("modules/oauth2/native/ApplicationDetails.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ApplicationDetails(arg0) {
   const cResult = c.c(50);
   ({ application, scopes, redirectUri, approximateGuildCount, isEmbeddedFlow, disclosures, connectedAccount } = arg0);
   let num = closure_6();
@@ -324,7 +324,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   tmp19 = tmp27;
   tmp18 = applicationDetails;
   tmp17 = View;
-}) : ((arg0) => {
+}) : (function ApplicationDetails(arg0) {
   ({ application, scopes, redirectUri, approximateGuildCount, disclosures } = arg0);
   ({ isEmbeddedFlow, connectedAccount } = arg0);
   const tmp2 = closure_6();

@@ -1,21 +1,21 @@
-// === Module 14432: UserProfileEditBannerButton ===
+// === Module 14671: UserProfileEditBannerButton ===
 
-// Module 14432 (UserProfileEditBannerButton)
+// Module 14671 (UserProfileEditBannerButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Pressables from "Pressables" /* 5916 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7861 */;
-import useUserProfileBannerHeightDefault from "useUserProfileBannerHeight" /* 7913 */;
-import PencilIcon from "PencilIcon" /* 10071 */;
+import Pressables from "Pressables" /* 6189 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8279 */;
+import useUserProfileBannerHeightDefault from "useUserProfileBannerHeight" /* 8332 */;
+import PencilIcon from "PencilIcon" /* 9675 */;
 import noop from "module_19" /* 19 */;
 
-const UserProfileBannerDefault = tmp5(7929);
-const EditButtonDefault = tmp5(14433);
+const UserProfileBannerDefault = tmp5(8348);
+const EditButtonDefault = tmp5(14672);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { position: "relative" }, editButton: null, previewButton: null, refreshEditButtonContainer: null };
 let size = { position: "absolute", top: 12, right: 12, width: 28, height: 28, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.round };
 obj2.editButton = size;
@@ -24,7 +24,7 @@ obj2.previewButton = rect;
 obj2.refreshEditButtonContainer = { position: "absolute", top: 12, right: 12 };
 let closure_7 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
+let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function ProfilePreviewButton(userId) {
   const cResult = userId(context[6]).c(9);
   userId = userId.userId;
   let tmp4 = closure_7();
@@ -90,7 +90,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   cResult[3] = fn;
   tmp5 = fn;
   const obj2 = userId(context[8]);
-}) : ((userId) => {
+}) : (function ProfilePreviewButton(userId) {
   userId = userId.userId;
   let analyticsLocations;
   let context;
@@ -112,7 +112,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   return tmp5;
 });
 ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditButton(arg0) {
   const cResult = c.c(6);
   ({ onPress, accessibilityLabel, disabled } = arg0);
   const tmp5 = closure_7();
@@ -142,7 +142,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = tmp11;
   tmp10 = tmp11;
   const obj3 = { accessibilityRole: "button", accessibilityLabel, onPress, disabled: undefined !== disabled && disabled, style: tmp5.editButton, children: first };
-}) : ((disabled) => {
+}) : (function EditButton(disabled) {
   let flag = disabled.disabled;
   ({ onPress, accessibilityLabel } = disabled);
   if (flag === undefined) {
@@ -157,7 +157,7 @@ ReactCompilerGating = fn(558);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileEditBannerButton.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileEditBannerButton(arg0) {
   let obj = dependencyMap;
   const cResult = c.c(24);
   ({ user, displayProfile, pendingBanner, pendingAvatarSrc, pendingThemeColors, pendingAccentColor, bannerSafeArea, showProfilePreviewButton, showEditButton, onPressEdit, editButtonAccessibilityLabel, editDisabled, isUserProfileEditingRefresh } = arg0);
@@ -256,7 +256,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[7] = user;
   cResult[8] = tmp8;
   tmp7 = tmp8;
-}) : ((isUserProfileEditingRefresh) => {
+}) : (function UserProfileEditBannerButton(isUserProfileEditingRefresh) {
   ({ user, showProfilePreviewButton, showEditButton } = isUserProfileEditingRefresh);
   ({ displayProfile, pendingBanner, pendingAvatarSrc, pendingThemeColors, pendingAccentColor, bannerSafeArea } = isUserProfileEditingRefresh);
   if (showEditButton === undefined) {

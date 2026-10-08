@@ -1,7 +1,7 @@
-// === Module 15991: useDrawerState ===
+// === Module 16251: useDrawerState ===
 
-// Module 15991 (useDrawerState)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4742 */;
+// Module 16251 (useDrawerState)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4936 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/home_drawer/native/useDrawerState.tsx");
 
-export const useDrawerOpen = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useDrawerOpen = ReactCompilerGating.isReactCompilerEnabled() ? (function useDrawerOpen(arg0) {
   const cResult = require("c").c(7);
   _require = tmp4;
   let obj = require("c");
@@ -30,7 +30,7 @@ export const useDrawerOpen = ReactCompilerGating.isReactCompilerEnabled() ? ((ar
       const effect = noop.useEffect(tmp10, tmp11);
       return tmp9;
     }
-    const fn2 = function v() {
+    const fn2 = function l() {
       if (handleStateChange) {
         handleStateChange = function handleStateChange(data) {
           state = data.data.state;
@@ -109,7 +109,7 @@ export const useDrawerOpen = ReactCompilerGating.isReactCompilerEnabled() ? ((ar
   cResult[2] = fn;
   tmp6 = fn;
   const tmpResult = require("Link");
-}) : (() => {
+}) : (function useDrawerOpen() {
   let flag = arg0;
   if (arg0 === undefined) {
     flag = true;

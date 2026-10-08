@@ -1,19 +1,19 @@
-// === Module 13159: BetaTag ===
+// === Module 12872: BetaTag ===
 
-// Module 13159 (BetaTag)
+// Module 12872 (BetaTag)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import LinearGradientDefault from "LinearGradient" /* 5612 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import LinearGradientDefault from "LinearGradient" /* 5387 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const Gradients = fn(6951).Gradients;
+const Gradients = fn(7140).Gradients;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.lg, marginLeft: 8, paddingHorizontal: 8, justifyContent: "center" }, text: { textTransform: "uppercase" } };
 let closure_6 = createStyles.createStyles(obj2);
 let obj4 = { SMALL: "small", MEDIUM: "medium" };
@@ -22,7 +22,7 @@ let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadiu
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/BetaTag/native/BetaTag.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function BetaTag(arg0) {
   const cResult = c.c(26);
   ({ style, textStyle, size, gradient } = arg0);
   if (undefined === size) {
@@ -143,7 +143,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp7 = items3;
   }
   tmp5 = undefined !== gradient && gradient;
-}) : ((gradient) => {
+}) : (function BetaTag(gradient) {
   ({ style, textStyle, size } = gradient);
   if (size === undefined) {
     size = obj4.MEDIUM;

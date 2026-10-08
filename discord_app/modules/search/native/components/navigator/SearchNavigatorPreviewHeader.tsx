@@ -1,20 +1,20 @@
-// === Module 17065: SearchNavigatorPreviewHeader ===
+// === Module 17346: SearchNavigatorPreviewHeader ===
 
-// Module 17065 (SearchNavigatorPreviewHeader)
+// Module 17346 (SearchNavigatorPreviewHeader)
 import c from "c" /* 576 */;
-import ChannelHeaderDefault from "ChannelHeader" /* 13123 */;
+import ChannelHeaderDefault from "ChannelHeader" /* 12838 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles({ container: { flexShrink: 1, paddingRight: 12, flexDirection: "row", alignItems: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/navigator/SearchNavigatorPreviewHeader.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function SearchNavigatorPreviewHeader(channelId) {
   const cResult = c.c(5);
   channelId = channelId.channelId;
   const tmp3 = closure_5();
@@ -39,4 +39,6 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
   cResult[4] = tmp9;
   tmp8 = tmp9;
   const obj3 = { style: tmp3.container, children: tmp4 };
-}) : ((channelId) => <View style={closure_5().container}>{jsx(ChannelHeaderDefault, { channelId: channelId.channelId, screenIndex: "none", pressable: false, isGuildMemberCountVisible: false, isNavigationScreen: true })}</View>));
+}) : (function SearchNavigatorPreviewHeader(channelId) {
+  return <View style={closure_5().container}>{jsx(ChannelHeaderDefault, { channelId: channelId.channelId, screenIndex: "none", pressable: false, isGuildMemberCountVisible: false, isNavigationScreen: true })}</View>;
+}));

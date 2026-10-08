@@ -1,19 +1,19 @@
-// === Module 17543: FrecencyUserSettingsManager ===
+// === Module 17825: FrecencyUserSettingsManager ===
 
-// Module 17543 (FrecencyUserSettingsManager)
+// Module 17825 (FrecencyUserSettingsManager)
 import DurationsDefault from "Durations" /* 1102 */;
-import frecency_user_settings from "frecency_user_settings" /* 1232 */;
-import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1233 */;
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 2033 */;
+import frecency_user_settings from "frecency_user_settings" /* 1244 */;
+import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1245 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 2045 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore" /* 8829 */;
-import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 8828 */;
-import EmojiStore from "EmojiStore" /* 5645 */;
-import SoundboardStore from "SoundboardStore" /* 5687 */;
-import StickersPersistedStore from "StickersPersistedStore" /* 5693 */;
-import FrecencyStore from "FrecencyStore" /* 5701 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
+import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore" /* 9188 */;
+import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 9187 */;
+import EmojiStore from "EmojiStore" /* 5992 */;
+import SoundboardStore from "SoundboardStore" /* 5424 */;
+import StickersPersistedStore from "StickersPersistedStore" /* 6034 */;
+import FrecencyStore from "FrecencyStore" /* 6091 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6797 */;
 
 require = fn;
 function handleConnectionOpen() {
@@ -141,9 +141,9 @@ function resetTimer(arg0, arg1) {
   }
   timeout = setTimeout(() => saveProtos(c0), arg0);
 }
-const MAX_NUM_SELECTED_ITEMS = fn(5701).MAX_NUM_SELECTED_ITEMS;
+const MAX_NUM_SELECTED_ITEMS = fn(6091).MAX_NUM_SELECTED_ITEMS;
 const UserSettingsTypes = fn(1095).UserSettingsTypes;
-const FREQUENCY_ITEM_LIMIT = fn(1360).FREQUENCY_ITEM_LIMIT;
+const FREQUENCY_ITEM_LIMIT = fn(1372).FREQUENCY_ITEM_LIMIT;
 const random = Math.random();
 let closure_14 = 10 + random * (10 * DurationsDefault.Millis.SECOND);
 let result = 2 * DurationsDefault.Millis.HOUR;

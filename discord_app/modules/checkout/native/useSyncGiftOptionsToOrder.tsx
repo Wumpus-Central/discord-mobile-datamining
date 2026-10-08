@@ -1,35 +1,35 @@
-// === Module 10570: useSyncGiftOptionsToOrder ===
+// === Module 10167: useSyncGiftOptionsToOrder ===
 
-// Module 10570 (useSyncGiftOptionsToOrder)
+// Module 10167 (useSyncGiftOptionsToOrder)
 import LoggerDefault from "Logger" /* 3 */;
-import BillingUtils from "BillingUtils" /* 4549 */;
-import useGiftOptionsSyncDebounceDefault from "useGiftOptionsSyncDebounce" /* 10445 */;
+import BillingUtils from "BillingUtils" /* 4741 */;
+import useGiftOptionsSyncDebounceDefault from "useGiftOptionsSyncDebounce" /* 10042 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-fn(6943).useNativeCheckoutStoreOrNull;
+fn(7132).useNativeCheckoutStoreOrNull;
 const ReactCompilerGating = fn(558);
 const tmp2 = new LoggerDefault("useSyncGiftOptionsToOrder");
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/checkout/native/useSyncGiftOptionsToOrder.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, current) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSyncGiftOptionsToOrder(arg0, current) {
   _require = arg0;
   importDefault = current;
   const cResult = require("c").c(22);
   dependencyMap = noop.useRef(null);
-  _slicedToArray = noop.useRef(null);
-  noop = noop.useRef(false);
   let obj = require("c");
+  noop = noop.useRef(false);
+  ref = noop.useRef(null);
   noop.useRef(null);
   noop.useRef(0);
   noop.useRef(null);
   noop.useRef(null);
-  ref = noop.useRef(undefined);
-  [tmp4, tmp5] = noop.useState(0);
+  ref2 = noop.useRef(undefined);
+  [tmp4, tmp5] = ref(noop.useState(0), 2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function o(setOrderRevision) {
       return setOrderRevision.setOrderRevision;
@@ -39,7 +39,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, current) =
   } else {
     first = cResult[0];
   }
-  let tmp7 = ref(first);
+  let tmp7 = ref2(first);
   closure_11 = tmp7;
   let tmp8 = useGiftOptionsSyncDebounceDefault(tmp5);
   const waitForPause = tmp8.waitForPause;
@@ -88,7 +88,36 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, current) =
                         }
                         if (cResult[20] !== tmp15) {
                           const obj3 = { awaitSync: tmp15 };
-                          cResult[20] = tmp15;
+                          class G {
+                            constructor() {
+                              if (null != closure_0) {
+                                tmp = closure_2;
+                                if (closure_2.current !== closure_3.current) {
+                                  num = 3;
+                                  if (closure_7.current >= 3) {
+                                    num2 = 0;
+                                    tmp3.current = 0;
+                                  }
+                                  tmp4 = flush;
+                                  tmp5 = flush(tmp2.current);
+                                  tmp6 = waitForSync;
+                                  tmp8 = closure_4;
+                                  current = closure_4.current;
+                                  tmp7 = waitForSync();
+                                  if (!current) {
+                                    tmp9 = closure_9;
+                                    current = null != closure_9.current;
+                                  }
+                                  if (!current) {
+                                    tmp10 = closure_10;
+                                    tmp11 = closure_10((arg0) => arg0 + 1);
+                                  }
+                                  return tmp7;
+                                }
+                              }
+                              return Promise.resolve(true);
+                            }
+                          }
                           cResult[21] = obj3;
                           let tmp16 = obj3;
                         } else {
@@ -97,36 +126,47 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, current) =
                         return tmp16;
                       }
                     }
-                    const fn3 = function b() {
-                      if (null != closure_0) {
-                        if (ref.current !== ref2.current) {
-                          if (ref6.current >= 3) {
-                            tmp3.current = 0;
+                    class G {
+                      constructor() {
+                        if (null != closure_0) {
+                          tmp = closure_2;
+                          if (closure_2.current !== closure_3.current) {
+                            num = 3;
+                            if (closure_7.current >= 3) {
+                              num2 = 0;
+                              tmp3.current = 0;
+                            }
+                            tmp4 = flush;
+                            tmp5 = flush(tmp2.current);
+                            tmp6 = waitForSync;
+                            tmp8 = closure_4;
+                            current = closure_4.current;
+                            tmp7 = waitForSync();
+                            if (!current) {
+                              tmp9 = closure_9;
+                              current = null != closure_9.current;
+                            }
+                            if (!current) {
+                              tmp10 = closure_10;
+                              tmp11 = closure_10((arg0) => arg0 + 1);
+                            }
+                            return tmp7;
                           }
-                          const tmp5 = flush(tmp2.current);
-                          current = ref3.current;
-                          if (!current) {
-                            current = null != ref8.current;
-                          }
-                          if (!current) {
-                            tmp5((arg0) => arg0 + 1);
-                          }
-                          return waitForSync();
                         }
+                        return Promise.resolve(true);
                       }
-                      return Promise.resolve(true);
-                    };
+                    }
                     cResult[16] = flush;
                     cResult[17] = arg0;
                     cResult[18] = waitForSync;
-                    cResult[19] = fn3;
-                    tmp15 = fn3;
+                    cResult[19] = G;
+                    tmp15 = G;
                   }
                 }
               }
             }
           }
-          const items1 = [arg0, current, tmp4, resolveSyncs, tmp7, waitForPause];
+          const items1 = [, current, tmp4, resolveSyncs, tmp7, waitForPause];
           cResult[9] = current;
           cResult[10] = arg0;
           cResult[11] = resolveSyncs;
@@ -258,17 +298,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, current) =
   cResult[7] = waitForPause;
   cResult[8] = E;
   tmp12 = E;
-}) : ((arg0, current) => {
+}) : (function useSyncGiftOptionsToOrder(arg0, current) {
   closure_0 = arg0;
   importDefault = current;
   dependencyMap = noop.useRef(null);
-  _slicedToArray = noop.useRef(null);
   noop = noop.useRef(false);
+  ref = noop.useRef(null);
   noop.useRef(null);
   noop.useRef(0);
   noop.useRef(null);
   noop.useRef(null);
-  const tmp = _slicedToArray(noop.useState(0), 2);
+  const tmp = ref(noop.useState(0), 2);
   closure_10 = tmp2;
   const tmp3 = noop.useRef(undefined)((setOrderRevision) => setOrderRevision.setOrderRevision);
   closure_11 = tmp3;

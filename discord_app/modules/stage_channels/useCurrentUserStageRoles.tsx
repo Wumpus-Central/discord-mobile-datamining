@@ -1,8 +1,8 @@
-// === Module 9203: useCurrentUserStageRoles ===
+// === Module 10763: useCurrentUserStageRoles ===
 
-// Module 9203 (useCurrentUserStageRoles)
+// Module 10763 (useCurrentUserStageRoles)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 5585 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 5953 */;
 
 const require = globalThis.__r;
 
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useCurrentUserStageRoles.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCurrentUserStageRoles(arg0, arg1) {
   _require = arg0;
   const cResult = require("c").c(5);
   dependencyMap = tmp4;
@@ -41,7 +41,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   tmp8 = fn;
   const obj = require("c");
   tmp = _require;
-}) : ((arg0) => {
+}) : (function useCurrentUserStageRoles(arg0) {
   _require = arg0;
   let flag = arg1;
   if (arg1 === undefined) {

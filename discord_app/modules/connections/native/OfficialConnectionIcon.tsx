@@ -1,14 +1,14 @@
-// === Module 11196: OfficialConnectionIcon ===
+// === Module 11313: OfficialConnectionIcon ===
 
-// Module 11196 (OfficialConnectionIcon)
+// Module 11313 (OfficialConnectionIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
-import native from "native" /* 1188 */;
-import useRoleIconProps from "useRoleIconProps" /* 6692 */;
-import RoleIconDefault from "RoleIcon" /* 6711 */;
-import _modDef11197 from "module_11197" /* 11197 */;
-import _modDef11198 from "module_11198" /* 11198 */;
+import native from "native" /* 1200 */;
+import useRoleIconProps from "useRoleIconProps" /* 6869 */;
+import RoleIconDefault from "RoleIcon" /* 6888 */;
+import _modDef11314 from "module_11314" /* 11314 */;
+import _modDef11315 from "module_11315" /* 11315 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,13 +17,13 @@ const Constants = fn(1085);
 ({ DEFAULT_ROLE_COLOR_HEX: closure_4, EMPTY_STRING_SNOWFLAKE_ID: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles({ verifiedCheck: { position: "absolute", left: 0, top: 0 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/connections/native/OfficialConnectionIcon.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((displayRoleIcon) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function OfficialConnectionIcon(displayRoleIcon) {
   const cResult = c.c(33);
   ({ guildId, role, roleId, roleColor, size, style } = displayRoleIcon);
   const tmp4 = closure_8();
@@ -142,7 +142,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((displayRoleIcon)
                 cResult[32] = tmp25;
                 tmp22 = tmp25;
               }
-              const obj5 = { style: tmp18, size: native.Icon.Sizes.CUSTOM, source: _modDef11198, color: PRIMARY_630 };
+              const obj5 = { style: tmp18, size: native.Icon.Sizes.CUSTOM, source: _modDef11315, color: PRIMARY_630 };
               const tmp21 = timestampProducer(native.Icon, obj5);
               cResult[26] = PRIMARY_630;
               cResult[27] = tmp18;
@@ -155,7 +155,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((displayRoleIcon)
             cResult[25] = items2;
             tmp18 = items2;
           }
-          const obj6 = { style: tmp14, size: native.Icon.Sizes.CUSTOM, source: _modDef11197, color: roleColor };
+          const obj6 = { style: tmp14, size: native.Icon.Sizes.CUSTOM, source: _modDef11314, color: roleColor };
           const tmp17 = timestampProducer(native.Icon, obj6);
           cResult[20] = roleColor;
           cResult[21] = tmp14;
@@ -182,7 +182,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((displayRoleIcon)
   cResult[4] = roleId;
   cResult[5] = obj7;
   tmp7 = obj7;
-}) : ((arg0) => {
+}) : (function OfficialConnectionIcon(arg0) {
   ({ role, roleId, roleColor, size, style } = arg0);
   ({ guildId, displayRoleIcon } = arg0);
   const tmp = closure_8();
@@ -231,11 +231,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((displayRoleIcon)
   const obj5 = { style: null, children: null };
   const items1 = [style, size1];
   obj5.style = items1;
-  const obj6 = { style: null, size: native.Icon.Sizes.CUSTOM, source: _modDef11197, color: roleColor };
+  const obj6 = { style: null, size: native.Icon.Sizes.CUSTOM, source: _modDef11314, color: roleColor };
   const items2 = [tmp.verifiedCheck, size1];
   obj6.style = items2;
   const items3 = [timestampProducer(native.Icon, obj6), ];
-  const obj7 = { style: null, size: native.Icon.Sizes.CUSTOM, source: _modDef11198, color: PRIMARY_630 };
+  const obj7 = { style: null, size: native.Icon.Sizes.CUSTOM, source: _modDef11315, color: PRIMARY_630 };
   const items4 = [tmp.verifiedCheck, size1];
   obj7.style = items4;
   items3[1] = timestampProducer(native.Icon, obj7);

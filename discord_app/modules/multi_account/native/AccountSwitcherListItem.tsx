@@ -1,39 +1,39 @@
-// === Module 15912: AccountSwitcherListItem ===
+// === Module 16171: AccountSwitcherListItem ===
 
-// Module 15912 (AccountSwitcherListItem)
+// Module 16171 (AccountSwitcherListItem)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4600 */;
-import UserUtilsDefault from "UserUtils" /* 4728 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Pressables from "Pressables" /* 5916 */;
+import native from "native" /* 1200 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4792 */;
+import UserUtilsDefault from "UserUtils" /* 4922 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import Pressables from "Pressables" /* 6189 */;
 import noop from "module_19" /* 19 */;
-import UserRecord from "UserRecord" /* 1391 */;
-import StreamerModeStore from "StreamerModeStore" /* 4729 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserRecord from "UserRecord" /* 1403 */;
+import StreamerModeStore from "StreamerModeStore" /* 4923 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const initialize = CircleCheckIcon(504);
-const CircleCheckIcon2 = CircleCheckIcon(4798);
-const CircleInformationIcon = CircleCheckIcon(4818);
+const CircleCheckIcon2 = CircleCheckIcon(4992);
+const CircleInformationIcon = CircleCheckIcon(5012);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
-const MultiAccountTokenStatus = fn(12071).MultiAccountTokenStatus;
+const MultiAccountTokenStatus = fn(12144).MultiAccountTokenStatus;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_11 = createStyles.createStyles({ accountListTag: { marginLeft: 12, flex: 1 }, tagContainer: { display: "flex", flexDirection: "row" }, accountSwitcherListItem: { display: "flex", flexDirection: "row", justifyContent: "flex-start", alignItems: "center", paddingVertical: 8, paddingHorizontal: 16 }, username: { flexShrink: 1 }, accountInfo: { flex: 1, minWidth: "30%", display: "flex", flexDirection: "row", alignItems: "center" } });
 let ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function AccountStatusIcon(user) {
   let CircleCheckIcon = require;
   let TEXT_BRAND = dependencyMap;
   const cResult = c.c(4);
   user = user.user;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
-    const fn = function s() {
+    const fn = function o() {
       return currentUser.getCurrentUser();
     };
     cResult[0] = items;
@@ -69,7 +69,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
     }
   }
   const CircleCheckIconResult = initialize;
-}) : ((user) => {
+}) : (function AccountStatusIcon(user) {
   user = user.user;
   const items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
@@ -94,13 +94,13 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/multi_account/native/AccountSwitcherListItem.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AccountSwitcherListItem(arg0) {
   const cResult = c.c(51);
   ({ user, onPressUser, showActiveAccountLabel, sortHandlers, delayLongPress, leading, trailing } = arg0);
   const tmp5 = closure_11();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [StreamerModeStore];
-    const fn = function b() {
+    const fn = function v() {
       return StreamerModeStore.hidePersonalInformation;
     };
     cResult[0] = items;
@@ -308,7 +308,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                       const merged = Object.assign(sortHandlers);
                       const items2 = [leading, tmp54, tmp57];
                       tmp61.children = items2;
-                      const tmp65 = v65535(PressableOpacity, tmp61, user.id);
+                      const tmp65 = collapsed(PressableOpacity, tmp61, user.id);
                       cResult[38] = PressableOpacity;
                       cResult[39] = accessibilityRole;
                       cResult[40] = accessibilityState;
@@ -343,7 +343,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                 const obj8 = { style: accountInfo, children: null };
                 const items3 = [tmp33, tmp51];
                 obj8.children = items3;
-                const tmp56 = v65535(React4, obj8);
+                const tmp56 = collapsed(React4, obj8);
                 cResult[31] = tmp5.accountInfo;
                 cResult[32] = tmp33;
                 cResult[33] = tmp51;
@@ -359,7 +359,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             const obj9 = { style: tmp36, children: null };
             const items4 = [tmp48, tmp22];
             obj9.children = items4;
-            const tmp53 = v65535(React4, obj9);
+            const tmp53 = collapsed(React4, obj9);
             cResult[27] = tmp22;
             cResult[28] = tmp5.accountListTag;
             cResult[29] = tmp48;
@@ -375,7 +375,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         const obj10 = { style: tmp37, children: null };
         const items5 = [tmp41, tmp45];
         obj10.children = items5;
-        const tmp50 = v65535(React4, obj10);
+        const tmp50 = collapsed(React4, obj10);
         cResult[23] = tmp5.tagContainer;
         cResult[24] = tmp41;
         cResult[25] = tmp45;
@@ -427,7 +427,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[15] = tmp15;
   cResult[16] = userTag;
   tmp39 = userTag;
-}) : ((arg0) => {
+}) : (function AccountSwitcherListItem(arg0) {
   ({ user, onPressUser, showActiveAccountLabel } = arg0);
   if (showActiveAccountLabel === undefined) {
     showActiveAccountLabel = false;
@@ -497,18 +497,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     items4[1] = tmp18Result;
     obj11.children = items4;
-    const items5 = [v65535(React4, obj11), tmp8];
+    const items5 = [collapsed(React4, obj11), tmp8];
     obj10.children = items5;
-    items3[1] = v65535(React4, obj10);
+    items3[1] = collapsed(React4, obj10);
     obj8.children = items3;
-    items2[1] = v65535(React4, obj8);
+    items2[1] = collapsed(React4, obj8);
     if (undefined === trailing) {
       const obj16 = { user };
       trailing = options(closure_12, obj16);
     }
     items2[2] = trailing;
     obj6.children = items2;
-    return v65535(PressableOpacity, obj6, user.id);
+    return collapsed(PressableOpacity, obj6, user.id);
   }
   tmp8 = null;
   if (user.tokenStatus === MultiAccountTokenStatus.INVALID) {

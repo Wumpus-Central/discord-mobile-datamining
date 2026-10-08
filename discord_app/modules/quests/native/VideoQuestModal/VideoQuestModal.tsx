@@ -1,23 +1,23 @@
-// === Module 14944: VideoQuestModal ===
+// === Module 15206: VideoQuestModal ===
 
-// Module 14944 (VideoQuestModal)
+// Module 15206 (VideoQuestModal)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import spring from "spring" /* 5604 */;
-import QuestTypes from "QuestTypes" /* 5633 */;
-import AnalyticsActions from "AnalyticsActions" /* 7215 */;
-import QuestUtils from "QuestUtils" /* 10921 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 10971 */;
-import applyOrientationLock2 from "applyOrientationLock" /* 10977 */;
-import QuestDockGestureContext from "QuestDockGestureContext" /* 14913 */;
-import VideoQuestModalContextDefault from "VideoQuestModalContext" /* 14945 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import spring from "spring" /* 5374 */;
+import QuestTypes from "QuestTypes" /* 5980 */;
+import AnalyticsActions from "AnalyticsActions" /* 7395 */;
+import QuestUtils from "QuestUtils" /* 10572 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 11164 */;
+import applyOrientationLock2 from "applyOrientationLock" /* 11170 */;
+import QuestDockGestureContext from "QuestDockGestureContext" /* 15175 */;
+import VideoQuestModalContextDefault from "VideoQuestModalContext" /* 15207 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-let closure_6 = fn(14912).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
+let closure_6 = fn(15174).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -25,7 +25,7 @@ let c10 = -100;
 let c11 = 0.5625;
 let top = { mass: 1.9, damping: 18, stiffness: 80, overshootClamping: true };
 const VideoQuestModalSteps = { WATCH_VIDEO: 0, [0]: "WATCH_VIDEO", POST_WATCH_VIDEO: 1, [1]: "POST_WATCH_VIDEO" };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { root: { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM }, pillarboxed: { alignSelf: "center" }, wrapper: { flexDirection: "column", flexGrow: 1, flexShrink: 1, zIndex: 1 }, contentWrapper: { flex: 1 }, contentBackground: null, modalContentWrapper: null, backgroundWrapper: null };
 let obj5 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -47,7 +47,7 @@ const __initData2 = { code: "function VideoQuestModalTsx2(){const{withSpring,int
 const __initData3 = { code: "function VideoQuestModalTsx3(){const{withSpring,clamp,postWatchAnimationState,BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG,interpolate,CLOUDS_BACKGROUND_INVISIBLE_OFFSET_Y}=this.__closure;return{opacity:withSpring(clamp(postWatchAnimationState.get(),0,1),BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG),transform:[{translateY:withSpring(interpolate(postWatchAnimationState.get(),[0,1],[CLOUDS_BACKGROUND_INVISIBLE_OFFSET_Y,0]),BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG)}]};}" };
 const __initData4 = { code: "function VideoQuestModalTsx4(){const{withSpring,interpolate,postWatchAnimationState,safeAreaInsets,BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG}=this.__closure;return{transform:[{translateY:withSpring(interpolate(postWatchAnimationState.get(),[0,1],[safeAreaInsets.top,0]),BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG)}],opacity:withSpring(postWatchAnimationState.get(),BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG)};}" };
 let ReactCompilerGating = fn(558);
-let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((sourceQuestContent) => {
+let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function VideoQuestModalContent(sourceQuestContent) {
   let obj = initialStep(quest[9]);
   const cResult = obj.c(73);
   ({ onClose, initialStep } = sourceQuestContent);
@@ -419,7 +419,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((sour
     }
   }
   let obj2 = initialStep(quest[10]);
-}) : ((sourceQuestContent) => {
+}) : (function VideoQuestModalContent(sourceQuestContent) {
   ({ onClose, initialStep } = sourceQuestContent);
   sourceQuestContent = sourceQuestContent.sourceQuestContent;
   let obj = initialStep(quest[10]);
@@ -619,7 +619,7 @@ let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestModal.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((questContentPosition) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function VideoQuestModal(questContentPosition) {
   const cResult = questContentPosition(videoSessionId[9]).c(14);
   questContentPosition = questContentPosition.questContentPosition;
   const onClose = questContentPosition.onClose;
@@ -733,7 +733,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((questC
               questOrQuests: nonNullableQuest,
               questContentPosition,
               sourceQuestContent,
-              children() {
+              children: function renderVideoQuestModal() {
                 return closure_2_8(closure_2_19, { initialStep, onClose, sourceQuestContent });
               }
             })
@@ -752,7 +752,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((questC
     cResult[9] = obj2;
   }
   const tmpResult = questContentPosition(videoSessionId[24]);
-}) : ((questContentPosition) => {
+}) : (function VideoQuestModal(questContentPosition) {
   questContentPosition = questContentPosition.questContentPosition;
   const onClose = questContentPosition.onClose;
   const videoSessionId = questContentPosition.videoSessionId;
@@ -784,7 +784,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((questC
                 questOrQuests,
                 questContentPosition,
                 sourceQuestContent,
-                children() {
+                children: function renderVideoQuestModal() {
                   return closure_2_8(closure_2_19, { initialStep, onClose, sourceQuestContent });
                 }
               })

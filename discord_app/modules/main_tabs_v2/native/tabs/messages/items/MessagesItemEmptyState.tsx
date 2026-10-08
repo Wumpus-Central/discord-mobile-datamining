@@ -1,13 +1,13 @@
-// === Module 16058: MessagesItemEmptyState ===
+// === Module 16318: MessagesItemEmptyState ===
 
-// Module 16058 (MessagesItemEmptyState)
+// Module 16318 (MessagesItemEmptyState)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import RootNavigationRef from "RootNavigationRef" /* 4743 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import _modDef16018 from "module_16018" /* 16018 */;
+import RootNavigationRef from "RootNavigationRef" /* 4937 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import _modDef16278 from "module_16278" /* 16278 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { container: { padding: nativeDefault.space.PX_16, flex: 1, height: 325 }, containerImage: null, image: null, body: null, title: null };
 let obj3 = { padding: nativeDefault.space.PX_16, flex: 1, height: 325 };
 obj.containerImage = { marginBottom: nativeDefault.space.PX_16, flexShrink: 1, flexGrow: 1 };
@@ -29,7 +29,7 @@ let obj5 = { marginBottom: nativeDefault.space.PX_16, marginTop: nativeDefault.s
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/MessagesItemEmptyState.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesItemEmptyState() {
   const cResult = c.c(18);
   const tmp4 = closure_8();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -49,7 +49,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     first = cResult[0];
   }
   if (cResult[1] !== tmp4.image) {
-    let obj2 = { resizeMode: "contain", source: _modDef16018, style: tmp4.image };
+    let obj2 = { resizeMode: "contain", source: _modDef16278, style: tmp4.image };
     const tmp10 = timestampProducer(React4, obj2);
     cResult[1] = tmp4.image;
     cResult[2] = tmp10;
@@ -136,7 +136,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[5] = tmp12;
   tmp11 = tmp12;
   const obj7 = { style: tmp4.containerImage, children: tmp6 };
-}) : (() => {
+}) : (function MessagesItemEmptyState() {
   const tmp = closure_8();
   const obj = { style: tmp.container, collapsable: false, children: null };
   let obj2 = { style: tmp.containerImage, children: null };
@@ -151,7 +151,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       }
     }
   }, []);
-  obj3.source = _modDef16018;
+  obj3.source = _modDef16278;
   obj3.style = tmp.image;
   obj2.children = timestampProducer(React4, obj3);
   const items = [timestampProducer(hasOwnProperty, obj2), , , ];

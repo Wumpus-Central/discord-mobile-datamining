@@ -1,11 +1,11 @@
-// === Module 10787: WishlistViewMoreCard ===
+// === Module 12740: WishlistViewMoreCard ===
 
-// Module 10787 (WishlistViewMoreCard)
+// Module 12740 (WishlistViewMoreCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import WishlistItemCardDefault from "WishlistItemCard" /* 10782 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import WishlistItemCardDefault from "WishlistItemCard" /* 12735 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: c3, StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles(() => {
   const obj = { moreOverlay: null };
   const obj2 = {};
@@ -29,7 +29,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/native/WishlistViewMoreCard.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function WishlistViewMoreCard(arg0) {
   const cResult = c.c(18);
   ({ sku, size, recipientName, overflowCount, onPress } = arg0);
   const tmp4 = closure_8();
@@ -106,7 +106,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = sku;
   cResult[5] = tmp8;
   tmp7 = tmp8;
-}) : ((recipientName) => {
+}) : (function WishlistViewMoreCard(recipientName) {
   recipientName = recipientName.recipientName;
   ({ sku, size, overflowCount, onPress } = recipientName);
   const obj = { onPress, accessibilityLabel: null, children: null };

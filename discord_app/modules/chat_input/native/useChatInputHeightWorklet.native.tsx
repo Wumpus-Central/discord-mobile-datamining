@@ -1,8 +1,8 @@
-// === Module 11658: useChatInputHeightWorklet ===
+// === Module 11723: useChatInputHeightWorklet ===
 
-// Module 11658 (useChatInputHeightWorklet)
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import useChatInputMaxHeight from "useChatInputMaxHeight" /* 11659 */;
+// Module 11723 (useChatInputHeightWorklet)
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import useChatInputMaxHeight from "useChatInputMaxHeight" /* 11724 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,7 +19,7 @@ function getIsChatInputHeightWorkletEnabled() {
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/chat_input/native/useChatInputHeightWorklet.native.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((textFieldHeight) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useChatInputHeightWorklet(textFieldHeight) {
   const cResult = textFieldHeight(sharedValue[3]).c(14);
   textFieldHeight = textFieldHeight.textFieldHeight;
   const textFieldMinHeight = textFieldHeight.textFieldMinHeight;
@@ -175,7 +175,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((textFieldHeight)
   cResult[3] = fn;
   tmp5 = fn;
   const obj7 = { contentSize: sharedValue, textFieldHeight, getChatInputHeightAnimationTimingWorklet: textFieldHeight(sharedValue[5]).getChatInputHeightAnimationTimingWorklet, textFieldMinHeight };
-}) : ((textFieldHeight) => {
+}) : (function useChatInputHeightWorklet(textFieldHeight) {
   textFieldHeight = textFieldHeight.textFieldHeight;
   const textFieldMinHeight = textFieldHeight.textFieldMinHeight;
   let sharedValue;

@@ -1,17 +1,17 @@
-// === Module 16846: guild_channels/ChannelSubtitle ===
+// === Module 17125: guild_channels/ChannelSubtitle ===
 
-// Module 16846 (guild_channels/ChannelSubtitle)
+// Module 17125 (guild_channels/ChannelSubtitle)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import MessagePreviewMarkup from "MessagePreviewMarkup" /* 11709 */;
-import ChannelListLayout from "ChannelListLayout" /* 11712 */;
-import getChannelSubtitleData from "getChannelSubtitleData" /* 16195 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import MessagePreviewMarkup from "MessagePreviewMarkup" /* 11774 */;
+import ChannelListLayout from "ChannelListLayout" /* 11777 */;
+import getChannelSubtitleData from "getChannelSubtitleData" /* 16455 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
-let closure_3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelSubtitle(arg0) {
   const cResult = c.c(15);
   ({ muted, connected, channelId, guildId, layout, subtitle, textProps } = arg0);
   if (cResult[0] === channelId) {
@@ -89,7 +89,7 @@ let closure_3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   tmp5 = tmp12;
   tmp4 = Text;
   const tmpResult = getChannelSubtitleData;
-}) : ((arg0) => {
+}) : (function ChannelSubtitle(arg0) {
   ({ muted, textProps } = arg0);
   ({ connected, channelId, guildId, layout, subtitle } = arg0);
   const channelSubtitleData = getChannelSubtitleData.getChannelSubtitleData(subtitle);

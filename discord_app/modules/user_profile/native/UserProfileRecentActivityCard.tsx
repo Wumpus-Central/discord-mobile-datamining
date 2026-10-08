@@ -1,28 +1,28 @@
-// === Module 12939: UserProfileRecentActivityCard ===
+// === Module 13218: UserProfileRecentActivityCard ===
 
-// Module 12939 (UserProfileRecentActivityCard)
+// Module 13218 (UserProfileRecentActivityCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import AvatarUtils from "AvatarUtils" /* 1402 */;
-import StringUtils from "StringUtils" /* 2018 */;
-import native from "native" /* 4595 */;
-import shared from "shared" /* 4735 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Pressables from "Pressables" /* 5916 */;
-import FastImageDefault from "FastImage" /* 5981 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 6664 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6688 */;
-import utils from "utils" /* 7829 */;
-import ContentInventoryTypes from "ContentInventoryTypes" /* 8027 */;
-import UnknownGameIcon from "UnknownGameIcon" /* 8281 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8352 */;
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8353 */;
-import ContentInventoryActivityImageUtils from "ContentInventoryActivityImageUtils" /* 12837 */;
-import BadgesAll from "Badges" /* 12850 */;
-import TrendingType from "TrendingType" /* 12855 */;
-import useTrackUserProfileActivityActionDefault from "useTrackUserProfileActivityAction" /* 12862 */;
-import useTrackUserProfileActivityViewDefault from "useTrackUserProfileActivityView" /* 12863 */;
+import AvatarUtils from "AvatarUtils" /* 1414 */;
+import StringUtils from "StringUtils" /* 2030 */;
+import native from "native" /* 4787 */;
+import shared from "shared" /* 4929 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import Pressables from "Pressables" /* 6189 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 6841 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6865 */;
+import UnknownGameIcon from "UnknownGameIcon" /* 7662 */;
+import utils from "utils" /* 8247 */;
+import ContentInventoryTypes from "ContentInventoryTypes" /* 8435 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8850 */;
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8851 */;
+import ContentInventoryActivityImageUtils from "ContentInventoryActivityImageUtils" /* 12984 */;
+import BadgesAll from "Badges" /* 12999 */;
+import TrendingType from "TrendingType" /* 13004 */;
+import useTrackUserProfileActivityActionDefault from "useTrackUserProfileActivityAction" /* 13011 */;
+import useTrackUserProfileActivityViewDefault from "useTrackUserProfileActivityView" /* 13012 */;
 import noop from "module_19" /* 19 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
@@ -62,7 +62,7 @@ function getEntryText(entry) {
           const obj5 = { title: entry.extra.activity_name };
           let obj6 = obj5;
         } else {
-          obj6 = { title: "r" };
+          obj6 = { title: "create" };
         }
         return obj6;
       }
@@ -94,8 +94,8 @@ let obj = {
     return true;
   }
 };
-items[1] = { Badge: BadgesAll.NewGameBadge, predicate: fn(7829).isEntryNew };
-let obj2 = { Badge: BadgesAll.NewGameBadge, predicate: fn(7829).isEntryNew };
+items[1] = { Badge: BadgesAll.NewGameBadge, predicate: fn(8247).isEntryNew };
+let obj2 = { Badge: BadgesAll.NewGameBadge, predicate: fn(8247).isEntryNew };
 items[2] = {
   Badge: BadgesAll.StreakBadge,
   predicate(entry) {
@@ -153,7 +153,7 @@ items[5] = {
     return tmp3;
   }
 };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj7 = { body: null, content: null, imageContainer: null, imageAspectRatio: null, posterImageAspectRatio: null, largeImage: null, smallImageBackground: null, smallImage: null, badges: null, badgeCell: null };
 let obj6 = {
   Badge: BadgesAll.MarathonBadge,
@@ -182,7 +182,7 @@ const obj10 = { flexDirection: "row", flexWrap: "wrap", alignItems: "center", ro
 obj7.badgeCell = { width: "50%", paddingRight: nativeDefault.space.PX_8 };
 let closure_9 = createStyles.createStyles(obj7);
 let ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((entry) => {
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GamingEntryBadges(entry) {
   let tmp2 = dependencyMap;
   const cResult = badgeCell(576).c(14);
   badgeCell = entry.entry;
@@ -212,25 +212,25 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((entry) => {
     }
   }
   if (cResult[7] !== badgeCell) {
-    class C {
+    class E {
       constructor(arg0) {
         return entry.predicate(entry);
       }
     }
     cResult[7] = badgeCell;
-    cResult[8] = C;
+    cResult[8] = E;
   } else {
-    class C {
+    class E {
       constructor(arg0) {
         return entry.predicate(entry);
       }
     }
   }
-  const found = items.filter(C);
+  const found = items.filter(E);
   let TopGameBadge = importAll;
   let obj = badgeCell(576);
   if (tmpResult.isTopGameEntry(badgeCell)) {
-    class C {
+    class E {
       constructor(arg0) {
         return entry.predicate(entry);
       }
@@ -242,7 +242,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((entry) => {
     obj3.children = tmp2;
     const tmp10 = closure_6(View, obj3);
   } else {
-    class C {
+    class E {
       constructor(arg0) {
         return entry.predicate(entry);
       }
@@ -257,8 +257,8 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((entry) => {
   cResult[4] = "user-profile";
   cResult[5] = str.badges;
   cResult[6] = tmp10;
-  tmpResult = badgeCell(8027);
-}) : ((entry) => {
+  tmpResult = badgeCell(8435);
+}) : (function GamingEntryBadges(entry) {
   entry = entry.entry;
   const tmp = closure_9();
   const badgeCell = tmp;
@@ -279,7 +279,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((entry) => {
   return closure_6(BadgesAll.BadgesContainer, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_11 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((poster) => {
+let closure_11 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function EntryImage(poster) {
   const cResult = c.c(26);
   ({ largeImage, smallImage } = poster);
   const tmp4 = closure_9();
@@ -408,7 +408,7 @@ let closure_11 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((post
     tmp7 = items2;
   }
   obj2 = native;
-}) : ((poster) => {
+}) : (function EntryImage(poster) {
   ({ largeImage, smallImage } = poster);
   const tmp = closure_9();
   let src;
@@ -462,7 +462,7 @@ let closure_11 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((post
   obj = native;
 }));
 ReactCompilerGating = fn(558);
-let closure_12 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_12 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function EntryCardBody(arg0) {
   const cResult = c.c(24);
   ({ entry, largeImage, smallImage, title, subtitle, style } = arg0);
   const tmp4 = closure_9();
@@ -576,7 +576,7 @@ let closure_12 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
   cResult[4] = tmp5;
   cResult[5] = tmp8;
   tmp7 = tmp8;
-}) : ((arg0) => {
+}) : (function EntryCardBody(arg0) {
   ({ entry, title, subtitle } = arg0);
   ({ largeImage, smallImage, style } = arg0);
   const tmp = closure_9();
@@ -617,7 +617,7 @@ const obj11 = { width: "50%", paddingRight: nativeDefault.space.PX_8 };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileRecentActivityCard.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileRecentActivityCard(arg0) {
   const cResult = c.c(33);
   ({ user, entry, style } = arg0);
   if (cResult[0] !== entry) {
@@ -637,13 +637,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       if (cResult[4] === user) {
         let tmp8 = cResult[5];
       }
-      const tmp9 = tmp6(12862)(tmp8);
+      const tmp9 = tmp6(13011)(tmp8);
       _require = tmp9;
       if (cResult[6] === tmp9) {
         if (cResult[7] === user.id) {
           let tmp10 = cResult[8];
         }
-        tmp6(12863)(tmp10);
+        tmp6(13012)(tmp10);
         let application_id;
         if ("application_id" in entry.extra) {
           application_id = entry.extra.application_id;
@@ -652,7 +652,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           if (cResult[10] === user.id) {
             let tmp14 = cResult[11];
           }
-          const tmp15 = tmp6(8353)(tmp14);
+          const tmp15 = tmp6(8851)(tmp14);
           importDefault = tmp15;
           if (cResult[12] === tmp9) {
             if (cResult[13] === tmp15) {
@@ -800,7 +800,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = user;
   cResult[5] = obj6;
   tmp8 = obj6;
-}) : ((style) => {
+}) : (function UserProfileRecentActivityCard(style) {
   ({ user, entry } = style);
   closure_1 = undefined;
   const imageForContentEntry = ContentInventoryActivityImageUtils.useImageForContentEntry({ entry, showCoverImage: false, trackingSource: "user_profile_recent_activity_native" });

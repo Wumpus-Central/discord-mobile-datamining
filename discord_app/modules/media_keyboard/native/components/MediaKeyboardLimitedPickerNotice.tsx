@@ -1,23 +1,23 @@
-// === Module 10401: MediaKeyboardLimitedPickerNotice ===
+// === Module 9998: MediaKeyboardLimitedPickerNotice ===
 
-// Module 10401 (MediaKeyboardLimitedPickerNotice)
+// Module 9998 (MediaKeyboardLimitedPickerNotice)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({ container: { flexDirection: "row", paddingHorizontal: 16, paddingVertical: 16, alignItems: "center" }, absoluteContainer: { position: "absolute" }, text: { flex: 1 }, button: { marginLeft: 16 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardLimitedPickerNotice.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function MediaKeyboardLimitedPickerNotice(arg0) {
   const cResult = c.c(19);
   ({ onPress, onHeightChange } = arg0);
   const tmp4 = closure_6();
@@ -114,7 +114,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = absoluteContainer;
   cResult[4] = items1;
   tmp7 = items1;
-}) : ((onHeightChange) => {
+}) : (function MediaKeyboardLimitedPickerNotice(onHeightChange) {
   onHeightChange = onHeightChange.onHeightChange;
   const tmp = closure_6();
   const items = [onHeightChange];

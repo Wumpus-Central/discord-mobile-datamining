@@ -1,21 +1,21 @@
-// === Module 12319: ChatPlaceholder ===
+// === Module 12417: ChatPlaceholder ===
 
-// Module 12319 (ChatPlaceholder)
+// Module 12417 (ChatPlaceholder)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6478 */;
-import useChatPlaceholderAnimatedStylesDefault from "useChatPlaceholderAnimatedStyles" /* 12320 */;
-import getChatPlaceholderRowHeightDefault from "getChatPlaceholderRowHeight" /* 12321 */;
-import ChatPlaceholderRowDefault from "ChatPlaceholderRow" /* 12322 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6656 */;
+import useChatPlaceholderAnimatedStylesDefault from "useChatPlaceholderAnimatedStyles" /* 12418 */;
+import getChatPlaceholderRowHeightDefault from "getChatPlaceholderRowHeight" /* 12419 */;
+import ChatPlaceholderRowDefault from "ChatPlaceholderRow" /* 12420 */;
 import noop from "module_19" /* 19 */;
 
-const ReanimatedRexportDefault = tmp14(4618);
+const ReanimatedRexportDefault = tmp14(4810);
 require = fn;
-let closure_4 = fn(9100).useChatInputContainerHeight;
+let closure_4 = fn(9318).useChatInputContainerHeight;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { placeholder: null };
 let obj3 = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
@@ -25,7 +25,7 @@ obj3.overflow = "hidden";
 obj.placeholder = obj3;
 let closure_6 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
-let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useLinesForRowIndexCallback() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [];
@@ -53,7 +53,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp3 = cResult[1];
   }
   return tmp3;
-}) : (() => {
+}) : (function useLinesForRowIndexCallback() {
   noop.useRef([]);
   return noop.useCallback((arg0) => {
     let tmp2 = ref.current[arg0];
@@ -68,7 +68,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }, []);
 });
 ReactCompilerGating = fn(558);
-let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBottomSafeAreaInset() {
   const cResult = c.c(4);
   const rect = useSafeAreaInsetsDefault();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -92,7 +92,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[2] = sum;
   cResult[3] = obj3;
   tmp7 = obj3;
-}) : (() => {
+}) : (function useBottomSafeAreaInset() {
   const rect = useSafeAreaInsetsDefault();
   const insets = useSafeAreaInsetsKeyboardAwareDefault({ isKeyboardAwareOnAndroid: false, includeKeyboardHeight: true }).insets;
   return { containerBottomInset: insets.bottom - rect.bottom, windowVerticalInset: rect.top + insets.bottom };
@@ -101,7 +101,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat/native/placeholder/ChatPlaceholder.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((screenIndex) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ChatPlaceholder(screenIndex) {
   let diff;
   let sum1;
   let sum2;
@@ -189,7 +189,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((screen
   cResult[9] = items1;
   cResult[10] = sum1;
   tmp12 = items1;
-}) : ((screenIndex) => {
+}) : (function ChatPlaceholder(screenIndex) {
   let height;
   let containerBottomInset;
   closure_4 = undefined;

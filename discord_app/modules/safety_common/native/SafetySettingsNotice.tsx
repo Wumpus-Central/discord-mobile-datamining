@@ -1,17 +1,17 @@
-// === Module 14513: SafetySettingsNotice ===
+// === Module 14773: SafetySettingsNotice ===
 
-// Module 14513 (SafetySettingsNotice)
+// Module 14773 (SafetySettingsNotice)
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import SafetySettingsUtils from "SafetySettingsUtils" /* 14514 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import SafetySettingsUtils from "SafetySettingsUtils" /* 14774 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(8108).SafetySettingsNoticeAction;
+let closure_4 = fn(7015).SafetySettingsNoticeAction;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { blockedIgnoredRedirect: { display: "flex", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.xs, borderColor: nativeDefault.colors.TEXT_LINK, borderWidth: 1, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -19,7 +19,7 @@ let obj3 = { display: "flex", flexDirection: "row", alignItems: "center", gap: n
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/safety_common/native/SafetySettingsNotice.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((noticeType) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SafetySettingsNotice(noticeType) {
   const cResult = labelHook(noticeType[7]).c(17);
   ({ label, labelHook } = noticeType);
   noticeType = noticeType.noticeType;
@@ -122,7 +122,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((noticeType) => {
   cResult[5] = fn2;
   tmp8 = fn2;
   const obj = labelHook(noticeType[7]);
-}) : ((noticeType) => {
+}) : (function SafetySettingsNotice(noticeType) {
   ({ label, labelHook } = noticeType);
   noticeType = noticeType.noticeType;
   const count = noticeType.count;

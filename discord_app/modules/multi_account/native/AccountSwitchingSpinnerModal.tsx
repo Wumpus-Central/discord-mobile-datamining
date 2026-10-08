@@ -1,18 +1,18 @@
-// === Module 17609: AccountSwitchingSpinnerModal ===
+// === Module 17891: AccountSwitchingSpinnerModal ===
 
-// Module 17609 (AccountSwitchingSpinnerModal)
+// Module 17891 (AccountSwitchingSpinnerModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5975 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6158 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles({ switchingSpinnerContainer: { flex: 1, alignItems: "center", justifyContent: "center" } });
 const ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function AccountSwitchingSpinnerModal() {
   const cResult = c.c(4);
   const tmp4 = closure_4();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -36,7 +36,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp10 = cResult[3];
   }
   return tmp10;
-}) : (() => {
+}) : (function AccountSwitchingSpinnerModal() {
   const obj = { style: closure_4().switchingSpinnerContainer, accessible: true, accessibilityLabel: null, children: null };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.n8qMH0);

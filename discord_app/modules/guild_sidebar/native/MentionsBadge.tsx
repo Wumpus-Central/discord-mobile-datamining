@@ -1,8 +1,8 @@
-// === Module 16185: MentionsBadge ===
+// === Module 16445: MentionsBadge ===
 
-// Module 16185 (MentionsBadge)
+// Module 16445 (MentionsBadge)
 import c from "c" /* 576 */;
-import native from "native" /* 1188 */;
+import native from "native" /* 1200 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/native/MentionsBadge.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function MentionsBadge(arg0) {
   const cResult = c.c(3);
   ({ mentionsCount, isMentionLowImportance } = arg0);
   if (cResult[0] === isMentionLowImportance) {
@@ -25,7 +25,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = mentionsCount;
   cResult[2] = tmp5;
   tmp4 = tmp5;
-}) : ((arg0) => {
+}) : (function MentionsBadge(arg0) {
   ({ mentionsCount, isMentionLowImportance } = arg0);
   return jsx(native.Badge, { value, isMentionLowImportance });
 });

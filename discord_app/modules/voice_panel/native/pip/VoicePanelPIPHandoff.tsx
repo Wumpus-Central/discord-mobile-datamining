@@ -1,13 +1,13 @@
-// === Module 11922: VoicePanelPIPHandoff ===
+// === Module 11995: VoicePanelPIPHandoff ===
 
-// Module 11922 (VoicePanelPIPHandoff)
+// Module 11995 (VoicePanelPIPHandoff)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 fn(558);
 const ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((subscribe) => {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePIPCardsSettled(subscribe) {
   const cResult = c.c(2);
   if (cResult[0] !== subscribe) {
     const fn = function n() {
@@ -20,7 +20,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((subscribe) => {
     tmp2 = cResult[1];
   }
   return noop.useSyncExternalStore(subscribe.subscribe, tmp2);
-}) : ((subscribe) => {
+}) : (function usePIPCardsSettled(subscribe) {
   const items = [subscribe];
   return noop.useSyncExternalStore(subscribe.subscribe, noop.useCallback(() => subscribe.arePIPCardsSettled(), items));
 });
@@ -121,7 +121,7 @@ prototype["recount"] = function recount() {
 
 export default VoicePanelPIPHandoff;
 export const usePIPCardsSettled = tmp2;
-export const usePIPPanelLayoutCommitted = ReactCompilerGating.isReactCompilerEnabled() ? ((subscribe) => {
+export const usePIPPanelLayoutCommitted = ReactCompilerGating.isReactCompilerEnabled() ? (function usePIPPanelLayoutCommitted(subscribe) {
   const cResult = c.c(2);
   if (cResult[0] !== subscribe) {
     const fn = function n() {
@@ -134,7 +134,7 @@ export const usePIPPanelLayoutCommitted = ReactCompilerGating.isReactCompilerEna
     tmp2 = cResult[1];
   }
   return noop.useSyncExternalStore(subscribe.subscribe, tmp2);
-}) : ((subscribe) => {
+}) : (function usePIPPanelLayoutCommitted(subscribe) {
   const items = [subscribe];
   return noop.useSyncExternalStore(subscribe.subscribe, noop.useCallback(() => subscribe.isPanelLayoutCommitted(), items));
 });

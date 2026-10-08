@@ -1,35 +1,35 @@
-// === Module 14736: FamilyCenterRequestsPage ===
+// === Module 14997: FamilyCenterRequestsPage ===
 
-// Module 14736 (FamilyCenterRequestsPage)
+// Module 14997 (FamilyCenterRequestsPage)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import _modDef2521 from "module_2521" /* 2521 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6626 */;
-import useUserLinks from "useUserLinks" /* 8328 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8329 */;
-import useHelpLineVisibility from "useHelpLineVisibility" /* 9840 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 11544 */;
-import FamilyCenterParentalConsentNoticeDefault from "FamilyCenterParentalConsentNotice" /* 14697 */;
-import FamilyCenterLinkingBannerDefault from "FamilyCenterLinkingBanner" /* 14737 */;
-import FamilyCenterAcceptedLinksDefault from "FamilyCenterAcceptedLinks" /* 14739 */;
-import FamilyCenterPendingLinksDefault from "FamilyCenterPendingLinks" /* 14748 */;
+import _modDef2565 from "module_2565" /* 2565 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6803 */;
+import useUserLinks from "useUserLinks" /* 7711 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 7712 */;
+import useHelpLineVisibility from "useHelpLineVisibility" /* 10403 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 11558 */;
+import FamilyCenterParentalConsentNoticeDefault from "FamilyCenterParentalConsentNotice" /* 14958 */;
+import FamilyCenterLinkingBannerDefault from "FamilyCenterLinkingBanner" /* 14998 */;
+import FamilyCenterAcceptedLinksDefault from "FamilyCenterAcceptedLinks" /* 15000 */;
+import FamilyCenterPendingLinksDefault from "FamilyCenterPendingLinks" /* 15009 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
-const FamilyCenterConstants = fn(7062);
+const FamilyCenterConstants = fn(7248);
 ({ MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS: hasOwnProperty, MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS: metroRequire } = FamilyCenterConstants);
-const THROUGHLINE_URL = fn(9797).THROUGHLINE_URL;
+const THROUGHLINE_URL = fn(10361).THROUGHLINE_URL;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let createStyles = fn(4896);
+let createStyles = fn(5090);
 let obj2 = { container: { display: "flex", paddingTop: nativeDefault.space.PX_12, marginTop: nativeDefault.space.PX_12, borderTopColor: nativeDefault.colors.BORDER_SUBTLE, borderTopWidth: 1 } };
 let closure_10 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCenterMaxConnectionsBlurb() {
   const cResult = c.c(9);
   let container = closure_10();
   const hasMaxConnections = useUserLinks.useHasMaxConnections();
@@ -37,7 +37,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   if (cResult[0] !== tmp6) {
     const intl = util.intl;
     const obj3 = { maxConnections: tmp6 };
-    const formatToPlainStringResult = intl.formatToPlainString(_modDef2521["1/PzIj"], obj3);
+    const formatToPlainStringResult = intl.formatToPlainString(_modDef2565["1/PzIj"], obj3);
     cResult[0] = tmp6;
     cResult[1] = formatToPlainStringResult;
     let tmp7 = formatToPlainStringResult;
@@ -47,7 +47,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   if (cResult[2] !== tmp6) {
     const intl2 = util.intl;
     const obj4 = { maxConnections: tmp6 };
-    const formatToPlainStringResult1 = intl2.formatToPlainString(_modDef2521.RcTgiE, obj4);
+    const formatToPlainStringResult1 = intl2.formatToPlainString(_modDef2565.RcTgiE, obj4);
     cResult[2] = tmp6;
     cResult[3] = formatToPlainStringResult1;
     let tmp9 = formatToPlainStringResult1;
@@ -77,12 +77,12 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     cResult[8] = tmp18;
   }
   const tmpResult = useAgeSpecificText;
-}) : (() => {
+}) : (function FamilyCenterMaxConnectionsBlurb() {
   const tmp = closure_10();
   const hasMaxConnections = useUserLinks.useHasMaxConnections();
   useAgeSpecificText;
   const intl = util.intl;
-  intl.formatToPlainString(_modDef2521["1/PzIj"], { maxConnections: useIsInAdultAgeGroupDefault() ? hasOwnProperty : timestampProducer });
+  intl.formatToPlainString(_modDef2565["1/PzIj"], { maxConnections: useIsInAdultAgeGroupDefault() ? hasOwnProperty : timestampProducer });
   const intl2 = util.intl;
   let tmp10 = null;
   if (hasMaxConnections) {
@@ -93,7 +93,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   return tmp10;
 });
-createStyles = fn(4896);
+createStyles = fn(5090);
 let obj6 = { container: null, supportHeader: null };
 let obj3 = { display: "flex", paddingTop: nativeDefault.space.PX_12, marginTop: nativeDefault.space.PX_12, borderTopColor: nativeDefault.colors.BORDER_SUBTLE, borderTopWidth: 1 };
 obj6.container = { display: "flex", marginTop: nativeDefault.space.PX_16 };
@@ -101,7 +101,7 @@ let obj7 = { display: "flex", marginTop: nativeDefault.space.PX_16 };
 obj6.supportHeader = { marginBottom: nativeDefault.space.PX_4 };
 let closure_12 = createStyles.createStyles(obj6);
 ReactCompilerGating = fn(558);
-let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCenterHelpLineInfo() {
   const cResult = c.c(12);
   const tmp4 = closure_12();
   const shouldShowHelplineLink = useHelpLineVisibility.useShouldShowHelplineLink();
@@ -115,7 +115,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         ({ container, supportHeader } = tmp4);
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
           const intl3 = util.intl;
-          const stringResult = intl3.string(_modDef2521["7/tVhv"]);
+          const stringResult = intl3.string(_modDef2565["7/tVhv"]);
           cResult[3] = stringResult;
           let tmp13 = stringResult;
         } else {
@@ -161,31 +161,31 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   if (shouldShowHelplineLink) {
     const intl2 = util.intl;
-    let formatResult = intl2.format(_modDef2521["KOwsf/"], { helpLink: "https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line" });
+    let formatResult = intl2.format(_modDef2565["KOwsf/"], { helpLink: "https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line" });
   } else {
     formatResult = null;
     if (shouldShowThroughlineLink) {
       const intl = util.intl;
       const obj7 = { helpLink: THROUGHLINE_URL };
-      formatResult = intl.format(_modDef2521["6tsC8u"], obj7);
+      formatResult = intl.format(_modDef2565["6tsC8u"], obj7);
     }
   }
   cResult[0] = shouldShowHelplineLink;
   cResult[1] = shouldShowThroughlineLink;
   cResult[2] = formatResult;
-}) : (() => {
+}) : (function FamilyCenterHelpLineInfo() {
   const tmp = closure_12();
   const shouldShowHelplineLink = useHelpLineVisibility.useShouldShowHelplineLink();
   useHelpLineVisibility;
   if (shouldShowHelplineLink) {
     const intl2 = util.intl;
-    let formatResult = intl2.format(_modDef2521["KOwsf/"], { helpLink: "https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line" });
+    let formatResult = intl2.format(_modDef2565["KOwsf/"], { helpLink: "https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line" });
   } else {
     formatResult = null;
     if (tmp6) {
       const intl = util.intl;
       const obj2 = { helpLink: THROUGHLINE_URL };
-      formatResult = intl.format(_modDef2521["6tsC8u"], obj2);
+      formatResult = intl.format(_modDef2565["6tsC8u"], obj2);
     }
   }
   let tmp11 = null;
@@ -193,7 +193,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const obj3 = { style: tmp.container, children: null };
     const obj4 = { style: tmp.supportHeader, variant: "heading-sm/semibold", children: null };
     const intl3 = util.intl;
-    obj4.children = intl3.string(_modDef2521["7/tVhv"]);
+    obj4.children = intl3.string(_modDef2565["7/tVhv"]);
     const items = [closure_1_8(Text_Text.Text, obj4), ];
     const obj5 = { variant: "text-xs/medium", color: "text-muted", children: formatResult };
     items[1] = closure_1_8(Text_Text.Text, obj5);
@@ -202,7 +202,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   return tmp11;
 });
-createStyles = fn(4896);
+createStyles = fn(5090);
 const obj11 = { scrollView: { flex: 1 }, container: null };
 const obj8 = { marginBottom: nativeDefault.space.PX_4 };
 obj11.container = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
@@ -212,7 +212,7 @@ const obj12 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nat
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterRequestsPage.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCenterRequestsPage() {
   const cResult = c.c(11);
   const tmp4 = closure_14();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -262,7 +262,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[10] = tmp27;
   tmp26 = tmp27;
   const obj4 = { style: tmp4.scrollView, children: tmp21 };
-}) : (() => {
+}) : (function FamilyCenterRequestsPage() {
   const tmp = closure_14();
   const obj = { style: tmp.scrollView, children: null };
   const obj2 = { bottom: true, children: null };

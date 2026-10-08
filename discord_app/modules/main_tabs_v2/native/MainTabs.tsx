@@ -1,26 +1,26 @@
-// === Module 15963: MainTabs ===
+// === Module 16223: MainTabs ===
 
-// Module 15963 (MainTabs)
+// Module 16223 (MainTabs)
 import c from "c" /* 576 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import native from "native" /* 4595 */;
-import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4738 */;
-import ThemedGradientDefault from "ThemedGradient" /* 5918 */;
-import useActiveTheme from "useActiveTheme" /* 7520 */;
-import MainTabsNavigatorPanelDefault from "MainTabsNavigatorPanel" /* 15964 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import native from "native" /* 4787 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4932 */;
+import useActiveTheme from "useActiveTheme" /* 9243 */;
+import ThemedGradientDefault from "ThemedGradient" /* 10211 */;
+import MainTabsNavigatorPanelDefault from "MainTabsNavigatorPanel" /* 16224 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({ container: { flex: 1 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/MainTabs.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function MainTabs() {
   const cResult = c.c(15);
   const tmp5 = useColorThemeBackgroundDefault();
   const isCustomThemeActive = useActiveTheme.useIsCustomThemeActive();
@@ -89,7 +89,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[2] = obj6;
   tmp9 = obj6;
   const tmp8 = useSafeAreaInsetsDefault();
-}) : (() => {
+}) : (function MainTabs() {
   const tmp = useColorThemeBackgroundDefault();
   const isCustomThemeActive = useActiveTheme.useIsCustomThemeActive();
   const rect = useSafeAreaInsetsDefault();

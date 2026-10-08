@@ -1,7 +1,7 @@
-// === Module 8100: VirtualBackgroundsIosExperiment ===
+// === Module 5267: VirtualBackgroundsIosExperiment ===
 
-// Module 8100 (VirtualBackgroundsIosExperiment)
-import ApexExperiment from "ApexExperiment" /* 1440 */;
+// Module 5267 (VirtualBackgroundsIosExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-08-virtual-backgrounds-ios", kind: "user", defaultConfig: { enabled: false }, variations: null };

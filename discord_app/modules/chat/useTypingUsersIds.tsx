@@ -1,9 +1,9 @@
-// === Module 11593: useTypingUsersIds ===
+// === Module 11656: useTypingUsersIds ===
 
-// Module 11593 (useTypingUsersIds)
-import RelationshipStore from "RelationshipStore" /* 4525 */;
-import TypingStore from "TypingStore" /* 11592 */;
-import UserStore from "UserStore" /* 1377 */;
+// Module 11656 (useTypingUsersIds)
+import RelationshipStore from "RelationshipStore" /* 4717 */;
+import TypingStore from "TypingStore" /* 11655 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat/useTypingUsersIds.tsx");
 
-export const useTypingUserIds = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export const useTypingUserIds = ReactCompilerGating.isReactCompilerEnabled() ? (function useTypingUserIds(arg0, arg1) {
   _require = arg0;
   let MAX_SAFE_INTEGER = arg1;
   const cResult = require("c").c(5);
@@ -77,7 +77,7 @@ export const useTypingUserIds = ReactCompilerGating.isReactCompilerEnabled() ? (
   const obj = require("c");
   tmp = _require;
   tmp2 = MAX_SAFE_INTEGER;
-}) : ((arg0) => {
+}) : (function useTypingUserIds(arg0) {
   _require = arg0;
   let MAX_SAFE_INTEGER = arg1;
   if (arg1 === undefined) {

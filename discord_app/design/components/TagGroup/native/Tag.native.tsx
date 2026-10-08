@@ -1,18 +1,18 @@
-// === Module 14273: Tag ===
+// === Module 14097: Tag ===
 
-// Module 14273 (Tag)
+// Module 14097 (Tag)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import TagGroupTypes from "TagGroupTypes" /* 14271 */;
-import TagGraphic from "TagGraphic" /* 14274 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import TagGroupTypes from "TagGroupTypes" /* 14095 */;
+import TagGraphic from "TagGraphic" /* 14098 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles((arg0, arg1) => {
   const obj = { tag: null, inline: null, label: null };
   const obj2 = { flexDirection: "row", alignItems: "center", gap: TagGroupTypes.getTagGap(arg0), minHeight: null, paddingVertical: null, paddingHorizontal: null, borderWidth: null, borderRadius: null, borderColor: null, backgroundColor: null };
@@ -32,7 +32,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/TagGroup/native/Tag.native.tsx");
 
-export const Tag = ReactCompilerGating.isReactCompilerEnabled() ? ((variant) => {
+export const Tag = ReactCompilerGating.isReactCompilerEnabled() ? (function Tag(variant) {
   const cResult = c.c(16);
   ({ item, size, inline } = variant);
   const tmp4 = closure_6(size, variant.variant);
@@ -103,7 +103,7 @@ export const Tag = ReactCompilerGating.isReactCompilerEnabled() ? ((variant) => 
   cResult[1] = inline;
   cResult[2] = items1;
   tmp5 = items1;
-}) : ((variant) => {
+}) : (function Tag(variant) {
   ({ item, size, inline } = variant);
   const tmp = closure_6(size, variant.variant);
   const items = [tmp.tag, ];

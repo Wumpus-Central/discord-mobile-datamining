@@ -1,19 +1,19 @@
-// === Module 5608: ButtonHooks ===
+// === Module 5381: ButtonHooks ===
 
-// Module 5608 (ButtonHooks)
+// Module 5381 (ButtonHooks)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import useToken from "useToken" /* 4586 */;
-import native from "native" /* 4595 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import shared from "shared" /* 4735 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Icon from "Icon" /* 5603 */;
-import spring from "spring" /* 5604 */;
-import springPresets from "springPresets" /* 5605 */;
-import ButtonConstants from "ButtonConstants" /* 5607 */;
-import useFontScale from "useFontScale" /* 5609 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import useToken from "useToken" /* 4778 */;
+import native from "native" /* 4787 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import shared from "shared" /* 4929 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import spring from "spring" /* 5374 */;
+import Icon from "Icon" /* 5377 */;
+import springPresets from "springPresets" /* 5378 */;
+import ButtonConstants from "ButtonConstants" /* 5380 */;
+import useFontScale from "useFontScale" /* 5382 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -136,12 +136,12 @@ function getButtonColorTokens(arg0) {
   }
 }
 let c4 = "rgba(0,0,0,0.001)";
-let createStyles = fn(4896);
+let createStyles = fn(5090);
 const backgroundInactive = createStyles.experimental_createToken(() => "#161CBB");
-createStyles = fn(4896);
+createStyles = fn(5090);
 const backgroundPressed = createStyles.experimental_createToken(() => "#1318A0");
 let ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useProfileThemedButtonStyles(arg0) {
   const cResult = c.c(26);
   const themeContext = native.useThemeContext();
   ({ primaryColor, theme } = themeContext);
@@ -214,7 +214,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             tmp33 = cResult[13];
           }
           if (cResult[14] !== tmp31) {
-            const obj5 = { backgroundColor: tmp31, borderColor: tmp33, color: "Array" };
+            const obj5 = { backgroundColor: tmp31, borderColor: tmp33, color: "r" };
             cResult[14] = tmp31;
             cResult[15] = obj5;
             let tmp35 = obj5;
@@ -247,7 +247,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                 tmp18 = cResult[23];
               }
               if (cResult[24] !== tmp16) {
-                const obj6 = { backgroundColor: tmp16, borderColor: tmp18, color: "Array" };
+                const obj6 = { backgroundColor: tmp16, borderColor: tmp18, color: "r" };
                 cResult[24] = tmp16;
                 cResult[25] = obj6;
                 let tmp20 = obj6;
@@ -288,7 +288,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
   }
   return tmp5;
-}) : ((arg0) => {
+}) : (function useProfileThemedButtonStyles(arg0) {
   _require = arg0;
   const themeContext = require("native").useThemeContext();
   const primaryColor = themeContext.primaryColor;
@@ -325,7 +325,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       } else {
         setColorOpacity3Result = setColorOpacity3("white", 0.34);
       }
-      const obj9 = { backgroundColor: null, borderColor: null, color: "Array" };
+      const obj9 = { backgroundColor: null, borderColor: null, color: "r" };
       items2[1] = setColorOpacity3Result;
       obj9.backgroundColor = items2;
       const items3 = [c4, c4];
@@ -346,7 +346,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       } else {
         darkenColorResult1 = obj3.setColorOpacity("white", 0.2);
       }
-      const obj11 = { backgroundColor: null, borderColor: null, color: "Array" };
+      const obj11 = { backgroundColor: null, borderColor: null, color: "r" };
       items4[1] = darkenColorResult1;
       obj11.backgroundColor = items4;
       const items5 = [c4, c4];
@@ -359,10 +359,10 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 });
 let closure_7 = tmp2;
 fn(558);
-createStyles = fn(4896);
+createStyles = fn(5090);
 const styleProperties = createStyles.createStyleProperties(getButtonColorTokens);
 ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useButtonTextColorStyles(arg0) {
   const cResult = c.c(4);
   const tmp4 = closure_7(arg0);
   if (cResult[0] !== arg0) {
@@ -390,7 +390,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp10 = cResult[3];
   }
   return tmp10;
-}) : ((arg0) => {
+}) : (function useButtonTextColorStyles(arg0) {
   const tmp = closure_7(arg0);
   let color;
   const token = useToken.useToken(getButtonColorTokens(arg0).foregroundInactive);
@@ -406,7 +406,7 @@ let closure_10 = tmp5;
 const __initData = { code: "function ButtonHooksNativeTsx1(){const{interpolateColor,pressed,inactiveColor,pressedColor}=this.__closure;return{tintColor:interpolateColor(pressed.get(),[0,1],[inactiveColor,pressedColor])};}" };
 const __initData2 = { code: "function ButtonHooksNativeTsx2(){const{interpolateColor,pressed,inactiveColor,pressedColor}=this.__closure;return{tintColor:interpolateColor(pressed.get(),[0,1],[inactiveColor,pressedColor])};}" };
 ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useForegroundColor(arg0) {
   const cResult = c.c(2);
   if (cResult[0] !== arg0) {
     const tmp6 = getButtonColorTokens(arg0);
@@ -417,11 +417,13 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp4 = cResult[1];
   }
   return useToken.useToken(tmp4.foregroundInactive);
-}) : ((arg0) => useToken.useToken(getButtonColorTokens(arg0).foregroundInactive));
+}) : (function useForegroundColor(arg0) {
+  return useToken.useToken(getButtonColorTokens(arg0).foregroundInactive);
+});
 ReactCompilerGating = fn(558);
 const __initData3 = { code: "function ButtonHooksNativeTsx3(){const{themedStyles,colors,interpolateColor,pressed}=this.__closure;var _themedStyles$backgro,_themedStyles,_themedStyles$borderC,_themedStyles2;const backgroundColor=(_themedStyles$backgro=(_themedStyles=themedStyles)===null||_themedStyles===void 0?void 0:_themedStyles.backgroundColor)!==null&&_themedStyles$backgro!==void 0?_themedStyles$backgro:[colors.backgroundInactive,colors.backgroundPressed];const borderColor=(_themedStyles$borderC=(_themedStyles2=themedStyles)===null||_themedStyles2===void 0?void 0:_themedStyles2.borderColor)!==null&&_themedStyles$borderC!==void 0?_themedStyles$borderC:[colors.borderInactive,colors.borderPressed];return{backgroundColor:interpolateColor(pressed.get(),[0,1],backgroundColor),borderColor:interpolateColor(pressed.get(),[0,1],borderColor)};}" };
 const __initData4 = { code: "function ButtonHooksNativeTsx4(){const{themedStyles,colors,interpolateColor,pressed}=this.__closure;var _themedStyles$backgro,_themedStyles,_themedStyles$borderC,_themedStyles2;const backgroundColor=(_themedStyles$backgro=(_themedStyles=themedStyles)===null||_themedStyles===void 0?void 0:_themedStyles.backgroundColor)!==null&&_themedStyles$backgro!==void 0?_themedStyles$backgro:[colors.backgroundInactive,colors.backgroundPressed];const borderColor=(_themedStyles$borderC=(_themedStyles2=themedStyles)===null||_themedStyles2===void 0?void 0:_themedStyles2.borderColor)!==null&&_themedStyles$borderC!==void 0?_themedStyles$borderC:[colors.borderInactive,colors.borderPressed];return{backgroundColor:interpolateColor(pressed.get(),[0,1],backgroundColor),borderColor:interpolateColor(pressed.get(),[0,1],borderColor)};}" };
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, pressed) => {
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIconTintStyles(arg0, pressed) {
   _require = pressed;
   const cResult = require("c").c(2);
   const color = closure_10(arg0).color;
@@ -447,7 +449,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, pressed) => {
   fn.__workletHash = 10122935395765;
   fn.__initData = __initData;
   return tmpResult2.useAnimatedStyle(fn);
-}) : ((arg0, pressed) => {
+}) : (function useIconTintStyles(arg0, pressed) {
   _require = pressed;
   const color = closure_10(arg0).color;
   token = require("useToken").useToken(getButtonColorTokens(arg0).foregroundPressed);
@@ -467,7 +469,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, pressed) => {
 ReactCompilerGating = fn(558);
 const __initData5 = { code: "function ButtonHooksNativeTsx5(){const{width,scaleAmountInPx,withSpring,interpolate,pressed,ON_PRESS_SPRING}=this.__closure;const scale=width.get()>0?(width.get()-scaleAmountInPx)/width.get():1;return{transform:[{scale:withSpring(interpolate(pressed.get(),[0,1],[1,scale]),ON_PRESS_SPRING,\"animate-always\")}]};}" };
 const __initData6 = { code: "function ButtonHooksNativeTsx6(){const{width,scaleAmountInPx,withSpring,interpolate,pressed,ON_PRESS_SPRING}=this.__closure;const scale=width.get()>0?(width.get()-scaleAmountInPx)/width.get():1;return{transform:[{scale:withSpring(interpolate(pressed.get(),[0,1],[1,scale]),ON_PRESS_SPRING,'animate-always')}]};}" };
-let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGradientPillStyles(arg0) {
   const cResult = c.c(2);
   const borderInactive = styleProperties(arg0).borderInactive;
   if (cResult[0] !== borderInactive) {
@@ -479,9 +481,11 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp2 = cResult[1];
   }
   return tmp2;
-}) : ((arg0) => ({ borderColor: styleProperties(arg0).borderInactive }));
+}) : (function useGradientPillStyles(arg0) {
+  return { borderColor: styleProperties(arg0).borderInactive };
+});
 ReactCompilerGating = fn(558);
-let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((pressed, width, scaleAmountInPx) => {
+let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? (function useButtonScaleStyles(pressed, width, scaleAmountInPx) {
   _require = pressed;
   dependencyMap = scaleAmountInPx;
   const fn = function n() {
@@ -504,7 +508,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((pressed, width, scal
   fn.__workletHash = 11326712012657;
   fn.__initData = __initData5;
   return obj.useAnimatedStyle(fn);
-}) : ((pressed, width, scaleAmountInPx) => {
+}) : (function useButtonScaleStyles(pressed, width, scaleAmountInPx) {
   _require = pressed;
   dependencyMap = scaleAmountInPx;
   const fn = function n() {
@@ -530,7 +534,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((pressed, width, scal
 });
 let closure_17 = tmp9;
 ReactCompilerGating = fn(558);
-let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, pressed) => {
+let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function useButtonPillStyles(arg0, pressed) {
   _require = pressed;
   const tmp = closure_7(arg0);
   const styles = tmp;
@@ -564,7 +568,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, pressed) => {
   fn.__workletHash = 1024908390291;
   fn.__initData = __initData3;
   return obj.useAnimatedStyle(fn);
-}) : ((arg0, pressed) => {
+}) : (function useButtonPillStyles(arg0, pressed) {
   _require = pressed;
   const tmp = closure_7(arg0);
   const styles = tmp;
@@ -600,7 +604,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, pressed) => {
   return obj.useAnimatedStyle(fn);
 });
 ReactCompilerGating = fn(558);
-let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2, arg3, arg4) => {
+let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useButtonPressAnimationProps(arg0, arg1, arg2, arg3, arg4) {
   closure_0 = arg2;
   closure_1 = arg3;
   closure_2 = arg4;
@@ -690,7 +694,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2, a
   cResult[2] = fn;
   tmp7 = fn;
   const tmpResult2 = ReanimatedRexport;
-}) : ((arg0) => {
+}) : (function useButtonPressAnimationProps(arg0) {
   let num = arg1;
   if (arg1 === undefined) {
     num = 8;

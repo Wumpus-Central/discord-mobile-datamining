@@ -1,10 +1,10 @@
-// === Module 9255: useAppChannelApplicationOptions ===
+// === Module 8584: useAppChannelApplicationOptions ===
 
-// Module 9255 (useAppChannelApplicationOptions)
+// Module 8584 (useAppChannelApplicationOptions)
 import c from "c" /* 576 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 6665 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8547 */;
-import useGuildEmbeddedApplications from "useGuildEmbeddedApplications" /* 9256 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 6842 */;
+import useGuildEmbeddedApplications from "useGuildEmbeddedApplications" /* 8585 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8586 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,7 +25,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_channels/useAppChannelApplicationOptions.tsx");
 
-export const useAppChannelApplicationOptions = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2, arg3) => {
+export const useAppChannelApplicationOptions = ReactCompilerGating.isReactCompilerEnabled() ? (function useAppChannelApplicationOptions(arg0, arg1, arg2, arg3) {
   const cResult = c.c(8);
   const tmp4 = undefined !== arg3 && arg3;
   let tmp5;
@@ -82,7 +82,7 @@ export const useAppChannelApplicationOptions = ReactCompilerGating.isReactCompil
   cResult[2] = sorted;
   tmp9 = sorted;
   tmp10 = null == data2 || items1.some((application) => application.application.id === data2.id);
-}) : ((arg0, arg1, arg2) => {
+}) : (function useAppChannelApplicationOptions(arg0, arg1, arg2) {
   let flag = arg3;
   if (arg3 === undefined) {
     flag = false;

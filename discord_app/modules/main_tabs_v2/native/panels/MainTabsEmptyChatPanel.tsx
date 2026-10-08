@@ -1,19 +1,19 @@
-// === Module 16941: MainTabsEmptyChatPanel ===
+// === Module 17222: MainTabsEmptyChatPanel ===
 
-// Module 16941 (MainTabsEmptyChatPanel)
+// Module 17222 (MainTabsEmptyChatPanel)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import FavoritesHooks from "FavoritesHooks" /* 10049 */;
-import useDrawerWidth from "useDrawerWidth" /* 11157 */;
-import FavoritesEmptyStateDefault from "FavoritesEmptyState" /* 16942 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import FavoritesHooks from "FavoritesHooks" /* 10294 */;
+import useDrawerWidth from "useDrawerWidth" /* 11278 */;
+import FavoritesEmptyStateDefault from "FavoritesEmptyState" /* 17223 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles((left, marginTop) => {
   const obj = { container: null };
   const obj2 = {};
@@ -33,7 +33,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/MainTabsEmptyChatPanel.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function MainTabsEmptyChatPanel() {
   const cResult = c.c(3);
   const drawerWidth = useDrawerWidth.useDrawerWidth();
   let container = closure_6(drawerWidth, useSafeAreaInsetsDefault().top);
@@ -57,7 +57,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
   }
   obj3 = FavoritesHooks;
-}) : (() => {
+}) : (function MainTabsEmptyChatPanel() {
   const drawerWidth = useDrawerWidth.useDrawerWidth();
   const tmp4 = closure_6(drawerWidth, useSafeAreaInsetsDefault().top);
   let tmp5 = null;

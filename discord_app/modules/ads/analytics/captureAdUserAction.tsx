@@ -1,21 +1,21 @@
-// === Module 7226: captureAdUserAction ===
+// === Module 7405: captureAdUserAction ===
 
-// Module 7226 (captureAdUserAction)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import v1 from "v1" /* 1266 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import AdCreativeType from "AdCreativeType" /* 5637 */;
-import getDeviceMetadataDefault from "getDeviceMetadata" /* 7174 */;
-import QuestDataUtils from "QuestDataUtils" /* 7196 */;
-import getQuestLogger from "getQuestLogger" /* 7206 */;
-import AnalyticsActions from "AnalyticsActions" /* 7215 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7225 */;
-import QuestHomeSearchSession from "QuestHomeSearchSession" /* 7227 */;
-import BrandSafetyContext from "BrandSafetyContext" /* 7228 */;
-import AdDataUtils from "AdDataUtils" /* 7231 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7236 */;
+// Module 7405 (captureAdUserAction)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import v1 from "v1" /* 1278 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import AdCreativeType from "AdCreativeType" /* 5984 */;
+import getDeviceMetadataDefault from "getDeviceMetadata" /* 7353 */;
+import QuestDataUtils from "QuestDataUtils" /* 7375 */;
+import getQuestLogger from "getQuestLogger" /* 7386 */;
+import AnalyticsActions from "AnalyticsActions" /* 7395 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7404 */;
+import QuestHomeSearchSession from "QuestHomeSearchSession" /* 7406 */;
+import BrandSafetyContext from "BrandSafetyContext" /* 7407 */;
+import AdDataUtils from "AdDataUtils" /* 7410 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7415 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import QuestStore from "QuestStore" /* 7200 */;
+import QuestStore from "QuestStore" /* 7379 */;
 
 require = fn;
 function emitClickEventWithCreative() {
@@ -295,8 +295,8 @@ function handleViewImpression(minViewTimeSeconds) {
   obj.is_quest_enrollment_blocked = isQuestEnrollmentBlocked;
   const merged2 = Object.assign(AnalyticsTypes.getContentProperties(surfaceId, questContentPosition, questContentRowIndex));
   if (minViewTimeSeconds.adCreativeType !== AdCreativeType.AdCreativeType.QUEST) {
-    const obj6 = { event: AnalyticEvents.QUEST_CONTENT_VIEWED, adContentId: null, relatedQuestId: null, adCreativeType: null, trackGuildAndChannelMetadata: null, shouldExtendSession: null, sourceQuestContent: null, properties: null };
-    ({ adCreativeId: obj9.adContentId, relatedQuestId: obj9.relatedQuestId, adCreativeType: obj9.adCreativeType } = minViewTimeSeconds);
+    const obj6 = { event: AnalyticEvents.QUEST_CONTENT_VIEWED, adContentId: null, noFillDecision: null, relatedQuestId: null, adCreativeType: null, trackGuildAndChannelMetadata: null, shouldExtendSession: null, sourceQuestContent: null, properties: null };
+    ({ adCreativeId: obj9.adContentId, noFillDecision: obj9.noFillDecision, relatedQuestId: obj9.relatedQuestId, adCreativeType: obj9.adCreativeType } = minViewTimeSeconds);
     obj6.trackGuildAndChannelMetadata = trackGuildAndChannelMetadata;
     obj6.shouldExtendSession = shouldExtendSession;
     obj6.sourceQuestContent = sourceQuestContent;
@@ -466,8 +466,8 @@ export const captureAdUserAction = function captureAdUserAction(captureAdUserAct
           tmp2Result.trackQuestEvent(obj);
           const tmp2Result8 = AnalyticsTypes;
         } else {
-          const obj5 = { event: constants.QUEST_CONTENT_LOADED, adContentId: null, relatedQuestId: null, adCreativeType: null, trackGuildAndChannelMetadata: null, sourceQuestContent: null, properties: null };
-          ({ adCreativeId: obj8.adContentId, relatedQuestId: obj8.relatedQuestId, adCreativeType: obj8.adCreativeType, trackGuildAndChannelMetadata: obj8.trackGuildAndChannelMetadata, sourceQuestContent: obj8.sourceQuestContent } = adCreativeType);
+          const obj5 = { event: constants.QUEST_CONTENT_LOADED, adContentId: null, noFillDecision: null, relatedQuestId: null, adCreativeType: null, trackGuildAndChannelMetadata: null, sourceQuestContent: null, properties: null };
+          ({ adCreativeId: obj8.adContentId, noFillDecision: obj8.noFillDecision, relatedQuestId: obj8.relatedQuestId, adCreativeType: obj8.adCreativeType, trackGuildAndChannelMetadata: obj8.trackGuildAndChannelMetadata, sourceQuestContent: obj8.sourceQuestContent } = adCreativeType);
           const obj6 = { triggered_by_status_change: null, impression_id: null, is_quest_enrollment_blocked: null, content_id: null, content_name: null, content_position: null, row_index: null };
           ({ triggeredByStatusChange: obj9.triggered_by_status_change, impressionId: obj9.impression_id } = adCreativeType);
           obj6.is_quest_enrollment_blocked = tmp;

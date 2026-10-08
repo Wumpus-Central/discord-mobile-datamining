@@ -1,10 +1,10 @@
-// === Module 15212: EmojiFaceWithSpiralEyesIcon ===
+// === Module 15474: EmojiFaceWithSpiralEyesIcon ===
 
-// Module 15212 (EmojiFaceWithSpiralEyesIcon)
+// Module 15474 (EmojiFaceWithSpiralEyesIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4585 */;
-import _mod15213 from "module_15213" /* 15213 */;
+import BaseIconImage from "BaseIconImage" /* 4777 */;
+import _mod15475 from "module_15475" /* 15475 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/EmojiFaceWithSpiralEyesIcon.tsx");
 
-export const EmojiFaceWithSpiralEyesIcon = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const EmojiFaceWithSpiralEyesIcon = ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiFaceWithSpiralEyesIcon(arg0) {
   const cResult = c.c(9);
   if (cResult[0] !== arg0) {
     ({ style, color } = arg0);
@@ -36,7 +36,7 @@ export const EmojiFaceWithSpiralEyesIcon = ReactCompilerGating.isReactCompilerEn
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod15213;
+    const tmpResult = _mod15475;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -58,12 +58,12 @@ export const EmojiFaceWithSpiralEyesIcon = ReactCompilerGating.isReactCompilerEn
   cResult[8] = tmp14;
   tmp12 = tmp14;
   const obj2 = { source: tmp10, color: INTERACTIVE_ICON_DEFAULT, style: tmp5 };
-}) : ((color) => {
+}) : (function EmojiFaceWithSpiralEyesIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;
   if (INTERACTIVE_ICON_DEFAULT === undefined) {
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15213, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15475, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

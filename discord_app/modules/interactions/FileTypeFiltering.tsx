@@ -1,13 +1,13 @@
-// === Module 11796: FileTypeFiltering ===
+// === Module 11863: FileTypeFiltering ===
 
-// Module 11796 (FileTypeFiltering)
+// Module 11863 (FileTypeFiltering)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5714 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5297 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2116 */;
+import LocaleStore from "LocaleStore" /* 2128 */;
 
 require = fn;
 function fileTypesFormattedStringHelper(arr, stateFromStores) {
@@ -48,7 +48,7 @@ let closure_8 = ["mp3", "m4a", "wav", "ogg", "opus", "flac"];
 let closure_9 = { jpg: ["jpeg", "jfif", "heic", "heif"], mov: ["mp4", "qt"] };
 let closure_10 = { jpg: ["jpeg", "jfif"], mp4: ["mov", "qt"] };
 let ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arr) => {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFileTypesFormattedString(arr) {
   const cResult = c.c(5);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [LocaleStore];
@@ -75,7 +75,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arr) => {
   cResult[4] = tmp9;
   tmp8 = tmp9;
   const tmpResult = initialize;
-}) : ((arg0) => {
+}) : (function useFileTypesFormattedString(arg0) {
   _require = arg0;
   const items = [LocaleStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => locale.locale);
@@ -154,7 +154,7 @@ export const getFileTypeFiltering = function getFileTypeFiltering(fileTypes) {
   }
   items3 = [];
 };
-export const useFileTypeFiltering = ReactCompilerGating.isReactCompilerEnabled() ? ((arr) => {
+export const useFileTypeFiltering = ReactCompilerGating.isReactCompilerEnabled() ? (function useFileTypeFiltering(arr) {
   const cResult = allowedExtensions(576).c(14);
   if (cResult[0] !== arr) {
     if (null != arr) {
@@ -305,7 +305,7 @@ export const useFileTypeFiltering = ReactCompilerGating.isReactCompilerEnabled()
     cResult[13] = obj2;
   }
   const obj = allowedExtensions(576);
-}) : ((arg0) => {
+}) : (function useFileTypeFiltering(arg0) {
   closure_0 = arg0;
   let items = [arg0];
   const memo = noop.useMemo(() => {

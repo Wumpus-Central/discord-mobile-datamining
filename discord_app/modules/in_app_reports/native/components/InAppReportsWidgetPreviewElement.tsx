@@ -1,23 +1,23 @@
-// === Module 8341: InAppReportsWidgetPreviewElement ===
+// === Module 13389: InAppReportsWidgetPreviewElement ===
 
-// Module 8341 (InAppReportsWidgetPreviewElement)
+// Module 13389 (InAppReportsWidgetPreviewElement)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6476 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7126 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7129 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 7924 */;
-import UserProfileWidgetsBoard from "UserProfileWidgetsBoard" /* 8351 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6654 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7311 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7315 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8343 */;
+import UserProfileWidgetsBoard from "UserProfileWidgetsBoard" /* 13084 */;
 import noop from "module_19" /* 19 */;
 
-const UserProfilePersonalWidgetCardDefault = tmp5(8342);
+const UserProfilePersonalWidgetCardDefault = tmp5(13207);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 }, title: { lineHeight: 16, marginBottom: 8 }, card: { backgroundColor: nativeDefault.colors.USER_PROFILE_CONTAINER_BACKGROUND } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -25,7 +25,7 @@ let obj3 = { backgroundColor: nativeDefault.colors.USER_PROFILE_CONTAINER_BACKGR
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsWidgetPreviewElement.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function WidgetPreview(arg0) {
   const cResult = c.c(18);
   ({ widget, userId } = arg0);
   let container = closure_6();
@@ -121,7 +121,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = userId;
   cResult[3] = widget;
   cResult[4] = tmp8;
-}) : ((arg0) => {
+}) : (function WidgetPreview(arg0) {
   ({ widget, userId } = arg0);
   const tmp = closure_6();
   let SpsnDY = dependencyMap;

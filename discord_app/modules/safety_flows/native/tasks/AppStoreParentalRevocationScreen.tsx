@@ -1,19 +1,19 @@
-// === Module 18125: AppStoreParentalRevocationScreen ===
+// === Module 18412: AppStoreParentalRevocationScreen ===
 
-// Module 18125 (AppStoreParentalRevocationScreen)
+// Module 18412 (AppStoreParentalRevocationScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import _modDef2815 from "module_2815" /* 2815 */;
-import LinkingDefault from "Linking" /* 4571 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Stack_Stack from "Stack/Stack" /* 5600 */;
-import ModalScreen from "ModalScreen" /* 8128 */;
-import ModalContent from "ModalContent" /* 8129 */;
-import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8296 */;
-import ModalActionButton from "ModalActionButton" /* 10742 */;
-import ModalFooter from "ModalFooter" /* 11549 */;
-import LogOutDisclaimerDefault from "LogOutDisclaimer" /* 18111 */;
+import _modDef2859 from "module_2859" /* 2859 */;
+import LinkingDefault from "Linking" /* 4763 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import Stack_Stack from "Stack/Stack" /* 5373 */;
+import ModalScreen from "ModalScreen" /* 7506 */;
+import ModalContent from "ModalContent" /* 7507 */;
+import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 7679 */;
+import ModalFooter from "ModalFooter" /* 11564 */;
+import ModalActionButton from "ModalActionButton" /* 11613 */;
+import LogOutDisclaimerDefault from "LogOutDisclaimer" /* 18398 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,7 +21,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let c7 = "https://support.discord.com/hc/en-us/articles/42855178312087";
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { content: { flexGrow: 1, width: "100%" }, upperHalf: { flex: 1, justifyContent: "flex-end", alignItems: "center" }, lowerHalf: { flex: 1 }, text: { textAlign: "center" }, body: { paddingHorizontal: nativeDefault.space.PX_16 } };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -29,7 +29,7 @@ let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_flows/native/tasks/AppStoreParentalRevocationScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppStoreParentalRevocationScreen() {
   const cResult = c.c(30);
   const tmp4 = closure_8();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -44,7 +44,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   ({ content, upperHalf, text } = tmp4);
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
-    const stringResult = intl.string(_modDef2815.Z87TFb);
+    const stringResult = intl.string(_modDef2859.Z87TFb);
     cResult[1] = stringResult;
     let tmp6 = stringResult;
   } else {
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   ({ body, text: text2 } = tmp4);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const intl2 = util.intl;
-    const stringResult1 = intl2.string(_modDef2815.VS98dM);
+    const stringResult1 = intl2.string(_modDef2859.VS98dM);
     cResult[4] = stringResult1;
     let tmp12 = stringResult1;
   } else {
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
     const intl3 = util.intl;
-    const stringResult2 = intl3.string(_modDef2815.BaI6L4);
+    const stringResult2 = intl3.string(_modDef2859.BaI6L4);
     cResult[7] = stringResult2;
     let tmp18 = stringResult2;
   } else {
@@ -135,7 +135,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                 const items = [tmp43, ];
                 const obj7 = { variant: "primary", text: null, icon: null, iconPosition: "end", onPress: null };
                 const intl4 = util.intl;
-                obj7.text = intl4.string(_modDef2815["6FXIU6"]);
+                obj7.text = intl4.string(_modDef2859["6FXIU6"]);
                 const obj8 = { color: nativeDefault.colors.WHITE };
                 obj7.icon = hasOwnProperty(LinkExternalSmallIcon.LinkExternalSmallIcon, obj8);
                 obj7.onPress = first;
@@ -199,7 +199,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[12] = tmp15;
   cResult[13] = tmp25;
   tmp24 = tmp25;
-}) : (() => {
+}) : (function AppStoreParentalRevocationScreen() {
   const tmp = closure_8();
   const callback = noop.useCallback(() => {
     LinkingDefault.openURL(closure_1_7);
@@ -211,16 +211,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const obj5 = { align: "center", spacing: nativeDefault.space.PX_16, children: null };
   const obj6 = { accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
   const intl = util.intl;
-  obj6.children = intl.string(_modDef2815.Z87TFb);
+  obj6.children = intl.string(_modDef2859.Z87TFb);
   const items = [hasOwnProperty(Text_Text.Text, obj6), ];
   const obj7 = { align: "center", spacing: nativeDefault.space.PX_16, style: tmp.body, children: null };
   const obj8 = { variant: "text-md/medium", color: "text-subtle", style: tmp.text, children: null };
   const intl2 = util.intl;
-  obj8.children = intl2.string(_modDef2815.VS98dM);
+  obj8.children = intl2.string(_modDef2859.VS98dM);
   const items1 = [hasOwnProperty(Text_Text.Text, obj8), ];
   const obj9 = { variant: "text-md/medium", color: "text-subtle", style: tmp.text, children: null };
   const intl3 = util.intl;
-  obj9.children = intl3.string(_modDef2815.BaI6L4);
+  obj9.children = intl3.string(_modDef2859.BaI6L4);
   items1[1] = hasOwnProperty(Text_Text.Text, obj9);
   obj7.children = items1;
   items[1] = timestampProducer(Stack_Stack.Stack, obj7);
@@ -234,7 +234,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const items4 = [hasOwnProperty(LogOutDisclaimerDefault, {}), ];
   const obj12 = { variant: "primary", text: null, icon: null, iconPosition: "end", onPress: null };
   const intl4 = util.intl;
-  obj12.text = intl4.string(_modDef2815["6FXIU6"]);
+  obj12.text = intl4.string(_modDef2859["6FXIU6"]);
   obj12.icon = hasOwnProperty(LinkExternalSmallIcon.LinkExternalSmallIcon, { color: nativeDefault.colors.WHITE });
   obj12.onPress = callback;
   items4[1] = hasOwnProperty(ModalActionButton.ModalActionButton, obj12);

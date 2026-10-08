@@ -1,8 +1,8 @@
-// === Module 17858: ApplicationIdentityLinkedRolesExperiment ===
+// === Module 18145: ApplicationIdentityLinkedRolesExperiment ===
 
-// Module 17858 (ApplicationIdentityLinkedRolesExperiment)
+// Module 18145 (ApplicationIdentityLinkedRolesExperiment)
 import c from "c" /* 576 */;
-import createExperiment from "module_4780" /* 4780 */;
+import createExperiment from "module_4974" /* 4974 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -13,7 +13,7 @@ const experiment = createExperiment.createExperiment(obj);
 const result = size.fileFinishedImporting("modules/connections/experiments/ApplicationIdentityLinkedRolesExperiment.tsx");
 
 export const ApplicationIdentityLinkedRolesExperiment = experiment;
-export const useApplicationIdentityLinkedRolesEnabled = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId, location) => {
+export const useApplicationIdentityLinkedRolesEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useApplicationIdentityLinkedRolesEnabled(guildId, location) {
   const cResult = c.c(4);
   if (cResult[0] === guildId) {
     if (cResult[1] === location) {
@@ -34,4 +34,6 @@ export const useApplicationIdentityLinkedRolesEnabled = ReactCompilerGating.isRe
   cResult[1] = location;
   cResult[2] = obj3;
   tmp2 = obj3;
-}) : ((guildId, location) => experiment.useExperiment({ guildId, location }, { autoTrackExposure: false }).enabled);
+}) : (function useApplicationIdentityLinkedRolesEnabled(guildId, location) {
+  return experiment.useExperiment({ guildId, location }, { autoTrackExposure: false }).enabled;
+});

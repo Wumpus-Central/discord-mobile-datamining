@@ -1,25 +1,23 @@
-// === Module 15881: VEVOOPropBlurAmount ===
+// === Module 16140: VEVOOPropBlurAmount ===
 
-// Module 15881 (VEVOOPropBlurAmount)
+// Module 16140 (VEVOOPropBlurAmount)
 import c from "c" /* 576 */;
-import FormSwitch from "FormSwitch" /* 6706 */;
-import Form from "Form" /* 8924 */;
+import FormSwitch from "FormSwitch" /* 6883 */;
+import Form from "Form" /* 8555 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const require = globalThis.__r;
-
 require = fn;
-const VEVOOStore = fn(5781);
+const VEVOOStore = fn(5364);
 ({ getVisualEffectViewOverrides: hasOwnProperty, setVisualEffectViewOverides: metroRequire } = VEVOOStore);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles({ enabledSwitchStyle: { alignSelf: "flex-start" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/visual_effect_view/native/overrides/VEVOOPropBlurAmount.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function VEVOOPropBlurAmount() {
   const cResult = c.c(18);
   const tmp4 = closure_8();
   const tmp5 = _slicedToArray;
@@ -36,7 +34,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   dependencyMap = tmp5Result[1];
   const tmp6 = _slicedToArray(noop.useState(false), 2);
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function w(blurAmountOverride) {
+    const fn = function h(blurAmountOverride) {
       if (null != blurAmountOverride) {
         closure_2(blurAmountOverride);
       }
@@ -67,37 +65,71 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   const combined = "Blur Amount " + tmp14;
   if (cResult[4] !== first1) {
-    const fn2 = function x(arg0) {
-      require(arg0);
-      let tmp3;
-      if (arg0) {
-        tmp3 = first1;
+    class E {
+      constructor(arg0) {
+        tmp = closure_0(arg0);
+        tmp3 = undefined;
+        tmp2 = closure_3;
+        if (arg0) {
+          tmp3 = closure_1;
+        }
+        tmp2Result = tmp2(tmp3);
+        return;
       }
-      closure_3(tmp3);
-    };
+    }
     cResult[4] = first1;
-    cResult[5] = fn2;
-    let tmp17 = fn2;
+    cResult[5] = E;
   } else {
-    tmp17 = cResult[5];
+    class E {
+      constructor(arg0) {
+        tmp = closure_0(arg0);
+        tmp3 = undefined;
+        tmp2 = closure_3;
+        if (arg0) {
+          tmp3 = closure_1;
+        }
+        tmp2Result = tmp2(tmp3);
+        return;
+      }
+    }
   }
   if (cResult[6] === tmp7) {
-    if (cResult[7] === tmp17) {
-      let tmp18 = cResult[8];
+    class E {
+      constructor(arg0) {
+        tmp = closure_0(arg0);
+        tmp3 = undefined;
+        tmp2 = closure_3;
+        if (arg0) {
+          tmp3 = closure_1;
+        }
+        tmp2Result = tmp2(tmp3);
+        return;
+      }
     }
     if (cResult[9] === !tmp7) {
-      if (cResult[10] === tmp21) {
-        let tmp22 = cResult[11];
+      class E {
+        constructor(arg0) {
+          tmp = closure_0(arg0);
+          tmp3 = undefined;
+          tmp2 = closure_3;
+          if (arg0) {
+            tmp3 = closure_1;
+          }
+          tmp2Result = tmp2(tmp3);
+          return;
+        }
       }
       if (cResult[12] === tmp4.enabledSwitchStyle) {
-        if (cResult[13] === combined) {
-          if (cResult[14] === tmp18) {
-            if (cResult[15] === tmp22) {
-              if (cResult[16] === tmp26) {
-                let tmp27 = cResult[17];
-              }
-              return tmp27;
+        class E {
+          constructor(arg0) {
+            tmp = closure_0(arg0);
+            tmp3 = undefined;
+            tmp2 = closure_3;
+            if (arg0) {
+              tmp3 = closure_1;
             }
+            tmp2Result = tmp2(tmp3);
+            return;
           }
         }
       }
@@ -109,22 +141,19 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       cResult[15] = tmp22;
       cResult[16] = !tmp7;
       cResult[17] = tmp29;
-      tmp27 = tmp29;
     }
     const obj4 = { disabled: !tmp7, disabledOpacity: !tmp7, initialValue: ref, onValueChange: tmp13 };
-    const tmp25 = jsx(first1(15882), { disabled: !tmp7, disabledOpacity: !tmp7, initialValue: ref, onValueChange: tmp13 });
+    const tmp25 = jsx(first1(16141), { disabled: !tmp7, disabledOpacity: !tmp7, initialValue: ref, onValueChange: tmp13 });
     cResult[9] = !tmp7;
     cResult[10] = !tmp7;
     cResult[11] = tmp25;
-    tmp22 = tmp25;
   }
-  const tmp19 = jsx(FormSwitch.FormSwitch, { value: tmp7, onValueChange: tmp17 });
+  const tmp19 = jsx(FormSwitch.FormSwitch, { value: tmp7, onValueChange: E });
   cResult[6] = tmp7;
-  cResult[7] = tmp17;
+  cResult[7] = E;
   cResult[8] = tmp19;
-  tmp18 = tmp19;
   ref = noop.useRef(first1);
-}) : (() => {
+}) : (function VEVOOPropBlurAmount() {
   const tmp = closure_8();
   [tmp3, require] = onValueChange(noop.useState(false), 2);
   const tmp4 = onValueChange(noop.useState(closure_5().blurAmountOverride), 2);
@@ -153,7 +182,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     leading: jsx(FormSwitch.FormSwitch, {
       value: tmp3,
       onValueChange(arg0) {
-        require(arg0);
+        _require(arg0);
         let tmp3;
         if (arg0) {
           tmp3 = first;
@@ -167,7 +196,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const obj2 = {
     value: tmp3,
     onValueChange(arg0) {
-      require(arg0);
+      _require(arg0);
       let tmp3;
       if (arg0) {
         tmp3 = first;
@@ -176,14 +205,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
   };
   const ref = noop.useRef(first);
-  obj.subLabel = jsx(first(15882), { disabled: !tmp3, disabledOpacity: !tmp3, initialValue: noop.useRef(first), onValueChange });
+  obj.subLabel = jsx(first(16141), { disabled: !tmp3, disabledOpacity: !tmp3, initialValue: noop.useRef(first), onValueChange });
   return jsx(Form.FormRow, {
     label: "Blur Amount " + str,
     leadingStyle: tmp.enabledSwitchStyle,
     leading: jsx(FormSwitch.FormSwitch, {
       value: tmp3,
       onValueChange(arg0) {
-        require(arg0);
+        _require(arg0);
         let tmp3;
         if (arg0) {
           tmp3 = first;

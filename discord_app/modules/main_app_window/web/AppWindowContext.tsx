@@ -1,9 +1,9 @@
-// === Module 5951: AppWindowContext ===
+// === Module 6134: AppWindowContext ===
 
-// Module 5951 (AppWindowContext)
+// Module 6134 (AppWindowContext)
 import c from "c" /* 576 */;
-import WindowIdUtils2 from "WindowIdUtils" /* 5952 */;
-import WindowInteractingUtils from "WindowInteractingUtils" /* 5953 */;
+import WindowIdUtils2 from "WindowIdUtils" /* 6071 */;
+import WindowInteractingUtils from "WindowInteractingUtils" /* 6135 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,12 +11,12 @@ require = fn;
 const jsx = fn(21).jsx;
 let componentDispatcher = new fn(1121).ComponentDispatcher();
 let obj = { appContext: fn(1085).AppContext.APP, renderWindow: window, windowDispatch: componentDispatcher, windowId: null };
-const WindowIdUtils = fn(5952);
+const WindowIdUtils = fn(6071);
 obj.windowId = WindowIdUtils.getMainWindowId();
 const context = noop.createContext(obj);
 const map = new Map();
 let ReactCompilerGating = fn(558);
-let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((appContext, renderWindow) => {
+let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useWindowContextValue(appContext, renderWindow) {
   _require = renderWindow;
   const cResult = require("c").c(16);
   if (cResult[0] !== renderWindow) {
@@ -90,7 +90,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((appContext, ren
   cResult[5] = windowId;
   cResult[6] = obj2;
   tmp13 = obj2;
-}) : ((appContext, defaultView) => {
+}) : (function useWindowContextValue(appContext, defaultView) {
   _require = appContext;
   dependencyMap = defaultView;
   const tmp = windowId(noop.useState(require("WindowIdUtils").getWindowId(defaultView)), 2);
@@ -209,7 +209,7 @@ export const getCurrentlyInteractingAppContext = function getCurrentlyInteractin
   }
   return appContext;
 };
-export const AppWindowContextProvider = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
+export const AppWindowContextProvider = ReactCompilerGating.isReactCompilerEnabled() ? (function AppWindowContextProvider(children) {
   const cResult = c.c(3);
   children = children.children;
   const tmp2 = closure_7(children.appContext, children.renderWindow);
@@ -224,7 +224,15 @@ export const AppWindowContextProvider = ReactCompilerGating.isReactCompilerEnabl
   cResult[1] = tmp2;
   cResult[2] = tmp4;
   tmp3 = tmp4;
-}) : ((appContext) => <context.Provider value={closure_7(appContext.appContext, appContext.renderWindow)}>{appContext.children}</context.Provider>);
-export const useAppContext = () => noop.useContext(context).appContext;
-export const useWindowDispatch = () => noop.useContext(context).windowDispatch;
-export const useRenderWindow = () => noop.useContext(context).renderWindow;
+}) : (function AppWindowContextProvider(appContext) {
+  return <context.Provider value={closure_7(appContext.appContext, appContext.renderWindow)}>{appContext.children}</context.Provider>;
+});
+export const useAppContext = function useAppContext() {
+  return noop.useContext(context).appContext;
+};
+export const useWindowDispatch = function useWindowDispatch() {
+  return noop.useContext(context).windowDispatch;
+};
+export const useRenderWindow = function useRenderWindow() {
+  return noop.useContext(context).renderWindow;
+};

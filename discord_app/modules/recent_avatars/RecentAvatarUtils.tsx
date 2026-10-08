@@ -1,13 +1,13 @@
-// === Module 7851: RecentAvatarUtils ===
+// === Module 8269: RecentAvatarUtils ===
 
-// Module 7851 (RecentAvatarUtils)
+// Module 8269 (RecentAvatarUtils)
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1126 */;
-import GlobalUtils from "GlobalUtils" /* 1375 */;
-import AvatarUtils from "AvatarUtils" /* 1402 */;
-import ImageLoaderUtils from "ImageLoaderUtils" /* 1437 */;
-import _modDef1478 from "module_1478" /* 1478 */;
-import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 6493 */;
+import GlobalUtils from "GlobalUtils" /* 1387 */;
+import AvatarUtils from "AvatarUtils" /* 1414 */;
+import ImageLoaderUtils from "ImageLoaderUtils" /* 1449 */;
+import _modDef1490 from "module_1490" /* 1490 */;
+import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 6670 */;
 import size from "module_2" /* 2 */;
 
 function getArchivedAvatarURL(allowWebp) {
@@ -59,7 +59,7 @@ function getArchivedAvatarURL(allowWebp) {
     }
     const ARCHIVED_AVATARResult = Endpoints.ARCHIVED_AVATAR(userId, avatarId, storageHash, str2);
     const _HermesInternal2 = HermesInternal;
-    return "" + combined + ARCHIVED_AVATARResult + "?" + _modDef1478.stringify(obj2);
+    return "" + combined + ARCHIVED_AVATARResult + "?" + _modDef1490.stringify(obj2);
   }
   str2 = "jpg";
   if (null != window.GLOBAL_ENV.CDN_HOST) {

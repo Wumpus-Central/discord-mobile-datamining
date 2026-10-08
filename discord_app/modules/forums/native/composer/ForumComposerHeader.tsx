@@ -1,15 +1,15 @@
-// === Module 10088: ForumComposerHeader ===
+// === Module 9671: ForumComposerHeader ===
 
-// Module 10088 (ForumComposerHeader)
+// Module 9671 (ForumComposerHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import useChannelNameDefault from "useChannelName" /* 5049 */;
-import BookCheckIcon from "BookCheckIcon" /* 5866 */;
-import ForumIcon from "ForumIcon" /* 5879 */;
-import Pressables from "Pressables" /* 5916 */;
-import XSmallIcon from "XSmallIcon" /* 6024 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import useChannelNameDefault from "useChannelName" /* 5417 */;
+import Pressables from "Pressables" /* 6189 */;
+import XSmallIcon from "XSmallIcon" /* 6210 */;
+import BookCheckIcon from "BookCheckIcon" /* 8178 */;
+import ForumIcon from "ForumIcon" /* 8191 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles((height) => {
   const obj = { headerBar: { height, flexDirection: "row", alignItems: "center" }, headerBarContent: { flexDirection: "row", alignItems: "center", flex: 1 }, headerBarText: { marginHorizontal: nativeDefault.space.PX_16 }, headerBarSeparator: null, button: null };
   const obj4 = {};
@@ -37,7 +37,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/composer/ForumComposerHeader.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onGuidelinesPress) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumComposerHeader(onGuidelinesPress) {
   const cResult = c.c(34);
   ({ title, channel, submitting, onClose } = onGuidelinesPress);
   onGuidelinesPress = onGuidelinesPress.onGuidelinesPress;
@@ -215,7 +215,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onGuidelinesPres
   cResult[6] = tmp8;
   cResult[7] = tmp13;
   tmp12 = tmp13;
-}) : ((height) => {
+}) : (function ForumComposerHeader(height) {
   ({ title, channel, onClose: require } = height);
   ({ submitting, onGuidelinesPress } = height);
   const tmp = closure_7(height.height);

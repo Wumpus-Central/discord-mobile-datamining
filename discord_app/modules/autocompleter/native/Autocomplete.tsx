@@ -1,33 +1,33 @@
-// === Module 12039: Autocomplete ===
+// === Module 12112: Autocomplete ===
 
-// Module 12039 (Autocomplete)
+// Module 12112 (Autocomplete)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 2017 */;
-import StringUtils from "StringUtils" /* 2018 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import useChannelName from "useChannelName" /* 5049 */;
-import TimestampUtils from "TimestampUtils" /* 5814 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5819 */;
-import Pressables from "Pressables" /* 5916 */;
-import FastImageDefault from "FastImage" /* 5981 */;
-import TableRow from "TableRow" /* 6000 */;
-import TableRowTrailingText from "TableRowTrailingText" /* 6009 */;
-import _modDef7818 from "module_7818" /* 7818 */;
-import UnknownGameIcon from "UnknownGameIcon" /* 8281 */;
-import Form from "Form" /* 8924 */;
-import StickersHooks from "StickersHooks" /* 10124 */;
-import StickerDefault from "Sticker" /* 10140 */;
-import ChannelAutocompleteEmojiUpsellDefault from "ChannelAutocompleteEmojiUpsell" /* 12040 */;
-import GameSearchRowExperimentDefault from "GameSearchRowExperiment" /* 12041 */;
-import GamePlatformBadgeRowDefault from "GamePlatformBadgeRow" /* 12042 */;
+import native from "native" /* 1200 */;
+import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 2029 */;
+import StringUtils from "StringUtils" /* 2030 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import useChannelName from "useChannelName" /* 5417 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import TableRow from "TableRow" /* 6184 */;
+import Pressables from "Pressables" /* 6189 */;
+import TableRowTrailingText from "TableRowTrailingText" /* 6195 */;
+import UnknownGameIcon from "UnknownGameIcon" /* 7662 */;
+import TimestampUtils from "TimestampUtils" /* 8131 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8134 */;
+import _modDef8237 from "module_8237" /* 8237 */;
+import Form from "Form" /* 8555 */;
+import StickersHooks from "StickersHooks" /* 9709 */;
+import StickerDefault from "Sticker" /* 9725 */;
+import ChannelAutocompleteEmojiUpsellDefault from "ChannelAutocompleteEmojiUpsell" /* 12113 */;
+import GameSearchRowExperimentDefault from "GameSearchRowExperiment" /* 12114 */;
+import GamePlatformBadgeRowDefault from "GamePlatformBadgeRow" /* 12115 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
-import UserStore from "UserStore" /* 1377 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const View = fn(17).View;
@@ -35,9 +35,9 @@ const Constants = fn(1085);
 ({ ChannelTypes: closure_8, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
-let obj2 = { row: { height: fn(10085).AUTOCOMPLETE_ROW_HEIGHT, paddingVertical: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, leading: null, trailing: null, username: null, emoji: null, emojiImage: null, emojiText: null, stickerContainer: null, commandChoiceLoadingContainer: null, commandChoiceLoadingItem: null, autocompleteIcon: null, gameIcon: null, labelRow: null };
-let obj3 = { height: fn(10085).AUTOCOMPLETE_ROW_HEIGHT, paddingVertical: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+const createStyles = fn(5090);
+let obj2 = { row: { height: fn(9668).AUTOCOMPLETE_ROW_HEIGHT, paddingVertical: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, leading: null, trailing: null, username: null, emoji: null, emojiImage: null, emojiText: null, stickerContainer: null, commandChoiceLoadingContainer: null, commandChoiceLoadingItem: null, autocompleteIcon: null, gameIcon: null, labelRow: null };
+let obj3 = { height: fn(9668).AUTOCOMPLETE_ROW_HEIGHT, paddingVertical: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.leading = { fontSize: 16, color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, fontFamily: Fonts.PRIMARY_SEMIBOLD };
 let obj4 = { fontSize: 16, color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, fontFamily: Fonts.PRIMARY_SEMIBOLD };
 obj2.trailing = { fontSize: 14, color: nativeDefault.colors.TEXT_MUTED };
@@ -59,7 +59,7 @@ let obj8 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, height:
 obj2.labelRow = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 let closure_11 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((text) => {
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function AutocompleteLabel(text) {
   const cResult = c.c(3);
   const tmp4 = closure_11();
   if (cResult[0] === text.text) {
@@ -74,14 +74,14 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((text) => {
   cResult[2] = tmp6;
   tmp5 = tmp6;
   const obj2 = { style: tmp4.leading, text: text.text };
-}) : ((text) => {
+}) : (function AutocompleteLabel(text) {
   const tmp = closure_11();
   return options(Form.FormRow.Label, { style: closure_11().leading, text: text.text });
 });
 fn(558);
 let obj9 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function User(user) {
   const cResult = user(576).c(27);
   user = user.user;
   ({ nick, status, guildId } = user);
@@ -140,7 +140,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
                     }
                   }
                   const obj4 = { DEPRECATED_style: tmp4.row, onPress, accessibilityRole: "menuitem", label: tmp13, leading: tmp17, trailing: tmp21 };
-                  const tmp27 = closure_9(tmp(8924).FormRow, obj4);
+                  const tmp27 = closure_9(tmp(8555).FormRow, obj4);
                   cResult[21] = onPress;
                   cResult[22] = tmp4.row;
                   cResult[23] = tmp13;
@@ -151,7 +151,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
                 }
               }
               const obj5 = { user, usernameStyle: tmp20, discriminatorStyle: tmp4.trailing };
-              const tmp24 = closure_9(guildId(9331), obj5);
+              const tmp24 = closure_9(guildId(8740), obj5);
               cResult[17] = tmp4.trailing;
               cResult[18] = tmp20;
               cResult[19] = user;
@@ -166,8 +166,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
             tmp20 = items1;
           }
         }
-        const obj6 = { status, user, size: tmp(1188).AvatarSizes.SMALL, guildId, autoStatusCutout: true };
-        const tmp19 = closure_9(tmp(1188).Avatar, obj6);
+        const obj6 = { status, user, size: tmp(1200).AvatarSizes.SMALL, guildId, autoStatusCutout: true };
+        const tmp19 = closure_9(tmp(1200).Avatar, obj6);
         cResult[10] = guildId;
         cResult[11] = status;
         cResult[12] = user;
@@ -180,8 +180,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
       name = stateFromStores;
     }
     if (name == null) {
-      name = guildId(4728).getName(user);
-      const obj3 = guildId(4728);
+      name = guildId(4922).getName(user);
+      const obj3 = guildId(4922);
     }
     cResult[4] = stateFromStores;
     cResult[5] = nick;
@@ -190,7 +190,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
     tmp9 = name;
     const tmpResult = tmp(504);
   }
-  const fn = function o() {
+  const fn = function n() {
     let nickname = null;
     if (null == guildId) {
       nickname = RelationshipStore.getNickname(user.id);
@@ -202,7 +202,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
   cResult[3] = fn;
   tmp7 = fn;
   const obj = user(576);
-}) : ((user) => {
+}) : (function User(user) {
   user = user.user;
   ({ nick, guildId } = user);
   ({ status, onPress } = user);
@@ -220,21 +220,21 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
     nick = stateFromStores;
   }
   if (nick == null) {
-    nick = guildId(4728).getName(user);
-    const obj3 = guildId(4728);
+    nick = guildId(4922).getName(user);
+    const obj3 = guildId(4922);
   }
   obj2.label = closure_9(closure_12, { text: nick });
   const obj = user(504);
-  obj2.leading = closure_9(user(1188).Avatar, { status, user, size: user(1188).AvatarSizes.SMALL, guildId, autoStatusCutout: true });
+  obj2.leading = closure_9(user(1200).Avatar, { status, user, size: user(1200).AvatarSizes.SMALL, guildId, autoStatusCutout: true });
   const obj5 = { user, usernameStyle: null, discriminatorStyle: tmp.trailing };
   const items1 = [, ];
   ({ trailing: arr2[0], username: arr2[1] } = tmp);
   obj5.usernameStyle = items1;
-  obj2.trailing = closure_9(guildId(9331), obj5);
-  return closure_9(user(8924).FormRow, obj2);
+  obj2.trailing = closure_9(guildId(8740), obj5);
+  return closure_9(user(8555).FormRow, obj2);
 });
 ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Global(arg0) {
   const cResult = c.c(10);
   ({ text, description, badge, onPress } = arg0);
   const tmp4 = closure_11();
@@ -273,7 +273,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const obj5 = { text };
     const items = [options(closure_12, obj5), badge];
     obj4.children = items;
-    let tmp8 = v65535(View, obj4);
+    let tmp8 = collapsed(View, obj4);
   } else {
     const obj6 = { text };
     tmp8 = options(closure_12, obj6);
@@ -282,7 +282,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = tmp4;
   cResult[2] = text;
   cResult[3] = tmp8;
-}) : ((arg0) => {
+}) : (function Global(arg0) {
   ({ text, badge } = arg0);
   ({ description, onPress } = arg0);
   const obj = { onPress, accessibilityRole: "menuitem", label: null, trailing: null };
@@ -291,7 +291,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const obj3 = { text };
     const items = [options(closure_12, obj3), badge];
     obj2.children = items;
-    let tmp2Result = v65535(View, obj2);
+    let tmp2Result = collapsed(View, obj2);
   } else {
     const obj4 = { text };
     tmp2Result = options(closure_12, obj4);
@@ -301,7 +301,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return options(TableRow.TableRow, obj);
 });
 ReactCompilerGating = fn(558);
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((name) => {
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function Role(name) {
   const cResult = c.c(16);
   ({ onPress, showDescription, colorString } = name);
   const tmp4 = closure_11();
@@ -376,7 +376,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((name) => {
   cResult[3] = tmp5;
   cResult[4] = items;
   tmp8 = items;
-}) : ((colorString) => {
+}) : (function Role(colorString) {
   colorString = colorString.colorString;
   ({ onPress, showDescription, name } = colorString);
   const obj = { onPress, accessibilityRole: "menuitem", label: null, trailing: null };
@@ -398,14 +398,14 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((name) => {
   return options(TableRow.TableRow, obj);
 });
 ReactCompilerGating = fn(558);
-let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channel(arg0) {
   const cResult = c.c(17);
   ({ channel, category, onPress } = arg0);
   const tmp4 = closure_11();
   if (cResult[0] !== channel) {
     const getGuild = GuildStore.getGuild;
     if (channel.type === constants.GUILD_CATEGORY) {
-      let channelIconWithGuild = _modDef7818;
+      let channelIconWithGuild = _modDef8237;
     } else {
       channelIconWithGuild = utils_ChannelUtils.getChannelIconWithGuild(channel, tmp7);
       const tmpResult = utils_ChannelUtils;
@@ -472,11 +472,11 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[4] = tmp14;
     tmp12 = tmp14;
   }
-}) : ((onPress) => {
+}) : (function Channel(onPress) {
   ({ channel, category } = onPress);
   const tmp = closure_11();
   if (channel.type === constants.GUILD_CATEGORY) {
-    let channelIconWithGuild = _modDef7818;
+    let channelIconWithGuild = _modDef8237;
   } else {
     channelIconWithGuild = utils_ChannelUtils.getChannelIconWithGuild(channel, tmp2);
   }
@@ -494,7 +494,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return options(Form.FormRow, obj4);
 });
 ReactCompilerGating = fn(558);
-let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((name) => {
+let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Emoji(name) {
   const cResult = c.c(20);
   ({ url, surrogates, onPress } = name);
   const tmp4 = closure_11();
@@ -575,7 +575,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((name) => {
     cResult[10] = items1;
     tmp5 = items1;
   }
-}) : ((url) => {
+}) : (function Emoji(url) {
   url = url.url;
   ({ name, surrogates, onPress } = url);
   const tmp = closure_11();
@@ -601,7 +601,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((name) => {
   return tmp2(Form.FormRow, obj4);
 });
 ReactCompilerGating = fn(558);
-let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiPremiumUpsell(arg0) {
   const cResult = c.c(5);
   ({ results, onPress } = arg0);
   if (cResult[0] !== results) {
@@ -624,12 +624,12 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = tmp4;
   cResult[4] = tmp9;
   tmp8 = tmp9;
-}) : ((arg0) => {
+}) : (function EmojiPremiumUpsell(arg0) {
   ({ results, onPress } = arg0);
   return options(Form.FormRow, { onPress, accessibilityRole: "menuitem", label: options(ChannelAutocompleteEmojiUpsellDefault, { results }) });
 });
 ReactCompilerGating = fn(558);
-let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Choice(arg0) {
   const cResult = c.c(5);
   ({ choice, onPress } = arg0);
   if (cResult[0] !== choice.displayName) {
@@ -652,13 +652,13 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = tmp4;
   cResult[4] = tmp9;
   tmp8 = tmp9;
-}) : ((arg0) => {
+}) : (function Choice(arg0) {
   ({ choice, onPress } = arg0);
   const obj = { onPress, accessibilityRole: "menuitem", label: options(closure_12, { text: choice.displayName }) };
   return options(Form.FormRow, obj);
 });
 ReactCompilerGating = fn(558);
-let tmp11 = ReactCompilerGating.isReactCompilerEnabled() ? ((isInteracting) => {
+let tmp11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Sticker(isInteracting) {
   const cResult = c.c(8);
   ({ sticker, onPress, onLongPress } = isInteracting);
   const tmp4 = closure_11();
@@ -691,14 +691,14 @@ let tmp11 = ReactCompilerGating.isReactCompilerEnabled() ? ((isInteracting) => {
   cResult[1] = sticker;
   cResult[2] = tmp7;
   tmp6 = tmp7;
-}) : ((arg0) => {
+}) : (function Sticker(arg0) {
   ({ sticker, onPress, onLongPress, isInteracting } = arg0);
   const tmp = closure_11();
   const shouldAnimateSticker = StickersHooks.useShouldAnimateSticker(isInteracting);
   return options(Pressables.PressableOpacity, { accessibilityRole: "menuitem", style: tmp.stickerContainer, onPress, onLongPress, pointerEvents: "box-only", children: options(StickerDefault, { sticker, size: 40, animated: shouldAnimateSticker }) });
 });
 ReactCompilerGating = fn(558);
-let tmp12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let tmp12 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChoiceLoading() {
   const cResult = c.c(10);
   const tmp4 = closure_11();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -749,7 +749,7 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[6] = tmp14;
   tmp13 = tmp14;
   const obj6 = { style: tmp4.commandChoiceLoadingContainer, children: tmp9 };
-}) : (() => {
+}) : (function ChoiceLoading() {
   const tmp = closure_11();
   const memo = noop.useMemo(() => _modDef12.random(100, 300), []);
   const obj = { DEPRECATED_style: tmp.row, leading: null };
@@ -772,7 +772,7 @@ const obj10 = {
   Choice: tmp10,
   ChoiceLoading: tmp12,
   Sticker: tmp11,
-  Label: ReactCompilerGating.isReactCompilerEnabled() ? ((label) => {
+  Label: ReactCompilerGating.isReactCompilerEnabled() ? (function Label(label) {
     const cResult = c.c(2);
     label = label.label;
     if (cResult[0] !== label) {
@@ -787,11 +787,13 @@ const obj10 = {
       tmp4 = cResult[1];
     }
     return tmp4;
-  }) : ((text) => options(Form.FormRow, { label: options(closure_12, { text: text.label }) })),
+  }) : (function Label(text) {
+    return options(Form.FormRow, { label: options(closure_12, { text: text.label }) });
+  }),
   Game: null,
   Timestamp: null
 };
-let tmp13 = ReactCompilerGating.isReactCompilerEnabled() ? ((label) => {
+let tmp13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Label(label) {
   const cResult = c.c(2);
   label = label.label;
   if (cResult[0] !== label) {
@@ -806,9 +808,11 @@ let tmp13 = ReactCompilerGating.isReactCompilerEnabled() ? ((label) => {
     tmp4 = cResult[1];
   }
   return tmp4;
-}) : ((text) => options(Form.FormRow, { label: options(closure_12, { text: text.label }) }));
+}) : (function Label(text) {
+  return options(Form.FormRow, { label: options(closure_12, { text: text.label }) });
+});
 ReactCompilerGating = fn(558);
-obj10.Game = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+obj10.Game = ReactCompilerGating.isReactCompilerEnabled() ? (function Game(arg0) {
   const cResult = c.c(15);
   ({ game, onPress } = arg0);
   let gameIcon = closure_11();
@@ -883,7 +887,7 @@ obj10.Game = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = gameIcon;
   cResult[4] = tmp8Result;
   tmpResult = StringUtils;
-}) : ((game) => {
+}) : (function Game(game) {
   game = game.game;
   const tmp = closure_11();
   const tmp4 = getGameMediaRefURLDefault(game.id, game.icon, { size: 32 });
@@ -908,7 +912,7 @@ obj10.Game = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   obj6.trailing = tmp8Result;
   return tmp8(Form.FormRow, obj6);
 });
-obj10.Timestamp = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+obj10.Timestamp = ReactCompilerGating.isReactCompilerEnabled() ? (function Timestamp(arg0) {
   const cResult = c.c(10);
   ({ mention, description, onPress } = arg0);
   if (cResult[0] !== mention) {
@@ -960,7 +964,7 @@ obj10.Timestamp = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[9] = tmp15;
     tmp13 = tmp15;
   }
-}) : ((description) => {
+}) : (function Timestamp(description) {
   let str = description.description;
   ({ mention, onPress } = description);
   const result = TimestampUtils.formatTimestampMention(mention);

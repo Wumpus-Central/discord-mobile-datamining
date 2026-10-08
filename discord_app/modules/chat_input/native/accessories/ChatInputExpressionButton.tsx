@@ -1,17 +1,17 @@
-// === Module 11812: ChatInputExpressionButton ===
+// === Module 11879: ChatInputExpressionButton ===
 
-// Module 11812 (ChatInputExpressionButton)
+// Module 11879 (ChatInputExpressionButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import useToken from "useToken" /* 4586 */;
-import Pressables from "Pressables" /* 5916 */;
+import native from "native" /* 1200 */;
+import useToken from "useToken" /* 4778 */;
+import Pressables from "Pressables" /* 6189 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles((height) => {
   const obj = { expressionButton: null, expressionButtonIconTint: null };
   const size = { borderRadius: nativeDefault.radii.sm, height, width: height, alignItems: "center", justifyContent: "center" };
@@ -23,7 +23,7 @@ const ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/chat_input/native/accessories/ChatInputExpressionButton.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ExpressionButton(arg0) {
   const cResult = c.c(18);
   ({ style, active, showKeyboardIcon, onPress } = arg0);
   if (undefined === showKeyboardIcon) {
@@ -67,7 +67,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
     } else {
       tmp17 = cResult[7];
     }
-    const tmp5Result = importDefault(showKeyboardIcon ? 11072 : 8445);
+    const tmp5Result = importDefault(showKeyboardIcon ? 11880 : 8931);
     if (cResult[8] === tmp9.expressionButtonIconTint) {
       if (cResult[9] === token1) {
         if (cResult[10] === tmp5Result) {
@@ -110,7 +110,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   cResult[4] = items;
   tmp13 = items;
   const tmpResult4 = useToken;
-}) : ((active) => {
+}) : (function ExpressionButton(active) {
   let flag = active.active;
   if (flag === undefined) {
     flag = false;
@@ -142,6 +142,6 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   obj4.accessibilityState = { expanded: flag };
   obj4.onPress = callback;
   const ref = noop.useRef(null);
-  obj4.children = jsx(native.Icon, { size: token1, style: tmp7.expressionButtonIconTint, source: importDefault(showKeyboardIcon ? 11072 : 8445) });
+  obj4.children = jsx(native.Icon, { size: token1, style: tmp7.expressionButtonIconTint, source: importDefault(showKeyboardIcon ? 11880 : 8931) });
   return jsx(Pressables.PressableOpacity, { ref: noop.useRef(null), style: null, hitSlop: null, accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, onPress: null, children: null });
 }));

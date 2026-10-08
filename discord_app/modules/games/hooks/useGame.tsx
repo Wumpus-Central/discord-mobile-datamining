@@ -1,11 +1,11 @@
-// === Module 6822: useGame ===
+// === Module 6995: useGame ===
 
-// Module 6822 (useGame)
+// Module 6995 (useGame)
 import DurationsDefault from "Durations" /* 1102 */;
-import GameActionCreators from "GameActionCreators" /* 6823 */;
+import GameActionCreators from "GameActionCreators" /* 6996 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GameStore from "GameStore" /* 2007 */;
+import GameStore from "GameStore" /* 2019 */;
 
 const require = globalThis.__r;
 
@@ -77,7 +77,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
     }
   }
 });
-obj2.load = function() {
+obj2.load = function load() {
   const self = this;
   const apply = closure_2.apply;
   if (typeof apply === "unknown") {
@@ -111,11 +111,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/games/hooks/useGame.tsx");
 
 export const useGame = fetchStore;
-export const useGames = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useGames = ReactCompilerGating.isReactCompilerEnabled() ? (function useGames(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] !== arg0) {
-    const fn = function n() {
+    const fn = function l() {
       let items = [
         ...closure_0.map((item) => {
           const items = [item];
@@ -135,7 +135,7 @@ export const useGames = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) =
     tmp3 = cResult[2];
   }
   const effect = noop.useEffect(tmp2, tmp3);
-}) : ((arg0) => {
+}) : (function useGames(arg0) {
   closure_0 = arg0;
   let items = [arg0];
   const effect = noop.useEffect(() => {

@@ -1,6 +1,6 @@
-// === Module 17302: VoicePanelStreamOutputSinkStack ===
+// === Module 17583: VoicePanelStreamOutputSinkStack ===
 
-// Module 17302 (VoicePanelStreamOutputSinkStack)
+// Module 17583 (VoicePanelStreamOutputSinkStack)
 import c from "c" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -105,7 +105,7 @@ prototype["sourceId"] = function sourceId(dependencyMap) {
 };
 
 export default VoicePanelStreamOutputSinkStack;
-export const useSetHasActiveVideoOutputSink = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useSetHasActiveVideoOutputSink = ReactCompilerGating.isReactCompilerEnabled() ? (function useSetHasActiveVideoOutputSink(arg0) {
   const hasActiveVideoOutputSink = arg0;
   const cResult = c.c(10);
   const id = noop.useId();
@@ -148,7 +148,7 @@ export const useSetHasActiveVideoOutputSink = ReactCompilerGating.isReactCompile
   cResult[1] = arg0;
   cResult[2] = fn;
   tmp3 = fn;
-}) : ((arg0) => {
+}) : (function useSetHasActiveVideoOutputSink(arg0) {
   const hasActiveVideoOutputSink = arg0;
   const id = noop.useId();
   const items = [id, arg0];

@@ -1,16 +1,16 @@
-// === Module 7651: useIsCallActive ===
+// === Module 7972: useIsCallActive ===
 
-// Module 7651 (useIsCallActive)
-import CallStore from "CallStore" /* 5444 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
+// Module 7972 (useIsCallActive)
+import CallStore from "CallStore" /* 5754 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6041 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ParticipantTypes = fn(4917).ParticipantTypes;
+const ParticipantTypes = fn(5113).ParticipantTypes;
 fn(558);
 const ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsCallActive(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   const cResult = require("c").c(5);
@@ -28,7 +28,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     }
     return tmp(504).useStateFromStores(first, tmp7, tmp8);
   }
-  const fn = function o() {
+  const fn = function u() {
     let isCallActiveResult = CallStore.isCallActive(closure_0, closure_1);
     if (isCallActiveResult) {
       const participants = ChannelRTCStore.getParticipants(closure_0);
@@ -45,7 +45,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   tmp7 = fn;
   const obj = require("c");
   tmp = _require;
-}) : ((arg0, arg1) => {
+}) : (function useIsCallActive(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   const items = [CallStore, ChannelRTCStore];
@@ -72,7 +72,7 @@ const result = size.fileFinishedImporting("modules/calls/mobile/useIsCallActive.
 
 export default tmp2;
 export { checkIsCallActive };
-export const useIsCallActiveNullable = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export const useIsCallActiveNullable = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsCallActiveNullable(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   const cResult = require("c").c(5);
@@ -90,7 +90,7 @@ export const useIsCallActiveNullable = ReactCompilerGating.isReactCompilerEnable
     }
     return tmp(504).useStateFromStores(first, tmp7, tmp8);
   }
-  const fn = function o() {
+  const fn = function u() {
     let tmp2 = null != closure_0;
     if (tmp2) {
       let isCallActiveResult = CallStore.isCallActive(closure_0, closure_1);
@@ -111,7 +111,7 @@ export const useIsCallActiveNullable = ReactCompilerGating.isReactCompilerEnable
   tmp7 = fn;
   const obj = require("c");
   tmp = _require;
-}) : ((arg0, arg1) => {
+}) : (function useIsCallActiveNullable(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   const items = [CallStore, ChannelRTCStore];

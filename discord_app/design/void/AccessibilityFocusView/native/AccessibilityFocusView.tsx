@@ -1,8 +1,8 @@
-// === Module 13949: AccessibilityFocusView ===
+// === Module 14252: AccessibilityFocusView ===
 
-// Module 13949 (AccessibilityFocusView)
+// Module 14252 (AccessibilityFocusView)
 import c from "c" /* 576 */;
-import AccessibilityFocusNativeComponentDefault from "AccessibilityFocusNativeComponent" /* 13950 */;
+import AccessibilityFocusNativeComponentDefault from "AccessibilityFocusNativeComponent" /* 14253 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/AccessibilityFocusView/native/AccessibilityFocusView.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AccessibilityFocusView(arg0) {
   const cResult = c.c(8);
   if (cResult[0] !== arg0) {
     ({ onAccessibilityFocus, onAccessibilityBlur } = arg0);
@@ -48,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[6] = tmp5;
   cResult[7] = tmp12;
   tmp9 = tmp12;
-}) : ((arg0) => {
+}) : (function AccessibilityFocusView(arg0) {
   ({ onAccessibilityFocus, onAccessibilityBlur } = arg0);
   const merged = Object.assign(arg0, Object.assign({ onAccessibilityFocus: 0, onAccessibilityBlur: 0 }));
   const obj = {};

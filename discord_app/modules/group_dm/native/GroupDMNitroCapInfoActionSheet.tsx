@@ -1,21 +1,21 @@
-// === Module 11829: GroupDMNitroCapInfoActionSheet ===
+// === Module 11914: GroupDMNitroCapInfoActionSheet ===
 
-// Module 11829 (GroupDMNitroCapInfoActionSheet)
+// Module 11914 (GroupDMNitroCapInfoActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6652 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6829 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const number = fn(11228).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+const number = fn(11343).MAX_GROUP_DM_NITRO_PARTICIPANTS;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 }, title: null, body: null, button: null };
 let obj3 = { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
 obj2.title = { marginTop: nativeDefault.space.PX_8, textAlign: "center" };
@@ -29,7 +29,7 @@ let obj6 = { width: "100%", marginTop: nativeDefault.space.PX_24 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/group_dm/native/GroupDMNitroCapInfoActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GroupDMNitroCapInfoActionSheet() {
   const cResult = c.c(15);
   const tmp4 = closure_8();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -119,7 +119,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[13] = tmp20;
   cResult[14] = tmp25;
   tmp24 = tmp25;
-}) : (() => {
+}) : (function GroupDMNitroCapInfoActionSheet() {
   const tmp = closure_8();
   const callback = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.hideActionSheet();

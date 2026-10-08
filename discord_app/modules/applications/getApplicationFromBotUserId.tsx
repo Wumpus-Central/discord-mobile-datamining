@@ -1,7 +1,7 @@
-// === Module 12269: getApplicationFromBotUserId ===
+// === Module 12348: getApplicationFromBotUserId ===
 
-// Module 12269 (getApplicationFromBotUserId)
-import UserProfileStore from "UserProfileStore" /* 7124 */;
+// Module 12348 (getApplicationFromBotUserId)
+import UserProfileStore from "UserProfileStore" /* 7309 */;
 
 const require = globalThis.__r;
 
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/getApplicationFromBotUserId.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGetApplicationFromBotUserId(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -47,7 +47,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const obj = require("c");
   const stateFromStores = require("initialize").useStateFromStores(first, tmp6);
   return stateFromStores;
-}) : ((arg0) => {
+}) : (function useGetApplicationFromBotUserId(arg0) {
   _require = arg0;
   const items = [UserProfileStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {

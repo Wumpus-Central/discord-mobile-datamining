@@ -1,28 +1,28 @@
-// === Module 9881: EmojiPickerActionSheet ===
+// === Module 9361: EmojiPickerActionSheet ===
 
-// Module 9881 (EmojiPickerActionSheet)
+// Module 9361 (EmojiPickerActionSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import SearchField from "SearchField" /* 6554 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9879 */;
-import EmojiPickerUtils from "EmojiPickerUtils" /* 9883 */;
-import DoubleTapReminderToast from "DoubleTapReminderToast" /* 9891 */;
-import BurstReactionToggleDefault from "BurstReactionToggle" /* 9893 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import SearchField from "SearchField" /* 6730 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9359 */;
+import EmojiPickerUtils from "EmojiPickerUtils" /* 9363 */;
+import DoubleTapReminderToast from "DoubleTapReminderToast" /* 9371 */;
+import BurstReactionToggleDefault from "BurstReactionToggle" /* 9373 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const View = fn(17).View;
-const EmojiPickerSource = fn(9882).EmojiPickerSource;
+const EmojiPickerSource = fn(9362).EmojiPickerSource;
 const EXPRESSION_FOOTER_HEIGHT = fn(1085).EXPRESSION_FOOTER_HEIGHT;
-let EmojiIntention = fn(1380).EmojiIntention;
+let EmojiIntention = fn(1392).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const EmojiPickerActionSheet = "EmojiPickerActionSheet";
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { header: { flexDirection: "column" }, searchContainer: { display: "flex", flexDirection: "row", marginBottom: -nativeDefault.space.PX_16 }, content: null, background: null, headerText: null, headerSpacer: null, burstReaction: null };
 let obj3 = { display: "flex", flexDirection: "row", marginBottom: -nativeDefault.space.PX_16 };
 obj2.content = { paddingHorizontal: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT };
@@ -153,11 +153,11 @@ export default function EmojiPickerActionSheet(onClose) {
       const obj2 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: null };
       const intl = util.intl;
       obj2.children = intl.string(util.t.wHTk2C);
-      const items = [v65535(Text_Text.Text, obj2), ];
+      const items = [collapsed(Text_Text.Text, obj2), ];
       const obj3 = { variant: "text-sm/medium", color: "text-muted", children: null };
       const intl2 = util.intl;
       obj3.children = intl2.string(util.t.VrWSNn);
-      items[1] = v65535(Text_Text.Text, obj3);
+      items[1] = collapsed(Text_Text.Text, obj3);
       obj.children = items;
       tmp = closure_2_11(View, obj);
     }
@@ -175,7 +175,7 @@ export default function EmojiPickerActionSheet(onClose) {
     const obj2 = { style: items1, children: null };
     items1[1] = headerSpacer;
     const obj3 = { ref, size: "md", round: true, onChange: handleTextChange, placeholder: EmojiPickerUtils.getSearchPlaceholder(pickerIntention, currentUser) };
-    const items2 = [v65535(SearchField.SearchField, obj3), ];
+    const items2 = [collapsed(SearchField.SearchField, obj3), ];
     let tmp4Result = pickerIntention === EmojiIntention.REACTION;
     if (tmp4Result) {
       tmp4Result = source !== EmojiPickerSource.NOTIFICATION;
@@ -195,7 +195,7 @@ export default function EmojiPickerActionSheet(onClose) {
           },
         isActive: currentUser
       };
-      tmp4Result = v65535(BurstReactionToggleDefault, obj5);
+      tmp4Result = collapsed(BurstReactionToggleDefault, obj5);
     }
     items2[1] = tmp4Result;
     obj2.children = items2;

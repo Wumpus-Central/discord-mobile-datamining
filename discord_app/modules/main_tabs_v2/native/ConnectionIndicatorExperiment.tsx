@@ -1,7 +1,7 @@
-// === Module 13514: ConnectionIndicatorExperiment ===
+// === Module 13811: ConnectionIndicatorExperiment ===
 
-// Module 13514 (ConnectionIndicatorExperiment)
-import ApexExperiment from "ApexExperiment" /* 1440 */;
+// Module 13811 (ConnectionIndicatorExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2025-12-connection-indicator", kind: "user", defaultConfig: { timeoutMs: "IconComponent", hidden: null }, variations: null };

@@ -1,12 +1,12 @@
-// === Module 11905: ChatInputScrimGradient ===
+// === Module 11978: ChatInputScrimGradient ===
 
-// Module 11905 (ChatInputScrimGradient)
+// Module 11978 (ChatInputScrimGradient)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
-import useToken from "useToken" /* 4586 */;
-import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4702 */;
-import LinearGradientDefault from "LinearGradient" /* 5612 */;
+import useToken from "useToken" /* 4778 */;
+import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4896 */;
+import LinearGradientDefault from "LinearGradient" /* 5387 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 fn(558);
 const ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatInputScrimGradient(arg0) {
   const cResult = c.c(23);
   ({ gradientHeight, inline, scrimBase } = arg0);
   const tmp4 = undefined !== inline && inline;
@@ -143,7 +143,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[8] = items2;
   tmp14 = items2;
   tmpResult6 = useToken;
-}) : ((scrimBase) => {
+}) : (function ChatInputScrimGradient(scrimBase) {
   ({ gradientHeight, inline } = scrimBase);
   if (inline === undefined) {
     inline = false;
@@ -187,7 +187,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/chat_input/native/ChatInputScrimGradient.tsx");
 
 export const ChatInputScrimGradient = tmp4;
-export const useChatInputFloatingOverlayStyle = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useChatInputFloatingOverlayStyle = ReactCompilerGating.isReactCompilerEnabled() ? (function useChatInputFloatingOverlayStyle() {
   const cResult = c.c(2);
   const result = -useToken.useToken(nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_SCRIM_GRADIENT_HEIGHT) / 2;
   if (cResult[0] !== result) {
@@ -199,7 +199,7 @@ export const useChatInputFloatingOverlayStyle = ReactCompilerGating.isReactCompi
     tmp3 = cResult[1];
   }
   return tmp3;
-}) : (() => {
+}) : (function useChatInputFloatingOverlayStyle() {
   const obj = { marginTop: -useToken.useToken(nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_SCRIM_GRADIENT_HEIGHT) / 2, overflow: "visible" };
   return obj;
 });

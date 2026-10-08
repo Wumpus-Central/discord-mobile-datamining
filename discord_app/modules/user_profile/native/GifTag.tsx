@@ -1,13 +1,13 @@
-// === Module 7938: GifTag ===
+// === Module 8103: GifTag ===
 
-// Module 7938 (GifTag)
+// Module 8103 (GifTag)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import createStyles from "createStyles" /* 4896 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import createStyles from "createStyles" /* 5090 */;
 import n from "module_683" /* 683 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -25,7 +25,7 @@ let closure_4 = createStyles.createStyles(obj);
 let obj3 = { color: nativeDefault.unsafe_rawColors.PRIMARY_800 };
 const result = size.fileFinishedImporting("modules/user_profile/native/GifTag.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GifTag(style) {
   const cResult = c.c(9);
   style = style.style;
   const tmp4 = closure_4();
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
   cResult[1] = tmp4.gifTag;
   cResult[2] = items;
   tmp5 = items;
-}) : ((style) => {
+}) : (function GifTag(style) {
   const tmp = closure_4();
   const obj = { style: null, pointerEvents: "none", children: null };
   const items = [tmp.gifTag, style.style];

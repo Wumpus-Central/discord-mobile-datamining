@@ -1,13 +1,13 @@
-// === Module 13126: PrivateChannelHeader ===
+// === Module 12841: PrivateChannelHeader ===
 
-// Module 13126 (PrivateChannelHeader)
+// Module 12841 (PrivateChannelHeader)
 import nativeDefault from "native" /* 587 */;
-import ChannelHeader from "ChannelHeader" /* 13123 */;
+import ChannelHeader from "ChannelHeader" /* 12838 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import PresenceStore from "PresenceStore" /* 4936 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
-import UserStore from "UserStore" /* 1377 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import PresenceStore from "PresenceStore" /* 5106 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const View = fn(17).View;
@@ -15,15 +15,15 @@ const Constants = fn(1085);
 ({ ChannelTypes: closure_9, StatusTypes: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, Fragment: closure_12, jsxs: map1 } = jsxProd);
-let closure_14 = fn(1188).AVATAR_SIZE_MAP[fn(undefined, 1188).AvatarSizes.REFRESH_MEDIUM_32];
+let closure_14 = fn(1200).AVATAR_SIZE_MAP[fn(undefined, 1200).AvatarSizes.REFRESH_MEDIUM_32];
 let closure_15 = Object.freeze({ onlineCount: null, memberCount: null });
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { activityStatusText: { color: nativeDefault.colors.TEXT_MUTED }, groupDMIconAnchor: { marginRight: 12, flexShrink: 0 } };
 let closure_16 = createStyles.createStyles(obj);
 fn(558);
 let obj3 = { color: nativeDefault.colors.TEXT_MUTED };
 const ReactCompilerGating = fn(558);
-let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGroupDmMemberCounts(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -76,7 +76,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   let obj = require("c");
   return require("initialize").useStateFromStoresObject(first, tmp7, tmp8);
-}) : ((arg0) => {
+}) : (function useGroupDmMemberCounts(arg0) {
   _require = arg0;
   let items = [UserStore, PresenceStore];
   const items1 = [arg0];
@@ -111,7 +111,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     obj = closure_15;
   }, items1);
 });
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function PrivateChannelHeader(channelId) {
   const cResult = channelId(stateFromStores[12]).c(39);
   channelId = channelId.channelId;
   const screenIndex = channelId.screenIndex;
@@ -524,7 +524,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
     cResult[14] = stateFromStores1;
     cResult[15] = tmp22Result;
   }
-  class L {
+  class G {
     constructor() {
       obj = closure_0(closure_2[14]);
       result = obj.navigateToChannelDetails(channelId, screenIndex, "private-channel-header-title");
@@ -533,9 +533,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   }
   cResult[9] = channelId;
   cResult[10] = screenIndex;
-  cResult[11] = L;
+  cResult[11] = G;
   const tmpResult4 = channelId(stateFromStores[13]);
-}) : ((channelId) => {
+}) : (function PrivateChannelHeader(channelId) {
   channelId = channelId.channelId;
   const screenIndex = channelId.screenIndex;
   const pressable = channelId.pressable;
@@ -728,7 +728,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/channel/header/PrivateChannelHeader.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function PrivateChannelHeader(channelId) {
   const cResult = channelId(stateFromStores[12]).c(39);
   channelId = channelId.channelId;
   const screenIndex = channelId.screenIndex;
@@ -1141,7 +1141,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
     cResult[14] = stateFromStores1;
     cResult[15] = tmp22Result;
   }
-  class L {
+  class G {
     constructor() {
       obj = closure_0(closure_2[14]);
       result = obj.navigateToChannelDetails(channelId, screenIndex, "private-channel-header-title");
@@ -1150,9 +1150,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
   }
   cResult[9] = channelId;
   cResult[10] = screenIndex;
-  cResult[11] = L;
+  cResult[11] = G;
   const tmpResult4 = channelId(stateFromStores[13]);
-}) : ((channelId) => {
+}) : (function PrivateChannelHeader(channelId) {
   channelId = channelId.channelId;
   const screenIndex = channelId.screenIndex;
   const pressable = channelId.pressable;

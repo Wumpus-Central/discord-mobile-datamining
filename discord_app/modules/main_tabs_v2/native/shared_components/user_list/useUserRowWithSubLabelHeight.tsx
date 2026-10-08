@@ -1,13 +1,13 @@
-// === Module 16963: useUserRowWithSubLabelHeight ===
+// === Module 17244: useUserRowWithSubLabelHeight ===
 
-// Module 16963 (useUserRowWithSubLabelHeight)
+// Module 17244 (useUserRowWithSubLabelHeight)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4586 */;
-import useFontScale from "useFontScale" /* 5609 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10736 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 10738 */;
-import ActionStatusSubLabel from "ActionStatusSubLabel" /* 16422 */;
+import useToken from "useToken" /* 4778 */;
+import useFontScale from "useFontScale" /* 5382 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10490 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11596 */;
+import ActionStatusSubLabel from "ActionStatusSubLabel" /* 16682 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -17,7 +17,7 @@ function getUserRowWithSubLabelHeight(rowHeight) {
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/useUserRowWithSubLabelHeight.tsx");
 
 export { getUserRowWithSubLabelHeight };
-export const useUserRowWithSubLabelHeight = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useUserRowWithSubLabelHeight = ReactCompilerGating.isReactCompilerEnabled() ? (function useUserRowWithSubLabelHeight(arg0) {
   const cResult = c.c(6);
   let num = 1;
   if (undefined !== arg0) {
@@ -53,7 +53,7 @@ export const useUserRowWithSubLabelHeight = ReactCompilerGating.isReactCompilerE
   cResult[5] = tmp4ResultResult;
   tmp10 = tmp4ResultResult;
   const tmp4Result = roundToNearestPixelDefault;
-}) : (() => {
+}) : (function useUserRowWithSubLabelHeight() {
   let num = arg0;
   if (arg0 === undefined) {
     num = 1;

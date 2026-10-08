@@ -1,6 +1,6 @@
-// === Module 10486: useSelectPremiumGift ===
+// === Module 10083: useSelectPremiumGift ===
 
-// Module 10486 (useSelectPremiumGift)
+// Module 10083 (useSelectPremiumGift)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/hooks/useSelectPremiumGift.tsx");
 
-export const useSelectPremiumGift = ReactCompilerGating.isReactCompilerEnabled() ? ((GiftPurchaseButton) => {
+export const useSelectPremiumGift = ReactCompilerGating.isReactCompilerEnabled() ? (function useSelectPremiumGift(GiftPurchaseButton) {
   const cResult = require("c").c(7);
   const obj = require("c");
   let navigation = require("useNavigation").useNavigation();
@@ -64,7 +64,7 @@ export const useSelectPremiumGift = ReactCompilerGating.isReactCompilerEnabled()
       { planId: planIdForPremiumType, recipientUserId, productId: navigation(recipientUserId[8]).getProductIdForGift(planIdForPremiumType) };
     })();
   });
-  const fn = function() {
+  function t0() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -73,16 +73,16 @@ export const useSelectPremiumGift = ReactCompilerGating.isReactCompilerEnabled()
       applyArgumentsResult = apply(self, arguments);
     }
     return applyArgumentsResult;
-  };
+  }
   cResult[0] = createOrReuseGiftOrder;
   cResult[1] = navigation;
   cResult[2] = planInterval;
   cResult[3] = recipientUserId;
   cResult[4] = setOrder;
   cResult[5] = setPremiumType;
-  cResult[6] = fn;
-  tmp5 = fn;
-}) : ((GiftPurchaseButton) => {
+  cResult[6] = t0;
+  tmp5 = t0;
+}) : (function useSelectPremiumGift(GiftPurchaseButton) {
   let navigation = require("useNavigation").useNavigation();
   _require = navigation;
   const obj = require("useNavigation");

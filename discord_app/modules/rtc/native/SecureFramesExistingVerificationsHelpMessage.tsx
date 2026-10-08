@@ -1,13 +1,13 @@
-// === Module 9391: SecureFramesExistingVerificationsHelpMessage ===
+// === Module 8812: SecureFramesExistingVerificationsHelpMessage ===
 
-// Module 9391 (SecureFramesExistingVerificationsHelpMessage)
+// Module 8812 (SecureFramesExistingVerificationsHelpMessage)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import useSecureFramesUserVerifiedKeysCount from "useSecureFramesUserVerifiedKeysCount" /* 9392 */;
-import createStyles from "createStyles" /* 4896 */;
+import native from "native" /* 1200 */;
+import useSecureFramesUserVerifiedKeysCount from "useSecureFramesUserVerifiedKeysCount" /* 8813 */;
+import createStyles from "createStyles" /* 5090 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -16,7 +16,7 @@ const jsx = jsxProd.jsx;
 let closure_4 = createStyles.createStyles({ container: { width: "100%" } });
 const result = size.fileFinishedImporting("modules/rtc/native/SecureFramesExistingVerificationsHelpMessage.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SecureFramesExistingVerificationsHelpMessage(arg0) {
   const cResult = c.c(13);
   ({ style, userId, userKey } = arg0);
   const tmp4 = closure_4();
@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = userKey;
   cResult[2] = obj5;
   tmp5 = obj5;
-}) : ((arg0) => {
+}) : (function SecureFramesExistingVerificationsHelpMessage(arg0) {
   ({ style, userId, userKey } = arg0);
   const tmp = closure_4();
   const secureFramesUserVerifiedKeysCount = useSecureFramesUserVerifiedKeysCount.useSecureFramesUserVerifiedKeysCount({ userId, keyToOmit: userKey });

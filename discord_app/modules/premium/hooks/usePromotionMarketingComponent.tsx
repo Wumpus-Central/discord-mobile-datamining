@@ -1,11 +1,11 @@
-// === Module 13244: usePromotionMarketingComponent ===
+// === Module 13544: usePromotionMarketingComponent ===
 
-// Module 13244 (usePromotionMarketingComponent)
-import constants from "constants" /* 10441 */;
+// Module 13544 (usePromotionMarketingComponent)
+import constants from "constants" /* 10038 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserOfferStore from "UserOfferStore" /* 6972 */;
-import PromotionsStore from "PromotionsStore" /* 10409 */;
+import UserOfferStore from "UserOfferStore" /* 7161 */;
+import PromotionsStore from "PromotionsStore" /* 10006 */;
 
 const require = globalThis.__r;
 
@@ -15,7 +15,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/hooks/usePromotionMarketingComponent.tsx");
 
-export const usePromotionMarketingComponent = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const usePromotionMarketingComponent = ReactCompilerGating.isReactCompilerEnabled() ? (function usePromotionMarketingComponent(arg0) {
   _require = arg0;
   const cResult = require("c").c(11);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -269,7 +269,7 @@ export const usePromotionMarketingComponent = ReactCompilerGating.isReactCompile
     }
   }
   return null;
-}) : ((arg0) => {
+}) : (function usePromotionMarketingComponent(arg0) {
   _require = arg0;
   const effect = noop.useEffect(() => {
     const result = closure_0(stateFromStores[6]).maybeFetchActivePromotions();

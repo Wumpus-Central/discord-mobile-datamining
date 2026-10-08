@@ -1,29 +1,29 @@
-// === Module 16251: FavoritesGuildChannels ===
+// === Module 16511: FavoritesGuildChannels ===
 
-// Module 16251 (FavoritesGuildChannels)
+// Module 16511 (FavoritesGuildChannels)
 import c from "c" /* 576 */;
-import useFontScale from "useFontScale" /* 5609 */;
-import useScaledRowHeightDefault from "useScaledRowHeight" /* 6553 */;
-import RedesignChannelList from "RedesignChannelList" /* 16068 */;
-import FavoritesGuildSuggestedChannels from "FavoritesGuildSuggestedChannels" /* 16165 */;
-import useShouldRenderChannelList from "useShouldRenderChannelList" /* 16239 */;
-import FavoritesGuildChannelList from "FavoritesGuildChannelList" /* 16252 */;
+import useFontScale from "useFontScale" /* 5382 */;
+import useScaledRowHeightDefault from "useScaledRowHeight" /* 6729 */;
+import RedesignChannelList from "RedesignChannelList" /* 16328 */;
+import FavoritesGuildSuggestedChannels from "FavoritesGuildSuggestedChannels" /* 16425 */;
+import useShouldRenderChannelList from "useShouldRenderChannelList" /* 16499 */;
+import FavoritesGuildChannelList from "FavoritesGuildChannelList" /* 16512 */;
 import noop from "module_19" /* 19 */;
 
-const ChannelListPanelBackdropDefault = tmp4(16066);
-const ChannelListStickyHeaderDefault = tmp4(16100);
-const FavoritesGuildSuggestedChannelsDefault = tmp4(16165);
-const FavoritesGuildSuggestionsLoaderDefault = tmp4(16253);
-const FavoritesGuildSidebarHeaderDefault = tmp4(16258);
+const ChannelListPanelBackdropDefault = tmp4(16326);
+const ChannelListStickyHeaderDefault = tmp4(16360);
+const FavoritesGuildSuggestedChannelsDefault = tmp4(16425);
+const FavoritesGuildSuggestionsLoaderDefault = tmp4(16513);
+const FavoritesGuildSidebarHeaderDefault = tmp4(16518);
 require = fn;
-let closure_3 = fn(16166).useFavoritesGuildSuggestionCount;
+let closure_3 = fn(16426).useFavoritesGuildSuggestionCount;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/native/FavoritesGuildChannels.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FavoritesGuildChannels(guild) {
   let obj = dependencyMap;
   const cResult = c.c(11);
   const tmp3 = closure_3();
@@ -91,7 +91,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
     cResult[10] = tmp15Result2;
   }
   tmpResult3 = useShouldRenderChannelList;
-}) : ((arg0) => {
+}) : (function FavoritesGuildChannels(arg0) {
   const tmp = closure_3();
   let tmp2 = importDefault;
   let obj = dependencyMap;

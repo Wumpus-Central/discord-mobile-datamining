@@ -1,14 +1,14 @@
-// === Module 12118: ChannelPickerActionSheet ===
+// === Module 12196: ChannelPickerActionSheet ===
 
-// Module 12118 (ChannelPickerActionSheet)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import useChannelName from "useChannelName" /* 5049 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5819 */;
-import TableRowIcon from "TableRowIcon" /* 6006 */;
-import TableRadioRow from "TableRadioRow" /* 6078 */;
+// Module 12196 (ChannelPickerActionSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import useChannelName from "useChannelName" /* 5417 */;
+import TableRowIcon from "TableRowIcon" /* 6192 */;
+import TableRadioRow from "TableRadioRow" /* 6264 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8134 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
-import UserStore from "UserStore" /* 1377 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
@@ -19,7 +19,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/native/ChannelPickerActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channels) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelPickerActionSheet(channels) {
   _require = channels;
   const cResult = require("c").c(33);
   const bottom = guild(channels[6])().bottom;
@@ -74,42 +74,124 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channels) => {
                       }
                       if (cResult[27] === tmp16) {
                         if (cResult[28] === tmp23) {
-                          let tmp26 = cResult[29];
+                          let tmp27 = cResult[29];
                         }
                         if (cResult[30] === undefined) {
-                          if (cResult[31] === tmp26) {
-                            let tmp29 = cResult[32];
+                          if (cResult[31] === tmp27) {
+                            let tmp30 = cResult[32];
                           }
-                          return tmp29;
+                          return tmp30;
                         }
-                        let obj3 = { scrollable: true, header: undefined, children: tmp26 };
-                        const tmp31 = closure_5(tmp(tmp2[17]).ActionSheet, obj3);
+                        let obj3 = { scrollable: true, header: undefined, children: tmp27 };
+                        const tmp32 = closure_5(tmp(tmp2[17]).ActionSheet, obj3);
+                        class P {
+                          constructor(arg0) {
+                            closure_0 = channels;
+                            if ("" === channels) {
+                              obj = closure_0;
+                              tmp = null;
+                              if (null != closure_0.noChannelOptionLabel) {
+                                tmp8 = closure_1;
+                                tmp9 = closure_2;
+                                obj3 = closure_1(closure_2[8]);
+                                hideActionSheetResult = obj3.hideActionSheet();
+                                onSelectResult = obj.onSelect(null);
+                                return;
+                              }
+                            }
+                            found = channels.find(() => { ... });
+                            if (null != found) {
+                              tmp3 = closure_1;
+                              tmp4 = closure_2;
+                              obj2 = closure_1(closure_2[8]);
+                              hideActionSheetResult1 = obj2.hideActionSheet();
+                              tmp6 = onSelect;
+                              tmp7 = onSelect(found);
+                            }
+                            return;
+                          }
+                        }
                         cResult[30] = undefined;
-                        cResult[31] = tmp26;
-                        cResult[32] = tmp31;
-                        tmp29 = tmp31;
+                        cResult[31] = tmp27;
+                        cResult[32] = tmp32;
+                        tmp30 = tmp32;
                       }
                       let obj4 = { contentContainerStyle: tmp16, children: tmp23 };
-                      const tmp28 = closure_5(tmp(tmp2[16]).BottomSheetScrollView, obj4);
+                      const tmp29 = closure_5(tmp(tmp2[16]).BottomSheetScrollView, obj4);
+                      class P {
+                        constructor(arg0) {
+                          closure_0 = channels;
+                          if ("" === channels) {
+                            obj = closure_0;
+                            tmp = null;
+                            if (null != closure_0.noChannelOptionLabel) {
+                              tmp8 = closure_1;
+                              tmp9 = closure_2;
+                              obj3 = closure_1(closure_2[8]);
+                              hideActionSheetResult = obj3.hideActionSheet();
+                              onSelectResult = obj.onSelect(null);
+                              return;
+                            }
+                          }
+                          found = channels.find(() => { ... });
+                          if (null != found) {
+                            tmp3 = closure_1;
+                            tmp4 = closure_2;
+                            obj2 = closure_1(closure_2[8]);
+                            hideActionSheetResult1 = obj2.hideActionSheet();
+                            tmp6 = onSelect;
+                            tmp7 = onSelect(found);
+                          }
+                          return;
+                        }
+                      }
                       cResult[27] = tmp16;
                       cResult[28] = tmp23;
-                      cResult[29] = tmp28;
-                      tmp26 = tmp28;
+                      cResult[29] = tmp29;
+                      tmp27 = tmp29;
                     }
                   }
                 }
               }
               const obj5 = { defaultValue: str2, accessibilityLabel: title, onChange: tmp17, hasIcons: true, children: null };
-              const items1 = [tmp18, cResult[18]];
-              obj5.children = items1;
-              const tmp25 = closure_6(tmp(tmp2[15]).TableRadioGroup, obj5);
+              class P {
+                constructor(arg0) {
+                  closure_0 = channels;
+                  if ("" === channels) {
+                    obj = closure_0;
+                    tmp = null;
+                    if (null != closure_0.noChannelOptionLabel) {
+                      tmp8 = closure_1;
+                      tmp9 = closure_2;
+                      obj3 = closure_1(closure_2[8]);
+                      hideActionSheetResult = obj3.hideActionSheet();
+                      onSelectResult = obj.onSelect(null);
+                      return;
+                    }
+                  }
+                  found = channels.find(() => { ... });
+                  if (null != found) {
+                    tmp3 = closure_1;
+                    tmp4 = closure_2;
+                    obj2 = closure_1(closure_2[8]);
+                    hideActionSheetResult1 = obj2.hideActionSheet();
+                    tmp6 = onSelect;
+                    tmp7 = onSelect(found);
+                  }
+                  return;
+                }
+              }
+              tmp25[0] = tmp18;
+              tmp25[1] = cResult[18];
+              obj5.children = tmp25;
+              const tmp26 = closure_6(tmp(tmp2[15]).TableRadioGroup, obj5);
               cResult[21] = str2;
               cResult[22] = title;
               cResult[23] = tmp17;
               cResult[24] = tmp18;
               cResult[25] = cResult[18];
-              cResult[26] = tmp25;
-              tmp23 = tmp25;
+              cResult[26] = tmp26;
+              tmp23 = tmp26;
             }
           }
           if (cResult[19] !== guild) {
@@ -159,30 +241,69 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channels) => {
           }
           const mapped = channels.map(V);
           cResult[16] = channels;
+          class P {
+            constructor(arg0) {
+              closure_0 = channels;
+              if ("" === channels) {
+                obj = closure_0;
+                tmp = null;
+                if (null != closure_0.noChannelOptionLabel) {
+                  tmp8 = closure_1;
+                  tmp9 = closure_2;
+                  obj3 = closure_1(closure_2[8]);
+                  hideActionSheetResult = obj3.hideActionSheet();
+                  onSelectResult = obj.onSelect(null);
+                  return;
+                }
+              }
+              found = channels.find(() => { ... });
+              if (null != found) {
+                tmp3 = closure_1;
+                tmp4 = closure_2;
+                obj2 = closure_1(closure_2[8]);
+                hideActionSheetResult1 = obj2.hideActionSheet();
+                tmp6 = onSelect;
+                tmp7 = onSelect(found);
+              }
+              return;
+            }
+          }
           cResult[17] = guild;
           cResult[18] = mapped;
         }
       }
-      const fn = function _(arg0) {
-        noChannelOptionLabel = arg0;
-        if ("" === arg0) {
-          if (null != noChannelOptionLabel.noChannelOptionLabel) {
-            ActionSheetActionCreatorsDefault.hideActionSheet();
-            obj.onSelect(null);
+      class P {
+        constructor(arg0) {
+          closure_0 = channels;
+          if ("" === channels) {
+            obj = closure_0;
+            tmp = null;
+            if (null != closure_0.noChannelOptionLabel) {
+              tmp8 = closure_1;
+              tmp9 = closure_2;
+              obj3 = closure_1(closure_2[8]);
+              hideActionSheetResult = obj3.hideActionSheet();
+              onSelectResult = obj.onSelect(null);
+              return;
+            }
           }
-          obj = noChannelOptionLabel;
+          found = channels.find(() => { ... });
+          if (null != found) {
+            tmp3 = closure_1;
+            tmp4 = closure_2;
+            obj2 = closure_1(closure_2[8]);
+            hideActionSheetResult1 = obj2.hideActionSheet();
+            tmp6 = onSelect;
+            tmp7 = onSelect(found);
+          }
+          return;
         }
-        const found = channels.find((id) => id.id === closure_0);
-        if (null != found) {
-          ActionSheetActionCreatorsDefault.hideActionSheet();
-          onSelect(found);
-        }
-      };
+      }
       cResult[10] = channels;
       cResult[11] = onSelect;
       cResult[12] = channels;
-      cResult[13] = fn;
-      tmp17 = fn;
+      cResult[13] = P;
+      tmp17 = P;
     } else {
       class V {
         constructor(arg0) {
@@ -227,9 +348,35 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channels) => {
           }
         }
         const obj6 = { source: guild(tmp2[11]) };
+        cResult[5] = closure_5(tmp(tmp2[10]).TableRowIcon, obj6);
+        class P {
+          constructor(arg0) {
+            closure_0 = channels;
+            if ("" === channels) {
+              obj = closure_0;
+              tmp = null;
+              if (null != closure_0.noChannelOptionLabel) {
+                tmp8 = closure_1;
+                tmp9 = closure_2;
+                obj3 = closure_1(closure_2[8]);
+                hideActionSheetResult = obj3.hideActionSheet();
+                onSelectResult = obj.onSelect(null);
+                return;
+              }
+            }
+            found = channels.find(() => { ... });
+            if (null != found) {
+              tmp3 = closure_1;
+              tmp4 = closure_2;
+              obj2 = closure_1(closure_2[8]);
+              hideActionSheetResult1 = obj2.hideActionSheet();
+              tmp6 = onSelect;
+              tmp7 = onSelect(found);
+            }
+            return;
+          }
+        }
         const tmp12 = closure_5(tmp(tmp2[10]).TableRowIcon, obj6);
-        cResult[5] = tmp12;
-        const tmp11 = tmp12;
       } else {
         class V {
           constructor(arg0) {
@@ -276,6 +423,33 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channels) => {
         const obj7 = { value: "", label: channels.noChannelOptionLabel, icon: tmp11 };
         const tmp14 = closure_5(tmp(tmp2[12]).TableRadioRow, obj7);
         cResult[6] = channels.noChannelOptionLabel;
+        class P {
+          constructor(arg0) {
+            closure_0 = channels;
+            if ("" === channels) {
+              obj = closure_0;
+              tmp = null;
+              if (null != closure_0.noChannelOptionLabel) {
+                tmp8 = closure_1;
+                tmp9 = closure_2;
+                obj3 = closure_1(closure_2[8]);
+                hideActionSheetResult = obj3.hideActionSheet();
+                onSelectResult = obj.onSelect(null);
+                return;
+              }
+            }
+            found = channels.find(() => { ... });
+            if (null != found) {
+              tmp3 = closure_1;
+              tmp4 = closure_2;
+              obj2 = closure_1(closure_2[8]);
+              hideActionSheetResult1 = obj2.hideActionSheet();
+              tmp6 = onSelect;
+              tmp7 = onSelect(found);
+            }
+            return;
+          }
+        }
         cResult[7] = tmp14;
       } else {
         class V {
@@ -345,7 +519,33 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channels) => {
       }
       const obj8 = { title: tmp5, trailing: undefined };
       const tmp10 = closure_5(tmp(tmp2[9]).BottomSheetTitleHeader, obj8);
-      cResult[2] = undefined;
+      class P {
+        constructor(arg0) {
+          closure_0 = channels;
+          if ("" === channels) {
+            obj = closure_0;
+            tmp = null;
+            if (null != closure_0.noChannelOptionLabel) {
+              tmp8 = closure_1;
+              tmp9 = closure_2;
+              obj3 = closure_1(closure_2[8]);
+              hideActionSheetResult = obj3.hideActionSheet();
+              onSelectResult = obj.onSelect(null);
+              return;
+            }
+          }
+          found = channels.find(() => { ... });
+          if (null != found) {
+            tmp3 = closure_1;
+            tmp4 = closure_2;
+            obj2 = closure_1(closure_2[8]);
+            hideActionSheetResult1 = obj2.hideActionSheet();
+            tmp6 = onSelect;
+            tmp7 = onSelect(found);
+          }
+          return;
+        }
+      }
       cResult[3] = tmp5;
       cResult[4] = tmp10;
     } else {
@@ -372,7 +572,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channels) => {
     }
   }
   let obj = require("c");
-}) : ((noChannelOptionLabel) => {
+}) : (function ChannelPickerActionSheet(noChannelOptionLabel) {
   _require = noChannelOptionLabel;
   ({ header, guild: importDefault, channels } = noChannelOptionLabel);
   ({ onSelect: RelationshipStore, selectedChannel } = noChannelOptionLabel);
@@ -395,7 +595,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channels) => {
   let items;
   if (null != noChannelOptionLabel.noChannelOptionLabel) {
     let obj3 = { value: "", label: noChannelOptionLabel.noChannelOptionLabel, icon: null };
-    let obj4 = { source: require("module_12119") };
+    let obj4 = { source: require("module_12197") };
     obj3.icon = closure_5(require("TableRowIcon").TableRowIcon, obj4);
     items = closure_5(require("TableRadioRow").TableRadioRow, obj3);
   }

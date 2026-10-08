@@ -1,7 +1,7 @@
-// === Module 16568: useSubscribeToGuildMemberUpdates ===
+// === Module 16823: useSubscribeToGuildMemberUpdates ===
 
-// Module 16568 (useSubscribeToGuildMemberUpdates)
-import GuildSubscriptionsActionCreatorsAll from "GuildSubscriptionsActionCreators" /* 6825 */;
+// Module 16823 (useSubscribeToGuildMemberUpdates)
+import GuildSubscriptionsActionCreatorsAll from "GuildSubscriptionsActionCreators" /* 6998 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_mod_dash_member_safety/useSubscribeToGuildMemberUpdates.tsx");
 
-export const useSubscribeToGuildMemberUpdates = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useSubscribeToGuildMemberUpdates = ReactCompilerGating.isReactCompilerEnabled() ? (function useSubscribeToGuildMemberUpdates(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] !== arg0) {
@@ -32,7 +32,7 @@ export const useSubscribeToGuildMemberUpdates = ReactCompilerGating.isReactCompi
     tmp3 = cResult[2];
   }
   const effect = noop.useEffect(tmp2, tmp3);
-}) : ((arg0) => {
+}) : (function useSubscribeToGuildMemberUpdates(arg0) {
   closure_0 = arg0;
   const items = [arg0];
   const effect = noop.useEffect(() => {

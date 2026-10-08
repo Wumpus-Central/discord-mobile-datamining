@@ -1,16 +1,15 @@
-// === Module 9184: useEmbeddedActivityBackground ===
+// === Module 10752: useEmbeddedActivityBackground ===
 
-// Module 9184 (useEmbeddedActivityBackground)
+// Module 10752 (useEmbeddedActivityBackground)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-let closure_4 = ["embedded_cover", "embedded_background"];
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/useEmbeddedActivityBackground.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((applicationId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useEmbeddedActivityBackground(applicationId) {
   const cResult = applicationId(names[3]).c(13);
   applicationId = applicationId.applicationId;
   ({ size, names, format } = applicationId);
@@ -42,56 +41,72 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((applicationId) =
           str2 = str3;
         }
         if (cResult[5] !== names) {
-          const fn = function k() {
-            closure_4.current = names;
-          };
-          cResult[5] = names;
-          cResult[6] = fn;
-          let tmp10 = fn;
-        } else {
-          tmp10 = cResult[6];
-        }
-        const effect = obj2.useEffect(tmp10);
-        if (cResult[7] !== applicationId) {
-          const fn2 = function y() {
-            const current = ref.current;
-            if (null != current) {
-              const assets = applicationId(names[4]).getAssets(tmp);
-              assets.then((result) => {
-                closure_3(false);
-                const entries = Object.entries(result);
-                const obj = entries[Symbol.iterator]();
-                while (obj !== undefined) {
-                  let tmp5 = _slicedToArray(tmp3, 2);
-                  [r10020, tmp6] = tmp5;
-                  if (null != tmp6) {
-                    if ("" !== tmp6.id) {
-                      if (current.includes(tmp6.name)) {
-                        let tmp12 = closure_2_2(tmp6.id);
-                        obj.return();
-                      }
-                    }
-                  }
-                  continue;
-                }
-              });
-              let obj = applicationId(names[4]);
+          class B {
+            constructor() {
+              closure_4.current = closure_1;
+              return;
             }
-          };
+          }
+          cResult[5] = names;
+          cResult[6] = B;
+        } else {
+          class B {
+            constructor() {
+              closure_4.current = closure_1;
+              return;
+            }
+          }
+        }
+        const effect = obj2.useEffect(B);
+        if (cResult[7] !== applicationId) {
+          class O {
+            constructor() {
+              current = closure_4.current;
+              if (null != current) {
+                tmp2 = applicationId;
+                tmp3 = closure_1;
+                obj = applicationId(closure_1[4]);
+                assets = obj.getAssets(tmp);
+                nextPromise = assets.then(() => { ... });
+              }
+              return;
+            }
+          }
           const items = [applicationId];
           cResult[7] = applicationId;
-          cResult[8] = fn2;
+          cResult[8] = O;
           cResult[9] = items;
           let tmp13 = items;
-          let tmp12 = fn2;
         } else {
-          tmp12 = cResult[8];
+          class O {
+            constructor() {
+              current = closure_4.current;
+              if (null != current) {
+                tmp2 = applicationId;
+                tmp3 = closure_1;
+                obj = applicationId(closure_1[4]);
+                assets = obj.getAssets(tmp);
+                nextPromise = assets.then(() => { ... });
+              }
+              return;
+            }
+          }
           tmp13 = cResult[9];
         }
-        const effect1 = obj2.useEffect(tmp12, tmp13);
+        const effect1 = obj2.useEffect(O, tmp13);
         if (cResult[10] === tmp8) {
-          if (cResult[11] === str2) {
-            let tmp15 = cResult[12];
+          class O {
+            constructor() {
+              current = closure_4.current;
+              if (null != current) {
+                tmp2 = applicationId;
+                tmp3 = closure_1;
+                obj = applicationId(closure_1[4]);
+                assets = obj.getAssets(tmp);
+                nextPromise = assets.then(() => { ... });
+              }
+              return;
+            }
           }
           return tmp15;
         }
@@ -99,8 +114,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((applicationId) =
         cResult[10] = tmp8;
         cResult[11] = str2;
         cResult[12] = obj3;
-        tmp15 = obj3;
         ref = obj2.useRef(names);
+        tmp15 = obj3;
       }
     }
   }
@@ -112,7 +127,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((applicationId) =
   cResult[3] = size;
   cResult[4] = assetImage;
   tmp8 = assetImage;
-}) : ((applicationId) => {
+  const tmpResult = tmp(tmp2[4]);
+}) : (function useEmbeddedActivityBackground(applicationId) {
   applicationId = applicationId.applicationId;
   ({ size, names } = applicationId);
   if (names === undefined) {

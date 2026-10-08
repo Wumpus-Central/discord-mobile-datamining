@@ -1,7 +1,7 @@
-// === Module 17195: useActivityWebViewLockManager ===
+// === Module 17476: useActivityWebViewLockManager ===
 
-// Module 17195 (useActivityWebViewLockManager)
-import native from "native" /* 4595 */;
+// Module 17476 (useActivityWebViewLockManager)
+import native from "native" /* 4787 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -26,7 +26,7 @@ export default function useActivityWebViewLockManager() {
     }
     const set = new Set();
     const map = new Map();
-    return () => {
+    return function useActivityWebviewLock() {
       const id = getCanRender.useId();
       closure_0 = id;
       let tmp2 = map(getCanRender.useState(() => {

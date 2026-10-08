@@ -1,23 +1,23 @@
-// === Module 12254: useMaybeGetSortedBoosts ===
+// === Module 12333: useMaybeGetSortedBoosts ===
 
-// Module 12254 (useMaybeGetSortedBoosts)
+// Module 12333 (useMaybeGetSortedBoosts)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1126 */;
-import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 7679 */;
-import getBoostLifecyclePhase from "getBoostLifecyclePhase" /* 12255 */;
+import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 8000 */;
+import getBoostLifecyclePhase from "getBoostLifecyclePhase" /* 12334 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 12236 */;
-import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 5590 */;
-import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import GuildStore from "GuildStore" /* 2074 */;
+import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 12315 */;
+import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 5956 */;
+import GuildMemberStore from "GuildMemberStore" /* 2124 */;
+import GuildStore from "GuildStore" /* 2086 */;
 
 const require = globalThis.__r;
 
 require = fn;
 fn(558);
 const ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMaybeGetSortedBoosts(arg0, arg1) {
   _require = arg0;
   const cResult = require("c").c(37);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -106,7 +106,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
                 return;
               }
             }
-            class G {
+            class A {
               constructor() {
                 set = new Set();
                 closure_0 = set;
@@ -146,7 +146,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
                   return;
                 }
               }
-              class G {
+              class A {
                 constructor() {
                   set = new Set();
                   closure_0 = set;
@@ -201,7 +201,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
                   return;
                 }
               }
-              class G {
+              class A {
                 constructor() {
                   set = new Set();
                   closure_0 = set;
@@ -222,7 +222,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
                   }
                 }
               }
-              class R {
+              class N {
                 constructor() {
                   tmp = closure_4 === length && closure_6;
                   if (!tmp) {
@@ -240,7 +240,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
               cResult[32] = stateFromStores;
               cResult[33] = arg0;
               cResult[34] = stateFromStores1;
-              cResult[35] = R;
+              cResult[35] = N;
               cResult[36] = items5;
             }
           }
@@ -253,7 +253,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
               return;
             }
           }
-          class G {
+          class A {
             constructor() {
               set = new Set();
               closure_0 = set;
@@ -275,7 +275,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
           tmp19 = M;
           const tmpResult2 = tmp(504);
         }
-        class G {
+        class A {
           constructor() {
             set = new Set();
             closure_0 = set;
@@ -291,10 +291,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
         const items6 = [arg0, cResult[8]];
         cResult[13] = arg0;
         cResult[14] = cResult[8];
-        cResult[15] = G;
+        cResult[15] = A;
         cResult[16] = items6;
         tmp17 = items6;
-        tmp16 = G;
+        tmp16 = A;
       }
     }
   }
@@ -345,7 +345,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   cResult[8] = substr;
   obj3 = stateFromStores;
   const tmpResult = require("initialize");
-}) : ((arg0, arg1) => {
+}) : (function useMaybeGetSortedBoosts(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
   const items = [stateFromStoresArray1];
@@ -423,7 +423,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useMaybeGetSortedBoosts.tsx");
 
 export default tmp2;
-export const useGetBoostUserConfig = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
+export const useGetBoostUserConfig = ReactCompilerGating.isReactCompilerEnabled() ? (function useGetBoostUserConfig(id) {
   _require = id;
   const cResult = require("c").c(14);
   if (cResult[0] !== id.id) {
@@ -487,7 +487,7 @@ export const useGetBoostUserConfig = ReactCompilerGating.isReactCompilerEnabled(
   if (user2 != null) {
     username2 = user2.username;
   }
-  const fn = function n() {
+  const fn = function a() {
     const member = GuildMemberStore.getMember(id.guildId, id.userId);
     let nick = GuildMemberStore.getNick(id.guildId, id.userId);
     if (nick == null) {
@@ -527,7 +527,7 @@ export const useGetBoostUserConfig = ReactCompilerGating.isReactCompilerEnabled(
   tmp15 = fn;
   let obj = require("c");
   tmp = _require;
-}) : ((id) => {
+}) : (function useGetBoostUserConfig(id) {
   _require = id;
   const date = new Date(SnowflakeUtilsDefault.extractTimestamp(id.id));
   const items = [GuildMemberStore];

@@ -1,19 +1,19 @@
-// === Module 1391: UserRecord ===
+// === Module 1403: UserRecord ===
 
-// Module 1391 (UserRecord)
+// Module 1403 (UserRecord)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
-import FlagUtils from "FlagUtils" /* 1390 */;
-import AvatarUtils from "AvatarUtils" /* 1402 */;
-import AvatarDecorationUtils from "AvatarDecorationUtils" /* 1972 */;
-import PremiumTypeUtils from "PremiumTypeUtils" /* 1976 */;
-import Record from "Record" /* 1392 */;
+import FlagUtils from "FlagUtils" /* 1402 */;
+import AvatarUtils from "AvatarUtils" /* 1414 */;
+import AvatarDecorationUtils from "AvatarDecorationUtils" /* 1984 */;
+import PremiumTypeUtils from "PremiumTypeUtils" /* 1988 */;
+import Record from "Record" /* 1404 */;
 
 const AvatarUtilsDefault = AvatarUtils;
 
 require = fn;
 const Constants = fn(1085);
 ({ LOCAL_BOT_ID: closure_4, NON_USER_BOT_DISCRIMINATOR: hasOwnProperty, PREMIUM_TYPE_NONE: metroRequire, UserFlags: closure_7 } = Constants);
-const PremiumConstants = fn(1379);
+const PremiumConstants = fn(1391);
 ({ SKU_ID_PURCHASED_FLAGS: closure_8, PremiumTypes: closure_9, PurchasedFlags: c10 } = PremiumConstants);
 class UserRecord extends tmp2 {
   constructor(arg0) {
@@ -426,9 +426,9 @@ prototype["hasHadPremium"] = function hasHadPremium(arg0) {
   if (arg0 === undefined) {
     tmp = null;
   }
-  const hasPurchasedFlagResult = this.hasPurchasedFlag(v65535.PREMIUM_TIER_0);
-  const hasPurchasedFlagResult1 = this.hasPurchasedFlag(v65535.PREMIUM_TIER_1);
-  const hasPurchasedFlagResult2 = this.hasPurchasedFlag(v65535.PREMIUM_TIER_2);
+  const hasPurchasedFlagResult = this.hasPurchasedFlag(collapsed.PREMIUM_TIER_0);
+  const hasPurchasedFlagResult1 = this.hasPurchasedFlag(collapsed.PREMIUM_TIER_1);
+  const hasPurchasedFlagResult2 = this.hasPurchasedFlag(collapsed.PREMIUM_TIER_2);
   if (options.TIER_0 === tmp) {
     return hasPurchasedFlagResult;
   } else if (options.TIER_1 === tmp) {

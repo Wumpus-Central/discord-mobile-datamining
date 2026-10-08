@@ -1,28 +1,27 @@
-// === Module 17455: CaptchaModal ===
+// === Module 17737: CaptchaModal ===
 
-// Module 17455 (CaptchaModal)
+// Module 17737 (CaptchaModal)
 import util from "util" /* 1126 */;
-import Link from "Link" /* 1491 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import SharedCaptchaUtils from "SharedCaptchaUtils" /* 5414 */;
-import Stack_Stack from "Stack/Stack" /* 5600 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6652 */;
-import CaptchaUtilsDefault from "CaptchaUtils" /* 17457 */;
-import DisguiseSpotIllustration from "DisguiseSpotIllustration" /* 17460 */;
+import Link from "Link" /* 1503 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import Stack_Stack from "Stack/Stack" /* 5373 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import SharedCaptchaUtils from "SharedCaptchaUtils" /* 5723 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6829 */;
+import RegistrationUtils from "RegistrationUtils" /* 16173 */;
+import CaptchaUtilsDefault from "CaptchaUtils" /* 17739 */;
+import DisguiseSpotIllustration from "DisguiseSpotIllustration" /* 17742 */;
 import noop from "module_19" /* 19 */;
-
-const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Keyboard: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let closure_6 = fn(15906).doesRegistrationHaveIdentityType;
-const RegistrationConstants = fn(15907);
+let closure_6 = fn(16165).doesRegistrationHaveIdentityType;
+const RegistrationConstants = fn(16166);
 ({ RegisterTransitionSteps: closure_7, RegistrationTransitionActionTypes: closure_8 } = RegistrationConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_11 = createStyles.createStyles((arg0) => {
   let num = 8;
   if (arg0) {
@@ -34,7 +33,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/captcha/native/CaptchaModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCaptchaVerify) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function CaptchaModal(onCaptchaVerify) {
   const cResult = onCaptchaVerify(close[7]).c(36);
   onCaptchaVerify = onCaptchaVerify.onCaptchaVerify;
   const onReject = onCaptchaVerify.onReject;
@@ -72,18 +71,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCaptchaVerify)
     closure_9 = tmp10;
     const _Symbol = Symbol;
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-      class I {
+      class B {
         constructor() {
           dismissResult = captchaService.dismiss();
           return;
         }
       }
       const items = [];
-      cResult[3] = I;
+      cResult[3] = B;
       cResult[4] = items;
       let tmp13 = items;
     } else {
-      class I {
+      class B {
         constructor() {
           dismissResult = captchaService.dismiss();
           return;
@@ -91,27 +90,61 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCaptchaVerify)
       }
       tmp13 = cResult[4];
     }
-    const effect = sitekey.useEffect(I, tmp13);
+    const effect = sitekey.useEffect(B, tmp13);
     if (cResult[5] === captchaService) {
-      class I {
+      class B {
         constructor() {
           dismissResult = captchaService.dismiss();
           return;
         }
       }
     }
-    class P {
-      constructor() {
-        tmp = closure_9();
-        tmp2 = close();
-        obj = closure_0(closure_2[11]);
-        result = obj.emitCaptchaDistributionMetric(userflow);
-        obj2 = closure_1(closure_2[12]);
-        showCaptchaResult = obj2.showCaptcha(captchaService, sitekey, rqdata);
-        nextPromise = showCaptchaResult.then(() => { ... });
-        catchPromise = nextPromise.catch(() => { ... });
-        return;
-      }
+    function handleShowCaptcha() {
+      closure_9();
+      close();
+      const result = SharedCaptchaUtils.emitCaptchaDistributionMetric(userflow);
+      const showCaptchaResult = CaptchaUtilsDefault.showCaptcha(captchaService, sitekey, rqdata);
+      CaptchaUtilsDefault.showCaptcha(captchaService, sitekey, rqdata).then((result) => {
+        state = state.getState();
+        let name;
+        if (state != null) {
+          const first = state.routes[0];
+          if (first != null) {
+            name = first.name;
+          }
+        }
+        let tmp4 = "auth" === name;
+        if (tmp4) {
+          tmp4 = rqtoken();
+        }
+        if (tmp4) {
+          const obj3 = { step: userflow.CAPTCHA, actionType: navigation.SUBMITTED };
+          onCaptchaVerify(close[13]).trackRegTransition(obj3);
+          const obj2 = onCaptchaVerify(close[13]);
+        }
+        closure_1_0(result, closure_1_6);
+        const state1 = state.getState();
+        let name1;
+        if (state1 != null) {
+          const first1 = state1.routes[0];
+          if (first1 != null) {
+            name1 = first1.name;
+          }
+        }
+        let tmp15 = "auth" === name1;
+        if (tmp15) {
+          tmp15 = rqtoken();
+        }
+        if (tmp15) {
+          const obj5 = { step: userflow.CAPTCHA, actionType: navigation.SUCCESS };
+          onCaptchaVerify(close[13]).trackRegTransition(obj5);
+          const obj4 = onCaptchaVerify(close[13]);
+        }
+      }).catch((error) => {
+        if (onReject != null) {
+          tmp(error);
+        }
+      });
     }
     cResult[5] = captchaService;
     cResult[6] = close;
@@ -123,7 +156,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCaptchaVerify)
     cResult[12] = rqtoken;
     cResult[13] = sitekey;
     cResult[14] = userflow;
-    cResult[15] = P;
+    cResult[15] = handleShowCaptcha;
   }
   let obj3 = { onReject, analyticsType: str };
   cResult[0] = str;
@@ -131,10 +164,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCaptchaVerify)
   cResult[2] = obj3;
   tmp9 = obj3;
   let obj2 = onCaptchaVerify(close[9]);
-}) : ((arg0) => {
+}) : (function CaptchaModal(arg0) {
   ({ onCaptchaVerify: require, onReject } = arg0);
   ({ close: dependencyMap, sitekey: noop, captchaService: closure_4, headerText, bodyText, rqdata: closure_5, rqtoken: closure_6, userflow: closure_7 } = arg0);
-  const tmp2 = closure_11(onReject(6439)());
+  const tmp2 = closure_11(onReject(6617)());
   const navigation = Link.useNavigation();
   const items = [navigation];
   const memo = noop.useMemo(() => {
@@ -155,7 +188,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCaptchaVerify)
     }
     return str;
   }, items);
-  closure_9 = onReject(17456)({ onReject, analyticsType: memo });
+  closure_9 = onReject(17738)({ onReject, analyticsType: memo });
   const effect = noop.useEffect(() => {
     closure_1_4.dismiss();
   }, []);
@@ -179,7 +212,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCaptchaVerify)
   items1[1] = closure_10(closure_5, obj5);
   const obj6 = {
     grow: true,
-    onPress() {
+    onPress: function handleShowCaptcha() {
       closure_9();
       dependencyMap();
       const result = SharedCaptchaUtils.emitCaptchaDistributionMetric(constants);
@@ -199,8 +232,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCaptchaVerify)
         }
         if (tmp4) {
           const obj3 = { step: constants.CAPTCHA, actionType: navigation.SUBMITTED };
-          require("RegistrationUtils").trackRegTransition(obj3);
-          const obj2 = require("RegistrationUtils");
+          RegistrationUtils.trackRegTransition(obj3);
         }
         closure_1_0(result, closure_1_6);
         const state1 = state.getState();
@@ -217,8 +249,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCaptchaVerify)
         }
         if (tmp15) {
           const obj5 = { step: constants.CAPTCHA, actionType: navigation.SUCCESS };
-          require("RegistrationUtils").trackRegTransition(obj5);
-          const obj4 = require("RegistrationUtils");
+          RegistrationUtils.trackRegTransition(obj5);
         }
       }).catch((error) => {
         if (onReject != null) {

@@ -1,25 +1,25 @@
-// === Module 10035: VoiceChannelListInviteEmbed ===
+// === Module 9565: VoiceChannelListInviteEmbed ===
 
-// Module 10035 (VoiceChannelListInviteEmbed)
+// Module 9565 (VoiceChannelListInviteEmbed)
 import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1085 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import GuildRecord from "GuildRecord" /* 2070 */;
-import UserUtilsDefault from "UserUtils" /* 4728 */;
-import Constants2 from "Constants" /* 7239 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7616 */;
-import CodedLinksConstants from "CodedLinksConstants" /* 10037 */;
-import getChannelAndRecipientsFromInviteDefault from "getChannelAndRecipientsFromInvite" /* 10038 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
-import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 10036 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
-import UserStore from "UserStore" /* 1377 */;
-import VoiceStateStore from "VoiceStateStore" /* 4915 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4920 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
+import GuildRecord from "GuildRecord" /* 2082 */;
+import UserUtilsDefault from "UserUtils" /* 4922 */;
+import Constants2 from "Constants" /* 7418 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7863 */;
+import CodedLinksConstants from "CodedLinksConstants" /* 9567 */;
+import getChannelAndRecipientsFromInviteDefault from "getChannelAndRecipientsFromInvite" /* 9568 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
+import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 9566 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildMemberStore from "GuildMemberStore" /* 2124 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
+import UserStore from "UserStore" /* 1389 */;
+import VoiceStateStore from "VoiceStateStore" /* 5111 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5114 */;
 import size from "module_2" /* 2 */;
 
 const processColor = _mod17.processColor;
@@ -62,7 +62,7 @@ export const createVoiceChannelListInviteEmbed = function createVoiceChannelList
     const guild1 = GuildStore.getGuild(invite.guild.id);
     tmp = null;
     if (null != guild1) {
-      const channel = displayNameStylesEnabled(10038)(invite).channel;
+      const channel = displayNameStylesEnabled(9568)(invite).channel;
       tmp = null;
       if (null != channel) {
         tmp = null;
@@ -86,16 +86,16 @@ export const createVoiceChannelListInviteEmbed = function createVoiceChannelList
   } else {
     guild = tmp.guild;
     const channel2 = tmp.channel;
-    ({ colors, baseColors } = displayNameStylesEnabled(7615)(theme));
+    ({ colors, baseColors } = displayNameStylesEnabled(7861)(theme));
     let assetUriForEmbed;
     if (null != guild.icon) {
-      assetUriForEmbed = guild(7616).getAssetUriForEmbed(getGuildIconSource(guild, 128, false));
-      let obj2 = guild(7616);
+      assetUriForEmbed = guild(7863).getAssetUriForEmbed(getGuildIconSource(guild, 128, false));
+      let obj2 = guild(7863);
     }
     const voiceStatesForChannelAlt = SortedVoiceStateStore.getVoiceStatesForChannelAlt(channel2.id, guild.id);
     const items = [];
     const tmp39 = displayNameStylesEnabled;
-    const tmp41 = displayNameStylesEnabled(7615)(theme);
+    const tmp41 = displayNameStylesEnabled(7861)(theme);
     HermesBuiltin.arraySpread(voiceStatesForChannelAlt.filter((voiceState) => !voiceState.voiceState.selfStream), HermesBuiltin.arraySpread(voiceStatesForChannelAlt.filter((voiceState) => voiceState.voiceState.selfStream), 0));
     const substr = items.slice(0, 10);
     displayNameStylesEnabled = AccessibilityStore.displayNameStylesEnabled;
@@ -157,7 +157,7 @@ export const createVoiceChannelListInviteEmbed = function createVoiceChannelList
     const currentClientVoiceChannelId = VoiceStateStore.getCurrentClientVoiceChannelId(guild.id);
     const merged = Object.assign(baseColors);
     const arraySpreadResult = HermesBuiltin.arraySpread(voiceStatesForChannelAlt.filter((voiceState) => voiceState.voiceState.selfStream), 0);
-    const embedScrollGradientBackground = guild(4702).getEmbedScrollGradientBackground();
+    const embedScrollGradientBackground = guild(4896).getEmbedScrollGradientBackground();
     let backgroundColor = processColor(embedScrollGradientBackground);
     if (backgroundColor == null) {
       backgroundColor = baseColors.backgroundColor;
@@ -168,16 +168,16 @@ export const createVoiceChannelListInviteEmbed = function createVoiceChannelList
     obj5.guildName = guild.name;
     obj5.guildIcon = assetUriForEmbed;
     obj5.headerText = "";
-    let obj4 = guild(4702);
-    obj5.titleText = guild(5049).computeChannelName(channel2, UserStore, RelationshipStore);
+    let obj4 = guild(4896);
+    obj5.titleText = guild(5417).computeChannelName(channel2, UserStore, RelationshipStore);
     obj5.titleColor = voiceStatesForChannelAlt.length > 0 ? colors.voiceActiveColor : colors.voiceMutedColor;
     const intl = tmp30(1126).intl;
     obj5.acceptLabelText = intl.string(guild(1126).t.gpqgah);
     ({ acceptLabelGreenColor: obj3.acceptLabelColor, acceptLabelGreenBackgroundColor: obj3.acceptLabelBackgroundColor } = colors);
-    const tmp30Result = guild(5049);
+    const tmp30Result = guild(5417);
     const tmp35 = currentClientVoiceChannelId === channel2.id;
     const items1 = [GuildMemberStore];
-    obj5.canBeAccepted = tmp39(10039).canAcceptInvite(items1, invite);
+    obj5.canBeAccepted = tmp39(9569).canAcceptInvite(items1, invite);
     obj5.embedCanBeTapped = true;
     obj5.type = InviteTypes.GUILD;
     obj5.voiceUsers = mapped;
@@ -185,7 +185,7 @@ export const createVoiceChannelListInviteEmbed = function createVoiceChannelList
     const intl2 = tmp30(1126).intl;
     obj5.emptyStateText = intl2.string(guild(1126).t.zSqdrS);
     const intl3 = tmp30(1126).intl;
-    const tmp39Result = tmp39(10039);
+    const tmp39Result = tmp39(9569);
     obj5.streamingLabel = intl3.string(guild(1126).t.dI3q4h).toUpperCase();
     obj5.voiceHeaderBackgroundColor = colors.voiceHeaderBackgroundColor;
     obj5.reducedMotion = AccessibilityStore.useReducedMotion;

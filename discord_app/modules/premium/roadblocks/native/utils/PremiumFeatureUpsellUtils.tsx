@@ -1,11 +1,11 @@
-// === Module 9657: PremiumFeatureUpsellUtils ===
+// === Module 9394: PremiumFeatureUpsellUtils ===
 
-// Module 9657 (PremiumFeatureUpsellUtils)
+// Module 9394 (PremiumFeatureUpsellUtils)
 import _modDef38 from "module_38" /* 38 */;
 import Constants from "Constants" /* 1085 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
-import SoundboardTypes from "SoundboardTypes" /* 5812 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7494 */;
+import SoundboardTypes from "SoundboardTypes" /* 7039 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 9219 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticsPages = Constants.AnalyticsPages;
@@ -33,8 +33,6 @@ export const getAnalyticsPage = function getAnalyticsPage(featureName) {
     return AnalyticsPages.PREMIUM_UPSELL_CLIENT_THEMES;
   } else if (EntitlementFeatureNames.EntitlementFeatureNames.APP_ICONS === featureName) {
     return AnalyticsPages.PREMIUM_UPSELL_APP_ICONS;
-  } else if (EntitlementFeatureNames.EntitlementFeatureNames.SAVED_MESSAGES === featureName) {
-    return AnalyticsPages.PREMIUM_UPSELL_FOR_LATER;
   } else if (EntitlementFeatureNames.EntitlementFeatureNames.SCHEDULED_MESSAGES === featureName) {
     return AnalyticsPages.PREMIUM_UPSELL_SCHEDULED_MESSAGES;
   } else if (EntitlementFeatureNames.EntitlementFeatureNames.STREAM_HIGH_QUALITY === featureName) {
@@ -59,8 +57,6 @@ export const getUpsellType = function getUpsellType(EMOJIS_EVERYWHERE) {
     return ConstantsIOS.UpsellTypes.CLIENT_THEMES;
   } else if (EntitlementFeatureNames.EntitlementFeatureNames.APP_ICONS === EMOJIS_EVERYWHERE) {
     return ConstantsIOS.UpsellTypes.APP_ICONS;
-  } else if (EntitlementFeatureNames.EntitlementFeatureNames.SAVED_MESSAGES === EMOJIS_EVERYWHERE) {
-    return ConstantsIOS.UpsellTypes.FOR_LATER;
   } else if (EntitlementFeatureNames.EntitlementFeatureNames.SCHEDULED_MESSAGES === EMOJIS_EVERYWHERE) {
     return ConstantsIOS.UpsellTypes.SCHEDULED_MESSAGES;
   } else if (EntitlementFeatureNames.EntitlementFeatureNames.STREAM_HIGH_QUALITY === EMOJIS_EVERYWHERE) {

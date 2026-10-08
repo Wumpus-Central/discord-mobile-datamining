@@ -1,6 +1,6 @@
-// === Module 14460: GummyStripes ===
+// === Module 14688: GummyStripes ===
 
-// Module 14460 (GummyStripes)
+// Module 14688 (GummyStripes)
 import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,13 +10,13 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, Fragment: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles({ stripe: { flex: 1 }, stripeOverlap: { marginLeft: -1 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/display_name_styles/native/effects/GummyStripes.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((colors) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GummyStripes(colors) {
   const cResult = require("c").c(7);
   colors = colors.colors;
   const tmp2 = closure_5();
@@ -60,7 +60,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((colors) => {
   cResult[1] = tmp2;
   cResult[2] = mapped;
   let obj = require("c");
-}) : ((colors) => {
+}) : (function GummyStripes(colors) {
   colors = colors.colors;
   closure_0 = closure_5();
   return closure_3(closure_4, {

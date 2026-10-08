@@ -1,15 +1,15 @@
-// === Module 15840: ParentalControlsDirectMessages ===
+// === Module 16099: ParentalControlsDirectMessages ===
 
-// Module 15840 (ParentalControlsDirectMessages)
+// Module 16099 (ParentalControlsDirectMessages)
 import util from "util" /* 1126 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14641 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14642 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7061 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14902 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14903 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7247 */;
 
 require = fn;
 let ReactCompilerGating = fn(558);
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const SettingBuilders = fn(11142);
+const SettingBuilders = fn(11262);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -19,8 +19,10 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.wbYDfT);
   },
-  parent: fn(7645).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
-  useValue: () => !useParentalControlSettings.useDefaultGuildsRestricted(),
+  parent: fn(7966).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  useValue() {
+    return !useParentalControlSettings.useDefaultGuildsRestricted();
+  },
   onValueChange: function onAllowDirectMessagesFromServerMembersValueChange(arg0) {
     const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
     if (null != selectedTeenId) {

@@ -1,21 +1,21 @@
-// === Module 15459: DevToolsDataStorageScreen ===
+// === Module 15721: DevToolsDataStorageScreen ===
 
-// Module 15459 (DevToolsDataStorageScreen)
+// Module 15721 (DevToolsDataStorageScreen)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Link from "Link" /* 1491 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 2078 */;
-import DatabaseManagerDefault from "DatabaseManager" /* 2095 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4574 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import TableRow from "TableRow" /* 6000 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6478 */;
-import useScaledRowHeightDefault from "useScaledRowHeight" /* 6553 */;
-import FastestListDefault from "FastestList" /* 6559 */;
-import useFastestListTableRowPlaceholderConfigDefault from "useFastestListTableRowPlaceholderConfig" /* 10613 */;
-import useScaledSectionHeightDefault from "useScaledSectionHeight" /* 10614 */;
+import Link from "Link" /* 1503 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 2090 */;
+import DatabaseManagerDefault from "DatabaseManager" /* 2107 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4766 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import TableRow from "TableRow" /* 6184 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6656 */;
+import useScaledRowHeightDefault from "useScaledRowHeight" /* 6729 */;
+import FastestListDefault from "FastestList" /* 6735 */;
+import useFastestListTableRowPlaceholderConfigDefault from "useFastestListTableRowPlaceholderConfig" /* 10210 */;
+import useScaledSectionHeightDefault from "useScaledSectionHeight" /* 10212 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -26,13 +26,13 @@ require = fn;
 const View = fn(17).View;
 let PersistedStore = fn(505).PersistedStore;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_12, flex: 1 }, sectionHeader: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_12, flex: 1 };
 obj.sectionHeader = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, verticalAlign: "middle", flexDirection: "row", alignItems: "center", flex: 1 };
 let closure_9 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
-let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function DatabaseDisableRow() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = {
@@ -65,20 +65,22 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() =>
     first = cResult[0];
   }
   return first;
-}) : (() => jsx(TableRow.TableRow, {
-  label: "Disable Database",
-  start: true,
-  onPress() {
-    const databaseResult = DatabaseDaosDefault.database();
-    if (null != databaseResult) {
-      databaseResult.disable("via UserSettingsDatabaseControls");
-      ToastActionCreatorsDefault.open({ key: "disable_database", content: "Database has been disabled." });
-      const tmpResult = ToastActionCreatorsDefault;
+}) : (function DatabaseDisableRow() {
+  return jsx(TableRow.TableRow, {
+    label: "Disable Database",
+    start: true,
+    onPress() {
+      const databaseResult = DatabaseDaosDefault.database();
+      if (null != databaseResult) {
+        databaseResult.disable("via UserSettingsDatabaseControls");
+        ToastActionCreatorsDefault.open({ key: "disable_database", content: "Database has been disabled." });
+        const tmpResult = ToastActionCreatorsDefault;
+      }
     }
-  }
-})));
+  });
+}));
 ReactCompilerGating = fn(558);
-let closure_11 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_11 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function DatabaseCurrentRow() {
   const cResult = c.c(5);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [DatabaseManagerDefault, AuthenticationStore];
@@ -114,7 +116,7 @@ let closure_11 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() =>
   cResult[4] = tmp11;
   tmp10 = tmp11;
   const tmpResult = initialize;
-}) : (() => {
+}) : (function DatabaseCurrentRow() {
   const items = [DatabaseManagerDefault, AuthenticationStore];
   const stateFromStores = initialize.useStateFromStores(items, () => DatabaseManagerDefault.database(id.getId()));
   let str = "No active database.";
@@ -131,7 +133,7 @@ let closure_11 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() =>
   return jsx(TableRow.TableRow, { label: str, start: true, end: true, subLabel: null });
 }));
 ReactCompilerGating = fn(558);
-let closure_12 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_12 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function DisableDatabaseAndRemoveRow() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = {
@@ -154,15 +156,17 @@ let closure_12 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() =>
     first = cResult[0];
   }
   return first;
-}) : (() => jsx(TableRow.TableRow, {
-  label: "Disable + Remove Database",
-  onPress() {
-    const result = DatabaseManagerDefault.replaceDisableAllDatabases("via UserSettingsDatabaseControls");
-    ToastActionCreatorsDefault.open({ key: "disable_database_and_remove", content: "Database has been removed." });
-  }
-})));
+}) : (function DisableDatabaseAndRemoveRow() {
+  return jsx(TableRow.TableRow, {
+    label: "Disable + Remove Database",
+    onPress() {
+      const result = DatabaseManagerDefault.replaceDisableAllDatabases("via UserSettingsDatabaseControls");
+      ToastActionCreatorsDefault.open({ key: "disable_database_and_remove", content: "Database has been removed." });
+    }
+  });
+}));
 ReactCompilerGating = fn(558);
-let closure_13 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_13 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function CacheStatsRow() {
   const cResult = c.c(2);
   const navigation = Link.useNavigation();
   if (cResult[0] !== navigation) {
@@ -187,7 +191,7 @@ let closure_13 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() =>
     tmp5 = cResult[1];
   }
   return tmp5;
-}) : (() => {
+}) : (function CacheStatsRow() {
   const navigation = Link.useNavigation();
   return jsx(TableRow.TableRow, {
     label: "View Cache Stats",
@@ -201,7 +205,7 @@ const constants = { DATABASE_CONTROLS: 0, [0]: "DATABASE_CONTROLS", DATABASE_CUR
 fn(558);
 let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, verticalAlign: "middle", flexDirection: "row", alignItems: "center", flex: 1 };
 ReactCompilerGating = fn(558);
-let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((store) => {
+let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function DevToolsPersistedStoresActionSheet(store) {
   const cResult = store(576).c(10);
   store = store.store;
   const close = store.close;
@@ -215,7 +219,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((store) => {
   }
   if (cResult[2] !== tmp4) {
     const obj2 = { title: tmp4 };
-    const tmp8 = jsx(tmp(6651).BottomSheetTitleHeader, { title: tmp4 });
+    const tmp8 = jsx(tmp(6828).BottomSheetTitleHeader, { title: tmp4 });
     cResult[2] = tmp4;
     cResult[3] = tmp8;
     let tmp6 = tmp8;
@@ -233,7 +237,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((store) => {
       return tmp11;
     }
     const obj3 = { header: tmp6, children: tmp9 };
-    const tmp13 = jsx(tmp(6708).ActionSheet, { header: tmp6, children: tmp9 });
+    const tmp13 = jsx(tmp(6885).ActionSheet, { header: tmp6, children: tmp9 });
     cResult[7] = tmp6;
     cResult[8] = tmp9;
     cResult[9] = tmp13;
@@ -241,7 +245,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((store) => {
   }
   const obj4 = {
     hasIcons: false,
-    children: jsx(store(6704).ActionSheetRow, {
+    children: jsx(store(6881).ActionSheetRow, {
       variant: "danger",
       label: "Clear persisted store",
       subLabel: "App restart required to re-init the cleared store",
@@ -252,9 +256,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((store) => {
       }
     })
   };
-  const tmp10 = jsx(store(6704).ActionSheetRow.Group, {
+  const tmp10 = jsx(store(6881).ActionSheetRow.Group, {
     hasIcons: false,
-    children: jsx(store(6704).ActionSheetRow, {
+    children: jsx(store(6881).ActionSheetRow, {
       variant: "danger",
       label: "Clear persisted store",
       subLabel: "App restart required to re-init the cleared store",
@@ -280,13 +284,13 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((store) => {
       close();
     }
   };
-}) : ((store) => {
+}) : (function DevToolsPersistedStoresActionSheet(store) {
   store = store.store;
   const close = store.close;
-  const obj = { header: jsx(store(6651).BottomSheetTitleHeader, { title: store.getName() }), children: null };
+  const obj = { header: jsx(store(6828).BottomSheetTitleHeader, { title: store.getName() }), children: null };
   const obj3 = {
     hasIcons: false,
-    children: jsx(store(6704).ActionSheetRow, {
+    children: jsx(store(6881).ActionSheetRow, {
       variant: "danger",
       label: "Clear persisted store",
       subLabel: "App restart required to re-init the cleared store",
@@ -297,9 +301,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((store) => {
       }
     })
   };
-  obj.children = jsx(store(6704).ActionSheetRow.Group, {
+  obj.children = jsx(store(6881).ActionSheetRow.Group, {
     hasIcons: false,
-    children: jsx(store(6704).ActionSheetRow, {
+    children: jsx(store(6881).ActionSheetRow, {
       variant: "danger",
       label: "Clear persisted store",
       subLabel: "App restart required to re-init the cleared store",
@@ -310,12 +314,12 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((store) => {
       }
     })
   });
-  return jsx(store(6708).ActionSheet, { header: jsx(store(6651).BottomSheetTitleHeader, { title: store.getName() }), children: null });
+  return jsx(store(6885).ActionSheet, { header: jsx(store(6828).BottomSheetTitleHeader, { title: store.getName() }), children: null });
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsDataStorageScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevToolsDataStorageScreen() {
   const cResult = require("c").c(18);
   const tmp3 = closure_9();
   _require = tmp3;
@@ -330,7 +334,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const tmp7 = useScaledSectionHeightDefault();
   const tmp8 = useFastestListTableRowPlaceholderConfigDefault();
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function _(arg0) {
+    const fn = function v(arg0) {
       closure_0 = arg0;
       PersistedStore = found(504).PersistedStore;
       const all = PersistedStore.getAll();
@@ -368,7 +372,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   importDefault = tmp9;
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn2 = function w() {
+    const fn2 = function p() {
       return closure_1("");
     };
     cResult[2] = fn2;
@@ -626,7 +630,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[13] = sum;
   cResult[14] = jsx(FastestListDefault, { sections, renderItem: O, renderSectionHeader: U, insetEnd: sum, itemSize: tmp6, sectionHeaderSize: tmp7, estimatedListSize: "windowSize", placeholderConfig: tmp8, wrapChildren: true });
   const tmp16 = jsx(FastestListDefault, { sections, renderItem: O, renderSectionHeader: U, insetEnd: sum, itemSize: tmp6, sectionHeaderSize: tmp7, estimatedListSize: "windowSize", placeholderConfig: tmp8, wrapChildren: true });
-}) : (() => {
+}) : (function DevToolsDataStorageScreen() {
   const tmp = closure_9();
   closure_0 = tmp;
   const tmp2 = callback(persistedStores[17])();

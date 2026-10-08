@@ -1,11 +1,11 @@
-// === Module 10627: ApplicationStreamActivityStatus ===
+// === Module 10225: ApplicationStreamActivityStatus ===
 
-// Module 10627 (ApplicationStreamActivityStatus)
+// Module 10225 (ApplicationStreamActivityStatus)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import ActivityStatusIconDefault from "ActivityStatusIcon" /* 10628 */;
-import TvIcon from "TvIcon" /* 10629 */;
-import ActivityStatusTextDefault from "ActivityStatusText" /* 10631 */;
+import ActivityStatusIconDefault from "ActivityStatusIcon" /* 10226 */;
+import TvIcon from "TvIcon" /* 10227 */;
+import ActivityStatusTextDefault from "ActivityStatusText" /* 10229 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activity_status/native/ApplicationStreamActivityStatus.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ApplicationStreamActivityStatus(arg0) {
   const cResult = c.c(13);
   ({ game, iconStyle, textStyle, maxFontSizeMultiplier, hideIcon, hideText } = arg0);
   if (undefined !== hideIcon && hideIcon) {
@@ -96,7 +96,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[4] = tmp13;
     tmp12 = tmp13;
   }
-}) : ((hideText) => {
+}) : (function ApplicationStreamActivityStatus(hideText) {
   ({ game, hideIcon } = hideText);
   ({ iconStyle, textStyle, maxFontSizeMultiplier } = hideText);
   if (hideIcon === undefined) {
@@ -135,7 +135,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   let tmp12 = !hideIcon;
   if (!hideIcon) {
-    const obj2 = { icon: tmp7(10629).TvIcon, style: iconStyle };
+    const obj2 = { icon: tmp7(10227).TvIcon, style: iconStyle };
     tmp12 = React3(ActivityStatusIconDefault, obj2);
   }
   const children = [tmp12, ];

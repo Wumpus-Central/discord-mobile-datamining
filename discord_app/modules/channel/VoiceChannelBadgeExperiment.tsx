@@ -1,9 +1,9 @@
-// === Module 13041: VoiceChannelBadgeExperiment ===
+// === Module 13319: VoiceChannelBadgeExperiment ===
 
-// Module 13041 (VoiceChannelBadgeExperiment)
+// Module 13319 (VoiceChannelBadgeExperiment)
 import c from "c" /* 576 */;
-import ExperimentConstants from "ExperimentConstants" /* 4783 */;
-import createExperiment from "module_4780" /* 4780 */;
+import ExperimentConstants from "ExperimentConstants" /* 4977 */;
+import createExperiment from "module_4974" /* 4974 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -14,7 +14,7 @@ const experiment = createExperiment.createExperiment(obj);
 const result = size.fileFinishedImporting("modules/channel/VoiceChannelBadgeExperiment.tsx");
 
 export const VoiceChannelBadgeExperiment = experiment;
-export const useVoiceChannelBadgeExperiment = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useVoiceChannelBadgeExperiment = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoiceChannelBadgeExperiment(arg0) {
   const cResult = c.c(4);
   ({ guildId, location: _location } = arg0);
   if (cResult[0] === guildId) {
@@ -36,7 +36,9 @@ export const useVoiceChannelBadgeExperiment = ReactCompilerGating.isReactCompile
   cResult[1] = _location;
   cResult[2] = obj3;
   tmp2 = obj3;
-}) : ((guildId) => experiment.useExperiment({ guildId: guildId.guildId, location: guildId.location }, { autoTrackExposure: true }));
+}) : (function useVoiceChannelBadgeExperiment(guildId) {
+  return experiment.useExperiment({ guildId: guildId.guildId, location: guildId.location }, { autoTrackExposure: true });
+});
 export const getVoiceChannelBadgeExperiment = function getVoiceChannelBadgeExperiment(guildId) {
   return experiment.getCurrentConfig({ guildId: guildId.guildId, location: guildId.location }, { autoTrackExposure: true });
 };

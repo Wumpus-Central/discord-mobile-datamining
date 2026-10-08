@@ -1,8 +1,8 @@
-// === Module 10742: ModalActionButton ===
+// === Module 11613: ModalActionButton ===
 
-// Module 10742 (ModalActionButton)
+// Module 11613 (ModalActionButton)
 import c from "c" /* 576 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,13 +11,13 @@ let closure_2 = ["variant"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles({ spacer: { marginTop: 12 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Modal/native/ModalActionButton.native.tsx");
 
-export const ModalActionButton = ReactCompilerGating.isReactCompilerEnabled() ? ((variant) => {
+export const ModalActionButton = ReactCompilerGating.isReactCompilerEnabled() ? (function ModalActionButton(variant) {
   const cResult = c.c(12);
   if (cResult[0] !== variant) {
     variant = variant.variant;
@@ -74,7 +74,7 @@ export const ModalActionButton = ReactCompilerGating.isReactCompilerEnabled() ? 
   cResult[4] = tmp5;
   cResult[5] = tmp11;
   tmp10 = tmp11;
-}) : ((variant) => {
+}) : (function ModalActionButton(variant) {
   variant = variant.variant;
   const merged = Object.assign(variant, Object.assign({ variant: 0 }));
   let tmp5 = "secondary" === variant;

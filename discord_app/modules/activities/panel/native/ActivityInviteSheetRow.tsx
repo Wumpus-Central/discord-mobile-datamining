@@ -1,19 +1,19 @@
-// === Module 17211: ActivityInviteSheetRow ===
+// === Module 17492: ActivityInviteSheetRow ===
 
-// Module 17211 (ActivityInviteSheetRow)
+// Module 17492 (ActivityInviteSheetRow)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import UserStore from "UserStore" /* 1377 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const InviteSendStates = fn(7239).InviteSendStates;
+const InviteSendStates = fn(7418).InviteSendStates;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { acronym: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center", overflow: "hidden", marginTop: 0, marginRight: 10, borderColor: nativeDefault.colors.BORDER_MUTED, borderStyle: "solid", borderWidth: 2 };
 obj.acronym = size;
@@ -22,7 +22,7 @@ const ReactCompilerGating = fn(558);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/panel/native/ActivityInviteSheetRow.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((onPressAvatar) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ActivityInviteSheetRow(onPressAvatar) {
   const cResult = onInviteSent(row[10]).c(47);
   ({ end, onInviteSent } = onPressAvatar);
   onPressAvatar = onPressAvatar.onPressAvatar;
@@ -191,12 +191,6 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((onPres
           cResult[42] = tmp31;
           cResult[43] = start;
           cResult[44] = tmp65;
-          class M {
-            constructor() {
-              tmp = onInviteSent(row);
-              return;
-            }
-          }
           cResult[45] = tmp69;
           cResult[46] = tmp73;
           tmp71 = tmp73;
@@ -337,12 +331,6 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((onPres
     cResult[6] = id;
     cResult[7] = onPressAvatar;
     cResult[8] = tmp9Result9;
-    class M {
-      constructor() {
-        tmp = onInviteSent(row);
-        return;
-      }
-    }
     cResult[9] = globalName;
     cResult[10] = user;
     cResult[11] = tmp43Result;
@@ -351,18 +339,15 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((onPres
     tmp37 = tmp9Result9;
     const tmp9Result10 = tmp9(tmp2[17]);
   }
-  class M {
-    constructor() {
-      tmp = onInviteSent(row);
-      return;
-    }
+  function handlePress() {
+    onInviteSent(row);
   }
   cResult[3] = onInviteSent;
   cResult[4] = row;
-  cResult[5] = M;
-  tmp10 = M;
+  cResult[5] = handlePress;
+  tmp10 = handlePress;
   const tmpResult = onInviteSent(row[11]);
-}) : ((row) => {
+}) : (function ActivityInviteSheetRow(row) {
   ({ onInviteSent: require, onPressAvatar } = row);
   row = row.row;
   const sendState = row.sendState;

@@ -1,8 +1,8 @@
-// === Module 15110: SynchronizeIconNative ===
+// === Module 15372: SynchronizeIconNative ===
 
-// Module 15110 (SynchronizeIconNative)
+// Module 15372 (SynchronizeIconNative)
 import c from "c" /* 576 */;
-import inlineStyles from "inlineStyles" /* 8169 */;
+import inlineStyles from "inlineStyles" /* 7550 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/client_themes/images/native/SynchronizeIconNative.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SynchronizeIcon(arg0) {
   const cResult = c.c(7);
   ({ fill, iconStyles } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -58,7 +58,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = tmp7;
   cResult[6] = tmp12;
   tmp11 = tmp12;
-}) : ((iconStyles) => {
+}) : (function SynchronizeIcon(iconStyles) {
   const fill = iconStyles.fill;
   const size = { style: iconStyles.iconStyles, x: "0px", y: "0px", width: "24", height: "24", viewBox: "0 0 24 24", fill, children: null };
   const tmp = inlineStylesDefault;

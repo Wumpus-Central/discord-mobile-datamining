@@ -1,8 +1,8 @@
-// === Module 17349: useControlsHiddenPresentation ===
+// === Module 17630: useControlsHiddenPresentation ===
 
-// Module 17349 (useControlsHiddenPresentation)
-import spring from "spring" /* 5604 */;
-import VoicePanelConstants from "VoicePanelConstants" /* 11916 */;
+// Module 17630 (useControlsHiddenPresentation)
+import spring from "spring" /* 5374 */;
+import VoicePanelConstants from "VoicePanelConstants" /* 11989 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -18,7 +18,7 @@ const __initData3 = { code: "function useControlsHiddenPresentationTsx3(){const{
 const __initData4 = { code: "function useControlsHiddenPresentationTsx4(){const{withSpring,yeeted,wrapperSpecs,HIDDEN_OPACITY_PHYSICS,cleanUp,runOnJS}=this.__closure;return{opacity:withSpring(yeeted||wrapperSpecs.get().hidden?0:1,HIDDEN_OPACITY_PHYSICS,'respect-motion-settings',cleanUp!=null?function(finished){if(finished&&yeeted){runOnJS(cleanUp)();}}:undefined)};}" };
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/utils/useControlsHiddenPresentation.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((mode, wrapperSpecs, arg2) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useControlsHiddenPresentation(mode, wrapperSpecs, arg2) {
   _require = mode;
   dependencyMap = wrapperSpecs;
   let obj = arg2;
@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((mode, wrapperSpe
   cResult[1] = animatedStyle;
   cResult[2] = obj5;
   tmp7 = obj5;
-}) : ((mode, wrapperSpecs) => {
+}) : (function useControlsHiddenPresentation(mode, wrapperSpecs) {
   _require = mode;
   dependencyMap = wrapperSpecs;
   let obj = arg2;

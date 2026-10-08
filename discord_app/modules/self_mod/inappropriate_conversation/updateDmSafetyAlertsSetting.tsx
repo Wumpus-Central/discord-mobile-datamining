@@ -1,7 +1,7 @@
-// === Module 14659: updateDmSafetyAlertsSetting ===
+// === Module 14920: updateDmSafetyAlertsSetting ===
 
-// Module 14659 (updateDmSafetyAlertsSetting)
-import wrappers from "wrappers" /* 1228 */;
+// Module 14920 (updateDmSafetyAlertsSetting)
+import wrappers from "wrappers" /* 1240 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

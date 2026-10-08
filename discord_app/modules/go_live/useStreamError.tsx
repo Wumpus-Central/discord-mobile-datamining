@@ -1,15 +1,15 @@
-// === Module 9138: useStreamError ===
+// === Module 10708: useStreamError ===
 
-// Module 9138 (useStreamError)
-import AVErrorStore from "AVErrorStore" /* 9130 */;
+// Module 10708 (useStreamError)
+import AVErrorStore from "AVErrorStore" /* 10702 */;
 
 const require = fn;
-let closure_3 = { [fn(9131).AVError.STREAM_SOUNDSHARE_FAILED]: 0, [fn(9131).AVError.STREAM_SEND_HIGH_PACKET_LOSS]: 1, [fn(9131).AVError.STREAM_VIEW_HIGH_PACKET_LOSS]: 1, [fn(9131).AVError.STREAM_SEND_LOW_FPS]: 2, [fn(9131).AVError.STREAM_VIEW_LOW_FPS]: 2, [fn(9131).AVError.STREAM_BAD_NETWORK_QUALITY]: 3 };
+let closure_3 = { [fn(5287).AVError.STREAM_SOUNDSHARE_FAILED]: 0, [fn(5287).AVError.STREAM_SEND_HIGH_PACKET_LOSS]: 1, [fn(5287).AVError.STREAM_VIEW_HIGH_PACKET_LOSS]: 1, [fn(5287).AVError.STREAM_SEND_LOW_FPS]: 2, [fn(5287).AVError.STREAM_VIEW_LOW_FPS]: 2, [fn(5287).AVError.STREAM_BAD_NETWORK_QUALITY]: 3 };
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/go_live/useStreamError.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useStreamError(id) {
   const cResult = id(576).c(4);
   id = id.id;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
   }
   const obj = id(576);
   return id(504).useStateFromStores(first, tmp6, tmp7);
-}) : ((id) => {
+}) : (function useStreamError(id) {
   id = id.id;
   const items = [AVErrorStore];
   const items1 = [id];

@@ -1,24 +1,24 @@
-// === Module 15325: InAppNotificationsSetting ===
+// === Module 15587: InAppNotificationsSetting ===
 
-// Module 15325 (InAppNotificationsSetting)
+// Module 15587 (InAppNotificationsSetting)
 import c from "c" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1126 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import UserSettings from "UserSettings" /* 2028 */;
-import _modDef2847 from "module_2847" /* 2847 */;
-import SettingsConstants from "SettingsConstants" /* 7645 */;
-import FocusModeUtils from "FocusModeUtils" /* 12488 */;
-import notifications_NotificationSettingsUtils from "notifications/NotificationSettingsUtils" /* 14308 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 15326 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import UserSettings from "UserSettings" /* 2040 */;
+import _modDef2891 from "module_2891" /* 2891 */;
+import SettingsConstants from "SettingsConstants" /* 7966 */;
+import FocusModeUtils from "FocusModeUtils" /* 12584 */;
+import notifications_NotificationSettingsUtils from "notifications/NotificationSettingsUtils" /* 14533 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 15588 */;
 import "ReactCompilerGating";
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import SettingBuilders_mod from "SettingBuilders" /* 11142 */;
+import SettingBuilders_mod from "SettingBuilders" /* 11262 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;
 let ReactCompilerGating = ReactCompilerGating_mod;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useInAppNotificationsSettingValue() {
   const FocusMode = UserSettings.FocusMode;
   const setting = FocusMode.useSetting();
   const ShowInAppNotifications = UserSettings.ShowInAppNotifications;
@@ -27,7 +27,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     setting1 = ShowInAppNotifications.useSetting();
   }
   return setting1;
-}) : (() => {
+}) : (function useInAppNotificationsSettingValue() {
   const FocusMode = UserSettings.FocusMode;
   const setting = FocusMode.useSetting();
   const ShowInAppNotifications = UserSettings.ShowInAppNotifications;
@@ -47,7 +47,7 @@ let obj = {
   },
   useIsDisabled: null
 };
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useInAppNotificationsDescription() {
   const cResult = c.c(2);
   const focusModeEnabled = FocusModeUtils.useFocusModeEnabled();
   if (cResult[0] !== focusModeEnabled) {
@@ -63,7 +63,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp5 = cResult[1];
   }
   return tmp5;
-}) : (() => {
+}) : (function useInAppNotificationsDescription() {
   let stringResult;
   if (obj.useFocusModeEnabled()) {
     const intl = util.intl;
@@ -90,9 +90,9 @@ const obj3 = {};
 const merged1 = Object.assign(obj);
 obj3.useTitle = function useTitle() {
   const intl = util.intl;
-  return intl.string(_modDef2847.sH5mu9);
+  return intl.string(_modDef2891.sH5mu9);
 };
-obj3.useDescription = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+obj3.useDescription = ReactCompilerGating.isReactCompilerEnabled() ? (function useRedesignInAppNotificationsDescription() {
   let cIRG0s = dependencyMap;
   const cResult = c.c(2);
   const focusModeEnabled = FocusModeUtils.useFocusModeEnabled();
@@ -103,21 +103,21 @@ obj3.useDescription = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       cIRG0s = util.t.cIRG0s;
       let stringResult = string(cIRG0s);
     } else {
-      stringResult = string(_modDef2847["T/zMdV"]);
+      stringResult = string(_modDef2891["T/zMdV"]);
     }
     cResult[0] = focusModeEnabled;
     cResult[1] = stringResult;
   } else {
     return cResult[1];
   }
-}) : (() => {
+}) : (function useRedesignInAppNotificationsDescription() {
   const focusModeEnabled = FocusModeUtils.useFocusModeEnabled();
   const intl = util.intl;
   const string = intl.string;
   if (focusModeEnabled) {
     let stringResult = string(util.t.cIRG0s);
   } else {
-    stringResult = string(_modDef2847["T/zMdV"]);
+    stringResult = string(_modDef2891["T/zMdV"]);
   }
   return stringResult;
 });

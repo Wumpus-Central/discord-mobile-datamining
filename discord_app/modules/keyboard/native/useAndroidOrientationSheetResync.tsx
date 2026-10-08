@@ -1,6 +1,6 @@
-// === Module 11838: useAndroidOrientationSheetResync ===
+// === Module 11923: useAndroidOrientationSheetResync ===
 
-// Module 11838 (useAndroidOrientationSheetResync)
+// Module 11923 (useAndroidOrientationSheetResync)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -8,7 +8,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/keyboard/native/useAndroidOrientationSheetResync.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((animatedIndex) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAndroidOrientationSheetResync(animatedIndex) {
   const cResult = animatedIndex(bottomSheetRef[2]).c(8);
   animatedIndex = animatedIndex.animatedIndex;
   bottomSheetRef = animatedIndex.bottomSheetRef;
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((animatedIndex) =
   cResult[7] = items;
   tmp6 = items;
   tmp5 = fn;
-}) : ((animatedIndex) => {
+}) : (function useAndroidOrientationSheetResync(animatedIndex) {
   animatedIndex = animatedIndex.animatedIndex;
   let bottomSheetRef = animatedIndex.bottomSheetRef;
   const containerHeight = animatedIndex.containerHeight;

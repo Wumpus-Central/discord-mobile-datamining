@@ -1,9 +1,9 @@
-// === Module 8542: useFetchVirtualCurrencyBalance ===
+// === Module 9027: useFetchVirtualCurrencyBalance ===
 
-// Module 8542 (useFetchVirtualCurrencyBalance)
+// Module 9027 (useFetchVirtualCurrencyBalance)
 import _mod19 from "module_19" /* 19 */;
-import VirtualCurrencyActionCreators from "VirtualCurrencyActionCreators" /* 8544 */;
-import VirtualCurrencyStore from "VirtualCurrencyStore" /* 8543 */;
+import VirtualCurrencyActionCreators from "VirtualCurrencyActionCreators" /* 9029 */;
+import VirtualCurrencyStore from "VirtualCurrencyStore" /* 9028 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -12,7 +12,7 @@ const require = globalThis.__r;
 const useEffect = _mod19.useEffect;
 const result = size.fileFinishedImporting("modules/virtual_currency/hooks/useFetchVirtualCurrencyBalance.tsx");
 
-export const useFetchVirtualCurrencyBalance = ReactCompilerGating.isReactCompilerEnabled() ? ((disableFetch) => {
+export const useFetchVirtualCurrencyBalance = ReactCompilerGating.isReactCompilerEnabled() ? (function useFetchVirtualCurrencyBalance(disableFetch) {
   _require = disableFetch;
   const cResult = require("c").c(14);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -102,7 +102,7 @@ export const useFetchVirtualCurrencyBalance = ReactCompilerGating.isReactCompile
   cResult[5] = fn2;
   tmp10 = fn2;
   const tmpResult = require("initialize");
-}) : ((disableFetch) => {
+}) : (function useFetchVirtualCurrencyBalance(disableFetch) {
   _require = disableFetch;
   const items = [VirtualCurrencyStore];
   const isFetching = require("initialize").useStateFromStoresObject(items, () => ({ balance: VirtualCurrencyStore.balance, isFetching: VirtualCurrencyStore.isFetchingBalance, error: VirtualCurrencyStore.fetchBalanceError }));

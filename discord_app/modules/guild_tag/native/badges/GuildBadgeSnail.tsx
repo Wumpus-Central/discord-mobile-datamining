@@ -1,9 +1,9 @@
-// === Module 13786: GuildBadgeSnail ===
+// === Module 14008: GuildBadgeSnail ===
 
-// Module 13786 (GuildBadgeSnail)
+// Module 14008 (GuildBadgeSnail)
 import c from "c" /* 576 */;
-import inlineStyles from "inlineStyles" /* 8169 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 13748 */;
+import inlineStyles from "inlineStyles" /* 7550 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 13970 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,7 +21,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgeSnail.tsx");
 
-export const GuildBadgeSnail = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const GuildBadgeSnail = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBadgeSnail(arg0) {
   const cResult = c.c(31);
   if (cResult[0] !== arg0) {
     ({ width, height, primaryTintColor, secondaryTintColor } = arg0);
@@ -181,7 +181,7 @@ export const GuildBadgeSnail = ReactCompilerGating.isReactCompilerEnabled() ? ((
   tmp12 = transformedBadgeColors;
   const obj9 = { primaryBaseColors, primaryTintColor: tmp4, primaryTintLuminances, primaryLuminanceWeights: items, secondaryBaseColors, secondaryTintColor: tmp6, secondaryTintLuminances, secondaryLuminanceWeights: items1 };
   const tmpResult = GuildBadgeUtils;
-}) : ((width) => {
+}) : (function GuildBadgeSnail(width) {
   let num = width.width;
   if (num === undefined) {
     num = 24;

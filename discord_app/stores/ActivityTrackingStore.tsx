@@ -1,19 +1,19 @@
-// === Module 13570: ActivityTrackingStore ===
+// === Module 13863: ActivityTrackingStore ===
 
-// Module 13570 (ActivityTrackingStore)
+// Module 13863 (ActivityTrackingStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import GameAnalyticsUtils from "GameAnalyticsUtils" /* 5025 */;
-import ActivitiesActionCreatorsDefault from "ActivitiesActionCreators" /* 11146 */;
-import RunningGameStore from "RunningGameStore" /* 2006 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
+import GameAnalyticsUtils from "GameAnalyticsUtils" /* 7429 */;
+import ActivitiesActionCreatorsDefault from "ActivitiesActionCreators" /* 11266 */;
+import RunningGameStore from "RunningGameStore" /* 2018 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import DetectableGameStore from "DetectableGameStore" /* 2024 */;
-import LibraryApplicationStore from "LibraryApplicationStore" /* 6912 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
+import DetectableGameStore from "DetectableGameStore" /* 2036 */;
+import LibraryApplicationStore from "LibraryApplicationStore" /* 7101 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5108 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
 
 require = fn;
 function stopActivity(applicationId) {
@@ -69,7 +69,7 @@ function updateActivity(applicationId) {
   ActivitiesActionCreatorsDefault.updateActivity(obj3);
   applicationId.updatedAt = timestamp;
   if (null == dependencyMap[applicationId.applicationId]) {
-    const interval = new tmp3(2046).Interval();
+    const interval = new tmp3(2058).Interval();
     tmp11[applicationId.applicationId] = interval;
     interval.start(closure_12, () => {
       updateActivity(closure_0);

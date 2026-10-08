@@ -1,26 +1,26 @@
-// === Module 6737: OnboardingHomeUtils ===
+// === Module 6911: OnboardingHomeUtils ===
 
-// Module 6737 (OnboardingHomeUtils)
-import FavoritesUtils from "FavoritesUtils" /* 2077 */;
-import guildHasOnboardingHomeDefault from "guildHasOnboardingHome" /* 5085 */;
-import GuildOnboardingUtils from "GuildOnboardingUtils" /* 6608 */;
-import useIsNewMemberDefault from "useIsNewMember" /* 6738 */;
-import ImpersonateStore from "ImpersonateStore" /* 2105 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 5083 */;
+// Module 6911 (OnboardingHomeUtils)
+import FavoritesUtils from "FavoritesUtils" /* 2089 */;
+import GuildOnboardingUtils from "GuildOnboardingUtils" /* 6784 */;
+import useIsNewMemberDefault from "useIsNewMember" /* 6913 */;
+import guildHasOnboardingHomeDefault from "guildHasOnboardingHome" /* 6914 */;
+import ImpersonateStore from "ImpersonateStore" /* 2117 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 6912 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const Constants = fn(1085);
 ({ GuildFeatures: closure_7, ME: closure_8 } = Constants);
-const ChannelFlags = fn(2058).ChannelFlags;
+const ChannelFlags = fn(2070).ChannelFlags;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_onboarding_home/OnboardingHomeUtils.tsx");
 
-export const useCanSeeOnboardingHome = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useCanSeeOnboardingHome = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanSeeOnboardingHome(arg0) {
   _require = arg0;
   const cResult = require("c").c(5);
   const tmp4 = useIsNewMemberDefault(arg0);
@@ -110,7 +110,7 @@ export const useCanSeeOnboardingHome = ReactCompilerGating.isReactCompilerEnable
   tmp9 = fn;
   const obj = require("c");
   tmp = _require;
-}) : ((arg0) => {
+}) : (function useCanSeeOnboardingHome(arg0) {
   _require = arg0;
   const tmp = useIsNewMemberDefault(arg0);
   importDefault = tmp;

@@ -1,11 +1,11 @@
-// === Module 15160: useIsFavoritesGuildVisible ===
+// === Module 15422: useIsFavoritesGuildVisible ===
 
-// Module 15160 (useIsFavoritesGuildVisible)
-import FavoritesUtils from "FavoritesUtils" /* 2077 */;
-import FavoritesHooks from "FavoritesHooks" /* 10049 */;
-import FavoritesGuildIntroPopover from "FavoritesGuildIntroPopover" /* 10061 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
-import FavoriteStore from "FavoriteStore" /* 2054 */;
+// Module 15422 (useIsFavoritesGuildVisible)
+import FavoritesUtils from "FavoritesUtils" /* 2089 */;
+import FavoritesHooks from "FavoritesHooks" /* 10294 */;
+import FavoritesGuildIntroPopover from "FavoritesGuildIntroPopover" /* 10306 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4899 */;
+import FavoriteStore from "FavoriteStore" /* 2066 */;
 
 const require = globalThis.__r;
 
@@ -48,7 +48,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/hooks/useIsFavoritesGuildVisible.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsFavoritesGuildVisible(arg0) {
   const cResult = require("c").c(8);
   _require = tmp4;
   const obj = require("c");
@@ -91,7 +91,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[7] = items1;
   tmp11 = items1;
   tmp10 = fn;
-}) : (() => {
+}) : (function useIsFavoritesGuildVisible() {
   let flag = arg0;
   if (arg0 === undefined) {
     flag = true;

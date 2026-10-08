@@ -1,20 +1,22 @@
-// === Module 6757: ConjureTypes ===
+// === Module 6933: ConjureTypes ===
 
-// Module 6757 (ConjureTypes)
+// Module 6933 (ConjureTypes)
 import size from "module_2" /* 2 */;
 
-const frozen = Object.freeze({ APP_CHANNEL: 1, VOICE_CHANNEL: 2, PROFILE_WIDGET: 3, AUTOMOD: 4, BOT: 5, APPLICATION_COMMANDS: 6 });
+const frozen = Object.freeze({ APP_CHANNEL: 1, VOICE_CHANNEL: 2, PROFILE_WIDGET: 3, AUTOMOD: 4, BOT: 5, APPLICATION_COMMANDS: 6, OVERLAY: 7 });
 const frozen1 = Object.freeze({ PUBLIC: 1, SHAREABLE: 2, NATIVE_APP_CHANNELS: 4 });
 const set = new Set(["image/png", "image/jpeg", "image/gif", "image/webp"]);
 let c3 = 5242880;
 let c4 = 52428800;
-const items = [{ id: "claude-fable-5-1", label: "Claude Fable 5.1", provider: "anthropic" }, { id: "claude-opus-5-5", label: "Claude Opus 5.5", provider: "anthropic" }, { id: "claude-sonnet-5-5", label: "Claude Sonnet 5.5", provider: "anthropic" }, { id: "claude-haiku-4-5", label: "Claude Haiku 4.5", provider: "anthropic" }, { id: "gpt-6-astra", label: "GPT-6 Astra", provider: "openai", supports_fast: true }, { id: "gpt-6.1-sol", label: "GPT-6.1 Sol", provider: "openai", supports_fast: true }, { id: "gpt-6-luna", label: "GPT-6 Luna", provider: "openai", supports_fast: true }, { id: "xai/grok-4.7", label: "Grok 4.7", provider: "xai" }];
+const items = [{ id: "claude-fable-5-1", label: "Claude Fable 5.1", provider: "anthropic" }, { id: "claude-opus-5-5", label: "Claude Opus 5.5", provider: "anthropic" }, { id: "claude-sonnet-5-5", label: "Claude Sonnet 5.5", provider: "anthropic" }, { id: "claude-haiku-5-5", label: "Claude Haiku 5.5", provider: "anthropic" }, { id: "gpt-6-astra", label: "GPT-6 Astra", provider: "openai", supports_fast: true }, { id: "gpt-6.1-sol", label: "GPT-6.1 Sol", provider: "openai", supports_fast: true }, { id: "gpt-6-luna", label: "GPT-6 Luna", provider: "openai", supports_fast: true }, { id: "xai/grok-4.7", label: "Grok 4.7", provider: "xai" }];
 let obj = { main: items, subagent: items, thinking: ["low", "medium", "high", "xhigh", "max"] };
 const items1 = [{ id: "deepseek/deepseek-flash", label: "DeepSeek V4.1 Flash", provider: "deepseek" }, { id: "moonshotai/kimi-k3", label: "Kimi K3", provider: "moonshotai" }];
 const result = size.fileFinishedImporting("modules/conjure/ConjureTypes.tsx");
 
 export const UNNAMED_PROJECT_NAME = "Untitled App";
 export const ConjureSupportedSurface = frozen;
+export const MIN_PROJECT_NAME_LENGTH = 2;
+export const MAX_PROJECT_NAME_LENGTH = 128;
 export const MAX_PROJECT_COLLABORATOR_ROLES = 25;
 export const ConjureProjectFlags = frozen1;
 export const isProjectPublic = function isProjectPublic(flags) {
@@ -46,13 +48,6 @@ export const projectUsesNativeAppChannels = function projectUsesNativeAppChannel
     tmp3 = num & frozen1.NATIVE_APP_CHANNELS;
   }
   return tmp3;
-};
-export const conjureCreateFlags = function conjureCreateFlags(c5) {
-  let num = 0;
-  if (c5) {
-    num = frozen1.NATIVE_APP_CHANNELS;
-  }
-  return frozen1.PUBLIC | num;
 };
 export const projectSupportsVisibility = function projectSupportsVisibility(stateFromStores) {
   return null != stateFromStores.flags;

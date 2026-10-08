@@ -1,7 +1,7 @@
-// === Module 16237: useGameClaimCoachmark ===
+// === Module 16497: useGameClaimCoachmark ===
 
-// Module 16237 (useGameClaimCoachmark)
-import PermissionStore from "PermissionStore" /* 4515 */;
+// Module 16497 (useGameClaimCoachmark)
+import PermissionStore from "PermissionStore" /* 4707 */;
 
 const require = globalThis.__r;
 
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_claim/useGameClaimCoachmark.tsx");
 
-export const useCanShowGameClaimCoachmark = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export const useCanShowGameClaimCoachmark = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanShowGameClaimCoachmark(guildId) {
   _require = guildId;
   const cResult = require("c").c(4);
   const obj = require("c");
@@ -46,7 +46,7 @@ export const useCanShowGameClaimCoachmark = ReactCompilerGating.isReactCompilerE
     gameClaimCoachmarkEnabled = tmpResult2.useHasUnclaimedGames(guildId, gameClaimCoachmarkEnabled);
   }
   return gameClaimCoachmarkEnabled;
-}) : ((guildId) => {
+}) : (function useCanShowGameClaimCoachmark(guildId) {
   _require = guildId;
   let gameClaimCoachmarkEnabled = require("GameClaimCoachmarkExperiment").useGameClaimCoachmarkEnabled(guildId, "useCanShowGameClaimCoachmark");
   const obj = require("GameClaimCoachmarkExperiment");

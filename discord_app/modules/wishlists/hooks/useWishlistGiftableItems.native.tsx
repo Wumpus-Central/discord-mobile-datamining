@@ -1,6 +1,6 @@
-// === Module 8483: useWishlistGiftableItems ===
+// === Module 8969: useWishlistGiftableItems ===
 
-// Module 8483 (useWishlistGiftableItems)
+// Module 8969 (useWishlistGiftableItems)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/hooks/useWishlistGiftableItems.native.tsx");
 
 export const GIFTABLE_PRODUCT_LINES = set;
-export const useWishlistGiftableItems = ReactCompilerGating.isReactCompilerEnabled() ? ((items) => {
+export const useWishlistGiftableItems = ReactCompilerGating.isReactCompilerEnabled() ? (function useWishlistGiftableItems(items) {
   const cResult = c.c(2);
   items = undefined;
   if (items != null) {
@@ -39,7 +39,7 @@ export const useWishlistGiftableItems = ReactCompilerGating.isReactCompilerEnabl
     tmp3 = cResult[1];
   }
   return tmp3;
-}) : ((arg0) => {
+}) : (function useWishlistGiftableItems(arg0) {
   let items = [arg0];
   return noop.useMemo(() => {
     let found;

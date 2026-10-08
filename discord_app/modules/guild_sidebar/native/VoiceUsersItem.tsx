@@ -1,19 +1,19 @@
-// === Module 16091: VoiceUsersItem ===
+// === Module 16351: VoiceUsersItem ===
 
-// Module 16091 (VoiceUsersItem)
+// Module 16351 (VoiceUsersItem)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles({ voiceStates: { paddingRight: 8 }, voiceStatesCollapsed: { paddingRight: 0, flexDirection: "row", flexWrap: "wrap", alignItems: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/native/VoiceUsersItem.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceUsersItem(arg0) {
   const cResult = c.c(6);
   ({ collapsed, children } = arg0);
   const tmp2 = closure_4();
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = collapsed;
   cResult[2] = items;
   tmp3 = items;
-}) : ((children) => {
+}) : (function VoiceUsersItem(children) {
   let voiceStatesCollapsed = children.collapsed;
   const tmp = closure_4();
   let voiceStates = !voiceStatesCollapsed;

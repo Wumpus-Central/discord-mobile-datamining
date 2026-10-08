@@ -1,14 +1,14 @@
-// === Module 17310: UserVideoFailed ===
+// === Module 17591: UserVideoFailed ===
 
-// Module 17310 (UserVideoFailed)
+// Module 17591 (UserVideoFailed)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4951 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 8079 */;
-import AVError from "AVError" /* 9131 */;
-import VideoStreamReadyActionCreators from "VideoStreamReadyActionCreators" /* 9147 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5135 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5241 */;
+import AVError from "AVError" /* 5287 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import VideoStreamReadyActionCreators from "VideoStreamReadyActionCreators" /* 10713 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
 const require = globalThis.__r;
@@ -19,7 +19,7 @@ const View = fn(17).View;
 const VideoToggleState = fn(1085).VideoToggleState;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_700, padding: 8 }, text: { textAlign: "center" }, button: { marginTop: 16, alignSelf: "center" } };
 let closure_9 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -27,7 +27,7 @@ let obj3 = { alignItems: "center", justifyContent: "center", backgroundColor: na
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/video_calls/native/components/UserVideoFailed.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserVideoFailed(userId) {
   const cResult = require("c").c(51);
   if (cResult[0] !== userId) {
     userId = userId.userId;
@@ -65,25 +65,25 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
                     if (cResult[34] === tmp16) {
                       if (cResult[35] === tmp17) {
                         if (cResult[36] === tmp18) {
-                          let tmp38 = cResult[37];
+                          let tmp39 = cResult[37];
                         }
                         if (cResult[38] === tmp13) {
                           if (cResult[39] === tmp6) {
-                            let tmp41 = cResult[40];
+                            let tmp42 = cResult[40];
                           }
                           if (cResult[41] === tmp10.button) {
-                            if (cResult[42] === tmp41) {
-                              let tmp44 = cResult[43];
+                            if (cResult[42] === tmp42) {
+                              let tmp45 = cResult[43];
                             }
                             if (cResult[44] === tmp12) {
-                              if (cResult[45] === tmp44) {
+                              if (cResult[45] === tmp45) {
                                 if (cResult[46] === tmp19) {
                                   if (cResult[47] === tmp20) {
                                     if (cResult[48] === tmp21) {
-                                      if (cResult[49] === tmp38) {
-                                        let tmp48 = cResult[50];
+                                      if (cResult[49] === tmp39) {
+                                        let tmp49 = cResult[50];
                                       }
-                                      return tmp48;
+                                      return tmp49;
                                     }
                                   }
                                 }
@@ -92,52 +92,52 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
                             const obj2 = {};
                             const merged = Object.assign(tmp19);
                             obj2.style = tmp20;
-                            const items = [tmp21, tmp38, tmp44];
+                            const items = [tmp21, tmp39, tmp45];
                             obj2.children = items;
-                            const tmp53 = closure_8(tmp12, obj2);
+                            const tmp54 = closure_8(tmp12, obj2);
                             cResult[44] = tmp12;
-                            cResult[45] = tmp44;
+                            cResult[45] = tmp45;
                             cResult[46] = tmp19;
                             cResult[47] = tmp20;
                             cResult[48] = tmp21;
-                            cResult[49] = tmp38;
-                            cResult[50] = tmp53;
-                            tmp48 = tmp53;
+                            cResult[49] = tmp39;
+                            cResult[50] = tmp54;
+                            tmp49 = tmp54;
                           }
-                          const obj4 = { style: tmp10.button, children: tmp41 };
-                          const tmp47 = closure_7(View, obj4);
+                          const obj3 = { style: tmp10.button, children: tmp42 };
+                          const tmp48 = closure_7(View, obj3);
                           cResult[41] = tmp10.button;
-                          cResult[42] = tmp41;
-                          cResult[43] = tmp47;
-                          tmp44 = tmp47;
+                          cResult[42] = tmp42;
+                          cResult[43] = tmp48;
+                          tmp45 = tmp48;
                         }
-                        let tmp42 = !tmp6;
+                        let tmp43 = !tmp6;
                         if (!tmp6) {
-                          const obj5 = { variant: "secondary", size: "md", text: null, onPress: null };
-                          const intl2 = tmp(1126).intl;
-                          obj5.text = intl2.string(tmp(1126).t["hxmQ/e"]);
-                          obj5.onPress = tmp13;
-                          tmp42 = closure_7(tmp(5601).Button, obj5);
+                          const obj4 = { variant: "secondary", size: "md", text: null, onPress: null };
+                          const intl3 = tmp(1126).intl;
+                          obj4.text = intl3.string(tmp(1126).t["hxmQ/e"]);
+                          obj4.onPress = tmp13;
+                          tmp43 = closure_7(tmp(5375).Button, obj4);
                         }
                         cResult[38] = tmp13;
                         cResult[39] = tmp6;
-                        cResult[40] = tmp42;
-                        tmp41 = tmp42;
+                        cResult[40] = tmp43;
+                        tmp42 = tmp43;
                       }
                     }
                   }
                 }
               }
-              const obj6 = { variant: cResult[15], color: cResult[16], style: cResult[17], selectable: cResult[18], children: cResult[19] };
-              const tmp40 = closure_7(cResult[12], obj6);
+              const obj5 = { variant: cResult[15], color: cResult[16], style: cResult[17], selectable: cResult[18], children: cResult[19] };
+              const tmp41 = closure_7(cResult[12], obj5);
               cResult[31] = cResult[12];
               cResult[32] = cResult[15];
               cResult[33] = cResult[16];
               cResult[34] = cResult[17];
               cResult[35] = cResult[18];
               cResult[36] = cResult[19];
-              cResult[37] = tmp40;
-              tmp38 = tmp40;
+              cResult[37] = tmp41;
+              tmp39 = tmp41;
             }
           }
         }
@@ -146,103 +146,49 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   }
   let obj = require("c");
   if (cResult[23] !== str2) {
-    class R {
-      constructor() {
-        obj = closure_0(closure_2[9]);
-        result = obj.clearVideoStreamTimeout(closure_0(closure_2[10]).MediaEngineContextTypes.DEFAULT, closure_0);
-        obj2 = closure_1(closure_2[11]);
-        setDisableLocalVideoResult = obj2.setDisableLocalVideo(closure_0, VideoToggleState.DISABLED, closure_0(closure_2[10]).MediaEngineContextTypes.DEFAULT, false);
-        timerId = setTimeout(() => { ... }, 1000);
-        return;
-      }
+    function handleRetry() {
+      const result = VideoStreamReadyActionCreators.clearVideoStreamTimeout(BaseConnectionEvent.MediaEngineContextTypes.DEFAULT, closure_0);
+      AudioActionCreatorsDefault.setDisableLocalVideo(closure_0, VideoToggleState.DISABLED, BaseConnectionEvent.MediaEngineContextTypes.DEFAULT, false);
+      const timerId = setTimeout(() => {
+        AudioActionCreatorsDefault.setDisableLocalVideo(closure_1_0, constants.MANUAL_ENABLED, closure_0(5135).MediaEngineContextTypes.DEFAULT, false);
+      }, 1000);
     }
     cResult[23] = str2;
-    cResult[24] = R;
+    cResult[24] = handleRetry;
+    let tmp22 = handleRetry;
   } else {
-    class R {
-      constructor() {
-        obj = closure_0(closure_2[9]);
-        result = obj.clearVideoStreamTimeout(closure_0(closure_2[10]).MediaEngineContextTypes.DEFAULT, closure_0);
-        obj2 = closure_1(closure_2[11]);
-        setDisableLocalVideoResult = obj2.setDisableLocalVideo(closure_0, VideoToggleState.DISABLED, closure_0(closure_2[10]).MediaEngineContextTypes.DEFAULT, false);
-        timerId = setTimeout(() => { ... }, 1000);
-        return;
-      }
-    }
+    tmp22 = cResult[24];
   }
   if (cResult[25] === str) {
-    class R {
-      constructor() {
-        obj = closure_0(closure_2[9]);
-        result = obj.clearVideoStreamTimeout(closure_0(closure_2[10]).MediaEngineContextTypes.DEFAULT, closure_0);
-        obj2 = closure_1(closure_2[11]);
-        setDisableLocalVideoResult = obj2.setDisableLocalVideo(closure_0, VideoToggleState.DISABLED, closure_0(closure_2[10]).MediaEngineContextTypes.DEFAULT, false);
-        timerId = setTimeout(() => { ... }, 1000);
-        return;
-      }
+    if (cResult[26] === tmp10.container) {
+      let tmp24 = cResult[27];
     }
     let formatToPlainString = tmp10.text;
     const _Symbol = Symbol;
     if (cResult[28] === Symbol.for("react.memo_cache_sentinel")) {
-      class R {
-        constructor() {
-          obj = closure_0(closure_2[9]);
-          result = obj.clearVideoStreamTimeout(closure_0(closure_2[10]).MediaEngineContextTypes.DEFAULT, closure_0);
-          obj2 = closure_1(closure_2[11]);
-          setDisableLocalVideoResult = obj2.setDisableLocalVideo(closure_0, VideoToggleState.DISABLED, closure_0(closure_2[10]).MediaEngineContextTypes.DEFAULT, false);
-          timerId = setTimeout(() => { ... }, 1000);
-          return;
-        }
-      }
-      const stringResult = obj3.string(tmp(1126).t["z+mxvo"]);
+      const intl = tmp(1126).intl;
+      const stringResult = intl.string(tmp(1126).t["z+mxvo"]);
       cResult[28] = stringResult;
       let ejOT95 = stringResult;
     } else {
-      class R {
-        constructor() {
-          obj = closure_0(closure_2[9]);
-          result = obj.clearVideoStreamTimeout(closure_0(closure_2[10]).MediaEngineContextTypes.DEFAULT, closure_0);
-          obj2 = closure_1(closure_2[11]);
-          setDisableLocalVideoResult = obj2.setDisableLocalVideo(closure_0, VideoToggleState.DISABLED, closure_0(closure_2[10]).MediaEngineContextTypes.DEFAULT, false);
-          timerId = setTimeout(() => { ... }, 1000);
-          return;
-        }
-      }
+      ejOT95 = cResult[28];
     }
     if (cResult[29] !== tmp10.text) {
-      class R {
-        constructor() {
-          obj = closure_0(closure_2[9]);
-          result = obj.clearVideoStreamTimeout(closure_0(closure_2[10]).MediaEngineContextTypes.DEFAULT, closure_0);
-          obj2 = closure_1(closure_2[11]);
-          setDisableLocalVideoResult = obj2.setDisableLocalVideo(closure_0, VideoToggleState.DISABLED, closure_0(closure_2[10]).MediaEngineContextTypes.DEFAULT, false);
-          timerId = setTimeout(() => { ... }, 1000);
-          return;
-        }
-      }
-      const obj7 = { variant: "text-md/semibold", color: "text-strong", style: formatToPlainString, children: ejOT95 };
-      const tmp28 = closure_7(tmp(4892).Text, obj7);
+      const obj6 = { variant: "text-md/semibold", color: "text-strong", style: formatToPlainString, children: ejOT95 };
+      const tmp29 = closure_7(tmp(5086).Text, obj6);
       cResult[29] = tmp10.text;
-      cResult[30] = tmp28;
+      cResult[30] = tmp29;
+      let tmp27 = tmp29;
     } else {
-      class R {
-        constructor() {
-          obj = closure_0(closure_2[9]);
-          result = obj.clearVideoStreamTimeout(closure_0(closure_2[10]).MediaEngineContextTypes.DEFAULT, closure_0);
-          obj2 = closure_1(closure_2[11]);
-          setDisableLocalVideoResult = obj2.setDisableLocalVideo(closure_0, VideoToggleState.DISABLED, closure_0(closure_2[10]).MediaEngineContextTypes.DEFAULT, false);
-          timerId = setTimeout(() => { ... }, 1000);
-          return;
-        }
-      }
+      tmp27 = cResult[30];
     }
-    const Text = tmp(4892).Text;
+    const Text = tmp(5086).Text;
     const text = tmp10.text;
-    const intl = tmp(1126).intl;
-    formatToPlainString = intl.formatToPlainString;
+    const intl2 = tmp(1126).intl;
+    formatToPlainString = intl2.formatToPlainString;
     ejOT95 = tmp(1126).t.ejOT95;
-    const obj8 = { errorCode: tmpResult.getErrorInfo(tmp4).errorCode };
-    const formatToPlainStringResult = formatToPlainString(ejOT95, obj8);
+    const obj7 = { errorCode: tmpResult.getErrorInfo(tmp4).errorCode };
+    const formatToPlainStringResult = formatToPlainString(ejOT95, obj7);
     cResult[6] = tmp4;
     cResult[7] = tmp5;
     cResult[8] = str;
@@ -251,7 +197,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
     cResult[11] = str2;
     cResult[12] = Text;
     cResult[13] = View;
-    cResult[14] = R;
+    cResult[14] = tmp22;
     str2 = "text-sm/semibold";
     cResult[15] = "text-sm/semibold";
     str = "text-muted";
@@ -267,8 +213,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   cResult[25] = str;
   cResult[26] = tmp10.container;
   cResult[27] = items1;
+  tmp24 = items1;
   tmpResult = require("AVError");
-}) : ((arg0) => {
+}) : (function UserVideoFailed(arg0) {
   ({ userId: require, removeRetryButton } = arg0);
   ({ style, avError } = arg0);
   const merged = Object.assign(arg0, Object.assign({ userId: 0, style: 0, avError: 0, removeRetryButton: 0 }));
@@ -291,7 +238,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
     const obj6 = { variant: "secondary", size: "md", text: null, onPress: null };
     const intl3 = util.intl;
     obj6.text = intl3.string(util.t["hxmQ/e"]);
-    obj6.onPress = function onPress() {
+    obj6.onPress = function handleRetry() {
       const result = VideoStreamReadyActionCreators.clearVideoStreamTimeout(BaseConnectionEvent.MediaEngineContextTypes.DEFAULT, _require);
       AudioActionCreatorsDefault.setDisableLocalVideo(_require, VideoToggleState.DISABLED, BaseConnectionEvent.MediaEngineContextTypes.DEFAULT, false);
       const timerId = setTimeout(() => {

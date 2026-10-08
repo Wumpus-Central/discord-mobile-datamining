@@ -1,21 +1,21 @@
-// === Module 10697: InviteRolesDisplay ===
+// === Module 10285: InviteRolesDisplay ===
 
-// Module 10697 (InviteRolesDisplay)
-import RolePillDefault from "RolePill" /* 10698 */;
+// Module 10285 (InviteRolesDisplay)
+import RolePillDefault from "RolePill" /* 10286 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleStore from "GuildRoleStore" /* 2106 */;
+import GuildRoleStore from "GuildRoleStore" /* 2118 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({ container: { marginTop: 8 }, label: { marginBottom: 4 }, rolesRow: { flexDirection: "row", flexWrap: "wrap" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/instant_invite/native/InviteRolesDisplay.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((roleIds) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function InviteRolesDisplay(roleIds) {
   const cResult = roleIds(576).c(20);
   roleIds = roleIds.roleIds;
   const guildId = roleIds.guildId;
@@ -48,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((roleIds) => {
       }
       if (cResult[6] !== tmp4.label) {
         const obj2 = { variant: "text-xs/semibold", color: "text-muted", style: label, children: tmp9 };
-        const tmp13 = closure_5(tmp(4892).Text, obj2);
+        const tmp13 = closure_5(tmp(5086).Text, obj2);
         cResult[6] = tmp4.label;
         cResult[7] = tmp13;
         let tmp11 = tmp13;
@@ -88,16 +88,23 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((roleIds) => {
         }
       }
       if (cResult[11] !== guildId) {
-        const fn2 = function j(role) {
-          return hasOwnProperty(RolePillDefault, { role, guildId }, role.id);
-        };
+        class D {
+          constructor(arg0) {
+            obj = { role: roleIds, guildId };
+            return jsx(closure_1(closure_2[10]), obj, roleIds.id);
+          }
+        }
         cResult[11] = guildId;
-        cResult[12] = fn2;
-        let tmp16 = fn2;
+        cResult[12] = D;
       } else {
-        tmp16 = cResult[12];
+        class D {
+          constructor(arg0) {
+            obj = { role: roleIds, guildId };
+            return jsx(closure_1(closure_2[10]), obj, roleIds.id);
+          }
+        }
       }
-      let mapped = stateFromStoresArray.map(tmp16);
+      let mapped = stateFromStoresArray.map(D);
       cResult[8] = guildId;
       cResult[9] = stateFromStoresArray;
       cResult[10] = mapped;
@@ -116,7 +123,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((roleIds) => {
   tmp8 = items2;
   tmp7 = fn;
   const obj = roleIds(576);
-}) : ((roleIds) => {
+}) : (function InviteRolesDisplay(roleIds) {
   roleIds = roleIds.roleIds;
   const guildId = roleIds.guildId;
   const tmp = closure_7();
@@ -132,7 +139,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((roleIds) => {
     const obj3 = { variant: "text-xs/semibold", color: "text-muted", style: tmp.label, children: null };
     const intl = tmp2(1126).intl;
     obj3.children = intl.string(tmp2(1126).t.stcSfI);
-    const items2 = [closure_5(tmp2(4892).Text, obj3), ];
+    const items2 = [closure_5(tmp2(5086).Text, obj3), ];
     const obj4 = { style: tmp.rolesRow, children: stateFromStoresArray.map((role) => hasOwnProperty(RolePillDefault, { role, guildId }, role.id)) };
     items2[1] = closure_5(View, obj4);
     obj2.children = items2;

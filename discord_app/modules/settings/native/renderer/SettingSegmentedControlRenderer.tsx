@@ -1,23 +1,23 @@
-// === Module 14529: SettingSegmentedControlRenderer ===
+// === Module 14790: SettingSegmentedControlRenderer ===
 
-// Module 14529 (SettingSegmentedControlRenderer)
+// Module 14790 (SettingSegmentedControlRenderer)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 587 */;
-import SettingsRendererConfig from "SettingsRendererConfig" /* 14425 */;
-import SettingRendererUtils from "SettingRendererUtils" /* 14519 */;
-import SettingTreeManagerDefault from "SettingTreeManager" /* 14520 */;
+import SettingsRendererConfig from "SettingsRendererConfig" /* 14651 */;
+import SettingRendererUtils from "SettingRendererUtils" /* 14779 */;
+import SettingTreeManagerDefault from "SettingTreeManager" /* 14780 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 14517 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 14777 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const NodeType = fn(11143).NodeType;
+const NodeType = fn(11263).NodeType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { controlContainer: { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8 }, pageContainer: { flex: 1 } };
 let closure_11 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -25,7 +25,7 @@ let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDef
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/settings/native/renderer/SettingSegmentedControlRenderer.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((node) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SettingSegmentedControl(node) {
   const cResult = defaultIndex(576).c(23);
   node = node.node;
   defaultIndex = node.defaultIndex;
@@ -167,7 +167,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((node) => {
   cResult[2] = C;
   tmp6 = C;
   const tmp4 = _slicedToArray(noop.useState(0), 2);
-}) : ((node) => {
+}) : (function SettingSegmentedControl(node) {
   _require = undefined;
   settings = undefined;
   dependencyMap = undefined;
@@ -201,13 +201,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((node) => {
   const memo = noop.useMemo(() => {
     const items = [];
     const item = settings.forEach((id) => {
-      const tmp = items(14425).SETTING_RENDERER_CONFIG[id];
+      const tmp = items(14651).SETTING_RENDERER_CONFIG[id];
       settings(38)(tmp.type === constants.ROUTE, "Invalid setting type for segmented control: " + id);
       const screen = tmp.screen;
       const obj = { label: null, id: null, page: null };
       const component = screen.getComponent();
       const tmp2 = settings(38);
-      obj.label = items(14519).getSettingTitle(id);
+      obj.label = items(14779).getSettingTitle(id);
       obj.id = id;
       obj.page = closure_2_8(component, {});
       items.push(obj);

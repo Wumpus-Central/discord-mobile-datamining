@@ -1,14 +1,14 @@
-// === Module 9767: useStageChannelGridParticipants ===
+// === Module 10970: useStageChannelGridParticipants ===
 
-// Module 9767 (useStageChannelGridParticipants)
+// Module 10970 (useStageChannelGridParticipants)
 import _mod12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
-import StageChannelParticipants from "StageChannelParticipants" /* 5589 */;
-import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 5595 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 5955 */;
+import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 5961 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5582 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6041 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5892 */;
 
 const require = globalThis.__r;
 
@@ -16,7 +16,7 @@ require = fn;
 const constants = { SELECTED: 0, [0]: "SELECTED", SPEAKER: 1, [1]: "SPEAKER", AUDIENCE: 2, [2]: "AUDIENCE", MEDIA: 3, [3]: "MEDIA" };
 fn(558);
 const ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useThrottleDurationForChannel(arg0) {
   const cResult = c.c(3);
   const stageParticipantsCount = StageChannelParticipantStoreHooks.useStageParticipantsCount(arg0, StageChannelParticipants.StageChannelParticipantNamedIndex.AUDIENCE);
   [tmp4, dependencyMap] = noop.useState(false);
@@ -44,7 +44,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     num3 = 5000;
   }
   return num3;
-}) : ((arg0) => {
+}) : (function useThrottleDurationForChannel(arg0) {
   const stageParticipantsCount = StageChannelParticipantStoreHooks.useStageParticipantsCount(arg0, StageChannelParticipants.StageChannelParticipantNamedIndex.AUDIENCE);
   const tmp2 = _slicedToArray(noop.useState(false), 2);
   closure_1 = tmp2[1];
@@ -84,12 +84,12 @@ function useStageChannelParticipantsList(arg0, arg1, arg2) {
     c2 = -1;
     const items2 = [];
     if (c2) {
-      let mutableParticipants = StageChannelParticipantStore.getMutableParticipants(items, closure_0(5589).StageChannelParticipantNamedIndex.SPEAKER);
+      let mutableParticipants = StageChannelParticipantStore.getMutableParticipants(items, closure_0(5955).StageChannelParticipantNamedIndex.SPEAKER);
       const iter = mutableParticipants[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
         let tmp10 = nextResult;
-        if (nextResult.type !== closure_0(5589).StageChannelParticipantTypes.STREAM) {
+        if (nextResult.type !== closure_0(5955).StageChannelParticipantTypes.STREAM) {
           iter.return();
           break;
         } else {
@@ -124,7 +124,7 @@ function useStageChannelParticipantsList(arg0, arg1, arg2) {
       items.push(chunkResult.length);
     }
     pushSection(items4, 1, false);
-    const items5 = [closure_0(5589).StageChannelParticipantNamedIndex.SPEAKER, closure_0(5589).StageChannelParticipantNamedIndex.AUDIENCE];
+    const items5 = [closure_0(5955).StageChannelParticipantNamedIndex.SPEAKER, closure_0(5955).StageChannelParticipantNamedIndex.AUDIENCE];
     const item = items5.forEach((item) => {
       const mutableParticipants = StageChannelParticipantStore.getMutableParticipants(stateFromStores[0], item);
       let found = mutableParticipants;
@@ -152,7 +152,7 @@ const result = size.fileFinishedImporting("modules/stage_channels/useStageChanne
 
 export { useStageChannelParticipantsList };
 export const useThrottleDurationForChannel = tmp2;
-export const useStageChannelParticipantsListThrottled = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2, arg3) => {
+export const useStageChannelParticipantsListThrottled = ReactCompilerGating.isReactCompilerEnabled() ? (function useStageChannelParticipantsListThrottled(arg0, arg1, arg2, arg3) {
   const cResult = require("c").c(13);
   _require = arg0;
   dependencyMap = arg1;
@@ -163,7 +163,7 @@ export const useStageChannelParticipantsListThrottled = ReactCompilerGating.isRe
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     const items = [closure_0, StageChannelParticipantStore.getParticipantsVersion(closure_0)];
     return items;
-  }, items1, tmp(5596).isVersionEqual);
+  }, items1, tmp(5962).isVersionEqual);
   const tmpResult = require("initialize");
   const items2 = [stateFromStores1];
   const items3 = [arg0];
@@ -176,12 +176,12 @@ export const useStageChannelParticipantsListThrottled = ReactCompilerGating.isRe
     c2 = -1;
     const items2 = [];
     if (c2) {
-      let mutableParticipants = StageChannelParticipantStore.getMutableParticipants(items, closure_0(5589).StageChannelParticipantNamedIndex.SPEAKER);
+      let mutableParticipants = StageChannelParticipantStore.getMutableParticipants(items, closure_0(5955).StageChannelParticipantNamedIndex.SPEAKER);
       const iter = mutableParticipants[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
         let tmp10 = nextResult;
-        if (nextResult.type !== closure_0(5589).StageChannelParticipantTypes.STREAM) {
+        if (nextResult.type !== closure_0(5955).StageChannelParticipantTypes.STREAM) {
           iter.return();
           break;
         } else {
@@ -216,7 +216,7 @@ export const useStageChannelParticipantsListThrottled = ReactCompilerGating.isRe
       items.push(chunkResult.length);
     }
     pushSection(items4, 1, false);
-    const items5 = [closure_0(5589).StageChannelParticipantNamedIndex.SPEAKER, closure_0(5589).StageChannelParticipantNamedIndex.AUDIENCE];
+    const items5 = [closure_0(5955).StageChannelParticipantNamedIndex.SPEAKER, closure_0(5955).StageChannelParticipantNamedIndex.AUDIENCE];
     const item = items5.forEach((item) => {
       const mutableParticipants = StageChannelParticipantStore.getMutableParticipants(stateFromStores[0], item);
       let found = mutableParticipants;
@@ -299,7 +299,7 @@ export const useStageChannelParticipantsListThrottled = ReactCompilerGating.isRe
   cResult[5] = items8;
   tmp22 = items8;
   const tmp8Result = tmp8(require("useThrottle").useThrottledState(memo, arg2, tmp13), 2);
-}) : ((arg0, arg1, arg2) => {
+}) : (function useStageChannelParticipantsListThrottled(arg0, arg1, arg2) {
   let flag = arg3;
   if (arg3 === undefined) {
     flag = false;
@@ -324,12 +324,12 @@ export const useStageChannelParticipantsListThrottled = ReactCompilerGating.isRe
     c2 = -1;
     const items2 = [];
     if (c2) {
-      let mutableParticipants = StageChannelParticipantStore.getMutableParticipants(items, closure_0(5589).StageChannelParticipantNamedIndex.SPEAKER);
+      let mutableParticipants = StageChannelParticipantStore.getMutableParticipants(items, closure_0(5955).StageChannelParticipantNamedIndex.SPEAKER);
       const iter = mutableParticipants[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
         let tmp10 = nextResult;
-        if (nextResult.type !== closure_0(5589).StageChannelParticipantTypes.STREAM) {
+        if (nextResult.type !== closure_0(5955).StageChannelParticipantTypes.STREAM) {
           iter.return();
           break;
         } else {
@@ -364,7 +364,7 @@ export const useStageChannelParticipantsListThrottled = ReactCompilerGating.isRe
       items.push(chunkResult.length);
     }
     pushSection(items4, 1, false);
-    const items5 = [closure_0(5589).StageChannelParticipantNamedIndex.SPEAKER, closure_0(5589).StageChannelParticipantNamedIndex.AUDIENCE];
+    const items5 = [closure_0(5955).StageChannelParticipantNamedIndex.SPEAKER, closure_0(5955).StageChannelParticipantNamedIndex.AUDIENCE];
     const item = items5.forEach((item) => {
       const mutableParticipants = StageChannelParticipantStore.getMutableParticipants(stateFromStores[0], item);
       let found = mutableParticipants;

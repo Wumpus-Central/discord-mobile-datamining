@@ -1,9 +1,9 @@
-// === Module 14450: useScrollToUserProfileEditFormSection ===
+// === Module 14678: useScrollToUserProfileEditFormSection ===
 
-// Module 14450 (useScrollToUserProfileEditFormSection)
+// Module 14678 (useScrollToUserProfileEditFormSection)
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9431 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9095 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/native/useScrollToUserProfileEditFormSection.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useScrollToUserProfileEditFormSection(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   const cResult = require("c").c(7);
@@ -85,7 +85,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   cResult[6] = fn2;
   tmp10 = fn2;
   const tmpResult = require("initialize");
-}) : ((arg0, arg1) => {
+}) : (function useScrollToUserProfileEditFormSection(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   ref = ref.useRef({});

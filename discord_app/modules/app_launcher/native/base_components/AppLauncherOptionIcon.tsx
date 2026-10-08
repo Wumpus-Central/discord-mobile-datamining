@@ -1,6 +1,6 @@
-// === Module 11820: AppLauncherOptionIcon ===
+// === Module 11905: AppLauncherOptionIcon ===
 
-// Module 11820 (AppLauncherOptionIcon)
+// Module 11905 (AppLauncherOptionIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
@@ -8,7 +8,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { iconWrapper: { justifyContent: "center", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: nativeDefault.radii.round } };
 const styles = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -16,7 +16,7 @@ const obj3 = { justifyContent: "center", alignItems: "center", backgroundColor: 
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/base_components/AppLauncherOptionIcon.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLauncherOptionIcon(arg0) {
   const cResult = c.c(9);
   ({ wrapperStyle, wrapperSize, icon } = arg0);
   let num = 32;
@@ -57,7 +57,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = wrapperStyle;
   cResult[5] = items;
   tmp4 = items;
-}) : ((wrapperSize) => {
+}) : (function AppLauncherOptionIcon(wrapperSize) {
   let num = wrapperSize.wrapperSize;
   if (num === undefined) {
     num = 32;

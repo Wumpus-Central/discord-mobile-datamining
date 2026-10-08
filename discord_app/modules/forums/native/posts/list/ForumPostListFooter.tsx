@@ -1,14 +1,14 @@
-// === Module 11653: ForumPostListFooter ===
+// === Module 11718: ForumPostListFooter ===
 
-// Module 11653 (ForumPostListFooter)
+// Module 11718 (ForumPostListFooter)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 6785 */;
-import ForumPostReactions from "ForumPostReactions" /* 10040 */;
-import useTypingUsersIds from "useTypingUsersIds" /* 11593 */;
-import ForumPostMessageCountDefault from "ForumPostMessageCount" /* 11646 */;
-import ForumPostTypingUsersDefault from "ForumPostTypingUsers" /* 11647 */;
-import GameInviteVoiceCountDefault from "GameInviteVoiceCount" /* 11654 */;
+import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 6960 */;
+import ForumPostReactions from "ForumPostReactions" /* 10427 */;
+import useTypingUsersIds from "useTypingUsersIds" /* 11656 */;
+import ForumPostMessageCountDefault from "ForumPostMessageCount" /* 11711 */;
+import ForumPostTypingUsersDefault from "ForumPostTypingUsers" /* 11712 */;
+import GameInviteVoiceCountDefault from "GameInviteVoiceCount" /* 11719 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const View = fn(17).View;
 const AnalyticsObjects = fn(1085).AnalyticsObjects;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { footer: { display: "flex", alignItems: "center", flexDirection: "row", justifyContent: "flex-start" }, dot: null };
 let size = { height: 4, width: 4, borderRadius: 2, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginHorizontal: 8 };
 obj2.dot = size;
@@ -25,7 +25,7 @@ const ReactCompilerGating = fn(558);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/posts/list/ForumPostListFooter.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPostListFooter(arg0) {
   const cResult = c.c(22);
   ({ thread, firstMessage, hasUnreads, parentChannel } = arg0);
   const tmp4 = closure_8();
@@ -123,7 +123,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = thread;
   cResult[2] = tmp8;
   tmp7 = tmp8;
-}) : ((parentChannel) => {
+}) : (function ForumPostListFooter(parentChannel) {
   ({ thread, firstMessage, hasUnreads } = parentChannel);
   const tmp = closure_8();
   const typingUserIds = useTypingUsersIds.useTypingUserIds(thread.id);

@@ -1,21 +1,21 @@
-// === Module 10114: GIFPickerNoResults ===
+// === Module 9699: GIFPickerNoResults ===
 
-// Module 10114 (GIFPickerNoResults)
+// Module 9699 (GIFPickerNoResults)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import BottomSheetModal from "BottomSheetModal" /* 6119 */;
-import SearchEmpty from "SearchEmpty" /* 9934 */;
-import useModalDismissGuardRefreshControl from "useModalDismissGuardRefreshControl" /* 9938 */;
-import useExpressionPickerInsetsDefault from "useExpressionPickerInsets" /* 10099 */;
+import native from "native" /* 1200 */;
+import BottomSheetModal from "BottomSheetModal" /* 6298 */;
+import SearchEmpty from "SearchEmpty" /* 9456 */;
+import useModalDismissGuardRefreshControl from "useModalDismissGuardRefreshControl" /* 9460 */;
+import useExpressionPickerInsetsDefault from "useExpressionPickerInsets" /* 9683 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
 fn(1085).GIFPickerResultTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { emptyStateContainer: { padding: 0, flex: 1 }, emptyStateBody: { color: nativeDefault.colors.TEXT_SUBTLE }, emptyStateImage: null };
 let obj3 = { color: nativeDefault.colors.TEXT_SUBTLE };
 obj.emptyStateImage = { marginBottom: nativeDefault.space.PX_8, marginTop: 0 };
@@ -25,7 +25,7 @@ let obj4 = { marginBottom: nativeDefault.space.PX_8, marginTop: 0 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/gif_picker/native/GIFPickerNoResults.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function GIFPickerNoResults(arg0) {
   const cResult = c.c(16);
   ({ categoryType, inActionSheet } = arg0);
   const tmp4 = closure_7();
@@ -105,7 +105,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
     const tmpResult2 = useModalDismissGuardRefreshControl;
   }
   const tmpResult = SearchEmpty;
-}) : ((inActionSheet) => {
+}) : (function GIFPickerNoResults(inActionSheet) {
   inActionSheet = inActionSheet.inActionSheet;
   const tmp = closure_7();
   const safeAreaBottomKeyboardAware = useExpressionPickerInsetsDefault({ hasCategories: false }).safeAreaBottomKeyboardAware;

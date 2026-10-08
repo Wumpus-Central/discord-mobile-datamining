@@ -1,11 +1,11 @@
-// === Module 11677: ActivitiesBanner ===
+// === Module 11742: ActivitiesBanner ===
 
-// Module 11677 (ActivitiesBanner)
+// Module 11742 (ActivitiesBanner)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import useActivityApplications from "useActivityApplications" /* 11666 */;
-import ApplicationsImageDefault from "ApplicationsImage" /* 11678 */;
-import BannerBaseDefault from "BannerBase" /* 11689 */;
+import useActivityApplications from "useActivityApplications" /* 11731 */;
+import ApplicationsImageDefault from "ApplicationsImage" /* 11743 */;
+import BannerBaseDefault from "BannerBase" /* 11754 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/onboarding/banner/ActivitiesBanner.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ActivitiesBanner(context) {
   let tmp2 = dependencyMap;
   const cResult = c.c(10);
   context = context.context;
@@ -64,7 +64,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
   cResult[4] = tmp9;
   tmp8 = tmp9;
   const tmp5 = _slicedToArray(useActivityApplications.useActivityApplications(tmp4), 2);
-}) : ((context) => {
+}) : (function ActivitiesBanner(context) {
   const obj2 = { guildId: context.context.channel.guild_id, fetchesShelf: false };
   [tmp4, tmp5] = useActivityApplications.useActivityApplications({ guildId: context.context.channel.guild_id, fetchesShelf: false });
   let tmp6Result = null;

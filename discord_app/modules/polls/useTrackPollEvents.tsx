@@ -1,8 +1,8 @@
-// === Module 11850: useTrackPollEvents ===
+// === Module 11934: useTrackPollEvents ===
 
-// Module 11850 (useTrackPollEvents)
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5076 */;
-import PollLayoutTypes from "PollLayoutTypes" /* 11363 */;
+// Module 11934 (useTrackPollEvents)
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5105 */;
+import PollLayoutTypes from "PollLayoutTypes" /* 11540 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/polls/useTrackPollEvents.tsx");
 
-export const useTrackPollCreationEvents = ReactCompilerGating.isReactCompilerEnabled() ? ((attachments_count, arg1) => {
+export const useTrackPollCreationEvents = ReactCompilerGating.isReactCompilerEnabled() ? (function useTrackPollCreationEvents(attachments_count, arg1) {
   _require = attachments_count;
   closure_1 = arg1;
   const cResult = require("c").c(5);
@@ -54,7 +54,7 @@ export const useTrackPollCreationEvents = ReactCompilerGating.isReactCompilerEna
   cResult[1] = attachments_count;
   cResult[2] = fn;
   tmp2 = fn;
-}) : ((attachments_count, arg1) => {
+}) : (function useTrackPollCreationEvents(attachments_count, arg1) {
   closure_1 = arg1;
   let obj = { trackPollCreationCancelled: null };
   const items = [attachments_count, arg1];

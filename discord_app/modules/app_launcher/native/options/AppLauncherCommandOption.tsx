@@ -1,26 +1,26 @@
-// === Module 11800: AppLauncherCommandOption ===
+// === Module 11867: AppLauncherCommandOption ===
 
-// Module 11800 (AppLauncherCommandOption)
+// Module 11867 (AppLauncherCommandOption)
 import nativeDefault from "native" /* 587 */;
-import utils_AutocompleteUtilsDefault from "utils/AutocompleteUtils" /* 5708 */;
-import AppLauncherChoicesOptionDefault from "AppLauncherChoicesOption" /* 11801 */;
-import AppLauncherAutocompleteOptionDefault from "AppLauncherAutocompleteOption" /* 11808 */;
-import AppLauncherTextInputOptionDefault from "AppLauncherTextInputOption" /* 11810 */;
-import AppLauncherAttachmentOptionDefault from "AppLauncherAttachmentOption" /* 11813 */;
-import AppLauncherBooleanOptionDefault from "AppLauncherBooleanOption" /* 11817 */;
-import AppLauncherMentionableListActionSheet from "AppLauncherMentionableListActionSheet" /* 11818 */;
-import AppLauncherMentionableOptionDefault from "AppLauncherMentionableOption" /* 11821 */;
-import AppLauncherRoleOptionDefault from "AppLauncherRoleOption" /* 11823 */;
-import AppLauncherUserOptionDefault from "AppLauncherUserOption" /* 11824 */;
-import AppLauncherChannelOptionDefault from "AppLauncherChannelOption" /* 11830 */;
+import utils_AutocompleteUtilsDefault from "utils/AutocompleteUtils" /* 6098 */;
+import AppLauncherChoicesOptionDefault from "AppLauncherChoicesOption" /* 11868 */;
+import AppLauncherAutocompleteOptionDefault from "AppLauncherAutocompleteOption" /* 11875 */;
+import AppLauncherTextInputOptionDefault from "AppLauncherTextInputOption" /* 11877 */;
+import AppLauncherAttachmentOptionDefault from "AppLauncherAttachmentOption" /* 11881 */;
+import AppLauncherBooleanOptionDefault from "AppLauncherBooleanOption" /* 11902 */;
+import AppLauncherMentionableListActionSheet from "AppLauncherMentionableListActionSheet" /* 11903 */;
+import AppLauncherMentionableOptionDefault from "AppLauncherMentionableOption" /* 11906 */;
+import AppLauncherRoleOptionDefault from "AppLauncherRoleOption" /* 11908 */;
+import AppLauncherUserOptionDefault from "AppLauncherUserOption" /* 11909 */;
+import AppLauncherChannelOptionDefault from "AppLauncherChannelOption" /* 11915 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(1489).AppLauncherOptionAutoFocusType;
+let closure_4 = fn(1501).AppLauncherOptionAutoFocusType;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { dismissableOptionWrapper: { flexDirection: "row", alignItems: "center" }, optionViewContainer: { flex: 1 }, dismissButton: { marginLeft: 8, marginRight: -4, padding: 4, borderRadius: nativeDefault.radii.round }, option: { flex: 1 } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -28,7 +28,7 @@ let obj3 = { marginLeft: 8, marginRight: -4, padding: 4, borderRadius: nativeDef
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/native/options/AppLauncherCommandOption.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLauncherCommandOption(option) {
   const cResult = option(onEndEditing[7]).c(162);
   option = option.option;
   const onStartEditing = option.onStartEditing;
@@ -182,13 +182,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
               cResult[99] = tmp46;
               tmp43 = tmp46;
             }
-            function le() {
+            function pe() {
               return onEndEditing(option);
             }
             cResult[88] = onEndEditing;
             cResult[89] = option;
-            cResult[90] = le;
-            tmp40 = le;
+            cResult[90] = pe;
+            tmp40 = pe;
           }
           function re(mentionable) {
             mentionable = mentionable.mentionable;
@@ -343,7 +343,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
                   }
                 }
               }
-              class Ee {
+              class Ae {
                 constructor(arg0) {
                   user = option.user;
                   tmp = onOptionValueChange;
@@ -385,7 +385,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
               }
             }
             cResult[119] = onEndEditing;
-            class Ee {
+            class Ae {
               constructor(arg0) {
                 user = option.user;
                 tmp = onOptionValueChange;
@@ -407,10 +407,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
               }
             }
             cResult[120] = option;
-            cResult[121] = Ae;
-            tmp19 = Ae;
+            cResult[121] = Ee;
+            tmp19 = Ee;
           }
-          class Ee {
+          class Ae {
             constructor(arg0) {
               user = option.user;
               tmp = onOptionValueChange;
@@ -433,8 +433,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
           }
           cResult[116] = onOptionValueChange;
           cResult[117] = option;
-          cResult[118] = Ee;
-          tmp18 = Ee;
+          cResult[118] = Ae;
+          tmp18 = Ae;
         } else if (tmp(tmp2[8]).ApplicationCommandOptionType.CHANNEL === type) {
           class Oe {
             constructor() {
@@ -478,7 +478,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
                   }
                 }
               }
-              class Ee {
+              class Ae {
                 constructor(arg0) {
                   user = option.user;
                   tmp = onOptionValueChange;
@@ -520,7 +520,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
               }
             }
             cResult[135] = onEndEditing;
-            class Ee {
+            class Ae {
               constructor(arg0) {
                 user = option.user;
                 tmp = onOptionValueChange;
@@ -545,7 +545,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
             cResult[137] = Ne;
             tmp9 = Ne;
           }
-          class Ee {
+          class Ae {
             constructor(arg0) {
               user = option.user;
               tmp = onOptionValueChange;
@@ -590,7 +590,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
                 return onDismiss(option);
               }
             }
-            class Ee {
+            class Ae {
               constructor(arg0) {
                 user = option.user;
                 tmp = onOptionValueChange;
@@ -625,7 +625,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
                 }
               }
               const obj9 = { style: null, children: null };
-              class Ee {
+              class Ae {
                 constructor(arg0) {
                   user = option.user;
                   tmp = onOptionValueChange;
@@ -668,7 +668,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
             }
           }
           cResult[151] = onDismiss;
-          class Ee {
+          class Ae {
             constructor(arg0) {
               user = option.user;
               tmp = onOptionValueChange;
@@ -700,7 +700,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
           }
         }
         const obj11 = { style: dismissableOptionWrapper.optionViewContainer, children: null };
-        class Ee {
+        class Ae {
           constructor(arg0) {
             user = option.user;
             tmp = onOptionValueChange;
@@ -786,7 +786,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
                   return;
                 }
               }
-              class Ee {
+              class Ae {
                 constructor(arg0) {
                   user = option.user;
                   tmp = onOptionValueChange;
@@ -843,7 +843,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
                 return;
               }
             }
-            class Ee {
+            class Ae {
               constructor(arg0) {
                 user = option.user;
                 tmp = onOptionValueChange;
@@ -892,7 +892,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
             return;
           }
         }
-        class Ee {
+        class Ae {
           constructor(arg0) {
             user = option.user;
             tmp = onOptionValueChange;
@@ -937,7 +937,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
         return;
       }
     }
-    class Ee {
+    class Ae {
       constructor(arg0) {
         user = option.user;
         tmp = onOptionValueChange;
@@ -1184,7 +1184,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
     tmp66 = Q;
   }
   let obj = option(onEndEditing[7]);
-}) : ((option) => {
+}) : (function AppLauncherCommandOption(option) {
   let name = option.option;
   ({ onStartEditing: importDefault, onEndEditing: dependencyMap, onOptionValueChange: View, onPress } = option);
   const onDismiss = option.onDismiss;
@@ -1192,10 +1192,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
   ({ onPressAttachmentOption, onFocus, command } = option);
   const tmp = closure_7();
   let type = name.type;
-  if (name(1985).ApplicationCommandOptionType.STRING !== type) {
-    if (tmp2(1985).ApplicationCommandOptionType.INTEGER !== type) {
-      if (tmp2(1985).ApplicationCommandOptionType.NUMBER !== type) {
-        if (tmp2(1985).ApplicationCommandOptionType.ATTACHMENT === type) {
+  if (name(1997).ApplicationCommandOptionType.STRING !== type) {
+    if (tmp2(1997).ApplicationCommandOptionType.INTEGER !== type) {
+      if (tmp2(1997).ApplicationCommandOptionType.NUMBER !== type) {
+        if (tmp2(1997).ApplicationCommandOptionType.ATTACHMENT === type) {
           let obj2 = {
             style: tmp.option,
             option: name,
@@ -1217,7 +1217,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
           };
           let tmp28Result = onDismiss(AppLauncherAttachmentOptionDefault, obj2, name.name);
           let tmp13 = onDismiss;
-        } else if (tmp2(1985).ApplicationCommandOptionType.BOOLEAN === type) {
+        } else if (tmp2(1997).ApplicationCommandOptionType.BOOLEAN === type) {
           let obj3 = { style: tmp.option, option: name, initialValue: null, onPress: null, hasError: null };
           let first;
           if (optionValues.current[name.name] != null) {
@@ -1233,7 +1233,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
           obj3.hasError = hasError;
           tmp28Result = tmp35(AppLauncherBooleanOptionDefault, obj3, name.name);
           tmp13 = tmp35;
-        } else if (tmp2(1985).ApplicationCommandOptionType.MENTIONABLE === type) {
+        } else if (tmp2(1997).ApplicationCommandOptionType.MENTIONABLE === type) {
           let obj4 = { option: name, initialValue: null, onMentionablePress: null, onActionSheetDismiss: null, channel: null, autoFocus: null, hasError: null, onPress: null };
           let first1;
           if (optionValues.current[name.name] != null) {
@@ -1277,7 +1277,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
           obj4.onPress = onPress;
           tmp28Result = tmp28(AppLauncherMentionableOptionDefault, obj4);
           tmp13 = tmp28;
-        } else if (tmp2(1985).ApplicationCommandOptionType.ROLE === type) {
+        } else if (tmp2(1997).ApplicationCommandOptionType.ROLE === type) {
           const obj5 = { style: tmp.option, option: name, initialValue: null, onRolePress: null, onActionSheetDismiss: null, channel: null, autoFocus: null, hasError: null, onPress: null };
           let first2;
           if (optionValues.current[name.name] != null) {
@@ -1303,7 +1303,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
           obj5.onPress = onPress;
           tmp28Result = tmp21(AppLauncherRoleOptionDefault, obj5, name.name);
           tmp13 = tmp21;
-        } else if (tmp2(1985).ApplicationCommandOptionType.USER === type) {
+        } else if (tmp2(1997).ApplicationCommandOptionType.USER === type) {
           const obj6 = { style: tmp.option, option: name, initialValue: null, onUserPress: null, onActionSheetDismiss: null, channel: null, autoFocus: null, hasError: null, onPress: null };
           let first3;
           if (optionValues.current[name.name] != null) {
@@ -1333,7 +1333,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
           obj6.onPress = onPress;
           tmp28Result = tmp14(AppLauncherUserOptionDefault, obj6, name.name);
           tmp13 = tmp14;
-        } else if (tmp2(1985).ApplicationCommandOptionType.CHANNEL === type) {
+        } else if (tmp2(1997).ApplicationCommandOptionType.CHANNEL === type) {
           let obj = { style: tmp.option, option: name, initialValue: null, onChannelPress: null, onActionSheetDismiss: null, channel: null, autoFocus: null, hasError: null, onPress: null };
           let first4;
           if (optionValues.current[name.name] != null) {
@@ -1373,9 +1373,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
             onPress() {
                       return onDismiss(name);
                     },
-            children: tmp13(tmp2(4803).CircleXIcon, { size: "md" })
+            children: tmp13(tmp2(4997).CircleXIcon, { size: "md" })
           };
-          items[1] = tmp13(tmp2(5916).PressableOpacity, obj9);
+          items[1] = tmp13(tmp2(6189).PressableOpacity, obj9);
           obj7.children = items;
           tmp62 = closure_6(View, obj7);
         }

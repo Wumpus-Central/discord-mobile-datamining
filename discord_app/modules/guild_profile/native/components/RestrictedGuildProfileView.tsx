@@ -1,15 +1,15 @@
-// === Module 9412: RestrictedGuildProfileView ===
+// === Module 8833: RestrictedGuildProfileView ===
 
-// Module 9412 (RestrictedGuildProfileView)
+// Module 8833 (RestrictedGuildProfileView)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import useToken from "useToken" /* 4586 */;
-import useThemeDefault from "useTheme" /* 4797 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import LinearGradientDefault from "LinearGradient" /* 5612 */;
-import GuildIcon from "GuildIcon" /* 5978 */;
-import GuildProfileView from "GuildProfileView" /* 9413 */;
+import useToken from "useToken" /* 4778 */;
+import useThemeDefault from "useTheme" /* 4991 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import LinearGradientDefault from "LinearGradient" /* 5387 */;
+import GuildIcon from "GuildIcon" /* 6161 */;
+import GuildProfileView from "GuildProfileView" /* 8834 */;
 import noop from "module_19" /* 19 */;
 
 const GuildIconDefault = GuildIcon;
@@ -22,7 +22,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_profile/native/components/RestrictedGuildProfileView.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function RestrictedGuildProfileView() {
   const cResult = c.c(23);
   const styles = GuildProfileView.useStyles();
   const tmp6 = useThemeDefault();
@@ -135,7 +135,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[2] = backgroundForProfile;
   tmp10 = backgroundForProfile;
   const tmpResult = GuildProfileView;
-}) : (() => {
+}) : (function RestrictedGuildProfileView() {
   const styles = GuildProfileView.useStyles();
   const tmp2 = useThemeDefault();
   const obj3 = { style: styles.container, children: null };

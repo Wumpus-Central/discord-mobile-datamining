@@ -1,14 +1,14 @@
-// === Module 12785: MediaModalOverlayAltText ===
+// === Module 12932: MediaModalOverlayAltText ===
 
-// Module 12785 (MediaModalOverlayAltText)
+// Module 12932 (MediaModalOverlayAltText)
 import nativeDefault from "native" /* 587 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet" /* 11164 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet" /* 11286 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles((arg0) => {
   const obj = { container: { backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_ACTIVE, marginVertical: nativeDefault.space.PX_8, marginHorizontal: nativeDefault.space.PX_8, marginRight: nativeDefault.space.PX_8 + arg0, paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.sm, alignSelf: "flex-end" } };
   return obj;
@@ -17,7 +17,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaModalOverlayAltText.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((description) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function MediaModalOverlayAltTextButton(description) {
   let PressableOpacity = str;
   let tmp = dependencyMap;
   const cResult = str(576).c(7);
@@ -26,7 +26,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((descri
   if (str == null) {
     str = "";
   }
-  const ViewImageDescriptions = PressableOpacity(2028).ViewImageDescriptions;
+  const ViewImageDescriptions = PressableOpacity(2040).ViewImageDescriptions;
   let tmp3 = null;
   if (ViewImageDescriptions.useSetting()) {
     tmp3 = null;
@@ -57,7 +57,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((descri
         const obj2 = { variant: "text-xs/semibold", color: "text-overlay-light", children: null };
         const intl = PressableOpacity(1126).intl;
         obj2.children = intl.string(PressableOpacity(1126).t.Q5VqrN);
-        const tmp9 = jsx(PressableOpacity(4892).Text, { variant: "text-xs/semibold", color: "text-overlay-light", children: null });
+        const tmp9 = jsx(PressableOpacity(5086).Text, { variant: "text-xs/semibold", color: "text-overlay-light", children: null });
         cResult[3] = tmp9;
         let tmp7 = tmp9;
       } else {
@@ -65,7 +65,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((descri
       }
       if (cResult[4] === container.container) {
       }
-      PressableOpacity = PressableOpacity(5916).PressableOpacity;
+      PressableOpacity = PressableOpacity(6189).PressableOpacity;
       const obj3 = { style: container.container, onPress: tmp4, hitSlop: tmp6, children: tmp7 };
       tmp = <PressableOpacity style={container.container} onPress={tmp4} hitSlop={tmp6}>{tmp7}</PressableOpacity>;
       container = container.container;
@@ -75,12 +75,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((descri
     }
   }
   return tmp3;
-}) : ((description) => {
+}) : (function MediaModalOverlayAltTextButton(description) {
   let str;
   if (str == null) {
     str = "";
   }
-  const ViewImageDescriptions = str(2028).ViewImageDescriptions;
+  const ViewImageDescriptions = str(2040).ViewImageDescriptions;
   let tmp4 = null;
   if (ViewImageDescriptions.useSetting()) {
     tmp4 = null;
@@ -99,8 +99,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((descri
       const obj2 = { variant: "text-xs/semibold", color: "text-overlay-light", children: null };
       const intl = tmp3(1126).intl;
       obj2.children = intl.string(tmp3(1126).t.Q5VqrN);
-      obj.children = jsx(tmp3(4892).Text, { variant: "text-xs/semibold", color: "text-overlay-light", children: null });
-      tmp4 = jsx(tmp3(5916).PressableOpacity, {
+      obj.children = jsx(tmp3(5086).Text, { variant: "text-xs/semibold", color: "text-overlay-light", children: null });
+      tmp4 = jsx(tmp3(6189).PressableOpacity, {
         style: tmp2.container,
         onPress() {
               if (str == null) {

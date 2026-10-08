@@ -1,8 +1,8 @@
-// === Module 17572: RadioGroupActionComponent ===
+// === Module 17854: RadioGroupActionComponent ===
 
-// Module 17572 (RadioGroupActionComponent)
-import spring from "spring" /* 5604 */;
-import springPresets from "springPresets" /* 5605 */;
+// Module 17854 (RadioGroupActionComponent)
+import spring from "spring" /* 5374 */;
+import springPresets from "springPresets" /* 5378 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/interaction_components/native/actions/RadioGroupActionComponent.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((type) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function RadioGroupActionComponent(type) {
   const cResult = type(ref[3]).c(25);
   type = type.type;
   ({ options, required } = type);
@@ -159,7 +159,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((type) 
         }
       }
     }
-    const fn = function v(value) {
+    function onChange(value) {
       if ("" !== value) {
         if (null == value) {
           const obj2 = { type, value: null };
@@ -173,13 +173,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((type) 
           executeStateUpdate(obj);
         }
       }
-    };
+    }
     cResult[5] = executeStateUpdate;
     cResult[6] = required;
     cResult[7] = type;
     cResult[8] = str;
-    cResult[9] = fn;
-    tmp15 = fn;
+    cResult[9] = onChange;
+    tmp15 = onChange;
     const tmpResult2 = tmp(tmp2[5]);
   }
   let tmp8;
@@ -199,7 +199,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((type) 
   cResult[4] = tmp8;
   tmp7 = tmp8;
   let obj = type(ref[3]);
-}) : ((type) => {
+}) : (function RadioGroupActionComponent(type) {
   type = type.type;
   options = type.options;
   const required = type.required;

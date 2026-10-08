@@ -1,16 +1,16 @@
-// === Module 8419: GameProfileSkeleton ===
+// === Module 8916: GameProfileSkeleton ===
 
-// Module 8419 (GameProfileSkeleton)
+// Module 8916 (GameProfileSkeleton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4618 */;
-import GameProfileSkeletonPulse from "GameProfileSkeletonPulse" /* 8420 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4810 */;
+import GameProfileSkeletonPulse from "GameProfileSkeletonPulse" /* 8917 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { placeholder: { backgroundColor: nativeDefault.colors.ICON_MUTED }, button: null, buttonSm: null, buttonMd: null };
 const obj3 = { backgroundColor: nativeDefault.colors.ICON_MUTED };
 obj2.button = { borderRadius: nativeDefault.radii.sm };
@@ -23,7 +23,7 @@ const dependencyMap = { sm: "buttonSm", md: "buttonMd" };
 fn(558);
 const obj4 = { borderRadius: nativeDefault.radii.sm };
 let ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function GameProfileSkeletonPlaceholder(style) {
   const cResult = c.c(3);
   style = style.style;
   const tmp2 = closure_5();
@@ -41,7 +41,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
   cResult[1] = tmp2.placeholder;
   cResult[2] = tmp4;
   tmp3 = tmp4;
-}) : ((style) => {
+}) : (function GameProfileSkeletonPlaceholder(style) {
   const obj = { style: null };
   const items = [closure_5().placeholder, style.style];
   obj.style = items;
@@ -49,7 +49,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
 });
 let closure_7 = tmp4;
 ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function GameProfileSkeletonContainer(arg0) {
   const cResult = c.c(6);
   ({ animationDelayMs, children, style } = arg0);
   let num = 0;
@@ -80,7 +80,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = items;
   tmp5 = items;
   const tmpResult = GameProfileSkeletonPulse;
-}) : ((animationDelayMs) => {
+}) : (function GameProfileSkeletonContainer(animationDelayMs) {
   let num = animationDelayMs.animationDelayMs;
   if (num === undefined) {
     num = 0;
@@ -98,7 +98,7 @@ const result = size.fileFinishedImporting("modules/game_profile/native/component
 export default tmp4;
 export const SKELETON_CARD_ANIMATION_DELAY_MS = 150;
 export const GameProfileSkeletonContainer = tmp3;
-export const GameProfileSkeletonButton = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const GameProfileSkeletonButton = ReactCompilerGating.isReactCompilerEnabled() ? (function GameProfileSkeletonButton(arg0) {
   const cResult = c.c(4);
   ({ size, style } = arg0);
   let str = "md";
@@ -123,7 +123,7 @@ export const GameProfileSkeletonButton = ReactCompilerGating.isReactCompilerEnab
   cResult[2] = tmp2[dependencyMap[str]];
   cResult[3] = tmp5;
   tmp4 = tmp5;
-}) : ((size) => {
+}) : (function GameProfileSkeletonButton(size) {
   let str = size.size;
   if (str === undefined) {
     str = "md";

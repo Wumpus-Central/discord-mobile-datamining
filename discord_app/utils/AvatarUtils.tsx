@@ -1,20 +1,20 @@
-// === Module 1402: AvatarUtils ===
+// === Module 1414: AvatarUtils ===
 
-// Module 1402 (AvatarUtils)
+// Module 1414 (AvatarUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import IntegerDefault from "Integer" /* 14 */;
-import Url from "Url" /* 1373 */;
-import AvatarDecorationConstants from "AvatarDecorationConstants" /* 1403 */;
-import utils_AvatarUtils from "utils/AvatarUtils" /* 1405 */;
-import ImageLoaderUtils from "ImageLoaderUtils" /* 1437 */;
-import _modDef1478 from "module_1478" /* 1478 */;
-import ForceSdrEmojisStickersExperiment from "ForceSdrEmojisStickersExperiment" /* 1887 */;
-import NumberUtils from "NumberUtils" /* 1888 */;
-import AvatarDecorationUtils from "AvatarDecorationUtils" /* 1972 */;
-import CollectiblesAssetUtils from "CollectiblesAssetUtils" /* 1974 */;
-import _modDef1975 from "module_1975" /* 1975 */;
+import Url from "Url" /* 1385 */;
+import AvatarDecorationConstants from "AvatarDecorationConstants" /* 1415 */;
+import utils_AvatarUtils from "utils/AvatarUtils" /* 1417 */;
+import ImageLoaderUtils from "ImageLoaderUtils" /* 1449 */;
+import _modDef1490 from "module_1490" /* 1490 */;
+import ForceSdrEmojisStickersExperiment from "ForceSdrEmojisStickersExperiment" /* 1899 */;
+import NumberUtils from "NumberUtils" /* 1900 */;
+import AvatarDecorationUtils from "AvatarDecorationUtils" /* 1984 */;
+import CollectiblesAssetUtils from "CollectiblesAssetUtils" /* 1986 */;
+import _modDef1987 from "module_1987" /* 1987 */;
 import Constants from "Constants" /* 1085 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
 import size from "module_2" /* 2 */;
 
 function getAvatarURL(canAnimate) {
@@ -111,7 +111,7 @@ function getAvatarURL(canAnimate) {
           obj4.animated = true;
         }
         const _HermesInternal2 = HermesInternal;
-        return combined + "?" + _modDef1478.stringify(obj4);
+        return combined + "?" + _modDef1490.stringify(obj4);
       }
     }
   }
@@ -151,7 +151,9 @@ function getDefaultAvatarURL(id, discriminator) {
   }
   return first;
 }
-function getUserAvatarURL(user) {
+function getUserAvatarURLWithoutFallback(bot) {
+  const avatar = bot.avatar;
+  ({ id, discriminator, bot } = bot);
   if (flag === undefined) {
     flag = false;
   }
@@ -163,41 +165,24 @@ function getUserAvatarURL(user) {
   if (format === undefined) {
     tmp2 = null;
   }
-  let tmp3 = SUPPORTS_WEBP;
-  if (SUPPORTS_WEBP === undefined) {
+  let tmp3 = canUseWebpResult;
+  if (canUseWebpResult === undefined) {
     tmp3 = canUseWebpResult;
   }
-  ({ avatar, id, discriminator, bot } = user);
-  if (flag === undefined) {
-    flag = false;
-  }
-  let tmp4 = tmp;
-  if (tmp === undefined) {
-    tmp4 = size;
-  }
-  if (tmp2 === undefined) {
-    tmp2 = null;
-  }
-  if (tmp3 === undefined) {
-    tmp3 = canUseWebpResult;
-  }
-  if (!bot) {
-    const obj = { endpoint: React3.AVATAR, path: "avatars", id, hash: avatar, size: tmp4, canAnimate: flag, format: tmp2, canWebP: tmp3 };
-    let first = getAvatarURL(obj);
-  } else {
-    first = utils_AvatarUtils.default.BOT_AVATARS[avatar];
-    if (!first) {
-      if (null == avatar) {
-        if ("0000" === discriminator) {
-          first = DEFAULT_AVATARS[0];
-        }
+  if (bot) {
+    let tmp5;
+    if (null != avatar) {
+      tmp5 = utils_AvatarUtils.default.BOT_AVATARS[avatar];
+    }
+    if (tmp5) {
+      return tmp5;
+    } else if (null == avatar) {
+      if ("0000" === discriminator) {
+        return DEFAULT_AVATARS[0];
       }
     }
   }
-  if (first == null) {
-    first = getDefaultAvatarURL(user.id, user.discriminator, user.isProvisional, tmp);
-  }
-  return first;
+  return getAvatarURL({ endpoint: React3.AVATAR, path: "avatars", id, hash: avatar, size: tmp, canAnimate: flag, format: tmp2, canWebP: tmp3 });
 }
 function getGuildMemberAvatarURLSimple(size) {
   ({ guildId, userId, avatar, canAnimate } = size);
@@ -260,7 +245,7 @@ function getGuildMemberAvatarURLSimple(size) {
   if (tmp20) {
     obj.animated = true;
   }
-  return combined + "?" + _modDef1478.stringify(obj);
+  return combined + "?" + _modDef1490.stringify(obj);
 }
 function getGuildBannerURL(guild) {
   ({ id, banner } = guild);
@@ -317,7 +302,7 @@ function getGuildBannerURL(guild) {
       obj.animated = true;
     }
     const _HermesInternal2 = HermesInternal;
-    return combined + "?" + _modDef1478.stringify(obj);
+    return combined + "?" + _modDef1490.stringify(obj);
   }
 }
 function getApplicationIconURL(guildMember) {
@@ -330,43 +315,25 @@ function getApplicationIconURL(guildMember) {
     fallbackAvatar = true;
   }
   guildMember = guildMember.guildMember;
-  let id1;
+  let id;
   if (bot != null) {
-    id1 = bot.id;
+    id = bot.id;
   }
-  if (null != id1) {
+  if (null != id) {
     if (null != guildMember) {
       if (null != guildMember.avatar) {
-        const obj2 = { userId: bot.id, guildId: null, avatar: null, canAnimate: false, size: null };
-        ({ guildId: obj4.guildId, avatar: obj4.avatar } = guildMember);
-        obj2.size = size;
-        return getGuildMemberAvatarURLSimple(obj2);
+        const obj3 = { userId: bot.id, guildId: null, avatar: null, canAnimate: false, size: null };
+        ({ guildId: obj2.guildId, avatar: obj2.avatar } = guildMember);
+        obj3.size = size;
+        return getGuildMemberAvatarURLSimple(obj3);
       }
     }
   }
   if (null != bot) {
     if (botIconFirst) {
-      const avatar = bot.avatar;
-      let tmp2 = size;
-      ({ id, discriminator, bot: bot2 } = bot);
-      if (size === undefined) {
-        tmp2 = closure_1_4;
-      }
-      if (!bot2) {
-        const obj = { endpoint: React3.AVATAR, path: "avatars", id, hash: avatar, size: tmp2, canAnimate: false, format: null, canWebP: tmp3 };
-        let first = getAvatarURL(obj);
-      } else {
-        first = utils_AvatarUtils.default.BOT_AVATARS[avatar];
-        if (!first) {
-          if (null == avatar) {
-            if ("0000" === discriminator) {
-              first = DEFAULT_AVATARS[0];
-            }
-          }
-        }
-      }
-      if (null != first) {
-        return first;
+      const tmp3 = getUserAvatarURLWithoutFallback(bot, false, size);
+      if (null != tmp3) {
+        return tmp3;
       }
     }
   }
@@ -375,42 +342,24 @@ function getApplicationIconURL(guildMember) {
     if (isMatch) {
       isMatch = re6.test(icon);
     }
-    let tmp23 = icon;
+    let tmp11 = icon;
     if (!isMatch) {
-      const obj3 = { endpoint: React3.APPLICATION_ICON, path: "app-icons", id: guildMember.id, hash: icon, size, canAnimate: false, canWebP: false, keepAspectRatio: guildMember.keepAspectRatio };
-      tmp23 = getAvatarURL(obj3);
+      const obj = { endpoint: React3.APPLICATION_ICON, path: "app-icons", id: guildMember.id, hash: icon, size, canAnimate: false, canWebP: false, keepAspectRatio: guildMember.keepAspectRatio };
+      tmp11 = getAvatarURL(obj);
     }
-    return tmp23;
+    return tmp11;
   } else {
     if (null != bot) {
-      const avatar2 = bot.avatar;
-      let tmp10 = size;
-      ({ id: id2, discriminator: discriminator2, bot: bot3 } = bot);
-      if (size === undefined) {
-        tmp10 = closure_1_4;
-      }
-      if (!bot3) {
-        const obj7 = { endpoint: React3.AVATAR, path: "avatars", id: id2, hash: avatar2, size: tmp10, canAnimate: false, format: null, canWebP: tmp11 };
-        let first1 = getAvatarURL(obj7);
-      } else {
-        first1 = utils_AvatarUtils.default.BOT_AVATARS[avatar2];
-        if (!first1) {
-          if (null == avatar2) {
-            if ("0000" === discriminator2) {
-              first1 = DEFAULT_AVATARS[0];
-            }
-          }
-        }
-      }
-      if (null != first1) {
-        return first1;
+      const tmp5 = getUserAvatarURLWithoutFallback(bot, false, size);
+      if (null != tmp5) {
+        return tmp5;
       }
     }
-    let tmp18;
+    let tmp6;
     if (fallbackAvatar) {
-      tmp18 = _modDef1975;
+      tmp6 = _modDef1987;
     }
-    return tmp18;
+    return tmp6;
   }
 }
 function getChannelIconURL(arg0) {
@@ -506,6 +455,28 @@ function getEmojiURL(dependencyMap) {
     str = "webp";
   }
 }
+function getUserAvatarURL(user) {
+  if (flag === undefined) {
+    flag = false;
+  }
+  let tmp = size;
+  if (size === undefined) {
+    tmp = size;
+  }
+  let tmp2 = format;
+  if (format === undefined) {
+    tmp2 = null;
+  }
+  let tmp3 = SUPPORTS_WEBP;
+  if (SUPPORTS_WEBP === undefined) {
+    tmp3 = canUseWebpResult;
+  }
+  let tmp4 = getUserAvatarURLWithoutFallback(user, flag, tmp, tmp2, tmp3);
+  if (tmp4 == null) {
+    tmp4 = getDefaultAvatarURL(user.id, user.discriminator, user.isProvisional, tmp);
+  }
+  return tmp4;
+}
 function getGuildMemberAvatarURL(avatar) {
   avatar = avatar.avatar;
   ({ userId, guildId } = avatar);
@@ -590,7 +561,7 @@ function getUserBannerURL(arg0) {
       obj.animated = true;
     }
     const _HermesInternal2 = HermesInternal;
-    return combined + "?" + _modDef1478.stringify(obj);
+    return combined + "?" + _modDef1490.stringify(obj);
   }
 }
 function getAvatarDecorationURL(canAnimate) {
@@ -696,7 +667,7 @@ function getGuildMemberBannerURL(arg0) {
         obj.animated = true;
       }
       const _HermesInternal2 = HermesInternal;
-      return combined + "?" + _modDef1478.stringify(obj);
+      return combined + "?" + _modDef1490.stringify(obj);
     }
   }
 }
@@ -900,13 +871,23 @@ export default {
   hasAnimatedGuildIcon,
   isAnimatedIconHash,
   getUserAvatarSource(stateFromStores, flag, size) {
-    const tmp = getUserAvatarURL(stateFromStores, flag, size);
-    let tmp2 = tmp;
-    if (typeof tmp !== "number") {
-      const obj = { uri: tmp };
-      tmp2 = obj;
+    if (flag === undefined) {
+      flag = false;
     }
-    return tmp2;
+    let tmp = size;
+    if (size === undefined) {
+      tmp = size;
+    }
+    let tmp2 = getUserAvatarURLWithoutFallback(stateFromStores, flag, tmp, null, canUseWebpResult);
+    if (tmp2 == null) {
+      tmp2 = getDefaultAvatarURL(stateFromStores.id, stateFromStores.discriminator, stateFromStores.isProvisional, tmp3);
+    }
+    let tmp6 = tmp2;
+    if (typeof tmp2 !== "number") {
+      const obj = { uri: tmp2 };
+      tmp6 = obj;
+    }
+    return tmp6;
   },
   getGuildIconURL,
   getGuildSplashURL,

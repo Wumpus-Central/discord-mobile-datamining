@@ -1,15 +1,15 @@
-// === Module 12360: SkipHeaderButton ===
+// === Module 12456: SkipHeaderButton ===
 
-// Module 12360 (SkipHeaderButton)
+// Module 12456 (SkipHeaderButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import HeaderShared from "HeaderShared" /* 7509 */;
+import HeaderShared from "HeaderShared" /* 9232 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { button: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT }, insideNavigatorButton: { paddingRight: 16 } };
 let closure_3 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -17,7 +17,7 @@ const obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/nuf/native/components/SkipHeaderButton.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((label) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SkipHeaderButton(label) {
   const cResult = c.c(9);
   const tmp4 = closure_3();
   if (cResult[0] !== label.label) {
@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((label) => {
   cResult[3] = prop;
   cResult[4] = items;
   tmp8 = items;
-}) : ((label) => {
+}) : (function SkipHeaderButton(label) {
   const tmp = closure_3();
   label = label.label;
   if (label == null) {

@@ -1,14 +1,14 @@
-// === Module 13116: IconActionButton ===
+// === Module 12830: IconActionButton ===
 
-// Module 13116 (IconActionButton)
+// Module 12830 (IconActionButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import useFontScale from "useFontScale" /* 5609 */;
-import Pressables from "Pressables" /* 5916 */;
-import Badge from "Badge" /* 7514 */;
+import native from "native" /* 1200 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import useFontScale from "useFontScale" /* 5382 */;
+import Pressables from "Pressables" /* 6189 */;
+import Badge from "Badge" /* 9237 */;
 import _readOnlyError from "_readOnlyError" /* 377 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ const BadgeDefault = Badge;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles(() => {
   const obj = { actionIconButtonPressable: { minWidth: 32, minHeight: 32, borderRadius: 20, marginEnd: 12, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "row", paddingRight: 12, paddingLeft: 12 }, withoutMargin: { marginEnd: 0 }, filled: {}, outlined: null, roundButton: null, actionIcon: null, actionText: null, unreadBadgeLeft: null, unreadBadgeRight: null, unreadBadgeMask: null, countStyle: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
@@ -89,7 +89,7 @@ let closure_7 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functi
   cResult[3] = fn;
   tmp3 = fn;
   let obj = source(576);
-}) : ((color) => {
+}) : (function IconComponent(color) {
   ({ IconComponent, source } = color);
   color = color.color;
   const tmp = closure_6();
@@ -105,7 +105,7 @@ let closure_7 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functi
 }));
 fn(558);
 ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((badgePosition) => {
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ButtonBadge(badgePosition) {
   const cResult = c.c(3);
   badgePosition = badgePosition.badgePosition;
   let str = "left";
@@ -129,7 +129,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((badgePosition) => {
   cResult[1] = tmp5;
   cResult[2] = tmp8;
   tmp6 = tmp8;
-}) : ((badgePosition) => {
+}) : (function ButtonBadge(badgePosition) {
   let str = badgePosition.badgePosition;
   if (str === undefined) {
     str = "left";
@@ -142,7 +142,7 @@ let closure_8 = tmp5;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/IconActionButton.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((noMargin) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function IconActionButton(noMargin) {
   const cResult = c.c(32);
   ({ source, IconComponent, variant, color, buttonText, buttonTextColor, accessibilityLabel, style, badge, badgePosition, count, hitSlop, disabled, onPress, onLongPress } = noMargin);
   let str = "filled";
@@ -291,7 +291,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((noMargin) => {
   cResult[4] = withoutMargin;
   cResult[5] = items1;
   tmp11 = items1;
-}) : ((variant) => {
+}) : (function IconActionButton(variant) {
   let str = variant.variant;
   ({ source, IconComponent } = variant);
   if (str === undefined) {

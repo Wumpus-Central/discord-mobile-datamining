@@ -1,23 +1,23 @@
-// === Module 16863: MediaGrid ===
+// === Module 17142: MediaGrid ===
 
-// Module 16863 (MediaGrid)
-import SearchPlatformUtils from "SearchPlatformUtils" /* 11980 */;
-import MediaGridItemDefault from "MediaGridItem" /* 16859 */;
+// Module 17142 (MediaGrid)
+import SearchPlatformUtils from "SearchPlatformUtils" /* 12053 */;
+import MediaGridItemDefault from "MediaGridItem" /* 17138 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const SearchConstants = fn(7524);
+const SearchConstants = fn(9247);
 ({ SEARCH_LIST_HORIZONTAL_PADDING, MEDIA_NUM_COLUMNS: hasOwnProperty, MEDIA_ITEM_GAP_WIDTH: metroRequire } = SearchConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { paddingLeft: SEARCH_LIST_HORIZONTAL_PADDING - 2, paddingRight: SEARCH_LIST_HORIZONTAL_PADDING + 4 } };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/list/rows/MediaGrid.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((media) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function MediaGrid(media) {
   const cResult = media(onPress[6]).c(11);
   media = media.media;
   const mediaSize = media.mediaSize;
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((media) => {
   cResult[4] = fn;
   tmp5 = fn;
   let obj = media(onPress[6]);
-}) : ((media) => {
+}) : (function MediaGrid(media) {
   media = media.media;
   const mediaSize = media.mediaSize;
   const onPress = media.onPress;

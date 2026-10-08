@@ -1,15 +1,15 @@
-// === Module 16126: GuildThemeNuxPreviewGraphic ===
+// === Module 16386: GuildThemeNuxPreviewGraphic ===
 
-// Module 16126 (GuildThemeNuxPreviewGraphic)
+// Module 16386 (GuildThemeNuxPreviewGraphic)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import GuildThemePreviewArtDefault from "GuildThemePreviewArt" /* 16127 */;
+import GuildThemePreviewArtDefault from "GuildThemePreviewArt" /* 16387 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { width: "100%", aspectRatio: 1.7777777777777777, alignItems: "center", justifyContent: "center", marginBottom: nativeDefault.space.PX_24 } };
 let closure_5 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -17,7 +17,7 @@ let obj3 = { width: "100%", aspectRatio: 1.7777777777777777, alignItems: "center
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_themes/native/GuildThemeNuxPreviewGraphic.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildThemeNuxPreviewGraphic(arg0) {
   const cResult = c.c(5);
   ({ themeSettings, isPersonal } = arg0);
   const tmp3 = closure_5();
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = tmp10;
   tmp9 = tmp10;
   const obj3 = { accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", style: tmp3.container, children: tmp5 };
-}) : ((arg0) => {
+}) : (function GuildThemeNuxPreviewGraphic(arg0) {
   ({ themeSettings, isPersonal } = arg0);
   const obj = { accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", style: closure_5().container, children: null };
   let tmp4 = null;

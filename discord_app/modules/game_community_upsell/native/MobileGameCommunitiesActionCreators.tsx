@@ -1,13 +1,13 @@
-// === Module 16246: MobileGameCommunitiesActionCreators ===
+// === Module 16506: MobileGameCommunitiesActionCreators ===
 
-// Module 16246 (MobileGameCommunitiesActionCreators)
+// Module 16506 (MobileGameCommunitiesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
-import _modDef1478 from "module_1478" /* 1478 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
+import _modDef1490 from "module_1490" /* 1490 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LocalAppDetectionStore from "LocalAppDetectionStore" /* 13540 */;
-import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 15466 */;
+import LocalAppDetectionStore from "LocalAppDetectionStore" /* 13837 */;
+import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 15728 */;
 
 require = fn;
 let closure_7 = async function _fetchDetectedGameCommunities() {
@@ -53,7 +53,7 @@ let closure_7 = async function _fetchDetectedGameCommunities() {
           const obj4 = { game_ids: tmp19, limit: 20, ignored_guild_ids: null };
           const _Array = Array;
           obj4.ignored_guild_ids = Array.from(dismissedGuildIds.getDismissedGuildIds());
-          request.query = _modDef1478.stringify(obj4);
+          request.query = _modDef1490.stringify(obj4);
           c2 = 1;
           c3 = 1;
           const obj5 = { value: HTTP.get(request), done: false };
@@ -158,7 +158,7 @@ let closure_8 = asyncGeneratorStep(async () => {
     }
   }
 });
-obj2.load = function() {
+obj2.load = function load() {
   const self = this;
   const apply = closure_8.apply;
   if (typeof apply === "unknown") {

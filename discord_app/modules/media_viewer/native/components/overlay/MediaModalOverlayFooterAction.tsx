@@ -1,13 +1,13 @@
-// === Module 12786: MediaModalOverlayFooterAction ===
+// === Module 12933: MediaModalOverlayFooterAction ===
 
-// Module 12786 (MediaModalOverlayFooterAction)
+// Module 12933 (MediaModalOverlayFooterAction)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5780 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6626 */;
-import MediaViewerThumbnailsDefault from "MediaViewerThumbnails" /* 12779 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5363 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6803 */;
+import MediaViewerThumbnailsDefault from "MediaViewerThumbnails" /* 12926 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { paddingTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 }, buttonContainer: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
 obj2.buttonContainer = { paddingHorizontal: nativeDefault.space.PX_16 };
@@ -25,7 +25,7 @@ let obj4 = { paddingHorizontal: nativeDefault.space.PX_16 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaModalOverlayFooterAction.tsx");
 
-export const MediaModalOverlayFooterAction = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const MediaModalOverlayFooterAction = ReactCompilerGating.isReactCompilerEnabled() ? (function MediaModalOverlayFooterAction(arg0) {
   const cResult = c.c(15);
   ({ footerAction, sliderElement, syncer } = arg0);
   const tmp4 = closure_8();
@@ -103,7 +103,7 @@ export const MediaModalOverlayFooterAction = ReactCompilerGating.isReactCompiler
   cResult[3] = syncer;
   cResult[4] = tmp9Result;
   tmp7 = tmp9Result;
-}) : ((arg0) => {
+}) : (function MediaModalOverlayFooterAction(arg0) {
   ({ footerAction, sliderElement, syncer } = arg0);
   const tmp = closure_8();
   const rect = { bottom: true, left: true, right: true, style: tmp.container, children: null };

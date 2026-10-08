@@ -1,13 +1,13 @@
-// === Module 16517: useMainTabsChannelScreenStyles ===
+// === Module 16777: useMainTabsChannelScreenStyles ===
 
-// Module 16517 (useMainTabsChannelScreenStyles)
+// Module 16777 (useMainTabsChannelScreenStyles)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 const obj2 = { elevation: null };
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
 const merged1 = Object.assign(nativeDefault.shadows.SHADOW_LOW);
@@ -19,7 +19,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/useMainTabsChannelScreenStyles.tsx");
 
-export const useMainTabsChannelScreenStyles = ReactCompilerGating.isReactCompilerEnabled() ? ((isDragging, translateX, maxWidth, isCompletelyCovered, freezeValue) => {
+export const useMainTabsChannelScreenStyles = ReactCompilerGating.isReactCompilerEnabled() ? (function useMainTabsChannelScreenStyles(isDragging, translateX, maxWidth, isCompletelyCovered, freezeValue) {
   closure_2 = maxWidth;
   __initData = freezeValue;
   const cResult = c.c(3);
@@ -76,7 +76,7 @@ export const useMainTabsChannelScreenStyles = ReactCompilerGating.isReactCompile
   cResult[1] = tmp2.elevation;
   cResult[2] = items;
   tmp4 = items;
-}) : ((isDragging, translateX, maxWidth, isCompletelyCovered, freezeValue) => {
+}) : (function useMainTabsChannelScreenStyles(isDragging, translateX, maxWidth, isCompletelyCovered, freezeValue) {
   closure_2 = maxWidth;
   closure_4 = freezeValue;
   const tmp = isCompletelyCovered();

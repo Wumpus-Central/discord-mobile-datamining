@@ -1,12 +1,12 @@
-// === Module 6484: UserSettingsAccountActionCreators ===
+// === Module 6662: UserSettingsAccountActionCreators ===
 
-// Module 6484 (UserSettingsAccountActionCreators)
+// Module 6662 (UserSettingsAccountActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import router_utils from "router_utils" /* 1112 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6089 */;
-import trackUserAvatarUpdated from "trackUserAvatarUpdated" /* 6492 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6494 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 5936 */;
+import trackUserAvatarUpdated from "trackUserAvatarUpdated" /* 6669 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6671 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -125,7 +125,7 @@ let closure_11 = async function _saveProfileAndAccountRequest(arg0) {
 };
 const Constants = fn(1085);
 ({ Endpoints: closure_4, Routes: hasOwnProperty, DEVICE_TOKEN: metroRequire, DEVICE_VOIP_TOKEN: closure_7 } = Constants);
-const PushNotificationConstants = fn(6092);
+const PushNotificationConstants = fn(5939);
 ({ DEVICE_PUSH_VOIP_PROVIDER: closure_8, getDevicePushProvider: closure_9 } = PushNotificationConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/UserSettingsAccountActionCreators.tsx");
@@ -189,8 +189,8 @@ export const saveProfileAndAccountChanges = function saveProfileAndAccountChange
   if (undefined !== typingIndicatorStyle) {
     let result = null;
     if (null != typingIndicatorStyle) {
-      result = avatar(1398).serializeTypingIndicatorStyle(typingIndicatorStyle);
-      const obj3 = avatar(1398);
+      result = avatar(1410).serializeTypingIndicatorStyle(typingIndicatorStyle);
+      const obj3 = avatar(1410);
     }
     user.typing_indicator_style = result;
   }
@@ -214,8 +214,8 @@ export const saveProfileAndAccountChanges = function saveProfileAndAccountChange
   const obj4 = { headers: null };
   const obj = avatarId(584);
   tmp13 = null != tmp12 && null != value;
-  obj4.headers = avatarId(6485).buildHeadersForMd5({ [avatar(6489).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5 });
-  let tmpResult = avatarId(6485);
+  obj4.headers = avatarId(6663).buildHeadersForMd5({ [avatar(6667).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5 });
+  let tmpResult = avatarId(6663);
   return saveProfileAndAccountRequest(user, obj4).then((result) => {
     DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_SUCCESS" });
     let tmp4 = null == avatar;

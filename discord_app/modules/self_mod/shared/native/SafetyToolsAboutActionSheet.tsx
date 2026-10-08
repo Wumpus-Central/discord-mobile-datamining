@@ -1,21 +1,21 @@
-// === Module 9859: SafetyToolsAboutActionSheet ===
+// === Module 10419: SafetyToolsAboutActionSheet ===
 
-// Module 9859 (SafetyToolsAboutActionSheet)
+// Module 10419 (SafetyToolsAboutActionSheet)
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 9811 */;
-import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 9812 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 10374 */;
+import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 10375 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 let View = fn(17).View;
-let isNudgeWarning = fn(9797).getSafetyToolsActionSheetKey;
+let isNudgeWarning = fn(10361).getSafetyToolsActionSheetKey;
 let HelpdeskArticles = fn(1085).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { aboutContainer: { marginHorizontal: nativeDefault.space.PX_32 }, description: null, reportFalsePositive: null };
 let obj3 = { marginHorizontal: nativeDefault.space.PX_32 };
 obj2.description = { alignSelf: "center", textAlign: "center", marginBottom: nativeDefault.space.PX_24 };
@@ -27,7 +27,7 @@ let obj5 = { alignSelf: "center", textAlign: "center", marginTop: nativeDefault.
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/shared/native/SafetyToolsAboutActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SafetyToolsAboutScreen(channelId) {
   const cResult = channelId(warningId[9]).c(35);
   channelId = channelId.channelId;
   const recipientId = channelId.recipientId;
@@ -499,7 +499,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   cResult[5] = T;
   tmp8 = T;
   let obj2 = channelId(warningId[10]);
-}) : ((channelId) => {
+}) : (function SafetyToolsAboutScreen(channelId) {
   channelId = channelId.channelId;
   const recipientId = channelId.recipientId;
   const warningId = channelId.warningId;

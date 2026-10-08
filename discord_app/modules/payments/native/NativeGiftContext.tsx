@@ -1,33 +1,33 @@
-// === Module 10443: NativeGiftContext ===
+// === Module 10040: NativeGiftContext ===
 
-// Module 10443 (NativeGiftContext)
+// Module 10040 (NativeGiftContext)
 import LoggerDefault from "Logger" /* 3 */;
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1126 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import BillingUtils from "BillingUtils" /* 4549 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5715 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6688 */;
-import ContextUtilsDefault from "ContextUtils" /* 6947 */;
-import BadgeId from "BadgeId" /* 7866 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 7879 */;
-import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 10407 */;
-import PremiumGiftingIntentActionCreators from "PremiumGiftingIntentActionCreators" /* 10485 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import BillingUtils from "BillingUtils" /* 4741 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5298 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6865 */;
+import ContextUtilsDefault from "ContextUtils" /* 7136 */;
+import BadgeId from "BadgeId" /* 8284 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8297 */;
+import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 10004 */;
+import PremiumGiftingIntentActionCreators from "PremiumGiftingIntentActionCreators" /* 10082 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7874 */;
-import PromotionsStore from "PromotionsStore" /* 10409 */;
-import GiftCodeRecord from "GiftCodeRecord" /* 10444 */;
-import UserStore from "UserStore" /* 1377 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8292 */;
+import PromotionsStore from "PromotionsStore" /* 10006 */;
+import GiftCodeRecord from "GiftCodeRecord" /* 10041 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-fn(6932).GPlayBillingResult;
-const PremiumConstants = fn(1379);
+fn(7121).GPlayBillingResult;
+const PremiumConstants = fn(1391);
 ({ PremiumTypes: closure_12, SubscriptionIntervalTypes: map1, SubscriptionPlanInfo: closure_14 } = PremiumConstants);
 let PaymentGateways = fn(1096).PaymentGateways;
 let jsx = fn(21).jsx;
@@ -35,7 +35,7 @@ let closure_17 = new LoggerDefault("NativeGiftContext");
 const tmp4 = new LoggerDefault("NativeGiftContext");
 [closure_18, tmp6, tmp7] = ContextUtilsDefault();
 let ReactCompilerGating = fn(558);
-let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGiftInfoOptions(arg0) {
   const cResult = c.c(11);
   ({ giftStyle, recipientUserId, customGiftMessage, emojiConfetti, soundEffect, selectedGiftingPromotionReward, premiumType } = arg0);
   if (emojiConfetti != null) {
@@ -85,7 +85,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const items1 = [selectedGiftingPromotionReward];
   items = items1;
-}) : ((giftStyle) => {
+}) : (function useGiftInfoOptions(giftStyle) {
   giftStyle = giftStyle.giftStyle;
   const recipientUserId = giftStyle.recipientUserId;
   const customGiftMessage = giftStyle.customGiftMessage;
@@ -138,7 +138,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }, items);
 });
 ReactCompilerGating = fn(558);
-let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((order) => {
+let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSyncOrder(order) {
   const cResult = order(setRevision[15]).c(44);
   order = order.order;
   let revision = order.revision;
@@ -213,7 +213,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((order) => {
                                                                       }
                                                                       if (cResult[42] !== tmp14) {
                                                                         let obj2 = { awaitSyncOrder: tmp14 };
-                                                                        class A {
+                                                                        class O {
                                                                           constructor() {
                                                                             tmp = flush(giftInfoOptions);
                                                                             tmp2 = waitForSync();
@@ -229,7 +229,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((order) => {
                                                                       return tmp15;
                                                                     }
                                                                   }
-                                                                  class A {
+                                                                  class O {
                                                                     constructor() {
                                                                       tmp = flush(giftInfoOptions);
                                                                       tmp2 = waitForSync();
@@ -240,8 +240,8 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((order) => {
                                                                   cResult[38] = flush;
                                                                   cResult[39] = giftInfoOptions;
                                                                   cResult[40] = waitForSync;
-                                                                  cResult[41] = A;
-                                                                  tmp14 = A;
+                                                                  cResult[41] = O;
+                                                                  tmp14 = O;
                                                                 }
                                                               }
                                                             }
@@ -839,12 +839,12 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((order) => {
     obj3 = externalGatewayFacet;
     let tmp6 = planId(externalGatewayFacet.useState(0), 2);
   }
-  let obj4 = { orderId: "a", planId: "no good", planSelection: { premiumType, planInterval }, giftInfo: "zna\u010Dka" };
+  let obj4 = { orderId: "a", planId: "twitch.tv", planSelection: { premiumType, planInterval }, giftInfo: "youtube.com" };
   cResult[0] = planInterval;
   cResult[1] = premiumType;
   cResult[2] = obj4;
   tmp3 = obj4;
-}) : ((order) => {
+}) : (function useSyncOrder(order) {
   order = order.order;
   let revision = order.revision;
   const setRevision = order.setRevision;
@@ -858,7 +858,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((order) => {
   const setPremiumType = order.setPremiumType;
   const setPlanInterval = order.setPlanInterval;
   const setError = order.setError;
-  let obj = { orderId: "a", planId: "no good", planSelection: { premiumType, planInterval }, giftInfo: "zna\u010Dka" };
+  let obj = { orderId: "a", planId: "twitch.tv", planSelection: { premiumType, planInterval }, giftInfo: "youtube.com" };
   closure_13 = externalGatewayFacet.useRef(obj);
   externalGatewayFacet.useRef(false);
   externalGatewayFacet.useRef(null);
@@ -1407,7 +1407,7 @@ const importDefaultResultResult = _slicedToArray(ContextUtilsDefault(), 3);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/payments/native/NativeGiftContext.tsx");
 
-export const NativeGiftContextProvider = ReactCompilerGating.isReactCompilerEnabled() ? ((basePurchaseAnalytics) => {
+export const NativeGiftContextProvider = ReactCompilerGating.isReactCompilerEnabled() ? (function NativeGiftContextProvider(basePurchaseAnalytics) {
   const cResult = basePurchaseAnalytics(setCurrentAnalyticsStep[15]).c(88);
   basePurchaseAnalytics = basePurchaseAnalytics.basePurchaseAnalytics;
   const recipientUserId = basePurchaseAnalytics.recipientUserId;
@@ -1677,7 +1677,7 @@ export const NativeGiftContextProvider = ReactCompilerGating.isReactCompilerEnab
   cResult[4] = productIdForGift;
   tmp29 = productIdForGift;
   const tmpResult14 = basePurchaseAnalytics(setCurrentAnalyticsStep[23]);
-}) : ((basePurchaseAnalytics) => {
+}) : (function NativeGiftContextProvider(basePurchaseAnalytics) {
   basePurchaseAnalytics = basePurchaseAnalytics.basePurchaseAnalytics;
   _require = basePurchaseAnalytics;
   const recipientUserId = basePurchaseAnalytics.recipientUserId;
@@ -2066,7 +2066,7 @@ export const NativeGiftContextProvider = ReactCompilerGating.isReactCompilerEnab
                 yield closure_1_40(closure_2_2);
                 return value;
               });
-              obj8.onPurchaseComplete = function() {
+              obj8.onPurchaseComplete = function onPurchaseComplete() {
                 const self = this;
                 const apply = closure_1_1.apply;
                 if (typeof apply === "unknown") {

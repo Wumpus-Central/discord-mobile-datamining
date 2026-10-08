@@ -1,17 +1,17 @@
-// === Module 17378: VoicePanelControlsDimOverlay ===
+// === Module 17660: VoicePanelControlsDimOverlay ===
 
-// Module 17378 (VoicePanelControlsDimOverlay)
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import spring from "spring" /* 5604 */;
-import AccessibilityPreferencesSharedValue from "AccessibilityPreferencesSharedValue" /* 14220 */;
-import VoicePanelControlUtils from "VoicePanelControlUtils" /* 17343 */;
+// Module 17660 (VoicePanelControlsDimOverlay)
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import spring from "spring" /* 5374 */;
+import AccessibilityPreferencesSharedValue from "AccessibilityPreferencesSharedValue" /* 14519 */;
+import VoicePanelControlUtils from "VoicePanelControlUtils" /* 17624 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_4 = fn(14222).BACKDROP_OPAQUE_MAX_OPACITY;
-const VoicePanelConstants = fn(11916);
+let closure_4 = fn(14042).BACKDROP_OPAQUE_MAX_OPACITY;
+const VoicePanelConstants = fn(11989);
 ({ PANEL_CONTROLS_HEIGHT_PHYSICS: hasOwnProperty, VoicePanelModes: metroRequire } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(11914).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(11987).VoicePanelControlsModes;
 const jsx = fn(21).jsx;
 const __initData = { code: "function VoicePanelControlsDimOverlayTsx1(){const{windowDimensions,getDrawerSpec,safeArea,controlsSpecs,VoicePanelControlsModes,mode,VoicePanelModes,interpolate,wrapperSpecs,BACKDROP_OPAQUE_MAX_OPACITY}=this.__closure;const{height:height}=windowDimensions.get();const{minHeight:minHeight,maxHeight:maxHeight}=getDrawerSpec(height,safeArea.get().top);if(controlsSpecs.get().mode!==VoicePanelControlsModes.DRAWER||mode.get()!==VoicePanelModes.PANEL){return 0;}return interpolate(wrapperSpecs.get().height,[minHeight,maxHeight],[0,BACKDROP_OPAQUE_MAX_OPACITY],\"clamp\");}" };
 const __initData2 = { code: "function VoicePanelControlsDimOverlayTsx2(){const{overlayOpacity}=this.__closure;return overlayOpacity.get()>=0.35;}" };
@@ -25,7 +25,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelControlsDimOverlay.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((wrapperSpecs) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePanelControlsDimOverlay(wrapperSpecs) {
   const cResult = wrapperSpecs(setControlsMode[6]).c(6);
   wrapperSpecs = wrapperSpecs.wrapperSpecs;
   const context = controlsSpecs.useContext(windowDimensions(setControlsMode[7]));
@@ -74,34 +74,37 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((wrappe
   A.__initData = __initData;
   derivedValue = obj2.useDerivedValue(A);
   const obj3 = { windowDimensions, getDrawerSpec: wrapperSpecs(setControlsMode[9]).getDrawerSpec, safeArea, controlsSpecs, VoicePanelControlsModes: derivedValue1, mode, VoicePanelModes: derivedValue, interpolate: wrapperSpecs(setControlsMode[8]).interpolate, wrapperSpecs, BACKDROP_OPAQUE_MAX_OPACITY: safeArea };
+  const fn = function y() {
+    return derivedValue.get() >= 0.35;
+  };
+  fn.__closure = { overlayOpacity: derivedValue };
+  fn.__workletHash = 733654137262;
+  fn.__initData = __initData2;
+  derivedValue1 = wrapperSpecs(setControlsMode[8]).useDerivedValue(fn);
+  const obj4 = wrapperSpecs(setControlsMode[8]);
   class S {
     constructor() {
-      return closure_6.get() >= 0.35;
+      obj = { zIndex: 1, opacity: null, display: null };
+      obj2 = closure_0(closure_2[10]);
+      obj.opacity = obj2.withSpring(closure_6.get(), closure_5);
+      accessibilityPreferencesSharedValue = closure_0(closure_2[11]).accessibilityPreferencesSharedValue;
+      str = "flex";
+      if (accessibilityPreferencesSharedValue.get().screenReaderEnabled) {
+        tmp = closure_7;
+        str = "flex";
+        if (!closure_7.get()) {
+          str = "none";
+        }
+      }
+      obj.display = str;
+      return obj;
     }
   }
-  S.__closure = { overlayOpacity: derivedValue };
-  S.__workletHash = 733654137262;
-  S.__initData = __initData2;
-  derivedValue1 = wrapperSpecs(setControlsMode[8]).useDerivedValue(S);
-  const obj4 = wrapperSpecs(setControlsMode[8]);
-  const fn = function y() {
-    const obj = { zIndex: 1, opacity: spring.withSpring(derivedValue.get(), hasOwnProperty), display: null };
-    const accessibilityPreferencesSharedValue = AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue;
-    let str = "flex";
-    if (accessibilityPreferencesSharedValue.get().screenReaderEnabled) {
-      str = "flex";
-      if (!derivedValue1.get()) {
-        str = "none";
-      }
-    }
-    obj.display = str;
-    return obj;
-  };
   const obj5 = wrapperSpecs(setControlsMode[8]);
-  fn.__closure = { withSpring: wrapperSpecs(setControlsMode[10]).withSpring, overlayOpacity: derivedValue, PANEL_CONTROLS_HEIGHT_PHYSICS: mode, accessibilityPreferencesSharedValue: wrapperSpecs(setControlsMode[11]).accessibilityPreferencesSharedValue, overlayActive: derivedValue1 };
-  fn.__workletHash = 8950053221992;
-  fn.__initData = __initData3;
-  const animatedStyle = obj5.useAnimatedStyle(fn);
+  S.__closure = { withSpring: wrapperSpecs(setControlsMode[10]).withSpring, overlayOpacity: derivedValue, PANEL_CONTROLS_HEIGHT_PHYSICS: mode, accessibilityPreferencesSharedValue: wrapperSpecs(setControlsMode[11]).accessibilityPreferencesSharedValue, overlayActive: derivedValue1 };
+  S.__workletHash = 8950053221992;
+  S.__initData = __initData3;
+  const animatedStyle = obj5.useAnimatedStyle(S);
   const obj6 = { withSpring: wrapperSpecs(setControlsMode[10]).withSpring, overlayOpacity: derivedValue, PANEL_CONTROLS_HEIGHT_PHYSICS: mode, accessibilityPreferencesSharedValue: wrapperSpecs(setControlsMode[11]).accessibilityPreferencesSharedValue, overlayActive: derivedValue1 };
   const fn2 = function v() {
     let pointerEvents = "none";
@@ -148,7 +151,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((wrappe
   cResult[4] = animatedStyle;
   cResult[5] = jsx(tmp(tmp2[12]).Backdrop, { onDismiss: O, style: animatedStyle, animatedProps, opaque: true, "aria-hidden": true });
   const tmp10 = jsx(tmp(tmp2[12]).Backdrop, { onDismiss: O, style: animatedStyle, animatedProps, opaque: true, "aria-hidden": true });
-}) : ((wrapperSpecs) => {
+}) : (function VoicePanelControlsDimOverlay(wrapperSpecs) {
   wrapperSpecs = wrapperSpecs.wrapperSpecs;
   let windowDimensions;
   let setControlsMode;

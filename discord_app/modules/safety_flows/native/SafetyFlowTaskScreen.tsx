@@ -1,26 +1,26 @@
-// === Module 18113: SafetyFlowTaskScreen ===
+// === Module 18400: SafetyFlowTaskScreen ===
 
-// Module 18113 (SafetyFlowTaskScreen)
+// Module 18400 (SafetyFlowTaskScreen)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Stack_Stack from "Stack/Stack" /* 5600 */;
-import ModalScreen from "ModalScreen" /* 8128 */;
-import ModalContent from "ModalContent" /* 8129 */;
-import ModalActionButton from "ModalActionButton" /* 10742 */;
-import ModalFooter from "ModalFooter" /* 11549 */;
-import LogOutDisclaimerDefault from "LogOutDisclaimer" /* 18111 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import Stack_Stack from "Stack/Stack" /* 5373 */;
+import ModalScreen from "ModalScreen" /* 7506 */;
+import ModalContent from "ModalContent" /* 7507 */;
+import ModalFooter from "ModalFooter" /* 11564 */;
+import ModalActionButton from "ModalActionButton" /* 11613 */;
+import LogOutDisclaimerDefault from "LogOutDisclaimer" /* 18398 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles({ header: { textAlign: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_flows/native/SafetyFlowTaskScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SafetyFlowTaskScreen(arg0) {
   const cResult = c.c(23);
   ({ ImageComponent, title, subtitle, subtitleColor, action, onAction, footer, children, submitting, withLogout } = arg0);
   let str = "text-strong";
@@ -138,7 +138,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = tmp9;
   tmp8 = tmp9;
   const obj8 = { accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp6.header, children: title };
-}) : ((action) => {
+}) : (function SafetyFlowTaskScreen(action) {
   ({ ImageComponent, subtitle, subtitleColor } = action);
   if (subtitleColor === undefined) {
     subtitleColor = "text-strong";

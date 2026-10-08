@@ -1,7 +1,7 @@
-// === Module 6776: useGuildShopPreviewVisible ===
+// === Module 6952: useGuildShopPreviewVisible ===
 
-// Module 6776 (useGuildShopPreviewVisible)
-import PermissionStore from "PermissionStore" /* 4515 */;
+// Module 6952 (useGuildShopPreviewVisible)
+import PermissionStore from "PermissionStore" /* 4707 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/creator_monetization/guild_shop/useGuildShopPreviewVisible.tsx");
 
-export const useGuildShopPreviewVisible = ReactCompilerGating.isReactCompilerEnabled() ? ((features) => {
+export const useGuildShopPreviewVisible = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildShopPreviewVisible(features) {
   _require = features;
   const cResult = require("c").c(7);
   const obj = require("c");
@@ -95,7 +95,7 @@ export const useGuildShopPreviewVisible = ReactCompilerGating.isReactCompilerEna
     tmp16 = cResult[6];
   }
   return null != features && stateFromStores && !tmp10 && tmp16 && guildEligibleForGuildProducts && !result;
-}) : ((features) => {
+}) : (function useGuildShopPreviewVisible(features) {
   _require = features;
   const result = require("DismissibleContentUnsafeUtils").useIsDismissibleContentDismissed_UNSAFE(require("dismissible_content").DismissibleContent.SERVER_SHOP_PHANTOM_PREVIEW);
   const obj = require("DismissibleContentUnsafeUtils");
@@ -123,9 +123,9 @@ export const useGuildShopPreviewVisible = ReactCompilerGating.isReactCompilerEna
   }
   const items1 = [, , ];
   ({ CREATOR_MONETIZABLE: arr2[0], CREATOR_MONETIZABLE_PROVISIONAL: arr2[1], ROLE_SUBSCRIPTIONS_ENABLED: arr2[2] } = constants2);
-  const guildEligibleForGuildProducts = tmp(6771).useGuildEligibleForGuildProducts(id);
+  const guildEligibleForGuildProducts = tmp(6947).useGuildEligibleForGuildProducts(id);
   let tmp9 = null != features;
-  const tmpResult = tmp(6771);
+  const tmpResult = tmp(6947);
   if (tmp9) {
     tmp9 = stateFromStores;
   }

@@ -1,15 +1,15 @@
-// === Module 11733: LearnMoreAboutAppsSection ===
+// === Module 11799: LearnMoreAboutAppsSection ===
 
-// Module 11733 (LearnMoreAboutAppsSection)
+// Module 11799 (LearnMoreAboutAppsSection)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
-import LinkingDefault from "Linking" /* 4571 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Pressables from "Pressables" /* 5916 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 8961 */;
-import TrackSectionHeaderDefault from "TrackSectionHeader" /* 11734 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2127 */;
+import LinkingDefault from "Linking" /* 4763 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import Pressables from "Pressables" /* 6189 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 11233 */;
+import TrackSectionHeaderDefault from "TrackSectionHeader" /* 11800 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ const View = fn(17).View;
 const HelpdeskArticles = fn(1085).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { marginTop: nativeDefault.space.PX_32, borderRadius: nativeDefault.radii.lg, alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, paddingHorizontal: nativeDefault.space.PX_64 }, body: { textAlign: "center" }, divider: null, linkButton: null };
 let obj3 = { marginTop: nativeDefault.space.PX_32, borderRadius: nativeDefault.radii.lg, alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, paddingHorizontal: nativeDefault.space.PX_64 };
 obj2.divider = { height: nativeDefault.space.PX_16 };
@@ -30,7 +30,7 @@ let obj5 = { borderRadius: nativeDefault.radii.round, backgroundColor: nativeDef
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/screens/home/LearnMoreAboutAppsSection.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((visible) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function LearnMoreAboutAppsSection(visible) {
   const cResult = c.c(26);
   visible = visible.visible;
   const tmp4 = closure_8();
@@ -163,7 +163,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((visible) => {
   cResult[21] = tmp32;
   cResult[22] = tmp37;
   tmp36 = tmp37;
-}) : ((visible) => {
+}) : (function LearnMoreAboutAppsSection(visible) {
   const tmp = closure_8();
   const callback = noop.useCallback(() => {
     const obj = LinkingDefault;

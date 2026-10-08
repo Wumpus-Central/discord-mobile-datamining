@@ -1,14 +1,14 @@
-// === Module 15520: MfaOptionScreen ===
+// === Module 15782: MfaOptionScreen ===
 
-// Module 15520 (MfaOptionScreen)
+// Module 15782 (MfaOptionScreen)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Stack_Stack from "Stack/Stack" /* 5600 */;
-import useWideAuthViewDefault from "useWideAuthView" /* 6439 */;
-import BackgroundImageDefault from "BackgroundImage" /* 6470 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6626 */;
-import MfaScreenUtilsDefault from "MfaScreenUtils" /* 15521 */;
-import BackButtonDefault from "BackButton" /* 15522 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import Stack_Stack from "Stack/Stack" /* 5373 */;
+import useWideAuthViewDefault from "useWideAuthView" /* 6617 */;
+import BackgroundImageDefault from "BackgroundImage" /* 6648 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6803 */;
+import MfaScreenUtilsDefault from "MfaScreenUtils" /* 15783 */;
+import BackButtonDefault from "BackButton" /* 15784 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,7 +19,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/mfa/native/screens/MfaOptionScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((mfaMethod) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function MFAOptionScreen(mfaMethod) {
   const cResult = c.c(34);
   ({ headerText, headerImage, subtitle, input, submit, screenProps, error, content } = mfaMethod);
   const tmp5 = useWideAuthViewDefault();
@@ -181,7 +181,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((mfaMethod) => {
   cResult[2] = tmp12;
   tmp11 = tmp12;
   const obj11 = { variant: "heading-xl/extrabold", style: screenStyles.mfaContainerHeaderText, children: headerText };
-}) : ((arg0) => {
+}) : (function MFAOptionScreen(arg0) {
   ({ headerImage, subtitle, screenProps, error } = arg0);
   ({ headerText, input, submit, mfaMethod, content } = arg0);
   const tmp3 = useWideAuthViewDefault();

@@ -1,9 +1,9 @@
-// === Module 12271: DeveloperApplicationsStore ===
+// === Module 12350: DeveloperApplicationsStore ===
 
-// Module 12271 (DeveloperApplicationsStore)
+// Module 12350 (DeveloperApplicationsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import DeveloperApplicationsConstants from "DeveloperApplicationsConstants" /* 12272 */;
+import DeveloperApplicationsConstants from "DeveloperApplicationsConstants" /* 12351 */;
 import size from "module_2" /* 2 */;
 
 const DeveloperApplicationsFetchState = DeveloperApplicationsConstants.DeveloperApplicationsFetchState;

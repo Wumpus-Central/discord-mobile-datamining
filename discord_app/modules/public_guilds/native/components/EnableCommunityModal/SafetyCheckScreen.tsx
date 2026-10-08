@@ -1,10 +1,10 @@
-// === Module 17884: SafetyCheckScreen ===
+// === Module 18171: SafetyCheckScreen ===
 
-// Module 17884 (SafetyCheckScreen)
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9282 */;
+// Module 18171 (SafetyCheckScreen)
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8613 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9283 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8614 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
@@ -17,7 +17,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/public_guilds/native/components/EnableCommunityModal/SafetyCheckScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SafetyCheckScreen() {
   const cResult = guild(first1[7]).c(51);
   const ref = noop.useRef(null);
   let obj = guild(first1[7]);
@@ -276,7 +276,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         cResult[22] = tmp46;
         tmp43 = tmp46;
       }
-      const fn3 = function w(arg0) {
+      function handleAcceptContentFilter(arg0) {
         if (null != guild) {
           if (arg0) {
             if (tmp.explicitContentFilter < constants2.ALL_MEMBERS) {
@@ -289,13 +289,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             GuildSettingsActionCreatorsDefault.updateGuild(obj4);
           }
         }
-      };
+      }
       cResult[5] = guild;
       cResult[6] = first1;
-      cResult[7] = fn3;
-      tmp24 = fn3;
+      cResult[7] = handleAcceptContentFilter;
+      tmp24 = handleAcceptContentFilter;
     }
-    const fn2 = function x(arg0) {
+    function handleAcceptVerificationLevel(arg0) {
       if (null != guild) {
         if (arg0) {
           if (tmp.verificationLevel < constants.LOW) {
@@ -308,14 +308,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           GuildSettingsActionCreatorsDefault.updateGuild(obj4);
         }
       }
-    };
+    }
     cResult[2] = guild;
     cResult[3] = verificationLevel;
-    cResult[4] = fn2;
-    tmp23 = fn2;
+    cResult[4] = handleAcceptVerificationLevel;
+    tmp23 = handleAcceptVerificationLevel;
   }
   const tmpResult = guild(first1[11]);
-}) : (() => {
+}) : (function SafetyCheckScreen() {
   const ref = noop.useRef(null);
   const token = guild(first1[8]).useToken(verificationLevel(first1[9]).modules.mobile.TABLE_ROW_PADDING);
   let obj2 = guild(first1[8]);
@@ -372,7 +372,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     obj15.label = intl5.string(tmp2(tmp3[15]).t["rkA56+"]);
     obj15.value = guild.verificationLevel !== constants.NONE;
     obj15.disabled = verificationLevel !== tmp16;
-    obj15.onValueChange = function onValueChange(arg0) {
+    obj15.onValueChange = function handleAcceptVerificationLevel(arg0) {
       if (null != guild) {
         if (arg0) {
           if (tmp.verificationLevel < constants.LOW) {
@@ -400,7 +400,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     obj18.label = intl7.string(tmp2(tmp3[15]).t.zOuzl7);
     obj18.value = guild.explicitContentFilter === constants2.ALL_MEMBERS;
     obj18.disabled = first1 === tmp18;
-    obj18.onValueChange = function onValueChange(arg0) {
+    obj18.onValueChange = function handleAcceptContentFilter(arg0) {
       if (null != guild) {
         if (arg0) {
           if (tmp.explicitContentFilter < constants2.ALL_MEMBERS) {

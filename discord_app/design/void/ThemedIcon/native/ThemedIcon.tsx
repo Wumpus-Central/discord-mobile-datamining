@@ -1,9 +1,9 @@
-// === Module 13931: ThemedIcon ===
+// === Module 14234: ThemedIcon ===
 
-// Module 13931 (ThemedIcon)
+// Module 14234 (ThemedIcon)
 import c from "c" /* 576 */;
-import useToken from "useToken" /* 4586 */;
-import IconDefault from "Icon" /* 5603 */;
+import useToken from "useToken" /* 4778 */;
+import IconDefault from "Icon" /* 5377 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/ThemedIcon/native/ThemedIcon.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((themedColor) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ThemedIcon(themedColor) {
   const cResult = c.c(6);
   if (cResult[0] !== themedColor) {
     themedColor = themedColor.themedColor;
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((themedColor) => 
   cResult[4] = token;
   cResult[5] = tmp13;
   tmp10 = tmp13;
-}) : ((themedColor) => {
+}) : (function ThemedIcon(themedColor) {
   const merged = Object.assign(themedColor, Object.assign({ themedColor: 0 }));
   const token = useToken.useToken(themedColor.themedColor);
   const obj2 = { color: token };

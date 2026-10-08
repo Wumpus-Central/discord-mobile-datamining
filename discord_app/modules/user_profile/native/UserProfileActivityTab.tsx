@@ -1,10 +1,10 @@
-// === Module 12934: UserProfileActivityTab ===
+// === Module 13213: UserProfileActivityTab ===
 
-// Module 12934 (UserProfileActivityTab)
+// Module 13213 (UserProfileActivityTab)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import UserProfileRecentActivityCardDefault from "UserProfileRecentActivityCard" /* 12939 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import UserProfileRecentActivityCardDefault from "UserProfileRecentActivityCard" /* 13218 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const View = fn(17).View;
 const HelpdeskArticles = fn(1085).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { section: { gap: nativeDefault.space.PX_16 }, sectionHeading: null, introText: null, learnMore: null, loading: null, loadingRow: null, loadingThumbnail: null, loadingLine: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.sectionHeading = { marginBottom: -nativeDefault.space.PX_8 };
@@ -30,7 +30,7 @@ const size1 = { width: 135, height: 16, borderRadius: nativeDefault.radii.sm, ba
 obj2.loadingLine = size1;
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileActivityTabSkeleton() {
   const cResult = require("c").c(8);
   const tmp2 = closure_8();
   _require = tmp2;
@@ -73,7 +73,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[4] = mapped;
   tmp4 = mapped;
   let obj = require("c");
-}) : (() => {
+}) : (function UserProfileActivityTabSkeleton() {
   const tmp = closure_8();
   closure_0 = tmp;
   let obj = {
@@ -88,7 +88,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   return closure_5(View, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Section(arg0) {
   const cResult = c.c(11);
   ({ heading, introText, children } = arg0);
   const tmp4 = closure_8();
@@ -137,7 +137,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = tmp6;
   tmp5 = tmp6;
   const obj4 = { style: tmp4.sectionHeading, variant: "text-sm/medium", color: "text-strong", accessibilityRole: "header", lineClamp: 1, children: heading };
-}) : ((introText) => {
+}) : (function Section(introText) {
   introText = introText.introText;
   ({ heading, children } = introText);
   const tmp = closure_8();
@@ -154,7 +154,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return timestampProducer(View, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function RecentActivityIntroText() {
   const cResult = require("c").c(2);
   const tmp4 = closure_8();
   _require = tmp4;
@@ -168,8 +168,8 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             accessibilityRole: "link",
             onPress() {
               const obj2 = { href: null };
-              const obj = learnMore(8057);
-              obj2.href = closure_1_1(2115).getArticleURL(constants.ACTIVITY_STATUS_SETTINGS);
+              const obj = learnMore(8466);
+              obj2.href = closure_1_1(2127).getArticleURL(constants.ACTIVITY_STATUS_SETTINGS);
               return obj.handleClick(obj2);
             },
             children
@@ -184,7 +184,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp5 = cResult[1];
   }
   return tmp5;
-}) : (() => {
+}) : (function RecentActivityIntroText() {
   _require = closure_8();
   const intl = require("util").intl;
   return intl.format(require("util").t["4bk9Ak"], {
@@ -195,8 +195,8 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         accessibilityRole: "link",
         onPress() {
           const obj2 = { href: null };
-          const obj = learnMore(8057);
-          obj2.href = closure_1_1(2115).getArticleURL(constants.ACTIVITY_STATUS_SETTINGS);
+          const obj = learnMore(8466);
+          obj2.href = closure_1_1(2127).getArticleURL(constants.ACTIVITY_STATUS_SETTINGS);
           return obj.handleClick(obj2);
         },
         children
@@ -209,7 +209,7 @@ let obj8 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.spac
 size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileActivityTab.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileActivityTab(user) {
   const cResult = user(576).c(25);
   user = user.user;
   ({ currentUser, guildId, channelId, cardStyle } = user);
@@ -218,7 +218,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
       if (cResult[2] === user.id) {
         let tmp4 = cResult[3];
       }
-      const tmp6 = cardStyle(12935)(tmp4);
+      const tmp6 = cardStyle(13214)(tmp4);
       ({ recent, isCurrentUser, hasCurrentActivity, hasRecentActivity } = tmp6);
       if (!hasCurrentActivity) {
         if (!hasRecentActivity) {
@@ -238,7 +238,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
                 }
               }
             }
-            let obj2 = tmp(12938);
+            let obj2 = tmp(13217);
             if (isCurrentUser) {
               obj2 = {};
               let tmp7Result = closure_5(obj2.UserProfileActivityEmptyCurrentUser, obj2);
@@ -311,7 +311,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
         const intl = tmp(1126).intl;
         obj6.heading = intl.string(tmp(1126).t.J6STd9);
         const obj7 = { user, currentUser, guildId, style: cardStyle };
-        obj6.children = closure_5(cardStyle(12836), obj7);
+        obj6.children = closure_5(cardStyle(12983), obj7);
         tmp17 = closure_5(closure_10, obj6);
       }
       cResult[10] = cardStyle;
@@ -330,16 +330,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
   cResult[3] = obj8;
   tmp4 = obj8;
   const obj = user(576);
-}) : ((user) => {
+}) : (function UserProfileActivityTab(user) {
   user = user.user;
   ({ currentUser, guildId, cardStyle } = user);
-  ({ recent, isCurrentUser, hasCurrentActivity, hasRecentActivity } = cardStyle(12935)({ userId: user.id, currentUserId: currentUser.id, guildId }));
+  ({ recent, isCurrentUser, hasCurrentActivity, hasRecentActivity } = cardStyle(13214)({ userId: user.id, currentUserId: currentUser.id, guildId }));
   if (!hasCurrentActivity) {
     if (!hasRecentActivity) {
       if (tmp4) {
         let tmp10Result = closure_5(closure_9, {});
       } else {
-        const tmp7 = user(12938);
+        const tmp7 = user(13217);
         if (isCurrentUser) {
           tmp10Result = closure_5(tmp7.UserProfileActivityEmptyCurrentUser, {});
         } else {
@@ -355,7 +355,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
     const intl = user(1126).intl;
     obj3.heading = intl.string(user(1126).t.J6STd9);
     const obj4 = { user, currentUser, guildId, style: cardStyle };
-    obj3.children = closure_5(cardStyle(12836), obj4);
+    obj3.children = closure_5(cardStyle(12983), obj4);
     hasCurrentActivity = closure_5(closure_10, obj3);
   }
   const items = [hasCurrentActivity, ];
@@ -374,5 +374,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
   items[1] = hasRecentActivity;
   tmp10Result = closure_6(closure_7, { children: items });
   const obj = { userId: user.id, currentUserId: currentUser.id, guildId };
-  const tmp3 = cardStyle(12935)({ userId: user.id, currentUserId: currentUser.id, guildId });
+  const tmp3 = cardStyle(13214)({ userId: user.id, currentUserId: currentUser.id, guildId });
 });

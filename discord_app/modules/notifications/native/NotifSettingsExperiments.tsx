@@ -1,7 +1,7 @@
-// === Module 14305: NotifSettingsExperiments ===
+// === Module 14530: NotifSettingsExperiments ===
 
-// Module 14305 (NotifSettingsExperiments)
-import ApexExperiment from "ApexExperiment" /* 1440 */;
+// Module 14530 (NotifSettingsExperiments)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-04-declarative-notif-settings", kind: "user", defaultConfig: { enabled: false, clearDeclarative: false }, variations: null };

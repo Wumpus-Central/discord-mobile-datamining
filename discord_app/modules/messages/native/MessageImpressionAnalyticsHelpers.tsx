@@ -1,17 +1,17 @@
-// === Module 10032: MessageImpressionAnalyticsHelpers ===
+// === Module 9562: MessageImpressionAnalyticsHelpers ===
 
-// Module 10032 (MessageImpressionAnalyticsHelpers)
+// Module 9562 (MessageImpressionAnalyticsHelpers)
 import c from "c" /* 576 */;
-import InviteCodeUtils from "InviteCodeUtils" /* 4878 */;
-import CodedLink from "CodedLink" /* 4881 */;
-import GuildOfficialMessageUtils from "GuildOfficialMessageUtils" /* 6780 */;
-import InviteTypeUtils from "InviteTypeUtils" /* 7238 */;
-import MessageViewTrackingManager from "MessageViewTrackingManager" /* 10033 */;
-import VoiceChannelListInviteExperiment from "VoiceChannelListInviteExperiment" /* 10034 */;
-import VoiceChannelListInviteEmbed from "VoiceChannelListInviteEmbed" /* 10035 */;
+import InviteCodeUtils from "InviteCodeUtils" /* 5072 */;
+import CodedLink from "CodedLink" /* 5075 */;
+import GuildOfficialMessageUtils from "GuildOfficialMessageUtils" /* 6956 */;
+import InviteTypeUtils from "InviteTypeUtils" /* 7417 */;
+import MessageViewTrackingManager from "MessageViewTrackingManager" /* 9563 */;
+import VoiceChannelListInviteExperiment from "VoiceChannelListInviteExperiment" /* 9564 */;
+import VoiceChannelListInviteEmbed from "VoiceChannelListInviteEmbed" /* 9565 */;
 import noop from "module_19" /* 19 */;
-import InviteStore from "InviteStore" /* 4877 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4920 */;
+import InviteStore from "InviteStore" /* 5071 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5114 */;
 
 const require = globalThis.__r;
 
@@ -58,11 +58,11 @@ function getVoiceInviteEmbedRenderInfo(state) {
 }
 const Constants = fn(1085);
 ({ ChannelTypes: metroRequire, GuildFeatures: closure_7, InviteStates: closure_8, MessageFlags: closure_9 } = Constants);
-const LinkType = fn(7186).LinkType;
-const InviteTypes = fn(7239).InviteTypes;
+const LinkType = fn(7365).LinkType;
+const InviteTypes = fn(7418).InviteTypes;
 fn(558);
 let ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldTrackAnnouncementMessageViews(arg0) {
   const cResult = channel(576).c(6);
   ({ guild, channel } = arg0);
   ({ messages, isMessagesReady } = arg0);
@@ -122,7 +122,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = someResult;
   tmp7 = someResult;
   const obj = channel(576);
-}) : ((messages) => {
+}) : (function useShouldTrackAnnouncementMessageViews(messages) {
   ({ guild, channel } = messages);
   messages = messages.messages;
   const isMessagesReady = messages.isMessagesReady;
@@ -163,7 +163,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }, items);
 });
 ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldTrackRichPresenceInviteEmbedViews(arg0) {
   const cResult = c.c(3);
   ({ messages, isMessagesReady } = arg0);
   if (cResult[0] === isMessagesReady) {
@@ -180,7 +180,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = messages;
   cResult[2] = someResult;
   tmp2 = someResult;
-}) : ((messages) => {
+}) : (function useShouldTrackRichPresenceInviteEmbedViews(messages) {
   messages = messages.messages;
   const isMessagesReady = messages.isMessagesReady;
   const items = [messages, isMessagesReady];
@@ -193,7 +193,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }, items);
 });
 ReactCompilerGating = fn(558);
-const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldTrackOfficialMessageViews(arg0) {
   const cResult = c.c(4);
   ({ guild, messages, isMessagesReady } = arg0);
   let id;
@@ -224,7 +224,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = messages;
   cResult[3] = someResult;
   tmp4 = someResult;
-}) : ((isMessagesReady) => {
+}) : (function useShouldTrackOfficialMessageViews(isMessagesReady) {
   ({ guild, messages } = isMessagesReady);
   isMessagesReady = isMessagesReady.isMessagesReady;
   let isGuildOfficialMessagesEnabled;
@@ -356,7 +356,7 @@ export const handleOfficialMessageViewTracking = function handleOfficialMessageV
     }
   }
 };
-export const useShouldTrackVoiceInviteEmbedViews = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useShouldTrackVoiceInviteEmbedViews = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldTrackVoiceInviteEmbedViews(arg0) {
   const cResult = c.c(3);
   ({ messages, isMessagesReady } = arg0);
   if (cResult[0] === isMessagesReady) {
@@ -376,7 +376,7 @@ export const useShouldTrackVoiceInviteEmbedViews = ReactCompilerGating.isReactCo
   cResult[1] = messages;
   cResult[2] = someResult;
   tmp2 = someResult;
-}) : ((messages) => {
+}) : (function useShouldTrackVoiceInviteEmbedViews(messages) {
   messages = messages.messages;
   const isMessagesReady = messages.isMessagesReady;
   const items = [messages, isMessagesReady];

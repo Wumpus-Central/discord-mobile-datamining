@@ -1,13 +1,13 @@
-// === Module 13688: MidjourneyOnboardingUtils ===
+// === Module 13910: MidjourneyOnboardingUtils ===
 
-// Module 13688 (MidjourneyOnboardingUtils)
+// Module 13910 (MidjourneyOnboardingUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4899 */;
 
 require = fn;
-const MidjourneyOnboardingConstants = fn(13689);
+const MidjourneyOnboardingConstants = fn(13911);
 ({ MIDJOURNEY_BOT_ID: closure_4, MIDJOURNEY_GUILD_ID: hasOwnProperty } = MidjourneyOnboardingConstants);
 const ReactCompilerGating = fn(558);
 function isMidjourneyOnboardingFlow() {
@@ -37,7 +37,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/midjourney_onboarding/MidjourneyOnboardingUtils.tsx");
 
 export { isMidjourneyOnboardingFlow };
-export const useIsMidjourneyOnboardingFlow = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useIsMidjourneyOnboardingFlow = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsMidjourneyOnboardingFlow() {
   const cResult = c.c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GuildStore];
@@ -68,7 +68,7 @@ export const useIsMidjourneyOnboardingFlow = ReactCompilerGating.isReactCompiler
     [tmp4, tmp5, tmp6] = cResult;
   }
   return initialize.useStateFromStores(tmp4, tmp5, tmp6);
-}) : (() => {
+}) : (function useIsMidjourneyOnboardingFlow() {
   const items = [GuildStore];
   return initialize.useStateFromStores(items, () => {
     guildStore = { guildStore }.guildStore;

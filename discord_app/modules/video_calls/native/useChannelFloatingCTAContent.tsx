@@ -1,11 +1,11 @@
-// === Module 17254: useChannelFloatingCTAContent ===
+// === Module 17535: useChannelFloatingCTAContent ===
 
-// Module 17254 (useChannelFloatingCTAContent)
-import dismissible_content from "dismissible_content" /* 2036 */;
-import useGameConsoleAccountsDefault from "useGameConsoleAccounts" /* 9457 */;
+// Module 17535 (useChannelFloatingCTAContent)
+import dismissible_content from "dismissible_content" /* 2048 */;
+import useGameConsoleAccountsDefault from "useGameConsoleAccounts" /* 9108 */;
 import noop from "module_19" /* 19 */;
-import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5108 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/useChannelFloatingCTAContent.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useChannelFloatingCTAContent(arg0) {
   _require = arg0;
   const cResult = require("c").c(9);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -43,14 +43,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const obj3 = useGameConsoleAccountsDefault();
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [MediaEngineStore];
-    class C {
-      constructor() {
-        return closure_1_4.isAnyLocalVideoAutoDisabled();
-      }
-    }
+    const fn2 = function _() {
+      return anyLocalVideoAutoDisabled.isAnyLocalVideoAutoDisabled();
+    };
     cResult[3] = items1;
-    cResult[4] = C;
-    let tmp9 = C;
+    cResult[4] = fn2;
+    let tmp9 = fn2;
     let tmp8 = items1;
   } else {
     tmp8 = cResult[3];
@@ -68,13 +66,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const items2 = [];
   if (stateFromStores1) {
-    items2.push(tmp(2036).DismissibleContent.VOICE_PANEL_BAD_CONNECTION_CTA);
+    items2.push(tmp(2048).DismissibleContent.VOICE_PANEL_BAD_CONNECTION_CTA);
   }
   if (stateFromStores) {
-    items2.push(tmp(2036).DismissibleContent.SOUNDBOARD_MOBILE_FLOATING_CTA);
+    items2.push(tmp(2048).DismissibleContent.SOUNDBOARD_MOBILE_FLOATING_CTA);
   }
   if (obj3.some((twoWayLink) => twoWayLink.twoWayLink)) {
-    items2.push(tmp(2036).DismissibleContent.DONUT_MOBILE_NUX);
+    items2.push(tmp(2048).DismissibleContent.DONUT_MOBILE_NUX);
   }
   cResult[5] = obj3;
   cResult[6] = stateFromStores1;
@@ -82,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[8] = items2;
   tmp12 = items2;
   const tmpResult2 = require("useStateFromStores");
-}) : ((arg0) => {
+}) : (function useChannelFloatingCTAContent(arg0) {
   _require = arg0;
   let items = [RTCConnectionStore];
   stateFromStores = require("useStateFromStores").useStateFromStores(items, () => {

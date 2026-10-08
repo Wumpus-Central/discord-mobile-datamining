@@ -1,13 +1,13 @@
-// === Module 9082: getEmbeddedActivityJoinability ===
+// === Module 10665: getEmbeddedActivityJoinability ===
 
-// Module 9082 (getEmbeddedActivityJoinability)
-import ChannelUtils from "ChannelUtils" /* 5041 */;
-import isActivitySupportedOnClientPlatformDefault from "isActivitySupportedOnClientPlatform" /* 9080 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
-import UserStore from "UserStore" /* 1377 */;
-import VoiceStateStore from "VoiceStateStore" /* 4915 */;
+// Module 10665 (getEmbeddedActivityJoinability)
+import ChannelUtils from "ChannelUtils" /* 5410 */;
+import isActivitySupportedOnClientPlatformDefault from "isActivitySupportedOnClientPlatform" /* 10663 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
+import UserStore from "UserStore" /* 1389 */;
+import VoiceStateStore from "VoiceStateStore" /* 5111 */;
 
 require = fn;
 function getEmbeddedActivityJoinability(arg0) {
@@ -112,7 +112,7 @@ const result = size.fileFinishedImporting("modules/activities/utils/getEmbeddedA
 
 export default getEmbeddedActivityJoinability;
 export { EmbeddedActivityJoinability };
-export const useEmbeddedActivityJoinability = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
+export const useEmbeddedActivityJoinability = ReactCompilerGating.isReactCompilerEnabled() ? (function useEmbeddedActivityJoinability(userId) {
   const cResult = userId(channelId[9]).c(11);
   userId = userId.userId;
   const activity = userId.activity;
@@ -122,20 +122,29 @@ export const useEmbeddedActivityJoinability = ReactCompilerGating.isReactCompile
   const isActivitiesEnabledForCurrentPlatform = userId(channelId[10]).useIsActivitiesEnabledForCurrentPlatform();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
-    const fn = function l() {
-      return currentUser.getCurrentUser();
-    };
+    class I {
+      constructor() {
+        return closure_1_6.getCurrentUser();
+      }
+    }
     cResult[0] = items;
-    cResult[1] = fn;
+    cResult[1] = I;
     tmp5 = items;
-    tmp6 = fn;
   } else {
     [tmp5, tmp6] = cResult;
   }
   const obj2 = userId(channelId[10]);
-  const stateFromStores = userId(channelId[11]).useStateFromStores(tmp5, tmp6);
+  const stateFromStores = userId(channelId[11]).useStateFromStores(tmp5, I);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const items1 = [application, VoiceStateStore, stateFromStores, isActivitiesEnabledForCurrentPlatform];
+    const items1 = [application, , , ];
+    class I {
+      constructor() {
+        return closure_1_6.getCurrentUser();
+      }
+    }
+    items1[1] = VoiceStateStore;
+    items1[2] = stateFromStores;
+    items1[3] = isActivitiesEnabledForCurrentPlatform;
     cResult[2] = items1;
     let tmp9 = items1;
   } else {
@@ -147,10 +156,10 @@ export const useEmbeddedActivityJoinability = ReactCompilerGating.isReactCompile
         if (cResult[6] === stateFromStores) {
           if (cResult[7] === isActivitiesEnabledForCurrentPlatform) {
             if (cResult[8] === userId) {
-              let tmp14 = cResult[9];
-              let tmp15 = cResult[10];
+              let tmp13 = cResult[9];
+              let tmp14 = cResult[10];
             }
-            return tmp(tmp2[11]).useStateFromStores(tmp9, tmp14, tmp15);
+            return tmp(tmp2[11]).useStateFromStores(tmp9, tmp13, tmp14);
           }
         }
       }
@@ -171,10 +180,10 @@ export const useEmbeddedActivityJoinability = ReactCompilerGating.isReactCompile
   cResult[8] = userId;
   cResult[9] = T;
   cResult[10] = items2;
-  tmp15 = items2;
-  tmp14 = T;
+  tmp14 = items2;
+  tmp13 = T;
   const tmpResult = userId(channelId[11]);
-}) : ((userId) => {
+}) : (function useEmbeddedActivityJoinability(userId) {
   userId = userId.userId;
   const activity = userId.activity;
   const channelId = userId.channelId;

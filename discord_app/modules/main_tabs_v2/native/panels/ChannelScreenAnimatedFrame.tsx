@@ -1,15 +1,15 @@
-// === Module 15970: ChannelScreenAnimatedFrame ===
+// === Module 16230: ChannelScreenAnimatedFrame ===
 
-// Module 15970 (ChannelScreenAnimatedFrame)
+// Module 16230 (ChannelScreenAnimatedFrame)
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import timing from "timing" /* 4897 */;
-import PanelsConfig from "PanelsConfig" /* 15968 */;
+import native from "native" /* 1200 */;
+import timing from "timing" /* 5091 */;
+import PanelsConfig from "PanelsConfig" /* 16228 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { position: "absolute", zIndex: 1, top: 0, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, splitDivider: null };
 let obj3 = { position: "absolute", zIndex: 1, top: 0, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.splitDivider = { borderLeftColor: nativeDefault.colors.APP_FRAME_BORDER, borderLeftWidth: nativeDefault.modules.mobile.CHANNEL_DRAWER_DIVIDER_WIDTH };
@@ -21,7 +21,7 @@ let obj4 = { borderLeftColor: nativeDefault.colors.APP_FRAME_BORDER, borderLeftW
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/ChannelScreenAnimatedFrame.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((translateX) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelScreenAnimatedFrame(translateX) {
   const cResult = translateX(isChatLockedOpen[5]).c(8);
   translateX = translateX.translateX;
   const maxWidth = translateX.maxWidth;
@@ -91,7 +91,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((translateX) => {
   cResult[4] = items;
   tmp7 = items;
   const obj4 = translateX(isChatLockedOpen[10]);
-}) : ((translateX) => {
+}) : (function ChannelScreenAnimatedFrame(translateX) {
   translateX = translateX.translateX;
   const maxWidth = translateX.maxWidth;
   const isChatLockedOpen = translateX.isChatLockedOpen;

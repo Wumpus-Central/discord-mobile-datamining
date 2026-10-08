@@ -1,13 +1,14 @@
-// === Module 17563: InteractionModalManager ===
+// === Module 17845: InteractionModalManager ===
 
-// Module 17563 (InteractionModalManager)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import openInteractionIframeModalDefault from "openInteractionIframeModal" /* 17575 */;
-import closeIFrameModalDefault from "closeIFrameModal" /* 17578 */;
+// Module 17845 (InteractionModalManager)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import isPostMessageDisconnectDefault from "isPostMessageDisconnect" /* 11152 */;
+import openInteractionIframeModalDefault from "openInteractionIframeModal" /* 17857 */;
+import closeIFrameModalDefault from "closeIFrameModal" /* 17860 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 5124 */;
-import InteractionStore from "InteractionStore" /* 7611 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
+import ApplicationStore from "ApplicationStore" /* 5436 */;
+import InteractionStore from "InteractionStore" /* 7856 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6797 */;
 
 let require = fn;
 let closure_8 = async function _handleInteractionModalCreate(arg0) {
@@ -149,15 +150,24 @@ const prototype = function InteractionModalManager() {
       applyArgumentsResult.iframeModalOpenTimeMs = undefined;
       const obj2 = { type: interaction_iframe_modal, application_id: applicationId.applicationId, duration_open_ms: diff };
     },
-    RPC_APP_DISCONNECTED(application) {
-      const iFrameModalApplicationId = uiStore.getIFrameModalApplicationId();
-      let tmp3 = application.application.id === iFrameModalApplicationId;
-      const iFrameModalKey = uiStore.getIFrameModalKey();
-      if (tmp3) {
-        tmp3 = null != iFrameModalApplicationId;
-      }
-      if (tmp3) {
-        closeIFrameModalDefault(iFrameModalApplicationId, iFrameModalKey);
+    RPC_APP_DISCONNECTED(context) {
+      iFrameModal = iFrameModal.getIFrameModal();
+      if (null != iFrameModal) {
+        if (isPostMessageDisconnectDefault(context)) {
+          context = context.context;
+          let tmp3 = context.surface.type === applyArgumentsResult(dependencyMap[12]).EmbeddedSurfaceType.INTERACTION_MODAL;
+          if (tmp3) {
+            const launch = context.launch;
+            let interactionId;
+            if (launch != null) {
+              interactionId = launch.interactionId;
+            }
+            tmp3 = interactionId === iFrameModal.interactionId;
+          }
+          if (tmp3) {
+            closeIFrameModalDefault(iFrameModal.applicationId, iFrameModal.modalKey);
+          }
+        }
       }
     }
   };

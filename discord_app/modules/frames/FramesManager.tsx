@@ -1,16 +1,16 @@
-// === Module 9013: FramesManager ===
+// === Module 11151: FramesManager ===
 
-// Module 9013 (FramesManager)
+// Module 11151 (FramesManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8547 */;
-import FramesStore from "FramesStore" /* 9000 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8586 */;
+import isPostMessageDisconnectDefault from "isPostMessageDisconnect" /* 11152 */;
+import FramesStore from "FramesStore" /* 10612 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6797 */;
 
 require = fn;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_4, RPCCloseCodes: hasOwnProperty } = Constants);
-const TransportTypes = fn(5323).TransportTypes;
 class FramesManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -21,14 +21,14 @@ class FramesManager extends tmp3 {
           },
       FRAME_LAUNCH(arg0) {
             ({ applicationId, analyticsContext } = arg0);
-            const result = applyArgumentsResult(9014).trackFrameSessionStart(applicationId, analyticsContext);
+            const result = applyArgumentsResult(10625).trackFrameSessionStart(applicationId, analyticsContext);
           },
       FRAME_LAUNCH_FAIL(arg0) {
             ({ applicationId, error, analyticsContext } = arg0);
-            const result = applyArgumentsResult(9014).trackFrameSessionStartFailed(applicationId, error, analyticsContext);
+            const result = applyArgumentsResult(10625).trackFrameSessionStartFailed(applicationId, error, analyticsContext);
           },
       FRAME_STOP(applicationId) {
-            applyArgumentsResult(9014).trackFrameSessionEnd(applicationId.applicationId);
+            applyArgumentsResult(10625).trackFrameSessionEnd(applicationId.applicationId);
           },
       VOICE_CHANNEL_SELECT(arg0) {
             const result = applyArgumentsResult.handleVoiceChannelSelect(arg0);
@@ -46,6 +46,9 @@ class FramesManager extends tmp3 {
               const allFrames = FramesStore.getAllFrames();
               for (const item10014 of allFrames) {
                 let tmp8 = item10014.surface.type !== EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN;
+                if (tmp8) {
+                  tmp8 = item10014.surface.type !== EmbeddedSurfaceType.EmbeddedSurfaceType.OVERLAY;
+                }
                 if (tmp8) {
                   tmp8 = item10014.surface.guildId === guild.id;
                 }
@@ -82,19 +85,20 @@ class FramesManager extends tmp3 {
         }
       }
     };
-    applyArgumentsResult.handleRPCDisconnect = function handleRPCDisconnect(arg0) {
-      ({ reason, source } = arg0);
+    applyArgumentsResult.handleRPCDisconnect = function handleRPCDisconnect(reason) {
+      reason = reason.reason;
       if (null != reason) {
-        if (source.type === TransportTypes.POST_MESSAGE) {
-          const frameByIframeId = FramesStore.getFrameByIframeId(source.iframeId);
-          if (null != frameByIframeId) {
-            applyArgumentsResult.leaveFrame(frameByIframeId.id);
+        if (isPostMessageDisconnectDefault(reason)) {
+          const frameByEmbeddedContext = FramesStore.getFrameByEmbeddedContext(reason.context, reason.source.iframeId);
+          if (null != frameByEmbeddedContext) {
+            applyArgumentsResult.leaveFrame(frameByEmbeddedContext.id);
             if (reason.code !== constants2.CLOSE_NORMAL) {
-              const obj4 = { rpc_close_code: null, rpc_message: null, application_id: null };
+              const obj = { rpc_close_code: null, rpc_message: null, application_id: null };
               ({ code: obj2.rpc_close_code, message: obj2.rpc_message } = reason);
-              obj4.application_id = frameByIframeId.applicationId;
-              AnalyticsUtilsDefault.track(constants.ACTIVITY_CLOSED_RPC_ERROR, obj4);
+              obj.application_id = frameByEmbeddedContext.applicationId;
+              AnalyticsUtilsDefault.track(constants.ACTIVITY_CLOSED_RPC_ERROR, obj);
               const result = applyArgumentsResult.showRPCDisconnectErrorUI(reason);
+              const tmp6Result = AnalyticsUtilsDefault;
             }
           }
         }

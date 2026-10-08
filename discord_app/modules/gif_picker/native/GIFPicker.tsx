@@ -1,14 +1,14 @@
-// === Module 10101: GIFPicker ===
+// === Module 9685: GIFPicker ===
 
-// Module 10101 (GIFPicker)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import GIFPickerActionCreatorsAll from "GIFPickerActionCreators" /* 10103 */;
-import gif_picker_GIFPickerUtils from "gif_picker/GIFPickerUtils" /* 10106 */;
-import GifPickerUtils from "GifPickerUtils" /* 10109 */;
-import GIFPickerSearchSuggestionsDefault from "GIFPickerSearchSuggestions" /* 10110 */;
+// Module 9685 (GIFPicker)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import GIFPickerActionCreatorsAll from "GIFPickerActionCreators" /* 9687 */;
+import gif_picker_GIFPickerUtils from "gif_picker/GIFPickerUtils" /* 9690 */;
+import GifPickerUtils from "GifPickerUtils" /* 9693 */;
+import GIFPickerSearchSuggestionsDefault from "GIFPickerSearchSuggestions" /* 9695 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GIFPickerViewStore from "GIFPickerViewStore" /* 10102 */;
+import GIFPickerViewStore from "GIFPickerViewStore" /* 9686 */;
 
 require = fn;
 const View = fn(17).View;
@@ -16,13 +16,13 @@ const Constants = fn(1085);
 ({ AnalyticEvents: closure_8, ChatInputComponentViewedTypes: closure_9, GIF_FETCH_LIMIT_IOS: c10, GIFPickerResultTypes: closure_11, TooltipNames: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_15 = createStyles.createStyles({ container: { flex: 1 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/gif_picker/native/GIFPicker.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((bottomSheetRef) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function GIFPicker(bottomSheetRef) {
   const cResult = bottomSheetRef(initialQuery[8]).c(66);
   bottomSheetRef = bottomSheetRef.bottomSheetRef;
   const channelId = bottomSheetRef.channelId;
@@ -231,10 +231,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((bottom
               return;
             }
           }
-          const stateFromStoresObject = tmp(initialQuery[15]).useStateFromStoresObject(tmp36, Te);
+          const stateFromStoresObject = tmp(initialQuery[15]).useStateFromStoresObject(tmp36, Fe);
           let resultItems = stateFromStoresObject.resultItems;
           const resultQuery = stateFromStoresObject.resultQuery;
-          class Te {
+          class Fe {
             constructor() {
               if (closure_11 !== GIFPickerResultTypes.FAVORITES) {
                 tmp2 = closure_7;
@@ -247,69 +247,215 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((bottom
             }
           }
           if (cResult[17] !== resultQuery) {
-            class U {
-              constructor() {
-                tmp = closure_7(false);
-                tmp2 = closure_12(GIFPickerResultTypes.SEARCH);
-                tmp3 = closure_13("");
-                obj = closure_2(closure_3[9]);
-                resetSearchResult = obj.resetSearch();
-                current = closure_6.current;
-                if (current != null) {
-                  blurResult = current.blur();
+            class Re {
+              constructor(arg0, arg1) {
+                tmp = undefined === arg1 || arg1;
+                if (closure_8.current !== bottomSheetRef) {
+                  closure_8.current = bottomSheetRef;
+                  tmp19 = closure_12;
+                  tmp20 = GIFPickerResultTypes;
+                  tmp21 = closure_12(GIFPickerResultTypes.SEARCH);
+                  num = 0;
+                  tmp22 = bottomSheetRef.trim().length > 0;
+                  tmp3 = tmp22;
+                  tmp23 = closure_10;
+                  if (tmp3) {
+                    tmp2 = resultQuery;
+                    tmp3 = resultQuery !== bottomSheetRef;
+                  }
+                  tmp23Result = tmp23(tmp3);
+                  tmp5 = closure_7;
+                  tmp6 = closure_7(tmp22);
+                  tmp7 = !tmp;
+                  if (tmp) {
+                    search = closure_14;
+                  } else {
+                    tmp8 = closure_2;
+                    tmp9 = closure_3;
+                    search = closure_2(closure_3[9]).search;
+                  }
+                  tmp10 = null;
+                  str = "";
+                  SEARCH = null;
+                  if ("" !== bottomSheetRef) {
+                    SEARCH = tmp20.SEARCH;
+                  }
+                  tmp12 = GIF_FETCH_LIMIT_IOS;
+                  tmp13 = bottomSheetRef;
+                  tmp14 = SEARCH;
+                  tmp15 = tmp7;
+                  searchResult = search(bottomSheetRef, SEARCH, tmp7, GIF_FETCH_LIMIT_IOS);
+                  if (!tmp) {
+                    tmp17 = closure_6;
+                    current = closure_6.current;
+                    if (current != null) {
+                      setTextResult = current.setText(bottomSheetRef);
+                    }
+                  }
                 }
                 return;
               }
             }
             cResult[17] = resultQuery;
-            cResult[18] = tmp40;
+            cResult[18] = Re;
           } else {
-            class U {
-              constructor() {
-                tmp = closure_7(false);
-                tmp2 = closure_12(GIFPickerResultTypes.SEARCH);
-                tmp3 = closure_13("");
-                obj = closure_2(closure_3[9]);
-                resetSearchResult = obj.resetSearch();
-                current = closure_6.current;
-                if (current != null) {
-                  blurResult = current.blur();
+            class Re {
+              constructor(arg0, arg1) {
+                tmp = undefined === arg1 || arg1;
+                if (closure_8.current !== bottomSheetRef) {
+                  closure_8.current = bottomSheetRef;
+                  tmp19 = closure_12;
+                  tmp20 = GIFPickerResultTypes;
+                  tmp21 = closure_12(GIFPickerResultTypes.SEARCH);
+                  num = 0;
+                  tmp22 = bottomSheetRef.trim().length > 0;
+                  tmp3 = tmp22;
+                  tmp23 = closure_10;
+                  if (tmp3) {
+                    tmp2 = resultQuery;
+                    tmp3 = resultQuery !== bottomSheetRef;
+                  }
+                  tmp23Result = tmp23(tmp3);
+                  tmp5 = closure_7;
+                  tmp6 = closure_7(tmp22);
+                  tmp7 = !tmp;
+                  if (tmp) {
+                    search = closure_14;
+                  } else {
+                    tmp8 = closure_2;
+                    tmp9 = closure_3;
+                    search = closure_2(closure_3[9]).search;
+                  }
+                  tmp10 = null;
+                  str = "";
+                  SEARCH = null;
+                  if ("" !== bottomSheetRef) {
+                    SEARCH = tmp20.SEARCH;
+                  }
+                  tmp12 = GIF_FETCH_LIMIT_IOS;
+                  tmp13 = bottomSheetRef;
+                  tmp14 = SEARCH;
+                  tmp15 = tmp7;
+                  searchResult = search(bottomSheetRef, SEARCH, tmp7, GIF_FETCH_LIMIT_IOS);
+                  if (!tmp) {
+                    tmp17 = closure_6;
+                    current = closure_6.current;
+                    if (current != null) {
+                      setTextResult = current.setText(bottomSheetRef);
+                    }
+                  }
                 }
                 return;
               }
             }
           }
+          Re = tmp39;
           if (cResult[19] === tmp39) {
-            class U {
-              constructor() {
-                tmp = closure_7(false);
-                tmp2 = closure_12(GIFPickerResultTypes.SEARCH);
-                tmp3 = closure_13("");
-                obj = closure_2(closure_3[9]);
-                resetSearchResult = obj.resetSearch();
-                current = closure_6.current;
-                if (current != null) {
-                  blurResult = current.blur();
+            class Re {
+              constructor(arg0, arg1) {
+                tmp = undefined === arg1 || arg1;
+                if (closure_8.current !== bottomSheetRef) {
+                  closure_8.current = bottomSheetRef;
+                  tmp19 = closure_12;
+                  tmp20 = GIFPickerResultTypes;
+                  tmp21 = closure_12(GIFPickerResultTypes.SEARCH);
+                  num = 0;
+                  tmp22 = bottomSheetRef.trim().length > 0;
+                  tmp3 = tmp22;
+                  tmp23 = closure_10;
+                  if (tmp3) {
+                    tmp2 = resultQuery;
+                    tmp3 = resultQuery !== bottomSheetRef;
+                  }
+                  tmp23Result = tmp23(tmp3);
+                  tmp5 = closure_7;
+                  tmp6 = closure_7(tmp22);
+                  tmp7 = !tmp;
+                  if (tmp) {
+                    search = closure_14;
+                  } else {
+                    tmp8 = closure_2;
+                    tmp9 = closure_3;
+                    search = closure_2(closure_3[9]).search;
+                  }
+                  tmp10 = null;
+                  str = "";
+                  SEARCH = null;
+                  if ("" !== bottomSheetRef) {
+                    SEARCH = tmp20.SEARCH;
+                  }
+                  tmp12 = GIF_FETCH_LIMIT_IOS;
+                  tmp13 = bottomSheetRef;
+                  tmp14 = SEARCH;
+                  tmp15 = tmp7;
+                  searchResult = search(bottomSheetRef, SEARCH, tmp7, GIF_FETCH_LIMIT_IOS);
+                  if (!tmp) {
+                    tmp17 = closure_6;
+                    current = closure_6.current;
+                    if (current != null) {
+                      setTextResult = current.setText(bottomSheetRef);
+                    }
+                  }
                 }
                 return;
               }
             }
-            const effect1 = obj2.useEffect(tmp43, tmp42);
+            const effect1 = obj2.useEffect(tmp42, tmp41);
             const _Symbol5 = Symbol;
             if (cResult[23] === Symbol.for("react.memo_cache_sentinel")) {
-              class Pe {
-                constructor() {
-                  obj = channelId(initialQuery[16]);
-                  acknowledgeTooltipResult = obj.acknowledgeTooltip(closure_12.GIF_PICKER_TOOLTIP);
-                  obj2 = guildId(initialQuery[9]);
-                  trendingSearchTerms = obj2.fetchTrendingSearchTerms();
+              class Re {
+                constructor(arg0, arg1) {
+                  tmp = undefined === arg1 || arg1;
+                  if (closure_8.current !== bottomSheetRef) {
+                    closure_8.current = bottomSheetRef;
+                    tmp19 = closure_12;
+                    tmp20 = GIFPickerResultTypes;
+                    tmp21 = closure_12(GIFPickerResultTypes.SEARCH);
+                    num = 0;
+                    tmp22 = bottomSheetRef.trim().length > 0;
+                    tmp3 = tmp22;
+                    tmp23 = closure_10;
+                    if (tmp3) {
+                      tmp2 = resultQuery;
+                      tmp3 = resultQuery !== bottomSheetRef;
+                    }
+                    tmp23Result = tmp23(tmp3);
+                    tmp5 = closure_7;
+                    tmp6 = closure_7(tmp22);
+                    tmp7 = !tmp;
+                    if (tmp) {
+                      search = closure_14;
+                    } else {
+                      tmp8 = closure_2;
+                      tmp9 = closure_3;
+                      search = closure_2(closure_3[9]).search;
+                    }
+                    tmp10 = null;
+                    str = "";
+                    SEARCH = null;
+                    if ("" !== bottomSheetRef) {
+                      SEARCH = tmp20.SEARCH;
+                    }
+                    tmp12 = GIF_FETCH_LIMIT_IOS;
+                    tmp13 = bottomSheetRef;
+                    tmp14 = SEARCH;
+                    tmp15 = tmp7;
+                    searchResult = search(bottomSheetRef, SEARCH, tmp7, GIF_FETCH_LIMIT_IOS);
+                    if (!tmp) {
+                      tmp17 = closure_6;
+                      current = closure_6.current;
+                      if (current != null) {
+                        setTextResult = current.setText(bottomSheetRef);
+                      }
+                    }
+                  }
                   return;
                 }
               }
               const items1 = [];
-              cResult[23] = Pe;
+              cResult[23] = tmp46;
               cResult[24] = items1;
-              class Te {
+              class Fe {
                 constructor() {
                   if (closure_11 !== GIFPickerResultTypes.FAVORITES) {
                     tmp2 = closure_7;
@@ -322,19 +468,59 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((bottom
                 }
               }
             } else {
-              class Pe {
-                constructor() {
-                  obj = channelId(initialQuery[16]);
-                  acknowledgeTooltipResult = obj.acknowledgeTooltip(closure_12.GIF_PICKER_TOOLTIP);
-                  obj2 = guildId(initialQuery[9]);
-                  trendingSearchTerms = obj2.fetchTrendingSearchTerms();
+              class Re {
+                constructor(arg0, arg1) {
+                  tmp = undefined === arg1 || arg1;
+                  if (closure_8.current !== bottomSheetRef) {
+                    closure_8.current = bottomSheetRef;
+                    tmp19 = closure_12;
+                    tmp20 = GIFPickerResultTypes;
+                    tmp21 = closure_12(GIFPickerResultTypes.SEARCH);
+                    num = 0;
+                    tmp22 = bottomSheetRef.trim().length > 0;
+                    tmp3 = tmp22;
+                    tmp23 = closure_10;
+                    if (tmp3) {
+                      tmp2 = resultQuery;
+                      tmp3 = resultQuery !== bottomSheetRef;
+                    }
+                    tmp23Result = tmp23(tmp3);
+                    tmp5 = closure_7;
+                    tmp6 = closure_7(tmp22);
+                    tmp7 = !tmp;
+                    if (tmp) {
+                      search = closure_14;
+                    } else {
+                      tmp8 = closure_2;
+                      tmp9 = closure_3;
+                      search = closure_2(closure_3[9]).search;
+                    }
+                    tmp10 = null;
+                    str = "";
+                    SEARCH = null;
+                    if ("" !== bottomSheetRef) {
+                      SEARCH = tmp20.SEARCH;
+                    }
+                    tmp12 = GIF_FETCH_LIMIT_IOS;
+                    tmp13 = bottomSheetRef;
+                    tmp14 = SEARCH;
+                    tmp15 = tmp7;
+                    searchResult = search(bottomSheetRef, SEARCH, tmp7, GIF_FETCH_LIMIT_IOS);
+                    if (!tmp) {
+                      tmp17 = closure_6;
+                      current = closure_6.current;
+                      if (current != null) {
+                        setTextResult = current.setText(bottomSheetRef);
+                      }
+                    }
+                  }
                   return;
                 }
               }
-              const tmp46 = cResult[24];
+              const tmp45 = cResult[24];
             }
-            const effect2 = obj2.useEffect(Pe, tmp46);
-            class Te {
+            const effect2 = obj2.useEffect(tmp46, tmp45);
+            class Fe {
               constructor() {
                 if (closure_11 !== GIFPickerResultTypes.FAVORITES) {
                   tmp2 = closure_7;
@@ -348,23 +534,63 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((bottom
             }
             const effect3 = obj2.useEffect(tmp48, tmp49);
             if (cResult[28] !== tmp39) {
-              class Pe {
-                constructor() {
-                  obj = channelId(initialQuery[16]);
-                  acknowledgeTooltipResult = obj.acknowledgeTooltip(closure_12.GIF_PICKER_TOOLTIP);
-                  obj2 = guildId(initialQuery[9]);
-                  trendingSearchTerms = obj2.fetchTrendingSearchTerms();
+              class Re {
+                constructor(arg0, arg1) {
+                  tmp = undefined === arg1 || arg1;
+                  if (closure_8.current !== bottomSheetRef) {
+                    closure_8.current = bottomSheetRef;
+                    tmp19 = closure_12;
+                    tmp20 = GIFPickerResultTypes;
+                    tmp21 = closure_12(GIFPickerResultTypes.SEARCH);
+                    num = 0;
+                    tmp22 = bottomSheetRef.trim().length > 0;
+                    tmp3 = tmp22;
+                    tmp23 = closure_10;
+                    if (tmp3) {
+                      tmp2 = resultQuery;
+                      tmp3 = resultQuery !== bottomSheetRef;
+                    }
+                    tmp23Result = tmp23(tmp3);
+                    tmp5 = closure_7;
+                    tmp6 = closure_7(tmp22);
+                    tmp7 = !tmp;
+                    if (tmp) {
+                      search = closure_14;
+                    } else {
+                      tmp8 = closure_2;
+                      tmp9 = closure_3;
+                      search = closure_2(closure_3[9]).search;
+                    }
+                    tmp10 = null;
+                    str = "";
+                    SEARCH = null;
+                    if ("" !== bottomSheetRef) {
+                      SEARCH = tmp20.SEARCH;
+                    }
+                    tmp12 = GIF_FETCH_LIMIT_IOS;
+                    tmp13 = bottomSheetRef;
+                    tmp14 = SEARCH;
+                    tmp15 = tmp7;
+                    searchResult = search(bottomSheetRef, SEARCH, tmp7, GIF_FETCH_LIMIT_IOS);
+                    if (!tmp) {
+                      tmp17 = closure_6;
+                      current = closure_6.current;
+                      if (current != null) {
+                        setTextResult = current.setText(bottomSheetRef);
+                      }
+                    }
+                  }
                   return;
                 }
               }
               let obj3 = {
                 onClickSuggestion(arg0) {
-                              return tmp40(arg0, false);
+                              return Re(arg0, false);
                             }
               };
               const tmp52 = tmp28(tmp8(initialQuery[17]), obj3);
               cResult[28] = tmp39;
-              class Te {
+              class Fe {
                 constructor() {
                   if (closure_11 !== GIFPickerResultTypes.FAVORITES) {
                     tmp2 = closure_7;
@@ -378,23 +604,103 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((bottom
               }
               cResult[29] = tmp52;
             } else {
-              class Pe {
-                constructor() {
-                  obj = channelId(initialQuery[16]);
-                  acknowledgeTooltipResult = obj.acknowledgeTooltip(closure_12.GIF_PICKER_TOOLTIP);
-                  obj2 = guildId(initialQuery[9]);
-                  trendingSearchTerms = obj2.fetchTrendingSearchTerms();
+              class Re {
+                constructor(arg0, arg1) {
+                  tmp = undefined === arg1 || arg1;
+                  if (closure_8.current !== bottomSheetRef) {
+                    closure_8.current = bottomSheetRef;
+                    tmp19 = closure_12;
+                    tmp20 = GIFPickerResultTypes;
+                    tmp21 = closure_12(GIFPickerResultTypes.SEARCH);
+                    num = 0;
+                    tmp22 = bottomSheetRef.trim().length > 0;
+                    tmp3 = tmp22;
+                    tmp23 = closure_10;
+                    if (tmp3) {
+                      tmp2 = resultQuery;
+                      tmp3 = resultQuery !== bottomSheetRef;
+                    }
+                    tmp23Result = tmp23(tmp3);
+                    tmp5 = closure_7;
+                    tmp6 = closure_7(tmp22);
+                    tmp7 = !tmp;
+                    if (tmp) {
+                      search = closure_14;
+                    } else {
+                      tmp8 = closure_2;
+                      tmp9 = closure_3;
+                      search = closure_2(closure_3[9]).search;
+                    }
+                    tmp10 = null;
+                    str = "";
+                    SEARCH = null;
+                    if ("" !== bottomSheetRef) {
+                      SEARCH = tmp20.SEARCH;
+                    }
+                    tmp12 = GIF_FETCH_LIMIT_IOS;
+                    tmp13 = bottomSheetRef;
+                    tmp14 = SEARCH;
+                    tmp15 = tmp7;
+                    searchResult = search(bottomSheetRef, SEARCH, tmp7, GIF_FETCH_LIMIT_IOS);
+                    if (!tmp) {
+                      tmp17 = closure_6;
+                      current = closure_6.current;
+                      if (current != null) {
+                        setTextResult = current.setText(bottomSheetRef);
+                      }
+                    }
+                  }
                   return;
                 }
               }
             }
             if (cResult[30] === onPressGIF) {
-              class Pe {
-                constructor() {
-                  obj = channelId(initialQuery[16]);
-                  acknowledgeTooltipResult = obj.acknowledgeTooltip(closure_12.GIF_PICKER_TOOLTIP);
-                  obj2 = guildId(initialQuery[9]);
-                  trendingSearchTerms = obj2.fetchTrendingSearchTerms();
+              class Re {
+                constructor(arg0, arg1) {
+                  tmp = undefined === arg1 || arg1;
+                  if (closure_8.current !== bottomSheetRef) {
+                    closure_8.current = bottomSheetRef;
+                    tmp19 = closure_12;
+                    tmp20 = GIFPickerResultTypes;
+                    tmp21 = closure_12(GIFPickerResultTypes.SEARCH);
+                    num = 0;
+                    tmp22 = bottomSheetRef.trim().length > 0;
+                    tmp3 = tmp22;
+                    tmp23 = closure_10;
+                    if (tmp3) {
+                      tmp2 = resultQuery;
+                      tmp3 = resultQuery !== bottomSheetRef;
+                    }
+                    tmp23Result = tmp23(tmp3);
+                    tmp5 = closure_7;
+                    tmp6 = closure_7(tmp22);
+                    tmp7 = !tmp;
+                    if (tmp) {
+                      search = closure_14;
+                    } else {
+                      tmp8 = closure_2;
+                      tmp9 = closure_3;
+                      search = closure_2(closure_3[9]).search;
+                    }
+                    tmp10 = null;
+                    str = "";
+                    SEARCH = null;
+                    if ("" !== bottomSheetRef) {
+                      SEARCH = tmp20.SEARCH;
+                    }
+                    tmp12 = GIF_FETCH_LIMIT_IOS;
+                    tmp13 = bottomSheetRef;
+                    tmp14 = SEARCH;
+                    tmp15 = tmp7;
+                    searchResult = search(bottomSheetRef, SEARCH, tmp7, GIF_FETCH_LIMIT_IOS);
+                    if (!tmp) {
+                      tmp17 = closure_6;
+                      current = closure_6.current;
+                      if (current != null) {
+                        setTextResult = current.setText(bottomSheetRef);
+                      }
+                    }
+                  }
                   return;
                 }
               }
@@ -416,12 +722,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((bottom
           const items2 = [tmp39, initialQuery];
           cResult[19] = tmp39;
           cResult[20] = initialQuery;
-          cResult[21] = tmp43;
+          cResult[21] = tmp42;
           cResult[22] = items2;
-          tmp42 = items2;
+          tmp41 = items2;
           const tmpResult3 = tmp(initialQuery[15]);
         }
-        class Te {
+        class Fe {
           constructor() {
             if (closure_11 !== GIFPickerResultTypes.FAVORITES) {
               tmp2 = closure_7;
@@ -434,7 +740,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((bottom
           }
         }
         cResult[14] = first;
-        cResult[16] = Te;
+        cResult[16] = Fe;
       }
       const tmpResult = tmp(initialQuery[12]);
       const result = tmp(initialQuery[14]).filterFavoriteGIFsByQuery(favorites, tmp27);
@@ -456,8 +762,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((bottom
     GIFPickerActionCreatorsAll.initializeSearch();
     GIFPickerActionCreatorsAll.resetSearch();
     if (null != channelId) {
-      const obj4 = { type: constants2.GIF, channel_id: tmp4, guild_id: guildId };
-      AnalyticsUtilsDefault.track(constants.CHAT_INPUT_COMPONENT_VIEWED, obj4);
+      const obj4 = { type: constants.GIF, channel_id: tmp4, guild_id: guildId };
+      AnalyticsUtilsDefault.track(closure_2_8.CHAT_INPUT_COMPONENT_VIEWED, obj4);
     }
   };
   const items3 = [channelId, guildId];
@@ -468,7 +774,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((bottom
   tmp6 = items3;
   tmp5 = fn;
   let obj = bottomSheetRef(initialQuery[8]);
-}) : ((bottomSheetRef) => {
+}) : (function GIFPicker(bottomSheetRef) {
   bottomSheetRef = bottomSheetRef.bottomSheetRef;
   const channelId = bottomSheetRef.channelId;
   const guildId = bottomSheetRef.guildId;
@@ -487,8 +793,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((bottom
     GIFPickerActionCreatorsAll.initializeSearch();
     GIFPickerActionCreatorsAll.resetSearch();
     if (null != channelId) {
-      const obj4 = { type: constants2.GIF, channel_id: tmp4, guild_id: guildId };
-      AnalyticsUtilsDefault.track(constants.CHAT_INPUT_COMPONENT_VIEWED, obj4);
+      const obj4 = { type: constants.GIF, channel_id: tmp4, guild_id: guildId };
+      AnalyticsUtilsDefault.track(closure_2_8.CHAT_INPUT_COMPONENT_VIEWED, obj4);
     }
   }, items);
   let tmp3 = channelId;
@@ -521,11 +827,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((bottom
   const ref = onPressGIF.useRef(null);
   const tmp10 = contentHorizontalPadding(onPressGIF.useState(false), 2);
   closure_10 = tmp10[1];
-  constants3 = onPressGIF.useRef("");
+  constants2 = onPressGIF.useRef("");
   onPressGIF.useRef(false);
   const tmp = closure_15();
   [tmp12, c13] = contentHorizontalPadding(onPressGIF.useState(false), 2);
-  const tmp14 = contentHorizontalPadding(onPressGIF.useState(constants3.SEARCH), 2);
+  const tmp14 = contentHorizontalPadding(onPressGIF.useState(constants2.SEARCH), 2);
   const first1 = tmp14[0];
   closure_15 = tmp14[1];
   const tmp16 = contentHorizontalPadding(onPressGIF.useState(""), 2);
@@ -534,7 +840,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((bottom
   const items2 = [ref];
   const callback1 = onPressGIF.useCallback(() => {
     closure_10(false);
-    closure_15(constants3.SEARCH);
+    closure_15(constants2.SEARCH);
     closure_17("");
     GIFPickerActionCreatorsAll.resetSearch();
     const current = ref.current;
@@ -551,7 +857,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((bottom
   let obj2 = bottomSheetRef(initialQuery[12]);
   const items4 = [first];
   const stateFromStoresObject = bottomSheetRef(initialQuery[15]).useStateFromStoresObject(items4, () => {
-    if (first1 !== constants3.FAVORITES) {
+    if (first1 !== constants2.FAVORITES) {
       resultItems = GIFPickerViewStore.getResultItems();
     } else {
       resultItems = closure_20;
@@ -568,7 +874,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((bottom
     }
     if (ref.current !== current) {
       ref.current = current;
-      closure_15(constants3.SEARCH);
+      closure_15(constants2.SEARCH);
       const tmp21 = current.trim().length > 0;
       let tmp2 = tmp21;
       if (tmp2) {
@@ -583,7 +889,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((bottom
       }
       let SEARCH = null;
       if ("" !== current) {
-        SEARCH = constants3.SEARCH;
+        SEARCH = constants2.SEARCH;
       }
       search(current, SEARCH, !flag, limit);
       if (!flag) {
@@ -633,11 +939,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((bottom
   }), items8);
   const items10 = [bottomSheetRef, callback2];
   const callback3 = onPressGIF.useCallback((gifId, index) => {
-    GIFPickerActionCreatorsAll.trackSelectGIF({ type: constants3.SEARCH, index, offset: 0, limit, results: resultItems.length, totalResults: resultItems.length, query: resultQuery, gifId: gifId.id });
+    GIFPickerActionCreatorsAll.trackSelectGIF({ type: constants2.SEARCH, index, offset: 0, limit, results: resultItems.length, totalResults: resultItems.length, query: resultQuery, gifId: gifId.id });
     onPressGIF(gifId);
   }, items9);
   const callback4 = onPressGIF.useCallback((arg0, arg1) => {
-    if (arg0 === constants3.TRENDING_GIFS) {
+    if (arg0 === constants2.TRENDING_GIFS) {
       closure_10(false);
       closure_15(arg0);
       const trendingGIFs = GIFPickerActionCreatorsAll.fetchTrendingGIFs(limit);

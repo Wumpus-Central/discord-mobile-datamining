@@ -1,17 +1,17 @@
-// === Module 6689: GuildOnboardingCompleted ===
+// === Module 6866: GuildOnboardingCompleted ===
 
-// Module 6689 (GuildOnboardingCompleted)
+// Module 6866 (GuildOnboardingCompleted)
 import nativeDefault from "native" /* 587 */;
-import GlobalUtils from "GlobalUtils" /* 1375 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import timing from "timing" /* 4897 */;
-import UserProfileRolesCard from "UserProfileRolesCard" /* 6691 */;
+import GlobalUtils from "GlobalUtils" /* 1387 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import timing from "timing" /* 5091 */;
+import UserProfileRolesCard from "UserProfileRolesCard" /* 6868 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
-import GuildRoleStore from "GuildRoleStore" /* 2106 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import UserStore from "UserStore" /* 1377 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 6602 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
+import GuildRoleStore from "GuildRoleStore" /* 2118 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import UserStore from "UserStore" /* 1389 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 6778 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let c12 = 400;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { screen: { flex: 1, position: "relative" }, container: { backgroundColor: "rgba(0, 0, 0, 0.5)", paddingHorizontal: 24, display: "flex", justifyContent: "center", flexGrow: 1 }, containerWithoutSplash: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, backgroundImage: { position: "absolute", width: "100%", height: "100%" }, title: {}, subtitle: { marginTop: 16 }, card: null, username: null, rolesHeader: null, roles: null, role: null, roleOverflow: null, animation: null, wave: null, animationText: null, getStartedButton: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.card = { marginTop: 24, padding: 16, paddingBottom: 32, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
@@ -45,7 +45,7 @@ let obj6 = { marginTop: 24, borderColor: nativeDefault.colors.BORDER_SUBTLE, bor
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding/native/GuildOnboardingCompleted.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildOnboardingCompleted(guildId) {
   const cResult = guildId(onClose[11]).c(126);
   guildId = guildId.guildId;
   ({ prompts, completeOnboarding } = guildId);
@@ -228,7 +228,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   cResult[14] = stateFromStoresArray;
   cResult[15] = found;
   const tmpResult8 = guildId(onClose[13]);
-}) : ((guildId) => {
+}) : (function GuildOnboardingCompleted(guildId) {
   guildId = guildId.guildId;
   ({ prompts, completeOnboarding } = guildId);
   const onClose = guildId.onClose;
@@ -431,8 +431,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       const substr = stateFromStoresArray.slice(0, 3);
       const items14 = [
         substr.map((role) => {
-              const obj = { style: role.role, children: v65535(UserProfileRolesCard.RoleItem, { role, guildId: stateFromStores1.id, disableInteraction: true }) };
-              return v65535(React4, obj, role.id);
+              const obj = { style: role.role, children: collapsed(UserProfileRolesCard.RoleItem, { role, guildId: stateFromStores1.id, disableInteraction: true }) };
+              return collapsed(React4, obj, role.id);
             }),
 
       ];

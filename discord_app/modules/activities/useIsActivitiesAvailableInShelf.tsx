@@ -1,7 +1,7 @@
-// === Module 9116: useIsActivitiesAvailableInShelf ===
+// === Module 10689: useIsActivitiesAvailableInShelf ===
 
-// Module 9116 (useIsActivitiesAvailableInShelf)
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9026 */;
+// Module 10689 (useIsActivitiesAvailableInShelf)
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 10635 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -11,12 +11,12 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/useIsActivitiesAvailableInShelf.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsActivitiesAvailableInShelf(guildId, arg1) {
   _require = guildId;
   const cResult = require("c").c(8);
   let obj = require("c");
   const isActivitiesEnabledForCurrentPlatform = require("useIsActivitiesEnabledForCurrentPlatform").useIsActivitiesEnabledForCurrentPlatform();
-  const tmp3 = isActivitiesEnabledForCurrentPlatform(9117)(arg1);
+  const tmp3 = isActivitiesEnabledForCurrentPlatform(10690)(arg1);
   if (cResult[0] === guildId) {
     if (cResult[1] === tmp3) {
       let tmp4 = cResult[2];
@@ -35,7 +35,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId, arg1) =
         return tmp4;
       }
     }
-    const fn = function o() {
+    const fn = function v() {
       let tmp = closure_2;
       if (closure_2) {
         tmp = isActivitiesEnabledForCurrentPlatform;
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId, arg1) =
   cResult[2] = tmp5;
   tmp4 = tmp5;
   let obj2 = require("useIsActivitiesEnabledForCurrentPlatform");
-}) : ((guildId, arg1) => {
+}) : (function useIsActivitiesAvailableInShelf(guildId, arg1) {
   _require = guildId;
   const isActivitiesEnabledForCurrentPlatform = require("useIsActivitiesEnabledForCurrentPlatform").useIsActivitiesEnabledForCurrentPlatform();
   let tmp3 = null != guildId;

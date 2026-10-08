@@ -1,16 +1,16 @@
-// === Module 15603: DevToolsAgeVerificationScreen ===
+// === Module 15883: DevToolsAgeVerificationScreen ===
 
-// Module 15603 (DevToolsAgeVerificationScreen)
+// Module 15883 (DevToolsAgeVerificationScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import TableRow from "TableRow" /* 6000 */;
-import TableRowArrow from "TableRowArrow" /* 6007 */;
-import TableRowGroup from "TableRowGroup" /* 6081 */;
-import KeyIcon from "KeyIcon" /* 6453 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8117 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8119 */;
-import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 8124 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 5915 */;
+import TableRow from "TableRow" /* 6184 */;
+import TableRowArrow from "TableRowArrow" /* 6193 */;
+import TableRowGroup from "TableRowGroup" /* 6267 */;
+import KeyIcon from "KeyIcon" /* 6631 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7492 */;
+import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 7505 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -66,7 +66,7 @@ let closure_9 = async function _showAgeVerificationTestModal() {
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, content: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.content = { padding: nativeDefault.space.PX_16 };
@@ -76,7 +76,7 @@ let obj4 = { padding: nativeDefault.space.PX_16 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsAgeVerificationScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevToolsAgeVerificationScreen() {
   const cResult = c.c(10);
   const tmp4 = closure_7();
   const sum = tmp4.content.padding + useSafeAreaInsetsDefault().bottom;
@@ -140,7 +140,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[3] = tmp6;
   cResult[4] = items1;
   tmp7 = items1;
-}) : (() => {
+}) : (function DevToolsAgeVerificationScreen() {
   const tmp = closure_7();
   let obj = { style: tmp.container, contentContainerStyle: null, children: null };
   const items = [tmp.content, { paddingBottom: tmp.content.padding + useSafeAreaInsetsDefault().bottom }];

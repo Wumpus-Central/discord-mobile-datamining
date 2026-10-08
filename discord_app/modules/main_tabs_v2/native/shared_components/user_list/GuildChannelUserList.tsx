@@ -1,28 +1,28 @@
-// === Module 11223: GuildChannelUserList ===
+// === Module 11338: GuildChannelUserList ===
 
-// Module 11223 (GuildChannelUserList)
+// Module 11338 (GuildChannelUserList)
 import throttleDefault from "throttle" /* 550 */;
 import util from "util" /* 1126 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4520 */;
-import UserUtilsDefault from "UserUtils" /* 4728 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5048 */;
-import GuildUtilsDefault from "GuildUtils" /* 5711 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7861 */;
-import sortByMatchScore from "sortByMatchScore" /* 9509 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4712 */;
+import UserUtilsDefault from "UserUtils" /* 4922 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5405 */;
+import GuildUtilsDefault from "GuildUtils" /* 6101 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8279 */;
+import sortByMatchScore from "sortByMatchScore" /* 8675 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelMemberStore_mod from "ChannelMemberStore" /* 6792 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import UserStore from "UserStore" /* 1377 */;
+import ChannelMemberStore_mod from "ChannelMemberStore" /* 6967 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildMemberStore from "GuildMemberStore" /* 2124 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const sortByMatchScoreDefault = sortByMatchScore;
 
 require = fn;
 const View = fn(17).View;
-let ChannelMemberStore = fn(6792);
+let ChannelMemberStore = fn(6967);
 ({ EVERYONE_CHANNEL_ID: closure_7, MemberListRowTypes: closure_8 } = ChannelMemberStore);
 let ChannelMemberStore = ChannelMemberStore_mod;
 const Constants = fn(1085);
@@ -31,7 +31,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_17, Fragment: closure_18, jsxs: closure_19 } = jsxProd);
 let closure_20 = [];
 let ReactCompilerGating = fn(558);
-let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSearchableConfig(guildId) {
   const cResult = guildId(ref[12]).c(30);
   guildId = guildId.guildId;
   const listRef = guildId.listRef;
@@ -115,32 +115,14 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
                   if (cResult[26] === tmp23) {
                     if (cResult[27] === queryResults) {
                       if (cResult[28] === tmp24) {
-                        let tmp26 = cResult[29];
+                        let tmp27 = cResult[29];
                       }
-                      return tmp26;
+                      return tmp27;
                     }
                   }
                 }
-                const obj3 = { hasQuery: null, queryResults: null, onChangeText: null, searchBarRef: null, searchBarEmptyState: null };
-                class P {
-                  constructor(arg0) {
-                    searchResult = closure_7.search(guildId);
-                    tmp2 = closure_4(guildId);
-                    if ("" !== guildId.trim()) {
-                      tmp3 = closure_1;
-                      tmp4 = closure_3;
-                      obj = closure_1(closure_3[14]);
-                      tmp5 = guildId;
-                      members = obj.requestMembers(guildId, guildId);
-                    }
-                    return;
-                  }
-                }
-                obj3.queryResults = queryResults;
-                obj3.onChangeText = tmp23;
-                obj3.searchBarRef = ref;
-                obj3.searchBarEmptyState = tmp24;
-                class L {
+                const obj3 = { hasQuery: tmp14, queryResults, onChangeText: tmp23, searchBarRef: ref, searchBarEmptyState: tmp24 };
+                class O {
                   constructor() {
                     if (closure_5.length <= 0) {
                       tmp = closure_8;
@@ -164,27 +146,24 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
                 cResult[27] = queryResults;
                 cResult[28] = tmp24;
                 cResult[29] = obj3;
-                tmp26 = obj3;
+                tmp27 = obj3;
               }
             }
           }
-          class P {
-            constructor(arg0) {
-              searchResult = closure_7.search(guildId);
-              tmp2 = closure_4(guildId);
-              if ("" !== guildId.trim()) {
-                tmp3 = closure_1;
-                tmp4 = closure_3;
-                obj = closure_1(closure_3[14]);
-                tmp5 = guildId;
-                members = obj.requestMembers(guildId, guildId);
+          let tmp25 = null;
+          if (searchable) {
+            tmp25 = null;
+            if (!tmp16) {
+              let searchableEmptyStateResult;
+              if (searchableEmptyState != null) {
+                searchableEmptyStateResult = searchableEmptyState(str);
               }
-              return;
+              tmp25 = searchableEmptyStateResult;
             }
           }
           cResult[20] = tmp16;
           cResult[21] = str;
-          class L {
+          class O {
             constructor() {
               if (closure_5.length <= 0) {
                 tmp = closure_8;
@@ -205,26 +184,19 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
             }
           }
           cResult[23] = searchableEmptyState;
-          cResult[24] = null;
+          cResult[24] = tmp25;
           tmp24 = tmp25;
         }
-        class P {
-          constructor(arg0) {
-            searchResult = closure_7.search(guildId);
-            tmp2 = closure_4(guildId);
-            if ("" !== guildId.trim()) {
-              tmp3 = closure_1;
-              tmp4 = closure_3;
-              obj = closure_1(closure_3[14]);
-              tmp5 = guildId;
-              members = obj.requestMembers(guildId, guildId);
-            }
-            return;
+        const fn3 = function k(str) {
+          first1.search(str);
+          _slicedToArray(str);
+          if ("" !== str.trim()) {
+            const members = GuildUtilsDefault.requestMembers(guildId, str);
           }
-        }
+        };
         cResult[17] = first1;
         cResult[18] = guildId;
-        class L {
+        class O {
           constructor() {
             if (closure_5.length <= 0) {
               tmp = closure_8;
@@ -244,11 +216,11 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
             return;
           }
         }
-        tmp23 = P;
+        tmp23 = fn3;
       }
       let items = [listRef, str];
       cResult[14] = listRef;
-      class L {
+      class O {
         constructor() {
           if (closure_5.length <= 0) {
             tmp = closure_8;
@@ -272,7 +244,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       cResult[16] = items;
       tmp21 = items;
     }
-    class L {
+    class O {
       constructor() {
         if (closure_5.length <= 0) {
           tmp = closure_8;
@@ -295,10 +267,10 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     const items1 = [queryResults, "" !== tmp12];
     cResult[8] = "" !== tmp12;
     cResult[9] = queryResults;
-    cResult[10] = L;
+    cResult[10] = O;
     cResult[11] = items1;
     tmp18 = items1;
-    tmp17 = L;
+    tmp17 = O;
     const tmp3Result = _slicedToArray(obj2.useState(searchable), 2);
   }
   class E {
@@ -330,7 +302,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   tmp10 = items2;
   tmp9 = E;
   const tmp4 = _slicedToArray(queryResults.useState(""), 2);
-}) : ((guildId) => {
+}) : (function useSearchableConfig(guildId) {
   guildId = guildId.guildId;
   const listRef = guildId.listRef;
   const searchable = guildId.searchable;
@@ -429,7 +401,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/GuildChannelUserList.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function GuildChannelUserList(guildId) {
   const cResult = channelId(onUserPress[12]).c(96);
   ({ searchable, searchableEmptyState, channelId } = guildId);
   guildId = guildId.guildId;
@@ -640,7 +612,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildI
                         return;
                       }
                     }
-                    class Te {
+                    class Me {
                       constructor() {
                         if (null != roleId) {
                           tmp2 = channelId;
@@ -708,7 +680,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildI
                       return;
                     }
                   }
-                  class Te {
+                  class Me {
                     constructor() {
                       if (null != roleId) {
                         tmp2 = channelId;
@@ -761,7 +733,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildI
                   cResult[32] = channelId;
                   cResult[33] = guildId;
                   cResult[34] = roleId;
-                  cResult[35] = Te;
+                  cResult[35] = Me;
                 }
                 class Ce {
                   constructor() {
@@ -817,7 +789,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildI
   cResult[3] = obj5;
   tmp7 = obj5;
   let obj = channelId(onUserPress[12]);
-}) : ((searchable) => {
+}) : (function GuildChannelUserList(searchable) {
   let flag = searchable.searchable;
   if (flag === undefined) {
     flag = false;

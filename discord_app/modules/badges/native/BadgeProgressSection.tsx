@@ -1,19 +1,19 @@
-// === Module 10985: BadgeProgressSection ===
+// === Module 11209: BadgeProgressSection ===
 
-// Module 10985 (BadgeProgressSection)
+// Module 11209 (BadgeProgressSection)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import BadgeArtImageDefault from "BadgeArtImage" /* 10895 */;
-import BadgeDetailsUtils from "BadgeDetailsUtils" /* 10910 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import BadgeArtImageDefault from "BadgeArtImage" /* 10546 */;
+import BadgeDetailsUtils from "BadgeDetailsUtils" /* 10561 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { section: { gap: nativeDefault.space.PX_12 }, row: null, content: null, track: null, fill: null };
 let obj3 = { gap: nativeDefault.space.PX_12 };
 obj2.row = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_16 };
@@ -29,7 +29,7 @@ let obj7 = { height: 8, borderRadius: nativeDefault.radii.round, backgroundColor
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/native/BadgeProgressSection.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeProgressSection(arg0) {
   const cResult = c.c(37);
   ({ badge, viewerBadge } = arg0);
   const tmp4 = closure_6();
@@ -232,7 +232,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   tmp6 = View;
   tmp5 = View;
   const tmpResult = BadgeDetailsUtils;
-}) : ((arg0) => {
+}) : (function BadgeProgressSection(arg0) {
   ({ badge, viewerBadge } = arg0);
   const tmp = closure_6();
   const badgeProgressDisplay = BadgeDetailsUtils.getBadgeProgressDisplay(badge, viewerBadge);

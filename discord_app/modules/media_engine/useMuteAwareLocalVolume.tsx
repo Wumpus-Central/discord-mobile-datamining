@@ -1,9 +1,9 @@
-// === Module 9714: useMuteAwareLocalVolume ===
+// === Module 10919: useMuteAwareLocalVolume ===
 
-// Module 9714 (useMuteAwareLocalVolume)
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 8079 */;
+// Module 10919 (useMuteAwareLocalVolume)
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5241 */;
 import noop from "module_19" /* 19 */;
-import MediaEngineStore from "MediaEngineStore" /* 1999 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_engine/useMuteAwareLocalVolume.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useMuteAwareLocalVolume(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
   const cResult = require("c").c(10);
@@ -78,7 +78,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   tmp6 = fn;
   let obj = require("c");
   tmp = _require;
-}) : ((arg0, arg1) => {
+}) : (function useMuteAwareLocalVolume(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
   let obj = { effectiveVolume: null, handleVolumeChange: null };

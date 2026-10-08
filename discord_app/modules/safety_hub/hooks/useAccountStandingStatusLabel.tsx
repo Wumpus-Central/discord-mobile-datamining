@@ -1,18 +1,18 @@
-// === Module 14563: useAccountStandingStatusLabel ===
+// === Module 14824: useAccountStandingStatusLabel ===
 
-// Module 14563 (useAccountStandingStatusLabel)
+// Module 14824 (useAccountStandingStatusLabel)
 import c from "c" /* 576 */;
-import useSafetyHubAccountStanding from "useSafetyHubAccountStanding" /* 11507 */;
-import useSafetyHubInitialized from "useSafetyHubInitialized" /* 11535 */;
-import useSafetyHubFetchError from "useSafetyHubFetchError" /* 14564 */;
+import useSafetyHubAccountStanding from "useSafetyHubAccountStanding" /* 11499 */;
+import useSafetyHubInitialized from "useSafetyHubInitialized" /* 11533 */;
+import useSafetyHubFetchError from "useSafetyHubFetchError" /* 14825 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const util = tmp(1126);
-const SafetyHubAccountStandingLabels = tmp(14565);
+const SafetyHubAccountStandingLabels = tmp(14826);
 const result = size.fileFinishedImporting("modules/safety_hub/hooks/useAccountStandingStatusLabel.tsx");
 
-export const useAccountStandingStatusLabel = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useAccountStandingStatusLabel = ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountStandingStatusLabel() {
   let tmp = require;
   let formatToPlainStringResult = dependencyMap;
   const cResult = c.c(5);
@@ -54,7 +54,7 @@ export const useAccountStandingStatusLabel = ReactCompilerGating.isReactCompiler
   } else {
     return cResult[1];
   }
-}) : (() => {
+}) : (function useAccountStandingStatusLabel() {
   const safetyHubAccountStanding = useSafetyHubAccountStanding.useSafetyHubAccountStanding();
   const safetyHubInitialized = useSafetyHubInitialized.useSafetyHubInitialized();
   const safetyHubFetchError = useSafetyHubFetchError.useSafetyHubFetchError();

@@ -1,6 +1,6 @@
-// === Module 11299: usePollMessageContextItemTypes ===
+// === Module 9636: usePollMessageContextItemTypes ===
 
-// Module 11299 (usePollMessageContextItemTypes)
+// Module 9636 (usePollMessageContextItemTypes)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/polls/chat/usePollMessageContextItemTypes.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((poll) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePollMessageContextItemTypes(poll) {
   const obj = c;
   const cResult = obj.c(6);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -58,7 +58,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((poll) => {
     }
   }
   return closure_4;
-}) : ((poll) => {
+}) : (function usePollMessageContextItemTypes(poll) {
   const obj = initialize;
   const items = [AuthenticationStore];
   poll = poll.poll;

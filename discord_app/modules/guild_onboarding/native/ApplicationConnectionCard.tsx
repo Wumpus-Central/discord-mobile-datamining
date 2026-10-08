@@ -1,11 +1,11 @@
-// === Module 6663: ApplicationConnectionCard ===
+// === Module 6840: ApplicationConnectionCard ===
 
-// Module 6663 (ApplicationConnectionCard)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5076 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 6665 */;
+// Module 6840 (ApplicationConnectionCard)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5105 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 6842 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5124 */;
+import ApplicationStore from "ApplicationStore" /* 5436 */;
 
 require = fn;
 const AnalyticEvents = fn(1085).AnalyticEvents;
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_onboarding/native/ApplicationConnectionCard.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((connection) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ApplicationConnectionCard(connection) {
   const cResult = connection(_location[5]).c(26);
   connection = connection.connection;
   const guildId = connection.guildId;
@@ -241,7 +241,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((connection) => {
   tmp11 = items2;
   tmp10 = L;
   const tmpResult = connection(_location[6]);
-}) : ((connection) => {
+}) : (function ApplicationConnectionCard(connection) {
   connection = connection.connection;
   const guildId = connection.guildId;
   const _location = connection.location;

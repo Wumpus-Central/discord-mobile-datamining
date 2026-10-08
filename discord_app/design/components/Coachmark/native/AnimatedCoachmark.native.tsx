@@ -1,12 +1,12 @@
-// === Module 9902: AnimatedCoachmark ===
+// === Module 9383: AnimatedCoachmark ===
 
-// Module 9902 (AnimatedCoachmark)
+// Module 9383 (AnimatedCoachmark)
 import c from "c" /* 576 */;
-import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 4602 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4618 */;
-import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 9660 */;
-import TooltipConstants from "TooltipConstants" /* 9900 */;
-import Coachmark from "Coachmark" /* 9903 */;
+import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 4794 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4810 */;
+import TooltipConstants from "TooltipConstants" /* 9380 */;
+import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 9381 */;
+import Coachmark from "Coachmark" /* 9384 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -33,7 +33,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/Coachmark/native/AnimatedCoachmark.native.tsx");
 
-export const AnimatedCoachmark = ReactCompilerGating.isReactCompilerEnabled() ? ((visible) => {
+export const AnimatedCoachmark = ReactCompilerGating.isReactCompilerEnabled() ? (function AnimatedCoachmark(visible) {
   const cResult = c.c(9);
   visible = visible.visible;
   const tmp3 = _objectWithoutProperties(visible, closure_3);
@@ -81,7 +81,7 @@ export const AnimatedCoachmark = ReactCompilerGating.isReactCompilerEnabled() ? 
   cResult[1] = visible;
   cResult[2] = fn;
   tmp7 = fn;
-}) : ((visible) => {
+}) : (function AnimatedCoachmark(visible) {
   visible = visible.visible;
   const merged = Object.assign(visible, Object.assign({ visible: 0 }));
   c1 = undefined;

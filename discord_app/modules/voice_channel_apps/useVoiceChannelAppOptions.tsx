@@ -1,14 +1,14 @@
-// === Module 17019: useVoiceChannelAppOptions ===
+// === Module 17300: useVoiceChannelAppOptions ===
 
-// Module 17019 (useVoiceChannelAppOptions)
+// Module 17300 (useVoiceChannelAppOptions)
 import c from "c" /* 576 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6670 */;
-import ConjureUtils from "ConjureUtils" /* 6756 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 8735 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6847 */;
+import ConjureUtils from "ConjureUtils" /* 6932 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 12364 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 8734 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 11251 */;
 
 const require = globalThis.__r;
 const useGetOrFetchApplicationsDefault = useGetOrFetchApplications;
@@ -31,11 +31,11 @@ function voiceChannelAppCandidates(stateFromStoresArray, stateFromStoresArray1, 
   });
 }
 let ReactCompilerGating = fn(558);
-let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoiceChannelAppOptions(guildId) {
   _require = guildId;
   const cResult = require("c").c(46);
   if (cResult[0] !== guildId) {
-    const fn = function l() {
+    const fn = function p() {
       ConjureActionCreators.listProjects(closure_0);
     };
     let items = [guildId];
@@ -51,7 +51,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   const effect = noop.useEffect(tmp4, tmp5);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [ConjureProjectStore];
-    const fn2 = function s() {
+    const fn2 = function c() {
       return closure_5.getOwnedProjects();
     };
     cResult[3] = items1;
@@ -230,12 +230,12 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
             }
             const tmpResult5 = tmp(504);
             let obj3 = { hasRows: arr8.length > 0, loadFailed: "error" === stateFromStores || tmp35, fetchPhase: str };
-            const result = tmp(17020).voiceChannelAppListState(obj3);
+            const result = tmp(17301).voiceChannelAppListState(obj3);
             cResult[31] = str;
             cResult[32] = "error" === stateFromStores || tmp35;
             cResult[33] = arr8.length > 0;
             cResult[34] = result;
-            const tmpResult6 = tmp(17020);
+            const tmpResult6 = tmp(17301);
           }
           closure_130_0 = tmp21;
           let found = arr5.filter((item, index) => dependencyMap(stateFromStoresArray1[5]).isEmbeddedApplication(dependencyMap[index]));
@@ -262,7 +262,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   cResult[12] = tmp16;
   arr5 = tmp16;
   const tmpResult4 = require("initialize");
-}) : ((arg0) => {
+}) : (function useVoiceChannelAppOptions(arg0) {
   _require = arg0;
   let items = [arg0];
   const effect = noop.useEffect(() => {
@@ -400,7 +400,7 @@ let result = size.fileFinishedImporting("modules/voice_channel_apps/useVoiceChan
 export { voiceChannelAppCandidates };
 export { voiceChannelAppRows };
 export { voiceChannelAppIdsToFetch };
-export const useVoiceChannelAppSettingOptions = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export const useVoiceChannelAppSettingOptions = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoiceChannelAppSettingOptions(arg0, arg1) {
   closure_0 = arg1;
   const cResult = c.c(11);
   ({ options, listState } = closure_7(arg0));
@@ -476,7 +476,7 @@ export const useVoiceChannelAppSettingOptions = ReactCompilerGating.isReactCompi
   cResult[2] = obj8;
   tmp7 = obj8;
   const tmpResult = useGetOrFetchApplications;
-}) : ((arg0, arg1) => {
+}) : (function useVoiceChannelAppSettingOptions(arg0, arg1) {
   _require = arg1;
   const tmp = closure_7(arg0);
   options = tmp.options;

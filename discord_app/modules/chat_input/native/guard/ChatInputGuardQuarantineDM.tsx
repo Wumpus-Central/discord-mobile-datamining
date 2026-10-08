@@ -1,20 +1,20 @@
-// === Module 12108: ChatInputGuardQuarantineDM ===
+// === Module 12186: ChatInputGuardQuarantineDM ===
 
-// Module 12108 (ChatInputGuardQuarantineDM)
+// Module 12186 (ChatInputGuardQuarantineDM)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 12105 */;
-import ChatWarningIcon from "ChatWarningIcon" /* 12110 */;
+import ChatInputGuardDefault from "ChatInputGuard" /* 12183 */;
+import ChatWarningIcon from "ChatWarningIcon" /* 12188 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const QUARANTINE_APPEAL_LINK = fn(12109).QUARANTINE_APPEAL_LINK;
+const QUARANTINE_APPEAL_LINK = fn(12187).QUARANTINE_APPEAL_LINK;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardQuarantineDM.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ChatInputGuardQuarantineDM() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { type: "simple-action", icon: jsx(ChatWarningIcon.ChatWarningIcon, {}), message: null, subtext: null };
@@ -30,7 +30,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     first = cResult[0];
   }
   return first;
-}) : (() => {
+}) : (function ChatInputGuardQuarantineDM() {
   const obj = { type: "simple-action", icon: jsx(ChatWarningIcon.ChatWarningIcon, {}), message: null, subtext: null };
   const intl = util.intl;
   obj.message = intl.string(util.t.EouHwv);

@@ -1,8 +1,8 @@
-// === Module 4609: ThemeContextFlags ===
+// === Module 4801: ThemeContextFlags ===
 
-// Module 4609 (ThemeContextFlags)
+// Module 4801 (ThemeContextFlags)
 import c from "c" /* 576 */;
-import ThemeContext from "ThemeContext" /* 4599 */;
+import ThemeContext from "ThemeContext" /* 4791 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -16,7 +16,7 @@ export { hasThemeFlag };
 export const setThemeFlag = function setThemeFlag(tmpResult, MOBILE_DARK_GRADIENT_THEME_ENABLED) {
   return tmpResult | MOBILE_DARK_GRADIENT_THEME_ENABLED;
 };
-export const useThemeFlag = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useThemeFlag = ReactCompilerGating.isReactCompilerEnabled() ? (function useThemeFlag(arg0) {
   const cResult = c.c(3);
   const themeContext = ThemeContext.useThemeContext();
   if (cResult[0] === themeContext) {
@@ -29,4 +29,6 @@ export const useThemeFlag = ReactCompilerGating.isReactCompilerEnabled() ? ((arg
   cResult[1] = arg0;
   cResult[2] = (themeContext.flags & arg0) === arg0;
   tmp3 = tmp4;
-}) : ((arg0) => (ThemeContext.useThemeContext().flags & arg0) === arg0);
+}) : (function useThemeFlag(arg0) {
+  return (ThemeContext.useThemeContext().flags & arg0) === arg0;
+});

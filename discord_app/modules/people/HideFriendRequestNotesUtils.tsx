@@ -1,15 +1,15 @@
-// === Module 12972: HideFriendRequestNotesUtils ===
+// === Module 13251: HideFriendRequestNotesUtils ===
 
-// Module 12972 (HideFriendRequestNotesUtils)
-import UserSettings from "UserSettings" /* 2028 */;
-import useUserIsTeen from "useUserIsTeen" /* 8327 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
+// Module 13251 (HideFriendRequestNotesUtils)
+import UserSettings from "UserSettings" /* 2040 */;
+import useUserIsTeen from "useUserIsTeen" /* 7710 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
 
 const require = globalThis.__r;
 
 require = fn;
 let ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHideFriendRequestNotes() {
   const HideFriendRequestNotes = UserSettings.HideFriendRequestNotes;
   const setting = HideFriendRequestNotes.useSetting();
   let userIsTeen = useUserIsTeen.useUserIsTeen();
@@ -17,7 +17,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     userIsTeen = setting;
   }
   return userIsTeen;
-}) : (() => {
+}) : (function useHideFriendRequestNotes() {
   const HideFriendRequestNotes = UserSettings.HideFriendRequestNotes;
   const setting = HideFriendRequestNotes.useSetting();
   let userIsTeen = useUserIsTeen.useUserIsTeen();
@@ -32,7 +32,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/people/HideFriendRequestNotesUtils.tsx");
 
 export const useHideFriendRequestNotes = tmp2;
-export const useFriendRequestNote = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useFriendRequestNote = ReactCompilerGating.isReactCompilerEnabled() ? (function useFriendRequestNote(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   const obj = require("c");
@@ -67,7 +67,7 @@ export const useFriendRequestNote = ReactCompilerGating.isReactCompilerEnabled()
     }
   }
   return tmp9;
-}) : ((arg0) => {
+}) : (function useFriendRequestNote(arg0) {
   _require = arg0;
   const tmp = closure_3();
   const items = [RelationshipStore];

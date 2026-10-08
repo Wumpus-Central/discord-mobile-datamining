@@ -1,13 +1,13 @@
-// === Module 15697: UserSettingsDesignSystemTagGroup ===
+// === Module 15977: UserSettingsDesignSystemTagGroup ===
 
-// Module 15697 (UserSettingsDesignSystemTagGroup)
+// Module 15977 (UserSettingsDesignSystemTagGroup)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4586 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Stack_Stack from "Stack/Stack" /* 5600 */;
-import Card from "Card" /* 6002 */;
-import TagGroup from "TagGroup" /* 14270 */;
+import useToken from "useToken" /* 4778 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import Stack_Stack from "Stack/Stack" /* 5373 */;
+import Card from "Card" /* 6186 */;
+import TagGroup from "TagGroup" /* 14094 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { padding: nativeDefault.space.PX_16 }, narrow: { width: "60%" } };
 let closure_7 = createStyles.createStyles(obj2);
 let items = [{ id: "art", label: "Art" }, { id: "music", label: "Music" }];
@@ -27,7 +27,7 @@ let obj3 = { padding: nativeDefault.space.PX_16 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemTagGroup.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSettingsDesignSystemTagGroup() {
   const cResult = c.c(30);
   const tmp4 = closure_7();
   const token = useToken.useToken(nativeDefault.colors.ICON_BRAND);
@@ -212,7 +212,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[25] = tmp21;
   cResult[26] = tmp59;
   tmp58 = tmp59;
-}) : (() => {
+}) : (function UserSettingsDesignSystemTagGroup() {
   const tmp = closure_7();
   const obj2 = { contentContainerStyle: tmp.container, children: null };
   const token = useToken.useToken(nativeDefault.colors.ICON_BRAND);

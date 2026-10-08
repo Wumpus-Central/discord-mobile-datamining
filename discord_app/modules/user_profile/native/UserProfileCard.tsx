@@ -1,22 +1,22 @@
-// === Module 6713: UserProfileCard ===
+// === Module 6890: UserProfileCard ===
 
-// Module 6713 (UserProfileCard)
+// Module 6890 (UserProfileCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Pressables from "Pressables" /* 5916 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 6715 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import Pressables from "Pressables" /* 6189 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 6892 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 let closure_2 = ["title", "titleLeadingIcon", "titleIcon", "titleStyle", "trailingAction", "children", "style"];
 const View = fn(17).View;
-const Constants = fn(6714);
+const Constants = fn(6891);
 ({ CARD_ROWS_COLUMN_GAP, CARD_ROWS_ICON_SIZE, CARD_ROWS_ICON_SIZE_VARIANT: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { title: { marginBottom: nativeDefault.space.PX_12, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 }, titleContent: null, text: null, row: null, rowLabel: null, rowLabelText: null, rowSublabel: null };
 let obj3 = { marginBottom: nativeDefault.space.PX_12, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
 obj2.titleContent = { flex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
@@ -29,7 +29,7 @@ let closure_10 = createStyles.createStyles(obj2);
 fn(558);
 let obj4 = { flex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
 let ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileFormRow(arg0) {
   const cResult = c.c(28);
   ({ label, sublabel, icon, hint, disabled, isDestructive, onPress, labelColor, arrow } = arg0);
   const tmp5 = closure_10();
@@ -156,7 +156,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = tmp7;
   tmp6 = tmp7;
   const obj7 = { size, color: str };
-}) : ((arg0) => {
+}) : (function UserProfileFormRow(arg0) {
   ({ label, sublabel, hint, isDestructive, labelColor, arrow } = arg0);
   ({ icon, disabled, onPress } = arg0);
   if (tmp6Result3 === undefined) {
@@ -200,7 +200,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return closure_1_8(Pressables.PressableOpacity, obj);
 });
 ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileCardRows(children) {
   const cResult = c.c(5);
   children = children.children;
   if (cResult[0] !== children) {
@@ -230,7 +230,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
     }
     return tmp8;
   }
-}) : ((children) => {
+}) : (function UserProfileCardRows(children) {
   const obj = { children: null };
   const Children = noop.Children;
   obj.children = Children.map(children.children, (children, arg1) => closure_1_7(React.Fragment, { children }, arg1));
@@ -239,7 +239,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileCard.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileCard(arg0) {
   const cResult = c.c(21);
   if (cResult[0] !== arg0) {
     ({ title, titleLeadingIcon, titleIcon, titleStyle, trailingAction, children, style } = arg0);
@@ -333,7 +333,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[14] = tmp11;
   cResult[15] = tmp18Result2;
   tmp16 = tmp18Result2;
-}) : ((arg0) => {
+}) : (function UserProfileCard(arg0) {
   ({ title, trailingAction } = arg0);
   ({ titleLeadingIcon, titleIcon, titleStyle, children, style } = arg0);
   const merged = Object.assign(arg0, Object.assign({ title: 0, titleLeadingIcon: 0, titleIcon: 0, titleStyle: 0, trailingAction: 0, children: 0, style: 0 }));

@@ -1,20 +1,20 @@
-// === Module 11396: SpotifyActionCreators ===
+// === Module 11379: SpotifyActionCreators ===
 
-// Module 11396 (SpotifyActionCreators)
+// Module 11379 (SpotifyActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import GameUtilsDefault from "GameUtils" /* 8362 */;
-import SpotifyProtocolStore from "SpotifyProtocolStore" /* 11395 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import GameUtilsDefault from "GameUtils" /* 8860 */;
+import SpotifyProtocolStore from "SpotifyProtocolStore" /* 11378 */;
 
 const require = globalThis.__r;
 
 require = fn;
-function apiRequest(fn, arg1, arg2, arg3) {
+function apiRequest(fn, arg1, arg2, value) {
   closure_0 = fn;
   closure_1 = arg1;
-  obj = arg3;
+  obj = value;
   obj = {};
-  const merged = Object.assign(arg3);
+  const merged = Object.assign(value);
   obj.headers = { authorization: "Bearer " + arg2 };
   const obj2 = { authorization: "Bearer " + arg2 };
   const promise = fn(obj);
@@ -317,11 +317,11 @@ function apiRequest(fn, arg1, arg2, arg3) {
     return Promise.reject(error);
   });
 }
-const SpotifyConstants = fn(8026);
+const SpotifyConstants = fn(8434);
 ({ SPOTIFY_APP_PROTOCOL: closure_4, SpotifyEndpoints: hasOwnProperty } = SpotifyConstants);
 const Constants = fn(1085);
 ({ AbortCodes: metroRequire, Endpoints: closure_7, PlatformTypes: closure_8 } = Constants);
-const SpotifyAPI = { get: apiRequest.bind(null, fn(1282).HTTP.get), put: apiRequest.bind(null, fn(1282).HTTP.put) };
+const SpotifyAPI = { get: apiRequest.bind(null, fn(1294).HTTP.get), put: apiRequest.bind(null, fn(1294).HTTP.put) };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/spotify/SpotifyActionCreators.tsx");
 

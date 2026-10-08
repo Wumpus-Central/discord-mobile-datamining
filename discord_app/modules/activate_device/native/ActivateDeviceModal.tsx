@@ -1,7 +1,7 @@
-// === Module 13704: ActivateDeviceModal ===
+// === Module 13926: ActivateDeviceModal ===
 
-// Module 13704 (ActivateDeviceModal)
-import _modDef4815 from "module_4815" /* 4815 */;
+// Module 13926 (ActivateDeviceModal)
+import _modDef5009 from "module_5009" /* 5009 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activate_device/native/ActivateDeviceModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((userCode) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ActivateDeviceModal(userCode) {
   const cResult = userCode(576).c(5);
   userCode = userCode.userCode;
   if (cResult[0] !== userCode) {
@@ -25,16 +25,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userCode) => {
           return null;
         },
       headerLeft() {
-          const obj = { source: _modDef4815, onPress: onClose, accessibilityLabel: null };
+          const obj = { source: _modDef5009, onPress: onClose, accessibilityLabel: null };
           const intl = userCode(1126).intl;
           obj.accessibilityLabel = intl.string(userCode(1126).t.cpT0Cq);
-          return jsx(userCode(6890).HeaderActionButton, { source: _modDef4815, onPress: onClose, accessibilityLabel: null });
+          return jsx(userCode(7079).HeaderActionButton, { source: _modDef5009, onPress: onClose, accessibilityLabel: null });
         },
       headerRight() {
           return null;
         },
       render() {
-          return jsx(userCode(13705).ActivateDevice, { onClose, prefilledUserCode });
+          return jsx(userCode(13927).ActivateDevice, { onClose, prefilledUserCode });
         }
     };
     obj2[constants.ACTIVATE_DEVICE] = obj3;
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userCode) => {
   }
   if (cResult[3] !== tmp4) {
     const obj4 = { screens: tmp4, initialRouteName: constants.ACTIVATE_DEVICE, headerBackTitle: tmp6 };
-    const tmp11 = jsx(tmp(6503).Navigator, { screens: tmp4, initialRouteName: constants.ACTIVATE_DEVICE, headerBackTitle: tmp6 });
+    const tmp11 = jsx(tmp(6679).Navigator, { screens: tmp4, initialRouteName: constants.ACTIVATE_DEVICE, headerBackTitle: tmp6 });
     cResult[3] = tmp4;
     cResult[4] = tmp11;
     let tmp8 = tmp11;
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userCode) => {
     tmp8 = cResult[4];
   }
   return tmp8;
-}) : ((userCode) => {
+}) : (function ActivateDeviceModal(userCode) {
   userCode = userCode.userCode;
   const items = [userCode];
   const memo = noop.useMemo(() => {
@@ -77,16 +77,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userCode) => {
           return null;
         },
         headerLeft() {
-          const obj = { source: _modDef4815, onPress: onClose, accessibilityLabel: null };
+          const obj = { source: _modDef5009, onPress: onClose, accessibilityLabel: null };
           const intl = userCode(1126).intl;
           obj.accessibilityLabel = intl.string(userCode(1126).t.cpT0Cq);
-          return jsx(userCode(6890).HeaderActionButton, { source: _modDef4815, onPress: onClose, accessibilityLabel: null });
+          return jsx(userCode(7079).HeaderActionButton, { source: _modDef5009, onPress: onClose, accessibilityLabel: null });
         },
         headerRight() {
           return null;
         },
         render() {
-          return jsx(userCode(13705).ActivateDevice, { onClose, prefilledUserCode });
+          return jsx(userCode(13927).ActivateDevice, { onClose, prefilledUserCode });
         }
       }
     };
@@ -94,5 +94,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userCode) => {
   let obj = { screens: memo, initialRouteName: constants.ACTIVATE_DEVICE, headerBackTitle: null };
   let intl = userCode(1126).intl;
   obj.headerBackTitle = intl.string(userCode(1126).t["13/7kX"]);
-  return jsx(userCode(6503).Navigator, { screens: memo, initialRouteName: constants.ACTIVATE_DEVICE, headerBackTitle: null });
+  return jsx(userCode(6679).Navigator, { screens: memo, initialRouteName: constants.ACTIVATE_DEVICE, headerBackTitle: null });
 });

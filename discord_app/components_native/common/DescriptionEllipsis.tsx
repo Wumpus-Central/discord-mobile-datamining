@@ -1,6 +1,6 @@
-// === Module 12062: DescriptionEllipsis ===
+// === Module 12135: DescriptionEllipsis ===
 
-// Module 12062 (DescriptionEllipsis)
+// Module 12135 (DescriptionEllipsis)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { topicEllipsis: null, topicEllipsisDot: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, justifyContent: "center", alignItems: "center", flexDirection: "row", borderRadius: nativeDefault.radii.xs, marginTop: 4, height: 12, width: 24 };
 obj2.topicEllipsis = size;
@@ -20,7 +20,7 @@ const ReactCompilerGating = fn(558);
 size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/DescriptionEllipsis.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function DescriptionEllipsis(arg0) {
   const cResult = c.c(17);
   ({ style, dotStyle } = arg0);
   const tmp2 = closure_5();
@@ -93,7 +93,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = tmp2.topicEllipsis;
   cResult[2] = items4;
   tmp3 = items4;
-}) : ((dotStyle) => {
+}) : (function DescriptionEllipsis(dotStyle) {
   dotStyle = dotStyle.dotStyle;
   const tmp = closure_5();
   const obj = { style: null, children: null };

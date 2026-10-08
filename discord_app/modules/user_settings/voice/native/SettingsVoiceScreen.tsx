@@ -1,21 +1,21 @@
-// === Module 15080: SettingsVoiceScreen ===
+// === Module 15342: SettingsVoiceScreen ===
 
-// Module 15080 (SettingsVoiceScreen)
+// Module 15342 (SettingsVoiceScreen)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import shared from "shared" /* 4735 */;
-import useThemeDefault from "useTheme" /* 4797 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6147 */;
-import NoiseCancellationUtils from "NoiseCancellationUtils" /* 9687 */;
-import KrispLogo from "KrispLogo" /* 9690 */;
-import _modDef9691 from "module_9691" /* 9691 */;
-import _modDef9692 from "module_9692" /* 9692 */;
-import SettingBuilders from "SettingBuilders" /* 11142 */;
-import SettingLayoutDefault from "SettingLayout" /* 14515 */;
+import shared from "shared" /* 4929 */;
+import useThemeDefault from "useTheme" /* 4991 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6326 */;
+import NoiseCancellationUtils from "NoiseCancellationUtils" /* 10876 */;
+import KrispLogo from "KrispLogo" /* 10879 */;
+import _modDef10880 from "module_10880" /* 10880 */;
+import _modDef10881 from "module_10881" /* 10881 */;
+import SettingBuilders from "SettingBuilders" /* 11262 */;
+import SettingLayoutDefault from "SettingLayout" /* 14775 */;
 import noop from "module_19" /* 19 */;
-import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import HelpdeskUtils from "HelpdeskUtils" /* 2115 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
+import HelpdeskUtils from "HelpdeskUtils" /* 2127 */;
 
 require = fn;
 function getVoiceSettings() {
@@ -56,7 +56,7 @@ function getVoiceSettings() {
   const obj9 = { children: null };
   const items6 = [options(closure_15, {}), options(closure_14, {})];
   obj9.children = items6;
-  obj8.subLabel = v65535(closure_1_11, obj9);
+  obj8.subLabel = collapsed(closure_1_11, obj9);
   items1[4] = obj8;
   const obj10 = { label: null, settings: null };
   const intl7 = util.intl;
@@ -85,22 +85,22 @@ function getVoiceSettings() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
-const MobileUserSettings = fn(7645).MobileUserSettings;
+const MobileUserSettings = fn(7966).MobileUserSettings;
 const HelpdeskArticles = fn(1085).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 const guideURL = "" + HelpdeskUtils.getArticleURL(HelpdeskArticles.VOICE_VIDEO_TROUBLESHOOTING) + "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm";
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_13 = createStyles.createStyles({ krisp: { marginTop: 8, flexDirection: "row", alignItems: "center" }, logo: { marginRight: 8, height: 30, width: 67 } });
 let ReactCompilerGating = fn(558);
-let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function KrispLogo() {
   const cResult = c.c(9);
   const tmp4 = closure_13();
   const tmp6 = useThemeDefault();
   if (obj2.isThemeLight(tmp6)) {
-    let tmp5Result = _modDef9691;
+    let tmp5Result = _modDef10880;
   } else {
-    tmp5Result = _modDef9692;
+    tmp5Result = _modDef10881;
   }
   ({ krisp, logo } = tmp4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -146,7 +146,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const obj5 = { style: krisp, children: null };
     const items = [tmp10, tmp14];
     obj5.children = items;
-    const tmp20 = v65535(React4, obj5);
+    const tmp20 = collapsed(React4, obj5);
     cResult[6] = tmp4.krisp;
     cResult[7] = tmp10;
     cResult[8] = tmp20;
@@ -158,13 +158,13 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[3] = tmp11;
   tmp10 = tmp11;
   obj2 = shared;
-}) : (() => {
+}) : (function KrispLogo() {
   const tmp = closure_13();
   const tmp4 = useThemeDefault();
   if (obj.isThemeLight(tmp4)) {
-    let tmp2Result = _modDef9691;
+    let tmp2Result = _modDef10880;
   } else {
-    tmp2Result = _modDef9692;
+    tmp2Result = _modDef10881;
   }
   const obj2 = { style: tmp.krisp, children: null };
   const obj3 = { style: tmp.logo, source: tmp2Result, accessibilityLabel: null };
@@ -181,10 +181,10 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   obj4.children = options(Text_Text.Text, obj5);
   items[1] = options(LegacyBaseButton.LegacyPressable, obj4);
   obj2.children = items;
-  return v65535(React4, obj2);
+  return collapsed(React4, obj2);
 });
 ReactCompilerGating = fn(558);
-let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function SystemProcessingSubLabel() {
   const cResult = c.c(2);
   const noiseCancellationDeferredToSystem = NoiseCancellationUtils.useNoiseCancellationDeferredToSystem();
   if (cResult[0] !== noiseCancellationDeferredToSystem) {
@@ -208,7 +208,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp5 = cResult[1];
   }
   return tmp5;
-}) : (() => {
+}) : (function SystemProcessingSubLabel() {
   let tmp3 = null;
   if (obj.useNoiseCancellationDeferredToSystem()) {
     const obj2 = { variant: "text-sm/medium", children: null };
@@ -228,7 +228,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/voice/native/SettingsVoiceScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SettingsVoiceScreen() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { sections: getVoiceSettings() };
@@ -248,7 +248,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp7 = cResult[1];
   }
   return tmp7;
-}) : (() => {
+}) : (function SettingsVoiceScreen() {
   const node = noop.useMemo(() => {
     const obj = SettingBuilders;
     return obj.createList({ sections: getVoiceSettings() });

@@ -1,8 +1,8 @@
-// === Module 16723: useConjurePublishedAppName ===
+// === Module 16996: useConjurePublishedAppName ===
 
-// Module 16723 (useConjurePublishedAppName)
-import ApplicationStore from "ApplicationStore" /* 5124 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 8734 */;
+// Module 16996 (useConjurePublishedAppName)
+import ApplicationStore from "ApplicationStore" /* 5436 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 11251 */;
 
 const require = globalThis.__r;
 
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/publish/useConjurePublishedAppName.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConjurePublishedAppName(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp7);
-}) : ((arg0) => {
+}) : (function useConjurePublishedAppName(arg0) {
   _require = arg0;
   const items = [ConjureProjectStore, ApplicationStore];
   return require("initialize").useStateFromStores(items, () => {

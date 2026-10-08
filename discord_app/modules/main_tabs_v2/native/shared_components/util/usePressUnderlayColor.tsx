@@ -1,20 +1,20 @@
-// === Module 17431: usePressUnderlayColor ===
+// === Module 17713: usePressUnderlayColor ===
 
-// Module 17431 (usePressUnderlayColor)
+// Module 17713 (usePressUnderlayColor)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4586 */;
-import ColorUtils from "ColorUtils" /* 4733 */;
-import shared from "shared" /* 4735 */;
-import useThemeDefault from "useTheme" /* 4797 */;
-import ChannelEmojiConstants from "ChannelEmojiConstants" /* 17432 */;
+import useToken from "useToken" /* 4778 */;
+import ColorUtils from "ColorUtils" /* 4927 */;
+import shared from "shared" /* 4929 */;
+import useThemeDefault from "useTheme" /* 4991 */;
+import ChannelEmojiConstants from "ChannelEmojiConstants" /* 17714 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 let closure_3 = ChannelEmojiConstants.DEFAULT_CHANNEL_EMOJI_BACKGROUND_COLOR;
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/util/usePressUnderlayColor.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arr) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePressUnderlayColor(arr) {
   const cResult = c.c(4);
   const tmp4 = useThemeDefault();
   const token = useToken.useToken(nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE);
@@ -48,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arr) => {
   cResult[2] = tmp4;
   cResult[3] = hexWithOpacityResult;
   tmp6 = hexWithOpacityResult;
-}) : ((arr) => {
+}) : (function usePressUnderlayColor(arr) {
   const tmp2 = useThemeDefault();
   const token = useToken.useToken(nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE);
   let substr;

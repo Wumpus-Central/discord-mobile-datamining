@@ -1,19 +1,19 @@
-// === Module 8928: FormDivider ===
+// === Module 8559: FormDivider ===
 
-// Module 8928 (FormDivider)
+// Module 8559 (FormDivider)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 4595 */;
-import ColorUtils from "ColorUtils" /* 4733 */;
-import RedesignCompat from "RedesignCompat" /* 6080 */;
-import useProfileThemeValues from "useProfileThemeValues" /* 6690 */;
+import native from "native" /* 4787 */;
+import ColorUtils from "ColorUtils" /* 4927 */;
+import RedesignCompat from "RedesignCompat" /* 6266 */;
+import useProfileThemeValues from "useProfileThemeValues" /* 6867 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty, Platform } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles(() => {
   const obj = { divider: {}, dividerOuter: { marginLeft: 0, height: hasOwnProperty.hairlineWidth, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginTop: -1 * hasOwnProperty.hairlineWidth }, dividerHasIcon: { marginLeft: 56 } };
   return obj;
@@ -24,7 +24,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormDivider.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function Divider(arg0) {
   const cResult = c.c(10);
   ({ outer, iconPush, style } = arg0);
   let dividerHasIcon = undefined !== iconPush && iconPush;
@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp16 = tmp19;
   }
   const tmpResult3 = useProfileThemeValues;
-}) : ((arg0) => {
+}) : (function Divider(arg0) {
   let flag = arg0.outer;
   if (flag === undefined) {
     flag = false;

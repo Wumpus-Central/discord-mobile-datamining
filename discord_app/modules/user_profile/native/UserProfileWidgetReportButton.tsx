@@ -1,12 +1,12 @@
-// === Module 8347: UserProfileWidgetReportButton ===
+// === Module 13097: UserProfileWidgetReportButton ===
 
-// Module 8347 (UserProfileWidgetReportButton)
+// Module 13097 (UserProfileWidgetReportButton)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import MoreHorizontalIcon from "MoreHorizontalIcon" /* 7588 */;
-import ContextMenu from "ContextMenu" /* 7590 */;
-import FlagIcon from "FlagIcon" /* 8348 */;
-import showReportModalForUserWidget from "showReportModalForUserWidget" /* 8350 */;
+import MoreHorizontalIcon from "MoreHorizontalIcon" /* 9180 */;
+import ContextMenu from "ContextMenu" /* 9297 */;
+import FlagIcon from "FlagIcon" /* 9507 */;
+import showReportModalForUserWidget from "showReportModalForUserWidget" /* 13098 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,7 +19,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileWidgetReportButton.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileWidgetReportButton(userId) {
   const cResult = userId(576).c(7);
   userId = userId.userId;
   const widget = userId.widget;
@@ -44,7 +44,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
         obj.accessibilityRole = "button";
         const intl = userId(1126).intl;
         obj.accessibilityLabel = intl.string(userId(1126).t.xpSHSk);
-        obj.children = jsx(userId(7588).MoreHorizontalIcon, { size: "sm", color: widget(587).colors.TEXT_MUTED });
+        obj.children = jsx(userId(9180).MoreHorizontalIcon, { size: "sm", color: widget(587).colors.TEXT_MUTED });
         return <Pressable ref={ref.ref} />;
       };
       cResult[4] = fn;
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
     }
     if (cResult[5] !== tmp6) {
       const obj2 = { items: tmp6, children: tmp7 };
-      const tmp10 = jsx(tmp(7590).ContextMenu, { items: tmp6, children: tmp7 });
+      const tmp10 = jsx(tmp(9297).ContextMenu, { items: tmp6, children: tmp7 });
       cResult[5] = tmp6;
       cResult[6] = tmp10;
       let tmp8 = tmp10;
@@ -68,7 +68,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
     {
       label: first,
       variant: "destructive",
-      IconComponent: userId(8348).FlagIcon,
+      IconComponent: userId(9507).FlagIcon,
       action() {
         return showReportModalForUserWidget.showReportModalForUserWidget(userId, widget);
       }
@@ -81,12 +81,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   const obj3 = {
     label: first,
     variant: "destructive",
-    IconComponent: userId(8348).FlagIcon,
+    IconComponent: userId(9507).FlagIcon,
     action() {
       return showReportModalForUserWidget.showReportModalForUserWidget(userId, widget);
     }
   };
-}) : ((arg0) => {
+}) : (function UserProfileWidgetReportButton(arg0) {
   ({ userId: require, widget: importDefault } = arg0);
   let obj = { label: null, variant: "destructive", IconComponent: null, action: null };
   let intl = util.intl;

@@ -1,20 +1,20 @@
-// === Module 16814: SearchBarActivityIcon ===
+// === Module 17093: SearchBarActivityIcon ===
 
-// Module 16814 (SearchBarActivityIcon)
+// Module 17093 (SearchBarActivityIcon)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import timing from "timing" /* 4897 */;
-import SearchUtils from "SearchUtils" /* 11987 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import timing from "timing" /* 5091 */;
+import SearchUtils from "SearchUtils" /* 12060 */;
 import noop from "module_19" /* 19 */;
-import SearchMessageStore from "SearchMessageStore" /* 6794 */;
-import SearchQueryStore from "SearchQueryStore" /* 11994 */;
+import SearchMessageStore from "SearchMessageStore" /* 6067 */;
+import SearchQueryStore from "SearchQueryStore" /* 12067 */;
 
 require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
-let closure_7 = fn(7524).SEARCH_MESSAGE_TAB_SENTINEL;
+let closure_7 = fn(9247).SEARCH_MESSAGE_TAB_SENTINEL;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { spinnerColor: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT }, spinner: { width: 18, height: 18, alignItems: "center", justifyContent: "center", position: "absolute" }, icon: { marginLeft: 12, marginRight: 4 } };
 let closure_11 = createStyles.createStyles(obj);
 let obj4 = { START: 0, [0]: "START", END: 1, [1]: "END" };
@@ -29,7 +29,7 @@ let obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/layout/SearchBarActivityIcon.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function SearchBarActivityIcon(searchContext) {
   const cResult = searchContext(sharedValue[9]).c(25);
   searchContext = searchContext.searchContext;
   const tmp4 = closure_11();
@@ -232,7 +232,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((search
   tmp13 = items4;
   tmp12 = fn2;
   const tmpResult4 = searchContext(sharedValue[12]);
-}) : ((searchContext) => {
+}) : (function SearchBarActivityIcon(searchContext) {
   searchContext = searchContext.searchContext;
   let sharedValue;
   const tmp = closure_11();

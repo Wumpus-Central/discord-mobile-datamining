@@ -1,8 +1,8 @@
-// === Module 9791: useCreateThreadViewProps ===
+// === Module 10356: useCreateThreadViewProps ===
 
-// Module 9791 (useCreateThreadViewProps)
-import useGetThreadDraftSettingsDefault from "useGetThreadDraftSettings" /* 9792 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
+// Module 10356 (useCreateThreadViewProps)
+import useGetThreadDraftSettingsDefault from "useGetThreadDraftSettings" /* 9646 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
 
 const require = globalThis.__r;
 
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/threads/native/useCreateThreadViewProps.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCreateThreadViewProps(arg0) {
   const cResult = require("c").c(8);
   const tmp4 = useGetThreadDraftSettingsDefault(arg0);
   _require = tmp4;
@@ -31,7 +31,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     if (tmp4 != null) {
       parentChannelId1 = tmp4.parentChannelId;
     }
-    const fn = function u() {
+    const fn = function s() {
       parentChannelId = undefined;
       if (parentChannelId != null) {
         parentChannelId = parentChannelId.parentChannelId;
@@ -67,7 +67,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
   }
   return tmp12;
-}) : ((arg0) => {
+}) : (function useCreateThreadViewProps(arg0) {
   const tmp = useGetThreadDraftSettingsDefault(arg0);
   _require = tmp;
   const items = [ChannelStore];

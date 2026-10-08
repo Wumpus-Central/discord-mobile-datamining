@@ -1,11 +1,11 @@
-// === Module 12801: useMediaViewerPanGesture ===
+// === Module 12948: useMediaViewerPanGesture ===
 
-// Module 12801 (useMediaViewerPanGesture)
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import spring from "spring" /* 5604 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6147 */;
-import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 7946 */;
-import useVideoControls from "useVideoControls" /* 7947 */;
+// Module 12948 (useMediaViewerPanGesture)
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import spring from "spring" /* 5374 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6326 */;
+import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8364 */;
+import useVideoControls from "useVideoControls" /* 8365 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -24,7 +24,7 @@ let closure_12 = { code: "function useMediaViewerPanGestureTsx8(_,manager){const
 let closure_13 = { code: "function useMediaViewerPanGestureTsx9({velocityY:velocityY,translationY:translationY}){const{translatePos,start,velocity}=this.__closure;translatePos.set(translationY+start.get().y);velocity.set(velocityY);}" };
 let closure_14 = { code: "function useMediaViewerPanGestureTsx10(){const{start,translatePos,isInteracting}=this.__closure;start.set({x:0,y:translatePos.get()});isInteracting.set(true);}" };
 const ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, swipeVelocityThreshold, arg2) => {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMediaViewerPanGestureConfig(arg0, swipeVelocityThreshold, arg2) {
   _require = arg0;
   closure_1 = arg2;
   const cResult = require("c").c(17);
@@ -41,7 +41,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, swipeVelocityT
   const obj6 = require("ReanimatedRexport");
   const sharedValue5 = require("ReanimatedRexport").useSharedValue(true);
   if (cResult[0] !== arg2) {
-    let fn = function c() {
+    let fn = function u() {
       useVideoControls.tryPauseCurrentVideo();
       if (closure_1 != null) {
         closure_1();
@@ -96,33 +96,38 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, swipeVelocityT
       }
     }
   }
-  const fn2 = function w() {
-    const result = sharedValue.set(true);
-    if (sharedValue3.get() < 0) {
-      let tmp2 = -closure_0;
-    } else {
-      tmp2 = closure_0;
+  class S {
+    constructor() {
+      result = closure_2.set(true);
+      obj = closure_4;
+      if (closure_4.get() < 0) {
+        tmp3 = closure_0;
+        tmp2 = -closure_0;
+      } else {
+        tmp2 = closure_0;
+      }
+      obj2 = closure_0(closure_2[6]);
+      obj1 = { velocity: obj.get() };
+      merged = Object.assign(closure_4);
+      fn = function o() {
+        closure_0(sharedValue[3]).runOnJS(closure_1_5)();
+      };
+      obj5 = { runOnJS: closure_0(closure_2[3]).runOnJS, handleClose: closure_5 };
+      fn.__closure = obj5;
+      fn.__workletHash = 7033730772994;
+      fn.__initData = closure_5;
+      result1 = closure_3.set(obj2.withSpring(tmp2, obj1, "respect-motion-settings", fn));
+      return;
     }
-    const obj2 = spring;
-    const merged = Object.assign(closure_4);
-    const fn = function o() {
-      closure_0(sharedValue[3]).runOnJS(closure_1_5)();
-    };
-    const obj3 = { velocity: sharedValue3.get() };
-    fn.__closure = { runOnJS: ReanimatedRexport.runOnJS, handleClose: __initData };
-    fn.__workletHash = 7033730772994;
-    fn.__initData = __initData;
-    const result1 = sharedValue2.set(obj2.withSpring(tmp2, obj3, "respect-motion-settings", fn));
-    const obj4 = { runOnJS: ReanimatedRexport.runOnJS, handleClose: __initData };
-  };
+  }
   cResult[2] = arg0;
   cResult[3] = tmp8;
   cResult[4] = sharedValue;
   cResult[5] = sharedValue2;
   cResult[6] = sharedValue3;
-  cResult[7] = fn2;
-  tmp9 = fn2;
-}) : ((arg0, swipeVelocityThreshold, arg2) => {
+  cResult[7] = S;
+  tmp9 = S;
+}) : (function useMediaViewerPanGestureConfig(arg0, swipeVelocityThreshold, arg2) {
   _require = arg0;
   dependencyMap = arg2;
   const sharedValue = require("ReanimatedRexport").useSharedValue(false);
@@ -172,7 +177,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/useMediaViewerPanGesture.tsx");
 
 export const useMediaViewerPanGestureConfig = tmp2;
-export const useMediaViewerPanGesture = ReactCompilerGating.isReactCompilerEnabled() ? ((swipeVelocityThreshold, enabled) => {
+export const useMediaViewerPanGesture = ReactCompilerGating.isReactCompilerEnabled() ? (function useMediaViewerPanGesture(swipeVelocityThreshold, enabled) {
   _require = enabled;
   const cResult = require("c").c(12);
   swipeVelocityThreshold = swipeVelocityThreshold.swipeVelocityThreshold;
@@ -301,7 +306,7 @@ export const useMediaViewerPanGesture = ReactCompilerGating.isReactCompilerEnabl
   cResult[6] = velocity;
   cResult[7] = fn;
   tmp5 = fn;
-}) : ((swipeVelocityThreshold, enabled) => {
+}) : (function useMediaViewerPanGesture(swipeVelocityThreshold, enabled) {
   swipeVelocityThreshold = swipeVelocityThreshold.swipeVelocityThreshold;
   const velocity = swipeVelocityThreshold.velocity;
   const isInteracting = swipeVelocityThreshold.isInteracting;
@@ -315,7 +320,7 @@ export const useMediaViewerPanGesture = ReactCompilerGating.isReactCompilerEnabl
     const PanResult = Gesture.Pan();
     const maxPointersResult = Gesture.Pan().maxPointers(1);
     const activeOffsetYResult = Gesture.Pan().maxPointers(1).activeOffsetY([-10, 10]);
-    class V {
+    class G {
       constructor() {
         point = { x: 0, y: closure_1_3.get() };
         result = closure_1_4.set(point);
@@ -323,9 +328,9 @@ export const useMediaViewerPanGesture = ReactCompilerGating.isReactCompilerEnabl
         return;
       }
     }
-    V.__closure = { start, translatePos, isInteracting };
-    V.__workletHash = 8081304250737;
-    V.__initData = __initData4;
+    G.__closure = { start, translatePos, isInteracting };
+    G.__workletHash = 8081304250737;
+    G.__initData = __initData4;
     const failOffsetXResult = Gesture.Pan().maxPointers(1).activeOffsetY([-10, 10]).failOffsetX([-10, 10]);
     const obj = { start, translatePos, isInteracting };
     class P {
@@ -340,7 +345,7 @@ export const useMediaViewerPanGesture = ReactCompilerGating.isReactCompilerEnabl
     P.__workletHash = 11709907171278;
     P.__initData = __initData3;
     const obj2 = { translatePos, start, velocity };
-    const onStartResult = Gesture.Pan().maxPointers(1).activeOffsetY([-10, 10]).failOffsetX([-10, 10]).onStart(V);
+    const onStartResult = Gesture.Pan().maxPointers(1).activeOffsetY([-10, 10]).failOffsetX([-10, 10]).onStart(G);
     const fn = function _(arg0, fail) {
       if (!enabled.get()) {
         fail.fail();
@@ -350,7 +355,7 @@ export const useMediaViewerPanGesture = ReactCompilerGating.isReactCompilerEnabl
     fn.__workletHash = 982618860329;
     fn.__initData = __initData2;
     let obj3 = { enabled };
-    const onUpdateResult = Gesture.Pan().maxPointers(1).activeOffsetY([-10, 10]).failOffsetX([-10, 10]).onStart(V).onUpdate(P);
+    const onUpdateResult = Gesture.Pan().maxPointers(1).activeOffsetY([-10, 10]).failOffsetX([-10, 10]).onStart(G).onUpdate(P);
     const fn2 = function t() {
       const result = closure_1_2.set(false);
       if (Math.abs(velocity.get()) > closure_1_0) {
@@ -363,7 +368,7 @@ export const useMediaViewerPanGesture = ReactCompilerGating.isReactCompilerEnabl
         const obj3 = swipeVelocityThreshold(isInteracting[6]);
       }
     };
-    const onTouchesDownResult = Gesture.Pan().maxPointers(1).activeOffsetY([-10, 10]).failOffsetX([-10, 10]).onStart(V).onUpdate(P).onTouchesDown(fn);
+    const onTouchesDownResult = Gesture.Pan().maxPointers(1).activeOffsetY([-10, 10]).failOffsetX([-10, 10]).onStart(G).onUpdate(P).onTouchesDown(fn);
     fn2.__closure = { isInteracting, velocity, swipeVelocityThreshold, runOnJS: ReanimatedRexport.runOnJS, dismiss, translatePos, withSpring: spring.withSpring, SPRING_CONFIG };
     fn2.__workletHash = 1446317888277;
     fn2.__initData = __initData;

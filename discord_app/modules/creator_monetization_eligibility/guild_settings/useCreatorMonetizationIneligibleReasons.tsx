@@ -1,14 +1,14 @@
-// === Module 17958: useCreatorMonetizationIneligibleReasons ===
+// === Module 18245: useCreatorMonetizationIneligibleReasons ===
 
-// Module 17958 (useCreatorMonetizationIneligibleReasons)
+// Module 18245 (useCreatorMonetizationIneligibleReasons)
 import c from "c" /* 576 */;
-import useCreatorMonetizationEligibilityItemsDefault from "useCreatorMonetizationEligibilityItems" /* 17930 */;
+import useCreatorMonetizationEligibilityItemsDefault from "useCreatorMonetizationEligibilityItems" /* 18217 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/useCreatorMonetizationIneligibleReasons.tsx");
 
-export const useCreatorMonetizationIneligibleReasons = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useCreatorMonetizationIneligibleReasons = ReactCompilerGating.isReactCompilerEnabled() ? (function useCreatorMonetizationIneligibleReasons(arg0) {
   const cResult = c.c(2);
   const obj2 = useCreatorMonetizationEligibilityItemsDefault(arg0);
   if (cResult[0] !== obj2) {
@@ -33,7 +33,7 @@ export const useCreatorMonetizationIneligibleReasons = ReactCompilerGating.isRea
     tmp2 = null;
   }
   return tmp2;
-}) : ((arg0) => {
+}) : (function useCreatorMonetizationIneligibleReasons(arg0) {
   const obj = useCreatorMonetizationEligibilityItemsDefault(arg0);
   let flatMapResult;
   if (obj != null) {

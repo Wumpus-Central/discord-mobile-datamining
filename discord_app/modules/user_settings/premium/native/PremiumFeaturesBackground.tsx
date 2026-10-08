@@ -1,18 +1,18 @@
-// === Module 8520: PremiumFeaturesBackground ===
+// === Module 9004: PremiumFeaturesBackground ===
 
-// Module 8520 (PremiumFeaturesBackground)
+// Module 9004 (PremiumFeaturesBackground)
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
-import LinearGradientDefault from "LinearGradient" /* 5612 */;
+import LinearGradientDefault from "LinearGradient" /* 5387 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 let closure_3 = ["premiumType", "opacity", "children", "style"];
-const Gradients = fn(6951).Gradients;
-const PremiumTypes = fn(1379).PremiumTypes;
+const Gradients = fn(7140).Gradients;
+const PremiumTypes = fn(1391).PremiumTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { cardContainer: { display: "flex", borderRadius: nativeDefault.radii.lg, flexDirection: "column", justifyContent: "space-between", overflow: "hidden" } };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -20,7 +20,7 @@ const obj3 = { display: "flex", borderRadius: nativeDefault.radii.lg, flexDirect
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesBackground.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumFeaturesBackground(arg0) {
   const cResult = num7(576).c(17);
   if (cResult[0] !== arg0) {
     ({ premiumType, opacity, children, style } = arg0);
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[8] = mapped;
   tmp15 = mapped;
   let obj = num7(576);
-}) : ((opacity) => {
+}) : (function PremiumFeaturesBackground(opacity) {
   let num = opacity.opacity;
   if (num === undefined) {
     num = 1;

@@ -1,6 +1,6 @@
-// === Module 10628: ActivityStatusIcon ===
+// === Module 10226: ActivityStatusIcon ===
 
-// Module 10628 (ActivityStatusIcon)
+// Module 10226 (ActivityStatusIcon)
 import c from "c" /* 576 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -8,13 +8,13 @@ import noop from "module_19" /* 19 */;
 require = fn;
 let closure_2 = ["icon", "style"];
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles({ icon: { flexShrink: 0 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activity_status/native/ActivityStatusIcon.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ActivityStatusIcon(arg0) {
   const cResult = c.c(11);
   if (cResult[0] !== arg0) {
     ({ icon, style } = arg0);
@@ -58,7 +58,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = tmp8.icon;
   cResult[6] = items;
   tmp9 = items;
-}) : ((arg0) => {
+}) : (function ActivityStatusIcon(arg0) {
   ({ icon, style } = arg0);
   const merged = Object.assign(arg0, Object.assign({ icon: 0, style: 0 }));
   const obj = { size: "xxs", style: null, color: "status-positive" };

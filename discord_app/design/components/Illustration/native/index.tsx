@@ -1,9 +1,9 @@
-// === Module 7916: ? ===
+// === Module 8335: ? ===
 
-// Module 7916
+// Module 8335
 import c from "c" /* 576 */;
 import Constants from "Constants" /* 1085 */;
-import native from "native" /* 4595 */;
+import native from "native" /* 4787 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -33,7 +33,7 @@ export const getIllustrationSource = function getIllustrationSource(theme, light
   }
   return lightResult;
 };
-export const useIllustrationSource = ReactCompilerGating.isReactCompilerEnabled() ? ((fn) => {
+export const useIllustrationSource = ReactCompilerGating.isReactCompilerEnabled() ? (function useIllustrationSource(fn) {
   const cResult = c.c(3);
   const theme = native.useThemeContext().theme;
   if (cResult[0] === fn) {
@@ -47,4 +47,6 @@ export const useIllustrationSource = ReactCompilerGating.isReactCompilerEnabled(
   cResult[1] = theme;
   cResult[2] = tmp3;
   tmp2 = tmp3;
-}) : ((fn) => fn(native.useThemeContext().theme));
+}) : (function useIllustrationSource(fn) {
+  return fn(native.useThemeContext().theme);
+});

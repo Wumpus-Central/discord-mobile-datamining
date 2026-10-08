@@ -1,6 +1,6 @@
-// === Module 8395: useGameProfileHeroBackgroundURL ===
+// === Module 8893: useGameProfileHeroBackgroundURL ===
 
-// Module 8395 (useGameProfileHeroBackgroundURL)
+// Module 8893 (useGameProfileHeroBackgroundURL)
 import c from "c" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -10,7 +10,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileHeroBackgroundURL.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((screenshotUrls, size) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGameProfileHeroBackgroundURL(screenshotUrls, size) {
   const cResult = c.c(9);
   let screenshotURL = globalThis;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -60,7 +60,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((screenshotUrls, 
   cResult[2] = screenshotUrls;
   cResult[3] = bannerURL;
   tmp5 = bannerURL;
-}) : ((arg0, arg1) => {
+}) : (function useGameProfileHeroBackgroundURL(arg0, arg1) {
   let bannerURL = arg0;
   closure_1 = arg1;
   const first = _slicedToArray(noop.useState(() => Math.random()), 1)[0];

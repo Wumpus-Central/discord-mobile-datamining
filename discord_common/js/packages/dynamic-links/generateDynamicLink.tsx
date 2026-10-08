@@ -1,9 +1,9 @@
-// === Module 12755: generateDynamicLink ===
+// === Module 12903: generateDynamicLink ===
 
-// Module 12755 (generateDynamicLink)
-import v1 from "v1" /* 1266 */;
-import formatDefault from "format" /* 1351 */;
-import getDescriptionDefault from "getDescription" /* 12756 */;
+// Module 12903 (generateDynamicLink)
+import v1 from "v1" /* 1278 */;
+import formatDefault from "format" /* 1363 */;
+import getDescriptionDefault from "getDescription" /* 12904 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 

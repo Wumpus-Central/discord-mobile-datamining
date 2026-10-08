@@ -1,18 +1,18 @@
-// === Module 12229: GuildPowerupsNotificationContainer ===
+// === Module 12308: GuildPowerupsNotificationContainer ===
 
-// Module 12229 (GuildPowerupsNotificationContainer)
+// Module 12308 (GuildPowerupsNotificationContainer)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import _modDef2553 from "module_2553" /* 2553 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6477 */;
-import useGuildPowerupTier3OverrideConfigDefault from "useGuildPowerupTier3OverrideConfig" /* 12230 */;
-import useGuildPowerupExpiringNotificationsConfigDefault from "useGuildPowerupExpiringNotificationsConfig" /* 12231 */;
-import GuildPowerupsWarningDefault from "GuildPowerupsWarning" /* 12234 */;
+import _modDef2597 from "module_2597" /* 2597 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6655 */;
+import useGuildPowerupTier3OverrideConfigDefault from "useGuildPowerupTier3OverrideConfig" /* 12309 */;
+import useGuildPowerupExpiringNotificationsConfigDefault from "useGuildPowerupExpiringNotificationsConfig" /* 12310 */;
+import GuildPowerupsWarningDefault from "GuildPowerupsWarning" /* 12313 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
+import createStyles from "createStyles" /* 5090 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -23,7 +23,7 @@ let obj2 = { gap: nativeDefault.space.PX_12, margin: nativeDefault.space.PX_16 }
 obj.staffContainer = { padding: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: nativeDefault.radii.md, borderWidth: 1, borderStyle: "solid", borderColor: nativeDefault.colors.BORDER_SUBTLE };
 let closure_6 = createStyles.createStyles(obj);
 let ReactCompilerGating = ReactCompilerGating_mod;
-let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((text) => {
+let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function Tier3OverrideNotice(text) {
   const cResult = c.c(6);
   text = text.text;
   const tmp4 = closure_6();
@@ -54,7 +54,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((text) => {
   cResult[2] = tmp6;
   tmp5 = tmp6;
   obj2 = ManaTypeConsolidationExperiment;
-}) : ((children) => {
+}) : (function Tier3OverrideNotice(children) {
   const tmp = closure_6();
   const obj2 = { style: tmp.staffContainer, children: null };
   const manaTypeConsolidationExperiment = ManaTypeConsolidationExperiment.useManaTypeConsolidationExperiment("Tier3OverrideNotice");
@@ -69,7 +69,7 @@ let ReactCompilerGating = ReactCompilerGating_mod;
 let obj3 = { padding: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: nativeDefault.radii.md, borderWidth: 1, borderStyle: "solid", borderColor: nativeDefault.colors.BORDER_SUBTLE };
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsNotificationContainer.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPowerupsNotificationContainer(guildId) {
   const cResult = c.c(17);
   guildId = guildId.guildId;
   const tmp4 = closure_6();
@@ -91,7 +91,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
-    const stringResult = intl.string(_modDef2553["3FRirU"]);
+    const stringResult = intl.string(_modDef2597["3FRirU"]);
     cResult[0] = stringResult;
     let first = stringResult;
   } else {
@@ -162,7 +162,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   cResult[2] = str2;
   cResult[3] = tmp13;
   tmp12 = tmp13;
-}) : ((guildId) => {
+}) : (function GuildPowerupsNotificationContainer(guildId) {
   guildId = guildId.guildId;
   const tmp4 = useGuildPowerupTier3OverrideConfigDefault(guildId);
   const tmp5 = useGuildPowerupExpiringNotificationsConfigDefault(guildId);
@@ -181,7 +181,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     }
     obj3.variant = str2;
     const intl = util.intl;
-    obj3.children = intl.string(_modDef2553["3FRirU"]);
+    obj3.children = intl.string(_modDef2597["3FRirU"]);
     const items = [React4(Text_Text.Text, obj3), , ];
     let shouldShow = tmp4.shouldShow;
     if (shouldShow) {

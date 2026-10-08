@@ -1,28 +1,28 @@
-// === Module 9751: UserSummaryItem ===
+// === Module 10952: UserSummaryItem ===
 
-// Module 9751 (UserSummaryItem)
+// Module 10952 (UserSummaryItem)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 2112 */;
+import GuildMemberStore from "GuildMemberStore" /* 2124 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { flexDirection: "row" }, names: { marginStart: 4, paddingRight: 1 }, namesLegacy: { marginStart: 4, paddingRight: 1, color: nativeDefault.colors.TEXT_SUBTLE }, plusCountContainer: null, cutout: null };
 let obj3 = { marginStart: 4, paddingRight: 1, color: nativeDefault.colors.TEXT_SUBTLE };
 obj2.plusCountContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, marginStart: 2, alignItems: "center" };
 obj2.cutout = { marginRight: -4 };
 let closure_6 = createStyles.createStyles(obj2);
-let obj5 = { direction: fn(1188).CutoutDirection.RIGHT };
+let obj5 = { direction: fn(1200).CutoutDirection.RIGHT };
 const ReactCompilerGating = fn(558);
 let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, marginStart: 2, alignItems: "center" };
 let size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/UserSummaryItem.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSummaryItem(arg0) {
   const cResult = require("c").c(63);
   ({ style, namesStyle, namesVariant, max, users } = arg0);
   _require = users;

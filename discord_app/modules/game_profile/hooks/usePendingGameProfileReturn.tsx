@@ -1,11 +1,11 @@
-// === Module 12093: usePendingGameProfileReturn ===
+// === Module 12170: usePendingGameProfileReturn ===
 
-// Module 12093 (usePendingGameProfileReturn)
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8352 */;
-import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8358 */;
+// Module 12170 (usePendingGameProfileReturn)
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8850 */;
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8856 */;
 import noop from "module_19" /* 19 */;
-import GameStore from "GameStore" /* 2007 */;
-import GameProfileStore from "GameProfileStore" /* 8360 */;
+import GameStore from "GameStore" /* 2019 */;
+import GameProfileStore from "GameProfileStore" /* 8858 */;
 
 require = fn;
 const AVATAR_SIZE = fn(1085).AVATAR_SIZE;
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/hooks/usePendingGameProfileReturn.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePendingGameProfileReturn(channelId) {
   const cResult = channelId(stateFromStores1[5]).c(19);
   channelId = channelId.channelId;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -44,7 +44,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   let obj = channelId(stateFromStores1[5]);
   const stateFromStores = channelId(stateFromStores1[6]).useStateFromStores(first, tmp6);
   if (cResult[3] !== stateFromStores) {
-    class S {
+    class P {
       constructor() {
         tmp = closure_1;
         if (null != closure_1) {
@@ -62,9 +62,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
       }
     }
     cResult[3] = stateFromStores;
-    cResult[4] = S;
+    cResult[4] = P;
   } else {
-    class S {
+    class P {
       constructor() {
         tmp = closure_1;
         if (null != closure_1) {
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
     }
   }
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    class S {
+    class P {
       constructor() {
         tmp = closure_1;
         if (null != closure_1) {
@@ -104,7 +104,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
     cResult[5] = items1;
     const tmp9 = items1;
   } else {
-    class S {
+    class P {
       constructor() {
         tmp = closure_1;
         if (null != closure_1) {
@@ -283,7 +283,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
     }
   }
   return null;
-}) : ((channelId) => {
+}) : (function usePendingGameProfileReturn(channelId) {
   channelId = channelId.channelId;
   let stateFromStores1;
   const items = [GameProfileStore];

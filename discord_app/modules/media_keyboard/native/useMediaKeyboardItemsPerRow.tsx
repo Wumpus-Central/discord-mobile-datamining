@@ -1,6 +1,6 @@
-// === Module 10391: useMediaKeyboardItemsPerRow ===
+// === Module 9988: useMediaKeyboardItemsPerRow ===
 
-// Module 10391 (useMediaKeyboardItemsPerRow)
+// Module 9988 (useMediaKeyboardItemsPerRow)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -9,17 +9,17 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_keyboard/native/useMediaKeyboardItemsPerRow.tsx");
 
-export const useMediaKeyboardItemsPerRow = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useMediaKeyboardItemsPerRow = ReactCompilerGating.isReactCompilerEnabled() ? (function useMediaKeyboardItemsPerRow() {
   const cResult = num(576).c(6);
-  const tmp4 = ref(4746)();
+  const tmp4 = ref(4940)();
   num = 8;
-  if (num(4746).WindowSizeClassifier.XLARGE !== tmp4) {
+  if (num(4940).WindowSizeClassifier.XLARGE !== tmp4) {
     num = 6;
-    if (tmp(4746).WindowSizeClassifier.LARGE !== tmp4) {
+    if (tmp(4940).WindowSizeClassifier.LARGE !== tmp4) {
       num = 4;
-      if (tmp(4746).WindowSizeClassifier.NORMAL !== tmp4) {
+      if (tmp(4940).WindowSizeClassifier.NORMAL !== tmp4) {
         num = 3;
-        if (tmp(4746).WindowSizeClassifier.SMALL !== tmp4) {
+        if (tmp(4940).WindowSizeClassifier.SMALL !== tmp4) {
           const _Error = Error;
           const _HermesInternal = HermesInternal;
           const error = new Error("Unknown window size classifier: " + tmp4);
@@ -31,7 +31,7 @@ export const useMediaKeyboardItemsPerRow = ReactCompilerGating.isReactCompilerEn
   const result = num * c4;
   ref = noop.useRef(result);
   if (cResult[0] !== num) {
-    const fn = function n() {
+    const fn = function o() {
       ref.current = num * c4;
     };
     const items = [num];
@@ -57,16 +57,16 @@ export const useMediaKeyboardItemsPerRow = ReactCompilerGating.isReactCompilerEn
   cResult[5] = obj3;
   tmp15 = obj3;
   const obj = num(576);
-}) : (() => {
-  const tmp2 = itemsPageSizeRef(4746)();
+}) : (function useMediaKeyboardItemsPerRow() {
+  const tmp2 = itemsPageSizeRef(4940)();
   let itemsPerRow = 8;
-  if (itemsPerRow(4746).WindowSizeClassifier.XLARGE !== tmp2) {
+  if (itemsPerRow(4940).WindowSizeClassifier.XLARGE !== tmp2) {
     itemsPerRow = 6;
-    if (tmp3(4746).WindowSizeClassifier.LARGE !== tmp2) {
+    if (tmp3(4940).WindowSizeClassifier.LARGE !== tmp2) {
       itemsPerRow = 4;
-      if (tmp3(4746).WindowSizeClassifier.NORMAL !== tmp2) {
+      if (tmp3(4940).WindowSizeClassifier.NORMAL !== tmp2) {
         itemsPerRow = 3;
-        if (tmp3(4746).WindowSizeClassifier.SMALL !== tmp2) {
+        if (tmp3(4940).WindowSizeClassifier.SMALL !== tmp2) {
           const _Error = Error;
           const _HermesInternal = HermesInternal;
           const error = new Error("Unknown window size classifier: " + tmp2);

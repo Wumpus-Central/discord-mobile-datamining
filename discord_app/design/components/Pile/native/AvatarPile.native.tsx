@@ -1,12 +1,12 @@
-// === Module 12869: AvatarPile ===
+// === Module 13018: AvatarPile ===
 
-// Module 12869 (AvatarPile)
+// Module 13018 (AvatarPile)
 import c from "c" /* 576 */;
-import ClipView from "ClipView" /* 8502 */;
-import Pile from "Pile" /* 10752 */;
-import PileOverflow from "PileOverflow" /* 10753 */;
-import ListUtils from "ListUtils" /* 12300 */;
-import CutoutableAvatarImage from "CutoutableAvatarImage" /* 12870 */;
+import ClipView from "ClipView" /* 8986 */;
+import Pile from "Pile" /* 11617 */;
+import PileOverflow from "PileOverflow" /* 11618 */;
+import ListUtils from "ListUtils" /* 12398 */;
+import CutoutableAvatarImage from "CutoutableAvatarImage" /* 13019 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Pile/native/AvatarPile.native.tsx");
 
-export const AvatarPile = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const AvatarPile = ReactCompilerGating.isReactCompilerEnabled() ? (function AvatarPile(arg0) {
   const cResult = c.c(13);
   ({ totalCount, names, children } = arg0);
   const Children = noop.Children;
@@ -77,7 +77,7 @@ export const AvatarPile = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0)
   cResult[2] = listSummaryLabel;
   tmp6 = listSummaryLabel;
   const tmpResult = ListUtils;
-}) : ((arg0) => {
+}) : (function AvatarPile(arg0) {
   ({ totalCount, children } = arg0);
   const Children = noop.Children;
   ({ size, names } = arg0);

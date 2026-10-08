@@ -1,18 +1,18 @@
-// === Module 12508: useGetInitialMessagePreview ===
+// === Module 12604: useGetInitialMessagePreview ===
 
-// Module 12508 (useGetInitialMessagePreview)
+// Module 12604 (useGetInitialMessagePreview)
 import c from "c" /* 576 */;
-import isForwardMessageDefault from "isForwardMessage" /* 6815 */;
+import isForwardMessageDefault from "isForwardMessage" /* 6988 */;
 import noop from "module_19" /* 19 */;
-import MessageRecord from "MessageRecord" /* 4526 */;
+import MessageRecord from "MessageRecord" /* 4718 */;
 
 require = fn;
-const MessageSnapshotRecord = fn(4526).MessageSnapshotRecord;
+const MessageSnapshotRecord = fn(4718).MessageSnapshotRecord;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/hooks/useGetInitialMessagePreview.tsx");
 
-export const useGetInitialMessagePreview = ReactCompilerGating.isReactCompilerEnabled() ? ((message) => {
+export const useGetInitialMessagePreview = ReactCompilerGating.isReactCompilerEnabled() ? (function useGetInitialMessagePreview(message) {
   const cResult = c.c(4);
   message = message.message;
   if (cResult[0] !== message) {
@@ -59,7 +59,7 @@ export const useGetInitialMessagePreview = ReactCompilerGating.isReactCompilerEn
     tmp3 = cResult[1];
   }
   return tmp3;
-}) : ((message) => {
+}) : (function useGetInitialMessagePreview(message) {
   message = message.message;
   const items = [message];
   return noop.useMemo(() => {

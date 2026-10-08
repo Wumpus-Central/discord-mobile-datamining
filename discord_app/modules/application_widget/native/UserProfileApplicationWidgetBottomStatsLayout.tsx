@@ -1,16 +1,16 @@
-// === Module 8721: UserProfileApplicationWidgetBottomStatsLayout ===
+// === Module 13194: UserProfileApplicationWidgetBottomStatsLayout ===
 
-// Module 8721 (UserProfileApplicationWidgetBottomStatsLayout)
+// Module 13194 (UserProfileApplicationWidgetBottomStatsLayout)
 import nativeDefault from "native" /* 587 */;
-import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 8629 */;
-import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 8716 */;
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 13102 */;
+import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 13189 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { statsGrid: { flexDirection: "row", flexWrap: "wrap", rowGap: nativeDefault.space.PX_16, columnGap: nativeDefault.space.PX_12 }, stat: null };
 let obj3 = { flexDirection: "row", flexWrap: "wrap", rowGap: nativeDefault.space.PX_16, columnGap: nativeDefault.space.PX_12 };
 obj2.stat = { width: "47%", gap: nativeDefault.space.PX_4 };
@@ -20,7 +20,7 @@ const obj4 = { width: "47%", gap: nativeDefault.space.PX_4 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_widget/native/UserProfileApplicationWidgetBottomStatsLayout.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((bottomConfig) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileApplicationWidgetBottomStatsLayout(bottomConfig) {
   const cResult = bottomConfig(resolveFieldValue[6]).c(11);
   bottomConfig = bottomConfig.bottomConfig;
   resolveFieldValue = bottomConfig.resolveFieldValue;
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((bottomConfig) =>
           const obj2 = { field: iter.value, variant: "text-sm/medium", color: "text-default", skeletonWidthChars: 8 };
           const items = [React3(UserProfileApplicationWidgetFieldUtils.FieldText, obj2), ];
           if ("value" === iter.label.status) {
-            Text = Text(4892).Text;
+            Text = Text(5086).Text;
             const obj3 = { variant: "text-xs/normal", color: "text-muted", children: null };
             iter = iter.label.text;
             obj3.children = iter;
@@ -74,7 +74,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((bottomConfig) =>
           } else {
             tmp5Result = null;
             if ("skeleton" === iter.label.status) {
-              tmp5Result = React3(Text(8717).TextSkeleton, { variant: "text-xs/normal", widthChars: 6 });
+              tmp5Result = React3(Text(13190).TextSkeleton, { variant: "text-xs/normal", widthChars: 6 });
             }
           }
           items[1] = tmp5Result;
@@ -94,7 +94,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((bottomConfig) =>
   cResult[3] = resolveFieldValue;
   cResult[4] = mapped1;
   arr3 = mapped1;
-}) : ((arg0) => {
+}) : (function UserProfileApplicationWidgetBottomStatsLayout(arg0) {
   ({ bottomConfig: require, resolveFieldValue: dependencyMap, numberFormat: View } = arg0);
   const tmp = closure_5();
   const stat = tmp;
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((bottomConfig) =>
         const obj2 = { field: iter.value, variant: "text-sm/medium", color: "text-default", skeletonWidthChars: 8 };
         const items = [React3(UserProfileApplicationWidgetFieldUtils.FieldText, obj2), ];
         if ("value" === iter.label.status) {
-          Text = Text(4892).Text;
+          Text = Text(5086).Text;
           const obj3 = { variant: "text-xs/normal", color: "text-muted", children: null };
           iter = iter.label.text;
           obj3.children = iter;
@@ -120,7 +120,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((bottomConfig) =>
         } else {
           tmp5Result = null;
           if ("skeleton" === iter.label.status) {
-            tmp5Result = React3(Text(8717).TextSkeleton, { variant: "text-xs/normal", widthChars: 6 });
+            tmp5Result = React3(Text(13190).TextSkeleton, { variant: "text-xs/normal", widthChars: 6 });
           }
         }
         items[1] = tmp5Result;

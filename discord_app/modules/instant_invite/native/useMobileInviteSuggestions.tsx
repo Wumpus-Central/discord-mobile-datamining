@@ -1,18 +1,18 @@
-// === Module 9506: useMobileInviteSuggestions ===
+// === Module 8672: useMobileInviteSuggestions ===
 
-// Module 9506 (useMobileInviteSuggestions)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+// Module 8672 (useMobileInviteSuggestions)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import InviteSuggestionsStore from "InviteSuggestionsStore" /* 9507 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4920 */;
+import GuildMemberStore from "GuildMemberStore" /* 2124 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import InviteSuggestionsStore from "InviteSuggestionsStore" /* 8673 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5114 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const InviteTargetTypes = fn(7239).InviteTargetTypes;
+const InviteTargetTypes = fn(7418).InviteTargetTypes;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const NOOP_NULL = fn(1096).NOOP_NULL;
 const size = fn(2);
@@ -52,8 +52,8 @@ export default function useMobileInviteSuggestions(arg0, _location, arg2, applic
     }
     if (isGuildVoiceResult) {
       const obj2 = { location: "useMobileInviteSuggestions", guildId: set.guild_id };
-      isGuildVoiceResult = closure_0(9520).getGuildMembersInMobileVCInvitesExperiment(obj2);
-      const obj = closure_0(9520);
+      isGuildVoiceResult = closure_0(8690).getGuildMembersInMobileVCInvitesExperiment(obj2);
+      const obj = closure_0(8690);
     }
     if (dependencyMap !== constants.EMBEDDED_APPLICATION) {
       if (!isGuildVoiceResult) {
@@ -70,8 +70,8 @@ export default function useMobileInviteSuggestions(arg0, _location, arg2, applic
         });
       }
       const obj4 = { omitUserIds: set, guild: isFetchingRows.getGuild(set.guild_id), channel: set, inviteTargetType: dependencyMap };
-      const inviteSuggestions = closure_0(9521).loadInviteSuggestions(obj4);
-      const obj3 = closure_0(9521);
+      const inviteSuggestions = closure_0(8691).loadInviteSuggestions(obj4);
+      const obj3 = closure_0(8691);
       inviteSuggestions.catch(NOOP_NULL).finally(() => {
         closure_1_7(false);
       });

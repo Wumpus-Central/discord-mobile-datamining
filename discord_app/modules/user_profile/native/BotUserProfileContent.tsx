@@ -1,20 +1,20 @@
-// === Module 12807: BotUserProfileContent ===
+// === Module 12954: BotUserProfileContent ===
 
-// Module 12807 (BotUserProfileContent)
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
-import ToastUtils from "ToastUtils" /* 4573 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4909 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
-import ClipboardUtils from "ClipboardUtils" /* 6695 */;
+// Module 12954 (BotUserProfileContent)
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ToastUtils from "ToastUtils" /* 4765 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5940 */;
+import ClipboardUtils from "ClipboardUtils" /* 6872 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7001 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(6714);
+const Constants = fn(6891);
 ({ PROFILE_CONTENT_BOTTOM_PADDING: metroRequire, PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: closure_7 } = Constants);
-const ACTION_SHEET_MAX_WIDTH = fn(6653).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(6830).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 const size = fn(2);
@@ -109,7 +109,7 @@ export default noop.memo(function BotUserProfileContent(user) {
       const obj13 = {
         customStatusActivity: tmp16,
         hasCustomProfileTheme: null != primaryColor,
-        onPressTruncatedStatus() {
+        onPressTruncatedStatus: function handlePressTruncatedStatus() {
               const obj = ActionSheetActionCreatorsDefault;
               const obj2 = { user, guildId: guild_id, channelId: null };
               let id;
@@ -117,7 +117,7 @@ export default noop.memo(function BotUserProfileContent(user) {
                 id = channel.id;
               }
               obj2.channelId = id;
-              obj.openLazy(asyncRequireImpl(10852, dependencyMap.paths), "UserProfileCustomStatusActionSheet", obj2, "stack");
+              obj.openLazy(asyncRequireImpl(10503, dependencyMap.paths), "UserProfileCustomStatusActionSheet", obj2, "stack");
             },
         style: null,
         emojiOnlyStyle: null

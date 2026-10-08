@@ -1,9 +1,9 @@
-// === Module 9639: useHasVideoPermission ===
+// === Module 10834: useHasVideoPermission ===
 
-// Module 9639 (useHasVideoPermission)
-import StreamPermissionUtils from "StreamPermissionUtils" /* 7223 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
+// Module 10834 (useHasVideoPermission)
+import StreamPermissionUtils from "StreamPermissionUtils" /* 5903 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/useHasVideoPermission.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useHasVideoPermission(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -23,7 +23,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function l() {
+    const fn = function u() {
       let tmp = null != _private;
       if (tmp) {
         let isPrivateResult = _private.isPrivate();
@@ -47,7 +47,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp7, tmp8);
-}) : ((arg0) => {
+}) : (function useHasVideoPermission(arg0) {
   _require = arg0;
   const items = [GuildStore, PermissionStore];
   const items1 = [arg0];

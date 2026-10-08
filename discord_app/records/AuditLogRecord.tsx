@@ -1,10 +1,10 @@
-// === Module 17760: AuditLogRecord ===
+// === Module 18047: AuditLogRecord ===
 
-// Module 17760 (AuditLogRecord)
+// Module 18047 (AuditLogRecord)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import SentryUtilsDefault from "SentryUtils" /* 1242 */;
-import _modDef4467 from "module_4467" /* 4467 */;
-import Record from "Record" /* 1392 */;
+import SentryUtilsDefault from "SentryUtils" /* 1254 */;
+import _modDef4659 from "module_4659" /* 4659 */;
+import Record from "Record" /* 1404 */;
 
 function getTargetType(action) {
   if (action === constants2.ALL) {
@@ -274,7 +274,7 @@ const prototype = function AuditLogRecord(timestampEnd) {
   tmp5.actionType = getActionType(tmp5.action);
   ({ targetId: tmp5.targetId, timestampStart } = timestampEnd);
   if (timestampStart == null) {
-    const tmp8 = _modDef4467;
+    const tmp8 = _modDef4659;
     timestampStart = tmp8(SnowflakeUtilsDefault.extractTimestamp(tmp5.id));
   }
   tmp5.timestampStart = timestampStart;
@@ -314,10 +314,10 @@ const result = size.fileFinishedImporting("records/AuditLogRecord.tsx");
 export default prototype;
 export { getTargetType };
 export { getActionType };
-export const AuditLogChange = function AuditLogChange(key, items2, added) {
+export const AuditLogChange = function AuditLogChange(key, old_value, added) {
   const obj = Object.create(new.target.prototype);
   obj.key = key;
-  obj.oldValue = items2;
+  obj.oldValue = old_value;
   obj.newValue = added;
   return obj;
 }.prototype;

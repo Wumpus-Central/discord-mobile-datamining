@@ -1,17 +1,17 @@
-// === Module 13623: OngoingCallStatusLabel ===
+// === Module 13446: OngoingCallStatusLabel ===
 
-// Module 13623 (OngoingCallStatusLabel)
+// Module 13446 (OngoingCallStatusLabel)
 import c from "c" /* 576 */;
-import native from "native" /* 1188 */;
+import native from "native" /* 1200 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CallStore from "CallStore" /* 5444 */;
-import VoiceStateStore from "VoiceStateStore" /* 4915 */;
+import CallStore from "CallStore" /* 5754 */;
+import VoiceStateStore from "VoiceStateStore" /* 5111 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
-let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) => {
+let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOngoingCallStatus(arg0, arg1, arg2) {
   _require = arg0;
   let xNeSms = first;
   const cResult = require("c").c(11);
@@ -309,7 +309,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg
   xNeSms = tmp(xNeSms[8]).t.xNeSms;
   stringResult1 = intl.string(xNeSms);
   const tmpResult = require("initialize");
-}) : ((arg0, arg1) => {
+}) : (function useOngoingCallStatus(arg0, arg1) {
   _require = arg0;
   let flag = arg2;
   if (arg2 === undefined) {
@@ -366,7 +366,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_calls/native/components/OngoingCallStatusLabel.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function OngoingCallStatusLabel(arg0) {
   const cResult = c.c(3);
   ({ style, useAllAloneText } = arg0);
   let tmp5 = undefined === useAllAloneText;
@@ -386,7 +386,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = tmp4Result;
   cResult[2] = tmp8;
   tmp7 = tmp8;
-}) : ((useAllAloneText) => {
+}) : (function OngoingCallStatusLabel(useAllAloneText) {
   let flag = useAllAloneText.useAllAloneText;
   ({ style, channel, voiceState } = useAllAloneText);
   if (flag === undefined) {

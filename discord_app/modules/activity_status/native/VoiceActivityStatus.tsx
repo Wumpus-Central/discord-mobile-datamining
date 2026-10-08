@@ -1,16 +1,16 @@
-// === Module 10640: VoiceActivityStatus ===
+// === Module 10240: VoiceActivityStatus ===
 
-// Module 10640 (VoiceActivityStatus)
+// Module 10240 (VoiceActivityStatus)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import ActivityStatusTextDefault from "ActivityStatusText" /* 10631 */;
-import UserProfileVoiceActivityIconDefault from "UserProfileVoiceActivityIcon" /* 10641 */;
+import ActivityStatusTextDefault from "ActivityStatusText" /* 10229 */;
+import UserProfileVoiceActivityIconDefault from "UserProfileVoiceActivityIcon" /* 10241 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({ icon: { flexShrink: 0 } });
 const ReactCompilerGating = fn(558);
 function getVoiceActivityStatusText(voiceChannel) {
@@ -34,7 +34,7 @@ function getVoiceActivityStatusText(voiceChannel) {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activity_status/native/VoiceActivityStatus.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceActivityStatus(arg0) {
   let v9FaEzi = dependencyMap;
   const cResult = c.c(13);
   ({ channel, iconStyle, textStyle, maxFontSizeMultiplier, hideIcon, hideText } = arg0);
@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = tmp6;
   cResult[4] = tmp9;
   tmp8 = tmp9;
-}) : ((hideText) => {
+}) : (function VoiceActivityStatus(hideText) {
   ({ channel, hideIcon } = hideText);
   ({ iconStyle, textStyle, maxFontSizeMultiplier } = hideText);
   if (hideIcon === undefined) {

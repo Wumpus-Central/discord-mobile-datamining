@@ -1,10 +1,10 @@
-// === Module 12953: useVisibleUserProfileConnectionsAndAppIdentities ===
+// === Module 13232: useVisibleUserProfileConnectionsAndAppIdentities ===
 
-// Module 12953 (useVisibleUserProfileConnectionsAndAppIdentities)
-import PlatformsDefault from "Platforms" /* 5449 */;
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 6670 */;
-import useConnectionFilteredAppIdentitiesDefault from "useConnectionFilteredAppIdentities" /* 12954 */;
-import useUserProfileConnectionsDefault from "useUserProfileConnections" /* 12955 */;
+// Module 13232 (useVisibleUserProfileConnectionsAndAppIdentities)
+import PlatformsDefault from "Platforms" /* 5759 */;
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 6847 */;
+import useConnectionFilteredAppIdentitiesDefault from "useConnectionFilteredAppIdentities" /* 13233 */;
+import useUserProfileConnectionsDefault from "useUserProfileConnections" /* 13234 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useVisibleUserProfileConnectionsAndAppIdentities.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useVisibleUserProfileConnectionsAndAppIdentities(arg0) {
   const cResult = require("c").c(20);
   const prop = useConnectionFilteredAppIdentitiesDefault(arg0).filteredAppIdentities;
   const arr2 = useUserProfileConnectionsDefault(arg0);
@@ -26,7 +26,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     if (mapped == null) {
       mapped = [];
     }
-    set = new Set(mapped);
+    const set = new Set(mapped);
     cResult[0] = prop;
     cResult[1] = set;
     let tmp5 = set;
@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const arr5 = useGetOrFetchApplicationsDefault(tmp13);
   if (cResult[4] !== arr5) {
-    const found = arr5.filter(tmp(1375).isNotNullish);
+    const found = arr5.filter(tmp(1387).isNotNullish);
     cResult[4] = arr5;
     cResult[5] = found;
     let tmp17 = found;
@@ -58,167 +58,73 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       if (cResult[12] === tmp5) {
         if (cResult[13] === arr2) {
           if (cResult[17] === tmp19) {
-            if (cResult[18] === tmp24) {
-              let tmp28 = cResult[19];
+            if (cResult[18] === tmp22) {
+              let tmp26 = cResult[19];
             }
-            return tmp28;
+            return tmp26;
           }
           const obj2 = { appIdentities: tmp19, connections: cResult[14] };
           cResult[17] = tmp19;
           cResult[18] = cResult[14];
           cResult[19] = obj2;
-          tmp28 = obj2;
+          tmp26 = obj2;
         }
       }
       if (cResult[15] !== tmp5) {
-        class I {
-          constructor(arg0) {
-            obj = closure_1(closure_2[7]);
-            value = obj.get(arg0.type);
-            migrationExperimentEnabled = undefined;
-            if (value != null) {
-              migrationData = value.migrationData;
-              if (migrationData != null) {
-                str = "useVisibleUserProfileConnectionsAndAppIdentities";
-                migrationExperimentEnabled = migrationData.getMigrationExperimentEnabled("useVisibleUserProfileConnectionsAndAppIdentities");
-              }
+        const fn3 = function y(type) {
+          value = PlatformsDefault.get(type.type);
+          let migrationExperimentEnabled;
+          if (value != null) {
+            const migrationData = value.migrationData;
+            if (migrationData != null) {
+              migrationExperimentEnabled = migrationData.getMigrationExperimentEnabled("useVisibleUserProfileConnectionsAndAppIdentities");
             }
-            tmp3 = !migrationExperimentEnabled;
-            if (migrationExperimentEnabled) {
-              tmp4 = closure_0;
-              tmp3 = !closure_0.has(value.migrationData.replacedBy);
-            }
-            return tmp3;
           }
-        }
+          let tmp3 = !migrationExperimentEnabled;
+          if (migrationExperimentEnabled) {
+            tmp3 = !set.has(value.migrationData.replacedBy);
+          }
+          return tmp3;
+        };
         cResult[15] = tmp5;
-        cResult[16] = I;
+        cResult[16] = fn3;
+        let tmp23 = fn3;
       } else {
-        class I {
-          constructor(arg0) {
-            obj = closure_1(closure_2[7]);
-            value = obj.get(arg0.type);
-            migrationExperimentEnabled = undefined;
-            if (value != null) {
-              migrationData = value.migrationData;
-              if (migrationData != null) {
-                str = "useVisibleUserProfileConnectionsAndAppIdentities";
-                migrationExperimentEnabled = migrationData.getMigrationExperimentEnabled("useVisibleUserProfileConnectionsAndAppIdentities");
-              }
-            }
-            tmp3 = !migrationExperimentEnabled;
-            if (migrationExperimentEnabled) {
-              tmp4 = closure_0;
-              tmp3 = !closure_0.has(value.migrationData.replacedBy);
-            }
-            return tmp3;
-          }
-        }
+        tmp23 = cResult[16];
       }
-      const found1 = arr2.filter(I);
+      const found1 = arr2.filter(tmp23);
       cResult[12] = tmp5;
       cResult[13] = arr2;
       cResult[14] = found1;
     }
   }
   if (cResult[9] !== tmp17) {
-    class I {
-      constructor(arg0) {
-        obj = closure_1(closure_2[7]);
-        value = obj.get(arg0.type);
-        migrationExperimentEnabled = undefined;
-        if (value != null) {
-          migrationData = value.migrationData;
-          if (migrationData != null) {
-            str = "useVisibleUserProfileConnectionsAndAppIdentities";
-            migrationExperimentEnabled = migrationData.getMigrationExperimentEnabled("useVisibleUserProfileConnectionsAndAppIdentities");
-          }
-        }
-        tmp3 = !migrationExperimentEnabled;
-        if (migrationExperimentEnabled) {
-          tmp4 = closure_0;
-          tmp3 = !closure_0.has(value.migrationData.replacedBy);
-        }
-        return tmp3;
-      }
-    }
+    const fn = function v(identity) {
+      return { identity, application: closure_1.find((id) => id.id === identity.application_id) };
+    };
     cResult[9] = tmp17;
-    cResult[10] = tmp20;
-    let mapped1 = tmp20;
+    cResult[10] = fn;
+    let mapped1 = fn;
   } else {
-    class I {
-      constructor(arg0) {
-        obj = closure_1(closure_2[7]);
-        value = obj.get(arg0.type);
-        migrationExperimentEnabled = undefined;
-        if (value != null) {
-          migrationData = value.migrationData;
-          if (migrationData != null) {
-            str = "useVisibleUserProfileConnectionsAndAppIdentities";
-            migrationExperimentEnabled = migrationData.getMigrationExperimentEnabled("useVisibleUserProfileConnectionsAndAppIdentities");
-          }
-        }
-        tmp3 = !migrationExperimentEnabled;
-        if (migrationExperimentEnabled) {
-          tmp4 = closure_0;
-          tmp3 = !closure_0.has(value.migrationData.replacedBy);
-        }
-        return tmp3;
-      }
-    }
+    mapped1 = cResult[10];
   }
   if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-    class I {
-      constructor(arg0) {
-        obj = closure_1(closure_2[7]);
-        value = obj.get(arg0.type);
-        migrationExperimentEnabled = undefined;
-        if (value != null) {
-          migrationData = value.migrationData;
-          if (migrationData != null) {
-            str = "useVisibleUserProfileConnectionsAndAppIdentities";
-            migrationExperimentEnabled = migrationData.getMigrationExperimentEnabled("useVisibleUserProfileConnectionsAndAppIdentities");
-          }
-        }
-        tmp3 = !migrationExperimentEnabled;
-        if (migrationExperimentEnabled) {
-          tmp4 = closure_0;
-          tmp3 = !closure_0.has(value.migrationData.replacedBy);
-        }
-        return tmp3;
-      }
-    }
-    cResult[11] = tmp22;
+    const fn2 = function _(application) {
+      return null != application.application;
+    };
+    cResult[11] = fn2;
+    let tmp20 = fn2;
   } else {
-    class I {
-      constructor(arg0) {
-        obj = closure_1(closure_2[7]);
-        value = obj.get(arg0.type);
-        migrationExperimentEnabled = undefined;
-        if (value != null) {
-          migrationData = value.migrationData;
-          if (migrationData != null) {
-            str = "useVisibleUserProfileConnectionsAndAppIdentities";
-            migrationExperimentEnabled = migrationData.getMigrationExperimentEnabled("useVisibleUserProfileConnectionsAndAppIdentities");
-          }
-        }
-        tmp3 = !migrationExperimentEnabled;
-        if (migrationExperimentEnabled) {
-          tmp4 = closure_0;
-          tmp3 = !closure_0.has(value.migrationData.replacedBy);
-        }
-        return tmp3;
-      }
-    }
+    tmp20 = cResult[11];
   }
   mapped1 = prop.map(mapped1);
-  const found2 = mapped1.filter(tmp22);
+  const found2 = mapped1.filter(tmp20);
   cResult[6] = tmp17;
   cResult[7] = prop;
   cResult[8] = found2;
   const obj = require("c");
   tmp = _require;
-}) : ((arg0) => {
+}) : (function useVisibleUserProfileConnectionsAndAppIdentities(arg0) {
   const filteredAppIdentities = require("useConnectionFilteredAppIdentities")(arg0).filteredAppIdentities;
   const tmp = require("useUserProfileConnections")(arg0);
   importDefault = tmp;

@@ -1,21 +1,21 @@
-// === Module 17170: Toast ===
+// === Module 17451: Toast ===
 
-// Module 17170 (Toast)
+// Module 17451 (Toast)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4586 */;
-import Text_Text from "Text/Text" /* 4892 */;
+import useToken from "useToken" /* 4778 */;
+import Text_Text from "Text/Text" /* 5086 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
-const native = Icon(1188);
+const native = Icon(1200);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: null, multilineContainer: null, contentContainer: null };
 let merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
 obj2.container = { flexDirection: "row", alignItems: "center", borderRadius: nativeDefault.radii.xxl, padding: nativeDefault.space.PX_8, paddingRight: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.MOBILE_TOAST_BACKGROUND_DEFAULT, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1 };
@@ -24,7 +24,7 @@ obj2.multilineContainer = { paddingLeft: nativeDefault.space.PX_12 };
 obj2.contentContainer = { marginLeft: 8, flexShrink: 1 };
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function ToastIcon(arg0) {
   let Icon = require;
   let tmp = dependencyMap;
   const cResult = c.c(13);
@@ -82,7 +82,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[0] = token;
   cResult[1] = recolorLegacyIcon;
   cResult[2] = obj7;
-}) : ((recolorLegacyIcon) => {
+}) : (function ToastIcon(recolorLegacyIcon) {
   ({ icon, IconComponent, iconColor } = recolorLegacyIcon);
   if (iconColor == null) {
     iconColor = "mobile-text-heading-primary";
@@ -111,7 +111,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return tmp8;
 });
 ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function ToastContent(arg0) {
   const cResult = c.c(9);
   ({ content, onTextLayout } = arg0);
   const tmp4 = closure_8();
@@ -153,7 +153,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[8] = tmp7;
     tmp5 = tmp7;
   }
-}) : ((content) => {
+}) : (function ToastContent(content) {
   content = content.content;
   const tmp = closure_8();
   if (typeof content === "function") {
@@ -170,7 +170,7 @@ let obj4 = { paddingLeft: nativeDefault.space.PX_12 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/toast/native/Toast.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function Toast(arg0) {
   const cResult = c.c(16);
   ({ icon, iconColor, IconComponent, content, containerStyle, recolorLegacyIcon } = arg0);
   const tmp2 = closure_8();
@@ -249,7 +249,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = items1;
   tmp7 = items1;
   const tmp3 = _slicedToArray(noop.useState(false), 2);
-}) : ((arg0) => {
+}) : (function Toast(arg0) {
   c0 = undefined;
   ({ icon, iconColor, IconComponent, content, containerStyle, recolorLegacyIcon } = arg0);
   const tmp = closure_8();

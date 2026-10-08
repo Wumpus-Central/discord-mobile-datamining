@@ -1,10 +1,10 @@
-// === Module 9701: VoicePanelRiveMicButton ===
+// === Module 10890: VoicePanelRiveMicButton ===
 
-// Module 9701 (VoicePanelRiveMicButton)
+// Module 10890 (VoicePanelRiveMicButton)
 import c from "c" /* 576 */;
-import MicrophoneRive from "MicrophoneRive" /* 4686 */;
-import MicrophoneSlashIcon from "MicrophoneSlashIcon" /* 4826 */;
-import MicrophoneIcon2 from "MicrophoneIcon" /* 9702 */;
+import MicrophoneRive from "MicrophoneRive" /* 4880 */;
+import MicrophoneSlashIcon from "MicrophoneSlashIcon" /* 5020 */;
+import MicrophoneIcon2 from "MicrophoneIcon" /* 10891 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelRiveMicButton.tsx");
 
-export const VoicePanelRiveMicButton = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const VoicePanelRiveMicButton = ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePanelRiveMicButton(arg0) {
   const cResult = c.c(11);
   ({ color, muted } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -69,7 +69,7 @@ export const VoicePanelRiveMicButton = ReactCompilerGating.isReactCompilerEnable
   cResult[2] = !muted;
   cResult[3] = obj5;
   tmp6 = obj5;
-}) : ((arg0) => {
+}) : (function VoicePanelRiveMicButton(arg0) {
   ({ color, muted } = arg0);
   const obj = { style: { width: 24, height: 24, pointerEvents: "none" }, children: null };
   const obj2 = { dataBinding: { fill: color, on: !muted }, defaultViewModelInstance: null, fallback: null };

@@ -1,8 +1,8 @@
-// === Module 14676: ProfileToActivityUpsellActionSheet ===
+// === Module 14937: ProfileToActivityUpsellActionSheet ===
 
-// Module 14676 (ProfileToActivityUpsellActionSheet)
-import UserSettings from "UserSettings" /* 2028 */;
-import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 14675 */;
+// Module 14937 (ProfileToActivityUpsellActionSheet)
+import UserSettings from "UserSettings" /* 2040 */;
+import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 14936 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activity_privacy/native/ProfileToActivityUpsellActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((direction) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ProfileToActivityUpsellActionSheet(direction) {
   const cResult = direction(mappedActivityValue[3]).c(16);
   direction = direction.direction;
   const affectedGuildIds = direction.affectedGuildIds;
@@ -29,16 +29,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((direction) => {
         }
         const _Symbol = Symbol;
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-          class G {
+          class S {
             constructor() {
               obj = affectedGuildIds(mappedActivityValue[6]);
               hideActionSheetResult = obj.hideActionSheet();
               return;
             }
           }
-          cResult[7] = G;
+          cResult[7] = S;
         } else {
-          class G {
+          class S {
             constructor() {
               obj = affectedGuildIds(mappedActivityValue[6]);
               hideActionSheetResult = obj.hideActionSheet();
@@ -47,7 +47,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((direction) => {
           }
         }
         if (cResult[8] === affectedGuildIds) {
-          class G {
+          class S {
             constructor() {
               obj = affectedGuildIds(mappedActivityValue[6]);
               hideActionSheetResult = obj.hideActionSheet();
@@ -55,8 +55,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((direction) => {
             }
           }
         }
-        const obj2 = { direction, affectedGuildIds, title, subtitle, confirmText, toastContent, onConfirm: tmp7, onCardPress: G };
-        const tmp13 = jsx(affectedGuildIds(mappedActivityValue[7]), { direction, affectedGuildIds, title, subtitle, confirmText, toastContent, onConfirm: tmp7, onCardPress: G });
+        const obj2 = { direction, affectedGuildIds, title, subtitle, confirmText, toastContent, onConfirm: tmp7, onCardPress: S };
+        const tmp13 = jsx(affectedGuildIds(mappedActivityValue[7]), { direction, affectedGuildIds, title, subtitle, confirmText, toastContent, onConfirm: tmp7, onCardPress: S });
         cResult[8] = affectedGuildIds;
         cResult[9] = confirmText;
         cResult[10] = direction;
@@ -85,7 +85,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((direction) => {
   cResult[2] = profileToActivityUpsellStrings;
   tmp5 = profileToActivityUpsellStrings;
   const tmpResult = direction(mappedActivityValue[4]);
-}) : ((direction) => {
+}) : (function ProfileToActivityUpsellActionSheet(direction) {
   direction = direction.direction;
   const affectedGuildIds = direction.affectedGuildIds;
   const mappedActivityValue = direction.mappedActivityValue;

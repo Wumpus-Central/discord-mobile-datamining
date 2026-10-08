@@ -1,17 +1,17 @@
-// === Module 16925: SearchTabsGradient ===
+// === Module 17206: SearchTabsGradient ===
 
-// Module 16925 (SearchTabsGradient)
+// Module 17206 (SearchTabsGradient)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4586 */;
-import ColorUtils from "ColorUtils" /* 4733 */;
-import TabsGradientDefault from "TabsGradient" /* 12440 */;
+import useToken from "useToken" /* 4778 */;
+import ColorUtils from "ColorUtils" /* 4927 */;
+import TabsGradientDefault from "TabsGradient" /* 12536 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
-let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGradientColors() {
   const cResult = c.c(5);
   const token = useToken.useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
   if (cResult[0] !== token) {
@@ -34,8 +34,8 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[3] = tmp5;
   cResult[4] = items;
   tmp7 = items;
-}) : (() => {
-  token = token(4586).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
+}) : (function useGradientColors() {
+  token = token(4778).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
   let items = [token];
   return noop.useMemo(() => {
     const items = [token, ColorUtils.hexWithOpacity(token, 0)];
@@ -46,7 +46,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/tabs/SearchTabsGradient.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((state) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SearchTabsGradient(state) {
   const cResult = c.c(3);
   state = state.state;
   const tmp3 = closure_5();
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((state) => {
   cResult[1] = state;
   cResult[2] = tmp5;
   tmp4 = tmp5;
-}) : ((state) => {
+}) : (function SearchTabsGradient(state) {
   const colors = closure_5();
   return jsx(TabsGradientDefault, { state: state.state, colors });
 });

@@ -1,51 +1,51 @@
-// === Module 13435: PremiumGuildPreview ===
+// === Module 13735: PremiumGuildPreview ===
 
-// Module 13435 (PremiumGuildPreview)
+// Module 13735 (PremiumGuildPreview)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import GuildIcon from "GuildIcon" /* 5978 */;
-import GuildBoostingUtils from "GuildBoostingUtils" /* 7677 */;
-import _modDef13436 from "module_13436" /* 13436 */;
-import _modDef13437 from "module_13437" /* 13437 */;
-import _modDef13438 from "module_13438" /* 13438 */;
-import _modDef13439 from "module_13439" /* 13439 */;
-import _modDef13440 from "module_13440" /* 13440 */;
-import _modDef13441 from "module_13441" /* 13441 */;
-import _modDef13442 from "module_13442" /* 13442 */;
-import _modDef13443 from "module_13443" /* 13443 */;
+import native from "native" /* 1200 */;
+import GuildIcon from "GuildIcon" /* 6161 */;
+import GuildBoostingUtils from "GuildBoostingUtils" /* 7998 */;
+import _modDef13736 from "module_13736" /* 13736 */;
+import _modDef13737 from "module_13737" /* 13737 */;
+import _modDef13738 from "module_13738" /* 13738 */;
+import _modDef13739 from "module_13739" /* 13739 */;
+import _modDef13740 from "module_13740" /* 13740 */;
+import _modDef13741 from "module_13741" /* 13741 */;
+import _modDef13742 from "module_13742" /* 13742 */;
+import _modDef13743 from "module_13743" /* 13743 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1193 */;
+import ThemeStore from "ThemeStore" /* 1205 */;
 
 const GuildIconDefault = GuildIcon;
 
 require = fn;
 function getTierIcon(theme, tier) {
   if (BoostedGuildTiers.NONE === tier) {
-    let tmp20 = _modDef13437;
-    const tmp19 = _modDef13436;
+    let tmp20 = _modDef13737;
+    const tmp19 = _modDef13736;
     if (obj4.isThemeDark(theme)) {
       tmp20 = tmp19;
     }
     return tmp20;
   } else if (BoostedGuildTiers.TIER_1 === tier) {
-    let tmp15 = _modDef13439;
-    const tmp14 = _modDef13438;
+    let tmp15 = _modDef13739;
+    const tmp14 = _modDef13738;
     if (obj3.isThemeDark(theme)) {
       tmp15 = tmp14;
     }
     return tmp15;
   } else if (BoostedGuildTiers.TIER_2 === tier) {
-    let tmp10 = _modDef13441;
-    const tmp9 = _modDef13440;
+    let tmp10 = _modDef13741;
+    const tmp9 = _modDef13740;
     if (obj2.isThemeDark(theme)) {
       tmp10 = tmp9;
     }
     return tmp10;
   } else if (BoostedGuildTiers.TIER_3 === tier) {
-    let tmp5 = _modDef13443;
-    const tmp4 = _modDef13442;
+    let tmp5 = _modDef13743;
+    const tmp4 = _modDef13742;
     if (obj.isThemeDark(theme)) {
       tmp5 = tmp4;
     }
@@ -57,18 +57,18 @@ get_ActivityIndicator = fn(17);
 const BoostedGuildTiers = fn(1085).BoostedGuildTiers;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { guild: { padding: 16, borderRadius: nativeDefault.radii.xs, flexDirection: "row", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, guildInfo: { marginLeft: 16 }, guildName: null, tierPill: null, tierPillImage: null, tierPillText: null };
 let obj3 = { padding: 16, borderRadius: nativeDefault.radii.xs, flexDirection: "row", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
-obj2.guildName = { fontSize: 16, lineHeight: 20, color: fn(5627).DARK_WHITE_500_LIGHT_BLACK_500 };
-let obj4 = { fontSize: 16, lineHeight: 20, color: fn(5627).DARK_WHITE_500_LIGHT_BLACK_500 };
+obj2.guildName = { fontSize: 16, lineHeight: 20, color: fn(5974).DARK_WHITE_500_LIGHT_BLACK_500 };
+let obj4 = { fontSize: 16, lineHeight: 20, color: fn(5974).DARK_WHITE_500_LIGHT_BLACK_500 };
 obj2.tierPill = { marginTop: 8, padding: 4, paddingRight: 8, alignSelf: "flex-start", flexDirection: "row", borderRadius: 11, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.tierPillImage = { width: 16, height: 16 };
 let obj5 = { marginTop: 8, padding: 4, paddingRight: 8, alignSelf: "flex-start", flexDirection: "row", borderRadius: 11, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-obj2.tierPillText = { fontSize: 12, lineHeight: 16, marginLeft: 4, color: fn(5627).DARK_WHITE_500_LIGHT_PRIMARY_660 };
+obj2.tierPillText = { fontSize: 12, lineHeight: 16, marginLeft: 4, color: fn(5974).DARK_WHITE_500_LIGHT_PRIMARY_660 };
 let closure_9 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumGuildTierPill(arg0) {
   const cResult = c.c(15);
   ({ tier, theme } = arg0);
   const tmp4 = closure_9();
@@ -130,7 +130,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = tier;
   cResult[2] = tmp8;
   tmp7 = tmp8;
-}) : ((tier) => {
+}) : (function PremiumGuildTierPill(tier) {
   tier = tier.tier;
   const tmp = closure_9();
   const obj = { style: tmp.tierPill, children: null };
@@ -143,11 +143,11 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return closure_1_8(React3, obj);
 });
 ReactCompilerGating = fn(558);
-let obj6 = { fontSize: 12, lineHeight: 16, marginLeft: 4, color: fn(5627).DARK_WHITE_500_LIGHT_PRIMARY_660 };
+let obj6 = { fontSize: 12, lineHeight: 16, marginLeft: 4, color: fn(5974).DARK_WHITE_500_LIGHT_PRIMARY_660 };
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/premium/premium_guild_subscribe_modal/PremiumGuildPreview.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumGuildPreview(arg0) {
   const cResult = c.c(21);
   ({ guild, style } = arg0);
   const tmp4 = closure_9();
@@ -239,7 +239,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = items3;
   tmp9 = items3;
   const tmpResult = initialize;
-}) : ((guild) => {
+}) : (function PremiumGuildPreview(guild) {
   guild = guild.guild;
   const tmp = closure_9();
   const items = [ThemeStore];

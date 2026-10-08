@@ -1,13 +1,13 @@
-// === Module 12032: StaticChannelIndicator ===
+// === Module 12105: StaticChannelIndicator ===
 
-// Module 12032 (StaticChannelIndicator)
+// Module 12105 (StaticChannelIndicator)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4586 */;
-import ReadStateConstants from "ReadStateConstants" /* 5078 */;
+import useToken from "useToken" /* 4778 */;
+import ReadStateConstants from "ReadStateConstants" /* 5972 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import createStyles from "createStyles" /* 4896 */;
+import createStyles from "createStyles" /* 5090 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -27,7 +27,7 @@ let closure_6 = createStyles.createStyles(obj);
 let size = size_mod;
 const result = size.fileFinishedImporting("modules/channel_list_v2/native/components/StaticChannelIndicator.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((resolvedUnreadSetting) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelIndicator(resolvedUnreadSetting) {
   const cResult = c.c(5);
   ({ unread, style } = resolvedUnreadSetting);
   const tmp3 = closure_6();
@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((resolvedUnreadSe
   cResult[3] = unread;
   cResult[4] = tmp8;
   tmp7 = tmp8;
-}) : ((arg0) => {
+}) : (function ChannelIndicator(arg0) {
   ({ unread, resolvedUnreadSetting, style } = arg0);
   const tmp = closure_6();
   useToken;

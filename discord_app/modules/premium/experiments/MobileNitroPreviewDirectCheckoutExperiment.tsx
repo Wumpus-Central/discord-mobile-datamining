@@ -1,8 +1,8 @@
-// === Module 14493: MobileNitroPreviewDirectCheckoutExperiment ===
+// === Module 14753: MobileNitroPreviewDirectCheckoutExperiment ===
 
-// Module 14493 (MobileNitroPreviewDirectCheckoutExperiment)
+// Module 14753 (MobileNitroPreviewDirectCheckoutExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1440 */;
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -10,7 +10,7 @@ const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-09-mobi
 const result = size.fileFinishedImporting("modules/premium/experiments/MobileNitroPreviewDirectCheckoutExperiment.tsx");
 
 export const MobileNitroPreviewDirectCheckoutExperiment = apexExperiment;
-export const useMobileNitroPreviewDirectCheckoutEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useMobileNitroPreviewDirectCheckoutEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useMobileNitroPreviewDirectCheckoutEnabled() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { location: "native.GetNitroCard" };
@@ -20,4 +20,6 @@ export const useMobileNitroPreviewDirectCheckoutEnabled = ReactCompilerGating.is
     first = cResult[0];
   }
   return apexExperiment.useConfig(first);
-}) : (() => apexExperiment.useConfig({ location: "native.GetNitroCard" }));
+}) : (function useMobileNitroPreviewDirectCheckoutEnabled() {
+  return apexExperiment.useConfig({ location: "native.GetNitroCard" });
+});

@@ -1,18 +1,18 @@
-// === Module 17228: panel/LeaveActivityButton ===
+// === Module 17509: panel/LeaveActivityButton ===
 
-// Module 17228 (panel/LeaveActivityButton)
-import FramesNativeManagerDefault from "FramesNativeManager" /* 9011 */;
-import LeaveActivityButton from "LeaveActivityButton" /* 17218 */;
+// Module 17509 (panel/LeaveActivityButton)
+import FramesNativeManagerDefault from "FramesNativeManager" /* 11150 */;
+import LeaveActivityButton from "LeaveActivityButton" /* 17499 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const ActivityPanelModes = fn(9001).ActivityPanelModes;
+const ActivityPanelModes = fn(6072).ActivityPanelModes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/panel/native/LeaveActivityButton.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((frame) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function LeaveActivityButton(frame) {
   const cResult = frame(576).c(3);
   frame = frame.frame;
   const setMode = frame.setMode;
@@ -22,7 +22,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((frame)
     }
     return tmp4;
   }
-  const tmp5 = jsx(frame(17218).BaseLeaveActivityButton, {
+  const tmp5 = jsx(frame(17499).BaseLeaveActivityButton, {
     onPress() {
       setMode(ActivityPanelModes.DISCONNECTED);
       const timerId = setTimeout(() => {
@@ -43,7 +43,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((frame)
       }, 400);
     }
   };
-}) : ((arg0) => {
+}) : (function LeaveActivityButton(arg0) {
   ({ frame: require, setMode: importDefault } = arg0);
   return jsx(LeaveActivityButton.BaseLeaveActivityButton, {
     onPress() {

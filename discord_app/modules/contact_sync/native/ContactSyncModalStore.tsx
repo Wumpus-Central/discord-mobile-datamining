@@ -1,13 +1,13 @@
-// === Module 12341: ContactSyncModalStore ===
+// === Module 12437: ContactSyncModalStore ===
 
-// Module 12341 (ContactSyncModalStore)
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5447 */;
-import UserStore from "UserStore" /* 1377 */;
+// Module 12437 (ContactSyncModalStore)
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5757 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ContactPermissions = fn(12342).ContactPermissions;
+const ContactPermissions = fn(12438).ContactPermissions;
 const PlatformTypes = fn(1085).PlatformTypes;
 const ContactSyncModes = { NORMAL: 0, [0]: "NORMAL", ONBOARDING: 1, [1]: "ONBOARDING", ONBOARDING_INVITE: 2, [2]: "ONBOARDING_INVITE" };
 const module_570 = fn(570);
@@ -149,10 +149,10 @@ export const setError = function setError(arg0) {
     });
   });
 };
-export const useIsOnboarding = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useIsOnboarding = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsOnboarding() {
   const mode = obj5().mode;
   return mode === obj.ONBOARDING || mode === obj.ONBOARDING_INVITE;
-}) : (() => {
+}) : (function useIsOnboarding() {
   const mode = obj5().mode;
   return mode === obj.ONBOARDING || mode === obj.ONBOARDING_INVITE;
 });

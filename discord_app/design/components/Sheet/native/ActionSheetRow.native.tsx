@@ -1,11 +1,11 @@
-// === Module 6704: ActionSheetRow ===
+// === Module 6881: ActionSheetRow ===
 
-// Module 6704 (ActionSheetRow)
+// Module 6881 (ActionSheetRow)
 import c from "c" /* 576 */;
-import TableRow from "TableRow" /* 6000 */;
-import TableRowIcon from "TableRowIcon" /* 6006 */;
-import TableRowGroup from "TableRowGroup" /* 6081 */;
-import TableSwitchRow from "TableSwitchRow" /* 6705 */;
+import TableRow from "TableRow" /* 6184 */;
+import TableRowIcon from "TableRowIcon" /* 6192 */;
+import TableRowGroup from "TableRowGroup" /* 6267 */;
+import TableSwitchRow from "TableSwitchRow" /* 6882 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ const View = fn(17).View;
 const jsx = fn(21).jsx;
 const redux = noop.createContext("default");
 let ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function ActionSheetRow(arg0) {
   const cResult = c.c(15);
   if (cResult[0] !== arg0) {
     ({ label, variant, arrow, icon } = arg0);
@@ -75,7 +75,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[11] = tmp14;
   tmp12 = tmp14;
   const obj3 = { variant: str, label: tmp6, arrow: tmp4, icon: tmp5 };
-}) : ((label) => {
+}) : (function ActionSheetRow(label) {
   let str = label.variant;
   if (str === undefined) {
     str = "default";
@@ -88,7 +88,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return <redux.Provider value={str}>{null}</redux.Provider>;
 });
 ReactCompilerGating = fn(558);
-tmp2.Icon = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+tmp2.Icon = ReactCompilerGating.isReactCompilerEnabled() ? (function ActionSheetRowIcon(arg0) {
   const cResult = c.c(4);
   ({ source, IconComponent } = arg0);
   const context = noop.useContext(closure_7);
@@ -106,14 +106,14 @@ tmp2.Icon = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = context;
   cResult[3] = tmp6;
   tmp5 = tmp6;
-}) : ((IconComponent) => {
+}) : (function ActionSheetRowIcon(IconComponent) {
   IconComponent = IconComponent.IconComponent;
   const context = noop.useContext(closure_7);
   const obj = { source: IconComponent.source, IconComponent, variant: context };
   return jsx(TableRowIcon.TableRowIcon, { source: IconComponent.source, IconComponent, variant: context });
 });
 ReactCompilerGating = fn(558);
-tmp2.Group = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+tmp2.Group = ReactCompilerGating.isReactCompilerEnabled() ? (function ActionSheetRowGroup(arg0) {
   const cResult = c.c(4);
   ({ children, title, hasIcons } = arg0);
   if (cResult[0] === children) {
@@ -131,7 +131,7 @@ tmp2.Group = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = tmp5;
   tmp4 = tmp5;
   const obj2 = { children: jsx(TableRowGroup.TableRowGroup, { hasIcons, title, children }) };
-}) : ((arg0) => {
+}) : (function ActionSheetRowGroup(arg0) {
   ({ children, title, hasIcons } = arg0);
   return <View>{jsx(TableRowGroup.TableRowGroup, { hasIcons, title, children })}</View>;
 });
@@ -140,7 +140,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Sheet/native/ActionSheetRow.native.tsx");
 
 export const ActionSheetRow = tmp2;
-export const ActionSheetSwitchRow = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const ActionSheetSwitchRow = ReactCompilerGating.isReactCompilerEnabled() ? (function ActionSheetSwitchRow(arg0) {
   const cResult = c.c(2);
   if (cResult[0] !== arg0) {
     const obj2 = {};
@@ -153,7 +153,7 @@ export const ActionSheetSwitchRow = ReactCompilerGating.isReactCompilerEnabled()
     tmp4 = cResult[1];
   }
   return tmp4;
-}) : ((arg0) => {
+}) : (function ActionSheetSwitchRow(arg0) {
   const merged = Object.assign(arg0);
   return jsx(TableSwitchRow.TableSwitchRow, {});
 });

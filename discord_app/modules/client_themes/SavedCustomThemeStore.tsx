@@ -1,10 +1,10 @@
-// === Module 4795: SavedCustomThemeStore ===
+// === Module 4989: SavedCustomThemeStore ===
 
-// Module 4795 (SavedCustomThemeStore)
+// Module 4989 (SavedCustomThemeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import SentryUtilsDefault from "SentryUtils" /* 1242 */;
-import ThemeConstants from "ThemeConstants" /* 1196 */;
+import SentryUtilsDefault from "SentryUtils" /* 1254 */;
+import ThemeConstants from "ThemeConstants" /* 1208 */;
 import size from "module_2" /* 2 */;
 
 function validateSavedTheme(colors) {

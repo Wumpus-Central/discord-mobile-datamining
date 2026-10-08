@@ -1,19 +1,19 @@
-// === Module 9915: CreatorRevenueButton ===
+// === Module 9397: CreatorRevenueButton ===
 
-// Module 9915 (CreatorRevenueButton)
+// Module 9397 (CreatorRevenueButton)
 import c from "c" /* 576 */;
-import ShinyButtonDefault from "ShinyButton" /* 9916 */;
+import ShinyButtonDefault from "ShinyButton" /* 9398 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles({ container: { borderRadius: 3 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/CreatorRevenueButton.tsx");
 
-export const CreatorRevenueButton = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const CreatorRevenueButton = ReactCompilerGating.isReactCompilerEnabled() ? (function CreatorRevenueButton(arg0) {
   const cResult = c.c(9);
   ({ disabled, text, onPress, style, loading } = arg0);
   const tmp3 = closure_4();
@@ -48,7 +48,7 @@ export const CreatorRevenueButton = ReactCompilerGating.isReactCompilerEnabled()
   cResult[1] = tmp3.container;
   cResult[2] = items;
   tmp4 = items;
-}) : ((arg0) => {
+}) : (function CreatorRevenueButton(arg0) {
   ({ disabled, text, onPress, style, loading } = arg0);
   const obj = { style: null, loading, disabled, onPress, text };
   const items = [closure_4().container, style];

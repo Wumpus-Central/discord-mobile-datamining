@@ -1,15 +1,15 @@
-// === Module 14677: BaseUpsellActionSheet ===
+// === Module 14938: BaseUpsellActionSheet ===
 
-// Module 14677 (BaseUpsellActionSheet)
+// Module 14938 (BaseUpsellActionSheet)
 import nativeDefault from "native" /* 587 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4574 */;
-import DesignSystemsNotificationComponentsExperiment from "DesignSystemsNotificationComponentsExperiment" /* 4580 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 4798 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import GuildIconDefault from "GuildIcon" /* 5978 */;
-import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 14675 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4766 */;
+import DesignSystemsNotificationComponentsExperiment from "DesignSystemsNotificationComponentsExperiment" /* 4772 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 4992 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import GuildIconDefault from "GuildIcon" /* 6161 */;
+import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 14936 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2074 */;
+import GuildStore from "GuildStore" /* 2086 */;
 
 require = fn;
 function renderSuccessIcon() {
@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { paddingVertical: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_24 }, title: null, description: null, card: null, cardInfo: null, statusRow: null, guildSummary: null, chevron: null, buttonsContainer: null };
 let obj3 = { paddingVertical: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_24 };
 obj2.title = { marginBottom: nativeDefault.space.PX_8 };
@@ -38,7 +38,7 @@ let obj9 = { marginLeft: nativeDefault.space.PX_8 };
 obj2.buttonsContainer = { gap: nativeDefault.space.PX_8 };
 let closure_10 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function StoreGuildIcon(guildId) {
   const cResult = guildId(576).c(5);
   guildId = guildId.guildId;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -61,7 +61,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   const obj = guildId(576);
   const stateFromStores = guildId(504).useStateFromStores(first, tmp6);
   if (cResult[3] !== stateFromStores) {
-    const obj2 = { guild: stateFromStores, size: tmp(5978).GuildIconSizes.XSMALL };
+    const obj2 = { guild: stateFromStores, size: tmp(6161).GuildIconSizes.XSMALL };
     const tmp12 = closure_7(GuildIconDefault, obj2);
     cResult[3] = stateFromStores;
     cResult[4] = tmp12;
@@ -70,26 +70,26 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     tmp8 = cResult[4];
   }
   return tmp8;
-}) : ((guildId) => {
+}) : (function StoreGuildIcon(guildId) {
   guildId = guildId.guildId;
   const items = [GuildStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
   const obj2 = { guild: stateFromStores, size: null };
   const obj = guildId(504);
-  obj2.size = guildId(5978).GuildIconSizes.XSMALL;
+  obj2.size = guildId(6161).GuildIconSizes.XSMALL;
   return closure_7(GuildIconDefault, obj2);
 });
 ReactCompilerGating = fn(558);
-let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildCard(arg0) {
   const cResult = arr(576).c(51);
   ({ guildIds, direction, onPress } = arg0);
   const tmp4 = closure_10();
   if (cResult[0] !== guildIds) {
-    const result = tmp(14675).sortGuildIdsByFrecency(guildIds);
+    const result = tmp(14936).sortGuildIdsByFrecency(guildIds);
     cResult[0] = guildIds;
     cResult[1] = result;
     arr = result;
-    const tmpResult = tmp(14675);
+    const tmpResult = tmp(14936);
   } else {
     arr = cResult[1];
   }
@@ -113,7 +113,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const obj = arr(576);
   const stateFromStores = arr(504).useStateFromStores(tmp6, tmp8);
   if (cResult[5] !== direction) {
-    if (direction === tmp(14675).ChangeDirection.RESTRICTING) {
+    if (direction === tmp(14936).ChangeDirection.RESTRICTING) {
       const intl2 = tmp(1126).intl;
       let stringResult = intl2.string(tmp(1126).t.e6Kpa7);
     } else {
@@ -249,7 +249,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         }
       }
       const obj3 = { variant: "text-md/semibold", color: "text-strong", children: tmp23 };
-      const tmp26 = closure_7(tmp(4892).Text, obj3);
+      const tmp26 = closure_7(tmp(5086).Text, obj3);
       cResult[15] = tmp23;
       cResult[16] = tmp26;
     } else {
@@ -270,7 +270,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
     const statusRow = tmp4.statusRow;
-    if (direction === tmp(14675).ChangeDirection.RESTRICTING) {
+    if (direction === tmp(14936).ChangeDirection.RESTRICTING) {
       class E {
         constructor() {
           return closure_1.map((item) => {
@@ -329,14 +329,14 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       cResult[22] = t;
     }
     const obj6 = { variant: "text-sm/medium", color: "text-muted", children: cResult[6] };
-    const tmp29 = closure_7(tmp(4892).Text, obj6);
+    const tmp29 = closure_7(tmp(5086).Text, obj6);
     cResult[17] = cResult[6];
     cResult[18] = "text-muted";
     cResult[19] = tmp29;
     const tmpResult4 = tmp(504);
   }
   const tmpResult3 = arr(504);
-}) : ((guildIds) => {
+}) : (function GuildCard(guildIds) {
   guildIds = guildIds.guildIds;
   ({ direction, onPress } = guildIds);
   let substr;
@@ -422,7 +422,7 @@ let obj10 = { gap: nativeDefault.space.PX_8 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activity_privacy/native/BaseUpsellActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onConfirm) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function BaseUpsellActionSheet(onConfirm) {
   const cResult = toastContent(576).c(27);
   ({ direction, affectedGuildIds, title, subtitle, confirmText, toastContent } = onConfirm);
   onConfirm = onConfirm.onConfirm;
@@ -465,7 +465,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onConfirm) => {
                 const intl = toastContent(1126).intl;
                 obj2.text = intl.string(toastContent(1126).t.X1rGEm);
                 obj2.onPress = tmp7;
-                const tmp23 = closure_7(toastContent(5601).Button, obj2);
+                const tmp23 = closure_7(toastContent(5375).Button, obj2);
                 cResult[17] = tmp23;
                 let tmp21 = tmp23;
               } else {
@@ -492,7 +492,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onConfirm) => {
                 const items = [tmp8, tmp11, tmp14, tmp24];
                 obj4.children = items;
                 obj3.children = closure_8(closure_5, obj4);
-                const tmp32 = closure_7(toastContent(6652).BottomSheet, obj3);
+                const tmp32 = closure_7(toastContent(6829).BottomSheet, obj3);
                 cResult[21] = tmp4.container;
                 cResult[22] = tmp8;
                 cResult[23] = tmp11;
@@ -511,7 +511,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onConfirm) => {
               tmp24 = tmp27;
             }
             const obj6 = { variant: "primary", size: "md", text: confirmText, onPress: tmp5 };
-            const tmp20 = closure_7(toastContent(5601).Button, obj6);
+            const tmp20 = closure_7(toastContent(5375).Button, obj6);
             cResult[14] = confirmText;
             cResult[15] = tmp5;
             cResult[16] = tmp20;
@@ -527,14 +527,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onConfirm) => {
         tmp14 = tmp17;
       }
       const obj8 = { style: tmp4.description, variant: "text-md/medium", color: "text-default", children: subtitle };
-      const tmp13 = closure_7(toastContent(4892).Text, obj8);
+      const tmp13 = closure_7(toastContent(5086).Text, obj8);
       cResult[7] = tmp4.description;
       cResult[8] = subtitle;
       cResult[9] = tmp13;
       tmp11 = tmp13;
     }
     const obj9 = { style: tmp4.title, accessibilityRole: "header", variant: "heading-xl/bold", color: "text-strong", children: title };
-    const tmp10 = closure_7(toastContent(4892).Text, obj9);
+    const tmp10 = closure_7(toastContent(5086).Text, obj9);
     cResult[4] = tmp4.title;
     cResult[5] = title;
     cResult[6] = tmp10;
@@ -558,7 +558,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onConfirm) => {
   cResult[2] = fn;
   tmp5 = fn;
   let obj = toastContent(576);
-}) : ((toastContent) => {
+}) : (function BaseUpsellActionSheet(toastContent) {
   toastContent = toastContent.toastContent;
   const onConfirm = toastContent.onConfirm;
   ({ direction, affectedGuildIds, title, subtitle, confirmText, onCardPress } = toastContent);
@@ -582,17 +582,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onConfirm) => {
   }, []);
   let obj = { startExpanded: true, children: null };
   let obj2 = { style: tmp.container, children: null };
-  const items1 = [closure_7(toastContent(4892).Text, { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/bold", color: "text-strong", children: title }), closure_7(toastContent(4892).Text, { style: tmp.description, variant: "text-md/medium", color: "text-default", children: subtitle }), closure_7(closure_12, { guildIds: affectedGuildIds, direction, onPress: onCardPress }), ];
+  const items1 = [closure_7(toastContent(5086).Text, { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/bold", color: "text-strong", children: title }), closure_7(toastContent(5086).Text, { style: tmp.description, variant: "text-md/medium", color: "text-default", children: subtitle }), closure_7(closure_12, { guildIds: affectedGuildIds, direction, onPress: onCardPress }), ];
   let obj5 = { style: tmp.buttonsContainer, children: null };
-  const items2 = [closure_7(toastContent(5601).Button, { variant: "primary", size: "md", text: confirmText, onPress: callback }), ];
+  const items2 = [closure_7(toastContent(5375).Button, { variant: "primary", size: "md", text: confirmText, onPress: callback }), ];
   const obj6 = { variant: "secondary", size: "md", text: null, onPress: null };
   const intl = toastContent(1126).intl;
   obj6.text = intl.string(toastContent(1126).t.X1rGEm);
   obj6.onPress = callback1;
-  items2[1] = closure_7(toastContent(5601).Button, obj6);
+  items2[1] = closure_7(toastContent(5375).Button, obj6);
   obj5.children = items2;
   items1[3] = closure_8(closure_5, obj5);
   obj2.children = items1;
   obj.children = closure_8(closure_5, obj2);
-  return closure_7(toastContent(6652).BottomSheet, obj);
+  return closure_7(toastContent(6829).BottomSheet, obj);
 });

@@ -1,10 +1,10 @@
-// === Module 13385: OutboundPromotionClaimAlert ===
+// === Module 13685: OutboundPromotionClaimAlert ===
 
-// Module 13385 (OutboundPromotionClaimAlert)
+// Module 13685 (OutboundPromotionClaimAlert)
 import nativeDefault from "native" /* 587 */;
-import LinkingDefault from "Linking" /* 4571 */;
-import ClipboardUtils from "ClipboardUtils" /* 6695 */;
-import PromotionUtils from "PromotionUtils" /* 13247 */;
+import LinkingDefault from "Linking" /* 4763 */;
+import ClipboardUtils from "ClipboardUtils" /* 6872 */;
+import PromotionUtils from "PromotionUtils" /* 13547 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire, Image: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { loading: { marginVertical: 80 }, body: { alignItems: "center" }, title: { marginBottom: 8 }, errorTitle: { lineHeight: 24, marginBottom: 8 }, bodyText: { textAlign: "center", lineHeight: 20 }, copyInputContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, marginTop: 16, padding: 12, borderRadius: nativeDefault.radii.sm }, copyInputLabel: { lineHeight: 20, marginBottom: 8 }, copyInput: null, copyInputCopied: null, copyButton: null, promotionArt: null, errorArt: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, marginTop: 16, padding: 12, borderRadius: nativeDefault.radii.sm };
 obj2.copyInput = { borderWidth: 1, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.xs, padding: 8, marginBottom: 8, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
@@ -28,7 +28,7 @@ let obj5 = { borderColor: nativeDefault.colors.ICON_FEEDBACK_POSITIVE };
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/premium/OutboundPromotionClaimAlert.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCancel) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function OutboundPromotionClaimAlert(onCancel) {
   const cResult = onCancel(code[7]).c(51);
   onCancel = onCancel.onCancel;
   const onClaim = onCancel.onClaim;
@@ -418,7 +418,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCancel) => {
   tmp13 = items4;
   tmp12 = fn;
   const tmp11 = onClaim(code[9]);
-}) : ((onCancel) => {
+}) : (function OutboundPromotionClaimAlert(onCancel) {
   onCancel = onCancel.onCancel;
   const onClaim = onCancel.onClaim;
   const code = onCancel.code;

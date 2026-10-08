@@ -1,16 +1,16 @@
-// === Module 14577: AccountEditPassword ===
+// === Module 14838: AccountEditPassword ===
 
-// Module 14577 (AccountEditPassword)
+// Module 14838 (AccountEditPassword)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import UserSettingsAccountEditPasswordDefault from "UserSettingsAccountEditPassword" /* 14578 */;
+import UserSettingsAccountEditPasswordDefault from "UserSettingsAccountEditPassword" /* 14839 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 const obj = { container: null };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.container = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -20,7 +20,7 @@ const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/account/native/AccountEditPassword.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function AccountEditPassword() {
   const cResult = c.c(3);
   const tmp3 = closure_5();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -40,4 +40,6 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp8 = cResult[2];
   }
   return tmp8;
-}) : (() => <React3 style={closure_5().container}>{jsx(UserSettingsAccountEditPasswordDefault, {})}</React3>));
+}) : (function AccountEditPassword() {
+  return <React3 style={closure_5().container}>{jsx(UserSettingsAccountEditPasswordDefault, {})}</React3>;
+}));

@@ -1,23 +1,23 @@
-// === Module 10936: AppStoreOverlayBottomSheet ===
+// === Module 10587: AppStoreOverlayBottomSheet ===
 
-// Module 10936 (AppStoreOverlayBottomSheet)
-import openURLDefault from "openURL" /* 4565 */;
-import AnalyticsActions from "AnalyticsActions" /* 7215 */;
-import AppStoreOverlayContent from "AppStoreOverlayContent" /* 10933 */;
-import AppStoreOverlayBody from "AppStoreOverlayBody" /* 10937 */;
+// Module 10587 (AppStoreOverlayBottomSheet)
+import openURLDefault from "openURL" /* 4757 */;
+import AnalyticsActions from "AnalyticsActions" /* 7395 */;
+import AppStoreOverlayContent from "AppStoreOverlayContent" /* 10584 */;
+import AppStoreOverlayBody from "AppStoreOverlayBody" /* 10588 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({ headerBar: { zIndex: 1 }, bodyContainer: { flex: 1, minHeight: 0 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayBottomSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((metadata) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppStoreOverlayBottomSheet(metadata) {
   const cResult = metadata(onDismiss[5]).c(38);
   metadata = metadata.metadata;
   ({ trackOverlayCarouselScroll, onOverlaySurfaceClick, onOpen } = metadata);
@@ -161,7 +161,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((metadata) => {
   cResult[6] = onInstallPress;
   cResult[7] = U;
   const tmpResult = tmp(tmp2[8]);
-}) : ((metadata) => {
+}) : (function AppStoreOverlayBottomSheet(metadata) {
   metadata = metadata.metadata;
   const onOpen = metadata.onOpen;
   const onDismiss = metadata.onDismiss;

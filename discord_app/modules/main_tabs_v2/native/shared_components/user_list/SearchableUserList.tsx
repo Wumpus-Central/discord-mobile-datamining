@@ -1,22 +1,22 @@
-// === Module 10606: SearchableUserList ===
+// === Module 10203: SearchableUserList ===
 
-// Module 10606 (SearchableUserList)
+// Module 10203 (SearchableUserList)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import GlobalUtils from "GlobalUtils" /* 1375 */;
-import shared from "shared" /* 4735 */;
-import makeUserListPillDataDefault from "makeUserListPillData" /* 10608 */;
+import GlobalUtils from "GlobalUtils" /* 1387 */;
+import shared from "shared" /* 4929 */;
+import makeUserListPillDataDefault from "makeUserListPillData" /* 10205 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const View = fn(17).View;
-const UserRowModes = fn(10605).UserRowModes;
+const UserRowModes = fn(10202).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
-let obj2 = { searchBarContainer: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, searchBar: { height: "duration", minHeight: false }, searchBarRowContainer: null, noResults: null };
+const createStyles = fn(5090);
+let obj2 = { searchBarContainer: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, searchBar: { height: "emoji", minHeight: false }, searchBarRowContainer: null, noResults: null };
 const obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj2.searchBarRowContainer = { paddingTop: nativeDefault.space.PX_8 };
 let obj4 = { paddingTop: nativeDefault.space.PX_8 };
@@ -27,7 +27,7 @@ let obj5 = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_B
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/SearchableUserList.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((selectedUserIds) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SearchableUserList(selectedUserIds) {
   const cResult = selectedUserIds(onSelectUser[9]).c(82);
   selectedUserIds = selectedUserIds.selectedUserIds;
   const disabledUserIds = selectedUserIds.disabledUserIds;
@@ -241,7 +241,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((selectedUserIds)
   cResult[13] = obj2;
   tmp20 = obj2;
   const tmp18 = handleMessage(rowMode.useState(""), 2);
-}) : ((selectedUserIds) => {
+}) : (function SearchableUserList(selectedUserIds) {
   selectedUserIds = selectedUserIds.selectedUserIds;
   const disabledUserIds = selectedUserIds.disabledUserIds;
   const onSelectUser = selectedUserIds.onSelectUser;

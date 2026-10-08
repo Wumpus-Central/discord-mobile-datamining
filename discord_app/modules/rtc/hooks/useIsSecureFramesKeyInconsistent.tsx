@@ -1,14 +1,14 @@
-// === Module 9390: useIsSecureFramesKeyInconsistent ===
+// === Module 8811: useIsSecureFramesKeyInconsistent ===
 
-// Module 9390 (useIsSecureFramesKeyInconsistent)
-import SecureFramesUtils from "SecureFramesUtils" /* 9378 */;
+// Module 8811 (useIsSecureFramesKeyInconsistent)
+import SecureFramesUtils from "SecureFramesUtils" /* 8800 */;
 import noop from "module_19" /* 19 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4935 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5108 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7423 */;
 
 require = fn;
 let ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsSecureFramesKeyInconsistent(userId) {
   const cResult = userId(576).c(3);
   userId = userId.userId;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -31,7 +31,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   }
   const obj = userId(576);
   return userId(504).useStateFromStores(first, tmp7);
-}) : ((userId) => {
+}) : (function useIsSecureFramesKeyInconsistent(userId) {
   userId = userId.userId;
   let items = [RTCConnectionStore, StreamRTCConnectionStore];
   return userId(504).useStateFromStores(items, () => {
@@ -44,7 +44,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/rtc/hooks/useIsSecureFramesKeyInconsistent.tsx");
 
 export const useIsSecureFramesKeyInconsistent = tmp2;
-export const useAlertIfSecureFramesKeyInconsistent = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+export const useAlertIfSecureFramesKeyInconsistent = ReactCompilerGating.isReactCompilerEnabled() ? (function useAlertIfSecureFramesKeyInconsistent(channelId) {
   const cResult = channelId(userId[4]).c(9);
   channelId = channelId.channelId;
   userId = channelId.userId;
@@ -106,7 +106,7 @@ export const useAlertIfSecureFramesKeyInconsistent = ReactCompilerGating.isReact
   cResult[8] = items;
   tmp5 = items;
   tmp4 = S;
-}) : ((channelId) => {
+}) : (function useAlertIfSecureFramesKeyInconsistent(channelId) {
   channelId = channelId.channelId;
   const userId = channelId.userId;
   const nickname = channelId.nickname;

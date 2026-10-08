@@ -1,11 +1,11 @@
-// === Module 16459: ICYMIFeedbackSheet ===
+// === Module 16719: ICYMIFeedbackSheet ===
 
-// Module 16459 (ICYMIFeedbackSheet)
+// Module 16719 (ICYMIFeedbackSheet)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8039 */;
-import FeedbackActionSheetDefault from "FeedbackActionSheet" /* 11283 */;
-import ICYMIAnalytics2 from "ICYMIAnalytics" /* 14183 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8447 */;
+import FeedbackActionSheetDefault from "FeedbackActionSheet" /* 9623 */;
+import ICYMIAnalytics2 from "ICYMIAnalytics" /* 14482 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/native/ICYMIFeedbackSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIFeedbackSheet() {
   const cResult = c.c(5);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp11 = cResult[4];
   }
   return tmp11;
-}) : (() => {
+}) : (function ICYMIFeedbackSheet() {
   const obj = { headerLabel: null, showHeaderCloseButton: true, hideDontShowAgainCheckbox: true, ratingsBodyLabel: null, reasonsHeaderLabel: null, reasons: null, otherKey: "other", trackOpen: null, feedbackReasons: null, trackReport: null };
   const intl = util.intl;
   obj.headerLabel = intl.string(util.t["ppfH9+"]);

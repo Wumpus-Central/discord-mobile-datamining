@@ -1,17 +1,17 @@
-// === Module 12770: MaskedLinkModal ===
+// === Module 12918: MaskedLinkModal ===
 
-// Module 12770 (MaskedLinkModal)
+// Module 12918 (MaskedLinkModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Stack_Stack from "Stack/Stack" /* 5600 */;
-import AlertModal from "AlertModal" /* 5720 */;
-import Form from "Form" /* 8924 */;
-import SharedStateUtils from "SharedStateUtils" /* 12767 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import AlertModal from "AlertModal" /* 5303 */;
+import Stack_Stack from "Stack/Stack" /* 5373 */;
+import Form from "Form" /* 8555 */;
+import SharedStateUtils from "SharedStateUtils" /* 12915 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
+import createStyles from "createStyles" /* 5090 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -22,7 +22,7 @@ let closure_6 = createStyles.createStyles(obj);
 let obj2 = { borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 const result = size.fileFinishedImporting("modules/masked_link/components/native/MaskedLinkModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function MaskedLinkModal(arg0) {
   const cResult = c.c(60);
   ({ url, trustUrl, isProtocol, onConfirm, onCancel } = arg0);
   const tmp4 = closure_6();
@@ -302,7 +302,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = url;
   cResult[4] = obj17;
   tmp5 = obj17;
-}) : ((isProtocol) => {
+}) : (function MaskedLinkModal(isProtocol) {
   isProtocol = isProtocol.isProtocol;
   shouldTrustUrl = undefined;
   ({ url, trustUrl, onConfirm, onCancel } = isProtocol);

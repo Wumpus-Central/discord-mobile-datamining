@@ -1,21 +1,21 @@
-// === Module 16769: ConjureNativeTurnTimer ===
+// === Module 17044: ConjureNativeTurnTimer ===
 
-// Module 16769 (ConjureNativeTurnTimer)
+// Module 17044 (ConjureNativeTurnTimer)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import ConjureDuration from "ConjureDuration" /* 16693 */;
-import useConjureElapsedMs from "useConjureElapsedMs" /* 16770 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import ConjureDuration from "ConjureDuration" /* 16966 */;
+import useConjureElapsedMs from "useConjureElapsedMs" /* 17045 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_3 = createStyles.createStyles({ timer: { fontVariant: ["tabular-nums"] } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/agent_activity/native/ConjureNativeTurnTimer.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((variant) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureNativeTurnTimer(variant) {
   const cResult = c.c(9);
   variant = variant.variant;
   let str = "text-sm/normal";
@@ -60,7 +60,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((variant) => {
   cResult[8] = tmp11;
   tmp10 = tmp11;
   const tmpResult = useConjureElapsedMs;
-}) : ((variant) => {
+}) : (function ConjureNativeTurnTimer(variant) {
   let str = variant.variant;
   if (str === undefined) {
     str = "text-sm/normal";

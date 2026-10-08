@@ -1,19 +1,20 @@
-// === Module 15693: UserSettingsDesignSystemModal ===
+// === Module 15973: UserSettingsDesignSystemModal ===
 
-// Module 15693 (UserSettingsDesignSystemModal)
+// Module 15973 (UserSettingsDesignSystemModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import Navigator from "Navigator" /* 6503 */;
-import ModalScreen from "ModalScreen" /* 8128 */;
-import ModalContent from "ModalContent" /* 8129 */;
-import ModalActionButton from "ModalActionButton" /* 10742 */;
-import Modal from "Modal" /* 10989 */;
-import ModalFooter from "ModalFooter" /* 11549 */;
-import StepModal from "StepModal" /* 14290 */;
-import ModalDisclaimer from "ModalDisclaimer" /* 14292 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5940 */;
+import NavigatorHeader from "NavigatorHeader" /* 6203 */;
+import Navigator from "Navigator" /* 6679 */;
+import ModalScreen from "ModalScreen" /* 7506 */;
+import ModalContent from "ModalContent" /* 7507 */;
+import Modal from "Modal" /* 11213 */;
+import ModalFooter from "ModalFooter" /* 11564 */;
+import ModalActionButton from "ModalActionButton" /* 11613 */;
+import StepModal from "StepModal" /* 14114 */;
+import ModalDisclaimer from "ModalDisclaimer" /* 14116 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -28,7 +29,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { flex: 1, alignItems: "center", padding: 16, gap: 16 }, screen: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, emojiContainer: null, emoji: null, title: null, tableRows: null };
 let size = { alignItems: "center", justifyContent: "center", width: 80, height: 80, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, marginBottom: 16 };
 obj2.emojiContainer = size;
@@ -38,22 +39,22 @@ obj2.tableRows = { width: "100%" };
 let closure_9 = createStyles.createStyles(obj2);
 const constants = { START: "Come on fhqwhgads", WHO_DAT: "Who's that?", EVERYBODY: "Everybody come on fhqwhgads", JOCKIN: "I see you jockin' me", LIMIT: "Everybody to the limit" };
 let ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useScreens() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function t() {
       let obj = {};
       const obj2 = {
-        headerLeft: require("NavigatorHeader").getHeaderCloseButton(ModalActionCreatorsDefault.pop),
+        headerLeft: NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop),
         headerRight() {
           const obj = { text: null, onPress: null };
           const intl = closure_1_0(1126).intl;
           obj.text = intl.string(closure_1_0(1126).t["5Wxrcd"]);
-          obj.onPress = closure_1_1(5099).pop;
-          return closure_1_7(closure_1_0(6890).HeaderActionButton, obj);
+          obj.onPress = closure_1_1(5940).pop;
+          return closure_1_7(closure_1_0(7079).HeaderActionButton, obj);
         },
         headerTitle() {
-          return closure_1_7(closure_1_0(6017).NavigatorHeader, { title: constants.START, subtitle: "I said come on fhqwhgads" });
+          return closure_1_7(closure_1_0(6203).NavigatorHeader, { title: constants.START, subtitle: "I said come on fhqwhgads" });
         },
         render(arg0, arg1) {
           closure_0 = arg1;
@@ -65,19 +66,17 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
               return closure_0.push(constants.WHO_DAT);
             },
             secondaryAction: "Maybe later",
-            onSecondaryAction: closure_1(5099).pop,
+            onSecondaryAction: closure_1(5940).pop,
             disclaimer: "I said come on fhqwhgads."
           });
         }
       };
       obj[constants.START] = obj2;
       const obj4 = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
-      const obj3 = require("NavigatorHeader");
-      obj4.headerLeft = require("NavigatorHeader").getHeaderBackButton();
-      const obj5 = require("NavigatorHeader");
-      obj4.headerRight = require("NavigatorHeader").getHeaderCloseButton(ModalActionCreatorsDefault.pop);
+      obj4.headerLeft = NavigatorHeader.getHeaderBackButton();
+      obj4.headerRight = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
       obj4.headerTitle = function headerTitle() {
-        return closure_1_7(closure_1_0(6017).NavigatorHeader, { title: constants.WHO_DAT });
+        return closure_1_7(closure_1_0(6203).NavigatorHeader, { title: constants.WHO_DAT });
       };
       obj4.render = function render(arg0, arg1) {
         closure_0 = arg1;
@@ -88,17 +87,15 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           onAction() {
             return closure_0.push(constants.EVERYBODY);
           },
-          children: closure_7(closure_0(6105).TextInput, { placeholder: "My friend Jake" })
+          children: closure_7(closure_0(6283).TextInput, { placeholder: "My friend Jake" })
         });
       };
       obj[constants.WHO_DAT] = obj4;
       const obj7 = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
-      const obj6 = require("NavigatorHeader");
-      obj7.headerLeft = require("NavigatorHeader").getHeaderBackButton();
-      const obj8 = require("NavigatorHeader");
-      obj7.headerRight = require("NavigatorHeader").getHeaderCloseButton(ModalActionCreatorsDefault.pop);
+      obj7.headerLeft = NavigatorHeader.getHeaderBackButton();
+      obj7.headerRight = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
       obj7.headerTitle = function headerTitle() {
-        return closure_1_7(closure_1_0(6017).NavigatorHeader, { title: constants.EVERYBODY });
+        return closure_1_7(closure_1_0(6203).NavigatorHeader, { title: constants.EVERYBODY });
       };
       obj7.render = function render(arg0, arg1) {
         closure_0 = arg1;
@@ -110,12 +107,10 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       };
       obj[constants.EVERYBODY] = obj7;
       const obj10 = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
-      const obj9 = require("NavigatorHeader");
-      obj10.headerLeft = require("NavigatorHeader").getHeaderBackButton();
-      const obj11 = require("NavigatorHeader");
-      obj10.headerRight = require("NavigatorHeader").getHeaderCloseButton(ModalActionCreatorsDefault.pop);
+      obj10.headerLeft = NavigatorHeader.getHeaderBackButton();
+      obj10.headerRight = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
       obj10.headerTitle = function headerTitle() {
-        return closure_1_7(closure_1_0(6017).NavigatorHeader, { title: constants.JOCKIN, subtitle: "Tryin' to play like, you know me" });
+        return closure_1_7(closure_1_0(6203).NavigatorHeader, { title: constants.JOCKIN, subtitle: "Tryin' to play like, you know me" });
       };
       obj10.render = function render(arg0, arg1) {
         closure_0 = arg1;
@@ -131,20 +126,19 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       };
       obj[constants.JOCKIN] = obj10;
       const obj13 = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
-      const obj12 = require("NavigatorHeader");
-      obj13.headerLeft = require("NavigatorHeader").getHeaderBackButton();
+      obj13.headerLeft = NavigatorHeader.getHeaderBackButton();
       obj13.headerRight = function headerRight() {
-        return closure_1_7(closure_1_0(6017).HeaderSubmittingIndicator, {});
+        return closure_1_7(closure_1_0(6203).HeaderSubmittingIndicator, {});
       };
       obj13.headerTitle = function headerTitle() {
-        return closure_1_7(closure_1_0(6017).NavigatorHeader, { title: constants.LIMIT });
+        return closure_1_7(closure_1_0(6203).NavigatorHeader, { title: constants.LIMIT });
       };
       obj13.render = function render() {
         return closure_1_7(closure_1_14, {
           title: "Everybody to the limit.",
           emoji: "\u{1F44F}",
           action: "Everybody come on fhqwhgads!",
-          onAction: closure_1_1(5099).pop,
+          onAction: closure_1_1(5940).pop,
           secondaryAction: "Push that fh-h-h-h-wqhgad",
           onSecondaryAction() {
             return closure_1_1(dependencyMap[13]).openURL("https://www.youtube.com/watch?v=votBDwhTu1E");
@@ -164,122 +158,117 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     [tmp4, tmp5] = cResult;
   }
   return Navigator.useNavigatorScreens(tmp4, tmp5);
-}) : (() => Navigator.useNavigatorScreens(() => {
-  let obj = {};
-  const obj2 = {
-    headerLeft: require("NavigatorHeader").getHeaderCloseButton(ModalActionCreatorsDefault.pop),
-    headerRight() {
-      const obj = { text: null, onPress: null };
-      const intl = closure_1_0(1126).intl;
-      obj.text = intl.string(closure_1_0(1126).t["5Wxrcd"]);
-      obj.onPress = closure_1_1(5099).pop;
-      return closure_1_7(closure_1_0(6890).HeaderActionButton, obj);
-    },
-    headerTitle() {
-      return closure_1_7(closure_1_0(6017).NavigatorHeader, { title: constants.START, subtitle: "I said come on fhqwhgads" });
-    },
-    render(arg0, arg1) {
+}) : (function useScreens() {
+  return Navigator.useNavigatorScreens(() => {
+    let obj = {};
+    const obj2 = {
+      headerLeft: NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop),
+      headerRight() {
+        const obj = { text: null, onPress: null };
+        const intl = closure_1_0(1126).intl;
+        obj.text = intl.string(closure_1_0(1126).t["5Wxrcd"]);
+        obj.onPress = closure_1_1(5940).pop;
+        return closure_1_7(closure_1_0(7079).HeaderActionButton, obj);
+      },
+      headerTitle() {
+        return closure_1_7(closure_1_0(6203).NavigatorHeader, { title: constants.START, subtitle: "I said come on fhqwhgads" });
+      },
+      render(arg0, arg1) {
+        closure_0 = arg1;
+        return closure_7(closure_14, {
+          title: "Come on fhqwhgads.",
+          emoji: "\u{1F60E}",
+          action: "Everybody to the limit",
+          onAction() {
+            return closure_0.push(constants.WHO_DAT);
+          },
+          secondaryAction: "Maybe later",
+          onSecondaryAction: closure_1(5940).pop,
+          disclaimer: "I said come on fhqwhgads."
+        });
+      }
+    };
+    obj[constants.START] = obj2;
+    const obj4 = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
+    obj4.headerLeft = NavigatorHeader.getHeaderBackButton();
+    obj4.headerRight = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
+    obj4.headerTitle = function headerTitle() {
+      return closure_1_7(closure_1_0(6203).NavigatorHeader, { title: constants.WHO_DAT });
+    };
+    obj4.render = function render(arg0, arg1) {
       closure_0 = arg1;
       return closure_7(closure_14, {
-        title: "Come on fhqwhgads.",
-        emoji: "\u{1F60E}",
-        action: "Everybody to the limit",
+        title: "Who's that?",
+        emoji: "\u{1F4BF}",
+        action: "It's to the limit",
         onAction() {
-          return closure_0.push(constants.WHO_DAT);
+          return closure_0.push(constants.EVERYBODY);
         },
-        secondaryAction: "Maybe later",
-        onSecondaryAction: closure_1(5099).pop,
-        disclaimer: "I said come on fhqwhgads."
+        children: closure_7(closure_0(6283).TextInput, { placeholder: "My friend Jake" })
       });
-    }
-  };
-  obj[constants.START] = obj2;
-  const obj4 = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
-  const obj3 = require("NavigatorHeader");
-  obj4.headerLeft = require("NavigatorHeader").getHeaderBackButton();
-  const obj5 = require("NavigatorHeader");
-  obj4.headerRight = require("NavigatorHeader").getHeaderCloseButton(ModalActionCreatorsDefault.pop);
-  obj4.headerTitle = function headerTitle() {
-    return closure_1_7(closure_1_0(6017).NavigatorHeader, { title: constants.WHO_DAT });
-  };
-  obj4.render = function render(arg0, arg1) {
-    closure_0 = arg1;
-    return closure_7(closure_14, {
-      title: "Who's that?",
-      emoji: "\u{1F4BF}",
-      action: "It's to the limit",
-      onAction() {
-        return closure_0.push(constants.EVERYBODY);
-      },
-      children: closure_7(closure_0(6105).TextInput, { placeholder: "My friend Jake" })
-    });
-  };
-  obj[constants.WHO_DAT] = obj4;
-  const obj7 = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
-  const obj6 = require("NavigatorHeader");
-  obj7.headerLeft = require("NavigatorHeader").getHeaderBackButton();
-  const obj8 = require("NavigatorHeader");
-  obj7.headerRight = require("NavigatorHeader").getHeaderCloseButton(ModalActionCreatorsDefault.pop);
-  obj7.headerTitle = function headerTitle() {
-    return closure_1_7(closure_1_0(6017).NavigatorHeader, { title: constants.EVERYBODY });
-  };
-  obj7.render = function render(arg0, arg1) {
-    closure_0 = arg1;
-    return closure_7(closure_15, {
-      onAction() {
-        return closure_0.push(constants.JOCKIN);
-      }
-    });
-  };
-  obj[constants.EVERYBODY] = obj7;
-  const obj10 = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
-  const obj9 = require("NavigatorHeader");
-  obj10.headerLeft = require("NavigatorHeader").getHeaderBackButton();
-  const obj11 = require("NavigatorHeader");
-  obj10.headerRight = require("NavigatorHeader").getHeaderCloseButton(ModalActionCreatorsDefault.pop);
-  obj10.headerTitle = function headerTitle() {
-    return closure_1_7(closure_1_0(6017).NavigatorHeader, { title: constants.JOCKIN, subtitle: "Tryin' to play like, you know me" });
-  };
-  obj10.render = function render(arg0, arg1) {
-    closure_0 = arg1;
-    return closure_7(closure_14, {
-      title: "I see you jockin' me.",
-      emoji: "\u{1F525}",
-      action: "I'm like come on fhqwhgads",
-      onAction() {
-        return closure_0.push(constants.LIMIT);
-      },
-      disclaimer: "Tryin' to play like, you know me."
-    });
-  };
-  obj[constants.JOCKIN] = obj10;
-  const obj13 = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
-  const obj12 = require("NavigatorHeader");
-  obj13.headerLeft = require("NavigatorHeader").getHeaderBackButton();
-  obj13.headerRight = function headerRight() {
-    return closure_1_7(closure_1_0(6017).HeaderSubmittingIndicator, {});
-  };
-  obj13.headerTitle = function headerTitle() {
-    return closure_1_7(closure_1_0(6017).NavigatorHeader, { title: constants.LIMIT });
-  };
-  obj13.render = function render() {
-    return closure_1_7(closure_1_14, {
-      title: "Everybody to the limit.",
-      emoji: "\u{1F44F}",
-      action: "Everybody come on fhqwhgads!",
-      onAction: closure_1_1(5099).pop,
-      secondaryAction: "Push that fh-h-h-h-wqhgad",
-      onSecondaryAction() {
-        return closure_1_1(dependencyMap[13]).openURL("https://www.youtube.com/watch?v=votBDwhTu1E");
-      },
-      disclaimer: "The cheat is to the limit."
-    });
-  };
-  obj[constants.LIMIT] = obj13;
-  return obj;
-}, []));
+    };
+    obj[constants.WHO_DAT] = obj4;
+    const obj7 = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
+    obj7.headerLeft = NavigatorHeader.getHeaderBackButton();
+    obj7.headerRight = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
+    obj7.headerTitle = function headerTitle() {
+      return closure_1_7(closure_1_0(6203).NavigatorHeader, { title: constants.EVERYBODY });
+    };
+    obj7.render = function render(arg0, arg1) {
+      closure_0 = arg1;
+      return closure_7(closure_15, {
+        onAction() {
+          return closure_0.push(constants.JOCKIN);
+        }
+      });
+    };
+    obj[constants.EVERYBODY] = obj7;
+    const obj10 = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
+    obj10.headerLeft = NavigatorHeader.getHeaderBackButton();
+    obj10.headerRight = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
+    obj10.headerTitle = function headerTitle() {
+      return closure_1_7(closure_1_0(6203).NavigatorHeader, { title: constants.JOCKIN, subtitle: "Tryin' to play like, you know me" });
+    };
+    obj10.render = function render(arg0, arg1) {
+      closure_0 = arg1;
+      return closure_7(closure_14, {
+        title: "I see you jockin' me.",
+        emoji: "\u{1F525}",
+        action: "I'm like come on fhqwhgads",
+        onAction() {
+          return closure_0.push(constants.LIMIT);
+        },
+        disclaimer: "Tryin' to play like, you know me."
+      });
+    };
+    obj[constants.JOCKIN] = obj10;
+    const obj13 = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
+    obj13.headerLeft = NavigatorHeader.getHeaderBackButton();
+    obj13.headerRight = function headerRight() {
+      return closure_1_7(closure_1_0(6203).HeaderSubmittingIndicator, {});
+    };
+    obj13.headerTitle = function headerTitle() {
+      return closure_1_7(closure_1_0(6203).NavigatorHeader, { title: constants.LIMIT });
+    };
+    obj13.render = function render() {
+      return closure_1_7(closure_1_14, {
+        title: "Everybody to the limit.",
+        emoji: "\u{1F44F}",
+        action: "Everybody come on fhqwhgads!",
+        onAction: closure_1_1(5940).pop,
+        secondaryAction: "Push that fh-h-h-h-wqhgad",
+        onSecondaryAction() {
+          return closure_1_1(dependencyMap[13]).openURL("https://www.youtube.com/watch?v=votBDwhTu1E");
+        },
+        disclaimer: "The cheat is to the limit."
+      });
+    };
+    obj[constants.LIMIT] = obj13;
+    return obj;
+  }, []);
+});
 ReactCompilerGating = fn(558);
-let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function DemoModal() {
   const cResult = c.c(2);
   const tmp4 = closure_11();
   if (cResult[0] !== tmp4) {
@@ -292,12 +281,12 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp5 = cResult[1];
   }
   return tmp5;
-}) : (() => {
+}) : (function DemoModal() {
   const tmp = closure_11();
   return React5(Modal.Modal, { screens: closure_11(), initialRouteName: constants.START });
 });
 ReactCompilerGating = fn(558);
-let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function DemoStepModal() {
   const cResult = c.c(3);
   const tmp4 = closure_11();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -318,7 +307,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp7 = cResult[2];
   }
   return tmp7;
-}) : (() => {
+}) : (function DemoStepModal() {
   const memo = noop.useMemo(() => {
     const items = [, , , , ];
     ({ START: arr[0], WHO_DAT: arr[1], EVERYBODY: arr[2], JOCKIN: arr[3], LIMIT: arr[4] } = constants);
@@ -328,7 +317,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   return React5(StepModal.StepModal, { screens: closure_11(), steps: memo, initialRouteName: constants.START });
 });
 ReactCompilerGating = fn(558);
-let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function DemoScreen(arg0) {
   const cResult = c.c(21);
   ({ title, emoji, action, onAction, secondaryAction, onSecondaryAction, disclaimer, footer, children } = arg0);
   const tmp4 = closure_9();
@@ -437,7 +426,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = tmp4.emojiContainer;
   cResult[3] = tmp6;
   tmp5 = tmp6;
-}) : ((arg0) => {
+}) : (function DemoScreen(arg0) {
   ({ emoji, action, secondaryAction, disclaimer, footer } = arg0);
   ({ title, onAction, onSecondaryAction, children } = arg0);
   const tmp = closure_9();
@@ -479,7 +468,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return closure_1_8(ModalScreen.ModalScreen, { children: children1 });
 });
 ReactCompilerGating = fn(558);
-let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((onAction) => {
+let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function SwitchesScreen(onAction) {
   const cResult = parts(576).c(22);
   onAction = onAction.onAction;
   const tmp4 = closure_9();
@@ -494,132 +483,59 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((onAction) => {
     first = cResult[0];
   }
   const obj = parts(576);
-  [arr2, importDefault] = noop.useState(parts.map(first));
-  if (cResult[1] !== arr2) {
+  let tmp = parts;
+  [obj2, importDefault] = noop.useState(parts.map(first));
+  if (cResult[1] !== obj2) {
     const _Symbol = Symbol;
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-      const fn2 = function b(arg0) {
-        return arg0;
-      };
-      cResult[3] = fn2;
-      let tmp8 = fn2;
+      class A {
+        constructor(arg0) {
+          return onAction;
+        }
+      }
+      cResult[3] = A;
     } else {
-      tmp8 = cResult[3];
-    }
-    const someResult = arr2.some(tmp8);
-    cResult[1] = arr2;
-    cResult[2] = someResult;
-  } else {
-    if (cResult[4] === onAction) {
-      if (cResult[5] === tmp4.screen.backgroundColor) {
-        if (cResult[6] === tmp7) {
-          let tmp11 = cResult[7];
+      class A {
+        constructor(arg0) {
+          return onAction;
         }
-        if (cResult[8] === parts) {
-          if (cResult[9] === arr2) {
-            if (cResult[13] !== cResult[10]) {
-              const obj2 = { hasIcons: false, children: tmp15 };
-              const tmp21 = closure_7(tmp(6081).TableRowGroup, obj2);
-              cResult[13] = tmp15;
-              cResult[14] = tmp21;
-              let tmp19 = tmp21;
-            } else {
-              tmp19 = cResult[14];
-            }
-            if (cResult[15] === tmp4.tableRows) {
-              if (cResult[16] === tmp19) {
-                let tmp22 = cResult[17];
-              }
-              const _Symbol2 = Symbol;
-              if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
-                const tmp28 = closure_7(tmp(10741).ModalFloatingActionSpacer, {});
-                cResult[18] = tmp28;
-                let tmp26 = tmp28;
-              } else {
-                tmp26 = cResult[18];
-              }
-              if (cResult[19] === tmp11) {
-                if (cResult[20] === tmp22) {
-                  let tmp29 = cResult[21];
-                }
-                return tmp29;
-              }
-              const obj3 = { title: "Everybody come on fhqwhgads.", emoji: "\u{1F44F}", footer: tmp11, children: null };
-              const items = [tmp22, tmp26];
-              obj3.children = items;
-              const tmp32 = closure_8(closure_14, obj3);
-              cResult[19] = tmp11;
-              cResult[20] = tmp22;
-              cResult[21] = tmp32;
-              tmp29 = tmp32;
-            }
-            const obj4 = { style: tmp14, children: tmp19 };
-            const tmp25 = closure_7(closure_5, obj4);
-            cResult[15] = tmp4.tableRows;
-            cResult[16] = tmp19;
-            cResult[17] = tmp25;
-            tmp22 = tmp25;
-          }
-        }
-        if (cResult[11] !== parts) {
-          class C {
-            constructor(arg0, arg1) {
-              closure_0 = arg1;
-              obj = {
-                label: closure_0[arg1],
-                value: onAction,
-                onValueChange(arg0) {
-                              closure_0 = arg0;
-                              closure_1_1(() => { ... });
-                            }
-              };
-              return closure_1_7(closure_0(closure_1_2[24]).TableSwitchRow, obj, arg1);
-            }
-          }
-          cResult[11] = parts;
-          cResult[12] = C;
-        } else {
-          class C {
-            constructor(arg0, arg1) {
-              closure_0 = arg1;
-              obj = {
-                label: closure_0[arg1],
-                value: onAction,
-                onValueChange(arg0) {
-                              closure_0 = arg0;
-                              closure_1_1(() => { ... });
-                            }
-              };
-              return closure_1_7(closure_0(closure_1_2[24]).TableSwitchRow, obj, arg1);
-            }
-          }
-        }
-        const mapped = arr2.map(C);
-        cResult[8] = parts;
-        cResult[9] = arr2;
-        cResult[10] = mapped;
       }
     }
-    const obj5 = { isVisible: cResult[2], floatingBackgroundColor: tmp4.screen.backgroundColor, text: "Come on fhqwhgads", onPress: onAction };
-    const tmp13 = closure_7(tmp(10741).ModalFloatingAction, obj5);
+    const someResult = obj2.some(A);
+    cResult[1] = obj2;
+    cResult[2] = someResult;
+  } else {
+    class A {
+      constructor(arg0) {
+        return onAction;
+      }
+    }
+    if (cResult[4] === onAction) {
+      class A {
+        constructor(arg0) {
+          return onAction;
+        }
+      }
+    }
+    const obj3 = { isVisible: tmp7, floatingBackgroundColor: tmp4.screen.backgroundColor, text: "Come on fhqwhgads", onPress: onAction };
+    const tmp13 = closure_7(tmp(11612).ModalFloatingAction, obj3);
     cResult[4] = onAction;
     cResult[5] = tmp4.screen.backgroundColor;
-    cResult[6] = cResult[2];
+    cResult[6] = tmp7;
     cResult[7] = tmp13;
-    tmp11 = tmp13;
   }
   const tmp6 = _slicedToArray(noop.useState(parts.map(first)), 2);
-}) : ((onAction) => {
+}) : (function SwitchesScreen(onAction) {
   c1 = undefined;
   let tmp = closure_9();
   let parts = "I said ooh ah fhqwhgads, I said ooh ah fhqhgads!".split(" ");
   [arr2, c1] = noop.useState(parts.map(() => false));
   const obj = { title: "Everybody come on fhqwhgads.", emoji: "\u{1F44F}", footer: null, children: null };
   const tmp2 = _slicedToArray(noop.useState(parts.map(() => false)), 2);
-  obj.footer = closure_7(parts(10741).ModalFloatingAction, { isVisible: arr2.some((item) => item), floatingBackgroundColor: tmp.screen.backgroundColor, text: "Come on fhqwhgads", onPress: onAction.onAction });
+  obj.footer = closure_7(parts(11612).ModalFloatingAction, { isVisible: arr2.some((item) => item), floatingBackgroundColor: tmp.screen.backgroundColor, text: "Come on fhqwhgads", onPress: onAction.onAction });
   const obj3 = { style: tmp.tableRows, children: null };
   const obj2 = { isVisible: arr2.some((item) => item), floatingBackgroundColor: tmp.screen.backgroundColor, text: "Come on fhqwhgads", onPress: onAction.onAction };
-  obj3.children = closure_7(parts(6081).TableRowGroup, {
+  obj3.children = closure_7(parts(6267).TableRowGroup, {
     hasIcons: false,
     children: arr2.map((value, index) => {
       parts = index;
@@ -639,7 +555,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((onAction) => {
       }, index);
     })
   });
-  const items = [closure_7(closure_5, obj3), closure_7(parts(10741).ModalFloatingActionSpacer, {})];
+  const items = [closure_7(closure_5, obj3), closure_7(parts(11612).ModalFloatingActionSpacer, {})];
   obj.children = items;
   return closure_8(closure_14, obj);
 });
@@ -648,7 +564,7 @@ let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSettingsDesignSystemModal() {
   const cResult = c.c(4);
   const tmp4 = closure_9();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -677,7 +593,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp12 = cResult[3];
   }
   return tmp12;
-}) : (() => {
+}) : (function UserSettingsDesignSystemModal() {
   const obj = { children: null };
   const obj2 = { style: closure_9().container, children: null };
   const items = [React5(components_Button_Button.Button, { onPress: openDemoModal, text: "Show Modal" }), React5(components_Button_Button.Button, { onPress: openDemoStepModal, text: "Show Stepped Modal" })];

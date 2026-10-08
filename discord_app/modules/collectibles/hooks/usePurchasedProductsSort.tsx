@@ -1,10 +1,10 @@
-// === Module 14895: usePurchasedProductsSort ===
+// === Module 15157: usePurchasedProductsSort ===
 
-// Module 14895 (usePurchasedProductsSort)
-import CollectiblesItemType from "CollectiblesItemType" /* 1980 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7077 */;
+// Module 15157 (usePurchasedProductsSort)
+import CollectiblesItemType from "CollectiblesItemType" /* 1992 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7263 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7081 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7267 */;
 
 const require = globalThis.__r;
 
@@ -15,7 +15,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/usePurchasedProductsSort.tsx");
 
-export const usePurchasedProductsSort = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const usePurchasedProductsSort = ReactCompilerGating.isReactCompilerEnabled() ? (function usePurchasedProductsSort(arg0) {
   const cResult = require("c").c(9);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [CollectiblesPurchaseStore];
@@ -99,7 +99,7 @@ export const usePurchasedProductsSort = ReactCompilerGating.isReactCompilerEnabl
   cResult[5] = tmp8;
   cResult[6] = sorted;
   let tmpResult = require("useStateFromStores");
-}) : ((arg0) => {
+}) : (function usePurchasedProductsSort(arg0) {
   _require = arg0;
   let items = [CollectiblesPurchaseStore];
   stateFromStores = require("useStateFromStores").useStateFromStores(items, () => purchases.purchases);

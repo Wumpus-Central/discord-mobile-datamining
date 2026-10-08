@@ -1,46 +1,46 @@
-// === Module 14765: UserSettingsAuthedApp ===
+// === Module 15026: UserSettingsAuthedApp ===
 
-// Module 14765 (UserSettingsAuthedApp)
+// Module 15026 (UserSettingsAuthedApp)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Link from "Link" /* 1491 */;
-import RootNavigationRef from "RootNavigationRef" /* 4743 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4818 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import useAlertStore from "useAlertStore" /* 5716 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6494 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 6498 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 6616 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 6621 */;
-import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 6672 */;
-import MaskedLinkUtils from "MaskedLinkUtils" /* 8057 */;
-import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager" /* 9024 */;
-import UserSettingsAuthedAppDeleteWarningModalDefault from "UserSettingsAuthedAppDeleteWarningModal" /* 12277 */;
+import Link from "Link" /* 1503 */;
+import RootNavigationRef from "RootNavigationRef" /* 4937 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5012 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import useAlertStore from "useAlertStore" /* 5299 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6671 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 6675 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 6793 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 6798 */;
+import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 6849 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 8466 */;
+import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager" /* 10623 */;
+import UserSettingsAuthedAppDeleteWarningModalDefault from "UserSettingsAuthedAppDeleteWarningModal" /* 12356 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6609 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5077 */;
-import LocaleStore from "LocaleStore" /* 2116 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2062 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6786 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5971 */;
+import LocaleStore from "LocaleStore" /* 2128 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const Constants = fn(1085);
 ({ UserSettingsSections: closure_12, AnalyticsSections: map1, AnalyticsPages: closure_14 } = Constants);
-let closure_15 = fn(10666).ChannelDetailsNavigatorScreens;
-let closure_16 = fn(9829).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
+let closure_15 = fn(9581).ChannelDetailsNavigatorScreens;
+let closure_16 = fn(10392).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { paddingHorizontal: 16, paddingVertical: 24 }, section: { marginBottom: 24 }, header: { flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 12 }, appAboutDescription: { width: "100%" }, warningContainer: { marginTop: nativeDefault.space.PX_12, display: "flex", flexDirection: "row" }, warningIcon: null };
 let size = { width: 16, height: 16, marginRight: 8, color: nativeDefault.colors.TEXT_MUTED };
 obj2.warningIcon = size;
 let closure_19 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((text) => {
+let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function WarningLabel(text) {
   const cResult = c.c(8);
   text = text.text;
   const tmp4 = closure_19();
@@ -79,7 +79,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((text) => {
   cResult[6] = tmp9;
   cResult[7] = tmp13;
   tmp12 = tmp13;
-}) : ((children) => {
+}) : (function WarningLabel(children) {
   const tmp = closure_19();
   const obj = { style: tmp.warningContainer, children: null };
   const items = [constants(CircleInformationIcon.CircleInformationIcon, { size: "xs", color: nativeDefault.colors.TEXT_MUTED, style: tmp.warningIcon }), constants(Text_Text.Text, { color: "text-default", variant: "text-sm/medium", children: children.text })];
@@ -87,11 +87,11 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((text) => {
   return collapsedCategories(hasOwnProperty, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? ((application) => {
+let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function AuthorizedAppTwoWay(application) {
   const cResult = navigation(576).c(7);
   application = application.application;
   const obj = navigation(576);
-  navigation = navigation(1490).useNavigation();
+  navigation = navigation(1502).useNavigation();
   if (cResult[0] !== navigation) {
     const fn = function t() {
       const CommonActions = Link.CommonActions;
@@ -124,11 +124,11 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? ((application) =
   cResult[3] = tmp5;
   cResult[4] = formatResult;
   tmp6 = formatResult;
-  const obj2 = navigation(1490);
+  const obj2 = navigation(1502);
   const obj4 = { applicationName: application.name, onConnectionPress: tmp5 };
-}) : ((application) => {
+}) : (function AuthorizedAppTwoWay(application) {
   let navigation;
-  navigation = navigation(1490).useNavigation();
+  navigation = navigation(1502).useNavigation();
   const items = [navigation];
   const obj2 = { text: null };
   const callback = noop.useCallback(() => {
@@ -140,7 +140,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? ((application) =
   return closure_17(closure_20, obj2);
 });
 ReactCompilerGating = fn(558);
-let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? ((application) => {
+let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function ParentApp(application) {
   const cResult = c.c(4);
   application = application.application;
   if (cResult[0] !== application.name) {
@@ -163,7 +163,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? ((application) =
     tmp6 = cResult[3];
   }
   return tmp6;
-}) : ((application) => {
+}) : (function ParentApp(application) {
   const obj = { text: null };
   const intl = util.intl;
   obj.text = intl.format(util.t.j4B7EW, { applicationName: application.application.name });

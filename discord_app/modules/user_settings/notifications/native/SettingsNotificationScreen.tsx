@@ -1,19 +1,19 @@
-// === Module 15319: SettingsNotificationScreen ===
+// === Module 15581: SettingsNotificationScreen ===
 
-// Module 15319 (SettingsNotificationScreen)
+// Module 15581 (SettingsNotificationScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 4806 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Card from "Card" /* 6002 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6477 */;
-import SettingBuilders from "SettingBuilders" /* 11142 */;
-import NotificationPermissionUtil from "NotificationPermissionUtil" /* 12069 */;
-import SettingLayoutDefault from "SettingLayout" /* 14515 */;
-import ContextualOptInNudgeHoldoutExperimentDefault from "ContextualOptInNudgeHoldoutExperiment" /* 15321 */;
-import SettingsNotificationUtils from "SettingsNotificationUtils" /* 15322 */;
-import NotificationPermissionSettingsHeaderDefault from "NotificationPermissionSettingsHeader" /* 15323 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 5000 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import Card from "Card" /* 6186 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6655 */;
+import SettingBuilders from "SettingBuilders" /* 11262 */;
+import NotificationPermissionUtil from "NotificationPermissionUtil" /* 12142 */;
+import SettingLayoutDefault from "SettingLayout" /* 14775 */;
+import ContextualOptInNudgeHoldoutExperimentDefault from "ContextualOptInNudgeHoldoutExperiment" /* 15583 */;
+import SettingsNotificationUtils from "SettingsNotificationUtils" /* 15584 */;
+import NotificationPermissionSettingsHeaderDefault from "NotificationPermissionSettingsHeader" /* 15585 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -113,15 +113,15 @@ function getNotificationSettings() {
   return items1;
 }
 const View = fn(17).View;
-let closure_5 = fn(15320).initializeAndroidNotificationSettingsStore;
-const MobileUserSettings = fn(7645).MobileUserSettings;
+let closure_5 = fn(15582).initializeAndroidNotificationSettingsStore;
+const MobileUserSettings = fn(7966).MobileUserSettings;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { card: { marginBottom: 8, borderColor: nativeDefault.unsafe_rawColors.YELLOW_300, borderWidth: 1, borderRadius: nativeDefault.radii.lg }, cardContent: { flexDirection: "row", alignItems: "center", gap: 8 }, text: { flex: 1 } };
 let closure_10 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function SystemNotificationsSubLabel() {
   const cResult = c.c(11);
   const tmp4 = closure_10();
   const manaTypeConsolidationExperiment = ManaTypeConsolidationExperiment.useManaTypeConsolidationExperiment("SystemNotificationsSubLabel");
@@ -206,7 +206,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[6] = tmp4;
   cResult[7] = tmp15;
   tmp14 = tmp15;
-}) : (() => {
+}) : (function SystemNotificationsSubLabel() {
   const tmp = closure_10();
   const manaTypeConsolidationExperiment = ManaTypeConsolidationExperiment.useManaTypeConsolidationExperiment("SystemNotificationsSubLabel");
   let showReactivationPrompt = NotificationPermissionUtil.useShowReactivationPrompt();
@@ -251,7 +251,7 @@ let obj3 = { marginBottom: 8, borderColor: nativeDefault.unsafe_rawColors.YELLOW
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/notifications/native/SettingsNotificationScreen.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function SettingsNotificationsScreen() {
   const cResult = c.c(9);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { location: "SettingsNotificationsScreen" };
@@ -298,7 +298,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   const effect = noop.useEffect(N, tmp12);
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    class S {
+    class T {
       constructor() {
         obj = closure_1_0(closure_1_2[19]);
         result = obj.prefetchFamilyCenterAgeGroup();
@@ -306,11 +306,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       }
     }
     const items1 = [];
-    cResult[5] = S;
+    cResult[5] = T;
     cResult[6] = items1;
     let tmp15 = items1;
   } else {
-    class S {
+    class T {
       constructor() {
         obj = closure_1_0(closure_1_2[19]);
         result = obj.prefetchFamilyCenterAgeGroup();
@@ -319,9 +319,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
     tmp15 = cResult[6];
   }
-  const effect1 = noop.useEffect(S, tmp15);
+  const effect1 = noop.useEffect(T, tmp15);
   if (cResult[7] !== tmp7) {
-    class S {
+    class T {
       constructor() {
         obj = closure_1_0(closure_1_2[19]);
         result = obj.prefetchFamilyCenterAgeGroup();
@@ -334,7 +334,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     cResult[8] = tmp18;
     const tmp17 = tmp18;
   } else {
-    class S {
+    class T {
       constructor() {
         obj = closure_1_0(closure_1_2[19]);
         result = obj.prefetchFamilyCenterAgeGroup();
@@ -343,7 +343,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
   }
   return tmp17;
-}) : (() => {
+}) : (function SettingsNotificationsScreen() {
   const tmp = !ContextualOptInNudgeHoldoutExperimentDefault.useConfig({ location: "SettingsNotificationsScreen" }).inHoldout;
   closure_0 = tmp;
   const items = [tmp];

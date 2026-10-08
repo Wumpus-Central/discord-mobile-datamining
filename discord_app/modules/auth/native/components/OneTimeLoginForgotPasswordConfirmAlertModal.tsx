@@ -1,9 +1,9 @@
-// === Module 6442: OneTimeLoginForgotPasswordConfirmAlertModal ===
+// === Module 6620: OneTimeLoginForgotPasswordConfirmAlertModal ===
 
-// Module 6442 (OneTimeLoginForgotPasswordConfirmAlertModal)
+// Module 6620 (OneTimeLoginForgotPasswordConfirmAlertModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import AlertModal from "AlertModal" /* 5720 */;
+import AlertModal from "AlertModal" /* 5303 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/OneTimeLoginForgotPasswordConfirmAlertModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function OneTimeLoginForgotPasswordConfirmAlertModal() {
   const cResult = c.c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
@@ -41,7 +41,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp8 = cResult[2];
   }
   return tmp8;
-}) : (() => {
+}) : (function OneTimeLoginForgotPasswordConfirmAlertModal() {
   const obj = { title: null, content: null, actions: null };
   const intl = util.intl;
   obj.title = intl.string(util.t["6Ecyts"]);

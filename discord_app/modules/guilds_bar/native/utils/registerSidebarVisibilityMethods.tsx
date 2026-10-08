@@ -1,9 +1,9 @@
-// === Module 16144: registerSidebarVisibilityMethods ===
+// === Module 16404: registerSidebarVisibilityMethods ===
 
-// Module 16144 (registerSidebarVisibilityMethods)
-import SortedGuildStore2 from "SortedGuildStore" /* 5623 */;
-import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore" /* 7229 */;
-import GuildStore from "GuildStore" /* 2074 */;
+// Module 16404 (registerSidebarVisibilityMethods)
+import SortedGuildStore2 from "SortedGuildStore" /* 5968 */;
+import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore" /* 7408 */;
+import GuildStore from "GuildStore" /* 2086 */;
 import size from "module_2" /* 2 */;
 
 const SortedGuildStore = SortedGuildStore2;
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/guilds_bar/native/utils/regis
 export const registerGuildVisibilityMethod = function registerGuildVisibilityMethod(fastListRef) {
   const current = fastListRef.current;
   if (null != current) {
-    closure_1(() => {
+    closure_1(function getVisibleGuildIds() {
       if (null == current) {
         return [];
       } else {
@@ -63,7 +63,7 @@ export const registerFastListChannelVisibilityMethod = function registerFastList
   closure_0 = guildChannels;
   const current = ref.current;
   if (null != current) {
-    React(() => {
+    React(function getVisibleChannelIds() {
       if (null == containerSize) {
         return [];
       } else {

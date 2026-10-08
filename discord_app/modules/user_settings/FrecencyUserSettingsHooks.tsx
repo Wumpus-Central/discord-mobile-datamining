@@ -1,9 +1,9 @@
-// === Module 10108: FrecencyUserSettingsHooks ===
+// === Module 9692: FrecencyUserSettingsHooks ===
 
-// Module 10108 (FrecencyUserSettingsHooks)
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 2033 */;
+// Module 9692 (FrecencyUserSettingsHooks)
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 2045 */;
 import noop from "module_19" /* 19 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/FrecencyUserSettingsHooks.tsx");
 
-export const useFrecencySettings = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useFrecencySettings = ReactCompilerGating.isReactCompilerEnabled() ? (function useFrecencySettings(arg0) {
   const cResult = require("c").c(5);
   _require = tmp4;
   if (cResult[0] !== (undefined === arg0 || arg0)) {
@@ -48,7 +48,7 @@ export const useFrecencySettings = ReactCompilerGating.isReactCompilerEnabled() 
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(tmp8, tmp9);
-}) : (() => {
+}) : (function useFrecencySettings() {
   let flag = arg0;
   if (arg0 === undefined) {
     flag = true;

@@ -1,16 +1,16 @@
-// === Module 15879: DevWidget ===
+// === Module 16138: DevWidget ===
 
-// Module 15879 (DevWidget)
+// Module 16138 (DevWidget)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import spring from "spring" /* 5604 */;
-import springPresets from "springPresets" /* 5605 */;
-import Pressables from "Pressables" /* 5916 */;
-import StaffBadgeIcon from "StaffBadgeIcon" /* 15421 */;
-import VEVOODefault from "VEVOO" /* 15880 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import spring from "spring" /* 5374 */;
+import springPresets from "springPresets" /* 5378 */;
+import Pressables from "Pressables" /* 6189 */;
+import StaffBadgeIcon from "StaffBadgeIcon" /* 15683 */;
+import VEVOODefault from "VEVOO" /* 16139 */;
 import noop from "module_19" /* 19 */;
-import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7216 */;
+import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7396 */;
 
 const require = globalThis.__r;
 
@@ -18,7 +18,7 @@ require = fn;
 const DEV_WIDGET_SIZE = fn(585).DEV_WIDGET_SIZE;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { widgetContainer: { position: "absolute" }, widget: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, justifyContent: "center", alignItems: "center", height: DEV_WIDGET_SIZE, width: DEV_WIDGET_SIZE, borderRadius: nativeDefault.radii.xl };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_MOBILE_NAVIGATOR_X);
@@ -35,7 +35,7 @@ const __initData8 = { code: "function DevWidgetTsx8(event){const{getClampedPosit
 const __initData9 = { code: "function DevWidgetTsx9(){const{runOnJS,onChangePosition,x,y}=this.__closure;runOnJS(onChangePosition)({x:x.get(),y:y.get()});}" };
 const __initData10 = { code: "function DevWidgetTsx10(){const{getClampedPosition,x,y,withSpring,springUnclamped}=this.__closure;const{x:translateX,y:translateY}=getClampedPosition(x.get(),y.get());return{transform:[{translateX:withSpring(translateX,springUnclamped)},{translateY:withSpring(translateY,springUnclamped)}]};}" };
 let ReactCompilerGating = fn(558);
-let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function DraggableContainer(arg0) {
   const cResult = require("c").c(34);
   const x = arg0.x;
   _require = x;
@@ -364,7 +364,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = fn;
   tmp10 = fn;
   let obj2 = { windowDimensionsSharedValue: tmp9, insetsSharedValue: tmp8, clamp: require("ReanimatedRexport").clamp, dragBoundsPadding: num, contentWidth, contentHeight };
-}) : ((children) => {
+}) : (function DraggableContainer(children) {
   const x = children.x;
   _require = x;
   const y = children.y;
@@ -467,7 +467,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return sharedValue(require("LegacyBaseButton").GestureDetector, obj6);
 });
 ReactCompilerGating = fn(558);
-let closure_21 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_21 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function DevWidgetContent() {
   const cResult = c.c(4);
   const tmp4 = closure_9();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -496,7 +496,7 @@ let closure_21 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() =>
     tmp9 = cResult[3];
   }
   return tmp9;
-}) : (() => {
+}) : (function DevWidgetContent() {
   const tmp = closure_9();
   return timestampProducer(Pressables.PressableOpacity, {
     style: closure_9().widget,
@@ -512,7 +512,7 @@ ReactCompilerGating = fn(558);
 size = fn(2);
 let result = size.fileFinishedImporting("modules/devtools/native/components/DevWidget.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevWidget() {
   const cResult = c.c(11);
   const sharedValue = ReanimatedRexport.useSharedValue(DevToolsSettingsStore.devWidgetPosition.x);
   const sharedValue1 = ReanimatedRexport.useSharedValue(DevToolsSettingsStore.devWidgetPosition.y);
@@ -565,7 +565,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[1] = sharedValue1;
   cResult[2] = tmp6;
   tmp5 = tmp6;
-}) : (() => {
+}) : (function DevWidget() {
   const sharedValue = ReanimatedRexport.useSharedValue(DevToolsSettingsStore.devWidgetPosition.x);
   const sharedValue1 = ReanimatedRexport.useSharedValue(DevToolsSettingsStore.devWidgetPosition.y);
   const obj3 = { children: null };

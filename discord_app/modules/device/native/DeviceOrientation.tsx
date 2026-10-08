@@ -1,11 +1,11 @@
-// === Module 8018: DeviceOrientation ===
+// === Module 8426: DeviceOrientation ===
 
-// Module 8018 (DeviceOrientation)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import DeviceUtils from "DeviceUtils" /* 4872 */;
+// Module 8426 (DeviceOrientation)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1271 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import DeviceUtils from "DeviceUtils" /* 5066 */;
 import noop from "module_19" /* 19 */;
-import get_ActivityIndicator_mod from "module_8019" /* 8019 */;
+import get_ActivityIndicator_mod from "module_8427" /* 8427 */;
 
 const require = globalThis.__r;
 
@@ -246,7 +246,9 @@ function lockOrientation(PORTRAIT, flag) {
     });
   }
 }
-fn = () => obj3().orientation;
+function useOrientation() {
+  return obj3().orientation;
+}
 const size = fn(2);
 const result4 = size.fileFinishedImporting("modules/device/native/DeviceOrientation.tsx");
 
@@ -262,8 +264,8 @@ export const getOrientation = function getOrientation() {
 export const getOrientationLock = function getOrientationLock() {
   return obj3.getState().orientationLock;
 };
-export const useOrientation = fn;
-export const useOrientationListener = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export { useOrientation };
+export const useOrientationListener = ReactCompilerGating.isReactCompilerEnabled() ? (function useOrientationListener(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] !== arg0) {
@@ -281,7 +283,7 @@ export const useOrientationListener = ReactCompilerGating.isReactCompilerEnabled
     tmp3 = cResult[2];
   }
   const effect = noop.useEffect(tmp2, tmp3);
-}) : ((arg0) => {
+}) : (function useOrientationListener(arg0) {
   closure_0 = arg0;
   const items = [arg0];
   const effect = noop.useEffect(() => obj3.subscribe(closure_0), items);

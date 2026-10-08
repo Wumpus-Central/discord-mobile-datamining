@@ -1,12 +1,12 @@
-// === Module 15039: useUserRoleSubscriptionRelationship ===
+// === Module 15301: useUserRoleSubscriptionRelationship ===
 
-// Module 15039 (useUserRoleSubscriptionRelationship)
+// Module 15301 (useUserRoleSubscriptionRelationship)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import SubscriptionRoleStore from "SubscriptionRoleStore" /* 5646 */;
+import SubscriptionRoleStore from "SubscriptionRoleStore" /* 5993 */;
 
 require = fn;
-const constants = fn(15038).UserGuildRoleSubscriptionRelationship;
+const constants = fn(15300).UserGuildRoleSubscriptionRelationship;
 const ReactCompilerGating = fn(558);
 function getUserRoleSubscriptionRelationship() {
   let tmp = arg0;
@@ -34,7 +34,7 @@ function getUserRoleSubscriptionRelationship() {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useUserRoleSubscriptionRelationship.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserRoleSubscriptionRelationship() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [SubscriptionRoleStore];
@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     [tmp4, tmp5] = cResult;
   }
   return initialize.useStateFromStores(tmp4, tmp5);
-}) : (() => {
+}) : (function useUserRoleSubscriptionRelationship() {
   let items = [SubscriptionRoleStore];
   return initialize.useStateFromStores(items, () => {
     const items = [SubscriptionRoleStore];

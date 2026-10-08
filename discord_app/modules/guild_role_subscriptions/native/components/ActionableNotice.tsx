@@ -1,22 +1,22 @@
-// === Module 18017: ActionableNotice ===
+// === Module 18304: ActionableNotice ===
 
-// Module 18017 (ActionableNotice)
+// Module 18304 (ActionableNotice)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles({ container: { flexDirection: "row", paddingVertical: 12, alignItems: "center" }, message: { marginEnd: 27, flex: 3 }, actionButton: { flexGrow: 0, alignSelf: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/ActionableNotice.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ActionableNotice(arg0) {
   const cResult = c.c(17);
   ({ style, message, ctaMessage, onClick, submitting, disabled } = arg0);
   const tmp5 = closure_5();
@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = items1;
   tmp6 = items1;
   tmp4 = undefined !== disabled && disabled;
-}) : ((arg0) => {
+}) : (function ActionableNotice(arg0) {
   ({ submitting, disabled } = arg0);
   ({ style, message, ctaMessage, onClick } = arg0);
   if (disabled === undefined) {

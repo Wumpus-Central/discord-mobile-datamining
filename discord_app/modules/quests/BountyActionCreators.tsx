@@ -1,18 +1,18 @@
-// === Module 10962: BountyActionCreators ===
+// === Module 11155: BountyActionCreators ===
 
-// Module 10962 (BountyActionCreators)
+// Module 11155 (BountyActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
-import QuestTypes from "QuestTypes" /* 5633 */;
-import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 6983 */;
-import QuestDataUtils from "QuestDataUtils" /* 7196 */;
-import SessionAdGenerator from "SessionAdGenerator" /* 7218 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
+import QuestTypes from "QuestTypes" /* 5980 */;
+import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7172 */;
+import QuestDataUtils from "QuestDataUtils" /* 7375 */;
+import SessionAdGenerator from "SessionAdGenerator" /* 7398 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AdDeliveryStore from "AdDeliveryStore" /* 7197 */;
-import NetworkStore from "NetworkStore" /* 4945 */;
-import BountyStore from "BountyStore" /* 7199 */;
-import QuestStore from "QuestStore" /* 7200 */;
+import AdDeliveryStore from "AdDeliveryStore" /* 7376 */;
+import NetworkStore from "NetworkStore" /* 5280 */;
+import BountyStore from "BountyStore" /* 7378 */;
+import QuestStore from "QuestStore" /* 7379 */;
 
 require = fn;
 function fetchBountiesAndDispatch() {
@@ -101,10 +101,10 @@ let closure_12 = async function _fetchQuestHomeBounties(arg0) {
           c1 = 1;
           const obj4 = {
             value: fetchBountiesAndDispatch(tmp5, asyncGeneratorStep(async () => {
-                      await tmp2(6983).getSession();
+                      await tmp2(7172).getSession();
                       closure_128_0 = value;
-                      const orRefreshAdSession = tmp2(7218).getOrRefreshAdSession();
-                      const HTTP = tmp2(1282).HTTP;
+                      const orRefreshAdSession = tmp2(7398).getOrRefreshAdSession();
+                      const HTTP = tmp2(1294).HTTP;
                       const request = { url: constants.QUESTS_GET_DECISIONS, query: null, rejectWithError: false, context: null };
                       const obj7 = { placement: closure_129_0, client_ad_session_id: orRefreshAdSession.uuid, client_heartbeat_session_id: null, num_decisions_requested: 5 };
                       if (closure_128_0 != null) {

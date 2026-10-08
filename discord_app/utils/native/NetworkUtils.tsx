@@ -1,26 +1,27 @@
-// === Module 1469: utils/NetworkUtils ===
+// === Module 1481: utils/NetworkUtils ===
 
-// Module 1469 (utils/NetworkUtils)
+// Module 1481 (utils/NetworkUtils)
 import LoggerDefault from "Logger" /* 3 */;
-import Constants from "Constants" /* 1085 */;
-import configure_mod from "configure" /* 1470 */;
-import size from "module_2" /* 2 */;
+import configure2 from "configure" /* 1482 */;
 
+const configure_mod = configure2;
+
+require = fn;
 function notifyListeners(isConnected) {
   isConnected = isConnected.isConnected;
   ({ type, details } = isConnected);
   obj = { type, effectiveSpeed: null, serviceProvider: null };
   let cellularGeneration = null;
-  if (type === NetworkConnectionTypes.CELLULAR) {
+  if (type === configure2.NetInfoStateType.cellular) {
     cellularGeneration = details.cellularGeneration;
   }
   obj.effectiveSpeed = cellularGeneration;
   let carrier = null;
-  if (type === NetworkConnectionTypes.CELLULAR) {
+  if (type === configure2.NetInfoStateType.cellular) {
     carrier = details.carrier;
   }
   obj.serviceProvider = carrier;
-  obj.log("Network status changed: isConnected:" + isConnected + " type:" + isConnected.type + " speed:" + obj.cellularGeneration);
+  obj.log("Network status changed: isConnected:" + isConnected + " type:" + isConnected.type + " speed:" + obj.effectiveSpeed);
   const item = isConnected ? closure_4 : closure_5.forEach((fn) => {
     flag = isConnected;
     if (isConnected == null) {
@@ -31,7 +32,6 @@ function notifyListeners(isConnected) {
   const item1 = closure_6.forEach((fn) => fn(obj));
   const arr = isConnected ? closure_4 : closure_5;
 }
-const NetworkConnectionTypes = Constants.NetworkConnectionTypes;
 let obj = new LoggerDefault("NetworkUtils");
 obj.enableNativeLogger(true);
 let closure_4 = [];
@@ -46,6 +46,7 @@ configure.then((isConnected) => {
     flag = false;
   }
 });
+const size = fn(2);
 const result = size.fileFinishedImporting("utils/native/NetworkUtils.tsx");
 
 export default {
@@ -133,12 +134,12 @@ export default {
       ({ type, details } = result);
       obj = { type, effectiveSpeed: null, serviceProvider: null };
       let cellularGeneration = null;
-      if (type === constants.CELLULAR) {
+      if (type === configure2.NetInfoStateType.cellular) {
         cellularGeneration = details.cellularGeneration;
       }
       obj.effectiveSpeed = cellularGeneration;
       let carrier = null;
-      if (type === constants.CELLULAR) {
+      if (type === configure2.NetInfoStateType.cellular) {
         carrier = details.carrier;
       }
       obj.serviceProvider = carrier;

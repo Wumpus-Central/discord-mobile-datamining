@@ -1,15 +1,15 @@
-// === Module 17080: MessageRequestsScreenWithTabs ===
+// === Module 17361: MessageRequestsScreenWithTabs ===
 
-// Module 17080 (MessageRequestsScreenWithTabs)
+// Module 17361 (MessageRequestsScreenWithTabs)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import SegmentedControlState from "SegmentedControlState" /* 9317 */;
-import SegmentedControl from "SegmentedControl" /* 9318 */;
-import SegmentedControlPages from "SegmentedControlPages" /* 10987 */;
-import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11520 */;
-import MessageRequestListDefault from "MessageRequestList" /* 17081 */;
-import SpamMessageListDefault from "SpamMessageList" /* 17097 */;
+import SegmentedControlState from "SegmentedControlState" /* 8505 */;
+import SegmentedControl from "SegmentedControl" /* 8752 */;
+import SegmentedControlPages from "SegmentedControlPages" /* 11211 */;
+import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11518 */;
+import MessageRequestListDefault from "MessageRequestList" /* 17362 */;
+import SpamMessageListDefault from "SpamMessageList" /* 17378 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const constants = { REQUEST: "REQUEST", SPAM: "SPAM" };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, messageRequestContent: { flex: 1 }, tabContainer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj.tabContainer = { minHeight: 32, paddingHorizontal: nativeDefault.space.PX_16 };
@@ -28,13 +28,13 @@ let obj4 = { minHeight: 32, paddingHorizontal: nativeDefault.space.PX_16 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/message_requests/screens/MessageRequestsScreenWithTabs.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((navigation) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function MessageRequestsScreenWithTabs(navigation) {
   const cResult = c.c(30);
   navigation = navigation.navigation;
   const tmp4 = closure_9();
   [tmp6, importDefault] = noop.useState(0);
   if (cResult[0] !== navigation) {
-    const fn = function v(channelId) {
+    const fn = function b(channelId) {
       return navigation.push("preview", { channelId });
     };
     cResult[0] = navigation;
@@ -176,7 +176,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((naviga
   cResult[11] = items1;
   tmp21 = items1;
   const tmp5 = _slicedToArray(noop.useState(0), 2);
-}) : ((navigation) => {
+}) : (function MessageRequestsScreenWithTabs(navigation) {
   navigation = navigation.navigation;
   closure_1 = undefined;
   const tmp = closure_9();

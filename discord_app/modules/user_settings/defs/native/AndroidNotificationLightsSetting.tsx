@@ -1,20 +1,20 @@
-// === Module 15333: AndroidNotificationLightsSetting ===
+// === Module 15595: AndroidNotificationLightsSetting ===
 
-// Module 15333 (AndroidNotificationLightsSetting)
+// Module 15595 (AndroidNotificationLightsSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import SettingsConstants from "SettingsConstants" /* 7645 */;
-import SettingsNotificationUtils from "SettingsNotificationUtils" /* 15322 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 15326 */;
-import AndroidNotificationSettingsStore from "AndroidNotificationSettingsStore" /* 15320 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import SettingsConstants from "SettingsConstants" /* 7966 */;
+import SettingsNotificationUtils from "SettingsNotificationUtils" /* 15584 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 15588 */;
+import AndroidNotificationSettingsStore from "AndroidNotificationSettingsStore" /* 15582 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import SettingBuilders_mod from "SettingBuilders" /* 11142 */;
+import SettingBuilders_mod from "SettingBuilders" /* 11262 */;
 import size from "module_2" /* 2 */;
 
 ({ useAndroidNotificationLightsEnabled: c2, setAndroidNotificationLightsEnabled } = AndroidNotificationSettingsStore);
 let ReactCompilerGating = ReactCompilerGating_mod;
-let closure_3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasAndroidNotificationLightsSetting() {
   const cResult = c.c(2);
   const tmp4 = React2();
   if (cResult[0] !== tmp4) {
@@ -35,7 +35,7 @@ let closure_3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp5 = cResult[1];
   }
   return tmp5;
-}) : (() => {
+}) : (function useHasAndroidNotificationLightsSetting() {
   const tmp = React2();
   const isIOSResult = PlatformUtils.isIOS();
   let tmp5 = !isIOSResult;
@@ -58,7 +58,7 @@ const obj = {
 };
 let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-obj.useValue = () => {
+obj.useValue = function useAndroidNotificationLightsSettingValue() {
   let flag = React2();
   if (flag == null) {
     flag = false;

@@ -1,11 +1,11 @@
-// === Module 16035: useLiveStageData ===
+// === Module 16295: useLiveStageData ===
 
-// Module 16035 (useLiveStageData)
+// Module 16295 (useLiveStageData)
 import _modDef12 from "module_12" /* 12 */;
-import StageChannelParticipants from "StageChannelParticipants" /* 5589 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 5955 */;
 import noop from "module_19" /* 19 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5582 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5892 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/useLiveStageData.tsx");
 
-export const useLiveStageData = ReactCompilerGating.isReactCompilerEnabled() ? ((channel_id) => {
+export const useLiveStageData = ReactCompilerGating.isReactCompilerEnabled() ? (function useLiveStageData(channel_id) {
   _require = channel_id;
   const cResult = require("c").c(37);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -115,27 +115,27 @@ export const useLiveStageData = ReactCompilerGating.isReactCompilerEnabled() ? (
               tmp33 = cResult[25];
             }
             if (cResult[26] !== channel_id.channel_id) {
-              class B {
+              class O {
                 constructor() {
                   return closure_5.getChannel(closure_0.channel_id);
                 }
               }
               const items7 = [channel_id.channel_id];
               cResult[26] = channel_id.channel_id;
-              cResult[27] = B;
+              cResult[27] = O;
               cResult[28] = items7;
               let tmp36 = items7;
             } else {
-              class B {
+              class O {
                 constructor() {
                   return closure_5.getChannel(closure_0.channel_id);
                 }
               }
               tmp36 = cResult[28];
             }
-            const stateFromStores = tmp(573).useStateFromStores(tmp33, B, tmp36);
+            const stateFromStores = tmp(573).useStateFromStores(tmp33, O, tmp36);
             if (cResult[29] === stateFromStoresArray2.length) {
-              class B {
+              class O {
                 constructor() {
                   return closure_5.getChannel(closure_0.channel_id);
                 }
@@ -173,14 +173,14 @@ export const useLiveStageData = ReactCompilerGating.isReactCompilerEnabled() ? (
     }
   }
   if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-    class B {
+    class O {
       constructor() {
         return closure_5.getChannel(closure_0.channel_id);
       }
     }
-    cResult[15] = I;
+    cResult[15] = E;
   } else {
-    class B {
+    class O {
       constructor() {
         return closure_5.getChannel(closure_0.channel_id);
       }
@@ -190,9 +190,9 @@ export const useLiveStageData = ReactCompilerGating.isReactCompilerEnabled() ? (
   const items9 = [...stateFromStoresArray1];
   cResult[12] = stateFromStoresArray;
   cResult[13] = stateFromStoresArray1;
-  cResult[14] = _modDef12.uniqBy(items9, I);
-  const uniqByResult = _modDef12.uniqBy(items9, I);
-}) : ((channel_id) => {
+  cResult[14] = _modDef12.uniqBy(items9, E);
+  const uniqByResult = _modDef12.uniqBy(items9, E);
+}) : (function useLiveStageData(channel_id) {
   _require = channel_id;
   let items = [memo1];
   const items1 = [channel_id.channel_id];

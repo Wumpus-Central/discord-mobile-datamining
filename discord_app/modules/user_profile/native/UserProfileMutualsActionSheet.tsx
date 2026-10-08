@@ -1,23 +1,23 @@
-// === Module 12290: UserProfileMutualsActionSheet ===
+// === Module 12388: UserProfileMutualsActionSheet ===
 
-// Module 12290 (UserProfileMutualsActionSheet)
+// Module 12388 (UserProfileMutualsActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5048 */;
-import GuildIcon from "GuildIcon" /* 5978 */;
-import TableRow from "TableRow" /* 6000 */;
-import ActivityStatusDefault from "ActivityStatus" /* 10622 */;
-import UserProfileStackedActionSheet from "UserProfileStackedActionSheet" /* 10854 */;
-import useUserProfileMutualsDefault from "useUserProfileMutuals" /* 12285 */;
-import NoMutualServers from "NoMutualServers" /* 12286 */;
-import NoMutualFriends from "NoMutualFriends" /* 12291 */;
-import getMutualFriendsLabelDefault from "getMutualFriendsLabel" /* 12295 */;
-import getMutualGuildsLabelDefault from "getMutualGuildsLabel" /* 12296 */;
+import native from "native" /* 1200 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5405 */;
+import GuildIcon from "GuildIcon" /* 6161 */;
+import TableRow from "TableRow" /* 6184 */;
+import ActivityStatusDefault from "ActivityStatus" /* 10220 */;
+import UserProfileStackedActionSheet from "UserProfileStackedActionSheet" /* 10505 */;
+import useUserProfileMutualsDefault from "useUserProfileMutuals" /* 12383 */;
+import NoMutualServers from "NoMutualServers" /* 12384 */;
+import NoMutualFriends from "NoMutualFriends" /* 12389 */;
+import getMutualFriendsLabelDefault from "getMutualFriendsLabel" /* 12393 */;
+import getMutualGuildsLabelDefault from "getMutualGuildsLabel" /* 12394 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 4936 */;
+import PresenceStore from "PresenceStore" /* 5106 */;
 
 const GuildIconDefault = GuildIcon;
 const UserProfileStackedActionSheetDefault = UserProfileStackedActionSheet;
@@ -25,10 +25,10 @@ const UserProfileStackedActionSheetDefault = UserProfileStackedActionSheet;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire } = get_ActivityIndicator);
-const UserProfileSections = fn(7865).UserProfileSections;
+const UserProfileSections = fn(8283).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { flex: 1, gap: 20, paddingTop: nativeDefault.space.PX_8 }, loadingState: null, emptyState: null, activityStatusText: null, mutualGuildSubLabel: null };
 let obj3 = { flex: 1, gap: 20, paddingTop: nativeDefault.space.PX_8 };
 obj2.loadingState = { paddingTop: nativeDefault.space.PX_8, alignItems: "center" };
@@ -39,13 +39,13 @@ let obj5 = { color: nativeDefault.colors.TEXT_SUBTLE };
 obj2.mutualGuildSubLabel = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
 let closure_11 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((mutualFriend) => {
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function MutualFriendRow(mutualFriend) {
   const cResult = user(576).c(25);
   ({ guildId, onPress, start, end } = mutualFriend);
   user = mutualFriend.mutualFriend.user;
   const tmp4 = closure_11();
   const obj = user(576);
-  const avatarDecoration = user(7898).useAvatarDecoration(user);
+  const avatarDecoration = user(6058).useAvatarDecoration(user);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [PresenceStore];
     cResult[0] = items;
@@ -63,7 +63,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((mutualFriend) 
   } else {
     tmp8 = cResult[2];
   }
-  const obj2 = user(7898);
+  const obj2 = user(6058);
   const stateFromStoresObject = user(504).useStateFromStoresObject(first, tmp8);
   ({ status, isMobileOnline, isVROnline } = stateFromStoresObject);
   if (cResult[3] === avatarDecoration) {
@@ -100,7 +100,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((mutualFriend) 
                     }
                   }
                   const obj3 = { onPress, icon: tmp11, label: tmp13, subLabel: tmp16, start, end };
-                  const tmp22 = closure_9(tmp(6000).TableRow, obj3, tmp10);
+                  const tmp22 = closure_9(tmp(6184).TableRow, obj3, tmp10);
                   cResult[17] = end;
                   cResult[18] = onPress;
                   cResult[19] = start;
@@ -131,7 +131,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((mutualFriend) 
     }
   }
   const tmpResult = user(504);
-  const tmp12 = closure_9(user(1188).Avatar, { user, size: user(1188).AvatarSizes.REFRESH_MEDIUM_32, avatarDecoration, status, guildId, isMobileOnline, isVROnline, autoStatusCutout: true });
+  const tmp12 = closure_9(user(1200).Avatar, { user, size: user(1200).AvatarSizes.REFRESH_MEDIUM_32, avatarDecoration, status, guildId, isMobileOnline, isVROnline, autoStatusCutout: true });
   cResult[3] = avatarDecoration;
   cResult[4] = guildId;
   cResult[5] = isMobileOnline;
@@ -140,29 +140,29 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((mutualFriend) 
   cResult[8] = user;
   cResult[9] = tmp12;
   tmp11 = tmp12;
-  const obj6 = { user, size: user(1188).AvatarSizes.REFRESH_MEDIUM_32, avatarDecoration, status, guildId, isMobileOnline, isVROnline, autoStatusCutout: true };
-}) : ((mutualFriend) => {
+  const obj6 = { user, size: user(1200).AvatarSizes.REFRESH_MEDIUM_32, avatarDecoration, status, guildId, isMobileOnline, isVROnline, autoStatusCutout: true };
+}) : (function MutualFriendRow(mutualFriend) {
   const user = mutualFriend.mutualFriend.user;
   const guildId = mutualFriend.guildId;
   ({ onPress, start, end } = mutualFriend);
   const tmp = closure_11();
-  const avatarDecoration = user(7898).useAvatarDecoration(user);
-  const obj = user(7898);
+  const avatarDecoration = user(6058).useAvatarDecoration(user);
+  const obj = user(6058);
   const items = [PresenceStore];
   const stateFromStoresObject = user(504).useStateFromStoresObject(items, () => ({ status: PresenceStore.getStatus(user.id), isMobileOnline: PresenceStore.isMobileOnline(user.id), isVROnline: PresenceStore.isVROnline(user.id) }));
   ({ status, isMobileOnline, isVROnline } = stateFromStoresObject);
   const obj3 = { onPress, icon: null, label: null, subLabel: null, start: null, end: null };
   const obj2 = user(504);
-  obj3.icon = closure_9(user(1188).Avatar, { user, size: user(1188).AvatarSizes.REFRESH_MEDIUM_32, avatarDecoration, status, guildId, isMobileOnline, isVROnline, autoStatusCutout: true });
-  const obj4 = { user, size: user(1188).AvatarSizes.REFRESH_MEDIUM_32, avatarDecoration, status, guildId, isMobileOnline, isVROnline, autoStatusCutout: true };
+  obj3.icon = closure_9(user(1200).Avatar, { user, size: user(1200).AvatarSizes.REFRESH_MEDIUM_32, avatarDecoration, status, guildId, isMobileOnline, isVROnline, autoStatusCutout: true });
+  const obj4 = { user, size: user(1200).AvatarSizes.REFRESH_MEDIUM_32, avatarDecoration, status, guildId, isMobileOnline, isVROnline, autoStatusCutout: true };
   obj3.label = NicknameUtilsDefault.getName(guildId, undefined, user);
   obj3.subLabel = closure_9(ActivityStatusDefault, { userId: user.id, guildId, textStyle: tmp.activityStatusText });
   obj3.start = start;
   obj3.end = end;
-  return closure_9(user(6000).TableRow, obj3, user.id);
+  return closure_9(user(6184).TableRow, obj3, user.id);
 });
 ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function MutualGuildRow(arg0) {
   const cResult = c.c(28);
   ({ mutualGuild, user, onPress, start, end } = arg0);
   ({ guild, nick } = mutualGuild);
@@ -241,7 +241,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             const obj5 = { style: tmp4.mutualGuildSubLabel, children: null };
             const items = [tmp12, tmp15, tmp19];
             obj5.children = items;
-            const tmp26 = v65535(hasOwnProperty, obj5);
+            const tmp26 = collapsed(hasOwnProperty, obj5);
             cResult[15] = tmp4.mutualGuildSubLabel;
             cResult[16] = tmp12;
             cResult[17] = tmp15;
@@ -278,7 +278,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = user;
   cResult[2] = hasAvatarForGuildResult;
   tmp5 = hasAvatarForGuildResult;
-}) : ((mutualGuild) => {
+}) : (function MutualGuildRow(mutualGuild) {
   ({ guild, nick } = mutualGuild.mutualGuild);
   const user = mutualGuild.user;
   ({ onPress, start, end } = mutualGuild);
@@ -309,7 +309,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   items[2] = tmp3Result4;
   obj3.children = items;
-  obj.subLabel = v65535(hasOwnProperty, obj3);
+  obj.subLabel = collapsed(hasOwnProperty, obj3);
   obj.start = start;
   obj.end = end;
   return options(TableRow.TableRow, obj, guild.id);
@@ -320,7 +320,7 @@ let obj6 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.spac
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileMutualsActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileMutualsActionSheet(user) {
   const cResult = user(onPressMutualFriend[9]).c(42);
   user = user.user;
   const guildId = user.guildId;
@@ -347,58 +347,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
                   if (cResult[10] === user) {
                     let tmp10 = cResult[11];
                   }
-                  class F {
-                    constructor() {
-                      arr = mutualGuilds;
-                      if (null == mutualGuilds) {
-                        tmp11 = jsx;
-                        tmp12 = View;
-                        obj1 = { style: null, children: null };
-                        tmp13 = closure_4;
-                        obj1.style = closure_4.loadingState;
-                        tmp14 = jsx;
-                        tmp15 = ActivityIndicator;
-                        obj1.children = jsx(ActivityIndicator, {});
-                        tmp4 = jsx(View, obj1);
-                      } else {
-                        num = 0;
-                        if (0 === arr.length) {
-                          tmp5 = jsx;
-                          tmp6 = View;
-                          obj4 = { style: null, children: null };
-                          tmp7 = closure_4;
-                          obj4.style = closure_4.emptyState;
-                          tmp8 = jsx;
-                          tmp9 = closure_0;
-                          tmp10 = closure_2;
-                          obj4.children = jsx(closure_0(closure_2[21]).NoMutualServers, {});
-                          tmp4 = jsx(View, obj4);
-                        } else {
-                          tmp = jsx;
-                          tmp2 = closure_0;
-                          tmp3 = closure_2;
-                          obj = { data: null, keyExtractor: null, renderItem: null };
-                          obj.data = arr;
-                          obj.keyExtractor = function keyExtractor(guild) {
-                            return guild.guild.id;
-                          };
-                          obj.renderItem = function renderItem(start) {
-                            const item = start.item;
-                            return closure_1_9(closure_1_13, {
-                              user: item,
-                              mutualGuild: item,
-                              onPress() {
-                                return onPressMutualGuild(item.guild.id);
-                              },
-                              start: start.start,
-                              end: start.end
-                            });
-                          };
-                          tmp4 = jsx(closure_0(closure_2[20]).UserProfileStackedActionSheetList, obj);
-                        }
-                      }
-                      return tmp4;
-                    }
+                  let num7 = 0;
+                  if (user.section === UserProfileSections.MUTUAL_GUILDS) {
+                    num7 = 1;
                   }
                   let length;
                   if (mutualFriends != null) {
@@ -406,59 +357,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
                   }
                   if (cResult[12] !== length) {
                     const tmp15 = tmp7(tmp2[22])(length);
-                    class F {
-                      constructor() {
-                        arr = mutualGuilds;
-                        if (null == mutualGuilds) {
-                          tmp11 = jsx;
-                          tmp12 = View;
-                          obj1 = { style: null, children: null };
-                          tmp13 = closure_4;
-                          obj1.style = closure_4.loadingState;
-                          tmp14 = jsx;
-                          tmp15 = ActivityIndicator;
-                          obj1.children = jsx(ActivityIndicator, {});
-                          tmp4 = jsx(View, obj1);
-                        } else {
-                          num = 0;
-                          if (0 === arr.length) {
-                            tmp5 = jsx;
-                            tmp6 = View;
-                            obj4 = { style: null, children: null };
-                            tmp7 = closure_4;
-                            obj4.style = closure_4.emptyState;
-                            tmp8 = jsx;
-                            tmp9 = closure_0;
-                            tmp10 = closure_2;
-                            obj4.children = jsx(closure_0(closure_2[21]).NoMutualServers, {});
-                            tmp4 = jsx(View, obj4);
-                          } else {
-                            tmp = jsx;
-                            tmp2 = closure_0;
-                            tmp3 = closure_2;
-                            obj = { data: null, keyExtractor: null, renderItem: null };
-                            obj.data = arr;
-                            obj.keyExtractor = function keyExtractor(guild) {
-                              return guild.guild.id;
-                            };
-                            obj.renderItem = function renderItem(start) {
-                              const item = start.item;
-                              return closure_1_9(closure_1_13, {
-                                user: item,
-                                mutualGuild: item,
-                                onPress() {
-                                  return onPressMutualGuild(item.guild.id);
-                                },
-                                start: start.start,
-                                end: start.end
-                              });
-                            };
-                            tmp4 = jsx(closure_0(closure_2[20]).UserProfileStackedActionSheetList, obj);
-                          }
-                        }
-                        return tmp4;
-                      }
-                    }
+                    cResult[12] = length;
                     cResult[13] = tmp15;
                     let tmp14 = tmp15;
                   } else {
@@ -466,59 +365,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
                   }
                   if (cResult[14] !== tmp9) {
                     const tmp9Result = tmp9();
-                    class F {
-                      constructor() {
-                        arr = mutualGuilds;
-                        if (null == mutualGuilds) {
-                          tmp11 = jsx;
-                          tmp12 = View;
-                          obj1 = { style: null, children: null };
-                          tmp13 = closure_4;
-                          obj1.style = closure_4.loadingState;
-                          tmp14 = jsx;
-                          tmp15 = ActivityIndicator;
-                          obj1.children = jsx(ActivityIndicator, {});
-                          tmp4 = jsx(View, obj1);
-                        } else {
-                          num = 0;
-                          if (0 === arr.length) {
-                            tmp5 = jsx;
-                            tmp6 = View;
-                            obj4 = { style: null, children: null };
-                            tmp7 = closure_4;
-                            obj4.style = closure_4.emptyState;
-                            tmp8 = jsx;
-                            tmp9 = closure_0;
-                            tmp10 = closure_2;
-                            obj4.children = jsx(closure_0(closure_2[21]).NoMutualServers, {});
-                            tmp4 = jsx(View, obj4);
-                          } else {
-                            tmp = jsx;
-                            tmp2 = closure_0;
-                            tmp3 = closure_2;
-                            obj = { data: null, keyExtractor: null, renderItem: null };
-                            obj.data = arr;
-                            obj.keyExtractor = function keyExtractor(guild) {
-                              return guild.guild.id;
-                            };
-                            obj.renderItem = function renderItem(start) {
-                              const item = start.item;
-                              return closure_1_9(closure_1_13, {
-                                user: item,
-                                mutualGuild: item,
-                                onPress() {
-                                  return onPressMutualGuild(item.guild.id);
-                                },
-                                start: start.start,
-                                end: start.end
-                              });
-                            };
-                            tmp4 = jsx(closure_0(closure_2[20]).UserProfileStackedActionSheetList, obj);
-                          }
-                        }
-                        return tmp4;
-                      }
-                    }
+                    cResult[14] = tmp9;
                     cResult[15] = tmp9Result;
                     let tmp16 = tmp9Result;
                   } else {
@@ -528,114 +375,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
                     if (cResult[17] === tmp16) {
                       let tmp18 = cResult[18];
                     }
-                    class F {
-                      constructor() {
-                        arr = mutualGuilds;
-                        if (null == mutualGuilds) {
-                          tmp11 = jsx;
-                          tmp12 = View;
-                          obj1 = { style: null, children: null };
-                          tmp13 = closure_4;
-                          obj1.style = closure_4.loadingState;
-                          tmp14 = jsx;
-                          tmp15 = ActivityIndicator;
-                          obj1.children = jsx(ActivityIndicator, {});
-                          tmp4 = jsx(View, obj1);
-                        } else {
-                          num = 0;
-                          if (0 === arr.length) {
-                            tmp5 = jsx;
-                            tmp6 = View;
-                            obj4 = { style: null, children: null };
-                            tmp7 = closure_4;
-                            obj4.style = closure_4.emptyState;
-                            tmp8 = jsx;
-                            tmp9 = closure_0;
-                            tmp10 = closure_2;
-                            obj4.children = jsx(closure_0(closure_2[21]).NoMutualServers, {});
-                            tmp4 = jsx(View, obj4);
-                          } else {
-                            tmp = jsx;
-                            tmp2 = closure_0;
-                            tmp3 = closure_2;
-                            obj = { data: null, keyExtractor: null, renderItem: null };
-                            obj.data = arr;
-                            obj.keyExtractor = function keyExtractor(guild) {
-                              return guild.guild.id;
-                            };
-                            obj.renderItem = function renderItem(start) {
-                              const item = start.item;
-                              return closure_1_9(closure_1_13, {
-                                user: item,
-                                mutualGuild: item,
-                                onPress() {
-                                  return onPressMutualGuild(item.guild.id);
-                                },
-                                start: start.start,
-                                end: start.end
-                              });
-                            };
-                            tmp4 = jsx(closure_0(closure_2[20]).UserProfileStackedActionSheetList, obj);
-                          }
-                        }
-                        return tmp4;
-                      }
+                    let length1;
+                    if (mutualGuilds != null) {
+                      length1 = mutualGuilds.length;
                     }
-                    if (cResult[19] !== undefined) {
-                      const tmp21 = tmp7(tmp2[23])(tmp19);
-                      class F {
-                        constructor() {
-                          arr = mutualGuilds;
-                          if (null == mutualGuilds) {
-                            tmp11 = jsx;
-                            tmp12 = View;
-                            obj1 = { style: null, children: null };
-                            tmp13 = closure_4;
-                            obj1.style = closure_4.loadingState;
-                            tmp14 = jsx;
-                            tmp15 = ActivityIndicator;
-                            obj1.children = jsx(ActivityIndicator, {});
-                            tmp4 = jsx(View, obj1);
-                          } else {
-                            num = 0;
-                            if (0 === arr.length) {
-                              tmp5 = jsx;
-                              tmp6 = View;
-                              obj4 = { style: null, children: null };
-                              tmp7 = closure_4;
-                              obj4.style = closure_4.emptyState;
-                              tmp8 = jsx;
-                              tmp9 = closure_0;
-                              tmp10 = closure_2;
-                              obj4.children = jsx(closure_0(closure_2[21]).NoMutualServers, {});
-                              tmp4 = jsx(View, obj4);
-                            } else {
-                              tmp = jsx;
-                              tmp2 = closure_0;
-                              tmp3 = closure_2;
-                              obj = { data: null, keyExtractor: null, renderItem: null };
-                              obj.data = arr;
-                              obj.keyExtractor = function keyExtractor(guild) {
-                                return guild.guild.id;
-                              };
-                              obj.renderItem = function renderItem(start) {
-                                const item = start.item;
-                                return closure_1_9(closure_1_13, {
-                                  user: item,
-                                  mutualGuild: item,
-                                  onPress() {
-                                    return onPressMutualGuild(item.guild.id);
-                                  },
-                                  start: start.start,
-                                  end: start.end
-                                });
-                              };
-                              tmp4 = jsx(closure_0(closure_2[20]).UserProfileStackedActionSheetList, obj);
-                            }
-                          }
-                          return tmp4;
-                        }
-                      }
+                    if (cResult[19] !== length1) {
+                      const tmp21 = tmp7(tmp2[23])(length1);
+                      cResult[19] = length1;
                       cResult[20] = tmp21;
                       let tmp20 = tmp21;
                     } else {
@@ -643,59 +389,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
                     }
                     if (cResult[21] !== tmp10) {
                       const tmp10Result = tmp10();
-                      class F {
-                        constructor() {
-                          arr = mutualGuilds;
-                          if (null == mutualGuilds) {
-                            tmp11 = jsx;
-                            tmp12 = View;
-                            obj1 = { style: null, children: null };
-                            tmp13 = closure_4;
-                            obj1.style = closure_4.loadingState;
-                            tmp14 = jsx;
-                            tmp15 = ActivityIndicator;
-                            obj1.children = jsx(ActivityIndicator, {});
-                            tmp4 = jsx(View, obj1);
-                          } else {
-                            num = 0;
-                            if (0 === arr.length) {
-                              tmp5 = jsx;
-                              tmp6 = View;
-                              obj4 = { style: null, children: null };
-                              tmp7 = closure_4;
-                              obj4.style = closure_4.emptyState;
-                              tmp8 = jsx;
-                              tmp9 = closure_0;
-                              tmp10 = closure_2;
-                              obj4.children = jsx(closure_0(closure_2[21]).NoMutualServers, {});
-                              tmp4 = jsx(View, obj4);
-                            } else {
-                              tmp = jsx;
-                              tmp2 = closure_0;
-                              tmp3 = closure_2;
-                              obj = { data: null, keyExtractor: null, renderItem: null };
-                              obj.data = arr;
-                              obj.keyExtractor = function keyExtractor(guild) {
-                                return guild.guild.id;
-                              };
-                              obj.renderItem = function renderItem(start) {
-                                const item = start.item;
-                                return closure_1_9(closure_1_13, {
-                                  user: item,
-                                  mutualGuild: item,
-                                  onPress() {
-                                    return onPressMutualGuild(item.guild.id);
-                                  },
-                                  start: start.start,
-                                  end: start.end
-                                });
-                              };
-                              tmp4 = jsx(closure_0(closure_2[20]).UserProfileStackedActionSheetList, obj);
-                            }
-                          }
-                          return tmp4;
-                        }
-                      }
+                      cResult[21] = tmp10;
                       cResult[22] = tmp10Result;
                       let tmp22 = tmp10Result;
                     } else {
@@ -711,60 +405,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
                         }
                         if (cResult[29] === tmp6) {
                           if (cResult[30] === tmp25) {
-                            tmp(tmp2[24]);
-                            class F {
-                              constructor() {
-                                arr = mutualGuilds;
-                                if (null == mutualGuilds) {
-                                  tmp11 = jsx;
-                                  tmp12 = View;
-                                  obj1 = { style: null, children: null };
-                                  tmp13 = closure_4;
-                                  obj1.style = closure_4.loadingState;
-                                  tmp14 = jsx;
-                                  tmp15 = ActivityIndicator;
-                                  obj1.children = jsx(ActivityIndicator, {});
-                                  tmp4 = jsx(View, obj1);
-                                } else {
-                                  num = 0;
-                                  if (0 === arr.length) {
-                                    tmp5 = jsx;
-                                    tmp6 = View;
-                                    obj4 = { style: null, children: null };
-                                    tmp7 = closure_4;
-                                    obj4.style = closure_4.emptyState;
-                                    tmp8 = jsx;
-                                    tmp9 = closure_0;
-                                    tmp10 = closure_2;
-                                    obj4.children = jsx(closure_0(closure_2[21]).NoMutualServers, {});
-                                    tmp4 = jsx(View, obj4);
-                                  } else {
-                                    tmp = jsx;
-                                    tmp2 = closure_0;
-                                    tmp3 = closure_2;
-                                    obj = { data: null, keyExtractor: null, renderItem: null };
-                                    obj.data = arr;
-                                    obj.keyExtractor = function keyExtractor(guild) {
-                                      return guild.guild.id;
-                                    };
-                                    obj.renderItem = function renderItem(start) {
-                                      const item = start.item;
-                                      return closure_1_9(closure_1_13, {
-                                        user: item,
-                                        mutualGuild: item,
-                                        onPress() {
-                                          return onPressMutualGuild(item.guild.id);
-                                        },
-                                        start: start.start,
-                                        end: start.end
-                                      });
-                                    };
-                                    tmp4 = jsx(closure_0(closure_2[20]).UserProfileStackedActionSheetList, obj);
-                                  }
-                                }
-                                return tmp4;
-                              }
+                            if (cResult[31] === num7) {
+                              let tmp26 = cResult[32];
                             }
+                            const segmentedControlState = tmp(tmp2[24]).useSegmentedControlState(tmp26);
                             const _Symbol = Symbol;
                             if (cResult[33] === Symbol.for("react.memo_cache_sentinel")) {
                               class B {
@@ -773,59 +417,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
                                   return;
                                 }
                               }
-                              class F {
-                                constructor() {
-                                  arr = mutualGuilds;
-                                  if (null == mutualGuilds) {
-                                    tmp11 = jsx;
-                                    tmp12 = View;
-                                    obj1 = { style: null, children: null };
-                                    tmp13 = closure_4;
-                                    obj1.style = closure_4.loadingState;
-                                    tmp14 = jsx;
-                                    tmp15 = ActivityIndicator;
-                                    obj1.children = jsx(ActivityIndicator, {});
-                                    tmp4 = jsx(View, obj1);
-                                  } else {
-                                    num = 0;
-                                    if (0 === arr.length) {
-                                      tmp5 = jsx;
-                                      tmp6 = View;
-                                      obj4 = { style: null, children: null };
-                                      tmp7 = closure_4;
-                                      obj4.style = closure_4.emptyState;
-                                      tmp8 = jsx;
-                                      tmp9 = closure_0;
-                                      tmp10 = closure_2;
-                                      obj4.children = jsx(closure_0(closure_2[21]).NoMutualServers, {});
-                                      tmp4 = jsx(View, obj4);
-                                    } else {
-                                      tmp = jsx;
-                                      tmp2 = closure_0;
-                                      tmp3 = closure_2;
-                                      obj = { data: null, keyExtractor: null, renderItem: null };
-                                      obj.data = arr;
-                                      obj.keyExtractor = function keyExtractor(guild) {
-                                        return guild.guild.id;
-                                      };
-                                      obj.renderItem = function renderItem(start) {
-                                        const item = start.item;
-                                        return closure_1_9(closure_1_13, {
-                                          user: item,
-                                          mutualGuild: item,
-                                          onPress() {
-                                            return onPressMutualGuild(item.guild.id);
-                                          },
-                                          start: start.start,
-                                          end: start.end
-                                        });
-                                      };
-                                      tmp4 = jsx(closure_0(closure_2[20]).UserProfileStackedActionSheetList, obj);
-                                    }
-                                  }
-                                  return tmp4;
-                                }
-                              }
+                              cResult[33] = B;
                             } else {
                               class B {
                                 constructor(arg0) {
@@ -842,61 +434,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
                                   return;
                                 }
                               }
-                              const string = tmp34.string;
-                              class F {
-                                constructor() {
-                                  arr = mutualGuilds;
-                                  if (null == mutualGuilds) {
-                                    tmp11 = jsx;
-                                    tmp12 = View;
-                                    obj1 = { style: null, children: null };
-                                    tmp13 = closure_4;
-                                    obj1.style = closure_4.loadingState;
-                                    tmp14 = jsx;
-                                    tmp15 = ActivityIndicator;
-                                    obj1.children = jsx(ActivityIndicator, {});
-                                    tmp4 = jsx(View, obj1);
-                                  } else {
-                                    num = 0;
-                                    if (0 === arr.length) {
-                                      tmp5 = jsx;
-                                      tmp6 = View;
-                                      obj4 = { style: null, children: null };
-                                      tmp7 = closure_4;
-                                      obj4.style = closure_4.emptyState;
-                                      tmp8 = jsx;
-                                      tmp9 = closure_0;
-                                      tmp10 = closure_2;
-                                      obj4.children = jsx(closure_0(closure_2[21]).NoMutualServers, {});
-                                      tmp4 = jsx(View, obj4);
-                                    } else {
-                                      tmp = jsx;
-                                      tmp2 = closure_0;
-                                      tmp3 = closure_2;
-                                      obj = { data: null, keyExtractor: null, renderItem: null };
-                                      obj.data = arr;
-                                      obj.keyExtractor = function keyExtractor(guild) {
-                                        return guild.guild.id;
-                                      };
-                                      obj.renderItem = function renderItem(start) {
-                                        const item = start.item;
-                                        return closure_1_9(closure_1_13, {
-                                          user: item,
-                                          mutualGuild: item,
-                                          onPress() {
-                                            return onPressMutualGuild(item.guild.id);
-                                          },
-                                          start: start.start,
-                                          end: start.end
-                                        });
-                                      };
-                                      tmp4 = jsx(closure_0(closure_2[20]).UserProfileStackedActionSheetList, obj);
-                                    }
-                                  }
-                                  return tmp4;
-                                }
-                              }
-                              cResult[34] = tmp35;
+                              const stringResult = obj6.string(tmp(tmp2[25]).t["l2/aLi"]);
+                              cResult[34] = stringResult;
+                              const tmp30 = stringResult;
                             } else {
                               class B {
                                 constructor(arg0) {
@@ -905,75 +445,23 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
                                 }
                               }
                             }
-                            if (cResult[35] !== tmp30) {
+                            if (cResult[35] !== segmentedControlState) {
                               class B {
                                 constructor(arg0) {
                                   tmp = closure_5(user.nativeEvent.layout.width);
                                   return;
                                 }
                               }
-                              class F {
-                                constructor() {
-                                  arr = mutualGuilds;
-                                  if (null == mutualGuilds) {
-                                    tmp11 = jsx;
-                                    tmp12 = View;
-                                    obj1 = { style: null, children: null };
-                                    tmp13 = closure_4;
-                                    obj1.style = closure_4.loadingState;
-                                    tmp14 = jsx;
-                                    tmp15 = ActivityIndicator;
-                                    obj1.children = jsx(ActivityIndicator, {});
-                                    tmp4 = jsx(View, obj1);
-                                  } else {
-                                    num = 0;
-                                    if (0 === arr.length) {
-                                      tmp5 = jsx;
-                                      tmp6 = View;
-                                      obj4 = { style: null, children: null };
-                                      tmp7 = closure_4;
-                                      obj4.style = closure_4.emptyState;
-                                      tmp8 = jsx;
-                                      tmp9 = closure_0;
-                                      tmp10 = closure_2;
-                                      obj4.children = jsx(closure_0(closure_2[21]).NoMutualServers, {});
-                                      tmp4 = jsx(View, obj4);
-                                    } else {
-                                      tmp = jsx;
-                                      tmp2 = closure_0;
-                                      tmp3 = closure_2;
-                                      obj = { data: null, keyExtractor: null, renderItem: null };
-                                      obj.data = arr;
-                                      obj.keyExtractor = function keyExtractor(guild) {
-                                        return guild.guild.id;
-                                      };
-                                      obj.renderItem = function renderItem(start) {
-                                        const item = start.item;
-                                        return closure_1_9(closure_1_13, {
-                                          user: item,
-                                          mutualGuild: item,
-                                          onPress() {
-                                            return onPressMutualGuild(item.guild.id);
-                                          },
-                                          start: start.start,
-                                          end: start.end
-                                        });
-                                      };
-                                      tmp4 = jsx(closure_0(closure_2[20]).UserProfileStackedActionSheetList, obj);
-                                    }
-                                  }
-                                  return tmp4;
-                                }
-                              }
-                              let obj2 = { state: tmp30 };
-                              tmp39[0] = closure_9(tmp(tmp2[26]).Tabs, obj2);
-                              const tmp40 = closure_9(closure_5, tmp39);
-                              let obj3 = { state: tmp30 };
-                              const tmp41 = closure_9(tmp(tmp2[27]).SegmentedControlPages, obj3);
-                              cResult[35] = tmp30;
-                              cResult[36] = tmp40;
-                              cResult[37] = tmp41;
-                              let tmp37 = tmp41;
+                              let obj2 = { children: null };
+                              let obj3 = { state: segmentedControlState };
+                              obj2.children = closure_9(tmp(tmp2[26]).Tabs, obj3);
+                              const tmp35 = closure_9(closure_5, obj2);
+                              const obj4 = { state: segmentedControlState };
+                              const tmp36 = closure_9(tmp(tmp2[27]).SegmentedControlPages, obj4);
+                              cResult[35] = segmentedControlState;
+                              cResult[36] = tmp35;
+                              cResult[37] = tmp36;
+                              let tmp33 = tmp36;
                             } else {
                               class B {
                                 constructor(arg0) {
@@ -981,7 +469,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
                                   return;
                                 }
                               }
-                              tmp37 = cResult[37];
+                              tmp33 = cResult[37];
                             }
                             if (cResult[38] === tmp4.container) {
                               class B {
@@ -991,191 +479,62 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
                                 }
                               }
                             }
-                            const obj4 = { scrollable: true, title: tmp35, children: null };
-                            const obj5 = { style: tmp4.container, onLayout: B, children: null };
-                            const items = [tmp36, tmp37];
-                            obj5.children = items;
-                            obj4.children = closure_10(closure_5, obj5);
-                            const tmp47 = closure_9(tmp7(tmp2[20]), obj4);
+                            const obj5 = { scrollable: true, title: tmp30, children: null };
+                            const obj7 = { style: tmp4.container, onLayout: B, children: null };
+                            const items = [tmp32, tmp33];
+                            obj7.children = items;
+                            const tmpResult = tmp(tmp2[24]);
+                            obj5.children = closure_10(closure_5, obj7);
+                            const tmp42 = closure_9(tmp7(tmp2[20]), obj5);
                             cResult[38] = tmp4.container;
-                            cResult[39] = tmp36;
-                            cResult[40] = tmp37;
-                            cResult[41] = tmp47;
+                            cResult[39] = tmp32;
+                            cResult[40] = tmp33;
+                            cResult[41] = tmp42;
                             const tmp7Result = tmp7(tmp2[20]);
                           }
                         }
-                        class F {
-                          constructor() {
-                            arr = mutualGuilds;
-                            if (null == mutualGuilds) {
-                              tmp11 = jsx;
-                              tmp12 = View;
-                              obj1 = { style: null, children: null };
-                              tmp13 = closure_4;
-                              obj1.style = closure_4.loadingState;
-                              tmp14 = jsx;
-                              tmp15 = ActivityIndicator;
-                              obj1.children = jsx(ActivityIndicator, {});
-                              tmp4 = jsx(View, obj1);
-                            } else {
-                              num = 0;
-                              if (0 === arr.length) {
-                                tmp5 = jsx;
-                                tmp6 = View;
-                                obj4 = { style: null, children: null };
-                                tmp7 = closure_4;
-                                obj4.style = closure_4.emptyState;
-                                tmp8 = jsx;
-                                tmp9 = closure_0;
-                                tmp10 = closure_2;
-                                obj4.children = jsx(closure_0(closure_2[21]).NoMutualServers, {});
-                                tmp4 = jsx(View, obj4);
-                              } else {
-                                tmp = jsx;
-                                tmp2 = closure_0;
-                                tmp3 = closure_2;
-                                obj = { data: null, keyExtractor: null, renderItem: null };
-                                obj.data = arr;
-                                obj.keyExtractor = function keyExtractor(guild) {
-                                  return guild.guild.id;
-                                };
-                                obj.renderItem = function renderItem(start) {
-                                  const item = start.item;
-                                  return closure_1_9(closure_1_13, {
-                                    user: item,
-                                    mutualGuild: item,
-                                    onPress() {
-                                      return onPressMutualGuild(item.guild.id);
-                                    },
-                                    start: start.start,
-                                    end: start.end
-                                  });
-                                };
-                                tmp4 = jsx(closure_0(closure_2[20]).UserProfileStackedActionSheetList, obj);
-                              }
-                            }
-                            return tmp4;
-                          }
-                        }
-                        tmp28[0] = tmp6;
-                        tmp28[1] = num7;
-                        tmp28[2] = tmp25;
+                        const obj8 = { pageWidth: tmp6, defaultIndex: num7, items: tmp25 };
                         cResult[29] = tmp6;
                         cResult[30] = tmp25;
                         cResult[31] = num7;
-                        cResult[32] = tmp28;
+                        cResult[32] = obj8;
+                        tmp26 = obj8;
                       }
-                      class F {
-                        constructor() {
-                          arr = mutualGuilds;
-                          if (null == mutualGuilds) {
-                            tmp11 = jsx;
-                            tmp12 = View;
-                            obj1 = { style: null, children: null };
-                            tmp13 = closure_4;
-                            obj1.style = closure_4.loadingState;
-                            tmp14 = jsx;
-                            tmp15 = ActivityIndicator;
-                            obj1.children = jsx(ActivityIndicator, {});
-                            tmp4 = jsx(View, obj1);
-                          } else {
-                            num = 0;
-                            if (0 === arr.length) {
-                              tmp5 = jsx;
-                              tmp6 = View;
-                              obj4 = { style: null, children: null };
-                              tmp7 = closure_4;
-                              obj4.style = closure_4.emptyState;
-                              tmp8 = jsx;
-                              tmp9 = closure_0;
-                              tmp10 = closure_2;
-                              obj4.children = jsx(closure_0(closure_2[21]).NoMutualServers, {});
-                              tmp4 = jsx(View, obj4);
-                            } else {
-                              tmp = jsx;
-                              tmp2 = closure_0;
-                              tmp3 = closure_2;
-                              obj = { data: null, keyExtractor: null, renderItem: null };
-                              obj.data = arr;
-                              obj.keyExtractor = function keyExtractor(guild) {
-                                return guild.guild.id;
-                              };
-                              obj.renderItem = function renderItem(start) {
-                                const item = start.item;
-                                return closure_1_9(closure_1_13, {
-                                  user: item,
-                                  mutualGuild: item,
-                                  onPress() {
-                                    return onPressMutualGuild(item.guild.id);
-                                  },
-                                  start: start.start,
-                                  end: start.end
-                                });
-                              };
-                              tmp4 = jsx(closure_0(closure_2[20]).UserProfileStackedActionSheetList, obj);
-                            }
-                          }
-                          return tmp4;
-                        }
-                      }
-                      tmp26[0] = tmp18;
-                      tmp26[1] = tmp24;
+                      const items1 = [tmp18, tmp24];
                       cResult[26] = tmp24;
                       cResult[27] = tmp18;
-                      cResult[28] = tmp26;
-                      tmp25 = tmp26;
+                      cResult[28] = items1;
+                      tmp25 = items1;
                     }
-                    const obj6 = { id: "mutual-guilds", label: tmp20, page: tmp22 };
+                    const obj9 = { id: "mutual-guilds", label: tmp20, page: tmp22 };
                     cResult[23] = tmp22;
                     cResult[24] = tmp20;
-                    cResult[25] = obj6;
-                    tmp24 = obj6;
+                    cResult[25] = obj9;
+                    tmp24 = obj9;
                   }
-                  const obj7 = { id: "mutual-friends", label: tmp14, page: tmp16 };
+                  const obj10 = { id: "mutual-friends", label: tmp14, page: tmp16 };
                   cResult[16] = tmp14;
                   cResult[17] = tmp16;
-                  cResult[18] = obj7;
-                  tmp18 = obj7;
+                  cResult[18] = obj10;
+                  tmp18 = obj10;
                 }
               }
             }
           }
-          class F {
-            constructor() {
-              arr = mutualGuilds;
-              if (null == mutualGuilds) {
-                tmp11 = jsx;
-                tmp12 = View;
-                obj1 = { style: null, children: null };
-                tmp13 = closure_4;
-                obj1.style = closure_4.loadingState;
-                tmp14 = jsx;
-                tmp15 = ActivityIndicator;
-                obj1.children = jsx(ActivityIndicator, {});
-                tmp4 = jsx(View, obj1);
-              } else {
-                num = 0;
-                if (0 === arr.length) {
-                  tmp5 = jsx;
-                  tmp6 = View;
-                  obj4 = { style: null, children: null };
-                  tmp7 = closure_4;
-                  obj4.style = closure_4.emptyState;
-                  tmp8 = jsx;
-                  tmp9 = closure_0;
-                  tmp10 = closure_2;
-                  obj4.children = jsx(closure_0(closure_2[21]).NoMutualServers, {});
-                  tmp4 = jsx(View, obj4);
-                } else {
-                  tmp = jsx;
-                  tmp2 = closure_0;
-                  tmp3 = closure_2;
-                  obj = { data: null, keyExtractor: null, renderItem: null };
-                  obj.data = arr;
-                  obj.keyExtractor = function keyExtractor(guild) {
+          function renderMutualGuilds() {
+            if (null == mutualGuilds) {
+              const obj2 = { style: closure_4.loadingState, children: options(timestampProducer, {}) };
+              let tmp4 = options(hasOwnProperty, obj2);
+            } else if (0 === mutualGuilds.length) {
+              const obj3 = { style: closure_4.emptyState, children: options(NoMutualServers.NoMutualServers, {}) };
+              tmp4 = options(hasOwnProperty, obj3);
+            } else {
+              const obj = {
+                data: mutualGuilds,
+                keyExtractor(guild) {
                     return guild.guild.id;
-                  };
-                  obj.renderItem = function renderItem(start) {
+                  },
+                renderItem(start) {
                     const item = start.item;
                     return closure_1_9(closure_1_13, {
                       user: item,
@@ -1186,25 +545,24 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
                       start: start.start,
                       end: start.end
                     });
-                  };
-                  tmp4 = jsx(closure_0(closure_2[20]).UserProfileStackedActionSheetList, obj);
-                }
-              }
-              return tmp4;
+                  }
+              };
+              tmp4 = options(UserProfileStackedActionSheet.UserProfileStackedActionSheetList, obj);
             }
+            return tmp4;
           }
           cResult[6] = mutualGuilds;
           cResult[7] = onPressMutualGuild;
           cResult[8] = tmp4.emptyState;
           cResult[9] = tmp4.loadingState;
           cResult[10] = user;
-          cResult[11] = F;
-          tmp10 = F;
+          cResult[11] = renderMutualGuilds;
+          tmp10 = renderMutualGuilds;
         }
       }
     }
   }
-  const fn = function o() {
+  function renderMutualFriends() {
     if (null == mutualFriends) {
       const obj2 = { style: closure_4.loadingState, children: options(timestampProducer, {}) };
       let tmp4 = options(hasOwnProperty, obj2);
@@ -1233,16 +591,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
       tmp4 = options(UserProfileStackedActionSheet.UserProfileStackedActionSheetList, obj);
     }
     return tmp4;
-  };
+  }
   cResult[0] = guildId;
   cResult[1] = mutualFriends;
   cResult[2] = onPressMutualFriend;
   cResult[3] = tmp4.emptyState;
   cResult[4] = tmp4.loadingState;
-  cResult[5] = fn;
-  tmp9 = fn;
+  cResult[5] = renderMutualFriends;
+  tmp9 = renderMutualFriends;
   const tmp5 = onPressMutualGuild(noop.useState(0), 2);
-}) : ((user) => {
+}) : (function UserProfileMutualsActionSheet(user) {
   user = user.user;
   ({ guildId: importDefault, onPressMutualFriend: dependencyMap, onPressMutualGuild: _slicedToArray } = user);
   noop = undefined;
@@ -1259,7 +617,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
   }
   obj3.defaultIndex = num;
   let length;
-  const obj2 = user(9317);
+  const obj2 = user(8505);
   if (mutualFriends != null) {
     length = mutualFriends.length;
   }
@@ -1269,7 +627,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
     let tmp10 = closure_9(closure_5, obj5);
     let tmp9 = closure_9;
   } else if (0 === mutualFriends.length) {
-    const obj6 = { style: tmp.emptyState, children: closure_9(tmp6(12291).NoMutualFriends, {}) };
+    const obj6 = { style: tmp.emptyState, children: closure_9(tmp6(12389).NoMutualFriends, {}) };
     tmp10 = closure_9(closure_5, obj6);
     tmp9 = closure_9;
   } else {
@@ -1292,7 +650,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
           });
         }
     };
-    tmp10 = closure_9(tmp6(10854).UserProfileStackedActionSheetList, obj7);
+    tmp10 = closure_9(tmp6(10505).UserProfileStackedActionSheetList, obj7);
   }
   obj4.page = tmp10;
   const items = [obj4, ];
@@ -1306,7 +664,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
     const obj9 = { style: tmp.loadingState, children: tmp9(closure_6, {}) };
     let tmp9Result = tmp9(closure_5, obj9);
   } else if (0 === mutualGuilds.length) {
-    const obj10 = { style: tmp.emptyState, children: tmp9(tmp6(12286).NoMutualServers, {}) };
+    const obj10 = { style: tmp.emptyState, children: tmp9(tmp6(12384).NoMutualServers, {}) };
     tmp9Result = tmp9(closure_5, obj10);
   } else {
     const obj11 = {
@@ -1327,7 +685,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
           });
         }
     };
-    tmp9Result = tmp9(tmp6(10854).UserProfileStackedActionSheetList, obj11);
+    tmp9Result = tmp9(tmp6(10505).UserProfileStackedActionSheetList, obj11);
   }
   obj8.page = tmp9Result;
   items[1] = obj8;
@@ -1342,7 +700,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
   obj12.title = intl.string(user(1126).t["l2/aLi"]);
   const obj13 = { style: tmp.container, onLayout: callback, children: null };
   const tmp3Result4 = UserProfileStackedActionSheetDefault;
-  const items1 = [tmp9(closure_5, { children: tmp9(user(12297).Tabs, { state: segmentedControlState }) }), tmp9(user(10987).SegmentedControlPages, { state: segmentedControlState })];
+  const items1 = [tmp9(closure_5, { children: tmp9(user(12395).Tabs, { state: segmentedControlState }) }), tmp9(user(11211).SegmentedControlPages, { state: segmentedControlState })];
   obj13.children = items1;
   obj12.children = closure_10(closure_5, obj13);
   return tmp9(tmp3Result4, obj12);

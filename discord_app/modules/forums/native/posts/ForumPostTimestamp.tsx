@@ -1,21 +1,21 @@
-// === Module 11642: ForumPostTimestamp ===
+// === Module 11707: ForumPostTimestamp ===
 
-// Module 11642 (ForumPostTimestamp)
+// Module 11707 (ForumPostTimestamp)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import ForumHooks from "ForumHooks" /* 7539 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import ForumHooks from "ForumHooks" /* 9261 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const useForumChannelStore = fn(11629).useForumChannelStore;
+const useForumChannelStore = fn(11693).useForumChannelStore;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles({ text: { lineHeight: 18, height: 18 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPostTimestamp.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPostTimestamp(arg0) {
   const cResult = c.c(7);
   ({ textStyle, thread } = arg0);
   ({ hasUnreads, format } = arg0);
@@ -50,7 +50,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = textStyle;
   cResult[2] = items;
   tmp6 = items;
-}) : ((thread) => {
+}) : (function ForumPostTimestamp(thread) {
   thread = thread.thread;
   ({ textStyle, hasUnreads, format } = thread);
   const tmp = closure_4();

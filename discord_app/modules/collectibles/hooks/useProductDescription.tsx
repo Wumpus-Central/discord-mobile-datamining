@@ -1,10 +1,10 @@
-// === Module 12998: useProductDescription ===
+// === Module 13276: useProductDescription ===
 
-// Module 12998 (useProductDescription)
+// Module 13276 (useProductDescription)
 import _mod19 from "module_19" /* 19 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1980 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1992 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -103,7 +103,7 @@ const useMemo = _mod19.useMemo;
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useProductDescription.tsx");
 
 export { getProductDescription };
-export const useProductDescription = ReactCompilerGating.isReactCompilerEnabled() ? ((summary, arg1) => {
+export const useProductDescription = ReactCompilerGating.isReactCompilerEnabled() ? (function useProductDescription(summary, arg1) {
   const cResult = c.c(3);
   if (cResult[0] === summary) {
     if (cResult[1] === tmp2) {
@@ -116,7 +116,7 @@ export const useProductDescription = ReactCompilerGating.isReactCompilerEnabled(
   cResult[1] = undefined !== arg1 && arg1;
   cResult[2] = tmp4;
   tmp3 = tmp4;
-}) : ((arg0) => {
+}) : (function useProductDescription(arg0) {
   closure_0 = arg0;
   let flag = arg1;
   if (arg1 === undefined) {

@@ -1,16 +1,16 @@
-// === Module 17221: FramePanelContainer ===
+// === Module 17502: FramePanelContainer ===
 
-// Module 17221 (FramePanelContainer)
+// Module 17502 (FramePanelContainer)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import WakeLockDefault from "WakeLock" /* 9180 */;
-import FramePanelControllerDefault from "FramePanelController" /* 17222 */;
-import FramePanelUIDefault from "FramePanelUI" /* 17224 */;
+import WakeLockDefault from "WakeLock" /* 10748 */;
+import FramePanelControllerDefault from "FramePanelController" /* 17503 */;
+import FramePanelUIDefault from "FramePanelUI" /* 17505 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 9000 */;
+import FramesStore from "FramesStore" /* 10612 */;
 
 require = fn;
-const isLaunched = fn(8738).isLaunched;
+const isLaunched = fn(10613).isLaunched;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 const FrameActivities = "FrameActivities";
@@ -18,7 +18,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/panel/native/FramePanelContainer.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function FramePanelContainer() {
   const cResult = c.c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [FramesStore];
@@ -51,7 +51,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp8 = cResult[3];
   }
   return tmp8;
-}) : (() => {
+}) : (function FramePanelContainer() {
   const items = [FramesStore];
   let tmp2 = null;
   if (obj.useStateFromStores(items, () => isLaunched(mainFrame.getMainFrame()))) {

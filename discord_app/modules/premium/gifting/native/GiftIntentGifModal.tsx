@@ -1,14 +1,14 @@
-// === Module 11439: GiftIntentGifModal ===
+// === Module 11422: GiftIntentGifModal ===
 
-// Module 11439 (GiftIntentGifModal)
+// Module 11422 (GiftIntentGifModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
-import NavigatorHeader from "NavigatorHeader" /* 6017 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5940 */;
+import NavigatorHeader from "NavigatorHeader" /* 6203 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
 
 const require = globalThis.__r;
 
@@ -71,10 +71,10 @@ let closure_14 = async function _sendGiftIntentGif(arg0) {
 };
 let View = fn(17).View;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const MessageSendLocation = fn(4889).MessageSendLocation;
+const MessageSendLocation = fn(5083).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, messageContainer: null, pickerContainer: null, footer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.messageContainer = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8 };
@@ -83,7 +83,7 @@ let obj4 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: native
 obj2.footer = { gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8 };
 let closure_12 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function GiftIntentGifModalBody(channelId) {
   const cResult = channelId(onClose[15]).c(41);
   channelId = channelId.channelId;
   const giftIntentType = channelId.giftIntentType;
@@ -98,7 +98,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
     first = cResult[0];
   }
   if (cResult[1] !== channelId) {
-    const fn = function u() {
+    const fn = function f() {
       return ChannelStore.getChannel(channelId);
     };
     cResult[1] = channelId;
@@ -171,7 +171,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
       }
     }
   }
-  class R {
+  class M {
     constructor() {
       tmp2 = null != closure_3;
       tmp = closure_3;
@@ -213,9 +213,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
   cResult[5] = giftIntentType;
   cResult[6] = onClose;
   cResult[7] = first1;
-  cResult[8] = R;
+  cResult[8] = M;
   const tmpResult = channelId(onClose[17]);
-}) : ((channelId) => {
+}) : (function GiftIntentGifModalBody(channelId) {
   channelId = channelId.channelId;
   const giftIntentType = channelId.giftIntentType;
   const onClose = channelId.onClose;
@@ -321,7 +321,7 @@ let obj5 = { gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.spa
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/gifting/native/GiftIntentGifModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftIntentGifModal(channelId) {
   const cResult = channelId(onDismiss[15]).c(8);
   channelId = channelId.channelId;
   const giftIntentType = channelId.giftIntentType;
@@ -358,7 +358,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
       return tmp8;
     }
   }
-  const fn2 = function u() {
+  const fn2 = function f() {
     const obj = {};
     const obj2 = { title: null, headerLeft: null, render: null };
     const intl = util.intl;
@@ -377,7 +377,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   tmp5 = fn2;
   let obj = channelId(onDismiss[15]);
   tmp = channelId;
-}) : ((arg0) => {
+}) : (function GiftIntentGifModal(arg0) {
   ({ channelId: require, giftIntentType: importDefault, onDismiss } = arg0);
   const items = [onDismiss];
   closure_3 = noop.useCallback(() => {

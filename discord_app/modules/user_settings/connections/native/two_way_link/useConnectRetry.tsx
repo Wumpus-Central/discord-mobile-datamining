@@ -1,6 +1,6 @@
-// === Module 8792: useConnectRetry ===
+// === Module 9161: useConnectRetry ===
 
-// Module 8792 (useConnectRetry)
+// Module 9161 (useConnectRetry)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -9,7 +9,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/useConnectRetry.tsx");
 
-export const useConnectRetry = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export const useConnectRetry = ReactCompilerGating.isReactCompilerEnabled() ? (function useConnectRetry(arg0, arg1) {
   state = arg0;
   closure_1 = arg1;
   const cResult = c.c(3);
@@ -32,7 +32,7 @@ export const useConnectRetry = ReactCompilerGating.isReactCompilerEnabled() ? ((
   cResult[1] = arg1;
   cResult[2] = fn;
   tmp2 = fn;
-}) : ((arg0, arg1) => {
+}) : (function useConnectRetry(arg0, arg1) {
   state = arg0;
   closure_1 = arg1;
   const items = [arg0, arg1];

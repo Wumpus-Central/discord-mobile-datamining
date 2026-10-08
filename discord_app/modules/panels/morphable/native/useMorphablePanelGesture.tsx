@@ -1,16 +1,16 @@
-// === Module 17203: useMorphablePanelGesture ===
+// === Module 17484: useMorphablePanelGesture ===
 
-// Module 17203 (useMorphablePanelGesture)
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import HapticUtils from "HapticUtils" /* 4861 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6147 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 9787 */;
-import MorphablePanelUtils from "MorphablePanelUtils" /* 17201 */;
-import triggerIOSHapticDefault from "triggerIOSHaptic" /* 17204 */;
+// Module 17484 (useMorphablePanelGesture)
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import HapticUtils from "HapticUtils" /* 5055 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6326 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10352 */;
+import MorphablePanelUtils from "MorphablePanelUtils" /* 17482 */;
+import triggerIOSHapticDefault from "triggerIOSHaptic" /* 17485 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const MorphablePanelConstants = fn(11917);
+const MorphablePanelConstants = fn(11990);
 ({ IS_IOS: closure_4, MIN_PAN_GESTURE_MOVE: hasOwnProperty, MorphablePanelModes } = MorphablePanelConstants);
 ({ PANEL_TAP_GESTURE_MAX_DISTANCE: closure_7, PIP_POP_HEIGHT: closure_8, POP_RESISTANCE: closure_9 } = MorphablePanelConstants);
 const __initData = { code: "function useMorphablePanelGestureTsx1(){const{onTapGestureStart}=this.__closure;var _onTapGestureStart;(_onTapGestureStart=onTapGestureStart)===null||_onTapGestureStart===void 0||_onTapGestureStart();}" };
@@ -31,7 +31,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/panels/morphable/native/useMorphablePanelGesture.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((mode) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useMorphablePanelGesture(mode) {
   let onEndResult = mode;
   let RaceResult = onTapGestureStart;
   let flag;
@@ -236,7 +236,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((mode) => {
   cResult[19] = useMorphablePanelGestureTsx7;
   tmp11 = useMorphablePanelGestureTsx7;
   const obj8 = { updateSharedValueIfChanged: enabledResult(RaceResult[7]), wrapperOffset, initialGestureOffset: sharedValue, windowDimensions: tmp6, safeArea: tmp7, swipeRequiresPop: flag !== swipeRequiresPop && swipeRequiresPop };
-}) : ((mode) => {
+}) : (function useMorphablePanelGesture(mode) {
   mode = mode.mode;
   const onPanMinimizeGestureEnd = mode.onPanMinimizeGestureEnd;
   const onTapGestureStart = mode.onTapGestureStart;

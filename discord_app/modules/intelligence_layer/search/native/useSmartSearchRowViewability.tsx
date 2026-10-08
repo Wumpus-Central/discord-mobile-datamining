@@ -1,17 +1,17 @@
-// === Module 16878: useSmartSearchRowViewability ===
+// === Module 17157: useSmartSearchRowViewability ===
 
-// Module 16878 (useSmartSearchRowViewability)
-import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 12002 */;
-import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 12004 */;
+// Module 17157 (useSmartSearchRowViewability)
+import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 12075 */;
+import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 12077 */;
 import noop from "module_19" /* 19 */;
-import AppStateStore from "AppStateStore" /* 1986 */;
+import AppStateStore from "AppStateStore" /* 1998 */;
 
 const require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/intelligence_layer/search/native/useSmartSearchRowViewability.tsx");
 
-export const useSmartSearchRowViewability = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useSmartSearchRowViewability = ReactCompilerGating.isReactCompilerEnabled() ? (function useSmartSearchRowViewability() {
   const cResult = stateFromStores(576).c(7);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AppStateStore];
@@ -29,38 +29,54 @@ export const useSmartSearchRowViewability = ReactCompilerGating.isReactCompilerE
   const obj = stateFromStores(576);
   stateFromStores = stateFromStores(504).useStateFromStores(tmp4, tmp5);
   if (cResult[2] !== stateFromStores) {
-    const fn2 = function n() {
-      SmartSearchAnalyticsManagerDefault.setIsAppActive(stateFromStores, SearchSessionAnalyticsManagerDefault);
-    };
+    class S {
+      constructor() {
+        obj = closure_1(closure_2[6]);
+        setIsAppActiveResult = obj.setIsAppActive(closure_0, closure_1(closure_2[7]));
+        return;
+      }
+    }
     const items1 = [stateFromStores];
     cResult[2] = stateFromStores;
-    cResult[3] = fn2;
+    cResult[3] = S;
     cResult[4] = items1;
     let tmp9 = items1;
-    let tmp8 = fn2;
   } else {
-    tmp8 = cResult[3];
+    class S {
+      constructor() {
+        obj = closure_1(closure_2[6]);
+        setIsAppActiveResult = obj.setIsAppActive(closure_0, closure_1(closure_2[7]));
+        return;
+      }
+    }
     tmp9 = cResult[4];
   }
-  const effect = noop.useEffect(tmp8, tmp9);
+  const effect = noop.useEffect(S, tmp9);
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn3 = function u() {
-      return () => {
-        closure_1_1(12004).setIsRowViewable(false, closure_1_1(12002));
-      };
-    };
+    class S {
+      constructor() {
+        obj = closure_1(closure_2[6]);
+        setIsAppActiveResult = obj.setIsAppActive(closure_0, closure_1(closure_2[7]));
+        return;
+      }
+    }
     const items2 = [];
-    cResult[5] = fn3;
+    cResult[5] = tmp13;
     cResult[6] = items2;
     let tmp12 = items2;
-    let tmp11 = fn3;
   } else {
-    tmp11 = cResult[5];
+    class S {
+      constructor() {
+        obj = closure_1(closure_2[6]);
+        setIsAppActiveResult = obj.setIsAppActive(closure_0, closure_1(closure_2[7]));
+        return;
+      }
+    }
     tmp12 = cResult[6];
   }
-  const effect1 = noop.useEffect(tmp11, tmp12);
+  const effect1 = noop.useEffect(tmp13, tmp12);
   const tmpResult = stateFromStores(504);
-}) : (() => {
+}) : (function useSmartSearchRowViewability() {
   const items = [AppStateStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => {
     state = state.getState();
@@ -71,6 +87,6 @@ export const useSmartSearchRowViewability = ReactCompilerGating.isReactCompilerE
     SmartSearchAnalyticsManagerDefault.setIsAppActive(stateFromStores, SearchSessionAnalyticsManagerDefault);
   }, items1);
   const effect1 = noop.useEffect(() => () => {
-    closure_1_1(12004).setIsRowViewable(false, closure_1_1(12002));
+    closure_1_1(12077).setIsRowViewable(false, closure_1_1(12075));
   }, []);
 });

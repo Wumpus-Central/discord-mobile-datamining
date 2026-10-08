@@ -1,14 +1,14 @@
-// === Module 16179: useSubmittedGuildJoinRequestTotal ===
+// === Module 16439: useSubmittedGuildJoinRequestTotal ===
 
-// Module 16179 (useSubmittedGuildJoinRequestTotal)
-import GuildJoinRequestStore from "GuildJoinRequestStore" /* 5939 */;
+// Module 16439 (useSubmittedGuildJoinRequestTotal)
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6122 */;
 
 const require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/hooks/useSubmittedGuildJoinRequestTotal.tsx");
 
-export const useSubmittedGuildJoinRequestTotal = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export const useSubmittedGuildJoinRequestTotal = ReactCompilerGating.isReactCompilerEnabled() ? (function useSubmittedGuildJoinRequestTotal(guildId) {
   const cResult = guildId(576).c(4);
   guildId = guildId.guildId;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -38,7 +38,7 @@ export const useSubmittedGuildJoinRequestTotal = ReactCompilerGating.isReactComp
   }
   const obj = guildId(576);
   return guildId(504).useStateFromStores(first, tmp6, tmp7);
-}) : ((guildId) => {
+}) : (function useSubmittedGuildJoinRequestTotal(guildId) {
   guildId = guildId.guildId;
   const items = [GuildJoinRequestStore];
   const items1 = [guildId];

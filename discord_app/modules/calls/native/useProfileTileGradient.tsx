@@ -1,7 +1,7 @@
-// === Module 7934: useProfileTileGradient ===
+// === Module 8353: useProfileTileGradient ===
 
-// Module 7934 (useProfileTileGradient)
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7869 */;
+// Module 8353 (useProfileTileGradient)
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8287 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,7 +10,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/native/useProfileTileGradient.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useProfileTileGradient(userId) {
   const cResult = userId(isVideoBackgroundProfileFetchEnabled[3]).c(7);
   userId = userId.userId;
   const guildId = userId.guildId;
@@ -78,7 +78,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   tmp13 = items;
   tmp12 = I;
   const tmpResult = userId(isVideoBackgroundProfileFetchEnabled[5]);
-}) : ((userId) => {
+}) : (function useProfileTileGradient(userId) {
   userId = userId.userId;
   const guildId = userId.guildId;
   let isVideoBackgroundProfileFetchEnabled;

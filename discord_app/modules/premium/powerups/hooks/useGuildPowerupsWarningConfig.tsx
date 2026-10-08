@@ -1,11 +1,11 @@
-// === Module 12235: useGuildPowerupsWarningConfig ===
+// === Module 12314: useGuildPowerupsWarningConfig ===
 
-// Module 12235 (useGuildPowerupsWarningConfig)
+// Module 12314 (useGuildPowerupsWarningConfig)
 import util from "util" /* 1126 */;
-import _modDef2553 from "module_2553" /* 2553 */;
-import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 7682 */;
+import _modDef2597 from "module_2597" /* 2597 */;
+import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 8003 */;
 import noop from "module_19" /* 19 */;
-import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 12236 */;
+import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 12315 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupsWarningConfig.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, join) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildPowerupsWarningConfig(arg0, join) {
   _require = arg0;
   const cResult = require("c").c(14);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -25,7 +25,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, join) => {
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function l() {
+    const fn = function u() {
       return AppliedGuildBoostStore.getAppliedGuildBoostsForGuild(closure_0);
     };
     const items1 = [arg0];
@@ -78,7 +78,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, join) => {
     const _Symbol2 = Symbol;
     if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
       const intl = tmp(1126).intl;
-      const stringResult = intl.string(_modDef2553.n5hQhc);
+      const stringResult = intl.string(_modDef2597.n5hQhc);
       cResult[7] = stringResult;
       let tmp12 = stringResult;
     } else {
@@ -102,14 +102,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, join) => {
     }
     const intl2 = tmp(1126).intl;
     const obj4 = { boostCount: diff, perksString: join.join(", ") };
-    const formatToPlainStringResult = intl2.formatToPlainString(_modDef2553.iAaAiG, obj4);
+    const formatToPlainStringResult = intl2.formatToPlainString(_modDef2597.iAaAiG, obj4);
     cResult[8] = join;
     cResult[9] = diff;
     cResult[10] = formatToPlainStringResult;
     tmp15 = formatToPlainStringResult;
   }
   const tmpResult = require("initialize");
-}) : ((arg0, arg1) => {
+}) : (function useGuildPowerupsWarningConfig(arg0, arg1) {
   _require = arg0;
   importDefault = arg1;
   const items = [AppliedGuildBoostStore];
@@ -147,10 +147,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, join) => {
     } else {
       obj = { shouldShow: true, title: null, description: null, requiredBoostCount: null };
       const intl = util.intl;
-      obj.title = intl.string(_modDef2553.n5hQhc);
+      obj.title = intl.string(_modDef2597.n5hQhc);
       const intl2 = util.intl;
       const obj2 = { boostCount: diff, perksString: closure_1.join(", ") };
-      obj.description = intl2.formatToPlainString(_modDef2553.iAaAiG, obj2);
+      obj.description = intl2.formatToPlainString(_modDef2597.iAaAiG, obj2);
       obj.requiredBoostCount = diff;
     }
     return obj;

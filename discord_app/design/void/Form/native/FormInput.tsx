@@ -1,37 +1,37 @@
-// === Module 8930: FormInput ===
+// === Module 8561: FormInput ===
 
-// Module 8930 (FormInput)
+// Module 8561 (FormInput)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import native2 from "native" /* 4595 */;
-import shared from "shared" /* 4735 */;
-import RedesignCompat from "RedesignCompat" /* 6080 */;
-import TextInput from "TextInput" /* 6105 */;
-import TextArea2 from "TextArea" /* 6587 */;
+import native from "native" /* 1200 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import native2 from "native" /* 4787 */;
+import shared from "shared" /* 4929 */;
+import RedesignCompat from "RedesignCompat" /* 6266 */;
+import TextInput from "TextInput" /* 6283 */;
+import TextArea2 from "TextArea" /* 6763 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_2 = ["onChange", "keyboardAppearance", "keyboardType", "style", "inputTextStyle", "value", "title", "helpText", "error", "placeholder", "secureTextEntry", "disabled", "multiline", "autoFocus", "numberOfLines", "clearButtonVisibility", "autoCapitalize", "autoCorrect", "showBorder", "showCharactersRemaining", "enableAndroidSanitizedInputWorkaround", "allowRedesignTextInput"];
+let closure_2 = ["onChange", "keyboardAppearance", "keyboardType", "style", "inputTextStyle", "value", "title", "helpText", "error", "placeholder", "secureTextEntry", "disabled", "multiline", "autoFocus", "numberOfLines", "clearButtonVisibility", "autoCapitalize", "autoCorrect", "showBorder", "showCharactersRemaining", "enableAndroidSanitizedInputWorkaround", "allowRedesignTextInput", "ref"];
 const KeyboardThemes = fn(1085).KeyboardThemes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
-let obj = { inputViewContainer: { paddingVertical: 13, paddingHorizontal: 15 }, placeholderText: { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT }, inputText: null };
+const createStyles = fn(5090);
+let obj2 = { inputViewContainer: { paddingVertical: 13, paddingHorizontal: 15 }, placeholderText: { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT }, inputText: null };
 let obj3 = { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
-obj.inputText = { color: nativeDefault.colors.TEXT_DEFAULT };
-let closure_7 = createStyles.createStyles(obj);
+obj2.inputText = { color: nativeDefault.colors.TEXT_DEFAULT };
+let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 const obj4 = { color: nativeDefault.colors.TEXT_DEFAULT };
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormInput.tsx");
 
-export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
-  const cResult = c.c(85);
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormInput(arg0) {
+  const cResult = c.c(86);
   if (cResult[0] !== arg0) {
-    ({ onChange, keyboardAppearance, keyboardType, style, inputTextStyle, value, title, helpText, error, placeholder, secureTextEntry, disabled, multiline, autoFocus, numberOfLines, clearButtonVisibility, autoCapitalize, autoCorrect, showBorder, showCharactersRemaining, enableAndroidSanitizedInputWorkaround, allowRedesignTextInput } = arg0);
-    const tmp28 = _objectWithoutProperties(arg0, closure_2);
+    ({ onChange, keyboardAppearance, keyboardType, style, inputTextStyle, value, title, helpText, error, placeholder, secureTextEntry, disabled, multiline, autoFocus, numberOfLines, clearButtonVisibility, autoCapitalize, autoCorrect, showBorder, showCharactersRemaining, enableAndroidSanitizedInputWorkaround, allowRedesignTextInput, ref } = arg0);
+    const tmp29 = _objectWithoutProperties(arg0, closure_2);
     cResult[0] = arg0;
     cResult[1] = autoCapitalize;
     cResult[2] = autoCorrect;
@@ -41,31 +41,33 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
     cResult[6] = keyboardAppearance;
     cResult[7] = keyboardType;
     cResult[8] = onChange;
-    cResult[9] = tmp28;
-    cResult[10] = style;
-    cResult[11] = title;
-    cResult[12] = showCharactersRemaining;
-    cResult[13] = enableAndroidSanitizedInputWorkaround;
-    cResult[14] = allowRedesignTextInput;
-    cResult[15] = helpText;
-    cResult[16] = placeholder;
-    cResult[17] = secureTextEntry;
-    cResult[18] = disabled;
-    cResult[19] = multiline;
-    cResult[20] = autoFocus;
-    cResult[21] = numberOfLines;
-    cResult[22] = showBorder;
-    cResult[23] = value;
-    let tmp25 = value;
-    let tmp24 = showBorder;
-    let tmp23 = numberOfLines;
-    let tmp19 = secureTextEntry;
-    let tmp18 = placeholder;
-    let tmp17 = helpText;
-    let tmp16 = allowRedesignTextInput;
-    let tmp13 = title;
-    let tmp12 = style;
-    let tmp11 = tmp28;
+    cResult[9] = tmp29;
+    cResult[10] = ref;
+    cResult[11] = style;
+    cResult[12] = title;
+    cResult[13] = showCharactersRemaining;
+    cResult[14] = enableAndroidSanitizedInputWorkaround;
+    cResult[15] = allowRedesignTextInput;
+    cResult[16] = helpText;
+    cResult[17] = placeholder;
+    cResult[18] = secureTextEntry;
+    cResult[19] = disabled;
+    cResult[20] = multiline;
+    cResult[21] = autoFocus;
+    cResult[22] = numberOfLines;
+    cResult[23] = showBorder;
+    cResult[24] = value;
+    let tmp26 = value;
+    let tmp25 = showBorder;
+    let tmp24 = numberOfLines;
+    let tmp20 = secureTextEntry;
+    let tmp19 = placeholder;
+    let tmp18 = helpText;
+    let tmp17 = allowRedesignTextInput;
+    let tmp14 = title;
+    let tmp13 = style;
+    let tmp12 = ref;
+    let tmp11 = tmp29;
     let tmp10 = onChange;
     let tmp9 = keyboardType;
     let tmp8 = keyboardAppearance;
@@ -86,68 +88,69 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
     tmp11 = cResult[9];
     tmp12 = cResult[10];
     tmp13 = cResult[11];
-    tmp16 = cResult[14];
+    tmp14 = cResult[12];
     tmp17 = cResult[15];
     tmp18 = cResult[16];
     tmp19 = cResult[17];
-    tmp23 = cResult[21];
+    tmp20 = cResult[18];
     tmp24 = cResult[22];
     tmp25 = cResult[23];
+    tmp26 = cResult[24];
   }
   let str = "";
-  if (undefined !== tmp13) {
-    str = tmp13;
+  if (undefined !== tmp14) {
+    str = tmp14;
   }
   let str2 = "";
-  if (undefined !== tmp17) {
-    str2 = tmp17;
+  if (undefined !== tmp18) {
+    str2 = tmp18;
   }
   let str3 = "";
-  if (undefined !== tmp18) {
-    str3 = tmp18;
+  if (undefined !== tmp19) {
+    str3 = tmp19;
   }
-  let num25 = 1;
-  if (undefined !== tmp23) {
-    num25 = tmp23;
+  let num26 = 1;
+  if (undefined !== tmp24) {
+    num26 = tmp24;
   }
-  if (cResult[24] !== tmp24) {
-    let isAndroidResult = tmp24;
-    if (undefined === tmp24) {
+  if (cResult[25] !== tmp25) {
+    let isAndroidResult = tmp25;
+    if (undefined === tmp25) {
       isAndroidResult = PlatformUtils.isAndroid();
       const tmpResult = PlatformUtils;
     }
-    cResult[24] = tmp24;
-    cResult[25] = isAndroidResult;
-    let tmp33 = isAndroidResult;
+    cResult[25] = tmp25;
+    cResult[26] = isAndroidResult;
+    let tmp34 = isAndroidResult;
   } else {
-    tmp33 = cResult[25];
+    tmp34 = cResult[26];
   }
-  const tmp38 = closure_7();
+  const tmp39 = closure_7();
   native2;
   if (null != tmp8) {
-    const tmp43 = noop.useContext(RedesignCompat.RedesignCompatContext) && tmp37;
-    closure_0 = tmp43;
-    let tmp44 = !tmp36;
-    if (tmp36) {
-      tmp44 = !PlatformUtils.isAndroid();
+    const tmp44 = noop.useContext(RedesignCompat.RedesignCompatContext) && tmp38;
+    closure_0 = tmp44;
+    let tmp45 = !tmp37;
+    if (tmp37) {
+      tmp45 = !PlatformUtils.isAndroid();
       const tmpResult6 = PlatformUtils;
     }
-    let tmp45 = !tmp44;
-    if (tmp44) {
-      tmp45 = tmp29;
+    let tmp46 = !tmp45;
+    if (tmp45) {
+      tmp46 = tmp30;
     }
-    if (!tmp36) {
+    if (!tmp37) {
       let str4 = tmp9;
     } else {
       PlatformUtils;
       str4 = "visible-password";
     }
-    const ref = noop.useRef(null);
-    if (cResult[26] !== tmp43) {
+    const ref1 = noop.useRef(null);
+    if (cResult[27] !== tmp44) {
       function ee() {
         return {
           isFocused() {
-            const current = closure_1_0 ? ref : ref1.current;
+            const current = closure_1_0 ? ref1 : ref2.current;
             let isFocusedResult;
             if (current != null) {
               isFocusedResult = current.isFocused();
@@ -155,25 +158,25 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
             return true === isFocusedResult;
           },
           focus() {
-            const current = closure_1_0 ? ref : ref1.current;
+            const current = closure_1_0 ? ref1 : ref2.current;
             if (current != null) {
               current.focus();
             }
           },
           blur() {
-            const current = closure_1_0 ? ref : ref1.current;
+            const current = closure_1_0 ? ref1 : ref2.current;
             if (current != null) {
               current.blur();
             }
           },
           setText(arg0) {
-            const current = closure_1_0 ? ref : ref1.current;
+            const current = closure_1_0 ? ref1 : ref2.current;
             if (current != null) {
               current.setText(arg0);
             }
           },
           getText() {
-            const current = closure_1_0 ? ref : ref1.current;
+            const current = closure_1_0 ? ref1 : ref2.current;
             let str;
             if (current != null) {
               str = current.getText();
@@ -184,49 +187,49 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
             return str;
           },
           measure(arg0) {
-            const current = closure_1_0 ? ref : ref1.current;
+            const current = closure_1_0 ? ref1 : ref2.current;
             if (current != null) {
               current.measure(arg0);
             }
           },
           measureInWindow(arg0) {
-            const current = closure_1_0 ? ref : ref1.current;
+            const current = closure_1_0 ? ref1 : ref2.current;
             if (current != null) {
               current.measureInWindow(arg0);
             }
           },
           measureLayout(arg0, arg1, arg2) {
-            const current = closure_1_0 ? ref : ref1.current;
+            const current = closure_1_0 ? ref1 : ref2.current;
             if (current != null) {
               current.measureLayout(arg0, arg1, arg2);
             }
           }
         };
       }
-      cResult[26] = tmp43;
-      cResult[27] = ee;
-      let tmp48 = ee;
+      cResult[27] = tmp44;
+      cResult[28] = ee;
+      let tmp49 = ee;
     } else {
-      tmp48 = cResult[27];
+      tmp49 = cResult[28];
     }
-    const imperativeHandle = noop.useImperativeHandle(arg1, tmp48);
-    if (tmp43) {
-      if (tmp31) {
-        if (cResult[28] === str4) {
-          if (cResult[29] === tmp45) {
-            if (cResult[30] === tmp4) {
-              if (cResult[31] === tmp5) {
-                if (cResult[32] === tmp32) {
-                  if (cResult[33] === tmp30) {
-                    if (cResult[34] === tmp6) {
-                      if (cResult[35] === tmp8) {
-                        if (cResult[36] === tmp10) {
-                          if (cResult[37] === str3) {
-                            if (cResult[38] === tmp11.maxLength) {
-                              if (cResult[39] === tmp11.onEndEditing) {
-                                if (cResult[40] === tmp38.placeholderText.color) {
-                                  if (cResult[41] === tmp25) {
-                                    let tmp62 = cResult[42];
+    const imperativeHandle = noop.useImperativeHandle(tmp12, tmp49);
+    if (tmp44) {
+      if (tmp32) {
+        if (cResult[29] === str4) {
+          if (cResult[30] === tmp46) {
+            if (cResult[31] === tmp4) {
+              if (cResult[32] === tmp5) {
+                if (cResult[33] === tmp33) {
+                  if (cResult[34] === tmp31) {
+                    if (cResult[35] === tmp6) {
+                      if (cResult[36] === tmp8) {
+                        if (cResult[37] === tmp10) {
+                          if (cResult[38] === str3) {
+                            if (cResult[39] === tmp11.maxLength) {
+                              if (cResult[40] === tmp11.onEndEditing) {
+                                if (cResult[41] === tmp39.placeholderText.color) {
+                                  if (cResult[42] === tmp26) {
+                                    let tmp62 = cResult[43];
                                   }
                                   return tmp62;
                                 }
@@ -242,42 +245,42 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
             }
           }
         }
-        const obj2 = { ref, returnKeyType: "default", onChange: tmp10, keyboardAppearance: tmp8, keyboardType: str4, placeholderTextColor: tmp38.placeholderText.color, placeholder: str3, secureTextEntry: tmp45, disabled: tmp30, autoFocus: tmp32, autoCapitalize: tmp4, autoCorrect: tmp5, maxLength: null, onEndEditing: null, value: null, errorMessage: null };
+        const obj2 = { ref: ref1, returnKeyType: "default", onChange: tmp10, keyboardAppearance: tmp8, keyboardType: str4, placeholderTextColor: tmp39.placeholderText.color, placeholder: str3, secureTextEntry: tmp46, disabled: tmp31, autoFocus: tmp33, autoCapitalize: tmp4, autoCorrect: tmp5, maxLength: null, onEndEditing: null, value: null, errorMessage: null };
         ({ maxLength: obj9.maxLength, onEndEditing: obj9.onEndEditing } = tmp11);
-        obj2.value = tmp25;
+        obj2.value = tmp26;
         obj2.errorMessage = tmp6;
-        const tmp64 = jsx(TextArea2.TextArea, { ref, returnKeyType: "default", onChange: tmp10, keyboardAppearance: tmp8, keyboardType: str4, placeholderTextColor: tmp38.placeholderText.color, placeholder: str3, secureTextEntry: tmp45, disabled: tmp30, autoFocus: tmp32, autoCapitalize: tmp4, autoCorrect: tmp5, maxLength: null, onEndEditing: null, value: null, errorMessage: null });
-        cResult[28] = str4;
-        cResult[29] = tmp45;
-        cResult[30] = tmp4;
-        cResult[31] = tmp5;
-        cResult[32] = tmp32;
-        cResult[33] = tmp30;
-        cResult[34] = tmp6;
-        cResult[35] = tmp8;
-        cResult[36] = tmp10;
-        cResult[37] = str3;
-        cResult[38] = tmp11.maxLength;
-        cResult[39] = tmp11.onEndEditing;
-        cResult[40] = tmp38.placeholderText.color;
-        cResult[41] = tmp25;
-        cResult[42] = tmp64;
+        const tmp64 = jsx(TextArea2.TextArea, { ref: ref1, returnKeyType: "default", onChange: tmp10, keyboardAppearance: tmp8, keyboardType: str4, placeholderTextColor: tmp39.placeholderText.color, placeholder: str3, secureTextEntry: tmp46, disabled: tmp31, autoFocus: tmp33, autoCapitalize: tmp4, autoCorrect: tmp5, maxLength: null, onEndEditing: null, value: null, errorMessage: null });
+        cResult[29] = str4;
+        cResult[30] = tmp46;
+        cResult[31] = tmp4;
+        cResult[32] = tmp5;
+        cResult[33] = tmp33;
+        cResult[34] = tmp31;
+        cResult[35] = tmp6;
+        cResult[36] = tmp8;
+        cResult[37] = tmp10;
+        cResult[38] = str3;
+        cResult[39] = tmp11.maxLength;
+        cResult[40] = tmp11.onEndEditing;
+        cResult[41] = tmp39.placeholderText.color;
+        cResult[42] = tmp26;
+        cResult[43] = tmp64;
         tmp62 = tmp64;
       } else {
-        if (cResult[43] === str4) {
-          if (cResult[44] === tmp45) {
-            if (cResult[45] === tmp4) {
-              if (cResult[46] === tmp5) {
-                if (cResult[47] === tmp32) {
-                  if (cResult[48] === tmp30) {
-                    if (cResult[49] === tmp6) {
-                      if (cResult[50] === tmp8) {
-                        if (cResult[51] === tmp10) {
-                          if (cResult[52] === str3) {
-                            if (cResult[53] === tmp11.onEndEditing) {
-                              if (cResult[54] === tmp38.placeholderText.color) {
-                                if (cResult[55] === tmp58) {
-                                  let tmp59 = cResult[56];
+        if (cResult[44] === str4) {
+          if (cResult[45] === tmp46) {
+            if (cResult[46] === tmp4) {
+              if (cResult[47] === tmp5) {
+                if (cResult[48] === tmp33) {
+                  if (cResult[49] === tmp31) {
+                    if (cResult[50] === tmp6) {
+                      if (cResult[51] === tmp8) {
+                        if (cResult[52] === tmp10) {
+                          if (cResult[53] === str3) {
+                            if (cResult[54] === tmp11.onEndEditing) {
+                              if (cResult[55] === tmp39.placeholderText.color) {
+                                if (cResult[56] === tmp58) {
+                                  let tmp59 = cResult[57];
                                 }
                                 return tmp59;
                               }
@@ -292,22 +295,22 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
             }
           }
         }
-        const obj3 = { ref, returnKeyType: "done", onChange: tmp10, keyboardAppearance: tmp8, keyboardType: str4, placeholderTextColor: tmp38.placeholderText.color, placeholder: str3, secureTextEntry: tmp45, disabled: tmp30, autoFocus: tmp32, autoCapitalize: tmp4, autoCorrect: tmp5, onEndEditing: tmp11.onEndEditing, value: tmp25, errorMessage: tmp6 };
-        const tmp61 = jsx(TextInput.TextInput, { ref, returnKeyType: "done", onChange: tmp10, keyboardAppearance: tmp8, keyboardType: str4, placeholderTextColor: tmp38.placeholderText.color, placeholder: str3, secureTextEntry: tmp45, disabled: tmp30, autoFocus: tmp32, autoCapitalize: tmp4, autoCorrect: tmp5, onEndEditing: tmp11.onEndEditing, value: tmp25, errorMessage: tmp6 });
-        cResult[43] = str4;
-        cResult[44] = tmp45;
-        cResult[45] = tmp4;
-        cResult[46] = tmp5;
-        cResult[47] = tmp32;
-        cResult[48] = tmp30;
-        cResult[49] = tmp6;
-        cResult[50] = tmp8;
-        cResult[51] = tmp10;
-        cResult[52] = str3;
-        cResult[53] = tmp11.onEndEditing;
-        cResult[54] = tmp38.placeholderText.color;
-        cResult[55] = tmp25;
-        cResult[56] = tmp61;
+        const obj3 = { ref: ref1, returnKeyType: "done", onChange: tmp10, keyboardAppearance: tmp8, keyboardType: str4, placeholderTextColor: tmp39.placeholderText.color, placeholder: str3, secureTextEntry: tmp46, disabled: tmp31, autoFocus: tmp33, autoCapitalize: tmp4, autoCorrect: tmp5, onEndEditing: tmp11.onEndEditing, value: tmp26, errorMessage: tmp6 };
+        const tmp61 = jsx(TextInput.TextInput, { ref: ref1, returnKeyType: "done", onChange: tmp10, keyboardAppearance: tmp8, keyboardType: str4, placeholderTextColor: tmp39.placeholderText.color, placeholder: str3, secureTextEntry: tmp46, disabled: tmp31, autoFocus: tmp33, autoCapitalize: tmp4, autoCorrect: tmp5, onEndEditing: tmp11.onEndEditing, value: tmp26, errorMessage: tmp6 });
+        cResult[44] = str4;
+        cResult[45] = tmp46;
+        cResult[46] = tmp4;
+        cResult[47] = tmp5;
+        cResult[48] = tmp33;
+        cResult[49] = tmp31;
+        cResult[50] = tmp6;
+        cResult[51] = tmp8;
+        cResult[52] = tmp10;
+        cResult[53] = str3;
+        cResult[54] = tmp11.onEndEditing;
+        cResult[55] = tmp39.placeholderText.color;
+        cResult[56] = tmp26;
+        cResult[57] = tmp61;
         tmp59 = tmp61;
       }
     } else {
@@ -315,7 +318,7 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
         let str5 = tmp11.returnKeyType;
       } else {
         str5 = "done";
-        if (tmp31) {
+        if (tmp32) {
           str5 = "default";
         }
       }
@@ -323,42 +326,42 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
       if (tmp6 == null) {
         str6 = "";
       }
-      if (cResult[57] === tmp12) {
-        if (cResult[58] === tmp38.inputViewContainer) {
-          let tmp51 = cResult[59];
+      if (cResult[58] === tmp13) {
+        if (cResult[59] === tmp39.inputViewContainer) {
+          let tmp51 = cResult[60];
         }
-        let str7 = tmp25;
-        if (tmp25 == null) {
+        let str7 = tmp26;
+        if (tmp26 == null) {
           str7 = "";
         }
-        if (tmp31) {
+        if (tmp32) {
           NEVER = native.ClearButtonVisibility.NEVER;
         }
-        if (cResult[60] === str4) {
-          if (cResult[61] === tmp45) {
-            if (cResult[62] === tmp4) {
-              if (cResult[63] === tmp5) {
-                if (cResult[64] === tmp32) {
-                  if (cResult[65] === tmp30) {
-                    if (cResult[66] === str2) {
-                      if (cResult[67] === tmp7) {
-                        if (cResult[68] === tmp8) {
-                          if (cResult[69] === tmp31) {
-                            if (cResult[70] === num25) {
-                              if (cResult[71] === tmp10) {
-                                if (cResult[72] === str3) {
-                                  if (cResult[73] === tmp11) {
-                                    if (cResult[74] === tmp33) {
-                                      if (cResult[75] === tmp35) {
-                                        if (cResult[76] === tmp38.inputText.color) {
-                                          if (cResult[77] === tmp38.placeholderText.color) {
-                                            if (cResult[78] === str5) {
-                                              if (cResult[79] === str6) {
-                                                if (cResult[80] === tmp51) {
-                                                  if (cResult[81] === str7) {
-                                                    if (cResult[82] === NEVER) {
-                                                      if (cResult[83] === str) {
-                                                        let tmp52 = cResult[84];
+        if (cResult[61] === str4) {
+          if (cResult[62] === tmp46) {
+            if (cResult[63] === tmp4) {
+              if (cResult[64] === tmp5) {
+                if (cResult[65] === tmp33) {
+                  if (cResult[66] === tmp31) {
+                    if (cResult[67] === str2) {
+                      if (cResult[68] === tmp7) {
+                        if (cResult[69] === tmp8) {
+                          if (cResult[70] === tmp32) {
+                            if (cResult[71] === num26) {
+                              if (cResult[72] === tmp10) {
+                                if (cResult[73] === str3) {
+                                  if (cResult[74] === tmp11) {
+                                    if (cResult[75] === tmp34) {
+                                      if (cResult[76] === tmp36) {
+                                        if (cResult[77] === tmp39.inputText.color) {
+                                          if (cResult[78] === tmp39.placeholderText.color) {
+                                            if (cResult[79] === str5) {
+                                              if (cResult[80] === str6) {
+                                                if (cResult[81] === tmp51) {
+                                                  if (cResult[82] === str7) {
+                                                    if (cResult[83] === NEVER) {
+                                                      if (cResult[84] === str) {
+                                                        let tmp52 = cResult[85];
                                                       }
                                                       return tmp52;
                                                     }
@@ -384,50 +387,50 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
             }
           }
         }
-        const obj5 = { ref: ref1, inputTextColor: tmp38.inputText.color, multiline: tmp31, returnKeyType: str5, onChangeText: tmp10, keyboardAppearance: tmp8, keyboardType: str4, placeholderTextColor: tmp38.placeholderText.color, title: str, helpText: str2, error: str6, placeholder: str3, secureTextEntry: tmp45, disabled: tmp30, autoFocus: tmp32, numberOfLines: num25, autoCapitalize: tmp4, autoCorrect: tmp5, showBorder: tmp33, showCharactersRemaining: tmp35, style: tmp51, inputTextStyle: tmp7, value: str7, clearButtonVisibility: NEVER };
+        const obj5 = { ref: ref2, inputTextColor: tmp39.inputText.color, multiline: tmp32, returnKeyType: str5, onChangeText: tmp10, keyboardAppearance: tmp8, keyboardType: str4, placeholderTextColor: tmp39.placeholderText.color, title: str, helpText: str2, error: str6, placeholder: str3, secureTextEntry: tmp46, disabled: tmp31, autoFocus: tmp33, numberOfLines: num26, autoCapitalize: tmp4, autoCorrect: tmp5, showBorder: tmp34, showCharactersRemaining: tmp36, style: tmp51, inputTextStyle: tmp7, value: str7, clearButtonVisibility: NEVER };
         const merged = Object.assign(tmp11);
-        const tmp57 = jsx(native.InputView, { ref: ref1, inputTextColor: tmp38.inputText.color, multiline: tmp31, returnKeyType: str5, onChangeText: tmp10, keyboardAppearance: tmp8, keyboardType: str4, placeholderTextColor: tmp38.placeholderText.color, title: str, helpText: str2, error: str6, placeholder: str3, secureTextEntry: tmp45, disabled: tmp30, autoFocus: tmp32, numberOfLines: num25, autoCapitalize: tmp4, autoCorrect: tmp5, showBorder: tmp33, showCharactersRemaining: tmp35, style: tmp51, inputTextStyle: tmp7, value: str7, clearButtonVisibility: NEVER });
-        cResult[60] = str4;
-        cResult[61] = tmp45;
-        cResult[62] = tmp4;
-        cResult[63] = tmp5;
-        cResult[64] = tmp32;
-        cResult[65] = tmp30;
-        cResult[66] = str2;
-        cResult[67] = tmp7;
-        cResult[68] = tmp8;
-        cResult[69] = tmp31;
-        cResult[70] = num25;
-        cResult[71] = tmp10;
-        cResult[72] = str3;
-        cResult[73] = tmp11;
-        cResult[74] = tmp33;
-        cResult[75] = tmp35;
-        cResult[76] = tmp38.inputText.color;
-        cResult[77] = tmp38.placeholderText.color;
-        cResult[78] = str5;
-        cResult[79] = str6;
-        cResult[80] = tmp51;
-        cResult[81] = str7;
-        cResult[82] = NEVER;
-        cResult[83] = str;
-        cResult[84] = tmp57;
+        const tmp57 = jsx(native.InputView, { ref: ref2, inputTextColor: tmp39.inputText.color, multiline: tmp32, returnKeyType: str5, onChangeText: tmp10, keyboardAppearance: tmp8, keyboardType: str4, placeholderTextColor: tmp39.placeholderText.color, title: str, helpText: str2, error: str6, placeholder: str3, secureTextEntry: tmp46, disabled: tmp31, autoFocus: tmp33, numberOfLines: num26, autoCapitalize: tmp4, autoCorrect: tmp5, showBorder: tmp34, showCharactersRemaining: tmp36, style: tmp51, inputTextStyle: tmp7, value: str7, clearButtonVisibility: NEVER });
+        cResult[61] = str4;
+        cResult[62] = tmp46;
+        cResult[63] = tmp4;
+        cResult[64] = tmp5;
+        cResult[65] = tmp33;
+        cResult[66] = tmp31;
+        cResult[67] = str2;
+        cResult[68] = tmp7;
+        cResult[69] = tmp8;
+        cResult[70] = tmp32;
+        cResult[71] = num26;
+        cResult[72] = tmp10;
+        cResult[73] = str3;
+        cResult[74] = tmp11;
+        cResult[75] = tmp34;
+        cResult[76] = tmp36;
+        cResult[77] = tmp39.inputText.color;
+        cResult[78] = tmp39.placeholderText.color;
+        cResult[79] = str5;
+        cResult[80] = str6;
+        cResult[81] = tmp51;
+        cResult[82] = str7;
+        cResult[83] = NEVER;
+        cResult[84] = str;
+        cResult[85] = tmp57;
         tmp52 = tmp57;
       }
-      const items = [tmp38.inputViewContainer, tmp12];
-      cResult[57] = tmp12;
-      cResult[58] = tmp38.inputViewContainer;
-      cResult[59] = items;
+      const items = [tmp39.inputViewContainer, tmp13];
+      cResult[58] = tmp13;
+      cResult[59] = tmp39.inputViewContainer;
+      cResult[60] = items;
       tmp51 = items;
     }
-    ref1 = noop.useRef(null);
+    ref2 = noop.useRef(null);
   } else {
-    shared.isThemeDark(tmp40) ? KeyboardThemes.DARK : KeyboardThemes.LIGHT;
+    shared.isThemeDark(tmp41) ? KeyboardThemes.DARK : KeyboardThemes.LIGHT;
     const tmpResult8 = shared;
   }
-  tmp29 = undefined !== tmp19 && tmp19;
-  tmp37 = undefined === tmp16 || tmp16;
-}) : ((helpText, arg1) => {
+  tmp30 = undefined !== tmp20 && tmp20;
+  tmp38 = undefined === tmp17 || tmp17;
+}) : (function FormInput(helpText) {
   ({ onChange, keyboardAppearance, value, title } = helpText);
   ({ keyboardType, style, inputTextStyle } = helpText);
   if (title === undefined) {
@@ -477,7 +480,7 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
   if (flag7 === undefined) {
     flag7 = true;
   }
-  let onEndEditing = Object.assign(helpText, Object.assign({ onChange: 0, keyboardAppearance: 0, keyboardType: 0, style: 0, inputTextStyle: 0, value: 0, title: 0, helpText: 0, error: 0, placeholder: 0, secureTextEntry: 0, disabled: 0, multiline: 0, autoFocus: 0, numberOfLines: 0, clearButtonVisibility: 0, autoCapitalize: 0, autoCorrect: 0, showBorder: 0, showCharactersRemaining: 0, enableAndroidSanitizedInputWorkaround: 0, allowRedesignTextInput: 0 }));
+  let onEndEditing = Object.assign(helpText, Object.assign({ onChange: 0, keyboardAppearance: 0, keyboardType: 0, style: 0, inputTextStyle: 0, value: 0, title: 0, helpText: 0, error: 0, placeholder: 0, secureTextEntry: 0, disabled: 0, multiline: 0, autoFocus: 0, numberOfLines: 0, clearButtonVisibility: 0, autoCapitalize: 0, autoCorrect: 0, showBorder: 0, showCharactersRemaining: 0, enableAndroidSanitizedInputWorkaround: 0, allowRedesignTextInput: 0, ref: 0 }));
   closure_0 = undefined;
   let ref;
   let ref1;
@@ -505,7 +508,7 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
     }
     ref = noop.useRef(null);
     ref1 = noop.useRef(null);
-    const imperativeHandle = noop.useImperativeHandle(arg1, () => ({
+    const imperativeHandle = noop.useImperativeHandle(helpText.ref, () => ({
       isFocused() {
         const current = closure_1_0 ? ref : ref1.current;
         let isFocusedResult;
@@ -580,10 +583,10 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
         obj2.onEndEditing = onEndEditing;
         obj2.value = value;
         obj2.errorMessage = error;
-        let tmp14Result = <TextArea ref={ref} returnKeyType="default" onChange={onChange} keyboardAppearance={keyboardAppearance} keyboardType={str2} placeholderTextColor={null} placeholder={null} secureTextEntry={null} disabled={null} autoFocus={null} autoCapitalize={null} autoCorrect={null} maxLength={null} onEndEditing={null} value={null} errorMessage={null} />;
+        let tmp13Result = <TextArea ref={ref} returnKeyType="default" onChange={onChange} keyboardAppearance={keyboardAppearance} keyboardType={str2} placeholderTextColor={null} placeholder={null} secureTextEntry={null} disabled={null} autoFocus={null} autoCapitalize={null} autoCorrect={null} maxLength={null} onEndEditing={null} value={null} errorMessage={null} />;
       } else {
         const obj3 = { ref, returnKeyType: "done", onChange, keyboardAppearance, keyboardType: str2, placeholderTextColor: color.placeholderText.color, placeholder, secureTextEntry: tmp9, disabled: flag2, autoFocus: flag4, autoCapitalize, autoCorrect, onEndEditing: onEndEditing.onEndEditing, value, errorMessage: error };
-        tmp14Result = jsx(TextInput.TextInput, { ref, returnKeyType: "done", onChange, keyboardAppearance, keyboardType: str2, placeholderTextColor: color.placeholderText.color, placeholder, secureTextEntry: tmp9, disabled: flag2, autoFocus: flag4, autoCapitalize, autoCorrect, onEndEditing: onEndEditing.onEndEditing, value, errorMessage: error });
+        tmp13Result = jsx(TextInput.TextInput, { ref, returnKeyType: "done", onChange, keyboardAppearance, keyboardType: str2, placeholderTextColor: color.placeholderText.color, placeholder, secureTextEntry: tmp9, disabled: flag2, autoFocus: flag4, autoCapitalize, autoCorrect, onEndEditing: onEndEditing.onEndEditing, value, errorMessage: error });
       }
     } else {
       const obj5 = { ref: ref1, inputTextColor: color.inputText.color, multiline: flag3, returnKeyType: null, onChangeText: null, keyboardAppearance: null, keyboardType: null, placeholderTextColor: null, title: null, helpText: null, error: null, placeholder: null, secureTextEntry: null, disabled: null, autoFocus: null, numberOfLines: null, autoCapitalize: null, autoCorrect: null, showBorder: null, showCharactersRemaining: null, style: null, inputTextStyle: null, value: null, clearButtonVisibility: null };
@@ -635,4 +638,4 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
     shared.isThemeDark(tmp4) ? KeyboardThemes.DARK : KeyboardThemes.LIGHT;
     const TextAreaResult2 = shared;
   }
-}));
+});

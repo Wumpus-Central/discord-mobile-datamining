@@ -1,14 +1,14 @@
-// === Module 11003: UserProfileAboutMeCardCommand ===
+// === Module 11228: UserProfileAboutMeCardCommand ===
 
-// Module 11003 (UserProfileAboutMeCardCommand)
+// Module 11228 (UserProfileAboutMeCardCommand)
 import nativeDefault from "native" /* 587 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5076 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7043 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7047 */;
-import MarkupReactCommandRule from "MarkupReactCommandRule" /* 11004 */;
-import navigateToLastChannelDefault from "navigateToLastChannel" /* 11009 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5105 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7231 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7235 */;
+import MarkupReactCommandRule from "MarkupReactCommandRule" /* 11229 */;
+import navigateToLastChannelDefault from "navigateToLastChannel" /* 11235 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -16,7 +16,7 @@ const require = globalThis.__r;
 require = fn;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxs = fn(21).jsxs;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { commandClickable: { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: nativeDefault.colors.MENTION_BACKGROUND, marginEnd: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_12 } };
 let closure_5 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
@@ -24,7 +24,7 @@ let obj3 = { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: na
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileAboutMeCardCommand.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((application) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileAboutMeCardCommand(application) {
   const cResult = application(channel[6]).c(12);
   application = application.application;
   const command = application.command;
@@ -129,7 +129,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((applic
   let obj = application(channel[6]);
   tmp = application;
   tmp2 = channel;
-}) : ((channel) => {
+}) : (function UserProfileAboutMeCardCommand(channel) {
   ({ application: require, command } = channel);
   channel = channel.channel;
   let obj = {

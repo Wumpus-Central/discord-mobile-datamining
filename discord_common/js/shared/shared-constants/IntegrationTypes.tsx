@@ -1,6 +1,6 @@
-// === Module 17748: IntegrationTypes ===
+// === Module 18035: IntegrationTypes ===
 
-// Module 17748 (IntegrationTypes)
+// Module 18035 (IntegrationTypes)
 import size from "module_2" /* 2 */;
 
 const obj = { SYNCABLE: new Set(["twitch", "youtube"]) };

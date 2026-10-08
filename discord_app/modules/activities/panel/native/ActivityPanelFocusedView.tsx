@@ -1,36 +1,36 @@
-// === Module 17205: ActivityPanelFocusedView ===
+// === Module 17486: ActivityPanelFocusedView ===
 
-// Module 17205 (ActivityPanelFocusedView)
+// Module 17486 (ActivityPanelFocusedView)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import native from "native" /* 4595 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import timing from "timing" /* 4897 */;
-import spring from "spring" /* 5604 */;
-import EmbeddedActivityViewDefault from "EmbeddedActivityView" /* 9169 */;
-import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 17197 */;
-import ActivityPanelHeaderDefault from "ActivityPanelHeader" /* 17206 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import native from "native" /* 4787 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import timing from "timing" /* 5091 */;
+import spring from "spring" /* 5374 */;
+import EmbeddedActivityViewDefault from "EmbeddedActivityView" /* 10735 */;
+import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 17478 */;
+import ActivityPanelHeaderDefault from "ActivityPanelHeader" /* 17487 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2062 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ActivityLayoutMode = fn(2011).ActivityLayoutMode;
-const ActivityPanelConstants = fn(9001);
+const ActivityLayoutMode = fn(2023).ActivityLayoutMode;
+const ActivityPanelConstants = fn(6072);
 ({ ACTIVITY_LAYOUT_PHYSICS_GESTURE: closure_8, ACTIVITY_LAYOUT_PHYSICS_DEFAULT: closure_9, ActivityPanelModes: c10 } = ActivityPanelConstants);
-const ActivityPanelNativeConstants = fn(17200);
+const ActivityPanelNativeConstants = fn(17481);
 ({ DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG: closure_11, DEFAULT_PORTRAIT_LETTERBOX_CONFIG: closure_12, DEFAULT_LANDSCAPE_PILLERBOX_CONFIG: map1 } = ActivityPanelNativeConstants);
 const ThemeTypes = fn(1085).ThemeTypes;
-const IS_IOS = fn(11916).IS_IOS;
+const IS_IOS = fn(11989).IS_IOS;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
 const REDUCED_MOTION_TIMING = { duration: 300 };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { wrapper: { position: "absolute", flexDirection: "row", alignItems: "center", justifyContent: "center", overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, shade: null };
 let obj4 = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
@@ -38,7 +38,7 @@ obj4.backgroundColor = nativeDefault.colors.BLACK;
 obj.shade = obj4;
 let closure_19 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBaseActivityPanelFocusedView(context) {
   const cResult = c.c(6);
   let right = useSafeAreaInsetsDefault();
   const wrapperDimensions = noop.useContext(context.context).wrapperDimensions;
@@ -76,9 +76,9 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
   cResult[0] = right;
   cResult[1] = isWindowLandscape;
   cResult[2] = obj3;
-}) : ((context) => {
+}) : (function useBaseActivityPanelFocusedView(context) {
   let isWindowLandscape;
-  const tmp = isWindowLandscape(1618)();
+  const tmp = isWindowLandscape(1630)();
   const right = tmp;
   const wrapperDimensions = noop.useContext(context.context).wrapperDimensions;
   const isLandscape = wrapperDimensions.isLandscape;
@@ -112,7 +112,7 @@ let closure_26 = { code: "function transitionComplete_ActivityPanelFocusedViewTs
 const __initData5 = { code: "function ActivityPanelFocusedViewTsx7(){const{wrapperOffset,shown,windowDimensions,withSpring,ACTIVITY_LAYOUT_PHYSICS_DEFAULT}=this.__closure;const opacity=function(){if(!wrapperOffset.get().gestureActive){return shown.get()?1:0;}return 1-wrapperOffset.get().y/windowDimensions.height;}();return{opacity:withSpring(opacity,ACTIVITY_LAYOUT_PHYSICS_DEFAULT)};}" };
 const __initData6 = { code: "function ActivityPanelFocusedViewTsx8(){const{IS_IOS,animatedKeyboardHeight,wrapperDimensions}=this.__closure;const keyboardHeight_0=IS_IOS?animatedKeyboardHeight.get():0;return{width:wrapperDimensions.width,height:wrapperDimensions.height-keyboardHeight_0};}" };
 ReactCompilerGating = fn(558);
-let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((transitionCleanUp) => {
+let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function BaseActivityPanelFocusedView(transitionCleanUp) {
   const cResult = transitionState(updateActivityPanelModeToPIP[14]).c(24);
   ({ header, transitionState } = transitionCleanUp);
   transitionCleanUp = transitionCleanUp.transitionCleanUp;
@@ -368,7 +368,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((transitionCleanUp) =
   cResult[4] = obj8;
   tmp13 = obj8;
   const tmpResult = transitionState(updateActivityPanelModeToPIP[16]);
-}) : ((transitionState) => {
+}) : (function BaseActivityPanelFocusedView(transitionState) {
   transitionState = transitionState.transitionState;
   const transitionCleanUp = transitionState.transitionCleanUp;
   const updateActivityPanelModeToPIP = transitionState.updateActivityPanelModeToPIP;
@@ -510,19 +510,22 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((transitionCleanUp) =
     return items;
   }, items1);
   const obj6 = { wrapperOffset, shown, windowDimensions: tmp3, withSpring: transitionState(updateActivityPanelModeToPIP[23]).withSpring, ACTIVITY_LAYOUT_PHYSICS_DEFAULT: shown };
-  const fn2 = function f() {
-    let num = 0;
-    if (IS_IOS) {
-      num = closure_10.get();
+  class A {
+    constructor() {
+      num = 0;
+      if (IS_IOS) {
+        tmp = closure_10;
+        num = closure_10.get();
+      }
+      size = { width: wrapperDimensions.width, height: wrapperDimensions.height - num };
+      return size;
     }
-    const size = { width: wrapperDimensions.width, height: wrapperDimensions.height - num };
-    return size;
-  };
-  fn2.__closure = { IS_IOS, animatedKeyboardHeight: tmp7, wrapperDimensions };
-  fn2.__workletHash = 762235971819;
-  fn2.__initData = __initData6;
+  }
+  A.__closure = { IS_IOS, animatedKeyboardHeight: tmp7, wrapperDimensions };
+  A.__workletHash = 762235971819;
+  A.__initData = __initData6;
   const items2 = [updateActivityPanelModeToPIP];
-  const animatedStyle2 = transitionState(updateActivityPanelModeToPIP[20]).useAnimatedStyle(fn2);
+  const animatedStyle2 = transitionState(updateActivityPanelModeToPIP[20]).useAnimatedStyle(A);
   const callback = stateFromStores.useCallback(() => {
     updateActivityPanelModeToPIP();
   }, items2);
@@ -553,7 +556,7 @@ let obj3 = { position: "absolute", flexDirection: "row", alignItems: "center", j
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/panel/native/ActivityPanelFocusedView.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ActivityPanelFocusedView(arg0) {
   const cResult = c.c(15);
   ({ transitionState, transitionCleanUp } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -590,16 +593,16 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
     cResult[4] = tmp16;
   }
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    class D {
+    class E {
       constructor() {
         obj = closure_1_0(closure_1_2[28]);
         result = obj.updateActivityPanelMode(closure_1_10.PIP);
         return;
       }
     }
-    cResult[5] = D;
+    cResult[5] = E;
   } else {
-    class D {
+    class E {
       constructor() {
         obj = closure_1_0(closure_1_2[28]);
         result = obj.updateActivityPanelMode(closure_1_10.PIP);
@@ -608,7 +611,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
     }
   }
   if (cResult[6] === channel) {
-    class D {
+    class E {
       constructor() {
         obj = closure_1_0(closure_1_2[28]);
         result = obj.updateActivityPanelMode(closure_1_10.PIP);
@@ -623,7 +626,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   cResult[8] = portraitSafeAreasConfig;
   cResult[9] = value2(EmbeddedActivityViewDefault, { channel, layoutMode: ActivityLayoutMode.FOCUSED, portraitSafeAreasConfig, landscapeSafeAreasConfig });
   const tmp18 = value2(EmbeddedActivityViewDefault, { channel, layoutMode: ActivityLayoutMode.FOCUSED, portraitSafeAreasConfig, landscapeSafeAreasConfig });
-}) : ((transitionState) => {
+}) : (function ActivityPanelFocusedView(transitionState) {
   transitionState = transitionState.transitionState;
   const transitionCleanUp = transitionState.transitionCleanUp;
   let channel;

@@ -1,9 +1,9 @@
-// === Module 6664: useAnalyticsLocations ===
+// === Module 6841: useAnalyticsLocations ===
 
-// Module 6664 (useAnalyticsLocations)
+// Module 6841 (useAnalyticsLocations)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
-import _modDef1342 from "module_1342" /* 1342 */;
+import _modDef1354 from "module_1354" /* 1354 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ const jsx = fn(21).jsx;
 let context = noop.createContext([]);
 fn(558);
 let ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function AnalyticsLocationProvider(arg0) {
   const cResult = c.c(3);
   ({ children, value } = arg0);
   if (cResult[0] === children) {
@@ -26,9 +26,11 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = value;
   cResult[2] = tmp3;
   tmp2 = tmp3;
-}) : ((value) => <context.Provider value={value.value}>{value.children}</context.Provider>);
+}) : (function AnalyticsLocationProvider(value) {
+  return <context.Provider value={value.value}>{value.children}</context.Provider>;
+});
 ReactCompilerGating = fn(558);
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAnalyticsLocations() {
   let items = [...arguments];
   items = undefined;
   first = undefined;
@@ -69,7 +71,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         tmp26 = obj5;
       }
       const fn = function x() {
-        if (!_modDef1342(items, first)) {
+        if (!_modDef1354(items, first)) {
           closure_2(items);
         }
       };
@@ -108,7 +110,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[2] = tmp5;
   arr3 = tmp5;
   const obj = items(576);
-}) : (() => {
+}) : (function useAnalyticsLocations() {
   let items = [...arguments];
   context = undefined;
   const tmp = context(noop.useState(items), 2);
@@ -140,7 +142,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }, items2);
   const items3 = [items, first];
   const effect = noop.useEffect(() => {
-    if (!_modDef1342(items, first)) {
+    if (!_modDef1354(items, first)) {
       closure_2(items);
     }
   }, items3);
@@ -152,7 +154,7 @@ const result = size.fileFinishedImporting("modules/app_analytics/useAnalyticsLoc
 export default tmp4;
 export const LocationContext = context;
 export const AnalyticsLocationProvider = tmp3;
-export const useLocationStackFromLocationContext = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useLocationStackFromLocationContext = ReactCompilerGating.isReactCompilerEnabled() ? (function useLocationStackFromLocationContext() {
   const cResult = c.c(2);
   context = noop.useContext(context);
   if (cResult[0] !== context) {
@@ -167,7 +169,7 @@ export const useLocationStackFromLocationContext = ReactCompilerGating.isReactCo
     tmp3 = cResult[1];
   }
   return tmp3;
-}) : (() => {
+}) : (function useLocationStackFromLocationContext() {
   context = noop.useContext(context);
   if (context == null) {
     context = [];

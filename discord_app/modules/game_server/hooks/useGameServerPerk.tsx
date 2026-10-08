@@ -1,23 +1,23 @@
-// === Module 12250: useGameServerPerk ===
+// === Module 12329: useGameServerPerk ===
 
-// Module 12250 (useGameServerPerk)
+// Module 12329 (useGameServerPerk)
 import util from "util" /* 1126 */;
-import _modDef2975 from "module_2975" /* 2975 */;
-import useGameServerFeaturedGameNamesDefault from "useGameServerFeaturedGameNames" /* 12251 */;
-import _modDef12252 from "module_12252" /* 12252 */;
+import _modDef3019 from "module_3019" /* 3019 */;
+import useGameServerFeaturedGameNamesDefault from "useGameServerFeaturedGameNames" /* 12330 */;
+import _modDef12331 from "module_12331" /* 12331 */;
 import noop from "module_19" /* 19 */;
-import GameServerStore from "GameServerStore" /* 7683 */;
+import GameServerStore from "GameServerStore" /* 8004 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const skuId = fn(4775).GAME_SERVER_POWERUP_SKU_ID;
-const GuildPowerupType = fn(4774).GuildPowerupType;
+const skuId = fn(4969).GAME_SERVER_POWERUP_SKU_ID;
+const GuildPowerupType = fn(4968).GuildPowerupType;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_server/hooks/useGameServerPerk.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGameServerPerk(arg0) {
   _require = arg0;
   let tmp9Result = dependencyMap;
   const cResult = require("c").c(11);
@@ -51,7 +51,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       const _Symbol = Symbol;
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = tmp(1126).intl;
-        const stringResult = intl.string(_modDef2975["B3OfL/"]);
+        const stringResult = intl.string(_modDef3019["B3OfL/"]);
         cResult[3] = stringResult;
         let tmp12 = stringResult;
       } else {
@@ -71,8 +71,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         }
         if (cResult[8] === stateFromStores) {
         }
-        const obj3 = { skuId, title: tmp12, description: tmp14, cost: stateFromStores, dependencies: tmp16, type: GuildPowerupType.PERK, animatedImageUrl: _modDef12252, staticImageUrl: null };
-        tmp9Result = _modDef12252;
+        const obj3 = { skuId, title: tmp12, description: tmp14, cost: stateFromStores, dependencies: tmp16, type: GuildPowerupType.PERK, animatedImageUrl: _modDef12331, staticImageUrl: null };
+        tmp9Result = _modDef12331;
         obj3.staticImageUrl = tmp9Result;
         cResult[8] = stateFromStores;
         cResult[9] = tmp14;
@@ -80,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
       const intl2 = tmp(1126).intl;
       const obj4 = { gameName, gameName2 };
-      const formatResult = intl2.format(_modDef2975["+UqyGU"], obj4);
+      const formatResult = intl2.format(_modDef3019["+UqyGU"], obj4);
       cResult[4] = gameName;
       cResult[5] = gameName2;
       cResult[6] = formatResult;
@@ -88,7 +88,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
   }
   return tmp11;
-}) : ((arg0) => {
+}) : (function useGameServerPerk(arg0) {
   _require = arg0;
   const gameServerEnabled = require("GameServerExperiment").useGameServerEnabled(arg0, "useGameServerPerk");
   let obj = require("GameServerExperiment");
@@ -105,15 +105,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       if (null != stateFromStores) {
         const obj = { skuId, title: null, description: null, cost: null, dependencies: null, type: null, animatedImageUrl: null, staticImageUrl: null };
         const intl = util.intl;
-        obj.title = intl.string(_modDef2975["B3OfL/"]);
+        obj.title = intl.string(_modDef3019["B3OfL/"]);
         const intl2 = util.intl;
         const obj2 = { gameName, gameName2 };
-        obj.description = intl2.format(_modDef2975["+UqyGU"], obj2);
+        obj.description = intl2.format(_modDef3019["+UqyGU"], obj2);
         obj.cost = tmp2;
         obj.dependencies = [];
         obj.type = GuildPowerupType.PERK;
-        obj.animatedImageUrl = _modDef12252;
-        obj.staticImageUrl = _modDef12252;
+        obj.animatedImageUrl = _modDef12331;
+        obj.staticImageUrl = _modDef12331;
         tmp = obj;
       }
     }

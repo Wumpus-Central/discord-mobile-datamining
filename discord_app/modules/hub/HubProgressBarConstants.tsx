@@ -1,7 +1,7 @@
-// === Module 9505: HubProgressBarConstants ===
+// === Module 8671: HubProgressBarConstants ===
 
-// Module 9505 (HubProgressBarConstants)
-import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
+// Module 8671 (HubProgressBarConstants)
+import preloaded_user_settings from "preloaded_user_settings" /* 1209 */;
 import size from "module_2" /* 2 */;
 
 const items = [preloaded_user_settings.HubProgressStep.JOIN_GUILD, preloaded_user_settings.HubProgressStep.INVITE_USER, preloaded_user_settings.HubProgressStep.CONTACT_SYNC];

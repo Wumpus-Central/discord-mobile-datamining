@@ -1,12 +1,12 @@
-// === Module 8502: ClipView ===
+// === Module 8986: ClipView ===
 
-// Module 8502 (ClipView)
+// Module 8986 (ClipView)
 import c from "c" /* 576 */;
-import CutoutBackgroundContext from "CutoutBackgroundContext" /* 8503 */;
-import ClipViewNativeComponentDefault from "ClipViewNativeComponent" /* 8505 */;
+import CutoutBackgroundContext from "CutoutBackgroundContext" /* 8987 */;
+import ClipViewNativeComponentDefault from "ClipViewNativeComponent" /* 8989 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
 
 require = fn;
 let closure_3 = ["children", "cutouts", "style"];
@@ -17,7 +17,7 @@ const jsxProd = fn(21);
 const CutoutShape = { Circle: "circle", RoundedRect: "rounded-rect" };
 let closure_9 = [];
 let ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function SolidCutout(arg0) {
   const obj = c;
   const cResult = obj.c(25);
   ({ backgroundColor: x, cutout } = arg0);
@@ -117,7 +117,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[14] = result;
   cResult[15] = size1;
   tmp8 = size1;
-}) : ((arg0) => {
+}) : (function SolidCutout(arg0) {
   ({ backgroundColor, cutout } = arg0);
   const style = [closure_12.solidCutout];
   if (cutout.shape === obj.Circle) {
@@ -141,7 +141,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return timestampProducer(hasOwnProperty, { style });
 });
 ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((backgroundColor) => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function SolidCutoutOverlay(backgroundColor) {
   const cResult = backgroundColor(576).c(7);
   backgroundColor = backgroundColor.backgroundColor;
   const cutouts = backgroundColor.cutouts;
@@ -174,7 +174,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((backgroundColo
   cResult[1] = cutouts;
   cResult[2] = mapped;
   const obj = backgroundColor(576);
-}) : ((arg0) => {
+}) : (function SolidCutoutOverlay(arg0) {
   ({ backgroundColor: require, cutouts } = arg0);
   return closure_6(closure_5, { pointerEvents: "none", style: closure_12.solidCutoutContainer, children: cutouts.map((cutout, index) => timestampProducer(closure_10, { backgroundColor, cutout }, index)) });
 });
@@ -188,7 +188,7 @@ const ClipViewNativeComponent = ReanimatedRexport.createAnimatedComponent(ClipVi
 let size = fn(2);
 let result = size.fileFinishedImporting("design/components/Icon/native/ClipView.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ClipView(arg0) {
   const cResult = c.c(14);
   if (cResult[0] !== arg0) {
     ({ children, cutouts, style } = arg0);
@@ -256,7 +256,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[12] = tmp6;
   cResult[13] = tmp24;
   tmp21 = tmp24;
-}) : ((cutouts) => {
+}) : (function ClipView(cutouts) {
   cutouts = cutouts.cutouts;
   ({ children, style } = cutouts);
   const merged = Object.assign(cutouts, Object.assign({ children: 0, cutouts: 0, style: 0 }));

@@ -1,17 +1,17 @@
-// === Module 14698: FamilyCenterInlineWarningNotice ===
+// === Module 14959: FamilyCenterInlineWarningNotice ===
 
-// Module 14698 (FamilyCenterInlineWarningNotice)
+// Module 14959 (FamilyCenterInlineWarningNotice)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import WarningIcon from "WarningIcon" /* 4809 */;
-import Text_Text from "Text/Text" /* 4892 */;
+import WarningIcon from "WarningIcon" /* 5003 */;
+import Text_Text from "Text/Text" /* 5086 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_12, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_FEEDBACK_WARNING, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING }, text: null };
 let obj3 = { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_12, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_FEEDBACK_WARNING, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING };
 obj2.text = { flex: 1, paddingRight: nativeDefault.space.PX_8 };
@@ -21,7 +21,7 @@ let obj4 = { flex: 1, paddingRight: nativeDefault.space.PX_8 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterInlineWarningNotice.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCenterInlineWarningNotice(arg0) {
   const cResult = c.c(10);
   ({ text, style } = arg0);
   const tmp4 = closure_6();
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = tmp4.container;
   cResult[2] = items1;
   tmp5 = items1;
-}) : ((arg0) => {
+}) : (function FamilyCenterInlineWarningNotice(arg0) {
   ({ text, style } = arg0);
   const tmp = closure_6();
   const obj = { style: null, children: null };

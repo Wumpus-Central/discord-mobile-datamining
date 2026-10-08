@@ -1,19 +1,19 @@
-// === Module 16866: PollBadge ===
+// === Module 17145: PollBadge ===
 
-// Module 16866 (PollBadge)
+// Module 17145 (PollBadge)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import _modDef16867 from "module_16867" /* 16867 */;
+import native from "native" /* 1200 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import _modDef17146 from "module_17146" /* 17146 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { borderRadius: nativeDefault.radii.round, paddingHorizontal: 8, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, color: nativeDefault.colors.TEXT_MUTED, flexDirection: "row", alignItems: "center" }, text: { marginLeft: 4, textTransform: "uppercase" } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -21,7 +21,7 @@ let obj3 = { borderRadius: nativeDefault.radii.round, paddingHorizontal: 8, back
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/polls/native/PollBadge.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function PollBadge(style) {
   const cResult = c.c(10);
   style = style.style;
   const tmp4 = closure_6();
@@ -31,7 +31,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
     }
     const _Symbol = Symbol;
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj2 = { size: native.IconSizes.EXTRA_SMALL_10, source: _modDef16867 };
+      const obj2 = { size: native.IconSizes.EXTRA_SMALL_10, source: _modDef17146 };
       const tmp10 = React4(native.Icon, obj2);
       cResult[3] = tmp10;
       let tmp7 = tmp10;
@@ -76,12 +76,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
   cResult[1] = tmp4.container;
   cResult[2] = items1;
   tmp5 = items1;
-}) : ((style) => {
+}) : (function PollBadge(style) {
   const tmp = closure_6();
   const obj = { style: null, children: null };
   const items = [tmp.container, style.style];
   obj.style = items;
-  const items1 = [React4(native.Icon, { size: native.IconSizes.EXTRA_SMALL_10, source: _modDef16867 }), ];
+  const items1 = [React4(native.Icon, { size: native.IconSizes.EXTRA_SMALL_10, source: _modDef17146 }), ];
   const obj3 = { style: tmp.text, variant: "text-xs/semibold", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t.RgIi2B);

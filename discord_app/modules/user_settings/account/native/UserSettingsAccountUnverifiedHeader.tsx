@@ -1,16 +1,16 @@
-// === Module 6501: UserSettingsAccountUnverifiedHeader ===
+// === Module 6677: UserSettingsAccountUnverifiedHeader ===
 
-// Module 6501 (UserSettingsAccountUnverifiedHeader)
+// Module 6677 (UserSettingsAccountUnverifiedHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 6014 */;
+import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 6200 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const initialize = PressableOpacity(504);
-const Text_Text = PressableOpacity(4892);
-const Pressables = PressableOpacity(5916);
+const Text_Text = PressableOpacity(5086);
+const Pressables = PressableOpacity(6189);
 require = fn;
 function handleOpenEmailVerification() {
   EmailVerificationModalActionCreatorsDefault.open();
@@ -34,7 +34,7 @@ function getBannerText(stateFromStores) {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { accountWarning: { backgroundColor: nativeDefault.unsafe_rawColors.RED_400, height: 36, alignItems: "center", alignSelf: "stretch", flexDirection: "row", paddingHorizontal: 16 }, accountWarningText: { flex: 1, lineHeight: 16 }, accountWarningButton: null };
 let obj3 = { backgroundColor: nativeDefault.unsafe_rawColors.RED_400, height: 36, alignItems: "center", alignSelf: "stretch", flexDirection: "row", paddingHorizontal: 16 };
 obj2.accountWarningButton = { borderWidth: 1, borderColor: nativeDefault.colors.WHITE, borderRadius: nativeDefault.radii.xs, paddingHorizontal: 8, paddingVertical: 4 };
@@ -44,7 +44,7 @@ let obj4 = { borderWidth: 1, borderColor: nativeDefault.colors.WHITE, borderRadi
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/account/native/UserSettingsAccountUnverifiedHeader.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSettingsAccountUnverifiedHeader() {
   let PressableOpacity = require;
   let tmp = dependencyMap;
   const cResult = c.c(14);
@@ -111,7 +111,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp10 = tmp12;
   }
   const PressableOpacityResult = initialize;
-}) : (() => {
+}) : (function UserSettingsAccountUnverifiedHeader() {
   const tmp = closure_6();
   const items = [UserStore];
   const tmp4 = getBannerText(initialize.useStateFromStores(items, () => currentUser.getCurrentUser()));

@@ -1,21 +1,21 @@
-// === Module 12526: NotificationSettingsMockChannels ===
+// === Module 12622: NotificationSettingsMockChannels ===
 
-// Module 12526 (NotificationSettingsMockChannels)
+// Module 12622 (NotificationSettingsMockChannels)
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import TextIcon from "TextIcon" /* 5871 */;
-import StaticChannelIndicatorDefault from "StaticChannelIndicator" /* 12032 */;
+import native from "native" /* 1200 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import TextIcon from "TextIcon" /* 8183 */;
+import StaticChannelIndicatorDefault from "StaticChannelIndicator" /* 12105 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const UnreadSetting = fn(5078).UnreadSetting;
+const UnreadSetting = fn(5972).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { card: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden", borderRadius: 10, paddingVertical: 8 }, channel: { display: "flex", flexDirection: "row", alignItems: "center", paddingVertical: 4, justifyContent: "space-between", paddingRight: 12 }, channelName: { display: "flex", flexDirection: "row", alignItems: "center" } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -23,7 +23,7 @@ let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, over
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMockChannels.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((unreadSetting) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function NotificationSettingsMockChannels(unreadSetting) {
   const cResult = require("c").c(9);
   const tmp4 = closure_7();
   _require = tmp4;
@@ -103,7 +103,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((unreadSetting) =
   cResult[5] = mapped;
   tmp7 = mapped;
   let obj = require("c");
-}) : ((unreadSetting) => {
+}) : (function NotificationSettingsMockChannels(unreadSetting) {
   const tmp = closure_7();
   _require = tmp;
   let obj = { badged: true, unread: true, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES, name: null };

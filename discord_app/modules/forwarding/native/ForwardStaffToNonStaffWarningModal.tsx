@@ -1,9 +1,9 @@
-// === Module 11326: ForwardStaffToNonStaffWarningModal ===
+// === Module 11582: ForwardStaffToNonStaffWarningModal ===
 
-// Module 11326 (ForwardStaffToNonStaffWarningModal)
+// Module 11582 (ForwardStaffToNonStaffWarningModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import AlertModal from "AlertModal" /* 5720 */;
+import AlertModal from "AlertModal" /* 5303 */;
 import jsxProd from "jsxProd" /* 21 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -11,7 +11,7 @@ import size from "module_2" /* 2 */;
 ({ jsx: c2, Fragment: c3, jsxs: closure_4 } = jsxProd);
 const result = size.fileFinishedImporting("modules/forwarding/native/ForwardStaffToNonStaffWarningModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForwardStaffToNonStaffWarningModal(arg0) {
   const cResult = c.c(11);
   ({ onConfirm, onBack } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -76,7 +76,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[9] = tmp15;
   cResult[10] = tmp19;
   tmp18 = tmp19;
-}) : ((arg0) => {
+}) : (function ForwardStaffToNonStaffWarningModal(arg0) {
   ({ onConfirm, onBack } = arg0);
   const obj = { title: null, content: null, actions: null };
   const intl = util.intl;

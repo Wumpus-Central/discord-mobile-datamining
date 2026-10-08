@@ -1,43 +1,43 @@
-// === Module 17243: VoicePanelHeader ===
+// === Module 17524: VoicePanelHeader ===
 
-// Module 17243 (VoicePanelHeader)
+// Module 17524 (VoicePanelHeader)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import timing from "timing" /* 4897 */;
-import useChannelName from "useChannelName" /* 5049 */;
-import spring from "spring" /* 5604 */;
-import StageMusicActionCreators from "StageMusicActionCreators" /* 9586 */;
-import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 9730 */;
-import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 11920 */;
-import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 17217 */;
-import useStableParticipant from "useStableParticipant" /* 17248 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import timing from "timing" /* 5091 */;
+import spring from "spring" /* 5374 */;
+import useChannelName from "useChannelName" /* 5417 */;
+import StageMusicActionCreators from "StageMusicActionCreators" /* 10779 */;
+import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 10933 */;
+import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 11993 */;
+import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 17498 */;
+import useStableParticipant from "useStableParticipant" /* 17529 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
-import ExperimentStore from "ExperimentStore" /* 4782 */;
-import StageMusicStore from "StageMusicStore" /* 9572 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6041 */;
+import ExperimentStore from "ExperimentStore" /* 4976 */;
+import StageMusicStore from "StageMusicStore" /* 10767 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
-import SpeakingStore from "SpeakingStore" /* 5583 */;
-import UserStore from "UserStore" /* 1377 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
+import SpeakingStore from "SpeakingStore" /* 5952 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(11916);
+const VoicePanelConstants = fn(11989);
 let MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
 ({ UI_SHOW_HIDE_PHYSICS: closure_16, VoicePanelModes: closure_17, DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE: closure_18 } = VoicePanelConstants);
-const EDGE_GUTTER = fn(11919).EDGE_GUTTER;
-const VoicePanelControlsModes = fn(11914).VoicePanelControlsModes;
-const ParticipantTypes = fn(4917).ParticipantTypes;
+const EDGE_GUTTER = fn(11992).EDGE_GUTTER;
+const VoicePanelControlsModes = fn(11987).VoicePanelControlsModes;
+const ParticipantTypes = fn(5113).ParticipantTypes;
 const ThemeTypes = fn(1096).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_23, jsxs: closure_24 } = jsxProd);
 const OPACITY_TIMING = { duration: 300 };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { headerWrapper: { zIndex: 1, position: "absolute", top: 0, left: 0, width: "100%", paddingBottom: EDGE_GUTTER, overflow: "hidden" }, blurStyles: null, leftWrapper: null, rightWrapper: null, headerOuter: null, headerInner: null, headerContentWrapper: null, stroke: null, strokeAlt: null, strokeContainer: null, focusedSpeakingDotWrapper: null, focusedSpeakingDot: null, shieldIconMargin: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -68,7 +68,7 @@ const __initData4 = { code: "function VoicePanelHeaderTsx4(){const{isHeaderHidde
 const __initData5 = { code: "function VoicePanelHeaderTsx5(){const{withSpring,showHeaderBlur}=this.__closure;return{blurAmount:withSpring(showHeaderBlur.get()?0.3:0)};}" };
 const __initData6 = { code: "function VoicePanelHeaderTsx6(){const{withSpring,showHeaderBlur,HEADER_CHANGE_PHYSICS}=this.__closure;return{opacity:withSpring(showHeaderBlur.get()?1:0,HEADER_CHANGE_PHYSICS)};}" };
 let ReactCompilerGating = fn(558);
-let closure_35 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((isHeaderHidden) => {
+let closure_35 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function HeaderBlur(isHeaderHidden) {
   const cResult = isHeaderHidden(focused[21]).c(17);
   isHeaderHidden = isHeaderHidden.isHeaderHidden;
   const scrollPosition = isHeaderHidden.scrollPosition;
@@ -188,7 +188,7 @@ let closure_35 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((isHe
   tmp9 = tmp10;
   const obj11 = { style: tmp3.blurStyles, blurStyle: "ultra-thin", blurTheme: "dark", animatedProps };
   const obj6 = { withSpring: isHeaderHidden(focused[23]).withSpring, showHeaderBlur: derivedValue, HEADER_CHANGE_PHYSICS: obj4 };
-}) : ((isHeaderHidden) => {
+}) : (function HeaderBlur(isHeaderHidden) {
   isHeaderHidden = isHeaderHidden.isHeaderHidden;
   const scrollPosition = isHeaderHidden.scrollPosition;
   const focused = isHeaderHidden.focused;
@@ -254,7 +254,7 @@ const __initData8 = { code: "function VoicePanelHeaderTsx8(){const{showSpeakingI
 const __initData9 = { code: "function VoicePanelHeaderTsx9(){const{focused,controlsSpecs,VoicePanelControlsModes,speaking}=this.__closure;return focused.get()!=null&&controlsSpecs.get().mode!==VoicePanelControlsModes.HIDDEN&&speaking.get();}" };
 const __initData10 = { code: "function VoicePanelHeaderTsx10(){const{showSpeakingIndicator}=this.__closure;return{opacity:showSpeakingIndicator.get()?1:0};}" };
 ReactCompilerGating = fn(558);
-let closure_40 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_40 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function FocusedSpeakingDot() {
   const cResult = id(controlsSpecs[21]).c(12);
   id = AuthenticationStore.getId();
   const context = derivedValue.useContext(focused(controlsSpecs[27]));
@@ -386,7 +386,7 @@ let closure_40 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() =>
   tmp9 = items1;
   tmp8 = fn;
   const obj3 = id(controlsSpecs[22]);
-}) : (() => {
+}) : (function FocusedSpeakingDot() {
   const id = AuthenticationStore.getId();
   const context = derivedValue.useContext(focused(controlsSpecs[27]));
   focused = context.focused;
@@ -440,7 +440,7 @@ let closure_40 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() =>
   return closure_23(focused(controlsSpecs[26]), obj5);
 }));
 ReactCompilerGating = fn(558);
-let closure_41 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+let closure_41 = ReactCompilerGating.isReactCompilerEnabled() ? (function MusicMuteButton(channelId) {
   const cResult = stateFromStores(576).c(10);
   channelId = channelId.channelId;
   const tmp5 = useMyCurrentStageChannelRoleDefault(channelId);
@@ -477,7 +477,7 @@ let closure_41 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
         cResult[2] = stateFromStores;
         cResult[3] = stringResult;
       } else {
-        const tmp4Result = importDefault(stateFromStores ? 9583 : 9585);
+        const tmp4Result = importDefault(stateFromStores ? 10778 : 10234);
         if (cResult[4] !== stateFromStores) {
           const fn2 = function p() {
             return StageMusicActionCreators.updateStageMusicMuted(!stateFromStores);
@@ -507,7 +507,7 @@ let closure_41 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
     }
   }
   return null;
-}) : ((channelId) => {
+}) : (function MusicMuteButton(channelId) {
   channelId = channelId.channelId;
   let stateFromStores;
   const tmp3 = useMyCurrentStageChannelRoleDefault(channelId);
@@ -531,7 +531,7 @@ let closure_41 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
       }
       const obj3 = {
         accessibilityLabel: stringResult,
-        icon: importDefault(stateFromStores ? 9583 : 9585),
+        icon: importDefault(stateFromStores ? 10778 : 10234),
         onPress() {
               return StageMusicActionCreators.updateStageMusicMuted(!stateFromStores);
             }
@@ -560,7 +560,7 @@ ReactCompilerGating = fn(558);
 size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/header/VoicePanelHeader.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((wrapperOffset) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePanelHeader(wrapperOffset) {
   const cResult = wrapperOffset(channelId[21]).c(99);
   wrapperOffset = wrapperOffset.wrapperOffset;
   const gestureState = wrapperOffset.gestureState;
@@ -1304,7 +1304,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((wrappe
   cResult[6] = DOWN;
   cResult[7] = stringResult;
   const tmpResult24 = wrapperOffset(channelId[46]);
-}) : ((wrapperOffset) => {
+}) : (function VoicePanelHeader(wrapperOffset) {
   wrapperOffset = wrapperOffset.wrapperOffset;
   const gestureState = wrapperOffset.gestureState;
   const layout = wrapperOffset.layout;

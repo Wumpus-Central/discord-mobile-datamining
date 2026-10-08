@@ -1,13 +1,13 @@
-// === Module 12451: ForumChannelEmptyState ===
+// === Module 12547: ForumChannelEmptyState ===
 
-// Module 12451 (ForumChannelEmptyState)
+// Module 12547 (ForumChannelEmptyState)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import shared from "shared" /* 4735 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import _modDef12452 from "module_12452" /* 12452 */;
-import _modDef12453 from "module_12453" /* 12453 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import shared from "shared" /* 4929 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import _modDef12548 from "module_12548" /* 12548 */;
+import _modDef12549 from "module_12549" /* 12549 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,13 +15,13 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({ container: { flex: 1, alignSelf: "stretch", justifyContent: "center", alignItems: "center" }, image: { width: 120, height: 80 }, title: { textAlign: "center", marginTop: 16, marginHorizontal: 20 }, subtext: { textAlign: "center", marginTop: 4, marginHorizontal: 20 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/ForumChannelEmptyState.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ForumChannelEmptyState(arg0) {
   const cResult = c.c(26);
   ({ topViewHeight, channelName, tagFilter } = arg0);
   let num = 0;
@@ -44,9 +44,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
       let tmp9 = cResult[4];
     }
     if (tmpResult2.isThemeLight(tmpResult.useThemeContext().theme)) {
-      let tmp5Result = _modDef12452;
+      let tmp5Result = _modDef12548;
     } else {
-      tmp5Result = _modDef12453;
+      tmp5Result = _modDef12549;
     }
     if (cResult[5] === tmp4.image) {
       if (cResult[6] === tmp5Result) {
@@ -144,7 +144,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   cResult[4] = items1;
   tmp9 = items1;
   tmpResult = shared;
-}) : ((topViewHeight) => {
+}) : (function ForumChannelEmptyState(topViewHeight) {
   let num = topViewHeight.topViewHeight;
   if (num === undefined) {
     num = 0;
@@ -157,9 +157,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   obj2.style = items;
   const obj = shared;
   if (obj3.isThemeLight(obj.useThemeContext().theme)) {
-    let tmp4Result = _modDef12452;
+    let tmp4Result = _modDef12548;
   } else {
-    tmp4Result = _modDef12453;
+    tmp4Result = _modDef12549;
   }
   const items1 = [hasOwnProperty(React4, { source: tmp4Result, style: tmp.image }), , ];
   const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };

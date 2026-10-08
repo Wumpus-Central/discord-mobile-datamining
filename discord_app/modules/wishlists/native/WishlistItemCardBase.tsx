@@ -1,17 +1,17 @@
-// === Module 8460: WishlistItemCardBase ===
+// === Module 8946: WishlistItemCardBase ===
 
-// Module 8460 (WishlistItemCardBase)
+// Module 8946 (WishlistItemCardBase)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import GlobalUtils from "GlobalUtils" /* 1375 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4574 */;
-import useToken from "useToken" /* 4586 */;
-import native from "native" /* 4595 */;
-import LockIcon from "LockIcon" /* 5886 */;
-import useUserProfileColors from "useUserProfileColors" /* 7921 */;
-import useWishlistHooks from "useWishlistHooks" /* 8463 */;
-import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 8484 */;
+import GlobalUtils from "GlobalUtils" /* 1387 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4766 */;
+import useToken from "useToken" /* 4778 */;
+import native from "native" /* 4787 */;
+import LockIcon from "LockIcon" /* 8198 */;
+import useUserProfileColors from "useUserProfileColors" /* 8340 */;
+import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 8820 */;
+import useWishlistHooks from "useWishlistHooks" /* 8949 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 const rect = { position: "absolute", top: nativeDefault.space.PX_8, right: nativeDefault.space.PX_8 };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { card: { borderWidth: 1, borderRadius: nativeDefault.radii.lg, borderColor: nativeDefault.colors.BORDER_MUTED, justifyContent: "center", alignItems: "center", overflow: "hidden" }, overlayContainer: null, previewWrap: null, dimmedPreview: null, sourceIcon: null, lockBadge: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -49,23 +49,23 @@ obj6.justifyContent = "center";
 obj.lockBadge = obj6;
 let closure_8 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((toastText) => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function SourceIcon(toastText) {
   const cResult = toastText(576).c(6);
   toastText = toastText.toastText;
   const tmp4 = closure_8();
   if (cResult[0] !== toastText) {
-    const fn = function o() {
+    function onPress() {
       ToastActionCreatorsDefault.open({ key: "WISHLIST_SOURCE_ICON", content: toastText });
-    };
+    }
     cResult[0] = toastText;
-    cResult[1] = fn;
-    let tmp5 = fn;
+    cResult[1] = onPress;
+    let tmp5 = onPress;
   } else {
     tmp5 = cResult[1];
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT, size: "md" };
-    const tmp9 = closure_5(tmp(8461).HeartIcon, obj2);
+    const tmp9 = closure_5(tmp(8947).HeartIcon, obj2);
     cResult[2] = tmp9;
     let tmp6 = tmp9;
   } else {
@@ -85,7 +85,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((toastText) => {
   const obj = toastText(576);
   const obj3 = { style: tmp4.sourceIcon, onPress: tmp5, accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: tmp6 };
   tmp = toastText;
-}) : ((toastText) => {
+}) : (function SourceIcon(toastText) {
   toastText = toastText.toastText;
   const obj = {
     style: closure_8().sourceIcon,
@@ -95,7 +95,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((toastText) => {
     accessible: false,
     accessibilityElementsHidden: true,
     importantForAccessibility: "no-hide-descendants",
-    children: closure_5(toastText(8461).HeartIcon, { color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT, size: "md" })
+    children: closure_5(toastText(8947).HeartIcon, { color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT, size: "md" })
   };
   return closure_5(closure_3, obj);
 });
@@ -105,7 +105,7 @@ let obj3 = { borderWidth: 1, borderRadius: nativeDefault.radii.lg, borderColor: 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/native/WishlistItemCardBase.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((source) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function WishlistItemCardBase(source) {
   const cResult = c.c(54);
   ({ onPress, accessibilityLabel, renderPreview, size, overlay, accessibilityHidden, recipientName } = source);
   let num = 170;
@@ -366,7 +366,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((source) => {
   cResult[3] = obj16;
   tmp6 = obj16;
   const tmpResult = native;
-}) : ((username) => {
+}) : (function WishlistItemCardBase(username) {
   ({ onPress, size } = username);
   ({ accessibilityLabel, renderPreview, source } = username);
   if (size === undefined) {

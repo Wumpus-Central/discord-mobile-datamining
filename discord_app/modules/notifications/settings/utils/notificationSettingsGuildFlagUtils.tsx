@@ -1,11 +1,11 @@
-// === Module 12517: notificationSettingsGuildFlagUtils ===
+// === Module 12613: notificationSettingsGuildFlagUtils ===
 
-// Module 12517 (notificationSettingsGuildFlagUtils)
-import notificationSettingsPresetUtils from "notificationSettingsPresetUtils" /* 5080 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 6616 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 6621 */;
-import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 9865 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5077 */;
+// Module 12613 (notificationSettingsGuildFlagUtils)
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 6793 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 6798 */;
+import notificationSettingsPresetUtils from "notificationSettingsPresetUtils" /* 7886 */;
+import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10425 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5971 */;
 
 const require = globalThis.__r;
 
@@ -44,7 +44,7 @@ export const updateGuildPreset = function updateGuildPreset(guildId, arg1) {
     const tmp2Result6 = notificationSettingsFlagUtils;
   }
 };
-export const useGuildPresetSettings = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useGuildPresetSettings = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildPresetSettings(arg0) {
   _require = arg0;
   const cResult = require("c").c(13);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -111,7 +111,7 @@ export const useGuildPresetSettings = ReactCompilerGating.isReactCompilerEnabled
   cResult[8] = presetFromSettingsResult;
   tmp12 = presetFromSettingsResult;
   const tmpResult4 = require("notificationSettingsPresetUtils");
-}) : ((arg0) => {
+}) : (function useGuildPresetSettings(arg0) {
   _require = arg0;
   const items = [UserGuildSettingsStore];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => UserGuildSettingsStore.getGuildUnreadSetting(closure_0));

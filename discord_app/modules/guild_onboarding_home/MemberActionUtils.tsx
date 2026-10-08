@@ -1,18 +1,18 @@
-// === Module 11930: MemberActionUtils ===
+// === Module 12003: MemberActionUtils ===
 
-// Module 11930 (MemberActionUtils)
-import useIsNewMemberDefault from "useIsNewMember" /* 6738 */;
-import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 5083 */;
-import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 5084 */;
+// Module 12003 (MemberActionUtils)
+import useIsNewMemberDefault from "useIsNewMember" /* 6913 */;
+import GuildMemberStore from "GuildMemberStore" /* 2124 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 6912 */;
+import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 7888 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const GuildMemberFlags = fn(4501).GuildMemberFlags;
+const GuildMemberFlags = fn(4693).GuildMemberFlags;
 fn(558);
 let ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMemberActionsForChannel(arg0, arg1) {
   _require = arg0;
   importDefault = arg1;
   const cResult = require("c").c(11);
@@ -43,69 +43,114 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [GuildOnboardingMemberActionStore];
     cResult[4] = items2;
-    let tmp9 = items2;
+    let tmp10 = items2;
   } else {
-    tmp9 = cResult[4];
+    tmp10 = cResult[4];
   }
   if (cResult[5] !== arg0) {
-    const fn2 = function b() {
-      return GuildOnboardingMemberActionStore.getCompletedActions(closure_0);
-    };
+    class A {
+      constructor() {
+        return closure_5.getCompletedActions(closure_0);
+      }
+    }
     cResult[5] = arg0;
-    cResult[6] = fn2;
-    let tmp11 = fn2;
+    cResult[6] = A;
   } else {
-    tmp11 = cResult[6];
+    class A {
+      constructor() {
+        return closure_5.getCompletedActions(closure_0);
+      }
+    }
   }
   const tmpResult = require("useStateFromStores");
-  const stateFromStores1 = require("useStateFromStores").useStateFromStores(tmp9, tmp11);
+  const stateFromStores1 = require("useStateFromStores").useStateFromStores(tmp10, A);
   if (tmp4) {
-    let num9;
+    class A {
+      constructor() {
+        return closure_5.getCompletedActions(closure_0);
+      }
+    }
     if (stateFromStores != null) {
-      num9 = stateFromStores.findIndex((channelId) => channelId.channelId === id.id);
+      class A {
+        constructor() {
+          return closure_5.getCompletedActions(closure_0);
+        }
+      }
     }
-    if (num9 == null) {
-      num9 = 0;
+    if (undefined == null) {
+      class A {
+        constructor() {
+          return closure_5.getCompletedActions(closure_0);
+        }
+      }
     }
-    let tmp15 = null;
-    if (num9 >= 0) {
-      tmp15 = null;
+    if (undefined >= 0) {
+      class A {
+        constructor() {
+          return closure_5.getCompletedActions(closure_0);
+        }
+      }
       if (null != stateFromStores) {
-        tmp15 = stateFromStores[num9];
+        class A {
+          constructor() {
+            return closure_5.getCompletedActions(closure_0);
+          }
+        }
       }
     }
-    let tmp16 = null != tmp15;
-    if (tmp16) {
-      let tmp17;
+    let tmp18 = null != tmp17;
+    if (tmp18) {
+      class A {
+        constructor() {
+          return closure_5.getCompletedActions(closure_0);
+        }
+      }
       if (stateFromStores1 != null) {
-        tmp17 = stateFromStores1[tmp15.channelId];
+        class A {
+          constructor() {
+            return closure_5.getCompletedActions(closure_0);
+          }
+        }
       }
-      tmp16 = true === tmp17;
+      tmp18 = true === tmp19;
     }
-    if (cResult[8] === tmp15) {
-      if (cResult[9] === tmp16) {
-        let tmp18 = cResult[10];
+    if (cResult[8] === null) {
+      class A {
+        constructor() {
+          return closure_5.getCompletedActions(closure_0);
+        }
       }
-      return tmp18;
+      return tmp20;
     }
-    const obj2 = { channelAction: tmp15, completed: tmp16 };
-    cResult[8] = tmp15;
-    cResult[9] = tmp16;
+    const obj2 = { channelAction: null, completed: tmp18 };
+    cResult[8] = null;
+    cResult[9] = tmp18;
     cResult[10] = obj2;
-    tmp18 = obj2;
+    tmp20 = obj2;
   } else {
-    const _Symbol = Symbol;
-    if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj3 = {};
-      cResult[7] = obj3;
-      let tmp13 = obj3;
-    } else {
-      tmp13 = cResult[7];
+    class A {
+      constructor() {
+        return closure_5.getCompletedActions(closure_0);
+      }
     }
-    return tmp13;
+    if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
+      class A {
+        constructor() {
+          return closure_5.getCompletedActions(closure_0);
+        }
+      }
+      cResult[7] = tmp15;
+    } else {
+      class A {
+        constructor() {
+          return closure_5.getCompletedActions(closure_0);
+        }
+      }
+    }
+    return tmp15;
   }
   const tmpResult2 = require("useStateFromStores");
-}) : ((arg0, arg1) => {
+}) : (function useMemberActionsForChannel(arg0, arg1) {
   _require = arg0;
   importDefault = arg1;
   const tmp = useIsNewMemberDefault(arg0);
@@ -147,7 +192,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   const obj3 = require("useStateFromStores");
 });
 ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useNextMemberAction(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
   const cResult = require("c").c(10);
@@ -178,7 +223,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     tmp7 = cResult[3];
   }
   if (cResult[4] !== arg0) {
-    const fn2 = function f() {
+    const fn2 = function b() {
       return GuildOnboardingMemberActionStore.getCompletedActions(closure_0);
     };
     cResult[4] = arg0;
@@ -217,7 +262,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   cResult[9] = found;
   tmp11 = found;
   const tmpResult2 = require("useStateFromStores");
-}) : ((arg0, arg1) => {
+}) : (function useNextMemberAction(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
   const items = [GuildOnboardingHomeSettingsStore];
@@ -246,7 +291,7 @@ const result = size.fileFinishedImporting("modules/guild_onboarding_home/MemberA
 
 export const useMemberActionsForChannel = tmp2;
 export const useNextMemberAction = tmp3;
-export const useAllActionsCompleted = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useAllActionsCompleted = ReactCompilerGating.isReactCompilerEnabled() ? (function useAllActionsCompleted(arg0) {
   _require = arg0;
   const cResult = require("c").c(5);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -276,16 +321,16 @@ export const useAllActionsCompleted = ReactCompilerGating.isReactCompilerEnabled
     num4 = 0;
   }
   if (cResult[3] !== num4) {
-    const hasFlagResult = tmp(1390).hasFlag(num4, GuildMemberFlags.COMPLETED_HOME_ACTIONS);
+    const hasFlagResult = tmp(1402).hasFlag(num4, GuildMemberFlags.COMPLETED_HOME_ACTIONS);
     cResult[3] = num4;
     cResult[4] = hasFlagResult;
     let tmp8 = hasFlagResult;
-    const tmpResult2 = tmp(1390);
+    const tmpResult2 = tmp(1402);
   } else {
     tmp8 = cResult[4];
   }
   return tmp8;
-}) : ((arg0) => {
+}) : (function useAllActionsCompleted(arg0) {
   _require = arg0;
   const items = [GuildMemberStore];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => GuildMemberStore.getSelfMember(closure_0));

@@ -1,11 +1,11 @@
-// === Module 16301: useHomeDrawerGuildTyping ===
+// === Module 16561: useHomeDrawerGuildTyping ===
 
-// Module 16301 (useHomeDrawerGuildTyping)
+// Module 16561 (useHomeDrawerGuildTyping)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 568 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4517 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import TypingStore from "TypingStore" /* 11592 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4709 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import TypingStore from "TypingStore" /* 11655 */;
 
 const require = globalThis.__r;
 
@@ -17,13 +17,13 @@ function areHomeDrawerGuildTypingStatesEqual(typingChannelId, typingChannelId2) 
   }
   return result;
 }
-const isThread = fn(2055).isThread;
+const isThread = fn(2067).isThread;
 let closure_7 = { typingChannelId: "Array", typingChannelName: "Reflect", typingUserIds: [] };
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/home_drawer/native/useHomeDrawerGuildTyping.tsx");
 
-export const useHomeDrawerGuildTyping = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useHomeDrawerGuildTyping = ReactCompilerGating.isReactCompilerEnabled() ? (function useHomeDrawerGuildTyping(arg0) {
   _require = arg0;
   const cResult = require("c").c(6);
   const obj = require("c");
@@ -49,7 +49,7 @@ export const useHomeDrawerGuildTyping = ReactCompilerGating.isReactCompilerEnabl
       return tmpResult.useStateFromStores(first, tmp10, tmp11, areHomeDrawerGuildTypingStatesEqual);
     }
   }
-  const fn = function h() {
+  const fn = function p() {
     const typingUsersByGuild = TypingStore.getTypingUsersByGuild(closure_0);
     const keys = SnowflakeUtilsDefault.keys(typingUsersByGuild);
     const found = keys.find((item) => {
@@ -95,7 +95,7 @@ export const useHomeDrawerGuildTyping = ReactCompilerGating.isReactCompilerEnabl
   tmp11 = items1;
   tmp10 = fn;
   const obj3 = require("isHomeDrawerChannelInChannelList");
-}) : ((arg0) => {
+}) : (function useHomeDrawerGuildTyping(arg0) {
   _require = arg0;
   const isHomeDrawerChannelMuted = require("isHomeDrawerChannelMuted").useIsHomeDrawerChannelMuted();
   const obj = require("isHomeDrawerChannelMuted");

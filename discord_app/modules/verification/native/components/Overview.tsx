@@ -1,11 +1,11 @@
-// === Module 17698: Overview ===
+// === Module 17985: Overview ===
 
-// Module 17698 (Overview)
+// Module 17985 (Overview)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
-import UserRequiredActionStore from "UserRequiredActionStore" /* 2044 */;
-import UserStore from "UserStore" /* 1377 */;
-import HelpdeskUtils from "HelpdeskUtils" /* 2115 */;
+import UserRequiredActionStore from "UserRequiredActionStore" /* 2057 */;
+import UserStore from "UserStore" /* 1389 */;
+import HelpdeskUtils from "HelpdeskUtils" /* 2127 */;
 
 const require = globalThis.__r;
 
@@ -15,7 +15,7 @@ const Constants = fn(1085);
 ({ Endpoints: closure_7, VerificationModalScenes: closure_8, VerificationTypes: closure_9, HelpdeskArticles } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, containerInner: { flex: 1, padding: 20, justifyContent: "center", alignItems: "center" }, title: null, body: null, blocks: null, verificationType: null, button: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.title = { marginTop: 20, fontSize: 17, textAlign: "center", color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
@@ -31,7 +31,7 @@ let obj5 = { marginTop: 4, marginBottom: 20, fontSize: 14, textAlign: "center", 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/verification/native/components/Overview.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function Overview() {
   const cResult = require("c").c(30);
   let tmp4 = closure_13();
   _require = tmp4;
@@ -178,8 +178,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       tmp27 = tmp30;
     }
   }
-  const fn2 = function v() {
-    return v65535(closure_2_11, {
+  const fn2 = function b() {
+    return collapsed(closure_2_11, {
       children: stateFromStores.map((item) => {
         if (item === constants.CAPTCHA) {
           let obj = { text: null, onPress: null, grow: true };
@@ -235,7 +235,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[6] = fn2;
   tmp13 = fn2;
   const tmp11 = stateFromStores(navigation[14]);
-}) : (() => {
+}) : (function Overview() {
   const tmp = closure_13();
   _require = tmp;
   const items = [UserRequiredActionStore];
@@ -250,7 +250,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const items1 = [navigation, stateFromStores, tmp.verificationType];
   let obj3 = { style: tmp.container, children: null };
   let obj4 = { style: tmp.containerInner, children: null };
-  const callback = noop.useCallback(() => v65535(closure_2_11, {
+  const callback = noop.useCallback(() => collapsed(closure_2_11, {
     children: stateFromStores.map((item) => {
       if (item === constants.CAPTCHA) {
         let obj = { text: null, onPress: null, grow: true };

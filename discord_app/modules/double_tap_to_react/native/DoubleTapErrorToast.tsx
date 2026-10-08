@@ -1,22 +1,22 @@
-// === Module 7642: DoubleTapErrorToast ===
+// === Module 7963: DoubleTapErrorToast ===
 
-// Module 7642 (DoubleTapErrorToast)
+// Module 7963 (DoubleTapErrorToast)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import XSmallBoldIcon from "XSmallBoldIcon" /* 7643 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import XSmallBoldIcon from "XSmallBoldIcon" /* 7964 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const EmojiDisabledReasons = fn(1380).EmojiDisabledReasons;
+const EmojiDisabledReasons = fn(1392).EmojiDisabledReasons;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { icon: { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL, borderRadius: nativeDefault.radii.round, padding: nativeDefault.space.PX_4, marginLeft: nativeDefault.space.PX_4 } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function DoubleTapErrorToastIcon() {
   const cResult = c.c(3);
   const tmp4 = closure_6();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -37,7 +37,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp9 = cResult[2];
   }
   return tmp9;
-}) : (() => {
+}) : (function DoubleTapErrorToastIcon() {
   const obj = { style: closure_6().icon, "aria-hidden": true, children: jsx(XSmallBoldIcon.XSmallBoldIcon, { color: nativeDefault.colors.WHITE, size: "xs" }) };
   return <View style={closure_6().icon} aria-hidden>{jsx(XSmallBoldIcon.XSmallBoldIcon, { color: nativeDefault.colors.WHITE, size: "xs" })}</View>;
 });
@@ -48,8 +48,8 @@ export const showDoubleTapErrorToast = function showDoubleTapErrorToast(emojiNam
   emojiName = emojiName.emojiName;
   const reason = emojiName.reason;
   let obj = dependencyMap;
-  const designSystemsNotificationComponents = emojiName(4580).getDesignSystemsNotificationComponents("showDoubleTapErrorToast");
-  let obj3 = reason(4574);
+  const designSystemsNotificationComponents = emojiName(4772).getDesignSystemsNotificationComponents("showDoubleTapErrorToast");
+  let obj3 = reason(4766);
   if (designSystemsNotificationComponents) {
     if (null == emojiName) {
       let intl3 = tmp(1126).intl;
@@ -96,5 +96,5 @@ export const showDoubleTapErrorToast = function showDoubleTapErrorToast(emojiNam
     };
     obj3.open(obj6);
   }
-  let obj2 = emojiName(4580);
+  let obj2 = emojiName(4772);
 };

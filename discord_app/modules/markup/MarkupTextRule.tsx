@@ -1,12 +1,12 @@
-// === Module 5802: MarkupTextRule ===
+// === Module 5407: MarkupTextRule ===
 
-// Module 5802 (MarkupTextRule)
-import _modDef1936 from "module_1936" /* 1936 */;
+// Module 5407 (MarkupTextRule)
+import _modDef1948 from "module_1948" /* 1948 */;
 
 const tmp2 = /^[\s\S]+?(?=[^0-9A-Za-z\s\u00c0-\uffff]|\n\n| {2,}\n|\w+:\S|[0-9]+\.|$)/;
 const obj = {};
-const merged = Object.assign(_modDef1936.defaultRules.text);
-const t = fn(1936);
+const merged = Object.assign(_modDef1948.defaultRules.text);
+const t = fn(1948);
 obj.match = t.anyScopeRegex(tmp2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/markup/MarkupTextRule.tsx");

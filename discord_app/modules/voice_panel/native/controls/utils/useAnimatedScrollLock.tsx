@@ -1,11 +1,11 @@
-// === Module 11741: useAnimatedScrollLock ===
+// === Module 11807: useAnimatedScrollLock ===
 
-// Module 11741 (useAnimatedScrollLock)
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+// Module 11807 (useAnimatedScrollLock)
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const PlatformUtils = fn(1369);
+const PlatformUtils = fn(1381);
 let closure_3 = PlatformUtils.isAndroid();
 let context = noop.createContext(null);
 let closure_5 = { code: "function onBeginDrag_useAnimatedScrollLockTsx1(_,context){const{isDragScrolling}=this.__closure;context.momentumEndCount=0;isDragScrolling.set(true);}" };
@@ -23,7 +23,7 @@ let size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/controls/utils/useAnimatedScrollLock.tsx");
 
 export const ControlsGestureScrollLock = context;
-export const useAnimatedScrollLock = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useAnimatedScrollLock = ReactCompilerGating.isReactCompilerEnabled() ? (function useAnimatedScrollLock(arg0) {
   let obj = arg0;
   const cResult = onScrollHandler(onScrollHandlerWorkletized[3]).c(5);
   if (undefined === arg0) {
@@ -204,7 +204,7 @@ export const useAnimatedScrollLock = ReactCompilerGating.isReactCompilerEnabled(
   cResult[3] = animatedRef;
   cResult[4] = obj6;
   tmp16 = obj6;
-}) : (() => {
+}) : (function useAnimatedScrollLock() {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};

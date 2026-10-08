@@ -1,6 +1,6 @@
-// === Module 7244: ClipsConstants ===
+// === Module 7735: ClipsConstants ===
 
-// Module 7244 (ClipsConstants)
+// Module 7735 (ClipsConstants)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1102 */;
 

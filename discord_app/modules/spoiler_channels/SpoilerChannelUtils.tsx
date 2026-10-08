@@ -1,8 +1,8 @@
-// === Module 6842: SpoilerChannelUtils ===
+// === Module 5949: SpoilerChannelUtils ===
 
-// Module 6842 (SpoilerChannelUtils)
-import ChannelStore from "ChannelStore" /* 2051 */;
-import ChannelSpoilerAgreeStore from "ChannelSpoilerAgreeStore" /* 6843 */;
+// Module 5949 (SpoilerChannelUtils)
+import ChannelStore from "ChannelStore" /* 2063 */;
+import ChannelSpoilerAgreeStore from "ChannelSpoilerAgreeStore" /* 5950 */;
 
 const require = globalThis.__r;
 
@@ -51,7 +51,7 @@ function isChannelSpoilerGated(channel) {
 }
 fn(558);
 let ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGetSpoilerGatingChannelId(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -106,7 +106,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp7, tmp8);
-}) : ((arg0) => {
+}) : (function useGetSpoilerGatingChannelId(arg0) {
   _require = arg0;
   const items = [ChannelSpoilerAgreeStore, ChannelStore];
   const items1 = [arg0];
@@ -144,7 +144,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }, items1);
 });
 ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsChannelSpoilerGated(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -170,7 +170,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp7, tmp8);
-}) : ((arg0) => {
+}) : (function useIsChannelSpoilerGated(arg0) {
   _require = arg0;
   const items = [ChannelSpoilerAgreeStore, ChannelStore];
   const items1 = [arg0];
@@ -182,7 +182,7 @@ const result = size.fileFinishedImporting("modules/spoiler_channels/SpoilerChann
 export const useGetSpoilerGatingChannelId = tmp2;
 export { isChannelSpoilerGated };
 export const useIsChannelSpoilerGated = tmp3;
-export const useShouldShowSpoilerGateForChannelId = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useShouldShowSpoilerGateForChannelId = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldShowSpoilerGateForChannelId(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -208,7 +208,7 @@ export const useShouldShowSpoilerGateForChannelId = ReactCompilerGating.isReactC
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp7, tmp8);
-}) : ((arg0) => {
+}) : (function useShouldShowSpoilerGateForChannelId(arg0) {
   _require = arg0;
   const items = [ChannelStore, ChannelSpoilerAgreeStore];
   const items1 = [arg0];

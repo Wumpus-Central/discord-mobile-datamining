@@ -1,23 +1,23 @@
-// === Module 11074: AvailableForumTag ===
+// === Module 10439: AvailableForumTag ===
 
-// Module 11074 (AvailableForumTag)
+// Module 10439 (AvailableForumTag)
 import nativeDefault from "native" /* 587 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import EmojiDefault from "Emoji" /* 6632 */;
-import native from "native" /* 8602 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import EmojiDefault from "Emoji" /* 6809 */;
+import native from "native" /* 8517 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 5645 */;
+import EmojiStore from "EmojiStore" /* 5992 */;
 
 const require = globalThis.__r;
 
 require = fn;
 let closure_3 = ["ref"];
-const EMOJI_URL_BASE_SIZE = fn(1380).EMOJI_URL_BASE_SIZE;
+const EMOJI_URL_BASE_SIZE = fn(1392).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { pill: { display: "flex", flexDirection: "row", alignItems: "center", paddingHorizontal: 12, borderRadius: 20, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, margin: 6, borderWidth: 2, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, overflow: "hidden", height: 32 }, pillSelected: null, pillDisabled: null, emoji: null, imageEmoji: null, textEmoji: null };
 const obj3 = { display: "flex", flexDirection: "row", alignItems: "center", paddingHorizontal: 12, borderRadius: 20, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, margin: 6, borderWidth: 2, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, overflow: "hidden", height: 32 };
 obj2.pillSelected = { borderColor: nativeDefault.colors.BACKGROUND_BRAND, borderWidth: 1 };
@@ -31,7 +31,7 @@ let obj4 = { borderColor: nativeDefault.colors.BACKGROUND_BRAND, borderWidth: 1 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/AvailableForumTag.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((tag) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AvailableForumTag(tag) {
   const cResult = tag(disabled[8]).c(27);
   tag = tag.tag;
   onPress = tag.onPress;
@@ -242,22 +242,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((tag) => {
       tmp10 = arr2;
     }
   }
-  class R {
-    constructor() {
-      if (!disabled) {
-        tmp = onPress;
-        tmp2 = tag;
-        tmp3 = onPress(tag);
-      }
-      return;
+  function handlePress() {
+    if (!disabled) {
+      onPress(tag);
     }
   }
   cResult[3] = disabled;
   cResult[4] = onPress;
   cResult[5] = tag;
-  cResult[6] = R;
-  tmp9 = R;
-}) : ((tag) => {
+  cResult[6] = handlePress;
+  tmp9 = handlePress;
+}) : (function AvailableForumTag(tag) {
   tag = tag.tag;
   ({ onPress: importDefault, disabled } = tag);
   const selected = tag.selected;

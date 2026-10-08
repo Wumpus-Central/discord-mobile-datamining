@@ -1,18 +1,18 @@
-// === Module 12447: ReportToModChannelStore ===
+// === Module 12543: ReportToModChannelStore ===
 
-// Module 12447 (ReportToModChannelStore)
+// Module 12543 (ReportToModChannelStore)
 import c from "c" /* 576 */;
 import module_570 from "module_570" /* 570 */;
-import "module_4756";
-import module_4756 from "module_4756" /* 4756 */;
+import "module_4950";
+import module_4950 from "module_4950" /* 4950 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
 let obj = { name: "report-to-mod-channel-storage", storage: null };
-obj.storage = module_4756.createJSONStorage(() => require("LocalStorageWrapper"));
-let obj2 = module_570.create(module_4756.persist((arg0, arg1) => {
+obj.storage = module_4950.createJSONStorage(() => require("LocalStorageWrapper"));
+let obj2 = module_570.create(module_4950.persist((arg0, arg1) => {
   closure_0 = arg0;
   closure_1 = arg1;
   return {
@@ -43,7 +43,7 @@ let obj2 = module_570.create(module_4756.persist((arg0, arg1) => {
 const result = size.fileFinishedImporting("modules/report_to_mod/ReportToModChannelStore.tsx");
 
 export const useReportToModChannelFiltersStore = obj2;
-export const useShouldShowResolvedFlagsForChannel = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useShouldShowResolvedFlagsForChannel = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldShowResolvedFlagsForChannel(arg0) {
   closure_0 = arg0;
   const cResult = c.c(10);
   obj2 = obj2();
@@ -82,7 +82,7 @@ export const useShouldShowResolvedFlagsForChannel = ReactCompilerGating.isReactC
         cResult[9] = obj4;
         tmp4 = obj4;
       }
-      const fn = function n(arg0) {
+      const fn = function h(arg0) {
         return obj2.setShowResolvedFlags(closure_0, arg0);
       };
       cResult[4] = arg0;
@@ -99,7 +99,7 @@ export const useShouldShowResolvedFlagsForChannel = ReactCompilerGating.isReactC
     cResult[3] = flag;
     tmp2 = flag;
   }
-}) : ((arg0) => {
+}) : (function useShouldShowResolvedFlagsForChannel(arg0) {
   closure_0 = arg0;
   const obj = obj2();
   if (null == arg0) {

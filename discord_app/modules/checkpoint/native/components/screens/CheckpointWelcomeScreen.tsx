@@ -1,21 +1,21 @@
-// === Module 15553: CheckpointWelcomeScreen ===
+// === Module 15819: CheckpointWelcomeScreen ===
 
-// Module 15553 (CheckpointWelcomeScreen)
+// Module 15819 (CheckpointWelcomeScreen)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
-import _modDef3039 from "module_3039" /* 3039 */;
-import _modDef3071 from "module_3071" /* 3071 */;
-import UserUtils from "UserUtils" /* 4728 */;
-import TextWritingAnimation from "TextWritingAnimation" /* 15554 */;
-import CheckpointKnickKnacksDefault from "CheckpointKnickKnacks" /* 15556 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 15557 */;
-import UserStore from "UserStore" /* 1377 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
+import _modDef3083 from "module_3083" /* 3083 */;
+import _modDef3115 from "module_3115" /* 3115 */;
+import UserUtils from "UserUtils" /* 4922 */;
+import TextWritingAnimation from "TextWritingAnimation" /* 15820 */;
+import CheckpointKnickKnacksDefault from "CheckpointKnickKnacks" /* 15822 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 15823 */;
+import UserStore from "UserStore" /* 1389 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
+import createStyles from "createStyles" /* 5090 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -31,7 +31,7 @@ let closure_8 = createStyles.createStyles(obj);
 let obj3 = { marginTop: nativeDefault.space.PX_16 };
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/screens/CheckpointWelcomeScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function CheckpointWelcomeScreen() {
   const cResult = c.c(26);
   const tmp4 = closure_8();
   const bound = Math.min(useWindowDimensionsDefault().width / 392, 1);
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const _Symbol = Symbol;
     if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
       const intl = util.intl;
-      const stringResult = intl.string(_modDef3039["CdU/PF"]);
+      const stringResult = intl.string(_modDef3083["CdU/PF"]);
       cResult[7] = stringResult;
       let tmp14 = stringResult;
     } else {
@@ -82,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       if (cResult[11] !== name) {
         const intl2 = util.intl;
         const obj4 = { username: name };
-        const formatToPlainStringResult = intl2.formatToPlainString(_modDef3071.xhZ23b, obj4);
+        const formatToPlainStringResult = intl2.formatToPlainString(_modDef3115.xhZ23b, obj4);
         cResult[11] = name;
         cResult[12] = formatToPlainStringResult;
         let tmp20 = formatToPlainStringResult;
@@ -158,7 +158,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[6] = items3;
   tmp13 = items3;
   const tmpResult2 = UserUtils;
-}) : (() => {
+}) : (function CheckpointWelcomeScreen() {
   const tmp = closure_8();
   const bound = Math.min(useWindowDimensionsDefault().width / 392, 1);
   const items = [UserStore];
@@ -176,12 +176,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   obj6.style = items1;
   const tmp5 = CheckpointScreenDefault;
   const intl = util.intl;
-  obj6.text = intl.string(_modDef3039["CdU/PF"]);
+  obj6.text = intl.string(_modDef3083["CdU/PF"]);
   obj6.delay = delay;
   const items3 = [hasOwnProperty(TextWritingAnimationDefault, obj6), , ];
   const obj8 = { style: tmp.subtitle, text: null, delay: null, variant: "heading-xl/medium" };
   const intl2 = util.intl;
-  obj8.text = intl2.formatToPlainString(_modDef3071.xhZ23b, { username: name });
+  obj8.text = intl2.formatToPlainString(_modDef3115.xhZ23b, { username: name });
   obj8.delay = delay + TextWritingAnimation.DURATION;
   items3[1] = hasOwnProperty(TextWritingAnimationDefault, obj8);
   items3[2] = hasOwnProperty(CheckpointKnickKnacksDefault, { style: tmp.knickKnacks });

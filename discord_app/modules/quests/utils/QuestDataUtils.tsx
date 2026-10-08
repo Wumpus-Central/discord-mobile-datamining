@@ -1,14 +1,15 @@
-// === Module 7196: QuestDataUtils ===
+// === Module 7375: QuestDataUtils ===
 
-// Module 7196 (QuestDataUtils)
-import SentryUtilsDefault from "SentryUtils" /* 1242 */;
-import FlagUtils from "FlagUtils" /* 1390 */;
-import QuestTypes from "QuestTypes" /* 5633 */;
-import AdDecisionUtils from "AdDecisionUtils" /* 7198 */;
-import AdDeliveryStore from "AdDeliveryStore" /* 7197 */;
-import LocaleStore from "LocaleStore" /* 2116 */;
-import BountyStore from "BountyStore" /* 7199 */;
-import QuestStore from "QuestStore" /* 7200 */;
+// Module 7375 (QuestDataUtils)
+import SentryUtilsDefault from "SentryUtils" /* 1254 */;
+import FlagUtils from "FlagUtils" /* 1402 */;
+import QuestTypes from "QuestTypes" /* 5980 */;
+import AdDecisionUtils from "AdDecisionUtils" /* 7377 */;
+import QuestExpirationUtils from "QuestExpirationUtils" /* 7385 */;
+import AdDeliveryStore from "AdDeliveryStore" /* 7376 */;
+import LocaleStore from "LocaleStore" /* 2128 */;
+import BountyStore from "BountyStore" /* 7378 */;
+import QuestStore from "QuestStore" /* 7379 */;
 
 require = fn;
 function getQuestDeliveryDataForPlacement(questPlacementFromQuestContent, item) {
@@ -54,17 +55,17 @@ function getQuestDeliveryDataForPlacement(questPlacementFromQuestContent, item) 
     }
   }
 }
-const QuestConstants = fn(5630);
+const QuestConstants = fn(5977);
 ({ DismissibleQuestContentFlags: closure_7, BILLABLE_PLACEMENTS: closure_8, NON_BILLABLE_CREATIVE_TYPES: closure_9, EMPTY_AD_DECISION_DATA: c10 } = QuestConstants);
 let c11 = 2592000000;
 let obj = {};
-obj[fn(5633).QuestContent.QUEST_BAR] = fn(5633).AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA;
-obj[fn(5633).QuestContent.QUEST_BAR_V2] = fn(5633).AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA;
-obj[fn(5633).QuestContent.QUEST_BAR_MOBILE] = fn(5633).AdPlacement.MOBILE_HOME_DOCK_AREA;
-obj[fn(5633).QuestContent.QUEST_HOME_HERO] = fn(5633).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
-obj[fn(5633).QuestContent.QUEST_HOME_HERO_SHELF] = fn(5633).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
-obj[fn(5633).QuestContent.VIDEO_MODAL_MOBILE] = fn(5633).AdPlacement.VIDEO_MODAL_MOBILE;
-let items = [fn(5633).AdPlacement.VIDEO_MODAL_MOBILE];
+obj[fn(5980).QuestContent.QUEST_BAR] = fn(5980).AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA;
+obj[fn(5980).QuestContent.QUEST_BAR_V2] = fn(5980).AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA;
+obj[fn(5980).QuestContent.QUEST_BAR_MOBILE] = fn(5980).AdPlacement.MOBILE_HOME_DOCK_AREA;
+obj[fn(5980).QuestContent.QUEST_HOME_HERO] = fn(5980).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
+obj[fn(5980).QuestContent.QUEST_HOME_HERO_SHELF] = fn(5980).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
+obj[fn(5980).QuestContent.VIDEO_MODAL_MOBILE] = fn(5980).AdPlacement.VIDEO_MODAL_MOBILE;
+let items = [fn(5980).AdPlacement.VIDEO_MODAL_MOBILE];
 const set = new Set(items);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/utils/QuestDataUtils.tsx");
@@ -124,48 +125,17 @@ export const isDismissed = function isDismissed(dismissedQuestContent, ACTIVITY_
     return false;
   }
 };
-export const isQuestConfigExpired = function isQuestConfigExpired(expiresAt) {
-  const date = new Date(expiresAt.expiresAt);
-  return new Date(expiresAt.expiresAt).valueOf() <= Date.now();
-};
-export const isQuestExpired = function isQuestExpired(config) {
-  const date = new Date(config.config.expiresAt);
-  return new Date(config.config.expiresAt).valueOf() <= Date.now();
-};
 export const getIsQuestExpiredButWithinThirtyDayLookback = function getIsQuestExpiredButWithinThirtyDayLookback(quest) {
-  const date = new Date(quest.config.expiresAt);
-  if (valueOfResult <= Date.now()) {
+  if (obj.isQuestExpired(quest)) {
     const _Date = Date;
     const _Date2 = Date;
     const diff = Date.now() - c11;
-    const date1 = new Date(quest.config.expiresAt);
-    return null != quest.config.expiresAt && date1.valueOf() > diff;
+    const date = new Date(quest.config.expiresAt);
+    return null != quest.config.expiresAt && date.valueOf() > diff;
   } else {
     return false;
   }
-  valueOfResult = new Date(quest.config.expiresAt).valueOf();
-};
-export const findNextUpcomingExpirationEpochMs = function findNextUpcomingExpirationEpochMs(arg0) {
-  let tmp = null;
-  const timestamp = Date.now();
-  while (tmp3 !== undefined) {
-    let _Date = Date;
-    let tmp5 = new.target;
-    let tmp6 = new.target;
-    let date = new Date(tmp4.config.expiresAt);
-    let valueOfResult = date.valueOf();
-    if (valueOfResult > timestamp) {
-      let tmp11 = null == tmp;
-      if (!tmp11) {
-        tmp11 = tmp9 < tmp;
-      }
-      if (tmp11) {
-        tmp = valueOfResult;
-      }
-    }
-    continue;
-  }
-  return tmp;
+  obj = QuestExpirationUtils;
 };
 export const hasUnclaimedReward = function hasUnclaimedReward(userStatus) {
   return null != userStatus && null != userStatus.completedAt && null == userStatus.claimedAt;
@@ -237,25 +207,25 @@ export const getBountyByPlacementAndId = function getBountyByPlacementAndId(ques
 };
 export const getAdDecisionData = function getAdDecisionData(adContentId, sourceQuestContent) {
   if (null == obj[sourceQuestContent]) {
-    return v65535;
+    return collapsed;
   } else {
     obj = getQuestDeliveryDataForPlacement(tmp, adContentId);
     if (obj == null) {
       obj = {};
     }
     const adDecisionData = obj.adDecisionData;
-    if (null != adDecisionData) {
-      return adDecisionData;
-    }
-    const noFillForPlacement = AdDeliveryStore.getNoFillForPlacement(tmp, { includeExpired: true });
-    if (null != noFillForPlacement) {
-      if (noFillForPlacement.decisionId === adContentId) {
-        const obj2 = { decision_id: noFillForPlacement.decisionId, is_targeted: false };
-        let tmp4 = obj2;
+    if (null == adDecisionData) {
+      let tmp6 = collapsed;
+    } else {
+      tmp6 = adDecisionData;
+      if (tmp4 !== adContentId) {
+        tmp6 = adDecisionData;
+        if (tmp5 !== adContentId) {
+          tmp6 = adDecisionData;
+        }
       }
-      return tmp4;
     }
-    tmp4 = v65535;
+    return tmp6;
   }
 };
 export const getAdMetadataSealed = function getAdMetadataSealed(sourceQuestContent, adCreativeId) {
@@ -265,18 +235,7 @@ export const getAdMetadataSealed = function getAdMetadataSealed(sourceQuestConte
     if (tmp4 != null) {
       metadataSealed = tmp4.metadataSealed;
     }
-    if (null != metadataSealed) {
-      return metadataSealed;
-    } else {
-      const noFillForPlacement = AdDeliveryStore.getNoFillForPlacement(tmp, { includeExpired: true });
-      let metadataSealed1;
-      if (null != noFillForPlacement) {
-        if (noFillForPlacement.decisionId === adCreativeId) {
-          metadataSealed1 = noFillForPlacement.metadataSealed;
-        }
-      }
-      return metadataSealed1;
-    }
+    return metadataSealed;
   }
 };
 export const getAdProvenanceMetadataSealed = function getAdProvenanceMetadataSealed(sourceQuestContent, item) {
@@ -291,12 +250,6 @@ export const getAdProvenanceMetadataSealed = function getAdProvenanceMetadataSea
 };
 export const getAdTrafficMetadataSealed = function getAdTrafficMetadataSealed(sourceQuestContent, adCreativeId, adContentId) {
   if (null != obj[sourceQuestContent]) {
-    const noFillForPlacement = AdDeliveryStore.getNoFillForPlacement(tmp, { includeExpired: true });
-    if (null != noFillForPlacement) {
-      if (noFillForPlacement.decisionId === adContentId) {
-        return noFillForPlacement.trafficMetadataSealed;
-      }
-    }
     obj = getQuestDeliveryDataForPlacement(tmp, adContentId);
     if (obj == null) {
       obj = {};

@@ -1,10 +1,10 @@
-// === Module 15686: UserSettingsDesignSystemCoachmark ===
+// === Module 15966: UserSettingsDesignSystemCoachmark ===
 
-// Module 15686 (UserSettingsDesignSystemCoachmark)
+// Module 15966 (UserSettingsDesignSystemCoachmark)
 import c from "c" /* 576 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6626 */;
-import LayerScope from "LayerScope" /* 6658 */;
-import _modDef15687 from "module_15687" /* 15687 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6803 */;
+import LayerScope from "LayerScope" /* 6835 */;
+import _modDef15967 from "module_15967" /* 15967 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,10 +13,10 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_10 = createStyles.createStyles({ container: { paddingTop: 240, flex: 1, alignItems: "center", justifyContent: "center" }, flex: { flex: 1, padding: 16 } });
 let ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Content() {
   const cResult = visible(576).c(58);
   closure_10();
   [visible, importDefault] = noop.useState(true);
@@ -25,9 +25,9 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const tmp6 = _slicedToArray(noop.useState(false), 2);
   [tmp9, r10029] = noop.useState(false);
   const tmp8 = _slicedToArray(noop.useState(false), 2);
-  const obj3 = visible(15684);
-  [r10035, r10036] = visible(15684).useCanRotate();
-  const tmp10 = _slicedToArray(visible(15684).useCanRotate(), 2);
+  const obj3 = visible(15964);
+  [r10035, r10036] = visible(15964).useCanRotate();
+  const tmp10 = _slicedToArray(visible(15964).useCanRotate(), 2);
   const tmp11 = _slicedToArray(noop.useState(false), 2);
   const first1 = _slicedToArray(noop.useState("primary"), 2)[0];
   const tmp12 = _slicedToArray(noop.useState("primary"), 2);
@@ -65,7 +65,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         return closure_1(false);
       }
     }
-    tmp21[0] = _modDef15687;
+    tmp21[0] = _modDef15967;
     cResult[2] = tmp21;
   } else {
     class Y {
@@ -136,7 +136,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[13] = { title: "Title goes here, and it can get really long so we should handle that", description: "Body copy goes here", position: str2, visible, onDismiss: Y, graphic: tmp24, experimental_withBlurBackground: tmp7, buttonLabel: undefined, onButtonPress: tmp27, buttonVariant: first1, gradientColor: undefined };
   const obj4 = { title: "Title goes here, and it can get really long so we should handle that", description: "Body copy goes here", position: str2, visible, onDismiss: Y, graphic: tmp24, experimental_withBlurBackground: tmp7, buttonLabel: undefined, onButtonPress: tmp27, buttonVariant: first1, gradientColor: undefined };
   const tmp15 = _slicedToArray(noop.useState("16/9"), 2);
-}) : (() => {
+}) : (function Content() {
   let tmp = closure_10();
   const tmp2 = first2(first3.useState(true), 2);
   const visible = tmp2[0];
@@ -181,7 +181,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       buttonVariant: null,
       gradientColor: null
     };
-    const obj2 = { type: "image", src: { uri: _modDef15687 }, aspectRatio: first5 };
+    const obj2 = { type: "image", src: { uri: _modDef15967 }, aspectRatio: first5 };
     obj.graphic = obj2;
     obj.experimental_withBlurBackground = first1;
     let str2;
@@ -267,7 +267,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemCoachmark.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSettingsDesignSystemCoachmark() {
   const cResult = c.c(3);
   const tmp4 = closure_10();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -290,7 +290,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp10 = cResult[2];
   }
   return tmp10;
-}) : (() => {
+}) : (function UserSettingsDesignSystemCoachmark() {
   const obj = { style: closure_10().flex, bottom: true, children: null };
   const obj2 = { children: null };
   const tmp = closure_10();

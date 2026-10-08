@@ -1,11 +1,11 @@
-// === Module 9439: NsfwServerInviteWarningVariant ===
+// === Module 9101: NsfwServerInviteWarningVariant ===
 
-// Module 9439 (NsfwServerInviteWarningVariant)
+// Module 9101 (NsfwServerInviteWarningVariant)
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1126 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 5108 */;
-import getTinyBroncoWarningDescriptions from "getTinyBroncoWarningDescriptions" /* 9440 */;
-import useAgeGroupPresentation from "useAgeGroupPresentation" /* 9441 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 5905 */;
+import getTinyBroncoWarningDescriptions from "getTinyBroncoWarningDescriptions" /* 5932 */;
+import useAgeGroupPresentation from "useAgeGroupPresentation" /* 9102 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -32,7 +32,7 @@ export const getNsfwServerInviteWarningVariant = function getNsfwServerInviteWar
     return obj6;
   }
 };
-export const useGatedAgeGroup = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useGatedAgeGroup = ReactCompilerGating.isReactCompilerEnabled() ? (function useGatedAgeGroup() {
   const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
   const isVerifiedAdult = AgeVerificationUtils.useIsVerifiedAdult();
   const AgeGroupState = useAgeGroupPresentation.AgeGroupState;
@@ -42,7 +42,7 @@ export const useGatedAgeGroup = ReactCompilerGating.isReactCompilerEnabled() ? (
     TEEN = isVerifiedAdult ? AgeGroupState.ADULT : AgeGroupState.UNVERIFIED;
   }
   return TEEN;
-}) : (() => {
+}) : (function useGatedAgeGroup() {
   const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
   const isVerifiedAdult = AgeVerificationUtils.useIsVerifiedAdult();
   const AgeGroupState = useAgeGroupPresentation.AgeGroupState;

@@ -1,20 +1,20 @@
-// === Module 16258: FavoritesGuildSidebarHeader ===
+// === Module 16518: FavoritesGuildSidebarHeader ===
 
-// Module 16258 (FavoritesGuildSidebarHeader)
+// Module 16518 (FavoritesGuildSidebarHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
-import _modDef3395 from "module_3395" /* 3395 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Stack_Stack from "Stack/Stack" /* 5600 */;
-import ChatIcon from "ChatIcon" /* 5862 */;
-import TextIcon from "TextIcon" /* 5871 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 5892 */;
-import FavoritesHooks from "FavoritesHooks" /* 10049 */;
-import openFavoritesGuildLimitUpsell from "openFavoritesGuildLimitUpsell" /* 10052 */;
-import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 10719 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import _modDef3439 from "module_3439" /* 3439 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import Stack_Stack from "Stack/Stack" /* 5373 */;
+import ChatIcon from "ChatIcon" /* 8174 */;
+import TextIcon from "TextIcon" /* 8183 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 8204 */;
+import FavoritesHooks from "FavoritesHooks" /* 10294 */;
+import openFavoritesGuildLimitUpsell from "openFavoritesGuildLimitUpsell" /* 10297 */;
+import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 12698 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -31,15 +31,15 @@ function EmptyBody() {
   }, []);
   let obj = { variant: "text-sm/medium", color: "text-muted", children: null };
   const intl = util.intl;
-  obj.children = intl.format(_modDef3395.Z3Hdr5, { onClick: callback });
+  obj.children = intl.format(_modDef3439.Z3Hdr5, { onClick: callback });
   return timestampProducer(Text_Text.Text, obj);
 }
 const View = fn(17).View;
-let closure_5 = fn(16166).useHasFavoritesGuildSuggestions;
+let closure_5 = fn(16426).useHasFavoritesGuildSuggestions;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
 let c9 = "heading-md/semibold";
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { copy: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 }, divider: null, placeholderRows: null, placeholderRow: null, placeholderBar: null, placeholderBarShort: null, placeholderBarLong: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.divider = { height: 1, marginTop: nativeDefault.space.PX_12, marginHorizontal: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
@@ -55,7 +55,7 @@ let obj8 = { width: nativeDefault.space.PX_80 };
 obj2.placeholderBarLong = { width: nativeDefault.space.PX_128 };
 let closure_10 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlaceholderRows() {
   const cResult = c.c(26);
   const tmp4 = closure_10();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -185,7 +185,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[2] = tmp4.placeholderBarShort;
   cResult[3] = tmp10;
   tmp9 = tmp10;
-}) : (() => {
+}) : (function PlaceholderRows() {
   const tmp = closure_10();
   const obj = { style: tmp.placeholderRows, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
   const obj2 = { style: tmp.placeholderRow, children: null };
@@ -225,7 +225,7 @@ let obj9 = { width: nativeDefault.space.PX_128 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/native/FavoritesGuildSidebarHeader.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FavoritesGuildSidebarHeader() {
   const cResult = c.c(14);
   const tmp4 = closure_10();
   const tmp5 = closure_5();
@@ -237,7 +237,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
       const obj2 = { variant, color: "mobile-text-heading-primary", children: null };
       const intl = util.intl;
-      obj2.children = intl.string(_modDef3395["1n0TGE"]);
+      obj2.children = intl.string(_modDef3439["1n0TGE"]);
       const tmp16 = timestampProducer(Text_Text.Heading, obj2);
       const tmp18 = timestampProducer(EmptyBody, {});
       cResult[3] = tmp16;
@@ -303,7 +303,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[1] = tmp4.divider;
   cResult[2] = tmp7;
   tmp6 = tmp7;
-}) : (() => {
+}) : (function FavoritesGuildSidebarHeader() {
   const tmp = closure_10();
   const tmp2 = closure_5();
   const obj = { spacing: nativeDefault.space.PX_8, children: null };
@@ -316,7 +316,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const obj3 = { spacing: nativeDefault.space.PX_8, style: tmp.copy, children: null };
   const obj4 = { variant, color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
-  obj4.children = intl.string(_modDef3395["1n0TGE"]);
+  obj4.children = intl.string(_modDef3439["1n0TGE"]);
   const items1 = [timestampProducer(Text_Text.Heading, obj4), timestampProducer(EmptyBody, {})];
   obj3.children = items1;
   items[1] = React5(Stack_Stack.Stack, obj3);

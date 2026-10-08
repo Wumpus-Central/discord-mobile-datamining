@@ -1,12 +1,12 @@
-// === Module 7826: useAvatarColor ===
+// === Module 8244: useAvatarColor ===
 
-// Module 7826 (useAvatarColor)
+// Module 8244 (useAvatarColor)
 import c from "c" /* 576 */;
-import tinycolorDefault from "tinycolor" /* 7076 */;
+import tinycolorDefault from "tinycolor" /* 7262 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 require = fn;
 function hasFetchedColors(game_name) {
@@ -173,11 +173,11 @@ const module_570 = fn(570);
 const obj6 = module_570.create(() => ({ palette: {}, fetching: {} }));
 fn(558);
 let ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasFetchedColors(arg0) {
   closure_0 = arg0;
   const cResult = c.c(2);
   if (cResult[0] !== arg0) {
-    const fn = function e(arg0) {
+    const fn = function t(arg0) {
       let tmp2 = null != closure_0;
       if (tmp2) {
         tmp2 = arg0.fetching[tmp];
@@ -191,7 +191,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp2 = cResult[1];
   }
   return !obj6(tmp2);
-}) : ((arg0) => {
+}) : (function useHasFetchedColors(arg0) {
   closure_0 = arg0;
   return !obj6((arg0) => {
     let tmp2 = null != closure_0;
@@ -202,7 +202,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   });
 });
 ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) => {
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAvatarColors(arg0, arg1, arg2) {
   _require = arg0;
   const cResult = require("c").c(15);
   closure_1 = tmp4;
@@ -343,7 +343,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) =>
     cResult[10] = stateFromStores;
     cResult[11] = undefined;
   }
-  fn2 = function v() {
+  fn2 = function p() {
     let tmp2 = null != closure_0;
     if (tmp2) {
       tmp2 = null == closure_2;
@@ -358,7 +358,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) =>
   cResult[7] = fn2;
   cResult[8] = items1;
   const tmpResult = require("initialize");
-}) : ((arg0, arg1) => {
+}) : (function useAvatarColors(arg0, arg1) {
   _require = arg0;
   let flag = arg2;
   if (arg2 === undefined) {
@@ -399,11 +399,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) =>
     if (dependencyMap != null) {
       mapped = dependencyMap.map((item) => {
         [tmp, tmp2, tmp3] = item;
-        const obj = flag(7076)({ r: tmp, g: tmp2, b: tmp3 });
-        ({ h, s, l } = flag(7076)({ r: tmp, g: tmp2, b: tmp3 }).toHsl());
+        const obj = flag(7262)({ r: tmp, g: tmp2, b: tmp3 });
+        ({ h, s, l } = flag(7262)({ r: tmp, g: tmp2, b: tmp3 }).toHsl());
         const obj2 = { h, s: s * stateFromStores, l };
-        const toHslResult = flag(7076)({ r: tmp, g: tmp2, b: tmp3 }).toHsl();
-        return flag(7076)({ h, s: s * stateFromStores, l }).toHexString();
+        const toHslResult = flag(7262)({ r: tmp, g: tmp2, b: tmp3 }).toHsl();
+        return flag(7262)({ h, s: s * stateFromStores, l }).toHexString();
       });
     }
     return mapped;
@@ -418,13 +418,13 @@ let closure_12 = tmp5;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/avatar/useAvatarColor.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAvatarColor(arg0, arg1, arg2) {
   let tmp2 = undefined === arg2;
   if (!tmp2) {
     tmp2 = arg2;
   }
   return _slicedToArray(closure_12(arg0, arg1, tmp2), 1)[0];
-}) : ((arg0, arg1) => {
+}) : (function useAvatarColor(arg0, arg1) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = true;

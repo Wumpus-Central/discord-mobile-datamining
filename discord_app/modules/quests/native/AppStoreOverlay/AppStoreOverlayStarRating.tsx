@@ -1,17 +1,17 @@
-// === Module 10940: AppStoreOverlayStarRating ===
+// === Module 10591: AppStoreOverlayStarRating ===
 
-// Module 10940 (AppStoreOverlayStarRating)
+// Module 10591 (AppStoreOverlayStarRating)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import StarIcon from "StarIcon" /* 9956 */;
-import StarOutlineIcon from "StarOutlineIcon" /* 9958 */;
+import StarIcon from "StarIcon" /* 9483 */;
+import StarOutlineIcon from "StarOutlineIcon" /* 9485 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { row: { flexDirection: "row", alignItems: "center", gap: 2 }, star: null, starIcon: null, starFillMask: null };
 let size = { width: nativeDefault.space.PX_10, height: nativeDefault.space.PX_10, position: "relative" };
 obj2.star = size;
@@ -21,7 +21,7 @@ const rect = { position: "absolute", left: 0, top: 0, height: nativeDefault.spac
 obj2.starFillMask = rect;
 let closure_6 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((fillAmount) => {
+let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function FractionalStar(fillAmount) {
   const cResult = c.c(10);
   fillAmount = fillAmount.fillAmount;
   const tmp4 = closure_6();
@@ -74,7 +74,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((fillAmount) => 
   cResult[4] = tmp4.starIcon;
   cResult[5] = tmp10;
   tmp9 = tmp10;
-}) : ((fillAmount) => {
+}) : (function FractionalStar(fillAmount) {
   fillAmount = fillAmount.fillAmount;
   const tmp = closure_6();
   const obj = { style: tmp.star, importantForAccessibility: "no", accessibilityElementsHidden: true, children: null };
@@ -98,14 +98,14 @@ ReactCompilerGating = fn(558);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayStarRating.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((fillAmounts) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppStoreOverlayStarRating(fillAmounts) {
   const cResult = c.c(6);
   fillAmounts = fillAmounts.fillAmounts;
   const tmp2 = closure_6();
   if (cResult[0] !== fillAmounts) {
     const _Symbol = Symbol;
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-      const fn = function u(fillAmount, arg1) {
+      const fn = function p(fillAmount, arg1) {
         return closure_1_4(closure_1_7, { fillAmount }, arg1);
       };
       cResult[2] = fn;
@@ -130,7 +130,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((fillAmounts) => 
     cResult[5] = tmp12;
     tmp9 = tmp12;
   }
-}) : ((fillAmounts) => {
+}) : (function AppStoreOverlayStarRating(fillAmounts) {
   fillAmounts = fillAmounts.fillAmounts;
   return React4(View, { style: closure_6().row, children: fillAmounts.map((fillAmount, index) => closure_1_4(closure_1_7, { fillAmount }, index)) });
 });

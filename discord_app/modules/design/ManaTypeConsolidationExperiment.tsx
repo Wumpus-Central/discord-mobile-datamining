@@ -1,8 +1,8 @@
-// === Module 6477: ManaTypeConsolidationExperiment ===
+// === Module 6655: ManaTypeConsolidationExperiment ===
 
-// Module 6477 (ManaTypeConsolidationExperiment)
+// Module 6655 (ManaTypeConsolidationExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1440 */;
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -14,7 +14,7 @@ const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/design/ManaTypeConsolidationExperiment.tsx");
 
 export default apexExperiment;
-export const useManaTypeConsolidationExperiment = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+export const useManaTypeConsolidationExperiment = ReactCompilerGating.isReactCompilerEnabled() ? (function useManaTypeConsolidationExperiment(location) {
   const cResult = c.c(2);
   if (cResult[0] !== location) {
     const obj2 = { location };
@@ -25,4 +25,6 @@ export const useManaTypeConsolidationExperiment = ReactCompilerGating.isReactCom
     tmp2 = cResult[1];
   }
   return apexExperiment.useConfig(tmp2).enabled;
-}) : ((location) => apexExperiment.useConfig({ location }).enabled);
+}) : (function useManaTypeConsolidationExperiment(location) {
+  return apexExperiment.useConfig({ location }).enabled;
+});

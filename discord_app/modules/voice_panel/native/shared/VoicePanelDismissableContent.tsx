@@ -1,20 +1,20 @@
-// === Module 17241: VoicePanelDismissableContent ===
+// === Module 17522: VoicePanelDismissableContent ===
 
-// Module 17241 (VoicePanelDismissableContent)
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+// Module 17522 (VoicePanelDismissableContent)
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6041 */;
 
 const require = globalThis.__r;
 
 require = fn;
 function VoiceControlsNuxActionSheetImporter() {
-  return asyncRequireImpl(17242, dependencyMap.paths);
+  return asyncRequireImpl(17523, dependencyMap.paths);
 }
-const VoicePanelModes = fn(11916).VoicePanelModes;
-const isActivityParticipant = fn(4917).isActivityParticipant;
+const VoicePanelModes = fn(11989).VoicePanelModes;
+const isActivityParticipant = fn(5113).isActivityParticipant;
 const jsx = fn(21).jsx;
 const VoiceControlToggleNuxActionSheet = "VoiceControlToggleNuxActionSheet";
 const __initData = { code: "function VoicePanelDismissableContentTsx1(){const{mode,VoicePanelModes,focused}=this.__closure;var _focused$get;return mode.get()===VoicePanelModes.PANEL?(_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id:undefined;}" };
@@ -25,7 +25,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/shared/VoicePanelDismissableContent.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePanelDismissibleContent() {
   let ACTIVITIES_MOBILE_PIP_FAB_NUX = require;
   const cResult = require("c").c(5);
   const context = handleFocusChange.useContext(focused(mode[10]));
@@ -174,7 +174,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     return tmp12;
   }
   const obj4 = { runOnJS: require("ReanimatedRexport").runOnJS, handleFocusChange };
-}) : (() => {
+}) : (function VoicePanelDismissibleContent() {
   const context = handleFocusChange.useContext(focused(mode[10]));
   const channelId = context.channelId;
   focused = context.focused;

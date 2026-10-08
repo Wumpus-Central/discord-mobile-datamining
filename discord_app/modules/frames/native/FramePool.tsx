@@ -1,33 +1,33 @@
-// === Module 17175: FramePool ===
+// === Module 17456: FramePool ===
 
-// Module 17175 (FramePool)
+// Module 17456 (FramePool)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import v1 from "v1" /* 1266 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 9019 */;
-import WebViewContext from "WebViewContext" /* 9174 */;
-import FramePoolManagerDefault from "FramePoolManager" /* 16634 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10618 */;
+import WebViewContext from "WebViewContext" /* 10740 */;
+import makeIframeIdDefault from "makeIframeId" /* 11128 */;
+import FramePoolManagerDefault from "FramePoolManager" /* 16896 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 9000 */;
+import FramesStore from "FramesStore" /* 10612 */;
 
 require = fn;
 const View = fn(17).View;
-const FramesConstants = fn(8738);
+const FramesConstants = fn(10613);
 ({ FrameLayoutModes: closure_7, isLaunched: closure_8 } = FramesConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_10 = createStyles.createStyles({ pool: { position: "absolute", opacity: 0 } });
 fn(558);
 const ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((frame) => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function PooledFrame(frame) {
   const cResult = id(576).c(17);
   frame = frame.frame;
   id = frame.id;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function l() {
-      return id(1266).v4();
+      return first1(11128)();
     };
     cResult[0] = fn;
     let first = fn;
@@ -85,73 +85,67 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((frame) => {
       }
     }
     if (cResult[9] !== id) {
-      class S {
+      class P {
         constructor() {
-          return () => {
-            first1(closure_2[11]).removeFrameEntry(id);
-          };
+          obj = closure_1(closure_2[11]);
+          return obj.getWinningTargetState(id);
         }
       }
       cResult[9] = id;
-      cResult[10] = tmp15;
+      cResult[10] = P;
     } else {
-      class S {
+      class P {
         constructor() {
-          return () => {
-            first1(closure_2[11]).removeFrameEntry(id);
-          };
+          obj = closure_1(closure_2[11]);
+          return obj.getWinningTargetState(id);
         }
       }
     }
-    const syncExternalStore = noop.useSyncExternalStore(first1(16634).subscribe, tmp15);
+    const syncExternalStore = noop.useSyncExternalStore(first1(16896).subscribe, P);
     if (cResult[11] !== syncExternalStore) {
-      class S {
+      class P {
         constructor() {
-          return () => {
-            first1(closure_2[11]).removeFrameEntry(id);
-          };
+          obj = closure_1(closure_2[11]);
+          return obj.getWinningTargetState(id);
         }
       }
-      let tmp19 = syncExternalStore;
+      let tmp18 = syncExternalStore;
       if (syncExternalStore == null) {
-        class S {
+        class P {
           constructor() {
-            return () => {
-              first1(closure_2[11]).removeFrameEntry(id);
-            };
+            obj = closure_1(closure_2[11]);
+            return obj.getWinningTargetState(id);
           }
         }
-        tmp20[0] = constants.FOCUSED;
-        tmp19 = tmp20;
+        tmp19[0] = constants.FOCUSED;
+        tmp18 = tmp19;
       }
       cResult[11] = syncExternalStore;
-      cResult[12] = tmp19;
+      cResult[12] = tmp18;
     } else {
-      class S {
+      class P {
         constructor() {
-          return () => {
-            first1(closure_2[11]).removeFrameEntry(id);
-          };
+          obj = closure_1(closure_2[11]);
+          return obj.getWinningTargetState(id);
         }
       }
     }
     if (cResult[13] === frame) {
-      class S {
+      class P {
         constructor() {
-          return () => {
-            first1(closure_2[11]).removeFrameEntry(id);
-          };
+          obj = closure_1(closure_2[11]);
+          return obj.getWinningTargetState(id);
         }
       }
     }
-    const obj3 = { frame, iframeId: first1, onActivityCrash: tmp13, presentation: tmp18 };
-    const tmp24 = jsx(first1(17176), { frame, iframeId: first1, onActivityCrash: tmp13, presentation: tmp18 }, first1);
+    const obj3 = { frame, iframeId: first1, onActivityCrash: tmp13, presentation: tmp17 };
+    const tmp23 = jsx(first1(17457), { frame, iframeId: first1, onActivityCrash: tmp13, presentation: tmp17 }, first1);
     cResult[13] = frame;
     cResult[14] = first1;
-    cResult[15] = tmp18;
-    cResult[16] = tmp24;
+    cResult[15] = tmp17;
+    cResult[16] = tmp23;
   }
-  const fn2 = function h() {
+  const fn2 = function v() {
     FramePoolManagerDefault.registerFrameEntry(id, first1);
     FramesActionCreatorsDefault.attachFrameIframe(id, first1);
     return () => {
@@ -166,12 +160,12 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((frame) => {
   tmp7 = items1;
   tmp6 = fn2;
   let obj = id(576);
-}) : ((frame) => {
+}) : (function PooledFrame(frame) {
   frame = frame.frame;
   iframeId = undefined;
   dependencyMap = undefined;
   const id = frame.id;
-  [iframeId, dependencyMap] = noop.useState(() => id(1266).v4());
+  [iframeId, dependencyMap] = noop.useState(() => first(11128)());
   const items = [id, iframeId];
   const effect = noop.useEffect(() => {
     FramePoolManagerDefault.registerFrameEntry(id, first);
@@ -185,21 +179,21 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((frame) => {
     first(closure_2[11]).removeFrameEntry(id);
   }, items1);
   const callback = noop.useCallback(() => {
-    dependencyMap(v1.v4());
+    dependencyMap(makeIframeIdDefault());
   }, []);
-  let syncExternalStore = noop.useSyncExternalStore(iframeId(16634).subscribe, () => FramePoolManagerDefault.getWinningTargetState(id));
+  let syncExternalStore = noop.useSyncExternalStore(iframeId(16896).subscribe, () => FramePoolManagerDefault.getWinningTargetState(id));
   let obj = { frame, iframeId, onActivityCrash: callback, presentation: null };
   if (syncExternalStore == null) {
     const obj2 = { layoutMode: constants.FOCUSED };
     syncExternalStore = obj2;
   }
   obj.presentation = syncExternalStore;
-  return jsx(iframeId(17176), { frame, iframeId, onActivityCrash: callback, presentation: null }, iframeId);
+  return jsx(iframeId(17457), { frame, iframeId, onActivityCrash: callback, presentation: null }, iframeId);
 });
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/native/FramePool.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FramePool() {
   const cResult = c.c(18);
   const tmp4 = closure_10();
   ({ width, height } = useWindowDimensionsDefault());
@@ -407,7 +401,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[4] = width;
   cResult[5] = size;
   const tmp9 = _slicedToArray(noop.useState(0), 2);
-}) : (() => {
+}) : (function FramePool() {
   let tmp = closure_10();
   ({ width, height } = useWindowDimensionsDefault());
   const tmp2 = useWindowDimensionsDefault();

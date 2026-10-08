@@ -1,14 +1,14 @@
-// === Module 18011: FormPriceTier ===
+// === Module 18298: FormPriceTier ===
 
-// Module 18011 (FormPriceTier)
+// Module 18298 (FormPriceTier)
 import _modDef38 from "module_38" /* 38 */;
 import util from "util" /* 1126 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const RoleTierEditStore = fn(17972);
+const RoleTierEditStore = fn(18259);
 ({ LoadingState: c3, usePriceTiersAvailableInGuild: closure_4 } = RoleTierEditStore);
 const CurrencyCodes = fn(1085).CurrencyCodes;
 const jsx = fn(21).jsx;
@@ -58,7 +58,7 @@ export default function FormPriceTier(guildId) {
     const obj3 = {
       label: formatPriceResult,
       disabled: guildId.disabled,
-      onPress() {
+      onPress: function handleSelectPrice() {
           _modDef38(null != tiers, "handleSelectPrice must only be called if tiers != null");
           const obj2 = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
           let obj = ActionSheetActionCreatorsDefault;
@@ -75,8 +75,8 @@ export default function FormPriceTier(guildId) {
             price(onChange[8]).hideActionSheet();
           };
           obj2.selectedItem = price;
-          obj.openLazy(asyncRequireImpl(8978, dependencyMap.paths), "GuildRoleSubscriptionPriceTierSelect", obj2);
-          const tmp2 = asyncRequireImpl(8978, dependencyMap.paths);
+          obj.openLazy(asyncRequireImpl(8529, dependencyMap.paths), "GuildRoleSubscriptionPriceTierSelect", obj2);
+          const tmp2 = asyncRequireImpl(8529, dependencyMap.paths);
         },
       placeholder: null
     };
@@ -85,7 +85,7 @@ export default function FormPriceTier(guildId) {
     return jsx(price(onChange[5]), {
       label: formatPriceResult,
       disabled: guildId.disabled,
-      onPress() {
+      onPress: function handleSelectPrice() {
           _modDef38(null != tiers, "handleSelectPrice must only be called if tiers != null");
           const obj2 = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
           let obj = ActionSheetActionCreatorsDefault;
@@ -102,8 +102,8 @@ export default function FormPriceTier(guildId) {
             price(onChange[8]).hideActionSheet();
           };
           obj2.selectedItem = price;
-          obj.openLazy(asyncRequireImpl(8978, dependencyMap.paths), "GuildRoleSubscriptionPriceTierSelect", obj2);
-          const tmp2 = asyncRequireImpl(8978, dependencyMap.paths);
+          obj.openLazy(asyncRequireImpl(8529, dependencyMap.paths), "GuildRoleSubscriptionPriceTierSelect", obj2);
+          const tmp2 = asyncRequireImpl(8529, dependencyMap.paths);
         },
       placeholder: null
     });

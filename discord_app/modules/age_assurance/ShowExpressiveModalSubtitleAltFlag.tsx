@@ -1,13 +1,13 @@
-// === Module 8162: ShowExpressiveModalSubtitleAltFlag ===
+// === Module 7543: ShowExpressiveModalSubtitleAltFlag ===
 
-// Module 8162 (ShowExpressiveModalSubtitleAltFlag)
+// Module 7543 (ShowExpressiveModalSubtitleAltFlag)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 8125 */;
-import SafetyHubStore from "SafetyHubStore" /* 8139 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 5927 */;
+import SafetyHubStore from "SafetyHubStore" /* 5920 */;
 
 require = fn;
-const ApexExperiment = fn(1440);
+const ApexExperiment = fn(1452);
 let obj2 = { kind: "user", name: "2026-08-show-expressive-modal-subtitle-alt", defaultConfig: { enabled: false }, variations: null };
 let obj3 = { 1: null };
 obj3[1] = { enabled: true };
@@ -17,12 +17,12 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/ShowExpressiveModalSubtitleAltFlag.tsx");
 
-export const useShouldShowExpressiveModalSubtitleAlt = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+export const useShouldShowExpressiveModalSubtitleAlt = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldShowExpressiveModalSubtitleAlt(location) {
   const cResult = c.c(4);
   const isSuspendedUser = SafetyHubUtils.useIsSuspendedUser();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [SafetyHubStore];
-    const fn = function n() {
+    const fn = function u() {
       return showExpressiveModalSubtitleAlt.getShowExpressiveModalSubtitleAlt();
     };
     cResult[0] = items;
@@ -46,7 +46,7 @@ export const useShouldShowExpressiveModalSubtitleAlt = ReactCompilerGating.isRea
     enabled = stateFromStores;
   }
   return enabled;
-}) : ((location) => {
+}) : (function useShouldShowExpressiveModalSubtitleAlt(location) {
   const isSuspendedUser = SafetyHubUtils.useIsSuspendedUser();
   const items = [SafetyHubStore];
   const stateFromStores = initialize.useStateFromStores(items, () => showExpressiveModalSubtitleAlt.getShowExpressiveModalSubtitleAlt());

@@ -1,12 +1,12 @@
-// === Module 8381: MinecraftNeutralIcon ===
+// === Module 8879: MinecraftNeutralIcon ===
 
-// Module 8381 (MinecraftNeutralIcon)
+// Module 8879 (MinecraftNeutralIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4585 */;
-import _mod8382 from "module_8382" /* 8382 */;
-import _mod8383 from "module_8383" /* 8383 */;
-import _mod8384 from "module_8384" /* 8384 */;
+import BaseIconImage from "BaseIconImage" /* 4777 */;
+import _mod8880 from "module_8880" /* 8880 */;
+import _mod8881 from "module_8881" /* 8881 */;
+import _mod8882 from "module_8882" /* 8882 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,7 +19,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/MinecraftNeutralIcon.tsx");
 
-export const MinecraftNeutralIcon = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const MinecraftNeutralIcon = ReactCompilerGating.isReactCompilerEnabled() ? (function MinecraftNeutralIcon(arg0) {
   const cResult = c.c(31);
   if (cResult[0] !== arg0) {
     ({ style, color, secondaryColor, tertiaryColor } = arg0);
@@ -54,7 +54,7 @@ export const MinecraftNeutralIcon = ReactCompilerGating.isReactCompilerEnabled()
     str2 = tmp7;
   }
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod8382;
+    const tmpResult = _mod8880;
     cResult[6] = tmpResult;
     let tmp12 = tmpResult;
   } else {
@@ -67,7 +67,7 @@ export const MinecraftNeutralIcon = ReactCompilerGating.isReactCompilerEnabled()
       }
       const _Symbol = Symbol;
       if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmpResult3 = _mod8383;
+        const tmpResult3 = _mod8881;
         cResult[11] = tmpResult3;
         let tmp17 = tmpResult3;
       } else {
@@ -95,7 +95,7 @@ export const MinecraftNeutralIcon = ReactCompilerGating.isReactCompilerEnabled()
             }
             const _Symbol3 = Symbol;
             if (cResult[19] === Symbol.for("react.memo_cache_sentinel")) {
-              const tmpResult4 = _mod8384;
+              const tmpResult4 = _mod8882;
               cResult[19] = tmpResult4;
               let tmp29 = tmpResult4;
             } else {
@@ -170,7 +170,7 @@ export const MinecraftNeutralIcon = ReactCompilerGating.isReactCompilerEnabled()
   cResult[10] = tmp16;
   tmp14 = tmp16;
   const obj7 = { source: tmp12, color: INTERACTIVE_ICON_DEFAULT, style: tmp5 };
-}) : ((secondaryColor) => {
+}) : (function MinecraftNeutralIcon(secondaryColor) {
   ({ style, color } = secondaryColor);
   if (color === undefined) {
     color = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
@@ -186,15 +186,15 @@ export const MinecraftNeutralIcon = ReactCompilerGating.isReactCompilerEnabled()
   const merged = Object.assign(secondaryColor, Object.assign({ style: 0, color: 0, secondaryColor: 0, tertiaryColor: 0 }));
   const obj = { children: null };
   const merged1 = Object.assign(merged);
-  const items = [timestampProducer(BaseIconImage.BaseIconImage, { source: _mod8382, color, style }), , ];
-  const obj3 = { source: _mod8383, color: str, style: null };
+  const items = [timestampProducer(BaseIconImage.BaseIconImage, { source: _mod8880, color, style }), , ];
+  const obj3 = { source: _mod8881, color: str, style: null };
   const items1 = [style];
   const items2 = [];
   items2[HermesBuiltin.arraySpread(items1.flat(), 0)] = { position: "absolute", top: 0 };
   obj3.style = items2;
   const merged2 = Object.assign(merged);
   items[1] = timestampProducer(BaseIconImage.BaseIconImage, obj3);
-  const obj4 = { source: _mod8384, color: str2, style: null };
+  const obj4 = { source: _mod8882, color: str2, style: null };
   const items3 = [style];
   const items4 = [];
   items4[HermesBuiltin.arraySpread(items3.flat(), 0)] = { position: "absolute", top: 0 };

@@ -1,17 +1,17 @@
-// === Module 11007: AppLauncherContext ===
+// === Module 11232: AppLauncherContext ===
 
-// Module 11007 (AppLauncherContext)
+// Module 11232 (AppLauncherContext)
 import c from "c" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 8961 */;
-import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 11008 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 11233 */;
+import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 11234 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const AppLauncherKeyboardCloseReason = { DISMISSED: 0, [0]: "DISMISSED", COMMAND: 1, [1]: "COMMAND", ACTIVITY: 2, [2]: "ACTIVITY", BACK: 3, [3]: "BACK", OAUTH_MODAL: 4, [4]: "OAUTH_MODAL" };
 let context = noop.createContext(undefined);
 let ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((noop) => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAppLauncherChatInputRefDummy(noop) {
   const cResult = c.c(2);
   noop = noop.noop;
   if (cResult[0] !== noop) {
@@ -45,7 +45,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((noop) => {
     tmp2 = cResult[1];
   }
   return noop.useRef(tmp2);
-}) : ((noop) => {
+}) : (function useAppLauncherChatInputRefDummy(noop) {
   noop = noop.noop;
   return noop.useRef({
     getApplicationCommandManager() {
@@ -74,7 +74,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((noop) => {
 let closure_5 = tmp3;
 fn(558);
 ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRequiredAppLauncherContext() {
   context = noop.useContext(context);
   if (null == context) {
     const _Error = Error;
@@ -83,7 +83,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     return context;
   }
-}) : (() => {
+}) : (function useRequiredAppLauncherContext() {
   context = noop.useContext(context);
   if (null == context) {
     const _Error = Error;
@@ -101,7 +101,7 @@ export const AppLauncherBottomSheetExpandReason = { GESTURE: 0, [0]: "GESTURE", 
 export const AppLauncherContext = context;
 export const useAppLauncherChatInputRefDummy = tmp3;
 export const useRequiredAppLauncherContext = tmp4;
-export const useAppLauncherContext = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useAppLauncherContext = ReactCompilerGating.isReactCompilerEnabled() ? (function useAppLauncherContext() {
   const obj = c;
   const cResult = obj.c(6);
   const ref = noop.useRef(obj.DISMISSED);
@@ -139,7 +139,7 @@ export const useAppLauncherContext = ReactCompilerGating.isReactCompilerEnabled(
   cResult[4] = defaultAppLauncherWidth;
   cResult[5] = obj7;
   tmp9 = obj7;
-}) : (() => {
+}) : (function useAppLauncherContext() {
   const keyboardCloseReasonRef = noop.useRef(obj.DISMISSED);
   const bottomSheetExpandReasonRef = noop.useRef(undefined);
   obj = ReanimatedRexport;

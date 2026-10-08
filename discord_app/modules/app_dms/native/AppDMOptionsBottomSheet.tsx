@@ -1,19 +1,19 @@
-// === Module 13138: AppDMOptionsBottomSheet ===
+// === Module 12853: AppDMOptionsBottomSheet ===
 
-// Module 13138 (AppDMOptionsBottomSheet)
+// Module 12853 (AppDMOptionsBottomSheet)
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import openUserSettings from "openUserSettings" /* 6895 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7861 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import openUserSettings from "openUserSettings" /* 7084 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8279 */;
 import noop from "module_19" /* 19 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6609 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6786 */;
 
 require = fn;
 const View = fn(17).View;
 const UserSettingsSections = fn(1085).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { sheet: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, content: { paddingLeft: 16, paddingRight: 16, paddingBottom: 24 } };
 let closure_9 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -21,7 +21,7 @@ let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_dms/native/AppDMOptionsBottomSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppDMOptionsBottomSheet(userId) {
   const cResult = userId(application[8]).c(27);
   userId = userId.userId;
   const channel = userId.channel;
@@ -270,7 +270,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   cResult[5] = T;
   tmp11 = T;
   const tmpResult = userId(application[9]);
-}) : ((userId) => {
+}) : (function AppDMOptionsBottomSheet(userId) {
   userId = userId.userId;
   const channel = userId.channel;
   const application = userId.application;

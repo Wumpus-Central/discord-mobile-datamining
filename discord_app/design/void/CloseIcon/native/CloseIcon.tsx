@@ -1,8 +1,8 @@
-// === Module 13922: CloseIcon ===
+// === Module 14225: CloseIcon ===
 
-// Module 13922 (CloseIcon)
+// Module 14225 (CloseIcon)
 import c from "c" /* 576 */;
-import inlineStyles from "inlineStyles" /* 8169 */;
+import inlineStyles from "inlineStyles" /* 7550 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/CloseIcon/native/CloseIcon.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function Close(arg0) {
   const cResult = c.c(12);
   if (cResult[0] !== arg0) {
     ({ width, height, color } = arg0);
@@ -77,7 +77,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[10] = num7;
   cResult[11] = tmp16;
   tmp14 = tmp16;
-}) : ((width) => {
+}) : (function Close(width) {
   let num = width.width;
   if (num === undefined) {
     num = 24;

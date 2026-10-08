@@ -1,9 +1,9 @@
-// === Module 12969: UserProfileIncomingFriendRequest ===
+// === Module 13248: UserProfileIncomingFriendRequest ===
 
-// Module 12969 (UserProfileIncomingFriendRequest)
+// Module 13248 (UserProfileIncomingFriendRequest)
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
+import native from "native" /* 1200 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { rowGap: 16, flexDirection: "column" }, buttons: { flexDirection: "row", columnGap: 12 }, gameIcon: { paddingTop: 2 }, friendRequestNote: { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -20,7 +20,7 @@ let obj3 = { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileIncomingFriendRequest.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileIncomingFriendRequest(arg0) {
   const cResult = isGameRelationship(trackUserProfileAction[6]).c(42);
   ({ user, isGameRelationship, applicationId, style, showUserProfile } = arg0);
   let tmp4 = undefined !== isGameRelationship;
@@ -140,7 +140,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                                     tmp27 = cResult[29];
                                   }
                                   const _Symbol = Symbol;
-                                  class C {
+                                  class U {
                                     constructor() {
                                       tmp = acceptFriendRequest();
                                       str = "ACCEPT_FRIEND_REQUEST";
@@ -203,7 +203,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                                       }
                                       let obj4 = { style: tmp15, children: null };
                                       const items = [tmp16, tmp22, tmp34];
-                                      class C {
+                                      class U {
                                         constructor() {
                                           tmp = acceptFriendRequest();
                                           str = "ACCEPT_FRIEND_REQUEST";
@@ -249,7 +249,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                                 const obj6 = { userId: user.id, styles: tmp5.friendRequestNote, analyticsLocation: "User Profile" };
                                 const tmp23 = getOrFetchApplication(tmp6(tmp2[17]), obj6);
                                 cResult[24] = tmp5.friendRequestNote;
-                                class C {
+                                class U {
                                   constructor() {
                                     tmp = acceptFriendRequest();
                                     str = "ACCEPT_FRIEND_REQUEST";
@@ -336,7 +336,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                         const obj9 = { username: null };
                       }
                       const tmp17Result = tmp17(tmp(tmp2[13]).Text, tmp18);
-                      class C {
+                      class U {
                         constructor() {
                           tmp = acceptFriendRequest();
                           str = "ACCEPT_FRIEND_REQUEST";
@@ -358,7 +358,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                     }
                   }
                   const items2 = [tmp5.container, , ];
-                  class C {
+                  class U {
                     constructor() {
                       tmp = acceptFriendRequest();
                       str = "ACCEPT_FRIEND_REQUEST";
@@ -394,7 +394,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               cResult[10] = cancelFriendRequest;
               cResult[11] = tmp4;
               cResult[12] = trackUserProfileAction;
-              class C {
+              class U {
                 constructor() {
                   tmp = acceptFriendRequest();
                   str = "ACCEPT_FRIEND_REQUEST";
@@ -409,7 +409,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               tmp11 = S;
             }
           }
-          class C {
+          class U {
             constructor() {
               tmp = acceptFriendRequest();
               str = "ACCEPT_FRIEND_REQUEST";
@@ -424,8 +424,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           cResult[6] = acceptFriendRequest;
           cResult[7] = tmp4;
           cResult[8] = trackUserProfileAction;
-          cResult[9] = C;
-          tmp10 = C;
+          cResult[9] = U;
+          tmp10 = U;
           const tmp6Result = tmp6(tmp2[11]);
         }
       }
@@ -440,7 +440,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = obj10;
   tmp8 = obj10;
   const tmpResult = isGameRelationship(trackUserProfileAction[8]);
-}) : ((style) => {
+}) : (function UserProfileIncomingFriendRequest(style) {
   ({ user, isGameRelationship } = style);
   ({ channelId, guildId } = style);
   if (isGameRelationship === undefined) {

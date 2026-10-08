@@ -1,10 +1,10 @@
-// === Module 5903: useGameProfileObscured ===
+// === Module 8213: useGameProfileObscured ===
 
-// Module 5903 (useGameProfileObscured)
+// Module 8213 (useGameProfileObscured)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import utils from "utils" /* 5904 */;
-import UserStore from "UserStore" /* 1377 */;
+import utils from "utils" /* 6047 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
@@ -21,7 +21,7 @@ function isGameProfileObscured(game, nsfwAllowed) {
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileObscured.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((contentClassification) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGameProfileObscured(contentClassification) {
   const cResult = c.c(5);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
@@ -60,7 +60,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((contentClassific
   cResult[4] = result;
   tmp8 = result;
   const tmpResult = initialize;
-}) : ((contentClassification) => {
+}) : (function useGameProfileObscured(contentClassification) {
   initialize;
   [][0] = UserStore;
   let result = null != contentClassification;

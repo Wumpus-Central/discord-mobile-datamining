@@ -1,22 +1,22 @@
-// === Module 8806: PlayStationLinkError ===
+// === Module 9160: PlayStationLinkError ===
 
-// Module 8806 (PlayStationLinkError)
+// Module 9160 (PlayStationLinkError)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import useNavigation from "useNavigation" /* 1490 */;
-import useConnectRetry from "useConnectRetry" /* 8792 */;
-import TwoWayLinkError from "TwoWayLinkError" /* 8793 */;
+import useNavigation from "useNavigation" /* 1502 */;
+import useConnectRetry from "useConnectRetry" /* 9161 */;
+import TwoWayLinkError from "TwoWayLinkError" /* 9162 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const constants = fn(8798).PlayStationLinkModalScenes;
+const constants = fn(9150).PlayStationLinkModalScenes;
 const AbortCodes = fn(1085).AbortCodes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkError.tsx");
 
-export const PlayStationLinkError = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const PlayStationLinkError = ReactCompilerGating.isReactCompilerEnabled() ? (function PlayStationLinkError(arg0) {
   const cResult = c.c(7);
   ({ onClose, errorCode } = arg0);
   const navigation = useNavigation.useNavigation();
@@ -57,7 +57,7 @@ export const PlayStationLinkError = ReactCompilerGating.isReactCompilerEnabled()
     cResult[6] = tmp15;
     tmp13 = tmp15;
   }
-}) : ((arg0) => {
+}) : (function PlayStationLinkError(arg0) {
   ({ onClose, errorCode } = arg0);
   const navigation = useNavigation.useNavigation();
   const connectRetry = useConnectRetry.useConnectRetry(navigation, constants.PRE_CONNECT);

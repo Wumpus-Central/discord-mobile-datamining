@@ -1,8 +1,8 @@
-// === Module 11169: useChannelLoading ===
+// === Module 11289: useChannelLoading ===
 
-// Module 11169 (useChannelLoading)
-import hooks_useMountEffectDefault from "hooks/useMountEffect" /* 5598 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 9867 */;
+// Module 11289 (useChannelLoading)
+import hooks_useMountEffectDefault from "hooks/useMountEffect" /* 5393 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 9317 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/hooks/useChannelLoading.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useChannelLoading(channelId) {
   const cResult = channelId(oldestUnreadMessageId[3]).c(13);
   channelId = channelId.channelId;
   const jumpTargetId = channelId.jumpTargetId;
@@ -40,44 +40,47 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
               let tmp6 = cResult[9];
             }
             jumpTargetId(oldestUnreadMessageId[6])(tmp6);
-            if (cResult[10] === first1) {
-              if (cResult[11] === tmp5) {
-                let tmp9 = cResult[12];
+            class O {
+              constructor() {
+                tmp = closure_5(false);
+                return () => {
+                  first1.cancel();
+                };
               }
-              return tmp9;
             }
             const obj2 = { channelLatestMessageLoadingStatsManager: first1, startOrCancelLatestMessagesLoad: tmp5 };
             cResult[10] = first1;
             cResult[11] = tmp5;
             cResult[12] = obj2;
-            tmp9 = obj2;
           }
-          const fn3 = function p() {
-            closure_5(false);
-            return () => {
-              first1.cancel();
-            };
-          };
+          class O {
+            constructor() {
+              tmp = closure_5(false);
+              return () => {
+                first1.cancel();
+              };
+            }
+          }
           cResult[7] = first1;
           cResult[8] = tmp5;
-          cResult[9] = fn3;
-          tmp6 = fn3;
+          cResult[9] = O;
+          tmp6 = O;
         }
       }
     }
   }
-  const fn2 = function h(first1) {
+  function startOrCancelLatestMessagesLoad(first1) {
     const obj = messages_MessagesUtils;
     const result = obj.startOrCancelChannelLatestMessagesLoad({ jumpTargetId, oldestUnreadMessageId, shouldJumpToOriginalPost: shouldJumpToOriginalPost(first1), channelId, tracker: first1 });
-  };
+  }
   cResult[1] = channelId;
   cResult[2] = first1;
   cResult[3] = jumpTargetId;
   cResult[4] = oldestUnreadMessageId;
   cResult[5] = shouldJumpToOriginalPost;
-  cResult[6] = fn2;
-  tmp5 = fn2;
-}) : ((arg0) => {
+  cResult[6] = startOrCancelLatestMessagesLoad;
+  tmp5 = startOrCancelLatestMessagesLoad;
+}) : (function useChannelLoading(arg0) {
   ({ channelId: require, jumpTargetId: importDefault, oldestUnreadMessageId: dependencyMap, shouldJumpToOriginalPost: _slicedToArray } = arg0);
   let channelLatestMessageLoadingStatsManager;
   channelLatestMessageLoadingStatsManager = _slicedToArray(channelLatestMessageLoadingStatsManager.useState(() => new jumpTargetId(oldestUnreadMessageId[4])("Messages")), 1)[0];

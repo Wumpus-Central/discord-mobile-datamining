@@ -1,20 +1,20 @@
-// === Module 9424: GuildProfileGamesActionSheet ===
+// === Module 9088: GuildProfileGamesActionSheet ===
 
-// Module 9424 (GuildProfileGamesActionSheet)
+// Module 9088 (GuildProfileGamesActionSheet)
 import c from "c" /* 576 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import TableRow from "TableRow" /* 6000 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8352 */;
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8353 */;
-import components_GameIconDefault from "components/GameIcon" /* 9419 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import TableRow from "TableRow" /* 6184 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8850 */;
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8851 */;
+import components_GameIconDefault from "components/GameIcon" /* 9083 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
-let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildProfileGameRow(arg0) {
   const cResult = c.c(13);
   ({ game, activityLevel } = arg0);
   if (cResult[0] !== game.id) {
@@ -68,7 +68,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = game;
   cResult[4] = tmp9;
   tmp8 = tmp9;
-}) : ((activityLevel) => {
+}) : (function GuildProfileGameRow(activityLevel) {
   const game = activityLevel.game;
   const obj = { gameId: game.id, source: GameProfileAnalyticUtils.GameProfileSources.GuildProfileGames, trackEntryPointImpression: true };
   const tmpResult = useOpenGameProfileModalDefault(obj);
@@ -81,7 +81,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   obj2.onPress = fn;
   return jsx(TableRow.TableRow, { icon: jsx(components_GameIconDefault, { game, activityLevel: activityLevel.activityLevel }), label: game.name, arrow: null != tmpResult, onPress: null });
 });
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({ container: { padding: 16, paddingBottom: 48 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_profile/native/components/GuildProfileGamesActionSheet.tsx");
@@ -91,22 +91,22 @@ export default function GuildProfileGamesActionSheet(profile) {
   const id = profile.id;
   const gameActivity = profile.gameActivity;
   const tmp = closure_7();
-  const allGuildProfileGames = id(9423).useAllGuildProfileGames(profile);
-  let obj = id(9423);
+  const allGuildProfileGames = id(9087).useAllGuildProfileGames(profile);
+  let obj = id(9087);
   const intl = id(1126).intl;
-  const obj2 = id(7852);
+  const obj2 = id(8270);
   const items = [id];
   const str = intl.format(id(1126).t.vuAVo7, { serverName: profile.name });
   const callback = noop.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(9410, dependencyMap.paths), "GuildProfileActionSheet:" + id, { guildId: id });
+    obj.openLazy(asyncRequireImpl(8831, dependencyMap.paths), "GuildProfileActionSheet:" + id, { guildId: id });
   }, items);
   const obj3 = { ref: obj2.useBottomSheetRef().bottomSheetRef, scrollable: true, onDismiss: callback, startHeight: 300, children: null };
   const obj4 = { children: null };
   const obj5 = { style: tmp.container, children: null };
   const str1 = intl.format(id(1126).t.vuAVo7, { serverName: profile.name }).toString();
-  obj5.children = jsx(id(6081).TableRowGroup, { title: intl.format(id(1126).t.vuAVo7, { serverName: profile.name }).toString(), hasIcons: true, children: allGuildProfileGames.map((game) => <closure_6 key={game.id} game={game} activityLevel={gameActivity[game.id]} />) });
+  obj5.children = jsx(id(6267).TableRowGroup, { title: intl.format(id(1126).t.vuAVo7, { serverName: profile.name }).toString(), hasIcons: true, children: allGuildProfileGames.map((game) => <closure_6 key={game.id} game={game} activityLevel={gameActivity[game.id]} />) });
   obj4.children = <View style={tmp.container}>{null}</View>;
-  obj3.children = jsx(id(6119).BottomSheetScrollView, { children: null });
-  return jsx(id(6652).BottomSheet, { ref: obj2.useBottomSheetRef().bottomSheetRef, scrollable: true, onDismiss: callback, startHeight: 300, children: null });
+  obj3.children = jsx(id(6298).BottomSheetScrollView, { children: null });
+  return jsx(id(6829).BottomSheet, { ref: obj2.useBottomSheetRef().bottomSheetRef, scrollable: true, onDismiss: callback, startHeight: 300, children: null });
 };

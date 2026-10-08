@@ -1,19 +1,19 @@
-// === Module 10103: GIFPickerActionCreators ===
+// === Module 9687: GIFPickerActionCreators ===
 
-// Module 10103 (GIFPickerActionCreators)
+// Module 9687 (GIFPickerActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1126 */;
-import frecency_user_settings from "frecency_user_settings" /* 1232 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
-import URLUtilsDefault from "URLUtils" /* 1371 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5076 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5714 */;
-import AttachmentUrlUtilsAll from "AttachmentUrlUtils" /* 7529 */;
-import GifProvider from "GifProvider" /* 10104 */;
-import GIFPickerUtils from "GIFPickerUtils" /* 10105 */;
-import LocaleStore from "LocaleStore" /* 2116 */;
-import GIFPickerViewStore from "GIFPickerViewStore" /* 10102 */;
+import frecency_user_settings from "frecency_user_settings" /* 1244 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
+import URLUtilsDefault from "URLUtils" /* 1383 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5105 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5297 */;
+import AttachmentUrlUtilsAll from "AttachmentUrlUtils" /* 9252 */;
+import GifProvider from "GifProvider" /* 9688 */;
+import GIFPickerUtils from "GIFPickerUtils" /* 9689 */;
+import LocaleStore from "LocaleStore" /* 2128 */;
+import GIFPickerViewStore from "GIFPickerViewStore" /* 9686 */;
 import apply from "module_12" /* 12 */;
 
 const require = globalThis.__r;
@@ -169,9 +169,9 @@ export const trackSelectGIF = function trackSelectGIF(arg0) {
   }
 };
 export const initializeSearch = function initializeSearch() {
-  const obj = replaced(1266);
-  replaced = replaced(1266).v4().replace(closure_12, "");
-  const str = replaced(1266).v4();
+  const obj = replaced(1278);
+  replaced = replaced(1278).v4().replace(closure_12, "");
+  const str = replaced(1278).v4();
   AppAnalyticsUtilsDefault.trackWithMetadata(constants.SEARCH_OPENED, { search_type: constants3.GIF, load_id: replaced });
   const obj3 = { search_type: constants3.GIF, load_id: replaced };
   DispatcherDefault.wait(() => {
@@ -330,7 +330,7 @@ export const addFavoriteGIF = function addFavoriteGIF(size) {
           obj3.order = num + 1;
           gifs.gifs[tmp23] = obj3;
           const FavoriteGIFs = frecency_user_settings.FavoriteGIFs;
-          if (FavoriteGIFs.toBinary(gifs).length > v65535) {
+          if (FavoriteGIFs.toBinary(gifs).length > collapsed) {
             const obj5 = { title: null, body: null };
             const intl = util.intl;
             obj5.title = intl.string(util.t["+XYXtZ"]);

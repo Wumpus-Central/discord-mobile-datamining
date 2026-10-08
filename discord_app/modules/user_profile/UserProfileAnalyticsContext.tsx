@@ -1,10 +1,10 @@
-// === Module 7872: UserProfileAnalyticsContext ===
+// === Module 8290: UserProfileAnalyticsContext ===
 
-// Module 7872 (UserProfileAnalyticsContext)
+// Module 8290 (UserProfileAnalyticsContext)
 import c from "c" /* 576 */;
-import v1 from "v1" /* 1266 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6664 */;
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 7873 */;
+import v1 from "v1" /* 1278 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6841 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8291 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const jsx = fn(21).jsx;
 let context = noop.createContext(null);
 fn(558);
 const ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCreateUserProfileAnalyticsContext(arg0) {
   const cResult = c.c(10);
   ({ layout, userId, guildId, channelId, messageId, roleId, sourceSessionId, showGuildProfile } = arg0);
   const context = noop.useContext(closure_5);
@@ -59,7 +59,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[8] = userId;
   cResult[9] = obj2;
   tmp8 = obj2;
-}) : ((layout) => {
+}) : (function useCreateUserProfileAnalyticsContext(layout) {
   layout = layout.layout;
   const userId = layout.userId;
   const guildId = layout.guildId;
@@ -153,10 +153,10 @@ export const UserProfileAnalyticsProvider = (children) => {
   return ref(obj2.Provider, { value, children: children.children });
 };
 export const useCreateUserProfileAnalyticsContext = tmp2;
-export const useUserProfileAnalyticsContext = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useUserProfileAnalyticsContext = ReactCompilerGating.isReactCompilerEnabled() ? (function useUserProfileAnalyticsContext() {
   const cResult = context(576).c(18);
   context = noop.useContext(closure_5);
-  analyticsLocations = analyticsLocations(6664)().analyticsLocations;
+  analyticsLocations = analyticsLocations(6841)().analyticsLocations;
   if (cResult[0] === analyticsLocations) {
     if (cResult[1] === context) {
       let tmp3 = cResult[2];
@@ -185,7 +185,7 @@ export const useUserProfileAnalyticsContext = ReactCompilerGating.isReactCompile
               }
             }
           }
-          class P {
+          class I {
             constructor(arg0) {
               tmp = closure_0;
               if (null != closure_0) {
@@ -220,7 +220,7 @@ export const useUserProfileAnalyticsContext = ReactCompilerGating.isReactCompile
           cResult[17] = tmp10;
           tmp9 = tmp10;
         }
-        class P {
+        class I {
           constructor(arg0) {
             tmp = closure_0;
             if (null != closure_0) {
@@ -244,8 +244,8 @@ export const useUserProfileAnalyticsContext = ReactCompilerGating.isReactCompile
         }
         cResult[9] = analyticsLocations;
         cResult[10] = context;
-        cResult[11] = P;
-        tmp8 = P;
+        cResult[11] = I;
+        tmp8 = I;
       }
       cResult[6] = analyticsLocations;
       cResult[7] = context;
@@ -257,7 +257,7 @@ export const useUserProfileAnalyticsContext = ReactCompilerGating.isReactCompile
     cResult[5] = tmp5;
     tmp4 = tmp5;
   }
-  const fn = function o(arg0) {
+  const fn = function s(arg0) {
     if (null != context) {
       const obj2 = { analyticsLocations };
       const merged = Object.assign(context);
@@ -269,9 +269,9 @@ export const useUserProfileAnalyticsContext = ReactCompilerGating.isReactCompile
   cResult[1] = context;
   cResult[2] = fn;
   tmp3 = fn;
-}) : (() => {
+}) : (function useUserProfileAnalyticsContext() {
   const context = noop.useContext(closure_5);
-  analyticsLocations = analyticsLocations(6664)().analyticsLocations;
+  analyticsLocations = analyticsLocations(6841)().analyticsLocations;
   let obj = { context, trackUserProfileAction: null, trackUserProfileEditAction: null, trackUserProfileEditSaved: null, trackUserProfileWishlistAction: null };
   const items = [context, analyticsLocations];
   obj.trackUserProfileAction = noop.useCallback((arg0) => {

@@ -1,18 +1,18 @@
-// === Module 15364: SettingsItemAppIcon ===
+// === Module 15626: SettingsItemAppIcon ===
 
-// Module 15364 (SettingsItemAppIcon)
+// Module 15626 (SettingsItemAppIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import AppIconDefault from "AppIcon" /* 15365 */;
+import AppIconDefault from "AppIcon" /* 15627 */;
 import noop from "module_19" /* 19 */;
 
-const AppIconTypes = ClydeIcon(8859);
-const ClydeIcon2 = ClydeIcon(10560);
-const AppIconUtils = ClydeIcon(13280);
+const AppIconTypes = ClydeIcon(9402);
+const ClydeIcon2 = ClydeIcon(10157);
+const AppIconUtils = ClydeIcon(13581);
 require = fn;
-const getIconById = fn(8858).getIconById;
+const getIconById = fn(9401).getIconById;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { icon: { borderRadius: nativeDefault.radii.round } };
 let closure_5 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -20,7 +20,7 @@ let obj3 = { borderRadius: nativeDefault.radii.round };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_icons/native/SettingsItemAppIcon.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((color) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SettingsItemAppIcon(color) {
   let ClydeIcon = require;
   let tmp = dependencyMap;
   const cResult = c.c(5);
@@ -55,7 +55,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((color) => {
     cResult[1] = tmp;
   }
   tmp6 = getIconById(currentAppIcon);
-}) : ((color) => {
+}) : (function SettingsItemAppIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;
   if (INTERACTIVE_ICON_DEFAULT === undefined) {
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;

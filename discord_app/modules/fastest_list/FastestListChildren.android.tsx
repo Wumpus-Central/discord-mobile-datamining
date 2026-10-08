@@ -1,20 +1,20 @@
-// === Module 6571: FastestListChildren ===
+// === Module 6747: FastestListChildren ===
 
-// Module 6571 (FastestListChildren)
-import getFastestListVisibleItemsDefault from "getFastestListVisibleItemsDefault" /* 6572 */;
+// Module 6747 (FastestListChildren)
+import getFastestListVisibleItemsDefault from "getFastestListVisibleItemsDefault" /* 6748 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({ portal: { position: "absolute", opacity: 0, height: 0, top: 0 } });
 let obj = { items: [], keys: new Map(), keyIndex: 0 };
 let map = new Map();
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/fastest_list/FastestListChildren.android.tsx");
 
-export default noop.memo(noop.forwardRef((listFooterAlwaysMounted, arg1) => {
+export default noop.memo(function FastestListChildren(listFooterAlwaysMounted) {
   ({ estimatedListSize: importDefault, horizontal } = listFooterAlwaysMounted);
   if (horizontal === undefined) {
     horizontal = false;
@@ -49,7 +49,7 @@ export default noop.memo(noop.forwardRef((listFooterAlwaysMounted, arg1) => {
   const tmp3 = listFooterAlwaysMounted(listHeaderAlwaysMounted.useState(() => getFastestListVisibleItemsDefault({ estimatedListSize, sectionsVersioned })), 2);
   const itemSize = tmp3[0];
   closure_16 = tmp3[1];
-  const imperativeHandle = listHeaderAlwaysMounted.useImperativeHandle(arg1, () => ({
+  const imperativeHandle = listHeaderAlwaysMounted.useImperativeHandle(listFooterAlwaysMounted.ref, () => ({
     setVisibleItems(nativeEvent) {
       closure_0 = nativeEvent;
       closure_1_16((arg0) => {
@@ -262,4 +262,4 @@ export default noop.memo(noop.forwardRef((listFooterAlwaysMounted, arg1) => {
     closure_17.current = memo1;
   }, items2);
   return marginEnd(flag, { pointerEvents: "none", style: memo, children: memo1.items });
-}));
+});

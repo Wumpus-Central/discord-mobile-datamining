@@ -1,23 +1,23 @@
-// === Module 11118: GiftBoxAnimation ===
+// === Module 11237: GiftBoxAnimation ===
 
-// Module 11118 (GiftBoxAnimation)
+// Module 11237 (GiftBoxAnimation)
 import c from "c" /* 576 */;
-import LottieAnimationViewDefault from "LottieAnimationView" /* 5927 */;
+import LottieAnimationViewDefault from "LottieAnimationView" /* 6110 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 const require = globalThis.__r;
 
 const initialize = withResult10(504);
-const _mod5081 = withResult10(5081);
+const _mod5741 = withResult10(5741);
 require = fn;
-const PremiumGiftStyles = fn(1379).PremiumGiftStyles;
+const PremiumGiftStyles = fn(1391).PremiumGiftStyles;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/gift_code_modal/GiftBoxAnimation.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((giftStyle) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftBoxAnimation(giftStyle) {
   let withResult10 = require;
   const cResult = c.c(20);
   giftStyle = giftStyle.giftStyle;
@@ -187,14 +187,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((giftStyle) => {
     }
     const _Symbol11 = Symbol;
     if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-      class F {
+      class B {
         constructor() {
           return closure_1_0(closure_1_2[17]);
         }
       }
-      cResult[14] = F;
+      cResult[14] = B;
     } else {
-      class F {
+      class B {
         constructor() {
           return closure_1_0(closure_1_2[17]);
         }
@@ -202,20 +202,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((giftStyle) => {
     }
     const _Symbol12 = Symbol;
     if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-      class L {
+      class F {
         constructor() {
           return closure_1_0(closure_1_2[10]);
         }
       }
-      cResult[15] = L;
+      cResult[15] = F;
     } else {
-      class L {
+      class F {
         constructor() {
           return closure_1_0(closure_1_2[10]);
         }
       }
     }
-    const match = _mod5081.match(giftStyle);
+    const match = _mod5741.match(giftStyle);
     const withResult = match.with(PremiumGiftStyles.SNOWGLOBE, A);
     const withResult1 = match.with(PremiumGiftStyles.SNOWGLOBE, A).with(PremiumGiftStyles.BOX, tmp11);
     const withResult2 = match.with(PremiumGiftStyles.SNOWGLOBE, A).with(PremiumGiftStyles.BOX, tmp11).with(PremiumGiftStyles.CUP, tmp13);
@@ -225,34 +225,34 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((giftStyle) => {
     const withResult6 = match.with(PremiumGiftStyles.SNOWGLOBE, A).with(PremiumGiftStyles.BOX, tmp11).with(PremiumGiftStyles.CUP, tmp13).with(PremiumGiftStyles.STANDARD_BOX, E).with(PremiumGiftStyles.COFFEE, tmp16).with(PremiumGiftStyles.CHEST, O).with(PremiumGiftStyles.CAKE, tmp19);
     const withResult7 = match.with(PremiumGiftStyles.SNOWGLOBE, A).with(PremiumGiftStyles.BOX, tmp11).with(PremiumGiftStyles.CUP, tmp13).with(PremiumGiftStyles.STANDARD_BOX, E).with(PremiumGiftStyles.COFFEE, tmp16).with(PremiumGiftStyles.CHEST, O).with(PremiumGiftStyles.CAKE, tmp19).with(PremiumGiftStyles.SEASONAL_STANDARD_BOX, tmp21);
     const withResult8 = match.with(PremiumGiftStyles.SNOWGLOBE, A).with(PremiumGiftStyles.BOX, tmp11).with(PremiumGiftStyles.CUP, tmp13).with(PremiumGiftStyles.STANDARD_BOX, E).with(PremiumGiftStyles.COFFEE, tmp16).with(PremiumGiftStyles.CHEST, O).with(PremiumGiftStyles.CAKE, tmp19).with(PremiumGiftStyles.SEASONAL_STANDARD_BOX, tmp21).with(PremiumGiftStyles.SEASONAL_CAKE, C);
-    withResult10 = match.with(PremiumGiftStyles.SNOWGLOBE, A).with(PremiumGiftStyles.BOX, tmp11).with(PremiumGiftStyles.CUP, tmp13).with(PremiumGiftStyles.STANDARD_BOX, E).with(PremiumGiftStyles.COFFEE, tmp16).with(PremiumGiftStyles.CHEST, O).with(PremiumGiftStyles.CAKE, tmp19).with(PremiumGiftStyles.SEASONAL_STANDARD_BOX, tmp21).with(PremiumGiftStyles.SEASONAL_CAKE, C).with(PremiumGiftStyles.SEASONAL_CHEST, N).with(PremiumGiftStyles.SEASONAL_COFFEE, F);
-    const otherwiseResult = withResult10.otherwise(L);
+    withResult10 = match.with(PremiumGiftStyles.SNOWGLOBE, A).with(PremiumGiftStyles.BOX, tmp11).with(PremiumGiftStyles.CUP, tmp13).with(PremiumGiftStyles.STANDARD_BOX, E).with(PremiumGiftStyles.COFFEE, tmp16).with(PremiumGiftStyles.CHEST, O).with(PremiumGiftStyles.CAKE, tmp19).with(PremiumGiftStyles.SEASONAL_STANDARD_BOX, tmp21).with(PremiumGiftStyles.SEASONAL_CAKE, C).with(PremiumGiftStyles.SEASONAL_CHEST, N).with(PremiumGiftStyles.SEASONAL_COFFEE, B);
+    const otherwiseResult = withResult10.otherwise(F);
     cResult[2] = giftStyle;
     cResult[3] = otherwiseResult;
     const withResult9 = match.with(PremiumGiftStyles.SNOWGLOBE, A).with(PremiumGiftStyles.BOX, tmp11).with(PremiumGiftStyles.CUP, tmp13).with(PremiumGiftStyles.STANDARD_BOX, E).with(PremiumGiftStyles.COFFEE, tmp16).with(PremiumGiftStyles.CHEST, O).with(PremiumGiftStyles.CAKE, tmp19).with(PremiumGiftStyles.SEASONAL_STANDARD_BOX, tmp21).with(PremiumGiftStyles.SEASONAL_CAKE, C).with(PremiumGiftStyles.SEASONAL_CHEST, N);
   } else {
-    class L {
+    class F {
       constructor() {
         return closure_1_0(closure_1_2[10]);
       }
     }
     const _Symbol13 = Symbol;
     if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
-      class L {
+      class F {
         constructor() {
           return closure_1_0(closure_1_2[10]);
         }
       }
       cResult[16] = tmp31;
     } else {
-      class L {
+      class F {
         constructor() {
           return closure_1_0(closure_1_2[10]);
         }
       }
     }
     if (cResult[17] === tmp8) {
-      class L {
+      class F {
         constructor() {
           return closure_1_0(closure_1_2[10]);
         }
@@ -266,26 +266,26 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((giftStyle) => {
     cResult[19] = tmp35;
     tmp32 = tmp35;
   }
-}) : ((giftStyle) => {
+}) : (function GiftBoxAnimation(giftStyle) {
   giftStyle = giftStyle.giftStyle;
   initialize;
   [][0] = AccessibilityStore;
   if (null == giftStyle) {
     return null;
   } else {
-    const match = _mod5081.match(giftStyle);
-    const withResult = match.with(PremiumGiftStyles.SNOWGLOBE, () => require("module_11119"));
-    const withResult1 = match.with(PremiumGiftStyles.SNOWGLOBE, () => require("module_11119")).with(PremiumGiftStyles.BOX, () => require("module_11120"));
-    const withResult2 = match.with(PremiumGiftStyles.SNOWGLOBE, () => require("module_11119")).with(PremiumGiftStyles.BOX, () => require("module_11120")).with(PremiumGiftStyles.CUP, () => require("module_11121"));
-    const withResult3 = match.with(PremiumGiftStyles.SNOWGLOBE, () => require("module_11119")).with(PremiumGiftStyles.BOX, () => require("module_11120")).with(PremiumGiftStyles.CUP, () => require("module_11121")).with(PremiumGiftStyles.STANDARD_BOX, () => require("module_10579"));
-    const withResult4 = match.with(PremiumGiftStyles.SNOWGLOBE, () => require("module_11119")).with(PremiumGiftStyles.BOX, () => require("module_11120")).with(PremiumGiftStyles.CUP, () => require("module_11121")).with(PremiumGiftStyles.STANDARD_BOX, () => require("module_10579")).with(PremiumGiftStyles.COFFEE, () => require("module_10588"));
-    const withResult5 = match.with(PremiumGiftStyles.SNOWGLOBE, () => require("module_11119")).with(PremiumGiftStyles.BOX, () => require("module_11120")).with(PremiumGiftStyles.CUP, () => require("module_11121")).with(PremiumGiftStyles.STANDARD_BOX, () => require("module_10579")).with(PremiumGiftStyles.COFFEE, () => require("module_10588")).with(PremiumGiftStyles.CHEST, () => require("module_10585"));
-    const withResult6 = match.with(PremiumGiftStyles.SNOWGLOBE, () => require("module_11119")).with(PremiumGiftStyles.BOX, () => require("module_11120")).with(PremiumGiftStyles.CUP, () => require("module_11121")).with(PremiumGiftStyles.STANDARD_BOX, () => require("module_10579")).with(PremiumGiftStyles.COFFEE, () => require("module_10588")).with(PremiumGiftStyles.CHEST, () => require("module_10585")).with(PremiumGiftStyles.CAKE, () => require("module_10582"));
-    const withResult7 = match.with(PremiumGiftStyles.SNOWGLOBE, () => require("module_11119")).with(PremiumGiftStyles.BOX, () => require("module_11120")).with(PremiumGiftStyles.CUP, () => require("module_11121")).with(PremiumGiftStyles.STANDARD_BOX, () => require("module_10579")).with(PremiumGiftStyles.COFFEE, () => require("module_10588")).with(PremiumGiftStyles.CHEST, () => require("module_10585")).with(PremiumGiftStyles.CAKE, () => require("module_10582")).with(PremiumGiftStyles.SEASONAL_STANDARD_BOX, () => require("module_10591"));
-    const withResult8 = match.with(PremiumGiftStyles.SNOWGLOBE, () => require("module_11119")).with(PremiumGiftStyles.BOX, () => require("module_11120")).with(PremiumGiftStyles.CUP, () => require("module_11121")).with(PremiumGiftStyles.STANDARD_BOX, () => require("module_10579")).with(PremiumGiftStyles.COFFEE, () => require("module_10588")).with(PremiumGiftStyles.CHEST, () => require("module_10585")).with(PremiumGiftStyles.CAKE, () => require("module_10582")).with(PremiumGiftStyles.SEASONAL_STANDARD_BOX, () => require("module_10591")).with(PremiumGiftStyles.SEASONAL_CAKE, () => require("module_10594"));
-    const withResult9 = match.with(PremiumGiftStyles.SNOWGLOBE, () => require("module_11119")).with(PremiumGiftStyles.BOX, () => require("module_11120")).with(PremiumGiftStyles.CUP, () => require("module_11121")).with(PremiumGiftStyles.STANDARD_BOX, () => require("module_10579")).with(PremiumGiftStyles.COFFEE, () => require("module_10588")).with(PremiumGiftStyles.CHEST, () => require("module_10585")).with(PremiumGiftStyles.CAKE, () => require("module_10582")).with(PremiumGiftStyles.SEASONAL_STANDARD_BOX, () => require("module_10591")).with(PremiumGiftStyles.SEASONAL_CAKE, () => require("module_10594")).with(PremiumGiftStyles.SEASONAL_CHEST, () => require("module_10597"));
-    const withResult10 = match.with(PremiumGiftStyles.SNOWGLOBE, () => require("module_11119")).with(PremiumGiftStyles.BOX, () => require("module_11120")).with(PremiumGiftStyles.CUP, () => require("module_11121")).with(PremiumGiftStyles.STANDARD_BOX, () => require("module_10579")).with(PremiumGiftStyles.COFFEE, () => require("module_10588")).with(PremiumGiftStyles.CHEST, () => require("module_10585")).with(PremiumGiftStyles.CAKE, () => require("module_10582")).with(PremiumGiftStyles.SEASONAL_STANDARD_BOX, () => require("module_10591")).with(PremiumGiftStyles.SEASONAL_CAKE, () => require("module_10594")).with(PremiumGiftStyles.SEASONAL_CHEST, () => require("module_10597")).with(PremiumGiftStyles.SEASONAL_COFFEE, () => require("module_10600"));
-    const obj = { source: match.with(PremiumGiftStyles.SNOWGLOBE, () => require("module_11119")).with(PremiumGiftStyles.BOX, () => require("module_11120")).with(PremiumGiftStyles.CUP, () => require("module_11121")).with(PremiumGiftStyles.STANDARD_BOX, () => require("module_10579")).with(PremiumGiftStyles.COFFEE, () => require("module_10588")).with(PremiumGiftStyles.CHEST, () => require("module_10585")).with(PremiumGiftStyles.CAKE, () => require("module_10582")).with(PremiumGiftStyles.SEASONAL_STANDARD_BOX, () => require("module_10591")).with(PremiumGiftStyles.SEASONAL_CAKE, () => require("module_10594")).with(PremiumGiftStyles.SEASONAL_CHEST, () => require("module_10597")).with(PremiumGiftStyles.SEASONAL_COFFEE, () => require("module_10600")).otherwise(() => require("module_10579")), autoPlay: !tmp4, style: { width: 320, height: 212 } };
-    return jsx(LottieAnimationViewDefault, { source: match.with(PremiumGiftStyles.SNOWGLOBE, () => require("module_11119")).with(PremiumGiftStyles.BOX, () => require("module_11120")).with(PremiumGiftStyles.CUP, () => require("module_11121")).with(PremiumGiftStyles.STANDARD_BOX, () => require("module_10579")).with(PremiumGiftStyles.COFFEE, () => require("module_10588")).with(PremiumGiftStyles.CHEST, () => require("module_10585")).with(PremiumGiftStyles.CAKE, () => require("module_10582")).with(PremiumGiftStyles.SEASONAL_STANDARD_BOX, () => require("module_10591")).with(PremiumGiftStyles.SEASONAL_CAKE, () => require("module_10594")).with(PremiumGiftStyles.SEASONAL_CHEST, () => require("module_10597")).with(PremiumGiftStyles.SEASONAL_COFFEE, () => require("module_10600")).otherwise(() => require("module_10579")), autoPlay: !tmp4, style: { width: 320, height: 212 } });
+    const match = _mod5741.match(giftStyle);
+    const withResult = match.with(PremiumGiftStyles.SNOWGLOBE, () => require("module_11238"));
+    const withResult1 = match.with(PremiumGiftStyles.SNOWGLOBE, () => require("module_11238")).with(PremiumGiftStyles.BOX, () => require("module_11239"));
+    const withResult2 = match.with(PremiumGiftStyles.SNOWGLOBE, () => require("module_11238")).with(PremiumGiftStyles.BOX, () => require("module_11239")).with(PremiumGiftStyles.CUP, () => require("module_11240"));
+    const withResult3 = match.with(PremiumGiftStyles.SNOWGLOBE, () => require("module_11238")).with(PremiumGiftStyles.BOX, () => require("module_11239")).with(PremiumGiftStyles.CUP, () => require("module_11240")).with(PremiumGiftStyles.STANDARD_BOX, () => require("module_10176"));
+    const withResult4 = match.with(PremiumGiftStyles.SNOWGLOBE, () => require("module_11238")).with(PremiumGiftStyles.BOX, () => require("module_11239")).with(PremiumGiftStyles.CUP, () => require("module_11240")).with(PremiumGiftStyles.STANDARD_BOX, () => require("module_10176")).with(PremiumGiftStyles.COFFEE, () => require("module_10185"));
+    const withResult5 = match.with(PremiumGiftStyles.SNOWGLOBE, () => require("module_11238")).with(PremiumGiftStyles.BOX, () => require("module_11239")).with(PremiumGiftStyles.CUP, () => require("module_11240")).with(PremiumGiftStyles.STANDARD_BOX, () => require("module_10176")).with(PremiumGiftStyles.COFFEE, () => require("module_10185")).with(PremiumGiftStyles.CHEST, () => require("module_10182"));
+    const withResult6 = match.with(PremiumGiftStyles.SNOWGLOBE, () => require("module_11238")).with(PremiumGiftStyles.BOX, () => require("module_11239")).with(PremiumGiftStyles.CUP, () => require("module_11240")).with(PremiumGiftStyles.STANDARD_BOX, () => require("module_10176")).with(PremiumGiftStyles.COFFEE, () => require("module_10185")).with(PremiumGiftStyles.CHEST, () => require("module_10182")).with(PremiumGiftStyles.CAKE, () => require("module_10179"));
+    const withResult7 = match.with(PremiumGiftStyles.SNOWGLOBE, () => require("module_11238")).with(PremiumGiftStyles.BOX, () => require("module_11239")).with(PremiumGiftStyles.CUP, () => require("module_11240")).with(PremiumGiftStyles.STANDARD_BOX, () => require("module_10176")).with(PremiumGiftStyles.COFFEE, () => require("module_10185")).with(PremiumGiftStyles.CHEST, () => require("module_10182")).with(PremiumGiftStyles.CAKE, () => require("module_10179")).with(PremiumGiftStyles.SEASONAL_STANDARD_BOX, () => require("module_10188"));
+    const withResult8 = match.with(PremiumGiftStyles.SNOWGLOBE, () => require("module_11238")).with(PremiumGiftStyles.BOX, () => require("module_11239")).with(PremiumGiftStyles.CUP, () => require("module_11240")).with(PremiumGiftStyles.STANDARD_BOX, () => require("module_10176")).with(PremiumGiftStyles.COFFEE, () => require("module_10185")).with(PremiumGiftStyles.CHEST, () => require("module_10182")).with(PremiumGiftStyles.CAKE, () => require("module_10179")).with(PremiumGiftStyles.SEASONAL_STANDARD_BOX, () => require("module_10188")).with(PremiumGiftStyles.SEASONAL_CAKE, () => require("module_10191"));
+    const withResult9 = match.with(PremiumGiftStyles.SNOWGLOBE, () => require("module_11238")).with(PremiumGiftStyles.BOX, () => require("module_11239")).with(PremiumGiftStyles.CUP, () => require("module_11240")).with(PremiumGiftStyles.STANDARD_BOX, () => require("module_10176")).with(PremiumGiftStyles.COFFEE, () => require("module_10185")).with(PremiumGiftStyles.CHEST, () => require("module_10182")).with(PremiumGiftStyles.CAKE, () => require("module_10179")).with(PremiumGiftStyles.SEASONAL_STANDARD_BOX, () => require("module_10188")).with(PremiumGiftStyles.SEASONAL_CAKE, () => require("module_10191")).with(PremiumGiftStyles.SEASONAL_CHEST, () => require("module_10194"));
+    const withResult10 = match.with(PremiumGiftStyles.SNOWGLOBE, () => require("module_11238")).with(PremiumGiftStyles.BOX, () => require("module_11239")).with(PremiumGiftStyles.CUP, () => require("module_11240")).with(PremiumGiftStyles.STANDARD_BOX, () => require("module_10176")).with(PremiumGiftStyles.COFFEE, () => require("module_10185")).with(PremiumGiftStyles.CHEST, () => require("module_10182")).with(PremiumGiftStyles.CAKE, () => require("module_10179")).with(PremiumGiftStyles.SEASONAL_STANDARD_BOX, () => require("module_10188")).with(PremiumGiftStyles.SEASONAL_CAKE, () => require("module_10191")).with(PremiumGiftStyles.SEASONAL_CHEST, () => require("module_10194")).with(PremiumGiftStyles.SEASONAL_COFFEE, () => require("module_10197"));
+    const obj = { source: match.with(PremiumGiftStyles.SNOWGLOBE, () => require("module_11238")).with(PremiumGiftStyles.BOX, () => require("module_11239")).with(PremiumGiftStyles.CUP, () => require("module_11240")).with(PremiumGiftStyles.STANDARD_BOX, () => require("module_10176")).with(PremiumGiftStyles.COFFEE, () => require("module_10185")).with(PremiumGiftStyles.CHEST, () => require("module_10182")).with(PremiumGiftStyles.CAKE, () => require("module_10179")).with(PremiumGiftStyles.SEASONAL_STANDARD_BOX, () => require("module_10188")).with(PremiumGiftStyles.SEASONAL_CAKE, () => require("module_10191")).with(PremiumGiftStyles.SEASONAL_CHEST, () => require("module_10194")).with(PremiumGiftStyles.SEASONAL_COFFEE, () => require("module_10197")).otherwise(() => require("module_10176")), autoPlay: !tmp4, style: { width: 320, height: 212 } };
+    return jsx(LottieAnimationViewDefault, { source: match.with(PremiumGiftStyles.SNOWGLOBE, () => require("module_11238")).with(PremiumGiftStyles.BOX, () => require("module_11239")).with(PremiumGiftStyles.CUP, () => require("module_11240")).with(PremiumGiftStyles.STANDARD_BOX, () => require("module_10176")).with(PremiumGiftStyles.COFFEE, () => require("module_10185")).with(PremiumGiftStyles.CHEST, () => require("module_10182")).with(PremiumGiftStyles.CAKE, () => require("module_10179")).with(PremiumGiftStyles.SEASONAL_STANDARD_BOX, () => require("module_10188")).with(PremiumGiftStyles.SEASONAL_CAKE, () => require("module_10191")).with(PremiumGiftStyles.SEASONAL_CHEST, () => require("module_10194")).with(PremiumGiftStyles.SEASONAL_COFFEE, () => require("module_10197")).otherwise(() => require("module_10176")), autoPlay: !tmp4, style: { width: 320, height: 212 } });
   }
 });

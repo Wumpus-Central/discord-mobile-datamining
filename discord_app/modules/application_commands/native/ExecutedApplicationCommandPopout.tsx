@@ -1,31 +1,31 @@
-// === Module 11257: ExecutedApplicationCommandPopout ===
+// === Module 9597: ExecutedApplicationCommandPopout ===
 
-// Module 11257 (ExecutedApplicationCommandPopout)
+// Module 9597 (ExecutedApplicationCommandPopout)
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import utils_AvatarUtils from "utils/AvatarUtils" /* 1405 */;
-import KeyboardTypes from "KeyboardTypes" /* 1616 */;
-import Server from "Server" /* 1985 */;
-import ToastUtils from "ToastUtils" /* 4573 */;
-import UserUtilsDefault from "UserUtils" /* 4728 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import useChannelName from "useChannelName" /* 5049 */;
-import FastImageDefault from "FastImage" /* 5981 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7047 */;
-import InteractionActionCreatorsAll from "InteractionActionCreators" /* 7811 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7861 */;
-import NativeCommandClipboardModuleDefault from "NativeCommandClipboardModule" /* 11258 */;
+import native from "native" /* 1200 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import utils_AvatarUtils from "utils/AvatarUtils" /* 1417 */;
+import KeyboardTypes from "KeyboardTypes" /* 1628 */;
+import Server from "Server" /* 1997 */;
+import ToastUtils from "ToastUtils" /* 4765 */;
+import UserUtilsDefault from "UserUtils" /* 4922 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import useChannelName from "useChannelName" /* 5417 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7235 */;
+import InteractionActionCreatorsAll from "InteractionActionCreators" /* 8230 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8279 */;
+import NativeCommandClipboardModuleDefault from "NativeCommandClipboardModule" /* 9598 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildRoleStore from "GuildRoleStore" /* 2106 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import MessageStore from "MessageStore" /* 5116 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
-import UserStore from "UserStore" /* 1377 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 8827 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildRoleStore from "GuildRoleStore" /* 2118 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import MessageStore from "MessageStore" /* 5428 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
+import UserStore from "UserStore" /* 1389 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9186 */;
 
 require = fn;
 function getCommandOptionComponents(option) {
@@ -48,8 +48,8 @@ function getCommandOptionComponents(option) {
     const _HermesInternal = HermesInternal;
     combined = " " + name_localized;
   }
-  if (option.option.type !== option.option(1985).ApplicationCommandOptionType.SUB_COMMAND) {
-    if (iter.type !== tmp6(1985).ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
+  if (option.option.type !== option.option(1997).ApplicationCommandOptionType.SUB_COMMAND) {
+    if (iter.type !== tmp6(1997).ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
       if (null != iter.value) {
         function getUserComponent(user, styles) {
           let obj = {
@@ -66,39 +66,39 @@ function getCommandOptionComponents(option) {
             },
             children: null
           };
-          const items = [closure_1_22, channel(4728).getUserTag(user, { decoration: "never" })];
+          const items = [closure_1_22, channel(4922).getUserTag(user, { decoration: "never" })];
           obj.children = items;
-          return closure_1_24(user(1188).LegacyText, obj, "optionValue-" + user.name);
+          return closure_1_24(user(1200).LegacyText, obj, "optionValue-" + user.name);
         }
         function getCommandValueText(intl) {
           return closure_2_23(Text_Text.Text, { variant: "text-sm/medium", color: "mobile-text-heading-primary", children: intl }, "optionValue-" + iter.name);
         }
         const type = iter.type;
-        if (tmp6(1985).ApplicationCommandOptionType.USER === type) {
+        if (tmp6(1997).ApplicationCommandOptionType.USER === type) {
           const user = UserStore.getUser(iter.value.toString());
           let userComponent = null;
           if (null != user) {
             userComponent = getUserComponent(user, styles);
           }
-        } else if (tmp6(1985).ApplicationCommandOptionType.CHANNEL === type) {
+        } else if (tmp6(1997).ApplicationCommandOptionType.CHANNEL === type) {
           const channel1 = ChannelStore.getChannel(iter.value.toString());
           userComponent = null;
           if (null != channel1) {
             let obj = { style: styles.commandOptionMentionText, children: null };
-            const items1 = [closure_20, tmp6(5049).computeChannelName(channel1, UserStore, RelationshipStore)];
+            const items1 = [closure_20, tmp6(5417).computeChannelName(channel1, UserStore, RelationshipStore)];
             obj.children = items1;
             const _HermesInternal3 = HermesInternal;
-            userComponent = closure_24(tmp6(1188).LegacyText, obj, "optionValue-" + iter.name);
-            const tmp6Result = tmp6(5049);
+            userComponent = closure_24(tmp6(1200).LegacyText, obj, "optionValue-" + iter.name);
+            const tmp6Result = tmp6(5417);
           }
         } else {
           function getRoleComponent(role) {
             const obj = { style: styles.commandOptionMentionText, children: null };
             const items = [closure_2_22, role.name];
             obj.children = items;
-            return closure_2_24(native.LegacyText, obj, "optionValue-" + iter.name);
+            return dependencyMap(native.LegacyText, obj, "optionValue-" + iter.name);
           }
-          if (tmp6(1985).ApplicationCommandOptionType.ROLE === type) {
+          if (tmp6(1997).ApplicationCommandOptionType.ROLE === type) {
             value = iter.value;
             let role;
             if (null != guild) {
@@ -108,7 +108,7 @@ function getCommandOptionComponents(option) {
             if (null != role) {
               userComponent = getRoleComponent(role);
             }
-          } else if (tmp6(1985).ApplicationCommandOptionType.MENTIONABLE === type) {
+          } else if (tmp6(1997).ApplicationCommandOptionType.MENTIONABLE === type) {
             const str1 = iter.value.toString();
             let role1;
             if (null != guild) {
@@ -125,7 +125,7 @@ function getCommandOptionComponents(option) {
             }
           } else {
             userComponent = null;
-            if (tmp6(1985).ApplicationCommandOptionType.ATTACHMENT === type) {
+            if (tmp6(1997).ApplicationCommandOptionType.ATTACHMENT === type) {
               const intl = tmp6(1126).intl;
               userComponent = getCommandValueText(intl.string(tmp6(1126).t.nONJVc));
             }
@@ -161,14 +161,14 @@ function getCommandOptionComponents(option) {
         let obj2 = { children: null };
         const obj3 = { children: combined + str6 };
         const _HermesInternal4 = HermesInternal;
-        const items2 = [closure_23(tmp6(1188).LegacyText, obj3, "optionKey-" + iter.name), userComponent];
+        const items2 = [closure_23(tmp6(1200).LegacyText, obj3, "optionKey-" + iter.name), userComponent];
         obj2.children = items2;
         items.push(closure_24(noop.Fragment, obj2, text));
       }
       return items;
     }
   }
-  items.push(closure_23(noop.Fragment, { children: closure_23(option.option(1188).LegacyText, { children: combined }, "optionKey-" + option.option.name) }, text));
+  items.push(closure_23(noop.Fragment, { children: closure_23(option.option(1200).LegacyText, { children: combined }, "optionKey-" + option.option.name) }, text));
   if (null != option.option.options) {
     let options1;
     if (commandOptionSpec != null) {
@@ -223,7 +223,7 @@ function getCommandCopyText(item10021, channel, guild, name_localized) {
           channel = ChannelStore.getChannel(item10021.value.toString());
           sum = null;
           if (null != channel) {
-            sum = closure_1_20 + useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
+            sum = constants2 + useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
             const tmp5Result = useChannelName;
           }
         } else if (Server.ApplicationCommandOptionType.ROLE === type) {
@@ -300,15 +300,15 @@ function getCommandCopyText(item10021, channel, guild, name_localized) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, NativeModules: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const SUB_COMMAND_KEY_SEPARATOR = fn(5795).SUB_COMMAND_KEY_SEPARATOR;
+const SUB_COMMAND_KEY_SEPARATOR = fn(5399).SUB_COMMAND_KEY_SEPARATOR;
 const Constants = fn(1085);
 ({ MessageTypes: closure_17, WHITESPACE_RE: closure_18 } = Constants);
-const AppLauncherRouteName = fn(1489).AppLauncherRouteName;
-const ChannelAutocompleteConstants = fn(5796);
+const AppLauncherRouteName = fn(1501).AppLauncherRouteName;
+const ChannelAutocompleteConstants = fn(5400);
 ({ CHANNEL_SENTINEL: closure_20, COMMAND_SENTINEL: closure_21, MENTION_SENTINEL: closure_22 } = ChannelAutocompleteConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_23, jsxs: closure_24, Fragment: closure_25 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { paddingVertical: 8, paddingHorizontal: 16, gap: 16 }, activityIndicator: { padding: 16 }, application: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 }, applicationIcon: null, commandName: null, commandOptionText: null, commandOptionMentionText: null, commandText: null };
 let size = { width: 18, height: 18, borderRadius: nativeDefault.radii.round };
 obj2.applicationIcon = size;
@@ -320,7 +320,7 @@ let obj4 = { color: nativeDefault.colors.BACKGROUND_BRAND };
 obj2.commandText = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 let closure_26 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (function CommandContentContainer(channelId) {
   const cResult = channelId(guildId[26]).c(61);
   channelId = channelId.channelId;
   let flag = channelId.author;
@@ -527,7 +527,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
           obj2.source = utils_AvatarUtils.ensureAvatarSource(colorString.getAvatarSource(guildId));
           const items = [closure_2_23(tmp, obj2, "icon-" + colorString.id), closure_2_23(Text_Text.Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: colorString.username })];
           obj.children = items;
-          return closure_2_24(React5, obj, "application");
+          return dependencyMap(React5, obj, "application");
         }
     };
     let _HermesInternal = HermesInternal;
@@ -667,7 +667,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
   cResult[6] = obj9;
   tmp13 = obj9;
   const tmpResult = channelId(guildId[28]);
-}) : ((channelId) => {
+}) : (function CommandContentContainer(channelId) {
   channelId = channelId.channelId;
   const author = channelId.author;
   ({ applicationUser: importAll, data } = channelId);
@@ -759,7 +759,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
       obj2.source = utils_AvatarUtils.ensureAvatarSource(avatarSource.getAvatarSource(guildId));
       const items = [closure_2_23(tmp, obj2, "icon-" + avatarSource.id), closure_2_23(Text_Text.Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: avatarSource.username })];
       obj.children = items;
-      return closure_2_24(React5, obj, "application");
+      return dependencyMap(React5, obj, "application");
     }
   };
   const tmp4Result6 = channelId(data[31]);
@@ -831,7 +831,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
       obj2.source = utils_AvatarUtils.ensureAvatarSource(avatarSource.getAvatarSource(guildId));
       const items = [closure_2_23(tmp, obj2, "icon-" + avatarSource.id), closure_2_23(Text_Text.Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: avatarSource.username })];
       obj.children = items;
-      return closure_2_24(React5, obj, "application");
+      return dependencyMap(React5, obj, "application");
     }
   }), (children, arg1) => {
     let tmp = children;
@@ -846,7 +846,9 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
   return closure_24(channelId(data[34]).Card, obj4);
 });
 ReactCompilerGating = fn(558);
-let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (function CommandActionsContainer(channelId) {
+  let TableRowGroup = channelId;
+  let tmp = channel;
   const cResult = channelId(channel[26]).c(27);
   channelId = channelId.channelId;
   const chatInputRef = channelId.chatInputRef;
@@ -859,6 +861,9 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
     }
     cResult[0] = data.options;
     cResult[1] = someResult;
+    let tmp3 = someResult;
+  } else {
+    tmp3 = cResult[1];
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [ChannelStore, GuildStore];
@@ -868,56 +873,186 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
     tmp7 = cResult[2];
   }
   if (cResult[3] !== channelId) {
-    class C {
-      constructor() {
-        channel = closure_9.getChannel(channelId);
-        obj = { channel, guild: null };
-        guild_id = undefined;
-        tmp2 = closure_11;
-        if (channel != null) {
-          guild_id = channel.guild_id;
-        }
-        obj.guild = closure_11.getGuild(guild_id);
-        return obj;
+    const fn = function h() {
+      channel = ChannelStore.getChannel(channelId);
+      const obj = { channel, guild: null };
+      let guild_id;
+      if (channel != null) {
+        guild_id = channel.guild_id;
       }
-    }
+      obj.guild = GuildStore.getGuild(guild_id);
+      return obj;
+    };
     let items1 = [channelId];
     cResult[3] = channelId;
-    cResult[4] = C;
+    cResult[4] = fn;
     cResult[5] = items1;
     let tmp11 = items1;
+    let tmp10 = fn;
   } else {
-    class C {
-      constructor() {
-        channel = closure_9.getChannel(channelId);
-        obj = { channel, guild: null };
-        guild_id = undefined;
-        tmp2 = closure_11;
-        if (channel != null) {
-          guild_id = channel.guild_id;
-        }
-        obj.guild = closure_11.getGuild(guild_id);
-        return obj;
-      }
-    }
+    tmp10 = cResult[4];
     tmp11 = cResult[5];
   }
   let obj = channelId(channel[26]);
-  const stateFromStoresObject = channelId(channel[28]).useStateFromStoresObject(tmp7, C, tmp11);
+  const stateFromStoresObject = TableRowGroup(tmp[28]).useStateFromStoresObject(tmp7, tmp10, tmp11);
   channel = stateFromStoresObject.channel;
   guild = stateFromStoresObject.guild;
   if (cResult[6] === channel) {
-    class C {
-      constructor() {
-        channel = closure_9.getChannel(channelId);
-        obj = { channel, guild: null };
-        guild_id = undefined;
-        tmp2 = closure_11;
-        if (channel != null) {
-          guild_id = channel.guild_id;
+    if (cResult[7] === data) {
+      if (cResult[8] === guild) {
+        let tmp13 = cResult[9];
+      }
+      closure_5 = tmp13;
+      if (cResult[10] === chatInputRef) {
+        if (cResult[11] === data.id) {
+          if (cResult[12] === data.options) {
+            if (cResult[13] === tmp13) {
+              if (cResult[14] === tmp6) {
+                let arr3 = cResult[15];
+              }
+              if (0 === arr3.length) {
+                return null;
+              } else {
+                const _Symbol3 = Symbol;
+                if (cResult[24] === Symbol.for("react.memo_cache_sentinel")) {
+                  let obj2 = { variant: "text-sm/semibold", color: "text-subtle", children: null };
+                  const intl3 = TableRowGroup(tmp[24]).intl;
+                  obj2.children = intl3.string(TableRowGroup(tmp[24]).t["3eF5/L"]);
+                  const tmp29 = closure_23(TableRowGroup(tmp[22]).Text, obj2);
+                  cResult[24] = tmp29;
+                  let tmp27 = tmp29;
+                } else {
+                  tmp27 = cResult[24];
+                }
+                if (cResult[25] !== arr3) {
+                  let obj3 = { spacing: 8, children: null };
+                  let items2 = [tmp27, ];
+                  tmp27 = closure_23;
+                  TableRowGroup = TableRowGroup(tmp[42]).TableRowGroup;
+                  let obj4 = { hasIcons: false, children: arr3.map((children, index) => closure_1_23(guild.Fragment, { children }, index)) };
+                  tmp = closure_23(TableRowGroup, obj4);
+                  items2[1] = tmp;
+                  obj3.children = items2;
+                  const tmp32 = closure_24(TableRowGroup(tmp[41]).Stack, obj3);
+                  cResult[25] = arr3;
+                  cResult[26] = tmp32;
+                }
+              }
+            }
+          }
         }
-        obj.guild = closure_11.getGuild(guild_id);
-        return obj;
+      }
+      const items3 = [];
+      if (tmp3) {
+        if (null == chatInputRef) {
+          cResult[10] = chatInputRef;
+          cResult[11] = data.id;
+          cResult[12] = data.options;
+          cResult[13] = tmp13;
+          cResult[14] = tmp6;
+          cResult[15] = items3;
+          arr3 = items3;
+        } else {
+          const _Symbol2 = Symbol;
+          if (cResult[19] === Symbol.for("react.memo_cache_sentinel")) {
+            const intl2 = TableRowGroup(tmp[24]).intl;
+            const stringResult = intl2.string(TableRowGroup(tmp[24]).t.lNWC7s);
+            cResult[19] = stringResult;
+            let tmp20 = stringResult;
+          } else {
+            tmp20 = cResult[19];
+          }
+          if (cResult[20] === chatInputRef) {
+            if (cResult[21] === data.id) {
+              if (cResult[22] === data.options) {
+                let tmp22 = cResult[23];
+              }
+              items3.push(tmp22);
+            }
+          }
+          let obj5 = {
+            label: tmp20,
+            onPress() {
+                      ActionSheetActionCreatorsDefault.hideActionSheet();
+                      if (null != data.options) {
+                        if (data.options.length > 0) {
+                          const items = [Server.ApplicationCommandOptionType.SUB_COMMAND, Server.ApplicationCommandOptionType.SUB_COMMAND_GROUP];
+                          if (items.includes(data.options[0].type)) {
+                            const items1 = [data.options[0].name];
+                            const options1 = data.options[0].options;
+                            let hasItem = null != options1 && options1.length > 0;
+                            if (hasItem) {
+                              const items2 = [Server.ApplicationCommandOptionType.SUB_COMMAND, Server.ApplicationCommandOptionType.SUB_COMMAND_GROUP];
+                              hasItem = items2.includes(options1[0].type);
+                            }
+                            options = options1;
+                            if (hasItem) {
+                              items1.push(options1[0].name);
+                              options = options1[0].options;
+                            }
+                            if (chatInputRef != null) {
+                              const current2 = chatInputRef.current;
+                              if (current2 != null) {
+                                const obj2 = { type: KeyboardTypes.KeyboardTypes.APP_LAUNCHER, context: null };
+                                const obj3 = { initialRouteName: AppLauncherRouteName.COMMAND_VIEW, analyticsLocation: ApplicationCommandTypes.ApplicationCommandTriggerLocations.RECALL, preSelectedCommand: null };
+                                const obj5 = { commandId: null, prefilledOptions: null };
+                                const sum = data.id + SUB_COMMAND_KEY_SEPARATOR;
+                                obj5.commandId = sum + items1.join(SUB_COMMAND_KEY_SEPARATOR);
+                                obj5.prefilledOptions = options;
+                                obj3.preSelectedCommand = obj5;
+                                obj2.context = obj3;
+                                current2.openCustomKeyboard(obj2);
+                              }
+                            }
+                          }
+                        }
+                      }
+                      if (chatInputRef != null) {
+                        const current = chatInputRef.current;
+                        if (current != null) {
+                          const obj6 = { type: KeyboardTypes.KeyboardTypes.APP_LAUNCHER, context: null };
+                          const obj7 = { initialRouteName: AppLauncherRouteName.COMMAND_VIEW, analyticsLocation: ApplicationCommandTypes.ApplicationCommandTriggerLocations.RECALL, preSelectedCommand: null };
+                          ({ id: obj4.commandId, options: obj4.prefilledOptions } = data);
+                          obj7.preSelectedCommand = { commandId: null, prefilledOptions: null };
+                          obj6.context = obj7;
+                          current.openCustomKeyboard(obj6);
+                          const obj13 = { commandId: null, prefilledOptions: null };
+                        }
+                      }
+                    }
+          };
+          const tmp24 = closure_23(TableRowGroup(tmp[38]).TableRow, obj5);
+          cResult[20] = chatInputRef;
+          cResult[21] = data.id;
+          cResult[22] = data.options;
+          cResult[23] = tmp24;
+          tmp22 = tmp24;
+        }
+      } else {
+        const _Symbol = Symbol;
+        if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
+          const intl = TableRowGroup(tmp[24]).intl;
+          const stringResult1 = intl.string(TableRowGroup(tmp[24]).t["42H+Nb"]);
+          cResult[16] = stringResult1;
+          let onPress = stringResult1;
+        } else {
+          onPress = cResult[16];
+        }
+        if (cResult[17] !== tmp13) {
+          let obj6 = { label: onPress, onPress: null };
+          onPress = function onPress() {
+            ActionSheetActionCreatorsDefault.hideActionSheet();
+            closure_5();
+          };
+          obj6.onPress = onPress;
+          const tmp17 = closure_23(TableRowGroup(tmp[38]).TableRow, obj6);
+          cResult[17] = tmp13;
+          cResult[18] = tmp17;
+          let tmp15 = tmp17;
+        } else {
+          tmp15 = cResult[18];
+        }
+        items3.push(tmp15);
       }
     }
   }
@@ -1010,8 +1145,9 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
   cResult[7] = data;
   cResult[8] = guild;
   cResult[9] = S;
-  const tmpResult = channelId(channel[28]);
-}) : ((channelId) => {
+  tmp13 = S;
+  const TableRowGroupResult = TableRowGroup(tmp[28]);
+}) : (function CommandActionsContainer(channelId) {
   channelId = channelId.channelId;
   const chatInputRef = channelId.chatInputRef;
   const data = channelId.data;
@@ -1173,7 +1309,7 @@ let obj5 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/application_commands/native/ExecutedApplicationCommandPopout.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ExecutedCommandPopout(arg0) {
   const cResult = channelId(576).c(29);
   ({ user, channelId } = arg0);
   ({ chatInputRef, messageId } = arg0);
@@ -1192,7 +1328,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     const stateFromStores = channelId(504).useStateFromStores(first, tmp7);
     const tmpResult = channelId(504);
-    const analyticsLocations = messageId(6664)(messageId(6688).EXECUTED_COMMAND).analyticsLocations;
+    const analyticsLocations = messageId(6841)(messageId(6865).EXECUTED_COMMAND).analyticsLocations;
     if (cResult[4] === channelId) {
       let interactionData1;
       if (stateFromStores != null) {
@@ -1238,7 +1374,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                                 const obj2 = { value: analyticsLocations, children: tmp34 };
                                 cResult[26] = analyticsLocations;
                                 cResult[27] = tmp34;
-                                cResult[28] = closure_23(channelId(6664).AnalyticsLocationProvider, obj2);
+                                cResult[28] = closure_23(channelId(6841).AnalyticsLocationProvider, obj2);
                                 class S {
                                   constructor() {
                                     tmp = closure_2;
@@ -1275,12 +1411,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                                     return;
                                   }
                                 }
-                                const tmp39 = closure_23(channelId(6664).AnalyticsLocationProvider, obj2);
+                                const tmp39 = closure_23(channelId(6841).AnalyticsLocationProvider, obj2);
                               }
                               const obj3 = { startExpanded: true, bodyStyles: tmp4.container, children: tmp22 };
                               cResult[23] = tmp4.container;
                               cResult[24] = tmp22;
-                              cResult[25] = closure_23(channelId(6652).BottomSheet, obj3);
+                              cResult[25] = closure_23(channelId(6829).BottomSheet, obj3);
                               class S {
                                 constructor() {
                                   tmp = closure_2;
@@ -1317,7 +1453,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                                   return;
                                 }
                               }
-                              const tmp36 = closure_23(channelId(6652).BottomSheet, obj3);
+                              const tmp36 = closure_23(channelId(6829).BottomSheet, obj3);
                             }
                           }
                         }
@@ -1531,7 +1667,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[6] = messageId;
     cResult[7] = S;
     tmp13 = S;
-    const tmp10 = messageId(6664);
+    const tmp10 = messageId(6841);
   }
   const fn = function l() {
     return MessageStore.getMessage(channelId, messageId);
@@ -1541,7 +1677,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = fn;
   tmp7 = fn;
   let obj = channelId(576);
-}) : ((channelId) => {
+}) : (function ExecutedCommandPopout(channelId) {
   channelId = channelId.channelId;
   const messageId = channelId.messageId;
   ({ user, chatInputRef, author, applicationUser, guildId, messageType } = channelId);
@@ -1580,7 +1716,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       const messageInteractionData = InteractionActionCreatorsAll.fetchMessageInteractionData(channelId, messageId);
     }
   }, items1);
-  const obj2 = { value: messageId(6664)(messageId(6688).EXECUTED_COMMAND).analyticsLocations, children: null };
+  const obj2 = { value: messageId(6841)(messageId(6865).EXECUTED_COMMAND).analyticsLocations, children: null };
   const obj3 = { startExpanded: true, bodyStyles: tmp.container, children: null };
   let interactionData1;
   if (stateFromStores != null) {
@@ -1610,6 +1746,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp9Result = closure_23(closure_5, obj7);
   }
   obj3.children = tmp9Result;
-  obj2.children = closure_23(channelId(6652).BottomSheet, obj3);
-  return closure_23(channelId(6664).AnalyticsLocationProvider, obj2);
+  obj2.children = closure_23(channelId(6829).BottomSheet, obj3);
+  return closure_23(channelId(6841).AnalyticsLocationProvider, obj2);
 });

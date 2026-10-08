@@ -1,31 +1,32 @@
-// === Module 8351: UserProfileWidgetsBoard ===
+// === Module 13084: UserProfileWidgetsBoard ===
 
-// Module 8351 (UserProfileWidgetsBoard)
+// Module 13084 (UserProfileWidgetsBoard)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import StringUtils from "StringUtils" /* 2018 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7128 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7129 */;
-import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 8342 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8352 */;
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8353 */;
-import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 8619 */;
-import QuoteIcon from "QuoteIcon" /* 8620 */;
-import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 8626 */;
+import StringUtils from "StringUtils" /* 2030 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7314 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7315 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8850 */;
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8851 */;
+import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 13090 */;
+import QuoteIcon from "QuoteIcon" /* 13091 */;
+import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 13099 */;
+import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 13207 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ Image: hasOwnProperty, Pressable: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const UserProfileSections = fn(7865).UserProfileSections;
+({ Pressable: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+const UserProfileSections = fn(8283).UserProfileSections;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
+({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 const hitSlop = { top: 8, bottom: 8, left: 8, right: 8 };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { board: { gap: nativeDefault.space.PX_16 }, coverPlaceholder: null, favoriteRow: null, favoriteDetails: null, favoriteCover: null, list: null, listRow: null, listCover: null, listDetails: null, comment: null, commentText: null, grid: null, gridCover: null, tags: null, tag: null, viewMore: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj.coverPlaceholder = { borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -53,9 +54,9 @@ let obj12 = { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.P
 obj.tag = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE };
 let obj13 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE };
 obj.viewMore = { marginTop: nativeDefault.space.PX_12 };
-let closure_14 = createStyles.createStyles(obj);
+let closure_13 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
-let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((sourceUserId, applicationId) => {
+let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGamePress(sourceUserId, applicationId) {
   const cResult = c.c(3);
   if (cResult[0] === applicationId) {
     if (cResult[1] === sourceUserId) {
@@ -68,12 +69,12 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((sourceUserId, 
   cResult[1] = sourceUserId;
   cResult[2] = obj2;
   tmp4 = obj2;
-}) : ((sourceUserId, applicationId) => {
+}) : (function useGamePress(sourceUserId, applicationId) {
   const obj = { location: "UserProfileWidgetsBoard", applicationId, source: GameProfileAnalyticUtils.GameProfileSources.UserProfile, sourceUserId, trackEntryPointImpression: true, stackingBehavior: "stack" };
   return useOpenGameProfileModalDefault(obj);
 });
 ReactCompilerGating = fn(558);
-let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function useTrackUserProfileWidgetsView(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
   const cResult = require("c").c(5);
@@ -113,7 +114,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) =>
   tmp3 = items;
   tmp2 = fn;
   const obj2 = require("UserProfileAnalyticsContext");
-}) : ((arg0, arg1) => {
+}) : (function useTrackUserProfileWidgetsView(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
   trackUserProfileAction = require("UserProfileAnalyticsContext").useUserProfileAnalyticsContext().trackUserProfileAction;
@@ -136,10 +137,11 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) =>
   }, items);
 });
 ReactCompilerGating = fn(558);
-let closure_17 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_16 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function Cover(arg0) {
+  let obj = dependencyMap;
   const cResult = c.c(4);
   ({ uri, style } = arg0);
-  let coverPlaceholder = closure_14();
+  let coverPlaceholder = closure_13();
   if (cResult[0] === style) {
     if (cResult[1] === coverPlaceholder.coverPlaceholder) {
       if (cResult[2] === uri) {
@@ -148,46 +150,46 @@ let closure_17 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
     }
   }
   if (null != uri) {
-    const obj2 = { source: null, style: null };
+    obj = { source: null, style: null };
     const obj3 = { uri };
-    obj2.source = obj3;
+    obj.source = obj3;
     const items = [style, coverPlaceholder.coverPlaceholder];
-    obj2.style = items;
-    let tmp4 = v65535(hasOwnProperty, obj2);
+    obj.style = items;
+    let tmp4 = options(FastImageDefault, obj);
   } else {
     const obj4 = { style: null };
     const items1 = [style, coverPlaceholder.coverPlaceholder];
     obj4.style = items1;
-    tmp4 = v65535(React5, obj4);
+    tmp4 = options(timestampProducer, obj4);
   }
   cResult[0] = style;
   coverPlaceholder = coverPlaceholder.coverPlaceholder;
   cResult[1] = coverPlaceholder;
   cResult[2] = uri;
   cResult[3] = tmp4;
-}) : ((arg0) => {
+}) : (function Cover(arg0) {
   ({ uri, style } = arg0);
-  const tmp = closure_14();
+  const tmp = closure_13();
   if (null != uri) {
     const obj2 = { source: null, style: null };
     const obj3 = { uri };
     obj2.source = obj3;
     const items = [style, tmp.coverPlaceholder];
     obj2.style = items;
-    let tmp4 = v65535(hasOwnProperty, obj2);
+    let tmp4 = options(FastImageDefault, obj2);
   } else {
     const obj = { style: null };
     const items1 = [style, tmp.coverPlaceholder];
     obj.style = items1;
-    tmp4 = v65535(React5, obj);
+    tmp4 = options(timestampProducer, obj);
   }
   return tmp4;
 }));
 ReactCompilerGating = fn(558);
-let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((tags) => {
+let closure_17 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function WidgetTags(tags) {
   const cResult = require("c").c(13);
   tags = tags.tags;
-  const tmp2 = closure_14();
+  const tmp2 = closure_13();
   _require = tmp2;
   if (cResult[0] === tmp2) {
     if (cResult[1] === tags) {
@@ -202,7 +204,7 @@ let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((tags
         }
       }
       let obj2 = { style: tmp4, children: tmp5 };
-      const tmp17 = closure_10(tmp3, obj2);
+      const tmp17 = closure_9(tmp3, obj2);
       cResult[9] = tmp3;
       cResult[10] = tmp4;
       cResult[11] = tmp5;
@@ -212,7 +214,7 @@ let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((tags
   let obj = require("c");
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function p(tag) {
-      const widgetGameTagMetadata = closure_0(dependencyMap[13]).getWidgetGameTagMetadata(tag);
+      const widgetGameTagMetadata = closure_0(dependencyMap[14]).getWidgetGameTagMetadata(tag);
       if (null != widgetGameTagMetadata) {
         const obj2 = { tag, meta: widgetGameTagMetadata };
         const items = [obj2];
@@ -242,7 +244,7 @@ let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((tags
     tmp6 = null;
   } else {
     if (cResult[7] !== tmp2.tag) {
-      class I {
+      class P {
         constructor(arg0) {
           meta = tags.meta;
           obj = { style: closure_0.tag, children: null };
@@ -250,15 +252,15 @@ let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((tags
           items = [, ];
           items[0] = jsx(meta.icon, obj1);
           obj4 = { variant: "text-xs/medium", color: "text-muted", children: meta.getText() };
-          items[1] = jsx(closure_0(closure_2[14]).Text, obj4);
+          items[1] = jsx(closure_0(closure_2[15]).Text, obj4);
           obj.children = items;
           return jsxs(View, obj, tags.tag);
         }
       }
       cResult[7] = tmp2.tag;
-      cResult[8] = I;
+      cResult[8] = P;
     } else {
-      class I {
+      class P {
         constructor(arg0) {
           meta = tags.meta;
           obj = { style: closure_0.tag, children: null };
@@ -266,25 +268,25 @@ let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((tags
           items = [, ];
           items[0] = jsx(meta.icon, obj1);
           obj4 = { variant: "text-xs/medium", color: "text-muted", children: meta.getText() };
-          items[1] = jsx(closure_0(closure_2[14]).Text, obj4);
+          items[1] = jsx(closure_0(closure_2[15]).Text, obj4);
           obj.children = items;
           return jsxs(View, obj, tags.tag);
         }
       }
     }
-    const mapped = flatMapResult.map(I);
+    const mapped = flatMapResult.map(P);
     const tags2 = tmp2.tags;
   }
   const forResult = Symbol.for("react.early_return_sentinel");
-}) : ((tags) => {
+}) : (function WidgetTags(tags) {
   tags = tags.tags;
-  const tmp = closure_14();
+  const tmp = closure_13();
   closure_0 = tmp;
   if (tags == null) {
     tags = [];
   }
   const flatMapResult = tags.flatMap((tag) => {
-    const widgetGameTagMetadata = closure_0(dependencyMap[13]).getWidgetGameTagMetadata(tag);
+    const widgetGameTagMetadata = closure_0(dependencyMap[14]).getWidgetGameTagMetadata(tag);
     if (null != widgetGameTagMetadata) {
       const obj2 = { tag, meta: widgetGameTagMetadata };
       const items = [obj2];
@@ -301,27 +303,27 @@ let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((tags
       children: flatMapResult.map((meta) => {
           meta = meta.meta;
           const obj = { style: closure_0.tag, children: null };
-          const items = [v65535(meta.icon, { size: "xs", color: nativeDefault.colors.TEXT_MUTED }), ];
+          const items = [options(meta.icon, { size: "xs", color: nativeDefault.colors.TEXT_MUTED }), ];
           const obj2 = { size: "xs", color: nativeDefault.colors.TEXT_MUTED };
-          items[1] = v65535(Text_Text.Text, { variant: "text-xs/medium", color: "text-muted", children: meta.getText() });
+          items[1] = options(Text_Text.Text, { variant: "text-xs/medium", color: "text-muted", children: meta.getText() });
           obj.children = items;
-          return closure_2_11(React5, obj, meta.tag);
+          return collapsed(timestampProducer, obj, meta.tag);
         })
     };
-    tmp2 = closure_10(closure_7, obj);
+    tmp2 = closure_9(closure_6, obj);
   }
   return tmp2;
 }));
 ReactCompilerGating = fn(558);
-let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function FavoriteGameItem(arg0) {
   const cResult = c.c(39);
   ({ game, coverWidth } = arg0);
   ({ userId, disableInteraction } = arg0);
-  const tmp4 = closure_14();
+  const tmp4 = closure_13();
   ({ coverImageUrl, gameName } = useGameNameAndCoverImageDefault(game.gameId));
   let tmp6;
   if (!disableInteraction) {
-    tmp6 = closure_15(userId, game.gameId);
+    tmp6 = closure_14(userId, game.gameId);
   }
   _require = tmp6;
   if (cResult[0] !== tmp6) {
@@ -358,7 +360,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
         if (cResult[11] === tmp7) {
           if (cResult[12] === tmp8) {
             if (cResult[15] !== tmp6) {
-              class U {
+              class M {
                 constructor() {
                   tmp = undefined;
                   if (closure_0 != null) {
@@ -368,9 +370,9 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
                 }
               }
               cResult[15] = tmp6;
-              cResult[16] = U;
+              cResult[16] = M;
             } else {
-              class U {
+              class M {
                 constructor() {
                   tmp = undefined;
                   if (closure_0 != null) {
@@ -381,7 +383,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
               }
             }
             if (cResult[17] !== gameName) {
-              class U {
+              class M {
                 constructor() {
                   tmp = undefined;
                   if (closure_0 != null) {
@@ -391,11 +393,11 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
                 }
               }
               const obj3 = { variant: "text-md/semibold", color: "text-default", lineClamp: 2, children: gameName };
-              const tmp22 = v65535(Text_Text.Text, obj3);
+              const tmp22 = options(Text_Text.Text, obj3);
               cResult[17] = gameName;
               cResult[18] = tmp22;
             } else {
-              class U {
+              class M {
                 constructor() {
                   tmp = undefined;
                   if (closure_0 != null) {
@@ -406,7 +408,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
               }
             }
             if (cResult[19] === gameName) {
-              class U {
+              class M {
                 constructor() {
                   tmp = undefined;
                   if (closure_0 != null) {
@@ -416,10 +418,10 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
                 }
               }
             }
-            const obj4 = { onPress: U, disabled: null == tmp6, accessibilityRole: "button", accessibilityLabel: gameName, children: tmp21 };
-            const tmp26 = v65535(timestampProducer, obj4);
+            const obj4 = { onPress: M, disabled: null == tmp6, accessibilityRole: "button", accessibilityLabel: gameName, children: tmp21 };
+            const tmp26 = options(hasOwnProperty, obj4);
             cResult[19] = gameName;
-            cResult[20] = U;
+            cResult[20] = M;
             cResult[21] = null == tmp6;
             cResult[22] = tmp21;
             cResult[23] = tmp26;
@@ -427,7 +429,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
         }
       }
       const obj5 = { onPress: tmp7, disabled: tmp8, accessibilityRole: "button", accessibilityLabel: gameName, children: tmp11 };
-      const tmp18 = v65535(timestampProducer, obj5);
+      const tmp18 = options(hasOwnProperty, obj5);
       cResult[10] = gameName;
       cResult[11] = tmp7;
       cResult[12] = tmp8;
@@ -435,7 +437,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
       cResult[14] = tmp18;
     }
     const obj6 = { uri: coverImageUrl, style: tmp10 };
-    const tmp14 = v65535(closure_17, obj6);
+    const tmp14 = options(closure_16, obj6);
     cResult[7] = coverImageUrl;
     cResult[8] = tmp10;
     cResult[9] = tmp14;
@@ -447,16 +449,16 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
   cResult[6] = items;
   tmp10 = items;
   const tmp5 = useGameNameAndCoverImageDefault(game.gameId);
-}) : ((game) => {
+}) : (function FavoriteGameItem(game) {
   game = game.game;
   closure_0 = undefined;
   ({ userId, coverWidth, disableInteraction } = game);
-  let tmp = closure_14();
+  let tmp = closure_13();
   const tmp4 = useGameNameAndCoverImageDefault(game.gameId);
   const gameName = tmp4.gameName;
   let tmp5;
   if (!disableInteraction) {
-    tmp5 = closure_15(userId, game.gameId);
+    tmp5 = closure_14(userId, game.gameId);
   }
   closure_0 = tmp5;
   const obj = { style: tmp.favoriteRow, children: null };
@@ -476,11 +478,11 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
   const obj3 = { uri: tmp4.coverImageUrl, style: null };
   const items = [tmp.favoriteCover, { width: coverWidth }];
   obj3.style = items;
-  obj2.children = v65535(closure_17, obj3);
-  const items1 = [v65535(timestampProducer, obj2), ];
+  obj2.children = options(closure_16, obj3);
+  const items1 = [options(hasOwnProperty, obj2), ];
   const obj4 = { style: tmp.favoriteDetails, children: null };
   const items2 = [
-    v65535(timestampProducer, {
+    options(hasOwnProperty, {
       onPress() {
         let tmp;
         if (closure_0 != null) {
@@ -491,7 +493,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
       disabled: null == tmp5,
       accessibilityRole: "button",
       accessibilityLabel: gameName,
-      children: v65535(Text_Text.Text, { variant: "text-md/semibold", color: "text-default", lineClamp: 2, children: gameName })
+      children: options(Text_Text.Text, { variant: "text-md/semibold", color: "text-default", lineClamp: 2, children: gameName })
     }),
   ,
 
@@ -507,7 +509,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
     disabled: null == tmp5,
     accessibilityRole: "button",
     accessibilityLabel: gameName,
-    children: v65535(Text_Text.Text, { variant: "text-md/semibold", color: "text-default", lineClamp: 2, children: gameName })
+    children: options(Text_Text.Text, { variant: "text-md/semibold", color: "text-default", lineClamp: 2, children: gameName })
   };
   let trimmed;
   if (game.comment != null) {
@@ -518,29 +520,29 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
   if (!isNullOrEmptyResult) {
     const obj7 = { style: tmp.comment, children: null };
     const obj8 = { size: "xxs", color: nativeDefault.colors.TEXT_MUTED };
-    const items3 = [v65535(QuoteIcon.QuoteIcon, obj8), ];
+    const items3 = [options(QuoteIcon.QuoteIcon, obj8), ];
     const obj9 = { variant: "text-sm/normal", color: "text-muted", lineClamp: 3, style: tmp.commentText, children: game.comment };
-    items3[1] = v65535(Text_Text.Text, obj9);
+    items3[1] = options(Text_Text.Text, obj9);
     obj7.children = items3;
-    tmp6Result = closure_1_11(React5, obj7);
+    tmp6Result = collapsed(timestampProducer, obj7);
   }
   items2[1] = tmp6Result;
-  items2[2] = v65535(closure_18, { tags: game.tags });
+  items2[2] = options(closure_17, { tags: game.tags });
   obj4.children = items2;
-  items1[1] = closure_1_11(React5, obj4);
+  items1[1] = collapsed(timestampProducer, obj4);
   obj.children = items1;
-  return closure_1_11(React5, obj);
+  return collapsed(timestampProducer, obj);
 }));
 ReactCompilerGating = fn(558);
-let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function GameListRow(arg0) {
   const cResult = c.c(34);
   ({ game, coverWidth } = arg0);
   ({ userId, disableInteraction } = arg0);
-  const tmp4 = closure_14();
+  const tmp4 = closure_13();
   ({ coverImageUrl, gameName } = useGameNameAndCoverImageDefault(game.gameId));
   let tmp6;
   if (!disableInteraction) {
-    tmp6 = closure_15(userId, game.gameId);
+    tmp6 = closure_14(userId, game.gameId);
   }
   _require = tmp6;
   if (cResult[0] !== tmp6) {
@@ -577,7 +579,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
         if (cResult[11] === tmp7) {
           if (cResult[12] === tmp8) {
             if (cResult[15] !== tmp6) {
-              class U {
+              class M {
                 constructor() {
                   tmp = undefined;
                   if (closure_0 != null) {
@@ -587,9 +589,9 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
                 }
               }
               cResult[15] = tmp6;
-              cResult[16] = U;
+              cResult[16] = M;
             } else {
-              class U {
+              class M {
                 constructor() {
                   tmp = undefined;
                   if (closure_0 != null) {
@@ -600,7 +602,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
               }
             }
             if (cResult[17] !== gameName) {
-              class U {
+              class M {
                 constructor() {
                   tmp = undefined;
                   if (closure_0 != null) {
@@ -610,11 +612,11 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
                 }
               }
               const obj3 = { variant: "text-md/medium", color: "text-default", lineClamp: 2, children: gameName };
-              const tmp22 = v65535(Text_Text.Text, obj3);
+              const tmp22 = options(Text_Text.Text, obj3);
               cResult[17] = gameName;
               cResult[18] = tmp22;
             } else {
-              class U {
+              class M {
                 constructor() {
                   tmp = undefined;
                   if (closure_0 != null) {
@@ -625,7 +627,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
               }
             }
             if (cResult[19] === gameName) {
-              class U {
+              class M {
                 constructor() {
                   tmp = undefined;
                   if (closure_0 != null) {
@@ -635,10 +637,10 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
                 }
               }
             }
-            const obj4 = { onPress: U, disabled: null == tmp6, accessibilityRole: "button", accessibilityLabel: gameName, children: tmp21 };
-            const tmp26 = v65535(timestampProducer, obj4);
+            const obj4 = { onPress: M, disabled: null == tmp6, accessibilityRole: "button", accessibilityLabel: gameName, children: tmp21 };
+            const tmp26 = options(hasOwnProperty, obj4);
             cResult[19] = gameName;
-            cResult[20] = U;
+            cResult[20] = M;
             cResult[21] = null == tmp6;
             cResult[22] = tmp21;
             cResult[23] = tmp26;
@@ -646,7 +648,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
         }
       }
       const obj5 = { onPress: tmp7, disabled: tmp8, accessibilityRole: "button", accessibilityLabel: gameName, children: tmp11 };
-      const tmp18 = v65535(timestampProducer, obj5);
+      const tmp18 = options(hasOwnProperty, obj5);
       cResult[10] = gameName;
       cResult[11] = tmp7;
       cResult[12] = tmp8;
@@ -654,7 +656,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
       cResult[14] = tmp18;
     }
     const obj6 = { uri: coverImageUrl, style: tmp10 };
-    const tmp14 = v65535(closure_17, obj6);
+    const tmp14 = options(closure_16, obj6);
     cResult[7] = coverImageUrl;
     cResult[8] = tmp10;
     cResult[9] = tmp14;
@@ -666,16 +668,16 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
   cResult[6] = items;
   tmp10 = items;
   const tmp5 = useGameNameAndCoverImageDefault(game.gameId);
-}) : ((game) => {
+}) : (function GameListRow(game) {
   game = game.game;
   closure_0 = undefined;
   ({ userId, coverWidth, disableInteraction } = game);
-  let tmp = closure_14();
+  let tmp = closure_13();
   const tmp3 = useGameNameAndCoverImageDefault(game.gameId);
   const gameName = tmp3.gameName;
   let tmp4;
   if (!disableInteraction) {
-    tmp4 = closure_15(userId, game.gameId);
+    tmp4 = closure_14(userId, game.gameId);
   }
   closure_0 = tmp4;
   const obj = { style: tmp.listRow, children: null };
@@ -695,11 +697,11 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
   const obj3 = { uri: tmp3.coverImageUrl, style: null };
   const items = [tmp.listCover, { width: coverWidth }];
   obj3.style = items;
-  obj2.children = v65535(closure_17, obj3);
-  const items1 = [v65535(timestampProducer, obj2), ];
+  obj2.children = options(closure_16, obj3);
+  const items1 = [options(hasOwnProperty, obj2), ];
   const obj4 = { style: tmp.listDetails, children: null };
   const items2 = [
-    v65535(timestampProducer, {
+    options(hasOwnProperty, {
       onPress() {
         let tmp;
         if (closure_0 != null) {
@@ -710,25 +712,25 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
       disabled: null == tmp4,
       accessibilityRole: "button",
       accessibilityLabel: gameName,
-      children: v65535(Text_Text.Text, { variant: "text-md/medium", color: "text-default", lineClamp: 2, children: gameName })
+      children: options(Text_Text.Text, { variant: "text-md/medium", color: "text-default", lineClamp: 2, children: gameName })
     }),
-    v65535(closure_18, { tags: game.tags })
+    options(closure_17, { tags: game.tags })
   ];
   obj4.children = items2;
-  items1[1] = closure_1_11(React5, obj4);
+  items1[1] = collapsed(timestampProducer, obj4);
   obj.children = items1;
-  return closure_1_11(React5, obj);
+  return collapsed(timestampProducer, obj);
 }));
 ReactCompilerGating = fn(558);
-let closure_21 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function GameGridCover(arg0) {
   const cResult = c.c(15);
   ({ game, coverWidth } = arg0);
   ({ userId, disableInteraction } = arg0);
-  const tmp2 = closure_14();
+  const tmp2 = closure_13();
   ({ coverImageUrl, gameName } = useGameNameAndCoverImageDefault(game.gameId));
   let tmp4;
   if (!disableInteraction) {
-    tmp4 = closure_15(userId, game.gameId);
+    tmp4 = closure_14(userId, game.gameId);
   }
   closure_0 = tmp4;
   if (cResult[0] !== tmp4) {
@@ -772,7 +774,7 @@ let closure_21 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
         }
       }
       const obj3 = { onPress: tmp5, disabled: tmp6, accessibilityRole: "button", accessibilityLabel: gameName, children: tmp9 };
-      const tmp16 = v65535(timestampProducer, obj3);
+      const tmp16 = options(hasOwnProperty, obj3);
       cResult[10] = gameName;
       cResult[11] = tmp5;
       cResult[12] = tmp6;
@@ -781,7 +783,7 @@ let closure_21 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
       tmp13 = tmp16;
     }
     const obj4 = { uri: coverImageUrl, style: tmp8 };
-    const tmp12 = v65535(closure_17, obj4);
+    const tmp12 = options(closure_16, obj4);
     cResult[7] = coverImageUrl;
     cResult[8] = tmp8;
     cResult[9] = tmp12;
@@ -793,15 +795,15 @@ let closure_21 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
   cResult[6] = items;
   tmp8 = items;
   const tmp3 = useGameNameAndCoverImageDefault(game.gameId);
-}) : ((game) => {
+}) : (function GameGridCover(game) {
   game = game.game;
   closure_0 = undefined;
   ({ userId, coverWidth, disableInteraction } = game);
-  let tmp = closure_14();
+  let tmp = closure_13();
   ({ coverImageUrl, gameName } = useGameNameAndCoverImageDefault(game.gameId));
   let tmp3;
   if (!disableInteraction) {
-    tmp3 = closure_15(userId, game.gameId);
+    tmp3 = closure_14(userId, game.gameId);
   }
   closure_0 = tmp3;
   const obj = {
@@ -820,15 +822,15 @@ let closure_21 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
   const obj2 = { uri: coverImageUrl, style: null };
   const items = [tmp.gridCover, { width: coverWidth }];
   obj2.style = items;
-  obj.children = v65535(closure_17, obj2);
-  return v65535(timestampProducer, obj);
+  obj.children = options(closure_16, obj2);
+  return options(hasOwnProperty, obj);
 }));
 ReactCompilerGating = fn(558);
-const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
+const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function WidgetSection(userId) {
   const cResult = userId(576).c(66);
   userId = userId.userId;
   ({ widget, cardStyle, disableInteraction } = userId);
-  const tmp4 = closure_14();
+  const tmp4 = closure_13();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AuthenticationStore];
     cResult[0] = items;
@@ -865,7 +867,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((us
     arr2 = cResult[4];
   }
   const type = widget.type;
-  if (userId(7125).WidgetType.FAVORITE_GAMES === type) {
+  if (userId(7310).WidgetType.FAVORITE_GAMES === type) {
     if (cResult[5] === tmp12) {
       if (cResult[6] === result) {
         if (cResult[7] === disableInteraction) {
@@ -877,7 +879,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((us
     let tmp56 = tmp12 > num4;
     if (tmp56) {
       const obj2 = { userId, game: arr2[0], coverWidth: result, disableInteraction };
-      tmp56 = closure_10(closure_19, obj2);
+      tmp56 = closure_9(closure_18, obj2);
     }
     cResult[5] = tmp12;
     cResult[6] = result;
@@ -887,7 +889,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((us
     num4 = 10;
     cResult[10] = tmp56;
   } else {
-    if (tmp(7125).WidgetType.CURRENT_GAMES === type) {
+    if (tmp(7310).WidgetType.CURRENT_GAMES === type) {
       if (cResult[11] === tmp10) {
         if (cResult[12] === arr2) {
           let arr5 = cResult[13];
@@ -918,7 +920,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((us
                         const obj3 = { children: null };
                         const items1 = [tmp40, tmp44];
                         obj3.children = items1;
-                        const tmp54 = closure_11(closure_12, obj3);
+                        const tmp54 = closure_10(closure_11, obj3);
                         cResult[28] = tmp40;
                         cResult[29] = tmp44;
                         cResult[30] = tmp54;
@@ -951,12 +953,12 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((us
                       stringResult = intl2.formatToPlainString(tmp(1126).t.zr0Y5R, obj5);
                     }
                     const obj6 = { variant: "text-sm/medium", color: "text-muted", children: stringResult };
-                    obj4.children = closure_10(tmp(4892).Text, obj6);
-                    closure_10(closure_6, obj4);
+                    obj4.children = closure_9(tmp(5086).Text, obj6);
+                    closure_9(closure_5, obj4);
                   }
                 }
                 const obj7 = { style: tmp4.list, children: tmp38 };
-                const tmp43 = closure_10(closure_7, obj7);
+                const tmp43 = closure_9(closure_6, obj7);
                 cResult[20] = tmp4.list;
                 cResult[21] = tmp38;
                 cResult[22] = tmp43;
@@ -965,7 +967,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((us
             }
           }
         }
-        const tmp39 = tmp12 > num4 && arr5.map((game) => v65535(closure_20, { userId, game, coverWidth: result, disableInteraction }, game.gameId));
+        const tmp39 = tmp12 > num4 && arr5.map((game) => options(closure_19, { userId, game, coverWidth: result, disableInteraction }, game.gameId));
         cResult[14] = tmp12;
         cResult[15] = result;
         cResult[16] = disableInteraction;
@@ -983,8 +985,8 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((us
       cResult[13] = substr;
       arr5 = substr;
     } else {
-      if (tmp(7125).WidgetType.WANT_TO_PLAY_GAMES !== type) {
-        if (tmp(7125).WidgetType.PLAYED_GAMES !== type) {
+      if (tmp(7310).WidgetType.WANT_TO_PLAY_GAMES !== type) {
+        if (tmp(7310).WidgetType.PLAYED_GAMES !== type) {
           return null;
         }
       }
@@ -1017,7 +1019,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((us
                         const obj8 = { children: null };
                         const items2 = [tmp21, tmp25];
                         obj8.children = items2;
-                        const tmp35 = closure_11(closure_12, obj8);
+                        const tmp35 = closure_10(closure_11, obj8);
                         cResult[48] = tmp21;
                         cResult[49] = tmp25;
                         cResult[50] = tmp35;
@@ -1050,12 +1052,12 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((us
                       stringResult1 = intl.formatToPlainString(tmp(1126).t.zr0Y5R, obj10);
                     }
                     const obj11 = { variant: "text-sm/medium", color: "text-muted", children: stringResult1 };
-                    obj9.children = closure_10(tmp(4892).Text, obj11);
-                    closure_10(closure_6, obj9);
+                    obj9.children = closure_9(tmp(5086).Text, obj11);
+                    closure_9(closure_5, obj9);
                   }
                 }
                 const obj12 = { style: tmp4.grid, children: tmp19 };
-                const tmp24 = closure_10(closure_7, obj12);
+                const tmp24 = closure_9(closure_6, obj12);
                 cResult[40] = tmp4.grid;
                 cResult[41] = tmp19;
                 cResult[42] = tmp24;
@@ -1064,7 +1066,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((us
             }
           }
         }
-        const tmp20 = tmp12 > num4 && arr3.map((game) => v65535(closure_21, { userId, game, coverWidth: result, disableInteraction }, game.gameId));
+        const tmp20 = tmp12 > num4 && arr3.map((game) => options(closure_20, { userId, game, coverWidth: result, disableInteraction }, game.gameId));
         cResult[34] = tmp12;
         cResult[35] = result;
         cResult[36] = disableInteraction;
@@ -1083,11 +1085,11 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((us
       arr3 = substr1;
     }
     if (cResult[51] !== widget) {
-      const widgetTitle = tmp(8622).getWidgetTitle(widget);
+      const widgetTitle = tmp(13093).getWidgetTitle(widget);
       cResult[51] = widget;
       cResult[52] = widgetTitle;
       let tmp60 = widgetTitle;
-      const tmpResult2 = tmp(8622);
+      const tmpResult2 = tmp(13093);
     } else {
       tmp60 = cResult[52];
     }
@@ -1099,69 +1101,51 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((us
           }
           const _Symbol = Symbol;
           if (cResult[58] === Symbol.for("react.memo_cache_sentinel")) {
-            class V {
-              constructor(arg0) {
-                return closure_3(userId.nativeEvent.layout.width);
-              }
-            }
-            cResult[58] = V;
+            const fn2 = function z(nativeEvent) {
+              return _slicedToArray(nativeEvent.nativeEvent.layout.width);
+            };
+            cResult[58] = fn2;
+            let tmp65 = fn2;
           } else {
-            class V {
-              constructor(arg0) {
-                return closure_3(userId.nativeEvent.layout.width);
-              }
-            }
+            tmp65 = cResult[58];
           }
           if (cResult[59] !== tmp32) {
-            class V {
-              constructor(arg0) {
-                return closure_3(userId.nativeEvent.layout.width);
-              }
-            }
-            const obj13 = { onLayout: V, children: tmp32 };
-            const tmp67 = closure_10(closure_7, obj13);
+            const obj13 = { onLayout: tmp65, children: tmp32 };
+            const tmp69 = closure_9(closure_6, obj13);
             cResult[59] = tmp32;
-            cResult[60] = tmp67;
+            cResult[60] = tmp69;
+            let tmp66 = tmp69;
           } else {
-            class V {
-              constructor(arg0) {
-                return closure_3(userId.nativeEvent.layout.width);
-              }
-            }
+            tmp66 = cResult[60];
           }
           if (cResult[61] === cardStyle) {
-            class V {
-              constructor(arg0) {
-                return closure_3(userId.nativeEvent.layout.width);
+            if (cResult[62] === tmp60) {
+              if (cResult[63] === tmp62) {
+                if (cResult[64] === tmp66) {
+                  let tmp70 = cResult[65];
+                }
+                return tmp70;
               }
             }
           }
-          const obj14 = { style: cardStyle, title: tmp60, trailingAction: tmp62, children: tmp65 };
-          const tmp70 = closure_10(disableInteraction(6713), obj14);
+          const obj14 = { style: cardStyle, title: tmp60, trailingAction: tmp62, children: tmp66 };
+          const tmp72 = closure_9(disableInteraction(6890), obj14);
           cResult[61] = cardStyle;
           cResult[62] = tmp60;
           cResult[63] = tmp62;
-          cResult[64] = tmp65;
-          cResult[65] = tmp70;
+          cResult[64] = tmp66;
+          cResult[65] = tmp72;
+          tmp70 = tmp72;
         }
       }
     }
     let tmp63 = !stateFromStores;
     if (!stateFromStores) {
-      class V {
-        constructor(arg0) {
-          return closure_3(userId.nativeEvent.layout.width);
-        }
-      }
+      tmp63 = !disableInteraction;
     }
     if (tmp63) {
-      class V {
-        constructor(arg0) {
-          return closure_3(userId.nativeEvent.layout.width);
-        }
-      }
       const obj15 = { userId, widget };
-      tmp63 = closure_10(disableInteraction(8347), obj15);
+      tmp63 = closure_9(disableInteraction(13097), obj15);
     }
     cResult[53] = disableInteraction;
     cResult[54] = stateFromStores;
@@ -1171,16 +1155,16 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((us
     tmp62 = tmp63;
   }
   const tmp11 = _slicedToArray(noop.useState(0), 2);
-}) : ((style) => {
+}) : (function WidgetSection(style) {
   const userId = style.userId;
   const widget = style.widget;
   const disableInteraction = style.disableInteraction;
   _slicedToArray = undefined;
   noop = undefined;
-  const tmp = closure_14();
+  const tmp = closure_13();
   const items = [AuthenticationStore];
-  const stateFromStores = userId(disableInteraction[18]).useStateFromStores(items, () => AuthenticationStore.getId() === userId);
-  const obj = userId(disableInteraction[18]);
+  const stateFromStores = userId(disableInteraction[19]).useStateFromStores(items, () => AuthenticationStore.getId() === userId);
+  const obj = userId(disableInteraction[19]);
   [tmp6, c3] = noop.useState(false);
   const tmp5 = _slicedToArray(noop.useState(false), 2);
   [tmp8, c4] = noop.useState(0);
@@ -1189,14 +1173,14 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((us
   const items1 = [widget.games];
   const memo = noop.useMemo(() => _modDef12.uniqBy(widget.games, "gameId"), items1);
   const type = widget.type;
-  if (userId(disableInteraction[20]).WidgetType.FAVORITE_GAMES === type) {
+  if (userId(disableInteraction[21]).WidgetType.FAVORITE_GAMES === type) {
     let tmp33 = tmp8 > 0;
     if (tmp33) {
       const obj2 = { userId, game: memo[0], coverWidth: result, disableInteraction };
-      tmp33 = closure_10(closure_19, obj2);
+      tmp33 = closure_9(closure_18, obj2);
     }
     let tmp13Result = tmp33;
-  } else if (tmp2(tmp3[20]).WidgetType.CURRENT_GAMES === type) {
+  } else if (tmp2(tmp3[21]).WidgetType.CURRENT_GAMES === type) {
     let substr = memo;
     if (!tmp6) {
       substr = memo.slice(0, 2);
@@ -1204,15 +1188,15 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((us
     const obj3 = { style: tmp.list, children: null };
     let mapped = tmp8 > 0;
     if (mapped) {
-      mapped = substr.map((game) => v65535(closure_20, { userId, game, coverWidth, disableInteraction }, game.gameId));
+      mapped = substr.map((game) => options(closure_19, { userId, game, coverWidth, disableInteraction }, game.gameId));
     }
     obj3.children = mapped;
-    const items2 = [closure_10(closure_7, obj3), ];
+    const items2 = [closure_9(closure_6, obj3), ];
     if (memo.length <= 2) {
       const obj4 = { children: null };
       items2[1] = tmp23;
       obj4.children = items2;
-      tmp13Result = closure_11(closure_12, obj4);
+      tmp13Result = closure_10(closure_11, obj4);
     } else {
       const obj5 = {
         style: tmp.viewMore,
@@ -1223,20 +1207,20 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((us
         accessibilityRole: "button",
         children: null
       };
-      const intl2 = tmp2(tmp3[21]).intl;
+      const intl2 = tmp2(tmp3[22]).intl;
       if (tmp6) {
-        let stringResult = intl2.string(tmp2(tmp3[21]).t["6MwJo/"]);
+        let stringResult = intl2.string(tmp2(tmp3[22]).t["6MwJo/"]);
       } else {
         const obj6 = { numberOfItems: memo.length - 2 };
-        stringResult = intl2.formatToPlainString(tmp2(tmp3[21]).t.zr0Y5R, obj6);
+        stringResult = intl2.formatToPlainString(tmp2(tmp3[22]).t.zr0Y5R, obj6);
       }
       const obj7 = { variant: "text-sm/medium", color: "text-muted", children: stringResult };
-      obj5.children = closure_10(tmp2(tmp3[14]).Text, obj7);
-      closure_10(closure_6, obj5);
+      obj5.children = closure_9(tmp2(tmp3[15]).Text, obj7);
+      closure_9(c5, obj5);
     }
   } else {
-    if (tmp2(tmp3[20]).WidgetType.WANT_TO_PLAY_GAMES !== type) {
-      if (tmp2(tmp3[20]).WidgetType.PLAYED_GAMES !== type) {
+    if (tmp2(tmp3[21]).WidgetType.WANT_TO_PLAY_GAMES !== type) {
+      if (tmp2(tmp3[21]).WidgetType.PLAYED_GAMES !== type) {
         return null;
       }
     }
@@ -1247,15 +1231,15 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((us
     const obj8 = { style: tmp.grid, children: null };
     let mapped1 = tmp8 > 0;
     if (mapped1) {
-      mapped1 = substr1.map((game) => v65535(closure_21, { userId, game, coverWidth, disableInteraction }, game.gameId));
+      mapped1 = substr1.map((game) => options(closure_20, { userId, game, coverWidth, disableInteraction }, game.gameId));
     }
     obj8.children = mapped1;
-    const items3 = [closure_10(closure_7, obj8), ];
+    const items3 = [closure_9(closure_6, obj8), ];
     if (memo.length <= 6) {
       const obj9 = { children: null };
       items3[1] = tmp12;
       obj9.children = items3;
-      tmp13Result = closure_11(closure_12, obj9);
+      tmp13Result = closure_10(closure_11, obj9);
     } else {
       const obj10 = {
         style: tmp.viewMore,
@@ -1266,41 +1250,41 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((us
         accessibilityRole: "button",
         children: null
       };
-      const intl = tmp2(tmp3[21]).intl;
+      const intl = tmp2(tmp3[22]).intl;
       if (tmp6) {
-        let stringResult1 = intl.string(tmp2(tmp3[21]).t["6MwJo/"]);
+        let stringResult1 = intl.string(tmp2(tmp3[22]).t["6MwJo/"]);
       } else {
         const obj11 = { numberOfItems: memo.length - 6 };
-        stringResult1 = intl.formatToPlainString(tmp2(tmp3[21]).t.zr0Y5R, obj11);
+        stringResult1 = intl.formatToPlainString(tmp2(tmp3[22]).t.zr0Y5R, obj11);
       }
       const obj12 = { variant: "text-sm/medium", color: "text-muted", children: stringResult1 };
-      obj10.children = closure_10(tmp2(tmp3[14]).Text, obj12);
-      closure_10(closure_6, obj10);
+      obj10.children = closure_9(tmp2(tmp3[15]).Text, obj12);
+      closure_9(c5, obj10);
     }
   }
   const obj13 = { style: style.cardStyle, title: null, trailingAction: null, children: null };
   const tmp7 = _slicedToArray(noop.useState(0), 2);
-  const tmp9Result = widget(disableInteraction[24]);
-  obj13.title = userId(disableInteraction[22]).getWidgetTitle(widget);
+  const tmp9Result = widget(disableInteraction[25]);
+  obj13.title = userId(disableInteraction[23]).getWidgetTitle(widget);
   let tmp36Result = !stateFromStores;
   if (!stateFromStores) {
     tmp36Result = !disableInteraction;
   }
   if (tmp36Result) {
     const obj14 = { userId, widget };
-    tmp36Result = closure_10(tmp9(tmp3[23]), obj14);
+    tmp36Result = closure_9(tmp9(tmp3[24]), obj14);
   }
   obj13.trailingAction = tmp36Result;
-  obj13.children = closure_10(closure_7, {
+  obj13.children = closure_9(closure_6, {
     onLayout(nativeEvent) {
       return _undefined2(nativeEvent.nativeEvent.layout.width);
     },
     children: tmp13Result
   });
-  return closure_10(tmp9Result, obj13);
+  return closure_9(tmp9Result, obj13);
 }));
 ReactCompilerGating = fn(558);
-let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function WidgetRenderer(arg0) {
   let tmp2 = dependencyMap;
   const cResult = c.c(12);
   ({ userId, widget, cardStyle } = arg0);
@@ -1310,7 +1294,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
     const obj2 = { userId, widget, cardStyle };
-    tmp2 = v65535(UserProfileApplicationWidgetCardDefault, obj2);
+    tmp2 = options(UserProfileApplicationWidgetCardDefault, obj2);
     cResult[0] = cardStyle;
     cResult[1] = userId;
     cResult[2] = widget;
@@ -1321,7 +1305,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
     const obj3 = { userId, widget, cardStyle };
-    const tmp11 = v65535(UserProfilePersonalWidgetCardDefault, obj3);
+    const tmp11 = options(UserProfilePersonalWidgetCardDefault, obj3);
     cResult[4] = cardStyle;
     cResult[5] = userId;
     cResult[6] = widget;
@@ -1336,24 +1320,24 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
     const obj4 = { userId, widget, cardStyle };
-    const tmp7 = v65535(memoResult, obj4);
+    const tmp7 = options(memoResult, obj4);
     cResult[8] = cardStyle;
     cResult[9] = userId;
     cResult[10] = widget;
     cResult[11] = tmp7;
     tmp4 = tmp7;
   }
-}) : ((arg0) => {
+}) : (function WidgetRenderer(arg0) {
   ({ userId, widget, cardStyle } = arg0);
   if (widget instanceof UserProfileApplicationWidgetTypes.ApplicationWidget) {
     const obj2 = { userId, widget, cardStyle };
-    let tmp3Result = v65535(UserProfileApplicationWidgetCardDefault, obj2);
+    let tmp3Result = options(UserProfileApplicationWidgetCardDefault, obj2);
   } else if (widget instanceof UserProfilePersonalWidget.UserProfilePersonalWidget) {
     const obj3 = { userId, widget, cardStyle };
-    tmp3Result = v65535(UserProfilePersonalWidgetCardDefault, obj3);
+    tmp3Result = options(UserProfilePersonalWidgetCardDefault, obj3);
   } else {
     const obj = { userId, widget, cardStyle };
-    tmp3Result = v65535(memoResult, obj);
+    tmp3Result = options(memoResult, obj);
   }
   return tmp3Result;
 });
@@ -1362,16 +1346,16 @@ let obj14 = { marginTop: nativeDefault.space.PX_12 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileWidgetsBoard.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileWidgetsBoard(userId) {
   const cResult = userId(576).c(10);
   userId = userId.userId;
   ({ isVisible, cardStyle } = userId);
-  const tmp5 = closure_14();
+  const tmp5 = closure_13();
   const obj = userId(576);
   const tmp4 = undefined === isVisible || isVisible;
-  const displayableBoardWidgets = userId(12719).useDisplayableBoardWidgets(userId);
+  const displayableBoardWidgets = userId(13211).useDisplayableBoardWidgets(userId);
   let num = 0;
-  closure_16(tmp4, displayableBoardWidgets.length > 0);
+  closure_15(tmp4, displayableBoardWidgets.length > 0);
   if (0 === displayableBoardWidgets.length) {
     return null;
   } else {
@@ -1385,7 +1369,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
             return tmp11;
           }
           const obj2 = { style: tmp16, children: cResult[3] };
-          const tmp14 = closure_10(closure_7, obj2);
+          const tmp14 = closure_9(closure_6, obj2);
           cResult[7] = tmp5.board;
           cResult[8] = cResult[3];
           cResult[9] = tmp14;
@@ -1405,28 +1389,28 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
       cResult[3] = mapped;
     }
     const fn = function f(widget) {
-      return v65535(closure_23, { userId, widget, cardStyle }, widget.getUniqueKey());
+      return options(closure_22, { userId, widget, cardStyle }, widget.getUniqueKey());
     };
     cResult[4] = cardStyle;
     cResult[5] = userId;
     cResult[6] = fn;
     tmp8 = fn;
   }
-  const tmpResult = userId(12719);
-}) : ((userId) => {
+  const tmpResult = userId(13211);
+}) : (function UserProfileWidgetsBoard(userId) {
   userId = userId.userId;
   let flag = userId.isVisible;
   if (flag === undefined) {
     flag = true;
   }
   const cardStyle = userId.cardStyle;
-  const tmp = closure_14();
-  const displayableBoardWidgets = userId(12719).useDisplayableBoardWidgets(userId);
-  closure_16(flag, displayableBoardWidgets.length > 0);
+  const tmp = closure_13();
+  const displayableBoardWidgets = userId(13211).useDisplayableBoardWidgets(userId);
+  closure_15(flag, displayableBoardWidgets.length > 0);
   let tmp3 = null;
   if (0 !== displayableBoardWidgets.length) {
-    const obj2 = { style: tmp.board, children: displayableBoardWidgets.map((widget) => v65535(closure_23, { userId, widget, cardStyle }, widget.getUniqueKey())) };
-    tmp3 = closure_10(closure_7, obj2);
+    const obj2 = { style: tmp.board, children: displayableBoardWidgets.map((widget) => options(closure_22, { userId, widget, cardStyle }, widget.getUniqueKey())) };
+    tmp3 = closure_9(closure_6, obj2);
   }
   return tmp3;
 });

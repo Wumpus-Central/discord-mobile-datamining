@@ -1,21 +1,21 @@
-// === Module 15921: useInitialRegistrationStep ===
+// === Module 16181: useInitialRegistrationStep ===
 
-// Module 15921 (useInitialRegistrationStep)
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6089 */;
-import RegistrationStepsUtils from "RegistrationStepsUtils" /* 15905 */;
+// Module 16181 (useInitialRegistrationStep)
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 5936 */;
+import RegistrationStepsUtils from "RegistrationStepsUtils" /* 16164 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ConsentStore from "ConsentStore" /* 6091 */;
+import ConsentStore from "ConsentStore" /* 5938 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const resetRegistration = fn(15906).resetRegistration;
+const resetRegistration = fn(16165).resetRegistration;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/useInitialRegistrationStep.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useInitialRegistrationStep(arg0) {
   _require = arg0;
   const cResult = require("c").c(9);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -39,7 +39,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     const effect = noop.useEffect(tmp8, tmp9);
     if (cResult[6] !== arg0) {
-      class F {
+      class R {
         constructor() {
           obj = closure_0(closure_2[4]);
           if (closure_0 === obj.getRegistrationSteps()[1]) {
@@ -57,11 +57,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
       const items1 = [arg0];
       cResult[6] = arg0;
-      cResult[7] = F;
+      cResult[7] = R;
       cResult[8] = items1;
       let tmp12 = items1;
     } else {
-      class F {
+      class R {
         constructor() {
           obj = closure_0(closure_2[4]);
           if (closure_0 === obj.getRegistrationSteps()[1]) {
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
       tmp12 = cResult[8];
     }
-    const effect1 = noop.useEffect(F, tmp12);
+    const effect1 = noop.useEffect(R, tmp12);
   }
   class S {
     constructor() {
@@ -107,7 +107,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   tmp9 = items2;
   tmp8 = S;
   const tmpResult = require("initialize");
-}) : ((arg0) => {
+}) : (function useInitialRegistrationStep(arg0) {
   _require = arg0;
   const items = [ConsentStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => authenticationConsentRequired.getAuthenticationConsentRequired());

@@ -1,15 +1,15 @@
-// === Module 12020: SmartSearchExperiments ===
+// === Module 12093: SmartSearchExperiments ===
 
-// Module 12020 (SmartSearchExperiments)
-import GuildStore from "GuildStore" /* 2074 */;
+// Module 12093 (SmartSearchExperiments)
+import GuildStore from "GuildStore" /* 2086 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const GuildFeatures = fn(1085).GuildFeatures;
-let ApexExperiment = fn(1440);
+let ApexExperiment = fn(1452);
 const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-09-mobile-nlp-search-user-flag", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
-ApexExperiment = fn(1440);
+ApexExperiment = fn(1452);
 const apexExperiment1 = ApexExperiment.createApexExperiment({ kind: "guild", name: "2026-09-mobile-nlp-search-guild-experiment", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -39,7 +39,7 @@ export const isNlpSearchEnabled = function isNlpSearchEnabled(guildId, suggested
     return false;
   }
 };
-export const useIsNlpSearchEnabled = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, location) => {
+export const useIsNlpSearchEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsNlpSearchEnabled(arg0, location) {
   let str = arg0;
   _require = arg0;
   const cResult = require("c").c(9);
@@ -108,7 +108,7 @@ export const useIsNlpSearchEnabled = ReactCompilerGating.isReactCompilerEnabled(
   cResult[8] = obj3;
   tmp9 = obj3;
   const tmpResult = require("initialize");
-}) : ((arg0, location) => {
+}) : (function useIsNlpSearchEnabled(arg0, location) {
   _require = arg0;
   const items = [GuildStore];
   const items1 = [arg0];

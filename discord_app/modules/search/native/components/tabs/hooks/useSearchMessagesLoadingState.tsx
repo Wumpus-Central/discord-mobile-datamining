@@ -1,19 +1,19 @@
-// === Module 16905: useSearchMessagesLoadingState ===
+// === Module 17186: useSearchMessagesLoadingState ===
 
-// Module 16905 (useSearchMessagesLoadingState)
+// Module 17186 (useSearchMessagesLoadingState)
 import initialize from "initialize" /* 504 */;
-import SearchUtils from "SearchUtils" /* 11987 */;
-import usePlaceholderStyles from "usePlaceholderStyles" /* 16837 */;
-import SearchMessageStore from "SearchMessageStore" /* 6794 */;
-import SearchQueryStore from "SearchQueryStore" /* 11994 */;
+import SearchUtils from "SearchUtils" /* 12060 */;
+import usePlaceholderStyles from "usePlaceholderStyles" /* 17116 */;
+import SearchMessageStore from "SearchMessageStore" /* 6067 */;
+import SearchQueryStore from "SearchQueryStore" /* 12067 */;
 
 require = fn;
-let closure_4 = fn(7524).SEARCH_TABS_TO_SEARCH_QUERY_LIMITS;
+let closure_4 = fn(9247).SEARCH_TABS_TO_SEARCH_QUERY_LIMITS;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/tabs/hooks/useSearchMessagesLoadingState.tsx");
 
-export const useSearchMessagesLoadingState = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => {
+export const useSearchMessagesLoadingState = ReactCompilerGating.isReactCompilerEnabled() ? (function useSearchMessagesLoadingState(searchContext) {
   const cResult = searchContext(tab[4]).c(8);
   searchContext = searchContext.searchContext;
   tab = searchContext.tab;
@@ -69,7 +69,7 @@ export const useSearchMessagesLoadingState = ReactCompilerGating.isReactCompiler
   cResult[2] = obj2;
   tmp4 = obj2;
   const obj = searchContext(tab[4]);
-}) : ((arg0) => {
+}) : (function useSearchMessagesLoadingState(arg0) {
   ({ searchContext: require, tab: dependencyMap } = arg0);
   ({ placeholderHeight, numColumns } = arg0);
   closure_2 = usePlaceholderStyles.useFullscreenPlaceholderCount({ placeholderHeight, numColumns });

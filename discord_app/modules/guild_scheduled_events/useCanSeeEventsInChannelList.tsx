@@ -1,14 +1,14 @@
-// === Module 12024: useCanSeeEventsInChannelList ===
+// === Module 12097: useCanSeeEventsInChannelList ===
 
-// Module 12024 (useCanSeeEventsInChannelList)
-import useCanCreateAnEventDefault from "useCanCreateAnEvent" /* 9206 */;
-import useIsHubForGuildDefault from "useIsHubForGuild" /* 12025 */;
+// Module 12097 (useCanSeeEventsInChannelList)
+import useCanCreateAnEventDefault from "useCanCreateAnEvent" /* 8629 */;
+import useIsHubForGuildDefault from "useIsHubForGuild" /* 12098 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useCanSeeEventsInChannelList.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCanSeeEventsInChannelList(arg0) {
   let tmp = useCanCreateAnEventDefault(arg0);
   const tmp2 = useIsHubForGuildDefault(arg0);
   let tmp3 = !tmp2;
@@ -19,7 +19,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp3 = tmp;
   }
   return tmp3;
-}) : ((arg0) => {
+}) : (function useCanSeeEventsInChannelList(arg0) {
   let tmp = useCanCreateAnEventDefault(arg0);
   const tmp2 = useIsHubForGuildDefault(arg0);
   let tmp3 = !tmp2;

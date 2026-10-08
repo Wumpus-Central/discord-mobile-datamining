@@ -1,17 +1,17 @@
-// === Module 18166: AppShare ===
+// === Module 18453: AppShare ===
 
-// Module 18166 (AppShare)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import useMountEffectDefault from "useMountEffect" /* 5597 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6089 */;
-import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 6997 */;
-import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7295 */;
-import NativeShareManagerModuleDefault from "NativeShareManagerModule" /* 8049 */;
-import ShareScreenDefault from "ShareScreen" /* 13730 */;
-import AccessibilityManagerDefault from "AccessibilityManager" /* 14218 */;
-import _modDef14412 from "module_14412" /* 14412 */;
-import AppToastContainerDefault from "AppToastContainer" /* 17168 */;
+// Module 18453 (AppShare)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import useMountEffectDefault from "useMountEffect" /* 5392 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 5936 */;
+import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7185 */;
+import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7500 */;
+import NativeShareManagerModuleDefault from "NativeShareManagerModule" /* 8458 */;
+import ShareScreenDefault from "ShareScreen" /* 13952 */;
+import AccessibilityManagerDefault from "AccessibilityManager" /* 14517 */;
+import _modDef14638 from "module_14638" /* 14638 */;
+import AppToastContainerDefault from "AppToastContainer" /* 17449 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -20,14 +20,14 @@ const require = globalThis.__r;
 
 require = fn;
 fn(17).BackHandler;
-const AnalyticsTrackingStore = fn(6982);
-const ShareStore = fn(14178);
+const AnalyticsTrackingStore = fn(7171);
+const ShareStore = fn(14477);
 const AnalyticEvents = fn(1085).AnalyticEvents;
-let closure_8 = fn(12072).MultiAccountSwitchLocation;
+let closure_8 = fn(12145).MultiAccountSwitchLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAuthenticated() {
   const cResult = stateFromStores(576).c(5);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AuthenticationStore];
@@ -66,7 +66,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   const effect = noop.useEffect(tmp8, tmp9);
   let tmpResult = stateFromStores(504);
-}) : (() => {
+}) : (function useAuthenticated() {
   const items = [AuthenticationStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => authenticated.isAuthenticated());
   const items1 = [stateFromStores];
@@ -82,7 +82,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }, items1);
 });
 ReactCompilerGating = fn(558);
-let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((targetUserId) => {
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function useInitialization(targetUserId) {
   const cResult = targetUserId(576).c(8);
   targetUserId = targetUserId.targetUserId;
   [first, dependencyMap] = noop.useState(false);
@@ -192,7 +192,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((targetUserId) 
     }
   }
   return first;
-}) : ((targetUserId) => {
+}) : (function useInitialization(targetUserId) {
   targetUserId = targetUserId.targetUserId;
   first = undefined;
   closure_2 = undefined;
@@ -237,7 +237,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/share/native/AppShare.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((attachments) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppShare(attachments) {
   _require = attachments;
   const cResult = require("c").c(14);
   const tmp4 = closure_12(attachments);
@@ -272,9 +272,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((attachments) => 
         const _Symbol = Symbol;
         if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
           let obj2 = { appEntryKey: share };
-          const tmp27 = closure_9(tmp(17115).ActionSheetContainer, obj2);
+          const tmp27 = closure_9(tmp(17396).ActionSheetContainer, obj2);
           const tmp28 = closure_9(AppToastContainerDefault, { appChrome: false });
-          const tmp29 = closure_9(tmp(5720).AlertModalContainer, {});
+          const tmp29 = closure_9(tmp(5303).AlertModalContainer, {});
           cResult[9] = tmp27;
           cResult[10] = tmp28;
           cResult[11] = tmp29;
@@ -290,7 +290,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((attachments) => 
           const obj3 = { appEntryKey: share, children: null };
           const items = [tmp13, tmp22, tmp23, tmp24];
           obj3.children = items;
-          const tmp33 = closure_10(_modDef14412, obj3);
+          const tmp33 = closure_10(_modDef14638, obj3);
           cResult[12] = tmp13;
           cResult[13] = tmp33;
           let tmp30 = tmp33;
@@ -301,7 +301,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((attachments) => 
       }
     }
     if (!tmp4) {
-      const tmp14Result = closure_9(tmp(6542).SceneLoadingIndicator, {});
+      const tmp14Result = closure_9(tmp(6718).SceneLoadingIndicator, {});
       cResult[6] = tmp4;
       cResult[7] = attachments;
       cResult[8] = tmp14Result;
@@ -315,7 +315,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((attachments) => 
     }
     obj4.onClose = exitApp;
     closure_9(tmp11Result, obj4);
-    tmpResult = tmp(1615);
+    tmpResult = tmp(1627);
   }
   const fn = function c() {
     let tmp2 = null != attachments.text;
@@ -333,7 +333,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((attachments) => 
   tmp7 = items1;
   tmp6 = fn;
   let obj = require("c");
-}) : ((attachments) => {
+}) : (function AppShare(attachments) {
   _require = attachments;
   closure_11();
   const items = [attachments.attachments.length, attachments.text];

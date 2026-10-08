@@ -1,16 +1,16 @@
-// === Module 10604: UnifiedGiftModalRecipientSelectScreen ===
+// === Module 10201: UnifiedGiftModalRecipientSelectScreen ===
 
-// Module 10604 (UnifiedGiftModalRecipientSelectScreen)
+// Module 10201 (UnifiedGiftModalRecipientSelectScreen)
 import nativeDefault from "native" /* 587 */;
-import UnifiedGiftModalTypes from "UnifiedGiftModalTypes" /* 10572 */;
-import SearchableUserListDefault from "SearchableUserList" /* 10606 */;
+import UnifiedGiftModalTypes from "UnifiedGiftModalTypes" /* 10169 */;
+import SearchableUserListDefault from "SearchableUserList" /* 10203 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const UserRowModes = fn(10605).UserRowModes;
+const UserRowModes = fn(10202).UserRowModes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { flex: 1, paddingTop: 16, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -18,11 +18,11 @@ let obj3 = { flex: 1, paddingTop: 16, backgroundColor: nativeDefault.colors.MOBI
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkout/native/gifting/UnifiedGiftModalRecipientSelectScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((setRecipientUser) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UnifiedGiftModalRecipientSelectScreen(setRecipientUser) {
   const cResult = setRecipientUser(576).c(6);
   setRecipientUser = setRecipientUser.setRecipientUser;
   const obj = setRecipientUser(576);
-  const navigation = setRecipientUser(1490).useNavigation();
+  const navigation = setRecipientUser(1502).useNavigation();
   const tmp4 = closure_6();
   if (cResult[0] === navigation) {
     if (cResult[1] === setRecipientUser) {
@@ -41,7 +41,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((setRecipientUser
     cResult[5] = tmp10;
     tmp7 = tmp10;
   }
-  const tmp6 = jsx(navigation(10606), {
+  const tmp6 = jsx(navigation(10203), {
     onSelectUser(arg0) {
       setRecipientUser(arg0);
       navigation.navigate(UnifiedGiftModalTypes.UnifiedGiftModalScreens.GIFT_DETAIL, undefined, { pop: true });
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((setRecipientUser
   cResult[1] = setRecipientUser;
   cResult[2] = tmp6;
   tmp5 = tmp6;
-  const obj2 = setRecipientUser(1490);
+  const obj2 = setRecipientUser(1502);
   const obj4 = {
     onSelectUser(arg0) {
       setRecipientUser(arg0);
@@ -64,9 +64,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((setRecipientUser
     disableGradient: true,
     disableThemedGradient: true
   };
-}) : ((setRecipientUser) => {
+}) : (function UnifiedGiftModalRecipientSelectScreen(setRecipientUser) {
   setRecipientUser = setRecipientUser.setRecipientUser;
-  importDefault = setRecipientUser(1490).useNavigation();
+  importDefault = setRecipientUser(1502).useNavigation();
   const obj2 = {
     style: closure_6().container,
     children: jsx(SearchableUserListDefault, {

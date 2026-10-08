@@ -1,8 +1,8 @@
-// === Module 4550: BraintreeUtils ===
+// === Module 4742: BraintreeUtils ===
 
-// Module 4550 (BraintreeUtils)
-import core_CodeSplittingUtils from "core/CodeSplittingUtils" /* 4552 */;
-import BraintreeStore from "BraintreeStore" /* 4551 */;
+// Module 4742 (BraintreeUtils)
+import core_CodeSplittingUtils from "core/CodeSplittingUtils" /* 4744 */;
+import BraintreeStore from "BraintreeStore" /* 4743 */;
 
 require = fn;
 const PaymentSettings = fn(1085).PaymentSettings;
@@ -14,13 +14,13 @@ export const getBraintreeSDK = function getBraintreeSDK() {
     createPromise() {
       return client(paths[4])(paths[3], paths.paths);
     },
-    webpackId: 4555
+    webpackId: 4747
   };
   return core_CodeSplittingUtils.importWithRetry({
     createPromise() {
       return client(paths[4])(paths[3], paths.paths);
     },
-    webpackId: 4555
+    webpackId: 4747
   }).then((result) => result.default);
 };
 export const collectDeviceData = function collectDeviceData() {
@@ -30,7 +30,7 @@ export const collectDeviceData = function collectDeviceData() {
       createPromise() {
           return client(paths[4])(paths[3], paths.paths);
         },
-      webpackId: 4555
+      webpackId: 4747
     };
     let importWithRetryResult = core_CodeSplittingUtils.importWithRetry(obj2);
     let nextPromise1 = core_CodeSplittingUtils.importWithRetry(obj2).then((result) => result.default).then((client) => {
@@ -39,24 +39,24 @@ export const collectDeviceData = function collectDeviceData() {
       let obj2 = client.create({ authorization: constants.BRAINTREE.KEY });
       return client.create({ authorization: constants.BRAINTREE.KEY }).then((result) => {
         client = result;
-        let obj = client(4552);
+        let obj = client(4744);
         let obj2 = {
           createPromise() {
             return client(paths[4])(paths[3], paths.paths);
           },
-          webpackId: 4555
+          webpackId: 4747
         };
-        const importWithRetryResult = client(4552).importWithRetry({
+        const importWithRetryResult = client(4744).importWithRetry({
           createPromise() {
             return client(paths[4])(paths[3], paths.paths);
           },
-          webpackId: 4555
+          webpackId: 4747
         });
-        return client(4552).importWithRetry({
+        return client(4744).importWithRetry({
           createPromise() {
             return client(paths[4])(paths[3], paths.paths);
           },
-          webpackId: 4555
+          webpackId: 4747
         }).then((result) => result.default).then((dataCollector) => {
           dataCollector = dataCollector.dataCollector;
           const obj = { client };
@@ -71,7 +71,7 @@ export const collectDeviceData = function collectDeviceData() {
       createPromise() {
           return client(paths[4])(paths[3], paths.paths);
         },
-      webpackId: 4555
+      webpackId: 4747
     };
     const importWithRetryResult1 = core_CodeSplittingUtils.importWithRetry(obj4);
     nextPromise1 = core_CodeSplittingUtils.importWithRetry(obj4).then((result) => result.default).then((dataCollector) => {

@@ -1,7 +1,7 @@
-// === Module 9202: useEventException ===
+// === Module 8501: useEventException ===
 
-// Module 9202 (useEventException)
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7050 */;
+// Module 8501 (useEventException)
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6059 */;
 
 const require = globalThis.__r;
 
@@ -10,7 +10,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useEventException.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useEventException(arg0, arg1) {
   _require = arg1;
   const cResult = require("c").c(6);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -56,7 +56,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   cResult[5] = found;
   tmp7 = found;
   const tmpResult = require("initialize");
-}) : ((arg0, arg1) => {
+}) : (function useEventException(arg0, arg1) {
   _require = arg1;
   const items = [GuildScheduledEventStore];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {

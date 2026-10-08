@@ -1,16 +1,15 @@
-// === Module 7772: MarkupParsers ===
+// === Module 8093: MarkupParsers ===
 
-// Module 7772 (MarkupParsers)
+// Module 8093 (MarkupParsers)
 import Constants from "Constants" /* 1085 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import SentryUtilsDefault from "SentryUtils" /* 1242 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 4883 */;
-import renderMessageMarkup from "renderMessageMarkup" /* 7542 */;
-import NativeMarkdownExperiment2 from "NativeMarkdownExperiment" /* 7773 */;
-import ChangeLogStandardTemplate from "ChangeLogStandardTemplate" /* 7774 */;
-import trackMarkdownParse from "trackMarkdownParse" /* 7786 */;
-import parseNativeMarkupDefault from "parseNativeMarkup" /* 7788 */;
-import priv from "priv" /* 1444 */;
+import SentryUtilsDefault from "SentryUtils" /* 1254 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 5077 */;
+import NativeMarkdownExperiment2 from "NativeMarkdownExperiment" /* 8094 */;
+import ChangeLogStandardTemplate from "ChangeLogStandardTemplate" /* 8095 */;
+import renderMessageMarkup from "renderMessageMarkup" /* 8114 */;
+import parseNativeMarkupDefault from "parseNativeMarkup" /* 8123 */;
+import priv from "priv" /* 1456 */;
 import size from "module_2" /* 2 */;
 
 const MessageTypes = Constants.MessageTypes;
@@ -109,88 +108,54 @@ export const parseMessageMarkup = function parseMessageMarkup(message, message2,
   }
   if (message.type === MessageTypes.CHANGELOG) {
     if (null != message.changelogId) {
-      const obj6 = MarkupUtilsDefault;
-      const obj2 = { hideSimpleEmbedContent: forceHideSimpleEmbedContent, formatInline: flag, allowHeading: null, allowList: null, allowLinks: null, previewLinkTarget: null };
-      let tmp15 = flag2;
+      const obj4 = MarkupUtilsDefault;
+      let obj2 = { hideSimpleEmbedContent: forceHideSimpleEmbedContent, formatInline: flag, allowHeading: null, allowList: null, allowLinks: null, previewLinkTarget: null };
+      let tmp10 = flag2;
       const tmpResult = ChangeLogStandardTemplate;
       if (!flag2) {
-        tmp15 = flag3;
+        tmp10 = flag3;
       }
-      obj2.allowHeading = tmp15;
+      obj2.allowHeading = tmp10;
       if (!flag2) {
         flag2 = flag3;
       }
-      let obj3 = { content: null, isInlineReplyPreview: false, hasSpoilerEmbeds: false, hasBailedAst: false, nativeMarkdownEnabled: null };
+      const obj3 = { content: null, isInlineReplyPreview: false, hasSpoilerEmbeds: false, hasBailedAst: false, nativeMarkdownEnabled: null };
       obj2.allowList = flag2;
       obj2.allowLinks = flag4;
       obj2.previewLinkTarget = flag4;
-      obj3.content = obj6.astParserFor(ChangeLogStandardTemplate.changelogRules(message.changelogId, true))(message.content, false, obj2);
+      obj3.content = obj4.astParserFor(ChangeLogStandardTemplate.changelogRules(message.changelogId, true))(message.content, false, obj2);
       obj3.nativeMarkdownEnabled = enabled;
-      const result1 = closure_7.set(message, obj3);
+      result = closure_7.set(message, obj3);
       return obj3;
     }
   }
-  let tmp4 = message2;
-  let obj4 = { contentMessage: message2, hideSimpleEmbedContent: forceHideSimpleEmbedContent, formatInline: flag, allowGameMentions: true, allowHeading: null, allowList: null, allowLinks: null, previewLinkTarget: null };
-  let tmp6 = flag2;
+  const obj5 = { contentMessage: message2, hideSimpleEmbedContent: forceHideSimpleEmbedContent, formatInline: flag, allowGameMentions: true, allowHeading: null, allowList: null, allowLinks: null, previewLinkTarget: null };
+  let tmp4 = flag2;
   if (!flag2) {
-    tmp6 = flag3;
+    tmp4 = flag3;
   }
-  obj4.allowHeading = tmp6;
-  let tmp7 = flag2;
+  obj5.allowHeading = tmp4;
+  let tmp5 = flag2;
   if (!flag2) {
-    tmp7 = flag3;
+    tmp5 = flag3;
   }
-  obj4.allowList = tmp7;
-  obj4.allowLinks = flag4;
-  obj4.previewLinkTarget = flag4;
-  const nowResult = performance.now();
-  ({ result, path } = (function parseMessageContentToAST(message, arg1, enabled) {
+  obj5.allowList = tmp5;
+  obj5.allowLinks = flag4;
+  obj5.previewLinkTarget = flag4;
+  const obj6 = {};
+  const merged = Object.assign((function parseMessageContentToAST(message, arg1, enabled) {
     if (!enabled) {
-      const obj4 = { result: renderMessageMarkup.renderMessageMarkupToAST(message, arg1), path: "legacy" };
-      return obj4;
+      return renderMessageMarkup.renderMessageMarkupToAST(message, arg1);
     } else {
       try {
-        const obj = { result: renderMessageMarkup.renderMessageMarkupToASTWithParser(parseNativeMarkupDefault, message, arg1), path: "native" };
-        return obj;
+        return renderMessageMarkup.renderMessageMarkupToASTWithParser(parseNativeMarkupDefault, message, arg1);
       } catch (tmp4) {
         SentryUtilsDefault.captureException(tmp4);
       }
     }
-  })(message, obj4, enabled));
-  const obj5 = {};
-  const diff = performance.now() - nowResult;
-  const merged = Object.assign(result);
-  obj5.isInlineReplyPreview = flag;
-  obj5.nativeMarkdownEnabled = enabled;
-  result2 = closure_7.set(message, obj5);
-  const tmp8 = (function parseMessageContentToAST(message, arg1, enabled) {
-    if (!enabled) {
-      const obj4 = { result: renderMessageMarkup.renderMessageMarkupToAST(message, arg1), path: "legacy" };
-      return obj4;
-    } else {
-      try {
-        const obj = { result: renderMessageMarkup.renderMessageMarkupToASTWithParser(parseNativeMarkupDefault, message, arg1), path: "native" };
-        return obj;
-      } catch (tmp4) {
-        SentryUtilsDefault.captureException(tmp4);
-      }
-    }
-  })(message, obj4, enabled);
-  const obj7 = { durationMs: diff, path, contentLength: null, hasBailedAst: null };
-  if (tmp4 == null) {
-    tmp4 = message;
-  }
-  const content = tmp4.content;
-  let num;
-  if (content != null) {
-    num = content.length;
-  }
-  if (num == null) {
-    num = 0;
-  }
-  obj7.contentLength = num;
-  obj7.hasBailedAst = obj5.hasBailedAst;
-  trackMarkdownParse.trackMarkdownParse(obj7);
-  return obj5;
+  })(message, obj5, enabled));
+  obj6.isInlineReplyPreview = flag;
+  obj6.nativeMarkdownEnabled = enabled;
+  const result1 = closure_7.set(message, obj6);
+  return obj6;
 };

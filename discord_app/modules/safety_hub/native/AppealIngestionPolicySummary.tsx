@@ -1,19 +1,19 @@
-// === Module 11524: AppealIngestionPolicySummary ===
+// === Module 11522: AppealIngestionPolicySummary ===
 
-// Module 11524 (AppealIngestionPolicySummary)
+// Module 11522 (AppealIngestionPolicySummary)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import ColorUtils from "ColorUtils" /* 4733 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 8125 */;
+import ColorUtils from "ColorUtils" /* 4927 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 5927 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { sectionTitle: { marginBottom: 8 }, policy: { marginBottom: 16 }, borderColor: { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY }, userContainer: null };
 let obj3 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 obj2.userContainer = { marginTop: 8, justifyContent: "flex-start", minHeight: 40, borderRadius: nativeDefault.radii.sm, borderWidth: 1, padding: 18 };
@@ -23,7 +23,7 @@ let obj4 = { marginTop: 8, justifyContent: "flex-start", minHeight: 40, borderRa
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/native/AppealIngestionPolicySummary.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((classification) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIngestionPolicySummary(classification) {
   const cResult = c.c(21);
   classification = classification.classification;
   const tmp4 = closure_5();
@@ -122,7 +122,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((classification) 
   cResult[10] = tmp15;
   cResult[11] = items1;
   tmp16 = items1;
-}) : ((classification) => {
+}) : (function AppealIngestionPolicySummary(classification) {
   classification = classification.classification;
   const tmp = closure_5();
   let description;

@@ -1,8 +1,8 @@
-// === Module 12194: BoostGem ===
+// === Module 12273: BoostGem ===
 
-// Module 12194 (BoostGem)
+// Module 12273 (BoostGem)
 import c from "c" /* 576 */;
-import inlineStyles from "inlineStyles" /* 8169 */;
+import inlineStyles from "inlineStyles" /* 7550 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/images/BoostGem.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function BoostGem(arg0) {
   const cResult = c.c(10);
   ({ width, height, style } = arg0);
   let num = 39;
@@ -64,7 +64,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[8] = num;
   cResult[9] = tmp18;
   tmp17 = tmp18;
-}) : ((style) => {
+}) : (function BoostGem(style) {
   let num = style.width;
   if (num === undefined) {
     num = 39;

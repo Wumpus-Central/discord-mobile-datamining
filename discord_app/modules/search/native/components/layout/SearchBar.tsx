@@ -1,36 +1,36 @@
-// === Module 16813: layout/SearchBar ===
+// === Module 17092: layout/SearchBar ===
 
-// Module 16813 (layout/SearchBar)
+// Module 17092 (layout/SearchBar)
 import util from "util" /* 1126 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4596 */;
-import useChannelName from "useChannelName" /* 5049 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 11980 */;
-import SearchTokens from "SearchTokens" /* 11988 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12001 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12005 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4788 */;
+import useChannelName from "useChannelName" /* 5417 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 12053 */;
+import SearchTokens from "SearchTokens" /* 12061 */;
+import tracking_TrackingDefault from "tracking/Tracking" /* 12074 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12078 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
-import UserStore from "UserStore" /* 1377 */;
-import SearchQueryStore from "SearchQueryStore" /* 11994 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
+import UserStore from "UserStore" /* 1389 */;
+import SearchQueryStore from "SearchQueryStore" /* 12067 */;
 
 const SearchPlatformUtilsDefault = SearchPlatformUtils;
 
 require = fn;
 const View = fn(17).View;
-const SearchConstants = fn(7524);
+const SearchConstants = fn(9247);
 ({ SEARCH_BAR_HEIGHT: c10, SearchQueryTagTypes: closure_11 } = SearchConstants);
-const SearchFilterAddLocations = fn(7523).SearchFilterAddLocations;
+const SearchFilterAddLocations = fn(9246).SearchFilterAddLocations;
 const SearchTypes = fn(1085).SearchTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_15 = createStyles.createStyles((minHeight) => {
   const obj = { searchBar: { minHeight: minHeight + 2 }, icon: { width: 32, minHeight, justifyContent: "center", zIndex: 10 } };
   return obj;
 });
 let ReactCompilerGating = fn(558);
-let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSearchPlaceholder(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -99,7 +99,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   let obj = require("c");
   return require("initialize").useStateFromStores(first, tmp6, tmp7);
-}) : ((arg0) => {
+}) : (function useSearchPlaceholder(arg0) {
   _require = arg0;
   const items = [SearchQueryStore];
   const items1 = [arg0];
@@ -154,7 +154,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/layout/SearchBar.tsx");
 
-export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext, arg1) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function SearchBarWithRef(searchContext) {
   let v0zoRaK = searchContext;
   const cResult = searchContext(ref[15]).c(37);
   searchContext = searchContext.searchContext;
@@ -170,7 +170,7 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
     first = cResult[0];
   }
   if (cResult[1] !== searchContext) {
-    const fn = function l() {
+    const fn = function c() {
       return SearchQueryStore.getTags(searchContext);
     };
     const items1 = [searchContext];
@@ -355,7 +355,7 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
         }
       }
     }
-    const imperativeHandle = noop.useImperativeHandle(arg1, M);
+    const imperativeHandle = noop.useImperativeHandle(searchContext.ref, M);
     if (cResult[10] !== searchContext) {
       class M {
         constructor() {
@@ -436,9 +436,9 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
       }
       const items2 = [searchContext];
       cResult[10] = searchContext;
-      cResult[11] = tmp24;
+      cResult[11] = tmp23;
       cResult[12] = items2;
-      let tmp23 = items2;
+      let tmp22 = items2;
     } else {
       class M {
         constructor() {
@@ -517,9 +517,9 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
           return obj;
         }
       }
-      tmp23 = cResult[12];
+      tmp22 = cResult[12];
     }
-    const effect = noop.useEffect(tmp24, tmp23);
+    const effect = noop.useEffect(tmp23, tmp22);
     if (cResult[13] !== searchContext) {
       class M {
         constructor() {
@@ -599,7 +599,7 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
         }
       }
       cResult[13] = searchContext;
-      cResult[14] = tmp27;
+      cResult[14] = tmp26;
     } else {
       class M {
         constructor() {
@@ -680,722 +680,478 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
       }
     }
     if (cResult[15] !== searchContext) {
-      class M {
-        constructor() {
-          obj = {
-            setText(arg0) {
-                      const current = ref.current;
-                      let setTextResult;
-                      if (current != null) {
-                        setTextResult = current.setText(arg0);
-                      }
-                      return setTextResult;
-                    },
-            getText() {
-                      const current = ref.current;
-                      let str;
-                      if (current != null) {
-                        str = current.getText();
-                      }
-                      if (str == null) {
-                        str = "";
-                      }
-                      return str;
-                    },
-            blur() {
-                      const current = ref.current;
-                      let blurResult;
-                      if (current != null) {
-                        blurResult = current.blur();
-                      }
-                      return blurResult;
-                    },
-            focus() {
-                      const current = ref.current;
-                      let focusResult;
-                      if (current != null) {
-                        focusResult = current.focus();
-                      }
-                      return focusResult;
-                    },
-            isFocused() {
-                      const current = ref.current;
-                      let flag;
-                      if (current != null) {
-                        flag = current.isFocused();
-                      }
-                      if (flag == null) {
-                        flag = false;
-                      }
-                      return flag;
-                    },
-            measure(arg0) {
-                      const current = ref.current;
-                      let measureResult;
-                      if (current != null) {
-                        measureResult = current.measure(arg0);
-                      }
-                      return measureResult;
-                    },
-            measureInWindow(arg0) {
-                      const current = ref.current;
-                      let measureInWindowResult;
-                      if (current != null) {
-                        measureInWindowResult = current.measureInWindow(arg0);
-                      }
-                      return measureInWindowResult;
-                    },
-            measureLayout(arg0, arg1, arg2) {
-                      const current = ref.current;
-                      let measureLayoutResult;
-                      if (current != null) {
-                        measureLayoutResult = current.measureLayout(arg0, arg1, arg2);
-                      }
-                      return measureLayoutResult;
-                    }
-          };
-          return obj;
+      class H {
+        constructor(arg0) {
+          closure_0 = searchContext;
+          obj = closure_9;
+          tmp = searchContext;
+          tmp2 = closure_9.getTags(searchContext)[searchContext];
+          closure_1 = tmp2;
+          if (null != tmp2) {
+            tmp14 = closure_0;
+            tmp15 = closure_2;
+            AccessibilityAnnouncer = closure_0(closure_2[21]).AccessibilityAnnouncer;
+            intl = closure_0(closure_2[12]).intl;
+            obj1 = { text: null };
+            obj1.text = tmp2.text;
+            announceResult = AccessibilityAnnouncer.announce(intl.formatToPlainString(closure_0(closure_2[12]).t.srlxB8, obj1));
+            tmp17 = SearchQueryTagTypes;
+            if (tmp2.type === SearchQueryTagTypes.COMPLETE) {
+              tmp3 = closure_1;
+              obj2 = closure_1(tmp15[22]);
+              obj8 = { searchContext: null, searchTokenType: null, isDefault: null };
+              obj8.searchContext = tmp;
+              obj8.searchTokenType = tmp2.searchTokenType;
+              tmp4 = SearchFilterAddLocations;
+              obj8.isDefault = tmp2.location === SearchFilterAddLocations.CLIENT_AUTO_ADD;
+              result = obj2.trackSearchFilterRemove(obj8);
+            }
+            tmp6 = closure_1;
+            obj4 = closure_1(tmp15[20]);
+            updateSearchQueryResult = obj4.updateSearchQuery(tmp, (removeTag) => {
+              removeTag.removeTag(closure_0);
+              if (type.type === constants.PREFIX) {
+                const result = removeTag.restoreDraftTextInputValue();
+              }
+            });
+            obj5 = closure_1(tmp15[19]);
+            result1 = obj5.syncAutocompleteDebounced(tmp);
+            queryString = obj.getQueryString(tmp);
+            searchResultsQuery = obj.getSearchResultsQuery(tmp);
+            if (queryString !== searchResultsQuery) {
+              tmp6Result = tmp6(tmp15[19]);
+              if (tmp11) {
+                initialMessages = tmp6Result.fetchInitialMessages(tmp);
+              } else {
+                initialMessagesDebounced = tmp6Result.fetchInitialMessagesDebounced(tmp);
+              }
+            }
+          }
+          return;
         }
       }
       cResult[15] = searchContext;
-      cResult[16] = tmp29;
+      cResult[16] = H;
     } else {
-      class M {
-        constructor() {
-          obj = {
-            setText(arg0) {
-                      const current = ref.current;
-                      let setTextResult;
-                      if (current != null) {
-                        setTextResult = current.setText(arg0);
-                      }
-                      return setTextResult;
-                    },
-            getText() {
-                      const current = ref.current;
-                      let str;
-                      if (current != null) {
-                        str = current.getText();
-                      }
-                      if (str == null) {
-                        str = "";
-                      }
-                      return str;
-                    },
-            blur() {
-                      const current = ref.current;
-                      let blurResult;
-                      if (current != null) {
-                        blurResult = current.blur();
-                      }
-                      return blurResult;
-                    },
-            focus() {
-                      const current = ref.current;
-                      let focusResult;
-                      if (current != null) {
-                        focusResult = current.focus();
-                      }
-                      return focusResult;
-                    },
-            isFocused() {
-                      const current = ref.current;
-                      let flag;
-                      if (current != null) {
-                        flag = current.isFocused();
-                      }
-                      if (flag == null) {
-                        flag = false;
-                      }
-                      return flag;
-                    },
-            measure(arg0) {
-                      const current = ref.current;
-                      let measureResult;
-                      if (current != null) {
-                        measureResult = current.measure(arg0);
-                      }
-                      return measureResult;
-                    },
-            measureInWindow(arg0) {
-                      const current = ref.current;
-                      let measureInWindowResult;
-                      if (current != null) {
-                        measureInWindowResult = current.measureInWindow(arg0);
-                      }
-                      return measureInWindowResult;
-                    },
-            measureLayout(arg0, arg1, arg2) {
-                      const current = ref.current;
-                      let measureLayoutResult;
-                      if (current != null) {
-                        measureLayoutResult = current.measureLayout(arg0, arg1, arg2);
-                      }
-                      return measureLayoutResult;
-                    }
-          };
-          return obj;
+      class H {
+        constructor(arg0) {
+          closure_0 = searchContext;
+          obj = closure_9;
+          tmp = searchContext;
+          tmp2 = closure_9.getTags(searchContext)[searchContext];
+          closure_1 = tmp2;
+          if (null != tmp2) {
+            tmp14 = closure_0;
+            tmp15 = closure_2;
+            AccessibilityAnnouncer = closure_0(closure_2[21]).AccessibilityAnnouncer;
+            intl = closure_0(closure_2[12]).intl;
+            obj1 = { text: null };
+            obj1.text = tmp2.text;
+            announceResult = AccessibilityAnnouncer.announce(intl.formatToPlainString(closure_0(closure_2[12]).t.srlxB8, obj1));
+            tmp17 = SearchQueryTagTypes;
+            if (tmp2.type === SearchQueryTagTypes.COMPLETE) {
+              tmp3 = closure_1;
+              obj2 = closure_1(tmp15[22]);
+              obj8 = { searchContext: null, searchTokenType: null, isDefault: null };
+              obj8.searchContext = tmp;
+              obj8.searchTokenType = tmp2.searchTokenType;
+              tmp4 = SearchFilterAddLocations;
+              obj8.isDefault = tmp2.location === SearchFilterAddLocations.CLIENT_AUTO_ADD;
+              result = obj2.trackSearchFilterRemove(obj8);
+            }
+            tmp6 = closure_1;
+            obj4 = closure_1(tmp15[20]);
+            updateSearchQueryResult = obj4.updateSearchQuery(tmp, (removeTag) => {
+              removeTag.removeTag(closure_0);
+              if (type.type === constants.PREFIX) {
+                const result = removeTag.restoreDraftTextInputValue();
+              }
+            });
+            obj5 = closure_1(tmp15[19]);
+            result1 = obj5.syncAutocompleteDebounced(tmp);
+            queryString = obj.getQueryString(tmp);
+            searchResultsQuery = obj.getSearchResultsQuery(tmp);
+            if (queryString !== searchResultsQuery) {
+              tmp6Result = tmp6(tmp15[19]);
+              if (tmp11) {
+                initialMessages = tmp6Result.fetchInitialMessages(tmp);
+              } else {
+                initialMessagesDebounced = tmp6Result.fetchInitialMessagesDebounced(tmp);
+              }
+            }
+          }
+          return;
         }
       }
     }
     if (cResult[17] === searchContext) {
-      class M {
-        constructor() {
-          obj = {
-            setText(arg0) {
-                      const current = ref.current;
-                      let setTextResult;
-                      if (current != null) {
-                        setTextResult = current.setText(arg0);
-                      }
-                      return setTextResult;
-                    },
-            getText() {
-                      const current = ref.current;
-                      let str;
-                      if (current != null) {
-                        str = current.getText();
-                      }
-                      if (str == null) {
-                        str = "";
-                      }
-                      return str;
-                    },
-            blur() {
-                      const current = ref.current;
-                      let blurResult;
-                      if (current != null) {
-                        blurResult = current.blur();
-                      }
-                      return blurResult;
-                    },
-            focus() {
-                      const current = ref.current;
-                      let focusResult;
-                      if (current != null) {
-                        focusResult = current.focus();
-                      }
-                      return focusResult;
-                    },
-            isFocused() {
-                      const current = ref.current;
-                      let flag;
-                      if (current != null) {
-                        flag = current.isFocused();
-                      }
-                      if (flag == null) {
-                        flag = false;
-                      }
-                      return flag;
-                    },
-            measure(arg0) {
-                      const current = ref.current;
-                      let measureResult;
-                      if (current != null) {
-                        measureResult = current.measure(arg0);
-                      }
-                      return measureResult;
-                    },
-            measureInWindow(arg0) {
-                      const current = ref.current;
-                      let measureInWindowResult;
-                      if (current != null) {
-                        measureInWindowResult = current.measureInWindow(arg0);
-                      }
-                      return measureInWindowResult;
-                    },
-            measureLayout(arg0, arg1, arg2) {
-                      const current = ref.current;
-                      let measureLayoutResult;
-                      if (current != null) {
-                        measureLayoutResult = current.measureLayout(arg0, arg1, arg2);
-                      }
-                      return measureLayoutResult;
-                    }
-          };
-          return obj;
+      class H {
+        constructor(arg0) {
+          closure_0 = searchContext;
+          obj = closure_9;
+          tmp = searchContext;
+          tmp2 = closure_9.getTags(searchContext)[searchContext];
+          closure_1 = tmp2;
+          if (null != tmp2) {
+            tmp14 = closure_0;
+            tmp15 = closure_2;
+            AccessibilityAnnouncer = closure_0(closure_2[21]).AccessibilityAnnouncer;
+            intl = closure_0(closure_2[12]).intl;
+            obj1 = { text: null };
+            obj1.text = tmp2.text;
+            announceResult = AccessibilityAnnouncer.announce(intl.formatToPlainString(closure_0(closure_2[12]).t.srlxB8, obj1));
+            tmp17 = SearchQueryTagTypes;
+            if (tmp2.type === SearchQueryTagTypes.COMPLETE) {
+              tmp3 = closure_1;
+              obj2 = closure_1(tmp15[22]);
+              obj8 = { searchContext: null, searchTokenType: null, isDefault: null };
+              obj8.searchContext = tmp;
+              obj8.searchTokenType = tmp2.searchTokenType;
+              tmp4 = SearchFilterAddLocations;
+              obj8.isDefault = tmp2.location === SearchFilterAddLocations.CLIENT_AUTO_ADD;
+              result = obj2.trackSearchFilterRemove(obj8);
+            }
+            tmp6 = closure_1;
+            obj4 = closure_1(tmp15[20]);
+            updateSearchQueryResult = obj4.updateSearchQuery(tmp, (removeTag) => {
+              removeTag.removeTag(closure_0);
+              if (type.type === constants.PREFIX) {
+                const result = removeTag.restoreDraftTextInputValue();
+              }
+            });
+            obj5 = closure_1(tmp15[19]);
+            result1 = obj5.syncAutocompleteDebounced(tmp);
+            queryString = obj.getQueryString(tmp);
+            searchResultsQuery = obj.getSearchResultsQuery(tmp);
+            if (queryString !== searchResultsQuery) {
+              tmp6Result = tmp6(tmp15[19]);
+              if (tmp11) {
+                initialMessages = tmp6Result.fetchInitialMessages(tmp);
+              } else {
+                initialMessagesDebounced = tmp6Result.fetchInitialMessagesDebounced(tmp);
+              }
+            }
+          }
+          return;
         }
       }
       if (cResult[20] !== searchContext) {
-        class M {
-          constructor() {
-            obj = {
-              setText(arg0) {
-                          const current = ref.current;
-                          let setTextResult;
-                          if (current != null) {
-                            setTextResult = current.setText(arg0);
-                          }
-                          return setTextResult;
-                        },
-              getText() {
-                          const current = ref.current;
-                          let str;
-                          if (current != null) {
-                            str = current.getText();
-                          }
-                          if (str == null) {
-                            str = "";
-                          }
-                          return str;
-                        },
-              blur() {
-                          const current = ref.current;
-                          let blurResult;
-                          if (current != null) {
-                            blurResult = current.blur();
-                          }
-                          return blurResult;
-                        },
-              focus() {
-                          const current = ref.current;
-                          let focusResult;
-                          if (current != null) {
-                            focusResult = current.focus();
-                          }
-                          return focusResult;
-                        },
-              isFocused() {
-                          const current = ref.current;
-                          let flag;
-                          if (current != null) {
-                            flag = current.isFocused();
-                          }
-                          if (flag == null) {
-                            flag = false;
-                          }
-                          return flag;
-                        },
-              measure(arg0) {
-                          const current = ref.current;
-                          let measureResult;
-                          if (current != null) {
-                            measureResult = current.measure(arg0);
-                          }
-                          return measureResult;
-                        },
-              measureInWindow(arg0) {
-                          const current = ref.current;
-                          let measureInWindowResult;
-                          if (current != null) {
-                            measureInWindowResult = current.measureInWindow(arg0);
-                          }
-                          return measureInWindowResult;
-                        },
-              measureLayout(arg0, arg1, arg2) {
-                          const current = ref.current;
-                          let measureLayoutResult;
-                          if (current != null) {
-                            measureLayoutResult = current.measureLayout(arg0, arg1, arg2);
-                          }
-                          return measureLayoutResult;
-                        }
-            };
-            return obj;
+        class H {
+          constructor(arg0) {
+            closure_0 = searchContext;
+            obj = closure_9;
+            tmp = searchContext;
+            tmp2 = closure_9.getTags(searchContext)[searchContext];
+            closure_1 = tmp2;
+            if (null != tmp2) {
+              tmp14 = closure_0;
+              tmp15 = closure_2;
+              AccessibilityAnnouncer = closure_0(closure_2[21]).AccessibilityAnnouncer;
+              intl = closure_0(closure_2[12]).intl;
+              obj1 = { text: null };
+              obj1.text = tmp2.text;
+              announceResult = AccessibilityAnnouncer.announce(intl.formatToPlainString(closure_0(closure_2[12]).t.srlxB8, obj1));
+              tmp17 = SearchQueryTagTypes;
+              if (tmp2.type === SearchQueryTagTypes.COMPLETE) {
+                tmp3 = closure_1;
+                obj2 = closure_1(tmp15[22]);
+                obj8 = { searchContext: null, searchTokenType: null, isDefault: null };
+                obj8.searchContext = tmp;
+                obj8.searchTokenType = tmp2.searchTokenType;
+                tmp4 = SearchFilterAddLocations;
+                obj8.isDefault = tmp2.location === SearchFilterAddLocations.CLIENT_AUTO_ADD;
+                result = obj2.trackSearchFilterRemove(obj8);
+              }
+              tmp6 = closure_1;
+              obj4 = closure_1(tmp15[20]);
+              updateSearchQueryResult = obj4.updateSearchQuery(tmp, (removeTag) => {
+                removeTag.removeTag(closure_0);
+                if (type.type === constants.PREFIX) {
+                  const result = removeTag.restoreDraftTextInputValue();
+                }
+              });
+              obj5 = closure_1(tmp15[19]);
+              result1 = obj5.syncAutocompleteDebounced(tmp);
+              queryString = obj.getQueryString(tmp);
+              searchResultsQuery = obj.getSearchResultsQuery(tmp);
+              if (queryString !== searchResultsQuery) {
+                tmp6Result = tmp6(tmp15[19]);
+                if (tmp11) {
+                  initialMessages = tmp6Result.fetchInitialMessages(tmp);
+                } else {
+                  initialMessagesDebounced = tmp6Result.fetchInitialMessagesDebounced(tmp);
+                }
+              }
+            }
+            return;
           }
         }
         const textInputValue = SearchQueryStore.getTextInputValue(searchContext);
         cResult[20] = searchContext;
         cResult[21] = textInputValue;
       } else {
-        class M {
-          constructor() {
-            obj = {
-              setText(arg0) {
-                          const current = ref.current;
-                          let setTextResult;
-                          if (current != null) {
-                            setTextResult = current.setText(arg0);
-                          }
-                          return setTextResult;
-                        },
-              getText() {
-                          const current = ref.current;
-                          let str;
-                          if (current != null) {
-                            str = current.getText();
-                          }
-                          if (str == null) {
-                            str = "";
-                          }
-                          return str;
-                        },
-              blur() {
-                          const current = ref.current;
-                          let blurResult;
-                          if (current != null) {
-                            blurResult = current.blur();
-                          }
-                          return blurResult;
-                        },
-              focus() {
-                          const current = ref.current;
-                          let focusResult;
-                          if (current != null) {
-                            focusResult = current.focus();
-                          }
-                          return focusResult;
-                        },
-              isFocused() {
-                          const current = ref.current;
-                          let flag;
-                          if (current != null) {
-                            flag = current.isFocused();
-                          }
-                          if (flag == null) {
-                            flag = false;
-                          }
-                          return flag;
-                        },
-              measure(arg0) {
-                          const current = ref.current;
-                          let measureResult;
-                          if (current != null) {
-                            measureResult = current.measure(arg0);
-                          }
-                          return measureResult;
-                        },
-              measureInWindow(arg0) {
-                          const current = ref.current;
-                          let measureInWindowResult;
-                          if (current != null) {
-                            measureInWindowResult = current.measureInWindow(arg0);
-                          }
-                          return measureInWindowResult;
-                        },
-              measureLayout(arg0, arg1, arg2) {
-                          const current = ref.current;
-                          let measureLayoutResult;
-                          if (current != null) {
-                            measureLayoutResult = current.measureLayout(arg0, arg1, arg2);
-                          }
-                          return measureLayoutResult;
-                        }
-            };
-            return obj;
+        class H {
+          constructor(arg0) {
+            closure_0 = searchContext;
+            obj = closure_9;
+            tmp = searchContext;
+            tmp2 = closure_9.getTags(searchContext)[searchContext];
+            closure_1 = tmp2;
+            if (null != tmp2) {
+              tmp14 = closure_0;
+              tmp15 = closure_2;
+              AccessibilityAnnouncer = closure_0(closure_2[21]).AccessibilityAnnouncer;
+              intl = closure_0(closure_2[12]).intl;
+              obj1 = { text: null };
+              obj1.text = tmp2.text;
+              announceResult = AccessibilityAnnouncer.announce(intl.formatToPlainString(closure_0(closure_2[12]).t.srlxB8, obj1));
+              tmp17 = SearchQueryTagTypes;
+              if (tmp2.type === SearchQueryTagTypes.COMPLETE) {
+                tmp3 = closure_1;
+                obj2 = closure_1(tmp15[22]);
+                obj8 = { searchContext: null, searchTokenType: null, isDefault: null };
+                obj8.searchContext = tmp;
+                obj8.searchTokenType = tmp2.searchTokenType;
+                tmp4 = SearchFilterAddLocations;
+                obj8.isDefault = tmp2.location === SearchFilterAddLocations.CLIENT_AUTO_ADD;
+                result = obj2.trackSearchFilterRemove(obj8);
+              }
+              tmp6 = closure_1;
+              obj4 = closure_1(tmp15[20]);
+              updateSearchQueryResult = obj4.updateSearchQuery(tmp, (removeTag) => {
+                removeTag.removeTag(closure_0);
+                if (type.type === constants.PREFIX) {
+                  const result = removeTag.restoreDraftTextInputValue();
+                }
+              });
+              obj5 = closure_1(tmp15[19]);
+              result1 = obj5.syncAutocompleteDebounced(tmp);
+              queryString = obj.getQueryString(tmp);
+              searchResultsQuery = obj.getSearchResultsQuery(tmp);
+              if (queryString !== searchResultsQuery) {
+                tmp6Result = tmp6(tmp15[19]);
+                if (tmp11) {
+                  initialMessages = tmp6Result.fetchInitialMessages(tmp);
+                } else {
+                  initialMessagesDebounced = tmp6Result.fetchInitialMessagesDebounced(tmp);
+                }
+              }
+            }
+            return;
           }
         }
       }
       if (cResult[22] !== searchContext) {
-        class M {
-          constructor() {
-            obj = {
-              setText(arg0) {
-                          const current = ref.current;
-                          let setTextResult;
-                          if (current != null) {
-                            setTextResult = current.setText(arg0);
-                          }
-                          return setTextResult;
-                        },
-              getText() {
-                          const current = ref.current;
-                          let str;
-                          if (current != null) {
-                            str = current.getText();
-                          }
-                          if (str == null) {
-                            str = "";
-                          }
-                          return str;
-                        },
-              blur() {
-                          const current = ref.current;
-                          let blurResult;
-                          if (current != null) {
-                            blurResult = current.blur();
-                          }
-                          return blurResult;
-                        },
-              focus() {
-                          const current = ref.current;
-                          let focusResult;
-                          if (current != null) {
-                            focusResult = current.focus();
-                          }
-                          return focusResult;
-                        },
-              isFocused() {
-                          const current = ref.current;
-                          let flag;
-                          if (current != null) {
-                            flag = current.isFocused();
-                          }
-                          if (flag == null) {
-                            flag = false;
-                          }
-                          return flag;
-                        },
-              measure(arg0) {
-                          const current = ref.current;
-                          let measureResult;
-                          if (current != null) {
-                            measureResult = current.measure(arg0);
-                          }
-                          return measureResult;
-                        },
-              measureInWindow(arg0) {
-                          const current = ref.current;
-                          let measureInWindowResult;
-                          if (current != null) {
-                            measureInWindowResult = current.measureInWindow(arg0);
-                          }
-                          return measureInWindowResult;
-                        },
-              measureLayout(arg0, arg1, arg2) {
-                          const current = ref.current;
-                          let measureLayoutResult;
-                          if (current != null) {
-                            measureLayoutResult = current.measureLayout(arg0, arg1, arg2);
-                          }
-                          return measureLayoutResult;
-                        }
-            };
-            return obj;
+        class H {
+          constructor(arg0) {
+            closure_0 = searchContext;
+            obj = closure_9;
+            tmp = searchContext;
+            tmp2 = closure_9.getTags(searchContext)[searchContext];
+            closure_1 = tmp2;
+            if (null != tmp2) {
+              tmp14 = closure_0;
+              tmp15 = closure_2;
+              AccessibilityAnnouncer = closure_0(closure_2[21]).AccessibilityAnnouncer;
+              intl = closure_0(closure_2[12]).intl;
+              obj1 = { text: null };
+              obj1.text = tmp2.text;
+              announceResult = AccessibilityAnnouncer.announce(intl.formatToPlainString(closure_0(closure_2[12]).t.srlxB8, obj1));
+              tmp17 = SearchQueryTagTypes;
+              if (tmp2.type === SearchQueryTagTypes.COMPLETE) {
+                tmp3 = closure_1;
+                obj2 = closure_1(tmp15[22]);
+                obj8 = { searchContext: null, searchTokenType: null, isDefault: null };
+                obj8.searchContext = tmp;
+                obj8.searchTokenType = tmp2.searchTokenType;
+                tmp4 = SearchFilterAddLocations;
+                obj8.isDefault = tmp2.location === SearchFilterAddLocations.CLIENT_AUTO_ADD;
+                result = obj2.trackSearchFilterRemove(obj8);
+              }
+              tmp6 = closure_1;
+              obj4 = closure_1(tmp15[20]);
+              updateSearchQueryResult = obj4.updateSearchQuery(tmp, (removeTag) => {
+                removeTag.removeTag(closure_0);
+                if (type.type === constants.PREFIX) {
+                  const result = removeTag.restoreDraftTextInputValue();
+                }
+              });
+              obj5 = closure_1(tmp15[19]);
+              result1 = obj5.syncAutocompleteDebounced(tmp);
+              queryString = obj.getQueryString(tmp);
+              searchResultsQuery = obj.getSearchResultsQuery(tmp);
+              if (queryString !== searchResultsQuery) {
+                tmp6Result = tmp6(tmp15[19]);
+                if (tmp11) {
+                  initialMessages = tmp6Result.fetchInitialMessages(tmp);
+                } else {
+                  initialMessagesDebounced = tmp6Result.fetchInitialMessagesDebounced(tmp);
+                }
+              }
+            }
+            return;
           }
         }
         let obj4 = { searchContext };
-        const tmp35 = jsx(setDismissed(tmp2[24]), { searchContext });
+        const tmp33 = jsx(setDismissed(tmp2[24]), { searchContext });
         cResult[22] = searchContext;
-        cResult[23] = tmp35;
+        cResult[23] = tmp33;
       } else {
-        class M {
-          constructor() {
-            obj = {
-              setText(arg0) {
-                          const current = ref.current;
-                          let setTextResult;
-                          if (current != null) {
-                            setTextResult = current.setText(arg0);
-                          }
-                          return setTextResult;
-                        },
-              getText() {
-                          const current = ref.current;
-                          let str;
-                          if (current != null) {
-                            str = current.getText();
-                          }
-                          if (str == null) {
-                            str = "";
-                          }
-                          return str;
-                        },
-              blur() {
-                          const current = ref.current;
-                          let blurResult;
-                          if (current != null) {
-                            blurResult = current.blur();
-                          }
-                          return blurResult;
-                        },
-              focus() {
-                          const current = ref.current;
-                          let focusResult;
-                          if (current != null) {
-                            focusResult = current.focus();
-                          }
-                          return focusResult;
-                        },
-              isFocused() {
-                          const current = ref.current;
-                          let flag;
-                          if (current != null) {
-                            flag = current.isFocused();
-                          }
-                          if (flag == null) {
-                            flag = false;
-                          }
-                          return flag;
-                        },
-              measure(arg0) {
-                          const current = ref.current;
-                          let measureResult;
-                          if (current != null) {
-                            measureResult = current.measure(arg0);
-                          }
-                          return measureResult;
-                        },
-              measureInWindow(arg0) {
-                          const current = ref.current;
-                          let measureInWindowResult;
-                          if (current != null) {
-                            measureInWindowResult = current.measureInWindow(arg0);
-                          }
-                          return measureInWindowResult;
-                        },
-              measureLayout(arg0, arg1, arg2) {
-                          const current = ref.current;
-                          let measureLayoutResult;
-                          if (current != null) {
-                            measureLayoutResult = current.measureLayout(arg0, arg1, arg2);
-                          }
-                          return measureLayoutResult;
-                        }
-            };
-            return obj;
+        class H {
+          constructor(arg0) {
+            closure_0 = searchContext;
+            obj = closure_9;
+            tmp = searchContext;
+            tmp2 = closure_9.getTags(searchContext)[searchContext];
+            closure_1 = tmp2;
+            if (null != tmp2) {
+              tmp14 = closure_0;
+              tmp15 = closure_2;
+              AccessibilityAnnouncer = closure_0(closure_2[21]).AccessibilityAnnouncer;
+              intl = closure_0(closure_2[12]).intl;
+              obj1 = { text: null };
+              obj1.text = tmp2.text;
+              announceResult = AccessibilityAnnouncer.announce(intl.formatToPlainString(closure_0(closure_2[12]).t.srlxB8, obj1));
+              tmp17 = SearchQueryTagTypes;
+              if (tmp2.type === SearchQueryTagTypes.COMPLETE) {
+                tmp3 = closure_1;
+                obj2 = closure_1(tmp15[22]);
+                obj8 = { searchContext: null, searchTokenType: null, isDefault: null };
+                obj8.searchContext = tmp;
+                obj8.searchTokenType = tmp2.searchTokenType;
+                tmp4 = SearchFilterAddLocations;
+                obj8.isDefault = tmp2.location === SearchFilterAddLocations.CLIENT_AUTO_ADD;
+                result = obj2.trackSearchFilterRemove(obj8);
+              }
+              tmp6 = closure_1;
+              obj4 = closure_1(tmp15[20]);
+              updateSearchQueryResult = obj4.updateSearchQuery(tmp, (removeTag) => {
+                removeTag.removeTag(closure_0);
+                if (type.type === constants.PREFIX) {
+                  const result = removeTag.restoreDraftTextInputValue();
+                }
+              });
+              obj5 = closure_1(tmp15[19]);
+              result1 = obj5.syncAutocompleteDebounced(tmp);
+              queryString = obj.getQueryString(tmp);
+              searchResultsQuery = obj.getSearchResultsQuery(tmp);
+              if (queryString !== searchResultsQuery) {
+                tmp6Result = tmp6(tmp15[19]);
+                if (tmp11) {
+                  initialMessages = tmp6Result.fetchInitialMessages(tmp);
+                } else {
+                  initialMessagesDebounced = tmp6Result.fetchInitialMessagesDebounced(tmp);
+                }
+              }
+            }
+            return;
           }
         }
       }
       if (cResult[24] === tmp4.icon) {
-        class M {
-          constructor() {
-            obj = {
-              setText(arg0) {
-                          const current = ref.current;
-                          let setTextResult;
-                          if (current != null) {
-                            setTextResult = current.setText(arg0);
-                          }
-                          return setTextResult;
-                        },
-              getText() {
-                          const current = ref.current;
-                          let str;
-                          if (current != null) {
-                            str = current.getText();
-                          }
-                          if (str == null) {
-                            str = "";
-                          }
-                          return str;
-                        },
-              blur() {
-                          const current = ref.current;
-                          let blurResult;
-                          if (current != null) {
-                            blurResult = current.blur();
-                          }
-                          return blurResult;
-                        },
-              focus() {
-                          const current = ref.current;
-                          let focusResult;
-                          if (current != null) {
-                            focusResult = current.focus();
-                          }
-                          return focusResult;
-                        },
-              isFocused() {
-                          const current = ref.current;
-                          let flag;
-                          if (current != null) {
-                            flag = current.isFocused();
-                          }
-                          if (flag == null) {
-                            flag = false;
-                          }
-                          return flag;
-                        },
-              measure(arg0) {
-                          const current = ref.current;
-                          let measureResult;
-                          if (current != null) {
-                            measureResult = current.measure(arg0);
-                          }
-                          return measureResult;
-                        },
-              measureInWindow(arg0) {
-                          const current = ref.current;
-                          let measureInWindowResult;
-                          if (current != null) {
-                            measureInWindowResult = current.measureInWindow(arg0);
-                          }
-                          return measureInWindowResult;
-                        },
-              measureLayout(arg0, arg1, arg2) {
-                          const current = ref.current;
-                          let measureLayoutResult;
-                          if (current != null) {
-                            measureLayoutResult = current.measureLayout(arg0, arg1, arg2);
-                          }
-                          return measureLayoutResult;
-                        }
-            };
-            return obj;
+        class H {
+          constructor(arg0) {
+            closure_0 = searchContext;
+            obj = closure_9;
+            tmp = searchContext;
+            tmp2 = closure_9.getTags(searchContext)[searchContext];
+            closure_1 = tmp2;
+            if (null != tmp2) {
+              tmp14 = closure_0;
+              tmp15 = closure_2;
+              AccessibilityAnnouncer = closure_0(closure_2[21]).AccessibilityAnnouncer;
+              intl = closure_0(closure_2[12]).intl;
+              obj1 = { text: null };
+              obj1.text = tmp2.text;
+              announceResult = AccessibilityAnnouncer.announce(intl.formatToPlainString(closure_0(closure_2[12]).t.srlxB8, obj1));
+              tmp17 = SearchQueryTagTypes;
+              if (tmp2.type === SearchQueryTagTypes.COMPLETE) {
+                tmp3 = closure_1;
+                obj2 = closure_1(tmp15[22]);
+                obj8 = { searchContext: null, searchTokenType: null, isDefault: null };
+                obj8.searchContext = tmp;
+                obj8.searchTokenType = tmp2.searchTokenType;
+                tmp4 = SearchFilterAddLocations;
+                obj8.isDefault = tmp2.location === SearchFilterAddLocations.CLIENT_AUTO_ADD;
+                result = obj2.trackSearchFilterRemove(obj8);
+              }
+              tmp6 = closure_1;
+              obj4 = closure_1(tmp15[20]);
+              updateSearchQueryResult = obj4.updateSearchQuery(tmp, (removeTag) => {
+                removeTag.removeTag(closure_0);
+                if (type.type === constants.PREFIX) {
+                  const result = removeTag.restoreDraftTextInputValue();
+                }
+              });
+              obj5 = closure_1(tmp15[19]);
+              result1 = obj5.syncAutocompleteDebounced(tmp);
+              queryString = obj.getQueryString(tmp);
+              searchResultsQuery = obj.getSearchResultsQuery(tmp);
+              if (queryString !== searchResultsQuery) {
+                tmp6Result = tmp6(tmp15[19]);
+                if (tmp11) {
+                  initialMessages = tmp6Result.fetchInitialMessages(tmp);
+                } else {
+                  initialMessagesDebounced = tmp6Result.fetchInitialMessagesDebounced(tmp);
+                }
+              }
+            }
+            return;
           }
         }
         if (cResult[27] === undefined) {
-          class M {
-            constructor() {
-              obj = {
-                setText(arg0) {
-                              const current = ref.current;
-                              let setTextResult;
-                              if (current != null) {
-                                setTextResult = current.setText(arg0);
-                              }
-                              return setTextResult;
-                            },
-                getText() {
-                              const current = ref.current;
-                              let str;
-                              if (current != null) {
-                                str = current.getText();
-                              }
-                              if (str == null) {
-                                str = "";
-                              }
-                              return str;
-                            },
-                blur() {
-                              const current = ref.current;
-                              let blurResult;
-                              if (current != null) {
-                                blurResult = current.blur();
-                              }
-                              return blurResult;
-                            },
-                focus() {
-                              const current = ref.current;
-                              let focusResult;
-                              if (current != null) {
-                                focusResult = current.focus();
-                              }
-                              return focusResult;
-                            },
-                isFocused() {
-                              const current = ref.current;
-                              let flag;
-                              if (current != null) {
-                                flag = current.isFocused();
-                              }
-                              if (flag == null) {
-                                flag = false;
-                              }
-                              return flag;
-                            },
-                measure(arg0) {
-                              const current = ref.current;
-                              let measureResult;
-                              if (current != null) {
-                                measureResult = current.measure(arg0);
-                              }
-                              return measureResult;
-                            },
-                measureInWindow(arg0) {
-                              const current = ref.current;
-                              let measureInWindowResult;
-                              if (current != null) {
-                                measureInWindowResult = current.measureInWindow(arg0);
-                              }
-                              return measureInWindowResult;
-                            },
-                measureLayout(arg0, arg1, arg2) {
-                              const current = ref.current;
-                              let measureLayoutResult;
-                              if (current != null) {
-                                measureLayoutResult = current.measureLayout(arg0, arg1, arg2);
-                              }
-                              return measureLayoutResult;
-                            }
-              };
-              return obj;
+          class H {
+            constructor(arg0) {
+              closure_0 = searchContext;
+              obj = closure_9;
+              tmp = searchContext;
+              tmp2 = closure_9.getTags(searchContext)[searchContext];
+              closure_1 = tmp2;
+              if (null != tmp2) {
+                tmp14 = closure_0;
+                tmp15 = closure_2;
+                AccessibilityAnnouncer = closure_0(closure_2[21]).AccessibilityAnnouncer;
+                intl = closure_0(closure_2[12]).intl;
+                obj1 = { text: null };
+                obj1.text = tmp2.text;
+                announceResult = AccessibilityAnnouncer.announce(intl.formatToPlainString(closure_0(closure_2[12]).t.srlxB8, obj1));
+                tmp17 = SearchQueryTagTypes;
+                if (tmp2.type === SearchQueryTagTypes.COMPLETE) {
+                  tmp3 = closure_1;
+                  obj2 = closure_1(tmp15[22]);
+                  obj8 = { searchContext: null, searchTokenType: null, isDefault: null };
+                  obj8.searchContext = tmp;
+                  obj8.searchTokenType = tmp2.searchTokenType;
+                  tmp4 = SearchFilterAddLocations;
+                  obj8.isDefault = tmp2.location === SearchFilterAddLocations.CLIENT_AUTO_ADD;
+                  result = obj2.trackSearchFilterRemove(obj8);
+                }
+                tmp6 = closure_1;
+                obj4 = closure_1(tmp15[20]);
+                updateSearchQueryResult = obj4.updateSearchQuery(tmp, (removeTag) => {
+                  removeTag.removeTag(closure_0);
+                  if (type.type === constants.PREFIX) {
+                    const result = removeTag.restoreDraftTextInputValue();
+                  }
+                });
+                obj5 = closure_1(tmp15[19]);
+                result1 = obj5.syncAutocompleteDebounced(tmp);
+                queryString = obj.getQueryString(tmp);
+                searchResultsQuery = obj.getSearchResultsQuery(tmp);
+                if (queryString !== searchResultsQuery) {
+                  tmp6Result = tmp6(tmp15[19]);
+                  if (tmp11) {
+                    initialMessages = tmp6Result.fetchInitialMessages(tmp);
+                  } else {
+                    initialMessagesDebounced = tmp6Result.fetchInitialMessagesDebounced(tmp);
+                  }
+                }
+              }
+              return;
             }
           }
         }
-        let obj5 = { ref, accessibilityHint: undefined, autoFocus: true, defaultValue: tmp31, style: tmp4.searchBar, tags: tmp9, icon: tmp36, onChangeText: tmp27, onRemove: tmp29, placeholder: tmp18, onSubmitEditing: G, leadingFade: true, horizontal: true, autoClearInputOnTagAdd: false };
-        const tmp43 = jsx(setDismissed(tmp2[25]), { ref, accessibilityHint: undefined, autoFocus: true, defaultValue: tmp31, style: tmp4.searchBar, tags: tmp9, icon: tmp36, onChangeText: tmp27, onRemove: tmp29, placeholder: tmp18, onSubmitEditing: G, leadingFade: true, horizontal: true, autoClearInputOnTagAdd: false });
+        let obj5 = { ref, accessibilityHint: undefined, autoFocus: true, defaultValue: tmp29, style: tmp4.searchBar, tags: tmp9, icon: tmp34, onChangeText: tmp26, onRemove: H, placeholder: tmp18, onSubmitEditing: G, leadingFade: true, horizontal: true, autoClearInputOnTagAdd: false };
         class G {
           constructor() {
             tmp = setDismissed();
@@ -1443,20 +1199,19 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
           }
         }
         cResult[27] = undefined;
-        cResult[28] = tmp31;
-        cResult[29] = tmp29;
+        cResult[28] = tmp29;
+        cResult[29] = H;
         cResult[30] = G;
-        cResult[31] = tmp27;
+        cResult[31] = tmp26;
         cResult[32] = tmp18;
         cResult[33] = tmp9;
         cResult[34] = tmp4.searchBar;
-        cResult[35] = tmp36;
-        cResult[36] = tmp43;
+        cResult[35] = tmp34;
+        cResult[36] = tmp41;
       }
-      let obj6 = { style: tmp4.icon, children: tmp33 };
+      let obj6 = { style: tmp4.icon, children: tmp31 };
       cResult[24] = tmp4.icon;
-      cResult[25] = tmp33;
-      cResult[26] = <View style={tmp4.icon}>{tmp33}</View>;
+      cResult[25] = tmp31;
       class G {
         constructor() {
           tmp = setDismissed();
@@ -1503,7 +1258,8 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
           return;
         }
       }
-      const tmp39 = <View style={tmp4.icon}>{tmp33}</View>;
+      tmp34 = <View style={tmp4.icon}>{tmp31}</View>;
+      const tmp37 = <View style={tmp4.icon}>{tmp31}</View>;
     }
     class G {
       constructor() {
@@ -1555,239 +1311,158 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
     cResult[18] = setDismissed;
     cResult[19] = G;
   } else {
-    class M {
-      constructor() {
-        obj = {
-          setText(arg0) {
-                  const current = ref.current;
-                  let setTextResult;
-                  if (current != null) {
-                    setTextResult = current.setText(arg0);
-                  }
-                  return setTextResult;
-                },
-          getText() {
-                  const current = ref.current;
-                  let str;
-                  if (current != null) {
-                    str = current.getText();
-                  }
-                  if (str == null) {
-                    str = "";
-                  }
-                  return str;
-                },
-          blur() {
-                  const current = ref.current;
-                  let blurResult;
-                  if (current != null) {
-                    blurResult = current.blur();
-                  }
-                  return blurResult;
-                },
-          focus() {
-                  const current = ref.current;
-                  let focusResult;
-                  if (current != null) {
-                    focusResult = current.focus();
-                  }
-                  return focusResult;
-                },
-          isFocused() {
-                  const current = ref.current;
-                  let flag;
-                  if (current != null) {
-                    flag = current.isFocused();
-                  }
-                  if (flag == null) {
-                    flag = false;
-                  }
-                  return flag;
-                },
-          measure(arg0) {
-                  const current = ref.current;
-                  let measureResult;
-                  if (current != null) {
-                    measureResult = current.measure(arg0);
-                  }
-                  return measureResult;
-                },
-          measureInWindow(arg0) {
-                  const current = ref.current;
-                  let measureInWindowResult;
-                  if (current != null) {
-                    measureInWindowResult = current.measureInWindow(arg0);
-                  }
-                  return measureInWindowResult;
-                },
-          measureLayout(arg0, arg1, arg2) {
-                  const current = ref.current;
-                  let measureLayoutResult;
-                  if (current != null) {
-                    measureLayoutResult = current.measureLayout(arg0, arg1, arg2);
-                  }
-                  return measureLayoutResult;
-                }
-        };
-        return obj;
+    class H {
+      constructor(arg0) {
+        closure_0 = searchContext;
+        obj = closure_9;
+        tmp = searchContext;
+        tmp2 = closure_9.getTags(searchContext)[searchContext];
+        closure_1 = tmp2;
+        if (null != tmp2) {
+          tmp14 = closure_0;
+          tmp15 = closure_2;
+          AccessibilityAnnouncer = closure_0(closure_2[21]).AccessibilityAnnouncer;
+          intl = closure_0(closure_2[12]).intl;
+          obj1 = { text: null };
+          obj1.text = tmp2.text;
+          announceResult = AccessibilityAnnouncer.announce(intl.formatToPlainString(closure_0(closure_2[12]).t.srlxB8, obj1));
+          tmp17 = SearchQueryTagTypes;
+          if (tmp2.type === SearchQueryTagTypes.COMPLETE) {
+            tmp3 = closure_1;
+            obj2 = closure_1(tmp15[22]);
+            obj8 = { searchContext: null, searchTokenType: null, isDefault: null };
+            obj8.searchContext = tmp;
+            obj8.searchTokenType = tmp2.searchTokenType;
+            tmp4 = SearchFilterAddLocations;
+            obj8.isDefault = tmp2.location === SearchFilterAddLocations.CLIENT_AUTO_ADD;
+            result = obj2.trackSearchFilterRemove(obj8);
+          }
+          tmp6 = closure_1;
+          obj4 = closure_1(tmp15[20]);
+          updateSearchQueryResult = obj4.updateSearchQuery(tmp, (removeTag) => {
+            removeTag.removeTag(closure_0);
+            if (type.type === constants.PREFIX) {
+              const result = removeTag.restoreDraftTextInputValue();
+            }
+          });
+          obj5 = closure_1(tmp15[19]);
+          result1 = obj5.syncAutocompleteDebounced(tmp);
+          queryString = obj.getQueryString(tmp);
+          searchResultsQuery = obj.getSearchResultsQuery(tmp);
+          if (queryString !== searchResultsQuery) {
+            tmp6Result = tmp6(tmp15[19]);
+            if (tmp11) {
+              initialMessages = tmp6Result.fetchInitialMessages(tmp);
+            } else {
+              initialMessagesDebounced = tmp6Result.fetchInitialMessagesDebounced(tmp);
+            }
+          }
+        }
+        return;
       }
     }
     const _Symbol = Symbol;
     if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-      class M {
-        constructor() {
-          obj = {
-            setText(arg0) {
-                      const current = ref.current;
-                      let setTextResult;
-                      if (current != null) {
-                        setTextResult = current.setText(arg0);
-                      }
-                      return setTextResult;
-                    },
-            getText() {
-                      const current = ref.current;
-                      let str;
-                      if (current != null) {
-                        str = current.getText();
-                      }
-                      if (str == null) {
-                        str = "";
-                      }
-                      return str;
-                    },
-            blur() {
-                      const current = ref.current;
-                      let blurResult;
-                      if (current != null) {
-                        blurResult = current.blur();
-                      }
-                      return blurResult;
-                    },
-            focus() {
-                      const current = ref.current;
-                      let focusResult;
-                      if (current != null) {
-                        focusResult = current.focus();
-                      }
-                      return focusResult;
-                    },
-            isFocused() {
-                      const current = ref.current;
-                      let flag;
-                      if (current != null) {
-                        flag = current.isFocused();
-                      }
-                      if (flag == null) {
-                        flag = false;
-                      }
-                      return flag;
-                    },
-            measure(arg0) {
-                      const current = ref.current;
-                      let measureResult;
-                      if (current != null) {
-                        measureResult = current.measure(arg0);
-                      }
-                      return measureResult;
-                    },
-            measureInWindow(arg0) {
-                      const current = ref.current;
-                      let measureInWindowResult;
-                      if (current != null) {
-                        measureInWindowResult = current.measureInWindow(arg0);
-                      }
-                      return measureInWindowResult;
-                    },
-            measureLayout(arg0, arg1, arg2) {
-                      const current = ref.current;
-                      let measureLayoutResult;
-                      if (current != null) {
-                        measureLayoutResult = current.measureLayout(arg0, arg1, arg2);
-                      }
-                      return measureLayoutResult;
-                    }
-          };
-          return obj;
+      class H {
+        constructor(arg0) {
+          closure_0 = searchContext;
+          obj = closure_9;
+          tmp = searchContext;
+          tmp2 = closure_9.getTags(searchContext)[searchContext];
+          closure_1 = tmp2;
+          if (null != tmp2) {
+            tmp14 = closure_0;
+            tmp15 = closure_2;
+            AccessibilityAnnouncer = closure_0(closure_2[21]).AccessibilityAnnouncer;
+            intl = closure_0(closure_2[12]).intl;
+            obj1 = { text: null };
+            obj1.text = tmp2.text;
+            announceResult = AccessibilityAnnouncer.announce(intl.formatToPlainString(closure_0(closure_2[12]).t.srlxB8, obj1));
+            tmp17 = SearchQueryTagTypes;
+            if (tmp2.type === SearchQueryTagTypes.COMPLETE) {
+              tmp3 = closure_1;
+              obj2 = closure_1(tmp15[22]);
+              obj8 = { searchContext: null, searchTokenType: null, isDefault: null };
+              obj8.searchContext = tmp;
+              obj8.searchTokenType = tmp2.searchTokenType;
+              tmp4 = SearchFilterAddLocations;
+              obj8.isDefault = tmp2.location === SearchFilterAddLocations.CLIENT_AUTO_ADD;
+              result = obj2.trackSearchFilterRemove(obj8);
+            }
+            tmp6 = closure_1;
+            obj4 = closure_1(tmp15[20]);
+            updateSearchQueryResult = obj4.updateSearchQuery(tmp, (removeTag) => {
+              removeTag.removeTag(closure_0);
+              if (type.type === constants.PREFIX) {
+                const result = removeTag.restoreDraftTextInputValue();
+              }
+            });
+            obj5 = closure_1(tmp15[19]);
+            result1 = obj5.syncAutocompleteDebounced(tmp);
+            queryString = obj.getQueryString(tmp);
+            searchResultsQuery = obj.getSearchResultsQuery(tmp);
+            if (queryString !== searchResultsQuery) {
+              tmp6Result = tmp6(tmp15[19]);
+              if (tmp11) {
+                initialMessages = tmp6Result.fetchInitialMessages(tmp);
+              } else {
+                initialMessagesDebounced = tmp6Result.fetchInitialMessagesDebounced(tmp);
+              }
+            }
+          }
+          return;
         }
       }
       cResult[8] = V;
     } else {
-      class M {
-        constructor() {
-          obj = {
-            setText(arg0) {
-                      const current = ref.current;
-                      let setTextResult;
-                      if (current != null) {
-                        setTextResult = current.setText(arg0);
-                      }
-                      return setTextResult;
-                    },
-            getText() {
-                      const current = ref.current;
-                      let str;
-                      if (current != null) {
-                        str = current.getText();
-                      }
-                      if (str == null) {
-                        str = "";
-                      }
-                      return str;
-                    },
-            blur() {
-                      const current = ref.current;
-                      let blurResult;
-                      if (current != null) {
-                        blurResult = current.blur();
-                      }
-                      return blurResult;
-                    },
-            focus() {
-                      const current = ref.current;
-                      let focusResult;
-                      if (current != null) {
-                        focusResult = current.focus();
-                      }
-                      return focusResult;
-                    },
-            isFocused() {
-                      const current = ref.current;
-                      let flag;
-                      if (current != null) {
-                        flag = current.isFocused();
-                      }
-                      if (flag == null) {
-                        flag = false;
-                      }
-                      return flag;
-                    },
-            measure(arg0) {
-                      const current = ref.current;
-                      let measureResult;
-                      if (current != null) {
-                        measureResult = current.measure(arg0);
-                      }
-                      return measureResult;
-                    },
-            measureInWindow(arg0) {
-                      const current = ref.current;
-                      let measureInWindowResult;
-                      if (current != null) {
-                        measureInWindowResult = current.measureInWindow(arg0);
-                      }
-                      return measureInWindowResult;
-                    },
-            measureLayout(arg0, arg1, arg2) {
-                      const current = ref.current;
-                      let measureLayoutResult;
-                      if (current != null) {
-                        measureLayoutResult = current.measureLayout(arg0, arg1, arg2);
-                      }
-                      return measureLayoutResult;
-                    }
-          };
-          return obj;
+      class H {
+        constructor(arg0) {
+          closure_0 = searchContext;
+          obj = closure_9;
+          tmp = searchContext;
+          tmp2 = closure_9.getTags(searchContext)[searchContext];
+          closure_1 = tmp2;
+          if (null != tmp2) {
+            tmp14 = closure_0;
+            tmp15 = closure_2;
+            AccessibilityAnnouncer = closure_0(closure_2[21]).AccessibilityAnnouncer;
+            intl = closure_0(closure_2[12]).intl;
+            obj1 = { text: null };
+            obj1.text = tmp2.text;
+            announceResult = AccessibilityAnnouncer.announce(intl.formatToPlainString(closure_0(closure_2[12]).t.srlxB8, obj1));
+            tmp17 = SearchQueryTagTypes;
+            if (tmp2.type === SearchQueryTagTypes.COMPLETE) {
+              tmp3 = closure_1;
+              obj2 = closure_1(tmp15[22]);
+              obj8 = { searchContext: null, searchTokenType: null, isDefault: null };
+              obj8.searchContext = tmp;
+              obj8.searchTokenType = tmp2.searchTokenType;
+              tmp4 = SearchFilterAddLocations;
+              obj8.isDefault = tmp2.location === SearchFilterAddLocations.CLIENT_AUTO_ADD;
+              result = obj2.trackSearchFilterRemove(obj8);
+            }
+            tmp6 = closure_1;
+            obj4 = closure_1(tmp15[20]);
+            updateSearchQueryResult = obj4.updateSearchQuery(tmp, (removeTag) => {
+              removeTag.removeTag(closure_0);
+              if (type.type === constants.PREFIX) {
+                const result = removeTag.restoreDraftTextInputValue();
+              }
+            });
+            obj5 = closure_1(tmp15[19]);
+            result1 = obj5.syncAutocompleteDebounced(tmp);
+            queryString = obj.getQueryString(tmp);
+            searchResultsQuery = obj.getSearchResultsQuery(tmp);
+            if (queryString !== searchResultsQuery) {
+              tmp6Result = tmp6(tmp15[19]);
+              if (tmp11) {
+                initialMessages = tmp6Result.fetchInitialMessages(tmp);
+              } else {
+                initialMessagesDebounced = tmp6Result.fetchInitialMessagesDebounced(tmp);
+              }
+            }
+          }
+          return;
         }
       }
     }
@@ -1796,6 +1471,7 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
     let intl = v0zoRaK(tmp2[12]).intl;
     v0zoRaK = v0zoRaK(tmp2[12]).t["0zoRaK"];
     let obj8 = { text: joined };
+    const formatToPlainStringResult = intl.formatToPlainString(v0zoRaK, obj8);
     cResult[6] = stateFromStores;
     class G {
       constructor() {
@@ -1843,10 +1519,10 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
         return;
       }
     }
-    const formatToPlainStringResult = intl.formatToPlainString(v0zoRaK, obj8);
+    cResult[7] = formatToPlainStringResult;
   }
   const v0zoRaKResult = v0zoRaK(ref[16]);
-}) : ((searchContext, arg1) => {
+}) : (function SearchBarWithRef(searchContext) {
   searchContext = searchContext.searchContext;
   let stateFromStores;
   let ref;
@@ -1871,7 +1547,7 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
   }, items3);
   ref = ref.useRef(null);
   let obj3 = searchContext(stateFromStores[16]);
-  const imperativeHandle = ref.useImperativeHandle(arg1, () => ({
+  const imperativeHandle = ref.useImperativeHandle(searchContext.ref, () => ({
     setText(arg0) {
       const current = ref.current;
       let setTextResult;
@@ -1988,7 +1664,7 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
       AccessibilityAnnouncer.announce(intl.formatToPlainString(util.t.srlxB8, obj3));
       if (tmp2.type === constants.COMPLETE) {
         const obj6 = { searchContext, searchTokenType: tmp2.searchTokenType, isDefault: tmp2.location === SearchFilterAddLocations.CLIENT_AUTO_ADD };
-        let result = search_tracking_TrackingDefault.trackSearchFilterRemove(obj6);
+        let result = tracking_TrackingDefault.trackSearchFilterRemove(obj6);
       }
       SearchPlatformActionCreatorsDefault.updateSearchQuery(searchContext, (removeTag) => {
         removeTag.removeTag(closure_0);
@@ -2052,4 +1728,4 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
   obj4.placeholder = tmp6;
   obj4.onSubmitEditing = memo2;
   return jsx(setDismissed(stateFromStores[25]), { ref, accessibilityHint: memo1, autoFocus: true, defaultValue: textInputValue, style: tmp.searchBar, tags: memo, icon: null, onChangeText: null, onRemove: null, placeholder: null, onSubmitEditing: null, leadingFade: true, horizontal: true, autoClearInputOnTagAdd: false });
-})));
+}));

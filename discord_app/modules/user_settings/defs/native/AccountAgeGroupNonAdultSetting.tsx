@@ -1,20 +1,20 @@
-// === Module 14557: AccountAgeGroupNonAdultSetting ===
+// === Module 14818: AccountAgeGroupNonAdultSetting ===
 
-// Module 14557 (AccountAgeGroupNonAdultSetting)
+// Module 14818 (AccountAgeGroupNonAdultSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 5108 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5587 */;
-import SettingsConstants from "SettingsConstants" /* 7645 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8117 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8119 */;
-import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 14511 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 5905 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 5915 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5918 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7492 */;
+import SettingsConstants from "SettingsConstants" /* 7966 */;
+import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 14771 */;
 import "ReactCompilerGating";
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11142 */;
+import SettingBuilders from "SettingBuilders" /* 11262 */;
 import size from "module_2" /* 2 */;
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountAgeGroupNonAdultSettingTrailing() {
   const cResult = c.c(3);
   const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -37,7 +37,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp7 = cResult[2];
   }
   return tmp7;
-}) : (() => {
+}) : (function useAccountAgeGroupNonAdultSettingTrailing() {
   const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
   const intl = util.intl;
   let stringResult = intl.string(util.t.lKDPGA);
@@ -47,7 +47,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   return stringResult;
 });
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function AccountAgeGroupNonAdultSettingPredicate() {
   const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
   const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
   let hasTeenDefaults = RegionalFeatureConfigUtils.useHasTeenDefaults();
@@ -63,7 +63,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     hasTeenDefaults = !isTinyBroncoSettingsEnabled;
   }
   return hasTeenDefaults;
-}) : (() => {
+}) : (function AccountAgeGroupNonAdultSettingPredicate() {
   const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
   const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
   let hasTeenDefaults = RegionalFeatureConfigUtils.useHasTeenDefaults();
@@ -92,7 +92,7 @@ const pressable = SettingBuilders.createPressable({
     const result = obj.showAgeVerificationGetStartedModal({ entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.ACCOUNT_AGE_GROUP });
   },
   withArrow: true,
-  usePredicate: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  usePredicate: ReactCompilerGating.isReactCompilerEnabled() ? (function AccountAgeGroupNonAdultSettingPredicate() {
     const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
     const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
     let hasTeenDefaults = RegionalFeatureConfigUtils.useHasTeenDefaults();
@@ -108,7 +108,7 @@ const pressable = SettingBuilders.createPressable({
       hasTeenDefaults = !isTinyBroncoSettingsEnabled;
     }
     return hasTeenDefaults;
-  }) : (() => {
+  }) : (function AccountAgeGroupNonAdultSettingPredicate() {
     const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
     const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
     let hasTeenDefaults = RegionalFeatureConfigUtils.useHasTeenDefaults();

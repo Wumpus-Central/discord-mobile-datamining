@@ -1,20 +1,20 @@
-// === Module 9441: useAgeGroupPresentation ===
+// === Module 9102: useAgeGroupPresentation ===
 
-// Module 9441 (useAgeGroupPresentation)
+// Module 9102 (useAgeGroupPresentation)
 import c from "c" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1126 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 5108 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8117 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8119 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2127 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 5905 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 5915 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7492 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const HelpdeskArticles = Constants.HelpdeskArticles;
 const AgeGroupState = { ADULT: "adult", TEEN: "teen", UNVERIFIED: "unverified" };
 let ReactCompilerGating = ReactCompilerGating_mod;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAgeGroupState() {
   const obj = AgeVerificationUtils;
   const isAgeVerified = obj.useIsAgeVerified();
   if (obj2.useIsVerifiedTeen()) {
@@ -23,7 +23,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     TEEN = isAgeVerified ? tmp2.ADULT : tmp2.UNVERIFIED;
   }
   return TEEN;
-}) : (() => {
+}) : (function useAgeGroupState() {
   const obj = AgeVerificationUtils;
   const isAgeVerified = obj.useIsAgeVerified();
   if (obj2.useIsVerifiedTeen()) {
@@ -47,7 +47,7 @@ export const handleShowAgeVerification = function handleShowAgeVerification() {
   const obj = AgeVerificationActionCreatorsDefault;
   const result = obj.showAgeVerificationGetStartedModal({ entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.ACCOUNT_AGE_GROUP });
 };
-export const useAgeGroupValueLabel = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useAgeGroupValueLabel = ReactCompilerGating.isReactCompilerEnabled() ? (function useAgeGroupValueLabel() {
   const obj = c;
   const cResult = obj.c(3);
   const tmp4 = closure_5();
@@ -85,7 +85,7 @@ export const useAgeGroupValueLabel = ReactCompilerGating.isReactCompilerEnabled(
     }
     return tmp7;
   }
-}) : (() => {
+}) : (function useAgeGroupValueLabel() {
   const tmp = closure_5();
   if (obj.ADULT === tmp) {
     const intl3 = util.intl;

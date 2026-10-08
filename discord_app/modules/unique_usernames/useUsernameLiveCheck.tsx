@@ -1,11 +1,11 @@
-// === Module 14534: useUsernameLiveCheck ===
+// === Module 14795: useUsernameLiveCheck ===
 
-// Module 14534 (useUsernameLiveCheck)
+// Module 14795 (useUsernameLiveCheck)
 import _mod12 from "module_12" /* 12 */;
-import UniqueUsernamesActionCreatorsDefault from "UniqueUsernamesActionCreators" /* 14536 */;
-import UniqueUsernamesUtils from "UniqueUsernamesUtils" /* 14537 */;
+import UniqueUsernamesActionCreatorsDefault from "UniqueUsernamesActionCreators" /* 14797 */;
+import UniqueUsernamesUtils from "UniqueUsernamesUtils" /* 14798 */;
 import noop from "module_19" /* 19 */;
-import UniqueUsernamesStore from "UniqueUsernamesStore" /* 14535 */;
+import UniqueUsernamesStore from "UniqueUsernamesStore" /* 14796 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/unique_usernames/useUsernameLiveCheck.tsx");
 
-export const useUsernameLiveCheck = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2, arg3) => {
+export const useUsernameLiveCheck = ReactCompilerGating.isReactCompilerEnabled() ? (function useUsernameLiveCheck(arg0, arg1, arg2, arg3) {
   _require = arg0;
   const cResult = require("c").c(18);
   closure_1 = tmp4;
@@ -45,14 +45,14 @@ export const useUsernameLiveCheck = ReactCompilerGating.isReactCompilerEnabled()
   stateFromStores = require("useStateFromStores").useStateFromStores(first, tmp9, tmp10);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [stateFromStores];
-    class U {
+    class C {
       constructor() {
         return closure_4.isRateLimited();
       }
     }
     cResult[4] = items2;
-    cResult[5] = U;
-    let tmp13 = U;
+    cResult[5] = C;
+    let tmp13 = C;
     let tmp12 = items2;
   } else {
     tmp12 = cResult[4];
@@ -74,7 +74,7 @@ export const useUsernameLiveCheck = ReactCompilerGating.isReactCompilerEnabled()
               let tmp19 = cResult[15];
             }
             const effect = noop.useEffect(tmp19, tmp18);
-            class U {
+            class C {
               constructor() {
                 return closure_4.isRateLimited();
               }
@@ -84,7 +84,7 @@ export const useUsernameLiveCheck = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
     }
-    class U {
+    class C {
       constructor() {
         return closure_4.isRateLimited();
       }
@@ -112,7 +112,7 @@ export const useUsernameLiveCheck = ReactCompilerGating.isReactCompilerEnabled()
   cResult[7] = undefined !== arg3 && arg3;
   cResult[8] = debounceResult;
   tmp16 = debounceResult;
-}) : ((arg0) => {
+}) : (function useUsernameLiveCheck(arg0) {
   _require = arg0;
   let flag = arg1;
   if (arg1 === undefined) {

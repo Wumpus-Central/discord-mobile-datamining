@@ -1,12 +1,12 @@
-// === Module 5778: Backdrop ===
+// === Module 5361: Backdrop ===
 
-// Module 5778 (Backdrop)
+// Module 5361 (Backdrop)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import native from "native" /* 4595 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4618 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import native from "native" /* 4787 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4810 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let closure_6 = {};
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { fill: StyleSheet.absoluteFillObject, backdrop: { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM }, backdropOpaque: null, accessibilityDismiss: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM };
 obj2.backdropOpaque = { backgroundColor: nativeDefault.colors.MOBILE_BACKGROUND_SCRIM_OPAQUE };
@@ -26,7 +26,7 @@ let obj4 = { backgroundColor: nativeDefault.colors.MOBILE_BACKGROUND_SCRIM_OPAQU
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Backdrop/native/Backdrop.native.tsx");
 
-export const Backdrop = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const Backdrop = ReactCompilerGating.isReactCompilerEnabled() ? (function Backdrop(arg0) {
   const cResult = c.c(28);
   ({ style, accessibleDismissStyle, animatedProps, opaque, blur, onDismiss, accessibilityLabel, aria-hidden: tmp4 } = arg0);
   if (undefined === animatedProps) {
@@ -169,7 +169,7 @@ export const Backdrop = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) =
   cResult[6] = items3;
   tmp9 = items3;
   const tmpResult = native;
-}) : ((animatedProps) => {
+}) : (function Backdrop(animatedProps) {
   animatedProps = animatedProps.animatedProps;
   ({ style, accessibleDismissStyle } = animatedProps);
   if (animatedProps === undefined) {

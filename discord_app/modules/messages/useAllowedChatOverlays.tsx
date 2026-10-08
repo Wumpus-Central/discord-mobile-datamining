@@ -1,16 +1,16 @@
-// === Module 11093: useAllowedChatOverlays ===
+// === Module 10457: useAllowedChatOverlays ===
 
-// Module 11093 (useAllowedChatOverlays)
+// Module 10457 (useAllowedChatOverlays)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4504 */;
-import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 9047 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4696 */;
+import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 10458 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2062 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
 
 require = fn;
-const ChatOverlays = fn(11091).ChatOverlays;
-const ActivityPanelModes = fn(9001).ActivityPanelModes;
+const ChatOverlays = fn(10455).ChatOverlays;
+const ActivityPanelModes = fn(6072).ActivityPanelModes;
 const no_text_activity = "no_text_activity";
 let obj = { no_text_activity: null };
 let items = [, , ];
@@ -33,7 +33,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/useAllowedChatOverlays.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAllowedChatOverlays() {
   obj = c;
   const cResult = obj.c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
   }
   const tmpResult3 = useStateFromStores;
-}) : (() => {
+}) : (function useAllowedChatOverlays() {
   obj = useStateFromStores;
   const items = [EmbeddedActivitiesStore];
   const stateFromStores = obj.useStateFromStores(items, () => EmbeddedActivitiesStore.getCurrentEmbeddedActivity());

@@ -1,11 +1,11 @@
-// === Module 17017: VoiceChannelAppSetting ===
+// === Module 17298: VoiceChannelAppSetting ===
 
-// Module 17017 (VoiceChannelAppSetting)
+// Module 17298 (VoiceChannelAppSetting)
 import c from "c" /* 576 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import useVoiceChannelApp from "useVoiceChannelApp" /* 17018 */;
-import VoiceChannelAppActionSheet from "VoiceChannelAppActionSheet" /* 17021 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import useVoiceChannelApp from "useVoiceChannelApp" /* 17299 */;
+import VoiceChannelAppActionSheet from "VoiceChannelAppActionSheet" /* 17302 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -39,9 +39,9 @@ function VoiceChannelAppRow(guildId) {
     tmp8Result = jsx(tmp5(tmp3[10]), { application: found.iconApplication });
   }
   obj3.icon = tmp8Result;
-  obj3.onPress = function onPress() {
+  obj3.onPress = function handlePress() {
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(17021, dependencyMap.paths), VoiceChannelAppActionSheet.VOICE_CHANNEL_APP_ACTION_SHEET_KEY, { guildId, selectedApplicationId: application_id, onChange });
+    obj.openLazy(asyncRequireImpl(17302, dependencyMap.paths), VoiceChannelAppActionSheet.VOICE_CHANNEL_APP_ACTION_SHEET_KEY, { guildId, selectedApplicationId: application_id, onChange });
   };
   obj2.children = jsx(guildId(application_id[9]).TableRow, { label: name, accessibilityLabel: "" + stringResult + " " + name, icon: null, onPress: null, arrow: true });
   return jsx(guildId(application_id[8]).TableRowGroup, { title: stringResult, description: null, hasIcons: null, children: null });
@@ -51,7 +51,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_channel_apps/native/VoiceChannelAppSetting.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceChannelAppSetting(arg0) {
   const cResult = c.c(4);
   ({ channel, guildId, onChange } = arg0);
   if (!obj2.useCanConfigureVoiceChannelApp(channel)) {
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[3] = tmp5;
   }
   obj2 = useVoiceChannelApp;
-}) : ((channel) => {
+}) : (function VoiceChannelAppSetting(channel) {
   channel = channel.channel;
   ({ guildId, onChange } = channel);
   let tmp = null;

@@ -1,10 +1,10 @@
-// === Module 12788: useMediaModalFooterBackground ===
+// === Module 12935: useMediaModalFooterBackground ===
 
-// Module 12788 (useMediaModalFooterBackground)
+// Module 12935 (useMediaModalFooterBackground)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
-import useToken from "useToken" /* 4586 */;
+import useToken from "useToken" /* 4778 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_viewer/native/components/overlay/useMediaModalFooterBackground.android.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useMediaModalFooterBackground() {
   const cResult = c.c(5);
   const tmp2 = _modDef683;
   const tmp2Result = tmp2(useToken.useToken(nativeDefault.colors.THEME_LOCKED_BLUR_FALLBACK));
@@ -34,7 +34,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[3] = tmp4;
   cResult[4] = obj3;
   tmp8 = obj3;
-}) : (() => {
+}) : (function useMediaModalFooterBackground() {
   const tmp = _modDef683;
   const tmp2 = _slicedToArray(tmp(useToken.useToken(nativeDefault.colors.THEME_LOCKED_BLUR_FALLBACK)).rgba(), 4);
   return { mediaModalFooterBackgroundColorRgba: { r: tmp2[0], g: tmp2[1], b: tmp2[2], a: tmp2[3] }, MediaModalFooterUnderlay: "Array" };

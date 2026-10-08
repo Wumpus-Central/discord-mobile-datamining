@@ -1,8 +1,8 @@
-// === Module 5697: GuildStickers ===
+// === Module 6038: GuildStickers ===
 
-// Module 5697 (GuildStickers)
+// Module 6038 (GuildStickers)
 import LoggerDefault from "Logger" /* 3 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 2078 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 2090 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 let closure_3 = new LoggerDefault("GuildStickers");

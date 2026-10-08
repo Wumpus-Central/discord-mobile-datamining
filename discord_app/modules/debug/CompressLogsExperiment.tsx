@@ -1,7 +1,7 @@
-// === Module 12544: CompressLogsExperiment ===
+// === Module 12642: CompressLogsExperiment ===
 
-// Module 12544 (CompressLogsExperiment)
-import ApexExperiment from "ApexExperiment" /* 1440 */;
+// Module 12642 (CompressLogsExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", name: "2026-08-compress-logs", defaultConfig: { enabled: false }, variations: null };

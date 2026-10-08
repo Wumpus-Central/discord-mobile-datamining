@@ -1,7 +1,7 @@
-// === Module 11927: getNextResourceChannel ===
+// === Module 12000: getNextResourceChannel ===
 
-// Module 11927 (getNextResourceChannel)
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 5083 */;
+// Module 12000 (getNextResourceChannel)
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 6912 */;
 
 const require = globalThis.__r;
 
@@ -21,7 +21,7 @@ export default function getCurrentAndNextResourceChannel(guildId, arg1) {
   }
   return items;
 };
-export const usePreviousAndNextResourceChannel = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export const usePreviousAndNextResourceChannel = ReactCompilerGating.isReactCompilerEnabled() ? (function usePreviousAndNextResourceChannel(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   const cResult = require("c").c(9);
@@ -80,7 +80,7 @@ export const usePreviousAndNextResourceChannel = ReactCompilerGating.isReactComp
     tmp13 = cResult[3];
   }
   return tmp13;
-}) : ((arg0, arg1) => {
+}) : (function usePreviousAndNextResourceChannel(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   const items = [GuildOnboardingHomeSettingsStore];

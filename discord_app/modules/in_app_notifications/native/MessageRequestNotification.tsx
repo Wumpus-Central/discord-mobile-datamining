@@ -1,13 +1,13 @@
-// === Module 12561: MessageRequestNotification ===
+// === Module 12692: MessageRequestNotification ===
 
-// Module 12561 (MessageRequestNotification)
+// Module 12692 (MessageRequestNotification)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import RootNavigationRef from "RootNavigationRef" /* 4743 */;
-import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 12494 */;
-import MessagePreviewText from "MessagePreviewText" /* 12501 */;
-import Notification from "Notification" /* 12531 */;
+import native from "native" /* 1200 */;
+import RootNavigationRef from "RootNavigationRef" /* 4937 */;
+import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 12590 */;
+import MessagePreviewText from "MessagePreviewText" /* 12597 */;
+import Notification from "Notification" /* 12627 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/MessageRequestNotification.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((notification) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function MessageRequestInAppNotification(notification) {
   const cResult = c.c(13);
   notification = notification.notification;
   ({ author, numMutualGuilds } = notification);
@@ -47,8 +47,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((notification) =>
       tmp8 = cResult[5];
     }
     if (cResult[6] !== author) {
-      const obj3 = { user: author, size: native.AvatarSizes.NORMAL, guildId: "Array" };
-      const tmp11 = jsx(native.Avatar, { user: author, size: native.AvatarSizes.NORMAL, guildId: "Array" });
+      const obj3 = { user: author, size: native.AvatarSizes.NORMAL, guildId: "r" };
+      const tmp11 = jsx(native.Avatar, { user: author, size: native.AvatarSizes.NORMAL, guildId: "r" });
       cResult[6] = author;
       cResult[7] = tmp11;
       let tmp9 = tmp11;
@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((notification) =>
   cResult[2] = formatToPlainStringResult;
   tmp4 = formatToPlainStringResult;
   const obj6 = { name: author.username, count: numMutualGuilds };
-}) : ((notification) => {
+}) : (function MessageRequestInAppNotification(notification) {
   notification = notification.notification;
   const author = notification.author;
   const numMutualGuilds = notification.numMutualGuilds;
@@ -101,19 +101,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((notification) =>
     return obj;
   }, items);
   const callback = noop.useCallback(() => {
-    numMutualGuilds(12494).clearNotification();
-    const obj = numMutualGuilds(12494);
-    const rootNavigationRef = author(4743).getRootNavigationRef();
+    numMutualGuilds(12590).clearNotification();
+    const obj = numMutualGuilds(12590);
+    const rootNavigationRef = author(4937).getRootNavigationRef();
     if (rootNavigationRef != null) {
       rootNavigationRef.navigate("message-requests");
     }
   }, []);
-  let obj = { icon: jsx(author(1188).Avatar, { user: author, size: author(1188).AvatarSizes.NORMAL, guildId: "Array" }), header: memo, children: null, onPress: null, notification: null };
+  let obj = { icon: jsx(author(1200).Avatar, { user: author, size: author(1200).AvatarSizes.NORMAL, guildId: "r" }), header: memo, children: null, onPress: null, notification: null };
   const obj3 = { text: null };
   let intl = author(1126).intl;
   obj3.text = intl.string(author(1126).t["Bx4/Lf"]);
-  obj.children = jsx(author(12501).SystemMessageText, { text: null });
+  obj.children = jsx(author(12597).SystemMessageText, { text: null });
   obj.onPress = callback;
   obj.notification = notification;
-  return jsx(author(12531).NotificationPressable, { icon: jsx(author(1188).Avatar, { user: author, size: author(1188).AvatarSizes.NORMAL, guildId: "Array" }), header: memo, children: null, onPress: null, notification: null });
+  return jsx(author(12627).NotificationPressable, { icon: jsx(author(1200).Avatar, { user: author, size: author(1200).AvatarSizes.NORMAL, guildId: "r" }), header: memo, children: null, onPress: null, notification: null });
 });

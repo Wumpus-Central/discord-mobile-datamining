@@ -1,23 +1,23 @@
-// === Module 10379: MediaKeyboardActionSheet ===
+// === Module 9976: MediaKeyboardActionSheet ===
 
-// Module 10379 (MediaKeyboardActionSheet)
+// Module 9976 (MediaKeyboardActionSheet)
 import util from "util" /* 1126 */;
-import ImageIcon from "ImageIcon" /* 5878 */;
-import PollsIcon from "PollsIcon" /* 10380 */;
-import AttachmentIcon from "AttachmentIcon" /* 10382 */;
-import MediaKeyboardBottomSheetHeaderSimpleDefault from "MediaKeyboardBottomSheetHeaderSimple" /* 10384 */;
-import MediaKeyboardBottomSheetActionsDefault from "MediaKeyboardBottomSheetActions" /* 10386 */;
+import ImageIcon from "ImageIcon" /* 8190 */;
+import PollsIcon from "PollsIcon" /* 9977 */;
+import AttachmentIcon from "AttachmentIcon" /* 9979 */;
+import MediaKeyboardBottomSheetHeaderSimpleDefault from "MediaKeyboardBottomSheetHeaderSimple" /* 9981 */;
+import MediaKeyboardBottomSheetActionsDefault from "MediaKeyboardBottomSheetActions" /* 9983 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const constants = fn(1614).MediaPickerActionSheetEngagedActions;
+const constants = fn(1626).MediaPickerActionSheetEngagedActions;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onBack) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function MediaKeyboardActionSheet(onBack) {
   const cResult = onClose(sharedValue[5]).c(41);
   ({ channel, draftType, uploadLimit, disableWhenReachedLimit, includedUploadIds, extensions, allowCamera, onPressCamera, onAttachPress, onPressItem, onLongPressItem, onViewAll, onManageLimited, onClose } = onBack);
   onBack = onBack.onBack;
@@ -249,7 +249,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onBack) => {
   cResult[6] = onBack;
   cResult[7] = fn;
   const obj2 = onClose(sharedValue[6]);
-}) : ((onAttachPress) => {
+}) : (function MediaKeyboardActionSheet(onAttachPress) {
   onAttachPress = onAttachPress.onAttachPress;
   const onViewAll = onAttachPress.onViewAll;
   const onClose = onAttachPress.onClose;

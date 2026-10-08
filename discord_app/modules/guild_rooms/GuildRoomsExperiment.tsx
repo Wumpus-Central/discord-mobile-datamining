@@ -1,12 +1,12 @@
-// === Module 5096: GuildRoomsExperiment ===
+// === Module 7474: GuildRoomsExperiment ===
 
-// Module 5096 (GuildRoomsExperiment)
-import GuildMemberStore from "GuildMemberStore" /* 2112 */;
+// Module 7474 (GuildRoomsExperiment)
+import GuildMemberStore from "GuildMemberStore" /* 2124 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const createExperiment = fn(4780);
+const createExperiment = fn(4974);
 let obj2 = { kind: "guild", id: "2026-06_guild_rooms", label: "Guild Rooms", defaultConfig: { enabled: false, interactionsEnabled: false, multipleRoomsEnabled: false, posturesEnabled: false }, treatments: null };
 let items = [{ id: 1, label: "Enable Guild Rooms in this guild", config: { enabled: true, interactionsEnabled: true, multipleRoomsEnabled: false, posturesEnabled: true } }, { id: 2, label: "Enable Guild Rooms without Interactions", config: { enabled: true, interactionsEnabled: false, multipleRoomsEnabled: false, posturesEnabled: true } }, { id: 3, label: "Enable Guild Rooms with Room Variants", config: { enabled: true, interactionsEnabled: true, multipleRoomsEnabled: true, posturesEnabled: true } }, { id: 4, label: "Enable Guild Rooms without Postures", config: { enabled: true, interactionsEnabled: true, multipleRoomsEnabled: false, posturesEnabled: false } }, { id: 5, label: "Enable Guild Rooms with Room 2 Default and Selector", config: { enabled: true, interactionsEnabled: true, multipleRoomsEnabled: true, posturesEnabled: true } }];
 obj2.treatments = items;
@@ -37,7 +37,7 @@ export const getGuildRoomsConfig = function getGuildRoomsConfig(guildId, disable
   obj.disable = flag;
   return closure_3.getCurrentConfig(guildId, obj);
 };
-export const useGuildRoomsExperiment = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId, disable) => {
+export const useGuildRoomsExperiment = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildRoomsExperiment(guildId, disable) {
   _require = guildId;
   const cResult = require("c").c(7);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -91,7 +91,7 @@ export const useGuildRoomsExperiment = ReactCompilerGating.isReactCompilerEnable
   cResult[6] = obj2;
   tmp9 = obj2;
   const tmpResult = require("initialize");
-}) : ((guildId, disable) => {
+}) : (function useGuildRoomsExperiment(guildId, disable) {
   _require = guildId;
   const items = [GuildMemberStore];
   const items1 = [guildId.guildId];

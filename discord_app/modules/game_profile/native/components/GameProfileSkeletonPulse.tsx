@@ -1,16 +1,16 @@
-// === Module 8420: GameProfileSkeletonPulse ===
+// === Module 8917: GameProfileSkeletonPulse ===
 
-// Module 8420 (GameProfileSkeletonPulse)
+// Module 8917 (GameProfileSkeletonPulse)
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 const require = fn;
 let c4 = 0.1;
 let c5 = 1300;
-const Easing = fn(4618).Easing;
-const inOutResult = Easing.inOut(fn(4618).Easing.quad);
+const Easing = fn(4810).Easing;
+const inOutResult = Easing.inOut(fn(4810).Easing.quad);
 const metroRequire = inOutResult;
-const ReanimatedRexport = fn(4618);
+const ReanimatedRexport = fn(4810);
 const pulsePhase = ReanimatedRexport.makeMutable(0);
 let c8 = 0;
 let c9 = false;
@@ -36,11 +36,11 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileSkeletonPulse.tsx");
 
-export const useSkeletonPulseStyle = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useSkeletonPulseStyle = ReactCompilerGating.isReactCompilerEnabled() ? (function useSkeletonPulseStyle(arg0) {
   const cResult = stateFromStores(576).c(7);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AccessibilityStore];
-    const fn = function f() {
+    const fn = function _() {
       return AccessibilityStore.useReducedMotion;
     };
     cResult[0] = items;
@@ -340,8 +340,8 @@ export const useSkeletonPulseStyle = ReactCompilerGating.isReactCompilerEnabled(
   T.__closure = { shouldReduceMotion: stateFromStores, MAX_OPACITY: v01, getPulseOpacity, pulsePhase, phaseOffset: result };
   T.__workletHash = 3992024948852;
   T.__initData = __initData;
-  return stateFromStores(4618).useAnimatedStyle(T);
-}) : ((arg0) => {
+  return stateFromStores(4810).useAnimatedStyle(T);
+}) : (function useSkeletonPulseStyle(arg0) {
   const items = [AccessibilityStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => AccessibilityStore.useReducedMotion);
   const effect = noop.useEffect(() => {
@@ -404,7 +404,7 @@ export const useSkeletonPulseStyle = ReactCompilerGating.isReactCompilerEnabled(
   let result = -arg0 % c5 / c5;
   dependencyMap = result;
   let obj = stateFromStores(504);
-  const fn = function f() {
+  const fn = function _() {
     const obj = { opacity: null };
     if (stateFromStores) {
       obj.opacity = opacity;
@@ -430,5 +430,5 @@ export const useSkeletonPulseStyle = ReactCompilerGating.isReactCompilerEnabled(
   fn.__closure = { shouldReduceMotion: stateFromStores, MAX_OPACITY: v01, getPulseOpacity, pulsePhase, phaseOffset: result };
   fn.__workletHash = 15886965849973;
   fn.__initData = __initData2;
-  return stateFromStores(4618).useAnimatedStyle(fn);
+  return stateFromStores(4810).useAnimatedStyle(fn);
 });

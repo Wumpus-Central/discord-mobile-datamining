@@ -1,15 +1,15 @@
-// === Module 12364: ContactSyncInviteFriends ===
+// === Module 12460: ContactSyncInviteFriends ===
 
-// Module 12364 (ContactSyncInviteFriends)
+// Module 12460 (ContactSyncInviteFriends)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import UserUtilsDefault from "UserUtils" /* 4728 */;
-import FastImageDefault from "FastImage" /* 5981 */;
-import showShareActionSheet from "showShareActionSheet" /* 8048 */;
-import _modDef12365 from "module_12365" /* 12365 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import UserUtilsDefault from "UserUtils" /* 4922 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import showShareActionSheet from "showShareActionSheet" /* 8457 */;
+import _modDef12461 from "module_12461" /* 12461 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
@@ -19,7 +19,7 @@ const Constants = fn(1085);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsSections: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { flex: 1, alignItems: "center", justifyContent: "center", paddingHorizontal: 16 }, art: { marginBottom: 16 }, title: { marginBottom: 8, textAlign: "center" }, subtitle: { lineHeight: 18, textAlign: "center" }, button: { marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 } };
 let closure_10 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -27,7 +27,7 @@ let obj3 = { marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefau
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/contact_sync/native/components/ContactSyncInviteFriends.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContactSyncInviteFriends() {
   const cResult = stateFromStores(576).c(26);
   const tmp4 = closure_10();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   let obj = stateFromStores(576);
   stateFromStores = stateFromStores(504).useStateFromStores(tmp5, tmp6);
   if (cResult[2] !== stateFromStores) {
-    const fn2 = function x() {
+    function handleInvitePress() {
       AnalyticsUtilsDefault.track(constants.FRIEND_ADD_VIEWED, { friend_add_type: "Invite", source_page: constants2.CONTACT_SYNC_MODAL });
       const intl = util.intl;
       let str = "";
@@ -57,15 +57,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       const formatToPlainStringResult = intl.formatToPlainString(util.t["6E9a1J"], { url: "https://discord.com/", username: str });
       showShareActionSheet.showShareActionSheet({ message: formatToPlainStringResult }, constants2.CONTACT_SYNC_MODAL);
       const tmp5Result = showShareActionSheet;
-    };
+    }
     cResult[2] = stateFromStores;
-    cResult[3] = fn2;
-    let tmp9 = fn2;
+    cResult[3] = handleInvitePress;
+    let tmp9 = handleInvitePress;
   } else {
     tmp9 = cResult[3];
   }
   if (cResult[4] !== tmp4.art) {
-    let obj2 = { style: tmp4.art, source: _modDef12365 };
+    let obj2 = { style: tmp4.art, source: _modDef12461 };
     const tmp14 = closure_7(FastImageDefault, obj2);
     cResult[4] = tmp4.art;
     cResult[5] = tmp14;
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   if (cResult[7] !== tmp4.title) {
     const obj3 = { style: tmp4.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: tmp15 };
-    const tmp19 = closure_7(tmp(4892).Text, obj3);
+    const tmp19 = closure_7(tmp(5086).Text, obj3);
     cResult[7] = tmp4.title;
     cResult[8] = tmp19;
     let tmp17 = tmp19;
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   if (cResult[10] !== tmp4.subtitle) {
     const obj4 = { style: tmp4.subtitle, variant: "text-sm/medium", color: "text-default", children: tmp20 };
-    const tmp24 = closure_7(tmp(4892).Text, obj4);
+    const tmp24 = closure_7(tmp(5086).Text, obj4);
     cResult[10] = tmp4.subtitle;
     cResult[11] = tmp24;
     let tmp22 = tmp24;
@@ -124,7 +124,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         }
         if (cResult[18] !== tmp9) {
           const obj5 = { variant: "primary", size: "lg", text: tmp27, onPress: tmp9 };
-          const tmp31 = closure_7(tmp(5601).Button, obj5);
+          const tmp31 = closure_7(tmp(5375).Button, obj5);
           cResult[18] = tmp9;
           cResult[19] = tmp31;
           let tmp29 = tmp31;
@@ -170,7 +170,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[16] = tmp26;
   tmp25 = tmp26;
   let tmpResult = stateFromStores(504);
-}) : (() => {
+}) : (function ContactSyncInviteFriends() {
   const tmp = closure_10();
   const items = [UserStore];
   _require = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());
@@ -178,7 +178,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { style: tmp.art, source: null };
   let obj = require("initialize");
-  obj4.source = _modDef12365;
+  obj4.source = _modDef12461;
   const items1 = [closure_7(FastImageDefault, obj4), , ];
   const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   let intl = require("util").intl;
@@ -194,7 +194,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const obj8 = { variant: "primary", size: "lg", text: null, onPress: null };
   const intl3 = require("util").intl;
   obj8.text = intl3.string(require("util").t["6Qgrev"]);
-  obj8.onPress = function onPress() {
+  obj8.onPress = function handleInvitePress() {
     AnalyticsUtilsDefault.track(constants.FRIEND_ADD_VIEWED, { friend_add_type: "Invite", source_page: constants2.CONTACT_SYNC_MODAL });
     const intl = util.intl;
     let str = "";

@@ -1,15 +1,15 @@
-// === Module 14854: BountiesModalEndedCtaButtons ===
+// === Module 15115: BountiesModalEndedCtaButtons ===
 
-// Module 14854 (BountiesModalEndedCtaButtons)
+// Module 15115 (BountiesModalEndedCtaButtons)
 import nativeDefault from "native" /* 587 */;
-import timing from "timing" /* 4897 */;
-import timingPresets from "timingPresets" /* 4900 */;
-import QuestContent from "QuestContent" /* 5635 */;
-import AdCreativeType from "AdCreativeType" /* 5637 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7225 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 10931 */;
+import timing from "timing" /* 5091 */;
+import timingPresets from "timingPresets" /* 5094 */;
+import QuestContent from "QuestContent" /* 5982 */;
+import AdCreativeType from "AdCreativeType" /* 5984 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7404 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 10582 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
+import createStyles from "createStyles" /* 5090 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -22,7 +22,7 @@ const __initData = { code: "function BountiesModalEndedCtaButtonsTsx1(){const{wi
 const __initData2 = { code: "function BountiesModalEndedCtaButtonsTsx2(){const{withTiming,visible,timingStandard}=this.__closure;return{opacity:withTiming(visible?1:0,timingStandard)};}" };
 let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalEndedCtaButtons.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((bounty) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function BountiesModalEndedCtaButtons(bounty) {
   const cResult = bounty(sourceQuestContent[4]).c(13);
   bounty = bounty.bounty;
   const visible = bounty.visible;
@@ -119,7 +119,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((bounty) => {
   cResult[12] = tmp13Result;
   tmp11 = tmp13Result;
   let obj2 = { withTiming: bounty(sourceQuestContent[7]).withTiming, visible, timingStandard: bounty(sourceQuestContent[8]).timingStandard };
-}) : ((bounty) => {
+}) : (function BountiesModalEndedCtaButtons(bounty) {
   bounty = bounty.bounty;
   let visible = bounty.visible;
   ({ sourceQuestContent: dependencyMap, showCloseButton } = bounty);
@@ -131,8 +131,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((bounty) => {
     flag = false;
   }
   const tmp = closure_5();
-  closure_3 = bounty(10929).useGetQuestImpressionId();
-  let obj = bounty(10929);
+  closure_3 = bounty(10580).useGetQuestImpressionId();
+  let obj = bounty(10580);
   const fn = function y() {
     let num = 0;
     if (visible) {
@@ -140,12 +140,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((bounty) => {
     }
     return { opacity: timing.withTiming(num, timingPresets.timingStandard) };
   };
-  let obj2 = bounty(4618);
-  fn.__closure = { withTiming: bounty(4897).withTiming, visible, timingStandard: bounty(4900).timingStandard };
+  let obj2 = bounty(4810);
+  fn.__closure = { withTiming: bounty(5091).withTiming, visible, timingStandard: bounty(5094).timingStandard };
   fn.__workletHash = 5587342121093;
   fn.__initData = __initData2;
   const animatedStyle = obj2.useAnimatedStyle(fn);
-  bounty(14853);
+  bounty(15114);
   if (visible) {
     const obj4 = { style: null, children: null };
     const items = [tmp.container, animatedStyle];
@@ -161,7 +161,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((bounty) => {
           const result = obj.openAdGameLinkDirectly(obj2, { content: QuestContent.QuestContent.VIDEO_MODAL_END_CARD, ctaContent: AnalyticsTypes.QuestContentCTA.OPEN_GAME_LINK, impressionId: closure_3(), sourceQuestContent });
         }
     };
-    const items1 = [closure_3(tmp2(5601).Button, obj5), ];
+    const items1 = [closure_3(tmp2(5375).Button, obj5), ];
     let tmp9Result = null;
     if (showCloseButton) {
       const obj6 = { variant: "secondary-overlay", text: null, size: "lg", disabled: null, onPress: null };
@@ -169,11 +169,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((bounty) => {
       obj6.text = intl.string(tmp2(1126).t.cpT0Cq);
       obj6.disabled = flag;
       obj6.onPress = bounty.onClose;
-      tmp9Result = tmp9(tmp2(5601).Button, obj6);
+      tmp9Result = tmp9(tmp2(5375).Button, obj6);
     }
     items1[1] = tmp9Result;
     obj4.children = items1;
-    visible = closure_4(visible(4618).View, obj4);
+    visible = closure_4(visible(4810).View, obj4);
     tmp9 = closure_3;
   }
   return visible;

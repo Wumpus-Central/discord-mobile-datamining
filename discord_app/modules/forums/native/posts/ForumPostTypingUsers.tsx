@@ -1,9 +1,9 @@
-// === Module 11647: ForumPostTypingUsers ===
+// === Module 11712: ForumPostTypingUsers ===
 
-// Module 11647 (ForumPostTypingUsers)
+// Module 11712 (ForumPostTypingUsers)
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4618 */;
+import native from "native" /* 1200 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4810 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { display: "flex", flexDirection: "row", alignItems: "center", flex: 1 }, lastTypingUser: { marginEnd: 0 }, typingUser: { marginEnd: -8, borderWidth: 2, borderRadius: nativeDefault.radii.round }, dots: null, typingText: null, borderColor: null, borderColorPressed: null };
 let obj3 = { marginEnd: -8, borderWidth: 2, borderRadius: nativeDefault.radii.round };
 obj2.dots = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingVertical: nativeDefault.space.PX_4, paddingLeft: 4, borderRadius: nativeDefault.radii.lg, marginStart: -8, borderWidth: 4, marginEnd: 8, marginTop: -1, marginBottom: -1 };
@@ -29,7 +29,7 @@ let obj6 = { color: nativeDefault.colors.CARD_PRIMARY_PRESSED_BG };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPostTypingUsers.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((hasUnreads) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPostTypingUsers(hasUnreads) {
   const cResult = require("c").c(32);
   ({ thread, typingUserIds } = hasUnreads);
   const tmp4 = guildId1();
@@ -55,17 +55,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((hasUnreads) => {
       const forumPostContainerPressedIn = tmp(tmp2[9]).useForumPostContainerPressedIn();
       const tmp8 = facepileUsers;
       const tmpResult = tmp(tmp2[9]);
-      class I {
+      class U {
         constructor() {
           obj = { borderColor: closure_4.value ? color : color };
           return obj;
         }
       }
       const obj3 = { forumPostPressedIn: forumPostContainerPressedIn, borderColorPressed: color2, borderColor: color };
-      I.__closure = obj3;
-      I.__workletHash = 6320844933544;
-      I.__initData = __initData;
-      const animatedStyle = tmp(tmp2[10]).useAnimatedStyle(I);
+      U.__closure = obj3;
+      U.__workletHash = 6320844933544;
+      U.__initData = __initData;
+      const animatedStyle = tmp(tmp2[10]).useAnimatedStyle(U);
       let str = "text-muted";
       if (hasUnreads.hasUnreads) {
         str = "text-default";
@@ -123,7 +123,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((hasUnreads) => {
                         let items = [tmp15, tmp30, tmp33];
                         obj5.children = items;
                         const tmp38 = animatedStyle(tmp13, obj5);
-                        class I {
+                        class U {
                           constructor() {
                             obj = { borderColor: closure_4.value ? color : color };
                             return obj;
@@ -138,7 +138,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((hasUnreads) => {
                       }
                     }
                     const obj6 = { variant: "text-sm/semibold", color: str, style: tmp4.typingText, lineClamp: 1, children: null };
-                    class I {
+                    class U {
                       constructor() {
                         obj = { borderColor: closure_4.value ? color : color };
                         return obj;
@@ -211,7 +211,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((hasUnreads) => {
   cResult[5] = obj7;
   tmp7 = obj7;
   const obj2 = require("ForumHooks");
-}) : ((hasUnreads) => {
+}) : (function ForumPostTypingUsers(hasUnreads) {
   ({ thread, typingUserIds } = hasUnreads);
   let color;
   let guildId;

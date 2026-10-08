@@ -1,41 +1,41 @@
-// === Module 13378: PremiumPlanSelectYearlyUpsellModal ===
+// === Module 13678: PremiumPlanSelectYearlyUpsellModal ===
 
-// Module 13378 (PremiumPlanSelectYearlyUpsellModal)
-import common_AlertDefault from "common/Alert" /* 5790 */;
-import TextStylesDefault from "TextStyles" /* 5922 */;
-import _modDef13379 from "module_13379" /* 13379 */;
+// Module 13678 (PremiumPlanSelectYearlyUpsellModal)
+import common_AlertDefault from "common/Alert" /* 5394 */;
+import TextStylesDefault from "TextStyles" /* 5902 */;
+import _modDef13679 from "module_13679" /* 13679 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2116 */;
-import IAPStore from "IAPStore" /* 6931 */;
+import LocaleStore from "LocaleStore" /* 2128 */;
+import IAPStore from "IAPStore" /* 7120 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const usePremiumPlanSelectStore = fn(13367).usePremiumPlanSelectStore;
-let closure_10 = fn(1379).PREMIUM_YEARLY_DISCOUNT_PERCENT;
+const usePremiumPlanSelectStore = fn(13667).usePremiumPlanSelectStore;
+let closure_10 = fn(1391).PREMIUM_YEARLY_DISCOUNT_PERCENT;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { marginHorizontal: 26 }, image: { alignSelf: "center", marginVertical: 32 }, header: null, description: null, upsellButton: null, continueButton: null, cancelButton: null };
 let obj3 = {};
 const merged = Object.assign(TextStylesDefault(fn(1096).Fonts.DISPLAY_EXTRABOLD, undefined, 24));
 obj3.alignSelf = "center";
 obj3.textAlign = "center";
 obj3.paddingBottom = 8;
-obj3.color = fn(5627).DARK_WHITE_500_LIGHT_BLACK_500;
+obj3.color = fn(5974).DARK_WHITE_500_LIGHT_BLACK_500;
 obj2.header = obj3;
-obj2.description = { alignSelf: "center", textAlign: "center", paddingBottom: 32, color: fn(5627).DARK_WHITE_500_LIGHT_BLACK_500 };
+obj2.description = { alignSelf: "center", textAlign: "center", paddingBottom: 32, color: fn(5974).DARK_WHITE_500_LIGHT_BLACK_500 };
 obj2.upsellButton = { marginBottom: 16 };
 obj2.continueButton = { marginBottom: 4 };
 obj2.cancelButton = { marginTop: 8, marginBottom: 4 };
 let closure_13 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let obj4 = { alignSelf: "center", textAlign: "center", paddingBottom: 32, color: fn(5627).DARK_WHITE_500_LIGHT_BLACK_500 };
+let obj4 = { alignSelf: "center", textAlign: "center", paddingBottom: 32, color: fn(5974).DARK_WHITE_500_LIGHT_BLACK_500 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/PremiumPlanSelectYearlyUpsellModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((continueWithDefault) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumPlanSelectYearlyUpsellModal(continueWithDefault) {
   const cResult = productId(continueWithDefault[13]).c(43);
   ({ onClose, productId } = continueWithDefault);
   ({ orderPriceString, continueWithUpsell } = continueWithDefault);
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((continueWithDefa
     tmp14 = cResult[3];
   }
   if (cResult[4] !== productId) {
-    class N {
+    class U {
       constructor() {
         items = [, ];
         items[0] = closure_8.getProduct(productId);
@@ -88,9 +88,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((continueWithDefa
       }
     }
     cResult[4] = productId;
-    cResult[5] = N;
+    cResult[5] = U;
   } else {
-    class N {
+    class U {
       constructor() {
         items = [, ];
         items[0] = closure_8.getProduct(productId);
@@ -102,7 +102,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((continueWithDefa
   const tmpResult3 = productId(continueWithDefault[15]);
   const tmpResult4 = productId(continueWithDefault[15]);
   if (!tmp6) {
-    class N {
+    class U {
       constructor() {
         items = [, ];
         items[0] = closure_8.getProduct(productId);
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((continueWithDefa
     }
   }
   if (orderPriceString == null) {
-    class N {
+    class U {
       constructor() {
         items = [, ];
         items[0] = closure_8.getProduct(productId);
@@ -121,7 +121,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((continueWithDefa
       }
     }
     if (tmp7Result[0] != null) {
-      class N {
+      class U {
         constructor() {
           items = [, ];
           items[0] = closure_8.getProduct(productId);
@@ -134,7 +134,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((continueWithDefa
   }
   noop = tmp19;
   if (cResult[6] === continueWithDefault) {
-    class N {
+    class U {
       constructor() {
         items = [, ];
         items[0] = closure_8.getProduct(productId);
@@ -142,9 +142,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((continueWithDefa
         return items;
       }
     }
-    const effect = obj2.useEffect(V);
+    const effect = obj2.useEffect(N);
     if (tmp19) {
-      class N {
+      class U {
         constructor() {
           items = [, ];
           items[0] = closure_8.getProduct(productId);
@@ -153,7 +153,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((continueWithDefa
         }
       }
     } else {
-      class N {
+      class U {
         constructor() {
           items = [, ];
           items[0] = closure_8.getProduct(productId);
@@ -163,7 +163,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((continueWithDefa
       }
       const container = tmp4.container;
       if (cResult[9] !== tmp4.image) {
-        class N {
+        class U {
           constructor() {
             items = [, ];
             items[0] = closure_8.getProduct(productId);
@@ -176,7 +176,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((continueWithDefa
         cResult[9] = tmp4.image;
         cResult[10] = tmp26;
       } else {
-        class N {
+        class U {
           constructor() {
             items = [, ];
             items[0] = closure_8.getProduct(productId);
@@ -190,7 +190,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((continueWithDefa
       const obj4 = { discountPercentage: obj6.formatPercent(stateFromStores, closure_10 / 100) };
       const formatResult = intl.format(productId(tmp2[19]).t["7chOVL"], obj4);
       if (cResult[11] === LegacyText) {
-        class N {
+        class U {
           constructor() {
             items = [, ];
             items[0] = closure_8.getProduct(productId);
@@ -208,7 +208,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((continueWithDefa
       const formatPercentResult = obj6.formatPercent(stateFromStores, closure_10 / 100);
     }
   }
-  class V {
+  class N {
     constructor() {
       if (closure_4) {
         tmp = continueWithDefault;
@@ -219,9 +219,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((continueWithDefa
   }
   cResult[6] = continueWithDefault;
   cResult[7] = null == premiumBundledItemsFromProductId.premiumTier || null == orderPriceString;
-  cResult[8] = V;
-  tmp7Result = _slicedToArray(productId(continueWithDefault[15]).useStateFromStoresArray(tmp14, N), 2);
-}) : ((arg0) => {
+  cResult[8] = N;
+  tmp7Result = _slicedToArray(productId(continueWithDefault[15]).useStateFromStoresArray(tmp14, U), 2);
+}) : (function PremiumPlanSelectYearlyUpsellModal(arg0) {
   ({ onClose, productId } = arg0);
   ({ orderPriceString, continueWithUpsell: importDefault, continueWithDefault: dependencyMap } = arg0);
   _slicedToArray = undefined;
@@ -231,8 +231,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((continueWithDefa
   [tmp4, c3] = noop.useState(null);
   const obj = noop;
   const tmp3 = _slicedToArray(noop.useState(null), 2);
-  const premiumBundledItemsFromProductId = productId(6925).getPremiumBundledItemsFromProductId(productId);
-  const obj2 = productId(6925);
+  const premiumBundledItemsFromProductId = productId(7114).getPremiumBundledItemsFromProductId(productId);
+  const obj2 = productId(7114);
   let items = [LocaleStore];
   const stateFromStores = productId(504).useStateFromStores(items, () => locale.locale);
   const obj3 = productId(504);
@@ -263,25 +263,25 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((continueWithDefa
   if (null == premiumTier || null == orderPriceString) {
     return null;
   } else {
-    const formatPercentResult = productId(1888).formatPercent(stateFromStores, closure_10 / 100);
+    const formatPercentResult = productId(1900).formatPercent(stateFromStores, closure_10 / 100);
     const obj5 = { onClose, noDefaultButtons: true, children: null };
     const obj6 = { style: tmp.container, children: null };
     const obj7 = { style: tmp.image, source: null };
-    const tmp5Result = productId(1888);
-    obj7.source = _modDef13379;
+    const tmp5Result = productId(1900);
+    obj7.source = _modDef13679;
     const items2 = [closure_11(closure_5, obj7), , , , , ];
     const obj8 = { style: tmp.header, accessibilityRole: "header", children: null };
     const intl = productId(1126).intl;
     const obj9 = { discountPercentage: formatPercentResult, planName: null };
     const tmp19 = common_AlertDefault;
-    obj9.planName = productId(4534).getPremiumTypeDisplayName(premiumTier);
+    obj9.planName = productId(4726).getPremiumTypeDisplayName(premiumTier);
     obj8.children = intl.format(productId(1126).t.LQCVfK, obj9);
-    items2[1] = closure_11(productId(1188).LegacyText, obj8);
+    items2[1] = closure_11(productId(1200).LegacyText, obj8);
     const obj10 = { style: tmp.description, children: null };
     const intl2 = productId(1126).intl;
     const obj11 = { discountPercentage: formatPercentResult };
     obj10.children = intl2.format(productId(1126).t["7chOVL"], obj11);
-    items2[2] = closure_11(productId(1188).LegacyText, obj10);
+    items2[2] = closure_11(productId(1200).LegacyText, obj10);
     const obj12 = { style: tmp.upsellButton, children: null };
     const obj13 = { variant: "active", text: null, onPress: null, disabled: null, loading: null };
     const intl3 = productId(1126).intl;
@@ -293,7 +293,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((continueWithDefa
     };
     obj13.disabled = tmp11;
     obj13.loading = "upsell" === tmp4 && tmp2;
-    obj12.children = closure_11(productId(5601).Button, obj13);
+    obj12.children = closure_11(productId(5375).Button, obj13);
     items2[3] = closure_11(closure_6, obj12);
     const obj15 = { style: tmp.continueButton, children: null };
     const obj16 = { variant: "secondary", text: null, onPress: null, disabled: null, loading: null };
@@ -305,14 +305,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((continueWithDefa
     };
     obj16.disabled = tmp11;
     obj16.loading = "default" === tmp4 && tmp2;
-    obj15.children = closure_11(productId(5601).Button, obj16);
+    obj15.children = closure_11(productId(5375).Button, obj16);
     items2[4] = closure_11(closure_6, obj15);
     const obj17 = { style: tmp.cancelButton, children: null };
     const obj18 = { variant: "tertiary", text: null, onPress: null };
     const intl5 = productId(1126).intl;
     obj18.text = intl5.string(productId(1126).t.cpT0Cq);
     obj18.onPress = onClose;
-    obj17.children = closure_11(productId(5601).Button, obj18);
+    obj17.children = closure_11(productId(5375).Button, obj18);
     items2[5] = closure_11(closure_6, obj17);
     obj6.children = items2;
     obj5.children = closure_12(closure_6, obj6);

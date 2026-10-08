@@ -1,10 +1,10 @@
-// === Module 16116: FavoritesGuildAddActionSheet ===
+// === Module 16376: FavoritesGuildAddActionSheet ===
 
-// Module 16116 (FavoritesGuildAddActionSheet)
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4860 */;
-import openFavoritesGuildLimitUpsellDefault from "openFavoritesGuildLimitUpsell" /* 10052 */;
-import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 10719 */;
-import FavoritesGuildAddCategoryActionSheet from "FavoritesGuildAddCategoryActionSheet" /* 16117 */;
+// Module 16376 (FavoritesGuildAddActionSheet)
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5054 */;
+import openFavoritesGuildLimitUpsellDefault from "openFavoritesGuildLimitUpsell" /* 10297 */;
+import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 12698 */;
+import FavoritesGuildAddCategoryActionSheet from "FavoritesGuildAddCategoryActionSheet" /* 16377 */;
 import noop from "module_19" /* 19 */;
 
 const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
@@ -18,7 +18,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const FavoritesGuildAddActionSheet = "FavoritesGuildAddActionSheet";
 const ReactCompilerGating = fn(558);
-let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function FavoritesGuildAddActionSheet() {
   const cResult = shouldShowUpsell(favoriteLimit[5]).c(12);
   let obj = shouldShowUpsell(favoriteLimit[5]);
   const favoritesLimitUpsell = shouldShowUpsell(favoriteLimit[6]).useFavoritesLimitUpsell();
@@ -111,7 +111,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[3] = fn;
   tmp5 = fn;
   const obj2 = shouldShowUpsell(favoriteLimit[6]);
-}) : (() => {
+}) : (function FavoritesGuildAddActionSheet() {
   const favoritesLimitUpsell = shouldShowUpsell(favoriteLimit[6]).useFavoritesLimitUpsell();
   shouldShowUpsell = favoritesLimitUpsell.shouldShowUpsell;
   const isAtLimit = favoritesLimitUpsell.isAtLimit;

@@ -1,15 +1,15 @@
-// === Module 12358: ContactSyncError ===
+// === Module 12454: ContactSyncError ===
 
-// Module 12358 (ContactSyncError)
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4618 */;
-import timing from "timing" /* 4897 */;
+// Module 12454 (ContactSyncError)
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4810 */;
+import timing from "timing" /* 5091 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles({ container: { justifyContent: "center" }, error: { paddingHorizontal: 16, textAlign: "center" } });
 const __initData = { code: "function ContactSyncErrorTsx1(){const{withTiming,hasError,ERROR_HEIGHT}=this.__closure;return{height:withTiming(hasError?ERROR_HEIGHT:0)};}" };
 const __initData2 = { code: "function ContactSyncErrorTsx2(){const{withTiming,hasError,ERROR_HEIGHT}=this.__closure;return{height:withTiming(hasError?ERROR_HEIGHT:0)};}" };
@@ -17,7 +17,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/contact_sync/native/components/ContactSyncError.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContactSyncError(arg0) {
   const cResult = require("c").c(10);
   ({ style, error } = arg0);
   const tmp4 = closure_4();
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         tmp11 = tmp14;
       }
       const obj4 = { variant: "text-sm/medium", color: "text-feedback-critical", style: tmp4.error, children: error };
-      const tmp10 = jsx(tmp(4892).Text, { variant: "text-sm/medium", color: "text-feedback-critical", style: tmp4.error, children: error });
+      const tmp10 = jsx(tmp(5086).Text, { variant: "text-sm/medium", color: "text-feedback-critical", style: tmp4.error, children: error });
       cResult[4] = error;
       cResult[5] = tmp4.error;
       cResult[6] = tmp10;
@@ -76,7 +76,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = items;
   tmp7 = items;
   const obj2 = { withTiming: require("timing").withTiming, hasError: tmp5, ERROR_HEIGHT: 44 };
-}) : ((error) => {
+}) : (function ContactSyncError(error) {
   error = error.error;
   _require = undefined;
   const tmp = closure_4();

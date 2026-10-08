@@ -1,24 +1,24 @@
-// === Module 16427: ForYouLoadMore ===
+// === Module 16687: ForYouLoadMore ===
 
-// Module 16427 (ForYouLoadMore)
+// Module 16687 (ForYouLoadMore)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
 import noop from "module_19" /* 19 */;
-import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 7137 */;
+import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6062 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: c2, View: c3 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({ container: { alignItems: "center", flexDirection: "row", justifyContent: "center", marginTop: 8, marginBottom: 24, marginHorizontal: 16, height: 42 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notification_center/native/ForYouLoadMore.tsx");
 
-export const ForYouLoadMore = ReactCompilerGating.isReactCompilerEnabled() ? ((onPressLoad) => {
+export const ForYouLoadMore = ReactCompilerGating.isReactCompilerEnabled() ? (function ForYouLoadMore(onPressLoad) {
   const cResult = c.c(8);
   onPressLoad = onPressLoad.onPressLoad;
   const tmp4 = closure_6();
@@ -64,7 +64,7 @@ export const ForYouLoadMore = ReactCompilerGating.isReactCompilerEnabled() ? ((o
   cResult[3] = onPressLoad;
   cResult[4] = tmp10Result;
   const tmpResult = useStateFromStores;
-}) : ((onPressLoad) => {
+}) : (function ForYouLoadMore(onPressLoad) {
   const tmp = closure_6();
   const items = [NotificationCenterItemsStore];
   const obj2 = { style: tmp.container, children: null };

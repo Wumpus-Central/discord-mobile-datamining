@@ -1,30 +1,30 @@
-// === Module 10402: MediaKeyboardEmptyState ===
+// === Module 9999: MediaKeyboardEmptyState ===
 
-// Module 10402 (MediaKeyboardEmptyState)
+// Module 9999 (MediaKeyboardEmptyState)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import SettingsIcon from "SettingsIcon" /* 6893 */;
-import CameraIcon from "CameraIcon" /* 10397 */;
-import _modDef10403 from "module_10403" /* 10403 */;
-import _modDef10404 from "module_10404" /* 10404 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import SettingsIcon from "SettingsIcon" /* 7082 */;
+import CameraIcon from "CameraIcon" /* 9994 */;
+import _modDef10000 from "module_10000" /* 10000 */;
+import _modDef10001 from "module_10001" /* 10001 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
-const NativePermissionStatus = fn(5105).NativePermissionStatus;
+const NativePermissionStatus = fn(7477).NativePermissionStatus;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { marginHorizontal: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_32, justifyContent: "center", alignItems: "center" }, label: null };
 let obj3 = { marginHorizontal: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_32, justifyContent: "center", alignItems: "center" };
 obj2.label = { textAlign: "center", marginVertical: nativeDefault.space.PX_16 };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function MediaKeyboardEmptyState(arg0) {
   const cResult = c.c(14);
   ({ actionIcon, actionLabel, actionPress, imageSource, label } = arg0);
   const tmp4 = closure_8();
@@ -82,7 +82,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = tmp10;
   tmp9 = tmp10;
   const obj5 = { variant: "text-sm/semibold", color: "text-muted", style: tmp4.label, children: label };
-}) : ((arg0) => {
+}) : (function MediaKeyboardEmptyState(arg0) {
   ({ actionIcon, actionLabel, actionPress, imageSource, label } = arg0);
   const tmp = closure_8();
   const obj = { style: tmp.container, children: null };
@@ -108,7 +108,7 @@ export const getMediaEmptyStateComponentOrNull = function getMediaEmptyStateComp
           const intl3 = util.intl;
           obj2.actionLabel = intl3.string(util.t.JuXTi6);
           obj2.actionPress = tmp2;
-          obj2.imageSource = _modDef10403;
+          obj2.imageSource = _modDef10000;
           const intl4 = util.intl;
           obj2.label = intl4.string(util.t["5g7NcN"]);
           return timestampProducer(closure_9, obj2);
@@ -117,7 +117,7 @@ export const getMediaEmptyStateComponentOrNull = function getMediaEmptyStateComp
           const intl = util.intl;
           obj.actionLabel = intl.string(util.t.tpoWUd);
           obj.actionPress = tmp;
-          obj.imageSource = _modDef10404;
+          obj.imageSource = _modDef10001;
           const intl2 = util.intl;
           obj.label = intl2.string(util.t.YOvRBZ);
           return timestampProducer(closure_9, obj);
@@ -129,7 +129,7 @@ export const getMediaEmptyStateComponentOrNull = function getMediaEmptyStateComp
   const intl5 = util.intl;
   obj3.actionLabel = intl5.string(util.t["457oeG"]);
   obj3.actionPress = photosEmpty.onPressPrivacySettings;
-  obj3.imageSource = _modDef10403;
+  obj3.imageSource = _modDef10000;
   const intl6 = util.intl;
   obj3.label = intl6.string(util.t["8p9jGu"]);
   return timestampProducer(closure_9, obj3);

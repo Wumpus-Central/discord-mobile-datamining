@@ -1,7 +1,7 @@
-// === Module 11666: useActivityApplications ===
+// === Module 11731: useActivityApplications ===
 
-// Module 11666 (useActivityApplications)
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9026 */;
+// Module 11731 (useActivityApplications)
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 10635 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -9,7 +9,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/onboarding/hooks/useActivityApplications.tsx");
 
-export const useActivityApplications = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export const useActivityApplications = ReactCompilerGating.isReactCompilerEnabled() ? (function useActivityApplications(guildId) {
   const cResult = guildId(576).c(9);
   guildId = guildId.guildId;
   const fetchesShelf = guildId.fetchesShelf;
@@ -21,11 +21,11 @@ export const useActivityApplications = ReactCompilerGating.isReactCompilerEnable
   } else {
     tmp3 = cResult[1];
   }
-  const arr = fetchesShelf(11667)(tmp3);
+  const arr = fetchesShelf(11732)(tmp3);
   if (cResult[2] !== arr) {
     const _Symbol = Symbol;
     if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-      const fn = function s(application) {
+      const fn = function p(application) {
         return application.application;
       };
       cResult[4] = fn;
@@ -60,11 +60,11 @@ export const useActivityApplications = ReactCompilerGating.isReactCompilerEnable
     tmp9 = fn2;
   }
   let obj = guildId(576);
-}) : ((guildId) => {
+}) : (function useActivityApplications(guildId) {
   guildId = guildId.guildId;
   const fetchesShelf = guildId.fetchesShelf;
   const items = [fetchesShelf, guildId];
-  const mapped = fetchesShelf(11667)({ guildId }).map((application) => application.application);
+  const mapped = fetchesShelf(11732)({ guildId }).map((application) => application.application);
   const effect = noop.useEffect(() => {
     if (fetchesShelf) {
       const obj2 = { guildId };

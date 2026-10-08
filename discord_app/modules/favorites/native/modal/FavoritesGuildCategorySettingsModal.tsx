@@ -1,27 +1,27 @@
-// === Module 16077: FavoritesGuildCategorySettingsModal ===
+// === Module 16337: FavoritesGuildCategorySettingsModal ===
 
-// Module 16077 (FavoritesGuildCategorySettingsModal)
+// Module 16337 (FavoritesGuildCategorySettingsModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5714 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10048 */;
+import native from "native" /* 1200 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5297 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10293 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FavoriteStore from "FavoriteStore" /* 2054 */;
+import FavoriteStore from "FavoriteStore" /* 2066 */;
 
 require = fn;
 let ScrollView = fn(17).ScrollView;
-let maxLength = fn(2065).MAX_FAVORITE_CATEGORY_NAME_LENGTH;
+let maxLength = fn(2077).MAX_FAVORITE_CATEGORY_NAME_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, content: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.content = { padding: nativeDefault.space.PX_16 };
 let closure_10 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((categoryId) => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function FavoritesGuildCategorySettings(categoryId) {
   const cResult = categoryId(navigation[9]).c(50);
   categoryId = categoryId.categoryId;
   const onGoBack = categoryId.onGoBack;
@@ -36,37 +36,76 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((categoryId) =>
     first = cResult[0];
   }
   if (cResult[1] !== categoryId) {
-    const fn = function v() {
-      let str = FavoriteStore.getNickname(categoryId);
-      if (str == null) {
-        str = "";
+    class C {
+      constructor() {
+        str = closure_6.getNickname(categoryId);
+        if (str == null) {
+          str = "";
+        }
+        return str;
       }
-      return str;
-    };
+    }
     cResult[1] = categoryId;
-    cResult[2] = fn;
-    let tmp8 = fn;
+    cResult[2] = C;
   } else {
-    tmp8 = cResult[2];
+    class C {
+      constructor() {
+        str = closure_6.getNickname(categoryId);
+        if (str == null) {
+          str = "";
+        }
+        return str;
+      }
+    }
   }
   let obj2 = categoryId(navigation[10]);
-  const stateFromStores = categoryId(navigation[11]).useStateFromStores(first, tmp8);
+  const stateFromStores = categoryId(navigation[11]).useStateFromStores(first, C);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+    class C {
+      constructor() {
+        str = closure_6.getNickname(categoryId);
+        if (str == null) {
+          str = "";
+        }
+        return str;
+      }
+    }
     const items1 = [FavoriteStore];
     cResult[3] = items1;
-    let tmp10 = items1;
+    const tmp10 = items1;
   } else {
-    tmp10 = cResult[3];
+    class C {
+      constructor() {
+        str = closure_6.getNickname(categoryId);
+        if (str == null) {
+          str = "";
+        }
+        return str;
+      }
+    }
   }
   if (cResult[4] !== categoryId) {
-    const fn2 = function p() {
-      return null != FavoriteStore.getCategoryRecord(categoryId);
-    };
+    class C {
+      constructor() {
+        str = closure_6.getNickname(categoryId);
+        if (str == null) {
+          str = "";
+        }
+        return str;
+      }
+    }
     cResult[4] = categoryId;
-    cResult[5] = fn2;
-    let tmp12 = fn2;
+    cResult[5] = tmp12;
   } else {
-    tmp12 = cResult[5];
+    class C {
+      constructor() {
+        str = closure_6.getNickname(categoryId);
+        if (str == null) {
+          str = "";
+        }
+        return str;
+      }
+    }
   }
   const tmpResult = categoryId(navigation[11]);
   const stateFromStores1 = categoryId(navigation[11]).useStateFromStores(tmp10, tmp12);
@@ -75,7 +114,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((categoryId) =>
   [tmp15, tmp16] = stateFromStores(stateFromStores1.useState(stateFromStores), 2);
   ScrollView = tmp16;
   if (cResult[6] !== stateFromStores) {
-    class R {
+    class E {
       constructor() {
         tmp = closure_5(closure_3);
         return;
@@ -83,11 +122,11 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((categoryId) =>
     }
     const items2 = [stateFromStores];
     cResult[6] = stateFromStores;
-    cResult[7] = R;
+    cResult[7] = E;
     cResult[8] = items2;
     let tmp18 = items2;
   } else {
-    class R {
+    class E {
       constructor() {
         tmp = closure_5(closure_3);
         return;
@@ -95,9 +134,9 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((categoryId) =>
     }
     tmp18 = cResult[8];
   }
-  const effect = obj5.useEffect(R, tmp18);
+  const effect = obj5.useEffect(E, tmp18);
   if (cResult[9] !== tmp15) {
-    class R {
+    class E {
       constructor() {
         tmp = closure_5(closure_3);
         return;
@@ -106,7 +145,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((categoryId) =>
     cResult[9] = tmp15;
     cResult[10] = tmp21;
   } else {
-    class R {
+    class E {
       constructor() {
         tmp = closure_5(closure_3);
         return;
@@ -115,7 +154,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((categoryId) =>
   }
   FavoriteStore = tmp21;
   if (cResult[11] === tmp15) {
-    class R {
+    class E {
       constructor() {
         tmp = closure_5(closure_3);
         return;
@@ -129,7 +168,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((categoryId) =>
   cResult[13] = tmp21;
   cResult[14] = categoryId(navigation[12]).isFavoritesGuildCategoryNameValid(tmp15) && tmp21 !== stateFromStores;
   const tmp22 = categoryId(navigation[12]).isFavoritesGuildCategoryNameValid(tmp15) && tmp21 !== stateFromStores;
-}) : ((categoryId) => {
+}) : (function FavoritesGuildCategorySettings(categoryId) {
   categoryId = categoryId.categoryId;
   const onGoBack = categoryId.onGoBack;
   let navigation;
@@ -240,10 +279,10 @@ const obj4 = { padding: nativeDefault.space.PX_16 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/native/modal/FavoritesGuildCategorySettingsModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((categoryId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FavoritesGuildCategorySettingsModal(categoryId) {
   const cResult = categoryId(576).c(4);
   categoryId = categoryId.categoryId;
-  onGoBack = onGoBack(10673)().onGoBack;
+  onGoBack = onGoBack(9586)().onGoBack;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = tmp(1126).intl;
     const stringResult = intl.string(tmp(1126).t["/uELTj"]);
@@ -258,7 +297,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((categoryId) => {
     }
     return tmp7;
   }
-  const tmp8 = closure_8(onGoBack(10674), {
+  const tmp8 = closure_8(onGoBack(9587), {
     screenKey: "favoritesGuildCategorySettings",
     title: first,
     render() {
@@ -277,15 +316,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((categoryId) => {
       return closure_2_8(closure_11, { categoryId, onGoBack });
     }
   };
-}) : ((categoryId) => {
+}) : (function FavoritesGuildCategorySettingsModal(categoryId) {
   categoryId = categoryId.categoryId;
   let onGoBack;
-  onGoBack = onGoBack(10673)().onGoBack;
+  onGoBack = onGoBack(9586)().onGoBack;
   const obj = { screenKey: "favoritesGuildCategorySettings", title: null, render: null };
   const intl = categoryId(1126).intl;
   obj.title = intl.string(categoryId(1126).t["/uELTj"]);
   obj.render = function render() {
     return closure_2_8(closure_11, { categoryId, onGoBack });
   };
-  return closure_8(onGoBack(10674), obj);
+  return closure_8(onGoBack(9587), obj);
 });

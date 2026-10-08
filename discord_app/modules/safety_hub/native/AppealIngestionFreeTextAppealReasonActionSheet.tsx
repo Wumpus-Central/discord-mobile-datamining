@@ -1,16 +1,16 @@
-// === Module 11527: AppealIngestionFreeTextAppealReasonActionSheet ===
+// === Module 11525: AppealIngestionFreeTextAppealReasonActionSheet ===
 
-// Module 11527 (AppealIngestionFreeTextAppealReasonActionSheet)
+// Module 11525 (AppealIngestionFreeTextAppealReasonActionSheet)
 import nativeDefault from "native" /* 587 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 8139 */;
+import SafetyHubStore from "SafetyHubStore" /* 5920 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { footerText: { textAlign: "center" }, textArea: { marginTop: -16, marginBottom: 36 }, separator: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginHorizontal: -16 }, closeIcon: { alignSelf: "flex-end", flexDirection: "row", marginBottom: -26 } };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -18,14 +18,14 @@ let obj3 = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, mar
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/native/AppealIngestionFreeTextAppealReasonActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onSave) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIngestionFreeTextAppealReasonActionSheet(onSave) {
   const cResult = onSave(value[8]).c(33);
   onSave = onSave.onSave;
   const onClose = onSave.onClose;
   const tmp4 = closure_8();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [SafetyHubStore];
-    const fn = function h() {
+    const fn = function u() {
       return freeTextAppealReason.getFreeTextAppealReason();
     };
     cResult[0] = items;
@@ -212,7 +212,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onSave) => {
     tmp20 = tmp21;
   }
   const tmp9 = _slicedToArray(noop.useState(stateFromStores), 2);
-}) : ((onPress) => {
+}) : (function AppealIngestionFreeTextAppealReasonActionSheet(onPress) {
   const onSave = onPress.onSave;
   value = undefined;
   const tmp = closure_8();

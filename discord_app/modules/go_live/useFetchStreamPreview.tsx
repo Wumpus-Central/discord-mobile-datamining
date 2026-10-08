@@ -1,12 +1,12 @@
-// === Module 9759: useFetchStreamPreview ===
+// === Module 10960: useFetchStreamPreview ===
 
-// Module 9759 (useFetchStreamPreview)
-import StreamActionCreators from "StreamActionCreators" /* 5038 */;
+// Module 10960 (useFetchStreamPreview)
+import StreamActionCreators from "StreamActionCreators" /* 7438 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamPreviewStore from "ApplicationStreamPreviewStore" /* 5040 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
+import ApplicationStreamPreviewStore from "ApplicationStreamPreviewStore" /* 7440 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
 
 const require = globalThis.__r;
 
@@ -16,7 +16,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/go_live/useFetchStreamPreview.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFetchStreamPreview(arg0, arg1, arg2) {
   _require = arg0;
   dependencyMap = arg1;
   closure_2 = arg2;
@@ -134,7 +134,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
   cResult[13] = arg2;
   cResult[14] = fn3;
   const tmpResult4 = require("initialize");
-}) : ((arg0, arg1, arg2) => {
+}) : (function useFetchStreamPreview(arg0, arg1, arg2) {
   _require = arg0;
   dependencyMap = arg1;
   noop = arg2;

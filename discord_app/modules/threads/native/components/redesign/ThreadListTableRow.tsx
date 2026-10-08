@@ -1,19 +1,19 @@
-// === Module 16916: ThreadListTableRow ===
+// === Module 17197: ThreadListTableRow ===
 
-// Module 16916 (ThreadListTableRow)
+// Module 17197 (ThreadListTableRow)
 import c from "c" /* 576 */;
-import TableRow from "TableRow" /* 6000 */;
-import ThreadBrowserRowSubtext from "ThreadBrowserRowSubtext" /* 16917 */;
+import TableRow from "TableRow" /* 6184 */;
+import ThreadBrowserRowSubtext from "ThreadBrowserRowSubtext" /* 17198 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({ subLabel: { maxWidth: "100%", marginTop: 2 } });
 let ReactCompilerGating = fn(558);
-let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((thread) => {
+let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function ThreadListTableRow(thread) {
   const cResult = c.c(14);
   thread = thread.thread;
   let id = thread.onPress;
@@ -72,7 +72,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((thread) => {
     cResult[1] = id;
     cResult[2] = fn;
   }
-}) : ((thread) => {
+}) : (function ThreadListTableRow(thread) {
   thread = thread.thread;
   const onPress = thread.onPress;
   ({ start, end } = thread);
@@ -90,7 +90,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/threads/native/components/redesign/ThreadListTableRow.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((threadId) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectedThreadListTableRow(threadId) {
   const cResult = threadId(576).c(8);
   threadId = threadId.threadId;
   ({ onPress, start, end } = threadId);
@@ -131,7 +131,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((thread
     cResult[7] = tmp11;
   }
   const tmpResult = threadId(504);
-}) : ((threadId) => {
+}) : (function ConnectedThreadListTableRow(threadId) {
   threadId = threadId.threadId;
   ({ onPress, start, end } = threadId);
   const items = [ChannelStore];

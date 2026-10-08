@@ -1,11 +1,11 @@
-// === Module 16156: UnclaimedGamesActionCreators ===
+// === Module 16416: UnclaimedGamesActionCreators ===
 
-// Module 16156 (UnclaimedGamesActionCreators)
+// Module 16416 (UnclaimedGamesActionCreators)
 import BackoffDefault from "Backoff" /* 569 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UnclaimedGamesStore from "UnclaimedGamesStore" /* 16157 */;
+import UnclaimedGamesStore from "UnclaimedGamesStore" /* 16417 */;
 
 require = fn;
 function fetchUnclaimedGames() {
@@ -99,7 +99,7 @@ const fetchStore = initialize.createFetchStore(UnclaimedGamesStore, {
   }
 });
 let ReactCompilerGating = fn(558);
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useUnclaimedGameIdsForGuild(arg0, arg1) {
   let tmp2 = undefined === arg1;
   if (!tmp2) {
     tmp2 = arg1;
@@ -113,7 +113,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     tmp3 = closure_6;
   }
   return tmp3;
-}) : ((arg0) => {
+}) : (function useUnclaimedGameIdsForGuild(arg0) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = true;
@@ -159,13 +159,13 @@ export default { fetch: fetchUnclaimedGames };
 export { fetchUnclaimedGames };
 export const useUnclaimedGames = fetchStore;
 export const useUnclaimedGameIdsForGuild = tmp4;
-export const useHasUnclaimedGames = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export const useHasUnclaimedGames = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasUnclaimedGames(arg0, arg1) {
   let tmp2 = undefined === arg1;
   if (!tmp2) {
     tmp2 = arg1;
   }
   return closure_10(arg0, tmp2).length > 0;
-}) : ((arg0) => {
+}) : (function useHasUnclaimedGames(arg0) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = true;

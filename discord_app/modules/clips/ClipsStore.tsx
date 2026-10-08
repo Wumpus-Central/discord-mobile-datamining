@@ -1,16 +1,15 @@
-// === Module 2005: ClipsStore ===
+// === Module 2017: ClipsStore ===
 
-// Module 2005 (ClipsStore)
+// Module 2017 (ClipsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import FlagUtils from "FlagUtils" /* 1390 */;
-import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import DiscordNativeDefault from "DiscordNative" /* 4496 */;
-import clipPOVOverlap from "clipPOVOverlap" /* 13827 */;
-import DistributedClipsExperimentDefault from "DistributedClipsExperiment" /* 13829 */;
-import AutoclippingDefaultOverrideExperiment2 from "AutoclippingDefaultOverrideExperiment" /* 13830 */;
+import FlagUtils from "FlagUtils" /* 1402 */;
+import DiscordNativeDefault from "DiscordNative" /* 4688 */;
+import clipPOVOverlap from "clipPOVOverlap" /* 14131 */;
+import DistributedClipsExperimentDefault from "DistributedClipsExperiment" /* 14133 */;
+import AutoclippingDefaultOverrideExperiment2 from "AutoclippingDefaultOverrideExperiment" /* 14134 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import RunningGameStore from "RunningGameStore" /* 2006 */;
+import RunningGameStore from "RunningGameStore" /* 2018 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -241,11 +240,11 @@ function trackClipMessage(message) {
   }
   obj = DistributedClipsExperimentDefault;
 }
-const ClipsConstants = fn(7244);
+const ClipsConstants = fn(7735);
 ({ CLIPS_HARDWARE_CLASSIFICATION_VERSION: metroRequire, ClipSaveTypes: closure_7, ClipsUserEducationType: closure_8, ClipsLogger: closure_9, MAX_SIMULTANEOUS_SAVE_CLIP_OPERATIONS: c10, ClipsHardwareClassification: closure_11, ClipsSaveNoOpReason: closure_12, ClipsLengthSettings, DEFAULT_CLIPS_BITRATE_PERCENT } = ClipsConstants);
 const Constants = fn(1085);
 ({ MessageAttachmentFlags: map1, MessageReferenceTypes: closure_14, VoiceFlags: closure_15 } = Constants);
-const StreamSettingsConstants = fn(4943);
+const StreamSettingsConstants = fn(5210);
 let c16 = "default";
 let c17 = "Discord Clips";
 const dependencyMap = {};
@@ -352,7 +351,7 @@ prototype["getHardwareClassificationVersion"] = function getHardwareClassificati
   return obj.hardwareClassificationVersion;
 };
 prototype["getIsAtMaxSaveClipOperations"] = function getIsAtMaxSaveClipOperations() {
-  return closure_21 >= v65535;
+  return closure_21 >= collapsed;
 };
 prototype["getLastClipsError"] = function getLastClipsError() {
   return c26;
@@ -481,21 +480,7 @@ let items = [
     obj.hardwareClassificationForDecoupled = prop;
     return obj;
   },
-  (clipsSettings) => {
-    const _default = MediaEngineStore.default;
-    let hardwareEncoding;
-    if (_default != null) {
-      hardwareEncoding = _default.getHardwareEncoding();
-    }
-    obj = {};
-    const merged = Object.assign(clipsSettings);
-    const obj2 = {};
-    const merged1 = Object.assign(clipsSettings.clipsSettings);
-    obj2.clipsEnabled = hardwareEncoding && clipsSettings.clipsSettings.clipsEnabled;
-    obj2.decoupledClipsEnabled = hardwareEncoding && clipsSettings.clipsSettings.decoupledClipsEnabled;
-    obj.clipsSettings = obj2;
-    return obj;
-  },
+  (arg0) => arg0,
   (newClipIds) => {
     obj = {};
     const merged = Object.assign(newClipIds);

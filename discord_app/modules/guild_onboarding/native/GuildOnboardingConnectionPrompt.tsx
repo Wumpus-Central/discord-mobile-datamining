@@ -1,31 +1,31 @@
-// === Module 6661: GuildOnboardingConnectionPrompt ===
+// === Module 6838: GuildOnboardingConnectionPrompt ===
 
-// Module 6661 (GuildOnboardingConnectionPrompt)
+// Module 6838 (GuildOnboardingConnectionPrompt)
 import nativeDefault from "native" /* 587 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5076 */;
-import GuildOnboardingPromptsActionCreators from "GuildOnboardingPromptsActionCreators" /* 6601 */;
-import GuildOnboardingUtils from "GuildOnboardingUtils" /* 6608 */;
-import ConnectionCardDefault from "ConnectionCard" /* 6662 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6688 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5105 */;
+import GuildOnboardingPromptsActionCreators from "GuildOnboardingPromptsActionCreators" /* 6777 */;
+import GuildOnboardingUtils from "GuildOnboardingUtils" /* 6784 */;
+import ConnectionCardDefault from "ConnectionCard" /* 6839 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6865 */;
 import noop from "module_19" /* 19 */;
-import MemberVerificationFormStore from "MemberVerificationFormStore" /* 5970 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6609 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5447 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 6602 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 6153 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6786 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5757 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 6778 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const OnboardingConnectionType = fn(6603).OnboardingConnectionType;
-let closure_12 = fn(6599).GuildOnboardingModalStates;
+const OnboardingConnectionType = fn(6779).OnboardingConnectionType;
+let closure_12 = fn(6775).GuildOnboardingModalStates;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4896);
-let obj2 = { flex: { flex: 1 }, container: { display: "flex", flex: 1, flexGrow: 1, marginTop: fn(6075).NAV_BAR_HEIGHT, marginBottom: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, scrollContainer: null, header: null, title: null, description: null, connectionsList: null, footer: null, footerContent: null };
-let obj3 = { display: "flex", flex: 1, flexGrow: 1, marginTop: fn(6075).NAV_BAR_HEIGHT, marginBottom: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+const createStyles = fn(5090);
+let obj2 = { flex: { flex: 1 }, container: { display: "flex", flex: 1, flexGrow: 1, marginTop: fn(6261).NAV_BAR_HEIGHT, marginBottom: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, scrollContainer: null, header: null, title: null, description: null, connectionsList: null, footer: null, footerContent: null };
+let obj3 = { display: "flex", flex: 1, flexGrow: 1, marginTop: fn(6261).NAV_BAR_HEIGHT, marginBottom: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.scrollContainer = { display: "flex", flexGrow: 1, paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 let obj4 = { display: "flex", flexGrow: 1, paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.header = { marginBottom: nativeDefault.space.PX_24 };
@@ -45,7 +45,7 @@ let obj10 = { width: "100%", paddingHorizontal: nativeDefault.space.PX_16 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding/native/GuildOnboardingConnectionPrompt.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildOnboardingConnectionPrompt(guildId) {
   const cResult = guildId(isLastStep[15]).c(98);
   guildId = guildId.guildId;
   const onComplete = guildId.onComplete;
@@ -64,23 +64,37 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     first = cResult[0];
   }
   if (cResult[1] !== guildId) {
-    const fn = function x() {
-      return GuildOnboardingPromptsStore.getOnboardingConnections(guildId);
-    };
+    class P {
+      constructor() {
+        return closure_10.getOnboardingConnections(guildId);
+      }
+    }
     cResult[1] = guildId;
-    cResult[2] = fn;
-    let tmp10 = fn;
+    cResult[2] = P;
   } else {
-    tmp10 = cResult[2];
+    class P {
+      constructor() {
+        return closure_10.getOnboardingConnections(guildId);
+      }
+    }
   }
   let obj2 = guildId(isLastStep[16]);
-  const stateFromStores = guildId(isLastStep[18]).useStateFromStores(first, tmp10);
+  const stateFromStores = guildId(isLastStep[18]).useStateFromStores(first, P);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+    class P {
+      constructor() {
+        return closure_10.getOnboardingConnections(guildId);
+      }
+    }
     const items1 = [stateFromStores4];
     cResult[3] = items1;
-    let tmp12 = items1;
+    const tmp12 = items1;
   } else {
-    tmp12 = cResult[3];
+    class P {
+      constructor() {
+        return closure_10.getOnboardingConnections(guildId);
+      }
+    }
   }
   if (cResult[4] !== guildId) {
     class L {
@@ -107,7 +121,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     }
     const items2 = [stateFromStores3];
     cResult[6] = items2;
-    const tmp16 = items2;
+    const tmp15 = items2;
   } else {
     class L {
       constructor() {
@@ -122,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       }
     }
     cResult[7] = guildId;
-    cResult[8] = tmp18;
+    cResult[8] = tmp17;
   } else {
     class L {
       constructor() {
@@ -131,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     }
   }
   const tmpResult6 = guildId(isLastStep[18]);
-  const stateFromStores1 = guildId(isLastStep[18]).useStateFromStores(tmp16, tmp18);
+  const stateFromStores1 = guildId(isLastStep[18]).useStateFromStores(tmp15, tmp17);
   if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
     class L {
       constructor() {
@@ -140,7 +154,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     }
     const items3 = [stateFromStoresArray];
     cResult[9] = items3;
-    const tmp20 = items3;
+    const tmp19 = items3;
   } else {
     class L {
       constructor() {
@@ -164,7 +178,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     }
   }
   const tmpResult7 = guildId(isLastStep[18]);
-  const stateFromStores2 = guildId(isLastStep[18]).useStateFromStores(tmp20, U);
+  const stateFromStores2 = guildId(isLastStep[18]).useStateFromStores(tmp19, U);
   if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
     class U {
       constructor() {
@@ -179,17 +193,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     }
     cResult[12] = M;
     cResult[13] = items4;
-    let tmp24 = items4;
+    let tmp23 = items4;
   } else {
     class U {
       constructor() {
         return closure_6.getRulesPrompt(guildId);
       }
     }
-    tmp24 = cResult[13];
+    tmp23 = cResult[13];
   }
   const tmpResult8 = guildId(isLastStep[18]);
-  stateFromStores3 = guildId(isLastStep[18]).useStateFromStores(tmp24, M);
+  stateFromStores3 = guildId(isLastStep[18]).useStateFromStores(tmp23, M);
   if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
     class U {
       constructor() {
@@ -204,7 +218,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     }
     items5[1] = stateFromStores2;
     cResult[14] = items5;
-    const tmp26 = items5;
+    const tmp25 = items5;
   } else {
     class U {
       constructor() {
@@ -261,7 +275,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     cResult[15] = stateFromStores;
     cResult[16] = H;
     cResult[17] = items6;
-    let tmp28 = items6;
+    let tmp27 = items6;
   } else {
     class H {
       constructor() {
@@ -302,10 +316,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
         return false;
       }
     }
-    tmp28 = cResult[17];
+    tmp27 = cResult[17];
   }
   const tmpResult9 = guildId(isLastStep[18]);
-  stateFromStores4 = guildId(isLastStep[18]).useStateFromStores(tmp26, H, tmp28);
+  stateFromStores4 = guildId(isLastStep[18]).useStateFromStores(tmp25, H, tmp27);
   if (cResult[18] === guildId) {
     class H {
       constructor() {
@@ -389,7 +403,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   cResult[21] = Z;
   cResult[22] = items7;
   const tmpResult10 = guildId(isLastStep[18]);
-}) : ((guildId) => {
+}) : (function GuildOnboardingConnectionPrompt(guildId) {
   guildId = guildId.guildId;
   const onComplete = guildId.onComplete;
   const isLastStep = guildId.isLastStep;

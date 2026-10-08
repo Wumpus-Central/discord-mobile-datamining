@@ -1,24 +1,24 @@
-// === Module 15785: ShopFlashList ===
+// === Module 16043: ShopFlashList ===
 
-// Module 15785 (ShopFlashList)
+// Module 16043 (ShopFlashList)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import generated_NoResults from "generated/NoResults" /* 7915 */;
-import _mod8404 from "module_8404" /* 8404 */;
-import useScrollToInitialIndexOnce from "useScrollToInitialIndexOnce" /* 15748 */;
+import native from "native" /* 1200 */;
+import generated_NoResults from "generated/NoResults" /* 8334 */;
+import _mod8600 from "module_8600" /* 8600 */;
+import useScrollToInitialIndexOnce from "useScrollToInitialIndexOnce" /* 16006 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { contentContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST } };
 let closure_4 = createStyles.createStyles(obj2);
 fn(558);
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 const ReactCompilerGating = fn(558);
-const ListEmptyComponent = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const ListEmptyComponent = ReactCompilerGating.isReactCompilerEnabled() ? (function ShopEmptyState() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { marginTop: 42 };
@@ -38,7 +38,7 @@ const ListEmptyComponent = ReactCompilerGating.isReactCompilerEnabled() ? (() =>
     tmp5 = cResult[1];
   }
   return tmp5;
-}) : (() => {
+}) : (function ShopEmptyState() {
   const obj = { style: { marginTop: 42 }, Illustration: generated_NoResults.NoResults, body: null };
   const intl = util.intl;
   obj.body = intl.string(util.t.eAn6z2);
@@ -47,7 +47,7 @@ const ListEmptyComponent = ReactCompilerGating.isReactCompilerEnabled() ? (() =>
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/ShopFlashList.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ShopFlashList(arg0) {
   const cResult = c.c(9);
   ({ data, renderItem, initialScrollIndex, getItemType } = arg0);
   const ref = noop.useRef(null);
@@ -74,7 +74,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
     const obj2 = { ref, data, renderItem, showsVerticalScrollIndicator: false, ListEmptyComponent, initialScrollIndex, getItemType, contentContainerStyle: tmp5.contentContainer };
-    const tmp12 = jsx(_mod8404.FlashList, { ref, data, renderItem, showsVerticalScrollIndicator: false, ListEmptyComponent, initialScrollIndex, getItemType, contentContainerStyle: tmp5.contentContainer });
+    const tmp12 = jsx(_mod8600.FlashList, { ref, data, renderItem, showsVerticalScrollIndicator: false, ListEmptyComponent, initialScrollIndex, getItemType, contentContainerStyle: tmp5.contentContainer });
     cResult[3] = data;
     cResult[4] = getItemType;
     cResult[5] = initialScrollIndex;
@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = tmp6;
   cResult[2] = obj3;
   tmp7 = obj3;
-}) : ((initialScrollIndex) => {
+}) : (function ShopFlashList(initialScrollIndex) {
   initialScrollIndex = initialScrollIndex.initialScrollIndex;
   ({ data, renderItem, getItemType } = initialScrollIndex);
   const ref = noop.useRef(null);
@@ -100,5 +100,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = useScrollToInitialIndexOnce;
   const scrollToInitialIndexOnce = obj.useScrollToInitialIndexOnce({ shouldScroll: tmp5, initialScrollIndex, flashListRef: ref, afterMs: useScrollToInitialIndexOnce.INITIAL_SCROLL_DELAY_MS });
-  return jsx(_mod8404.FlashList, { ref, data, renderItem, showsVerticalScrollIndicator: false, ListEmptyComponent, initialScrollIndex, getItemType, contentContainerStyle: tmp2.contentContainer });
+  return jsx(_mod8600.FlashList, { ref, data, renderItem, showsVerticalScrollIndicator: false, ListEmptyComponent, initialScrollIndex, getItemType, contentContainerStyle: tmp2.contentContainer });
 });

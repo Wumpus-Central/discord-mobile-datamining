@@ -1,9 +1,9 @@
-// === Module 5975: ActivityIndicator/ActivityIndicator ===
+// === Module 6158: ActivityIndicator/ActivityIndicator ===
 
-// Module 5975 (ActivityIndicator/ActivityIndicator)
+// Module 6158 (ActivityIndicator/ActivityIndicator)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4586 */;
+import useToken from "useToken" /* 4778 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/ActivityIndicator/native/ActivityIndicator.native.tsx");
 
-export const ActivityIndicator = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const ActivityIndicator = ReactCompilerGating.isReactCompilerEnabled() ? (function ActivityIndicator(arg0) {
   const cResult = c.c(9);
   if (cResult[0] !== arg0) {
     ({ size, animating } = arg0);
@@ -62,7 +62,7 @@ export const ActivityIndicator = ReactCompilerGating.isReactCompilerEnabled() ? 
   cResult[8] = tmp13;
   tmp11 = tmp13;
   tmpResult = useToken;
-}) : ((size) => {
+}) : (function ActivityIndicator(size) {
   let str = size.size;
   if (str === undefined) {
     str = "large";

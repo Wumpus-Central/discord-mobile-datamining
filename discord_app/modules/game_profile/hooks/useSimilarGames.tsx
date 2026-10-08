@@ -1,18 +1,18 @@
-// === Module 8574: useSimilarGames ===
+// === Module 9058: useSimilarGames ===
 
-// Module 8574 (useSimilarGames)
-import GameStore from "GameStore" /* 2007 */;
-import UserStore from "UserStore" /* 1377 */;
+// Module 9058 (useSimilarGames)
+import GameStore from "GameStore" /* 2019 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = fn;
-fn(8448).SIMILAR_GAMES_BLOCKED_GAME_IDS;
+fn(8934).SIMILAR_GAMES_BLOCKED_GAME_IDS;
 let closure_5 = [];
 const similarGames = [];
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useSimilarGames.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSimilarGames(arg0) {
   const cResult = data(576).c(14);
   if (cResult[0] !== arg0) {
     const hasItem = set.has(arg0);
@@ -24,7 +24,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = data(576);
   const tmp7 = !tmp4;
-  const similarGameIds = data(8447).useSimilarGameIds(arg0, tmp7);
+  const similarGameIds = data(8933).useSimilarGameIds(arg0, tmp7);
   ({ data, isLoading, error } = similarGameIds);
   if (tmp4) {
     let tmp10 = closure_5;
@@ -32,8 +32,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp10 = data;
   }
   data = tmp10;
-  let tmpResult = data(8447);
-  const games = data(6822).useGames(tmp10);
+  let tmpResult = data(8933);
+  const games = data(6995).useGames(tmp10);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GameStore];
     cResult[2] = items;
@@ -60,7 +60,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     tmp15 = cResult[5];
   }
-  const tmpResult4 = data(6822);
+  const tmpResult4 = data(6995);
   const stateFromStores = data(504).useStateFromStores(tmp12, S, tmp15);
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     class S {
@@ -142,9 +142,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp24 = obj2;
   }
   const tmpResult6 = data(504);
-}) : ((arg0) => {
+}) : (function useSimilarGames(arg0) {
   const hasItem = set.has(arg0);
-  const similarGameIds = data(8447).useSimilarGameIds(arg0, !hasItem);
+  const similarGameIds = data(8933).useSimilarGameIds(arg0, !hasItem);
   ({ data, isLoading, error } = similarGameIds);
   if (hasItem) {
     let tmp7 = closure_5;
@@ -152,10 +152,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp7 = data;
   }
   data = tmp7;
-  const obj = data(8447);
+  const obj = data(8933);
   const tmp2 = !hasItem;
-  const games = data(6822).useGames(tmp7);
-  const tmp3Result = data(6822);
+  const games = data(6995).useGames(tmp7);
+  const tmp3Result = data(6995);
   const items = [GameStore];
   const items1 = [tmp7];
   const stateFromStores = data(504).useStateFromStores(items, () => data.some((item) => null == game.getGame(item) && !game.hasNoData(item) && !game.didFetchingFail(item)), items1);

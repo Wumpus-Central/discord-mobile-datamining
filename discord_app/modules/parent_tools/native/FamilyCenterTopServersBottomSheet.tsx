@@ -1,24 +1,24 @@
-// === Module 14722: FamilyCenterTopServersBottomSheet ===
+// === Module 14983: FamilyCenterTopServersBottomSheet ===
 
-// Module 14722 (FamilyCenterTopServersBottomSheet)
+// Module 14983 (FamilyCenterTopServersBottomSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import _modDef2521 from "module_2521" /* 2521 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import GuildIconDefault from "GuildIcon" /* 5978 */;
-import TableRowGroup from "TableRowGroup" /* 6081 */;
-import ActionSheet from "ActionSheet" /* 6708 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7061 */;
+import _modDef2565 from "module_2565" /* 2565 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import GuildIconDefault from "GuildIcon" /* 6161 */;
+import TableRowGroup from "TableRowGroup" /* 6267 */;
+import ActionSheet from "ActionSheet" /* 6885 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7247 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { header: { textAlign: "center" }, guildIcon: { borderRadius: nativeDefault.radii.md, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST } };
 let closure_6 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildActivity) => {
+let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRow(guildActivity) {
   const cResult = guildActivity(576).c(13);
   guildActivity = guildActivity.guildActivity;
   const tmp4 = closure_6();
@@ -30,7 +30,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildActivity) 
     first = cResult[0];
   }
   if (cResult[1] !== guildActivity.guild_id) {
-    const fn = function s() {
+    const fn = function u() {
       return FamilyCenterStore.getGuild(guildActivity.guild_id);
     };
     cResult[1] = guildActivity.guild_id;
@@ -61,7 +61,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildActivity) 
           }
         }
         const obj2 = { label: stateFromStores.name, subLabel: tmp9, icon: tmp11 };
-        const tmp17 = closure_4(tmp(6000).TableRow, obj2);
+        const tmp17 = closure_4(tmp(6184).TableRow, obj2);
         cResult[9] = tmp9;
         cResult[10] = stateFromStores.name;
         cResult[11] = tmp11;
@@ -75,15 +75,15 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildActivity) 
       cResult[8] = tmp14;
       tmp11 = tmp14;
     }
-    const topUserOrGuildDescription = tmp(8331).getTopUserOrGuildDescription(guildActivity.messages_sent, guildActivity.call_count);
+    const topUserOrGuildDescription = tmp(7714).getTopUserOrGuildDescription(guildActivity.messages_sent, guildActivity.call_count);
     cResult[3] = guildActivity.call_count;
     cResult[4] = guildActivity.messages_sent;
     cResult[5] = topUserOrGuildDescription;
     tmp9 = topUserOrGuildDescription;
-    const tmpResult2 = tmp(8331);
+    const tmpResult2 = tmp(7714);
   }
   const tmpResult = guildActivity(504);
-}) : ((guildActivity) => {
+}) : (function GuildRow(guildActivity) {
   guildActivity = guildActivity.guildActivity;
   const tmp = closure_6();
   const items = [FamilyCenterStore];
@@ -91,11 +91,11 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildActivity) 
   if (null == stateFromStores) {
     return null;
   } else {
-    const topUserOrGuildDescription = tmp2(8331).getTopUserOrGuildDescription(guildActivity.messages_sent, guildActivity.call_count);
+    const topUserOrGuildDescription = tmp2(7714).getTopUserOrGuildDescription(guildActivity.messages_sent, guildActivity.call_count);
     const obj2 = { label: stateFromStores.name, subLabel: topUserOrGuildDescription, icon: null };
     const obj3 = { guild: stateFromStores, style: tmp.guildIcon };
     obj2.icon = closure_4(GuildIconDefault, obj3);
-    return closure_4(tmp2(6000).TableRow, obj2);
+    return closure_4(tmp2(6184).TableRow, obj2);
   }
   const obj = guildActivity(504);
 });
@@ -104,13 +104,13 @@ let obj3 = { borderRadius: nativeDefault.radii.md, borderColor: nativeDefault.co
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterTopServersBottomSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((topGuildActivities) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCenterTopGuildsBottomSheet(topGuildActivities) {
   const cResult = c.c(11);
   topGuildActivities = topGuildActivities.topGuildActivities;
   const tmp4 = closure_6();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
-    const stringResult = intl.string(_modDef2521.Lq9Set);
+    const stringResult = intl.string(_modDef2565.Lq9Set);
     cResult[0] = stringResult;
     let first = stringResult;
   } else {
@@ -128,7 +128,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((topGuildActiviti
   if (cResult[3] !== topGuildActivities) {
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      const fn = function b(guildActivity) {
+      const fn = function h(guildActivity) {
         return closure_1_4(closure_1_7, { guildActivity }, guildActivity.guild_id);
       };
       cResult[5] = fn;
@@ -164,12 +164,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((topGuildActiviti
     cResult[10] = tmp20;
     tmp18 = tmp20;
   }
-}) : ((topGuildActivities) => {
+}) : (function FamilyCenterTopGuildsBottomSheet(topGuildActivities) {
   topGuildActivities = topGuildActivities.topGuildActivities;
   const obj = { children: null };
   const obj2 = { variant: "text-md/bold", style: closure_6().header, children: null };
   const intl = util.intl;
-  obj2.children = intl.string(_modDef2521.Lq9Set);
+  obj2.children = intl.string(_modDef2565.Lq9Set);
   const items = [React4(Text_Text.Text, obj2), ];
   const tmp = closure_6();
   items[1] = React4(TableRowGroup.TableRowGroup, { hasIcons: true, children: topGuildActivities.map((guildActivity) => closure_1_4(closure_1_7, { guildActivity }, guildActivity.guild_id)) });

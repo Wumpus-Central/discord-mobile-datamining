@@ -1,6 +1,6 @@
-// === Module 15014: QuestDockHeaderSeparator ===
+// === Module 15276: QuestDockHeaderSeparator ===
 
-// Module 15014 (QuestDockHeaderSeparator)
+// Module 15276 (QuestDockHeaderSeparator)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
@@ -8,7 +8,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 const obj = { separator: null };
 let size = { backgroundColor: nativeDefault.colors.TEXT_DEFAULT, opacity: 0.2, height: 18, width: 1.5 };
 obj.separator = size;
@@ -17,7 +17,7 @@ const ReactCompilerGating = fn(558);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockHeaderSeparator.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function QuestDockHeaderSeparator() {
   const cResult = c.c(2);
   const tmp2 = closure_4();
   if (cResult[0] !== tmp2.separator) {
@@ -30,4 +30,6 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp3 = cResult[1];
   }
   return tmp3;
-}) : (() => <View style={closure_4().separator} />));
+}) : (function QuestDockHeaderSeparator() {
+  return <View style={closure_4().separator} />;
+}));

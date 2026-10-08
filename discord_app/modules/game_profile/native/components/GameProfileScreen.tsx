@@ -1,19 +1,19 @@
-// === Module 8359: GameProfileScreen ===
+// === Module 8857: GameProfileScreen ===
 
-// Module 8359 (GameProfileScreen)
+// Module 8857 (GameProfileScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4860 */;
-import timing from "timing" /* 4897 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8352 */;
-import getGameProfileStoreWebsiteDataDefault from "getGameProfileStoreWebsiteData" /* 8370 */;
-import GameProfileStoreLinksActionSheet from "GameProfileStoreLinksActionSheet" /* 8387 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5054 */;
+import timing from "timing" /* 5091 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8850 */;
+import getGameProfileStoreWebsiteDataDefault from "getGameProfileStoreWebsiteData" /* 8868 */;
+import GameProfileStoreLinksActionSheet from "GameProfileStoreLinksActionSheet" /* 8885 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GameProfileStore from "GameProfileStore" /* 8360 */;
+import GameProfileStore from "GameProfileStore" /* 8858 */;
 
 const GameProfileStoreLinksActionSheetDefault = GameProfileStoreLinksActionSheet;
 
@@ -23,14 +23,14 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let c10 = 56;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { loadingContainer: { flex: 1, justifyContent: "center", alignItems: "center", minHeight: 300, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, scrollView: null, stickyHeader: null };
 let obj3 = { flex: 1, justifyContent: "center", alignItems: "center", minHeight: 300, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.scrollView = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.stickyHeader = { position: "absolute", top: 0, left: 0, right: 0 };
 let closure_11 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function GetButton(onPress) {
   const cResult = c.c(4);
   onPress = onPress.onPress;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -59,7 +59,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
     tmp8 = cResult[3];
   }
   return tmp8;
-}) : ((onPress) => {
+}) : (function GetButton(onPress) {
   const obj = { variant: "primary", size: "sm", text: null, onPress: null, accessibilityLabel: null };
   const intl = util.intl;
   obj.text = intl.string(util.t.l8JeHg);
@@ -83,7 +83,7 @@ let obj4 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWE
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((gameId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProfileScreen(gameId) {
   const cResult = gameId(sourceUserId[8]).c(76);
   gameId = gameId.gameId;
   const source = gameId.source;
@@ -126,7 +126,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((gameId) => {
   const sharedValue = gameId(sourceUserId[17]).useSharedValue(0);
   STICKY_HEADER_HEIGHT = obj3.useRef(false);
   if (cResult[1] !== num) {
-    class B {
+    class D {
       constructor() {
         tmp2 = initialScrollOffset > 0;
         tmp = initialScrollOffset;
@@ -151,9 +151,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((gameId) => {
       }
     }
     cResult[1] = num;
-    cResult[2] = B;
+    cResult[2] = D;
   } else {
-    class B {
+    class D {
       constructor() {
         tmp2 = initialScrollOffset > 0;
         tmp = initialScrollOffset;
@@ -179,7 +179,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((gameId) => {
     }
   }
   if (data != null) {
-    class B {
+    class D {
       constructor() {
         tmp2 = initialScrollOffset > 0;
         tmp = initialScrollOffset;
@@ -205,7 +205,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((gameId) => {
     }
   }
   if (cResult[3] === sharedValue) {
-    class B {
+    class D {
       constructor() {
         tmp2 = initialScrollOffset > 0;
         tmp = initialScrollOffset;
@@ -300,7 +300,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((gameId) => {
     const tmpResult17 = tmp(tmp2[17]);
     const gameProfileStoreWebsites = tmp(tmp2[20]).useGameProfileStoreWebsites(data);
     if (cResult[6] !== gameProfileStoreWebsites) {
-      class B {
+      class D {
         constructor() {
           tmp2 = initialScrollOffset > 0;
           tmp = initialScrollOffset;
@@ -325,7 +325,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((gameId) => {
         }
       }
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-        class B {
+        class D {
           constructor() {
             tmp2 = initialScrollOffset > 0;
             tmp = initialScrollOffset;
@@ -351,7 +351,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((gameId) => {
         }
         cResult[8] = tmp38;
       } else {
-        class B {
+        class D {
           constructor() {
             tmp2 = initialScrollOffset > 0;
             tmp = initialScrollOffset;
@@ -381,7 +381,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((gameId) => {
       cResult[6] = gameProfileStoreWebsites;
       cResult[7] = found;
     } else {
-      class B {
+      class D {
         constructor() {
           tmp2 = initialScrollOffset > 0;
           tmp = initialScrollOffset;
@@ -409,7 +409,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((gameId) => {
       __initData3 = obj3.useRef(undefined);
       __initData4 = obj3.useRef(null);
       if (cResult[9] !== name) {
-        class B {
+        class D {
           constructor() {
             tmp2 = initialScrollOffset > 0;
             tmp = initialScrollOffset;
@@ -453,7 +453,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((gameId) => {
           }
         }
       } else {
-        class B {
+        class D {
           constructor() {
             tmp2 = initialScrollOffset > 0;
             tmp = initialScrollOffset;
@@ -552,7 +552,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((gameId) => {
   cResult[4] = undefined;
   cResult[5] = obj8;
   const tmpResult11 = gameId(sourceUserId[17]);
-}) : ((gameId) => {
+}) : (function GameProfileScreen(gameId) {
   gameId = gameId.gameId;
   const source = gameId.source;
   const sourceUserId = gameId.sourceUserId;

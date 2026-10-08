@@ -1,22 +1,22 @@
-// === Module 6004: AnimatedPressableHighlight ===
+// === Module 6188: AnimatedPressableHighlight ===
 
-// Module 6004 (AnimatedPressableHighlight)
+// Module 6188 (AnimatedPressableHighlight)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4586 */;
-import useIOSPressEffects from "useIOSPressEffects" /* 6005 */;
+import useToken from "useToken" /* 4778 */;
+import useIOSPressEffects from "useIOSPressEffects" /* 6191 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
 
 require = fn;
 let closure_3 = ["children"];
 let closure_4 = ["children"];
 const Pressable = fn(17).Pressable;
 const jsx = fn(21).jsx;
-let closure_9 = ReanimatedRexport.createAnimatedComponent(fn(5916).PressableHighlight);
+let closure_9 = ReanimatedRexport.createAnimatedComponent(fn(6189).PressableHighlight);
 let ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function AnimatedPressableHighlightiOS(children) {
   const cResult = c.c(12);
   if (cResult[0] !== children) {
     children = children.children;
@@ -67,7 +67,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
   cResult[5] = items;
   tmp10 = items;
   const tmpResult = useIOSPressEffects;
-}) : ((children) => {
+}) : (function AnimatedPressableHighlightiOS(children) {
   const merged = Object.assign(children, Object.assign({ children: 0 }));
   const iOSPressEffects = useIOSPressEffects.useIOSPressEffects(4);
   const obj2 = { accessibilityRole: "button", onPressIn: iOSPressEffects.onPressIn, onPressOut: iOSPressEffects.onPressOut };
@@ -78,7 +78,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
   return <closure_9 accessibilityRole="button" onPressIn={iOSPressEffects.onPressIn} onPressOut={iOSPressEffects.onPressOut} />;
 });
 ReactCompilerGating = fn(558);
-const PlatformUtils = fn(1369);
+const PlatformUtils = fn(1381);
 if (PlatformUtils.isAndroid()) {
   tmp2 = tmp3;
 }

@@ -1,13 +1,13 @@
-// === Module 4894: useManaTextMigrationHighlight ===
+// === Module 5088: useManaTextMigrationHighlight ===
 
-// Module 4894 (useManaTextMigrationHighlight)
+// Module 5088 (useManaTextMigrationHighlight)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import DevSettingsStore from "DevSettingsStore" /* 4895 */;
-import ThemeStore from "ThemeStore" /* 1193 */;
-import createStyles from "createStyles" /* 4896 */;
+import DevSettingsStore from "DevSettingsStore" /* 5089 */;
+import ThemeStore from "ThemeStore" /* 1205 */;
+import createStyles from "createStyles" /* 5090 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -28,7 +28,7 @@ const internal2 = nativeDefault.internal;
 obj5.borderColor = internal2.resolveSemanticColor(nativeDefault.themes.LIGHT, nativeDefault.colors.STATUS_WARNING);
 const result = size.fileFinishedImporting("design/components/Text/native/useManaTextMigrationHighlight.tsx");
 
-export const useManaTextMigrationHighlight = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export const useManaTextMigrationHighlight = ReactCompilerGating.isReactCompilerEnabled() ? (function useManaTextMigrationHighlight(arg0, arg1) {
   const cResult = c.c(7);
   let overridden = closure_5();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -75,7 +75,7 @@ export const useManaTextMigrationHighlight = ReactCompilerGating.isReactCompiler
     cResult[6] = tmp9;
   }
   tmpResult = initialize;
-}) : ((arg0, arg1) => {
+}) : (function useManaTextMigrationHighlight(arg0, arg1) {
   const tmp = closure_5();
   const items = [DevSettingsStore];
   if (!obj.useStateFromStores(items, () => DevSettingsStore.get("highlight_mana_text"))) {

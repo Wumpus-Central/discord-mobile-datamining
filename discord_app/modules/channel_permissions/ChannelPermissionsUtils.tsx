@@ -1,21 +1,21 @@
-// === Module 9250: ChannelPermissionsUtils ===
+// === Module 8579: ChannelPermissionsUtils ===
 
-// Module 9250 (ChannelPermissionsUtils)
+// Module 8579 (ChannelPermissionsUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
 import util from "util" /* 1126 */;
-import Server from "Server" /* 1985 */;
-import ChannelRecord from "ChannelRecord" /* 2055 */;
-import GuildRecord from "GuildRecord" /* 2070 */;
-import GuildRoleUtils from "GuildRoleUtils" /* 2110 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4520 */;
-import UserUtilsDefault from "UserUtils" /* 4728 */;
-import ChannelUtils from "ChannelUtils" /* 5041 */;
-import ChannelPermissionsConstants from "ChannelPermissionsConstants" /* 8110 */;
-import ChannelSettingsPermissionsActionCreators from "ChannelSettingsPermissionsActionCreators" /* 9251 */;
-import GuildRoleRecord from "GuildRoleRecord" /* 2107 */;
-import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import UserStore from "UserStore" /* 1377 */;
+import Server from "Server" /* 1997 */;
+import ChannelRecord from "ChannelRecord" /* 2067 */;
+import GuildRecord from "GuildRecord" /* 2082 */;
+import GuildRoleUtils from "GuildRoleUtils" /* 2122 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4712 */;
+import UserUtilsDefault from "UserUtils" /* 4922 */;
+import ChannelUtils from "ChannelUtils" /* 5410 */;
+import ChannelPermissionsConstants from "ChannelPermissionsConstants" /* 7484 */;
+import ChannelSettingsPermissionsActionCreators from "ChannelSettingsPermissionsActionCreators" /* 8580 */;
+import GuildRoleRecord from "GuildRoleRecord" /* 2119 */;
+import GuildMemberStore from "GuildMemberStore" /* 2124 */;
+import UserStore from "UserStore" /* 1389 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
@@ -476,7 +476,7 @@ export const getExistingMembers = function getExistingMembers(memberIds, channel
     return tmp10;
   });
 };
-export const getExistingMembersRows = function getExistingMembersRows(memberIds, channel, guild, accessPermissions, arg4) {
+export const getExistingMembersRows = function getExistingMembersRows(memberIds, channel, guild, MODERATE_STAGE_CHANNEL_PERMISSIONS, arg4) {
   _require = guild;
   let obj = arg4;
   if (arg4 === undefined) {
@@ -485,7 +485,7 @@ export const getExistingMembersRows = function getExistingMembersRows(memberIds,
   const appChannelBotUserId = obj.appChannelBotUserId;
   closure_129_0 = channel;
   closure_129_1 = guild;
-  closure_129_2 = accessPermissions;
+  closure_129_2 = MODERATE_STAGE_CHANNEL_PERMISSIONS;
   const permissionUpdates = obj.permissionUpdates;
   const mapped = memberIds.map(UserStore.getUser);
   const found = mapped.filter(require("GlobalUtils").isNotNullish);

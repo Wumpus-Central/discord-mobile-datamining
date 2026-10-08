@@ -1,12 +1,12 @@
-// === Module 16924: SearchTabsTransitionGroup ===
+// === Module 17205: SearchTabsTransitionGroup ===
 
-// Module 16924 (SearchTabsTransitionGroup)
+// Module 17205 (SearchTabsTransitionGroup)
 import c from "c" /* 576 */;
-import native from "native" /* 4595 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import spring from "spring" /* 5604 */;
-import springPresets from "springPresets" /* 5605 */;
-import Tabs_Tabs from "Tabs/Tabs" /* 12297 */;
+import native from "native" /* 4787 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import spring from "spring" /* 5374 */;
+import springPresets from "springPresets" /* 5378 */;
+import Tabs_Tabs from "Tabs/Tabs" /* 12395 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,10 +20,10 @@ function renderItem(key, state, transitionState, cleanUp) {
 }
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
-let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCountFormatter() {
   const cResult = setting(576).c(2);
   let obj = setting(576);
-  setting = setting(2028).SearchResultExactCountEnabled.useSetting();
+  setting = setting(2040).SearchResultExactCountEnabled.useSetting();
   if (cResult[0] !== setting) {
     const fn = function t(toLocaleString) {
       if (!setting) {
@@ -42,8 +42,8 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp3 = cResult[1];
   }
   return tmp3;
-}) : (() => {
-  setting = setting(2028).SearchResultExactCountEnabled.useSetting();
+}) : (function useCountFormatter() {
+  setting = setting(2040).SearchResultExactCountEnabled.useSetting();
   const items = [setting];
   return noop.useCallback((toLocaleString) => {
     if (!setting) {
@@ -67,7 +67,7 @@ const __initData6 = { code: "function SearchTabsTransitionGroupTsx8(){const{swip
 const __initData7 = { code: "function SearchTabsTransitionGroupTsx9(){const{state}=this.__closure;return state.scrollOffset.get()>0;}" };
 const __initData8 = { code: "function SearchTabsTransitionGroupTsx10(isOffsetFromStart,prevIsOffsetFromStart){const{swipeForMemberListContext}=this.__closure;if(isOffsetFromStart!==prevIsOffsetFromStart){var _swipeForMemberListCo;(_swipeForMemberListCo=swipeForMemberListContext)===null||_swipeForMemberListCo===void 0||_swipeForMemberListCo.disallowGesture.set(isOffsetFromStart);}}" };
 ReactCompilerGating = fn(558);
-let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((state) => {
+let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function AnimatedTabs(state) {
   const cResult = state(cleanUp[3]).c(14);
   state = state.state;
   const transitionState = state.transitionState;
@@ -233,7 +233,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((state) => {
   tmp7 = items;
   tmp6 = fn2;
   const obj3 = { withSpring: state(cleanUp[8]).withSpring, opacity: sharedValue, springStandard: state(cleanUp[9]).springStandard, transitionState, TransitionStates: state(cleanUp[7]).TransitionStates, runOnJS: state(cleanUp[6]).runOnJS, cleanUp };
-}) : ((state) => {
+}) : (function AnimatedTabs(state) {
   state = state.state;
   const transitionState = state.transitionState;
   const cleanUp = state.cleanUp;
@@ -341,7 +341,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/tabs/SearchTabsTransitionGroup.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((state) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SearchTabsTransitionGroup(state) {
   const cResult = c.c(2);
   state = state.state;
   if (cResult[0] !== state) {
@@ -358,7 +358,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((state) => {
     tmp4 = cResult[1];
   }
   return tmp4;
-}) : ((state) => {
+}) : (function SearchTabsTransitionGroup(state) {
   const obj = { items: null, getItemKey, renderItem };
   const items = [state.state];
   obj.items = items;

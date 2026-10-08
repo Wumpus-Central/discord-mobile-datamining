@@ -1,30 +1,30 @@
-// === Module 9502: InstantInviteActionSheet ===
+// === Module 8667: InstantInviteActionSheet ===
 
-// Module 9502 (InstantInviteActionSheet)
+// Module 8667 (InstantInviteActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import InviteCodeUtils from "InviteCodeUtils" /* 4878 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7861 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9494 */;
-import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 9503 */;
-import HubProgressActionCreators from "HubProgressActionCreators" /* 9504 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1209 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import InviteCodeUtils from "InviteCodeUtils" /* 5072 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8279 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8658 */;
+import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 8668 */;
+import HubProgressActionCreators from "HubProgressActionCreators" /* 8670 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import StageInstanceStore from "StageInstanceStore" /* 2056 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 9495 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
+import StageInstanceStore from "StageInstanceStore" /* 2068 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 8659 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const InviteTargetTypes = fn(7239).InviteTargetTypes;
+const InviteTargetTypes = fn(7418).InviteTargetTypes;
 const Permissions = fn(1085).Permissions;
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { placeholderHeader: null, placeholderLabel: null, errorEmptyState: null, searchAndShareContainer: null, inviteAgeText: null, shareApps: null };
 let size = { height: 16, width: "80%", margin: 16, marginBottom: 8, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 obj2.placeholderHeader = size;
@@ -37,7 +37,7 @@ obj2.inviteAgeText = { paddingBottom: nativeDefault.space.PX_8, paddingHorizonta
 obj2.shareApps = { paddingVertical: 0 };
 let closure_16 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Loading() {
   const cResult = c.c(8);
   const tmp2 = closure_16();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -85,7 +85,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[6] = tmp12;
   cResult[7] = tmp17;
   tmp16 = tmp17;
-}) : (() => {
+}) : (function Loading() {
   const tmp = closure_16();
   const items = [];
   let num = 0;
@@ -104,7 +104,7 @@ let obj4 = { paddingBottom: nativeDefault.space.PX_8, paddingHorizontal: nativeD
 size = fn(2);
 let result = size.fileFinishedImporting("modules/instant_invite/native/components/InstantInviteActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function InstantInviteActionSheet(channel) {
   const cResult = channel(vanityURLCode[13]).c(66);
   channel = channel.channel;
   const source = channel.source;
@@ -603,7 +603,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     tmp15 = M;
   }
   const tmp6 = source(vanityURLCode[16]);
-}) : ((channel) => {
+}) : (function InstantInviteActionSheet(channel) {
   channel = channel.channel;
   const source = channel.source;
   const vanityURLCode = channel.vanityURLCode;

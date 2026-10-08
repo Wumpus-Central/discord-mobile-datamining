@@ -1,26 +1,26 @@
-// === Module 16902: ChannelsScreen ===
+// === Module 17183: ChannelsScreen ===
 
-// Module 16902 (ChannelsScreen)
+// Module 17183 (ChannelsScreen)
 import util from "util" /* 1126 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4596 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12001 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4788 */;
+import tracking_TrackingDefault from "tracking/Tracking" /* 12074 */;
 import noop from "module_19" /* 19 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4920 */;
-import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 12007 */;
-import SearchQueryStore from "SearchQueryStore" /* 11994 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5114 */;
+import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 12080 */;
+import SearchQueryStore from "SearchQueryStore" /* 12067 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const SearchConstants = fn(7524);
+const SearchConstants = fn(9247);
 ({ EMPTY_VOICE_STATES: closure_7, SearchListItemTypes: closure_8, CHANNELS_ESTIMATED_ITEM_SIZE: closure_9 } = SearchConstants);
-let closure_10 = fn(7523).SearchResultContentEntityTypes;
+let closure_10 = fn(9246).SearchResultContentEntityTypes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/ChannelsScreen.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelsScreen(searchContext) {
   const cResult = searchContext(stateFromStores[8]).c(53);
   searchContext = searchContext.searchContext;
   if (cResult[0] !== searchContext) {
@@ -209,7 +209,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((search
   cResult[25] = stateFromStores1.length;
   cResult[26] = Y;
   const tmpResult14 = searchContext(stateFromStores[10]);
-}) : ((searchContext) => {
+}) : (function ChannelsScreen(searchContext) {
   searchContext = searchContext.searchContext;
   let stateFromStores;
   let stateFromStores2;
@@ -259,12 +259,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((search
   const items8 = [onPressGuildTextChannel, searchContext];
   const callback = stateFromStores1.useCallback((channelId, index) => {
     onPressGuildTextChannel(channelId);
-    const result = search_tracking_TrackingDefault.trackSearchResultClicked({ searchContext, channelId, index, entityType: constants.CHANNEL });
+    const result = tracking_TrackingDefault.trackSearchResultClicked({ searchContext, channelId, index, entityType: constants.CHANNEL });
   }, items8);
   const items9 = [onPressGuildVoiceChannel, searchContext];
   const callback1 = stateFromStores1.useCallback((channelId, index) => {
     onPressGuildVoiceChannel(channelId);
-    const result = search_tracking_TrackingDefault.trackSearchResultClicked({ searchContext, channelId, index, entityType: constants.CHANNEL });
+    const result = tracking_TrackingDefault.trackSearchResultClicked({ searchContext, channelId, index, entityType: constants.CHANNEL });
   }, items9);
   const items10 = [fullscreenPlaceholderCount, callback, callback1, stateFromStores3, tmp6, stateFromStores, stateFromStores1, stateFromStores2];
   const memo = stateFromStores1.useMemo(() => {
@@ -303,7 +303,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((search
       items.push(element1);
       closure_0 = stateFromStores2;
       closure_1 = closure_5;
-      const sorted = stateFromStores1.sort((channel, channel2) => {
+      const sorted = stateFromStores1.sort(function sort(channel, channel2) {
         channel = channel.channel;
         let tmp = closure_0;
         let tmp3 = closure_0;

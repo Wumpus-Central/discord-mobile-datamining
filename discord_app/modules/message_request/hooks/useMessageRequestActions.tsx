@@ -1,16 +1,16 @@
-// === Module 12099: useMessageRequestActions ===
+// === Module 12177: useMessageRequestActions ===
 
-// Module 12099 (useMessageRequestActions)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import UserSettings from "UserSettings" /* 2028 */;
-import ReportModals from "ReportModals" /* 8312 */;
+// Module 12177 (useMessageRequestActions)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import UserSettings from "UserSettings" /* 2040 */;
+import ReportModals from "ReportModals" /* 7695 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 7124 */;
+import UserProfileStore from "UserProfileStore" /* 7309 */;
 
 require = fn;
-const MessageRequestConstants = fn(12100);
+const MessageRequestConstants = fn(12178);
 ({ MessageRequestAnalyticsAction: closure_7, BATCH_REJECT_LIMIT: closure_8 } = MessageRequestConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const size = fn(2);

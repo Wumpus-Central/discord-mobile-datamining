@@ -1,10 +1,10 @@
-// === Module 15962: useOrientationLock ===
+// === Module 16222: useOrientationLock ===
 
-// Module 15962 (useOrientationLock)
-import MetaQuestUtils from "MetaQuestUtils" /* 1615 */;
-import DeviceUtils from "DeviceUtils" /* 4872 */;
-import useWideAuthViewDefault from "useWideAuthView" /* 6439 */;
-import DeviceOrientation from "DeviceOrientation" /* 8018 */;
+// Module 16222 (useOrientationLock)
+import MetaQuestUtils from "MetaQuestUtils" /* 1627 */;
+import DeviceUtils from "DeviceUtils" /* 5066 */;
+import useWideAuthViewDefault from "useWideAuthView" /* 6617 */;
+import DeviceOrientation from "DeviceOrientation" /* 8426 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/useOrientationLock.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePortraitOrientationOnly() {
   const cResult = require("c").c(3);
   const tmp2 = useWideAuthViewDefault();
   _require = tmp2;
@@ -52,7 +52,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp4 = cResult[2];
   }
   const effect = noop.useEffect(tmp3, tmp4);
-}) : (() => {
+}) : (function usePortraitOrientationOnly() {
   const tmp = useWideAuthViewDefault();
   closure_0 = tmp;
   const items = [tmp];

@@ -1,121 +1,124 @@
-// === Module 7939: UserProfileAvatar ===
+// === Module 8357: UserProfileAvatar ===
 
-// Module 7939 (UserProfileAvatar)
+// Module 8357 (UserProfileAvatar)
 import c from "c" /* 576 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 7924 */;
-import HeaderAvatarDefault from "HeaderAvatar" /* 7940 */;
-import openUserProfileAvatarMediaViewerDefault from "openUserProfileAvatarMediaViewer" /* 7943 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8343 */;
+import HeaderAvatarDefault from "HeaderAvatar" /* 8358 */;
+import openUserProfileAvatarMediaViewerDefault from "openUserProfileAvatarMediaViewer" /* 8361 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_3 = ["backgroundColor", "size"];
+let closure_3 = ["backgroundColor", "size", "ref"];
 let closure_4 = ["animate", "user", "guildId"];
 const View = fn(17).View;
-const TrackUserProfileActions = fn(7865).TrackUserProfileActions;
-const AVATAR_SIZE_VARIANT = fn(6714).AVATAR_SIZE_VARIANT;
+const TrackUserProfileActions = fn(8283).TrackUserProfileActions;
+const AVATAR_SIZE_VARIANT = fn(6891).AVATAR_SIZE_VARIANT;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
 let ReactCompilerGating = fn(558);
-const forwardRefResult = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, ref) => {
-  const cResult = c.c(21);
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileAvatar(arg0) {
+  const cResult = c.c(22);
   if (cResult[0] !== arg0) {
-    ({ backgroundColor, size } = arg0);
-    const tmp8 = _objectWithoutProperties(arg0, closure_3);
+    ({ backgroundColor, size, ref } = arg0);
+    const tmp9 = _objectWithoutProperties(arg0, closure_3);
     cResult[0] = arg0;
     cResult[1] = backgroundColor;
-    cResult[2] = tmp8;
-    cResult[3] = size;
-    let tmp5 = size;
-    let tmp4 = tmp8;
+    cResult[2] = tmp9;
+    cResult[3] = ref;
+    cResult[4] = size;
+    let tmp6 = size;
+    let tmp5 = ref;
+    let tmp4 = tmp9;
     let tmp3 = backgroundColor;
   } else {
     tmp3 = cResult[1];
     tmp4 = cResult[2];
     tmp5 = cResult[3];
+    tmp6 = cResult[4];
   }
-  if (undefined === tmp5) {
-    tmp5 = AVATAR_SIZE_VARIANT;
+  if (undefined === tmp6) {
+    tmp6 = AVATAR_SIZE_VARIANT;
   }
-  const tmp10 = UserProfileSharedStylesDefault();
-  if (cResult[4] !== tmp3) {
+  const tmp11 = UserProfileSharedStylesDefault();
+  if (cResult[5] !== tmp3) {
     const obj2 = { backgroundColor: tmp3 };
-    cResult[4] = tmp3;
-    cResult[5] = obj2;
-    let tmp11 = obj2;
+    cResult[5] = tmp3;
+    cResult[6] = obj2;
+    let tmp12 = obj2;
   } else {
-    tmp11 = cResult[5];
+    tmp12 = cResult[6];
   }
-  if (cResult[6] === tmp10.avatarBackground) {
-    if (cResult[7] === tmp10.avatarPosition) {
-      if (cResult[8] === tmp11) {
-        let tmp12 = cResult[9];
+  if (cResult[7] === tmp11.avatarBackground) {
+    if (cResult[8] === tmp11.avatarPosition) {
+      if (cResult[9] === tmp12) {
+        let tmp13 = cResult[10];
       }
-      if (cResult[10] === tmp10.avatar) {
-        if (cResult[11] === tmp10.avatarPosition) {
-          let tmp14 = cResult[12];
+      if (cResult[11] === tmp11.avatar) {
+        if (cResult[12] === tmp11.avatarPosition) {
+          let tmp15 = cResult[13];
         }
-        if (cResult[13] === tmp4) {
-          if (cResult[14] === ref) {
-            if (cResult[15] === tmp5) {
-              if (cResult[16] === tmp14) {
-                let tmp16 = cResult[17];
+        if (cResult[14] === tmp4) {
+          if (cResult[15] === tmp5) {
+            if (cResult[16] === tmp6) {
+              if (cResult[17] === tmp15) {
+                let tmp16 = cResult[18];
               }
-              if (cResult[18] === tmp12) {
-                if (cResult[19] === tmp16) {
-                  let tmp23 = cResult[20];
+              if (cResult[19] === tmp13) {
+                if (cResult[20] === tmp16) {
+                  let tmp23 = cResult[21];
                 }
                 return tmp23;
               }
               const obj3 = { children: null };
-              const items = [tmp12, tmp16];
+              const items = [tmp13, tmp16];
               obj3.children = items;
               const tmp26 = __initData(closure_1_11, obj3);
-              cResult[18] = tmp12;
-              cResult[19] = tmp16;
-              cResult[20] = tmp26;
+              cResult[19] = tmp13;
+              cResult[20] = tmp16;
+              cResult[21] = tmp26;
               tmp23 = tmp26;
             }
           }
         }
-        const obj4 = { ref, style: tmp14, size: tmp5 };
+        const obj4 = { ref: tmp5, style: tmp15, size: tmp6 };
         const merged = Object.assign(tmp4);
-        const tmp22 = v65535(HeaderAvatarDefault, obj4);
-        cResult[13] = tmp4;
-        cResult[14] = ref;
+        const tmp22 = collapsed(HeaderAvatarDefault, obj4);
+        cResult[14] = tmp4;
         cResult[15] = tmp5;
-        cResult[16] = tmp14;
-        cResult[17] = tmp22;
+        cResult[16] = tmp6;
+        cResult[17] = tmp15;
+        cResult[18] = tmp22;
         tmp16 = tmp22;
-        const tmp9Result = HeaderAvatarDefault;
+        const tmp10Result = HeaderAvatarDefault;
       }
       const items1 = [, ];
-      ({ avatar: arr2[0], avatarPosition: arr2[1] } = tmp10);
-      cResult[10] = tmp10.avatar;
-      cResult[11] = tmp10.avatarPosition;
-      cResult[12] = items1;
-      tmp14 = items1;
+      ({ avatar: arr2[0], avatarPosition: arr2[1] } = tmp11);
+      cResult[11] = tmp11.avatar;
+      cResult[12] = tmp11.avatarPosition;
+      cResult[13] = items1;
+      tmp15 = items1;
     }
   }
   const obj5 = { style: null };
   const items2 = [, , ];
-  ({ avatarBackground: arr[0], avatarPosition: arr[1] } = tmp10);
-  items2[2] = tmp11;
+  ({ avatarBackground: arr[0], avatarPosition: arr[1] } = tmp11);
+  items2[2] = tmp12;
   obj5.style = items2;
-  const tmp13 = v65535(View, obj5);
-  cResult[6] = tmp10.avatarBackground;
-  cResult[7] = tmp10.avatarPosition;
-  cResult[8] = tmp11;
-  cResult[9] = tmp13;
-  tmp12 = tmp13;
-}) : ((backgroundColor, ref) => {
+  const tmp14 = collapsed(View, obj5);
+  cResult[7] = tmp11.avatarBackground;
+  cResult[8] = tmp11.avatarPosition;
+  cResult[9] = tmp12;
+  cResult[10] = tmp14;
+  tmp13 = tmp14;
+}) : (function UserProfileAvatar(backgroundColor) {
   let size = backgroundColor.size;
   if (size === undefined) {
     size = AVATAR_SIZE_VARIANT;
   }
-  const merged = Object.assign(backgroundColor, Object.assign({ backgroundColor: 0, size: 0 }));
+  const merged = Object.assign(backgroundColor, Object.assign({ backgroundColor: 0, size: 0, ref: 0 }));
   const tmp2 = UserProfileSharedStylesDefault();
   const obj = { children: null };
   const obj2 = { style: null };
@@ -123,22 +126,23 @@ const forwardRefResult = noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
   ({ avatarBackground: arr[0], avatarPosition: arr[1] } = tmp2);
   items[2] = { backgroundColor: backgroundColor.backgroundColor };
   obj2.style = items;
-  const items1 = [v65535(View, obj2), ];
-  const obj3 = { ref, style: null, size };
+  const items1 = [collapsed(View, obj2), ];
+  const obj3 = { ref: backgroundColor.ref, style: null, size };
   const items2 = [, ];
   ({ avatar: arr3[0], avatarPosition: arr3[1] } = tmp2);
   obj3.style = items2;
   const merged1 = Object.assign(merged);
-  items1[1] = v65535(HeaderAvatarDefault, obj3);
+  items1[1] = collapsed(HeaderAvatarDefault, obj3);
   obj.children = items1;
   return __initData(closure_1_11, obj);
-}));
+});
+let closure_13 = tmp3;
 ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileAvatar.tsx");
 
-export default forwardRefResult;
-export const OpenableUserProfileAvatar = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export default tmp3;
+export const OpenableUserProfileAvatar = ReactCompilerGating.isReactCompilerEnabled() ? (function OpenableUserProfileAvatar(guildId) {
   const cResult = require("c").c(23);
   if (cResult[0] !== guildId) {
     ({ animate, user } = guildId);
@@ -169,7 +173,7 @@ export const OpenableUserProfileAvatar = ReactCompilerGating.isReactCompilerEnab
     if (cResult[8] === tmp10) {
       if (cResult[9] === tmp4) {
         if (cResult[10] === trackUserProfileAction) {
-          class R {
+          class C {
             constructor() {
               obj = { action: TrackUserProfileActions.VIEW_AVATAR };
               tmp = trackUserProfileAction(obj);
@@ -194,7 +198,7 @@ export const OpenableUserProfileAvatar = ReactCompilerGating.isReactCompilerEnab
                   }
                 }
               }
-              class R {
+              class C {
                 constructor() {
                   obj = { action: TrackUserProfileActions.VIEW_AVATAR };
                   tmp = trackUserProfileAction(obj);
@@ -223,7 +227,7 @@ export const OpenableUserProfileAvatar = ReactCompilerGating.isReactCompilerEnab
           }
           if (tmp12) {
             const intl = tmp(1126).intl;
-            class R {
+            class C {
               constructor() {
                 obj = { action: TrackUserProfileActions.VIEW_AVATAR };
                 tmp = trackUserProfileAction(obj);
@@ -242,7 +246,7 @@ export const OpenableUserProfileAvatar = ReactCompilerGating.isReactCompilerEnab
         }
       }
     }
-    class R {
+    class C {
       constructor() {
         obj = { action: TrackUserProfileActions.VIEW_AVATAR };
         tmp = trackUserProfileAction(obj);
@@ -255,7 +259,7 @@ export const OpenableUserProfileAvatar = ReactCompilerGating.isReactCompilerEnab
     cResult[9] = tmp4;
     cResult[10] = trackUserProfileAction;
     cResult[11] = user;
-    cResult[12] = R;
+    cResult[12] = C;
   }
   const tmp13 = null != user.avatar || user.hasAvatarForGuild(tmp4);
   cResult[5] = tmp4;
@@ -263,7 +267,7 @@ export const OpenableUserProfileAvatar = ReactCompilerGating.isReactCompilerEnab
   cResult[7] = tmp13;
   tmp12 = tmp13;
   const tmpResult = require("UserProfileAnalyticsContext");
-}) : ((animate) => {
+}) : (function OpenableUserProfileAvatar(animate) {
   let flag = animate.animate;
   if (flag === undefined) {
     flag = true;

@@ -1,15 +1,15 @@
-// === Module 1618: useSafeAreaInsets ===
+// === Module 1630: useSafeAreaInsets ===
 
-// Module 1618 (useSafeAreaInsets)
+// Module 1630 (useSafeAreaInsets)
 import c from "c" /* 576 */;
-import AppEntryKeyContext from "AppEntryKeyContext" /* 1487 */;
-import SafeAreaStoreDefault from "SafeAreaStore" /* 1619 */;
+import AppEntryKeyContext from "AppEntryKeyContext" /* 1499 */;
+import SafeAreaStoreDefault from "SafeAreaStore" /* 1631 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/safe_area/useSafeAreaInsets.native.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSafeAreaInsets() {
   const cResult = c.c(2);
   const appEntryKey = AppEntryKeyContext.useAppEntryKey();
   if (cResult[0] !== appEntryKey) {
@@ -23,7 +23,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp4 = cResult[1];
   }
   return SafeAreaStoreDefault(tmp4);
-}) : (() => {
+}) : (function useSafeAreaInsets() {
   closure_0 = AppEntryKeyContext.useAppEntryKey();
   return SafeAreaStoreDefault((arg0) => arg0.byAppEntry[closure_0].safeAreaInsets);
 });

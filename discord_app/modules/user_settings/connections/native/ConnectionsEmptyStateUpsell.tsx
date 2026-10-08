@@ -1,18 +1,18 @@
-// === Module 14783: ConnectionsEmptyStateUpsell ===
+// === Module 15044: ConnectionsEmptyStateUpsell ===
 
-// Module 14783 (ConnectionsEmptyStateUpsell)
+// Module 15044 (ConnectionsEmptyStateUpsell)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import AvatarUtils from "AvatarUtils" /* 1402 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import shared from "shared" /* 4735 */;
-import useThemeDefault from "useTheme" /* 4797 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Stack_Stack from "Stack/Stack" /* 5600 */;
-import Card from "Card" /* 6002 */;
-import ConnectionsHooks from "ConnectionsHooks" /* 7025 */;
-import authorizeConnectionDefault from "authorizeConnection" /* 8764 */;
-import ConnectionsTracking from "ConnectionsTracking" /* 14784 */;
+import AvatarUtils from "AvatarUtils" /* 1414 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import shared from "shared" /* 4929 */;
+import useThemeDefault from "useTheme" /* 4991 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import Stack_Stack from "Stack/Stack" /* 5373 */;
+import Card from "Card" /* 6186 */;
+import ConnectionsHooks from "ConnectionsHooks" /* 7213 */;
+import authorizeConnectionDefault from "authorizeConnection" /* 9147 */;
+import ConnectionsTracking from "ConnectionsTracking" /* 15045 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -29,13 +29,13 @@ const View = fn(17).View;
 const AnalyticsLocations = fn(1085).AnalyticsLocations;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles(() => {
   const obj = { container: { flex: 1, alignItems: "center" }, content: { flex: 1, width: "100%", maxWidth: 260, alignItems: "center", justifyContent: "center" }, card: { flex: 1, maxHeight: 76, maxWidth: 76, aspectRatio: 1, alignItems: "center", justifyContent: "center", padding: 12 }, textContainer: { marginTop: 32 }, text: { textAlign: "center" }, iconContainer: { flex: 1, maxHeight: 52, maxWidth: 52, aspectRatio: 1, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center", padding: 8 }, icon: { flex: 1, aspectRatio: 1 } };
   return obj;
 });
 let ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((platform) => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmptyStateCard(platform) {
   const cResult = platform(576).c(27);
   platform = platform.platform;
   const tmp4 = closure_8();
@@ -52,11 +52,11 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((platform) => {
     tmp6 = cResult[1];
   }
   if (cResult[2] !== platform.type) {
-    const connectionBackgroundColor = tmp(14785).getConnectionBackgroundColor(platform.type);
+    const connectionBackgroundColor = tmp(15046).getConnectionBackgroundColor(platform.type);
     cResult[2] = platform.type;
     cResult[3] = connectionBackgroundColor;
     let tmp7 = connectionBackgroundColor;
-    const tmpResult = tmp(14785);
+    const tmpResult = tmp(15046);
   } else {
     tmp7 = cResult[3];
   }
@@ -91,7 +91,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((platform) => {
                         }
                       }
                       const obj2 = { onPress: tmp6, style: tmp4.card, border: "strong", children: tmp19 };
-                      const tmp25 = closure_6(tmp(6002).Card, obj2);
+                      const tmp25 = closure_6(tmp(6186).Card, obj2);
                       cResult[23] = tmp6;
                       cResult[24] = tmp4.card;
                       cResult[25] = tmp19;
@@ -107,7 +107,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((platform) => {
                   }
                 }
                 const obj4 = { style: tmp4.icon, source: tmp9, resizeMode: "contain", disableColor: true, accessibilityLabel: platform.name };
-                const tmp18 = closure_6(tmp(1188).Icon, obj4);
+                const tmp18 = closure_6(tmp(1200).Icon, obj4);
                 cResult[16] = platform.name;
                 cResult[17] = tmp9;
                 cResult[18] = tmp4.icon;
@@ -135,15 +135,15 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((platform) => {
     }
   }
   const obj = platform(576);
-  let whitePNG = platform(1402).makeSource;
+  let whitePNG = platform(1414).makeSource;
   if (null != tmp7) {
     let whitePNG2 = platform.icon.whitePNG;
   } else {
     const icon = platform.icon;
-    whitePNG2 = tmp(4735).isThemeDark(tmp5) ? icon.darkPNG : icon.lightPNG;
-    const tmpResult4 = tmp(4735);
+    whitePNG2 = tmp(4929).isThemeDark(tmp5) ? icon.darkPNG : icon.lightPNG;
+    const tmpResult4 = tmp(4929);
   }
-  const tmpResult3 = platform(1402);
+  const tmpResult3 = platform(1414);
   cResult[4] = tmp7;
   cResult[5] = platform.icon.darkPNG;
   cResult[6] = platform.icon.lightPNG;
@@ -152,7 +152,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((platform) => {
   cResult[8] = tmp5;
   cResult[9] = whitePNG(whitePNG2);
   const whitePNGResult = whitePNG(whitePNG2);
-}) : ((platform) => {
+}) : (function EmptyStateCard(platform) {
   platform = platform.platform;
   importDefault = undefined;
   let connectionBackgroundColor;
@@ -192,7 +192,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/connections/native/ConnectionsEmptyStateUpsell.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectionsEmptyStateUpsell() {
   const cResult = c.c(43);
   const tmp4 = closure_8();
   const emptyStatePlatforms = ConnectionsHooks.useEmptyStatePlatforms();
@@ -225,57 +225,28 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     if (cResult[9] !== arr2) {
       const _Symbol = Symbol;
       if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-        class P {
-          constructor(arg0) {
-            obj = { platform: arg0 };
-            return closure_1_6(closure_1_9, obj, arg0.type);
-          }
-        }
-        cResult[11] = P;
+        const fn = function v(platform) {
+          return closure_1_6(closure_1_9, { platform }, platform.type);
+        };
+        cResult[11] = fn;
+        let tmp12 = fn;
       } else {
-        class P {
-          constructor(arg0) {
-            obj = { platform: arg0 };
-            return closure_1_6(closure_1_9, obj, arg0.type);
-          }
-        }
+        tmp12 = cResult[11];
       }
-      const mapped = arr2.map(P);
+      const mapped = arr2.map(tmp12);
       cResult[9] = arr2;
       cResult[10] = mapped;
     } else {
-      class P {
-        constructor(arg0) {
-          obj = { platform: arg0 };
-          return closure_1_6(closure_1_9, obj, arg0.type);
-        }
-      }
-      if (cResult[12] !== tmp10) {
-        class P {
-          constructor(arg0) {
-            obj = { platform: arg0 };
-            return closure_1_6(closure_1_9, obj, arg0.type);
-          }
-        }
+      if (cResult[12] !== cResult[10]) {
         const obj4 = { spacing: 16, justify: "center", direction: "horizontal", children: tmp10 };
-        const tmp16 = timestampProducer(Stack_Stack.Stack, obj4);
+        const tmp17 = timestampProducer(Stack_Stack.Stack, obj4);
         cResult[12] = tmp10;
-        cResult[13] = tmp16;
+        cResult[13] = tmp17;
+        let tmp15 = tmp17;
       } else {
-        class P {
-          constructor(arg0) {
-            obj = { platform: arg0 };
-            return closure_1_6(closure_1_9, obj, arg0.type);
-          }
-        }
+        tmp15 = cResult[13];
       }
       if (cResult[14] !== arr3) {
-        class P {
-          constructor(arg0) {
-            obj = { platform: arg0 };
-            return closure_1_6(closure_1_9, obj, arg0.type);
-          }
-        }
         const _Symbol2 = Symbol;
         if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
           class T {
@@ -312,9 +283,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             }
           }
           const obj5 = { count: diff };
-          const tmp24 = timestampProducer(OtherConnectionsCard, obj5);
+          const tmp26 = timestampProducer(OtherConnectionsCard, obj5);
           cResult[17] = diff;
-          cResult[18] = tmp24;
+          cResult[18] = tmp26;
         } else {
           class T {
             constructor(arg0) {
@@ -323,7 +294,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             }
           }
         }
-        if (cResult[19] === tmp22) {
+        if (cResult[19] === tmp24) {
           class T {
             constructor(arg0) {
               obj = { platform: arg0 };
@@ -339,21 +310,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             }
           }
           const obj6 = { spacing: 16, direction: "vertical", align: "center", style: tmp9, children: null };
-          const items = [tmp15, tmp25];
+          const items = [tmp15, tmp27];
           obj6.children = items;
-          const tmp30 = React5(Stack_Stack.Stack, obj6);
+          const tmp32 = React5(Stack_Stack.Stack, obj6);
           cResult[22] = tmp4.textContainer;
-          cResult[23] = tmp25;
+          cResult[23] = tmp27;
           cResult[24] = tmp15;
-          cResult[25] = tmp30;
+          cResult[25] = tmp32;
         }
         const obj7 = { spacing: 16, justify: "center", direction: "horizontal", children: null };
-        const items1 = [tmp17, tmp22];
+        const items1 = [tmp18, tmp24];
         obj7.children = items1;
-        const tmp27 = React5(Stack_Stack.Stack, obj7);
-        cResult[19] = tmp22;
-        cResult[20] = tmp17;
-        cResult[21] = tmp27;
+        const tmp29 = React5(Stack_Stack.Stack, obj7);
+        cResult[19] = tmp24;
+        cResult[20] = tmp18;
+        cResult[21] = tmp29;
       }
     }
   }
@@ -361,39 +332,39 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[6] = tmp4.container;
   cResult[7] = tmp7;
   cResult[8] = items2;
-}) : (() => {
+}) : (function ConnectionsEmptyStateUpsell() {
   const tmp = closure_8();
-  emptyStatePlatforms = emptyStatePlatforms(7025).useEmptyStatePlatforms();
+  emptyStatePlatforms = emptyStatePlatforms(7213).useEmptyStatePlatforms();
   const items = [emptyStatePlatforms];
   const memo = noop.useMemo(() => emptyStatePlatforms.slice(0, 3), items);
   const items1 = [emptyStatePlatforms];
   const memo1 = noop.useMemo(() => emptyStatePlatforms.slice(3, 5), items1);
   const obj2 = { style: null, children: null };
   const items2 = [tmp.container, ];
-  const obj = emptyStatePlatforms(7025);
+  const obj = emptyStatePlatforms(7213);
   items2[1] = { paddingBottom: useSafeAreaInsetsDefault().bottom };
   obj2.style = items2;
   const obj4 = { style: tmp.content, children: null };
   const obj5 = { spacing: 16, direction: "vertical", align: "center", style: tmp.textContainer, children: null };
   const obj3 = { paddingBottom: useSafeAreaInsetsDefault().bottom };
-  const items3 = [closure_6(emptyStatePlatforms(5600).Stack, { spacing: 16, justify: "center", direction: "horizontal", children: memo.map((platform) => closure_1_6(closure_1_9, { platform }, platform.type)) }), ];
+  const items3 = [closure_6(emptyStatePlatforms(5373).Stack, { spacing: 16, justify: "center", direction: "horizontal", children: memo.map((platform) => closure_1_6(closure_1_9, { platform }, platform.type)) }), ];
   const obj7 = { spacing: 16, justify: "center", direction: "horizontal", children: null };
   const items4 = [memo1.map((platform) => closure_1_6(closure_1_9, { platform }, platform.type)), closure_6(OtherConnectionsCard, { count: emptyStatePlatforms.length - 5 })];
   obj7.children = items4;
-  items3[1] = closure_7(emptyStatePlatforms(5600).Stack, obj7);
+  items3[1] = closure_7(emptyStatePlatforms(5373).Stack, obj7);
   obj5.children = items3;
-  const items5 = [closure_7(emptyStatePlatforms(5600).Stack, obj5), ];
+  const items5 = [closure_7(emptyStatePlatforms(5373).Stack, obj5), ];
   const obj9 = { spacing: 8, align: "center", style: tmp.textContainer, children: null };
   const obj10 = { variant: "text-lg/bold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
   const intl = emptyStatePlatforms(1126).intl;
   obj10.children = intl.string(emptyStatePlatforms(1126).t.JlrHXb);
-  const items6 = [closure_6(emptyStatePlatforms(4892).Text, obj10), ];
+  const items6 = [closure_6(emptyStatePlatforms(5086).Text, obj10), ];
   const obj11 = { variant: "text-md/medium", color: "text-default", style: tmp.text, children: null };
   const intl2 = emptyStatePlatforms(1126).intl;
   obj11.children = intl2.string(emptyStatePlatforms(1126).t.XijaQP);
-  items6[1] = closure_6(emptyStatePlatforms(4892).Text, obj11);
+  items6[1] = closure_6(emptyStatePlatforms(5086).Text, obj11);
   obj9.children = items6;
-  items5[1] = closure_7(emptyStatePlatforms(5600).Stack, obj9);
+  items5[1] = closure_7(emptyStatePlatforms(5373).Stack, obj9);
   obj4.children = items5;
   obj2.children = closure_7(View, obj4);
   return closure_6(View, obj2);

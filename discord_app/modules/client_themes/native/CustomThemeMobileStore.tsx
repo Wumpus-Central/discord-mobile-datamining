@@ -1,15 +1,15 @@
-// === Module 1238: CustomThemeMobileStore ===
+// === Module 1250: CustomThemeMobileStore ===
 
-// Module 1238 (CustomThemeMobileStore)
+// Module 1250 (CustomThemeMobileStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
-import ClientThemesUtils from "ClientThemesUtils" /* 1239 */;
-import isPerModeThemingActive from "isPerModeThemingActive" /* 4731 */;
-import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1194 */;
-import ThemeStore from "ThemeStore" /* 1193 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1195 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1209 */;
+import ClientThemesUtils from "ClientThemesUtils" /* 1251 */;
+import isPerModeThemingActive from "isPerModeThemingActive" /* 4925 */;
+import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1206 */;
+import ThemeStore from "ThemeStore" /* 1205 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1207 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
 
 require = fn;
 function reset() {
@@ -96,7 +96,7 @@ prototype["getState"] = function getState() {
     const obj2 = { theme, customTheme: prop };
     let obj = obj2;
   } else {
-    obj = { theme: "start", customTheme: "unicodeVersion" };
+    obj = { theme: "Array", customTheme: "Reflect" };
   }
   return obj;
 };

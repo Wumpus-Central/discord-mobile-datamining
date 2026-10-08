@@ -1,10 +1,10 @@
-// === Module 10782: WishlistItemCard ===
+// === Module 12735: WishlistItemCard ===
 
-// Module 10782 (WishlistItemCard)
+// Module 12735 (WishlistItemCard)
 import c from "c" /* 576 */;
-import CollectiblesWishlistItemCardDefault from "CollectiblesWishlistItemCard" /* 10783 */;
-import PremiumWishlistItemCardDefault from "PremiumWishlistItemCard" /* 10785 */;
-import SocialLayerStorefrontWishlistItemCardDefault from "SocialLayerStorefrontWishlistItemCard" /* 10786 */;
+import CollectiblesWishlistItemCardDefault from "CollectiblesWishlistItemCard" /* 12736 */;
+import PremiumWishlistItemCardDefault from "PremiumWishlistItemCard" /* 12738 */;
+import SocialLayerStorefrontWishlistItemCardDefault from "SocialLayerStorefrontWishlistItemCard" /* 12739 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/native/WishlistItemCard.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function WishlistItemCard(arg0) {
   const cResult = c.c(22);
   if (cResult[0] !== arg0) {
     ({ sku, isOwned, source, wishlistOwnerId } = arg0);
@@ -106,7 +106,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   } else {
     return null;
   }
-}) : ((arg0) => {
+}) : (function WishlistItemCard(arg0) {
   ({ sku, isOwned, source, wishlistOwnerId } = arg0);
   const merged = Object.assign(arg0, Object.assign({ sku: 0, isOwned: 0, source: 0, wishlistOwnerId: 0 }));
   const productLine = sku.productLine;

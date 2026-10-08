@@ -1,11 +1,11 @@
-// === Module 9303: useSelectStage ===
+// === Module 8749: useSelectStage ===
 
-// Module 9303 (useSelectStage)
+// Module 8749 (useSelectStage)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useSelectStage.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSelectStage() {
   const cResult = require("c").c(11);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [SelectedChannelStore];
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       }
       return value;
     });
-    const fn2 = function() {
+    function t5() {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -109,9 +109,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         applyArgumentsResult = apply(self, arguments);
       }
       return applyArgumentsResult;
-    };
+    }
     cResult[6] = first;
-    cResult[7] = fn2;
+    cResult[7] = t5;
   } else {
     class S {
       constructor() {
@@ -142,7 +142,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[9] = first;
   cResult[10] = items3;
   const tmpResult = require("initialize");
-}) : (() => {
+}) : (function useSelectStage() {
   const items = [SelectedChannelStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => voiceChannelId.getVoiceChannelId(), []);
   [first, asyncGeneratorStep] = noop.useState(stateFromStores);

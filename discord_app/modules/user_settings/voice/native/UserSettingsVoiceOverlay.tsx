@@ -1,14 +1,14 @@
-// === Module 9683: UserSettingsVoiceOverlay ===
+// === Module 10872: UserSettingsVoiceOverlay ===
 
-// Module 9683 (UserSettingsVoiceOverlay)
+// Module 10872 (UserSettingsVoiceOverlay)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import TableSwitchRow from "TableSwitchRow" /* 6705 */;
-import UserSettingsVoice from "UserSettingsVoice" /* 9670 */;
-import MobileVoiceOverlayActionCreatorsDefault from "MobileVoiceOverlayActionCreators" /* 9684 */;
+import TableSwitchRow from "TableSwitchRow" /* 6882 */;
+import UserSettingsVoice from "UserSettingsVoice" /* 10859 */;
+import MobileVoiceOverlayActionCreatorsDefault from "MobileVoiceOverlayActionCreators" /* 10873 */;
 import noop from "module_19" /* 19 */;
-import MobileVoiceOverlayStore from "MobileVoiceOverlayStore" /* 9671 */;
+import MobileVoiceOverlayStore from "MobileVoiceOverlayStore" /* 10860 */;
 
 require = fn;
 const jsx = fn(21).jsx;
@@ -16,7 +16,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceOverlay.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSettingsVoiceOverlay() {
   const cResult = c.c(7);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [MobileVoiceOverlayStore];
@@ -64,7 +64,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp14 = cResult[6];
   }
   return tmp14;
-}) : (() => {
+}) : (function UserSettingsVoiceOverlay() {
   const items = [MobileVoiceOverlayStore];
   const stateFromStores = useStateFromStores.useStateFromStores(items, () => enabled.getEnabled());
   const obj2 = { title: null, hasIcons: false, children: null };

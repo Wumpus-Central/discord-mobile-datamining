@@ -1,29 +1,29 @@
-// === Module 12439: GuildDirectoryCategorySelector ===
+// === Module 12535: GuildDirectoryCategorySelector ===
 
-// Module 12439 (GuildDirectoryCategorySelector)
+// Module 12535 (GuildDirectoryCategorySelector)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
 import util from "util" /* 1126 */;
-import useToken from "useToken" /* 4586 */;
-import GuildDirectoryActionCreatorsAll from "GuildDirectoryActionCreators" /* 11958 */;
+import useToken from "useToken" /* 4778 */;
+import GuildDirectoryActionCreatorsAll from "GuildDirectoryActionCreators" /* 12031 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildDirectoryStore from "GuildDirectoryStore" /* 11954 */;
+import GuildDirectoryStore from "GuildDirectoryStore" /* 12027 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const GuildDirectoryConstants = fn(11947);
+const GuildDirectoryConstants = fn(12020);
 ({ DirectoryEntryCategories: closure_8, getHubCategories: closure_9 } = GuildDirectoryConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { categoriesListWrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, paddingTop: 12 } };
 let closure_12 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGradientColors() {
   const cResult = c.c(5);
   const token = useToken.useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
   if (cResult[0] !== token) {
@@ -47,7 +47,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[3] = tmp5;
   cResult[4] = items;
   tmp7 = items;
-}) : (() => {
+}) : (function useGradientColors() {
   const token = useToken.useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
   const items = [token, ];
   const obj2 = _modDef683(token);
@@ -59,7 +59,7 @@ let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padd
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryCategorySelector.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildDirectoryCategorySelector(channel) {
   const cResult = channel(allEntriesCount[10]).c(37);
   channel = channel.channel;
   const onCategorySelected = channel.onCategorySelected;
@@ -85,24 +85,24 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     tmp7 = cResult[1];
   }
   if (cResult[2] !== channel.id) {
-    class D {
+    class G {
       constructor() {
         return closure_7.getCurrentCategoryId(channel.id);
       }
     }
     cResult[2] = channel.id;
-    cResult[3] = D;
+    cResult[3] = G;
   } else {
-    class D {
+    class G {
       constructor() {
         return closure_7.getCurrentCategoryId(channel.id);
       }
     }
   }
   const tmp5 = _slicedToArray(stateFromStores.useState(0), 2);
-  stateFromStores = channel(allEntriesCount[13]).useStateFromStores(tmp7, D);
+  stateFromStores = channel(allEntriesCount[13]).useStateFromStores(tmp7, G);
   if (cResult[4] !== channel.id) {
-    class D {
+    class G {
       constructor() {
         return closure_7.getCurrentCategoryId(channel.id);
       }
@@ -115,21 +115,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     cResult[4] = channel.id;
     cResult[5] = items1;
   } else {
-    class D {
+    class G {
       constructor() {
         return closure_7.getCurrentCategoryId(channel.id);
       }
     }
   }
   if (cResult[6] === allEntriesCount) {
-    class D {
+    class G {
       constructor() {
         return closure_7.getCurrentCategoryId(channel.id);
       }
     }
   }
   if (cResult[10] === allEntriesCount) {
-    class D {
+    class G {
       constructor() {
         return closure_7.getCurrentCategoryId(channel.id);
       }
@@ -159,7 +159,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   cResult[11] = categoryCounts;
   cResult[12] = T;
   const tmpResult = channel(allEntriesCount[13]);
-}) : ((channel) => {
+}) : (function GuildDirectoryCategorySelector(channel) {
   channel = channel.channel;
   ({ onCategorySelected: importDefault, categoryCounts } = channel);
   const allEntriesCount = channel.allEntriesCount;

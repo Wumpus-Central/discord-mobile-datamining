@@ -1,17 +1,17 @@
-// === Module 13342: NitroCreditEducationActionSheet ===
+// === Module 13642: NitroCreditEducationActionSheet ===
 
-// Module 13342 (NitroCreditEducationActionSheet)
+// Module 13642 (NitroCreditEducationActionSheet)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1126 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 4806 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6652 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2127 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 5000 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6829 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
+import createStyles from "createStyles" /* 5090 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -23,7 +23,7 @@ let closure_7 = createStyles.createStyles(obj);
 let obj2 = { flexDirection: "row", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, justifyContent: "center", borderRadius: nativeDefault.radii.lg, marginBottom: 12 };
 const result = size.fileFinishedImporting("modules/premium/fractional/native/NitroCreditEducationActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((aboutText) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function NitroCreditEducationActionSheet(aboutText) {
   const cResult = c.c(18);
   aboutText = aboutText.aboutText;
   const tmp4 = closure_7();
@@ -110,7 +110,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((aboutText) => {
   cResult[6] = tmp12;
   tmp11 = tmp12;
   const obj10 = { style: tmp4.aboutTextContainer, children: tmp8 };
-}) : ((children) => {
+}) : (function NitroCreditEducationActionSheet(children) {
   const tmp = closure_7();
   const obj = { children: null };
   const obj2 = { style: tmp.container, children: null };

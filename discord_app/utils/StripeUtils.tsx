@@ -1,21 +1,21 @@
-// === Module 5426: StripeUtils ===
+// === Module 5735: StripeUtils ===
 
-// Module 5426 (StripeUtils)
+// Module 5735 (StripeUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
-import _mod5427 from "module_5427" /* 5427 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
+import _mod5736 from "module_5736" /* 5736 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import LocaleStore from "LocaleStore" /* 2116 */;
+import LocaleStore from "LocaleStore" /* 2128 */;
 
 require = fn;
 function getStripe() {
   if (null != React2) {
     let resolved = Promise.resolve(React2);
   } else {
-    const stripe = _mod5427.loadStripe(constants.STRIPE.KEY);
+    const stripe = _mod5736.loadStripe(constants.STRIPE.KEY);
     resolved = stripe.then((result) => {
       closure_2 = result;
       return result;
@@ -363,7 +363,7 @@ export const authenticatePaymentIntentForPaymentId = function authenticatePaymen
   return applyArgumentsResult;
 };
 export { getStripeElementLocale };
-export const useStripeLocale = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useStripeLocale = ReactCompilerGating.isReactCompilerEnabled() ? (function useStripeLocale() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [LocaleStore];
@@ -383,7 +383,7 @@ export const useStripeLocale = ReactCompilerGating.isReactCompilerEnabled() ? ((
     [tmp4, tmp5] = cResult;
   }
   return initialize.useStateFromStores(tmp4, tmp5);
-}) : (() => {
+}) : (function useStripeLocale() {
   const items = [LocaleStore];
   return initialize.useStateFromStores(items, () => {
     locale = locale.locale;

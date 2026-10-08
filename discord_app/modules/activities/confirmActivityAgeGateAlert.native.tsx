@@ -1,24 +1,24 @@
-// === Module 9040: confirmActivityAgeGateAlert ===
+// === Module 10653: confirmActivityAgeGateAlert ===
 
-// Module 9040 (confirmActivityAgeGateAlert)
+// Module 10653 (confirmActivityAgeGateAlert)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5714 */;
-import ActivityAnnouncementDefault from "ActivityAnnouncement" /* 9041 */;
+import native from "native" /* 1200 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5297 */;
+import ActivityAnnouncementDefault from "ActivityAnnouncement" /* 10654 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { alertContainer: { display: "flex", alignItems: "center", padding: 8 }, alertBodyText: { fontSize: 16, lineHeight: 24, color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, textAlign: "center" } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((description) => {
+let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConfirmActivityGateContent(description) {
   const cResult = c.c(7);
   description = description.description;
   const tmp4 = closure_6();
@@ -54,7 +54,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((description) =>
   cResult[3] = tmp10;
   tmp9 = tmp10;
   const obj3 = { style: tmp4.alertBodyText, variant: "text-md/normal", children: description };
-}) : ((children) => {
+}) : (function ConfirmActivityGateContent(children) {
   const tmp = closure_6();
   const obj = { style: tmp.alertContainer, children: null };
   const items = [React4(ActivityAnnouncementDefault, {}), React4(Text_Text.Text, { style: tmp.alertBodyText, variant: "text-md/normal", children: children.description })];

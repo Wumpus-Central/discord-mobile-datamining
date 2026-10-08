@@ -1,9 +1,9 @@
-// === Module 15072: GuildRoleSubscriptionEmojiGallery ===
+// === Module 15334: GuildRoleSubscriptionEmojiGallery ===
 
-// Module 15072 (GuildRoleSubscriptionEmojiGallery)
-import chunkDefault from "chunk" /* 9964 */;
-import LayoutUtils from "LayoutUtils" /* 9966 */;
-import EmojiIconDefault from "EmojiIcon" /* 15073 */;
+// Module 15334 (GuildRoleSubscriptionEmojiGallery)
+import chunkDefault from "chunk" /* 9491 */;
+import LayoutUtils from "LayoutUtils" /* 9493 */;
+import EmojiIconDefault from "EmojiIcon" /* 15335 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionEmojiGallery.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((maxPerRow) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiGallery(maxPerRow) {
   const cResult = guildId(576).c(16);
   ({ emojiIds, guildId } = maxPerRow);
   maxPerRow = maxPerRow.maxPerRow;
@@ -55,26 +55,36 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((maxPerRow) => {
   }
   let obj = guildId(576);
   if (cResult[7] !== guildId) {
-    const fn = function x(arr, key) {
-      const obj = { style: { flexDirection: "row" }, children: jsx(LayoutUtils.GappedList, { gap: 16, children: arr.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id)) }) };
-      return <View key={key} style={{ flexDirection: "row" }}>{jsx(LayoutUtils.GappedList, { gap: 16, children: arr.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id)) })}</View>;
-    };
+    class I {
+      constructor(arg0, arg1) {
+        obj = { style: { flexDirection: "row" }, children: null };
+        obj1 = { gap: 16, children: maxPerRow.map(() => { ... }) };
+        obj.children = jsx(closure_0(closure_2[6]).GappedList, obj1);
+        return jsx(View, obj, arg1);
+      }
+    }
     cResult[7] = guildId;
-    cResult[8] = fn;
-    let tmp9 = fn;
+    cResult[8] = I;
   } else {
-    tmp9 = cResult[8];
+    class I {
+      constructor(arg0, arg1) {
+        obj = { style: { flexDirection: "row" }, children: null };
+        obj1 = { gap: 16, children: maxPerRow.map(() => { ... }) };
+        obj.children = jsx(closure_0(closure_2[6]).GappedList, obj1);
+        return jsx(View, obj, arg1);
+      }
+    }
   }
-  const mapped = chunkDefault(emojiIds, num).map(tmp9);
+  const mapped = chunkDefault(emojiIds, num).map(I);
   cResult[0] = emojiIds;
   cResult[1] = guildId;
   cResult[2] = num;
-  cResult[3] = guildId(9966).GappedList;
+  cResult[3] = guildId(9493).GappedList;
   cResult[4] = View;
   cResult[5] = 8;
   cResult[6] = mapped;
   const arr = chunkDefault(emojiIds, num);
-}) : ((emojiIds) => {
+}) : (function EmojiGallery(emojiIds) {
   ({ guildId: require, maxPerRow } = emojiIds);
   if (maxPerRow === undefined) {
     maxPerRow = 9;

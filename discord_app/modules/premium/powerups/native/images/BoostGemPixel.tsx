@@ -1,8 +1,8 @@
-// === Module 13377: BoostGemPixel ===
+// === Module 13677: BoostGemPixel ===
 
-// Module 13377 (BoostGemPixel)
+// Module 13677 (BoostGemPixel)
 import c from "c" /* 576 */;
-import inlineStyles from "inlineStyles" /* 8169 */;
+import inlineStyles from "inlineStyles" /* 7550 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/images/BoostGemPixel.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function BoostGemPixel(arg0) {
   const cResult = c.c(62);
   ({ width, height, style } = arg0);
   let num = 24;
@@ -220,7 +220,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[60] = num;
   cResult[61] = tmp122;
   tmp121 = tmp122;
-}) : ((style) => {
+}) : (function BoostGemPixel(style) {
   let num = style.width;
   if (num === undefined) {
     num = 24;

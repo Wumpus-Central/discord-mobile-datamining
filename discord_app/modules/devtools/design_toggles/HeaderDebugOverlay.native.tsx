@@ -1,10 +1,10 @@
-// === Module 6018: HeaderDebugOverlay ===
+// === Module 6204: HeaderDebugOverlay ===
 
-// Module 6018 (HeaderDebugOverlay)
+// Module 6204 (HeaderDebugOverlay)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import useDesignToggleDefault from "useDesignToggle" /* 6019 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import useDesignToggleDefault from "useDesignToggle" /* 6205 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const dependencyMap = { "os-drawn": "OS-Drawn", "custom-drawn": "Custom-Drawn", "js-stack": "JS Stack", sheet: "Sheet", bespoke: "Bespoke" };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { tintWash: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, pointerEvents: "none", opacity: 0.15 }, badgeContainer: { position: "absolute", bottom: 2, right: 4, pointerEvents: "none" }, badge: { paddingHorizontal: 4, paddingVertical: 1, borderRadius: nativeDefault.radii.xs }, "color-os-drawn": null, "color-custom-drawn": null, "color-js-stack": null, "color-sheet": null, "color-bespoke": null };
 let obj3 = { paddingHorizontal: 4, paddingVertical: 1, borderRadius: nativeDefault.radii.xs };
 obj2["color-os-drawn"] = { backgroundColor: nativeDefault.colors.TEXT_LINK };
@@ -30,7 +30,7 @@ const obj8 = { backgroundColor: nativeDefault.colors.STATUS_WARNING };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/devtools/design_toggles/HeaderDebugOverlay.native.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useHeaderDebugOverlay(arg0, arg1) {
   const cResult = c.c(17);
   const tmp5 = closure_8();
   if (tmp4) {
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     return null;
   }
   tmp4 = useDesignToggleDefault("show_header_debug_info");
-}) : ((arg0, arg1) => {
+}) : (function useHeaderDebugOverlay(arg0, arg1) {
   const tmp3 = closure_8();
   if (tmp2) {
     let tmp6 = arg1;

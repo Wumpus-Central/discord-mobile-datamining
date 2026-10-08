@@ -1,9 +1,9 @@
-// === Module 16095: GuildRoleSubscriptionGatedChannelIcon ===
+// === Module 16355: GuildRoleSubscriptionGatedChannelIcon ===
 
-// Module 16095 (GuildRoleSubscriptionGatedChannelIcon)
+// Module 16355 (GuildRoleSubscriptionGatedChannelIcon)
 import c from "c" /* 576 */;
-import native from "native" /* 1188 */;
-import _modDef9917 from "module_9917" /* 9917 */;
+import native from "native" /* 1200 */;
+import _modDef9399 from "module_9399" /* 9399 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/premium_channel/GuildRoleSubscriptionGatedChannelIcon.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SubscriptionGatedChannelIcon(arg0) {
   const cResult = c.c(3);
   ({ locked, isInMainTabsExperiment } = arg0);
   const Sizes = native.Icon.Sizes;
@@ -23,17 +23,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     return tmp6;
   }
-  const tmp7 = jsx(native.Icon, { source: _modDef9917, size: tmp4, disableColor: false !== locked });
+  const tmp7 = jsx(native.Icon, { source: _modDef9399, size: tmp4, disableColor: false !== locked });
   cResult[0] = tmp4;
   cResult[1] = false !== locked;
   cResult[2] = tmp7;
   tmp6 = tmp7;
-  const obj2 = { source: _modDef9917, size: tmp4, disableColor: false !== locked };
-}) : ((arg0) => {
+  const obj2 = { source: _modDef9399, size: tmp4, disableColor: false !== locked };
+}) : (function SubscriptionGatedChannelIcon(arg0) {
   ({ locked, isInMainTabsExperiment } = arg0);
-  const obj = { source: _modDef9917, size: null, disableColor: null };
+  const obj = { source: _modDef9399, size: null, disableColor: null };
   const Sizes = native.Icon.Sizes;
   obj.size = isInMainTabsExperiment ? Sizes.EXTRA_SMALL_10 : Sizes.SMALL;
   obj.disableColor = false !== locked;
-  return jsx(native.Icon, { source: _modDef9917, size: null, disableColor: null });
+  return jsx(native.Icon, { source: _modDef9399, size: null, disableColor: null });
 });

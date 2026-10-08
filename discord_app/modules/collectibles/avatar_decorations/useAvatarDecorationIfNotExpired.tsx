@@ -1,8 +1,8 @@
-// === Module 7941: useAvatarDecorationIfNotExpired ===
+// === Module 8359: useAvatarDecorationIfNotExpired ===
 
-// Module 7941 (useAvatarDecorationIfNotExpired)
-import AvatarDecorationUtils from "AvatarDecorationUtils" /* 1972 */;
-import Timers from "Timers" /* 2046 */;
+// Module 8359 (useAvatarDecorationIfNotExpired)
+import AvatarDecorationUtils from "AvatarDecorationUtils" /* 1984 */;
+import Timers from "Timers" /* 2058 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/avatar_decorations/useAvatarDecorationIfNotExpired.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAvatarDecorationIfNotExpired(arg0) {
   _require = arg0;
   const cResult = require("c").c(6);
   [first, _slicedToArray] = noop.useState(false);
@@ -91,7 +91,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp10 = arg0;
   }
   return tmp10;
-}) : ((arg0) => {
+}) : (function useAvatarDecorationIfNotExpired(arg0) {
   closure_0 = arg0;
   [first, _slicedToArray] = noop.useState(false);
   noop = noop.useRef(null);

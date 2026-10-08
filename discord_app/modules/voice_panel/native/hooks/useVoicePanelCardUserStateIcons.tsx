@@ -1,28 +1,28 @@
-// === Module 17250: useVoicePanelCardUserStateIcons ===
+// === Module 17531: useVoicePanelCardUserStateIcons ===
 
-// Module 17250 (useVoicePanelCardUserStateIcons)
+// Module 17531 (useVoicePanelCardUserStateIcons)
 import util from "util" /* 1126 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4574 */;
-import VoiceStateIconUtils from "VoiceStateIconUtils" /* 9350 */;
-import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 9673 */;
-import useMuteAwareLocalVolumeDefault from "useMuteAwareLocalVolume" /* 9714 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11915 */;
-import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 17251 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4766 */;
+import VoiceStateIconUtils from "VoiceStateIconUtils" /* 8772 */;
+import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 10862 */;
+import useMuteAwareLocalVolumeDefault from "useMuteAwareLocalVolume" /* 10919 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11988 */;
+import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 17532 */;
 import noop from "module_19" /* 19 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
-import VoiceStateStore from "VoiceStateStore" /* 4915 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5108 */;
+import VoiceStateStore from "VoiceStateStore" /* 5111 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ParticipantTypes = fn(4917).ParticipantTypes;
+const ParticipantTypes = fn(5113).ParticipantTypes;
 const jsx = fn(21).jsx;
 const VoicePanelCardUserStateIconType = { STREAM_ICON: "STREAM_ICON", USER_VIDEO_ICON: "USER_VIDEO_ICON", MUTE_DEAFEN_ICON: "MUTE_DEAFEN_ICON", USER_DISCONNECTED_ICON: "DISCONNECTED_ICON", SPEAKER_MUTE_ICON: "SPEAKER_MUTE_ICON" };
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useVoicePanelCardUserStateIcons.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2, arg3) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useVoicePanelCardUserStateIcons(arg0, arg1, arg2, arg3) {
   _require = arg1;
   const cResult = require("c").c(35);
   let tmp4 = null;
@@ -45,26 +45,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
   const videoIconState = require("VoiceStateIconUtils").useVideoIconState(tmp9, arg2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [RTCConnectionStore];
-    class C {
-      constructor() {
-        return closure_1_4.isConnected();
-      }
-    }
+    const fn = function _() {
+      return connected.isConnected();
+    };
     cResult[0] = items;
-    cResult[1] = C;
+    cResult[1] = fn;
     tmp11 = items;
+    tmp12 = fn;
   } else {
     [tmp11, tmp12] = cResult;
   }
   const tmpResult5 = require("VoiceStateIconUtils");
-  const stateFromStores = require("useStateFromStores").useStateFromStores(tmp11, C);
+  const stateFromStores = require("useStateFromStores").useStateFromStores(tmp11, tmp12);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [VoiceStateStore];
-    class C {
-      constructor() {
-        return closure_1_4.isConnected();
-      }
-    }
     cResult[2] = items1;
     let tmp15 = items1;
   } else {
@@ -76,26 +70,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
       let tmp18 = cResult[6];
     }
     const stateFromStores1 = tmp(tmp2[9]).useStateFromStores(tmp15, tmp17, tmp18);
-    class C {
-      constructor() {
-        return closure_1_4.isConnected();
-      }
-    }
+    let tmp21;
     const tmpResult7 = tmp(tmp2[9]);
     if (arg0 === ParticipantTypes.STREAM) {
-      const tmp21 = arg1;
+      tmp21 = arg1;
     }
     const _Symbol = Symbol;
     if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-      cResult[7] = { location: "useVoicePanelCardUserStateIcons" };
-      class C {
-        constructor() {
-          return closure_1_4.isConnected();
-        }
-      }
       let obj2 = { location: "useVoicePanelCardUserStateIcons" };
+      cResult[7] = obj2;
+      let tmp22 = obj2;
     } else {
-      const tmp22 = cResult[7];
+      tmp22 = cResult[7];
     }
     const tmp5Result = tmp5(tmp2[10]);
     let showTileVolumeIndicator = tmp5(tmp2[12]).useConfig(tmp22).showTileVolumeIndicator;
@@ -115,11 +101,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
         }
       }
       cResult[8] = setShowFloatingCTA;
-      class C {
-        constructor() {
-          return closure_1_4.isConnected();
-        }
-      }
       cResult[9] = V;
     } else {
       class V {
@@ -149,7 +130,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
             openManaResult = obj2.openMana("user-disconnected-indicator", obj1);
           } else {
             obj5 = { key: "user-disconnected-indicator", icon: null, content: null };
-            obj5.icon = function icon() { ... };
+            obj5.icon = function icon() {
+              return closure_1_7(closure_1_0(5000).CircleErrorIcon, { size: "xs", color: closure_1_1(587).colors.STATUS_WARNING });
+            };
             intl = tmp(tmp2[17]).intl;
             obj5.content = intl.string(tmp(tmp2[17]).t.HFwRpk);
             openResult = obj2.open(obj5);
@@ -158,11 +141,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
         }
       }
       cResult[10] = P;
-      class C {
-        constructor() {
-          return closure_1_4.isConnected();
-        }
-      }
     } else {
       class P {
         constructor() {
@@ -182,7 +160,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
             openManaResult = obj2.openMana("user-disconnected-indicator", obj1);
           } else {
             obj5 = { key: "user-disconnected-indicator", icon: null, content: null };
-            obj5.icon = function icon() { ... };
+            obj5.icon = function icon() {
+              return closure_1_7(closure_1_0(5000).CircleErrorIcon, { size: "xs", color: closure_1_1(587).colors.STATUS_WARNING });
+            };
             intl = tmp(tmp2[17]).intl;
             obj5.content = intl.string(tmp(tmp2[17]).t.HFwRpk);
             openResult = obj2.open(obj5);
@@ -210,7 +190,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
             openManaResult = obj2.openMana("user-disconnected-indicator", obj1);
           } else {
             obj5 = { key: "user-disconnected-indicator", icon: null, content: null };
-            obj5.icon = function icon() { ... };
+            obj5.icon = function icon() {
+              return closure_1_7(closure_1_0(5000).CircleErrorIcon, { size: "xs", color: closure_1_1(587).colors.STATUS_WARNING });
+            };
             intl = tmp(tmp2[17]).intl;
             obj5.content = intl.string(tmp(tmp2[17]).t.HFwRpk);
             openResult = obj2.open(obj5);
@@ -237,7 +219,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
             openManaResult = obj2.openMana("user-disconnected-indicator", obj1);
           } else {
             obj5 = { key: "user-disconnected-indicator", icon: null, content: null };
-            obj5.icon = function icon() { ... };
+            obj5.icon = function icon() {
+              return closure_1_7(closure_1_0(5000).CircleErrorIcon, { size: "xs", color: closure_1_1(587).colors.STATUS_WARNING });
+            };
             intl = tmp(tmp2[17]).intl;
             obj5.content = intl.string(tmp(tmp2[17]).t.HFwRpk);
             openResult = obj2.open(obj5);
@@ -264,7 +248,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
               openManaResult = obj2.openMana("user-disconnected-indicator", obj1);
             } else {
               obj5 = { key: "user-disconnected-indicator", icon: null, content: null };
-              obj5.icon = function icon() { ... };
+              obj5.icon = function icon() {
+                return closure_1_7(closure_1_0(5000).CircleErrorIcon, { size: "xs", color: closure_1_1(587).colors.STATUS_WARNING });
+              };
               intl = tmp(tmp2[17]).intl;
               obj5.content = intl.string(tmp(tmp2[17]).t.HFwRpk);
               openResult = obj2.open(obj5);
@@ -272,12 +258,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
             return;
           }
         }
-        cResult[11] = tmp26;
-        class C {
-          constructor() {
-            return closure_1_4.isConnected();
-          }
-        }
+        cResult[11] = tmp27;
       } else {
         class P {
           constructor() {
@@ -297,7 +278,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
               openManaResult = obj2.openMana("user-disconnected-indicator", obj1);
             } else {
               obj5 = { key: "user-disconnected-indicator", icon: null, content: null };
-              obj5.icon = function icon() { ... };
+              obj5.icon = function icon() {
+                return closure_1_7(closure_1_0(5000).CircleErrorIcon, { size: "xs", color: closure_1_1(587).colors.STATUS_WARNING });
+              };
               intl = tmp(tmp2[17]).intl;
               obj5.content = intl.string(tmp(tmp2[17]).t.HFwRpk);
               openResult = obj2.open(obj5);
@@ -307,7 +290,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
         }
       }
     }
-    return tmp25;
+    return tmp27;
   }
   class A {
     constructor() {
@@ -330,7 +313,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
   tmp18 = items2;
   tmp17 = A;
   const tmpResult6 = require("useStateFromStores");
-}) : ((arg0, arg1, arg2) => {
+}) : (function useVoicePanelCardUserStateIcons(arg0, arg1, arg2) {
   _require = arg0;
   importDefault = arg1;
   let tmp = arg3;
@@ -383,7 +366,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
   const tmp2Result = useMuteAwareLocalVolumeDefault;
   showTileVolumeIndicator = MobileAudioOutputExperimentDefault.useConfig({ location: "useVoicePanelCardUserStateIcons" }).showTileVolumeIndicator;
   if (showTileVolumeIndicator) {
-    showTileVolumeIndicator = 0 === tmp2Result(tmp13, tmp4(4951).MediaEngineContextTypes.STREAM).effectiveVolume;
+    showTileVolumeIndicator = 0 === tmp2Result(tmp13, tmp4(5135).MediaEngineContextTypes.STREAM).effectiveVolume;
   }
   if (showTileVolumeIndicator) {
     showTileVolumeIndicator = arg0 === tmp5.STREAM;
@@ -408,7 +391,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
       const obj4 = {
         key: "user-disconnected-indicator",
         icon() {
-            return stateFromStores1(closure_1_0(4806).CircleErrorIcon, { size: "xs", color: closure_1_1(587).colors.STATUS_WARNING });
+            return stateFromStores1(closure_1_0(5000).CircleErrorIcon, { size: "xs", color: closure_1_1(587).colors.STATUS_WARNING });
           },
         content: null
       };
@@ -430,7 +413,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
                     const obj2 = { key: "" + closure_1_1 + "-stream-status", content: null };
                     const intl = closure_0(1126).intl;
                     obj2.content = intl.string(closure_0(1126).t.Q8Uzof);
-                    closure_1(4574).open(obj2);
+                    closure_1(4766).open(obj2);
                   }
           };
           items.push(obj2);
@@ -467,46 +450,46 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
             muteDeafenIconState: tmp16,
             withLeftMargin: items1.length > 0,
             onPress() {
-                    if (closure_0(9350).MuteDeafenIconState.DEAFENED_SERVER === muteDeafenIconState) {
+                    if (closure_0(8772).MuteDeafenIconState.DEAFENED_SERVER === muteDeafenIconState) {
                       const obj2 = { key: null, content: null };
                       const _HermesInternal4 = HermesInternal;
                       obj2.key = "" + closure_1_1 + "-status";
                       const intl4 = closure_0(1126).intl;
                       obj2.content = intl4.string(closure_0(1126).t.btxSdB);
-                      closure_1(4574).open(obj2);
-                      const obj7 = closure_1(4574);
-                    } else if (closure_0(9350).MuteDeafenIconState.DEAFENED === muteDeafenIconState) {
+                      closure_1(4766).open(obj2);
+                      const obj7 = closure_1(4766);
+                    } else if (closure_0(8772).MuteDeafenIconState.DEAFENED === muteDeafenIconState) {
                       const obj4 = { key: null, content: null };
                       const _HermesInternal3 = HermesInternal;
                       obj4.key = "" + closure_1_1 + "-status";
                       const intl3 = closure_0(1126).intl;
                       obj4.content = intl3.string(closure_0(1126).t.NjmiOL);
-                      closure_1(4574).open(obj4);
-                      const obj5 = closure_1(4574);
-                    } else if (closure_0(9350).MuteDeafenIconState.MUTED_SERVER === muteDeafenIconState) {
+                      closure_1(4766).open(obj4);
+                      const obj5 = closure_1(4766);
+                    } else if (closure_0(8772).MuteDeafenIconState.MUTED_SERVER === muteDeafenIconState) {
                       const obj6 = { key: null, content: null };
                       const _HermesInternal2 = HermesInternal;
                       obj6.key = "" + closure_1_1 + "-status";
                       const intl2 = closure_0(1126).intl;
                       obj6.content = intl2.string(closure_0(1126).t.uLddbQ);
-                      closure_1(4574).open(obj6);
-                      const obj3 = closure_1(4574);
-                    } else if (closure_0(9350).MuteDeafenIconState.MUTED_LOCAL === muteDeafenIconState) {
+                      closure_1(4766).open(obj6);
+                      const obj3 = closure_1(4766);
+                    } else if (closure_0(8772).MuteDeafenIconState.MUTED_LOCAL === muteDeafenIconState) {
                       const obj8 = { key: null, content: null };
                       const _HermesInternal = HermesInternal;
                       obj8.key = "" + closure_1_1 + "-status";
                       const intl = closure_0(1126).intl;
                       obj8.content = intl.string(closure_0(1126).t.Q8Uzof);
-                      closure_1(4574).open(obj8);
-                      const obj = closure_1(4574);
-                    } else if (closure_0(9350).MuteDeafenIconState.MUTED === muteDeafenIconState) {
+                      closure_1(4766).open(obj8);
+                      const obj = closure_1(4766);
+                    } else if (closure_0(8772).MuteDeafenIconState.MUTED === muteDeafenIconState) {
                       const obj10 = { key: null, content: null };
                       const _HermesInternal5 = HermesInternal;
                       obj10.key = "" + closure_1_1 + "-status";
                       const intl5 = closure_0(1126).intl;
                       obj10.content = intl5.string(closure_0(1126).t.tjtv3P);
-                      closure_1(4574).open(obj10);
-                      const obj9 = closure_1(4574);
+                      closure_1(4766).open(obj10);
+                      const obj9 = closure_1(4766);
                     }
                   }
           };

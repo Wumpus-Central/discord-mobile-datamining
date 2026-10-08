@@ -1,30 +1,30 @@
-// === Module 14637: SettingsScreenNotices ===
+// === Module 14898: SettingsScreenNotices ===
 
-// Module 14637 (SettingsScreenNotices)
+// Module 14898 (SettingsScreenNotices)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 5108 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5587 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 5588 */;
-import FamilyCenterSettingsNoticeDefault from "FamilyCenterSettingsNotice" /* 14638 */;
-import AgeConfirmationNoticeDefault from "AgeConfirmationNotice" /* 14646 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 5905 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 5917 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5918 */;
+import FamilyCenterSettingsNoticeDefault from "FamilyCenterSettingsNotice" /* 14899 */;
+import AgeConfirmationNoticeDefault from "AgeConfirmationNotice" /* 14907 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { noticeContainer: { marginHorizontal: nativeDefault.space.PX_16, marginTop: nativeDefault.space.PX_16 }, listHeaderNoticeContainer: null };
 const obj3 = { marginHorizontal: nativeDefault.space.PX_16, marginTop: nativeDefault.space.PX_16 };
 obj2.listHeaderNoticeContainer = { marginTop: nativeDefault.space.PX_16 };
 let closure_6 = createStyles.createStyles(obj2);
 const obj5 = { SENSITIVE_CONTENT_FILTERS: null, CONTENT_AND_SOCIAL: null, DATA_AND_PRIVACY: null };
 const obj4 = { marginTop: nativeDefault.space.PX_16 };
-let items = [{ order: 100, predicate: fn(8331).isParentallyControlled, Component: FamilyCenterSettingsNoticeDefault }, , , ];
-const obj6 = { order: 100, predicate: fn(8331).isParentallyControlled, Component: FamilyCenterSettingsNoticeDefault };
-items[1] = { order: 150, predicate: fn(14639).shouldShowTinyBroncoUnconfirmedNotice, Component: fn(14639).ContentFiltersUnconfirmedNotice };
-const obj7 = { order: 150, predicate: fn(14639).shouldShowTinyBroncoUnconfirmedNotice, Component: fn(14639).ContentFiltersUnconfirmedNotice };
+let items = [{ order: 100, predicate: fn(7714).isParentallyControlled, Component: FamilyCenterSettingsNoticeDefault }, , , ];
+const obj6 = { order: 100, predicate: fn(7714).isParentallyControlled, Component: FamilyCenterSettingsNoticeDefault };
+items[1] = { order: 150, predicate: fn(14900).shouldShowTinyBroncoUnconfirmedNotice, Component: fn(14900).ContentFiltersUnconfirmedNotice };
+const obj7 = { order: 150, predicate: fn(14900).shouldShowTinyBroncoUnconfirmedNotice, Component: fn(14900).ContentFiltersUnconfirmedNotice };
 items[2] = {
   order: 200,
   predicate() {
@@ -59,7 +59,7 @@ items[3] = {
     }
     return false === nsfwAllowed;
   },
-  Component: fn(14647).SensitiveContentFiltersTeenNotice
+  Component: fn(14908).SensitiveContentFiltersTeenNotice
 };
 obj5.SENSITIVE_CONTENT_FILTERS = items;
 const obj9 = {
@@ -72,10 +72,10 @@ const obj9 = {
     }
     return false === nsfwAllowed;
   },
-  Component: fn(14647).SensitiveContentFiltersTeenNotice
+  Component: fn(14908).SensitiveContentFiltersTeenNotice
 };
-const items1 = [{ order: 100, predicate: fn(8331).isParentallyControlled, Component: FamilyCenterSettingsNoticeDefault }, ];
-const obj10 = { order: 100, predicate: fn(8331).isParentallyControlled, Component: FamilyCenterSettingsNoticeDefault };
+const items1 = [{ order: 100, predicate: fn(7714).isParentallyControlled, Component: FamilyCenterSettingsNoticeDefault }, ];
+const obj10 = { order: 100, predicate: fn(7714).isParentallyControlled, Component: FamilyCenterSettingsNoticeDefault };
 items1[1] = {
   order: 200,
   predicate() {
@@ -101,14 +101,14 @@ const obj11 = {
   },
   Component: AgeConfirmationNoticeDefault
 };
-const items2 = [{ order: 100, predicate: fn(8331).isParentallyControlled, Component: FamilyCenterSettingsNoticeDefault }];
+const items2 = [{ order: 100, predicate: fn(7714).isParentallyControlled, Component: FamilyCenterSettingsNoticeDefault }];
 obj5.DATA_AND_PRIVACY = items2;
 const ReactCompilerGating = fn(558);
-const obj12 = { order: 100, predicate: fn(8331).isParentallyControlled, Component: FamilyCenterSettingsNoticeDefault };
+const obj12 = { order: 100, predicate: fn(7714).isParentallyControlled, Component: FamilyCenterSettingsNoticeDefault };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/privacy_and_safety/native/SettingsScreenNotices.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SettingsScreenNotices(arg0) {
   const cResult = c.c(11);
   ({ screen, isListHeader } = arg0);
   closure_6();
@@ -145,77 +145,77 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     const _Symbol3 = Symbol;
     if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-      class C {
+      class N {
         constructor(arg0) {
-          return arg0.predicate();
+          return arg0.Component;
         }
       }
-      cResult[4] = tmp8;
+      cResult[4] = N;
     } else {
-      class C {
+      class N {
         constructor(arg0) {
-          return arg0.predicate();
+          return arg0.Component;
         }
       }
     }
     const found = obj5[screen].filter(C);
     const sorted = found.sort(tmp6);
-    const mapped = sorted.map(tmp8);
+    const mapped = sorted.map(N);
     cResult[0] = screen;
     cResult[1] = mapped;
   } else {
-    class C {
+    class N {
       constructor(arg0) {
-        return arg0.predicate();
+        return arg0.Component;
       }
     }
     if (0 !== arr.length) {
-      class C {
+      class N {
         constructor(arg0) {
-          return arg0.predicate();
+          return arg0.Component;
         }
       }
     }
     if (null == null) {
-      class C {
+      class N {
         constructor(arg0) {
-          return arg0.predicate();
+          return arg0.Component;
         }
       }
     } else {
-      class C {
+      class N {
         constructor(arg0) {
-          return arg0.predicate();
+          return arg0.Component;
         }
       }
-      if (cResult[5] === tmp13) {
-        class C {
+      if (cResult[5] === tmp12) {
+        class N {
           constructor(arg0) {
-            return arg0.predicate();
+            return arg0.Component;
           }
         }
-        if (cResult[8] === tmp14) {
-          class C {
+        if (cResult[8] === tmp13) {
+          class N {
             constructor(arg0) {
-              return arg0.predicate();
+              return arg0.Component;
             }
           }
-          return tmp18;
+          return tmp17;
         }
-        const obj2 = { style: tmp14, children: tmp15 };
-        const tmp21 = <View style={tmp14}>{tmp15}</View>;
-        cResult[8] = tmp14;
-        cResult[9] = tmp15;
-        cResult[10] = tmp21;
-        tmp18 = tmp21;
+        const obj2 = { style: tmp13, children: tmp14 };
+        const tmp20 = <View style={tmp13}>{tmp14}</View>;
+        cResult[8] = tmp13;
+        cResult[9] = tmp14;
+        cResult[10] = tmp20;
+        tmp17 = tmp20;
       }
-      const tmp17 = <tmp13 key={screen} />;
-      cResult[5] = tmp13;
+      const tmp16 = <tmp12 key={screen} />;
+      cResult[5] = tmp12;
       cResult[6] = screen;
-      cResult[7] = tmp17;
+      cResult[7] = tmp16;
     }
   }
-}) : ((screen) => {
+}) : (function SettingsScreenNotices(screen) {
   screen = screen.screen;
   let flag = screen.isListHeader;
   if (flag === undefined) {

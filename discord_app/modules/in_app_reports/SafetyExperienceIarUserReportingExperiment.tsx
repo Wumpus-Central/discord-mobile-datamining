@@ -1,8 +1,8 @@
-// === Module 12816: SafetyExperienceIarUserReportingExperiment ===
+// === Module 12963: SafetyExperienceIarUserReportingExperiment ===
 
-// Module 12816 (SafetyExperienceIarUserReportingExperiment)
+// Module 12963 (SafetyExperienceIarUserReportingExperiment)
 import c from "c" /* 576 */;
-import createExperiment from "module_4780" /* 4780 */;
+import createExperiment from "module_4974" /* 4974 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -13,7 +13,7 @@ const experiment = createExperiment.createExperiment(obj);
 const result = size.fileFinishedImporting("modules/in_app_reports/SafetyExperienceIarUserReportingExperiment.tsx");
 
 export default experiment;
-export const useIsIarUserReportingEnabled = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+export const useIsIarUserReportingEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsIarUserReportingEnabled(location) {
   const cResult = c.c(3);
   if (cResult[0] !== location) {
     const obj2 = { location };
@@ -31,7 +31,9 @@ export const useIsIarUserReportingEnabled = ReactCompilerGating.isReactCompilerE
     tmp3 = cResult[2];
   }
   return experiment.useExperiment(tmp2, tmp3).enabled;
-}) : ((location) => experiment.useExperiment({ location }, { autoTrackExposure: true }).enabled);
+}) : (function useIsIarUserReportingEnabled(location) {
+  return experiment.useExperiment({ location }, { autoTrackExposure: true }).enabled;
+});
 export const isIarUserReportingEnabled = function isIarUserReportingEnabled(location) {
   return experiment.getCurrentConfig({ location }, { autoTrackExposure: true }).enabled;
 };

@@ -1,6 +1,6 @@
-// === Module 7514: Badge ===
+// === Module 9237: Badge ===
 
-// Module 7514 (Badge)
+// Module 9237 (Badge)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
@@ -8,7 +8,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { badge: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND }, badgeClassic: null, mask: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj.badgeClassic = { backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
@@ -19,7 +19,7 @@ const obj4 = { backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/Badge.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function Badge(arg0) {
   const cResult = c.c(18);
   ({ size, maskSize, classic, maskColor, style, badgeStyle } = arg0);
   let num = 12;
@@ -103,7 +103,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   cResult[3] = tmp7;
   tmp6 = tmp7;
   tmp2 = undefined !== classic && classic;
-}) : ((size) => {
+}) : (function Badge(size) {
   let num = size.size;
   if (num === undefined) {
     num = 12;

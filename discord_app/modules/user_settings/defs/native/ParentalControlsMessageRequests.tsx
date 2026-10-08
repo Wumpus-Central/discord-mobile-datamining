@@ -1,24 +1,26 @@
-// === Module 15841: ParentalControlsMessageRequests ===
+// === Module 16100: ParentalControlsMessageRequests ===
 
-// Module 15841 (ParentalControlsMessageRequests)
+// Module 16100 (ParentalControlsMessageRequests)
 import util from "util" /* 1126 */;
-import _modDef2521 from "module_2521" /* 2521 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8117 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8119 */;
-import useSelectedTeen from "useSelectedTeen" /* 8330 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14641 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14642 */;
-import DefaultDMSettingsExperiment from "DefaultDMSettingsExperiment" /* 15827 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7061 */;
+import _modDef2565 from "module_2565" /* 2565 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 5915 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7492 */;
+import useSelectedTeen from "useSelectedTeen" /* 7713 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14902 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14903 */;
+import DefaultDMSettingsExperiment from "DefaultDMSettingsExperiment" /* 16086 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7247 */;
 
 require = fn;
 fn(558);
 let ReactCompilerGating = fn(558);
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const useIsDisabled = () => useParentalControlSettings.useDefaultGuildsRestricted();
-const SettingBuilders = fn(11142);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  if (typeof fn === "function") {
+function useIsDisabled() {
+  return useParentalControlSettings.useDefaultGuildsRestricted();
+}
+const SettingBuilders = fn(11262);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useValue() {
+  if (typeof useIsDisabled === "function") {
     const defaultGuildsRestricted = useParentalControlSettings.useDefaultGuildsRestricted();
     const selectedTeenId = useSelectedTeen.useSelectedTeenId();
     const ParentalControlledDefaultMessageRequestRestricted = ParentalControlledUserSettings.ParentalControlledDefaultMessageRequestRestricted;
@@ -30,8 +32,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-}) : (() => {
-  if (typeof fn === "function") {
+}) : (function useValue() {
+  if (typeof useIsDisabled === "function") {
     const defaultGuildsRestricted = useParentalControlSettings.useDefaultGuildsRestricted();
     const selectedTeenId = useSelectedTeen.useSelectedTeenId();
     const ParentalControlledDefaultMessageRequestRestricted = ParentalControlledUserSettings.ParentalControlledDefaultMessageRequestRestricted;
@@ -51,11 +53,11 @@ const toggle = SettingBuilders.createToggle({
   },
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2521["7aYkh1"]);
+    return intl.string(_modDef2565["7aYkh1"]);
   },
-  parent: fn(7645).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
-  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-    if (typeof fn === "function") {
+  parent: fn(7966).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useValue() {
+    if (typeof useIsDisabled === "function") {
       const defaultGuildsRestricted = useParentalControlSettings.useDefaultGuildsRestricted();
       const selectedTeenId = useSelectedTeen.useSelectedTeenId();
       const ParentalControlledDefaultMessageRequestRestricted = ParentalControlledUserSettings.ParentalControlledDefaultMessageRequestRestricted;
@@ -67,8 +69,8 @@ const toggle = SettingBuilders.createToggle({
     } else {
       throw new TypeError("Trying to call a non-function");
     }
-  }) : (() => {
-    if (typeof fn === "function") {
+  }) : (function useValue() {
+    if (typeof useIsDisabled === "function") {
       const defaultGuildsRestricted = useParentalControlSettings.useDefaultGuildsRestricted();
       const selectedTeenId = useSelectedTeen.useSelectedTeenId();
       const ParentalControlledDefaultMessageRequestRestricted = ParentalControlledUserSettings.ParentalControlledDefaultMessageRequestRestricted;

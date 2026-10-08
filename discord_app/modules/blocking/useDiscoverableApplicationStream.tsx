@@ -1,8 +1,8 @@
-// === Module 10624: useDiscoverableApplicationStream ===
+// === Module 10222: useDiscoverableApplicationStream ===
 
-// Module 10624 (useDiscoverableApplicationStream)
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4918 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
+// Module 10222 (useDiscoverableApplicationStream)
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5893 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
 
 const require = globalThis.__r;
 
@@ -37,7 +37,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/blocking/useDiscoverableApplicationStream.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useDiscoverableApplicationStream(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -64,7 +64,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp7, tmp8);
-}) : ((arg0) => {
+}) : (function useDiscoverableApplicationStream(arg0) {
   _require = arg0;
   let items = [ApplicationStreamingStore, RelationshipStore];
   const items1 = [arg0];

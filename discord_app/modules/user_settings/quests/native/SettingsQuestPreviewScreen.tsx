@@ -1,16 +1,16 @@
-// === Module 14988: SettingsQuestPreviewScreen ===
+// === Module 15250: SettingsQuestPreviewScreen ===
 
-// Module 14988 (SettingsQuestPreviewScreen)
+// Module 15250 (SettingsQuestPreviewScreen)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import QuestActionCreators from "QuestActionCreators" /* 10007 */;
-import QuestCardPreview from "QuestCardPreview" /* 14989 */;
-import QuestEmbedPreview from "QuestEmbedPreview" /* 14991 */;
+import QuestActionCreators from "QuestActionCreators" /* 9537 */;
+import QuestCardPreview from "QuestCardPreview" /* 15251 */;
+import QuestEmbedPreview from "QuestEmbedPreview" /* 15253 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import QuestStore from "QuestStore" /* 7200 */;
-import ThemeStore from "ThemeStore" /* 1193 */;
+import QuestStore from "QuestStore" /* 7379 */;
+import ThemeStore from "ThemeStore" /* 1205 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -18,23 +18,22 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, controlBarContainer: { paddingHorizontal: PX_16, paddingTop: PX_16 / 2, paddingBottom: PX_16 }, segmentedControlContainer: { paddingHorizontal: PX_16 }, pagesContainer: { flex: 1, width: "100%" }, activityIndicator: null, allSectionsContainer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 let obj4 = { paddingHorizontal: PX_16, paddingTop: PX_16 / 2, paddingBottom: PX_16 };
 obj2.activityIndicator = { marginTop: nativeDefault.space.PX_32 };
-let obj5 = { marginTop: nativeDefault.space.PX_32 };
-obj2.allSectionsContainer = { marginBottom: nativeDefault.space.PX_80 };
+obj2.allSectionsContainer = { marginBottom: nativeDefault.space.PX_192 };
 let closure_13 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let obj6 = { marginBottom: nativeDefault.space.PX_80 };
+let obj5 = { marginTop: nativeDefault.space.PX_32 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/quests/native/SettingsQuestPreviewScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SettingsQuestPreviewScreen() {
   const cResult = params(576).c(88);
   let obj = params(576);
-  params = params(1491).useRoute().params;
+  params = params(1503).useRoute().params;
   closure_13();
   let questId;
   if (params != null) {
@@ -68,7 +67,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp11 = cResult[2];
     tmp12 = cResult[3];
   }
-  const obj2 = params(1491);
+  const obj2 = params(1503);
   stateFromStores = params(504).useStateFromStores(first1, tmp11, tmp12);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [ThemeStore];
@@ -291,7 +290,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[11] = questId;
   cResult[12] = T;
   const tmpResult2 = params(504);
-}) : (() => {
+}) : (function SettingsQuestPreviewScreen() {
   params = params(questId[10]).useRoute().params;
   let tmp3 = closure_13();
   closure_1 = tmp3;
@@ -320,7 +319,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     let tmp2 = null;
     if (null != stateFromStores) {
       const obj = { quest: tmp };
-      tmp2 = v65535(QuestCardPreview.QuestCardPreview, obj);
+      tmp2 = collapsed(QuestCardPreview.QuestCardPreview, obj);
     }
     return tmp2;
   }, items3);
@@ -351,7 +350,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       const _HermesInternal = HermesInternal;
       const combined = "" + first + "-" + stateFromStores1 + "-" + completedAt + "-" + progress;
       const obj = { questId: first };
-      return v65535(QuestEmbedPreview.QuestEmbedPreview, obj, combined);
+      return collapsed(QuestEmbedPreview.QuestEmbedPreview, obj, combined);
     }
   }, items4);
   callback2 = obj2.useCallback(() => null, []);

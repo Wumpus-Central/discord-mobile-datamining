@@ -1,26 +1,26 @@
-// === Module 17565: InteractionModalUtils ===
+// === Module 17847: InteractionModalUtils ===
 
-// Module 17565 (InteractionModalUtils)
+// Module 17847 (InteractionModalUtils)
 import _modDef38 from "module_38" /* 38 */;
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1126 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import Server from "Server" /* 1985 */;
-import stageAttachmentFilesDefault from "stageAttachmentFiles" /* 7483 */;
-import ComponentStateContext from "ComponentStateContext" /* 7806 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 8842 */;
-import getURLForApplicationDefault from "getURLForApplication" /* 9002 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
+import Server from "Server" /* 1997 */;
+import ComponentStateContext from "ComponentStateContext" /* 8225 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9201 */;
+import stageAttachmentFilesDefault from "stageAttachmentFiles" /* 9660 */;
+import getURLForApplicationDefault from "getURLForApplication" /* 10614 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 7280 */;
-import InteractionModalStore from "InteractionModalStore" /* 14180 */;
-import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 7807 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildMemberStore from "GuildMemberStore" /* 2124 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4899 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 7880 */;
+import InteractionModalStore from "InteractionModalStore" /* 14479 */;
+import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 8226 */;
 
 require = fn;
 function validate(arr) {
@@ -2195,12 +2195,12 @@ let closure_21 = async function _submitModal(arg0) {
     }
   }
 };
-const DraftType = fn(7044).DraftType;
-const InteractionModalState = fn(14180).InteractionModalState;
+const DraftType = fn(7232).DraftType;
+const InteractionModalState = fn(14479).InteractionModalState;
 const Endpoints = fn(1085).Endpoints;
 fn(558);
 let ReactCompilerGating = fn(558);
-let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((bot) => {
+let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function useApplicationInfo(bot) {
   const cResult = c.c(11);
   if (cResult[0] === bot.bot) {
     if (cResult[1] === bot.icon) {
@@ -2265,7 +2265,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((bot) => {
   cResult[4] = applicationIconURL;
   tmp4 = applicationIconURL;
   tmp3 = member;
-}) : ((arg0) => {
+}) : (function useApplicationInfo(arg0) {
   const user = arg0;
   const items = [, , , ];
   ({ id: arr[0], icon: arr[1], name: arr[2], bot: arr[3] } = arg0);
@@ -2302,7 +2302,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((bot) => {
   }, items);
 });
 ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsFirstTextInputInModal(arg0) {
   const componentStateContext = ComponentStateContext.useComponentStateContext();
   let first;
   if (componentStateContext != null) {
@@ -2325,7 +2325,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const tmp8 = type1 === Server.ComponentType.LABEL && first.component.id === arg0;
   }
   return tmp6;
-}) : ((arg0) => {
+}) : (function useIsFirstTextInputInModal(arg0) {
   const componentStateContext = ComponentStateContext.useComponentStateContext();
   let first;
   if (componentStateContext != null) {
@@ -2350,7 +2350,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return tmp6;
 });
 ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((customId, arg1) => {
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useModalState(customId, arg1) {
   _require = customId;
   importDefault = arg1;
   const cResult = require("c").c(30);
@@ -2380,18 +2380,18 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((customId, arg1) => {
     tmp12 = cResult[1];
   }
   if (cResult[2] !== first) {
-    class N {
+    class A {
       constructor() {
         return closure_12.getModalState(closure_5);
       }
     }
     const items1 = [first];
     cResult[2] = first;
-    cResult[3] = N;
+    cResult[3] = A;
     cResult[4] = items1;
     let tmp15 = items1;
   } else {
-    class N {
+    class A {
       constructor() {
         return closure_12.getModalState(closure_5);
       }
@@ -2399,7 +2399,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((customId, arg1) => {
     tmp15 = cResult[4];
   }
   const tmp7 = _slicedToArray(first.useState(null), 2);
-  const stateFromStores = tmp(customId[19]).useStateFromStores(tmp12, N, tmp15);
+  const stateFromStores = tmp(customId[19]).useStateFromStores(tmp12, A, tmp15);
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
     class P {
       constructor() {
@@ -2479,7 +2479,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((customId, arg1) => {
       }
     }
   });
-  const fn = function() {
+  function t5() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -2488,13 +2488,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((customId, arg1) => {
       applyArgumentsResult = apply(self, arguments);
     }
     return applyArgumentsResult;
-  };
+  }
   cResult[6] = tmp5;
   cResult[7] = customId;
   cResult[8] = tmp18;
-  cResult[9] = fn;
+  cResult[9] = t5;
   const tmpResult = tmp(customId[19]);
-}) : ((customId, arg1) => {
+}) : (function useModalState(customId, arg1) {
   _require = customId;
   importDefault = arg1;
   customId = customId.customId;
@@ -2595,7 +2595,7 @@ let result = size.fileFinishedImporting("modules/interaction_components/Interact
 
 export const useIsFirstTextInputInModal = tmp2;
 export const useModalState = tmp3;
-export const useIframeModalState = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+export const useIframeModalState = ReactCompilerGating.isReactCompilerEnabled() ? (function useIframeModalState(channelId) {
   const cResult = c.c(16);
   ({ application, customId } = channelId);
   ({ applicationIconURL, applicationName, applicationBaseUrl } = closure_17(application));
@@ -2666,7 +2666,7 @@ export const useIframeModalState = ReactCompilerGating.isReactCompilerEnabled() 
   tmp9 = obj3;
   tmp10 = null != tmp4.guild_id && "" !== tmp4.guild_id;
   const tmp3 = closure_17(application);
-}) : ((channelId) => {
+}) : (function useIframeModalState(channelId) {
   ({ application, customId } = channelId);
   const tmp = closure_17(application);
   const applicationBaseUrl = tmp.applicationBaseUrl;

@@ -1,10 +1,10 @@
-// === Module 8973: ChatSmileIcon ===
+// === Module 12878: ChatSmileIcon ===
 
-// Module 8973 (ChatSmileIcon)
+// Module 12878 (ChatSmileIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4585 */;
-import _mod8974 from "module_8974" /* 8974 */;
+import BaseIconImage from "BaseIconImage" /* 4777 */;
+import _mod12879 from "module_12879" /* 12879 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/ChatSmileIcon.tsx");
 
-export const ChatSmileIcon = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const ChatSmileIcon = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatSmileIcon(arg0) {
   const cResult = c.c(9);
   if (cResult[0] !== arg0) {
     ({ style, color } = arg0);
@@ -36,7 +36,7 @@ export const ChatSmileIcon = ReactCompilerGating.isReactCompilerEnabled() ? ((ar
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod8974;
+    const tmpResult = _mod12879;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -58,12 +58,12 @@ export const ChatSmileIcon = ReactCompilerGating.isReactCompilerEnabled() ? ((ar
   cResult[8] = tmp14;
   tmp12 = tmp14;
   const obj2 = { source: tmp10, color: INTERACTIVE_ICON_DEFAULT, style: tmp5 };
-}) : ((color) => {
+}) : (function ChatSmileIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;
   if (INTERACTIVE_ICON_DEFAULT === undefined) {
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8974, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12879, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

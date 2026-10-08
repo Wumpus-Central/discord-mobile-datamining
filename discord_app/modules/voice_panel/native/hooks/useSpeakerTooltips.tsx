@@ -1,27 +1,27 @@
-// === Module 17290: useSpeakerTooltips ===
+// === Module 17571: useSpeakerTooltips ===
 
-// Module 17290 (useSpeakerTooltips)
+// Module 17571 (useSpeakerTooltips)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import dismissible_content from "dismissible_content" /* 2036 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import useCoachmark from "useCoachmark" /* 9895 */;
-import VoicePanelConsoleFacepile from "VoicePanelConsoleFacepile" /* 17293 */;
+import dismissible_content from "dismissible_content" /* 2048 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import useCoachmark from "useCoachmark" /* 9375 */;
+import VoicePanelConsoleFacepile from "VoicePanelConsoleFacepile" /* 17574 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ConsoleVoiceUpsellStore = fn(17288);
+const ConsoleVoiceUpsellStore = fn(17569);
 ({ setVoiceUpsellDismissed: hasOwnProperty, useConsoleVoiceUpsellStore: metroRequire } = ConsoleVoiceUpsellStore);
-let VoicePanelControlsModes = fn(11914).VoicePanelControlsModes;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+let VoicePanelControlsModes = fn(11987).VoicePanelControlsModes;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const jsx = fn(21).jsx;
 let __initData = { code: "function useSpeakerTooltipsTsx1(){const{controlsSpecs}=this.__closure;return controlsSpecs.get().mode;}" };
 const __initData2 = { code: "function useSpeakerTooltipsTsx2(currentControlsMode,previous){const{runOnJS,setIsShowingControls,VoicePanelControlsModes}=this.__closure;if(currentControlsMode===previous)return;runOnJS(setIsShowingControls)(currentControlsMode===VoicePanelControlsModes.FLOATING_DEFAULT);}" };
 const ReactCompilerGating = fn(558);
-let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) => {
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCoachmarkHelper(arg0, arg1, arg2) {
   const visible = arg1;
   closure_1 = arg2;
   const cResult = c.c(6);
@@ -59,7 +59,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, ar
   cResult[5] = items;
   tmp6 = items;
   tmp5 = fn2;
-}) : ((arg0, arg1, arg2) => {
+}) : (function useCoachmarkHelper(arg0, arg1, arg2) {
   const visible = arg1;
   closure_1 = arg2;
   const items = [arg1];

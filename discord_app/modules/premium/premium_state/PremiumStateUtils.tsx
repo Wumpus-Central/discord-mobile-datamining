@@ -1,6 +1,6 @@
-// === Module 1399: PremiumStateUtils ===
+// === Module 1411: PremiumStateUtils ===
 
-// Module 1399 (PremiumStateUtils)
+// Module 1411 (PremiumStateUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/premium_state/PremiumStateUtils.tsx");

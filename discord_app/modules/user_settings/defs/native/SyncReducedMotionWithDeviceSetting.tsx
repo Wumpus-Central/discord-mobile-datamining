@@ -1,16 +1,16 @@
-// === Module 15253: SyncReducedMotionWithDeviceSetting ===
+// === Module 15515: SyncReducedMotionWithDeviceSetting ===
 
-// Module 15253 (SyncReducedMotionWithDeviceSetting)
+// Module 15515 (SyncReducedMotionWithDeviceSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14295 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14520 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11142);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const SettingBuilders = fn(11262);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useReducedMotionSyncSettingValue() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AccessibilityStore];
@@ -25,7 +25,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     [tmp4, tmp5] = cResult;
   }
   return initialize.useStateFromStores(tmp4, tmp5);
-}) : (() => {
+}) : (function useReducedMotionSyncSettingValue() {
   const items = [AccessibilityStore];
   return initialize.useStateFromStores(items, () => "auto" === AccessibilityStore.rawPrefersReducedMotion);
 });
@@ -34,8 +34,8 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t["St+DJK"]);
   },
-  parent: fn(7645).MobileUserSettings.ACCESSIBILITY,
-  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  parent: fn(7966).MobileUserSettings.ACCESSIBILITY,
+  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useReducedMotionSyncSettingValue() {
     const cResult = c.c(2);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
       const items = [AccessibilityStore];
@@ -50,7 +50,7 @@ const toggle = SettingBuilders.createToggle({
       [tmp4, tmp5] = cResult;
     }
     return initialize.useStateFromStores(tmp4, tmp5);
-  }) : (() => {
+  }) : (function useReducedMotionSyncSettingValue() {
     const items = [AccessibilityStore];
     return initialize.useStateFromStores(items, () => "auto" === AccessibilityStore.rawPrefersReducedMotion);
   }),

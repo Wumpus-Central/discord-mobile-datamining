@@ -1,20 +1,20 @@
-// === Module 15675: UserSettingsDesignSystemContextMenu ===
+// === Module 15955: UserSettingsDesignSystemContextMenu ===
 
-// Module 15675 (UserSettingsDesignSystemContextMenu)
+// Module 15955 (UserSettingsDesignSystemContextMenu)
 import _mod12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import _modDef4817 from "module_4817" /* 4817 */;
-import _modDef4856 from "module_4856" /* 4856 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import Card from "Card" /* 6002 */;
-import _modDef6596 from "module_6596" /* 6596 */;
-import _modDef7636 from "module_7636" /* 7636 */;
-import _modDef11194 from "module_11194" /* 11194 */;
-import _modDef12457 from "module_12457" /* 12457 */;
-import _modDef15676 from "module_15676" /* 15676 */;
-import _modDef15677 from "module_15677" /* 15677 */;
+import _modDef5011 from "module_5011" /* 5011 */;
+import _modDef5050 from "module_5050" /* 5050 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import Card from "Card" /* 6186 */;
+import _modDef6772 from "module_6772" /* 6772 */;
+import _modDef7957 from "module_7957" /* 7957 */;
+import _modDef11311 from "module_11311" /* 11311 */;
+import _modDef12553 from "module_12553" /* 12553 */;
+import _modDef15956 from "module_15956" /* 15956 */;
+import _modDef15957 from "module_15957" /* 15957 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -24,13 +24,13 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-let items = [_modDef12457, _modDef6596, _modDef7636, _modDef4817, _modDef4856, _modDef15676, _modDef15677, _modDef11194];
+let items = [_modDef12553, _modDef6772, _modDef7957, _modDef5011, _modDef5050, _modDef15956, _modDef15957, _modDef11311];
 let closure_10 = ["Launch Probe!", "Activate Laser", "Teleport Widget", "Engage Hyperdrive", "Deploy Robots", "Initiate Time Warp", "Beam Up Snacks", "Hack Database", "Trigger Cosmic Boom", "Unleash Space Vortex", "Activate Cloaking Device"];
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { flexDirection: "column", gap: 12, padding: 16 }, card: { gap: 12 }, divider: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginVertical: 12 } };
 let closure_11 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((label) => {
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function DemoContextMenu(label) {
   const cResult = num2(576).c(19);
   label = label.label;
   ({ align, triggerOnLongPress, count, sections, alignButton } = label);
@@ -67,7 +67,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((label) => {
       closure_2 = _mod12.shuffle(items);
       const obj3 = { length: closure_1 };
       return Array.from({ length: closure_1 }).map((item, index) => {
-        const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: "salt", action: "saltkar" };
+        const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: -1493171804, action: 94208.12633447349 };
         let str = "default";
         if (index === closure_0 - 1) {
           str = "destructive";
@@ -92,7 +92,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((label) => {
       let obj3 = { length: num2 };
       const tmpResult2 = tmp(12);
       const mapped1 = Array.from(obj3).map((item, index) => {
-        const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: "salt", action: "saltkar" };
+        const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: -1493171804, action: 94208.12633447349 };
         let str = "default";
         if (index === closure_0 - 1) {
           str = "destructive";
@@ -153,7 +153,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((label) => {
       }
     }
     const obj5 = { triggerOnLongPress: tmp4, items: tmp5, align, title: "Sample title", children: C };
-    const tmp19 = closure_7(tmp(7590).ContextMenu, obj5);
+    const tmp19 = closure_7(tmp(9297).ContextMenu, obj5);
     cResult[11] = align;
     cResult[12] = tmp5;
     cResult[13] = C;
@@ -161,7 +161,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((label) => {
     cResult[15] = tmp19;
   }
   let obj = num2(576);
-}) : ((align) => {
+}) : (function DemoContextMenu(align) {
   ({ label: require, triggerOnLongPress } = align);
   if (triggerOnLongPress === undefined) {
     triggerOnLongPress = false;
@@ -192,7 +192,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((label) => {
         const obj2 = text(num[14]);
         const obj3 = { length };
         return Array.from({ length }).map((item, index) => {
-          const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: "salt", action: "saltkar" };
+          const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: -1493171804, action: 94208.12633447349 };
           let str = "default";
           if (index === closure_0 - 1) {
             str = "destructive";
@@ -212,7 +212,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((label) => {
       const _Array2 = Array;
       const obj4 = { length: num };
       mapped = Array.from(obj4).map((item, index) => {
-        const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: "salt", action: "saltkar" };
+        const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: -1493171804, action: 94208.12633447349 };
         let str = "default";
         if (index === closure_0 - 1) {
           str = "destructive";
@@ -248,7 +248,7 @@ let obj3 = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, mar
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemContextMenu.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSettingsDesignSystemAlertModal() {
   const cResult = c.c(59);
   const tmp4 = closure_11();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -539,7 +539,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[23] = tmp46;
   cResult[24] = tmp57;
   tmp56 = tmp57;
-}) : (() => {
+}) : (function UserSettingsDesignSystemAlertModal() {
   const tmp = closure_11();
   const obj = { children: null };
   const obj2 = { style: tmp.container, children: null };

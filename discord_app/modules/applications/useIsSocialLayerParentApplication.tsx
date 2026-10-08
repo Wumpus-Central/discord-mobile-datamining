@@ -1,8 +1,8 @@
-// === Module 8757: useIsSocialLayerParentApplication ===
+// === Module 9137: useIsSocialLayerParentApplication ===
 
-// Module 8757 (useIsSocialLayerParentApplication)
+// Module 9137 (useIsSocialLayerParentApplication)
 import c from "c" /* 576 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8758 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 9138 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ function getIsSocialLayerParentApplication(application) {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/useIsSocialLayerParentApplication.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((application) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsSocialLayerParentApplication(application) {
   const cResult = c.c(2);
   if (cResult[0] !== application) {
     const hasApplicationFlagResult = ApplicationFlagUtils.hasApplicationFlag(application, ApplicationFlags.PARENT);
@@ -26,7 +26,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((application) => 
     tmp4 = cResult[1];
   }
   return tmp4;
-}) : ((arg0) => {
+}) : (function useIsSocialLayerParentApplication(arg0) {
   closure_0 = arg0;
   const items = [arg0];
   return noop.useMemo(() => ApplicationFlagUtils.hasApplicationFlag(closure_0, ApplicationFlags.PARENT), items);

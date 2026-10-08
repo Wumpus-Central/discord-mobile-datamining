@@ -1,8 +1,8 @@
-// === Module 7538: useIsNsfwGated ===
+// === Module 9260: useIsNsfwGated ===
 
-// Module 7538 (useIsNsfwGated)
-import GuildNSFWAgreeStore from "GuildNSFWAgreeStore" /* 5107 */;
-import UserStore from "UserStore" /* 1377 */;
+// Module 9260 (useIsNsfwGated)
+import GuildNSFWAgreeStore from "GuildNSFWAgreeStore" /* 5931 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
@@ -11,13 +11,13 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_gate/useIsNsfwGated.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((nsfw) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsNsfwGated(nsfw) {
   _require = nsfw;
   const cResult = require("c").c(5);
   nsfw = nsfw.nsfw;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
-    const fn = function u() {
+    const fn = function n() {
       currentUser = currentUser.getCurrentUser();
       let nsfwAllowed;
       if (currentUser != null) {
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((nsfw) => {
     nsfw = tmp12;
   }
   return nsfw;
-}) : ((nsfw) => {
+}) : (function useIsNsfwGated(nsfw) {
   _require = nsfw;
   nsfw = nsfw.nsfw;
   const items = [UserStore];

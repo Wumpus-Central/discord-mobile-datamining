@@ -1,9 +1,9 @@
-// === Module 9765: BlankAudienceTile ===
+// === Module 10968: BlankAudienceTile ===
 
-// Module 9765 (BlankAudienceTile)
+// Module 10968 (BlankAudienceTile)
 import c from "c" /* 576 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
-import AudienceTile from "AudienceTile" /* 9766 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
+import AudienceTile from "AudienceTile" /* 10969 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/native/components/BlankAudienceTile.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function BlankAudienceTile() {
   const cResult = c.c(7);
   const width = useWindowDimensionsDefault().width;
   const audienceTileStyles = AudienceTile.useAudienceTileStyles();
@@ -48,7 +48,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[5] = tmp7;
   cResult[6] = tmp9;
   tmp8 = tmp9;
-}) : (() => {
+}) : (function BlankAudienceTile() {
   const audienceTileStyles = AudienceTile.useAudienceTileStyles();
   const obj3 = { style: null };
   const items = [audienceTileStyles.container, ];

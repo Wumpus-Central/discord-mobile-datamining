@@ -1,9 +1,9 @@
-// === Module 13774: GuildBadgeCat ===
+// === Module 13996: GuildBadgeCat ===
 
-// Module 13774 (GuildBadgeCat)
+// Module 13996 (GuildBadgeCat)
 import c from "c" /* 576 */;
-import inlineStyles from "inlineStyles" /* 8169 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 13748 */;
+import inlineStyles from "inlineStyles" /* 7550 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 13970 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgeCat.tsx");
 
-export const GuildBadgeCat = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const GuildBadgeCat = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBadgeCat(arg0) {
   const cResult = c.c(65);
   if (cResult[0] !== arg0) {
     ({ width, height, primaryTintColor } = arg0);
@@ -307,7 +307,7 @@ export const GuildBadgeCat = ReactCompilerGating.isReactCompilerEnabled() ? ((ar
   cResult[63] = num6;
   cResult[64] = tmp112;
   tmp110 = tmp112;
-}) : ((primaryTintColor) => {
+}) : (function GuildBadgeCat(primaryTintColor) {
   let num = primaryTintColor.width;
   if (num === undefined) {
     num = 24;

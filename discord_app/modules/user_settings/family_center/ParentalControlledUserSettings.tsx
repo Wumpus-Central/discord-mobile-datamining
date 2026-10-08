@@ -1,14 +1,14 @@
-// === Module 14642: ParentalControlledUserSettings ===
+// === Module 14903: ParentalControlledUserSettings ===
 
-// Module 14642 (ParentalControlledUserSettings)
+// Module 14903 (ParentalControlledUserSettings)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
 import Constants from "Constants" /* 1085 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
-import wrappers from "wrappers" /* 1228 */;
-import UserSettings from "UserSettings" /* 2028 */;
-import DMSafetyConstants from "DMSafetyConstants" /* 2030 */;
-import SpendingLimitUtils from "SpendingLimitUtils" /* 14644 */;
-import ParentalControlledUserSettingsDefinitions_mod from "ParentalControlledUserSettingsDefinitions" /* 14643 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1209 */;
+import wrappers from "wrappers" /* 1240 */;
+import UserSettings from "UserSettings" /* 2040 */;
+import DMSafetyConstants from "DMSafetyConstants" /* 2042 */;
+import SpendingLimitUtils from "SpendingLimitUtils" /* 14905 */;
+import ParentalControlledUserSettingsDefinitions_mod from "ParentalControlledUserSettingsDefinitions" /* 14904 */;
 import size from "module_2" /* 2 */;
 
 const constants = DMSafetyConstants.ExplicitContentFilterTypes;

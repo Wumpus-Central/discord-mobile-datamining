@@ -1,7 +1,7 @@
-// === Module 16502: CardHeightMeasurer ===
+// === Module 16762: CardHeightMeasurer ===
 
-// Module 16502 (CardHeightMeasurer)
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8039 */;
+// Module 16762 (CardHeightMeasurer)
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8447 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -11,13 +11,13 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/icymi/native/CardHeightMeasurer.tsx");
 
-export const CardHeightMeasurer = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((itemId) => {
+export const CardHeightMeasurer = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function CardHeightMeasurer(itemId) {
   const cResult = itemId(576).c(8);
   itemId = itemId.itemId;
   const children = itemId.children;
-  const width = noop.useContext(itemId(16435).ICYMIContext).width;
+  const width = noop.useContext(itemId(16695).ICYMIContext).width;
   if (cResult[0] !== itemId) {
-    const fn = function s(nativeEvent) {
+    const fn = function l(nativeEvent) {
       ICYMIActionCreatorsDefault.setCardHeight(itemId, nativeEvent.nativeEvent.layout.height);
     };
     cResult[0] = itemId;
@@ -48,10 +48,10 @@ export const CardHeightMeasurer = noop.memo(ReactCompilerGating.isReactCompilerE
   cResult[6] = tmp3;
   cResult[7] = tmp5;
   tmp4 = tmp5;
-}) : ((children) => {
+}) : (function CardHeightMeasurer(children) {
   const itemId = children.itemId;
   const items = [itemId];
   return <View onLayout={noop.useCallback((nativeEvent) => {
     ICYMIActionCreatorsDefault.setCardHeight(itemId, nativeEvent.nativeEvent.layout.height);
-  }, items)} pointerEvents="box-none" style={{ width: noop.useContext(itemId(16435).ICYMIContext).width, alignSelf: "center" }}>{children.children}</View>;
+  }, items)} pointerEvents="box-none" style={{ width: noop.useContext(itemId(16695).ICYMIContext).width, alignSelf: "center" }}>{children.children}</View>;
 }));

@@ -1,8 +1,8 @@
-// === Module 16634: FramePoolManager ===
+// === Module 16896: FramePoolManager ===
 
-// Module 16634 (FramePoolManager)
-import getFramesManagerDefault from "getFramesManager" /* 9076 */;
-import AbstractFramePoolManager from "AbstractFramePoolManager" /* 16635 */;
+// Module 16896 (FramePoolManager)
+import getFramesManagerDefault from "getFramesManager" /* 11149 */;
+import AbstractFramePoolManager from "AbstractFramePoolManager" /* 16897 */;
 
 class FramePoolManager extends tmp4 {
   constructor() {

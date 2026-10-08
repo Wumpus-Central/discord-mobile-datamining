@@ -1,15 +1,15 @@
-// === Module 15042: UserSettingsGuildRoleSubscriptions ===
+// === Module 15304: UserSettingsGuildRoleSubscriptions ===
 
-// Module 15042 (UserSettingsGuildRoleSubscriptions)
+// Module 15304 (UserSettingsGuildRoleSubscriptions)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import useRestorePurchasesDefault from "useRestorePurchases" /* 15043 */;
-import useActiveGuildSubscriptionsDefault from "useActiveGuildSubscriptions" /* 15044 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15045 */;
-import LoadingIndicatorDefault from "LoadingIndicator" /* 15048 */;
-import ManageSubscriptionCardDefault from "ManageSubscriptionCard" /* 15049 */;
+import native from "native" /* 1200 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import useRestorePurchasesDefault from "useRestorePurchases" /* 15305 */;
+import useActiveGuildSubscriptionsDefault from "useActiveGuildSubscriptions" /* 15306 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15307 */;
+import LoadingIndicatorDefault from "LoadingIndicator" /* 15310 */;
+import ManageSubscriptionCardDefault from "ManageSubscriptionCard" /* 15311 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,10 +25,10 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let c7 = "role-subscriptions";
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles({ container: { flex: 1 }, list: { flex: 1 }, listContentContainer: { paddingHorizontal: 16 }, sectionHeader: { paddingVertical: 24 }, sectionSubtitle: { marginTop: 4 } });
 let ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRoleSubscriptionsSectionHeader() {
   const cResult = c.c(7);
   const tmp4 = closure_8();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -72,7 +72,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[5] = tmp10;
   cResult[6] = tmp14;
   tmp13 = tmp14;
-}) : (() => {
+}) : (function GuildRoleSubscriptionsSectionHeader() {
   const tmp = closure_8();
   const obj = { style: tmp.sectionHeader, children: null };
   const obj2 = { variant: "eyebrow", color: "text-default", children: null };
@@ -87,7 +87,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   return timestampProducer(React3, obj);
 });
 ReactCompilerGating = fn(558);
-const ItemSeparatorComponent = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const ItemSeparatorComponent = ReactCompilerGating.isReactCompilerEnabled() ? (function ItemSeparator() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const tmp6 = hasOwnProperty(native.Spacer, { size: 8 });
@@ -97,12 +97,14 @@ const ItemSeparatorComponent = ReactCompilerGating.isReactCompilerEnabled() ? ((
     first = cResult[0];
   }
   return first;
-}) : (() => hasOwnProperty(native.Spacer, { size: 8 }));
+}) : (function ItemSeparator() {
+  return hasOwnProperty(native.Spacer, { size: 8 });
+});
 ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/manage_subscriptions/UserSettingsGuildRoleSubscriptions.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSettingsGuildRoleSubscriptions() {
   const cResult = c.c(14);
   const tmp4 = closure_8();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -187,7 +189,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     cResult[10] = tmp19;
   }
   tmpResult = GuildRoleSubscriptionsHooks;
-}) : (() => {
+}) : (function UserSettingsGuildRoleSubscriptions() {
   const tmp = closure_8();
   useRestorePurchasesDefault({ forceRestore: true });
   const tmp5 = useActiveGuildSubscriptionsDefault({ ensureFresh: true });

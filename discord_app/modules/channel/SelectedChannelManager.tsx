@@ -1,17 +1,17 @@
-// === Module 17668: SelectedChannelManager ===
+// === Module 17951: SelectedChannelManager ===
 
-// Module 17668 (SelectedChannelManager)
+// Module 17951 (SelectedChannelManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import router_utils from "router_utils" /* 1112 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5575 */;
-import transitionToGuild from "transitionToGuild" /* 6855 */;
-import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5885 */;
+import transitionToGuild from "transitionToGuild" /* 7043 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4899 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6797 */;
 
 require = fn;
-const findFirstVoiceChannelId = fn(2103).findFirstVoiceChannelId;
+const findFirstVoiceChannelId = fn(2115).findFirstVoiceChannelId;
 const Constants = fn(1085);
 ({ ChannelTypes: closure_7, Routes: closure_8, ME: closure_9, NULL_STRING_GUILD_ID: c10 } = Constants);
 class SelectedChannelManager extends tmp3 {
@@ -44,7 +44,7 @@ prototype["handleChannelCreate"] = function handleChannelCreate(channel) {
   channel = channel.channel;
   if (channel.type === constants.GROUP_DM) {
     const originChannelId = channel.originChannelId;
-    const channelId = SelectedChannelStore.getChannelId(v65535);
+    const channelId = SelectedChannelStore.getChannelId(collapsed);
     if (tmp) {
       router_utils.transitionTo(closure_1_8.CHANNEL(options, channel.id));
     }

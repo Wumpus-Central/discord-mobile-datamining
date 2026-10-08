@@ -1,23 +1,23 @@
-// === Module 12868: UserProfileActivityVoiceChannelUsers ===
+// === Module 13017: UserProfileActivityVoiceChannelUsers ===
 
-// Module 12868 (UserProfileActivityVoiceChannelUsers)
+// Module 13017 (UserProfileActivityVoiceChannelUsers)
 import util from "util" /* 1126 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5048 */;
-import UserProfileStackedActionSheet from "UserProfileStackedActionSheet" /* 10854 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5405 */;
+import UserProfileStackedActionSheet from "UserProfileStackedActionSheet" /* 10505 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 4936 */;
+import PresenceStore from "PresenceStore" /* 5106 */;
 
 const UserProfileStackedActionSheetDefault = UserProfileStackedActionSheet;
 
 require = fn;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
-let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
+let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserRow(user) {
   const cResult = user(576).c(20);
   user = user.user;
   ({ channel, onPress, start, end } = user);
   const obj = user(576);
-  const avatarDecoration = user(7898).useAvatarDecoration(user, channel.guild_id);
+  const avatarDecoration = user(6058).useAvatarDecoration(user, channel.guild_id);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [PresenceStore];
     cResult[0] = items;
@@ -35,7 +35,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
   } else {
     tmp7 = cResult[2];
   }
-  const obj2 = user(7898);
+  const obj2 = user(6058);
   const stateFromStoresObject = user(504).useStateFromStoresObject(first, tmp7);
   ({ status, isMobileOnline, isVROnline } = stateFromStoresObject);
   if (cResult[3] === channel.guild_id) {
@@ -64,7 +64,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
                   }
                 }
                 const obj3 = { onPress, label: tmp9, icon: tmp11, start, end };
-                const tmp16 = jsx(tmp(6000).TableRow, { onPress, label: tmp9, icon: tmp11, start, end });
+                const tmp16 = jsx(tmp(6184).TableRow, { onPress, label: tmp9, icon: tmp11, start, end });
                 cResult[14] = end;
                 cResult[15] = onPress;
                 cResult[16] = start;
@@ -77,8 +77,8 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
           }
         }
       }
-      const obj5 = { user, avatarDecoration, size: tmp(1188).AvatarSizes.REFRESH_MEDIUM_32, guildId: channel.guild_id, status, isMobileOnline, isVROnline, autoStatusCutout: true };
-      const tmp13 = jsx(tmp(1188).Avatar, { user, avatarDecoration, size: tmp(1188).AvatarSizes.REFRESH_MEDIUM_32, guildId: channel.guild_id, status, isMobileOnline, isVROnline, autoStatusCutout: true });
+      const obj5 = { user, avatarDecoration, size: tmp(1200).AvatarSizes.REFRESH_MEDIUM_32, guildId: channel.guild_id, status, isMobileOnline, isVROnline, autoStatusCutout: true };
+      const tmp13 = jsx(tmp(1200).Avatar, { user, avatarDecoration, size: tmp(1200).AvatarSizes.REFRESH_MEDIUM_32, guildId: channel.guild_id, status, isMobileOnline, isVROnline, autoStatusCutout: true });
       cResult[7] = avatarDecoration;
       cResult[8] = channel.guild_id;
       cResult[9] = isMobileOnline;
@@ -96,28 +96,28 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
   cResult[5] = user;
   cResult[6] = name;
   tmp9 = name;
-}) : ((user) => {
+}) : (function UserRow(user) {
   user = user.user;
   const channel = user.channel;
   ({ onPress, start, end } = user);
-  const avatarDecoration = user(7898).useAvatarDecoration(user, channel.guild_id);
-  const obj = user(7898);
+  const avatarDecoration = user(6058).useAvatarDecoration(user, channel.guild_id);
+  const obj = user(6058);
   const items = [PresenceStore];
   const stateFromStoresObject = user(504).useStateFromStoresObject(items, () => ({ status: PresenceStore.getStatus(user.id), isMobileOnline: PresenceStore.isMobileOnline(user.id), isVROnline: PresenceStore.isVROnline(user.id) }));
   ({ status, isMobileOnline, isVROnline } = stateFromStoresObject);
   const obj3 = { onPress, label: null, icon: null, start: null, end: null };
   const obj2 = user(504);
   obj3.label = NicknameUtilsDefault.getName(channel.guild_id, channel.id, user);
-  obj3.icon = jsx(user(1188).Avatar, { user, avatarDecoration, size: user(1188).AvatarSizes.REFRESH_MEDIUM_32, guildId: channel.guild_id, status, isMobileOnline, isVROnline, autoStatusCutout: true });
+  obj3.icon = jsx(user(1200).Avatar, { user, avatarDecoration, size: user(1200).AvatarSizes.REFRESH_MEDIUM_32, guildId: channel.guild_id, status, isMobileOnline, isVROnline, autoStatusCutout: true });
   obj3.start = start;
   obj3.end = end;
-  return jsx(user(6000).TableRow, { onPress, label: null, icon: null, start: null, end: null });
+  return jsx(user(6184).TableRow, { onPress, label: null, icon: null, start: null, end: null });
 });
 ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileActivityVoiceChannelUsers.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileActivityVoiceChannelUsers(arg0) {
   const cResult = channel(576).c(11);
   ({ users, channel } = arg0);
   ({ onBack, onPressUser } = arg0);
@@ -153,14 +153,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         return tmp11;
       }
       const obj2 = { title: first, onBack, scrollable: true, children: tmp8 };
-      const tmp14 = jsx(onPressUser(10854), { title: first, onBack, scrollable: true, children: tmp8 });
+      const tmp14 = jsx(onPressUser(10505), { title: first, onBack, scrollable: true, children: tmp8 });
       cResult[8] = onBack;
       cResult[9] = tmp8;
       cResult[10] = tmp14;
       tmp11 = tmp14;
     }
     const obj3 = { data: users, keyExtractor: tmp6, renderItem: tmp7 };
-    const tmp10 = jsx(channel(10854).UserProfileStackedActionSheetList, { data: users, keyExtractor: tmp6, renderItem: tmp7 });
+    const tmp10 = jsx(channel(10505).UserProfileStackedActionSheetList, { data: users, keyExtractor: tmp6, renderItem: tmp7 });
     cResult[5] = tmp7;
     cResult[6] = users;
     cResult[7] = tmp10;
@@ -177,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = fn2;
   tmp7 = fn2;
   const obj = channel(576);
-}) : ((arg0) => {
+}) : (function UserProfileActivityVoiceChannelUsers(arg0) {
   ({ channel: require, onPressUser: importDefault } = arg0);
   ({ users, onBack } = arg0);
   const obj = { title: null, onBack: null, scrollable: true, children: null };

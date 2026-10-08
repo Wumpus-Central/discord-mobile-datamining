@@ -1,20 +1,20 @@
-// === Module 16915: ThreadList ===
+// === Module 17196: ThreadList ===
 
-// Module 16915 (ThreadList)
+// Module 17196 (ThreadList)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 4595 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import spring from "spring" /* 5604 */;
-import springPresets from "springPresets" /* 5605 */;
-import TableRow from "TableRow" /* 6000 */;
-import _mod8404 from "module_8404" /* 8404 */;
-import RowButton from "RowButton" /* 8926 */;
-import ThreadPlusIcon from "ThreadPlusIcon" /* 11880 */;
-import ThreadListTableRowDefault from "ThreadListTableRow" /* 16916 */;
-import ThreadListEmptyDefault from "ThreadListEmpty" /* 16918 */;
-import ThreadListLoadingIndicatorDefault from "ThreadListLoadingIndicator" /* 16919 */;
+import native from "native" /* 4787 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import spring from "spring" /* 5374 */;
+import springPresets from "springPresets" /* 5378 */;
+import TableRow from "TableRow" /* 6184 */;
+import RowButton from "RowButton" /* 8557 */;
+import _mod8600 from "module_8600" /* 8600 */;
+import ThreadPlusIcon from "ThreadPlusIcon" /* 11952 */;
+import ThreadListTableRowDefault from "ThreadListTableRow" /* 17197 */;
+import ThreadListEmptyDefault from "ThreadListEmpty" /* 17199 */;
+import ThreadListLoadingIndicatorDefault from "ThreadListLoadingIndicator" /* 17200 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -44,11 +44,11 @@ function getThreadListStateKey(arg0) {
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({ container: { flex: 1, flexGrow: 1 }, center: { justifyContent: "center", alignItems: "center" }, header: { marginTop: 24, marginBottom: 10 }, footer: { marginVertical: 16, justifyContent: "center", alignItems: "center" }, section: { marginTop: 16, marginBottom: 8 } });
 const set = new Set();
 let ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((title) => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function ThreadListSection(title) {
   const cResult = c.c(5);
   const tmp4 = closure_7();
   if (cResult[0] !== title.title) {
@@ -70,7 +70,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((title) => {
   cResult[3] = tmp5;
   cResult[4] = tmp8;
   tmp7 = tmp8;
-}) : ((title) => {
+}) : (function ThreadListSection(title) {
   const tmp = closure_7();
   return jsx(Text_Text.Text, { style: closure_7().section, accessibilityRole: "header", variant: "text-xs/bold", color: "text-default", children: title.title.toUpperCase() });
 });
@@ -79,7 +79,7 @@ let ListHeaderComponent = { code: "function ThreadListTsx2(finished){const{state
 __initData = { code: "function ThreadListTsx3(){const{withSpring,opacity,springStandard,state,TransitionStates,runOnJS,cleanUp}=this.__closure;return{opacity:withSpring(opacity.get(),springStandard,'respect-motion-settings',function(finished){if(finished&&state===TransitionStates.YEETED){runOnJS(cleanUp)();}})};}" };
 let closure_15 = { code: "function ThreadListTsx4(finished){const{state,TransitionStates,runOnJS,cleanUp}=this.__closure;if(finished&&state===TransitionStates.YEETED){runOnJS(cleanUp)();}}" };
 ReactCompilerGating = fn(558);
-let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((state) => {
+let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function EnterExitCrossFadeContainer(state) {
   const cResult = cleanUp(sharedValue[5]).c(12);
   ({ contentContainerStyle, cleanUp } = state);
   state = state.state;
@@ -169,7 +169,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((state) => {
   tmp7 = items1;
   tmp6 = fn2;
   const obj3 = { withSpring: cleanUp(sharedValue[10]).withSpring, opacity: sharedValue, springStandard: cleanUp(sharedValue[11]).springStandard, state, TransitionStates: cleanUp(sharedValue[9]).TransitionStates, runOnJS: cleanUp(sharedValue[8]).runOnJS, cleanUp };
-}) : ((cleanUp) => {
+}) : (function EnterExitCrossFadeContainer(cleanUp) {
   cleanUp = cleanUp.cleanUp;
   state = cleanUp.state;
   let sharedValue;
@@ -223,7 +223,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/threads/native/components/redesign/ThreadList.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCreateThreadPress) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ThreadList(onCreateThreadPress) {
   const cResult = onThreadPress(contentContainerStyle[5]).c(28);
   ({ channel, onThreadPress } = onCreateThreadPress);
   onCreateThreadPress = onCreateThreadPress.onCreateThreadPress;
@@ -293,7 +293,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCreateThreadPr
                     tmp = closure_17;
                     if (closure_17.EMPTY === arg1) {
                       tmp22 = jsx;
-                      tmp23 = f75622;
+                      tmp23 = EnterExitCrossFadeContainer;
                       obj1 = { contentContainerStyle: null, state: null, cleanUp: null, children: null };
                       tmp24 = closure_3;
                       obj1.contentContainerStyle = closure_3.container;
@@ -305,10 +305,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCreateThreadPr
                       tmp27 = onCreateThreadPress;
                       obj6.onCreateThreadPress = onCreateThreadPress;
                       obj1.children = jsx(closure_1(closure_2[19]), obj6);
-                      return jsx(f75622, obj1, onCreateThreadPress);
+                      return jsx(EnterExitCrossFadeContainer, obj1, onCreateThreadPress);
                     } else if (tmp.LOADING === arg1) {
                       tmp17 = jsx;
-                      tmp18 = f75622;
+                      tmp18 = EnterExitCrossFadeContainer;
                       obj7 = { contentContainerStyle: null, state: null, cleanUp: null, children: null };
                       tmp19 = closure_3;
                       items = [, ];
@@ -319,7 +319,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCreateThreadPr
                       tmp20 = closure_1;
                       tmp21 = closure_2;
                       obj7.children = jsx(closure_1(closure_2[20]), {});
-                      return jsx(f75622, obj7, onCreateThreadPress);
+                      return jsx(EnterExitCrossFadeContainer, obj7, onCreateThreadPress);
                     } else if (tmp.LIST === arg1) {
                       tmp2 = jsx;
                       obj = { contentContainerStyle: null, state: null, cleanUp: null, children: null };
@@ -327,7 +327,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCreateThreadPr
                       obj.state = arg2;
                       obj.cleanUp = arg3;
                       tmp5 = closure_0;
-                      tmp3 = f75622;
+                      tmp3 = EnterExitCrossFadeContainer;
                       tmp4 = closure_3;
                       tmp6 = closure_2;
                       obj8 = { data: null, ListHeaderComponent: null, ListHeaderComponentStyle: null, renderItem: null, keyExtractor: null, onEndReached: null, onEndReachedThreshold: 0.4, accessibilityLabel: null, ListFooterComponent: null, ListFooterComponentStyle: null, contentContainerStyle: null };
@@ -399,7 +399,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCreateThreadPr
                                   tmp = closure_17;
                                   if (closure_17.EMPTY === arg1) {
                                     tmp22 = jsx;
-                                    tmp23 = f75622;
+                                    tmp23 = EnterExitCrossFadeContainer;
                                     obj1 = { contentContainerStyle: null, state: null, cleanUp: null, children: null };
                                     tmp24 = closure_3;
                                     obj1.contentContainerStyle = closure_3.container;
@@ -411,10 +411,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCreateThreadPr
                                     tmp27 = onCreateThreadPress;
                                     obj6.onCreateThreadPress = onCreateThreadPress;
                                     obj1.children = jsx(closure_1(closure_2[19]), obj6);
-                                    return jsx(f75622, obj1, onCreateThreadPress);
+                                    return jsx(EnterExitCrossFadeContainer, obj1, onCreateThreadPress);
                                   } else if (tmp.LOADING === arg1) {
                                     tmp17 = jsx;
-                                    tmp18 = f75622;
+                                    tmp18 = EnterExitCrossFadeContainer;
                                     obj7 = { contentContainerStyle: null, state: null, cleanUp: null, children: null };
                                     tmp19 = closure_3;
                                     items = [, ];
@@ -425,7 +425,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCreateThreadPr
                                     tmp20 = closure_1;
                                     tmp21 = closure_2;
                                     obj7.children = jsx(closure_1(closure_2[20]), {});
-                                    return jsx(f75622, obj7, onCreateThreadPress);
+                                    return jsx(EnterExitCrossFadeContainer, obj7, onCreateThreadPress);
                                   } else if (tmp.LIST === arg1) {
                                     tmp2 = jsx;
                                     obj = { contentContainerStyle: null, state: null, cleanUp: null, children: null };
@@ -433,7 +433,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCreateThreadPr
                                     obj.state = arg2;
                                     obj.cleanUp = arg3;
                                     tmp5 = closure_0;
-                                    tmp3 = f75622;
+                                    tmp3 = EnterExitCrossFadeContainer;
                                     tmp4 = closure_3;
                                     tmp6 = closure_2;
                                     obj8 = { data: null, ListHeaderComponent: null, ListHeaderComponentStyle: null, renderItem: null, keyExtractor: null, onEndReached: null, onEndReachedThreshold: 0.4, accessibilityLabel: null, ListFooterComponent: null, ListFooterComponentStyle: null, contentContainerStyle: null };
@@ -489,7 +489,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCreateThreadPr
                 tmp = closure_17;
                 if (closure_17.EMPTY === arg1) {
                   tmp22 = jsx;
-                  tmp23 = f75622;
+                  tmp23 = EnterExitCrossFadeContainer;
                   obj1 = { contentContainerStyle: null, state: null, cleanUp: null, children: null };
                   tmp24 = closure_3;
                   obj1.contentContainerStyle = closure_3.container;
@@ -501,10 +501,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCreateThreadPr
                   tmp27 = onCreateThreadPress;
                   obj6.onCreateThreadPress = onCreateThreadPress;
                   obj1.children = jsx(closure_1(closure_2[19]), obj6);
-                  return jsx(f75622, obj1, onCreateThreadPress);
+                  return jsx(EnterExitCrossFadeContainer, obj1, onCreateThreadPress);
                 } else if (tmp.LOADING === arg1) {
                   tmp17 = jsx;
-                  tmp18 = f75622;
+                  tmp18 = EnterExitCrossFadeContainer;
                   obj7 = { contentContainerStyle: null, state: null, cleanUp: null, children: null };
                   tmp19 = closure_3;
                   items = [, ];
@@ -515,7 +515,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCreateThreadPr
                   tmp20 = closure_1;
                   tmp21 = closure_2;
                   obj7.children = jsx(closure_1(closure_2[20]), {});
-                  return jsx(f75622, obj7, onCreateThreadPress);
+                  return jsx(EnterExitCrossFadeContainer, obj7, onCreateThreadPress);
                 } else if (tmp.LIST === arg1) {
                   tmp2 = jsx;
                   obj = { contentContainerStyle: null, state: null, cleanUp: null, children: null };
@@ -523,7 +523,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCreateThreadPr
                   obj.state = arg2;
                   obj.cleanUp = arg3;
                   tmp5 = closure_0;
-                  tmp3 = f75622;
+                  tmp3 = EnterExitCrossFadeContainer;
                   tmp4 = closure_3;
                   tmp6 = closure_2;
                   obj8 = { data: null, ListHeaderComponent: null, ListHeaderComponentStyle: null, renderItem: null, keyExtractor: null, onEndReached: null, onEndReachedThreshold: 0.4, accessibilityLabel: null, ListFooterComponent: null, ListFooterComponentStyle: null, contentContainerStyle: null };
@@ -588,7 +588,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCreateThreadPr
             tmp = closure_17;
             if (closure_17.EMPTY === arg1) {
               tmp22 = jsx;
-              tmp23 = f75622;
+              tmp23 = EnterExitCrossFadeContainer;
               obj1 = { contentContainerStyle: null, state: null, cleanUp: null, children: null };
               tmp24 = closure_3;
               obj1.contentContainerStyle = closure_3.container;
@@ -600,10 +600,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCreateThreadPr
               tmp27 = onCreateThreadPress;
               obj6.onCreateThreadPress = onCreateThreadPress;
               obj1.children = jsx(closure_1(closure_2[19]), obj6);
-              return jsx(f75622, obj1, onCreateThreadPress);
+              return jsx(EnterExitCrossFadeContainer, obj1, onCreateThreadPress);
             } else if (tmp.LOADING === arg1) {
               tmp17 = jsx;
-              tmp18 = f75622;
+              tmp18 = EnterExitCrossFadeContainer;
               obj7 = { contentContainerStyle: null, state: null, cleanUp: null, children: null };
               tmp19 = closure_3;
               items = [, ];
@@ -614,7 +614,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCreateThreadPr
               tmp20 = closure_1;
               tmp21 = closure_2;
               obj7.children = jsx(closure_1(closure_2[20]), {});
-              return jsx(f75622, obj7, onCreateThreadPress);
+              return jsx(EnterExitCrossFadeContainer, obj7, onCreateThreadPress);
             } else if (tmp.LIST === arg1) {
               tmp2 = jsx;
               obj = { contentContainerStyle: null, state: null, cleanUp: null, children: null };
@@ -622,7 +622,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCreateThreadPr
               obj.state = arg2;
               obj.cleanUp = arg3;
               tmp5 = closure_0;
-              tmp3 = f75622;
+              tmp3 = EnterExitCrossFadeContainer;
               tmp4 = closure_3;
               tmp6 = closure_2;
               obj8 = { data: null, ListHeaderComponent: null, ListHeaderComponentStyle: null, renderItem: null, keyExtractor: null, onEndReached: null, onEndReachedThreshold: 0.4, accessibilityLabel: null, ListFooterComponent: null, ListFooterComponentStyle: null, contentContainerStyle: null };
@@ -672,7 +672,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCreateThreadPr
             tmp = closure_17;
             if (closure_17.EMPTY === arg1) {
               tmp22 = jsx;
-              tmp23 = f75622;
+              tmp23 = EnterExitCrossFadeContainer;
               obj1 = { contentContainerStyle: null, state: null, cleanUp: null, children: null };
               tmp24 = closure_3;
               obj1.contentContainerStyle = closure_3.container;
@@ -684,10 +684,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCreateThreadPr
               tmp27 = onCreateThreadPress;
               obj6.onCreateThreadPress = onCreateThreadPress;
               obj1.children = jsx(closure_1(closure_2[19]), obj6);
-              return jsx(f75622, obj1, onCreateThreadPress);
+              return jsx(EnterExitCrossFadeContainer, obj1, onCreateThreadPress);
             } else if (tmp.LOADING === arg1) {
               tmp17 = jsx;
-              tmp18 = f75622;
+              tmp18 = EnterExitCrossFadeContainer;
               obj7 = { contentContainerStyle: null, state: null, cleanUp: null, children: null };
               tmp19 = closure_3;
               items = [, ];
@@ -698,7 +698,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCreateThreadPr
               tmp20 = closure_1;
               tmp21 = closure_2;
               obj7.children = jsx(closure_1(closure_2[20]), {});
-              return jsx(f75622, obj7, onCreateThreadPress);
+              return jsx(EnterExitCrossFadeContainer, obj7, onCreateThreadPress);
             } else if (tmp.LIST === arg1) {
               tmp2 = jsx;
               obj = { contentContainerStyle: null, state: null, cleanUp: null, children: null };
@@ -706,7 +706,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCreateThreadPr
               obj.state = arg2;
               obj.cleanUp = arg3;
               tmp5 = closure_0;
-              tmp3 = f75622;
+              tmp3 = EnterExitCrossFadeContainer;
               tmp4 = closure_3;
               tmp6 = closure_2;
               obj8 = { data: null, ListHeaderComponent: null, ListHeaderComponentStyle: null, renderItem: null, keyExtractor: null, onEndReached: null, onEndReachedThreshold: 0.4, accessibilityLabel: null, ListFooterComponent: null, ListFooterComponentStyle: null, contentContainerStyle: null };
@@ -767,7 +767,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCreateThreadPr
   cResult[3] = fn;
   tmp7 = fn;
   let obj3 = onThreadPress(contentContainerStyle[12]);
-}) : ((onCreateThreadPress) => {
+}) : (function ThreadList(onCreateThreadPress) {
   ({ channel, onThreadPress } = onCreateThreadPress);
   onCreateThreadPress = onCreateThreadPress.onCreateThreadPress;
   const contentContainerStyle = onCreateThreadPress.contentContainerStyle;
@@ -891,7 +891,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCreateThreadPr
       }
       obj5.ListFooterComponentStyle = footer;
       obj5.contentContainerStyle = contentContainerStyle;
-      obj.children = jsx(_mod8404.AnimatedFlashList, { data: memo, ListHeaderComponent: memo2, ListHeaderComponentStyle: closure_3.header, renderItem, keyExtractor, onEndReached, onEndReachedThreshold: 0.4, accessibilityLabel: null, ListFooterComponent: null, ListFooterComponentStyle: null, contentContainerStyle: null });
+      obj.children = jsx(_mod8600.AnimatedFlashList, { data: memo, ListHeaderComponent: memo2, ListHeaderComponentStyle: closure_3.header, renderItem, keyExtractor, onEndReached, onEndReachedThreshold: 0.4, accessibilityLabel: null, ListFooterComponent: null, ListFooterComponentStyle: null, contentContainerStyle: null });
       return <closure_16 key={key} contentContainerStyle={closure_3.container} state={state} cleanUp={cleanUp}>{null}</closure_16>;
     }
   }, items4);

@@ -1,21 +1,21 @@
-// === Module 15358: ScreenDowntimeScheduleSetting ===
+// === Module 15620: ScreenDowntimeScheduleSetting ===
 
-// Module 15358 (ScreenDowntimeScheduleSetting)
+// Module 15620 (ScreenDowntimeScheduleSetting)
 import util from "util" /* 1126 */;
-import UserSettings from "UserSettings" /* 2028 */;
-import SettingsConstants from "SettingsConstants" /* 7645 */;
-import useUserIsTeenAgeGroupDefault from "useUserIsTeenAgeGroup" /* 14735 */;
+import UserSettings from "UserSettings" /* 2040 */;
+import SettingsConstants from "SettingsConstants" /* 7966 */;
+import useUserIsTeenAgeGroupDefault from "useUserIsTeenAgeGroup" /* 14996 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11142 */;
+import SettingBuilders from "SettingBuilders" /* 11262 */;
 import size from "module_2" /* 2 */;
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePredicate() {
   let hasActiveParentLinks = useUserIsTeenAgeGroupDefault();
   if (hasActiveParentLinks) {
     hasActiveParentLinks = obj.useHasActiveParentLinks();
   }
   return hasActiveParentLinks;
-}) : (() => {
+}) : (function usePredicate() {
   let hasActiveParentLinks = useUserIsTeenAgeGroupDefault();
   if (hasActiveParentLinks) {
     hasActiveParentLinks = obj.useHasActiveParentLinks();
@@ -37,13 +37,13 @@ const toggle = SettingBuilders.createToggle({
     const EnableScreenDowntimeScheduleNotifications = UserSettings.EnableScreenDowntimeScheduleNotifications;
     return EnableScreenDowntimeScheduleNotifications.updateSetting(arg0);
   },
-  usePredicate: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  usePredicate: ReactCompilerGating.isReactCompilerEnabled() ? (function usePredicate() {
     let hasActiveParentLinks = useUserIsTeenAgeGroupDefault();
     if (hasActiveParentLinks) {
       hasActiveParentLinks = obj.useHasActiveParentLinks();
     }
     return hasActiveParentLinks;
-  }) : (() => {
+  }) : (function usePredicate() {
     let hasActiveParentLinks = useUserIsTeenAgeGroupDefault();
     if (hasActiveParentLinks) {
       hasActiveParentLinks = obj.useHasActiveParentLinks();

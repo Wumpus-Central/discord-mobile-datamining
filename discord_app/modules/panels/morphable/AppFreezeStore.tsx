@@ -1,6 +1,6 @@
-// === Module 7975: AppFreezeStore ===
+// === Module 8392: AppFreezeStore ===
 
-// Module 7975 (AppFreezeStore)
+// Module 8392 (AppFreezeStore)
 import module_570 from "module_570" /* 570 */;
 import size from "module_2" /* 2 */;
 

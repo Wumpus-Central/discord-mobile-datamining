@@ -1,35 +1,35 @@
-// === Module 12999: InlinePriceTag ===
+// === Module 13277: InlinePriceTag ===
 
-// Module 12999 (InlinePriceTag)
+// Module 13277 (InlinePriceTag)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
 import util from "util" /* 1126 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1980 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4534 */;
-import useToken from "useToken" /* 4586 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import LinearGradientDefault from "LinearGradient" /* 5612 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6688 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 6715 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7077 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7078 */;
-import useCurrentUser from "useCurrentUser" /* 7860 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8346 */;
-import OrbsIcon from "OrbsIcon" /* 8524 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 8539 */;
-import CollectiblesShopPricePlaceholder from "CollectiblesShopPricePlaceholder" /* 8556 */;
-import TagIcon from "TagIcon" /* 8557 */;
-import useProductDisableState from "useProductDisableState" /* 8564 */;
-import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 13003 */;
-import MobileNitroUpsellInShopPdpExperimentDefault from "MobileNitroUpsellInShopPdpExperiment" /* 13004 */;
-import useVirtualCurrencyData from "useVirtualCurrencyData" /* 13005 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1992 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4726 */;
+import useToken from "useToken" /* 4778 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import LinearGradientDefault from "LinearGradient" /* 5387 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6865 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 6892 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7263 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7264 */;
+import useCurrentUser from "useCurrentUser" /* 8278 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9005 */;
+import OrbsIcon from "OrbsIcon" /* 9009 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9024 */;
+import CollectiblesShopPricePlaceholder from "CollectiblesShopPricePlaceholder" /* 9040 */;
+import TagIcon from "TagIcon" /* 9041 */;
+import useProductDisableState from "useProductDisableState" /* 9048 */;
+import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 13281 */;
+import MobileNitroUpsellInShopPdpExperimentDefault from "MobileNitroUpsellInShopPdpExperiment" /* 13282 */;
+import useVirtualCurrencyData from "useVirtualCurrencyData" /* 13283 */;
 import noop from "module_19" /* 19 */;
-import IAPStore from "IAPStore" /* 6931 */;
+import IAPStore from "IAPStore" /* 7120 */;
 
 require = fn;
 function ExpressiveNitroUpsell(arg0) {
@@ -50,7 +50,7 @@ function ExpressiveNitroUpsell(arg0) {
       }
       if (closure_1_2) {
         const obj = ActionSheetActionCreatorsDefault;
-        const tmp9 = asyncRequireImpl(13000, dependencyMap.paths);
+        const tmp9 = asyncRequireImpl(13278, dependencyMap.paths);
         const obj2 = { analyticsLocations: null, title: null, description: null };
         const items = [AnalyticsLocationDefault.COLLECTIBLES_SHOP_DETAILS_MODAL];
         obj2.analyticsLocations = items;
@@ -129,7 +129,7 @@ const Constants = fn(1085);
 ({ AnalyticsSections: closure_7, CurrencyCodes: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-let createStyles = fn(4896);
+let createStyles = fn(5090);
 let obj2 = { priceTag: { flexDirection: "row", alignItems: "center" }, strikedPrice: { textDecorationLine: "line-through", textDecorationStyle: "solid", opacity: 0.7 }, strikedOrbPrice: { textDecorationLine: "line-through", textDecorationStyle: "solid", opacity: 0.7, marginRight: 4 }, regularPrice: {}, nitroIcon: { width: 20, height: 20, marginLeft: 8, marginRight: 4 }, nitroIconSubscribeNow: { marginLeft: 0 }, root: { flexDirection: "column" }, container: { flexDirection: "row", alignItems: "flex-start", justifyContent: "space-between" }, priceTagRow: { flexDirection: "row", alignItems: "center" }, nitroUpsellPill: { alignSelf: "stretch", marginTop: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center", justifyContent: "space-between", borderRadius: nativeDefault.radii.round, overflow: "hidden", paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_4 }, nitroUpsellGradient: null, nitroUpsellSavings: null, nitroUpsellCta: null, nitroUpsellIcon: null, nitroUpsellChevron: null, underline: null, subscribeNowPressable: null, androidTextPadding: null, orbsIcon: null, disabled: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -150,7 +150,7 @@ let closure_12 = createStyles.createStyles(obj2);
 const start = { x: 0, y: 0.5 };
 const end = { x: 1, y: 0.5 };
 let ReactCompilerGating = fn(558);
-let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function PriceTag(arg0) {
   const cResult = c.c(12);
   ({ priceFormatted, style, color, icon, variant, accessibilityLabel } = arg0);
   let str = "interactive-text-active";
@@ -182,7 +182,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             const obj2 = { children: null };
             const items = [icon, tmp6];
             obj2.children = items;
-            const tmp12 = closure_1_11(v65535, obj2);
+            const tmp12 = closure_1_11(collapsed, obj2);
             cResult[9] = icon;
             cResult[10] = tmp6;
             cResult[11] = tmp12;
@@ -206,7 +206,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = tmp4.priceTag;
   cResult[2] = items1;
   tmp5 = items1;
-}) : ((accessibilityLabel) => {
+}) : (function PriceTag(accessibilityLabel) {
   let str = accessibilityLabel.color;
   ({ priceFormatted, style } = accessibilityLabel);
   if (str === undefined) {
@@ -223,10 +223,10 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   obj2.style = items1;
   items[1] = options(Text_Text.Text, obj2);
   obj.children = items;
-  return closure_1_11(v65535, obj);
+  return closure_1_11(collapsed, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsPriceTag(arg0) {
   const cResult = c.c(41);
   ({ vcData, isProductDisabled, product, eligibleForShopDiscount } = arg0);
   const tmp4 = closure_12();
@@ -417,7 +417,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp16 = items1;
     const tmpResult2 = CollectiblesUtils;
   }
-}) : ((arg0) => {
+}) : (function OrbsPriceTag(arg0) {
   ({ vcData, product } = arg0);
   ({ isProductDisabled, eligibleForShopDiscount } = arg0);
   const tmp = closure_12();
@@ -487,7 +487,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
 });
 ReactCompilerGating = fn(558);
-let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((onTrackPress) => {
+let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function NitroUpsell(onTrackPress) {
   const cResult = onTrackPress(576).c(21);
   onTrackPress = onTrackPress.onTrackPress;
   const handleNitroSubscribe = onTrackPress.handleNitroSubscribe;
@@ -510,7 +510,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((onTrackPress) 
         cResult[6] = tmp4.androidTextPadding;
         cResult[7] = androidTextPadding;
         let tmp10 = androidTextPadding;
-        tmpResult = tmp(1369);
+        tmpResult = tmp(1381);
       } else {
         tmp10 = cResult[7];
       }
@@ -542,7 +542,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((onTrackPress) 
             tmp19 = tmp22;
           }
           const obj3 = { variant: "text-md/normal", color: "interactive-text-default", style: tmp10, children: cResult[10] };
-          const tmp18 = closure_9(tmp(4892).Text, obj3);
+          const tmp18 = closure_9(tmp(5086).Text, obj3);
           cResult[13] = tmp10;
           cResult[14] = cResult[10];
           cResult[15] = tmp18;
@@ -571,7 +571,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((onTrackPress) 
     const items1 = [, ];
     ({ nitroIcon: arr[0], nitroIconSubscribeNow: arr[1] } = tmp4);
     obj5.style = items1;
-    const tmp9 = closure_9(tmp(8346).NitroWheelIcon, obj5);
+    const tmp9 = closure_9(tmp(9005).NitroWheelIcon, obj5);
     cResult[3] = tmp4.nitroIcon;
     cResult[4] = tmp4.nitroIconSubscribeNow;
     cResult[5] = tmp9;
@@ -588,7 +588,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((onTrackPress) 
   cResult[2] = fn;
   tmp5 = fn;
   const obj = onTrackPress(576);
-}) : ((premiumPriceFormatted) => {
+}) : (function NitroUpsell(premiumPriceFormatted) {
   ({ onTrackPress: require, handleNitroSubscribe: importDefault } = premiumPriceFormatted);
   const tmp = closure_12();
   dependencyMap = tmp;
@@ -626,7 +626,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((onTrackPress) 
 });
 fn(558);
 let obj6 = { alignSelf: "flex-start", marginBottom: -2, marginTop: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center" };
-createStyles = fn(4896);
+createStyles = fn(5090);
 let closure_19 = createStyles.createStyles(() => {
   const discount = { backgroundColor: "rgba(46, 204, 113, 0.25)", flexDirection: "row", flexShrink: 1, borderRadius: nativeDefault.radii.xs - 1, paddingHorizontal: 6, marginLeft: 6, paddingTop: null, paddingBottom: null };
   let num;
@@ -643,7 +643,7 @@ let closure_19 = createStyles.createStyles(() => {
   return { discount };
 });
 ReactCompilerGating = fn(558);
-let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((discountPercentage) => {
+let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function BundleDiscountV2(discountPercentage) {
   const cResult = c.c(5);
   discountPercentage = discountPercentage.discountPercentage;
   let discount = closure_19();
@@ -670,7 +670,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((discountPercen
     cResult[3] = tmp4;
     cResult[4] = tmp10;
   }
-}) : ((discountPercentage) => {
+}) : (function BundleDiscountV2(discountPercentage) {
   discountPercentage = discountPercentage.discountPercentage;
   let tmp4 = null;
   if (discountPercentage >= CollectiblesUtils.DISCOUNT_DISPLAY_MINIMUM_THRESHOLD) {
@@ -686,7 +686,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((discountPercen
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/InlinePriceTag.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function InlinePriceTag(arg0) {
   const cResult = c.c(52);
   ({ product, onTrackPress } = arg0);
   closure_12();
@@ -791,7 +791,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const tmpResult10 = CollectiblesUtils;
   }
   tmpResult8 = initialize;
-}) : ((arg0) => {
+}) : (function InlinePriceTag(arg0) {
   ({ product, onTrackPress } = arg0);
   let nitroIcon = closure_12();
   const currentUser = useCurrentUser.useCurrentUser();

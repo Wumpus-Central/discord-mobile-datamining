@@ -1,8 +1,8 @@
-// === Module 9739: StageChannelAnimationUtils ===
+// === Module 10940: StageChannelAnimationUtils ===
 
-// Module 9739 (StageChannelAnimationUtils)
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import timing from "timing" /* 4897 */;
+// Module 10940 (StageChannelAnimationUtils)
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import timing from "timing" /* 5091 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -17,7 +17,7 @@ const __initData2 = { code: "function StageChannelAnimationUtilsTsx3(){const{isI
 const __initData3 = { code: "function StageChannelAnimationUtilsTsx4(){const{withTiming,paddingTop,TIMING_CONFIG}=this.__closure;return{paddingTop:withTiming(paddingTop.get(),TIMING_CONFIG)};}" };
 const result = size.fileFinishedImporting("modules/stage_channels/native/components/StageChannelAnimationUtils.tsx");
 
-export const useStageActionBarAnimation = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, controlPadding) => {
+export const useStageActionBarAnimation = ReactCompilerGating.isReactCompilerEnabled() ? (function useStageActionBarAnimation(arg0, controlPadding) {
   _require = controlPadding;
   const tmp = require("useIsInvitedToSpeak")();
   importDefault = tmp;
@@ -51,7 +51,7 @@ export const useStageActionBarAnimation = ReactCompilerGating.isReactCompilerEna
   fn.__workletHash = 16816216105718;
   fn.__initData = __initData;
   return obj3.useAnimatedStyle(fn);
-}) : ((arg0, controlPadding) => {
+}) : (function useStageActionBarAnimation(arg0, controlPadding) {
   _require = controlPadding;
   const tmp = require("useIsInvitedToSpeak")();
   importDefault = tmp;

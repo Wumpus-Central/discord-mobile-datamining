@@ -1,8 +1,8 @@
-// === Module 14310: DeclarativeNotificationSettingsRedesignExperiment ===
+// === Module 14535: DeclarativeNotificationSettingsRedesignExperiment ===
 
-// Module 14310 (DeclarativeNotificationSettingsRedesignExperiment)
+// Module 14535 (DeclarativeNotificationSettingsRedesignExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1440 */;
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/notifications/DeclarativeNoti
 export const isDeclarativeNotificationSettingsRedesignEnabled = function isDeclarativeNotificationSettingsRedesignEnabled(getAssignedNotifSettingsAndMappings) {
   return closure_2.getConfig({ location: getAssignedNotifSettingsAndMappings }).enabled;
 };
-export const useIsDeclarativeNotificationSettingsRedesignEnabled = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+export const useIsDeclarativeNotificationSettingsRedesignEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsDeclarativeNotificationSettingsRedesignEnabled(location) {
   const cResult = c.c(2);
   if (cResult[0] !== location) {
     const obj2 = { location };
@@ -23,4 +23,6 @@ export const useIsDeclarativeNotificationSettingsRedesignEnabled = ReactCompiler
     tmp2 = cResult[1];
   }
   return closure_2.useConfig(tmp2).enabled;
-}) : ((location) => closure_2.useConfig({ location }).enabled);
+}) : (function useIsDeclarativeNotificationSettingsRedesignEnabled(location) {
+  return closure_2.useConfig({ location }).enabled;
+});

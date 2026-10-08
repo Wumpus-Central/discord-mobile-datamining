@@ -1,21 +1,21 @@
-// === Module 9951: useMaybeAddPollsMarketingEasterEggNote ===
+// === Module 9478: useMaybeAddPollsMarketingEasterEggNote ===
 
-// Module 9951 (useMaybeAddPollsMarketingEasterEggNote)
+// Module 9478 (useMaybeAddPollsMarketingEasterEggNote)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import LocaleStore from "LocaleStore" /* 2116 */;
+import LocaleStore from "LocaleStore" /* 2128 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/polls/useMaybeAddPollsMarketingEasterEggNote.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((emojiName) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useMaybeAddPollsMarketingEasterEggNote(emojiName) {
   const cResult = c.c(5);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [LocaleStore];
-    const fn = function l() {
+    const fn = function s() {
       locale = locale.locale;
       return locale.startsWith("en-");
     };
@@ -47,7 +47,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((emojiName) => {
   cResult[4] = formatToPlainStringResult;
   tmp8 = formatToPlainStringResult;
   const tmpResult = initialize;
-}) : ((emojiName) => {
+}) : (function useMaybeAddPollsMarketingEasterEggNote(emojiName) {
   initialize;
   [][0] = LocaleStore;
   let formatToPlainStringResult = emojiName;

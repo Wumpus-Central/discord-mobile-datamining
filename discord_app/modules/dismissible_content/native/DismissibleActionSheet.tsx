@@ -1,8 +1,8 @@
-// === Module 10368: DismissibleActionSheet ===
+// === Module 9965: DismissibleActionSheet ===
 
-// Module 10368 (DismissibleActionSheet)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import useMountEffectDefault from "useMountEffect" /* 5597 */;
+// Module 9965 (DismissibleActionSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import useMountEffectDefault from "useMountEffect" /* 5392 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,15 +12,15 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/dismissible_content/native/DismissibleActionSheet.tsx");
 
-export const DismissibleActionSheet = ReactCompilerGating.isReactCompilerEnabled() ? ((actionSheetKey) => {
+export const DismissibleActionSheet = ReactCompilerGating.isReactCompilerEnabled() ? (function DismissibleActionSheet(actionSheetKey) {
   _require = actionSheetKey;
   const cResult = require("c").c(6);
   if (cResult[0] !== actionSheetKey) {
-    const fn = function o() {
+    const fn = function s() {
       const obj2 = {};
       const obj = ActionSheetActionCreatorsDefault;
       const merged = Object.assign(actionSheetKey);
-      obj2.markAsDismissed = function markAsDismissed(arg0) {
+      obj2.markAsDismissed = function _markAsDismissed(arg0) {
         ActionSheetActionCreatorsDefault.hideActionSheet(actionSheetKey.actionSheetKey);
         actionSheetKey.markAsDismissed(arg0);
       };
@@ -41,7 +41,7 @@ export const DismissibleActionSheet = ReactCompilerGating.isReactCompilerEnabled
     const effect = noop.useEffect(tmp5, tmp6);
     return null;
   }
-  const fn2 = function h() {
+  const fn2 = function o() {
     return () => {
       if (tmp2) {
         ActionSheetActionCreatorsDefault.hideActionSheet(hideSheetOnUnmount.actionSheetKey);
@@ -58,13 +58,13 @@ export const DismissibleActionSheet = ReactCompilerGating.isReactCompilerEnabled
   tmp6 = items;
   tmp5 = fn2;
   let obj = require("c");
-}) : ((arg0) => {
+}) : (function DismissibleActionSheet(arg0) {
   closure_0 = arg0;
   useMountEffectDefault(() => {
     const obj2 = {};
     const obj = ActionSheetActionCreatorsDefault;
     const merged = Object.assign(closure_0);
-    obj2.markAsDismissed = function markAsDismissed(arg0) {
+    obj2.markAsDismissed = function _markAsDismissed(arg0) {
       ActionSheetActionCreatorsDefault.hideActionSheet(closure_1_0.actionSheetKey);
       closure_1_0.markAsDismissed(arg0);
     };

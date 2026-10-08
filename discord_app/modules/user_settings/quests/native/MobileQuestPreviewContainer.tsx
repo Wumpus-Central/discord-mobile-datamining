@@ -1,12 +1,12 @@
-// === Module 14990: MobileQuestPreviewContainer ===
+// === Module 15252: MobileQuestPreviewContainer ===
 
-// Module 14990 (MobileQuestPreviewContainer)
+// Module 15252 (MobileQuestPreviewContainer)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4892 */;
+import Text_Text from "Text/Text" /* 5086 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
+import createStyles from "createStyles" /* 5090 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -19,7 +19,7 @@ let closure_5 = createStyles.createStyles(obj);
 let obj3 = { marginBottom: nativeDefault.space.PX_16 };
 const result = size.fileFinishedImporting("modules/user_settings/quests/native/MobileQuestPreviewContainer.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function MobileQuestPreviewContainer(arg0) {
   const cResult = c.c(7);
   ({ children, title } = arg0);
   const tmp4 = closure_5();
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = title;
   cResult[2] = tmp6;
   tmp5 = tmp6;
-}) : ((title) => {
+}) : (function MobileQuestPreviewContainer(title) {
   title = title.title;
   const tmp = closure_5();
   const obj = { style: tmp.container, children: null };

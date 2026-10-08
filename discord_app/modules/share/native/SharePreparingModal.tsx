@@ -1,15 +1,15 @@
-// === Module 8054: SharePreparingModal ===
+// === Module 8463: SharePreparingModal ===
 
-// Module 8054 (SharePreparingModal)
+// Module 8463 (SharePreparingModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Backdrop from "Backdrop" /* 5778 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5975 */;
-import XSmallIcon from "XSmallIcon" /* 6024 */;
-import MediaViewerOverlayButtonDefault from "MediaViewerOverlayButton" /* 8055 */;
-import MediaModalOverlayHeaderWrapper from "MediaModalOverlayHeaderWrapper" /* 8056 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import Backdrop from "Backdrop" /* 5361 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6158 */;
+import XSmallIcon from "XSmallIcon" /* 6210 */;
+import MediaViewerOverlayButtonDefault from "MediaViewerOverlayButton" /* 8464 */;
+import MediaModalOverlayHeaderWrapper from "MediaModalOverlayHeaderWrapper" /* 8465 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { content: { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_12 }, topBar: null, topBarEnd: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -30,7 +30,7 @@ let obj3 = { flex: 1, alignItems: "center", justifyContent: "center", gap: nativ
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/share/native/SharePreparingModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCancel) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SharePreparingModal(onCancel) {
   const cResult = c.c(19);
   onCancel = onCancel.onCancel;
   const tmp4 = closure_7();
@@ -132,7 +132,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCancel) => {
   cResult[9] = tmp16;
   cResult[10] = tmp21;
   tmp20 = tmp21;
-}) : ((onCancel) => {
+}) : (function SharePreparingModal(onCancel) {
   onCancel = onCancel.onCancel;
   const tmp = closure_7();
   const items = [onCancel];

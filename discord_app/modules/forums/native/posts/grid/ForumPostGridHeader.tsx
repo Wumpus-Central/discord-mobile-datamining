@@ -1,27 +1,27 @@
-// === Module 11630: ForumPostGridHeader ===
+// === Module 11694: ForumPostGridHeader ===
 
-// Module 11630 (ForumPostGridHeader)
+// Module 11694 (ForumPostGridHeader)
 import c from "c" /* 576 */;
-import ForumPostPinIconDefault from "ForumPostPinIcon" /* 11631 */;
-import ForumPostUsername from "ForumPostUsername" /* 11633 */;
-import ForumPostTimestampDefault from "ForumPostTimestamp" /* 11642 */;
-import ForumPostNewTagDefault from "ForumPostNewTag" /* 11643 */;
-import ForumPostTitleDefault from "ForumPostTitle" /* 11644 */;
+import ForumPostPinIconDefault from "ForumPostPinIcon" /* 11695 */;
+import ForumPostUsername from "ForumPostUsername" /* 11697 */;
+import ForumPostTimestampDefault from "ForumPostTimestamp" /* 11707 */;
+import ForumPostNewTagDefault from "ForumPostNewTag" /* 11708 */;
+import ForumPostTitleDefault from "ForumPostTitle" /* 11709 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const ForumTimestampFormats = fn(6786).ForumTimestampFormats;
-const ChannelFlags = fn(2058).ChannelFlags;
+const ForumTimestampFormats = fn(6961).ForumTimestampFormats;
+const ChannelFlags = fn(2070).ChannelFlags;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles({ pinIcon: { marginEnd: 8 }, container: { display: "flex", flexDirection: "column", marginBottom: 4 }, details: { flexDirection: "row", alignItems: "center", marginBottom: 4 }, timestampText: { flex: 1 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/posts/grid/ForumPostGridHeader.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPostGridHeader(arg0) {
   const cResult = c.c(27);
   ({ thread, hasUnreads, isNew } = arg0);
   const tmp4 = closure_8();
@@ -133,7 +133,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = tmp4.pinIcon;
   cResult[4] = tmp9;
   tmp8 = tmp9;
-}) : ((arg0) => {
+}) : (function ForumPostGridHeader(arg0) {
   ({ thread, hasUnreads, isNew } = arg0);
   const tmp = closure_8();
   let hasFlagResult = thread.hasFlag(ChannelFlags.PINNED);

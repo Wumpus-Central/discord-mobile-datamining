@@ -1,15 +1,15 @@
-// === Module 15568: CheckpointApngPlayer ===
+// === Module 15825: CheckpointApngPlayer ===
 
-// Module 15568 (CheckpointApngPlayer)
+// Module 15825 (CheckpointApngPlayer)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1370 */;
-import FastImageDefault from "FastImage" /* 5981 */;
-import APNGPlayer from "APNGPlayer" /* 8497 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
-import createStyles from "createStyles" /* 4896 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1382 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import APNGPlayer from "APNGPlayer" /* 8981 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
+import createStyles from "createStyles" /* 5090 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -18,7 +18,7 @@ const jsx = jsxProd.jsx;
 let closure_6 = createStyles.createStyles({ container: { alignItems: "center", justifyContent: "center" } });
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointApngPlayer.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function CheckpointApngPlayer(arg0) {
   let obj = dependencyMap;
   const cResult = c.c(9);
   ({ uri, style } = arg0);
@@ -71,7 +71,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = uri;
   cResult[5] = tmp9Result;
   tmpResult2 = utils_PlatformUtils;
-}) : ((arg0) => {
+}) : (function CheckpointApngPlayer(arg0) {
   ({ uri, style } = arg0);
   const tmp = closure_6();
   const items = [AccessibilityStore];

@@ -1,12 +1,12 @@
-// === Module 16676: ConjureMessageActionSheet ===
+// === Module 16939: ConjureMessageActionSheet ===
 
-// Module 16676 (ConjureMessageActionSheet)
+// Module 16939 (ConjureMessageActionSheet)
 import util from "util" /* 1126 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4574 */;
-import CopyIcon from "CopyIcon" /* 4849 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4860 */;
-import ClipboardUtils from "ClipboardUtils" /* 6695 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7861 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4766 */;
+import CopyIcon from "CopyIcon" /* 5043 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5054 */;
+import ClipboardUtils from "ClipboardUtils" /* 6872 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8279 */;
 import noop from "module_19" /* 19 */;
 
 const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
@@ -16,7 +16,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let c6 = "conjure-message-actions";
 const ReactCompilerGating = fn(558);
-let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((content) => {
+let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureMessageActionSheet(content) {
   const cResult = content(onRestoreVersion[5]).c(19);
   content = content.content;
   const userId = content.userId;
@@ -237,7 +237,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((content) => {
   cResult[7] = tmp4;
   cResult[8] = tmp9;
   let obj = content(onRestoreVersion[5]);
-}) : ((content) => {
+}) : (function ConjureMessageActionSheet(content) {
   content = content.content;
   const userId = content.userId;
   const onRestoreVersion = content.onRestoreVersion;

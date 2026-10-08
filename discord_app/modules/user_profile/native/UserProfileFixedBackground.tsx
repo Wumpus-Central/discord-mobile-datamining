@@ -1,11 +1,11 @@
-// === Module 7920: UserProfileFixedBackground ===
+// === Module 8339: UserProfileFixedBackground ===
 
-// Module 7920 (UserProfileFixedBackground)
+// Module 8339 (UserProfileFixedBackground)
 import c from "c" /* 576 */;
-import native from "native" /* 4595 */;
-import LinearGradientDefault from "LinearGradient" /* 5612 */;
-import useUserProfileColors from "useUserProfileColors" /* 7921 */;
-import useUserProfileGradientColors from "useUserProfileGradientColors" /* 7922 */;
+import native from "native" /* 4787 */;
+import LinearGradientDefault from "LinearGradient" /* 5387 */;
+import useUserProfileColors from "useUserProfileColors" /* 8340 */;
+import useUserProfileGradientColors from "useUserProfileGradientColors" /* 8341 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileFixedBackground.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileFixedBackground(arg0) {
   const cResult = c.c(20);
   ({ style, gradientHeight, bannerHeight } = arg0);
   const themeContext = native.useThemeContext();
@@ -110,7 +110,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   cResult[2] = theme;
   cResult[3] = obj6;
   tmp5 = obj6;
-}) : ((style) => {
+}) : (function UserProfileFixedBackground(style) {
   style = style.style;
   ({ gradientHeight, bannerHeight } = style);
   const themeContext = native.useThemeContext();

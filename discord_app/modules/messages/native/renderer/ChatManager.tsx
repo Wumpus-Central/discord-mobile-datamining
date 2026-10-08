@@ -1,9 +1,9 @@
-// === Module 11167: ChatManager ===
+// === Module 9315: ChatManager ===
 
-// Module 11167 (ChatManager)
-import _modDef1342 from "module_1342" /* 1342 */;
-import getEmbeddedActivityKeyDefault from "getEmbeddedActivityKey" /* 11168 */;
-import RowGeneratorConstants from "RowGeneratorConstants" /* 7603 */;
+// Module 9315 (ChatManager)
+import _modDef1354 from "module_1354" /* 1354 */;
+import getEmbeddedActivityKeyDefault from "getEmbeddedActivityKey" /* 9316 */;
+import RowGeneratorConstants from "RowGeneratorConstants" /* 7720 */;
 import size from "module_2" /* 2 */;
 
 ({ Changeset: c2, RowType: c3 } = RowGeneratorConstants);
@@ -160,7 +160,7 @@ prototype["determineChangeType"] = function determineChangeType(forceRender) {
             hasItem = updateMessageIds.has(message.id);
           }
           if (!hasItem) {
-            INSERT = _modDef1342(tmp, message) ? constants.NOOP : constants.UPDATE;
+            INSERT = _modDef1354(tmp, message) ? constants.NOOP : constants.UPDATE;
           }
         }
         INSERT = constants.UPDATE;

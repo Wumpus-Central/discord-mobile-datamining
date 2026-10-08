@@ -1,22 +1,22 @@
-// === Module 16327: GuildsBarPendingGuild ===
+// === Module 16587: GuildsBarPendingGuild ===
 
-// Module 16327 (GuildsBarPendingGuild)
+// Module 16587 (GuildsBarPendingGuild)
 import nativeDefault from "native" /* 587 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4708 */;
-import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 5924 */;
-import GuildIcon from "GuildIcon" /* 5978 */;
-import getGuildsBarGuildMenuItemsDefault from "getGuildsBarGuildMenuItems" /* 16266 */;
-import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 16289 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4902 */;
+import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 6107 */;
+import GuildIcon from "GuildIcon" /* 6161 */;
+import getGuildsBarGuildMenuItemsDefault from "getGuildsBarGuildMenuItems" /* 16526 */;
+import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 16549 */;
 import noop from "module_19" /* 19 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4706 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
-import SortedGuildStore from "SortedGuildStore" /* 5623 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4900 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4899 */;
+import SortedGuildStore from "SortedGuildStore" /* 5968 */;
 
 require = fn;
-const GuildRecord = fn(2070);
+const GuildRecord = fn(2082);
 ({ getGuildIconSource: hasOwnProperty, getGuildIconURL: metroRequire } = GuildRecord);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { guildIcon: null };
 let size = { width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE, height: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE };
 obj.guildIcon = size;
@@ -25,7 +25,7 @@ const ReactCompilerGating = fn(558);
 size = fn(2);
 let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarPendingGuild.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function GuildsBarPendingGuild(guildId) {
   const cResult = guildId(stateFromStores[9]).c(51);
   guildId = guildId.guildId;
   closure_10();
@@ -230,7 +230,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildI
       const tmp31 = tmp7(tmp2[15])(tmp30);
     }
   }
-  class C {
+  class B {
     constructor() {
       joinRequestGuild = closure_4.getJoinRequestGuild(guildId);
       tmp2 = undefined;
@@ -264,11 +264,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildI
   cResult[11] = token;
   cResult[12] = stateFromStores;
   cResult[13] = items6;
-  cResult[14] = C;
-  tmp22 = C;
+  cResult[14] = B;
+  tmp22 = B;
   tmp21 = items6;
   const tmpResult8 = guildId(stateFromStores[12]);
-}) : ((guildId) => {
+}) : (function GuildsBarPendingGuild(guildId) {
   guildId = guildId.guildId;
   let token;
   let stateFromStores;
@@ -368,7 +368,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildI
   ({ accessibilityActions, onAccessibilityAction } = memo1);
   let tmp2Result = guildId(stateFromStores[12]);
   const sharedValue = guildId(stateFromStores[21]).useSharedValue(guildId);
-  const obj7 = { id: guildId, accessibilityActions, onAccessibilityAction, cutouts, selected: stateFromStores, sharedId: sharedValue, circle: !stateFromStores, overState: "Reflect", unread: null, label: null, config: null, styles: null, externalChildren: null, expandedChildren: null, children: "cry" };
+  const obj7 = { id: guildId, accessibilityActions, onAccessibilityAction, cutouts, selected: stateFromStores, sharedId: sharedValue, circle: !stateFromStores, overState: "Reflect", unread: null, label: null, config: null, styles: null, externalChildren: null, expandedChildren: null, children: "passthroughCount" };
   let str = guildName;
   const tmp2Result2 = guildId(stateFromStores[21]);
   if (guildName == null) {
@@ -388,5 +388,5 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildI
     const tmp5Result2 = tmp5(tmp3[13]);
   }
   obj7.children = tmp19Result;
-  return jsx(token(stateFromStores[10]), { id: guildId, accessibilityActions, onAccessibilityAction, cutouts, selected: stateFromStores, sharedId: sharedValue, circle: !stateFromStores, overState: "Reflect", unread: null, label: null, config: null, styles: null, externalChildren: null, expandedChildren: null, children: "cry" });
+  return jsx(token(stateFromStores[10]), { id: guildId, accessibilityActions, onAccessibilityAction, cutouts, selected: stateFromStores, sharedId: sharedValue, circle: !stateFromStores, overState: "Reflect", unread: null, label: null, config: null, styles: null, externalChildren: null, expandedChildren: null, children: "passthroughCount" });
 }));

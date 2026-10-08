@@ -1,15 +1,15 @@
-// === Module 10901: BadgeDirectoryView ===
+// === Module 10552: BadgeDirectoryView ===
 
-// Module 10901 (BadgeDirectoryView)
+// Module 10552 (BadgeDirectoryView)
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 7879 */;
-import BadgeUtils from "BadgeUtils" /* 10902 */;
-import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 10905 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8297 */;
+import BadgeUtils from "BadgeUtils" /* 10553 */;
+import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 10556 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9431 */;
-import UserStore from "UserStore" /* 1377 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7874 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9095 */;
+import UserStore from "UserStore" /* 1389 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8292 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 const UserSettingsSections = fn(1085).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, content: null, centered: null, section: null, grid: null, tile: null, badgeIndicator: null, footer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.content = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_48 };
@@ -36,11 +36,11 @@ obj2.footer = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: native
 let closure_12 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
-const f56103 = () => {
+function useTileSize() {
 
-};
+}
 ReactCompilerGating = fn(558);
-let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((badgeIndicatorIds) => {
+let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeSection(badgeIndicatorIds) {
   const cResult = tileSize(badgeIndicatorIds[11]).c(15);
   ({ title, badges, tileSize } = badgeIndicatorIds);
   ({ emptyText, onPressBadge: tile } = badgeIndicatorIds);
@@ -137,7 +137,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((badgeIndicator
   cResult[9] = tileSize;
   cResult[10] = tmp10;
   let obj = tileSize(badgeIndicatorIds[11]);
-}) : ((children) => {
+}) : (function BadgeSection(children) {
   ({ badges, tileSize: require, emptyText, onPressBadge: importDefault, badgeIndicatorIds: dependencyMap } = children);
   let map = closure_12();
   if (0 === badges.length) {
@@ -193,14 +193,14 @@ let obj9 = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDef
 size = fn(2);
 let result1 = size.fileFinishedImporting("modules/badges/native/BadgeDirectoryView.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeDirectoryView(arg0) {
   const cResult = targetUsername(576).c(80);
   ({ targetUserId, targetUsername } = arg0);
   const tmp4 = closure_12();
-  if (typeof f56103 === "function") {
-    const diff = stateFromStores(1484)().width - 2 * stateFromStores(587).space.PX_16;
+  if (typeof useTileSize === "function") {
+    const diff = stateFromStores(1496)().width - 2 * stateFromStores(587).space.PX_16;
     let result = 3 * stateFromStores(587).space.PX_12;
-    const sum = stateFromStores(1618)().bottom + stateFromStores(587).space.PX_16;
+    const sum = stateFromStores(1630)().bottom + stateFromStores(587).space.PX_16;
     if (cResult[0] !== sum) {
       let obj2 = { paddingBottom: sum };
       cResult[0] = sum;
@@ -257,7 +257,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         tmp19 = cResult[7];
       }
       if (cResult[8] !== tmp18) {
-        const fn = function w() {
+        const fn = function z() {
           if (null != targetUserId) {
             let badges = BadgeDirectoryStore.getBadges(tmp);
           } else {
@@ -384,9 +384,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         }
       }
       if (cResult[16] !== tmp18) {
-        class V {
+        class L {
           constructor() {
-            return closure_8.hasCatalogFetchErrorFor(targetUserId);
+            hasCatalogForResult = null != targetUserId;
+            if (hasCatalogForResult) {
+              tmp3 = closure_8;
+              hasCatalogForResult = closure_8.hasCatalogFor(tmp);
+            }
+            return hasCatalogForResult;
           }
         }
         const items6 = [tmp18];
@@ -401,19 +406,24 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           }
         }
         cResult[16] = tmp18;
-        cResult[17] = V;
+        cResult[17] = tmp32;
         cResult[18] = items6;
         let tmp31 = items6;
       } else {
-        class V {
+        class L {
           constructor() {
-            return closure_8.hasCatalogFetchErrorFor(targetUserId);
+            hasCatalogForResult = null != targetUserId;
+            if (hasCatalogForResult) {
+              tmp3 = closure_8;
+              hasCatalogForResult = closure_8.hasCatalogFor(tmp);
+            }
+            return hasCatalogForResult;
           }
         }
         tmp31 = cResult[18];
       }
       const tmpResult6 = targetUsername(504);
-      const stateFromStores2 = targetUsername(504).useStateFromStores(tmp29, V, tmp31);
+      const stateFromStores2 = targetUsername(504).useStateFromStores(tmp29, tmp32, tmp31);
       if (cResult[19] !== tmp18) {
         class G {
           constructor() {
@@ -445,7 +455,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         cResult[19] = tmp18;
         cResult[20] = G;
         cResult[21] = items7;
-        let tmp34 = items7;
+        let tmp35 = items7;
       } else {
         class G {
           constructor() {
@@ -463,9 +473,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             return;
           }
         }
-        tmp34 = cResult[21];
+        tmp35 = cResult[21];
       }
-      const effect = targetUserId.useEffect(G, tmp34);
+      const effect = targetUserId.useEffect(G, tmp35);
       if (cResult[22] === stateFromStores) {
         class G {
           constructor() {
@@ -483,7 +493,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             return;
           }
         }
-        const effect1 = obj7.useEffect(Q, tmp37);
+        const effect1 = obj7.useEffect(Q, tmp38);
         if (cResult[26] !== stateFromStoresArray) {
           class G {
             constructor() {
@@ -513,7 +523,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             }
           }
           cResult[27] = directoryBadges;
-          const tmp39 = directoryBadges;
+          const tmp40 = directoryBadges;
         } else {
           class G {
             constructor() {
@@ -542,7 +552,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             return id;
           }
         }
-        const owned = tmp39.owned;
+        const owned = tmp40.owned;
         if (cResult[28] === stateFromStoresArray) {
           class G {
             constructor() {
@@ -560,7 +570,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               return;
             }
           }
-          const badgeIndicatorIds = targetUsername(10903).useBadgeDirectoryBadgeIndicators(tmp42).badgeIndicatorIds;
+          const badgeIndicatorIds = targetUsername(10554).useBadgeDirectoryBadgeIndicators(tmp43).badgeIndicatorIds;
           class U {
             constructor() {
               currentUser = closure_1_7.getCurrentUser();
@@ -623,13 +633,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           const intl = targetUsername(1126).intl;
           const obj3 = { username: targetUsername };
           stringResult = intl.formatToPlainString(targetUsername(1126).t.EIcwoe, obj3);
-          const tmpResult8 = targetUsername(10903);
+          const tmpResult8 = targetUsername(10554);
         }
         const obj4 = { badges: stateFromStoresArray, enabled: !tmp17 };
         cResult[28] = stateFromStoresArray;
         cResult[29] = !tmp17;
         cResult[30] = obj4;
-        tmp42 = obj4;
+        tmp43 = obj4;
       }
       class Q {
         constructor() {
@@ -658,7 +668,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       cResult[24] = Q;
       cResult[25] = items8;
       obj7 = targetUserId;
-      tmp37 = items8;
+      tmp38 = items8;
       const tmpResult7 = targetUsername(504);
     }
     const items9 = [tmp4.footer, tmp9];
@@ -685,19 +695,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     throw new TypeError("Trying to call a non-function");
   }
   let obj = targetUsername(576);
-}) : ((arg0) => {
+}) : (function BadgeDirectoryView(arg0) {
   ({ targetUserId, targetUsername } = arg0);
   let stateFromStores;
   dependencyMap = undefined;
   targetUserId = undefined;
   let stateFromStoresArray;
   let tmp = closure_12();
-  if (typeof f56103 === "function") {
+  if (typeof useTileSize === "function") {
     let stringResult1 = dependencyMap;
-    const diff = stateFromStores(1484)().width - 2 * stateFromStores(587).space.PX_16;
+    const diff = stateFromStores(1496)().width - 2 * stateFromStores(587).space.PX_16;
     let result = 3 * stateFromStores(587).space.PX_12;
     let items = [tmp.footer, ];
-    let obj = { paddingBottom: stateFromStores(1618)().bottom + stateFromStores(587).space.PX_16 };
+    let obj = { paddingBottom: stateFromStores(1630)().bottom + stateFromStores(587).space.PX_16 };
     items[1] = obj;
     const items1 = [UserStore];
     stateFromStores = targetUsername(504).useStateFromStores(items1, () => {
@@ -767,7 +777,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const obj3 = { badges: stateFromStoresArray, enabled: null };
     let tmp33Result = !tmp10;
     obj3.enabled = tmp33Result;
-    const badgeIndicatorIds = targetUsername(10903).useBadgeDirectoryBadgeIndicators(obj3).badgeIndicatorIds;
+    const badgeIndicatorIds = targetUsername(10554).useBadgeDirectoryBadgeIndicators(obj3).badgeIndicatorIds;
     if (null != targetUserId && targetUserId !== stateFromStores) {
       if (null != targetUsername) {
         const intl2 = targetUsername(1126).intl;
@@ -804,21 +814,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           const obj7 = { variant: "text-md/semibold", children: null };
           const intl3 = targetUsername(1126).intl;
           obj7.children = intl3.string(targetUsername(1126).t.iufib1);
-          const items13 = [closure_10(targetUsername(4892).Text, obj7), , ];
+          const items13 = [closure_10(targetUsername(5086).Text, obj7), , ];
           const obj8 = { variant: "text-md/normal", color: "text-subtle", children: null };
           const intl4 = targetUsername(1126).intl;
           obj8.children = intl4.string(targetUsername(1126).t.eAn6z2);
-          items13[1] = closure_10(targetUsername(4892).Text, obj8);
+          items13[1] = closure_10(targetUsername(5086).Text, obj8);
           const obj9 = { variant: "secondary", size: "sm", onPress: callback, text: null };
           const intl5 = targetUsername(1126).intl;
           obj9.text = intl5.string(targetUsername(1126).t["7NqTJn"]);
-          items13[2] = closure_10(targetUsername(5601).Button, obj9);
+          items13[2] = closure_10(targetUsername(5375).Button, obj9);
           obj5.children = items13;
           return closure_11(closure_5, obj5);
         }
       }
       if (!stateFromStores1) {
-        const obj10 = { style: tmp.centered, children: closure_10(targetUsername(5975).ActivityIndicator, {}) };
+        const obj10 = { style: tmp.centered, children: closure_10(targetUsername(6158).ActivityIndicator, {}) };
         closure_10(closure_5, obj10);
       }
       let result1 = (diff - result) / 4;
@@ -854,7 +864,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         string = intl9.string;
         stringResult1 = string(targetUsername(1126).t.msyp90);
         obj16.text = stringResult1;
-        items = closure_10(targetUsername(5601).Button, obj16);
+        items = closure_10(targetUsername(5375).Button, obj16);
         obj15.children = items;
         let tmp33Result2 = closure_10(closure_5, obj15);
       } else {
@@ -864,7 +874,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           const obj18 = { variant: "secondary", onPress: callback1, text: null };
           const intl8 = targetUsername(1126).intl;
           obj18.text = intl8.string(targetUsername(1126).t["6CLLyH"]);
-          obj17.children = closure_10(targetUsername(5601).Button, obj18);
+          obj17.children = closure_10(targetUsername(5375).Button, obj18);
           tmp33Result2 = closure_10(closure_5, obj17);
         }
       }
@@ -874,7 +884,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     const intl = targetUsername(1126).intl;
     formatToPlainStringResult = intl.string(targetUsername(1126).t.UqnlQF);
-    const tmp6Result6 = targetUsername(10903);
+    const tmp6Result6 = targetUsername(10554);
   } else {
     throw new TypeError("Trying to call a non-function");
   }

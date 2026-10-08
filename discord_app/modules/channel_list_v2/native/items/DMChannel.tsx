@@ -1,28 +1,28 @@
-// === Module 16207: DMChannel ===
+// === Module 16467: DMChannel ===
 
-// Module 16207 (DMChannel)
+// Module 16467 (DMChannel)
 import nativeDefault from "native" /* 587 */;
-import transitionToChannel from "transitionToChannel" /* 4907 */;
-import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9295 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10664 */;
-import useCallA11yStateDefault from "useCallA11yState" /* 15998 */;
-import ChannelItemDefault from "ChannelItem" /* 16093 */;
+import transitionToChannel from "transitionToChannel" /* 5101 */;
+import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 8626 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10264 */;
+import useCallA11yStateDefault from "useCallA11yState" /* 16258 */;
+import ChannelItemDefault from "ChannelItem" /* 16353 */;
 import noop from "module_19" /* 19 */;
-import ReadStateStore from "ReadStateStore" /* 4911 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5077 */;
+import ReadStateStore from "ReadStateStore" /* 6040 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5971 */;
 
 require = fn;
-const UnreadSetting = fn(5078).UnreadSetting;
+const UnreadSetting = fn(5972).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
-let obj = { container: { marginVertical: fn(11711).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
+const createStyles = fn(5090);
+let obj = { container: { marginVertical: fn(11776).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
 let closure_8 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
-let obj3 = { marginVertical: fn(11711).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
+let obj3 = { marginVertical: fn(11776).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/channel_list_v2/native/items/DMChannel.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function DMChannel(channel) {
   const cResult = channel(576).c(31);
   channel = channel.channel;
   closure_8();
@@ -127,7 +127,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
   cResult[16] = mentionCount;
   cResult[17] = getChannelA11yLabelDefault({ channel, unread: hasUnread, mentionCount, isIncomingCall, isOngoingCall });
   const tmp18 = getChannelA11yLabelDefault({ channel, unread: hasUnread, mentionCount, isIncomingCall, isOngoingCall });
-}) : ((channel) => {
+}) : (function DMChannel(channel) {
   channel = channel.channel;
   const selected = channel.selected;
   const items = [channel.id];

@@ -1,25 +1,25 @@
-// === Module 12835: AddOrOpenAppButton ===
+// === Module 12982: AddOrOpenAppButton ===
 
-// Module 12835 (AddOrOpenAppButton)
+// Module 12982 (AddOrOpenAppButton)
 import c from "c" /* 576 */;
-import ToastUtils from "ToastUtils" /* 4573 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import ClipboardUtils from "ClipboardUtils" /* 6695 */;
-import ApplicationUtils from "ApplicationUtils" /* 8741 */;
-import getApplicationInstallURL from "getApplicationInstallURL" /* 11770 */;
-import useIsAppDMDefault from "useIsAppDM" /* 11783 */;
+import ToastUtils from "ToastUtils" /* 4765 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import ClipboardUtils from "ClipboardUtils" /* 6872 */;
+import ApplicationUtils from "ApplicationUtils" /* 10640 */;
+import getApplicationInstallURL from "getApplicationInstallURL" /* 11837 */;
+import useIsAppDMDefault from "useIsAppDM" /* 11850 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const getSection = fn(8827).getSection;
+const getSection = fn(9186).getSection;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const AppLauncherRouteName = fn(1489).AppLauncherRouteName;
+const AppLauncherRouteName = fn(1501).AppLauncherRouteName;
 const jsx = fn(21).jsx;
 fn(558);
 let ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((application) => {
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddAppButton(application) {
   const cResult = application(576).c(19);
   application = application.application;
   const guildId = application.guildId;
@@ -45,7 +45,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((application) =
           const customInstallUrl = application.customInstallUrl;
           if (null != customInstallUrl) {
             if (!obj2.isDiscordUrl(customInstallUrl)) {
-              let PlusSmallIcon = tmp(8296).LinkExternalSmallIcon;
+              let PlusSmallIcon = tmp(7679).LinkExternalSmallIcon;
             }
             const _Symbol = Symbol;
             if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
@@ -185,15 +185,15 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((application) =
               }
             }
             const obj6 = { text: tmp11, onPress: tmp4, onLongPress: tmp5, accessibilityActions: tmp9, onAccessibilityAction: C, icon: tmp13 };
-            const tmp18 = jsx(tmp(5601).Button, { text: tmp11, onPress: tmp4, onLongPress: tmp5, accessibilityActions: tmp9, onAccessibilityAction: C, icon: tmp13 });
+            const tmp18 = jsx(tmp(5375).Button, { text: tmp11, onPress: tmp4, onLongPress: tmp5, accessibilityActions: tmp9, onAccessibilityAction: C, icon: tmp13 });
             cResult[14] = C;
             cResult[15] = tmp5;
             cResult[16] = tmp4;
             cResult[17] = tmp13;
             cResult[18] = tmp18;
-            obj2 = guildId(1371);
+            obj2 = guildId(1383);
           }
-          PlusSmallIcon = tmp(8562).PlusSmallIcon;
+          PlusSmallIcon = tmp(9046).PlusSmallIcon;
         }
       }
     }
@@ -211,7 +211,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((application) =
   cResult[5] = fn;
   tmp4 = fn;
   let obj = application(576);
-}) : ((application) => {
+}) : (function AddAppButton(application) {
   application = application.application;
   const guildId = application.guildId;
   let items = [, , , , ];
@@ -226,7 +226,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((application) =
   const customInstallUrl = application.customInstallUrl;
   if (null != customInstallUrl) {
     if (!obj2.isDiscordUrl(customInstallUrl)) {
-      let PlusSmallIcon = application(8296).LinkExternalSmallIcon;
+      let PlusSmallIcon = application(7679).LinkExternalSmallIcon;
       let tmp6 = application;
     }
     const items1 = [application];
@@ -253,13 +253,13 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((application) =
     obj3.onAccessibilityAction = callback1;
     const obj4 = { size: "sm", color: guildId(587).colors.WHITE };
     obj3.icon = <PlusSmallIcon size="sm" color={guildId(587).colors.WHITE} />;
-    return jsx(tmp6(5601).Button, { text: null, onPress: null, onLongPress: null, accessibilityActions: null, onAccessibilityAction: null, icon: null });
+    return jsx(tmp6(5375).Button, { text: null, onPress: null, onLongPress: null, accessibilityActions: null, onAccessibilityAction: null, icon: null });
   }
-  PlusSmallIcon = application(8562).PlusSmallIcon;
+  PlusSmallIcon = application(9046).PlusSmallIcon;
   tmp6 = application;
 });
 ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((profileApplication) => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function OpenAppButton(profileApplication) {
   const cResult = require("c").c(8);
   profileApplication = profileApplication.profileApplication;
   _require = profileApplication;
@@ -408,7 +408,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((profileApplica
       }
     }
   });
-  const fn = function() {
+  function t1() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -417,14 +417,14 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((profileApplica
       applyArgumentsResult = apply(self, arguments);
     }
     return applyArgumentsResult;
-  };
+  }
   cResult[0] = botUserId;
   cResult[1] = channel;
   cResult[2] = profileApplication.id;
-  cResult[3] = fn;
-  tmp6 = fn;
+  cResult[3] = t1;
+  tmp6 = t1;
   const tmp4 = _slicedToArray(noop.useState(false), 2);
-}) : ((profileApplication) => {
+}) : (function OpenAppButton(profileApplication) {
   profileApplication = profileApplication.profileApplication;
   const botUserId = profileApplication.botUserId;
   const channel = profileApplication.channel;
@@ -479,18 +479,18 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((profileApplica
             if (application1 == null) {
               c3 = 1;
               c4 = 1;
-              const obj7 = { value: tmp2(6665).fetchApplication(profileApplication.id), done: false };
+              const obj7 = { value: tmp2(6842).fetchApplication(profileApplication.id), done: false };
               return obj7;
             } else {
               closure_129_1 = closure_0;
               closure_130_3(false);
               if (null != closure_129_0) {
-                tmp2(4860).hideAllActionSheets();
-                const obj5 = tmp2(4860);
+                tmp2(5054).hideAllActionSheets();
+                const obj5 = tmp2(5054);
                 const obj8 = { recipientIds: closure_130_1 };
                 c3 = 2;
                 c4 = 1;
-                const obj10 = { value: tmp2(4909).openPrivateChannel(obj8), done: false };
+                const obj10 = { value: tmp2(7001).openPrivateChannel(obj8), done: false };
                 return obj10;
               } else {
                 c4 = 3;
@@ -530,8 +530,8 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((profileApplica
             const obj = closure_0(dependencyMap[23]);
           }, 0);
           const obj12 = { application_id: closure_129_1.id };
-          tmp2(1252).track(constants.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, obj12);
-          let obj = tmp2(1252);
+          tmp2(1264).track(constants.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, obj12);
+          let obj = tmp2(1264);
         }
         c4 = 3;
         const obj13 = { value, done: true };
@@ -551,7 +551,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((profileApplica
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/AddOrOpenAppButton.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddOrOpenAppButton(arg0) {
   const cResult = c.c(6);
   ({ application, botUserId, channel, guildId } = arg0);
   const tmp2 = useIsAppDMDefault(channel);
@@ -577,7 +577,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[5] = tmp6;
   }
   tmp6 = <closure_11 profileApplication={application} botUserId={botUserId} channel={channel} />;
-}) : ((arg0) => {
+}) : (function AddOrOpenAppButton(arg0) {
   ({ application, channel } = arg0);
   ({ botUserId, guildId } = arg0);
   if (useIsAppDMDefault(channel)) {

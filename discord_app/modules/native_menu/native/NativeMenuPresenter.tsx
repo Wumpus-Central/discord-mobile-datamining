@@ -1,18 +1,17 @@
-// === Module 17120: NativeMenuPresenter ===
+// === Module 17401: NativeMenuPresenter ===
 
-// Module 17120 (NativeMenuPresenter)
-import useBackPressHandlerDefault from "useBackPressHandler" /* 5787 */;
-import NativeMenuActionCreatorsDefault from "NativeMenuActionCreators" /* 10394 */;
-import noop from "module_19" /* 19 */;
-import NativeMenuStore from "NativeMenuStore" /* 9625 */;
+// Module 17401 (NativeMenuPresenter)
+import initialize from "initialize" /* 504 */;
+import c from "c" /* 576 */;
+import NativeMenuStore from "NativeMenuStore" /* 9645 */;
 
-const require = fn;
+require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/native_menu/native/NativeMenuPresenter.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = key(576).c(5);
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function MenuContainer() {
+  const cResult = c.c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [NativeMenuStore];
     const fn = function u() {
@@ -28,50 +27,26 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp4, tmp5, tmp6] = cResult;
   }
-  let obj = key(576);
-  const stateFromStoresObject = key(504).useStateFromStoresObject(tmp4, tmp5, tmp6);
+  const stateFromStoresObject = initialize.useStateFromStoresObject(tmp4, tmp5, tmp6);
   const menu = stateFromStoresObject.menu;
-  if (cResult[3] !== stateFromStoresObject.key) {
-    const fn2 = function s() {
-      if (null != key) {
-        NativeMenuActionCreatorsDefault.hideNativeMenu(tmp);
-      }
-      return null != key;
-    };
-    cResult[3] = key;
-    cResult[4] = fn2;
-    let tmp9 = fn2;
-  } else {
-    tmp9 = cResult[4];
-  }
-  useBackPressHandlerDefault(tmp9);
-  let tmp11 = null;
+  let tmp9 = null;
   if (null != stateFromStoresObject.key) {
-    tmp11 = null;
+    tmp9 = null;
     if (null != menu) {
-      tmp11 = menu;
+      tmp9 = menu;
     }
   }
-  return tmp11;
-}) : (() => {
+  return tmp9;
+}) : (function MenuContainer() {
   const items = [NativeMenuStore];
-  const stateFromStoresObject = key(504).useStateFromStoresObject(items, () => ({ key: NativeMenuStore.getKey(), menu: NativeMenuStore.getMenu() }), []);
-  key = stateFromStoresObject.key;
+  const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => ({ key: NativeMenuStore.getKey(), menu: NativeMenuStore.getMenu() }), []);
   const menu = stateFromStoresObject.menu;
-  const items1 = [key];
-  const callback = noop.useCallback(() => {
-    if (null != key) {
-      NativeMenuActionCreatorsDefault.hideNativeMenu(tmp);
-    }
-    return null != key;
-  }, items1);
-  useBackPressHandlerDefault(callback);
-  let tmp4 = null;
-  if (null != key) {
-    tmp4 = null;
+  let tmp2 = null;
+  if (null != stateFromStoresObject.key) {
+    tmp2 = null;
     if (null != menu) {
-      tmp4 = menu;
+      tmp2 = menu;
     }
   }
-  return tmp4;
+  return tmp2;
 });

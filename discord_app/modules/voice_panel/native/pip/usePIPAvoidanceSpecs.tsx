@@ -1,14 +1,14 @@
-// === Module 17395: usePIPAvoidanceSpecs ===
+// === Module 17677: usePIPAvoidanceSpecs ===
 
-// Module 17395 (usePIPAvoidanceSpecs)
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9110 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 9787 */;
-import VoicePanelControlsConstants from "VoicePanelControlsConstants" /* 11914 */;
-import VoicePanelConstants from "VoicePanelConstants" /* 11916 */;
-import MorphablePanelConstants from "MorphablePanelConstants" /* 11917 */;
-import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 11920 */;
-import getPIPBottomOffsetForPIPModeDefault from "getPIPBottomOffsetForPIPMode" /* 17117 */;
-import getAdjustedBottomOffsetsDefault from "getAdjustedBottomOffsets" /* 17194 */;
+// Module 17677 (usePIPAvoidanceSpecs)
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9512 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10352 */;
+import VoicePanelControlsConstants from "VoicePanelControlsConstants" /* 11987 */;
+import VoicePanelConstants from "VoicePanelConstants" /* 11989 */;
+import MorphablePanelConstants from "MorphablePanelConstants" /* 11990 */;
+import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 11993 */;
+import getPIPBottomOffsetForPIPModeDefault from "getPIPBottomOffsetForPIPMode" /* 17398 */;
+import getAdjustedBottomOffsetsDefault from "getAdjustedBottomOffsets" /* 17475 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -21,7 +21,7 @@ const __initData2 = { code: "function usePIPAvoidanceSpecsTsx3(){const{mode,cont
 const __initData3 = { code: "function usePIPAvoidanceSpecsTsx4(props,previous){const{cheapWorkletShallowEqual,VoicePanelModes,VoicePanelControlsModes,DEFAULT_CHANNEL_INPUT_HEIGHT,PIP_WINDOW_OFFSET,getPIPBottomOffsetForPIPMode,getAdjustedBottomOffsets,calculateVoicePanelHeaderSpecs,edgeGutter,updateSharedValueIfChanged,pipAvoidanceSpecs}=this.__closure;if(cheapWorkletShallowEqual(props,previous!==null&&previous!==void 0?previous:undefined))return;const{mode:mode_0,controlsSpecs:controlsSpecs_0,keyboardHeight:keyboardHeight_0,safeArea:safeArea_0,screenName:screenName_0}=props;const screenBottomOffset=function(){if(mode_0!==VoicePanelModes.PIP){if(mode_0===VoicePanelModes.PANEL&&controlsSpecs_0.mode===VoicePanelControlsModes.DRAWER){return DEFAULT_CHANNEL_INPUT_HEIGHT+PIP_WINDOW_OFFSET;}return 0;}return getPIPBottomOffsetForPIPMode(screenName_0);}();let{bottomOffset:bottomOffset}=getAdjustedBottomOffsets({screenBottomOffset:screenBottomOffset,safeAreaBottom:safeArea_0.bottom,keyboardHeight:keyboardHeight_0});if(keyboardHeight_0<=0&&mode_0===VoicePanelModes.PANEL&&controlsSpecs_0.mode===VoicePanelControlsModes.FLOATING_DEFAULT){bottomOffset+=controlsSpecs_0.height+PIP_WINDOW_OFFSET;}const{height:headerHeight}=calculateVoicePanelHeaderSpecs(safeArea_0,edgeGutter);updateSharedValueIfChanged(pipAvoidanceSpecs,{top:mode_0===VoicePanelModes.PANEL&&controlsSpecs_0.mode===VoicePanelControlsModes.FLOATING_DEFAULT?headerHeight:0,bottom:bottomOffset});}" };
 const result = size.fileFinishedImporting("modules/voice_panel/native/pip/usePIPAvoidanceSpecs.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((mode) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePIPAvoidanceSpecs(mode) {
   mode = mode.mode;
   const controlsSpecs = mode.controlsSpecs;
   const safeArea = mode.safeArea;
@@ -84,7 +84,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((mode) => {
   fn2.__initData = __initData;
   const animatedReaction = obj3.useAnimatedReaction(fn, fn2);
   return sharedValue;
-}) : ((mode) => {
+}) : (function usePIPAvoidanceSpecs(mode) {
   mode = mode.mode;
   const controlsSpecs = mode.controlsSpecs;
   const safeArea = mode.safeArea;

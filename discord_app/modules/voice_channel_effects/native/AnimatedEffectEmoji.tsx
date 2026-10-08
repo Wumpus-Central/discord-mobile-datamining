@@ -1,15 +1,15 @@
-// === Module 9164: AnimatedEffectEmoji ===
+// === Module 10730: AnimatedEffectEmoji ===
 
-// Module 9164 (AnimatedEffectEmoji)
+// Module 10730 (AnimatedEffectEmoji)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import native from "native" /* 1188 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import timing from "timing" /* 4897 */;
-import FastImageDefault from "FastImage" /* 5981 */;
+import native from "native" /* 1200 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import timing from "timing" /* 5091 */;
+import FastImageDefault from "FastImage" /* 6164 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 require = fn;
 const View = fn(17).View;
@@ -17,7 +17,7 @@ const jsx = fn(21).jsx;
 let c7 = -120;
 let closure_8 = 6 * DurationsDefault.Millis.SECOND;
 let closure_9 = 2 * DurationsDefault.Millis.SECOND;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { voiceChannelEffectEmojiContainer: null, voiceChannelEffectEmojiContainerTileNotch: null, voiceChannelEffectEmoji: null, textEmoji: null, imageEmoji: null };
 const rect = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.round, position: "absolute", right: 16, top: 16 };
 obj2.voiceChannelEffectEmojiContainer = rect;
@@ -27,7 +27,7 @@ obj2.textEmoji = { fontSize: 32, lineHeight: 38, alignContent: "center", justify
 obj2.imageEmoji = { width: 32, height: 32 };
 let closure_10 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Emoji(arg0) {
   let imageEmoji = dependencyMap;
   const cResult = c.c(5);
   ({ url, surrogates } = arg0);
@@ -42,18 +42,13 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
   }
   if ("" !== url) {
-    const obj2 = { resizeMode: "contain", style: null, source: null };
-    const items = [textEmoji.imageEmoji];
-    obj2.style = items;
+    const obj2 = { resizeMode: "contain", style: textEmoji.imageEmoji, source: null };
     const obj3 = { uri: url };
     obj2.source = obj3;
-    let tmp4 = jsx(FastImageDefault, { resizeMode: "contain", style: null, source: null });
+    let tmp4 = jsx(FastImageDefault, { resizeMode: "contain", style: textEmoji.imageEmoji, source: null });
   } else {
-    const obj4 = { style: null, allowFontScaling: false, children: null };
-    const items1 = [textEmoji.textEmoji];
-    obj4.style = items1;
-    obj4.children = surrogates;
-    tmp4 = jsx(native.LegacyText, { style: null, allowFontScaling: false, children: null });
+    const obj4 = { style: textEmoji.textEmoji, allowFontScaling: false, children: surrogates };
+    tmp4 = jsx(native.LegacyText, { style: textEmoji.textEmoji, allowFontScaling: false, children: surrogates });
   }
   imageEmoji = textEmoji.imageEmoji;
   cResult[0] = imageEmoji;
@@ -62,22 +57,17 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = surrogates;
   cResult[3] = url;
   cResult[4] = tmp4;
-}) : ((url) => {
+}) : (function Emoji(url) {
   url = url.url;
   const tmp = closure_10();
   if ("" !== url) {
-    const obj2 = { resizeMode: "contain", style: null, source: null };
-    const items = [tmp.imageEmoji];
-    obj2.style = items;
+    const obj2 = { resizeMode: "contain", style: tmp.imageEmoji, source: null };
     const obj3 = { uri: url };
     obj2.source = obj3;
-    let tmp5 = jsx(FastImageDefault, { resizeMode: "contain", style: null, source: null });
+    let tmp5 = jsx(FastImageDefault, { resizeMode: "contain", style: tmp.imageEmoji, source: null });
   } else {
-    const obj = { style: null, allowFontScaling: false, children: null };
-    const items1 = [tmp.textEmoji];
-    obj.style = items1;
-    obj.children = url.surrogates;
-    tmp5 = jsx(native.LegacyText, { style: null, allowFontScaling: false, children: null });
+    const obj = { style: tmp.textEmoji, allowFontScaling: false, children: url.surrogates };
+    tmp5 = jsx(native.LegacyText, { style: tmp.textEmoji, allowFontScaling: false, children: url.surrogates });
   }
   return tmp5;
 });
@@ -87,14 +77,14 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_channel_effects/native/AnimatedEffectEmoji.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AnimatedEffectEmoji(arg0) {
   const cResult = onComplete(stateFromStores[8]).c(14);
   ({ userId, voiceChannelEffect, hasNotch, onComplete } = arg0);
   const tmp5 = closure_10();
   ({ emoji, sentAt } = voiceChannelEffect);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [AccessibilityStore];
-    const fn = function w() {
+    const fn = function f() {
       return useReducedMotion.useReducedMotion;
     };
     cResult[0] = items;
@@ -266,7 +256,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = fn2;
   tmp10 = fn2;
   let tmpResult = onComplete(stateFromStores[11]);
-}) : ((onComplete) => {
+}) : (function AnimatedEffectEmoji(onComplete) {
   ({ voiceChannelEffect, hasNotch } = onComplete);
   if (hasNotch === undefined) {
     hasNotch = false;

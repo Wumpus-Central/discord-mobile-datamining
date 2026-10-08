@@ -1,17 +1,17 @@
-// === Module 8364: useInAppBrowserReturn ===
+// === Module 8862: useInAppBrowserReturn ===
 
-// Module 8364 (useInAppBrowserReturn)
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8352 */;
-import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8358 */;
+// Module 8862 (useInAppBrowserReturn)
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8850 */;
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8856 */;
 import noop from "module_19" /* 19 */;
-import GameProfileStore from "GameProfileStore" /* 8360 */;
+import GameProfileStore from "GameProfileStore" /* 8858 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_profile/native/hooks/useInAppBrowserReturn.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((gameId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useInAppBrowserReturn(gameId) {
   const cResult = gameId(576).c(4);
   gameId = gameId.gameId;
   const scrollY = gameId.scrollY;
@@ -63,7 +63,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((gameId) => {
   tmp3 = items;
   tmp2 = fn;
   let obj = gameId(576);
-}) : ((gameId) => {
+}) : (function useInAppBrowserReturn(gameId) {
   gameId = gameId.gameId;
   const scrollY = gameId.scrollY;
   const items = [gameId, scrollY];

@@ -1,7 +1,7 @@
-// === Module 5775: useAccessibilityViewIsModalToggle ===
+// === Module 5358: useAccessibilityViewIsModalToggle ===
 
-// Module 5775 (useAccessibilityViewIsModalToggle)
-import AccessibilityFocusLockManagerDefault from "AccessibilityFocusLockManager" /* 5776 */;
+// Module 5358 (useAccessibilityViewIsModalToggle)
+import AccessibilityFocusLockManagerDefault from "AccessibilityFocusLockManager" /* 5359 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -9,7 +9,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/AccessibilityView/useAccessibilityViewIsModalToggle.native.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAccessibilityViewIsModalToggle(arg0) {
   const cResult = nativeID(576).c(6);
   ({ accessibilityViewIsModal, nativeID } = arg0);
   closure_1 = tmp2;
@@ -20,7 +20,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     noop = tmp3;
     if (cResult[3] !== tmp3) {
-      const fn2 = function b() {
+      const fn2 = function v() {
         closure_3();
         return () => {
           closure_1_3(false);
@@ -38,7 +38,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     const effect = noop.useEffect(tmp4, tmp5);
   }
-  const fn = function t(arg0) {
+  const fn = function l(arg0) {
     let tmp = arg0;
     if (undefined === arg0) {
       tmp = closure_1;
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = nativeID;
   cResult[2] = fn;
   tmp3 = fn;
-}) : ((accessibilityViewIsModal) => {
+}) : (function useAccessibilityViewIsModalToggle(accessibilityViewIsModal) {
   let flag = accessibilityViewIsModal.accessibilityViewIsModal;
   if (flag === undefined) {
     flag = false;

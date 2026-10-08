@@ -1,7 +1,7 @@
-// === Module 16069: useIsGameCommunityServerPreview ===
+// === Module 16329: useIsGameCommunityServerPreview ===
 
-// Module 16069 (useIsGameCommunityServerPreview)
-import LurkingStore from "LurkingStore" /* 4516 */;
+// Module 16329 (useIsGameCommunityServerPreview)
+import LurkingStore from "LurkingStore" /* 4708 */;
 
 const require = globalThis.__r;
 
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/lurker_mode/native/useIsGameCommunityServerPreview.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsGameCommunityServerPreview(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -42,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp6, tmp7);
-}) : ((arg0) => {
+}) : (function useIsGameCommunityServerPreview(arg0) {
   _require = arg0;
   const items = [LurkingStore];
   const items1 = [arg0];

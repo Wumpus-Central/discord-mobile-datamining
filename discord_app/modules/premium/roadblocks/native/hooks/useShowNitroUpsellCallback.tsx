@@ -1,8 +1,8 @@
-// === Module 9932: useShowNitroUpsellCallback ===
+// === Module 9454: useShowNitroUpsellCallback ===
 
-// Module 9932 (useShowNitroUpsellCallback)
+// Module 9454 (useShowNitroUpsellCallback)
 import c from "c" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -10,7 +10,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/roadblocks/native/hooks/useShowNitroUpsellCallback.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useShowNitroUpsellCallback() {
   const cResult = c.c(5);
   const sharedValue = ReanimatedRexport.useSharedValue(false);
   if (cResult[0] !== sharedValue) {
@@ -34,7 +34,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[3] = sharedValue;
   cResult[4] = obj3;
   tmp4 = obj3;
-}) : (() => {
+}) : (function useShowNitroUpsellCallback() {
   const sharedValue = ReanimatedRexport.useSharedValue(false);
   const items = [sharedValue];
   return {

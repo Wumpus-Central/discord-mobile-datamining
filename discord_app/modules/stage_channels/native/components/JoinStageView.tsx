@@ -1,13 +1,13 @@
-// === Module 9636: JoinStageView ===
+// === Module 10831: JoinStageView ===
 
-// Module 9636 (JoinStageView)
+// Module 10831 (JoinStageView)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import StageChannelParticipants from "StageChannelParticipants" /* 5589 */;
-import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 5595 */;
-import StageChannelUtils from "StageChannelUtils" /* 8109 */;
-import StageActionBarButtons from "StageActionBarButtons" /* 9571 */;
-import StageViewWithPromptsDefault from "StageViewWithPrompts" /* 9616 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 5955 */;
+import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 5961 */;
+import StageChannelUtils from "StageChannelUtils" /* 7483 */;
+import StageActionBarButtons from "StageActionBarButtons" /* 10766 */;
+import StageViewWithPromptsDefault from "StageViewWithPrompts" /* 10809 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/native/components/JoinStageView.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function JoinStageView(channel) {
   const cResult = c.c(14);
   channel = channel.channel;
   const stageParticipants = StageChannelParticipantStoreHooks.useStageParticipants(channel.id, StageChannelParticipants.StageChannelParticipantNamedIndex.SPEAKER);
@@ -77,7 +77,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   cResult[3] = tmp10;
   cResult[4] = participantNamesText;
   const tmpResult = StageChannelUtils;
-}) : ((channel) => {
+}) : (function JoinStageView(channel) {
   channel = channel.channel;
   const stageParticipants = StageChannelParticipantStoreHooks.useStageParticipants(channel.id, StageChannelParticipants.StageChannelParticipantNamedIndex.SPEAKER);
   const found = stageParticipants.filter((type) => type.type === StageChannelParticipants.StageChannelParticipantTypes.VOICE);

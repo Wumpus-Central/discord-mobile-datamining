@@ -1,10 +1,10 @@
-// === Module 8305: ManualReviewPendingAlertModal ===
+// === Module 7688: ManualReviewPendingAlertModal ===
 
-// Module 8305 (ManualReviewPendingAlertModal)
+// Module 7688 (ManualReviewPendingAlertModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import _modDef3137 from "module_3137" /* 3137 */;
-import AlertModal from "AlertModal" /* 5720 */;
+import _modDef3181 from "module_3181" /* 3181 */;
+import AlertModal from "AlertModal" /* 5303 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,13 +13,13 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/native/ManualReviewPendingAlertModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ManualReviewPendingAlertModal() {
   const cResult = c.c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
-    const stringResult = intl.string(_modDef3137.CNm4w6);
+    const stringResult = intl.string(_modDef3181.CNm4w6);
     const intl2 = util.intl;
-    const stringResult1 = intl2.string(_modDef3137["14Fje3"]);
+    const stringResult1 = intl2.string(_modDef3181["14Fje3"]);
     cResult[0] = stringResult;
     cResult[1] = stringResult1;
     tmp4 = stringResult;
@@ -42,12 +42,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp9 = cResult[2];
   }
   return tmp9;
-}) : (() => {
+}) : (function ManualReviewPendingAlertModal() {
   const obj = { title: null, content: null, actions: null };
   const intl = util.intl;
-  obj.title = intl.string(_modDef3137.CNm4w6);
+  obj.title = intl.string(_modDef3181.CNm4w6);
   const intl2 = util.intl;
-  obj.content = intl2.string(_modDef3137["14Fje3"]);
+  obj.content = intl2.string(_modDef3181["14Fje3"]);
   const obj2 = { children: null };
   const obj3 = { text: null };
   const intl3 = util.intl;

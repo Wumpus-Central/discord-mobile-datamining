@@ -1,22 +1,22 @@
-// === Module 17352: VoicePanelVisualEffectView ===
+// === Module 17633: VoicePanelVisualEffectView ===
 
-// Module 17352 (VoicePanelVisualEffectView)
+// Module 17633 (VoicePanelVisualEffectView)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import useToken from "useToken" /* 4586 */;
-import shared from "shared" /* 4735 */;
-import native from "native" /* 8602 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import useToken from "useToken" /* 4778 */;
+import shared from "shared" /* 4929 */;
+import native from "native" /* 8517 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1193 */;
+import ThemeStore from "ThemeStore" /* 1205 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ DynamicColorIOS: closure_4, StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { wrapper: null, border: null };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.wrapper = {};
@@ -31,7 +31,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/shared/VoicePanelVisualEffectView.tsx");
 
-export const VoicePanelVisualEffectView = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((matchAppTheme) => {
+export const VoicePanelVisualEffectView = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePanelVisualEffectViewInner(matchAppTheme) {
   const cResult = c.c(18);
   matchAppTheme = matchAppTheme.matchAppTheme;
   const token = useToken.useToken(nativeDefault.colors.THEME_LOCKED_BLUR_FALLBACK);
@@ -129,7 +129,7 @@ export const VoicePanelVisualEffectView = noop.memo(ReactCompilerGating.isReactC
   cResult[5] = tmp15;
   tmp14 = tmp15;
   tmpResult8 = PlatformUtils;
-}) : ((matchAppTheme) => {
+}) : (function VoicePanelVisualEffectViewInner(matchAppTheme) {
   let flag = matchAppTheme.matchAppTheme;
   if (flag === undefined) {
     flag = false;

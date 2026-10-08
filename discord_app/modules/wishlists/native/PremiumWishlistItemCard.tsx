@@ -1,8 +1,8 @@
-// === Module 10785: PremiumWishlistItemCard ===
+// === Module 12738: PremiumWishlistItemCard ===
 
-// Module 10785 (PremiumWishlistItemCard)
-import SKUPreview from "SKUPreview" /* 8459 */;
-import WishlistItemCardBaseDefault from "WishlistItemCardBase" /* 8460 */;
+// Module 12738 (PremiumWishlistItemCard)
+import SKUPreview from "SKUPreview" /* 8945 */;
+import WishlistItemCardBaseDefault from "WishlistItemCardBase" /* 8946 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ const ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/native/PremiumWishlistItemCard.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumWishlistItemCard(arg0) {
   const cResult = require("c").c(13);
   if (cResult[0] !== arg0) {
     ({ sku, source, size } = arg0);
@@ -70,7 +70,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[11] = tmp6;
   cResult[12] = jsx(WishlistItemCardBaseDefault, { accessibilityLabel: tmp5.name, renderPreview: P, source: tmp6, size });
   const tmp13 = jsx(WishlistItemCardBaseDefault, { accessibilityLabel: tmp5.name, renderPreview: P, source: tmp6, size });
-}) : ((size) => {
+}) : (function PremiumWishlistItemCard(size) {
   size = size.size;
   ({ sku, source } = size);
   const merged = Object.assign(size, Object.assign({ sku: 0, source: 0, size: 0 }));

@@ -1,10 +1,10 @@
-// === Module 6971: useTrialOffer ===
+// === Module 7160: useTrialOffer ===
 
-// Module 6971 (useTrialOffer)
+// Module 7160 (useTrialOffer)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
-import UserOfferStore from "UserOfferStore" /* 6972 */;
+import UserStore from "UserStore" /* 1389 */;
+import UserOfferStore from "UserOfferStore" /* 7161 */;
 
 const require = globalThis.__r;
 
@@ -23,7 +23,7 @@ export const hasUserTrialOfferExpired = function hasUserTrialOfferExpired(hasExp
   }
   return flag;
 };
-export const useTrialOffer = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useTrialOffer = ReactCompilerGating.isReactCompilerEnabled() ? (function useTrialOffer(arg0) {
   _require = arg0;
   const cResult = require("c").c(9);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -34,7 +34,7 @@ export const useTrialOffer = ReactCompilerGating.isReactCompilerEnabled() ? ((ar
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function f() {
+    const fn = function o() {
       return UserOfferStore.getUserTrialOffer(closure_0);
     };
     cResult[1] = arg0;
@@ -57,15 +57,12 @@ export const useTrialOffer = ReactCompilerGating.isReactCompilerEnabled() ? ((ar
   noop = tmp8[1];
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [UserStore];
-    class T {
-      constructor() {
-        obj = closure_0(closure_1[7]);
-        return obj.isPremium(closure_1_4.getCurrentUser());
-      }
-    }
+    const fn2 = function p() {
+      return closure_0(stateFromStores[7]).isPremium(currentUser.getCurrentUser());
+    };
     cResult[3] = items1;
-    cResult[4] = T;
-    let tmp11 = T;
+    cResult[4] = fn2;
+    let tmp11 = fn2;
     let tmp10 = items1;
   } else {
     tmp10 = cResult[3];
@@ -74,8 +71,9 @@ export const useTrialOffer = ReactCompilerGating.isReactCompilerEnabled() ? ((ar
   const obj3 = noop;
   const tmpResult = require("initialize");
   const stateFromStores1 = require("initialize").useStateFromStores(tmp10, tmp11);
+  let result = !stateFromStores1;
   if (stateFromStores1) {
-    const result = UserOfferStore.canFractionalPremiumUserUseOffer();
+    result = UserOfferStore.canFractionalPremiumUserUseOffer();
   }
   if (cResult[5] === first1) {
     if (cResult[6] === stateFromStores) {
@@ -83,15 +81,16 @@ export const useTrialOffer = ReactCompilerGating.isReactCompilerEnabled() ? ((ar
       let tmp17 = cResult[8];
     }
     const effect = obj3.useEffect(tmp16, tmp17);
-    class T {
-      constructor() {
-        obj = closure_0(closure_1[7]);
-        return obj.isPremium(closure_1_4.getCurrentUser());
+    let tmp19 = null;
+    if (!first1) {
+      tmp19 = null;
+      if (result) {
+        tmp19 = stateFromStores;
       }
     }
-    return null;
+    return tmp19;
   }
-  class U {
+  class E {
     constructor() {
       tmp = closure_1;
       if (null != closure_1) {
@@ -141,12 +140,12 @@ export const useTrialOffer = ReactCompilerGating.isReactCompilerEnabled() ? ((ar
   const items2 = [first1, stateFromStores];
   cResult[5] = first1;
   cResult[6] = stateFromStores;
-  cResult[7] = U;
+  cResult[7] = E;
   cResult[8] = items2;
   tmp17 = items2;
-  tmp16 = U;
+  tmp16 = E;
   const tmpResult2 = require("initialize");
-}) : ((arg0) => {
+}) : (function useTrialOffer(arg0) {
   _require = arg0;
   const items = [UserOfferStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => UserOfferStore.getUserTrialOffer(closure_0));

@@ -1,19 +1,18 @@
-// === Module 1394: DisplayNameStylesUtils ===
+// === Module 1406: DisplayNameStylesUtils ===
 
-// Module 1394 (DisplayNameStylesUtils)
+// Module 1406 (DisplayNameStylesUtils)
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 568 */;
 import _modDef683 from "module_683" /* 683 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
-import DisplayNameEffect from "DisplayNameEffect" /* 1396 */;
-import DisplayNameFont from "DisplayNameFont" /* 1397 */;
+import DisplayNameEffect from "DisplayNameEffect" /* 1408 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const DisplayNameStylesConstants = fn(1395);
-({ DISPLAY_NAME_STYLES_GUMMY_HUE_LIGHTNESS: closure_4, DISPLAY_NAME_STYLES_GUMMY_HUE_SATURATION: hasOwnProperty, FLYWHEEL_EFFECTS: metroRequire, FLYWHEEL_FONTS: closure_7, getColorPresetsForEffect: closure_8 } = DisplayNameStylesConstants);
-let items = [fn(1396).DisplayNameEffect.NEON, fn(1396).DisplayNameEffect.TOON, fn(1396).DisplayNameEffect.POP, fn(1396).DisplayNameEffect.GUMMY];
+const DisplayNameStylesConstants = fn(1407);
+({ DISPLAY_NAME_STYLES_GUMMY_HUE_LIGHTNESS: closure_4, DISPLAY_NAME_STYLES_GUMMY_HUE_SATURATION: hasOwnProperty, getColorPresetsForEffect: metroRequire } = DisplayNameStylesConstants);
+let items = [fn(1408).DisplayNameEffect.NEON, fn(1408).DisplayNameEffect.TOON, fn(1408).DisplayNameEffect.POP, fn(1408).DisplayNameEffect.GUMMY];
 const set = new Set(items);
 const items1 = [{ hueShift: -18, saturation: 0.54, lightness: 0.72 }, { hueShift: -5, saturation: 0.66, lightness: 0.6 }, { hueShift: 9, saturation: 0.56, lightness: 0.68 }, { hueShift: 22, saturation: 0.6, lightness: 0.63 }];
 const size = fn(2);
@@ -47,7 +46,7 @@ export const areDisplayNameStylesEqual = function areDisplayNameStylesEqual(font
 };
 export const isSolidPresetColor = function isSolidPresetColor(arg0, arg1) {
   closure_0 = arg0;
-  return closure_1_8(arg1).some((item) => item[0] === closure_0);
+  return timestampProducer(arg1).some((item) => item[0] === closure_0);
 };
 export const resolveSolidColor = function resolveSolidColor(arg0, arg1, arg2) {
   let tmp = arg1;
@@ -55,7 +54,7 @@ export const resolveSolidColor = function resolveSolidColor(arg0, arg1, arg2) {
     tmp = arg0;
   } else {
     closure_0 = arg0;
-    closure_1_8(arg2);
+    timestampProducer(arg2);
   }
   return tmp;
 };
@@ -63,7 +62,7 @@ export const resolveSolidPresetSeed = function resolveSolidPresetSeed(selectedCo
   let first = selectedColor;
   closure_0 = selectedColor;
   if (!obj.some((item) => item[0] === closure_0)) {
-    first = closure_1_8(selectedEffectId)[0][0];
+    first = timestampProducer(selectedEffectId)[0][0];
   }
   return first;
 };
@@ -156,38 +155,11 @@ export const parseServerDisplayNameStyles = function parseServerDisplayNameStyle
 };
 export const generateRandomDisplayNameStyles = function generateRandomDisplayNameStyles(visibleFontOrder, visibleEffectOrder) {
   const tmp = visibleEffectOrder[Math.floor(Math, Math.random(Math) * visibleEffectOrder.length)];
-  const arr = closure_1_8(tmp);
+  const arr = timestampProducer(tmp);
   const obj = { fontId: visibleFontOrder[Math.floor(Math, Math.random(Math) * visibleFontOrder.length)], effectId: tmp, colors: null };
   const items = [...arr[Math.floor(Math, Math.random(Math) * arr.length)]];
   obj.colors = items;
   return obj;
-};
-export const applyFlywheelViewingFallback = function applyFlywheelViewingFallback(fontId, isDisplayNameStylesFlywheelViewersEnabled) {
-  if (!isDisplayNameStylesFlywheelViewersEnabled) {
-    if (null != fontId) {
-      if (React5.includes(fontId.fontId)) {
-        fontId = DisplayNameFont.DisplayNameFont.DEFAULT;
-      } else {
-        fontId = fontId.fontId;
-      }
-      if (timestampProducer.includes(fontId.effectId)) {
-        let effectId = DisplayNameEffect.DisplayNameEffect.SOLID;
-      } else {
-        effectId = fontId.effectId;
-      }
-      if (fontId !== fontId.fontId) {
-        const obj = {};
-        const merged = Object.assign(fontId);
-        obj.fontId = fontId;
-        obj.effectId = effectId;
-        let tmp7 = obj;
-      } else {
-        tmp7 = fontId;
-      }
-      return tmp7;
-    }
-  }
-  return fontId;
 };
 export const hasNonLatinLetters = function hasNonLatinLetters(displayName) {
   if (null == displayName) {

@@ -1,14 +1,14 @@
-// === Module 15817: useDMPermissionsOverrideCount ===
+// === Module 16076: useDMPermissionsOverrideCount ===
 
-// Module 15817 (useDMPermissionsOverrideCount)
-import GuildStore from "GuildStore" /* 2074 */;
+// Module 16076 (useDMPermissionsOverrideCount)
+import GuildStore from "GuildStore" /* 2086 */;
 
 const require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/privacy_and_safety/useDMPermissionsOverrideCount.tsx");
 
-export const useDMPermissionsOverrideCount = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useDMPermissionsOverrideCount = ReactCompilerGating.isReactCompilerEnabled() ? (function useDMPermissionsOverrideCount() {
   const cResult = setting(defaultGuildsRestricted[2]).c(5);
   const RestrictedGuildIds = setting(defaultGuildsRestricted[3]).RestrictedGuildIds;
   setting = RestrictedGuildIds.useSetting();
@@ -43,7 +43,7 @@ export const useDMPermissionsOverrideCount = ReactCompilerGating.isReactCompiler
   tmp9 = items1;
   tmp8 = fn;
   const obj2 = setting(defaultGuildsRestricted[4]);
-}) : (() => {
+}) : (function useDMPermissionsOverrideCount() {
   const RestrictedGuildIds = setting(defaultGuildsRestricted[3]).RestrictedGuildIds;
   setting = RestrictedGuildIds.useSetting();
   defaultGuildsRestricted = setting(defaultGuildsRestricted[4]).useDefaultGuildsRestricted();

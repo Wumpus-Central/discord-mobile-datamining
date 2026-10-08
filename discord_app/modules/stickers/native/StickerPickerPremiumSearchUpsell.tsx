@@ -1,9 +1,9 @@
-// === Module 10158: StickerPickerPremiumSearchUpsell ===
+// === Module 9744: StickerPickerPremiumSearchUpsell ===
 
-// Module 10158 (StickerPickerPremiumSearchUpsell)
+// Module 9744 (StickerPickerPremiumSearchUpsell)
 import nativeDefault from "native" /* 587 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import PremiumUtils from "PremiumUtils" /* 4534 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import PremiumUtils from "PremiumUtils" /* 4726 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -11,10 +11,10 @@ const require = globalThis.__r;
 require = fn;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_4, AnalyticsPages: hasOwnProperty, AnalyticsSections: metroRequire } = Constants);
-const PremiumConstants = fn(1379);
+const PremiumConstants = fn(1391);
 ({ PremiumSubscriptionSKUs: closure_7, PremiumUpsellTypes: closure_8 } = PremiumConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { nitroIcon: { marginRight: nativeDefault.space.PX_8, alignSelf: "center" } };
 let closure_10 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -22,7 +22,7 @@ let obj3 = { marginRight: nativeDefault.space.PX_8, alignSelf: "center" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stickers/native/StickerPickerPremiumSearchUpsell.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function StickerPickerPremiumSearchUpsell(guildId) {
   const cResult = guildId(analyticsLocations[7]).c(14);
   guildId = guildId.guildId;
   const tmp4 = closure_10();
@@ -89,33 +89,56 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       tmp20 = tmp22;
     }
   }
-  const fn = function p() {
-    if (!ref.current) {
-      tmp.current = true;
-      let obj2 = { type: constants4.STICKERS_EVERYWHERE_INLINE_UPSELL, location: null, location_stack: null, sku_id: null };
-      if (null != guildId) {
-        let DM_CHANNEL = constants2.GUILD_CHANNEL;
+  class L {
+    constructor() {
+      if (closure_1.current) {
+        return;
       } else {
-        DM_CHANNEL = constants2.DM_CHANNEL;
+        flag = true;
+        tmp.current = true;
+        tmp2 = closure_1;
+        tmp3 = closure_2;
+        obj = closure_1(closure_2[13]);
+        tmp4 = AnalyticEvents;
+        obj1 = { type: null, location: null, location_stack: null, sku_id: null };
+        tmp5 = PremiumUpsellTypes;
+        obj1.type = PremiumUpsellTypes.STICKERS_EVERYWHERE_INLINE_UPSELL;
+        tmp6 = guildId;
+        tmp7 = null;
+        if (null != guildId) {
+          tmp9 = AnalyticsPages;
+          DM_CHANNEL = AnalyticsPages.GUILD_CHANNEL;
+        } else {
+          tmp8 = AnalyticsPages;
+          DM_CHANNEL = AnalyticsPages.DM_CHANNEL;
+        }
+        obj5 = { page: null, section: null };
+        obj5.page = DM_CHANNEL;
+        tmp10 = AnalyticsSections;
+        obj5.section = AnalyticsSections.STICKER_PICKER_UPSELL;
+        obj1.location = obj5;
+        tmp11 = analyticsLocations;
+        obj1.location_stack = analyticsLocations;
+        tmp12 = closure_0;
+        obj4 = closure_0(tmp3[14]);
+        tmp13 = useTier0UpsellContent;
+        tmp14 = PremiumSubscriptionSKUs;
+        obj1.sku_id = obj4.castPremiumSubscriptionAsSkuId(useTier0UpsellContent ? tmp14.TIER_0 : tmp14.TIER_2);
+        obj1 = obj.track(AnalyticEvents.PREMIUM_UPSELL_VIEWED, obj1);
       }
-      const obj3 = { page: DM_CHANNEL, section: constants3.STICKER_PICKER_UPSELL };
-      obj2.location = obj3;
-      obj2.location_stack = analyticsLocations;
-      const obj = AnalyticsUtilsDefault;
-      obj2.sku_id = PremiumUtils.castPremiumSubscriptionAsSkuId(useTier0UpsellContent ? React5.TIER_0 : React5.TIER_2);
-      obj2 = obj.track(constants.PREMIUM_UPSELL_VIEWED, obj2);
+      return;
     }
-  };
+  }
   const items = [analyticsLocations, guildId, useTier0UpsellContent];
   cResult[1] = analyticsLocations;
   cResult[2] = guildId;
   cResult[3] = useTier0UpsellContent;
-  cResult[4] = fn;
+  cResult[4] = L;
   cResult[5] = items;
   tmp11 = items;
-  tmp10 = fn;
+  tmp10 = L;
   const tmp9 = require("usePremiumFeatureUpsellGetNitro")(useTier0UpsellContent, premiumUpsellConfig.onViewAllPerks, constants2.PREMIUM_UPSELL_STICKERS_EVERYWHERE);
-}) : ((guildId) => {
+}) : (function StickerPickerPremiumSearchUpsell(guildId) {
   guildId = guildId.guildId;
   let analyticsLocations;
   let useTier0UpsellContent;

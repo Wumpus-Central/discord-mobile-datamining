@@ -1,17 +1,17 @@
-// === Module 8166: AgeVerificationSpotIllustration ===
+// === Module 7547: AgeVerificationSpotIllustration ===
 
-// Module 8166 (AgeVerificationSpotIllustration)
+// Module 7547 (AgeVerificationSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5981 */;
-import _modDef8167 from "module_8167" /* 8167 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import _modDef7548 from "module_7548" /* 7548 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
 let result = size.fileFinishedImporting("design/components/mana-assets/native/generated/AgeVerificationSpotIllustration.native.tsx");
 
-export const AgeVerificationSpotIllustration = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const AgeVerificationSpotIllustration = ReactCompilerGating.isReactCompilerEnabled() ? (function AgeVerificationSpotIllustration(arg0) {
   const cResult = c.c(9);
   ({ accessible, accessibilityLabel, resizeMode, width, height, scale } = arg0);
   let num = 288;
@@ -27,7 +27,7 @@ export const AgeVerificationSpotIllustration = ReactCompilerGating.isReactCompil
     num3 = scale;
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { uri: _modDef8167 };
+    const obj2 = { uri: _modDef7548 };
     cResult[0] = obj2;
     let first = obj2;
   } else {
@@ -58,12 +58,12 @@ export const AgeVerificationSpotIllustration = ReactCompilerGating.isReactCompil
     cResult[8] = tmp11;
     tmp8 = tmp11;
   }
-  const items = [{ width: result, height: result1 }];
+  const size = { width: result, height: result1 };
   cResult[1] = result;
   cResult[2] = result1;
-  cResult[3] = items;
-  tmp7 = items;
-}) : ((width) => {
+  cResult[3] = size;
+  tmp7 = size;
+}) : (function AgeVerificationSpotIllustration(width) {
   let num = width.width;
   ({ accessible, accessibilityLabel, resizeMode } = width);
   if (num === undefined) {
@@ -78,11 +78,9 @@ export const AgeVerificationSpotIllustration = ReactCompilerGating.isReactCompil
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef8167 };
+  const obj2 = { uri: _modDef7548 };
   obj.source = obj2;
-  const size = { width: num * num3, height: num2 * num3 };
-  const items = [size];
-  obj.style = items;
+  obj.style = { width: num * num3, height: num2 * num3 };
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;

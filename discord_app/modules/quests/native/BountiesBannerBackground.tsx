@@ -1,12 +1,12 @@
-// === Module 14899: BountiesBannerBackground ===
+// === Module 15161: BountiesBannerBackground ===
 
-// Module 14899 (BountiesBannerBackground)
+// Module 15161 (BountiesBannerBackground)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import LinearGradientDefault from "LinearGradient" /* 5612 */;
-import common_Video from "common/Video" /* 7993 */;
+import LinearGradientDefault from "LinearGradient" /* 5387 */;
+import common_Video from "common/Video" /* 8401 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -19,7 +19,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/BountiesBannerBackground.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function BountiesBannerBackground(arg0) {
   const cResult = c.c(12);
   ({ children, style, uri } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -81,7 +81,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   tmp9 = tmp10;
   const obj5 = { source: tmp8, style: React3.absoluteFillObject, resizeMode: "cover", muted: true, disableFocus: true, paused: stateFromStores, importantForAccessibility: "no-hide-descendants" };
   const tmpResult = initialize;
-}) : ((arg0) => {
+}) : (function BountiesBannerBackground(arg0) {
   ({ children, style, uri } = arg0);
   const items = [AccessibilityStore];
   const obj2 = { style, children: null };

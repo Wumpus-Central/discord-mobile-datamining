@@ -1,7 +1,7 @@
-// === Module 17399: useExternalPipAspectRatioUpdater ===
+// === Module 17681: useExternalPipAspectRatioUpdater ===
 
-// Module 17399 (useExternalPipAspectRatioUpdater)
-import ExternalPipDefault from "ExternalPip" /* 9145 */;
+// Module 17681 (useExternalPipAspectRatioUpdater)
+import ExternalPipDefault from "ExternalPip" /* 5219 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -11,12 +11,12 @@ const ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/external_pip/useExternalPipAspectRatioUpdater.native.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, current) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useExternalPipAspectRatioUpdater(arg0, arg1, current) {
   _require = arg1;
   const cResult = require("c").c(5);
   dependencyMap = noop.useRef(current);
   if (cResult[0] !== current) {
-    const fn = function u() {
+    const fn = function c() {
       closure_2.current = current;
     };
     cResult[0] = current;
@@ -27,7 +27,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, curr
   }
   const insertionEffect = noop.useInsertionEffect(tmp2);
   if (cResult[2] !== arg1) {
-    const fn2 = function c() {
+    const fn2 = function h() {
       size = size.getTargetDimensions(ref.current);
       current(ref[3]).setPipAspectRatio(size.width, size.height);
       return size.subscribeFromItem(() => {
@@ -55,7 +55,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, curr
   }
   const effect = noop.useEffect(tmp4, tmp5);
   const obj = require("c");
-}) : ((arg0, arg1, current) => {
+}) : (function useExternalPipAspectRatioUpdater(arg0, arg1, current) {
   closure_0 = arg1;
   noop.useRef(current);
   const insertionEffect = noop.useInsertionEffect(() => {

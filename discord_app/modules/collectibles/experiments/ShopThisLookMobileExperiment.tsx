@@ -1,8 +1,8 @@
-// === Module 7896: ShopThisLookMobileExperiment ===
+// === Module 8316: ShopThisLookMobileExperiment ===
 
-// Module 7896 (ShopThisLookMobileExperiment)
+// Module 8316 (ShopThisLookMobileExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1440 */;
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -10,7 +10,7 @@ const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-07-shop
 const result = size.fileFinishedImporting("modules/collectibles/experiments/ShopThisLookMobileExperiment.tsx");
 
 export default apexExperiment;
-export const useIsShopThisLookMobileEnabled = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+export const useIsShopThisLookMobileEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsShopThisLookMobileEnabled(location) {
   const cResult = c.c(2);
   if (cResult[0] !== location) {
     const obj2 = { location };
@@ -21,4 +21,6 @@ export const useIsShopThisLookMobileEnabled = ReactCompilerGating.isReactCompile
     tmp2 = cResult[1];
   }
   return apexExperiment.useConfig(tmp2).shopThisLookMobileEnabled;
-}) : ((location) => apexExperiment.useConfig({ location }).shopThisLookMobileEnabled);
+}) : (function useIsShopThisLookMobileEnabled(location) {
+  return apexExperiment.useConfig({ location }).shopThisLookMobileEnabled;
+});

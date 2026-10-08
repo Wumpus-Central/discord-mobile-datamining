@@ -1,9 +1,9 @@
-// === Module 9033: ActivitiesInTextUtils ===
+// === Module 8488: ActivitiesInTextUtils ===
 
-// Module 9033 (ActivitiesInTextUtils)
+// Module 8488 (ActivitiesInTextUtils)
 import ChannelTypes from "ChannelTypes" /* 1106 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
 
 const require = globalThis.__r;
 
@@ -31,7 +31,7 @@ function isActivityInTextSupportedForChannel(channel) {
 const Permissions = fn(1096).Permissions;
 fn(558);
 const ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsActivitiesInTextEnabled(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -70,7 +70,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp7);
-}) : ((arg0) => {
+}) : (function useIsActivitiesInTextEnabled(arg0) {
   _require = arg0;
   const items = [ChannelStore, PermissionStore];
   return require("initialize").useStateFromStores(items, () => {
@@ -130,7 +130,7 @@ export const isActivitiesInTextEnabled = function isActivitiesInTextEnabled(chan
 };
 export const useIsActivitiesInTextEnabled = tmp2;
 export { getIsAppLauncherEnabled };
-export const useIsAppLauncherEnabled = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useIsAppLauncherEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsAppLauncherEnabled(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -165,7 +165,7 @@ export const useIsAppLauncherEnabled = ReactCompilerGating.isReactCompilerEnable
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp6);
-}) : ((arg0) => {
+}) : (function useIsAppLauncherEnabled(arg0) {
   _require = arg0;
   const items = [ChannelStore];
   return require("initialize").useStateFromStores(items, () => {

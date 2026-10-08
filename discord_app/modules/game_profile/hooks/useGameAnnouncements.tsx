@@ -1,9 +1,9 @@
-// === Module 8446: useGameAnnouncements ===
+// === Module 8932: useGameAnnouncements ===
 
-// Module 8446 (useGameAnnouncements)
+// Module 8932 (useGameAnnouncements)
 import _mod19 from "module_19" /* 19 */;
-import GameProfileHttpUtils from "GameProfileHttpUtils" /* 8447 */;
-import GameProfileStore from "GameProfileStore" /* 8360 */;
+import GameProfileHttpUtils from "GameProfileHttpUtils" /* 8933 */;
+import GameProfileStore from "GameProfileStore" /* 8858 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -12,7 +12,7 @@ const require = globalThis.__r;
 const useEffect = _mod19.useEffect;
 let result = size.fileFinishedImporting("modules/game_profile/hooks/useGameAnnouncements.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, limit) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGameAnnouncements(arg0, limit) {
   _require = arg0;
   dependencyMap = limit;
   const cResult = require("c").c(16);
@@ -24,7 +24,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, limit) => 
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function u() {
+    const fn = function l() {
       let announcements;
       if (null != closure_0) {
         announcements = GameProfileStore.getAnnouncements(closure_0);
@@ -130,7 +130,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, limit) => 
   tmp9 = items1;
   tmp8 = fn2;
   const tmpResult = require("initialize");
-}) : ((arg0, limit) => {
+}) : (function useGameAnnouncements(arg0, limit) {
   _require = arg0;
   dependencyMap = limit;
   const items = [GameProfileStore];

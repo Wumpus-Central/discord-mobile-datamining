@@ -1,38 +1,38 @@
-// === Module 10392: MediaKeyboardItem ===
+// === Module 9989: MediaKeyboardItem ===
 
-// Module 10392 (MediaKeyboardItem)
+// Module 9989 (MediaKeyboardItem)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4618 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import timing from "timing" /* 4897 */;
-import ImageIcon from "ImageIcon" /* 5878 */;
-import _modDef10136 from "module_10136" /* 10136 */;
-import AttachmentIcon from "AttachmentIcon" /* 10382 */;
-import NativeMenuActionCreatorsDefault from "NativeMenuActionCreators" /* 10394 */;
-import CameraIcon from "CameraIcon" /* 10397 */;
+import native from "native" /* 1200 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4810 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import timing from "timing" /* 5091 */;
+import ImageIcon from "ImageIcon" /* 8190 */;
+import _modDef9721 from "module_9721" /* 9721 */;
+import AttachmentIcon from "AttachmentIcon" /* 9979 */;
+import NativeMenuActionCreatorsDefault from "NativeMenuActionCreators" /* 9991 */;
+import CameraIcon from "CameraIcon" /* 9994 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 7280 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 7880 */;
 
 const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable } = get_ActivityIndicator);
-const DeviceConstants = fn(10393);
+const DeviceConstants = fn(9990);
 ({ ALAssetsType: closure_7, DeviceMediaType: closure_8 } = DeviceConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let closure_11 = ReanimatedRexport.createAnimatedComponent(Pressable);
-let createStyles = fn(4896);
+let createStyles = fn(5090);
 let obj = { container: { flexDirection: "row", paddingHorizontal: 12, alignItems: "center" }, image: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND }, imageContainer: null, labelContainer: null, mediaKeyboardItemLabelContainer: null, icon: null, checkIcon: null, checkIconContainer: null, selectedOverlay: null, specialButton: null, disabled: null, imageDisabled: null };
 let obj2 = { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND };
 obj.imageContainer = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", position: "relative" };
 const rect = { flexDirection: "row", alignItems: "center", backgroundColor: null, borderRadius: null, paddingHorizontal: 5, paddingVertical: 4, position: "absolute", left: 8, bottom: 8 };
-let ColorUtils = fn(4733);
+let ColorUtils = fn(4927);
 rect.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_700, 0.6);
 rect.borderRadius = nativeDefault.radii.xs;
 obj.labelContainer = rect;
@@ -42,13 +42,13 @@ obj.icon = size;
 let size1 = { width: 14, height: 14, color: nativeDefault.colors.BACKGROUND_BRAND };
 obj.checkIcon = size1;
 let size2 = { width: 24, height: 24, position: "absolute", justifyContent: "center", alignItems: "center", right: 6, top: 6, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.WHITE, borderWidth: 1, borderColor: null };
-ColorUtils = fn(4733);
+ColorUtils = fn(4927);
 size2.borderColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.1);
 obj.checkIconContainer = size2;
 let obj5 = {};
 const merged = Object.assign(get_ActivityIndicator.StyleSheet.absoluteFillObject);
 obj5.borderRadius = nativeDefault.radii.xs;
-ColorUtils = fn(4733);
+ColorUtils = fn(4927);
 obj5.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.3);
 obj.selectedOverlay = obj5;
 obj.specialButton = { flexDirection: "column", justifyContent: "center", alignItems: "center", gap: 8 };
@@ -56,7 +56,7 @@ obj.disabled = { opacity: 0.4 };
 obj.imageDisabled = { opacity: 0.2 };
 let closure_12 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
-let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) => {
+let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useLayoutStyle(arg0, arg1, arg2) {
   const cResult = c.c(6);
   let num = 0;
   if (0 !== arg2) {
@@ -115,7 +115,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, ar
   cResult[4] = num9;
   cResult[5] = obj2;
   tmp4 = obj2;
-}) : ((arg0, arg1, arg2) => {
+}) : (function useLayoutStyle(arg0, arg1, arg2) {
   closure_0 = arg0;
   closure_1 = arg1;
   closure_2 = arg2;
@@ -168,7 +168,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, ar
   }, items);
 });
 ReactCompilerGating = fn(558);
-let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function NewCaption(arg0) {
   const cResult = c.c(12);
   ({ label, style, textStyle } = arg0);
   const tmp4 = closure_12();
@@ -177,7 +177,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       let tmp5 = cResult[2];
     }
     if (cResult[3] !== tmp4.icon) {
-      const obj2 = { source: _modDef10136, style: tmp4.icon };
+      const obj2 = { source: _modDef9721, style: tmp4.icon };
       const tmp9 = options(native.Icon, obj2);
       cResult[3] = tmp4.icon;
       cResult[4] = tmp9;
@@ -200,7 +200,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       const obj3 = { style: tmp5, children: null };
       const items = [tmp6, tmp10];
       obj3.children = items;
-      const tmp16 = v65535(React4, obj3);
+      const tmp16 = collapsed(React4, obj3);
       cResult[8] = tmp5;
       cResult[9] = tmp6;
       cResult[10] = tmp10;
@@ -219,18 +219,18 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = tmp4.labelContainer;
   cResult[2] = items1;
   tmp5 = items1;
-}) : ((arg0) => {
+}) : (function NewCaption(arg0) {
   ({ label, style, textStyle } = arg0);
   const tmp = closure_12();
   const obj = { style: null, children: null };
   const items = [tmp.labelContainer, style];
   obj.style = items;
-  const items1 = [options(native.Icon, { source: _modDef10136, style: tmp.icon }), options(Text_Text.Text, { style: textStyle, color: "text-overlay-light", variant: "text-xs/bold", children: label })];
+  const items1 = [options(native.Icon, { source: _modDef9721, style: tmp.icon }), options(Text_Text.Text, { style: textStyle, color: "text-overlay-light", variant: "text-xs/bold", children: label })];
   obj.children = items1;
-  return v65535(React4, obj);
+  return collapsed(React4, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((draftType) => {
+let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function MediaKeyboardImage(draftType) {
   const cResult = draftType(channelId[10]).c(67);
   draftType = draftType.draftType;
   const item = draftType.item;
@@ -258,391 +258,415 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((draftType) => 
           let tmp8 = cResult[6];
         }
         const stateFromStoresObject = tmp(channelId[15]).useStateFromStoresObject(first, tmp7, tmp8);
-        isIncluded = tmp11;
+        isIncluded = tmp12;
         if (cResult[7] === channelId) {
-          if (cResult[8] === tmp11) {
+          if (cResult[8] === tmp12) {
             if (cResult[9] === item) {
               if (cResult[10] === onPressItem) {
-                let tmp12 = cResult[11];
+                let tmp13 = cResult[11];
               }
               if (cResult[12] === channelId) {
-                if (cResult[13] === tmp11) {
+                if (cResult[13] === tmp12) {
                   if (cResult[14] === item) {
                     if (cResult[15] === onLongPressItem) {
-                      let tmp13 = cResult[16];
+                      let tmp14 = cResult[16];
                     }
-                    if (cResult[17] === tmp12) {
-                      if (cResult[18] === tmp13) {
-                        let tmp14 = cResult[19];
+                    if (cResult[17] === tmp13) {
+                      if (cResult[18] === tmp14) {
+                        let tmp15 = cResult[19];
                       }
-                      const onPress = tmp14.onPress;
-                      class U {
-                        constructor() {
-                          obj = closure_1(closure_2[16]);
-                          hideNativeMenuResult = obj.hideNativeMenu();
-                          if (onLongPressItem != null) {
-                            obj1 = { channelId: null, item: null, isIncluded: null };
-                            tmp3 = channelId;
-                            obj1.channelId = channelId;
-                            tmp4 = item;
-                            obj1.item = item;
-                            tmp5 = closure_7;
-                            obj1.isIncluded = closure_7;
-                            tmp2Result = tmp2(obj1);
-                          }
-                          return;
-                        }
-                      }
+                      ({ onPress, onLongPress } = tmp15);
                       if (isIncluded.PHOTO !== type) {
                         if (constants.IMAGE !== type) {
                           if (tmp16.VIDEO === type) {
                             const _Symbol = Symbol;
-                            class U {
-                              constructor() {
-                                obj = closure_1(closure_2[16]);
-                                hideNativeMenuResult = obj.hideNativeMenu();
-                                if (onLongPressItem != null) {
-                                  obj1 = { channelId: null, item: null, isIncluded: null };
-                                  tmp3 = channelId;
-                                  obj1.channelId = channelId;
-                                  tmp4 = item;
-                                  obj1.item = item;
-                                  tmp5 = closure_7;
-                                  obj1.isIncluded = closure_7;
-                                  tmp2Result = tmp2(obj1);
-                                }
-                                return;
-                              }
+                            if (cResult[21] === Symbol.for("react.memo_cache_sentinel")) {
+                              const intl = tmp(channelId[17]).intl;
+                              const stringResult = intl.string(tmp(channelId[17]).t.FlNoSV);
+                              cResult[21] = stringResult;
                             }
                           }
                           if (tmp16.VIDEO !== type) {
                             if (constants.VIDEO !== type) {
                               if (tmp16.PHOTO === type) {
-                                class U {
-                                  constructor() {
-                                    obj = closure_1(closure_2[16]);
-                                    hideNativeMenuResult = obj.hideNativeMenu();
-                                    if (onLongPressItem != null) {
-                                      obj1 = { channelId: null, item: null, isIncluded: null };
-                                      tmp3 = channelId;
-                                      obj1.channelId = channelId;
-                                      tmp4 = item;
-                                      obj1.item = item;
-                                      tmp5 = closure_7;
-                                      obj1.isIncluded = closure_7;
-                                      tmp2Result = tmp2(obj1);
-                                    }
-                                    return;
-                                  }
-                                }
-                                if ("image/gif" === tmpResult2.getType(image.uri)) {
+                                let tmp23 = null;
+                                if ("image/gif" === tmpResult3.getType(image.uri)) {
                                   if (cResult[26] !== tmp4.mediaKeyboardItemLabelContainer) {
-                                    class U {
+                                    let obj2 = { style: tmp4.mediaKeyboardItemLabelContainer, label: "GIF" };
+                                    cResult[26] = tmp4.mediaKeyboardItemLabelContainer;
+                                    class K {
                                       constructor() {
                                         obj = closure_1(closure_2[16]);
                                         hideNativeMenuResult = obj.hideNativeMenu();
-                                        if (onLongPressItem != null) {
-                                          obj1 = { channelId: null, item: null, isIncluded: null };
-                                          tmp3 = channelId;
-                                          obj1.channelId = channelId;
-                                          tmp4 = item;
-                                          obj1.item = item;
-                                          tmp5 = closure_7;
-                                          obj1.isIncluded = closure_7;
-                                          tmp2Result = tmp2(obj1);
-                                        }
+                                        obj1 = { channelId, item, isIncluded: closure_7 };
+                                        tmp2 = onPressItem(obj1);
                                         return;
                                       }
                                     }
-                                    const tmp26 = closure_9(tmp(channelId[20]).Caption, { style: null, label: "GIF" });
-                                    cResult[26] = tmp4.mediaKeyboardItemLabelContainer;
-                                    cResult[27] = tmp26;
-                                    let obj2 = { style: null, label: "GIF" };
+                                    let tmp24 = closure_9(tmp(channelId[20]).Caption, obj2);
+                                    const tmp26 = closure_9(tmp(channelId[20]).Caption, obj2);
+                                  } else {
+                                    tmp24 = cResult[27];
                                   }
+                                  tmp23 = tmp24;
                                 }
-                                tmpResult2 = tmp(channelId[19]);
+                                tmpResult3 = tmp(channelId[19]);
+                              } else {
+                                tmp23 = null;
                               }
-                              class U {
-                                constructor() {
-                                  obj = closure_1(closure_2[16]);
-                                  hideNativeMenuResult = obj.hideNativeMenu();
-                                  if (onLongPressItem != null) {
-                                    obj1 = { channelId: null, item: null, isIncluded: null };
-                                    tmp3 = channelId;
-                                    obj1.channelId = channelId;
-                                    tmp4 = item;
-                                    obj1.item = item;
-                                    tmp5 = closure_7;
-                                    obj1.isIncluded = closure_7;
-                                    tmp2Result = tmp2(obj1);
-                                  }
-                                  return;
-                                }
+                              let tmp34 = !tmp12;
+                              if (!tmp12) {
+                                tmp34 = tmp10 >= uploadLimit && disableWhenReachedLimit || disabled;
+                                const tmp35 = tmp10 >= uploadLimit && disableWhenReachedLimit || disabled;
                               }
                               if (cResult[28] !== tmp4.checkIcon) {
                                 const obj3 = { source: null, disableColor: false, color: null, style: null };
-                                class U {
-                                  constructor() {
-                                    obj = closure_1(closure_2[16]);
-                                    hideNativeMenuResult = obj.hideNativeMenu();
-                                    if (onLongPressItem != null) {
-                                      obj1 = { channelId: null, item: null, isIncluded: null };
-                                      tmp3 = channelId;
-                                      obj1.channelId = channelId;
-                                      tmp4 = item;
-                                      obj1.item = item;
-                                      tmp5 = closure_7;
-                                      obj1.isIncluded = closure_7;
-                                      tmp2Result = tmp2(obj1);
-                                    }
-                                    return;
-                                  }
-                                }
+                                const Icon = tmp(channelId[11]).Icon;
                                 obj3.source = item(channelId[21]);
                                 obj3.color = tmp4.checkIcon.color;
                                 obj3.style = tmp4.checkIcon;
-                                const tmp37 = closure_9(tmp(channelId[11]).Icon, obj3);
-                                cResult[28] = tmp4.checkIcon;
-                                cResult[29] = tmp37;
-                                let tmp35 = tmp37;
-                              } else {
-                                tmp35 = cResult[29];
-                              }
-                              if (cResult[30] === tmp4.checkIconContainer) {
-                                class U {
+                                class K {
                                   constructor() {
                                     obj = closure_1(closure_2[16]);
                                     hideNativeMenuResult = obj.hideNativeMenu();
-                                    if (onLongPressItem != null) {
-                                      obj1 = { channelId: null, item: null, isIncluded: null };
-                                      tmp3 = channelId;
-                                      obj1.channelId = channelId;
-                                      tmp4 = item;
-                                      obj1.item = item;
-                                      tmp5 = closure_7;
-                                      obj1.isIncluded = closure_7;
-                                      tmp2Result = tmp2(obj1);
-                                    }
+                                    obj1 = { channelId, item, isIncluded: closure_7 };
+                                    tmp2 = onPressItem(obj1);
                                     return;
                                   }
                                 }
-                                if (cResult[33] !== tmp11) {
-                                  const obj4 = { selected: tmp11 };
-                                  class U {
-                                    constructor() {
-                                      obj = closure_1(closure_2[16]);
-                                      hideNativeMenuResult = obj.hideNativeMenu();
-                                      if (onLongPressItem != null) {
-                                        obj1 = { channelId: null, item: null, isIncluded: null };
-                                        tmp3 = channelId;
-                                        obj1.channelId = channelId;
-                                        tmp4 = item;
-                                        obj1.item = item;
-                                        tmp5 = closure_7;
-                                        obj1.isIncluded = closure_7;
-                                        tmp2Result = tmp2(obj1);
-                                      }
-                                      return;
-                                    }
-                                  }
-                                  cResult[33] = tmp11;
+                                cResult[28] = tmp4.checkIcon;
+                                cResult[29] = tmp39;
+                                let tmp36 = tmp39;
+                              } else {
+                                tmp36 = cResult[29];
+                              }
+                              if (cResult[30] === tmp4.checkIconContainer) {
+                                if (cResult[31] === tmp36) {
+                                  let tmp40 = cResult[32];
+                                }
+                                const tmp46 = closure_13(index, numItemsPerRow, totalNumItems);
+                                if (cResult[33] !== tmp12) {
+                                  const obj4 = { selected: tmp12 };
+                                  cResult[33] = tmp12;
                                   cResult[34] = obj4;
+                                  let tmp47 = obj4;
+                                } else {
+                                  tmp47 = cResult[34];
                                 }
                                 let imageDisabled;
                                 if (tmp34) {
                                   imageDisabled = tmp4.imageDisabled;
                                 }
-                                if (cResult[35] === tmp43) {
+                                if (cResult[35] === tmp46) {
                                   if (cResult[36] === tmp4.imageContainer) {
+                                    if (cResult[37] === imageDisabled) {
+                                      let tmp49 = cResult[38];
+                                    }
                                     if (cResult[39] !== size) {
-                                      const size1 = { height: size, width: null };
-                                      class U {
+                                      const size1 = { height: size, width: size };
+                                      cResult[39] = size;
+                                      cResult[40] = size1;
+                                      class K {
                                         constructor() {
                                           obj = closure_1(closure_2[16]);
                                           hideNativeMenuResult = obj.hideNativeMenu();
-                                          if (onLongPressItem != null) {
-                                            obj1 = { channelId: null, item: null, isIncluded: null };
-                                            tmp3 = channelId;
-                                            obj1.channelId = channelId;
-                                            tmp4 = item;
-                                            obj1.item = item;
-                                            tmp5 = closure_7;
-                                            obj1.isIncluded = closure_7;
-                                            tmp2Result = tmp2(obj1);
-                                          }
+                                          obj1 = { channelId, item, isIncluded: closure_7 };
+                                          tmp2 = onPressItem(obj1);
                                           return;
                                         }
                                       }
-                                      cResult[39] = size;
-                                      cResult[40] = size1;
-                                      let tmp47 = size1;
-                                    } else {
-                                      tmp47 = cResult[40];
                                     }
-                                    class U {
+                                    if (cResult[41] === tmp4.image) {
+                                      if (cResult[42] === tmp51) {
+                                        let tmp52 = cResult[43];
+                                      }
+                                      if (cResult[44] === image.uri) {
+                                        if (cResult[45] === size) {
+                                          let tmp53 = cResult[46];
+                                          let tmp54 = cResult[47];
+                                        }
+                                        if (cResult[48] === tmp52) {
+                                          if (cResult[49] === tmp53) {
+                                            if (cResult[50] === tmp54) {
+                                              let tmp55 = cResult[51];
+                                            }
+                                            if (cResult[52] === tmp12) {
+                                              if (cResult[53] === size) {
+                                                if (cResult[54] === tmp4.selectedOverlay) {
+                                                  let tmp58 = cResult[55];
+                                                }
+                                                let tmp62 = null;
+                                                if (tmp12) {
+                                                  tmp62 = tmp40;
+                                                }
+                                                if (cResult[56] === tmp17) {
+                                                  if (cResult[57] === tmp23) {
+                                                    if (cResult[58] === tmp34) {
+                                                      if (cResult[59] === onLongPress) {
+                                                        if (cResult[60] === onPress) {
+                                                          if (cResult[61] === tmp47) {
+                                                            if (cResult[62] === tmp49) {
+                                                              if (cResult[63] === tmp55) {
+                                                                if (cResult[64] === tmp58) {
+                                                                  if (cResult[65] === tmp62) {
+                                                                    let tmp63 = cResult[66];
+                                                                  }
+                                                                  return tmp63;
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                                const obj5 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, onPress: null, onLongPress: null, disabled: null, style: null, children: null };
+                                                class K {
+                                                  constructor() {
+                                                    obj = closure_1(closure_2[16]);
+                                                    hideNativeMenuResult = obj.hideNativeMenu();
+                                                    obj1 = { channelId, item, isIncluded: closure_7 };
+                                                    tmp2 = onPressItem(obj1);
+                                                    return;
+                                                  }
+                                                }
+                                                obj5.accessibilityState = tmp47;
+                                                obj5.onPress = onPress;
+                                                obj5.onLongPress = onLongPress;
+                                                obj5.disabled = tmp34;
+                                                obj5.style = tmp49;
+                                                const items1 = [tmp55, tmp23, tmp58, tmp62];
+                                                obj5.children = items1;
+                                                const tmp66 = closure_10(includedUploadIds, obj5);
+                                                cResult[56] = tmp17;
+                                                cResult[57] = tmp23;
+                                                cResult[58] = tmp34;
+                                                cResult[59] = onLongPress;
+                                                cResult[60] = onPress;
+                                                cResult[61] = tmp47;
+                                                cResult[62] = tmp49;
+                                                cResult[63] = tmp55;
+                                                cResult[64] = tmp58;
+                                                cResult[65] = tmp62;
+                                                cResult[66] = tmp66;
+                                                tmp63 = tmp66;
+                                              }
+                                            }
+                                            let tmp59 = null;
+                                            if (tmp12) {
+                                              const obj6 = { style: null };
+                                              const items2 = [tmp4.selectedOverlay, ];
+                                              const size2 = { height: size, width: null };
+                                              class K {
+                                                constructor() {
+                                                  obj = closure_1(closure_2[16]);
+                                                  hideNativeMenuResult = obj.hideNativeMenu();
+                                                  obj1 = { channelId, item, isIncluded: closure_7 };
+                                                  tmp2 = onPressItem(obj1);
+                                                  return;
+                                                }
+                                              }
+                                              items2[1] = size2;
+                                              obj6.style = items2;
+                                              tmp59 = closure_9(onLongPressItem, obj6);
+                                            }
+                                            cResult[52] = tmp12;
+                                            class K {
+                                              constructor() {
+                                                obj = closure_1(closure_2[16]);
+                                                hideNativeMenuResult = obj.hideNativeMenu();
+                                                obj1 = { channelId, item, isIncluded: closure_7 };
+                                                tmp2 = onPressItem(obj1);
+                                                return;
+                                              }
+                                            }
+                                            cResult[54] = tmp4.selectedOverlay;
+                                            cResult[55] = tmp59;
+                                            tmp58 = tmp59;
+                                          }
+                                        }
+                                        const obj7 = { resizeMode: "cover", resizeMethod: "resize", style: tmp52, source: tmp53, localImageSource: tmp54 };
+                                        class K {
+                                          constructor() {
+                                            obj = closure_1(closure_2[16]);
+                                            hideNativeMenuResult = obj.hideNativeMenu();
+                                            obj1 = { channelId, item, isIncluded: closure_7 };
+                                            tmp2 = onPressItem(obj1);
+                                            return;
+                                          }
+                                        }
+                                        cResult[48] = tmp52;
+                                        cResult[49] = tmp53;
+                                        cResult[50] = tmp54;
+                                        cResult[51] = tmp57;
+                                        tmp55 = tmp57;
+                                      }
+                                      const size3 = { uri: image.uri, width: size, height: size, cache: "force-cache" };
+                                      const size4 = { uri: null, width: null, height: null };
+                                      class K {
+                                        constructor() {
+                                          obj = closure_1(closure_2[16]);
+                                          hideNativeMenuResult = obj.hideNativeMenu();
+                                          obj1 = { channelId, item, isIncluded: closure_7 };
+                                          tmp2 = onPressItem(obj1);
+                                          return;
+                                        }
+                                      }
+                                      size4.width = size;
+                                      size4.height = size;
+                                      cResult[44] = image.uri;
+                                      cResult[45] = size;
+                                      cResult[46] = size3;
+                                      cResult[47] = size4;
+                                      tmp54 = size4;
+                                      tmp53 = size3;
+                                    }
+                                    const items3 = [tmp4.image, tmp51];
+                                    class K {
                                       constructor() {
                                         obj = closure_1(closure_2[16]);
                                         hideNativeMenuResult = obj.hideNativeMenu();
-                                        if (onLongPressItem != null) {
-                                          obj1 = { channelId: null, item: null, isIncluded: null };
-                                          tmp3 = channelId;
-                                          obj1.channelId = channelId;
-                                          tmp4 = item;
-                                          obj1.item = item;
-                                          tmp5 = closure_7;
-                                          obj1.isIncluded = closure_7;
-                                          tmp2Result = tmp2(obj1);
-                                        }
+                                        obj1 = { channelId, item, isIncluded: closure_7 };
+                                        tmp2 = onPressItem(obj1);
                                         return;
                                       }
                                     }
-                                    const items1 = [tmp4.image, tmp47];
-                                    cResult[41] = tmp4.image;
-                                    cResult[42] = tmp47;
-                                    cResult[43] = items1;
+                                    cResult[42] = tmp51;
+                                    cResult[43] = items3;
+                                    tmp52 = items3;
                                   }
                                 }
-                                const items2 = [tmp4.imageContainer, imageDisabled, tmp43];
-                                cResult[35] = tmp43;
+                                class K {
+                                  constructor() {
+                                    obj = closure_1(closure_2[16]);
+                                    hideNativeMenuResult = obj.hideNativeMenu();
+                                    obj1 = { channelId, item, isIncluded: closure_7 };
+                                    tmp2 = onPressItem(obj1);
+                                    return;
+                                  }
+                                }
+                                tmp50[0] = tmp4.imageContainer;
+                                tmp50[1] = imageDisabled;
+                                tmp50[2] = tmp46;
+                                cResult[35] = tmp46;
                                 cResult[36] = tmp4.imageContainer;
                                 cResult[37] = imageDisabled;
-                                cResult[38] = items2;
+                                cResult[38] = tmp50;
+                                tmp49 = tmp50;
                               }
-                              const obj5 = { style: tmp4.checkIconContainer, children: tmp35 };
-                              const tmp41 = closure_9(onLongPressItem, obj5);
+                              class K {
+                                constructor() {
+                                  obj = closure_1(closure_2[16]);
+                                  hideNativeMenuResult = obj.hideNativeMenu();
+                                  obj1 = { channelId, item, isIncluded: closure_7 };
+                                  tmp2 = onPressItem(obj1);
+                                  return;
+                                }
+                              }
+                              tmp43[0] = tmp4.checkIconContainer;
+                              tmp43[1] = tmp36;
+                              const tmp44 = closure_9(onLongPressItem, tmp43);
                               cResult[30] = tmp4.checkIconContainer;
-                              cResult[31] = tmp35;
-                              cResult[32] = tmp41;
-                              tmp34 = !tmp11;
+                              cResult[31] = tmp36;
+                              cResult[32] = tmp44;
+                              tmp40 = tmp44;
                             }
                           }
-                          class U {
-                            constructor() {
-                              obj = closure_1(closure_2[16]);
-                              hideNativeMenuResult = obj.hideNativeMenu();
-                              if (onLongPressItem != null) {
-                                obj1 = { channelId: null, item: null, isIncluded: null };
-                                tmp3 = channelId;
-                                obj1.channelId = channelId;
-                                tmp4 = item;
-                                obj1.item = item;
-                                tmp5 = closure_7;
-                                obj1.isIncluded = closure_7;
-                                tmp2Result = tmp2(obj1);
-                              }
-                              return;
-                            }
+                          if (cResult[22] !== image.playableDuration) {
+                            const timeFormat = tmp(channelId[18]).getTimeFormat(image.playableDuration);
+                            cResult[22] = image.playableDuration;
+                            cResult[23] = timeFormat;
+                            let tmp27 = timeFormat;
+                            const tmpResult4 = tmp(channelId[18]);
+                          } else {
+                            tmp27 = cResult[23];
                           }
                           if (cResult[24] !== tmp27) {
-                            class U {
+                            const obj8 = { label: tmp27 };
+                            const tmp32 = closure_9(closure_14, obj8);
+                            cResult[24] = tmp27;
+                            class K {
                               constructor() {
                                 obj = closure_1(closure_2[16]);
                                 hideNativeMenuResult = obj.hideNativeMenu();
-                                if (onLongPressItem != null) {
-                                  obj1 = { channelId: null, item: null, isIncluded: null };
-                                  tmp3 = channelId;
-                                  obj1.channelId = channelId;
-                                  tmp4 = item;
-                                  obj1.item = item;
-                                  tmp5 = closure_7;
-                                  obj1.isIncluded = closure_7;
-                                  tmp2Result = tmp2(obj1);
-                                }
+                                obj1 = { channelId, item, isIncluded: closure_7 };
+                                tmp2 = onPressItem(obj1);
                                 return;
                               }
                             }
-                            tmp31[0] = tmp27;
-                            const tmp32 = closure_9(closure_14, tmp31);
-                            cResult[24] = tmp27;
                             cResult[25] = tmp32;
                           }
                         }
                       }
                       const _Symbol2 = Symbol;
-                      if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
-                        const string = tmp(channelId[17]).intl.string;
-                        class U {
-                          constructor() {
-                            obj = closure_1(closure_2[16]);
-                            hideNativeMenuResult = obj.hideNativeMenu();
-                            if (onLongPressItem != null) {
-                              obj1 = { channelId: null, item: null, isIncluded: null };
-                              tmp3 = channelId;
-                              obj1.channelId = channelId;
-                              tmp4 = item;
-                              obj1.item = item;
-                              tmp5 = closure_7;
-                              obj1.isIncluded = closure_7;
-                              tmp2Result = tmp2(obj1);
-                            }
-                            return;
-                          }
+                      class K {
+                        constructor() {
+                          obj = closure_1(closure_2[16]);
+                          hideNativeMenuResult = obj.hideNativeMenu();
+                          obj1 = { channelId, item, isIncluded: closure_7 };
+                          tmp2 = onPressItem(obj1);
+                          return;
                         }
-                        cResult[20] = tmp21;
                       }
                     }
-                    class U {
+                    const obj9 = { onPress: tmp13, onLongPress: tmp14 };
+                    cResult[17] = tmp13;
+                    class K {
                       constructor() {
                         obj = closure_1(closure_2[16]);
                         hideNativeMenuResult = obj.hideNativeMenu();
-                        if (onLongPressItem != null) {
-                          obj1 = { channelId: null, item: null, isIncluded: null };
-                          tmp3 = channelId;
-                          obj1.channelId = channelId;
-                          tmp4 = item;
-                          obj1.item = item;
-                          tmp5 = closure_7;
-                          obj1.isIncluded = closure_7;
-                          tmp2Result = tmp2(obj1);
-                        }
+                        obj1 = { channelId, item, isIncluded: closure_7 };
+                        tmp2 = onPressItem(obj1);
                         return;
                       }
                     }
-                    tmp15[0] = tmp12;
-                    tmp15[1] = tmp13;
-                    cResult[17] = tmp12;
-                    cResult[18] = tmp13;
-                    cResult[19] = tmp15;
-                    tmp14 = tmp15;
+                    cResult[18] = tmp14;
+                    cResult[19] = obj9;
+                    tmp15 = obj9;
                   }
                 }
               }
-              class U {
+              const fn2 = function z() {
+                NativeMenuActionCreatorsDefault.hideNativeMenu();
+                if (onLongPressItem != null) {
+                  const obj2 = { channelId, item, isIncluded };
+                  tmp2(obj2);
+                }
+              };
+              cResult[12] = channelId;
+              cResult[13] = tmp12;
+              class K {
                 constructor() {
                   obj = closure_1(closure_2[16]);
                   hideNativeMenuResult = obj.hideNativeMenu();
-                  if (onLongPressItem != null) {
-                    obj1 = { channelId: null, item: null, isIncluded: null };
-                    tmp3 = channelId;
-                    obj1.channelId = channelId;
-                    tmp4 = item;
-                    obj1.item = item;
-                    tmp5 = closure_7;
-                    obj1.isIncluded = closure_7;
-                    tmp2Result = tmp2(obj1);
-                  }
+                  obj1 = { channelId, item, isIncluded: closure_7 };
+                  tmp2 = onPressItem(obj1);
                   return;
                 }
               }
-              cResult[12] = channelId;
-              cResult[13] = tmp11;
               cResult[14] = item;
               cResult[15] = onLongPressItem;
-              cResult[16] = U;
-              tmp13 = U;
+              cResult[16] = fn2;
+              tmp14 = fn2;
             }
           }
         }
-        const fn2 = function z() {
-          NativeMenuActionCreatorsDefault.hideNativeMenu();
-          onPressItem({ channelId, item, isIncluded });
-        };
+        class K {
+          constructor() {
+            obj = closure_1(closure_2[16]);
+            hideNativeMenuResult = obj.hideNativeMenu();
+            obj1 = { channelId, item, isIncluded: closure_7 };
+            tmp2 = onPressItem(obj1);
+            return;
+          }
+        }
         cResult[7] = channelId;
         cResult[8] = null != stateFromStoresObject.upload;
         cResult[9] = item;
         cResult[10] = onPressItem;
-        cResult[11] = fn2;
-        tmp12 = fn2;
+        cResult[11] = K;
+        tmp13 = K;
         const tmpResult = tmp(channelId[15]);
       }
     }
@@ -669,17 +693,17 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((draftType) => 
     obj.uploadCount = length;
     return obj;
   };
-  const items3 = [channelId, draftType, image, includedUploadIds];
+  const items4 = [channelId, draftType, image, includedUploadIds];
   cResult[1] = channelId;
   cResult[2] = draftType;
   cResult[3] = image;
   cResult[4] = includedUploadIds;
   cResult[5] = fn;
-  cResult[6] = items3;
-  tmp8 = items3;
+  cResult[6] = items4;
+  tmp8 = items4;
   tmp7 = fn;
   let obj = draftType(channelId[10]);
-}) : ((draftType) => {
+}) : (function MediaKeyboardImage(draftType) {
   draftType = draftType.draftType;
   const item = draftType.item;
   ({ size, channelId } = draftType);
@@ -812,7 +836,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((draftType) => 
   let obj = draftType(channelId[15]);
 });
 ReactCompilerGating = fn(558);
-let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function MediaKeyboardDummy(arg0) {
   const cResult = c.c(13);
   ({ size, isFirstInRow } = arg0);
   const tmp2 = closure_12();
@@ -870,7 +894,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = tmp3;
   cResult[4] = items1;
   tmp4 = items1;
-}) : ((arg0) => {
+}) : (function MediaKeyboardDummy(arg0) {
   ({ size, isFirstInRow } = arg0);
   const tmp = closure_12();
   const items = [tmp.imageContainer, ];
@@ -886,13 +910,13 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   obj2.children = options(React4, obj3);
   return options(React4, obj2);
 });
-createStyles = fn(4896);
+createStyles = fn(5090);
 let obj4 = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", position: "relative" };
 let closure_17 = createStyles.createStyleProperties({ backgroundColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, pressedBackgroundColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_ACTIVE });
 const __initData = { code: "function MediaKeyboardItemTsx1(){const{withTiming,interpolateColor,pressed,backgroundColor,pressedBackgroundColor,Easing}=this.__closure;return{backgroundColor:withTiming(interpolateColor(pressed.get(),[0,1],[backgroundColor,pressedBackgroundColor]),{duration:200,easing:Easing.out(Easing.quad)})};}" };
 const __initData2 = { code: "function MediaKeyboardItemTsx2(){const{withTiming,interpolateColor,pressed,backgroundColor,pressedBackgroundColor,Easing}=this.__closure;return{backgroundColor:withTiming(interpolateColor(pressed.get(),[0,1],[backgroundColor,pressedBackgroundColor]),{duration:200,easing:Easing.out(Easing.quad)})};}" };
 ReactCompilerGating = fn(558);
-let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function MediaKeyboardSpecialButton(arg0) {
   const cResult = sharedValue(pressedBackgroundColor[10]).c(20);
   ({ size, onPress, disabled, accessibilityLabel, children } = arg0);
   ({ index, totalNumItems, numItemsPerRow } = arg0);
@@ -1001,7 +1025,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[11] = items;
   tmp11 = items;
   let obj4 = { withTiming: sharedValue(pressedBackgroundColor[22]).withTiming, interpolateColor: sharedValue(pressedBackgroundColor[5]).interpolateColor, pressed: sharedValue, backgroundColor, pressedBackgroundColor, Easing: sharedValue(pressedBackgroundColor[5]).Easing };
-}) : ((arg0) => {
+}) : (function MediaKeyboardSpecialButton(arg0) {
   ({ size, disabled } = arg0);
   let sharedValue;
   let pressedBackgroundColor;
@@ -1067,7 +1091,7 @@ let obj6 = { backgroundColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_
 size = fn(2);
 let result = size.fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardItem.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((draftType) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function MediaKeyboardItem(draftType) {
   const cResult = channel(onPressItem[10]).c(20);
   ({ items, channel } = draftType);
   draftType = draftType.draftType;
@@ -1180,7 +1204,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((draftT
   cResult[15] = uploadLimit;
   cResult[16] = mapped;
   tmp6 = mapped;
-}) : ((arg0) => {
+}) : (function MediaKeyboardItem(arg0) {
   ({ items, channel: require, draftType: importDefault, onPressItem: dependencyMap, onLongPressItem: noop, rowIndex: closure_4, totalNumItems: Pressable, numPerRow } = arg0);
   ({ includedUploadIds: closure_7, uploadLimit: closure_8, disableWhenReachedLimit: closure_9, disabled: closure_10 } = arg0);
   ({ handleCameraPress, handleAttachPress, handleViewAllPhotosPress } = arg0);

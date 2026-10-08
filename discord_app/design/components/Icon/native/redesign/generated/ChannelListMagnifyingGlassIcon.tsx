@@ -1,10 +1,10 @@
-// === Module 13672: ChannelListMagnifyingGlassIcon ===
+// === Module 13894: ChannelListMagnifyingGlassIcon ===
 
-// Module 13672 (ChannelListMagnifyingGlassIcon)
+// Module 13894 (ChannelListMagnifyingGlassIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4585 */;
-import _mod13673 from "module_13673" /* 13673 */;
+import BaseIconImage from "BaseIconImage" /* 4777 */;
+import _mod13895 from "module_13895" /* 13895 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/ChannelListMagnifyingGlassIcon.tsx");
 
-export const ChannelListMagnifyingGlassIcon = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const ChannelListMagnifyingGlassIcon = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelListMagnifyingGlassIcon(arg0) {
   const cResult = c.c(9);
   if (cResult[0] !== arg0) {
     ({ style, color } = arg0);
@@ -36,7 +36,7 @@ export const ChannelListMagnifyingGlassIcon = ReactCompilerGating.isReactCompile
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod13673;
+    const tmpResult = _mod13895;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -58,12 +58,12 @@ export const ChannelListMagnifyingGlassIcon = ReactCompilerGating.isReactCompile
   cResult[8] = tmp14;
   tmp12 = tmp14;
   const obj2 = { source: tmp10, color: INTERACTIVE_ICON_DEFAULT, style: tmp5 };
-}) : ((color) => {
+}) : (function ChannelListMagnifyingGlassIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;
   if (INTERACTIVE_ICON_DEFAULT === undefined) {
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod13673, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod13895, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

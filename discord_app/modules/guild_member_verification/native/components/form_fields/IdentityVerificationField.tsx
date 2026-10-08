@@ -1,19 +1,19 @@
-// === Module 6013: IdentityVerificationField ===
+// === Module 6199: IdentityVerificationField ===
 
-// Module 6013 (IdentityVerificationField)
+// Module 6199 (IdentityVerificationField)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4708 */;
-import EnvelopeIcon from "EnvelopeIcon" /* 4823 */;
-import MobilePhoneIcon2 from "MobilePhoneIcon" /* 6455 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4902 */;
+import EnvelopeIcon from "EnvelopeIcon" /* 5017 */;
+import MobilePhoneIcon2 from "MobilePhoneIcon" /* 6633 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
-const CheckmarkLargeIcon2 = CheckmarkLargeIcon(4583);
-const Text_Text = CheckmarkLargeIcon(4892);
-const components_Button_Button = CheckmarkLargeIcon(5601);
+const CheckmarkLargeIcon2 = CheckmarkLargeIcon(4775);
+const Text_Text = CheckmarkLargeIcon(5086);
+const components_Button_Button = CheckmarkLargeIcon(5375);
 require = fn;
 function getLabel(arg0, arg1) {
   if (MemberVerificationTypes.UserVerificationFieldPlatforms.EMAIL === arg0) {
@@ -44,56 +44,48 @@ function getLabel(arg0, arg1) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { padding: 8, marginTop: 8, borderRadius: nativeDefault.radii.sm, height: 48, flexDirection: "row", alignItems: "center", justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, icon: { marginLeft: 4, marginRight: 8 }, label: { flex: 1, marginLeft: 4, lineHeight: 20 }, verifiedContainer: { paddingVertical: 7, paddingHorizontal: 4, flexDirection: "row", alignItems: "center" }, ctaButton: { flexGrow: 0, alignSelf: "center", paddingHorizontal: 16 } };
 let closure_6 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function BaseIdentityVerificationField(arg0) {
   let CheckmarkLargeIcon = require;
   let tmp = dependencyMap;
-  const cResult = c.c(18);
+  const cResult = c.c(16);
   ({ label, passesVerification: verifiedContainer, onPress, icon } = arg0);
   const tmp3 = closure_6();
   if (cResult[0] === icon) {
     if (cResult[1] === tmp3.icon) {
       let tmp4 = cResult[2];
     }
-    if (cResult[3] !== tmp3.label) {
-      const items = [tmp3.label];
-      cResult[3] = tmp3.label;
-      cResult[4] = items;
-      let tmp7 = items;
-    } else {
-      tmp7 = cResult[4];
-    }
-    if (cResult[5] === label) {
-      if (cResult[6] === tmp7) {
-        let tmp8 = cResult[7];
+    if (cResult[3] === label) {
+      if (cResult[4] === tmp3.label) {
+        let tmp7 = cResult[5];
       }
-      if (cResult[8] === onPress) {
-        if (cResult[9] === verifiedContainer) {
-          if (cResult[10] === tmp3.ctaButton) {
-            if (cResult[11] === tmp3.verifiedContainer) {
-              if (cResult[13] === tmp3.container) {
-                if (cResult[14] === tmp4) {
-                  if (cResult[15] === tmp8) {
-                    if (cResult[16] === tmp11) {
-                      let tmp16 = cResult[17];
+      if (cResult[6] === onPress) {
+        if (cResult[7] === verifiedContainer) {
+          if (cResult[8] === tmp3.ctaButton) {
+            if (cResult[9] === tmp3.verifiedContainer) {
+              if (cResult[11] === tmp3.container) {
+                if (cResult[12] === tmp4) {
+                  if (cResult[13] === tmp7) {
+                    if (cResult[14] === tmp10) {
+                      let tmp15 = cResult[15];
                     }
-                    return tmp16;
+                    return tmp15;
                   }
                 }
               }
               const obj2 = { style: tmp3.container, children: null };
-              const items1 = [tmp4, tmp8, cResult[12]];
-              obj2.children = items1;
-              const tmp19 = hasOwnProperty(View, obj2);
-              cResult[13] = tmp3.container;
-              cResult[14] = tmp4;
-              cResult[15] = tmp8;
-              cResult[16] = cResult[12];
-              cResult[17] = tmp19;
-              tmp16 = tmp19;
+              const items = [tmp4, tmp7, cResult[10]];
+              obj2.children = items;
+              const tmp18 = hasOwnProperty(View, obj2);
+              cResult[11] = tmp3.container;
+              cResult[12] = tmp4;
+              cResult[13] = tmp7;
+              cResult[14] = cResult[10];
+              cResult[15] = tmp18;
+              tmp15 = tmp18;
             }
           }
         }
@@ -114,19 +106,19 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         obj5.onPress = onPress;
         obj4.children = React4(components_Button_Button.Button, obj5);
       }
-      const tmp12Result = React4(View, obj4);
-      cResult[8] = onPress;
+      const tmp11Result = React4(View, obj4);
+      cResult[6] = onPress;
+      cResult[7] = verifiedContainer;
+      ({ ctaButton: tmp2[8], verifiedContainer } = tmp3);
       cResult[9] = verifiedContainer;
-      ({ ctaButton: tmp2[10], verifiedContainer } = tmp3);
-      cResult[11] = verifiedContainer;
-      cResult[12] = tmp12Result;
+      cResult[10] = tmp11Result;
     }
-    const obj6 = { style: tmp7, variant: "text-md/medium", color: "mobile-text-heading-primary", children: label };
-    const tmp10 = React4(Text_Text.Text, obj6);
-    cResult[5] = label;
-    cResult[6] = tmp7;
-    cResult[7] = tmp10;
-    tmp8 = tmp10;
+    const obj6 = { style: tmp3.label, variant: "text-md/medium", color: "mobile-text-heading-primary", children: label };
+    const tmp9 = React4(Text_Text.Text, obj6);
+    cResult[3] = label;
+    cResult[4] = tmp3.label;
+    cResult[5] = tmp9;
+    tmp7 = tmp9;
   }
   let tmp5 = null;
   if (null != icon) {
@@ -137,7 +129,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = tmp3.icon;
   cResult[2] = tmp5;
   tmp4 = tmp5;
-}) : ((icon) => {
+}) : (function BaseIdentityVerificationField(icon) {
   icon = icon.icon;
   ({ label, passesVerification, onPress } = icon);
   const tmp = closure_6();
@@ -147,11 +139,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const obj2 = { style: tmp.icon };
     tmp4 = React4(icon, obj2);
   }
-  const items = [tmp4, , ];
-  const obj3 = { style: null, variant: "text-md/medium", color: "mobile-text-heading-primary", children: label };
-  const items1 = [tmp.label];
-  obj3.style = items1;
-  items[1] = React4(Text_Text.Text, obj3);
+  const items = [tmp4, React4(Text_Text.Text, { style: tmp.label, variant: "text-md/medium", color: "mobile-text-heading-primary", children: label }), ];
   if (passesVerification) {
     const obj4 = { style: tmp.verifiedContainer, accessible: true, accessibilityLabel: null, children: null };
     const intl2 = util.intl;
@@ -175,7 +163,7 @@ let obj3 = { padding: 8, marginTop: 8, borderRadius: nativeDefault.radii.sm, hei
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/IdentityVerificationField.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function IdentityVerificationField(arg0) {
   const cResult = c.c(12);
   ({ platform, passesVerification } = arg0);
   if (cResult[0] === passesVerification) {
@@ -235,7 +223,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = platform;
   cResult[2] = tmp5;
   tmp4 = tmp5;
-}) : ((arg0) => {
+}) : (function IdentityVerificationField(arg0) {
   ({ platform, passesVerification } = arg0);
   const label = getLabel(platform, passesVerification);
   if (MemberVerificationTypes.UserVerificationFieldPlatforms.EMAIL === platform) {

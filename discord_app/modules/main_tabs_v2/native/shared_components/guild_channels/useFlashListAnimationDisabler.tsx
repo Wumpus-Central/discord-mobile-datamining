@@ -1,8 +1,8 @@
-// === Module 13946: useFlashListAnimationDisabler ===
+// === Module 14249: useFlashListAnimationDisabler ===
 
-// Module 13946 (useFlashListAnimationDisabler)
+// Module 14249 (useFlashListAnimationDisabler)
 import c from "c" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/useFlashListAnimationDisabler.tsx");
 
-export const useFlashListAnimationDisabler = ReactCompilerGating.isReactCompilerEnabled() ? ((point) => {
+export const useFlashListAnimationDisabler = ReactCompilerGating.isReactCompilerEnabled() ? (function useFlashListAnimationDisabler(point) {
   closure_0 = point;
   const cResult = c.c(9);
   const sharedValue = ReanimatedRexport.useSharedValue(false);
@@ -45,7 +45,7 @@ export const useFlashListAnimationDisabler = ReactCompilerGating.isReactCompiler
     fn3.__initData = __initData2;
     const animatedReaction = ReanimatedRexport.useAnimatedReaction(fn2, fn3);
     if (cResult[4] !== sharedValue) {
-      const fn4 = function b(arg0) {
+      const fn4 = function f(arg0) {
         let tmp = arg0;
         if (arg0) {
           tmp = !sharedValue.get();
@@ -87,7 +87,7 @@ export const useFlashListAnimationDisabler = ReactCompilerGating.isReactCompiler
   cResult[3] = items1;
   tmp7 = items1;
   tmp6 = fn;
-}) : ((point) => {
+}) : (function useFlashListAnimationDisabler(point) {
   closure_0 = point;
   const sharedValue = ReanimatedRexport.useSharedValue(false);
   const sharedValue1 = ReanimatedRexport.useSharedValue(point);
@@ -110,7 +110,7 @@ export const useFlashListAnimationDisabler = ReactCompilerGating.isReactCompiler
   fn2.__workletHash = 12840122256347;
   fn2.__initData = __initData5;
   const animatedReaction = ReanimatedRexport.useAnimatedReaction(fn, fn2);
-  const fn3 = function f(arg0) {
+  const fn3 = function b(arg0) {
     let tmp = arg0;
     if (arg0) {
       tmp = !sharedValue.get();

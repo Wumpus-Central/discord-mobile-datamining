@@ -1,11 +1,11 @@
-// === Module 6557: ViewEmptyState ===
+// === Module 6733: ViewEmptyState ===
 
-// Module 6557 (ViewEmptyState)
+// Module 6733 (ViewEmptyState)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
+import native from "native" /* 1200 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 5922 */;
+import TextStyles from "TextStyles" /* 5902 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 const Fonts = fn(1085).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { emptyContainer: { flex: 1, justifyContent: "center", alignItems: "center", marginHorizontal: 36 }, emptyImage: { width: 170, height: 130 }, fixOpticalIllusion: { marginTop: -50, alignItems: "center" }, emptyLabel: null, emptyText: null };
 let obj3 = {};
 const merged = Object.assign(TextStyles(Fonts.DISPLAY_SEMIBOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 18));
@@ -27,7 +27,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/ViewEmptyState.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ViewEmptyState(arg0) {
   const cResult = c.c(21);
   ({ source, label, text, style } = arg0);
   const tmp4 = closure_6();
@@ -118,7 +118,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = tmp4.emptyContainer;
   cResult[2] = items2;
   tmp5 = items2;
-}) : ((arg0) => {
+}) : (function ViewEmptyState(arg0) {
   ({ label, text } = arg0);
   ({ source, style } = arg0);
   const tmp = closure_6();

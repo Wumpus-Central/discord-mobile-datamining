@@ -1,19 +1,19 @@
-// === Module 11165: MediaModalOverlayAltTextSheet ===
+// === Module 11287: MediaModalOverlayAltTextSheet ===
 
-// Module 11165 (MediaModalOverlayAltTextSheet)
+// Module 11287 (MediaModalOverlayAltTextSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import useIsScreenLandscape from "useIsScreenLandscape" /* 5919 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6651 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6652 */;
-import useMessagePreviewHeight from "useMessagePreviewHeight" /* 11166 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6828 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6829 */;
+import useIsScreenLandscape from "useIsScreenLandscape" /* 8302 */;
+import useMessagePreviewHeight from "useMessagePreviewHeight" /* 11288 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { padding: nativeDefault.space.PX_16 } };
 let closure_3 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -21,7 +21,7 @@ let obj3 = { padding: nativeDefault.space.PX_16 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaModalOverlayAltTextSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((description) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function MediaViewerAltTextSheet(description) {
   const cResult = c.c(11);
   description = description.description;
   const tmp4 = closure_3();
@@ -80,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((description) => 
   cResult[5] = items;
   tmp10 = items;
   obj3 = useIsScreenLandscape;
-}) : ((children) => {
+}) : (function MediaViewerAltTextSheet(children) {
   const tmp = closure_3();
   const messagePreviewCollapsedheight = useMessagePreviewHeight.useMessagePreviewCollapsedheight();
   let num = 70;

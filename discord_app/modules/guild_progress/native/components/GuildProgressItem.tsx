@@ -1,20 +1,20 @@
-// === Module 12263: GuildProgressItem ===
+// === Module 12342: GuildProgressItem ===
 
-// Module 12263 (GuildProgressItem)
-import GuildProgressUtils from "GuildProgressUtils" /* 12145 */;
-import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 12148 */;
-import GuildProgressCircleDefault from "GuildProgressCircle" /* 12265 */;
+// Module 12342 (GuildProgressItem)
+import GuildProgressUtils from "GuildProgressUtils" /* 12224 */;
+import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 12227 */;
+import GuildProgressCircleDefault from "GuildProgressCircle" /* 12344 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles({ icon: { width: 32, height: 32 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_progress/native/components/GuildProgressItem.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildProgressItem(guild) {
   const cResult = guild(completed[4]).c(13);
   guild = guild.guild;
   const tmp4 = closure_4();
@@ -67,28 +67,28 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
       cResult[12] = tmp16;
       tmp13 = tmp16;
     }
-    let fn2;
+    let fn;
     if (numFinished > 0) {
       if (numFinished < totalSteps) {
-        fn2 = () => jsx(GuildProgressCircleDefault, { percent: 100 * numFinished / totalSteps, size: 32 });
+        fn = () => jsx(GuildProgressCircleDefault, { percent: 100 * numFinished / totalSteps, size: 32 });
       }
     }
     cResult[5] = numFinished;
     cResult[6] = totalSteps;
-    cResult[7] = fn2;
-    tmp12 = fn2;
+    cResult[7] = fn;
+    tmp12 = fn;
   }
-  const fn = function s() {
+  function openGuildProgress() {
     if (!completed) {
       const progress = GuildProgressActionCreatorsDefault.createProgress(guild.id);
     }
     GuildProgressUtils.openActionSheet(guild);
-  };
+  }
   cResult[0] = completed;
   cResult[1] = guild;
-  cResult[2] = fn;
-  tmp6 = fn;
-}) : ((guild) => {
+  cResult[2] = openGuildProgress;
+  tmp6 = openGuildProgress;
+}) : (function GuildProgressItem(guild) {
   guild = guild.guild;
   let completed;
   const tmp = closure_4();
@@ -97,7 +97,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   completed = iOSCompletionStates.completed;
   const totalSteps = iOSCompletionStates.totalSteps;
   let obj2 = {
-    onPress() {
+    onPress: function openGuildProgress() {
       if (!completed) {
         const progress = GuildProgressActionCreatorsDefault.createProgress(guild.id);
       }

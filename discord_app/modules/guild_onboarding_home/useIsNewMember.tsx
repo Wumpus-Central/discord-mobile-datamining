@@ -1,20 +1,20 @@
-// === Module 6738: useIsNewMember ===
+// === Module 6913: useIsNewMember ===
 
-// Module 6738 (useIsNewMember)
+// Module 6913 (useIsNewMember)
 import DurationsDefault from "Durations" /* 1102 */;
-import FlagUtils from "FlagUtils" /* 1390 */;
-import ImpersonateStore from "ImpersonateStore" /* 2105 */;
-import GuildMemberStore from "GuildMemberStore" /* 2112 */;
+import FlagUtils from "FlagUtils" /* 1402 */;
+import ImpersonateStore from "ImpersonateStore" /* 2117 */;
+import GuildMemberStore from "GuildMemberStore" /* 2124 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GuildMemberFlags = fn(4501).GuildMemberFlags;
+const GuildMemberFlags = fn(4693).GuildMemberFlags;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/useIsNewMember.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsNewMember(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -25,7 +25,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function u() {
+    const fn = function l() {
       let flag = true;
       if (!ImpersonateStore.isFullServerPreview(closure_0)) {
         const selfMember = GuildMemberStore.getSelfMember(closure_0);
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp7);
-}) : ((arg0) => {
+}) : (function useIsNewMember(arg0) {
   _require = arg0;
   const items = [GuildMemberStore, ImpersonateStore];
   return require("initialize").useStateFromStores(items, () => {

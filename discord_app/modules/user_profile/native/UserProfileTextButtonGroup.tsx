@@ -1,22 +1,22 @@
-// === Module 12834: UserProfileTextButtonGroup ===
+// === Module 12981: UserProfileTextButtonGroup ===
 
-// Module 12834 (UserProfileTextButtonGroup)
+// Module 12981 (UserProfileTextButtonGroup)
 import c from "c" /* 576 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const PROFILE_SIDE_PADDING = fn(6714).PROFILE_SIDE_PADDING;
+const PROFILE_SIDE_PADDING = fn(6891).PROFILE_SIDE_PADDING;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({ container: { flexDirection: "row", flexWrap: "wrap", gap: 12 }, buttonArea: { flexGrow: 1 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileTextButtonGroup.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileTextButtonGroup(arg0) {
   const cResult = c.c(35);
   ({ primaryButton, secondaryButton, maxWidth, style } = arg0);
   const tmp2 = closure_7();
@@ -152,7 +152,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = tmp2.container;
   cResult[2] = items5;
   tmp31 = items5;
-}) : ((arg0) => {
+}) : (function UserProfileTextButtonGroup(arg0) {
   ({ primaryButton, secondaryButton, maxWidth, style } = arg0);
   let items = closure_7();
   const width = useWindowDimensionsDefault().width;

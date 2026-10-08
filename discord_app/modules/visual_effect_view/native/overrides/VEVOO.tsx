@@ -1,13 +1,13 @@
-// === Module 15880: VEVOO ===
+// === Module 16139: VEVOO ===
 
-// Module 15880 (VEVOO)
+// Module 16139 (VEVOO)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import spring from "spring" /* 5604 */;
-import springPresets from "springPresets" /* 5605 */;
+import spring from "spring" /* 5374 */;
+import springPresets from "springPresets" /* 5378 */;
 import noop from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 4895 */;
+import DevSettingsStore from "DevSettingsStore" /* 5089 */;
 
 const require = globalThis.__r;
 
@@ -16,9 +16,9 @@ const ScrollView = fn(17).ScrollView;
 const DEV_WIDGET_SIZE = fn(585).DEV_WIDGET_SIZE;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-let createStyles = fn(4896);
+let createStyles = fn(5090);
 const styles = createStyles.createStyles({ zeroPadding: { paddingVertical: 0, paddingHorizontal: 0 }, zeroPaddingVertical: { paddingVertical: 0 }, zeroPaddingHorizontal: { paddingHorizontal: 0 }, zeroHeight: { height: 0 }, enabledSwitchStyle: { alignSelf: "flex-start" } });
-createStyles = fn(4896);
+createStyles = fn(5090);
 let obj = { wrapper: null, scrollView: null, scrollViewContent: null, close: null };
 let size = { borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_660, borderRadius: nativeDefault.radii.lg, position: "absolute", top: 0, left: 0, width: 300, height: 400 };
 let merged = Object.assign(nativeDefault.shadows.SHADOW_MOBILE_NAVIGATOR_X);
@@ -33,7 +33,7 @@ let closure_8 = createStyles.createStyles(obj);
 const __initData = { code: "function VEVOOTsx1(){const{withSpring,y,px8,DEV_WIDGET_SIZE,springUnclamped,x}=this.__closure;return{top:withSpring(y.get()-px8+DEV_WIDGET_SIZE,springUnclamped),left:withSpring(x.get()-px8,springUnclamped)};}" };
 const __initData2 = { code: "function VEVOOTsx2(){const{withSpring,y,px8,DEV_WIDGET_SIZE,springUnclamped,x}=this.__closure;return{top:withSpring(y.get()-px8+DEV_WIDGET_SIZE,springUnclamped),left:withSpring(x.get()-px8,springUnclamped)};}" };
 let ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function VisualEffectViewOverrideOverlay_(arg0) {
   const cResult = require("c").c(18);
   ({ onClose, x } = arg0);
   _require = x;
@@ -133,7 +133,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = items2;
   tmp7 = items2;
   let obj2 = require("ReanimatedRexport");
-}) : ((arg0) => {
+}) : (function VisualEffectViewOverrideOverlay_(arg0) {
   const x = arg0.x;
   _require = x;
   const y = arg0.y;
@@ -176,7 +176,7 @@ let obj5 = { paddingBottom: nativeDefault.space.PX_24 };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/visual_effect_view/native/overrides/VEVOO.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function VisualEffectViewOverrideOverlay(arg0) {
   const cResult = c.c(5);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [DevSettingsStore];
@@ -212,7 +212,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
     }
   }
   tmpResult = initialize;
-}) : ((arg0) => {
+}) : (function VisualEffectViewOverrideOverlay(arg0) {
   const items = [DevSettingsStore];
   let tmp = null;
   if (obj.useStateFromStores(items, () => DevSettingsStore.get("visual_effect_view_overrides"))) {

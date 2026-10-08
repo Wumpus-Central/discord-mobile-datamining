@@ -1,20 +1,20 @@
-// === Module 15794: useSecureFramesVerifiedUsers ===
+// === Module 16052: useSecureFramesVerifiedUsers ===
 
-// Module 15794 (useSecureFramesVerifiedUsers)
+// Module 16052 (useSecureFramesVerifiedUsers)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import VerifiedKeyStore from "VerifiedKeyStore" /* 9362 */;
+import VerifiedKeyStore from "VerifiedKeyStore" /* 8784 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/hooks/useSecureFramesVerifiedUsers.tsx");
 
-export const useSecureFramesVerifiedUserIds = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useSecureFramesVerifiedUserIds = ReactCompilerGating.isReactCompilerEnabled() ? (function useSecureFramesVerifiedUserIds() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [VerifiedKeyStore];
-    const fn = function o() {
+    const fn = function u() {
       return userIds.getUserIds();
     };
     cResult[0] = items;
@@ -25,7 +25,7 @@ export const useSecureFramesVerifiedUserIds = ReactCompilerGating.isReactCompile
     [tmp4, tmp5] = cResult;
   }
   return initialize.useStateFromStoresArray(tmp4, tmp5);
-}) : (() => {
+}) : (function useSecureFramesVerifiedUserIds() {
   const items = [VerifiedKeyStore];
   return initialize.useStateFromStoresArray(items, () => userIds.getUserIds());
 });

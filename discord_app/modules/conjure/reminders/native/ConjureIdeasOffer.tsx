@@ -1,12 +1,12 @@
-// === Module 16727: ConjureIdeasOffer ===
+// === Module 17000: ConjureIdeasOffer ===
 
-// Module 16727 (ConjureIdeasOffer)
+// Module 17000 (ConjureIdeasOffer)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import _modDef3753 from "module_3753" /* 3753 */;
-import Stack_Stack from "Stack/Stack" /* 5600 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import ConjureNativeMarkdownDefault from "ConjureNativeMarkdown" /* 16686 */;
+import _modDef3827 from "module_3827" /* 3827 */;
+import Stack_Stack from "Stack/Stack" /* 5373 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import ConjureNativeMarkdownDefault from "ConjureNativeMarkdown" /* 16955 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,13 +17,13 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/reminders/native/ConjureIdeasOffer.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureIdeasOffer(arg0) {
   const cResult = c.c(9);
   ({ style, attribution, onAsk } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { source: null };
     const intl = util.intl;
-    obj2.source = intl.string(_modDef3753.s96AWB);
+    obj2.source = intl.string(_modDef3827.s96AWB);
     const tmp8 = React4(ConjureNativeMarkdownDefault, obj2);
     cResult[0] = tmp8;
     let first = tmp8;
@@ -32,7 +32,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const intl2 = util.intl;
-    const stringResult = intl2.string(_modDef3753["U/bLzU"]);
+    const stringResult = intl2.string(_modDef3827["U/bLzU"]);
     cResult[1] = stringResult;
     let tmp10 = stringResult;
   } else {
@@ -66,18 +66,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = tmp14;
   tmp13 = tmp14;
   const obj4 = { direction: "horizontal", children: React4(components_Button_Button.Button, { variant: "secondary", size: "sm", disabled: null == onAsk, onPress: onAsk, text: tmp10 }) };
-}) : ((onAsk) => {
+}) : (function ConjureIdeasOffer(onAsk) {
   onAsk = onAsk.onAsk;
   const obj = { style: onAsk.style, children: null };
   const items = [onAsk.attribution, , ];
   const obj2 = { source: null };
   const intl = util.intl;
-  obj2.source = intl.string(_modDef3753.s96AWB);
+  obj2.source = intl.string(_modDef3827.s96AWB);
   items[1] = React4(ConjureNativeMarkdownDefault, obj2);
   const obj3 = { direction: "horizontal", children: null };
   const obj4 = { variant: "secondary", size: "sm", disabled: null == onAsk, onPress: onAsk, text: null };
   const intl2 = util.intl;
-  obj4.text = intl2.string(_modDef3753["U/bLzU"]);
+  obj4.text = intl2.string(_modDef3827["U/bLzU"]);
   obj3.children = React4(components_Button_Button.Button, obj4);
   items[2] = React4(Stack_Stack.Stack, obj3);
   obj.children = items;

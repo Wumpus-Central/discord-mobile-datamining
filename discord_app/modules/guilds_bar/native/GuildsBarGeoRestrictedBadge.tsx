@@ -1,27 +1,27 @@
-// === Module 16329: GuildsBarGeoRestrictedBadge ===
+// === Module 16589: GuildsBarGeoRestrictedBadge ===
 
-// Module 16329 (GuildsBarGeoRestrictedBadge)
+// Module 16589 (GuildsBarGeoRestrictedBadge)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import _modDef4816 from "module_4816" /* 4816 */;
-import FastImageDefault from "FastImage" /* 5981 */;
+import _modDef5010 from "module_5010" /* 5010 */;
+import FastImageDefault from "FastImage" /* 6164 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { badgeImageContainer: null, badgeImage: null };
 let size = { position: "absolute", bottom: -3, right: -3, height: 22, width: 22, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, backgroundColor: nativeDefault.colors.STATUS_WARNING_BACKGROUND, borderWidth: 3, borderRadius: 11, justifyContent: "center", alignItems: "center", overflow: "hidden" };
 obj.badgeImageContainer = size;
-const size1 = { height: 16, width: 16, opacity: fn(5627).DARK_1_LIGHT_08, tintColor: nativeDefault.colors.BLACK };
+const size1 = { height: 16, width: 16, opacity: fn(5974).DARK_1_LIGHT_08, tintColor: nativeDefault.colors.BLACK };
 obj.badgeImage = size1;
 let closure_5 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarGeoRestrictedBadge.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function GuildsBarGeoRestrictedBadge(style) {
   const cResult = c.c(8);
   style = style.style;
   const tmp3 = closure_5();
@@ -30,8 +30,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((style)
       let tmp4 = cResult[2];
     }
     if (cResult[3] !== tmp3.badgeImage) {
-      const obj2 = { source: _modDef4816, style: tmp3.badgeImage };
-      const tmp9 = jsx(FastImageDefault, { source: _modDef4816, style: tmp3.badgeImage });
+      const obj2 = { source: _modDef5010, style: tmp3.badgeImage };
+      const tmp9 = jsx(FastImageDefault, { source: _modDef5010, style: tmp3.badgeImage });
       cResult[3] = tmp3.badgeImage;
       cResult[4] = tmp9;
       let tmp5 = tmp9;
@@ -56,12 +56,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((style)
   cResult[1] = tmp3.badgeImageContainer;
   cResult[2] = items;
   tmp4 = items;
-}) : ((style) => {
+}) : (function GuildsBarGeoRestrictedBadge(style) {
   const tmp = closure_5();
   const obj = { style: null, pointerEvents: "none", children: null };
   const items = [tmp.badgeImageContainer, style.style];
   obj.style = items;
-  const obj2 = { source: _modDef4816, style: tmp.badgeImage };
-  obj.children = jsx(FastImageDefault, { source: _modDef4816, style: tmp.badgeImage });
+  const obj2 = { source: _modDef5010, style: tmp.badgeImage };
+  obj.children = jsx(FastImageDefault, { source: _modDef5010, style: tmp.badgeImage });
   return <View style={null} pointerEvents="none">{null}</View>;
 }));

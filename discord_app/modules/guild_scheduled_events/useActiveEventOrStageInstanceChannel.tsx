@@ -1,17 +1,17 @@
-// === Module 16151: useActiveEventOrStageInstanceChannel ===
+// === Module 16411: useActiveEventOrStageInstanceChannel ===
 
-// Module 16151 (useActiveEventOrStageInstanceChannel)
+// Module 16411 (useActiveEventOrStageInstanceChannel)
 import c from "c" /* 576 */;
-import useGuildScheduledEvents from "useGuildScheduledEvents" /* 9195 */;
-import useLiveStageChannelsDefault from "useLiveStageChannels" /* 16150 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
+import useGuildScheduledEvents from "useGuildScheduledEvents" /* 8630 */;
+import useLiveStageChannelsDefault from "useLiveStageChannels" /* 16410 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useActiveEventOrStageInstanceChannel.tsx");
 
-export const useActiveEventOrStageInstanceChannel = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useActiveEventOrStageInstanceChannel = ReactCompilerGating.isReactCompilerEnabled() ? (function useActiveEventOrStageInstanceChannel(arg0) {
   const cResult = c.c(2);
   let firstActiveEventChannel = useGuildScheduledEvents.useFirstActiveEventChannel(arg0);
   const tmp3 = useLiveStageChannelsDefault(arg0);
@@ -42,7 +42,7 @@ export const useActiveEventOrStageInstanceChannel = ReactCompilerGating.isReactC
     firstActiveEventChannel = tmp6;
   }
   return firstActiveEventChannel;
-}) : ((arg0) => {
+}) : (function useActiveEventOrStageInstanceChannel(arg0) {
   let firstActiveEventChannel = useGuildScheduledEvents.useFirstActiveEventChannel(arg0);
   const first = useLiveStageChannelsDefault(arg0)[0];
   if (first != null) {

@@ -1,26 +1,26 @@
-// === Module 15682: UserSettingsDesignSystemTextInput ===
+// === Module 15962: UserSettingsDesignSystemTextInput ===
 
-// Module 15682 (UserSettingsDesignSystemTextInput)
+// Module 15962 (UserSettingsDesignSystemTextInput)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Stack_Stack from "Stack/Stack" /* 5600 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import TextIcon from "TextIcon" /* 5871 */;
-import AtIcon from "AtIcon" /* 5881 */;
-import Card from "Card" /* 6002 */;
-import TextInput from "TextInput" /* 6105 */;
-import TextField from "TextField" /* 6107 */;
-import Input from "Input" /* 6430 */;
-import SplitTextInput from "SplitTextInput" /* 6461 */;
-import SearchField from "SearchField" /* 6554 */;
-import TextArea from "TextArea" /* 6587 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6651 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6652 */;
-import SettingsIcon from "SettingsIcon" /* 6893 */;
-import IconButton from "IconButton" /* 7586 */;
-import GhostInput from "GhostInput" /* 14285 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import Stack_Stack from "Stack/Stack" /* 5373 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import Card from "Card" /* 6186 */;
+import TextInput from "TextInput" /* 6283 */;
+import Input from "Input" /* 6284 */;
+import TextField from "TextField" /* 6287 */;
+import SplitTextInput from "SplitTextInput" /* 6639 */;
+import SearchField from "SearchField" /* 6730 */;
+import TextArea from "TextArea" /* 6763 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6828 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6829 */;
+import SettingsIcon from "SettingsIcon" /* 7082 */;
+import IconButton from "IconButton" /* 8106 */;
+import TextIcon from "TextIcon" /* 8183 */;
+import AtIcon from "AtIcon" /* 8193 */;
+import GhostInput from "GhostInput" /* 14109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -28,11 +28,11 @@ require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { padding: 16 }, sample: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.xl } };
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Sample(children) {
   const cResult = c.c(5);
   children = children.children;
   const tmp4 = closure_8();
@@ -57,12 +57,12 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
   cResult[4] = tmp9;
   tmp8 = tmp9;
   const obj3 = { shadow: "low", style: tmp4.sample, children: tmp5 };
-}) : ((children) => {
+}) : (function Sample(children) {
   const tmp = closure_8();
   return timestampProducer(Card.Card, { shadow: "low", style: closure_8().sample, children: timestampProducer(Stack_Stack.Stack, { spacing: 24, children: children.children }) });
 });
 ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((defaultValue) => {
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function InputUsername(defaultValue) {
   const cResult = c.c(5);
   defaultValue = defaultValue.defaultValue;
   let hasItem;
@@ -75,15 +75,15 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((defaultValue) 
   }
   [tmp7, require] = noop.useState(str2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function o(arr) {
+    function handleChange(arr) {
       let str = "default";
       if (arr.includes(" ")) {
         str = "error";
       }
       require(str);
-    };
-    cResult[0] = fn;
-    let first = fn;
+    }
+    cResult[0] = handleChange;
+    let first = handleChange;
   } else {
     first = cResult[0];
   }
@@ -113,7 +113,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((defaultValue) 
   cResult[4] = tmp11;
   tmp9 = tmp11;
   const tmp6 = _slicedToArray(noop.useState(str2), 2);
-}) : ((defaultValue) => {
+}) : (function InputUsername(defaultValue) {
   defaultValue = defaultValue.defaultValue;
   let hasItem;
   if (defaultValue != null) {
@@ -134,7 +134,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((defaultValue) 
   obj.errorMessage = str3;
   obj.label = "Username";
   obj.leadingIcon = AtIcon.AtIcon;
-  obj.onChange = function onChange(arr) {
+  obj.onChange = function handleChange(arr) {
     let str = "default";
     if (arr.includes(" ")) {
       str = "error";
@@ -144,7 +144,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((defaultValue) 
   return timestampProducer(TextInput.TextInput, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((defaultValue) => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function GhostInputUsername(defaultValue) {
   const cResult = c.c(5);
   defaultValue = defaultValue.defaultValue;
   let hasItem;
@@ -157,15 +157,15 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((defaultValue) 
   }
   [tmp7, require] = noop.useState(str2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function o(arr) {
+    function handleChange(arr) {
       let str = "default";
       if (arr.includes(" ")) {
         str = "error";
       }
       require(str);
-    };
-    cResult[0] = fn;
-    let first = fn;
+    }
+    cResult[0] = handleChange;
+    let first = handleChange;
   } else {
     first = cResult[0];
   }
@@ -193,7 +193,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((defaultValue) 
   cResult[4] = tmp11;
   tmp9 = tmp11;
   const tmp6 = _slicedToArray(noop.useState(str2), 2);
-}) : ((defaultValue) => {
+}) : (function GhostInputUsername(defaultValue) {
   defaultValue = defaultValue.defaultValue;
   let hasItem;
   if (defaultValue != null) {
@@ -212,7 +212,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((defaultValue) 
     str3 = "Username can't contain spaces";
   }
   obj.errorMessage = str3;
-  obj.onChange = function onChange(arr) {
+  obj.onChange = function handleChange(arr) {
     let str = "default";
     if (arr.includes(" ")) {
       str = "error";
@@ -222,7 +222,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((defaultValue) 
   return timestampProducer(GhostInput.GhostInput, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function GhostInputActionSheet() {
   const cResult = c.c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const tmp6 = timestampProducer(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: "Ghost Input - Centered" });
@@ -253,7 +253,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp8 = cResult[2];
   }
   return tmp8;
-}) : (() => {
+}) : (function GhostInputActionSheet() {
   const obj = { children: null };
   const items = [timestampProducer(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: "Ghost Input - Centered" }), ];
   const obj2 = { style: { padding: 12 }, children: timestampProducer(closure_9, { children: timestampProducer(closure_11, { placeholder: "@wumpus", description: "You can use up to 16 alpha-numeric characters" }) }) };
@@ -262,7 +262,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   return React5(Sheet_BottomSheet.BottomSheet, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function GhostInputActionSheetLeftAligned() {
   const cResult = c.c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const tmp6 = timestampProducer(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: "Ghost Input - Left Aligned" });
@@ -293,7 +293,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp8 = cResult[2];
   }
   return tmp8;
-}) : (() => {
+}) : (function GhostInputActionSheetLeftAligned() {
   const obj = { children: null };
   const items = [timestampProducer(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: "Ghost Input - Left Aligned" }), ];
   const obj2 = { style: { padding: 12 }, children: timestampProducer(closure_9, { children: timestampProducer(closure_11, { placeholder: "@wumpus", description: "You can use up to 16 alpha-numeric characters", centered: false, size: "md" }) }) };
@@ -302,22 +302,22 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   return React5(Sheet_BottomSheet.BottomSheet, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function CustomAttachmentExample() {
   const cResult = c.c(6);
   [tmp5, require] = noop.useState("default");
   const tmp4 = _slicedToArray(noop.useState("default"), 2);
   [tmp7, importDefault] = noop.useState("");
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function l(arr) {
+    function handleChange(arr) {
       importDefault(arr);
       let str = "default";
       if (arr.includes(" ")) {
         str = "error";
       }
       require(str);
-    };
-    cResult[0] = fn;
-    let first = fn;
+    }
+    cResult[0] = handleChange;
+    let first = handleChange;
   } else {
     first = cResult[0];
   }
@@ -353,7 +353,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[5] = tmp11;
   tmp10 = tmp11;
   const obj3 = { status: tmp5, errorMessage: str, label: "Pressable Attachment", value: tmp7, trailingPressableProps: tmp9, trailingIcon: AtIcon.AtIcon, onChange: first };
-}) : (() => {
+}) : (function CustomAttachmentExample() {
   [tmp2, require] = noop.useState("default");
   const tmp = _slicedToArray(noop.useState("default"), 2);
   [tmp4, importDefault] = noop.useState("");
@@ -371,7 +371,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     accessibilityLabel: "Press"
   };
   obj.trailingIcon = AtIcon.AtIcon;
-  obj.onChange = function onChange(arr) {
+  obj.onChange = function handleChange(arr) {
     importDefault(arr);
     let str = "default";
     if (arr.includes(" ")) {
@@ -386,7 +386,7 @@ let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRa
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemTextInput.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSettingsDesignSystemTextInput() {
   const cResult = c.c(46);
   const tmp4 = closure_8();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -684,7 +684,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp129 = cResult[45];
   }
   return tmp129;
-}) : (() => {
+}) : (function UserSettingsDesignSystemTextInput() {
   const obj = { children: null };
   const obj2 = { spacing: 24, style: closure_8().container, children: null };
   const obj3 = { children: null };

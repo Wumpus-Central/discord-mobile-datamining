@@ -1,26 +1,26 @@
-// === Module 8486: BundleSampleV2 ===
+// === Module 8970: BundleSampleV2 ===
 
-// Module 8486 (BundleSampleV2)
+// Module 8970 (BundleSampleV2)
 import _modDef38 from "module_38" /* 38 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import utils from "utils" /* 1977 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1980 */;
-import FastImageDefault from "FastImage" /* 5981 */;
-import ProfileEffectSampleV2Default from "ProfileEffectSampleV2" /* 8488 */;
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 8499 */;
-import NameplateDummyUserPreview from "NameplateDummyUserPreview" /* 8506 */;
+import native from "native" /* 1200 */;
+import utils from "utils" /* 1989 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1992 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import ProfileEffectSampleV2Default from "ProfileEffectSampleV2" /* 8972 */;
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 8983 */;
+import NameplateDummyUserPreview from "NameplateDummyUserPreview" /* 8990 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: c3, StyleSheet, View: closure_4 } = get_ActivityIndicator);
-const BUNDLE_PREVIEW_CONFIG = fn(8487).BUNDLE_PREVIEW_CONFIG;
+const BUNDLE_PREVIEW_CONFIG = fn(8971).BUNDLE_PREVIEW_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let ReactCompilerGating = fn(558);
-let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function BundleStaticPreviewContent(arg0) {
   const cResult = c.c(13);
   ({ previewAssets, disableBackground, mutedBackground, targetSize } = arg0);
   ({ bgStatic, fgStatic } = previewAssets);
@@ -136,7 +136,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = targetSize;
   cResult[2] = tmp5Result;
   tmp3 = tmp5Result;
-}) : ((mutedBackground) => {
+}) : (function BundleStaticPreviewContent(mutedBackground) {
   ({ previewAssets, disableBackground, targetSize } = mutedBackground);
   ({ bgStatic, fgStatic } = previewAssets);
   let tmp = null;
@@ -238,7 +238,7 @@ obj2.fgClip = obj6;
 const merged4 = Object.assign(StyleSheet.absoluteFillObject);
 obj2.fgImage = {};
 const styles = StyleSheet.create(obj2);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_10 = createStyles.createStyles((arg0) => {
   const obj = { bundle: null, pfx: null, avatar: null, avatarWithNameplate: null, nameplate: null };
   const size = { width: tmp.bundleWidth, height: tmp.bundleHeight, borderRadius: nativeDefault.radii.xs };
@@ -259,7 +259,7 @@ let closure_10 = createStyles.createStyles((arg0) => {
   return obj;
 });
 ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function BundleSampleV2Composed(arg0) {
   let AvatarSizes = dependencyMap;
   const cResult = c.c(21);
   ({ deco, pfx, nameplate, size } = arg0);
@@ -345,9 +345,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         cResult[10] = tmp19;
         tmp18 = tmp19;
       } else {
-        const obj5 = { style: null, children: null };
-        const items1 = [null != undefined ? tmp3.avatarWithNameplate : tmp3.avatar];
-        obj5.style = items1;
+        const obj5 = { style: null != undefined ? tmp3.avatarWithNameplate : tmp3.avatar, children: null };
         const obj6 = { item: deco, size: tmp12, threeTierBundle: null != undefined };
         obj5.children = timestampProducer(AvatarDecorationSampleV2Default, obj6);
         timestampProducer(React4, obj5);
@@ -373,7 +371,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       const tmpResult = utils;
     }
   }
-}) : ((arg0) => {
+}) : (function BundleSampleV2Composed(arg0) {
   ({ deco, pfx, nameplate, size } = arg0);
   if (size === undefined) {
     size = "small";
@@ -416,9 +414,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       timestampProducer(React4, obj5);
     }
   } else {
-    const obj7 = { style: null, children: null };
-    const items1 = [null != nameplateData ? tmp.avatarWithNameplate : tmp.avatar];
-    obj7.style = items1;
+    const obj7 = { style: null != nameplateData ? tmp.avatarWithNameplate : tmp.avatar, children: null };
     const obj8 = { item: deco, size: tmp9, threeTierBundle: null != nameplateData };
     obj7.children = timestampProducer(AvatarDecorationSampleV2Default, obj8);
     timestampProducer(React4, obj7);
@@ -429,7 +425,7 @@ ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/BundleSampleV2.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function BundleSampleV2(arg0) {
   const cResult = c.c(12);
   ({ deco, pfx, nameplate, size, previewAssets, disableStaticBackground, mutedStaticBackground, targetSize } = arg0);
   let str = "small";
@@ -483,7 +479,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = str;
   cResult[4] = obj4;
   tmp4 = obj4;
-}) : ((size) => {
+}) : (function BundleSampleV2(size) {
   let str = size.size;
   ({ deco, pfx, nameplate } = size);
   if (str === undefined) {

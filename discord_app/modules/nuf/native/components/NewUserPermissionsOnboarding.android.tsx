@@ -1,11 +1,11 @@
-// === Module 12352: NewUserPermissionsOnboarding ===
+// === Module 12448: NewUserPermissionsOnboarding ===
 
-// Module 12352 (NewUserPermissionsOnboarding)
+// Module 12448 (NewUserPermissionsOnboarding)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,9 +13,9 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, ScrollView: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
-let obj2 = { scrollContainer: { minHeight: "100%" }, container: { flexGrow: 1, alignItems: "center", justifyContent: "center" }, alertContainer: { paddingTop: 80 + fn(6075).NAV_BAR_HEIGHT }, alert: null, alertContent: null, alertTitle: null, alertSubtitle: null, buttonWrapper: null, primaryButtonContainer: null, trailing: null };
-let obj3 = { paddingTop: 80 + fn(6075).NAV_BAR_HEIGHT };
+const createStyles = fn(5090);
+let obj2 = { scrollContainer: { minHeight: "100%" }, container: { flexGrow: 1, alignItems: "center", justifyContent: "center" }, alertContainer: { paddingTop: 80 + fn(6261).NAV_BAR_HEIGHT }, alert: null, alertContent: null, alertTitle: null, alertSubtitle: null, buttonWrapper: null, primaryButtonContainer: null, trailing: null };
+let obj3 = { paddingTop: 80 + fn(6261).NAV_BAR_HEIGHT };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
 obj2.alert = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.xl, borderWidth: 1, borderColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE, alignItems: "center", maxWidth: 290 };
 obj2.alertContent = { paddingVertical: 24, paddingHorizontal: 24, alignItems: "center" };
@@ -33,7 +33,7 @@ let obj7 = { flexGrow: 0, padding: nativeDefault.space.PX_16 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/nuf/native/components/NewUserPermissionsOnboarding.android.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewUserPermissionsOnboarding(arg0) {
   const cResult = c.c(45);
   ({ title, subtitle, header, trailing, loading, showSkip, onAllow, onDontAllow } = arg0);
   const tmp5 = closure_6();
@@ -222,7 +222,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = tmp12;
   tmp11 = tmp12;
   const obj14 = { style: tmp5.alertTitle, variant: "heading-lg/bold", color: "text-default", children: title };
-}) : ((showSkip) => {
+}) : (function NewUserPermissionsOnboarding(showSkip) {
   let flag = showSkip.showSkip;
   ({ title, subtitle, header, trailing, loading } = showSkip);
   if (flag === undefined) {

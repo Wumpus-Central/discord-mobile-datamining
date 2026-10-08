@@ -1,9 +1,9 @@
-// === Module 11759: ApplicationFrecencyHooks ===
+// === Module 11825: ApplicationFrecencyHooks ===
 
-// Module 11759 (ApplicationFrecencyHooks)
+// Module 11825 (ApplicationFrecencyHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import noop from "module_19" /* 19 */;
-import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 8828 */;
+import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 9187 */;
 
 const require = globalThis.__r;
 
@@ -13,11 +13,11 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/ApplicationFrecencyHooks.tsx");
 
-export const useSortApplicationsViaFrecency = ReactCompilerGating.isReactCompilerEnabled() ? ((arr, arr2) => {
+export const useSortApplicationsViaFrecency = ReactCompilerGating.isReactCompilerEnabled() ? (function useSortApplicationsViaFrecency(arr, arr2) {
   _require = arr;
   const cResult = require("c").c(31);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function l() {
+    const fn = function p() {
       const FrecencyUserSettingsActionCreators = closure_0(stateFromStores[5]).FrecencyUserSettingsActionCreators;
       const ifUncached = FrecencyUserSettingsActionCreators.loadIfUncached(str.FRECENCY_AND_FAVORITES_SETTINGS);
     };
@@ -268,7 +268,7 @@ export const useSortApplicationsViaFrecency = ReactCompilerGating.isReactCompile
   cResult[11] = undefined;
   arr4 = tmp14;
   const tmpResult = require("initialize");
-}) : ((arg0, arg1) => {
+}) : (function useSortApplicationsViaFrecency(arg0, arg1) {
   _require = arg0;
   const effect = memo.useEffect(() => {
     const FrecencyUserSettingsActionCreators = closure_0(stateFromStores[5]).FrecencyUserSettingsActionCreators;

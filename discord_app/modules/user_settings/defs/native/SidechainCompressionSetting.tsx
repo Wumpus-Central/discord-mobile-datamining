@@ -1,17 +1,17 @@
-// === Module 15091: SidechainCompressionSetting ===
+// === Module 15353: SidechainCompressionSetting ===
 
-// Module 15091 (SidechainCompressionSetting)
+// Module 15353 (SidechainCompressionSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 8079 */;
-import MediaEngineStore from "MediaEngineStore" /* 1999 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5241 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
 
 require = fn;
-const Features = fn(4921).Features;
+const Features = fn(5115).Features;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11142);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const SettingBuilders = fn(11262);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSidechainCompressionSettingValue() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [MediaEngineStore];
@@ -26,7 +26,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     [tmp4, tmp5] = cResult;
   }
   return initialize.useStateFromStores(tmp4, tmp5);
-}) : (() => {
+}) : (function useSidechainCompressionSettingValue() {
   const items = [MediaEngineStore];
   return initialize.useStateFromStores(items, () => sidechainCompression.getSidechainCompression());
 });
@@ -35,11 +35,11 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t["/jwMtn"]);
   },
-  parent: fn(7645).MobileUserSettings.VOICE,
+  parent: fn(7966).MobileUserSettings.VOICE,
   usePredicate() {
     return MediaEngineStore.supports(Features.SIDECHAIN_COMPRESSION);
   },
-  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useSidechainCompressionSettingValue() {
     const cResult = c.c(2);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
       const items = [MediaEngineStore];
@@ -54,7 +54,7 @@ const toggle = SettingBuilders.createToggle({
       [tmp4, tmp5] = cResult;
     }
     return initialize.useStateFromStores(tmp4, tmp5);
-  }) : (() => {
+  }) : (function useSidechainCompressionSettingValue() {
     const items = [MediaEngineStore];
     return initialize.useStateFromStores(items, () => sidechainCompression.getSidechainCompression());
   }),

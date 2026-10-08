@@ -1,7 +1,7 @@
-// === Module 17284: VoicePanelChannelOptInNotice ===
+// === Module 17565: VoicePanelChannelOptInNotice ===
 
-// Module 17284 (VoicePanelChannelOptInNotice)
-import OptInChannelsActionCreators from "OptInChannelsActionCreators" /* 6615 */;
+// Module 17565 (VoicePanelChannelOptInNotice)
+import OptInChannelsActionCreators from "OptInChannelsActionCreators" /* 6792 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -10,7 +10,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/shared/VoicePanelChannelOptInNotice.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((analyticsSection) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePanelChannelOptInNotice(analyticsSection) {
   const cResult = channel(576).c(12);
   ({ style, channel } = analyticsSection);
   analyticsSection = analyticsSection.analyticsSection;
@@ -25,8 +25,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((analyt
         const stringResult = intl.string(channel(1126).t["9mysCh"]);
         const intl2 = channel(1126).intl;
         const stringResult1 = intl2.string(channel(1126).t.PDUCIN);
-        const obj2 = { IconComponent: channel(13672).ChannelListMagnifyingGlassIcon };
-        const tmp12 = jsx(channel(6006).TableRowIcon, { IconComponent: channel(13672).ChannelListMagnifyingGlassIcon });
+        const obj2 = { IconComponent: channel(13894).ChannelListMagnifyingGlassIcon };
+        const tmp12 = jsx(channel(6192).TableRowIcon, { IconComponent: channel(13894).ChannelListMagnifyingGlassIcon });
         cResult[4] = stringResult;
         cResult[5] = stringResult1;
         cResult[6] = tmp12;
@@ -40,7 +40,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((analyt
       }
       if (cResult[7] !== tmp4) {
         const obj3 = { label: tmp6, subLabel: tmp7, icon: tmp8, onPress: tmp4, start: true, end: true, arrow: true };
-        const tmp15 = jsx(channel(6000).TableRow, { label: tmp6, subLabel: tmp7, icon: tmp8, onPress: tmp4, start: true, end: true, arrow: true });
+        const tmp15 = jsx(channel(6184).TableRow, { label: tmp6, subLabel: tmp7, icon: tmp8, onPress: tmp4, start: true, end: true, arrow: true });
         cResult[7] = tmp4;
         cResult[8] = tmp15;
         let tmp13 = tmp15;
@@ -54,7 +54,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((analyt
         return tmp16;
       }
       const obj4 = { style, children: tmp13 };
-      const tmp19 = jsx(analyticsSection(5983), { style, children: tmp13 });
+      const tmp19 = jsx(analyticsSection(6166), { style, children: tmp13 });
       cResult[9] = style;
       cResult[10] = tmp13;
       cResult[11] = tmp19;
@@ -70,7 +70,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((analyt
   cResult[3] = fn;
   tmp4 = fn;
   const obj = channel(576);
-}) : ((channel) => {
+}) : (function VoicePanelChannelOptInNotice(channel) {
   channel = channel.channel;
   const analyticsSection = channel.analyticsSection;
   const items = [channel, analyticsSection];
@@ -83,9 +83,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((analyt
   obj2.label = intl.string(channel(1126).t["9mysCh"]);
   const intl2 = channel(1126).intl;
   obj2.subLabel = intl2.string(channel(1126).t.PDUCIN);
-  const tmp2 = analyticsSection(5983);
-  obj2.icon = jsx(channel(6006).TableRowIcon, { IconComponent: channel(13672).ChannelListMagnifyingGlassIcon });
+  const tmp2 = analyticsSection(6166);
+  obj2.icon = jsx(channel(6192).TableRowIcon, { IconComponent: channel(13894).ChannelListMagnifyingGlassIcon });
   obj2.onPress = callback;
-  obj.children = jsx(channel(6000).TableRow, { label: null, subLabel: null, icon: null, onPress: null, start: true, end: true, arrow: true });
+  obj.children = jsx(channel(6184).TableRow, { label: null, subLabel: null, icon: null, onPress: null, start: true, end: true, arrow: true });
   return <tmp2 style={channel.style}>{null}</tmp2>;
 }));

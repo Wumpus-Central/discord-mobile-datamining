@@ -1,9 +1,9 @@
-// === Module 6658: LayerScope ===
+// === Module 6835: LayerScope ===
 
-// Module 6658 (LayerScope)
+// Module 6835 (LayerScope)
 import c from "c" /* 576 */;
-import useInitialValueDefault from "useInitialValue" /* 5991 */;
-import LayerContext from "LayerContext" /* 6659 */;
+import useInitialValueDefault from "useInitialValue" /* 6174 */;
+import LayerContext from "LayerContext" /* 6836 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,7 +11,7 @@ require = fn;
 function Layer(zIndex) {
   zIndex = zIndex.zIndex;
   _slicedToArray = undefined;
-  const context = noop.useContext(zIndex(6659).LayerContext);
+  const context = noop.useContext(zIndex(6836).LayerContext);
   dependencyMap = _slicedToArray(noop.useState({}), 2)[1];
   _slicedToArray = noop.useRef(null);
   const items = [context];
@@ -48,7 +48,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Layers/native/LayerScope.native.tsx");
 
-export const LayerScope = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const LayerScope = ReactCompilerGating.isReactCompilerEnabled() ? (function LayerScope(arg0) {
   const cResult = c.c(7);
   ({ children, zIndex } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -88,7 +88,7 @@ export const LayerScope = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0)
   cResult[5] = tmp6;
   cResult[6] = tmp11;
   tmp10 = tmp11;
-}) : ((arg0) => {
+}) : (function LayerScope(arg0) {
   ({ children, zIndex } = arg0);
   const obj = {
     value: useInitialValueDefault(() => {

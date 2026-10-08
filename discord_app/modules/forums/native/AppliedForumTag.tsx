@@ -1,31 +1,31 @@
-// === Module 10369: AppliedForumTag ===
+// === Module 9966: AppliedForumTag ===
 
-// Module 10369 (AppliedForumTag)
+// Module 9966 (AppliedForumTag)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import EmojiDefault from "Emoji" /* 6632 */;
-import ForumTagContextMenuDefault from "ForumTagContextMenu" /* 10370 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import EmojiDefault from "Emoji" /* 6809 */;
+import ForumTagContextMenuDefault from "ForumTagContextMenu" /* 9967 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 5645 */;
+import EmojiStore from "EmojiStore" /* 5992 */;
 
 require = fn;
 let closure_3 = ["ref"];
 const View = fn(17).View;
-const EMOJI_URL_BASE_SIZE = fn(1380).EMOJI_URL_BASE_SIZE;
+const EMOJI_URL_BASE_SIZE = fn(1392).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { pill: { height: 24, paddingHorizontal: 8, borderRadius: 20, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, marginRight: 4, flexShrink: 1 }, disableEndMargin: { marginRight: 0 }, emoji: { height: 12, width: 12, marginRight: 4, flexShrink: 0 }, textEmoji: { fontSize: 10, marginRight: 4 }, tagName: { flexShrink: 1 }, container: { display: "flex", flexDirection: "row", alignItems: "center" } };
 let closure_10 = createStyles.createStyles(obj2);
 fn(558);
 const obj3 = { height: 24, paddingHorizontal: 8, borderRadius: 20, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, marginRight: 4, flexShrink: 1 };
 const ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((hasUnreads) => {
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function AppliedForumTag(hasUnreads) {
   const cResult = containerStyle(name[9]).c(17);
   ({ tag, containerStyle } = hasUnreads);
   const tmp4 = closure_10();
@@ -41,7 +41,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((hasUnreads) => {
     first = cResult[0];
   }
   if (cResult[1] !== emojiId) {
-    const fn = function x() {
+    const fn = function b() {
       let usableCustomEmojiById = null;
       if (null != emojiId) {
         usableCustomEmojiById = EmojiStore.getUsableCustomEmojiById(tmp);
@@ -162,7 +162,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((hasUnreads) => {
   cResult[13] = I;
   tmp9 = I;
   const tmpResult = containerStyle(name[10]);
-}) : ((hasUnreads) => {
+}) : (function AppliedForumTag(hasUnreads) {
   ({ tag, containerStyle: require } = hasUnreads);
   dependencyMap = undefined;
   c3 = undefined;
@@ -226,7 +226,7 @@ let closure_11 = tmp5;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/AppliedForumTag.tsx");
 
-export const AppliedForumTagPill = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const AppliedForumTagPill = ReactCompilerGating.isReactCompilerEnabled() ? (function AppliedForumTagPill(arg0) {
   const cResult = c.c(11);
   ({ tag, hasUnreads, containerStyle, disableEndMargin } = arg0);
   const tmp2 = closure_10();
@@ -267,7 +267,7 @@ export const AppliedForumTagPill = ReactCompilerGating.isReactCompilerEnabled() 
   cResult[1] = disableEndMargin;
   cResult[2] = disableEndMargin ? tmp2.disableEndMargin : {};
   const tmp4 = disableEndMargin ? tmp2.disableEndMargin : {};
-}) : ((arg0) => {
+}) : (function AppliedForumTagPill(arg0) {
   ({ tag, hasUnreads, containerStyle, disableEndMargin } = arg0);
   const tmp = closure_10();
   const obj = { tag, hasUnreads, containerStyle: null };

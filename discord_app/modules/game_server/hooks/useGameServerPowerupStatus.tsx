@@ -1,11 +1,11 @@
-// === Module 12249: useGameServerPowerupStatus ===
+// === Module 12328: useGameServerPowerupStatus ===
 
-// Module 12249 (useGameServerPowerupStatus)
+// Module 12328 (useGameServerPowerupStatus)
 import util from "util" /* 1126 */;
-import _modDef2553 from "module_2553" /* 2553 */;
-import useGameServerGetExpiringEntitlementsDefault from "useGameServerGetExpiringEntitlements" /* 12233 */;
+import _modDef2597 from "module_2597" /* 2597 */;
+import useGameServerGetExpiringEntitlementsDefault from "useGameServerGetExpiringEntitlements" /* 12312 */;
 import noop from "module_19" /* 19 */;
-import GameServerStore from "GameServerStore" /* 7683 */;
+import GameServerStore from "GameServerStore" /* 8004 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_server/hooks/useGameServerPowerupStatus.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGameServerPowerupStatus(arg0) {
   _require = arg0;
   const cResult = require("c").c(7);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -25,7 +25,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function o() {
+    const fn = function u() {
       const stateForGuild = GameServerStore.getStateForGuild(closure_0);
       let entitlements;
       if (stateForGuild != null) {
@@ -63,7 +63,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         const obj3 = { type: "active", statusText: null };
         const intl = tmp(1126).intl;
-        obj3.statusText = intl.string(_modDef2553.FFLkmx);
+        obj3.statusText = intl.string(_modDef2597.FFLkmx);
         cResult[6] = obj3;
         let tmp10 = obj3;
       } else {
@@ -73,7 +73,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
   }
   return tmp9;
-}) : ((arg0) => {
+}) : (function useGameServerPowerupStatus(arg0) {
   _require = arg0;
   const items = [GameServerStore];
   const items1 = [arg0];
@@ -85,7 +85,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     return entitlements;
   }, items1);
-  const tmp2 = stateFromStores(12233)(arg0);
+  const tmp2 = stateFromStores(12312)(arg0);
   dependencyMap = tmp2;
   const items2 = [tmp2, stateFromStores];
   return noop.useMemo(() => {
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       } else {
         obj3 = { type: "active", statusText: null };
         const intl = util.intl;
-        obj3.statusText = intl.string(_modDef2553.FFLkmx);
+        obj3.statusText = intl.string(_modDef2597.FFLkmx);
       }
       return obj3;
     }

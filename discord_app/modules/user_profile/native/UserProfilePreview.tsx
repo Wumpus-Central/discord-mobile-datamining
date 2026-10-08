@@ -1,12 +1,12 @@
-// === Module 10838: UserProfilePreview ===
+// === Module 10487: UserProfilePreview ===
 
-// Module 10838 (UserProfilePreview)
+// Module 10487 (UserProfilePreview)
 import nativeDefault from "native" /* 587 */;
-import useDisplayProfileDefault from "useDisplayProfile" /* 7868 */;
-import scaleProfileFrameDefault from "scaleProfileFrame" /* 7907 */;
+import useDisplayProfileDefault from "useDisplayProfile" /* 8286 */;
+import scaleProfileFrameDefault from "scaleProfileFrame" /* 8326 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 7842 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8260 */;
 
 const require = globalThis.__r;
 
@@ -15,11 +15,11 @@ function filterLayer(responsive) {
   return true !== responsive.responsive;
 }
 const View = fn(17).View;
-const Constants = fn(6714);
+const Constants = fn(6891);
 ({ PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: closure_7, UserProfileThemeTypes: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_12 = createStyles.createStyles((arg0, arg1, arg2) => {
   let num = arg2;
   if (arg2 == null) {
@@ -47,7 +47,7 @@ const ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfilePreview.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfilePreview(arg0) {
   const cResult = guildId(576).c(88);
   ({ user, displayName, guildId } = arg0);
   ({ avatarDecorationOverride, profileEffectOverride, profileEffectRestartKey, profileFrameOverride, displayNameStylesOverride, style, compact, hideFrame, additionalBadges } = arg0);
@@ -86,18 +86,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       if (cResult[5] === user) {
         let tmp12 = cResult[6];
       }
-      ({ theme, primaryColor, secondaryColor } = tmp10(7910)(tmp12));
+      ({ theme, primaryColor, secondaryColor } = tmp10(8329)(tmp12));
       const tmp17 = closure_12(tmp4, null != primaryColor, maxWidth);
-      tmp10(7924)();
-      const tmp13 = tmp10(7910)(tmp12);
+      tmp10(8343)();
+      const tmp13 = tmp10(8329)(tmp12);
       const tmp15 = null != primaryColor;
-      const customStatusActivity = guildId(10839).useCustomStatusActivity();
+      const customStatusActivity = guildId(10488).useCustomStatusActivity();
       if (cResult[7] === primaryColor) {
         if (cResult[8] === secondaryColor) {
           if (cResult[9] === theme) {
             let tmp21 = cResult[10];
           }
-          const userProfileColors = guildId(7921).useUserProfileColors(tmp21);
+          const userProfileColors = guildId(8340).useUserProfileColors(tmp21);
           ({ avatarBackground, containerBackground, gradientFallbackBackground } = userProfileColors);
           if (undefined !== avatarDecorationOverride) {
             pendingAvatarDecoration = avatarDecorationOverride;
@@ -147,9 +147,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                         if (tmp29 != null) {
                           skuId = tmp29.skuId;
                         }
-                        const tmp10ResultResult = tmp10(7883)(skuId);
+                        const tmp10ResultResult = tmp10(8303)(skuId);
                         if (cResult[22] === pendingAvatar) {
-                          const arr2 = tmp10(7925)(tmp11, pendingLegacyUsernameDisabled);
+                          const arr2 = tmp10(8344)(tmp11, pendingLegacyUsernameDisabled);
                           if (cResult[25] !== arr2) {
                             const _Symbol = Symbol;
                             if (cResult[27] === Symbol.for("react.memo_cache_sentinel")) {
@@ -178,58 +178,58 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                             }
                             importDefault = tmp42;
                             if (cResult[28] !== tmp42) {
-                              class Oe {
+                              class Se {
                                 constructor(arg0) {
-                                  return !closure_1.has(arg0.id);
+                                  return arg0.id;
                                 }
                               }
                               cResult[28] = tmp42;
-                              cResult[29] = Oe;
+                              cResult[29] = tmp50;
                             } else {
-                              class Oe {
+                              class Se {
                                 constructor(arg0) {
-                                  return !closure_1.has(arg0.id);
+                                  return arg0.id;
                                 }
                               }
                             }
                             const items1 = [];
-                            HermesBuiltin.arraySpread(additionalBadges.filter(Oe), HermesBuiltin.arraySpread(arr2, 0));
+                            HermesBuiltin.arraySpread(additionalBadges.filter(tmp50), HermesBuiltin.arraySpread(arr2, 0));
                             const _Symbol2 = Symbol;
                             if (cResult[30] === Symbol.for("react.memo_cache_sentinel")) {
-                              class Oe {
+                              class Se {
                                 constructor(arg0) {
-                                  return !closure_1.has(arg0.id);
+                                  return arg0.id;
                                 }
                               }
-                              cResult[30] = tmp56;
+                              cResult[30] = tmp57;
                             } else {
-                              class Oe {
+                              class Se {
                                 constructor(arg0) {
-                                  return !closure_1.has(arg0.id);
+                                  return arg0.id;
                                 }
                               }
                             }
                             const arraySpreadResult = HermesBuiltin.arraySpread(arr2, 0);
-                            [tmp60, dependencyMap] = noop.useState(tmp56);
+                            [tmp61, dependencyMap] = noop.useState(tmp57);
                             const _Symbol3 = Symbol;
                             if (cResult[31] === Symbol.for("react.memo_cache_sentinel")) {
-                              class Oe {
+                              class Se {
                                 constructor(arg0) {
-                                  return !closure_1.has(arg0.id);
+                                  return arg0.id;
                                 }
                               }
-                              cResult[31] = tmp62;
+                              cResult[31] = tmp63;
                             } else {
-                              class Oe {
+                              class Se {
                                 constructor(arg0) {
-                                  return !closure_1.has(arg0.id);
+                                  return arg0.id;
                                 }
                               }
                             }
                             if (null == tmp10ResultResult) {
-                              class Oe {
+                              class Se {
                                 constructor(arg0) {
-                                  return !closure_1.has(arg0.id);
+                                  return arg0.id;
                                 }
                               }
                               const items2 = [tmp17.profileContainer, undefined, style];
@@ -238,56 +238,56 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                               cResult[41] = tmp17.profileContainer;
                               cResult[42] = items2;
                             } else {
-                              class Oe {
+                              class Se {
                                 constructor(arg0) {
-                                  return !closure_1.has(arg0.id);
+                                  return arg0.id;
                                 }
                               }
-                              const tmp64 = tmp10(7907)(tmp10ResultResult, tmp60.width);
-                              cResult[32] = tmp60.width;
+                              const tmp65 = tmp10(8326)(tmp10ResultResult, tmp61.width);
+                              cResult[32] = tmp61.width;
                               cResult[33] = tmp10ResultResult;
-                              cResult[34] = tmp64;
+                              cResult[34] = tmp65;
                             }
-                            const tmp59 = _slicedToArray(noop.useState(tmp56), 2);
+                            const tmp60 = _slicedToArray(noop.useState(tmp57), 2);
                           }
                         }
-                        const tmp10Result = tmp10(7883);
+                        const tmp10Result = tmp10(8303);
                         const obj2 = { userId: user.id, image: pendingAvatar };
-                        const pendingAvatarSrc = guildId(7851).getPendingAvatarSrc(obj2);
+                        const pendingAvatarSrc = guildId(8269).getPendingAvatarSrc(obj2);
                         cResult[22] = pendingAvatar;
                         cResult[23] = user.id;
                         cResult[24] = pendingAvatarSrc;
-                        const tmpResult7 = guildId(7851);
+                        const tmpResult7 = guildId(8269);
                       }
                     }
                   }
                 }
                 let profilePreviewValue;
                 if (!tmp5) {
-                  class Oe {
+                  class Se {
                     constructor(arg0) {
-                      return !closure_1.has(arg0.id);
+                      return arg0.id;
                     }
                   }
                   const obj3 = { pendingValue: pendingProfileFrame, userValue: null, guildValue: null, guildId: null };
                   if (tmp11 != null) {
-                    class Oe {
+                    class Se {
                       constructor(arg0) {
-                        return !closure_1.has(arg0.id);
+                        return arg0.id;
                       }
                     }
                   }
                   obj3.userValue = undefined;
                   if (tmp11 != null) {
-                    class Oe {
+                    class Se {
                       constructor(arg0) {
-                        return !closure_1.has(arg0.id);
+                        return arg0.id;
                       }
                     }
                     if (tmp33 != null) {
-                      class Oe {
+                      class Se {
                         constructor(arg0) {
-                          return !closure_1.has(arg0.id);
+                          return arg0.id;
                         }
                       }
                     }
@@ -297,24 +297,24 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                   profilePreviewValue = obj9.getProfilePreviewValue(obj3);
                 }
                 if (tmp11 != null) {
-                  class Oe {
+                  class Se {
                     constructor(arg0) {
-                      return !closure_1.has(arg0.id);
+                      return arg0.id;
                     }
                   }
                   if (tmp35 != null) {
-                    class Oe {
+                    class Se {
                       constructor(arg0) {
-                        return !closure_1.has(arg0.id);
+                        return arg0.id;
                       }
                     }
                   }
                 }
                 cResult[16] = undefined;
                 if (tmp11 != null) {
-                  class Oe {
+                  class Se {
                     constructor(arg0) {
-                      return !closure_1.has(arg0.id);
+                      return arg0.id;
                     }
                   }
                 }
@@ -327,15 +327,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               }
             }
           }
-          const tmpResult6 = guildId(7921);
+          const tmpResult6 = guildId(8340);
           const obj4 = { pendingValue: pendingProfileEffect, userValue: profileEffect, guildValue: profileEffect1, guildId };
-          const profilePreviewValue1 = guildId(7848).getProfilePreviewValue(obj4);
+          const profilePreviewValue1 = guildId(8266).getProfilePreviewValue(obj4);
           cResult[11] = pendingProfileEffect;
           cResult[12] = guildId;
           cResult[13] = profileEffect;
           cResult[14] = profileEffect1;
           cResult[15] = profilePreviewValue1;
-          const tmpResult8 = guildId(7848);
+          const tmpResult8 = guildId(8266);
         }
       }
       const obj5 = { theme, primaryColor, secondaryColor };
@@ -344,7 +344,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       cResult[9] = theme;
       cResult[10] = obj5;
       tmp21 = obj5;
-      const tmpResult5 = guildId(10839);
+      const tmpResult5 = guildId(10488);
     }
   }
   const obj6 = { user, displayProfile: tmp11, pendingThemeColors };
@@ -354,7 +354,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[6] = obj6;
   tmp12 = obj6;
   const tmpResult = guildId(504);
-}) : ((hideFrame) => {
+}) : (function UserProfilePreview(hideFrame) {
   ({ user, displayName, guildId } = hideFrame);
   ({ avatarDecorationOverride, profileEffectOverride, profileEffectRestartKey, profileFrameOverride, displayNameStylesOverride, compact } = hideFrame);
   ({ accessibilityLabel, style } = hideFrame);

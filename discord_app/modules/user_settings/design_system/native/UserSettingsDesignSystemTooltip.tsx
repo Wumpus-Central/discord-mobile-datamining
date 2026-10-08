@@ -1,14 +1,11 @@
-// === Module 15684: UserSettingsDesignSystemTooltip ===
+// === Module 15964: UserSettingsDesignSystemTooltip ===
 
-// Module 15684 (UserSettingsDesignSystemTooltip)
+// Module 15964 (UserSettingsDesignSystemTooltip)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6626 */;
-import LayerScope from "LayerScope" /* 6658 */;
-import TableSwitchRow from "TableSwitchRow" /* 6705 */;
-import DeviceOrientation from "DeviceOrientation" /* 8018 */;
-import useTooltip from "useTooltip" /* 9896 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6803 */;
+import LayerScope from "LayerScope" /* 6835 */;
+import DeviceOrientation from "DeviceOrientation" /* 8426 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,10 +13,11 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles({ container: { padding: 16, flex: 1, alignItems: "center", justifyContent: "center" }, flex: { flex: 1 } });
+let closure_9 = ["top", "bottom", "left", "right"];
 let ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanRotate() {
   const cResult = first(576).c(6);
   const tmp2 = _slicedToArray(noop.useState(false), 2);
   first = tmp2[0];
@@ -62,7 +60,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp9 = cResult[5];
   }
   return tmp9;
-}) : (() => {
+}) : (function useCanRotate() {
   const tmp = _slicedToArray(noop.useState(false), 2);
   const first = tmp[0];
   const effect = noop.useEffect(() => {
@@ -77,116 +75,132 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const items = [first, tmp[1]];
   return items;
 });
-let closure_9 = tmp3;
+let closure_10 = tmp3;
 ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(22);
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Content() {
+  const cResult = visible(576).c(23);
   const tmp4 = closure_8();
   [visible, dependencyMap] = noop.useState(false);
-  [tmp8, tmp9] = closure_9();
-  const tmp10 = _slicedToArray(noop.useState(false), 2);
+  const obj = visible(576);
+  [tmp8, tmp9] = closure_10();
+  const tmp10 = _slicedToArray(noop.useState("top"), 2);
   const first1 = tmp10[0];
   let str = "Show tooltip";
   if (visible) {
     str = "Hide tooltip";
   }
   const ref = noop.useRef(null);
-  let str2 = "top";
-  if (first1) {
-    str2 = "bottom";
-  }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function l() {
-      return closure_1(false);
+      return dependencyMap(false);
     };
     cResult[0] = fn;
     let first2 = fn;
   } else {
     first2 = cResult[0];
   }
-  if (cResult[1] === visible) {
-    if (cResult[2] === str2) {
+  if (cResult[1] === first1) {
+    if (cResult[2] === visible) {
       let tmp14 = cResult[3];
     }
-    const tooltip = useTooltip.useTooltip(ref, tmp14);
+    const tooltip = tmp(9376).useTooltip(ref, tmp14);
     if (cResult[4] !== visible) {
-      class N {
+      class U {
         constructor() {
           tmp = closure_1(!closure_0);
           return;
         }
       }
       cResult[4] = visible;
-      cResult[5] = N;
+      cResult[5] = U;
     } else {
-      class N {
+      class U {
         constructor() {
           tmp = closure_1(!closure_0);
           return;
         }
       }
     }
-    if (cResult[6] === N) {
-      class N {
+    if (cResult[6] === U) {
+      class U {
         constructor() {
           tmp = closure_1(!closure_0);
           return;
         }
       }
       if (cResult[9] === tmp4.container) {
-        class N {
+        class U {
           constructor() {
             tmp = closure_1(!closure_0);
             return;
           }
         }
         if (cResult[12] === tmp8) {
-          class N {
+          class U {
             constructor() {
               tmp = closure_1(!closure_0);
               return;
             }
           }
-          if (cResult[15] !== first1) {
-            class N {
-              constructor() {
-                tmp = closure_1(!closure_0);
-                return;
-              }
-            }
-            const obj3 = { label: "Enable Bottom Position", value: first1, onValueChange: tmp10[1] };
-            const tmp28 = hasOwnProperty(TableSwitchRow.TableSwitchRow, obj3);
-            cResult[15] = first1;
-            cResult[16] = tmp28;
-          } else {
-            class N {
-              constructor() {
-                tmp = closure_1(!closure_0);
-                return;
-              }
-            }
-          }
           const _Symbol = Symbol;
-          if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
-            class N {
+          if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
+            class U {
               constructor() {
                 tmp = closure_1(!closure_0);
                 return;
               }
             }
-            const tmp31 = hasOwnProperty(closure_11, {});
-            cResult[17] = tmp31;
-            const tmp29 = tmp31;
+            const mapped = closure_9.map((label) => closure_1_5(first(6264).TableRadioRow, { label, value: label }, label));
+            cResult[15] = mapped;
+            const tmp27 = mapped;
           } else {
-            class N {
+            class U {
               constructor() {
                 tmp = closure_1(!closure_0);
                 return;
               }
             }
           }
-          if (cResult[18] === tmp20) {
-            class N {
+          if (cResult[16] !== first1) {
+            class U {
+              constructor() {
+                tmp = closure_1(!closure_0);
+                return;
+              }
+            }
+            const obj3 = { title: "Position", value: first1, onChange: tmp10[1], hasIcons: false, children: tmp27 };
+            const tmp30 = closure_5(tmp(6265).TableRadioGroup, obj3);
+            cResult[16] = first1;
+            cResult[17] = tmp30;
+          } else {
+            class U {
+              constructor() {
+                tmp = closure_1(!closure_0);
+                return;
+              }
+            }
+          }
+          const _Symbol2 = Symbol;
+          if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
+            class U {
+              constructor() {
+                tmp = closure_1(!closure_0);
+                return;
+              }
+            }
+            const tmp33 = closure_5(closure_12, {});
+            cResult[18] = tmp33;
+            const tmp31 = tmp33;
+          } else {
+            class U {
+              constructor() {
+                tmp = closure_1(!closure_0);
+                return;
+              }
+            }
+          }
+          if (cResult[19] === tmp20) {
+            class U {
               constructor() {
                 tmp = closure_1(!closure_0);
                 return;
@@ -194,86 +208,94 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             }
           }
           const obj4 = { children: null };
-          const items = [tmp20, tmp24, tmp27, tmp29];
+          const items = [tmp20, tmp24, tmp29, tmp31];
           obj4.children = items;
-          const tmp35 = React5(timestampProducer, obj4);
-          cResult[18] = tmp20;
-          cResult[19] = tmp24;
-          cResult[20] = tmp27;
-          cResult[21] = tmp35;
+          const tmp37 = closure_7(closure_6, obj4);
+          cResult[19] = tmp20;
+          cResult[20] = tmp24;
+          cResult[21] = tmp29;
+          cResult[22] = tmp37;
         }
         const obj5 = { label: "Unlock Orientation", value: tmp8, onValueChange: tmp9 };
-        const tmp26 = hasOwnProperty(TableSwitchRow.TableSwitchRow, obj5);
+        const tmp26 = closure_5(tmp(6882).TableSwitchRow, obj5);
         cResult[12] = tmp8;
         cResult[13] = tmp9;
         cResult[14] = tmp26;
       }
       const obj6 = { style: tmp4.container, children: tmp17 };
-      const tmp23 = hasOwnProperty(View, obj6);
+      const tmp23 = closure_5(View, obj6);
       cResult[9] = tmp4.container;
       cResult[10] = tmp17;
       cResult[11] = tmp23;
     }
-    const obj7 = { ref, onPress: N, variant: "primary", text: str, size: "md" };
-    const tmp19 = hasOwnProperty(components_Button_Button.Button, obj7);
-    cResult[6] = N;
+    const obj7 = { ref, onPress: U, variant: "primary", text: str, size: "md" };
+    const tmp19 = closure_5(tmp(5375).Button, obj7);
+    cResult[6] = U;
     cResult[7] = str;
     cResult[8] = tmp19;
-    const tmpResult = useTooltip;
+    const tmpResult = tmp(9376);
   }
-  const obj8 = { label: "NEW", position: str2, visible, onPress: first2 };
-  cResult[1] = visible;
-  cResult[2] = str2;
+  const obj8 = { label: "NEW", position: first1, visible, onPress: first2 };
+  cResult[1] = first1;
+  cResult[2] = visible;
   cResult[3] = obj8;
   tmp14 = obj8;
-  const tmp7 = _slicedToArray(closure_9(), 2);
-}) : (() => {
-  [visible, closure_1] = noop.useState(false);
+  const tmp7 = _slicedToArray(closure_10(), 2);
+}) : (function Content() {
+  const tmp2 = first1(noop.useState(false), 2);
+  const visible = tmp2[0];
+  dependencyMap = tmp2[1];
   const tmp = closure_8();
-  [tmp5, tmp6] = closure_9();
-  const tmp7 = _slicedToArray(noop.useState(false), 2);
-  const first1 = tmp7[0];
+  [tmp5, tmp6] = first1(closure_10(), 2);
+  const tmp7 = first1(noop.useState("top"), 2);
+  first1 = tmp7[0];
   let str = "Show tooltip";
   if (visible) {
     str = "Hide tooltip";
   }
   const ref = noop.useRef(null);
   const items = [first1, visible];
-  const memo = noop.useMemo(() => {
-    let str = "top";
-    if (first1) {
-      str = "bottom";
+  const memo = noop.useMemo(() => ({
+    label: "NEW",
+    position: first1,
+    visible,
+    onPress() {
+      return dependencyMap(false);
     }
-    return {
-      label: "NEW",
-      position: str,
-      visible,
-      onPress() {
-        return closure_1_1(false);
-      }
-    };
-  }, items);
-  const tmp4 = _slicedToArray(closure_9(), 2);
-  const tooltip = useTooltip.useTooltip(ref, memo);
+  }), items);
+  const tmp4 = first1(closure_10(), 2);
+  const tooltip = visible(9376).useTooltip(ref, memo);
   const obj3 = { children: null };
   const obj4 = {
     style: tmp.container,
-    children: hasOwnProperty(components_Button_Button.Button, {
+    children: closure_5(visible(5375).Button, {
       ref,
       onPress() {
-        closure_1(!first);
+        dependencyMap(!first);
       },
       variant: "primary",
       text: str,
       size: "md"
     })
   };
-  const items1 = [hasOwnProperty(View, obj4), hasOwnProperty(TableSwitchRow.TableSwitchRow, { label: "Unlock Orientation", value: tmp5, onValueChange: tmp6 }), hasOwnProperty(TableSwitchRow.TableSwitchRow, { label: "Enable Bottom Position", value: first1, onValueChange: tmp7[1] }), hasOwnProperty(closure_11, {})];
+  const items1 = [closure_5(View, obj4), closure_5(visible(6882).TableSwitchRow, { label: "Unlock Orientation", value: tmp5, onValueChange: tmp6 }), , ];
+  const obj2 = visible(9376);
+  const obj5 = {
+    ref,
+    onPress() {
+      dependencyMap(!first);
+    },
+    variant: "primary",
+    text: str,
+    size: "md"
+  };
+  items1[2] = closure_5(visible(6265).TableRadioGroup, { title: "Position", value: first1, onChange: tmp7[1], hasIcons: false, children: closure_9.map((label) => closure_1_5(first(6264).TableRadioRow, { label, value: label }, label)) });
+  items1[3] = closure_5(closure_12, {});
   obj3.children = items1;
-  return React5(timestampProducer, obj3);
+  return closure_7(closure_6, obj3);
 });
 ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function TooltipNote() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { padding: 16, paddingTop: 16 };
@@ -293,22 +315,22 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp5 = cResult[1];
   }
   return tmp5;
-}) : (() => {
+}) : (function TooltipNote() {
   const obj = { variant: "text-sm/normal", style: { padding: 16, paddingTop: 16 }, children: null };
   const items = ["Note: If your tooltip is not displaying or it is not in the right position/zIndex, consider adding or moving an existing", hasOwnProperty(Text_Text.Text, { variant: "text-sm/bold", children: " <LayerScope/>" }), " on the surface you expect to see the tooltip."];
   obj.children = items;
   return React5(Text_Text.Text, obj);
 });
-let closure_11 = tmp4;
+let closure_12 = tmp4;
 ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemTooltip.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSettingsDesignSystemTooltip() {
   const cResult = c.c(3);
   const tmp4 = closure_8();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { children: hasOwnProperty(closure_10, {}) };
+    const obj2 = { children: hasOwnProperty(closure_11, {}) };
     const tmp8 = hasOwnProperty(LayerScope.LayerScope, obj2);
     cResult[0] = tmp8;
     let first = tmp8;
@@ -325,10 +347,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp9 = cResult[2];
   }
   return tmp9;
-}) : (() => {
+}) : (function UserSettingsDesignSystemTooltip() {
   const obj = { style: closure_8().flex, bottom: true, children: null };
   const tmp = closure_8();
-  obj.children = hasOwnProperty(LayerScope.LayerScope, { children: hasOwnProperty(closure_10, {}) });
+  obj.children = hasOwnProperty(LayerScope.LayerScope, { children: hasOwnProperty(closure_11, {}) });
   return hasOwnProperty(common_SafeAreaView.SafeAreaPaddingView, obj);
 });
 export const useCanRotate = tmp3;

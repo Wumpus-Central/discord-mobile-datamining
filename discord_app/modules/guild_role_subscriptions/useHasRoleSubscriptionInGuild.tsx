@@ -1,10 +1,10 @@
-// === Module 6765: useHasRoleSubscriptionInGuild ===
+// === Module 6941: useHasRoleSubscriptionInGuild ===
 
-// Module 6765 (useHasRoleSubscriptionInGuild)
+// Module 6941 (useHasRoleSubscriptionInGuild)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import GuildRoleStore from "GuildRoleStore" /* 2106 */;
-import GuildStore from "GuildStore" /* 2074 */;
+import GuildMemberStore from "GuildMemberStore" /* 2124 */;
+import GuildRoleStore from "GuildRoleStore" /* 2118 */;
+import GuildStore from "GuildStore" /* 2086 */;
 
 const require = globalThis.__r;
 
@@ -59,7 +59,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useHasRoleSubscriptionInGuild.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useHasRoleSubscriptionInGuild(arg0) {
   _require = arg0;
   const cResult = require("c").c(8);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -115,7 +115,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   tmp13 = items2;
   tmp12 = fn2;
   const tmpResult = require("initialize");
-}) : ((arg0) => {
+}) : (function useHasRoleSubscriptionInGuild(arg0) {
   _require = arg0;
   let items = [AuthenticationStore, GuildMemberStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => {

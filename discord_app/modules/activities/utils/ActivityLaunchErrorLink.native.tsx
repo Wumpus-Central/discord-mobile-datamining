@@ -1,8 +1,8 @@
-// === Module 9074: ActivityLaunchErrorLink ===
+// === Module 10661: ActivityLaunchErrorLink ===
 
-// Module 9074 (ActivityLaunchErrorLink)
+// Module 10661 (ActivityLaunchErrorLink)
 import c from "c" /* 576 */;
-import migration from "migration" /* 9075 */;
+import migration from "migration" /* 10662 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/ActivityLaunchErrorLink.native.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ActivityLaunchErrorLink(arg0) {
   const cResult = c.c(3);
   ({ href, children } = arg0);
   if (cResult[0] === children) {
@@ -25,7 +25,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = href;
   cResult[2] = tmp5;
   tmp4 = tmp5;
-}) : ((arg0) => {
+}) : (function ActivityLaunchErrorLink(arg0) {
   ({ href, children } = arg0);
   return jsx(migration.IntlLink, { target, children });
 });

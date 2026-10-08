@@ -1,16 +1,16 @@
-// === Module 12421: HubEmailConnectionGuildSelect ===
+// === Module 12517: HubEmailConnectionGuildSelect ===
 
-// Module 12421 (HubEmailConnectionGuildSelect)
+// Module 12517 (HubEmailConnectionGuildSelect)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 2066 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import GuildIconDefault from "GuildIcon" /* 5978 */;
-import Form from "Form" /* 8924 */;
+import native from "native" /* 1200 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 2078 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import GuildIconDefault from "GuildIcon" /* 6161 */;
+import Form from "Form" /* 8555 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -18,10 +18,10 @@ import noop from "module_19" /* 19 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, FlatList: closure_7 } = get_ActivityIndicator);
-const HubEmailConnectionSteps = fn(12400).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(12496).HubEmailConnectionSteps;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { rowContainer: { marginHorizontal: 16, borderRadius: nativeDefault.radii.sm, padding: 12, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL }, guildIcon: null, separator: null, header: null, title: null, footerSafeAreaContainer: null, footerContainer: null, error: null };
 let obj3 = { marginHorizontal: 16, borderRadius: nativeDefault.radii.sm, padding: 12, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
 obj2.guildIcon = { borderRadius: nativeDefault.radii.sm };
@@ -35,7 +35,7 @@ let obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, position
 obj2.error = { color: nativeDefault.unsafe_rawColors.RED_400, alignSelf: "center", fontSize: 14, marginVertical: 8 };
 let closure_11 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function HubEmailConnectionGuildSelectRow(arg0) {
   const cResult = c.c(12);
   ({ guildInfo, signup, loading } = arg0);
   const tmp4 = closure_11();
@@ -90,7 +90,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = tmp5;
   cResult[4] = tmp11;
   tmp10 = tmp11;
-}) : ((guildInfo) => {
+}) : (function HubEmailConnectionGuildSelectRow(guildInfo) {
   guildInfo = guildInfo.guildInfo;
   ({ signup, loading } = guildInfo);
   const tmp = closure_11();
@@ -107,7 +107,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 });
 let closure_12 = tmp4;
 ReactCompilerGating = fn(558);
-let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function HubEmailConnectionGuildSelectHeader() {
   const cResult = c.c(6);
   const tmp4 = closure_11();
   ({ header, title } = tmp4);
@@ -139,7 +139,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[4] = tmp7;
   cResult[5] = tmp11;
   tmp10 = tmp11;
-}) : (() => {
+}) : (function HubEmailConnectionGuildSelectHeader() {
   const tmp = closure_11();
   const obj = { style: tmp.header, children: null };
   const obj2 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
@@ -149,7 +149,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   return options(timestampProducer, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function HubEmailConnectionGuildSelectFooter(arg0) {
   const cResult = c.c(19);
   ({ errors, loading, onFooterButtonPressed } = arg0);
   const tmp4 = closure_11();
@@ -205,7 +205,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         const obj4 = { style: tmp4.footerContainer, children: null };
         const items = [tmp10, tmp13];
         obj4.children = items;
-        const tmp21 = v65535(timestampProducer, obj4);
+        const tmp21 = collapsed(timestampProducer, obj4);
         cResult[12] = tmp4.footerContainer;
         cResult[13] = tmp10;
         cResult[14] = tmp13;
@@ -239,7 +239,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = tmp5;
   cResult[4] = items1;
   tmp6 = items1;
-}) : ((onFooterButtonPressed) => {
+}) : (function HubEmailConnectionGuildSelectFooter(onFooterButtonPressed) {
   ({ errors, loading } = onFooterButtonPressed);
   const tmp = closure_11();
   const obj = { style: null, children: null };
@@ -263,7 +263,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   items1[1] = tmp3Result;
   obj3.children = items1;
-  obj.children = v65535(timestampProducer, obj3);
+  obj.children = collapsed(timestampProducer, obj3);
   return options(timestampProducer, obj);
 });
 const size = fn(2);
@@ -345,7 +345,7 @@ export default function HubEmailConnectionGuildSelect(onClose) {
                   c3 = 2;
                   c4 = 3;
                   v3 = 1;
-                  const obj5 = { value: email(12414).sendVerificationEmail(email, true, id), done: false };
+                  const obj5 = { value: email(12510).sendVerificationEmail(email, true, id), done: false };
                   return obj5;
                 }
               } else if (1 === tmp8) {
@@ -356,7 +356,7 @@ export default function HubEmailConnectionGuildSelect(onClose) {
                 if (2 === tmp8) {
                   c3 = 1;
                   closure_128_0 = closure_2;
-                  const aPIError = new id(5319).APIError(closure_128_0);
+                  const aPIError = new id(5631).APIError(closure_128_0);
                   v3(aPIError);
                   c3 = 0;
                   closure_1_7(false);

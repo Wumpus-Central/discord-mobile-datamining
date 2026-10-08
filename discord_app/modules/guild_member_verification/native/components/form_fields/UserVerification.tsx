@@ -1,23 +1,23 @@
-// === Module 6012: UserVerification ===
+// === Module 6198: UserVerification ===
 
-// Module 6012 (UserVerification)
+// Module 6198 (UserVerification)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4708 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import IdentityVerificationFieldDefault from "IdentityVerificationField" /* 6013 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4902 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import IdentityVerificationFieldDefault from "IdentityVerificationField" /* 6199 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({ emailPhoneNote: { marginTop: 8, marginBottom: 12 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/UserVerification.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserVerification(arg0) {
   const cResult = c.c(14);
   ({ verification, field } = arg0);
   const tmp4 = closure_6();
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[2] = tmp6;
     tmp5 = tmp6;
   }
-}) : ((arg0) => {
+}) : (function UserVerification(arg0) {
   ({ verification, field } = arg0);
   if (null == field.platform) {
     return null;

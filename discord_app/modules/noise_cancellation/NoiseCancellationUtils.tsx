@@ -1,10 +1,10 @@
-// === Module 9687: NoiseCancellationUtils ===
+// === Module 10876: NoiseCancellationUtils ===
 
-// Module 9687 (NoiseCancellationUtils)
+// Module 10876 (NoiseCancellationUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import getEffectiveNoiseCancellationDefault from "getEffectiveNoiseCancellation" /* 9688 */;
-import MediaEngineStore from "MediaEngineStore" /* 1999 */;
+import getEffectiveNoiseCancellationDefault from "getEffectiveNoiseCancellation" /* 10877 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
@@ -20,7 +20,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/noise_cancellation/NoiseCancellationUtils.tsx");
 
 export { getNoiseCancellationDeferredToSystem };
-export const useNoiseCancellationDeferredToSystem = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useNoiseCancellationDeferredToSystem = ReactCompilerGating.isReactCompilerEnabled() ? (function useNoiseCancellationDeferredToSystem() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [MediaEngineStore];
@@ -36,7 +36,7 @@ export const useNoiseCancellationDeferredToSystem = ReactCompilerGating.isReactC
     [tmp4, tmp5] = cResult;
   }
   return initialize.useStateFromStores(tmp4, tmp5);
-}) : (() => {
+}) : (function useNoiseCancellationDeferredToSystem() {
   const items = [MediaEngineStore];
   return initialize.useStateFromStores(items, () => {
     systemMicrophoneMode = systemMicrophoneMode.getSystemMicrophoneMode();

@@ -1,10 +1,10 @@
-// === Module 16484: ContentInventoryEntryRow ===
+// === Module 16744: ContentInventoryEntryRow ===
 
-// Module 16484 (ContentInventoryEntryRow)
-import GamingLikeEntryRowDefault from "GamingLikeEntryRow" /* 16485 */;
-import CustomStatusEntryRowDefault from "CustomStatusEntryRow" /* 16492 */;
+// Module 16744 (ContentInventoryEntryRow)
+import GamingLikeEntryRowDefault from "GamingLikeEntryRow" /* 16745 */;
+import CustomStatusEntryRowDefault from "CustomStatusEntryRow" /* 16752 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/icymi/native/ContentInventoryEntryRow.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((content) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContentInventoryEntryRow(content) {
   const cResult = content(576).c(10);
   content = content.content;
   ({ renderForScreenshot, visible } = content);
@@ -38,9 +38,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((content) => {
     return null;
   } else {
     const content_type = content.content_type;
-    if (tmp(7824).ContentInventoryEntryType.TOP_GAME !== content_type) {
-      if (tmp(7824).ContentInventoryEntryType.PLAYED_GAME !== content_type) {
-        if (tmp(7824).ContentInventoryEntryType.CUSTOM_STATUS === content_type) {
+    if (tmp(8243).ContentInventoryEntryType.TOP_GAME !== content_type) {
+      if (tmp(8243).ContentInventoryEntryType.PLAYED_GAME !== content_type) {
+        if (tmp(8243).ContentInventoryEntryType.CUSTOM_STATUS === content_type) {
           if (visible == null) {
             visible = false;
           }
@@ -78,7 +78,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((content) => {
     tmp14 = tmp17;
   }
   tmpResult = content(504);
-}) : ((content) => {
+}) : (function ContentInventoryEntryRow(content) {
   content = content.content;
   let flag = content.renderForScreenshot;
   if (flag === undefined) {
@@ -90,9 +90,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((content) => {
     return null;
   } else {
     const content_type = content.content_type;
-    if (tmp(7824).ContentInventoryEntryType.TOP_GAME !== content_type) {
-      if (tmp(7824).ContentInventoryEntryType.PLAYED_GAME !== content_type) {
-        if (tmp(7824).ContentInventoryEntryType.CUSTOM_STATUS === content_type) {
+    if (tmp(8243).ContentInventoryEntryType.TOP_GAME !== content_type) {
+      if (tmp(8243).ContentInventoryEntryType.PLAYED_GAME !== content_type) {
+        if (tmp(8243).ContentInventoryEntryType.CUSTOM_STATUS === content_type) {
           const obj2 = { content, renderForScreenshot: flag, visible: null };
           if (flag2 == null) {
             flag2 = false;

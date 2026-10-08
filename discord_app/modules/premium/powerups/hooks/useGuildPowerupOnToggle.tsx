@@ -1,7 +1,7 @@
-// === Module 12210: useGuildPowerupOnToggle ===
+// === Module 12289: useGuildPowerupOnToggle ===
 
-// Module 12210 (useGuildPowerupOnToggle)
-import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 12162 */;
+// Module 12289 (useGuildPowerupOnToggle)
+import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 12241 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupOnToggle.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildPowerupOnToggle(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   const cResult = require("c").c(7);
@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   cResult[1] = arg1;
   cResult[2] = fn;
   tmp6 = fn;
-}) : ((arg0, arg1) => {
+}) : (function useGuildPowerupOnToggle(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   [tmp2, _slicedToArray] = noop.useState(false);

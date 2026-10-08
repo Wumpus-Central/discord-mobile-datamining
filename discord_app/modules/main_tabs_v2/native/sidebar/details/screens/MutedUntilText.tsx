@@ -1,21 +1,21 @@
-// === Module 11079: MutedUntilText ===
+// === Module 10442: MutedUntilText ===
 
-// Module 11079 (MutedUntilText)
+// Module 10442 (MutedUntilText)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
+import Text_Text from "Text/Text" /* 5086 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 const MuteSettingType = { SERVER: 0, [0]: "SERVER", CHANNEL: 1, [1]: "CHANNEL", DM: 2, [2]: "DM", CATEGORY: 3, [3]: "CATEGORY" };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles({ formHintText: { lineHeight: 18, marginBottom: 8, marginTop: 8, paddingHorizontal: 16 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/screens/MutedUntilText.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function MutedUntilText(arg0) {
   const obj = c;
   const cResult = obj.c(13);
   ({ muteConfig, type } = arg0);
@@ -121,7 +121,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[12] = tmp21;
     tmp19 = tmp21;
   }
-}) : ((arg0) => {
+}) : (function MutedUntilText(arg0) {
   ({ muteConfig, type } = arg0);
   const tmp = closure_4();
   if (null != muteConfig) {
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         return jsx(Text_Text.Text, { variant: "text-sm/medium", color: "control-brand-foreground", children }, "muted");
       };
       obj2.children = intl5.format(N2NXMd, obj3);
-      return jsx(tmp15(4892).Text, { style: tmp.formHintText, variant: "text-sm/medium", color: "text-muted", children: null });
+      return jsx(tmp15(5086).Text, { style: tmp.formHintText, variant: "text-sm/medium", color: "text-muted", children: null });
     }
   }
   if (obj.SERVER === type) {
@@ -174,6 +174,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     return null;
   }
   obj = { style: tmp.formHintText, variant: "text-sm/medium", color: "text-muted", children: stringResult };
-  return jsx(tmp3(4892).Text, { style: tmp.formHintText, variant: "text-sm/medium", color: "text-muted", children: stringResult });
+  return jsx(tmp3(5086).Text, { style: tmp.formHintText, variant: "text-sm/medium", color: "text-muted", children: stringResult });
 });
 export { MuteSettingType };

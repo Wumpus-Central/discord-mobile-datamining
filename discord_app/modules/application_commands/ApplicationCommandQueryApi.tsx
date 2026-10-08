@@ -1,17 +1,17 @@
-// === Module 8968: ApplicationCommandQueryApi ===
+// === Module 9759: ApplicationCommandQueryApi ===
 
-// Module 8968 (ApplicationCommandQueryApi)
+// Module 9759 (ApplicationCommandQueryApi)
 import c from "c" /* 576 */;
-import GlobalUtils from "GlobalUtils" /* 1375 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7043 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7047 */;
-import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 8833 */;
-import ApplicationCommandBuiltIns from "ApplicationCommandBuiltIns" /* 8835 */;
-import CommandPermissionUtils from "CommandPermissionUtils" /* 8957 */;
+import GlobalUtils from "GlobalUtils" /* 1387 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7231 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7235 */;
+import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 9192 */;
+import ApplicationCommandBuiltIns from "ApplicationCommandBuiltIns" /* 9194 */;
+import CommandPermissionUtils from "CommandPermissionUtils" /* 9760 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import ApplicationCommandIndexStore_mod from "ApplicationCommandIndexStore" /* 8827 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import ApplicationCommandIndexStore_mod from "ApplicationCommandIndexStore" /* 9186 */;
 
 const require = globalThis.__r;
 const CommandPermissionUtilsAll = CommandPermissionUtils;
@@ -55,14 +55,14 @@ function findCommandInSection(found, commandId) {
     }
   }
 }
-let ApplicationCommandIndexStore = fn(8827);
+let ApplicationCommandIndexStore = fn(9186);
 ({ useContextIndexState: metroRequire, useDiscoveryState: closure_7, useQueryState: closure_8, useUserIndexState: closure_9 } = ApplicationCommandIndexStore);
 let ApplicationCommandIndexStore = ApplicationCommandIndexStore_mod;
-const BuiltInSectionId = fn(5795).BuiltInSectionId;
+const BuiltInSectionId = fn(5399).BuiltInSectionId;
 const NOOP = fn(1085).NOOP;
 fn(558);
 let ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, text) => {
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCachedResults(arg0, arg1, text) {
   const cResult = c.c(9);
   if (cResult[0] !== arg1) {
     items = [arg1];
@@ -103,7 +103,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, text) =>
   cResult[3] = text;
   cResult[4] = obj7;
   tmp5 = obj7;
-}) : ((arg0, arg1, text) => {
+}) : (function useCachedResults(arg0, arg1, text) {
   closure_0 = arg1;
   items = [arg1];
   const obj = {
@@ -117,7 +117,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, text) =>
   return { commands: tmp.commands, sections: tmp.descriptors };
 });
 ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDiscovery(arg0) {
   const cResult = guild_id(576).c(46);
   ({ context, filters, options, allowFetch } = arg0);
   guild_id = null;
@@ -240,7 +240,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               cResult[33] = items3;
               tmp37 = items3;
             } else {
-              const tmp53 = tmp(8835).BUILT_IN_SECTIONS[BuiltInSectionId.BUILT_IN];
+              const tmp53 = tmp(9194).BUILT_IN_SECTIONS[BuiltInSectionId.BUILT_IN];
               const _Symbol2 = Symbol;
               if (cResult[40] === Symbol.for("react.memo_cache_sentinel")) {
                 const items4 = [tmp53];
@@ -357,7 +357,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[6] = obj5;
   tmp10 = obj5;
   const tmpResult = guild_id(504);
-}) : ((options) => {
+}) : (function useDiscovery(options) {
   ({ context, filters } = options);
   options = options.options;
   let descriptors;
@@ -465,7 +465,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }, items3);
 });
 ReactCompilerGating = fn(558);
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arr) => {
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCommandsForApplication(arg0, arg1, arr) {
   const cResult = require("c").c(12);
   const tmp4 = closure_9(true, true);
   const tmp5 = closure_6(arg0, true, true);
@@ -537,7 +537,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arr) => 
     }
   }
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function h(arg0, id) {
+    const fn = function f(arg0, id) {
       arg0[id.id] = id;
       return arg0;
     };
@@ -593,7 +593,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arr) => 
   tmp15 = found;
   tmp14 = application1;
   let obj = require("c");
-}) : ((arg0, arg1, arg2) => {
+}) : (function useCommandsForApplication(arg0, arg1, arg2) {
   closure_0 = arg1;
   closure_1 = arg2;
   const tmp = closure_9(true, true);
@@ -687,10 +687,10 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arr) => 
   }, items);
 });
 let closure_14 = tmp6;
-let items = [fn(1985).ApplicationCommandType.CHAT];
+let items = [fn(1997).ApplicationCommandType.CHAT];
 ReactCompilerGating = fn(558);
 const obj6 = { id: "placeholder-section", type: null, name: "" };
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, placeholderCount) => {
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useQuery(arg0, arg1, placeholderCount) {
   const cResult = c.c(15);
   if (cResult[0] !== placeholderCount) {
     const obj2 = {};
@@ -771,7 +771,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, placehol
   cResult[4] = items2;
   tmp9 = items2;
   const tmp8 = closure_1_8(arg0, arg1, tmp4);
-}) : ((arg0, commandTypes, placeholderCount) => {
+}) : (function useQuery(arg0, commandTypes, placeholderCount) {
   closure_0 = commandTypes;
   let obj = {};
   const merged = Object.assign(placeholderCount);
@@ -818,14 +818,14 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, placehol
     tmp10 = descriptors;
   }, items1);
 });
-obj6.type = fn(7047).ApplicationCommandSectionType.APPLICATION;
+obj6.type = fn(7235).ApplicationCommandSectionType.APPLICATION;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandQueryApi.tsx");
 
 export const getCachedCommand = function getCachedCommand(type, commandId, applicationId) {
   closure_0 = applicationId;
   if (null == commandId) {
-    return { application: "duration", command: "toCharArray$esjava$1", section: "toCharArray$esjava$1" };
+    return { application: "useSharedValue", command: "apply", section: "next" };
   } else {
     const userState = ApplicationCommandIndexStore.getUserState();
     const result2 = userState.result;
@@ -872,7 +872,7 @@ export const getCachedCommand = function getCachedCommand(type, commandId, appli
         }
       }
     }
-    return { application: "duration", command: "toCharArray$esjava$1", section: "toCharArray$esjava$1" };
+    return { application: "useSharedValue", command: "apply", section: "next" };
   }
 };
 export const getCachedApplicationSection = function getCachedApplicationSection(type, CHAT, applicationId) {
@@ -1013,11 +1013,11 @@ export const useCommand = function useCommand(cResult, commandId) {
         }
       }
     }
-    return { command: "start", application: "unicodeVersion" };
+    return { command: "Array", application: "Reflect" };
   }, items);
 };
 export const useCommandsForApplication = tmp6;
-export const useAccessibleCommandsForApplication = ReactCompilerGating.isReactCompilerEnabled() ? ((channel, arg1, arg2) => {
+export const useAccessibleCommandsForApplication = ReactCompilerGating.isReactCompilerEnabled() ? (function useAccessibleCommandsForApplication(channel, arg1, arg2) {
   let guild_id = isUserInstalled;
   const cResult = sectionDescriptor(isUserInstalled[9]).c(12);
   if (cResult[0] !== channel) {
@@ -1099,7 +1099,7 @@ export const useAccessibleCommandsForApplication = ReactCompilerGating.isReactCo
     cResult[7] = commands;
     cResult[8] = found;
   }
-}) : ((channel, arg1, arg2) => {
+}) : (function useAccessibleCommandsForApplication(channel, arg1, arg2) {
   _require = channel;
   items = [channel];
   const tmp = closure_14(isUserInstalled.useMemo(() => ({ channel, type: "channel" }), items), arg1, arg2);

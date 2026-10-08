@@ -1,8 +1,8 @@
-// === Module 12795: useMediaLoading ===
+// === Module 12942: useMediaLoading ===
 
-// Module 12795 (useMediaLoading)
+// Module 12942 (useMediaLoading)
 import c from "c" /* 576 */;
-import hooks_useStableCallbackDefault from "hooks/useStableCallback" /* 6460 */;
+import hooks_useStableCallbackDefault from "hooks/useStableCallback" /* 6638 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_viewer/native/useMediaLoading.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onLoad) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useMediaLoading(onLoad) {
   const cResult = c.c(19);
   onLoad = onLoad.onLoad;
   const onError = onLoad.onError;
@@ -24,7 +24,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onLoad) => {
   closure_6 = noop.useRef("idle");
   noop.useRef(null);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function l() {
+    const fn = function o() {
       if (null != ref.current) {
         const _clearTimeout = clearTimeout;
         clearTimeout(ref.current);
@@ -295,7 +295,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onLoad) => {
   cResult[18] = { hasError: tmp4, isLoadingVisible: tmp6, progress: tmp8, handleLoadStart: tmp16, handleLoad: I, handleError: tmp19, handleProgress: A };
   const obj3 = { hasError: tmp4, isLoadingVisible: tmp6, progress: tmp8, handleLoadStart: tmp16, handleLoad: I, handleError: tmp19, handleProgress: A };
   const tmp7 = _slicedToArray(noop.useState(0), 2);
-}) : ((onLoad) => {
+}) : (function useMediaLoading(onLoad) {
   onLoad = onLoad.onLoad;
   const onError = onLoad.onError;
   const onLoadingVisible = onLoad.onLoadingVisible;

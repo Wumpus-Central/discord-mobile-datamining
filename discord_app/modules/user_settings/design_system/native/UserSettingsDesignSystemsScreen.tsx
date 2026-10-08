@@ -1,9 +1,9 @@
-// === Module 15460: UserSettingsDesignSystemsScreen ===
+// === Module 15722: UserSettingsDesignSystemsScreen ===
 
-// Module 15460 (UserSettingsDesignSystemsScreen)
+// Module 15722 (UserSettingsDesignSystemsScreen)
 import c from "c" /* 576 */;
-import SettingBuilders from "SettingBuilders" /* 11142 */;
-import SettingLayoutDefault from "SettingLayout" /* 14515 */;
+import SettingBuilders from "SettingBuilders" /* 11262 */;
+import SettingLayoutDefault from "SettingLayout" /* 14775 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -34,13 +34,13 @@ function getDesignSystemsSettings() {
   items1[4] = obj5;
   return items1;
 }
-const MobileUserSettings = fn(7645).MobileUserSettings;
+const MobileUserSettings = fn(7966).MobileUserSettings;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemsScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SettingsDesignSystemsScreen() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { sections: getDesignSystemsSettings() };
@@ -60,7 +60,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp7 = cResult[1];
   }
   return tmp7;
-}) : (() => {
+}) : (function SettingsDesignSystemsScreen() {
   const node = noop.useMemo(() => {
     const obj = SettingBuilders;
     return obj.createList({ sections: getDesignSystemsSettings() });

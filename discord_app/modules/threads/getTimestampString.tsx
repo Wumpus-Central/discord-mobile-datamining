@@ -1,6 +1,6 @@
-// === Module 7021: threads/getTimestampString ===
+// === Module 7209: threads/getTimestampString ===
 
-// Module 7021 (threads/getTimestampString)
+// Module 7209 (threads/getTimestampString)
 import util from "util" /* 1126 */;
 import size from "module_2" /* 2 */;
 
@@ -17,7 +17,7 @@ export default function getTimestampString(arg0, fn) {
   }
   importDefault = undefined;
   let time;
-  const diffResult = require("module_4467")().diff(require("module_4467")(arg0), "s");
+  const diffResult = require("module_4659")().diff(require("module_4659")(arg0), "s");
   let tmp4;
   if (null != fn) {
     tmp4 = fn();
@@ -114,6 +114,6 @@ export default function getTimestampString(arg0, fn) {
       }
     }
   }
-  let obj = require("module_4467")();
-  return require("module_4467")(arg0).format("LL");
+  let obj = require("module_4659")();
+  return require("module_4659")(arg0).format("LL");
 };

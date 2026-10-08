@@ -1,21 +1,21 @@
-// === Module 9315: GuildScheduledEventDetailsActionSheet ===
+// === Module 8491: GuildScheduledEventDetailsActionSheet ===
 
-// Module 9315 (GuildScheduledEventDetailsActionSheet)
+// Module 8491 (GuildScheduledEventDetailsActionSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 9306 */;
+import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 8493 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7050 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6059 */;
 
 require = fn;
 const View = fn(17).View;
-const GuildScheduledEventsConstants = fn(2057);
+const GuildScheduledEventsConstants = fn(2069);
 ({ EventDetailSections: closure_8, MAX_RSVP_USER_DISPLAY_COUNT: closure_9 } = GuildScheduledEventsConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { segmentedControl: { paddingTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_12 }, header: { flexDirection: "column" } };
 let closure_12 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -23,7 +23,7 @@ let obj3 = { paddingTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefa
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildScheduledEventDetailsActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((eventId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildScheduledEventDetailsActionSheet(eventId) {
   const cResult = eventId(stateFromStores[11]).c(58);
   eventId = eventId.eventId;
   const event = eventId.event;
@@ -62,16 +62,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((eventId) => {
       if (stateFromStores != null) {
         guild_id1 = stateFromStores.guild_id;
       }
-      const fn = function x() {
-        let guild_id;
-        if (stateFromStores != null) {
-          guild_id = stateFromStores.guild_id;
+      class G {
+        constructor() {
+          guild_id = undefined;
+          tmp = closure_6;
+          if (closure_2 != null) {
+            guild_id = closure_2.guild_id;
+          }
+          return null != closure_6.getGuild(guild_id);
         }
-        return null != GuildStore.getGuild(guild_id);
-      };
+      }
       cResult[6] = guild_id1;
-      cResult[7] = fn;
-      let tmp19 = fn;
+      cResult[7] = G;
+      let tmp19 = G;
     } else {
       tmp19 = cResult[7];
     }
@@ -96,15 +99,31 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((eventId) => {
     }
     if (cResult[8] === arr4) {
       let guild_id3;
+      class G {
+        constructor() {
+          guild_id = undefined;
+          tmp = closure_6;
+          if (closure_2 != null) {
+            guild_id = closure_2.guild_id;
+          }
+          return null != closure_6.getGuild(guild_id);
+        }
+      }
       if (stateFromStores != null) {
         guild_id3 = stateFromStores.guild_id;
       }
-      if (cResult[11] === guild_id3) {
-        let id1;
-        if (stateFromStores != null) {
-          id1 = stateFromStores.id;
+      if (tmp31 === guild_id3) {
+        class G {
+          constructor() {
+            guild_id = undefined;
+            tmp = closure_6;
+            if (closure_2 != null) {
+              guild_id = closure_2.guild_id;
+            }
+            return null != closure_6.getGuild(guild_id);
+          }
         }
-        if (cResult[12] === id1) {
+        if (cResult[12] === undefined) {
           let tmp34 = cResult[13];
         }
         const tmp7Result = tmp7(tmp5(tmp2[18])(tmp34), 2);
@@ -137,7 +156,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((eventId) => {
               return;
             }
           }
-          cResult[14] = X;
+          class G {
+            constructor() {
+              guild_id = undefined;
+              tmp = closure_6;
+              if (closure_2 != null) {
+                guild_id = closure_2.guild_id;
+              }
+              return null != closure_6.getGuild(guild_id);
+            }
+          }
         } else {
           class X {
             constructor(arg0) {
@@ -154,7 +182,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((eventId) => {
               return;
             }
           }
-          cResult[15] = tmp44;
+          class G {
+            constructor() {
+              guild_id = undefined;
+              tmp = closure_6;
+              if (closure_2 != null) {
+                guild_id = closure_2.guild_id;
+              }
+              return null != closure_6.getGuild(guild_id);
+            }
+          }
         } else {
           class X {
             constructor(arg0) {
@@ -263,6 +300,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((eventId) => {
             return;
           }
         }
+        class G {
+          constructor() {
+            guild_id = undefined;
+            tmp = closure_6;
+            if (closure_2 != null) {
+              guild_id = closure_2.guild_id;
+            }
+            return null != closure_6.getGuild(guild_id);
+          }
+        }
         const obj3 = { count: num6 };
         tmp29[HermesBuiltin.arraySpread(arr4, 0)] = obj3;
         tmp28 = tmp29;
@@ -300,7 +347,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((eventId) => {
   tmp13 = items3;
   tmp12 = S;
   const tmp8 = _slicedToArray(first2.useState(eventId.recurrenceId), 2);
-}) : ((eventId) => {
+}) : (function GuildScheduledEventDetailsActionSheet(eventId) {
   eventId = eventId.eventId;
   const event = eventId.event;
   const onCloseActionSheet = eventId.onCloseActionSheet;

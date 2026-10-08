@@ -1,10 +1,10 @@
-// === Module 16005: MessagesItemChannelWave ===
+// === Module 16265: MessagesItemChannelWave ===
 
-// Module 16005 (MessagesItemChannelWave)
+// Module 16265 (MessagesItemChannelWave)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelWave.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesItemChannelWave(arg0) {
   const cResult = c.c(5);
   ({ wavePressed, hasNameplate } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -48,7 +48,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   cResult[4] = tmp11;
   tmp10 = tmp11;
   tmp4 = undefined !== hasNameplate && hasNameplate;
-}) : ((hasNameplate) => {
+}) : (function MessagesItemChannelWave(hasNameplate) {
   let flag = hasNameplate.hasNameplate;
   if (flag === undefined) {
     flag = false;

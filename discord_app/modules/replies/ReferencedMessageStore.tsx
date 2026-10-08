@@ -1,16 +1,16 @@
-// === Module 7115: ReferencedMessageStore ===
+// === Module 7301: ReferencedMessageStore ===
 
-// Module 7115 (ReferencedMessageStore)
+// Module 7301 (ReferencedMessageStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import privDefault from "priv" /* 1444 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5118 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7122 */;
+import privDefault from "priv" /* 1456 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5430 */;
+import handleExplicitMediaScanTimeoutForMessage from "handleExplicitMediaScanTimeoutForMessage" /* 7308 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelConversationsStore from "ChannelConversationsStore" /* 7116 */;
-import ConversationPreviewStore from "ConversationPreviewStore" /* 7121 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import MessageStore from "MessageStore" /* 5116 */;
+import ChannelConversationsStore from "ChannelConversationsStore" /* 7302 */;
+import ConversationPreviewStore from "ConversationPreviewStore" /* 7307 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import MessageStore from "MessageStore" /* 5428 */;
 
 require = fn;
 function processMessage(message) {
@@ -330,7 +330,7 @@ const referencedMessageStore = new ReferencedMessageStore(DispatcherDefault, {
       value = merged.get(channelId, messageId);
       if (null != value) {
         if (value.state === merged.LOADED) {
-          const obj2 = { state: tmp3.LOADED, message: ExplicitMediaRedactionUtils.handleExplicitMediaScanTimeoutForMessage(value.message) };
+          const obj2 = { state: tmp3.LOADED, message: handleExplicitMediaScanTimeoutForMessage.handleExplicitMediaScanTimeoutForMessage(value.message) };
           const result = merged.set(channelId, messageId, obj2);
         }
       }

@@ -1,32 +1,32 @@
-// === Module 9741: StageChannelCallList ===
+// === Module 10942: StageChannelCallList ===
 
-// Module 9741 (StageChannelCallList)
+// Module 10942 (StageChannelCallList)
 import _modDef38 from "module_38" /* 38 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
-import StageChannelParticipants from "StageChannelParticipants" /* 5589 */;
-import useIsScreenLandscape from "useIsScreenLandscape" /* 5919 */;
-import SpeakerTile from "SpeakerTile" /* 9743 */;
-import StageSectionHeaderDefault from "StageSectionHeader" /* 9750 */;
-import UserSummaryItemDefault from "UserSummaryItem" /* 9751 */;
-import StageGridRowDefault from "StageGridRow" /* 9752 */;
-import AudienceGridRowDefault from "AudienceGridRow" /* 9764 */;
-import useStageChannelGridParticipants from "useStageChannelGridParticipants" /* 9767 */;
+import native from "native" /* 1200 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 5955 */;
+import useIsScreenLandscape from "useIsScreenLandscape" /* 8302 */;
+import SpeakerTile from "SpeakerTile" /* 10944 */;
+import StageSectionHeaderDefault from "StageSectionHeader" /* 10951 */;
+import UserSummaryItemDefault from "UserSummaryItem" /* 10952 */;
+import StageGridRowDefault from "StageGridRow" /* 10953 */;
+import AudienceGridRowDefault from "AudienceGridRow" /* 10967 */;
+import useStageChannelGridParticipants from "useStageChannelGridParticipants" /* 10970 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const StageChannelListStore = fn(9742);
+const StageChannelListStore = fn(10943);
 ({ useActiveSpeakerPillScrollHandler: hasOwnProperty, useActiveSpeakerPillState: metroRequire } = StageChannelListStore);
-const MAX_AUDIENCE_ROW_LIMIT = fn(5578).MAX_AUDIENCE_ROW_LIMIT;
+const MAX_AUDIENCE_ROW_LIMIT = fn(5888).MAX_AUDIENCE_ROW_LIMIT;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let obj = { direction: fn(1188).CutoutDirection.RIGHT, radius: 13, inset: -6 };
+let obj = { direction: fn(1200).CutoutDirection.RIGHT, radius: 13, inset: -6 };
 let users = { STREAM: 0, [0]: "STREAM", SPEAKER: 1, [1]: "SPEAKER", AUDIENCE: 2, [2]: "AUDIENCE" };
 let ReactCompilerGating = fn(558);
-let closure_12 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+let closure_12 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function StageChannelCallListRenderer(channel) {
   const cResult = channel(collapsed[9]).c(43);
   channel = channel.channel;
   ({ listSections, rowsBySection } = channel);
@@ -552,7 +552,7 @@ let closure_12 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((chan
   cResult[4] = listSections[users.AUDIENCE];
   cResult[5] = items;
   let obj = channel(collapsed[9]);
-}) : ((channel) => {
+}) : (function StageChannelCallListRenderer(channel) {
   channel = channel.channel;
   const listSections = channel.listSections;
   const rowsBySection = channel.rowsBySection;
@@ -811,7 +811,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/native/components/StageChannelCallList.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function StageChannelCallList(channel) {
   const cResult = c.c(7);
   channel = channel.channel;
   const throttleDurationForChannel = useStageChannelGridParticipants.useThrottleDurationForChannel(channel.id);
@@ -853,14 +853,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   cResult[1] = width;
   cResult[2] = obj5;
   tmp6 = obj5;
-}) : ((channel) => {
+}) : (function StageChannelCallList(channel) {
   channel = channel.channel;
   let width;
   let isScreenLandscape;
-  const throttleDurationForChannel = width(9767).useThrottleDurationForChannel(channel.id);
-  width = isScreenLandscape(1484)().width;
-  let obj = width(9767);
-  isScreenLandscape = width(5919).useIsScreenLandscape();
+  const throttleDurationForChannel = width(10970).useThrottleDurationForChannel(channel.id);
+  width = isScreenLandscape(1496)().width;
+  let obj = width(10970);
+  isScreenLandscape = width(8302).useIsScreenLandscape();
   const items = [width, isScreenLandscape];
   const memo = noop.useMemo(() => {
     let num = 3;
@@ -874,7 +874,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     obj[StageChannelParticipants.StageChannelParticipantNamedIndex.AUDIENCE] = MAX_AUDIENCE_ROW_LIMIT;
     return obj;
   }, items);
-  const obj2 = width(5919);
-  const tmp4 = _slicedToArray(width(9767).useStageChannelParticipantsListThrottled(channel.id, memo, throttleDurationForChannel, true), 2);
+  const obj2 = width(8302);
+  const tmp4 = _slicedToArray(width(10970).useStageChannelParticipantsListThrottled(channel.id, memo, throttleDurationForChannel, true), 2);
   return closure_8(closure_12, { channel, listSections: tmp4[0], rowsBySection: tmp4[1] });
 });

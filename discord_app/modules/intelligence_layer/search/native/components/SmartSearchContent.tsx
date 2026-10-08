@@ -1,11 +1,11 @@
-// === Module 16879: SmartSearchContent ===
+// === Module 17158: SmartSearchContent ===
 
-// Module 16879 (SmartSearchContent)
+// Module 17158 (SmartSearchContent)
 import c from "c" /* 576 */;
-import SmartSearchTypes from "SmartSearchTypes" /* 11985 */;
-import SuggestedSearchListDefault from "SuggestedSearchList" /* 16825 */;
-import SmartSearchSkeletonDefault from "SmartSearchSkeleton" /* 16880 */;
-import SmartSearchResults from "SmartSearchResults" /* 16881 */;
+import SmartSearchTypes from "SmartSearchTypes" /* 12058 */;
+import SuggestedSearchListDefault from "SuggestedSearchList" /* 17104 */;
+import SmartSearchSkeletonDefault from "SmartSearchSkeleton" /* 17159 */;
+import SmartSearchResults from "SmartSearchResults" /* 17160 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/intelligence_layer/search/native/components/SmartSearchContent.tsx");
 
-export const SmartSearchContent = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const SmartSearchContent = ReactCompilerGating.isReactCompilerEnabled() ? (function SmartSearchContent(arg0) {
   const cResult = c.c(8);
   ({ smartSearchQuery, hasKeywordResults, entry, isCollapsed } = arg0);
   const status = entry.status;
@@ -62,7 +62,7 @@ export const SmartSearchContent = ReactCompilerGating.isReactCompilerEnabled() ?
     }
     return tmp4;
   }
-}) : ((arg0) => {
+}) : (function SmartSearchContent(arg0) {
   ({ smartSearchQuery, entry } = arg0);
   const status = entry.status;
   ({ hasKeywordResults, isCollapsed } = arg0);

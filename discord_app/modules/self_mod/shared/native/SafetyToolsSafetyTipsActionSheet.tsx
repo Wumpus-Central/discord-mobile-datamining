@@ -1,19 +1,19 @@
-// === Module 9858: SafetyToolsSafetyTipsActionSheet ===
+// === Module 10418: SafetyToolsSafetyTipsActionSheet ===
 
-// Module 9858 (SafetyToolsSafetyTipsActionSheet)
+// Module 10418 (SafetyToolsSafetyTipsActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import SafetyTipsSectionDefault from "SafetyTipsSection" /* 9819 */;
-import SafetyToolsActionSheetWrapperDefault from "SafetyToolsActionSheetWrapper" /* 9848 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import SafetyTipsSectionDefault from "SafetyTipsSection" /* 10382 */;
+import SafetyToolsActionSheetWrapperDefault from "SafetyToolsActionSheetWrapper" /* 10409 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(9797).getInappropriateConversationsSafetyTips;
+let closure_4 = fn(10361).getInappropriateConversationsSafetyTips;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { safetyTipsContainer: { marginHorizontal: nativeDefault.space.PX_16 } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -21,7 +21,7 @@ let obj3 = { marginHorizontal: nativeDefault.space.PX_16 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/shared/native/SafetyToolsSafetyTipsActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SafetyToolsSafetyTipsActionSheet(arg0) {
   const cResult = c.c(11);
   ({ channelId, recipientId, warningId, warningType, onClose } = arg0);
   const tmp4 = closure_6();
@@ -77,7 +77,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[9] = warningType;
   cResult[10] = tmp18;
   tmp17 = tmp18;
-}) : ((arg0) => {
+}) : (function SafetyToolsSafetyTipsActionSheet(arg0) {
   ({ channelId, recipientId, warningId, warningType, onClose } = arg0);
   const obj = { hasHeaderBack: true, recipientId, warningId, warningType, headerTitle: null, channelId: null, onClose: null, children: null };
   const tmp = closure_6();

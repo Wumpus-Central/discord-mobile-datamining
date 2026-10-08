@@ -1,6 +1,6 @@
-// === Module 18109: SafetyFlowsTaskContext ===
+// === Module 18396: SafetyFlowsTaskContext ===
 
-// Module 18109 (SafetyFlowsTaskContext)
+// Module 18396 (SafetyFlowsTaskContext)
 import noop from "module_19" /* 19 */;
 
 let context = noop.createContext(null);
@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_flows/SafetyFlowsTaskContext.tsx");
 
 export const SafetyFlowTaskContext = context;
-export const useSafetyFlowTask = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useSafetyFlowTask = ReactCompilerGating.isReactCompilerEnabled() ? (function useSafetyFlowTask() {
   context = noop.useContext(context);
   if (null == context) {
     const _Error = Error;
@@ -18,7 +18,7 @@ export const useSafetyFlowTask = ReactCompilerGating.isReactCompilerEnabled() ? 
   } else {
     return context;
   }
-}) : (() => {
+}) : (function useSafetyFlowTask() {
   context = noop.useContext(context);
   if (null == context) {
     const _Error = Error;

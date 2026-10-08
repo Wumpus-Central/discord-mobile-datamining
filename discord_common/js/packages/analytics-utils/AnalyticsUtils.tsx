@@ -1,14 +1,14 @@
-// === Module 1260: discord_common/AnalyticsUtils ===
+// === Module 1272: discord_common/AnalyticsUtils ===
 
-// Module 1260 (discord_common/AnalyticsUtils)
+// Module 1272 (discord_common/AnalyticsUtils)
 import _modDef38 from "module_38" /* 38 */;
-import AnalyticsTrackingStore from "AnalyticsTrackingStore" /* 1261 */;
-import StandardAnalyticsConstants from "StandardAnalyticsConstants" /* 1340 */;
-import AnalyticsTrackingActionCreators from "AnalyticsTrackingActionCreators" /* 1341 */;
-import _modDef1342 from "module_1342" /* 1342 */;
-import encodeProperties from "encodeProperties" /* 1345 */;
-import AnalyticsSchema from "AnalyticsSchema" /* 1346 */;
-import getSuperProperties from "getSuperProperties" /* 1347 */;
+import AnalyticsTrackingStore from "AnalyticsTrackingStore" /* 1273 */;
+import StandardAnalyticsConstants from "StandardAnalyticsConstants" /* 1352 */;
+import AnalyticsTrackingActionCreators from "AnalyticsTrackingActionCreators" /* 1353 */;
+import _modDef1354 from "module_1354" /* 1354 */;
+import encodeProperties from "encodeProperties" /* 1357 */;
+import AnalyticsSchema from "AnalyticsSchema" /* 1358 */;
+import getSuperProperties from "getSuperProperties" /* 1359 */;
 import size from "module_2" /* 2 */;
 
 const dependencyMap = {};
@@ -29,6 +29,7 @@ export const getSuperPropertiesBase64 = getSuperProperties.getSuperPropertiesBas
 export const extendSuperProperties = getSuperProperties.extendSuperProperties;
 export const getOS = getSuperProperties.getOS;
 export const getDevice = getSuperProperties.getDevice;
+export const getBrowser = getSuperProperties.getBrowser;
 export const getCampaignParams = getSuperProperties.getCampaignParams;
 export const isThrottled = function isThrottled(CHANNEL_OPENED) {
   let tmp = null != dependencyMap[CHANNEL_OPENED];
@@ -84,7 +85,7 @@ export const trackMaker = (arg0) => {
             }
           }
           if (obj3.deduplicate) {
-            if (_modDef1342(closure_5[joined], obj2)) {
+            if (_modDef1354(closure_5[joined], obj2)) {
               return Promise.resolve();
             } else {
               closure_5[joined] = obj2;

@@ -1,14 +1,14 @@
-// === Module 12216: useDeactivateWarningText ===
+// === Module 12295: useDeactivateWarningText ===
 
-// Module 12216 (useDeactivateWarningText)
+// Module 12295 (useDeactivateWarningText)
 import util from "util" /* 1126 */;
-import _modDef2553 from "module_2553" /* 2553 */;
-import Powerups from "Powerups" /* 4777 */;
-import useGuildRoleMemberCountsDefault from "useGuildRoleMemberCounts" /* 6629 */;
+import _modDef2597 from "module_2597" /* 2597 */;
+import Powerups from "Powerups" /* 4971 */;
+import useGuildRoleMemberCountsDefault from "useGuildRoleMemberCounts" /* 6806 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 4786 */;
-import GuildRoleStore from "GuildRoleStore" /* 2106 */;
-import GuildStore from "GuildStore" /* 2074 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4980 */;
+import GuildRoleStore from "GuildRoleStore" /* 2118 */;
+import GuildStore from "GuildStore" /* 2086 */;
 
 const require = globalThis.__r;
 
@@ -17,7 +17,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useDeactivateWarningText.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, skuId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useDeactivateWarningText(arg0, skuId) {
   _require = arg0;
   importDefault = skuId;
   const cResult = require("c").c(29);
@@ -64,7 +64,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, skuId) => 
     }
   }
   if (cResult[4] !== arg0) {
-    class U {
+    class P {
       constructor() {
         guild = closure_6.getGuild(closure_0);
         vanityURLCode = undefined;
@@ -75,9 +75,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, skuId) => 
       }
     }
     cResult[4] = arg0;
-    cResult[5] = U;
+    cResult[5] = P;
   } else {
-    class U {
+    class P {
       constructor() {
         guild = closure_6.getGuild(closure_0);
         vanityURLCode = undefined;
@@ -89,9 +89,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, skuId) => 
     }
   }
   const tmpResult = require("initialize");
-  const stateFromStores1 = require("initialize").useStateFromStores(tmp9, U);
+  const stateFromStores1 = require("initialize").useStateFromStores(tmp9, P);
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-    class U {
+    class P {
       constructor() {
         guild = closure_6.getGuild(closure_0);
         vanityURLCode = undefined;
@@ -104,7 +104,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, skuId) => 
     const items2 = [GuildRoleStore];
     cResult[6] = items2;
   } else {
-    class U {
+    class P {
       constructor() {
         guild = closure_6.getGuild(closure_0);
         vanityURLCode = undefined;
@@ -116,7 +116,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, skuId) => 
     }
   }
   if (cResult[7] === arg0) {
-    class U {
+    class P {
       constructor() {
         guild = closure_6.getGuild(closure_0);
         vanityURLCode = undefined;
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, skuId) => 
   cResult[10] = D;
   cResult[11] = items3;
   const tmpResult2 = require("initialize");
-}) : ((arg0, skuId) => {
+}) : (function useDeactivateWarningText(arg0, skuId) {
   _require = arg0;
   importDefault = skuId;
   let items = [stateFromStores1];
@@ -204,17 +204,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, skuId) => 
       if (stateFromStores2 > 0) {
         const intl5 = util.intl;
         const obj2 = { perk: tmp.title, memberCount: tmp14 };
-        let formatToPlainStringResult = intl5.formatToPlainString(_modDef2553["4jSvr1"], obj2);
+        let formatToPlainStringResult = intl5.formatToPlainString(_modDef2597["4jSvr1"], obj2);
       } else {
         const intl4 = util.intl;
         const obj3 = { perk: tmp.title };
-        formatToPlainStringResult = intl4.formatToPlainString(_modDef2553.cavtEo, obj3);
+        formatToPlainStringResult = intl4.formatToPlainString(_modDef2597.cavtEo, obj3);
       }
     } else {
       if (Powerups.VANITY_URL_POWERUP_SKU_ID === skuId) {
         const intl3 = util.intl;
         const string = intl3.string;
-        const tmp11 = _modDef2553;
+        const tmp11 = _modDef2597;
         if (stateFromStores1) {
           let stringResult = string(tmp11.hN75yb);
           let tmp13 = importDefault;
@@ -236,14 +236,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, skuId) => 
                   num = 0;
                 }
                 obj.memberCount = num;
-                formatToPlainStringResult1 = intl.formatToPlainString(_modDef2553["4jSvr1"], obj);
+                formatToPlainStringResult1 = intl.formatToPlainString(_modDef2597["4jSvr1"], obj);
                 tmp7 = importDefault;
               }
             }
           }
         }
         const intl2 = util.intl;
-        formatToPlainStringResult1 = intl2.string(_modDef2553.Vf2ZcR);
+        formatToPlainStringResult1 = intl2.string(_modDef2597.Vf2ZcR);
         tmp7 = importDefault;
       }
       const obj4 = { text: formatToPlainStringResult1, critical: tmp.skuId === Powerups.VANITY_URL_POWERUP_SKU_ID };
@@ -255,7 +255,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, skuId) => 
       if (tmp20) {
         const obj5 = { text: null, critical: true };
         const intl6 = util.intl;
-        obj5.text = intl6.string(tmp7(2553).M4XL5n);
+        obj5.text = intl6.string(tmp7(2597).M4XL5n);
         items.push(obj5);
       }
       return items;

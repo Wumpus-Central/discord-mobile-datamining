@@ -1,11 +1,11 @@
-// === Module 17294: useCanConnect ===
+// === Module 17575: useCanConnect ===
 
-// Module 17294 (useCanConnect)
-import ChannelUtils from "ChannelUtils" /* 5041 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
-import VoiceStateStore from "VoiceStateStore" /* 4915 */;
+// Module 17575 (useCanConnect)
+import ChannelUtils from "ChannelUtils" /* 5410 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
+import VoiceStateStore from "VoiceStateStore" /* 5111 */;
 
 const require = globalThis.__r;
 
@@ -15,7 +15,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useCanConnect.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCanConnect(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   let obj = require("c");
   return require("initialize").useStateFromStoresObject(first, C, tmp10);
-}) : ((arg0) => {
+}) : (function useCanConnect(arg0) {
   _require = arg0;
   const items = [ChannelStore, PermissionStore, GuildStore, VoiceStateStore];
   const items1 = [arg0];

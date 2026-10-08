@@ -1,12 +1,12 @@
-// === Module 6690: useProfileThemeValues ===
+// === Module 6867: useProfileThemeValues ===
 
-// Module 6690 (useProfileThemeValues)
+// Module 6867 (useProfileThemeValues)
 import _mod19 from "module_19" /* 19 */;
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import shims from "shims" /* 586 */;
 import nativeDefault from "native" /* 587 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -15,7 +15,7 @@ const require = globalThis.__r;
 const useMemo = _mod19.useMemo;
 const result = size.fileFinishedImporting("modules/user_profile/useProfileThemeValues.native.tsx");
 
-export const useProfileThemeValues = ReactCompilerGating.isReactCompilerEnabled() ? ((theme) => {
+export const useProfileThemeValues = ReactCompilerGating.isReactCompilerEnabled() ? (function useProfileThemeValues(theme) {
   const cResult = c.c(15);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AccessibilityStore];
@@ -90,7 +90,7 @@ export const useProfileThemeValues = ReactCompilerGating.isReactCompilerEnabled(
     tmpResult4 = shims;
   }
   const tmpResult = useStateFromStores;
-}) : ((theme) => {
+}) : (function useProfileThemeValues(theme) {
   _require = theme;
   const items = [AccessibilityStore];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => saturation.saturation);

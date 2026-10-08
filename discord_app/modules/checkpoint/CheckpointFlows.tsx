@@ -1,9 +1,9 @@
-// === Module 15541: CheckpointFlows ===
+// === Module 15803: CheckpointFlows ===
 
-// Module 15541 (CheckpointFlows)
-import CheckpointNavigation from "CheckpointNavigation" /* 15542 */;
-import CheckpointSharedDataFlow from "CheckpointSharedDataFlow" /* 15543 */;
-import CheckpointNoSharedDataFlow from "CheckpointNoSharedDataFlow" /* 15544 */;
+// Module 15803 (CheckpointFlows)
+import CheckpointNavigation from "CheckpointNavigation" /* 15804 */;
+import CheckpointSharedDataFlow from "CheckpointSharedDataFlow" /* 15805 */;
+import CheckpointNoSharedDataFlow from "CheckpointNoSharedDataFlow" /* 15806 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/checkpoint/CheckpointFlows.tsx");
@@ -20,8 +20,8 @@ export const getCheckpointRoutes = function getCheckpointRoutes(arg0) {
   }
   return CHECKPOINT_NO_SHARED_DATA_FLOW;
 };
-export const getAdjacentCheckpointRoute = function getAdjacentCheckpointRoute(checkpointFlow, arg1, arg2) {
-  if (checkpointFlow === CheckpointNavigation.CheckpointFlow.SHARED_DATA) {
+export const getAdjacentCheckpointRoute = function getAdjacentCheckpointRoute(arg0, arg1, arg2) {
+  if (arg0 === CheckpointNavigation.CheckpointFlow.SHARED_DATA) {
     let prop = CheckpointSharedDataFlow.CHECKPOINT_SHARED_DATA_FLOW;
   } else {
     prop = CheckpointNoSharedDataFlow.CHECKPOINT_NO_SHARED_DATA_FLOW;

@@ -1,26 +1,26 @@
-// === Module 11607: CustomTypingIndicatorDisplay ===
+// === Module 11671: CustomTypingIndicatorDisplay ===
 
-// Module 11607 (CustomTypingIndicatorDisplay)
+// Module 11671 (CustomTypingIndicatorDisplay)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import CustomTypingIndicatorGlyphDefault from "CustomTypingIndicatorGlyph" /* 11608 */;
+import CustomTypingIndicatorGlyphDefault from "CustomTypingIndicatorGlyph" /* 11672 */;
 import noop from "module_19" /* 19 */;
 
 const util = PressableOpacity(1126);
-const Text_Text = PressableOpacity(4892);
-const Stack_Stack = PressableOpacity(5600);
-const Pressables = PressableOpacity(5916);
-const CustomTypingIndicatorUtils = PressableOpacity(11600);
+const Text_Text = PressableOpacity(5086);
+const Stack_Stack = PressableOpacity(5373);
+const Pressables = PressableOpacity(6189);
+const CustomTypingIndicatorUtils = PressableOpacity(11659);
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles(() => ({ text: { flexShrink: 1 }, pressable: { flex: 1 } }));
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorDisplay.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function CustomTypingIndicatorDisplay(arg0) {
   let PressableOpacity = require;
   let PX_8 = dependencyMap;
   const cResult = c.c(19);
@@ -117,7 +117,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   tmp4 = undefined !== justifyCenter && justifyCenter;
   stringResult = intl2.format(CustomTypingIndicatorUtils.getCustomTypingIndicatorSuggestionWithNameMessage(config.typingSuggestion), { name: username });
   const PressableOpacityResult1 = CustomTypingIndicatorUtils;
-}) : ((showName) => {
+}) : (function CustomTypingIndicatorDisplay(showName) {
   ({ config, username, showEmojis } = showName);
   if (showEmojis === undefined) {
     showEmojis = true;

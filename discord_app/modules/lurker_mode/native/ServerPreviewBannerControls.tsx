@@ -1,13 +1,13 @@
-// === Module 16141: ServerPreviewBannerControls ===
+// === Module 16401: ServerPreviewBannerControls ===
 
-// Module 16141 (ServerPreviewBannerControls)
+// Module 16401 (ServerPreviewBannerControls)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import _modDef6022 from "module_6022" /* 6022 */;
-import transitionToGuild from "transitionToGuild" /* 6855 */;
-import IconButton from "IconButton" /* 7586 */;
-import ServerPreviewPillDefault from "ServerPreviewPill" /* 16142 */;
+import _modDef6208 from "module_6208" /* 6208 */;
+import transitionToGuild from "transitionToGuild" /* 7043 */;
+import IconButton from "IconButton" /* 8106 */;
+import ServerPreviewPillDefault from "ServerPreviewPill" /* 16402 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ const View = fn(17).View;
 const MOBILE_GUILD_UPSELL_LIST = fn(1085).MOBILE_GUILD_UPSELL_LIST;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { row: null };
 const rect = { position: "absolute", top: nativeDefault.space.PX_16, left: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 obj2.row = rect;
@@ -24,11 +24,11 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/lurker_mode/native/ServerPreviewBannerControls.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ServerPreviewBannerControls() {
   const cResult = c.c(5);
   const tmp4 = closure_8();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function t() {
+    const fn = function n() {
       transitionToGuild.transitionToGuild(MOBILE_GUILD_UPSELL_LIST);
     };
     cResult[0] = fn;
@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     first = cResult[0];
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { size: "md", variant: "secondary-overlay", icon: _modDef6022, onPress: first, accessibilityLabel: null, maxFontSizeMultiplier: 1.5 };
+    const obj2 = { size: "md", variant: "secondary-overlay", icon: _modDef6208, onPress: first, accessibilityLabel: null, maxFontSizeMultiplier: 1.5 };
     const intl = util.intl;
     obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
     const tmp10 = timestampProducer(IconButton.IconButton, obj2);
@@ -62,12 +62,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp12 = cResult[4];
   }
   return tmp12;
-}) : (() => {
+}) : (function ServerPreviewBannerControls() {
   const obj = { style: closure_8().row, children: null };
   const callback = noop.useCallback(() => {
     transitionToGuild.transitionToGuild(MOBILE_GUILD_UPSELL_LIST);
   }, []);
-  const obj2 = { size: "md", variant: "secondary-overlay", icon: _modDef6022, onPress: callback, accessibilityLabel: null, maxFontSizeMultiplier: 1.5 };
+  const obj2 = { size: "md", variant: "secondary-overlay", icon: _modDef6208, onPress: callback, accessibilityLabel: null, maxFontSizeMultiplier: 1.5 };
   const intl = util.intl;
   obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
   const items = [timestampProducer(IconButton.IconButton, obj2), timestampProducer(ServerPreviewPillDefault, {})];

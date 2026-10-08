@@ -1,22 +1,22 @@
-// === Module 9840: useHelpLineVisibility ===
+// === Module 10403: useHelpLineVisibility ===
 
-// Module 9840 (useHelpLineVisibility)
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8329 */;
-import MessageRequestActionCreators from "MessageRequestActionCreators" /* 9841 */;
+// Module 10403 (useHelpLineVisibility)
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 7712 */;
+import MessageRequestActionCreators from "MessageRequestActionCreators" /* 10318 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2116 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7061 */;
+import LocaleStore from "LocaleStore" /* 2128 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7247 */;
 
 require = fn;
 const set = new Set(["US"]);
 const set1 = new Set(["en-US", "es-ES"]);
 let ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldShowHelplineLink() {
   const cResult = stateFromStores(576).c(11);
   const tmp4 = useIsInAdultAgeGroupDefault();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [FamilyCenterStore];
-    const fn = function c() {
+    const fn = function h() {
       return userCountry.getUserCountry();
     };
     cResult[0] = items;
@@ -84,7 +84,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[10] = hasItem;
   tmp16 = hasItem;
   const tmpResult2 = stateFromStores(573);
-}) : (() => {
+}) : (function useShouldShowHelplineLink() {
   const tmp = useIsInAdultAgeGroupDefault();
   const items = [FamilyCenterStore];
   stateFromStores = stateFromStores(573).useStateFromStores(items, () => userCountry.getUserCountry());
@@ -115,14 +115,14 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/hooks/useHelpLineVisibility.tsx");
 
 export const useShouldShowHelplineLink = tmp4;
-export const useShouldShowThroughlineLink = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useShouldShowThroughlineLink = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldShowThroughlineLink() {
   const tmp = useIsInAdultAgeGroupDefault();
   let tmp2 = !tmp;
   if (!tmp) {
     tmp2 = !closure_8();
   }
   return tmp2;
-}) : (() => {
+}) : (function useShouldShowThroughlineLink() {
   const tmp = useIsInAdultAgeGroupDefault();
   let tmp2 = !tmp;
   if (!tmp) {

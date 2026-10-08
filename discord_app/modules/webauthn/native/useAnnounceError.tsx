@@ -1,7 +1,7 @@
-// === Module 14611: useAnnounceError ===
+// === Module 14872: useAnnounceError ===
 
-// Module 14611 (useAnnounceError)
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4596 */;
+// Module 14872 (useAnnounceError)
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4788 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/webauthn/native/useAnnounceError.tsx");
 
-export const useAnnounceError = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useAnnounceError = ReactCompilerGating.isReactCompilerEnabled() ? (function useAnnounceError(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] !== arg0) {
@@ -36,7 +36,7 @@ export const useAnnounceError = ReactCompilerGating.isReactCompilerEnabled() ? (
     tmp3 = cResult[2];
   }
   const effect = noop.useEffect(tmp2, tmp3);
-}) : ((arg0) => {
+}) : (function useAnnounceError(arg0) {
   closure_0 = arg0;
   const items = [arg0];
   const effect = noop.useEffect(() => {

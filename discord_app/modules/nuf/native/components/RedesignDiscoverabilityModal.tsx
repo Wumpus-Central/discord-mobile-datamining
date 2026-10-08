@@ -1,26 +1,26 @@
-// === Module 17636: RedesignDiscoverabilityModal ===
+// === Module 17918: RedesignDiscoverabilityModal ===
 
-// Module 17636 (RedesignDiscoverabilityModal)
+// Module 17918 (RedesignDiscoverabilityModal)
 import nativeDefault from "native" /* 587 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
-import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 12348 */;
-import SkipHeaderButtonDefault from "SkipHeaderButton" /* 12360 */;
-import NUFActionCreators from "NUFActionCreators" /* 12368 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1272 */;
+import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 12444 */;
+import SkipHeaderButtonDefault from "SkipHeaderButton" /* 12456 */;
+import NUFActionCreators from "NUFActionCreators" /* 12464 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const View = fn(17).View;
-const useContactSyncModalStore = fn(12341).useContactSyncModalStore;
+const useContactSyncModalStore = fn(12437).useContactSyncModalStore;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { header: { borderBottomWidth: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" }, container: null };
 let obj3 = { borderBottomWidth: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" };
-obj2.container = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center", paddingBottom: 44, paddingTop: fn(6075).NAV_BAR_HEIGHT + 32 };
+obj2.container = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center", paddingBottom: 44, paddingTop: fn(6261).NAV_BAR_HEIGHT + 32 };
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((onComplete) => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function DiscoverabilityLandingScene(onComplete) {
   const cResult = onComplete(stateFromStores[10]).c(12);
   onComplete = onComplete.onComplete;
   let obj = onComplete(stateFromStores[10]);
@@ -79,20 +79,32 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((onComplete) => 
       }
     }
   }
-  const fn2 = function v() {
-    const result = ContactSyncActionCreatorsDefault.updateDiscoverability({ phone: allowPhone, email: allowEmail });
-    if (allowEmail) {
-      if (null != stateFromStores) {
-        if (allowPhone) {
-          if (null == name) {
-            navigation.push(ConstantsIOS.DiscoverabilityScenes.NAME);
+  class N {
+    constructor() {
+      tmp = closure_2;
+      obj = closure_1(closure_2[13]);
+      obj1 = { phone: allowPhone, email: allowEmail };
+      tmp2 = allowPhone;
+      result = obj.updateDiscoverability(obj1);
+      if (allowEmail) {
+        tmp4 = closure_2;
+        tmp5 = null;
+        if (null != closure_2) {
+          if (tmp2) {
+            tmp6 = name;
+            if (null == name) {
+              tmp8 = closure_1;
+              tmp9 = closure_0;
+              arr = closure_1.push(closure_0(tmp[14]).DiscoverabilityScenes.NAME);
+            }
+            return;
           }
         }
       }
+      tmp7 = onComplete();
+      return;
     }
-    onComplete();
-    const obj2 = { phone: allowPhone, email: allowEmail };
-  };
+  }
   cResult[2] = allowEmail;
   cResult[3] = allowPhone;
   cResult[4] = tmp10;
@@ -100,10 +112,10 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((onComplete) => 
   cResult[6] = navigation;
   cResult[7] = onComplete;
   cResult[8] = stateFromStores;
-  cResult[9] = fn2;
-  tmp11 = fn2;
+  cResult[9] = N;
+  tmp11 = N;
   const tmpResult = tmp(stateFromStores[12]);
-}) : ((onComplete) => {
+}) : (function DiscoverabilityLandingScene(onComplete) {
   onComplete = onComplete.onComplete;
   let stateFromStores;
   let allowEmail;
@@ -146,7 +158,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((onComplete) => 
   return jsx(navigation(tmp[15]), { onNext });
 });
 ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((onComplete) => {
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function DiscoverabilityNameScene(onComplete) {
   const cResult = onComplete(576).c(12);
   onComplete = onComplete.onComplete;
   const tmp3 = closure_8();
@@ -159,7 +171,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((onComplete) =>
     }
     const effect = noop.useEffect(tmp5, tmp6);
     if (cResult[4] !== onComplete) {
-      const fn2 = function h(arg0) {
+      const fn2 = function p(arg0) {
         const result = NUFActionCreators.startContactSyncForDiscoverability(arg0);
         onComplete();
       };
@@ -190,7 +202,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((onComplete) =>
       tmp15 = tmp18;
     }
     const obj3 = { onNext: tmp9, loading: false, initialName: name };
-    const tmp14 = jsx(allowPhone(12361), { onNext: tmp9, loading: false, initialName: name });
+    const tmp14 = jsx(allowPhone(12457), { onNext: tmp9, loading: false, initialName: name });
     cResult[6] = tmp9;
     cResult[7] = name;
     cResult[8] = tmp14;
@@ -209,7 +221,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((onComplete) =>
   tmp6 = items;
   tmp5 = fn;
   const tmp4 = useContactSyncModalStore();
-}) : ((onComplete) => {
+}) : (function DiscoverabilityNameScene(onComplete) {
   onComplete = onComplete.onComplete;
   allowPhone = undefined;
   const tmp = closure_8();
@@ -232,11 +244,11 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((onComplete) =>
     name = "";
   }
   obj2.initialName = name;
-  obj.children = jsx(allowPhone(12361), { onNext: callback, loading: false, initialName: null });
+  obj.children = jsx(allowPhone(12457), { onNext: callback, loading: false, initialName: null });
   return <View style={tmp.container}>{null}</View>;
 });
 ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function RedesignDiscoverabilityModal(route) {
   const cResult = require("c").c(8);
   const onComplete = route.route.params.onComplete;
   const tmp4 = closure_8();
@@ -258,7 +270,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
     const obj2 = {};
     const obj3 = {
       ignoreKeyboard: true,
-      impressionName: tmp(1260).ImpressionNames.DISCOVERABILITY,
+      impressionName: tmp(1272).ImpressionNames.DISCOVERABILITY,
       fullscreen: true,
       headerLeft() {
           return null;
@@ -281,7 +293,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
     obj2[tmp(1105).DiscoverabilityScenes.LANDING] = obj3;
     const obj4 = {
       ignoreKeyboard: true,
-      impressionName: tmp(1260).ImpressionNames.DISCOVERABILITY,
+      impressionName: tmp(1272).ImpressionNames.DISCOVERABILITY,
       fullscreen: true,
       headerTitle() {
           return null;
@@ -318,7 +330,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
   cResult[7] = tmp11;
   tmp10 = tmp11;
   const obj5 = { headerStyle: tmp4.header, screens: tmp7, initialRouteName: require("ConstantsIOS").DiscoverabilityScenes.LANDING, headerBackTitle: tmp8 };
-}) : ((route) => {
+}) : (function RedesignDiscoverabilityModal(route) {
   let onComplete = route.route.params.onComplete;
   let obj = { headerStyle: closure_8().header, screens: null, initialRouteName: onComplete(1105).DiscoverabilityScenes.LANDING, headerBackTitle: null };
   const items = [onComplete];
@@ -388,7 +400,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
   }, items);
   const intl = onComplete(1126).intl;
   obj.headerBackTitle = intl.string(onComplete(1126).t["13/7kX"]);
-  return jsx(onComplete(6503).Navigator, { headerStyle: closure_8().header, screens: null, initialRouteName: onComplete(1105).DiscoverabilityScenes.LANDING, headerBackTitle: null });
+  return jsx(onComplete(6679).Navigator, { headerStyle: closure_8().header, screens: null, initialRouteName: onComplete(1105).DiscoverabilityScenes.LANDING, headerBackTitle: null });
 });
 tmp2.modalConfig = { animation: fn(1085).ModalAnimation.SLIDE_IN_OUT };
 const size = fn(2);

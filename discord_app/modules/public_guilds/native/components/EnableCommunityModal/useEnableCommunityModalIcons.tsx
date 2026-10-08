@@ -1,7 +1,7 @@
-// === Module 17886: useEnableCommunityModalIcons ===
+// === Module 18173: useEnableCommunityModalIcons ===
 
-// Module 17886 (useEnableCommunityModalIcons)
-import useThemeDefault from "useTheme" /* 4797 */;
+// Module 18173 (useEnableCommunityModalIcons)
+import useThemeDefault from "useTheme" /* 4991 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,9 +21,9 @@ const prototype = EnableCommunityModalIcons.prototype;
 Object.defineProperty(prototype, "safetyCheck", {
   get: function safetyCheck() {
     if (obj.isThemeDark(this.theme)) {
-      let tmpResult = require("module_17887");
+      let tmpResult = require("module_18174");
     } else {
-      tmpResult = require("module_17888");
+      tmpResult = require("module_18175");
     }
     return tmpResult;
   },
@@ -38,9 +38,9 @@ Object.defineProperty(prototype, "channelSetup", {
 Object.defineProperty(prototype, "finishingTouches", {
   get: function finishingTouches() {
     if (obj.isThemeDark(this.theme)) {
-      let tmpResult = require("module_17893");
+      let tmpResult = require("module_18180");
     } else {
-      tmpResult = require("module_17894");
+      tmpResult = require("module_18181");
     }
     return tmpResult;
   },
@@ -48,7 +48,7 @@ Object.defineProperty(prototype, "finishingTouches", {
 });
 Object.defineProperty(prototype, "close", {
   get: function close() {
-    return require("module_4815");
+    return require("module_5009");
   },
   set: undefined
 });
@@ -56,12 +56,12 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/public_guilds/native/components/EnableCommunityModal/useEnableCommunityModalIcons.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useEnableCommunityModalIcons() {
   const cResult = require("c").c(2);
   const tmp2 = useThemeDefault();
   _require = tmp2;
   if (cResult[0] !== tmp2) {
-    const fn = function s() {
+    const fn = function o() {
       if (typeof EnableCommunityModalIcons === "function") {
         const merged = Object.assign({ theme: null });
         merged[0] = ThemeTypes.LIGHT;
@@ -78,7 +78,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp3 = cResult[1];
   }
   return _slicedToArray(noop.useState(tmp3), 1)[0];
-}) : (() => {
+}) : (function useEnableCommunityModalIcons() {
   closure_0 = useThemeDefault();
   return _slicedToArray(noop.useState(() => {
     if (typeof EnableCommunityModalIcons === "function") {

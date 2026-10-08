@@ -1,8 +1,8 @@
-// === Module 9606: useLocalStorageState ===
+// === Module 10799: useLocalStorageState ===
 
-// Module 9606 (useLocalStorageState)
+// Module 10799 (useLocalStorageState)
 import Storage3 from "Storage" /* 510 */;
-import useMountEffectDefault from "useMountEffect" /* 5597 */;
+import useMountEffectDefault from "useMountEffect" /* 5392 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("hooks/useLocalStorageState.tsx");
 
-export const useLocalStorageState = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export const useLocalStorageState = ReactCompilerGating.isReactCompilerEnabled() ? (function useLocalStorageState(arg0, arg1) {
   _require = arg0;
   importDefault = arg1;
   const cResult = require("c").c(11);
@@ -85,7 +85,7 @@ export const useLocalStorageState = ReactCompilerGating.isReactCompilerEnabled()
     tmp8 = S;
     const tmp6 = _slicedToArray(noop.useState(tmp3), 2);
   }
-  const fn = function l() {
+  const fn = function n() {
     const Storage = Storage3.Storage;
     value = Storage.get(closure_0);
     if (null == value) {
@@ -98,7 +98,7 @@ export const useLocalStorageState = ReactCompilerGating.isReactCompilerEnabled()
   cResult[2] = fn;
   tmp3 = fn;
   const obj = require("c");
-}) : ((arg0, arg1) => {
+}) : (function useLocalStorageState(arg0, arg1) {
   closure_0 = arg0;
   importDefault = arg1;
   const tmp = _slicedToArray(noop.useState(() => {

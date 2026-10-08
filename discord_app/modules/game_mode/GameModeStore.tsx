@@ -1,10 +1,10 @@
-// === Module 4886: GameModeStore ===
+// === Module 5080: GameModeStore ===
 
-// Module 4886 (GameModeStore)
+// Module 5080 (GameModeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
-import RunningGameStore from "RunningGameStore" /* 2006 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1258 */;
+import RunningGameStore from "RunningGameStore" /* 2018 */;
 
 const require = fn;
 function syncRunningGame() {
@@ -32,7 +32,7 @@ function syncExperimentAssignment() {
   }
   return false;
 }
-const DefaultGameModeSettings = fn(4887).DefaultGameModeSettings;
+const DefaultGameModeSettings = fn(5081).DefaultGameModeSettings;
 let obj = {};
 let merged = Object.assign(DefaultGameModeSettings);
 let c6 = false;
@@ -105,6 +105,21 @@ prototype["isEnabledFor"] = function isEnabledFor(arg0) {
 Object.defineProperty(prototype, "hasRunningGame", {
   get: function hasRunningGame() {
     return c6;
+  },
+  set: undefined
+});
+Object.defineProperty(prototype, "runningGameId", {
+  get: function runningGameId() {
+    const visibleRunningGames = RunningGameStore.getVisibleRunningGames();
+    let id;
+    const found = visibleRunningGames.find((isLauncher) => true !== isLauncher.isLauncher);
+    if (found != null) {
+      id = found.id;
+    }
+    if (id == null) {
+      id = null;
+    }
+    return id;
   },
   set: undefined
 });

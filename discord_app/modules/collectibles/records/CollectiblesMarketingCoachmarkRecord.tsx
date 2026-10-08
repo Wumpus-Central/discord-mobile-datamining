@@ -1,7 +1,7 @@
-// === Module 7091: CollectiblesMarketingCoachmarkRecord ===
+// === Module 7277: CollectiblesMarketingCoachmarkRecord ===
 
-// Module 7091 (CollectiblesMarketingCoachmarkRecord)
-import CollectiblesMarketingType from "CollectiblesMarketingType" /* 7089 */;
+// Module 7277 (CollectiblesMarketingCoachmarkRecord)
+import CollectiblesMarketingType from "CollectiblesMarketingType" /* 7275 */;
 import size from "module_2" /* 2 */;
 
 const prototype = function CollectiblesMarketingCoachmarkRecord(arg0) {

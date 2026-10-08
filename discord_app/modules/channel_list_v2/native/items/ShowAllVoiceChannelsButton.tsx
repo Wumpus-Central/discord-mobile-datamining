@@ -1,9 +1,9 @@
-// === Module 16159: ShowAllVoiceChannelsButton ===
+// === Module 16419: ShowAllVoiceChannelsButton ===
 
-// Module 16159 (ShowAllVoiceChannelsButton)
-import VoiceCategoryActionCreators from "VoiceCategoryActionCreators" /* 16160 */;
+// Module 16419 (ShowAllVoiceChannelsButton)
+import VoiceCategoryActionCreators from "VoiceCategoryActionCreators" /* 16420 */;
 import noop from "module_19" /* 19 */;
-import ChannelListVoiceCategoryStore from "ChannelListVoiceCategoryStore" /* 7057 */;
+import ChannelListVoiceCategoryStore from "ChannelListVoiceCategoryStore" /* 7244 */;
 
 require = fn;
 const jsx = fn(21).jsx;
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/channel_list_v2/native/items/ShowAllVoiceChannelsButton.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ShowAllVoiceChannelsButton(guildId) {
   const cResult = guildId(section[4]).c(14);
   guildId = guildId.guildId;
   section = guildId.section;
@@ -78,47 +78,37 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildI
       }
     }
   }
-  class C {
-    constructor() {
-      obj = closure_0(closure_1[6]);
-      if (closure_3) {
-        tmp6 = guildId;
-        voiceCategoryExpandResult = obj.voiceCategoryExpand(guildId);
-        tmp8 = globalThis;
-        _setTimeout = setTimeout;
-        num = 0;
-        timerId = setTimeout(() => {
-          const current = ref.current;
-          if (current != null) {
-            const obj = { animated: false, section, item: 0, paddingStart: null };
-            const _Math = Math;
-            obj.paddingStart = Math.round(0.3 * guildId(section[7]).getWindowDimensions().height);
-            current.scrollToLocation(obj);
-            const obj2 = guildId(section[7]);
-          }
-        }, 0);
-      } else {
-        tmp = guildId;
-        result = obj.voiceCategoryCollapse(guildId);
-        tmp3 = listRef;
-        current = listRef.current;
-        tmp4 = null;
+  const fn2 = function v() {
+    let obj = VoiceCategoryActionCreators;
+    if (stateFromStores) {
+      obj.voiceCategoryExpand(guildId);
+      const _setTimeout = setTimeout;
+      const timerId = setTimeout(() => {
+        const current = ref.current;
         if (current != null) {
-          flag = false;
-          scrollToTopResult = current.scrollToTop(false);
+          const obj = { animated: false, section, item: 0, paddingStart: null };
+          const _Math = Math;
+          obj.paddingStart = Math.round(0.3 * guildId(section[7]).getWindowDimensions().height);
+          current.scrollToLocation(obj);
+          const obj2 = guildId(section[7]);
         }
+      }, 0);
+    } else {
+      const result = obj.voiceCategoryCollapse(guildId);
+      let current = listRef.current;
+      if (current != null) {
+        current.scrollToTop(false);
       }
-      return;
     }
-  }
+  };
   cResult[3] = stateFromStores;
   cResult[4] = guildId;
   cResult[5] = listRef;
   cResult[6] = section;
-  cResult[7] = C;
-  tmp8 = C;
+  cResult[7] = fn2;
+  tmp8 = fn2;
   const tmpResult = guildId(section[5]);
-}) : ((guildId) => {
+}) : (function ShowAllVoiceChannelsButton(guildId) {
   guildId = guildId.guildId;
   const section = guildId.section;
   const listRef = guildId.listRef;

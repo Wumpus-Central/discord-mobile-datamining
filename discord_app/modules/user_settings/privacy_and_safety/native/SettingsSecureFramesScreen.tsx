@@ -1,15 +1,15 @@
-// === Module 15795: SettingsSecureFramesScreen ===
+// === Module 16053: SettingsSecureFramesScreen ===
 
-// Module 15795 (SettingsSecureFramesScreen)
+// Module 16053 (SettingsSecureFramesScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7861 */;
-import UserActionCreators from "UserActionCreators" /* 7863 */;
-import SecureFramesUtils from "SecureFramesUtils" /* 9378 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8279 */;
+import UserActionCreators from "UserActionCreators" /* 8281 */;
+import SecureFramesUtils from "SecureFramesUtils" /* 8800 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 function UserListItem(userId) {
@@ -79,7 +79,7 @@ function UserListItem(userId) {
         }
         if (cResult[14] !== stateFromStores) {
           if (null != stateFromStores) {
-            const obj4 = { user: stateFromStores, guildId: "Array", size: "function pnpm_presetsTs1(event){return{transform:[{translateX:event.translationX}]};}" };
+            const obj4 = { user: stateFromStores, guildId: "Array", size: "p\u0314" };
             const Avatar = TableRow(tmp14[15]).Avatar;
             obj4.size = TableRow(tmp14[15]).AvatarSizes.REFRESH_MEDIUM_32;
             class F {
@@ -238,7 +238,7 @@ const View = fn(17).View;
 const UserSettingsSections = fn(1085).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { flexGrow: 1, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 }, header: null, list: null };
 let obj3 = { flexGrow: 1, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
 obj2.header = { marginTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_8 };
@@ -249,7 +249,7 @@ const constants = { USER: "USER" };
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled();
 ReactCompilerGating = fn(558);
-let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function SettingsSecureFramesFooter() {
   const cResult = navigation(secureFramesVerifiedUserIds[8]).c(21);
   const tmp4 = closure_9();
   const obj = navigation(secureFramesVerifiedUserIds[8]);
@@ -364,7 +364,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[7] = fn2;
   tmp9 = fn2;
   const tmpResult = navigation(secureFramesVerifiedUserIds[21]);
-}) : (() => {
+}) : (function SettingsSecureFramesFooter() {
   const tmp = closure_9();
   const token = navigation(secureFramesVerifiedUserIds[19]).useToken(callback(secureFramesVerifiedUserIds[6]).modules.mobile.TABLE_ROW_HEIGHT);
   const obj = navigation(secureFramesVerifiedUserIds[19]);
@@ -405,7 +405,7 @@ let obj5 = { flexGrow: 1, gap: nativeDefault.space.PX_8 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/privacy_and_safety/native/SettingsSecureFramesScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SettingsSecureFramesScreen() {
   const cResult = c.c(8);
   const tmp4 = closure_9();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -462,7 +462,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[6] = tmp11;
   cResult[7] = tmp20;
   tmp19 = tmp20;
-}) : (() => {
+}) : (function SettingsSecureFramesScreen() {
   const tmp = closure_9();
   const obj = { style: tmp.container, children: null };
   const obj2 = { style: tmp.header, children: null };

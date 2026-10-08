@@ -1,7 +1,7 @@
-// === Module 9837: useLastChannelMessage ===
+// === Module 10400: useLastChannelMessage ===
 
-// Module 9837 (useLastChannelMessage)
-import MessageStore from "MessageStore" /* 5116 */;
+// Module 10400 (useLastChannelMessage)
+import MessageStore from "MessageStore" /* 5428 */;
 
 const require = globalThis.__r;
 
@@ -10,7 +10,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useLastChannelMessage.tsx");
 
-export const useLastChannelMessage = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useLastChannelMessage = ReactCompilerGating.isReactCompilerEnabled() ? (function useLastChannelMessage(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -36,7 +36,7 @@ export const useLastChannelMessage = ReactCompilerGating.isReactCompilerEnabled(
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp6);
-}) : ((arg0) => {
+}) : (function useLastChannelMessage(arg0) {
   _require = arg0;
   const items = [MessageStore];
   return require("initialize").useStateFromStores(items, () => {

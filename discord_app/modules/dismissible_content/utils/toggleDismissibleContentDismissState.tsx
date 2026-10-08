@@ -1,23 +1,23 @@
-// === Module 15462: toggleDismissibleContentDismissState ===
+// === Module 15724: toggleDismissibleContentDismissState ===
 
-// Module 15462 (toggleDismissibleContentDismissState)
+// Module 15724 (toggleDismissibleContentDismissState)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _mod19 from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4899 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
-const UserSettingsProtoActionCreators = obj(2033);
-const DismissibleContentUtils = obj(2037);
-const DismissibleContentTypes = obj(2041);
-const VersionedDismissibleContentUtils = obj(2049);
-const DismissibleContentFrameworkActionCreators = obj(10060);
+const UserSettingsProtoActionCreators = obj(2045);
+const DismissibleContentUtils = obj(2049);
+const DismissibleContentTypes = obj(2054);
+const VersionedDismissibleContentUtils = obj(2061);
+const DismissibleContentFrameworkActionCreators = obj(10305);
 _mod19.useCallback;
 let result = size.fileFinishedImporting("modules/dismissible_content/utils/toggleDismissibleContentDismissState.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useToggleDismissibleContentDismissState(arg0) {
   _require = arg0;
   const cResult = require("c").c(11);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -279,7 +279,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[7] = C;
   tmp11 = C;
   const tmpResult2 = require("DismissibleContentUnsafeUtils");
-}) : ((arg0) => {
+}) : (function useToggleDismissibleContentDismissState(arg0) {
   _require = arg0;
   const items = [SelectedGuildStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => guildId.getGuildId());

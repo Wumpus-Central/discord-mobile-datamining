@@ -1,8 +1,8 @@
-// === Module 17270: SoundboardSoundPreviewMenuExperiment ===
+// === Module 17551: SoundboardSoundPreviewMenuExperiment ===
 
-// Module 17270 (SoundboardSoundPreviewMenuExperiment)
+// Module 17551 (SoundboardSoundPreviewMenuExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1440 */;
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -14,7 +14,7 @@ const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/soundboard/experiments/SoundboardSoundPreviewMenuExperiment.tsx");
 
 export const SoundboardSoundPreviewMenuExperiment = apexExperiment;
-export const useSoundboardSoundPreviewMenuEnabled = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+export const useSoundboardSoundPreviewMenuEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useSoundboardSoundPreviewMenuEnabled(location) {
   const cResult = c.c(2);
   if (cResult[0] !== location) {
     const obj2 = { location };
@@ -25,4 +25,6 @@ export const useSoundboardSoundPreviewMenuEnabled = ReactCompilerGating.isReactC
     tmp2 = cResult[1];
   }
   return apexExperiment.useConfig(tmp2).enabled;
-}) : ((location) => apexExperiment.useConfig({ location }).enabled);
+}) : (function useSoundboardSoundPreviewMenuEnabled(location) {
+  return apexExperiment.useConfig({ location }).enabled;
+});

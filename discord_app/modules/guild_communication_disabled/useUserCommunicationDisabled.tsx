@@ -1,16 +1,16 @@
-// === Module 7647: useUserCommunicationDisabled ===
+// === Module 7968: useUserCommunicationDisabled ===
 
-// Module 7647 (useUserCommunicationDisabled)
+// Module 7968 (useUserCommunicationDisabled)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4502 */;
-import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import UserStore from "UserStore" /* 1377 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4694 */;
+import GuildMemberStore from "GuildMemberStore" /* 2124 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 fn(558);
 const ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useUserCommunicationDisabled(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   const cResult = require("c").c(7);
@@ -35,11 +35,11 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
       if (prop == null) {
         prop = null;
       }
-      const items1 = [prop, tmp(4502).isMemberCommunicationDisabled(stateFromStores)];
+      const items1 = [prop, tmp(4694).isMemberCommunicationDisabled(stateFromStores)];
       cResult[5] = stateFromStores;
       cResult[6] = items1;
       let tmp9 = items1;
-      const tmpResult2 = tmp(4502);
+      const tmpResult2 = tmp(4694);
     } else {
       tmp9 = cResult[6];
     }
@@ -63,7 +63,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   tmp7 = items2;
   tmp6 = fn;
   const obj = require("c");
-}) : ((arg0, arg1) => {
+}) : (function useUserCommunicationDisabled(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   const items = [GuildMemberStore];
@@ -95,7 +95,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_communication_disabled/useUserCommunicationDisabled.tsx");
 
 export default tmp3;
-export const useCurrentUserCommunicationDisabled = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useCurrentUserCommunicationDisabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useCurrentUserCommunicationDisabled(arg0) {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
@@ -115,7 +115,7 @@ export const useCurrentUserCommunicationDisabled = ReactCompilerGating.isReactCo
     id = stateFromStores.id;
   }
   return closure_4(id, arg0);
-}) : ((arg0) => {
+}) : (function useCurrentUserCommunicationDisabled(arg0) {
   const items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   let id;

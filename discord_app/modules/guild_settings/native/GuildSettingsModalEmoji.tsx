@@ -1,18 +1,18 @@
-// === Module 17779: GuildSettingsModalEmoji ===
+// === Module 18066: GuildSettingsModalEmoji ===
 
-// Module 17779 (GuildSettingsModalEmoji)
+// Module 18066 (GuildSettingsModalEmoji)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import RoleSubscriptionEmojiUtils from "RoleSubscriptionEmojiUtils" /* 5650 */;
-import GuildSettingsModalEmoji_EmojiRow from "GuildSettingsModalEmoji/EmojiRow" /* 17782 */;
-import HeaderRow from "HeaderRow" /* 17786 */;
-import EmptyServerSettingsEmoji from "EmptyServerSettingsEmoji" /* 17787 */;
+import native from "native" /* 1200 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import RoleSubscriptionEmojiUtils from "RoleSubscriptionEmojiUtils" /* 5997 */;
+import GuildSettingsModalEmoji_EmojiRow from "GuildSettingsModalEmoji/EmojiRow" /* 18069 */;
+import HeaderRow from "HeaderRow" /* 18073 */;
+import EmptyServerSettingsEmoji from "EmptyServerSettingsEmoji" /* 18074 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import GuildSettingsEmojiStore from "GuildSettingsEmojiStore" /* 17780 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import GuildSettingsEmojiStore from "GuildSettingsEmojiStore" /* 18067 */;
 import apply_mod from "module_12" /* 12 */;
 
 const require = globalThis.__r;
@@ -26,8 +26,8 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 let apply = apply_mod;
-let closure_12 = apply.throttle(fn(9952).fetchEmoji, 1000);
-const createStyles = fn(4896);
+let closure_12 = apply.throttle(fn(9479).fetchEmoji, 1000);
+const createStyles = fn(5090);
 let obj = { loadingContainer: { flex: 1, paddingTop: 40 }, emptyState: { paddingTop: 30 }, list: { paddingHorizontal: nativeDefault.space.PX_12 }, section: null, titleContainer: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_12 };
 obj.section = { paddingVertical: nativeDefault.space.PX_16 };
@@ -73,7 +73,7 @@ const computeEmojiItems = apply.memoize((arr, stateFromStores) => {
   return items2;
 });
 let ReactCompilerGating = fn(558);
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((headerDescription) => {
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ManageEmojisModal(headerDescription) {
   const cResult = guild(onSelectRolesForEmoji[14]).c(45);
   ({ computeEmojiItems, contentContainerStyle, disabled, guild } = headerDescription);
   headerDescription = headerDescription.headerDescription;
@@ -248,7 +248,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((headerDescription)
   cResult[8] = emojiItems;
   tmp11 = emojiItems;
   const tmpResult2 = guild(onSelectRolesForEmoji[16]);
-}) : ((disabled) => {
+}) : (function ManageEmojisModal(disabled) {
   let flag = disabled.disabled;
   ({ computeEmojiItems, contentContainerStyle } = disabled);
   if (flag === undefined) {
@@ -376,7 +376,7 @@ function computeSectionItem(intl, length, arg2) {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalEmoji.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSettingsModalEmoji(guildId) {
   const cResult = guildId(stateFromStores[14]).c(18);
   guildId = guildId.guildId;
   ({ contentContainerStyle, isLandingScreen } = guildId);
@@ -493,7 +493,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   tmp11 = items2;
   tmp10 = I;
   const tmpResult3 = guildId(stateFromStores[24]);
-}) : ((contentContainerStyle) => {
+}) : (function GuildSettingsModalEmoji(contentContainerStyle) {
   ({ guildId: require, isLandingScreen } = contentContainerStyle);
   let stateFromStores;
   const items = [GuildStore];

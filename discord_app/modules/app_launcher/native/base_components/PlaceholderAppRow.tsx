@@ -1,16 +1,16 @@
-// === Module 11728: PlaceholderAppRow ===
+// === Module 11794: PlaceholderAppRow ===
 
-// Module 11728 (PlaceholderAppRow)
+// Module 11794 (PlaceholderAppRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import TableRow from "TableRow" /* 6000 */;
-import usePlaceholderSize from "usePlaceholderSize" /* 11682 */;
+import TableRow from "TableRow" /* 6184 */;
+import usePlaceholderSize from "usePlaceholderSize" /* 11747 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { loadingAppIcon: null, loadingTextPlaceholder: null, loadingTextPlaceholderSmall: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
 obj2.loadingAppIcon = size;
@@ -23,7 +23,7 @@ let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, height
 size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/base_components/PlaceholderAppRow.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function PlaceholderAppRow(arg0) {
   const cResult = c.c(19);
   ({ isFirstRow, isLastRow } = arg0);
   const tmp6 = closure_4();
@@ -68,28 +68,28 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
       const _Symbol = Symbol;
       if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-        class L {
+        class A {
           constructor() {
             return;
           }
         }
-        cResult[12] = L;
+        cResult[12] = A;
       } else {
-        class L {
+        class A {
           constructor() {
             return;
           }
         }
       }
       if (cResult[13] === tmp4) {
-        class L {
+        class A {
           constructor() {
             return;
           }
         }
       }
-      const obj5 = { icon: tmp9, label: tmp15, subLabel: tmp19, subLabelLineClamp: 1, start: tmp4, end: tmp5, onPress: L };
-      const tmp26 = jsx(TableRow.TableRow, { icon: tmp9, label: tmp15, subLabel: tmp19, subLabelLineClamp: 1, start: tmp4, end: tmp5, onPress: L });
+      const obj5 = { icon: tmp9, label: tmp15, subLabel: tmp19, subLabelLineClamp: 1, start: tmp4, end: tmp5, onPress: A };
+      const tmp26 = jsx(TableRow.TableRow, { icon: tmp9, label: tmp15, subLabel: tmp19, subLabelLineClamp: 1, start: tmp4, end: tmp5, onPress: A });
       cResult[13] = tmp4;
       cResult[14] = tmp5;
       cResult[15] = tmp9;
@@ -115,7 +115,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[6] = tmp16;
   tmp15 = tmp16;
   const tmpResult2 = usePlaceholderSize;
-}) : ((isFirstRow) => {
+}) : (function PlaceholderAppRow(isFirstRow) {
   let flag = isFirstRow.isFirstRow;
   if (flag === undefined) {
     flag = false;

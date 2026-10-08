@@ -1,25 +1,25 @@
-// === Module 7270: PollsUtils ===
+// === Module 7870: PollsUtils ===
 
-// Module 7270 (PollsUtils)
+// Module 7870 (PollsUtils)
 import DurationsDefault from "Durations" /* 1102 */;
 import util from "util" /* 1126 */;
-import v1 from "v1" /* 1266 */;
-import utils_StringUtils from "utils/StringUtils" /* 2019 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5048 */;
-import useMessageAuthor from "useMessageAuthor" /* 5311 */;
-import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 6736 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import MessageReactionsStore from "MessageReactionsStore" /* 7271 */;
-import MessageStore from "MessageStore" /* 5116 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
+import v1 from "v1" /* 1278 */;
+import utils_StringUtils from "utils/StringUtils" /* 2031 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5405 */;
+import useMessageAuthor from "useMessageAuthor" /* 5623 */;
+import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 6910 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import MessageReactionsStore from "MessageReactionsStore" /* 7871 */;
+import MessageStore from "MessageStore" /* 5428 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
 
 const require = globalThis.__r;
 
 require = fn;
 function getSampleOfVoterUsernamesForAnswer(message, id) {
   const channelId = message.getChannelId();
-  const reactions = MessageReactionsStore.getReactions(channelId, message.id, { id, name: "", animated: false }, closure_9, channel(7272).ReactionTypes.VOTE);
+  const reactions = MessageReactionsStore.getReactions(channelId, message.id, { id, name: "", animated: false }, closure_9, channel(7873).ReactionTypes.VOTE);
   channel = ChannelStore.getChannel(channelId);
   let guildId = null;
   if (null != channel) {
@@ -94,7 +94,7 @@ function formatVoterTooltipText(arr, arg1) {
     return intl.formatToPlainString(util.t.yVX6kE, obj);
   }
 }
-const PollsConstants = fn(7468);
+const PollsConstants = fn(7943);
 ({ POLL_RESULT_MESSAGE_POLL_TITLE_MAX_VISIBLE_CHARS: closure_8, VOTES_TOOLTIP_MAX_USERS: closure_9 } = PollsConstants);
 const Constants = fn(1085);
 ({ ChannelTypesSets: c10, Permissions: closure_11 } = Constants);
@@ -139,7 +139,7 @@ export const hasNonVoteReactions = function hasNonVoteReactions(message) {
   }
   return false;
 };
-export const useCanPostPollsInChannel = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useCanPostPollsInChannel = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanPostPollsInChannel(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -178,7 +178,7 @@ export const useCanPostPollsInChannel = ReactCompilerGating.isReactCompilerEnabl
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp6);
-}) : ((arg0) => {
+}) : (function useCanPostPollsInChannel(arg0) {
   _require = arg0;
   const items = [PermissionStore];
   return require("initialize").useStateFromStores(items, () => {

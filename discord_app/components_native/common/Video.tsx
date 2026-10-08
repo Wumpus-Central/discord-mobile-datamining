@@ -1,24 +1,25 @@
-// === Module 7993: common/Video ===
+// === Module 8401: common/Video ===
 
-// Module 7993 (common/Video)
+// Module 8401 (common/Video)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 6541 */;
-import openMediaModal from "openMediaModal" /* 7944 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 6717 */;
+import openMediaModal from "openMediaModal" /* 8362 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ TouchableWithoutFeedback: closure_4, View: hasOwnProperty, Image: metroRequire, AppState: closure_7 } = get_ActivityIndicator);
+({ TouchableWithoutFeedback: hasOwnProperty, View: metroRequire, AppState: closure_7 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { flex: 1, shadowColor: nativeDefault.unsafe_rawColors.BLACK, shadowOpacity: 0.5, shadowOffset: { height: 1, width: 0 }, shadowRadius: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND }, video: null };
 let obj3 = { flex: 1, shadowColor: nativeDefault.unsafe_rawColors.BLACK, shadowOpacity: 0.5, shadowOffset: { height: 1, width: 0 }, shadowRadius: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj2.video = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 let closure_9 = createStyles.createLegacyClassComponentStyles(obj2);
 const ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function VideoComponent(arg0) {
   const cResult = require("c").c(25);
   ({ style, source, poster, onLoadStart, onLoad, onReadyForDisplay, onError, onEnd, paused, muted, posterResizeMode, resizeMode, disableFocus, controls, ariaHidden, mixWithOthers, importantForAccessibility, pauseWhileAppInactive, playInBackground, preventsDisplaySleepDuringVideoPlayback, httpEngine } = arg0);
   let tmp4 = undefined !== paused && paused;
@@ -32,7 +33,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   _require = tmp6;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = tmp(7994);
+    const tmpResult = tmp(8402);
     cResult[0] = tmpResult;
     let first = tmpResult;
   } else {
@@ -40,7 +41,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   tmp = _require;
-  [r10058, dependencyMap] = noop.useState("active" === closure_7.currentState);
+  [r10058, importDefault] = noop.useState("active" === closure_7.currentState);
   if (cResult[1] !== (undefined === pauseWhileAppInactive || pauseWhileAppInactive)) {
     class N {
       constructor() {
@@ -144,7 +145,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[23] = undefined;
   cResult[24] = <first.default style={style} source={source} importantForAccessibility={importantForAccessibility} poster={poster} muted={undefined === muted || muted} paused={tmp4} posterResizeMode={str2} resizeMode={str} repeat playInBackground={undefined !== playInBackground && playInBackground} pictureInPicture={false} playWhenInactive={false} onLoadStart={onLoadStart} onLoad={onLoad} onReadyForDisplay={onReadyForDisplay} onError={onError} onEnd={onEnd} disableFocus={disableFocus} aria-hidden={ariaHidden} mixWithOthers={mixWithOthers} preventsDisplaySleepDuringVideoPlayback={undefined === preventsDisplaySleepDuringVideoPlayback || preventsDisplaySleepDuringVideoPlayback} httpEngine={httpEngine} />;
   const tmp17 = <first.default style={style} source={source} importantForAccessibility={importantForAccessibility} poster={poster} muted={undefined === muted || muted} paused={tmp4} posterResizeMode={str2} resizeMode={str} repeat playInBackground={undefined !== playInBackground && playInBackground} pictureInPicture={false} playWhenInactive={false} onLoadStart={onLoadStart} onLoad={onLoad} onReadyForDisplay={onReadyForDisplay} onError={onError} onEnd={onEnd} disableFocus={disableFocus} aria-hidden={ariaHidden} mixWithOthers={mixWithOthers} preventsDisplaySleepDuringVideoPlayback={undefined === preventsDisplaySleepDuringVideoPlayback || preventsDisplaySleepDuringVideoPlayback} httpEngine={httpEngine} />;
-}) : ((paused) => {
+}) : (function VideoComponent(paused) {
   let flag = paused.paused;
   ({ style, source, poster, onLoadStart, onLoad, onReadyForDisplay, onError, onEnd } = paused);
   if (flag === undefined) {
@@ -175,7 +176,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     flag4 = true;
   }
   const tmp = _slicedToArray(noop.useState("active" === closure_7.currentState), 2);
-  dependencyMap = tmp[1];
+  closure_1 = tmp[1];
   const items = [pauseWhileAppInactive];
   const effect = noop.useEffect(() => {
     if (closure_0) {
@@ -213,7 +214,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     props = controls.props;
   }
   const merged = Object.assign(props);
-  return jsx(pauseWhileAppInactive(7994).default, { style, source, importantForAccessibility, poster, muted: flag2, paused: null, posterResizeMode: null, resizeMode: null, repeat: true, playInBackground: null, pictureInPicture: false, playWhenInactive: false, onLoadStart: null, onLoad: null, onReadyForDisplay: null, onError: null, onEnd: null, disableFocus: null, "aria-hidden": null, mixWithOthers: null, preventsDisplaySleepDuringVideoPlayback: null, httpEngine: null });
+  return jsx(pauseWhileAppInactive(8402).default, { style, source, importantForAccessibility, poster, muted: flag2, paused: null, posterResizeMode: null, resizeMode: null, repeat: true, playInBackground: null, pictureInPicture: false, playWhenInactive: false, onLoadStart: null, onLoad: null, onReadyForDisplay: null, onError: null, onEnd: null, disableFocus: null, "aria-hidden": null, mixWithOthers: null, preventsDisplaySleepDuringVideoPlayback: null, httpEngine: null });
 });
 let closure_10 = tmp4;
 const PureComponent = noop.PureComponent;
@@ -222,7 +223,7 @@ class Video extends PureComponent {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     closure_0 = applyArgumentsResult;
     applyArgumentsResult.state = { postponeRender: true };
-    applyArgumentsResult.ref = closure_3.createRef();
+    applyArgumentsResult.ref = closure_4.createRef();
     applyArgumentsResult.isVideo = function isVideo() {
       const src = applyArgumentsResult.props.src;
       let tmp = null != src;
@@ -301,16 +302,22 @@ prototype["renderVideo"] = function renderVideo() {
   return null;
 };
 prototype["renderImage"] = function renderImage() {
-  const src = this.props.src;
+  ({ src, ariaHidden } = this.props);
   if ("uri" in src) {
     if ("" !== src.uri) {
-      const obj = { source: null, style: null, "aria-hidden": null };
+      const obj = { source: null, style: null, accessible: null, accessibilityElementsHidden: null, importantForAccessibility: null };
       const obj2 = { uri: src.uri };
       obj.source = obj2;
       const size = { width: tmp, height: tmp2 };
       obj.style = size;
-      obj["aria-hidden"] = tmp3;
-      return <timestampProducer source={null} style={null} aria-hidden={null} />;
+      obj.accessible = true !== ariaHidden;
+      obj.accessibilityElementsHidden = ariaHidden;
+      let str2;
+      if (true === ariaHidden) {
+        str2 = "no-hide-descendants";
+      }
+      obj.importantForAccessibility = str2;
+      return jsx(FastImageDefault, { source: null, style: null, accessible: null, accessibilityElementsHidden: null, importantForAccessibility: null });
     }
   }
 };
@@ -334,7 +341,7 @@ prototype["render"] = function render() {
           accessibilityLabel = intl.string(util.t.OIDkcp);
         }
         const obj2 = { accessibilityRole: "button", accessibilityLabel, onPress: self.handleOpenFullScreen, children: tmp3Result };
-        tmp3Result2 = <React4 accessibilityRole="button" accessibilityLabel={accessibilityLabel} onPress={self.handleOpenFullScreen}>{tmp3Result}</React4>;
+        tmp3Result2 = <hasOwnProperty accessibilityRole="button" accessibilityLabel={accessibilityLabel} onPress={self.handleOpenFullScreen}>{tmp3Result}</hasOwnProperty>;
       }
       return tmp3Result2;
     }
@@ -345,13 +352,13 @@ prototype["render"] = function render() {
     self.renderImage();
   }
 };
-Video.contextType = fn(4595).ThemeContext;
+Video.contextType = fn(4787).ThemeContext;
 let size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/Video.tsx");
 
 export default Video;
 export const createVideoControls = function createVideoControls(NOOP) {
-  const ref = noop.createRef();
+  ref = ref.createRef();
   c5 = 0;
   c6 = 0;
   let progressPercent = 0;

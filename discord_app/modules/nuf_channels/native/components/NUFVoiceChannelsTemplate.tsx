@@ -1,11 +1,11 @@
-// === Module 13604: NUFVoiceChannelsTemplate ===
+// === Module 13426: NUFVoiceChannelsTemplate ===
 
-// Module 13604 (NUFVoiceChannelsTemplate)
-import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1881 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5575 */;
-import NUFChannelsManagerDefault from "NUFChannelsManager" /* 13594 */;
-import NUFTemplateDefault from "NUFTemplate" /* 13605 */;
-import _modDef13606 from "module_13606" /* 13606 */;
+// Module 13426 (NUFVoiceChannelsTemplate)
+import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1893 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5885 */;
+import NUFChannelsManagerDefault from "NUFChannelsManager" /* 13416 */;
+import NUFTemplateDefault from "NUFTemplate" /* 13427 */;
+import _modDef13428 from "module_13428" /* 13428 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/nuf_channels/native/components/NUFVoiceChannelsTemplate.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function NUFVoiceChannelsTemplate(channel) {
   const cResult = channel(576).c(5);
   channel = channel.channel;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -41,7 +41,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     let obj2 = {
       title: tmp4,
       description: tmp5,
-      imageSrc: _modDef13606,
+      imageSrc: _modDef13428,
       CTALabel: tmp8,
       onCTAPress() {
           const result = NUFChannelsManagerDefault.handleVoiceChannelsOnboard();
@@ -52,7 +52,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     const tmp14 = jsx(NUFTemplateDefault, {
       title: tmp4,
       description: tmp5,
-      imageSrc: _modDef13606,
+      imageSrc: _modDef13428,
       CTALabel: tmp8,
       onCTAPress() {
           const result = NUFChannelsManagerDefault.handleVoiceChannelsOnboard();
@@ -67,14 +67,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     tmp10 = cResult[4];
   }
   return tmp10;
-}) : ((channel) => {
+}) : (function NUFVoiceChannelsTemplate(channel) {
   channel = channel.channel;
   let obj = { title: null, description: null, imageSrc: null, CTALabel: null, onCTAPress: null };
   const intl = channel(1126).intl;
   obj.title = intl.string(channel(1126).t.w5HAll);
   const intl2 = channel(1126).intl;
   obj.description = intl2.string(channel(1126).t.Ww4hhq);
-  obj.imageSrc = _modDef13606;
+  obj.imageSrc = _modDef13428;
   const intl3 = channel(1126).intl;
   obj.CTALabel = intl3.string(channel(1126).t.eIi3Om);
   obj.onCTAPress = function onCTAPress() {

@@ -1,16 +1,16 @@
-// === Module 12227: GuildPowerupsBoostInfo ===
+// === Module 12306: GuildPowerupsBoostInfo ===
 
-// Module 12227 (GuildPowerupsBoostInfo)
+// Module 12306 (GuildPowerupsBoostInfo)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4774 */;
-import BoostGemIcon from "BoostGemIcon" /* 4832 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6477 */;
-import getGuildPowerupsBoostInfoText from "getGuildPowerupsBoostInfoText" /* 12228 */;
+import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4968 */;
+import BoostGemIcon from "BoostGemIcon" /* 5026 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6655 */;
+import getGuildPowerupsBoostInfoText from "getGuildPowerupsBoostInfoText" /* 12307 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
+import createStyles from "createStyles" /* 5090 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -22,7 +22,7 @@ let closure_7 = createStyles.createStyles(obj);
 let obj2 = { flex: 1, alignItems: "center", justifyContent: "center", paddingVertical: nativeDefault.space.PX_12 };
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsBoostInfo.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPowerupsBoostInfo(arg0) {
   const cResult = c.c(21);
   ({ count, type } = arg0);
   const tmp4 = closure_7();
@@ -127,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = guildPowerupsBoostInfoText;
   tmp6 = guildPowerupsBoostInfoText;
   const tmpResult = getGuildPowerupsBoostInfoText;
-}) : ((arg0) => {
+}) : (function GuildPowerupsBoostInfo(arg0) {
   ({ count, type } = arg0);
   const tmp = closure_7();
   const manaTypeConsolidationExperiment = ManaTypeConsolidationExperiment.useManaTypeConsolidationExperiment("GuildPowerupsBoostInfo");

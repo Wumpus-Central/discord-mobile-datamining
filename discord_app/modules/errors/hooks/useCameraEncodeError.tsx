@@ -1,9 +1,9 @@
-// === Module 17306: useCameraEncodeError ===
+// === Module 17587: useCameraEncodeError ===
 
-// Module 17306 (useCameraEncodeError)
-import AVError from "AVError" /* 9131 */;
+// Module 17587 (useCameraEncodeError)
+import AVError from "AVError" /* 5287 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import AVErrorStore from "AVErrorStore" /* 9130 */;
+import AVErrorStore from "AVErrorStore" /* 10702 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/errors/hooks/useCameraEncodeError.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCameraEncodeError(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -41,7 +41,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp7);
-}) : ((arg0) => {
+}) : (function useCameraEncodeError(arg0) {
   _require = arg0;
   const items = [AVErrorStore, AuthenticationStore];
   return require("initialize").useStateFromStores(items, () => {

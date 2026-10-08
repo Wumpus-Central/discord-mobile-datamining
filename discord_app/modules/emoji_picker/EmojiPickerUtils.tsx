@@ -1,31 +1,31 @@
-// === Module 9883: EmojiPickerUtils ===
+// === Module 9363: EmojiPickerUtils ===
 
-// Module 9883 (EmojiPickerUtils)
+// Module 9363 (EmojiPickerUtils)
 import DurationsDefault from "Durations" /* 1102 */;
 import util from "util" /* 1126 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import v1 from "v1" /* 1266 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4529 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4533 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5076 */;
-import ExpressionPickerGridStores from "ExpressionPickerGridStores" /* 9884 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import v1 from "v1" /* 1278 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4721 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4725 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5105 */;
+import ExpressionPickerGridStores from "ExpressionPickerGridStores" /* 9364 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 5645 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import SortedGuildStore from "SortedGuildStore" /* 5623 */;
-import UserStore from "UserStore" /* 1377 */;
+import EmojiStore from "EmojiStore" /* 5992 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import SortedGuildStore from "SortedGuildStore" /* 5968 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const EmojiPickerConstants = fn(5649);
+const EmojiPickerConstants = fn(5996);
 ({ EmojiCategories: closure_8, EmojiCategoryTypes: closure_9, EmojiSubCategory: c10 } = EmojiPickerConstants);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_11, AnalyticsPages: closure_12, AnalyticsSections: map1, AutoCompleteResultTypes: closure_14, SearchTypes: closure_15 } = Constants);
-const EmojiConstants = fn(1380);
+const EmojiConstants = fn(1392);
 ({ isExternalEmojiAllowedForIntention: closure_16, EmojiDisabledReasons: closure_17, EmojiIntention: closure_18 } = EmojiConstants);
-const ExpressionPickerViewType = fn(1229).ExpressionPickerViewType;
-const PremiumUpsellTypes = fn(1379).PremiumUpsellTypes;
+const ExpressionPickerViewType = fn(1241).ExpressionPickerViewType;
+const PremiumUpsellTypes = fn(1391).PremiumUpsellTypes;
 const re21 = /-/g;
 const apply = fn(12);
 fn(558);
@@ -37,7 +37,7 @@ const throttleResult = apply.throttle((emojiSuggestions) => {
   AppAnalyticsUtilsDefault.trackWithMetadata(constants4.AUTO_SUGGEST_DISPLAYED, obj2);
 }, DurationsDefault.Millis.HALF_SECOND, { leading: false, trailing: true });
 let ReactCompilerGating = fn(558);
-let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFrequentlyUsedEmojis(arg0) {
   _require = arg0;
   const cResult = require("c").c(5);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -74,7 +74,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStoresArray(tmp7, tmp9);
-}) : ((arg0) => {
+}) : (function useFrequentlyUsedEmojis(arg0) {
   _require = arg0;
   const effect = noop.useEffect(() => {
     const FrecencyUserSettingsActionCreators = closure_0(dependencyMap[27]).FrecencyUserSettingsActionCreators;
@@ -88,7 +88,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 });
 let closure_22 = tmp7;
 ReactCompilerGating = fn(558);
-let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFrequentlyUsedReactionEmojis(arg0) {
   _require = arg0;
   const cResult = require("c").c(5);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -125,7 +125,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStoresArray(tmp7, tmp9);
-}) : ((arg0) => {
+}) : (function useFrequentlyUsedReactionEmojis(arg0) {
   _require = arg0;
   const effect = noop.useEffect(() => {
     const FrecencyUserSettingsActionCreators = closure_0(dependencyMap[27]).FrecencyUserSettingsActionCreators;
@@ -139,7 +139,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 });
 let closure_23 = tmp8;
 ReactCompilerGating = fn(558);
-let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFavoriteEmojis(arg0) {
   _require = arg0;
   const cResult = require("c").c(5);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -175,7 +175,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStoresArray(tmp7, tmp9);
-}) : ((arg0) => {
+}) : (function useFavoriteEmojis(arg0) {
   _require = arg0;
   const effect = noop.useEffect(() => {
     const FrecencyUserSettingsActionCreators = closure_0(dependencyMap[27]).FrecencyUserSettingsActionCreators;
@@ -186,10 +186,10 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 });
 let closure_24 = tmp9;
 ReactCompilerGating = fn(558);
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, channel, intention, showOnlyUnicode) => {
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEmojiSearchResults(arg0, channel, intention, showOnlyUnicode) {
   _require = arg0;
-  importDefault = channel;
   dependencyMap = intention;
+  noop = showOnlyUnicode;
   const cResult = require("c").c(12);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function u() {
@@ -204,7 +204,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, channel, inten
   } else {
     [tmp4, tmp5] = cResult;
   }
-  const effect = showOnlyUnicode.useEffect(tmp4, tmp5);
+  const effect = noop.useEffect(tmp4, tmp5);
   if (cResult[2] !== intention) {
     const tmp9 = closure_16(intention);
     cResult[2] = intention;
@@ -213,7 +213,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, channel, inten
   } else {
     tmp7 = cResult[3];
   }
-  includeExternalGuilds = tmp7;
+  const includeExternalGuilds = tmp7;
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [includeExternalGuilds];
     cResult[4] = items1;
@@ -235,48 +235,36 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, channel, inten
       }
     }
   }
-  class I {
-    constructor() {
-      str = closure_0.replace(/^:/, "");
-      replaced = str.replace(/:$/, "");
-      result = null;
-      if ("" !== replaced) {
-        tmp3 = closure_4;
-        obj = { channel: null, query: null, count: 0, intention: null, includeExternalGuilds: null, showOnlyUnicode: null };
-        tmp4 = closure_1;
-        obj.channel = closure_1;
-        obj.query = replaced;
-        tmp5 = closure_2;
-        obj.intention = closure_2;
-        tmp6 = closure_4;
-        obj.includeExternalGuilds = closure_4;
-        tmp7 = closure_3;
-        obj.showOnlyUnicode = closure_3;
-        result = closure_4.searchWithoutFetchingLatest(obj);
-      }
-      return result;
+  const fn2 = function j() {
+    const replaced = closure_0.replace(/^:/, "").replace(/:$/, "");
+    let result = null;
+    if ("" !== replaced) {
+      const obj = { channel, query: replaced, count: 0, intention, includeExternalGuilds, showOnlyUnicode };
+      result = EmojiStore.searchWithoutFetchingLatest(obj);
     }
-  }
+    return result;
+  };
   const items2 = [arg0, channel, intention, tmp7, showOnlyUnicode];
   cResult[5] = channel;
   cResult[6] = tmp7;
   cResult[7] = intention;
   cResult[8] = arg0;
   cResult[9] = showOnlyUnicode;
-  cResult[10] = I;
+  cResult[10] = fn2;
   cResult[11] = items2;
   tmp13 = items2;
-  tmp12 = I;
+  tmp12 = fn2;
   let obj = require("c");
-}) : ((arg0, channel, intention, showOnlyUnicode) => {
+}) : (function useEmojiSearchResults(arg0, channel, intention, showOnlyUnicode) {
   _require = arg0;
   dependencyMap = intention;
-  const effect = showOnlyUnicode.useEffect(() => {
+  noop = showOnlyUnicode;
+  const effect = noop.useEffect(() => {
     const FrecencyUserSettingsActionCreators = closure_0(intention[27]).FrecencyUserSettingsActionCreators;
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
   }, []);
   const tmp2 = closure_16(intention);
-  includeExternalGuilds = tmp2;
+  const includeExternalGuilds = tmp2;
   const items = [includeExternalGuilds];
   const items1 = [arg0, channel, intention, tmp2, showOnlyUnicode];
   return require("initialize").useStateFromStores(items, () => {
@@ -290,7 +278,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, channel, inten
   }, items1, require("initialize").statesWillNeverBeEqual);
 });
 ReactCompilerGating = fn(558);
-let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsFavoriteEmoji(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
   const cResult = require("c").c(6);
@@ -339,7 +327,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   tmp9 = E;
   const obj = require("c");
   tmp = _require;
-}) : ((arg0, arg1) => {
+}) : (function useIsFavoriteEmoji(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
   const effect = noop.useEffect(() => {
@@ -444,7 +432,7 @@ export const useEmojiCategories = function useEmojiCategories(CHAT, channel) {
     let intl = CHAT(guildId[19]).intl;
     obj.name = intl.string(CHAT(guildId[19]).t.f0Ezmv);
     obj.id = constants.SOUNDMOJI;
-    ((flattenedGuildIds, GUILD) => {
+    (function addCustomEmojiCategory(flattenedGuildIds, GUILD) {
       const iter = flattenedGuildIds[Symbol.iterator]();
       while (iter !== undefined) {
         guild = undefined;
@@ -871,7 +859,7 @@ export const useFrequentlyUsedEmojis = tmp7;
 export const useFrequentlyUsedReactionEmojis = tmp8;
 export const useFavoriteEmojis = tmp9;
 export const useIsFavoriteEmoji = tmp10;
-export const useEmojiInPriorityOrder = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useEmojiInPriorityOrder = ReactCompilerGating.isReactCompilerEnabled() ? (function useEmojiInPriorityOrder(arg0) {
   _require = arg0;
   const cResult = require("c").c(5);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -908,7 +896,7 @@ export const useEmojiInPriorityOrder = ReactCompilerGating.isReactCompilerEnable
   }
   const obj = require("c");
   return require("initialize").useStateFromStoresArray(tmp7, tmp9);
-}) : ((arg0) => {
+}) : (function useEmojiInPriorityOrder(arg0) {
   _require = arg0;
   const effect = noop.useEffect(() => {
     const FrecencyUserSettingsActionCreators = closure_0(dependencyMap[27]).FrecencyUserSettingsActionCreators;

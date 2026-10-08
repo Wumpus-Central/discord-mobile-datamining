@@ -1,19 +1,19 @@
-// === Module 8613: ActionSheetDragHandle ===
+// === Module 8528: ActionSheetDragHandle ===
 
-// Module 8613 (ActionSheetDragHandle)
+// Module 8528 (ActionSheetDragHandle)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4618 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4810 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ TouchableWithoutFeedback: c3, View: closure_4 } = get_ActivityIndicator);
-const ActionSheetDragHandleConstants = fn(8603);
+const ActionSheetDragHandleConstants = fn(8518);
 ({ DRAG_HANDLE_BAR_HEIGHT, DRAG_HANDLE_PADDING, DRAG_HANDLE_HEIGHT } = ActionSheetDragHandleConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { container: { height: DRAG_HANDLE_HEIGHT }, containerOverlay: { position: "absolute", top: 0, left: 0, right: 0 }, handle: { alignItems: "center", paddingVertical: DRAG_HANDLE_PADDING }, bar: null };
 let size = { backgroundColor: nativeDefault.colors.ICON_MUTED, borderRadius: nativeDefault.radii.xs, height: DRAG_HANDLE_BAR_HEIGHT, width: 31 };
 obj.bar = size;
@@ -22,7 +22,7 @@ const ReactCompilerGating = fn(558);
 size = fn(2);
 const result = size.fileFinishedImporting("design/components/experimental/ActionSheetDragHandle/native/ActionSheetDragHandle.native.tsx");
 
-export const ActionSheetDragHandle = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const ActionSheetDragHandle = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function DragHandle(arg0) {
   let obj = dependencyMap;
   const cResult = c.c(17);
   ({ onPress, accessibilityLabel, animatedBarStyles, aria-hidden: tmp3, overlay } = arg0);
@@ -102,7 +102,7 @@ export const ActionSheetDragHandle = noop.memo(ReactCompilerGating.isReactCompil
   cResult[3] = containerOverlay;
   cResult[4] = items1;
   tmp8 = items1;
-}) : ((accessibilityLabel) => {
+}) : (function DragHandle(accessibilityLabel) {
   accessibilityLabel = accessibilityLabel.accessibilityLabel;
   ({ onPress, overlay } = accessibilityLabel);
   if (accessibilityLabel === undefined) {

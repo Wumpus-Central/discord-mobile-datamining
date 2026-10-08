@@ -1,9 +1,9 @@
-// === Module 6888: canChannelUseSoundboard ===
+// === Module 7077: canChannelUseSoundboard ===
 
-// Module 6888 (canChannelUseSoundboard)
-import ChannelStore from "ChannelStore" /* 2051 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
+// Module 7077 (canChannelUseSoundboard)
+import ChannelStore from "ChannelStore" /* 2063 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
 
 const require = globalThis.__r;
 
@@ -44,7 +44,7 @@ export const canSelectedVoiceChannelUseSoundboard = function canSelectedVoiceCha
   }
   return flag;
 };
-export const useCanChannelUseSoundboard = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useCanChannelUseSoundboard = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanChannelUseSoundboard(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -55,7 +55,7 @@ export const useCanChannelUseSoundboard = ReactCompilerGating.isReactCompilerEna
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function u() {
+    const fn = function s() {
       let flag = false;
       if (null != guildVoiceOrThread) {
         const CALLABLE = constants.CALLABLE;
@@ -81,7 +81,7 @@ export const useCanChannelUseSoundboard = ReactCompilerGating.isReactCompilerEna
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp6, tmp7);
-}) : ((arg0) => {
+}) : (function useCanChannelUseSoundboard(arg0) {
   _require = arg0;
   const items = [PermissionStore];
   const items1 = [arg0];

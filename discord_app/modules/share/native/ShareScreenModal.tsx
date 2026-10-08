@@ -1,19 +1,19 @@
-// === Module 13729: ShareScreenModal ===
+// === Module 13951: ShareScreenModal ===
 
-// Module 13729 (ShareScreenModal)
+// Module 13951 (ShareScreenModal)
 import LoggerDefault from "Logger" /* 3 */;
 import ChannelTypes from "ChannelTypes" /* 1106 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5940 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
 
 require = fn;
 function onClose() {
   ModalActionCreatorsDefault.popWithKey(SHARE_SCREEN_MODAL_KEY);
 }
-const SHARE_SCREEN_MODAL_KEY = fn(13680).SHARE_SCREEN_MODAL_KEY;
+const SHARE_SCREEN_MODAL_KEY = fn(13902).SHARE_SCREEN_MODAL_KEY;
 const jsx = fn(21).jsx;
 let closure_9 = new LoggerDefault("ShareScreenModal");
 const ReactCompilerGating = fn(558);
@@ -21,7 +21,7 @@ const tmp2 = new LoggerDefault("ShareScreenModal");
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/share/native/ShareScreenModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((shareId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ShareScreenModal(shareId) {
   const cResult = channelId(attachmentManifest[9]).c(20);
   ({ text, channelId } = shareId);
   shareId = shareId.shareId;
@@ -321,7 +321,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((shareId) => {
   tmp9 = items3;
   tmp8 = fn;
   const tmp6 = stateFromStores(noop.useState(null), 2);
-}) : ((text) => {
+}) : (function ShareScreenModal(text) {
   text = text.text;
   require = text;
   const channelId = text.channelId;

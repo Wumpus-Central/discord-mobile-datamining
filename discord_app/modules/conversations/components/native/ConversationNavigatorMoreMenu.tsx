@@ -1,15 +1,15 @@
-// === Module 7581: ConversationNavigatorMoreMenu ===
+// === Module 9292: ConversationNavigatorMoreMenu ===
 
-// Module 7581 (ConversationNavigatorMoreMenu)
+// Module 9292 (ConversationNavigatorMoreMenu)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import ToastUtils from "ToastUtils" /* 4573 */;
-import ConversationsActionCreators from "ConversationsActionCreators" /* 7561 */;
-import ConversationsAnalytics2 from "ConversationsAnalytics" /* 7564 */;
-import ThumbsUpIcon from "ThumbsUpIcon" /* 7582 */;
-import ThumbsDownIcon from "ThumbsDownIcon" /* 7584 */;
-import IconButton from "IconButton" /* 7586 */;
-import MoreHorizontalIcon from "MoreHorizontalIcon" /* 7588 */;
+import ToastUtils from "ToastUtils" /* 4765 */;
+import IconButton from "IconButton" /* 8106 */;
+import MoreHorizontalIcon from "MoreHorizontalIcon" /* 9180 */;
+import ConversationsActionCreators from "ConversationsActionCreators" /* 9272 */;
+import ConversationsAnalytics2 from "ConversationsAnalytics" /* 9275 */;
+import ThumbsUpIcon from "ThumbsUpIcon" /* 9293 */;
+import ThumbsDownIcon from "ThumbsDownIcon" /* 9295 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ require = fn;
 let closure_2 = ["ref"];
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_12 } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -25,7 +25,7 @@ let obj3 = { paddingHorizontal: nativeDefault.space.PX_12 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conversations/components/native/ConversationNavigatorMoreMenu.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConversationNavigatorMoreMenu(channelId) {
   const cResult = channelId(conversationId[7]).c(16);
   channelId = channelId.channelId;
   conversationId = channelId.conversationId;
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
           let tmp11 = cResult[10];
         }
         if (cResult[11] !== tmp4.container) {
-          const fn = function f(ref) {
+          const fn = function y(ref) {
             const obj = { style: container.container, ref: ref.ref, children: null };
             const obj2 = {};
             const merged = Object.assign(_objectWithoutProperties(ref, container));
@@ -130,7 +130,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   cResult[3] = obj4;
   tmp7 = obj4;
   let obj = channelId(conversationId[7]);
-}) : ((channelId) => {
+}) : (function ConversationNavigatorMoreMenu(channelId) {
   channelId = channelId.channelId;
   const conversationId = channelId.conversationId;
   const container = closure_7();

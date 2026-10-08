@@ -1,19 +1,19 @@
-// === Module 11417: useTrackCreateGuildViewed ===
+// === Module 11400: useTrackCreateGuildViewed ===
 
-// Module 11417 (useTrackCreateGuildViewed)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+// Module 11400 (useTrackCreateGuildViewed)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const GuildTemplateStates = fn(6839).GuildTemplateStates;
+const GuildTemplateStates = fn(7021).GuildTemplateStates;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_templates/useTrackCreateGuildViewed.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useTrackCreateGuildViewed(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -25,7 +25,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   noop.useRef(first);
   if (cResult[1] !== arg0) {
-    const fn = function s() {
+    const fn = function _() {
       let tmp2 = null != closure_0;
       if (tmp2) {
         tmp2 = closure_0.state !== GuildTemplateStates.RESOLVING;
@@ -49,7 +49,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const effect = noop.useEffect(tmp3);
   let obj = require("c");
-}) : ((arg0) => {
+}) : (function useTrackCreateGuildViewed(arg0) {
   closure_0 = arg0;
   noop.useRef([]);
   const effect = noop.useEffect(() => {

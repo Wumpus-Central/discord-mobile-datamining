@@ -1,7 +1,7 @@
-// === Module 9785: useChannelSafeAreaHeightSharedValue ===
+// === Module 10349: useChannelSafeAreaHeightSharedValue ===
 
-// Module 9785 (useChannelSafeAreaHeightSharedValue)
-import KeyboardTypes from "KeyboardTypes" /* 1616 */;
+// Module 10349 (useChannelSafeAreaHeightSharedValue)
+import KeyboardTypes from "KeyboardTypes" /* 1628 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -11,7 +11,7 @@ let closure_3 = { code: "function useChannelSafeAreaHeightSharedValueAndroidTsx1
 let closure_4 = { code: "function useChannelSafeAreaHeightSharedValueAndroidTsx2(){const{chatInputSpaceBottom,keyboardOpenOrOpening,keyboardWillOpenSharedValue,keyboardOpenedHeight,insets,keyboardTypeSharedValue,KeyboardTypes,customKeyboardSheetHeightSV}=this.__closure;function resolveBottom(bottom){return Math.max(bottom,chatInputSpaceBottom);}if(keyboardOpenOrOpening.get()||keyboardWillOpenSharedValue.get()){const systemKeyboardHeight=keyboardOpenedHeight.get();if(systemKeyboardHeight<=0){return resolveBottom(insets.get().bottom);}return systemKeyboardHeight;}if(keyboardTypeSharedValue.get()===KeyboardTypes.SYSTEM){return resolveBottom(insets.get().bottom);}return customKeyboardSheetHeightSV.get();}" };
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/channel/useChannelSafeAreaHeightSharedValue.android.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useChannelSafeAreaHeightSharedValue() {
   const tmp = keyboardOpenOrOpening(keyboardOpenedHeight[1])();
   _require = tmp;
   const tmp2 = keyboardOpenOrOpening(keyboardOpenedHeight[2])();
@@ -52,7 +52,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   fn.__workletHash = 2306570198520;
   fn.__initData = keyboardTypeSharedValue;
   return obj6.useDerivedValue(fn);
-}) : (() => {
+}) : (function useChannelSafeAreaHeightSharedValue() {
   const tmp = keyboardOpenOrOpening(keyboardOpenedHeight[1])();
   _require = tmp;
   const tmp2 = keyboardOpenOrOpening(keyboardOpenedHeight[2])();

@@ -1,8 +1,8 @@
-// === Module 10034: VoiceChannelListInviteExperiment ===
+// === Module 9564: VoiceChannelListInviteExperiment ===
 
-// Module 10034 (VoiceChannelListInviteExperiment)
+// Module 9564 (VoiceChannelListInviteExperiment)
 import c from "c" /* 576 */;
-import createExperiment from "module_4780" /* 4780 */;
+import createExperiment from "module_4974" /* 4974 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/messages/VoiceChannelListInvi
 export const getVoiceChannelListInviteExperiment = function getVoiceChannelListInviteExperiment(guildId) {
   return closure_2.getCurrentConfig({ guildId: guildId.guildId, location: guildId.location });
 };
-export const useVoiceChannelListInviteExperiment = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useVoiceChannelListInviteExperiment = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoiceChannelListInviteExperiment(arg0) {
   const cResult = c.c(3);
   ({ guildId, location: _location } = arg0);
   if (cResult[0] === guildId) {
@@ -29,4 +29,6 @@ export const useVoiceChannelListInviteExperiment = ReactCompilerGating.isReactCo
   cResult[1] = _location;
   cResult[2] = obj2;
   tmp2 = obj2;
-}) : ((guildId) => closure_2.useExperiment({ guildId: guildId.guildId, location: guildId.location }));
+}) : (function useVoiceChannelListInviteExperiment(guildId) {
+  return closure_2.useExperiment({ guildId: guildId.guildId, location: guildId.location });
+});

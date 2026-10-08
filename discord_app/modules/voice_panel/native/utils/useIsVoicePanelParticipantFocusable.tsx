@@ -1,12 +1,12 @@
-// === Module 17328: useIsVoicePanelParticipantFocusable ===
+// === Module 17609: useIsVoicePanelParticipantFocusable ===
 
-// Module 17328 (useIsVoicePanelParticipantFocusable)
-import GlobalUtils from "GlobalUtils" /* 1375 */;
-import participantHasVideo from "participantHasVideo" /* 9154 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4918 */;
-import MediaEngineStore from "MediaEngineStore" /* 1999 */;
+// Module 17609 (useIsVoicePanelParticipantFocusable)
+import GlobalUtils from "GlobalUtils" /* 1387 */;
+import participantHasVideo from "participantHasVideo" /* 10720 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2062 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6041 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5893 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
 
 const require = globalThis.__r;
 
@@ -55,13 +55,13 @@ function isVoicePanelParticipantFocusable(guildId, channelId, id2) {
     }
   }
 }
-const CallConstants = fn(4917);
+const CallConstants = fn(5113);
 ({ isActivityParticipant: metroRequire, isStreamParticipant: closure_7, isUserParticipant: closure_8 } = CallConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/utils/useIsVoicePanelParticipantFocusable.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsVoicePanelParticipantFocusable(arg0, arg1, arg2) {
   _require = arg0;
   dependencyMap = arg1;
   closure_2 = arg2;
@@ -93,7 +93,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
   tmp9 = P;
   const obj = require("c");
   tmp = _require;
-}) : ((arg0, arg1, arg2) => {
+}) : (function useIsVoicePanelParticipantFocusable(arg0, arg1, arg2) {
   _require = arg0;
   dependencyMap = arg1;
   closure_2 = arg2;

@@ -1,21 +1,21 @@
-// === Module 6015: EmailVerificationModal ===
+// === Module 6201: EmailVerificationModal ===
 
-// Module 6015 (EmailVerificationModal)
+// Module 6201 (EmailVerificationModal)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
-import useInitialValueDefault from "useInitialValue" /* 5991 */;
-import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 6014 */;
-import NavigatorHeader from "NavigatorHeader" /* 6017 */;
-import ChangeEmailCollectReasonsDefault from "ChangeEmailCollectReasons" /* 6076 */;
-import ChangeEmailWarningDefault from "ChangeEmailWarning" /* 6084 */;
-import ConfirmEmailChangeCodeDefault from "ConfirmEmailChangeCode" /* 6102 */;
-import EnterEmailDefault from "EnterEmail" /* 6482 */;
-import Navigator from "Navigator" /* 6503 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1272 */;
+import useInitialValueDefault from "useInitialValue" /* 6174 */;
+import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 6200 */;
+import NavigatorHeader from "NavigatorHeader" /* 6203 */;
+import ChangeEmailCollectReasonsDefault from "ChangeEmailCollectReasons" /* 6262 */;
+import ChangeEmailWarningDefault from "ChangeEmailWarning" /* 6270 */;
+import ConfirmEmailChangeCodeDefault from "ConfirmEmailChangeCode" /* 6280 */;
+import EnterEmailDefault from "EnterEmail" /* 6660 */;
+import Navigator from "Navigator" /* 6679 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
@@ -106,14 +106,14 @@ function getScreens(initiallyVerified) {
   obj2[VerificationModalScenes.CHANGE_EMAIL_COMPLETE] = obj25;
   return obj2;
 }
-const resetChangeEmailStore = fn(6016).resetChangeEmailStore;
+const resetChangeEmailStore = fn(6202).resetChangeEmailStore;
 const VerificationModalScenes = fn(1085).VerificationModalScenes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/verification/native/components/EmailVerificationModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((isChangeEmail) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function EmailVerificationModal(isChangeEmail) {
   const cResult = c.c(10);
   isChangeEmail = isChangeEmail.isChangeEmail;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -199,7 +199,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((isChangeEmail) =
   cResult[5] = tmp14;
   tmp13 = tmp14;
   const tmp10 = _slicedToArray(noop.useState(), 2);
-}) : ((isChangeEmail) => {
+}) : (function EmailVerificationModal(isChangeEmail) {
   isChangeEmail = isChangeEmail.isChangeEmail;
   importDefault = undefined;
   changeEmailReason = undefined;

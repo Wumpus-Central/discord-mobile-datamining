@@ -1,16 +1,16 @@
-// === Module 11882: ChatInputActionButton ===
+// === Module 11954: ChatInputActionButton ===
 
-// Module 11882 (ChatInputActionButton)
+// Module 11954 (ChatInputActionButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4586 */;
-import Pressables from "Pressables" /* 5916 */;
+import useToken from "useToken" /* 4778 */;
+import Pressables from "Pressables" /* 6189 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles((height, marginHorizontal) => {
   const obj = { actionButton: null, actionButtonIcon: null, actionButtonIconActive: null, actionButtonIconDisabled: null };
   const size = { borderRadius: nativeDefault.radii.sm, height, width: height, marginHorizontal, flexShrink: 0, flexDirection: "row", alignItems: "center", justifyContent: "center" };
@@ -26,9 +26,9 @@ const ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/chat_input/native/action_buttons/ChatInputActionButton.tsx");
 
-export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, ref) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function Button(arg0) {
   const cResult = c.c(28);
-  ({ active, style, disabled, onPress, accessible, accessibilityLabel, accessibilityHint, accessibilityState, accessibilityActions, onAccessibilityAction, IconComponent } = arg0);
+  ({ active, style, disabled, onPress, accessible, accessibilityLabel, accessibilityHint, accessibilityState, accessibilityActions, onAccessibilityAction, IconComponent, ref } = arg0);
   let tmp4 = undefined !== active;
   ({ activeStyle, activeIconStyle } = arg0);
   if (tmp4) {
@@ -99,9 +99,9 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
                                   if (cResult[24] === tmp14) {
                                     if (cResult[25] === tmp15) {
                                       if (cResult[26] === tmp16) {
-                                        let tmp25 = cResult[27];
+                                        let tmp24 = cResult[27];
                                       }
-                                      return tmp25;
+                                      return tmp24;
                                     }
                                   }
                                 }
@@ -114,7 +114,7 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
                   }
                 }
                 const obj2 = { ref, style: tmp14, hitSlop: tmp15, disabled, accessible, accessibilityRole: "button", accessibilityState: tmp16, accessibilityLabel, accessibilityHint, accessibilityActions, onAccessibilityAction, onPress, children: tmp21 };
-                const tmp27 = jsx(Pressables.PressableOpacity, { ref, style: tmp14, hitSlop: tmp15, disabled, accessible, accessibilityRole: "button", accessibilityState: tmp16, accessibilityLabel, accessibilityHint, accessibilityActions, onAccessibilityAction, onPress, children: tmp21 });
+                const tmp26 = jsx(Pressables.PressableOpacity, { ref, style: tmp14, hitSlop: tmp15, disabled, accessible, accessibilityRole: "button", accessibilityState: tmp16, accessibilityLabel, accessibilityHint, accessibilityActions, onAccessibilityAction, onPress, children: tmp21 });
                 cResult[15] = accessibilityActions;
                 cResult[16] = accessibilityHint;
                 cResult[17] = accessibilityLabel;
@@ -127,8 +127,8 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
                 cResult[24] = tmp14;
                 cResult[25] = tmp15;
                 cResult[26] = tmp16;
-                cResult[27] = tmp27;
-                tmp25 = tmp27;
+                cResult[27] = tmp26;
+                tmp24 = tmp26;
               }
               const obj3 = { size: "custom", style: tmp20 };
               const tmp23 = <IconComponent size="custom" style={tmp20} />;
@@ -162,12 +162,12 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
   cResult[3] = items1;
   tmp14 = items1;
   const tmpResult4 = useToken;
-}) : ((active, ref) => {
+}) : (function Button(active) {
   let flag = active.active;
   if (flag === undefined) {
     flag = false;
   }
-  ({ style, disabled, accessibilityState, activeStyle, activeIconStyle, onPress, accessible, accessibilityLabel, accessibilityHint, accessibilityActions, onAccessibilityAction, IconComponent } = active);
+  ({ style, disabled, accessibilityState, activeStyle, activeIconStyle, onPress, accessible, accessibilityLabel, accessibilityHint, accessibilityActions, onAccessibilityAction, IconComponent, ref } = active);
   const token = useToken.useToken(nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
   const token1 = useToken.useToken(nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
   const token2 = useToken.useToken(nativeDefault.modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
@@ -223,4 +223,4 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
   items1[3] = disabled;
   obj4.children = <IconComponent size="custom" style={items1} />;
   return jsx(Pressables.PressableOpacity, { ref, style: null, hitSlop: null, disabled: null, accessible: null, accessibilityRole: "button", accessibilityState: null, accessibilityLabel: null, accessibilityHint: null, accessibilityActions: null, onAccessibilityAction: null, onPress: null, children: null });
-})));
+}));

@@ -1,14 +1,14 @@
-// === Module 11720: Timestamp ===
+// === Module 11785: Timestamp ===
 
-// Module 11720 (Timestamp)
+// Module 11785 (Timestamp)
 import nativeDefault from "native" /* 587 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4574 */;
-import useFormattedTimestampDefault from "useFormattedTimestamp" /* 11721 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4766 */;
+import useFormattedTimestampDefault from "useFormattedTimestamp" /* 11786 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 const obj2 = { timestamp: { color: nativeDefault.colors.TEXT_DEFAULT, backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
 let closure_4 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -16,7 +16,7 @@ const obj3 = { color: nativeDefault.colors.TEXT_DEFAULT, backgroundColor: native
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/markup/Timestamp.native.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((node) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function Timestamp(node) {
   const cResult = node(576).c(6);
   node = node.node;
   const obj = node(576);
@@ -44,14 +44,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((node) => {
       return tmp7;
     }
   }
-  const tmp8 = jsx(tmp(1188).LegacyText, { style, onPress: tmp6, children: tmp5 });
+  const tmp8 = jsx(tmp(1200).LegacyText, { style, onPress: tmp6, children: tmp5 });
   cResult[2] = tmp5;
   cResult[3] = style;
   cResult[4] = tmp6;
   cResult[5] = tmp8;
   tmp7 = tmp8;
   const tmp4 = closure_4();
-}) : ((node) => {
+}) : (function Timestamp(node) {
   node = node.node;
   const tmp = closure_4();
   let style = tmp.timestamp;
@@ -59,7 +59,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((node) => {
     style = node.style;
   }
   const tmp2 = useFormattedTimestampDefault(node);
-  return jsx(node(1188).LegacyText, {
+  return jsx(node(1200).LegacyText, {
     style,
     onPress() {
       ToastActionCreatorsDefault.open({ key: "TIMESTAMP", content: node.full });

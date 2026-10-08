@@ -1,12 +1,12 @@
-// === Module 12309: ApplicationIconAndName ===
+// === Module 12407: ApplicationIconAndName ===
 
-// Module 12309 (ApplicationIconAndName)
+// Module 12407 (ApplicationIconAndName)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 4892 */;
+import native from "native" /* 1200 */;
+import Text_Text from "Text/Text" /* 5086 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
+import createStyles from "createStyles" /* 5090 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -19,7 +19,7 @@ let closure_6 = createStyles.createStyles((width) => {
 });
 const result = size.fileFinishedImporting("modules/user_profile/native/ApplicationIconAndName.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ApplicationIconAndName(arg0) {
   const cResult = c.c(15);
   ({ application, textVariant, iconSize, useComma } = arg0);
   const tmp5 = closure_6(iconSize);
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = str;
   tmp6 = str;
   tmp4 = undefined !== useComma && useComma;
-}) : ((textVariant) => {
+}) : (function ApplicationIconAndName(textVariant) {
   ({ application, iconSize, useComma } = textVariant);
   if (useComma === undefined) {
     useComma = false;

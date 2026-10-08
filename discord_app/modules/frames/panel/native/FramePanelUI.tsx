@@ -1,18 +1,18 @@
-// === Module 17224: FramePanelUI ===
+// === Module 17505: FramePanelUI ===
 
-// Module 17224 (FramePanelUI)
+// Module 17505 (FramePanelUI)
 import c from "c" /* 576 */;
-import ActivityPanelUI from "ActivityPanelUI" /* 17198 */;
-import FramePanelStateContextDefault from "FramePanelStateContext" /* 17223 */;
-import FramePanelSystemUIManagerDefault from "FramePanelSystemUIManager" /* 17229 */;
+import ActivityPanelUI from "ActivityPanelUI" /* 17479 */;
+import FramePanelStateContextDefault from "FramePanelStateContext" /* 17504 */;
+import FramePanelSystemUIManagerDefault from "FramePanelSystemUIManager" /* 17510 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function renderActivityOrPIP(id, arg1, transitionState, transitionCleanUp) {
   if ("pip" === arg1) {
-    let tmp4 = 17225;
+    let tmp4 = 17506;
   } else {
-    tmp4 = 17226;
+    tmp4 = 17507;
   }
   return jsx(importDefault(tmp4), { transitionState, transitionCleanUp }, id);
 }
@@ -21,7 +21,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/panel/native/FramePanelUI.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FramePanelUI() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function t() {
@@ -41,7 +41,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp5 = cResult[1];
   }
   return tmp5;
-}) : (() => {
+}) : (function FramePanelUI() {
   const renderActivityPanelSystemUIManager = noop.useCallback(() => jsx(FramePanelSystemUIManagerDefault, {}), []);
   const items = [renderActivityPanelSystemUIManager];
   return noop.useMemo(() => jsx(ActivityPanelUI.BaseActivityPanelUI, { renderActivityOrPIP, context: FramePanelStateContextDefault, renderActivityPanelSystemUIManager }), items);

@@ -1,6 +1,6 @@
-// === Module 16785: ConjureTraceDetail ===
+// === Module 17060: ConjureTraceDetail ===
 
-// Module 16785 (ConjureTraceDetail)
+// Module 17060 (ConjureTraceDetail)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;

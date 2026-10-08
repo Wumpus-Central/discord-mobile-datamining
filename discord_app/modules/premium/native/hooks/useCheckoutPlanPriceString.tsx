@@ -1,20 +1,20 @@
-// === Module 13162: useCheckoutPlanPriceString ===
+// === Module 13462: useCheckoutPlanPriceString ===
 
-// Module 13162 (useCheckoutPlanPriceString)
+// Module 13462 (useCheckoutPlanPriceString)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
-const PlatformUtils = obj(1369);
-const PremiumBundledPlansUtils = obj(6925);
+const PlatformUtils = obj(1381);
+const PremiumBundledPlansUtils = obj(7114);
 require = fn;
-const useNativeCheckoutStore = fn(6943).useNativeCheckoutStore;
+const useNativeCheckoutStore = fn(7132).useNativeCheckoutStore;
 let ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((productId) => {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCheckoutPlan(productId) {
   let obj = require;
   let availablePlanForItems = dependencyMap;
   const cResult = c.c(10);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function u(orderRequired) {
+    const fn = function t(orderRequired) {
       return orderRequired.orderRequired;
     };
     cResult[0] = fn;
@@ -69,7 +69,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((productId) => {
   cResult[8] = tmp7;
   cResult[9] = obj3;
   tmp13 = obj3;
-}) : ((arg0) => {
+}) : (function useCheckoutPlan(arg0) {
   _require = arg0;
   const tmp2 = useNativeCheckoutStore((getCheckoutContextRecord) => getCheckoutContextRecord.getCheckoutContextRecord());
   dependencyMap = tmp2;
@@ -96,7 +96,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((productId) => {
 let closure_4 = tmp2;
 fn(558);
 ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCheckoutPlanDiscountPrices(arg0, arg1) {
   const cResult = c.c(10);
   const tmp2 = closure_4(arg0);
   const plan = tmp2.plan;
@@ -150,7 +150,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     }
   }
   return tmp3;
-}) : ((arg0, discountedPriceString) => {
+}) : (function useCheckoutPlanDiscountPrices(arg0, discountedPriceString) {
   const tmp = closure_4(arg0);
   const plan = tmp.plan;
   const useOrderPricing = tmp.useOrderPricing;
@@ -188,7 +188,7 @@ const result = size.fileFinishedImporting("modules/premium/native/hooks/useCheck
 
 export const useCheckoutPlan = tmp2;
 export const useCheckoutPlanDiscountPrices = tmp3;
-export const useCheckoutPlanPriceString = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, priceString) => {
+export const useCheckoutPlanPriceString = ReactCompilerGating.isReactCompilerEnabled() ? (function useCheckoutPlanPriceString(arg0, priceString) {
   const cResult = c.c(2);
   priceString = undefined;
   if (priceString != null) {
@@ -212,7 +212,7 @@ export const useCheckoutPlanPriceString = ReactCompilerGating.isReactCompilerEna
     cResult[0] = plan;
     cResult[1] = priceString1;
   }
-}) : ((arg0, priceString) => {
+}) : (function useCheckoutPlanPriceString(arg0, priceString) {
   priceString = undefined;
   if (priceString != null) {
     priceString = priceString.priceString;

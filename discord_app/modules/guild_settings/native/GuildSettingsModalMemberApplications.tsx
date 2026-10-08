@@ -1,15 +1,15 @@
-// === Module 16574: GuildSettingsModalMemberApplications ===
+// === Module 16829: GuildSettingsModalMemberApplications ===
 
-// Module 16574 (GuildSettingsModalMemberApplications)
+// Module 16829 (GuildSettingsModalMemberApplications)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4708 */;
-import UserUtilsDefault from "UserUtils" /* 4728 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 16575 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4902 */;
+import UserUtilsDefault from "UserUtils" /* 4922 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 16830 */;
 import noop from "module_19" /* 19 */;
-import GuildJoinRequestStore from "GuildJoinRequestStore" /* 5939 */;
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6122 */;
 
 const require = globalThis.__r;
 
@@ -18,13 +18,13 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { containerInner: { paddingHorizontal: nativeDefault.space.PX_12, flex: 1, marginTop: 16 }, spinnerContainer: { padding: 32 }, footerSpinner: { paddingVertical: 16 }, spinner: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_12, flex: 1, marginTop: 16 };
 obj.spinner = { color: nativeDefault.colors.TEXT_BRAND };
 let closure_10 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
-const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
+const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function MemberApplicationUser(user) {
   const cResult = c.c(10);
   user = user.user;
   if (cResult[0] !== user) {
@@ -76,7 +76,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((us
   cResult[5] = user;
   cResult[6] = tmp11;
   tmp10 = tmp11;
-}) : ((user) => {
+}) : (function MemberApplicationUser(user) {
   user = user.user;
   const globalName = UserUtilsDefault.getGlobalName(user);
   let username = globalName;
@@ -93,7 +93,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((us
   return closure_1_8(hasOwnProperty, { children });
 }));
 ReactCompilerGating = fn(558);
-let closure_12 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((joinRequest) => {
+let closure_12 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSettingsModalMemberApplication(joinRequest) {
   const cResult = joinRequest(576).c(14);
   joinRequest = joinRequest.joinRequest;
   ({ start, end } = joinRequest);
@@ -126,8 +126,8 @@ let closure_12 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((join
         tmp5 = cResult[3];
       }
       if (cResult[4] !== tmp5) {
-        const obj3 = { source: tmp5, size: tmp(1188).AvatarSizes.SMALL };
-        const tmp10 = closure_7(tmp(1188).Avatar, obj3);
+        const obj3 = { source: tmp5, size: tmp(1200).AvatarSizes.SMALL };
+        const tmp10 = closure_7(tmp(1200).Avatar, obj3);
         cResult[4] = tmp5;
         cResult[5] = tmp10;
         let tmp8 = tmp10;
@@ -156,7 +156,7 @@ let closure_12 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((join
         }
       }
       const obj5 = { arrow: true, icon: tmp8, label: tmp11, onPress: tmp4, start, end };
-      const tmp17 = closure_7(tmp(6000).TableRow, obj5);
+      const tmp17 = closure_7(tmp(6184).TableRow, obj5);
       cResult[8] = end;
       cResult[9] = tmp4;
       cResult[10] = start;
@@ -167,7 +167,7 @@ let closure_12 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((join
     }
   }
   const obj = joinRequest(576);
-}) : ((joinRequest) => {
+}) : (function GuildSettingsModalMemberApplication(joinRequest) {
   joinRequest = joinRequest.joinRequest;
   [][0] = joinRequest;
   ({ start, end } = joinRequest);
@@ -183,14 +183,14 @@ let closure_12 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((join
         userAvatarSource = AvatarUtilsDefault.getUserAvatarSource(user);
       }
       const obj2 = { arrow: true, icon: null, label: null, onPress: null, start: null, end: null };
-      const obj3 = { source: userAvatarSource, size: joinRequest(1188).AvatarSizes.SMALL };
-      obj2.icon = closure_7(joinRequest(1188).Avatar, obj3);
+      const obj3 = { source: userAvatarSource, size: joinRequest(1200).AvatarSizes.SMALL };
+      obj2.icon = closure_7(joinRequest(1200).Avatar, obj3);
       const obj4 = { user };
       obj2.label = closure_7(closure_11, obj4);
       obj2.onPress = tmp;
       obj2.start = start;
       obj2.end = end;
-      return closure_7(joinRequest(6000).TableRow, obj2);
+      return closure_7(joinRequest(6184).TableRow, obj2);
     }
   }
 }));
@@ -199,7 +199,7 @@ let obj4 = { color: nativeDefault.colors.TEXT_BRAND };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalMemberApplications.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSettingsModalMemberApplications(arg0) {
   const cResult = applicationStatus(guildJoinRequests[7]).c(43);
   ({ guildId, applicationStatus } = arg0);
   const tmp4 = closure_10();
@@ -218,14 +218,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
       const _Symbol = Symbol;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildJoinRequestStore];
-        class T {
-          constructor() {
-            return closure_1_6.isFetching();
-          }
-        }
+        const fn = function y() {
+          return fetching.isFetching();
+        };
         cResult[6] = items;
-        cResult[7] = T;
-        let tmp9 = T;
+        cResult[7] = fn;
+        let tmp9 = fn;
         let tmp8 = items;
       } else {
         tmp8 = cResult[6];
@@ -244,89 +242,76 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
             let tmp14 = cResult[14];
           }
           const effect = fetchNextPage.useEffect(tmp13, tmp14);
-          class M {
-            constructor() {
-              if (0 === guildJoinRequests.length) {
-                tmp = closure_5;
-                tmp2 = closure_5();
+          if (cResult[15] !== guildJoinRequests.length) {
+            class J {
+              constructor(arg0) {
+                index = arg0.index;
+                obj = { joinRequest: arg0.item, start: 0 === index, end: index === guildJoinRequests.length - 1 };
+                return jsx(closure_12, obj);
               }
-              return;
+            }
+            cResult[15] = guildJoinRequests.length;
+            cResult[16] = J;
+          } else {
+            class J {
+              constructor(arg0) {
+                index = arg0.index;
+                obj = { joinRequest: arg0.item, start: 0 === index, end: index === guildJoinRequests.length - 1 };
+                return jsx(closure_12, obj);
+              }
             }
           }
           const _Symbol2 = Symbol;
           if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
-            class D {
+            class F {
               constructor(arg0) {
                 return arg0.joinRequestId;
               }
             }
-            cResult[17] = D;
-            class M {
-              constructor() {
-                if (0 === guildJoinRequests.length) {
-                  tmp = closure_5;
-                  tmp2 = closure_5();
-                }
-                return;
-              }
-            }
+            cResult[17] = F;
           } else {
-            class D {
+            class F {
               constructor(arg0) {
                 return arg0.joinRequestId;
               }
             }
           }
           if (stateFromStores) {
-            class D {
+            class F {
               constructor(arg0) {
                 return arg0.joinRequestId;
               }
             }
             if (0 === guildJoinRequests.length) {
-              class D {
+              class F {
                 constructor(arg0) {
                   return arg0.joinRequestId;
                 }
               }
               if (cResult[20] === tmp4.spinnerContainer) {
-                class D {
+                class F {
                   constructor(arg0) {
                     return arg0.joinRequestId;
                   }
                 }
-                return tmp19;
+                return tmp21;
               }
-              class M {
-                constructor() {
-                  if (0 === guildJoinRequests.length) {
-                    tmp = closure_5;
-                    tmp2 = closure_5();
-                  }
-                  return;
-                }
-              }
-              let obj2 = { style: tmp4.spinnerContainer, children: tmp18 };
+              let obj2 = { style: tmp4.spinnerContainer, children: tmp20 };
+              const tmp24 = closure_7(closure_5, obj2);
               cResult[20] = tmp4.spinnerContainer;
-              cResult[21] = tmp18;
-              class C {
-                constructor() {
-                  tmp = fetchNextPage(closure_0(closure_2[15]).GuildJoinRequestSortOrders.TIMESTAMP_DESC, applicationStatus);
-                  return;
-                }
-              }
-              const tmp21 = closure_7(closure_5, obj2);
-              tmp19 = closure_7(closure_5, obj2);
+              cResult[21] = tmp20;
+              cResult[22] = tmp24;
+              tmp21 = tmp24;
             }
           }
           if (cResult[23] === stateFromStores) {
-            class D {
+            class F {
               constructor(arg0) {
                 return arg0.joinRequestId;
               }
             }
           }
-          const fn = function w() {
+          function renderFooter() {
             let tmp = null;
             if (stateFromStores) {
               const obj = { style: closure_1.footerSpinner, children: null };
@@ -335,55 +320,38 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
               tmp = React5(hasOwnProperty, obj);
             }
             return tmp;
-          };
+          }
           cResult[23] = stateFromStores;
-          class C {
-            constructor() {
-              tmp = fetchNextPage(closure_0(closure_2[15]).GuildJoinRequestSortOrders.TIMESTAMP_DESC, applicationStatus);
-              return;
-            }
-          }
+          cResult[24] = tmp4.footerSpinner;
           cResult[25] = tmp4.spinner;
-          cResult[26] = fn;
+          cResult[26] = renderFooter;
         }
-        class M {
-          constructor() {
-            if (0 === guildJoinRequests.length) {
-              tmp = closure_5;
-              tmp2 = closure_5();
-            }
-            return;
+        const fn3 = function x() {
+          if (0 === guildJoinRequests.length) {
+            closure_5();
           }
-        }
+        };
         const items1 = [tmp12, guildJoinRequests.length];
         cResult[11] = tmp12;
         cResult[12] = guildJoinRequests.length;
-        cResult[13] = M;
-        class C {
-          constructor() {
-            tmp = fetchNextPage(closure_0(closure_2[15]).GuildJoinRequestSortOrders.TIMESTAMP_DESC, applicationStatus);
-            return;
-          }
-        }
+        cResult[13] = fn3;
         cResult[14] = items1;
         tmp14 = items1;
-        tmp13 = M;
+        tmp13 = fn3;
       }
-      class C {
-        constructor() {
-          tmp = fetchNextPage(closure_0(closure_2[15]).GuildJoinRequestSortOrders.TIMESTAMP_DESC, applicationStatus);
-          return;
-        }
-      }
+      const fn2 = function q() {
+        fetchNextPage(MemberVerificationTypes.GuildJoinRequestSortOrders.TIMESTAMP_DESC, applicationStatus);
+      };
       cResult[8] = applicationStatus;
       cResult[9] = fetchNextPage;
-      cResult[10] = C;
-      tmp12 = C;
+      cResult[10] = fn2;
+      tmp12 = fn2;
       const tmpResult4 = applicationStatus(tmp2[18]);
     }
     const obj3 = { guildId, guildJoinRequests };
     cResult[3] = guildId;
     cResult[4] = guildJoinRequests;
+    cResult[5] = obj3;
     tmp6 = obj3;
     const tmpResult = applicationStatus(tmp2[16]);
   }
@@ -393,7 +361,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   cResult[2] = obj4;
   tmp5 = obj4;
   let obj = applicationStatus(guildJoinRequests[7]);
-}) : ((arg0) => {
+}) : (function GuildSettingsModalMemberApplications(arg0) {
   ({ guildId, applicationStatus } = arg0);
   let guildJoinRequests;
   let tmp = closure_10();
@@ -446,7 +414,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
     const obj9 = { paddingBottom: require("useSafeAreaInsets")().bottom + tmp2(tmp3[5]).space.PX_16 };
     obj8.contentContainerStyle = obj9;
     obj8.onEndReached = onEndReached;
-    obj8.ListFooterComponent = function ListFooterComponent() {
+    obj8.ListFooterComponent = function renderFooter() {
       let tmp = null;
       if (stateFromStores) {
         const obj = { style: closure_1.footerSpinner, children: null };

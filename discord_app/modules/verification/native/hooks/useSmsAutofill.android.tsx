@@ -1,6 +1,6 @@
-// === Module 6583: useSmsAutofill ===
+// === Module 6759: useSmsAutofill ===
 
-// Module 6583 (useSmsAutofill)
+// Module 6759 (useSmsAutofill)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/verification/native/hooks/useSmsAutofill.android.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSmsAutofill(arg0) {
   _require = arg0;
   const cResult = require("c").c(5);
   if (cResult[0] !== arg0) {
@@ -28,7 +28,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   dependencyMap = tmp2;
   if (cResult[2] !== tmp2) {
-    const fn2 = function c() {
+    const fn2 = function l() {
       closure_0 = nativeEventEmitter.addListener("verificationCodeReceived", closure_1);
       SmsAutofillManager.startSmsRetriever();
       return () => {
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp4 = cResult[4];
   }
   return noop.useEffect(tmp3, tmp4);
-}) : ((arg0) => {
+}) : (function useSmsAutofill(arg0) {
   closure_0 = arg0;
   const items = [arg0];
   const callback = noop.useCallback((code) => closure_0(code.code), items);

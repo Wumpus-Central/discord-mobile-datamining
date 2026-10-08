@@ -1,8 +1,8 @@
-// === Module 17528: SearchResultsFeedbackExperiment ===
+// === Module 17810: SearchResultsFeedbackExperiment ===
 
-// Module 17528 (SearchResultsFeedbackExperiment)
+// Module 17810 (SearchResultsFeedbackExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1440 */;
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -13,7 +13,7 @@ obj.variations = obj2;
 let closure_2 = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/search/experiments/SearchResultsFeedbackExperiment.tsx");
 
-export const useIsSearchResultsFeedbackExperimentEnabled = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+export const useIsSearchResultsFeedbackExperimentEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsSearchResultsFeedbackExperimentEnabled(location) {
   const cResult = c.c(2);
   const _location = location.location;
   if (cResult[0] !== _location) {
@@ -25,7 +25,9 @@ export const useIsSearchResultsFeedbackExperimentEnabled = ReactCompilerGating.i
     tmp2 = cResult[1];
   }
   return closure_2.useConfig(tmp2).enabled;
-}) : ((location) => closure_2.useConfig({ location: location.location }).enabled);
+}) : (function useIsSearchResultsFeedbackExperimentEnabled(location) {
+  return closure_2.useConfig({ location: location.location }).enabled;
+});
 export const getIsSearchResultsFeedbackExperimentEnabled = function getIsSearchResultsFeedbackExperimentEnabled(location) {
   return closure_2.getConfig({ location: location.location }).enabled;
 };

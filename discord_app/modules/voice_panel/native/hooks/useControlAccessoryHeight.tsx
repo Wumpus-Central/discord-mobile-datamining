@@ -1,7 +1,7 @@
-// === Module 17377: useControlAccessoryHeight ===
+// === Module 17659: useControlAccessoryHeight ===
 
-// Module 17377 (useControlAccessoryHeight)
-import VoicePanelConsoleStatus from "VoicePanelConsoleStatus" /* 17350 */;
+// Module 17659 (useControlAccessoryHeight)
+import VoicePanelConsoleStatus from "VoicePanelConsoleStatus" /* 17631 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useControlAccessoryHeight.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useControlAccessoryHeight() {
   const cResult = isConnectingOrConnectedToConsole(shouldShowFloatingCTA[2]).c(9);
   const channelId = sharedValue1.useContext(sharedValue(shouldShowFloatingCTA[3])).channelId;
   isConnectingOrConnectedToConsole = sharedValue(shouldShowFloatingCTA[4])(channelId).isConnectingOrConnectedToConsole;
@@ -54,24 +54,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       S.__initData = __initData;
       return tmp(tmp2[5]).useDerivedValue(S);
     }
-    class H {
-      constructor() {
-        num = 0;
-        tmp = closure_3;
-        if (closure_2) {
-          num = closure_4;
-        }
-        result = closure_3.set(num);
-        return;
+    const fn2 = function f() {
+      let num = 0;
+      if (shouldShowFloatingCTA) {
+        num = closure_4;
       }
-    }
+      const result = sharedValue1.set(num);
+    };
     const items = [sharedValue1, shouldShowFloatingCTA, tmp11];
     cResult[5] = sharedValue1;
     cResult[6] = shouldShowFloatingCTA;
-    cResult[7] = H;
+    cResult[7] = fn2;
     cResult[8] = items;
     tmp14 = items;
-    tmp13 = H;
+    tmp13 = fn2;
     const tmpResult4 = tmp(tmp2[5]);
   }
   const fn = function s() {
@@ -88,7 +84,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[3] = items1;
   tmp6 = items1;
   tmp5 = fn;
-}) : (() => {
+}) : (function useControlAccessoryHeight() {
   const channelId = sharedValue1.useContext(sharedValue(shouldShowFloatingCTA[3])).channelId;
   const isConnectingOrConnectedToConsole = sharedValue(shouldShowFloatingCTA[4])(channelId).isConnectingOrConnectedToConsole;
   sharedValue = isConnectingOrConnectedToConsole(shouldShowFloatingCTA[5]).useSharedValue(0);

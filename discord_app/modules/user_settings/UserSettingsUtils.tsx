@@ -1,11 +1,11 @@
-// === Module 1233: user_settings/UserSettingsUtils ===
+// === Module 1245: user_settings/UserSettingsUtils ===
 
-// Module 1233 (user_settings/UserSettingsUtils)
+// Module 1245 (user_settings/UserSettingsUtils)
 import _modDef12 from "module_12" /* 12 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
-import user_settings_shared from "user_settings_shared" /* 1226 */;
-import frecency_user_settings from "frecency_user_settings" /* 1232 */;
-import ProtoUtils from "ProtoUtils" /* 1234 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1209 */;
+import user_settings_shared from "user_settings_shared" /* 1238 */;
+import frecency_user_settings from "frecency_user_settings" /* 1244 */;
+import ProtoUtils from "ProtoUtils" /* 1246 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -24,7 +24,7 @@ function b64ToProto(arg0, arg1) {
   }
 }
 const ZERO_STRING_GUILD_ID = fn(1085).ZERO_STRING_GUILD_ID;
-let obj = { [PRELOADED_USER_SETTINGS]: fn(1197).PreloadedUserSettings, [FRECENCY_AND_FAVORITES_SETTINGS]: fn(1232).FrecencyUserSettings };
+let obj = { [PRELOADED_USER_SETTINGS]: fn(1209).PreloadedUserSettings, [FRECENCY_AND_FAVORITES_SETTINGS]: fn(1244).FrecencyUserSettings };
 ({ PRELOADED_USER_SETTINGS, FRECENCY_AND_FAVORITES_SETTINGS } = fn(1095).UserSettingsTypes);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/UserSettingsUtils.tsx");

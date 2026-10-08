@@ -1,9 +1,9 @@
-// === Module 11779: useLaunchingActivityButtonState ===
+// === Module 11846: useLaunchingActivityButtonState ===
 
-// Module 11779 (useLaunchingActivityButtonState)
+// Module 11846 (useLaunchingActivityButtonState)
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
-import FramesStore from "FramesStore" /* 9000 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2062 */;
+import FramesStore from "FramesStore" /* 10612 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/utils/useLaunchingActivityButtonState.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((applicationId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useLaunchingActivityButtonState(applicationId) {
   const cResult = applicationId(onSubmissionComplete[4]).c(16);
   applicationId = applicationId.applicationId;
   const context = applicationId.context;
@@ -93,29 +93,33 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((applicationId) =
           tmp22 = obj3;
         }
       }
-      const fn3 = function _() {
-        let tmp = !stateFromStores1;
-        if (!stateFromStores1) {
-          tmp = closure_4;
-        }
-        if (tmp) {
-          if (onSubmissionComplete != null) {
-            tmp2();
+      class I {
+        constructor() {
+          tmp = !closure_3;
+          if (!closure_3) {
+            tmp = closure_4;
           }
+          if (tmp) {
+            tmp3 = null;
+            if (onSubmissionComplete != null) {
+              tmp2Result = tmp2();
+            }
+          }
+          return;
         }
-      };
+      }
       const items2 = [stateFromStores1, tmp16, onSubmissionComplete];
       cResult[8] = onSubmissionComplete;
       cResult[9] = stateFromStores1;
       cResult[10] = tmp16;
-      cResult[11] = fn3;
+      cResult[11] = I;
       cResult[12] = items2;
       tmp18 = items2;
-      tmp17 = fn3;
+      tmp17 = I;
       const tmpResult3 = tmp(tmp2[6]);
     }
   }
-  const fn = function u() {
+  const fn = function l() {
     let id;
     if ("channel" === context.type) {
       id = context.channel.id;
@@ -128,7 +132,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((applicationId) =
   cResult[4] = fn;
   tmp7 = fn;
   const obj2 = applicationId(onSubmissionComplete[5]);
-}) : ((applicationId) => {
+}) : (function useLaunchingActivityButtonState(applicationId) {
   applicationId = applicationId.applicationId;
   ({ context: importDefault, onSubmissionComplete } = applicationId);
   closure_4 = undefined;

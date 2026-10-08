@@ -1,26 +1,28 @@
-// === Module 12811: GuildInviteActionSheet ===
+// === Module 12958: GuildInviteActionSheet ===
 
-// Module 12811 (GuildInviteActionSheet)
+// Module 12958 (GuildInviteActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import SearchField from "SearchField" /* 6554 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6651 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6652 */;
-import InstantInviteUtilsDefault from "InstantInviteUtils" /* 9496 */;
-import _modDef12812 from "module_12812" /* 12812 */;
-import _modDef12813 from "module_12813" /* 12813 */;
-import GuildInviteRowDefault from "GuildInviteRow" /* 12814 */;
+import native from "native" /* 1200 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import SearchField from "SearchField" /* 6730 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6828 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6829 */;
+import InstantInviteUtilsDefault from "InstantInviteUtils" /* 8660 */;
+import _modDef12959 from "module_12959" /* 12959 */;
+import _modDef12960 from "module_12960" /* 12960 */;
+import GuildInviteRowDefault from "GuildInviteRow" /* 12961 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { content: { paddingHorizontal: nativeDefault.space.PX_16 }, searchbarWrapper: null, sectionTitle: null, emptyStateContainer: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.searchbarWrapper = { rowGap: 8, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
@@ -29,7 +31,7 @@ obj2.sectionTitle = { paddingBottom: 6, paddingTop: 24, backgroundColor: nativeD
 obj2.emptyStateContainer = { margin: 24 };
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-const ListEmptyComponent = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const ListEmptyComponent = ReactCompilerGating.isReactCompilerEnabled() ? (function EmptyGuildList() {
   const cResult = c.c(4);
   const tmp4 = closure_8();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -45,7 +47,7 @@ const ListEmptyComponent = ReactCompilerGating.isReactCompilerEnabled() ? (() =>
     [tmp5, tmp6] = cResult;
   }
   if (cResult[2] !== tmp4.emptyStateContainer) {
-    const obj2 = { containerStyle: tmp4.emptyStateContainer, title: tmp5, body: tmp6, darkSource: _modDef12812, lightSource: _modDef12813 };
+    const obj2 = { containerStyle: tmp4.emptyStateContainer, title: tmp5, body: tmp6, darkSource: _modDef12959, lightSource: _modDef12960 };
     const tmp12 = timestampProducer(native.ThemedEmptyState, obj2);
     cResult[2] = tmp4.emptyStateContainer;
     cResult[3] = tmp12;
@@ -54,18 +56,18 @@ const ListEmptyComponent = ReactCompilerGating.isReactCompilerEnabled() ? (() =>
     tmp9 = cResult[3];
   }
   return tmp9;
-}) : (() => {
+}) : (function EmptyGuildList() {
   const obj = { containerStyle: closure_8().emptyStateContainer, title: null, body: null, darkSource: null, lightSource: null };
   const intl = util.intl;
   obj.title = intl.string(util.t["2bfiLk"]);
   const intl2 = util.intl;
   obj.body = intl2.string(util.t.V6nAfF);
-  obj.darkSource = _modDef12812;
-  obj.lightSource = _modDef12813;
+  obj.darkSource = _modDef12959;
+  obj.lightSource = _modDef12960;
   return timestampProducer(native.ThemedEmptyState, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((recipientId) => {
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildList(recipientId) {
   const cResult = recipientId(576).c(21);
   recipientId = recipientId.recipientId;
   const source = recipientId.source;
@@ -73,250 +75,160 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((recipientId) =
   dependencyMap = tmp4;
   let obj = recipientId(576);
   let num = 2;
-  const obj2 = recipientId(12809);
-  [arr, arr2] = recipientId(12809).useServerInviteRows(recipientId, recipientId.query);
+  const obj2 = recipientId(12956);
+  [arr, arr2] = recipientId(12956).useServerInviteRows(recipientId, recipientId.query);
   if (cResult[0] === (0 === arr.length && 0 === arr2.length)) {
     if (cResult[1] === arr) {
       if (cResult[2] === arr2) {
         if (cResult[4] === recipientId) {
           if (cResult[5] === source) {
-            let tmp10 = cResult[6];
+            let tmp9 = cResult[6];
           }
           if (cResult[7] !== tmp4) {
-            class E {
-              constructor(arg0) {
-                tmp = null;
-                if (recipientId.data.length > 0) {
-                  tmp2 = jsx;
-                  tmp3 = closure_0;
-                  tmp4 = closure_2;
-                  obj = { style: null, variant: "text-sm/semibold", color: "text-default", children: null };
-                  tmp5 = closure_2;
-                  obj.style = closure_2.sectionTitle;
-                  obj.children = recipientId.title;
-                  tmp = jsx(closure_0(closure_2[14]).Text, obj);
-                }
-                return tmp;
+            function renderSectionHeader(data) {
+              let tmp = null;
+              if (data.data.length > 0) {
+                const obj = { style: sectionTitle.sectionTitle, variant: "text-sm/semibold", color: "text-default", children: data.title };
+                tmp = timestampProducer(Text_Text.Text, obj);
               }
+              return tmp;
             }
-            class T {
-              constructor(arg0) {
-                ({ item, start, end } = recipientId);
-                obj = { row: item, recipientId, source, start, end };
-                return jsx(closure_1(closure_2[13]), obj);
-              }
-            }
-            cResult[8] = E;
+            cResult[7] = tmp4;
+            cResult[8] = renderSectionHeader;
+            let tmp11 = renderSectionHeader;
           } else {
-            class E {
-              constructor(arg0) {
-                tmp = null;
-                if (recipientId.data.length > 0) {
-                  tmp2 = jsx;
-                  tmp3 = closure_0;
-                  tmp4 = closure_2;
-                  obj = { style: null, variant: "text-sm/semibold", color: "text-default", children: null };
-                  tmp5 = closure_2;
-                  obj.style = closure_2.sectionTitle;
-                  obj.children = recipientId.title;
-                  tmp = jsx(closure_0(closure_2[14]).Text, obj);
-                }
-                return tmp;
-              }
-            }
+            tmp11 = cResult[8];
           }
-          class T {
-            constructor(arg0) {
-              ({ item, start, end } = recipientId);
-              obj = { row: item, recipientId, source, start, end };
-              return jsx(closure_1(closure_2[13]), obj);
-            }
-          }
-          if (0 !== arr.length) {
-            class E {
-              constructor(arg0) {
-                tmp = null;
-                if (recipientId.data.length > 0) {
-                  tmp2 = jsx;
-                  tmp3 = closure_0;
-                  tmp4 = closure_2;
-                  obj = { style: null, variant: "text-sm/semibold", color: "text-default", children: null };
-                  tmp5 = closure_2;
-                  obj.style = closure_2.sectionTitle;
-                  obj.children = recipientId.title;
-                  tmp = jsx(closure_0(closure_2[14]).Text, obj);
-                }
-                return tmp;
-              }
-            }
+          _slicedToArray = tmp11;
+          let tmp13 = 0 === arr.length;
+          if (!tmp13) {
+            tmp13 = 0 === arr2.length;
           }
           closure_4 = tmp13;
-          if (0 === arr.length) {
-            class E {
-              constructor(arg0) {
-                tmp = null;
-                if (recipientId.data.length > 0) {
-                  tmp2 = jsx;
-                  tmp3 = closure_0;
-                  tmp4 = closure_2;
-                  obj = { style: null, variant: "text-sm/semibold", color: "text-default", children: null };
-                  tmp5 = closure_2;
-                  obj.style = closure_2.sectionTitle;
-                  obj.children = recipientId.title;
-                  tmp = jsx(closure_0(closure_2[14]).Text, obj);
-                }
-                return tmp;
-              }
-            }
+          let num7 = 0;
+          if (tmp13) {
+            num7 = 24;
           }
-          const sum = source(6478)().insets.bottom + source(587).space.PX_16;
-          if (cResult[9] === 0) {
-            class E {
-              constructor(arg0) {
-                tmp = null;
-                if (recipientId.data.length > 0) {
-                  tmp2 = jsx;
-                  tmp3 = closure_0;
-                  tmp4 = closure_2;
-                  obj = { style: null, variant: "text-sm/semibold", color: "text-default", children: null };
-                  tmp5 = closure_2;
-                  obj.style = closure_2.sectionTitle;
-                  obj.children = recipientId.title;
-                  tmp = jsx(closure_0(closure_2[14]).Text, obj);
-                }
-                return tmp;
-              }
+          const sum = source(6656)().insets.bottom + source(587).space.PX_16;
+          if (cResult[9] === num7) {
+            if (cResult[10] === sum) {
+              let tmp15 = cResult[11];
             }
             if (cResult[12] === tmp13) {
-              class E {
-                constructor(arg0) {
-                  tmp = null;
-                  if (recipientId.data.length > 0) {
-                    tmp2 = jsx;
-                    tmp3 = closure_0;
-                    tmp4 = closure_2;
-                    obj = { style: null, variant: "text-sm/semibold", color: "text-default", children: null };
-                    tmp5 = closure_2;
-                    obj.style = closure_2.sectionTitle;
-                    obj.children = recipientId.title;
-                    tmp = jsx(closure_0(closure_2[14]).Text, obj);
-                  }
-                  return tmp;
-                }
+              if (cResult[13] === tmp11) {
+                let tmp16 = cResult[14];
               }
-              class T {
+              class A {
                 constructor(arg0) {
-                  ({ item, start, end } = recipientId);
-                  obj = { row: item, recipientId, source, start, end };
-                  return jsx(closure_1(closure_2[13]), obj);
+                  tmp2 = null;
+                  if (!closure_4) {
+                    tmp3 = closure_3;
+                    tmp2 = closure_3(tmp);
+                  }
+                  return tmp2;
                 }
               }
               if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
+                const fn = function k(guild) {
+                  return guild.guild.id;
+                };
                 class A {
                   constructor(arg0) {
-                    return recipientId.guild.id;
+                    tmp2 = null;
+                    if (!closure_4) {
+                      tmp3 = closure_3;
+                      tmp2 = closure_3(tmp);
+                    }
+                    return tmp2;
                   }
                 }
-                class T {
-                  constructor(arg0) {
-                    ({ item, start, end } = recipientId);
-                    obj = { row: item, recipientId, source, start, end };
-                    return jsx(closure_1(closure_2[13]), obj);
-                  }
-                }
+                let tmp18 = fn;
               } else {
-                class A {
-                  constructor(arg0) {
-                    return recipientId.guild.id;
+                tmp18 = cResult[15];
+              }
+              if (cResult[16] === tmp9) {
+                if (cResult[17] === tmp7) {
+                  if (cResult[18] === tmp15) {
+                    if (cResult[19] === tmp16) {
+                      let tmp19 = cResult[20];
+                    }
+                    return tmp19;
                   }
                 }
               }
-              if (cResult[16] === tmp10) {
-                class A {
-                  constructor(arg0) {
-                    return recipientId.guild.id;
-                  }
-                }
-              }
-              const obj3 = { renderItem: tmp10, contentContainerStyle: tmp15, sections: tmp7, renderSectionHeader: tmp17, stickySectionHeadersEnabled: true, keyExtractor: A, ListEmptyComponent };
-              const tmp23 = closure_6(tmp(10854).UserProfileStackedActionSheetSectionList, obj3);
-              cResult[16] = tmp10;
+              const obj3 = { renderItem: tmp9, contentContainerStyle: tmp15, sections: tmp7, renderSectionHeader: tmp16, stickySectionHeadersEnabled: true, keyExtractor: tmp18, ListEmptyComponent };
+              const tmp22 = closure_6(tmp(10505).UserProfileStackedActionSheetSectionList, obj3);
+              cResult[16] = tmp9;
               cResult[17] = tmp7;
               cResult[18] = tmp15;
-              cResult[19] = tmp17;
-              cResult[20] = tmp23;
+              cResult[19] = tmp16;
+              cResult[20] = tmp22;
+              tmp19 = tmp22;
             }
-            class T {
+            class A {
               constructor(arg0) {
-                ({ item, start, end } = recipientId);
-                obj = { row: item, recipientId, source, start, end };
-                return jsx(closure_1(closure_2[13]), obj);
+                tmp2 = null;
+                if (!closure_4) {
+                  tmp3 = closure_3;
+                  tmp2 = closure_3(tmp);
+                }
+                return tmp2;
               }
             }
             cResult[12] = tmp13;
-            cResult[13] = E;
-            cResult[14] = tmp17;
+            cResult[13] = tmp11;
+            cResult[14] = A;
+            tmp16 = A;
           }
-          const obj4 = { paddingTop: 0, paddingBottom: sum };
-          cResult[9] = 0;
+          const obj4 = { paddingTop: num7, paddingBottom: sum };
+          cResult[9] = num7;
           cResult[10] = sum;
           cResult[11] = obj4;
-        }
-        class T {
-          constructor(arg0) {
-            ({ item, start, end } = recipientId);
-            obj = { row: item, recipientId, source, start, end };
-            return jsx(closure_1(closure_2[13]), obj);
-          }
+          tmp15 = obj4;
         }
         cResult[4] = recipientId;
         cResult[5] = source;
-        cResult[6] = T;
-        tmp10 = T;
+        cResult[6] = tmp10;
+        tmp9 = tmp10;
       }
     }
   }
   if (0 === arr.length && 0 === arr2.length) {
-    class A {
-      constructor(arg0) {
-        return recipientId.guild.id;
-      }
-    }
+    let items = [];
   } else {
+    const obj5 = { title: null, data: null };
     class A {
       constructor(arg0) {
-        return recipientId.guild.id;
+        tmp2 = null;
+        if (!closure_4) {
+          tmp3 = closure_3;
+          tmp2 = closure_3(tmp);
+        }
+        return tmp2;
       }
     }
-    class T {
-      constructor(arg0) {
-        ({ item, start, end } = recipientId);
-        obj = { row: item, recipientId, source, start, end };
-        return jsx(closure_1(closure_2[13]), obj);
-      }
-    }
-    tmp8[0] = tmp9(tmp(1126).t["u+Ithu"]);
-    tmp8[1] = arr;
-    const items = [tmp8, ];
-    const obj5 = { title: null, data: null };
+    obj5.title = tmp8(tmp(1126).t["u+Ithu"]);
+    obj5.data = arr;
+    items = [obj5, ];
+    const obj6 = { title: null, data: null };
     const intl = tmp(1126).intl;
-    obj5.title = intl.string(tmp(1126).t["c5T+X/"]);
-    obj5.data = arr2;
-    items[1] = obj5;
+    obj6.title = intl.string(tmp(1126).t["c5T+X/"]);
+    obj6.data = arr2;
+    items[1] = obj6;
   }
   cResult[0] = 0 === arr.length && 0 === arr2.length;
   cResult[1] = arr;
   cResult[num] = arr2;
   num = 3;
   cResult[3] = items;
-  const tmp5 = _slicedToArray(recipientId(12809).useServerInviteRows(recipientId, recipientId.query), 2);
-}) : ((recipientId) => {
+  const tmp5 = _slicedToArray(recipientId(12956).useServerInviteRows(recipientId, recipientId.query), 2);
+}) : (function GuildList(recipientId) {
   recipientId = recipientId.recipientId;
   const source = recipientId.source;
   _slicedToArray = undefined;
   dependencyMap = closure_8();
-  let obj = recipientId(12809);
-  [arr, arr2] = recipientId(12809).useServerInviteRows(recipientId, recipientId.query);
+  let obj = recipientId(12956);
+  [arr, arr2] = recipientId(12956).useServerInviteRows(recipientId, recipientId.query);
   if (0 === arr.length) {
     if (0 === arr2.length) {
       let items = [];
@@ -342,7 +254,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((recipientId) =
     if (tmp5) {
       num = 24;
     }
-    const obj3 = { paddingTop: num, paddingBottom: source(6478)().insets.bottom + source(587).space.PX_16 };
+    const obj3 = { paddingTop: num, paddingBottom: source(6656)().insets.bottom + source(587).space.PX_16 };
     obj2.contentContainerStyle = obj3;
     obj2.sections = items;
     obj2.renderSectionHeader = function renderSectionHeader(section) {
@@ -362,7 +274,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((recipientId) =
       return guild.guild.id;
     };
     obj2.ListEmptyComponent = ListEmptyComponent;
-    return closure_6(tmp(10854).UserProfileStackedActionSheetSectionList, obj2);
+    return closure_6(tmp(10505).UserProfileStackedActionSheetSectionList, obj2);
   }
   const obj4 = { title: null, data: null };
   const intl = tmp(1126).intl;
@@ -374,24 +286,24 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((recipientId) =
   obj5.title = intl2.string(recipientId(1126).t["c5T+X/"]);
   obj5.data = arr2;
   items[1] = obj5;
-  const tmp3 = _slicedToArray(recipientId(12809).useServerInviteRows(recipientId, recipientId.query), 2);
+  const tmp3 = _slicedToArray(recipientId(12956).useServerInviteRows(recipientId, recipientId.query), 2);
 });
 ReactCompilerGating = fn(558);
 let obj5 = { paddingBottom: 6, paddingTop: 24, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/instant_invite/native/action_sheet/invite_to_guilds/GuildInviteActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildInviteActionSheet(arg0) {
   const cResult = c.c(14);
   ({ recipientId, source } = arg0);
   const tmp4 = closure_8();
   [tmp6, require] = noop.useState("");
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function h(arg0) {
-      _require(arg0);
-    };
-    cResult[0] = fn;
-    let first = fn;
+    function handleQueryChange(arg0) {
+      require(arg0);
+    }
+    cResult[0] = handleQueryChange;
+    let first = handleQueryChange;
   } else {
     first = cResult[0];
   }
@@ -468,7 +380,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[9] = tmp23;
   tmp22 = tmp23;
   const tmp5 = _slicedToArray(noop.useState(""), 2);
-}) : ((arg0) => {
+}) : (function GuildInviteActionSheet(arg0) {
   ({ recipientId, source } = arg0);
   const tmp = closure_8();
   const tmp2 = _slicedToArray(noop.useState(""), 2);
@@ -479,7 +391,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const obj2 = { scrollable: true, startExpanded: true, header: timestampProducer(BottomSheetTitleHeader.BottomSheetTitleHeader, obj), contentStyles: tmp.content, children: null };
   const obj3 = { style: tmp.searchbarWrapper, children: null };
   const obj4 = {
-    onChange(arg0) {
+    onChange: function handleQueryChange(arg0) {
       closure_0(arg0);
     },
     placeholder: null

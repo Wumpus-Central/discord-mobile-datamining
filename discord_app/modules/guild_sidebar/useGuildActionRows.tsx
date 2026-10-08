@@ -1,24 +1,24 @@
-// === Module 16229: useGuildActionRows ===
+// === Module 16489: useGuildActionRows ===
 
-// Module 16229 (useGuildActionRows)
-import useIsNewMemberDefault from "useIsNewMember" /* 6738 */;
-import useCanSeeEventsInChannelListDefault from "useCanSeeEventsInChannelList" /* 12024 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12185 */;
-import useTotalPossibleBoostCountDefault from "useTotalPossibleBoostCount" /* 16192 */;
-import useIsEligibleForServerOnboardingSetupProgressDefault from "useIsEligibleForServerOnboardingSetupProgress" /* 16230 */;
+// Module 16489 (useGuildActionRows)
+import useIsNewMemberDefault from "useIsNewMember" /* 6913 */;
+import useCanSeeEventsInChannelListDefault from "useCanSeeEventsInChannelList" /* 12097 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12264 */;
+import useTotalPossibleBoostCountDefault from "useTotalPossibleBoostCount" /* 16452 */;
+import useIsEligibleForServerOnboardingSetupProgressDefault from "useIsEligibleForServerOnboardingSetupProgress" /* 16490 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 5083 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 6912 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ChannelListGuildActionRow = fn(7058).ChannelListGuildActionRow;
+const ChannelListGuildActionRow = fn(7245).ChannelListGuildActionRow;
 const GuildFeatures = fn(1085).GuildFeatures;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_sidebar/useGuildActionRows.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildActionRows(id) {
   _require = id;
   const cResult = require("c").c(10);
   const obj = require("c");
@@ -175,14 +175,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
         if (premiumProgressBarEnabled) {
           items2.push(ChannelListGuildActionRow.GUILD_PREMIUM_PROGRESS_BAR);
         }
-        tmpResult18 = tmp(6901);
+        tmpResult18 = tmp(7090);
       }
     }
   }
   if (gameServerEnabled) {
     if (isGameServerTabAlwaysOnEnabled) {
       if (!tmp29) {
-        let items3 = [tmp(2036).DismissibleContent.EMPTY_GAME_SERVER_TAB];
+        let items3 = [tmp(2048).DismissibleContent.EMPTY_GAME_SERVER_TAB];
       }
       cResult[6] = gameServerEnabled;
       cResult[7] = tmp29;
@@ -192,7 +192,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
   }
   items3 = [];
   const tmpResult17 = require("GameServerTabAlwaysOnExperiment");
-}) : ((id) => {
+}) : (function useGuildActionRows(id) {
   _require = id;
   const tmp3 = useCanSeeEventsInChannelListDefault(id.id);
   let canReviewGuildMemberApplications = require("canReviewGuildMemberApplications").useCanReviewGuildMemberApplications(id.id);
@@ -242,7 +242,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
   if (gameServerEnabled) {
     if (isGameServerTabAlwaysOnEnabled) {
       if (!hasItem3) {
-        let items2 = [tmp4(2036).DismissibleContent.EMPTY_GAME_SERVER_TAB];
+        let items2 = [tmp4(2048).DismissibleContent.EMPTY_GAME_SERVER_TAB];
       }
       const items3 = [];
       if (hasItem) {

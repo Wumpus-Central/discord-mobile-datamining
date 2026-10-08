@@ -1,11 +1,11 @@
-// === Module 8975: AuthorizeFormSeparator ===
+// === Module 12880: AuthorizeFormSeparator ===
 
-// Module 8975 (AuthorizeFormSeparator)
+// Module 12880 (AuthorizeFormSeparator)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import createStyles from "createStyles" /* 4896 */;
+import createStyles from "createStyles" /* 5090 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -16,7 +16,7 @@ let closure_4 = createStyles.createStyles(obj);
 let obj2 = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 const result = size.fileFinishedImporting("modules/oauth2/native/AuthorizeFormSeparator.tsx");
 
-export const AuthorizeFormSeparator = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const AuthorizeFormSeparator = ReactCompilerGating.isReactCompilerEnabled() ? (function AuthorizeFormSeparator() {
   const cResult = c.c(2);
   const tmp2 = closure_4();
   if (cResult[0] !== tmp2.separator) {
@@ -29,4 +29,6 @@ export const AuthorizeFormSeparator = ReactCompilerGating.isReactCompilerEnabled
     tmp3 = cResult[1];
   }
   return tmp3;
-}) : (() => <View style={closure_4().separator} />);
+}) : (function AuthorizeFormSeparator() {
+  return <View style={closure_4().separator} />;
+});

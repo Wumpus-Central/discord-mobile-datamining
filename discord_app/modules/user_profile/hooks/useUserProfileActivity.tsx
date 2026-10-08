@@ -1,14 +1,14 @@
-// === Module 12882: useUserProfileActivity ===
+// === Module 13031: useUserProfileActivity ===
 
-// Module 12882 (useUserProfileActivity)
+// Module 13031 (useUserProfileActivity)
 import _mod19 from "module_19" /* 19 */;
-import Constants from "Constants" /* 4921 */;
-import utils from "utils" /* 7829 */;
-import ContentInventoryTypes from "ContentInventoryTypes" /* 8027 */;
-import UserProfileStackedActivityCardUtils from "UserProfileStackedActivityCardUtils" /* 12883 */;
-import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 8480 */;
-import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import PresenceStore from "PresenceStore" /* 4936 */;
+import Constants from "Constants" /* 5115 */;
+import utils from "utils" /* 8247 */;
+import ContentInventoryTypes from "ContentInventoryTypes" /* 8435 */;
+import UserProfileStackedActivityCardUtils from "UserProfileStackedActivityCardUtils" /* 13032 */;
+import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 8966 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
+import PresenceStore from "PresenceStore" /* 5106 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -20,12 +20,12 @@ let closure_8 = [];
 let closure_9 = [];
 let result = size.fileFinishedImporting("modules/user_profile/hooks/useUserProfileActivity.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserProfileActivity(arg0) {
   _require = arg0;
   const cResult = require("c").c(20);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [MediaEngineStore];
-    const fn = function h() {
+    const fn = function y() {
       return MediaEngineStore.supports(constants.VIDEO);
     };
     cResult[0] = items;
@@ -39,7 +39,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const stateFromStores = require("initialize").useStateFromStores(tmp4, tmp5);
   let tmp8 = null;
   if (stateFromStores) {
-    tmp8 = userProfileLiveActivities(10624)(arg0);
+    tmp8 = userProfileLiveActivities(10222)(arg0);
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [PresenceStore];
@@ -49,63 +49,108 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp9 = cResult[2];
   }
   if (cResult[3] !== arg0) {
-    const fn2 = function f() {
-      return PresenceStore.getActivities(closure_0);
-    };
+    class S {
+      constructor() {
+        return closure_6.getActivities(closure_0);
+      }
+    }
     cResult[3] = arg0;
-    cResult[4] = fn2;
-    let tmp11 = fn2;
+    cResult[4] = S;
   } else {
-    tmp11 = cResult[4];
+    class S {
+      constructor() {
+        return closure_6.getActivities(closure_0);
+      }
+    }
   }
   let tmpResult = require("initialize");
-  const stateFromStores1 = require("initialize").useStateFromStores(tmp9, tmp11);
+  const stateFromStores1 = require("initialize").useStateFromStores(tmp9, S);
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
+    class S {
+      constructor() {
+        return closure_6.getActivities(closure_0);
+      }
+    }
     const items2 = [ContentInventoryOutboxStore];
     cResult[5] = items2;
-    let tmp13 = items2;
+    const tmp13 = items2;
   } else {
-    tmp13 = cResult[5];
+    class S {
+      constructor() {
+        return closure_6.getActivities(closure_0);
+      }
+    }
   }
   if (cResult[6] !== arg0) {
-    const fn3 = function p() {
-      return ContentInventoryOutboxStore.getUserOutbox(closure_0);
-    };
+    class S {
+      constructor() {
+        return closure_6.getActivities(closure_0);
+      }
+    }
     cResult[6] = arg0;
-    cResult[7] = fn3;
-    let tmp15 = fn3;
+    cResult[7] = tmp15;
   } else {
-    tmp15 = cResult[7];
+    class S {
+      constructor() {
+        return closure_6.getActivities(closure_0);
+      }
+    }
   }
   let tmpResult4 = require("initialize");
   const stateFromStores2 = require("initialize").useStateFromStores(tmp13, tmp15);
   if (cResult[8] === stateFromStores1) {
-    let entries;
-    if (stateFromStores2 != null) {
-      entries = stateFromStores2.entries;
+    class S {
+      constructor() {
+        return closure_6.getActivities(closure_0);
+      }
     }
-    if (cResult[9] === entries) {
-      userProfileLiveActivities = cResult[10];
-      let arr5 = cResult[11];
+    if (stateFromStores2 != null) {
+      class S {
+        constructor() {
+          return closure_6.getActivities(closure_0);
+        }
+      }
+    }
+    if (cResult[9] === tmp17) {
+      class S {
+        constructor() {
+          return closure_6.getActivities(closure_0);
+        }
+      }
+      userProfileLiveActivities = arr4;
+      let tmp18 = cResult[11];
     }
     if (0 === arr4.length) {
-      arr4 = closure_8;
+      class S {
+        constructor() {
+          return closure_6.getActivities(closure_0);
+        }
+      }
     }
-    if (null == arr5) {
-      arr5 = closure_9;
+    if (null == tmp18) {
+      class S {
+        constructor() {
+          return closure_6.getActivities(closure_0);
+        }
+      }
+    } else {
+      class S {
+        constructor() {
+          return closure_6.getActivities(closure_0);
+        }
+      }
     }
     if (cResult[12] === arr4) {
-      if (cResult[13] === arr5) {
-        let tmp21 = cResult[14];
+      class S {
+        constructor() {
+          return closure_6.getActivities(closure_0);
+        }
       }
       ({ live, recent } = tmp21);
       if (cResult[15] === live) {
-        if (cResult[16] === stateFromStores2) {
-          if (cResult[17] === recent) {
-            if (cResult[18] === tmp8) {
-              let tmp22 = cResult[19];
-            }
-            return tmp22;
+        class S {
+          constructor() {
+            return closure_6.getActivities(closure_0);
           }
         }
       }
@@ -115,11 +160,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       cResult[17] = recent;
       cResult[18] = tmp8;
       cResult[19] = obj2;
-      tmp22 = obj2;
     }
-    const obj3 = { live: arr4, recent: arr5 };
+    const obj3 = { live: arr4, recent: tmp18 };
     cResult[12] = arr4;
-    cResult[13] = arr5;
+    cResult[13] = tmp18;
     cResult[14] = obj3;
     tmp21 = obj3;
   }
@@ -127,8 +171,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   userProfileLiveActivities = require("UserProfileStackedActivityCardUtils").getUserProfileLiveActivities(stateFromStores1);
   let found;
   if (stateFromStores2 != null) {
-    const entries1 = stateFromStores2.entries;
-    found = entries1.filter((item) => {
+    class S {
+      constructor() {
+        return closure_6.getActivities(closure_0);
+      }
+    }
+    found = arr5.filter((item) => {
       let length = item;
       const isEntryLiveResult = utils.isEntryLive(item);
       if (isEntryLiveResult) {
@@ -142,8 +190,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             tmp6 = !userProfileLiveActivities.some((item) => {
               let result = null != item;
               if (result) {
-                result = item(8023).isMatchingListeningActivity(item, item);
-                const obj = item(8023);
+                result = item(8431).isMatchingListeningActivity(item, item);
+                const obj = item(8431);
               }
               return result;
             });
@@ -154,8 +202,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             result = !userProfileLiveActivities.some((item) => {
               let result = null != item;
               if (result) {
-                result = item(8023).isMatchingWatchActivity(item, item);
-                const obj = item(8023);
+                result = item(8431).isMatchingWatchActivity(item, item);
+                const obj = item(8431);
               }
               return result;
             });
@@ -170,17 +218,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     });
   }
   cResult[8] = stateFromStores1;
-  let entries2;
   if (stateFromStores2 != null) {
-    entries2 = stateFromStores2.entries;
+    class S {
+      constructor() {
+        return closure_6.getActivities(closure_0);
+      }
+    }
   }
-  cResult[9] = entries2;
+  cResult[9] = undefined;
   cResult[10] = userProfileLiveActivities;
   cResult[11] = found;
-  arr5 = found;
-  arr4 = userProfileLiveActivities;
+  tmp18 = found;
   const tmpResult6 = require("UserProfileStackedActivityCardUtils");
-}) : ((arg0) => {
+}) : (function useUserProfileActivity(arg0) {
   _require = arg0;
   const items = [MediaEngineStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => MediaEngineStore.supports(constants.VIDEO));
@@ -220,8 +270,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               tmp6 = !userProfileLiveActivities.some((item) => {
                 let result = null != item;
                 if (result) {
-                  result = userProfileLiveActivities(8023).isMatchingListeningActivity(closure_0, item);
-                  const obj = userProfileLiveActivities(8023);
+                  result = userProfileLiveActivities(8431).isMatchingListeningActivity(closure_0, item);
+                  const obj = userProfileLiveActivities(8431);
                 }
                 return result;
               });
@@ -232,8 +282,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               result = !userProfileLiveActivities.some((item) => {
                 let result = null != item;
                 if (result) {
-                  result = userProfileLiveActivities(8023).isMatchingWatchActivity(closure_0, item);
-                  const obj = userProfileLiveActivities(8023);
+                  result = userProfileLiveActivities(8431).isMatchingWatchActivity(closure_0, item);
+                  const obj = userProfileLiveActivities(8431);
                 }
                 return result;
               });

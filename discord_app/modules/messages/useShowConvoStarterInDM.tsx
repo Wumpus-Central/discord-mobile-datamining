@@ -1,12 +1,12 @@
-// === Module 11909: useShowConvoStarterInDM ===
+// === Module 11982: useShowConvoStarterInDM ===
 
-// Module 11909 (useShowConvoStarterInDM)
+// Module 11982 (useShowConvoStarterInDM)
 import _mod19 from "module_19" /* 19 */;
-import ChannelConstants from "ChannelConstants" /* 2058 */;
-import MessageRequestStore from "MessageRequestStore" /* 6734 */;
-import MessageStore from "MessageStore" /* 5116 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
-import UserStore from "UserStore" /* 1377 */;
+import ChannelConstants from "ChannelConstants" /* 2070 */;
+import MessageRequestStore from "MessageRequestStore" /* 6060 */;
+import MessageStore from "MessageStore" /* 5428 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
+import UserStore from "UserStore" /* 1389 */;
 import Constants from "Constants" /* 1085 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -19,7 +19,7 @@ const ChannelFlags = ChannelConstants.ChannelFlags;
 let result = size.fileFinishedImporting("modules/messages/useShowConvoStarterInDM.tsx");
 
 export const MAX_MESSAGES_ALLOWED_FOR_GREETING = 25;
-export const useShowConvoStarterInDM = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
+export const useShowConvoStarterInDM = ReactCompilerGating.isReactCompilerEnabled() ? (function useShowConvoStarterInDM(id) {
   const _require = id;
   const cResult = require("c").c(15);
   dependencyMap = useRef(false);
@@ -42,7 +42,7 @@ export const useShowConvoStarterInDM = ReactCompilerGating.isReactCompilerEnable
       let tmp6 = cResult[4];
     }
     MessageStore = tmp6;
-    const strangerDangerWarning = tmp(9798).useStrangerDangerWarning(id.id);
+    const strangerDangerWarning = tmp(10362).useStrangerDangerWarning(id.id);
     if (cResult[5] !== id) {
       const hasFlagResult = id.hasFlag(ChannelFlags.HAS_ONLY_SYSTEM_MESSAGES);
       cResult[5] = id;
@@ -73,7 +73,7 @@ export const useShowConvoStarterInDM = ReactCompilerGating.isReactCompilerEnable
         }
       }
     }
-    class D {
+    class O {
       constructor() {
         tmp2 = closure_0;
         if (closure_2.current !== closure_0.id) {
@@ -157,11 +157,11 @@ export const useShowConvoStarterInDM = ReactCompilerGating.isReactCompilerEnable
     cResult[10] = tmp9;
     cResult[11] = strangerDangerWarning;
     cResult[12] = tmp6;
-    cResult[13] = D;
+    cResult[13] = O;
     cResult[14] = items1;
     tmp19 = items1;
-    tmp18 = D;
-    const tmpResult = tmp(9798);
+    tmp18 = O;
+    const tmpResult = tmp(10362);
   }
   let recipientId = null;
   if (tmp4) {
@@ -172,7 +172,7 @@ export const useShowConvoStarterInDM = ReactCompilerGating.isReactCompilerEnable
   cResult[4] = recipientId;
   tmp6 = recipientId;
   const obj = require("c");
-}) : ((id) => {
+}) : (function useShowConvoStarterInDM(id) {
   const _require = id;
   dependencyMap = useRef(false);
   useRef = useRef(id.id);

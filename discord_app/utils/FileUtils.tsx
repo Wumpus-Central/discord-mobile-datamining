@@ -1,14 +1,14 @@
-// === Module 7283: FileUtils ===
+// === Module 7737: FileUtils ===
 
-// Module 7283 (FileUtils)
+// Module 7737 (FileUtils)
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1126 */;
-import PremiumUtils from "PremiumUtils" /* 4534 */;
-import FileSizeUtils from "FileSizeUtils" /* 5324 */;
-import UploadUtils from "UploadUtils" /* 7256 */;
-import noConflictDefault from "noConflict" /* 7284 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import UserStore from "UserStore" /* 1377 */;
+import PremiumUtils from "PremiumUtils" /* 4726 */;
+import FileSizeUtils from "FileSizeUtils" /* 5636 */;
+import UploadUtils from "UploadUtils" /* 7732 */;
+import noConflictDefault from "noConflict" /* 7738 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const PremiumUtilsDefault = PremiumUtils;
 
@@ -23,7 +23,7 @@ function getUploadFileSizeSum(arg0) {
 }
 const Constants = fn(1085);
 ({ GuildFeatures, MAX_ATTACHMENT_SIZE: hasOwnProperty } = Constants);
-const PremiumConstants = fn(1379);
+const PremiumConstants = fn(1391);
 const PremiumTypes = PremiumConstants.PremiumTypes;
 let items = [{ reType: /^image\/vnd.adobe.photoshop/, klass: "photoshop" }, { reType: /^image\/svg\+xml/, klass: "webcode" }, { reType: /^image\//, klass: "image" }, { reType: /^video\//, klass: "video" }, { reName: /\.pdf$/, klass: "acrobat" }, { reName: /\.ae/, klass: "ae" }, { reName: /\.sketch$/, klass: "sketch" }, { reName: /\.ai$/, klass: "ai" }, { reName: /\.(?:rar|zip|7z|tar|tar\.gz)$/, klass: "archive" }, { reName: /\.(?:c\+\+|cpp|cc|c|h|hpp|mm|m|json|js|ts|rb|rake|py|asm|fs|pyc|dtd|cgi|bat|rss|java|graphml|idb|lua|o|gml|prl|sls|conf|cmake|make|sln|vbe|cxx|wbf|vbs|r|wml|php|bash|applescript|fcgi|yaml|ex|exs|sh|ml|actionscript)$/, klass: "code" }, { reName: /\.(?:txt|rtf|doc|docx|md|pages|ppt|pptx|pptm|key|log)$/, klass: "document" }, { reName: /\.(?:xls|xlsx|numbers|csv)$/, klass: "spreadsheet" }, { reName: /\.(?:html|xhtml|htm|xml|xsd|css|styl)$/, klass: "webcode" }, { reName: /\.(?:mp3|ogg|opus|wav|aiff|flac)$/, klass: "audio" }];
 const items1 = [GuildFeatures.MAX_FILE_SIZE_100_MB, PremiumConstants.MAX_GUILD_FILE_SIZE_100_MB];
@@ -48,9 +48,9 @@ export const transformNativeFile = function transformNativeFile(filename, arg1) 
   }
   return file;
 };
-export const makeFile = function makeFile(arg0, filename, type) {
+export const makeFile = function makeFile(arg0, arg1, type) {
   items = [arg0];
-  const file = new File(items, filename, { type });
+  const file = new File(items, arg1, { type });
   return file;
 };
 export const classifyFile = function classifyFile(file) {

@@ -1,21 +1,21 @@
-// === Module 14985: QuestEnrollmentBlockedBottomSheet ===
+// === Module 15247: QuestEnrollmentBlockedBottomSheet ===
 
-// Module 14985 (QuestEnrollmentBlockedBottomSheet)
+// Module 15247 (QuestEnrollmentBlockedBottomSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6652 */;
-import useCountdownDefault from "useCountdown" /* 6961 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6829 */;
+import useCountdownDefault from "useCountdown" /* 7150 */;
 import noop from "module_19" /* 19 */;
-import QuestStore from "QuestStore" /* 7200 */;
+import QuestStore from "QuestStore" /* 7379 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { heading: { display: "flex", justifyContent: "center", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 }, container: null };
 let obj3 = { display: "flex", justifyContent: "center", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 };
 obj2.container = { display: "flex", justifyContent: "center", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 };
@@ -23,7 +23,7 @@ let closure_6 = createStyles.createStyles(obj2);
 fn(558);
 let obj4 = { display: "flex", justifyContent: "center", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 };
 const ReactCompilerGating = fn(558);
-let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((questEnrollmentBlockedUntil) => {
+let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestEnrollmentBlockedBottomSheet(questEnrollmentBlockedUntil) {
   const cResult = c.c(21);
   questEnrollmentBlockedUntil = questEnrollmentBlockedUntil.questEnrollmentBlockedUntil;
   const tmp4 = closure_6();
@@ -135,7 +135,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((questEnrollment
     cResult[17] = tmp34;
     tmp31 = tmp34;
   }
-}) : ((questEnrollmentBlockedUntil) => {
+}) : (function QuestEnrollmentBlockedBottomSheet(questEnrollmentBlockedUntil) {
   questEnrollmentBlockedUntil = questEnrollmentBlockedUntil.questEnrollmentBlockedUntil;
   const tmp = closure_6();
   let date = questEnrollmentBlockedUntil;
@@ -175,7 +175,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((questEnrollment
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestEnrollmentBlockedBottomSheet/QuestEnrollmentBlockedBottomSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((questId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestEnrollmentBlockedBottomSheetConnected(questId) {
   let QUEST_ENROLLMENT_BLOCKED_BOTTOM_SHEET = sourceQuestContent;
   const cResult = questId(sourceQuestContent[7]).c(12);
   questId = questId.questId;
@@ -208,10 +208,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((questId) => {
         if (cResult[5] === sourceQuestContent) {
           let tmp7 = cResult[6];
         }
-        class C {
+        class B {
           constructor() {
             obj = { questId, questEnrollmentBlockedUntil: closure_1, sourceQuestContent };
-            return jsx(f69381, obj);
+            return jsx(QuestEnrollmentBlockedBottomSheet, obj);
           }
         }
         const obj2 = { overrideVisibility: true, questOrQuests: stateFromStores, questContent: null, questContentPosition: null, sourceQuestContent: null, children: null };
@@ -228,20 +228,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((questId) => {
         cResult[11] = tmp10;
       }
     }
-    class C {
+    class B {
       constructor() {
         obj = { questId, questEnrollmentBlockedUntil: closure_1, sourceQuestContent };
-        return jsx(f69381, obj);
+        return jsx(QuestEnrollmentBlockedBottomSheet, obj);
       }
     }
     cResult[3] = questEnrollmentBlockedUntil;
     cResult[4] = questId;
     cResult[5] = sourceQuestContent;
-    cResult[6] = C;
-    tmp7 = C;
+    cResult[6] = B;
+    tmp7 = B;
   }
   const tmpResult = questId(QUEST_ENROLLMENT_BLOCKED_BOTTOM_SHEET[8]);
-}) : ((questContentPosition) => {
+}) : (function QuestEnrollmentBlockedBottomSheetConnected(questContentPosition) {
   ({ questId: require, questEnrollmentBlockedUntil: importDefault, sourceQuestContent } = questContentPosition);
   const items = [QuestStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => QuestStore.getQuest(questId));

@@ -1,20 +1,20 @@
-// === Module 14725: FamilyCenterActivityPurchaseRow ===
+// === Module 14986: FamilyCenterActivityPurchaseRow ===
 
-// Module 14725 (FamilyCenterActivityPurchaseRow)
+// Module 14986 (FamilyCenterActivityPurchaseRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import PriceUtils from "PriceUtils" /* 6750 */;
-import useCollectiblesDataDefault from "useCollectiblesData" /* 7855 */;
-import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 14726 */;
-import FamilyCenterActivityItemPreviewDefault from "FamilyCenterActivityItemPreview" /* 14727 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import PriceUtils from "PriceUtils" /* 6926 */;
+import useCollectiblesDataDefault from "useCollectiblesData" /* 8273 */;
+import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 14987 */;
+import FamilyCenterActivityItemPreviewDefault from "FamilyCenterActivityItemPreview" /* 14988 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { display: "flex", flexDirection: "row", alignItems: "center", borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 }, textContainer: { display: "flex", flexDirection: "column", flexShrink: 1 } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -22,7 +22,7 @@ let obj3 = { display: "flex", flexDirection: "row", alignItems: "center", border
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivityPurchaseRow.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCenterActivityPurchaseRow(arg0) {
   const cResult = c.c(23);
   ({ skuId, subscriptionPlanId, total, currency } = arg0);
   const tmp4 = closure_6();
@@ -141,7 +141,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = purchaseDisplayInfo;
   tmp8 = purchaseDisplayInfo;
   const tmpResult2 = FamilyCenterActivityPurchaseRowUtils;
-}) : ((arg0) => {
+}) : (function FamilyCenterActivityPurchaseRow(arg0) {
   ({ skuId, subscriptionPlanId } = arg0);
   ({ total, currency } = arg0);
   const tmp = closure_6();

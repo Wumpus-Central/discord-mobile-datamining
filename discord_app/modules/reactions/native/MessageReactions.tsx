@@ -1,13 +1,13 @@
-// === Module 9986: MessageReactions ===
+// === Module 9516: MessageReactions ===
 
-// Module 9986 (MessageReactions)
+// Module 9516 (MessageReactions)
 import c from "c" /* 576 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 6664 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6688 */;
-import MessageReactionsContent from "MessageReactionsContent" /* 9987 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 6841 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6865 */;
+import MessageReactionsContent from "MessageReactionsContent" /* 9517 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import MessageStore from "MessageStore" /* 5116 */;
+import MessageStore from "MessageStore" /* 5428 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
 
@@ -16,7 +16,7 @@ let closure_3 = ["channelId", "messageId", "emoji", "reactions", "isSelectedBurs
 const jsx = fn(21).jsx;
 let closure_8 = [];
 let ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMessageReactions(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
   const cResult = require("c").c(8);
@@ -70,7 +70,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => 
   tmp6 = fn;
   const obj = require("c");
   tmp = _require;
-}) : ((arg0, arg1) => {
+}) : (function useMessageReactions(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
   const items = [MessageStore];
@@ -93,7 +93,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/reactions/native/MessageReactions.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function MessageReactions(arg0) {
   const cResult = c.c(20);
   if (cResult[0] !== arg0) {
     ({ channelId, messageId, emoji, reactions, isSelectedBurst } = arg0);
@@ -199,7 +199,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[15] = arr3;
     cResult[16] = tmp22;
   }
-}) : ((emoji) => {
+}) : (function MessageReactions(emoji) {
   ({ channelId, messageId, reactions, isSelectedBurst } = emoji);
   if (isSelectedBurst === undefined) {
     isSelectedBurst = false;

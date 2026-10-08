@@ -1,15 +1,15 @@
-// === Module 9257: TableRowApplicationIcon ===
+// === Module 8587: TableRowApplicationIcon ===
 
-// Module 9257 (TableRowApplicationIcon)
+// Module 8587 (TableRowApplicationIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import FastImageDefault from "FastImage" /* 5981 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
+import FastImageDefault from "FastImage" /* 6164 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { icon: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.sm };
 obj2.icon = size;
@@ -18,7 +18,7 @@ const ReactCompilerGating = fn(558);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/native/TableRowApplicationIcon.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((application) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function TableRowApplicationIcon(application) {
   const cResult = c.c(6);
   application = application.application;
   const tmp3 = closure_4();
@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((application) => 
   cResult[2] = applicationIconSource;
   tmp4 = applicationIconSource;
   const obj4 = { id: application.id, icon: application.icon, size: 32 };
-}) : ((application) => {
+}) : (function TableRowApplicationIcon(application) {
   application = application.application;
   const obj = { source: null, style: null };
   const tmp = closure_4();

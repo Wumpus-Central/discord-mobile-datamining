@@ -1,20 +1,20 @@
-// === Module 8340: InAppReportsUserPreview ===
+// === Module 13388: InAppReportsUserPreview ===
 
-// Module 8340 (InAppReportsUserPreview)
+// Module 13388 (InAppReportsUserPreview)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import ColorUtils from "ColorUtils" /* 4733 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6476 */;
+import native from "native" /* 1200 */;
+import ColorUtils from "ColorUtils" /* 4927 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6654 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 }, borderColor: { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY }, title: { lineHeight: 16, marginBottom: 8 }, userContainer: null, userProfileInfo: null };
 let obj3 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 obj2.userContainer = { flexDirection: "row", alignItems: "center", justifyContent: "flex-start", minHeight: 40, borderRadius: nativeDefault.radii.sm, borderWidth: 1, padding: 12 };
@@ -25,7 +25,7 @@ let obj4 = { flexDirection: "row", alignItems: "center", justifyContent: "flex-s
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsUserPreview.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserPreview(user) {
   const cResult = c.c(34);
   user = user.user;
   const tmp4 = closure_5();
@@ -71,7 +71,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
                 let tmp17 = cResult[15];
               }
               if (cResult[16] !== user) {
-                const obj4 = { size: native.AvatarSizes.LARGE_48, user, guildId: "Array" };
+                const obj4 = { size: native.AvatarSizes.LARGE_48, user, guildId: "r" };
                 const tmp20 = React3(native.Avatar, obj4);
                 cResult[16] = user;
                 cResult[17] = tmp20;
@@ -176,7 +176,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
   cResult[2] = typeConsolidationEyebrow.style;
   cResult[3] = tmp4.title;
   cResult[4] = title;
-}) : ((user) => {
+}) : (function UserPreview(user) {
   user = user.user;
   const tmp = closure_5();
   const typeConsolidationEyebrow = useTypeConsolidationTextTransform.useTypeConsolidationEyebrow("InAppReportsUserPreview", "text-xs/bold");
@@ -202,7 +202,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
   const items2 = [tmp.userContainer, { borderColor: ColorUtils.hexWithOpacity(tmp.borderColor.color, 0.08) }];
   obj5.style = items2;
   const hexWithOpacityResult = ColorUtils.hexWithOpacity(tmp.borderColor.color, 0.08);
-  const items3 = [React3(native.Avatar, { size: native.AvatarSizes.LARGE_48, user, guildId: "Array" }), ];
+  const items3 = [React3(native.Avatar, { size: native.AvatarSizes.LARGE_48, user, guildId: "r" }), ];
   const obj7 = { style: tmp.userProfileInfo, children: null };
   let tmp8Result = null != user.globalName;
   if (tmp8Result) {

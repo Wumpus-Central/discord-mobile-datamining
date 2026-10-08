@@ -1,22 +1,22 @@
-// === Module 15018: QuestDockUnenrolledBackground ===
+// === Module 15280: QuestDockUnenrolledBackground ===
 
-// Module 15018 (QuestDockUnenrolledBackground)
+// Module 15280 (QuestDockUnenrolledBackground)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4586 */;
-import QuestHooks from "QuestHooks" /* 14908 */;
-import QuestDockCreativeContext from "QuestDockCreativeContext" /* 14940 */;
-import QuestDockVideoBackgroundDefault from "QuestDockVideoBackground" /* 15019 */;
+import useToken from "useToken" /* 4778 */;
+import QuestHooks from "QuestHooks" /* 15170 */;
+import QuestDockCreativeContext from "QuestDockCreativeContext" /* 15202 */;
+import QuestDockVideoBackgroundDefault from "QuestDockVideoBackground" /* 15281 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const expandedHeight = fn(14912).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
+const expandedHeight = fn(15174).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockUnenrolledBackground.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function QuestDockUnenrolledBackground() {
   const cResult = c.c(5);
   const questDockQuest = QuestDockCreativeContext.useQuestDockQuest();
   const questDockHeroAsset = QuestHooks.useQuestDockHeroAsset(questDockQuest);
@@ -51,7 +51,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[4] = tmp10;
   tmp9 = tmp10;
   const obj5 = { expandedHeight, imageUrl: staticUrl, videoUrl: url, videoMimetype: mimetype, gradientBaseColor: token };
-}) : (() => {
+}) : (function QuestDockUnenrolledBackground() {
   const questDockQuest = QuestDockCreativeContext.useQuestDockQuest();
   const questDockHeroAsset = QuestHooks.useQuestDockHeroAsset(questDockQuest);
   ({ videoAsset, staticUrl } = questDockHeroAsset);

@@ -1,7 +1,8 @@
-// === Module 10012: BountyTypes ===
+// === Module 9542: BountyTypes ===
 
-// Module 10012 (BountyTypes)
-import AssetUtils from "AssetUtils" /* 10013 */;
+// Module 9542 (BountyTypes)
+import BountyAspectRatio from "BountyAspectRatio" /* 9543 */;
+import AssetUtils from "AssetUtils" /* 9544 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -13,17 +14,25 @@ function videoRenditionsFromServer(video_renditions) {
     const tmp4 = entries[Symbol.iterator]();
     while (tmp4 !== undefined) {
       let tmp9 = _slicedToArray(tmp6, 2);
-      [tmp10, tmp11] = tmp9;
-      let obj2 = AssetUtils;
-      obj[tmp10] = obj2.resolveAdCreativeCdnUrl(tmp11);
+      [tmp10, tmp12] = tmp9;
+      let _Object2 = Object;
+      let values = Object.values(BountyAspectRatio.BountyAspectRatio);
+      let hasItem = values.includes(tmp10);
+      if (hasItem) {
+        hasItem = "" !== tmp12;
+      }
+      if (hasItem) {
+        let tmp13Result = AssetUtils;
+        obj[tmp10] = tmp13Result.resolveAdCreativeCdnUrl(tmp12);
+      }
       continue;
     }
-    const _Object2 = Object;
-    let tmp14;
+    const _Object3 = Object;
+    let tmp19;
     if (Object.keys(obj).length > 0) {
-      tmp14 = obj;
+      tmp19 = obj;
     }
-    return tmp14;
+    return tmp19;
   }
 }
 const size = fn(2);

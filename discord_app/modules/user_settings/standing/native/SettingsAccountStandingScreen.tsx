@@ -1,16 +1,16 @@
-// === Module 14566: SettingsAccountStandingScreen ===
+// === Module 14827: SettingsAccountStandingScreen ===
 
-// Module 14566 (SettingsAccountStandingScreen)
+// Module 14827 (SettingsAccountStandingScreen)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
-import SafetyHubPageDefault from "SafetyHubPage" /* 14567 */;
+import SafetyHubPageDefault from "SafetyHubPage" /* 14828 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
 const result = size.fileFinishedImporting("modules/user_settings/standing/native/SettingsAccountStandingScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SettingsAccountStandingScreen() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const tmp6 = jsx(SafetyHubPageDefault, { visible: true });
@@ -20,4 +20,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     first = cResult[0];
   }
   return first;
-}) : (() => jsx(SafetyHubPageDefault, { visible: true }));
+}) : (function SettingsAccountStandingScreen() {
+  return jsx(SafetyHubPageDefault, { visible: true });
+});

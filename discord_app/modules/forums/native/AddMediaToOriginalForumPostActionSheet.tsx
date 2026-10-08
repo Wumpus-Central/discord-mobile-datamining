@@ -1,17 +1,17 @@
-// === Module 11626: AddMediaToOriginalForumPostActionSheet ===
+// === Module 11690: AddMediaToOriginalForumPostActionSheet ===
 
-// Module 11626 (AddMediaToOriginalForumPostActionSheet)
+// Module 11690 (AddMediaToOriginalForumPostActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import tracking_Tracking from "tracking/Tracking" /* 7276 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 7287 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 7741 */;
+import Tracking from "Tracking" /* 7876 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import MessageStore from "MessageStore" /* 5116 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import MessageStore from "MessageStore" /* 5428 */;
 
 require = fn;
 function _upload() {
@@ -82,28 +82,28 @@ let closure_17 = async function _upload2(arg0) {
             dependencyMap(true);
           });
           closure_132_5.on("progress", (currentSize) => {
-            const maxFileSizeResult = closure_0(7283).maxFileSize(id.id);
-            const obj = closure_0(7283);
-            const effectiveUploadLimit = closure_0(7308).getEffectiveUploadLimit(maxFileSizeResult);
+            const maxFileSizeResult = closure_0(7737).maxFileSize(id.id);
+            const obj = closure_0(7737);
+            const effectiveUploadLimit = closure_0(7752).getEffectiveUploadLimit(maxFileSizeResult);
             if (currentSize.currentSize > effectiveUploadLimit) {
               closure_1_5.cancel();
               dependencyMap(false);
-              closure_1(4860).hideActionSheet();
+              closure_1(5054).hideActionSheet();
               const obj4 = { file: currentSize, maxSize: effectiveUploadLimit, baseMaxSize: maxFileSizeResult, guildId: id.id, analyticsLocations };
-              closure_1(8845)(obj4);
-              const obj3 = closure_1(4860);
+              closure_1(9204)(obj4);
+              const obj3 = closure_1(5054);
             }
-            const obj2 = closure_0(7308);
+            const obj2 = closure_0(7752);
           });
           closure_132_5.on("error", () => {
             dependencyMap(false);
-            closure_1(4860).hideActionSheet();
+            closure_1(5054).hideActionSheet();
           });
           closure_132_5.on("complete", () => {
             dependencyMap(false);
-            closure_1(8842).clearAll(closure_1_0, ChannelMessage.ChannelMessage);
-            const obj = closure_1(8842);
-            closure_1(4860).hideActionSheet();
+            closure_1(9201).clearAll(closure_1_0, ChannelMessage.ChannelMessage);
+            const obj = closure_1(9201);
+            closure_1(5054).hideActionSheet();
           });
           const messages = closure_133_10.getMessages(closure_132_0);
           closure_132_7 = messages.get(closure_133_1(closure_133_2[18]).castChannelIdAsMessageId(closure_132_0));
@@ -151,7 +151,7 @@ let closure_17 = async function _upload2(arg0) {
           closure_1 = 0;
           const items = [];
           closure_1 = HermesBuiltin.arraySpread(closure_132_8, 0);
-          const mapped = closure_132_9.map((item, index) => closure_1_0(7256).getAttachmentPayload(item, index));
+          const mapped = closure_132_9.map((item, index) => closure_1_0(7732).getAttachmentPayload(item, index));
           dependencyMap = mapped;
           if (mapped == null) {
             dependencyMap = [];
@@ -237,12 +237,12 @@ let closure_17 = async function _upload2(arg0) {
   }
 };
 const View = fn(17).View;
-const DraftType = fn(7044).DraftType;
+const DraftType = fn(7232).DraftType;
 const Constants = fn(1085);
 ({ AbortCodes: closure_11, Endpoints: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { paddingHorizontal: 16, paddingTop: 24 }, post: { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, marginBottom: 32, shadowColor: nativeDefault.colors.BLACK, shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.25, shadowRadius: 4, elevation: 4 }, postContent: { marginBottom: 0, padding: 8 }, title: { textAlign: "center", marginBottom: 8 }, description: { textAlign: "center", marginBottom: 32 }, button: null, buttonMargin: null };
 let obj3 = { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, marginBottom: 32, shadowColor: nativeDefault.colors.BLACK, shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.25, shadowRadius: 4, elevation: 4 };
 obj2.button = { borderRadius: nativeDefault.radii.sm };
@@ -253,7 +253,7 @@ let obj4 = { borderRadius: nativeDefault.radii.sm };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/forums/native/AddMediaToOriginalForumPostActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((threadId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddMediaToOriginalForumPostActionSheet(threadId) {
   const cResult = threadId(sendMessage[29]).c(71);
   threadId = threadId.threadId;
   const attachments = threadId.attachments;
@@ -423,7 +423,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((threadId) => {
   cResult[17] = threadId;
   cResult[18] = D;
   const tmpResult4 = threadId(sendMessage[30]);
-}) : ((threadId) => {
+}) : (function AddMediaToOriginalForumPostActionSheet(threadId) {
   threadId = threadId.threadId;
   const attachments = threadId.attachments;
   const sendMessage = threadId.sendMessage;
@@ -458,7 +458,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((threadId) => {
     if (null != stateFromStores) {
       if (null != stateFromStores2) {
         if (null != stateFromStores1) {
-          const result = tracking_Tracking.trackForumAddMediaToOriginalPostClicked({ added: true });
+          const result = Tracking.trackForumAddMediaToOriginalPostClicked({ added: true });
           const obj3 = { threadId, attachments, setIsUploading, guild: tmp2, analyticsLocations };
           _upload(obj3);
         }
@@ -467,7 +467,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((threadId) => {
     ActionSheetActionCreatorsDefault.hideActionSheet();
   }, items6);
   const callback1 = stateFromStores1.useCallback(() => {
-    const result = tracking_Tracking.trackForumAddMediaToOriginalPostClicked({ added: false });
+    const result = Tracking.trackForumAddMediaToOriginalPostClicked({ added: false });
     ActionSheetActionCreatorsDefault.hideActionSheet();
     sendMessage();
   }, items7);

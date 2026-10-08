@@ -1,18 +1,18 @@
-// === Module 15673: UserSettingsDesignSystemTabs ===
+// === Module 15953: UserSettingsDesignSystemTabs ===
 
-// Module 15673 (UserSettingsDesignSystemTabs)
+// Module 15953 (UserSettingsDesignSystemTabs)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4586 */;
-import ColorUtils from "ColorUtils" /* 4733 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Stack_Stack from "Stack/Stack" /* 5600 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import TableSwitchRow from "TableSwitchRow" /* 6705 */;
-import SegmentedControlState from "SegmentedControlState" /* 9317 */;
-import SegmentedControlPages from "SegmentedControlPages" /* 10987 */;
-import Tabs_Tabs from "Tabs/Tabs" /* 12297 */;
-import TabsGradientDefault from "TabsGradient" /* 12440 */;
+import useToken from "useToken" /* 4778 */;
+import ColorUtils from "ColorUtils" /* 4927 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import Stack_Stack from "Stack/Stack" /* 5373 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import TableSwitchRow from "TableSwitchRow" /* 6882 */;
+import SegmentedControlState from "SegmentedControlState" /* 8505 */;
+import SegmentedControlPages from "SegmentedControlPages" /* 11211 */;
+import Tabs_Tabs from "Tabs/Tabs" /* 12395 */;
+import TabsGradientDefault from "TabsGradient" /* 12536 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,11 +21,11 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsxs: closure_7, jsx: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { margin: 16, flex: 1, alignItems: "center" }, item: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderWidth: 2, borderColor: nativeDefault.colors.BORDER_STRONG, flex: 1, alignItems: "center", justifyContent: "center", height: 400 } };
 let closure_9 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useTabItems(arg0, arg1) {
   let sum;
   const cResult = c.c(4);
   const tmp2 = closure_9();
@@ -69,7 +69,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) =>
   cResult[2] = arg1;
   cResult[3] = items;
   tmp3 = items;
-}) : ((arg0, arg1) => {
+}) : (function useTabItems(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   const tmp = closure_9();
@@ -108,7 +108,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) =>
   }, items);
 });
 ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGradientColors() {
   const cResult = c.c(5);
   const token = useToken.useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
   if (cResult[0] !== token) {
@@ -131,7 +131,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[3] = tmp5;
   cResult[4] = items;
   tmp7 = items;
-}) : (() => {
+}) : (function useGradientColors() {
   const token = useToken.useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
   const items = [token, ];
   items[1] = ColorUtils.hexWithOpacity(token, 0);
@@ -142,7 +142,7 @@ let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borde
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemTabs.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSettingsDesignSystemTabs() {
   const cResult = c.c(47);
   [tmp5, require] = noop.useState(0);
   [first, closure_2] = noop.useState(3);
@@ -161,15 +161,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const segmentedControlState = SegmentedControlState.useSegmentedControlState(tmp16);
     const _Symbol = Symbol;
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-      class D {
+      class M {
         constructor(arg0) {
           tmp = closure_0(arg0.nativeEvent.layout.width);
           return;
         }
       }
-      cResult[3] = D;
+      cResult[3] = M;
     } else {
-      class D {
+      class M {
         constructor(arg0) {
           tmp = closure_0(arg0.nativeEvent.layout.width);
           return;
@@ -178,14 +178,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
     const tmp21 = closure_11();
     if (cResult[4] === segmentedControlState) {
-      class D {
+      class M {
         constructor(arg0) {
           tmp = closure_0(arg0.nativeEvent.layout.width);
           return;
         }
       }
       if (cResult[7] === tmp21) {
-        class D {
+        class M {
           constructor(arg0) {
             tmp = closure_0(arg0.nativeEvent.layout.width);
             return;
@@ -194,7 +194,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       }
       let tmp26 = first2;
       if (first2) {
-        class D {
+        class M {
           constructor(arg0) {
             tmp = closure_0(arg0.nativeEvent.layout.width);
             return;
@@ -221,7 +221,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[2] = obj4;
   tmp16 = obj4;
   const tmp12 = _slicedToArray(noop.useState(false), 2);
-}) : (() => {
+}) : (function UserSettingsDesignSystemTabs() {
   const tmp = _slicedToArray(noop.useState(0), 2);
   closure_0 = tmp[1];
   [first, closure_2] = noop.useState(3);

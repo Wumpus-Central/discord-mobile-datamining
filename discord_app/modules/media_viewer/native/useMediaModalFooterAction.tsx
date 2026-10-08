@@ -1,7 +1,7 @@
-// === Module 10944: useMediaModalFooterAction ===
+// === Module 10595: useMediaModalFooterAction ===
 
-// Module 10944 (useMediaModalFooterAction)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
+// Module 10595 (useMediaModalFooterAction)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1271 */;
 import module_570 from "module_570" /* 570 */;
 import size from "module_2" /* 2 */;
 
@@ -19,5 +19,5 @@ export const setMediaModalFooterAction = function setMediaModalFooterAction(foot
   });
 };
 export const clearMediaModalFooterAction = function clearMediaModalFooterAction() {
-  ReactBatchUpdates.batchUpdates(() => state.setState({ footerAction: "r" }));
+  ReactBatchUpdates.batchUpdates(() => state.setState({ footerAction: "create" }));
 };

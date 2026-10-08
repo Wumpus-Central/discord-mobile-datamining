@@ -1,22 +1,22 @@
-// === Module 18039: useInviteAssignableRoles ===
+// === Module 18326: useInviteAssignableRoles ===
 
-// Module 18039 (useInviteAssignableRoles)
-import PermissionUtilsAll from "PermissionUtils" /* 4520 */;
+// Module 18326 (useInviteAssignableRoles)
+import PermissionUtilsAll from "PermissionUtils" /* 4712 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleStore from "GuildRoleStore" /* 2106 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
-import UserStore from "UserStore" /* 1377 */;
+import GuildRoleStore from "GuildRoleStore" /* 2118 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const isEveryoneRole = fn(2107).isEveryoneRole;
+const isEveryoneRole = fn(2119).isEveryoneRole;
 const Permissions = fn(1085).Permissions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/instant_invite/useInviteAssignableRoles.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useInviteAssignableRoles(arg0) {
   _require = arg0;
   const cResult = require("c").c(9);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -145,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
   }
   return tmp12;
-}) : ((arg0) => {
+}) : (function useInviteAssignableRoles(arg0) {
   _require = arg0;
   const items = [GuildRoleStore, UserStore, PermissionStore];
   const items1 = [arg0];

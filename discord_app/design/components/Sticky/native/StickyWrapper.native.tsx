@@ -1,8 +1,8 @@
-// === Module 9794: StickyWrapper ===
+// === Module 10358: StickyWrapper ===
 
-// Module 9794 (StickyWrapper)
+// Module 10358 (StickyWrapper)
 import c from "c" /* 576 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1370 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1382 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Sticky/native/StickyWrapper.native.tsx");
 
-export const StickyWrapper = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const StickyWrapper = ReactCompilerGating.isReactCompilerEnabled() ? (function StickyWrapper(arg0) {
   const cResult = c.c(9);
   ({ header, children, pointerEvents, style } = arg0);
   if (cResult[0] !== style) {
@@ -67,7 +67,7 @@ export const StickyWrapper = ReactCompilerGating.isReactCompilerEnabled() ? ((ar
   cResult[7] = tmp6;
   cResult[8] = tmp13;
   tmp12 = tmp13;
-}) : ((header) => {
+}) : (function StickyWrapper(header) {
   header = header.header;
   const obj = { style: null, pointerEvents: header.pointerEvents, children: null };
   const items = [header.style, closure_5.wrapper];

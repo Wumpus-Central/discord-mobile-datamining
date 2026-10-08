@@ -1,13 +1,13 @@
-// === Module 15659: UserSettingsDesignSystemButtonGroup ===
+// === Module 15939: UserSettingsDesignSystemButtonGroup ===
 
-// Module 15659 (UserSettingsDesignSystemButtonGroup)
+// Module 15939 (UserSettingsDesignSystemButtonGroup)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import ButtonGroup from "ButtonGroup" /* 5599 */;
-import Stack_Stack from "Stack/Stack" /* 5600 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import _modDef6894 from "module_6894" /* 6894 */;
-import IconButton from "IconButton" /* 7586 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import Stack_Stack from "Stack/Stack" /* 5373 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import ButtonGroup from "ButtonGroup" /* 5963 */;
+import _modDef7083 from "module_7083" /* 7083 */;
+import IconButton from "IconButton" /* 8106 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,13 +15,13 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({ container: { padding: 16, paddingBottom: 64 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemButtonGroup.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSettingsDesignSystemButtonGroup() {
   const cResult = c.c(15);
   const tmp4 = closure_7();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const obj7 = {
       accessibilityLabel: "Settings",
       variant: "secondary",
-      icon: _modDef6894,
+      icon: _modDef7083,
       onPress() {
 
         }
@@ -107,7 +107,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const obj11 = {
       accessibilityLabel: "Settings",
       variant: "secondary",
-      icon: _modDef6894,
+      icon: _modDef7083,
       onPress() {
 
         }
@@ -164,7 +164,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const obj17 = {
       accessibilityLabel: "Cancel",
       variant: "secondary",
-      icon: _modDef6894,
+      icon: _modDef7083,
       onPress() {
 
         }
@@ -196,7 +196,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp49 = cResult[14];
   }
   return tmp49;
-}) : (() => {
+}) : (function UserSettingsDesignSystemButtonGroup() {
   const obj = { children: null };
   const obj2 = { style: closure_7().container, children: null };
   const obj3 = { spacing: 24, children: null };
@@ -233,7 +233,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     hasOwnProperty(IconButton.IconButton, {
       accessibilityLabel: "Settings",
       variant: "secondary",
-      icon: _modDef6894,
+      icon: _modDef7083,
       onPress() {
 
       }
@@ -243,7 +243,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const obj12 = {
     accessibilityLabel: "Settings",
     variant: "secondary",
-    icon: _modDef6894,
+    icon: _modDef7083,
     onPress() {
 
     }
@@ -265,7 +265,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   items4[1] = hasOwnProperty(IconButton.IconButton, {
     accessibilityLabel: "Settings",
     variant: "secondary",
-    icon: _modDef6894,
+    icon: _modDef7083,
     onPress() {
 
     }
@@ -293,7 +293,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const obj13 = {
     accessibilityLabel: "Settings",
     variant: "secondary",
-    icon: _modDef6894,
+    icon: _modDef7083,
     onPress() {
 
     }
@@ -309,7 +309,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   items6[1] = hasOwnProperty(IconButton.IconButton, {
     accessibilityLabel: "Cancel",
     variant: "secondary",
-    icon: _modDef6894,
+    icon: _modDef7083,
     onPress() {
 
     }

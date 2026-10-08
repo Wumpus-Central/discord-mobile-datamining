@@ -1,9 +1,9 @@
-// === Module 16670: ConjureNativeStatusLine ===
+// === Module 16933: ConjureNativeStatusLine ===
 
-// Module 16670 (ConjureNativeStatusLine)
+// Module 16933 (ConjureNativeStatusLine)
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import MagicWandIcon from "MagicWandIcon" /* 12515 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import MagicWandIcon from "MagicWandIcon" /* 12611 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let items = [nativeDefault.colors.TEXT_BRAND, nativeDefault.colors.TEXT_FEEDBACK_POSITIVE, nativeDefault.colors.TEXT_FEEDBACK_WARNING, nativeDefault.colors.TEXT_FEEDBACK_INFO];
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { row: { flexDirection: "row", alignItems: "flex-start", paddingVertical: nativeDefault.space.PX_4 }, glyphGutter: { width: 40, marginRight: 12, alignItems: "center" }, label: { flex: 1 }, trailing: null, chevron: null };
 let obj3 = { flexDirection: "row", alignItems: "flex-start", paddingVertical: nativeDefault.space.PX_4 };
 obj2.trailing = { flexShrink: 0, marginLeft: nativeDefault.space.PX_8 };
@@ -38,7 +38,7 @@ function laneTintIndexFor(key) {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/agent_activity/native/ConjureNativeStatusLine.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((line) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureNativeStatusLine(line) {
   let PressableOpacity = line;
   let tmp = glyph;
   const cResult = line(glyph[6]).c(28);
@@ -226,7 +226,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((line) => {
   cResult[12] = trailing;
   cResult[13] = fn;
   tmp17 = fn;
-}) : ((live) => {
+}) : (function ConjureNativeStatusLine(live) {
   const line = live.line;
   let flag = live.settled;
   if (flag === undefined) {

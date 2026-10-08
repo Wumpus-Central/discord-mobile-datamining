@@ -1,19 +1,19 @@
-// === Module 11621: ApplicationCommandOptionValueParser ===
+// === Module 11685: ApplicationCommandOptionValueParser ===
 
-// Module 11621 (ApplicationCommandOptionValueParser)
+// Module 11685 (ApplicationCommandOptionValueParser)
 import _modDef12 from "module_12" /* 12 */;
-import GlobalUtils from "GlobalUtils" /* 1375 */;
-import Server from "Server" /* 1985 */;
-import useChannelName from "useChannelName" /* 5049 */;
-import MessageParser from "MessageParser" /* 7179 */;
+import GlobalUtils from "GlobalUtils" /* 1387 */;
+import Server from "Server" /* 1997 */;
+import useChannelName from "useChannelName" /* 5417 */;
+import MessageParser from "MessageParser" /* 7358 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5698 */;
-import GuildChannelStore from "GuildChannelStore" /* 4513 */;
-import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import GuildRoleStore from "GuildRoleStore" /* 2106 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
-import UserStore from "UserStore" /* 1377 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6039 */;
+import GuildChannelStore from "GuildChannelStore" /* 4705 */;
+import GuildMemberStore from "GuildMemberStore" /* 2124 */;
+import GuildRoleStore from "GuildRoleStore" /* 2118 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const MessageParserDefault = MessageParser;
 
@@ -43,7 +43,7 @@ function getChannels(getGuildId, arr) {
     }
     tmp2 = null == arr || arr.includes(getGuildId.type);
     return guildId(12)(items).map((id) => {
-      const obj = { id: id.id, text: closure_0(5049).computeChannelName(id, UserStore, RelationshipStore) };
+      const obj = { id: id.id, text: closure_0(5417).computeChannelName(id, UserStore, RelationshipStore) };
       return obj;
     });
   } else {
@@ -77,8 +77,8 @@ function getChannels(getGuildId, arr) {
     });
   }
 }
-let closure_6 = fn(2055).isGuildSelectableChannelType;
-const ChannelAutocompleteConstants = fn(5796);
+let closure_6 = fn(2067).isGuildSelectableChannelType;
+const ChannelAutocompleteConstants = fn(5400);
 ({ MENTION_SENTINEL: closure_12, CHANNEL_SENTINEL: map1 } = ChannelAutocompleteConstants);
 function matchPrefix(arg0, arg1, arg2) {
 
@@ -154,7 +154,7 @@ class ApplicationCommandOptionValueParser {
         }
         obj = closure_1;
       }
-      if (type.type === channel(1985).ApplicationCommandOptionType.USER) {
+      if (type.type === channel(1997).ApplicationCommandOptionType.USER) {
         const matchUserResult = matchUser();
         if (null != matchUserResult) {
           return matchUserResult;
@@ -208,13 +208,13 @@ class ApplicationCommandOptionValueParser {
           throw new TypeError("Trying to call a non-function");
         }
       }
-      if (type.type === channel(1985).ApplicationCommandOptionType.ROLE) {
+      if (type.type === channel(1997).ApplicationCommandOptionType.ROLE) {
         const matchRoleResult = matchRole();
         if (null != matchRoleResult) {
           return matchRoleResult;
         }
       }
-      if (type.type === channel(1985).ApplicationCommandOptionType.CHANNEL) {
+      if (type.type === channel(1997).ApplicationCommandOptionType.CHANNEL) {
         arr7 = closure_2_13;
         if (typeof matchPrefix === "function") {
           let firstResult = null;
@@ -239,7 +239,7 @@ class ApplicationCommandOptionValueParser {
         }
         obj8 = getChannels(obj.channel, type.channelTypes);
       }
-      if (type.type === channel(1985).ApplicationCommandOptionType.MENTIONABLE) {
+      if (type.type === channel(1997).ApplicationCommandOptionType.MENTIONABLE) {
         const matchRoleResult1 = matchRole();
         if (null != matchRoleResult1) {
           return matchRoleResult1;
@@ -327,7 +327,7 @@ export const parseOptionValuesForSend = function parseOptionValuesForSend(channe
     return obj3;
   }
 };
-export const useApplicationCommandOptionValueParser = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+export const useApplicationCommandOptionValueParser = ReactCompilerGating.isReactCompilerEnabled() ? (function useApplicationCommandOptionValueParser(channel) {
   const cResult = obj2(576).c(2);
   channel = channel.channel;
   if (cResult[0] !== channel) {
@@ -400,7 +400,7 @@ export const useApplicationCommandOptionValueParser = ReactCompilerGating.isReac
           }
           obj = closure_1;
         }
-        if (type.type === channel(1985).ApplicationCommandOptionType.USER) {
+        if (type.type === channel(1997).ApplicationCommandOptionType.USER) {
           const matchUserResult = matchUser();
           if (null != matchUserResult) {
             return matchUserResult;
@@ -454,13 +454,13 @@ export const useApplicationCommandOptionValueParser = ReactCompilerGating.isReac
             throw new TypeError("Trying to call a non-function");
           }
         }
-        if (type.type === channel(1985).ApplicationCommandOptionType.ROLE) {
+        if (type.type === channel(1997).ApplicationCommandOptionType.ROLE) {
           const matchRoleResult = matchRole();
           if (null != matchRoleResult) {
             return matchRoleResult;
           }
         }
-        if (type.type === channel(1985).ApplicationCommandOptionType.CHANNEL) {
+        if (type.type === channel(1997).ApplicationCommandOptionType.CHANNEL) {
           arr7 = closure_2_13;
           if (typeof matchPrefix === "function") {
             let firstResult = null;
@@ -485,7 +485,7 @@ export const useApplicationCommandOptionValueParser = ReactCompilerGating.isReac
           }
           obj8 = getChannels(obj.channel, type.channelTypes);
         }
-        if (type.type === channel(1985).ApplicationCommandOptionType.MENTIONABLE) {
+        if (type.type === channel(1997).ApplicationCommandOptionType.MENTIONABLE) {
           const matchRoleResult1 = matchRole();
           if (null != matchRoleResult1) {
             return matchRoleResult1;
@@ -529,7 +529,7 @@ export const useApplicationCommandOptionValueParser = ReactCompilerGating.isReac
     tmp2 = cResult[1];
   }
   return tmp2;
-}) : ((channel) => {
+}) : (function useApplicationCommandOptionValueParser(channel) {
   channel = channel.channel;
   const items = [channel];
   return noop.useMemo(() => {
@@ -602,7 +602,7 @@ export const useApplicationCommandOptionValueParser = ReactCompilerGating.isReac
           }
           obj = closure_1;
         }
-        if (type.type === channel(1985).ApplicationCommandOptionType.USER) {
+        if (type.type === channel(1997).ApplicationCommandOptionType.USER) {
           const matchUserResult = matchUser();
           if (null != matchUserResult) {
             return matchUserResult;
@@ -656,13 +656,13 @@ export const useApplicationCommandOptionValueParser = ReactCompilerGating.isReac
             throw new TypeError("Trying to call a non-function");
           }
         }
-        if (type.type === channel(1985).ApplicationCommandOptionType.ROLE) {
+        if (type.type === channel(1997).ApplicationCommandOptionType.ROLE) {
           const matchRoleResult = matchRole();
           if (null != matchRoleResult) {
             return matchRoleResult;
           }
         }
-        if (type.type === channel(1985).ApplicationCommandOptionType.CHANNEL) {
+        if (type.type === channel(1997).ApplicationCommandOptionType.CHANNEL) {
           arr7 = closure_2_13;
           if (typeof matchPrefix === "function") {
             let firstResult = null;
@@ -687,7 +687,7 @@ export const useApplicationCommandOptionValueParser = ReactCompilerGating.isReac
           }
           obj8 = getChannels(obj.channel, type.channelTypes);
         }
-        if (type.type === channel(1985).ApplicationCommandOptionType.MENTIONABLE) {
+        if (type.type === channel(1997).ApplicationCommandOptionType.MENTIONABLE) {
           const matchRoleResult1 = matchRole();
           if (null != matchRoleResult1) {
             return matchRoleResult1;

@@ -1,9 +1,9 @@
-// === Module 13779: GuildBadgeDollarSign ===
+// === Module 14001: GuildBadgeDollarSign ===
 
-// Module 13779 (GuildBadgeDollarSign)
+// Module 14001 (GuildBadgeDollarSign)
 import c from "c" /* 576 */;
-import inlineStyles from "inlineStyles" /* 8169 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 13748 */;
+import inlineStyles from "inlineStyles" /* 7550 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 13970 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgeDollarSign.tsx");
 
-export const GuildBadgeDollarSign = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const GuildBadgeDollarSign = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBadgeDollarSign(arg0) {
   const cResult = c.c(47);
   if (cResult[0] !== arg0) {
     ({ width, height, primaryTintColor } = arg0);
@@ -235,7 +235,7 @@ export const GuildBadgeDollarSign = ReactCompilerGating.isReactCompilerEnabled()
   cResult[45] = num6;
   cResult[46] = tmp73;
   tmp71 = tmp73;
-}) : ((primaryTintColor) => {
+}) : (function GuildBadgeDollarSign(primaryTintColor) {
   let num = primaryTintColor.width;
   if (num === undefined) {
     num = 24;

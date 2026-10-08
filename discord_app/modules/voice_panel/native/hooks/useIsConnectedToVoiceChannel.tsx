@@ -1,9 +1,9 @@
-// === Module 17219: useIsConnectedToVoiceChannel ===
+// === Module 17500: useIsConnectedToVoiceChannel ===
 
-// Module 17219 (useIsConnectedToVoiceChannel)
+// Module 17500 (useIsConnectedToVoiceChannel)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
-import VoiceStateStore from "VoiceStateStore" /* 4915 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5108 */;
+import VoiceStateStore from "VoiceStateStore" /* 5111 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useIsConnectedToVoiceChannel.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsConnectedToVoiceChannel(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -52,7 +52,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp8);
-}) : ((arg0) => {
+}) : (function useIsConnectedToVoiceChannel(arg0) {
   _require = arg0;
   const items = [RTCConnectionStore, VoiceStateStore, AuthenticationStore];
   return require("initialize").useStateFromStores(items, () => {

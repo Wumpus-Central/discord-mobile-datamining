@@ -1,25 +1,25 @@
-// === Module 16065: MessagesFastestList ===
+// === Module 16325: MessagesFastestList ===
 
-// Module 16065 (MessagesFastestList)
+// Module 16325 (MessagesFastestList)
 import nativeDefault from "native" /* 587 */;
-import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 6566 */;
-import FastestListItemTypeDefault from "FastestListItemType" /* 6568 */;
-import MessagesItemChannel from "MessagesItemChannel" /* 15996 */;
-import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 16006 */;
-import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 16008 */;
-import useMessagesData from "useMessagesData" /* 16011 */;
-import MessagesItemHappeningNow from "MessagesItemHappeningNow" /* 16021 */;
-import MessagesItemEmptyState from "MessagesItemEmptyState" /* 16058 */;
-import MessagesItemSeparator from "MessagesItemSeparator" /* 16059 */;
-import MessagesItemSuggestedFriendsHeaderDefault from "MessagesItemSuggestedFriendsHeader" /* 16060 */;
-import MessagesItemAddFriendsWidget from "MessagesItemAddFriendsWidget" /* 16061 */;
+import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 6742 */;
+import FastestListItemTypeDefault from "FastestListItemType" /* 6744 */;
+import MessagesItemChannel from "MessagesItemChannel" /* 16256 */;
+import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 16266 */;
+import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 16268 */;
+import useMessagesData from "useMessagesData" /* 16271 */;
+import MessagesItemHappeningNow from "MessagesItemHappeningNow" /* 16281 */;
+import MessagesItemEmptyState from "MessagesItemEmptyState" /* 16318 */;
+import MessagesItemSeparator from "MessagesItemSeparator" /* 16319 */;
+import MessagesItemSuggestedFriendsHeaderDefault from "MessagesItemSuggestedFriendsHeader" /* 16320 */;
+import MessagesItemAddFriendsWidget from "MessagesItemAddFriendsWidget" /* 16321 */;
 import noop from "module_19" /* 19 */;
 
 const MessagesItemSeparatorDefault = MessagesItemSeparator;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles(() => {
   const obj = { placeholder: { backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
   return obj;
@@ -28,7 +28,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesFastestList.tsx");
 
-export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((listLeft, arg1) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesFastestList(listLeft) {
   const cResult = listItemHeight(listLeft[5]).c(58);
   ({ accessibilityLabel, data, handleScrollAnimated, insetEnd, listItemHeight } = listLeft);
   ({ listItemSizes, listItemSuggestedFriendHeight } = listLeft);
@@ -45,7 +45,7 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
   ({ sections, setAddedFriendSuggestions } = data);
   listRefHappeningNow.useRef(null);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function c() {
+    const fn = function l() {
       return {
         scrollToTop(arg0) {
           const current = ref.current;
@@ -64,7 +64,7 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
   } else {
     [tmp4, tmp5] = cResult;
   }
-  const imperativeHandle = listRefHappeningNow.useImperativeHandle(arg1, tmp4, tmp5);
+  const imperativeHandle = listRefHappeningNow.useImperativeHandle(listLeft.ref, tmp4, tmp5);
   if (cResult[2] === channelFavorites) {
     if (cResult[3] === channels) {
       if (cResult[4] === friendSuggestions) {
@@ -76,7 +76,7 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
                   let tmp8 = cResult[12];
                 }
                 const _Symbol = Symbol;
-                class L {
+                class G {
                   constructor(arg0, arg1, arg2) {
                     tmp = closure_2;
                     tmp2 = null;
@@ -109,7 +109,7 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
                       return num;
                     }
                   }
-                  class L {
+                  class G {
                     constructor(arg0, arg1, arg2) {
                       tmp = closure_2;
                       tmp2 = null;
@@ -156,7 +156,7 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
                     }
                   }
                   tmp12[0] = tmp8;
-                  class L {
+                  class G {
                     constructor(arg0, arg1, arg2) {
                       tmp = closure_2;
                       tmp2 = null;
@@ -242,7 +242,7 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
                         }
                       }
                     }
-                    class L {
+                    class G {
                       constructor(arg0, arg1, arg2) {
                         tmp = closure_2;
                         tmp2 = null;
@@ -282,7 +282,7 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
                       }
                     }
                   }
-                  class L {
+                  class G {
                     constructor(arg0, arg1, arg2) {
                       tmp = closure_2;
                       tmp2 = null;
@@ -357,7 +357,7 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
                 cResult[18] = X;
               }
             }
-            class L {
+            class G {
               constructor(arg0, arg1, arg2) {
                 tmp = closure_2;
                 tmp2 = null;
@@ -380,46 +380,84 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
             }
             cResult[9] = listLeft;
             cResult[11] = scrollPosition;
-            cResult[12] = L;
-            tmp8 = L;
+            cResult[12] = G;
+            tmp8 = G;
           }
         }
       }
     }
   }
-  const fn2 = function u(arg0, row) {
-    if (useMessagesData.MessagesDataSections.FavoriteChannels === arg0) {
-      const obj2 = { channelId: channelFavorites[row].channelId, placeholderHeight: listItemHeight, row };
-      return jsx(MessagesItemChannel.MessagesItemChannelFast, { channelId: channelFavorites[row].channelId, placeholderHeight: listItemHeight, row });
-    } else if (useMessagesData.MessagesDataSections.Channels === arg0) {
-      const obj3 = { channelId: channels[row].channelId, placeholderHeight: listItemHeight, row };
-      return jsx(MessagesItemChannel.MessagesItemChannelFast, { channelId: channels[row].channelId, placeholderHeight: listItemHeight, row });
-    } else if (useMessagesData.MessagesDataSections.Separator === arg0) {
-      return jsx(MessagesItemSeparatorDefault, {});
-    } else if (useMessagesData.MessagesDataSections.SuggestedFriends === arg0) {
-      const obj4 = { suggestedFriend: friendSuggestions[row], onAddFriendSuggestions: setAddedFriendSuggestions };
-      const obj5 = { height: listItemSuggestedFriendHeight };
-      const merged = Object.assign(obj4);
-      return jsx(MessagesItemSuggestedFriend.MessagesItemSuggestedFriendFast, { height: listItemSuggestedFriendHeight });
-    } else if (useMessagesData.MessagesDataSections.Placeholders === arg0) {
-      const obj = { row, height: listItemHeight };
-      return jsx(MessagesItemPlaceholderDefault, { row, height: listItemHeight });
-    } else {
-      const _Error = Error;
-      const _HermesInternal = HermesInternal;
-      const error = new Error("Invalid section " + arg0 + " in Messages renderItem");
-      throw error;
+  class S {
+    constructor(arg0, arg1) {
+      tmp = closure_0;
+      tmp2 = closure_2;
+      if (closure_0(closure_2[6]).MessagesDataSections.FavoriteChannels === listLeft) {
+        tmp23 = jsx;
+        obj1 = { channelId: null, placeholderHeight: null, row: null };
+        tmp24 = channelFavorites;
+        obj1.channelId = channelFavorites[arg1].channelId;
+        tmp25 = listItemHeight;
+        obj1.placeholderHeight = listItemHeight;
+        obj1.row = arg1;
+        return jsx(tmp(tmp2[7]).MessagesItemChannelFast, obj1);
+      } else if (tmp(tmp2[6]).MessagesDataSections.Channels === listLeft) {
+        tmp20 = jsx;
+        obj6 = { channelId: null, placeholderHeight: null, row: null };
+        tmp21 = channels;
+        obj6.channelId = channels[arg1].channelId;
+        tmp22 = listItemHeight;
+        obj6.placeholderHeight = listItemHeight;
+        obj6.row = arg1;
+        return jsx(tmp(tmp2[7]).MessagesItemChannelFast, obj6);
+      } else if (tmp(tmp2[6]).MessagesDataSections.Separator === listLeft) {
+        tmp18 = jsx;
+        tmp19 = closure_1;
+        return jsx(closure_1(tmp2[8]), {});
+      } else if (tmp(tmp2[6]).MessagesDataSections.SuggestedFriends === listLeft) {
+        obj7 = { suggestedFriend: null, onAddFriendSuggestions: null };
+        tmp11 = friendSuggestions;
+        obj7.suggestedFriend = friendSuggestions[arg1];
+        tmp12 = setAddedFriendSuggestions;
+        obj7.onAddFriendSuggestions = setAddedFriendSuggestions;
+        tmp13 = jsx;
+        obj8 = { height: null };
+        tmp14 = closure_1;
+        obj8.height = closure_1;
+        tmp15 = obj8;
+        tmp16 = obj7;
+        merged = Object.assign(obj7);
+        return jsx(tmp(tmp2[9]).MessagesItemSuggestedFriendFast, obj8);
+      } else if (tmp(tmp2[6]).MessagesDataSections.Placeholders === listLeft) {
+        tmp8 = jsx;
+        tmp9 = closure_1;
+        obj = { row: null, height: null };
+        obj.row = arg1;
+        tmp10 = listItemHeight;
+        obj.height = listItemHeight;
+        return jsx(closure_1(tmp2[10]), obj);
+      } else {
+        tmp3 = globalThis;
+        _Error = Error;
+        _HermesInternal = HermesInternal;
+        str = " in Messages renderItem";
+        str2 = "Invalid section ";
+        tmp4 = new.target;
+        tmp5 = new.target;
+        error = new Error("Invalid section " + listLeft + " in Messages renderItem");
+        tmp7 = error;
+        throw error;
+      }
     }
-  };
+  }
   cResult[2] = channelFavorites;
   cResult[3] = channels;
   cResult[4] = friendSuggestions;
   cResult[5] = listItemHeight;
   cResult[6] = listItemSuggestedFriendHeight;
   cResult[7] = setAddedFriendSuggestions;
-  cResult[8] = fn2;
+  cResult[8] = S;
   let obj = listItemHeight(listLeft[5]);
-}) : ((listItemSizes, arg1) => {
+}) : (function MessagesFastestList(listItemSizes) {
   ({ data, listItemHeight } = listItemSizes);
   listItemSizes = listItemSizes.listItemSizes;
   const listItemSuggestedFriendHeight = listItemSizes.listItemSuggestedFriendHeight;
@@ -427,7 +465,7 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
   const listRefHappeningNow = listItemSizes.listRefHappeningNow;
   const listTop = listItemSizes.listTop;
   const scrollPosition = listItemSizes.scrollPosition;
-  ({ accessibilityLabel, handleScrollAnimated, insetEnd, scrollIndicatorInsetBottom } = listItemSizes);
+  ({ accessibilityLabel, handleScrollAnimated, insetEnd, scrollIndicatorInsetBottom, ref } = listItemSizes);
   let tmp = listTop();
   closure_7 = tmp;
   const channels = data.channels;
@@ -436,8 +474,8 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
   const renderHeader = data.renderHeader;
   const renderFooter = data.renderFooter;
   const setAddedFriendSuggestions = data.setAddedFriendSuggestions;
-  const ref = listLeft.useRef(null);
-  const imperativeHandle = listLeft.useImperativeHandle(arg1, () => ({
+  const ref1 = listLeft.useRef(null);
+  const imperativeHandle = listLeft.useImperativeHandle(ref, () => ({
     scrollToTop() {
       let flag = arg0;
       if (arg0 === undefined) {
@@ -573,5 +611,5 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
     obj.sectionItem = { type: FastestListPropsPlaceholder.FastestListPropsPlaceholderType.FEED_ITEM, colorHex: closure_7.placeholder.backgroundColor, labelPadding: nativeDefault.space.PX_4, labelSize: listItemSizes.label, labelSecondarySize: listItemSizes.labelSecondary, padding: nativeDefault.space.PX_16, shape: "circle", shapeSize: listItemSizes.avatar };
     return obj;
   }, items6);
-  return listRefHappeningNow(listItemSizes(listItemSuggestedFriendHeight[17]), { insetEnd, accessibilityLabel, estimatedListSize: "windowSize", keyExtractor: callback2, itemSize: callback1, listId: "dm-messages-list", listFooterSize: memo2.getSize, listFooterAlwaysMounted: true, listHeaderSize: memo1.getSize, listHeaderAlwaysMounted: true, placeholderConfig: memo3, ref, renderItem: callback, renderListFooter: memo2.getComponent, renderListHeader: memo1.getComponent, renderSectionHeader: memo.getComponent, scrollIndicatorInsetEnd: scrollIndicatorInsetBottom, scrollReporting: "animatedCallbacks", scrollHandlerAnimated: handleScrollAnimated, sections: data.sections, sectionHeaderSize: memo.getSize });
-})));
+  return listRefHappeningNow(listItemSizes(listItemSuggestedFriendHeight[17]), { insetEnd, accessibilityLabel, estimatedListSize: "windowSize", keyExtractor: callback2, itemSize: callback1, listId: "dm-messages-list", listFooterSize: memo2.getSize, listFooterAlwaysMounted: true, listHeaderSize: memo1.getSize, listHeaderAlwaysMounted: true, placeholderConfig: memo3, ref: ref1, renderItem: callback, renderListFooter: memo2.getComponent, renderListHeader: memo1.getComponent, renderSectionHeader: memo.getComponent, scrollIndicatorInsetEnd: scrollIndicatorInsetBottom, scrollReporting: "animatedCallbacks", scrollHandlerAnimated: handleScrollAnimated, sections: data.sections, sectionHeaderSize: memo.getSize });
+}));

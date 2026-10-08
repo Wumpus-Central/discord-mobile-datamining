@@ -1,12 +1,12 @@
-// === Module 17725: AutomodTriggerConfigs ===
+// === Module 18012: AutomodTriggerConfigs ===
 
-// Module 17725 (AutomodTriggerConfigs)
+// Module 18012 (AutomodTriggerConfigs)
 import util from "util" /* 1126 */;
-import guild_automod_PermissionUtils from "guild_automod/PermissionUtils" /* 17038 */;
+import guild_automod_PermissionUtils from "guild_automod/PermissionUtils" /* 17319 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const Constants = fn(11487);
+const Constants = fn(11473);
 ({ AutomodActionType, AutomodEventType, AutomodTriggerType } = Constants);
 const mentionTotalLimit = Constants.MENTION_SPAM_LIMIT_DEFAULT;
 let obj = { NEW: "new", RECOMMENDED: "recommended", BETA: "beta", ALPHA: "alpha" };
@@ -226,7 +226,7 @@ export const validateRuleByTriggerConfigOrThrow = function validateRuleByTrigger
     throw error2;
   }
 };
-export const useAvailableTriggerTypes = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useAvailableTriggerTypes = ReactCompilerGating.isReactCompilerEnabled() ? (function useAvailableTriggerTypes(arg0) {
   const cResult = isUserProfileRuleEnabled(isApplicationRuleEnabled[4]).c(3);
   const obj = isUserProfileRuleEnabled(isApplicationRuleEnabled[4]);
   isUserProfileRuleEnabled = isUserProfileRuleEnabled(isApplicationRuleEnabled[5]).useIsUserProfileRuleEnabled(arg0);
@@ -270,7 +270,7 @@ export const useAvailableTriggerTypes = ReactCompilerGating.isReactCompilerEnabl
   cResult[1] = isUserProfileRuleEnabled;
   cResult[2] = reduced;
   tmp4 = reduced;
-}) : ((arg0) => {
+}) : (function useAvailableTriggerTypes(arg0) {
   isUserProfileRuleEnabled = isUserProfileRuleEnabled(isApplicationRuleEnabled[5]).useIsUserProfileRuleEnabled(arg0);
   const obj = isUserProfileRuleEnabled(isApplicationRuleEnabled[5]);
   isApplicationRuleEnabled = isUserProfileRuleEnabled(isApplicationRuleEnabled[6]).useIsApplicationRuleEnabled(arg0);

@@ -1,11 +1,11 @@
-// === Module 16115: useFavoritesGuildHeaderAction ===
+// === Module 16375: useFavoritesGuildHeaderAction ===
 
-// Module 16115 (useFavoritesGuildHeaderAction)
+// Module 16375 (useFavoritesGuildHeaderAction)
 import c from "c" /* 576 */;
 import router_utils from "router_utils" /* 1112 */;
 import util from "util" /* 1126 */;
-import _modDef3395 from "module_3395" /* 3395 */;
-import FavoritesHooks from "FavoritesHooks" /* 10049 */;
+import _modDef3439 from "module_3439" /* 3439 */;
+import FavoritesHooks from "FavoritesHooks" /* 10294 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildHeaderAction.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavoritesGuildHeaderAction() {
   let tmp2 = dependencyMap;
   const cResult = c.c(6);
   const hasAccess = FavoritesHooks.useFavoritesAccess().hasAccess;
@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   if (cResult[1] !== hasAccess) {
     const intl = util.intl;
     if (hasAccess) {
-      tmp2 = _modDef3395;
+      tmp2 = _modDef3439;
       let ojM1xJ = tmp2.G9fGlP;
     } else {
       ojM1xJ = util.t.ojM1xJ;
@@ -51,7 +51,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     cResult[5] = obj3;
     tmp10 = obj3;
   }
-}) : (() => {
+}) : (function useFavoritesGuildHeaderAction() {
   const hasAccess = FavoritesHooks.useFavoritesAccess().hasAccess;
   const obj2 = { isPreview: !hasAccess, label: null, exitPreview: null };
   const callback = noop.useCallback(() => {
@@ -59,7 +59,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }, []);
   const intl = util.intl;
   if (hasAccess) {
-    let ojM1xJ = _modDef3395.G9fGlP;
+    let ojM1xJ = _modDef3439.G9fGlP;
   } else {
     ojM1xJ = util.t.ojM1xJ;
   }

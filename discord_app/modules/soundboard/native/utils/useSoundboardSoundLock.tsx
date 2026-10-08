@@ -1,25 +1,25 @@
-// === Module 17269: useSoundboardSoundLock ===
+// === Module 17550: useSoundboardSoundLock ===
 
-// Module 17269 (useSoundboardSoundLock)
+// Module 17550 (useSoundboardSoundLock)
 import util from "util" /* 1126 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4534 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4574 */;
-import _modDef4831 from "module_4831" /* 4831 */;
-import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 7491 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7494 */;
-import SoundboardSoundPreviewMenuExperiment2 from "SoundboardSoundPreviewMenuExperiment" /* 17270 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4726 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4766 */;
+import _modDef5025 from "module_5025" /* 5025 */;
+import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 9216 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 9219 */;
+import SoundboardSoundPreviewMenuExperiment2 from "SoundboardSoundPreviewMenuExperiment" /* 17551 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const DEFAULT_SOUND_GUILD_ID = fn(5689).DEFAULT_SOUND_GUILD_ID;
+const DEFAULT_SOUND_GUILD_ID = fn(5426).DEFAULT_SOUND_GUILD_ID;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/soundboard/native/utils/useSoundboardSoundLock.tsx");
 
-export const useSoundboardSoundLock = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId, guild_id) => {
+export const useSoundboardSoundLock = ReactCompilerGating.isReactCompilerEnabled() ? (function useSoundboardSoundLock(guildId, guild_id) {
   _require = guildId;
   const cResult = require("c").c(19);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -72,14 +72,11 @@ export const useSoundboardSoundLock = ReactCompilerGating.isReactCompilerEnabled
                     tmp16 = closure_0;
                     tmp17 = closure_2;
                     tmp15 = closure_1(closure_2[9]);
-                    SOUNDBOARD_EVERYWHERE = closure_0(closure_2[10]).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE;
                     tmp18 = undefined;
                     if (SoundboardSoundPreviewMenuExperiment.getConfig({ location: "PremiumUpsellActionSheet" }).returnOnUpsellDismiss) {
                       tmp18 = guildId;
                     }
-                    tmp19 = SOUNDBOARD_EVERYWHERE;
-                    tmp20 = tmp18;
-                    tmp15Result = tmp15(SOUNDBOARD_EVERYWHERE, undefined, undefined, tmp18);
+                    tmp15Result = tmp15(closure_0(closure_2[10]).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE, undefined, tmp18);
                   } else {
                     tmp = closure_0;
                     if (!closure_0.available) {
@@ -126,14 +123,11 @@ export const useSoundboardSoundLock = ReactCompilerGating.isReactCompilerEnabled
                           tmp16 = closure_0;
                           tmp17 = closure_2;
                           tmp15 = closure_1(closure_2[9]);
-                          SOUNDBOARD_EVERYWHERE = closure_0(closure_2[10]).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE;
                           tmp18 = undefined;
                           if (SoundboardSoundPreviewMenuExperiment.getConfig({ location: "PremiumUpsellActionSheet" }).returnOnUpsellDismiss) {
                             tmp18 = guildId;
                           }
-                          tmp19 = SOUNDBOARD_EVERYWHERE;
-                          tmp20 = tmp18;
-                          tmp15Result = tmp15(SOUNDBOARD_EVERYWHERE, undefined, undefined, tmp18);
+                          tmp15Result = tmp15(closure_0(closure_2[10]).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE, undefined, tmp18);
                         } else {
                           tmp = closure_0;
                           if (!closure_0.available) {
@@ -169,14 +163,11 @@ export const useSoundboardSoundLock = ReactCompilerGating.isReactCompilerEnabled
                         tmp16 = closure_0;
                         tmp17 = closure_2;
                         tmp15 = closure_1(closure_2[9]);
-                        SOUNDBOARD_EVERYWHERE = closure_0(closure_2[10]).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE;
                         tmp18 = undefined;
                         if (SoundboardSoundPreviewMenuExperiment.getConfig({ location: "PremiumUpsellActionSheet" }).returnOnUpsellDismiss) {
                           tmp18 = guildId;
                         }
-                        tmp19 = SOUNDBOARD_EVERYWHERE;
-                        tmp20 = tmp18;
-                        tmp15Result = tmp15(SOUNDBOARD_EVERYWHERE, undefined, undefined, tmp18);
+                        tmp15Result = tmp15(closure_0(closure_2[10]).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE, undefined, tmp18);
                       } else {
                         tmp = closure_0;
                         if (!closure_0.available) {
@@ -213,14 +204,11 @@ export const useSoundboardSoundLock = ReactCompilerGating.isReactCompilerEnabled
                     tmp16 = closure_0;
                     tmp17 = closure_2;
                     tmp15 = closure_1(closure_2[9]);
-                    SOUNDBOARD_EVERYWHERE = closure_0(closure_2[10]).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE;
                     tmp18 = undefined;
                     if (SoundboardSoundPreviewMenuExperiment.getConfig({ location: "PremiumUpsellActionSheet" }).returnOnUpsellDismiss) {
                       tmp18 = guildId;
                     }
-                    tmp19 = SOUNDBOARD_EVERYWHERE;
-                    tmp20 = tmp18;
-                    tmp15Result = tmp15(SOUNDBOARD_EVERYWHERE, undefined, undefined, tmp18);
+                    tmp15Result = tmp15(closure_0(closure_2[10]).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE, undefined, tmp18);
                   } else {
                     tmp = closure_0;
                     if (!closure_0.available) {
@@ -256,14 +244,11 @@ export const useSoundboardSoundLock = ReactCompilerGating.isReactCompilerEnabled
                 tmp16 = closure_0;
                 tmp17 = closure_2;
                 tmp15 = closure_1(closure_2[9]);
-                SOUNDBOARD_EVERYWHERE = closure_0(closure_2[10]).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE;
                 tmp18 = undefined;
                 if (SoundboardSoundPreviewMenuExperiment.getConfig({ location: "PremiumUpsellActionSheet" }).returnOnUpsellDismiss) {
                   tmp18 = guildId;
                 }
-                tmp19 = SOUNDBOARD_EVERYWHERE;
-                tmp20 = tmp18;
-                tmp15Result = tmp15(SOUNDBOARD_EVERYWHERE, undefined, undefined, tmp18);
+                tmp15Result = tmp15(closure_0(closure_2[10]).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE, undefined, tmp18);
               } else {
                 tmp = closure_0;
                 if (!closure_0.available) {
@@ -315,7 +300,7 @@ export const useSoundboardSoundLock = ReactCompilerGating.isReactCompilerEnabled
   cResult[5] = result1;
   tmp8 = result1;
   const tmpResult2 = require("SoundboardUtils");
-}) : ((guildId, guild_id) => {
+}) : (function useSoundboardSoundLock(guildId, guild_id) {
   _require = guildId;
   let BARTXV = dependencyMap;
   const items = [UserStore];

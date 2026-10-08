@@ -1,6 +1,6 @@
-// === Module 13476: NativeCompressionModule ===
+// === Module 13776: NativeCompressionModule ===
 
-// Module 13476 (NativeCompressionModule)
+// Module 13776 (NativeCompressionModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

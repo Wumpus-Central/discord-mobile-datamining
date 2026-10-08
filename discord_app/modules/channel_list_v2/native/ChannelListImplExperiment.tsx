@@ -1,7 +1,7 @@
-// === Module 16143: ChannelListImplExperiment ===
+// === Module 16403: ChannelListImplExperiment ===
 
-// Module 16143 (ChannelListImplExperiment)
-import ApexExperiment from "ApexExperiment" /* 1440 */;
+// Module 16403 (ChannelListImplExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", name: "2026-09-channel-list-impl", defaultConfig: { list: "fast" }, variations: null };

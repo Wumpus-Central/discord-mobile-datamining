@@ -1,16 +1,16 @@
-// === Module 12824: useCardGridLayout ===
+// === Module 12971: useCardGridLayout ===
 
-// Module 12824 (useCardGridLayout)
+// Module 12971 (useCardGridLayout)
 import c from "c" /* 576 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
-import Constants from "Constants" /* 6714 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
+import Constants from "Constants" /* 6891 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const PROFILE_SIDE_PADDING = Constants.PROFILE_SIDE_PADDING;
 let result = size.fileFinishedImporting("modules/user_profile/hooks/native/useCardGridLayout.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCardGridLayout(arg0) {
   const cResult = c.c(12);
   if (cResult[0] !== arg0) {
     let obj2 = arg0;
@@ -78,7 +78,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const diff1 = num6 - 1;
     if (diff < bound1 * num6 + num5 * diff1) {
       if (cResult[5] !== num5) {
-        const obj3 = { columns: 1, cardWidth: "Array", rowWidth: "apply", gap: num5 };
+        const obj3 = { columns: 1, cardWidth: "Array", rowWidth: "backgroundColor", gap: num5 };
         cResult[5] = num5;
         cResult[6] = obj3;
         let tmp15 = obj3;
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = num5;
   cResult[4] = diff2;
   tmp6 = diff2;
-}) : (() => {
+}) : (function useCardGridLayout() {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -166,7 +166,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const bound1 = Math.min(Math.max(tmp4, num), num2);
   const diff2 = num4 - 1;
   if (diff < bound1 * num4 + num3 * diff2) {
-    const obj2 = { columns: 1, cardWidth: "Array", rowWidth: "apply", gap: num3 };
+    const obj2 = { columns: 1, cardWidth: "Array", rowWidth: "backgroundColor", gap: num3 };
     let obj3 = obj2;
   } else {
     obj3 = { columns: num4, cardWidth: bound1, rowWidth: bound1 * num4 + num3 * diff2, gap: num3 };

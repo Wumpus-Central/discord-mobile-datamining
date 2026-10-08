@@ -1,16 +1,16 @@
-// === Module 17083: useMessageRequestTimestampText ===
+// === Module 17364: useMessageRequestTimestampText ===
 
-// Module 17083 (useMessageRequestTimestampText)
+// Module 17364 (useMessageRequestTimestampText)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import _modDef4467 from "module_4467" /* 4467 */;
-import ReadStateStore from "ReadStateStore" /* 4911 */;
+import _modDef4659 from "module_4659" /* 4659 */;
+import ReadStateStore from "ReadStateStore" /* 6040 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 fn(558);
 const ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMessageRequestTimestampText(id) {
   _require = id;
   const cResult = require("c").c(7);
   const obj = require("c");
@@ -24,7 +24,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
     first = cResult[0];
   }
   if (cResult[1] !== id.id) {
-    const fn = function l() {
+    const fn = function n() {
       return ReadStateStore.lastMessageId(id.id);
     };
     cResult[1] = id.id;
@@ -57,9 +57,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
     let str = "";
     let calendarResult;
     if (null != extractTimestampResult) {
-      calendarResult = _modDef4467(extractTimestampResult).calendar();
+      calendarResult = _modDef4659(extractTimestampResult).calendar();
       str = forResult;
-      const obj7 = _modDef4467(extractTimestampResult);
+      const obj7 = _modDef4659(extractTimestampResult);
     }
     cResult[3] = stateFromStores;
     cResult[4] = messageRequestPreview;
@@ -73,7 +73,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
     extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(lastMessageId);
   }
   forResult = Symbol.for("react.early_return_sentinel");
-}) : ((arg0) => {
+}) : (function useMessageRequestTimestampText(arg0) {
   _require = arg0;
   const messageRequestPreview = require("useMessageRequestPreview").useMessageRequestPreview(arg0);
   const obj2 = { lastMessageId: null };
@@ -88,8 +88,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
     }
     let str = "";
     if (null != extractTimestampResult) {
-      str = _modDef4467(extractTimestampResult).calendar();
-      const obj6 = _modDef4467(extractTimestampResult);
+      str = _modDef4659(extractTimestampResult).calendar();
+      const obj6 = _modDef4659(extractTimestampResult);
     }
     return str;
   }
@@ -103,7 +103,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_request/hooks/useMessageRequestTimestampText.tsx");
 
 export const useMessageRequestTimestampText = tmp2;
-export const useMessageRequestRelativeTimestampText = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
+export const useMessageRequestRelativeTimestampText = ReactCompilerGating.isReactCompilerEnabled() ? (function useMessageRequestRelativeTimestampText(id) {
   _require = id;
   const cResult = require("c").c(7);
   const obj = require("c");
@@ -116,7 +116,7 @@ export const useMessageRequestRelativeTimestampText = ReactCompilerGating.isReac
     first = cResult[0];
   }
   if (cResult[1] !== id.id) {
-    const fn = function l() {
+    const fn = function n() {
       return ReadStateStore.lastMessageId(id.id);
     };
     cResult[1] = id.id;
@@ -149,9 +149,9 @@ export const useMessageRequestRelativeTimestampText = ReactCompilerGating.isReac
     let str = "";
     let timestampString;
     if (null != extractTimestampResult) {
-      timestampString = tmp(7420).getTimestampString(extractTimestampResult);
+      timestampString = tmp(7895).getTimestampString(extractTimestampResult);
       str = forResult;
-      const tmpResult2 = tmp(7420);
+      const tmpResult2 = tmp(7895);
     }
     cResult[3] = stateFromStores;
     cResult[4] = messageRequestPreview;
@@ -165,7 +165,7 @@ export const useMessageRequestRelativeTimestampText = ReactCompilerGating.isReac
     extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(lastMessageId);
   }
   forResult = Symbol.for("react.early_return_sentinel");
-}) : ((arg0) => {
+}) : (function useMessageRequestRelativeTimestampText(arg0) {
   _require = arg0;
   const messageRequestPreview = require("useMessageRequestPreview").useMessageRequestPreview(arg0);
   const obj2 = { lastMessageId: null };
@@ -181,8 +181,8 @@ export const useMessageRequestRelativeTimestampText = ReactCompilerGating.isReac
     }
     let str = "";
     if (null != extractTimestampResult) {
-      str = tmp(7420).getTimestampString(extractTimestampResult);
-      const tmpResult = tmp(7420);
+      str = tmp(7895).getTimestampString(extractTimestampResult);
+      const tmpResult = tmp(7895);
     }
     return str;
   }

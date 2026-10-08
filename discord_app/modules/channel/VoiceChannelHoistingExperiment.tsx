@@ -1,9 +1,9 @@
-// === Module 17506: VoiceChannelHoistingExperiment ===
+// === Module 17788: VoiceChannelHoistingExperiment ===
 
-// Module 17506 (VoiceChannelHoistingExperiment)
+// Module 17788 (VoiceChannelHoistingExperiment)
 import c from "c" /* 576 */;
-import ExperimentConstants from "ExperimentConstants" /* 4783 */;
-import createExperiment from "module_4780" /* 4780 */;
+import ExperimentConstants from "ExperimentConstants" /* 4977 */;
+import createExperiment from "module_4974" /* 4974 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -14,7 +14,7 @@ const experiment = createExperiment.createExperiment(obj);
 const result = size.fileFinishedImporting("modules/channel/VoiceChannelHoistingExperiment.tsx");
 
 export const VoiceChannelHoistingExperiment = experiment;
-export const useVoiceChannelHoistingExperiment = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId, location) => {
+export const useVoiceChannelHoistingExperiment = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoiceChannelHoistingExperiment(guildId, location) {
   const cResult = c.c(4);
   if (cResult[0] === guildId) {
     if (cResult[1] === location) {
@@ -35,4 +35,6 @@ export const useVoiceChannelHoistingExperiment = ReactCompilerGating.isReactComp
   cResult[1] = location;
   cResult[2] = obj3;
   tmp2 = obj3;
-}) : ((guildId, location) => experiment.useExperiment({ guildId, location }, { autoTrackExposure: false }));
+}) : (function useVoiceChannelHoistingExperiment(guildId, location) {
+  return experiment.useExperiment({ guildId, location }, { autoTrackExposure: false });
+});

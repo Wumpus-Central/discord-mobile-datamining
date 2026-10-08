@@ -1,6 +1,6 @@
-// === Module 13266: useDebounce ===
+// === Module 13567: useDebounce ===
 
-// Module 13266 (useDebounce)
+// Module 13567 (useDebounce)
 import c from "c" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -10,7 +10,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("hooks/useDebounce.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useDebounce(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   const cResult = c.c(4);
@@ -39,7 +39,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   tmp5 = items;
   tmp4 = fn;
   const tmp2 = _slicedToArray(noop.useState(arg0), 2);
-}) : ((arg0, arg1) => {
+}) : (function useDebounce(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   const tmp = _slicedToArray(noop.useState(arg0), 2);

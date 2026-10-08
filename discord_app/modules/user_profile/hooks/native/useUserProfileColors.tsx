@@ -1,23 +1,23 @@
-// === Module 7921: useUserProfileColors ===
+// === Module 8340: useUserProfileColors ===
 
-// Module 7921 (useUserProfileColors)
+// Module 8340 (useUserProfileColors)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useThemeDefault from "useTheme" /* 4797 */;
-import useProfileThemeValues from "useProfileThemeValues" /* 6690 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import useThemeDefault from "useTheme" /* 4991 */;
+import useProfileThemeValues from "useProfileThemeValues" /* 6867 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 const initialize = obj(504);
 const utils_ColorUtils = obj(1103);
-const useToken = obj(4586);
-const UserProfileGradientUtils = obj(7912);
+const useToken = obj(4778);
+const UserProfileGradientUtils = obj(8331);
 require = fn;
 const ThemeTypes = fn(1096).ThemeTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileColors.tsx");
 
-export const useUserProfileColors = ReactCompilerGating.isReactCompilerEnabled() ? ((theme) => {
+export const useUserProfileColors = ReactCompilerGating.isReactCompilerEnabled() ? (function useUserProfileColors(theme) {
   let obj = require;
   let int2hexResult = dependencyMap;
   const cResult = c.c(21);
@@ -26,7 +26,7 @@ export const useUserProfileColors = ReactCompilerGating.isReactCompilerEnabled()
   const profileThemeValues = useProfileThemeValues.useProfileThemeValues(theme.theme);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AccessibilityStore];
-    const fn = function t() {
+    const fn = function s() {
       return AccessibilityStore.syncProfileThemeWithUserTheme;
     };
     cResult[0] = items;
@@ -136,7 +136,7 @@ export const useUserProfileColors = ReactCompilerGating.isReactCompilerEnabled()
   cResult[8] = obj5;
   tmp16 = obj5;
   const objResult17 = useToken;
-}) : ((theme) => {
+}) : (function useUserProfileColors(theme) {
   ({ primaryColor, secondaryColor } = theme);
   const tmp2 = useThemeDefault();
   const profileThemeValues = useProfileThemeValues.useProfileThemeValues(theme.theme);

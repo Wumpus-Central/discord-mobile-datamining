@@ -1,26 +1,26 @@
-// === Module 9989: SlideoutButton ===
+// === Module 9519: SlideoutButton ===
 
-// Module 9989 (SlideoutButton)
+// Module 9519 (SlideoutButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import Pressables from "Pressables" /* 5916 */;
+import native from "native" /* 1200 */;
+import Pressables from "Pressables" /* 6189 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { button: { alignSelf: "flex-end", justifyContent: "center", alignItems: "center" }, buttonText: null };
 let obj3 = { color: null, fontSize: 12, fontFamily: null, marginTop: 2, marginHorizontal: 2, textAlign: "center" };
-const ColorUtils = fn(4733);
+const ColorUtils = fn(4927);
 obj3.color = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.6);
 obj3.fontFamily = fn(1085).Fonts.PRIMARY_SEMIBOLD;
 obj2.buttonText = obj3;
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function SlideoutButton(arg0) {
   const cResult = c.c(20);
   ({ onPress, color, IconComponent, title, height } = arg0);
   let num = 60;
@@ -104,7 +104,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = num;
   cResult[2] = size;
   tmp5 = size;
-}) : ((arg0) => {
+}) : (function SlideoutButton(arg0) {
   ({ title, height } = arg0);
   ({ onPress, color, IconComponent } = arg0);
   if (height === undefined) {

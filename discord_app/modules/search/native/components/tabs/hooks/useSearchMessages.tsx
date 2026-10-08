@@ -1,9 +1,9 @@
-// === Module 16904: useSearchMessages ===
+// === Module 17185: useSearchMessages ===
 
-// Module 16904 (useSearchMessages)
-import SearchUtils from "SearchUtils" /* 11987 */;
-import SearchMessageStore from "SearchMessageStore" /* 6794 */;
-import SearchQueryStore from "SearchQueryStore" /* 11994 */;
+// Module 17185 (useSearchMessages)
+import SearchUtils from "SearchUtils" /* 12060 */;
+import SearchMessageStore from "SearchMessageStore" /* 6067 */;
+import SearchQueryStore from "SearchQueryStore" /* 12067 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/tabs/hooks/useSearchMessages.tsx");
 
-export const useSearchMessages = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export const useSearchMessages = ReactCompilerGating.isReactCompilerEnabled() ? (function useSearchMessages(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   const cResult = require("c").c(5);
@@ -30,7 +30,7 @@ export const useSearchMessages = ReactCompilerGating.isReactCompilerEnabled() ? 
     }
     return tmp(504).useStateFromStores(first, tmp7, tmp8);
   }
-  const fn = function u() {
+  const fn = function o() {
     const searchResultsQuery = SearchQueryStore.getSearchResultsQuery(closure_0);
     return SearchMessageStore.getMessages(SearchUtils.getSearchTabFetchId(closure_0, closure_1, searchResultsQuery));
   };
@@ -43,7 +43,7 @@ export const useSearchMessages = ReactCompilerGating.isReactCompilerEnabled() ? 
   tmp7 = fn;
   const obj = require("c");
   tmp = _require;
-}) : ((arg0, arg1) => {
+}) : (function useSearchMessages(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   const items = [SearchQueryStore, SearchMessageStore];

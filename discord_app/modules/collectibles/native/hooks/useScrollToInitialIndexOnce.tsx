@@ -1,6 +1,6 @@
-// === Module 15748: useScrollToInitialIndexOnce ===
+// === Module 16006: useScrollToInitialIndexOnce ===
 
-// Module 15748 (useScrollToInitialIndexOnce)
+// Module 16006 (useScrollToInitialIndexOnce)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/hooks/useScrollToInitialIndexOnce.tsx");
 
 export const INITIAL_SCROLL_DELAY_MS = 100;
-export const useScrollToInitialIndexOnce = ReactCompilerGating.isReactCompilerEnabled() ? ((initialScrollIndex) => {
+export const useScrollToInitialIndexOnce = ReactCompilerGating.isReactCompilerEnabled() ? (function useScrollToInitialIndexOnce(initialScrollIndex) {
   const cResult = c.c(7);
   initialScrollIndex = initialScrollIndex.initialScrollIndex;
   const shouldScroll = initialScrollIndex.shouldScroll;
@@ -66,7 +66,7 @@ export const useScrollToInitialIndexOnce = ReactCompilerGating.isReactCompilerEn
   cResult[6] = items;
   tmp3 = items;
   tmp2 = fn;
-}) : ((initialScrollIndex) => {
+}) : (function useScrollToInitialIndexOnce(initialScrollIndex) {
   initialScrollIndex = initialScrollIndex.initialScrollIndex;
   const shouldScroll = initialScrollIndex.shouldScroll;
   const flashListRef = initialScrollIndex.flashListRef;

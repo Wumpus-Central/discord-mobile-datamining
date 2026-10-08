@@ -1,30 +1,30 @@
-// === Module 17225: FramePanelPIPView ===
+// === Module 17506: FramePanelPIPView ===
 
-// Module 17225 (FramePanelPIPView)
+// Module 17506 (FramePanelPIPView)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import FrameRenderTargetDefault from "FrameRenderTarget" /* 16632 */;
-import FrameStackLevel from "FrameStackLevel" /* 16636 */;
-import ActivityPanelPIPView from "ActivityPanelPIPView" /* 17199 */;
-import FramePanelStateContextDefault from "FramePanelStateContext" /* 17223 */;
+import FrameRenderTargetDefault from "FrameRenderTarget" /* 16894 */;
+import FrameStackLevel from "FrameStackLevel" /* 16898 */;
+import ActivityPanelPIPView from "ActivityPanelPIPView" /* 17480 */;
+import FramePanelStateContextDefault from "FramePanelStateContext" /* 17504 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 9000 */;
+import FramesStore from "FramesStore" /* 10612 */;
 
 require = fn;
-const FramesConstants = fn(8738);
+const FramesConstants = fn(10613);
 ({ asLaunched: hasOwnProperty, FrameLayoutModes: metroRequire, getPipOrientationLockStateForFrame: closure_7 } = FramesConstants);
-const portraitSafeAreasConfig = fn(17200).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
+const portraitSafeAreasConfig = fn(17481).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/panel/native/FramePanelPIPView.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function FramePanelPIPView(arg0) {
   const cResult = c.c(13);
   ({ transitionState, transitionCleanUp } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [FramesStore];
-    const fn = function f() {
+    const fn = function u() {
       return closure_1_5(mainFrame.getMainFrame());
     };
     cResult[0] = items;
@@ -83,7 +83,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   cResult[6] = tmp13;
   tmp12 = tmp13;
   const tmpResult2 = ActivityPanelPIPView;
-}) : ((transitionState) => {
+}) : (function FramePanelPIPView(transitionState) {
   transitionState = transitionState.transitionState;
   const transitionCleanUp = transitionState.transitionCleanUp;
   let stateFromStores;

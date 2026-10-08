@@ -1,23 +1,23 @@
-// === Module 13402: useMarketablePowerupPerks ===
+// === Module 13702: useMarketablePowerupPerks ===
 
-// Module 13402 (useMarketablePowerupPerks)
-import Powerups from "Powerups" /* 4777 */;
-import useGameServerPerkDefault from "useGameServerPerk" /* 12250 */;
+// Module 13702 (useMarketablePowerupPerks)
+import Powerups from "Powerups" /* 4971 */;
+import useGameServerPerkDefault from "useGameServerPerk" /* 12329 */;
 import noop from "module_19" /* 19 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 4773 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4967 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GuildPowerupsConstants = fn(4774);
+const GuildPowerupsConstants = fn(4968);
 const GuildPowerupType = GuildPowerupsConstants.GuildPowerupType;
-let items = [...Array.from(tmp2.GUILD_TAG_BADGE_PACKS_WAVE_ONE_SKU_ID_SET), ...Array.from(tmp2.GUILD_TAG_BADGE_PACKS_WAVE_TWO_SKU_ID_SET), fn(4777).VANITY_URL_POWERUP_SKU_ID];
+let items = [...Array.from(tmp2.GUILD_TAG_BADGE_PACKS_WAVE_ONE_SKU_ID_SET), ...Array.from(tmp2.GUILD_TAG_BADGE_PACKS_WAVE_TWO_SKU_ID_SET), fn(4971).VANITY_URL_POWERUP_SKU_ID];
 let set = new Set(items);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useMarketablePowerupPerks.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useMarketablePowerupPerks(arg0) {
   _require = arg0;
   const cResult = require("c").c(13);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -28,7 +28,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function o() {
+    const fn = function _() {
       const stateForGuild = GuildPowerupsStore.getStateForGuild(closure_0);
       let tmp2;
       if (stateForGuild != null) {
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const _Set = Set;
     set = new Set(set);
     if (serverThemeRollbackEnabled) {
-      set.add(tmp(4777).GUILD_POWERUP_GUILD_THEME_SKU_ID);
+      set.add(tmp(4971).GUILD_POWERUP_GUILD_THEME_SKU_ID);
     }
     cResult[3] = serverThemeRollbackEnabled;
     cResult[4] = set;
@@ -99,7 +99,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[9] = items2;
   arr3 = items2;
   const tmpResult2 = require("ServerThemeExperiment");
-}) : ((arg0) => {
+}) : (function useMarketablePowerupPerks(arg0) {
   _require = arg0;
   let items = [memo];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     return tmp2;
   });
-  let tmp2 = stateFromStores(12250)(arg0);
+  let tmp2 = stateFromStores(12329)(arg0);
   dependencyMap = tmp2;
   const obj = require("initialize");
   const serverThemeRollbackEnabled = require("ServerThemeExperiment").useServerThemeRollbackEnabled(arg0, "useMarketablePowerupPerks");

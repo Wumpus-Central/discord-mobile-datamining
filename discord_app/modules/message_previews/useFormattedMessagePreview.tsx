@@ -1,17 +1,17 @@
-// === Module 12491: useFormattedMessagePreview ===
+// === Module 12587: useFormattedMessagePreview ===
 
-// Module 12491 (useFormattedMessagePreview)
+// Module 12587 (useFormattedMessagePreview)
 import _mod12 from "module_12" /* 12 */;
 import MessageTypes from "MessageTypes" /* 1101 */;
 import util from "util" /* 1126 */;
-import useMessageAuthorDefault from "useMessageAuthor" /* 5311 */;
-import isForwardMessageDefault from "isForwardMessage" /* 6815 */;
-import useIsCallActiveDefault from "useIsCallActive" /* 7651 */;
-import SystemMessageUtilsDefault from "SystemMessageUtils" /* 7656 */;
-import VoiceSessionUtils from "VoiceSessionUtils" /* 7752 */;
+import useMessageAuthorDefault from "useMessageAuthor" /* 5623 */;
+import isForwardMessageDefault from "isForwardMessage" /* 6988 */;
+import useIsCallActiveDefault from "useIsCallActive" /* 7972 */;
+import SystemMessageUtilsDefault from "SystemMessageUtils" /* 7977 */;
+import VoiceSessionUtils from "VoiceSessionUtils" /* 8073 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
-import UserStore from "UserStore" /* 1377 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
@@ -360,7 +360,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_previews/useFormattedMessagePreview.tsx");
 
 export { isMessageContentPreviewable };
-export const useFormattedMessagePreview = ReactCompilerGating.isReactCompilerEnabled() ? ((author, id) => {
+export const useFormattedMessagePreview = ReactCompilerGating.isReactCompilerEnabled() ? (function useFormattedMessagePreview(author, id) {
   const _require = author;
   const cResult = require("c").c(10);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -425,7 +425,7 @@ export const useFormattedMessagePreview = ReactCompilerGating.isReactCompilerEna
     }
     const stateFromStores1 = tmp(504).useStateFromStores(tmp16, tmp18);
     const tmpResult5 = tmp(504);
-    const obj2 = { message: author, channel: id, currentUserId: stateFromStores, authorNick: stringResult, otherUser: stateFromStores1, otherUserNick: tmp(5311).useNullableUserAuthor(stateFromStores1, id).nick, isBlocked, isIgnored, isCallActive: tmp10 };
+    const obj2 = { message: author, channel: id, currentUserId: stateFromStores, authorNick: stringResult, otherUser: stateFromStores1, otherUserNick: tmp(5623).useNullableUserAuthor(stateFromStores1, id).nick, isBlocked, isIgnored, isCallActive: tmp10 };
     return formatMessagePreview(author, obj2);
   }
   class I {
@@ -443,7 +443,7 @@ export const useFormattedMessagePreview = ReactCompilerGating.isReactCompilerEna
   cResult[9] = I;
   tmp18 = I;
   const tmpResult4 = require("initialize");
-}) : ((author, channel) => {
+}) : (function useFormattedMessagePreview(author, channel) {
   const _require = author;
   const items = [RelationshipStore];
   const items1 = [author.author.id];

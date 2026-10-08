@@ -1,27 +1,27 @@
-// === Module 15083: VoiceSensitivitySetting ===
+// === Module 15345: VoiceSensitivitySetting ===
 
-// Module 15083 (VoiceSensitivitySetting)
+// Module 15345 (VoiceSensitivitySetting)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import util from "util" /* 1126 */;
-import SettingsConstants from "SettingsConstants" /* 7645 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 8079 */;
-import VoiceSensitivityDefault from "VoiceSensitivity" /* 9677 */;
-import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import createStyles from "createStyles" /* 4896 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5241 */;
+import SettingsConstants from "SettingsConstants" /* 7966 */;
+import VoiceSensitivityDefault from "VoiceSensitivity" /* 10866 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
+import createStyles from "createStyles" /* 5090 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11142 */;
+import SettingBuilders from "SettingBuilders" /* 11262 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;
 const jsx = jsxProd.jsx;
 let closure_6 = createStyles.createStyles({ slider: { marginTop: 8 } });
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoiceSensitivitySettingDescription() {
   const cResult = inputMode(576).c(11);
   const tmp4 = closure_6();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [MediaEngineStore];
-    const fn = function n() {
+    const fn = function l() {
       return { inputMode: MediaEngineStore.getMode(), vadThreshold: MediaEngineStore.getModeOptions().threshold, vadAutoThreshold: MediaEngineStore.getModeOptions().autoThreshold };
     };
     cResult[0] = items;
@@ -71,7 +71,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[7] = tmp11;
   tmp10 = tmp11;
   const tmpResult = inputMode(504);
-}) : (() => {
+}) : (function useVoiceSensitivitySettingDescription() {
   const tmp = closure_6();
   const items = [MediaEngineStore];
   const stateFromStoresObject = inputMode(504).useStateFromStoresObject(items, () => ({ inputMode: MediaEngineStore.getMode(), vadThreshold: MediaEngineStore.getModeOptions().threshold, vadAutoThreshold: MediaEngineStore.getModeOptions().autoThreshold }));
@@ -101,12 +101,12 @@ let obj = {
     return intl.string(util.t["sqUm+k"]);
   },
   parent: SettingsConstants.MobileUserSettings.VOICE,
-  useDescription: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  useDescription: ReactCompilerGating.isReactCompilerEnabled() ? (function useVoiceSensitivitySettingDescription() {
     const cResult = inputMode(576).c(11);
     const tmp4 = closure_6();
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
       const items = [MediaEngineStore];
-      const fn = function n() {
+      const fn = function l() {
         return { inputMode: MediaEngineStore.getMode(), vadThreshold: MediaEngineStore.getModeOptions().threshold, vadAutoThreshold: MediaEngineStore.getModeOptions().autoThreshold };
       };
       cResult[0] = items;
@@ -156,7 +156,7 @@ let obj = {
     cResult[7] = tmp11;
     tmp10 = tmp11;
     const tmpResult = inputMode(504);
-  }) : (() => {
+  }) : (function useVoiceSensitivitySettingDescription() {
     const tmp = closure_6();
     const items = [MediaEngineStore];
     const stateFromStoresObject = inputMode(504).useStateFromStoresObject(items, () => ({ inputMode: MediaEngineStore.getMode(), vadThreshold: MediaEngineStore.getModeOptions().threshold, vadAutoThreshold: MediaEngineStore.getModeOptions().autoThreshold }));
@@ -194,12 +194,12 @@ export default SettingBuilders.createStatic({
     return intl.string(util.t["sqUm+k"]);
   },
   parent: SettingsConstants.MobileUserSettings.VOICE,
-  useDescription: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  useDescription: ReactCompilerGating.isReactCompilerEnabled() ? (function useVoiceSensitivitySettingDescription() {
     const cResult = inputMode(576).c(11);
     const tmp4 = closure_6();
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
       const items = [MediaEngineStore];
-      const fn = function n() {
+      const fn = function l() {
         return { inputMode: MediaEngineStore.getMode(), vadThreshold: MediaEngineStore.getModeOptions().threshold, vadAutoThreshold: MediaEngineStore.getModeOptions().autoThreshold };
       };
       cResult[0] = items;
@@ -249,7 +249,7 @@ export default SettingBuilders.createStatic({
     cResult[7] = tmp11;
     tmp10 = tmp11;
     const tmpResult = inputMode(504);
-  }) : (() => {
+  }) : (function useVoiceSensitivitySettingDescription() {
     const tmp = closure_6();
     const items = [MediaEngineStore];
     const stateFromStoresObject = inputMode(504).useStateFromStoresObject(items, () => ({ inputMode: MediaEngineStore.getMode(), vadThreshold: MediaEngineStore.getModeOptions().threshold, vadAutoThreshold: MediaEngineStore.getModeOptions().autoThreshold }));

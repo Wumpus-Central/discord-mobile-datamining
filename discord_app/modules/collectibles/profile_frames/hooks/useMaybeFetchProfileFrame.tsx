@@ -1,9 +1,9 @@
-// === Module 7883: useMaybeFetchProfileFrame ===
+// === Module 8303: useMaybeFetchProfileFrame ===
 
-// Module 7883 (useMaybeFetchProfileFrame)
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7065 */;
-import useFramePreviewOverrideFrameDefault from "useFramePreviewOverrideFrame" /* 7884 */;
-import useProfileFrameDefault from "useProfileFrame" /* 7894 */;
+// Module 8303 (useMaybeFetchProfileFrame)
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7251 */;
+import useFramePreviewOverrideFrameDefault from "useFramePreviewOverrideFrame" /* 8304 */;
+import useProfileFrameDefault from "useProfileFrame" /* 8314 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/profile_frames/hooks/useMaybeFetchProfileFrame.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useMaybeFetchProfileFrame(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   let tmp2 = useFramePreviewOverrideFrameDefault();
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   tmp6 = items;
   tmp5 = fn;
   let obj = require("c");
-}) : ((arg0) => {
+}) : (function useMaybeFetchProfileFrame(arg0) {
   closure_0 = arg0;
   let tmp = useFramePreviewOverrideFrameDefault();
   const tmp2 = useProfileFrameDefault(arg0);

@@ -1,16 +1,16 @@
-// === Module 16580: useSortedMemberApplications ===
+// === Module 16835: useSortedMemberApplications ===
 
-// Module 16580 (useSortedMemberApplications)
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4708 */;
+// Module 16835 (useSortedMemberApplications)
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4902 */;
 import noop from "module_19" /* 19 */;
-import GuildJoinRequestStore from "GuildJoinRequestStore" /* 5939 */;
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6122 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/hooks/useSortedMemberApplications.tsx");
 
-export const useSortedMemberApplications = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export const useSortedMemberApplications = ReactCompilerGating.isReactCompilerEnabled() ? (function useSortedMemberApplications(guildId) {
   const cResult = guildId(applicationStatus[3]).c(9);
   guildId = guildId.guildId;
   applicationStatus = guildId.applicationStatus;
@@ -57,7 +57,7 @@ export const useSortedMemberApplications = ReactCompilerGating.isReactCompilerEn
   tmp7 = items2;
   tmp6 = fn;
   const obj = guildId(applicationStatus[3]);
-}) : ((guildId) => {
+}) : (function useSortedMemberApplications(guildId) {
   guildId = guildId.guildId;
   const applicationStatus = guildId.applicationStatus;
   const sortOrder = guildId.sortOrder;

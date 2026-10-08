@@ -1,11 +1,11 @@
-// === Module 9990: useEmojiColorPalette ===
+// === Module 9520: useEmojiColorPalette ===
 
-// Module 9990 (useEmojiColorPalette)
+// Module 9520 (useEmojiColorPalette)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import EmojiColorUtils from "EmojiColorUtils" /* 7627 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
-import ThemeStore from "ThemeStore" /* 1193 */;
+import EmojiColorUtils from "EmojiColorUtils" /* 7948 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
+import ThemeStore from "ThemeStore" /* 1205 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/emojis/hooks/useEmojiColorPalette.tsx");
 
-export const useEmojiColorPalette = ReactCompilerGating.isReactCompilerEnabled() ? ((colors) => {
+export const useEmojiColorPalette = ReactCompilerGating.isReactCompilerEnabled() ? (function useEmojiColorPalette(colors) {
   const cResult = c.c(8);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AccessibilityStore];
@@ -63,7 +63,7 @@ export const useEmojiColorPalette = ReactCompilerGating.isReactCompilerEnabled()
   cResult[7] = emojiColorPalette;
   tmp12 = emojiColorPalette;
   const tmpResult4 = EmojiColorUtils;
-}) : ((colors) => {
+}) : (function useEmojiColorPalette(colors) {
   const items = [AccessibilityStore];
   const stateFromStores = initialize.useStateFromStores(items, () => saturation.saturation);
   const items1 = [ThemeStore];

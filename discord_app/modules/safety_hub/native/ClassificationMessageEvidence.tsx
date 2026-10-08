@@ -1,51 +1,50 @@
-// === Module 11516: ClassificationMessageEvidence ===
+// === Module 11508: ClassificationMessageEvidence ===
 
-// Module 11516 (ClassificationMessageEvidence)
-import MediaFormatTesters from "MediaFormatTesters" /* 5046 */;
-import RowGeneratorDefault from "RowGenerator" /* 7602 */;
-import openMediaModal from "openMediaModal" /* 7944 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 8125 */;
+// Module 11508 (ClassificationMessageEvidence)
+import MediaFormatTesters from "MediaFormatTesters" /* 5415 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 5927 */;
+import RowGeneratorDefault from "RowGenerator" /* 7719 */;
+import openMediaModal from "openMediaModal" /* 8362 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1193 */;
-import UserStore from "UserStore" /* 1377 */;
-import SafetyHubStore from "SafetyHubStore" /* 8139 */;
+import ThemeStore from "ThemeStore" /* 1205 */;
+import UserStore from "UserStore" /* 1389 */;
+import SafetyHubStore from "SafetyHubStore" /* 5920 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, findNodeHandle: metroRequire, Image: closure_7, ActivityIndicator: closure_8 } = get_ActivityIndicator);
-const SafetyHubConstants = fn(8126);
+const SafetyHubConstants = fn(5921);
 ({ DEFAULT_MEDIA_MAX_WIDTH: closure_12, DEFAULT_MEDIA_MAX_HEIGHT: map1, VIDEO_PLACEHOLDER_WIDTH: closure_14, VIDEO_PLACEHOLDER_HEIGHT: closure_15, VIDEO_PLACEHOLDER_FILENAME: closure_16 } = SafetyHubConstants);
 const MessageTypes = fn(1085).MessageTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
 let c20 = "1";
 const rowGenerator = new RowGeneratorDefault();
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_22 = createStyles.createStyles({ dummyVideoAttachments: { width: 0, height: 0 } });
 const ReactCompilerGating = fn(558);
 let tmp5 = new RowGeneratorDefault();
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/native/ClassificationMessageEvidence.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ClassificationEvidence(arg0) {
   const cResult = ref(576).c(52);
   closure_22();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [UserStore];
-    class E {
-      constructor() {
-        return closure_10.getCurrentUser();
-      }
-    }
+    const items = [closure_10];
+    const fn = function w() {
+      return closure_10.getCurrentUser();
+    };
     cResult[0] = items;
-    cResult[1] = E;
+    cResult[1] = fn;
     tmp5 = items;
+    tmp6 = fn;
   } else {
     [tmp5, tmp6] = cResult;
   }
   let obj = ref(576);
-  const stateFromStores = ref(504).useStateFromStores(tmp5, E);
+  const stateFromStores = ref(504).useStateFromStores(tmp5, tmp6);
   ref = noop.useRef(null);
   const tmp11 = first1(noop.useState(null), 2);
   const reactTag = tmp11[0];
@@ -121,7 +120,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     if (cResult[9] === first2.attachments) {
       if (cResult[10] === first1) {
         if (cResult[11] === tmp20) {
-          UserStore = tmp32;
+          closure_10 = tmp32;
           if (cResult[16] === first2.attachments) {
             if (cResult[17] === first1) {
               if (cResult[18] === id) {
@@ -190,7 +189,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                     }
                   }
                   if (cResult[27] !== first3) {
-                    function de() {
+                    function ce() {
                       if (0 === first3) {
                         dependencyMap(timestampProducer(ref.current));
                       }
@@ -202,10 +201,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                       }
                     }
                     cResult[27] = first3;
-                    cResult[28] = de;
+                    cResult[28] = ce;
                     cResult[29] = items4;
                     let tmp42 = items4;
-                    let tmp41 = de;
+                    let tmp41 = ce;
                   } else {
                     tmp41 = cResult[28];
                     tmp42 = cResult[29];
@@ -241,7 +240,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                         }
                       }
                       obj4.onTapImage = tmp36;
-                      const tmp47 = closure_18(reactTag(11519), obj4);
+                      const tmp47 = closure_18(reactTag(11511), obj4);
                       cResult[38] = tmp36;
                       cResult[39] = tmp47;
                       let tmp44 = tmp47;
@@ -285,7 +284,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                               }
                             }
                             const obj6 = { rowGenerator, message: tmp48, modifyRow: tmp38, pointerEvents: "none" };
-                            const tmp61 = closure_18(reactTag(8336), obj6);
+                            const tmp61 = closure_18(reactTag(9308), obj6);
                             cResult[46] = tmp38;
                             cResult[47] = tmp48;
                             cResult[48] = tmp61;
@@ -301,7 +300,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                     }
                     tmp49[0] = first2.id;
                     const _Date = Date;
-                    const tmpResult6 = tmp(5118);
+                    const tmpResult6 = tmp(5430);
                     const date = new Date(reactTag(11).extractTimestamp(first2.id));
                     tmp49[1] = date.toUTCString();
                     tmp49[2] = c20;
@@ -412,7 +411,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const tmpResult5 = tmp(504);
   }
   const tmpResult4 = ref(504);
-}) : ((arg0) => {
+}) : (function ClassificationEvidence(arg0) {
   let attachments = closure_22();
   const items = [memo];
   const stateFromStores = ref(504).useStateFromStores(items, () => memo.getCurrentUser());
@@ -427,11 +426,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   let tmp5 = first1;
   const items1 = [id];
   const resolveAssetSource = first3.resolveAssetSource;
-  if (obj3.useStateFromStores(items1, () => ref(4735).isThemeLight(id.theme))) {
-    let assetSource = resolveAssetSource(tmp11(11517));
+  if (obj3.useStateFromStores(items1, () => ref(4929).isThemeLight(id.theme))) {
+    let assetSource = resolveAssetSource(tmp11(11509));
     let tmp13 = tmp11;
   } else {
-    assetSource = resolveAssetSource(tmp11(11518));
+    assetSource = resolveAssetSource(tmp11(11510));
     tmp13 = tmp11;
   }
   let first2 = arg0.flaggedContent[0];
@@ -453,10 +452,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         str = "";
       }
       obj.filename = str;
-      obj.flags = ref(8125).getSpoilerFlagsForAttachment(filename);
+      obj.flags = ref(5927).getSpoilerFlagsForAttachment(filename);
       obj.size = 0;
       obj.proxy_url = filename.url;
-      const obj2 = ref(8125);
+      const obj2 = ref(5927);
       if (obj3.isImageFile(filename.filename)) {
         const obj4 = {};
         const merged1 = Object.assign(obj);
@@ -488,7 +487,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           obj5.filename = filename;
           tmp4 = obj5;
         }
-        tmp2Result = ref(5046);
+        tmp2Result = ref(5415);
       }
       return tmp4;
     });
@@ -583,10 +582,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const items8 = [closure_18(closure_8, {}), ];
     let obj5 = { style: attachments.dummyVideoAttachments, children: null };
     attachments = first2.attachments;
-    first2 = attachments.filter((filename) => ref(5046).isVideoFile(filename.filename));
+    first2 = attachments.filter((filename) => ref(5415).isVideoFile(filename.filename));
     obj5.children = first2.map((uri, index) => {
       closure_0 = uri;
-      return closure_1_18(first(7994), {
+      return closure_1_18(first(8402), {
         source: { uri: uri.url },
         onLoad(arg0) {
           closure_0 = arg0;
@@ -609,12 +608,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     let obj10 = obj4;
   } else {
     const obj6 = { ref, onTapImage: callback, inverted: false };
-    const items9 = [closure_18(tmp13(11519), obj6), ];
+    const items9 = [closure_18(tmp13(11511), obj6), ];
     const obj7 = { rowGenerator, message: null, modifyRow: null, pointerEvents: "none" };
-    const tmp13Result = tmp13(8336);
+    const tmp13Result = tmp13(9308);
     const obj8 = { id: first2.id, timestamp: null, channel_id: null, type: null, author: null, content: null, attachments: null };
     const _Date = Date;
-    const tmpResult2 = tmp(5118);
+    const tmpResult2 = tmp(5430);
     const date = new Date(tmp13(11).extractTimestamp(first2.id));
     obj8.timestamp = date.toUTCString();
     obj8.channel_id = channel_id;

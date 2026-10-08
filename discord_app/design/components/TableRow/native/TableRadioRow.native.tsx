@@ -1,12 +1,12 @@
-// === Module 6078: TableRadioRow ===
+// === Module 6264: TableRadioRow ===
 
-// Module 6078 (TableRadioRow)
+// Module 6264 (TableRadioRow)
 import c from "c" /* 576 */;
-import native from "native" /* 4588 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4600 */;
-import TableRow from "TableRow" /* 6000 */;
-import TableRadioGroup from "TableRadioGroup" /* 6079 */;
-import FormRadio from "FormRadio" /* 6082 */;
+import native from "native" /* 4780 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4792 */;
+import TableRow from "TableRow" /* 6184 */;
+import TableRadioGroup from "TableRadioGroup" /* 6265 */;
+import FormRadio from "FormRadio" /* 6268 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/TableRow/native/TableRadioRow.native.tsx");
 
-export const TableRadioRow = ReactCompilerGating.isReactCompilerEnabled() ? ((value) => {
+export const TableRadioRow = ReactCompilerGating.isReactCompilerEnabled() ? (function TableRadioRow(value) {
   const cResult = c.c(33);
   if (cResult[0] !== value) {
     value = value.value;
@@ -153,18 +153,18 @@ export const TableRadioRow = ReactCompilerGating.isReactCompilerEnabled() ? ((va
       tmp21 = obj4;
     }
   }
-  const fn = function x(arg0) {
+  function handleOnPress(arg0) {
     if (closure_0 != null) {
       tmp(arg0);
     }
     onSelect(closure_1);
-  };
+  }
   cResult[9] = legacyCompat_onPress;
   cResult[10] = onSelect;
   cResult[11] = tmp11;
-  cResult[12] = fn;
-  tmp17 = fn;
-}) : ((value) => {
+  cResult[12] = handleOnPress;
+  tmp17 = handleOnPress;
+}) : (function TableRadioRow(value) {
   value = value.value;
   require = value;
   ({ label, subLabel, disabled } = value);
@@ -199,7 +199,7 @@ export const TableRadioRow = ReactCompilerGating.isReactCompilerEnabled() ? ((va
   }
   obj.accessibilityLabel = "" + nodeText + ", " + str;
   obj.accessibilityHint = value.accessibilityHint;
-  obj.onPress = function onPress(arg0) {
+  obj.onPress = function handleOnPress(arg0) {
     if (dependencyMap != null) {
       tmp(arg0);
     }

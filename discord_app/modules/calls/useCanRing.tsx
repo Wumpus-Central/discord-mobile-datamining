@@ -1,10 +1,10 @@
-// === Module 9402: useCanRing ===
+// === Module 7017: useCanRing ===
 
-// Module 9402 (useCanRing)
+// Module 7017 (useCanRing)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CallStore from "CallStore" /* 5444 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
+import CallStore from "CallStore" /* 5754 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/useCanRing.tsx");
 
-export const useCanRing = ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1) => {
+export const useCanRing = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanRing(id, arg1) {
   _require = id;
   dependencyMap = arg1;
   const cResult = require("c").c(11);
@@ -175,7 +175,7 @@ export const useCanRing = ReactCompilerGating.isReactCompilerEnabled() ? ((id, a
     }
   }
   return stateFromStores2;
-}) : ((bot, arg1) => {
+}) : (function useCanRing(bot, arg1) {
   _require = bot;
   dependencyMap = arg1;
   const items = [ChannelStore];

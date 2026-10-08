@@ -1,8 +1,8 @@
-// === Module 9069: BaseSocket ===
+// === Module 11147: BaseSocket ===
 
-// Module 9069 (BaseSocket)
+// Module 11147 (BaseSocket)
 import _modDef12 from "module_12" /* 12 */;
-import RPCErrorDefault from "RPCError" /* 9059 */;
+import RPCErrorDefault from "RPCError" /* 11134 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
@@ -13,7 +13,9 @@ class BaseSocket {
     merged = Object.assign({ id: null, authorization: null, application: null, abortController: null });
     obj2 = closure_0(closure_1[1]);
     merged[0] = obj2.uniqueId();
-    obj1 = { authing: false, scopes: [], accessToken: null, expires: null };
+    obj1 = { authing: false, scopes: null, accessToken: null, expires: null };
+    set = new Set();
+    obj1.scopes = set;
     date = new Date(0);
     obj1.expires = date;
     merged[1] = obj1;

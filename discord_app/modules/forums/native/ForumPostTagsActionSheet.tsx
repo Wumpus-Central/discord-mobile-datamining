@@ -1,24 +1,24 @@
-// === Module 11073: ForumPostTagsActionSheet ===
+// === Module 10438: ForumPostTagsActionSheet ===
 
-// Module 11073 (ForumPostTagsActionSheet)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import ForumActionCreatorsDefault from "ForumActionCreators" /* 7552 */;
-import AvailableForumTagDefault from "AvailableForumTag" /* 11074 */;
+// Module 10438 (ForumPostTagsActionSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import ForumActionCreatorsDefault from "ForumActionCreators" /* 9263 */;
+import AvailableForumTagDefault from "AvailableForumTag" /* 10439 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-let View = fn(17).View;
-const MAX_FORUM_POST_TAGS = fn(6786).MAX_FORUM_POST_TAGS;
+const View = fn(17).View;
+const MAX_FORUM_POST_TAGS = fn(6961).MAX_FORUM_POST_TAGS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_9 = createStyles.createStyles({ tagsContainer: { display: "flex", flexDirection: "row", flexWrap: "wrap" }, saveButton: { marginTop: 8, marginHorizontal: 16, marginBottom: 16 }, subtitle: { marginTop: 4 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/ForumPostTagsActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((thread) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPostTagsActionSheet(thread) {
   const cResult = thread(onClose[7]).c(42);
   thread = thread.thread;
   ({ canManageThread, onSave } = thread);
@@ -57,7 +57,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((thread) => {
   }
   const tmp16 = canManageThread(first.useState(tmp9), 2);
   first = tmp16[0];
-  View = tmp16[1];
+  closure_5 = tmp16[1];
   closure_6 = tmp18;
   const tmpResult = thread(onClose[9]);
   const visibleForumTags = thread(onClose[9]).useVisibleForumTags(thread.parentChannel);
@@ -79,28 +79,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((thread) => {
             }
           }
           cResult[11] = onClose;
-          class V {
-            constructor() {
-              tmp = closure_4;
-              arr1 = Array.from(closure_4);
-              if (null != onSave) {
-                items = [];
-                num = 0;
-                tmp9 = items;
-                tmp10 = tmp;
-                arraySpreadResult = HermesBuiltin.arraySpread(tmp, 0);
-                tmp4Result = tmp4(items);
-              } else if (null != thread) {
-                tmp6 = closure_1;
-                tmp7 = closure_2;
-                obj = closure_1(closure_2[10]);
-                updateForumPostTagsResult = obj.updateForumPostTags(tmp5.id, tmp3);
-              }
-              obj2 = closure_1(closure_2[11]);
-              hideActionSheetResult = obj2.hideActionSheet();
-              return;
-            }
-          }
           cResult[12] = E;
         } else {
           class E {
@@ -113,28 +91,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((thread) => {
             }
           }
         }
-        class V {
-          constructor() {
-            tmp = closure_4;
-            arr1 = Array.from(closure_4);
-            if (null != onSave) {
-              items = [];
-              num = 0;
-              tmp9 = items;
-              tmp10 = tmp;
-              arraySpreadResult = HermesBuiltin.arraySpread(tmp, 0);
-              tmp4Result = tmp4(items);
-            } else if (null != thread) {
-              tmp6 = closure_1;
-              tmp7 = closure_2;
-              obj = closure_1(closure_2[10]);
-              updateForumPostTagsResult = obj.updateForumPostTags(tmp5.id, tmp3);
-            }
-            obj2 = closure_1(closure_2[11]);
-            hideActionSheetResult = obj2.hideActionSheet();
-            return;
-          }
-        }
+        const _Symbol = Symbol;
         if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
           class E {
             constructor() {
@@ -146,30 +103,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((thread) => {
             }
           }
           const stringResult1 = obj4.string(tmp(onClose[8]).t["+HS9+m"]);
-          class V {
-            constructor() {
-              tmp = closure_4;
-              arr1 = Array.from(closure_4);
-              if (null != onSave) {
-                items = [];
-                num = 0;
-                tmp9 = items;
-                tmp10 = tmp;
-                arraySpreadResult = HermesBuiltin.arraySpread(tmp, 0);
-                tmp4Result = tmp4(items);
-              } else if (null != thread) {
-                tmp6 = closure_1;
-                tmp7 = closure_2;
-                obj = closure_1(closure_2[10]);
-                updateForumPostTagsResult = obj.updateForumPostTags(tmp5.id, tmp3);
-              }
-              obj2 = closure_1(closure_2[11]);
-              hideActionSheetResult = obj2.hideActionSheet();
-              return;
-            }
-          }
           cResult[13] = stringResult1;
-          const tmp24 = stringResult1;
+          const tmp25 = stringResult1;
         } else {
           class E {
             constructor() {
@@ -239,72 +174,36 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((thread) => {
           cResult[26] = tmp20;
           cResult[27] = X;
         }
-        let obj2 = { title: tmp5, subtitle: tmp24, subtitleStyle: tmp7.subtitle };
-        const tmp28 = onPress(tmp(onClose[12]).BottomSheetTitleHeader, obj2);
+        let obj2 = { title: tmp5, subtitle: tmp25, subtitleStyle: tmp7.subtitle };
+        const tmp29 = onPress(tmp(onClose[12]).BottomSheetTitleHeader, obj2);
         cResult[14] = tmp7.subtitle;
         cResult[15] = tmp5;
-        cResult[16] = tmp28;
-      }
-    }
-    class V {
-      constructor() {
-        tmp = closure_4;
-        arr1 = Array.from(closure_4);
-        if (null != onSave) {
-          items = [];
-          num = 0;
-          tmp9 = items;
-          tmp10 = tmp;
-          arraySpreadResult = HermesBuiltin.arraySpread(tmp, 0);
-          tmp4Result = tmp4(items);
-        } else if (null != thread) {
-          tmp6 = closure_1;
-          tmp7 = closure_2;
-          obj = closure_1(closure_2[10]);
-          updateForumPostTagsResult = obj.updateForumPostTags(tmp5.id, tmp3);
-        }
-        obj2 = closure_1(closure_2[11]);
-        hideActionSheetResult = obj2.hideActionSheet();
-        return;
+        cResult[16] = tmp29;
       }
     }
     cResult[7] = onSave;
     cResult[8] = first;
     cResult[9] = thread;
-    cResult[10] = V;
+    cResult[10] = tmp22;
   }
-  class H {
-    constructor(arg0) {
-      if (null == thread) {
-        return;
-      } else {
-        tmp = globalThis;
-        _Set = Set;
-        tmp2 = closure_4;
-        tmp3 = new.target;
-        tmp4 = new.target;
-        set = new Set(closure_4);
-        tmp5 = set;
-        if (set.has(thread)) {
-          deleteResult = set.delete(thread);
-          tmp9 = closure_5;
-          tmp10 = closure_5(set);
-        } else {
-          tmp6 = closure_6;
-          if (!closure_6) {
-            addResult = set.add(thread);
-          }
-        }
-        return;
+  function toggleTag(arg0) {
+    if (null != arg0) {
+      const _Set = Set;
+      const set = new Set(first);
+      if (set.has(arg0)) {
+        set.delete(arg0);
+        closure_5(set);
+      } else if (!closure_6) {
+        set.add(arg0);
       }
     }
   }
   cResult[4] = first.size >= closure_6;
   cResult[5] = first;
-  cResult[6] = H;
-  tmp20 = H;
+  cResult[6] = toggleTag;
+  tmp20 = toggleTag;
   const tmpResult2 = thread(onClose[9]);
-}) : ((thread) => {
+}) : (function ForumPostTagsActionSheet(thread) {
   thread = thread.thread;
   let flag = thread.canManageThread;
   if (flag === undefined) {
@@ -332,15 +231,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((thread) => {
     }
   }
   const tmp3 = closure_9();
-  let appliedTags = thread(6788).useAppliedTags(thread);
+  let appliedTags = thread(6963).useAppliedTags(thread);
   if (null != tags) {
     appliedTags = tags;
   }
-  let obj = thread(6788);
+  let obj = thread(6963);
   [first, closure_5] = first.useState(new Set(appliedTags));
   closure_6 = first.size >= closure_6;
   let set = new Set(appliedTags);
-  const visibleForumTags = thread(6788).useVisibleForumTags(thread.parentChannel);
+  const visibleForumTags = thread(6963).useVisibleForumTags(thread.parentChannel);
   let obj2 = {
     onDismiss() {
       let tmp;
@@ -356,8 +255,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((thread) => {
   const intl2 = tmp4(1126).intl;
   obj3.subtitle = intl2.string(thread(1126).t["+HS9+m"]);
   obj3.subtitleStyle = tmp3.subtitle;
-  obj2.header = toggleTag(thread(6651).BottomSheetTitleHeader, obj3);
-  const tmp4Result = thread(6788);
+  obj2.header = toggleTag(thread(6828).BottomSheetTitleHeader, obj3);
+  const tmp4Result = thread(6963);
   let items = [
     toggleTag(closure_5, {
       style: tmp3.tagsContainer,
@@ -384,7 +283,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((thread) => {
   const obj6 = { text: null, onPress: null };
   const intl3 = tmp4(1126).intl;
   obj6.text = intl3.string(thread(1126).t["R3BPH+"]);
-  obj6.onPress = function onPress() {
+  obj6.onPress = function handleSave() {
     Array.from(first);
     if (null != dependencyMap) {
       const items = [];
@@ -395,8 +294,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((thread) => {
     }
     ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  obj5.children = toggleTag(thread(5601).Button, obj6);
+  obj5.children = toggleTag(thread(5375).Button, obj6);
   items[1] = toggleTag(closure_5, obj5);
   obj2.children = items;
-  return closure_8(thread(6708).ActionSheet, obj2);
+  return closure_8(thread(6885).ActionSheet, obj2);
 });

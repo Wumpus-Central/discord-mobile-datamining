@@ -1,19 +1,19 @@
-// === Module 4585: BaseIconImage ===
+// === Module 4777: BaseIconImage ===
 
-// Module 4585 (BaseIconImage)
+// Module 4777 (BaseIconImage)
 import c from "c" /* 576 */;
-import useToken from "useToken" /* 4586 */;
+import useToken from "useToken" /* 4778 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Image = fn(17).Image;
 const jsx = fn(21).jsx;
-const dependencyMap = { xxs: { width: 12, height: 12 }, xs: { width: 16, height: 16 }, sm: { width: 18, height: 18 }, md: { width: 24, height: 24 }, lg: { width: 32, height: 32 }, custom: { width: "start", height: "unicodeVersion" }, refresh_sm: { width: 18, height: 18 } };
+const dependencyMap = { xxs: { width: 12, height: 12 }, xs: { width: 16, height: 16 }, sm: { width: 18, height: 18 }, md: { width: 24, height: 24 }, lg: { width: 32, height: 32 }, custom: { width: "Array", height: "Reflect" }, refresh_sm: { width: 18, height: 18 } };
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Icon/native/BaseIconImage.tsx");
 
-export const BaseIconImage = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const BaseIconImage = ReactCompilerGating.isReactCompilerEnabled() ? (function BaseIconImage(arg0) {
   const cResult = c.c(14);
   ({ source, size, color, resizeMode, style, accessible, accessibilityLabel } = arg0);
   const str = "md";
@@ -74,7 +74,7 @@ export const BaseIconImage = ReactCompilerGating.isReactCompilerEnabled() ? ((ar
     tmp6 = null != color && typeof color === "string";
   }
   const tmpResult = useToken;
-}) : ((size) => {
+}) : (function BaseIconImage(size) {
   let str = size.size;
   if (str === undefined) {
     str = "md";

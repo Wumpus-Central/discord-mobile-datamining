@@ -1,17 +1,17 @@
-// === Module 12265: GuildProgressCircle ===
+// === Module 12344: GuildProgressCircle ===
 
-// Module 12265 (GuildProgressCircle)
+// Module 12344 (GuildProgressCircle)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import GuildProgressUtils from "GuildProgressUtils" /* 12145 */;
-import ProgressCircleDefault from "ProgressCircle" /* 12266 */;
+import GuildProgressUtils from "GuildProgressUtils" /* 12224 */;
+import ProgressCircleDefault from "ProgressCircle" /* 12345 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { wrapper: { position: "relative" }, circle: { position: "absolute" }, progressCircle: { color: nativeDefault.colors.BACKGROUND_BRAND } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -19,7 +19,7 @@ let obj3 = { color: nativeDefault.colors.BACKGROUND_BRAND };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_progress/native/components/GuildProgressCircle.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildProgressCircle(arg0) {
   const cResult = c.c(25);
   ({ percent, style, size } = arg0);
   let num = 32;
@@ -116,7 +116,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = result;
   cResult[2] = size1;
   tmp6 = size1;
-}) : ((size) => {
+}) : (function GuildProgressCircle(size) {
   let num = size.size;
   ({ percent, style } = size);
   if (num === undefined) {

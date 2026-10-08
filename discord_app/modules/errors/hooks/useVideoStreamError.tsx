@@ -1,14 +1,14 @@
-// === Module 9129: useVideoStreamError ===
+// === Module 10701: useVideoStreamError ===
 
-// Module 9129 (useVideoStreamError)
-import AVError from "AVError" /* 9131 */;
+// Module 10701 (useVideoStreamError)
+import AVError from "AVError" /* 5287 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import AVErrorStore from "AVErrorStore" /* 9130 */;
+import AVErrorStore from "AVErrorStore" /* 10702 */;
 
 require = fn;
-const MediaEngineContextTypes = fn(4921).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(5115).MediaEngineContextTypes;
 let ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVideoStreamErrorContext(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   const cResult = require("c").c(4);
@@ -58,7 +58,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   tmp7 = T;
   const obj = require("c");
   tmp = _require;
-}) : ((arg0, arg1) => {
+}) : (function useVideoStreamErrorContext(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   let items = [AVErrorStore, AuthenticationStore];
@@ -83,7 +83,7 @@ ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/errors/hooks/useVideoStreamError.tsx");
 
-export default (arg0, arg1) => {
+export default function useVideoStreamError(arg0, arg1) {
   const tmp = closure_5(arg0, arg1);
   let type;
   if (tmp != null) {

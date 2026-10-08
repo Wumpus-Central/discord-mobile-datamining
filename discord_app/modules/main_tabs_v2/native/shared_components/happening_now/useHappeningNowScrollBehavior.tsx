@@ -1,6 +1,6 @@
-// === Module 16032: useHappeningNowScrollBehavior ===
+// === Module 16292: useHappeningNowScrollBehavior ===
 
-// Module 16032 (useHappeningNowScrollBehavior)
+// Module 16292 (useHappeningNowScrollBehavior)
 import c from "c" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -10,7 +10,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/useHappeningNowScrollBehavior.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useHappeningNowScrollBehavior(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   const cResult = c.c(6);
@@ -39,7 +39,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   cResult[1] = arg1;
   cResult[2] = fn;
   tmp4 = fn;
-}) : ((arg0, arg1) => {
+}) : (function useHappeningNowScrollBehavior(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   const tmp = _slicedToArray(noop.useState(false), 2);

@@ -1,9 +1,9 @@
-// === Module 5312: useDisplayNameStyles ===
+// === Module 5624: useDisplayNameStyles ===
 
-// Module 5312 (useDisplayNameStyles)
+// Module 5624 (useDisplayNameStyles)
 import _mod19 from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import UserStore from "UserStore" /* 1377 */;
+import GuildMemberStore from "GuildMemberStore" /* 2124 */;
+import UserStore from "UserStore" /* 1389 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

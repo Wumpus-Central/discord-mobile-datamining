@@ -1,10 +1,10 @@
-// === Module 14764: AuthorizedAppScreen ===
+// === Module 15025: AuthorizedAppScreen ===
 
-// Module 14764 (AuthorizedAppScreen)
+// Module 15025 (AuthorizedAppScreen)
 import c from "c" /* 576 */;
-import useNavigation from "useNavigation" /* 1490 */;
-import useSettingNavigationRoute from "useSettingNavigationRoute" /* 6497 */;
-import UserSettingsAuthedAppDefault from "UserSettingsAuthedApp" /* 14765 */;
+import useNavigation from "useNavigation" /* 1502 */;
+import useSettingNavigationRoute from "useSettingNavigationRoute" /* 6674 */;
+import UserSettingsAuthedAppDefault from "UserSettingsAuthedApp" /* 15026 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/authorized_apps/native/AuthorizedAppScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AuthorizedAppScreen() {
   const cResult = c.c(6);
   const settingNavigationRoute = useSettingNavigationRoute.useSettingNavigationRoute();
   const stackNavigation = useNavigation.useStackNavigation();
@@ -44,7 +44,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[3] = items;
   tmp6 = items;
   tmp5 = fn;
-}) : (() => {
+}) : (function AuthorizedAppScreen() {
   const settingNavigationRoute = useSettingNavigationRoute.useSettingNavigationRoute();
   const stackNavigation = useNavigation.useStackNavigation();
   const items = [stackNavigation, settingNavigationRoute.params.oauth2Token.application.name];

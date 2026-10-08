@@ -1,8 +1,8 @@
-// === Module 2083: Table ===
+// === Module 2095: Table ===
 
-// Module 2083 (Table)
-import Key from "Key" /* 2084 */;
-import TableId from "TableId" /* 2085 */;
+// Module 2095 (Table)
+import Key from "Key" /* 2096 */;
+import TableId from "TableId" /* 2097 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -137,7 +137,7 @@ prototype["put"] = function put(key) {
 prototype["putAll"] = function putAll(arr) {
   let Replace = arg1;
   if (arg1 === undefined) {
-    Replace = prefix(2085).ConflictOptions.Replace;
+    Replace = prefix(2097).ConflictOptions.Replace;
   }
   const transaction = this.transaction;
   const obj = { type: "kv.put_many", table: this.tableId, cells: null, overwrite: null };
@@ -155,7 +155,7 @@ prototype["putAll"] = function putAll(arr) {
     });
   }
   obj.cells = mapped;
-  obj.overwrite = Replace === prefix(2085).ConflictOptions.Replace;
+  obj.overwrite = Replace === prefix(2097).ConflictOptions.Replace;
   transaction.add(obj);
 };
 prototype["delete"] = function delete() {
@@ -199,7 +199,7 @@ class Table {
     obj.messages = {
       getLatest(guildId) {
             const database = obj.database;
-            obj = { type: "messages.get_latest", table: obj.tableId, guildId };
+            obj = { type: "messages.get_latest", table: obj.tableId, messageKey: obj.prefix[0], guildId };
             return database.execute(obj, obj.defaultDebugTag);
           }
     };
@@ -319,7 +319,7 @@ prototype2["put"] = function put(key) {
 prototype2["putAll"] = function putAll(arr) {
   let Replace = arg1;
   if (arg1 === undefined) {
-    Replace = prefix(2085).ConflictOptions.Replace;
+    Replace = prefix(2097).ConflictOptions.Replace;
   }
   const database = this.database;
   let obj = { type: "kv.put_many", table: this.tableId, cells: null, overwrite: null };
@@ -337,7 +337,7 @@ prototype2["putAll"] = function putAll(arr) {
     });
   }
   obj.cells = mapped;
-  obj.overwrite = Replace === prefix(2085).ConflictOptions.Replace;
+  obj.overwrite = Replace === prefix(2097).ConflictOptions.Replace;
   return database.execute(obj, this.defaultDebugTag);
 };
 prototype2["replaceAll"] = function replaceAll(arg0) {

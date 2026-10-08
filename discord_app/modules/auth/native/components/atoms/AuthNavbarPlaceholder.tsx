@@ -1,14 +1,14 @@
-// === Module 6473: AuthNavbarPlaceholder ===
+// === Module 6651: AuthNavbarPlaceholder ===
 
-// Module 6473 (AuthNavbarPlaceholder)
+// Module 6651 (AuthNavbarPlaceholder)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import NavigatorHeader from "NavigatorHeader" /* 6017 */;
+import NavigatorHeader from "NavigatorHeader" /* 6203 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { navBar: { backgroundColor: nativeDefault.unsafe_rawColors.TRANSPARENT, borderBottomWidth: 0 } };
 let closure_3 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -16,7 +16,7 @@ const obj3 = { backgroundColor: nativeDefault.unsafe_rawColors.TRANSPARENT, bord
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/atoms/AuthNavbarPlaceholder.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AuthNavbarPlaceholder() {
   const cResult = c.c(2);
   const tmp4 = closure_3();
   if (cResult[0] !== tmp4.navBar) {
@@ -29,7 +29,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp5 = cResult[1];
   }
   return tmp5;
-}) : (() => {
+}) : (function AuthNavbarPlaceholder() {
   const tmp = closure_3();
   return jsx(NavigatorHeader.FauxHeader, { style: closure_3().navBar, children: null });
 });

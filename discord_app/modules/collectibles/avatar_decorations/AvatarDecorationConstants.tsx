@@ -1,7 +1,7 @@
-// === Module 1403: AvatarDecorationConstants ===
+// === Module 1415: AvatarDecorationConstants ===
 
-// Module 1403 (AvatarDecorationConstants)
-import AvatarConstants from "AvatarConstants" /* 1404 */;
+// Module 1415 (AvatarDecorationConstants)
+import AvatarConstants from "AvatarConstants" /* 1416 */;
 import size from "module_2" /* 2 */;
 
 const AvatarSizes = AvatarConstants.AvatarSizes;

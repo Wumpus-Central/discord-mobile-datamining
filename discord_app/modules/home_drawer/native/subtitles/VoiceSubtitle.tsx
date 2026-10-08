@@ -1,9 +1,9 @@
-// === Module 16303: VoiceSubtitle ===
+// === Module 16563: VoiceSubtitle ===
 
-// Module 16303 (VoiceSubtitle)
+// Module 16563 (VoiceSubtitle)
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5048 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5405 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/home_drawer/native/subtitles/VoiceSubtitle.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceSubtitle(guildId) {
   const cResult = guildId(576).c(7);
   guildId = guildId.guildId;
   const voiceUsers = guildId.voiceUsers;
@@ -20,7 +20,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     if (cResult[1] === voiceUsers) {
       if (cResult[5] !== cResult[2]) {
         const obj2 = { variant: "text-xs/medium", color: "text-voice-connected", lineClamp: 1, children: tmp4 };
-        const tmp9 = jsx(tmp(4892).Text, { variant: "text-xs/medium", color: "text-voice-connected", lineClamp: 1, children: tmp4 });
+        const tmp9 = jsx(tmp(5086).Text, { variant: "text-xs/medium", color: "text-voice-connected", lineClamp: 1, children: tmp4 });
         cResult[5] = tmp4;
         cResult[6] = tmp9;
         let tmp7 = tmp9;
@@ -31,7 +31,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     }
   }
   if (cResult[3] !== guildId) {
-    const fn = function l(arg0) {
+    const fn = function n(arg0) {
       return NicknameUtilsDefault.getName(guildId, null, arg0);
     };
     cResult[3] = guildId;
@@ -51,7 +51,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   cResult[1] = voiceUsers;
   cResult[2] = intl.format(guildId(1126).t.r1Vkoc, obj3);
   const formatResult = intl.format(guildId(1126).t.r1Vkoc, obj3);
-}) : ((arg0) => {
+}) : (function VoiceSubtitle(arg0) {
   ({ guildId: require, voiceUsers } = arg0);
   const obj = { variant: "text-xs/medium", color: "text-voice-connected", lineClamp: 1, children: null };
   const intl = util.intl;

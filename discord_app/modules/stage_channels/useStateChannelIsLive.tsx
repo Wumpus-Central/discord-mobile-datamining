@@ -1,7 +1,7 @@
-// === Module 8105: useStateChannelIsLive ===
+// === Module 7480: useStateChannelIsLive ===
 
-// Module 8105 (useStateChannelIsLive)
-import StageInstanceStore from "StageInstanceStore" /* 2056 */;
+// Module 7480 (useStateChannelIsLive)
+import StageInstanceStore from "StageInstanceStore" /* 2068 */;
 
 const require = globalThis.__r;
 
@@ -10,7 +10,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useStateChannelIsLive.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useStageChannelIsLive(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -36,7 +36,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp6, tmp7);
-}) : ((arg0) => {
+}) : (function useStageChannelIsLive(arg0) {
   _require = arg0;
   const items = [StageInstanceStore];
   const items1 = [arg0];

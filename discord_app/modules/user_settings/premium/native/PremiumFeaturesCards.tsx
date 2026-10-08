@@ -1,21 +1,21 @@
-// === Module 8896: PremiumFeaturesCards ===
+// === Module 9329: PremiumFeaturesCards ===
 
-// Module 8896 (PremiumFeaturesCards)
-import PremiumFeaturesCardDefault from "PremiumFeaturesCard" /* 8897 */;
+// Module 9329 (PremiumFeaturesCards)
+import PremiumFeaturesCardDefault from "PremiumFeaturesCard" /* 9330 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
-const PremiumTypes = fn(1379).PremiumTypes;
+const PremiumTypes = fn(1391).PremiumTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({ container: { width: "100%", gap: 12 } });
 let obj2 = { TIER_0_LEADING: 0, [0]: "TIER_0_LEADING", TIER_2_LEADING: 1, [1]: "TIER_2_LEADING" };
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesCards.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onPaymentSuccess) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumFeaturesCards(onPaymentSuccess) {
   const cResult = applicationId(onPaymentDismiss[6]).c(12);
   ({ style, applicationId } = onPaymentSuccess);
   onPaymentSuccess = onPaymentSuccess.onPaymentSuccess;
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onPaymentSuccess
   cResult[11] = items2;
   tmp6 = items2;
   const obj = applicationId(onPaymentDismiss[6]);
-}) : ((onFirstCardLayout) => {
+}) : (function PremiumFeaturesCards(onFirstCardLayout) {
   ({ applicationId: require, onPaymentSuccess: importDefault, onPaymentDismiss: dependencyMap, order } = onFirstCardLayout);
   if (order === undefined) {
     order = obj2.TIER_0_LEADING;

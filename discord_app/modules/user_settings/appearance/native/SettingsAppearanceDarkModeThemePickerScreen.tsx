@@ -1,19 +1,19 @@
-// === Module 15142: SettingsAppearanceDarkModeThemePickerScreen ===
+// === Module 15404: SettingsAppearanceDarkModeThemePickerScreen ===
 
-// Module 15142 (SettingsAppearanceDarkModeThemePickerScreen)
+// Module 15404 (SettingsAppearanceDarkModeThemePickerScreen)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import SettingsAppearanceThemePickerScreenDefault from "SettingsAppearanceThemePickerScreen" /* 15101 */;
+import SettingsAppearanceThemePickerScreenDefault from "SettingsAppearanceThemePickerScreen" /* 15363 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SystemTheme = fn(1196).SystemTheme;
+const SystemTheme = fn(1208).SystemTheme;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceDarkModeThemePickerScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SettingsAppearanceDarkModeThemePickerScreen() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { mode: SystemTheme.DARK, themeSelector: "nitro", headerTitle: null };
@@ -26,7 +26,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     first = cResult[0];
   }
   return first;
-}) : (() => {
+}) : (function SettingsAppearanceDarkModeThemePickerScreen() {
   const obj = { mode: SystemTheme.DARK, themeSelector: "nitro", headerTitle: null };
   const intl = util.intl;
   obj.headerTitle = intl.string(util.t["EgvHH/"]);

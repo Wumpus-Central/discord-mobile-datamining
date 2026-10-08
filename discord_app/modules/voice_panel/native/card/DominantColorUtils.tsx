@@ -1,8 +1,8 @@
-// === Module 8515: DominantColorUtils ===
+// === Module 8999: DominantColorUtils ===
 
-// Module 8515 (DominantColorUtils)
+// Module 8999 (DominantColorUtils)
 import nativeDefault from "native" /* 587 */;
-import privDefault from "priv" /* 1444 */;
+import privDefault from "priv" /* 1456 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ let closure_6 = new privDefault({ max: 1000 });
 let tmp2 = new privDefault({ max: 1000 });
 let closure_7 = new privDefault({ max: 1000 });
 let ReactCompilerGating = fn(558);
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDominantRGBFromImage(arg0) {
   _require = arg0;
   const cResult = require("c").c(7);
   importDefault = noop.useRef(true);
@@ -37,8 +37,8 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       hexToRgbResult = closure_6.get(arg0);
     }
     if (hexToRgbResult == null) {
-      hexToRgbResult = tmp(4733).hexToRgb(nativeDefault.unsafe_rawColors.PRIMARY_800);
-      const tmpResult = tmp(4733);
+      hexToRgbResult = tmp(4927).hexToRgb(nativeDefault.unsafe_rawColors.PRIMARY_800);
+      const tmpResult = tmp(4927);
     }
     cResult[2] = arg0;
     cResult[3] = hexToRgbResult;
@@ -77,11 +77,11 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           let result = closure_1_7.set(str, value2);
           if (null != value2) {
             if (typeof value2 === "number") {
-              let dominantColorsLocalAsset = ref(1886).getDominantColorsLocalAsset(Image.resolveAssetSource(value2));
-              const obj3 = ref(1886);
+              let dominantColorsLocalAsset = ref(1898).getDominantColorsLocalAsset(Image.resolveAssetSource(value2));
+              const obj3 = ref(1898);
             } else {
-              dominantColorsLocalAsset = ref(1886).getDominantColors(Image.resolveAssetSource(value2));
-              const obj4 = ref(1886);
+              dominantColorsLocalAsset = ref(1898).getDominantColors(Image.resolveAssetSource(value2));
+              const obj4 = ref(1898);
             }
             dominantColorsLocalAsset.then((result) => {
               const tmp = _slicedToArray(result[0], 3);
@@ -125,7 +125,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const effect1 = noop.useEffect(tmp14, tmp15);
   return tmp13;
-}) : ((arg0) => {
+}) : (function useDominantRGBFromImage(arg0) {
   _require = arg0;
   importDefault = noop.useRef(true);
   const effect = noop.useEffect(() => () => {
@@ -169,11 +169,11 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         let result = closure_1_7.set(str, value2);
         if (null != value2) {
           if (typeof value2 === "number") {
-            let dominantColorsLocalAsset = ref(1886).getDominantColorsLocalAsset(Image.resolveAssetSource(value2));
-            const obj3 = ref(1886);
+            let dominantColorsLocalAsset = ref(1898).getDominantColorsLocalAsset(Image.resolveAssetSource(value2));
+            const obj3 = ref(1898);
           } else {
-            dominantColorsLocalAsset = ref(1886).getDominantColors(Image.resolveAssetSource(value2));
-            const obj4 = ref(1886);
+            dominantColorsLocalAsset = ref(1898).getDominantColors(Image.resolveAssetSource(value2));
+            const obj4 = ref(1898);
           }
           dominantColorsLocalAsset.then((result) => {
             const tmp = _slicedToArray(result[0], 3);
@@ -235,10 +235,10 @@ let result = size.fileFinishedImporting("modules/voice_panel/native/card/Dominan
 
 export { getCachedSourceFromURI };
 export const useDominantRGBFromImage = tmp4;
-export const useDominantColorFromImage = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useDominantColorFromImage = ReactCompilerGating.isReactCompilerEnabled() ? (function useDominantColorFromImage(arg0) {
   const tmp = closure_8(arg0);
   return "rgb(" + tmp.r + ", " + tmp.g + ", " + tmp.b + ")";
-}) : ((arg0) => {
+}) : (function useDominantColorFromImage(arg0) {
   const tmp = closure_8(arg0);
   return "rgb(" + tmp.r + ", " + tmp.g + ", " + tmp.b + ")";
 });

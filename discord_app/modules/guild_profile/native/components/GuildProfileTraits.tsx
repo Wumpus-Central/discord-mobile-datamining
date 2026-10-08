@@ -1,23 +1,23 @@
-// === Module 9425: GuildProfileTraits ===
+// === Module 9089: GuildProfileTraits ===
 
-// Module 9425 (GuildProfileTraits)
+// Module 9089 (GuildProfileTraits)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4533 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import EmojiDefault from "Emoji" /* 6632 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4725 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import EmojiDefault from "Emoji" /* 6809 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { display: "flex", flexDirection: "row", flexWrap: "wrap", gap: 8 }, trait: { display: "flex", flexDirection: "row", gap: 4, alignItems: "center", paddingHorizontal: 8, paddingVertical: 4, borderRadius: nativeDefault.radii.lg, borderWidth: 1, borderStyle: "solid", borderColor: nativeDefault.colors.BORDER_SUBTLE }, emojiImage: { width: 16, height: 16 } };
 let closure_7 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((emoji) => {
+let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function TraitEmoji(emoji) {
   const cResult = c.c(7);
   emoji = emoji.emoji;
   const tmp3 = closure_7();
@@ -56,7 +56,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((emoji) => {
     cResult[2] = emojiURL;
     tmp4 = emojiURL;
   }
-}) : ((emoji) => {
+}) : (function TraitEmoji(emoji) {
   emoji = emoji.emoji;
   if (null == emoji) {
     return null;
@@ -72,7 +72,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((emoji) => {
   }
 });
 ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((trait) => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildProfileTraitView(trait) {
   const cResult = c.c(8);
   trait = trait.trait;
   const tmp4 = closure_7();
@@ -111,7 +111,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((trait) => {
   cResult[6] = tmp9;
   cResult[7] = tmp13;
   tmp12 = tmp13;
-}) : ((trait) => {
+}) : (function GuildProfileTraitView(trait) {
   trait = trait.trait;
   const obj = { style: closure_7().trait, children: null };
   const items = [hasOwnProperty(closure_8, { emoji: trait.emoji }), hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: trait.label })];
@@ -123,7 +123,7 @@ let obj3 = { display: "flex", flexDirection: "row", gap: 4, alignItems: "center"
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_profile/native/components/GuildProfileTraits.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((profile) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildProfileTraits(profile) {
   const cResult = c.c(10);
   let traits = profile.profile;
   const tmp2 = closure_7();
@@ -183,7 +183,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((profile) => {
     cResult[9] = tmp17;
     tmp14 = tmp17;
   }
-}) : ((profile) => {
+}) : (function GuildProfileTraits(profile) {
   profile = profile.profile;
   const items = [profile];
   const memo = noop.useMemo(() => {

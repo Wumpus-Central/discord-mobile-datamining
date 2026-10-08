@@ -1,29 +1,29 @@
-// === Module 15556: CheckpointKnickKnacks ===
+// === Module 15822: CheckpointKnickKnacks ===
 
-// Module 15556 (CheckpointKnickKnacks)
+// Module 15822 (CheckpointKnickKnacks)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import _mod4610 from "module_4610" /* 4610 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import _mod4802 from "module_4802" /* 4802 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 require = fn;
 const View = fn(17).View;
-const CHECKPOINT_PRIMARY = fn(5121).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(5433).CHECKPOINT_PRIMARY;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({ rive: { width: 143, height: 32 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointKnickKnacks.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function CheckpointKnickKnacks(style) {
   const cResult = c.c(12);
   style = style.style;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AccessibilityStore];
-    const fn = function v() {
+    const fn = function k() {
       return useReducedMotion.useReducedMotion;
     };
     cResult[0] = items;
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
       }
       if (cResult[7] !== tmp9) {
         const obj3 = { artboard: "Entry", dataBinding: tmp9 };
-        const tmp14 = jsx(_mod4610.CheckpointKnickKnacksRive, { artboard: "Entry", dataBinding: tmp9 });
+        const tmp14 = jsx(_mod4802.CheckpointKnickKnacksRive, { artboard: "Entry", dataBinding: tmp9 });
         cResult[7] = tmp9;
         cResult[8] = tmp14;
         let tmp12 = tmp14;
@@ -75,7 +75,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
     tmp11 = items1;
   }
   tmpResult2 = PlatformUtils;
-}) : ((style) => {
+}) : (function CheckpointKnickKnacks(style) {
   let stateFromStores;
   const items = [AccessibilityStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
     const items2 = [tmp4.rive, style.style];
     obj3.style = items2;
     const obj4 = { artboard: "Entry", dataBinding: memo };
-    obj3.children = jsx(tmp(4610).CheckpointKnickKnacksRive, { artboard: "Entry", dataBinding: memo });
+    obj3.children = jsx(tmp(4802).CheckpointKnickKnacksRive, { artboard: "Entry", dataBinding: memo });
     tmp6 = <View style={null}>{null}</View>;
   }
   return tmp6;

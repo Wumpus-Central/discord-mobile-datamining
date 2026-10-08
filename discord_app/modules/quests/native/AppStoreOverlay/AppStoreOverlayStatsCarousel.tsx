@@ -1,16 +1,16 @@
-// === Module 10938: AppStoreOverlayStatsCarousel ===
+// === Module 10589: AppStoreOverlayStatsCarousel ===
 
-// Module 10938 (AppStoreOverlayStatsCarousel)
+// Module 10589 (AppStoreOverlayStatsCarousel)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6147 */;
-import AnalyticsActions from "AnalyticsActions" /* 7215 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7225 */;
-import AppStoreOverlayStatCardUtils from "AppStoreOverlayStatCardUtils" /* 10939 */;
-import AppStoreOverlayStarRatingDefault from "AppStoreOverlayStarRating" /* 10940 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6326 */;
+import AnalyticsActions from "AnalyticsActions" /* 7395 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7404 */;
+import AppStoreOverlayStatCardUtils from "AppStoreOverlayStatCardUtils" /* 10590 */;
+import AppStoreOverlayStarRatingDefault from "AppStoreOverlayStarRating" /* 10591 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -66,7 +66,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 let closure_10 = 130 + nativeDefault.space.PX_16;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { carousel: { marginHorizontal: -nativeDefault.space.PX_16 }, carouselContent: null, statCard: null, statCardExpanded: null, expandedCarouselContent: null, secondaryRow: null };
 let obj3 = { marginHorizontal: -nativeDefault.space.PX_16 };
 obj2.carouselContent = { gap: nativeDefault.space.PX_16, paddingLeft: nativeDefault.space.PX_16, paddingRight: nativeDefault.space.PX_16 };
@@ -79,7 +79,7 @@ let obj5 = { flexDirection: "row", gap: nativeDefault.space.PX_16, paddingHorizo
 obj2.secondaryRow = { height: nativeDefault.space.PX_16, justifyContent: "center" };
 let closure_11 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function AppStoreOverlayStatCardItem(arg0) {
   const cResult = c.c(28);
   ({ stat, expanded, onRatingPress } = arg0);
   let statCardExpanded = undefined !== expanded && expanded;
@@ -220,7 +220,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = statCardExpanded;
   cResult[4] = items2;
   tmp10 = items2;
-}) : ((onRatingPress) => {
+}) : (function AppStoreOverlayStatCardItem(onRatingPress) {
   ({ stat, expanded } = onRatingPress);
   if (expanded === undefined) {
     expanded = false;
@@ -280,7 +280,7 @@ let obj6 = { height: nativeDefault.space.PX_16, justifyContent: "center" };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayStatsCarousel.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCarouselScroll) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppStoreOverlayStatsCarousel(onCarouselScroll) {
   const cResult = onRatingPress(576).c(34);
   ({ stats, onRatingPress } = onCarouselScroll);
   onCarouselScroll = onCarouselScroll.onCarouselScroll;
@@ -293,52 +293,33 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCarouselScroll
     first = cResult[0];
   }
   let obj = onRatingPress(576);
-  const nativeGesture = onRatingPress(6147).useNativeGesture(first);
+  const nativeGesture = onRatingPress(6326).useNativeGesture(first);
   dependencyMap = length.useRef(0);
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    class S {
-      constructor() {
-        closure_2.current = 0;
-        return;
-      }
-    }
-    cResult[1] = S;
+    const fn = function h() {
+      closure_2.current = 0;
+    };
+    cResult[1] = fn;
+    let tmp8 = fn;
   } else {
-    class S {
-      constructor() {
-        closure_2.current = 0;
-        return;
-      }
-    }
+    tmp8 = cResult[1];
   }
   if (cResult[2] !== stats.length) {
-    class S {
-      constructor() {
-        closure_2.current = 0;
-        return;
-      }
-    }
-    tmp10[0] = length;
+    const items = [length];
     cResult[2] = length;
-    cResult[3] = tmp10;
+    cResult[3] = items;
+    let tmp9 = items;
   } else {
-    class S {
-      constructor() {
-        closure_2.current = 0;
-        return;
-      }
-    }
+    tmp9 = cResult[3];
   }
-  const effect = length.useEffect(S, tmp10);
+  const effect = length.useEffect(tmp8, tmp9);
   if (cResult[4] === stats.length) {
-    class S {
-      constructor() {
-        closure_2.current = 0;
-        return;
-      }
+    if (cResult[5] === onCarouselScroll) {
+      let tmp11 = cResult[6];
     }
-    if (cResult[7] !== R) {
-      class A {
+    closure_4 = tmp11;
+    if (cResult[7] !== tmp11) {
+      class E {
         constructor(arg0) {
           velocity = onCarouselScroll.nativeEvent.velocity;
           num = undefined;
@@ -355,10 +336,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCarouselScroll
           return;
         }
       }
-      cResult[7] = R;
-      cResult[8] = A;
+      cResult[7] = tmp11;
+      cResult[8] = E;
     } else {
-      class A {
+      class E {
         constructor(arg0) {
           velocity = onCarouselScroll.nativeEvent.velocity;
           num = undefined;
@@ -377,7 +358,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCarouselScroll
       }
     }
     if (0 === stats.length) {
-      class A {
+      class E {
         constructor(arg0) {
           velocity = onCarouselScroll.nativeEvent.velocity;
           num = undefined;
@@ -396,7 +377,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCarouselScroll
       }
       return null;
     } else {
-      class A {
+      class E {
         constructor(arg0) {
           velocity = onCarouselScroll.nativeEvent.velocity;
           num = undefined;
@@ -414,7 +395,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCarouselScroll
         }
       }
       if (tmp7) {
-        class A {
+        class E {
           constructor(arg0) {
             velocity = onCarouselScroll.nativeEvent.velocity;
             num = undefined;
@@ -432,7 +413,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCarouselScroll
           }
         }
         if (cResult[12] !== onRatingPress) {
-          class A {
+          class E {
             constructor(arg0) {
               velocity = onCarouselScroll.nativeEvent.velocity;
               num = undefined;
@@ -450,9 +431,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCarouselScroll
             }
           }
           cResult[12] = onRatingPress;
-          cResult[13] = tmp18;
+          cResult[13] = tmp17;
         } else {
-          class A {
+          class E {
             constructor(arg0) {
               velocity = onCarouselScroll.nativeEvent.velocity;
               num = undefined;
@@ -470,12 +451,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCarouselScroll
             }
           }
         }
-        const mapped = stats.map(tmp18);
+        const mapped = stats.map(tmp17);
         cResult[9] = onRatingPress;
         cResult[10] = stats;
         cResult[11] = mapped;
       } else {
-        class A {
+        class E {
           constructor(arg0) {
             velocity = onCarouselScroll.nativeEvent.velocity;
             num = undefined;
@@ -498,7 +479,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCarouselScroll
               obj = { stat: onCarouselScroll, onRatingPress: null };
               tmp3 = undefined;
               tmp = jsx;
-              tmp2 = f56362;
+              tmp2 = AppStoreOverlayStatCardItem;
               if ("rating" === onCarouselScroll.type) {
                 tmp3 = onRatingPress;
               }
@@ -514,7 +495,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCarouselScroll
               obj = { stat: onCarouselScroll, onRatingPress: null };
               tmp3 = undefined;
               tmp = jsx;
-              tmp2 = f56362;
+              tmp2 = AppStoreOverlayStatCardItem;
               if ("rating" === onCarouselScroll.type) {
                 tmp3 = onRatingPress;
               }
@@ -571,9 +552,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCarouselScroll
   cResult[4] = stats.length;
   cResult[5] = onCarouselScroll;
   cResult[6] = R;
+  tmp11 = R;
   tmp7 = stats.length <= 2;
-  const tmpResult = onRatingPress(6147);
-}) : ((arg0) => {
+  const tmpResult = onRatingPress(6326);
+}) : (function AppStoreOverlayStatsCarousel(arg0) {
   ({ stats, onRatingPress: require, onCarouselScroll } = arg0);
   let length;
   let map = closure_11();

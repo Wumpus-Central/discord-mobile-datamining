@@ -1,11 +1,11 @@
-// === Module 10758: useCollectiblesExternalGatewayFacet ===
+// === Module 12712: useCollectiblesExternalGatewayFacet ===
 
-// Module 10758 (useCollectiblesExternalGatewayFacet)
+// Module 12712 (useCollectiblesExternalGatewayFacet)
 import _mod19 from "module_19" /* 19 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 8539 */;
-import UserStore from "UserStore" /* 1377 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9024 */;
+import UserStore from "UserStore" /* 1389 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -14,7 +14,7 @@ const require = globalThis.__r;
 const useMemo = _mod19.useMemo;
 const result = size.fileFinishedImporting("modules/collectibles/native/hooks/useCollectiblesExternalGatewayFacet.android.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((cResult) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCollectiblesExternalGatewayFacet(cResult) {
   cResult = c.c(7);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
@@ -51,7 +51,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((cResult) => {
   cResult[4] = collectibleGoogleSkuId;
   tmp8 = collectibleGoogleSkuId;
   const tmpResult2 = collectibles_CollectiblesUtils;
-}) : ((arg0) => {
+}) : (function useCollectiblesExternalGatewayFacet(arg0) {
   _require = arg0;
   let items = [UserStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());

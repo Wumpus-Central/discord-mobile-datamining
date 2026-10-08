@@ -1,8 +1,8 @@
-// === Module 10051: FavoritesGuildExperiment ===
+// === Module 10296: FavoritesGuildExperiment ===
 
-// Module 10051 (FavoritesGuildExperiment)
+// Module 10296 (FavoritesGuildExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment_mod from "ApexExperiment" /* 1440 */;
+import ApexExperiment_mod from "ApexExperiment" /* 1452 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -20,7 +20,7 @@ obj3.variations = obj4;
 let closure_3 = ApexExperiment.createApexExperiment(obj3);
 const result = size.fileFinishedImporting("modules/favorites/FavoritesGuildExperiment.tsx");
 
-export const useFavoritesGuildConfig = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+export const useFavoritesGuildConfig = ReactCompilerGating.isReactCompilerEnabled() ? (function useFavoritesGuildConfig(location) {
   const cResult = c.c(7);
   const _location = location.location;
   if (cResult[0] !== _location) {
@@ -52,7 +52,7 @@ export const useFavoritesGuildConfig = ReactCompilerGating.isReactCompilerEnable
   cResult[5] = config1;
   cResult[6] = obj4;
   tmp6 = obj4;
-}) : ((location) => {
+}) : (function useFavoritesGuildConfig(location) {
   const _location = location.location;
   const config = closure_3.useConfig({ location: _location });
   const tmp2 = config.enabled || closure_2.useConfig({ location: _location }).enabled;

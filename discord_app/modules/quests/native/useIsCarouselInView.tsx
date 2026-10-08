@@ -1,8 +1,8 @@
-// === Module 14901: useIsCarouselInView ===
+// === Module 15163: useIsCarouselInView ===
 
-// Module 14901 (useIsCarouselInView)
+// Module 15163 (useIsCarouselInView)
 import c from "c" /* 576 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,12 +11,12 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/useIsCarouselInView.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsCarouselInView() {
   const cResult = c.c(7);
   const height = useWindowDimensionsDefault().height;
   closure_2 = noop.useRef(height);
   if (cResult[0] !== height) {
-    const fn = function u() {
+    const fn = function n() {
       closure_2.current = height;
     };
     const items = [height];
@@ -34,7 +34,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   [tmp7, _slicedToArray] = noop.useState(true);
   closure_4 = noop.useRef(tmp7);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn2 = function o() {
+    const fn2 = function v() {
       setInterval(() => {
         if (null != ref.current) {
           const current = ref.current;
@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp11 = cResult[6];
   }
   return tmp11;
-}) : (() => {
+}) : (function useIsCarouselInView() {
   const containerRef = noop.useRef(null);
   const height = useWindowDimensionsDefault().height;
   closure_2 = noop.useRef(height);

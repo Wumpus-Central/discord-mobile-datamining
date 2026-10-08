@@ -1,6 +1,6 @@
-// === Module 9145: ExternalPip ===
+// === Module 5219: ExternalPip ===
 
-// Module 9145 (ExternalPip)
+// Module 5219 (ExternalPip)
 import get_ActivityIndicator from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

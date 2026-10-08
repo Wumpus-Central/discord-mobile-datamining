@@ -1,14 +1,14 @@
-// === Module 8399: GameProfileMedia ===
+// === Module 8897: GameProfileMedia ===
 
-// Module 8399 (GameProfileMedia)
+// Module 8897 (GameProfileMedia)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import openMediaModal from "openMediaModal" /* 7944 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8352 */;
-import GameProfileMediaSources from "GameProfileMediaSources" /* 8400 */;
+import openMediaModal from "openMediaModal" /* 8362 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8850 */;
+import GameProfileMediaSources from "GameProfileMediaSources" /* 8898 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 require = fn;
 function keyExtractor(originalUrl, arg1) {
@@ -24,18 +24,18 @@ function getItemType(type) {
   return type;
 }
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, Image: metroRequire, Pressable: closure_7, StyleSheet } = get_ActivityIndicator);
-let NOOP = fn(1096).NOOP;
+({ View: hasOwnProperty, Pressable: metroRequire, StyleSheet } = get_ActivityIndicator);
+const NOOP = fn(1096).NOOP;
 const jsxProd = fn(21);
-({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
+({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
 const PX_16 = nativeDefault.space.PX_16;
-let closure_15 = 2 * (fn(8400).MEDIA_ITEM_MAX_WIDTH + PX_12);
-const createStyles = fn(4896);
+let closure_14 = 2 * (fn(8898).MEDIA_ITEM_MAX_WIDTH + PX_12);
+const createStyles = fn(5090);
 let obj = { container: { gap: nativeDefault.space.PX_12, marginHorizontal: -nativeDefault.space.PX_16 }, list: { overflow: "visible" }, separator: { width: PX_12 }, listPadding: { width: PX_16 }, mediaItem: null, mediaImage: null, mediaVideo: null, reducedMotionPoster: null, playIconWrapper: null };
 let obj3 = { gap: nativeDefault.space.PX_12, marginHorizontal: -nativeDefault.space.PX_16 };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
-obj.mediaItem = { maxWidth: fn(8400).MEDIA_ITEM_MAX_WIDTH, maxHeight: fn(8400).MEDIA_ITEM_MAX_HEIGHT, borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
+obj.mediaItem = { maxWidth: fn(8898).MEDIA_ITEM_MAX_WIDTH, maxHeight: fn(8898).MEDIA_ITEM_MAX_HEIGHT, borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
 obj.mediaImage = { width: "100%", height: "100%", resizeMode: "cover" };
 let size = { width: "100%", height: "100%", backgroundColor: nativeDefault.colors.BLACK };
 obj.mediaVideo = size;
@@ -48,14 +48,14 @@ const merged2 = Object.assign(StyleSheet.absoluteFillObject);
 obj6.alignItems = "center";
 obj6.justifyContent = "center";
 obj.playIconWrapper = obj6;
-let closure_16 = createStyles.createStyles(obj);
+let closure_15 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
-const ItemSeparatorComponent = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const ItemSeparatorComponent = ReactCompilerGating.isReactCompilerEnabled() ? (function Separator() {
   const cResult = c.c(2);
-  const tmp2 = closure_16();
+  const tmp2 = closure_15();
   if (cResult[0] !== tmp2.separator) {
     const obj2 = { style: tmp2.separator };
-    const tmp6 = v65535(hasOwnProperty, obj2);
+    const tmp6 = options(hasOwnProperty, obj2);
     cResult[0] = tmp2.separator;
     cResult[1] = tmp6;
     let tmp3 = tmp6;
@@ -63,14 +63,16 @@ const ItemSeparatorComponent = ReactCompilerGating.isReactCompilerEnabled() ? ((
     tmp3 = cResult[1];
   }
   return tmp3;
-}) : (() => v65535(hasOwnProperty, { style: closure_16().separator }));
+}) : (function Separator() {
+  return options(hasOwnProperty, { style: closure_15().separator });
+});
 ReactCompilerGating = fn(558);
-let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function ListPadding() {
   const cResult = c.c(2);
-  const tmp2 = closure_16();
+  const tmp2 = closure_15();
   if (cResult[0] !== tmp2.listPadding) {
     const obj2 = { style: tmp2.listPadding };
-    const tmp6 = v65535(hasOwnProperty, obj2);
+    const tmp6 = options(hasOwnProperty, obj2);
     cResult[0] = tmp2.listPadding;
     cResult[1] = tmp6;
     let tmp3 = tmp6;
@@ -78,78 +80,81 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp3 = cResult[1];
   }
   return tmp3;
-}) : (() => v65535(hasOwnProperty, { style: closure_16().listPadding }));
+}) : (function ListPadding() {
+  return options(hasOwnProperty, { style: closure_15().listPadding });
+});
 ReactCompilerGating = fn(558);
-let closure_21 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((sources) => {
+let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ImageItem(sources) {
   const cResult = index(trackAction[10]).c(21);
   ({ url, index } = sources);
   sources = sources.sources;
   trackAction = sources.trackAction;
   ({ width, height, onScrollToIndex } = sources);
   const setMediaModalOpen = sources.setMediaModalOpen;
-  const tmp2 = closure_16();
+  const tmp3 = closure_15();
   const obj = index(trackAction[10]);
+  const tmp = trackAction;
   if (cResult[0] === index) {
     if (cResult[1] === onScrollToIndex) {
       if (cResult[2] === setMediaModalOpen) {
         if (cResult[3] === sources) {
           if (cResult[4] === trackAction) {
-            let tmp4 = cResult[5];
+            let tmp5 = cResult[5];
           }
           if (cResult[6] === height) {
             if (cResult[7] === width) {
-              let tmp5 = cResult[8];
+              let tmp6 = cResult[8];
             }
-            if (cResult[9] === tmp2.mediaItem) {
-              if (cResult[10] === tmp5) {
-                let tmp6 = cResult[11];
+            if (cResult[9] === tmp3.mediaItem) {
+              if (cResult[10] === tmp6) {
+                let tmp7 = cResult[11];
               }
               if (cResult[12] !== url) {
                 const obj2 = { uri: url };
                 cResult[12] = url;
                 cResult[13] = obj2;
-                let tmp7 = obj2;
+                let tmp8 = obj2;
               } else {
-                tmp7 = cResult[13];
+                tmp8 = cResult[13];
               }
-              if (cResult[14] === tmp2.mediaImage) {
-                if (cResult[15] === tmp7) {
-                  let tmp8 = cResult[16];
+              if (cResult[14] === tmp3.mediaImage) {
+                if (cResult[15] === tmp8) {
+                  let tmp9 = cResult[16];
                 }
-                if (cResult[17] === tmp4) {
-                  if (cResult[18] === tmp6) {
-                    if (cResult[19] === tmp8) {
-                      let tmp12 = cResult[20];
+                if (cResult[17] === tmp5) {
+                  if (cResult[18] === tmp7) {
+                    if (cResult[19] === tmp9) {
+                      let tmp13 = cResult[20];
                     }
-                    return tmp12;
+                    return tmp13;
                   }
                 }
-                const obj3 = { ref, style: tmp6, onPress: tmp4, children: tmp8 };
-                const tmp15 = closure_10(closure_7, obj3);
-                cResult[17] = tmp4;
-                cResult[18] = tmp6;
-                cResult[19] = tmp8;
-                cResult[20] = tmp15;
-                tmp12 = tmp15;
+                const obj3 = { ref, style: tmp7, onPress: tmp5, children: tmp9 };
+                const tmp16 = closure_9(closure_6, obj3);
+                cResult[17] = tmp5;
+                cResult[18] = tmp7;
+                cResult[19] = tmp9;
+                cResult[20] = tmp16;
+                tmp13 = tmp16;
               }
-              const obj4 = { source: tmp7, style: tmp2.mediaImage };
-              const tmp11 = closure_10(closure_6, obj4);
-              cResult[14] = tmp2.mediaImage;
-              cResult[15] = tmp7;
-              cResult[16] = tmp11;
-              tmp8 = tmp11;
+              const obj4 = { source: tmp8, style: tmp3.mediaImage };
+              const tmp12 = closure_9(sources(tmp[13]), obj4);
+              cResult[14] = tmp3.mediaImage;
+              cResult[15] = tmp8;
+              cResult[16] = tmp12;
+              tmp9 = tmp12;
             }
-            const items = [tmp2.mediaItem, tmp5];
-            cResult[9] = tmp2.mediaItem;
-            cResult[10] = tmp5;
+            const items = [tmp3.mediaItem, tmp6];
+            cResult[9] = tmp3.mediaItem;
+            cResult[10] = tmp6;
             cResult[11] = items;
-            tmp6 = items;
+            tmp7 = items;
           }
           const size = { width, height };
           cResult[6] = height;
           cResult[7] = width;
           cResult[8] = size;
-          tmp5 = size;
+          tmp6 = size;
         }
       }
     }
@@ -177,16 +182,16 @@ let closure_21 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((sour
   cResult[3] = sources;
   cResult[4] = trackAction;
   cResult[5] = fn;
-  tmp4 = fn;
+  tmp5 = fn;
   ref = setMediaModalOpen.useRef(null);
-}) : ((index) => {
+}) : (function ImageItem(index) {
   index = index.index;
   const sources = index.sources;
   const trackAction = index.trackAction;
   const onScrollToIndex = index.onScrollToIndex;
   const setMediaModalOpen = index.setMediaModalOpen;
   ({ url, width, height } = index);
-  const tmp = closure_16();
+  const tmp = closure_15();
   const ref = setMediaModalOpen.useRef(null);
   const items = [sources, index, trackAction, onScrollToIndex, setMediaModalOpen];
   const obj = {
@@ -209,26 +214,26 @@ let closure_21 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((sour
         }
       });
     }, items),
-    children: closure_10(closure_6, { source: { uri: url }, style: tmp.mediaImage })
+    children: closure_9(sources(trackAction[13]), { source: { uri: url }, style: tmp.mediaImage })
   };
   const items1 = [tmp.mediaItem, { width, height }];
   obj.style = items1;
-  return closure_10(closure_7, obj);
+  return closure_9(closure_6, obj);
 }));
-let closure_22 = noop.memo((sources) => {
+let closure_21 = noop.memo(function TrailerItem(sources) {
   ({ posterUrl, index } = sources);
   sources = sources.sources;
   const trackAction = sources.trackAction;
   const onScrollToIndex = sources.onScrollToIndex;
   const setMediaModalOpen = sources.setMediaModalOpen;
   ({ url, active, reducedMotion, width, height } = sources);
-  const tmp = closure_16();
+  const tmp = closure_15();
   setMediaModalOpen.useRef(null);
   const ref = setMediaModalOpen.useRef(0);
   const callback = setMediaModalOpen.useCallback((current) => {
     closure_6.current = current;
   }, []);
-  const ref1 = setMediaModalOpen.useRef(index(trackAction[13]).createVideoControls(NOOP));
+  const ref1 = setMediaModalOpen.useRef(index(trackAction[14]).createVideoControls(NOOP));
   const current = ref1.current;
   const subscribe = current.useSubscribe(callback, NOOP, NOOP);
   const items = [trackAction, sources, index, onScrollToIndex, setMediaModalOpen];
@@ -258,19 +263,19 @@ let closure_22 = noop.memo((sources) => {
   };
   const items1 = [tmp.mediaItem, { width, height }];
   obj2.style = items1;
-  const intl = index(trackAction[14]).intl;
-  obj2.accessibilityLabel = intl.string(index(trackAction[14]).t.oRN0Og);
+  const intl = index(trackAction[15]).intl;
+  obj2.accessibilityLabel = intl.string(index(trackAction[15]).t.oRN0Og);
   if (reducedMotion) {
     const obj3 = { children: null };
     const obj4 = { source: null, style: null, accessibilityIgnoresInvertColors: true };
     const obj5 = { uri: posterUrl };
     obj4.source = obj5;
     obj4.style = tmp.reducedMotionPoster;
-    const items2 = [closure_10(ref, obj4), ];
-    const obj6 = { style: tmp.playIconWrapper, pointerEvents: "none", children: closure_10(index(tmp5[15]).CirclePlayIcon, { size: "md", color: "white", secondaryColor: "black" }) };
-    items2[1] = closure_10(ref, obj6);
+    const items2 = [closure_9(sources(tmp5[13]), obj4), ];
+    const obj6 = { style: tmp.playIconWrapper, pointerEvents: "none", children: closure_9(index(tmp5[16]).CirclePlayIcon, { size: "md", color: "white", secondaryColor: "black" }) };
+    items2[1] = closure_9(ref, obj6);
     obj3.children = items2;
-    let tmp8Result = closure_12(closure_11, obj3);
+    let tmp8Result = closure_11(closure_10, obj3);
   } else {
     const obj7 = { style: tmp.mediaVideo, source: null, poster: null, posterResizeMode: "cover", paused: null, muted: true, resizeMode: "cover", pauseWhileAppInactive: true, controls: null };
     const obj8 = { uri: url };
@@ -278,26 +283,26 @@ let closure_22 = noop.memo((sources) => {
     obj7.poster = posterUrl;
     obj7.paused = !active;
     obj7.controls = ref1.current;
-    tmp8Result = closure_10(index(tmp5[13]).VideoComponent, obj7);
+    tmp8Result = closure_9(index(tmp5[14]).VideoComponent, obj7);
   }
   obj2.children = tmp8Result;
-  return closure_10(closure_7, obj2);
+  return closure_9(ref, obj2);
 });
 ReactCompilerGating = fn(558);
-let obj4 = { maxWidth: fn(8400).MEDIA_ITEM_MAX_WIDTH, maxHeight: fn(8400).MEDIA_ITEM_MAX_HEIGHT, borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
+let obj4 = { maxWidth: fn(8898).MEDIA_ITEM_MAX_WIDTH, maxHeight: fn(8898).MEDIA_ITEM_MAX_HEIGHT, borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileMedia.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProfileMedia(arg0) {
   const cResult = trackAction(576).c(44);
   ({ game, trackAction } = arg0);
-  closure_16();
+  closure_15();
   let obj = trackAction(576);
-  const obscured = trackAction(8389).useObscuredSurface().obscured;
+  const obscured = trackAction(8887).useObscuredSurface().obscured;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [mediaViewerSources];
+    const items = [bound1];
     const fn = function s() {
-      return mediaViewerSources.useReducedMotion;
+      return bound1.useReducedMotion;
     };
     cResult[0] = items;
     cResult[1] = fn;
@@ -306,7 +311,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   } else {
     [tmp5, tmp6] = cResult;
   }
-  const obj2 = trackAction(8389);
+  const obj2 = trackAction(8887);
   const stateFromStores = trackAction(504).useStateFromStores(tmp5, tmp6);
   const tmpResult = trackAction(504);
   [tmp10, dependencyMap] = noop.useState(0);
@@ -316,10 +321,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   noop = _slicedToArray(noop.useState(false), 2)[1];
   noop.useRef(null);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const carouselPreviewPixelSize = trackAction(8400).getCarouselPreviewPixelSize();
+    const carouselPreviewPixelSize = trackAction(8898).getCarouselPreviewPixelSize();
     cResult[2] = carouselPreviewPixelSize;
     let tmp14 = carouselPreviewPixelSize;
-    const tmpResult2 = trackAction(8400);
+    const tmpResult2 = trackAction(8898);
   } else {
     tmp14 = cResult[2];
   }
@@ -357,8 +362,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
   }
-  const bound = Math.max(0, Math.min(trackAction(8400).MEDIA_ITEM_MAX_WIDTH, tmp10 - PX_12 - 2 * PX_16));
-  const bound1 = Math.min(trackAction(8400).MEDIA_ITEM_MAX_HEIGHT, bound / trackAction(8400).MEDIA_ITEM_ASPECT_RATIO);
+  const bound = Math.max(0, Math.min(trackAction(8898).MEDIA_ITEM_MAX_WIDTH, tmp10 - PX_12 - 2 * PX_16));
+  bound1 = Math.min(trackAction(8898).MEDIA_ITEM_MAX_HEIGHT, bound / trackAction(8898).MEDIA_ITEM_ASPECT_RATIO);
   if (cResult[6] !== arr2) {
     class F {
       constructor(arg0) {
@@ -366,7 +371,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         return;
       }
     }
-    mediaViewerSources = obj6.buildMediaViewerSources(arr2, tmp14);
+    let mediaViewerSources = obj6.buildMediaViewerSources(arr2, tmp14);
     cResult[6] = arr2;
     cResult[7] = mediaViewerSources;
     const tmp22 = mediaViewerSources;
@@ -380,7 +385,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   mediaViewerSources = tmp22;
   const result = (tmp10 - bound - 2 * PX_16) / 2;
-  NOOP = result;
   const sum = bound + PX_12;
   closure_10 = sum;
   if (cResult[8] === sum) {
@@ -413,18 +417,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[13] = result;
   cResult[14] = Q;
   const tmp12 = _slicedToArray(noop.useState(false), 2);
-}) : ((game) => {
+}) : (function GameProfileMedia(game) {
   game = game.game;
   const trackAction = game.trackAction;
   let stateFromStores;
   let first;
   noop = undefined;
-  let memo;
-  const tmp = closure_16();
-  let obj = game(stateFromStores[16]);
+  let ref;
+  let num;
+  const tmp = num();
+  let obj = game(stateFromStores[17]);
   let tmp2 = game;
-  const items = [memo];
-  stateFromStores = game(stateFromStores[17]).useStateFromStores(items, () => memo.useReducedMotion);
+  const items = [ref];
+  stateFromStores = game(stateFromStores[18]).useStateFromStores(items, () => ref.useReducedMotion);
   const tmp5 = first(noop.useState(0), 2);
   first = tmp5[0];
   noop = tmp5[1];
@@ -432,8 +437,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   closure_5 = tmp7[1];
   const tmp8 = first(noop.useState(false), 2);
   const setMediaModalOpen = tmp8[1];
-  const ref = noop.useRef(null);
-  memo = noop.useMemo(() => game(stateFromStores[7]).getCarouselPreviewPixelSize(), []);
+  ref = noop.useRef(null);
+  const memo = noop.useMemo(() => game(stateFromStores[7]).getCarouselPreviewPixelSize(), []);
   const items1 = [game];
   const callback = noop.useCallback((nativeEvent) => {
     closure_4(nativeEvent.nativeEvent.layout.width);
@@ -446,7 +451,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const items4 = [memo1, memo];
   const memo4 = noop.useMemo(() => GameProfileMediaSources.buildMediaViewerSources(memo1, memo), items4);
   const items5 = [memo1, first, memo2];
-  const memo5 = noop.useMemo(() => memo1.map((item, index) => Math.max(0, index * (memo2 + memo5) - (first - memo2 - 2 * callback2) / 2)), items5);
+  const memo5 = noop.useMemo(() => memo1.map((item, index) => Math.max(0, index * (memo2 + memo4) - (first - memo2 - 2 * memo5) / 2)), items5);
   const items6 = [memo5];
   const items7 = [memo5];
   const callback1 = noop.useCallback((nativeEvent) => {
@@ -486,7 +491,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     closure_5(arg0);
   }, items7);
-  let num = -1;
+  num = -1;
   if (!obj.useObscuredSurface().obscured) {
     num = -1;
     if (!tmp8[0]) {
@@ -512,10 +517,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       size.height = memo3;
       size.onScrollToIndex = callback2;
       size.setMediaModalOpen = setMediaModalOpen;
-      let tmp9 = v65535(closure_22, size);
+      let tmp9 = options(closure_21, size);
     } else {
       const size1 = { url: item.previewUrl, index, sources: memo4, trackAction, width: memo2, height: memo3, onScrollToIndex: callback2, setMediaModalOpen };
-      tmp9 = v65535(closure_21, size1);
+      tmp9 = options(closure_20, size1);
     }
     return tmp9;
   }, items8);
@@ -524,7 +529,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const obj4 = { style: tmp.container, onLayout: callback, children: null };
     let tmp28Result = memo2 > 0;
     if (tmp28Result) {
-      const obj5 = { ref, horizontal: true, renderScrollComponent: trackAction(tmp3[19]), style: tmp.list, overrideProps: null, data: null, extraData: null, renderItem: null, keyExtractor: null, getItemType: null, drawDistance: null, showsHorizontalScrollIndicator: false, ItemSeparatorComponent: null, ListHeaderComponent: null, ListFooterComponent: null, decelerationRate: "fast", snapToOffsets: null, snapToStart: false, snapToEnd: false, onMomentumScrollEnd: null };
+      const obj5 = { ref, horizontal: true, renderScrollComponent: trackAction(tmp3[20]), style: tmp.list, overrideProps: null, data: null, extraData: null, renderItem: null, keyExtractor: null, getItemType: null, drawDistance: null, showsHorizontalScrollIndicator: false, ItemSeparatorComponent: null, ListHeaderComponent: null, ListFooterComponent: null, decelerationRate: "fast", snapToOffsets: null, snapToStart: false, snapToEnd: false, onMomentumScrollEnd: null };
       const obj6 = { style: tmp.list };
       obj5.overrideProps = obj6;
       obj5.data = memo1;
@@ -532,13 +537,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       obj5.renderItem = callback3;
       obj5.keyExtractor = keyExtractor;
       obj5.getItemType = getItemType;
-      obj5.drawDistance = num;
+      obj5.drawDistance = callback2;
       obj5.ItemSeparatorComponent = ItemSeparatorComponent;
       obj5.ListHeaderComponent = ListFooterComponent;
       obj5.ListFooterComponent = ListFooterComponent;
       obj5.snapToOffsets = memo5;
       obj5.onMomentumScrollEnd = callback1;
-      tmp28Result = tmp28(tmp2(tmp3[18]).FlashList, obj5);
+      tmp28Result = tmp28(tmp2(tmp3[19]).FlashList, obj5);
     }
     obj4.children = tmp28Result;
     tmp28Result2 = tmp28(closure_5, obj4);

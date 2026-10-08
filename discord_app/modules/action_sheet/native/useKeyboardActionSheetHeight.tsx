@@ -1,11 +1,11 @@
-// === Module 9789: useKeyboardActionSheetHeight ===
+// === Module 10354: useKeyboardActionSheetHeight ===
 
-// Module 9789 (useKeyboardActionSheetHeight)
+// Module 10354 (useKeyboardActionSheetHeight)
 import c from "c" /* 576 */;
-import useWindowDimensions from "useWindowDimensions" /* 1484 */;
-import useSafeAreaInsets from "useSafeAreaInsets" /* 1618 */;
-import NavigatorConstants from "NavigatorConstants" /* 6075 */;
-import useCustomKeyboardHeight from "useCustomKeyboardHeight" /* 6481 */;
+import useWindowDimensions from "useWindowDimensions" /* 1496 */;
+import useSafeAreaInsets from "useSafeAreaInsets" /* 1630 */;
+import NavigatorConstants from "NavigatorConstants" /* 6261 */;
+import useCustomKeyboardHeight from "useCustomKeyboardHeight" /* 6659 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -15,7 +15,7 @@ const useCustomKeyboardHeightDefault = useCustomKeyboardHeight;
 
 const result = size.fileFinishedImporting("modules/action_sheet/native/useKeyboardActionSheetHeight.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useKeyboardActionSheetHeight() {
   const cResult = c.c(5);
   const tmp5 = useSafeAreaInsetsDefault();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -47,7 +47,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[3] = tmp7;
   cResult[4] = obj3;
   tmp9 = obj3;
-}) : (() => {
+}) : (function useKeyboardActionSheetHeight() {
   const tmp2 = useSafeAreaInsetsDefault();
   const tmp3 = useWindowDimensionsDefault({ ignoreKeyboard: true });
   const maximum = Math.max(0, tmp3.height - NavigatorConstants.NAV_BAR_HEIGHT_MULTILINE - tmp2.top);

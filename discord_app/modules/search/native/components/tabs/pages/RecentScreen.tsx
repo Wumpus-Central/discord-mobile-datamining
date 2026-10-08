@@ -1,35 +1,35 @@
-// === Module 16831: RecentScreen ===
+// === Module 17110: RecentScreen ===
 
-// Module 16831 (RecentScreen)
+// Module 17110 (RecentScreen)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Pressables from "Pressables" /* 5916 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8117 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8119 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 11980 */;
-import SmartSearchUtils from "SmartSearchUtils" /* 11983 */;
-import SearchUtils from "SearchUtils" /* 11987 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12001 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12005 */;
-import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 14650 */;
-import MediaGridPlaceholder from "MediaGridPlaceholder" /* 16838 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 5915 */;
+import Pressables from "Pressables" /* 6189 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7492 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 12053 */;
+import SmartSearchUtils from "SmartSearchUtils" /* 12056 */;
+import SearchUtils from "SearchUtils" /* 12060 */;
+import tracking_TrackingDefault from "tracking/Tracking" /* 12074 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12078 */;
+import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 14911 */;
+import MediaGridPlaceholder from "MediaGridPlaceholder" /* 17117 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import SearchMessageStore from "SearchMessageStore" /* 6794 */;
-import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 12007 */;
-import SearchHistoryStore from "SearchHistoryStore" /* 16832 */;
-import SearchQueryStore from "SearchQueryStore" /* 11994 */;
+import SearchMessageStore from "SearchMessageStore" /* 6067 */;
+import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 12080 */;
+import SearchHistoryStore from "SearchHistoryStore" /* 17111 */;
+import SearchQueryStore from "SearchQueryStore" /* 12067 */;
 
 require = fn;
-const SearchConstants = fn(7524);
+const SearchConstants = fn(9247);
 ({ EMPTY_SEARCH_QUERY_STRING: c10, MESSAGE_PLACEHOLDER_ITEM_SIZE: closure_11, SearchListItemTypes: closure_12, SearchTabs: map1 } = SearchConstants);
-const EMPTY_MEDIA_RESULTS = fn(11996).EMPTY_MEDIA_RESULTS;
+const EMPTY_MEDIA_RESULTS = fn(12069).EMPTY_MEDIA_RESULTS;
 const SearchTypes = fn(1085).SearchTypes;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
-let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => {
+let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function ClearAllHistory(searchContext) {
   const cResult = searchContext(576).c(6);
   searchContext = searchContext.searchContext;
   if (cResult[0] !== searchContext) {
@@ -54,7 +54,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext)
     const obj2 = { variant: "text-sm/semibold", color: "text-brand", children: null };
     const intl2 = tmp(1126).intl;
     obj2.children = intl2.string(tmp(1126).t.LFTAUp);
-    const tmp9 = jsx(tmp(4892).Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
+    const tmp9 = jsx(tmp(5086).Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
     cResult[3] = tmp9;
     let tmp7 = tmp9;
   } else {
@@ -62,7 +62,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext)
   }
   if (cResult[4] !== tmp4) {
     const obj3 = { onPress: tmp4, accessibilityRole: "button", unstable_pressDelay: 130, accessibilityLabel: tmp5, children: tmp7 };
-    const tmp12 = jsx(tmp(5916).PressableHighlight, { onPress: tmp4, accessibilityRole: "button", unstable_pressDelay: 130, accessibilityLabel: tmp5, children: tmp7 });
+    const tmp12 = jsx(tmp(6189).PressableHighlight, { onPress: tmp4, accessibilityRole: "button", unstable_pressDelay: 130, accessibilityLabel: tmp5, children: tmp7 });
     cResult[4] = tmp4;
     cResult[5] = tmp12;
     let tmp10 = tmp12;
@@ -70,7 +70,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext)
     tmp10 = cResult[5];
   }
   return tmp10;
-}) : ((searchContext) => {
+}) : (function ClearAllHistory(searchContext) {
   searchContext = searchContext.searchContext;
   const obj = {
     onPress() {
@@ -86,8 +86,8 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext)
   const obj2 = { variant: "text-sm/semibold", color: "text-brand", children: null };
   const intl2 = searchContext(1126).intl;
   obj2.children = intl2.string(searchContext(1126).t.LFTAUp);
-  obj.children = jsx(searchContext(4892).Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
-  return jsx(searchContext(5916).PressableHighlight, {
+  obj.children = jsx(searchContext(5086).Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
+  return jsx(searchContext(6189).PressableHighlight, {
     onPress() {
       return SearchPlatformActionCreatorsDefault.clearSearchHistory(searchContext);
     },
@@ -98,7 +98,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext)
   });
 });
 ReactCompilerGating = fn(558);
-let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((onJumpToMedia) => {
+let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function ViewAll(onJumpToMedia) {
   const cResult = c.c(4);
   onJumpToMedia = onJumpToMedia.onJumpToMedia;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -129,7 +129,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((onJumpToMedia)
     tmp9 = cResult[3];
   }
   return tmp9;
-}) : ((onJumpToMedia) => {
+}) : (function ViewAll(onJumpToMedia) {
   const obj = { onPress: onJumpToMedia.onJumpToMedia, accessibilityRole: "button", unstable_pressDelay: 130, accessibilityLabel: null, children: null };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.Ofpgwh);
@@ -140,7 +140,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((onJumpToMedia)
   return jsx(Pressables.PressableHighlight, { onPress: onJumpToMedia.onJumpToMedia, accessibilityRole: "button", unstable_pressDelay: 130, accessibilityLabel: null, children: null });
 });
 ReactCompilerGating = fn(558);
-let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => {
+let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSuggestedUsersData(searchContext) {
   const cResult = require("c").c(9);
   searchContext = searchContext.searchContext;
   _require = searchContext;
@@ -151,7 +151,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext)
   } else {
     first = cResult[0];
   }
-  const arr = onPressDMItem(10607)(first);
+  const arr = onPressDMItem(10204)(first);
   if (cResult[1] !== searchContext) {
     let obj3 = { searchContext };
     cResult[1] = searchContext;
@@ -255,7 +255,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext)
       }
     })();
   });
-  const fn = function() {
+  function t3() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -264,13 +264,13 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext)
       applyArgumentsResult = apply(self, arguments);
     }
     return applyArgumentsResult;
-  };
+  }
   cResult[3] = onPressDMItem;
   cResult[4] = searchContext;
-  cResult[5] = fn;
-  tmp8 = fn;
+  cResult[5] = t3;
+  tmp8 = t3;
   const tmpResult = require("useOnPressSearchItem");
-}) : ((searchContext) => {
+}) : (function useSuggestedUsersData(searchContext) {
   searchContext = searchContext.searchContext;
   _require = searchContext;
   importDefault = undefined;
@@ -372,7 +372,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext)
   }, items1);
 });
 ReactCompilerGating = fn(558);
-let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => {
+let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSuggestedChannelsData(searchContext) {
   const cResult = searchContext(onPressGuildTextChannel[12]).c(23);
   searchContext = searchContext.searchContext;
   if (cResult[0] !== searchContext) {
@@ -514,7 +514,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext)
     }
   }
   const fn2 = function b(channelId) {
-    const result = search_tracking_TrackingDefault.trackSuggestedSearchClicked({ searchContext, channelId });
+    const result = tracking_TrackingDefault.trackSuggestedSearchClicked({ searchContext, channelId });
     onPressGuildTextChannel(channelId);
   };
   cResult[12] = onPressGuildTextChannel;
@@ -522,7 +522,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext)
   cResult[14] = fn2;
   tmp16 = fn2;
   const tmpResult8 = searchContext(onPressGuildTextChannel[24]);
-}) : ((searchContext) => {
+}) : (function useSuggestedChannelsData(searchContext) {
   searchContext = searchContext.searchContext;
   let stateFromStores;
   let memo1;
@@ -543,7 +543,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext)
   isLoadingSuggestedSearches = suggestedSearches1.isLoadingSuggestedSearches;
   const items3 = [onPressGuildTextChannel, searchContext];
   const onPress = memo1.useCallback((channelId) => {
-    const result = search_tracking_TrackingDefault.trackSuggestedSearchClicked({ searchContext, channelId });
+    const result = tracking_TrackingDefault.trackSuggestedSearchClicked({ searchContext, channelId });
     onPressGuildTextChannel(channelId);
   }, items3);
   const items4 = [onPress, memo1, memo, suggestedSearches, isLoadingSuggestedSearches];
@@ -590,7 +590,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext)
   }, items4);
 });
 ReactCompilerGating = fn(558);
-let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSearchHistory(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] !== arg0) {
@@ -624,9 +624,9 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp7 = cResult[3];
   }
   const tmp5 = _slicedToArray(noop.useState(tmp4), 2);
-  const focusEffect = tmp(1491).useFocusEffect(tmp7);
+  const focusEffect = tmp(1503).useFocusEffect(tmp7);
   return tmp6;
-}) : ((arg0) => {
+}) : (function useSearchHistory(arg0) {
   _require = arg0;
   const tmp = _slicedToArray(noop.useState(() => SearchHistoryStore.getSearchHistory(closure_0)), 2);
   closure_1 = tmp[1];
@@ -644,7 +644,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return tmp[0];
 });
 ReactCompilerGating = fn(558);
-let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => {
+let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function RecentScreen(searchContext) {
   const cResult = searchContext(576).c(42);
   searchContext = searchContext.searchContext;
   ({ onJumpToMedia, suggestedData } = searchContext);
@@ -672,16 +672,16 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((sear
   const messages = stateFromStoresObject.messages;
   ({ isLoadingMediaGrid, isInitialSearchQuery } = stateFromStoresObject);
   if (cResult[3] !== searchContext) {
-    const searchContextId = tmp2(11987).getSearchContextId(searchContext);
+    const searchContextId = tmp2(12060).getSearchContextId(searchContext);
     cResult[3] = searchContext;
     cResult[4] = searchContextId;
     let tmp11 = searchContextId;
-    const tmp2Result2 = tmp2(11987);
+    const tmp2Result2 = tmp2(12060);
   } else {
     tmp11 = cResult[4];
   }
   const arr3 = closure_21(tmp11);
-  const tmp15 = messages(16836)(searchContext.width);
+  const tmp15 = messages(17115)(searchContext.width);
   dependencyMap = tmp15;
   if (null != messages) {
     if (0 !== messages.length) {
@@ -693,7 +693,7 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((sear
       items1 = [];
       const obj4 = messages[Symbol.iterator]();
       while (obj4 !== undefined) {
-        let obj5 = searchContext(11980);
+        let obj5 = searchContext(12053);
         let items2 = [tmp19];
         let media = obj5.getMedia(searchContext, items2);
         let item = media.forEach((item) => items1.push(item));
@@ -714,7 +714,7 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((sear
       let tmp30 = cResult[10];
     }
     let num11 = searchContext;
-    const onPressMediaItem = searchContext(16833).useOnPressMediaItem(tmp30);
+    const onPressMediaItem = searchContext(17112).useOnPressMediaItem(tmp30);
     if (cResult[11] === messages) {
       if (cResult[12] === onPressMediaItem) {
         let tmp35 = cResult[13];
@@ -727,7 +727,7 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((sear
       } else {
         tmp36 = cResult[14];
       }
-      const fullscreenPlaceholderCount = num11(16837).useFullscreenPlaceholderCount(tmp36);
+      const fullscreenPlaceholderCount = num11(17116).useFullscreenPlaceholderCount(tmp36);
       if (cResult[15] === tmp35) {
         if (cResult[16] === isInitialSearchQuery) {
           if (cResult[17] === EMPTY_MEDIA_RESULTS) {
@@ -1053,7 +1053,7 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((sear
           arr8.push(element);
         });
       }
-      const num11Result = num11(16837);
+      const num11Result = num11(17116);
     }
     class G {
       constructor(arg0) {
@@ -1083,7 +1083,7 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((sear
     cResult[12] = onPressMediaItem;
     cResult[13] = G;
     tmp35 = G;
-    const obj7 = searchContext(16833);
+    const obj7 = searchContext(17112);
   }
   const obj13 = { searchContext, allMediaResults: EMPTY_MEDIA_RESULTS };
   cResult[8] = EMPTY_MEDIA_RESULTS;
@@ -1091,7 +1091,7 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((sear
   cResult[10] = obj13;
   tmp30 = obj13;
   const tmp2Result = searchContext(504);
-}) : ((searchContext) => {
+}) : (function RecentScreen(searchContext) {
   searchContext = searchContext.searchContext;
   const onJumpToMedia = searchContext.onJumpToMedia;
   const suggestedData = searchContext.suggestedData;
@@ -1210,7 +1210,7 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((sear
   return jsx(onJumpToMedia(suggestedData[33]), { data, ListFooterComponent });
 }));
 ReactCompilerGating = fn(558);
-let closure_23 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => {
+let closure_23 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function RecentUserScreen(searchContext) {
   const cResult = c.c(5);
   if (cResult[0] !== searchContext.searchContext) {
     const obj2 = { searchContext: searchContext.searchContext };
@@ -1235,14 +1235,14 @@ let closure_23 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((sear
   cResult[3] = tmp3;
   cResult[4] = tmp6;
   tmp4 = tmp6;
-}) : ((searchContext) => {
+}) : (function RecentUserScreen(searchContext) {
   const obj2 = {};
   const merged = Object.assign(searchContext);
   obj2.suggestedData = closure_19({ searchContext: searchContext.searchContext });
   return <closure_22 />;
 }));
 ReactCompilerGating = fn(558);
-let closure_24 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => {
+let closure_24 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function RecentGuildScreen(searchContext) {
   const cResult = c.c(5);
   if (cResult[0] !== searchContext.searchContext) {
     const obj2 = { searchContext: searchContext.searchContext };
@@ -1267,7 +1267,7 @@ let closure_24 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((sear
   cResult[3] = tmp3;
   cResult[4] = tmp6;
   tmp4 = tmp6;
-}) : ((searchContext) => {
+}) : (function RecentGuildScreen(searchContext) {
   const obj2 = {};
   const merged = Object.assign(searchContext);
   obj2.suggestedData = closure_20({ searchContext: searchContext.searchContext });
@@ -1277,7 +1277,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/RecentScreen.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function RecentScreenContainer(arg0) {
   const cResult = c.c(12);
   ({ searchContext, onJumpToMedia, width } = arg0);
   const type = searchContext.type;
@@ -1335,7 +1335,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
     cResult[11] = tmp7;
     tmp4 = tmp7;
   }
-}) : ((arg0) => {
+}) : (function RecentScreenContainer(arg0) {
   ({ searchContext, onJumpToMedia, width } = arg0);
   const type = searchContext.type;
   if (SearchTypes.DMS === type) {

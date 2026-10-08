@@ -1,9 +1,9 @@
-// === Module 9305: useGuildScheduledEventUserCount ===
+// === Module 8492: useGuildScheduledEventUserCount ===
 
-// Module 9305 (useGuildScheduledEventUserCount)
+// Module 8492 (useGuildScheduledEventUserCount)
 import _mod19 from "module_19" /* 19 */;
-import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 9306 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7050 */;
+import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 8493 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6059 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -12,7 +12,7 @@ const require = globalThis.__r;
 const useEffect = _mod19.useEffect;
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useGuildScheduledEventUserCount.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildScheduledEventUserCount(arg0, arg1, arg2) {
   _require = arg0;
   closure_1 = arg1;
   dependencyMap = arg2;
@@ -36,7 +36,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
         return tmp8;
       }
     }
-    const fn2 = function v() {
+    const fn2 = function f() {
       let tmp2 = null != closure_0;
       if (tmp2) {
         tmp2 = null != closure_1;
@@ -68,7 +68,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
   cResult[3] = fn;
   let obj = require("c");
   tmp = _require;
-}) : ((arg0, arg1, arg2) => {
+}) : (function useGuildScheduledEventUserCount(arg0, arg1, arg2) {
   _require = arg0;
   closure_1 = arg1;
   dependencyMap = arg2;

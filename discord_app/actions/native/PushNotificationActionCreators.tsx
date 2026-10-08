@@ -1,16 +1,16 @@
-// === Module 12070: PushNotificationActionCreators ===
+// === Module 12143: PushNotificationActionCreators ===
 
-// Module 12070 (PushNotificationActionCreators)
+// Module 12143 (PushNotificationActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import TokenManagerAll from "TokenManager" /* 1111 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5089 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5944 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import MultiAccountStore from "MultiAccountStore" /* 12071 */;
+import MultiAccountStore from "MultiAccountStore" /* 12144 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -116,8 +116,8 @@ let closure_17 = async function _getOrRefreshPushSyncToken(arg0) {
 };
 const Constants = fn(1085);
 ({ DEVICE_TOKEN: closure_7, DEVICE_VOIP_TOKEN: closure_8, Endpoints: closure_9 } = Constants);
-const MAX_PUSH_SYNC_ACCOUNTS = fn(12072).MAX_PUSH_SYNC_ACCOUNTS;
-const PushNotificationConstants = fn(6092);
+const MAX_PUSH_SYNC_ACCOUNTS = fn(12145).MAX_PUSH_SYNC_ACCOUNTS;
+const PushNotificationConstants = fn(5939);
 ({ BUNDLE_ID: closure_11, DEVICE_PUSH_VOIP_PROVIDER: closure_12, getDevicePushProvider: map1, IS_QUEST_RELEASE: closure_14 } = PushNotificationConstants);
 const logger = new LoggerDefault("PushNotificationActionCreators");
 const size = fn(2);
@@ -166,7 +166,7 @@ export default {
     return (async () => {
       const id2 = id.getId();
       validUsers = validUsers.getValidUsers();
-      const sorted = validUsers.sort((id, id2) => {
+      const sorted = validUsers.sort(function sortCurrentUserFirst(id, id2) {
         let num = -1;
         if (id.id !== closure_1_0) {
           let num2 = 0;
@@ -190,15 +190,15 @@ export default {
           closure_128_1 = value;
           if (closure_128_1.length >= 1) {
             if (null != closure_128_1[0]) {
-              const HTTP = tmp2(1282).HTTP;
+              const HTTP = tmp2(1294).HTTP;
               const request = { url: constants.DEVICES_SYNC, body: null, rejectWithError: false };
               if (closure_129_1) {
                 let tmp9 = closure_1_12;
               } else {
                 tmp9 = closure_1_13();
               }
-              const obj7 = { provider: tmp9, token: closure_129_0, push_sync_tokens: closure_128_1.filter(tmp2(1375).isNotNullish), bypass_server_throttling_supported: null, bundle_id: null };
-              let isAndroidResult = tmp2(1369).isAndroid();
+              const obj7 = { provider: tmp9, token: closure_129_0, push_sync_tokens: closure_128_1.filter(tmp2(1387).isNotNullish), bypass_server_throttling_supported: null, bundle_id: null };
+              let isAndroidResult = tmp2(1381).isAndroid();
               if (isAndroidResult) {
                 isAndroidResult = !closure_1_14;
               }
@@ -218,8 +218,8 @@ export default {
       } else if (arg0 !== 2) {
         closure_128_2 = value;
         if (closure_128_2.body.invalid_push_sync_tokens.length > 0) {
-          const result = v2(12074).invalidatePushSyncTokens(closure_128_2.body.invalid_push_sync_tokens);
-          v2(12074);
+          const result = v2(12148).invalidatePushSyncTokens(closure_128_2.body.invalid_push_sync_tokens);
+          v2(12148);
         }
       }
       return value;

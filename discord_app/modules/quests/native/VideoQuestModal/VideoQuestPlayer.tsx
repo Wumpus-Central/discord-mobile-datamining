@@ -1,26 +1,26 @@
-// === Module 14952: VideoQuestPlayer ===
+// === Module 15214: VideoQuestPlayer ===
 
-// Module 14952 (VideoQuestPlayer)
-import ClientInfoUtils from "ClientInfoUtils" /* 1368 */;
-import QuestActionCreators from "QuestActionCreators" /* 10007 */;
-import AssetUtils from "AssetUtils" /* 10013 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 10953 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 14839 */;
-import SimpleMuxWrapper from "SimpleMuxWrapper" /* 14955 */;
-import VideoQuestCaptions from "VideoQuestCaptions" /* 14963 */;
+// Module 15214 (VideoQuestPlayer)
+import ClientInfoUtils from "ClientInfoUtils" /* 1380 */;
+import QuestActionCreators from "QuestActionCreators" /* 9537 */;
+import AssetUtils from "AssetUtils" /* 9544 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 10604 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 15100 */;
+import SimpleMuxWrapper from "SimpleMuxWrapper" /* 15217 */;
+import VideoQuestCaptions from "VideoQuestCaptions" /* 15225 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VideoQuestUIStore from "VideoQuestUIStore" /* 7202 */;
+import VideoQuestUIStore from "VideoQuestUIStore" /* 7381 */;
 
 require = fn;
-const QuestsExperimentLocations = fn(5630).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5977).QuestsExperimentLocations;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestPlayer.tsx");
 
-export const PlayerState = fn(14839).PlayerState;
-export const VideoQuestPlayer = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((onEnd) => {
+export const PlayerState = fn(15100).PlayerState;
+export const VideoQuestPlayer = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function VideoQuestPlayer(onEnd) {
   const cResult = onLoad(onToggleFullscreen[6]).c(104);
   ({ style, onLoad } = onEnd);
   onEnd = onEnd.onEnd;
@@ -102,7 +102,7 @@ export const VideoQuestPlayer = noop.memo(ReactCompilerGating.isReactCompilerEna
   cResult[7] = questTaskDetails.progressSeconds;
   cResult[8] = fn;
   const tmp18 = VideoQuestUIStore(B);
-}) : ((onLoad) => {
+}) : (function VideoQuestPlayer(onLoad) {
   onLoad = onLoad.onLoad;
   const onEnd = onLoad.onEnd;
   const onToggleFullscreen = onLoad.onToggleFullscreen;

@@ -1,7 +1,7 @@
-// === Module 12172: getGuildPowerupFormattedDateString ===
+// === Module 12251: getGuildPowerupFormattedDateString ===
 
-// Module 12172 (getGuildPowerupFormattedDateString)
-import LocaleStore from "LocaleStore" /* 2116 */;
+// Module 12251 (getGuildPowerupFormattedDateString)
+import LocaleStore from "LocaleStore" /* 2128 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/utils/getGuildPowerupFormattedDateString.tsx");

@@ -1,10 +1,10 @@
-// === Module 12097: ChatInputGuardMessageRequest ===
+// === Module 12175: ChatInputGuardMessageRequest ===
 
-// Module 12097 (ChatInputGuardMessageRequest)
-import ChatInputGuardDefault from "ChatInputGuard" /* 12105 */;
+// Module 12175 (ChatInputGuardMessageRequest)
+import ChatInputGuardDefault from "ChatInputGuard" /* 12183 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardMessageRequest.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ChatInputGuardMessageRequest(channel) {
   const cResult = require("c").c(29);
   channel = channel.channel;
   _require = channel;
@@ -42,208 +42,125 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
   let obj3 = require("useIsMessageRequestRestrictedViewer");
   const stateFromStores = require("initialize").useStateFromStores(first, tmp8);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn2 = function y() {
+    function handleRequestError() {
       const obj2 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
       const intl = recipientId(acceptMessageRequest[10]).intl;
       obj2.content = intl.string(recipientId(acceptMessageRequest[10]).t["EDYbS+"]);
       obj2.icon = navigation(acceptMessageRequest[11]);
       navigation(acceptMessageRequest[9]).open(obj2);
-    };
-    cResult[3] = fn2;
-    let tmp10 = fn2;
+    }
+    cResult[3] = handleRequestError;
+    let tmp10 = handleRequestError;
   } else {
     tmp10 = cResult[3];
   }
   if (cResult[4] !== navigation) {
-    class S {
-      constructor() {
-        arr = closure_1.pop();
-        return;
-      }
+    function handleRejectSuccess() {
+      navigation.pop();
     }
     cResult[4] = navigation;
-    cResult[5] = S;
+    cResult[5] = handleRejectSuccess;
+    let tmp11 = handleRejectSuccess;
   } else {
-    class S {
-      constructor() {
-        arr = closure_1.pop();
-        return;
-      }
-    }
+    tmp11 = cResult[5];
   }
-  if (cResult[6] === S) {
-    class S {
-      constructor() {
-        arr = closure_1.pop();
-        return;
-      }
+  if (cResult[6] === tmp11) {
+    if (cResult[7] === stateFromStores) {
+      let tmp12 = cResult[8];
     }
-    const messageRequestActions = tmp(tmp2[12]).useMessageRequestActions(obj5);
+    const messageRequestActions = tmp(tmp2[12]).useMessageRequestActions(tmp12);
     acceptMessageRequest = messageRequestActions.acceptMessageRequest;
     const rejectMessageRequest = messageRequestActions.rejectMessageRequest;
     ({ isAcceptLoading, isRejectLoading, isUserProfileLoading, isOptimisticAccepted, isOptimisticRejected } = messageRequestActions);
+    let tmp14 = isAcceptLoading;
     if (!isAcceptLoading) {
-      class S {
-        constructor() {
-          arr = closure_1.pop();
-          return;
-        }
-      }
+      tmp14 = isRejectLoading;
     }
-    if (!isAcceptLoading) {
-      class S {
-        constructor() {
-          arr = closure_1.pop();
-          return;
-        }
-      }
+    if (!tmp14) {
+      tmp14 = isUserProfileLoading;
     }
-    if (!isAcceptLoading) {
-      class S {
-        constructor() {
-          arr = closure_1.pop();
-          return;
-        }
-      }
+    if (!tmp14) {
+      tmp14 = isOptimisticAccepted;
     }
-    if (!isAcceptLoading) {
-      class S {
-        constructor() {
-          arr = closure_1.pop();
-          return;
-        }
-      }
+    if (!tmp14) {
+      tmp14 = isOptimisticRejected;
     }
     if (cResult[9] === acceptMessageRequest) {
-      class S {
-        constructor() {
-          arr = closure_1.pop();
-          return;
-        }
+      if (cResult[10] === channel.id) {
+        let tmp15 = cResult[11];
       }
       if (cResult[12] === channel.id) {
-        class S {
-          constructor() {
-            arr = closure_1.pop();
-            return;
-          }
+        if (cResult[13] === rejectMessageRequest) {
+          let tmp17 = cResult[14];
         }
         const _Symbol = Symbol;
         if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-          class S {
-            constructor() {
-              arr = closure_1.pop();
-              return;
-            }
-          }
-          const stringResult = obj7.string(tmp(tmp2[10]).t["e/eQVB"]);
+          let intl = tmp(tmp2[10]).intl;
+          const stringResult = intl.string(tmp(tmp2[10]).t["e/eQVB"]);
           cResult[15] = stringResult;
-          const tmp18 = stringResult;
+          let tmp19 = stringResult;
         } else {
-          class S {
-            constructor() {
-              arr = closure_1.pop();
-              return;
-            }
-          }
+          tmp19 = cResult[15];
         }
         if (cResult[16] !== isMessageRequestRestrictedViewer) {
-          class S {
-            constructor() {
-              arr = closure_1.pop();
-              return;
-            }
-          }
+          const intl2 = tmp(tmp2[10]).intl;
           const t = tmp(tmp2[10]).t;
-          const stringResult1 = obj8.string(isMessageRequestRestrictedViewer ? t.YQ0uUE : t.HcVzGI);
+          const stringResult1 = intl2.string(isMessageRequestRestrictedViewer ? t.YQ0uUE : t.HcVzGI);
           cResult[16] = isMessageRequestRestrictedViewer;
           cResult[17] = stringResult1;
         } else {
-          class S {
-            constructor() {
-              arr = closure_1.pop();
-              return;
-            }
-          }
           const _Symbol2 = Symbol;
           if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
-            class S {
-              constructor() {
-                arr = closure_1.pop();
-                return;
-              }
-            }
-            const stringResult2 = obj9.string(tmp(tmp2[10]).t.Kz8Pwr);
+            const intl3 = tmp(tmp2[10]).intl;
+            const stringResult2 = intl3.string(tmp(tmp2[10]).t.Kz8Pwr);
             cResult[18] = stringResult2;
-            const tmp23 = stringResult2;
+            let tmp24 = stringResult2;
           } else {
-            class S {
-              constructor() {
-                arr = closure_1.pop();
-                return;
-              }
-            }
+            tmp24 = cResult[18];
           }
           if (!isAcceptLoading) {
-            class S {
-              constructor() {
-                arr = closure_1.pop();
-                return;
-              }
-            }
+            isAcceptLoading = isUserProfileLoading;
           }
           if (!isAcceptLoading) {
-            class S {
-              constructor() {
-                arr = closure_1.pop();
-                return;
-              }
-            }
+            isAcceptLoading = isOptimisticAccepted;
           }
           if (cResult[19] !== isMessageRequestRestrictedViewer) {
-            class S {
-              constructor() {
-                arr = closure_1.pop();
-                return;
-              }
-            }
+            const intl4 = tmp(tmp2[10]).intl;
             const t2 = tmp(tmp2[10]).t;
-            const stringResult3 = obj10.string(isMessageRequestRestrictedViewer ? t2.BVN4pL : t2.B2nygW);
+            const stringResult3 = intl4.string(isMessageRequestRestrictedViewer ? t2.BVN4pL : t2.B2nygW);
             cResult[19] = isMessageRequestRestrictedViewer;
             cResult[20] = stringResult3;
           } else {
-            class S {
-              constructor() {
-                arr = closure_1.pop();
-                return;
-              }
-            }
             if (!isRejectLoading) {
-              class S {
-                constructor() {
-                  arr = closure_1.pop();
-                  return;
+              isRejectLoading = isOptimisticRejected;
+            }
+            if (cResult[21] === tmp14) {
+              if (cResult[22] === tmp15) {
+                if (cResult[23] === tmp17) {
+                  if (cResult[24] === isAcceptLoading) {
+                    if (cResult[25] === tmp26) {
+                      if (cResult[26] === isRejectLoading) {
+                        if (cResult[27] === tmp21) {
+                          let tmp29 = cResult[28];
+                        }
+                        return tmp29;
+                      }
+                    }
+                  }
                 }
               }
             }
-            if (cResult[21] === isAcceptLoading) {
-              class S {
-                constructor() {
-                  arr = closure_1.pop();
-                  return;
-                }
-              }
-            }
-            let obj4 = { type: "button-action", message: tmp18, subtext: tmp20, buttonPrimaryText: tmp23, buttonPrimaryOnPress: tmp14, buttonPrimaryDisabled: isAcceptLoading, buttonPrimaryLoading: isAcceptLoading, buttonSecondaryText: tmp25, buttonSecondaryOnPress: tmp16, buttonSecondaryDisabled: isAcceptLoading, buttonSecondaryLoading: isRejectLoading };
-            const tmp31 = jsx(navigation(tmp2[14]), { type: "button-action", message: tmp18, subtext: tmp20, buttonPrimaryText: tmp23, buttonPrimaryOnPress: tmp14, buttonPrimaryDisabled: isAcceptLoading, buttonPrimaryLoading: isAcceptLoading, buttonSecondaryText: tmp25, buttonSecondaryOnPress: tmp16, buttonSecondaryDisabled: isAcceptLoading, buttonSecondaryLoading: isRejectLoading });
-            cResult[21] = isAcceptLoading;
-            cResult[22] = tmp14;
-            cResult[23] = tmp16;
+            let obj4 = { type: "button-action", message: tmp19, subtext: tmp21, buttonPrimaryText: tmp24, buttonPrimaryOnPress: tmp15, buttonPrimaryDisabled: tmp14, buttonPrimaryLoading: isAcceptLoading, buttonSecondaryText: cResult[20], buttonSecondaryOnPress: tmp17, buttonSecondaryDisabled: tmp14, buttonSecondaryLoading: isRejectLoading };
+            const tmp32 = jsx(navigation(tmp2[14]), { type: "button-action", message: tmp19, subtext: tmp21, buttonPrimaryText: tmp24, buttonPrimaryOnPress: tmp15, buttonPrimaryDisabled: tmp14, buttonPrimaryLoading: isAcceptLoading, buttonSecondaryText: cResult[20], buttonSecondaryOnPress: tmp17, buttonSecondaryDisabled: tmp14, buttonSecondaryLoading: isRejectLoading });
+            cResult[21] = tmp14;
+            cResult[22] = tmp15;
+            cResult[23] = tmp17;
             cResult[24] = isAcceptLoading;
-            cResult[25] = tmp25;
+            cResult[25] = cResult[20];
             cResult[26] = isRejectLoading;
-            cResult[27] = tmp20;
-            cResult[28] = tmp31;
+            cResult[27] = tmp21;
+            cResult[28] = tmp32;
+            tmp29 = tmp32;
           }
         }
       }
@@ -308,6 +225,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
       cResult[12] = channel.id;
       cResult[13] = rejectMessageRequest;
       cResult[14] = onRejectClick;
+      tmp17 = onRejectClick;
     }
     _require = rejectMessageRequest(function*(arg0) {
       if (c3 === 2) {
@@ -372,14 +290,16 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
     cResult[9] = acceptMessageRequest;
     cResult[10] = channel.id;
     cResult[11] = onAcceptClick;
+    tmp15 = onAcceptClick;
     const tmpResult2 = tmp(tmp2[12]);
   }
-  obj5 = { user: stateFromStores, onError: tmp10, onRejectSuccess: S };
-  cResult[6] = S;
+  let obj5 = { user: stateFromStores, onError: tmp10, onRejectSuccess: tmp11 };
+  cResult[6] = tmp11;
   cResult[7] = stateFromStores;
   cResult[8] = obj5;
+  tmp12 = obj5;
   const tmpResult = require("initialize");
-}) : ((channel) => {
+}) : (function ChatInputGuardMessageRequest(channel) {
   channel = channel.channel;
   dependencyMap = undefined;
   c3 = undefined;
@@ -481,14 +401,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
       }
     }
   };
-  importDefault = channel(1490).useNavigation();
-  let obj = channel(1490);
-  const isMessageRequestRestrictedViewer = channel(12098).useIsMessageRequestRestrictedViewer();
-  let obj2 = channel(12098);
+  importDefault = channel(1502).useNavigation();
+  let obj = channel(1502);
+  const isMessageRequestRestrictedViewer = channel(12176).useIsMessageRequestRestrictedViewer();
+  let obj2 = channel(12176);
   const items = [closure_4];
   const stateFromStores = channel(504).useStateFromStores(items, () => UserStore.getUser(channel.getRecipientId()));
   let obj3 = channel(504);
-  const messageRequestActions = channel(12099).useMessageRequestActions({
+  const messageRequestActions = channel(12177).useMessageRequestActions({
     user: stateFromStores,
     onError: function handleRequestError() {
       const obj2 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
@@ -516,7 +436,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
     tmp6 = isOptimisticRejected;
   }
   const obj6 = { type: "button-action", message: null, subtext: null, buttonPrimaryText: null, buttonPrimaryOnPress: null, buttonPrimaryDisabled: null, buttonPrimaryLoading: null, buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonSecondaryDisabled: null, buttonSecondaryLoading: null };
-  let obj4 = channel(12099);
+  let obj4 = channel(12177);
   let obj5 = {
     user: stateFromStores,
     onError: function handleRequestError() {

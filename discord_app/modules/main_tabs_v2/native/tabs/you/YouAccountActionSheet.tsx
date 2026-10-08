@@ -1,62 +1,62 @@
-// === Module 16352: YouAccountActionSheet ===
+// === Module 16612: YouAccountActionSheet ===
 
-// Module 16352 (YouAccountActionSheet)
+// Module 16612 (YouAccountActionSheet)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import ClientThemesUtils from "ClientThemesUtils" /* 1239 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import UserSettings from "UserSettings" /* 2028 */;
-import useToken from "useToken" /* 4586 */;
-import UserUtilsDefault from "UserUtils" /* 4728 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Stack_Stack from "Stack/Stack" /* 5600 */;
-import Pressables from "Pressables" /* 5916 */;
-import Card from "Card" /* 6002 */;
-import TableRowIcon from "TableRowIcon" /* 6006 */;
-import useDesignToggleDefault from "useDesignToggle" /* 6019 */;
-import TableRadioRow from "TableRadioRow" /* 6078 */;
-import TableRadioGroup from "TableRadioGroup" /* 6079 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6477 */;
-import _modDef6591 from "module_6591" /* 6591 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6651 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6688 */;
-import ActionSheet from "ActionSheet" /* 6708 */;
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 8091 */;
-import ReactionIcon from "ReactionIcon" /* 8444 */;
-import getChannelA11yLabel from "getChannelA11yLabel" /* 9295 */;
-import useGameMentionsAsPlainText from "useGameMentionsAsPlainText" /* 10626 */;
-import ActivityEmojiDefault from "ActivityEmoji" /* 10642 */;
-import userSettingToActivity from "userSettingToActivity" /* 10839 */;
-import removeCustomStatusDefault from "removeCustomStatus" /* 10848 */;
-import MultiAccountActionCreatorsAll from "MultiAccountActionCreators" /* 12074 */;
-import FocusModeUtils from "FocusModeUtils" /* 12488 */;
-import setUserStatusDefault from "setUserStatus" /* 12489 */;
-import ThemeDarkIcon from "ThemeDarkIcon" /* 12559 */;
-import _modDef13942 from "module_13942" /* 13942 */;
-import _modDef13943 from "module_13943" /* 13943 */;
-import _modDef13944 from "module_13944" /* 13944 */;
-import _modDef13945 from "module_13945" /* 13945 */;
-import ThemeLightIcon from "ThemeLightIcon" /* 15102 */;
-import ThemeMidnightIcon from "ThemeMidnightIcon" /* 15104 */;
-import ThemeGrayIcon from "ThemeGrayIcon" /* 16353 */;
-import openManageAccountsModalDefault from "openManageAccountsModal" /* 16355 */;
+import native from "native" /* 1200 */;
+import ClientThemesUtils from "ClientThemesUtils" /* 1251 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import UserSettings from "UserSettings" /* 2040 */;
+import useToken from "useToken" /* 4778 */;
+import UserUtilsDefault from "UserUtils" /* 4922 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5258 */;
+import Stack_Stack from "Stack/Stack" /* 5373 */;
+import Card from "Card" /* 6186 */;
+import Pressables from "Pressables" /* 6189 */;
+import TableRowIcon from "TableRowIcon" /* 6192 */;
+import useDesignToggleDefault from "useDesignToggle" /* 6205 */;
+import TableRadioRow from "TableRadioRow" /* 6264 */;
+import TableRadioGroup from "TableRadioGroup" /* 6265 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6655 */;
+import _modDef6767 from "module_6767" /* 6767 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6828 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6865 */;
+import ActionSheet from "ActionSheet" /* 6885 */;
+import getChannelA11yLabel from "getChannelA11yLabel" /* 8626 */;
+import ReactionIcon from "ReactionIcon" /* 8930 */;
+import useGameMentionsAsPlainText from "useGameMentionsAsPlainText" /* 10224 */;
+import ActivityEmojiDefault from "ActivityEmoji" /* 10242 */;
+import userSettingToActivity from "userSettingToActivity" /* 10488 */;
+import removeCustomStatusDefault from "removeCustomStatus" /* 10499 */;
+import MultiAccountActionCreatorsAll from "MultiAccountActionCreators" /* 12148 */;
+import FocusModeUtils from "FocusModeUtils" /* 12584 */;
+import setUserStatusDefault from "setUserStatus" /* 12585 */;
+import ThemeDarkIcon from "ThemeDarkIcon" /* 12690 */;
+import _modDef14245 from "module_14245" /* 14245 */;
+import _modDef14246 from "module_14246" /* 14246 */;
+import _modDef14247 from "module_14247" /* 14247 */;
+import _modDef14248 from "module_14248" /* 14248 */;
+import ThemeLightIcon from "ThemeLightIcon" /* 15364 */;
+import ThemeMidnightIcon from "ThemeMidnightIcon" /* 15366 */;
+import ThemeGrayIcon from "ThemeGrayIcon" /* 16613 */;
+import openManageAccountsModalDefault from "openManageAccountsModal" /* 16615 */;
 import noop from "module_19" /* 19 */;
-import MultiAccountStore from "MultiAccountStore" /* 12071 */;
-import ThemeStore from "ThemeStore" /* 1193 */;
-import UserRecord from "UserRecord" /* 1391 */;
-import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7217 */;
-import StreamerModeStore from "StreamerModeStore" /* 4729 */;
-import UserStore from "UserStore" /* 1377 */;
+import MultiAccountStore from "MultiAccountStore" /* 12144 */;
+import ThemeStore from "ThemeStore" /* 1205 */;
+import UserRecord from "UserRecord" /* 1403 */;
+import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7397 */;
+import StreamerModeStore from "StreamerModeStore" /* 4923 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const util = currentLocale(1126);
-const TableRowGroup = currentLocale(6081);
-const TableSwitchRow = currentLocale(6705);
-const BellSlashIcon = currentLocale(9826);
-const DevToolsContentDefault = tmp9(15639);
-const YouSwitchClientsRadioGroupDefault = tmp9(16361);
+const TableRowGroup = currentLocale(6267);
+const TableSwitchRow = currentLocale(6882);
+const BellSlashIcon = currentLocale(10325);
+const DevToolsContentDefault = tmp9(15919);
+const YouSwitchClientsRadioGroupDefault = tmp9(16621);
 require = fn;
 function FocusModeSetting() {
   let currentLocale = require;
@@ -79,11 +79,11 @@ function FocusModeSetting() {
       if (arg0) {
         const obj3 = {
           onSelect(quiet_mode_enabled, arg1) {
-              closure_1_0(12488).setFocusMode(quiet_mode_enabled, arg1);
-              const obj = closure_1_0(12488);
-              closure_1_1(4860).hideActionSheet();
-              const obj2 = closure_1_1(4860);
-              const result = closure_1_0(16350).showYouAccountActionSheet();
+              closure_1_0(12584).setFocusMode(quiet_mode_enabled, arg1);
+              const obj = closure_1_0(12584);
+              closure_1_1(5054).hideActionSheet();
+              const obj2 = closure_1_1(5054);
+              const result = closure_1_0(16610).showYouAccountActionSheet();
             }
         };
         require("ActionSheetActionCreators").openLazy(require("asyncRequireImpl")(paths[50], paths.paths), "FocusModeOptionsActionSheet", obj3);
@@ -119,13 +119,13 @@ function FocusModeSetting() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
-const MultiAccountTokenStatus = fn(12071).MultiAccountTokenStatus;
+const MultiAccountTokenStatus = fn(12144).MultiAccountTokenStatus;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_14, AuthStates: closure_15, StatusTypes: closure_16, ThemeTypes: closure_17 } = Constants);
-let closure_18 = fn(12072).MultiAccountSwitchLocation;
+let closure_18 = fn(12145).MultiAccountSwitchLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_19, jsxs: closure_20 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { account: { position: "relative" }, manage: { position: "absolute", right: 0, zIndex: 100 }, leadingIcon: { width: 24, height: 24, margin: 4 }, trailingIcon: null, customStatusRow: null, customStatusEditButton: null, customStatusRemoveButton: null, customStatusText: null, sectionHeading: null };
 let size = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, width: 16, height: 16 };
 obj.trailingIcon = size;
@@ -139,7 +139,7 @@ let obj5 = { height: nativeDefault.modules.mobile.TABLE_ROW_HEIGHT, paddingHoriz
 obj.sectionHeading = { marginBottom: nativeDefault.space.PX_8 };
 let closure_21 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
-let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
+let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function AccountSectionHeading(children) {
   const cResult = c.c(3);
   children = children.children;
   const tmp4 = closure_21();
@@ -155,31 +155,31 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
   cResult[2] = tmp6;
   tmp5 = tmp6;
   const obj2 = { accessibilityRole: "header", variant: "experimental/body-sm/medium", color: "text-subtle", style: tmp4.sectionHeading, children };
-}) : ((children) => {
+}) : (function AccountSectionHeading(children) {
   const tmp = closure_21();
   return closure_1_19(Text_Text.Text, { accessibilityRole: "header", variant: "experimental/body-sm/medium", color: "text-subtle", style: closure_21().sectionHeading, children: children.children });
 });
 ReactCompilerGating = fn(558);
-let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function useStatusRadioRowProps() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { icon: null, value: null };
-    const obj3 = { source: _modDef13945, variant: "text-status-online" };
+    const obj3 = { source: _modDef14248, variant: "text-status-online" };
     obj2.icon = closure_1_19(TableRowIcon.TableRowIcon, obj3);
     obj2.value = constants3.ONLINE;
     const items = [obj2, , , ];
     const obj4 = { icon: null, value: null };
-    const obj5 = { source: _modDef13942, variant: "text-status-idle" };
+    const obj5 = { source: _modDef14245, variant: "text-status-idle" };
     obj4.icon = closure_1_19(TableRowIcon.TableRowIcon, obj5);
     obj4.value = constants3.IDLE;
     items[1] = obj4;
     const obj6 = { icon: null, value: null };
-    const obj7 = { source: _modDef13943, variant: "text-status-dnd" };
+    const obj7 = { source: _modDef14246, variant: "text-status-dnd" };
     obj6.icon = closure_1_19(TableRowIcon.TableRowIcon, obj7);
     obj6.value = constants3.DND;
     items[2] = obj6;
     const obj8 = { icon: null, value: null };
-    const obj9 = { source: _modDef13944, variant: "text-status-offline" };
+    const obj9 = { source: _modDef14247, variant: "text-status-offline" };
     obj8.icon = closure_1_19(TableRowIcon.TableRowIcon, obj9);
     obj8.value = constants3.INVISIBLE;
     items[3] = obj8;
@@ -189,36 +189,38 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     first = cResult[0];
   }
   return first;
-}) : (() => noop.useMemo(() => {
-  const obj = { icon: closure_1_19(require("TableRowIcon").TableRowIcon, { source: _modDef13945, variant: "text-status-online" }), value: constants.ONLINE };
-  const items = [obj, , , ];
-  const obj3 = { icon: null, value: null };
-  const obj2 = { source: _modDef13945, variant: "text-status-online" };
-  obj3.icon = closure_1_19(require("TableRowIcon").TableRowIcon, { source: _modDef13942, variant: "text-status-idle" });
-  obj3.value = constants.IDLE;
-  items[1] = obj3;
-  const obj5 = { icon: null, value: null };
-  const obj4 = { source: _modDef13942, variant: "text-status-idle" };
-  obj5.icon = closure_1_19(require("TableRowIcon").TableRowIcon, { source: _modDef13943, variant: "text-status-dnd" });
-  obj5.value = constants.DND;
-  items[2] = obj5;
-  const obj7 = { icon: null, value: null };
-  const obj6 = { source: _modDef13943, variant: "text-status-dnd" };
-  obj7.icon = closure_1_19(require("TableRowIcon").TableRowIcon, { source: _modDef13944, variant: "text-status-offline" });
-  obj7.value = constants.INVISIBLE;
-  items[3] = obj7;
-  return items;
-}, []));
+}) : (function useStatusRadioRowProps() {
+  return noop.useMemo(() => {
+    const obj = { icon: closure_1_19(require("TableRowIcon").TableRowIcon, { source: _modDef14248, variant: "text-status-online" }), value: constants.ONLINE };
+    const items = [obj, , , ];
+    const obj3 = { icon: null, value: null };
+    const obj2 = { source: _modDef14248, variant: "text-status-online" };
+    obj3.icon = closure_1_19(require("TableRowIcon").TableRowIcon, { source: _modDef14245, variant: "text-status-idle" });
+    obj3.value = constants.IDLE;
+    items[1] = obj3;
+    const obj5 = { icon: null, value: null };
+    const obj4 = { source: _modDef14245, variant: "text-status-idle" };
+    obj5.icon = closure_1_19(require("TableRowIcon").TableRowIcon, { source: _modDef14246, variant: "text-status-dnd" });
+    obj5.value = constants.DND;
+    items[2] = obj5;
+    const obj7 = { icon: null, value: null };
+    const obj6 = { source: _modDef14246, variant: "text-status-dnd" };
+    obj7.icon = closure_1_19(require("TableRowIcon").TableRowIcon, { source: _modDef14247, variant: "text-status-offline" });
+    obj7.value = constants.INVISIBLE;
+    items[3] = obj7;
+    return items;
+  }, []);
+});
 ReactCompilerGating = fn(558);
-let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouStatusRadioGroup() {
   const cResult = setting(576).c(19);
   const arr = closure_23();
-  const StatusSetting = setting(2028).StatusSetting;
+  const StatusSetting = setting(2040).StatusSetting;
   setting = StatusSetting.useSetting();
-  const StatusExpiresAtSetting = setting(2028).StatusExpiresAtSetting;
+  const StatusExpiresAtSetting = setting(2040).StatusExpiresAtSetting;
   const setting1 = StatusExpiresAtSetting.useSetting();
   let obj = setting(576);
-  const manaTypeConsolidationExperiment = setting(6477).useManaTypeConsolidationExperiment("YouAccountActionSheetOnlineStatus");
+  const manaTypeConsolidationExperiment = setting(6655).useManaTypeConsolidationExperiment("YouAccountActionSheetOnlineStatus");
   if (cResult[0] !== setting) {
     const fn = function e(nextStatus) {
       setUserStatusDefault({ prevStatus: setting, nextStatus });
@@ -271,7 +273,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           }
         }
         const obj5 = { title: tmp10, accessibilityLabel: tmp11, onChange: tmp7, defaultValue: setting, hasIcons: true, children: cResult[6] };
-        const tmp18 = closure_19(tmp(6079).TableRadioGroup, obj5);
+        const tmp18 = closure_19(tmp(6265).TableRadioGroup, obj5);
         cResult[10] = tmp7;
         cResult[11] = setting;
         cResult[12] = tmp10;
@@ -292,52 +294,39 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     cResult[5] = setting1;
     cResult[6] = mapped;
   }
-  class T {
-    constructor(arg0) {
-      tmp2 = closure_0;
-      tmp3 = closure_3;
-      tmp = jsx;
-      obj = {};
-      merged = Object.assign(arg0);
-      obj2 = closure_0(closure_3[27]);
-      obj.label = obj2.getStatusLabel(arg0.value);
-      formatToPlainStringResult = undefined;
-      if (arg0.value === closure_0) {
-        tmp6 = closure_1;
-        tmp7 = null;
-        if (null != closure_1) {
-          str = "0";
-          if ("0" !== tmp6) {
-            intl = tmp2(tmp3[25]).intl;
-            obj1 = { endTime: null };
-            tmp8 = globalThis;
-            _Date = Date;
-            _Number = Number;
-            tmp9 = new.target;
-            tmp10 = new.target;
-            date = new Date(Number(tmp6));
-            tmp11 = date;
-            obj1.endTime = date.toLocaleString(tmp2(tmp3[25]).intl.currentLocale, { month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit" });
-            formatToPlainStringResult = intl.formatToPlainString(tmp2(tmp3[25]).t.BWD8fs, obj1);
-          }
+  const fn2 = function b(value) {
+    const obj = {};
+    const merged = Object.assign(value);
+    obj.label = getChannelA11yLabel.getStatusLabel(value.value);
+    let formatToPlainStringResult;
+    if (value.value === setting) {
+      if (null != setting1) {
+        if ("0" !== setting1) {
+          const intl = util.intl;
+          const obj3 = { endTime: null };
+          const _Date = Date;
+          const _Number = Number;
+          const date = new Date(Number(setting1));
+          obj3.endTime = date.toLocaleString(util.intl.currentLocale, { month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit" });
+          formatToPlainStringResult = intl.formatToPlainString(util.t.BWD8fs, obj3);
         }
       }
-      obj.subLabel = formatToPlainStringResult;
-      return tmp(closure_0(closure_3[26]).TableRadioRow, obj, arg0.value);
     }
-  }
+    obj.subLabel = formatToPlainStringResult;
+    return closure_2_19(TableRadioRow.TableRadioRow, obj, value.value);
+  };
   cResult[7] = setting;
   cResult[8] = setting1;
-  cResult[9] = T;
-  tmp13 = T;
-  const obj2 = setting(6477);
-}) : (() => {
-  const StatusSetting = setting(2028).StatusSetting;
+  cResult[9] = fn2;
+  tmp13 = fn2;
+  const obj2 = setting(6655);
+}) : (function YouStatusRadioGroup() {
+  const StatusSetting = setting(2040).StatusSetting;
   setting = StatusSetting.useSetting();
-  const StatusExpiresAtSetting = setting(2028).StatusExpiresAtSetting;
+  const StatusExpiresAtSetting = setting(2040).StatusExpiresAtSetting;
   closure_1 = StatusExpiresAtSetting.useSetting();
   const arr = closure_23();
-  const manaTypeConsolidationExperiment = setting(6477).useManaTypeConsolidationExperiment("YouAccountActionSheetOnlineStatus");
+  const manaTypeConsolidationExperiment = setting(6655).useManaTypeConsolidationExperiment("YouAccountActionSheetOnlineStatus");
   const items = [setting];
   const callback = noop.useCallback((nextStatus) => {
     setUserStatusDefault({ prevStatus: setting, nextStatus });
@@ -378,7 +367,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     obj.subLabel = formatToPlainStringResult;
     return closure_2_19(TableRadioRow.TableRadioRow, obj, value.value);
   });
-  const tmp5Result = closure_19(setting(6079).TableRadioGroup, obj2);
+  const tmp5Result = closure_19(setting(6265).TableRadioGroup, obj2);
   let tmp9 = tmp5Result;
   if (manaTypeConsolidationExperiment) {
     let obj3 = { children: null };
@@ -390,7 +379,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   return tmp9;
 });
 ReactCompilerGating = fn(558);
-let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function ThemeRadioGroup() {
   const cResult = c.c(17);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ThemeStore];
@@ -498,7 +487,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       const obj7 = { children: null };
       const items1 = [tmp12, tmp34];
       obj7.children = items1;
-      const tmp39 = closure_1_20(hasOwnProperty, obj7);
+      const tmp39 = constants2(hasOwnProperty, obj7);
       cResult[14] = tmp34;
       cResult[15] = tmp12;
       cResult[16] = tmp39;
@@ -508,14 +497,14 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const obj8 = { title: tmp16, accessibilityLabel: tmp17, onChange: tmp9, defaultValue: stateFromStores, hasIcons: true, children: null };
   const items2 = [tmp18, tmp22, tmp26, tmp30];
   obj8.children = items2;
-  const tmp35 = closure_1_20(TableRadioGroup.TableRadioGroup, obj8);
+  const tmp35 = constants2(TableRadioGroup.TableRadioGroup, obj8);
   cResult[10] = tmp16;
   cResult[11] = tmp17;
   cResult[12] = stateFromStores;
   cResult[13] = tmp35;
   tmp34 = tmp35;
   const tmpResult6 = ManaTypeConsolidationExperiment;
-}) : (() => {
+}) : (function ThemeRadioGroup() {
   const items = [ThemeStore];
   const stateFromStores = initialize.useStateFromStores(items, () => theme.theme);
   const manaTypeConsolidationExperiment = ManaTypeConsolidationExperiment.useManaTypeConsolidationExperiment("YouAccountActionSheetTheme");
@@ -567,16 +556,16 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   obj9.value = constants4.ONYX;
   items2[3] = closure_1_19(TableRadioRow.TableRadioRow, obj9);
   obj4.children = items2;
-  items1[1] = closure_1_20(TableRadioGroup.TableRadioGroup, obj4);
+  items1[1] = constants2(TableRadioGroup.TableRadioGroup, obj4);
   obj5.children = items1;
-  return closure_1_20(hasOwnProperty, obj5);
+  return constants2(hasOwnProperty, obj5);
 });
 ReactCompilerGating = fn(558);
-let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? ((arr) => {
+let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountRadioRowProps(arr) {
   const cResult = stateFromStores(576).c(7);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [StreamerModeStore];
-    const fn = function n() {
+    const fn = function o() {
       return StreamerModeStore.hidePersonalInformation;
     };
     cResult[0] = items;
@@ -624,7 +613,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? ((arr) => {
   cResult[3] = arr;
   cResult[4] = mapped;
   const tmpResult = stateFromStores(504);
-}) : ((arg0) => {
+}) : (function useAccountRadioRowProps(arg0) {
   _require = arg0;
   const items = [StreamerModeStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => StreamerModeStore.hidePersonalInformation);
@@ -650,7 +639,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? ((arr) => {
   }), items1);
 });
 ReactCompilerGating = fn(558);
-let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouAccountRadioGroup() {
   const cResult = stateFromStores(576).c(26);
   const tmp4 = closure_21();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -668,10 +657,10 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   let obj = stateFromStores(576);
   stateFromStores = stateFromStores(504).useStateFromStores(tmp5, tmp6);
   const tmpResult = stateFromStores(504);
-  const multiAccountUsers = stateFromStores(15911).useMultiAccountUsers().multiAccountUsers;
+  const multiAccountUsers = stateFromStores(16170).useMultiAccountUsers().multiAccountUsers;
   const arr2 = closure_26(multiAccountUsers);
-  const tmpResult3 = stateFromStores(15911);
-  const manaTypeConsolidationExperiment = stateFromStores(6477).useManaTypeConsolidationExperiment("YouAccountActionSheetSwitchAccounts");
+  const tmpResult3 = stateFromStores(16170);
+  const manaTypeConsolidationExperiment = stateFromStores(6655).useManaTypeConsolidationExperiment("YouAccountActionSheetSwitchAccounts");
   let id;
   if (stateFromStores != null) {
     id = stateFromStores.id;
@@ -695,8 +684,8 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       const _Symbol = Symbol;
       const account = tmp4.account;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn3 = function p() {
-          return multiAccountUsers(16355)();
+        const fn3 = function y() {
+          return multiAccountUsers(16615)();
         };
         cResult[6] = fn3;
         let tmp14 = fn3;
@@ -709,8 +698,8 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         let obj3 = { variant: "text-sm/semibold", color: "text-brand", children: null };
         const intl2 = tmp(1126).intl;
         obj3.children = intl2.string(tmp(1126).t.HxrBOZ);
-        obj2.children = closure_19(tmp(4892).Text, obj3);
-        const tmp17 = closure_19(tmp(5916).PressableOpacity, obj2);
+        obj2.children = closure_19(tmp(5086).Text, obj3);
+        const tmp17 = closure_19(tmp(6189).PressableOpacity, obj2);
         cResult[7] = tmp17;
         let tmp15 = tmp17;
       } else {
@@ -734,16 +723,16 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       if (cResult[12] !== arr2) {
         const _Symbol3 = Symbol;
         if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-          class H {
+          class M {
             constructor(arg0) {
               obj = {};
               merged = Object.assign(arg0);
               return closure_1_19(closure_0(closure_1_3[26]).TableRadioRow, obj, arg0.value);
             }
           }
-          cResult[14] = H;
+          cResult[14] = M;
         } else {
-          class H {
+          class M {
             constructor(arg0) {
               obj = {};
               merged = Object.assign(arg0);
@@ -751,11 +740,11 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             }
           }
         }
-        const mapped = arr2.map(H);
+        const mapped = arr2.map(M);
         cResult[12] = arr2;
         cResult[13] = mapped;
       } else {
-        class H {
+        class M {
           constructor(arg0) {
             obj = {};
             merged = Object.assign(arg0);
@@ -763,7 +752,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           }
         }
         if (cResult[15] === stateFromStores.id) {
-          class H {
+          class M {
             constructor(arg0) {
               obj = {};
               merged = Object.assign(arg0);
@@ -772,7 +761,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           }
         }
         const obj6 = { title: tmp26, accessibilityLabel: tmp27, onChange: tmp11, defaultValue: tmp28, hasIcons: true, children: tmp29 };
-        const tmp35 = closure_19(tmp(6079).TableRadioGroup, obj6);
+        const tmp35 = closure_19(tmp(6265).TableRadioGroup, obj6);
         cResult[15] = stateFromStores.id;
         cResult[16] = tmp11;
         cResult[17] = tmp27;
@@ -783,7 +772,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
   }
   if (stateFromStores != null) {
-    class H {
+    class M {
       constructor(arg0) {
         obj = {};
         merged = Object.assign(arg0);
@@ -816,16 +805,16 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[3] = multiAccountUsers;
   cResult[4] = fn2;
   tmp11 = fn2;
-  const tmpResult4 = stateFromStores(6477);
-}) : (() => {
+  const tmpResult4 = stateFromStores(6655);
+}) : (function YouAccountRadioGroup() {
   const tmp = closure_21();
   const items = [UserStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj = stateFromStores(504);
-  const multiAccountUsers = stateFromStores(15911).useMultiAccountUsers().multiAccountUsers;
-  let obj2 = stateFromStores(15911);
+  const multiAccountUsers = stateFromStores(16170).useMultiAccountUsers().multiAccountUsers;
+  let obj2 = stateFromStores(16170);
   const arr2 = closure_26(multiAccountUsers);
-  const manaTypeConsolidationExperiment = stateFromStores(6477).useManaTypeConsolidationExperiment("YouAccountActionSheetSwitchAccounts");
+  const manaTypeConsolidationExperiment = stateFromStores(6655).useManaTypeConsolidationExperiment("YouAccountActionSheetSwitchAccounts");
   const items1 = [multiAccountUsers, ];
   let id;
   if (stateFromStores != null) {
@@ -841,15 +830,15 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     let obj5 = { style: tmp.manage, children: null };
     const obj6 = {
       onPress() {
-          return multiAccountUsers(16355)();
+          return multiAccountUsers(16615)();
         },
       children: null
     };
     const obj7 = { variant: "text-sm/semibold", color: "text-brand", children: null };
     const intl2 = tmp2(1126).intl;
     obj7.children = intl2.string(tmp2(1126).t.HxrBOZ);
-    obj6.children = closure_19(tmp2(4892).Text, obj7);
-    obj5.children = closure_19(tmp2(5916).PressableOpacity, obj6);
+    obj6.children = closure_19(tmp2(5086).Text, obj7);
+    obj5.children = closure_19(tmp2(6189).PressableOpacity, obj6);
     const items2 = [closure_19(closure_5, obj5), , ];
     let tmp15Result = manaTypeConsolidationExperiment;
     if (manaTypeConsolidationExperiment) {
@@ -871,16 +860,16 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     obj9.defaultValue = stateFromStores.id;
     obj9.children = arr2.map((value) => {
       const merged = Object.assign(value);
-      return closure_1_19(stateFromStores(6078).TableRadioRow, {}, value.value);
+      return closure_1_19(stateFromStores(6264).TableRadioRow, {}, value.value);
     });
-    items2[2] = closure_19(tmp2(6079).TableRadioGroup, obj9);
+    items2[2] = closure_19(tmp2(6265).TableRadioGroup, obj9);
     obj4.children = items2;
     return closure_20(closure_5, obj4);
   }
-  let obj3 = stateFromStores(6477);
+  let obj3 = stateFromStores(6655);
 });
 ReactCompilerGating = fn(558);
-let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (function CustomStatus() {
   const cResult = c.c(33);
   const tmp4 = closure_21();
   const customStatusActivity = userSettingToActivity.useCustomStatusActivity();
@@ -929,7 +918,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         }
         const _Symbol = Symbol;
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-          const fn = function n() {
+          const fn = function o() {
             ActionSheetActionCreatorsDefault.hideActionSheet();
             const obj3 = { analyticsLocations: null };
             const items = [AnalyticsLocationDefault.YOU_ACCOUNT_ACTION_SHEET];
@@ -978,7 +967,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                                   const obj5 = { shadow: "none", border: "none", style: tmp4.customStatusRow, children: null };
                                   let items = [tmp34, tmp37];
                                   obj5.children = items;
-                                  obj4.children = closure_1_20(Card.Card, obj5);
+                                  obj4.children = constants2(Card.Card, obj5);
                                   const tmp44 = closure_1_19(TableRowGroup.TableRowGroup, obj4);
                                   cResult[29] = tmp4.customStatusRow;
                                   cResult[30] = tmp34;
@@ -1002,7 +991,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                                 const intl4 = util.intl;
                                 obj6.accessibilityLabel = intl4.string(util.t.wfYTHe);
                                 obj6.style = tmp4.customStatusRemoveButton;
-                                const obj7 = { style: tmp4.trailingIcon, source: _modDef6591 };
+                                const obj7 = { style: tmp4.trailingIcon, source: _modDef6767 };
                                 obj6.children = closure_1_19(timestampProducer, obj7);
                                 tmp38 = closure_1_19(Pressables.PressableOpacity, obj6);
                               }
@@ -1018,7 +1007,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                       const obj8 = { style: tmp4.customStatusEditButton, accessibilityRole: "button", accessibilityLabel: tmp15, accessibilityHint: tmp19, onPress: tmp22, children: null };
                       const items1 = [tmp23, tmp31];
                       obj8.children = items1;
-                      const tmp36 = closure_1_20(Pressables.PressableOpacity, obj8);
+                      const tmp36 = constants2(Pressables.PressableOpacity, obj8);
                       cResult[19] = tmp4.customStatusEditButton;
                       cResult[20] = tmp15;
                       cResult[21] = tmp19;
@@ -1088,7 +1077,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp19 = formatToPlainStringResult;
   }
   const tmpResult4 = useToken;
-}) : (() => {
+}) : (function CustomStatus() {
   const tmp = closure_21();
   const customStatusActivity = userSettingToActivity.useCustomStatusActivity();
   state = undefined;
@@ -1169,7 +1158,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   obj8.children = gameMentionsAsPlainText;
   items[1] = closure_1_19(Text_Text.Text, obj8);
   obj4.children = items;
-  const items1 = [closure_1_20(Pressables.PressableOpacity, obj4), ];
+  const items1 = [constants2(Pressables.PressableOpacity, obj4), ];
   let tmp14Result2 = null;
   if (null != customStatusActivity) {
     const obj9 = {
@@ -1185,26 +1174,26 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const intl4 = util.intl;
     obj9.accessibilityLabel = intl4.string(util.t.wfYTHe);
     obj9.style = tmp.customStatusRemoveButton;
-    const obj10 = { style: tmp.trailingIcon, source: _modDef6591 };
+    const obj10 = { style: tmp.trailingIcon, source: _modDef6767 };
     obj9.children = closure_1_19(timestampProducer, obj10);
     tmp14Result2 = closure_1_19(Pressables.PressableOpacity, obj9);
   }
   const tmp2Result4 = useToken;
   items1[1] = tmp14Result2;
   obj3.children = items1;
-  return closure_1_19(TableRowGroup.TableRowGroup, { hasIcons: false, children: closure_1_20(Card.Card, obj3) });
+  return closure_1_19(TableRowGroup.TableRowGroup, { hasIcons: false, children: constants2(Card.Card, obj3) });
 });
 ReactCompilerGating = fn(558);
 let obj6 = { marginBottom: nativeDefault.space.PX_8 };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouAccountActionSheet.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((statusOnly) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function YouAccountActionSheet(statusOnly) {
   const cResult = c.c(33);
   statusOnly = statusOnly.statusOnly;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [MultiAccountStore];
-    const fn = function o() {
+    const fn = function n() {
       return canUseMultiAccountMobile.getCanUseMultiAccountMobile();
     };
     cResult[0] = items;
@@ -1219,14 +1208,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((status
   const tmp10 = useDesignToggleDefault("theme_setting_in_account_sheet");
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [DeveloperExperimentStore];
-    class T {
-      constructor() {
-        return closure_1_11.isDeveloper;
-      }
-    }
+    const fn2 = function b() {
+      return isDeveloper.isDeveloper;
+    };
     cResult[2] = items1;
-    cResult[3] = T;
-    let tmp12 = T;
+    cResult[3] = fn2;
+    let tmp12 = fn2;
     let tmp11 = items1;
   } else {
     tmp11 = cResult[2];
@@ -1239,16 +1226,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((status
   if (cResult[4] === stateFromStores) {
     if (cResult[5] === tmp4) {
       if (cResult[7] !== cResult[6]) {
-        { title: null }.title = tmp16;
-        class T {
-          constructor() {
-            return closure_1_11.isDeveloper;
-          }
-        }
+        const obj2 = { title: tmp16 };
+        const tmp21 = closure_1_19(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2);
         cResult[7] = tmp16;
         cResult[8] = tmp21;
         let tmp19 = tmp21;
-        const obj2 = { title: null };
       } else {
         tmp19 = cResult[8];
       }
@@ -1257,36 +1239,23 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((status
         if (tmp10) {
           tmp23 = closure_1_19(closure_25, {});
         }
-        class T {
-          constructor() {
-            return closure_1_11.isDeveloper;
-          }
-        }
+        cResult[9] = tmp10;
         cResult[10] = tmp23;
         let tmp22 = tmp23;
       } else {
         tmp22 = cResult[10];
       }
-      class T {
-        constructor() {
-          return closure_1_11.isDeveloper;
-        }
-      }
+      const _Symbol = Symbol;
       if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
         const tmp31 = closure_1_19(closure_24, {});
-        class T {
-          constructor() {
-            return closure_1_11.isDeveloper;
-          }
-        }
-        const tmp32 = closure_1_19(FocusModeSetting, {});
-        const tmp34 = closure_1_19(closure_29, {});
-        cResult[11] = tmp32;
-        cResult[12] = tmp34;
+        const tmp33 = closure_1_19(FocusModeSetting, {});
+        const tmp35 = closure_1_19(closure_29, {});
+        cResult[11] = tmp33;
+        cResult[12] = tmp35;
         cResult[13] = tmp31;
         let tmp28 = tmp31;
-        let tmp27 = tmp34;
-        let tmp26 = tmp32;
+        let tmp27 = tmp35;
+        let tmp26 = tmp33;
       } else {
         tmp26 = cResult[11];
         tmp27 = cResult[12];
@@ -1294,120 +1263,97 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((status
       }
       if (cResult[14] === stateFromStores) {
         if (cResult[15] === tmp4) {
-          let tmp35 = cResult[16];
+          let tmp36 = cResult[16];
         }
         if (cResult[17] === stateFromStores1) {
           if (cResult[18] === tmp4) {
-            let tmp39 = cResult[19];
+            let tmp40 = cResult[19];
           }
           if (cResult[20] === stateFromStores1) {
             if (cResult[21] === manaTypeConsolidationExperiment) {
               if (cResult[22] === tmp4) {
-                let tmp42 = cResult[23];
+                let tmp43 = cResult[23];
               }
-              if (cResult[24] === tmp35) {
-                if (cResult[25] === tmp39) {
-                  if (cResult[26] === tmp42) {
+              if (cResult[24] === tmp36) {
+                if (cResult[25] === tmp40) {
+                  if (cResult[26] === tmp43) {
                     if (cResult[27] === tmp22) {
-                      let tmp50 = cResult[28];
+                      let tmp52 = cResult[28];
                     }
                     if (cResult[29] === stateFromStores) {
-                      if (cResult[30] === tmp50) {
+                      if (cResult[30] === tmp52) {
                         if (cResult[31] === tmp19) {
-                          let tmp54 = cResult[32];
+                          let tmp55 = cResult[32];
                         }
-                        return tmp54;
+                        return tmp55;
                       }
                     }
-                    class T {
-                      constructor() {
-                        return closure_1_11.isDeveloper;
-                      }
-                    }
-                    tmp56[0] = stateFromStores;
-                    tmp56[1] = tmp19;
-                    tmp56[3] = tmp50;
-                    const tmp57 = closure_1_19(ActionSheet.ActionSheet, tmp56);
+                    const obj3 = { startExpanded: stateFromStores, header: tmp19, showGradient: true, children: tmp52 };
+                    const tmp57 = closure_1_19(ActionSheet.ActionSheet, obj3);
                     cResult[29] = stateFromStores;
-                    cResult[30] = tmp50;
+                    cResult[30] = tmp52;
                     cResult[31] = tmp19;
                     cResult[32] = tmp57;
-                    tmp54 = tmp57;
+                    tmp55 = tmp57;
                   }
                 }
               }
-              class T {
-                constructor() {
-                  return closure_1_11.isDeveloper;
-                }
-              }
-              const items2 = [tmp22, tmp28, tmp26, tmp27, tmp35, tmp39, tmp42];
-              tmp52[1] = items2;
-              const tmp53 = closure_1_20(Stack_Stack.Stack, tmp52);
-              cResult[24] = tmp35;
-              cResult[25] = tmp39;
-              cResult[26] = tmp42;
+              const obj4 = { spacing: 24, children: null };
+              const items2 = [tmp22, tmp28, tmp26, tmp27, tmp36, tmp40, tmp43];
+              obj4.children = items2;
+              const tmp54 = constants2(Stack_Stack.Stack, obj4);
+              cResult[24] = tmp36;
+              cResult[25] = tmp40;
+              cResult[26] = tmp43;
               cResult[27] = tmp22;
-              cResult[28] = tmp53;
-              tmp50 = tmp53;
+              cResult[28] = tmp54;
+              tmp52 = tmp54;
             }
           }
-          class T {
-            constructor() {
-              return closure_1_11.isDeveloper;
-            }
+          let tmp44 = !tmp4;
+          if (!tmp4) {
+            tmp44 = stateFromStores1;
           }
-          if (!!tmp4) {
+          if (!tmp44) {
             cResult[20] = stateFromStores1;
-            class T {
-              constructor() {
-                return closure_1_11.isDeveloper;
-              }
-            }
+            cResult[21] = manaTypeConsolidationExperiment;
             cResult[22] = tmp4;
-            cResult[23] = tmp43;
-            tmp42 = tmp43;
+            cResult[23] = tmp44;
+            tmp43 = tmp44;
           } else if (manaTypeConsolidationExperiment) {
-            const obj3 = { children: null };
-            class T {
-              constructor() {
-                return closure_1_11.isDeveloper;
-              }
-            }
+            const obj5 = { children: null };
             const items3 = [closure_1_19(closure_22, { children: "Developer Tools" }), ];
             tmp9 = DevToolsContentDefault;
             items3[1] = closure_1_19(tmp9, { embedded: true });
-            obj3.children = items3;
-            let tmp45 = closure_1_20(hasOwnProperty, obj3);
+            obj5.children = items3;
+            let tmp46 = constants2(hasOwnProperty, obj5);
           } else {
-            tmp45 = closure_1_19(DevToolsContentDefault, { title: "Developer Tools", embedded: true });
+            tmp46 = closure_1_19(DevToolsContentDefault, { title: "Developer Tools", embedded: true });
           }
         }
-        let tmp40 = !tmp4;
-        class T {
-          constructor() {
-            return closure_1_11.isDeveloper;
-          }
+        let tmp41 = !tmp4;
+        if (!tmp4) {
+          tmp41 = stateFromStores1;
         }
-        if (tmp40) {
-          tmp40 = closure_1_19(YouSwitchClientsRadioGroupDefault, {});
+        if (tmp41) {
+          tmp41 = closure_1_19(YouSwitchClientsRadioGroupDefault, {});
         }
         cResult[17] = stateFromStores1;
         cResult[18] = tmp4;
-        cResult[19] = tmp40;
-        tmp39 = tmp40;
+        cResult[19] = tmp41;
+        tmp40 = tmp41;
       }
-      let tmp36 = !tmp4;
+      let tmp37 = !tmp4;
       if (!tmp4) {
-        tmp36 = stateFromStores;
+        tmp37 = stateFromStores;
       }
-      if (tmp36) {
-        tmp36 = closure_1_19(closure_27, {});
+      if (tmp37) {
+        tmp37 = closure_1_19(closure_27, {});
       }
       cResult[14] = stateFromStores;
       cResult[15] = tmp4;
-      cResult[16] = tmp36;
-      tmp35 = tmp36;
+      cResult[16] = tmp37;
+      tmp36 = tmp37;
     }
   }
   const intl = util.intl;
@@ -1425,7 +1371,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((status
   cResult[5] = undefined !== statusOnly && statusOnly;
   cResult[6] = stringResult;
   const tmpResult4 = ManaTypeConsolidationExperiment;
-}) : ((statusOnly) => {
+}) : (function YouAccountActionSheet(statusOnly) {
   let flag = statusOnly.statusOnly;
   if (flag === undefined) {
     flag = false;
@@ -1479,7 +1425,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((status
     const obj5 = { spacing: 24, children: null };
     items2[6] = tmp16;
     obj5.children = items2;
-    obj4.children = closure_1_20(Stack_Stack.Stack, obj5);
+    obj4.children = constants2(Stack_Stack.Stack, obj5);
     return closure_1_19(ActionSheet.ActionSheet, obj4);
   } else if (manaTypeConsolidationExperiment) {
     const obj6 = { children: null };
@@ -1488,7 +1434,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((status
     tmp8Result6 = closure_1_19(tmp4, { embedded: true });
     items3[1] = tmp8Result6;
     obj6.children = items3;
-    let tmp8Result7 = closure_1_20(hasOwnProperty, obj6);
+    let tmp8Result7 = constants2(hasOwnProperty, obj6);
   } else {
     tmp8Result7 = closure_1_19(DevToolsContentDefault, { title: "Developer Tools", embedded: true });
   }

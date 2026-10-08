@@ -1,19 +1,19 @@
-// === Module 12208: useCanGuildPowerupBeToggled ===
+// === Module 12287: useCanGuildPowerupBeToggled ===
 
-// Module 12208 (useCanGuildPowerupBeToggled)
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12174 */;
+// Module 12287 (useCanGuildPowerupBeToggled)
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12253 */;
 import noop from "module_19" /* 19 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 4773 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4967 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const PowerupActiveStatusType = fn(4774).PowerupActiveStatusType;
+const PowerupActiveStatusType = fn(4968).PowerupActiveStatusType;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useCanGuildPowerupBeToggled.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCanGuildPowerupBeToggled(arg0, arg1, arg2) {
   _require = arg0;
   skuId = arg1;
   importDefault = arg1;
@@ -64,7 +64,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
                 if (null != cResult[9]) {
                   if (null != allPowerups[tmp15]) {
                     const intl = tmp(unlockedPowerups[7]).intl;
-                    const tmp9Result = require("module_2553");
+                    const tmp9Result = require("module_2597");
                     let title;
                     if (allPowerups[tmp15] != null) {
                       title = tmp24.title;
@@ -130,7 +130,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
     }
   }
   return tmp11;
-}) : ((arg0, arg1, arg2) => {
+}) : (function useCanGuildPowerupBeToggled(arg0, arg1, arg2) {
   _require = arg0;
   importDefault = arg1;
   dependencyMap = arg2;
@@ -174,7 +174,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
           if (null != found1) {
             if (null != allPowerups[found1]) {
               const intl = closure_0(1126).intl;
-              const tmp11 = skuId(2553);
+              const tmp11 = skuId(2597);
               let title;
               if (allPowerups[found1] != null) {
                 title = tmp13.title;

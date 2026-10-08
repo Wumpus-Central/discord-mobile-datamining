@@ -1,8 +1,8 @@
-// === Module 13221: MobileNitroManageSubscriptionsSettingsExperiment ===
+// === Module 13521: MobileNitroManageSubscriptionsSettingsExperiment ===
 
-// Module 13221 (MobileNitroManageSubscriptionsSettingsExperiment)
+// Module 13521 (MobileNitroManageSubscriptionsSettingsExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1440 */;
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -14,7 +14,7 @@ const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/premium/experiments/MobileNitroManageSubscriptionsSettingsExperiment.tsx");
 
 export default apexExperiment;
-export const useMobileNitroManageSubscriptionsSettingsExperiment = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+export const useMobileNitroManageSubscriptionsSettingsExperiment = ReactCompilerGating.isReactCompilerEnabled() ? (function useMobileNitroManageSubscriptionsSettingsExperiment(location) {
   const cResult = c.c(2);
   const _location = location.location;
   if (cResult[0] !== _location) {
@@ -26,7 +26,9 @@ export const useMobileNitroManageSubscriptionsSettingsExperiment = ReactCompiler
     tmp2 = cResult[1];
   }
   return apexExperiment.useConfig(tmp2).enabled;
-}) : ((location) => apexExperiment.useConfig({ location: location.location }).enabled);
+}) : (function useMobileNitroManageSubscriptionsSettingsExperiment(location) {
+  return apexExperiment.useConfig({ location: location.location }).enabled;
+});
 export const getMobileNitroManageSubscriptionsSettingsExperiment = function getMobileNitroManageSubscriptionsSettingsExperiment(location) {
   return apexExperiment.getConfig({ location: location.location }).enabled;
 };

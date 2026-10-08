@@ -1,19 +1,19 @@
-// === Module 16859: MediaGridItem ===
+// === Module 17138: MediaGridItem ===
 
-// Module 16859 (MediaGridItem)
+// Module 17138 (MediaGridItem)
 import nativeDefault from "native" /* 587 */;
-import timing from "timing" /* 4897 */;
-import timingPresets from "timingPresets" /* 4900 */;
+import timing from "timing" /* 5091 */;
+import timingPresets from "timingPresets" /* 5094 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable: hasOwnProperty, useWindowDimensions: metroRequire } = get_ActivityIndicator);
-const SearchMediaTypes = fn(7524).SearchMediaTypes;
+const SearchMediaTypes = fn(9247).SearchMediaTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { container: { borderRadius: nativeDefault.radii.xs, overflow: "hidden", backgroundColor: nativeDefault.colors.BORDER_SUBTLE }, avatar: { position: "absolute", top: 8, right: 8 }, card: { padding: 0 } };
 let closure_11 = createStyles.createStyles(obj);
 const constants = { HIDDEN: 0, [0]: "HIDDEN", VISIBLE: 1, [1]: "VISIBLE" };
@@ -24,7 +24,7 @@ let obj3 = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", backgroun
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/list/rows/MediaGridItem.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((media) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function MediaGridItem(media) {
   const cResult = media(ref[8]).c(63);
   media = media.media;
   ({ size, containerStyle, onPress } = media);
@@ -198,7 +198,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((media)
   cResult[4] = media.author;
   cResult[5] = avatarSource;
   const tmpResult = media(ref[9]);
-}) : ((media) => {
+}) : (function MediaGridItem(media) {
   media = media.media;
   let size = media.size;
   const onPress = media.onPress;

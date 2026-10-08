@@ -1,20 +1,20 @@
-// === Module 12963: useWishlistSuggestionsDismissibleContent ===
+// === Module 13242: useWishlistSuggestionsDismissibleContent ===
 
-// Module 12963 (useWishlistSuggestionsDismissibleContent)
+// Module 13242 (useWishlistSuggestionsDismissibleContent)
 import DurationsDefault from "Durations" /* 1102 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 7124 */;
+import UserProfileStore from "UserProfileStore" /* 7309 */;
 
 const require = fn;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const cooldownDurationMs = 90 * DurationsDefault.Millis.DAY;
 let closure_7 = 90 * DurationsDefault.Millis.DAY;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useWishlistSuggestionsDismissibleContent.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useWishlistSuggestionsDismissibleContent(userId) {
   const cResult = userId(wishlist[6]).c(13);
   userId = userId.userId;
   wishlist = userId.wishlist;
@@ -136,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   tmp14 = items1;
   tmp13 = I;
   const tmp6 = _slicedToArray(noop.useState(false), 2);
-}) : ((userId) => {
+}) : (function useWishlistSuggestionsDismissibleContent(userId) {
   userId = userId.userId;
   const wishlist = userId.wishlist;
   let hasFetchedWishlist = userId.hasFetchedWishlist;

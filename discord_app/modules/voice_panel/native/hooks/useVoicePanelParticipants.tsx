@@ -1,14 +1,14 @@
-// === Module 17329: useVoicePanelParticipants ===
+// === Module 17610: useVoicePanelParticipants ===
 
-// Module 17329 (useVoicePanelParticipants)
+// Module 17610 (useVoicePanelParticipants)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6041 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
-import VoiceStateStore from "VoiceStateStore" /* 4915 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4920 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5108 */;
+import VoiceStateStore from "VoiceStateStore" /* 5111 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5114 */;
 
 const require = globalThis.__r;
 
@@ -22,13 +22,13 @@ function getMemoizedParticipant(item10013, first1) {
   }
   return value;
 }
-const VoicePanelConstants = fn(11916);
+const VoicePanelConstants = fn(11989);
 ({ VoicePanelCardItemType: closure_11, VoicePanelCTACard: closure_12 } = VoicePanelConstants);
 const RTCConnectionStates = fn(1085).RTCConnectionStates;
 let closure_14 = [];
 fn(558);
 const ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoicePanelCards(arg0, arg1) {
   _require = arg0;
   importDefault = arg1;
   const cResult = require("c").c(22);
@@ -143,7 +143,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
       }
     }
   }
-  class V {
+  class O {
     constructor() {
       if (closure_4) {
         tmp5 = closure_5;
@@ -266,10 +266,10 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   cResult[14] = tmp10;
   cResult[15] = stateFromStores;
   cResult[16] = desyncedChannelParticipants;
-  cResult[17] = V;
+  cResult[17] = O;
   cResult[18] = items3;
   const tmpResult2 = require("RTCConnectionDesyncHooks");
-}) : ((arg0, arg1) => {
+}) : (function useVoicePanelCards(arg0, arg1) {
   _require = arg0;
   importDefault = arg1;
   const id = stateFromStores.getId();
@@ -375,7 +375,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useVoicePanelParticipants.tsx");
 
 export default tmp3;
-export const useChunkedParticipants = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export const useChunkedParticipants = ReactCompilerGating.isReactCompilerEnabled() ? (function useChunkedParticipants(arg0, arg1) {
   _require = arg0;
   importDefault = arg1;
   const cResult = require("c").c(13);
@@ -504,7 +504,7 @@ export const useChunkedParticipants = ReactCompilerGating.isReactCompilerEnabled
   cResult[11] = I;
   cResult[12] = items2;
   const tmpResult = require("VoicePanelCardLayoutManager");
-}) : ((arg0, arg1) => {
+}) : (function useChunkedParticipants(arg0, arg1) {
   _require = arg0;
   importDefault = arg1;
   const id = AuthenticationStore.getId();

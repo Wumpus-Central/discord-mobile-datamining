@@ -1,9 +1,9 @@
-// === Module 12530: NotificationSettingsChannelPost ===
+// === Module 12626: NotificationSettingsChannelPost ===
 
-// Module 12530 (NotificationSettingsChannelPost)
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 6621 */;
+// Module 12626 (NotificationSettingsChannelPost)
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 6798 */;
 import noop from "module_19" /* 19 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5077 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5971 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsChannelPost.tsx");
 
-export const NotificationSettingsChannelPost = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+export const NotificationSettingsChannelPost = ReactCompilerGating.isReactCompilerEnabled() ? (function NotificationSettingsChannelPost(channel) {
   _require = channel;
   const cResult = require("c").c(17);
   channel = channel.channel;
@@ -83,7 +83,7 @@ export const NotificationSettingsChannelPost = ReactCompilerGating.isReactCompil
         obj3.children = jsx(tmp(tmp2[10]).TableCheckboxRow, { label: tmp10, checked: newForumThreadsCreated, disabled: muted, onPress: tmp12 });
         const tmp15 = jsx(tmp(tmp2[9]).TableRowGroup, { title: tmp8, hasIcons: false, children: null });
         cResult[10] = newForumThreadsCreated;
-        class S {
+        class M {
           constructor() {
             obj = closure_1(closure_2[8]);
             result = obj.setForumThreadsCreated(closure_0.channel, !newForumThreadsCreated);
@@ -94,7 +94,7 @@ export const NotificationSettingsChannelPost = ReactCompilerGating.isReactCompil
         cResult[13] = tmp15;
         tmp13 = tmp15;
       }
-      class S {
+      class M {
         constructor() {
           obj = closure_1(closure_2[8]);
           result = obj.setForumThreadsCreated(closure_0.channel, !newForumThreadsCreated);
@@ -103,8 +103,8 @@ export const NotificationSettingsChannelPost = ReactCompilerGating.isReactCompil
       }
       cResult[7] = newForumThreadsCreated;
       cResult[8] = channel.channel;
-      cResult[9] = S;
-      tmp12 = S;
+      cResult[9] = M;
+      tmp12 = M;
       const tmpResult = tmp(tmp2[6]);
     }
   }
@@ -117,7 +117,7 @@ export const NotificationSettingsChannelPost = ReactCompilerGating.isReactCompil
   cResult[4] = fn;
   tmp6 = fn;
   const obj = require("c");
-}) : ((channel) => {
+}) : (function NotificationSettingsChannelPost(channel) {
   _require = channel;
   ({ guild_id: importDefault, id: dependencyMap } = channel.channel);
   const items = [UserGuildSettingsStore];

@@ -1,22 +1,22 @@
-// === Module 10780: GiftingBadgeProgress ===
+// === Module 12733: GiftingBadgeProgress ===
 
-// Module 10780 (GiftingBadgeProgress)
+// Module 12733 (GiftingBadgeProgress)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import _modDef2617 from "module_2617" /* 2617 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10488 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10494 */;
+import _modDef2661 from "module_2661" /* 2661 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10085 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10091 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(7874).getSingleRequirementThreshold;
+let closure_4 = fn(8292).getSingleRequirementThreshold;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let ReactCompilerGating = fn(558);
-let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((percent) => {
+let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function GiftingBadgeProgressBar(percent) {
   const cResult = c.c(8);
   const tmp2 = closure_8();
   const combined = "" + Math.min(Math.max(percent.percent, 0), 100) + "%";
@@ -53,7 +53,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((percent) => {
   cResult[3] = tmp4;
   cResult[4] = tmp6;
   tmp5 = tmp6;
-}) : ((percent) => {
+}) : (function GiftingBadgeProgressBar(percent) {
   const tmp = closure_8();
   const obj = { style: tmp.progressBarTrack, children: null };
   const obj2 = { style: null };
@@ -62,7 +62,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((percent) => {
   obj.children = hasOwnProperty(View, obj2);
   return hasOwnProperty(View, obj);
 });
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj3 = { container: { flexDirection: "row", alignItems: "center", padding: nativeDefault.space.PX_16 }, content: null, progressBarTrack: null, progressBarFill: null, labels: null };
 let obj4 = { flexDirection: "row", alignItems: "center", padding: nativeDefault.space.PX_16 };
 obj3.content = { flex: 1, paddingHorizontal: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_4 };
@@ -78,7 +78,7 @@ let obj8 = { flexDirection: "row", justifyContent: "flex-end", alignItems: "cent
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/gifting/native/views/GiftingBadgeProgress.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftingBadgeProgress(arg0) {
   const cResult = c.c(50);
   ({ progress, currentTier, nextTier, iconSize, title } = arg0);
   let num = 24;
@@ -238,7 +238,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           const obj8 = { variant: "text-xs/normal", color: "text-muted", children: null };
           const intl = util.intl;
           const obj9 = { count: progress, threshold: tmp21 };
-          obj8.children = intl.format(_modDef2617.iIpfQe, obj9);
+          obj8.children = intl.format(_modDef2661.iIpfQe, obj9);
           tmp37 = hasOwnProperty(Text_Text.Text, obj8);
         }
         cResult[6] = tmp6;
@@ -294,7 +294,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = giftingBadgeTierIconUrl1;
   tmp6 = giftingBadgeTierIconUrl1;
   const tmpResult4 = GiftingBadgesUtils;
-}) : ((title) => {
+}) : (function GiftingBadgeProgress(title) {
   ({ progress, nextTier, iconSize } = title);
   if (iconSize === undefined) {
     iconSize = 24;
@@ -335,7 +335,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const obj9 = { variant: "text-xs/normal", color: "text-muted", children: null };
     const intl = util.intl;
     const obj10 = { count: progress, threshold: tmp7 };
-    obj9.children = intl.format(_modDef2617.iIpfQe, obj10);
+    obj9.children = intl.format(_modDef2661.iIpfQe, obj10);
     tmp17Result = hasOwnProperty(Text_Text.Text, obj9);
   }
   obj8.children = tmp17Result;

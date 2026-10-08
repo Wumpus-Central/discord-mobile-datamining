@@ -1,31 +1,31 @@
-// === Module 9241: StageChannelUpsell ===
+// === Module 8551: StageChannelUpsell ===
 
-// Module 9241 (StageChannelUpsell)
+// Module 8551 (StageChannelUpsell)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
-import _modDef4815 from "module_4815" /* 4815 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import Pressables from "Pressables" /* 5916 */;
-import _modDef9243 from "module_9243" /* 9243 */;
+import native from "native" /* 1200 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import _modDef5009 from "module_5009" /* 5009 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5940 */;
+import Pressables from "Pressables" /* 6189 */;
+import _modDef8553 from "module_8553" /* 8553 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const createChannelRecord = fn(2055).createChannelRecord;
-let closure_7 = fn(9242).useStageChannelUpsellCardStore;
-let closure_8 = fn(9210).CREATE_GUILD_EVENT_MODAL_KEY;
+const createChannelRecord = fn(2067).createChannelRecord;
+let closure_7 = fn(8552).useStageChannelUpsellCardStore;
+let closure_8 = fn(8490).CREATE_GUILD_EVENT_MODAL_KEY;
 const ChannelTypes = fn(1085).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const CREATE_CHANNEL_MODAL_KEY = "CREATE_CHANNEL_MODAL_KEY";
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { flexDirection: "column", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: 16, margin: 16, borderRadius: nativeDefault.radii.sm }, image: { marginBottom: 16 }, closeContainer: { position: "absolute", top: 14, right: 14 }, header: { lineHeight: 20, marginBottom: 4 }, description: { textAlign: "center", marginBottom: 4 }, button: { marginTop: 12, alignSelf: "stretch" } };
 let closure_13 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -40,10 +40,10 @@ export default function StageChannelUpsell(arg0) {
   if (!tmp2[0]) {
     let obj = { style: tmp.container, children: null };
     let obj2 = { onPress: tmp3, accessibilityRole: "button", style: tmp.closeContainer, children: null };
-    let obj3 = { source: _modDef4815 };
+    let obj3 = { source: _modDef5009 };
     obj2.children = closure_10(native.Icon, obj3);
     const items = [closure_10(Pressables.PressableOpacity, obj2), , , , , ];
-    const obj4 = { source: _modDef9243, style: tmp.image };
+    const obj4 = { source: _modDef8553, style: tmp.image };
     items[1] = closure_10(closure_4, obj4);
     const obj5 = { style: tmp.header, variant: "text-md/bold", color: "mobile-text-heading-primary", children: null };
     const intl = util.intl;
@@ -57,7 +57,7 @@ export default function StageChannelUpsell(arg0) {
     const intl3 = util.intl;
     const obj8 = {
       suggestionsHook(children, arg1) {
-          return closure_1_10(guildId(4892).Text, { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children }, arg1);
+          return closure_1_10(guildId(5086).Text, { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children }, arg1);
         }
     };
     obj7.children = intl3.format(util.t.Vh7rP7, obj8);
@@ -66,9 +66,9 @@ export default function StageChannelUpsell(arg0) {
     const obj10 = { variant: "secondary", size: "md", text: null, onPress: null };
     const intl4 = util.intl;
     obj10.text = intl4.string(util.t["X/3SyA"]);
-    obj10.onPress = function onPress() {
+    obj10.onPress = function handleCreateChannel() {
       ModalActionCreatorsDefault.popWithKey(closure_8);
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9244, dependencyMap.paths), {
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(8554, dependencyMap.paths), {
         guildId,
         channelType: ChannelTypes.GUILD_STAGE_VOICE,
         onChannelCreated(id) {

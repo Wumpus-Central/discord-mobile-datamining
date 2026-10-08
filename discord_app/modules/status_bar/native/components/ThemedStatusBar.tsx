@@ -1,13 +1,13 @@
-// === Module 14419: ThemedStatusBar ===
+// === Module 14645: ThemedStatusBar ===
 
-// Module 14419 (ThemedStatusBar)
+// Module 14645 (ThemedStatusBar)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4742 */;
-import StatusBarDefault from "StatusBar" /* 9096 */;
-import useGlobalStatusIndicatorState from "useGlobalStatusIndicatorState" /* 9620 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4936 */;
+import StatusBarDefault from "StatusBar" /* 10340 */;
+import useGlobalStatusIndicatorState from "useGlobalStatusIndicatorState" /* 10813 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1193 */;
+import ThemeStore from "ThemeStore" /* 1205 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const require = globalThis.__r;
@@ -18,7 +18,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/status_bar/native/components/ThemedStatusBar.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ThemedStatusBar() {
   const cResult = c.c(6);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AuthenticationStore];
@@ -84,7 +84,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     str = "light-content";
   }
   const tmpResult6 = useGlobalStatusIndicatorState;
-}) : (() => {
+}) : (function ThemedStatusBar() {
   const items = [AuthenticationStore];
   const stateFromStores = initialize.useStateFromStores(items, () => authenticated.isAuthenticated());
   const isModalOpen = NavigationRouteUtils.useIsModalOpen();

@@ -1,16 +1,16 @@
-// === Module 9777: SummaryActionCreators ===
+// === Module 9627: SummaryActionCreators ===
 
-// Module 9777 (SummaryActionCreators)
+// Module 9627 (SummaryActionCreators)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5443 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import SummaryStore from "SummaryStore" /* 9778 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5753 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import SummaryStore from "SummaryStore" /* 9572 */;
 
 require = fn;
 function fetchSummary() {
@@ -515,7 +515,7 @@ let closure_9 = 30 * DurationsDefault.Millis.SECOND;
 const dependencyMap = {};
 let closure_11 = {};
 let ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMaybeFetchChannelAffinitiesAndSummaries(arg0) {
   const cResult = stateFromStores(576).c(10);
   if (cResult[0] !== arg0) {
     let items = arg0;
@@ -608,7 +608,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   tmp11 = items2;
   tmp10 = fn2;
   const tmpResult = stateFromStores(573);
-}) : (() => {
+}) : (function useMaybeFetchChannelAffinitiesAndSummaries() {
   let items = arg0;
   if (arg0 === undefined) {
     items = [];

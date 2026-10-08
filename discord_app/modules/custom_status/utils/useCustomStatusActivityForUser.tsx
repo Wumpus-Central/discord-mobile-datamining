@@ -1,8 +1,8 @@
-// === Module 10853: useCustomStatusActivityForUser ===
+// === Module 10504: useCustomStatusActivityForUser ===
 
-// Module 10853 (useCustomStatusActivityForUser)
+// Module 10504 (useCustomStatusActivityForUser)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import PresenceStore from "PresenceStore" /* 4936 */;
+import PresenceStore from "PresenceStore" /* 5106 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/custom_status/utils/useCustomStatusActivityForUser.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCustomStatusActivityForUser(arg0) {
   _require = arg0;
   const cResult = require("c").c(6);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -82,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
   }
   return stateFromStores1;
-}) : ((arg0) => {
+}) : (function useCustomStatusActivityForUser(arg0) {
   _require = arg0;
   const items = [AuthenticationStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => AuthenticationStore.getId() === closure_0);

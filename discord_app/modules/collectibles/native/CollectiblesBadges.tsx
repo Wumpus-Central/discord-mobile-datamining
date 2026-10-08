@@ -1,21 +1,21 @@
-// === Module 8519: CollectiblesBadges ===
+// === Module 9003: CollectiblesBadges ===
 
-// Module 8519 (CollectiblesBadges)
+// Module 9003 (CollectiblesBadges)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import LockIcon from "LockIcon" /* 5886 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8346 */;
-import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 8520 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import LockIcon from "LockIcon" /* 8198 */;
+import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 9004 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9005 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const PremiumTypes = fn(1379).PremiumTypes;
+const PremiumTypes = fn(1391).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { badgeTextUppercase: { textTransform: "uppercase" }, badgeSurfaceDarkMode: { backgroundColor: nativeDefault.colors.WHITE }, badgeSurfaceLightMode: null, newIconBadge: null, limitedTimeBadge: null, lockIconBadge: null, newLockIconBadge: null, badgePill: null, iconTextBadge: null };
 let obj3 = { backgroundColor: nativeDefault.colors.WHITE };
 obj2.badgeSurfaceLightMode = { backgroundColor: nativeDefault.colors.BADGE_BACKGROUND_BRAND };
@@ -35,7 +35,7 @@ let closure_7 = createStyles.createStyles(obj2);
 fn(558);
 const obj10 = { flexDirection: "row", alignItems: "center", gap: 4, paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: 2, borderRadius: nativeDefault.radii.round };
 let ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function NewBadge(style) {
   const cResult = c.c(9);
   style = style.style;
   const tmp4 = closure_7();
@@ -79,7 +79,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
   cResult[1] = tmp4.newIconBadge;
   cResult[2] = items;
   tmp5 = items;
-}) : ((style) => {
+}) : (function NewBadge(style) {
   const tmp = closure_7();
   const obj = { style: null, children: null };
   const items = [tmp.newIconBadge, style.style];
@@ -91,7 +91,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
   return hasOwnProperty(View, obj);
 });
 ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function LockBadge(arg0) {
   let stringResult = dependencyMap;
   const cResult = c.c(6);
   ({ isNew, style: lockIconBadge } = arg0);
@@ -135,7 +135,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   newLockIconBadge = newLockIconBadge.newLockIconBadge;
   cResult[4] = newLockIconBadge;
   cResult[5] = tmp8;
-}) : ((isNew) => {
+}) : (function LockBadge(isNew) {
   let flag = isNew.isNew;
   if (flag === undefined) {
     flag = false;
@@ -165,7 +165,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return tmp7;
 });
 ReactCompilerGating = fn(558);
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumBadge(arg0) {
   let stringResult = dependencyMap;
   const cResult = c.c(6);
   ({ isNew, style: lockIconBadge } = arg0);
@@ -209,7 +209,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   newLockIconBadge = newLockIconBadge.newLockIconBadge;
   cResult[4] = newLockIconBadge;
   cResult[5] = tmp8;
-}) : ((isNew) => {
+}) : (function PremiumBadge(isNew) {
   let flag = isNew.isNew;
   if (flag === undefined) {
     flag = false;
@@ -239,7 +239,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return tmp7;
 });
 ReactCompilerGating = fn(558);
-let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
+let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function LimitedTimeBadge(style) {
   const cResult = c.c(9);
   style = style.style;
   const tmp4 = closure_7();
@@ -283,7 +283,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
   cResult[1] = tmp4.limitedTimeBadge;
   cResult[2] = items;
   tmp5 = items;
-}) : ((style) => {
+}) : (function LimitedTimeBadge(style) {
   const tmp = closure_7();
   const obj = { style: null, children: null };
   const items = [tmp.limitedTimeBadge, style.style];
@@ -295,7 +295,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
   return hasOwnProperty(View, obj);
 });
 ReactCompilerGating = fn(558);
-let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function IconBadgePill(arg0) {
   const cResult = c.c(10);
   ({ icon, accessibilityLabel, isDark } = arg0);
   const tmp2 = closure_7();
@@ -340,7 +340,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = tmp3;
   cResult[2] = items;
   tmp4 = items;
-}) : ((isDark) => {
+}) : (function IconBadgePill(isDark) {
   isDark = isDark.isDark;
   ({ icon, accessibilityLabel } = isDark);
   const tmp = closure_7();
@@ -362,7 +362,7 @@ export const LockBadge = tmp5;
 export const PremiumBadge = tmp6;
 export const LimitedTimeBadge = tmp7;
 export const IconBadgePill = tmp8;
-export const IconTextBadge = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const IconTextBadge = ReactCompilerGating.isReactCompilerEnabled() ? (function IconTextBadge(arg0) {
   const cResult = c.c(14);
   ({ icon, label, isDark } = arg0);
   const tmp4 = closure_7();
@@ -427,7 +427,7 @@ export const IconTextBadge = ReactCompilerGating.isReactCompilerEnabled() ? ((ar
   cResult[1] = tmp5;
   cResult[2] = items1;
   tmp6 = items1;
-}) : ((isDark) => {
+}) : (function IconTextBadge(isDark) {
   isDark = isDark.isDark;
   ({ icon, label } = isDark);
   const tmp = closure_7();

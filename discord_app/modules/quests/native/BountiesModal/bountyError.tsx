@@ -1,10 +1,10 @@
-// === Module 14845: bountyError ===
+// === Module 15106: bountyError ===
 
-// Module 14845 (bountyError)
+// Module 15106 (bountyError)
 import util from "util" /* 1126 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4574 */;
-import _modDef4813 from "module_4813" /* 4813 */;
-import BountiesModalConstants from "BountiesModalConstants" /* 14831 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4766 */;
+import _modDef5007 from "module_5007" /* 5007 */;
+import BountiesModalConstants from "BountiesModalConstants" /* 15092 */;
 import size from "module_2" /* 2 */;
 
 const toastDurationMs = BountiesModalConstants.BOUNTY_REWARD_CLAIM_FAILED_TOAST_DURATION_MS;
@@ -25,7 +25,7 @@ export const openBountyRewardClaimErrorToast = function openBountyRewardClaimErr
       if (null != message1) {
         let message = code.message;
       }
-      const obj2 = { key: "QUESTS_BOUNTIES_REWARD_CLAIM_FAILED", content: message, icon: _modDef4813, toastDurationMs };
+      const obj2 = { key: "QUESTS_BOUNTIES_REWARD_CLAIM_FAILED", content: message, icon: _modDef5007, toastDurationMs };
       obj.open(obj2);
     }
   }

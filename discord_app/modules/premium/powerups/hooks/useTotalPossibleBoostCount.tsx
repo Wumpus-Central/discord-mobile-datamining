@@ -1,9 +1,9 @@
-// === Module 16192: useTotalPossibleBoostCount ===
+// === Module 16452: useTotalPossibleBoostCount ===
 
-// Module 16192 (useTotalPossibleBoostCount)
+// Module 16452 (useTotalPossibleBoostCount)
 import _mod19 from "module_19" /* 19 */;
 import c from "c" /* 576 */;
-import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4774 */;
+import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4968 */;
 import Constants from "Constants" /* 1085 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -13,7 +13,7 @@ const useMemo = _mod19.useMemo;
 ({ AppliedGuildBoostsRequiredForBoostedGuildTier: hasOwnProperty, BoostedGuildTiers: metroRequire, GuildFeatures: closure_7 } = Constants);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useTotalPossibleBoostCount.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useTotalPossibleBoostCount(arg0) {
   let tmp = arg0;
   const id = arg0;
   const cResult = c.c(5);
@@ -76,7 +76,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp = closure_1;
     cResult[4] = closure_1;
   }
-}) : ((arg0) => {
+}) : (function useTotalPossibleBoostCount(arg0) {
   closure_0 = arg0;
   const items = [arg0];
   return useMemo(() => {

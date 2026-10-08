@@ -1,21 +1,21 @@
-// === Module 16908: SearchHistoricalIndexingHeader ===
+// === Module 17189: SearchHistoricalIndexingHeader ===
 
-// Module 16908 (SearchHistoricalIndexingHeader)
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12001 */;
+// Module 17189 (SearchHistoricalIndexingHeader)
+import tracking_TrackingDefault from "tracking/Tracking" /* 12074 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2116 */;
+import LocaleStore from "LocaleStore" /* 2128 */;
 
 const require = fn;
-const SearchConstants = fn(7524);
+const SearchConstants = fn(9247);
 ({ SearchTabs: hasOwnProperty, SEARCH_LIST_HORIZONTAL_PADDING, SEARCH_ROW_TAP_STATE_PADDING } = SearchConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({ header: { marginBottom: 16 }, headerMessages: { marginHorizontal: SEARCH_LIST_HORIZONTAL_PADDING, marginTop: SEARCH_ROW_TAP_STATE_PADDING } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/messages/SearchHistoricalIndexingHeader.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function HistoricalIndexingHeader(searchContext) {
   const cResult = searchContext(576).c(16);
   searchContext = searchContext.searchContext;
   const documentsIndexed = searchContext.documentsIndexed;
@@ -55,7 +55,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) =
       }
       if (cResult[11] !== tmp14) {
         const obj3 = { variant: "heading-sm/normal", color: "interactive-text-default", children: tmp14 };
-        const tmp18 = jsx(tmp(4892).Text, { variant: "heading-sm/normal", color: "interactive-text-default", children: tmp14 });
+        const tmp18 = jsx(tmp(5086).Text, { variant: "heading-sm/normal", color: "interactive-text-default", children: tmp14 });
         cResult[11] = tmp14;
         cResult[12] = tmp18;
         let tmp16 = tmp18;
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) =
         return tmp19;
       }
       const obj4 = { variant: "primary", border: "subtle", style: tmp13, children: tmp16 };
-      const tmp21 = jsx(tmp(6002).Card, { variant: "primary", border: "subtle", style: tmp13, children: tmp16 });
+      const tmp21 = jsx(tmp(6186).Card, { variant: "primary", border: "subtle", style: tmp13, children: tmp16 });
       cResult[13] = tmp13;
       cResult[14] = tmp16;
       cResult[15] = tmp21;
@@ -82,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) =
     tmp13 = items;
   }
   const fn = function b() {
-    search_tracking_TrackingDefault.trackSearchIndexing({ searchContext, isHistoricalIndexing: true, documentsIndexed });
+    tracking_TrackingDefault.trackSearchIndexing({ searchContext, isHistoricalIndexing: true, documentsIndexed });
   };
   const items1 = [documentsIndexed, searchContext];
   cResult[2] = documentsIndexed;
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) =
   tmp10 = items1;
   tmp9 = fn;
   const obj = searchContext(576);
-}) : ((searchContext) => {
+}) : (function HistoricalIndexingHeader(searchContext) {
   searchContext = searchContext.searchContext;
   const documentsIndexed = searchContext.documentsIndexed;
   const tab = searchContext.tab;
@@ -109,7 +109,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) =
     return headerMessages;
   }, items1);
   const effect = noop.useEffect(() => {
-    search_tracking_TrackingDefault.trackSearchIndexing({ searchContext, isHistoricalIndexing: true, documentsIndexed });
+    tracking_TrackingDefault.trackSearchIndexing({ searchContext, isHistoricalIndexing: true, documentsIndexed });
   }, items2);
   const obj = { variant: "primary", border: "subtle", style: null, children: null };
   const items3 = [tmp.header, memo1];

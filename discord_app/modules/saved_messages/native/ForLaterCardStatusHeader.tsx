@@ -1,12 +1,12 @@
-// === Module 11861: ForLaterCardStatusHeader ===
+// === Module 12680: ForLaterCardStatusHeader ===
 
-// Module 11861 (ForLaterCardStatusHeader)
+// Module 12680 (ForLaterCardStatusHeader)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4892 */;
+import Text_Text from "Text/Text" /* 5086 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
+import createStyles from "createStyles" /* 5090 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -21,7 +21,7 @@ let closure_6 = createStyles.createStyles(obj);
 let obj3 = { padding: 6, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT };
 const result = size.fileFinishedImporting("modules/saved_messages/native/ForLaterCardStatusHeader.tsx");
 
-export const ForLaterCardStatusHeader = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const ForLaterCardStatusHeader = ReactCompilerGating.isReactCompilerEnabled() ? (function ForLaterCardStatusHeader(arg0) {
   const cResult = c.c(19);
   ({ IconComponent, label, isCritical, lineClamp, actions } = arg0);
   const tmp5 = closure_6();
@@ -100,7 +100,7 @@ export const ForLaterCardStatusHeader = ReactCompilerGating.isReactCompilerEnabl
   cResult[1] = tmp6;
   cResult[2] = tmp8;
   tmp7 = tmp8;
-}) : ((isCritical) => {
+}) : (function ForLaterCardStatusHeader(isCritical) {
   let flag = isCritical.isCritical;
   ({ IconComponent, label } = isCritical);
   if (flag === undefined) {

@@ -1,24 +1,24 @@
-// === Module 10692: InstantInviteCreator ===
+// === Module 10280: InstantInviteCreator ===
 
-// Module 10692 (InstantInviteCreator)
+// Module 10280 (InstantInviteCreator)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
 
-const native = Stack(1188);
-const Stack_Stack = Stack(5600);
-const DetailedGuildIdentityUserRow = Stack(10693);
+const native = Stack(1200);
+const Stack_Stack = Stack(5373);
+const DetailedGuildIdentityUserRow = Stack(10281);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({ identity: { flex: 1 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_instant_invites/native/InstantInviteCreator.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function InstantInviteCreator(arg0) {
   let Stack = require;
   let items = dependencyMap;
   const cResult = c.c(14);
@@ -79,7 +79,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
     cResult[2] = avatarSource;
     tmp3 = avatarSource;
   }
-}) : ((arg0) => {
+}) : (function InstantInviteCreator(arg0) {
   ({ guildId, user } = arg0);
   let tmp2 = null;
   if (null != user) {

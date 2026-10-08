@@ -1,10 +1,10 @@
-// === Module 6917: GuildBoostingSubscribeButton ===
+// === Module 7106: GuildBoostingSubscribeButton ===
 
-// Module 6917 (GuildBoostingSubscribeButton)
-import GuildBoostPurchasingUtils from "GuildBoostPurchasingUtils" /* 6919 */;
+// Module 7106 (GuildBoostingSubscribeButton)
+import GuildBoostPurchasingUtils from "GuildBoostPurchasingUtils" /* 7108 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 6918 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7107 */;
 
 require = fn;
 function handleBoostPress() {
@@ -81,14 +81,14 @@ let closure_15 = async function _handleBoostPress() {
 let View = fn(17).View;
 const Constants = fn(1085);
 ({ AnalyticsObjects: closure_7, AnalyticsObjectTypes: closure_8, AnalyticsPages: closure_9, NOOP: c10 } = Constants);
-let closure_11 = fn(5621).PremiumGuildSubscribeModalScenes;
-const FractionalPremiumStates = fn(1379).FractionalPremiumStates;
+let closure_11 = fn(5966).PremiumGuildSubscribeModalScenes;
+const FractionalPremiumStates = fn(1391).FractionalPremiumStates;
 let jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_boosting/native/GuildBoostingSubscribeButton.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBoostingSubscribeButton(guild) {
   const cResult = guild(analyticsSection[12]).c(33);
   guild = guild.guild;
   const previousGuildSubscriptionSlot = guild.previousGuildSubscriptionSlot;
@@ -105,7 +105,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   const analyticsLocations = previousGuildSubscriptionSlot(analyticsSection[15])().analyticsLocations;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [boostSlots];
-    const fn = function n() {
+    const fn = function l() {
       const keys = Object.keys(boostSlots.boostSlots);
       return keys.some((item) => null == boostSlots.boostSlots[item].premiumGuildSubscription && !boostSlots.boostSlots[item].isOnCooldown());
     };
@@ -339,7 +339,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   cResult[7] = fn2;
   tmp11 = fn2;
   const tmpResult = guild(analyticsSection[16]);
-}) : ((guild) => {
+}) : (function GuildBoostingSubscribeButton(guild) {
   guild = guild.guild;
   const previousGuildSubscriptionSlot = guild.previousGuildSubscriptionSlot;
   const analyticsSection = guild.analyticsSection;
@@ -388,7 +388,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   const items2 = [tmp3, shouldUseMobileWebRedirectCheckout, handleMobileWebRedirectCheckout, guild.id, analyticsSection, stateFromStores, previousGuildSubscriptionSlot, analyticsLocations, callback];
   jsx = intent.useCallback(() => {
     if (closure_6) {
-      let tmp9 = v65535;
+      let tmp9 = collapsed;
     } else if (stateFromStores) {
       tmp9 = callback(guild.id, previousGuildSubscriptionSlot);
     } else {

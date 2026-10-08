@@ -1,15 +1,15 @@
-// === Module 9922: PremiumUpsellGradientBackground ===
+// === Module 9443: PremiumUpsellGradientBackground ===
 
-// Module 9922 (PremiumUpsellGradientBackground)
+// Module 9443 (PremiumUpsellGradientBackground)
 import c from "c" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
-import LinearGradientDefault from "LinearGradient" /* 5612 */;
+import LinearGradientDefault from "LinearGradient" /* 5387 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const Gradients = fn(6951).Gradients;
+const Gradients = fn(7140).Gradients;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { gradient: null };
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
 obj2.gradient = { opacity: 0.1 };
@@ -18,7 +18,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/roadblocks/native/views/PremiumUpsellGradientBackground.tsx");
 
-export const PremiumUpsellGradientBackground = ReactCompilerGating.isReactCompilerEnabled() ? ((useTier0UpsellContent) => {
+export const PremiumUpsellGradientBackground = ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumUpsellGradientBackground(useTier0UpsellContent) {
   const cResult = c.c(3);
   const tmp4 = closure_5();
   if (true === useTier0UpsellContent.useTier0UpsellContent) {
@@ -41,7 +41,7 @@ export const PremiumUpsellGradientBackground = ReactCompilerGating.isReactCompil
   cResult[1] = PREMIUM_TIER_2_TRI_COLOR;
   cResult[2] = tmp9;
   tmp7 = tmp9;
-}) : ((useTier0UpsellContent) => {
+}) : (function PremiumUpsellGradientBackground(useTier0UpsellContent) {
   const obj = { style: closure_5().gradient, start: null, end: null, colors: null };
   const tmp = closure_5();
   obj.start = ConstantsIOS.HorizontalGradient.START;

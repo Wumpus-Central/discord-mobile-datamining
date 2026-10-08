@@ -1,28 +1,28 @@
-// === Module 8490: ProfileEffect ===
+// === Module 8974: ProfileEffect ===
 
-// Module 8490 (ProfileEffect)
+// Module 8974 (ProfileEffect)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
-import useProfileEffectDefault from "useProfileEffect" /* 7909 */;
-import utils from "utils" /* 8491 */;
-import constants from "constants" /* 8492 */;
-import ProfileEffectUtils from "ProfileEffectUtils" /* 8493 */;
-import ProfileEffectLayerDefault from "ProfileEffectLayer" /* 8496 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
+import useProfileEffectDefault from "useProfileEffect" /* 8328 */;
+import utils from "utils" /* 8975 */;
+import constants from "constants" /* 8976 */;
+import ProfileEffectUtils from "ProfileEffectUtils" /* 8977 */;
+import ProfileEffectLayerDefault from "ProfileEffectLayer" /* 8980 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
-import AppStateStore from "AppStateStore" /* 1986 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
+import AppStateStore from "AppStateStore" /* 1998 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
 let jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_10 = createStyles.createStyles({ profileEffects: { position: "absolute", width: "100%", top: 0, bottom: 0, left: 0, right: 0, flex: 1, justifyContent: "flex-start" }, effect: { position: "absolute" } });
 let ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arr) => {
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePreloadProfileEffect(arr) {
   const cResult = c.c(8);
   if (cResult[0] !== arr) {
     let tmp3 = globalThis;
@@ -86,7 +86,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arr) => {
     }
     return tmp16;
   }
-}) : ((arg0) => {
+}) : (function usePreloadProfileEffect(arg0) {
   closure_0 = arg0;
   const items = [arg0];
   const memo = noop.useMemo(() => new Set(closure_0.map((src) => src.src)), items);
@@ -112,7 +112,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arr) => {
 });
 let closure_11 = tmp3;
 ReactCompilerGating = fn(558);
-let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function useProfileDimensions() {
   const cResult = c.c(4);
   [tmp3, require] = noop.useState(0);
   const height = useWindowDimensionsDefault().height;
@@ -136,7 +136,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[2] = tmp3;
   cResult[3] = size;
   tmp5 = size;
-}) : (() => {
+}) : (function useProfileDimensions() {
   const tmp = _slicedToArray(noop.useState(0), 2);
   closure_0 = tmp[1];
   const size = {
@@ -249,7 +249,7 @@ function ProfileEffect(profileEffect) {
   })}</accessibilityLabel>;
 }
 ReactCompilerGating = fn(558);
-let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((thumbnailUrlOverride) => {
+let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function StaticEffect(thumbnailUrlOverride) {
   const cResult = useThumbnail(width[8]).c(28);
   ({ profileEffect, bannerAdjustment, useThumbnail } = thumbnailUrlOverride);
   let thumbnailPreviewSrc = thumbnailUrlOverride.thumbnailUrlOverride;
@@ -385,7 +385,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((thumbnailUrlOv
   tmp8 = items1;
   tmp7 = fn;
   const tmp5 = _slicedToArray(thumbnailPreviewSrc.useState(0), 2);
-}) : ((useThumbnail) => {
+}) : (function StaticEffect(useThumbnail) {
   ({ profileEffect, bannerAdjustment } = useThumbnail);
   if (bannerAdjustment === undefined) {
     bannerAdjustment = 0;
@@ -440,7 +440,7 @@ ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/profile_effects/native/ProfileEffect.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((skuId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function WrappedProfileEffect(skuId) {
   let useThumbnail = skuId;
   const cResult = c.c(10);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -491,7 +491,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((skuId) => {
     cResult[6] = tmp19;
   }
   const tmpResult2 = utils;
-}) : ((skuId) => {
+}) : (function WrappedProfileEffect(skuId) {
   let thumbnailUrlOverride = skuId;
   const tmp = useProfileEffectDefault(skuId.skuId);
   const items = [AccessibilityStore];

@@ -1,13 +1,13 @@
-// === Module 16605: ConjureRemixSheet ===
+// === Module 16860: ConjureRemixSheet ===
 
-// Module 16605 (ConjureRemixSheet)
+// Module 16860 (ConjureRemixSheet)
 import nativeDefault from "native" /* 587 */;
-import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 6701 */;
+import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 6878 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import SortedGuildStore from "SortedGuildStore" /* 5623 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import SortedGuildStore from "SortedGuildStore" /* 5968 */;
 
 const require = globalThis.__r;
 
@@ -16,7 +16,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const VibegrationsRemixSheet = "VibegrationsRemixSheet";
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 } };
 let closure_12 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -24,7 +24,7 @@ let obj3 = { gap: nativeDefault.space.PX_16 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/remix/native/ConjureRemixSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((project) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureRemixSheet(project) {
   const cResult = require("c").c(33);
   project = project.project;
   _require = project;
@@ -177,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((project) => {
         }
       }
     });
-    const fn2 = function() {
+    function t6() {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -186,12 +186,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((project) => {
         applyArgumentsResult = apply(self, arguments);
       }
       return applyArgumentsResult;
-    };
+    }
     cResult[8] = first;
     cResult[9] = onRemixed;
     cResult[10] = project;
     cResult[11] = first1;
-    cResult[12] = fn2;
+    cResult[12] = t6;
   }
   const found = stateFromStoresArray.find((id) => id.id === first);
   if (found != null) {
@@ -222,7 +222,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((project) => {
   cResult[3] = stateFromStoresArray;
   cResult[4] = undefined;
   const tmpResult = require("initialize");
-}) : ((project) => {
+}) : (function ConjureRemixSheet(project) {
   project = project.project;
   const onRemixed = project.onRemixed;
   let first1;
@@ -320,7 +320,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((project) => {
               _undefined(null);
               dependencyMap = 1;
               c3 = 1;
-              const obj5 = { value: tmp2(16606).remixConjureProjectInto(project, first), done: false };
+              const obj5 = { value: tmp2(16861).remixConjureProjectInto(project, first), done: false };
               return obj5;
             }
           }
@@ -338,7 +338,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((project) => {
             closure_129_5(false);
           }
         }
-        tmp5(4860).hideActionSheet(VibegrationsRemixSheet);
+        tmp5(5054).hideActionSheet(VibegrationsRemixSheet);
         closure_129_1(closure_128_0.projectId, closure_129_2);
         c3 = 3;
         const obj7 = { value: undefined, done: true };

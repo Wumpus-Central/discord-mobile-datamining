@@ -1,13 +1,13 @@
-// === Module 17846: useGuildSettingsRoleExampleMessage ===
+// === Module 18133: useGuildSettingsRoleExampleMessage ===
 
-// Module 17846 (useGuildSettingsRoleExampleMessage)
+// Module 18133 (useGuildSettingsRoleExampleMessage)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5118 */;
-import createMessageDefault from "createMessage" /* 7261 */;
-import UserActionCreatorsAll from "UserActionCreators" /* 7863 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5430 */;
+import UserActionCreatorsAll from "UserActionCreators" /* 8281 */;
+import createMessageDefault from "createMessage" /* 9763 */;
 import noop from "module_19" /* 19 */;
-import UserRecord from "UserRecord" /* 1391 */;
+import UserRecord from "UserRecord" /* 1403 */;
 
 const require = globalThis.__r;
 
@@ -17,7 +17,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/roles/hooks/useGuildSettingsRoleExampleMessage.tsx");
 
-export const useGuildSettingsRoleExampleMessage = ReactCompilerGating.isReactCompilerEnabled() ? ((content) => {
+export const useGuildSettingsRoleExampleMessage = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildSettingsRoleExampleMessage(content) {
   const cResult = c.c(2);
   if (cResult[0] !== content) {
     const obj2 = {};
@@ -35,7 +35,7 @@ export const useGuildSettingsRoleExampleMessage = ReactCompilerGating.isReactCom
     const insertStaticUserResult = UserActionCreatorsAll.insertStaticUser(tmp14);
     if (null != insertStaticUserResult) {
       messageRecord.author = insertStaticUserResult;
-      messageRecord.author.getAvatarURL = () => require("module_13154");
+      messageRecord.author.getAvatarURL = () => require("module_12688");
     }
     cResult[0] = content;
     cResult[1] = messageRecord;
@@ -44,7 +44,7 @@ export const useGuildSettingsRoleExampleMessage = ReactCompilerGating.isReactCom
     tmp4 = cResult[1];
   }
   return tmp4;
-}) : ((content) => {
+}) : (function useGuildSettingsRoleExampleMessage(content) {
   const items = [content];
   return noop.useMemo(() => {
     const obj2 = {};

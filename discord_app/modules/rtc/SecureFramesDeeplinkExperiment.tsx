@@ -1,8 +1,8 @@
-// === Module 9389: SecureFramesDeeplinkExperiment ===
+// === Module 8810: SecureFramesDeeplinkExperiment ===
 
-// Module 9389 (SecureFramesDeeplinkExperiment)
+// Module 8810 (SecureFramesDeeplinkExperiment)
 import c from "c" /* 576 */;
-import createExperimentDefault from "createExperiment" /* 4781 */;
+import createExperimentDefault from "createExperiment" /* 4975 */;
 
 require = fn;
 const obj = { kind: "user", id: "2024-09_secure_frames_deeplink", label: "Secure Frames Deeplinks", defaultConfig: { enabled: false }, treatments: null };
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/SecureFramesDeeplinkExperiment.tsx");
 
-export const useSecureFramesDeeplinkExperiment = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+export const useSecureFramesDeeplinkExperiment = ReactCompilerGating.isReactCompilerEnabled() ? (function useSecureFramesDeeplinkExperiment(location) {
   const cResult = c.c(3);
   const _location = location.location;
   if (cResult[0] !== _location) {
@@ -32,7 +32,9 @@ export const useSecureFramesDeeplinkExperiment = ReactCompilerGating.isReactComp
     tmp3 = cResult[2];
   }
   return closure_2.useExperiment(tmp2, tmp3);
-}) : ((location) => closure_2.useExperiment({ location: location.location }, { autoTrackExposure: true }));
+}) : (function useSecureFramesDeeplinkExperiment(location) {
+  return closure_2.useExperiment({ location: location.location }, { autoTrackExposure: true });
+});
 export const getSecureFramesDeeplinkExperiment = function getSecureFramesDeeplinkExperiment(location) {
   return closure_2.getCurrentConfig({ location: location.location }, { autoTrackExposure: true });
 };

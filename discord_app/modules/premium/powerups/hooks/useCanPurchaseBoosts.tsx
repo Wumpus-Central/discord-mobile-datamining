@@ -1,18 +1,18 @@
-// === Module 12179: useCanPurchaseBoosts ===
+// === Module 12258: useCanPurchaseBoosts ===
 
-// Module 12179 (useCanPurchaseBoosts)
+// Module 12258 (useCanPurchaseBoosts)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 6908 */;
-import UserStore from "UserStore" /* 1377 */;
+import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7097 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
-const FractionalPremiumStates = fn(1379).FractionalPremiumStates;
+const FractionalPremiumStates = fn(1391).FractionalPremiumStates;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useCanPurchaseBoosts.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCanPurchaseBoosts() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
@@ -33,7 +33,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   const tmpResult = initialize;
   return useFractionalPremiumInfoDefault().fractionalState === FractionalPremiumStates.NONE && !initialize.useStateFromStores(tmp4, tmp5);
-}) : (() => {
+}) : (function useCanPurchaseBoosts() {
   const items = [UserStore];
   return useFractionalPremiumInfoDefault().fractionalState === FractionalPremiumStates.NONE && !initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();

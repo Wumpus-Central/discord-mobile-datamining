@@ -1,23 +1,23 @@
-// === Module 17174: AppComponents ===
+// === Module 17455: AppComponents ===
 
-// Module 17174 (AppComponents)
-import AccessibilityAnnouncerLiveRegion from "AccessibilityAnnouncerLiveRegion" /* 4597 */;
-import PortalKeyboard from "PortalKeyboard" /* 4757 */;
-import AlertModal from "AlertModal" /* 5720 */;
-import common_NotificationsDefault from "common/Notifications" /* 12479 */;
-import ContextMenuContainer from "ContextMenuContainer" /* 14276 */;
-import PortalKeyboardRenderer from "PortalKeyboardRenderer" /* 16643 */;
-import MainShared from "MainShared" /* 17115 */;
-import MainViewTooltipActionSheetsV2Default from "MainViewTooltipActionSheetsV2" /* 17134 */;
-import FramePoolDefault from "FramePool" /* 17175 */;
-import ExternalPipViewDefault from "ExternalPipView" /* 17182 */;
-import ActivityPanelContainerDefault from "ActivityPanelContainer" /* 17188 */;
-import FramePanelContainerDefault from "FramePanelContainer" /* 17221 */;
-import VoicePanelContainerDefault from "VoicePanelContainer" /* 17230 */;
-import MediaPlaybackPanelContainerDefault from "MediaPlaybackPanelContainer" /* 17401 */;
+// Module 17455 (AppComponents)
+import AccessibilityAnnouncerLiveRegion from "AccessibilityAnnouncerLiveRegion" /* 4789 */;
+import PortalKeyboard from "PortalKeyboard" /* 4951 */;
+import AlertModal from "AlertModal" /* 5303 */;
+import common_NotificationsDefault from "common/Notifications" /* 12575 */;
+import ContextMenuContainer from "ContextMenuContainer" /* 14100 */;
+import PortalKeyboardRenderer from "PortalKeyboardRenderer" /* 16905 */;
+import MainShared from "MainShared" /* 17396 */;
+import MainViewTooltipActionSheetsV2Default from "MainViewTooltipActionSheetsV2" /* 17415 */;
+import FramePoolDefault from "FramePool" /* 17456 */;
+import ExternalPipViewDefault from "ExternalPipView" /* 17463 */;
+import ActivityPanelContainerDefault from "ActivityPanelContainer" /* 17469 */;
+import FramePanelContainerDefault from "FramePanelContainer" /* 17502 */;
+import VoicePanelContainerDefault from "VoicePanelContainer" /* 17511 */;
+import MediaPlaybackPanelContainerDefault from "MediaPlaybackPanelContainer" /* 17683 */;
 import jsxProd from "jsxProd" /* 21 */;
-import PlatformUtils_mod from "PlatformUtils" /* 1369 */;
-import AppFreezer_mod from "AppFreezer" /* 16504 */;
+import PlatformUtils_mod from "PlatformUtils" /* 1381 */;
+import AppFreezer_mod from "AppFreezer" /* 16764 */;
 import size from "module_2" /* 2 */;
 
 ({ jsx, jsxs, Fragment } = jsxProd);

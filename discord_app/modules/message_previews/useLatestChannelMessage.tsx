@@ -1,9 +1,9 @@
-// === Module 15153: useLatestChannelMessage ===
+// === Module 15415: useLatestChannelMessage ===
 
-// Module 15153 (useLatestChannelMessage)
-import MessagePreviewManagerDefault from "MessagePreviewManager" /* 15154 */;
+// Module 15415 (useLatestChannelMessage)
+import MessagePreviewManagerDefault from "MessagePreviewManager" /* 15416 */;
 import _slicedToArray from "module_32" /* 32 */;
-import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 13545 */;
+import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 13842 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_previews/useLatestChannelMessage.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild_id, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useLatestChannelMessage(guild_id, arg1) {
   const cResult = require("c").c(9);
   _require = tmp4;
   guild_id = guild_id.guild_id;
@@ -41,22 +41,29 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild_id, arg1) 
         useEffect(tmp12, tmp13);
         return tmp10;
       }
-      const fn2 = function p() {
-        let tmp2 = null == id;
-        if (!tmp2) {
-          tmp2 = closure_3;
+      class L {
+        constructor() {
+          tmp2 = null == id;
+          tmp = id;
+          if (!tmp2) {
+            tmp2 = closure_3;
+          }
+          if (!tmp2) {
+            tmp3 = closure_1;
+            tmp4 = closure_2;
+            obj = closure_1(closure_2[6]);
+            addWantResult = obj.addWant(tmp);
+          }
+          return;
         }
-        if (!tmp2) {
-          MessagePreviewManagerDefault.addWant(id);
-        }
-      };
+      }
       let items1 = [id, tmp11];
       cResult[5] = id;
       cResult[6] = tmp11;
-      cResult[7] = fn2;
+      cResult[7] = L;
       cResult[8] = items1;
       tmp13 = items1;
-      tmp12 = fn2;
+      tmp12 = L;
       const tmp9 = _slicedToArray(tmp(tmp2[5]).useStateFromStoresArray(first, tmp7), 2);
     }
   }
@@ -77,7 +84,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild_id, arg1) 
   let obj = require("c");
   tmp = _require;
   tmp2 = id;
-}) : ((arg0) => {
+}) : (function useLatestChannelMessage(arg0) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;

@@ -1,13 +1,13 @@
-// === Module 15257: LanguageSetting ===
+// === Module 15519: LanguageSetting ===
 
-// Module 15257 (LanguageSetting)
+// Module 15519 (LanguageSetting)
 import util from "util" /* 1126 */;
-import LocaleStore from "LocaleStore" /* 2116 */;
+import LocaleStore from "LocaleStore" /* 2128 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11142);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const SettingBuilders = fn(11262);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useLanguageSettingTrailing() {
   const cResult = stateFromStores(576).c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [LocaleStore];
@@ -39,7 +39,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp8 = cResult[3];
   }
   return tmp8;
-}) : (() => {
+}) : (function useLanguageSettingTrailing() {
   const items = [LocaleStore];
   _require = require("initialize").useStateFromStores(items, () => locale.locale);
   const obj = require("initialize");
@@ -59,8 +59,8 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t.IHMsPn);
   },
   parent: null,
-  IconComponent: fn(15258).LanguageIcon,
-  useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  IconComponent: fn(15520).LanguageIcon,
+  useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (function useLanguageSettingTrailing() {
     const cResult = stateFromStores(576).c(4);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
       const items = [LocaleStore];
@@ -92,7 +92,7 @@ const route = SettingBuilders.createRoute({
       tmp8 = cResult[3];
     }
     return tmp8;
-  }) : (() => {
+  }) : (function useLanguageSettingTrailing() {
     const items = [LocaleStore];
     _require = require("initialize").useStateFromStores(items, () => locale.locale);
     const obj = require("initialize");

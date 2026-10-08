@@ -1,19 +1,19 @@
-// === Module 5610: ButtonPill ===
+// === Module 5385: ButtonPill ===
 
-// Module 5610 (ButtonPill)
+// Module 5385 (ButtonPill)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4586 */;
-import native from "native" /* 4595 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import shared from "shared" /* 4735 */;
-import spring from "spring" /* 5604 */;
-import springPresets from "springPresets" /* 5605 */;
-import ButtonConstants2 from "ButtonConstants" /* 5607 */;
-import ButtonHooks from "ButtonHooks" /* 5608 */;
-import ButtonShine from "ButtonShine" /* 5611 */;
-import LinearGradientDefault from "LinearGradient" /* 5612 */;
-import ButtonEllipsis from "ButtonEllipsis" /* 5616 */;
+import useToken from "useToken" /* 4778 */;
+import native from "native" /* 4787 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import shared from "shared" /* 4929 */;
+import spring from "spring" /* 5374 */;
+import springPresets from "springPresets" /* 5378 */;
+import ButtonConstants2 from "ButtonConstants" /* 5380 */;
+import ButtonHooks from "ButtonHooks" /* 5381 */;
+import ButtonShine from "ButtonShine" /* 5386 */;
+import LinearGradientDefault from "LinearGradient" /* 5387 */;
+import ButtonEllipsis from "ButtonEllipsis" /* 5391 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -25,13 +25,13 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 let c10 = 300;
-let ButtonConstants = fn(5607);
-const paddingVertical = ButtonConstants.getButtonPadding(fn(5607).SMALL_BUTTON_HEIGHT, fn(5607).SMALL_BUTTON_ICON_SIZE);
-ButtonConstants = fn(5607);
-const paddingVertical2 = ButtonConstants.getButtonPadding(fn(5607).MEDIUM_BUTTON_HEIGHT, fn(5607).MEDIUM_BUTTON_ICON_SIZE);
-ButtonConstants = fn(5607);
-const paddingVertical3 = ButtonConstants.getButtonPadding(fn(5607).LARGE_BUTTON_HEIGHT, fn(5607).LARGE_BUTTON_ICON_SIZE);
-const createStyles = fn(4896);
+let ButtonConstants = fn(5380);
+const paddingVertical = ButtonConstants.getButtonPadding(fn(5380).SMALL_BUTTON_HEIGHT, fn(5380).SMALL_BUTTON_ICON_SIZE);
+ButtonConstants = fn(5380);
+const paddingVertical2 = ButtonConstants.getButtonPadding(fn(5380).MEDIUM_BUTTON_HEIGHT, fn(5380).MEDIUM_BUTTON_ICON_SIZE);
+ButtonConstants = fn(5380);
+const paddingVertical3 = ButtonConstants.getButtonPadding(fn(5380).LARGE_BUTTON_HEIGHT, fn(5380).LARGE_BUTTON_ICON_SIZE);
+const createStyles = fn(5090);
 let closure_14 = createStyles.createStyles((arg0, arg1) => {
   if ("sm" === arg1) {
     const obj2 = { minHeight: ButtonConstants2.SMALL_BUTTON_HEIGHT, minWidth: ButtonConstants2.SMALL_BUTTON_HEIGHT, paddingHorizontal: ButtonConstants2.SMALL_BUTTON_HORIZONTAL_PADDING, paddingVertical };
@@ -58,7 +58,7 @@ let closure_14 = createStyles.createStyles((arg0, arg1) => {
   return obj6;
 });
 let ReactCompilerGating = fn(558);
-let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function PillWrapper(arg0) {
   const cResult = c.c(42);
   ({ children, variant, style, shiny, expressiveRiveRef, expressivePressState } = arg0);
   let tmp4 = undefined !== shiny;
@@ -270,7 +270,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = items9;
   tmp12 = items9;
   const tmpResult11 = useToken;
-}) : ((expressivePressState) => {
+}) : (function PillWrapper(expressivePressState) {
   ({ children, variant, style, shiny } = expressivePressState);
   if (shiny === undefined) {
     shiny = false;
@@ -343,7 +343,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 });
 fn(558);
 ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function BasicButtonPill(arg0) {
   const cResult = c.c(15);
   ({ children, style, pressed, variant, size, shiny, expressiveRiveRef, expressivePressState } = arg0);
   let str = "primary";
@@ -405,7 +405,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = tmp5.pill;
   cResult[2] = items;
   tmp6 = items;
-}) : ((variant) => {
+}) : (function BasicButtonPill(variant) {
   let str = variant.variant;
   ({ children, style, pressed } = variant);
   if (str === undefined) {
@@ -428,7 +428,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 });
 let closure_16 = tmp5;
 ReactCompilerGating = fn(558);
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function LoadingButtonPill(arg0) {
   const cResult = c.c(32);
   ({ children, style, pressed, variant, size, loading, loaderSize, expressiveRiveRef, expressivePressState } = arg0);
   let str = "primary";
@@ -580,7 +580,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = items4;
   tmp15 = items4;
   const tmp6Result = _slicedToArray(closure_22(undefined !== loading && loading, size), 2);
-}) : ((variant) => {
+}) : (function LoadingButtonPill(variant) {
   let str = variant.variant;
   ({ children, style, pressed } = variant);
   if (str === undefined) {
@@ -646,7 +646,7 @@ const __initData2 = { code: "function ButtonPillNativeTsx2(){const{withSpring,lo
 const __initData3 = { code: "function ButtonPillNativeTsx3(){const{withSpring,loading,SUBTLE_SPRING,useReducedMotion,withDelay,FADE_DELAY,offsetY}=this.__closure;const opacityTransition=withSpring(loading?0:1,SUBTLE_SPRING,'animate-always');if(useReducedMotion){return{opacity:loading?opacityTransition:withDelay(FADE_DELAY,opacityTransition),transform:[{translateY:0}]};}return{opacity:opacityTransition,transform:[{translateY:withSpring(loading?-1*offsetY:0,SUBTLE_SPRING)}]};}" };
 const __initData4 = { code: "function ButtonPillNativeTsx4(){const{withSpring,loading,SUBTLE_SPRING,useReducedMotion,withDelay,FADE_DELAY,offsetY}=this.__closure;const opacityTransition_0=withSpring(loading?1:0,SUBTLE_SPRING,'animate-always');if(useReducedMotion){return{opacity:loading?withDelay(FADE_DELAY,opacityTransition_0):opacityTransition_0,transform:[{translateY:0}]};}return{opacity:opacityTransition_0,transform:[{translateY:withSpring(loading?0:offsetY,SUBTLE_SPRING)}]};}" };
 ReactCompilerGating = fn(558);
-let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((loading, arg1) => {
+let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useLoadingStyles(loading, arg1) {
   _require = loading;
   const cResult = require("c").c(3);
   const enabled = noop.useContext(require("AccessibilityPreferencesContext").AccessibilityPreferencesContext).reducedMotion.enabled;
@@ -739,7 +739,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((loading, arg1) => {
   cResult[1] = animatedStyle1;
   cResult[2] = items;
   tmp6 = items;
-}) : ((loading, arg1) => {
+}) : (function useLoadingStyles(loading, arg1) {
   _require = loading;
   const enabled = noop.useContext(require("AccessibilityPreferencesContext").AccessibilityPreferencesContext).reducedMotion.enabled;
   num = 12;
@@ -825,7 +825,7 @@ let closure_22 = tmp7;
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Button/native/ButtonPill.native.tsx");
 
-export const ButtonPill = ReactCompilerGating.isReactCompilerEnabled() ? ((loading) => {
+export const ButtonPill = ReactCompilerGating.isReactCompilerEnabled() ? (function ButtonPill(loading) {
   const cResult = c.c(4);
   if (null == loading.loading) {
     if (cResult[0] !== loading) {
@@ -848,7 +848,7 @@ export const ButtonPill = ReactCompilerGating.isReactCompilerEnabled() ? ((loadi
     }
     return tmp2;
   }
-}) : ((loading) => {
+}) : (function ButtonPill(loading) {
   if (null == loading.loading) {
     const obj2 = {};
     const merged = Object.assign(loading);

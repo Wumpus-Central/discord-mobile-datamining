@@ -1,9 +1,9 @@
-// === Module 16823: useSmartSearchStatus ===
+// === Module 17102: useSmartSearchStatus ===
 
-// Module 16823 (useSmartSearchStatus)
-import SmartSearchUtils from "SmartSearchUtils" /* 11983 */;
-import SmartSearchResultsStoreDefault from "SmartSearchResultsStore" /* 11984 */;
-import SmartSearchTypes from "SmartSearchTypes" /* 11985 */;
+// Module 17102 (useSmartSearchStatus)
+import SmartSearchUtils from "SmartSearchUtils" /* 12056 */;
+import SmartSearchResultsStoreDefault from "SmartSearchResultsStore" /* 12057 */;
+import SmartSearchTypes from "SmartSearchTypes" /* 12058 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/intelligence_layer/search/native/useSmartSearchStatus.tsx");
 
-export const useSmartSearchStatus = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useSmartSearchStatus = ReactCompilerGating.isReactCompilerEnabled() ? (function useSmartSearchStatus(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -44,7 +44,7 @@ export const useSmartSearchStatus = ReactCompilerGating.isReactCompilerEnabled()
   }
   let obj = require("c");
   return require("initialize").useStateFromStoresObject(first, tmp6, tmp7);
-}) : ((arg0) => {
+}) : (function useSmartSearchStatus(arg0) {
   _require = arg0;
   const items = [SmartSearchResultsStore];
   const items1 = [arg0];

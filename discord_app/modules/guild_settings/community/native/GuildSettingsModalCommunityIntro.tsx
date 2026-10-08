@@ -1,20 +1,20 @@
-// === Module 17876: GuildSettingsModalCommunityIntro ===
+// === Module 18163: GuildSettingsModalCommunityIntro ===
 
-// Module 17876 (GuildSettingsModalCommunityIntro)
+// Module 18163 (GuildSettingsModalCommunityIntro)
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import ToastUtils from "ToastUtils" /* 4573 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4818 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import LightbulbIcon from "LightbulbIcon" /* 9970 */;
-import AnalyticsIcon from "AnalyticsIcon" /* 10121 */;
-import EnableCommunityModalActionCreatorsDefault from "EnableCommunityModalActionCreators" /* 17881 */;
+import ToastUtils from "ToastUtils" /* 4765 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5012 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import LightbulbIcon from "LightbulbIcon" /* 9497 */;
+import AnalyticsIcon from "AnalyticsIcon" /* 9706 */;
+import EnableCommunityModalActionCreatorsDefault from "EnableCommunityModalActionCreators" /* 18168 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9283 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8614 */;
 
 const require = globalThis.__r;
 
@@ -75,14 +75,14 @@ const Constants = fn(1085);
 ({ HelpdeskArticles: c10, GuildFeatures: closure_11, GuildSettingsSections: closure_12, Permissions: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { height: "100%" }, contentPadding: { padding: 16 }, header: { textAlign: "center", marginBottom: 8 }, body: { textAlign: "center", marginBottom: 24 }, details: { textAlign: "center", marginTop: 24 }, headerImage: { width: "100%" }, features: { marginTop: 32, marginBottom: 32 }, featureCard: { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, flex: 1, flexDirection: "row", padding: 16, borderRadius: nativeDefault.radii.sm, marginTop: 8, alignItems: "flex-start" }, featureIcon: null, featureDescription: null };
 let obj3 = { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, flex: 1, flexDirection: "row", padding: 16, borderRadius: nativeDefault.radii.sm, marginTop: 8, alignItems: "flex-start" };
 obj2.featureIcon = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: 40, marginRight: 16, padding: 8 };
 obj2.featureDescription = { overflow: "hidden", flex: 1 };
 let closure_17 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function FeatureCard(arg0) {
   const cResult = c.c(17);
   ({ icon, header, body } = arg0);
   const tmp4 = closure_17();
@@ -156,7 +156,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = tmp5;
   cResult[4] = tmp8;
   tmp7 = tmp8;
-}) : ((arg0) => {
+}) : (function FeatureCard(arg0) {
   ({ icon, header, body } = arg0);
   const tmp = closure_17();
   const obj = { style: tmp.featureCard, children: null };
@@ -173,7 +173,7 @@ let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, border
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/community/native/GuildSettingsModalCommunityIntro.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSettingsModalCommunityIntro(guildId) {
   const cResult = guildId(navigation[15]).c(54);
   guildId = guildId.guildId;
   const onClose = guildId.onClose;
@@ -262,14 +262,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       }
     }
     const items2 = [GuildSettingsStore];
-    class H {
+    class G {
       constructor() {
         return closure_1_9.isSubmitting();
       }
     }
     cResult[6] = items2;
-    cResult[7] = H;
-    let tmp14 = H;
+    cResult[7] = G;
+    let tmp14 = G;
     const tmp13 = items2;
   } else {
     class F {
@@ -326,7 +326,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       }
     }
   }
-  class Y {
+  class H {
     constructor() {
       tmp = !closure_5;
       if (!closure_5) {
@@ -358,9 +358,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   cResult[9] = stateFromStores2;
   cResult[10] = navigation;
   cResult[11] = onClose;
-  cResult[12] = Y;
+  cResult[12] = H;
   const tmpResult4 = guildId(navigation[17]);
-}) : ((contentContainerStyle) => {
+}) : (function GuildSettingsModalCommunityIntro(contentContainerStyle) {
   ({ guildId: require, onClose } = contentContainerStyle);
   let navigation;
   let tmp = closure_17();
@@ -418,7 +418,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   const obj13 = { text: null, onPress: null, disabled: null };
   const intl3 = require("util").intl;
   obj13.text = intl3.string(require("util").t.LhlgY9);
-  obj13.onPress = function onPress() {
+  obj13.onPress = function handlePress() {
     if (stateFromStores1) {
       EnableCommunityModalActionCreatorsDefault.open();
     } else {

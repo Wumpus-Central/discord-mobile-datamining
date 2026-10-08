@@ -1,9 +1,9 @@
-// === Module 14856: BountiesModalProgress ===
+// === Module 15117: BountiesModalProgress ===
 
-// Module 14856 (BountiesModalProgress)
+// Module 15117 (BountiesModalProgress)
 import nativeDefault from "native" /* 587 */;
-import timing from "timing" /* 4897 */;
-import timingPresets from "timingPresets" /* 4900 */;
+import timing from "timing" /* 5091 */;
+import timingPresets from "timingPresets" /* 5094 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_9 = createStyles.createStyles(() => {
   const obj = { progressContainer: { height: 4 }, progressTrack: null, progressBar: null, progressBarGlowLayer: null };
   const obj2 = {};
@@ -35,7 +35,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalProgress.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((progress) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function BountiesModalProgress(progress) {
   const cResult = progress(shouldSkipAnimation[7]).c(17);
   progress = progress.progress;
   const visible = progress.visible;
@@ -152,7 +152,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((progress) => {
   cResult[3] = items3;
   tmp13 = items3;
   const obj3 = { withTiming: progress(shouldSkipAnimation[9]).withTiming, progress, shouldSkipAnimation, timingNone: progress(shouldSkipAnimation[10]).timingNone, timingFast: progress(shouldSkipAnimation[10]).timingFast };
-}) : ((progress) => {
+}) : (function BountiesModalProgress(progress) {
   progress = progress.progress;
   const visible = progress.visible;
   const tmp = closure_9();

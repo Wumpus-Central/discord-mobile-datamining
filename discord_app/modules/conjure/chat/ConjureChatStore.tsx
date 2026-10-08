@@ -1,25 +1,25 @@
-// === Module 12924: ConjureChatStore ===
+// === Module 13073: ConjureChatStore ===
 
-// Module 12924 (ConjureChatStore)
+// Module 13073 (ConjureChatStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1126 */;
-import UserSettings from "UserSettings" /* 2028 */;
-import _modDef3753 from "module_3753" /* 3753 */;
-import ConjureUtils from "ConjureUtils" /* 6756 */;
-import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 8737 */;
-import SoundUtils from "SoundUtils" /* 9575 */;
-import conjureProjectMute from "conjureProjectMute" /* 12925 */;
+import UserSettings from "UserSettings" /* 2040 */;
+import _modDef3827 from "module_3827" /* 3827 */;
+import ConjureUtils from "ConjureUtils" /* 6932 */;
+import SoundUtils from "SoundUtils" /* 10770 */;
+import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 12366 */;
+import conjureProjectMute from "conjureProjectMute" /* 13074 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7061 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import NotificationSettingsStore from "NotificationSettingsStore" /* 12481 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5445 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 8734 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7247 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
+import NotificationSettingsStore from "NotificationSettingsStore" /* 12577 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4899 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5755 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 11251 */;
 
 require = fn;
 function newMessage(assistant, content, arg2) {
@@ -29,8 +29,8 @@ function newMessage(assistant, content, arg2) {
   }
   ({ ts, id, userId, turnId } = obj);
   if (id == null) {
-    const sum = c30 + 1;
-    c30 = sum;
+    const sum = c31 + 1;
+    c31 = sum;
     id = `m${tmp2}`;
   }
   const obj2 = { id, render_id: id, role: assistant, content };
@@ -65,7 +65,7 @@ function newMessageFromHistory(ts) {
   const tmp2 = (function snowflakeTimeOf(id) {
     let startsWithResult;
     if (id != null) {
-      startsWithResult = id.startsWith(closure_1_32);
+      startsWithResult = id.startsWith(closure_1_33);
     }
     let substr = id;
     if (true === startsWithResult) {
@@ -125,6 +125,9 @@ function newMessageFromHistory(ts) {
   }
   if (null != ts.publish_notice) {
     tmp.publishNotice = ts.publish_notice;
+  }
+  if (null != ts.project_event) {
+    tmp.projectEvent = ts.project_event;
   }
   if (tmp8) {
     tmp.clarification = ts.clarification;
@@ -194,7 +197,7 @@ function resolveTurnIndex(arr3, activeTurnId) {
         let tmp4 = tmp3.turn_id === activeTurnId;
         if (!tmp4) {
           let _HermesInternal = HermesInternal;
-          tmp4 = tmp3.id === "" + c32 + activeTurnId;
+          tmp4 = tmp3.id === "" + c33 + activeTurnId;
         }
         num = diff;
         if (tmp4) {
@@ -247,7 +250,7 @@ function patchTurn(projectId, turnId, fn) {
           let tmp8 = tmp6.turn_id === turnId;
           if (!tmp8) {
             const _HermesInternal = HermesInternal;
-            tmp8 = tmp6.id === "" + c32 + turnId;
+            tmp8 = tmp6.id === "" + c33 + turnId;
           }
           tmp7 = tmp6;
           if (!tmp8) {
@@ -288,7 +291,7 @@ function hasOpenTurn(map) {
         let tmp = map[diff];
         let tmp4 = flag2;
         if ("assistant" === tmp.role) {
-          let tmp5 = "side_reply" === tmp.kind || "publish_notice" === tmp.kind;
+          let tmp5 = "side_reply" === tmp.kind || "publish_notice" === tmp.kind || "project_event" === tmp.kind;
           tmp4 = flag2;
           if (!tmp5) {
             let flag = flag2;
@@ -410,7 +413,7 @@ function recordThinkingTransition(projectId) {
           while (true) {
             if ("assistant" === value[diff].role) {
               let tmp7 = value[diff];
-              let tmp8 = "side_reply" === tmp7.kind || "publish_notice" === tmp7.kind;
+              let tmp8 = "side_reply" === tmp7.kind || "publish_notice" === tmp7.kind || "project_event" === tmp7.kind;
               if (!tmp8) {
                 break;
               }
@@ -487,11 +490,12 @@ function recordThinkingTransition(projectId) {
 function purgeProject(projectId) {
   let deleteResult = map.delete(projectId);
   const deleteResult1 = map6.delete(projectId);
-  const deleteResult2 = set2.delete(projectId);
+  const deleteResult2 = set3.delete(projectId);
   const deleteResult3 = map1.delete(projectId);
   const deleteResult4 = map2.delete(projectId);
   const deleteResult5 = map3.delete(projectId);
   const deleteResult6 = map4.delete(projectId);
+  const deleteResult7 = set1.delete(projectId);
   const index = closure_23.indexOf(projectId);
   if (-1 !== index) {
     closure_23.splice(index, 1);
@@ -518,7 +522,10 @@ function purgeProject(projectId) {
     deleteResult = deleteResult7;
   }
   if (!deleteResult) {
-    deleteResult = tmp10;
+    deleteResult = deleteResult8;
+  }
+  if (!deleteResult) {
+    deleteResult = tmp11;
   }
   return deleteResult;
 }
@@ -654,6 +661,9 @@ function stoppable(role) {
     if (!tmp2) {
       tmp2 = "publish_notice" === role.kind;
     }
+    if (!tmp2) {
+      tmp2 = "project_event" === role.kind;
+    }
     tmp = !tmp2;
   }
   if (tmp) {
@@ -686,7 +696,7 @@ let closure_4 = ["disposition"];
 let closure_5 = ["disposition"];
 const Constants = fn(1085);
 ({ Routes: closure_15, StatusTypes: closure_16 } = Constants);
-const StaticChannelRoute = fn(2058).StaticChannelRoute;
+const StaticChannelRoute = fn(2070).StaticChannelRoute;
 const bit_message1 = "bit_message1";
 let set = new Set(["reply", "plan_proposed", "terminal_error"]);
 let map = new Map();
@@ -696,11 +706,12 @@ let closure_23 = [];
 const map3 = new Map();
 const map4 = new Map();
 const set1 = new Set();
+const set2 = new Set();
 const map5 = new Map();
 let width = 0;
-let closure_29 = [];
-let c30 = 0;
-let c32 = "turn:";
+let closure_30 = [];
+let c31 = 0;
+let c33 = "turn:";
 const Store = initializeDefault.Store;
 class ConjureChatStore extends Store {
 }
@@ -711,7 +722,7 @@ prototype["initialize"] = function initialize() {
 prototype["getMessages"] = function getMessages(arg0) {
   value = map.get(arg0);
   if (value == null) {
-    value = closure_29;
+    value = closure_30;
   }
   return value;
 };
@@ -733,7 +744,7 @@ prototype["hasLoadedHistory"] = function hasLoadedHistory(projectId) {
   return map6.has(projectId);
 };
 prototype["isHistoryUnavailable"] = function isHistoryUnavailable(projectId) {
-  return set2.has(projectId);
+  return set3.has(projectId);
 };
 prototype["getFinishedAt"] = function getFinishedAt(id) {
   let tmp = null;
@@ -763,6 +774,9 @@ prototype["getThinkingActivity"] = function getThinkingActivity(projectId) {
 prototype["isCompacting"] = function isCompacting(projectId) {
   return set1.has(projectId);
 };
+prototype["isSaving"] = function isSaving(arg0) {
+  return set2.has(arg0);
+};
 prototype["getSidebarWidth"] = function getSidebarWidth() {
   return width;
 };
@@ -782,7 +796,7 @@ prototype["isAnyThinking"] = function isAnyThinking() {
   return false;
 };
 const map6 = new Map();
-const set2 = new Set();
+const set3 = new Set();
 const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
   LOGOUT: function handleLogout() {
     map5.clear();
@@ -792,11 +806,13 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
           if (0 === map3.size) {
             if (0 === map4.size) {
               if (0 === set1.size) {
-                if (0 === map6.size) {
-                  if (0 === set2.size) {
-                    if (0 === closure_23.length) {
-                      if (0 === width) {
-                        return false;
+                if (0 === set2.size) {
+                  if (0 === map6.size) {
+                    if (0 === set3.size) {
+                      if (0 === closure_23.length) {
+                        if (0 === width) {
+                          return false;
+                        }
                       }
                     }
                   }
@@ -813,24 +829,39 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
     map3.clear();
     map4.clear();
     set1.clear();
-    map6.clear();
     set2.clear();
+    map6.clear();
+    set3.clear();
     closure_23.length = 0;
     width = 0;
   },
-  CONJURE_CHAT_HISTORY_SET: function handleChatHistorySet(degraded) {
-    ({ projectId, entries, cursor } = degraded);
-    if (cursor == null) {
-      cursor = null;
-    }
-    const result = map6.set(projectId, cursor);
-    if (true === degraded.degraded) {
-      set2.add(projectId);
+  CONJURE_CHAT_HISTORY_SET: function handleChatHistorySet(arg0) {
+    ({ projectId, entries, cursor, degraded } = arg0);
+    let mapped;
+    let num;
+    value = map6.get(projectId);
+    if (map6.has(projectId)) {
+      value2 = map.get(projectId);
+      if (value2 == null) {
+        value2 = [];
+      }
+      let items = value2;
     } else {
-      set2.delete(projectId);
+      items = [];
+    }
+    let tmp4 = cursor;
+    if (cursor == null) {
+      tmp4 = null;
+    }
+    const result = map6.set(projectId, tmp4);
+    if (true === degraded) {
+      set3.add(projectId);
+    } else {
+      set3.delete(projectId);
     }
     map4.delete(projectId);
     set1.delete(projectId);
+    set2.delete(projectId);
     new Set();
     const found = entries.filter((id) => {
       let tmp = null == id.id;
@@ -845,7 +876,32 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
       }
       return tmp;
     });
-    const result1 = map.set(projectId, applyAgentReactions(found.map(newMessageFromHistory)));
+    mapped = found.map(newMessageFromHistory);
+    num = -1;
+    if (null != cursor) {
+      num = -1;
+      if (true !== degraded) {
+        num = mapped.findIndex((id) => null != id.id);
+      }
+    }
+    let num2 = -1;
+    if (-1 !== num) {
+      num2 = items.findIndex((id) => id.id === mapped[num].id);
+    }
+    if (-1 !== num2) {
+      if (value == null) {
+        value = null;
+      }
+      const result1 = map6.set(projectId, value);
+    }
+    let tmp17 = mapped;
+    if (-1 !== num2) {
+      const items1 = [];
+      HermesBuiltin.arraySpread(mapped.slice(num), HermesBuiltin.arraySpread(items.slice(0, num2), 0));
+      tmp17 = items1;
+      const arraySpreadResult = HermesBuiltin.arraySpread(items.slice(0, num2), 0);
+    }
+    const result2 = map.set(projectId, applyAgentReactions(tmp17));
     recordThinkingTransition(projectId);
   },
   CONJURE_CHAT_HISTORY_PREPEND: function handleChatHistoryPrepend(cursor) {
@@ -947,7 +1003,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
                 let tmp11 = tmp10.turn_id === activeTurnId;
                 if (!tmp11) {
                   let _HermesInternal = HermesInternal;
-                  tmp11 = tmp10.id === "" + c32 + activeTurnId;
+                  tmp11 = tmp10.id === "" + c33 + activeTurnId;
                 }
                 num5 = diff;
                 if (tmp11) {
@@ -1115,6 +1171,25 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
       const result = map.set(projectId, items);
     }
   },
+  CONJURE_CHAT_PROJECT_EVENT: function handleChatProjectEvent(arg0) {
+    ({ projectId, event } = arg0);
+    value = map.get(projectId);
+    if (null == value) {
+      return false;
+    } else if (value.some((id) => id.id === event.id)) {
+      return false;
+    } else {
+      ({ ts: obj3.ts, id: obj3.id } = event);
+      const tmp2 = newMessage("assistant", "", { ts: null, id: null });
+      tmp2.kind = "project_event";
+      tmp2.projectEvent = event;
+      tmp2.finished = true;
+      const items = [];
+      items[HermesBuiltin.arraySpread(value, 0)] = tmp2;
+      const result = map.set(projectId, items);
+      const obj2 = { ts: null, id: null };
+    }
+  },
   CONJURE_CHAT_STEP_APPEND: function handleChatStepAppend(turnId) {
     ({ projectId, step } = turnId);
     turnId = turnId.turnId;
@@ -1173,6 +1248,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
       map4.delete(projectId);
       set1.delete(projectId);
     }
+    set2.delete(projectId);
     recordThinkingTransition(projectId);
   },
   CONJURE_CHAT_INTERRUPTED: function handleChatInterrupted(projectId) {
@@ -1228,7 +1304,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
             let tmp4 = tmp3.turn_id === turnId;
             if (!tmp4) {
               let _HermesInternal = HermesInternal;
-              tmp4 = tmp3.id === "" + c32 + turnId;
+              tmp4 = tmp3.id === "" + c33 + turnId;
             }
             num2 = diff;
             if (tmp4) {
@@ -1274,7 +1350,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
             let tmp4 = role.turn_id === require;
             if (!tmp4) {
               const _HermesInternal = HermesInternal;
-              tmp4 = role.id === "" + c32 + tmp3;
+              tmp4 = role.id === "" + c33 + tmp3;
             }
             let tmp7 = role;
             if (tmp4) {
@@ -1321,6 +1397,16 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
       set1.delete(projectId);
     }
   },
+  CONJURE_CHAT_SAVING_SET: function handleChatSavingSet(arg0) {
+    ({ projectId, saving } = arg0);
+    if (saving === set2.has(projectId)) {
+      return false;
+    } else if (saving) {
+      set2.add(projectId);
+    } else {
+      set2.delete(projectId);
+    }
+  },
   CONJURE_CHAT_USAGE_SET: function handleChatUsageSet(projectId) {
     const result = map3.set(projectId.projectId, projectId.project);
   },
@@ -1350,7 +1436,8 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
         return false;
       }
     }
-    const deleteResult1 = map4.delete(projectId);
+    const deleteResult = set1.delete(projectId);
+    let deleteResult2 = map4.delete(projectId);
     value = map.get(projectId);
     if (null != value) {
       if (value.some((role) => {
@@ -1409,7 +1496,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
                 const items = [];
                 const obj2 = { type: "step", kind: "terminal_error", message: null };
                 const intl = util.intl;
-                obj2.message = intl.string(_modDef3753.lmiuFX);
+                obj2.message = intl.string(_modDef3827.lmiuFX);
                 items[HermesBuiltin.arraySpread(disposition.steps, 0)] = obj2;
                 obj.steps = items;
                 tmp2 = obj;
@@ -1422,11 +1509,13 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
         recordThinkingTransition(projectId);
       }
     }
-    let tmp6 = !deleteResult1;
-    if (!deleteResult1) {
-      tmp6 = !deleteResult;
+    if (!deleteResult2) {
+      deleteResult2 = deleteResult;
     }
-    return !tmp6;
+    if (!deleteResult2) {
+      deleteResult2 = deleteResult1;
+    }
+    return deleteResult2 && undefined;
   },
   CONJURE_PROJECT_CREATE_SUCCESS: function handleProjectCreateSuccess(project) {
     project = project.project;
@@ -1483,22 +1572,22 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/chat/ConjureChatStore.tsx");
 
 export default conjureChatStore;
-export const turnSettled = function turnSettled(finished) {
-  let someResult = true === finished.finished || true === finished.continued;
+export const turnSettled = function turnSettled(message) {
+  let someResult = true === message.finished || true === message.continued;
   if (!someResult) {
-    someResult = "" !== finished.content;
+    someResult = "" !== message.content;
   }
   if (!someResult) {
-    someResult = null != finished.proposal;
+    someResult = null != message.proposal;
   }
   if (!someResult) {
-    someResult = null != finished.clarification;
+    someResult = null != message.clarification;
   }
   if (!someResult) {
-    someResult = null != finished.intake;
+    someResult = null != message.intake;
   }
   if (!someResult) {
-    const steps = finished.steps;
+    const steps = message.steps;
     someResult = steps.some((kind) => set.has(kind.kind));
   }
   return someResult;
@@ -1523,7 +1612,7 @@ export const isStrandedSegment = function isStrandedSegment(arg0, arg1) {
                 let tmp8 = tmp5.turn_id === turn_id;
                 if (!tmp8) {
                   let _HermesInternal = HermesInternal;
-                  tmp8 = tmp5.id === "" + c32 + turn_id;
+                  tmp8 = tmp5.id === "" + c33 + turn_id;
                 }
                 if (tmp8) {
                   let someResult1 = true === tmp5.finished || true === tmp5.continued || "" !== tmp5.content || null != tmp5.proposal || null != tmp5.clarification || null != tmp5.intake;
@@ -1546,8 +1635,8 @@ export const isStrandedSegment = function isStrandedSegment(arg0, arg1) {
   }
   return false;
 };
-export const getOlderHistoryCursor = function getOlderHistoryCursor(projectId) {
-  value = map6.get(projectId);
+export const getOlderHistoryCursor = function getOlderHistoryCursor(arg0) {
+  value = map6.get(arg0);
   if (value == null) {
     value = null;
   }

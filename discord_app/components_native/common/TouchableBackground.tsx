@@ -1,6 +1,6 @@
-// === Module 12033: TouchableBackground ===
+// === Module 12106: TouchableBackground ===
 
-// Module 12033 (TouchableBackground)
+// Module 12106 (TouchableBackground)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -12,7 +12,7 @@ let closure_2 = ["activeBackgroundColor", "pressableStyle", "style", "children",
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Pressable: closure_7 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { default: { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE } };
 let closure_9 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -20,7 +20,7 @@ const obj3 = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTI
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/TouchableBackground.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onPressOut) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function TouchableBackground(onPressOut) {
   const cResult = c.c(28);
   if (cResult[0] !== onPressOut) {
     ({ activeBackgroundColor, pressableStyle, style, children, onPressIn } = onPressOut);
@@ -55,7 +55,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onPressOut) => {
     cResult[9] = fn;
   }
   if (cResult[10] !== tmp5) {
-    class E {
+    class R {
       constructor(arg0) {
         if (closure_1 != null) {
           tmp2 = onPressOut;
@@ -66,9 +66,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onPressOut) => {
       }
     }
     cResult[10] = tmp5;
-    cResult[11] = E;
+    cResult[11] = R;
   } else {
-    class E {
+    class R {
       constructor(arg0) {
         if (closure_1 != null) {
           tmp2 = onPressOut;
@@ -80,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onPressOut) => {
     }
   }
   if (cResult[12] === tmp2) {
-    class E {
+    class R {
       constructor(arg0) {
         if (closure_1 != null) {
           tmp2 = onPressOut;
@@ -93,7 +93,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onPressOut) => {
   }
   let tmp17 = tmp14;
   if (tmp14) {
-    class E {
+    class R {
       constructor(arg0) {
         if (closure_1 != null) {
           tmp2 = onPressOut;
@@ -104,7 +104,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onPressOut) => {
       }
     }
     if (tmp2 == null) {
-      class E {
+      class R {
         constructor(arg0) {
           if (closure_1 != null) {
             tmp2 = onPressOut;
@@ -123,7 +123,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onPressOut) => {
   cResult[14] = tmp12;
   cResult[15] = tmp17;
   const tmp13 = _slicedToArray(noop.useState(false), 2);
-}) : ((onPressOut) => {
+}) : (function TouchableBackground(onPressOut) {
   ({ activeBackgroundColor, onPressIn } = onPressOut);
   onPressOut = onPressOut.onPressOut;
   ({ pressableStyle, style, children } = onPressOut);

@@ -1,32 +1,32 @@
-// === Module 16617: useConjureAppSettingsForm ===
+// === Module 16876: useConjureAppSettingsForm ===
 
-// Module 16617 (useConjureAppSettingsForm)
+// Module 16876 (useConjureAppSettingsForm)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import _modDef3753 from "module_3753" /* 3753 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4860 */;
-import ConjureUtils from "ConjureUtils" /* 6756 */;
-import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 12118 */;
+import _modDef3827 from "module_3827" /* 3827 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5054 */;
+import ConjureUtils from "ConjureUtils" /* 6932 */;
+import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 12196 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 4513 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
-import UserStore from "UserStore" /* 1377 */;
-import ConjureChatStore from "ConjureChatStore" /* 12924 */;
-import ConjureConnectionStore_mod from "ConjureConnectionStore" /* 12923 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 8734 */;
+import GuildChannelStore from "GuildChannelStore" /* 4705 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
+import UserStore from "UserStore" /* 1389 */;
+import ConjureChatStore from "ConjureChatStore" /* 13073 */;
+import ConjureConnectionStore_mod from "ConjureConnectionStore" /* 13072 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 11251 */;
 
 require = fn;
 let View = fn(17).View;
-let ConjureConnectionStore = fn(12923);
+let ConjureConnectionStore = fn(13072);
 ({ requestProjectRebuild: closure_12, sendUserMessage: map1, submitProjectSettings: closure_14 } = ConjureConnectionStore);
 let ConjureConnectionStore = ConjureConnectionStore_mod;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
 const ConjureSettingsChannelSheet = "ConjureSettingsChannelSheet";
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { section: { gap: nativeDefault.space.PX_16 }, secretRow: null, secretRowInfo: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.secretRow = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_8 };
@@ -243,7 +243,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
         obj3.channels = channels;
         obj3.selectedChannel = found;
         const intl = util.intl;
-        obj3.noChannelOptionLabel = intl.string(_modDef3753["jtBVV+"]);
+        obj3.noChannelOptionLabel = intl.string(_modDef3827["jtBVV+"]);
         obj3.onSelect = function onSelect(id) {
           let str;
           if (id != null) {
@@ -743,9 +743,9 @@ export default function useConjureAppSettingsForm(projectId) {
                 if (application_id == null) {
                   _null = null;
                 }
-                _null2(9010)(_null);
+                _null2(12376)(_null);
                 let prop;
-                const tmp19 = _null2(9010);
+                const tmp19 = _null2(12376);
                 if (project2 != null) {
                   prop = project2.preview_application_id;
                 }
@@ -753,8 +753,8 @@ export default function useConjureAppSettingsForm(projectId) {
                 if (prop == null) {
                   _null2 = null;
                 }
-                _null2(9010)(_null2);
-                const tmp27 = _null2(9010);
+                _null2(12376)(_null2);
+                const tmp27 = _null2(12376);
               }
               c5 = 0;
               closure_131_12(false);
@@ -763,7 +763,7 @@ export default function useConjureAppSettingsForm(projectId) {
             closure_1_12(closure_131_0);
           }
           const intl = _null(1126).intl;
-          closure_1_13(closure_131_0, intl.string(_null2(3753)["08bsJL"]));
+          closure_1_13(closure_131_0, intl.string(_null2(3827)["08bsJL"]));
         }
       } catch (tmp67) {
         closure_4 = tmp67;

@@ -1,9 +1,9 @@
-// === Module 10855: UserProfileGradientContainer ===
+// === Module 10506: UserProfileGradientContainer ===
 
-// Module 10855 (UserProfileGradientContainer)
+// Module 10506 (UserProfileGradientContainer)
 import c from "c" /* 576 */;
-import LinearGradientDefault from "LinearGradient" /* 5612 */;
-import useUserProfileGradientColors from "useUserProfileGradientColors" /* 7922 */;
+import LinearGradientDefault from "LinearGradient" /* 5387 */;
+import useUserProfileGradientColors from "useUserProfileGradientColors" /* 8341 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileGradientContainer.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileGradientContainer(arg0) {
   const cResult = c.c(4);
   ({ containerStyle, children, primaryColor, secondaryColor, fallbackBackground } = arg0);
   const userProfileGradientColors = useUserProfileGradientColors.useUserProfileGradientColors(primaryColor, secondaryColor, fallbackBackground);
@@ -30,7 +30,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   cResult[2] = containerStyle;
   cResult[3] = tmp5;
   tmp4 = tmp5;
-}) : ((arg0) => {
+}) : (function UserProfileGradientContainer(arg0) {
   ({ primaryColor, secondaryColor, fallbackBackground, containerStyle, children } = arg0);
   const colors = useUserProfileGradientColors.useUserProfileGradientColors(primaryColor, secondaryColor, fallbackBackground);
   return jsx(LinearGradientDefault, { colors, style, children });

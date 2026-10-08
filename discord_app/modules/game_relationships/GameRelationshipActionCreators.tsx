@@ -1,10 +1,10 @@
-// === Module 10618: GameRelationshipActionCreators ===
+// === Module 10216: GameRelationshipActionCreators ===
 
-// Module 10618 (GameRelationshipActionCreators)
+// Module 10216 (GameRelationshipActionCreators)
 import util from "util" /* 1126 */;
-import shared from "shared" /* 4735 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 5319 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5714 */;
+import shared from "shared" /* 4929 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5297 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 5631 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -116,7 +116,7 @@ let closure_9 = async function _removeGameFriend() {
     userId: closure_129_0,
     applicationId: closure_129_1,
     onSuccess() {
-      const AccessibilityAnnouncer = closure_1_0(4735).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = closure_1_0(4929).AccessibilityAnnouncer;
       const intl = closure_1_0(1126).intl;
       AccessibilityAnnouncer.announce(intl.string(closure_1_0(1126).t.zRf8cO));
     }
@@ -131,7 +131,7 @@ let closure_10 = async function _cancelGameFriendRequest() {
     userId: closure_129_0,
     applicationId: closure_129_1,
     onSuccess() {
-      const AccessibilityAnnouncer = closure_1_0(4735).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = closure_1_0(4929).AccessibilityAnnouncer;
       const intl = closure_1_0(1126).intl;
       AccessibilityAnnouncer.announce(intl.string(closure_1_0(1126).t.XMf21q));
     }
@@ -162,7 +162,7 @@ export default {
 
     }
     ({ userId, applicationId } = arg0);
-    const HTTP = onSuccess(1282).HTTP;
+    const HTTP = onSuccess(1294).HTTP;
     const request = { url: closure_4.USER_GAME_RELATIONSHIP(userId, applicationId), body: { type: constants.FRIEND }, oldFormErrors: true, rejectWithError: false };
     const putResult = HTTP.put(request);
     return HTTP.put(request).then(() => {
@@ -170,7 +170,7 @@ export default {
       const intl = util.intl;
       AccessibilityAnnouncer.announce(intl.string(util.t.taJiuc));
     }).catch((error) => {
-      const aPIError = new onSuccess(5319).APIError(error);
+      const aPIError = new onSuccess(5631).APIError(error);
       let anyErrorMessage = aPIError.getAnyErrorMessage();
       const obj = { title: null, body: null };
       const intl = onSuccess(1126).intl;

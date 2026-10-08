@@ -1,6 +1,6 @@
-// === Module 16740: ConjureClarification ===
+// === Module 17015: ConjureClarification ===
 
-// Module 16740 (ConjureClarification)
+// Module 17015 (ConjureClarification)
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/conjure/clarification/ConjureClarification.tsx");

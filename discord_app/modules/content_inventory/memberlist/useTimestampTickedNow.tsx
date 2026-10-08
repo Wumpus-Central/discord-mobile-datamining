@@ -1,12 +1,12 @@
-// === Module 12848: useTimestampTickedNow ===
+// === Module 12997: useTimestampTickedNow ===
 
-// Module 12848 (useTimestampTickedNow)
+// Module 12997 (useTimestampTickedNow)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 const require = globalThis.__r;
 
@@ -15,7 +15,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/content_inventory/memberlist/useTimestampTickedNow.tsx");
 
-export const useTimestampTickedNow = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useTimestampTickedNow = ReactCompilerGating.isReactCompilerEnabled() ? (function useTimestampTickedNow(arg0) {
   const cResult = c.c(11);
   if (cResult[0] !== arg0) {
     let obj2 = arg0;
@@ -47,7 +47,7 @@ export const useTimestampTickedNow = ReactCompilerGating.isReactCompilerEnabled(
   [tmp8, require] = noop.useState(tmp6);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AccessibilityStore];
-    const fn2 = function w() {
+    const fn2 = function f() {
       return useReducedMotion.useReducedMotion;
     };
     cResult[3] = items;
@@ -75,60 +75,39 @@ export const useTimestampTickedNow = ReactCompilerGating.isReactCompilerEnabled(
   }
   importDefault = result;
   if (cResult[5] !== result) {
-    class C {
-      constructor() {
-        interval = new closure_0(closure_1_2[7]).Interval();
-        closure_0 = interval;
-        startResult = interval.start(SECOND, () => {
-          const timestamp = Date.now();
-          const rounded = Math.floor(timestamp / result(1102).Millis.SECOND);
-          interval(rounded * result(1102).Millis.SECOND);
-        });
-        return () => interval.stop();
-      }
-    }
+    const fn3 = function _() {
+      const interval = new require("Timers").Interval();
+      interval.start(closure_1, () => {
+        const timestamp = Date.now();
+        const rounded = Math.floor(timestamp / result(1102).Millis.SECOND);
+        interval(rounded * result(1102).Millis.SECOND);
+      });
+      return () => interval.stop();
+    };
     const items1 = [result];
     cResult[5] = result;
-    cResult[6] = C;
+    cResult[6] = fn3;
     cResult[7] = items1;
     let tmp16 = items1;
+    let tmp15 = fn3;
   } else {
-    class C {
-      constructor() {
-        interval = new closure_0(closure_1_2[7]).Interval();
-        closure_0 = interval;
-        startResult = interval.start(SECOND, () => {
-          const timestamp = Date.now();
-          const rounded = Math.floor(timestamp / result(1102).Millis.SECOND);
-          interval(rounded * result(1102).Millis.SECOND);
-        });
-        return () => interval.stop();
-      }
-    }
+    tmp15 = cResult[6];
     tmp16 = cResult[7];
   }
-  const effect = noop.useEffect(C, tmp16);
+  const effect = noop.useEffect(tmp15, tmp16);
   if (cResult[8] === tmp8) {
-    class C {
-      constructor() {
-        interval = new closure_0(closure_1_2[7]).Interval();
-        closure_0 = interval;
-        startResult = interval.start(SECOND, () => {
-          const timestamp = Date.now();
-          const rounded = Math.floor(timestamp / result(1102).Millis.SECOND);
-          interval(rounded * result(1102).Millis.SECOND);
-        });
-        return () => interval.stop();
-      }
+    if (cResult[9] === tmp13) {
+      let tmp18 = cResult[10];
     }
-    return obj4;
+    return tmp18;
   }
-  obj4 = { now: tmp8, slowTickMode: tmp13 };
+  const obj4 = { now: tmp8, slowTickMode: tmp13 };
   cResult[8] = tmp8;
   cResult[9] = tmp13;
   cResult[10] = obj4;
+  tmp18 = obj4;
   const tmpResult = initialize;
-}) : (() => {
+}) : (function useTimestampTickedNow() {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -162,7 +141,7 @@ export const useTimestampTickedNow = ReactCompilerGating.isReactCompilerEnabled(
   importDefault = result;
   const items1 = [result];
   const effect = noop.useEffect(() => {
-    const interval = new closure_0(2046).Interval();
+    const interval = new closure_0(2058).Interval();
     interval.start(c1, () => {
       const timestamp = Date.now();
       const rounded = Math.floor(timestamp / c1(1102).Millis.SECOND);

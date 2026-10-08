@@ -1,10 +1,10 @@
-// === Module 9429: usePendingFolderGuildIds ===
+// === Module 9093: usePendingFolderGuildIds ===
 
-// Module 9429 (usePendingFolderGuildIds)
+// Module 9093 (usePendingFolderGuildIds)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4706 */;
-import GuildStore from "GuildStore" /* 2074 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4900 */;
+import GuildStore from "GuildStore" /* 2086 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
@@ -22,7 +22,7 @@ function getPendingFolderGuildIds() {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/usePendingFolderGuildIds.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePendingFolderGuildIds() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [UserGuildJoinRequestStore, GuildStore];
@@ -41,7 +41,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     [tmp4, tmp5] = cResult;
   }
   return initialize.useStateFromStoresArray(tmp4, tmp5);
-}) : (() => {
+}) : (function usePendingFolderGuildIds() {
   let items = [UserGuildJoinRequestStore, GuildStore];
   return initialize.useStateFromStoresArray(items, () => {
     const items = [UserGuildJoinRequestStore, GuildStore];

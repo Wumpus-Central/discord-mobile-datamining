@@ -1,18 +1,18 @@
-// === Module 16298: isHomeDrawerChannelMuted ===
+// === Module 16558: isHomeDrawerChannelMuted ===
 
-// Module 16298 (isHomeDrawerChannelMuted)
+// Module 16558 (isHomeDrawerChannelMuted)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4517 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5077 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4709 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5971 */;
 
 require = fn;
-const isThread = fn(2055).isThread;
+const isThread = fn(2067).isThread;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/home_drawer/native/isHomeDrawerChannelMuted.tsx");
 
-export const useIsHomeDrawerChannelMuted = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useIsHomeDrawerChannelMuted = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsHomeDrawerChannelMuted() {
   const cResult = c.c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [JoinedThreadsStore, UserGuildSettingsStore];
@@ -43,7 +43,7 @@ export const useIsHomeDrawerChannelMuted = ReactCompilerGating.isReactCompilerEn
     [tmp4, tmp5, tmp6] = cResult;
   }
   return initialize.useStateFromStores(tmp4, tmp5, tmp6, initialize.statesWillNeverBeEqual);
-}) : (() => {
+}) : (function useIsHomeDrawerChannelMuted() {
   const items = [JoinedThreadsStore, UserGuildSettingsStore];
   return initialize.useStateFromStores(items, () => (type) => {
     const tmp = closure_1_3(type.type);

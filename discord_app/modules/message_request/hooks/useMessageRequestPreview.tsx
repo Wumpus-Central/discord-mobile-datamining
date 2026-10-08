@@ -1,12 +1,12 @@
-// === Module 12274: useMessageRequestPreview ===
+// === Module 12353: useMessageRequestPreview ===
 
-// Module 12274 (useMessageRequestPreview)
+// Module 12353 (useMessageRequestPreview)
 import _modDef12 from "module_12" /* 12 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import MessageStore from "MessageStore" /* 5116 */;
-import ReadStateStore from "ReadStateStore" /* 4911 */;
-import MessageRequestPreviewStore from "MessageRequestPreviewStore" /* 12275 */;
+import MessageStore from "MessageStore" /* 5428 */;
+import ReadStateStore from "ReadStateStore" /* 6040 */;
+import MessageRequestPreviewStore from "MessageRequestPreviewStore" /* 12354 */;
 
 require = fn;
 function loadMessageRequestData() {
@@ -207,7 +207,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_request/hooks/useMessageRequestPreview.tsx");
 
-export const useMessageRequestPreview = ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1) => {
+export const useMessageRequestPreview = ReactCompilerGating.isReactCompilerEnabled() ? (function useMessageRequestPreview(id, arg1) {
   let obj = arg1;
   const cResult = id(576).c(12);
   id = id.id;
@@ -305,7 +305,7 @@ export const useMessageRequestPreview = ReactCompilerGating.isReactCompilerEnabl
   cResult[11] = obj3;
   tmp23 = obj3;
   const tmpResult2 = id(504);
-}) : ((id) => {
+}) : (function useMessageRequestPreview(id) {
   id = id.id;
   let obj = arg1;
   if (arg1 === undefined) {

@@ -1,8 +1,8 @@
-// === Module 13113: useConjureAppChannelRefreshButton ===
+// === Module 12827: useConjureAppChannelRefreshButton ===
 
-// Module 13113 (useConjureAppChannelRefreshButton)
-import _modDef3753 from "module_3753" /* 3753 */;
-import restartConjureAppFramesDefault from "restartConjureAppFrames" /* 9010 */;
+// Module 12827 (useConjureAppChannelRefreshButton)
+import _modDef3827 from "module_3827" /* 3827 */;
+import restartConjureAppFramesDefault from "restartConjureAppFrames" /* 12376 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -10,7 +10,7 @@ const require = globalThis.__r;
 
 const result = size.fileFinishedImporting("modules/conjure/app_channel/native/useConjureAppChannelRefreshButton.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((application_id) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConjureAppChannelRefreshButton(application_id) {
   _require = application_id;
   let RetryIcon = dependencyMap;
   const cResult = require("c").c(5);
@@ -22,7 +22,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((application_id) 
     tmp6 = null;
     if (!tmp5) {
       if (cResult[0] !== application_id.application_id) {
-        const fn = function l() {
+        const fn = function t() {
           application_id = application_id.application_id;
           if (application_id == null) {
             application_id = null;
@@ -38,7 +38,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((application_id) 
       const _Symbol = Symbol;
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = tmp(1126).intl;
-        const stringResult = intl.string(_modDef3753["p4B/7M"]);
+        const stringResult = intl.string(_modDef3827["p4B/7M"]);
         cResult[2] = stringResult;
         let tmp9 = stringResult;
       } else {
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((application_id) 
       }
       if (cResult[3] !== tmp7) {
         const obj3 = { source: null, IconComponent: null, onPress: null, accessibilityLabel: null };
-        RetryIcon = tmp(11377).RetryIcon;
+        RetryIcon = tmp(12633).RetryIcon;
         obj3.IconComponent = RetryIcon;
         obj3.onPress = tmp7;
         obj3.accessibilityLabel = tmp9;
@@ -56,7 +56,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((application_id) 
     }
   }
   return tmp6;
-}) : ((arg0) => {
+}) : (function useConjureAppChannelRefreshButton(arg0) {
   _require = arg0;
   const isConjureChannelCandidate = require("ConjureUtils").useIsConjureChannelCandidate(arg0, "ChannelActions");
   require("AppChannelChat");
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((application_id) 
     if (!tmp5) {
       const obj2 = {
         source: null,
-        IconComponent: tmp(11377).RetryIcon,
+        IconComponent: tmp(12633).RetryIcon,
         onPress() {
               application_id = application_id.application_id;
               if (application_id == null) {
@@ -77,7 +77,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((application_id) 
         accessibilityLabel: null
       };
       const intl = tmp(1126).intl;
-      obj2.accessibilityLabel = intl.string(_modDef3753["p4B/7M"]);
+      obj2.accessibilityLabel = intl.string(_modDef3827["p4B/7M"]);
       tmp6 = obj2;
     }
   }

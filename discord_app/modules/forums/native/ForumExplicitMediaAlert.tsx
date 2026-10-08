@@ -1,8 +1,8 @@
-// === Module 8946: ForumExplicitMediaAlert ===
+// === Module 12875: ForumExplicitMediaAlert ===
 
-// Module 8946 (ForumExplicitMediaAlert)
+// Module 12875 (ForumExplicitMediaAlert)
 import nativeDefault from "native" /* 587 */;
-import ExplicitMediaActionCreators from "ExplicitMediaActionCreators" /* 8947 */;
+import ExplicitMediaActionCreators from "ExplicitMediaActionCreators" /* 11549 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { padding: nativeDefault.space.PX_16, alignItems: "stretch" }, title: null, body: null, buttonContainer: null, text: null };
 let obj3 = { padding: nativeDefault.space.PX_16, alignItems: "stretch" };
 obj2.title = { marginBottom: nativeDefault.space.PX_16 };
@@ -26,7 +26,7 @@ let obj6 = { marginVertical: nativeDefault.space.PX_16 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/forums/native/ForumExplicitMediaAlert.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumExplicitMediaAlert(channelId) {
   const cResult = channelId(onClose[6]).c(32);
   channelId = channelId.channelId;
   const messageId = channelId.messageId;
@@ -177,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   cResult[2] = items2;
   tmp6 = items2;
   const obj = channelId(onClose[6]);
-}) : ((arg0) => {
+}) : (function ForumExplicitMediaAlert(arg0) {
   ({ channelId: require, messageId: importDefault, onClose } = arg0);
   const tmp = closure_6();
   const obj = { noDefaultButtons: true, style: tmp.container, onClose, children: null };

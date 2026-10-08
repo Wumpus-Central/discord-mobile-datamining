@@ -1,18 +1,18 @@
-// === Module 17433: ChannelSubtitle ===
+// === Module 17715: ChannelSubtitle ===
 
-// Module 17433 (ChannelSubtitle)
+// Module 17715 (ChannelSubtitle)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import MessagePreviewMarkup from "MessagePreviewMarkup" /* 11709 */;
-import getChannelSubtitleData from "getChannelSubtitleData" /* 16195 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 16853 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import MessagePreviewMarkup from "MessagePreviewMarkup" /* 11774 */;
+import getChannelSubtitleData from "getChannelSubtitleData" /* 16455 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 17132 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SUBTITLE_OPACITY_NORMAL = fn(11711).SUBTITLE_OPACITY_NORMAL;
+const SUBTITLE_OPACITY_NORMAL = fn(11776).SUBTITLE_OPACITY_NORMAL;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
-let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelSubtitle(arg0) {
   const cResult = c.c(14);
   ({ muted, connected, channelId, guildId, subtitle, textProps } = arg0);
   if (cResult[0] === channelId) {
@@ -91,7 +91,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   tmp5 = tmp12;
   tmp4 = Text;
   const tmpResult = getChannelSubtitleData;
-}) : ((arg0) => {
+}) : (function ChannelSubtitle(arg0) {
   ({ muted, textProps } = arg0);
   ({ connected, channelId, guildId, subtitle } = arg0);
   const channelSubtitleData = getChannelSubtitleData.getChannelSubtitleData(subtitle);

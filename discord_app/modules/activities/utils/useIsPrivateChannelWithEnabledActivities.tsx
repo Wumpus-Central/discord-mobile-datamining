@@ -1,7 +1,7 @@
-// === Module 9117: useIsPrivateChannelWithEnabledActivities ===
+// === Module 10690: useIsPrivateChannelWithEnabledActivities ===
 
-// Module 9117 (useIsPrivateChannelWithEnabledActivities)
-import ChannelStore from "ChannelStore" /* 2051 */;
+// Module 10690 (useIsPrivateChannelWithEnabledActivities)
+import ChannelStore from "ChannelStore" /* 2063 */;
 
 const require = globalThis.__r;
 
@@ -10,7 +10,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/useIsPrivateChannelWithEnabledActivities.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsPrivateChannelWithEnabledActivities(arg0) {
   _require = arg0;
   const cResult = require("c").c(5);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -47,7 +47,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp7 = cResult[4];
   }
   return tmp7;
-}) : ((arg0) => {
+}) : (function useIsPrivateChannelWithEnabledActivities(arg0) {
   _require = arg0;
   const items = [ChannelStore];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => ChannelStore.getChannel(closure_0));

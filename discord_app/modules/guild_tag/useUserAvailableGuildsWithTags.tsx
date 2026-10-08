@@ -1,17 +1,17 @@
-// === Module 14486: useUserAvailableGuildsWithTags ===
+// === Module 14716: useUserAvailableGuildsWithTags ===
 
-// Module 14486 (useUserAvailableGuildsWithTags)
+// Module 14716 (useUserAvailableGuildsWithTags)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import GuildStore from "GuildStore" /* 2074 */;
+import GuildMemberStore from "GuildMemberStore" /* 2124 */;
+import GuildStore from "GuildStore" /* 2086 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_tag/useUserAvailableGuildsWithTags.tsx");
 
-export const useUserAvailableGuildsWithTags = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useUserAvailableGuildsWithTags = ReactCompilerGating.isReactCompilerEnabled() ? (function useUserAvailableGuildsWithTags() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GuildStore, GuildMemberStore];
@@ -49,7 +49,7 @@ export const useUserAvailableGuildsWithTags = ReactCompilerGating.isReactCompile
     [tmp4, tmp5] = cResult;
   }
   return initialize.useStateFromStoresArray(tmp4, tmp5);
-}) : (() => {
+}) : (function useUserAvailableGuildsWithTags() {
   const items = [GuildStore, GuildMemberStore];
   return initialize.useStateFromStoresArray(items, () => {
     guildsArray = guildsArray.getGuildsArray();

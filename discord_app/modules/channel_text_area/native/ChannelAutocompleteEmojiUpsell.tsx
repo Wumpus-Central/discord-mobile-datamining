@@ -1,19 +1,19 @@
-// === Module 12040: ChannelAutocompleteEmojiUpsell ===
+// === Module 12113: ChannelAutocompleteEmojiUpsell ===
 
-// Module 12040 (ChannelAutocompleteEmojiUpsell)
+// Module 12113 (ChannelAutocompleteEmojiUpsell)
 import nativeDefault from "native" /* 587 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import FastImageDefault from "FastImage" /* 5981 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
+import FastImageDefault from "FastImage" /* 6164 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const EMOJI_URL_BASE_SIZE = fn(1380).EMOJI_URL_BASE_SIZE;
+const EMOJI_URL_BASE_SIZE = fn(1392).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { upsell: { flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, title: { lineHeight: 16, flex: 1 }, emojis: { height: 28 }, emojiWrapper: null, emoji: null };
 let size = { position: "absolute", width: 28, height: 28, padding: 2, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderWidth: 2, borderRadius: 14, borderColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, alignItems: "center", justifyContent: "center" };
 obj2.emojiWrapper = size;
@@ -23,7 +23,7 @@ const ReactCompilerGating = fn(558);
 size = fn(2);
 let result = size.fileFinishedImporting("modules/channel_text_area/native/ChannelAutocompleteEmojiUpsell.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((results) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelAutocompleteEmojiUpsell(results) {
   const cResult = require("c").c(25);
   results = results.results;
   const tmp4 = closure_7();
@@ -96,7 +96,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((results) => {
           tmp18 = items1;
         }
         const obj6 = { style: title, accessibilityRole: "header", variant: "text-sm/medium", children: tmp11 };
-        const tmp15 = closure_5(tmp(4892).Text, obj6);
+        const tmp15 = closure_5(tmp(5086).Text, obj6);
         cResult[10] = tmp4.title;
         cResult[11] = tmp11;
         cResult[12] = tmp15;
@@ -143,7 +143,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((results) => {
   cResult[7] = fn;
   tmp6 = fn;
   let obj = require("c");
-}) : ((results) => {
+}) : (function ChannelAutocompleteEmojiUpsell(results) {
   results = results.results;
   const tmp = closure_7();
   _require = tmp;

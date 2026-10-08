@@ -1,26 +1,26 @@
-// === Module 8394: SKUUtils ===
+// === Module 8892: SKUUtils ===
 
-// Module 8394 (SKUUtils)
+// Module 8892 (SKUUtils)
 import util from "util" /* 1126 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import _modDef4467 from "module_4467" /* 4467 */;
-import matchPathCompat from "matchPathCompat" /* 4710 */;
-import StoreUtils from "StoreUtils" /* 5329 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import _modDef4659 from "module_4659" /* 4659 */;
+import matchPathCompat from "matchPathCompat" /* 4904 */;
+import StoreUtils from "StoreUtils" /* 5640 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
 const Constants = fn(1085);
 const GameGenres = Constants.GameGenres;
 ({ SKUTypes: hasOwnProperty, Routes: metroRequire, SKUProductLines: closure_7 } = Constants);
+const merged = Object.assign(GameGenres);
 let closure_8 = {};
 let closure_9 = {};
-const merged = Object.assign(GameGenres);
-const frozen = Object.freeze({ ALL: -1 });
-const keys = Object.keys(frozen);
-const item = keys.forEach((item) => {
-  const replaced = item.toLowerCase().replace(/_/g, "-");
-  closure_8[replaced] = frozen[item];
-  closure_9[frozen[item]] = replaced;
+const entries = Object.entries(Object.freeze({ ALL: -1 }));
+const item = entries.forEach((item) => {
+  [str, tmp] = item;
+  const replaced = str.toLowerCase().replace(/_/g, "-");
+  closure_8[replaced] = tmp;
+  closure_9[tmp] = replaced;
 });
 const items = [["YYYY-MM-DD", "MMMM DD, Y"], ["YYYY-MM", "MMMM Y"], ["MM-DD", "MMMM DD"], ["MM", "MMMM"], ["YYYY", "Y"]];
 const size = fn(2);
@@ -277,7 +277,7 @@ export const getReadablePreorderReleaseDate = function getReadablePreorderReleas
     let num = 0;
     if (0 < items.length) {
       [tmp3, tmp4] = items[num];
-      const obj = _modDef4467(preorderApproximateReleaseDate, tmp3, true);
+      const obj = _modDef4659(preorderApproximateReleaseDate, tmp3, true);
       while (!obj.isValid()) {
         num = num + 1;
       }

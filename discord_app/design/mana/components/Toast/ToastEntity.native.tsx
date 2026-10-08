@@ -1,17 +1,17 @@
-// === Module 14281: ToastEntity ===
+// === Module 14105: ToastEntity ===
 
-// Module 14281 (ToastEntity)
+// Module 14105 (ToastEntity)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import FastImageDefault from "FastImage" /* 5981 */;
+import FastImageDefault from "FastImage" /* 6164 */;
 import noop from "module_19" /* 19 */;
 
-const utils_StringUtils = Text(2019);
-const Text_Text = Text(4892);
+const utils_StringUtils = Text(2031);
+const Text_Text = Text(5086);
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { entity: { flexShrink: 0, width: 24, height: 24, alignItems: "center", justifyContent: "center", overflow: "hidden" }, image: { width: 24, height: 24 }, glyph: { textAlign: "center" }, avatar: { borderRadius: nativeDefault.radii.round }, guild: null, guildAcronym: null };
 let obj3 = { borderRadius: nativeDefault.radii.round };
 obj2.guild = { borderRadius: nativeDefault.radii.sm };
@@ -21,7 +21,7 @@ let closure_5 = createStyles.createStyles(obj2);
 fn(558);
 let obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 const ReactCompilerGating = fn(558);
-let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function ToastEntityContent(arg0) {
   let Text = require;
   let tmp = dependencyMap;
   const cResult = c.c(35);
@@ -174,7 +174,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[34] = tmp7;
     tmp4 = tmp7;
   }
-}) : ((arg0) => {
+}) : (function ToastEntityContent(arg0) {
   ({ entity, styles } = arg0);
   const type = entity.type;
   if ("emoji" === type) {
@@ -226,7 +226,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 const size = fn(2);
 const result = size.fileFinishedImporting("design/mana/components/Toast/ToastEntity.native.tsx");
 
-export const ToastEntity = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const ToastEntity = ReactCompilerGating.isReactCompilerEnabled() ? (function ToastEntity(arg0) {
   const cResult = c.c(11);
   ({ entity, style } = arg0);
   const tmp2 = closure_5();
@@ -280,7 +280,7 @@ export const ToastEntity = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
   cResult[3] = tmp2.entity;
   cResult[4] = items;
   tmp5 = items;
-}) : ((entity) => {
+}) : (function ToastEntity(entity) {
   entity = entity.entity;
   const tmp = closure_5();
   if ("avatar" === entity.type) {

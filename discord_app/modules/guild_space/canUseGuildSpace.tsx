@@ -1,15 +1,15 @@
-// === Module 6739: canUseGuildSpace ===
+// === Module 6915: canUseGuildSpace ===
 
-// Module 6739 (canUseGuildSpace)
-import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
+// Module 6915 (canUseGuildSpace)
+import GuildStore from "GuildStore" /* 2086 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const Permissions = fn(1085).Permissions;
 let ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsGuildSpaceAdmin(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -20,7 +20,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function s() {
+    const fn = function c() {
       let canResult = null != closure_0;
       if (canResult) {
         canResult = PermissionStore.can(Permissions.MANAGE_GUILD, tmp);
@@ -39,7 +39,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp6, tmp7);
-}) : ((arg0) => {
+}) : (function useIsGuildSpaceAdmin(arg0) {
   _require = arg0;
   const items = [PermissionStore];
   const items1 = [arg0];
@@ -67,7 +67,7 @@ export const useIsGuildSpaceAdmin = tmp2;
 export function canUseGuildSpace(guild, getChannelIdForGuildTransition) {
   return false;
 }
-export const useCanUseGuildSpace = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export const useCanUseGuildSpace = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanUseGuildSpace(arg0, arg1) {
   _require = arg0;
   const cResult = require("c").c(7);
   const obj = require("c");
@@ -97,7 +97,7 @@ export const useCanUseGuildSpace = ReactCompilerGating.isReactCompilerEnabled() 
   const obj2 = require("GuildSpaceExperiment");
   closure_5(tmp(504).useStateFromStores(first, tmp8, tmp9));
   return false;
-}) : ((arg0, arg1) => {
+}) : (function useCanUseGuildSpace(arg0, arg1) {
   _require = arg0;
   const guildSpaceExperimentEnabled = require("GuildSpaceExperiment").useGuildSpaceExperimentEnabled(arg0, arg1);
   const obj = require("GuildSpaceExperiment");

@@ -1,17 +1,17 @@
-// === Module 13132: GuildActionSheetMemberCount ===
+// === Module 12847: GuildActionSheetMemberCount ===
 
-// Module 13132 (GuildActionSheetMemberCount)
+// Module 12847 (GuildActionSheetMemberCount)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
+import Text_Text from "Text/Text" /* 5086 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { wrapper: { flexDirection: "row", alignItems: "center" }, dot: null, dotContainer: null, onlineDot: null, offlineDot: null, refreshText: null };
 let size = { width: 8, height: 8, borderRadius: nativeDefault.radii.sm };
 obj.dot = size;
@@ -19,7 +19,7 @@ obj.dotContainer = { alignItems: "center", justifyContent: "center", marginRight
 obj.onlineDot = { backgroundColor: nativeDefault.colors.TEXT_STATUS_ONLINE };
 let obj3 = { backgroundColor: nativeDefault.colors.TEXT_STATUS_ONLINE };
 obj.offlineDot = { backgroundColor: nativeDefault.colors.TEXT_STATUS_OFFLINE };
-const PlatformUtils = fn(1370);
+const PlatformUtils = fn(1382);
 let num;
 if (PlatformUtils.isAndroid()) {
   num = 14;
@@ -31,7 +31,7 @@ let obj4 = { backgroundColor: nativeDefault.colors.TEXT_STATUS_OFFLINE };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_action_sheet/native/components/GuildActionSheetMemberCount.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function MemberCount(arg0) {
   const cResult = c.c(25);
   ({ type, count, color, dotContainerWidth, textVariant } = arg0);
   if (null == count) {
@@ -149,7 +149,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
     cResult[3] = type;
     cResult[4] = formatResult;
   }
-}) : ((arg0) => {
+}) : (function MemberCount(arg0) {
   ({ type, count, color, dotContainerWidth, textVariant } = arg0);
   if (null == count) {
     const intl2 = util.intl;

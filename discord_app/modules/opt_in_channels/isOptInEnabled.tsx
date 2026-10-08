@@ -1,10 +1,10 @@
-// === Module 7059: isOptInEnabled ===
+// === Module 6081: isOptInEnabled ===
 
-// Module 7059 (isOptInEnabled)
-import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5077 */;
-import UserStore from "UserStore" /* 1377 */;
+// Module 6081 (isOptInEnabled)
+import GuildStore from "GuildStore" /* 2086 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5971 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ const Constants = fn(1085);
 ({ GuildFeatures: metroRequire, Permissions: closure_7 } = Constants);
 fn(558);
 const ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOptInEnabledForGuild(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -24,42 +24,73 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function c() {
-      let isOptInEnabledResult = UserGuildSettingsStore.isOptInEnabled(closure_0);
-      guild = GuildStore.getGuild(closure_0);
-      let flag;
-      if (guild != null) {
-        const features = guild.features;
-        flag = features.has(constants.COMMUNITY);
-      }
-      if (flag == null) {
-        flag = false;
-      }
-      const currentUser = UserStore.getCurrentUser();
-      let flag2;
-      if (currentUser != null) {
-        flag2 = currentUser.isStaff();
-      }
-      if (flag2 == null) {
-        flag2 = false;
-      }
-      if (isOptInEnabledResult) {
-        if (!flag) {
-          flag = flag2;
+    class E {
+      constructor() {
+        isOptInEnabledResult = closure_4.isOptInEnabled(closure_0);
+        guild = closure_2.getGuild(closure_0);
+        flag = undefined;
+        if (guild != null) {
+          features = guild.features;
+          tmp3 = GuildFeatures;
+          flag = features.has(GuildFeatures.COMMUNITY);
         }
-        isOptInEnabledResult = flag;
+        if (flag == null) {
+          flag = false;
+        }
+        currentUser = closure_5.getCurrentUser();
+        flag2 = undefined;
+        if (currentUser != null) {
+          flag2 = currentUser.isStaff();
+        }
+        if (flag2 == null) {
+          flag2 = false;
+        }
+        if (isOptInEnabledResult) {
+          if (!flag) {
+            flag = flag2;
+          }
+          isOptInEnabledResult = flag;
+        }
+        return isOptInEnabledResult;
       }
-      return isOptInEnabledResult;
-    };
+    }
     cResult[1] = arg0;
-    cResult[2] = fn;
-    let tmp8 = fn;
+    cResult[2] = E;
   } else {
-    tmp8 = cResult[2];
+    class E {
+      constructor() {
+        isOptInEnabledResult = closure_4.isOptInEnabled(closure_0);
+        guild = closure_2.getGuild(closure_0);
+        flag = undefined;
+        if (guild != null) {
+          features = guild.features;
+          tmp3 = GuildFeatures;
+          flag = features.has(GuildFeatures.COMMUNITY);
+        }
+        if (flag == null) {
+          flag = false;
+        }
+        currentUser = closure_5.getCurrentUser();
+        flag2 = undefined;
+        if (currentUser != null) {
+          flag2 = currentUser.isStaff();
+        }
+        if (flag2 == null) {
+          flag2 = false;
+        }
+        if (isOptInEnabledResult) {
+          if (!flag) {
+            flag = flag2;
+          }
+          isOptInEnabledResult = flag;
+        }
+        return isOptInEnabledResult;
+      }
+    }
   }
   const obj = require("c");
-  return require("initialize").useStateFromStores(first, tmp8);
-}) : ((arg0) => {
+  return require("initialize").useStateFromStores(first, E);
+}) : (function useOptInEnabledForGuild(arg0) {
   _require = arg0;
   const items = [UserGuildSettingsStore, GuildStore, UserStore];
   return require("initialize").useStateFromStores(items, () => {
@@ -108,7 +139,7 @@ export const isOptInEnabledForGuild = function isOptInEnabledForGuild(guild_id) 
   }
   return tmp2;
 };
-export const useShouldShowOnboardingAdminUpsellForGuild = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useShouldShowOnboardingAdminUpsellForGuild = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldShowOnboardingAdminUpsellForGuild(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -119,7 +150,7 @@ export const useShouldShowOnboardingAdminUpsellForGuild = ReactCompilerGating.is
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function l() {
+    const fn = function s() {
       guild = GuildStore.getGuild(closure_0);
       let flag;
       const canResult = PermissionStore.can(constants2.MANAGE_GUILD, guild);
@@ -141,7 +172,7 @@ export const useShouldShowOnboardingAdminUpsellForGuild = ReactCompilerGating.is
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp7);
-}) : ((arg0) => {
+}) : (function useShouldShowOnboardingAdminUpsellForGuild(arg0) {
   _require = arg0;
   const items = [GuildStore, PermissionStore];
   return require("initialize").useStateFromStores(items, () => {

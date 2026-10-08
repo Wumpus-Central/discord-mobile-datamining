@@ -1,31 +1,31 @@
-// === Module 10387: MediaKeyboardList ===
+// === Module 9984: MediaKeyboardList ===
 
-// Module 10387 (MediaKeyboardList)
+// Module 9984 (MediaKeyboardList)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7295 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9110 */;
-import DeviceMediaDefault from "DeviceMedia" /* 10388 */;
-import MediaKeyboardItem from "MediaKeyboardItem" /* 10392 */;
-import MediaKeyboardFooterDefault from "MediaKeyboardFooter" /* 10399 */;
-import MediaKeyboardLimitedPickerNoticeDefault from "MediaKeyboardLimitedPickerNotice" /* 10401 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7500 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9512 */;
+import DeviceMediaDefault from "DeviceMedia" /* 9985 */;
+import MediaKeyboardItem from "MediaKeyboardItem" /* 9989 */;
+import MediaKeyboardFooterDefault from "MediaKeyboardFooter" /* 9996 */;
+import MediaKeyboardLimitedPickerNoticeDefault from "MediaKeyboardLimitedPickerNotice" /* 9998 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DimensionsStore from "DimensionsStore" /* 1485 */;
+import DimensionsStore from "DimensionsStore" /* 1497 */;
 
 const MediaKeyboardItemDefault = MediaKeyboardItem;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ NativeEventEmitter, NativeModules } = get_ActivityIndicator);
-let closure_6 = fn(1614).InAppCameraUsedCameraPreviewTypes;
-let closure_7 = fn(6653).ACTION_SHEET_START_HEIGHT_RATIO;
-const NativePermissionStatus = fn(5105).NativePermissionStatus;
+let closure_6 = fn(1626).InAppCameraUsedCameraPreviewTypes;
+let closure_7 = fn(6830).ACTION_SHEET_START_HEIGHT_RATIO;
+const NativePermissionStatus = fn(7477).NativePermissionStatus;
 const jsx = fn(21).jsx;
 const nativeEventEmitter = new NativeEventEmitter(NativeModules.PhotoLibraryHelper);
 const photoLibraryChanged = "photoLibraryChanged";
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { listContainer: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, marginTop: 8, paddingTop: 8 } };
 let closure_12 = createStyles.createStyles(obj);
 const __initData = { code: "function MediaKeyboardListTsx1(){const{animatedIndex}=this.__closure;return animatedIndex.get();}" };
@@ -33,7 +33,7 @@ const __initData2 = { code: "function MediaKeyboardListTsx2(currentIndex){const{
 const __initData3 = { code: "function MediaKeyboardListTsx3(){const{animatedIndex}=this.__closure;return animatedIndex.get();}" };
 const __initData4 = { code: "function MediaKeyboardListTsx4(currentIndex){const{latch,runOnJS,setIsExpanded}=this.__closure;if(currentIndex>0.1&&!latch.get()){latch.set(true);runOnJS(setIsExpanded)(true);}}" };
 let ReactCompilerGating = fn(558);
-let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((animatedIndex) => {
+let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasMediaKeyboardBottomSheetExpanded(animatedIndex) {
   _require = animatedIndex;
   let tmp = _slicedToArray(noop.useState(false), 2);
   closure_1 = tmp2;
@@ -61,7 +61,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((animatedIndex)
   fn2.__initData = __initData2;
   const animatedReaction = obj2.useAnimatedReaction(fn, fn2);
   return tmp[0];
-}) : ((animatedIndex) => {
+}) : (function useHasMediaKeyboardBottomSheetExpanded(animatedIndex) {
   _require = animatedIndex;
   let tmp = _slicedToArray(noop.useState(false), 2);
   closure_1 = tmp2;
@@ -99,7 +99,7 @@ let obj3 = { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGRO
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardList.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function MediaKeyboardList(channel) {
   const cResult = channel(onPressCamera[12]).c(74);
   channel = channel.channel;
   const draftType = channel.draftType;
@@ -175,44 +175,33 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
       }
     }
   }
-  class J {
-    constructor() {
-      if (closure_14 !== includedUploadIds.AUTHORIZED) {
-        if (tmp !== includedUploadIds.LIMITED) {
-          return;
+  const fn2 = function z() {
+    draftType(onPressCamera[13]).refreshAssets({ batchSize: itemsPageSizeRef.current, extensions });
+    let addListenerResult;
+    if (uploadLimit != null) {
+      addListenerResult = uploadLimit.addListener(disableWhenReachedLimit, () => {
+        if (ref.current) {
+          const obj2 = { batchSize: ref2.current, extensions };
+          draftType(onPressCamera[13]).refreshAssets(obj2);
+          const obj = draftType(onPressCamera[13]);
         }
-      }
-      obj = draftType(onPressCamera[13]);
-      obj1 = { batchSize: itemsPageSizeRef.current, extensions };
-      refreshAssetsResult = obj.refreshAssets(obj1);
-      obj3 = uploadLimit;
-      addListenerResult = undefined;
-      if (uploadLimit != null) {
-        tmp4 = disableWhenReachedLimit;
-        addListenerResult = obj3.addListener(disableWhenReachedLimit, () => {
-          if (ref.current) {
-            const obj2 = { batchSize: ref2.current, extensions };
-            draftType(onPressCamera[13]).refreshAssets(obj2);
-            const obj = draftType(onPressCamera[13]);
-          }
-        });
-      }
-      closure_0 = addListenerResult;
-      return () => {
-        if (addListenerResult != null) {
-          addListenerResult.remove();
-        }
-      };
+      });
     }
-  }
+    channel = addListenerResult;
+    return () => {
+      if (addListenerResult != null) {
+        addListenerResult.remove();
+      }
+    };
+  };
   const items1 = [first1, itemsPageSizeRef, extensions];
   cResult[3] = extensions;
   cResult[4] = itemsPageSizeRef;
   cResult[5] = first1;
-  cResult[6] = J;
+  cResult[6] = fn2;
   cResult[7] = items1;
   const tmpResult = tmp(onPressCamera[14]);
-}) : ((channel) => {
+}) : (function MediaKeyboardList(channel) {
   channel = channel.channel;
   const draftType = channel.draftType;
   const onPressCamera = channel.onPressCamera;

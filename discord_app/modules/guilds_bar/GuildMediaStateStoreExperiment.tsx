@@ -1,8 +1,8 @@
-// === Module 16313: GuildMediaStateStoreExperiment ===
+// === Module 16573: GuildMediaStateStoreExperiment ===
 
-// Module 16313 (GuildMediaStateStoreExperiment)
+// Module 16573 (GuildMediaStateStoreExperiment)
 import c from "c" /* 576 */;
-import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1441 */;
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1453 */;
 
 require = fn;
 const obj = { HOOK: "hook", STORE: "store", SHADOW: "shadow" };
@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/GuildMediaStateStoreExperiment.tsx");
 
 export const GuildMediaStateSource = obj;
-export const useGuildMediaStateSource = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+export const useGuildMediaStateSource = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildMediaStateSource(location) {
   const cResult = c.c(2);
   if (cResult[0] !== location) {
     const obj2 = { location };
@@ -24,4 +24,6 @@ export const useGuildMediaStateSource = ReactCompilerGating.isReactCompilerEnabl
     tmp2 = cResult[1];
   }
   return closure_2.useConfig(tmp2).source;
-}) : ((location) => closure_2.useConfig({ location }).source);
+}) : (function useGuildMediaStateSource(location) {
+  return closure_2.useConfig({ location }).source;
+});

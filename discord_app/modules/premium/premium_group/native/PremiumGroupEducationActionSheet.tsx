@@ -1,17 +1,17 @@
-// === Module 13340: PremiumGroupEducationActionSheet ===
+// === Module 13640: PremiumGroupEducationActionSheet ===
 
-// Module 13340 (PremiumGroupEducationActionSheet)
+// Module 13640 (PremiumGroupEducationActionSheet)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import _modDef3233 from "module_3233" /* 3233 */;
-import PremiumGroupConstants from "PremiumGroupConstants" /* 4548 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 4806 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6652 */;
+import _modDef3277 from "module_3277" /* 3277 */;
+import PremiumGroupConstants from "PremiumGroupConstants" /* 4740 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 5000 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6829 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
+import createStyles from "createStyles" /* 5090 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -23,7 +23,7 @@ let closure_7 = createStyles.createStyles(obj);
 let obj2 = { flexDirection: "row", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, justifyContent: "center", borderRadius: nativeDefault.radii.lg, marginBottom: 12 };
 const result = size.fileFinishedImporting("modules/premium/premium_group/native/PremiumGroupEducationActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((aboutText) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumGroupEducationActionSheet(aboutText) {
   const cResult = c.c(18);
   aboutText = aboutText.aboutText;
   const tmp4 = closure_7();
@@ -58,7 +58,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((aboutText) => {
         if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
           const intl = util.intl;
           const obj4 = { helpCenterLink: HELP_CENTER_LINK };
-          const formatResult = intl.format(_modDef3233.ah1Ecm, obj4);
+          const formatResult = intl.format(_modDef3277.ah1Ecm, obj4);
           cResult[11] = formatResult;
           let tmp18 = formatResult;
         } else {
@@ -110,7 +110,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((aboutText) => {
   cResult[6] = tmp12;
   tmp11 = tmp12;
   const obj9 = { style: tmp4.aboutTextContainer, children: tmp8 };
-}) : ((children) => {
+}) : (function PremiumGroupEducationActionSheet(children) {
   const tmp = closure_7();
   const obj = { children: null };
   const obj2 = { style: tmp.container, children: null };
@@ -120,7 +120,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((aboutText) => {
   const items1 = [timestampProducer(View, obj3), ];
   const obj6 = { variant: "text-sm/medium", color: "text-overlay-light", style: tmp.helpdeskText, children: null };
   const intl = util.intl;
-  obj6.children = intl.format(_modDef3233.ah1Ecm, { helpCenterLink: HELP_CENTER_LINK });
+  obj6.children = intl.format(_modDef3277.ah1Ecm, { helpCenterLink: HELP_CENTER_LINK });
   items1[1] = hasOwnProperty(Text_Text.Text, obj6);
   obj2.children = items1;
   obj.children = timestampProducer(View, obj2);

@@ -1,21 +1,21 @@
-// === Module 16821: SearchScreenLayout ===
+// === Module 17100: SearchScreenLayout ===
 
-// Module 16821 (SearchScreenLayout)
+// Module 17100 (SearchScreenLayout)
 import c from "c" /* 576 */;
-import AppFreezerDefault from "AppFreezer" /* 16504 */;
-import SearchTabsLayoutDefault from "SearchTabsLayout" /* 16822 */;
-import AutocompleteScreenDefault from "AutocompleteScreen" /* 16930 */;
+import AppFreezerDefault from "AppFreezer" /* 16764 */;
+import SearchTabsLayoutDefault from "SearchTabsLayout" /* 17101 */;
+import AutocompleteScreenDefault from "AutocompleteScreen" /* 17211 */;
 import noop from "module_19" /* 19 */;
-import SearchQueryStore from "SearchQueryStore" /* 11994 */;
+import SearchQueryStore from "SearchQueryStore" /* 12067 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles({ hidden: { opacity: 0 }, visible: { flex: 1 } });
 let ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function SearchFreezeContainer(arg0) {
   const cResult = c.c(10);
   ({ visible, children, containerStyle } = arg0);
   const tmp3 = closure_8();
@@ -56,7 +56,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = tmp5;
   cResult[2] = items;
   tmp6 = items;
-}) : ((visible) => {
+}) : (function SearchFreezeContainer(visible) {
   visible = visible.visible;
   ({ children, containerStyle } = visible);
   const tmp = closure_8();
@@ -69,7 +69,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/layout/SearchScreenLayout.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function SearchScreenLayout(searchContext) {
   const cResult = searchContext(576).c(20);
   searchContext = searchContext.searchContext;
   ({ containerStyle, width } = searchContext);
@@ -158,7 +158,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((search
   cResult[6] = tmp11;
   tmp10 = tmp11;
   const tmpResult = searchContext(504);
-}) : ((width) => {
+}) : (function SearchScreenLayout(width) {
   const searchContext = width.searchContext;
   const containerStyle = width.containerStyle;
   const items = [SearchQueryStore];

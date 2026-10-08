@@ -1,15 +1,15 @@
-// === Module 12168: GuildDismissibleContentUtils ===
+// === Module 12247: GuildDismissibleContentUtils ===
 
-// Module 12168 (GuildDismissibleContentUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import Uint8ArrayUtils from "Uint8ArrayUtils" /* 2035 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
+// Module 12247 (GuildDismissibleContentUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import Uint8ArrayUtils from "Uint8ArrayUtils" /* 2047 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const UserSettingsDelay = fn(1095).UserSettingsDelay;
 const ReactCompilerGating = fn(558);
 function isContentDismissed(GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK, guildId) {
@@ -24,7 +24,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_dismissible_content/GuildDismissibleContentUtils.tsx");
 
 export { isContentDismissed };
-export const useIsContentDismissed = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export const useIsContentDismissed = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsContentDismissed(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
   const cResult = require("c").c(4);
@@ -55,7 +55,7 @@ export const useIsContentDismissed = ReactCompilerGating.isReactCompilerEnabled(
   tmp6 = fn;
   let obj = require("c");
   tmp = _require;
-}) : ((arg0, arg1) => {
+}) : (function useIsContentDismissed(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
   const items = [UserSettingsProtoStore];
@@ -86,7 +86,7 @@ export const markContentAsDismissed = function markContentAsDismissed(dc, guildI
   }, UserSettingsDelay.INFREQUENT_USER_ACTION);
   if (arg2) {
     let UNKNOWN = AUTO_DISMISS;
-    const obj3 = { type: tmp(2036).DismissibleGuildContent[dc], guild_id: guildId, action: null };
+    const obj3 = { type: tmp(2048).DismissibleGuildContent[dc], guild_id: guildId, action: null };
     if (AUTO_DISMISS == null) {
       UNKNOWN = ContentDismissActionType.UNKNOWN;
     }

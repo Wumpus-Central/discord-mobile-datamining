@@ -1,22 +1,22 @@
-// === Module 11160: createSocialLayerStorefrontProductDetailsEmbed ===
+// === Module 11282: createSocialLayerStorefrontProductDetailsEmbed ===
 
-// Module 11160 (createSocialLayerStorefrontProductDetailsEmbed)
+// Module 11282 (createSocialLayerStorefrontProductDetailsEmbed)
 import util from "util" /* 1126 */;
-import GlobalUtils from "GlobalUtils" /* 1375 */;
-import _modDef3623 from "module_3623" /* 3623 */;
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 6670 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 6741 */;
-import StorefrontUtils from "StorefrontUtils" /* 6746 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7615 */;
-import isSocialLayerApplicationDefault from "isSocialLayerApplication" /* 11161 */;
+import GlobalUtils from "GlobalUtils" /* 1387 */;
+import _modDef3697 from "module_3697" /* 3697 */;
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 6847 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 6917 */;
+import StorefrontUtils from "StorefrontUtils" /* 6922 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7861 */;
+import isSocialLayerApplicationDefault from "isSocialLayerApplication" /* 11283 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5124 */;
-import SKUStore from "SKUStore" /* 5702 */;
+import ApplicationStore from "ApplicationStore" /* 5436 */;
+import SKUStore from "SKUStore" /* 6092 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const InviteTypes = fn(7239).InviteTypes;
+const InviteTypes = fn(7418).InviteTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx");
@@ -78,7 +78,7 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
             if (result1) {
               let stringResult = string(util.t.boqtTA);
             } else {
-              stringResult = string(_modDef3623.BKf0MM);
+              stringResult = string(_modDef3697.BKf0MM);
             }
             obj3.acceptLabelText = stringResult;
             let prop;
@@ -104,7 +104,7 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
   obj6.type = InviteTypes.GUILD;
   return obj6;
 };
-export const useFetchSocialLayerStorefrontProductDetailsEmbedApplications = ReactCompilerGating.isReactCompilerEnabled() ? ((arr) => {
+export const useFetchSocialLayerStorefrontProductDetailsEmbedApplications = ReactCompilerGating.isReactCompilerEnabled() ? (function useFetchSocialLayerStorefrontProductDetailsEmbedApplications(arr) {
   const cResult = require("c").c(7);
   if (cResult[0] !== arr) {
     const _Symbol = Symbol;
@@ -170,7 +170,7 @@ export const useFetchSocialLayerStorefrontProductDetailsEmbedApplications = Reac
   }
   const obj = require("c");
   tmp = _require;
-}) : ((arg0) => {
+}) : (function useFetchSocialLayerStorefrontProductDetailsEmbedApplications(arg0) {
   _require = arg0;
   let items = [arg0];
   const memo = noop.useMemo(() => closure_0.reduce((arr, item) => {
@@ -201,5 +201,5 @@ export const useFetchSocialLayerStorefrontProductDetailsEmbedApplications = Reac
     const items = [...new Set(found.map((applicationId) => applicationId.applicationId))];
     return items;
   }, items2);
-  memo(6670)(stateFromStoresArray);
+  memo(6847)(stateFromStoresArray);
 });

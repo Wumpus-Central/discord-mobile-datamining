@@ -1,7 +1,7 @@
-// === Module 11599: CustomTypingIndicatorDynamicAsset ===
+// === Module 11665: CustomTypingIndicatorDynamicAsset ===
 
-// Module 11599 (CustomTypingIndicatorDynamicAsset)
-import FastImageDefault from "FastImage" /* 5981 */;
+// Module 11665 (CustomTypingIndicatorDynamicAsset)
+import FastImageDefault from "FastImage" /* 6164 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -10,7 +10,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles((width, gap) => {
   const obj = { emojiRow: { flexDirection: "row", gap }, emoji: { width, height: width }, text: { flexShrink: 1 } };
   return obj;
@@ -19,7 +19,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorDynamicAsset.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((emojiSize) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function CustomTypingIndicatorDynamicAsset(emojiSize) {
   const cResult = require("c").c(25);
   ({ name, suggestion, spacing, emojiGap, textVariant, textColor, textStyle, lineClamp, style, emojiSource } = emojiSize);
   if (emojiGap == null) {
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((emojiSize) => {
                     const obj2 = { direction: "horizontal", spacing, align: "center", justify: "flex-start", style, children: null };
                     const items = [tmp10, tmp17];
                     obj2.children = items;
-                    const tmp22 = closure_5(tmp(5600).Stack, obj2);
+                    const tmp22 = closure_5(tmp(5373).Stack, obj2);
                     cResult[20] = spacing;
                     cResult[21] = style;
                     cResult[22] = tmp10;
@@ -73,7 +73,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((emojiSize) => {
               }
             }
             const obj3 = { variant: textVariant, color: textColor, lineClamp, includeFontPadding: true, style: tmp14, children: tmp15 };
-            const tmp19 = closure_4(tmp(4892).Text, obj3);
+            const tmp19 = closure_4(tmp(5086).Text, obj3);
             cResult[14] = lineClamp;
             cResult[15] = tmp14;
             cResult[16] = tmp15;
@@ -84,12 +84,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((emojiSize) => {
           }
           const intl = tmp(1126).intl;
           const obj4 = { name };
-          const formatResult = intl.format(tmp(11600).getCustomTypingIndicatorSuggestionWithNameMessage(suggestion), obj4);
+          const formatResult = intl.format(tmp(11659).getCustomTypingIndicatorSuggestionWithNameMessage(suggestion), obj4);
           cResult[11] = name;
           cResult[12] = suggestion;
           cResult[13] = formatResult;
           tmp15 = formatResult;
-          const tmpResult = tmp(11600);
+          const tmpResult = tmp(11659);
         }
         const items1 = [tmp4Result.text, textStyle];
         cResult[8] = tmp4Result.text;
@@ -122,7 +122,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((emojiSize) => {
   cResult[1] = emojiSource;
   cResult[2] = mapped;
   let obj = require("c");
-}) : ((arg0) => {
+}) : (function CustomTypingIndicatorDynamicAsset(arg0) {
   ({ spacing, emojiGap, emojiSource } = arg0);
   _require = undefined;
   ({ name, suggestion, emojiSize, textVariant, textColor, textStyle, lineClamp, style } = arg0);

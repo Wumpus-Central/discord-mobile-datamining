@@ -1,9 +1,9 @@
-// === Module 11731: RecommendationAppRow ===
+// === Module 11797: RecommendationAppRow ===
 
-// Module 11731 (RecommendationAppRow)
+// Module 11797 (RecommendationAppRow)
 import c from "c" /* 576 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import AppLauncherHomeScreen from "AppLauncherHomeScreen" /* 11708 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
+import AppLauncherHomeScreen from "AppLauncherHomeScreen" /* 11773 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/base_components/RecommendationAppRow.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function RecommendationAppRow(arg0) {
   const cResult = c.c(11);
   ({ application, onPress, isFirstRow, isLastRow, showsPromoted } = arg0);
   if (cResult[0] === application.bot) {
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = applicationIconSource;
   tmp7 = applicationIconSource;
   const obj4 = { id: application.id, icon: application.icon, bot: application.bot, botIconFirst: true };
-}) : ((onPress) => {
+}) : (function RecommendationAppRow(onPress) {
   ({ application, isFirstRow } = onPress);
   if (isFirstRow === undefined) {
     isFirstRow = false;

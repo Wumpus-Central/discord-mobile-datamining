@@ -1,27 +1,27 @@
-// === Module 14453: ChangeAvatarActionSheet ===
+// === Module 14681: ChangeAvatarActionSheet ===
 
-// Module 14453 (ChangeAvatarActionSheet)
+// Module 14681 (ChangeAvatarActionSheet)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4534 */;
-import TableRow from "TableRow" /* 6000 */;
-import TableRowGroup from "TableRowGroup" /* 6081 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6651 */;
-import ActionSheet from "ActionSheet" /* 6708 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8346 */;
-import Form from "Form" /* 8924 */;
-import UserProfileUpsellButtonDefault from "UserProfileUpsellButton" /* 14436 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4726 */;
+import TableRow from "TableRow" /* 6184 */;
+import TableRowGroup from "TableRowGroup" /* 6267 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6828 */;
+import ActionSheet from "ActionSheet" /* 6885 */;
+import Form from "Form" /* 8555 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9005 */;
+import UserProfileUpsellButtonDefault from "UserProfileUpsellButton" /* 14661 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const View = fn(17).View;
 const AnalyticsObjects = fn(1085).AnalyticsObjects;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { nitroWheel: { marginLeft: nativeDefault.space.PX_8 }, sublabel: null, label: null, remove: null, upsellButton: null, upsellTitleContainer: null, titleWrapper: null, titleContainer: null };
 let obj3 = { marginLeft: nativeDefault.space.PX_8 };
 obj2.sublabel = { color: nativeDefault.colors.TEXT_DEFAULT };
@@ -40,7 +40,7 @@ let obj7 = { marginTop: nativeDefault.space.PX_12, marginBottom: nativeDefault.s
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/ChangeAvatarActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChangeAvatarActionSheet(arg0) {
   const cResult = c.c(41);
   ({ handleUploadAvatarSelect, handleRemoveAvatarSelect, handleUploadGIFAvatarSelect, handleEditAvatarDecorationSelect, showAnimatedAvatarUpsell, showRemoveAvatar } = arg0);
   const tmp6 = closure_9();
@@ -269,7 +269,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   tmp20 = tmp21;
   const obj20 = { title: tmp15, trailing: tmp17, titleWrapperStyle: tmp6.titleWrapper, titleContainerStyle: tmp6.titleContainer };
   const tmpResult = initialize;
-}) : ((showRemoveAvatar) => {
+}) : (function ChangeAvatarActionSheet(showRemoveAvatar) {
   ({ handleUploadGIFAvatarSelect, handleEditAvatarDecorationSelect, showAnimatedAvatarUpsell } = showRemoveAvatar);
   ({ handleUploadAvatarSelect, handleRemoveAvatarSelect } = showRemoveAvatar);
   if (showAnimatedAvatarUpsell === undefined) {

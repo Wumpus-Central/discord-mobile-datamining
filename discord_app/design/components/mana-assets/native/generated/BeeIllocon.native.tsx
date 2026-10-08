@@ -1,17 +1,17 @@
-// === Module 16715: BeeIllocon ===
+// === Module 16988: BeeIllocon ===
 
-// Module 16715 (BeeIllocon)
+// Module 16988 (BeeIllocon)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5981 */;
-import _modDef16716 from "module_16716" /* 16716 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import _modDef16989 from "module_16989" /* 16989 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/BeeIllocon.native.tsx");
 
-export const BeeIllocon = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const BeeIllocon = ReactCompilerGating.isReactCompilerEnabled() ? (function BeeIllocon(arg0) {
   const cResult = c.c(8);
   ({ accessible, accessibilityLabel, resizeMode, size } = arg0);
   let num = 64;
@@ -19,7 +19,7 @@ export const BeeIllocon = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0)
     num = size;
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { uri: _modDef16716 };
+    const obj2 = { uri: _modDef16989 };
     cResult[0] = obj2;
     let first = obj2;
   } else {
@@ -27,10 +27,9 @@ export const BeeIllocon = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0)
   }
   if (cResult[1] !== num) {
     const size1 = { width: num, height: num };
-    const items = [size1];
     cResult[1] = num;
-    cResult[2] = items;
-    let tmp5 = items;
+    cResult[2] = size1;
+    let tmp5 = size1;
   } else {
     tmp5 = cResult[2];
   }
@@ -51,17 +50,16 @@ export const BeeIllocon = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0)
   cResult[6] = tmp5;
   cResult[7] = tmp7;
   tmp6 = tmp7;
-}) : ((size) => {
+}) : (function BeeIllocon(size) {
   let num = size.size;
   ({ accessible, accessibilityLabel, resizeMode } = size);
   if (num === undefined) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef16716 };
+  const obj2 = { uri: _modDef16989 };
   obj.source = obj2;
-  const items = [{ width: num, height: num }];
-  obj.style = items;
+  obj.style = { width: num, height: num };
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;

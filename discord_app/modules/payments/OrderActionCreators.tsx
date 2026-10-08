@@ -1,10 +1,10 @@
-// === Module 6755: OrderActionCreators ===
+// === Module 6931: OrderActionCreators ===
 
-// Module 6755 (OrderActionCreators)
+// Module 6931 (OrderActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import BillingError_mod from "BillingError" /* 4556 */;
+import BillingError_mod from "BillingError" /* 4748 */;
 
 require = fn;
 let closure_6 = async function _signOrder(arg0) {
@@ -38,9 +38,10 @@ let closure_6 = async function _signOrder(arg0) {
           closure_129_1 = undefined;
           closure_129_2 = undefined;
           closure_129_3 = undefined;
-          ({ orderId: closure_129_0, expectedRevision: closure_129_1, loadId: closure_129_2, purchaseToken: closure_129_3 } = closure_0);
           closure_129_4 = undefined;
+          ({ orderId: closure_129_0, expectedRevision: closure_129_1, loadId: closure_129_2, purchaseToken: closure_129_3, gatewayCheckoutContext: closure_129_4 } = closure_0);
           closure_129_5 = undefined;
+          closure_129_6 = undefined;
           c5 = 1;
           c6 = 1;
           return { value: "Reflect", done: true };
@@ -54,24 +55,27 @@ let closure_6 = async function _signOrder(arg0) {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          closure_129_5 = {};
+          closure_129_6 = {};
           if (null != closure_129_1) {
-            closure_129_5.expected_revision = closure_129_1;
+            closure_129_6.expected_revision = closure_129_1;
           }
           if (null != closure_129_3) {
-            closure_129_5.purchase_token = closure_129_3;
+            closure_129_6.purchase_token = closure_129_3;
+          }
+          if (null != closure_129_4) {
+            closure_129_6.gateway_checkout_context = closure_129_4;
           }
           c4 = 1;
           const HTTP = closure_130_0(closure_130_1[4]).HTTP;
-          const request = { url: closure_130_3.ORDER_SIGN(closure_129_0), body: closure_129_5, context: null, rejectWithError: true };
-          let tmp50;
+          const request = { url: closure_130_3.ORDER_SIGN(closure_129_0), body: closure_129_6, context: null, rejectWithError: true };
+          let tmp55;
           if (null != closure_129_2) {
             if ("" !== closure_129_2) {
               const obj5 = { load_id: closure_129_2 };
-              tmp50 = obj5;
+              tmp55 = obj5;
             }
           }
-          request.context = tmp50;
+          request.context = tmp55;
           c5 = 3;
           c6 = 1;
           const obj6 = { value: HTTP.post(request), done: false };
@@ -79,9 +83,9 @@ let closure_6 = async function _signOrder(arg0) {
         }
       } else if (2 === tmp7) {
         c4 = 0;
-        closure_129_6 = closure_3;
-        if (closure_129_6 instanceof closure_130_0(closure_130_1[4]).HTTPResponseError) {
-          if (400 === closure_129_6.status) {
+        closure_129_7 = closure_3;
+        if (closure_129_7 instanceof closure_130_0(closure_130_1[4]).HTTPResponseError) {
+          if (400 === closure_129_7.status) {
             if ((function isOrderShape(body) {
               let tmp = null != body && typeof body === "object";
               if (tmp) {
@@ -91,12 +95,12 @@ let closure_6 = async function _signOrder(arg0) {
                 tmp = "status" in body;
               }
               return tmp;
-            })(closure_129_6.body)) {
-              throw new closure_130_5(closure_129_6.body);
+            })(closure_129_7.body)) {
+              throw new closure_130_5(closure_129_7.body);
             }
           }
         }
-        throw closure_129_6;
+        throw closure_129_7;
       } else if (arg0 === 1) {
         c6 = 3;
         throw value;
@@ -106,23 +110,23 @@ let closure_6 = async function _signOrder(arg0) {
         const obj7 = { value, done: true };
         return obj7;
       } else {
-        closure_129_4 = value;
+        closure_129_5 = value;
         c4 = 0;
-        if (null == closure_129_4.body) {
+        if (null == closure_129_5.body) {
           const _Error = Error;
           const error = new Error("Invalid sign order response");
           throw error;
         } else {
           c6 = 3;
-          const obj = { value: closure_129_4.body, done: true };
+          const obj = { value: closure_129_5.body, done: true };
           return obj;
         }
       }
-    } catch (tmp55) {
-      closure_3 = tmp55;
+    } catch (tmp60) {
+      closure_3 = tmp60;
       if (tmp4 === c4) {
         c6 = tmp2;
-        throw tmp55;
+        throw tmp60;
       } else {
         c5 = tmp;
       }

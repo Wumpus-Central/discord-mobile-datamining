@@ -1,21 +1,21 @@
-// === Module 13381: PromotionsHooks ===
+// === Module 13681: PromotionsHooks ===
 
-// Module 13381 (PromotionsHooks)
+// Module 13681 (PromotionsHooks)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4534 */;
-import PromotionUtils from "PromotionUtils" /* 13247 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4726 */;
+import PromotionUtils from "PromotionUtils" /* 13547 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
-import PromotionsStore from "PromotionsStore" /* 10409 */;
+import UserStore from "UserStore" /* 1389 */;
+import PromotionsStore from "PromotionsStore" /* 10006 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const PremiumTypes = fn(1379).PremiumTypes;
+const PremiumTypes = fn(1391).PremiumTypes;
 let ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEligibleActiveOutboundPromotions(arg0) {
   const cResult = stateFromStores(576).c(13);
   if (cResult[0] !== arg0) {
     let obj2 = arg0;
@@ -46,14 +46,12 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const stateFromStoresArray = stateFromStores(504).useStateFromStoresArray(tmp6, tmp7);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [PromotionsStore];
-    class P {
-      constructor() {
-        return closure_1_5.consumedInboundPromotionId;
-      }
-    }
+    const fn2 = function f() {
+      return PromotionsStore.consumedInboundPromotionId;
+    };
     cResult[4] = items1;
-    cResult[5] = P;
-    let tmp10 = P;
+    cResult[5] = fn2;
+    let tmp10 = fn2;
     let tmp9 = items1;
   } else {
     tmp9 = cResult[4];
@@ -63,14 +61,12 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   stateFromStores = stateFromStores(504).useStateFromStores(tmp9, tmp10);
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [PromotionsStore];
-    class P {
-      constructor() {
-        return closure_1_5.consumedInboundPromotionId;
-      }
-    }
+    const fn3 = function h() {
+      return PromotionsStore.claimedOutboundPromotionCodes;
+    };
     cResult[6] = items2;
-    cResult[7] = tmp16;
-    let tmp14 = tmp16;
+    cResult[7] = fn3;
+    let tmp14 = fn3;
     let tmp13 = items2;
   } else {
     tmp13 = cResult[6];
@@ -82,21 +78,16 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     if (cResult[9] === stateFromStores) {
       if (cResult[10] === tmp5) {
         if (cResult[11] === stateFromStoresArray) {
-          let tmp18 = cResult[12];
+          let tmp16 = cResult[12];
         }
-        return tmp18;
+        return tmp16;
       }
     }
   }
   if (undefined !== includeClaimedPromotions && includeClaimedPromotions) {
     const _Set = Set;
-    class P {
-      constructor() {
-        return closure_1_5.consumedInboundPromotionId;
-      }
-    }
+    new Set(stateFromStores1.map((promotion) => promotion.promotion.id));
   }
-  c1 = null;
   const found = stateFromStoresArray.filter((id) => {
     let tmp = id.id !== stateFromStores;
     if (tmp) {
@@ -106,8 +97,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         let flag = !result;
         if (!result) {
           flag = true;
-          if (_null != null) {
-            const hasItem = _null.has(id.id);
+          if (set != null) {
+            const hasItem = set.has(id.id);
             flag = true;
           }
         }
@@ -123,9 +114,9 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[10] = undefined !== includeClaimedPromotions && includeClaimedPromotions;
   cResult[11] = stateFromStoresArray;
   cResult[12] = found;
-  tmp18 = found;
+  tmp16 = found;
   const tmpResult4 = stateFromStores(504);
-}) : (() => {
+}) : (function useEligibleActiveOutboundPromotions() {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -176,8 +167,9 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 let closure_7 = tmp2;
 fn(558);
 ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOutboundPromotions() {
   const cResult = stateFromStores(576).c(38);
+  let tmp4 = globalThis;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [PromotionsStore];
     const fn = function l() {
@@ -194,14 +186,12 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   stateFromStores = stateFromStores(504).useStateFromStores(tmp5, tmp6);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [UserStore];
-    class P {
-      constructor() {
-        return closure_1_4.getCurrentUser();
-      }
-    }
+    const fn2 = function f() {
+      return currentUser.getCurrentUser();
+    };
     cResult[2] = items1;
-    cResult[3] = P;
-    let tmp10 = P;
+    cResult[3] = fn2;
+    let tmp10 = fn2;
     let tmp9 = items1;
   } else {
     tmp9 = cResult[2];
@@ -210,63 +200,49 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const tmpResult = stateFromStores(504);
   const stateFromStores1 = stateFromStores(504).useStateFromStores(tmp9, tmp10);
   if (cResult[4] !== stateFromStores1) {
-    PremiumUtilsDefault;
-    class P {
-      constructor() {
-        return closure_1_4.getCurrentUser();
-      }
-    }
+    const isPremiumExactlyResult = PremiumUtilsDefault.isPremiumExactly(stateFromStores1, PremiumTypes.TIER_2);
     cResult[4] = stateFromStores1;
-    cResult[5] = tmp17;
-    let tmp13 = tmp17;
+    cResult[5] = isPremiumExactlyResult;
+    let tmp13 = isPremiumExactlyResult;
   } else {
     tmp13 = cResult[5];
   }
   if (cResult[6] === stateFromStores1) {
     if (cResult[7] === tmp13) {
-      let tmp18 = cResult[8];
+      let tmp17 = cResult[8];
     }
-    importDefault = tmp18;
+    importDefault = tmp17;
     const _Symbol = Symbol;
-    class P {
-      constructor() {
-        return closure_1_4.getCurrentUser();
-      }
-    }
-    if (tmp21 === Symbol.for("react.memo_cache_sentinel")) {
+    if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
       const items2 = [PromotionsStore];
-      class P {
-        constructor() {
-          return closure_1_4.getCurrentUser();
-        }
-      }
+      const fn3 = function y() {
+        return PromotionsStore.claimedOutboundPromotionCodes;
+      };
       cResult[9] = items2;
-      cResult[10] = tmp25;
-      let tmp23 = tmp25;
-      let tmp22 = items2;
+      cResult[10] = fn3;
+      let tmp21 = fn3;
+      let tmp20 = items2;
     } else {
-      tmp22 = cResult[9];
-      tmp23 = cResult[10];
+      tmp20 = cResult[9];
+      tmp21 = cResult[10];
     }
-    const stateFromStores2 = tmp(504).useStateFromStores(tmp22, tmp23);
+    const stateFromStores2 = tmp(504).useStateFromStores(tmp20, tmp21);
     const _Symbol2 = Symbol;
     if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
       const items3 = [PromotionsStore];
-      class P {
-        constructor() {
-          return closure_1_4.getCurrentUser();
-        }
-      }
+      const fn4 = function w() {
+        return PromotionsStore.claimedOutboundPromotionCodesLoaded;
+      };
       cResult[11] = items3;
-      cResult[12] = tmp29;
-      let tmp27 = tmp29;
-      let tmp26 = items3;
+      cResult[12] = fn4;
+      let tmp24 = fn4;
+      let tmp23 = items3;
     } else {
-      tmp26 = cResult[11];
-      tmp27 = cResult[12];
+      tmp23 = cResult[11];
+      tmp24 = cResult[12];
     }
     const tmpResult5 = tmp(504);
-    const stateFromStores3 = tmp(504).useStateFromStores(tmp26, tmp27);
+    const stateFromStores3 = tmp(504).useStateFromStores(tmp23, tmp24);
     if (cResult[13] !== stateFromStores) {
       class A {
         constructor() {
@@ -280,15 +256,10 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         }
       }
       const items4 = [stateFromStores];
-      class P {
-        constructor() {
-          return closure_1_4.getCurrentUser();
-        }
-      }
       cResult[13] = stateFromStores;
       cResult[14] = A;
       cResult[15] = items4;
-      let tmp32 = items4;
+      let tmp28 = items4;
     } else {
       class A {
         constructor() {
@@ -301,9 +272,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           return;
         }
       }
-      tmp32 = cResult[15];
+      tmp28 = cResult[15];
     }
-    const effect = noop.useEffect(A, tmp32);
+    const effect = noop.useEffect(A, tmp28);
     if (cResult[16] === stateFromStores) {
       class A {
         constructor() {
@@ -316,14 +287,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           return;
         }
       }
-      const effect1 = noop.useEffect(R, tmp35);
+      const effect1 = noop.useEffect(D, tmp31);
       const _Symbol3 = Symbol;
-      class P {
-        constructor() {
-          return closure_1_4.getCurrentUser();
-        }
-      }
-      if (tmp37 === Symbol.for("react.memo_cache_sentinel")) {
+      if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
         class M {
           constructor() {
             obj = closure_1(closure_2[9]);
@@ -334,13 +300,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           }
         }
         const items5 = [];
-        class P {
-          constructor() {
-            return closure_1_4.getCurrentUser();
-          }
-        }
+        cResult[20] = M;
         cResult[21] = items5;
-        let tmp39 = items5;
+        let tmp34 = items5;
       } else {
         class M {
           constructor() {
@@ -351,9 +313,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             return;
           }
         }
-        tmp39 = cResult[21];
+        tmp34 = cResult[21];
       }
-      const effect2 = noop.useEffect(M, tmp39);
+      const effect2 = noop.useEffect(M, tmp34);
       if (cResult[22] !== stateFromStores2) {
         class M {
           constructor() {
@@ -364,12 +326,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             return;
           }
         }
-        const claimedOutboundPromotionCodeMap = obj8.getClaimedOutboundPromotionCodeMap(stateFromStores2);
-        class P {
-          constructor() {
-            return closure_1_4.getCurrentUser();
-          }
-        }
+        const claimedOutboundPromotionCodeMap = obj9.getClaimedOutboundPromotionCodeMap(stateFromStores2);
+        cResult[22] = stateFromStores2;
         cResult[23] = claimedOutboundPromotionCodeMap;
       } else {
         class M {
@@ -393,12 +351,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             return;
           }
         }
-        cResult[24] = tmp44;
-        class P {
-          constructor() {
-            return closure_1_4.getCurrentUser();
-          }
-        }
+        cResult[24] = tmp39;
       } else {
         class M {
           constructor() {
@@ -410,7 +363,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           }
         }
       }
-      const arr9 = closure_7(tmp43);
+      const arr9 = closure_7(tmp39);
       if (cResult[25] !== arr9) {
         class M {
           constructor() {
@@ -422,58 +375,83 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           }
         }
         if (cResult[27] === Symbol.for("react.memo_cache_sentinel")) {
-          class H {
-            constructor(arg0) {
-              return arg0.id;
-            }
-          }
-          cResult[27] = H;
-          class P {
+          class M {
             constructor() {
-              return closure_1_4.getCurrentUser();
+              obj = closure_1(closure_2[9]);
+              waitResult = obj.wait(() => {
+                const claimedOutboundPromotionCodes = closure_1_1(closure_1_2[10]).fetchClaimedOutboundPromotionCodes();
+              });
+              return;
             }
           }
+          cResult[27] = tmp43;
         } else {
-          class H {
-            constructor(arg0) {
-              return arg0.id;
+          class M {
+            constructor() {
+              obj = closure_1(closure_2[9]);
+              waitResult = obj.wait(() => {
+                const claimedOutboundPromotionCodes = closure_1_1(closure_1_2[10]).fetchClaimedOutboundPromotionCodes();
+              });
+              return;
             }
           }
         }
-        class P {
-          constructor() {
-            return closure_1_4.getCurrentUser();
-          }
-        }
-        const tmp482 = new tmp48(arr9.map(tmp47));
+        const set = new tmp4.Set(arr9.map(tmp43));
+        tmp4 = set;
         cResult[25] = arr9;
-        cResult[26] = tmp482;
+        cResult[26] = set;
       } else {
-        class H {
-          constructor(arg0) {
-            return arg0.id;
+        class M {
+          constructor() {
+            obj = closure_1(closure_2[9]);
+            waitResult = obj.wait(() => {
+              const claimedOutboundPromotionCodes = closure_1_1(closure_1_2[10]).fetchClaimedOutboundPromotionCodes();
+            });
+            return;
           }
         }
-        dependencyMap = tmp46;
-        if (cResult[28] === tmp46) {
-          class H {
-            constructor(arg0) {
-              return arg0.id;
+        dependencyMap = tmp41;
+        if (cResult[28] === tmp41) {
+          class M {
+            constructor() {
+              obj = closure_1(closure_2[9]);
+              waitResult = obj.wait(() => {
+                const claimedOutboundPromotionCodes = closure_1_1(closure_1_2[10]).fetchClaimedOutboundPromotionCodes();
+              });
+              return;
             }
           }
         }
-        class P {
-          constructor() {
-            return closure_1_4.getCurrentUser();
+        if (cResult[31] !== tmp41) {
+          class M {
+            constructor() {
+              obj = closure_1(closure_2[9]);
+              waitResult = obj.wait(() => {
+                const claimedOutboundPromotionCodes = closure_1_1(closure_1_2[10]).fetchClaimedOutboundPromotionCodes();
+              });
+              return;
+            }
+          }
+          cResult[31] = tmp41;
+          cResult[32] = tmp49;
+        } else {
+          class M {
+            constructor() {
+              obj = closure_1(closure_2[9]);
+              waitResult = obj.wait(() => {
+                const claimedOutboundPromotionCodes = closure_1_1(closure_1_2[10]).fetchClaimedOutboundPromotionCodes();
+              });
+              return;
+            }
           }
         }
-        const found = stateFromStores2.filter(tmp53);
-        cResult[28] = tmp46;
+        const found = stateFromStores2.filter(tmp49);
+        cResult[28] = tmp41;
         cResult[29] = stateFromStores2;
         cResult[30] = found;
       }
     }
-    class R {
+    class D {
       constructor() {
         obj = closure_1(closure_2[9]);
         waitResult = obj.wait(() => {
@@ -489,28 +467,32 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         return;
       }
     }
-    const items6 = [stateFromStores, tmp18];
+    const items6 = [stateFromStores, tmp17];
     cResult[16] = stateFromStores;
-    cResult[17] = tmp18;
-    cResult[18] = R;
+    cResult[17] = tmp17;
+    cResult[18] = D;
     cResult[19] = items6;
-    tmp35 = items6;
+    tmp31 = items6;
     const tmpResult6 = tmp(504);
   }
   const tmpResult4 = stateFromStores(504);
   const isPremiumResult = PremiumUtilsDefault.isPremium(stateFromStores1);
   if (isPremiumResult) {
-    class H {
-      constructor(arg0) {
-        return arg0.id;
+    class M {
+      constructor() {
+        obj = closure_1(closure_2[9]);
+        waitResult = obj.wait(() => {
+          const claimedOutboundPromotionCodes = closure_1_1(closure_1_2[10]).fetchClaimedOutboundPromotionCodes();
+        });
+        return;
       }
     }
   }
   cResult[6] = stateFromStores1;
   cResult[7] = tmp13;
   cResult[8] = !isPremiumResult;
-  tmp18 = tmp20;
-}) : (() => {
+  tmp17 = tmp19;
+}) : (function useOutboundPromotions() {
   const items = [PromotionsStore];
   stateFromStores = stateFromStores(stateFromStores2[6]).useStateFromStores(items, () => PromotionsStore.lastFetchedActivePromotions);
   let obj = stateFromStores(stateFromStores2[6]);
@@ -591,7 +573,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   return { promotionsLoaded, activeOutboundPromotions, claimedEndedOutboundPromotions, claimedOutboundPromotionCodeMap };
 });
 ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useUnseenOutboundPromotions() {
   const cResult = stateFromStores(576).c(10);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [PromotionsStore];
@@ -612,11 +594,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     if (cResult[7] !== arr2) {
       const _Symbol = Symbol;
       if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn2 = function v(promotion) {
+        const fn3 = function v(promotion) {
           return stateFromStores(dependencyMap[7]).shouldShowOutboundPromotionOnPlatform(promotion);
         };
-        cResult[9] = fn2;
-        let tmp12 = fn2;
+        cResult[9] = fn3;
+        let tmp12 = fn3;
       } else {
         tmp12 = cResult[9];
       }
@@ -628,31 +610,23 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
   } else {
     if (cResult[5] !== stateFromStores) {
-      class P {
-        constructor(arg0) {
-          date = new Date(arg0.startDate);
-          date1 = new Date(closure_0);
-          return date > date1;
-        }
-      }
+      const fn2 = function f(startDate) {
+        const date = new Date(startDate.startDate);
+        return date > new Date(stateFromStores);
+      };
       cResult[5] = stateFromStores;
-      cResult[6] = P;
+      cResult[6] = fn2;
+      let tmp8 = fn2;
     } else {
-      class P {
-        constructor(arg0) {
-          date = new Date(arg0.startDate);
-          date1 = new Date(closure_0);
-          return date > date1;
-        }
-      }
+      tmp8 = cResult[6];
     }
-    const found1 = arr2.filter(P);
+    const found1 = arr2.filter(tmp8);
     cResult[2] = arr2;
     cResult[3] = stateFromStores;
     cResult[4] = found1;
   }
   const tmpResult = stateFromStores(504);
-}) : (() => {
+}) : (function useUnseenOutboundPromotions() {
   const items = [PromotionsStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => PromotionsStore.lastSeenOutboundPromotionStartDate);
   const tmp2 = closure_7();
@@ -672,7 +646,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   return memo.filter((item) => stateFromStores(dependencyMap[7]).shouldShowOutboundPromotionOnPlatform(item));
 });
 ReactCompilerGating = fn(558);
-const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsInPromotion(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -694,7 +668,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp6);
-}) : ((arg0) => {
+}) : (function useIsInPromotion(arg0) {
   _require = arg0;
   const items = [PromotionsStore];
   return require("initialize").useStateFromStores(items, () => PromotionsStore.hasPromotion(closure_0));
@@ -706,7 +680,7 @@ export const useEligibleActiveOutboundPromotions = tmp2;
 export const useOutboundPromotions = tmp3;
 export const useUnseenOutboundPromotions = tmp4;
 export const useIsInPromotion = tmp5;
-export const useHasActiveBogoPromotion = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useHasActiveBogoPromotion = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasActiveBogoPromotion() {
   const cResult = c.c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function t() {
@@ -735,7 +709,7 @@ export const useHasActiveBogoPromotion = ReactCompilerGating.isReactCompilerEnab
     tmp8 = cResult[3];
   }
   return initialize.useStateFromStores(tmp7, tmp8);
-}) : (() => {
+}) : (function useHasActiveBogoPromotion() {
   const effect = noop.useEffect(() => {
     const result = require("PromotionsActionCreators").maybeFetchActivePromotions();
   }, []);

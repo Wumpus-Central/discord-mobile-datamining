@@ -1,10 +1,10 @@
-// === Module 13624: OngoingCallTimer ===
+// === Module 13447: OngoingCallTimer ===
 
-// Module 13624 (OngoingCallTimer)
+// Module 13447 (OngoingCallTimer)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import TimerDefault from "Timer" /* 13625 */;
+import TimerDefault from "Timer" /* 13448 */;
 import noop from "module_19" /* 19 */;
-import CallStore from "CallStore" /* 5444 */;
+import CallStore from "CallStore" /* 5754 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_calls/native/components/OngoingCallTimer.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function OnGoingCallTimer(arg0) {
   const cResult = channelId(576).c(9);
   ({ style, channelId } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[8] = tmp13;
   tmp12 = tmp13;
   const tmpResult = channelId(504);
-}) : ((style) => {
+}) : (function OnGoingCallTimer(style) {
   const channelId = style.channelId;
   const items = [CallStore];
   const items1 = [channelId];

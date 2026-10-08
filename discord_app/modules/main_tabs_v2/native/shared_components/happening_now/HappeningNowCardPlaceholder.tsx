@@ -1,21 +1,21 @@
-// === Module 16033: HappeningNowCardPlaceholder ===
+// === Module 16293: HappeningNowCardPlaceholder ===
 
-// Module 16033 (HappeningNowCardPlaceholder)
+// Module 16293 (HappeningNowCardPlaceholder)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import timing from "timing" /* 4897 */;
-import HappeningNowCardDefault from "HappeningNowCard" /* 15130 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import timing from "timing" /* 5091 */;
+import HappeningNowCardDefault from "HappeningNowCard" /* 15392 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 
 require = fn;
 const View = fn(17).View;
-const HAPPENING_NOW_CONTENT_HEIGHT = fn(15129).HAPPENING_NOW_CONTENT_HEIGHT;
+const HAPPENING_NOW_CONTENT_HEIGHT = fn(15391).HAPPENING_NOW_CONTENT_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { placeholderContainer: { flexDirection: "row", alignItems: "center" }, placeholderIcon: null, placeholderContent: null, placeholderText: null, placeholderTextTop: null, placeholderTextBottom: null };
 let size = { height: HAPPENING_NOW_CONTENT_HEIGHT, width: HAPPENING_NOW_CONTENT_HEIGHT, borderRadius: nativeDefault.radii.sm, marginRight: 12, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 obj2.placeholderIcon = size;
@@ -29,7 +29,7 @@ const __initData = { code: "function HappeningNowCardPlaceholderTsx2(){const{opa
 let closure_10 = { code: "function HappeningNowCardPlaceholderTsx3(){const{opacity,withRepeat,withTiming,endOpacity,duration,Easing}=this.__closure;opacity.set(withRepeat(withTiming(endOpacity,{duration:duration,easing:Easing.ease}),-1,true));}" };
 const __initData2 = { code: "function HappeningNowCardPlaceholderTsx4(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };
 let ReactCompilerGating = fn(558);
-let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((duration) => {
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBlinkStyle(duration) {
   const cResult = duration(sharedValue[7]).c(5);
   duration = duration.duration;
   const endOpacity = duration.endOpacity;
@@ -75,7 +75,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((duration) => {
   tmp6 = items;
   tmp5 = fn;
   let obj2 = duration(sharedValue[8]);
-}) : ((duration) => {
+}) : (function useBlinkStyle(duration) {
   duration = duration.duration;
   const endOpacity = duration.endOpacity;
   let sharedValue;
@@ -107,7 +107,7 @@ let obj3 = { height: 12, borderRadius: 5, backgroundColor: nativeDefault.colors.
 size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardPlaceholder.tsx");
 
-export const HappeningNowCardPlaceholder = ReactCompilerGating.isReactCompilerEnabled() ? ((panelVariant) => {
+export const HappeningNowCardPlaceholder = ReactCompilerGating.isReactCompilerEnabled() ? (function HappeningNowCardPlaceholder(panelVariant) {
   const cResult = c.c(24);
   panelVariant = panelVariant.panelVariant;
   let tmp3 = undefined !== panelVariant;
@@ -221,7 +221,7 @@ export const HappeningNowCardPlaceholder = ReactCompilerGating.isReactCompilerEn
   cResult[2] = tmp4.placeholderContainer;
   cResult[3] = items4;
   tmp7 = items4;
-}) : ((panelVariant) => {
+}) : (function HappeningNowCardPlaceholder(panelVariant) {
   let flag = panelVariant.panelVariant;
   if (flag === undefined) {
     flag = false;

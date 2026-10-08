@@ -1,16 +1,16 @@
-// === Module 14480: useFetchNameplate ===
+// === Module 14710: useFetchNameplate ===
 
-// Module 14480 (useFetchNameplate)
+// Module 14710 (useFetchNameplate)
 import c from "c" /* 576 */;
-import utils from "utils" /* 1977 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1980 */;
-import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 10791 */;
+import utils from "utils" /* 1989 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1992 */;
+import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 10482 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/collectibles/nameplates/hooks/useFetchNameplate.tsx");
 
-export const useFetchNameplate = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useFetchNameplate = ReactCompilerGating.isReactCompilerEnabled() ? (function useFetchNameplate(arg0) {
   const cResult = c.c(7);
   const fetchCollectiblesProduct = useFetchCollectiblesProduct.useFetchCollectiblesProduct(arg0);
   ({ product, isFetching } = fetchCollectiblesProduct);
@@ -51,7 +51,7 @@ export const useFetchNameplate = ReactCompilerGating.isReactCompilerEnabled() ? 
   cResult[5] = product;
   cResult[6] = obj3;
   tmp10 = obj3;
-}) : ((arg0) => {
+}) : (function useFetchNameplate(arg0) {
   const fetchCollectiblesProduct = useFetchCollectiblesProduct.useFetchCollectiblesProduct(arg0);
   const product = fetchCollectiblesProduct.product;
   let type;

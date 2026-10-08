@@ -1,19 +1,19 @@
-// === Module 17108: Settings ===
+// === Module 17389: Settings ===
 
-// Module 17108 (Settings)
+// Module 17389 (Settings)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import DeviceUtils from "DeviceUtils" /* 4872 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 6440 */;
-import profileModalTransition from "profileModalTransition" /* 16980 */;
-import SettingsNavigatorDefault from "SettingsNavigator" /* 17109 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import DeviceUtils from "DeviceUtils" /* 5066 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 6618 */;
+import profileModalTransition from "profileModalTransition" /* 17261 */;
+import SettingsNavigatorDefault from "SettingsNavigator" /* 17390 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { containerOuter: { flex: 1, overflow: "hidden" }, containerOuterTablet: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingHorizontal: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, flex: 1 }, container: { flex: 1 }, containerTablet: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingHorizontal: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, flex: 1 };
 obj2.containerTablet = { borderRadius: nativeDefault.radii.md, overflow: "hidden", flex: 1 };
@@ -23,7 +23,7 @@ let obj4 = { borderRadius: nativeDefault.radii.md, overflow: "hidden", flex: 1 }
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/settings/Settings.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function Settings() {
   const cResult = c.c(15);
   const reportProfileModalTransition = profileModalTransition.useReportProfileModalTransition();
   ({ top, left, right: containerOuterTablet } = useSafeAreaInsetsDefault());
@@ -101,7 +101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[7] = tmp8;
   cResult[8] = items1;
   const tmp6 = useSafeAreaInsetsDefault();
-}) : (() => {
+}) : (function Settings() {
   const reportProfileModalTransition = profileModalTransition.useReportProfileModalTransition();
   const rect = useSafeAreaInsetsDefault();
   const top = rect.top;

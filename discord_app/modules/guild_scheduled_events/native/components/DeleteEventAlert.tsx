@@ -1,22 +1,22 @@
-// === Module 9492: DeleteEventAlert ===
+// === Module 8656: DeleteEventAlert ===
 
-// Module 9492 (DeleteEventAlert)
+// Module 8656 (DeleteEventAlert)
 import util from "util" /* 1126 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7050 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6059 */;
 
 const require = globalThis.__r;
 
 require = fn;
 let jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({ contentText: { textAlign: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/DeleteEventAlert.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((eventId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function DeleteEventAlert(eventId) {
   const cResult = require("c").c(32);
   eventId = eventId.eventId;
   _require = eventId;
@@ -62,96 +62,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((eventId) => {
             }
             if (cResult[12] !== tmp13) {
               const tmp13Result = tmp13();
-              class E {
-                constructor() {
-                  if (closure_5) {
-                    tmp7 = closure_0;
-                    tmp8 = closure_2;
-                    intl2 = closure_0(closure_2[10]).intl;
-                    tmp9 = closure_0;
-                    tmp10 = closure_2;
-                    stringResult = intl2.string(closure_0(closure_2[10]).t.tqClly);
-                  } else {
-                    tmp = closure_4;
-                    tmp2 = closure_0;
-                    tmp3 = closure_2;
-                    intl = closure_0(closure_2[10]).intl;
-                    string = intl.string;
-                    tmp4 = closure_0;
-                    tmp5 = closure_2;
-                    t = closure_0(closure_2[10]).t;
-                    if (closure_4) {
-                      stringResult = string(t.wr33rW);
-                    } else {
-                      stringResult = string(t.B9sJLX);
-                    }
-                  }
-                  return stringResult;
-                }
-              }
+              cResult[12] = tmp13;
               cResult[13] = tmp13Result;
               let tmp14 = tmp13Result;
             } else {
               tmp14 = cResult[13];
             }
-            class E {
-              constructor() {
-                if (closure_5) {
-                  tmp7 = closure_0;
-                  tmp8 = closure_2;
-                  intl2 = closure_0(closure_2[10]).intl;
-                  tmp9 = closure_0;
-                  tmp10 = closure_2;
-                  stringResult = intl2.string(closure_0(closure_2[10]).t.tqClly);
-                } else {
-                  tmp = closure_4;
-                  tmp2 = closure_0;
-                  tmp3 = closure_2;
-                  intl = closure_0(closure_2[10]).intl;
-                  string = intl.string;
-                  tmp4 = closure_0;
-                  tmp5 = closure_2;
-                  t = closure_0(closure_2[10]).t;
-                  if (closure_4) {
-                    stringResult = string(t.wr33rW);
-                  } else {
-                    stringResult = string(t.B9sJLX);
-                  }
-                }
-                return stringResult;
-              }
-            }
+            const _Symbol = Symbol;
             if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-              let string = tmp(tmp2[10]).intl.string;
-              class E {
-                constructor() {
-                  if (closure_5) {
-                    tmp7 = closure_0;
-                    tmp8 = closure_2;
-                    intl2 = closure_0(closure_2[10]).intl;
-                    tmp9 = closure_0;
-                    tmp10 = closure_2;
-                    stringResult = intl2.string(closure_0(closure_2[10]).t.tqClly);
-                  } else {
-                    tmp = closure_4;
-                    tmp2 = closure_0;
-                    tmp3 = closure_2;
-                    intl = closure_0(closure_2[10]).intl;
-                    string = intl.string;
-                    tmp4 = closure_0;
-                    tmp5 = closure_2;
-                    t = closure_0(closure_2[10]).t;
-                    if (closure_4) {
-                      stringResult = string(t.wr33rW);
-                    } else {
-                      stringResult = string(t.B9sJLX);
-                    }
-                  }
-                  return stringResult;
-                }
-              }
-              cResult[14] = tmp17;
-              let tmp16 = tmp17;
+              let intl = tmp(tmp2[10]).intl;
+              let stringResult = intl.string(tmp(tmp2[10]).t.v2GWNQ);
+              cResult[14] = stringResult;
+              let tmp16 = stringResult;
             } else {
               tmp16 = cResult[14];
             }
@@ -164,100 +86,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((eventId) => {
                   if (cResult[20] === tmp10) {
                     if (cResult[22] === tmp12) {
                       if (cResult[23] === tmp21) {
-                        let tmp23 = cResult[24];
+                        let tmp24 = cResult[24];
                       }
-                      const _Symbol = Symbol;
-                      class E {
-                        constructor() {
-                          if (closure_5) {
-                            tmp7 = closure_0;
-                            tmp8 = closure_2;
-                            intl2 = closure_0(closure_2[10]).intl;
-                            tmp9 = closure_0;
-                            tmp10 = closure_2;
-                            stringResult = intl2.string(closure_0(closure_2[10]).t.tqClly);
-                          } else {
-                            tmp = closure_4;
-                            tmp2 = closure_0;
-                            tmp3 = closure_2;
-                            intl = closure_0(closure_2[10]).intl;
-                            string = intl.string;
-                            tmp4 = closure_0;
-                            tmp5 = closure_2;
-                            t = closure_0(closure_2[10]).t;
-                            if (closure_4) {
-                              stringResult = string(t.wr33rW);
-                            } else {
-                              stringResult = string(t.B9sJLX);
-                            }
-                          }
-                          return stringResult;
-                        }
-                      }
-                      if (tmp25 === Symbol.for("react.memo_cache_sentinel")) {
+                      const _Symbol2 = Symbol;
+                      if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
                         const obj2 = { variant: "secondary", text: null };
-                        class E {
-                          constructor() {
-                            if (closure_5) {
-                              tmp7 = closure_0;
-                              tmp8 = closure_2;
-                              intl2 = closure_0(closure_2[10]).intl;
-                              tmp9 = closure_0;
-                              tmp10 = closure_2;
-                              stringResult = intl2.string(closure_0(closure_2[10]).t.tqClly);
-                            } else {
-                              tmp = closure_4;
-                              tmp2 = closure_0;
-                              tmp3 = closure_2;
-                              intl = closure_0(closure_2[10]).intl;
-                              string = intl.string;
-                              tmp4 = closure_0;
-                              tmp5 = closure_2;
-                              t = closure_0(closure_2[10]).t;
-                              if (closure_4) {
-                                stringResult = string(t.wr33rW);
-                              } else {
-                                stringResult = string(t.B9sJLX);
-                              }
-                            }
-                            return stringResult;
-                          }
-                        }
-                        const intl3 = tmp(tmp2[10]).intl;
-                        obj2.text = intl3.string(tmp(tmp2[10]).t.oEAioF);
-                        const tmp29 = <tmp28 key="cancel" variant="secondary" text={null} />;
+                        const intl5 = tmp(tmp2[10]).intl;
+                        obj2.text = intl5.string(tmp(tmp2[10]).t.oEAioF);
+                        const tmp29 = jsx(tmp(tmp2[12]).AlertActionButton, { variant: "secondary", text: null }, "cancel");
                         cResult[25] = tmp29;
+                        let tmp27 = tmp29;
+                      } else {
+                        tmp27 = cResult[25];
                       }
-                      if (cResult[26] !== tmp23) {
-                        const items1 = [tmp23, ];
-                        class E {
-                          constructor() {
-                            if (closure_5) {
-                              tmp7 = closure_0;
-                              tmp8 = closure_2;
-                              intl2 = closure_0(closure_2[10]).intl;
-                              tmp9 = closure_0;
-                              tmp10 = closure_2;
-                              stringResult = intl2.string(closure_0(closure_2[10]).t.tqClly);
-                            } else {
-                              tmp = closure_4;
-                              tmp2 = closure_0;
-                              tmp3 = closure_2;
-                              intl = closure_0(closure_2[10]).intl;
-                              string = intl.string;
-                              tmp4 = closure_0;
-                              tmp5 = closure_2;
-                              t = closure_0(closure_2[10]).t;
-                              if (closure_4) {
-                                stringResult = string(t.wr33rW);
-                              } else {
-                                stringResult = string(t.B9sJLX);
-                              }
-                            }
-                            return stringResult;
-                          }
-                        }
-                        cResult[26] = tmp23;
+                      if (cResult[26] !== tmp24) {
+                        const items1 = [tmp24, tmp27];
+                        cResult[26] = tmp24;
                         cResult[27] = items1;
                         let tmp30 = items1;
                       } else {
@@ -279,107 +123,35 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((eventId) => {
                       cResult[31] = tmp33;
                       tmp31 = tmp33;
                     }
-                    class E {
-                      constructor() {
-                        if (closure_5) {
-                          tmp7 = closure_0;
-                          tmp8 = closure_2;
-                          intl2 = closure_0(closure_2[10]).intl;
-                          tmp9 = closure_0;
-                          tmp10 = closure_2;
-                          stringResult = intl2.string(closure_0(closure_2[10]).t.tqClly);
-                        } else {
-                          tmp = closure_4;
-                          tmp2 = closure_0;
-                          tmp3 = closure_2;
-                          intl = closure_0(closure_2[10]).intl;
-                          string = intl.string;
-                          tmp4 = closure_0;
-                          tmp5 = closure_2;
-                          t = closure_0(closure_2[10]).t;
-                          if (closure_4) {
-                            stringResult = string(t.wr33rW);
-                          } else {
-                            stringResult = string(t.B9sJLX);
-                          }
-                        }
-                        return stringResult;
-                      }
-                    }
                     let obj4 = { variant: "destructive", onPress: tmp12, text: cResult[21] };
-                    const tmp24 = jsx(tmp(tmp2[12]).AlertActionButton, { variant: "destructive", onPress: tmp12, text: cResult[21] }, "delete");
+                    const tmp26 = jsx(tmp(tmp2[12]).AlertActionButton, { variant: "destructive", onPress: tmp12, text: cResult[21] }, "delete");
                     cResult[22] = tmp12;
                     cResult[23] = cResult[21];
-                    cResult[24] = tmp24;
-                    tmp23 = tmp24;
+                    cResult[24] = tmp26;
+                    tmp24 = tmp26;
                   }
                 }
-                class E {
-                  constructor() {
-                    if (closure_5) {
-                      tmp7 = closure_0;
-                      tmp8 = closure_2;
-                      intl2 = closure_0(closure_2[10]).intl;
-                      tmp9 = closure_0;
-                      tmp10 = closure_2;
-                      stringResult = intl2.string(closure_0(closure_2[10]).t.tqClly);
-                    } else {
-                      tmp = closure_4;
-                      tmp2 = closure_0;
-                      tmp3 = closure_2;
-                      intl = closure_0(closure_2[10]).intl;
-                      string = intl.string;
-                      tmp4 = closure_0;
-                      tmp5 = closure_2;
-                      t = closure_0(closure_2[10]).t;
-                      if (closure_4) {
-                        stringResult = string(t.wr33rW);
-                      } else {
-                        stringResult = string(t.B9sJLX);
-                      }
-                    }
-                    return stringResult;
+                if (tmp10) {
+                  if (!tmp11) {
+                    const intl3 = tmp(tmp2[10]).intl;
+                    let stringResult1 = intl3.string(tmp(tmp2[10]).t["8ZsNv5"]);
                   }
+                  cResult[19] = tmp11;
+                  cResult[20] = tmp10;
+                  cResult[21] = stringResult1;
                 }
-                let intl2 = tmp(tmp2[10]).intl;
-                intl2.string(tmp(tmp2[10]).t.B9sJLX);
+                const intl4 = tmp(tmp2[10]).intl;
+                stringResult1 = intl4.string(tmp(tmp2[10]).t.B9sJLX);
               }
             }
             let tmp19 = null;
             if (tmp10) {
               tmp19 = null;
               if (!tmp11) {
-                let obj5 = { variant: "text-md/medium", color: "text-default", style: null, children: null };
-                class E {
-                  constructor() {
-                    if (closure_5) {
-                      tmp7 = closure_0;
-                      tmp8 = closure_2;
-                      intl2 = closure_0(closure_2[10]).intl;
-                      tmp9 = closure_0;
-                      tmp10 = closure_2;
-                      stringResult = intl2.string(closure_0(closure_2[10]).t.tqClly);
-                    } else {
-                      tmp = closure_4;
-                      tmp2 = closure_0;
-                      tmp3 = closure_2;
-                      intl = closure_0(closure_2[10]).intl;
-                      string = intl.string;
-                      tmp4 = closure_0;
-                      tmp5 = closure_2;
-                      t = closure_0(closure_2[10]).t;
-                      if (closure_4) {
-                        stringResult = string(t.wr33rW);
-                      } else {
-                        stringResult = string(t.B9sJLX);
-                      }
-                    }
-                    return stringResult;
-                  }
-                }
-                let intl = tmp(tmp2[10]).intl;
-                obj5.children = intl.format(tmp(tmp2[10]).t.ZcpcyO, {});
-                tmp19 = jsx(tmp(tmp2[11]).Text, { variant: "text-md/medium", color: "text-default", style: null, children: null });
+                let obj5 = { variant: "text-md/medium", color: "text-default", style: tmp4.contentText, children: null };
+                let intl2 = tmp(tmp2[10]).intl;
+                obj5.children = intl2.format(tmp(tmp2[10]).t.ZcpcyO, {});
+                tmp19 = jsx(tmp(tmp2[11]).Text, { variant: "text-md/medium", color: "text-default", style: tmp4.contentText, children: null });
               }
             }
             cResult[15] = tmp11;
@@ -388,37 +160,26 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((eventId) => {
             cResult[18] = tmp19;
             tmp18 = tmp19;
           }
-          class E {
-            constructor() {
-              if (closure_5) {
-                tmp7 = closure_0;
-                tmp8 = closure_2;
-                intl2 = closure_0(closure_2[10]).intl;
-                tmp9 = closure_0;
-                tmp10 = closure_2;
-                stringResult = intl2.string(closure_0(closure_2[10]).t.tqClly);
+          function getHeaderText() {
+            if (closure_5) {
+              const intl2 = util.intl;
+              let stringResult = intl2.string(util.t.tqClly);
+            } else {
+              const intl = util.intl;
+              const string = intl.string;
+              const t = util.t;
+              if (closure_4) {
+                stringResult = string(t.wr33rW);
               } else {
-                tmp = closure_4;
-                tmp2 = closure_0;
-                tmp3 = closure_2;
-                intl = closure_0(closure_2[10]).intl;
-                string = intl.string;
-                tmp4 = closure_0;
-                tmp5 = closure_2;
-                t = closure_0(closure_2[10]).t;
-                if (closure_4) {
-                  stringResult = string(t.wr33rW);
-                } else {
-                  stringResult = string(t.B9sJLX);
-                }
+                stringResult = string(t.B9sJLX);
               }
-              return stringResult;
             }
+            return stringResult;
           }
           cResult[9] = tmp11;
           cResult[10] = tmp10;
-          cResult[11] = E;
-          tmp13 = E;
+          cResult[11] = getHeaderText;
+          tmp13 = getHeaderText;
         }
       }
     }
@@ -507,7 +268,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((eventId) => {
   cResult[7] = recurrenceId;
   cResult[8] = handleConfirmClick;
   tmp12 = handleConfirmClick;
-}) : ((eventException) => {
+}) : (function DeleteEventAlert(eventException) {
   ({ eventId: require, guildId: importDefault, recurrenceId } = eventException);
   eventException = eventException.eventException;
   closure_4 = undefined;
@@ -537,7 +298,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((eventId) => {
             return obj4;
           } else {
             closure_0 = tmp4;
-            const obj8 = v1(9213);
+            const obj8 = v1(8494);
             if (GuildScheduledEventStore) {
               v1 = 2;
               dependencyMap = 1;
@@ -568,7 +329,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((eventId) => {
             const obj = { value, done: true };
             return obj;
           }
-          v1(4860).hideActionSheet();
+          v1(5054).hideActionSheet();
           dependencyMap = 3;
           return { value: "IconComponent", done: null };
         }

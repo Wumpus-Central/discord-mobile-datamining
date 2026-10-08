@@ -1,6 +1,6 @@
-// === Module 5801: StaticRouteRendering ===
+// === Module 5406: StaticRouteRendering ===
 
-// Module 5801 (StaticRouteRendering)
+// Module 5406 (StaticRouteRendering)
 import util from "util" /* 1126 */;
 import size from "module_2" /* 2 */;
 
@@ -26,12 +26,12 @@ export const staticRouteToTranslation = function staticRouteToTranslation(id) {
   const intl4 = util.intl;
   return intl4.string(util.t.VbpLyU);
 };
-export const staticRouteToItemString = function staticRouteToItemString(GuildRoleStore, id, itemId, id) {
+export const staticRouteToItemString = function staticRouteToItemString(GuildRoleStore, id, itemId, guildId) {
   if ("linked-roles" === id) {
-    if (null == id) {
+    if (null == guildId) {
       return null;
     } else {
-      const role = GuildRoleStore.getRole(id, itemId);
+      const role = GuildRoleStore.getRole(guildId, itemId);
       let name = null;
       if (null != role) {
         const tags = role.tags;

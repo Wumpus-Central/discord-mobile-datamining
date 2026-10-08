@@ -1,8 +1,8 @@
-// === Module 6570: useFastestListPropsScrollReporting ===
+// === Module 6746: useFastestListPropsScrollReporting ===
 
-// Module 6570 (useFastestListPropsScrollReporting)
+// Module 6746 (useFastestListPropsScrollReporting)
 import c from "c" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -10,7 +10,7 @@ const __initData = { code: "function useFastestListPropsScrollReportingNativeTsx
 const __initData2 = { code: "function useFastestListPropsScrollReportingNativeTsx2(event){const{scrollPosition,horizontal}=this.__closure;if(scrollPosition!=null){scrollPosition.set(horizontal?event.contentOffset.x:event.contentOffset.y);}}" };
 let result = size.fileFinishedImporting("modules/fastest_list/props/useFastestListPropsScrollReporting.native.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((scrollReporting, horizontal) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFastestListPropsScrollReporting(scrollReporting, horizontal) {
   closure_0 = horizontal;
   const cResult = c.c(8);
   let scrollPosition;
@@ -68,7 +68,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((scrollReporting,
     tmp6 = obj6;
   }
   const tmpResult = ReanimatedRexport;
-}) : ((scrollReporting, horizontal) => {
+}) : (function useFastestListPropsScrollReporting(scrollReporting, horizontal) {
   closure_0 = horizontal;
   let scrollPosition;
   if ("animatedScrollPosition" === scrollReporting.scrollReporting) {

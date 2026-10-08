@@ -1,9 +1,9 @@
-// === Module 9188: useTrackActivityVideoPip ===
+// === Module 10756: useTrackActivityVideoPip ===
 
-// Module 9188 (useTrackActivityVideoPip)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+// Module 10756 (useTrackActivityVideoPip)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
 import noop from "module_19" /* 19 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 9101 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 10675 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/useTrackActivityVideoPip.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useTrackActivityPip(arg0) {
   _require = arg0;
   const cResult = require("c").c(8);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -30,9 +30,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   let obj = require("c");
   const stateFromStores = require("useStateFromStores").useStateFromStores(tmp4, tmp5);
-  const tmp8 = stateFromStores(7957)(stateFromStores);
+  const tmp8 = stateFromStores(5928)(stateFromStores);
   dependencyMap = tmp8;
-  const tmp9 = stateFromStores(9167)();
+  const tmp9 = stateFromStores(10733)();
   noop = tmp9;
   if (cResult[2] === arg0) {
     if (cResult[3] === tmp9) {
@@ -45,47 +45,39 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
   }
-  class I {
-    constructor() {
-      compositeInstanceId = closure_3;
-      if (null != closure_3) {
-        if (null != closure_2) {
-          if (closure_1 !== tmp8) {
-            track = AnalyticEvents;
-            tmp3 = closure_1;
-            tmp4 = closure_2;
-            tmp2 = tmp ? track.ACTIVITY_VIDEO_PIP_SHOWN : track.ACTIVITY_VIDEO_PIP_HIDDEN;
-            tmp5 = closure_1(closure_2[8]);
-            track = tmp5.track;
-            obj = { channel_id: null, guild_id: null, application_id: null, activity_session_id: null };
-            tmp6 = closure_0;
-            ({ id: obj.channel_id, guild_id: obj.guild_id } = closure_0);
-            ({ applicationId: obj.application_id, compositeInstanceId } = compositeInstanceId);
-            obj.activity_session_id = compositeInstanceId;
-            trackResult = track(tmp2, obj);
-          }
+  const fn2 = function u() {
+    compositeInstanceId = closure_3;
+    if (null != closure_3) {
+      if (null != closure_2) {
+        if (stateFromStores !== tmp8) {
+          const track = AnalyticsUtilsDefault.track;
+          const obj = { channel_id: null, guild_id: null, application_id: null, activity_session_id: null };
+          ({ id: obj.channel_id, guild_id: obj.guild_id } = closure_0);
+          ({ applicationId: obj.application_id, compositeInstanceId } = compositeInstanceId);
+          obj.activity_session_id = compositeInstanceId;
+          track(tmp ? track.ACTIVITY_VIDEO_PIP_SHOWN : track.ACTIVITY_VIDEO_PIP_HIDDEN, obj);
+          const tmp2 = tmp ? track.ACTIVITY_VIDEO_PIP_SHOWN : track.ACTIVITY_VIDEO_PIP_HIDDEN;
         }
       }
-      return;
     }
-  }
+  };
   const items1 = [stateFromStores, tmp8, arg0, tmp9];
   cResult[2] = arg0;
   cResult[3] = tmp9;
   cResult[4] = stateFromStores;
   cResult[5] = tmp8;
-  cResult[6] = I;
+  cResult[6] = fn2;
   cResult[7] = items1;
   tmp11 = items1;
-  tmp10 = I;
+  tmp10 = fn2;
   const tmpResult = require("useStateFromStores");
-}) : ((arg0) => {
+}) : (function useTrackActivityPip(arg0) {
   _require = arg0;
   const items = [ChannelCallLifecycleStore];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => pipEnabledWhileFocusedOnActivityOrStream.isPipEnabledWhileFocusedOnActivityOrStream());
-  let tmp2 = stateFromStores(7957)(stateFromStores);
+  let tmp2 = stateFromStores(5928)(stateFromStores);
   dependencyMap = tmp2;
-  const tmp3 = stateFromStores(9167)();
+  const tmp3 = stateFromStores(10733)();
   noop = tmp3;
   const items1 = [stateFromStores, tmp2, arg0, tmp3];
   const effect = noop.useEffect(() => {

@@ -1,18 +1,18 @@
-// === Module 15887: AnimatedKeyboardProviderController ===
+// === Module 16146: AnimatedKeyboardProviderController ===
 
-// Module 15887 (AnimatedKeyboardProviderController)
+// Module 16146 (AnimatedKeyboardProviderController)
 import c from "c" /* 576 */;
-import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1632 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4618 */;
+import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1644 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4810 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c2, jsxs: c3 } = jsxProd);
-let ReanimatedRexport = fn(4618);
+let ReanimatedRexport = fn(4810);
 const mutable = ReanimatedRexport.makeMutable(0);
-ReanimatedRexport = fn(4618);
-const mutable1 = ReanimatedRexport.makeMutable(fn(4618).KeyboardState.UNKNOWN);
+ReanimatedRexport = fn(4810);
+const mutable1 = ReanimatedRexport.makeMutable(fn(4810).KeyboardState.UNKNOWN);
 fn(558);
 const __initData = { code: "function AnimatedKeyboardProviderControllerTsx1(e){const{animatedKeyboardState,KeyboardState}=this.__closure;animatedKeyboardState.set(e.height===0?KeyboardState.CLOSED:KeyboardState.OPEN);}" };
 const __initData2 = { code: "function AnimatedKeyboardProviderControllerTsx2(e_0){const{animatedKeyboardHeight}=this.__closure;animatedKeyboardHeight.set(e_0.height);}" };
@@ -21,7 +21,7 @@ const __initData4 = { code: "function AnimatedKeyboardProviderControllerTsx4(e){
 const __initData5 = { code: "function AnimatedKeyboardProviderControllerTsx5(e_0){const{animatedKeyboardHeight}=this.__closure;animatedKeyboardHeight.set(e_0.height);}" };
 const __initData6 = { code: "function AnimatedKeyboardProviderControllerTsx6(e_1){const{animatedKeyboardState,KeyboardState,animatedKeyboardHeight}=this.__closure;animatedKeyboardState.set(e_1.height===0?KeyboardState.CLOSED:KeyboardState.OPEN);animatedKeyboardHeight.set(e_1.height);}" };
 const ReactCompilerGating = fn(558);
-let closure_12 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_12 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ComponentInner() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { onStart: null, onMove: null, onEnd: null };
@@ -70,7 +70,7 @@ let closure_12 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() =>
   }
   KeyboardChatScrollView.useKeyboardHandler(tmp4, tmp5);
   return null;
-}) : (() => {
+}) : (function ComponentInner() {
   const obj2 = { onStart: null, onMove: null, onEnd: null };
   const fn = function o(height) {
     if (0 === height.height) {
@@ -114,7 +114,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/keyboard/native/AnimatedKeyboardProviderController.tsx");
 
 export default {
-  Component: ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
+  Component: ReactCompilerGating.isReactCompilerEnabled() ? (function Component(children) {
     const cResult = c.c(3);
     children = children.children;
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -136,7 +136,7 @@ export default {
       tmp8 = cResult[2];
     }
     return tmp8;
-  }) : ((children) => {
+  }) : (function Component(children) {
     const obj = { enabled: true, navigationBarTranslucent: true, preserveEdgeToEdge: true, statusBarTranslucent: true, children: null };
     const items = [children.children, React2(closure_12, {})];
     obj.children = items;

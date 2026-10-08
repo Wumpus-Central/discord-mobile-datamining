@@ -1,10 +1,10 @@
-// === Module 8147: AgeVerificationMethodAvailability ===
+// === Module 7528: AgeVerificationMethodAvailability ===
 
-// Module 8147 (AgeVerificationMethodAvailability)
+// Module 7528 (AgeVerificationMethodAvailability)
 import c from "c" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import AppStoreAgeSignalSupport from "AppStoreAgeSignalSupport" /* 8148 */;
-import GoogleWalletActionCreators from "GoogleWalletActionCreators" /* 8149 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import AppStoreAgeSignalSupport from "AppStoreAgeSignalSupport" /* 7529 */;
+import GoogleWalletActionCreators from "GoogleWalletActionCreators" /* 7530 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -47,7 +47,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_assurance/AgeVerificationMethodAvailability.native.tsx");
 
-export const useAvailableMethodsV2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arr) => {
+export const useAvailableMethodsV2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAvailableMethodsV2(arr) {
   const cResult = c.c(6);
   [tmp5, require] = noop.useState(false);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -107,7 +107,7 @@ export const useAvailableMethodsV2 = ReactCompilerGating.isReactCompilerEnabled(
   cResult[5] = found;
   tmp11 = found;
   const tmp4 = _slicedToArray(noop.useState(false), 2);
-}) : ((arg0) => {
+}) : (function useAvailableMethodsV2(arg0) {
   closure_0 = arg0;
   const tmp = memo(noop.useState(false), 2);
   const first = tmp[0];

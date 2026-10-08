@@ -1,6 +1,6 @@
-// === Module 8782: TwoWayLinkDiscordConsent ===
+// === Module 9128: TwoWayLinkDiscordConsent ===
 
-// Module 8782 (TwoWayLinkDiscordConsent)
+// Module 9128 (TwoWayLinkDiscordConsent)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -15,14 +15,14 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsxs: closure_8, jsx: closure_9 } = jsxProd);
 let closure_10 = new LoggerDefault("TwoWayLinkDiscordConsentNative");
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_11 = createStyles.createStyles({ scroller: { alignSelf: "stretch", flexShrink: 1 }, flex: { flex: 1 } });
 const ReactCompilerGating = fn(558);
 const tmp4 = new LoggerDefault("TwoWayLinkDiscordConsentNative");
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/TwoWayLinkDiscordConsent.tsx");
 
-export const TwoWayLinkDiscordConsent = ReactCompilerGating.isReactCompilerEnabled() ? ((callbackCode) => {
+export const TwoWayLinkDiscordConsent = ReactCompilerGating.isReactCompilerEnabled() ? (function TwoWayLinkDiscordConsent(callbackCode) {
   const cResult = require("c").c(39);
   callbackCode = callbackCode.callbackCode;
   _require = callbackCode;
@@ -189,7 +189,7 @@ export const TwoWayLinkDiscordConsent = ReactCompilerGating.isReactCompilerEnabl
       }
     })();
   });
-  const fn = function() {
+  function t1() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -198,16 +198,16 @@ export const TwoWayLinkDiscordConsent = ReactCompilerGating.isReactCompilerEnabl
       applyArgumentsResult = apply(self, arguments);
     }
     return applyArgumentsResult;
-  };
+  }
   cResult[0] = callbackCode;
   cResult[1] = callbackState;
   cResult[2] = onError;
   cResult[3] = onNext;
   cResult[4] = platformType;
-  cResult[5] = fn;
-  tmp6 = fn;
+  cResult[5] = t1;
+  tmp6 = t1;
   const tmp5 = onError(noop.useState(false), 2);
-}) : ((callbackCode) => {
+}) : (function TwoWayLinkDiscordConsent(callbackCode) {
   callbackCode = callbackCode.callbackCode;
   _require = callbackCode;
   const callbackState = callbackCode.callbackState;

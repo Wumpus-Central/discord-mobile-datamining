@@ -1,26 +1,26 @@
-// === Module 15866: RedesignSettingsNotificationScreen ===
+// === Module 16125: RedesignSettingsNotificationScreen ===
 
-// Module 15866 (RedesignSettingsNotificationScreen)
+// Module 16125 (RedesignSettingsNotificationScreen)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import _modDef2847 from "module_2847" /* 2847 */;
-import useMountEffectDefault from "useMountEffect" /* 5597 */;
-import SettingBuilders from "SettingBuilders" /* 11142 */;
-import SettingLayoutDefault from "SettingLayout" /* 14515 */;
-import ContextualOptInNudgeHoldoutExperimentDefault from "ContextualOptInNudgeHoldoutExperiment" /* 15321 */;
-import NotificationPermissionSettingsHeaderDefault from "NotificationPermissionSettingsHeader" /* 15323 */;
-import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 15867 */;
+import _modDef2891 from "module_2891" /* 2891 */;
+import useMountEffectDefault from "useMountEffect" /* 5392 */;
+import SettingBuilders from "SettingBuilders" /* 11262 */;
+import SettingLayoutDefault from "SettingLayout" /* 14775 */;
+import ContextualOptInNudgeHoldoutExperimentDefault from "ContextualOptInNudgeHoldoutExperiment" /* 15583 */;
+import NotificationPermissionSettingsHeaderDefault from "NotificationPermissionSettingsHeader" /* 15585 */;
+import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 16126 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_4 = fn(15320).initializeAndroidNotificationSettingsStore;
-const MobileUserSettings = fn(7645).MobileUserSettings;
+let closure_4 = fn(15582).initializeAndroidNotificationSettingsStore;
+const MobileUserSettings = fn(7966).MobileUserSettings;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/notifications/settings/native/routes/RedesignSettingsNotificationScreen.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function RedesignSettingsNotificationsScreen() {
   const cResult = c.c(6);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { location: "SettingsNotificationsScreen" };
@@ -36,7 +36,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const items = [MobileNotifSettingsRouteBuilders.buildOverviewCategoriesSection(), ];
     const obj5 = { label: null, settings: null };
     const intl = util.intl;
-    obj5.label = intl.string(_modDef2847.nvBHcD);
+    obj5.label = intl.string(_modDef2891.nvBHcD);
     const items1 = [, , , , , , ];
     ({ REDESIGN_IN_APP_NOTIFICATIONS: arr2[0], REDESIGN_IN_APP_MESSAGE_SOUNDS: arr2[1], REDESIGN_ANDROID_MESSAGE_NOTIFICATIONS: arr2[2], REDESIGN_IOS_NATIVE_PHONE_INTEGRATION: arr2[3], REDESIGN_ANDROID_NOTIFICATION_LIGHTS: arr2[4], REDESIGN_ANDROID_NOTIFICATION_VIBRATIONS: arr2[5], REDESIGN_ANDROID_NOTIFICATION_SOUNDS: arr2[6] } = MobileUserSettings);
     obj5.settings = items1;
@@ -101,7 +101,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
   }
   return tmp13;
-}) : (() => {
+}) : (function RedesignSettingsNotificationsScreen() {
   const tmp = !ContextualOptInNudgeHoldoutExperimentDefault.useConfig({ location: "SettingsNotificationsScreen" }).inHoldout;
   closure_0 = tmp;
   let items = [tmp];
@@ -111,7 +111,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const items = [MobileNotifSettingsRouteBuilders.buildOverviewCategoriesSection(), ];
     const obj4 = { label: null, settings: null };
     const intl = util.intl;
-    obj4.label = intl.string(_modDef2847.nvBHcD);
+    obj4.label = intl.string(_modDef2891.nvBHcD);
     const items1 = [, , , , , , ];
     ({ REDESIGN_IN_APP_NOTIFICATIONS: arr2[0], REDESIGN_IN_APP_MESSAGE_SOUNDS: arr2[1], REDESIGN_ANDROID_MESSAGE_NOTIFICATIONS: arr2[2], REDESIGN_IOS_NATIVE_PHONE_INTEGRATION: arr2[3], REDESIGN_ANDROID_NOTIFICATION_LIGHTS: arr2[4], REDESIGN_ANDROID_NOTIFICATION_VIBRATIONS: arr2[5], REDESIGN_ANDROID_NOTIFICATION_SOUNDS: arr2[6] } = MobileUserSettings);
     obj4.settings = items1;

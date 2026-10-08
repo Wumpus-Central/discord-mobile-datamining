@@ -1,25 +1,25 @@
-// === Module 17981: GuildRoleSubscriptionTierCreationModal ===
+// === Module 18268: GuildRoleSubscriptionTierCreationModal ===
 
-// Module 17981 (GuildRoleSubscriptionTierCreationModal)
+// Module 18268 (GuildRoleSubscriptionTierCreationModal)
 import util from "util" /* 1126 */;
-import ToastUtils from "ToastUtils" /* 4573 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15060 */;
+import ToastUtils from "ToastUtils" /* 4765 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15322 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RoleTierEditStore from "RoleTierEditStore" /* 17972 */;
+import RoleTierEditStore from "RoleTierEditStore" /* 18259 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GuildRoleSubscriptionsConstants = fn(15038);
+const GuildRoleSubscriptionsConstants = fn(15300);
 ({ GuildRoleSubscriptionsTierScenes: closure_8, GUILD_ROLE_SUBSCRIPTION_TIER_CREATION_KEY: closure_9 } = GuildRoleSubscriptionsConstants);
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierCreationModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRoleSubscriptionTierCreationModal(guildId) {
   const cResult = require("c").c(22);
   guildId = guildId.guildId;
   _require = guildId;
@@ -41,165 +41,76 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
               let tmp7 = cResult[6];
             }
             if (cResult[7] !== error) {
-              class O {
-                constructor() {
-                  obj = error;
-                  if (null != error) {
-                    tmp = closure_0;
-                    tmp2 = closure_3;
-                    obj2 = closure_0(closure_3[9]);
-                    anyErrorMessage = obj.getAnyErrorMessage();
-                    if (anyErrorMessage == null) {
-                      intl = tmp(tmp2[10]).intl;
-                      anyErrorMessage = intl.string(tmp(tmp2[10]).t.R0RpRX);
-                    }
-                    presentErrorResult = obj2.presentError(anyErrorMessage);
+              const fn = function b() {
+                if (null != error) {
+                  let anyErrorMessage = error.getAnyErrorMessage();
+                  if (anyErrorMessage == null) {
+                    const intl = util.intl;
+                    anyErrorMessage = intl.string(util.t.R0RpRX);
                   }
-                  return;
+                  ToastUtils.presentError(anyErrorMessage);
                 }
-              }
+              };
               const items = [error];
               cResult[7] = error;
-              cResult[8] = O;
+              cResult[8] = fn;
               cResult[9] = items;
               let tmp9 = items;
+              let tmp8 = fn;
             } else {
-              class O {
-                constructor() {
-                  obj = error;
-                  if (null != error) {
-                    tmp = closure_0;
-                    tmp2 = closure_3;
-                    obj2 = closure_0(closure_3[9]);
-                    anyErrorMessage = obj.getAnyErrorMessage();
-                    if (anyErrorMessage == null) {
-                      intl = tmp(tmp2[10]).intl;
-                      anyErrorMessage = intl.string(tmp(tmp2[10]).t.R0RpRX);
-                    }
-                    presentErrorResult = obj2.presentError(anyErrorMessage);
-                  }
-                  return;
-                }
-              }
+              tmp8 = cResult[8];
               tmp9 = cResult[9];
             }
-            const layoutEffect = obj2.useLayoutEffect(O, tmp9);
+            const layoutEffect = obj2.useLayoutEffect(tmp8, tmp9);
             const _Symbol = Symbol;
             if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-              class O {
-                constructor() {
-                  obj = error;
-                  if (null != error) {
-                    tmp = closure_0;
-                    tmp2 = closure_3;
-                    obj2 = closure_0(closure_3[9]);
-                    anyErrorMessage = obj.getAnyErrorMessage();
-                    if (anyErrorMessage == null) {
-                      intl = tmp(tmp2[10]).intl;
-                      anyErrorMessage = intl.string(tmp(tmp2[10]).t.R0RpRX);
-                    }
-                    presentErrorResult = obj2.presentError(anyErrorMessage);
-                  }
-                  return;
-                }
-              }
               const items1 = [, , , , ];
               ({ DETAILS: arr2[0], CHANNEL_BENEFITS: arr2[1], INTANGIBLE_BENEFITS: arr2[2], DESIGN: arr2[3], CONFIRMATION: arr2[4] } = closure_8);
               cResult[10] = items1;
-              const tmp12 = items1;
+              let tmp12 = items1;
             } else {
-              class O {
-                constructor() {
-                  obj = error;
-                  if (null != error) {
-                    tmp = closure_0;
-                    tmp2 = closure_3;
-                    obj2 = closure_0(closure_3[9]);
-                    anyErrorMessage = obj.getAnyErrorMessage();
-                    if (anyErrorMessage == null) {
-                      intl = tmp(tmp2[10]).intl;
-                      anyErrorMessage = intl.string(tmp(tmp2[10]).t.R0RpRX);
-                    }
-                    presentErrorResult = obj2.presentError(anyErrorMessage);
-                  }
-                  return;
-                }
-              }
+              tmp12 = cResult[10];
             }
             if (cResult[11] === guildId) {
-              class O {
-                constructor() {
-                  obj = error;
-                  if (null != error) {
-                    tmp = closure_0;
-                    tmp2 = closure_3;
-                    obj2 = closure_0(closure_3[9]);
-                    anyErrorMessage = obj.getAnyErrorMessage();
-                    if (anyErrorMessage == null) {
-                      intl = tmp(tmp2[10]).intl;
-                      anyErrorMessage = intl.string(tmp(tmp2[10]).t.R0RpRX);
-                    }
-                    presentErrorResult = obj2.presentError(anyErrorMessage);
-                  }
-                  return;
-                }
+              if (cResult[12] === tmp7) {
+                let tmp14 = cResult[13];
               }
               if (cResult[14] === guildId) {
-                class O {
-                  constructor() {
-                    obj = error;
-                    if (null != error) {
-                      tmp = closure_0;
-                      tmp2 = closure_3;
-                      obj2 = closure_0(closure_3[9]);
-                      anyErrorMessage = obj.getAnyErrorMessage();
-                      if (anyErrorMessage == null) {
-                        intl = tmp(tmp2[10]).intl;
-                        anyErrorMessage = intl.string(tmp(tmp2[10]).t.R0RpRX);
-                      }
-                      presentErrorResult = obj2.presentError(anyErrorMessage);
-                    }
-                    return;
-                  }
+                if (cResult[15] === tmp14) {
+                  let tmp19 = cResult[16];
                 }
                 if (cResult[17] === editStateId) {
-                  class O {
-                    constructor() {
-                      obj = error;
-                      if (null != error) {
-                        tmp = closure_0;
-                        tmp2 = closure_3;
-                        obj2 = closure_0(closure_3[9]);
-                        anyErrorMessage = obj.getAnyErrorMessage();
-                        if (anyErrorMessage == null) {
-                          intl = tmp(tmp2[10]).intl;
-                          anyErrorMessage = intl.string(tmp(tmp2[10]).t.R0RpRX);
-                        }
-                        presentErrorResult = obj2.presentError(anyErrorMessage);
+                  if (cResult[18] === groupListingId) {
+                    if (cResult[19] === guildId) {
+                      if (cResult[20] === tmp19) {
+                        let tmp22 = cResult[21];
                       }
-                      return;
+                      return tmp22;
                     }
                   }
                 }
-                let obj4 = { guildId, editStateId, groupListingId, children: tmp18 };
-                const tmp23 = jsx(tmp(tmp2[13]).EditStateContextProvider, { guildId, editStateId, groupListingId, children: tmp18 });
+                let obj4 = { guildId, editStateId, groupListingId, children: tmp19 };
+                const tmp24 = jsx(tmp(tmp2[13]).EditStateContextProvider, { guildId, editStateId, groupListingId, children: tmp19 });
                 cResult[17] = editStateId;
                 cResult[18] = groupListingId;
                 cResult[19] = guildId;
-                cResult[20] = tmp18;
-                cResult[21] = tmp23;
+                cResult[20] = tmp19;
+                cResult[21] = tmp24;
+                tmp22 = tmp24;
               }
-              let obj5 = { guildId, children: tmp13 };
-              const tmp20 = jsx(tmp(tmp2[12]).RoleSubscriptionSettingsDisabledContextProvider, { guildId, children: tmp13 });
+              let obj5 = { guildId, children: tmp14 };
+              const tmp21 = jsx(tmp(tmp2[12]).RoleSubscriptionSettingsDisabledContextProvider, { guildId, children: tmp14 });
               cResult[14] = guildId;
-              cResult[15] = tmp13;
-              cResult[16] = tmp20;
+              cResult[15] = tmp14;
+              cResult[16] = tmp21;
+              tmp19 = tmp21;
             }
             const obj6 = { guildId, modalKey, onDone: tmp7, steps: tmp12 };
-            const tmp17 = jsx(groupListingId(tmp2[11]), { guildId, modalKey, onDone: tmp7, steps: tmp12 });
+            const tmp18 = jsx(groupListingId(tmp2[11]), { guildId, modalKey, onDone: tmp7, steps: tmp12 });
             cResult[11] = guildId;
             cResult[12] = tmp7;
-            cResult[13] = tmp17;
+            cResult[13] = tmp18;
+            tmp14 = tmp18;
           }
         }
       }
@@ -285,7 +196,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   cResult[6] = handleCreate;
   tmp7 = handleCreate;
   let obj3 = onClose(onAfterTierCreation[8]);
-}) : ((guildId) => {
+}) : (function GuildRoleSubscriptionTierCreationModal(guildId) {
   guildId = guildId.guildId;
   const groupListingId = guildId.groupListingId;
   ({ onClose: importAll, onAfterTierCreation: dependencyMap } = guildId);
@@ -376,7 +287,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   let obj2 = { guildId, editStateId, groupListingId, children: null };
   let obj3 = {
     guildId,
-    children: jsx(groupListingId(17982), {
+    children: jsx(groupListingId(18269), {
       guildId,
       modalKey,
       onDone: function handleCreate() {
@@ -392,9 +303,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       steps: memo
     })
   };
-  obj2.children = jsx(guildId(17967).RoleSubscriptionSettingsDisabledContextProvider, {
+  obj2.children = jsx(guildId(18254).RoleSubscriptionSettingsDisabledContextProvider, {
     guildId,
-    children: jsx(groupListingId(17982), {
+    children: jsx(groupListingId(18269), {
       guildId,
       modalKey,
       onDone: function handleCreate() {
@@ -410,5 +321,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       steps: memo
     })
   });
-  return jsx(guildId(17990).EditStateContextProvider, { guildId, editStateId, groupListingId, children: null });
+  return jsx(guildId(18277).EditStateContextProvider, { guildId, editStateId, groupListingId, children: null });
 });

@@ -1,22 +1,22 @@
-// === Module 16875: GenericTextRow ===
+// === Module 17154: GenericTextRow ===
 
-// Module 16875 (GenericTextRow)
+// Module 17154 (GenericTextRow)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import SearchListRow from "SearchListRow" /* 16828 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import SearchListRow from "SearchListRow" /* 17107 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({ title: { flexDirection: "row" }, container: { padding: 10 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/list/rows/GenericTextRow.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((text) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function GenericTextRow(text) {
   const cResult = c.c(18);
   text = text.text;
   closure_0 = text;
@@ -132,7 +132,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((text) 
       }
     }
   });
-  const fn = function() {
+  function t1() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -141,12 +141,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((text) 
       applyArgumentsResult = apply(self, arguments);
     }
     return applyArgumentsResult;
-  };
+  }
   cResult[0] = onPress;
   cResult[1] = text;
-  cResult[2] = fn;
-  tmp5 = fn;
-}) : ((text) => {
+  cResult[2] = t1;
+  tmp5 = t1;
+}) : (function GenericTextRow(text) {
   text = text.text;
   require = text;
   ({ icon, onPress } = text);

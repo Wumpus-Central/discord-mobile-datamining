@@ -1,15 +1,15 @@
-// === Module 15003: QuestDockContentExpanded ===
+// === Module 15265: QuestDockContentExpanded ===
 
-// Module 15003 (QuestDockContentExpanded)
-import spring from "spring" /* 5604 */;
-import QuestDockUtils from "QuestDockUtils" /* 14911 */;
+// Module 15265 (QuestDockContentExpanded)
+import spring from "spring" /* 5374 */;
+import QuestDockUtils from "QuestDockUtils" /* 15173 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const QuestDockMode = fn(5630).QuestDockMode;
-let QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(14912).QUEST_DOCK_MODE_CHANGE_PHYSICS;
+const QuestDockMode = fn(5977).QuestDockMode;
+let QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(15174).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { wrapper: null };
 let obj3 = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
@@ -24,7 +24,7 @@ const ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockContentExpanded.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((expandedHeight) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function QuestDockContentExpanded(expandedHeight) {
   const cResult = expandedHeightMode(activeQuestDockMode[7]).c(6);
   ({ children, expandedHeightMode } = expandedHeight);
   expandedHeight = expandedHeight.expandedHeight;
@@ -94,7 +94,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((expand
   cResult[2] = items;
   tmp8 = items;
   const obj3 = { expandedHeightMode, getQuestDockExpandedHeightLimits: expandedHeightMode(activeQuestDockMode[11]).getQuestDockExpandedHeightLimits, windowDimensions, safeArea: tmp6, expandedHeight, withSpring: expandedHeightMode(activeQuestDockMode[12]).withSpring, activeQuestDockMode, QuestDockMode: windowDimensions, QUEST_DOCK_MODE_CHANGE_PHYSICS, questDockWrapperSpecs: context.questDockWrapperSpecs };
-}) : ((children) => {
+}) : (function QuestDockContentExpanded(children) {
   const expandedHeightMode = children.expandedHeightMode;
   const expandedHeight = children.expandedHeight;
   const context = questDockWrapperSpecs.useContext(expandedHeightMode(activeQuestDockMode[8]).QuestDockGestureContext);

@@ -1,19 +1,19 @@
-// === Module 5998: FormCheckbox ===
+// === Module 6182: FormCheckbox ===
 
-// Module 5998 (FormCheckbox)
+// Module 6182 (FormCheckbox)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 4602 */;
-import IconDefault from "Icon" /* 5603 */;
-import spring from "spring" /* 5604 */;
-import springPresets from "springPresets" /* 5605 */;
-import _modDef5999 from "module_5999" /* 5999 */;
+import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 4794 */;
+import spring from "spring" /* 5374 */;
+import IconDefault from "Icon" /* 5377 */;
+import springPresets from "springPresets" /* 5378 */;
+import _modDef6183 from "module_6183" /* 6183 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { checkbox: null, unselected: null, selected: null, checkmark: null };
 let size = { width: nativeDefault.modules.mobile.CONTROL_CHECKBOX_SIZE_DEFAULT, height: nativeDefault.modules.mobile.CONTROL_CHECKBOX_SIZE_DEFAULT, flexGrow: 0, flexShrink: 0, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.modules.mobile.CONTROL_CHECKBOX_BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CONTROL_CHECKBOX_BORDER_WIDTH, borderColor: nativeDefault.colors.CHECKBOX_BORDER_DEFAULT };
 obj2.checkbox = size;
@@ -29,12 +29,12 @@ const __initData = { code: "function FormCheckboxNativeTsx1(){const{withSpring,c
 const __initData2 = { code: "function FormCheckboxNativeTsx2(){const{withSpring,checked,selected,unselected,SUBTLE_SPRING}=this.__closure;const defaultAnimation={borderColor:withSpring(checked?selected.borderColor:unselected.borderColor,SUBTLE_SPRING,'animate-always'),backgroundColor:withSpring(checked?selected.backgroundColor:unselected.backgroundColor,SUBTLE_SPRING,'animate-always')};return defaultAnimation;}" };
 const obj5 = { tintColor: nativeDefault.colors.CHECKBOX_ICON_ACTIVE };
 let ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((checked) => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCheckboxStyles(checked) {
   _require = checked;
   const tmp = closure_5();
   const selected = tmp.selected;
   const unselected = tmp.unselected;
-  const fn = function t() {
+  const fn = function c() {
     if (closure_0) {
       let borderColor = selected.borderColor;
     } else {
@@ -54,12 +54,12 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((checked) => {
   fn.__workletHash = 4459088483670;
   fn.__initData = __initData;
   return obj.useAnimatedStyle(fn);
-}) : ((checked) => {
+}) : (function useCheckboxStyles(checked) {
   _require = checked;
   const tmp = closure_5();
   const selected = tmp.selected;
   const unselected = tmp.unselected;
-  const fn = function t() {
+  const fn = function c() {
     if (closure_0) {
       let borderColor = selected.borderColor;
     } else {
@@ -83,10 +83,10 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((checked) => {
 const __initData3 = { code: "function FormCheckboxNativeTsx3(){const{useReducedMotion,withSpring,checked,SUBTLE_SPRING}=this.__closure;const uncheckedScale=useReducedMotion?1:0.5;return{opacity:withSpring(checked?1:0,SUBTLE_SPRING,\"animate-always\"),transform:[{scale:withSpring(checked?1:uncheckedScale,SUBTLE_SPRING)}]};}" };
 const __initData4 = { code: "function FormCheckboxNativeTsx4(){const{useReducedMotion,withSpring,checked,SUBTLE_SPRING}=this.__closure;const uncheckedScale=useReducedMotion?1:0.5;return{opacity:withSpring(checked?1:0,SUBTLE_SPRING,'animate-always'),transform:[{scale:withSpring(checked?1:uncheckedScale,SUBTLE_SPRING)}]};}" };
 ReactCompilerGating = fn(558);
-let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((useReducedMotion, checked) => {
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCheckmarkStyles(useReducedMotion, checked) {
   _require = useReducedMotion;
   closure_1 = checked;
-  const fn = function c() {
+  const fn = function t() {
     let num = 0.5;
     if (closure_0) {
       num = 1;
@@ -110,10 +110,10 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((useReducedMoti
   fn.__workletHash = 12934307330610;
   fn.__initData = __initData3;
   return obj.useAnimatedStyle(fn);
-}) : ((useReducedMotion, checked) => {
+}) : (function useCheckmarkStyles(useReducedMotion, checked) {
   _require = useReducedMotion;
   closure_1 = checked;
-  const fn = function c() {
+  const fn = function t() {
     let num = 0.5;
     if (closure_0) {
       num = 1;
@@ -141,7 +141,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((useReducedMoti
 size = fn(2);
 const result = size.fileFinishedImporting("design/components/Forms/native/FormCheckbox.native.tsx");
 
-export const FormCheckbox = ReactCompilerGating.isReactCompilerEnabled() ? ((checked) => {
+export const FormCheckbox = ReactCompilerGating.isReactCompilerEnabled() ? (function FormCheckbox(checked) {
   const cResult = c.c(9);
   checked = checked.checked;
   const tmp3 = closure_5();
@@ -168,10 +168,10 @@ export const FormCheckbox = ReactCompilerGating.isReactCompilerEnabled() ? ((che
       cResult[8] = tmp15;
       tmp12 = tmp15;
     }
-    const obj3 = { source: _modDef5999, size: IconDefault.Sizes.SMALL_20, style: null };
+    const obj3 = { source: _modDef6183, size: IconDefault.Sizes.SMALL_20, style: null };
     const items = [tmp3.checkmark, tmp5];
     obj3.style = items;
-    const tmp11 = <Icon source={_modDef5999} size={IconDefault.Sizes.SMALL_20} style={null} />;
+    const tmp11 = <Icon source={_modDef6183} size={IconDefault.Sizes.SMALL_20} style={null} />;
     cResult[3] = tmp5;
     cResult[4] = tmp3.checkmark;
     cResult[5] = tmp11;
@@ -182,16 +182,16 @@ export const FormCheckbox = ReactCompilerGating.isReactCompilerEnabled() ? ((che
   cResult[1] = tmp3.checkbox;
   cResult[2] = items1;
   tmp6 = items1;
-}) : ((checked) => {
+}) : (function FormCheckbox(checked) {
   checked = checked.checked;
   const tmp = closure_5();
   const tmp2 = closure_9(checked);
   const obj = { style: null, children: null };
   const items = [tmp.checkbox, tmp2];
   obj.style = items;
-  const obj2 = { source: _modDef5999, size: IconDefault.Sizes.SMALL_20, style: null };
+  const obj2 = { source: _modDef6183, size: IconDefault.Sizes.SMALL_20, style: null };
   const items1 = [tmp.checkmark, closure_12(noop.useContext(AccessibilityPreferencesContext.AccessibilityPreferencesContext).reducedMotion.enabled, checked)];
   obj2.style = items1;
-  obj.children = <Icon source={_modDef5999} size={IconDefault.Sizes.SMALL_20} style={null} />;
+  obj.children = <Icon source={_modDef6183} size={IconDefault.Sizes.SMALL_20} style={null} />;
   return jsx(ReanimatedRexport.View, { style: null, children: null });
 });

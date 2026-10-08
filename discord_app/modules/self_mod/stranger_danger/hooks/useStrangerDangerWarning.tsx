@@ -1,22 +1,22 @@
-// === Module 9798: useStrangerDangerWarning ===
+// === Module 10362: useStrangerDangerWarning ===
 
-// Module 9798 (useStrangerDangerWarning)
+// Module 10362 (useStrangerDangerWarning)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import useUserIsTeen from "useUserIsTeen" /* 8327 */;
-import useIsSpamMessageRequest from "useIsSpamMessageRequest" /* 9800 */;
-import useIsMessageRequest from "useIsMessageRequest" /* 9801 */;
-import useChannelSafetyWarning from "useChannelSafetyWarning" /* 9802 */;
-import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 9803 */;
-import UserStore from "UserStore" /* 1377 */;
+import useUserIsTeen from "useUserIsTeen" /* 7710 */;
+import useIsSpamMessageRequest from "useIsSpamMessageRequest" /* 10363 */;
+import useIsMessageRequest from "useIsMessageRequest" /* 10364 */;
+import useChannelSafetyWarning from "useChannelSafetyWarning" /* 10365 */;
+import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 10366 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
-const SafetyWarningTypes = fn(9799).SafetyWarningTypes;
+const SafetyWarningTypes = fn(10266).SafetyWarningTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/stranger_danger/hooks/useStrangerDangerWarning.tsx");
 
-export const useStrangerDangerWarning = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useStrangerDangerWarning = ReactCompilerGating.isReactCompilerEnabled() ? (function useStrangerDangerWarning(arg0) {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
@@ -53,7 +53,7 @@ export const useStrangerDangerWarning = ReactCompilerGating.isReactCompilerEnabl
     }
   }
   tmpResult10 = useInappropriateConversationWarningsForChannel;
-}) : ((arg0) => {
+}) : (function useStrangerDangerWarning(arg0) {
   const items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   const isSpamMessageRequest = useIsSpamMessageRequest.useIsSpamMessageRequest(arg0);

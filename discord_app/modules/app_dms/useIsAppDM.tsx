@@ -1,7 +1,7 @@
-// === Module 11783: useIsAppDM ===
+// === Module 11850: useIsAppDM ===
 
-// Module 11783 (useIsAppDM)
-import UserStore from "UserStore" /* 1377 */;
+// Module 11850 (useIsAppDM)
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
@@ -10,7 +10,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_dms/useIsAppDM.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsAppDM(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -44,7 +44,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj = require("c");
   return require("useStateFromStores").useStateFromStores(first, tmp6);
-}) : ((arg0) => {
+}) : (function useIsAppDM(arg0) {
   _require = arg0;
   const items = [UserStore];
   return require("useStateFromStores").useStateFromStores(items, () => {

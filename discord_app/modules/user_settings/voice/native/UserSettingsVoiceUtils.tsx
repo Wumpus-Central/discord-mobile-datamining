@@ -1,11 +1,11 @@
-// === Module 9686: UserSettingsVoiceUtils ===
+// === Module 10875: UserSettingsVoiceUtils ===
 
-// Module 9686 (UserSettingsVoiceUtils)
+// Module 10875 (UserSettingsVoiceUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 8079 */;
-import NoiseCancellationUtils from "NoiseCancellationUtils" /* 9687 */;
-import MediaEngineStore from "MediaEngineStore" /* 1999 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5241 */;
+import NoiseCancellationUtils from "NoiseCancellationUtils" /* 10876 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
 
 require = fn;
 const Constants = fn(1085);
@@ -42,7 +42,7 @@ export const handleNoiseSuppressionChange = function handleNoiseSuppressionChang
 };
 export { NoiseSuppressionOpt };
 export { getSelectedNoiseSuppressionOption };
-export const useSelectedNoiseSuppressionOption = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useSelectedNoiseSuppressionOption = ReactCompilerGating.isReactCompilerEnabled() ? (function useSelectedNoiseSuppressionOption() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [MediaEngineStore];
@@ -64,7 +64,7 @@ export const useSelectedNoiseSuppressionOption = ReactCompilerGating.isReactComp
     [tmp4, tmp5] = cResult;
   }
   return initialize.useStateFromStores(tmp4, tmp5);
-}) : (() => {
+}) : (function useSelectedNoiseSuppressionOption() {
   const items = [MediaEngineStore];
   return initialize.useStateFromStores(items, () => {
     const noiseSuppression = MediaEngineStore.getNoiseSuppression();

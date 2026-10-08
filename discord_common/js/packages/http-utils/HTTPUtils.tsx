@@ -1,13 +1,13 @@
-// === Module 1282: HTTPUtils ===
+// === Module 1294: HTTPUtils ===
 
-// Module 1282 (HTTPUtils)
+// Module 1294 (HTTPUtils)
 import logger_Logger from "logger/Logger" /* 4 */;
 import BackoffDefault from "Backoff" /* 569 */;
-import _createForOfIteratorHelperDefault from "_createForOfIteratorHelper" /* 1283 */;
-import V8APIError from "V8APIError" /* 1336 */;
-import convertSkemaError from "convertSkemaError" /* 1337 */;
-import stringifyErrors from "stringifyErrors" /* 1338 */;
-import discord_common_V6OrEarlierAPIError from "discord_common/V6OrEarlierAPIError" /* 1339 */;
+import _createForOfIteratorHelperDefault from "_createForOfIteratorHelper" /* 1295 */;
+import V8APIError from "V8APIError" /* 1348 */;
+import convertSkemaError from "convertSkemaError" /* 1349 */;
+import stringifyErrors from "stringifyErrors" /* 1350 */;
+import discord_common_V6OrEarlierAPIError from "discord_common/V6OrEarlierAPIError" /* 1351 */;
 import size from "module_2" /* 2 */;
 
 function sendRequest(method, signal, arg2, fn, fn2, cause) {
@@ -211,11 +211,11 @@ function sendRequest(method, signal, arg2, fn, fn2, cause) {
                 if (body2 != null) {
                   code = body2.code;
                 }
-                if (code === method(1336).INVALID_FORM_BODY_ERROR_CODE) {
+                if (code === method(1348).INVALID_FORM_BODY_ERROR_CODE) {
                   const errors = response.body.errors;
                   if (null != errors) {
-                    response.body = tmp17(1337).convertSkemaError(errors);
-                    const tmp17Result = tmp17(1337);
+                    response.body = tmp17(1349).convertSkemaError(errors);
+                    const tmp17Result = tmp17(1349);
                   }
                 }
                 tmp17 = method;

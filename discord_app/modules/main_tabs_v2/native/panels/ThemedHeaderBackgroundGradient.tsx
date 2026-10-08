@@ -1,25 +1,25 @@
-// === Module 16512: ThemedHeaderBackgroundGradient ===
+// === Module 16772: ThemedHeaderBackgroundGradient ===
 
-// Module 16512 (ThemedHeaderBackgroundGradient)
+// Module 16772 (ThemedHeaderBackgroundGradient)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import useToken from "useToken" /* 4586 */;
-import LinearGradientDefault from "LinearGradient" /* 5612 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import useToken from "useToken" /* 4778 */;
+import LinearGradientDefault from "LinearGradient" /* 5387 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({ container: { position: "absolute", left: 0, right: 0, top: 0 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/ThemedHeaderBackgroundGradient.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ThemedHeaderBackgroundGradient(arg0) {
   const cResult = c.c(17);
   ({ baseColor, minHeight } = arg0);
   if (undefined === baseColor) {
@@ -107,7 +107,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   cResult[6] = items1;
   tmp13 = items1;
   const tmpResult = useToken;
-}) : ((baseColor) => {
+}) : (function ThemedHeaderBackgroundGradient(baseColor) {
   let BACKGROUND_BASE_LOWEST = baseColor.baseColor;
   if (BACKGROUND_BASE_LOWEST === undefined) {
     BACKGROUND_BASE_LOWEST = nativeDefault.colors.BACKGROUND_BASE_LOWEST;

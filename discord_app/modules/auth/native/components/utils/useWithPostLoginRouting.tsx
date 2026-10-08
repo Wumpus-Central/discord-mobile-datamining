@@ -1,7 +1,7 @@
-// === Module 6450: useWithPostLoginRouting ===
+// === Module 6628: useWithPostLoginRouting ===
 
-// Module 6450 (useWithPostLoginRouting)
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6089 */;
+// Module 6628 (useWithPostLoginRouting)
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 5936 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -16,7 +16,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/utils/useWithPostLoginRouting.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, handleLogin) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useWithPostLoginRouting(arg0, handleLogin) {
   _require = arg0;
   const cResult = require("c").c(8);
   const tmp4 = loginStatus(noop.useState(), 2);
@@ -24,18 +24,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, handleLogi
   asyncGeneratorStep = tmp4[1];
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AuthenticationStore];
-    const fn = function u() {
-      return { loginStatus: authStore.getLoginStatus() };
-    };
+    class O {
+      constructor() {
+        obj = { loginStatus: closure_1_6.getLoginStatus() };
+        return obj;
+      }
+    }
     cResult[0] = items;
-    cResult[1] = fn;
+    cResult[1] = O;
     tmp6 = items;
-    tmp7 = fn;
   } else {
     [tmp6, tmp7] = cResult;
   }
   let obj = require("c");
-  loginStatus = require("initialize").useStateFromStoresObject(tmp6, tmp7).loginStatus;
+  loginStatus = require("initialize").useStateFromStoresObject(tmp6, O).loginStatus;
   if (cResult[2] === handleLogin) {
     if (cResult[3] === loginStatus) {
       if (cResult[4] === arg0) {
@@ -47,7 +49,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, handleLogi
       }
     }
   }
-  class S {
+  class N {
     constructor() {
       tmp2 = closure_1_7;
       if (closure_2 !== closure_1_7.LOGGING_IN) {
@@ -92,12 +94,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, handleLogi
         intl2 = closure_0(closure_2[8]).intl;
         obj1.description = intl2.string(closure_0(closure_2[8]).t.myKyqh);
         obj1.phone = closure_1_6.getCredentials().login;
-        obj1.onPhoneTokenReceived = function onPhoneTokenReceived(arg0) {
-          const replaced = closure_1_0.replace(constants2.EXTERNAL_LINK, { externalURL: closure_1(first[9])(arg0) });
-        };
-        obj1.onClose = function onClose() {
-          handleLogin(dependencyMap[10]).loginReset();
-        };
+        obj1.onPhoneTokenReceived = function onPhoneTokenReceived() { ... };
+        obj1.onClose = function onClose() { ... };
         replaced = login.replace(closure_1_8.VERIFY_PHONE, obj1);
       } else if (tmp2.PHONE_IP_AUTHORIZATION === tmp6) {
         tmp24 = closure_1_6;
@@ -114,85 +112,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, handleLogi
         obj4.description = intl4.string(closure_0(closure_2[8]).t["0/ALaJ"]);
         obj4.phone = closure_1_6.getCredentials().login;
         tmp30 = closure_3;
-        closure_2 = closure_3(function*(arg0) {
-          if (c4 === 2) {
-            c4 = 3;
-            throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp4 === 3) {
-            if (arg0 === 1) {
-              throw value;
-            } else if (arg0 === 2) {
-              const obj3 = { value, done: true };
-              return obj3;
-            } else {
-              return { value: "IconComponent", done: null };
-            }
-          } else {
-            try {
-              c4 = 2;
-              if (0 === c3) {
-                if (arg0 === 1) {
-                  c4 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c4 = 3;
-                  const obj4 = { value, done: true };
-                  return obj4;
-                } else {
-                  c2 = 0;
-                  closure_1 = tmp2;
-                  closure_129_0 = undefined;
-                  c3 = 1;
-                  c4 = 1;
-                  const obj5 = { value: handleLogin(dependencyMap[10]).authorizeIPAddress(closure_0), done: false };
-                  return obj5;
-                }
-              } else if (arg0 === 1) {
-                c4 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c4 = 3;
-                const obj = { value, done: true };
-                return obj;
-              } else {
-                const routes = closure_0.getState().routes;
-                closure_129_0 = routes.findIndex(() => { ... });
-                if (closure_129_0 >= 0) {
-                  closure_0.pop(closure_129_0);
-                } else {
-                  closure_0.pop();
-                }
-                c4 = 3;
-              }
-            } catch (tmp17) {
-              c4 = tmp;
-              throw tmp17;
-            }
-          }
-        });
-        obj4.onPhoneTokenReceived = function() {
-          const self = this;
-          const apply = closure_2.apply;
-          if (typeof apply === "unknown") {
-            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-          } else {
-            applyArgumentsResult = apply(self, arguments);
-          }
-          return applyArgumentsResult;
-        };
-        obj4.onClose = function onClose(arg0) {
-          if (arg0) {
-            let tmp6 = null != handleLogin;
-            if (tmp6) {
-              tmp6 = "" !== handleLogin;
-            }
-            if (tmp6) {
-              closure_1(closure_1_0, handleLogin);
-            }
-          } else {
-            AuthenticationActionCreatorsDefault.loginReset();
-          }
-        };
+        closure_2 = closure_3(/* F138951 */ function() { ... });
+        obj4.onPhoneTokenReceived = function onPhoneTokenReceived() { ... };
+        obj4.onClose = function onClose() { ... };
         arr3 = login.push(closure_1_8.VERIFY_PHONE, obj4);
       }
       tmp23 = closure_3(tmp6);
@@ -204,12 +126,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, handleLogi
   cResult[3] = loginStatus;
   cResult[4] = arg0;
   cResult[5] = first;
-  cResult[6] = S;
+  cResult[6] = N;
   cResult[7] = items1;
   tmp10 = items1;
-  tmp9 = S;
+  tmp9 = N;
   const tmpResult = require("initialize");
-}) : ((arg0, handleLogin) => {
+}) : (function useWithPostLoginRouting(arg0, handleLogin) {
   _require = arg0;
   const tmp = loginStatus(noop.useState(), 2);
   const first = tmp[0];
@@ -315,7 +237,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, handleLogi
           }
         }
       });
-      obj3.onPhoneTokenReceived = function() {
+      obj3.onPhoneTokenReceived = function onPhoneTokenReceived() {
         const self = this;
         const apply = closure_2.apply;
         if (typeof apply === "unknown") {

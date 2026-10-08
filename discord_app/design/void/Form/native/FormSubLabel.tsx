@@ -1,8 +1,8 @@
-// === Module 6643: FormSubLabel ===
+// === Module 6820: FormSubLabel ===
 
-// Module 6643 (FormSubLabel)
+// Module 6820 (FormSubLabel)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 4892 */;
+import Text_Text from "Text/Text" /* 5086 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormSubLabel.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormSubLabel(arg0) {
   const cResult = c.c(6);
   ({ text, numberOfLines, style, accessible, color } = arg0);
   let str = "text-subtle";
@@ -38,7 +38,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = text;
   cResult[5] = tmp5;
   tmp4 = tmp5;
-}) : ((color) => {
+}) : (function FormSubLabel(color) {
   color = color.color;
   ({ text, numberOfLines, style, accessible } = color);
   if (color === undefined) {

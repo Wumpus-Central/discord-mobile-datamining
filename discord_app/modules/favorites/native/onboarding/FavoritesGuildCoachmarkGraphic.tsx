@@ -1,13 +1,13 @@
-// === Module 16295: FavoritesGuildCoachmarkGraphic ===
+// === Module 16555: FavoritesGuildCoachmarkGraphic ===
 
-// Module 16295 (FavoritesGuildCoachmarkGraphic)
+// Module 16555 (FavoritesGuildCoachmarkGraphic)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import FavoritesSpotIllustration from "FavoritesSpotIllustration" /* 10055 */;
+import native from "native" /* 1200 */;
+import FavoritesSpotIllustration from "FavoritesSpotIllustration" /* 10300 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4896 */;
+import createStyles from "createStyles" /* 5090 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -18,7 +18,7 @@ let closure_5 = createStyles.createStyles(obj);
 let obj2 = { alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_12 };
 const result = size.fileFinishedImporting("modules/favorites/native/onboarding/FavoritesGuildCoachmarkGraphic.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function FavoritesGuildCoachmarkGraphic() {
   const cResult = c.c(6);
   const tmp4 = closure_5();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -51,7 +51,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[4] = tmp8;
   cResult[5] = tmp12;
   tmp11 = tmp12;
-}) : (() => {
+}) : (function FavoritesGuildCoachmarkGraphic() {
   const tmp = closure_5();
   const obj = { style: tmp.container, children: null };
   const items = [React3(FavoritesSpotIllustration.FavoritesSpotIllustration, { width: 160, height: 90 }), React3(native.BetaTag, { style: tmp.betaTag })];

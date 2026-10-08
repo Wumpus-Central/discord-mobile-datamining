@@ -1,24 +1,24 @@
-// === Module 12524: NotificationSettingsMessageNotificationChannelActionSheet ===
+// === Module 12620: NotificationSettingsMessageNotificationChannelActionSheet ===
 
-// Module 12524 (NotificationSettingsMessageNotificationChannelActionSheet)
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 6616 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 6621 */;
-import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 9865 */;
+// Module 12620 (NotificationSettingsMessageNotificationChannelActionSheet)
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 6793 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 6798 */;
+import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10425 */;
 import noop from "module_19" /* 19 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5077 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5971 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const UserNotificationSettings = fn(1085).UserNotificationSettings;
-const UnreadSetting = fn(5078).UnreadSetting;
+const UnreadSetting = fn(5972).UnreadSetting;
 let closure_6 = fn(1095).ChannelNotificationSettingsFlags;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMessageNotificationChannelActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function NotificationSettingsMessageNotificationChannelActionSheet(channel) {
   _require = channel;
   const cResult = require("c").c(11);
   let obj = require("c");
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
           }
         }
         let obj3 = { context: "channel", value: notification, allMessagesSubLabel: tmp5, onChange: tmp8 };
-        const tmp12 = jsx(unread(12523), { context: "channel", value: notification, allMessagesSubLabel: tmp5, onChange: tmp8 });
+        const tmp12 = jsx(unread(12619), { context: "channel", value: notification, allMessagesSubLabel: tmp5, onChange: tmp8 });
         cResult[7] = notification;
         cResult[8] = tmp5;
         cResult[9] = tmp8;
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   cResult[2] = stringResult;
   tmp5 = stringResult;
   let obj2 = require("notficationSettingsChannelFlagUtils");
-}) : ((channel) => {
+}) : (function NotificationSettingsMessageNotificationChannelActionSheet(channel) {
   _require = channel;
   const channelPresetSettings = require("notficationSettingsChannelFlagUtils").useChannelPresetSettings(channel.channel);
   const unread = channelPresetSettings.unread;
@@ -112,5 +112,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     obj4.label = NotificationLabel.notifications(message_notifications);
     const result = NotificationSettingsModalActionCreatorsDefault.updateChannelOverrideSettings(obj4);
   };
-  return jsx(unread(12523), { context: "channel", value: notification, allMessagesSubLabel: null, onChange: null });
+  return jsx(unread(12619), { context: "channel", value: notification, allMessagesSubLabel: null, onChange: null });
 });

@@ -1,29 +1,29 @@
-// === Module 15578: DevToolsRevenuePlaygroundScreen ===
+// === Module 15858: DevToolsRevenuePlaygroundScreen ===
 
-// Module 15578 (DevToolsRevenuePlaygroundScreen)
+// Module 15858 (DevToolsRevenuePlaygroundScreen)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import TableRow from "TableRow" /* 6000 */;
-import TableRowArrow from "TableRowArrow" /* 6007 */;
-import TableRowGroup from "TableRowGroup" /* 6081 */;
-import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 6701 */;
-import TableSwitchRow from "TableSwitchRow" /* 6705 */;
-import IAPUtils from "IAPUtils" /* 10796 */;
-import BundleUpdaterDefault from "BundleUpdater" /* 11414 */;
+import native from "native" /* 1200 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import TableRow from "TableRow" /* 6184 */;
+import TableRowArrow from "TableRowArrow" /* 6193 */;
+import TableRowGroup from "TableRowGroup" /* 6267 */;
+import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 6878 */;
+import TableSwitchRow from "TableSwitchRow" /* 6882 */;
+import BundleUpdaterDefault from "BundleUpdater" /* 11397 */;
+import IAPUtils from "IAPUtils" /* 12748 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PremiumGiftingIntentStore from "PremiumGiftingIntentStore" /* 7759 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7156 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import UserStore from "UserStore" /* 1377 */;
-import DevSettingsStore from "DevSettingsStore" /* 4895 */;
+import PremiumGiftingIntentStore from "PremiumGiftingIntentStore" /* 8080 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7336 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
+import UserStore from "UserStore" /* 1389 */;
+import DevSettingsStore from "DevSettingsStore" /* 5089 */;
 
 require = fn;
 function describeServerError(status) {
@@ -420,7 +420,7 @@ function FriendAnniversary() {
       label: "Number of anniversaries",
       subLabel: "Current: " + str,
       trailing: closure_17(require("TableRowArrow").TableRowArrow, {}),
-      onPress() {
+      onPress: function openCountPicker() {
         const obj = Sheet_showSimpleActionSheet;
         const result = obj.showSimpleActionSheet({
           key: "dev-tools-friend-anniversary-count",
@@ -447,7 +447,7 @@ function FriendAnniversary() {
     closure_17(require("TableRow").TableRow, {
       label: "Trigger Mobile FA message in current DM",
       subLabel: "Sends an ephemeral GIFTING_PROMPT into the selected channel",
-      onPress() {
+      onPress: function triggerCardInCurrentDM() {
         const channelId = first1.getChannelId();
         if (null != channelId) {
           channel = channel.getChannel(channelId);
@@ -497,7 +497,7 @@ function FriendAnniversary() {
     label: "Number of anniversaries",
     subLabel: "Current: " + str,
     trailing: closure_17(require("TableRowArrow").TableRowArrow, {}),
-    onPress() {
+    onPress: function openCountPicker() {
       const obj = Sheet_showSimpleActionSheet;
       const result = obj.showSimpleActionSheet({
         key: "dev-tools-friend-anniversary-count",
@@ -524,7 +524,7 @@ function FriendAnniversary() {
   let obj7 = {
     label: "Trigger Mobile FA message in current DM",
     subLabel: "Sends an ephemeral GIFTING_PROMPT into the selected channel",
-    onPress() {
+    onPress: function triggerCardInCurrentDM() {
       const channelId = first1.getChannelId();
       if (null != channelId) {
         channel = channel.getChannel(channelId);
@@ -574,7 +574,7 @@ function FriendAnniversary() {
     label: "Reconcile now",
     subLabel: "Fetch + merge server dismissals into the local store",
     disabled: first1,
-    onPress() {
+    onPress: function handleReconcileNow() {
       channel(() => {
         let num = stateFromStores3;
         if (stateFromStores3 == null) {
@@ -594,7 +594,7 @@ function FriendAnniversary() {
     tmp29 = 0 === arr.length;
   }
   obj14.disabled = tmp29;
-  obj14.onPress = function onPress() {
+  obj14.onPress = function openSeedPicker() {
     const obj = Sheet_showSimpleActionSheet;
     const result = obj.showSimpleActionSheet({
       key: "dev-tools-gift-intent-seed",
@@ -629,7 +629,7 @@ function FriendAnniversary() {
     label: "Clear all server dismissals (staff)",
     subLabel: "DELETE every server dismissal for this user",
     disabled: first1,
-    onPress() {
+    onPress: function handleClearAllServerDismissals() {
       channel(() => {
         const HTTP = closure_1_0(stateFromStores2[15]).HTTP;
         return HTTP.del({ url: "" + closure_1_21 + "/" + closure_1_22, rejectWithError: true });
@@ -640,7 +640,7 @@ function FriendAnniversary() {
     variant: "danger",
     label: "Reset local message cooldown",
     subLabel: "Clears messageGiftIntentLastShownMap on this device",
-    onPress() {
+    onPress: function handleResetLocalCooldown() {
       stateFromStores1(stateFromStores2[13]).dispatch({ type: "DEV_TOOLS_GIFT_MESSAGE_COOLDOWN_RESET" });
       const obj = stateFromStores1(stateFromStores2[13]);
       stateFromStores1(stateFromStores2[16]).open({ key: "dev-tools-gift-intent-local", content: "Cleared local message cooldown." });
@@ -652,7 +652,7 @@ function FriendAnniversary() {
   return closure_18(closure_19, obj16);
 }
 function TrialOfferSheetExample() {
-  premiumTrialOffer = premiumTrialOffer(6969).usePremiumTrialOffer();
+  premiumTrialOffer = premiumTrialOffer(7158).usePremiumTrialOffer();
   let obj2 = {
     label: "Trial Offer Nitro Basic",
     subLabel: "No trial offer in store",
@@ -666,13 +666,13 @@ function TrialOfferSheetExample() {
 
             }
         };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15579, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj2);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15859, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj2);
       }
     }
   };
-  items = [closure_17(premiumTrialOffer(6000).TableRow, obj2), ];
+  items = [closure_17(premiumTrialOffer(6184).TableRow, obj2), ];
   const obj3 = { title: "Trial Offers", hasIcons: false, children: null };
-  items[1] = closure_17(premiumTrialOffer(6000).TableRow, {
+  items[1] = closure_17(premiumTrialOffer(6184).TableRow, {
     label: "Trial Offer Nitro",
     subLabel: "No trial offer in store",
     disabled: null == premiumTrialOffer,
@@ -685,12 +685,12 @@ function TrialOfferSheetExample() {
 
             }
         };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15579, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj2);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15859, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj2);
       }
     }
   });
   obj3.children = items;
-  return closure_18(premiumTrialOffer(6081).TableRowGroup, obj3);
+  return closure_18(premiumTrialOffer(6267).TableRowGroup, obj3);
 }
 function PaymentFlowTest() {
   const obj = {
@@ -764,21 +764,21 @@ function GuildTagBadges() {
   return constants(TableRowGroup.TableRowGroup, obj);
 }
 const ScrollView = fn(17).ScrollView;
-const DevSettingsCategory = fn(4895).DevSettingsCategory;
-const PremiumConstants = fn(1379);
+const DevSettingsCategory = fn(5089).DevSettingsCategory;
+const PremiumConstants = fn(1391);
 ({ GiftIntentType: closure_15, PremiumTypes: closure_16 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
 let items = [{ label: "None", value: null }, { label: "1", value: 1 }, { label: "2", value: 2 }, { label: "3", value: 3 }, { label: "4", value: 4 }, { label: "5", value: 5 }, { label: "10", value: 10 }, { label: "25", value: 25 }];
 let c21 = "/users/@me/gift-intents/dismissals";
 const FRIEND_ANNIVERSARY = "FRIEND_ANNIVERSARY";
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, scrollContainer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.scrollContainer = { padding: nativeDefault.space.PX_16 };
 let closure_25 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumToggles() {
   const cResult = c.c(8);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     items = [DevSettingsStore];
@@ -802,7 +802,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       const fn2 = function u(arg0) {
         const tmp = closure_4(arg0, 3);
         const subLabel = tmp[0];
-        return closure_17(subLabel(6705).TableSwitchRow, {
+        return closure_17(subLabel(6882).TableSwitchRow, {
           label: tmp[2].label,
           subLabel,
           value: tmp[1],
@@ -832,7 +832,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     return tmp12;
   }
   const tmpResult = useStateFromStores;
-}) : (() => {
+}) : (function PremiumToggles() {
   items = [DevSettingsStore];
   const stateFromStores = useStateFromStores.useStateFromStores(items, () => DevSettingsStore.allByCategory(constants.PREMIUM).filter((item) => {
     [tmp] = item;
@@ -843,7 +843,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     hasIcons: false,
     children: stateFromStores.map((item) => {
       [tmp, tmp2, ] = item;
-      return closure_17(closure_0(6705).TableSwitchRow, {
+      return closure_17(closure_0(6882).TableSwitchRow, {
         label: tmp3,
         subLabel: tmp,
         value: tmp2,
@@ -855,7 +855,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   });
 });
 ReactCompilerGating = fn(558);
-let closure_28 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_28 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForceMockIAP() {
   const cResult = c.c(6);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     items = [DevSettingsStore];
@@ -910,7 +910,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp12 = cResult[5];
   }
   return tmp12;
-}) : (() => {
+}) : (function ForceMockIAP() {
   items = [DevSettingsStore];
   const stateFromStores = useStateFromStores.useStateFromStores(items, () => DevSettingsStore.get("force_mock_iap"));
   let result = IAPUtils.shouldMockIAPForceEnable();
@@ -938,7 +938,7 @@ let obj4 = { padding: nativeDefault.space.PX_16 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsRevenuePlaygroundScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevToolsRevenuePlaygroundScreen() {
   const cResult = c.c(20);
   const tmp4 = closure_25();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -1018,7 +1018,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[18] = tmp4.scrollContainer;
   cResult[19] = tmp51;
   tmp50 = tmp51;
-}) : (() => {
+}) : (function DevToolsRevenuePlaygroundScreen() {
   const tmp = closure_25();
   const obj = { style: tmp.container, contentContainerStyle: tmp.scrollContainer, children: null };
   items = [constants(TrialOfferSheetExample, {}), constants(native.Spacer, { size: nativeDefault.space.PX_16 }), constants(closure_27, {}), , , , , , , , , , , , , , ];

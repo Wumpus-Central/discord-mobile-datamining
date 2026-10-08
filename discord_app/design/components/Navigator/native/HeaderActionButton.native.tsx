@@ -1,29 +1,29 @@
-// === Module 6890: HeaderActionButton ===
+// === Module 7079: HeaderActionButton ===
 
-// Module 6890 (HeaderActionButton)
+// Module 7079 (HeaderActionButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import IconDefault from "Icon" /* 5603 */;
-import ButtonConstants from "ButtonConstants" /* 5607 */;
-import Pressables from "Pressables" /* 5916 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import IconDefault from "Icon" /* 5377 */;
+import ButtonConstants from "ButtonConstants" /* 5380 */;
+import Pressables from "Pressables" /* 6189 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const ANDROID_FOREGROUND_RIPPLE = fn(1192).ANDROID_FOREGROUND_RIPPLE;
+const ANDROID_FOREGROUND_RIPPLE = fn(1204).ANDROID_FOREGROUND_RIPPLE;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
-let obj = { button: { alignSelf: "stretch", alignItems: "center", justifyContent: "center", flexDirection: "row" }, text: { color: nativeDefault.colors.TEXT_BRAND, textTransform: "capitalize" }, buttonFont: { fontSize: 16, maxWidth: 80 }, buttonDisabled: { opacity: 0.6 } };
-let closure_6 = createStyles.createStyles(obj);
+const createStyles = fn(5090);
+let obj2 = { button: { alignSelf: "stretch", alignItems: "center", justifyContent: "center", flexDirection: "row" }, text: { color: nativeDefault.colors.TEXT_BRAND, textTransform: "capitalize" }, buttonFont: { fontSize: 16, maxWidth: 80 }, buttonDisabled: { opacity: 0.6 } };
+let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj3 = { color: nativeDefault.colors.TEXT_BRAND, textTransform: "capitalize" };
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Navigator/native/HeaderActionButton.native.tsx");
 
-export const HeaderActionButton = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((foregroundRipple, ref) => {
+export const HeaderActionButton = ReactCompilerGating.isReactCompilerEnabled() ? (function HeaderActionButton(foregroundRipple) {
   const cResult = c.c(31);
-  ({ style, textStyle, imageStyle, text, source, accessibilityLabel, accessibilityHint, accessibilityActions, onAccessibilityAction, icon, IconComponent, IconComponentSize, onPress, disabled, iconSize, hitSlop } = foregroundRipple);
+  ({ style, textStyle, imageStyle, text, source, accessibilityLabel, accessibilityHint, accessibilityActions, onAccessibilityAction, icon, IconComponent, IconComponentSize, onPress, disabled, iconSize, hitSlop, ref } = foregroundRipple);
   const tmp4 = closure_6();
   if (null != text) {
     if (cResult[0] === tmp4.buttonFont) {
@@ -103,9 +103,9 @@ export const HeaderActionButton = noop.forwardRef(ReactCompilerGating.isReactCom
                           if (cResult[27] === accessibilityLabel) {
                             if (cResult[28] === ANDROID_FOREGROUND_RIPPLE) {
                               if (cResult[29] === tmp19) {
-                                let tmp21 = cResult[30];
+                                let tmp20 = cResult[30];
                               }
-                              return tmp21;
+                              return tmp20;
                             }
                           }
                         }
@@ -120,7 +120,7 @@ export const HeaderActionButton = noop.forwardRef(ReactCompilerGating.isReactCom
         const obj5 = { ref, accessibilityLabel, accessibilityHint, accessibilityActions, onAccessibilityAction, accessibilityRole: "button", onPress, activeOpacity: 0.6, androidRippleConfig: ANDROID_FOREGROUND_RIPPLE, style: tmp19, hitSlop, disabled, children: null };
         const items1 = [tmp9, icon];
         obj5.children = items1;
-        const tmp23 = hasOwnProperty(Pressables.PressableOpacity, obj5);
+        const tmp22 = hasOwnProperty(Pressables.PressableOpacity, obj5);
         cResult[18] = accessibilityActions;
         cResult[19] = accessibilityHint;
         cResult[20] = tmp9;
@@ -133,8 +133,8 @@ export const HeaderActionButton = noop.forwardRef(ReactCompilerGating.isReactCom
         cResult[27] = accessibilityLabel;
         cResult[28] = ANDROID_FOREGROUND_RIPPLE;
         cResult[29] = tmp19;
-        cResult[30] = tmp23;
-        tmp21 = tmp23;
+        cResult[30] = tmp22;
+        tmp20 = tmp22;
       }
     }
     const items2 = [tmp4.button, style, buttonDisabled];
@@ -144,9 +144,9 @@ export const HeaderActionButton = noop.forwardRef(ReactCompilerGating.isReactCom
     cResult[17] = items2;
     tmp19 = items2;
   }
-}) : ((arg0, ref) => {
+}) : (function HeaderActionButton(arg0) {
   ({ text, source, accessibilityLabel, IconComponent, disabled } = arg0);
-  ({ style, textStyle, imageStyle, accessibilityHint, accessibilityActions, onAccessibilityAction, icon, IconComponentSize, onPress, foregroundRipple, iconSize, hitSlop } = arg0);
+  ({ style, textStyle, imageStyle, accessibilityHint, accessibilityActions, onAccessibilityAction, icon, IconComponentSize, onPress, foregroundRipple, iconSize, hitSlop, ref } = arg0);
   const tmp = closure_6();
   if (null != text) {
     const obj2 = { style: null, variant: "text-md/semibold", lineClamp: 1, maxFontSizeMultiplier: null, children: null };
@@ -190,4 +190,4 @@ export const HeaderActionButton = noop.forwardRef(ReactCompilerGating.isReactCom
   const items2 = [tmp2, icon];
   obj4.children = items2;
   return hasOwnProperty(Pressables.PressableOpacity, obj4);
-}));
+});

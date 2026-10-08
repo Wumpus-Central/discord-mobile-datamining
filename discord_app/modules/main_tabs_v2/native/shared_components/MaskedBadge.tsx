@@ -1,23 +1,23 @@
-// === Module 7513: MaskedBadge ===
+// === Module 9236: MaskedBadge ===
 
-// Module 7513 (MaskedBadge)
+// Module 9236 (MaskedBadge)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import BadgeDefault from "Badge" /* 7514 */;
+import native from "native" /* 1200 */;
+import BadgeDefault from "Badge" /* 9237 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
-let obj2 = { maskStyle: { position: "relative", right: "applicationId" }, unreadDot: { width: 0, height: 0 }, badgeStyle: { flexGrow: 1, flexShrink: 0 }, unreadBadge: { position: "relative", bottom: -3 }, lowPriorityBadge: { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_400 } };
+const createStyles = fn(5090);
+let obj2 = { maskStyle: { position: "relative", right: "IconComponent" }, unreadDot: { width: 0, height: 0 }, badgeStyle: { flexGrow: 1, flexShrink: 0 }, unreadBadge: { position: "relative", bottom: -3 }, lowPriorityBadge: { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_400 } };
 let closure_5 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj3 = { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_400 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/MaskedBadge.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function MaskedBadge(arg0) {
   const cResult = c.c(19);
   ({ backgroundColor, value, maxValue, size, style } = arg0);
   ({ unread, lowPriority } = arg0);
@@ -94,7 +94,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[17] = size;
     cResult[18] = tmp9;
   }
-}) : ((backgroundColor) => {
+}) : (function MaskedBadge(backgroundColor) {
   backgroundColor = backgroundColor.backgroundColor;
   value = backgroundColor.value;
   ({ unread, maxValue, lowPriority, size, style } = backgroundColor);

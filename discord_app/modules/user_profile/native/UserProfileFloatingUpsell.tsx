@@ -1,26 +1,26 @@
-// === Module 14501: UserProfileFloatingUpsell ===
+// === Module 14761: UserProfileFloatingUpsell ===
 
-// Module 14501 (UserProfileFloatingUpsell)
+// Module 14761 (UserProfileFloatingUpsell)
 import c from "c" /* 576 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import UserProfileUpsellCardV2 from "UserProfileUpsellCardV2" /* 14490 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import UserProfileUpsellCardV2 from "UserProfileUpsellCardV2" /* 14750 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const UserProfileUpsellCardV2Default = UserProfileUpsellCardV2;
 
 require = fn;
-const Constants = fn(6714);
+const Constants = fn(6891);
 ({ FLOATING_UPSELL_HEIGHT: hasOwnProperty, PROFILE_SIDE_PADDING: metroRequire } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles((bottom) => {
   const obj = { container: { position: "absolute", bottom, start: 0, end: 0, marginHorizontal: timestampProducer - UserProfileUpsellCardV2.GRADIENT_BORDER_WIDTH } };
   return obj;
 });
 fn(558);
 const ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFloatingUpsellHeight() {
   const cResult = c.c(3);
   [tmp3, require] = noop.useState(hasOwnProperty);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -41,7 +41,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp5 = cResult[2];
   }
   return tmp5;
-}) : (() => {
+}) : (function useFloatingUpsellHeight() {
   const tmp = _slicedToArray(noop.useState(hasOwnProperty), 2);
   closure_0 = tmp[1];
   return { height: tmp[0], onLayout: noop.useCallback((nativeEvent) => closure_0(nativeEvent.nativeEvent.layout.height), []) };
@@ -49,7 +49,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileFloatingUpsell.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileFloatingUpsell(arg0) {
   const cResult = c.c(3);
   const tmp4 = closure_8(useSafeAreaInsetsDefault().bottom);
   if (cResult[0] === arg0) {
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = tmp8;
   tmp5 = tmp8;
   const tmp3Result = UserProfileUpsellCardV2Default;
-}) : ((arg0) => {
+}) : (function UserProfileFloatingUpsell(arg0) {
   const tmp = closure_8(useSafeAreaInsetsDefault().bottom);
   const obj = { style: closure_8(useSafeAreaInsetsDefault().bottom).container };
   const merged = Object.assign(arg0);

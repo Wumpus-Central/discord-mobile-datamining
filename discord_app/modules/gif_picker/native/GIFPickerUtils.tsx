@@ -1,11 +1,11 @@
-// === Module 10106: gif_picker/GIFPickerUtils ===
+// === Module 9690: gif_picker/GIFPickerUtils ===
 
-// Module 10106 (gif_picker/GIFPickerUtils)
+// Module 9690 (gif_picker/GIFPickerUtils)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import URLUtilsDefault from "URLUtils" /* 1371 */;
-import AttachmentUrlUtilsAll from "AttachmentUrlUtils" /* 7529 */;
-import FavoriteGIFHooks from "FavoriteGIFHooks" /* 10107 */;
+import URLUtilsDefault from "URLUtils" /* 1383 */;
+import AttachmentUrlUtilsAll from "AttachmentUrlUtils" /* 9252 */;
+import FavoriteGIFHooks from "FavoriteGIFHooks" /* 9691 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -62,7 +62,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/gif_picker/native/GIFPickerUtils.tsx");
 
 export const GIF_HEADER_HEIGHT = 56;
-export const useFavoriteGIFsMobile = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useFavoriteGIFsMobile = ReactCompilerGating.isReactCompilerEnabled() ? (function useFavoriteGIFsMobile() {
   const cResult = c.c(6);
   const sortedFavoriteGIFs = FavoriteGIFHooks.useSortedFavoriteGIFs(transformFavoriteGifUrl);
   if (cResult[0] === sortedFavoriteGIFs[0]) {
@@ -94,10 +94,10 @@ export const useFavoriteGIFsMobile = ReactCompilerGating.isReactCompilerEnabled(
   cResult[1] = sortedFavoriteGIFs.length;
   cResult[2] = tmp5;
   tmp4 = tmp5;
-}) : (() => {
-  sortedFavoriteGIFs = sortedFavoriteGIFs(10107).useSortedFavoriteGIFs(transformFavoriteGifUrl);
+}) : (function useFavoriteGIFsMobile() {
+  sortedFavoriteGIFs = sortedFavoriteGIFs(9691).useSortedFavoriteGIFs(transformFavoriteGifUrl);
   const items = [sortedFavoriteGIFs];
-  let obj = sortedFavoriteGIFs(10107);
+  let obj = sortedFavoriteGIFs(9691);
   return {
     favorites: sortedFavoriteGIFs,
     favoritesCategory: noop.useMemo(() => {

@@ -1,17 +1,17 @@
-// === Module 13465: GatewaySocketDispatcher ===
+// === Module 13765: GatewaySocketDispatcher ===
 
-// Module 13465 (GatewaySocketDispatcher)
+// Module 13765 (GatewaySocketDispatcher)
 import LoggerDefault from "Logger" /* 3 */;
-import TimeUtils from "TimeUtils" /* 4925 */;
-import WorkSchedulerTelemetry from "WorkSchedulerTelemetry" /* 13469 */;
-import GatewaySocketAnalytics from "GatewaySocketAnalytics" /* 13470 */;
-import VoiceServerUpdateImmediateExperiment from "VoiceServerUpdateImmediateExperiment" /* 13471 */;
-import ConnectionStateDefault from "ConnectionState" /* 13472 */;
-import ActionBatcherDefault from "ActionBatcher" /* 13473 */;
+import TimeUtils from "TimeUtils" /* 5119 */;
+import WorkSchedulerTelemetry from "WorkSchedulerTelemetry" /* 13769 */;
+import GatewaySocketAnalytics from "GatewaySocketAnalytics" /* 13770 */;
+import VoiceServerUpdateImmediateExperiment from "VoiceServerUpdateImmediateExperiment" /* 13771 */;
+import ConnectionStateDefault from "ConnectionState" /* 13772 */;
+import ActionBatcherDefault from "ActionBatcher" /* 13773 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-let closure_4 = fn(13466).DISPATCHER_IDEAL_TIME_LIMIT_MS;
+let closure_4 = fn(13766).DISPATCHER_IDEAL_TIME_LIMIT_MS;
 let closure_5 = new LoggerDefault("GatewaySocket");
 const set = new Set(["INITIAL_GUILD", "READY"]);
 const set1 = new Set(["READY", "INITIAL_GUILD"]);
@@ -296,7 +296,7 @@ prototype["dispatchMultiple"] = function dispatchMultiple(items, arg1) {
       }
       if (closure_5.length > 0) {
         let telemetry = self.scheduler.telemetry;
-        telemetry.measure(tmp21(13469).WorkSchedulerTelemetryMeasurement.COUNT_DISPATCHES_LEFT_AFTER_YIELD, closure_5.length);
+        telemetry.measure(tmp21(13769).WorkSchedulerTelemetryMeasurement.COUNT_DISPATCHES_LEFT_AFTER_YIELD, closure_5.length);
         const queue = self.queue;
         const unshift = queue.unshift;
         items = [];

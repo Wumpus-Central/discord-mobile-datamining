@@ -1,18 +1,18 @@
-// === Module 12245: GuildPowerupsPerkCard ===
+// === Module 12324: GuildPowerupsPerkCard ===
 
-// Module 12245 (GuildPowerupsPerkCard)
+// Module 12324 (GuildPowerupsPerkCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import shared from "shared" /* 4735 */;
-import useThemeDefault from "useTheme" /* 4797 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import LinearGradientDefault from "LinearGradient" /* 5612 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6477 */;
-import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 12195 */;
-import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 12196 */;
-import GuildPowerupsCardDefault from "GuildPowerupsCard" /* 12241 */;
+import native from "native" /* 1200 */;
+import shared from "shared" /* 4929 */;
+import useThemeDefault from "useTheme" /* 4991 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import LinearGradientDefault from "LinearGradient" /* 5387 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6655 */;
+import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 12274 */;
+import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 12275 */;
+import GuildPowerupsCardDefault from "GuildPowerupsCard" /* 12320 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,7 +21,7 @@ let closure_3 = ["title", "description", "imageUrl", "isImageAnimated", "riveCom
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { marginHorizontal: nativeDefault.space.PX_16 }, card: { padding: 0, overflow: "hidden" }, contentContainer: null, imageContainer: null, gradient: null, headerContainer: null, badge: null };
 let obj3 = { marginHorizontal: nativeDefault.space.PX_16 };
 obj2.contentContainer = { gap: nativeDefault.space.PX_16, padding: nativeDefault.space.PX_16 };
@@ -37,7 +37,7 @@ let obj5 = { gap: nativeDefault.space.PX_4 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsPerkCard.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPowerupsPerkCard(arg0) {
   const cResult = c.c(62);
   if (cResult[0] !== arg0) {
     ({ title, description, imageUrl, isImageAnimated, riveComponent, style, onPress, status, badge } = arg0);
@@ -300,7 +300,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp27 = items4;
   }
   const tmpResult2 = ManaTypeConsolidationExperiment;
-}) : ((arg0) => {
+}) : (function GuildPowerupsPerkCard(arg0) {
   ({ imageUrl, isImageAnimated } = arg0);
   ({ title, description } = arg0);
   if (isImageAnimated === undefined) {

@@ -1,19 +1,19 @@
-// === Module 14967: VideoQuestModalCloseButton ===
+// === Module 15229: VideoQuestModalCloseButton ===
 
-// Module 14967 (VideoQuestModalCloseButton)
+// Module 15229 (VideoQuestModalCloseButton)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Pressables from "Pressables" /* 5916 */;
-import XSmallIcon from "XSmallIcon" /* 6024 */;
+import Pressables from "Pressables" /* 6189 */;
+import XSmallIcon from "XSmallIcon" /* 6210 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
 const result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestModalCloseButton.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function VideoQuestModalCloseButton(arg0) {
   const cResult = c.c(10);
   ({ onClose, iconColor, style } = arg0);
   if (undefined === iconColor) {
@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[8] = tmp9;
   cResult[9] = tmp13;
   tmp12 = tmp13;
-}) : ((iconColor) => {
+}) : (function VideoQuestModalCloseButton(iconColor) {
   let MOBILE_TEXT_HEADING_PRIMARY = iconColor.iconColor;
   if (MOBILE_TEXT_HEADING_PRIMARY === undefined) {
     MOBILE_TEXT_HEADING_PRIMARY = nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY;

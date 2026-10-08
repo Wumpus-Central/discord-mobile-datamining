@@ -1,20 +1,20 @@
-// === Module 7743: useDiscountOffer ===
+// === Module 8064: useDiscountOffer ===
 
-// Module 7743 (useDiscountOffer)
+// Module 8064 (useDiscountOffer)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
-import UserOfferStore from "UserOfferStore" /* 6972 */;
+import UserStore from "UserStore" /* 1389 */;
+import UserOfferStore from "UserOfferStore" /* 7161 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const CHURN_DISCOUNT_IDS = fn(1379).CHURN_DISCOUNT_IDS;
+const CHURN_DISCOUNT_IDS = fn(1391).CHURN_DISCOUNT_IDS;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/hooks/useDiscountOffer.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useDiscountOffer(arg0, arg1) {
   _require = arg0;
   const cResult = require("c").c(11);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -152,7 +152,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   tmp17 = items2;
   tmp16 = E;
   const tmpResult2 = require("initialize");
-}) : ((arg0, arg1) => {
+}) : (function useDiscountOffer(arg0, arg1) {
   _require = arg0;
   const items = [UserOfferStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => UserOfferStore.getUserDiscountOffer(closure_0));

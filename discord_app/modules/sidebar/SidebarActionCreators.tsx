@@ -1,17 +1,17 @@
-// === Module 7527: SidebarActionCreators ===
+// === Module 9250: SidebarActionCreators ===
 
-// Module 7527 (SidebarActionCreators)
+// Module 9250 (SidebarActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
 import router_utils from "router_utils" /* 1112 */;
-import ChannelRecord from "ChannelRecord" /* 2055 */;
-import ChannelConstants from "ChannelConstants" /* 2058 */;
-import Client from "Client" /* 4793 */;
-import SidebarActionTypes from "SidebarActionTypes" /* 6795 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 6978 */;
-import MessageManagerDefault from "MessageManager" /* 7528 */;
-import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 7532 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
+import ChannelRecord from "ChannelRecord" /* 2067 */;
+import ChannelConstants from "ChannelConstants" /* 2070 */;
+import Client from "Client" /* 4987 */;
+import SidebarActionTypes from "SidebarActionTypes" /* 6068 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7167 */;
+import MessageManagerDefault from "MessageManager" /* 9251 */;
+import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 9254 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
 import size from "module_2" /* 2 */;
 
 let closure_3 = ChannelRecord.isChannelThreadsForcedOpenedInFullView;

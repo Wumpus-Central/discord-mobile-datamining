@@ -1,15 +1,15 @@
-// === Module 15007: QuestDockEnrolledHeader ===
+// === Module 15269: QuestDockEnrolledHeader ===
 
-// Module 15007 (QuestDockEnrolledHeader)
+// Module 15269 (QuestDockEnrolledHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import QuestTypes from "QuestTypes" /* 5633 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10736 */;
-import hooks_QuestHooks from "hooks/QuestHooks" /* 10924 */;
-import QuestCopyHooks from "QuestCopyHooks" /* 10968 */;
-import QuestDockCreativeContext from "QuestDockCreativeContext" /* 14940 */;
-import QuestProgressIndicatorDefault from "QuestProgressIndicator" /* 14950 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import QuestTypes from "QuestTypes" /* 5980 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10490 */;
+import hooks_QuestHooks from "hooks/QuestHooks" /* 10575 */;
+import QuestCopyHooks from "QuestCopyHooks" /* 11161 */;
+import QuestDockCreativeContext from "QuestDockCreativeContext" /* 15202 */;
+import QuestProgressIndicatorDefault from "QuestProgressIndicator" /* 15212 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,14 +20,14 @@ const jsxProd = fn(21);
 const PX_8 = nativeDefault.space.PX_8;
 let c7 = "heading-md/semibold";
 let c8 = "text-sm/medium";
-let closure_9 = fn(14912).QUEST_DOCK_COLLAPSED_HEIGHT - 2 * PX_8;
-const createStyles = fn(4896);
+let closure_9 = fn(15174).QUEST_DOCK_COLLAPSED_HEIGHT - 2 * PX_8;
+const createStyles = fn(5090);
 let closure_10 = createStyles.createStyles({ wrapper: { alignItems: "center", display: "flex", flexDirection: "row", flexGrow: 1, flexShrink: 1, gap: 8, justifyContent: "center", padding: PX_8 }, progressIndicatorWrapper: { flexGrow: 0, flexShrink: 0 }, copy: { flexGrow: 1, flexShrink: 1, minWidth: 0 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockEnrolledHeader.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function QuestDockEnrolledHeader() {
   const cResult = c.c(22);
   const questDockQuest = QuestDockCreativeContext.useQuestDockQuest();
   const tmp5 = closure_10();
@@ -127,7 +127,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[1] = questDockQuest;
   cResult[2] = obj12;
   tmp9 = obj12;
-}) : (() => {
+}) : (function QuestDockEnrolledHeader() {
   const questDockQuest = QuestDockCreativeContext.useQuestDockQuest();
   const tmp4 = closure_10();
   const questTaskDetails = hooks_QuestHooks.useQuestTaskDetails(questDockQuest);

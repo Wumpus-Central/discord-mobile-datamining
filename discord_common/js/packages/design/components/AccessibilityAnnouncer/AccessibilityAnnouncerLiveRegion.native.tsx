@@ -1,6 +1,6 @@
-// === Module 4597: AccessibilityAnnouncerLiveRegion ===
+// === Module 4789: AccessibilityAnnouncerLiveRegion ===
 
-// Module 4597 (AccessibilityAnnouncerLiveRegion)
+// Module 4789 (AccessibilityAnnouncerLiveRegion)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -8,8 +8,8 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, Text: c2 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const module_4577 = fn(4577);
-const state = module_4577.create(() => ({ message: "duration", version: false }));
+const module_4769 = fn(4769);
+const state = module_4769.create(() => ({ message: "emoji", version: false }));
 const styles = StyleSheet.create({ liveRegion: { position: "absolute", top: 0, left: 0, width: 1, height: 1, opacity: 0 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -19,7 +19,7 @@ export const updateAccessibilityAnnouncerLiveRegionMessage = function updateAcce
   const message = intl;
   state.setState((version) => ({ message, version: version.version + 1 }));
 };
-export const AccessibilityAnnouncerLiveRegion = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const AccessibilityAnnouncerLiveRegion = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function AccessibilityAnnouncerLiveRegion() {
   const cResult = c.c(3);
   ({ message, version } = state());
   if (cResult[0] === message) {
@@ -33,7 +33,7 @@ export const AccessibilityAnnouncerLiveRegion = noop.memo(ReactCompilerGating.is
   cResult[1] = version;
   cResult[2] = tmp4;
   tmp3 = tmp4;
-}) : (() => {
+}) : (function AccessibilityAnnouncerLiveRegion() {
   const tmp = state();
   return <React2 key={tmp.version} accessibilityLiveRegion="polite" pointerEvents="none" style={closure_5.liveRegion}>{tmp.message}</React2>;
 }));

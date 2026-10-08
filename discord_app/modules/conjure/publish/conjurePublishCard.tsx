@@ -1,7 +1,7 @@
-// === Module 16724: conjurePublishCard ===
+// === Module 16997: conjurePublishCard ===
 
-// Module 16724 (conjurePublishCard)
-import _modDef3753 from "module_3753" /* 3753 */;
+// Module 16997 (conjurePublishCard)
+import _modDef3827 from "module_3827" /* 3827 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/publish/conjurePublishCard.tsx");
@@ -54,16 +54,16 @@ export const publishNoticeMessage = function publishNoticeMessage(notice) {
   if (notice.update) {
     const surface = notice.surface;
     if ("bot" === surface) {
-      return _modDef3753.zfpeIL;
+      return _modDef3827.zfpeIL;
     } else if ("widget" === surface) {
-      return _modDef3753.DxCfTh;
+      return _modDef3827.DxCfTh;
     } else if ("automod" === surface) {
-      return _modDef3753["8ytGC3"];
+      return _modDef3827["8ytGC3"];
     } else {
-      return _modDef3753.WSmpBT;
+      return _modDef3827.WSmpBT;
     }
   } else {
-    return _modDef3753.MOrR29;
+    return _modDef3827.MOrR29;
   }
 };
 export const withLivePublishCard = function withLivePublishCard(stateFromStores1, stateFromStores2) {

@@ -1,9 +1,9 @@
-// === Module 10609: SearchableUserListActions ===
+// === Module 10206: SearchableUserListActions ===
 
-// Module 10609 (SearchableUserListActions)
+// Module 10206 (SearchableUserListActions)
 import c from "c" /* 576 */;
-import TableRow from "TableRow" /* 6000 */;
-import TableRowGroup from "TableRowGroup" /* 6081 */;
+import TableRow from "TableRow" /* 6184 */;
+import TableRowGroup from "TableRowGroup" /* 6267 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 const jsx = fn(21).jsx;
 fn(558);
 const ReactCompilerGating = fn(558);
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserFlashListActions(arg0) {
   const cResult = c.c(10);
   ({ actions, style } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -64,7 +64,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[8] = tmp9;
   cResult[9] = tmp13;
   tmp12 = tmp13;
-}) : ((actions) => {
+}) : (function UserFlashListActions(actions) {
   actions = actions.actions;
   const obj = { style: null, children: null };
   const items = [{ flex: 1 }, actions.style];
@@ -83,7 +83,7 @@ let closure_7 = tmp4;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/SearchableUserListActions.tsx");
 
-export const useUserListActionsProps = ReactCompilerGating.isReactCompilerEnabled() ? ((actions) => {
+export const useUserListActionsProps = ReactCompilerGating.isReactCompilerEnabled() ? (function useUserListActionsProps(actions) {
   const cResult = actions(576).c(8);
   actions = actions.actions;
   const style = actions.style;
@@ -148,10 +148,10 @@ export const useUserListActionsProps = ReactCompilerGating.isReactCompilerEnable
   }
   const error = new Error("UserListActions: paddingTop and paddingBottom must be numbers.");
   throw error;
-}) : ((actions) => {
+}) : (function useUserListActionsProps(actions) {
   actions = actions.actions;
   const style = actions.style;
-  const tmp = style(10610)();
+  const tmp = style(10207)();
   dependencyMap = tmp;
   const items = [actions, tmp, style];
   return noop.useMemo(() => {

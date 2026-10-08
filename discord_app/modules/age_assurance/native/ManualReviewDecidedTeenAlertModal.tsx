@@ -1,46 +1,46 @@
-// === Module 8303: ManualReviewDecidedTeenAlertModal ===
+// === Module 7686: ManualReviewDecidedTeenAlertModal ===
 
-// Module 8303 (ManualReviewDecidedTeenAlertModal)
+// Module 7686 (ManualReviewDecidedTeenAlertModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import _modDef3137 from "module_3137" /* 3137 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import AlertModal from "AlertModal" /* 5720 */;
-import ManualReviewInconclusiveCopyExperiment from "ManualReviewInconclusiveCopyExperiment" /* 8304 */;
+import _modDef3181 from "module_3181" /* 3181 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import AlertModal from "AlertModal" /* 5303 */;
+import ManualReviewInconclusiveCopyExperiment from "ManualReviewInconclusiveCopyExperiment" /* 7687 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const FALLBACK_TEEN_AGE_RANGE = fn(8118).FALLBACK_TEEN_AGE_RANGE;
+const FALLBACK_TEEN_AGE_RANGE = fn(5914).FALLBACK_TEEN_AGE_RANGE;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/native/ManualReviewDecidedTeenAlertModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((teenAgeRange) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ManualReviewDecidedTeenAlertModal(teenAgeRange) {
   const cResult = c.c(8);
   teenAgeRange = teenAgeRange.teenAgeRange;
   const isManualReviewInconclusiveCopyEnabled = ManualReviewInconclusiveCopyExperiment.useIsManualReviewInconclusiveCopyEnabled("manual_review_decided_teen_modal");
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function l(children, id) {
+    function contentAndSettingsHook(children, id) {
       return jsx(Text_Text.Text, {
         variant: "text-md/normal",
         color: "text-link",
         onPress() {
-          const obj = closure_1_1(8117);
+          const obj = closure_1_1(7492);
           const intl = closure_1_0(1126).intl;
-          return obj.openUrl(closure_1_1(2115).getArticleURL(intl.string(closure_1_1(3137).agiNYw)));
+          return obj.openUrl(closure_1_1(2127).getArticleURL(intl.string(closure_1_1(3181).agiNYw)));
         },
         children
       }, id);
-    };
-    cResult[0] = fn;
-    let first = fn;
+    }
+    cResult[0] = contentAndSettingsHook;
+    let first = contentAndSettingsHook;
   } else {
     first = cResult[0];
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     let intl = util.intl;
-    const stringResult = intl.string(_modDef3137.AA3xYb);
+    const stringResult = intl.string(_modDef3181.AA3xYb);
     cResult[1] = stringResult;
     let tmp6 = stringResult;
   } else {
@@ -75,7 +75,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((teenAgeRange) =>
   }
   const intl2 = util.intl;
   const format = intl2.format;
-  let obj6 = _modDef3137;
+  let obj6 = _modDef3181;
   if (isManualReviewInconclusiveCopyEnabled) {
     obj6 = { contentAndSettingsHook: first };
     let formatResult = format(obj6.UIbYzl, obj6);
@@ -90,16 +90,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((teenAgeRange) =>
   cResult[2] = isManualReviewInconclusiveCopyEnabled;
   cResult[3] = teenAgeRange;
   cResult[4] = formatResult;
-}) : ((teenAgeRange) => {
+}) : (function ManualReviewDecidedTeenAlertModal(teenAgeRange) {
   teenAgeRange = teenAgeRange.teenAgeRange;
   function contentAndSettingsHook(children, id) {
     return jsx(Text_Text.Text, {
       variant: "text-md/normal",
       color: "text-link",
       onPress() {
-        const obj = closure_1_1(8117);
+        const obj = closure_1_1(7492);
         const intl = closure_1_0(1126).intl;
-        return obj.openUrl(closure_1_1(2115).getArticleURL(intl.string(closure_1_1(3137).agiNYw)));
+        return obj.openUrl(closure_1_1(2127).getArticleURL(intl.string(closure_1_1(3181).agiNYw)));
       },
       children
     }, id);
@@ -107,10 +107,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((teenAgeRange) =>
   const isManualReviewInconclusiveCopyEnabled = ManualReviewInconclusiveCopyExperiment.useIsManualReviewInconclusiveCopyEnabled("manual_review_decided_teen_modal");
   const obj2 = { title: null, content: null, actions: null };
   let intl = util.intl;
-  obj2.title = intl.string(_modDef3137.AA3xYb);
+  obj2.title = intl.string(_modDef3181.AA3xYb);
   const intl2 = util.intl;
   const format = intl2.format;
-  const tmp5 = _modDef3137;
+  const tmp5 = _modDef3181;
   if (isManualReviewInconclusiveCopyEnabled) {
     const obj3 = { contentAndSettingsHook };
     let formatResult = format(tmp5.UIbYzl, obj3);

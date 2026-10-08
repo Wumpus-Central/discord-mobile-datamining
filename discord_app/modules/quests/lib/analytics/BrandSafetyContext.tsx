@@ -1,14 +1,14 @@
-// === Module 7228: BrandSafetyContext ===
+// === Module 7407: BrandSafetyContext ===
 
-// Module 7228 (BrandSafetyContext)
-import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import ContentImpressionTrackerConstants from "ContentImpressionTrackerConstants" /* 7230 */;
-import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore" /* 7229 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
-import UserStore from "UserStore" /* 1377 */;
+// Module 7407 (BrandSafetyContext)
+import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
+import ContentImpressionTrackerConstants from "ContentImpressionTrackerConstants" /* 7409 */;
+import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore" /* 7408 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4899 */;
+import UserStore from "UserStore" /* 1389 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

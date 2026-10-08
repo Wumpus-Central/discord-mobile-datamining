@@ -1,9 +1,9 @@
-// === Module 12241: GuildPowerupsCard ===
+// === Module 12320: GuildPowerupsCard ===
 
-// Module 12241 (GuildPowerupsCard)
+// Module 12320 (GuildPowerupsCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Card from "Card" /* 6002 */;
+import Card from "Card" /* 6186 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import n_mod from "module_683" /* 683 */;
@@ -12,7 +12,7 @@ require = fn;
 let closure_2 = ["children", "containerStyle", "status", "style"];
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { cardActive: null, cardExpiring: null, cardRemoving: null };
 let obj3 = { borderColor: null };
 let n = n_mod;
@@ -37,7 +37,7 @@ const alphaResult2 = n(nativeDefault.unsafe_rawColors.YELLOW_300).alpha(0.35);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsCard.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPowerupsCard(arg0) {
   const cResult = c.c(18);
   if (cResult[0] !== arg0) {
     ({ children, containerStyle, status, style } = arg0);
@@ -118,7 +118,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[9] = "removing" === type2 && tmp12.cardRemoving;
   cResult[10] = items;
   tmp19 = items;
-}) : ((status) => {
+}) : (function GuildPowerupsCard(status) {
   status = status.status;
   ({ children, containerStyle, style } = status);
   const merged = Object.assign(status, Object.assign({ children: 0, containerStyle: 0, status: 0, style: 0 }));

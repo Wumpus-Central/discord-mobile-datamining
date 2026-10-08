@@ -1,8 +1,8 @@
-// === Module 12944: UserProfileRecentActivityMobileExperiment ===
+// === Module 13223: UserProfileRecentActivityMobileExperiment ===
 
-// Module 12944 (UserProfileRecentActivityMobileExperiment)
+// Module 13223 (UserProfileRecentActivityMobileExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1440 */;
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -13,7 +13,7 @@ obj.variations = obj2;
 let closure_2 = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/user_profile/experiments/UserProfileRecentActivityMobileExperiment.tsx");
 
-export const useIsRecentActivityMobileEnabled = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+export const useIsRecentActivityMobileEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsRecentActivityMobileEnabled(location) {
   const cResult = c.c(2);
   if (cResult[0] !== location) {
     const obj2 = { location };
@@ -24,4 +24,6 @@ export const useIsRecentActivityMobileEnabled = ReactCompilerGating.isReactCompi
     tmp2 = cResult[1];
   }
   return closure_2.useConfig(tmp2).enabled;
-}) : ((location) => closure_2.useConfig({ location }).enabled);
+}) : (function useIsRecentActivityMobileEnabled(location) {
+  return closure_2.useConfig({ location }).enabled;
+});

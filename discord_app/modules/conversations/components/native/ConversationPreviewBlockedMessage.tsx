@@ -1,13 +1,13 @@
-// === Module 7598: ConversationPreviewBlockedMessage ===
+// === Module 9305: ConversationPreviewBlockedMessage ===
 
-// Module 7598 (ConversationPreviewBlockedMessage)
+// Module 9305 (ConversationPreviewBlockedMessage)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Stack_Stack from "Stack/Stack" /* 5600 */;
-import EyeSlashIcon2 from "EyeSlashIcon" /* 6463 */;
-import DenyIcon from "DenyIcon" /* 7599 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import Stack_Stack from "Stack/Stack" /* 5373 */;
+import EyeSlashIcon2 from "EyeSlashIcon" /* 6641 */;
+import DenyIcon from "DenyIcon" /* 9306 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conversations/components/native/ConversationPreviewBlockedMessage.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((reason) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConversationPreviewBlockedMessage(reason) {
   const cResult = c.c(9);
   reason = reason.reason;
   if (cResult[0] !== reason) {
@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((reason) => {
     cResult[8] = tmp18;
     tmp15 = tmp18;
   }
-}) : ((reason) => {
+}) : (function ConversationPreviewBlockedMessage(reason) {
   const obj = { direction: "horizontal", spacing: nativeDefault.space.PX_8, align: "center", children: null };
   if ("blocked" === reason.reason) {
     let EyeSlashIcon = DenyIcon.DenyIcon;

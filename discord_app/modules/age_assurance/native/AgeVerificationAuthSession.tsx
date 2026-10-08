@@ -1,10 +1,10 @@
-// === Module 8134: AgeVerificationAuthSession ===
+// === Module 7521: AgeVerificationAuthSession ===
 
-// Module 8134 (AgeVerificationAuthSession)
+// Module 7521 (AgeVerificationAuthSession)
 import LoggerDefault from "Logger" /* 3 */;
 import c from "c" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import NativeBrowserManagerModuleIOSDefault from "NativeBrowserManagerModuleIOS" /* 4859 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import NativeBrowserManagerModuleIOSDefault from "NativeBrowserManagerModuleIOS" /* 5053 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -146,7 +146,7 @@ export const closeAgeVerificationAuthSession = function closeAgeVerificationAuth
 export function getIsAgeVerificationAuthSessionAwaitingResult() {
   return c6;
 }
-export const useIsAgeVerificationAuthSessionOpen = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useIsAgeVerificationAuthSessionOpen = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsAgeVerificationAuthSessionOpen() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function n(isOpen) {
@@ -158,5 +158,7 @@ export const useIsAgeVerificationAuthSessionOpen = ReactCompilerGating.isReactCo
     first = cResult[0];
   }
   return closure_5(first);
-}) : (() => closure_5((isOpen) => isOpen.isOpen));
+}) : (function useIsAgeVerificationAuthSessionOpen() {
+  return closure_5((isOpen) => isOpen.isOpen);
+});
 export { getIsAgeVerificationAuthSessionOpen };

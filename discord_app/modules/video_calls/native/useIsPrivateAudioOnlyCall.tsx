@@ -1,12 +1,12 @@
-// === Module 9088: useIsPrivateAudioOnlyCall ===
+// === Module 10335: useIsPrivateAudioOnlyCall ===
 
-// Module 9088 (useIsPrivateAudioOnlyCall)
+// Module 10335 (useIsPrivateAudioOnlyCall)
 import _slicedToArray from "module_32" /* 32 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4918 */;
-import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import VoiceStateStore from "VoiceStateStore" /* 4915 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2062 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6041 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5893 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
+import VoiceStateStore from "VoiceStateStore" /* 5111 */;
 
 const require = globalThis.__r;
 
@@ -16,12 +16,12 @@ function areParticipantStatesEqual(arg0, arg1) {
   [, tmp2] = arg1;
   return tmp === tmp2;
 }
-const isActivityParticipant = fn(4917).isActivityParticipant;
+const isActivityParticipant = fn(5113).isActivityParticipant;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/useIsPrivateAudioOnlyCall.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsPrivateAudioOnlyCall(id) {
   _require = id;
   const cResult = require("c").c(13);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -32,7 +32,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
     first = cResult[0];
   }
   if (cResult[1] !== id.id) {
-    const fn = function v() {
+    const fn = function h() {
       const items = [ChannelRTCStore.getSelectedParticipant(_private.id), ChannelRTCStore.getParticipantsVersion(_private.id)];
       return items;
     };
@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
       }
       return tmp(504).useStateFromStores(tmp12, tmp16, tmp17);
     }
-    const fn2 = function b() {
+    const fn2 = function _() {
       let isPrivateResult = _private.isPrivate();
       if (isPrivateResult) {
         isPrivateResult = !VoiceStateStore.hasVideo(_private.id);
@@ -108,7 +108,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
   cResult[7] = tmp10;
   tmp9 = tmp10;
   const tmpResult = require("initialize");
-}) : ((id) => {
+}) : (function useIsPrivateAudioOnlyCall(id) {
   _require = id;
   let items = [ChannelRTCStore];
   const items1 = [id];

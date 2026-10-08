@@ -1,8 +1,8 @@
-// === Module 12940: useIsGameFriends ===
+// === Module 13219: useIsGameFriends ===
 
-// Module 12940 (useIsGameFriends)
+// Module 13219 (useIsGameFriends)
 import _slicedToArray from "module_32" /* 32 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7155 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7335 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_relationships/hooks/useIsGameFriends.tsx");
 
-export const useIsGameFriends = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useIsGameFriends = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsGameFriends(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -23,7 +23,7 @@ export const useIsGameFriends = ReactCompilerGating.isReactCompilerEnabled() ? (
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function u() {
+    const fn = function l() {
       const gameRelationshipsForUserByType = GameRelationshipStore.getGameRelationshipsForUserByType(closure_0, RelationshipTypes.FRIEND);
       const items = [gameRelationshipsForUserByType.length > 0, GameRelationshipStore.getGameRelationshipsVersion()];
       return items;
@@ -40,7 +40,7 @@ export const useIsGameFriends = ReactCompilerGating.isReactCompilerEnabled() ? (
   }
   const obj = require("c");
   return _slicedToArray(require("initialize").useStateFromStores(first, tmp6, tmp7, require("SecondaryIndexMapUtils").isVersionEqual), 1)[0];
-}) : ((arg0) => {
+}) : (function useIsGameFriends(arg0) {
   _require = arg0;
   let items = [GameRelationshipStore];
   const items1 = [arg0];

@@ -1,8 +1,8 @@
-// === Module 16260: NativeFreezeScreens ===
+// === Module 16520: NativeFreezeScreens ===
 
-// Module 16260 (NativeFreezeScreens)
+// Module 16520 (NativeFreezeScreens)
 import _modDef38 from "module_38" /* 38 */;
-import enableScreens from "enableScreens" /* 5722 */;
+import enableScreens from "enableScreens" /* 5305 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,12 +10,12 @@ require = fn;
 let StyleSheet = fn(17).StyleSheet;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({ screens: { flex: 1, overflow: "hidden" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/freeze/native/NativeFreezeScreens.tsx");
 
-export const NativeFreezeScreens = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const NativeFreezeScreens = ReactCompilerGating.isReactCompilerEnabled() ? (function NativeFreezeScreens(arg0) {
   const cResult = activeIndex(576).c(27);
   ({ children, activeIndex } = arg0);
   ({ detachInactiveScreens, lazy, unmountOnBlur, freezeOnBlur, preloadIndices } = arg0);
@@ -93,7 +93,7 @@ export const NativeFreezeScreens = ReactCompilerGating.isReactCompilerEnabled() 
                     }
                   }
                   const obj2 = { enabled: tmp4, hasTwoStates: true, style: tmp9.screens, nativeID: "native-freeze-screens-container", children: cResult[14] };
-                  const tmp27 = first(tmp(5722).ScreenContainer, obj2);
+                  const tmp27 = first(tmp(5305).ScreenContainer, obj2);
                   cResult[23] = tmp4;
                   cResult[24] = tmp9.screens;
                   cResult[25] = cResult[14];
@@ -178,7 +178,7 @@ export const NativeFreezeScreens = ReactCompilerGating.isReactCompilerEnabled() 
   cResult[21] = undefined !== unmountOnBlur && unmountOnBlur;
   cResult[22] = E;
   tmp22 = E;
-}) : ((detachInactiveScreens) => {
+}) : (function NativeFreezeScreens(detachInactiveScreens) {
   ({ children, activeIndex } = detachInactiveScreens);
   let flag = detachInactiveScreens.detachInactiveScreens;
   if (flag === undefined) {

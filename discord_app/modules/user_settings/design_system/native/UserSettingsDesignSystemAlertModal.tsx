@@ -1,10 +1,10 @@
-// === Module 15667: UserSettingsDesignSystemAlertModal ===
+// === Module 15947: UserSettingsDesignSystemAlertModal ===
 
-// Module 15667 (UserSettingsDesignSystemAlertModal)
+// Module 15947 (UserSettingsDesignSystemAlertModal)
 import c from "c" /* 576 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import useAlertStore from "useAlertStore" /* 5716 */;
-import AlertModal from "AlertModal" /* 5720 */;
+import useAlertStore from "useAlertStore" /* 5299 */;
+import AlertModal from "AlertModal" /* 5303 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
-let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function DemoModal() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     closure_0 = asyncGeneratorStep(async () => {
@@ -67,7 +67,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         }
       }
     });
-    const fn = function() {
+    function t0() {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -76,9 +76,9 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         applyArgumentsResult = apply(self, arguments);
       }
       return applyArgumentsResult;
-    };
-    cResult[0] = fn;
-    let first = fn;
+    }
+    cResult[0] = t0;
+    let first = t0;
   } else {
     first = cResult[0];
   }
@@ -96,7 +96,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp6 = cResult[1];
   }
   return tmp6;
-}) : (() => {
+}) : (function DemoModal() {
   const callback = noop.useCallback(asyncGeneratorStep(async () => {
     if (c0 === 2) {
       c0 = 3;
@@ -150,13 +150,13 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   obj.actions = items;
   return jsx(AlertModal.AlertModal, { title: "Are you sure?", content: "This will clear 3 incoming friend requests. The users who sent them won\u2019t be informed.", actions: null });
 });
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_9 = createStyles.createStyles({ container: { padding: 16, flex: 1, alignItems: "center" } });
 ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemAlertModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSettingsDesignSystemAlertModal() {
   const cResult = c.c(3);
   const tmp4 = closure_9();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -179,7 +179,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp9 = cResult[2];
   }
   return tmp9;
-}) : (() => {
+}) : (function UserSettingsDesignSystemAlertModal() {
   const obj = { children: null };
   const obj2 = { style: closure_9().container, children: jsx(components_Button_Button.Button, { onPress: openDemoModal, text: "Show Alert" }) };
   obj.children = <React4 style={closure_9().container}>{jsx(components_Button_Button.Button, { onPress: openDemoModal, text: "Show Alert" })}</React4>;

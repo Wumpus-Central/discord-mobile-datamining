@@ -1,8 +1,8 @@
-// === Module 17968: CreatorMonetizationSettingsDisabledContext ===
+// === Module 18255: CreatorMonetizationSettingsDisabledContext ===
 
-// Module 17968 (CreatorMonetizationSettingsDisabledContext)
+// Module 18255 (CreatorMonetizationSettingsDisabledContext)
 import c from "c" /* 576 */;
-import CreatorMonetizationRestrictionsHooks from "CreatorMonetizationRestrictionsHooks" /* 6766 */;
+import CreatorMonetizationRestrictionsHooks from "CreatorMonetizationRestrictionsHooks" /* 6942 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -10,7 +10,7 @@ const jsx = fn(21).jsx;
 let context = noop.createContext(undefined);
 fn(558);
 const ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCreatorMonetizationSettingsDisabled() {
   context = noop.useContext(context);
   if (null == context) {
     const _Error = Error;
@@ -19,7 +19,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     return context;
   }
-}) : (() => {
+}) : (function useCreatorMonetizationSettingsDisabled() {
   context = noop.useContext(context);
   if (null == context) {
     const _Error = Error;
@@ -34,7 +34,7 @@ const result = size.fileFinishedImporting("modules/creator_monetization/CreatorM
 
 export default context;
 export const useCreatorMonetizationSettingsDisabled = tmp3;
-export const CreatorMonetizationSettingsDisabledContextProvider = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const CreatorMonetizationSettingsDisabledContextProvider = ReactCompilerGating.isReactCompilerEnabled() ? (function CreatorMonetizationSettingsDisabledContextProvider(arg0) {
   const cResult = c.c(3);
   ({ children, guildId } = arg0);
   const shouldRestrictUpdatingCreatorMonetizationSettings = CreatorMonetizationRestrictionsHooks.useShouldRestrictUpdatingCreatorMonetizationSettings(guildId).shouldRestrictUpdatingCreatorMonetizationSettings;
@@ -49,7 +49,7 @@ export const CreatorMonetizationSettingsDisabledContextProvider = ReactCompilerG
   cResult[1] = shouldRestrictUpdatingCreatorMonetizationSettings;
   cResult[2] = tmp3;
   tmp2 = tmp3;
-}) : ((arg0) => {
+}) : (function CreatorMonetizationSettingsDisabledContextProvider(arg0) {
   ({ guildId, children } = arg0);
   return <context.Provider value={CreatorMonetizationRestrictionsHooks.useShouldRestrictUpdatingCreatorMonetizationSettings(guildId).shouldRestrictUpdatingCreatorMonetizationSettings}>{children}</context.Provider>;
 });

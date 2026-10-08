@@ -1,14 +1,14 @@
-// === Module 17740: TriggerFields ===
+// === Module 18027: TriggerFields ===
 
-// Module 17740 (TriggerFields)
+// Module 18027 (TriggerFields)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import AutomodRuleUtils from "AutomodRuleUtils" /* 17724 */;
-import MentionSpamTriggerFieldsDefault from "MentionSpamTriggerFields" /* 17741 */;
-import DefaultKeywordListTriggerFieldsDefault from "DefaultKeywordListTriggerFields" /* 17742 */;
-import ApplicationTriggerFieldsDefault from "ApplicationTriggerFields" /* 17746 */;
-import KeywordFilterTriggerFieldsDefault from "KeywordFilterTriggerFields" /* 17750 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import AutomodRuleUtils from "AutomodRuleUtils" /* 18011 */;
+import MentionSpamTriggerFieldsDefault from "MentionSpamTriggerFields" /* 18028 */;
+import DefaultKeywordListTriggerFieldsDefault from "DefaultKeywordListTriggerFields" /* 18029 */;
+import ApplicationTriggerFieldsDefault from "ApplicationTriggerFields" /* 18033 */;
+import KeywordFilterTriggerFieldsDefault from "KeywordFilterTriggerFields" /* 18037 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/native/components/TriggerFields.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function TriggerFields(arg0) {
   let stringResult = dependencyMap;
   const cResult = c.c(14);
   ({ rule, onChangeRule, onValidityChange } = arg0);
@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmpResult = AutomodRuleUtils;
   }
   obj2 = AutomodRuleUtils;
-}) : ((onValidityChange) => {
+}) : (function TriggerFields(onValidityChange) {
   ({ rule, onChangeRule } = onValidityChange);
   if (obj.isRuleMLSpamFilter(rule)) {
     const obj2 = { variant: "text-md/normal", color: "text-default", children: null };

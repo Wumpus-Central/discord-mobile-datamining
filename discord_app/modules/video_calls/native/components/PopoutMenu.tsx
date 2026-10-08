@@ -1,16 +1,16 @@
-// === Module 9186: PopoutMenu ===
+// === Module 10754: PopoutMenu ===
 
-// Module 9186 (PopoutMenu)
+// Module 10754 (PopoutMenu)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import Patterns from "Patterns" /* 4863 */;
-import timing from "timing" /* 4897 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6147 */;
-import FormRowDefault from "FormRow" /* 6640 */;
-import Form from "Form" /* 8924 */;
+import native from "native" /* 1200 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import Patterns from "Patterns" /* 5057 */;
+import timing from "timing" /* 5091 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6326 */;
+import FormRowDefault from "FormRow" /* 6817 */;
+import Form from "Form" /* 8555 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,11 +19,11 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
 let c9 = 250;
-const createStyles = fn(4896);
-let obj = { container: { position: "absolute", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.sm }, popoutMenuRow: { flex: 1 }, popoutMenuRowLabel: { width: "100%" } };
-let closure_10 = createStyles.createStyles(obj);
+const createStyles = fn(5090);
+let obj2 = { container: { position: "absolute", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.sm }, popoutMenuRow: { flex: 1 }, popoutMenuRowLabel: { width: "100%" } };
+let closure_10 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function PopoutMenuRow(onClose) {
   const cResult = c.c(13);
   ({ icon, text, onClick } = onClose);
   onClose = onClose.onClose;
@@ -86,7 +86,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
   cResult[1] = onClose;
   cResult[2] = fn;
   tmp5 = fn;
-}) : ((onClose) => {
+}) : (function PopoutMenuRow(onClose) {
   ({ icon, onClick } = onClose);
   onClose = onClose.onClose;
   const tmp = closure_10();
@@ -120,25 +120,23 @@ let obj3 = { position: "absolute", backgroundColor: nativeDefault.colors.BACKGRO
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/components/PopoutMenu.tsx");
 
-export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((onClose, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function PopoutMenu(onClose) {
   const cResult = onOpen(576).c(32);
   ({ disabled, title, trigger, rows, style, onOpen } = onClose);
   onClose = onClose.onClose;
-  const tmp4 = closure_10();
   let obj = onOpen(576);
-  const tmp5 = onClose;
-  ({ width, height } = onClose(1484)());
-  const tmp8 = first(noop.useState(0), 2);
-  dependencyMap = tmp8[1];
-  const tmp9 = first(noop.useState(false), 2);
-  first = tmp9[0];
-  let tmp11 = tmp9[1];
-  noop = tmp11;
-  const tmp12 = first(noop.useState(false), 2);
-  const first1 = tmp12[0];
-  closure_6 = tmp12[1];
-  const tmp6 = onClose(1484)();
-  const ref1 = noop.useRef(null);
+  const tmp4 = closure_10();
+  ({ width, height } = onClose(1496)());
+  const tmp7 = first(noop.useState(0), 2);
+  dependencyMap = tmp7[1];
+  const tmp8 = first(noop.useState(false), 2);
+  first = tmp8[0];
+  noop = tmp10;
+  const tmp11 = first(noop.useState(false), 2);
+  const first1 = tmp11[0];
+  closure_6 = tmp11[1];
+  const tmp5 = onClose(1496)();
+  const ref = noop.useRef(null);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const size1 = { top: 0, left: 0, width: 0, height: 0 };
     cResult[0] = size1;
@@ -146,19 +144,19 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
   } else {
     first2 = cResult[0];
   }
-  const ref = noop.useRef(null);
+  const ref1 = noop.useRef(null);
   [size, c9] = first(noop.useState(first2), 2);
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const size3 = { width: 0, height: 0 };
     cResult[1] = size3;
-    let tmp18 = size3;
+    let tmp17 = size3;
   } else {
-    tmp18 = cResult[1];
+    tmp17 = cResult[1];
   }
-  const tmp7Result = first(noop.useState(first2), 2);
-  [size2, closure_10] = first(noop.useState(tmp18), 2);
+  const tmp6Result = first(noop.useState(first2), 2);
+  [size2, closure_10] = first(noop.useState(tmp17), 2);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    function ne() {
+    function calculateDimensions() {
       if (ref != null) {
         let current = ref.current;
         if (current != null) {
@@ -180,12 +178,12 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
         }
       });
     }
-    cResult[2] = ne;
-    let tmp20 = ne;
+    cResult[2] = calculateDimensions;
+    let tmp19 = calculateDimensions;
   } else {
-    tmp20 = cResult[2];
+    tmp19 = cResult[2];
   }
-  closure_11 = tmp20;
+  closure_11 = tmp19;
   if (cResult[3] !== first1) {
     function ue() {
       let tmp = first1;
@@ -204,15 +202,15 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
     cResult[3] = first1;
     cResult[4] = ue;
     cResult[5] = items;
-    let tmp22 = items;
-    let tmp21 = ue;
+    let tmp21 = items;
+    let tmp20 = ue;
   } else {
-    tmp21 = cResult[4];
-    tmp22 = cResult[5];
+    tmp20 = cResult[4];
+    tmp21 = cResult[5];
   }
-  const effect = obj2.useEffect(tmp21, tmp22);
+  const effect = obj2.useEffect(tmp20, tmp21);
   let sum = -size2.height;
-  if (size.top + size.height + size2.height + 8 + onClose(1618)().bottom < height) {
+  if (size.top + size.height + size2.height + 8 + onClose(1630)().bottom < height) {
     sum = size.height + 16;
   }
   let num6 = 0;
@@ -221,12 +219,12 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
   }
   if (cResult[6] === num6) {
     if (cResult[7] === sum) {
-      let tmp25 = cResult[8];
+      let tmp24 = cResult[8];
     }
-    ({ top, left } = tmp25);
+    ({ top, left } = tmp24);
     if (cResult[9] === left) {
       if (cResult[10] === top) {
-        let tmp26 = cResult[11];
+        let tmp25 = cResult[11];
       }
       const _Symbol = Symbol;
       if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
@@ -240,10 +238,10 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
             return obj;
           }
         }
-        const items1 = [tmp11];
+        const items1 = [tmp10];
         cResult[12] = Ae;
         cResult[13] = items1;
-        let tmp28 = items1;
+        let tmp27 = items1;
       } else {
         class Ae {
           constructor() {
@@ -255,9 +253,9 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
             return obj;
           }
         }
-        tmp28 = cResult[13];
+        tmp27 = cResult[13];
       }
-      const imperativeHandle = obj2.useImperativeHandle(arg1, Ae, tmp28);
+      const imperativeHandle = obj2.useImperativeHandle(onClose.ref, Ae, tmp27);
       const _Symbol2 = Symbol;
       if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
         class Ae {
@@ -274,7 +272,7 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
           closure_2(arg0);
         }, 16);
         cResult[14] = debounceResult;
-        const tmp31 = debounceResult;
+        const tmp29 = debounceResult;
       } else {
         class Ae {
           constructor() {
@@ -287,8 +285,8 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
           }
         }
       }
-      debounceResult = tmp31;
-      __initData = tmp33;
+      debounceResult = tmp29;
+      __initData = tmp31;
       function handleClose() {
         if (first) {
           onClose();
@@ -333,11 +331,11 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
           return obj1;
         }
       }
-      let obj3 = { withTiming: onOpen(4897).withTiming, animateIn: tmp8[0] > 0 && !first, STANDARD_EASING: onOpen(1188).STANDARD_EASING, ANIMATION_DURATION: v250, runOnJS: onOpen(4618).runOnJS, handleClose, EXTRA_PADDING: 8 };
+      let obj3 = { withTiming: onOpen(5091).withTiming, animateIn: tmp7[0] > 0 && !first, STANDARD_EASING: onOpen(1200).STANDARD_EASING, ANIMATION_DURATION: v250, runOnJS: onOpen(4810).runOnJS, handleClose, EXTRA_PADDING: 8 };
       De.__closure = obj3;
       De.__workletHash = 4709130936628;
       De.__initData = debounceResult;
-      const animatedStyle = onOpen(4618).useAnimatedStyle(De);
+      const animatedStyle = onOpen(4810).useAnimatedStyle(De);
       const _Symbol3 = Symbol;
       if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
         class Ie {
@@ -346,7 +344,7 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
           }
         }
         cResult[15] = Ie;
-        const tmp37 = Ie;
+        const tmp35 = Ie;
       } else {
         class Ie {
           constructor() {
@@ -354,7 +352,7 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
           }
         }
       }
-      Ie = tmp37;
+      Ie = tmp35;
       if (cResult[16] !== onOpen) {
         class Oe {
           constructor() {
@@ -380,8 +378,8 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
           }
         }
       }
-      Oe = tmp38;
-      if (cResult[18] !== tmp38) {
+      Oe = tmp36;
+      if (cResult[18] !== tmp36) {
         class Oe {
           constructor() {
             tmp = closure_4(false);
@@ -400,7 +398,7 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
               return;
             }
           }
-          let obj4 = { runOnJS: onOpen(4618).runOnJS, _setClose: tmp11 };
+          let obj4 = { runOnJS: onOpen(4810).runOnJS, _setClose: tmp10 };
           PopoutMenuTsx4.__closure = obj4;
           PopoutMenuTsx4.__workletHash = 15929711498886;
           PopoutMenuTsx4.__initData = Ie;
@@ -414,15 +412,14 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
             }
           }
         }
-        const Gesture = onOpen(6147).Gesture;
+        const Gesture = onOpen(6326).Gesture;
         const LongPressResult = Gesture.LongPress();
-        function ve() {
+        function be() {
           ReanimatedRexport.runOnJS(Oe)();
         }
-        let obj5 = { runOnJS: onOpen(4618).runOnJS, handleLongPress: tmp38 };
-        ve.__closure = obj5;
-        ve.__workletHash = 1649917173815;
-        tmp11 = handleClose;
+        let obj5 = { runOnJS: onOpen(4810).runOnJS, handleLongPress: tmp36 };
+        be.__closure = obj5;
+        be.__workletHash = 1649917173815;
         class De {
           constructor() {
             tmp = closure_0;
@@ -461,8 +458,9 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
             return obj1;
           }
         }
-        const onStartResult = Gesture.LongPress().onBegin(PopoutMenuTsx4).onStart(ve);
-        cResult[18] = tmp38;
+        be.__initData = handleClose;
+        const onStartResult = Gesture.LongPress().onBegin(PopoutMenuTsx4).onStart(be);
+        cResult[18] = tmp36;
         cResult[19] = onStartResult;
         const onBeginResult = Gesture.LongPress().onBegin(PopoutMenuTsx4);
       } else {
@@ -482,7 +480,7 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
             }
           }
         }
-        let tmp46Result2 = trigger;
+        let tmp44Result = trigger;
         if (!disabled) {
           class PopoutMenuTsx4 {
             constructor() {
@@ -491,86 +489,10 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
               return;
             }
           }
-          const obj6 = { gesture: tmp39, children: null };
+          const obj6 = { gesture: tmp37, children: null };
           const obj8 = { ref, children: trigger };
           obj6.children = closure_6(first1, obj8);
-          const items2 = [closure_6(onOpen(6147).GestureDetector, obj6), ];
-          let tmp46Result = null;
-          if (first1) {
-            class PopoutMenuTsx4 {
-              constructor() {
-                obj = closure_0(closure_2[14]);
-                tmp = obj.runOnJS(closure_4)(true);
-                return;
-              }
-            }
-            tmp51[0] = ref1;
-            const items3 = [tmp4.container, style, tmp26, animatedStyle];
-            tmp51[1] = items3;
-            tmp51[2] = function onLayout(nativeEvent) {
-              debounceResult(nativeEvent.nativeEvent.layout.height);
-            };
-            let tmp48Result = null;
-            if (null != title) {
-              class PopoutMenuTsx4 {
-                constructor() {
-                  obj = closure_0(closure_2[14]);
-                  tmp = obj.runOnJS(closure_4)(true);
-                  return;
-                }
-              }
-              const obj9 = { text: title };
-              tmp48Result = tmp48(closure_11, obj9);
-            }
-            const items4 = [tmp48Result, , ];
-            class De {
-              constructor() {
-                tmp = closure_0;
-                tmp2 = closure_2;
-                obj = closure_0(closure_2[15]);
-                num = 0;
-                tmp3 = closure_13;
-                if (closure_13) {
-                  num = 1;
-                }
-                obj1 = { opacity: null, transform: null };
-                obj8 = { easing: tmp(tmp2[8]).STANDARD_EASING, duration: c9 };
-                fn = function n(arg0) {
-                  if (arg0) {
-                    onOpen(dependencyMap[14]).runOnJS(handleClose)();
-                    const obj = onOpen(dependencyMap[14]);
-                  }
-                };
-                obj9 = { runOnJS: tmp(tmp2[14]).runOnJS, handleClose };
-                tmp4 = c9;
-                fn.__closure = obj9;
-                fn.__workletHash = 7805688342878;
-                fn.__initData = closure_13;
-                obj1.opacity = obj.withTiming(num, obj8, "respect-motion-settings", fn);
-                tmpResult = tmp(tmp2[15]);
-                num2 = 0;
-                if (tmp3) {
-                  num2 = -8;
-                }
-                obj10 = { translateY: null };
-                obj11 = { easing: tmp(tmp2[8]).STANDARD_EASING, duration: tmp4 };
-                obj10.translateY = tmpResult.withTiming(num2, obj11);
-                items = [];
-                items[0] = obj10;
-                obj1.transform = items;
-                return obj1;
-              }
-            }
-            items4[1] = null;
-            items4[2] = rows.map((item, index) => {
-              const obj = {};
-              const merged = Object.assign(item);
-              obj.onClose = Ie;
-              return timestampProducer(closure_11, obj, index);
-            });
-            tmp51[3] = items4;
-            tmp46Result = tmp46(tmp5(4618).View, tmp51);
-          }
+          const items2 = [closure_6(onOpen(6326).GestureDetector, obj6), ];
           class De {
             constructor() {
               tmp = closure_0;
@@ -609,15 +531,15 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
               return obj1;
             }
           }
-          items2[1] = tmp46Result;
-          tmp54[0] = items2;
-          tmp46Result2 = tmp46(ref1, tmp54);
-          tmp48 = closure_6;
+          const obj9 = { children: null };
+          items2[1] = null;
+          obj9.children = items2;
+          tmp44Result = tmp44(ref1, obj9);
         }
         cResult[21] = animatedStyle;
         cResult[22] = disabled;
-        cResult[23] = tmp39;
-        cResult[24] = tmp26;
+        cResult[23] = tmp37;
+        cResult[24] = tmp25;
         cResult[25] = first1;
         class De {
           constructor() {
@@ -657,31 +579,32 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
             return obj1;
           }
         }
+        cResult[26] = rows;
         cResult[27] = style;
         cResult[28] = tmp4;
         cResult[29] = title;
         cResult[30] = trigger;
-        cResult[31] = tmp46Result2;
+        cResult[31] = tmp44Result;
       }
-      let tmpResult = onOpen(4618);
+      let tmpResult = onOpen(4810);
     }
     const rect = { left, top };
     cResult[9] = left;
     cResult[10] = top;
     cResult[11] = rect;
-    tmp26 = rect;
+    tmp25 = rect;
   }
   const rect1 = { top: sum, left: num6 };
   cResult[6] = num6;
   cResult[7] = sum;
   cResult[8] = rect1;
-  tmp25 = rect1;
-  const tmp7Result2 = first(noop.useState(tmp18), 2);
-}) : ((onClose, arg1) => {
+  tmp24 = rect1;
+  const tmp6Result2 = first(noop.useState(tmp17), 2);
+}) : (function PopoutMenu(onClose) {
   ({ title, trigger, rows, onOpen } = onClose);
   onClose = onClose.onClose;
   let width;
-  ({ disabled, style } = onClose);
+  ({ disabled, style, ref } = onClose);
   let size = onClose(width[11])();
   width = size.width;
   const height = size.height;
@@ -694,8 +617,8 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
   const tmp9 = height(bottom.useState(false), 2);
   const first1 = tmp9[0];
   const v250 = tmp9[1];
-  const ref = bottom.useRef(null);
   const ref1 = bottom.useRef(null);
+  const ref2 = bottom.useRef(null);
   const tmp13 = height(bottom.useState({ top: 0, left: 0, width: 0, height: 0 }), 2);
   const first2 = tmp13[0];
   closure_13 = tmp13[1];
@@ -707,14 +630,14 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
     let tmp = first1;
     if (first1) {
       let current1;
-      if (ref != null) {
-        current1 = ref.current;
+      if (ref1 != null) {
+        current1 = ref1.current;
       }
       tmp = null != current1;
     }
     if (tmp) {
-      if (ref != null) {
-        let current = ref.current;
+      if (ref1 != null) {
+        let current = ref1.current;
         if (current != null) {
           current.measureInWindow((left, arg1, width, height) => {
             const size = { top: Math.max(arg1, 0), left, width, height };
@@ -751,7 +674,7 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
   }, items1);
   const items2 = [tmp6[1]];
   ({ top, left } = memo);
-  const imperativeHandle = bottom.useImperativeHandle(arg1, () => ({
+  const imperativeHandle = bottom.useImperativeHandle(ref, () => ({
     close() {
       _setClose(true);
     }
@@ -768,7 +691,7 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
       duration(false);
     }
   }, items4);
-  let tmp = ref();
+  let tmp = ref1();
   const tmp2 = onClose;
   function ie() {
     let num = 0;
@@ -817,12 +740,12 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
   let tmp27Result2 = trigger;
   if (!disabled) {
     let obj4 = { gesture: tmp25, children: null };
-    let obj5 = { ref, children: trigger };
+    let obj5 = { ref: ref1, children: trigger };
     obj4.children = first(closure_5, obj5);
     const items6 = [first(tmp22(tmp3[17]).GestureDetector, obj4), ];
     let tmp27Result = null;
     if (first1) {
-      const obj6 = { ref: ref1, style: null, onLayout: null, children: null };
+      const obj6 = { ref: ref2, style: null, onLayout: null, children: null };
       const items7 = [tmp.container, style, , ];
       const rect = { left, top };
       items7[2] = rect;
@@ -834,7 +757,7 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
       let tmp29Result = null;
       if (null != title) {
         const obj7 = { text: title };
-        tmp29Result = tmp29(ref1, obj7);
+        tmp29Result = tmp29(ref2, obj7);
       }
       const items8 = [tmp29Result, , ];
       let tmp29Result2 = null;
@@ -857,4 +780,4 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
     tmp27Result2 = tmp27(first1, obj8);
   }
   return tmp27Result2;
-}));
+});

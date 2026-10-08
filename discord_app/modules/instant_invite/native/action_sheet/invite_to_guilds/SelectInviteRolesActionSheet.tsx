@@ -1,82 +1,160 @@
-// === Module 18040: SelectInviteRolesActionSheet ===
+// === Module 18327: SelectInviteRolesActionSheet ===
 
-// Module 18040 (SelectInviteRolesActionSheet)
+// Module 18327 (SelectInviteRolesActionSheet)
 import _mod12 from "module_12" /* 12 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles({ list: { flex: 1 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/instant_invite/native/action_sheet/invite_to_guilds/SelectInviteRolesActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((assignableRoles) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SelectInviteRolesActionSheet(assignableRoles) {
   const cResult = assignableRoles(576).c(35);
   assignableRoles = assignableRoles.assignableRoles;
   ({ selectedRoleIds, onSave } = assignableRoles);
   closure_8();
   if (cResult[0] !== assignableRoles) {
-    let tmp4 = globalThis;
+    let tmp5 = globalThis;
     const _Symbol = Symbol;
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-      class S {
-        constructor(arg0) {
-          return assignableRoles.id;
-        }
-      }
-      cResult[2] = S;
+      const fn = function v(id) {
+        return id.id;
+      };
+      cResult[2] = fn;
+      let tmp6 = fn;
     } else {
-      class S {
-        constructor(arg0) {
-          return assignableRoles.id;
-        }
-      }
+      tmp6 = cResult[2];
     }
-    let set = new tmp4.Set(assignableRoles.map(S));
-    tmp4 = set;
+    let set = new tmp5.Set(assignableRoles.map(tmp6));
+    tmp5 = set;
     cResult[0] = assignableRoles;
     cResult[1] = set;
   } else {
-    class S {
-      constructor(arg0) {
-        return assignableRoles.id;
+    dependencyMap = tmp4;
+    if (cResult[3] === cResult[1]) {
+      if (cResult[4] === selectedRoleIds) {
+        _slicedToArray = tmp11;
+        if (cResult[8] !== cResult[5]) {
+          const fn2 = function x() {
+            return new Set(closure_3);
+          };
+          cResult[8] = tmp11;
+          cResult[9] = fn2;
+          let tmp16 = fn2;
+        } else {
+          tmp16 = cResult[9];
+        }
+        [first, closure_5] = first.useState(tmp16);
+        onSave(10210)();
+        onSave(6729)();
+        const _Symbol2 = Symbol;
+        if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
+          class C {
+            constructor(arg0) {
+              closure_0 = assignableRoles;
+              tmp = closure_5((items) => {
+                set = new Set(items);
+                if (!set.delete(closure_0)) {
+                  set.add(closure_0);
+                }
+                return set;
+              });
+              return;
+            }
+          }
+          cResult[10] = C;
+        } else {
+          class C {
+            constructor(arg0) {
+              closure_0 = assignableRoles;
+              tmp = closure_5((items) => {
+                set = new Set(items);
+                if (!set.delete(closure_0)) {
+                  set.add(closure_0);
+                }
+                return set;
+              });
+              return;
+            }
+          }
+        }
+        closure_6 = C;
+        if (cResult[11] === cResult[5]) {
+          class C {
+            constructor(arg0) {
+              closure_0 = assignableRoles;
+              tmp = closure_5((items) => {
+                set = new Set(items);
+                if (!set.delete(closure_0)) {
+                  set.add(closure_0);
+                }
+                return set;
+              });
+              return;
+            }
+          }
+        }
+        const fn3 = function k() {
+          ActionSheetActionCreatorsDefault.hideActionSheet();
+          const sorted = Array.from(first).sort();
+          const arr = Array.from(first);
+          const items = [...closure_3];
+          if (!isEqualResult) {
+            onSave(sorted);
+          }
+          isEqualResult = _mod12.isEqual(sorted, items.sort());
+        };
+        cResult[11] = cResult[5];
+        cResult[12] = onSave;
+        cResult[13] = first;
+        cResult[14] = fn3;
       }
     }
-    dependencyMap = tmp3;
-    if (cResult[3] === tmp3) {
-      class S {
+    if (cResult[6] !== cResult[1]) {
+      class C {
         constructor(arg0) {
-          return assignableRoles.id;
+          closure_0 = assignableRoles;
+          tmp = closure_5((items) => {
+            set = new Set(items);
+            if (!set.delete(closure_0)) {
+              set.add(closure_0);
+            }
+            return set;
+          });
+          return;
         }
       }
-    }
-    if (cResult[6] !== tmp3) {
-      class R {
-        constructor(arg0) {
-          return closure_2.has(assignableRoles);
-        }
-      }
-      cResult[6] = tmp3;
-      cResult[7] = R;
+      cResult[6] = tmp4;
+      cResult[7] = tmp13;
     } else {
-      class R {
+      class C {
         constructor(arg0) {
-          return closure_2.has(assignableRoles);
+          closure_0 = assignableRoles;
+          tmp = closure_5((items) => {
+            set = new Set(items);
+            if (!set.delete(closure_0)) {
+              set.add(closure_0);
+            }
+            return set;
+          });
+          return;
         }
       }
     }
-    const found = selectedRoleIds.filter(R);
-    cResult[3] = tmp3;
+    const found = selectedRoleIds.filter(tmp13);
+    cResult[3] = cResult[1];
     cResult[4] = selectedRoleIds;
     cResult[5] = found;
   }
   let obj = assignableRoles(576);
-}) : ((assignableRoles) => {
+}) : (function SelectInviteRolesActionSheet(assignableRoles) {
   assignableRoles = assignableRoles.assignableRoles;
   const selectedRoleIds = assignableRoles.selectedRoleIds;
   const onSave = assignableRoles.onSave;

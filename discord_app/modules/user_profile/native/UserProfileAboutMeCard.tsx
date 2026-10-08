@@ -1,40 +1,40 @@
-// === Module 10999: UserProfileAboutMeCard ===
+// === Module 11223: UserProfileAboutMeCard ===
 
-// Module 10999 (UserProfileAboutMeCard)
+// Module 11223 (UserProfileAboutMeCard)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import KeyboardTypes from "KeyboardTypes" /* 1616 */;
-import useToken from "useToken" /* 4586 */;
-import ChatInputUtils from "ChatInputUtils" /* 4751 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import GuildIconDefault from "GuildIcon" /* 5978 */;
-import UserProfileCardDefault from "UserProfileCard" /* 6713 */;
-import MaskedLinkUtils from "MaskedLinkUtils" /* 8057 */;
-import BioTextDefault from "BioText" /* 11000 */;
-import useFriendsSinceDate from "useFriendsSinceDate" /* 11001 */;
-import UserProfileAboutMeCardCommandDefault from "UserProfileAboutMeCardCommand" /* 11003 */;
+import native from "native" /* 1200 */;
+import KeyboardTypes from "KeyboardTypes" /* 1628 */;
+import useToken from "useToken" /* 4778 */;
+import ChatInputUtils from "ChatInputUtils" /* 4945 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import GuildIconDefault from "GuildIcon" /* 6161 */;
+import UserProfileCardDefault from "UserProfileCard" /* 6890 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 8466 */;
+import BioTextDefault from "BioText" /* 11224 */;
+import useFriendsSinceDate from "useFriendsSinceDate" /* 11226 */;
+import UserProfileAboutMeCardCommandDefault from "UserProfileAboutMeCardCommand" /* 11228 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2116 */;
-import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import GuildStore from "GuildStore" /* 2074 */;
+import LocaleStore from "LocaleStore" /* 2128 */;
+import GuildMemberStore from "GuildMemberStore" /* 2124 */;
+import GuildStore from "GuildStore" /* 2086 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(6714);
+const Constants = fn(6891);
 ({ DIVIDER_DOT: closure_8, UserProfileThemeTypes } = Constants);
 const Routes = fn(1085).Routes;
-const AppLauncherRouteName = fn(1489).AppLauncherRouteName;
+const AppLauncherRouteName = fn(1501).AppLauncherRouteName;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 let closure_14 = { headingVariant: "text-sm/semibold", textVariant: "text-md/normal", headingSpacing: 8, rowGap: 24, columnGap: 6 };
 const dependencyMap2 = { [UserProfileThemeTypes.PREVIEW]: { headingVariant: "text-xs/semibold", textVariant: "text-sm/normal", headingSpacing: 4, rowGap: 12, columnGap: 3 } };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_16 = createStyles.createStyles({ card: { flexDirection: "column" }, textWithIcon: { flexDirection: "row", alignItems: "center" }, memberJoinDates: { flexDirection: "row", flexWrap: "wrap" }, slashCommands: { flex: 1, flexDirection: "row", flexWrap: "wrap", marginBottom: 12 }, policyLinks: { rowGap: 8 } });
 let ReactCompilerGating = fn(558);
-let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Heading(arg0) {
   const cResult = c.c(8);
   ({ children, themeType } = arg0);
   if (cResult[0] !== themeType) {
@@ -79,7 +79,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[7] = tmp11;
   tmp10 = tmp11;
   const tmpResult = useToken;
-}) : ((children) => {
+}) : (function Heading(children) {
   const themeType = children.themeType;
   let tmp;
   if (null != themeType) {
@@ -96,7 +96,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return closure_1_11(Text_Text.Text, { accessibilityRole: "header", variant: token, color: "user-profile-about-me-heading-text", style: { marginBottom: headingSpacing }, children: children.children });
 });
 ReactCompilerGating = fn(558);
-let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function TextWithIcon(arg0) {
   const cResult = c.c(15);
   ({ icon, children, themeType, accessibilityLabel } = arg0);
   const tmp4 = closure_16();
@@ -164,7 +164,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = tmp9;
   cResult[6] = items1;
   tmp10 = items1;
-}) : ((themeType) => {
+}) : (function TextWithIcon(themeType) {
   themeType = themeType.themeType;
   ({ icon, children, accessibilityLabel } = themeType);
   let tmp2;
@@ -182,7 +182,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return __initData(View, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bio(arg0) {
   const cResult = c.c(16);
   ({ userId, displayProfile, pendingBio, themeType, lineClamp } = arg0);
   if (cResult[0] !== themeType) {
@@ -264,7 +264,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = pendingBio;
   cResult[4] = previewBio;
   tmp8 = previewBio;
-}) : ((arg0) => {
+}) : (function Bio(arg0) {
   ({ displayProfile, themeType } = arg0);
   let tmp;
   ({ userId, pendingBio, lineClamp } = arg0);
@@ -296,7 +296,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return tmp4;
 });
 ReactCompilerGating = fn(558);
-let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
+let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function MemberJoinDates(userId) {
   const cResult = userId(576).c(47);
   userId = userId.userId;
   const guildId = userId.guildId;
@@ -319,14 +319,14 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   ({ textVariant, columnGap } = tmp5);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [LocaleStore];
-    class A {
+    class P {
       constructor() {
         return closure_1_5.locale;
       }
     }
     cResult[2] = items;
-    cResult[3] = A;
-    let tmp10 = A;
+    cResult[3] = P;
+    let tmp10 = P;
     let tmp9 = items;
   } else {
     tmp9 = cResult[2];
@@ -336,7 +336,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   const stateFromStores = userId(504).useStateFromStores(tmp9, tmp10);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [GuildStore];
-    class A {
+    class P {
       constructor() {
         return closure_1_5.locale;
       }
@@ -358,7 +358,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
       }
     }
     cResult[5] = guildId;
-    class A {
+    class P {
       constructor() {
         return closure_1_5.locale;
       }
@@ -390,7 +390,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
       }
     }
     const items2 = [GuildMemberStore];
-    class A {
+    class P {
       constructor() {
         return closure_1_5.locale;
       }
@@ -420,14 +420,14 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
         return guild;
       }
     }
-    const stateFromStores2 = tmp(504).useStateFromStores(tmp17, G);
-    class A {
+    const stateFromStores2 = tmp(504).useStateFromStores(tmp17, B);
+    class P {
       constructor() {
         return closure_1_5.locale;
       }
     }
     const tmpResult6 = tmp(504);
-    const tmpResult7 = tmp(6685);
+    const tmpResult7 = tmp(6862);
     const createdAtDate = tmpResult7.getCreatedAtDate(guildId(11).extractTimestamp(userId), stateFromStores);
     const obj6 = guildId(11);
     if (stateFromStores2 != null) {
@@ -442,7 +442,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
         }
       }
     }
-    const createdAtDate1 = tmp(6685).getCreatedAtDate(tmp22, stateFromStores);
+    const createdAtDate1 = tmp(6862).getCreatedAtDate(tmp22, stateFromStores);
     const _Symbol = Symbol;
     if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
       class R {
@@ -456,7 +456,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
         }
       }
       const stringResult = obj8.string(tmp(1126).t.a6XYD9);
-      class A {
+      class P {
         constructor() {
           return closure_1_5.locale;
         }
@@ -487,7 +487,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
         }
       }
       const obj2 = { themeType: null, children: null };
-      class A {
+      class P {
         constructor() {
           return closure_1_5.locale;
         }
@@ -520,7 +520,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
         }
       }
       tmp31[0] = columnGap;
-      class A {
+      class P {
         constructor() {
           return closure_1_5.locale;
         }
@@ -550,7 +550,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
         }
       }
       const _Symbol2 = Symbol;
-      class A {
+      class P {
         constructor() {
           return closure_1_5.locale;
         }
@@ -581,9 +581,9 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
     cResult[30] = tmp4.memberJoinDates;
     cResult[31] = tmp31;
     cResult[32] = items3;
-    const tmpResult8 = tmp(6685);
+    const tmpResult8 = tmp(6862);
   }
-  class G {
+  class B {
     constructor() {
       member = null;
       if (null != guildId) {
@@ -596,9 +596,9 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   }
   cResult[8] = guildId;
   cResult[9] = userId;
-  cResult[10] = G;
+  cResult[10] = B;
   const tmpResult5 = userId(504);
-}) : ((userId) => {
+}) : (function MemberJoinDates(userId) {
   userId = userId.userId;
   ({ guildId: importDefault, themeType } = userId);
   let tmp2;
@@ -631,13 +631,13 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
     return member;
   });
   const obj3 = userId(504);
-  const obj4 = userId(6685);
+  const obj4 = userId(6862);
   const createdAtDate = obj4.getCreatedAtDate(SnowflakeUtilsDefault.extractTimestamp(userId), stateFromStores);
   let joinedAt;
   if (stateFromStores2 != null) {
     joinedAt = stateFromStores2.joinedAt;
   }
-  const createdAtDate1 = userId(6685).getCreatedAtDate(joinedAt, stateFromStores);
+  const createdAtDate1 = userId(6862).getCreatedAtDate(joinedAt, stateFromStores);
   const obj7 = { themeType, children: null };
   const intl = tmp4(1126).intl;
   obj7.children = intl.string(userId(1126).t.a6XYD9);
@@ -645,7 +645,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   const obj8 = { style: null, children: null };
   const items4 = [tmp.memberJoinDates, { columnGap }];
   obj8.style = items4;
-  const obj9 = { themeType, icon: closure_11(userId(10560).ClydeIcon, { size: "xs" }), accessibilityLabel: null, children: null };
+  const obj9 = { themeType, icon: closure_11(userId(10157).ClydeIcon, { size: "xs" }), accessibilityLabel: null, children: null };
   const intl2 = tmp4(1126).intl;
   obj9.accessibilityLabel = intl2.formatToPlainString(userId(1126).t["9t7w53"], { date: createdAtDate });
   obj9.children = createdAtDate;
@@ -654,9 +654,9 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   if (tmp13Result) {
     const obj10 = { children: null };
     const obj11 = { variant: textVariant, color: "text-default", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children };
-    const items6 = [closure_11(tmp4(4892).Text, obj11), ];
+    const items6 = [closure_11(tmp4(5086).Text, obj11), ];
     const obj12 = { themeType, icon: null, accessibilityLabel: null, children: null };
-    const obj13 = { guild: stateFromStores1, size: tmp4(5978).GuildIconSizes.XXSMALL };
+    const obj13 = { guild: stateFromStores1, size: tmp4(6161).GuildIconSizes.XXSMALL };
     obj12.icon = closure_11(GuildIconDefault, obj13);
     const intl3 = tmp4(1126).intl;
     const obj14 = { guildName: stateFromStores1.name, date: createdAtDate1 };
@@ -675,7 +675,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   return closure_12(View, obj15);
 });
 ReactCompilerGating = fn(558);
-let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function FriendsSinceDate(arg0) {
   const cResult = c.c(11);
   ({ themeType, userId } = arg0);
   if (cResult[0] !== themeType) {
@@ -737,7 +737,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp16 = tmp18;
   }
   const tmpResult = useFriendsSinceDate;
-}) : ((themeType) => {
+}) : (function FriendsSinceDate(themeType) {
   themeType = themeType.themeType;
   let tmp;
   if (null != themeType) {
@@ -762,7 +762,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return tmp6;
 });
 ReactCompilerGating = fn(558);
-let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function PolicyLinks(arg0) {
   const cResult = c.c(16);
   ({ termsOfServiceUrl, privacyPolicyUrl, themeType } = arg0);
   const tmp4 = closure_16();
@@ -847,7 +847,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = themeType;
   cResult[5] = tmp13;
   tmp12 = tmp13;
-}) : ((arg0) => {
+}) : (function PolicyLinks(arg0) {
   ({ termsOfServiceUrl, privacyPolicyUrl, themeType } = arg0);
   if (null != termsOfServiceUrl) {
     const obj = { themeType, children: null };
@@ -884,7 +884,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return tmp3Result;
 });
 ReactCompilerGating = fn(558);
-let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((url) => {
+let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function PolicyLink(url) {
   const cResult = url(576).c(10);
   url = url.url;
   ({ label, themeType } = url);
@@ -924,19 +924,19 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((url) => {
       return tmp11;
     }
     const obj2 = { accessibilityRole: "link", onPress: tmp8, children: tmp9 };
-    const tmp13 = closure_11(tmp(1188).PressableOpacity, obj2);
+    const tmp13 = closure_11(tmp(1200).PressableOpacity, obj2);
     cResult[7] = tmp8;
     cResult[8] = tmp9;
     cResult[9] = tmp13;
     tmp11 = tmp13;
   }
-  const tmp10 = closure_11(url(4892).Text, { variant: textVariant, color: "text-link", children: label });
+  const tmp10 = closure_11(url(5086).Text, { variant: textVariant, color: "text-link", children: label });
   cResult[4] = label;
   cResult[5] = textVariant;
   cResult[6] = tmp10;
   tmp9 = tmp10;
   const obj = url(576);
-}) : ((children) => {
+}) : (function PolicyLink(children) {
   ({ url: require, themeType } = children);
   let tmp;
   if (null != themeType) {
@@ -954,7 +954,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((url) => {
   });
 });
 ReactCompilerGating = fn(558);
-let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function BotSlashCommands(channel) {
   const cResult = channel(context[11]).c(26);
   channel = channel.channel;
   const themeType = channel.themeType;
@@ -1170,7 +1170,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   cResult[5] = fn;
   tmp6 = fn;
   const tmp5 = analyticsLocations(context[27])(channel, applicationId, commandIds);
-}) : ((channel) => {
+}) : (function BotSlashCommands(channel) {
   channel = channel.channel;
   let analyticsLocations;
   let context;
@@ -1215,7 +1215,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileAboutMeCard.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileAboutMeCard(arg0) {
   const cResult = c.c(36);
   ({ userId, displayProfile, channel, pendingBio, bioLineClamp, themeType, style } = arg0);
   const tmp3 = closure_16();
@@ -1376,7 +1376,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[6] = tmp8;
   cResult[7] = items1;
   tmp9 = items1;
-}) : ((arg0) => {
+}) : (function UserProfileAboutMeCard(arg0) {
   ({ userId, displayProfile, channel, themeType } = arg0);
   ({ pendingBio, bioLineClamp, style } = arg0);
   let tmp2;

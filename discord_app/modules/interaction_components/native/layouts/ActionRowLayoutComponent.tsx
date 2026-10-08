@@ -1,6 +1,6 @@
-// === Module 17567: ActionRowLayoutComponent ===
+// === Module 17849: ActionRowLayoutComponent ===
 
-// Module 17567 (ActionRowLayoutComponent)
+// Module 17849 (ActionRowLayoutComponent)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/interaction_components/native/layouts/ActionRowLayoutComponent.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ActionRowLayoutComponent(arg0) {
   const cResult = c.c(5);
   ({ components, renderComponents } = arg0);
   let tmp2 = null;
@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
   }
   return tmp2;
-}) : ((components) => {
+}) : (function ActionRowLayoutComponent(components) {
   components = components.components;
   let tmp2 = null;
   if (null != components) {

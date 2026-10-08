@@ -1,15 +1,15 @@
-// === Module 16735: ConjureTodoList ===
+// === Module 17010: ConjureTodoList ===
 
-// Module 16735 (ConjureTodoList)
+// Module 17010 (ConjureTodoList)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import _modDef3753 from "module_3753" /* 3753 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import CheckmarkSmallBoldIcon from "CheckmarkSmallBoldIcon" /* 8991 */;
-import ConjureNativeStatusLine from "ConjureNativeStatusLine" /* 16670 */;
-import ConjureTodoAgents from "ConjureTodoAgents" /* 16720 */;
-import ConjureTodoState from "ConjureTodoState" /* 16736 */;
+import _modDef3827 from "module_3827" /* 3827 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import FormCheckbox from "FormCheckbox" /* 6182 */;
+import ConjureNativeStatusLine from "ConjureNativeStatusLine" /* 16933 */;
+import ConjureTodoAgents from "ConjureTodoAgents" /* 16993 */;
+import ConjureTodoState from "ConjureTodoState" /* 17011 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -19,36 +19,34 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
-let obj2 = { list: { gap: nativeDefault.space.PX_8 }, row: null, marker: null, markerCompleted: null, markerUnfinished: null, markerInProgress: null, markerSpinner: null, text: null, agents: null, agentMark: null, agentMarkTint0: null, agentMarkTint1: null, agentMarkTint2: null, agentMarkTint3: null, textCompleted: null };
+const createStyles = fn(5090);
+let obj2 = { list: { gap: nativeDefault.space.PX_8 }, row: null, marker: null, markerUnfinished: null, markerInProgress: null, markerSpinner: null, text: null, agents: null, agentMark: null, agentMarkTint0: null, agentMarkTint1: null, agentMarkTint2: null, agentMarkTint3: null, textCompleted: null };
 let obj3 = { gap: nativeDefault.space.PX_8 };
 obj2.row = { flexDirection: "row", gap: nativeDefault.space.PX_8, alignItems: "center" };
 let size = { width: nativeDefault.modules.mobile.CONTROL_CHECKBOX_SIZE_DEFAULT, height: nativeDefault.modules.mobile.CONTROL_CHECKBOX_SIZE_DEFAULT, flexGrow: 0, flexShrink: 0, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.modules.mobile.CONTROL_CHECKBOX_BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CONTROL_CHECKBOX_BORDER_WIDTH, borderColor: nativeDefault.colors.CHECKBOX_BORDER_DEFAULT };
 obj2.marker = size;
 let obj4 = { flexDirection: "row", gap: nativeDefault.space.PX_8, alignItems: "center" };
-obj2.markerCompleted = { borderColor: nativeDefault.colors.CHECKBOX_BORDER_SELECTED_DEFAULT, backgroundColor: nativeDefault.colors.CHECKBOX_BACKGROUND_SELECTED_DEFAULT };
-let obj5 = { borderColor: nativeDefault.colors.CHECKBOX_BORDER_SELECTED_DEFAULT, backgroundColor: nativeDefault.colors.CHECKBOX_BACKGROUND_SELECTED_DEFAULT };
 obj2.markerUnfinished = { borderStyle: "dashed", borderColor: nativeDefault.colors.BORDER_STRONG };
 obj2.markerInProgress = { borderWidth: 0 };
 const size1 = { width: nativeDefault.space.PX_16, height: nativeDefault.space.PX_16 };
 obj2.markerSpinner = size1;
 obj2.text = { flexShrink: 1 };
-let obj6 = { borderStyle: "dashed", borderColor: nativeDefault.colors.BORDER_STRONG };
+let obj5 = { borderStyle: "dashed", borderColor: nativeDefault.colors.BORDER_STRONG };
 obj2.agents = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, marginLeft: "auto", paddingLeft: nativeDefault.space.PX_8 };
 const size2 = { width: nativeDefault.space.PX_8, height: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.round };
 obj2.agentMark = size2;
-let obj7 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, marginLeft: "auto", paddingLeft: nativeDefault.space.PX_8 };
+let obj6 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, marginLeft: "auto", paddingLeft: nativeDefault.space.PX_8 };
 obj2.agentMarkTint0 = { backgroundColor: nativeDefault.colors.TEXT_BRAND };
-const obj8 = { backgroundColor: nativeDefault.colors.TEXT_BRAND };
+let obj7 = { backgroundColor: nativeDefault.colors.TEXT_BRAND };
 obj2.agentMarkTint1 = { backgroundColor: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE };
-const obj9 = { backgroundColor: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE };
+const obj8 = { backgroundColor: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE };
 obj2.agentMarkTint2 = { backgroundColor: nativeDefault.colors.TEXT_FEEDBACK_WARNING };
-const obj10 = { backgroundColor: nativeDefault.colors.TEXT_FEEDBACK_WARNING };
+const obj9 = { backgroundColor: nativeDefault.colors.TEXT_FEEDBACK_WARNING };
 obj2.agentMarkTint3 = { backgroundColor: nativeDefault.colors.TEXT_FEEDBACK_INFO };
 obj2.textCompleted = { textDecorationLine: "line-through" };
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((agents) => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function TodoAgents(agents) {
   const cResult = require("c").c(19);
   agents = agents.agents;
   const tmp4 = closure_8();
@@ -76,10 +74,10 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((agents) => {
                     let obj2 = { variant: "text-xs/medium", color: "text-muted", accessibilityLabel: null, children: null };
                     let intl = tmp(1126).intl;
                     const obj3 = { count: tmp6 };
-                    obj2.accessibilityLabel = intl.formatToPlainString(items1(3753).SPGdDc, obj3);
+                    obj2.accessibilityLabel = intl.formatToPlainString(items1(3827).SPGdDc, obj3);
                     const _HermesInternal = HermesInternal;
                     obj2.children = "+" + tmp6;
-                    tmp18 = closure_6(tmp(4892).Text, obj2);
+                    tmp18 = closure_6(tmp(5086).Text, obj2);
                   }
                   cResult[12] = tmp6;
                   cResult[13] = tmp18;
@@ -128,7 +126,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((agents) => {
       items[1] = items1[ConjureNativeStatusLine.laneTintIndexFor(key.key) % ConjureNativeStatusLine.LANE_TINT_COUNT];
       obj.style = items;
       const intl = util.intl;
-      obj.accessibilityLabel = intl.formatToPlainString(_modDef3753.TVvPCJ, { name: key.name, task: key.task });
+      obj.accessibilityLabel = intl.formatToPlainString(_modDef3827.TVvPCJ, { name: key.name, task: key.task });
       return timestampProducer(hasOwnProperty, obj, key.key);
     });
     tmp12 = forResult;
@@ -151,7 +149,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((agents) => {
   tmp5 = tmp15;
   tmp6 = overflow;
   const splitAgentOverflowResult = require("ConjureTodoAgents").splitAgentOverflow(agents);
-}) : ((agents) => {
+}) : (function TodoAgents(agents) {
   const tmp = closure_8();
   _require = tmp;
   let obj = require("ConjureTodoAgents");
@@ -168,7 +166,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((agents) => {
           items[1] = items[ConjureNativeStatusLine.laneTintIndexFor(key.key) % ConjureNativeStatusLine.LANE_TINT_COUNT];
           obj.style = items;
           const intl = util.intl;
-          obj.accessibilityLabel = intl.formatToPlainString(_modDef3753.TVvPCJ, { name: key.name, task: key.task });
+          obj.accessibilityLabel = intl.formatToPlainString(_modDef3827.TVvPCJ, { name: key.name, task: key.task });
           return timestampProducer(hasOwnProperty, obj, key.key);
         }),
 
@@ -178,10 +176,10 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((agents) => {
       const obj3 = { variant: "text-xs/medium", color: "text-muted", accessibilityLabel: null, children: null };
       let intl = tmp2(1126).intl;
       const obj4 = { count: overflow };
-      obj3.accessibilityLabel = intl.formatToPlainString(items(3753).SPGdDc, obj4);
+      obj3.accessibilityLabel = intl.formatToPlainString(items(3827).SPGdDc, obj4);
       const _HermesInternal = HermesInternal;
       obj3.children = "+" + overflow;
-      tmp9 = closure_6(tmp2(4892).Text, obj3);
+      tmp9 = closure_6(tmp2(5086).Text, obj3);
     }
     items1[1] = tmp9;
     obj2.children = items1;
@@ -190,161 +188,185 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((agents) => {
   return tmp10Result;
 });
 ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((status) => {
-  const cResult = c.c(17);
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function TodoMarker(status) {
+  const cResult = c.c(20);
   status = status.status;
   const tmp4 = closure_8();
-  let markerCompleted = tmp5;
-  if ("completed" === status) {
-    markerCompleted = tmp4.markerCompleted;
-  }
-  let markerInProgress = tmp6;
-  if ("in_progress" === status) {
-    markerInProgress = tmp4.markerInProgress;
-  }
-  if (cResult[0] === tmp4.marker) {
-    if (cResult[1] === markerCompleted) {
-      if (cResult[2] === markerInProgress) {
-        if (cResult[3] === tmp7) {
-          let tmp8 = cResult[4];
-        }
-        if (cResult[5] !== status) {
-          if ("completed" === status) {
-            const intl4 = util.intl;
-            let stringResult = intl4.string(_modDef3753.KvBdun);
-          } else {
-            if ("in_progress" === status) {
-              const intl3 = util.intl;
-              stringResult = intl3.string(_modDef3753["m5G9+S"]);
-            } else if ("unfinished" !== status) {
-              const intl = util.intl;
-              stringResult = intl.string(_modDef3753.sPGeWi);
-            }
-            const intl2 = util.intl;
-            stringResult = intl2.string(_modDef3753.lRpwhD);
+  if ("completed" !== status) {
+    if ("pending" !== status) {
+      let markerInProgress = tmp37;
+      if ("in_progress" === status) {
+        markerInProgress = tmp4.markerInProgress;
+      }
+      if (cResult[7] === tmp4.marker) {
+        if (cResult[8] === markerInProgress) {
+          if (cResult[9] === tmp6) {
+            let tmp7 = cResult[10];
           }
-          cResult[5] = status;
-          cResult[6] = stringResult;
-        } else {
-          if (cResult[7] === status) {
-            if (cResult[8] === tmp4.markerSpinner) {
-              let tmp16 = cResult[9];
-            }
-            if (cResult[10] !== status) {
-              let tmp21 = null;
-              if (tmp5) {
-                const obj2 = { size: "xs", color: nativeDefault.colors.CHECKBOX_ICON_ACTIVE };
-                tmp21 = timestampProducer(CheckmarkSmallBoldIcon.CheckmarkSmallBoldIcon, obj2);
-              }
-              cResult[10] = status;
-              cResult[11] = tmp21;
-              let tmp20 = tmp21;
+          if (cResult[11] !== status) {
+            if ("completed" === status) {
+              const intl4 = util.intl;
+              let stringResult = intl4.string(_modDef3827.KvBdun);
             } else {
-              tmp20 = cResult[11];
+              if ("in_progress" === status) {
+                const intl3 = util.intl;
+                stringResult = intl3.string(_modDef3827["m5G9+S"]);
+              } else if ("unfinished" !== status) {
+                const intl = util.intl;
+                stringResult = intl.string(_modDef3827.sPGeWi);
+              }
+              const intl2 = util.intl;
+              stringResult = intl2.string(_modDef3827.lRpwhD);
             }
-            if (cResult[12] === tmp8) {
-              if (cResult[13] === tmp9) {
-                if (cResult[14] === tmp16) {
-                  if (cResult[15] === tmp20) {
-                    let tmp24 = cResult[16];
+            cResult[11] = status;
+            cResult[12] = stringResult;
+          } else {
+            if (cResult[13] === status) {
+              if (cResult[14] === tmp4.markerSpinner) {
+                let tmp15 = cResult[15];
+              }
+              if (cResult[16] === tmp7) {
+                if (cResult[17] === tmp8) {
+                  if (cResult[18] === tmp15) {
+                    let tmp19 = cResult[19];
                   }
-                  return tmp24;
+                  return tmp19;
                 }
               }
+              const obj2 = { style: tmp7, accessibilityRole: "image", accessibilityLabel: tmp8, children: tmp15 };
+              const tmp22 = timestampProducer(hasOwnProperty, obj2);
+              cResult[16] = tmp7;
+              cResult[17] = tmp8;
+              cResult[18] = tmp15;
+              cResult[19] = tmp22;
+              tmp19 = tmp22;
             }
-            const obj3 = { style: tmp8, accessibilityRole: "image", accessibilityLabel: tmp9, children: null };
-            const items = [tmp16, tmp20];
-            obj3.children = items;
-            const tmp27 = React5(hasOwnProperty, obj3);
-            cResult[12] = tmp8;
-            cResult[13] = tmp9;
-            cResult[14] = tmp16;
-            cResult[15] = tmp20;
-            cResult[16] = tmp27;
-            tmp24 = tmp27;
+            let tmp16 = null;
+            if (tmp37) {
+              const obj3 = { size: "small", style: tmp4.markerSpinner };
+              tmp16 = timestampProducer(React4, obj3);
+            }
+            cResult[13] = status;
+            cResult[14] = tmp4.markerSpinner;
+            cResult[15] = tmp16;
+            tmp15 = tmp16;
           }
-          let tmp17 = null;
-          if (tmp6) {
-            const obj4 = { size: "small", style: tmp4.markerSpinner };
-            tmp17 = timestampProducer(React4, obj4);
-          }
-          cResult[7] = status;
-          cResult[8] = tmp4.markerSpinner;
-          cResult[9] = tmp17;
-          tmp16 = tmp17;
         }
       }
+      const items = [tmp4.marker, markerInProgress, "unfinished" === status && tmp4.markerUnfinished];
+      cResult[7] = tmp4.marker;
+      cResult[8] = markerInProgress;
+      cResult[9] = "unfinished" === status && tmp4.markerUnfinished;
+      cResult[10] = items;
+      tmp7 = items;
     }
   }
-  const items1 = [tmp4.marker, markerCompleted, markerInProgress, "unfinished" === status && tmp4.markerUnfinished];
-  cResult[0] = tmp4.marker;
-  cResult[1] = markerCompleted;
-  cResult[2] = markerInProgress;
-  cResult[3] = "unfinished" === status && tmp4.markerUnfinished;
-  cResult[4] = items1;
-  tmp8 = items1;
-}) : ((status) => {
+  if (cResult[0] !== status) {
+    if ("completed" === status) {
+      const intl8 = util.intl;
+      let stringResult1 = intl8.string(_modDef3827.KvBdun);
+    } else {
+      if ("in_progress" === status) {
+        const intl7 = util.intl;
+        stringResult1 = intl7.string(_modDef3827["m5G9+S"]);
+      } else if ("unfinished" !== status) {
+        const intl5 = util.intl;
+        stringResult1 = intl5.string(_modDef3827.sPGeWi);
+      }
+      const intl6 = util.intl;
+      stringResult1 = intl6.string(_modDef3827.lRpwhD);
+    }
+    cResult[0] = status;
+    cResult[1] = stringResult1;
+  } else {
+    if (cResult[2] !== tmp5) {
+      const obj4 = { checked: tmp5 };
+      const tmp32 = timestampProducer(FormCheckbox.FormCheckbox, obj4);
+      cResult[2] = tmp5;
+      cResult[3] = tmp32;
+      let tmp30 = tmp32;
+    } else {
+      tmp30 = cResult[3];
+    }
+    if (cResult[4] === cResult[1]) {
+      if (cResult[5] === tmp30) {
+        let tmp33 = cResult[6];
+      }
+      return tmp33;
+    }
+    const obj5 = { accessible: true, accessibilityRole: "image", accessibilityLabel: cResult[1], children: tmp30 };
+    const tmp36 = timestampProducer(hasOwnProperty, obj5);
+    cResult[4] = cResult[1];
+    cResult[5] = tmp30;
+    cResult[6] = tmp36;
+    tmp33 = tmp36;
+  }
+}) : (function TodoMarker(status) {
   status = status.status;
   const tmp = closure_8();
-  const items = [tmp.marker, , , ];
-  let markerCompleted = tmp4;
-  if ("completed" === status) {
-    markerCompleted = tmp.markerCompleted;
+  if ("completed" !== status) {
+    if ("pending" !== status) {
+      const items = [tmp.marker, , ];
+      let markerInProgress = tmp34;
+      if ("in_progress" === status) {
+        markerInProgress = tmp.markerInProgress;
+      }
+      items[1] = markerInProgress;
+      const obj = { style: null, accessibilityRole: "image", accessibilityLabel: null, children: null };
+      items[2] = "unfinished" === status && tmp.markerUnfinished;
+      obj.style = items;
+      if ("completed" === status) {
+        const intl4 = util.intl;
+        let stringResult = intl4.string(_modDef3827.KvBdun);
+      } else if ("in_progress" === status) {
+        const intl3 = util.intl;
+        stringResult = intl3.string(_modDef3827["m5G9+S"]);
+      } else if ("unfinished" === status) {
+        const intl2 = util.intl;
+        stringResult = intl2.string(_modDef3827.lRpwhD);
+      } else {
+        const intl = util.intl;
+        stringResult = intl.string(_modDef3827.sPGeWi);
+      }
+      obj.accessibilityLabel = stringResult;
+      let tmp2Result = null;
+      if ("in_progress" === status) {
+        const obj2 = { size: "small", style: tmp.markerSpinner };
+        tmp2Result = timestampProducer(React4, obj2);
+      }
+      obj.children = tmp2Result;
+      return timestampProducer(tmp3, obj);
+    }
   }
-  items[1] = markerCompleted;
-  let markerInProgress = tmp5;
-  if ("in_progress" === status) {
-    markerInProgress = tmp.markerInProgress;
-  }
-  items[2] = markerInProgress;
-  const obj = { style: items, accessibilityRole: "image", accessibilityLabel: null, children: null };
-  items[3] = "unfinished" === status && tmp.markerUnfinished;
   if ("completed" === status) {
-    const intl4 = util.intl;
-    let stringResult = intl4.string(_modDef3753.KvBdun);
-    let tmp11 = importDefault;
-    let tmp12 = require;
-  } else if ("in_progress" === status) {
-    const intl3 = util.intl;
-    stringResult = intl3.string(_modDef3753["m5G9+S"]);
-    tmp11 = importDefault;
-    tmp12 = require;
-  } else if ("unfinished" === status) {
-    const intl2 = util.intl;
-    stringResult = intl2.string(_modDef3753.lRpwhD);
-    tmp11 = importDefault;
-    tmp12 = require;
+    const intl8 = util.intl;
+    let stringResult1 = intl8.string(_modDef3827.KvBdun);
+    let tmp21 = require;
   } else {
-    const intl = util.intl;
-    stringResult = intl.string(_modDef3753.sPGeWi);
-    tmp11 = importDefault;
-    tmp12 = require;
+    if ("in_progress" === status) {
+      const intl7 = util.intl;
+      stringResult1 = intl7.string(_modDef3827["m5G9+S"]);
+      tmp21 = require;
+    } else if ("unfinished" !== status) {
+      tmp21 = require;
+      const intl5 = util.intl;
+      stringResult1 = intl5.string(_modDef3827.sPGeWi);
+    }
+    const intl6 = util.intl;
+    stringResult1 = intl6.string(_modDef3827.lRpwhD);
+    tmp21 = require;
   }
-  obj.accessibilityLabel = stringResult;
-  let tmp22 = null;
-  if ("in_progress" === status) {
-    const obj2 = { size: "small", style: tmp.markerSpinner };
-    tmp22 = timestampProducer(React4, obj2);
-  }
-  const items1 = [tmp22, ];
-  let tmp25 = null;
-  if ("completed" === status) {
-    const obj3 = { size: "xs", color: tmp11(587).colors.CHECKBOX_ICON_ACTIVE };
-    tmp25 = timestampProducer(tmp12(8991).CheckmarkSmallBoldIcon, obj3);
-  }
-  items1[1] = tmp25;
-  obj.children = items1;
-  return React5(hasOwnProperty, obj);
+  { accessible: true, accessibilityRole: "image", accessibilityLabel: stringResult1, children: timestampProducer(tmp21(6182).FormCheckbox, { checked: "completed" === status }) };
 });
 ReactCompilerGating = fn(558);
-const obj11 = { backgroundColor: nativeDefault.colors.TEXT_FEEDBACK_INFO };
+const obj10 = { backgroundColor: nativeDefault.colors.TEXT_FEEDBACK_INFO };
 function todoProgress(arr) {
   return { completed: arr.filter((status) => "completed" === status.status).length, total: arr.length };
 }
 size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/agent_activity/native/ConjureTodoList.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureTodoList(arg0) {
   const cResult = require("c").c(47);
   ({ todos, provisional, agents, announceProgress, live, superseded, expanded, onToggleExpanded } = arg0);
   textCompleted = undefined === live || live;
@@ -365,7 +387,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         const _Symbol3 = Symbol;
         if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
           const intl2 = tmp(1126).intl;
-          const stringResult = intl2.string(textCompleted(3753).RtzECX);
+          const stringResult = intl2.string(textCompleted(3827).RtzECX);
           cResult[12] = stringResult;
           let tmp25 = stringResult;
         } else {
@@ -387,8 +409,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
               const intl3 = tmp(1126).intl;
               const intl4 = tmp(1126).intl;
-              const stringResult2 = intl4.string(textCompleted(3753).xydHoj);
-              class G {
+              const stringResult2 = intl4.string(textCompleted(3827).xydHoj);
+              class W {
                 constructor(arg0) {
                   tmp = closure_0;
                   tmp2 = closure_2;
@@ -400,7 +422,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                   tmp4 = jsxs;
                   tmp5 = View;
                   items = [, , ];
-                  items[0] = jsx(f74923, { status: todoMarkResult });
+                  items[0] = jsx(TodoMarker, { status: todoMarkResult });
                   if ("in_progress" === todoMarkResult) {
                     str = "text-default";
                   } else {
@@ -418,7 +440,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                   tmp7Result = null;
                   if ("completed" !== todoMarkResult) {
                     tmp10 = closure_0;
-                    tmp9 = f74921;
+                    tmp9 = TodoAgents;
                     value = closure_0.get(arg0.id);
                     if (value == null) {
                       value = [];
@@ -434,8 +456,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               }
               cResult[18] = stringResult2;
               let tmp32 = stringResult2;
-              let tmp31 = intl3.string(textCompleted(3753).RKyN9q);
-              const stringResult1 = intl3.string(textCompleted(3753).RKyN9q);
+              let tmp31 = intl3.string(textCompleted(3827).RKyN9q);
+              const stringResult1 = intl3.string(textCompleted(3827).RKyN9q);
             } else {
               tmp31 = cResult[17];
               tmp32 = cResult[18];
@@ -471,7 +493,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                                   }
                                 }
                                 let obj2 = { title: tmp25, meta: tmp28, showHeader: tmp30, superseded: null, expanded: null, onToggleExpanded: null, showLabel: null, hideLabel: null, children: null };
-                                class G {
+                                class W {
                                   constructor(arg0) {
                                     tmp = closure_0;
                                     tmp2 = closure_2;
@@ -483,7 +505,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                                     tmp4 = jsxs;
                                     tmp5 = View;
                                     items = [, , ];
-                                    items[0] = jsx(f74923, { status: todoMarkResult });
+                                    items[0] = jsx(TodoMarker, { status: todoMarkResult });
                                     if ("in_progress" === todoMarkResult) {
                                       str = "text-default";
                                     } else {
@@ -501,7 +523,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                                     tmp7Result = null;
                                     if ("completed" !== todoMarkResult) {
                                       tmp10 = closure_0;
-                                      tmp9 = f74921;
+                                      tmp9 = TodoAgents;
                                       value = closure_0.get(arg0.id);
                                       if (value == null) {
                                         value = [];
@@ -520,7 +542,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                                 obj2.showLabel = tmp31;
                                 obj2.hideLabel = tmp32;
                                 obj2.children = tmp49;
-                                const tmp56 = closure_6(textCompleted(16683), obj2);
+                                const tmp56 = closure_6(textCompleted(16949), obj2);
                                 cResult[40] = tmp6;
                                 cResult[41] = onToggleExpanded;
                                 cResult[42] = tmp5;
@@ -533,7 +555,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                             }
                             let obj3 = { style: tmp36, children: null };
                             let items = [tmp37, ];
-                            class G {
+                            class W {
                               constructor(arg0) {
                                 tmp = closure_0;
                                 tmp2 = closure_2;
@@ -545,7 +567,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                                 tmp4 = jsxs;
                                 tmp5 = View;
                                 items = [, , ];
-                                items[0] = jsx(f74923, { status: todoMarkResult });
+                                items[0] = jsx(TodoMarker, { status: todoMarkResult });
                                 if ("in_progress" === todoMarkResult) {
                                   str = "text-default";
                                 } else {
@@ -563,7 +585,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                                 tmp7Result = null;
                                 if ("completed" !== todoMarkResult) {
                                   tmp10 = closure_0;
-                                  tmp9 = f74921;
+                                  tmp9 = TodoAgents;
                                   value = closure_0.get(arg0.id);
                                   if (value == null) {
                                     value = [];
@@ -592,7 +614,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                           if ("" !== provisional) {
                             let obj4 = { style: tmp7.row, children: null };
                             let items1 = [closure_6(closure_10, { status: "pending" }), ];
-                            class G {
+                            class W {
                               constructor(arg0) {
                                 tmp = closure_0;
                                 tmp2 = closure_2;
@@ -604,7 +626,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                                 tmp4 = jsxs;
                                 tmp5 = View;
                                 items = [, , ];
-                                items[0] = jsx(f74923, { status: todoMarkResult });
+                                items[0] = jsx(TodoMarker, { status: todoMarkResult });
                                 if ("in_progress" === todoMarkResult) {
                                   str = "text-default";
                                 } else {
@@ -622,7 +644,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                                 tmp7Result = null;
                                 if ("completed" !== todoMarkResult) {
                                   tmp10 = closure_0;
-                                  tmp9 = f74921;
+                                  tmp9 = TodoAgents;
                                   value = closure_0.get(arg0.id);
                                   if (value == null) {
                                     value = [];
@@ -638,13 +660,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                             }
                             tmp48[2] = tmp7.text;
                             tmp48[3] = provisional;
-                            items1[1] = closure_6(tmp(4892).Text, tmp48);
+                            items1[1] = closure_6(tmp(5086).Text, tmp48);
                             obj4.children = items1;
                             tmp43 = closure_7(closure_5, obj4);
                           }
                         }
                         cResult[32] = provisional;
-                        class G {
+                        class W {
                           constructor(arg0) {
                             tmp = closure_0;
                             tmp2 = closure_2;
@@ -656,7 +678,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                             tmp4 = jsxs;
                             tmp5 = View;
                             items = [, , ];
-                            items[0] = jsx(f74923, { status: todoMarkResult });
+                            items[0] = jsx(TodoMarker, { status: todoMarkResult });
                             if ("in_progress" === todoMarkResult) {
                               str = "text-default";
                             } else {
@@ -674,7 +696,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                             tmp7Result = null;
                             if ("completed" !== todoMarkResult) {
                               tmp10 = closure_0;
-                              tmp9 = f74921;
+                              tmp9 = TodoAgents;
                               value = closure_0.get(arg0.id);
                               if (value == null) {
                                 value = [];
@@ -708,7 +730,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                     cResult[19] = tmp8;
                     cResult[20] = textCompleted;
                     cResult[21] = tmp7.row;
-                    class G {
+                    class W {
                       constructor(arg0) {
                         tmp = closure_0;
                         tmp2 = closure_2;
@@ -720,7 +742,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                         tmp4 = jsxs;
                         tmp5 = View;
                         items = [, , ];
-                        items[0] = jsx(f74923, { status: todoMarkResult });
+                        items[0] = jsx(TodoMarker, { status: todoMarkResult });
                         if ("in_progress" === todoMarkResult) {
                           str = "text-default";
                         } else {
@@ -738,7 +760,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                         tmp7Result = null;
                         if ("completed" !== todoMarkResult) {
                           tmp10 = closure_0;
-                          tmp9 = f74921;
+                          tmp9 = TodoAgents;
                           value = closure_0.get(arg0.id);
                           if (value == null) {
                             value = [];
@@ -760,7 +782,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                 }
               }
             }
-            class G {
+            class W {
               constructor(arg0) {
                 tmp = closure_0;
                 tmp2 = closure_2;
@@ -772,7 +794,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                 tmp4 = jsxs;
                 tmp5 = View;
                 items = [, , ];
-                items[0] = jsx(f74923, { status: todoMarkResult });
+                items[0] = jsx(TodoMarker, { status: todoMarkResult });
                 if ("in_progress" === todoMarkResult) {
                   str = "text-default";
                 } else {
@@ -790,7 +812,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                 tmp7Result = null;
                 if ("completed" !== todoMarkResult) {
                   tmp10 = closure_0;
-                  tmp9 = f74921;
+                  tmp9 = TodoAgents;
                   value = closure_0.get(arg0.id);
                   if (value == null) {
                     value = [];
@@ -809,12 +831,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             cResult[28] = tmp7.row;
             cResult[29] = tmp7.text;
             cResult[30] = tmp7.textCompleted;
-            cResult[31] = G;
-            tmp38 = G;
+            cResult[31] = W;
+            tmp38 = W;
           }
         }
         const obj5 = { accessibilityLiveRegion: str4, accessibilityLabel: tmp10, children: tmp9 };
-        const tmp29 = closure_6(tmp(16683).ConjureNativeCollapsibleMeta, obj5);
+        const tmp29 = closure_6(tmp(16949).ConjureNativeCollapsibleMeta, obj5);
         cResult[13] = tmp9;
         cResult[14] = tmp10;
         cResult[15] = str4;
@@ -838,11 +860,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp14 = cResult[9];
   }
   if (cResult[10] !== tmp14) {
-    const groupAgentsByTodoResult = tmp(16720).groupAgentsByTodo(tmp14);
+    const groupAgentsByTodoResult = tmp(16993).groupAgentsByTodo(tmp14);
     cResult[10] = tmp14;
     cResult[11] = groupAgentsByTodoResult;
     let tmp16 = groupAgentsByTodoResult;
-    const tmpResult = tmp(16720);
+    const tmpResult = tmp(16993);
   } else {
     tmp16 = cResult[11];
   }
@@ -850,8 +872,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (0 !== todos.length) {
     const intl = tmp(1126).intl;
     const obj6 = { completed: length, total: length2 };
-    const formatToPlainStringResult = intl.formatToPlainString(textCompleted(3753)["P/I+JW"], obj6);
-    class G {
+    const formatToPlainStringResult = intl.formatToPlainString(textCompleted(3827)["P/I+JW"], obj6);
+    class W {
       constructor(arg0) {
         tmp = closure_0;
         tmp2 = closure_2;
@@ -863,7 +885,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         tmp4 = jsxs;
         tmp5 = View;
         items = [, , ];
-        items[0] = jsx(f74923, { status: todoMarkResult });
+        items[0] = jsx(TodoMarker, { status: todoMarkResult });
         if ("in_progress" === todoMarkResult) {
           str = "text-default";
         } else {
@@ -881,7 +903,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         tmp7Result = null;
         if ("completed" !== todoMarkResult) {
           tmp10 = closure_0;
-          tmp9 = f74921;
+          tmp9 = TodoAgents;
           value = closure_0.get(arg0.id);
           if (value == null) {
             value = [];
@@ -896,7 +918,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
     const obj7 = { completed: length, total: length2 };
-    const tmp23Result = tmp23(textCompleted(3753)["7tzwKB"], obj7);
+    const tmp23Result = tmp23(textCompleted(3827)["7tzwKB"], obj7);
     let tmp19 = forResult;
   } else {
     tmp19 = null;
@@ -916,7 +938,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   tmp10 = tmp23Result;
   tmp9 = formatToPlainStringResult;
   forResult = Symbol.for("react.early_return_sentinel");
-}) : ((announceProgress) => {
+}) : (function ConjureTodoList(announceProgress) {
   ({ todos, provisional, agents } = announceProgress);
   let flag = announceProgress.announceProgress;
   if (flag === undefined) {
@@ -951,11 +973,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const intl = agents(1126).intl;
   const intl2 = agents(1126).intl;
-  const formatToPlainStringResult = intl.formatToPlainString(flag2(3753)["P/I+JW"], { completed: length, total: todos.length });
+  const formatToPlainStringResult = intl.formatToPlainString(flag2(3827)["P/I+JW"], { completed: length, total: todos.length });
   let obj = { title: null, meta: null, showHeader: null, superseded: null, expanded: null, onToggleExpanded: null, showLabel: null, hideLabel: null, children: null };
-  const formatToPlainStringResult1 = intl2.formatToPlainString(flag2(3753)["7tzwKB"], { completed: length, total: todos.length });
+  const formatToPlainStringResult1 = intl2.formatToPlainString(flag2(3827)["7tzwKB"], { completed: length, total: todos.length });
   const intl3 = agents(1126).intl;
-  obj.title = intl3.string(flag2(3753).RtzECX);
+  obj.title = intl3.string(flag2(3827).RtzECX);
   let str = "none";
   if (flag) {
     str = "none";
@@ -963,15 +985,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       str = "polite";
     }
   }
-  obj.meta = closure_6(agents(16683).ConjureNativeCollapsibleMeta, { accessibilityLiveRegion: str, accessibilityLabel: formatToPlainStringResult1, children: formatToPlainStringResult });
+  obj.meta = closure_6(agents(16949).ConjureNativeCollapsibleMeta, { accessibilityLiveRegion: str, accessibilityLabel: formatToPlainStringResult1, children: formatToPlainStringResult });
   obj.showHeader = todos.length > 0;
   obj.superseded = flag3;
   obj.expanded = flag4;
   obj.onToggleExpanded = announceProgress.onToggleExpanded;
   const intl4 = agents(1126).intl;
-  obj.showLabel = intl4.string(flag2(3753).RKyN9q);
+  obj.showLabel = intl4.string(flag2(3827).RKyN9q);
   const intl5 = agents(1126).intl;
-  obj.hideLabel = intl5.string(flag2(3753).xydHoj);
+  obj.hideLabel = intl5.string(flag2(3827).xydHoj);
   let obj2 = { style: tmp.list, children: null };
   let items1 = [
     todos.map((status) => {
@@ -1010,7 +1032,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       let obj3 = { style: tmp.row, children: null };
       let items2 = [closure_6(closure_10, { status: "pending" }), ];
       let obj4 = { variant: "text-sm/normal", color: "text-muted", style: tmp.text, children: provisional };
-      items2[1] = closure_6(agents(4892).Text, obj4);
+      items2[1] = closure_6(agents(5086).Text, obj4);
       obj3.children = items2;
       tmp10Result = closure_7(closure_5, obj3);
     }
@@ -1018,6 +1040,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   items1[1] = tmp10Result;
   obj2.children = items1;
   obj.children = closure_7(closure_5, obj2);
-  return closure_6(flag2(16683), obj);
+  return closure_6(flag2(16949), obj);
 });
 export { todoProgress };

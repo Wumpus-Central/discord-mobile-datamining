@@ -1,21 +1,21 @@
-// === Module 12132: ChatInputGuardGuildCommunicationDisabled ===
+// === Module 12211: ChatInputGuardGuildCommunicationDisabled ===
 
-// Module 12132 (ChatInputGuardGuildCommunicationDisabled)
+// Module 12211 (ChatInputGuardGuildCommunicationDisabled)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import ClockWarningIcon from "ClockWarningIcon" /* 11478 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 12105 */;
-import useCommunicationDisabledCountdownCleanup from "useCommunicationDisabledCountdownCleanup" /* 12133 */;
+import ClockWarningIcon from "ClockWarningIcon" /* 11462 */;
+import ChatInputGuardDefault from "ChatInputGuard" /* 12183 */;
+import useCommunicationDisabledCountdownCleanup from "useCommunicationDisabledCountdownCleanup" /* 12212 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const link = fn(2114).GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK;
+const link = fn(2126).GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardGuildCommunicationDisabled.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildMember) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function CommunicationDisabledNoticeForGuild(guildMember) {
   const cResult = c.c(7);
   guildMember = guildMember.guildMember;
   const communicationDisabledCountdownCleanup = useCommunicationDisabledCountdownCleanup.useCommunicationDisabledCountdownCleanup(guildMember);
@@ -61,7 +61,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildM
     }
     return tmp25;
   }
-}) : ((guildMember) => {
+}) : (function CommunicationDisabledNoticeForGuild(guildMember) {
   guildMember = guildMember.guildMember;
   const communicationDisabledCountdownCleanup = useCommunicationDisabledCountdownCleanup.useCommunicationDisabledCountdownCleanup(guildMember);
   const communicationDisabledUntil = guildMember.communicationDisabledUntil;

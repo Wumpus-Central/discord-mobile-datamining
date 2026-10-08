@@ -1,10 +1,10 @@
-// === Module 5609: useFontScale ===
+// === Module 5382: useFontScale ===
 
-// Module 5609 (useFontScale)
+// Module 5382 (useFontScale)
 import c from "c" /* 576 */;
-import AppEntryKeyContext from "AppEntryKeyContext" /* 1487 */;
+import AppEntryKeyContext from "AppEntryKeyContext" /* 1499 */;
 import noop from "module_19" /* 19 */;
-import DimensionsStore from "DimensionsStore" /* 1485 */;
+import DimensionsStore from "DimensionsStore" /* 1497 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
@@ -18,7 +18,7 @@ export const getFontScale = function getFontScale() {
   }
   return DimensionsStore.getState().byAppEntry[str].fontScale;
 };
-export const useFontScale = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useFontScale = ReactCompilerGating.isReactCompilerEnabled() ? (function useFontScale() {
   const cResult = c.c(2);
   const appEntryKey = AppEntryKeyContext.useAppEntryKey();
   if (cResult[0] !== appEntryKey) {
@@ -32,7 +32,7 @@ export const useFontScale = ReactCompilerGating.isReactCompilerEnabled() ? (() =
     tmp3 = cResult[1];
   }
   return DimensionsStore(tmp3);
-}) : (() => {
+}) : (function useFontScale() {
   const appEntryKey = AppEntryKeyContext.useAppEntryKey();
   const items = [appEntryKey];
   return DimensionsStore(noop.useCallback((arg0) => arg0.byAppEntry[appEntryKey].fontScale, items));

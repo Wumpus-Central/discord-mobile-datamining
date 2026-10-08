@@ -1,6 +1,6 @@
-// === Module 7853: useShopProductItems ===
+// === Module 8271: useShopProductItems ===
 
-// Module 7853 (useShopProductItems)
+// Module 8271 (useShopProductItems)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import noop from "module_19" /* 19 */;
@@ -90,7 +90,7 @@ export const getPurchasedItem = function getPurchasedItem(arg0, firstAvatarDecor
   }
   return tmp;
 };
-export const useShopProductItems = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useShopProductItems = ReactCompilerGating.isReactCompilerEnabled() ? (function useShopProductItems(arg0) {
   const cResult = c.c(2);
   if (cResult[0] !== arg0) {
     if (typeof ItemsSortingHat === "function") {
@@ -108,7 +108,7 @@ export const useShopProductItems = ReactCompilerGating.isReactCompilerEnabled() 
     tmp2 = cResult[1];
   }
   return tmp2;
-}) : ((arg0) => {
+}) : (function useShopProductItems(arg0) {
   closure_0 = arg0;
   const items = [arg0];
   return noop.useMemo(() => {

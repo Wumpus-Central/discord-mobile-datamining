@@ -1,14 +1,14 @@
-// === Module 12458: ChatViewPopups ===
+// === Module 12554: ChatViewPopups ===
 
-// Module 12458 (ChatViewPopups)
-import useIsHubRealNamePromptShowingDefault from "useIsHubRealNamePromptShowing" /* 12459 */;
-import WelcomeScreenUtils from "WelcomeScreenUtils" /* 12463 */;
-import GuildDirectoryNicknameUpsellModalActionCreatorsDefault from "GuildDirectoryNicknameUpsellModalActionCreators" /* 12469 */;
+// Module 12554 (ChatViewPopups)
+import useIsHubRealNamePromptShowingDefault from "useIsHubRealNamePromptShowing" /* 12555 */;
+import WelcomeScreenUtils from "WelcomeScreenUtils" /* 12559 */;
+import GuildDirectoryNicknameUpsellModalActionCreatorsDefault from "GuildDirectoryNicknameUpsellModalActionCreators" /* 12565 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatViewPopups(guildId) {
   const cResult = guildId(576).c(5);
   guildId = guildId.guildId;
   importDefault = showWelcomeModal.useRef(false);
@@ -16,7 +16,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   dependencyMap = tmp2;
   let obj = guildId(576);
   let obj2 = showWelcomeModal;
-  showWelcomeModal = guildId(12463).useShowWelcomeModal(guildId, guildId.channelId);
+  showWelcomeModal = guildId(12559).useShowWelcomeModal(guildId, guildId.channelId);
   if (cResult[0] === guildId) {
     if (cResult[1] === tmp2) {
       if (cResult[2] === showWelcomeModal) {
@@ -60,13 +60,13 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   cResult[4] = items;
   tmp5 = items;
   tmp4 = fn;
-}) : ((guildId) => {
+}) : (function ChatViewPopups(guildId) {
   guildId = guildId.guildId;
   let showWelcomeModal;
   importDefault = showWelcomeModal.useRef(false);
   const tmp = useIsHubRealNamePromptShowingDefault(guildId);
   dependencyMap = tmp;
-  showWelcomeModal = guildId(12463).useShowWelcomeModal(guildId, guildId.channelId);
+  showWelcomeModal = guildId(12559).useShowWelcomeModal(guildId, guildId.channelId);
   const items = [guildId, showWelcomeModal, tmp];
   const effect = showWelcomeModal.useEffect(() => {
     if (!ref.current) {

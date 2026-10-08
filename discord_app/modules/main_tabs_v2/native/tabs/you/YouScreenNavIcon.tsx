@@ -1,27 +1,27 @@
-// === Module 16986: YouScreenNavIcon ===
+// === Module 17267: YouScreenNavIcon ===
 
-// Module 16986 (YouScreenNavIcon)
+// Module 17267 (YouScreenNavIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import mergeProps from "mergeProps" /* 4591 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import ClipViewDefault from "ClipView" /* 8502 */;
-import native from "native" /* 8602 */;
-import YouScreenNavIconMeasurer from "YouScreenNavIconMeasurer" /* 16987 */;
+import mergeProps from "mergeProps" /* 4783 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import native from "native" /* 8517 */;
+import ClipViewDefault from "ClipView" /* 8986 */;
+import YouScreenNavIconMeasurer from "YouScreenNavIconMeasurer" /* 17268 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const md = fn(16387).ICON_SIZE.md;
+const md = fn(16647).ICON_SIZE.md;
 const padding = (nativeDefault.space.PX_32 - md) / 2;
 const TEXT_DEFAULT = nativeDefault.colors.TEXT_DEFAULT;
 let c8 = "text-default";
-const point = { shape: fn(8502).CutoutShape.Circle, x: md - 8 - 4, y: -4, size: 16 };
+const point = { shape: fn(8986).CutoutShape.Circle, x: md - 8 - 4, y: -4, size: 16 };
 let items = [point];
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_10 = createStyles.createStyles((width) => {
   const obj = { borderRadius: nativeDefault.modules.button.BORDER_RADIUS, width, minWidth: nativeDefault.space.PX_48, maxWidth: nativeDefault.space.PX_80, flexShrink: null, flexDirection: "column", alignItems: "center", padding: null };
   let num = 1;
@@ -39,9 +39,9 @@ const ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouScreenNavIcon.tsx");
 
-export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, ref) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function YouScreenNavIcon(arg0) {
   const cResult = c.c(22);
-  ({ onPress, IconComponent, accessibilityLabel, label, showRedDot } = arg0);
+  ({ onPress, IconComponent, accessibilityLabel, label, showRedDot, ref } = arg0);
   const youScreenNavIconMeasurement = YouScreenNavIconMeasurer.useYouScreenNavIconMeasurement();
   const containerRef = youScreenNavIconMeasurement.containerRef;
   const tmp6 = closure_10(youScreenNavIconMeasurement.width);
@@ -75,57 +75,57 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
       }
       if (cResult[8] === containerRef) {
         if (cResult[9] === ref) {
-          let tmp21 = cResult[10];
+          let tmp20 = cResult[10];
         }
         if (label == null) {
           label = accessibilityLabel;
         }
         if (cResult[11] === tmp6.label) {
           if (cResult[12] === label) {
-            let tmp24 = cResult[13];
+            let tmp23 = cResult[13];
           }
           if (cResult[14] === accessibilityLabel) {
             if (cResult[15] === tmp18) {
               if (cResult[16] === tmp11) {
                 if (cResult[17] === onPress) {
                   if (cResult[18] === tmp6.container) {
-                    if (cResult[19] === tmp21) {
-                      if (cResult[20] === tmp24) {
-                        let tmp28 = cResult[21];
+                    if (cResult[19] === tmp20) {
+                      if (cResult[20] === tmp23) {
+                        let tmp27 = cResult[21];
                       }
-                      return tmp28;
+                      return tmp27;
                     }
                   }
                 }
               }
             }
           }
-          const obj4 = { ref: tmp21, style: tmp6.container, accessibilityRole: "button", accessibilityLabel, accessibilityValue: tmp18, onPress, hitSlop: nativeDefault.space.PX_8, children: null };
-          items = [tmp11, tmp24];
+          const obj4 = { ref: tmp20, style: tmp6.container, accessibilityRole: "button", accessibilityLabel, accessibilityValue: tmp18, onPress, hitSlop: nativeDefault.space.PX_8, children: null };
+          items = [tmp11, tmp23];
           obj4.children = items;
-          const tmp31 = hasOwnProperty(native.PressableScale, obj4);
+          const tmp30 = hasOwnProperty(native.PressableScale, obj4);
           cResult[14] = accessibilityLabel;
           cResult[15] = tmp18;
           cResult[16] = tmp11;
           cResult[17] = onPress;
           cResult[18] = tmp6.container;
-          cResult[19] = tmp21;
-          cResult[20] = tmp24;
-          cResult[21] = tmp31;
-          tmp28 = tmp31;
+          cResult[19] = tmp20;
+          cResult[20] = tmp23;
+          cResult[21] = tmp30;
+          tmp27 = tmp30;
         }
         const obj5 = { style: tmp6.label, variant: "text-xs/semibold", color, maxFontSizeMultiplier: 2, lineClamp: 1, children: label };
-        const tmp27 = React4(Text_Text.Text, obj5);
+        const tmp26 = React4(Text_Text.Text, obj5);
         cResult[11] = tmp6.label;
         cResult[12] = label;
-        cResult[13] = tmp27;
-        tmp24 = tmp27;
+        cResult[13] = tmp26;
+        tmp23 = tmp26;
       }
       const mergeRefsResult = mergeProps.mergeRefs(ref, containerRef);
       cResult[8] = containerRef;
       cResult[9] = ref;
       cResult[10] = mergeRefsResult;
-      tmp21 = mergeRefsResult;
+      tmp20 = mergeRefsResult;
       const tmpResult2 = mergeProps;
     }
   }
@@ -145,9 +145,9 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
   cResult[5] = tmp12;
   tmp11 = tmp12;
   const tmpResult = YouScreenNavIconMeasurer;
-}) : ((arg0, ref) => {
-  ({ accessibilityLabel, label, showRedDot } = arg0);
-  ({ onPress, IconComponent } = arg0);
+}) : (function YouScreenNavIcon(ref) {
+  ({ accessibilityLabel, label, showRedDot } = ref);
+  ({ onPress, IconComponent } = ref);
   if (showRedDot === undefined) {
     showRedDot = false;
   }
@@ -173,7 +173,7 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
   }
   const obj7 = { ref: null, style: null, accessibilityRole: "button", accessibilityLabel: null, accessibilityValue: null, onPress: null, hitSlop: null, children: null };
   const obj2 = { size: "md", color: TEXT_DEFAULT };
-  obj7.ref = mergeProps.mergeRefs(ref, youScreenNavIconMeasurement.containerRef);
+  obj7.ref = mergeProps.mergeRefs(ref.ref, youScreenNavIconMeasurement.containerRef);
   obj7.style = tmp4.container;
   obj7.accessibilityLabel = accessibilityLabel;
   obj7.accessibilityValue = tmp12;
@@ -188,4 +188,4 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
   items1[1] = React4(Text_Text.Text, obj8);
   obj7.children = items1;
   return hasOwnProperty(native.PressableScale, obj7);
-})));
+}));

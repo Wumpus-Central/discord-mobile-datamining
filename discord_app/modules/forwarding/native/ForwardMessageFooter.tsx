@@ -1,19 +1,19 @@
-// === Module 11331: ForwardMessageFooter ===
+// === Module 11598: ForwardMessageFooter ===
 
-// Module 11331 (ForwardMessageFooter)
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 7416 */;
+// Module 11598 (ForwardMessageFooter)
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 7891 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DraftStore from "DraftStore" /* 7044 */;
+import DraftStore from "DraftStore" /* 7232 */;
 
 const require = fn;
-const DraftType = fn(7044).DraftType;
+const DraftType = fn(7232).DraftType;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forwarding/native/ForwardMessageFooter.tsx");
 
-export const ForwardMessageFooter = ReactCompilerGating.isReactCompilerEnabled() ? ((message) => {
+export const ForwardMessageFooter = ReactCompilerGating.isReactCompilerEnabled() ? (function ForwardMessageFooter(message) {
   const cResult = message(trackForwardEditContextMessageOnce[5]).c(42);
   message = message.message;
   ({ forwardOptions, sendLabel, selectedDestinations, isSending, onSend } = message);
@@ -290,7 +290,7 @@ export const ForwardMessageFooter = ReactCompilerGating.isReactCompilerEnabled()
   tmp11 = fn2;
   obj5 = noop;
   const tmpResult = message(trackForwardEditContextMessageOnce[8]);
-}) : ((message) => {
+}) : (function ForwardMessageFooter(message) {
   message = message.message;
   ({ selectedDestinations, isSending, onSend } = message);
   let trackForwardEditContextMessageOnce;

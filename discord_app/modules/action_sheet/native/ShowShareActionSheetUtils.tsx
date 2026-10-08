@@ -1,12 +1,12 @@
-// === Module 8050: ShowShareActionSheetUtils ===
+// === Module 8459: ShowShareActionSheetUtils ===
 
-// Module 8050 (ShowShareActionSheetUtils)
+// Module 8459 (ShowShareActionSheetUtils)
 import Constants from "Constants" /* 1085 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import URLUtilsDefault from "URLUtils" /* 1371 */;
-import FileExtensionUtils from "FileExtensionUtils" /* 5966 */;
-import SharePreparingModalConstants from "SharePreparingModalConstants" /* 8051 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import URLUtilsDefault from "URLUtils" /* 1383 */;
+import FileExtensionUtils from "FileExtensionUtils" /* 6148 */;
+import SharePreparingModalConstants from "SharePreparingModalConstants" /* 8460 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

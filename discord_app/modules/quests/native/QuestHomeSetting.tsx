@@ -1,25 +1,25 @@
-// === Module 14821: QuestHomeSetting ===
+// === Module 15082: QuestHomeSetting ===
 
-// Module 14821 (QuestHomeSetting)
+// Module 15082 (QuestHomeSetting)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useNavigation from "useNavigation" /* 1490 */;
-import _mod4498 from "module_4498" /* 4498 */;
-import useQuestHomeHeaderDefault from "useQuestHomeHeader" /* 14822 */;
-import QuestHomeDefault from "QuestHome" /* 14826 */;
+import useNavigation from "useNavigation" /* 1502 */;
+import _mod4690 from "module_4690" /* 4690 */;
+import useQuestHomeHeaderDefault from "useQuestHomeHeader" /* 15083 */;
+import QuestHomeDefault from "QuestHome" /* 15087 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import QuestHomeNavigationStore from "QuestHomeNavigationStore" /* 10922 */;
+import QuestHomeNavigationStore from "QuestHomeNavigationStore" /* 10573 */;
 
 require = fn;
-const QuestConstants = fn(5630);
+const QuestConstants = fn(5977);
 ({ QuestHomeSortMethods: metroRequire, getQuestHomeFilterOptionItem: closure_7 } = QuestConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST } };
 let closure_9 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFinishedNavigating() {
   const cResult = c.c(3);
   const navigation = useNavigation.useNavigation();
   [tmp4, importDefault] = noop.useState(false);
@@ -39,7 +39,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   const effect = noop.useEffect(tmp5, tmp6);
   return tmp4;
-}) : (() => {
+}) : (function useFinishedNavigating() {
   const navigation = useNavigation.useNavigation();
   const tmp2 = _slicedToArray(noop.useState(false), 2);
   closure_1 = tmp2[1];
@@ -53,7 +53,7 @@ let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestHomeSetting.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestHomeSetting() {
   const cResult = c.c(16);
   const tmp3 = closure_9();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -168,15 +168,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const effect = noop.useEffect(E, tmp14);
   const tmp16 = closure_10();
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    class T {
+    class N {
       constructor() {
         tmp = closure_1(closure_11);
         return;
       }
     }
-    cResult[4] = T;
+    cResult[4] = N;
   } else {
-    class T {
+    class N {
       constructor() {
         tmp = closure_1(closure_11);
         return;
@@ -184,7 +184,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
   }
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    class O {
+    class H {
       constructor() {
         return () => {
           closure_1_1(closure_1_2[11]).close();
@@ -193,11 +193,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       }
     }
     const items1 = [];
-    cResult[5] = O;
+    cResult[5] = H;
     cResult[6] = items1;
     let tmp19 = items1;
   } else {
-    class O {
+    class H {
       constructor() {
         return () => {
           closure_1_1(closure_1_2[11]).close();
@@ -207,10 +207,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
     tmp19 = cResult[6];
   }
-  const effect1 = noop.useEffect(O, tmp19);
+  const effect1 = noop.useEffect(H, tmp19);
   const field = QuestHomeNavigationStore.useField("scrollToQuestId");
   if (cResult[7] === tmp11) {
-    class O {
+    class H {
       constructor() {
         return () => {
           closure_1_1(closure_1_2[11]).close();
@@ -220,7 +220,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
     useQuestHomeHeaderDefault(obj4);
     if (cResult[10] === tmp16) {
-      class O {
+      class H {
         constructor() {
           return () => {
             closure_1_1(closure_1_2[11]).close();
@@ -229,8 +229,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         }
       }
     }
-    const obj3 = { containerStyle: tmp3.container, isNavigationComplete: tmp16, scrollToQuestId: field, sortMethod: tmp7, filters: tmp11, onClearFilters: T };
-    const tmp26 = jsx(QuestHomeDefault, { containerStyle: tmp3.container, isNavigationComplete: tmp16, scrollToQuestId: field, sortMethod: tmp7, filters: tmp11, onClearFilters: T });
+    const obj3 = { containerStyle: tmp3.container, isNavigationComplete: tmp16, scrollToQuestId: field, sortMethod: tmp7, filters: tmp11, onClearFilters: N };
+    const tmp26 = jsx(QuestHomeDefault, { containerStyle: tmp3.container, isNavigationComplete: tmp16, scrollToQuestId: field, sortMethod: tmp7, filters: tmp11, onClearFilters: N });
     cResult[10] = tmp16;
     cResult[11] = field;
     cResult[12] = tmp11;
@@ -243,7 +243,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[8] = tmp7;
   cResult[9] = obj4;
   const tmp5Result = _slicedToArray(noop.useState(tmp9), 2);
-}) : (() => {
+}) : (function QuestHomeSetting() {
   const tmp = closure_9();
   [tmp3, tmp4] = noop.useState(() => {
     let SUGGESTED = QuestHomeNavigationStore.getField("sort");
@@ -305,7 +305,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       }
       closure_1_1(found);
     }
-  }, { equalityFn: _mod4498.shallow, fireImmediately: true }), []);
+  }, { equalityFn: _mod4690.shallow, fireImmediately: true }), []);
   const tmp5 = _slicedToArray(noop.useState(() => {
     const str = QuestHomeNavigationStore.getField("filter");
     if (null == str) {

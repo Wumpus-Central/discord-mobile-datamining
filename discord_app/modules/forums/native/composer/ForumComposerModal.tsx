@@ -1,22 +1,22 @@
-// === Module 10073: ForumComposerModal ===
+// === Module 9644: ForumComposerModal ===
 
-// Module 10073 (ForumComposerModal)
+// Module 9644 (ForumComposerModal)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import KeyboardUIStore from "KeyboardUIStore" /* 1488 */;
-import KeyboardTypes from "KeyboardTypes" /* 1616 */;
-import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1881 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5715 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 7416 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 8842 */;
-import ForumComposerModalActionCreators from "ForumComposerModalActionCreators" /* 10072 */;
+import KeyboardUIStore from "KeyboardUIStore" /* 1500 */;
+import KeyboardTypes from "KeyboardTypes" /* 1628 */;
+import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1893 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5298 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 7891 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9201 */;
+import ForumComposerModalActionCreators from "ForumComposerModalActionCreators" /* 9643 */;
 import noop from "module_19" /* 19 */;
-import NativeMenuStore from "NativeMenuStore" /* 9625 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import DraftStore from "DraftStore" /* 7044 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 7280 */;
-import ForumPostMessagesStore from "ForumPostMessagesStore" /* 6790 */;
+import NativeMenuStore from "NativeMenuStore" /* 9645 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import DraftStore from "DraftStore" /* 7232 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 7880 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 6965 */;
 
 require = fn;
 function showForumComposerCloseAlert(arg0) {
@@ -36,9 +36,9 @@ function showForumComposerCloseAlert(arg0) {
   actions_AlertActionCreatorsDefault.show(obj3);
 }
 const View = fn(17).View;
-const DraftType = fn(7044).DraftType;
+const DraftType = fn(7232).DraftType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
 let closure_12 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -46,7 +46,7 @@ let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW 
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/forums/native/composer/ForumComposerModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((parentChannelId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumComposerModal(parentChannelId) {
   const cResult = parentChannelId(isEdit[16]).c(34);
   parentChannelId = parentChannelId.parentChannelId;
   const threadId = parentChannelId.threadId;
@@ -150,97 +150,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((parentChannelId)
       }
       cResult[12] = items5;
       cResult[13] = O;
-      class R {
-        constructor(arg0) {
-          if (null != closure_4) {
-            tmp31 = parentChannelId;
-            tmp32 = closure_0;
-            tmp33 = closure_3;
-            if (parentChannelId) {
-              tmp32Result = tmp32(tmp33[20]);
-              result = tmp32Result.closeCreateForumPostModal();
-              tmp24 = parentChannelId;
-              tmp25 = closure_1;
-              tmp26 = closure_3;
-              obj11 = closure_1(closure_3[13]);
-              tmp27 = DraftType;
-              clearDraftResult = obj11.clearDraft(parentChannelId, DraftType.ThreadSettings);
-              obj12 = closure_1(closure_3[13]);
-              clearDraftResult1 = obj12.clearDraft(parentChannelId, DraftType.ChannelMessage);
-              obj13 = closure_1(closure_3[14]);
-              clearAllResult = obj13.clearAll(parentChannelId, DraftType.ChannelMessage);
-            } else {
-              tmp32Result1 = tmp32(tmp33[21]);
-              obj1 = { type: null };
-              tmp = closure_0;
-              tmp2 = closure_3;
-              obj1.type = closure_0(closure_3[22]).KeyboardTypes.SYSTEM;
-              setKeyboardTypeResult = tmp32Result1.setKeyboardType(obj1);
-              obj3 = closure_7;
-              tmp4 = parentChannelId;
-              tmp5 = DraftType;
-              draft = closure_7.getDraft(parentChannelId, DraftType.ChannelMessage);
-              threadSettings = closure_7.getThreadSettings(parentChannelId);
-              if (threadSettings == null) {
-                tmp7 = closure_1;
-                tmp8 = closure_3;
-                obj4 = closure_1(closure_3[23]);
-                threadSettings = obj3.getThreadDraftWithParentMessageId(obj4.castChannelIdAsMessageId(tmp4));
-              }
-              tmp9 = closure_9;
-              tmp10 = DraftType;
-              tmp11 = isEdit;
-              if (isEdit) {
-                tmp14 = closure_0;
-                tmp15 = closure_3;
-                obj6 = closure_0(closure_3[20]);
-                result1 = obj6.closeCreateForumPostModal();
-                tmp17 = closure_1;
-                tmp18 = closure_3;
-                obj7 = closure_1(closure_3[13]);
-                tmp19 = DraftType;
-                clearDraftResult2 = obj7.clearDraft(tmp4, DraftType.ThreadSettings);
-                obj8 = closure_1(closure_3[13]);
-                clearDraftResult3 = obj8.clearDraft(tmp4, DraftType.ChannelMessage);
-                obj9 = closure_1(closure_3[14]);
-                clearAllResult1 = obj9.clearAll(tmp4, DraftType.ChannelMessage);
-              } else {
-                num = 0;
-                if (draft.length <= 0) {
-                  if (arr2.length <= 0) {
-                    str = undefined;
-                    if (threadSettings != null) {
-                      str = threadSettings.name;
-                    }
-                    if (str == null) {
-                      str = "";
-                    }
-                  }
-                }
-                tmp12 = showForumComposerCloseAlert;
-                obj14 = { onConfirm: null, onCancel: null };
-                obj14.onConfirm = function onConfirm() {
-                  const result = parentChannelId(isEdit[24]).maybeTrackForumNewPostDraftCreated({ guildId: stateFromStores.guild_id, channelId: stateFromStores.id });
-                  const obj = parentChannelId(isEdit[24]);
-                  const obj2 = { guildId: stateFromStores.guild_id, channelId: stateFromStores.id };
-                  const result1 = parentChannelId(isEdit[20]).closeCreateForumPostModal();
-                };
-                obj14.onCancel = function onCancel() {
-                  const result = parentChannelId(isEdit[20]).closeCreateForumPostModal();
-                  const obj = parentChannelId(isEdit[20]);
-                  threadId(isEdit[13]).clearDraft(closure_1_0, DraftType.ThreadSettings);
-                  const obj2 = threadId(isEdit[13]);
-                  threadId(isEdit[13]).clearDraft(closure_1_0, DraftType.ChannelMessage);
-                  const obj3 = threadId(isEdit[13]);
-                  threadId(isEdit[14]).clearAll(closure_1_0, DraftType.ChannelMessage);
-                };
-                tmp13 = showForumComposerCloseAlert(obj14);
-              }
-            }
-          }
-          return;
-        }
-      }
     } else {
       class L {
         constructor() {
@@ -256,101 +165,66 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((parentChannelId)
         }
       }
     }
-    class R {
-      constructor(arg0) {
-        if (null != closure_4) {
-          tmp31 = parentChannelId;
-          tmp32 = closure_0;
-          tmp33 = closure_3;
-          if (parentChannelId) {
-            tmp32Result = tmp32(tmp33[20]);
-            result = tmp32Result.closeCreateForumPostModal();
-            tmp24 = parentChannelId;
-            tmp25 = closure_1;
-            tmp26 = closure_3;
-            obj11 = closure_1(closure_3[13]);
-            tmp27 = DraftType;
-            clearDraftResult = obj11.clearDraft(parentChannelId, DraftType.ThreadSettings);
-            obj12 = closure_1(closure_3[13]);
-            clearDraftResult1 = obj12.clearDraft(parentChannelId, DraftType.ChannelMessage);
-            obj13 = closure_1(closure_3[14]);
-            clearAllResult = obj13.clearAll(parentChannelId, DraftType.ChannelMessage);
+    function handleClose(arg0) {
+      if (null != stateFromStores) {
+        if (arg0) {
+          let result = ForumComposerModalActionCreators.closeCreateForumPostModal();
+          const tmp32Result = ForumComposerModalActionCreators;
+          DraftActionCreatorsDefault.clearDraft(parentChannelId, DraftType.ThreadSettings);
+          DraftActionCreatorsDefault.clearDraft(parentChannelId, DraftType.ChannelMessage);
+          UploadAttachmentActionCreatorsDefault.clearAll(parentChannelId, DraftType.ChannelMessage);
+        } else {
+          let obj = { type: KeyboardTypes.KeyboardTypes.SYSTEM };
+          KeyboardUIStore.setKeyboardType(obj);
+          const draft = DraftStore.getDraft(parentChannelId, DraftType.ChannelMessage);
+          let threadSettings = DraftStore.getThreadSettings(parentChannelId);
+          if (threadSettings == null) {
+            threadSettings = DraftStore.getThreadDraftWithParentMessageId(SnowflakeUtilsDefault.castChannelIdAsMessageId(parentChannelId));
+          }
+          if (isEdit) {
+            let result1 = ForumComposerModalActionCreators.closeCreateForumPostModal();
+            DraftActionCreatorsDefault.clearDraft(parentChannelId, DraftType.ThreadSettings);
+            DraftActionCreatorsDefault.clearDraft(parentChannelId, DraftType.ChannelMessage);
+            UploadAttachmentActionCreatorsDefault.clearAll(parentChannelId, DraftType.ChannelMessage);
           } else {
-            tmp32Result1 = tmp32(tmp33[21]);
-            obj1 = { type: null };
-            tmp = closure_0;
-            tmp2 = closure_3;
-            obj1.type = closure_0(closure_3[22]).KeyboardTypes.SYSTEM;
-            setKeyboardTypeResult = tmp32Result1.setKeyboardType(obj1);
-            obj3 = closure_7;
-            tmp4 = parentChannelId;
-            tmp5 = DraftType;
-            draft = closure_7.getDraft(parentChannelId, DraftType.ChannelMessage);
-            threadSettings = closure_7.getThreadSettings(parentChannelId);
-            if (threadSettings == null) {
-              tmp7 = closure_1;
-              tmp8 = closure_3;
-              obj4 = closure_1(closure_3[23]);
-              threadSettings = obj3.getThreadDraftWithParentMessageId(obj4.castChannelIdAsMessageId(tmp4));
-            }
-            tmp9 = closure_9;
-            tmp10 = DraftType;
-            tmp11 = isEdit;
-            if (isEdit) {
-              tmp14 = closure_0;
-              tmp15 = closure_3;
-              obj6 = closure_0(closure_3[20]);
-              result1 = obj6.closeCreateForumPostModal();
-              tmp17 = closure_1;
-              tmp18 = closure_3;
-              obj7 = closure_1(closure_3[13]);
-              tmp19 = DraftType;
-              clearDraftResult2 = obj7.clearDraft(tmp4, DraftType.ThreadSettings);
-              obj8 = closure_1(closure_3[13]);
-              clearDraftResult3 = obj8.clearDraft(tmp4, DraftType.ChannelMessage);
-              obj9 = closure_1(closure_3[14]);
-              clearAllResult1 = obj9.clearAll(tmp4, DraftType.ChannelMessage);
-            } else {
-              num = 0;
-              if (draft.length <= 0) {
-                if (arr2.length <= 0) {
-                  str = undefined;
-                  if (threadSettings != null) {
-                    str = threadSettings.name;
-                  }
-                  if (str == null) {
-                    str = "";
-                  }
+            if (draft.length <= 0) {
+              if (arr2.length <= 0) {
+                let str;
+                if (threadSettings != null) {
+                  str = threadSettings.name;
+                }
+                if (str == null) {
+                  str = "";
                 }
               }
-              tmp12 = showForumComposerCloseAlert;
-              obj14 = { onConfirm: null, onCancel: null };
-              obj14.onConfirm = function onConfirm() {
-                const result = parentChannelId(isEdit[24]).maybeTrackForumNewPostDraftCreated({ guildId: stateFromStores.guild_id, channelId: stateFromStores.id });
-                const obj = parentChannelId(isEdit[24]);
-                const obj2 = { guildId: stateFromStores.guild_id, channelId: stateFromStores.id };
-                const result1 = parentChannelId(isEdit[20]).closeCreateForumPostModal();
-              };
-              obj14.onCancel = function onCancel() {
-                const result = parentChannelId(isEdit[20]).closeCreateForumPostModal();
-                const obj = parentChannelId(isEdit[20]);
-                threadId(isEdit[13]).clearDraft(closure_1_0, DraftType.ThreadSettings);
-                const obj2 = threadId(isEdit[13]);
-                threadId(isEdit[13]).clearDraft(closure_1_0, DraftType.ChannelMessage);
-                const obj3 = threadId(isEdit[13]);
-                threadId(isEdit[14]).clearAll(closure_1_0, DraftType.ChannelMessage);
-              };
-              tmp13 = showForumComposerCloseAlert(obj14);
             }
+            let obj2 = {
+              onConfirm() {
+                      const result = parentChannelId(isEdit[24]).maybeTrackForumNewPostDraftCreated({ guildId: stateFromStores.guild_id, channelId: stateFromStores.id });
+                      const obj = parentChannelId(isEdit[24]);
+                      const obj2 = { guildId: stateFromStores.guild_id, channelId: stateFromStores.id };
+                      const result1 = parentChannelId(isEdit[20]).closeCreateForumPostModal();
+                    },
+              onCancel() {
+                      const result = parentChannelId(isEdit[20]).closeCreateForumPostModal();
+                      const obj = parentChannelId(isEdit[20]);
+                      threadId(isEdit[13]).clearDraft(closure_1_0, DraftType.ThreadSettings);
+                      const obj2 = threadId(isEdit[13]);
+                      threadId(isEdit[13]).clearDraft(closure_1_0, DraftType.ChannelMessage);
+                      const obj3 = threadId(isEdit[13]);
+                      threadId(isEdit[14]).clearAll(closure_1_0, DraftType.ChannelMessage);
+                    }
+            };
+            showForumComposerCloseAlert(obj2);
           }
+          const tmp32Result2 = KeyboardUIStore;
         }
-        return;
       }
     }
     cResult[14] = tmp4;
     cResult[15] = stateFromStores;
     cResult[16] = parentChannelId;
-    cResult[17] = R;
+    cResult[17] = handleClose;
     const tmpResult5 = tmp(tmp2[18]);
   }
   class K {
@@ -371,7 +245,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((parentChannelId)
   cResult[10] = threadId;
   cResult[11] = K;
   const tmpResult4 = parentChannelId(isEdit[18]);
-}) : ((parentChannelId) => {
+}) : (function ForumComposerModal(parentChannelId) {
   parentChannelId = parentChannelId.parentChannelId;
   const threadId = parentChannelId.threadId;
   ({ messageId: importAll, isEdit } = parentChannelId);

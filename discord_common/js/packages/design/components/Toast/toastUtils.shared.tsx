@@ -1,11 +1,11 @@
-// === Module 4576: ? ===
+// === Module 4768: ? ===
 
-// Module 4576
-import module_4577 from "module_4577" /* 4577 */;
+// Module 4768
+import module_4769 from "module_4769" /* 4769 */;
 import size from "module_2" /* 2 */;
 
 let c2 = 1;
-const useToastStore = module_4577.create(() => {
+const useToastStore = module_4769.create(() => {
   const obj = { currentToastMap: new Map(), queuedToastsMap: null };
   const map = new Map();
   obj.queuedToastsMap = new Map();
@@ -14,15 +14,15 @@ const useToastStore = module_4577.create(() => {
 let result = size.fileFinishedImporting("../discord_common/js/packages/design/components/Toast/toastUtils.shared.tsx");
 
 export { useToastStore };
-export const showToast = function showToast(toManaToastResult) {
+export const showToast = function showToast(surface) {
   let str;
-  if (toManaToastResult != null) {
-    str = toManaToastResult.surface;
+  if (surface != null) {
+    str = surface.surface;
   }
   if (str == null) {
     str = "app";
   }
-  let obj = { toast: toManaToastResult, key: null };
+  let obj = { toast: surface, key: null };
   closure_2 = tmp + 1;
   obj.key = +closure_2;
   str(obj[1]).batchUpdates(() => {
@@ -58,7 +58,7 @@ export const popToast = function popToast(arg0) {
   if (arg0 === undefined) {
     str = "app";
   }
-  str(1259).batchUpdates(() => {
+  str(1271).batchUpdates(() => {
     obj.setState((queuedToastsMap) => {
       queuedToastsMap = queuedToastsMap.queuedToastsMap;
       let items = queuedToastsMap.get(str);

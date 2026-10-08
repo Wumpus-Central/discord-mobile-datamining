@@ -1,15 +1,15 @@
-// === Module 7231: AdDataUtils ===
+// === Module 7410: AdDataUtils ===
 
-// Module 7231 (AdDataUtils)
-import AdUserActionCreators from "AdUserActionCreators" /* 7234 */;
+// Module 7410 (AdDataUtils)
+import AdUserActionCreators from "AdUserActionCreators" /* 7413 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AdUserStore from "AdUserStore" /* 7232 */;
+import AdUserStore from "AdUserStore" /* 7411 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const DEFAULT_TIMEOUT_MS = fn(7233).DEFAULT_TIMEOUT_MS;
+const DEFAULT_TIMEOUT_MS = fn(7412).DEFAULT_TIMEOUT_MS;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/ads/utils/AdDataUtils.android.tsx");
@@ -52,7 +52,7 @@ export const getAdUser = function getAdUser(questContentName) {
   }
   resolved = Promise.resolve(adUser);
 };
-export const useAdUser = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useAdUser = ReactCompilerGating.isReactCompilerEnabled() ? (function useAdUser(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   const obj = require("c");
@@ -91,7 +91,7 @@ export const useAdUser = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   }
   const effect = noop.useEffect(tmp4, tmp5);
   return tmp3;
-}) : ((arg0) => {
+}) : (function useAdUser(arg0) {
   closure_0 = arg0;
   const tmp = _slicedToArray(noop.useState(AdUserStore.adUser), 2);
   dependencyMap = tmp[1];

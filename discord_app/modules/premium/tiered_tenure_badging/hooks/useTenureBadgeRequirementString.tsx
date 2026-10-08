@@ -1,14 +1,14 @@
-// === Module 10887: useTenureBadgeRequirementString ===
+// === Module 10538: useTenureBadgeRequirementString ===
 
-// Module 10887 (useTenureBadgeRequirementString)
+// Module 10538 (useTenureBadgeRequirementString)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import PremiumConstants from "PremiumConstants" /* 1379 */;
-import useTenureBadging from "useTenureBadging" /* 10888 */;
+import PremiumConstants from "PremiumConstants" /* 1391 */;
+import useTenureBadging from "useTenureBadging" /* 10539 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
-const TieredTenureBadgeUtils = erUSmA(7132);
+const TieredTenureBadgeUtils = erUSmA(7318);
 const TieredTenureBadge = PremiumConstants.TieredTenureBadge;
 function getTenureBadgeRequirementString(badge, tenureReqNumMonths) {
   if (TieredTenureBadge.PREMIUM_TENURE_1_MONTH !== badge) {
@@ -36,7 +36,7 @@ function getTenureBadgeRequirementString(badge, tenureReqNumMonths) {
 }
 const result = size.fileFinishedImporting("modules/premium/tiered_tenure_badging/hooks/useTenureBadgeRequirementString.tsx");
 
-export const useTenureBadgeRequirementString = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useTenureBadgeRequirementString = ReactCompilerGating.isReactCompilerEnabled() ? (function useTenureBadgeRequirementString() {
   let erUSmA = require;
   let obj = dependencyMap;
   const cResult = c.c(2);
@@ -74,7 +74,7 @@ export const useTenureBadgeRequirementString = ReactCompilerGating.isReactCompil
   } else {
     return cResult[1];
   }
-}) : (() => {
+}) : (function useTenureBadgeRequirementString() {
   const tieredTenureBadge = useTenureBadging.useTieredTenureBadge();
   if (null == tieredTenureBadge) {
     return null;

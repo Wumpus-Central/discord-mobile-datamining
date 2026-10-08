@@ -1,9 +1,9 @@
-// === Module 14344: openActivityShareLinkModal ===
+// === Module 14572: openActivityShareLinkModal ===
 
-// Module 14344 (openActivityShareLinkModal)
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
-import ChatInputUtils from "ChatInputUtils" /* 4751 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
+// Module 14572 (openActivityShareLinkModal)
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ChatInputUtils from "ChatInputUtils" /* 4945 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5940 */;
 import size from "module_2" /* 2 */;
 
 const ACTIVITY_SHARE_LINK_MODAL = "ACTIVITY_SHARE_LINK_MODAL";
@@ -13,7 +13,7 @@ export const ACTIVITY_SHARE_LINK_MODAL = "ACTIVITY_SHARE_LINK_MODAL";
 export const openActivityShareLinkModal = function openActivityShareLinkModal(arg0) {
   ({ applicationId, customId, linkId, message, onShare } = arg0);
   ChatInputUtils.dismissKeyboard();
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14345, dependencyMap.paths), { applicationId, customId, linkId, message, onShare }, ACTIVITY_SHARE_LINK_MODAL, { presentation: "modal" });
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14573, dependencyMap.paths), { applicationId, customId, linkId, message, onShare }, ACTIVITY_SHARE_LINK_MODAL, { presentation: "modal" });
 };
 export const closeActivityShareLinkModal = function closeActivityShareLinkModal() {
   ModalActionCreatorsDefault.popWithKey(ACTIVITY_SHARE_LINK_MODAL);

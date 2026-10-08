@@ -1,9 +1,9 @@
-// === Module 16081: ConnectedUserLimit ===
+// === Module 16341: ConnectedUserLimit ===
 
-// Module 16081 (ConnectedUserLimit)
+// Module 16341 (ConnectedUserLimit)
 import c from "c" /* 576 */;
-import useChannelVideoLimitDefault from "useChannelVideoLimit" /* 9340 */;
-import VoiceChannelUserLimitDefault from "VoiceChannelUserLimit" /* 16082 */;
+import useChannelVideoLimitDefault from "useChannelVideoLimit" /* 8762 */;
+import VoiceChannelUserLimitDefault from "VoiceChannelUserLimit" /* 16342 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/native/ConnectedUserLimit.tsx");
 
-export const ConnectedUserLimit = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const ConnectedUserLimit = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectedUserLimit(arg0) {
   const cResult = c.c(4);
   ({ channel, video, userCount } = arg0);
   const limit = useChannelVideoLimitDefault(channel).limit;
@@ -49,7 +49,7 @@ export const ConnectedUserLimit = ReactCompilerGating.isReactCompilerEnabled() ?
   cResult[2] = userCount;
   cResult[3] = tmp9;
   tmp8 = tmp9;
-}) : ((users) => {
+}) : (function ConnectedUserLimit(users) {
   ({ channel, video } = users);
   const limit = useChannelVideoLimitDefault(channel).limit;
   let num = -1;

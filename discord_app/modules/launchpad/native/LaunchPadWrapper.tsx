@@ -1,24 +1,24 @@
-// === Module 17414: LaunchPadWrapper ===
+// === Module 17696: LaunchPadWrapper ===
 
-// Module 17414 (LaunchPadWrapper)
+// Module 17696 (LaunchPadWrapper)
 import nativeDefault from "native" /* 587 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import HapticUtils from "HapticUtils" /* 4861 */;
-import RouteManagerDefault from "RouteManager" /* 12572 */;
-import LaunchPadPullTabCache from "LaunchPadPullTabCache" /* 17412 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import HapticUtils from "HapticUtils" /* 5055 */;
+import RouteManagerDefault from "RouteManager" /* 10985 */;
+import LaunchPadPullTabCache from "LaunchPadPullTabCache" /* 17694 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire, TouchableOpacity: closure_7, StyleSheet: closure_8 } = get_ActivityIndicator);
-const LaunchPadTypes = fn(11138).LaunchPadTypes;
+const LaunchPadTypes = fn(11258).LaunchPadTypes;
 const Constants = fn(1085);
 ({ AnalyticEvents: c10, ComponentActions: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { modalWrapper: null, a11yDismiss: null };
 let size = { height: "100%", width: "100%", paddingTop: nativeDefault.space.PX_8 };
 obj2.modalWrapper = size;
@@ -26,7 +26,7 @@ const size1 = { position: "absolute", top: 0, width: "100%", height: nativeDefau
 obj2.a11yDismiss = size1;
 let closure_14 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function useLaunchPadComponentDispatchListeners(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] !== arg0) {
@@ -63,7 +63,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp3 = cResult[2];
   }
   const effect = noop.useEffect(tmp2, tmp3);
-}) : ((arg0) => {
+}) : (function useLaunchPadComponentDispatchListeners(arg0) {
   closure_0 = arg0;
   const items = [arg0];
   const effect = noop.useEffect(() => {
@@ -93,8 +93,8 @@ ReactCompilerGating = fn(558);
 size = fn(2);
 let result = size.fileFinishedImporting("modules/launchpad/native/LaunchPadWrapper.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((launchPadType) => {
-  const cResult = launchPadType(isModalOpen[9]).c(63);
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function LaunchPadWrapper(launchPadType) {
+  const cResult = launchPadType(isModalOpen[9]).c(62);
   launchPadType = launchPadType.launchPadType;
   ({ gestureState, launchPadShown, launchPadSharedState, launchPadPullTabState, updaters } = launchPadType);
   closure_14();
@@ -133,22 +133,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((launchPadType) =
         }
         const effect = obj4.useEffect(tmp14, tmp15);
         if (cResult[10] !== updaters) {
-          class W {
+          class O {
             constructor() {
               return updaters.setLaunchPadPosition(0);
             }
           }
           cResult[10] = updaters;
-          cResult[11] = W;
-          const tmp17 = W;
+          cResult[11] = O;
+          const tmp17 = O;
         } else {
-          class W {
+          class O {
             constructor() {
               return updaters.setLaunchPadPosition(0);
             }
           }
         }
-        W = tmp17;
+        O = tmp17;
         if (cResult[12] !== tmp8) {
           class M {
             constructor() {
@@ -213,7 +213,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((launchPadType) =
         cResult[15] = isModalOpen;
         cResult[16] = launchPadType;
         cResult[17] = tmp8;
-        class N {
+        class F {
           constructor() {
             if (closure_3) {
               tmp2 = closure_4;
@@ -234,7 +234,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((launchPadType) =
         }
         cResult[19] = items2;
       }
-      class N {
+      class F {
         constructor() {
           if (closure_3) {
             tmp2 = closure_4;
@@ -255,8 +255,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((launchPadType) =
       }
       cResult[5] = tmp13;
       cResult[6] = tmp8;
-      cResult[7] = N;
-      tmp14 = N;
+      cResult[7] = F;
+      tmp14 = F;
       const tmp7 = updaters(tmp[13])(tmp5);
     }
   }
@@ -267,7 +267,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((launchPadType) =
   cResult[3] = obj5;
   tmp5 = obj5;
   const obj2 = launchPadType(isModalOpen[12]);
-}) : ((launchPadType) => {
+}) : (function LaunchPadWrapper(launchPadType) {
   launchPadType = launchPadType.launchPadType;
   ({ gestureState, launchPadShown, launchPadSharedState, updaters } = launchPadType);
   let isModalOpen;
@@ -317,11 +317,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((launchPadType) =
   const items4 = [launchPadShown];
   const effect3 = ref.useEffect(() => () => launchPadType(isModalOpen[16]).clearLaunchPadPullTabExclusionRect(), items4);
   updaters(isModalOpen[18])(() => {
-    if (closure_3) {
-      callback();
-    }
-    return closure_3;
-  });
+    callback();
+    return true;
+  }, tmp7);
   closure_15(updaters);
   const obj2 = { style: absoluteFill.absoluteFill, pointerEvents: "box-none", children: null };
   const tmp6 = updaters(isModalOpen[13])({ launchPadSharedState, launchPadShown, gestureState });

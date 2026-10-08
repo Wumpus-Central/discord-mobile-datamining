@@ -1,6 +1,6 @@
-// === Module 5263: ? ===
+// === Module 5575: ? ===
 
-// Module 5263
+// Module 5575
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/face/possessed.png.js");

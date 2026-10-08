@@ -1,22 +1,22 @@
-// === Module 11285: PublicGuildAnnouncementProfile ===
+// === Module 11365: PublicGuildAnnouncementProfile ===
 
-// Module 11285 (PublicGuildAnnouncementProfile)
+// Module 11365 (PublicGuildAnnouncementProfile)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import FastImageDefault from "FastImage" /* 5981 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6652 */;
-import PublicGuildsUtils from "PublicGuildsUtils" /* 7716 */;
-import _modDef11286 from "module_11286" /* 11286 */;
+import native from "native" /* 1200 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6829 */;
+import PublicGuildsUtils from "PublicGuildsUtils" /* 8037 */;
+import _modDef11366 from "module_11366" /* 11366 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { content: { padding: 16 }, avatar: null, nameWrapper: null, headerText: null, description: null };
 let size = { borderRadius: nativeDefault.radii.lg, height: 80, width: 80, marginVertical: 16 };
 obj2.avatar = size;
@@ -28,7 +28,7 @@ const ReactCompilerGating = fn(558);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/public_guilds/native/components/PublicGuildAnnouncementProfile.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function PublicGuildAnnouncementProfile() {
   const cResult = c.c(22);
   const tmp4 = closure_6();
   ({ content, avatar } = tmp4);
@@ -50,7 +50,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp7 = cResult[2];
   }
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj3 = { source: _modDef11286, disableColor: true };
+    const obj3 = { source: _modDef11366, disableColor: true };
     const tmp14 = React4(native.Icon, obj3);
     cResult[3] = tmp14;
     let tmp11 = tmp14;
@@ -148,7 +148,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[8] = tmp17;
   cResult[9] = tmp21;
   tmp20 = tmp21;
-}) : (() => {
+}) : (function PublicGuildAnnouncementProfile() {
   const tmp = closure_6();
   const obj = { startExpanded: true, children: null };
   const obj2 = { style: tmp.content, children: null };
@@ -157,7 +157,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   obj3.source = PublicGuildsUtils.getPublicSystemMessageAvatar();
   const items = [React4(tmp2, obj3), , , ];
   const obj5 = { style: tmp.nameWrapper, children: null };
-  const items1 = [React4(native.Icon, { source: _modDef11286, disableColor: true }), ];
+  const items1 = [React4(native.Icon, { source: _modDef11366, disableColor: true }), ];
   const obj7 = { style: tmp.headerText, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj7.children = intl.string(util.t.xfAlNx);

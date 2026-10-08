@@ -1,12 +1,12 @@
-// === Module 9415: guild_profile/GuildProfileUtils ===
+// === Module 8836: guild_profile/GuildProfileUtils ===
 
-// Module 9415 (guild_profile/GuildProfileUtils)
+// Module 8836 (guild_profile/GuildProfileUtils)
 import c from "c" /* 576 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import tinycolorDefault from "tinycolor" /* 7076 */;
-import useAvatarColor from "useAvatarColor" /* 7826 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
+import tinycolorDefault from "tinycolor" /* 7262 */;
+import useAvatarColor from "useAvatarColor" /* 8244 */;
 import _slicedToArray from "module_32" /* 32 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 const useAvatarColorDefault = useAvatarColor;
 
@@ -15,7 +15,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_profile/native/GuildProfileUtils.tsx");
 
-export const useProfilePrimaryColor = ReactCompilerGating.isReactCompilerEnabled() ? ((brandColorPrimary, arg1) => {
+export const useProfilePrimaryColor = ReactCompilerGating.isReactCompilerEnabled() ? (function useProfilePrimaryColor(brandColorPrimary, arg1) {
   const cResult = c.c(2);
   if (cResult[0] !== brandColorPrimary) {
     let guildIconURL = null;
@@ -42,7 +42,7 @@ export const useProfilePrimaryColor = ReactCompilerGating.isReactCompilerEnabled
     brandColorPrimary = brandColorPrimary.brandColorPrimary;
   }
   return brandColorPrimary;
-}) : ((brandColorPrimary, arg1) => {
+}) : (function useProfilePrimaryColor(brandColorPrimary, arg1) {
   let guildIconURL = null;
   if (null != brandColorPrimary) {
     guildIconURL = null;

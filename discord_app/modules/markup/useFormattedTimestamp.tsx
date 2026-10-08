@@ -1,6 +1,6 @@
-// === Module 11721: useFormattedTimestamp ===
+// === Module 11786: useFormattedTimestamp ===
 
-// Module 11721 (useFormattedTimestamp)
+// Module 11786 (useFormattedTimestamp)
 import DurationsDefault from "Durations" /* 1102 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -21,7 +21,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/markup/useFormattedTimestamp.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFormattedTimestamp(arg0) {
   let parsed = arg0;
   _require = arg0;
   let R = _require;
@@ -38,7 +38,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       const effect = noop.useEffect(tmp4, tmp5);
       if ("R" === parsed.format) {
         if (cResult[5] !== parsed.parsed) {
-          const TIMESTAMP_FORMATS = R(5814).TIMESTAMP_FORMATS;
+          const TIMESTAMP_FORMATS = R(8131).TIMESTAMP_FORMATS;
           R = TIMESTAMP_FORMATS.R;
           RResult = R(parsed.parsed);
           parsed = parsed.parsed;
@@ -82,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   tmp5 = items;
   tmp4 = fn;
   const obj2 = require("areHookInputsEqual");
-}) : ((format) => {
+}) : (function useFormattedTimestamp(format) {
   _require = format;
   const forceUpdate = require("areHookInputsEqual").useForceUpdate();
   const items = [forceUpdate, , ];

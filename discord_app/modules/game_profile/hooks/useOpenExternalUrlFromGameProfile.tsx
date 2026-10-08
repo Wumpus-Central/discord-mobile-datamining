@@ -1,8 +1,8 @@
-// === Module 8361: useOpenExternalUrlFromGameProfile ===
+// === Module 8859: useOpenExternalUrlFromGameProfile ===
 
-// Module 8361 (useOpenExternalUrlFromGameProfile)
-import openURLDefault from "openURL" /* 4565 */;
-import GameUtilsDefault from "GameUtils" /* 8362 */;
+// Module 8859 (useOpenExternalUrlFromGameProfile)
+import openURLDefault from "openURL" /* 4757 */;
+import GameUtilsDefault from "GameUtils" /* 8860 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -134,7 +134,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_profile/hooks/useOpenExternalUrlFromGameProfile.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useOpenExternalUrlFromGameProfile(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   [first, dependencyMap] = noop.useState(false);
@@ -226,7 +226,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
   });
-  const fn = function() {
+  function t0() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -235,12 +235,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       applyArgumentsResult = apply(self, arguments);
     }
     return applyArgumentsResult;
-  };
+  }
   cResult[0] = arg0;
   cResult[1] = first;
-  cResult[2] = fn;
-  tmp4 = fn;
-}) : ((arg0) => {
+  cResult[2] = t0;
+  tmp4 = t0;
+}) : (function useOpenExternalUrlFromGameProfile(arg0) {
   [first, closure_2] = noop.useState(false);
   closure_0 = asyncGeneratorStep(async (arg0) => {
     if (c5 === 2) {

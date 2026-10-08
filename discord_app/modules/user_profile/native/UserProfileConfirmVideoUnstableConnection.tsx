@@ -1,9 +1,9 @@
-// === Module 12305: UserProfileConfirmVideoUnstableConnection ===
+// === Module 12403: UserProfileConfirmVideoUnstableConnection ===
 
-// Module 12305 (UserProfileConfirmVideoUnstableConnection)
+// Module 12403 (UserProfileConfirmVideoUnstableConnection)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import AlertModal from "AlertModal" /* 5720 */;
+import AlertModal from "AlertModal" /* 5303 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileConfirmVideoUnstableConnection.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onConfirm) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileConfirmVideoUnstableConnection(onConfirm) {
   const cResult = c.c(8);
   onConfirm = onConfirm.onConfirm;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onConfirm) => {
     tmp16 = cResult[7];
   }
   return tmp16;
-}) : ((onConfirm) => {
+}) : (function UserProfileConfirmVideoUnstableConnection(onConfirm) {
   const obj = { title: null, content: null, actions: null };
   const intl = util.intl;
   obj.title = intl.string(util.t.m2Hyj0);

@@ -1,17 +1,17 @@
-// === Module 14229: AIGlyphText ===
+// === Module 14053: AIGlyphText ===
 
-// Module 14229 (AIGlyphText)
+// Module 14053 (AIGlyphText)
 import c from "c" /* 576 */;
-import useToken from "useToken" /* 4586 */;
-import AIGlyphFont from "AIGlyphFont" /* 14230 */;
+import useToken from "useToken" /* 4778 */;
+import AIGlyphFont from "AIGlyphFont" /* 14054 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
 
 require = fn;
 const Text = fn(17).Text;
 const jsx = fn(21).jsx;
 let closure_4 = ReanimatedRexport.createAnimatedComponent(Text);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles((fontSize, color) => {
   const obj = { glyph: { color, fontFamily: AIGlyphFont.AI_GLYPH_FONT_FAMILY_NATIVE, fontSize, lineHeight: fontSize, textAlign: "center", includeFontPadding: false } };
   return obj;
@@ -20,7 +20,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/visual-identities/ai/AIGlyphText.native.tsx");
 
-export const AIGlyphText = ReactCompilerGating.isReactCompilerEnabled() ? ((size) => {
+export const AIGlyphText = ReactCompilerGating.isReactCompilerEnabled() ? (function AIGlyphText(size) {
   const cResult = c.c(10);
   ({ color, allowFontScaling, animated, numberOfLines, ellipsizeMode, style, children } = size);
   let str = "text-default";
@@ -69,7 +69,7 @@ export const AIGlyphText = ReactCompilerGating.isReactCompilerEnabled() ? ((size
   cResult[2] = items;
   tmp8 = items;
   const tmpResult = useToken;
-}) : ((color) => {
+}) : (function AIGlyphText(color) {
   let str = color.color;
   if (str === undefined) {
     str = "text-default";

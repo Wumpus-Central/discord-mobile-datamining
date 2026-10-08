@@ -1,27 +1,27 @@
-// === Module 17334: VoicePanelPIP ===
+// === Module 17615: VoicePanelPIP ===
 
-// Module 17334 (VoicePanelPIP)
+// Module 17615 (VoicePanelPIP)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4504 */;
-import native from "native" /* 4595 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import spring from "spring" /* 5604 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6147 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 9019 */;
-import EmbeddedActivitiesActionCreatorsAll from "EmbeddedActivitiesActionCreators" /* 9026 */;
-import ExternalPipDefault from "ExternalPip" /* 9145 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 9787 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11915 */;
-import VoicePanelPIPHandoff from "VoicePanelPIPHandoff" /* 11922 */;
-import utils_triggerIOSHapticDefault from "utils/triggerIOSHaptic" /* 17233 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 17234 */;
-import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 17236 */;
-import VoicePanelPIPScaleCache from "VoicePanelPIPScaleCache" /* 17335 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4696 */;
+import native from "native" /* 4787 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import ExternalPipDefault from "ExternalPip" /* 5219 */;
+import spring from "spring" /* 5374 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6326 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10352 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10618 */;
+import EmbeddedActivitiesActionCreatorsAll from "EmbeddedActivitiesActionCreators" /* 10635 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11988 */;
+import VoicePanelPIPHandoff from "VoicePanelPIPHandoff" /* 11995 */;
+import utils_triggerIOSHapticDefault from "utils/triggerIOSHaptic" /* 17514 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 17515 */;
+import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 17517 */;
+import VoicePanelPIPScaleCache from "VoicePanelPIPScaleCache" /* 17616 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
-import FramesStore from "FramesStore" /* 9000 */;
-import VoicePanelStore from "VoicePanelStore" /* 5104 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2062 */;
+import FramesStore from "FramesStore" /* 10612 */;
+import VoicePanelStore from "VoicePanelStore" /* 6079 */;
 
 require = fn;
 function renderPIPWrapper(arg0, arg1, transitionState, transitionCleanUp) {
@@ -29,15 +29,15 @@ function renderPIPWrapper(arg0, arg1, transitionState, transitionCleanUp) {
 }
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(11916);
+const VoicePanelConstants = fn(11989);
 ({ DRAWER_SPRING_PHYSICS: closure_9, VoicePanelModes: c10, SECONDARY_PIP_TOP_MARGIN } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(11914).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(17235).VoicePanelPIPModes;
-const ActivityPanelModes = fn(9001).ActivityPanelModes;
-const isLaunched = fn(8738).isLaunched;
+const VoicePanelControlsModes = fn(11987).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(17516).VoicePanelPIPModes;
+const ActivityPanelModes = fn(6072).ActivityPanelModes;
+const isLaunched = fn(10613).isLaunched;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { container: { position: "absolute", zIndex: 10 }, pipContentWrapper: { backgroundColor: "black" }, inAppElevationShadow: {}, pipMask: null, multiPipContainer: null, pushToTalkContainer: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -89,7 +89,7 @@ getTouchesSpread.__closure = {};
 getTouchesSpread.__workletHash = 14242071118706;
 getTouchesSpread.__initData = { code: "function getTouchesSpread_VoicePanelPIPTsx2(touches,centroid){if(touches.length<2)return 0;let total=0;for(const touch of touches){const dx=touch.absoluteX-centroid.x;const dy=touch.absoluteY-centroid.y;total+=Math.sqrt(dx*dx+dy*dy);}return total/touches.length;}" };
 let ReactCompilerGating = fn(558);
-let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePIPTileHandoff() {
   const cResult = c.c(4);
   const pipHandoff = noop.useContext(VoicePanelStateContextDefault).pipHandoff;
   const mode = VoicePanelPIPStateContext.usePIPState().mode;
@@ -109,7 +109,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[2] = mode !== VoicePanelPIPModes.IN_APP || pIPCardsSettled;
   cResult[3] = obj5;
   tmp6 = obj5;
-}) : (() => {
+}) : (function usePIPTileHandoff() {
   const pipHandoff = noop.useContext(VoicePanelStateContextDefault).pipHandoff;
   const mode = VoicePanelPIPStateContext.usePIPState().mode;
   const pIPCardsSettled = VoicePanelPIPHandoff.usePIPCardsSettled(pipHandoff);
@@ -149,7 +149,7 @@ let closure_44 = { code: "function VoicePanelPIPTsx24(){const{runOnJS,setFocused
 let closure_45 = { code: "function VoicePanelPIPTsx25(){const{pipMode,VoicePanelPIPModes,runOnJS,setMode,VoicePanelModes,controlsSpecs,VoicePanelControlsModes,showControls,hideControls}=this.__closure;if(pipMode===VoicePanelPIPModes.IN_APP){runOnJS(setMode)(VoicePanelModes.PANEL);}else{if(controlsSpecs.get().mode===VoicePanelControlsModes.HIDDEN){runOnJS(showControls)();}else{runOnJS(hideControls)();}}}" };
 let closure_46 = { code: "function VoicePanelPIPTsx26(){const{runOnJS,handleSecondaryPIPTap}=this.__closure;runOnJS(handleSecondaryPIPTap)();}" };
 ReactCompilerGating = fn(558);
-let closure_47 = ReactCompilerGating.isReactCompilerEnabled() ? ((pipMode, mainTileInLayout, mainTileVisible) => {
+let closure_47 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePIPGesture(pipMode, mainTileInLayout, mainTileVisible) {
   _require = pipMode;
   importDefault = mainTileInLayout;
   closure_2 = mainTileVisible;
@@ -916,7 +916,7 @@ let closure_47 = ReactCompilerGating.isReactCompilerEnabled() ? ((pipMode, mainT
   cResult[11] = fn2;
   tmp12 = fn2;
   let obj5 = require("ReanimatedRexport");
-}) : ((pipMode, mainTileInLayout, mainTileVisible) => {
+}) : (function usePIPGesture(pipMode, mainTileInLayout, mainTileVisible) {
   _require = pipMode;
   importDefault = mainTileInLayout;
   closure_2 = mainTileVisible;
@@ -973,7 +973,7 @@ let closure_47 = ReactCompilerGating.isReactCompilerEnabled() ? ((pipMode, mainT
   items1[7] = wrapperDimensions;
   const settlePIPPosition = hideControls.useCallback(N, items1);
   let obj4 = { pipState: pIPState, getScaledPIPContainerHeight: require("VoicePanelPIPUtils").getScaledPIPContainerHeight, calculatePIPPositionFromVelocity: require("VoicePanelPIPUtils").calculatePIPPositionFromVelocity, windowDimensions, safeArea, updateSharedValueIfChanged: require("updateSharedValueIfChanged"), wrapperDimensions };
-  class L {
+  class G {
     constructor() {
       scale = closure_14.scale;
       tmp = closure_14;
@@ -1034,12 +1034,12 @@ let closure_47 = ReactCompilerGating.isReactCompilerEnabled() ? ((pipMode, mainT
     }
   }
   let obj5 = require("ReanimatedRexport");
-  L.__closure = { pipState: pIPState, getScaledPIPContainerHeight: require("VoicePanelPIPUtils").getScaledPIPContainerHeight, mainTileInLayout, gestureState: sharedValue, getClampedPIPPosition: require("VoicePanelPIPUtils").getClampedPIPPosition, wrapperDimensions, windowDimensions, safeArea, pipAvoidanceSpecs, DRAWER_SPRING_PHYSICS: showControls, PIP_LAYOUT_PHYSICS: require("VoicePanelPIPUtils").PIP_LAYOUT_PHYSICS, opacity: sharedValue1, withSpring: require("spring").withSpring, getVoicePanelPIPBorderRadius: require("VoicePanelPIPUtils").getVoicePanelPIPBorderRadius };
-  L.__workletHash = 3627050442173;
-  L.__initData = __initData12;
-  const animatedStyle = obj5.useAnimatedStyle(L);
+  G.__closure = { pipState: pIPState, getScaledPIPContainerHeight: require("VoicePanelPIPUtils").getScaledPIPContainerHeight, mainTileInLayout, gestureState: sharedValue, getClampedPIPPosition: require("VoicePanelPIPUtils").getClampedPIPPosition, wrapperDimensions, windowDimensions, safeArea, pipAvoidanceSpecs, DRAWER_SPRING_PHYSICS: showControls, PIP_LAYOUT_PHYSICS: require("VoicePanelPIPUtils").PIP_LAYOUT_PHYSICS, opacity: sharedValue1, withSpring: require("spring").withSpring, getVoicePanelPIPBorderRadius: require("VoicePanelPIPUtils").getVoicePanelPIPBorderRadius };
+  G.__workletHash = 3627050442173;
+  G.__initData = __initData12;
+  const animatedStyle = obj5.useAnimatedStyle(G);
   let obj6 = { pipState: pIPState, getScaledPIPContainerHeight: require("VoicePanelPIPUtils").getScaledPIPContainerHeight, mainTileInLayout, gestureState: sharedValue, getClampedPIPPosition: require("VoicePanelPIPUtils").getClampedPIPPosition, wrapperDimensions, windowDimensions, safeArea, pipAvoidanceSpecs, DRAWER_SPRING_PHYSICS: showControls, PIP_LAYOUT_PHYSICS: require("VoicePanelPIPUtils").PIP_LAYOUT_PHYSICS, opacity: sharedValue1, withSpring: require("spring").withSpring, getVoicePanelPIPBorderRadius: require("VoicePanelPIPUtils").getVoicePanelPIPBorderRadius };
-  class G {
+  class L {
     constructor() {
       ({ width, height, scale } = closure_14);
       size = { width: width * scale.get(), height: height * scale.get(), borderRadius: null };
@@ -1049,10 +1049,10 @@ let closure_47 = ReactCompilerGating.isReactCompilerEnabled() ? ((pipMode, mainT
     }
   }
   let obj7 = require("ReanimatedRexport");
-  G.__closure = { pipState: pIPState, getVoicePanelPIPBorderRadius: require("VoicePanelPIPUtils").getVoicePanelPIPBorderRadius };
-  G.__workletHash = 1161486785503;
-  G.__initData = __initData13;
-  const animatedStyle1 = obj7.useAnimatedStyle(G);
+  L.__closure = { pipState: pIPState, getVoicePanelPIPBorderRadius: require("VoicePanelPIPUtils").getVoicePanelPIPBorderRadius };
+  L.__workletHash = 1161486785503;
+  L.__initData = __initData13;
+  const animatedStyle1 = obj7.useAnimatedStyle(L);
   const obj8 = { pipState: pIPState, getVoicePanelPIPBorderRadius: require("VoicePanelPIPUtils").getVoicePanelPIPBorderRadius };
   class U {
     constructor() {
@@ -1319,7 +1319,7 @@ const __initData18 = { code: "function VoicePanelPIPTsx30(){const{getVoicePanelP
 const __initData19 = { code: "function VoicePanelPIPTsx31(){const{pipState}=this.__closure;return{height:pipState.height*pipState.scale.get()};}" };
 const __initData20 = { code: "function VoicePanelPIPTsx32(values){const{gestureState,withSpring,PIP_LAYOUT_PHYSICS}=this.__closure;const active=gestureState.get().active;return{animations:{originX:withSpring(values.targetOriginX,PIP_LAYOUT_PHYSICS),originY:withSpring(values.targetOriginY,PIP_LAYOUT_PHYSICS),width:active?values.targetWidth:withSpring(values.targetWidth,PIP_LAYOUT_PHYSICS),height:active?values.targetHeight:withSpring(values.targetHeight,PIP_LAYOUT_PHYSICS)},initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight}};}" };
 ReactCompilerGating = fn(558);
-let closure_54 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_54 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePanelPIP() {
   const cResult = setMode(stateFromStores[13]).c(57);
   const tmp4 = closure_17();
   const context = noop.useContext(pIPState(stateFromStores[14]));
@@ -1755,7 +1755,7 @@ let closure_54 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[17] = items5;
   tmp33 = items5;
   const tmpResult4 = setMode(stateFromStores[17]);
-}) : (() => {
+}) : (function VoicePanelPIP() {
   const tmp = closure_17();
   const context = onAccessibilityAction.useContext(pIPState(stateFromStores[14]));
   const setMode = context.setMode;
@@ -1944,7 +1944,7 @@ let closure_54 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   return closure_16(tmp2Result, obj5);
 });
 ReactCompilerGating = fn(558);
-let closure_55 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((transitionState) => {
+let closure_55 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function PIPWrapper(transitionState) {
   const cResult = transitionState(576).c(6);
   transitionState = transitionState.transitionState;
   const transitionCleanUp = transitionState.transitionCleanUp;
@@ -1982,7 +1982,7 @@ let closure_55 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((tran
   tmp3 = items;
   tmp2 = fn;
   const obj = transitionState(576);
-}) : ((transitionState) => {
+}) : (function PIPWrapper(transitionState) {
   transitionState = transitionState.transitionState;
   const transitionCleanUp = transitionState.transitionCleanUp;
   const panelLayoutCommitted = closure_21().panelLayoutCommitted;
@@ -1999,7 +1999,7 @@ ReactCompilerGating = fn(558);
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelPIP.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePanelPIPWrapper() {
   const cResult = c.c(5);
   const pIPState = VoicePanelPIPStateContext.usePIPState();
   ({ mode, showSecondaryPIP } = pIPState);
@@ -2025,7 +2025,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[1] = showSecondaryPIP;
   cResult[2] = tmp6;
   tmp5 = tmp6;
-}) : (() => {
+}) : (function VoicePanelPIPWrapper() {
   const pIPState = VoicePanelPIPStateContext.usePIPState();
   ({ mode, showSecondaryPIP } = pIPState);
   if (null != mode) {

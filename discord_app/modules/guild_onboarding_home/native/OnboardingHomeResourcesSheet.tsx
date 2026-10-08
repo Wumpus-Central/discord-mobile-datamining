@@ -1,33 +1,33 @@
-// === Module 16555: OnboardingHomeResourcesSheet ===
+// === Module 16810: OnboardingHomeResourcesSheet ===
 
-// Module 16555 (OnboardingHomeResourcesSheet)
+// Module 16810 (OnboardingHomeResourcesSheet)
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 7532 */;
-import useResourceChannelsDefault from "useResourceChannels" /* 16554 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 9254 */;
+import useResourceChannelsDefault from "useResourceChannels" /* 16809 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_3 = fn(16553).ONBOARDING_HOME_RESOURCES_SHEET_KEY;
+let closure_3 = fn(16808).ONBOARDING_HOME_RESOURCES_SHEET_KEY;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/native/OnboardingHomeResourcesSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function OnboardingHomeResourcesSheet(guildId) {
   const cResult = guildId(576).c(11);
   guildId = guildId.guildId;
   let obj = guildId(576);
-  token = guildId(4586).useToken(token(587).modules.mobile.TABLE_ROW_ICON_SIZE);
-  const arr = token(16554)(guildId);
+  token = guildId(4778).useToken(token(587).modules.mobile.TABLE_ROW_ICON_SIZE);
+  const arr = token(16809)(guildId);
   if (cResult[0] !== guildId) {
-    const fn = function l(channelId) {
+    function handleChannelPress(channelId) {
       const homeResourceChannel = GuildOnboardingHomeActionCreators.selectHomeResourceChannel(guildId, channelId);
       ActionSheetActionCreatorsDefault.hideActionSheet(closure_3);
-    };
+    }
     cResult[0] = guildId;
-    cResult[1] = fn;
-    let tmp5 = fn;
+    cResult[1] = handleChannelPress;
+    let tmp5 = handleChannelPress;
   } else {
     tmp5 = cResult[1];
   }
@@ -38,8 +38,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
         if (cResult[9] !== cResult[5]) {
           let obj3 = { children: null };
           let obj4 = { hasIcons: true, children: tmp6 };
-          obj3.children = jsx(tmp(6704).ActionSheetRow.Group, { hasIcons: true, children: tmp6 });
-          const tmp12 = jsx(tmp(6708).ActionSheet, { children: null });
+          obj3.children = jsx(tmp(6881).ActionSheetRow.Group, { hasIcons: true, children: tmp6 });
+          const tmp12 = jsx(tmp(6885).ActionSheet, { children: null });
           cResult[9] = tmp6;
           cResult[10] = tmp12;
           let tmp10 = tmp12;
@@ -93,14 +93,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   cResult[7] = token;
   cResult[8] = I;
   tmp7 = I;
-  let obj2 = guildId(4586);
-}) : ((guildId) => {
+  let obj2 = guildId(4778);
+}) : (function OnboardingHomeResourcesSheet(guildId) {
   guildId = guildId.guildId;
-  importDefault = guildId(4586).useToken(nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE);
-  let obj = guildId(4586);
+  importDefault = guildId(4778).useToken(nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE);
+  let obj = guildId(4778);
   let obj2 = { children: null };
   const arr = useResourceChannelsDefault(guildId);
-  obj2.children = jsx(guildId(6704).ActionSheetRow.Group, {
+  obj2.children = jsx(guildId(6881).ActionSheetRow.Group, {
     hasIcons: true,
     children: useResourceChannelsDefault(guildId).map((label) => {
       const resourceChannelIconURL = height(dependencyMap[10]).getResourceChannelIconURL(label);
@@ -122,5 +122,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       return jsx(guildId(dependencyMap[11]).ActionSheetRow, { label: label.title, icon: null, onPress: null, arrow: true }, label.channelId);
     })
   });
-  return jsx(guildId(6708).ActionSheet, { children: null });
+  return jsx(guildId(6885).ActionSheet, { children: null });
 });

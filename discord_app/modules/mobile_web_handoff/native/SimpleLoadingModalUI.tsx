@@ -1,20 +1,20 @@
-// === Module 6832: SimpleLoadingModalUI ===
+// === Module 7026: SimpleLoadingModalUI ===
 
-// Module 6832 (SimpleLoadingModalUI)
+// Module 7026 (SimpleLoadingModalUI)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ Modal: c3, View: closure_4 } = get_ActivityIndicator);
 let jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({ modalBackground: { flex: 1, alignItems: "center", flexDirection: "column", justifyContent: "center" } });
 let constants = { OPENING: 0, [0]: "OPENING", SHOWN: 1, [1]: "SHOWN", DISMISSED: 2, [2]: "DISMISSED" };
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/mobile_web_handoff/native/SimpleLoadingModalUI.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((operation) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SimpleLoadingModal(operation) {
   const cResult = operation(576).c(31);
   operation = operation.operation;
   ({ onResolved, onRejected, cancelable, onDismissed } = operation);
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((operation) => {
     tmp3 = cResult[3];
   }
   noop = tmp3;
-  closure_3 = undefined !== cancelable && cancelable;
+  closure_3 = tmp4;
   if (cResult[4] !== onDismissed) {
     let fn3 = onDismissed;
     if (undefined === onDismissed) {
@@ -56,99 +56,97 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((operation) => {
     }
     cResult[4] = onDismissed;
     cResult[5] = fn3;
-    let tmp4 = fn3;
+    let tmp5 = fn3;
   } else {
-    tmp4 = cResult[5];
+    tmp5 = cResult[5];
   }
-  closure_4 = tmp4;
-  M();
-  jsx = noop.useRef(constants.OPENING);
-  if (cResult[6] !== tmp4) {
-    class M {
-      constructor() {
-        tmp = closure_5;
-        tmp2 = closure_7;
-        if (closure_5.current === closure_7.SHOWN) {
-          tmp3 = closure_4;
-          tmp4 = closure_4();
-        }
-        tmp.current = tmp2.DISMISSED;
-        return;
+  closure_4 = tmp5;
+  closure_6();
+  noop.useRef(constants.OPENING);
+  if (cResult[6] !== tmp5) {
+    const fn4 = function y() {
+      if (ref.current === constants.SHOWN) {
+        closure_4();
       }
-    }
-    cResult[6] = tmp4;
-    cResult[7] = M;
+      ref.current = constants.DISMISSED;
+    };
+    cResult[6] = tmp5;
+    cResult[7] = fn4;
+    let tmp7 = fn4;
   } else {
-    class M {
-      constructor() {
-        tmp = closure_5;
-        tmp2 = closure_7;
-        if (closure_5.current === closure_7.SHOWN) {
-          tmp3 = closure_4;
-          tmp4 = closure_4();
-        }
-        tmp.current = tmp2.DISMISSED;
-        return;
-      }
-    }
+    tmp7 = cResult[7];
   }
-  M = tmp6;
-  if (cResult[8] === tmp6) {
-    class M {
-      constructor() {
-        tmp = closure_5;
-        tmp2 = closure_7;
-        if (closure_5.current === closure_7.SHOWN) {
-          tmp3 = closure_4;
-          tmp4 = closure_4();
-        }
-        tmp.current = tmp2.DISMISSED;
-        return;
-      }
+  closure_6 = tmp7;
+  if (cResult[8] === tmp7) {
+    if (cResult[9] === tmp2) {
+      let tmp8 = cResult[10];
     }
-    constants = C;
-    if (cResult[11] === tmp6) {
-      class M {
-        constructor() {
-          tmp = closure_5;
-          tmp2 = closure_7;
-          if (closure_5.current === closure_7.SHOWN) {
-            tmp3 = closure_4;
-            tmp4 = closure_4();
-          }
-          tmp.current = tmp2.DISMISSED;
-          return;
-        }
+    constants = tmp8;
+    if (cResult[11] === tmp7) {
+      if (cResult[12] === tmp3) {
+        let tmp9 = cResult[13];
       }
-      closure_8 = W;
+      closure_8 = tmp9;
       if (cResult[14] === operation) {
-        class M {
-          constructor() {
-            tmp = closure_5;
-            tmp2 = closure_7;
-            if (closure_5.current === closure_7.SHOWN) {
-              tmp3 = closure_4;
-              tmp4 = closure_4();
-            }
-            tmp.current = tmp2.DISMISSED;
-            return;
+        if (cResult[15] === tmp9) {
+          if (cResult[16] === tmp8) {
+            let tmp10 = cResult[17];
+            let tmp11 = cResult[18];
           }
+          const effect = noop.useEffect(tmp10, tmp11);
+          if (cResult[19] !== tmp5) {
+            const fn5 = function w() {
+              if (ref.current === constants.DISMISSED) {
+                closure_4();
+              } else {
+                tmp.current = tmp2.SHOWN;
+              }
+            };
+            cResult[19] = tmp5;
+            class B {
+              constructor() {
+                promise = operation();
+                nextPromise = promise.then((result) => constants(result));
+                catchPromise = nextPromise.catch((error) => closure_1_8(error));
+                return;
+              }
+            }
+            cResult[20] = fn5;
+          }
+          class B {
+            constructor() {
+              promise = operation();
+              nextPromise = promise.then((result) => constants(result));
+              catchPromise = nextPromise.catch((error) => closure_1_8(error));
+              return;
+            }
+          }
+          const fn6 = function x() {
+            if (closure_3) {
+              closure_6();
+            }
+          };
+          cResult[21] = tmp4;
+          cResult[22] = tmp7;
+          cResult[23] = fn6;
         }
       }
       class B {
         constructor() {
           promise = operation();
-          nextPromise = promise.then((result) => closure_1_7(result));
+          nextPromise = promise.then((result) => constants(result));
           catchPromise = nextPromise.catch((error) => closure_1_8(error));
           return;
         }
       }
-      const items = [operation, C, W];
+      const items = [operation, tmp8, tmp9];
       cResult[14] = operation;
-      cResult[15] = W;
-      cResult[16] = C;
+      cResult[15] = tmp9;
+      cResult[16] = tmp8;
       cResult[17] = B;
       cResult[18] = items;
+      tmp11 = items;
+      tmp10 = B;
     }
     class W {
       constructor(arg0) {
@@ -157,9 +155,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((operation) => {
         return;
       }
     }
-    cResult[11] = tmp6;
+    cResult[11] = tmp7;
     cResult[12] = tmp3;
     cResult[13] = W;
+    tmp9 = W;
   }
   class C {
     constructor(arg0) {
@@ -168,11 +167,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((operation) => {
       return;
     }
   }
-  cResult[8] = tmp6;
+  cResult[8] = tmp7;
   cResult[9] = tmp2;
   cResult[10] = C;
-  const obj = operation(576);
-}) : ((operation) => {
+  tmp8 = C;
+}) : (function SimpleLoadingModal(operation) {
   operation = operation.operation;
   const S = operation.onResolved;
   if (S === undefined) {

@@ -1,15 +1,15 @@
-// === Module 14455: EditIcon ===
+// === Module 14682: EditIcon ===
 
-// Module 14455 (EditIcon)
+// Module 14682 (EditIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import PencilIcon from "PencilIcon" /* 10071 */;
+import PencilIcon from "PencilIcon" /* 9675 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { editIcon: { alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, xs: null, sm: null };
 let size = { width: 24, height: 24, borderRadius: nativeDefault.radii.md };
 obj2.xs = size;
@@ -21,7 +21,7 @@ let obj3 = { alignItems: "center", justifyContent: "center", backgroundColor: na
 size = fn(2);
 const result = size.fileFinishedImporting("modules/profile_customization/native/EditIcon.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditIcon(arg0) {
   const cResult = c.c(9);
   ({ style, size } = arg0);
   let str = "xs";
@@ -67,7 +67,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = tmp5;
   cResult[3] = obj4;
   tmp6 = obj4;
-}) : ((style) => {
+}) : (function EditIcon(style) {
   style = style.style;
   let str = style.size;
   if (str === undefined) {

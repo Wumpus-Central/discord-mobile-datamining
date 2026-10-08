@@ -1,15 +1,15 @@
-// === Module 14674: ProfilePrivacySetting ===
+// === Module 14935: ProfilePrivacySetting ===
 
-// Module 14674 (ProfilePrivacySetting)
+// Module 14935 (ProfilePrivacySetting)
 import util from "util" /* 1126 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
-import UserSettings from "UserSettings" /* 2028 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import SettingsConstants from "SettingsConstants" /* 7645 */;
-import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 14675 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1209 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import UserSettings from "UserSettings" /* 2040 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import SettingsConstants from "SettingsConstants" /* 7966 */;
+import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 14936 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11142 */;
+import SettingBuilders from "SettingBuilders" /* 11262 */;
 import size from "module_2" /* 2 */;
 
 let ReactCompilerGating = ReactCompilerGating_mod;
@@ -20,7 +20,7 @@ const radio = SettingBuilders.createRadio({
     return intl.string(util.t.Qnf32C);
   },
   parent: SettingsConstants.MobileUserSettings.DATA_AND_PRIVACY,
-  useValue: () => {
+  useValue() {
     const ProfileVisibility = UserSettings.ProfileVisibility;
     return ProfileVisibility.useSetting();
   },
@@ -33,7 +33,7 @@ const radio = SettingBuilders.createRadio({
     const profileToActivityUpsell = ActivityPrivacyUpsellUtils.computeProfileToActivityUpsell(setting, NumberResult);
     if (null != profileToActivityUpsell) {
       ({ direction: obj3.direction, affectedGuildIds: obj3.affectedGuildIds, settingName: obj3.settingName, mappedActivityValue: obj3.mappedActivityValue } = profileToActivityUpsell);
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14676, dependencyMap.paths), "ProfileToActivityPrivacyUpsellActionSheet", { direction: null, affectedGuildIds: null, settingName: null, mappedActivityValue: null });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14937, dependencyMap.paths), "ProfileToActivityPrivacyUpsellActionSheet", { direction: null, affectedGuildIds: null, settingName: null, mappedActivityValue: null });
       const obj4 = { direction: null, affectedGuildIds: null, settingName: null, mappedActivityValue: null };
     }
   },

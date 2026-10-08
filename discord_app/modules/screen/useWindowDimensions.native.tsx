@@ -1,10 +1,10 @@
-// === Module 1484: useWindowDimensions ===
+// === Module 1496: useWindowDimensions ===
 
-// Module 1484 (useWindowDimensions)
+// Module 1496 (useWindowDimensions)
 import c from "c" /* 576 */;
-import AppEntryKeyContext from "AppEntryKeyContext" /* 1487 */;
+import AppEntryKeyContext from "AppEntryKeyContext" /* 1499 */;
 import noop from "module_19" /* 19 */;
-import DimensionsStore from "DimensionsStore" /* 1485 */;
+import DimensionsStore from "DimensionsStore" /* 1497 */;
 
 require = fn;
 let closure_4 = { ignoreKeyboard: false };
@@ -18,7 +18,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/screen/useWindowDimensions.native.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useWindowDimensions(arg0) {
   let tmp = arg0;
   const cResult = c.c(3);
   if (undefined === arg0) {
@@ -48,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = undefined !== ignoreKeyboard && ignoreKeyboard;
   cResult[2] = fn;
   tmp2Result = AppEntryKeyContext;
-}) : (() => {
+}) : (function useWindowDimensions() {
   let tmp = arg0;
   if (arg0 === undefined) {
     tmp = closure_4;

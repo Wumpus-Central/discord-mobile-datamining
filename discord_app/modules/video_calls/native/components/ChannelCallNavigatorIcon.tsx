@@ -1,10 +1,10 @@
-// === Module 9600: ChannelCallNavigatorIcon ===
+// === Module 10793: ChannelCallNavigatorIcon ===
 
-// Module 9600 (ChannelCallNavigatorIcon)
+// Module 10793 (ChannelCallNavigatorIcon)
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5780 */;
-import Pressables from "Pressables" /* 5916 */;
+import native from "native" /* 1200 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5363 */;
+import Pressables from "Pressables" /* 6189 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,12 +12,12 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet: closure_4 } = get_ActivityIndicator);
-const resetFocusTimer = fn(9086).resetFocusTimer;
+const resetFocusTimer = fn(10333).resetFocusTimer;
 const Constants = fn(1085);
 ({ ThemeTypes: metroRequire, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { pressableContainer: { marginHorizontal: 4 }, pressable: { borderRadius: nativeDefault.radii.lg }, container: null, text: null, disabled: null, iconColor: null };
 let size = { flexDirection: "row", height: 32, width: 32, borderRadius: nativeDefault.radii.lg, alignItems: "center", justifyContent: "center", overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.container = size;
@@ -32,7 +32,7 @@ let obj5 = { color: nativeDefault.colors.ICON_SUBTLE };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/components/ChannelCallNavigatorIcon.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelCallNavigatorIcon(onPress) {
   const cResult = onPress(576).c(31);
   onPress = onPress.onPress;
   ({ source, accessibilityLabel, children, membersCount, disabled, theme, disableBackground, containerStyle, IconComponent } = onPress);
@@ -107,7 +107,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
                       const obj3 = { accessibilityRole: "button", accessibilityLabel, disabled, style: tmp6.pressable, onPress: tmp7, children: null };
                       const items = [tmp24, children];
                       obj3.children = items;
-                      const tmp30 = closure_8(tmp(5916).PressableOpacity, obj3);
+                      const tmp30 = closure_8(tmp(6189).PressableOpacity, obj3);
                       cResult[21] = accessibilityLabel;
                       cResult[22] = children;
                       cResult[23] = disabled;
@@ -136,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
               }
               if (tmp22) {
                 const obj5 = { style: tmp6.text, children: membersCount };
-                tmp22 = closure_7(tmp(1188).LegacyText, obj5);
+                tmp22 = closure_7(tmp(1200).LegacyText, obj5);
               }
               cResult[13] = membersCount;
               cResult[14] = tmp6.text;
@@ -149,8 +149,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
           const obj6 = { color: tmp6.iconColor.color, size: "sm" };
           let tmp17 = closure_7(IconComponent, obj6);
         } else {
-          const obj7 = { source, color: tmp6.iconColor.color, size: tmp(1188).Icon.Sizes.SMALL_20 };
-          tmp17 = closure_7(tmp(1188).Icon, obj7);
+          const obj7 = { source, color: tmp6.iconColor.color, size: tmp(1200).Icon.Sizes.SMALL_20 };
+          tmp17 = closure_7(tmp(1200).Icon, obj7);
         }
         cResult[9] = IconComponent;
         cResult[10] = source;
@@ -170,7 +170,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
       cResult[7] = theme;
       cResult[8] = tmp10;
       tmp9 = tmp10;
-      tmpResult = tmp(4735);
+      tmpResult = tmp(4929);
     }
   }
   const items2 = [tmp6.container, containerStyle, disabled2];
@@ -180,7 +180,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
   cResult[5] = items2;
   tmp8 = items2;
   const obj = onPress(576);
-}) : ((disableBackground) => {
+}) : (function ChannelCallNavigatorIcon(disableBackground) {
   ({ onPress: require, membersCount, disabled, theme } = disableBackground);
   ({ source, accessibilityLabel, children } = disableBackground);
   if (theme === undefined) {

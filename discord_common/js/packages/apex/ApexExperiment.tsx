@@ -1,6 +1,6 @@
-// === Module 1442: discord_common/apex/ApexExperiment ===
+// === Module 1454: discord_common/apex/ApexExperiment ===
 
-// Module 1442 (discord_common/apex/ApexExperiment)
+// Module 1454 (discord_common/apex/ApexExperiment)
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = globalThis.__r;

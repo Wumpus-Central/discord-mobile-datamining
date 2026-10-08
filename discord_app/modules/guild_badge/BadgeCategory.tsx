@@ -1,7 +1,7 @@
-// === Module 8429: BadgeCategory ===
+// === Module 8840: BadgeCategory ===
 
-// Module 8429 (BadgeCategory)
-import GuildTraits from "GuildTraits" /* 8430 */;
+// Module 8840 (BadgeCategory)
+import GuildTraits from "GuildTraits" /* 8839 */;
 import size from "module_2" /* 2 */;
 
 const BadgeCategory = { PARTNERED: 0, [0]: "PARTNERED", VERIFIED: 1, [1]: "VERIFIED", VERIFIED_AND_PARTNERED: 2, [2]: "VERIFIED_AND_PARTNERED", COMMUNITY: 3, [3]: "COMMUNITY", DISCOVERABLE: 4, [4]: "DISCOVERABLE", STAFF: 5, [5]: "STAFF", NONE: 6, [6]: "NONE" };

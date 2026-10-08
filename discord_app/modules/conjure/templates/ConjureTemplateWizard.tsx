@@ -1,9 +1,9 @@
-// === Module 16603: ConjureTemplateWizard ===
+// === Module 16858: ConjureTemplateWizard ===
 
-// Module 16603 (ConjureTemplateWizard)
+// Module 16858 (ConjureTemplateWizard)
 import util from "util" /* 1126 */;
-import _modDef3753 from "module_3753" /* 3753 */;
-import ConjureUtils from "ConjureUtils" /* 6756 */;
+import _modDef3827 from "module_3827" /* 3827 */;
+import ConjureUtils from "ConjureUtils" /* 6932 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/templates/ConjureTemplateWizard.tsx");
@@ -57,7 +57,7 @@ export const canLeaveConjureWizardQuestion = function canLeaveConjureWizardQuest
 };
 export const conjureTemplateStartMessage = function conjureTemplateStartMessage(name) {
   const intl = util.intl;
-  return intl.formatToPlainString(_modDef3753["/qSx7+"], { templateName: name, locale: util.intl.currentLocale });
+  return intl.formatToPlainString(_modDef3827["/qSx7+"], { templateName: name, locale: util.intl.currentLocale });
 };
 export const conjureTemplateWizardGuilds = function conjureTemplateWizardGuilds(guildsArray, VibegrationsTemplateWizardSheet) {
   closure_0 = VibegrationsTemplateWizardSheet;
@@ -117,9 +117,9 @@ export const conjureWizardServerCopy = function conjureWizardServerCopy(stateFro
   if (server == null) {
     const obj = { title: null, hint: null };
     const intl = util.intl;
-    obj.title = intl.string(_modDef3753.vcxYIA);
+    obj.title = intl.string(_modDef3827.vcxYIA);
     const intl2 = util.intl;
-    obj.hint = intl2.string(_modDef3753.auUHPZ);
+    obj.hint = intl2.string(_modDef3827.auUHPZ);
     server = obj;
   }
   return server;

@@ -1,17 +1,17 @@
-// === Module 5581: StageMediaHooks ===
+// === Module 5891: StageMediaHooks ===
 
-// Module 5581 (StageMediaHooks)
-import StageChannelParticipants from "StageChannelParticipants" /* 5589 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import VoiceStateStore from "VoiceStateStore" /* 4915 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5582 */;
+// Module 5891 (StageMediaHooks)
+import StageChannelParticipants from "StageChannelParticipants" /* 5955 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import VoiceStateStore from "VoiceStateStore" /* 5111 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5892 */;
 
 const require = globalThis.__r;
 
 require = fn;
 fn(558);
 let ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useStageHasStream(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -22,23 +22,29 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function o() {
-      const mutableParticipants = StageChannelParticipantStore.getMutableParticipants(closure_0, StageChannelParticipants.StageChannelParticipantNamedIndex.SPEAKER);
-      return null != mutableParticipants.find((type) => type.type === closure_1_0(closure_1_1[6]).StageChannelParticipantTypes.STREAM);
-    };
+    class S {
+      constructor() {
+        mutableParticipants = closure_4.getMutableParticipants(closure_0, closure_0(closure_1[6]).StageChannelParticipantNamedIndex.SPEAKER);
+        return null != mutableParticipants.find(() => { ... });
+      }
+    }
     const items1 = [arg0];
     cResult[1] = arg0;
-    cResult[2] = fn;
+    cResult[2] = S;
     cResult[3] = items1;
     let tmp7 = items1;
-    let tmp6 = fn;
   } else {
-    tmp6 = cResult[2];
+    class S {
+      constructor() {
+        mutableParticipants = closure_4.getMutableParticipants(closure_0, closure_0(closure_1[6]).StageChannelParticipantNamedIndex.SPEAKER);
+        return null != mutableParticipants.find(() => { ... });
+      }
+    }
     tmp7 = cResult[3];
   }
   const obj = require("c");
-  return require("initialize").useStateFromStores(first, tmp6, tmp7);
-}) : ((arg0) => {
+  return require("initialize").useStateFromStores(first, S, tmp7);
+}) : (function useStageHasStream(arg0) {
   _require = arg0;
   const items = [StageChannelParticipantStore];
   const items1 = [arg0];
@@ -49,7 +55,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 });
 let closure_5 = tmp3;
 ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useStageHasMedia(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   const obj = require("c");
@@ -62,23 +68,28 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function o() {
-      return VoiceStateStore.hasVideo(closure_0);
-    };
+    class S {
+      constructor() {
+        return closure_3.hasVideo(closure_0);
+      }
+    }
     const items1 = [arg0];
     cResult[1] = arg0;
-    cResult[2] = fn;
+    cResult[2] = S;
     cResult[3] = items1;
     let tmp8 = items1;
-    let tmp7 = fn;
   } else {
-    tmp7 = cResult[2];
+    class S {
+      constructor() {
+        return closure_3.hasVideo(closure_0);
+      }
+    }
     tmp8 = cResult[3];
   }
   const tmp4 = closure_5(arg0);
   const tmpResult = tmp(504);
-  return tmp(504).useStateFromStores(first, tmp7, tmp8) || tmp4;
-}) : ((arg0) => {
+  return tmp(504).useStateFromStores(first, S, tmp8) || tmp4;
+}) : (function useStageHasMedia(arg0) {
   _require = arg0;
   const tmp = closure_5(arg0);
   const items = [VoiceStateStore];
@@ -104,7 +115,7 @@ export const getStageHasMedia = function getStageHasMedia(id) {
   return hasVideoResult;
 };
 export { getStageHasStream };
-export const useIsStageVideoEnabled = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useIsStageVideoEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsStageVideoEnabled(arg0) {
   _require = arg0;
   const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -115,30 +126,47 @@ export const useIsStageVideoEnabled = ReactCompilerGating.isReactCompilerEnabled
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function o() {
-      return GuildStore.getGuild(closure_0);
-    };
+    class S {
+      constructor() {
+        return closure_2.getGuild(closure_0);
+      }
+    }
     cResult[1] = arg0;
-    cResult[2] = fn;
-    let tmp6 = fn;
+    cResult[2] = S;
   } else {
-    tmp6 = cResult[2];
+    class S {
+      constructor() {
+        return closure_2.getGuild(closure_0);
+      }
+    }
   }
   const obj = require("c");
-  const stateFromStores = require("initialize").useStateFromStores(first, tmp6);
+  const stateFromStores = require("initialize").useStateFromStores(first, S);
   let tmp8 = null != stateFromStores;
   if (tmp8) {
-    let num4;
+    class S {
+      constructor() {
+        return closure_2.getGuild(closure_0);
+      }
+    }
     if (stateFromStores != null) {
-      num4 = stateFromStores.maxStageVideoChannelUsers;
+      class S {
+        constructor() {
+          return closure_2.getGuild(closure_0);
+        }
+      }
     }
-    if (num4 == null) {
-      num4 = 0;
+    if (tmp9 == null) {
+      class S {
+        constructor() {
+          return closure_2.getGuild(closure_0);
+        }
+      }
     }
-    tmp8 = num4 > 0;
+    tmp8 = tmp9 > 0;
   }
   return tmp8;
-}) : ((arg0) => {
+}) : (function useIsStageVideoEnabled(arg0) {
   _require = arg0;
   const items = [GuildStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0));

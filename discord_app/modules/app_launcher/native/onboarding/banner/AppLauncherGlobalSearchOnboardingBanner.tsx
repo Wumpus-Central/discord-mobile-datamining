@@ -1,16 +1,16 @@
-// === Module 11754: AppLauncherGlobalSearchOnboardingBanner ===
+// === Module 11820: AppLauncherGlobalSearchOnboardingBanner ===
 
-// Module 11754 (AppLauncherGlobalSearchOnboardingBanner)
+// Module 11820 (AppLauncherGlobalSearchOnboardingBanner)
 import nativeDefault from "native" /* 587 */;
-import AppsIcon from "AppsIcon" /* 5897 */;
+import AppsIcon from "AppsIcon" /* 8209 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const DEFAULT_CONTENT_PADDING = fn(1489).DEFAULT_CONTENT_PADDING;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const DEFAULT_CONTENT_PADDING = fn(1501).DEFAULT_CONTENT_PADDING;
+const ContentDismissActionType = fn(2060).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { appsIcon: null, appsIconImage: null };
 let size = { height: 40, width: 40, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center" };
 obj2.appsIcon = size;
@@ -21,7 +21,7 @@ const ReactCompilerGating = fn(558);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/onboarding/banner/AppLauncherGlobalSearchOnboardingBanner.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GlobalSearchCoachmark(markAsDismissed) {
   let Coachmark = markAsDismissed;
   let tmp = dependencyMap;
   const cResult = markAsDismissed(576).c(21);
@@ -59,12 +59,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed)
           tmp13 = cResult[8];
         }
         if (cResult[9] !== markAsDismissed) {
-          const fn3 = function w() {
+          const fn2 = function w() {
             markAsDismissed({ actionType: ContentDismissActionType.TAKE_ACTION });
           };
           cResult[9] = markAsDismissed;
-          cResult[10] = fn3;
-          let tmp16 = fn3;
+          cResult[10] = fn2;
+          let tmp16 = fn2;
         } else {
           tmp16 = cResult[10];
         }
@@ -86,7 +86,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed)
               }
             }
           }
-          Coachmark = Coachmark(9903).Coachmark;
+          Coachmark = Coachmark(9384).Coachmark;
           const obj2 = { renderImgComponent: tmp9, title: tmp12, description: tmp13, onDismiss: tmp16, targetMeasurements: tmp17, surfaceMeasurements: tmp18, position: "bottom" };
           tmp = <Coachmark renderImgComponent={tmp9} title={tmp12} description={tmp13} onDismiss={tmp16} targetMeasurements={tmp17} surfaceMeasurements={tmp18} position="bottom" />;
           cResult[16] = tmp9;
@@ -102,14 +102,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed)
         tmp18 = size1;
       }
     }
-    const fn2 = function u() {
+    function appsIcon() {
       const obj = { style: closure_2.appsIcon, children: jsx(AppsIcon.AppsIcon, { style: closure_2.appsIconImage, color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE }) };
       return <View style={closure_2.appsIcon}>{jsx(AppsIcon.AppsIcon, { style: closure_2.appsIconImage, color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE })}</View>;
-    };
+    }
     cResult[4] = tmp3.appsIcon;
     cResult[5] = tmp3.appsIconImage;
-    cResult[6] = fn2;
-    tmp9 = fn2;
+    cResult[6] = appsIcon;
+    tmp9 = appsIcon;
   }
   const fn = function h() {
     return () => {
@@ -127,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed)
   tmp6 = items;
   tmp5 = fn;
   let obj = markAsDismissed(576);
-}) : ((markAsDismissed) => {
+}) : (function GlobalSearchCoachmark(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
   const visible = markAsDismissed.visible;
   const windowDimensions = markAsDismissed.windowDimensions;
@@ -165,7 +165,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed)
     obj.targetMeasurements = size;
     const size1 = { x: -140, y: -40, width: diff, height: windowDimensions.height };
     obj.surfaceMeasurements = size1;
-    tmp3 = jsx(markAsDismissed(9903).Coachmark, {
+    tmp3 = jsx(markAsDismissed(9384).Coachmark, {
       renderImgComponent: function appsIcon() {
           const obj = { style: closure_2.appsIcon, children: jsx(AppsIcon.AppsIcon, { style: closure_2.appsIconImage, color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE }) };
           return <View style={closure_2.appsIcon}>{jsx(AppsIcon.AppsIcon, { style: closure_2.appsIconImage, color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE })}</View>;

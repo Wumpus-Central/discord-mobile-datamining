@@ -1,29 +1,29 @@
-// === Module 9348: FormComponents ===
+// === Module 8770: FormComponents ===
 
-// Module 9348 (FormComponents)
+// Module 8770 (FormComponents)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import UserUtils from "UserUtils" /* 4728 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import NativeViewDefault from "NativeView" /* 5983 */;
-import TableRowGroup from "TableRowGroup" /* 6081 */;
-import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7241 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7861 */;
-import VoiceStateIcons from "VoiceStateIcons" /* 9349 */;
-import GuildTagDefault from "GuildTag" /* 9409 */;
-import ShieldLockIcon from "ShieldLockIcon" /* 9444 */;
-import CallActionCreatorsDefault from "CallActionCreators" /* 9446 */;
+import native from "native" /* 1200 */;
+import UserUtils from "UserUtils" /* 4922 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import NativeViewDefault from "NativeView" /* 6166 */;
+import TableRowGroup from "TableRowGroup" /* 6267 */;
+import CallActionCreatorsDefault from "CallActionCreators" /* 7003 */;
+import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7420 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8279 */;
+import VoiceStateIcons from "VoiceStateIcons" /* 8771 */;
+import GuildTagDefault from "GuildTag" /* 8830 */;
+import ShieldLockIcon from "ShieldLockIcon" /* 9105 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 4936 */;
+import PresenceStore from "PresenceStore" /* 5106 */;
 
 require = fn;
 let closure_3 = ["style"];
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { marginHorizontal: 16 }, voiceBadgesContainer: { flexDirection: "row" }, iconWrapper: { marginLeft: 8, padding: 6, backgroundColor: nativeDefault.colors.MOBILE_VOICE_PANEL_BADGE_BACKGROUND, borderRadius: nativeDefault.radii.round }, icon: null, notConnectedAvatar: null, memberRow: null, trailingContainer: null };
 let size = { width: 16, height: 16, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj2.icon = size;
@@ -34,7 +34,7 @@ let closure_9 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled();
 ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceBadges(arg0) {
   const cResult = c.c(12);
   ({ muteDeafenIconState, videoIconState } = arg0);
   const tmp4 = closure_9();
@@ -93,7 +93,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = tmp4.iconWrapper;
   cResult[3] = tmp6;
   tmp5 = tmp6;
-}) : ((arg0) => {
+}) : (function VoiceBadges(arg0) {
   ({ muteDeafenIconState, videoIconState } = arg0);
   const tmp = closure_9();
   const obj = { style: tmp.voiceBadgesContainer, children: null };
@@ -179,7 +179,7 @@ export const VoicePanelFormSection = function VoicePanelFormSection(style) {
     return React5(NativeViewDefault, obj5);
   }
 };
-export const MemberRowItem = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
+export const MemberRowItem = ReactCompilerGating.isReactCompilerEnabled() ? (function MemberRowItem(user) {
   const cResult = user(nick[7]).c(48);
   user = user.user;
   const channelId = user.channelId;
@@ -273,7 +273,7 @@ export const MemberRowItem = ReactCompilerGating.isReactCompilerEnabled() ? ((us
                 return obj.getStreamerActivityByUserId(id, closure_6);
               }
             }
-            const fn2 = function q() {
+            function renderLabel() {
               let name = nick;
               if (nick == null) {
                 name = UserUtils.getName(user);
@@ -303,7 +303,7 @@ export const MemberRowItem = ReactCompilerGating.isReactCompilerEnabled() ? ((us
               items[2] = tmp9Result;
               obj2.children = items;
               return closure_2_8(NativeViewDefault, obj2);
-            };
+            }
             cResult[17] = displayNameStylesFont;
             cResult[18] = isUserSecureFramesVerified;
             cResult[19] = nick;
@@ -312,7 +312,7 @@ export const MemberRowItem = ReactCompilerGating.isReactCompilerEnabled() ? ((us
             cResult[22] = tmp7.icon;
             cResult[23] = tmp7.memberRow;
             cResult[24] = user;
-            cResult[25] = fn2;
+            cResult[25] = renderLabel;
           } else {
             class W {
               constructor() {
@@ -378,7 +378,7 @@ export const MemberRowItem = ReactCompilerGating.isReactCompilerEnabled() ? ((us
   cResult[2] = obj6;
   tmp11 = obj6;
   const tmpResult6 = user(nick[13]);
-}) : ((user) => {
+}) : (function MemberRowItem(user) {
   user = user.user;
   const channelId = user.channelId;
   let flag = user.selfStream;

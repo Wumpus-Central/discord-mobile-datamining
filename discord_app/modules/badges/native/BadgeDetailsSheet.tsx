@@ -1,30 +1,30 @@
-// === Module 10906: BadgeDetailsSheet ===
+// === Module 10557: BadgeDetailsSheet ===
 
-// Module 10906 (BadgeDetailsSheet)
+// Module 10557 (BadgeDetailsSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4818 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 7879 */;
-import BadgeUtils from "BadgeUtils" /* 10902 */;
-import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 10905 */;
-import trackBadgeDirectoryActionDefault from "trackBadgeDirectoryAction" /* 10984 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5012 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8297 */;
+import BadgeUtils from "BadgeUtils" /* 10553 */;
+import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 10556 */;
+import trackBadgeDirectoryActionDefault from "trackBadgeDirectoryAction" /* 11208 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
-import UserStore from "UserStore" /* 1377 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7874 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
+import UserStore from "UserStore" /* 1389 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8292 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Platform, View: hasOwnProperty } = get_ActivityIndicator);
 const UserSettingsSections = fn(1085).UserSettingsSections;
-const ActionSheetConstants = fn(6653);
+const ActionSheetConstants = fn(6830);
 ({ ACTION_SHEET_MAX_WIDTH: c10, ACTION_SHEET_MINIMUM_BOTTOM_PADDING: closure_11 } = ActionSheetConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { content: { flexGrow: 1 }, page: { flexGrow: 1, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 }, swipePage: null, header: null, betaPill: null, graphic: null, graphicAnimated: null, identity: null, centeredText: null, eyebrow: null, uppercase: null, accessoryLine: null, accessoryDot: null, card: null, descriptionGroup: null, divider: null, notice: null, noticeIcon: null, noticeText: null };
 let obj3 = { flexGrow: 1, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 };
 obj2.swipePage = { paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 };
@@ -46,8 +46,8 @@ obj2.accessoryLine = { flexDirection: "row", flexWrap: "wrap", alignItems: "cent
 let size = { width: 3, height: 3, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.TEXT_SUBTLE };
 obj2.accessoryDot = size;
 let obj10 = { flexDirection: "row", flexWrap: "wrap", alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_6 };
-obj2.card = { flexGrow: 1, gap: nativeDefault.space.PX_16, padding: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
-let obj11 = { flexGrow: 1, gap: nativeDefault.space.PX_16, padding: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
+obj2.card = { gap: nativeDefault.space.PX_16, padding: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
+let obj11 = { gap: nativeDefault.space.PX_16, padding: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 obj2.descriptionGroup = { gap: nativeDefault.space.PX_4 };
 let obj12 = { gap: nativeDefault.space.PX_4 };
 obj2.divider = { height: 1, marginTop: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
@@ -57,7 +57,7 @@ obj2.noticeIcon = { marginTop: 2 };
 obj2.noticeText = { flex: 1 };
 let closure_15 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((segments) => {
+let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeAccessoryLine(segments) {
   const cResult = require("c").c(8);
   segments = segments.segments;
   let tmp2 = closure_15();
@@ -103,7 +103,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((segments) => {
   cResult[1] = segments;
   cResult[2] = mapped;
   let obj = require("c");
-}) : ((segments) => {
+}) : (function BadgeAccessoryLine(segments) {
   segments = segments.segments;
   const tmp = closure_15();
   const accessoryDot = tmp;
@@ -124,7 +124,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((segments) => {
   });
 });
 ReactCompilerGating = fn(558);
-let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
+let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function InfoNotice(children) {
   const cResult = c.c(9);
   children = children.children;
   const tmp4 = closure_15();
@@ -165,7 +165,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
   cResult[4] = tmp10;
   tmp9 = tmp10;
   const obj4 = { variant: "text-xs/medium", color: "text-default", style: tmp4.noticeText, children };
-}) : ((children) => {
+}) : (function InfoNotice(children) {
   const tmp = closure_15();
   const obj = { style: tmp.notice, children: null };
   const items = [__initData(CircleInformationIcon.CircleInformationIcon, { size: "xs", color: nativeDefault.colors.ICON_FEEDBACK_INFO, style: tmp.noticeIcon }), __initData(Text_Text.Text, { variant: "text-xs/medium", color: "text-default", style: tmp.noticeText, children: children.children })];
@@ -173,7 +173,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
   return __initData2(hasOwnProperty, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
+let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeDetailsSheetContent(badge) {
   const cResult = badge(isViewingOtherUser[12]).c(75);
   badge = badge.badge;
   ({ viewerBadge, displayedUserId } = badge);
@@ -196,7 +196,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
   const stateFromStores = badge(isViewingOtherUser[15]).useStateFromStores(tmp5, tmp6);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [UserStore];
-    class D {
+    class E {
       constructor() {
         currentUser = closure_1_7.getCurrentUser();
         premiumType = undefined;
@@ -207,8 +207,8 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
       }
     }
     cResult[2] = items1;
-    cResult[3] = D;
-    let tmp10 = D;
+    cResult[3] = E;
+    let tmp10 = E;
     let tmp9 = items1;
   } else {
     tmp9 = cResult[2];
@@ -276,7 +276,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
             }
           }
         }
-        class D {
+        class E {
           constructor() {
             currentUser = closure_1_7.getCurrentUser();
             premiumType = undefined;
@@ -301,7 +301,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
         ({ isNitro, eyebrow, displayName } = badgeTitle);
         if (cResult[35] !== badge) {
           const isLegacyDisplayBadgeResult = tmp(tmp2[20]).isLegacyDisplayBadge(badge);
-          class D {
+          class E {
             constructor() {
               currentUser = closure_1_7.getCurrentUser();
               premiumType = undefined;
@@ -342,7 +342,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
             }
             if (cResult[42] !== tmp32) {
               let obj2 = { key: "status", node: null };
-              class D {
+              class E {
                 constructor() {
                   currentUser = closure_1_7.getCurrentUser();
                   premiumType = undefined;
@@ -361,7 +361,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
               tmp34 = cResult[43];
             }
             items2.push(tmp34);
-            class D {
+            class E {
               constructor() {
                 currentUser = closure_1_7.getCurrentUser();
                 premiumType = undefined;
@@ -373,7 +373,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
             }
             if (tmp37) {
               const obj4 = { key: "rarity", node: null };
-              class D {
+              class E {
                 constructor() {
                   currentUser = closure_1_7.getCurrentUser();
                   premiumType = undefined;
@@ -395,7 +395,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
             const isNullOrEmptyResult = tmp(tmp2[21]).isNullOrEmpty(badgeDescriptionText);
             if (cResult[44] !== badge.badge_id) {
               const badgeDetailsCta = tmp(tmp2[24]).getBadgeDetailsCta(badge.badge_id);
-              class D {
+              class E {
                 constructor() {
                   currentUser = closure_1_7.getCurrentUser();
                   premiumType = undefined;
@@ -418,7 +418,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
                     let tmp46 = cResult[50];
                   }
                   const _Symbol = Symbol;
-                  class D {
+                  class E {
                     constructor() {
                       currentUser = closure_1_7.getCurrentUser();
                       premiumType = undefined;
@@ -438,7 +438,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
                       const result1 = badge(isViewingOtherUser[28]).openBadgeDirectoryScreen();
                     }
                     cResult[52] = ce;
-                    class D {
+                    class E {
                       constructor() {
                         currentUser = closure_1_7.getCurrentUser();
                         premiumType = undefined;
@@ -460,7 +460,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
                           }
                           tmp52 = tmp53;
                         }
-                        class D {
+                        class E {
                           constructor() {
                             currentUser = closure_1_7.getCurrentUser();
                             premiumType = undefined;
@@ -478,7 +478,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
                             let tmp60Result = null != imageUrl;
                             if (tmp60Result) {
                               const obj7 = { url: imageUrl, height: null, animated: null, style: null };
-                              class D {
+                              class E {
                                 constructor() {
                                   currentUser = closure_1_7.getCurrentUser();
                                   premiumType = undefined;
@@ -495,7 +495,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
                               tmp60Result = closure_12(displayedUserId(tmp2[31]), obj7);
                               const tmp13Result = displayedUserId(tmp2[31]);
                             }
-                            class D {
+                            class E {
                               constructor() {
                                 currentUser = closure_1_7.getCurrentUser();
                                 premiumType = undefined;
@@ -506,7 +506,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
                               }
                             }
                             if (cResult[66] !== items2) {
-                              class D {
+                              class E {
                                 constructor() {
                                   currentUser = closure_1_7.getCurrentUser();
                                   premiumType = undefined;
@@ -529,7 +529,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
                             if (tmp69) {
                               const obj10 = { variant: "text-md/medium", color: "text-subtle", style: null, children: null };
                               const items4 = [, ];
-                              class D {
+                              class E {
                                 constructor() {
                                   currentUser = closure_1_7.getCurrentUser();
                                   premiumType = undefined;
@@ -560,7 +560,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
                             let formatToPlainStringResult;
                             if (null != pagePosition) {
                               const intl2 = tmp(tmp2[30]).intl;
-                              class D {
+                              class E {
                                 constructor() {
                                   currentUser = closure_1_7.getCurrentUser();
                                   premiumType = undefined;
@@ -591,7 +591,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
                                     let tmp71Result = tmp19;
                                     if (tmp19) {
                                       const obj13 = { children: null };
-                                      class D {
+                                      class E {
                                         constructor() {
                                           currentUser = closure_1_7.getCurrentUser();
                                           premiumType = undefined;
@@ -605,7 +605,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
                                       obj13.children = tmp79(tmp(tmp2[30]).t.Zh44ni, obj14);
                                       tmp71Result = closure_12(closure_17, obj13);
                                     }
-                                    class D {
+                                    class E {
                                       constructor() {
                                         currentUser = closure_1_7.getCurrentUser();
                                         premiumType = undefined;
@@ -620,7 +620,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
                                   } else {
                                     tmp76 = cResult[74];
                                   }
-                                  class D {
+                                  class E {
                                     constructor() {
                                       currentUser = closure_1_7.getCurrentUser();
                                       premiumType = undefined;
@@ -637,7 +637,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
                                       let tmp67Result11 = tmp54;
                                     }
                                     tmp81[2] = tmp67Result11;
-                                    class D {
+                                    class E {
                                       constructor() {
                                         currentUser = closure_1_7.getCurrentUser();
                                         premiumType = undefined;
@@ -680,7 +680,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
                                   if (tmp16) {
                                     const obj17 = { children: null };
                                     const obj18 = { badge, viewerBadge: null };
-                                    class D {
+                                    class E {
                                       constructor() {
                                         currentUser = closure_1_7.getCurrentUser();
                                         premiumType = undefined;
@@ -702,7 +702,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
                                     const obj21 = { style: tmp4.descriptionGroup, children: null };
                                     if (tmp71Result4) {
                                       const obj22 = { variant: "text-sm/medium", color: "text-subtle", children: null };
-                                      class D {
+                                      class E {
                                         constructor() {
                                           currentUser = closure_1_7.getCurrentUser();
                                           premiumType = undefined;
@@ -715,7 +715,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
                                       obj22.children = tmp85(tmp(tmp2[30]).t["/Gmn3f"]);
                                       tmp71Result4 = closure_12(tmp(tmp2[14]).Text, obj22);
                                     }
-                                    class D {
+                                    class E {
                                       constructor() {
                                         currentUser = closure_1_7.getCurrentUser();
                                         premiumType = undefined;
@@ -741,7 +741,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
                                   }
                                   if (tmp71Result5) {
                                     const obj24 = { variant: null, size: "md", onPress: null, text: null };
-                                    class D {
+                                    class E {
                                       constructor() {
                                         currentUser = closure_1_7.getCurrentUser();
                                         premiumType = undefined;
@@ -771,7 +771,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
                                       const obj26 = { style: tmp4.divider };
                                       tmp71Result6 = closure_12(closure_5, obj26);
                                     }
-                                    class D {
+                                    class E {
                                       constructor() {
                                         currentUser = closure_1_7.getCurrentUser();
                                         premiumType = undefined;
@@ -809,7 +809,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
                         let isBetaBadgeIdResult = tmp(tmp2[19]).isBetaBadgeId(badge.badge_id);
                         if (isBetaBadgeIdResult) {
                           const obj29 = { style: null, children: null };
-                          class D {
+                          class E {
                             constructor() {
                               currentUser = closure_1_7.getCurrentUser();
                               premiumType = undefined;
@@ -837,7 +837,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
                   let result1 = isViewerOwnershipKnown;
                   if (isViewerOwnershipKnown) {
                     const obj31 = { badge, isViewingOtherUser: null, viewerOwnsBadge: null };
-                    class D {
+                    class E {
                       constructor() {
                         currentUser = closure_1_7.getCurrentUser();
                         premiumType = undefined;
@@ -876,7 +876,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
             const tmpResult21 = tmp(tmp2[21]);
           }
           const badgeStatusText = tmp(tmp2[20]).getBadgeStatusText(badge, tmp14);
-          class D {
+          class E {
             constructor() {
               currentUser = closure_1_7.getCurrentUser();
               premiumType = undefined;
@@ -894,7 +894,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
         } else {
           if (cResult[37] !== badge.info_label) {
             const obj33 = { key: "info", node: null };
-            class D {
+            class E {
               constructor() {
                 currentUser = closure_1_7.getCurrentUser();
                 premiumType = undefined;
@@ -916,7 +916,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
         }
         tmpResult18 = tmp(tmp2[21]);
       }
-      class D {
+      class E {
         constructor() {
           currentUser = closure_1_7.getCurrentUser();
           premiumType = undefined;
@@ -941,7 +941,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
   cResult[7] = obj35;
   tmp15 = obj35;
   const tmpResult14 = badge(isViewingOtherUser[15]);
-}) : ((badge) => {
+}) : (function BadgeDetailsSheetContent(badge) {
   badge = badge.badge;
   ({ viewerBadge, displayedUserId } = badge);
   const isViewingOtherUser = badge.isViewingOtherUser;
@@ -1228,7 +1228,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
   const tmp2Result19 = badge(isViewingOtherUser[19]);
 });
 ReactCompilerGating = fn(558);
-let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((badgeId) => {
+let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeDetailsPage(badgeId) {
   const cResult = badgeId(currentUserId[12]).c(25);
   badgeId = badgeId.badgeId;
   const displayedUserId = badgeId.displayedUserId;
@@ -1280,7 +1280,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((badgeId) => {
                           if (cResult[22] === tmp16) {
                           }
                           const obj2 = { style: tmp16, children: tmp18 };
-                          class O {
+                          class D {
                             constructor() {
                               badgeById = undefined;
                               if (null != currentUserId) {
@@ -1301,7 +1301,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((badgeId) => {
                 }
               }
               const obj3 = { badge: stateFromStores, viewerBadge: stateFromStores1, displayedUserId: null, isViewingOtherUser: null, targetUsername: null, isViewerOwnershipKnown: null, pagePosition: null };
-              class O {
+              class D {
                 constructor() {
                   badgeById = undefined;
                   if (null != currentUserId) {
@@ -1339,7 +1339,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((badgeId) => {
         }
         ({ page: tmp3[10], swipePage } = swipePage);
         cResult[11] = swipePage;
-        class O {
+        class D {
           constructor() {
             badgeById = undefined;
             if (null != currentUserId) {
@@ -1355,7 +1355,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((badgeId) => {
       }
       const tmpResult2 = tmp(tmp2[15]);
     }
-    class O {
+    class D {
       constructor() {
         badgeById = undefined;
         if (null != currentUserId) {
@@ -1369,10 +1369,10 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((badgeId) => {
     const items3 = [badgeId, currentUserId];
     cResult[6] = badgeId;
     cResult[7] = currentUserId;
-    cResult[8] = O;
+    cResult[8] = D;
     cResult[9] = items3;
     tmp12 = items3;
-    tmp11 = O;
+    tmp11 = D;
     const tmpResult = tmp(tmp2[15]);
   }
   const fn = function s() {
@@ -1386,7 +1386,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((badgeId) => {
   tmp7 = items4;
   tmp6 = fn;
   const obj = badgeId(currentUserId[12]);
-}) : ((badgeId) => {
+}) : (function BadgeDetailsPage(badgeId) {
   badgeId = badgeId.badgeId;
   const displayedUserId = badgeId.displayedUserId;
   const currentUserId = badgeId.currentUserId;
@@ -1422,8 +1422,8 @@ let obj14 = { flexDirection: "row", gap: nativeDefault.space.PX_4, padding: nati
 size = fn(2);
 let result = size.fileFinishedImporting("modules/badges/native/BadgeDetailsSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((badgeId) => {
-  const cResult = badgeId(isViewingOtherUser[12]).c(79);
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeDetailsSheet(badgeId) {
+  const cResult = badgeId(isViewingOtherUser[12]).c(81);
   badgeId = badgeId.badgeId;
   const displayedUserId = badgeId.displayedUserId;
   isViewingOtherUser = badgeId.isViewingOtherUser;
@@ -1525,7 +1525,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((badgeId) => {
         return;
       }
     }
-    const stateFromStores1 = tmp(tmp2[15]).useStateFromStores(tmp15, L, items2);
+    const stateFromStores1 = tmp(tmp2[15]).useStateFromStores(tmp15, K, items2);
     class V {
       constructor() {
         currentUser = closure_7.getCurrentUser();
@@ -1563,9 +1563,28 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((badgeId) => {
         }
       }
     }
-    const tmpResult3 = tmp(tmp2[15]);
+    const tmpResult4 = tmp(tmp2[15]);
     isBadgeDetailsSwipeEnabled = tmp(tmp2[37]).useIsBadgeDetailsSwipeEnabled(tmp17);
-    if (cResult[10] === displayedUserId) {
+    const _Symbol2 = Symbol;
+    if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
+      class I {
+        constructor(arg0) {
+          tmp = closure_4(badgeId.nativeEvent.layout.height);
+          return;
+        }
+      }
+      cResult[10] = tmp21;
+      class V {
+        constructor() {
+          currentUser = closure_7.getCurrentUser();
+          id = undefined;
+          if (currentUser != null) {
+            id = currentUser.id;
+          }
+          return id;
+        }
+      }
+    } else {
       class I {
         constructor(arg0) {
           tmp = closure_4(badgeId.nativeEvent.layout.height);
@@ -1573,53 +1592,46 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((badgeId) => {
         }
       }
     }
-    class X {
-      constructor() {
-        tmp = badgeId;
-        if (closure_8) {
-          tmp2 = displayedUserId;
-          tmp3 = isViewingOtherUser;
-          closure_0 = tmp;
-          tmp4 = closure_0;
-          tmp5 = closure_2;
-          obj = closure_0(closure_2[19]);
-          tmp6 = closure_8;
-          directoryBadges = obj.getDirectoryBadges(closure_8.getBadges(displayedUserId));
-          owned = directoryBadges.owned;
-          if (isViewingOtherUser) {
-            items = [];
-            items[0] = owned;
-            items1 = items;
-          } else {
-            items1 = [, ];
-            items1[0] = owned;
-            items1[1] = tmp8;
-          }
-          found = items1.find(() => { ... });
-          tmp9 = null;
-          if (null != found) {
-            mapped = found.map(() => { ... });
-          } else {
-            mapped = [];
-            mapped[0] = tmp;
-          }
-          tmp10 = mapped;
-        } else {
-          items2 = [];
-          items2[0] = tmp;
-          return items2;
+    const tmpResult5 = tmp(tmp2[37]);
+    const isBadgeDirectoryUpdatesEnabled = tmp(tmp2[37]).useIsBadgeDirectoryUpdatesEnabled(tmp20);
+    if (cResult[11] === displayedUserId) {
+      class I {
+        constructor(arg0) {
+          tmp = closure_4(badgeId.nativeEvent.layout.height);
+          return;
         }
-        return;
       }
     }
-    cResult[10] = displayedUserId;
-    cResult[11] = badgeId;
-    cResult[12] = isBadgeDetailsSwipeEnabled;
-    cResult[13] = isViewingOtherUser;
-    cResult[14] = X;
-    const tmpResult4 = tmp(tmp2[37]);
+    const fn = function z() {
+      if (isBadgeDetailsSwipeEnabled) {
+        closure_0 = badgeId;
+        const directoryBadges = BadgeUtils.getDirectoryBadges(BadgeDirectoryStore.getBadges(displayedUserId));
+        const owned = directoryBadges.owned;
+        if (isViewingOtherUser) {
+          const items = [owned];
+          let items1 = items;
+        } else {
+          items1 = [owned, tmp8];
+        }
+        const found = items1.find((arr) => arr.some((badge_id) => badge_id.badge_id === closure_1_0));
+        if (null != found) {
+          let mapped = found.map((badge_id) => badge_id.badge_id);
+        } else {
+          mapped = [badgeId];
+        }
+      } else {
+        const items2 = [badgeId];
+        return items2;
+      }
+    };
+    cResult[11] = displayedUserId;
+    cResult[12] = badgeId;
+    cResult[13] = isBadgeDetailsSwipeEnabled;
+    cResult[14] = isViewingOtherUser;
+    cResult[15] = fn;
+    const tmpResult6 = tmp(tmp2[37]);
   }
-  class L {
+  class K {
     constructor() {
       tmp = !isViewingOtherUser;
       if (isViewingOtherUser) {
@@ -1637,10 +1649,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((badgeId) => {
   items2 = [stateFromStores, isViewingOtherUser];
   cResult[5] = stateFromStores;
   cResult[6] = isViewingOtherUser;
-  cResult[7] = L;
+  cResult[7] = K;
   cResult[8] = items2;
   const tmpResult = badgeId(isViewingOtherUser[15]);
-}) : ((badgeId) => {
+}) : (function BadgeDetailsSheet(badgeId) {
   badgeId = badgeId.badgeId;
   const displayedUserId = badgeId.displayedUserId;
   const isViewingOtherUser = badgeId.isViewingOtherUser;
@@ -1684,6 +1696,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((badgeId) => {
   }, items2);
   let obj2 = badgeId(isViewingOtherUser[15]);
   isBadgeDetailsSwipeEnabled = badgeId(isViewingOtherUser[37]).useIsBadgeDetailsSwipeEnabled({ location: "BadgeDetailsSheet" });
+  let obj3 = badgeId(isViewingOtherUser[37]);
+  const isBadgeDirectoryUpdatesEnabled = badgeId(isViewingOtherUser[37]).useIsBadgeDirectoryUpdatesEnabled({ location: "BadgeDetailsSheet" });
   const first = targetUsername(noop.useState(() => {
     if (isBadgeDetailsSwipeEnabled) {
       closure_0 = badgeId;
@@ -1706,10 +1720,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((badgeId) => {
       return items2;
     }
   }), 1)[0];
-  const tmp13 = targetUsername(noop.useState(badgeId), 2);
-  first1 = tmp13[0];
-  closure_11 = tmp13[1];
-  let obj3 = badgeId(isViewingOtherUser[37]);
+  const tmp14 = targetUsername(noop.useState(badgeId), 2);
+  first1 = tmp14[0];
+  closure_11 = tmp14[1];
+  const obj4 = badgeId(isViewingOtherUser[37]);
   const items3 = [isBadgeDetailsSwipeEnabled];
   const items4 = [first1, displayedUserId];
   const stateFromStores2 = badgeId(isViewingOtherUser[15]).useStateFromStores(items3, () => BadgeDirectoryStore.getBadgeById(first1, displayedUserId), items4);
@@ -1733,10 +1747,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((badgeId) => {
       closure_11(tmp);
     }
   }, items6);
-  const obj4 = badgeId(isViewingOtherUser[15]);
-  const obj5 = badgeId(isViewingOtherUser[38]);
+  const obj5 = badgeId(isViewingOtherUser[15]);
+  const obj6 = badgeId(isViewingOtherUser[38]);
   const items7 = [stateFromStores, isViewingOtherUser];
-  const segmentedControlState = obj5.useSegmentedControlState({ items: memo, pageWidth: bound, defaultIndex: Math.max(first.indexOf(badgeId), 0), onPageChange: callback1 });
+  const segmentedControlState = obj6.useSegmentedControlState({ items: memo, pageWidth: bound, defaultIndex: Math.max(first.indexOf(badgeId), 0), onPageChange: callback1 });
   const effect = noop.useEffect(() => {
     let tmp = isViewingOtherUser;
     if (isViewingOtherUser) {
@@ -1756,29 +1770,34 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((badgeId) => {
       trackBadgeDirectoryActionDefault(obj);
     }
   }, items8);
-  const obj6 = { items: memo, pageWidth: bound, defaultIndex: Math.max(first.indexOf(badgeId), 0), onPageChange: callback1 };
+  const obj7 = { items: memo, pageWidth: bound, defaultIndex: Math.max(first.indexOf(badgeId), 0), onPageChange: callback1 };
   const dismissBadgeDirectoryBadgeIndicator = badgeId(isViewingOtherUser[40]).useDismissBadgeDirectoryBadgeIndicator({ badgeId: first1, enabled: !isViewingOtherUser });
+  let tmp24 = isBadgeDirectoryUpdatesEnabled;
+  if (isBadgeDirectoryUpdatesEnabled) {
+    tmp24 = !isBadgeDetailsSwipeEnabled;
+  }
+  const obj10 = { startExpanded: !tmp24, scrollable: true, dismissAccessibilityLabel: null, children: null };
   let name;
   if (stateFromStores2 != null) {
     name = stateFromStores2.name;
   }
-  const obj9 = { startExpanded: true, scrollable: true, dismissAccessibilityLabel: name, children: null };
-  const obj10 = { contentContainerStyle: null, onLayout: null, children: null };
+  obj10.dismissAccessibilityLabel = name;
+  const obj11 = { contentContainerStyle: null, onLayout: null, children: null };
   const items9 = [tmp.content, { paddingBottom: sum }];
-  obj10.contentContainerStyle = items9;
-  let tmp24;
+  obj11.contentContainerStyle = items9;
+  let tmp26;
   if (isBadgeDetailsSwipeEnabled) {
-    tmp24 = callback;
+    tmp26 = callback;
   }
-  obj10.onLayout = tmp24;
+  obj11.onLayout = tmp26;
   if (isBadgeDetailsSwipeEnabled) {
-    const obj11 = { state: segmentedControlState };
-    let tmp22Result = closure_12(tmp9(tmp2[41]).SegmentedControlPages, obj11);
+    const obj12 = { state: segmentedControlState };
+    let tmp23Result = closure_12(tmp9(tmp2[41]).SegmentedControlPages, obj12);
   } else {
-    const obj12 = { badgeId, displayedUserId, currentUserId: stateFromStores, isViewingOtherUser, targetUsername, isViewerOwnershipKnown: stateFromStores1 };
-    tmp22Result = closure_12(closure_19, obj12);
+    const obj13 = { badgeId, displayedUserId, currentUserId: stateFromStores, isViewingOtherUser, targetUsername, isViewerOwnershipKnown: stateFromStores1 };
+    tmp23Result = closure_12(closure_19, obj13);
   }
-  obj10.children = tmp22Result;
-  obj9.children = closure_12(badgeId(isViewingOtherUser[42]).BottomSheetScrollView, obj10);
-  return closure_12(badgeId(isViewingOtherUser[43]).BottomSheet, obj9);
+  obj11.children = tmp23Result;
+  obj10.children = closure_12(badgeId(isViewingOtherUser[42]).BottomSheetScrollView, obj11);
+  return closure_12(badgeId(isViewingOtherUser[43]).BottomSheet, obj10);
 });

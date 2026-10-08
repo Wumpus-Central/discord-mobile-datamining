@@ -1,9 +1,9 @@
-// === Module 17364: CircleWithCutout ===
+// === Module 17645: CircleWithCutout ===
 
-// Module 17364 (CircleWithCutout)
+// Module 17645 (CircleWithCutout)
 import c from "c" /* 576 */;
-import inlineStyles from "inlineStyles" /* 8169 */;
-import CircleWithCutoutUtils from "CircleWithCutoutUtils" /* 9114 */;
+import inlineStyles from "inlineStyles" /* 7550 */;
+import CircleWithCutoutUtils from "CircleWithCutoutUtils" /* 10687 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -17,7 +17,7 @@ const ReactCompilerGating = fn(558);
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/shared/CircleWithCutout.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function CircleWithCutout(arg0) {
   const cResult = c.c(26);
   ({ fill, cutoutPositionInDegrees, alignBadgeEdgeWithCircleEdge, badgeRadius, scaleToPixelDensity } = arg0);
   let tmp4 = undefined !== alignBadgeEdgeWithCircleEdge;
@@ -153,7 +153,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   cResult[2] = cutoutCenterX;
   diff = cutoutCenterX;
   const tmpResult2 = CircleWithCutoutUtils;
-}) : ((arg0) => {
+}) : (function CircleWithCutout(arg0) {
   ({ cutoutPositionInDegrees, alignBadgeEdgeWithCircleEdge } = arg0);
   ({ fill, circleRadius, cutoutRadius, enableCutout } = arg0);
   if (alignBadgeEdgeWithCircleEdge === undefined) {
@@ -205,5 +205,5 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   size.children = items2;
   return React4(inlineStylesDefault, size);
 }));
-export const getBadgeLeft = fn(9114).getBadgeLeft;
-export const getBadgeTop = fn(9114).getBadgeTop;
+export const getBadgeLeft = fn(10687).getBadgeLeft;
+export const getBadgeTop = fn(10687).getBadgeTop;

@@ -1,11 +1,11 @@
-// === Module 12733: InAppReportsDeleteMessageElement ===
+// === Module 13401: InAppReportsDeleteMessageElement ===
 
-// Module 12733 (InAppReportsDeleteMessageElement)
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5076 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 6978 */;
+// Module 13401 (InAppReportsDeleteMessageElement)
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5105 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7167 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MessageStore from "MessageStore" /* 5116 */;
+import MessageStore from "MessageStore" /* 5428 */;
 
 const require = fn;
 const AnalyticEvents = fn(1085).AnalyticEvents;
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsDeleteMessageElement.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((message) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function DeleteMessageElement(message) {
   const cResult = message(576).c(17);
   message = message.message;
   const reportId = message.reportId;
@@ -44,65 +44,99 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((message) => {
   const tmp4 = stateFromStores(noop.useState(false), 2);
   stateFromStores = message(504).useStateFromStores(first, tmp8, tmp9);
   if (cResult[4] !== stateFromStores) {
-    const fn2 = function v() {
-      dependencyMap(stateFromStores);
-    };
+    class T {
+      constructor() {
+        tmp = closure_2(closure_3);
+        return;
+      }
+    }
     const items2 = [stateFromStores];
     cResult[4] = stateFromStores;
-    cResult[5] = fn2;
+    cResult[5] = T;
     cResult[6] = items2;
     let tmp12 = items2;
-    let tmp11 = fn2;
   } else {
-    tmp11 = cResult[5];
+    class T {
+      constructor() {
+        tmp = closure_2(closure_3);
+        return;
+      }
+    }
     tmp12 = cResult[6];
   }
-  const effect = noop.useEffect(tmp11, tmp12);
+  const effect = noop.useEffect(T, tmp12);
   if (cResult[7] === message) {
-    if (cResult[8] === reportId) {
-      let tmp14 = cResult[9];
+    class T {
+      constructor() {
+        tmp = closure_2(closure_3);
+        return;
+      }
     }
     const _Symbol = Symbol;
     if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
+      class T {
+        constructor() {
+          tmp = closure_2(closure_3);
+          return;
+        }
+      }
+      const stringResult = obj4.string(tmp(1126).t.c9BHL9);
       const intl = tmp(1126).intl;
-      const stringResult = intl.string(tmp(1126).t.c9BHL9);
+      const stringResult1 = intl.string(tmp(1126).t.AT2KSd);
       const intl2 = tmp(1126).intl;
-      const stringResult1 = intl2.string(tmp(1126).t.AT2KSd);
-      const intl3 = tmp(1126).intl;
-      const stringResult2 = intl3.string(tmp(1126).t.dK8S0w);
+      const stringResult2 = intl2.string(tmp(1126).t.dK8S0w);
       cResult[10] = stringResult;
       cResult[11] = stringResult1;
       cResult[12] = stringResult2;
       let tmp17 = stringResult2;
       let tmp16 = stringResult1;
-      let tmp15 = stringResult;
+      const tmp15 = stringResult;
     } else {
-      tmp15 = cResult[10];
+      class T {
+        constructor() {
+          tmp = closure_2(closure_3);
+          return;
+        }
+      }
       tmp16 = cResult[11];
       tmp17 = cResult[12];
     }
     const _Symbol2 = Symbol;
     if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp23 = jsx(tmp(4853).TrashIcon, { color: "text-feedback-critical" });
-      cResult[13] = tmp23;
-      let tmp21 = tmp23;
-    } else {
-      tmp21 = cResult[13];
-    }
-    if (cResult[14] === tmp14) {
-      if (cResult[15] === tmp5) {
-        let tmp24 = cResult[16];
+      class T {
+        constructor() {
+          tmp = closure_2(closure_3);
+          return;
+        }
       }
-      return tmp24;
+      const tmp22 = jsx(tmp(5047).TrashIcon, { color: "text-feedback-critical" });
+      cResult[13] = tmp22;
+      const tmp21 = tmp22;
+    } else {
+      class T {
+        constructor() {
+          tmp = closure_2(closure_3);
+          return;
+        }
+      }
     }
-    const obj3 = { title: tmp15, disabledTitle: tmp16, description: tmp17, disabled: tmp5, variant: "danger", onPress: tmp14, icon: tmp21 };
-    const tmp27 = jsx(reportId(12728), { title: tmp15, disabledTitle: tmp16, description: tmp17, disabled: tmp5, variant: "danger", onPress: tmp14, icon: tmp21 });
-    cResult[14] = tmp14;
+    if (cResult[14] === C) {
+      class T {
+        constructor() {
+          tmp = closure_2(closure_3);
+          return;
+        }
+      }
+      return tmp23;
+    }
+    const obj3 = { title: tmp15, disabledTitle: tmp16, description: tmp17, disabled: tmp5, variant: "danger", onPress: C, icon: tmp21 };
+    const tmp26 = jsx(reportId(13397), { title: tmp15, disabledTitle: tmp16, description: tmp17, disabled: tmp5, variant: "danger", onPress: C, icon: tmp21 });
+    cResult[14] = C;
     cResult[15] = tmp5;
-    cResult[16] = tmp27;
-    tmp24 = tmp27;
+    cResult[16] = tmp26;
+    tmp23 = tmp26;
   }
-  class M {
+  class C {
     constructor() {
       tmp = closure_2(true);
       obj = closure_1(closure_2[8]);
@@ -115,10 +149,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((message) => {
   }
   cResult[7] = message;
   cResult[8] = reportId;
-  cResult[9] = M;
-  tmp14 = M;
+  cResult[9] = C;
   const tmpResult = message(504);
-}) : ((message) => {
+}) : (function DeleteMessageElement(message) {
   message = message.message;
   const reportId = message.reportId;
   let stateFromStores;
@@ -148,6 +181,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((message) => {
   obj2.description = intl3.string(message(1126).t.dK8S0w);
   obj2.disabled = tmp[0];
   obj2.onPress = callback;
-  obj2.icon = jsx(message(4853).TrashIcon, { color: "text-feedback-critical" });
-  return jsx(reportId(12728), { title: null, disabledTitle: null, description: null, disabled: null, variant: "danger", onPress: null, icon: null });
+  obj2.icon = jsx(message(5047).TrashIcon, { color: "text-feedback-critical" });
+  return jsx(reportId(13397), { title: null, disabledTitle: null, description: null, disabled: null, variant: "danger", onPress: null, icon: null });
 });

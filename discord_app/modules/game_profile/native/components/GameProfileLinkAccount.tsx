@@ -1,15 +1,15 @@
-// === Module 8418: GameProfileLinkAccount ===
+// === Module 8915: GameProfileLinkAccount ===
 
-// Module 8418 (GameProfileLinkAccount)
+// Module 8915 (GameProfileLinkAccount)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 6440 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8352 */;
-import GameProfileSkeleton from "GameProfileSkeleton" /* 8419 */;
-import GameProfileSection from "GameProfileSection" /* 8421 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 6618 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8850 */;
+import GameProfileSkeleton from "GameProfileSkeleton" /* 8916 */;
+import GameProfileSection from "GameProfileSection" /* 8918 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5124 */;
-import UserStore from "UserStore" /* 1377 */;
+import ApplicationStore from "ApplicationStore" /* 5436 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const GameProfileSkeletonDefault = GameProfileSkeleton;
 
@@ -18,7 +18,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = 48;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { card: { borderRadius: nativeDefault.radii.lg, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 }, cardImagesContainer: null, ellipseGroup: null, ellipse: null, cardImageApplication: null, userAvatar: null, cardContent: null, cardText: null, skeletonCardImage: null, skeletonUserAvatar: null, skeletonEllipse: null, skeletonCardContent: null, skeletonAnimationRoot: null, skeletonCardImagesContainerSmall: null, skeletonCardContentHeading: null, skeletonCardContentBody: null, skeletonCardContentBodySecondary: null };
 let obj3 = { borderRadius: nativeDefault.radii.lg, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
 obj.cardImagesContainer = { flexDirection: "row", gap: nativeDefault.space.PX_8, alignItems: "center", alignSelf: "center" };
@@ -53,7 +53,7 @@ const size7 = { width: "55%", height: nativeDefault.space.PX_12, borderRadius: n
 obj.skeletonCardContentBodySecondary = size7;
 let closure_10 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
-let closure_11 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_11 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function GameProfileLinkAccountSkeleton() {
   const cResult = c.c(41);
   const tmp4 = closure_10();
   const tmp6 = useIsWindowLargeDefault();
@@ -235,7 +235,7 @@ let closure_11 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() =>
   cResult[1] = skeletonCardImagesContainerSmall;
   cResult[2] = items4;
   tmp7 = items4;
-}) : (() => {
+}) : (function GameProfileLinkAccountSkeleton() {
   const tmp = closure_10();
   const tmp4 = useIsWindowLargeDefault();
   const obj = { style: tmp.card, children: null };
@@ -277,7 +277,7 @@ let obj10 = { marginBottom: nativeDefault.space.PX_4 };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileLinkAccount.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((analyticsLocations) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProfileLinkAccount(analyticsLocations) {
   const cResult = trackAction(startAuthorization[8]).c(46);
   ({ game, trackAction } = analyticsLocations);
   analyticsLocations = analyticsLocations.analyticsLocations;
@@ -352,20 +352,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((analyticsLocatio
       }
     }
   }
-  class L {
-    constructor() {
-      tmp = trackAction(closure_0(closure_2[14]).GameProfileTrackActionActions.LinkAccount);
-      obj = { analyticsLocations };
-      tmp2 = startAuthorization(obj);
-      return;
-    }
-  }
+  const fn2 = function w() {
+    trackAction(GameProfileAnalyticUtils.GameProfileTrackActionActions.LinkAccount);
+    startAuthorization({ analyticsLocations });
+  };
   cResult[8] = analyticsLocations;
   cResult[9] = startAuthorization;
   cResult[10] = trackAction;
-  cResult[11] = L;
+  cResult[11] = fn2;
   const tmpResult = trackAction(startAuthorization[13]);
-}) : ((analyticsLocations) => {
+}) : (function GameProfileLinkAccount(analyticsLocations) {
   ({ game, trackAction } = analyticsLocations);
   analyticsLocations = analyticsLocations.analyticsLocations;
   let startAuthorization;

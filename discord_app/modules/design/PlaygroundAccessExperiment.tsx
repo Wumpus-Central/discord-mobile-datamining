@@ -1,19 +1,19 @@
-// === Module 10731: PlaygroundAccessExperiment ===
+// === Module 11591: PlaygroundAccessExperiment ===
 
-// Module 10731 (PlaygroundAccessExperiment)
+// Module 11591 (PlaygroundAccessExperiment)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
-const ApexExperiment = fn(1440);
+const ApexExperiment = fn(1452);
 let obj2 = { name: "2026-02-mana-playground-access", kind: "user", defaultConfig: { enabled: false }, variations: null };
 const obj3 = { 1: null };
 obj3[1] = { enabled: true };
 obj2.variations = obj3;
 const apexExperiment = ApexExperiment.createApexExperiment(obj2);
 let ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePlaygroundAccessExperiment(location) {
   const cResult = c.c(2);
   if (cResult[0] !== location) {
     const obj2 = { location };
@@ -24,7 +24,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
     tmp2 = cResult[1];
   }
   return apexExperiment.useConfig(tmp2).enabled;
-}) : ((location) => apexExperiment.useConfig({ location }).enabled);
+}) : (function usePlaygroundAccessExperiment(location) {
+  return apexExperiment.useConfig({ location }).enabled;
+});
 let closure_4 = tmp3;
 ReactCompilerGating = fn(558);
 function getPlaygroundAccessExperiment(location) {
@@ -36,11 +38,11 @@ const result = size.fileFinishedImporting("modules/design/PlaygroundAccessExperi
 export default apexExperiment;
 export const usePlaygroundAccessExperiment = tmp3;
 export { getPlaygroundAccessExperiment };
-export const useHasPlaygroundAccess = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useHasPlaygroundAccess = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasPlaygroundAccess(arg0) {
   const cResult = c.c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
-    const fn = function c() {
+    const fn = function o() {
       return currentUser.getCurrentUser();
     };
     cResult[0] = items;
@@ -74,7 +76,7 @@ export const useHasPlaygroundAccess = ReactCompilerGating.isReactCompilerEnabled
     tmp7 = closure_4(arg0);
   }
   return tmp7;
-}) : ((arg0) => {
+}) : (function useHasPlaygroundAccess(arg0) {
   const items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   let isStaffResult;

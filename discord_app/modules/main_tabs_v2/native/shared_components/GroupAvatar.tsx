@@ -1,15 +1,15 @@
-// === Module 12881: GroupAvatar ===
+// === Module 13030: GroupAvatar ===
 
-// Module 12881 (GroupAvatar)
+// Module 13030 (GroupAvatar)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import timing from "timing" /* 4897 */;
-import spring from "spring" /* 5604 */;
-import FastImageDefault from "FastImage" /* 5981 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6477 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import timing from "timing" /* 5091 */;
+import spring from "spring" /* 5374 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6655 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 require = fn;
 let View = fn(17).View;
@@ -19,7 +19,7 @@ const createElement = fn(19).createElement;
 let c9 = 38;
 const SPRING_OPTIONS_SCALE = { damping: 30, stiffness: 400 };
 const SPRING_OPTIONS_POSITION = { damping: 30, stiffness: 400 };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_12 = createStyles.createStyles(() => {
   const obj = { groupContainer: { position: "relative" }, shadowContainer: { borderRadius: nativeDefault.radii.sm }, shadowContainerBackground: {}, shadowContainerBackgroundLight: { opacity: 0.4 }, shadowContainerBackgroundDark: { opacity: 0.15 }, gradientContainer: null, gradientDimOverlay: null, gradientImageBorder: null, avatarContainer: null, avatar: null, avatarWrapper: null, overflowCount: null };
   const size = { width: nativeDefault.modules.mobile.GROUP_AVATAR_SIZE, height: nativeDefault.modules.mobile.GROUP_AVATAR_SIZE, overflow: "hidden", borderRadius: nativeDefault.radii.sm };
@@ -47,7 +47,7 @@ fn(558);
 const __initData = { code: "function GroupAvatarTsx1(){const{withTiming,opacityAnimation,useReducedMotion,translateXAnimation,withSpring,SPRING_OPTIONS_POSITION,translateYAnimation,scaleAnimation,SPRING_OPTIONS_SCALE}=this.__closure;return{opacity:withTiming(opacityAnimation.get()),transform:[{translateX:useReducedMotion?translateXAnimation.get():withSpring(translateXAnimation.get(),SPRING_OPTIONS_POSITION)},{translateY:useReducedMotion?translateYAnimation.get():withSpring(translateYAnimation.get(),SPRING_OPTIONS_POSITION)},{scale:useReducedMotion?scaleAnimation.get():withSpring(scaleAnimation.get(),SPRING_OPTIONS_SCALE)}]};}" };
 const __initData2 = { code: "function GroupAvatarTsx2(){const{withTiming,opacityAnimation,useReducedMotion,translateXAnimation,withSpring,SPRING_OPTIONS_POSITION,translateYAnimation,scaleAnimation,SPRING_OPTIONS_SCALE}=this.__closure;return{opacity:withTiming(opacityAnimation.get()),transform:[{translateX:useReducedMotion?translateXAnimation.get():withSpring(translateXAnimation.get(),SPRING_OPTIONS_POSITION)},{translateY:useReducedMotion?translateYAnimation.get():withSpring(translateYAnimation.get(),SPRING_OPTIONS_POSITION)},{scale:useReducedMotion?scaleAnimation.get():withSpring(scaleAnimation.get(),SPRING_OPTIONS_SCALE)}]};}" };
 let ReactCompilerGating = fn(558);
-let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((scale) => {
+let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function AnimatedContainer(scale) {
   const cResult = scale(translateY[7]).c(17);
   scale = scale.scale;
   const translateX = scale.translateX;
@@ -103,7 +103,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((scale) => {
                 let tmp15 = cResult[10];
               }
               const effect = stateFromStores.useEffect(tmp14, tmp15);
-              class X {
+              class G {
                 constructor() {
                   obj = { opacity: null, transform: null };
                   tmp = closure_0;
@@ -147,10 +147,10 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((scale) => {
                 }
               }
               const obj2 = { withTiming: tmp(tmp2[12]).withTiming, opacityAnimation: sharedValue, useReducedMotion: stateFromStores, translateXAnimation: sharedValue2, withSpring: tmp(tmp2[13]).withSpring, SPRING_OPTIONS_POSITION, translateYAnimation: sharedValue1, scaleAnimation: sharedValue3, SPRING_OPTIONS_SCALE };
-              X.__closure = obj2;
-              X.__workletHash = 8800301056148;
-              X.__initData = __initData;
-              const animatedStyle = tmp(tmp2[11]).useAnimatedStyle(X);
+              G.__closure = obj2;
+              G.__workletHash = 8800301056148;
+              G.__initData = __initData;
+              const animatedStyle = tmp(tmp2[11]).useAnimatedStyle(G);
               if (cResult[11] === animatedStyle) {
                 if (cResult[12] === tmp4.avatarContainer) {
                   let tmp22 = cResult[13];
@@ -161,7 +161,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((scale) => {
                   }
                   return tmp23;
                 }
-                class X {
+                class G {
                   constructor() {
                     obj = { opacity: null, transform: null };
                     tmp = closure_0;
@@ -243,7 +243,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((scale) => {
   tmp15 = items2;
   tmp14 = fn2;
   const tmpResult9 = scale(translateY[11]);
-}) : ((children) => {
+}) : (function AnimatedContainer(children) {
   const scale = children.scale;
   const translateX = children.translateX;
   const translateY = children.translateY;
@@ -341,7 +341,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((scale) => {
   return sharedValue2(translateX(translateY[11]).View, obj4);
 });
 ReactCompilerGating = fn(558);
-let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((count) => {
+let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function GroupMemberCount(count) {
   const cResult = c.c(9);
   count = count.count;
   const manaTypeConsolidationExperiment = ManaTypeConsolidationExperiment.useManaTypeConsolidationExperiment("GroupAvatar");
@@ -389,7 +389,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((count) => {
   cResult[1] = str;
   cResult[2] = tmp7;
   tmp6 = tmp7;
-}) : ((count) => {
+}) : (function GroupMemberCount(count) {
   count = count.count;
   const manaTypeConsolidationExperiment = ManaTypeConsolidationExperiment.useManaTypeConsolidationExperiment("GroupAvatar");
   const tmp2 = closure_12();
@@ -410,7 +410,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((count) => {
   return animateOnMount(View, obj2);
 });
 ReactCompilerGating = fn(558);
-let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function GroupMemberAvatar(arg0) {
   const cResult = c.c(9);
   ({ guildId, user } = arg0);
   let avatarWrapper = closure_12();
@@ -450,7 +450,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = user;
   cResult[2] = avatarSource;
   tmp3 = avatarSource;
-}) : ((guildId) => {
+}) : (function GroupMemberAvatar(guildId) {
   guildId = guildId.guildId;
   const user = guildId.user;
   const tmp = closure_12();
@@ -474,7 +474,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/GroupAvatar.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((users) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GroupAvatar(users) {
   const cResult = users(ref[7]).c(40);
   users = users.users;
   const guildId = users.guildId;
@@ -633,7 +633,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((users) => {
             }
           }
         }
-        class X {
+        class G {
           constructor(arg0, arg1) {
             tmp = users[arg1];
             if (null == tmp) {
@@ -643,7 +643,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((users) => {
               obj = {};
               tmp5 = obj;
               tmp3 = createElement;
-              tmp4 = f62449;
+              tmp4 = AnimatedContainer;
               merged = Object.assign(users);
               obj.key = tmp.id;
               tmp7 = closure_6;
@@ -651,22 +651,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((users) => {
               tmp8 = closure_3;
               if (!closure_3) {
                 tmp10 = jsx;
-                tmp11 = f62453;
+                tmp11 = GroupMemberAvatar;
                 obj1 = { guildId: null, user: null };
                 tmp12 = guildId;
                 obj1.guildId = guildId;
                 obj1.user = tmp;
-                tmp13 = jsx(f62453, obj1);
+                tmp13 = jsx(GroupMemberAvatar, obj1);
                 tmp3Result = tmp3(tmp4, obj, tmp13);
               } else {
                 tmp9 = c5;
               }
               tmp14 = jsx;
-              tmp15 = f62451;
+              tmp15 = GroupMemberCount;
               obj4 = { count: null };
               tmp16 = closure_4;
               obj4.count = closure_4;
-              tmp13 = jsx(f62451, obj4);
+              tmp13 = jsx(GroupMemberCount, obj4);
             }
             return;
           }
@@ -677,8 +677,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((users) => {
         cResult[17] = users.length > 4;
         cResult[18] = num8;
         cResult[19] = users;
-        cResult[20] = X;
-        tmp18 = X;
+        cResult[20] = G;
+        tmp18 = G;
       }
     }
   }
@@ -689,7 +689,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((users) => {
   cResult[2] = theme;
   cResult[3] = tmp(ref[8]).isThemeLight(theme) ? tmp4.shadowContainerBackgroundLight : tmp4.shadowContainerBackgroundDark;
   const tmp6 = tmp(ref[8]).isThemeLight(theme) ? tmp4.shadowContainerBackgroundLight : tmp4.shadowContainerBackgroundDark;
-}) : ((users) => {
+}) : (function GroupAvatar(users) {
   users = users.users;
   const guildId = users.guildId;
   let ref;

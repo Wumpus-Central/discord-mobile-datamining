@@ -1,8 +1,8 @@
-// === Module 11366: useVoteReactors ===
+// === Module 11543: useVoteReactors ===
 
-// Module 11366 (useVoteReactors)
-import MessageReactionsTypes from "MessageReactionsTypes" /* 7272 */;
-import MessageReactionsStore from "MessageReactionsStore" /* 7271 */;
+// Module 11543 (useVoteReactors)
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7873 */;
+import MessageReactionsStore from "MessageReactionsStore" /* 7871 */;
 
 require = fn;
 let closure_4 = fn(1085).DEFAULT_NUM_REACTION_USERS;
@@ -10,7 +10,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/polls/useVoteReactors.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useVoteReactors(channelId) {
   const cResult = channelId(reaction[3]).c(9);
   channelId = channelId.channelId;
   const messageId = channelId.messageId;
@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   tmp6 = fn;
   const obj = channelId(reaction[3]);
   tmp = channelId;
-}) : ((channelId) => {
+}) : (function useVoteReactors(channelId) {
   channelId = channelId.channelId;
   const messageId = channelId.messageId;
   const reaction = channelId.reaction;

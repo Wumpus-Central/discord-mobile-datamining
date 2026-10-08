@@ -1,14 +1,14 @@
-// === Module 6613: GuildCategoryStore ===
+// === Module 6790: GuildCategoryStore ===
 
-// Module 6613 (GuildCategoryStore)
+// Module 6790 (GuildCategoryStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import getFlattedChannelListDefault from "getFlattedChannelList" /* 6614 */;
-import FavoriteStore from "FavoriteStore" /* 2054 */;
+import getFlattedChannelListDefault from "getFlattedChannelList" /* 6791 */;
+import FavoriteStore from "FavoriteStore" /* 2066 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildChannelStore_mod from "GuildChannelStore" /* 4513 */;
-import GuildStore from "GuildStore" /* 2074 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildChannelStore_mod from "GuildChannelStore" /* 4705 */;
+import GuildStore from "GuildStore" /* 2086 */;
 
 function setIndex(arg0, index) {
   arg0.index = index;
@@ -223,7 +223,7 @@ function handleFavoritesUpdate() {
     }
     _null.push({ channel, index: -1 });
   }
-  const channels = GuildChannelStore.getChannels(v65535);
+  const channels = GuildChannelStore.getChannels(collapsed);
   const obj = { _categories: [], null: [] };
   const item = channels[constants.GUILD_CATEGORY].forEach((channel) => {
     channel = channel.channel;
@@ -234,9 +234,9 @@ function handleFavoritesUpdate() {
   const item1 = channels[hasOwnProperty].forEach(updateChannel);
   const item2 = channels[timestampProducer].forEach(updateChannel);
   const item3 = getFlattedChannelListDefault(obj._categories, obj).forEach(setIndex);
-  closure_12[v65535] = obj;
+  closure_12[collapsed] = obj;
 }
-let GuildChannelStore = fn(4513);
+let GuildChannelStore = fn(4705);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: hasOwnProperty, GUILD_VOCAL_CHANNELS_KEY: metroRequire } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1085);

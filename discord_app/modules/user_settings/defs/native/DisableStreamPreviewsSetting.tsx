@@ -1,11 +1,11 @@
-// === Module 15809: DisableStreamPreviewsSetting ===
+// === Module 16068: DisableStreamPreviewsSetting ===
 
-// Module 15809 (DisableStreamPreviewsSetting)
+// Module 16068 (DisableStreamPreviewsSetting)
 import util from "util" /* 1126 */;
-import UserSettings from "UserSettings" /* 2028 */;
-import SettingsConstants from "SettingsConstants" /* 7645 */;
+import UserSettings from "UserSettings" /* 2040 */;
+import SettingsConstants from "SettingsConstants" /* 7966 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11142 */;
+import SettingBuilders from "SettingBuilders" /* 11262 */;
 import size from "module_2" /* 2 */;
 
 let ReactCompilerGating = ReactCompilerGating_mod;
@@ -20,7 +20,7 @@ const toggle = SettingBuilders.createToggle({
     return intl.string(util.t.jTNPHM);
   },
   parent: SettingsConstants.MobileUserSettings.VOICE,
-  useValue: () => {
+  useValue() {
     const DisableStreamPreviews = UserSettings.DisableStreamPreviews;
     let flag = DisableStreamPreviews.useSetting();
     if (flag == null) {

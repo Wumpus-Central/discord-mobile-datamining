@@ -1,20 +1,20 @@
-// === Module 17337: VoicePanelSecondaryPIPContent ===
+// === Module 17618: VoicePanelSecondaryPIPContent ===
 
-// Module 17337 (VoicePanelSecondaryPIPContent)
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 10738 */;
-import getActivityContainerPIPStylesSpecDefault from "getActivityContainerPIPStylesSpec" /* 17202 */;
+// Module 17618 (VoicePanelSecondaryPIPContent)
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11596 */;
+import getActivityContainerPIPStylesSpecDefault from "getActivityContainerPIPStylesSpec" /* 17483 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
-import FramesStore from "FramesStore" /* 9000 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2062 */;
+import FramesStore from "FramesStore" /* 10612 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
 
 const require = fn;
-const ActivityLayoutMode = fn(2011).ActivityLayoutMode;
-const ActivityPanelModes = fn(9001).ActivityPanelModes;
-const FramesConstants = fn(8738);
+const ActivityLayoutMode = fn(2023).ActivityLayoutMode;
+const ActivityPanelModes = fn(6072).ActivityPanelModes;
+const FramesConstants = fn(10613);
 ({ asLaunched: closure_9, FrameLayoutModes: c10, getPipOrientationLockStateForFrame: closure_11 } = FramesConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_13 = createStyles.createStyles({ activityContainer: { flex: 1 }, wrapper: { position: "absolute", left: "50%", top: "50%" } });
 const __initData = { code: "function VoicePanelSecondaryPIPContentTsx1(){const{pipState,roundToNearestPixel}=this.__closure;const scale=pipState.scale.get();const width=pipState.width*scale;const height=pipState.height*scale;return{width:width,height:height,marginLeft:roundToNearestPixel(width/2)*-1,marginTop:roundToNearestPixel(height/2)*-1};}" };
 const __initData2 = { code: "function VoicePanelSecondaryPIPContentTsx2(){const{pipState,getActivityContainerPipStylesSpec,activePipOrientationLockState,windowDimensions}=this.__closure;const scale_0=pipState.scale.get();const{width:width_0,height:height_0,shouldVerticallyCenter:shouldVerticallyCenter,shouldHorizontallyCenter:shouldHorizontallyCenter,marginLeft:marginLeft,marginTop:marginTop}=getActivityContainerPipStylesSpec({pipWidth:pipState.width*scale_0,pipHeight:pipState.height*scale_0,pipOrientationLockState:activePipOrientationLockState,isLandscape:windowDimensions.get().landscape});return{width:width_0,height:height_0,left:shouldHorizontallyCenter?\"50%\":\"0%\",top:shouldVerticallyCenter?\"50%\":\"0%\",marginLeft:marginLeft,marginTop:marginTop};}" };
@@ -24,7 +24,7 @@ const ReactCompilerGating = fn(558);
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelSecondaryPIPContent.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePanelSecondaryPIPContent() {
   let PIP = windowDimensions;
   const cResult = windowDimensions(connectedEmbeddedActivityChannelId[10]).c(23);
   windowDimensions = pipOrientationLockState.useContext(pIPState(connectedEmbeddedActivityChannelId[11])).windowDimensions;
@@ -361,7 +361,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[8] = animatedStyle;
   cResult[9] = items4;
   const obj4 = { pipState: pIPState, getActivityContainerPipStylesSpec: pIPState(connectedEmbeddedActivityChannelId[18]), activePipOrientationLockState: pipOrientationLockState, windowDimensions };
-}) : (() => {
+}) : (function VoicePanelSecondaryPIPContent() {
   let tmp = pIPState;
   let obj = connectedEmbeddedActivityChannelId;
   const windowDimensions = pipOrientationLockState.useContext(pIPState(connectedEmbeddedActivityChannelId[11])).windowDimensions;

@@ -1,10 +1,9 @@
-// === Module 17664: SavedMessagesManager ===
+// === Module 17947: SavedMessagesManager ===
 
-// Module 17664 (SavedMessagesManager)
-import ForLaterExperiment from "ForLaterExperiment" /* 7496 */;
-import SavedMessagesActions from "SavedMessagesActions" /* 11348 */;
+// Module 17947 (SavedMessagesManager)
+import SavedMessagesActions from "SavedMessagesActions" /* 12662 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6797 */;
 
 require = fn;
 let closure_3 = async function _refreshSavedMessages() {
@@ -29,33 +28,30 @@ let closure_3 = async function _refreshSavedMessages() {
           throw value;
         } else if (arg0 === 2) {
           c2 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_0 = tmp4;
-          if (obj3.isForLaterExperimentOn("saved_messages_manager")) {
-            c1 = 1;
-            c2 = 1;
-            const obj6 = { value: SavedMessagesActions.fetchAndUpdateSavedMessages(), done: false };
-            return obj6;
-          } else {
-            c2 = 3;
-          }
-          obj3 = ForLaterExperiment;
+          c1 = 1;
+          c2 = 1;
+          const obj5 = { value: SavedMessagesActions.fetchAndUpdateSavedMessages(), done: false };
+          return obj5;
         }
       } else if (arg0 === 1) {
         c2 = 3;
         throw value;
-      } else if (arg0 !== 2) {
-        const result = closure_128_0(closure_128_1[3]).showOverdueRemindersToast();
-        const obj = closure_128_0(closure_128_1[3]);
+      } else if (arg0 === 2) {
+        c2 = 3;
+        const obj6 = { value, done: true };
+        return obj6;
+      } else {
+        const result = closure_128_0(closure_128_1[2]).showOverdueRemindersToast();
+        c2 = 3;
+        return { value: "IconComponent", done: null };
       }
-      c2 = 3;
-      const obj7 = { value, done: true };
-      return obj7;
-    } catch (tmp13) {
+    } catch (tmp11) {
       c2 = tmp;
-      throw tmp13;
+      throw tmp11;
     }
   }
 };

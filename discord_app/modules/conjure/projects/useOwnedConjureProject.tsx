@@ -1,8 +1,8 @@
-// === Module 12283: useOwnedConjureProject ===
+// === Module 12362: useOwnedConjureProject ===
 
-// Module 12283 (useOwnedConjureProject)
-import useIsOwnedConjureApplicationDefault from "useIsOwnedConjureApplication" /* 8733 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 8734 */;
+// Module 12362 (useOwnedConjureProject)
+import useIsOwnedConjureApplicationDefault from "useIsOwnedConjureApplication" /* 12363 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 11251 */;
 
 const require = globalThis.__r;
 
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/projects/useOwnedConjureProject.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useOwnedConjureProject(arg0, arg1) {
   _require = arg0;
   const cResult = require("c").c(8);
   const tmp4 = useIsOwnedConjureApplicationDefault(arg0, arg1);
@@ -42,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     tmp10 = obj2;
     const tmpResult = tmp(504);
   }
-  const fn = function l() {
+  const fn = function c() {
     let result = null;
     if (true === closure_1) {
       result = null;
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   tmp7 = fn;
   const obj = require("c");
   tmp = _require;
-}) : ((arg0, arg1) => {
+}) : (function useOwnedConjureProject(arg0, arg1) {
   _require = arg0;
   const tmp = useIsOwnedConjureApplicationDefault(arg0, arg1);
   importDefault = tmp;

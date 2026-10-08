@@ -1,14 +1,14 @@
-// === Module 9998: MessagePreviewReactions ===
+// === Module 9528: MessagePreviewReactions ===
 
-// Module 9998 (MessagePreviewReactions)
+// Module 9528 (MessagePreviewReactions)
 import c from "c" /* 576 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 6664 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6688 */;
-import MessageReactionsContent from "MessageReactionsContent" /* 9987 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 6841 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6865 */;
+import MessageReactionsContent from "MessageReactionsContent" /* 9517 */;
 import noop from "module_19" /* 19 */;
-import ChannelConversationsStore from "ChannelConversationsStore" /* 7116 */;
-import ConversationPreviewStore from "ConversationPreviewStore" /* 7121 */;
-import MessagePreviewStore from "MessagePreviewStore" /* 8047 */;
+import ChannelConversationsStore from "ChannelConversationsStore" /* 7302 */;
+import ConversationPreviewStore from "ConversationPreviewStore" /* 7307 */;
+import MessagePreviewStore from "MessagePreviewStore" /* 8456 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
 
@@ -16,7 +16,7 @@ require = fn;
 const jsx = fn(21).jsx;
 let closure_7 = [];
 let ReactCompilerGating = fn(558);
-let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePreviewMessageReactions(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
   const cResult = require("c").c(5);
@@ -34,7 +34,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => 
     }
     return tmp(504).useStateFromStores(first, tmp8, tmp9);
   }
-  class E {
+  class M {
     constructor() {
       tmp = closure_1;
       message = closure_5.getMessage(closure_1);
@@ -53,13 +53,13 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => 
   const items1 = [arg0, arg1];
   cResult[1] = arg0;
   cResult[2] = arg1;
-  cResult[3] = E;
+  cResult[3] = M;
   cResult[4] = items1;
   tmp9 = items1;
-  tmp8 = E;
+  tmp8 = M;
   const obj = require("c");
   tmp = _require;
-}) : ((arg0, arg1) => {
+}) : (function usePreviewMessageReactions(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
   const items = [MessagePreviewStore, ChannelConversationsStore, ConversationPreviewStore];
@@ -79,7 +79,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/reactions/native/MessagePreviewReactions.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function MessagePreviewReactions(arg0) {
   const cResult = c.c(8);
   ({ channelId, messageId, emoji } = arg0);
   const arr = closure_8(channelId, messageId);
@@ -117,7 +117,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = arr;
   num = 4;
   cResult[4] = tmp7;
-}) : ((emoji) => {
+}) : (function MessagePreviewReactions(emoji) {
   ({ channelId, messageId } = emoji);
   const arr = closure_8(channelId, messageId);
   const obj = { value: useAnalyticsLocationsDefault(AnalyticsLocationDefault.MESSAGE_PREVIEW_REACTIONS).analyticsLocations, children: null };

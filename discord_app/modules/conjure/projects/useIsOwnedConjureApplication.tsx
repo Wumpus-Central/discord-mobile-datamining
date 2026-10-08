@@ -1,17 +1,17 @@
-// === Module 8733: useIsOwnedConjureApplication ===
+// === Module 12363: useIsOwnedConjureApplication ===
 
-// Module 8733 (useIsOwnedConjureApplication)
+// Module 12363 (useIsOwnedConjureApplication)
 import BackoffDefault from "Backoff" /* 569 */;
-import ConjureUtils from "ConjureUtils" /* 6756 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 8735 */;
+import ConjureUtils from "ConjureUtils" /* 6932 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 12364 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 8734 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 11251 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const isProjectOwner = fn(8734).isProjectOwner;
+const isProjectOwner = fn(11251).isProjectOwner;
 const useIsOwnedVibegrationsApplication = "useIsOwnedVibegrationsApplication";
 let closure_7 = new BackoffDefault(30000, 300000);
 const ReactCompilerGating = fn(558);
@@ -19,7 +19,7 @@ const tmp2 = new BackoffDefault(30000, 300000);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/projects/useIsOwnedConjureApplication.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsOwnedConjureApplication(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   const cResult = require("c").c(16);
@@ -172,7 +172,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     tmp13 = fn2;
     const tmpResult3 = tmp(504);
   }
-  const fn = function p() {
+  const fn = function j() {
     let tmp = closure_1;
     if (closure_1) {
       tmp = null != closure_0;
@@ -190,7 +190,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   tmp7 = items5;
   tmp6 = fn;
   let obj = require("c");
-}) : ((arg0, arg1) => {
+}) : (function useIsOwnedConjureApplication(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   const items = [stateFromStores1];

@@ -1,8 +1,8 @@
-// === Module 12234: GuildPowerupsWarning ===
+// === Module 12313: GuildPowerupsWarning ===
 
-// Module 12234 (GuildPowerupsWarning)
+// Module 12313 (GuildPowerupsWarning)
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4892 */;
+import Text_Text from "Text/Text" /* 5086 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { flexDirection: "row", alignItems: "flex-start", padding: nativeDefault.space.PX_24, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING, borderWidth: 1, borderColor: nativeDefault.colors.STATUS_WARNING, borderRadius: nativeDefault.radii.lg, gap: nativeDefault.space.PX_8, overflow: "hidden" }, contentContainer: null, warningText: null, text: null };
 let obj3 = { flexDirection: "row", alignItems: "flex-start", padding: nativeDefault.space.PX_24, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING, borderWidth: 1, borderColor: nativeDefault.colors.STATUS_WARNING, borderRadius: nativeDefault.radii.lg, gap: nativeDefault.space.PX_8, overflow: "hidden" };
 obj2.contentContainer = { flex: 1, gap: nativeDefault.space.PX_4, alignItems: "center" };
@@ -24,7 +24,7 @@ let obj5 = { marginTop: nativeDefault.space.PX_4 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsWarning.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((warnings) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPowerupsWarning(warnings) {
   const cResult = require("c").c(21);
   warnings = warnings.warnings;
   ({ guildId, powerupNames } = warnings);
@@ -32,13 +32,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((warnings) => {
   _require = tmp4;
   let obj = require("c");
   const manaTypeConsolidationExperiment = require("ManaTypeConsolidationExperiment").useManaTypeConsolidationExperiment("GuildPowerupsWarning");
-  const tmp7 = manaTypeConsolidationExperiment(12235)(guildId, powerupNames);
+  const tmp7 = manaTypeConsolidationExperiment(12314)(guildId, powerupNames);
   ({ title, description } = tmp7);
   if (tmp7.shouldShow) {
     const _Symbol = Symbol;
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
       const obj3 = { color: tmp6(587).colors.TEXT_FEEDBACK_WARNING, size: "md" };
-      const tmp12 = closure_4(tmp(4806).CircleErrorIcon, obj3);
+      const tmp12 = closure_4(tmp(5000).CircleErrorIcon, obj3);
       cResult[0] = tmp12;
       let first = tmp12;
     } else {
@@ -120,7 +120,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((warnings) => {
         }
       }
       const obj6 = { variant: str2, style: tmp4.text, children: description };
-      const tmp18 = closure_4(tmp(4892).Text, obj6);
+      const tmp18 = closure_4(tmp(5086).Text, obj6);
       cResult[4] = description;
       cResult[5] = tmp4.text;
       cResult[6] = str2;
@@ -128,7 +128,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((warnings) => {
       tmp16 = tmp18;
     }
     const obj7 = { variant: "text-md/semibold", color: "text-feedback-warning", style: tmp4.text, children: title };
-    const tmp15 = closure_4(tmp(4892).Text, obj7);
+    const tmp15 = closure_4(tmp(5086).Text, obj7);
     cResult[1] = tmp4.text;
     cResult[2] = title;
     cResult[3] = tmp15;
@@ -138,7 +138,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((warnings) => {
   }
   const obj2 = require("ManaTypeConsolidationExperiment");
   tmp6 = manaTypeConsolidationExperiment;
-}) : ((warnings) => {
+}) : (function GuildPowerupsWarning(warnings) {
   warnings = warnings.warnings;
   ({ guildId, powerupNames } = warnings);
   const tmp = closure_6();
@@ -151,15 +151,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((warnings) => {
     const obj2 = { style: tmp.container, children: null };
     const obj3 = { style: tmp.contentContainer, children: null };
     const obj4 = { color: tmp5(587).colors.TEXT_FEEDBACK_WARNING, size: "md" };
-    let items = [closure_4(tmp2(4806).CircleErrorIcon, obj4), , , ];
+    let items = [closure_4(tmp2(5000).CircleErrorIcon, obj4), , , ];
     const obj5 = { variant: "text-md/semibold", color: "text-feedback-warning", style: tmp.text, children: tmp7 };
-    items[1] = closure_4(tmp2(4892).Text, obj5);
+    items[1] = closure_4(tmp2(5086).Text, obj5);
     let str = "text-sm/medium";
     if (manaTypeConsolidationExperiment) {
       str = "experimental/body-sm/normal";
     }
     const obj6 = { variant: str, style: tmp.text, children: tmp8 };
-    items[2] = closure_4(tmp2(4892).Text, obj6);
+    items[2] = closure_4(tmp2(5086).Text, obj6);
     let mapped;
     if (warnings != null) {
       mapped = warnings.map((children, index) => {

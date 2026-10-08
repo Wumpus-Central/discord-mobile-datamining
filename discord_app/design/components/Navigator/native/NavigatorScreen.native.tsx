@@ -1,9 +1,9 @@
-// === Module 6538: NavigatorScreen ===
+// === Module 6714: NavigatorScreen ===
 
-// Module 6538 (NavigatorScreen)
+// Module 6714 (NavigatorScreen)
 import c from "c" /* 576 */;
-import config from "config" /* 6539 */;
-import PostponeRender from "PostponeRender" /* 6540 */;
+import config from "config" /* 6715 */;
+import PostponeRender from "PostponeRender" /* 6716 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Navigator/native/NavigatorScreen.native.tsx");
 
-export const NavigatorScreen = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const NavigatorScreen = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function NavigatorScreen(arg0) {
   const cResult = c.c(12);
   ({ screen, route, navigation, viewStyle } = arg0);
   const customNavbar = screen.customNavbar;
@@ -60,7 +60,7 @@ export const NavigatorScreen = noop.memo(ReactCompilerGating.isReactCompilerEnab
     cResult[0] = customNavbar;
     cResult[1] = customNavbarResult;
   }
-}) : ((arg0) => {
+}) : (function NavigatorScreen(arg0) {
   ({ screen, route } = arg0);
   const customNavbar = screen.customNavbar;
   ({ navigation, viewStyle } = arg0);

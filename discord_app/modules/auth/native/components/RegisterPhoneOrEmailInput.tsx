@@ -1,20 +1,20 @@
-// === Module 15923: RegisterPhoneOrEmailInput ===
+// === Module 16183: RegisterPhoneOrEmailInput ===
 
-// Module 15923 (RegisterPhoneOrEmailInput)
+// Module 16183 (RegisterPhoneOrEmailInput)
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
-import PhoneOrEmailUtils from "PhoneOrEmailUtils" /* 6458 */;
+import PhoneOrEmailUtils from "PhoneOrEmailUtils" /* 6636 */;
 import noop from "module_19" /* 19 */;
-import PhoneStore from "PhoneStore" /* 6437 */;
+import PhoneStore from "PhoneStore" /* 6615 */;
 
 require = fn;
-const RegistrationUIStore = fn(15906);
+const RegistrationUIStore = fn(16165);
 ({ setRegistrationErrors: hasOwnProperty, useRegistrationUIStore: metroRequire } = RegistrationUIStore);
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/RegisterPhoneOrEmailInput.tsx");
 
-export const RegisterPhoneOrEmailInput = ReactCompilerGating.isReactCompilerEnabled() ? ((loginPhone) => {
+export const RegisterPhoneOrEmailInput = ReactCompilerGating.isReactCompilerEnabled() ? (function RegisterPhoneOrEmailInput(loginPhone) {
   const cResult = loginPhone(setLoginPhone[5]).c(37);
   loginPhone = loginPhone.loginPhone;
   const loginEmail = loginPhone.loginEmail;
@@ -56,19 +56,19 @@ export const RegisterPhoneOrEmailInput = ReactCompilerGating.isReactCompilerEnab
   const obj2 = loginPhone(setLoginPhone[6]);
   const stateFromStores = tmp(setLoginPhone[8]).useStateFromStores(tmp8, tmp9);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    class T {
+    class H {
       constructor(arg0) {
         return loginPhone.errors;
       }
     }
-    cResult[4] = T;
+    cResult[4] = H;
     class E {
       constructor() {
         return inputMode.getCountryCode();
       }
     }
   } else {
-    class T {
+    class H {
       constructor(arg0) {
         return loginPhone.errors;
       }
@@ -77,7 +77,7 @@ export const RegisterPhoneOrEmailInput = ReactCompilerGating.isReactCompilerEnab
   const tmp13 = ref(tmp12);
   closure_7 = tmp13;
   if (cResult[5] !== tmp13) {
-    class T {
+    class H {
       constructor(arg0) {
         return loginPhone.errors;
       }
@@ -90,34 +90,44 @@ export const RegisterPhoneOrEmailInput = ReactCompilerGating.isReactCompilerEnab
     }
     cResult[6] = tmp15;
   } else {
-    class T {
+    class H {
       constructor(arg0) {
         return loginPhone.errors;
       }
     }
   }
   if (cResult[7] === tmp14) {
-    class T {
+    class H {
       constructor(arg0) {
         return loginPhone.errors;
       }
     }
   }
-  const fn = function k(arg0, arg1) {
-    if (inputMode === PhoneOrEmailUtils.PhoneOrEmailSelectorForceMode.PHONE) {
-      tmp15("phone");
-      setLoginPhone(arg0, arg1);
-    } else {
-      tmp15("email");
-      setLoginEmail(arg0);
+  class L {
+    constructor(arg0, arg1) {
+      if (inputMode === closure_0(closure_2[9]).PhoneOrEmailSelectorForceMode.PHONE) {
+        tmp5 = arg1;
+        tmp6 = closure_8;
+        str2 = "phone";
+        tmp7 = closure_8("phone");
+        tmp8 = setLoginPhone;
+        tmp9 = setLoginPhone(loginPhone, arg1);
+      } else {
+        tmp = closure_8;
+        str = "email";
+        tmp2 = closure_8("email");
+        tmp3 = setLoginEmail;
+        tmp4 = setLoginEmail(loginPhone);
+      }
+      return;
     }
-  };
+  }
   cResult[7] = tmp14;
   cResult[8] = inputMode;
   cResult[9] = setLoginEmail;
   cResult[10] = setLoginPhone;
-  cResult[11] = fn;
-}) : ((loginPhone) => {
+  cResult[11] = L;
+}) : (function RegisterPhoneOrEmailInput(loginPhone) {
   loginPhone = loginPhone.loginPhone;
   const loginEmail = loginPhone.loginEmail;
   const setLoginPhone = loginPhone.setLoginPhone;

@@ -1,16 +1,16 @@
-// === Module 9844: useInappropriateConversationSafetyToolsWarningForChannel ===
+// === Module 10405: useInappropriateConversationSafetyToolsWarningForChannel ===
 
-// Module 9844 (useInappropriateConversationSafetyToolsWarningForChannel)
+// Module 10405 (useInappropriateConversationSafetyToolsWarningForChannel)
 import c from "c" /* 576 */;
-import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 9803 */;
-import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 9805 */;
-import useSafetyAlertsSettingOrDefault from "useSafetyAlertsSettingOrDefault" /* 9806 */;
+import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 10366 */;
+import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 10368 */;
+import useSafetyAlertsSettingOrDefault from "useSafetyAlertsSettingOrDefault" /* 10369 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationSafetyToolsWarningForChannel.tsx");
 
-export const useInappropriateConversationSafetyToolsWarningForChannel = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useInappropriateConversationSafetyToolsWarningForChannel = ReactCompilerGating.isReactCompilerEnabled() ? (function useInappropriateConversationSafetyToolsWarningForChannel(arg0) {
   const cResult = c.c(6);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { location: "safety-tools-button" };
@@ -74,7 +74,7 @@ export const useInappropriateConversationSafetyToolsWarningForChannel = ReactCom
     }
   }
   const tmpResult4 = useInappropriateConversationWarningsForChannel;
-}) : ((arg0) => {
+}) : (function useInappropriateConversationSafetyToolsWarningForChannel(arg0) {
   const isEligibleForInappropriateConversationWarning = SelfModInappropriateConversationExperiment.useIsEligibleForInappropriateConversationWarning({ location: "safety-tools-button" });
   const safetyAlertsSettingOrDefault = useSafetyAlertsSettingOrDefault.useSafetyAlertsSettingOrDefault();
   const inappropriateConversationWarningsForChannel = useInappropriateConversationWarningsForChannel.useInappropriateConversationWarningsForChannel(arg0);

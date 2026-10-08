@@ -1,9 +1,9 @@
-// === Module 13098: MessageActivityInviteCoverImageStore ===
+// === Module 13376: MessageActivityInviteCoverImageStore ===
 
-// Module 13098 (MessageActivityInviteCoverImageStore)
+// Module 13376 (MessageActivityInviteCoverImageStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import privDefault from "priv" /* 1444 */;
+import privDefault from "priv" /* 1456 */;
 
 let closure_0 = new privDefault({ max: 500 });
 const Store = initializeDefault.Store;

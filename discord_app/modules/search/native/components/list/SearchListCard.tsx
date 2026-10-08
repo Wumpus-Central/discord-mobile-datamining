@@ -1,24 +1,24 @@
-// === Module 16862: SearchListCard ===
+// === Module 17141: SearchListCard ===
 
-// Module 16862 (SearchListCard)
+// Module 17141 (SearchListCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1188 */;
-import UserUtilsDefault from "UserUtils" /* 4728 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import useChannelNameDefault from "useChannelName" /* 5049 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5819 */;
-import ForumIcon from "ForumIcon" /* 5879 */;
-import Card from "Card" /* 6002 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10661 */;
+import native from "native" /* 1200 */;
+import UserUtilsDefault from "UserUtils" /* 4922 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import useChannelNameDefault from "useChannelName" /* 5417 */;
+import Card from "Card" /* 6186 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8134 */;
+import ForumIcon from "ForumIcon" /* 8191 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10261 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { channelName: { flexShrink: 1, marginStart: 4 }, channelIcon: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT }, avatar: { marginRight: 2 }, channel: { flexDirection: "row", alignItems: "center" }, author: { flexDirection: "row", alignItems: "center" }, authorName: { flexShrink: 1, marginStart: 2 }, container: null, content: null, footer: null, thumbnail: null, privateChannelIcon: null, icon: null, gdmIcon: null };
 let obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj2.container = { flex: 1, padding: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden" };
@@ -31,7 +31,7 @@ obj2.icon = { marginRight: 4 };
 obj2.gdmIcon = { width: 18 };
 let closure_7 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function SearchListContentAuthor(arg0) {
   const cResult = c.c(13);
   ({ author, avatarSource } = arg0);
   const tmp4 = closure_7();
@@ -85,7 +85,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = tmp7;
   tmp6 = tmp7;
   const obj5 = { source: avatarSource, size: native.AvatarSizes.SIZE_16, style: tmp4.avatar, avatarDecoration: author.avatarDecoration };
-}) : ((author) => {
+}) : (function SearchListContentAuthor(author) {
   author = author.author;
   const tmp = closure_7();
   const obj = { style: tmp.author, children: null };
@@ -99,7 +99,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 });
 let closure_8 = tmp3;
 ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function SearchListPrivateChannel(channel) {
   const cResult = c.c(18);
   channel = channel.channel;
   let channel2 = closure_7();
@@ -186,7 +186,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     cResult[17] = tmp16;
     tmp13 = tmp16;
   }
-}) : ((channel) => {
+}) : (function SearchListPrivateChannel(channel) {
   channel = channel.channel;
   const tmp = closure_7();
   const obj = { style: null, children: null };
@@ -215,7 +215,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   return tmp5Result;
 });
 ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function SearchListGuildChannel(channel) {
   const cResult = c.c(12);
   channel = channel.channel;
   const tmp4 = closure_7();
@@ -268,7 +268,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   cResult[4] = tmp9;
   tmp8 = tmp9;
   const obj4 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: tmp6, color: tmp4.channelIcon.color };
-}) : ((channel) => {
+}) : (function SearchListGuildChannel(channel) {
   channel = channel.channel;
   const tmp = closure_7();
   const tmp2 = useChannelNameDefault(channel);
@@ -282,7 +282,7 @@ let closure_10 = tmp4;
 fn(558);
 let obj5 = { flex: 1, overflow: "hidden", borderTopRightRadius: nativeDefault.radii.lg, borderTopLeftRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE };
 ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function SearchListCardContainer(arg0) {
   const cResult = c.c(7);
   ({ children, onPress, containerStyle } = arg0);
   const tmp4 = closure_7();
@@ -311,7 +311,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = tmp4.container;
   cResult[2] = items;
   tmp5 = items;
-}) : ((arg0) => {
+}) : (function SearchListCardContainer(arg0) {
   ({ children, onPress, containerStyle } = arg0);
   const obj = { shadow: "low", border: "subtle", onPress, style: null, children };
   const items = [closure_7().container, containerStyle];
@@ -319,7 +319,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return hasOwnProperty(Card.Card, obj);
 });
 ReactCompilerGating = fn(558);
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((thumbnail) => {
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function SearchListCardThumbnail(thumbnail) {
   const cResult = c.c(3);
   thumbnail = thumbnail.thumbnail;
   const tmp2 = closure_7();
@@ -334,9 +334,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((thumbnail) => {
   cResult[1] = thumbnail;
   cResult[2] = tmp4;
   tmp3 = tmp4;
-}) : ((children) => hasOwnProperty(View, { style: closure_7().thumbnail, children: children.thumbnail }));
+}) : (function SearchListCardThumbnail(children) {
+  return hasOwnProperty(View, { style: closure_7().thumbnail, children: children.thumbnail });
+});
 ReactCompilerGating = fn(558);
-let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function SearchListCardContent(arg0) {
   const cResult = c.c(8);
   ({ label, subLabel } = arg0);
   const tmp4 = closure_7();
@@ -381,7 +383,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[6] = tmp7;
   cResult[7] = tmp10;
   tmp9 = tmp10;
-}) : ((arg0) => {
+}) : (function SearchListCardContent(arg0) {
   ({ label, subLabel } = arg0);
   const obj = { style: closure_7().content, children: null };
   let tmp3 = label;
@@ -407,7 +409,7 @@ export const SearchListGuildChannel = tmp4;
 export const SearchListCardContainer = tmp5;
 export const SearchListCardThumbnail = tmp6;
 export const SearchListCardContent = tmp7;
-export const SearchListCardFooter = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const SearchListCardFooter = ReactCompilerGating.isReactCompilerEnabled() ? (function SearchListCardFooter(arg0) {
   const cResult = c.c(11);
   ({ author, avatarSource, channel } = arg0);
   const tmp2 = closure_7();
@@ -460,7 +462,7 @@ export const SearchListCardFooter = ReactCompilerGating.isReactCompilerEnabled()
   cResult[5] = avatarSource;
   cResult[6] = tmp14;
   tmp13 = tmp14;
-}) : ((channel) => {
+}) : (function SearchListCardFooter(channel) {
   channel = channel.channel;
   ({ author, avatarSource } = channel);
   const items = [channel];

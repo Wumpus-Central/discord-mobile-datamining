@@ -1,20 +1,20 @@
-// === Module 9764: AudienceGridRow ===
+// === Module 10967: AudienceGridRow ===
 
-// Module 9764 (AudienceGridRow)
+// Module 10967 (AudienceGridRow)
 import c from "c" /* 576 */;
-import BlankAudienceTileDefault from "BlankAudienceTile" /* 9765 */;
-import AudienceTileDefault from "AudienceTile" /* 9766 */;
+import BlankAudienceTileDefault from "BlankAudienceTile" /* 10968 */;
+import AudienceTileDefault from "AudienceTile" /* 10969 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const MAX_AUDIENCE_ROW_LIMIT = fn(5578).MAX_AUDIENCE_ROW_LIMIT;
+const MAX_AUDIENCE_ROW_LIMIT = fn(5888).MAX_AUDIENCE_ROW_LIMIT;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles({ rowContainer: { flex: 1, flexDirection: "row", marginVertical: 16, paddingHorizontal: 4, justifyContent: "space-between" } });
 let ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((count) => {
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function BlankAudience(count) {
   const cResult = c.c(2);
   count = count.count;
   if (cResult[0] !== count) {
@@ -29,7 +29,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((count) => {
     tmp2 = cResult[1];
   }
   return tmp2;
-}) : ((count) => {
+}) : (function BlankAudience(count) {
   count = count.count;
   const items = [];
   for (let num = 0; num < count; num = num + 1) {
@@ -42,7 +42,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/native/components/AudienceGridRow.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function AudienceGridRow(channel) {
   const cResult = channel(576).c(18);
   channel = channel.channel;
   ({ participants, renderBlankAudience, theme } = channel);
@@ -126,7 +126,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
   cResult[4] = items1;
   tmp6 = items1;
   const obj = channel(576);
-}) : ((theme) => {
+}) : (function AudienceGridRow(theme) {
   ({ channel: require, participants, renderBlankAudience } = theme);
   if (renderBlankAudience === undefined) {
     renderBlankAudience = true;

@@ -1,13 +1,13 @@
-// === Module 9862: notifications/NotificationUtils ===
+// === Module 10422: notifications/NotificationUtils ===
 
-// Module 9862 (notifications/NotificationUtils)
+// Module 10422 (notifications/NotificationUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import FlagUtilsAll from "FlagUtils" /* 1390 */;
-import MuteTimers from "MuteTimers" /* 4518 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5077 */;
+import FlagUtilsAll from "FlagUtils" /* 1402 */;
+import MuteTimers from "MuteTimers" /* 4710 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5971 */;
 
 require = fn;
 const UserNotificationSettings = fn(1085).UserNotificationSettings;
@@ -97,7 +97,7 @@ export const filterOverrides = function filterOverrides(channelOverrides, arg1) 
     return tmp7;
   });
 };
-export const useShouldUseNewNotificationSystem = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useShouldUseNewNotificationSystem = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldUseNewNotificationSystem() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserGuildSettingsStore];
@@ -112,7 +112,7 @@ export const useShouldUseNewNotificationSystem = ReactCompilerGating.isReactComp
     [tmp4, tmp5] = cResult;
   }
   return initialize.useStateFromStores(tmp4, tmp5);
-}) : (() => {
+}) : (function useShouldUseNewNotificationSystem() {
   const items = [UserGuildSettingsStore];
   return initialize.useStateFromStores(items, () => useNewNotifications.useNewNotifications);
 });

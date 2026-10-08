@@ -1,11 +1,11 @@
-// === Module 10927: apexExperiment ===
+// === Module 10578: apexExperiment ===
 
-// Module 10927 (apexExperiment)
+// Module 10578 (apexExperiment)
 import c from "c" /* 576 */;
-import QuestOrbMultiplierHooks from "QuestOrbMultiplierHooks" /* 10020 */;
-import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 10021 */;
-import QuestOrbsMultiplier from "QuestOrbsMultiplier" /* 10928 */;
-import ApexExperiment_mod from "ApexExperiment" /* 1440 */;
+import QuestOrbMultiplierHooks from "QuestOrbMultiplierHooks" /* 9551 */;
+import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 9552 */;
+import QuestOrbsMultiplier from "QuestOrbsMultiplier" /* 10579 */;
+import ApexExperiment_mod from "ApexExperiment" /* 1452 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -79,7 +79,7 @@ export const CustomAppStoreOverlayExperiment = apexExperiment2;
 export const IosAttributionFeatureGate = apexExperiment3;
 export const MutedVideoQuestNewDefaultsVariant = obj9;
 export const MutedVideoQuestNewDefaultsExperiment = apexExperiment4;
-export const useQuestOrbsMultiplierMarketing = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+export const useQuestOrbsMultiplierMarketing = ReactCompilerGating.isReactCompilerEnabled() ? (function useQuestOrbsMultiplierMarketing(location) {
   const cResult = c.c(4);
   if (cResult[0] !== location) {
     const obj2 = { location };
@@ -100,7 +100,7 @@ export const useQuestOrbsMultiplierMarketing = ReactCompilerGating.isReactCompil
     tmp7 = cResult[3];
   }
   return tmp7;
-}) : ((location) => {
+}) : (function useQuestOrbsMultiplierMarketing(location) {
   const questOrbMultiplierEligibility = QuestOrbMultiplierHooks.useQuestOrbMultiplierEligibility();
   const obj = { location };
   const tmp4 = questOrbMultiplierEligibility !== QuestOrbMultiplierUtils.QuestOrbMultiplierEligibilityType.INELIGIBLE && questOrbMultiplierEligibility !== QuestOrbMultiplierUtils.QuestOrbMultiplierEligibilityType.XBOX_GAME_PASS && closure_2.useConfig({ location }).enabled;

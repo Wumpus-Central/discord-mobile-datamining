@@ -1,10 +1,10 @@
-// === Module 12180: useFeaturedExpiringPowerup ===
+// === Module 12259: useFeaturedExpiringPowerup ===
 
-// Module 12180 (useFeaturedExpiringPowerup)
-import CollectiblesUtils from "CollectiblesUtils" /* 7078 */;
+// Module 12259 (useFeaturedExpiringPowerup)
+import CollectiblesUtils from "CollectiblesUtils" /* 7264 */;
 import noop from "module_19" /* 19 */;
-import GameServerStore from "GameServerStore" /* 7683 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 4773 */;
+import GameServerStore from "GameServerStore" /* 8004 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4967 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useFeaturedExpiringPowerup.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFeaturedExpiringPowerup(arg0) {
   _require = arg0;
   const cResult = require("c").c(18);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp8 = cResult[3];
   }
   if (cResult[4] !== arg0) {
-    const fn2 = function p() {
+    const fn2 = function _() {
       return GameServerStore.getStateForGuild(closure_0);
     };
     cResult[4] = arg0;
@@ -114,89 +114,193 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     if (0 !== found.length) {
       const _Symbol = Symbol;
       if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn3 = function x(ends_at, ends_at2) {
-          let tmp = ends_at;
-          if (ends_at2.ends_at > ends_at.ends_at) {
-            tmp = ends_at2;
+        class S {
+          constructor(arg0, arg1) {
+            tmp = arg0;
+            if (arg1.ends_at > arg0.ends_at) {
+              tmp = arg1;
+            }
+            return tmp;
           }
-          return tmp;
-        };
-        cResult[11] = fn3;
-        let tmp25 = fn3;
+        }
+        cResult[11] = S;
       } else {
-        tmp25 = cResult[11];
-      }
-      const reduced = found.reduce(tmp25);
-      let title;
-      if (stateFromStores != null) {
-        if (stateFromStores.allPowerups[reduced.sku_id] != null) {
-          title = tmp28.title;
+        class S {
+          constructor(arg0, arg1) {
+            tmp = arg0;
+            if (arg1.ends_at > arg0.ends_at) {
+              tmp = arg1;
+            }
+            return tmp;
+          }
         }
       }
-      if (title == null) {
-        title = null;
+      const reduced = found.reduce(S);
+      if (stateFromStores != null) {
+        class S {
+          constructor(arg0, arg1) {
+            tmp = arg0;
+            if (arg1.ends_at > arg0.ends_at) {
+              tmp = arg1;
+            }
+            return tmp;
+          }
+        }
+        if (tmp28 != null) {
+          class S {
+            constructor(arg0, arg1) {
+              tmp = arg0;
+              if (arg1.ends_at > arg0.ends_at) {
+                tmp = arg1;
+              }
+              return tmp;
+            }
+          }
+        }
       }
-      const sku = reduced.sku;
-      let game_server;
-      if (sku != null) {
-        const tenant_metadata = sku.tenant_metadata;
-        if (tenant_metadata != null) {
-          const guild_monetization = tenant_metadata.guild_monetization;
-          if (guild_monetization != null) {
-            game_server = guild_monetization.game_server;
+      if (undefined == null) {
+        class S {
+          constructor(arg0, arg1) {
+            tmp = arg0;
+            if (arg1.ends_at > arg0.ends_at) {
+              tmp = arg1;
+            }
+            return tmp;
+          }
+        }
+      }
+      if (reduced.sku != null) {
+        class S {
+          constructor(arg0, arg1) {
+            tmp = arg0;
+            if (arg1.ends_at > arg0.ends_at) {
+              tmp = arg1;
+            }
+            return tmp;
+          }
+        }
+        if (tmp30 != null) {
+          class S {
+            constructor(arg0, arg1) {
+              tmp = arg0;
+              if (arg1.ends_at > arg0.ends_at) {
+                tmp = arg1;
+              }
+              return tmp;
+            }
+          }
+          if (tmp31 != null) {
+            class S {
+              constructor(arg0, arg1) {
+                tmp = arg0;
+                if (arg1.ends_at > arg0.ends_at) {
+                  tmp = arg1;
+                }
+                return tmp;
+              }
+            }
+          }
+        }
+      }
+      if (null === undefined) {
+        class S {
+          constructor(arg0, arg1) {
+            tmp = arg0;
+            if (arg1.ends_at > arg0.ends_at) {
+              tmp = arg1;
+            }
+            return tmp;
           }
         }
       }
       const _Math = Math;
       const _Date = Date;
       const date = new Date(reduced.ends_at);
-      const bound = Math.max(0, tmp(7078).getDaysRemaining(date));
-      let metadata = reduced.metadata;
-      let num10;
-      if (metadata != null) {
-        num10 = metadata.num_expiring_boosts;
-      }
-      if (num10 == null) {
-        num10 = 0;
-      }
-      if (cResult[12] === bound) {
-        if (cResult[13] === reduced) {
-          if (cResult[14] === tmp30) {
-            if (cResult[15] === title) {
+      const bound = Math.max(0, tmp(7264).getDaysRemaining(date));
+      if (reduced.metadata != null) {
+        class S {
+          constructor(arg0, arg1) {
+            tmp = arg0;
+            if (arg1.ends_at > arg0.ends_at) {
+              tmp = arg1;
             }
+            return tmp;
           }
         }
       }
-      const obj2 = { name: title, daysUntilExpiry: bound, numExpiringBoosts: num10, isGameServer: null != game_server, skuId: reduced.sku_id };
+      if (undefined == null) {
+        class S {
+          constructor(arg0, arg1) {
+            tmp = arg0;
+            if (arg1.ends_at > arg0.ends_at) {
+              tmp = arg1;
+            }
+            return tmp;
+          }
+        }
+      }
+      if (cResult[12] === bound) {
+        class S {
+          constructor(arg0, arg1) {
+            tmp = arg0;
+            if (arg1.ends_at > arg0.ends_at) {
+              tmp = arg1;
+            }
+            return tmp;
+          }
+        }
+      }
+      const obj2 = { name: undefined, daysUntilExpiry: bound, numExpiringBoosts: undefined, isGameServer: null != undefined, skuId: reduced.sku_id };
       cResult[12] = bound;
       cResult[13] = reduced;
-      cResult[14] = null != game_server;
-      cResult[15] = title;
-      cResult[16] = num10;
+      cResult[14] = null != undefined;
+      cResult[15] = undefined;
+      cResult[16] = undefined;
       cResult[17] = obj2;
-      const tmpResult6 = tmp(7078);
+      const tmpResult6 = tmp(7264);
     }
   }
   cResult[6] = expiringPowerupCoachmarkEnabled;
-  let entitlements2;
   if (stateFromStores1 != null) {
-    entitlements2 = stateFromStores1.entitlements;
+    class S {
+      constructor(arg0, arg1) {
+        tmp = arg0;
+        if (arg1.ends_at > arg0.ends_at) {
+          tmp = arg1;
+        }
+        return tmp;
+      }
+    }
   }
-  cResult[7] = entitlements2;
-  let allPowerups1;
+  cResult[7] = undefined;
   if (stateFromStores != null) {
-    allPowerups1 = stateFromStores.allPowerups;
+    class S {
+      constructor(arg0, arg1) {
+        tmp = arg0;
+        if (arg1.ends_at > arg0.ends_at) {
+          tmp = arg1;
+        }
+        return tmp;
+      }
+    }
   }
-  cResult[8] = allPowerups1;
-  let unlockedPowerups2;
+  cResult[8] = undefined;
   if (stateFromStores != null) {
-    unlockedPowerups2 = stateFromStores.unlockedPowerups;
+    class S {
+      constructor(arg0, arg1) {
+        tmp = arg0;
+        if (arg1.ends_at > arg0.ends_at) {
+          tmp = arg1;
+        }
+        return tmp;
+      }
+    }
   }
-  cResult[9] = unlockedPowerups2;
+  cResult[9] = undefined;
   cResult[10] = undefined;
   tmp17 = tmp18;
   const tmpResult5 = require("ExpiringPowerupCoachmarkExperiment");
-}) : ((arg0) => {
+}) : (function useFeaturedExpiringPowerup(arg0) {
   _require = arg0;
   let items = [GuildPowerupsStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => GuildPowerupsStore.getStateForGuild(closure_0));

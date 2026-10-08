@@ -1,19 +1,19 @@
-// === Module 10477: GiftingPromotionUtils ===
+// === Module 10074: GiftingPromotionUtils ===
 
-// Module 10477 (GiftingPromotionUtils)
-import dismissible_content from "dismissible_content" /* 2036 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4704 */;
-import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10482 */;
-import MarketingComponentType from "MarketingComponentType" /* 10483 */;
+// Module 10074 (GiftingPromotionUtils)
+import dismissible_content from "dismissible_content" /* 2048 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4898 */;
+import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10079 */;
+import MarketingComponentType from "MarketingComponentType" /* 10080 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PromotionsStore from "PromotionsStore" /* 10409 */;
+import PromotionsStore from "PromotionsStore" /* 10006 */;
 
 require = fn;
-const SubscriptionPlans = fn(1379).SubscriptionPlans;
+const SubscriptionPlans = fn(1391).SubscriptionPlans;
 fn(558);
 let ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFetchClaimableGiftingPromotionRewardSkuIds() {
   const cResult = require("c").c(8);
   const tmp4 = purchases(hasPreviouslyFetched.useState(), 2);
   _require = tmp4[1];
@@ -49,7 +49,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       }
     }
   }
-  const fn2 = function b() {
+  const fn2 = function h() {
     if (hasPreviouslyFetched) {
       if (!ref.current) {
         if (stateFromStoresArray.length > 0) {
@@ -73,7 +73,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[7] = items1;
   tmp11 = items1;
   tmp10 = fn2;
-}) : (() => {
+}) : (function useFetchClaimableGiftingPromotionRewardSkuIds() {
   const tmp = purchases(hasPreviouslyFetched.useState(), 2);
   _require = tmp[1];
   const items = [fetchPurchasesError];
@@ -103,9 +103,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   return tmp[0];
 });
 ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) => {
-  const items = [, ];
-  ({ PREMIUM_YEAR_TIER_2: arr[0], PREMIUM_MONTH_TIER_2: arr[1] } = SubscriptionPlans);
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldShowSelectFreeSkuStep(id, arg1, arg2) {
+  const items = [, , ];
+  ({ PREMIUM_YEAR_TIER_2: arr[0], PREMIUM_MONTH_TIER_2: arr[1], PREMIUM_3_MONTH_TIER_2: arr[2] } = SubscriptionPlans);
   id = undefined;
   if (id != null) {
     id = id.id;
@@ -123,9 +123,9 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) => {
     tmp4 = tmp3;
   }
   return tmp4;
-}) : ((id, arg1, arg2) => {
-  const items = [, ];
-  ({ PREMIUM_YEAR_TIER_2: arr[0], PREMIUM_MONTH_TIER_2: arr[1] } = SubscriptionPlans);
+}) : (function useShouldShowSelectFreeSkuStep(id, arg1, arg2) {
+  const items = [, , ];
+  ({ PREMIUM_YEAR_TIER_2: arr[0], PREMIUM_MONTH_TIER_2: arr[1], PREMIUM_3_MONTH_TIER_2: arr[2] } = SubscriptionPlans);
   id = undefined;
   if (id != null) {
     id = id.id;
@@ -145,8 +145,8 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) => {
   return tmp4;
 });
 function useIsPlanEligibleForGiftingPromotion(id) {
-  const items = [, ];
-  ({ PREMIUM_YEAR_TIER_2: arr[0], PREMIUM_MONTH_TIER_2: arr[1] } = SubscriptionPlans);
+  const items = [, , ];
+  ({ PREMIUM_YEAR_TIER_2: arr[0], PREMIUM_MONTH_TIER_2: arr[1], PREMIUM_3_MONTH_TIER_2: arr[2] } = SubscriptionPlans);
   id = undefined;
   if (id != null) {
     id = id.id;
@@ -163,9 +163,9 @@ export const getRewardAssetIdMap = function getRewardAssetIdMap(arr) {
   return map;
 };
 export const useShouldShowSelectFreeSkuStep = tmp3;
-export const useShouldAutoSelectGiftingPromotionReward = ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) => {
-  const items = [, ];
-  ({ PREMIUM_YEAR_TIER_2: arr[0], PREMIUM_MONTH_TIER_2: arr[1] } = SubscriptionPlans);
+export const useShouldAutoSelectGiftingPromotionReward = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldAutoSelectGiftingPromotionReward(id, arg1, arg2) {
+  const items = [, , ];
+  ({ PREMIUM_YEAR_TIER_2: arr[0], PREMIUM_MONTH_TIER_2: arr[1], PREMIUM_3_MONTH_TIER_2: arr[2] } = SubscriptionPlans);
   id = undefined;
   if (id != null) {
     id = id.id;
@@ -182,9 +182,9 @@ export const useShouldAutoSelectGiftingPromotionReward = ReactCompilerGating.isR
     tmp3 = arg1;
   }
   return tmp3;
-}) : ((id, arg1, arg2) => {
-  const items = [, ];
-  ({ PREMIUM_YEAR_TIER_2: arr[0], PREMIUM_MONTH_TIER_2: arr[1] } = SubscriptionPlans);
+}) : (function useShouldAutoSelectGiftingPromotionReward(id, arg1, arg2) {
+  const items = [, , ];
+  ({ PREMIUM_YEAR_TIER_2: arr[0], PREMIUM_MONTH_TIER_2: arr[1], PREMIUM_3_MONTH_TIER_2: arr[2] } = SubscriptionPlans);
   id = undefined;
   if (id != null) {
     id = id.id;

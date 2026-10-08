@@ -1,6 +1,6 @@
-// === Module 16789: useConjureTraceDetail ===
+// === Module 17064: useConjureTraceDetail ===
 
-// Module 16789 (useConjureTraceDetail)
+// Module 17064 (useConjureTraceDetail)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/debug/useConjureTraceDetail.tsx");
 
-export const useConjureTraceDetail = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, detailId) => {
+export const useConjureTraceDetail = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjureTraceDetail(arg0, detailId) {
   _require = arg0;
   dependencyMap = detailId;
   const cResult = require("c").c(11);
@@ -28,11 +28,11 @@ export const useConjureTraceDetail = ReactCompilerGating.isReactCompilerEnabled(
       return null;
     } else {
       if (cResult[4] !== detailId) {
-        const cachedTraceDetailResult = tmp(16785).cachedTraceDetail(detailId);
+        const cachedTraceDetailResult = tmp(17060).cachedTraceDetail(detailId);
         cResult[4] = detailId;
         cResult[5] = cachedTraceDetailResult;
         let tmp9 = cachedTraceDetailResult;
-        const tmpResult = tmp(16785);
+        const tmpResult = tmp(17060);
       } else {
         tmp9 = cResult[5];
       }
@@ -84,7 +84,7 @@ export const useConjureTraceDetail = ReactCompilerGating.isReactCompilerEnabled(
   tmp7 = items;
   tmp6 = fn;
   const tmp4 = _slicedToArray(noop.useState(null), 2);
-}) : ((arg0, detailId) => {
+}) : (function useConjureTraceDetail(arg0, detailId) {
   _require = arg0;
   dependencyMap = detailId;
   [tmp2, _slicedToArray] = noop.useState(null);

@@ -1,10 +1,10 @@
-// === Module 10662: useRecipientsLabel ===
+// === Module 10262: useRecipientsLabel ===
 
-// Module 10662 (useRecipientsLabel)
+// Module 10262 (useRecipientsLabel)
 import util from "util" /* 1126 */;
-import GlobalUtils from "GlobalUtils" /* 1375 */;
+import GlobalUtils from "GlobalUtils" /* 1387 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
@@ -37,7 +37,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/useRecipientsLabel.tsx");
 
-export const useRecipientsLabel = ReactCompilerGating.isReactCompilerEnabled() ? ((recipients) => {
+export const useRecipientsLabel = ReactCompilerGating.isReactCompilerEnabled() ? (function useRecipientsLabel(recipients) {
   _require = recipients;
   const cResult = require("c").c(5);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -70,7 +70,7 @@ export const useRecipientsLabel = ReactCompilerGating.isReactCompilerEnabled() ?
     cResult[4] = tmp10;
   }
   const tmpResult = require("initialize");
-}) : ((arg0) => {
+}) : (function useRecipientsLabel(arg0) {
   _require = arg0;
   const items = [UserStore];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {

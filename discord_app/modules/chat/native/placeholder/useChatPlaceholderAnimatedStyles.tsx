@@ -1,20 +1,20 @@
-// === Module 12320: useChatPlaceholderAnimatedStyles ===
+// === Module 12418: useChatPlaceholderAnimatedStyles ===
 
-// Module 12320 (useChatPlaceholderAnimatedStyles)
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import timing from "timing" /* 4897 */;
-import timingPresets from "timingPresets" /* 4900 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+// Module 12418 (useChatPlaceholderAnimatedStyles)
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import timing from "timing" /* 5091 */;
+import timingPresets from "timingPresets" /* 5094 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 require = fn;
-let TIMING_CONFIG = { duration: 1300, easing: fn(1188).STANDARD_EASING };
+let TIMING_CONFIG = { duration: 1300, easing: fn(1200).STANDARD_EASING };
 const __initData = { code: "function useChatPlaceholderAnimatedStylesTsx1(){const{visible,animated,useReducedMotion,withRepeat,withSequence,withTiming,timingNone,TIMING_CONFIG}=this.__closure;if(!visible){return{opacity:0};}else{if(!animated||useReducedMotion){return{opacity:0.7};}}return{opacity:withRepeat(withSequence(withTiming(0.3,timingNone),withTiming(0.7,TIMING_CONFIG),withTiming(0.3,TIMING_CONFIG)),-1)};}" };
 const __initData2 = { code: "function useChatPlaceholderAnimatedStylesTsx2(){const{visible,animated,useReducedMotion,withRepeat,withSequence,withTiming,timingNone,TIMING_CONFIG}=this.__closure;if(!visible){return{opacity:0};}else if(!animated||useReducedMotion){return{opacity:0.7};}return{opacity:withRepeat(withSequence(withTiming(0.3,timingNone),withTiming(0.7,TIMING_CONFIG),withTiming(0.3,TIMING_CONFIG)),-1)};}" };
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat/native/placeholder/useChatPlaceholderAnimatedStyles.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((visible) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useChatPlaceholderAnimatedStyles(visible) {
   TIMING_CONFIG = visible(animated[3]);
   const cResult = TIMING_CONFIG.c(2);
   visible = visible.visible;
@@ -55,7 +55,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((visible) => {
   fn2.__workletHash = 7324174224540;
   fn2.__initData = __initData;
   return tmpResult2.useAnimatedStyle(fn2);
-}) : ((visible) => {
+}) : (function useChatPlaceholderAnimatedStyles(visible) {
   visible = visible.visible;
   const animated = visible.animated;
   let stateFromStores;

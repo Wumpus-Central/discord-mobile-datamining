@@ -1,22 +1,22 @@
-// === Module 9953: useEmojiAndSource ===
+// === Module 9480: useEmojiAndSource ===
 
-// Module 9953 (useEmojiAndSource)
-import EmojiTypes from "EmojiTypes" /* 4532 */;
+// Module 9480 (useEmojiAndSource)
+import EmojiTypes from "EmojiTypes" /* 4724 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2074 */;
-import EmojiStore from "EmojiStore" /* 5645 */;
+import GuildStore from "GuildStore" /* 2086 */;
+import EmojiStore from "EmojiStore" /* 5992 */;
 
 require = fn;
-const ExpressionSourceRecord = fn(5979);
+const ExpressionSourceRecord = fn(6162);
 ({ ExpressionSourceGuildRecord: closure_7, EmojiSourceDataTypes: closure_8, getEmojiSourceData: closure_9 } = ExpressionSourceRecord);
 const GuildFeatures = fn(1085).GuildFeatures;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/emojis/hooks/useEmojiAndSource.tsx");
 
-export const useEmojiAndSource = ReactCompilerGating.isReactCompilerEnabled() ? ((emojiId) => {
+export const useEmojiAndSource = ReactCompilerGating.isReactCompilerEnabled() ? (function useEmojiAndSource(emojiId) {
   const cResult = emojiId(refreshPositionKey[9]).c(21);
   emojiId = emojiId.emojiId;
   refreshPositionKey = emojiId.refreshPositionKey;
@@ -471,7 +471,7 @@ export const useEmojiAndSource = ReactCompilerGating.isReactCompilerEnabled() ? 
       if (current != null) {
         currentResult = current();
       }
-      closure_0 = closure_2(/* F152355 */ function() { ... });
+      closure_0 = closure_2(/* F153426 */ function() { ... });
       if (closure_2) {
         tmp4 = (function fetch() { ... })();
       } else {
@@ -489,7 +489,7 @@ export const useEmojiAndSource = ReactCompilerGating.isReactCompilerEnabled() ? 
   cResult[11] = B;
   cResult[12] = items1;
   ref = noop.useRef(refreshPositionKey);
-}) : ((emojiId) => {
+}) : (function useEmojiAndSource(emojiId) {
   emojiId = emojiId.emojiId;
   const refreshPositionKey = emojiId.refreshPositionKey;
   closure_2 = undefined;

@@ -1,20 +1,20 @@
-// === Module 11651: ForumPostMessageContent ===
+// === Module 11716: ForumPostMessageContent ===
 
-// Module 11651 (ForumPostMessageContent)
+// Module 11716 (ForumPostMessageContent)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import useNativeForumPostContentDefault from "useNativeForumPostContent" /* 11652 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import useNativeForumPostContentDefault from "useNativeForumPostContent" /* 11717 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_4 = createStyles.createStyles({ text: { alignSelf: "flex-start" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPostMessageContent.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((hasUnreads) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPostMessageContent(hasUnreads) {
   const cResult = c.c(15);
   ({ messageContent, message, isMessageDeleted, messageLoaded, lineClamp, senderModifier } = hasUnreads);
   let num = 2;
@@ -78,7 +78,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((hasUnreads) => {
   cResult[4] = senderModifier;
   cResult[5] = obj3;
   tmp5 = obj3;
-}) : ((senderModifier) => {
+}) : (function ForumPostMessageContent(senderModifier) {
   let num = senderModifier.lineClamp;
   ({ messageContent, message, isMessageDeleted, hasUnreads, messageLoaded } = senderModifier);
   if (num === undefined) {

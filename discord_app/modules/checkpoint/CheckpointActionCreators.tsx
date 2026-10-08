@@ -1,8 +1,8 @@
-// === Module 15535: CheckpointActionCreators ===
+// === Module 15797: CheckpointActionCreators ===
 
-// Module 15535 (CheckpointActionCreators)
+// Module 15797 (CheckpointActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -248,6 +248,12 @@ const result = size.fileFinishedImporting("modules/checkpoint/CheckpointActionCr
 
 export const toggleMute = function toggleMute() {
   return DispatcherDefault.dispatch({ type: "CHECKPOINT_TOGGLE_MUTE" });
+};
+export const selectCharacterTrait = function selectCharacterTrait(trait, optionId) {
+  return DispatcherDefault.dispatch({ type: "CHECKPOINT_SELECT_CHARACTER_TRAIT", trait, optionId });
+};
+export const resetEditedCharacter = function resetEditedCharacter() {
+  return DispatcherDefault.dispatch({ type: "CHECKPOINT_RESET_EDITED_CHARACTER" });
 };
 export const fetchCheckpointData = function fetchCheckpointData() {
   const self = this;

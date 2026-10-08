@@ -1,12 +1,12 @@
-// === Module 14293: AvatarDuoPile ===
+// === Module 14117: AvatarDuoPile ===
 
-// Module 14293 (AvatarDuoPile)
+// Module 14117 (AvatarDuoPile)
 import _mod12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
-import ClipView from "ClipView" /* 8502 */;
-import Pile2 from "Pile" /* 10752 */;
-import ListUtils from "ListUtils" /* 12300 */;
-import CutoutableAvatarImage from "CutoutableAvatarImage" /* 12870 */;
+import ClipView from "ClipView" /* 8986 */;
+import Pile2 from "Pile" /* 11617 */;
+import ListUtils from "ListUtils" /* 12398 */;
+import CutoutableAvatarImage from "CutoutableAvatarImage" /* 13019 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ const ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/Pile/native/AvatarDuoPile.native.tsx");
 
-export const AvatarDuoPile = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const AvatarDuoPile = ReactCompilerGating.isReactCompilerEnabled() ? (function AvatarDuoPile(arg0) {
   const cResult = c.c(12);
   if (cResult[0] !== arg0) {
     ({ size, children } = arg0);
@@ -63,7 +63,7 @@ export const AvatarDuoPile = ReactCompilerGating.isReactCompilerEnabled() ? ((ar
     cResult[11] = tmp20;
     tmp18 = tmp20;
   }
-}) : ((size) => {
+}) : (function AvatarDuoPile(size) {
   size = size.size;
   const merged = Object.assign(size, Object.assign({ size: 0, children: 0 }));
   if ("aria-label" in merged) {

@@ -1,16 +1,16 @@
-// === Module 7655: UserJoinSystemMessage ===
+// === Module 7976: UserJoinSystemMessage ===
 
-// Module 7655 (UserJoinSystemMessage)
+// Module 7976 (UserJoinSystemMessage)
 import util from "util" /* 1126 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7630 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7632 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7634 */;
-import SystemMessageUtilsDefault from "SystemMessageUtils" /* 7656 */;
-import useIsStickerReplyEnabled from "useIsStickerReplyEnabled" /* 7668 */;
-import transformSticker from "transformSticker" /* 7669 */;
-import WelcomeCTAUtils from "WelcomeCTAUtils" /* 7672 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildStore from "GuildStore" /* 2074 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7951 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7953 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7955 */;
+import SystemMessageUtilsDefault from "SystemMessageUtils" /* 7977 */;
+import useIsStickerReplyEnabled from "useIsStickerReplyEnabled" /* 7989 */;
+import transformSticker from "transformSticker" /* 7990 */;
+import WelcomeCTAUtils from "WelcomeCTAUtils" /* 7993 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import GuildStore from "GuildStore" /* 2086 */;
 
 require = fn;
 const SystemChannelFlags = fn(1085).SystemChannelFlags;

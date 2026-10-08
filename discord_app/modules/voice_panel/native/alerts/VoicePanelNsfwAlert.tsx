@@ -1,19 +1,19 @@
-// === Module 17362: VoicePanelNsfwAlert ===
+// === Module 17643: VoicePanelNsfwAlert ===
 
-// Module 17362 (VoicePanelNsfwAlert)
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5712 */;
+// Module 17643 (VoicePanelNsfwAlert)
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6102 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2074 */;
+import GuildStore from "GuildStore" /* 2086 */;
 
 const require = fn;
-const isGuildNSFW = fn(2070).isGuildNSFW;
+const isGuildNSFW = fn(2082).isGuildNSFW;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/alerts/VoicePanelNsfwAlert.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePanelNsfwAlert(guildId) {
   const cResult = guildId(dismissModalCallback[5]).c(26);
   guildId = guildId.guildId;
   const onConnect = guildId.onConnect;
@@ -127,31 +127,31 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
           tmp28 = tmp30;
         }
       }
-      const fn2 = function w() {
+      function handleDisagree() {
         GuildActionCreatorsDefault.nsfwReturnToSafety(guildId);
         dismissModalCallback();
-      };
+      }
       cResult[6] = guildId;
       cResult[7] = dismissModalCallback;
-      cResult[8] = fn2;
-      tmp10 = fn2;
+      cResult[8] = handleDisagree;
+      tmp10 = handleDisagree;
     }
   }
-  const fn = function _() {
+  function handleAgree() {
     GuildActionCreatorsDefault.nsfwAgree(guildId);
     onConnect();
     dismissModalCallback();
-  };
+  }
   cResult[2] = guildId;
   cResult[3] = onConnect;
   cResult[4] = dismissModalCallback;
-  cResult[5] = fn;
-  tmp9 = fn;
+  cResult[5] = handleAgree;
+  tmp9 = handleAgree;
   const obj2 = guildId(dismissModalCallback[6]);
-}) : ((guildId) => {
+}) : (function VoicePanelNsfwAlert(guildId) {
   guildId = guildId.guildId;
   const onConnect = guildId.onConnect;
-  dependencyMap = guildId(5720).useDismissModalCallback();
+  dependencyMap = guildId(5303).useDismissModalCallback();
   const tmp3 = isGuildNSFW(GuildStore.getGuild(guildId));
   const intl = guildId(1126).intl;
   const string = intl.string;
@@ -174,7 +174,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   const obj3 = { children: null };
   const obj4 = {
     variant: "primary",
-    onPress() {
+    onPress: function handleAgree() {
       GuildActionCreatorsDefault.nsfwAgree(guildId);
       onConnect();
       closure_2();
@@ -183,10 +183,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   };
   const intl3 = tmp(1126).intl;
   obj4.text = intl3.string(guildId(1126).t.wVq7uo);
-  const items = [closure_5(guildId(5720).AlertActionButton, obj4, "confirm"), ];
+  const items = [closure_5(guildId(5303).AlertActionButton, obj4, "confirm"), ];
   const obj5 = {
     variant: "secondary",
-    onPress() {
+    onPress: function handleDisagree() {
       GuildActionCreatorsDefault.nsfwReturnToSafety(guildId);
       closure_2();
     },
@@ -194,9 +194,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   };
   const intl4 = tmp(1126).intl;
   obj5.text = intl4.string(guildId(1126).t["/g10LC"]);
-  items[1] = closure_5(guildId(5720).AlertActionButton, obj5, "add-profile-picture");
+  items[1] = closure_5(guildId(5303).AlertActionButton, obj5, "add-profile-picture");
   obj3.children = items;
-  obj2.actions = closure_6(guildId(5720).AlertActions, obj3);
-  return closure_5(guildId(5720).AlertModal, obj2);
+  obj2.actions = closure_6(guildId(5303).AlertActions, obj3);
+  return closure_5(guildId(5303).AlertModal, obj2);
 });
 export const VOICE_PANEL_NSFW_KEY = "voice-panel-nsfw";

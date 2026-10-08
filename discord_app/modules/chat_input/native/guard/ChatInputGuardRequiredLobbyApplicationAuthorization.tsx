@@ -1,28 +1,28 @@
-// === Module 12131: ChatInputGuardRequiredLobbyApplicationAuthorization ===
+// === Module 12210: ChatInputGuardRequiredLobbyApplicationAuthorization ===
 
-// Module 12131 (ChatInputGuardRequiredLobbyApplicationAuthorization)
+// Module 12210 (ChatInputGuardRequiredLobbyApplicationAuthorization)
 import nativeDefault from "native" /* 587 */;
-import LinkingDefault from "Linking" /* 4571 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 12105 */;
+import LinkingDefault from "Linking" /* 4763 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import ChatInputGuardDefault from "ChatInputGuard" /* 12183 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const Image = fn(17).Image;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { icon: null };
 let size = { height: 40, width: 40, resizeMode: "contain", borderRadius: nativeDefault.radii.md };
 obj.icon = size;
-let closure_5 = createStyles.createStyles(obj);
+let closure_4 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardRequiredLobbyApplicationAuthorization.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((requiredLinkedLobbyApplication) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ChatInputGuardRequiredLobbyApplicationAuthorization(requiredLinkedLobbyApplication) {
   const cResult = connectionEntrypointUrl(576).c(22);
   requiredLinkedLobbyApplication = requiredLinkedLobbyApplication.requiredLinkedLobbyApplication;
   ({ showLinkedLobbyApplicationLoadingIndicator, shouldRelaunchLinkedLobbyApplication } = requiredLinkedLobbyApplication);
-  const tmp4 = closure_5();
+  const tmp4 = closure_4();
   if (!showLinkedLobbyApplicationLoadingIndicator) {
     if (null != requiredLinkedLobbyApplication) {
       if (cResult[1] !== requiredLinkedLobbyApplication) {
@@ -118,7 +118,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((requir
       let tmp9;
       if (null != tmp6) {
         const obj6 = { style: tmp4.icon, source: tmp6 };
-        tmp9 = <Image style={tmp4.icon} source={tmp6} />;
+        tmp9 = jsx(FastImageDefault, { style: tmp4.icon, source: tmp6 });
       }
       cResult[3] = tmp6;
       cResult[4] = tmp4;
@@ -134,7 +134,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((requir
     first = cResult[0];
   }
   return first;
-}) : ((requiredLinkedLobbyApplication) => {
+}) : (function ChatInputGuardRequiredLobbyApplicationAuthorization(requiredLinkedLobbyApplication) {
   requiredLinkedLobbyApplication = requiredLinkedLobbyApplication.requiredLinkedLobbyApplication;
   let connectionEntrypointUrl;
   ({ showLinkedLobbyApplicationLoadingIndicator, shouldRelaunchLinkedLobbyApplication } = requiredLinkedLobbyApplication);
@@ -143,24 +143,24 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((requir
       const iconSource = requiredLinkedLobbyApplication.getIconSource(80);
       if (null != iconSource) {
         const obj = { style: tmp.icon, source: iconSource };
-        const tmp5 = <Image style={tmp.icon} source={iconSource} />;
+        const tmp6 = jsx(FastImageDefault, { style: tmp.icon, source: iconSource });
       }
       if (shouldRelaunchLinkedLobbyApplication) {
-        const obj2 = { type: "simple-action", icon: tmp5, message: null };
+        const obj2 = { type: "simple-action", icon: tmp6, message: null };
         const intl3 = connectionEntrypointUrl(1126).intl;
         const obj3 = { name: requiredLinkedLobbyApplication.name };
         obj2.message = intl3.format(connectionEntrypointUrl(1126).t["SU2mY/"], obj3);
-        return jsx(ChatInputGuardDefault, { type: "simple-action", icon: tmp5, message: null });
+        return jsx(ChatInputGuardDefault, { type: "simple-action", icon: tmp6, message: null });
       } else {
         connectionEntrypointUrl = requiredLinkedLobbyApplication.connectionEntrypointUrl;
-        const obj4 = { type: "simple-action", icon: tmp5, message: null, actionLabel: null, actionOnPress: null };
+        const obj4 = { type: "simple-action", icon: tmp6, message: null, actionLabel: null, actionOnPress: null };
         const intl = connectionEntrypointUrl(1126).intl;
         const obj5 = { name: requiredLinkedLobbyApplication.name };
         obj4.message = intl.format(connectionEntrypointUrl(1126).t.EvDn1D, obj5);
         let stringResult;
         if (null != connectionEntrypointUrl) {
-          const intl2 = tmp10(1126).intl;
-          stringResult = intl2.string(tmp10(1126).t.S0W8Z5);
+          const intl2 = tmp11(1126).intl;
+          stringResult = intl2.string(tmp11(1126).t.S0W8Z5);
         }
         obj4.actionLabel = stringResult;
         let fn;
@@ -168,7 +168,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((requir
           fn = () => LinkingDefault.openURLExternally(connectionEntrypointUrl);
         }
         obj4.actionOnPress = fn;
-        return jsx(ChatInputGuardDefault, { type: "simple-action", icon: tmp5, message: null, actionLabel: null, actionOnPress: null });
+        return jsx(ChatInputGuardDefault, { type: "simple-action", icon: tmp6, message: null, actionLabel: null, actionOnPress: null });
       }
     }
   }

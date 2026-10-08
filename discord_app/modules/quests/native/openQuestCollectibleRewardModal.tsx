@@ -1,26 +1,26 @@
-// === Module 10981: openQuestCollectibleRewardModal ===
+// === Module 11174: openQuestCollectibleRewardModal ===
 
-// Module 10981 (openQuestCollectibleRewardModal)
+// Module 11174 (openQuestCollectibleRewardModal)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import getQuestLogger from "getQuestLogger" /* 7206 */;
-import QuestRewardUtils from "QuestRewardUtils" /* 10018 */;
-import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 10826 */;
-import hooks_QuestHooks from "hooks/QuestHooks" /* 10924 */;
-import UserStore from "UserStore" /* 1377 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import getQuestLogger from "getQuestLogger" /* 7386 */;
+import QuestRewardUtils from "QuestRewardUtils" /* 9549 */;
+import hooks_QuestHooks from "hooks/QuestHooks" /* 10575 */;
+import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 11175 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
-const QuestsExperimentLocations = fn(5630).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5977).QuestsExperimentLocations;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { title: { textAlign: "center", marginHorizontal: nativeDefault.space.PX_32 } };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((quest) => {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestCollectibleRewardModalMessages(quest) {
   const cResult = c.c(12);
   quest = quest.quest;
   const tmp4 = closure_8();
@@ -83,7 +83,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((quest) => {
   cResult[5] = tmp13;
   tmp12 = tmp13;
   const tmpResult4 = hooks_QuestHooks;
-}) : ((quest) => {
+}) : (function QuestCollectibleRewardModalMessages(quest) {
   quest = quest.quest;
   const tmp = closure_8();
   const items = [UserStore];

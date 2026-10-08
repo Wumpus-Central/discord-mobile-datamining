@@ -1,27 +1,27 @@
-// === Module 14531: UserSettingsChangeUsername ===
+// === Module 14792: UserSettingsChangeUsername ===
 
-// Module 14531 (UserSettingsChangeUsername)
+// Module 14792 (UserSettingsChangeUsername)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
+import Text_Text from "Text/Text" /* 5086 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 function UsernameStatusMessage(showHint) {
   showHint = showHint.showHint;
-  const match = showHint(5081).match(showHint.usernameStatus);
-  let obj = { type: showHint(14532).NameValidationState.ERROR, message: null };
-  const P = showHint(5081).P;
+  const match = showHint(5741).match(showHint.usernameStatus);
+  let obj = { type: showHint(14793).NameValidationState.ERROR, message: null };
+  const P = showHint(5741).P;
   obj.message = P.select();
-  const str = showHint(5081);
-  const obj2 = { type: showHint(14532).NameValidationState.AVAILABLE, message: null };
-  const P2 = showHint(5081).P;
+  const str = showHint(5741);
+  const obj2 = { type: showHint(14793).NameValidationState.AVAILABLE, message: null };
+  const P2 = showHint(5741).P;
   obj2.message = P2.select();
-  const withResult = match.with(obj, (children) => closure_1_11(showHint(4892).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children }));
-  return match.with(obj, (children) => closure_1_11(showHint(4892).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children })).with(obj2, (children) => closure_1_11(showHint(4892).Text, { variant: "text-xs/medium", color: "text-feedback-positive", children })).otherwise(() => {
+  const withResult = match.with(obj, (children) => closure_1_11(showHint(5086).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children }));
+  return match.with(obj, (children) => closure_1_11(showHint(5086).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children })).with(obj2, (children) => closure_1_11(showHint(5086).Text, { variant: "text-xs/medium", color: "text-feedback-positive", children })).otherwise(() => {
     let tmp = null;
     if (showHint) {
       const obj = { variant: "text-xs/medium", color: "text-default", children: null };
@@ -37,7 +37,7 @@ get_ActivityIndicator = fn(17);
 const UserSettingsSections = fn(1085).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: { padding: 16 }, inputs: { flex: 1, flexDirection: "row", marginTop: 8 }, username: { flex: 2 }, discriminator: { flex: 1 }, divider: null, dividerInner: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.divider = { width: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, marginBottom: 8 };
@@ -49,7 +49,7 @@ let obj5 = { flex: 1, marginVertical: 12, backgroundColor: nativeDefault.colors.
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/account/native/UserSettingsChangeUsername.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSettingsChangeUsername() {
   const cResult = navigation(first[14]).c(74);
   closure_13();
   let obj = navigation(first[14]);
@@ -184,7 +184,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[11] = tmp26;
   const tmp20 = !tmp18;
   const tmpResult2 = navigation(first[18]);
-}) : (() => {
+}) : (function UserSettingsChangeUsername() {
   let tmp = closure_13();
   navigation = navigation(value[15]).useNavigation();
   let obj = navigation(value[15]);
@@ -275,12 +275,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           const tmp34 = first1;
         }
         user.discriminator = tmp34;
-        yield closure_2_2(6484).saveAccountChanges(user, { close: false });
+        yield closure_2_2(6662).saveAccountChanges(user, { close: false });
         closure_129_0 = value;
         if (!closure_129_0.ok) {
-          const v6OrEarlierAPIError = new closure_0(1282).V6OrEarlierAPIError(closure_129_0);
+          const v6OrEarlierAPIError = new closure_0(1294).V6OrEarlierAPIError(closure_129_0);
           closure_129_1 = v6OrEarlierAPIError;
-          const CommonActions = closure_0(1491).CommonActions;
+          const CommonActions = closure_0(1503).CommonActions;
           closure_0.dispatch(CommonActions.navigate(constants.ACCOUNT_CHANGE_USERNAME));
           closure_1_6(closure_129_1);
           c4 = 3;
@@ -288,7 +288,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         }
         return closure_129_0;
       });
-      obj2.onSubmit = function() {
+      obj2.onSubmit = function onSubmit() {
         const self = this;
         const apply = closure_0.apply;
         if (typeof apply === "unknown") {
@@ -374,7 +374,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       textContentType: "username",
       value,
       enableAndroidSanitizedInputWorkaround: stateFromStores.hasUniqueUsername(),
-      onChange(str) {
+      onChange: function onChangeUsername(str) {
           let hasUniqueUsernameResult;
           if (stateFromStores != null) {
             hasUniqueUsernameResult = stateFromStores.hasUniqueUsername();

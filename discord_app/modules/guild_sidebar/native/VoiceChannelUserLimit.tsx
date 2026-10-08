@@ -1,18 +1,18 @@
-// === Module 16082: VoiceChannelUserLimit ===
+// === Module 16342: VoiceChannelUserLimit ===
 
-// Module 16082 (VoiceChannelUserLimit)
+// Module 16342 (VoiceChannelUserLimit)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import _modDef13618 from "module_13618" /* 13618 */;
+import native from "native" /* 1200 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import _modDef13441 from "module_13441" /* 13441 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let rect = { videoIcon: null, wrapper: null, left: null, mid: null, right: null };
 let size = { height: 16, width: 16, marginRight: 4, tintColor: nativeDefault.colors.VOICE_CHANNEL_USER_LIMIT_ICON };
 rect.videoIcon = size;
@@ -29,7 +29,7 @@ let obj5 = { height: 20, flexDirection: "row", paddingRight: 6, paddingLeft: 2, 
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/native/VoiceChannelUserLimit.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceChannelUserLimit(arg0) {
   const cResult = c.c(25);
   ({ users, total, videoLimit } = arg0);
   const rect = closure_6();
@@ -132,21 +132,21 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   }
   let tmp7 = null;
   if (videoLimit) {
-    const obj8 = { source: _modDef13618, size: native.Icon.Sizes.REFRESH_SMALL_16, style: rect.videoIcon };
+    const obj8 = { source: _modDef13441, size: native.Icon.Sizes.REFRESH_SMALL_16, style: rect.videoIcon };
     tmp7 = React4(native.Icon, obj8);
   }
   cResult[0] = rect.videoIcon;
   cResult[1] = videoLimit;
   cResult[2] = tmp7;
   tmp6 = tmp7;
-}) : ((videoLimit) => {
+}) : (function VoiceChannelUserLimit(videoLimit) {
   ({ users, total } = videoLimit);
   const rect = closure_6();
   const obj = { style: rect.wrapper, children: null };
   const obj2 = { style: rect.left, children: null };
   let tmp3 = null;
   if (videoLimit.videoLimit) {
-    const obj3 = { source: _modDef13618, size: native.Icon.Sizes.REFRESH_SMALL_16, style: rect.videoIcon };
+    const obj3 = { source: _modDef13441, size: native.Icon.Sizes.REFRESH_SMALL_16, style: rect.videoIcon };
     tmp3 = React4(native.Icon, obj3);
   }
   const items = [tmp3, ];

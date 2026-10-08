@@ -1,26 +1,26 @@
-// === Module 15980: guilds/Guilds ===
+// === Module 16240: guilds/Guilds ===
 
-// Module 15980 (guilds/Guilds)
+// Module 16240 (guilds/Guilds)
 import c from "c" /* 576 */;
-import native from "native" /* 4595 */;
-import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4738 */;
-import QuestsEligibility from "QuestsEligibility" /* 10925 */;
-import QuestDockExternalCoordinationContext from "QuestDockExternalCoordinationContext" /* 14916 */;
-import QuestDockDefault from "QuestDock" /* 15000 */;
-import TabsPerformanceTracker from "TabsPerformanceTracker" /* 15981 */;
-import MainChannelsDefault from "MainChannels" /* 15982 */;
-import YouBarDefault from "YouBar" /* 16344 */;
+import native from "native" /* 4787 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4932 */;
+import QuestsEligibility from "QuestsEligibility" /* 10576 */;
+import QuestDockExternalCoordinationContext from "QuestDockExternalCoordinationContext" /* 15178 */;
+import QuestDockDefault from "QuestDock" /* 15262 */;
+import TabsPerformanceTracker from "TabsPerformanceTracker" /* 16241 */;
+import MainChannelsDefault from "MainChannels" /* 16242 */;
+import YouBarDefault from "YouBar" /* 16604 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const YouBarNavigatorScreens = fn(10833).YouBarNavigatorScreens;
+const YouBarNavigatorScreens = fn(11182).YouBarNavigatorScreens;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/guilds/Guilds.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function GuildsOnly() {
   const cResult = c.c(4);
   const trackTabPerformance = TabsPerformanceTracker.useTrackTabPerformance(YouBarNavigatorScreens.GUILDS);
   const tmp6 = useColorThemeBackgroundDefault();
@@ -56,7 +56,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp13 = cResult[3];
   }
   return tmp13;
-}) : (() => {
+}) : (function GuildsOnly() {
   const trackTabPerformance = TabsPerformanceTracker.useTrackTabPerformance(YouBarNavigatorScreens.GUILDS);
   const tmp4 = useColorThemeBackgroundDefault();
   let isEligibleForQuests = QuestsEligibility.getIsEligibleForQuests();

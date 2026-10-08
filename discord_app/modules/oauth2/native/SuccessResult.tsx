@@ -1,26 +1,26 @@
-// === Module 8746: ? ===
+// === Module 10643: ? ===
 
-// Module 8746
+// Module 10643
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
-import transitionToGuild from "transitionToGuild" /* 6855 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5940 */;
+import transitionToGuild from "transitionToGuild" /* 7043 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import PermissionStore from "PermissionStore" /* 4515 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import PermissionStore from "PermissionStore" /* 4707 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const Constants = fn(1085);
 ({ AnalyticEvents: c10, Permissions: closure_11 } = Constants);
-const AppLauncherRouteName = fn(1489).AppLauncherRouteName;
+const AppLauncherRouteName = fn(1501).AppLauncherRouteName;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, scrollView: { flex: 1 }, scrollViewContentContainer: null, inner: null, text: null, footer: null, footerLandscape: null, footerPortrait: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.scrollViewContentContainer = { height: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center" };
@@ -35,12 +35,12 @@ let obj4 = { height: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BA
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/oauth2/native/SuccessResult.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SuccessResultModal(guild) {
   const cResult = guild(576).c(66);
   guild = guild.guild;
   const application = guild.application;
   const tmp4 = closure_16();
-  guild(8018);
+  guild(8426);
   if (null == application) {
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
@@ -406,7 +406,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
           cResult[23] = items2;
         }
         if (cResult[24] !== stateFromStores1) {
-          class Y {
+          class W {
             constructor() {
               return closure_8.can(Permissions.SEND_MESSAGES, closure_3);
             }
@@ -429,9 +429,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
               return closure_1_9.getChannelId();
             }
           }
-          cResult[25] = Y;
+          cResult[25] = W;
         } else {
-          class Y {
+          class W {
             constructor() {
               return closure_8.can(Permissions.SEND_MESSAGES, closure_3);
             }
@@ -477,7 +477,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
         const _Symbol5 = Symbol;
         ({ container, scrollView, scrollViewContentContainer, inner } = tmp4);
         if (cResult[26] === Symbol.for("react.memo_cache_sentinel")) {
-          class Y {
+          class W {
             constructor() {
               return closure_8.can(Permissions.SEND_MESSAGES, closure_3);
             }
@@ -500,12 +500,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
               return closure_1_9.getChannelId();
             }
           }
-          tmp53[0] = application(8747);
+          tmp53[0] = application(10644);
           const tmp54 = closure_13(closure_4, tmp53);
           cResult[26] = tmp54;
           const tmp51 = tmp54;
         } else {
-          class Y {
+          class W {
             constructor() {
               return closure_8.can(Permissions.SEND_MESSAGES, closure_3);
             }
@@ -514,7 +514,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
         const _Symbol6 = Symbol;
         const text = tmp4.text;
         if (cResult[27] === Symbol.for("react.memo_cache_sentinel")) {
-          class Y {
+          class W {
             constructor() {
               return closure_8.can(Permissions.SEND_MESSAGES, closure_3);
             }
@@ -540,14 +540,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
           }
           cResult[27] = tmp57;
         } else {
-          class Y {
+          class W {
             constructor() {
               return closure_8.can(Permissions.SEND_MESSAGES, closure_3);
             }
           }
         }
         if (cResult[28] !== tmp4.text) {
-          class Y {
+          class W {
             constructor() {
               return closure_8.can(Permissions.SEND_MESSAGES, closure_3);
             }
@@ -570,25 +570,25 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
               return closure_1_9.getChannelId();
             }
           }
-          const tmp59 = closure_13(tmp(4892).Text, { style: null, variant: "text-lg/medium", children: null });
+          const tmp59 = closure_13(tmp(5086).Text, { style: null, variant: "text-lg/medium", children: null });
           cResult[28] = tmp4.text;
           cResult[29] = tmp59;
           const obj4 = { style: null, variant: "text-lg/medium", children: null };
         } else {
-          class Y {
+          class W {
             constructor() {
               return closure_8.can(Permissions.SEND_MESSAGES, closure_3);
             }
           }
         }
         if (cResult[30] === tmp4.text) {
-          class Y {
+          class W {
             constructor() {
               return closure_8.can(Permissions.SEND_MESSAGES, closure_3);
             }
           }
           if (cResult[33] === tmp4.inner) {
-            class Y {
+            class W {
               constructor() {
                 return closure_8.can(Permissions.SEND_MESSAGES, closure_3);
               }
@@ -695,7 +695,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
         }
         let tmp61 = null;
         if (null != tmp7) {
-          class Y {
+          class W {
             constructor() {
               return closure_8.can(Permissions.SEND_MESSAGES, closure_3);
             }
@@ -718,7 +718,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
               return closure_1_9.getChannelId();
             }
           }
-          tmp61 = closure_13(tmp(4892).Text, { style: null, variant: "text-sm/normal", children: null });
+          tmp61 = closure_13(tmp(5086).Text, { style: null, variant: "text-sm/normal", children: null });
           const obj6 = { style: null, variant: "text-sm/normal", children: null };
         }
         cResult[30] = tmp4.text;
@@ -767,7 +767,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
       const tmpResult3 = tmp(504);
     }
     if (application != null) {
-      class Y {
+      class W {
         constructor() {
           return closure_8.can(Permissions.SEND_MESSAGES, closure_3);
         }
@@ -775,7 +775,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
     }
     cResult[6] = undefined;
     if (guild != null) {
-      class Y {
+      class W {
         constructor() {
           return closure_8.can(Permissions.SEND_MESSAGES, closure_3);
         }
@@ -822,7 +822,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
     cResult[8] = L;
   }
   let obj = guild(576);
-}) : ((guild) => {
+}) : (function SuccessResultModal(guild) {
   guild = guild.guild;
   const application = guild.application;
   let stateFromStores;
@@ -889,7 +889,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
         id3 = guild.id;
       }
       obj.guild_id = id3;
-      AnalyticsUtilsDefault.track(v65535.OAUTH2_AUTHORIZE_SUCCESS_GO_TO_GUILD_CLICKED, obj);
+      AnalyticsUtilsDefault.track(collapsed.OAUTH2_AUTHORIZE_SUCCESS_GO_TO_GUILD_CLICKED, obj);
       const tmp9Result = AnalyticsUtilsDefault;
     }
   }, items1);
@@ -910,7 +910,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
     }
     if (tmp5) {
       let obj2 = { application_id: application.id };
-      AnalyticsUtilsDefault.track(v65535.OAUTH2_AUTHORIZE_SUCCESS_OPEN_APP_CLICKED, obj2);
+      AnalyticsUtilsDefault.track(collapsed.OAUTH2_AUTHORIZE_SUCCESS_OPEN_APP_CLICKED, obj2);
       const _setImmediate = setImmediate;
       setImmediate(() => {
         const bestActiveInput = guild(stateFromStores[19]).getBestActiveInput();
@@ -936,7 +936,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
     if (application != null) {
       id = application.id;
     }
-    AnalyticsUtilsDefault.track(v65535.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, { application_id: id });
+    AnalyticsUtilsDefault.track(collapsed.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, { application_id: id });
   }, items5);
   if (application != null) {
     id2 = application.id;
@@ -947,7 +947,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
     if (application != null) {
       id = application.id;
     }
-    AnalyticsUtilsDefault.track(v65535.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, { application_id: id });
+    AnalyticsUtilsDefault.track(collapsed.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, { application_id: id });
   }, items6);
   const tmp2Result3 = guild(stateFromStores[17]);
   const items7 = [PermissionStore];

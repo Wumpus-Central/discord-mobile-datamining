@@ -1,12 +1,12 @@
-// === Module 18095: StreamFullAlert ===
+// === Module 18382: StreamFullAlert ===
 
-// Module 18095 (StreamFullAlert)
+// Module 18382 (StreamFullAlert)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import common_AlertDefault from "common/Alert" /* 5790 */;
-import AVError from "AVError" /* 9131 */;
-import _modDef18096 from "module_18096" /* 18096 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import AVError from "AVError" /* 5287 */;
+import common_AlertDefault from "common/Alert" /* 5394 */;
+import _modDef18383 from "module_18383" /* 18383 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/calls/stream/StreamFullAlert.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function StreamFullAlert(arg0) {
   const cResult = c.c(7);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const errorInfo = AVError.getErrorInfo(AVError.AVError.STREAM_FULL);
@@ -50,7 +50,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const tmp16 = React4(Text_Text.Text, obj3);
     const obj4 = { variant: "text-md/normal", selectable: true, color: "text-muted", style: closure_6.body, children: first };
     const tmp17 = React4(Text_Text.Text, obj4);
-    const obj5 = { source: _modDef18096, style: closure_6.image };
+    const obj5 = { source: _modDef18383, style: closure_6.image };
     const tmp20 = React4(Image, obj5);
     cResult[2] = tmp16;
     cResult[3] = tmp17;
@@ -77,7 +77,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp21 = cResult[6];
   }
   return tmp21;
-}) : ((arg0) => {
+}) : (function StreamFullAlert(arg0) {
   const errorInfo = AVError.getErrorInfo(AVError.AVError.STREAM_FULL);
   let errorCode;
   if (errorInfo != null) {
@@ -95,7 +95,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const items = [React4(Text_Text.Text, obj3), React4(Text_Text.Text, { variant: "text-md/normal", selectable: true, color: "text-muted", style: closure_6.body, children: formatToPlainStringResult }), ];
   const obj4 = { variant: "text-md/normal", selectable: true, color: "text-muted", style: closure_6.body, children: formatToPlainStringResult };
   const tmp6 = common_AlertDefault;
-  items[2] = React4(Image, { source: _modDef18096, style: closure_6.image });
+  items[2] = React4(Image, { source: _modDef18383, style: closure_6.image });
   obj2.children = items;
   return hasOwnProperty(tmp6, obj2);
 });

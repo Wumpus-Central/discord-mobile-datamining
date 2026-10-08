@@ -1,14 +1,14 @@
-// === Module 13242: PillText ===
+// === Module 13542: PillText ===
 
-// Module 13242 (PillText)
+// Module 13542 (PillText)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import LinearGradientDefault from "LinearGradient" /* 5612 */;
-import usePremiumPrimaryGradientColorsDefault from "usePremiumPrimaryGradientColors" /* 13243 */;
-import createStyles from "createStyles" /* 4896 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import LinearGradientDefault from "LinearGradient" /* 5387 */;
+import usePremiumPrimaryGradientColorsDefault from "usePremiumPrimaryGradientColors" /* 13543 */;
+import createStyles from "createStyles" /* 5090 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -19,7 +19,7 @@ let closure_5 = createStyles.createStyles(obj);
 let obj2 = { paddingHorizontal: 8, borderRadius: nativeDefault.radii.lg, justifyContent: "center" };
 const result = size.fileFinishedImporting("modules/premium/native/components/PillText.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function PillText(arg0) {
   const cResult = c.c(10);
   ({ pillText, style } = arg0);
   const tmp4 = closure_5();
@@ -63,7 +63,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = tmp4.pillTextContainer;
   cResult[2] = items;
   tmp7 = items;
-}) : ((arg0) => {
+}) : (function PillText(arg0) {
   ({ pillText, style } = arg0);
   const tmp = closure_5();
   const obj = { style: null, start: HorizontalGradient.START, end: HorizontalGradient.END, colors: usePremiumPrimaryGradientColorsDefault(), children: null };

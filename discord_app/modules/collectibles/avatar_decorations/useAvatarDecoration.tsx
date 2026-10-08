@@ -1,8 +1,8 @@
-// === Module 7898: useAvatarDecoration ===
+// === Module 6058: useAvatarDecoration ===
 
-// Module 7898 (useAvatarDecoration)
+// Module 6058 (useAvatarDecoration)
 import _slicedToArray from "module_32" /* 32 */;
-import GuildMemberStore from "GuildMemberStore" /* 2112 */;
+import GuildMemberStore from "GuildMemberStore" /* 2124 */;
 
 const require = globalThis.__r;
 
@@ -38,7 +38,7 @@ function getAvatarDecoration(user, guildId) {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/avatar_decorations/useAvatarDecoration.tsx");
 
-export const useAvatarDecoration = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export const useAvatarDecoration = ReactCompilerGating.isReactCompilerEnabled() ? (function useAvatarDecoration(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   const cResult = require("c").c(4);
@@ -84,7 +84,7 @@ export const useAvatarDecoration = ReactCompilerGating.isReactCompilerEnabled() 
   tmp6 = fn;
   const obj = require("c");
   tmp = _require;
-}) : ((arg0, arg1) => {
+}) : (function useAvatarDecoration(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   let items = [GuildMemberStore];

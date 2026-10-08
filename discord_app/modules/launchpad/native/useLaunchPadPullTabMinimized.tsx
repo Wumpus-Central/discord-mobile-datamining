@@ -1,8 +1,8 @@
-// === Module 17417: useLaunchPadPullTabMinimized ===
+// === Module 17699: useLaunchPadPullTabMinimized ===
 
-// Module 17417 (useLaunchPadPullTabMinimized)
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import VoicePanelUtils from "VoicePanelUtils" /* 9622 */;
+// Module 17699 (useLaunchPadPullTabMinimized)
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import VoicePanelUtils from "VoicePanelUtils" /* 10815 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,10 +14,10 @@ if (DCDScrollTracker) {
 }
 let closure_3 = tmp32;
 let ReactCompilerGating = fn(558);
-let closure_4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsMinimizedDuringScroll() {
   const cResult = sharedValue(576).c(3);
   const obj = sharedValue(576);
-  sharedValue = sharedValue(4618).useSharedValue(false);
+  sharedValue = sharedValue(4810).useSharedValue(false);
   if (cResult[0] !== sharedValue) {
     const fn = function t() {
       closure_0 = -1;
@@ -55,8 +55,8 @@ let closure_4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   const effect = noop.useEffect(tmp3, tmp4);
   return sharedValue;
-}) : (() => {
-  sharedValue = sharedValue(4618).useSharedValue(false);
+}) : (function useIsMinimizedDuringScroll() {
+  sharedValue = sharedValue(4810).useSharedValue(false);
   const items = [sharedValue];
   const effect = noop.useEffect(() => {
     closure_0 = -1;
@@ -90,7 +90,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/launchpad/native/useLaunchPadPullTabMinimized.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((launchPadSharedState) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useLaunchPadPullTabMinimized(launchPadSharedState) {
   launchPadSharedState = launchPadSharedState.launchPadSharedState;
   const launchPadPullTabState = launchPadSharedState.launchPadPullTabState;
   const isVoicePanelFullscreen = VoicePanelUtils.useIsVoicePanelFullscreen();
@@ -110,7 +110,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((launchPadSharedS
   fn.__workletHash = 14263056934448;
   fn.__initData = __initData;
   return ReanimatedRexport.useDerivedValue(fn);
-}) : ((launchPadSharedState) => {
+}) : (function useLaunchPadPullTabMinimized(launchPadSharedState) {
   launchPadSharedState = launchPadSharedState.launchPadSharedState;
   const launchPadPullTabState = launchPadSharedState.launchPadPullTabState;
   const isVoicePanelFullscreen = VoicePanelUtils.useIsVoicePanelFullscreen();

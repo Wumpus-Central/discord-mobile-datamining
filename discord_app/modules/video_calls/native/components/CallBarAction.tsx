@@ -1,11 +1,11 @@
-// === Module 9112: CallBarAction ===
+// === Module 10685: CallBarAction ===
 
-// Module 9112 (CallBarAction)
+// Module 10685 (CallBarAction)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Pressables from "Pressables" /* 5916 */;
-import CircleWithCutoutUtils from "CircleWithCutoutUtils" /* 9114 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import Pressables from "Pressables" /* 6189 */;
+import CircleWithCutoutUtils from "CircleWithCutoutUtils" /* 10687 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,16 +17,16 @@ let closure_4 = ["isSmallSize"];
 let closure_5 = ["notifications", "isMentioned"];
 get_ActivityIndicator = fn(17);
 ({ Image: closure_8, View: closure_9 } = get_ActivityIndicator);
-const resetFocusTimer = fn(9086).resetFocusTimer;
+const resetFocusTimer = fn(10333).resetFocusTimer;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const ColorUtils = fn(4733);
+const ColorUtils = fn(4927);
 let closure_13 = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.24);
 let c14 = 45;
 let closure_15 = Object.freeze({ buttonRadius: 28, badgeRadius: 6, cutoutInset: 3 });
 const frozen = Object.freeze({ buttonRadius: 24, badgeRadius: 4, cutoutInset: 2 });
 let closure_17 = 24 + 2 * frozen.buttonRadius * 5 + 96;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj3 = { buttonContainer: { position: "absolute" }, iconContainer: { position: "absolute", justifyContent: "center", alignItems: "center" }, badge: { backgroundColor: "white", position: "absolute" }, notificationArea: null, notificationText: null, notificationAreaMentioned: null, notificationAreaUnread: null };
 const rect = { position: "absolute", top: -4, right: -4, height: 24, minWidth: 24, paddingHorizontal: 4, borderRadius: 12, borderWidth: 4, borderColor: nativeDefault.unsafe_rawColors.PRIMARY_760, alignItems: "center", justifyContent: "center" };
 obj3.notificationArea = rect;
@@ -36,7 +36,7 @@ let obj4 = { backgroundColor: nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_BACK
 obj3.notificationAreaUnread = { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_600 };
 let closure_18 = createStyles.createStyles(obj3);
 let ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ActionButton(arg0) {
   const cResult = onPress(576).c(52);
   ({ appearsDisabled, backgroundColor, imageStyle, onPress } = arg0);
   ({ accessibilityLabel, accessibilityState, source, showBadge, isSmallSize, children, lottieComponent, lottieComponentColor, IconComponent } = arg0);
@@ -146,7 +146,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                                                   }
                                                 }
                                                 const obj3 = { accessibilityLabel, accessibilityRole: "button", accessibilityState, onPress: tmp15, disabled: false, style: tmp16, children: tmp43 };
-                                                const tmp49 = closure_11(onPress(5916).PressableOpacity, obj3);
+                                                const tmp49 = closure_11(onPress(6189).PressableOpacity, obj3);
                                                 cResult[46] = accessibilityLabel;
                                                 cResult[47] = accessibilityState;
                                                 cResult[48] = tmp43;
@@ -177,13 +177,13 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                                 if (tmp5) {
                                   const obj5 = { style: null };
                                   const items1 = [tmp7.badge, ];
-                                  const size1 = { width: result1, height: result1, borderRadius: tmp11.badgeRadius, top: onPress(9114).getBadgeTop(tmp11.badgeRadius, tmp11.buttonRadius, cutoutPositionInDegrees), left: null };
-                                  const tmpResult = onPress(9114);
-                                  size1.left = onPress(9114).getBadgeLeft(tmp11.badgeRadius, tmp11.buttonRadius, cutoutPositionInDegrees);
+                                  const size1 = { width: result1, height: result1, borderRadius: tmp11.badgeRadius, top: onPress(10687).getBadgeTop(tmp11.badgeRadius, tmp11.buttonRadius, cutoutPositionInDegrees), left: null };
+                                  const tmpResult = onPress(10687);
+                                  size1.left = onPress(10687).getBadgeLeft(tmp11.badgeRadius, tmp11.buttonRadius, cutoutPositionInDegrees);
                                   items1[1] = size1;
                                   obj5.style = items1;
                                   tmp39 = closure_11(closure_9, obj5);
-                                  const tmpResult2 = onPress(9114);
+                                  const tmpResult2 = onPress(10687);
                                 }
                                 cResult[34] = tmp11.badgeRadius;
                                 cResult[35] = tmp11.buttonRadius;
@@ -261,7 +261,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   tmp16 = size3;
   const obj = onPress(576);
   tmp4 = undefined !== appearsDisabled && appearsDisabled;
-}) : ((appearsDisabled) => {
+}) : (function ActionButton(appearsDisabled) {
   let flag = appearsDisabled.appearsDisabled;
   if (flag === undefined) {
     flag = false;
@@ -350,7 +350,7 @@ let closure_19 = tmp5;
 fn(558);
 let obj5 = { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_600 };
 ReactCompilerGating = fn(558);
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function ToggledActionButton(arg0) {
   const cResult = c.c(20);
   if (cResult[0] !== arg0) {
     ({ isActive, disableTint, showBadge, isSmallSize, backgroundColor, tintColor } = arg0);
@@ -444,7 +444,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[19] = tmp24;
   tmp22 = tmp24;
   tmp13 = undefined !== tmp6 && tmp6;
-}) : ((showBadge) => {
+}) : (function ToggledActionButton(showBadge) {
   ({ isActive, disableTint } = showBadge);
   if (disableTint === undefined) {
     disableTint = false;
@@ -487,7 +487,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return closure_1_11(closure_19, obj);
 });
 ReactCompilerGating = fn(558);
-let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((isSmallSize) => {
+let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function PrimaryActionButton(isSmallSize) {
   const cResult = c.c(7);
   if (cResult[0] !== isSmallSize) {
     isSmallSize = isSmallSize.isSmallSize;
@@ -521,7 +521,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((isSmallSize) => {
   cResult[6] = tmp12;
   tmp10 = tmp12;
   const obj3 = { backgroundColor: nativeDefault.unsafe_rawColors.RED_400, imageStyle: tmp9, isSmallSize: undefined !== tmp4 && tmp4 };
-}) : ((isSmallSize) => {
+}) : (function PrimaryActionButton(isSmallSize) {
   let flag = isSmallSize.isSmallSize;
   if (flag === undefined) {
     flag = false;
@@ -538,7 +538,7 @@ export const SMALL_ACTION_BUTTON_DIMENSIONS = frozen;
 export const ActionButton = tmp5;
 export const ToggledActionButton = tmp6;
 export const PrimaryActionButton = tmp7;
-export const NotifiedActionButton = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const NotifiedActionButton = ReactCompilerGating.isReactCompilerEnabled() ? (function NotifiedActionButton(arg0) {
   const cResult = c.c(16);
   if (cResult[0] !== arg0) {
     ({ notifications, isMentioned } = arg0);
@@ -610,7 +610,7 @@ export const NotifiedActionButton = ReactCompilerGating.isReactCompilerEnabled()
     tmp11 = items;
   }
   notificationAreaMentioned = tmp10.notificationAreaMentioned;
-}) : ((isMentioned) => {
+}) : (function NotifiedActionButton(isMentioned) {
   isMentioned = isMentioned.isMentioned;
   const merged = Object.assign(isMentioned, Object.assign({ notifications: 0, isMentioned: 0 }));
   const tmp2 = closure_18();

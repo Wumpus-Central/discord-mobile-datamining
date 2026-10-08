@@ -1,6 +1,6 @@
-// === Module 13099: MessageActivityInviteCoverImageActionCreators ===
+// === Module 13377: MessageActivityInviteCoverImageActionCreators ===
 
-// Module 13099 (MessageActivityInviteCoverImageActionCreators)
+// Module 13377 (MessageActivityInviteCoverImageActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
 

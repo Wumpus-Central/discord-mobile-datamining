@@ -1,23 +1,23 @@
-// === Module 7580: ConversationNavigatorHeader ===
+// === Module 9291: ConversationNavigatorHeader ===
 
-// Module 7580 (ConversationNavigatorHeader)
+// Module 9291 (ConversationNavigatorHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1370 */;
-import useToken from "useToken" /* 4586 */;
-import useChannelNameDefault from "useChannelName" /* 5049 */;
-import HeaderShared from "HeaderShared" /* 7509 */;
-import ConversationNavigatorMoreMenuDefault from "ConversationNavigatorMoreMenu" /* 7581 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1382 */;
+import useToken from "useToken" /* 4778 */;
+import useChannelNameDefault from "useChannelName" /* 5417 */;
+import HeaderShared from "HeaderShared" /* 9232 */;
+import ConversationNavigatorMoreMenuDefault from "ConversationNavigatorMoreMenu" /* 9292 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles((arg0) => {
   const container = { flex: 1, paddingVertical: nativeDefault.space.PX_16, paddingRight: null, alignItems: "center", justifyContent: "center" };
   let num = 0;
@@ -28,7 +28,7 @@ let closure_6 = createStyles.createStyles((arg0) => {
   return { container };
 });
 let ReactCompilerGating = fn(558);
-let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConversationNavigatorHeader(channelId) {
   const cResult = channelId(576).c(10);
   channelId = channelId.channelId;
   ({ title, hasRightAction } = channelId);
@@ -78,13 +78,13 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
     cResult[9] = tmp18;
     tmp15 = tmp18;
   }
-  const tmp14 = jsx(channelId(7509).GenericHeaderTitle, { title, subtitle: tmp12, variant: "heading-lg/semibold", subtitleColor: "text-muted" });
+  const tmp14 = jsx(channelId(9232).GenericHeaderTitle, { title, subtitle: tmp12, variant: "heading-lg/semibold", subtitleColor: "text-muted" });
   cResult[4] = tmp12;
   cResult[5] = title;
   cResult[6] = tmp14;
   tmp13 = tmp14;
   const tmpResult = channelId(504);
-}) : ((channelId) => {
+}) : (function ConversationNavigatorHeader(channelId) {
   channelId = channelId.channelId;
   let flag = channelId.hasRightAction;
   if (flag === undefined) {
@@ -97,11 +97,11 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   const obj = channelId(504);
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { title: channelId.title, subtitle: useChannelNameDefault(stateFromStores, true), variant: "heading-lg/semibold", subtitleColor: "text-muted" };
-  obj2.children = jsx(channelId(7509).GenericHeaderTitle, { title: channelId.title, subtitle: useChannelNameDefault(stateFromStores, true), variant: "heading-lg/semibold", subtitleColor: "text-muted" });
+  obj2.children = jsx(channelId(9232).GenericHeaderTitle, { title: channelId.title, subtitle: useChannelNameDefault(stateFromStores, true), variant: "heading-lg/semibold", subtitleColor: "text-muted" });
   return <View style={tmp.container}>{null}</View>;
 });
 ReactCompilerGating = fn(558);
-let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((shouldHandleSafeArea) => {
+let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function HeaderWithBorder(shouldHandleSafeArea) {
   const cResult = c.c(4);
   const token = useToken.useToken(nativeDefault.colors.BORDER_SUBTLE);
   const token1 = useToken.useToken(nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
@@ -129,7 +129,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((shouldHandleSaf
   cResult[3] = renderHeaderResult;
   tmp6 = renderHeaderResult;
   const tmpResult = HeaderShared;
-}) : ((shouldHandleSafeArea) => {
+}) : (function HeaderWithBorder(shouldHandleSafeArea) {
   const token = useToken.useToken(nativeDefault.colors.BORDER_SUBTLE);
   const token1 = useToken.useToken(nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
   const obj4 = {};

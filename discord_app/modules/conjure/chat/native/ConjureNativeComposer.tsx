@@ -1,36 +1,36 @@
-// === Module 16771: ConjureNativeComposer ===
+// === Module 17046: ConjureNativeComposer ===
 
-// Module 16771 (ConjureNativeComposer)
+// Module 17046 (ConjureNativeComposer)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import _modDef3753 from "module_3753" /* 3753 */;
-import useToken from "useToken" /* 4586 */;
-import WarningIcon from "WarningIcon" /* 4809 */;
-import SendMessageIcon from "SendMessageIcon" /* 4847 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4860 */;
-import ConjureTypes from "ConjureTypes" /* 6757 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 8735 */;
-import MusicIcon from "MusicIcon" /* 9584 */;
-import ImageCarousel from "ImageCarousel" /* 10373 */;
-import PlusLargeIcon from "PlusLargeIcon" /* 10702 */;
-import keepLocalCopy from "keepLocalCopy" /* 11034 */;
-import ImagesIcon from "ImagesIcon" /* 11337 */;
-import ChatInputNativeCommandsDefault from "ChatInputNativeCommands" /* 11616 */;
-import ChatInputActionButtonDefault from "ChatInputActionButton" /* 11882 */;
-import ChatInputActionButtonTransitionItemDefault from "ChatInputActionButtonTransitionItem" /* 11890 */;
-import FiltersHorizontalIcon from "FiltersHorizontalIcon" /* 14824 */;
-import FileUpIcon from "FileUpIcon" /* 15380 */;
-import ConjureModelSettingsSheet from "ConjureModelSettingsSheet" /* 16618 */;
-import StopIcon from "StopIcon" /* 16730 */;
-import conjurePickedFiles from "conjurePickedFiles" /* 16743 */;
-import conjureAttachmentDrafts from "conjureAttachmentDrafts" /* 16744 */;
+import _modDef3827 from "module_3827" /* 3827 */;
+import useToken from "useToken" /* 4778 */;
+import WarningIcon from "WarningIcon" /* 5003 */;
+import SendMessageIcon from "SendMessageIcon" /* 5041 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5054 */;
+import ConjureTypes from "ConjureTypes" /* 6933 */;
+import ImageCarousel from "ImageCarousel" /* 9970 */;
+import MusicIcon from "MusicIcon" /* 10233 */;
+import PlusLargeIcon from "PlusLargeIcon" /* 10290 */;
+import ImagesIcon from "ImagesIcon" /* 11604 */;
+import ChatInputNativeCommandsDefault from "ChatInputNativeCommands" /* 11680 */;
+import ChatInputActionButtonDefault from "ChatInputActionButton" /* 11954 */;
+import ChatInputActionButtonTransitionItemDefault from "ChatInputActionButtonTransitionItem" /* 11962 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 12364 */;
+import keepLocalCopy from "keepLocalCopy" /* 12780 */;
+import FiltersHorizontalIcon from "FiltersHorizontalIcon" /* 15085 */;
+import FileUpIcon from "FileUpIcon" /* 15642 */;
+import ConjureModelSettingsSheet from "ConjureModelSettingsSheet" /* 16877 */;
+import StopIcon from "StopIcon" /* 17005 */;
+import conjurePickedFiles from "conjurePickedFiles" /* 17018 */;
+import conjureAttachmentDrafts from "conjureAttachmentDrafts" /* 17019 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
-import ConjureConnectionStore from "ConjureConnectionStore" /* 12923 */;
-import ConjureComposerDraftStore from "ConjureComposerDraftStore" /* 16757 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
+import ConjureConnectionStore from "ConjureConnectionStore" /* 13072 */;
+import ConjureComposerDraftStore from "ConjureComposerDraftStore" /* 17032 */;
 
 const require = globalThis.__r;
 const ConjureModelSettingsSheetDefault = ConjureModelSettingsSheet;
@@ -43,11 +43,11 @@ function draftAccessibilityLabel(draft) {
   if ("uploading" === draft.status) {
     const intl3 = util.intl;
     const obj3 = { name: draft.name };
-    let formatToPlainStringResult = intl3.formatToPlainString(_modDef3753.MWTYwv, obj3);
+    let formatToPlainStringResult = intl3.formatToPlainString(_modDef3827.MWTYwv, obj3);
   } else if (null != draft.errorText) {
     const intl2 = util.intl;
     ({ name: obj2.name, errorText: obj2.error } = draft);
-    formatToPlainStringResult = intl2.formatToPlainString(_modDef3753.U2WbGx, { name: null, error: null });
+    formatToPlainStringResult = intl2.formatToPlainString(_modDef3827.U2WbGx, { name: null, error: null });
     const obj5 = { name: null, error: null };
   } else {
     const intl = util.intl;
@@ -62,7 +62,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 let c13 = 120;
 const PX_8 = nativeDefault.space.PX_8;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { paddingHorizontal: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, paddingVertical: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 }, box: null, boxFocused: null, boxContents: null, input: null, draftCarousel: null, draftOverlay: null, trailingButton: null, trailingSlot: null, sendButtonActive: null, sendIconActive: null };
 let obj3 = { paddingHorizontal: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, paddingVertical: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
 obj2.box = { backgroundColor: nativeDefault.colors.MOBILE_CHATINPUT_BACKGROUND_DEFAULT, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_CHATINPUT_BORDER_DEFAULT, borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_BORDER_RADIUS, overflow: "hidden" };
@@ -88,7 +88,7 @@ let obj9 = { backgroundColor: nativeDefault.colors.CHAT_INPUT_SEND_BUTTON_ACTIVE
 obj2.sendIconActive = { tintColor: nativeDefault.colors.CHAT_INPUT_SEND_BUTTON_ICON_ACTIVE_TINT };
 let closure_15 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((draft) => {
+let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureNativeDraftTile(draft) {
   const cResult = c.c(25);
   draft = draft.draft;
   const onRemove = draft.onRemove;
@@ -205,7 +205,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((draft) => {
   cResult[1] = onRemove;
   cResult[2] = fn;
   tmp7 = fn;
-}) : ((draft) => {
+}) : (function ConjureNativeDraftTile(draft) {
   draft = draft.draft;
   const onRemove = draft.onRemove;
   const tmp = closure_15();
@@ -248,7 +248,7 @@ let obj10 = { tintColor: nativeDefault.colors.CHAT_INPUT_SEND_BUTTON_ICON_ACTIVE
 size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/chat/native/ConjureNativeComposer.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureNativeComposer(projectId) {
   const cResult = require("c").c(146);
   projectId = projectId.projectId;
   _require = projectId;
@@ -825,7 +825,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
             }
           }
         });
-        const fn2 = function() {
+        function t15() {
           const self = this;
           const apply = closure_0.apply;
           if (typeof apply === "unknown") {
@@ -834,9 +834,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
             applyArgumentsResult = apply(self, arguments);
           }
           return applyArgumentsResult;
-        };
+        }
         cResult[23] = tmp47;
-        cResult[24] = fn2;
+        cResult[24] = t15;
       } else {
         class Ie {
           constructor(arg0) {
@@ -1096,7 +1096,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
               }
             })();
           });
-          let fn3 = function() {
+          function t17() {
             const self = this;
             const apply = closure_0.apply;
             if (typeof apply === "unknown") {
@@ -1105,9 +1105,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
               applyArgumentsResult = apply(self, arguments);
             }
             return applyArgumentsResult;
-          };
+          }
           cResult[28] = tmp47;
-          cResult[29] = fn3;
+          cResult[29] = t17;
         } else {
           class Ie {
             constructor(arg0) {
@@ -1171,7 +1171,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
             }
           }
         }
-        fn3 = tmp52;
+        t17 = tmp52;
         const _Symbol3 = Symbol;
         if (cResult[30] === Symbol.for("react.memo_cache_sentinel")) {
           class Ie {
@@ -1626,7 +1626,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
           tmp60[1] = tmp(onSend[25]).MusicIcon;
           tmp60[2] = function action() {
             const items = [keepLocalCopy.types.audio];
-            return fn3(items);
+            return t17(items);
           };
           cResult[34] = tmp52;
           cResult[35] = tmp60;
@@ -1887,7 +1887,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
           tmp64[0] = tmp61;
           tmp64[1] = tmp(onSend[27]).FileUpIcon;
           tmp64[2] = function action() {
-            return fn3();
+            return t17();
           };
           cResult[37] = tmp52;
           cResult[38] = tmp64;
@@ -2088,7 +2088,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
   cResult[8] = L;
   cResult[9] = items3;
   let obj = require("c");
-}) : ((projectId) => {
+}) : (function ConjureNativeComposer(projectId) {
   projectId = projectId.projectId;
   _require = projectId;
   const canSend = projectId.canSend;
@@ -2184,8 +2184,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
       const diff = ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE - conjureAttachmentDrafts.getConjureAttachmentDrafts(closure_0, "chat").length;
       if (arr.length > diff) {
         const intl = obj2(1126).intl;
-        let obj = { count: obj2(6757).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
-        _undefined3(intl.formatToPlainString(_modDef3753.Q0aCVZ, obj));
+        let obj = { count: obj2(6933).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
+        _undefined3(intl.formatToPlainString(_modDef3827.Q0aCVZ, obj));
         const _Math = Math;
         const substr = arr.slice(0, Math.max(0, diff));
         arr = substr;
@@ -2216,7 +2216,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
         };
         obj3 = obj5;
       });
-      obj2 = obj2(16744);
+      obj2 = obj2(17019);
       result = obj2.addConjureAttachmentDrafts(closure_0, "chat", mapped);
     }
   }, items5);
@@ -2251,7 +2251,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
             projectId = callback3;
             c1 = 1;
             dependencyMap = 1;
-            const obj5 = { value: projectId(16743).pickConjurePhotos("any", projectId(6757).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE), done: false };
+            const obj5 = { value: projectId(17018).pickConjurePhotos("any", projectId(6933).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -2372,13 +2372,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
   const memo = obj.useMemo(() => {
     const obj = { label: null, IconComponent: null, action: null };
     const intl = util.intl;
-    obj.label = intl.string(_modDef3753["51+9lc"]);
+    obj.label = intl.string(_modDef3827["51+9lc"]);
     obj.IconComponent = ImagesIcon.ImagesIcon;
     obj.action = callback4;
     let items = [obj, , ];
     const obj2 = { label: null, IconComponent: null, action: null };
     const intl2 = util.intl;
-    obj2.label = intl2.string(_modDef3753["10ljr2"]);
+    obj2.label = intl2.string(_modDef3827["10ljr2"]);
     obj2.IconComponent = MusicIcon.MusicIcon;
     obj2.action = function action() {
       const items = [closure_0(running[26]).types.audio];
@@ -2387,7 +2387,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
     items[1] = obj2;
     const obj3 = { label: null, IconComponent: null, action: null };
     const intl3 = util.intl;
-    obj3.label = intl3.string(_modDef3753.aotDee);
+    obj3.label = intl3.string(_modDef3827.aotDee);
     obj3.IconComponent = FileUpIcon.FileUpIcon;
     obj3.action = function action() {
       return callback6();
@@ -2459,12 +2459,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
     if ("stop" === key.key) {
       const obj2 = { style: closure_14.trailingButton, IconComponent: StopIcon.StopIcon, onPress: onInterrupt, disabled: null == onInterrupt, accessibilityLabel: null };
       const intl2 = util.intl;
-      obj2.accessibilityLabel = intl2.string(_modDef3753.wiguT0);
+      obj2.accessibilityLabel = intl2.string(_modDef3827.wiguT0);
       let tmp14 = closure_2_11(ChatInputActionButtonDefault, obj2);
     } else if ("models" === key.key) {
       const obj = { style: closure_14.trailingButton, IconComponent: FiltersHorizontalIcon.FiltersHorizontalIcon, onPress: callback8, disabled: !canSend, accessibilityLabel: null };
       const intl = util.intl;
-      obj.accessibilityLabel = intl.string(_modDef3753["3E7Yc0"]);
+      obj.accessibilityLabel = intl.string(_modDef3827["3E7Yc0"]);
       tmp14 = closure_2_11(ChatInputActionButtonDefault, obj);
     } else {
       const obj5 = { active: true, style: null, activeStyle: null, activeIconStyle: null, IconComponent: null, accessibilityLabel: null, onPress: null, disabled: null };
@@ -2530,7 +2530,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
         ({ ref, onPress, accessibilityActions, onAccessibilityAction } = arg0);
         const obj = { ref, IconComponent: PlusLargeIcon.PlusLargeIcon, onPress, disabled: !canSend, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null };
         const intl = util.intl;
-        obj.accessibilityLabel = intl.string(_modDef3753.hFS71Z);
+        obj.accessibilityLabel = intl.string(_modDef3827.hFS71Z);
         obj.accessibilityActions = accessibilityActions;
         obj.onAccessibilityAction = onAccessibilityAction;
         return closure_2_11(ChatInputActionButtonDefault, obj);
@@ -2549,7 +2549,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
       ({ ref, onPress, accessibilityActions, onAccessibilityAction } = arg0);
       const obj = { ref, IconComponent: PlusLargeIcon.PlusLargeIcon, onPress, disabled: !canSend, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null };
       const intl = util.intl;
-      obj.accessibilityLabel = intl.string(_modDef3753.hFS71Z);
+      obj.accessibilityLabel = intl.string(_modDef3827.hFS71Z);
       obj.accessibilityActions = accessibilityActions;
       obj.onAccessibilityAction = onAccessibilityAction;
       return closure_2_11(ChatInputActionButtonDefault, obj);

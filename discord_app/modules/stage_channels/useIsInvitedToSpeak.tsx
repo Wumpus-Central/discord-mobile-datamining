@@ -1,11 +1,11 @@
-// === Module 9619: useIsInvitedToSpeak ===
+// === Module 10812: useIsInvitedToSpeak ===
 
-// Module 9619 (useIsInvitedToSpeak)
+// Module 10812 (useIsInvitedToSpeak)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 5043 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 5412 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
 
 const useAudienceRequestToSpeakStateDefault = useAudienceRequestToSpeakState;
 
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useIsInvitedToSpeak.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsInvitedToSpeak() {
   const cResult = c.c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [SelectedChannelStore];
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const stateFromStores1 = initialize.useStateFromStores(tmp8, tmp9);
   const tmpResult2 = initialize;
   return useAudienceRequestToSpeakStateDefault(stateFromStores1, stateFromStores) === useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
-}) : (() => {
+}) : (function useIsInvitedToSpeak() {
   const items = [SelectedChannelStore];
   const stateFromStores = initialize.useStateFromStores(items, () => voiceChannelId.getVoiceChannelId());
   const items1 = [AuthenticationStore];

@@ -1,24 +1,24 @@
-// === Module 11202: LeaveConnectionRoleActionSheet ===
+// === Module 11319: LeaveConnectionRoleActionSheet ===
 
-// Module 11202 (LeaveConnectionRoleActionSheet)
+// Module 11319 (LeaveConnectionRoleActionSheet)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6652 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6829 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles({ container: { padding: 12 }, marginTop: { marginTop: 8 }, button: { marginTop: 8, marginBottom: 16 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/connections/native/LeaveConnectionRoleActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onLeaveRolePressed) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function LeaveConnectionRoleActionSheet(onLeaveRolePressed) {
   const cResult = c.c(14);
   onLeaveRolePressed = onLeaveRolePressed.onLeaveRolePressed;
   const tmp4 = closure_5();
@@ -95,7 +95,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onLeaveRolePress
   cResult[8] = tmp15;
   cResult[9] = tmp19;
   tmp18 = tmp19;
-}) : ((onLeaveRolePressed) => {
+}) : (function LeaveConnectionRoleActionSheet(onLeaveRolePressed) {
   const tmp = closure_5();
   const obj = { children: null };
   const obj2 = { style: tmp.container, children: null };

@@ -1,7 +1,7 @@
-// === Module 12107: useLongestChannelMessageBeforeReply ===
+// === Module 12185: useLongestChannelMessageBeforeReply ===
 
-// Module 12107 (useLongestChannelMessageBeforeReply)
-import MessageStore from "MessageStore" /* 5116 */;
+// Module 12185 (useLongestChannelMessageBeforeReply)
+import MessageStore from "MessageStore" /* 5428 */;
 
 const require = globalThis.__r;
 
@@ -10,7 +10,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/useLongestChannelMessageBeforeReply.tsx");
 
-export const useLongestChannelMessageBeforeReply = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+export const useLongestChannelMessageBeforeReply = ReactCompilerGating.isReactCompilerEnabled() ? (function useLongestChannelMessageBeforeReply(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   const cResult = require("c").c(5);
@@ -63,7 +63,7 @@ export const useLongestChannelMessageBeforeReply = ReactCompilerGating.isReactCo
   tmp6 = fn;
   const obj = require("c");
   tmp = _require;
-}) : ((arg0, arg1) => {
+}) : (function useLongestChannelMessageBeforeReply(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   const items = [MessageStore];

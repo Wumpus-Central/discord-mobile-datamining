@@ -1,9 +1,9 @@
-// === Module 13286: useFPDurationLeft ===
+// === Module 13587: useFPDurationLeft ===
 
-// Module 13286 (useFPDurationLeft)
+// Module 13587 (useFPDurationLeft)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import useCountdownDefault from "useCountdown" /* 6961 */;
+import useCountdownDefault from "useCountdown" /* 7150 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -65,7 +65,7 @@ function roundFPCountdownUnits(arg0) {
 const CountDownMessageTypes = { SHORT_TIME_LEFT: 0, [0]: "SHORT_TIME_LEFT", LONG_TIME_LEFT: 1, [1]: "LONG_TIME_LEFT", ENDS_IN: 2, [2]: "ENDS_IN", SHORT_TIME: 3, [3]: "SHORT_TIME", CREDITS_ENDS_IN: 4, [4]: "CREDITS_ENDS_IN" };
 const result = size.fileFinishedImporting("modules/billing/hooks/useFPDurationLeft.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((toDate, arg1) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFPDurationLeft(toDate, arg1) {
   const obj = c;
   let cResult = obj.c(2);
   if (obj.SHORT_TIME_LEFT === arg1) {
@@ -94,7 +94,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((toDate, arg1) =>
   }
   cResult = useCountdownDefault;
   roundFPCountdownUnits(cResult(tmp14, 60000));
-}) : ((toDate, arg1) => {
+}) : (function useFPDurationLeft(toDate, arg1) {
   if (obj.SHORT_TIME_LEFT === arg1) {
     const time = { days: util.t["/wnvqA"], hours: util.t.Jsq0XN, minutes: util.t["SBd+Bs"] };
   } else if (obj.LONG_TIME_LEFT === arg1) {

@@ -1,25 +1,25 @@
-// === Module 8106: StartStageChannelActionSheet ===
+// === Module 7481: StartStageChannelActionSheet ===
 
-// Module 8106 (StartStageChannelActionSheet)
+// Module 7481 (StartStageChannelActionSheet)
 import nativeDefault from "native" /* 587 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import StageInstanceStore from "StageInstanceStore" /* 2056 */;
+import StageInstanceStore from "StageInstanceStore" /* 2068 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const StageChannelsConstants = fn(5578);
+const StageChannelsConstants = fn(5888);
 ({ MAX_STAGE_TOPIC_LENGTH: closure_9, START_STAGE_CHANNEL_EVENT_SHEET_KEY: c10 } = StageChannelsConstants);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_11, Fonts } = Constants);
-let closure_12 = fn(2057).GuildScheduledEventPrivacyLevel;
+let closure_12 = fn(2069).GuildScheduledEventPrivacyLevel;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { padding: 16 }, header: { alignItems: "center", paddingBottom: 24 }, headerTitle: { marginTop: 16, marginBottom: 8 }, headerSubtitle: { textAlign: "center" }, startButton: { marginTop: 16 }, buttonSubtitle: { paddingTop: 8, textAlign: "center" }, ageVerificationNotice: { marginBottom: nativeDefault.space.PX_16 }, error: null };
 let obj3 = { marginBottom: nativeDefault.space.PX_16 };
 obj2.error = { paddingTop: 8, fontSize: 12, fontFamily: Fonts.PRIMARY_MEDIUM, color: nativeDefault.unsafe_rawColors.RED_400 };
@@ -29,7 +29,7 @@ let obj4 = { paddingTop: 8, fontSize: 12, fontFamily: Fonts.PRIMARY_MEDIUM, colo
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/stage_channels/native/sheets/StartStageChannelActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function StartStageChannelEventActionSheet(channel) {
   const cResult = require("c").c(61);
   channel = channel.channel;
   _require = channel;
@@ -76,7 +76,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     if (cResult[4] === id) {
       let tmp16 = cResult[5];
     }
-    stateFromStores(5597)(tmp16);
+    stateFromStores(5392)(tmp16);
     if (cResult[6] === channel) {
       if (cResult[7] === stateFromStores) {
         if (cResult[8] === first1) {
@@ -202,7 +202,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
                               }
                             }
                             let obj2 = { text: tmp53, onPress: tmp19, disabled: "" === first1, loading: tmp12, accessibilityHint: tmp37 };
-                            const tmp59 = closure_13(tmp(5601).Button, obj2);
+                            const tmp59 = closure_13(tmp(5375).Button, obj2);
                             cResult[40] = tmp19;
                             cResult[41] = tmp37;
                             cResult[42] = tmp12;
@@ -220,20 +220,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
                             }
                           }
                           let obj5 = { style: tmp4.error, variant: "text-xs/medium", color: "text-feedback-critical", children: obj4.getAnyErrorMessage() };
-                          tmp52 = closure_13(tmp(4892).Text, obj5);
+                          tmp52 = closure_13(tmp(5086).Text, obj5);
                         }
                         cResult[35] = obj4;
                         cResult[36] = tmp4.error;
                         cResult[37] = tmp52;
                       }
                       let obj6 = { onConfirmPress: Z, style: tmp4.ageVerificationNotice, channelId: channel.id };
-                      const tmp50 = closure_13(tmp17(8116), obj6);
+                      const tmp50 = closure_13(tmp17(7491), obj6);
                       cResult[32] = channel.id;
                       cResult[33] = tmp4.ageVerificationNotice;
                       cResult[34] = tmp50;
                     }
                     let obj7 = { label: tmp39, maxLength, value: first1, placeholder: tmp41, onChange: tmp9[1], autoFocus: true, returnKeyType: "done", clearable: true, onSubmitEditing: tmp19 };
-                    const tmp46 = closure_13(tmp(6105).TextInput, obj7);
+                    const tmp46 = closure_13(tmp(6283).TextInput, obj7);
                     cResult[28] = tmp19;
                     cResult[29] = first1;
                     cResult[30] = tmp46;
@@ -249,7 +249,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
                 cResult[23] = tmp36;
               }
               const obj9 = { style: tmp4.headerSubtitle, variant: "text-sm/medium", color: "text-default", children: cResult[16] };
-              const tmp32 = closure_13(tmp(4892).Text, obj9);
+              const tmp32 = closure_13(tmp(5086).Text, obj9);
               cResult[17] = tmp4.headerSubtitle;
               cResult[18] = cResult[16];
               cResult[19] = tmp32;
@@ -257,7 +257,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
             }
           }
           const obj10 = { style: tmp4.headerTitle, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: cResult[11] };
-          const tmp26 = closure_13(tmp(4892).Text, obj10);
+          const tmp26 = closure_13(tmp(5086).Text, obj10);
           cResult[12] = tmp4.headerTitle;
           cResult[13] = cResult[11];
           cResult[14] = tmp26;
@@ -297,28 +297,28 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
               if ("" !== tmp45.trim()) {
                 v0(true);
                 v2(null);
-                const result = first1(1881).dismissGlobalKeyboard();
+                const result = first1(1893).dismissGlobalKeyboard();
                 v0 = 1;
                 if (null != closure_1) {
                   v2 = 3;
                   c5 = 1;
-                  const obj6 = { value: first1(8107).editStage(closure_0, tmp45, constants.GUILD_ONLY), done: false };
+                  const obj6 = { value: first1(7482).editStage(closure_0, tmp45, constants.GUILD_ONLY), done: false };
                   return obj6;
                 } else {
-                  const tmp33Result2 = first1(8107);
+                  const tmp33Result2 = first1(7482);
                   v2 = 2;
                   c5 = 1;
                   const obj7 = { value: tmp33Result2.startStage(closure_0, tmp45, constants.GUILD_ONLY, false), done: false };
                   return obj7;
                 }
-                const obj4 = first1(1881);
+                const obj4 = first1(1893);
               }
             }
           } else {
             if (1 === tmp7) {
               v0 = 0;
               closure_128_0 = tmp45;
-              const aPIError = new closure_0(5319).APIError(closure_128_0);
+              const aPIError = new closure_0(5631).APIError(closure_128_0);
               closure_128_1 = aPIError;
               v2(closure_128_1);
               v0(false);
@@ -337,9 +337,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
                 const obj = { value, done: true };
                 return obj;
               }
-              stateFromStores(4860).hideActionSheet(v65535);
+              stateFromStores(5054).hideActionSheet(collapsed);
               v0 = 0;
-              const obj2 = stateFromStores(4860);
+              const obj2 = stateFromStores(5054);
             }
             v0 = 0;
             c5 = 3;
@@ -399,7 +399,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   cResult[5] = A;
   tmp16 = A;
   const tmpResult2 = require("useStageSpeakingForCurrentUser");
-}) : ((channel) => {
+}) : (function StartStageChannelEventActionSheet(channel) {
   channel = channel.channel;
   value = undefined;
   dependencyMap = undefined;
@@ -434,28 +434,28 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
             if ("" !== importAll.trim()) {
               _undefined(true);
               asyncGeneratorStep(null);
-              const result = tmp45(1881).dismissGlobalKeyboard();
+              const result = tmp45(1893).dismissGlobalKeyboard();
               dependencyMap = 1;
               if (null != stateFromStores) {
                 c4 = 3;
                 c5 = 1;
-                const obj6 = { value: tmp45(8107).editStage(channel, importAll, constants.GUILD_ONLY), done: false };
+                const obj6 = { value: tmp45(7482).editStage(channel, importAll, constants.GUILD_ONLY), done: false };
                 return obj6;
               } else {
-                const tmp33Result2 = tmp45(8107);
+                const tmp33Result2 = tmp45(7482);
                 c4 = 2;
                 c5 = 1;
                 const obj7 = { value: tmp33Result2.startStage(channel, importAll, constants.GUILD_ONLY, false), done: false };
                 return obj7;
               }
-              const obj4 = tmp45(1881);
+              const obj4 = tmp45(1893);
             }
           }
         } else {
           if (1 === tmp7) {
             dependencyMap = 0;
             closure_128_1 = tmp45;
-            const aPIError = new channel(5319).APIError(closure_128_1);
+            const aPIError = new channel(5631).APIError(closure_128_1);
             closure_128_0 = aPIError;
             closure_129_4(closure_128_0);
             closure_129_3(false);
@@ -474,9 +474,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
               const obj = { value, done: true };
               return obj;
             }
-            tmp3(4860).hideActionSheet(closure_1_10);
+            tmp3(5054).hideActionSheet(closure_1_10);
             dependencyMap = 0;
-            const obj2 = tmp3(4860);
+            const obj2 = tmp3(5054);
           }
           dependencyMap = 0;
           c5 = 3;
@@ -510,8 +510,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   const tmp7 = _slicedToArray(noop.useState(false), 2);
   [obj3, c4] = _slicedToArray(noop.useState(null), 2);
   const tmp9 = _slicedToArray(noop.useState(null), 2);
-  const shouldAgeVerifyToSpeakForCurrentUser = channel(5586).useShouldAgeVerifyToSpeakForCurrentUser(channel.id);
-  stateFromStores(5597)(() => {
+  const shouldAgeVerifyToSpeakForCurrentUser = channel(5954).useShouldAgeVerifyToSpeakForCurrentUser(channel.id);
+  stateFromStores(5392)(() => {
     let id;
     if (stateFromStores != null) {
       id = stateFromStores.id;
@@ -528,7 +528,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     stringResult = intl.string(tmp2(1126).t["5BKP4y"]);
   }
   obj5.children = stringResult;
-  const items1 = [closure_13(channel(4892).Text, obj5), ];
+  const items1 = [closure_13(channel(5086).Text, obj5), ];
   let obj6 = { style: tmp.headerSubtitle, variant: "text-sm/medium", color: "text-default", children: null };
   if (null == stateFromStores) {
     const intl4 = tmp2(1126).intl;
@@ -538,11 +538,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     stringResult1 = intl3.string(tmp2(1126).t["I+9bLx"]);
   }
   obj6.children = stringResult1;
-  items1[1] = closure_13(channel(4892).Text, obj6);
+  items1[1] = closure_13(channel(5086).Text, obj6);
   obj4.children = items1;
   let stringResult2;
   const tmp11 = stateFromStores;
-  const tmp2Result = channel(5586);
+  const tmp2Result = channel(5954);
   if (null == stateFromStores) {
     const intl5 = tmp2(1126).intl;
     stringResult2 = intl5.string(tmp2(1126).t.gR66jX);
@@ -567,8 +567,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   const intl7 = tmp2(1126).intl;
   obj8.placeholder = intl7.string(channel(1126).t.ZwWruY);
   obj8.onSubmitEditing = handleSave;
-  items2[1] = closure_13(channel(6105).TextInput, obj8);
-  items2[2] = closure_13(tmp11(8116), {
+  items2[1] = closure_13(channel(6283).TextInput, obj8);
+  items2[2] = closure_13(tmp11(7491), {
     onConfirmPress() {
       return stateFromStores(_undefined[19]).hideActionSheet(closure_1_10);
     },
@@ -578,7 +578,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   let tmp15Result = null;
   if (null != obj3) {
     const obj10 = { style: tmp.error, variant: "text-xs/medium", color: "text-feedback-critical", children: obj3.getAnyErrorMessage() };
-    tmp15Result = closure_13(tmp2(4892).Text, obj10);
+    tmp15Result = closure_13(tmp2(5086).Text, obj10);
   }
   items2[3] = tmp15Result;
   const obj11 = { style: tmp.startButton, children: null };
@@ -589,14 +589,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     const intl8 = tmp2(1126).intl;
     stringResult3 = intl8.string(tmp2(1126).t.K344S7);
   }
-  obj11.children = closure_13(channel(5601).Button, { text: stringResult3, onPress: handleSave, disabled: "" === value, loading: tmp8, accessibilityHint: stringResult2 });
+  obj11.children = closure_13(channel(5375).Button, { text: stringResult3, onPress: handleSave, disabled: "" === value, loading: tmp8, accessibilityHint: stringResult2 });
   items2[4] = closure_13(View, obj11);
   let tmp15Result2 = null != stringResult2 && !shouldAgeVerifyToSpeakForCurrentUser;
   if (tmp15Result2) {
     const obj13 = { accessible: false, style: tmp.buttonSubtitle, variant: "text-xs/medium", color: "text-default", children: null };
     const intl10 = tmp2(1126).intl;
     obj13.children = intl10.string(tmp2(1126).t.gR66jX);
-    tmp15Result2 = closure_13(tmp2(4892).Text, obj13);
+    tmp15Result2 = closure_13(tmp2(5086).Text, obj13);
   }
   const obj12 = { text: stringResult3, onPress: handleSave, disabled: "" === value, loading: tmp8, accessibilityHint: stringResult2 };
   const obj9 = {
@@ -609,5 +609,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   const tmp13Result = closure_14(View, obj4);
   items2[5] = tmp15Result2;
   obj7.children = items2;
-  return closure_13(channel(6652).BottomSheet, { keyboardShouldPersistTaps: "always", children: closure_14(channel(6626).SafeAreaPaddingView, obj7) });
+  return closure_13(channel(6829).BottomSheet, { keyboardShouldPersistTaps: "always", children: closure_14(channel(6803).SafeAreaPaddingView, obj7) });
 });

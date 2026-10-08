@@ -1,8 +1,8 @@
-// === Module 7857: EditCollectiblesActionCreators ===
+// === Module 8275: EditCollectiblesActionCreators ===
 
-// Module 7857 (EditCollectiblesActionCreators)
+// Module 8275 (EditCollectiblesActionCreators)
 import Constants from "Constants" /* 1085 */;
-import openUserSettings from "openUserSettings" /* 6895 */;
+import openUserSettings from "openUserSettings" /* 7084 */;
 import size from "module_2" /* 2 */;
 
 const UserSettingsSections = Constants.UserSettingsSections;

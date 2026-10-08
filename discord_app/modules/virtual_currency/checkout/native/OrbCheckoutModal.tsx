@@ -1,15 +1,15 @@
-// === Module 13008: OrbCheckoutModal ===
+// === Module 13286: OrbCheckoutModal ===
 
-// Module 13008 (OrbCheckoutModal)
+// Module 13286 (OrbCheckoutModal)
 import c from "c" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
-import Stack_Stack from "Stack/Stack" /* 5600 */;
-import VirtualCurrencyUtils from "VirtualCurrencyUtils" /* 10008 */;
-import PaymentFlowStartedTriggerPoint from "PaymentFlowStartedTriggerPoint" /* 10552 */;
-import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 10791 */;
-import OrbCheckoutModalContext from "OrbCheckoutModalContext" /* 13009 */;
-import OrbCheckoutModalComponents from "OrbCheckoutModalComponents" /* 13010 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import Stack_Stack from "Stack/Stack" /* 5373 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5940 */;
+import VirtualCurrencyUtils from "VirtualCurrencyUtils" /* 9538 */;
+import PaymentFlowStartedTriggerPoint from "PaymentFlowStartedTriggerPoint" /* 10149 */;
+import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 10482 */;
+import OrbCheckoutModalContext from "OrbCheckoutModalContext" /* 13287 */;
+import OrbCheckoutModalComponents from "OrbCheckoutModalComponents" /* 13288 */;
 import "module_19";
 
 const require = globalThis.__r;
@@ -24,7 +24,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const constants3 = { MAIN: "MAIN" };
 let ReactCompilerGating = fn(558);
-let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((orbBalance) => {
+let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function OrbCheckoutModalContent(orbBalance) {
   const cResult = c.c(10);
   orbBalance = orbBalance.orbBalance;
   const orbCheckoutModalContext = OrbCheckoutModalContext.useOrbCheckoutModalContext();
@@ -80,7 +80,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((orbBalance) =>
   cResult[8] = tmp13;
   cResult[9] = tmp17;
   tmp16 = tmp17;
-}) : ((orbBalance) => {
+}) : (function OrbCheckoutModalContent(orbBalance) {
   const orbCheckoutModalContext = OrbCheckoutModalContext.useOrbCheckoutModalContext();
   ({ orbRedemptionError, skuId } = orbCheckoutModalContext);
   let product = useFetchCollectiblesProduct.useFetchCollectiblesProduct(skuId).product;
@@ -100,7 +100,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((orbBalance) =>
   return __initData(Stack_Stack.Stack, obj4);
 });
 ReactCompilerGating = fn(558);
-let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
+let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function OrbCheckoutModalFooter(onPress) {
   const cResult = c.c(3);
   onPress = onPress.onPress;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -124,14 +124,14 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
     tmp7 = cResult[2];
   }
   return tmp7;
-}) : ((onPress) => {
+}) : (function OrbCheckoutModalFooter(onPress) {
   const obj = { children: null };
   const items = [closure_1_11(OrbCheckoutModalComponents.OrbCheckoutLegalFinePrint, {}), closure_1_11(OrbCheckoutModalComponents.OrbCheckoutPurchaseButton, { onPress: onPress.onPress })];
   obj.children = items;
   return __initData(Stack_Stack.Stack, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOrbCheckoutPaymentFlowEvents(arg0) {
   _require = arg0;
   const cResult = require("c").c(16);
   let obj = require("c");
@@ -141,11 +141,11 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   let obj2 = require("OrbCheckoutModalContext");
   const virtualCurrencyBalance = require("useVirtualCurrencyBalance").useVirtualCurrencyBalance();
   if (cResult[0] !== skuId) {
-    let result = tmp(10008).get1PShopApplicationIdForSKU(skuId);
+    let result = tmp(9538).get1PShopApplicationIdForSKU(skuId);
     cResult[0] = skuId;
     cResult[1] = result;
     let tmp6 = result;
-    const tmpResult = tmp(10008);
+    const tmpResult = tmp(9538);
   } else {
     tmp6 = cResult[1];
   }
@@ -187,7 +187,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               }
               return tmp14;
             }
-            const fn = function b(arg0, arg1) {
+            const fn = function h(arg0, arg1) {
               const diff = Date.now() - closure_0;
               if (arg0 === constants.PAYMENT_FLOW_STARTED) {
                 const obj2 = {};
@@ -245,7 +245,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[10] = obj6;
   tmp11 = obj6;
   let obj3 = require("useVirtualCurrencyBalance");
-}) : ((arg0) => {
+}) : (function useOrbCheckoutPaymentFlowEvents(arg0) {
   _require = arg0;
   const orbCheckoutModalContext = require("OrbCheckoutModalContext").useOrbCheckoutModalContext();
   const skuId = orbCheckoutModalContext.skuId;

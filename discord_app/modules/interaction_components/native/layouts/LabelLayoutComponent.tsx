@@ -1,10 +1,10 @@
-// === Module 17569: LabelLayoutComponent ===
+// === Module 17851: LabelLayoutComponent ===
 
-// Module 17569 (LabelLayoutComponent)
+// Module 17851 (LabelLayoutComponent)
 import c from "c" /* 576 */;
-import Server from "Server" /* 1985 */;
-import Input from "Input" /* 6430 */;
-import ComponentStateContext from "ComponentStateContext" /* 7806 */;
+import Server from "Server" /* 1997 */;
+import Input from "Input" /* 6284 */;
+import ComponentStateContext from "ComponentStateContext" /* 8225 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/interaction_components/native/layouts/LabelLayoutComponent.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function LabelLayoutComponent(arg0) {
   const cResult = c.c(15);
   ({ label, description, component, renderComponent } = arg0);
   const componentError = ComponentStateContext.useComponentError(component);
@@ -80,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[6] = renderComponentResult1;
     tmp6 = renderComponentResult1;
   }
-}) : ((arg0) => {
+}) : (function LabelLayoutComponent(arg0) {
   ({ component, renderComponent } = arg0);
   ({ label, description } = arg0);
   const componentError = ComponentStateContext.useComponentError(component);

@@ -1,6 +1,6 @@
-// === Module 9029: pendingFrameLaunch ===
+// === Module 10630: pendingFrameLaunch ===
 
-// Module 9029 (pendingFrameLaunch)
+// Module 10630 (pendingFrameLaunch)
 import size from "module_2" /* 2 */;
 
 let closure_0 = {};

@@ -1,21 +1,21 @@
-// === Module 9410: GuildProfileActionSheet ===
+// === Module 8831: GuildProfileActionSheet ===
 
-// Module 9410 (GuildProfileActionSheet)
+// Module 8831 (GuildProfileActionSheet)
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
-import GuildProfileActionCreators from "GuildProfileActionCreators" /* 9264 */;
+import GuildProfileActionCreators from "GuildProfileActionCreators" /* 8594 */;
 import noop from "module_19" /* 19 */;
-import GuildProfileStore from "GuildProfileStore" /* 9262 */;
+import GuildProfileStore from "GuildProfileStore" /* 8592 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty } = get_ActivityIndicator);
-const GuildProfileFetchStatus = fn(9262).GuildProfileFetchStatus;
-const INVALID_ACCESS_ERROR_CODE = fn(9411).INVALID_ACCESS_ERROR_CODE;
+const GuildProfileFetchStatus = fn(8592).GuildProfileFetchStatus;
+const INVALID_ACCESS_ERROR_CODE = fn(8832).INVALID_ACCESS_ERROR_CODE;
 const VerticalGradient = fn(1085).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { loadingContainer: { paddingTop: 40 }, footerContainer: { paddingHorizontal: 16, paddingVertical: 40 }, scrollView: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
 let closure_12 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -23,7 +23,7 @@ let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_profile/native/components/GuildProfileActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildProfileActionSheet(guildId) {
   const cResult = guildId(analyticsLocations[9]).c(53);
   guildId = guildId.guildId;
   ({ context, inviteKey } = guildId);
@@ -71,7 +71,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
         return closure_6.getErrorCode(guildId);
       }
     }
-    const effect = noop.useEffect(G, items2);
+    const effect = noop.useEffect(V, items2);
     if (cResult[7] !== fetchGuildProfile) {
       class E {
         constructor() {
@@ -156,7 +156,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       }
     }
   }
-  class G {
+  class V {
     constructor() {
       obj = closure_0(closure_2[17]);
       result = obj.trackGuildProfileViewed(guildId, analyticsLocations);
@@ -166,10 +166,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   items2 = [guildId, analyticsLocations];
   cResult[3] = analyticsLocations;
   cResult[4] = guildId;
-  cResult[5] = G;
+  cResult[5] = V;
   cResult[6] = items2;
   const tmpResult6 = guildId(analyticsLocations[13]);
-}) : ((guildId) => {
+}) : (function GuildProfileActionSheet(guildId) {
   guildId = guildId.guildId;
   fetchGuildProfile = undefined;
   let analyticsLocations;

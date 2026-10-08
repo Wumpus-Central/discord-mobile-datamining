@@ -1,6 +1,6 @@
-// === Module 16231: ServerOnboardingSetupProgressCompletionStore ===
+// === Module 16491: ServerOnboardingSetupProgressCompletionStore ===
 
-// Module 16231 (ServerOnboardingSetupProgressCompletionStore)
+// Module 16491 (ServerOnboardingSetupProgressCompletionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 
@@ -46,7 +46,7 @@ export const markServerOnboardingSetupProgressComplete = function markServerOnbo
     DispatcherDefault.dispatch(obj2);
   }
 };
-export const useIsServerOnboardingSetupProgressComplete = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const useIsServerOnboardingSetupProgressComplete = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsServerOnboardingSetupProgressComplete(arg0) {
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -57,7 +57,7 @@ export const useIsServerOnboardingSetupProgressComplete = ReactCompilerGating.is
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function s() {
+    const fn = function n() {
       return serverOnboardingSetupProgressCompletionStore.isComplete(closure_0);
     };
     const items1 = [arg0];
@@ -72,7 +72,7 @@ export const useIsServerOnboardingSetupProgressComplete = ReactCompilerGating.is
   }
   const obj = require("c");
   return require("initialize").useStateFromStores(first, tmp6, tmp7);
-}) : ((arg0) => {
+}) : (function useIsServerOnboardingSetupProgressComplete(arg0) {
   _require = arg0;
   const items = [serverOnboardingSetupProgressCompletionStore];
   const items1 = [arg0];

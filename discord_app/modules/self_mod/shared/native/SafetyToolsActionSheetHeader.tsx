@@ -1,16 +1,16 @@
-// === Module 9849: SafetyToolsActionSheetHeader ===
+// === Module 10410: SafetyToolsActionSheetHeader ===
 
-// Module 9849 (SafetyToolsActionSheetHeader)
+// Module 10410 (SafetyToolsActionSheetHeader)
 import nativeDefault from "native" /* 587 */;
-import NavigatorHeader from "NavigatorHeader" /* 6017 */;
-import SafetyToolsActionCreators from "SafetyToolsActionCreators" /* 9838 */;
+import NavigatorHeader from "NavigatorHeader" /* 6203 */;
+import SafetyToolsActionCreators from "SafetyToolsActionCreators" /* 10401 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { navbarContainer: { display: "flex", flexDirection: "row", justifyContent: "center" }, navbarLeft: { position: "absolute", left: nativeDefault.space.PX_16 } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -18,7 +18,7 @@ let obj3 = { position: "absolute", left: nativeDefault.space.PX_16 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/self_mod/shared/native/SafetyToolsActionSheetHeader.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((recipientId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function SafetyToolsActionSheetHeader(recipientId) {
   const cResult = channelId(recipientId[6]).c(16);
   ({ title, channelId } = recipientId);
   recipientId = recipientId.recipientId;
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((recipientId) => 
   cResult[4] = fn;
   tmp5 = fn;
   const obj = channelId(recipientId[6]);
-}) : ((channelId) => {
+}) : (function SafetyToolsActionSheetHeader(channelId) {
   channelId = channelId.channelId;
   const recipientId = channelId.recipientId;
   const warningId = channelId.warningId;

@@ -1,23 +1,23 @@
-// === Module 7854: EditCollectiblesCTAButton ===
+// === Module 8272: EditCollectiblesCTAButton ===
 
-// Module 7854 (EditCollectiblesCTAButton)
+// Module 8272 (EditCollectiblesCTAButton)
 import util from "util" /* 1126 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4534 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import HapticUtils from "HapticUtils" /* 4861 */;
-import spring from "spring" /* 5604 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7065 */;
-import EditCollectiblesActionCreators from "EditCollectiblesActionCreators" /* 7857 */;
-import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 7858 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4726 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import HapticUtils from "HapticUtils" /* 5055 */;
+import spring from "spring" /* 5374 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7251 */;
+import EditCollectiblesActionCreators from "EditCollectiblesActionCreators" /* 8275 */;
+import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8276 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
 
 require = fn;
 let closure_5 = fn(1087).CollectiblesMobileShopScreen;
-let closure_6 = fn(1614).MEDIA_PICKER_SEND_BUTTON_SPRING;
+let closure_6 = fn(1626).MEDIA_PICKER_SEND_BUTTON_SPRING;
 const jsx = fn(21).jsx;
 let c8 = 0.9;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_9 = createStyles.createStyles({ buttonRowContainer: { flexGrow: 0, flexDirection: "row", justifyContent: "flex-end", paddingHorizontal: 12, height: 48 }, buttonContainer: { position: "absolute", bottom: 0, left: 0, right: 0, marginLeft: 24, marginRight: 24, flexDirection: "column", justifyContent: "flex-end" } });
 const __initData = { code: "function EditCollectiblesCTAButtonTsx1(){const{shouldShowButton,APPLY_BUTTON_BOUNCE_DISTANCE,APPLY_BUTTON_SCALE_TRANSITION,reducedMotion,withSpring,MEDIA_PICKER_SEND_BUTTON_SPRING}=this.__closure;const targetTranslateY=shouldShowButton.get()?0:APPLY_BUTTON_BOUNCE_DISTANCE;const targetScale=shouldShowButton.get()?1:APPLY_BUTTON_SCALE_TRANSITION;return{transform:[{translateY:reducedMotion?targetTranslateY:withSpring(targetTranslateY,MEDIA_PICKER_SEND_BUTTON_SPRING)},{scale:reducedMotion?targetScale:withSpring(targetScale,MEDIA_PICKER_SEND_BUTTON_SPRING)}]};}" };
 const __initData2 = { code: "function EditCollectiblesCTAButtonTsx2(){const{shouldShowButton}=this.__closure;return{pointerEvents:shouldShowButton.get()?\"box-none\":\"none\"};}" };
@@ -29,7 +29,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/EditCollectiblesCTAButton.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((selectedSkuId) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function EditCollectiblesCTAButton(selectedSkuId) {
   const cResult = currentSkuId(onApply[7]).c(47);
   ({ user, currentSkuId } = selectedSkuId);
   selectedSkuId = selectedSkuId.selectedSkuId;
@@ -40,19 +40,19 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((select
   const bottom = selectedSkuId(onApply[8])().bottom;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [analyticsSource];
-    class E {
+    class P {
       constructor() {
         return analyticsSource.useReducedMotion;
       }
     }
     cResult[0] = items;
-    cResult[1] = E;
+    cResult[1] = P;
     tmp6 = items;
   } else {
     [tmp6, tmp7] = cResult;
   }
   let obj = currentSkuId(onApply[7]);
-  const stateFromStores = currentSkuId(onApply[9]).useStateFromStores(tmp6, E);
+  const stateFromStores = currentSkuId(onApply[9]).useStateFromStores(tmp6, P);
   const tmpResult = currentSkuId(onApply[9]);
   ({ product, purchase } = selectedSkuId(onApply[10])(selectedSkuId));
   const tmp10 = selectedSkuId(onApply[10])(selectedSkuId);
@@ -64,7 +64,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((select
         let tmp13 = cResult[6];
       }
       const effect = analyticsLocations.useEffect(tmp12, tmp13);
-      class E {
+      class P {
         constructor() {
           return analyticsSource.useReducedMotion;
         }
@@ -137,7 +137,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((select
       const animatedStyle1 = currentSkuId(onApply[11]).useAnimatedStyle(fn2);
       if (cResult[7] !== user) {
         const canUseCollectiblesResult = tmp5(onApply[13]).canUseCollectibles(user);
-        class E {
+        class P {
           constructor() {
             return analyticsSource.useReducedMotion;
           }
@@ -154,7 +154,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((select
         }
         if (cResult[12] === tmp24) {
           let tmp31 = null == selectedSkuId;
-          class E {
+          class P {
             constructor() {
               return analyticsSource.useReducedMotion;
             }
@@ -180,14 +180,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((select
             if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
               const intl3 = currentSkuId(onApply[16]).intl;
               const stringResult = intl3.string(currentSkuId(onApply[16]).t.Jh8fJz);
-              class E {
+              class P {
                 constructor() {
                   return analyticsSource.useReducedMotion;
                 }
               }
               cResult[15] = stringResult;
             }
-            class E {
+            class P {
               constructor() {
                 return analyticsSource.useReducedMotion;
               }
@@ -197,7 +197,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((select
               if (cResult[16] !== user) {
                 const tmp5Result2 = tmp5(onApply[13]);
                 const intl2 = currentSkuId(onApply[16]).intl;
-                class E {
+                class P {
                   constructor() {
                     return analyticsSource.useReducedMotion;
                   }
@@ -220,7 +220,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((select
               if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
                 const intl = currentSkuId(onApply[16]).intl;
                 const stringResult1 = intl.string(currentSkuId(onApply[16]).t.fYfGgK);
-                class E {
+                class P {
                   constructor() {
                     return analyticsSource.useReducedMotion;
                   }
@@ -243,7 +243,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((select
                         if (cResult[27] === animatedStyle1) {
                           if (cResult[30] !== bottom) {
                             let obj6 = { marginBottom: bottom };
-                            class E {
+                            class P {
                               constructor() {
                                 return analyticsSource.useReducedMotion;
                               }
@@ -259,7 +259,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((select
                               if (tmp26) {
                                 str2 = "active";
                               }
-                              class E {
+                              class P {
                                 constructor() {
                                   return analyticsSource.useReducedMotion;
                                 }
@@ -272,7 +272,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((select
                               cResult[39] = tmp49;
                             }
                           }
-                          class E {
+                          class P {
                             constructor() {
                               return analyticsSource.useReducedMotion;
                             }
@@ -286,7 +286,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((select
                           cResult[35] = tmp46;
                         }
                         const items1 = [, ];
-                        class E {
+                        class P {
                           constructor() {
                             return analyticsSource.useReducedMotion;
                           }
@@ -319,7 +319,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((select
               }
               ActionSheetActionCreatorsDefault.hideActionSheet();
             }
-            class E {
+            class P {
               constructor() {
                 return analyticsSource.useReducedMotion;
               }
@@ -336,7 +336,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((select
           }
           const tmpResult10 = currentSkuId(onApply[15]);
         }
-        class E {
+        class P {
           constructor() {
             return analyticsSource.useReducedMotion;
           }
@@ -373,7 +373,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((select
   tmp13 = items2;
   tmp12 = O;
   const tmpResult7 = currentSkuId(onApply[11]);
-}) : ((user) => {
+}) : (function EditCollectiblesCTAButton(user) {
   user = user.user;
   const currentSkuId = user.currentSkuId;
   const selectedSkuId = user.selectedSkuId;

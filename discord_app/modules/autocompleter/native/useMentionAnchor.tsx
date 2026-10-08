@@ -1,8 +1,8 @@
-// === Module 12048: useMentionAnchor ===
+// === Module 12121: useMentionAnchor ===
 
-// Module 12048 (useMentionAnchor)
+// Module 12121 (useMentionAnchor)
 import c from "c" /* 576 */;
-import autocompleter_AutocompleteUtils from "autocompleter/AutocompleteUtils" /* 10084 */;
+import autocompleter_AutocompleteUtils from "autocompleter/AutocompleteUtils" /* 9667 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -46,11 +46,11 @@ function isMentionAnchorValid(text, selectionEnd, anchor, prefix, options) {
     }
   }
 }
-function transition(anchor, enabled, enabled) {
+function transition(kind, arg1, enabled) {
   ({ text, selectionEnd, prefix, options } = enabled);
   if (enabled.enabled) {
-    let tmp2 = anchor;
-    const kind = anchor.kind;
+    let tmp2 = kind;
+    kind = kind.kind;
     if ("idle" === kind) {
       const lastIndexOfResult = text.lastIndexOf(prefix, selectionEnd);
       let tmp7 = null;
@@ -73,13 +73,13 @@ function transition(anchor, enabled, enabled) {
       }
       return tmp17;
     } else if ("active" === kind) {
-      if (!enabled) {
+      if (!arg1) {
         tmp2 = closure_6;
       }
       return tmp2;
     } else if ("pending" === kind) {
       ({ anchor, seenText } = tmp2);
-      if (enabled) {
+      if (arg1) {
         const obj3 = { kind: "active", anchor };
         let tmp4 = obj3;
       } else if (text.startsWith(prefix, anchor)) {
@@ -108,7 +108,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/autocompleter/native/useMentionAnchor.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((text, selectionEnd, enabled, prefix, options) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useMentionAnchor(text, selectionEnd, enabled, prefix, options) {
   closure_0 = enabled;
   const cResult = c.c(14);
   [tmp3, tmp4] = noop.useState(closure_6);
@@ -195,7 +195,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((text, selectionE
   tmp5 = tmp16;
   const obj3 = { enabled, text, selectionEnd, prefix, options };
   const tmp2 = _slicedToArray(noop.useState(closure_6), 2);
-}) : ((text, selectionEnd, enabled, prefix, options) => {
+}) : (function useMentionAnchor(text, selectionEnd, enabled, prefix, options) {
   closure_0 = enabled;
   [anchor, tmp2] = noop.useState(closure_6);
   dependencyMap = tmp2;

@@ -1,9 +1,9 @@
-// === Module 17507: PastVcActivityMessagesExperiment ===
+// === Module 17789: PastVcActivityMessagesExperiment ===
 
-// Module 17507 (PastVcActivityMessagesExperiment)
+// Module 17789 (PastVcActivityMessagesExperiment)
 import c from "c" /* 576 */;
-import ExperimentConstants from "ExperimentConstants" /* 4783 */;
-import createExperiment from "module_4780" /* 4780 */;
+import ExperimentConstants from "ExperimentConstants" /* 4977 */;
+import createExperiment from "module_4974" /* 4974 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -17,7 +17,7 @@ export default experiment;
 export const isPastVcActivityMessagesEnabled = function isPastVcActivityMessagesEnabled(id, GuildSettingsModalOverview) {
   return experiment.getCurrentConfig({ guildId: id, location: GuildSettingsModalOverview }, { autoTrackExposure: true }).enabled;
 };
-export const useIsPastVcActivityMessagesEnabled = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId, location) => {
+export const useIsPastVcActivityMessagesEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsPastVcActivityMessagesEnabled(guildId, location) {
   const cResult = c.c(4);
   if (cResult[0] === guildId) {
     if (cResult[1] === location) {
@@ -38,4 +38,6 @@ export const useIsPastVcActivityMessagesEnabled = ReactCompilerGating.isReactCom
   cResult[1] = location;
   cResult[2] = obj3;
   tmp2 = obj3;
-}) : ((guildId, location) => experiment.useExperiment({ guildId, location }, { autoTrackExposure: true }).enabled);
+}) : (function useIsPastVcActivityMessagesEnabled(guildId, location) {
+  return experiment.useExperiment({ guildId, location }, { autoTrackExposure: true }).enabled;
+});

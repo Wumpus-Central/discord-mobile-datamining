@@ -1,12 +1,12 @@
-// === Module 12314: useJoinRequestButtonActions ===
+// === Module 12412: useJoinRequestButtonActions ===
 
-// Module 12314 (useJoinRequestButtonActions)
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+// Module 12412 (useJoinRequestButtonActions)
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
 
 require = fn;
 const Routes = fn(1085).Routes;
@@ -228,7 +228,7 @@ export const useJoinRequestButtonActions = function useJoinRequestButtonActions(
               const intl = tmp4(tmp61[7]).intl;
               obj12.content = intl.string(tmp4(tmp61[7]).t.WXHcq5);
               obj12.icon = function icon() {
-                return closure_1_8(closure_1_0(4798).CircleCheckIcon, { color: closure_1_1(587).colors.STATUS_POSITIVE_BACKGROUND, secondaryColor: closure_1_1(587).colors.STATUS_POSITIVE_TEXT });
+                return closure_1_8(closure_1_0(4992).CircleCheckIcon, { color: closure_1_1(587).colors.STATUS_POSITIVE_BACKGROUND, secondaryColor: closure_1_1(587).colors.STATUS_POSITIVE_TEXT });
               };
               tmp42(tmp61[6]).open(obj12);
               const obj = tmp42(tmp61[6]);
@@ -274,8 +274,8 @@ export const useJoinRequestButtonActions = function useJoinRequestButtonActions(
       const _HermesInternal = HermesInternal;
       const obj = ActionSheetActionCreatorsDefault;
       const obj2 = { joinRequest, onError, onDismiss };
-      obj.openLazy(asyncRequireImpl(12315, dependencyMap.paths), "RejectionReason-" + joinRequestId, obj2);
-      const tmp9 = asyncRequireImpl(12315, dependencyMap.paths);
+      obj.openLazy(asyncRequireImpl(12413, dependencyMap.paths), "RejectionReason-" + joinRequestId, obj2);
+      const tmp9 = asyncRequireImpl(12413, dependencyMap.paths);
     }
   }, items2);
   obj2.submitting = submitting;

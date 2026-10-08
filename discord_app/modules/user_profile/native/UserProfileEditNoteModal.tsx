@@ -1,21 +1,21 @@
-// === Module 12895: UserProfileEditNoteModal ===
+// === Module 13044: UserProfileEditNoteModal ===
 
-// Module 12895 (UserProfileEditNoteModal)
+// Module 13044 (UserProfileEditNoteModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1370 */;
-import useNavigation from "useNavigation" /* 1490 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
-import NavigatorHeader from "NavigatorHeader" /* 6017 */;
-import Navigator from "Navigator" /* 6503 */;
-import UserProfileEditNote from "UserProfileEditNote" /* 12896 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1382 */;
+import useNavigation from "useNavigation" /* 1502 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5940 */;
+import NavigatorHeader from "NavigatorHeader" /* 6203 */;
+import Navigator from "Navigator" /* 6679 */;
+import UserProfileEditNote from "UserProfileEditNote" /* 13045 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
-let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsModalPresented() {
   const cResult = c.c(3);
   const navigation = useNavigation.useNavigation();
   [tmp4, importDefault] = noop.useState(false);
@@ -39,7 +39,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   const effect = noop.useEffect(tmp5, tmp6);
   return tmp4;
-}) : (() => {
+}) : (function useIsModalPresented() {
   const navigation = useNavigation.useNavigation();
   const tmp2 = _slicedToArray(noop.useState(false), 2);
   closure_1 = tmp2[1];
@@ -55,7 +55,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileEditNoteModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileEditNoteModal(userId) {
   const cResult = userId(onBack[4]).c(15);
   userId = userId.userId;
   const onSave = userId.onSave;
@@ -63,15 +63,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   const tmp4 = closure_6();
   shouldFocusInput = tmp4;
   if (cResult[0] !== onBack) {
-    const fn = function t() {
+    function handleClose() {
       ModalActionCreatorsDefault.pop();
       if (onBack != null) {
         onBack();
       }
-    };
+    }
     cResult[0] = onBack;
-    cResult[1] = fn;
-    let tmp5 = fn;
+    cResult[1] = handleClose;
+    let tmp5 = handleClose;
   } else {
     tmp5 = cResult[1];
   }
@@ -169,7 +169,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   cResult[11] = S;
   tmp12 = S;
   let obj = userId(onBack[4]);
-}) : ((arg0) => {
+}) : (function UserProfileEditNoteModal(arg0) {
   ({ userId: require, onSave: importDefault, onBack: dependencyMap } = arg0);
   function handleClose() {
     ModalActionCreatorsDefault.pop();
@@ -193,7 +193,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
     const obj = { variant: "redesign/heading-18/bold", accessibilityRole: "header", children: null };
     const intl = userId(1126).intl;
     obj.children = intl.string(userId(1126).t.sHHsOM);
-    return jsx(userId(4892).Text, { variant: "redesign/heading-18/bold", accessibilityRole: "header", children: null });
+    return jsx(userId(5086).Text, { variant: "redesign/heading-18/bold", accessibilityRole: "header", children: null });
   };
   tmp2Result = utils_PlatformUtils;
   obj5.headerLeft = NavigatorHeader.getHeaderCloseButton(handleClose);

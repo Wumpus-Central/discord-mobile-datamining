@@ -1,16 +1,16 @@
-// === Module 13247: PromotionUtils ===
+// === Module 13547: PromotionUtils ===
 
-// Module 13247 (PromotionUtils)
+// Module 13547 (PromotionUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import FlagUtils from "FlagUtils" /* 1390 */;
-import dismissible_content from "dismissible_content" /* 2036 */;
-import DismissibleContentUtils from "DismissibleContentUtils" /* 2037 */;
-import constants from "constants" /* 10441 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import FlagUtils from "FlagUtils" /* 1402 */;
+import dismissible_content from "dismissible_content" /* 2048 */;
+import DismissibleContentUtils from "DismissibleContentUtils" /* 2049 */;
+import constants from "constants" /* 10038 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import PromotionRecord from "PromotionRecord" /* 10410 */;
-import PromotionsStore from "PromotionsStore" /* 10409 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
+import PromotionRecord from "PromotionRecord" /* 10007 */;
+import PromotionsStore from "PromotionsStore" /* 10006 */;
 
 require = fn;
 function claimedOutboundPromotionCodeFromServer(code) {
@@ -64,8 +64,8 @@ let closure_12 = async function _claimOutboundPromotion(arg0) {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          const HTTP = closure_132_0(closure_132_2[8]).HTTP;
-          const obj5 = { url: closure_132_9.CLAIM_OUTBOUND_PROMOTION_CODE(closure_131_0), rejectWithError: closure_132_0(closure_132_2[8]).rejectWithMigratedError() };
+          const HTTP = closure_132_0(closure_132_2[7]).HTTP;
+          const obj5 = { url: closure_132_9.CLAIM_OUTBOUND_PROMOTION_CODE(closure_131_0), rejectWithError: closure_132_0(closure_132_2[7]).rejectWithMigratedError() };
           c5 = 2;
           c6 = 1;
           const obj6 = { value: HTTP.post(obj5), done: false };
@@ -87,7 +87,7 @@ let closure_12 = async function _claimOutboundPromotion(arg0) {
           ANDROID = closure_132_10.ANDROID;
         }
         closure_131_6 = ANDROID;
-        obj9 = closure_132_0(closure_132_2[9]);
+        obj9 = closure_132_0(closure_132_2[8]);
         const obj8 = { platform: closure_131_6, status: closure_131_4.status, location_stack: closure_131_3, promotion_id: closure_131_0, name: null, partner: null };
         let name = closure_131_1;
         if (closure_131_1 == null) {
@@ -99,7 +99,7 @@ let closure_12 = async function _claimOutboundPromotion(arg0) {
           partner = null;
         }
         obj8.partner = partner;
-        closure_132_1(closure_132_2[10]).track(closure_132_8.OUTBOUND_PROMOTION_CLAIMED, obj8);
+        closure_132_1(closure_132_2[9]).track(closure_132_8.OUTBOUND_PROMOTION_CLAIMED, obj8);
         c6 = 3;
         const obj10 = { value: closure_132_11(body), done: true };
         return obj10;
@@ -110,10 +110,9 @@ let closure_12 = async function _claimOutboundPromotion(arg0) {
     }
   }
 };
-const PromotionFlags = fn(1379).PromotionFlags;
+const PromotionFlags = fn(1391).PromotionFlags;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_8, Endpoints: closure_9, Platforms: c10 } = Constants);
-const ActivityPlatform = fn(2011).ActivityPlatform;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/promotions/PromotionUtils.tsx");
 

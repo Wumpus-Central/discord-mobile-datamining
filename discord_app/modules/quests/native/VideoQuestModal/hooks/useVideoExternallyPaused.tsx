@@ -1,21 +1,21 @@
-// === Module 14975: useVideoExternallyPaused ===
+// === Module 15237: useVideoExternallyPaused ===
 
-// Module 14975 (useVideoExternallyPaused)
+// Module 15237 (useVideoExternallyPaused)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4742 */;
-import useAlertStore from "useAlertStore" /* 5716 */;
-import ContextMenuState from "ContextMenuState" /* 7591 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 10953 */;
-import ActionSheetStore from "ActionSheetStore" /* 4567 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4936 */;
+import useAlertStore from "useAlertStore" /* 5299 */;
+import ContextMenuState from "ContextMenuState" /* 9298 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 10604 */;
+import ActionSheetStore from "ActionSheetStore" /* 4759 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/hooks/useVideoExternallyPaused.tsx");
 
-export const useVideoExternallyPaused = ReactCompilerGating.isReactCompilerEnabled() ? ((questId, arg1) => {
+export const useVideoExternallyPaused = ReactCompilerGating.isReactCompilerEnabled() ? (function useVideoExternallyPaused(questId, arg1) {
   const cResult = c.c(11);
   const tmp4 = null != ContextMenuState.useActiveContextMenu();
   const openModalKey = NavigationRouteUtils.useOpenModalKey();
@@ -74,7 +74,7 @@ export const useVideoExternallyPaused = ReactCompilerGating.isReactCompilerEnabl
   cResult[9] = arg1;
   cResult[10] = PlatformUtils.isIOS() && arg1 || tmp11 || tmp4 || openModalKey !== tmp6 || tmp14;
   const tmp15 = PlatformUtils.isIOS() && arg1 || tmp11 || tmp4 || openModalKey !== tmp6 || tmp14;
-}) : ((questId, arg1) => {
+}) : (function useVideoExternallyPaused(questId, arg1) {
   const activeContextMenu = ContextMenuState.useActiveContextMenu();
   const openModalKey = NavigationRouteUtils.useOpenModalKey();
   const videoQuestModalKey = VideoQuestUtils.getVideoQuestModalKey(questId);

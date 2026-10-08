@@ -1,22 +1,22 @@
-// === Module 16829: pages/ErrorScreen ===
+// === Module 17108: pages/ErrorScreen ===
 
-// Module 16829 (pages/ErrorScreen)
+// Module 17108 (pages/ErrorScreen)
 import c from "c" /* 576 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4596 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6478 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4788 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6656 */;
 import noop from "module_19" /* 19 */;
 
-const Text_Text = tmp(4892);
+const Text_Text = tmp(5086);
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_6 = createStyles.createStyles({ container: { justifyContent: "center", alignItems: "center", height: "100%", display: "flex" }, text: { textAlign: "center", width: "75%" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/ErrorScreen.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((text) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ErrorScreen(text) {
   const cResult = c.c(15);
   text = text.text;
   require = text;
@@ -86,7 +86,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((text) 
   cResult[7] = tmp9;
   cResult[8] = items1;
   tmp10 = items1;
-}) : ((text) => {
+}) : (function ErrorScreen(text) {
   text = text.text;
   require = text;
   const tmp = closure_6();

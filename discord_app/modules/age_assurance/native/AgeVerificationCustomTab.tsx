@@ -1,10 +1,10 @@
-// === Module 8133: AgeVerificationCustomTab ===
+// === Module 7520: AgeVerificationCustomTab ===
 
-// Module 8133 (AgeVerificationCustomTab)
+// Module 7520 (AgeVerificationCustomTab)
 import LoggerDefault from "Logger" /* 3 */;
 import c from "c" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import NativeBrowserManagerModuleDefault from "NativeBrowserManagerModule" /* 4858 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import NativeBrowserManagerModuleDefault from "NativeBrowserManagerModule" /* 5052 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -219,7 +219,7 @@ let c8 = null;
 fn(558);
 const tmp2 = new LoggerDefault("AgeVerificationCustomTab");
 const ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsAgeVerificationCustomTabOpen() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function t(isOpen) {
@@ -231,7 +231,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     first = cResult[0];
   }
   return closure_6(first);
-}) : (() => closure_6((isOpen) => isOpen.isOpen));
+}) : (function useIsAgeVerificationCustomTabOpen() {
+  return closure_6((isOpen) => isOpen.isOpen);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/native/AgeVerificationCustomTab.tsx");
 
@@ -266,7 +268,7 @@ export function getIsAgeVerificationCustomTabAwaitingResult() {
   return c7;
 }
 export const useIsAgeVerificationCustomTabOpen = tmp3;
-export const useAgeVerificationCustomTabCopy = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const useAgeVerificationCustomTabCopy = ReactCompilerGating.isReactCompilerEnabled() ? (function useAgeVerificationCustomTabCopy() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function t(copy) {
@@ -278,5 +280,7 @@ export const useAgeVerificationCustomTabCopy = ReactCompilerGating.isReactCompil
     first = cResult[0];
   }
   return closure_6(first);
-}) : (() => closure_6((copy) => copy.copy));
+}) : (function useAgeVerificationCustomTabCopy() {
+  return closure_6((copy) => copy.copy);
+});
 export { getIsAgeVerificationCustomTabOpen };

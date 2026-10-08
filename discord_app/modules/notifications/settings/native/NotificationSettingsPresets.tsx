@@ -1,14 +1,14 @@
-// === Module 12514: NotificationSettingsPresets ===
+// === Module 12610: NotificationSettingsPresets ===
 
-// Module 12514 (NotificationSettingsPresets)
+// Module 12610 (NotificationSettingsPresets)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 4798 */;
-import notificationSettingsPresetUtils from "notificationSettingsPresetUtils" /* 5080 */;
-import BellSlashIcon from "BellSlashIcon" /* 9826 */;
-import notficationSettingsChannelFlagUtils from "notficationSettingsChannelFlagUtils" /* 9864 */;
-import MagicWandIcon from "MagicWandIcon" /* 12515 */;
-import notificationSettingsGuildFlagUtils from "notificationSettingsGuildFlagUtils" /* 12517 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 4992 */;
+import notificationSettingsPresetUtils from "notificationSettingsPresetUtils" /* 7886 */;
+import BellSlashIcon from "BellSlashIcon" /* 10325 */;
+import notficationSettingsChannelFlagUtils from "notficationSettingsChannelFlagUtils" /* 10424 */;
+import MagicWandIcon from "MagicWandIcon" /* 12611 */;
+import notificationSettingsGuildFlagUtils from "notificationSettingsGuildFlagUtils" /* 12613 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -38,16 +38,16 @@ function getSegmentedControlItems() {
   items[2] = obj3;
   return items;
 }
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { customContainer: { padding: 16, minHeight: 82, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.lg + 8, backgroundColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_ACTIVE_BG } };
 let closure_7 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((preset) => {
+let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function NotificationSettingsPresets(preset) {
   _require = preset;
   const cResult = require("c").c(21);
   const tmp4 = closure_7();
   if (cResult[0] !== preset) {
-    const fn = function u(arg0) {
+    function onSetActiveIndex(arg0) {
       let tmp = 0 === arg0;
       if (tmp) {
         tmp = preset.preset !== notificationSettingsPresetUtils.Presets.ALL_MESSAGES;
@@ -69,10 +69,10 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((preset) => {
       if (tmp17) {
         preset.updatePreset(notificationSettingsPresetUtils.Presets.NOTHING);
       }
-    };
+    }
     cResult[0] = preset;
-    cResult[1] = fn;
-    let tmp5 = fn;
+    cResult[1] = onSetActiveIndex;
+    let tmp5 = onSetActiveIndex;
   } else {
     tmp5 = cResult[1];
   }
@@ -112,74 +112,158 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((preset) => {
           tmp18 = cResult[10];
         }
         const _Symbol2 = Symbol;
-        if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
+        class I {
+          constructor() {
+            tmp = c1;
+            tmp2 = null == c1;
+            if (!tmp2) {
+              num = 3;
+              tmp2 = tmp >= 3;
+            }
+            if (!tmp2) {
+              tmp3 = closure_2;
+              setActiveIndexResult = closure_2.setActiveIndex(tmp);
+            }
+            return;
+          }
+        }
+        if (tmp19 === Symbol.for("react.memo_cache_sentinel")) {
+          const string = tmp(tmp2[3]).intl.string;
+          class I {
+            constructor() {
+              tmp = c1;
+              tmp2 = null == c1;
+              if (!tmp2) {
+                num = 3;
+                tmp2 = tmp >= 3;
+              }
+              if (!tmp2) {
+                tmp3 = closure_2;
+                setActiveIndexResult = closure_2.setActiveIndex(tmp);
+              }
+              return;
+            }
+          }
+          const tmp22 = closure_4(tmp(tmp2[13]).Text, { variant: "text-sm/semibold", children: null });
+          cResult[11] = tmp22;
           const obj3 = { variant: "text-sm/semibold", children: null };
-          const intl = tmp(tmp2[3]).intl;
-          obj3.children = intl.string(tmp(tmp2[3]).t["32yow9"]);
-          const tmp21 = closure_4(tmp(tmp2[13]).Text, obj3);
-          cResult[11] = tmp21;
-          let tmp19 = tmp21;
-        } else {
-          tmp19 = cResult[11];
         }
         const _Symbol3 = Symbol;
         if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
           const obj4 = { style: tmp18, children: null };
-          const items = [tmp19, ];
+          const items = [, ];
+          class I {
+            constructor() {
+              tmp = c1;
+              tmp2 = null == c1;
+              if (!tmp2) {
+                num = 3;
+                tmp2 = tmp >= 3;
+              }
+              if (!tmp2) {
+                tmp3 = closure_2;
+                setActiveIndexResult = closure_2.setActiveIndex(tmp);
+              }
+              return;
+            }
+          }
           const obj5 = { variant: "text-xs/medium", children: null };
-          const intl2 = tmp(tmp2[3]).intl;
-          obj5.children = intl2.string(tmp(tmp2[3]).t.l3doVX);
+          const intl = tmp(tmp2[3]).intl;
+          obj5.children = intl.string(tmp(tmp2[3]).t.l3doVX);
           items[1] = closure_4(tmp(tmp2[13]).Text, obj5);
           obj4.children = items;
-          const tmp26 = closure_5(View, obj4);
-          cResult[12] = tmp26;
-          let tmp22 = tmp26;
+          const tmp27 = closure_5(View, obj4);
+          cResult[12] = tmp27;
+          let tmp23 = tmp27;
         } else {
-          tmp22 = cResult[12];
+          tmp23 = cResult[12];
         }
         const _Symbol4 = Symbol;
         if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl3 = tmp(tmp2[3]).intl;
-          const stringResult = intl3.string(tmp(tmp2[3]).t["ztO+l+"]);
-          cResult[13] = stringResult;
-          let tmp27 = stringResult;
+          const intl2 = tmp(tmp2[3]).intl;
+          cResult[13] = intl2.string(tmp(tmp2[3]).t["ztO+l+"]);
+          class I {
+            constructor() {
+              tmp = c1;
+              tmp2 = null == c1;
+              if (!tmp2) {
+                num = 3;
+                tmp2 = tmp >= 3;
+              }
+              if (!tmp2) {
+                tmp3 = closure_2;
+                setActiveIndexResult = closure_2.setActiveIndex(tmp);
+              }
+              return;
+            }
+          }
+          const stringResult = intl2.string(tmp(tmp2[3]).t["ztO+l+"]);
         } else {
-          tmp27 = cResult[13];
+          const tmp28 = cResult[13];
         }
         if (cResult[14] !== preset) {
           const obj6 = {
             variant: "secondary",
-            text: tmp27,
+            text: tmp28,
             onPress() {
                       preset.updatePreset(notificationSettingsPresetUtils.Presets.MENTIONS);
                     }
           };
-          const tmp31 = closure_4(tmp(tmp2[14]).Button, obj6);
+          const tmp32 = closure_4(tmp(tmp2[14]).Button, obj6);
+          class I {
+            constructor() {
+              tmp = c1;
+              tmp2 = null == c1;
+              if (!tmp2) {
+                num = 3;
+                tmp2 = tmp >= 3;
+              }
+              if (!tmp2) {
+                tmp3 = closure_2;
+                setActiveIndexResult = closure_2.setActiveIndex(tmp);
+              }
+              return;
+            }
+          }
           cResult[14] = preset;
-          cResult[15] = tmp31;
-          let tmp29 = tmp31;
+          cResult[15] = tmp32;
+          let tmp30 = tmp32;
         } else {
-          tmp29 = cResult[15];
+          tmp30 = cResult[15];
         }
         if (cResult[16] === tmp4.customContainer) {
-          if (cResult[17] === tmp29) {
-            let tmp32 = cResult[18];
+          if (cResult[17] === tmp30) {
+            let tmp33 = cResult[18];
           }
-          return tmp32;
+          return tmp33;
         }
         const obj7 = { style: tmp4.customContainer, children: null };
-        const items1 = [tmp22, tmp29];
+        const items1 = [tmp23, tmp30];
         obj7.children = items1;
-        const tmp35 = closure_5(View, obj7);
+        const tmp36 = closure_5(View, obj7);
         cResult[16] = tmp4.customContainer;
-        cResult[17] = tmp29;
-        cResult[18] = tmp35;
-        tmp32 = tmp35;
+        cResult[17] = tmp30;
+        cResult[18] = tmp36;
+        tmp33 = tmp36;
       } else {
         if (cResult[19] !== segmentedControlState) {
           const obj8 = { variant: "experimental_Large", state: segmentedControlState };
           let tmp17 = closure_4(tmp(tmp2[15]).SegmentedControl, obj8);
-          cResult[19] = segmentedControlState;
+          class I {
+            constructor() {
+              tmp = c1;
+              tmp2 = null == c1;
+              if (!tmp2) {
+                num = 3;
+                tmp2 = tmp >= 3;
+              }
+              if (!tmp2) {
+                tmp3 = closure_2;
+                setActiveIndexResult = closure_2.setActiveIndex(tmp);
+              }
+              return;
+            }
+          }
           cResult[20] = tmp17;
           let tmp15 = tmp17;
         } else {
@@ -188,22 +272,28 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((preset) => {
         return tmp15;
       }
     }
-    const fn2 = function f() {
-      let tmp2 = null == num3;
-      if (!tmp2) {
-        tmp2 = num3 >= 3;
+    class I {
+      constructor() {
+        tmp = c1;
+        tmp2 = null == c1;
+        if (!tmp2) {
+          num = 3;
+          tmp2 = tmp >= 3;
+        }
+        if (!tmp2) {
+          tmp3 = closure_2;
+          setActiveIndexResult = closure_2.setActiveIndex(tmp);
+        }
+        return;
       }
-      if (!tmp2) {
-        segmentedControlState.setActiveIndex(num3);
-      }
-    };
+    }
     const items2 = [num3, segmentedControlState];
     cResult[6] = segmentedControlState;
     cResult[7] = num3;
-    cResult[8] = fn2;
+    cResult[8] = I;
     cResult[9] = items2;
     tmp12 = items2;
-    tmp11 = fn2;
+    tmp11 = I;
     const tmpResult = tmp(tmp2[12]);
   }
   const obj9 = { pageWidth: 0, onSetActiveIndex: tmp5, items: tmp6, defaultIndex: num3 };
@@ -212,7 +302,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((preset) => {
   cResult[5] = obj9;
   tmp9 = obj9;
   const obj = require("c");
-}) : ((preset) => {
+}) : (function NotificationSettingsPresets(preset) {
   _require = preset;
   let num = 0;
   if (preset.preset !== require("notificationSettingsPresetUtils").Presets.ALL_MESSAGES) {
@@ -297,7 +387,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((preset) => {
 fn(558);
 let obj3 = { padding: 16, minHeight: 82, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.lg + 8, backgroundColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_ACTIVE_BG };
 ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function NotificationSettingsGuildPresets(guildId) {
   _require = guildId;
   const cResult = require("c").c(5);
   const obj = require("c");
@@ -323,7 +413,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   cResult[3] = tmp3;
   cResult[4] = tmp5;
   tmp4 = tmp5;
-}) : ((guildId) => {
+}) : (function NotificationSettingsGuildPresets(guildId) {
   _require = guildId;
   const obj = {
     preset: require("notificationSettingsGuildFlagUtils").useGuildPresetSettings(guildId.guildId).preset,
@@ -337,7 +427,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsPresets.tsx");
 
 export const NotificationSettingsGuildPresets = tmp3;
-export const NotificationSettingsChannelPresets = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+export const NotificationSettingsChannelPresets = ReactCompilerGating.isReactCompilerEnabled() ? (function NotificationSettingsChannelPresets(channel) {
   _require = channel;
   const cResult = require("c").c(6);
   const obj = require("c");
@@ -367,7 +457,7 @@ export const NotificationSettingsChannelPresets = ReactCompilerGating.isReactCom
   cResult[2] = fn;
   tmp3 = fn;
   const obj2 = require("notficationSettingsChannelFlagUtils");
-}) : ((channel) => {
+}) : (function NotificationSettingsChannelPresets(channel) {
   _require = channel;
   const obj = {
     preset: require("notficationSettingsChannelFlagUtils").useChannelPresetSettings(channel.channel).preset,

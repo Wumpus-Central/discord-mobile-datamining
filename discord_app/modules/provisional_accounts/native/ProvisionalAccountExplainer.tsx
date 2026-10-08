@@ -1,21 +1,21 @@
-// === Module 12308: ProvisionalAccountExplainer ===
+// === Module 12406: ProvisionalAccountExplainer ===
 
-// Module 12308 (ProvisionalAccountExplainer)
+// Module 12406 (ProvisionalAccountExplainer)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 4806 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import Card from "Card" /* 6002 */;
-import UserProfileCardDefault from "UserProfileCard" /* 6713 */;
-import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 12309 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 5000 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import Card from "Card" /* 6186 */;
+import UserProfileCardDefault from "UserProfileCard" /* 6890 */;
+import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 12407 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_7 = createStyles.createStyles(() => {
   const obj = { chatContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, gap: nativeDefault.space.PX_8 }, header: null };
   const obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, gap: nativeDefault.space.PX_8 };
@@ -23,7 +23,7 @@ let closure_7 = createStyles.createStyles(() => {
   return obj;
 });
 let ReactCompilerGating = fn(558);
-let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((textVariant) => {
+let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function useNativeProvisionalAccountExplainerText(textVariant) {
   const cResult = iconSize(576).c(6);
   ({ userId, iconSize } = textVariant);
   textVariant = textVariant.textVariant;
@@ -35,7 +35,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((textVariant) =>
       if (cResult[4] === userId) {
         let tmp5 = cResult[5];
       }
-      return iconSize(12310).useProvisionalAccountExplanationText(tmp5);
+      return iconSize(12408).useProvisionalAccountExplanationText(tmp5);
     }
     const obj2 = { userId, renderApplicationName: tmp4 };
     cResult[3] = tmp4;
@@ -51,16 +51,16 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((textVariant) =>
   cResult[2] = fn;
   tmp4 = fn;
   const obj = iconSize(576);
-}) : ((userId) => {
+}) : (function useNativeProvisionalAccountExplainerText(userId) {
   const iconSize = userId.iconSize;
   const textVariant = userId.textVariant;
   const items = [iconSize, textVariant];
   const renderApplicationName = noop.useCallback((application) => hasOwnProperty(ApplicationIconAndNameDefault, { application, textVariant, iconSize }, application.id), items);
-  return iconSize(12310).useProvisionalAccountExplanationText({ userId: userId.userId, renderApplicationName });
+  return iconSize(12408).useProvisionalAccountExplanationText({ userId: userId.userId, renderApplicationName });
 });
 fn(558);
 ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatProvisionalAccountExplainerCard(arg0) {
   const cResult = c.c(16);
   ({ style, userId, iconSize } = arg0);
   const tmp4 = closure_7();
@@ -137,7 +137,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[1] = userId;
   cResult[2] = obj6;
   tmp5 = obj6;
-}) : ((arg0) => {
+}) : (function ChatProvisionalAccountExplainerCard(arg0) {
   ({ style, userId, iconSize } = arg0);
   const tmp = closure_7();
   const obj = { style: null, children: null };
@@ -157,7 +157,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/provisional_accounts/native/ProvisionalAccountExplainer.tsx");
 
 export const ChatProvisionalAccountExplainerCard = tmp3;
-export const UserProfileProvisionalAccountExplainerCard = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const UserProfileProvisionalAccountExplainerCard = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileProvisionalAccountExplainerCard(arg0) {
   const cResult = c.c(10);
   ({ style, userId, iconSize } = arg0);
   if (cResult[0] === iconSize) {
@@ -205,7 +205,7 @@ export const UserProfileProvisionalAccountExplainerCard = ReactCompilerGating.is
   cResult[1] = userId;
   cResult[2] = obj4;
   tmp4 = obj4;
-}) : ((userId) => {
+}) : (function UserProfileProvisionalAccountExplainerCard(userId) {
   const obj2 = { style: userId.style, title: null, titleIcon: null, children: null };
   const obj = { userId: userId.userId, iconSize: userId.iconSize, textVariant: "text-md/semibold" };
   const tmp = closure_8({ userId: userId.userId, iconSize: userId.iconSize, textVariant: "text-md/semibold" });

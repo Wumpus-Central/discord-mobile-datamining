@@ -1,13 +1,13 @@
-// === Module 12731: InAppReportsBlockUserElement ===
+// === Module 13399: InAppReportsBlockUserElement ===
 
-// Module 12731 (InAppReportsBlockUserElement)
-import NicknameUtilsDefault from "NicknameUtils" /* 5048 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5076 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 8113 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9447 */;
+// Module 13399 (InAppReportsBlockUserElement)
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5105 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5405 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7004 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7014 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
 
 const require = fn;
 const AnalyticEvents = fn(1085).AnalyticEvents;
@@ -16,7 +16,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsBlockUserElement.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function BlockUserElement(user) {
   const cResult = user(reportId[6]).c(28);
   user = user.user;
   const channelId = user.channelId;
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
     if (cResult[10] === id) {
       if (cResult[13] === channelId) {
         if (cResult[14] === reportId) {
-          class C {
+          class U {
             constructor() {
               obj = closure_1(closure_2[9]);
               obj1 = { other_user_id: user.id, report_id: reportId };
@@ -97,7 +97,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
           }
         }
       }
-      class C {
+      class U {
         constructor() {
           obj = closure_1(closure_2[9]);
           obj1 = { other_user_id: user.id, report_id: reportId };
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
       cResult[13] = channelId;
       cResult[14] = reportId;
       cResult[15] = user.id;
-      cResult[16] = C;
+      cResult[16] = U;
     }
   }
   const tmpResult2 = user(reportId[7]);
@@ -138,7 +138,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
   cResult[11] = user;
   cResult[12] = name;
   const obj4 = channelId(reportId[8]);
-}) : ((user) => {
+}) : (function BlockUserElement(user) {
   user = user.user;
   const channelId = user.channelId;
   const reportId = user.reportId;

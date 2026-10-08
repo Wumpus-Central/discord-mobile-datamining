@@ -1,6 +1,6 @@
-// === Module 4661: ManaContext ===
+// === Module 4853: ManaContext ===
 
-// Module 4661 (ManaContext)
+// Module 4853 (ManaContext)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting("../discord_common/js/packages/design/
 
 export const ManaContext = context;
 export const useManaContext = tmp3;
-export const ManaContextProvider = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const ManaContextProvider = ReactCompilerGating.isReactCompilerEnabled() ? (function ManaContextProvider(arg0) {
   obj = c;
   const cResult = obj.c(3);
   ({ children, value } = arg0);
@@ -34,7 +34,7 @@ export const ManaContextProvider = ReactCompilerGating.isReactCompilerEnabled() 
   cResult[1] = value;
   cResult[2] = tmp3;
   tmp2 = tmp3;
-}) : ((children) => {
+}) : (function ManaContextProvider(children) {
   value = children.value;
   if (value == null) {
     value = obj;

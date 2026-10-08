@@ -1,7 +1,7 @@
-// === Module 16042: utils/EmojiColorUtils ===
+// === Module 16302: utils/EmojiColorUtils ===
 
-// Module 16042 (utils/EmojiColorUtils)
-import privDefault from "priv" /* 1444 */;
+// Module 16302 (utils/EmojiColorUtils)
+import privDefault from "priv" /* 1456 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 function _getEmojiCacheKey(name) {

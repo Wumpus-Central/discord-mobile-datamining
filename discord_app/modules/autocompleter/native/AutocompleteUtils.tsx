@@ -1,32 +1,32 @@
-// === Module 10084: autocompleter/AutocompleteUtils ===
+// === Module 9667: autocompleter/AutocompleteUtils ===
 
-// Module 10084 (autocompleter/AutocompleteUtils)
+// Module 9667 (autocompleter/AutocompleteUtils)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import UserUtilsDefault from "UserUtils" /* 4728 */;
-import useChannelName from "useChannelName" /* 5049 */;
-import TimestampUtils from "TimestampUtils" /* 5814 */;
-import FormDividerDefault from "FormDivider" /* 8928 */;
+import UserUtilsDefault from "UserUtils" /* 4922 */;
+import useChannelName from "useChannelName" /* 5417 */;
+import TimestampUtils from "TimestampUtils" /* 8131 */;
+import FormDividerDefault from "FormDivider" /* 8559 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 4513 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
-import UserStore from "UserStore" /* 1377 */;
+import GuildChannelStore from "GuildChannelStore" /* 4705 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
-let closure_3 = fn(2055).isGuildSelectableChannelType;
+let closure_3 = fn(2067).isGuildSelectableChannelType;
 const Constants = fn(1085);
 ({ AutoCompleteResultTypes: closure_7, WHITESPACE_RE: closure_8 } = Constants);
-const ApplicationCommandsConstants = fn(10085);
+const ApplicationCommandsConstants = fn(9668);
 ({ AUTOCOMPLETE_EMOJI_ROW_HEIGHT: closure_9, AUTOCOMPLETE_ROW_HEIGHT: c10 } = ApplicationCommandsConstants);
-const ChannelAutocompleteConstants = fn(5796);
+const ChannelAutocompleteConstants = fn(5400);
 ({ CHANNEL_SENTINEL: closure_11, EMOJI_SENTINEL: closure_12, GAME_MENTION_SENTINEL: map1, MENTION_SENTINEL: closure_14 } = ChannelAutocompleteConstants);
 const jsx = fn(21).jsx;
 const hairlineWidth = fn(17).StyleSheet.hairlineWidth;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { itemDivider: { marginLeft: 16, backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
 let closure_17 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function AutocompleteFormDivider() {
   const cResult = c.c(2);
   const tmp3 = closure_17();
   if (cResult[0] !== tmp3.itemDivider) {
@@ -39,7 +39,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp4 = cResult[1];
   }
   return tmp4;
-}) : (() => {
+}) : (function AutocompleteFormDivider() {
   const tmp = closure_17();
   return jsx(FormDividerDefault, { style: closure_17().itemDivider });
 });
@@ -84,7 +84,7 @@ export const getItemLayout = function getItemLayout(arg0, index) {
       type = tmp2.type;
     }
   }
-  const tmp3 = type === constants.EMOJI ? options : v65535;
+  const tmp3 = type === constants.EMOJI ? options : collapsed;
   const obj = { length: tmp3, offset: null, index };
   const result = index * tmp3;
   obj.offset = result + Math.max(0, (index - 1) * hairlineWidth);

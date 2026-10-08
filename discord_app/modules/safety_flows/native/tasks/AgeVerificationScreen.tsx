@@ -1,23 +1,23 @@
-// === Module 18117: AgeVerificationScreen ===
+// === Module 18404: AgeVerificationScreen ===
 
-// Module 18117 (AgeVerificationScreen)
-import Server from "Server" /* 1985 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8119 */;
-import types from "types" /* 18104 */;
+// Module 18404 (AgeVerificationScreen)
+import Server from "Server" /* 1997 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 5915 */;
+import types from "types" /* 18391 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const Pressable = fn(17).Pressable;
 const HelpdeskArticles = fn(1085).HelpdeskArticles;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles({ helpLink: { textAlign: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/safety_flows/native/tasks/AgeVerificationScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeVerificationScreen() {
   const cResult = first(stateFromStores[7]).c(26);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const v4Result = tmp(tmp2[8]).v4();
@@ -334,7 +334,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[7] = V;
   tmp16 = V;
   const tmp14 = onTaskComplete(stateFromStores[12])(tmp12);
-}) : (() => {
+}) : (function AgeVerificationScreen() {
   const memo = noop.useMemo(() => memo(stateFromStores[8]).v4(), []);
   const tmp2 = closure_8();
   const onTaskComplete = memo(stateFromStores[9]).useOnTaskComplete();

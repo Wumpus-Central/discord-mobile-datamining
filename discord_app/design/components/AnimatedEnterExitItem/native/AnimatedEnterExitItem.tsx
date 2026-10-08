@@ -1,9 +1,9 @@
-// === Module 9660: AnimatedEnterExitItem ===
+// === Module 9381: AnimatedEnterExitItem ===
 
-// Module 9660 (AnimatedEnterExitItem)
+// Module 9381 (AnimatedEnterExitItem)
 import c from "c" /* 576 */;
-import native from "native" /* 4595 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import native from "native" /* 4787 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,7 +25,7 @@ const __initData3 = { code: "function AnimatedEnterExitItemTsx4(){const{useReduc
 const __initData4 = { code: "function AnimatedEnterExitItemTsx5(){const{state,TransitionStates,visible,hasExiting,useReducedMotion}=this.__closure;return state===TransitionStates.YEETED&&visible.get()===0&&(!hasExiting||useReducedMotion);}" };
 const __initData5 = { code: "function AnimatedEnterExitItemTsx6(hasExited,previous){const{runOnJS,cleanUp}=this.__closure;if(!hasExited||hasExited===previous)return;runOnJS(cleanUp)();}" };
 let ReactCompilerGating = fn(558);
-let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((entering) => {
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function AnimatedRenderItem(entering) {
   const cResult = shouldAnimate(entering[3]).c(10);
   ({ renderItem, item, shouldAnimate } = entering);
   entering = entering.entering;
@@ -45,51 +45,38 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((entering) => {
       let tmp6 = cResult[3];
     }
     const effect = exiting.useEffect(tmp5, tmp6);
-    class O {
-      constructor() {
-        if (!useReducedMotion) {
-          obj = shouldAnimate;
-          tmp = null;
-          value = undefined;
-          if (shouldAnimate != null) {
-            value = obj.get();
-          }
-          flag = false;
-          if (false !== value) {
-            tmp3 = state;
-            tmp4 = closure_0;
-            tmp5 = closure_1;
-            if (state === closure_0(closure_1[5]).TransitionStates.YEETED) {
-              if (null != exiting) {
-                tmp9 = closure_6;
-                tmp6Result = tmp6(closure_6.get(), (arg0) => {
-                  if (arg0) {
-                    shouldAnimate(entering[4]).runOnJS(cleanUp)();
-                    const obj = shouldAnimate(entering[4]);
-                  }
-                });
-              }
-            }
-            if (null != entering) {
-              tmp8 = closure_6;
-              tmp6Result = tmp7(closure_6.get());
-            } else {
-              tmp6Result = {};
-            }
-          }
-          return {};
+    const fn2 = function p() {
+      if (!useReducedMotion) {
+        value = undefined;
+        if (shouldAnimate != null) {
+          value = shouldAnimate.get();
         }
-        return;
+        if (false !== value) {
+          if (state === native.TransitionStates.YEETED) {
+            if (null != exiting) {
+              tmp6(sharedValue.get(), (arg0) => {
+                if (arg0) {
+                  shouldAnimate(entering[4]).runOnJS(cleanUp)();
+                  const obj = shouldAnimate(entering[4]);
+                }
+              });
+            }
+          }
+          if (null != entering) {
+            tmp7(sharedValue.get());
+          }
+        }
+        return {};
       }
-    }
+    };
     const obj3 = { useReducedMotion, shouldAnimate, state, TransitionStates: shouldAnimate(tmp2[5]).TransitionStates, exiting, visible: sharedValue, runOnJS: shouldAnimate(tmp2[4]).runOnJS, cleanUp, entering };
-    O.__closure = obj3;
-    O.__workletHash = 14013247946914;
-    O.__initData = sharedValue;
-    const animatedStyle = shouldAnimate(tmp2[4]).useAnimatedStyle(O);
+    fn2.__closure = obj3;
+    fn2.__workletHash = 14013247946914;
+    fn2.__initData = sharedValue;
+    const animatedStyle = shouldAnimate(tmp2[4]).useAnimatedStyle(fn2);
     __initData = tmp12;
     const tmpResult = shouldAnimate(tmp2[4]);
-    class M {
+    class O {
       constructor() {
         tmp = state === closure_0(closure_1[5]).TransitionStates.YEETED;
         if (tmp) {
@@ -109,10 +96,10 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((entering) => {
       }
     }
     const obj4 = { state, TransitionStates: shouldAnimate(tmp2[5]).TransitionStates, visible: sharedValue, hasExiting: null != exiting, useReducedMotion };
-    M.__closure = obj4;
-    M.__workletHash = 11984384474891;
-    M.__initData = __initData;
-    class I {
+    O.__closure = obj4;
+    O.__workletHash = 11984384474891;
+    O.__initData = __initData;
+    class R {
       constructor(arg0, arg1) {
         tmp = entering;
         if (entering) {
@@ -130,58 +117,21 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((entering) => {
       }
     }
     const obj5 = { runOnJS: shouldAnimate(tmp2[4]).runOnJS, cleanUp };
-    I.__closure = obj5;
-    I.__workletHash = 13577925153461;
-    I.__initData = __initData2;
-    const animatedReaction = shouldAnimate(tmp2[4]).useAnimatedReaction(M, I);
+    R.__closure = obj5;
+    R.__workletHash = 13577925153461;
+    R.__initData = __initData2;
+    const animatedReaction = shouldAnimate(tmp2[4]).useAnimatedReaction(O, R);
     if (cResult[4] === animatedStyle) {
       if (cResult[5] === item) {
         if (cResult[6] === renderItem) {
           let tmp16 = cResult[7];
         }
         if (cResult[8] !== tmp16) {
-          { children: null }.children = tmp16;
-          class O {
-            constructor() {
-              if (!useReducedMotion) {
-                obj = shouldAnimate;
-                tmp = null;
-                value = undefined;
-                if (shouldAnimate != null) {
-                  value = obj.get();
-                }
-                flag = false;
-                if (false !== value) {
-                  tmp3 = state;
-                  tmp4 = closure_0;
-                  tmp5 = closure_1;
-                  if (state === closure_0(closure_1[5]).TransitionStates.YEETED) {
-                    if (null != exiting) {
-                      tmp9 = closure_6;
-                      tmp6Result = tmp6(closure_6.get(), (arg0) => {
-                        if (arg0) {
-                          shouldAnimate(entering[4]).runOnJS(cleanUp)();
-                          const obj = shouldAnimate(entering[4]);
-                        }
-                      });
-                    }
-                  }
-                  if (null != entering) {
-                    tmp8 = closure_6;
-                    tmp6Result = tmp7(closure_6.get());
-                  } else {
-                    tmp6Result = {};
-                  }
-                }
-                return {};
-              }
-              return;
-            }
-          }
+          const obj6 = { children: tmp16 };
+          const tmp21 = cleanUp(state, obj6);
           cResult[8] = tmp16;
           cResult[9] = tmp21;
           let tmp18 = tmp21;
-          const obj6 = { children: null };
         } else {
           tmp18 = cResult[9];
         }
@@ -210,7 +160,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((entering) => {
   tmp6 = items;
   tmp5 = fn;
   const obj2 = shouldAnimate(entering[4]);
-}) : ((shouldAnimate) => {
+}) : (function AnimatedRenderItem(shouldAnimate) {
   shouldAnimate = shouldAnimate.shouldAnimate;
   const entering = shouldAnimate.entering;
   const exiting = shouldAnimate.exiting;
@@ -234,77 +184,87 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((entering) => {
     }
   }, items);
   let obj = shouldAnimate(entering[4]);
-  const fn = function v() {
-    if (!useReducedMotion) {
-      value = undefined;
-      if (shouldAnimate != null) {
-        value = shouldAnimate.get();
-      }
-      if (false !== value) {
-        if (state === native.TransitionStates.YEETED) {
-          if (null != exiting) {
-            tmp6(sharedValue.get(), (arg0) => {
-              if (arg0) {
-                shouldAnimate(entering[4]).runOnJS(cleanUp)();
-                const obj = shouldAnimate(entering[4]);
-              }
-            });
+  class A {
+    constructor() {
+      if (!useReducedMotion) {
+        obj = shouldAnimate;
+        tmp = null;
+        value = undefined;
+        if (shouldAnimate != null) {
+          value = obj.get();
+        }
+        flag = false;
+        if (false !== value) {
+          tmp3 = state;
+          tmp4 = closure_0;
+          tmp5 = closure_1;
+          if (state === closure_0(closure_1[5]).TransitionStates.YEETED) {
+            if (null != exiting) {
+              tmp9 = closure_6;
+              tmp6Result = tmp6(closure_6.get(), (arg0) => {
+                if (arg0) {
+                  shouldAnimate(entering[4]).runOnJS(cleanUp)();
+                  const obj = shouldAnimate(entering[4]);
+                }
+              });
+            }
+          }
+          if (null != entering) {
+            tmp8 = closure_6;
+            tmp6Result = tmp7(closure_6.get());
+          } else {
+            tmp6Result = {};
           }
         }
-        if (null != entering) {
-          tmp7(sharedValue.get());
-        }
-      }
-      return {};
-    }
-  };
-  const tmpResult = shouldAnimate(entering[4]);
-  fn.__closure = { useReducedMotion, shouldAnimate, state, TransitionStates: shouldAnimate(entering[5]).TransitionStates, exiting, visible: sharedValue, runOnJS: shouldAnimate(entering[4]).runOnJS, cleanUp, entering };
-  fn.__workletHash = 15718564228231;
-  fn.__initData = __initData3;
-  closure_7 = tmp6;
-  const animatedStyle = tmpResult.useAnimatedStyle(fn);
-  const obj2 = { useReducedMotion, shouldAnimate, state, TransitionStates: shouldAnimate(entering[5]).TransitionStates, exiting, visible: sharedValue, runOnJS: shouldAnimate(entering[4]).runOnJS, cleanUp, entering };
-  const fn2 = function b() {
-    let tmp = state === native.TransitionStates.YEETED;
-    if (tmp) {
-      tmp = 0 === sharedValue.get();
-    }
-    if (tmp) {
-      let tmp4 = !closure_7;
-      if (closure_7) {
-        tmp4 = useReducedMotion;
-      }
-      tmp = tmp4;
-    }
-    return tmp;
-  };
-  const tmpResult2 = shouldAnimate(entering[4]);
-  fn2.__closure = { state, TransitionStates: shouldAnimate(entering[5]).TransitionStates, visible: sharedValue, hasExiting: null != exiting, useReducedMotion };
-  fn2.__workletHash = 10212721541996;
-  fn2.__initData = __initData4;
-  class A {
-    constructor(arg0, arg1) {
-      tmp = shouldAnimate;
-      if (shouldAnimate) {
-        tmp2 = arg1;
-        tmp = shouldAnimate !== arg1;
-      }
-      if (tmp) {
-        tmp3 = closure_0;
-        tmp4 = closure_1;
-        obj = closure_0(closure_1[4]);
-        tmp5 = cleanUp;
-        tmp6 = obj.runOnJS(cleanUp)();
+        return {};
       }
       return;
     }
   }
+  const tmpResult = shouldAnimate(entering[4]);
+  A.__closure = { useReducedMotion, shouldAnimate, state, TransitionStates: shouldAnimate(entering[5]).TransitionStates, exiting, visible: sharedValue, runOnJS: shouldAnimate(entering[4]).runOnJS, cleanUp, entering };
+  A.__workletHash = 15718564228231;
+  A.__initData = __initData3;
+  closure_7 = tmp6;
+  const animatedStyle = tmpResult.useAnimatedStyle(A);
+  const obj2 = { useReducedMotion, shouldAnimate, state, TransitionStates: shouldAnimate(entering[5]).TransitionStates, exiting, visible: sharedValue, runOnJS: shouldAnimate(entering[4]).runOnJS, cleanUp, entering };
+  class I {
+    constructor() {
+      tmp = state === closure_0(closure_1[5]).TransitionStates.YEETED;
+      if (tmp) {
+        tmp2 = closure_6;
+        num = 0;
+        tmp = 0 === closure_6.get();
+      }
+      if (tmp) {
+        tmp3 = closure_7;
+        tmp4 = !closure_7;
+        if (closure_7) {
+          tmp4 = useReducedMotion;
+        }
+        tmp = tmp4;
+      }
+      return tmp;
+    }
+  }
+  const tmpResult2 = shouldAnimate(entering[4]);
+  I.__closure = { state, TransitionStates: shouldAnimate(entering[5]).TransitionStates, visible: sharedValue, hasExiting: null != exiting, useReducedMotion };
+  I.__workletHash = 10212721541996;
+  I.__initData = __initData4;
+  const fn = function v(arg0, arg1) {
+    let tmp = arg0;
+    if (arg0) {
+      tmp = arg0 !== arg1;
+    }
+    if (tmp) {
+      ReanimatedRexport.runOnJS(cleanUp)();
+    }
+  };
   const obj3 = { state, TransitionStates: shouldAnimate(entering[5]).TransitionStates, visible: sharedValue, hasExiting: null != exiting, useReducedMotion };
-  A.__closure = { runOnJS: shouldAnimate(entering[4]).runOnJS, cleanUp };
-  A.__workletHash = 16078328777782;
-  A.__initData = __initData5;
-  const animatedReaction = tmpResult2.useAnimatedReaction(fn2, A);
+  fn.__closure = { runOnJS: shouldAnimate(entering[4]).runOnJS, cleanUp };
+  fn.__workletHash = 16078328777782;
+  fn.__initData = __initData5;
+  const animatedReaction = tmpResult2.useAnimatedReaction(I, fn);
   const obj4 = { runOnJS: shouldAnimate(entering[4]).runOnJS, cleanUp };
   return cleanUp(state, { children: renderItem(item, animatedStyle) });
 });
@@ -312,7 +272,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/AnimatedEnterExitItem/native/AnimatedEnterExitItem.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function AnimatedEnterExitItem(arg0) {
   const cResult = c.c(9);
   ({ useReducedMotion, shouldAnimate, entering, exiting, item, renderItem } = arg0);
   if (null == item) {
@@ -346,7 +306,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[5] = useReducedMotion;
     cResult[6] = obj3;
   }
-}) : ((useReducedMotion) => {
+}) : (function AnimatedEnterExitItem(useReducedMotion) {
   useReducedMotion = useReducedMotion.useReducedMotion;
   const shouldAnimate = useReducedMotion.shouldAnimate;
   const entering = useReducedMotion.entering;

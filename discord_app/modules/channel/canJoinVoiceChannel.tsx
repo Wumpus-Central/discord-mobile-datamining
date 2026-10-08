@@ -1,8 +1,8 @@
-// === Module 5580: canJoinVoiceChannel ===
+// === Module 5890: canJoinVoiceChannel ===
 
-// Module 5580 (canJoinVoiceChannel)
+// Module 5890 (canJoinVoiceChannel)
 import Constants from "Constants" /* 1085 */;
-import ChannelRecord from "ChannelRecord" /* 2055 */;
+import ChannelRecord from "ChannelRecord" /* 2067 */;
 import size from "module_2" /* 2 */;
 
 const isPrivate = ChannelRecord.isPrivate;

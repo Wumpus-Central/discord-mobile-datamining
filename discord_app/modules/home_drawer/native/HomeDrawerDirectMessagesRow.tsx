@@ -1,29 +1,29 @@
-// === Module 16290: HomeDrawerDirectMessagesRow ===
+// === Module 16550: HomeDrawerDirectMessagesRow ===
 
-// Module 16290 (HomeDrawerDirectMessagesRow)
+// Module 16550 (HomeDrawerDirectMessagesRow)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import HomeDrawerExperiment from "HomeDrawerExperiment" /* 4748 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import HomeDrawerShared from "HomeDrawerShared" /* 16286 */;
+import HomeDrawerExperiment from "HomeDrawerExperiment" /* 4942 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import HomeDrawerShared from "HomeDrawerShared" /* 16546 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 4936 */;
-import RelationshipStore from "RelationshipStore" /* 4525 */;
+import PresenceStore from "PresenceStore" /* 5106 */;
+import RelationshipStore from "RelationshipStore" /* 4717 */;
 
 require = fn;
 const View = fn(17).View;
 const StatusTypes = fn(1085).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { subtitle: { flexDirection: "row", alignItems: "center", gap: 4 }, onlineDot: null };
 let size = { width: 8, height: 8, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.TEXT_STATUS_ONLINE };
 obj2.onlineDot = size;
 let closure_9 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function HomeDrawerDMsRow() {
   const cResult = c.c(8);
   const tmp4 = closure_9();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -84,7 +84,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[4] = tmp11;
   tmp10 = tmp11;
   const tmpResult = initialize;
-}) : (() => {
+}) : (function HomeDrawerDMsRow() {
   const tmp = closure_9();
   const items = [RelationshipStore, PresenceStore];
   const stateFromStores = initialize.useStateFromStores(items, () => {
@@ -116,7 +116,7 @@ ReactCompilerGating = fn(558);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawerDirectMessagesRow.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function HomeDrawerDMsRowWrapper() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { location: "dm-expanded-children" };
@@ -138,7 +138,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
   }
   return tmp6;
-}) : (() => {
+}) : (function HomeDrawerDMsRowWrapper() {
   const MobileHomeDrawerExperiment = HomeDrawerExperiment.MobileHomeDrawerExperiment;
   let tmp2 = null;
   if (MobileHomeDrawerExperiment.useConfig({ location: "dm-expanded-children" }).enableHome) {

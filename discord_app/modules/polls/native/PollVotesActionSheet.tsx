@@ -1,30 +1,30 @@
-// === Module 11359: PollVotesActionSheet ===
+// === Module 11536: PollVotesActionSheet ===
 
-// Module 11359 (PollVotesActionSheet)
+// Module 11536 (PollVotesActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import shared from "shared" /* 4735 */;
-import useThemeDefault from "useTheme" /* 4797 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import timing from "timing" /* 4897 */;
-import Pressables from "Pressables" /* 5916 */;
-import EmojiDefault from "Emoji" /* 6632 */;
-import PollsUtils from "PollsUtils" /* 7270 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7861 */;
-import formatPollMessageChatData from "formatPollMessageChatData" /* 11360 */;
-import _modDef11367 from "module_11367" /* 11367 */;
-import _modDef11368 from "module_11368" /* 11368 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
+import shared from "shared" /* 4929 */;
+import useThemeDefault from "useTheme" /* 4991 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import timing from "timing" /* 5091 */;
+import Pressables from "Pressables" /* 6189 */;
+import EmojiDefault from "Emoji" /* 6809 */;
+import PollsUtils from "PollsUtils" /* 7870 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8279 */;
+import formatPollMessageChatData from "formatPollMessageChatData" /* 11537 */;
+import _modDef11544 from "module_11544" /* 11544 */;
+import _modDef11545 from "module_11545" /* 11545 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4885 */;
-import EmojiStore from "EmojiStore" /* 5645 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import MessageStore from "MessageStore" /* 5116 */;
-import UserStore from "UserStore" /* 1377 */;
+import AccessibilityStore from "AccessibilityStore" /* 5079 */;
+import EmojiStore from "EmojiStore" /* 5992 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import MessageStore from "MessageStore" /* 5428 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 function VotersList(channelId) {
@@ -124,21 +124,21 @@ get_ActivityIndicator = fn(17);
 ({ Image: metroRequire, View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4896);
-let obj = { headerText: { textAlign: "center", paddingHorizontal: 16 }, subheaderText: { textAlign: "center", marginTop: 2, paddingHorizontal: 16 }, answerScroll: { marginTop: 24 }, answerScrollContainer: { gap: 4, paddingHorizontal: 16 }, answerName: { marginTop: 16, marginHorizontal: 16, marginBottom: 8 }, list: { paddingHorizontal: 16 }, answerButton: { padding: 8, flexDirection: "row", alignItems: "center", borderRadius: nativeDefault.radii.xs, maxWidth: 200 }, answerSelected: null, answerEmoji: null, answerText: null, emojiText: null, emojiImage: null, noResultsContainer: null, noResultsImage: null, noResultsTitle: null, noResultsSubtitle: null };
+const createStyles = fn(5090);
+let obj2 = { headerText: { textAlign: "center", paddingHorizontal: 16 }, subheaderText: { textAlign: "center", marginTop: 2, paddingHorizontal: 16 }, answerScroll: { marginTop: 24 }, answerScrollContainer: { gap: 4, paddingHorizontal: 16 }, answerName: { marginTop: 16, marginHorizontal: 16, marginBottom: 8 }, list: { paddingHorizontal: 16 }, answerButton: { padding: 8, flexDirection: "row", alignItems: "center", borderRadius: nativeDefault.radii.xs, maxWidth: 200 }, answerSelected: null, answerEmoji: null, answerText: null, emojiText: null, emojiImage: null, noResultsContainer: null, noResultsImage: null, noResultsTitle: null, noResultsSubtitle: null };
 let obj3 = { padding: 8, flexDirection: "row", alignItems: "center", borderRadius: nativeDefault.radii.xs, maxWidth: 200 };
-obj.answerSelected = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
-obj.answerEmoji = { marginRight: 8 };
-obj.answerText = { flexShrink: 1 };
-obj.emojiText = { fontSize: 16 };
-obj.emojiImage = { height: 16, width: 16, flexShrink: 0 };
-obj.noResultsContainer = { flexDirection: "column", alignItems: "center", paddingHorizontal: 16 };
-obj.noResultsImage = { marginTop: 32, width: 138 };
-obj.noResultsTitle = { marginTop: 16, textAlign: "center" };
-obj.noResultsSubtitle = { marginTop: 4, textAlign: "center" };
-let closure_16 = createStyles.createStyles(obj);
+obj2.answerSelected = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+obj2.answerEmoji = { marginRight: 8 };
+obj2.answerText = { flexShrink: 1 };
+obj2.emojiText = { fontSize: 16 };
+obj2.emojiImage = { height: 16, width: 16, flexShrink: 0 };
+obj2.noResultsContainer = { flexDirection: "column", alignItems: "center", paddingHorizontal: 16 };
+obj2.noResultsImage = { marginTop: 32, width: 138 };
+obj2.noResultsTitle = { marginTop: 16, textAlign: "center" };
+obj2.noResultsSubtitle = { marginTop: 4, textAlign: "center" };
+let closure_16 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function PollEmoji(arg0) {
   const cResult = emoji(576).c(10);
   ({ style, emoji } = arg0);
   const tmp4 = closure_16();
@@ -201,7 +201,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = fn;
   tmp7 = fn;
   const obj = emoji(576);
-}) : ((emoji) => {
+}) : (function PollEmoji(emoji) {
   emoji = emoji.emoji;
   const tmp = closure_16();
   const items = [EmojiStore];
@@ -226,7 +226,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return closure_14(EmojiDefault, { style: emoji.style, src: stateFromStores, name: emoji.name, textEmojiStyle: tmp.emojiText, fastImageStyle: tmp.emojiImage });
 });
 ReactCompilerGating = fn(558);
-let closure_18 = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((answer, ref) => {
+let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function PollAnswerButton(answer) {
   const cResult = c.c(32);
   answer = answer.answer;
   ({ reaction, selected, setSelectedAnswerId } = answer);
@@ -298,9 +298,9 @@ let closure_18 = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? 
                           if (cResult[28] === tmp11) {
                             if (cResult[29] === tmp15) {
                               if (cResult[30] === tmp20) {
-                                let tmp24 = cResult[31];
+                                let tmp23 = cResult[31];
                               }
-                              return tmp24;
+                              return tmp23;
                             }
                           }
                         }
@@ -311,7 +311,7 @@ let closure_18 = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? 
                 const obj3 = { ref, onPress: tmp5, style: tmp9, accessibilityRole: "tab", accessibilityState: tmp10, accessibilityLabel: tmp6, children: null };
                 const items = [tmp11, tmp15, tmp20];
                 obj3.children = items;
-                const tmp26 = closure_1_15(Pressables.PressableHighlight, obj3);
+                const tmp25 = closure_1_15(Pressables.PressableHighlight, obj3);
                 cResult[23] = tmp6;
                 cResult[24] = tmp5;
                 cResult[25] = ref;
@@ -320,8 +320,8 @@ let closure_18 = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? 
                 cResult[28] = tmp11;
                 cResult[29] = tmp15;
                 cResult[30] = tmp20;
-                cResult[31] = tmp26;
-                tmp24 = tmp26;
+                cResult[31] = tmp25;
+                tmp23 = tmp25;
               }
               const obj4 = { variant: "text-sm/semibold", color: str, lineClamp: 1, children: null };
               const items1 = [" ", "(", tmp18, ")"];
@@ -368,14 +368,14 @@ let closure_18 = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? 
     cResult[5] = formatToPlainStringResult;
     tmp6 = formatToPlainStringResult;
   }
-  const fn = function n() {
+  const fn = function l() {
     setSelectedAnswerId(String(answer.answer_id));
   };
   cResult[0] = answer.answer_id;
   cResult[1] = setSelectedAnswerId;
   cResult[2] = fn;
   tmp5 = fn;
-}) : ((answer, ref) => {
+}) : (function PollAnswerButton(answer) {
   answer = answer.answer;
   ({ reaction, selected, setSelectedAnswerId } = answer);
   const tmp = closure_16();
@@ -398,7 +398,7 @@ let closure_18 = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? 
     str = "interactive-text-active";
   }
   const intl = util.intl;
-  const obj2 = { ref, onPress: callback, style: null, accessibilityRole: "tab", accessibilityState: null, accessibilityLabel: null, children: null };
+  const obj2 = { ref: answer.ref, onPress: callback, style: null, accessibilityRole: "tab", accessibilityState: null, accessibilityLabel: null, children: null };
   const items1 = [tmp.answerButton, ];
   let answerSelected;
   if (selected) {
@@ -426,9 +426,9 @@ let closure_18 = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? 
   items2[2] = closure_1_15(Text_Text.Text, obj5);
   obj2.children = items2;
   return closure_1_15(Pressables.PressableHighlight, obj2);
-}));
+});
 ReactCompilerGating = fn(558);
-let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((message) => {
+let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function PollVotesHeader(message) {
   const cResult = message(setSelectedAnswerId[13]).c(31);
   message = message.message;
   const selectedAnswerId = message.selectedAnswerId;
@@ -705,7 +705,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((message) => {
     tmp13 = tmp15;
   }
   const tmpResult2 = message(setSelectedAnswerId[21]);
-}) : ((message) => {
+}) : (function PollVotesHeader(message) {
   message = message.message;
   const selectedAnswerId = message.selectedAnswerId;
   const setSelectedAnswerId = message.setSelectedAnswerId;
@@ -870,14 +870,14 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((message) => {
 });
 const __initData = { code: "function PollVotesActionSheetTsx1(){const{opacity}=this.__closure;return{flex:1,opacity:opacity.get(),marginBottom:32};}" };
 ReactCompilerGating = fn(558);
-let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function NoResults() {
   const cResult = c.c(14);
   const tmp4 = closure_16();
   const tmp6 = useThemeDefault();
   if (obj2.isThemeDark(tmp6)) {
-    let tmp5Result = _modDef11367;
+    let tmp5Result = _modDef11544;
   } else {
-    tmp5Result = _modDef11368;
+    tmp5Result = _modDef11545;
   }
   if (cResult[0] === tmp4.noResultsImage) {
     if (cResult[1] === tmp5Result) {
@@ -947,15 +947,15 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   tmp8 = tmp9;
   obj2 = shared;
   const obj6 = { style: tmp4.noResultsImage, source: tmp5Result };
-}) : (() => {
+}) : (function NoResults() {
   const tmp = closure_16();
   const obj = { style: tmp.noResultsContainer, children: null };
   const obj2 = { style: tmp.noResultsImage, source: null };
   const tmp4 = useThemeDefault();
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = _modDef11367;
+    let tmp2Result = _modDef11544;
   } else {
-    tmp2Result = _modDef11368;
+    tmp2Result = _modDef11545;
   }
   obj2.source = tmp2Result;
   const items = [state(timestampProducer, obj2), , ];

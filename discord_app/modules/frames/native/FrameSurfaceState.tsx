@@ -1,23 +1,23 @@
-// === Module 16800: FrameSurfaceState ===
+// === Module 17080: FrameSurfaceState ===
 
-// Module 16800 (FrameSurfaceState)
+// Module 17080 (FrameSurfaceState)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5975 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6158 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_24 } };
 let closure_5 = createStyles.createStyles(obj2);
 fn(558);
 let obj3 = { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_24 };
 const ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function FrameSurfaceExplanation(arg0) {
   const cResult = c.c(11);
   ({ heading, description, error } = arg0);
   const tmp4 = closure_5();
@@ -77,7 +77,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[9] = tmp11;
   cResult[10] = tmp15;
   tmp14 = tmp15;
-}) : ((arg0) => {
+}) : (function FrameSurfaceExplanation(arg0) {
   ({ heading, description, error } = arg0);
   const obj = { style: closure_5().container, children: null };
   let tmp3 = null;
@@ -105,7 +105,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/native/FrameSurfaceState.tsx");
 
 export const FrameSurfaceExplanation = tmp4;
-export const FrameSurfaceLoading = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export const FrameSurfaceLoading = ReactCompilerGating.isReactCompilerEnabled() ? (function FrameSurfaceLoading() {
   const cResult = c.c(3);
   const tmp4 = closure_5();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -125,4 +125,6 @@ export const FrameSurfaceLoading = ReactCompilerGating.isReactCompilerEnabled() 
     tmp8 = cResult[2];
   }
   return tmp8;
-}) : (() => React3(View, { style: closure_5().container, children: React3(ActivityIndicator_ActivityIndicator.ActivityIndicator, {}) }));
+}) : (function FrameSurfaceLoading() {
+  return React3(View, { style: closure_5().container, children: React3(ActivityIndicator_ActivityIndicator.ActivityIndicator, {}) });
+});

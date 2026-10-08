@@ -1,16 +1,16 @@
-// === Module 14349: providers ===
+// === Module 14577: providers ===
 
-// Module 14349 (providers)
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9062 */;
+// Module 14577 (providers)
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11137 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5447 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5757 */;
 
 const require = fn;
-let Constants = fn(5323);
+let Constants = fn(5635);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG } = Constants);
 Constants = fn(1085);
 ({ AnalyticsLocations: metroRequire, ComponentActions: closure_7, PlatformTypes: closure_8 } = Constants);
-Constants = fn(2011);
+Constants = fn(2023);
 ({ AM_HARMONY_PRD_APPLICATION_ID, AM_HARMONY_STG_APPLICATION_ID } = Constants);
 Constants = fn(1096);
 ({ RPCCommands, RPCErrors: closure_9 } = Constants);
@@ -317,7 +317,7 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
     }
   }
 });
-obj3.handler = function() {
+obj3.handler = function handler() {
   const self = this;
   const apply = closure_3.apply;
   if (typeof apply === "unknown") {

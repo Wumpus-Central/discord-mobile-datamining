@@ -1,16 +1,16 @@
-// === Module 11782: useShowTryItOutButtonInAppLauncher ===
+// === Module 11849: useShowTryItOutButtonInAppLauncher ===
 
-// Module 11782 (useShowTryItOutButtonInAppLauncher)
+// Module 11849 (useShowTryItOutButtonInAppLauncher)
 import c from "c" /* 576 */;
-import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 9027 */;
-import getPrimaryAppCommand from "getPrimaryAppCommand" /* 9034 */;
-import useIsAppDMDefault from "useIsAppDM" /* 11783 */;
+import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 10617 */;
+import getPrimaryAppCommand from "getPrimaryAppCommand" /* 10637 */;
+import useIsAppDMDefault from "useIsAppDM" /* 11850 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/app_dms/useShowTryItOutButtonInAppLauncher.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useShowTryItOutButtonInAppLauncher(arg0) {
   const cResult = c.c(4);
   ({ context, application, botUserId } = arg0);
   if (cResult[0] === application.id) {
@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = context;
   cResult[3] = obj2;
   tmp4 = obj2;
-}) : ((arg0) => {
+}) : (function useShowTryItOutButtonInAppLauncher(arg0) {
   ({ context, application, botUserId } = arg0);
   let isPrimaryAppCommandUsableInAppDM = getPrimaryAppCommand.useIsPrimaryAppCommandUsableInAppDM({ context, applicationId: application.id, botUserId });
   let channel;

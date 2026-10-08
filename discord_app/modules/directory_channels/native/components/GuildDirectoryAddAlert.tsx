@@ -1,12 +1,12 @@
-// === Module 11964: GuildDirectoryAddAlert ===
+// === Module 12037: GuildDirectoryAddAlert ===
 
-// Module 11964 (GuildDirectoryAddAlert)
+// Module 12037 (GuildDirectoryAddAlert)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import common_AlertDefault from "common/Alert" /* 5790 */;
-import GuildIcon from "GuildIcon" /* 5978 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import common_AlertDefault from "common/Alert" /* 5394 */;
+import GuildIcon from "GuildIcon" /* 6161 */;
 import noop from "module_19" /* 19 */;
 
 const GuildIconDefault = GuildIcon;
@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { guildIcon: { marginBottom: 16, borderRadius: nativeDefault.radii.sm }, title: { marginBottom: 8, textAlign: "center" }, description: { textAlign: "center" }, container: { alignItems: "center", justifyContent: "center" } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -23,7 +23,7 @@ let obj3 = { marginBottom: 16, borderRadius: nativeDefault.radii.sm };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryAddAlert.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildDirectoryAddAlert(arg0) {
   const cResult = c.c(20);
   ({ onClose, guild, directoryGuildName } = arg0);
   const tmp4 = closure_6();
@@ -117,7 +117,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = tmp4.guildIcon;
   cResult[3] = tmp10;
   tmp8 = tmp10;
-}) : ((arg0) => {
+}) : (function GuildDirectoryAddAlert(arg0) {
   ({ onClose, guild, directoryGuildName } = arg0);
   const tmp = closure_6();
   const obj = { confirmText: null, onConfirm: null, children: null };

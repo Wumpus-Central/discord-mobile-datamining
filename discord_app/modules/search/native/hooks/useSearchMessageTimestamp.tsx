@@ -1,9 +1,9 @@
-// === Module 16865: useSearchMessageTimestamp ===
+// === Module 17144: useSearchMessageTimestamp ===
 
-// Module 16865 (useSearchMessageTimestamp)
+// Module 17144 (useSearchMessageTimestamp)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import c from "c" /* 576 */;
-import NotificationCenterUtils from "NotificationCenterUtils" /* 7139 */;
+import NotificationCenterUtils from "NotificationCenterUtils" /* 6064 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/hooks/useSearchMessageTimestamp.tsx");
 
-export const useSearchMessageTimestamp = ReactCompilerGating.isReactCompilerEnabled() ? ((id, id2) => {
+export const useSearchMessageTimestamp = ReactCompilerGating.isReactCompilerEnabled() ? (function useSearchMessageTimestamp(id, id2) {
   const cResult = c.c(7);
   if (cResult[0] === id2) {
     if (cResult[1] === id.id) {
@@ -45,7 +45,7 @@ export const useSearchMessageTimestamp = ReactCompilerGating.isReactCompilerEnab
   tmp5 = relativeTimestamp;
   tmp4 = relativeTimestamp1;
   const tmpResult2 = NotificationCenterUtils;
-}) : ((arg0, arg1) => {
+}) : (function useSearchMessageTimestamp(arg0, arg1) {
   let id = arg0;
   const id2 = arg1;
   const items = [arg0, arg1];

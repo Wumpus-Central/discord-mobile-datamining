@@ -1,6 +1,6 @@
-// === Module 15929: usePasswordScore ===
+// === Module 16189: usePasswordScore ===
 
-// Module 15929 (usePasswordScore)
+// Module 16189 (usePasswordScore)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/utils/usePasswordScore.tsx");
 
 export const PasswordScore = { WEAK: 2, [2]: "WEAK", MEDIUM: 3, [3]: "MEDIUM", STRONG: 4, [4]: "STRONG" };
-export const usePasswordScore = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const usePasswordScore = ReactCompilerGating.isReactCompilerEnabled() ? (function usePasswordScore(arg0) {
   _require = arg0;
   const cResult = require("c").c(8);
   let obj = require("c");
@@ -22,7 +22,7 @@ export const usePasswordScore = ReactCompilerGating.isReactCompilerEnabled() ? (
   [tmp5, asyncGeneratorStep] = noop.useState(null);
   _slicedToArray = noop.useRef(null);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function c() {
+    const fn = function s() {
       closure_0 = asyncGeneratorStep(async (arg0) => {
         if (c6 === 2) {
           c6 = 3;
@@ -155,7 +155,7 @@ export const usePasswordScore = ReactCompilerGating.isReactCompilerEnabled() ? (
   cResult[7] = obj3;
   tmp12 = obj3;
   const tmp4 = _slicedToArray(noop.useState(null), 2);
-}) : ((arg0) => {
+}) : (function usePasswordScore(arg0) {
   closure_0 = arg0;
   [tmp2, dependencyMap] = noop.useState(null);
   let tmp = _slicedToArray(noop.useState(null), 2);

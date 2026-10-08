@@ -1,27 +1,27 @@
-// === Module 8812: CrunchyrollLinkPreConnect ===
+// === Module 9170: CrunchyrollLinkPreConnect ===
 
-// Module 8812 (CrunchyrollLinkPreConnect)
-import _modDef8813 from "module_8813" /* 8813 */;
+// Module 9170 (CrunchyrollLinkPreConnect)
+import _modDef9171 from "module_9171" /* 9171 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-let closure_4 = fn(8809).CrunchyrollLinkModalScenes;
+const constants = fn(9167).CrunchyrollLinkModalScenes;
 const PlatformTypes = fn(1085).PlatformTypes;
-const redirectDestination = fn(8024).CRUNCHYROLL_LINK_DEST_ORIGIN;
+const redirectDestination = fn(8432).CRUNCHYROLL_LINK_DEST_ORIGIN;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_8 = createStyles.createStyles({ image: { width: 152, height: 123 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkPreConnect.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function CrunchyrollLinkPreConnect() {
   const cResult = navigation(576).c(10);
   const tmp4 = closure_8();
   const obj = navigation(576);
-  navigation = navigation(1490).useNavigation();
+  navigation = navigation(1502).useNavigation();
   if (cResult[0] !== navigation) {
-    const fn = function t(arg0) {
+    const fn = function n(arg0) {
       navigation.push(constants.DISCORD_CONSENT, arg0);
     };
     cResult[0] = navigation;
@@ -31,47 +31,63 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp6 = cResult[1];
   }
   if (cResult[2] !== navigation) {
-    const fn2 = function y() {
-      navigation.push(constants.ERROR);
-    };
+    class N {
+      constructor() {
+        arr = closure_0.push(closure_4.ERROR);
+        return;
+      }
+    }
     cResult[2] = navigation;
-    cResult[3] = fn2;
-    let tmp7 = fn2;
+    cResult[3] = N;
   } else {
-    tmp7 = cResult[3];
+    class N {
+      constructor() {
+        arr = closure_0.push(closure_4.ERROR);
+        return;
+      }
+    }
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+    class N {
+      constructor() {
+        arr = closure_0.push(closure_4.ERROR);
+        return;
+      }
+    }
+    const stringResult = obj3.string(tmp(1126).t.siPkNp);
     const intl = tmp(1126).intl;
-    const stringResult = intl.string(tmp(1126).t.siPkNp);
-    const intl2 = tmp(1126).intl;
-    const stringResult1 = intl2.string(tmp(1126).t.oS4NEH);
+    const stringResult1 = intl.string(tmp(1126).t.oS4NEH);
     cResult[4] = stringResult;
     cResult[5] = stringResult1;
     let tmp9 = stringResult1;
-    let tmp8 = stringResult;
+    const tmp8 = stringResult;
   } else {
-    tmp8 = cResult[4];
+    class N {
+      constructor() {
+        arr = closure_0.push(closure_4.ERROR);
+        return;
+      }
+    }
     tmp9 = cResult[5];
   }
-  if (cResult[6] === tmp7) {
-    if (cResult[7] === tmp6) {
-      if (cResult[8] === tmp4.image) {
-        let tmp12 = cResult[9];
+  if (cResult[6] === N) {
+    class N {
+      constructor() {
+        arr = closure_0.push(closure_4.ERROR);
+        return;
       }
-      return tmp12;
     }
   }
-  const obj2 = navigation(1490);
-  const tmp13 = jsx(navigation(8778).TwoWayLinkPreConnect, { platformType: PlatformTypes.CRUNCHYROLL, onError: tmp7, onNext: tmp6, img: _modDef8813, imgStyle: tmp4.image, title: tmp8, body: tmp9, redirectDestination });
-  cResult[6] = tmp7;
+  const obj2 = navigation(1502);
+  const obj4 = { platformType: PlatformTypes.CRUNCHYROLL, onError: N, onNext: tmp6, img: _modDef9171, imgStyle: tmp4.image, title: tmp8, body: tmp9, redirectDestination };
+  cResult[6] = N;
   cResult[7] = tmp6;
   cResult[8] = tmp4.image;
-  cResult[9] = tmp13;
-  tmp12 = tmp13;
-  const obj3 = { platformType: PlatformTypes.CRUNCHYROLL, onError: tmp7, onNext: tmp6, img: _modDef8813, imgStyle: tmp4.image, title: tmp8, body: tmp9, redirectDestination };
-}) : (() => {
+  cResult[9] = jsx(navigation(9124).TwoWayLinkPreConnect, { platformType: PlatformTypes.CRUNCHYROLL, onError: N, onNext: tmp6, img: _modDef9171, imgStyle: tmp4.image, title: tmp8, body: tmp9, redirectDestination });
+  const tmp12 = jsx(navigation(9124).TwoWayLinkPreConnect, { platformType: PlatformTypes.CRUNCHYROLL, onError: N, onNext: tmp6, img: _modDef9171, imgStyle: tmp4.image, title: tmp8, body: tmp9, redirectDestination });
+}) : (function CrunchyrollLinkPreConnect() {
   const tmp = closure_8();
-  navigation = navigation(1490).useNavigation();
+  navigation = navigation(1502).useNavigation();
   const items = [navigation];
   const items1 = [navigation];
   const callback = noop.useCallback((arg0) => {
@@ -80,11 +96,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const callback1 = noop.useCallback(() => {
     navigation.push(constants.ERROR);
   }, items1);
-  const obj2 = { platformType: PlatformTypes.CRUNCHYROLL, onError: callback1, onNext: callback, img: _modDef8813, imgStyle: tmp.image, title: null, body: null, redirectDestination: null };
+  const obj2 = { platformType: PlatformTypes.CRUNCHYROLL, onError: callback1, onNext: callback, img: _modDef9171, imgStyle: tmp.image, title: null, body: null, redirectDestination: null };
   const intl = navigation(1126).intl;
   obj2.title = intl.string(navigation(1126).t.siPkNp);
   const intl2 = navigation(1126).intl;
   obj2.body = intl2.string(navigation(1126).t.oS4NEH);
   obj2.redirectDestination = redirectDestination;
-  return jsx(navigation(8778).TwoWayLinkPreConnect, { platformType: PlatformTypes.CRUNCHYROLL, onError: callback1, onNext: callback, img: _modDef8813, imgStyle: tmp.image, title: null, body: null, redirectDestination: null });
+  return jsx(navigation(9124).TwoWayLinkPreConnect, { platformType: PlatformTypes.CRUNCHYROLL, onError: callback1, onNext: callback, img: _modDef9171, imgStyle: tmp.image, title: null, body: null, redirectDestination: null });
 });

@@ -1,8 +1,8 @@
-// === Module 12713: useApplicationWidgetRefresh ===
+// === Module 13203: useApplicationWidgetRefresh ===
 
-// Module 12713 (useApplicationWidgetRefresh)
-import refreshApplicationWidget from "refreshApplicationWidget" /* 12714 */;
-import presentApplicationWidgetRefreshOutcomeDefault from "presentApplicationWidgetRefreshOutcome" /* 12715 */;
+// Module 13203 (useApplicationWidgetRefresh)
+import refreshApplicationWidget from "refreshApplicationWidget" /* 13204 */;
+import presentApplicationWidgetRefreshOutcomeDefault from "presentApplicationWidgetRefreshOutcome" /* 13205 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,13 +13,13 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_widget/hooks/useApplicationWidgetRefresh.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useApplicationWidgetRefresh(arg0) {
   _require = arg0;
   const cResult = require("c").c(8);
   [pending, dependencyMap] = noop.useState(false);
   _slicedToArray = noop.useRef(true);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function c() {
+    const fn = function s() {
       closure_3.current = true;
       return () => {
         closure_1_3.current = false;
@@ -50,7 +50,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[7] = obj3;
     tmp8 = obj3;
   }
-  const fn2 = function s() {
+  const fn2 = function l() {
     let tmp = first;
     if (!first) {
       tmp = null == closure_0;
@@ -71,7 +71,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = fn2;
   tmp7 = fn2;
   let obj = require("c");
-}) : ((arg0) => {
+}) : (function useApplicationWidgetRefresh(arg0) {
   closure_0 = arg0;
   [pending, closure_2] = noop.useState(false);
   _slicedToArray = noop.useRef(true);

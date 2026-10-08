@@ -1,21 +1,21 @@
-// === Module 15862: VideoBackgroundSetting ===
+// === Module 16121: VideoBackgroundSetting ===
 
-// Module 15862 (VideoBackgroundSetting)
+// Module 16121 (VideoBackgroundSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import SettingsConstants from "SettingsConstants" /* 7645 */;
-import applyBackgroundOption from "applyBackgroundOption" /* 8085 */;
-import VideoBackgroundActionCreators from "VideoBackgroundActionCreators" /* 8087 */;
-import LastUsedVideoBackgroundOption from "LastUsedVideoBackgroundOption" /* 8089 */;
-import useIsVideoBackgroundEnabledDefault from "useIsVideoBackgroundEnabled" /* 9674 */;
-import VideoBackgroundOptions from "VideoBackgroundOptions" /* 9694 */;
+import applyBackgroundOption from "applyBackgroundOption" /* 5251 */;
+import VideoBackgroundActionCreators from "VideoBackgroundActionCreators" /* 5254 */;
+import LastUsedVideoBackgroundOption from "LastUsedVideoBackgroundOption" /* 5256 */;
+import SettingsConstants from "SettingsConstants" /* 7966 */;
+import useIsVideoBackgroundEnabledDefault from "useIsVideoBackgroundEnabled" /* 10863 */;
+import VideoBackgroundOptions from "VideoBackgroundOptions" /* 10883 */;
 import Constants from "Constants" /* 1085 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11142 */;
+import SettingBuilders from "SettingBuilders" /* 11262 */;
 import size from "module_2" /* 2 */;
 
 ({ AnalyticsSections: c3, NOOP: closure_4, AnalyticsPages: hasOwnProperty } = Constants);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVideoBackgroundSettingValue() {
   const cResult = c.c(2);
   const lastUsedVideoBackgroundOption = LastUsedVideoBackgroundOption.useLastUsedVideoBackgroundOption();
   if (cResult[0] !== lastUsedVideoBackgroundOption) {
@@ -28,7 +28,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp5 = cResult[1];
   }
   return "" + tmp5;
-}) : (() => {
+}) : (function useVideoBackgroundSettingValue() {
   const lastUsedVideoBackgroundOption = LastUsedVideoBackgroundOption.useLastUsedVideoBackgroundOption();
   return "" + VideoBackgroundOptions.toVideoBackgroundRadioValue(lastUsedVideoBackgroundOption);
 });
@@ -41,7 +41,7 @@ const radio = SettingBuilders.createRadio({
   usePredicate() {
     return useIsVideoBackgroundEnabledDefault("VideoBackgroundSetting");
   },
-  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useVideoBackgroundSettingValue() {
     const cResult = c.c(2);
     const lastUsedVideoBackgroundOption = LastUsedVideoBackgroundOption.useLastUsedVideoBackgroundOption();
     if (cResult[0] !== lastUsedVideoBackgroundOption) {
@@ -54,7 +54,7 @@ const radio = SettingBuilders.createRadio({
       tmp5 = cResult[1];
     }
     return "" + tmp5;
-  }) : (() => {
+  }) : (function useVideoBackgroundSettingValue() {
     const lastUsedVideoBackgroundOption = LastUsedVideoBackgroundOption.useLastUsedVideoBackgroundOption();
     return "" + VideoBackgroundOptions.toVideoBackgroundRadioValue(lastUsedVideoBackgroundOption);
   }),

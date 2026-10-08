@@ -1,15 +1,15 @@
-// === Module 15329: CustomStatusNotificationSettings ===
+// === Module 15591: CustomStatusNotificationSettings ===
 
-// Module 15329 (CustomStatusNotificationSettings)
+// Module 15591 (CustomStatusNotificationSettings)
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1126 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import UserSettings from "UserSettings" /* 2028 */;
-import NotificationConstants from "NotificationConstants" /* 4528 */;
-import SettingsConstants from "SettingsConstants" /* 7645 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1209 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import UserSettings from "UserSettings" /* 2040 */;
+import NotificationConstants from "NotificationConstants" /* 4720 */;
+import SettingsConstants from "SettingsConstants" /* 7966 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11142 */;
+import SettingBuilders from "SettingBuilders" /* 11262 */;
 import size from "module_2" /* 2 */;
 
 function onChange(custom_status_push_notifications) {
@@ -33,7 +33,7 @@ const toggle = SettingBuilders.createToggle({
     return intl.string(util.t["/+OQEs"]);
   },
   parent: SettingsConstants.MobileUserSettings.NOTIFICATIONS,
-  useValue: () => {
+  useValue() {
     const CustomStatusPushNotifications = UserSettings.CustomStatusPushNotifications;
     const setting = CustomStatusPushNotifications.useSetting();
     return setting !== preloaded_user_settings.CustomStatusPushNotificationType.STATUS_PUSH_DISABLED;

@@ -1,21 +1,21 @@
-// === Module 17416: LaunchPadPullTab ===
+// === Module 17698: LaunchPadPullTab ===
 
-// Module 17416 (LaunchPadPullTab)
+// Module 17698 (LaunchPadPullTab)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
-import spring from "spring" /* 5604 */;
-import useWindowDimensionsSharedValue from "useWindowDimensionsSharedValue" /* 11661 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
+import spring from "spring" /* 5374 */;
+import useWindowDimensionsSharedValue from "useWindowDimensionsSharedValue" /* 11726 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Pressable = fn(17).Pressable;
-const LaunchPadConstants = fn(11138);
+const LaunchPadConstants = fn(11258);
 ({ LAUNCH_PAD_MARGIN: closure_4, LAUNCH_PAD_PULL_TAB_BORDER_RADIUS } = LaunchPadConstants);
 const LAUNCH_PAD_PULL_TAB_HEIGHT = LaunchPadConstants.LAUNCH_PAD_PULL_TAB_HEIGHT;
 ({ LAUNCH_PAD_PULL_TAB_HIT_SLOP: closure_7, LAUNCH_PAD_PULL_TAB_MINIMIZED_OFFSET: closure_8, LAUNCH_PAD_PULL_TAB_SCALE_FACTOR: closure_9, LAUNCH_PAD_PULL_TAB_SCALE_OFFSET: c10, LAUNCH_PAD_PULL_TAB_WIDTH, LAUNCH_PAD_SPRING_CONFIG: closure_11 } = LaunchPadConstants);
-const CHAT_INPUT_HEIGHT = fn(11589).CHAT_INPUT_HEIGHT;
+const CHAT_INPUT_HEIGHT = fn(11652).CHAT_INPUT_HEIGHT;
 const jsx = fn(21).jsx;
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj = { pullTab: null, pullTabButton: null, pullTabOpened: null, pullTabClosed: null };
 let size = { position: "absolute", right: 0, width: LAUNCH_PAD_PULL_TAB_WIDTH, height: LAUNCH_PAD_PULL_TAB_HEIGHT, borderTopLeftRadius: LAUNCH_PAD_PULL_TAB_BORDER_RADIUS, borderBottomLeftRadius: LAUNCH_PAD_PULL_TAB_BORDER_RADIUS, borderWidth: 1, borderTopWidth: 1, borderColor: "rgba(0, 0, 0, 0.08)" };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_MOBILE_NAVIGATOR_X);
@@ -30,7 +30,7 @@ const __initData2 = { code: "function LaunchPadPullTabTsx2(keyboardHeight_0,keyb
 const __initData3 = { code: "function LaunchPadPullTabTsx3(){const{keyboardHeight}=this.__closure;return keyboardHeight.get();}" };
 const __initData4 = { code: "function LaunchPadPullTabTsx4(keyboardHeight_0,keyboardHeightPrev){const{launchPadSharedState,updaters,keyboardHeightOpened,launchPadPullTabState,CHAT_INPUT_HEIGHT,LAUNCH_PAD_MARGIN,getWindowDimensionsWorklet,LAUNCH_PAD_PULL_TAB_HEIGHT,LAUNCH_PAD_PULL_TAB_SCALE_OFFSET}=this.__closure;if(launchPadSharedState.get()!==0){updaters.setLaunchPadPullTabMinimized(false);return;}if(keyboardHeightPrev==null||keyboardHeight_0===keyboardHeightPrev){return;}if(keyboardHeight_0<keyboardHeightPrev){var _keyboardHeightOpened;if(keyboardHeight_0===0){updaters.setLaunchPadPullTabMinimized(false);}if(keyboardHeightOpened.get()==null){keyboardHeightOpened.set(keyboardHeightPrev);}const keyboardClosePercent=1-keyboardHeight_0/((_keyboardHeightOpened=keyboardHeightOpened.get())!==null&&_keyboardHeightOpened!==void 0?_keyboardHeightOpened:keyboardHeightPrev);const keyboardOffsetRetractionAmount=launchPadPullTabState.get().offset*keyboardClosePercent;updaters.setLaunchPadPullTabPosition(launchPadPullTabState.get().position+keyboardOffsetRetractionAmount,launchPadPullTabState.get().offset-keyboardOffsetRetractionAmount);}else{updaters.setLaunchPadPullTabMinimized(true);if(keyboardHeightOpened.get()!=null){keyboardHeightOpened.set(undefined);}const keyboardWithChatInput=keyboardHeight_0+CHAT_INPUT_HEIGHT+LAUNCH_PAD_MARGIN*2;const spaceUnderPullTab=getWindowDimensionsWorklet({ignoreKeyboard:true}).height-(launchPadPullTabState.get().position+LAUNCH_PAD_PULL_TAB_HEIGHT+LAUNCH_PAD_PULL_TAB_SCALE_OFFSET);const offset=spaceUnderPullTab>keyboardWithChatInput?0:keyboardWithChatInput-spaceUnderPullTab;if(offset>0){updaters.setLaunchPadPullTabPosition(launchPadPullTabState.get().position-offset,launchPadPullTabState.get().offset+offset);}}}" };
 let ReactCompilerGating = fn(558);
-let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((launchPadSharedState) => {
+let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function useLaunchPadPullTabKeyboardListener(launchPadSharedState) {
   launchPadSharedState = launchPadSharedState.launchPadSharedState;
   const launchPadPullTabState = launchPadSharedState.launchPadPullTabState;
   const updaters = launchPadSharedState.updaters;
@@ -90,7 +90,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((launchPadShare
   fn2.__workletHash = 12531173913505;
   fn2.__initData = __initData2;
   const animatedReaction = obj2.useAnimatedReaction(fn, fn2);
-}) : ((launchPadSharedState) => {
+}) : (function useLaunchPadPullTabKeyboardListener(launchPadSharedState) {
   launchPadSharedState = launchPadSharedState.launchPadSharedState;
   const launchPadPullTabState = launchPadSharedState.launchPadPullTabState;
   const updaters = launchPadSharedState.updaters;
@@ -158,7 +158,7 @@ let obj4 = { backgroundColor: nativeDefault.colors.MOBILE_FLOATINGBAR_BACKGROUND
 size = fn(2);
 let result = size.fileFinishedImporting("modules/launchpad/native/LaunchPadPullTab.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((launchPadSharedState) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function LaunchPadPullTab(launchPadSharedState) {
   const cResult = launchPadSharedState(gestureState[11]).c(20);
   launchPadSharedState = launchPadSharedState.launchPadSharedState;
   const launchPadPullTabState = launchPadSharedState.launchPadPullTabState;
@@ -907,7 +907,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((launch
   cResult[2] = obj6;
   tmp7 = obj6;
   let obj = launchPadSharedState(gestureState[11]);
-}) : ((launchPadSharedState) => {
+}) : (function LaunchPadPullTab(launchPadSharedState) {
   launchPadSharedState = launchPadSharedState.launchPadSharedState;
   const launchPadPullTabState = launchPadSharedState.launchPadPullTabState;
   const gestureState = launchPadSharedState.gestureState;

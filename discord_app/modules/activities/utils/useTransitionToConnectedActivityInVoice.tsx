@@ -1,11 +1,11 @@
-// === Module 17393: useTransitionToConnectedActivityInVoice ===
+// === Module 17675: useTransitionToConnectedActivityInVoice ===
 
-// Module 17393 (useTransitionToConnectedActivityInVoice)
+// Module 17675 (useTransitionToConnectedActivityInVoice)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
+import ChannelStore from "ChannelStore" /* 2063 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
 
 require = fn;
 const ComponentActions = fn(1085).ComponentActions;
@@ -13,11 +13,11 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/useTransitionToConnectedActivityInVoice.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onTransition) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useTransitionToConnectedActivityInVoice(onTransition) {
   const cResult = onTransition(576).c(3);
   onTransition = onTransition.onTransition;
   if (cResult[0] !== onTransition) {
-    const fn = function s() {
+    const fn = function l() {
       closure_129_0 = asyncGeneratorStep(async (arg0) => {
         let _location = arg0;
         c3 = 0;
@@ -55,15 +55,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onTransition) =>
                   closure_129_3 = undefined;
                   _location = _location.location;
                   closure_129_0 = _location;
-                  const embeddedActivityLocationChannelId = handler(4504).getEmbeddedActivityLocationChannelId(_location);
+                  const embeddedActivityLocationChannelId = handler(4696).getEmbeddedActivityLocationChannelId(_location);
                   closure_129_1 = embeddedActivityLocationChannelId;
                   if (null != embeddedActivityLocationChannelId) {
-                    if (closure_2_1(9047)(embeddedActivityLocationChannelId)) {
+                    if (closure_2_1(10458)(embeddedActivityLocationChannelId)) {
                       if (voiceChannelId.getVoiceChannelId() !== embeddedActivityLocationChannelId) {
                         const obj4 = { channelId: embeddedActivityLocationChannelId };
                         c3 = 1;
                         c4 = 1;
-                        const obj5 = { value: closure_2_1(9048)(obj4), done: false };
+                        const obj5 = { value: closure_2_1(10660)(obj4), done: false };
                         return obj5;
                       }
                     }
@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onTransition) =>
               closure_129_3 = guild_id;
               const _setTimeout = setTimeout;
               const timerId = setTimeout(() => {
-                closure_3_1(9085)(closure_1_3, _location);
+                closure_3_1(10668)(closure_1_3, _location);
                 if (closure_0 != null) {
                   closure_0();
                 }
@@ -127,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onTransition) =>
     tmp3 = cResult[2];
   }
   const effect = noop.useEffect(tmp2, tmp3);
-}) : ((onTransition) => {
+}) : (function useTransitionToConnectedActivityInVoice(onTransition) {
   onTransition = onTransition.onTransition;
   const items = [onTransition];
   const effect = noop.useEffect(() => {
@@ -191,14 +191,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onTransition) =>
                   const obj4 = { value, done: true };
                   return obj4;
                 } else {
-                  embeddedActivityLocationChannelId = handler(4504).getEmbeddedActivityLocationChannelId(_location2);
+                  embeddedActivityLocationChannelId = handler(4696).getEmbeddedActivityLocationChannelId(_location2);
                   if (null != embeddedActivityLocationChannelId) {
-                    if (closure_2_1(9047)(embeddedActivityLocationChannelId)) {
+                    if (closure_2_1(10458)(embeddedActivityLocationChannelId)) {
                       if (voiceChannelId.getVoiceChannelId() !== embeddedActivityLocationChannelId) {
                         const obj5 = { channelId: embeddedActivityLocationChannelId };
                         c3 = 2;
                         c4 = 1;
-                        const obj6 = { value: closure_2_1(9048)(obj5), done: false };
+                        const obj6 = { value: closure_2_1(10660)(obj5), done: false };
                         return obj6;
                       }
                     }
@@ -222,7 +222,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onTransition) =>
               closure_129_3 = guild_id;
               const _setTimeout = setTimeout;
               const timerId = setTimeout(() => {
-                closure_3_1(9085)(closure_1_3, _location);
+                closure_3_1(10668)(closure_1_3, _location);
                 if (closure_0 != null) {
                   closure_0();
                 }

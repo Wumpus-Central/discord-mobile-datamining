@@ -1,11 +1,11 @@
-// === Module 11536: CtaButtonUtils ===
+// === Module 11547: CtaButtonUtils ===
 
-// Module 11536 (CtaButtonUtils)
+// Module 11547 (CtaButtonUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 5108 */;
-import useShouldRenderReportFalsePositiveButton from "useShouldRenderReportFalsePositiveButton" /* 11537 */;
-import FamilyCenterPendingConnectionStore from "FamilyCenterPendingConnectionStore" /* 5109 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 5905 */;
+import useShouldRenderReportFalsePositiveButton from "useShouldRenderReportFalsePositiveButton" /* 11548 */;
+import FamilyCenterPendingConnectionStore from "FamilyCenterPendingConnectionStore" /* 5906 */;
 
 require = fn;
 const CtaButtonType = { MARK_AS_FALSE_POSITIVE: "mark_as_false_positive", AGE_VERIFICATION_RETRY: "age_verification_retry", CONNECT_TO_TEEN: "connect_to_teen", AGE_VERIFICATION_MANUAL_REVIEW: "age_verification_manual_review" };
@@ -31,7 +31,7 @@ export const getCtaButtonType = function getCtaButtonType(id, channel_id) {
   }
   return CONNECT_TO_TEEN;
 };
-export const useCtaButtonType = ReactCompilerGating.isReactCompilerEnabled() ? ((id, channel_id) => {
+export const useCtaButtonType = ReactCompilerGating.isReactCompilerEnabled() ? (function useCtaButtonType(id, channel_id) {
   const obj = c;
   const cResult = obj.c(2);
   const shouldRenderReportFalsePositiveButton = useShouldRenderReportFalsePositiveButton.useShouldRenderReportFalsePositiveButton(id);
@@ -62,7 +62,7 @@ export const useCtaButtonType = ReactCompilerGating.isReactCompilerEnabled() ? (
     CONNECT_TO_TEEN = obj.CONNECT_TO_TEEN;
   }
   return CONNECT_TO_TEEN;
-}) : ((id, channel_id) => {
+}) : (function useCtaButtonType(id, channel_id) {
   const obj = useShouldRenderReportFalsePositiveButton;
   const shouldRenderReportFalsePositiveButton = obj.useShouldRenderReportFalsePositiveButton(id);
   const result = AgeVerificationUtils.isAgeVerificationMessageWithRetryCta(channel_id, id);

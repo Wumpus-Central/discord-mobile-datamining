@@ -1,7 +1,7 @@
-// === Module 10083: usePressHorizontalAutocompleteItemHandler ===
+// === Module 9666: usePressHorizontalAutocompleteItemHandler ===
 
-// Module 10083 (usePressHorizontalAutocompleteItemHandler)
-import autocompleter_AutocompleteUtils from "autocompleter/AutocompleteUtils" /* 10084 */;
+// Module 9666 (usePressHorizontalAutocompleteItemHandler)
+import autocompleter_AutocompleteUtils from "autocompleter/AutocompleteUtils" /* 9667 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/composer/hooks/usePressHorizontalAutocompleteItemHandler.tsx");
 
-export const usePressHorizontalAutocompleteItemHandler = ReactCompilerGating.isReactCompilerEnabled() ? ((draftContent) => {
+export const usePressHorizontalAutocompleteItemHandler = ReactCompilerGating.isReactCompilerEnabled() ? (function usePressHorizontalAutocompleteItemHandler(draftContent) {
   const cResult = draftContent(handleTextChange[3]).c(5);
   draftContent = draftContent.draftContent;
   handleTextChange = draftContent.handleTextChange;
@@ -40,7 +40,7 @@ export const usePressHorizontalAutocompleteItemHandler = ReactCompilerGating.isR
   cResult[3] = setSelection;
   cResult[4] = fn;
   tmp2 = fn;
-}) : ((draftContent) => {
+}) : (function usePressHorizontalAutocompleteItemHandler(draftContent) {
   draftContent = draftContent.draftContent;
   const handleTextChange = draftContent.handleTextChange;
   const setSelection = draftContent.setSelection;

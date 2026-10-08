@@ -1,21 +1,21 @@
-// === Module 10750: ActionSheetIconHeader ===
+// === Module 10446: ActionSheetIconHeader ===
 
-// Module 10750 (ActionSheetIconHeader)
+// Module 10446 (ActionSheetIconHeader)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 4892 */;
+import Text_Text from "Text/Text" /* 5086 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_5 = createStyles.createStyles({ container: { paddingVertical: 0, flexDirection: "row", alignItems: "center", gap: 12 }, titles: { justifyContent: "center", flex: 1 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Sheet/native/ActionSheetIconHeader.native.tsx");
 
-export const ActionSheetIconHeader = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export const ActionSheetIconHeader = ReactCompilerGating.isReactCompilerEnabled() ? (function ActionSheetIconHeader(arg0) {
   const cResult = c.c(14);
   ({ title, subtitle, icon } = arg0);
   const tmp4 = closure_5();
@@ -82,7 +82,7 @@ export const ActionSheetIconHeader = ReactCompilerGating.isReactCompilerEnabled(
   cResult[8] = tmp12;
   cResult[9] = tmp16;
   tmp15 = tmp16;
-}) : ((subtitle) => {
+}) : (function ActionSheetIconHeader(subtitle) {
   subtitle = subtitle.subtitle;
   ({ title, icon } = subtitle);
   const tmp = closure_5();

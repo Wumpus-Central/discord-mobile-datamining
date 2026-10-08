@@ -1,9 +1,9 @@
-// === Module 9168: getDefaultOrientationLockState ===
+// === Module 10734: getDefaultOrientationLockState ===
 
-// Module 9168 (getDefaultOrientationLockState)
+// Module 10734 (getDefaultOrientationLockState)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import useWindowDimensions from "useWindowDimensions" /* 1484 */;
-import useWindowSizeClassifier from "useWindowSizeClassifier" /* 4746 */;
+import useWindowDimensions from "useWindowDimensions" /* 1496 */;
+import useWindowSizeClassifier from "useWindowSizeClassifier" /* 4940 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activities/native/getDefaultOrientationLockState.tsx");

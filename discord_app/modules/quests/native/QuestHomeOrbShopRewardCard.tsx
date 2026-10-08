@@ -1,12 +1,12 @@
-// === Module 14903: QuestHomeOrbShopRewardCard ===
+// === Module 15165: QuestHomeOrbShopRewardCard ===
 
-// Module 14903 (QuestHomeOrbShopRewardCard)
+// Module 15165 (QuestHomeOrbShopRewardCard)
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7077 */;
-import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 7858 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7263 */;
+import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8276 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 const ShopCtaEnum = fn(1087).ShopCtaEnum;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { card: { overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.sm, position: "relative" }, assetTile: null };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj2.assetTile = {};
@@ -25,7 +25,7 @@ let obj4 = {};
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestHomeOrbShopRewardCard.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((product) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestHomeOrbShopRewardCard(product) {
   let PressableOpacity = require;
   let tmp = analyticsLocations;
   const cResult = require("c").c(44);
@@ -321,7 +321,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((product) => {
   cResult[4] = obj8;
   tmp13 = obj8;
   const PressableOpacityResult2 = PressableOpacity(tmp[14]);
-}) : ((product) => {
+}) : (function QuestHomeOrbShopRewardCard(product) {
   product = product.product;
   const require = product;
   let COLLECTIBLES_SHOP_CARD_WIDTH = product.cardWidth;

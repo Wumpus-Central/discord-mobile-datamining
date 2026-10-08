@@ -1,18 +1,18 @@
-// === Module 6000: TableRow ===
+// === Module 6184: TableRow ===
 
-// Module 6000 (TableRow)
+// Module 6184 (TableRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import PlatformUtils from "PlatformUtils" /* 1369 */;
-import useToken from "useToken" /* 4586 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import useFontScale from "useFontScale" /* 5609 */;
-import TableRowDivider from "TableRowDivider" /* 5995 */;
-import TableRowGroupContext from "TableRowGroupContext" /* 6001 */;
-import Card from "Card" /* 6002 */;
-import TableRowArrow from "TableRowArrow" /* 6007 */;
-import TableRowTrailingText from "TableRowTrailingText" /* 6009 */;
-import DragIcon from "DragIcon" /* 6010 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import useToken from "useToken" /* 4778 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import useFontScale from "useFontScale" /* 5382 */;
+import TableRowDivider from "TableRowDivider" /* 6179 */;
+import TableRowGroupContext from "TableRowGroupContext" /* 6185 */;
+import Card from "Card" /* 6186 */;
+import TableRowArrow from "TableRowArrow" /* 6193 */;
+import TableRowTrailingText from "TableRowTrailingText" /* 6195 */;
+import DragIcon from "DragIcon" /* 6196 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -23,7 +23,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
 const style = { padding: 0 };
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let closure_12 = createStyles.createStyles((arg0, arg1, arg2) => {
   const obj = { padding: nativeDefault.modules.mobile.TABLE_ROW_PADDING, minHeight: nativeDefault.modules.mobile.TABLE_ROW_HEIGHT, flexDirection: "row", alignItems: "center", opacity: null, borderRadius: null };
   let num = 1;
@@ -81,7 +81,7 @@ let closure_12 = createStyles.createStyles((arg0, arg1, arg2) => {
   return obj2;
 });
 let ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function TableRow(arg0) {
   const cResult = c.c(42);
   if (cResult[0] !== arg0) {
     ({ label, subLabel, icon, trailing, arrow, onPress, disabled, start, end, labelLineClamp, subLabelLineClamp, variant, draggable, dragHandlePressableProps, height } = arg0);
@@ -193,7 +193,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                                       const obj3 = { adjustSpacingForIcon: tmp28 };
                                       items[1] = closure_1_8(TableRowDivider.TableRowDivider, obj3);
                                       obj2.children = items;
-                                      tmp40 = v65535(options, obj2);
+                                      tmp40 = collapsed(options, obj2);
                                     }
                                     cResult[38] = tmp32;
                                     cResult[39] = tmp28;
@@ -246,7 +246,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[29] = tmp31;
   tmp30 = tmp31;
   const tmpResult = useToken;
-}) : ((arg0) => {
+}) : (function TableRow(arg0) {
   ({ icon, disabled } = arg0);
   ({ label, subLabel, trailing, arrow, onPress } = arg0);
   if (disabled === undefined) {
@@ -286,16 +286,16 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       const obj3 = { adjustSpacingForIcon: null != icon };
       items[1] = closure_1_8(TableRowDivider.TableRowDivider, obj3);
       obj2.children = items;
-      tmp11 = v65535(options, obj2);
+      tmp11 = collapsed(options, obj2);
     }
   }
   return tmp11;
 });
-tmp4.Icon = fn(6006).TableRowIcon;
-tmp4.Arrow = fn(6007).TableRowArrow;
-tmp4.TrailingText = fn(6009).TableRowTrailingText;
+tmp4.Icon = fn(6192).TableRowIcon;
+tmp4.Arrow = fn(6193).TableRowArrow;
+tmp4.TrailingText = fn(6195).TableRowTrailingText;
 ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((disabled) => {
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function TableRowInner(disabled) {
   const cResult = c.c(53);
   ({ label, labelLineClamp, subLabel, subLabelLineClamp, icon, trailing, arrow, variant, draggable, dragHandlePressableProps, borderRadius, height } = disabled);
   let str = "default";
@@ -397,7 +397,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((disabled) => {
                                                 const obj3 = { style: tmp16, children: null };
                                                 const items = [tmp17, tmp24, tmp44, tmp48, tmp52];
                                                 obj3.children = items;
-                                                const tmp58 = v65535(React5, obj3);
+                                                const tmp58 = collapsed(React5, obj3);
                                                 cResult[46] = tmp44;
                                                 cResult[47] = tmp48;
                                                 cResult[48] = tmp52;
@@ -423,7 +423,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((disabled) => {
                                         const obj5 = { style: tmp11.content, children: null };
                                         const items1 = [tmp36, tmp40];
                                         obj5.children = items1;
-                                        const tmp47 = v65535(React5, obj5);
+                                        const tmp47 = collapsed(React5, obj5);
                                         cResult[36] = tmp11.content;
                                         cResult[37] = tmp36;
                                         cResult[38] = tmp40;
@@ -452,7 +452,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((disabled) => {
                             const obj7 = { style: tmp11.labels, accessible: tmp28, accessibilityRole: str2, children: null };
                             const items3 = [tmp29, tmp32];
                             obj7.children = items3;
-                            const tmp39 = v65535(React5, obj7);
+                            const tmp39 = collapsed(React5, obj7);
                             cResult[26] = tmp11.labels;
                             cResult[27] = tmp29;
                             cResult[28] = tmp32;
@@ -545,7 +545,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((disabled) => {
     const tmpResult6 = useToken;
   }
   const tmpResult = useFontScale;
-}) : ((draggable) => {
+}) : (function TableRowInner(draggable) {
   ({ label, subLabel, icon, trailing, arrow, variant } = draggable);
   ({ labelLineClamp, subLabelLineClamp, disabled } = draggable);
   if (variant === undefined) {
@@ -627,7 +627,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((disabled) => {
   }
   items2[1] = tmp24;
   obj9.children = items2;
-  const items3 = [v65535(React5, obj9), ];
+  const items3 = [collapsed(React5, obj9), ];
   let tmp27 = null != tmp;
   if (tmp27) {
     const obj12 = { style: null, children: null };
@@ -639,7 +639,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((disabled) => {
   }
   items3[1] = tmp27;
   obj8.children = items3;
-  items1[2] = v65535(React5, obj8);
+  items1[2] = collapsed(React5, obj8);
   let tmp29 = null != trailing && null == tmp;
   if (tmp29) {
     const obj13 = { style: tmp8.trailing, children: trailing };
@@ -651,7 +651,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((disabled) => {
   }
   items1[4] = arrow;
   obj4.children = items1;
-  return v65535(React5, obj4);
+  return collapsed(React5, obj4);
 });
 let closure_13 = tmp5;
 const size = fn(2);

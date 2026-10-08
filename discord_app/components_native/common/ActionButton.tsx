@@ -1,9 +1,9 @@
-// === Module 10643: ActionButton ===
+// === Module 10243: ActionButton ===
 
-// Module 10643 (ActionButton)
+// Module 10243 (ActionButton)
 import c from "c" /* 576 */;
-import ButtonHooks from "ButtonHooks" /* 5608 */;
-import IconButton from "IconButton" /* 7586 */;
+import ButtonHooks from "ButtonHooks" /* 5381 */;
+import IconButton from "IconButton" /* 8106 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/ActionButton.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((IconComponent) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function ActionButton(IconComponent) {
   const cResult = c.c(11);
   IconComponent = IconComponent.IconComponent;
   let str = "tertiary";
@@ -63,7 +63,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((IconComponent) =
   cResult[2] = tmp5;
   tmp4 = tmp5;
   const tmpResult = ButtonHooks;
-}) : ((style) => {
+}) : (function ActionButton(style) {
   let str = "tertiary";
   if ("positive" === style.type) {
     str = "active";

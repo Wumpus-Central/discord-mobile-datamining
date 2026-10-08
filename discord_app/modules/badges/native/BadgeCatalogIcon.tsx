@@ -1,9 +1,9 @@
-// === Module 10894: BadgeCatalogIcon ===
+// === Module 10545: BadgeCatalogIcon ===
 
-// Module 10894 (BadgeCatalogIcon)
+// Module 10545 (BadgeCatalogIcon)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5981 */;
-import BadgeArtImageDefault from "BadgeArtImage" /* 10895 */;
+import FastImageDefault from "FastImage" /* 6164 */;
+import BadgeArtImageDefault from "BadgeArtImage" /* 10546 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
-let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeCatalogRasterIcon(arg0) {
   const cResult = c.c(23);
   ({ badge, size, style } = arg0);
   if (cResult[0] !== badge) {
@@ -22,9 +22,11 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[0] = badge;
     cResult[1] = joined;
     cResult[2] = found;
+    let tmp4 = found;
     let tmp3 = joined;
   } else {
     tmp3 = cResult[1];
+    tmp4 = cResult[2];
   }
   if (cResult[3] !== tmp3) {
     const obj2 = { urlsKey: tmp3, candidateIndex: 0 };
@@ -35,93 +37,177 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp6 = cResult[4];
   }
   [tmp8, tmp9] = noop.useState(tmp6);
-  require = tmp9;
+  const require = tmp9;
   if (tmp8.urlsKey !== tmp3) {
     const obj3 = { urlsKey: tmp3, candidateIndex: 0 };
     tmp9(obj3);
   }
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function z() {
-      tmp9((candidateIndex) => {
-        const obj = {};
-        const merged = Object.assign(candidateIndex);
-        obj.candidateIndex = candidateIndex.candidateIndex + 1;
-        return obj;
-      });
-    };
-    cResult[5] = fn;
-    let tmp12 = fn;
+    class B {
+      constructor() {
+        tmp = closure_0((candidateIndex) => {
+          const obj = {};
+          const merged = Object.assign(candidateIndex);
+          obj.candidateIndex = candidateIndex.candidateIndex + 1;
+          return obj;
+        });
+        return;
+      }
+    }
+    cResult[5] = B;
   } else {
-    tmp12 = cResult[5];
+    class B {
+      constructor() {
+        tmp = closure_0((candidateIndex) => {
+          const obj = {};
+          const merged = Object.assign(candidateIndex);
+          obj.candidateIndex = candidateIndex.candidateIndex + 1;
+          return obj;
+        });
+        return;
+      }
+    }
   }
   if (cResult[6] !== size) {
-    const size1 = { width: size, height: size };
+    class B {
+      constructor() {
+        tmp = closure_0((candidateIndex) => {
+          const obj = {};
+          const merged = Object.assign(candidateIndex);
+          obj.candidateIndex = candidateIndex.candidateIndex + 1;
+          return obj;
+        });
+        return;
+      }
+    }
+    tmp13[0] = size;
+    tmp13[1] = size;
     cResult[6] = size;
-    cResult[7] = size1;
-    let tmp13 = size1;
+    cResult[7] = tmp13;
   } else {
-    tmp13 = cResult[7];
+    class B {
+      constructor() {
+        tmp = closure_0((candidateIndex) => {
+          const obj = {};
+          const merged = Object.assign(candidateIndex);
+          obj.candidateIndex = candidateIndex.candidateIndex + 1;
+          return obj;
+        });
+        return;
+      }
+    }
   }
   if (cResult[8] === style) {
-    if (cResult[9] === tmp13) {
-      let tmp14 = cResult[10];
+    class B {
+      constructor() {
+        tmp = closure_0((candidateIndex) => {
+          const obj = {};
+          const merged = Object.assign(candidateIndex);
+          obj.candidateIndex = candidateIndex.candidateIndex + 1;
+          return obj;
+        });
+        return;
+      }
     }
-    if (null == tmp11) {
-      if (cResult[11] !== tmp14) {
-        const obj4 = { style: tmp14, "aria-hidden": true };
-        const tmp29 = <View style={tmp14} aria-hidden />;
-        cResult[11] = tmp14;
-        cResult[12] = tmp29;
+    if (null == tmp4[tmp8.candidateIndex]) {
+      class B {
+        constructor() {
+          tmp = closure_0((candidateIndex) => {
+            const obj = {};
+            const merged = Object.assign(candidateIndex);
+            obj.candidateIndex = candidateIndex.candidateIndex + 1;
+            return obj;
+          });
+          return;
+        }
       }
     } else {
-      if (cResult[13] !== tmp11) {
-        const obj5 = { uri: tmp11 };
-        cResult[13] = tmp11;
-        cResult[14] = obj5;
-        let tmp16 = obj5;
-      } else {
-        tmp16 = cResult[14];
+      class B {
+        constructor() {
+          tmp = closure_0((candidateIndex) => {
+            const obj = {};
+            const merged = Object.assign(candidateIndex);
+            obj.candidateIndex = candidateIndex.candidateIndex + 1;
+            return obj;
+          });
+          return;
+        }
       }
       if (cResult[15] !== size) {
-        const size2 = { width: size, height: size };
+        class B {
+          constructor() {
+            tmp = closure_0((candidateIndex) => {
+              const obj = {};
+              const merged = Object.assign(candidateIndex);
+              obj.candidateIndex = candidateIndex.candidateIndex + 1;
+              return obj;
+            });
+            return;
+          }
+        }
+        tmp18[0] = size;
+        tmp18[1] = size;
         cResult[15] = size;
-        cResult[16] = size2;
-        let tmp17 = size2;
+        cResult[16] = tmp18;
       } else {
-        tmp17 = cResult[16];
+        class B {
+          constructor() {
+            tmp = closure_0((candidateIndex) => {
+              const obj = {};
+              const merged = Object.assign(candidateIndex);
+              obj.candidateIndex = candidateIndex.candidateIndex + 1;
+              return obj;
+            });
+            return;
+          }
+        }
       }
       if (cResult[17] === tmp16) {
-        if (cResult[18] === tmp17) {
-          let tmp18 = cResult[19];
+        class B {
+          constructor() {
+            tmp = closure_0((candidateIndex) => {
+              const obj = {};
+              const merged = Object.assign(candidateIndex);
+              obj.candidateIndex = candidateIndex.candidateIndex + 1;
+              return obj;
+            });
+            return;
+          }
         }
         if (cResult[20] === tmp14) {
-          if (cResult[21] === tmp18) {
-            let tmp22 = cResult[22];
+          class B {
+            constructor() {
+              tmp = closure_0((candidateIndex) => {
+                const obj = {};
+                const merged = Object.assign(candidateIndex);
+                obj.candidateIndex = candidateIndex.candidateIndex + 1;
+                return obj;
+              });
+              return;
+            }
           }
-          return tmp22;
+          return tmp23;
         }
-        const obj6 = { style: tmp14, "aria-hidden": true, children: tmp18 };
-        const tmp25 = <View style={tmp14} aria-hidden>{tmp18}</View>;
+        const obj4 = { style: tmp14, "aria-hidden": true, children: tmp19 };
+        const tmp26 = <View style={tmp14} aria-hidden>{tmp19}</View>;
         cResult[20] = tmp14;
-        cResult[21] = tmp18;
-        cResult[22] = tmp25;
-        tmp22 = tmp25;
+        cResult[21] = tmp19;
+        cResult[22] = tmp26;
+        tmp23 = tmp26;
       }
-      const obj7 = { source: tmp16, style: tmp17, onError: tmp12 };
-      const tmp21 = jsx(FastImageDefault, { source: tmp16, style: tmp17, onError: tmp12 });
+      const obj5 = { source: tmp16, style: tmp18, onError: B };
+      const tmp22 = jsx(FastImageDefault, { source: tmp16, style: tmp18, onError: B });
       cResult[17] = tmp16;
-      cResult[18] = tmp17;
-      cResult[19] = tmp21;
-      tmp18 = tmp21;
+      cResult[18] = tmp18;
+      cResult[19] = tmp22;
     }
   }
   const items1 = [tmp13, style];
   cResult[8] = style;
   cResult[9] = tmp13;
   cResult[10] = items1;
-  tmp14 = items1;
   const tmp7 = _slicedToArray(noop.useState(tmp6), 2);
-}) : ((style) => {
+}) : (function BadgeCatalogRasterIcon(style) {
   ({ badge, size } = style);
   const items = [, , ];
   ({ simple_icon_raster_url: arr[0], complex_icon_static_url: arr[1], complex_icon_animated_url: arr[2] } = badge);
@@ -154,7 +240,7 @@ ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/native/BadgeCatalogIcon.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeCatalogIcon(arg0) {
   let tmp = dependencyMap;
   const cResult = c.c(9);
   ({ badge: simple_icon_url, size, style } = arg0);
@@ -189,7 +275,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[7] = style;
   cResult[8] = tmp5;
   tmp4 = tmp5;
-}) : ((arg0) => {
+}) : (function BadgeCatalogIcon(arg0) {
   ({ badge, size, style } = arg0);
   if (size > 24) {
     if (null != badge.simple_icon_url) {

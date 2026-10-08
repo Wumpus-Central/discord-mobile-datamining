@@ -1,23 +1,23 @@
-// === Module 9054: createWebViewController ===
+// === Module 11129: createWebViewController ===
 
-// Module 9054 (createWebViewController)
+// Module 11129 (createWebViewController)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
-import WebViewPostMessageTransportDefault from "WebViewPostMessageTransport" /* 9055 */;
-import createWebViewHtmlFile from "createWebViewHtmlFile" /* 9070 */;
+import createWebViewHtmlFile from "createWebViewHtmlFile" /* 10744 */;
+import WebViewPostMessageTransportDefault from "WebViewPostMessageTransport" /* 11130 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const ComponentActions = fn(1085).ComponentActions;
-let closure_5 = fn(2011).DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY;
-const TransportTypes = fn(5323).TransportTypes;
+let closure_5 = fn(2023).DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY;
+const TransportTypes = fn(5635).TransportTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/embedded_apps/native/utils/createWebViewController.tsx");
 
-export default function createWebViewController(id, arg1) {
+export default function createWebViewController(id, contextSource) {
   _require = id;
-  ({ getOrigin: importDefault, onDisallowedNavigation: dependencyMap } = arg1);
+  ({ getOrigin: importDefault, onDisallowedNavigation: dependencyMap } = contextSource);
   function postMessageToWebView(arg0) {
     const self = this;
     const apply = closure_5.apply;
@@ -71,7 +71,7 @@ export default function createWebViewController(id, arg1) {
     }
   });
   let ComponentDispatch = require("ComponentDispatchUtils").ComponentDispatch;
-  ComponentDispatch.dispatch(postMessageToWebView.IFRAME_MOUNT, { id });
+  ComponentDispatch.dispatch(postMessageToWebView.IFRAME_MOUNT, { id, data: { contextSource: contextSource.contextSource } });
   return {
     iframeId: id,
     release() {

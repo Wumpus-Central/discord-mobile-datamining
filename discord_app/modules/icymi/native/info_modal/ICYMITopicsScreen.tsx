@@ -1,69 +1,69 @@
-// === Module 16460: ICYMITopicsScreen ===
+// === Module 16720: ICYMITopicsScreen ===
 
-// Module 16460 (ICYMITopicsScreen)
+// Module 16720 (ICYMITopicsScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4600 */;
-import components_Button_Button from "components/Button/Button" /* 5601 */;
-import BookCheckIcon from "BookCheckIcon" /* 5866 */;
-import ForumIcon from "ForumIcon" /* 5879 */;
-import GameControllerIcon from "GameControllerIcon" /* 8771 */;
-import RobotIcon from "RobotIcon" /* 8987 */;
-import MusicIcon from "MusicIcon" /* 9584 */;
-import FoodIcon from "FoodIcon" /* 9974 */;
-import BicycleIcon from "BicycleIcon" /* 9976 */;
-import TvIcon from "TvIcon" /* 10629 */;
-import PencilSparkleIcon from "PencilSparkleIcon" /* 11053 */;
-import PiggyBankIcon from "PiggyBankIcon" /* 11547 */;
-import ICYMIAnalytics2 from "ICYMIAnalytics" /* 14183 */;
-import PaintPaletteIcon from "PaintPaletteIcon" /* 15095 */;
-import ScienceIcon from "ScienceIcon" /* 16462 */;
-import MedalIcon from "MedalIcon" /* 16463 */;
-import PaintbrushThinIcon from "PaintbrushThinIcon" /* 16465 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4792 */;
+import components_Button_Button from "components/Button/Button" /* 5375 */;
+import BookCheckIcon from "BookCheckIcon" /* 8178 */;
+import ForumIcon from "ForumIcon" /* 8191 */;
+import GameControllerIcon from "GameControllerIcon" /* 9117 */;
+import FoodIcon from "FoodIcon" /* 9501 */;
+import BicycleIcon from "BicycleIcon" /* 9503 */;
+import TvIcon from "TvIcon" /* 10227 */;
+import MusicIcon from "MusicIcon" /* 10233 */;
+import PiggyBankIcon from "PiggyBankIcon" /* 11562 */;
+import PencilSparkleIcon from "PencilSparkleIcon" /* 12797 */;
+import RobotIcon from "RobotIcon" /* 12825 */;
+import ICYMIAnalytics2 from "ICYMIAnalytics" /* 14482 */;
+import PaintPaletteIcon from "PaintPaletteIcon" /* 15357 */;
+import ScienceIcon from "ScienceIcon" /* 16722 */;
+import MedalIcon from "MedalIcon" /* 16723 */;
+import PaintbrushThinIcon from "PaintbrushThinIcon" /* 16725 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildDiscoveryCategoryStore from "GuildDiscoveryCategoryStore" /* 16454 */;
+import GuildDiscoveryCategoryStore from "GuildDiscoveryCategoryStore" /* 16714 */;
 
 require = fn;
 function primaryCategoryToEmojiIcon(categoryid) {
   if (GuildPrimaryCategory.GAMING === categoryid) {
-    return v65535(GameControllerIcon.GameControllerIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return collapsed(GameControllerIcon.GameControllerIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.ENTERTAINMENT === categoryid) {
-    return v65535(TvIcon.TvIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return collapsed(TvIcon.TvIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.GENERAL_CHATTING === categoryid) {
-    return v65535(ForumIcon.ForumIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return collapsed(ForumIcon.ForumIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.SCIENCE_AND_TECH === categoryid) {
-    return v65535(ScienceIcon.ScienceIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return collapsed(ScienceIcon.ScienceIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.MUSIC === categoryid) {
-    return v65535(MusicIcon.MusicIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return collapsed(MusicIcon.MusicIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.EDUCATION === categoryid) {
-    return v65535(BookCheckIcon.BookCheckIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return collapsed(BookCheckIcon.BookCheckIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.CREATIVE_ARTS === categoryid) {
-    return v65535(PaintPaletteIcon.PaintPaletteIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return collapsed(PaintPaletteIcon.PaintPaletteIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.FINANCE === categoryid) {
-    return v65535(PiggyBankIcon.PiggyBankIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return collapsed(PiggyBankIcon.PiggyBankIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.BOTS === categoryid) {
-    return v65535(RobotIcon.RobotIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return collapsed(RobotIcon.RobotIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.SPORTS === categoryid) {
-    return v65535(MedalIcon.MedalIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return collapsed(MedalIcon.MedalIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.TRAVEL_AND_FOOD === categoryid) {
-    return v65535(FoodIcon.FoodIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return collapsed(FoodIcon.FoodIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.FASHION_AND_BEAUTY === categoryid) {
-    return v65535(PaintbrushThinIcon.PaintbrushThinIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return collapsed(PaintbrushThinIcon.PaintbrushThinIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.FITNESS_AND_HEALTH === categoryid) {
-    return v65535(BicycleIcon.BicycleIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return collapsed(BicycleIcon.BicycleIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (16 === categoryid) {
-    return v65535(PencilSparkleIcon.PencilSparkleIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return collapsed(PencilSparkleIcon.PencilSparkleIcon, { size: "md", color: "redesign-button-tertiary-text" });
   }
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7, StyleSheet } = get_ActivityIndicator);
-const GuildPrimaryCategory = fn(16461).GuildPrimaryCategory;
+const GuildPrimaryCategory = fn(16721).GuildPrimaryCategory;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 }, footer: null, title: null, subtitle: null, separator: null, topicsContainer: null, scrollContentContainer: null };
 const rect = { position: "absolute", bottom: 0, left: nativeDefault.space.PX_24, right: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_8 };
 obj2.footer = rect;
@@ -79,7 +79,7 @@ let obj6 = { flex: 1, marginHorizontal: nativeDefault.space.PX_16, flexWrap: "wr
 obj2.scrollContentContainer = { paddingTop: nativeDefault.space.PX_24 };
 let closure_14 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function WordTopic(arg0) {
   const cResult = c.c(14);
   ({ topic, categoryid } = arg0);
   ({ selected, handlePress } = arg0);
@@ -127,7 +127,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         }
       }
       const obj3 = { accessibilityRole, accessibilityState, variant: str, text: topic, onPress: tmp9, icon: tmp4 };
-      const tmp12 = v65535(components_Button_Button.Button, obj3);
+      const tmp12 = collapsed(components_Button_Button.Button, obj3);
       cResult[7] = accessibilityRole;
       cResult[8] = accessibilityState;
       cResult[9] = tmp4;
@@ -146,7 +146,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp9 = fn;
   }
   const tmpResult = useA11yRolesNative;
-}) : ((categoryid) => {
+}) : (function WordTopic(categoryid) {
   categoryid = categoryid.categoryid;
   ({ selected, handlePress: importDefault } = categoryid);
   const tmp = primaryCategoryToEmojiIcon(categoryid);
@@ -164,7 +164,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       return importDefault(categoryid);
     };
     obj2.icon = tmp;
-    tmp8Result = v65535(components_Button_Button.Button, obj2);
+    tmp8Result = collapsed(components_Button_Button.Button, obj2);
   }
   return tmp8Result;
 });
@@ -178,7 +178,7 @@ export default function ICYMITopicsScreen() {
   const tmp6 = _slicedToArray(noop.useState(false), 2);
   dependencyMap = tmp6[1];
   const set = new Set();
-  const navigation = first(1490).useNavigation();
+  const navigation = first(1502).useNavigation();
   const items = [navigation, first];
   const callback = noop.useCallback(navigation(function*() {
     if (c3 === 2) {
@@ -255,7 +255,7 @@ export default function ICYMITopicsScreen() {
       }
     }
   }), items);
-  let obj = first(1490);
+  let obj = first(1502);
   const items1 = [GuildDiscoveryCategoryStore];
   const stateFromStoresArray = first(504).useStateFromStoresArray(items1, () => allCategories.getAllCategories());
   const items2 = [first];
@@ -279,17 +279,17 @@ export default function ICYMITopicsScreen() {
   let obj3 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
   let intl = first(1126).intl;
   obj3.children = intl.string(first(1126).t.Y5d99L);
-  const children = [closure_10(first(4892).Text, obj3), , , , ];
+  const children = [closure_10(first(5086).Text, obj3), , , , ];
   const obj4 = { variant: "text-sm/normal", color: "text-muted", style: tmp.subtitle, children: null };
   const intl2 = first(1126).intl;
   obj4.children = intl2.string(first(1126).t.MGZsfv);
-  children[1] = closure_10(first(4892).Text, obj4);
+  children[1] = closure_10(first(5086).Text, obj4);
   children[2] = closure_10(closure_6, { style: tmp.separator });
   let obj6 = { showsVerticalScrollIndicator: false, style: tmp.container, contentContainerStyle: tmp.scrollContentContainer, contentInset: { bottom: 72 + bottom }, children: null };
   let obj2 = first(504);
   let obj5 = { style: tmp.separator };
   let obj7 = { bottom: 72 + bottom };
-  obj6.children = closure_10(closure_6, { style: tmp.topicsContainer, children: stateFromStoresArray.map((categoryId) => v65535(closure_15, { selected: first.has(categoryId.categoryId), topic: categoryId.name, categoryid: categoryId.categoryId, handlePress }, categoryId.categoryId)) });
+  obj6.children = closure_10(closure_6, { style: tmp.topicsContainer, children: stateFromStoresArray.map((categoryId) => collapsed(closure_15, { selected: first.has(categoryId.categoryId), topic: categoryId.name, categoryid: categoryId.categoryId, handlePress }, categoryId.categoryId)) });
   children[3] = closure_10(closure_7, obj6);
   let tmp12Result = first.size > 0;
   if (tmp12Result) {
@@ -301,7 +301,7 @@ export default function ICYMITopicsScreen() {
     const intl3 = tmp7(1126).intl;
     obj11.text = intl3.string(tmp7(1126).t.PDTjLN);
     obj11.onPress = callback;
-    obj9.children = closure_10(tmp7(5601).Button, obj11);
+    obj9.children = closure_10(tmp7(5375).Button, obj11);
     tmp12Result = closure_10(closure_6, obj9);
   }
   children[4] = tmp12Result;

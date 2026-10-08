@@ -1,11 +1,11 @@
-// === Module 15590: OrbOnboardingPill ===
+// === Module 15870: OrbOnboardingPill ===
 
-// Module 15590 (OrbOnboardingPill)
+// Module 15870 (OrbOnboardingPill)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import OrbsIcon from "OrbsIcon" /* 8524 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import OrbsIcon from "OrbsIcon" /* 9009 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
 const ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function OrbOnboardingPill() {
   const cResult = c.c(4);
   const tmp4 = closure_5();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -45,7 +45,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp11 = cResult[3];
   }
   return tmp11;
-}) : (() => {
+}) : (function OrbOnboardingPill() {
   const obj = { style: closure_5().container, children: null };
   const items = [React3(OrbsIcon.OrbsIcon, { size: "sm" }), ];
   const obj2 = { variant: "text-sm/semibold", color: "redesign-button-tertiary-text", children: null };
@@ -56,7 +56,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   return React4(View, obj);
 });
 tmp4.displayName = "OrbOnboardingPill";
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj3 = { container: { height: 36, borderRadius: nativeDefault.radii.round, justifyContent: "center", alignItems: "center", flexDirection: "row", paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_4, backgroundColor: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, flexShrink: 0, gap: 4 } };
 let closure_5 = createStyles.createStyles(obj3);
 const size = fn(2);

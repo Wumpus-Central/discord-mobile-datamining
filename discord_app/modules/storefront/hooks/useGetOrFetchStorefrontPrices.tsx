@@ -1,13 +1,13 @@
-// === Module 8472: useGetOrFetchStorefrontPrices ===
+// === Module 8958: useGetOrFetchStorefrontPrices ===
 
-// Module 8472 (useGetOrFetchStorefrontPrices)
-import StorefrontActionCreators from "StorefrontActionCreators" /* 8473 */;
+// Module 8958 (useGetOrFetchStorefrontPrices)
+import StorefrontActionCreators from "StorefrontActionCreators" /* 8959 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 fn(558);
 const ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((applicationId) => {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGetOrFetchStorefrontPricesForApplicationId(applicationId) {
   const cResult = applicationId(576).c(3);
   applicationId = applicationId.applicationId;
   if (cResult[0] !== applicationId) {
@@ -28,7 +28,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((applicationId) => {
     tmp3 = cResult[2];
   }
   const effect = noop.useEffect(tmp2, tmp3);
-}) : ((applicationId) => {
+}) : (function useGetOrFetchStorefrontPricesForApplicationId(applicationId) {
   applicationId = applicationId.applicationId;
   const items = [applicationId];
   const effect = noop.useEffect(() => {
@@ -42,7 +42,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/storefront/hooks/useGetOrFetchStorefrontPrices.tsx");
 
 export const useGetOrFetchStorefrontPricesForApplicationId = tmp2;
-export const useGetOrFetchStorefrontPricesForSkuIds = ReactCompilerGating.isReactCompilerEnabled() ? ((skuIds) => {
+export const useGetOrFetchStorefrontPricesForSkuIds = ReactCompilerGating.isReactCompilerEnabled() ? (function useGetOrFetchStorefrontPricesForSkuIds(skuIds) {
   const cResult = skuIds(576).c(3);
   skuIds = skuIds.skuIds;
   if (cResult[0] !== skuIds) {
@@ -63,7 +63,7 @@ export const useGetOrFetchStorefrontPricesForSkuIds = ReactCompilerGating.isReac
     tmp3 = cResult[2];
   }
   const effect = noop.useEffect(tmp2, tmp3);
-}) : ((skuIds) => {
+}) : (function useGetOrFetchStorefrontPricesForSkuIds(skuIds) {
   skuIds = skuIds.skuIds;
   const items = [skuIds];
   const effect = noop.useEffect(() => {

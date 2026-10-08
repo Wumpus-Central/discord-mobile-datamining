@@ -1,19 +1,19 @@
-// === Module 17924: GuildSettingsRoleSubscriptionWelcomeView ===
+// === Module 18211: GuildSettingsRoleSubscriptionWelcomeView ===
 
-// Module 17924 (GuildSettingsRoleSubscriptionWelcomeView)
+// Module 18211 (GuildSettingsRoleSubscriptionWelcomeView)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
-import Text_Text from "Text/Text" /* 4892 */;
-import NavigatorConstants from "NavigatorConstants" /* 6075 */;
-import ErrorBlockDefault from "ErrorBlock" /* 11866 */;
-import WarningNoticeDefault from "WarningNotice" /* 17926 */;
-import EligibilityActionSheet from "EligibilityActionSheet" /* 17929 */;
-import HowItWorksSectionDefault from "HowItWorksSection" /* 17937 */;
-import CreatorBenefitsSectionDefault from "CreatorBenefitsSection" /* 17941 */;
-import CreatorHighlightSectionDefault from "CreatorHighlightSection" /* 17950 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import Text_Text from "Text/Text" /* 5086 */;
+import NavigatorConstants from "NavigatorConstants" /* 6261 */;
+import ErrorBlockDefault from "ErrorBlock" /* 11938 */;
+import WarningNoticeDefault from "WarningNotice" /* 18213 */;
+import EligibilityActionSheet from "EligibilityActionSheet" /* 18216 */;
+import HowItWorksSectionDefault from "HowItWorksSection" /* 18224 */;
+import CreatorBenefitsSectionDefault from "CreatorBenefitsSection" /* 18228 */;
+import CreatorHighlightSectionDefault from "CreatorHighlightSection" /* 18237 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -38,7 +38,7 @@ function StartEarningButton(isTermsAccepted) {
   const callback = noop.useCallback(() => submitAcceptTermsRequest(), items);
   const callback1 = noop.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
-    return obj.openLazy(asyncRequireImpl(17929, dependencyMap.paths), EligibilityActionSheet.ELIGIBILITY_ACTION_SHEET_KEY, {
+    return obj.openLazy(asyncRequireImpl(18216, dependencyMap.paths), EligibilityActionSheet.ELIGIBILITY_ACTION_SHEET_KEY, {
       eligibility,
       onRequireModeratorMFAClick() {
         navigation.push(constants.SECURITY);
@@ -100,7 +100,7 @@ function StartEarningButton(isTermsAccepted) {
     const obj9 = { loading, text: null, icon: null, pillStyle: null, onPress: null };
     const intl = tmp5(tmp3[12]).intl;
     obj9.text = intl.string(tmp5(tmp3[12]).t.NL5ZNS);
-    const obj10 = { source: require("module_4814"), color: require("native").unsafe_rawColors.WHITE, size: tmp5(tmp3[23]).Icon.Sizes.SMALL_20 };
+    const obj10 = { source: require("module_5008"), color: require("native").unsafe_rawColors.WHITE, size: tmp5(tmp3[23]).Icon.Sizes.SMALL_20 };
     obj9.icon = closure_11(tmp5(tmp3[23]).Icon, obj10);
     obj9.pillStyle = { backgroundColor: "#EB5D30" };
     obj9.onPress = callback1;
@@ -113,12 +113,12 @@ function StartEarningButton(isTermsAccepted) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const creatorPortalUrl = fn(15038).CREATOR_REVENUE_PORTAL_URL;
+const creatorPortalUrl = fn(15300).CREATOR_REVENUE_PORTAL_URL;
 const GuildSettingsSections = fn(1085).GuildSettingsSections;
-const constants = fn(17925).CreatorMonetizationOnboardingMarketingSection;
+const constants = fn(18212).CreatorMonetizationOnboardingMarketingSection;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(4896);
+const createStyles = fn(5090);
 let obj2 = { container: { flex: 1 }, contentContainer: { flex: 1, padding: 24 }, heroImage: { resizeMode: "cover", width: "100%" }, subtitle: { marginTop: 8 }, tos: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.sm, marginTop: 10 }, startEarningButton: { marginTop: 12 }, startEarningButtonContainer: { marginTop: 14 }, startEarningFabContainer: { marginHorizontal: 24 }, divider: null, sectionTitle: null, sectionFooter: null, statusNoticeContainer: null };
 let size = { width: "100%", height: 0.8, marginTop: 36, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 obj2.divider = size;
@@ -127,7 +127,7 @@ obj2.sectionFooter = { marginTop: 36 };
 obj2.statusNoticeContainer = { marginHorizontal: 0, marginTop: 14 };
 let closure_14 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((isApplicationPending) => {
+let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function ApplicationStatusNotice(isApplicationPending) {
   const cResult = c.c(19);
   ({ style, resubmittingEnableRequest, resubmissionError, createEnableRequest, requestRejectedNoticeText, reapplyNoticeText } = isApplicationPending);
   const tmp4 = closure_14();
@@ -228,7 +228,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((isApplicationP
     cResult[18] = tmp14;
     tmp13 = tmp14;
   }
-}) : ((arg0) => {
+}) : (function ApplicationStatusNotice(arg0) {
   ({ style, resubmissionError, requestRejectedNoticeText, reapplyNoticeText } = arg0);
   ({ resubmittingEnableRequest, createEnableRequest, isApplicationPending } = arg0);
   const tmp = closure_14();
@@ -264,7 +264,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((isApplicationP
   }
 });
 ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function SectionContainer(arg0) {
   const cResult = c.c(15);
   ({ title, children, footer, onLayout } = arg0);
   const tmp4 = closure_14();
@@ -328,7 +328,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = tmp10;
   tmp9 = tmp10;
   const obj5 = { style: tmp4.sectionTitle, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: title };
-}) : ((footer) => {
+}) : (function SectionContainer(footer) {
   footer = footer.footer;
   ({ title, children, onLayout } = footer);
   const tmp = closure_14();
@@ -345,7 +345,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 });
 let closure_16 = tmp4;
 ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function MarketingSections(arg0) {
   const cResult = require("c").c(16);
   ({ onboardingMarketing, onHowItWorksLayoutChange } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -457,7 +457,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[11] = mapped;
   }
   let obj = require("c");
-}) : ((onboardingMarketing) => {
+}) : (function MarketingSections(onboardingMarketing) {
   onboardingMarketing = onboardingMarketing.onboardingMarketing;
   _require = undefined;
   let obj = { title: null, footer: null, onLayout: null, children: null };
@@ -512,7 +512,7 @@ let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRa
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/welcome/GuildSettingsRoleSubscriptionWelcomeView.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSettingsRoleSubscriptionWelcomeView(guild) {
   const cResult = refreshEligibility(ref[10]).c(58);
   guild = guild.guild;
   closure_14();
@@ -713,7 +713,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   cResult[8] = obj6;
   tmp17 = obj6;
   const tmpResult = refreshEligibility(ref[32]);
-}) : ((guild) => {
+}) : (function GuildSettingsRoleSubscriptionWelcomeView(guild) {
   guild = guild.guild;
   refreshEligibility = undefined;
   let ref;

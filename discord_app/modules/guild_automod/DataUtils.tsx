@@ -1,6 +1,6 @@
-// === Module 11493: DataUtils ===
+// === Module 11479: DataUtils ===
 
-// Module 11493 (DataUtils)
+// Module 11479 (DataUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_automod/DataUtils.tsx");
